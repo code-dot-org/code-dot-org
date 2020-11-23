@@ -449,78 +449,78 @@ id-ID:
         content1: deskripsi di sini
         markdown: "#Proses Desain\nMendesain perangkat lunak berarti menyelesaikan
           banyak masalah kecil, setiap waktu. Masalah utama dalam desain perangkat
-          lunak adalah hal yang harus dibuat di tempat pertama.\n\nProses ini berguna
+          lunak adalah apa yang harus dibuat semenjak awal.\n\nProses ini berguna
           untuk semua jenis hal, tetapi kami akan fokus menggunakannya untuk desain
           aplikasi.\n\n<!-- Terjemahkan istilah \"Tentukan\", \"Siapkan\", \"Coba\",
-          \"Renungkan\" serta ubah ukuran dan pemosisian huruf sesuai kebutuhan-->\n<gaya
-          div=\"posisi: relatif; perataan teks: tengah; ukuran huruf: 1em\">\n  <img
+          \"Renungkan\" serta ubah ukuran dan pemosisian huruf sesuai kebutuhan-->\n<div
+          style=\"position: relative; text-align: center; font-size: 1em\">\n  <img
           src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
-          alt=\"Proses Desain\" gaya=\"lebar: 50%;\">\n  <gaya div=\"posisi: mutlak;
-          atas: 24%; kiri: 49.8%; mengubah: translateX(-49.8%); lebar huruf: tebal;\">Tentukan</div>
-          \n  <gaya div=\"posisi: mutlak; atas: 52%; kiri: 61%; mengubah: translateX(-61%);
-          lebar huruf: tebal;\">Siapkan</div>\n  <gaya div=\"posisi: mutlak; atas:
-          79%; kiri: 49.8%; mengubah: translateX(-49.8%); lebar huruf: tebal;\">Coba</div>\n
-          \ <gaya div=\"posisi: mutlak; atas: 52%; kiri: 39%; mengubah: translateX(-39%);
-          lebar huruf: tebal;\">Renungkan</div>\n</div>\n\n* **Tentukan**\n  *Aplikasi
-          apa yang ingin Anda buat?\n  *Apa kendala Anda?\n  *Seperti apakah kesuksesan
-          itu?\n* **Siapkan**\n  *Unsur curah gagasan/penelitian yang mungkin ada\n
-          \ *Bandingkan pro dan kontra\n  *Buat rencana\n* **Coba**\n  *Laksanakan
-          rencana Anda ke dalam tindakan\n* **Renungkan**\n  *Bagaimana hasil Anda
-          dibandingkan dengan tujuan yang Anda tetapkan ketika menentukan aplikasi?\n
-          \ *Apa yang dapat Anda pelajari dari ini atau lakukan lebih baik lain kali?\n
-          \ *Masalah baru apa yang Anda temukan?\n\n#Seperti Apa Rupanya\nSelama beberapa
-          minggu ke depan, Anda akan memiliki kesempatan untuk bereksperimen dengan
-          beberapa permainan yang ada dan merancang permainan Anda sendiri berdasarkan
-          hal yang telah Anda pelajari. Setelah membuat permainan Anda, Anda akan
-          mendapatkan kesempatan untuk menyajikannya kepada orang lain dan menerima
-          masukan. Semua langkah ini sangat penting dalam industri perangkat lunak,
-          dan mempraktikkan unsur proses desain akan membantu Anda menciptakan produk
-          yang lebih baik secara lebih efisien.  \n\nInilah yang akan diadakan dalam
-          minggu-minggu mendatang ketika kita mempelajari lebih lanjut tentang proses
-          desain:\n\n1. **Tentukan & Siapkan**\n   *Mainkan permainan yang ada untuk
-          mendapatkan gagasan dan memahami batasan\n   *Lakukan curah gagasan dan
-          rencanakan aplikasi baru atau modifikasi Anda\n1. **Coba**\n   *Ikuti rencana
-          Anda untuk membuat aplikasi\n1. **Renungkan & Sunting**\n   *Tukar aplikasi
-          dengan grup lain untuk membantu menjadikan proyek Anda lebih baik\n1. **Sajikan**\n
-          \  * Pamerkan produk akhir Anda!\n"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Renungkan</div>\n</div>\n\n*
+          **Tentukan**\n  *Aplikasi jenis apa yang ingin Anda buat?\n  *Apa kendala
+          Anda?\n  *Seperti apakah kesuksesan itu?\n* **Siapkan**\n  *Lakukan curah
+          gagasan/penelitian kemungkinan elemennya\n  *Bandingkan pro dan kontra\n
+          \ *Buat rencana\n* **Coba**\n  *Laksanakan rencana Anda ke dalam tindakan\n*
+          **Renungkan**\n  *Bagaimana hasil Anda dibandingkan dengan tujuan yang Anda
+          tetapkan ketika menentukan aplikasi?\n  *Apa yang dapat Anda pelajari dari
+          ini atau lakukan lebih baik lain kali?\n  *Masalah baru apa yang Anda temukan?\n\n#Seperti
+          Apa Rupanya\nSelama beberapa minggu ke depan, Anda akan memiliki kesempatan
+          untuk bereksperimen dengan beberapa permainan yang ada dan merancang permainan
+          Anda sendiri berdasarkan hal yang telah Anda pelajari. Setelah membuat permainan,
+          Anda akan mendapatkan kesempatan untuk menyajikannya kepada orang lain dan
+          menerima masukan. Semua langkah ini sangat penting dalam industri perangkat
+          lunak, dan mempraktikkan elemen proses desain akan membantu Anda menciptakan
+          produk yang lebih baik secara lebih efisien.  \n\nBerikut adalah agenda
+          yang akan diadakan dalam minggu-minggu mendatang ketika kita mempelajari
+          lebih lanjut tentang proses desain:\n\n1. **Tentukan & Siapkan**\n   *Mainkan
+          permainan yang ada untuk mendapatkan gagasan dan memahami batasan\n   *Lakukan
+          curah gagasan dan rencanakan aplikasi baru atau modifikasi Anda\n1. **Coba**\n
+          \  *Ikuti rencana Anda untuk membuat aplikasi\n1. **Renungkan & Edit**\n
+          \  *Tukar aplikasi dengan grup lain untuk membantu menjadikan proyek Anda
+          lebih baik\n1. **Sajikan**\n   * Pamerkan produk akhir Anda!\n"
       Begin planning your project_2018:
         content1: deskripsi di sini
         markdown: "#Proses Desain\nMendesain perangkat lunak berarti menyelesaikan
           banyak masalah kecil, setiap waktu. Masalah utama dalam desain perangkat
-          lunak adalah hal yang harus dibuat di tempat pertama.\n\nProses ini berguna
+          lunak adalah apa yang harus dibuat semenjak awal.\n\nProses ini berguna
           untuk semua jenis hal, tetapi kami akan fokus menggunakannya untuk desain
           aplikasi.\n\n<!-- Terjemahkan istilah \"Tentukan\", \"Siapkan\", \"Coba\",
-          \"Renungkan\" serta ubah ukuran dan pemosisian huruf sesuai kebutuhan-->\n<gaya
-          div=\"posisi: relatif; perataan teks: tengah; ukuran huruf: 1em\">\n  <img
+          \"Renungkan\" serta ubah ukuran dan pemosisian huruf sesuai kebutuhan-->\n<div
+          style=\"position: relative; text-align: center; font-size: 1em\">\n  <img
           src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
-          alt=\"Proses Desain\" gaya=\"lebar: 50%;\">\n  <gaya div=\"posisi: mutlak;
-          atas: 24%; kiri: 49.8%; mengubah: translateX(-49.8%); lebar huruf: tebal;\">Tentukan</div>
-          \n  <gaya div=\"posisi: mutlak; atas: 52%; kiri: 61%; mengubah: translateX(-61%);
-          lebar huruf: tebal;\">Siapkan</div>\n  <gaya div=\"posisi: mutlak; atas:
-          79%; kiri: 49.8%; mengubah: translateX(-49.8%); lebar huruf: tebal;\">Coba</div>\n
-          \ <gaya div=\"posisi: mutlak; atas: 52%; kiri: 39%; mengubah: translateX(-39%);
-          lebar huruf: tebal;\">Renungkan</div>\n</div>\n\n* **Tentukan**\n  *Aplikasi
-          apa yang ingin Anda buat?\n  *Apa kendala Anda?\n  *Seperti apakah kesuksesan
-          itu?\n* **Siapkan**\n  *Unsur curah gagasan/penelitian yang mungkin ada\n
-          \ *Bandingkan pro dan kontra\n  *Buat rencana\n* **Coba**\n  *Laksanakan
-          rencana Anda ke dalam tindakan\n* **Renungkan**\n  *Bagaimana hasil Anda
-          dibandingkan dengan tujuan yang Anda tetapkan ketika menentukan aplikasi?\n
-          \ *Apa yang dapat Anda pelajari dari ini atau lakukan lebih baik lain kali?\n
-          \ *Masalah baru apa yang Anda temukan?\n\n#Seperti Apa Rupanya\nSelama beberapa
-          minggu ke depan, Anda akan memiliki kesempatan untuk bereksperimen dengan
-          beberapa permainan yang ada dan merancang permainan Anda sendiri berdasarkan
-          hal yang telah Anda pelajari. Setelah membuat permainan Anda, Anda akan
-          mendapatkan kesempatan untuk menyajikannya kepada orang lain dan menerima
-          masukan. Semua langkah ini sangat penting dalam industri perangkat lunak,
-          dan mempraktikkan unsur proses desain akan membantu Anda menciptakan produk
-          yang lebih baik secara lebih efisien.  \n\nInilah yang akan diadakan dalam
-          minggu-minggu mendatang ketika kita mempelajari lebih lanjut tentang proses
-          desain:\n\n1. **Tentukan & Siapkan**\n   *Mainkan permainan yang ada untuk
-          mendapatkan gagasan dan memahami batasan\n   *Lakukan curah gagasan dan
-          rencanakan aplikasi baru atau modifikasi Anda\n1. **Coba**\n   *Ikuti rencana
-          Anda untuk membuat aplikasi\n1. **Renungkan & Sunting**\n   *Tukar aplikasi
-          dengan grup lain untuk membantu menjadikan proyek Anda lebih baik\n1. **Sajikan**\n
-          \  * Pamerkan produk akhir Anda!\n"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Renungkan</div>\n</div>\n\n*
+          **Tentukan**\n  *Aplikasi jenis apa yang ingin Anda buat?\n  *Apa kendala
+          Anda?\n  *Seperti apakah kesuksesan itu?\n* **Siapkan**\n  *Lakukan curah
+          gagasan/penelitian kemungkinan elemennya\n  *Bandingkan pro dan kontra\n
+          \ *Buat rencana\n* **Coba**\n  *Laksanakan rencana Anda ke dalam tindakan\n*
+          **Renungkan**\n  *Bagaimana hasil Anda dibandingkan dengan tujuan yang Anda
+          tetapkan ketika menentukan aplikasi?\n  *Apa yang dapat Anda pelajari dari
+          ini atau lakukan lebih baik lain kali?\n  *Masalah baru apa yang Anda temukan?\n\n#Seperti
+          Apa Rupanya\nSelama beberapa minggu ke depan, Anda akan memiliki kesempatan
+          untuk bereksperimen dengan beberapa permainan yang ada dan merancang permainan
+          Anda sendiri berdasarkan hal yang telah Anda pelajari. Setelah membuat permainan,
+          Anda akan mendapatkan kesempatan untuk menyajikannya kepada orang lain dan
+          menerima masukan. Semua langkah ini sangat penting dalam industri perangkat
+          lunak, dan mempraktikkan elemen proses desain akan membantu Anda menciptakan
+          produk yang lebih baik secara lebih efisien.  \n\nBerikut adalah agenda
+          yang akan diadakan dalam minggu-minggu mendatang ketika kita mempelajari
+          lebih lanjut tentang proses desain:\n\n1. **Tentukan & Siapkan**\n   *Mainkan
+          permainan yang ada untuk mendapatkan gagasan dan memahami batasan\n   *Lakukan
+          curah gagasan dan rencanakan aplikasi baru atau modifikasi Anda\n1. **Coba**\n
+          \  *Ikuti rencana Anda untuk membuat aplikasi\n1. **Renungkan & Edit**\n
+          \  *Tukar aplikasi dengan grup lain untuk membantu menjadikan proyek Anda
+          lebih baik\n1. **Sajikan**\n   * Pamerkan produk akhir Anda!\n"
       Begin planning your project_2018_2019:
         content1: deskripsi di sini
         markdown: |+
@@ -557,28 +557,28 @@ id-ID:
           Dalam ilmu komputer, events adalah tindakan yang dipantau oleh komputer. Dalam pelajaran ini, Anda akan bereaksi secara berbeda bergantung pada tombol yang ditekan.
       BinaryBracelets-Unplugged:
         markdown: |
-          #Gelang Berpasangan
+          # Gelang Binary
 
-          Buat gelang yang mewakili nama Anda dalam sistem yang dimengerti komputer!
+          Buat gelang yang mewakili nama Anda dalam sistem yang dipahami komputer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged_2020:
         markdown: |
-          #Gelang Berpasangan
+          # Gelang Binary
 
-          Buat gelang yang mewakili nama Anda dalam sistem yang dimengerti komputer!
+          Buat gelang yang mewakili nama Anda dalam sistem yang dipahami komputer!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryImages-Unplugged:
-        markdown: |
-          "#Gambar Berpasangan
+        markdown: |-
+          "#Gambar Binary
 
-          Komunikasikan cara membuat ulang gambar hanya menggunakan dua nilai sederhana."
+          Komunikasikan cara membuat ulang gambar hanya menggunakan dua nilai sederhana.
       BinaryImages-Unplugged_2020:
-        markdown: |
-          "#Gambar Berpasangan
+        markdown: |-
+          "#Gambar Binary
 
-          Komunikasikan cara membuat ulang gambar hanya menggunakan dua nilai sederhana."
+          Komunikasikan cara membuat ulang gambar hanya menggunakan dua nilai sederhana.
       CSD Header Size MC:
         answers:
         - {}
@@ -978,19 +978,19 @@ id-ID:
         - {}
       ConditionalsWithCards-Unplugged:
         markdown: |
-          "#Persyaratan Dengan Kartu
+          # Kondisional Dengan Kartu
 
-          Mainkan permainan kartu dan buat aturan seperti ""Jika saya menggambar kartu merah, saya mendapat poin"" dan ""Jika saya menggambar kartu hitam, Anda mendapat poin."""
+          Mainkan permainan kartu dan buat aturan seperti "Jika saya menggambar kartu merah, saya mendapat poin" dan "Jika saya menggambar kartu hitam, Anda mendapat poin."
       ConditionalsWithCards-Unplugged_2020:
         markdown: |
-          "#Persyaratan Dengan Kartu
+          # Kondisional Dengan Kartu
 
-          Mainkan permainan kartu dan buat aturan seperti ""Jika saya menggambar kartu merah, saya mendapat poin"" dan ""Jika saya menggambar kartu hitam, Anda mendapat poin."""
+          Mainkan permainan kartu dan buat aturan seperti "Jika saya menggambar kartu merah, saya mendapat poin" dan "Jika saya menggambar kartu hitam, Anda mendapat poin."
       Crowdsourcing-Unplugged:
-        markdown: |
-          #Urun Daya
+        markdown: |-
+          # Urun Daya
 
-          Perhatikan Bagaimana urun daya, proses teknik umum pemecahan masalah dalam ilmu komputer, dapat membantu Anda menyelesaikan tugas bersama sebagai ruang kelas lebih efesien daripada jika Anda harus melakukannya sendiri.
+          Perhatikan bagaimana urun daya, sebuah teknik umum pemecahan masalah dalam ilmu komputer, dapat membantu Anda menyelesaikan tugas bersama sebagai satu kelas lebih efesien daripada jika Anda harus melakukannya sendiri.
       Dance_Party_extras_intro:
         markdown: |
           #Tetaplah berdansa
@@ -1161,27 +1161,27 @@ id-ID:
         markdown: |
           # Merancang untuk Aksesibilitas
 
-          * Dalam dunia ilmu komputer, **aksesibilitas** adalah tentang menciptakan teknologi untuk para penyandang disabilities.
-          * Disabilities termasuk fisik, pendengaran, visual, dan banyak cacat lainnya.
-          * Disabilities itu beragam dan memengaruhi orang dengan berbagai cara, termasuk Bagaimana mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
-          * Merancang aplikasi yang dapat diakses orang penyandang disabilities membuat aplikasi tersebut lebih baik untuk semua orang juga!
+          * Di dunia ilmu komputer, **aksesibilitas** adalah tentang menciptakan teknologi untuk para penyandang disabilitas.
+          * Disabilitas meliputi fisik, pendengaran, visual, dan banyak lainnya.
+          * Disabilitas itu banyak macamnya dan memengaruhi orang dengan berbagai cara, termasuk cara mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
+          * Merancang aplikasi yang dapat diakses penyandang disabilitas membuat aplikasi tersebut lebih baik untuk semua orang juga!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019_2020:
         markdown: |
           # Merancang untuk Aksesibilitas
 
-          * Dalam dunia ilmu komputer, **aksesibilitas** adalah tentang menciptakan teknologi untuk para penyandang disabilities.
-          * Disabilities termasuk fisik, pendengaran, visual, dan banyak cacat lainnya.
-          * Disabilities itu beragam dan memengaruhi orang dengan berbagai cara, termasuk Bagaimana mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
-          * Merancang aplikasi yang dapat diakses orang penyandang disabilities membuat aplikasi tersebut lebih baik untuk semua orang juga!
+          * Di dunia ilmu komputer, **aksesibilitas** adalah tentang menciptakan teknologi untuk para penyandang disabilitas.
+          * Disabilitas meliputi fisik, pendengaran, visual, dan banyak lainnya.
+          * Disabilitas itu banyak macamnya dan memengaruhi orang dengan berbagai cara, termasuk cara mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
+          * Merancang aplikasi yang dapat diakses penyandang disabilitas membuat aplikasi tersebut lebih baik untuk semua orang juga!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalCitizenship-Unplugged:
-        markdown: |
+        markdown: |-
           "#Kewargaan Digital
 
-          Beberapa informasi tidak aman dibagikan secara online. Pelajaran ini akan membantu Anda mempelajari perbedaan antara informasi pribadi dan aman."
+          Beberapa informasi tidak aman dibagikan secara online. Pelajaran ini akan membantu Anda mempelajari perbedaan antara informasi aman dan privat.
       DigitalFootprint-Unplugged:
         markdown: |
           # Your Digital Footprint
@@ -1208,15 +1208,15 @@ id-ID:
 
           Variabel memberikan banyak kebebasan dalam ilmu komputer. Pelajaran ini membantu menjelaskan pengertian variabel dan Bagaimana kita menggunakannya dengan berbagai cara.
       ForLoopFun-Unplugged:
-        markdown: |
-          #Untuk Lingkaran yang Menyenangkan
+        markdown: |-
+          # Serunya For Loop
 
-          Kami tahu bahwa loop memungkinkan kita untuk melakukan berbagai hal berulang kali, tetapi sekarang kami akan mempelajari Bagaimana menggunakan loop dengan struktur ekstra yang dibangun dengan tepat.
+          Kita tahu bahwa loop memudahkan kita melakukan pengulangan berkali-kali, tetapi sekarang kita akan mempelajari kiat menggunakan loop dengan struktur tambahan yang bersifat bawaan.
       ForLoopFun-Unplugged_2020:
-        markdown: |
-          #Untuk Lingkaran yang Menyenangkan
+        markdown: |-
+          # Serunya For Loop
 
-          Kami tahu bahwa loop memungkinkan kita untuk melakukan berbagai hal berulang kali, tetapi sekarang kami akan mempelajari Bagaimana menggunakan loop dengan struktur ekstra yang dibangun dengan tepat.
+          Kita tahu bahwa loop memudahkan kita melakukan pengulangan berkali-kali, tetapi sekarang kita akan mempelajari kiat menggunakan loop dengan struktur tambahan yang bersifat bawaan.
       GettingLoopy-Unplugged:
         markdown: |
           # Getting Loopy
@@ -1235,15 +1235,15 @@ id-ID:
 
           <p align=center>
       GraphPaperProgramming-Unplugged:
-        markdown: |
-          "#Pemrograman Kertas Grafik
+        markdown: |-
+          # Pemrograman Kertas Grafik
 
-          Tulis algoritma yang dapat digunakan teman sekelas Anda untuk menggambar."
+          Tulis algorithm yang dapat digunakan teman sekelas Anda untuk menggambar.
       GraphPaperProgramming-Unplugged_2020:
-        markdown: |
-          "#Pemrograman Kertas Grafik
+        markdown: |-
+          # Pemrograman Kertas Grafik
 
-          Tulis algoritma yang dapat digunakan teman sekelas Anda untuk menggambar."
+          Tulis algorithm yang dapat digunakan teman sekelas Anda untuk menggambar.
       HappyLoops-Unplugged:
         markdown: |
           # Happy Loops
@@ -1275,15 +1275,15 @@ id-ID:
       Internet Simulator Setup 3:
         content1: deskripsi di sini
       Internet-Unplugged:
-        markdown: |
-          #Internet
+        markdown: |-
+          # Internet
 
-          Bangun internet Anda sendiri di kelas hanya dengan menggunakan secarik kertas.
+          Bangun internet Anda sendiri di kelas hanya dengan menggunakan lembaran kertas.
       Internet-Unplugged_2020:
-        markdown: |
-          #Internet
+        markdown: |-
+          # Internet
 
-          Bangun internet Anda sendiri di kelas hanya dengan menggunakan secarik kertas.
+          Bangun internet Anda sendiri di kelas hanya dengan menggunakan lembaran kertas.
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1597,7 +1597,7 @@ id-ID:
         markdown: |
           #Kata Sandi yang Kuat
 
-          Jelajahi alasan orang menggunakan kata sandi, pelajari manfaat menggunakan kata sandi, serta temukan strategi untuk membuat dan menjaga kata sandi yang kuat dan aman.
+          Gali alasan orang menggunakan kata sandi, pelajari manfaat menggunakan kata sandi, dan temukan strategi untuk membuat serta menjaga kata sandi yang kuat dan aman.
 
           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
@@ -1605,34 +1605,34 @@ id-ID:
         markdown: |
           #Presentasi Proyek
 
-          Saatnya mempresentasikan proyek Anda! Guru Anda akan memberikan rincian lebih lanjut tentang cara Anda akan mempresentasikan pekerjaan Anda kepada teman sekelas Anda.
+          Saatnya mempresentasikan proyek Anda! Guru akan memberikan rincian lebih lanjut tentang cara mempresentasikan hasil pekerjaan Anda kepada teman sekelas.
       Prepare for your presentation_2018:
         markdown: |
           #Presentasi Proyek
 
-          Saatnya mempresentasikan proyek Anda! Guru Anda akan memberikan rincian lebih lanjut tentang cara Anda akan mempresentasikan pekerjaan Anda kepada teman sekelas Anda.
+          Saatnya mempresentasikan proyek Anda! Guru akan memberikan rincian lebih lanjut tentang cara mempresentasikan hasil pekerjaan Anda kepada teman sekelas.
       PrivatePersonalInformation-Unplugged:
         markdown: |
-          #Informasi Pribadi dan Perorangan
+          # Informasi Privat dan Pribadi
 
-          Dikembangkan melalui Pendidikan Akal Sehat, pelajaran ini adalah tentang perbedaan antara informasi yang aman dibagikan secara online dan informasi yang tidak aman.
+          Dikembangkan melalui Commen Sense Education, pelajaran ini membahas perbedaan antara informasi yang aman dibagikan secara online dan informasi yang tidak aman.
 
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
       RelayProgramming-Unplugged:
-        markdown: |
-          "#Pemrograman Bergiliran
+        markdown: |-
+          "#Pemrograman Relay
 
-          Masuk ke dalam tim dan bekerja sama untuk menulis program dengan membuat gambar."
+          Bentuk tim-tim dan bekerja sama untuk menulis program yang membuat gambar.
       RelayProgramming-Unplugged_2020:
-        markdown: |
-          "#Pemrograman Bergiliran
+        markdown: |-
+          "#Pemrograman Relay
 
-          Masuk ke dalam tim dan bekerja sama untuk menulis program dengan membuat gambar."
+          Bentuk tim-tim dan bekerja sama untuk menulis program yang membuat gambar.
       ScreenOutTheMean-Unplugged:
-        markdown: |
-          #Memahami Keadaan
+        markdown: |-
+          # Singkirkan Yang Kejam
 
-          Hari ini, Anda akan mempelajari yang harus dilakukan jika seseorang dalam keadaan online.
+          Hari ini Anda akan mempelajari tindakan yang perlu dilakukan jika seseorang bersikap kejam secara online.
       SimonSays-Unplugged:
         markdown: |
           #Kata Simon
@@ -1644,15 +1644,15 @@ id-ID:
 
           Mainkan permainan dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang baik.
       Songwriting-Unplugged:
-        markdown: |
-          #Menulis lagu
+        markdown: |-
+          # Menulis lagu
 
-          Gunakan konsep paduan suara dalam lagu untuk mempelajari cara menetapkan dan menyebutkan fungsi.
+          Gunakan konsep paduan suara dalam lagu untuk mempelajari cara menetapkan dan memanggil function.
       Songwriting-Unplugged_2020:
-        markdown: |
-          #Menulis lagu
+        markdown: |-
+          # Menulis lagu
 
-          Gunakan konsep paduan suara dalam lagu untuk mempelajari cara menetapkan dan menyebutkan fungsi.
+          Gunakan konsep paduan suara dalam lagu untuk mempelajari cara menetapkan dan memanggil function.
       'Technique: Frequency Analysis':
         content1: deskripsi di sini
       Terminology Recap:
@@ -1692,32 +1692,32 @@ id-ID:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       behaviors 1 predict:
         answers:
-        - text: Peri akan berputar
+        - text: Sprite akan berputar
           feedback: Salah.
-        - text: Peri akan menyusut.
+        - text: Sprite akan menyusut.
           correct: true
           feedback: Benar!
-        - text: Peri akan bergerak.
+        - text: Sprite akan bergerak.
           feedback: Salah.
-        - text: Peri akan berubah warna.
+        - text: Sprite akan berubah warna.
           feedback: Salah
         questions:
-        - text: Klik tombol "sunting" untuk melihat Bagaimana kerja `perilaku misteri`.
-            Pelajari kode di dalamnya, lalu buat prediksi.
+        - text: Klik tombol "edit" untuk melihat cara kerja `mystery behavior`. Pelajari
+            kode di dalamnya, lalu buat prediksi.
       behaviors 1 predict_2020:
         answers:
-        - text: Peri akan berputar
+        - text: Sprite akan berputar
           feedback: Salah.
-        - text: Peri akan menyusut.
+        - text: Sprite akan menyusut.
           correct: true
           feedback: Benar!
-        - text: Peri akan bergerak.
+        - text: Sprite akan bergerak.
           feedback: Salah.
-        - text: Peri akan berubah warna.
+        - text: Sprite akan berubah warna.
           feedback: Salah
         questions:
-        - text: Klik tombol "sunting" untuk melihat Bagaimana kerja `perilaku misteri`.
-            Pelajari kode di dalamnya, lalu buat prediksi.
+        - text: Klik tombol "edit" untuk melihat cara kerja `mystery behavior`. Pelajari
+            kode di dalamnya, lalu buat prediksi.
       behaviors 4 predict:
         answers:
         - text: Ke kiri lalu ke bawah
@@ -1764,7 +1764,7 @@ id-ID:
           feedback: Salah.  Si artis menggambar persegi empat.
         - text: Si artis akan mengambar sebuah garis.
           feedback: Salah.  Si artis menggambar persegi empat.
-        - text: Sang pelukis akan mengambar sebuah kotak.
+        - text: Si artis akan mengambar sebuah kotak.
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu.
@@ -1778,7 +1778,7 @@ id-ID:
           feedback: Salah.  Si artis menggambar persegi empat.
         - text: Si artis akan mengambar sebuah garis.
           feedback: Salah.  Si artis menggambar persegi empat.
-        - text: Sang pelukis akan mengambar sebuah kotak.
+        - text: Si artis akan mengambar sebuah kotak.
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu.
@@ -1792,7 +1792,7 @@ id-ID:
           feedback: Salah.  Si artis menggambar persegi empat.
         - text: Si artis akan mengambar sebuah garis.
           feedback: Salah.  Si artis menggambar persegi empat.
-        - text: Sang pelukis akan mengambar sebuah kotak.
+        - text: Si artis akan mengambar sebuah kotak.
           correct: true
           feedback: Benar!
         - text: Saya tidak tahu.
@@ -2408,26 +2408,20 @@ id-ID:
           correct: true
           feedback: Benar!
         - text: Lebah akan mencoba mengisap nektar dari bunga dan sarang madu.
-          feedback: 'Salah. Blok `jika di bunga` membiarkan lebah mendapat madu bunga
+          feedback: 'Salah. Blok `if at flower` membiarkan lebah mendapat madu bunga
             di setiap bunga dan membuat madu di setiap sarang lebah.
 
 '
         - text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
-          feedback: 'Salah. Salah. Blok `jika di bunga` membiarkan lebah mendapat
-            madu bunga di setiap bunga dan membuat madu di setiap sarang lebah..
-
-'
+          feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
+            bunga di setiap bunga dan membuat madu di setiap sarang lebah..
         - text: Saya tidak tahu.
-          feedback: 'Blok `jika di bunga` membiarkan lebah mendapat madu bunga di
-            setiap bunga dan membuat madu di setiap sarang lebah.
-
-'
+          feedback: Blok `if at flower` membiarkan lebah mendapat madu bunga di setiap
+            bunga dan membuat madu di setiap sarang lebah.
         questions:
         - text: 'Perhatikan baik-baik kode di bawah. Menurut Anda, apa yang akan terjadi
-            setelah Anda mengklik "Jalankan"? Ingat: hanya akan ada *satu* sarang
-            lebah atau *satu* bunga di belakang setiap awan.
-
-'
+            setelah Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang lebah
+            atau *satu* bunga di balik setiap awan.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
         - text: 'Lebah akan mendapat madu bunga di setiap bunga dan membuat madu di
@@ -2437,26 +2431,20 @@ id-ID:
           correct: true
           feedback: Benar!
         - text: Lebah akan mencoba mengisap nektar dari bunga dan sarang madu.
-          feedback: 'Salah. Blok `jika di bunga` membiarkan lebah mendapat madu bunga
+          feedback: 'Salah. Blok `if at flower` membiarkan lebah mendapat madu bunga
             di setiap bunga dan membuat madu di setiap sarang lebah.
 
 '
         - text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
-          feedback: 'Salah. Salah. Blok `jika di bunga` membiarkan lebah mendapat
-            madu bunga di setiap bunga dan membuat madu di setiap sarang lebah..
-
-'
+          feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
+            bunga di setiap bunga dan membuat madu di setiap sarang lebah..
         - text: Saya tidak tahu.
-          feedback: 'Blok `jika di bunga` membiarkan lebah mendapat madu bunga di
-            setiap bunga dan membuat madu di setiap sarang lebah.
-
-'
+          feedback: Blok `if at flower` membiarkan lebah mendapat madu bunga di setiap
+            bunga dan membuat madu di setiap sarang lebah.
         questions:
         - text: 'Perhatikan baik-baik kode di bawah. Menurut Anda, apa yang akan terjadi
-            setelah Anda mengklik "Jalankan"? Ingat: hanya akan ada *satu* sarang
-            lebah atau *satu* bunga di belakang setiap awan.
-
-'
+            setelah Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang lebah
+            atau *satu* bunga di balik setiap awan.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Lebah akan bergerak maju dan hanya mengisap nektar satu kali.
@@ -3186,25 +3174,24 @@ id-ID:
         - text: Apa yang akan terjadi ketika Anda menekan "Jalankan"?
       courseE_project_exemplars_2019:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: |+
-          #Contoh Proyek
+        markdown: |-
+          # Contoh Proyek
 
-          Anda akan memulai tugas akhir Anda. Sebelum Anda mulai, luangkan waktu untuk melihat contoh proyek.
+          Anda akan memulai proyek akhir. Sebelum memulai, luangkan waktu untuk melihat contoh proyek.
 
-          ##Sprite Lab
+          ## Sprite Lab
 
-          | Tarian Raksasa (Sprite Lab) | Permainan Kue Mangkok (Sprite Lab) |
+          | Dansa Monster (Sprite Lab) | Permainan Kue Mangkok (Sprite Lab) |
           |---|---|
-          | [![Tarian Raksasa (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Permainan Kue Mangkok (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Permainan Kue Mangkok (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | [![Dansa Monster (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Dansa Monster (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Permainan Kue Mangkuk (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Permainan Kue Mangkuk (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
           | Coba tambahkan teks atau skor ke permainan ini! | Coba tambahkan teks atau skor ke permainan ini! |
 
-          ##Seniman
+          ## Artis
 
-          | Pola (Seniman) | Bunga Fungsi (Seniman) |
+          | Pola (Artis) | Bunga Function (Artis) |
           |---|---|
-          | [![Pola (Seniman)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pola (Seniman)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Bunga Fungsi (Seniman)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Bunga Fungsi (Seniman)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
-          | Ayo berkreasi dengan loop bersarang! | Ayo berkreasi dengan fungsi! |
-
+          | [![Pola (Artis)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pola (Artis)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Bunga Function (Artis)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Bunga Function (Artis)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Ayo asah kreativitas dengan nested loop! | Ayo asah kreativitas dengan function! |
       courseE_project_exemplars_2019_2020:
         content1: Tes Halaman Buku Teks Markdown
       courseExpress_EOC_2020:
@@ -3215,60 +3202,60 @@ id-ID:
         display_name: Proyek Akhir Kursus
       courseF_bee_variables_8a_2018:
         answers:
-        - text: Lebah tidak akan mengumpulkan madu bunga apa pun karena variabel tidak
-            disebut "berkumpul".
+        - text: Lebah tidak akan mengumpulkan nektar apa pun karena variabel tidak
+            disebut "kumpulkan".
           feedback: Salah. Nama variabel Anda tidak memengaruhi nilainya.
         - text: Lebah hanya akan mengumpulkan 2 madu bunga.
           correct: true
           feedback: Benar!
         - text: Lebah akan mengumpulkan semua madu bunga.
-          feedback: Salah. Variabel diatur kembali ke 0 sebelum dua fungsi panggilan
+          feedback: Salah. Variabel diatur kembali ke 0 sebelum dua panggilan function
             terakhir.
         - text: Saya tidak tahu.
-          feedback: Variabel diatur kembali ke 0 sebelum dua fungsi panggilan terakhir,
+          feedback: Variabel diatur kembali ke 0 sebelum dua panggilan function terakhir,
             di mana 1 ditambahkan setiap kali. Lebah kemudian mengumpulkan 2 unit
-            madu bunga.
+            nektar.
         questions:
-        - text: Lihat kode di bawah. Bagaimana banyak unit madu bunga yang akan dikumpulkan
-            lebah di akhir?
+        - text: Lihat kode di bawah. Berapa banyak unit nektar yang akan dikumpulkan
+            lebah pada akhirnya?
         title: Banyak Variabel Lebah
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - text: Lebah tidak akan mengumpulkan madu bunga apa pun karena variabel tidak
-            disebut "berkumpul".
+        - text: Lebah tidak akan mengumpulkan nektar apa pun karena variabel tidak
+            disebut "kumpulkan".
           feedback: Salah. Nama variabel Anda tidak memengaruhi nilainya.
         - text: Lebah hanya akan mengumpulkan 2 madu bunga.
           correct: true
           feedback: Benar!
         - text: Lebah akan mengumpulkan semua madu bunga.
-          feedback: Salah. Variabel diatur kembali ke 0 sebelum dua fungsi panggilan
+          feedback: Salah. Variabel diatur kembali ke 0 sebelum dua panggilan function
             terakhir.
         - text: Saya tidak tahu.
-          feedback: Variabel diatur kembali ke 0 sebelum dua fungsi panggilan terakhir,
+          feedback: Variabel diatur kembali ke 0 sebelum dua panggilan function terakhir,
             di mana 1 ditambahkan setiap kali. Lebah kemudian mengumpulkan 2 unit
-            madu bunga.
+            nektar.
         questions:
-        - text: Lihat kode di bawah. Bagaimana banyak unit madu bunga yang akan dikumpulkan
-            lebah di akhir?
+        - text: Lihat kode di bawah. Berapa banyak unit nektar yang akan dikumpulkan
+            lebah pada akhirnya?
         title: Banyak Variabel Lebah
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
-        - text: Lebah tidak akan mengumpulkan madu bunga apa pun karena variabel tidak
-            disebut "berkumpul".
+        - text: Lebah tidak akan mengumpulkan nektar apa pun karena variabel tidak
+            disebut "kumpulkan".
           feedback: Salah. Nama variabel Anda tidak memengaruhi nilainya.
         - text: Lebah hanya akan mengumpulkan 2 madu bunga.
           correct: true
           feedback: Benar!
         - text: Lebah akan mengumpulkan semua madu bunga.
-          feedback: Salah. Variabel diatur kembali ke 0 sebelum dua fungsi panggilan
+          feedback: Salah. Variabel diatur kembali ke 0 sebelum dua panggilan function
             terakhir.
         - text: Saya tidak tahu.
-          feedback: Variabel diatur kembali ke 0 sebelum dua fungsi panggilan terakhir,
+          feedback: Variabel diatur kembali ke 0 sebelum dua panggilan function terakhir,
             di mana 1 ditambahkan setiap kali. Lebah kemudian mengumpulkan 2 unit
-            madu bunga.
+            nektar.
         questions:
-        - text: Lihat kode di bawah. Bagaimana banyak unit madu bunga yang akan dikumpulkan
-            lebah di akhir?
+        - text: Lihat kode di bawah. Berapa banyak unit nektar yang akan dikumpulkan
+            lebah pada akhirnya?
         title: Banyak Variabel Lebah
       courseF_external_variableConstant:
         markdown: "<h2>Selengkapnya tentang Variabel</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
@@ -3285,7 +3272,7 @@ id-ID:
           saja mempelajari satu cara hebat untuk menggunakan variabel... sebagai konstanta!
           \ \nKetika Anda menggunakan variabel sebagai konstanta, Anda menetapkan
           nilai satu kali, lalu menggunakan nilai yang *sama* beberapa kali dalam
-          program Anda tanpa mengubahnya setelah Anda mengklik \"Jalankan\".  </h3>\n<br/><hr/>\n<h3>Di
+          program Anda tanpa mengubahnya setelah Anda mengklik \"Run\".\n </h3>\n<br/><hr/>\n<h3>Di
           bagian seri selanjutnya, Anda akan menulis kode dengan variabel yang *melakukan*
           perubahan di dalam program.</h3>\n\n"
       courseF_external_variableConstant_2018_2019:
@@ -3294,7 +3281,7 @@ id-ID:
           saja mempelajari satu cara hebat untuk menggunakan variabel... sebagai konstanta!
           \ \nKetika Anda menggunakan variabel sebagai konstanta, Anda menetapkan
           nilai satu kali, lalu menggunakan nilai yang *sama* beberapa kali dalam
-          program Anda tanpa mengubahnya setelah Anda mengklik \"Jalankan\".  </h3>\n<br/><hr/>\n<h3>Di
+          program Anda tanpa mengubahnya setelah Anda mengklik \"Run\".\n </h3>\n<br/><hr/>\n<h3>Di
           bagian seri selanjutnya, Anda akan menulis kode dengan variabel yang *melakukan*
           perubahan di dalam program.</h3>\n\n"
       courseF_external_variableConstant_2018_2019_2020:
@@ -3303,7 +3290,7 @@ id-ID:
           saja mempelajari satu cara hebat untuk menggunakan variabel... sebagai konstanta!
           \ \nKetika Anda menggunakan variabel sebagai konstanta, Anda menetapkan
           nilai satu kali, lalu menggunakan nilai yang *sama* beberapa kali dalam
-          program Anda tanpa mengubahnya setelah Anda mengklik \"Jalankan\".  </h3>\n<br/><hr/>\n<h3>Di
+          program Anda tanpa mengubahnya setelah Anda mengklik \"Run\".\n </h3>\n<br/><hr/>\n<h3>Di
           bagian seri selanjutnya, Anda akan menulis kode dengan variabel yang *melakukan*
           perubahan di dalam program.</h3>\n\n"
       courseF_markdown_algorithms_end:
@@ -3335,21 +3322,21 @@ id-ID:
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "# **Anda baru saja mempelajari \"persyaratan\"!**\n\n###Persyaratan
-          sangat berguna dalam ilmu komputer. Bayangkan masuk ke situs web favorit
-          Anda dan ketikkan kata sandi Anda. Situs web harus menggunakan persyaratan
+        markdown: "# **Anda baru saja mempelajari \"kondisional\"!**\n\n###Kondisional
+          sangat berguna dalam ilmu komputer. Bayangkan login ke situs web favorit
+          dan mengetikkan kata sandi Anda. Situs web harus menggunakan kondisional
           untuk memeriksa *jika* kata sandi yang Anda masukkan cocok dengan kata sandi
-          yang telah disimpan untuk nama pengguna Anda. \n\n###`Jika` itu cocok, masuk!
-          \n\n### `Lain`, sampaikan kesalahan kepada pengguna.  \n\n---\n\n## **Kosa
-          Kata untuk Diketahui**\n\n* ### **Ketentuan** - Sesuatu program yang diperiksa
-          sebelum mengizinkan tindakan\n\n* ###**Persyaratan** - Pernyataan yang hanya
-          berjalan dalam ketentuan tertentu\n\n"
+          yang telah disimpan untuk nama pengguna Anda. \n\n### `If` cocok, login!
+          \n\n### `Else`, memberikan tampilan kesalahan kepada pengguna.  \n\n---\n\n##
+          **Kosa Kata untuk Diketahui**\n\n* ### **Kondisi** - Sesuatu yang diperiksa
+          program sebelum mengizinkan tindakan\n\n* ###**Kondisional** - Pernyataan
+          yang hanya berjalan dalam kondisi tertentu\n\n"
       courseF_markdown_conditionals_intro:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "#**Dalam pelajaran ini...**\n\n### **Ketentuan** adalah hal-hal
-          yang dapat benar atau salah. \n\n###Anda akan mempelajari cara menggunakan
-          ketentuan dalam program untuk membuat sesuatu terjadi `ketika`, `hingga`,
-          atau `jika` ada sesuatu yang benar!\n---\n\n## **Blok untuk Diketahui**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
+        markdown: "#**Dalam pelajaran ini...**\n\n### **Kondisi** adalah hal-hal yang
+          dapat benar atau salah. \n\n###Anda akan mempelajari cara menggunakan kondisi
+          dalam program untuk membuat sesuatu terjadi `while`, `untill`, atau `if`
+          ada sesuatu yang benar!\n---\n\n## **Blok untuk Diketahui**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
       courseF_markdown_debugging_end:
         content1: Tes Halaman Buku Teks Markdown
         markdown: |
@@ -3370,114 +3357,115 @@ id-ID:
           * ### **Kegigihan** - Tidak menyerah
       courseF_markdown_debugging_intro:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "#Dalam pelajaran ini...\n\n###Apa yang Anda pikirkan ketika Anda
-          memikirkan bug? \n\n###Ketika kebanyakan orang memikirkan bug, mereka memikirkan
-          hal-hal yang agak menyeramkan. Dalam ilmu komputer, bug tidak aktif, tetapi
-          mereka masih dapat rumit.\n\n###Puzzle dalam pelajaran ini telah dipecahkan
-          untuk Anda! Namun, tidak secepat itu- puzzle itu sepertinya belum berfungsi.
-          Apakah ada bug di balik semua ini? \n\n---\n\n## Blok untuk Diketahui\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
+        markdown: "#Dalam pelajaran ini...\n\n###Apa yang tebersit di benak Anda ketika
+          memikirkan bug? \n\n###Ketika umumnya orang memikirkan bug, mereka terpikir
+          dengan hal-hal yang merayap-rayap menyeramkan. Dalam ilmu komputer, bug
+          tidak aktif, tetapi mereka masih dapat rumit.\n\n###Puzzle dalam pelajaran
+          ini telah dipecahkan untuk Anda! Namun, tidak secepat itu- puzzle itu sepertinya
+          belum berfungsi. Apakah ada bug di balik semua ini? \n\n---\n\n## Blok untuk
+          Diketahui\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
       courseF_markdown_forloops_end:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "#**Anda baru saja mempelajari \"loop untuk\"!**\n\n###**Loops untuk
-          adalah loop di mana Anda menetapkan nilai mulai, berhenti, dan langkah.**\n\n###Jenis
+        markdown: "#**Anda baru saja mempelajari \"for loop\"!**\n\n###**For loop
+          adalah loop untuk menetapkan nilai mulai, berhenti, dan langkah.**\n\n###Jenis
           loop `repeat` yang baru ini memberikan pengendalian lebih besar kepada Anda
-          ketika pengulangan dimulai, ketika berakhir, dan apakah loop Anda harus
-          meningkat setiap kali pengulangan berjalan.\n\n###Lebih banyak pengendalian
-          berarti Anda dapat memecahkan puzzle jauh lebih cepat! \n\n---\n\n##**Kosa
-          Kata untuk Diketahui**\n\n### **Loop untuk** - Loops untuk adalah loop yang
-          memiliki awal, akhir, dan tambahan yang telah ditentukan (interval langkah)\n\n"
+          ketika loop dimulai, ketika berakhir, dan apakah loop Anda harus meningkat
+          setiap kali pengulangan berjalan.\n\n###Lebih banyak pengendalian berarti
+          Anda dapat memecahkan puzzle jauh lebih cepat! \n\n---\n\n##**Kosa Kata
+          untuk Diketahui**\n\n### **For loop** - For loop adalah loop yang memiliki
+          awal, akhir, dan peningkatan yang sudah ditentukan (interval langkah)\n\n"
       courseF_markdown_forloops_end_2019:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "#**Anda baru saja mempelajari \"loop untuk\"!**\n\n###**Loops untuk
-          adalah loop di mana Anda menetapkan nilai mulai, berhenti, dan langkah.**\n\n###Jenis
+        markdown: "#**Anda baru saja mempelajari \"for loop\"!**\n\n###**For loop
+          adalah loop untuk menetapkan nilai mulai, berhenti, dan langkah.**\n\n###Jenis
           loop `repeat` yang baru ini memberikan pengendalian lebih besar kepada Anda
-          ketika pengulangan dimulai, ketika berakhir, dan apakah loop Anda harus
-          meningkat setiap kali pengulangan berjalan.\n\n###Lebih banyak pengendalian
-          berarti Anda dapat memecahkan puzzle jauh lebih cepat! \n\n---\n\n##**Kosa
-          Kata untuk Diketahui**\n\n### **Loop untuk** - Loops untuk adalah loop yang
-          memiliki awal, akhir, dan tambahan yang telah ditentukan (interval langkah)\n\n"
+          ketika loop dimulai, ketika berakhir, dan apakah loop Anda harus meningkat
+          setiap kali pengulangan berjalan.\n\n###Lebih banyak pengendalian berarti
+          Anda dapat memecahkan puzzle jauh lebih cepat! \n\n---\n\n##**Kosa Kata
+          untuk Diketahui**\n\n### **For loop** - For loop adalah loop yang memiliki
+          awal, akhir, dan peningkatan yang sudah ditentukan (interval langkah)\n\n"
       courseF_markdown_forloops_end_2019_2020:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "#**Anda baru saja mempelajari \"loop untuk\"!**\n\n###**Loops untuk
-          adalah loop di mana Anda menetapkan nilai mulai, berhenti, dan langkah.**\n\n###Jenis
+        markdown: "#**Anda baru saja mempelajari \"for loop\"!**\n\n###**For loop
+          adalah loop untuk menetapkan nilai mulai, berhenti, dan langkah.**\n\n###Jenis
           loop `repeat` yang baru ini memberikan pengendalian lebih besar kepada Anda
-          ketika pengulangan dimulai, ketika berakhir, dan apakah loop Anda harus
-          meningkat setiap kali pengulangan berjalan.\n\n###Lebih banyak pengendalian
-          berarti Anda dapat memecahkan puzzle jauh lebih cepat! \n\n---\n\n##**Kosa
-          Kata untuk Diketahui**\n\n### **Loop untuk** - Loops untuk adalah loop yang
-          memiliki awal, akhir, dan tambahan yang telah ditentukan (interval langkah)\n\n"
+          ketika loop dimulai, ketika berakhir, dan apakah loop Anda harus meningkat
+          setiap kali pengulangan berjalan.\n\n###Lebih banyak pengendalian berarti
+          Anda dapat memecahkan puzzle jauh lebih cepat! \n\n---\n\n##**Kosa Kata
+          untuk Diketahui**\n\n### **For loop** - For loop adalah loop yang memiliki
+          awal, akhir, dan peningkatan yang sudah ditentukan (interval langkah)\n\n"
       courseF_markdown_forloops_intro:
         content1: Tes Halaman Buku Teks Markdown
         markdown: |+
-          #**Dalam pelajaran ini...**
+          # **Dalam pelajaran ini...**
 
           ###Hari ini Anda akan mempelajari jenis loop `repeat` yang baru. Ini adalah pratinjau dari blok yang akan Anda gunakan:
 
           ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
 
-          ###* Untung*nya, loop baru ini akan menjadikan memecahkan puzzle seperti ini sangat mudah!
+          ### *Untung*nya, loop baru ini akan benar-benar memudahkan pemecahan puzzle seperti ini!
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
       courseF_markdown_forloops_intro_2019:
         content1: Tes Halaman Buku Teks Markdown
         markdown: |+
-          #**Dalam pelajaran ini...**
+          # **Dalam pelajaran ini...**
 
           ###Hari ini Anda akan mempelajari jenis loop `repeat` yang baru. Ini adalah pratinjau dari blok yang akan Anda gunakan:
 
           ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
 
-          ###* Untung*nya, loop baru ini akan menjadikan memecahkan puzzle seperti ini sangat mudah!
+          ### *Untung*nya, loop baru ini akan benar-benar memudahkan pemecahan puzzle seperti ini!
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
       courseF_markdown_forloops_intro_2019_2020:
         content1: Tes Halaman Buku Teks Markdown
         markdown: |+
-          #**Dalam pelajaran ini...**
+          # **Dalam pelajaran ini...**
 
           ###Hari ini Anda akan mempelajari jenis loop `repeat` yang baru. Ini adalah pratinjau dari blok yang akan Anda gunakan:
 
           ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
 
-          ###* Untung*nya, loop baru ini akan menjadikan memecahkan puzzle seperti ini sangat mudah!
+          ### *Untung*nya, loop baru ini akan benar-benar memudahkan pemecahan puzzle seperti ini!
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
       courseF_markdown_loops_end:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "# **Anda baru saja mempelajari \"loop\"!**  \n\n###**Lingkaran
-          adalah tindakan melakukan sesuatu berulang kali.** Kata lain untuk melakukan
-          sesuatu lagi adalah berulang.\n\n###Lingkaran sangat berguna untuk pola
-          berulang. Mungkin akan membantu jika Anda menulis program tanpa loop terlebih
-          dahulu, lalu mencoba menemukan polanya. \n\n###Ketika Anda melihatnya, lekatkan
-          pola itu ke dalam blok `ulangi`!\n\n---\n\n##**Kosa Kata untuk Diketahui**\n\n*
+        markdown: "# **Anda baru saja mempelajari \"loop\"!**  \n\n###**Loop adalah
+          tindakan melakukan sesuatu berulang kali.** Kata lain untuk melakukan sesuatu
+          lagi adalah mengulang.\n\n###Loop sangat berguna untuk mengulang pola. Mungkin
+          akan membantu jika Anda menulis program tanpa loop terlebih dahulu, baru
+          kemudian coba temukan polanya. \n\n###Ketika Anda melihatnya, lekatkan pola
+          itu ke dalam blok `repeat`!\n\n---\n\n##**Kosa Kata untuk Diketahui**\n\n*
           ### **Loop** - Tindakan melakukan sesuatu berulang kali\n\n* ### **Repeat**
           - Lakukan sesuatu lagi\n"
       courseF_markdown_loops_intro:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "#Dalam pelajaran ini...\n\n###Bayangkan Anda ingin sifat Anda bergerak
-          maju **5** kali. Hal ini akan sangat mudah - cukup pindahkan keluar **5**
-          blok bergerak maju. Sekarang, bayangkan Anda ingin sifat Anda bergerak maju
-          **5.000** kali! \n\n###Bagaimana lama waktu yang Anda butuhkan untuk memindahkan
-          keluar **5.000** blok? \n\n###Berharap ada cara mudah untuk melakukan hal
-          ini? Ada!\n\n---\n\n## Blok untuk Diketahui\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
+        markdown: "#Dalam pelajaran ini...\n\n###Bayangkan Anda menginginkan karakter
+          bergerak maju **5** kali. Hal ini akan sangat mudah - cukup pindahkan **5**
+          blok bergerak maju keluar. Sekarang, bayangkan Anda menginginkan karakter
+          bergerak maju **5.000** kali! \n\n###Berapa lama waktu yang Anda butuhkan
+          untuk memindahkan **5.000** blok keluar? \n\n###Berharap ada cara mudah
+          untuk melakukan hal ini? Ada!\n\n---\n\n## Blok untuk Diketahui\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
       courseF_markdown_nestedloops_end:
         content1: Tes Halaman Buku Teks Markdown
-        markdown: "# **Anda baru saja mempelajari \"loop bersarang\"!**\n\n###**Loops
-          bersarang adalah loop di dalam loop.** Anggap saja seperti loop luar, dengan
-          loop lain yang membuat semuanya menjadi nikmat dan nyaman serta bersarang
-          di dalam loop luar. \n\n###Loops bersarang sangat layak untuk mengulangi
-          pola dari pola. Itu dapat sangat kuat jika digunakan dengan benar!\n\n---\n\n##**Kosa
-          Kata untuk Diketahui**\n\n### __Loops Bersarang__ - Loop dalam loop\n\n"
+        markdown: "# **Anda baru saja mempelajari \"nested loop\"!**\n\n###**Nested
+          loop adalah loop di dalam loop.** Anggap saja seperti loop luar, dengan
+          loop lain yang merasa serba nyaman, damai, dan bersarang di dalam loop luar.
+          \n\n###Nested loop sangat bagus untuk mengulangi polanya pola. Loop jenis
+          ini sangat andal jika digunakan dengan benar!\n\n---\n\n##**Kosa Kata untuk
+          Diketahui**\n\n### __Nested Loops__ - Loop dalam loop\n\n"
       courseF_markdown_nestedloops_intro:
         content1: Tes Halaman Buku Teks Markdown
         markdown: "#**Dalam pelajaran ini...**\n\n###Pernahkah Anda bertanya-tanya
           apa yang akan terjadi jika Anda meletakkan loop *di dalam loop lain*? \n\n###Mungkin
-          hanya membuat Anda gila!\n\n###Jika loop normal layak mengulangi pola, menurut
-          Anda, apakah loop dalam loop lain akan layak? Ayo cari tahu!\n\n---\n\n##
-          **Blok untuk Diketahui**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
+          hanya membuat Anda gila!\n\n###Jika loop normal sudah bagus untuk mengulang
+          pola, menurut Anda, loop dalam loop lain itu apa keunggulannya? Ayo cari
+          tahu!\n\n---\n\n## **Blok untuk Diketahui**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
       courseF_markdown_variables_end:
         content1: Tes Halaman Buku Teks Markdown
         markdown: "# **Anda baru saja mempelajari \"variabel\"!**\n\n###Untuk menggunakan
@@ -3507,7 +3495,7 @@ id-ID:
         markdown: |+
           #**Dalam pelajaran ini...**
 
-          ###*Variabel* adalah tempat penampungan untuk informasi yang dapat berubah. Memiliki tempat penampungan memungkinkan untuk menulis program, bahkan ketika Anda tidak akan mengetahui semua nilai Anda sampai nanti!
+          ###*Variabel* adalah tempat penampungan untuk informasi yang dapat berubah. Keberadaan tempat penampungan memudahkan penulisan program, meskipun Anda tidak akan mengetahui semua nilai sampai waktu belakangan!
 
 
           ---
@@ -3522,7 +3510,7 @@ id-ID:
         markdown: |+
           #**Dalam pelajaran ini...**
 
-          ###*Variabel* adalah tempat penampungan untuk informasi yang dapat berubah. Memiliki tempat penampungan memungkinkan untuk menulis program, bahkan ketika Anda tidak akan mengetahui semua nilai Anda sampai nanti!
+          ###*Variabel* adalah tempat penampungan untuk informasi yang dapat berubah. Keberadaan tempat penampungan memudahkan penulisan program, meskipun Anda tidak akan mengetahui semua nilai sampai waktu belakangan!
 
 
           ---
@@ -3537,7 +3525,7 @@ id-ID:
         markdown: |+
           #**Dalam pelajaran ini...**
 
-          ###*Variabel* adalah tempat penampungan untuk informasi yang dapat berubah. Memiliki tempat penampungan memungkinkan untuk menulis program, bahkan ketika Anda tidak akan mengetahui semua nilai Anda sampai nanti!
+          ###*Variabel* adalah tempat penampungan untuk informasi yang dapat berubah. Keberadaan tempat penampungan memudahkan penulisan program, meskipun Anda tidak akan mengetahui semua nilai sampai waktu belakangan!
 
 
           ---
@@ -3563,8 +3551,8 @@ id-ID:
         - text: Saya tidak tahu.
           feedback: Salah. Setiap kali melewati loop `for`, artis menggambar garis
             lebih panjang yang juga lebih tebal.
-        markdown: "Kami menggunakan penghitung dari loop `untuk` kami guna mengubah
-          lebar kuas pada gambar ini.  \n\n\n"
+        markdown: "Kami menggunakan penghitung dari loop `for` untuk mengubah lebar
+          kuas pada gambar ini.  \n\n\n"
         questions:
         - text: Apa yang akan terjadi ketika Anda mengklik "Jalankan"?
       courseF_multi_artist_for10_predict1_2018:
@@ -3583,8 +3571,8 @@ id-ID:
         - text: Saya tidak tahu.
           feedback: Salah. Setiap kali melewati loop `for`, artis menggambar garis
             lebih panjang yang juga lebih tebal.
-        markdown: "Kami menggunakan penghitung dari loop `untuk` kami guna mengubah
-          lebar kuas pada gambar ini.  \n\n\n"
+        markdown: "Kami menggunakan penghitung dari loop `for` untuk mengubah lebar
+          kuas pada gambar ini.  \n\n\n"
         questions:
         - text: Apa yang akan terjadi ketika Anda mengklik "Jalankan"?
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -3603,8 +3591,8 @@ id-ID:
         - text: Saya tidak tahu.
           feedback: Salah. Setiap kali melewati loop `for`, artis menggambar garis
             lebih panjang yang juga lebih tebal.
-        markdown: "Kami menggunakan penghitung dari loop `untuk` kami guna mengubah
-          lebar kuas pada gambar ini.  \n\n\n"
+        markdown: "Kami menggunakan penghitung dari loop `for` untuk mengubah lebar
+          kuas pada gambar ini.  \n\n\n"
         questions:
         - text: Apa yang akan terjadi ketika Anda mengklik "Jalankan"?
       courseF_multi_artist_for10_predict1_2018_2019_2020:
@@ -3623,8 +3611,8 @@ id-ID:
         - text: Saya tidak tahu.
           feedback: Salah. Setiap kali melewati loop `for`, artis menggambar garis
             lebih panjang yang juga lebih tebal.
-        markdown: "Kami menggunakan penghitung dari loop `untuk` kami guna mengubah
-          lebar kuas pada gambar ini.  \n\n\n"
+        markdown: "Kami menggunakan penghitung dari loop `for` untuk mengubah lebar
+          kuas pada gambar ini.  \n\n\n"
         questions:
         - text: Apa yang akan terjadi ketika Anda mengklik "Jalankan"?
       courseF_multi_artist_fwp2_predict1:
@@ -3781,7 +3769,7 @@ id-ID:
           feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
             jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
         markdown: |+
-          Ah!  Penggunaan loop `untuk` menjadikan puzzle ini jauh lebih mudah!
+          Ah!  Penggunaan loop `for` menjadikan puzzle ini jauh lebih mudah!
 
 
         questions:
@@ -3801,10 +3789,10 @@ id-ID:
           feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
             jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
         - text: Saya tidak tahu.
-          feedback: Loop`untuk` akan membuat lebah mengumpulkan jumlah madu bunga
-            yang tepat, tetapi hanya diatur untuk mencapai 4 bunga.
+          feedback: Loop `for` akan membuat lebah mengumpulkan jumlah nektar yang
+            tepat, tetapi hanya diatur untuk mencapai 4 bunga.
         markdown: |+
-          Ah!  Penggunaan loop `untuk` menjadikan puzzle ini jauh lebih mudah!
+          Ah!  Penggunaan loop `for` menjadikan puzzle ini jauh lebih mudah!
 
 
         questions:
@@ -3824,10 +3812,10 @@ id-ID:
           feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
             jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
         - text: Saya tidak tahu.
-          feedback: Loop`untuk` akan membuat lebah mengumpulkan jumlah madu bunga
-            yang tepat, tetapi hanya diatur untuk mencapai 4 bunga.
+          feedback: Loop `for` akan membuat lebah mengumpulkan jumlah nektar yang
+            tepat, tetapi hanya diatur untuk mencapai 4 bunga.
         markdown: |+
-          Ah!  Penggunaan loop `untuk` menjadikan puzzle ini jauh lebih mudah!
+          Ah!  Penggunaan loop `for` menjadikan puzzle ini jauh lebih mudah!
 
 
         questions:
@@ -3847,10 +3835,10 @@ id-ID:
           feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
             jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
         - text: Saya tidak tahu.
-          feedback: Loop`untuk` akan membuat lebah mengumpulkan jumlah madu bunga
-            yang tepat, tetapi hanya diatur untuk mencapai 4 bunga.
+          feedback: Loop `for` akan membuat lebah mengumpulkan jumlah nektar yang
+            tepat, tetapi hanya diatur untuk mencapai 4 bunga.
         markdown: |+
-          Ah!  Penggunaan loop `untuk` menjadikan puzzle ini jauh lebih mudah!
+          Ah!  Penggunaan loop `for` menjadikan puzzle ini jauh lebih mudah!
 
 
         questions:
