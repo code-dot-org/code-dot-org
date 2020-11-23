@@ -70,7 +70,11 @@
             "name": "zeichne rechtes Bein"
           },
           "draw body and arms": {
-            "name": "zeichne Körper und Arme"
+            "name": "zeichne Körper und Arme",
+            "parameters": {
+              "armlength": "Armlänge",
+              "bodylength": "Körperlänge"
+            }
           },
           "draw a head": {
             "name": "zeichne einen Kopf"
@@ -376,7 +380,7 @@
         },
         "Course 4 Artist Functions Inspiration": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           }
         },
         "Course 4 Artist Functions challenge": {
@@ -384,7 +388,7 @@
             "name": "zeichne eine Linie aus Quadraten"
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           }
         },
         "Course 4 Bee Params 1": {
@@ -459,20 +463,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "Funktionsblock"
+          },
+          "patrol": {
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "Figur"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "Figur"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -480,7 +489,8 @@
             "parameters": {
               "actor": "Figur",
               "speed": "Geschwindigkeit"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -488,7 +498,8 @@
             "parameters": {
               "actor": "Figur",
               "speed": "Geschwindigkeit"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -524,7 +535,7 @@
             "name": "nach unten setzen/rückwärts"
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           }
         },
         "Course 4 SCF 1a": {
@@ -537,7 +548,7 @@
         },
         "Course 4 SCF 2": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "draw octagons": {
             "name": "zeichne Oktagons"
@@ -551,7 +562,7 @@
         },
         "Course 4 SCF 3": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "do something": {
             "name": "Funktionsblock"
@@ -680,13 +691,15 @@
           "n-sided shape": {
             "name": "Form mit n Seiten",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw a loop": {
             "name": "eine Schleife zeichnen",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw spiral circle": {
@@ -700,7 +713,8 @@
           "draw a loop": {
             "name": "eine Schleife zeichnen",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "n-sided shape": {
@@ -817,15 +831,18 @@
         },
         "NEW Course 4 Artist Functions 11": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw a line of  squares": {
+            "name": "zeichne 6 Quadrate"
           }
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
@@ -833,7 +850,7 @@
         },
         "NEW Course 4 Artist Functions 13": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
@@ -847,7 +864,7 @@
             "name": "zeichne eine Linie aus Quadraten"
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -857,7 +874,8 @@
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "zeichne ein Quadrat"
+            "name": "zeichne ein Quadrat",
+            "description": "Zeichnet ein Quadrat mit der Seitenlänge 100 Pixel."
           }
         },
         "NEW Course 4 Artist Functions 7": {
@@ -867,7 +885,8 @@
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "name": "zeichne ein Dreieck"
+            "name": "zeichne ein Dreieck",
+            "description": "Zeichnet ein Dreieck mit der Seitenlänge 100."
           }
         },
         "NEW Course 4 Artist Functions 9": {
@@ -901,13 +920,15 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "do something": {
             "name": "Funktionsblock",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -915,7 +936,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -923,7 +945,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -931,7 +954,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -939,7 +963,8 @@
           "draw a spiral edge": {
             "name": "eine Spiralkante zeichnen",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -949,16 +974,22 @@
             "parameters": {
               "points": "Punkte",
               "length": "Länge"
-            }
+            },
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge"
           },
           "draw a circle": {
-            "name": "Zeichne einen Kreis"
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
           },
           "draw a pinwheel": {
             "name": "zeichne ein Windrad",
             "parameters": {
               "length": "Länge",
-              "repeat": "wiederhole"
+              "repeat": "wiederhole",
+              "sides": "Kanten"
             }
           },
           "draw a triangle": {
@@ -970,7 +1001,8 @@
           "draw a shape": {
             "name": "zeichne eine Form",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw a house": {
@@ -982,7 +1014,8 @@
           "draw a square": {
             "name": "zeichne ein Quadrat",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -1073,7 +1106,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -1083,13 +1117,15 @@
             "parameters": {
               "height": "Höhe",
               "actor": "Figur"
-            }
+            },
+            "description": "springen Funktionsblock mit den Parametern Höhe und Figur"
           },
           "patrol": {
             "parameters": {
               "actor": "Figur",
               "speed": "Geschwindigkeit"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "New Artist Project": {
@@ -1310,10 +1346,13 @@
             }
           },
           "draw a polygon": {
-            "name": "zeichne ein Vieleck"
+            "name": "zeichne ein Vieleck",
+            "parameters": {
+              "sides": "Kanten"
+            }
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "do something": {
             "name": "Funktionsblock"
@@ -3056,7 +3095,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -3064,7 +3104,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -3072,7 +3113,8 @@
           "draw a spiral edge": {
             "name": "eine Spiralkante zeichnen",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -3081,7 +3123,8 @@
             "name": "eine Spiralkante zeichnen",
             "parameters": {
               "length": "Länge",
-              "min": "min"
+              "min": "min",
+              "sides": "Kanten"
             }
           }
         },
@@ -3090,7 +3133,8 @@
             "name": "eine Spiralkante zeichnen",
             "parameters": {
               "length": "Länge",
-              "min": "min"
+              "min": "min",
+              "sides": "Kanten"
             }
           }
         },
@@ -3100,16 +3144,22 @@
             "parameters": {
               "points": "Punkte",
               "length": "Länge"
-            }
+            },
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge"
           },
           "draw a circle": {
-            "name": "Zeichne einen Kreis"
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
           },
           "draw a pinwheel": {
             "name": "zeichne ein Windrad",
             "parameters": {
               "length": "Länge",
-              "repeat": "wiederhole"
+              "repeat": "wiederhole",
+              "sides": "Kanten"
             }
           },
           "draw a triangle": {
@@ -3121,7 +3171,8 @@
           "draw a shape": {
             "name": "zeichne eine Form",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw a house": {
@@ -3140,7 +3191,8 @@
             "name": "eine Spiralkante zeichnen",
             "parameters": {
               "length": "Länge",
-              "min": "min"
+              "min": "min",
+              "sides": "Kanten"
             }
           }
         },
@@ -3152,10 +3204,13 @@
             }
           },
           "draw a polygon": {
-            "name": "zeichne ein Vieleck"
+            "name": "zeichne ein Vieleck",
+            "parameters": {
+              "sides": "Kanten"
+            }
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "do something": {
             "name": "Funktionsblock"
@@ -3163,7 +3218,7 @@
         },
         "courseF_artist_fwp_challenge2": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "do something": {
             "name": "Funktionsblock"
