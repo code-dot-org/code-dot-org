@@ -119,7 +119,7 @@ class ActivitySectionCard extends Component {
 
   state = {
     levelPosToRemove: null,
-    currentYPositions: [],
+    currentYOffsets: [],
     draggedLevelPos: null
   };
 
@@ -179,7 +179,7 @@ class ActivitySectionCard extends Component {
     const deltaScrollTop = scrollTop - this.dragState.initialScrollTop;
     const draggedYPos = this.levelTokenMetrics[this.state.draggedLevelPos].top;
     let newPosition = this.state.draggedLevelPos;
-    const currentYPositions = this.dragState.startingYMidpoints.map(
+    const currentYOffsets = this.dragState.startingYMidpoints.map(
       (startingYMidpoint, index) => {
         const midpoint = startingYMidpoint - deltaScrollTop;
         const position = index + 1;
@@ -201,7 +201,7 @@ class ActivitySectionCard extends Component {
       }
     );
     this.dragState.newPosition = newPosition;
-    this.setState({currentYPositions});
+    this.setState({currentYOffsets});
     this.props.updateTargetActivitySection(clientY);
     this.triggerScroll(clientY);
   };
@@ -268,7 +268,7 @@ class ActivitySectionCard extends Component {
     this.dragState = this.initialDragState;
     this.setState({
       draggedLevelPos: null,
-      currentYPositions: []
+      currentYOffsets: []
     });
   };
 
@@ -471,9 +471,7 @@ class ActivitySectionCard extends Component {
               activityPosition={activityPosition}
               dragging={!!draggedLevelPos}
               draggedLevelPos={scriptLevel.position === draggedLevelPos}
-              delta={
-                this.state.currentYPositions[scriptLevel.position - 1] || 0
-              }
+              delta={this.state.currentYOffsets[scriptLevel.position - 1] || 0}
               handleDragStart={this.handleDragStart}
             />
           ))}
