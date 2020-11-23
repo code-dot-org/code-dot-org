@@ -115,7 +115,7 @@ class ActivitySectionCard extends Component {
   /**
    * To be populated with the bounding client rect of each level token element.
    */
-  metrics = {};
+  levelTokenMetrics = {};
 
   state = {
     levelPosToRemove: null,
@@ -128,20 +128,20 @@ class ActivitySectionCard extends Component {
   };
 
   handleDragStart = (position, {clientY}) => {
-    // The bounding boxes in this.metrics will be stale if the user scrolled the
+    // The bounding boxes in this.levelTokenMetrics will be stale if the user scrolled the
     // page since the last time this component was updated. Therefore, force the
-    // component to rerender so that this.metrics will be up to date.
+    // component to rerender so that this.levelTokenMetrics will be up to date.
     this.forceUpdate(() => {
       const startingPositions = this.props.activitySection.scriptLevels.map(
         scriptLevel => {
-          const metrics = this.metrics[scriptLevel.position];
+          const metrics = this.levelTokenMetrics[scriptLevel.position];
           return metrics.top + metrics.height / 2;
         }
       );
       this.setState(
         {
           draggedLevelPos: position,
-          dragHeight: this.metrics[position].height + tokenMargin,
+          dragHeight: this.levelTokenMetrics[position].height + tokenMargin,
           initialClientY: clientY,
           newPosition: position,
           startingPositions
@@ -157,7 +157,7 @@ class ActivitySectionCard extends Component {
 
   handleDrag = ({clientY}) => {
     const delta = clientY - this.state.initialClientY;
-    const dragPosition = this.metrics[this.state.draggedLevelPos].top;
+    const dragPosition = this.levelTokenMetrics[this.state.draggedLevelPos].top;
     let newPosition = this.state.draggedLevelPos;
     const currentPositions = this.state.startingPositions.map(
       (midpoint, index) => {
@@ -435,7 +435,7 @@ class ActivitySectionCard extends Component {
                   const metrics = ReactDOM.findDOMNode(
                     levelToken
                   ).getBoundingClientRect();
-                  this.metrics[scriptLevel.position] = metrics;
+                  this.levelTokenMetrics[scriptLevel.position] = metrics;
                 }
               }}
               key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
