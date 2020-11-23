@@ -1,10 +1,10 @@
 ---
-title: Contact International Partners
+title: Ota yhteyttä kansainvälisiin kumppaneihin
 ---
 
 {{ signup_button }}
 
-# Contact International Partners
+# Ota yhteyttä kansainvälisiin kumppaneihin
 
 Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
 

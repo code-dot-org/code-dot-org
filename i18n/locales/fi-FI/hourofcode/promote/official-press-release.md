@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+title: Hour of Coden lehdistötiedote vaaleissa valituille virkamiehille
 ---
 
 {{ signup_button }}
