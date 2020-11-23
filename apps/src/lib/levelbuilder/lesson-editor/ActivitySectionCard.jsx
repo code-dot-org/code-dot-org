@@ -173,7 +173,8 @@ class ActivitySectionCard extends Component {
     const draggedYPos = this.levelTokenMetrics[this.state.draggedLevelPos].top;
     let newPosition = this.state.draggedLevelPos;
     const currentYPositions = this.dragState.startingYMidpoints.map(
-      (midpoint, index) => {
+      (startingYMidpoint, index) => {
+        const midpoint = startingYMidpoint - deltaScrollTop;
         const position = index + 1;
         if (position === this.state.draggedLevelPos) {
           return deltaClientY + deltaScrollTop;
