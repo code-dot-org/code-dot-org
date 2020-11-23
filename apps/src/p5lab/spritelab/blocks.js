@@ -577,7 +577,7 @@ export default {
 
     generator.gamelab_behavior_get = function() {
       const name = Blockly.JavaScript.variableDB_.getName(
-        this.getTitleValue('VAR'),
+        this.getTitle_('VAR').id,
         Blockly.Procedures.NAME_TYPE
       );
       const extraArgs = [];
