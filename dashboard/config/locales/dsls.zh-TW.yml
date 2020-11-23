@@ -2316,7 +2316,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - text: 小藝術家將畫出一個三邊相等的三角形。
@@ -2331,7 +2331,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - text: 小藝術家將畫出一個三邊相等的三角形。
@@ -2346,7 +2346,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - text: 小藝術家將畫出一個三邊相等的三角形。
@@ -2361,7 +2361,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 小藝術家會畫出一個正方形。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -2374,7 +2374,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
@@ -2387,7 +2387,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
@@ -2400,7 +2400,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
@@ -2413,46 +2413,46 @@ zh-TW:
         - text: 我不知道。
           feedback: 農夫將在這 3 個迴圈的每個迴圈中收集 4 個南瓜。4 乘 3 等於 12！
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」後，農夫將收集多少個南瓜？
+        - text: 仔細查看下面的程式碼。點擊「運行」後，農夫將收集多少個南瓜？
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - text: 這條程式不會失敗。Scrat 將獲得橡樹果實。
-          feedback: 不正確。Scrat 在最後一次轉彎的時候走錯了路。
-        - text: Scrat 在最後一次轉彎時將走錯路。
+        - text: 這個程式不會失敗。鼠奎特將獲得橡樹果實。
+          feedback: 不正確。鼠奎特在最後一次轉彎的時候走錯了路。
+        - text: 鼠奎特在最後一次轉彎時將走錯路。
           correct: true
           feedback: 正確！
-        - text: Scrat 邁出的步數太少，最終不能得到橡樹果實。
+        - text: 鼠奎特邁出的步數太少，最終不能得到橡樹果實。
           feedback: 不正確。Scrat 轉錯方向後，還差了一步。
         - text: 我不知道。
           feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
         questions:
-        - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
+        - text: 仔細查看下面的程式碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - text: 這條程式不會失敗。Scrat 將獲得橡樹果實。
-          feedback: 不正確。Scrat 在最後一次轉彎的時候走錯了路。
-        - text: Scrat 在最後一次轉彎時將走錯路。
+        - text: 這個程式不會失敗。鼠奎特將獲得橡樹果實。
+          feedback: 不正確。鼠奎特在最後一次轉彎的時候走錯了路。
+        - text: 鼠奎特在最後一次轉彎時將走錯路。
           correct: true
           feedback: 正確！
-        - text: Scrat 邁出的步數太少，最終不能得到橡樹果實。
+        - text: 鼠奎特邁出的步數太少，最終不能得到橡樹果實。
           feedback: 不正確。Scrat 轉錯方向後，還差了一步。
         - text: 我不知道。
           feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
         questions:
-        - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
+        - text: 仔細查看下面的程式碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
-        - text: 這條程式不會失敗。Scrat 將獲得橡樹果實。
-          feedback: 不正確。Scrat 在最後一次轉彎的時候走錯了路。
-        - text: Scrat 在最後一次轉彎時將走錯路。
+        - text: 這個程式不會失敗。鼠奎特將獲得橡樹果實。
+          feedback: 不正確。鼠奎特在最後一次轉彎的時候走錯了路。
+        - text: 鼠奎特在最後一次轉彎時將走錯路。
           correct: true
           feedback: 正確！
-        - text: Scrat 邁出的步數太少，最終不能得到橡樹果實。
+        - text: 鼠奎特邁出的步數太少，最終不能得到橡樹果實。
           feedback: 不正確。Scrat 轉錯方向後，還差了一步。
         - text: 我不知道。
           feedback: 第一個錯誤是 Scrat 在最後一次轉彎的時候走錯了路。
         questions:
-        - text: 仔細查看下面的代碼。導致該程式失敗的第一個錯誤是什麼？
+        - text: 仔細查看下面的程式碼。導致該程式失敗的第一個錯誤是什麼？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - text: 小松鼠即將拿到橡果.程式碼中沒有錯誤.
@@ -2470,55 +2470,55 @@ zh-TW:
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
-        - text: 這隻鳥會撞到 TNT。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 我不知道。
-          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 這個程式碼讓小鳥抓到了豬豬。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
-        - text: 這隻鳥會撞到 TNT。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 我不知道。
-          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 這個程式碼讓小鳥抓到了豬豬。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
-        - text: 這隻鳥會撞到 TNT。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 我不知道。
-          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 這個程式碼讓小鳥抓到了豬豬。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - text: 這隻鳥離豬豬只差了一步。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 小鳥會成功抓住豬豬。
           correct: true
           feedback: 正確！
-        - text: 這隻鳥會撞到 TNT。
-          feedback: 不正確。此代碼完美地讓小鳥抓到了豬豬。
+        - text: 這隻鳥會撞到炸藥。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         - text: 我不知道。
-          feedback: 此代碼完美地讓小鳥抓到了豬豬。
+          feedback: 這個程式碼讓小鳥抓到了豬豬。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 不會移動。
@@ -2583,7 +2583,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict2_2018:
         answers:
         - text: BB-8 在第一次循環會跑太遠。
@@ -2596,7 +2596,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - text: BB-8 在第一次循環會跑太遠。
@@ -2609,7 +2609,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - text: BB-8 在第一次循環會跑太遠。
@@ -2622,7 +2622,7 @@ zh-TW:
         - text: 我不知道。
           feedback: 第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
-        - text: 仔細查看下面的代碼。點擊「運行」時會發生什麼？
+        - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseD_EOC_2020:
         display_name: 課程結束專案
         description: 你已經到達課程D的最後一課!選擇一個要創建的項目
@@ -4300,7 +4300,7 @@ zh-TW:
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
-        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
+        - text: 使用此程式碼 Laurel 將收集到 4 個寶藏。
           feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
           correct: true
@@ -4310,10 +4310,10 @@ zh-TW:
         - text: 我不知道。
           feedback: Laurel 會收集到所有寶石。
         questions:
-        - text: 仔細查看下面的代碼。如果代碼運行到最後（忽略任何錯誤），那麼 Laurel 會收集多少寶藏？
+        - text: 仔細查看下面的程式碼。如果程式碼運行到最後（忽略任何錯誤），那麼 Laurel 會收集多少寶藏？
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
+        - text: 使用此程式碼 Laurel 將收集到 4 個寶藏。
           feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
           correct: true
@@ -4328,7 +4328,7 @@ zh-TW:
 '
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
+        - text: 使用此程式碼 Laurel 將收集到 4 個寶藏。
           feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
           correct: true
@@ -4343,7 +4343,7 @@ zh-TW:
 '
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - text: 使用此代碼 Laurel 將收集到 4 個寶藏。
+        - text: 使用此程式碼 Laurel 將收集到 4 個寶藏。
           feedback: 不正確。Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         - text: Laurel 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
           correct: true
