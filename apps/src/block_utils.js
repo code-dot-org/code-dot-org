@@ -433,7 +433,7 @@ exports.cleanBlocks = function(blocksDom) {
 
 /**
  * Adds any functions from functionsXml to blocksXml. If a function with the
- * same name is already present in blocksXml, it won't be added again.
+ * same id is already present in blocksXml, it won't be added again.
  */
 exports.appendNewFunctions = function(blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
@@ -447,12 +447,12 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       ? startBlocksDom.ownerDocument
       : document;
     const name = ownerDocument.evaluate(
-      'title[@name="NAME"]/text()',
+      'title[@name="NAME"]',
       func,
       null,
-      XPathResult.STRING_TYPE,
+      XPathResult.FIRST_ORDERED_NODE_TYPE,
       null
-    ).stringValue;
+    ).singleNodeValue.id;
     const type = ownerDocument.evaluate(
       '@type',
       func,
@@ -462,7 +462,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
+        `//block[@type="${type}"]/title[@id="${name}"]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
