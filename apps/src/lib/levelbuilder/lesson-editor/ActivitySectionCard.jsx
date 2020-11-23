@@ -126,6 +126,7 @@ class ActivitySectionCard extends Component {
   initialDragState = {
     dragHeight: null,
     initialClientY: null,
+    initialScrollTop: null,
     newPosition: null,
     startingYMidpoints: null
   };
@@ -147,6 +148,7 @@ class ActivitySectionCard extends Component {
       this.dragState = {
         dragHeight: this.levelTokenMetrics[position].height + tokenMargin,
         initialClientY: clientY,
+        initialScrollTop: $(window).scrollTop(),
         newPosition: position,
         startingYMidpoints
       };
@@ -166,13 +168,15 @@ class ActivitySectionCard extends Component {
 
   handleDrag = ({clientY}) => {
     const deltaClientY = clientY - this.dragState.initialClientY;
+    const scrollTop = $(window).scrollTop();
+    const deltaScrollTop = scrollTop - this.dragState.initialScrollTop;
     const draggedYPos = this.levelTokenMetrics[this.state.draggedLevelPos].top;
     let newPosition = this.state.draggedLevelPos;
     const currentYPositions = this.dragState.startingYMidpoints.map(
       (midpoint, index) => {
         const position = index + 1;
         if (position === this.state.draggedLevelPos) {
-          return deltaClientY;
+          return deltaClientY + deltaScrollTop;
         }
         if (position < this.state.draggedLevelPos && draggedYPos < midpoint) {
           newPosition--;
