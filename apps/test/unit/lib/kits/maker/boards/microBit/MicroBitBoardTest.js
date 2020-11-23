@@ -18,9 +18,6 @@ function boardSetupAndStub(board) {
   sinon.stub(board.boardClient_, 'connectBoard').callsFake(() => {
     board.boardClient_.myPort = {write: () => {}};
     sinon.stub(board.boardClient_.myPort, 'write');
-    // Stubbing versions to replicate connection
-    board.boardClient_.firmataVersion = 'Firmata Protocol';
-    board.boardClient_.firmwareVersion = 'micro:bit Firmata';
   });
 }
 
@@ -48,7 +45,6 @@ describe('MicroBitBoard', () => {
   describe('Maker Board Interface', () => {
     itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
       boardSetupAndStub(board);
-
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
       sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
     });
@@ -428,65 +424,6 @@ describe('MicroBitBoard', () => {
         board.createButton(1);
         return board.destroy();
       });
-    });
-  });
-
-  describe(`checkExpectedFirmware() with expected versions`, () => {
-    it('resolves when the firmata and firmware version are as expected', done => {
-      board.nodeSerialAvailable = true;
-      board
-        .connect()
-        .then(() => {
-          // We expect to hit this case, due to expected firmware and firmata version
-          done();
-        })
-        .catch(() => {
-          done(
-            new Error(
-              'Expected promise to resolve based on firmata and firmware version, but it resolved'
-            )
-          );
-        });
-    });
-  });
-});
-
-describe(`MicroBitBoard with error set-up`, () => {
-  let board;
-  beforeEach(() => {
-    // Construct a board to test on
-    window.SerialPort = {};
-    board = new MicroBitBoard();
-    board.boardClient_ = new MicrobitStubBoard();
-    stubOpenSerialPort(board);
-    sinon.stub(board.boardClient_, 'connectBoard').callsFake(() => {
-      board.boardClient_.myPort = {write: () => {}};
-      sinon.stub(board.boardClient_.myPort, 'write');
-      // Stubbing versions to replicate connection
-      board.boardClient_.firmataVersion = 'unexpected';
-      board.boardClient_.firmwareVersion = 'micro:bit Firmata';
-    });
-  });
-
-  afterEach(() => {
-    board = undefined;
-  });
-
-  describe(`checkExpectedFirmware() with unexpected versions`, () => {
-    it('rejects when the firmata and firmware version are not as expected', done => {
-      // Only checks this for Maker App, not Chrome App, so setting NodeSerialAvailable to true
-      board.nodeSerialAvailable = true;
-      board
-        .connect()
-        .then(() => {
-          done(
-            new Error(
-              'Expected promise to reject based on firmata and firmware version, but it resolved'
-            )
-          );
-        })
-        // We expect to hit this case, due to bad firmware and firmata version
-        .catch(done);
     });
   });
 });
