@@ -95,6 +95,7 @@ class ScriptEditor extends React.Component {
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool,
+    initialIsMigrated: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -147,7 +148,8 @@ class ScriptEditor extends React.Component {
       descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
       teacherResources: resources,
-      hasImportedLessonDescriptions: false
+      hasImportedLessonDescriptions: false,
+      isMigrated: this.props.initialIsMigrated
     };
   }
 
@@ -251,7 +253,8 @@ class ScriptEditor extends React.Component {
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
-      resourceTypes: this.state.teacherResources.map(resource => resource.type)
+      resourceTypes: this.state.teacherResources.map(resource => resource.type),
+      is_migrated: this.state.isMigrated
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -685,6 +688,17 @@ class ScriptEditor extends React.Component {
                 script are visible to students in their section.
               </p>
             </HelpTip>
+          </label>
+          <label>
+            Use new lesson editor
+            <input
+              type="checkbox"
+              checked={this.state.isMigrated}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({isMigrated: !this.state.isMigrated})
+              }
+            />
           </label>
           <LessonExtrasEditor
             lessonExtrasAvailable={this.state.lessonExtrasAvailable}
