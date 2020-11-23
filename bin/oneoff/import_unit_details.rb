@@ -5,6 +5,7 @@ require 'optparse'
 require 'uri'
 require 'net/http'
 require_relative '../../deployment'
+require 'cdo/lesson_import_helper'
 
 # Once this script is ready, only levelbuilder should be added to this list.
 raise unless [:development, :adhoc].include? rack_env
@@ -99,13 +100,15 @@ def main(options)
     next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
-      lesson.update_from_curriculum_builder(cb_lesson)
+      LessonImportHelper.update_lesson(lesson, cb_lesson)
       log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
     end
 
     paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
     lockable_lessons_to_update = script.lessons.select(&:lockable?).reject {|l| paired_lesson_ids.include?(l.id)}
-    lockable_lessons_to_update.each(&:update_from_curriculum_builder)
+    lockable_lessons_to_update.each do |lockable|
+      LessonImportHelper.update_lesson(lockable)
+    end
 
     updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
       # Make sure the lesson group update does not also try to update lessons.
@@ -117,6 +120,8 @@ def main(options)
       lesson_group.update_from_curriculum_builder(cb_chapter)
     end
     script.fix_script_level_positions
+
+    script.update!(show_calendar: !!cb_unit['show_calendar'])
 
     puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"
   end

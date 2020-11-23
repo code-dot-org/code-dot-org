@@ -152,6 +152,7 @@ class Script < ActiveRecord::Base
     tts
     is_course
     background
+    show_calendar
   )
 
   def self.twenty_hour_script
