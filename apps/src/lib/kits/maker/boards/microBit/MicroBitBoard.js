@@ -96,21 +96,7 @@ export default class MicroBitBoard extends EventEmitter {
   checkExpectedFirmware() {
     return Promise.resolve()
       .then(() => this.openSerialPort())
-      .then(serialPort => this.boardClient_.connectBoard(serialPort))
-      .then(() => {
-        // Expect this.boardClient_.firmataVersion to equal "Firmata Protocol <version number>".
-        // Expect this.boardClient_.firmwareVersion to contain "micro:bit Firmata 1.0".
-        // TODO - Add a path for chromeserialport to identify firmata and firmware version.
-        if (
-          (this.boardClient_.firmataVersion.includes('Firmata Protocol') &&
-            this.boardClient_.firmwareVersion.includes('micro:bit Firmata')) ||
-          !this.nodeSerialAvailable
-        ) {
-          return Promise.resolve();
-        } else {
-          return Promise.reject();
-        }
-      });
+      .then(serialPort => this.boardClient_.connectBoard(serialPort));
   }
 
   /**

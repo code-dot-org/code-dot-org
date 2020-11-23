@@ -1519,6 +1519,7 @@
   "selectSong": "Seleccionar canción:",
   "selectStudent": "Filtrar por estudiante",
   "selectStudentsToMove": "Selecciona a estudiantes para moverlos a una nueva sección en la tabla. Selecciona en el menú desplegable a qué sección quieres mover a tus estudiantes. Elige \"Otro docente\" si deseas mover a los estudiantes a la sección de otro docente. Al mover a los estudiantes, no se borrarán sus progresos.",
+  "sendLessonLinkCopied": "Enlace copiado",
   "sendToPhone": "Enviar al teléfono",
   "settings": "Configuración",
   "setUpClass": "Configurar tu clase",

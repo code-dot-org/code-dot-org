@@ -336,15 +336,15 @@
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...",
-          "Function_intro_Ryan_a": "Funkciu môžete volať v programe viackrát. Skúste ju volať dvakrát, aby ste vyriešili tento hlavolam."
+          "Function_intro_Ryan_a": "Funkciu môžeš zavolať v programe viackrát. Skús ju volať dvakrát a vyrieš tak túto úlohu."
         },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...",
-          "Function_intro_Ryan_a": "Funkciu môžete volať v programe viackrát. Skúste ju volať dvakrát, aby ste vyriešili tento hlavolam."
+          "Function_intro_Ryan_a": "Funkciu môžeš zavolať v programe viackrát. Skús ju volať dvakrát a vyrieš tak túto úlohu."
         },
         "Function intro Ryan_2020": {
           "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...",
-          "Function_intro_Ryan_a": "Funkciu môžete volať v programe viackrát. Skúste ju volať dvakrát, aby ste vyriešili tento hlavolam."
+          "Function_intro_Ryan_a": "Funkciu môžeš zavolať v programe viackrát. Skús ju volať dvakrát a vyrieš tak túto úlohu."
         },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Vidíš **Morské lampáše** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ako ich môžeš použiť v podmienke a dostať sa tak s nimi k oceánskemu monumentu?  "
@@ -428,15 +428,15 @@
           "MC_HOC_2017_04_Cole_b": "Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere."
         },
         "MC_HOC_2017_05_Cole": {
-          "MC_HOC_2017_05_Cole_a": "Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj', aby si dokončil túto úlohu.",
+          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj'. Tak dokončíš túto úlohu.",
           "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš."
         },
         "MC_HOC_2017_05_Cole_2019": {
-          "MC_HOC_2017_05_Cole_a": "Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj', aby si dokončil túto úlohu.",
+          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj'. Tak dokončíš túto úlohu.",
           "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš."
         },
         "MC_HOC_2017_05_Cole_2020": {
-          "MC_HOC_2017_05_Cole_a": "Vedel si, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj', aby si dokončil túto úlohu.",
+          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj'. Tak dokončíš túto úlohu.",
           "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš."
         },
         "MC_HOC_2017_06_Cole": {
@@ -452,18 +452,18 @@
           "MC_HOC_2017_06_Cole_b": "Pomôž agentovi postaviť most po celej šírke rieky! "
         },
         "MC_HOC_2017_07_Cole": {
-          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom je vyčistiť chodník k banskému vozíku.",
-          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia 'uvoľni cestu'. Z panela s nástrojmi vyber malý zelený blok 'uvoľni cestu' toľkokrát, koľko potrebuješ.",
+          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom, je vyčistiť chodník k banskému vozíku.",
+          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `vymaž cestu`. Z panela nástrojov vyber malý zelený blok `vymaž cestu` toľkokrát, koľko potrebuješ.",
           "MC_HOC_2017_07_Cole_b": "Skús zmiešať bloky funkcie s ďalšími blokmi z panela nástrojov a vyrieš túto úlohu."
         },
         "MC_HOC_2017_07_Cole_2019": {
-          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom je vyčistiť chodník k banskému vozíku.",
-          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia 'uvoľni cestu'. Z panela s nástrojmi vyber malý zelený blok 'uvoľni cestu' toľkokrát, koľko potrebuješ.",
+          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom, je vyčistiť chodník k banskému vozíku.",
+          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `vymaž cestu`. Z panela nástrojov vyber malý zelený blok `vymaž cestu` toľkokrát, koľko potrebuješ.",
           "MC_HOC_2017_07_Cole_b": "Skús zmiešať bloky funkcie s ďalšími blokmi z panela nástrojov a vyrieš túto úlohu."
         },
         "MC_HOC_2017_07_Cole_2020": {
-          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom je vyčistiť chodník k banskému vozíku.",
-          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia 'uvoľni cestu'. Z panela s nástrojmi vyber malý zelený blok 'uvoľni cestu' toľkokrát, koľko potrebuješ.",
+          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom, je vyčistiť chodník k banskému vozíku.",
+          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `vymaž cestu`. Z panela nástrojov vyber malý zelený blok `vymaž cestu` toľkokrát, koľko potrebuješ.",
           "MC_HOC_2017_07_Cole_b": "Skús zmiešať bloky funkcie s ďalšími blokmi z panela nástrojov a vyrieš túto úlohu."
         },
         "MC_HOC_2017_10_RETRY": {
@@ -494,13 +494,13 @@
           "MC_HOC_2017_08_RY_c": "Cez lávu sa najľahšie dostaneš po prerušovanej čiare."
         },
         "MC_HOC_2017_FP20x20": {
-          "MC_HOC_2017_13_Cole_a": "Skús pomocou agenta vybudovať cesty pre banský vozík, aby si mohol objavovať svet!"
+          "MC_HOC_2017_13_Cole_a": "Skús pomocou agenta vybudovať cesty pre banský vozík a začni objavovať svet!"
         },
         "MC_HOC_2017_FP20x20_2019": {
-          "MC_HOC_2017_13_Cole_a": "Skús pomocou agenta vybudovať cesty pre banský vozík, aby si mohol objavovať svet!"
+          "MC_HOC_2017_13_Cole_a": "Skús pomocou agenta vybudovať cesty pre banský vozík a začni objavovať svet!"
         },
         "MC_HOC_2017_FP20x20_2020": {
-          "MC_HOC_2017_13_Cole_a": "Skús pomocou agenta vybudovať cesty pre banský vozík, aby si mohol objavovať svet!"
+          "MC_HOC_2017_13_Cole_a": "Skús pomocou agenta vybudovať cesty pre banský vozík a začni objavovať svet!"
         },
         "NEW Course 4 Artist Params inspire": {
           "double_loop": "Skús vložiť cyklus \"for\" dovnútra cyklu \"opakuj\"."
@@ -2947,7 +2947,7 @@
           "courseC_artist_loops1a_b": "Použi tento blok na nakreslenie nálepky!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
-          "courseC_artist_loops1a_a": "Toto je prvý blok, ktorý budeš potrebovať:\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_a": "Toto je prvý blok, ktorý budeš potrebovať:\n\n<xml>\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n</block>\n</xml>",
           "courseC_artist_loops1a_b": "Použi tento blok na nakreslenie nálepky!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
         },
         "courseC_artist_loops1a_2020": {
@@ -2999,7 +2999,7 @@
           "courseC_artist_loops4a_a": "Použi tento blok a skoč dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "Použi tento blok a skoč dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!",
+          "courseC_artist_loops4a_a": "Použi tento blok, aby si skočil dopredu:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n</block>\n</xml>\n\nNezabudni zmeniť to, ako ďaleko skočíš!",
           "courseC_artist_loops4a_b": "Tvoj program by mal vyzerať takto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
@@ -3029,7 +3029,7 @@
         "courseC_artist_loops5b_2019": {
           "courseC_artist_loops5b_a": "Použi tento blok na nastavenie tvojho vzoru:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
           "courseC_artist_loops5b_b": "Na vytvorenie dizajnu, ako je ten hore, použi blok posuň sa dozadu rovnako veľakrát ako blok posuň sa dopredu.",
-          "courseC_artist_loops5b_c": "Tvoj program by mal vyzerať takto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops5b_c": "Tvoj program by mal vyzerať nejako takto!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">rainbowLine</title>\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"jump_to\">\n<title name=\"VALUE\">13</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveBackward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">???</title>\n<title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Cat</title>\n<next>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">???</title>\n<next>\n<block type=\"sticker\">\n<title name=\"VALUE\">Dog</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseC_artist_loops5b_2020": {
           "courseC_artist_loops5b_a": "Použi tento blok na nastavenie tvojho vzoru:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
@@ -3093,8 +3093,8 @@
           "courseC_artist_loopsPrePre1a_b": "Aby si sa posunul dopredu o 50 pixelov, použi tento blok:\n\n<xml><block type=\"draw_move_by_constant\">\n\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "*\"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\"*",
-          "courseC_artist_prog2_b": "Máš problém so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "-   \"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\" \\*",
+          "courseC_artist_prog2_b": "Máš problém, so zabočením? Použi blok <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "*\"Ak použiješ blok <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, nakreslím čiaru.\"*",
@@ -4381,22 +4381,22 @@
           "courseD_artist_binary_challenge2_a": "V pôvodnom kóde je potrebné opraviť len pár riadkov."
         },
         "courseD_artist_nestedLoops1": {
-          "courseD_artist_nestedLoops1_a": "Najjednoduchší spôsob, ako nakresliť obrázok je posúvať sa dopredu a otáčať sa vpravo.",
+          "courseD_artist_nestedLoops1_a": "Najjednoduchší spôsob, ako nakresliť obrázok, je posúvať sa dopredu a otáčať sa vpravo.",
           "courseD_artist_nestedLoops1_b": "Trojuholník môžeš nakresliť pomocou bloku `opakuj` s dvomi blokmi v jeho vnútri. Ktoré bloky použiješ?",
           "courseD_artist_nestedLoops1_c": "Skús si napísať príkazy na papier a hľadaj vzory, ktoré sa dajú zjednodušiť opakovaním."
         },
         "courseD_artist_nestedLoops1_2018": {
-          "courseD_artist_nestedLoops1_a": "Najjednoduchší spôsob, ako nakresliť obrázok je posúvať sa dopredu a otáčať sa vpravo.",
+          "courseD_artist_nestedLoops1_a": "Najjednoduchší spôsob, ako nakresliť obrázok, je posúvať sa dopredu a otáčať sa vpravo.",
           "courseD_artist_nestedLoops1_b": "Trojuholník môžeš nakresliť pomocou bloku `opakuj` s dvomi blokmi v jeho vnútri. Ktoré bloky použiješ?",
           "courseD_artist_nestedLoops1_c": "Skús si napísať príkazy na papier a hľadaj vzory, ktoré sa dajú zjednodušiť opakovaním."
         },
         "courseD_artist_nestedLoops1_2019": {
-          "courseD_artist_nestedLoops1_a": "Najjednoduchší spôsob, ako nakresliť obrázok je posúvať sa dopredu a otáčať sa vpravo.",
+          "courseD_artist_nestedLoops1_a": "Najjednoduchší spôsob, ako nakresliť obrázok, je posúvať sa dopredu a otáčať sa vpravo.",
           "courseD_artist_nestedLoops1_b": "Trojuholník môžeš nakresliť pomocou bloku `opakuj` s dvomi blokmi v jeho vnútri. Ktoré bloky použiješ?",
           "courseD_artist_nestedLoops1_c": "Skús si napísať príkazy na papier a hľadaj vzory, ktoré sa dajú zjednodušiť opakovaním."
         },
         "courseD_artist_nestedLoops1_2020": {
-          "courseD_artist_nestedLoops1_a": "Najjednoduchší spôsob, ako nakresliť obrázok je posúvať sa dopredu a otáčať sa vpravo.",
+          "courseD_artist_nestedLoops1_a": "Najjednoduchší spôsob, ako nakresliť obrázok, je posúvať sa dopredu a otáčať sa vpravo.",
           "courseD_artist_nestedLoops1_b": "Trojuholník môžeš nakresliť pomocou bloku `opakuj` s dvomi blokmi v jeho vnútri. Ktoré bloky použiješ?",
           "courseD_artist_nestedLoops1_c": "Skús si napísať príkazy na papier a hľadaj vzory, ktoré sa dajú zjednodušiť opakovaním."
         },
@@ -4421,19 +4421,19 @@
           "courseD_artist_nestedLoops1a_c": "Ak chceš meniť farby, použi blok `nastav farbu` vo svojom kóde. Nemusíš použiť tie isté farby, aké sú na predlohe."
         },
         "courseD_artist_nestedLoops2": {
-          "courseD_artist_nestedLoops2_a": "Vytvor vnorený cyklus tak, že svoj trojuholník vložíš do dalšieho bloku`opakuj`.",
+          "courseD_artist_nestedLoops2_a": "Vytvor vnorený cyklus tak, že svoj trojuholník vložíš do ďalšieho bloku `opakuj`.",
           "courseD_artist_nestedLoops2_b": "Nezabudni vložiť blok `otoč sa` dovnútra cyklu tak, aby sa umelec otočil po dokončení každého trojuholníka."
         },
         "courseD_artist_nestedLoops2_2018": {
-          "courseD_artist_nestedLoops2_a": "Vytvor vnorený cyklus tak, že svoj trojuholník vložíš do dalšieho bloku`opakuj`.",
+          "courseD_artist_nestedLoops2_a": "Vytvor vnorený cyklus tak, že svoj trojuholník vložíš do ďalšieho bloku `opakuj`.",
           "courseD_artist_nestedLoops2_b": "Nezabudni vložiť blok `otoč sa` dovnútra cyklu tak, aby sa umelec otočil po dokončení každého trojuholníka."
         },
         "courseD_artist_nestedLoops2_2019": {
-          "courseD_artist_nestedLoops2_a": "Vytvor vnorený cyklus tak, že svoj trojuholník vložíš do dalšieho bloku`opakuj`.",
+          "courseD_artist_nestedLoops2_a": "Vytvor vnorený cyklus tak, že svoj trojuholník vložíš do ďalšieho bloku `opakuj`.",
           "courseD_artist_nestedLoops2_b": "Nezabudni vložiť blok `otoč sa` dovnútra cyklu tak, aby sa umelec otočil po dokončení každého trojuholníka."
         },
         "courseD_artist_nestedLoops2_2020": {
-          "courseD_artist_nestedLoops2_a": "Vytvor vnorený cyklus tak, že svoj trojuholník vložíš do dalšieho bloku`opakuj`.",
+          "courseD_artist_nestedLoops2_a": "Vytvor vnorený cyklus tak, že svoj trojuholník vložíš do ďalšieho bloku `opakuj`.",
           "courseD_artist_nestedLoops2_b": "Nezabudni vložiť blok `otoč sa` dovnútra cyklu tak, aby sa umelec otočil po dokončení každého trojuholníka."
         },
         "courseD_artist_nestedLoops3": {
@@ -4533,22 +4533,22 @@
           "courseD_artist_nestedLoops8_c": "Použi vnorený cyklus:\n\n-   Opakuj 8 krát\n    -   Nakresli šesťuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops9": {
-          "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tento krát s ním vykresli štvorce.",
+          "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tentokrát s ním vykresli štvorce.",
           "courseD_artist_nestedLoops9_b": "Pripoj ďalší blok vnorených cyklov k prvému bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.",
           "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n    -   Nakresli trojuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops9_2018": {
-          "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tento krát s ním vykresli štvorce.",
+          "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tentokrát s ním vykresli štvorce.",
           "courseD_artist_nestedLoops9_b": "Pripoj ďalší blok vnorených cyklov k prvému bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.",
           "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n    -   Nakresli trojuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops9_2019": {
-          "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tento krát s ním vykresli štvorce.",
+          "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tentokrát s ním vykresli štvorce.",
           "courseD_artist_nestedLoops9_b": "Pripoj ďalší blok vnorených cyklov k prvému bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.",
           "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n    -   Nakresli trojuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },
         "courseD_artist_nestedLoops9_2020": {
-          "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tento krát s ním vykresli štvorce.",
+          "courseD_artist_nestedLoops9_a": "Začni s vnoreným cyklom ako v predošlej úlohe, ale tentokrát s ním vykresli štvorce.",
           "courseD_artist_nestedLoops9_b": "Pripoj ďalší blok vnorených cyklov k prvému bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.",
           "courseD_artist_nestedLoops9_c": "Použi dva vnorené cykly:\n\n-   Opakuj 8 krát\n    -   Nakresli štvorec\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov\n-   Opakuj 8 krát\n    -   Nakresli trojuholník\n    -   Skoč dopredu o 50 pixelov\n    -   Otoč sa vpravo o 45 stupňov"
         },

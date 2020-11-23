@@ -1501,6 +1501,7 @@
   "selectSong": "Şarkı seç:",
   "selectStudent": "Öğrenciye göre filtrele",
   "selectStudentsToMove": "Tabloda yeni bölüme geçmeleri için öğrencileri seçiniz. Aşağıya doğru öğrencilerinizi yönlendirmek istediğiniz bölümün hangisi olacağını seçiniz. Eğer öğrencinizi başka bir öğretmenin kısmına yönlendirmek istiyorsanız, \"Başka Öğretmen\" kısmını seçiniz. Öğrencileri taşımak şu ana kadar yaptıklarını silmeyecektir.",
+  "sendLessonLinkCopied": "Bağlantı kopyalandı!",
   "sendToPhone": "Telefona Gönder",
   "settings": "Ayarlar",
   "setUpClass": "Sınıfını ayarla",

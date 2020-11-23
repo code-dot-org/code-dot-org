@@ -1179,6 +1179,8 @@ hu:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vízalatti
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': téli
             undefined: Semennyit
+      gamelab_setBackgroundImageAs:
+        text: háttér beállítása {IMG}
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL}"
         options:
@@ -1712,7 +1714,6 @@ hu:
             '"stoneBricks"': kőtéglák
             '"mossyStoneBricks"': mohás kőtéglák
             '"crackedStoneBricks"': törött kőtéglák
-            '"decorativeStoneBricks"': dekorációs kőtéglák
             '"blueCoralBlock"': kék korall blokk
             '"pinkCoralBlock"': rózsaszín koráll blokk
             '"magentaCoralBlock"': bíbor korall blokk

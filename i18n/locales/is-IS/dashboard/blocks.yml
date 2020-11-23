@@ -1199,6 +1199,8 @@ is:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': neðansjávar
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vetur
             undefined: ekkert
+      gamelab_setBackgroundImageAs:
+        text: stilla bakgrunn á {IMG}
       gamelab_setProp:
         text: stilla {SPRITE} {PROPERTY} á {VAL}
         options:
@@ -1208,8 +1210,6 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
-      gamelab_setQuestion:
-        text: fá svar við {QUESTION} fyrir breytu {VAR}
       gamelab_setSizes:
         text: stilla {SPRITE} {PROPERTY} á {N}%
         options:
@@ -1754,7 +1754,6 @@ is:
             '"stoneBricks"': steinn
             '"mossyStoneBricks"': mosavaxinn steinn
             '"crackedStoneBricks"': sprunginn steinn
-            '"decorativeStoneBricks"': útskorinn steinn
             '"blueCoralBlock"': blár kórall
             '"pinkCoralBlock"': bleikur kórall
             '"magentaCoralBlock"': blárauður kórall

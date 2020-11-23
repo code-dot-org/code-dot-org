@@ -10,15 +10,15 @@ id:
       Comment: Komentar
       Comments: Komentar
       Conditionals: Kondisi
-      Dancers: Penari
-      Default: Standar
+      Dancers: Pedansa
+      Default: Default
       Events: kegiatan
       Functions: fungsi
-      'Functions ': fungsi
-      Game/Score: Permainan/nilai
-      Games/Score: Permainan/nilai
-      Groups: Kelompok
-      Input: Masukan
+      'Functions ': 'Function '
+      Game/Score: Permainan/Skor
+      Games/Score: Permainan/Skor
+      Groups: Grup
+      Input: Input
       Locations: Lokasi
       Logic: Logika
       Loops: Loop
@@ -28,5 +28,5 @@ id:
       Sprites: Sprites
       Text: Teks
       Variables: variabel
-      'Variables ': 'Variabel '
+      'Variables ': 'Variable '
       World: Dunia

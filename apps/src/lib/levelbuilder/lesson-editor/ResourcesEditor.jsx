@@ -10,6 +10,7 @@ import Button from '@cdo/apps/templates/Button';
 import {connect} from 'react-redux';
 import {
   addResource,
+  editResource,
   removeResource
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 
@@ -26,20 +27,37 @@ const styles = {
   oddRow: {
     backgroundColor: color.lightest_gray
   },
-
+  actionsColumn: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white'
+  },
   remove: {
     fontSize: 14,
     color: 'white',
     background: color.dark_red,
     cursor: 'pointer',
-    textAlign: 'center'
+    textAlign: 'center',
+    width: '48%'
+  },
+  edit: {
+    fontSize: 14,
+    color: 'white',
+    background: color.default_blue,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '48%'
   }
 };
 
 class ResourcesEditor extends Component {
   static propTypes = {
+    courseVersionId: PropTypes.number,
+
+    // Provided by redux
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     addResource: PropTypes.func.isRequired,
+    editResource: PropTypes.func.isRequired,
     removeResource: PropTypes.func.isRequired
   };
 
@@ -69,7 +87,17 @@ class ResourcesEditor extends Component {
    */
   debouncedSearch = _.debounce((q, callback) => {
     const searchLimit = 7;
-    const searchUrl = `/resourcesearch/${encodeURIComponent(q)}/${searchLimit}`;
+    const params = {
+      query: encodeURIComponent(q),
+      limit: searchLimit
+    };
+    if (this.props.courseVersionId) {
+      params['courseVersionId'] = this.props.courseVersionId;
+    }
+    const query_params = Object.keys(params)
+      .map(key => `${key}=${params[key]}`)
+      .join('&');
+    const searchUrl = `/resourcesearch?${query_params}`;
     // Note, we don't return the fetch promise chain because in a debounced
     // function we're not guaranteed to return anything, and it's not a great
     // interface to sometimes return undefined when there's still async work
@@ -116,8 +144,16 @@ class ResourcesEditor extends Component {
     this.props.addResource(resource);
   };
 
+  saveEditResource = resource => {
+    this.props.editResource(resource);
+  };
+
   handleRemove = key => {
     this.props.removeResource(key);
+  };
+
+  handleEdit = resource => {
+    this.setState({newResourceDialogOpen: true, editingResource: resource});
   };
 
   handleAddResourceClick = e => {
@@ -126,17 +162,25 @@ class ResourcesEditor extends Component {
   };
 
   handleNewResourceDialogClose = () => {
-    this.setState({newResourceDialogOpen: false});
+    this.setState({newResourceDialogOpen: false, editingResource: null});
   };
 
   render() {
     return (
       <div>
-        <AddResourceDialog
-          isOpen={this.state.newResourceDialogOpen}
-          onSave={this.addResource}
-          handleClose={this.handleNewResourceDialogClose}
-        />
+        {this.state.newResourceDialogOpen && (
+          <AddResourceDialog
+            isOpen={this.state.newResourceDialogOpen}
+            onSave={
+              this.state.editingResource
+                ? this.saveEditResource
+                : this.addResource
+            }
+            handleClose={this.handleNewResourceDialogClose}
+            existingResource={this.state.editingResource}
+            courseVersionId={this.props.courseVersionId}
+          />
+        )}
         Resources
         <input
           type="hidden"
@@ -175,12 +219,16 @@ class ResourcesEditor extends Component {
                 >
                   <td>{resource.key}</td>
                   <td>{resource.name}</td>
-                  <td>{resource.properties ? resource.properties.type : ''}</td>
-                  <td>
-                    {resource.properties ? resource.properties.audience : ''}
-                  </td>
+                  <td>{resource.type}</td>
+                  <td>{resource.audience}</td>
                   <td>{resource.url}</td>
-                  <td style={{backgroundColor: 'white'}}>
+                  <td style={styles.actionsColumn}>
+                    <div
+                      style={styles.edit}
+                      onMouseDown={() => this.handleEdit(resource)}
+                    >
+                      <i className="fa fa-edit" />
+                    </div>
                     <div
                       style={styles.remove}
                       onMouseDown={() => this.handleRemove(resource.key)}
@@ -211,6 +259,7 @@ export default connect(
   }),
   {
     addResource,
+    editResource,
     removeResource
   }
 )(ResourcesEditor);

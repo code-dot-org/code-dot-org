@@ -1498,6 +1498,7 @@
   "selectSong": "选择歌曲：",
   "selectStudent": "按学生筛选",
   "selectStudentsToMove": "选择学生来移动到表格中新的小组。选择想要将学生移动到下拉框中的哪个小组。如果想将学生移动到不同教师的小组中，选择“其他教师”。移动学生不会清除他们的进度。",
+  "sendLessonLinkCopied": "链接已复制！",
   "sendToPhone": "发送到手机",
   "settings": "设置",
   "setUpClass": "设置你的班级",
