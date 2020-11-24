@@ -25,7 +25,7 @@
 
 require 'cdo/shared_constants'
 
-class Level < ActiveRecord::Base
+class Level < ApplicationRecord
   include SharedConstants
 
   belongs_to :game
