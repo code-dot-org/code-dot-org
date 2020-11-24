@@ -5,7 +5,7 @@ theme: responsive
 
 # Code.org’s Commitment to Accessibility
 
-Code.org believes computer science is foundational for all students and we are committed to equity, access, and opportunity in our organizational [values](https://code.org/about/values). To achieve this goal, we work to identify and eliminate barriers that prevent the inclusion and full participation of students and educators with disabilities.
+Code.org believes computer science is foundational for all students and we are committed to equity, access, and opportunity in our organizational [values](/about/values). To achieve this goal, we work to identify and eliminate barriers that prevent the inclusion and full participation of students and educators with disabilities.
 
 We are working on a holistic strategy to support accessibility throughout our platform. Our vision is to close gaps in access to computer science education for students with disabilities; establish a measure of learning and inclusion; and make improvements to our tools based on this data—while incorporating feedback from our stakeholders to support the learning needs of all students. 
 
@@ -28,16 +28,16 @@ Code.org is committed to continually improving the accessibility of our tools. A
 #### Current Accommodations:
 * [Microsoft Immersive Reader](https://www.onenote.com/learningtools) is enabled in all Code.org lessons in the instructions panel, offering customization for students to improve reading comprehension and focus.
         
-<img src="/images/accessibility/MicrosoftImmersiveReaderIcon.png" alt="Microsoft Immersive Reader icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
+<img src="/images/fit-1164/accessibility/MicrosoftImmersiveReaderIcon.jpg" alt="Microsoft Immersive Reader icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
 
 * In-house Text To Speech capabilities are enabled in many lessons in the instructions panel.
 
-<img src="/images/accessibility/TextToSpeechIcon.png" alt="Text to Speech icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
+<img src="/images/fit-1164/accessibility/TextToSpeechIcon.jpg" alt="Text to Speech icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
 
 * All videos we create are captioned in English by our team or volunteers.
-* Videos used in lessons have show notes allowing students to read a summary of the video content along with still images captured from the video.
+* Videos used in lessons have "show notes" allowing students to read a summary of the video content along with still images captured from the video.
 
-<img src="/images/accessibility/ShowNotesCircled.png" alt="Show Notes Tab" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
+<img src="/images/fit-1164/accessibility/ShowNotesCircled.jpg" alt="Show Notes Tab" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
 
 * [Unplugged lessons](https://code.org/curriculum/unplugged) are designed to be used in a classroom setting without computers and can be adjusted to meet the accommodation needs of individual learners.
 
@@ -65,10 +65,10 @@ Additionally, we recommend the following resources for students with disabilitie
 |[AccessCSForAll](https://www.washington.edu/accesscomputing/accesscsforall) | Content Provider | K-12 | An organization that provides resources for teachers bringing accessible computing to secondary schools and for high school students with disabilities to connect with mentors in the technology space. |
 |[Khan Academy](https://www.khanacademy.org/)| Content Provider | K-12 | Hosts a [Code.org curriculum](https://www.khanacademy.org/computing/code-org) about Computers and the Internet, as well as other computing curricula with various accommodations, including the ability to [reduce animation motion, captions, transcripts, and the ability to hide visually dependent content](https://support.khanacademy.org/hc/en-us/articles/360015623271-How-does-Khan-Academy-make-our-content-more-accessible-#:~:text=At%20Khan%20Academy%2C%20we%20care,on%20the%20browsers%20we%20support). |
 |[CSForAll](https://www.csforall.org/projects_and_programs/accessibility-pledge/)| Content Provider | K-12 | Spearheading projects and programs with different organizations across the United States. |
-|[Apple Everyone Can Code](https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf)| Product Provider | K-12 | Provides VoiceOver (modified TTS) and adapted curriculum for students with accessibility-needs. |
-|[Code Jumper](https://codejumper.com/)| Product Provider | K-6 | Physical coding aid/resource for students with visual impairments. |
-|[Snap Circuits](https://www.aph.org/product/snap-circuits-jr-access-pack/)| Product Provider | K-6 | Educational product that teaches electronics with solderless snap-together electronic components. Can include an access pack for students with visual impairments. |
-|[Sphero](https://sphero.com/products/sphero-bolt)| Product Provider | K-12 | Interactive coding robotic ball & STEM education kit for students with intellectual disabilities. Needs to be paired with an appropriate application. |
+|[Everyone Can Code](https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf)| Product Provider | K-12 | A curriculum designed by Apple for [Swift Playgrounds](https://www.apple.com/swift/playgrounds/) that provides VoiceOver (modified TTS) and adapted curriculum for students with accessibility needs. |
+|[Code Jumper](https://codejumper.com/)| Product Provider | K-6 | A physical coding aid/resource for students with visual impairments. |
+|[Snap Circuits](https://www.aph.org/product/snap-circuits-jr-access-pack/)| Product Provider | K-6 | An educational product that teaches electronics with solderless snap-together electronic components. Can include an access pack for students with visual impairments. |
+|[Sphero](https://sphero.com/products/sphero-bolt)| Product Provider | K-12 | An interactive coding robotic ball & STEM education kit for students with intellectual disabilities. Needs to be paired with an appropriate application. |
 
 
 ## Let Us Know How We Can Improve
