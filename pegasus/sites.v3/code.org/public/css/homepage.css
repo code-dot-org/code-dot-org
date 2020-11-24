@@ -180,6 +180,57 @@ body.modal-open .supreme-container{
   }
 }
 
+#homepage .hero-messages-ai {
+  text-align: left;
+  padding-left: 100px;
+}
+
+#homepage .join_us_ai {
+  text-align:left;
+  padding-left: 100px;
+  color:  #143441;
+}
+
+/* desktop */
+@media screen and (min-width: 601px) {
+  #homepage .hero-messages-ai .hero-super-message {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 24px;
+  }
+
+  #homepage .hero-messages-ai .hero-message {
+    font-size: 44px;
+    color: #3CFFF8;
+    margin-bottom: 24px;
+  }
+
+  #homepage .hero-messages-ai .hero-description {
+    font-size: 18px;
+    color: white;
+    max-width: 650px;
+    margin-bottom: 24px;
+  }
+}
+
+/* mobile */
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #homepage .hero-messages-ai .hero-super-message {
+    font-size: 16px;
+    color: white;
+  }
+
+  #homepage .hero-messages-ai .hero-message {
+    font-size: 34px;
+    color: #3CFFF8;
+  }
+
+  #homepage .hero-messages-ai .hero-description {
+    font-size: 18px;
+    color: white;
+  }
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   #homepage .hero-sub-message {
     margin-bottom: 80px;

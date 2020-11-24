@@ -149,7 +149,7 @@ class Homepage
     elsif hoc2020_ai_takeover
       [
         {
-          type: "cta_button_solid_white",
+          type: "hoc2020_ai_join_us",
           text: "homepage_action_text_join_us",
           url: "/ai"
         }
