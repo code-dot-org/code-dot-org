@@ -736,7 +736,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
     ScriptSeed::SeedContext.new(
       script: script,
       lesson_groups: script.lesson_groups.to_a,
-      lessons: script.lessons.to_a
+      lessons: script.lessons.to_a,
+      lesson_activities: [],
+      activity_sections: []
     )
   end
 

@@ -86,6 +86,23 @@ class ActivitySection < ApplicationRecord
     end
   end
 
+  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
+  def seeding_key(seed_context)
+    my_lesson_activity = seed_context.lesson_activities.select {|la| la.id == lesson_activity_id}.first
+    raise "No LessonActivity found for #{self.class}: #{my_key}, LessonActivity ID: #{lesson_activity_id}" unless my_lesson_activity
+    {
+      'activity_section.key': key,
+      'lesson_activity.key': my_lesson_activity.key
+    }
+  end
+
   private
 
   def fetch_script_level(sl_data)
