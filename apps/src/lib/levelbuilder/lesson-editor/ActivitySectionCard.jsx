@@ -19,6 +19,14 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
+// When dragging within this many pixels of the top or bottom of the screen,
+// start scrolling the page.
+const SCROLL_THRESHOLD = 100;
+
+// WHen the scroll threshold is reached, scroll this many pixels for each pixel
+// the cursor has moved beyond the threshold.
+const SCROLL_RATIO = 0.2;
+
 const styles = {
   checkbox: {
     margin: '0 0 0 7px'
@@ -90,6 +98,7 @@ class ActivitySectionCard extends Component {
     activitiesCount: PropTypes.number.isRequired,
     activitySectionMetrics: PropTypes.array.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
+    clearTargetActivitySection: PropTypes.func.isRequired,
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
@@ -141,6 +150,7 @@ class ActivitySectionCard extends Component {
       );
       window.addEventListener('selectstart', this.preventSelect);
       window.addEventListener('mousemove', this.handleDrag);
+      window.addEventListener('scroll', this.handleScroll);
       window.addEventListener('mouseup', this.handleDragStop);
     });
   };
@@ -171,6 +181,25 @@ class ActivitySectionCard extends Component {
     );
     this.setState({currentPositions, newPosition});
     this.props.updateTargetActivitySection(clientY);
+    this.triggerScroll(clientY);
+  };
+
+  handleScroll = () => {
+    this.props.updateActivitySectionMetrics();
+  };
+
+  triggerScroll = clientY => {
+    if (clientY < SCROLL_THRESHOLD) {
+      const step = (SCROLL_THRESHOLD - clientY) * SCROLL_RATIO;
+      const scrollTop = $(window).scrollTop();
+      $(window).scrollTop(scrollTop - step);
+    }
+    const bottom = $(window).height() - clientY;
+    if (bottom < SCROLL_THRESHOLD) {
+      const step = (SCROLL_THRESHOLD - bottom) * SCROLL_RATIO;
+      const scrollTop = $(window).scrollTop();
+      $(window).scrollTop(scrollTop + step);
+    }
   };
 
   handleDragStop = () => {
@@ -204,8 +233,7 @@ class ActivitySectionCard extends Component {
       );
     }
 
-    // shortcut to clear target activity section
-    this.props.updateTargetActivitySection(-1);
+    this.props.clearTargetActivitySection();
 
     this.setState({
       draggedLevelPos: null,
@@ -214,6 +242,7 @@ class ActivitySectionCard extends Component {
     });
     window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
+    window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('mouseup', this.handleDragStop);
   };
 
