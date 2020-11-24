@@ -36,27 +36,21 @@
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
   - elsif show_single_hero == "hoc2020_ai"
-
     .hero-messages-ai
       .col-10.desktop-feature
         &nbsp;
       .left.col-40
         .hero-super-message
-          / = hoc_s(:hoc2020_ai_subheader)
-          The Hour of Code 2020 is coming!
+          = hoc_s(:hoc2020_ai_subheader)
         .hero-message
-          / = hoc_s(:hoc2020_ai_header)
-          Explore Artificial Intelligence
+          = hoc_s(:hoc2020_ai_header)
         .hero-description
-          / = hoc_s(:hoc2020_ai_description)
-          AI and Machine Learning are impacting our entire world. Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics and AI, and more...
-
+          = hoc_s(:hoc2020_ai_description)
         - actions.each do |entry|
           - if entry[:type] == "hoc2020_ai_join_us"
             .action.join_us_ai
               %a.linktag#hero-hoc{href: entry[:url]}
                 %button.herohocbutton.herohocbutton-solid-white= I18n.t(entry[:text])
-
       .right.col-50{style: "text-align: center;"}
         .hero-bot
           %img{src: "/images/homepage/hoc2020_ai_bot.png"}
