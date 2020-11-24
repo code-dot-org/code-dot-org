@@ -90,6 +90,13 @@ class ActivitiesEditor extends Component {
     });
   };
 
+  clearTargetActivitySection = () => {
+    this.setState({
+      targetActivityPos: null,
+      targetActivitySectionPos: null
+    });
+  };
+
   // Given a clientY value of a location on the screen, find the ActivityCard
   // and ActivitySectionCard corresponding to that location, and update
   // targetActivityPos and targetActivitySectionPos to match.
@@ -118,6 +125,7 @@ class ActivitiesEditor extends Component {
             activitiesCount={activities.length}
             setActivitySectionRef={this.setActivitySectionRef}
             updateTargetActivitySection={this.updateTargetActivitySection}
+            clearTargetActivitySection={this.clearTargetActivitySection}
             targetActivityPos={this.state.targetActivityPos}
             targetActivitySectionPos={this.state.targetActivitySectionPos}
             activitySectionMetrics={this.sectionMetrics}
