@@ -396,7 +396,13 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    promote_hoc2020_ai(request) ? "hoc2020_ai" : "hoc2020"
+    if promote_hoc2020_ai(request)
+      "hoc2020_ai"
+    elsif promote_code_bytes(request)
+      "codebytes2020"
+    else
+      "hoc2020"
+    end
   end
 
   def self.get_heroes_arranged(request)
