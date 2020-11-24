@@ -35,6 +35,13 @@
       = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  - elsif show_single_hero == "hoc2020_ai"
+    .hero-super-message
+      = hoc_s(:hoc2020_ai_subheader)
+    .hero-message
+      = hoc_s(:hoc2020_ai_header)
+    .hero-description
+      = hoc_s(:hoc2020_ai_description)
   - elsif show_single_hero == "codebytes2020"
     .hero-message-codebytes
       Join us during this year's
