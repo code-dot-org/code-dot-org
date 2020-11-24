@@ -26,7 +26,9 @@ $(document).ready(function() {
   const objectives = lessonData.objectives || [];
 
   // Rename any keys that are different on the backend.
-  activities.forEach(activity => {
+  activities.forEach((activity, activityIndex) => {
+    activity.position = activityIndex + 1;
+
     // React key which must be unique for each object in the list. React
     // recommends against using the array index for this. We don't want to use
     // the id column directly, because when we create new objects, we want to
@@ -43,7 +45,9 @@ $(document).ready(function() {
 
     activity.duration = activity.duration || '';
 
-    activity.activitySections.forEach(activitySection => {
+    activity.activitySections.forEach((activitySection, sectionIndex) => {
+      activitySection.position = sectionIndex + 1;
+
       // React key
       activitySection.key = activitySection.id + '';
 
@@ -54,14 +58,14 @@ $(document).ready(function() {
       delete activitySection.description;
 
       activitySection.scriptLevels = activitySection.scriptLevels || [];
-      activitySection.scriptLevels.forEach(scriptLevel => {
+      activitySection.scriptLevels.forEach((scriptLevel, scriptLevelIndex) => {
         scriptLevel.status = LevelStatus.not_tried;
 
         // The position within the lesson
         scriptLevel.levelNumber = scriptLevel.position;
 
         // The position within the activity section
-        scriptLevel.position = scriptLevel.activitySectionPosition;
+        scriptLevel.position = scriptLevelIndex + 1;
 
         delete scriptLevel.activitySectionPosition;
       });
