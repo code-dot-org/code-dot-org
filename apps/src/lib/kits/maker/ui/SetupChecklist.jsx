@@ -98,6 +98,9 @@ export default class SetupChecklist extends Component {
       // What type of board is this?
       .then(() => {
         this.setState({boardTypeDetected: setupChecker.detectBoardType()});
+        if (experiments.isEnabled('microbit')) {
+          console.log('Board detected: ' + setupChecker.detectBoardType());
+        }
         Promise.resolve();
       })
 

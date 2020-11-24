@@ -215,6 +215,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.update(last_name: '')
   end
 
+  test 'email must be unique on enrollments within a workshop' do
+    enrollment = create :pd_enrollment
+    duplicate_enrollment = build :pd_enrollment,
+      email: enrollment.email,
+      workshop: enrollment.workshop
+
+    duplicate_enrollment.save
+    assert duplicate_enrollment.errors.added?(:email, 'already enrolled in workshop')
+
+    duplicate_enrollment.email = 'another_email@email.com'
+    assert duplicate_enrollment.valid?
+  end
+
   test 'full_name' do
     enrollment = create :pd_enrollment
     enrollment.full_name = 'SplitFirst SplitLast'

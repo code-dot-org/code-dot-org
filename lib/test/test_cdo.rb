@@ -21,5 +21,17 @@ class CdoTest < Minitest::Test
 
     # generates an unmodified link to unknown languages
     assert_equal CDO.curriculum_url("fa-ke", "test"), "https://curriculum.code.org/test"
+
+    # leaves link as-is if host is already specified and non-CB
+    assert_equal CDO.curriculum_url("es-mx", "https://code.org/test"), "https://code.org/test"
+
+    # leaves link as-is if autocomplete_partial_path == false
+    assert_equal CDO.curriculum_url("es-mx", "/test", false), "/test"
+
+    # correctly handles full CB link
+    assert_equal CDO.curriculum_url("es-mx", "https://curriculum.code.org/test"), "https://curriculum.code.org/es-mx/test"
+
+    # correctly handles undefined uri
+    assert_nil CDO.curriculum_url("es-mx", nil)
   end
 end
