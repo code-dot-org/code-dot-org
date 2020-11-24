@@ -689,17 +689,6 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
-          <label>
-            Use new lesson editor
-            <input
-              type="checkbox"
-              checked={this.state.isMigrated}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({isMigrated: !this.state.isMigrated})
-              }
-            />
-          </label>
           <LessonExtrasEditor
             lessonExtrasAvailable={this.state.lessonExtrasAvailable}
             projectWidgetTypes={this.state.projectWidgetTypes}
