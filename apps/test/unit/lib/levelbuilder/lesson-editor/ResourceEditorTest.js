@@ -6,13 +6,15 @@ import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/lib/level
 import resourceTestData from './resourceTestData';
 
 describe('ResourcesEditor', () => {
-  let defaultProps, addResource, removeResource;
+  let defaultProps, addResource, editResource, removeResource;
   beforeEach(() => {
     addResource = sinon.spy();
+    editResource = sinon.spy();
     removeResource = sinon.spy();
     defaultProps = {
       resources: resourceTestData,
       addResource,
+      editResource,
       removeResource
     };
   });
@@ -44,5 +46,15 @@ describe('ResourcesEditor', () => {
       properties: {}
     });
     expect(addResource).to.have.been.calledOnce;
+  });
+
+  it('can add a resource', () => {
+    const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
+    wrapper.instance().saveEditResource({
+      key: resourceTestData[0].key,
+      name: 'edited resource',
+      url: 'edited url'
+    });
+    expect(editResource).to.have.been.calledOnce;
   });
 });

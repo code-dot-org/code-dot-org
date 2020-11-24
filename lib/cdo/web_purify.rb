@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+require 'dynamic_config/gatekeeper'
 require_relative '../../pegasus/src/env'
 
 module WebPurify

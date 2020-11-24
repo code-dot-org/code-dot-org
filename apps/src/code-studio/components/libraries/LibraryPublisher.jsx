@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
-import {findProfanity} from './util';
+import {findProfanity} from '@cdo/apps/utils';
 
 const styles = {
   alert: {

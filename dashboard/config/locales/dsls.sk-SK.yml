@@ -2634,16 +2634,16 @@ sk-SK:
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Včela sa pohne dopredu a vezme 1 nektár.
-          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera len 2 nektáre.
-          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera všetok nektár.
           correct: true
           feedback: Správne!
         - text: Neviem.
-          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom
+          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania nektáru vo vnorenom
             cykle, čím vyrieši úlohu.
         questions:
         - text: Pozri sa pozorne na tieto vnorené cykly.  Čo sa stane, keď klikneš
@@ -2651,16 +2651,16 @@ sk-SK:
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: Včela sa pohne dopredu a vezme 1 nektár.
-          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera len 2 nektáre.
-          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera všetok nektár.
           correct: true
           feedback: Správne!
         - text: Neviem.
-          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom
+          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania nektáru vo vnorenom
             cykle, čím vyrieši úlohu.
         questions:
         - text: Pozri sa pozorne na tieto vnorené cykly.  Čo sa stane, keď klikneš
@@ -2668,16 +2668,16 @@ sk-SK:
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: Včela sa pohne dopredu a vezme 1 nektár.
-          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera len 2 nektáre.
-          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera všetok nektár.
           correct: true
           feedback: Správne!
         - text: Neviem.
-          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom
+          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania nektáru vo vnorenom
             cykle, čím vyrieši úlohu.
         questions:
         - text: Pozri sa pozorne na tieto vnorené cykly.  Čo sa stane, keď klikneš
@@ -2685,16 +2685,16 @@ sk-SK:
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: Včela sa pohne dopredu a vezme 1 nektár.
-          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera len 2 nektáre.
-          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania medu
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
             vo vnorenom cykle, čím vyrieši úlohu.
         - text: Včela zozbiera všetok nektár.
           correct: true
           feedback: Správne!
         - text: Neviem.
-          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania medu vo vnorenom
+          feedback: Včela zopakuje aktivitu pohybu vpred a zbierania nektáru vo vnorenom
             cykle, čím vyrieši úlohu.
         questions:
         - text: Pozri sa pozorne na tieto vnorené cykly.  Čo sa stane, keď klikneš

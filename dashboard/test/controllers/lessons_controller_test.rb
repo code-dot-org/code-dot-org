@@ -122,12 +122,12 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'My Activity',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     section = activity.activity_sections.create(
       name: 'My Activity Section',
       position: 1,
-      seeding_key: 'activity-section-key'
+      key: 'activity-section-key'
     )
 
     get :show, params: {
@@ -229,17 +229,17 @@ class LessonsControllerTest < ActionController::TestCase
     id_a = @lesson.lesson_activities.create(
       name: 'activity A',
       position: 1,
-      seeding_key: 'key_a'
+      key: 'key_a'
     ).id
     @lesson.lesson_activities.create(
       name: 'activity B',
       position: 2,
-      seeding_key: 'key_b'
+      key: 'key_b'
     ).id
     id_c = @lesson.lesson_activities.create(
       name: 'activity C',
       position: 3,
-      seeding_key: 'key_c'
+      key: 'key_c'
     ).id
 
     @update_params['activities'] = [
@@ -276,7 +276,7 @@ class LessonsControllerTest < ActionController::TestCase
     old_activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
 
     @update_params['activities'] = [
@@ -315,17 +315,17 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     activity.activity_sections.create(
       name: 'section A',
       position: 1,
-      seeding_key: 'key_a'
+      key: 'key_a'
     ).id
     id_b = activity.activity_sections.create(
       name: 'section B',
       position: 2,
-      seeding_key: 'key_b'
+      key: 'key_b'
     ).id
 
     @update_params['activities'] = [
@@ -442,12 +442,12 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     section = activity.activity_sections.create(
       name: 'section name',
       position: 1,
-      seeding_key: 'section-key'
+      key: 'section-key'
     )
 
     level_to_add = create :maze, name: 'level-to-add'
@@ -499,12 +499,12 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     section = activity.activity_sections.create(
       name: 'section name',
       position: 1,
-      seeding_key: 'section-key'
+      key: 'section-key'
     )
 
     existing_survey = create :level_group, name: 'existing-survey'
@@ -592,12 +592,12 @@ class LessonsControllerTest < ActionController::TestCase
       activity = @lesson.lesson_activities.create(
         name: 'activity name',
         position: i,
-        seeding_key: "activity-key-#{i}"
+        key: "activity-key-#{i}"
       )
       section = activity.activity_sections.create(
         name: 'section name',
         position: 1,
-        seeding_key: "section-key-#{i}"
+        key: "section-key-#{i}"
       )
       section.script_levels.create(
         position: i,
@@ -647,12 +647,12 @@ class LessonsControllerTest < ActionController::TestCase
       activity = @lesson.lesson_activities.create(
         name: 'activity name',
         position: i,
-        seeding_key: "activity-key-#{i}"
+        key: "activity-key-#{i}"
       )
       section = activity.activity_sections.create(
         name: 'section name',
         position: 1,
-        seeding_key: "section-key-#{i}"
+        key: "section-key-#{i}"
       )
       section.script_levels.create(
         position: i,
@@ -694,12 +694,12 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.create(
       name: 'activity name',
       position: 1,
-      seeding_key: 'activity-key'
+      key: 'activity-key'
     )
     section = activity.activity_sections.create(
       name: 'section name',
       position: 1,
-      seeding_key: 'section-key'
+      key: 'section-key'
     )
     [1, 2, 3].each do |i|
       section.script_levels.create(
