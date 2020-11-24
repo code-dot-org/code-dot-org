@@ -1472,6 +1472,7 @@
   "selectSong": "Song auswählen:",
   "selectStudent": "Nach Schüler filtern",
   "selectStudentsToMove": "Wählen Sie die Schüler aus, die zu einer neuen Lerngruppe in der Tabelle wechseln sollen. Wählen Sie in der Dropdown-Liste den Abschnitt aus, in Sie Ihre Schüler verschieben möchten. Wählen Sie \"Anderer Lehrer\", wenn Sie die Schüler in einen anderen Lehrerbereich verschieben möchten. Beim Verschieben der Schüler wird der Fortschritte nicht zurückgesetzt.",
+  "sendLessonLinkCopied": "Link kopiert!",
   "sendToPhone": "An Handy schicken",
   "settings": "Einstellungen",
   "setUpClass": "Dein Klassenzimmer einrichten",

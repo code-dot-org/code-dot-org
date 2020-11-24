@@ -23,6 +23,9 @@ const styles = {
   },
   lessonGroupName: {
     color: color.purple
+  },
+  subTitle: {
+    color: color.teal
   }
 };
 
@@ -46,19 +49,25 @@ export default class LessonGroupInfoDialog extends Component {
       >
         <h2 style={styles.lessonGroupName}>{this.props.displayName}</h2>
         {this.props.description && (
-          <div style={styles.description}>
-            <SafeMarkdown
-              openExternalLinksInNewTab={true}
-              markdown={this.props.description}
-            />
+          <div>
+            <h4 style={styles.subTitle}>{i18n.description()}</h4>
+            <div style={styles.description}>
+              <SafeMarkdown
+                openExternalLinksInNewTab={true}
+                markdown={this.props.description}
+              />
+            </div>
           </div>
         )}
         {this.props.bigQuestions && (
-          <div style={styles.description}>
-            <SafeMarkdown
-              openExternalLinksInNewTab={true}
-              markdown={this.props.bigQuestions}
-            />
+          <div>
+            <h4 style={styles.subTitle}>{i18n.bigQuestions()}</h4>
+            <div style={styles.description}>
+              <SafeMarkdown
+                openExternalLinksInNewTab={true}
+                markdown={this.props.bigQuestions}
+              />
+            </div>
           </div>
         )}
         <DialogFooter rightAlign>

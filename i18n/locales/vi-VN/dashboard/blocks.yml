@@ -1168,6 +1168,8 @@ vi:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': dưới nước
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': mùa đông
             undefined: không
+      gamelab_setBackgroundImageAs:
+        text: thiết lập nền để {IMG}
       gamelab_setProp:
         text: bộ {SPRITE} [PROPERTY]123_321[1] để {VAL}
         options:
@@ -1701,7 +1703,6 @@ vi:
             '"stoneBricks"': gạch đá
             '"mossyStoneBricks"': gạch đá phủ đầy rêu
             '"crackedStoneBricks"': gạch đá bị nứt
-            '"decorativeStoneBricks"': gạch đá trang trí
             '"blueCoralBlock"': khối san hô màu xanh
             '"pinkCoralBlock"': khối san hô màu hồng
             '"magentaCoralBlock"': khối san hô đỏ tươi

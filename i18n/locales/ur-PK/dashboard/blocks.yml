@@ -1145,6 +1145,8 @@ ur:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': پانی کے اندر
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': سردیاں
             undefined: کوئی نہیں
+      gamelab_setBackgroundImageAs:
+        text: پس منظر کو {IMG} پر سیٹ کریں
       gamelab_setProp:
         text: سیٹ {SPRITE} {PROPERTY} کرنے {VAL}
         options:
@@ -1639,7 +1641,6 @@ ur:
             '"stoneBricks"': پتھر اینٹوں
             '"mossyStoneBricks"': موسی پتھر اینٹوں
             '"crackedStoneBricks"': پھٹے پتھر اینٹوں
-            '"decorativeStoneBricks"': آرائشی پتھر اینٹوں
             '"blueCoralBlock"': نیلے رنگ کے مرجان بلاک
             '"pinkCoralBlock"': گلابی مرجان بلاک
             '"magentaCoralBlock"': میجنٹا مرجان بلاک

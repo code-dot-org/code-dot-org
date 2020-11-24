@@ -183,7 +183,7 @@ class LevelToken extends Component {
                     level={progressBubbleLevel}
                     disabled={true}
                   />
-                  <span style={styles.levelTitle}>{activeLevel.name}</span>
+                  <span style={styles.levelTitle}>{scriptLevel.key}</span>
                 </span>
                 {activeLevel.assessment && (
                   <span style={styles.tag}>assessment</span>

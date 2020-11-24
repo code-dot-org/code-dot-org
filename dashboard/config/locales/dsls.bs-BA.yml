@@ -2031,3 +2031,7 @@ bs-BA:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: opis ovdje
+      outbreak_story2:
+        content1: opis ovdje

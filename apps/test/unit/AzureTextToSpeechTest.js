@@ -10,30 +10,26 @@ const assertSoundResponsesEqual = (expected, actual) => {
 };
 
 describe('AzureTextToSpeech', () => {
-  let azureTTS;
+  let azureTTS, playBytesStub;
 
   beforeEach(() => {
     azureTTS = new AzureTextToSpeech();
+    playBytesStub = sinon.stub(azureTTS, 'playBytes_');
+  });
+
+  afterEach(() => {
+    playBytesStub.restore();
   });
 
   describe('enqueueAndPlay', () => {
-    let playSpy;
-
-    beforeEach(() => {
-      playSpy = sinon.spy();
-    });
-
     it('plays given soundPromise', async () => {
       const response = azureTTS.createSoundResponse_({
         bytes: new ArrayBuffer()
       });
 
-      await azureTTS.enqueueAndPlay(
-        new Promise(resolve => resolve(response)),
-        playSpy
-      );
+      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
 
-      expect(playSpy).to.have.been.calledOnce;
+      expect(playBytesStub).to.have.been.calledOnce;
       expect(azureTTS.queue_.length).to.equal(0);
     });
 
@@ -44,12 +40,9 @@ describe('AzureTextToSpeech', () => {
       });
       response.playbackOptions.onEnded = sinon.spy();
 
-      await azureTTS.enqueueAndPlay(
-        new Promise(resolve => resolve(response)),
-        playSpy
-      );
+      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
 
-      expect(playSpy).not.to.have.been.called;
+      expect(playBytesStub).not.to.have.been.called;
       expect(response.playbackOptions.onEnded).not.to.have.been.called;
     });
 
@@ -59,12 +52,9 @@ describe('AzureTextToSpeech', () => {
       });
       response.playbackOptions.onEnded = sinon.spy();
 
-      await azureTTS.enqueueAndPlay(
-        new Promise(resolve => resolve(response)),
-        playSpy
-      );
+      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
 
-      expect(playSpy).not.to.have.been.called;
+      expect(playBytesStub).not.to.have.been.called;
       expect(response.playbackOptions.onEnded).to.have.been.calledOnce;
     });
   });

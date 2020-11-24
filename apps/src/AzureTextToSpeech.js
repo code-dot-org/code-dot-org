@@ -1,9 +1,17 @@
 import {hashString, findProfanity} from '@cdo/apps/utils';
+import Sounds from '@cdo/apps/Sounds';
 
 // XMLHttpRequest readyState 4 means the request is done.
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 const READY_STATE_DONE = 4;
 
+/**
+ * A packaged response for a requested sound. Used for caching and for playing sound bytes.
+ * @param {ArrayBuffer} bytes Sound bytes from Azure Speech Service. For clarity, this should be null if the response contains profaneWords.
+ * @param {Object} playbackOptions Configuration options for a playing sound.
+ * @param {Array<string>} profaneWords Any profanity in the response. Used to determine whether the response should be cached and played.
+ * @param {string} error Any error that occurs while requesting the sound or checking for profanity.
+ */
 export class SoundResponse {
   constructor(bytes, playbackOptions, profaneWords = [], error = null) {
     this.bytes = bytes;
@@ -19,6 +27,11 @@ export class SoundResponse {
 
 let singleton;
 
+/**
+ * Converts text to sound bytes using Azure Speech Service. Before requesting sound bytes from Azure, we check for profanity
+ * in the text through our servers. If profanity is found, the sound will not be played.
+ * Uses an in-memory cache to reduce network calls (for both checking profanity and requesting sound bytes from Azure).
+ */
 export default class AzureTextToSpeech {
   /**
    * Instantiate or get class singleton. Using this is recommended to take advantage of caching.
@@ -46,12 +59,11 @@ export default class AzureTextToSpeech {
   /**
    *
    * @param {Promise<SoundResponse>} soundPromise A promise that returns a SoundResponse when resolved.
-   * @param {function(ArrayBuffer, Object)} play Function that plays sound bytes. Object parameter accepts
    * playback configuration options.
    */
-  enqueueAndPlay = (soundPromise, play) => {
+  enqueueAndPlay = soundPromise => {
     this.enqueue_(soundPromise);
-    this.asyncPlayFromQueue_(play);
+    this.asyncPlayFromQueue_(this.playBytes_);
   };
 
   /**
@@ -163,12 +175,22 @@ export default class AzureTextToSpeech {
   };
 
   /**
+   * A wrapper for the Sounds.getSingleton().playBytes function to aid in testability.
+   * @param {ArrayBuffer} bytes
+   * @param {Object} playbackOptions
+   * @private
+   */
+  playBytes_ = (bytes, playbackOptions) => {
+    Sounds.getSingleton().playBytes(bytes, playbackOptions);
+  };
+
+  /**
    * Called when a TTS sound is done playing. Set as part of this.playbackOptions_.
    * @private
    */
   onSoundComplete_ = () => {
     this.playing = false;
-    this.asyncPlayFromQueue_();
+    this.asyncPlayFromQueue_(this.playBytes_);
   };
 
   /**
