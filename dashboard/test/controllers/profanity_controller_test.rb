@@ -6,7 +6,8 @@ class ProfanityControllerTest < ActionController::TestCase
   end
 
   teardown do
-    # clear cache
+    # Some tests access and store data in the cache, so clear between tests to avoid state leakage
+    Rails.cache.clear
   end
 
   test 'find: caches and returns profanities from ProfanityFilter' do
