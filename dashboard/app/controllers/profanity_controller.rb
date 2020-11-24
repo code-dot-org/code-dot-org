@@ -1,6 +1,5 @@
-require 'digest/md5'
-
 class ProfanityController < ApplicationController
+  include ProfanityHelper
   before_action :authenticate_user!
 
   # POST /profanity/find
@@ -8,13 +7,7 @@ class ProfanityController < ApplicationController
   # @param [String] params[:locale] Locale to test in. Optional. Uses request locale if not provided.
   # @returns [Array<String>|nil] Profane words within the given string
   def find
-    profanity_result = nil
-    if params[:text]&.present?
-      # Hash params[:text] in cache_key to avoid long cache keys.
-      cache_key = "profanity/#{locale}/#{Digest::MD5.hexdigest(params[:text])}"
-      profanity_result = Rails.cache.fetch(cache_key) {ProfanityFilter.find_potential_profanities(params[:text], locale)}
-    end
-    render json: profanity_result
+    render json: find_profanities(params[:text], locale)
   end
 
   private
