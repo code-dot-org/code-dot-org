@@ -467,9 +467,12 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  var showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
+  var showDebugButtons =
+    !config.hideSource &&
+    !config.level.debuggerDisabled &&
+    !config.readonlyWorkspace;
   var breakpointsEnabled = !config.level.debuggerDisabled;
-  var showDebugConsole = !config.hideSource;
+  var showDebugConsole = !config.hideSource && !config.readonlyWorkspace;
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
