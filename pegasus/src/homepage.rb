@@ -414,7 +414,7 @@ class Homepage
       {text: "homepage_hero_text_stat_students", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020.jpg"}
     ]
     hero_hoc2020_ai = [
-      {text: "homepage_hero_text_stat_students", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020_ai_2x.png"}
+      {text: "homepage_hero_text_stat_students", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020_ai.png"}
     ]
     hero_codebytes2020 = [
       {centering: "50% 50%", type: "stat", textposition: "bottom", image: "/images/homepage/codebytes2020_background.jpg"}

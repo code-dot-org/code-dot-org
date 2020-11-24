@@ -36,12 +36,15 @@
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
   - elsif show_single_hero == "hoc2020_ai"
-    .hero-super-message
-      = hoc_s(:hoc2020_ai_subheader)
-    .hero-message
-      = hoc_s(:hoc2020_ai_header)
-    .hero-description
-      = hoc_s(:hoc2020_ai_description)
+    .hero-messages-ai
+      .hero-super-message
+        = hoc_s(:hoc2020_ai_subheader)
+      .hero-message
+        = hoc_s(:hoc2020_ai_header)
+      .hero-description
+        = hoc_s(:hoc2020_ai_description)
+    .hero-bot
+      %img{src: "/images/homepage/hoc2020_ai_bot.png", style: "position: absolute; width: 300px; top: -30px; right: 0px;"}
   - elsif show_single_hero == "codebytes2020"
     .hero-message-codebytes
       Join us during this year's

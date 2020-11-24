@@ -196,20 +196,20 @@ body.modal-open .supreme-container{
   #homepage .hero-messages-ai .hero-super-message {
     font-size: 24px;
     color: white;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   #homepage .hero-messages-ai .hero-message {
     font-size: 44px;
     color: #3CFFF8;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   #homepage .hero-messages-ai .hero-description {
     font-size: 18px;
     color: white;
     max-width: 650px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 }
 
