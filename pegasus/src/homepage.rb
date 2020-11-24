@@ -129,7 +129,15 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if code_break_takeover
+    if hoc2020_ai_takeover
+      [
+        {
+          type: "hoc2020_ai_join_us",
+          text: "homepage_action_text_join_us",
+          url: "/ai"
+        }
+      ]
+    elsif code_break_takeover
       [
         {
           type: "code_break_check"
@@ -144,14 +152,6 @@ class Homepage
           type: "cta_button_solid_yellow",
           text: "homepage_action_text_join_us",
           url: "/codebytes"
-        }
-      ]
-    elsif hoc2020_ai_takeover
-      [
-        {
-          type: "hoc2020_ai_join_us",
-          text: "homepage_action_text_join_us",
-          url: "/ai"
         }
       ]
     elsif hoc_mode == "actual-hoc"
