@@ -111,6 +111,7 @@
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -131,6 +132,7 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -152,6 +154,7 @@
     {
       "chapter": 3,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -172,6 +175,7 @@
     {
       "chapter": 4,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -193,6 +197,7 @@
     {
       "chapter": 5,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -213,6 +218,7 @@
     {
       "chapter": 6,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -234,6 +240,7 @@
     {
       "chapter": 7,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
       },
@@ -254,6 +261,7 @@
     {
       "chapter": 8,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "challenge": true

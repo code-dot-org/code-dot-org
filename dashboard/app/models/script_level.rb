@@ -623,8 +623,17 @@ class ScriptLevel < ApplicationRecord
     my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
     raise "No Lesson found for #{self.class}: #{my_key}, Lesson ID: #{stage_id}" unless my_lesson
     lesson_seeding_key = my_lesson.seeding_key(seed_context)
-
     my_key.merge!(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+
+    # Activity Section must be optional for now, so that we can still compute
+    # the seed key for legacy scripts. Currently, this is necessary because we
+    # output .script_json files for all legacy scripts, even though those aren't
+    # going to be used for seeding yet.
+    my_activity_section = seed_context.activity_sections.select {|s| s.id == activity_section_id}.first
+
+    # HACK: use script_level prefix so that it gets filtered out later.
+    my_key['script_level.activity_section.key'] = my_activity_section.key if my_activity_section
+
     my_key.stringify_keys
   end
 
