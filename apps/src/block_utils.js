@@ -446,13 +446,14 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     let startBlocksDocument = startBlocksDom.ownerDocument.evaluate
       ? startBlocksDom.ownerDocument
       : document;
-    const name = ownerDocument.evaluate(
+    const node = ownerDocument.evaluate(
       'title[@name="NAME"]',
       func,
       null,
       XPathResult.FIRST_ORDERED_NODE_TYPE,
       null
-    ).singleNodeValue.id;
+    ).singleNodeValue;
+    const name = node && node.id;
     const type = ownerDocument.evaluate(
       '@type',
       func,
