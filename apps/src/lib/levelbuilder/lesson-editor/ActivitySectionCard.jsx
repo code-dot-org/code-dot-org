@@ -319,6 +319,7 @@ class ActivitySectionCard extends Component {
           }
         ],
         activeId: level.id,
+        key: level.key,
         position: newLevelPosition,
         kind: 'puzzle',
         bonus: false,
