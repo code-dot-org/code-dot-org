@@ -327,6 +327,7 @@ module ScriptSeed
     attributes(
       :chapter,
       :position,
+      :activity_section_position,
       :assessment,
       :properties,
       :named_level,

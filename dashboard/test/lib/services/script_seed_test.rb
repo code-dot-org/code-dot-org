@@ -22,6 +22,8 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script = create_script_tree('test-serialize-seeding-json')
 
     filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
+    # Uncomment the following line to update test-serialize-seeding-json.script_json
+    # File.write(filename, ScriptSeed.serialize_seeding_json(script))
     assert_equal File.read(filename), ScriptSeed.serialize_seeding_json(script)
   end
 
