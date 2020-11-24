@@ -511,7 +511,7 @@ export default {
 
       openEditor(e) {
         e.stopPropagation();
-        behaviorEditor.openEditorForFunction(this, this.getTitleValue('VAR'));
+        behaviorEditor.openEditorForFunction(this, this.getTitle_('VAR').id);
       },
 
       getVars() {
