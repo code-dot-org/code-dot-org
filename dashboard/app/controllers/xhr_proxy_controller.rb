@@ -72,6 +72,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maps.googleapis.com
     opentdb.com
+    pixabay.com
     pokeapi.co
     qrng.anu.edu.au
     quandl.com
