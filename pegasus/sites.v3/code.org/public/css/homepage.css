@@ -197,6 +197,7 @@ body.modal-open .supreme-container{
     font-size: 24px;
     color: white;
     margin-bottom: 16px;
+    margin-top: 30px;
   }
 
   #homepage .hero-messages-ai .hero-message {
@@ -210,6 +211,10 @@ body.modal-open .supreme-container{
     color: white;
     max-width: 650px;
     margin-bottom: 16px;
+  }
+
+  #homepage .join_us_ai {
+    margin-bottom: 80px;
   }
 }
 
