@@ -12,7 +12,7 @@ class ProfanityController < ApplicationController
     if params[:text]&.present?
       # Hash params[:text] in cache_key to avoid long cache keys.
       cache_key = "profanity/#{locale}/#{Digest::MD5.hexdigest(params[:text])}"
-      profanity_result = Rails.cache.fetch(cache_key) {find_potential_profanities}
+      profanity_result = Rails.cache.fetch(cache_key) {ProfanityFilter.find_potential_profanities(params[:text], locale)}
     end
     render json: profanity_result
   end
@@ -21,9 +21,5 @@ class ProfanityController < ApplicationController
 
   def locale
     params[:locale] || request.locale
-  end
-
-  def find_potential_profanities
-    ProfanityFilter.find_potential_profanities(params[:text], locale)
   end
 end
