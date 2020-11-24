@@ -38,7 +38,9 @@
   - elsif show_single_hero == "hoc2020_ai"
 
     .hero-messages-ai
-      .left.col-50
+      .col-10.desktop-feature
+        &nbsp;
+      .left.col-40
         .hero-super-message
           / = hoc_s(:hoc2020_ai_subheader)
           The Hour of Code 2020 is coming!
@@ -55,9 +57,9 @@
               %a.linktag#hero-hoc{href: entry[:url]}
                 %button.herohocbutton.herohocbutton-solid-white= I18n.t(entry[:text])
 
-      .right.col-50
+      .right.col-50{style: "text-align: center;"}
         .hero-bot
-          %img{src: "/images/homepage/hoc2020_ai_bot.png", style: "width: 300px; top: -30px; right: 0px;"}
+          %img{src: "/images/homepage/hoc2020_ai_bot.png", style: "top: -30px; right: 0px;"}
   - elsif show_single_hero == "codebytes2020"
     .hero-message-codebytes
       Join us during this year's
