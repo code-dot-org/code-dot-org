@@ -17,7 +17,7 @@ Code.org is committed to continually improving the accessibility of our tools. A
 * Align the Code.org Hour of Code experience with [WCAG 2.0 Level A](https://www.w3.org/TR/WCAG20/) compliance.
 * Encourage organizations submitting potential Hour of Code tutorials to list how they have addressed accessibility as part of their submission and make these tutorials and their accessibility features easy to find.
 
-#### Current Accommodations
+#### Current Accommodations:
 * The Hour of Code tutorials page has a filter to highlight the tutorials from our partners that are accessible via screen-reader.
 
 ### K-12 Curriculum
@@ -25,7 +25,7 @@ Code.org is committed to continually improving the accessibility of our tools. A
 * Assess ways of making existing and new tools accessible, adopting strategies and technologies shown to be effective.
 * Investigate disaggregation of data on students with disabilities and integrate it into our ongoing data collection and analysis.
 
-#### Current Accommodations
+#### Current Accommodations:
 * [Microsoft Immersive Reader](https://www.onenote.com/learningtools) is enabled in all Code.org lessons in the instructions panel, offering customization for students to improve reading comprehension and focus.
         
 <img src="/images/accessibility/MicrosoftImmersiveReaderIcon.png" alt="Microsoft Immersive Reader icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
