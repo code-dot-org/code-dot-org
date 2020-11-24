@@ -28,11 +28,11 @@ Code.org is committed to continually improving the accessibility of our tools. A
 #### Current Accommodations:
 * [Microsoft Immersive Reader](https://www.onenote.com/learningtools) is enabled in all Code.org lessons in the instructions panel, offering customization for students to improve reading comprehension and focus.
         
-<img src="/images/fit-1164/accessibility/MicrosoftImmersiveReaderIcon.jpg" alt="Microsoft Immersive Reader icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
+<img src="/images/accessibility/MicrosoftImmersiveReaderIcon.png" alt="Microsoft Immersive Reader icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
 
 * In-house Text To Speech capabilities are enabled in many lessons in the instructions panel.
 
-<img src="/images/fit-1164/accessibility/TextToSpeechIcon.jpg" alt="Text to Speech icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
+<img src="/images/accessibility/TextToSpeechIcon.png" alt="Text to Speech icon" style="width: 60%; display:block; margin-right: auto; margin-left:auto">
 
 * All videos we create are captioned in English by our team or volunteers.
 * Videos used in lessons have "show notes" allowing students to read a summary of the video content along with still images captured from the video.
