@@ -13,7 +13,7 @@
 module ScriptSeed
   # Holds data that we've already retrieved from the database. Used to look up associations of objects without making additional queries.
   # Storing this data together in a "data object" makes it easier to pass around.
-  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :script_levels, :levels_script_levels, :levels,  keyword_init: true)
+  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :lesson_activities, :activity_sections, :script_levels, :levels_script_levels, :levels,  keyword_init: true)
 
   # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
   # designed to be used for seeding.
@@ -32,10 +32,15 @@ module ScriptSeed
     my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
     my_levels = my_script_levels.map(&:levels).flatten
 
+    activities = script.lessons.map(&:lesson_activities).flatten
+    sections = activities.map(&:activity_sections).flatten
+
     seed_context = SeedContext.new(
       script: script,
       lesson_groups: script.lesson_groups,
       lessons: script.lessons,
+      lesson_activities: activities,
+      activity_sections: sections,
       script_levels: my_script_levels,
       levels_script_levels: script.levels_script_levels,
       levels: my_levels
@@ -46,6 +51,8 @@ module ScriptSeed
       script: ScriptSerializer.new(script, scope: scope).as_json,
       lesson_groups: script.lesson_groups.map {|lg| ScriptSeed::LessonGroupSerializer.new(lg, scope: scope).as_json},
       lessons: script.lessons.map {|l| ScriptSeed::LessonSerializer.new(l, scope: scope).as_json},
+      lesson_activities: activities.map {|a| ScriptSeed::LessonActivitySerializer.new(a, scope: scope).as_json},
+      activity_sections: sections.map {|s| ScriptSeed::ActivitySectionSerializer.new(s, scope: scope).as_json},
       script_levels: script.script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
       levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json}
     }
@@ -281,6 +288,32 @@ module ScriptSeed
       :absolute_position,
       :lockable,
       :relative_position,
+      :properties,
+      :seeding_key
+    )
+
+    def seeding_key
+      object.seeding_key(@scope[:seed_context])
+    end
+  end
+
+  class LessonActivitySerializer < ActiveModel::Serializer
+    attributes(
+      :key,
+      :position,
+      :properties,
+      :seeding_key
+    )
+
+    def seeding_key
+      object.seeding_key(@scope[:seed_context])
+    end
+  end
+
+  class ActivitySectionSerializer < ActiveModel::Serializer
+    attributes(
+      :key,
+      :position,
       :properties,
       :seeding_key
     )
