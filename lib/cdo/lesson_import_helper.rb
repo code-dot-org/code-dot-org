@@ -189,6 +189,7 @@ module LessonImportHelper
     activity_sections = []
     current_progression_levels = []
     current_progression = nil
+    levels = levels.reject {|l| l.levels[0].type == 'CurriculumReference'}
     levels.each do |level|
       if current_progression.nil? || current_progression == level.progression
         current_progression = level.progression if current_progression.nil?
