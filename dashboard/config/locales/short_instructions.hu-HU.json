@@ -964,7 +964,8 @@
         "scrat 17": "Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló a feladat, de vigyázz a falra!",
         "scrat 18": "A \"ha-különben\" blokk egy feltételt ellenőriz , és az alapján végzi el az egyik VAGY a másik utasítást. Próbáld használni ezt az új blokkot, hogy eljuttass a makkhoz.",
         "scrat 19": "Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod csinálni elsőre?",
-        "scrat 20": "Tudsz segíteni nekem mindössze 3 blokk hozzáadásával, hogy megoldjak egy sokkal összetettebb labirintust? Ha jól csinálod, utána bármilyen kanyargós úton tudok majd haladni, a hossza nem számít. Siess! Olvad a jég!"
+        "scrat 20": "Tudsz segíteni nekem mindössze 3 blokk hozzáadásával, hogy megoldjak egy sokkal összetettebb labirintust? Ha jól csinálod, utána bármilyen kanyargós úton tudok majd haladni, a hossza nem számít. Siess! Olvad a jég!",
+        "Course 4 Artist 10": "Kattints ide, hogy a teljes utasítást lásd!\n\nEz egy érdekes alakzat kódja. Mi történik, ha többször ismételed, miközben mindegyik részlet után elfordulsz valamennyit? Ha alaposan megnézed, azt is láthatod, hogy ebben az alakzatban összesen 420 fokot fordul a művész, vagyis a következő alakzat elején más irányban fog állni, mint az előzőnél, pontosan 60 fokkal többet fordul jobbra, mint egy teljes kör. "
       }
     }
   }

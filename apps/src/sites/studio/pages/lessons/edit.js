@@ -94,6 +94,7 @@ $(document).ready(function() {
   ReactDOM.render(
     <Provider store={store}>
       <LessonEditor
+        id={lessonData.id}
         initialDisplayName={lessonData.name}
         initialOverview={lessonData.overview || ''}
         initialStudentOverview={lessonData.studentOverview || ''}
@@ -106,6 +107,7 @@ $(document).ready(function() {
         initialAnnouncements={lessonData.announcements || []}
         relatedLessons={relatedLessons}
         initialObjectives={objectives}
+        courseVersionId={lessonData.courseVersionId}
       />
     </Provider>,
     document.getElementById('edit-container')

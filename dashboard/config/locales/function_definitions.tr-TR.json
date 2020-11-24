@@ -3130,6 +3130,11 @@
           "collect stairs": {
             "name": "merdivenleri topla"
           }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "fonksiyonum"
+          }
         }
       }
     }

@@ -18263,6 +18263,10 @@ en:
               name: USE Programs (AppLab Only)
             MODIFY Programs:
               name: MODIFY Programs (AppLab -> Widget -> AppLab)
+            Does Code.org Like Your Dog?:
+              name: Does Code.org Like Your Dog?
+            dog:
+              name: Does Code.org Like Your Dog?
           lesson_groups: {}
           title: Ml/AI Unit - CSD
           description_audience: ''
@@ -18288,3 +18292,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        2021drafting:
+          lessons:
+            Sprite Lab:
+              name: Sprite Lab Blocks
+          lesson_groups:
+            Toolbox Levels:
+              display_name: Toolbox Levels
+          title: Planning script for CI and CSF 2021
+          description_audience: Internal
+          description_short: Internal

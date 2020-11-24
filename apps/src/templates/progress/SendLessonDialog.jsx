@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
@@ -58,19 +59,51 @@ class SendLessonDialog extends Component {
     showGoogleButton: PropTypes.bool
   };
 
+  constructor(props) {
+    super(props);
+    this.onCopyLink = this.onCopyLink.bind(this);
+    this.state = {
+      showLinkCopied: false
+    };
+  }
+
+  onCopyLink() {
+    copyToClipboard(this.props.lessonUrl);
+
+    // show "Link copied!" for 2 seconds
+    this.setState({showLinkCopied: true});
+    setTimeout(() => {
+      this.setState({showLinkCopied: false});
+    }, 2000);
+
+    firehoseClient.putRecord(
+      {
+        study: 'copy-lesson-link-button',
+        study_group: 'v0',
+        event: event,
+        data_json: this.props.analyticsData
+      },
+      {includeUserId: true}
+    );
+  }
+
   renderCopyToClipboardRow() {
     return (
       <div style={styles.row}>
         <Button
-          id="ui-test-copy-button"
+          id="uitest-copy-button"
           text=""
-          icon="copy"
+          icon="link"
           iconStyle={styles.buttonIcon}
-          color="white"
+          color={Button.ButtonColor.blue}
           style={styles.button}
-          onClick={() => copyToClipboard(this.props.lessonUrl)}
+          onClick={this.onCopyLink}
         />
-        <span style={styles.buttonLabel}>{i18n.sendLessonCopyLink()}</span>
+        <span style={styles.buttonLabel}>
+          {this.state.showLinkCopied
+            ? i18n.sendLessonLinkCopied()
+            : i18n.sendLessonCopyLink()}
+        </span>
       </div>
     );
   }
@@ -79,6 +112,7 @@ class SendLessonDialog extends Component {
     return (
       <div style={styles.row}>
         <GoogleClassroomShareButton
+          theme="classic"
           height={styles.button.height}
           url={this.props.lessonUrl}
           itemtype="assignment"
@@ -103,7 +137,8 @@ class SendLessonDialog extends Component {
           {i18n.sendLessonDetails()}{' '}
           <a
             target="_blank"
-            href="https://support.code.org/" // TODO: Update this!
+            rel="noopener noreferrer"
+            href="https://support.code.org/hc/en-us/articles/360051654691"
           >
             {i18n.learnMore()}
           </a>

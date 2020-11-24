@@ -125,11 +125,11 @@ class LessonGroup < ApplicationRecord
   end
 
   def localized_description
-    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.description", default: nil)
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.description", default: description)
   end
 
   def localized_big_questions
-    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions", default: nil)
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions", default: big_questions)
   end
 
   def summarize
@@ -146,6 +146,8 @@ class LessonGroup < ApplicationRecord
 
   def summarize_for_script_edit
     summary = summarize
+    summary[:description] = description
+    summary[:big_questions] = big_questions
     summary[:lessons] = lessons.map(&:summarize_for_script_edit)
     summary
   end
@@ -166,5 +168,37 @@ class LessonGroup < ApplicationRecord
 
     my_key.merge!(script_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
     my_key.stringify_keys
+  end
+
+  # This method takes chapter data exported from curriculum builder and updates
+  # corresponding fields of this LessonGroup to match it. Only fields on this
+  # LessonGroup will be updated. Lessons themselves are not updated here.
+  # The expected input format is as follows:
+  # {
+  #   "title": "CB Chapter Title",
+  #   "number": 1,
+  #   "questions": "Big Questions markdown",
+  #   "description": "Description markdown"
+  # }
+  #
+  # @param [Hash] cb_chapter_data - Chapter data to import.
+  # @return [Boolean] - Whether any changes to this lesson group were saved.
+  def update_from_curriculum_builder(cb_chapter_data)
+    # In the future, only levelbuilder should be added to this list.
+    raise unless [:development, :adhoc].include? rack_env
+
+    cb_questions = cb_chapter_data['questions']
+    if cb_questions.present? && big_questions.blank?
+      self.big_questions = cb_questions
+    end
+
+    cb_description = cb_chapter_data['description']
+    if cb_description.present? && description.blank?
+      self.description = cb_description
+    end
+
+    changed = changed?
+    save! if changed?
+    changed
   end
 end

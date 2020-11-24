@@ -152,6 +152,7 @@ class Script < ActiveRecord::Base
     tts
     is_course
     background
+    show_calendar
   )
 
   def self.twenty_hour_script
@@ -1278,7 +1279,6 @@ class Script < ActiveRecord::Base
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
-      script_announcements: announcements, #TODO: (dmcavoy) Remove after Sept 25 2020
       announcements: announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
@@ -1297,7 +1297,9 @@ class Script < ActiveRecord::Base
       hasStandards: has_standards_associations?,
       tts: tts?,
       is_course: is_course?,
-      background: background
+      background: background,
+      updatedAt: updated_at,
+      scriptPath: script_path(self)
     }
 
     #TODO: lessons should be summarized through lesson groups in the future

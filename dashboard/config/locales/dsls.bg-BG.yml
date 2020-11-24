@@ -2032,3 +2032,7 @@ bg-BG:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: опишете тук
+      outbreak_story2:
+        content1: опишете тук

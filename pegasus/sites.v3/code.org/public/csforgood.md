@@ -17,7 +17,7 @@ social:
 <h1>#CSforGood in your class</h1>
 
 <div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
-    <img src="/images/csforgood.png" style="width:100%">
+    <img src="/images/csforgood_1-1.png" style="width:100%">
 </div>
 
 <div class="col-60">
@@ -106,10 +106,10 @@ social:
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://education.minecraft.net/hour-of-code-2019" target="_blank"><img src="/images/tutorials/hoc2019/mee.png" style="width: 100%"></a>
+<a href="https://aka.ms/HourofCode2020" target="_blank"><img src="/images/tutorials/hoc2020/mee_empathy.jpg" style="width: 100%"></a>
 <br>
-<a href="https://education.minecraft.net/hour-of-code-2019" target="_blank"><h3 style="color:#7665a0"><strong>Minecraft Hour of Code: AI for Good</strong></h3></a>
-<p>Program the Minecraft Agent to collect data about forest fires. Then write code to help prevent the spread of fire, save the village, and bring life back to the forest.</p>
+<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>A Minecraft Tale of Two Villages</strong></h3></a>
+<p>Use the power of code to bring two villages together. Players will experience empathy and compassion for their neighbors, learn cooperation and inclusion, and embrace the diversity that makes us all uniquely special.</p>
 <p><i>From Minecraft: Education Edition. For grades 2 and up.</i></p>
 
 </div>

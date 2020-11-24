@@ -9578,7 +9578,7 @@ pl:
             Concept Practice with Minecraft:
               name: Patrząc w przyszłość
         csd1-2019:
-          title: Dział 1 CSD - Rozwiązywanie problemów i informatyka ('19- '20)
+          title: CSD Jednostka 1 - Rozwiązywanie problemów i informatyka ('19- '20)
           description: "\"Rozwiązywanie problemów i informatyka\" stanowi niezwykle interaktywny i zachęcający do współpracy wstęp do dziedziny informatyki, ujętej w ramy z szerzej rozumianego dążenia do rozwiązywania problemów.  Będziesz ćwiczyć proces rozwiązywania problemów do rozwiązania serii łamigłówek, wyzwań i scenariuszy z prawdziwego świata. Potem będziesz się dowiadywać, jak dane wejściowe, wyniki wyjściowe, przechowywanie oraz przetwarzanie informacji pomagają ludziom w rozwiązywaniu problemów. Dział kończy się projektem, w którym projektujesz aplikację, która pomaga rozwiązać wybrany przez Ciebie problem. \\r"
           description_short: "Dowiedz się, w jaki sposób ludzie pracują na komputerach, aby rozwiązać problemy."
           lesson_groups:
@@ -9753,7 +9753,7 @@ pl:
               description_student: Utwórz własną bransoletkę binarną i dowiedz się, w jaki sposób komputery zapamiętują informacje!
               description_teacher: W świecie komputerów system binarny jest niezwykle ważny. Większość komputerów obecnie przechowywać informacji wszelkiego rodzaju w formie binarnej. Ta lekcja pomaga przedstawić sposób w jaki można przełożyć coś z realnego życia na serię włączeń i wyłączeń.
             Create a Design with Loops:
-              name: Utwórz projekt przy pomocy pętli
+              name: Utwórz projekt z pętlami
             'End of Course Project: Create a Play Lab Game':
               name: 'Projekt na koniec kursu: Utwórz grę Play Lab'
               description_student: Przygotuj ręce na ogromne kodowanie! Czas rozpocząć budowanie swojego projektu.
@@ -9764,13 +9764,13 @@ pl:
               description_teacher: Używając zbioru symboli zamiast kodu uczniowie będą projektować algorytmy, aby instruować "robota", jak ma ustawiać kubeczki według różnych wzorców. Uczniowie będą po kolei wcielać się w rolę robota, reagując tylko na algorytmy zdefiniowane przez rówieśników. W tym segmencie uczniom przedstawia się połączenia pomiędzy symbolami a działaniami, różnicę pomiędzy algorytmem a programem oraz cenną umiejętność debugowania.
             'Loops: My Loopy Robotic Friends':
               name: Moi zapętleni robotyczni przyjaciele Jr.
-              description_student: Na tej lekcji będziesz ponownie programować swoich kolegów z klasy, ale używając pętli będziesz mógł rozwiązywać większe i bardziej skomplikowane problemy.
+              description_student: Na tej lekcji będziesz ponownie programować swoich kolegów z klasy, ale używając pętli będziesz mógł rozwiązywać większe i bardziej złożone problemy.
               description_teacher: Tworząc wstępną wersję zajęć "Moi robotyczni przyjaciele", uczniowie zajmują się większymi i bardziej skomplikowanymi projektami. W celu zaprojektowanie swoich "robotów", aby ukończyć większe konstrukcje, uczniowie będą musieli identyfikować wzorce powtórzone w swoich instrukcjach, które można zastąpić pętlą.
             Graphing Data:
               name: Zaznaczanie danych na wykresie
             Powerful Passwords:
               name: Bardzo skuteczne hasła
-              description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje informacje oraz jak zrobić dobre hasło.
+              description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje informacje oraz jak utworzyć dobre hasło.
               description_teacher: "We współpracy z **Common Sense Education** na tej lekcji uczniowie zgłębiają przyczyny używania przez ludzi haseł, poznają korzyści wynikające ze stosowania haseł oraz odkrywają strategie tworzenia i utrzymywania mocnych, bezpiecznych haseł.\\r\n\\r\nUczniowie poznają wskazówki dotyczące haseł, testują swoje obecne hasła w interaktywnej grze oraz tworzą nowe hasła z wykorzystaniem wytycznych dla skutecznych haseł.\\r\n"
             Sticker Art with Loops:
               name: Grafika naklejek przy pomocy pętli
@@ -9827,7 +9827,7 @@ pl:
               name: Programowanie w Harvesterze
             Going Places Safely:
               name: Bezpiecznie dotrzeć na miejsce
-              description_student: Poznaj reguły umożliwiające bezpieczne wchodzenie do miejsc w Internecie.
+              description_student: Poznaj reguły bezpiecznego odwiedzania miejsc w Internecie.
               description_teacher: We współpracy z "Common Sense Media", dzięki tej lekcji uczniowie dowiadują się, że wiele stron internetowych prosi o informacje, które są prywatne i omawia się na nich, w jaki sposób odpowiedzialnie postępować z takimi prośbami. Uczniowie dowiadują się również, że mogą odwiedzać wiele ciekawych miejsc w Internecie, ale muszą przestrzegać pewnych zasad, aby zachować bezpieczeństwo.
             'Loops: Happy Loops':
               name: Szczęśliwe pętle
@@ -9842,7 +9842,7 @@ pl:
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.
             'Events: The Big Event':
               name: Wielkie Zdarzenie Jr.
-              description_student: Idź i krzycz, gdy nauczyciele naciskają przyciski na wielkim pilocie.
+              description_student: Idź i krzycz, gdy Twoi nauczyciele naciskają przyciski na wielkim pilocie.
               description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie. Właśnie do tego służą zdarzenia.
             Events in Play Lab:
               name: W drodze ze zdarzeniami
@@ -9850,7 +9850,7 @@ pl:
               description_teacher: W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie historyjki w Play Lab!
             Ocean Scene with Loops:
               name: Scena oceanu z pętlami
-              description_student: Używaj pętli i wzorców, aby ukończyć obrazki.
+              description_student: Używaj pętli i wzorców, aby ukończyć ilustracje.
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.
             Learn to Drag and Drop:
               name: Nauka metody przeciągać i upuszczać
@@ -9902,7 +9902,7 @@ pl:
             'Programming: My Robotic Friends':
               name: 'Programowanie: Moi robotyczni przyjaciele'
             Programming in Ice Age:
-              name: Programowanie w "Epoce lodowcotej" [Ice Age]
+              name: Programowanie w Epoce lodowcotej
             Copyright and Creativity:
               name: Prawo autorskie i kreatywność
             Programming with Rey and BB-8:
@@ -9921,7 +9921,7 @@ pl:
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, uczniowie używają pętli do tworzenia wzorców. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.
             'Events: The Big Event':
               name: Wielkie Zdarzenie Jr.
-              description_student: Idź i krzycz, gdy nauczyciel naciska przyciski na wielkim pilocie.
+              description_student: Idź i krzycz, gdy Twój nauczyciel naciska przyciski na wielkim pilocie.
               description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie. Właśnie do tego służą zdarzenia.
             Events in Play Lab:
               name: Królewska bitwa ze zdarzeniami
@@ -9929,11 +9929,11 @@ pl:
               description_teacher: W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie gry w Play Lab!
             'Loops: Getting Loopy':
               name: Poznając pętle
-              description_student: Ba tej lekcji będziemy mieć potańcówkę używając pętli powtarzania!
+              description_student: Na tej lekcji będziemy mieć potańcówkę używając pętli powtarzania!
               description_teacher: W miarę, gdy zaczynamy pisać dłuższe i ciekawsze programy,, nasz kod często zawiera wiele powtórzeń. Na tej lekcji uczniowie nauczą się, jak można używać pętli, aby łatwiej przekazywać instrukcje, które mają mnóstwo powtórzonych wzorców ruchu w tańcu.
             The Right App:
               name: Odpowiednia aplikacja
-              description_student: Utwórz szkice swoich własnych aplikacji na smartfona.
+              description_student: Utwórz szkice swoj własnej aplikacji na smartfona.
               description_teacher: 'Na tej lekcji uczniowie będą stwierdzać, że informatyka może pomóc ludziom w prawdziwym życiu.  Najpierw uczniowie wykazują empatię względem kilku fikcyjnych użytkowników smartfona, aby pomóc im znaleźć "właściwą aplikację", które stanowi odpowiedź na ich potrzeby. Wówczas uczniowie okazują empatię i kreatywność, aby naszkicować swoją własną aplikacje na smartfona, która stanowi odpowiedź na potrzeby jednego dodatkowego użytkownika.'
             Loops in Harvester:
               name: Pętle z interfejsem Harvester
@@ -9941,7 +9941,7 @@ pl:
               description_teacher: Opierając się na koncepcji powtarzania instrukcji z "Zapętlania [Getting Loopy]", na tym etapie uczniowie będą używać pętli, aby bardziej efektywnie zbierać kukurydzę na Code. org.
             Programming in Maze:
               name: Programowanie z Angry Birds
-              description_student: Twórz programy, aby pomóc postaci Angry Bird przejść przez labirynt.
+              description_student: Twórz programy, aby pomóc Angry Bird przejść przez labirynt.
               description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.
             Programming in Harvester:
               name: Programowanie przy pomocy interfejsu Harvester
@@ -9949,7 +9949,7 @@ pl:
               description_teacher: 'Uczniowie będą stosować poznane koncepcje programowania do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie będą kontynuować rozwijanie sekwencyjnych umiejętności sekwencyjnych i zaczną korzystać z procesu debugowania.'
             Sequencing in Maze:
               name: Tworzenie sekwencji z Angry Birds
-              description_student: Pomóż postaci "Czerwony" Angry Bird iść ścieżką do niegrzecznej świnki.
+              description_student: Pomóż Czerwonemu Angry Bird iść ścieżką do niegrzecznej świnki.
               description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.
         pre-express-2019:
           title: Ekspresowy kurs dla nie umiejących czytać (2019)
@@ -9977,7 +9977,7 @@ pl:
             'Programming: My Robotic Friends':
               name: 'Programowanie: Moi robotyczni przyjaciele'
             Programming in Ice Age:
-              name: Programowanie w "Epoce lodowcotej" [Ice Age]
+              name: Programowanie w Epoce lodowcotej
             Copyright and Creativity:
               name: Prawo autorskie i kreatywność
             Programming with Rey and BB-8:
@@ -12183,11 +12183,11 @@ pl:
             Demonstrating Understanding:
               name: Okazywanie zrozumienia
         pl-csd-bugs:
-          title: 1 warsztat CSD 1 - Błędy
+          title: CSD Warsztat 1 - Błędy
           description_short: Debugowanie w Game Lab - Warsztat w roku akademickim 1
           lessons:
             CSD Workshop 1 Bugs:
-              name: 1 warsztat CSD 1 - Błędy
+              name: CSD Warsztat 1 - Błędy
         dlp19-csd-mod-w1:
           title: 'Odkrycia informatyki Głębokie uczenie 2019 Moduł dla Warsztatu 1'
           description_audience: Prowadzący "Odkrycia informatyki" w procesie szkolenia 2019 [CS Discoveries Facilitators in Training 2019]
@@ -12716,7 +12716,7 @@ pl:
             'Lesson 15: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
         time4cs-original-unit-1:
-          title: Oryginalny dział 1 Time 4CS
+          title: Time4CS Oryginalna Jednostka 1 
           lessons:
             Sequencing in Maze:
               name: Sekwencje w labiryncie
@@ -13164,7 +13164,7 @@ pl:
             Exploring Two Columns - Continuous:
               name: Eksplorowanie dwóch kolumn - Tryb ciągły
             Big Data, Crowdsourcing, and Machine Learning:
-              name: Giga dane, crowdsourcing i maszynowe uczenie
+              name: Giga dane, crowdsourcing i uczenie maszynowe
             Machine Learning and Bias:
               name: Uczenie maszynowe i uprzedzenia
             Project - Tell a Data Story - Part 1:
@@ -13791,7 +13791,7 @@ pl:
           lessons:
             Going Places Safely:
               name: Bezpiecznie dotrzeć na miejsce
-              description_student: Poznaj reguły umożliwiające bezpieczne wchodzenie do miejsc w Internecie.
+              description_student: Poznaj reguły bezpiecznego odwiedzania miejsc w Internecie.
               description_teacher: We współpracy z "Common Sense Media", dzięki tej lekcji uczniowie dowiadują się, że wiele stron internetowych prosi o informacje, które są prywatne i omawia się na nich, w jaki sposób odpowiedzialnie postępować z takimi prośbami. Uczniowie dowiadują się również, że mogą odwiedzać wiele ciekawych miejsc w Internecie, ale muszą przestrzegać pewnych zasad, aby zachować bezpieczeństwo.
             Learn to Drag and Drop:
               name: Nauka metody przeciągać i upuszczać
@@ -13827,11 +13827,11 @@ pl:
               description_teacher: Na tej lekcji uczniowie kontynuują poznawanie koncepcji pętli. Na poprzedniej lekcji uczniowie zostali wprowadzeni w pętle w formie przechodzenia przez labirynt i zbierania kukurydzy. Tutaj pętli używa się do zbierania skarbu w miejscach otwartych jaskiń.
             Ocean Scene with Loops:
               name: Scena oceanu z pętlami
-              description_student: Używaj pętli i wzorców, aby ukończyć obrazki.
+              description_student: Używaj pętli i wzorców, aby ukończyć ilustracje.
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.
             'Events: The Big Event':
               name: Wielkie Zdarzenie Jr.
-              description_student: Idź i krzycz, gdy nauczyciele naciskają przyciski na wielkim pilocie.
+              description_student: Idź i krzycz, gdy Twoi nauczyciele naciskają przyciski na wielkim pilocie.
               description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie. Właśnie do tego służą zdarzenia.
             Events in Play Lab:
               name: W drodze ze zdarzeniami
@@ -13873,11 +13873,11 @@ pl:
               description_teacher: Ta lekcja ma na celu przygotowanie mentalne uczniów do ćwiczeń w kodowaniu, na które natką się w trakcie kursu. W niewielkich zespołach uczniowie będą korzystać z fizycznego ćwiczenia do zaprogramowania  swoich kolegów z klasy tak, by przechodzili ostrożnie z miejsca na miejsce, aż do osiągnięcia celu.
             Sequencing in Maze:
               name: Tworzenie sekwencji z Angry Birds
-              description_student: Pomóż postaci "Czerwony" Angry Bird iść ścieżką do niegrzecznej świnki.
+              description_student: Pomóż Czerwonemu Angry Bird iść ścieżką do niegrzecznej świnki.
               description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.
             Programming in Maze:
               name: Programowanie z Angry Birds
-              description_student: Twórz programy, aby pomóc postaci Angry Bird przejść przez labirynt.
+              description_student: Twórz programy, aby pomóc Angry Bird przejść przez labirynt.
               description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.
             Programming in Harvester:
               name: Programowanie przy pomocy interfejsu Harvester
@@ -13885,7 +13885,7 @@ pl:
               description_teacher: 'Uczniowie będą stosować poznane koncepcje programowania do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie będą kontynuować rozwijanie sekwencyjnych umiejętności sekwencyjnych i zaczną korzystać z procesu debugowania.'
             'Loops: Getting Loopy':
               name: Poznając pętle
-              description_student: Ba tej lekcji będziemy mieć potańcówkę używając pętli powtarzania!
+              description_student: Na tej lekcji będziemy mieć potańcówkę używając pętli powtarzania!
               description_teacher: W miarę, gdy zaczynamy pisać dłuższe i ciekawsze programy,, nasz kod często zawiera wiele powtórzeń. Na tej lekcji uczniowie nauczą się, jak można używać pętli, aby łatwiej przekazywać instrukcje, które mają mnóstwo powtórzonych wzorców ruchu w tańcu.
             Loops in Harvester:
               name: Pętle z interfejsem Harvester
@@ -13901,11 +13901,11 @@ pl:
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, uczniowie używają pętli do tworzenia wzorców. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.
             The Right App:
               name: Odpowiednia aplikacja
-              description_student: Utwórz szkice swoich własnych aplikacji na smartfona.
+              description_student: Utwórz szkice swoj własnej aplikacji na smartfona.
               description_teacher: 'Na tej lekcji uczniowie będą stwierdzać, że informatyka może pomóc ludziom w prawdziwym życiu.  Najpierw uczniowie wykazują empatię względem kilku fikcyjnych użytkowników smartfona, aby pomóc im znaleźć "właściwą aplikację", które stanowi odpowiedź na ich potrzeby. Wówczas uczniowie okazują empatię i kreatywność, aby naszkicować swoją własną aplikacje na smartfona, która stanowi odpowiedź na potrzeby jednego dodatkowego użytkownika.'
             'Events: The Big Event':
               name: Wielkie Zdarzenie Jr.
-              description_student: Idź i krzycz, gdy nauczyciel naciska przyciski na wielkim pilocie.
+              description_student: Idź i krzycz, gdy Twój nauczyciel naciska przyciski na wielkim pilocie.
               description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie. Właśnie do tego służą zdarzenia.
             Events in Play Lab:
               name: Królewska bitwa ze zdarzeniami
@@ -13945,8 +13945,8 @@ pl:
               description_teacher: "Ta lekcja pomaga dzieciom uświadomić sobie, że w przypadku, gdy coś w Internecie wywołuje w nich gniew, smutek lub strach, należy o tym powiedzieć zaufanej osobie dorosłej. \\r\n\\r\nUczniowie uczą się, że inni ludzie mogą czasem zachowywać się się w Internecie jak dręczyciele. Będą zgłębiać czym jest cybernękanie oraz co mogą zrobić, gdy napotkają na takie zjawisko.  Po przeczytaniu scenariusza poświęconego złośliwemu zachowaniu online uczniowie dyskutują o tym, czym jest cybernękanie, jakie uczucia może wywoływać u różnych osób oraz jak na nie reagować. W końcu używają oni z nabytej wiedzy do utworzenia prostej strony ze wskazówkami na temat cybernękania w trakcie swojej podróży.\\r\n"
             Powerful Passwords:
               name: Bardzo skuteczne hasła
-              description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje informacje oraz jak zrobić dobre hasło.
-              description_teacher: "Uczniowie zgłębiają przyczyny używania przez ludzi haseł, poznają korzyści wynikające ze stosowania haseł oraz odkrywają strategie tworzenia i utrzymywania mocnych, bezpiecznych haseł.\\r\n\\r\nUczniowie poznają wskazówki dotyczące haseł, testują swoje obecne hasła w interaktywnej grze oraz tworzą nowe hasła z wykorzystaniem wytycznych dla skutecznych haseł.\\r\n"
+              description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje informacje oraz jak utworzyć dobre hasło.
+              description_teacher: "Uczniowie zgłębiają powody używania przez ludzi haseł, poznają korzyści wynikające ze stosowania haseł oraz odkrywają strategie tworzenia i utrzymywania mocnych, bezpiecznych haseł.\\r\n\\r\nUczniowie poznają wskazówki dotyczące haseł, testują swoje obecne hasła w interaktywnej grze oraz tworzą nowe hasła z wykorzystaniem wytycznych dla skutecznych haseł.\\r\n"
             'Programming: My Robotic Friends':
               name: Moi robotyczni przyjaciele Jr.
               description_student: Na tej lekcji będziesz udawać, że koledzy z klasy są robotami i zaprogramujesz ich tak, aby budowali wzorce piramid z kubeczków.
@@ -13973,7 +13973,7 @@ pl:
               description_teacher: W świecie komputerów system binarny jest niezwykle ważny. Większość komputerów obecnie przechowywać informacji wszelkiego rodzaju w formie binarnej. Ta lekcja pomaga przedstawić sposób w jaki można przełożyć coś z realnego życia na serię włączeń i wyłączeń.
             'Loops: My Loopy Robotic Friends':
               name: Moi zapętleni robotyczni przyjaciele Jr.
-              description_student: Na tej lekcji będziesz ponownie programować swoich kolegów z klasy, ale używając pętli będziesz mógł rozwiązywać większe i bardziej skomplikowane problemy.
+              description_student: Na tej lekcji będziesz ponownie programować swoich kolegów z klasy, ale używając pętli będziesz mógł rozwiązywać większe i bardziej złożone problemy.
               description_teacher: Tworząc wstępną wersję zajęć "Moi robotyczni przyjaciele", uczniowie zajmują się większymi i bardziej skomplikowanymi projektami. W celu zaprojektowanie swoich "robotów", aby ukończyć większe konstrukcje, uczniowie będą musieli identyfikować wzorce powtórzone w swoich instrukcjach, które można zastąpić pętlą.
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
@@ -14022,9 +14022,10 @@ pl:
                 W Internecie pojawia się całe mnóstwo ciekawych ludzi, ale czasem niektórzy z nich mogą być względem siebie złośliwi. Odegranie scenek pomoże Twoim uczniom zrozumieć, dlaczego często łatwiej jest być złośliwym w Internecie niż osobiście oraz jak radzić sobie ze złośliwością w internecie, gdy ją zauważą. 
             Password Power-Up:
               name: Włączenie na hasło
-              description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje informacje oraz jak zrobić dobre hasło.
+              description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje informacje oraz jak utworzyć dobre hasło.
               description_teacher: |-
                 <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
+
                 Ta lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
                 Skuteczniejsze, bardziej bezpieczne hasła internetowe są dobrym rozwiązaniem dla wszystkich. Jak możemy pomóc dzieciom w tworzeniu lepszych haseł i ich zapamiętaniu? Na tej lekcji korzystaj ze wskazówek, które pomogą dzieciom w tworzeniu haseł, które są zarówno bezpieczne, jak i łatwe do zapamiętania.
@@ -14344,8 +14345,8 @@ pl:
               description_teacher: "W ciągu pięciu kolejnych lekcji uczniowie będą mieli możliwość wykorzystania swoich umiejętności kodowania w projekcie podsumowującym. Ten projekt pomoże osobom zdobyć doświadczenie w zakresie kodowania i budowania przykładu, który można udostępnić rówieśnikom i kochanym osobom.  Zgodnie z zamierzeniami projekt realizowany będzie w ramach wielu lekcji lub wielu tygodni, a uczniowie będą spędzać czas poznając zasady prowadzenia burzy mózgów, nauki procesu projektowania, budowania i przedstawiania swojej finałowej pracy. \\r\n\\r\nNa etapie \"Eksploruj\" uczniowie będą bawić się zbudowanymi wcześniej przykładami projektów zarówno w Artist, jak i w Sprite Lab celem uzyskania inspiracji. Potem uczniowie będą poznawać proces projektowania i dowiadywać się jak wdrażać go we własnych projektach.  Następnie zostanie im udostępniona przestrzeń do stworzenia własnego projektu w Artist, Sprite Lab lub innym interfejsie, który wygodnie jest Ci udostępnić. (Najprawdopodobniej będzie to najdłuższy etap projektu). Uczniowie będą potem sprawdzać swój kod po przetestowaniu i weryfikacji przez rówieśników. Na koniec uczniowie będą mogli zaprezentować ukończoną pracę kolegom z klasy."
             AI for Oceans:
               name: AI dla oceanów
-              description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych szkoleniowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych szkoleniowych korzysta się na potrzeby modelu nauki maszynotej, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.'
-              description_teacher: "**Podsumowanie samouczka**: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych szkoleniowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych szkoleniowych korzysta się na potrzeby modelu nauki maszynotej, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.\\r\n\\r\n\\r\n**Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą przestawić swoje wnioski Tobie lub koledze z klasy.\\r"
+              description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.'
+              description_teacher: "**Podsumowanie samouczka**: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując usunć śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.\\r\n\\r\n\\r\n**Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą przestawić swoje wnioski Tobie lub komuś z klasy.\\r"
         express-2020:
           title: Kurs ekspresowy (2020)
           description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
@@ -14674,7 +14675,7 @@ pl:
             Exploring Two Columns:
               name: Eksplorowanie dwóch kolumn
             Big Data, Crowdsourcing, and Machine Learning:
-              name: Giga dane, crowdsourcing i maszynowe uczenie
+              name: Giga dane, crowdsourcing i uczenie maszynowe
             Machine Learning and Bias:
               name: Uczenie maszynowe i uprzedzenia
             Project - Tell a Data Story - Part 1:
@@ -14828,7 +14829,7 @@ pl:
               name: Moduł 7
         csd2-virtual:
           title: Wprowadzenie do Web Lab we własnym tempie
-          description: Nauczysz się, jak tworzyć i udostępniać treści na Twoich własnych stronach internetowych. Po podjęciu decyzji jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności w zakresie programowania takie jak debugowanie i komentowanie. Pod koniec tej części będziesz mieć osobistą stronę internetową, którą możesz opublikować w Internecie.
+          description: Nauczysz się, jak tworzyć i udostępniać treści na Twoich własnych stronach internetowych. Po podjęciu decyzji, jaką treść chcesz udostępniać światu, nauczysz się, jak konstruować i stylizować swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności w zakresie programowania takie, jak debugowanie i komentowanie. Pod koniec tej części będziesz mieć osobistą stronę internetową, którą możesz opublikować w Internecie.
           description_short: Naucz się budować swoją własną stronę internetową w Web Lab.
           lesson_groups:
             csd2_1:
@@ -15510,3 +15511,6 @@ pl:
             Build an App for Good:
               name: Utwórz aplikację na Dobre
           title: Aplikacje na Dobre
+        2021drafting:
+          description_audience: Wewnętrzne
+          description_short: Wewnętrzne

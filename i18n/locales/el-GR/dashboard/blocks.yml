@@ -1172,6 +1172,8 @@ el:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
             undefined: Καμία
+      gamelab_setBackgroundImageAs:
+        text: Ορισμός φόντου σε {IMG}
       gamelab_setProp:
         text: "΄όρισε {SPRITE} {PROPERTY} σε {VAL}"
         options:
@@ -1696,7 +1698,6 @@ el:
             '"stoneBricks"': πέτρινα τούβλα
             '"mossyStoneBricks"': χορταριασμένα πέτρινα τούβλα
             '"crackedStoneBricks"': ραγισμένα πέτρινα τούβλα
-            '"decorativeStoneBricks"': διακοσμητικά πέτρινα τούβλα
             '"blueCoralBlock"': μπλοκ μπλε κοραλλιών
             '"pinkCoralBlock"': μπλοκ ροζ κοραλλιών
             '"magentaCoralBlock"': μπλοκ φούξια κοραλλιών

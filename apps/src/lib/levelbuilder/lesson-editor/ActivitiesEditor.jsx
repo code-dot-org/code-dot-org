@@ -5,10 +5,10 @@ import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/Act
 import {connect} from 'react-redux';
 import {
   addActivity,
-  NEW_LEVEL_ID
+  getSerializedActivities
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import _ from 'lodash';
 import ReactDOM from 'react-dom';
+import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   activityEditAndPreview: {
@@ -32,7 +32,7 @@ const styles = {
 class ActivitiesEditor extends Component {
   static propTypes = {
     //redux
-    activities: PropTypes.array.isRequired,
+    activities: PropTypes.arrayOf(activityShape).isRequired,
     addActivity: PropTypes.func.isRequired
   };
 
@@ -90,6 +90,13 @@ class ActivitiesEditor extends Component {
     });
   };
 
+  clearTargetActivitySection = () => {
+    this.setState({
+      targetActivityPos: null,
+      targetActivitySectionPos: null
+    });
+  };
+
   // Given a clientY value of a location on the screen, find the ActivityCard
   // and ActivitySectionCard corresponding to that location, and update
   // targetActivityPos and targetActivitySectionPos to match.
@@ -106,42 +113,6 @@ class ActivitiesEditor extends Component {
     });
   };
 
-  // Serialize the activities into JSON, renaming any keys which are different
-  // on the backend.
-  serializeActivities = () => {
-    const activities = _.cloneDeep(this.props.activities);
-    activities.forEach(activity => {
-      activity.name = activity.displayName;
-      delete activity.displayName;
-
-      activity.activitySections.forEach(activitySection => {
-        activitySection.name = activitySection.displayName;
-        delete activitySection.displayName;
-
-        activitySection.description = activitySection.text;
-        delete activitySection.text;
-
-        activitySection.scriptLevels.forEach(scriptLevel => {
-          // The server expects id to be absent if a new script level is to be
-          // created.
-          if (scriptLevel.id === NEW_LEVEL_ID) {
-            delete scriptLevel.id;
-          }
-
-          // The position within the activity section
-          scriptLevel.activitySectionPosition = scriptLevel.position;
-
-          // Other position values will be recomputed from the
-          // activitySectionPosition on the server.
-          delete scriptLevel.position;
-          delete scriptLevel.levelNumber;
-        });
-      });
-    });
-
-    return JSON.stringify(activities);
-  };
-
   render() {
     const {activities} = this.props;
 
@@ -154,6 +125,7 @@ class ActivitiesEditor extends Component {
             activitiesCount={activities.length}
             setActivitySectionRef={this.setActivitySectionRef}
             updateTargetActivitySection={this.updateTargetActivitySection}
+            clearTargetActivitySection={this.clearTargetActivitySection}
             targetActivityPos={this.state.targetActivityPos}
             targetActivitySectionPos={this.state.targetActivitySectionPos}
             activitySectionMetrics={this.sectionMetrics}
@@ -172,7 +144,7 @@ class ActivitiesEditor extends Component {
         <input
           type="hidden"
           name="activities"
-          value={this.serializeActivities()}
+          value={getSerializedActivities(this.props.activities)}
         />
       </div>
     );
