@@ -221,7 +221,8 @@ body.modal-open .supreme-container{
   }
 
   #homepage .hero-bot img {
-    width: 300px;
+    width: 350px;
+    margin-top: -45px;
   }
 }
 
@@ -231,7 +232,7 @@ body.modal-open .supreme-container{
     font-size: 16px;
     color: white;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   #homepage .hero-messages-ai .hero-message {
