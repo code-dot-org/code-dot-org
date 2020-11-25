@@ -69,6 +69,7 @@ Feature: Using the Lesson Edit Page
     And I wait until element ".uitest-bubble" contains text "1"
     Then element ".uitest-bubble" contains text "2"
 
+  @no_firefox
   Scenario: Update script level properties
     Given I create a levelbuilder named "Levi"
     And I create a temp script and lesson
