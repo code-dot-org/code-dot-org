@@ -6,9 +6,10 @@ style_min: true
 social:
   "og:title": "Learn about Artificial Intelligence (AI)"
   "og:description": "Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!"
-  "og:image": "code.org/images/oceans/oceans-overview.png"
+  "og:image": "https://code.org/images/ai/ai-ethics-lp.png"
   "og:image:width": 485
   "og:image:height": 235
+  "twitter:image:src": "https://code.org/images/ai/ai-ethics-lp.png"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -205,7 +206,6 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
 </div>
 
 <div style="clear: both"></div>
-
 <div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
 
 {{ ai_vid_ethics2 }}
@@ -213,7 +213,6 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
 </div>
 
 <div style="clear: both"></div>
-
 <h3>Videos about AI from other organizations:</h3>
 <ul>
   <li><a href="https://youtu.be/DybczED-GKE" target="_blank">Seeing AI: Making the visual world more accessible</a> (3:27)</li>
@@ -417,6 +416,5 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
     </p>
   </div>
   <div style="clear: both; margin-bottom: 20px"></div>
-
 
 -->
