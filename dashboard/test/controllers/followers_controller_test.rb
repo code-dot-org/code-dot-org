@@ -69,6 +69,48 @@ class FollowersControllerTest < ActionController::TestCase
     assert_template 'followers/student_user_new'
   end
 
+  test "student_user_new increments join section attempts when signed in" do
+    refute @chris_section.students.include? @student
+    sign_in @student
+    section_join_attempts = @student.num_failed_section_attempts
+    assert_does_not_create(User) do
+      post :student_register, params: {section_code: @chris_section.code}
+    end
+    @student.reload
+    updated_section_join_attempts = @student.num_failed_section_attempts
+    change_in_section_attempts = updated_section_join_attempts - section_join_attempts
+    assert_equal 1, change_in_section_attempts
+  end
+
+  test 'student_user_new displays captcha when joining 3 or more sections in 24 hours' do
+    @new_student = create(:user)
+    sign_in @new_student
+    3.times do
+      post :student_register, params: {section_code: 'INVALID'}
+      @new_student.reload
+    end
+    assert_equal true, @new_student.display_captcha?
+  end
+
+  test 'student_user_new displays error when joining 3 or more sections in 24 hours without completing captcha' do
+    Recaptcha.configuration.skip_verify_env.delete("test")
+    @new_student = create(:user)
+    sign_in @new_student
+    invalid_section_code = 'INVALID'
+    3.times do
+      assert_does_not_create(User) do
+        post :student_register, params: {section_code: invalid_section_code}
+        @new_student.reload
+      end
+    end
+    # TODO: you need to resolve the error raised when performing this request
+    post :student_register, params: {section_code: @chris_section.code}
+    post :student_register, params: {section_code: @chris_section.code}
+    #get :student_user_new, params: {section_code: @chris_section.code}
+    @new_student.reload
+    assert_equal(I18n.t('follower.captcha_required'), flash[:alert])
+  end
+
   test "student_user_new when signed in without section code" do
     sign_in @student
     assert_does_not_create(Follower) do
