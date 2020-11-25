@@ -1654,6 +1654,13 @@ Then /^I open the stage lock dialog$/ do
   wait_short_until {jquery_is_element_visible('.modal-body')}
 end
 
+Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
+  wait_for_jquery
+  wait_short_until {@browser.execute_script("return $('.uitest-sendlesson').length") > lesson_num}
+  @browser.execute_script("$('.uitest-sendlesson').eq(#{lesson_num - 1}).children().first().click()")
+  wait_short_until {jquery_is_element_visible('.modal')}
+end
+
 Then /^I unlock the stage for students$/ do
   # allow editing
   @browser.execute_script("$('.modal-body button').first().click()")

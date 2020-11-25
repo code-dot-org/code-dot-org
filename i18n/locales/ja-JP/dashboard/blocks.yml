@@ -1178,6 +1178,8 @@ ja:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': みずのなか
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ふゆ
             undefined: なし
+      gamelab_setBackgroundImageAs:
+        text: 背景を次の値に設定する {IMG}
       gamelab_setProp:
         text: 設定 {SPRITE} {PROPERTY} 宛先 {VAL}
         options:
@@ -1711,7 +1713,6 @@ ja:
             '"stoneBricks"': 石レンガ
             '"mossyStoneBricks"': 苔石レンガ
             '"crackedStoneBricks"': ひびの入った石レンガ
-            '"decorativeStoneBricks"': 模様入り石レンガ
             '"blueCoralBlock"': 青色のサンゴブロック
             '"pinkCoralBlock"': 桃色のサンゴブロック
             '"magentaCoralBlock"': 赤紫色のサンゴブロック

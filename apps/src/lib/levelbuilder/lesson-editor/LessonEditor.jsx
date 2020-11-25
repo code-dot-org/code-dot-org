@@ -14,12 +14,11 @@ import {
   activityShape,
   resourceShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
-import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import {connect} from 'react-redux';
 import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {navigateToHref} from '@cdo/apps/utils';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 const styles = {
   editor: {
@@ -40,36 +39,6 @@ const styles = {
   dropdown: {
     margin: '0 6px',
     width: 300
-  },
-  saveButtonBackground: {
-    margin: 0,
-    position: 'fixed',
-    bottom: 0,
-    left: 0,
-    backgroundColor: color.lightest_gray,
-    borderColor: color.lightest_gray,
-    height: 50,
-    width: '100%',
-    zIndex: 900,
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  saveButton: {
-    margin: '10px 50px 10px 20px'
-  },
-  spinner: {
-    fontSize: 25,
-    padding: 10
-  },
-  lastSaved: {
-    fontSize: 14,
-    color: color.level_perfect,
-    padding: 15
-  },
-  error: {
-    fontSize: 14,
-    color: color.red,
-    padding: 15
   }
 };
 
@@ -89,7 +58,8 @@ class LessonEditor extends Component {
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     activities: PropTypes.arrayOf(activityShape).isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    courseVersionId: PropTypes.number
   };
 
   constructor(props) {
@@ -136,10 +106,11 @@ class LessonEditor extends Component {
         objectives: JSON.stringify(this.state.objectives),
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
-        announcements: this.state.announcements
+        announcements: JSON.stringify(this.state.announcements)
       })
     })
       .done(data => {
+        console.log(data);
         if (shouldCloseAfterSave) {
           navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
         } else {
@@ -317,7 +288,7 @@ class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ResourcesEditor />
+          <ResourcesEditor courseVersionId={this.props.courseVersionId} />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
@@ -335,43 +306,12 @@ class LessonEditor extends Component {
           <ActivitiesEditor />
         </CollapsibleEditorSection>
 
-        <div style={styles.saveButtonBackground} className="saveBar">
-          {this.state.lastSaved && !this.state.error && (
-            <div style={styles.lastSaved} className="lastSavedMessage">
-              {`Last saved at: ${new Date(
-                this.state.lastSaved
-              ).toLocaleString()}`}
-            </div>
-          )}
-          {this.state.error && (
-            <div style={styles.error}>
-              {`Error Saving: ${this.state.error}`}
-            </div>
-          )}
-          {this.state.isSaving && (
-            <div style={styles.spinner}>
-              <FontAwesome icon="spinner" className="fa-spin" />
-            </div>
-          )}
-          <button
-            className="btn"
-            type="button"
-            style={styles.saveButton}
-            onClick={e => this.handleSave(e, false)}
-            disabled={this.state.isSaving}
-          >
-            Save and Keep Editing
-          </button>
-          <button
-            className="btn btn-primary"
-            type="submit"
-            style={styles.saveButton}
-            onClick={e => this.handleSave(e, true)}
-            disabled={this.state.isSaving}
-          >
-            Save and Close
-          </button>
-        </div>
+        <SaveBar
+          handleSave={this.handleSave}
+          error={this.state.error}
+          isSaving={this.state.isSaving}
+          lastSaved={this.state.lastSaved}
+        />
       </div>
     );
   }
