@@ -4,7 +4,7 @@
     <arg name="this sprite" type="Sprite"/>
     <description>move a sprite if the user is pressing the arrow keys</description>
   </mutation>
-  <title name="NAME">moving with arrow keys</title>
+  <title name="NAME" id="moving with arrow keys">moving with arrow keys</title>
   <statement name="STACK">
     <block type="controls_if">
       <value name="IF0">
