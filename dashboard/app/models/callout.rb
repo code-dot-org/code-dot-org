@@ -13,7 +13,7 @@
 #  callout_text     :string(255)
 #
 
-class Callout < ActiveRecord::Base
+class Callout < ApplicationRecord
   include Seeded
   belongs_to :script_level, inverse_of: :callouts
 
