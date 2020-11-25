@@ -1004,10 +1004,19 @@ ko-KR:
   coursee-2018_name: 과정 E (2018)
   coursef-2018_name: 과정 F (2018)
   coursea-2019_name: 과정 A (2019)
+  courseb-2019_name: 과정 B (2019)
   coursec-2019_name: 과정 C (2019)
   coursed-2019_name: 과정 D (2019)
   coursee-2019_name: 과정 E (2019)
   coursef-2019_name: 과정 F (2019)
+  coursea-2020_name: 과정 A (2020)
+  courseb-2020_name: 과정 B (2020)
+  coursec-2020_name: 과정 C (2020)
+  coursed-2020_name: 과정 D (2020)
+  coursee-2020_name: 과정 E (2020)
+  coursef-2020_name: 과정 F (2020)
+  express-2019_name: 익스프레스 과정(2019)
+  express-2020_name: 익스프레스 과정(2020)
   accelerated_name: 빠른 과정
   express_name: 익스프레스 과정
   20-hour_name: 빠른 과정
@@ -1623,6 +1632,7 @@ ko-KR:
   hero_name: '마인크래프트: 히어로의 여정'
   applab_tile_start_tutorial: 시작
   applab_tile_teacher_guide: 선생님 가이드 보기
+  aquatic_name: '마인크래프트: 보야지 아쿠아틱'
   account_sign_up_email_opt_in: 당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도
     되겠습니까?
   account_sign_up_child_accept_terms: 본인은 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을
@@ -1705,3 +1715,4 @@ ko-KR:
   hoc2018_mc_thank_microsoft: 모든 어린이들이 컴퓨터 과학을 배우고 21세기에 성공할 기술을 얻을 수 있는 기회를 갖도록 저희의
     비전과 미션에 지원하고 있는 Microsoft에 감사드립니다.
   homepage_slot_text_title_at_home: 가정 학습
+  footer_powered_by_aws: Powered by Amazon Web Services
