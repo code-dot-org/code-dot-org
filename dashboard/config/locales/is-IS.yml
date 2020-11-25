@@ -194,9 +194,6 @@ is:
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
     student_consent: Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns
       til að nota þjónustur Code.org.
-    agree_us_website: Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum.
-    my_data_to_us: Gögn sem verða til með notkun minni á þessum vef kunna að verða
-      send til og geymd eða greind í Bandaríkjunum.
     agree_us_data_transfer_student: "**Ég samþykki að Code.org flytji gögn (þar með
       talið persónuupplýsingar) sem til koma vegna notkunar þinnar á vefsvæðinu til
       Bandaríkjanna** til hýsingar og vinnslu upplýsinganna."

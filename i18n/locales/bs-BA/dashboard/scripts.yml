@@ -2891,3 +2891,7 @@ bs:
               name: Kurs A
             Course B:
               name: Kurs B
+        ml-playground:
+          lessons:
+            intro:
+              name: Uvod

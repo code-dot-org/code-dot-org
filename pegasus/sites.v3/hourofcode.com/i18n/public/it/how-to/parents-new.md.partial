@@ -26,7 +26,7 @@ Tutte le nostre attività integrano la risoluzione dei problemi e il pensiero cr
 
 - Per il bambino che ama giocare: <a href="https://code.org/minecraft">Minecraft</a> o <a href="https://code.org/dance">Dance Party</a>
 - Per il bambino che ama la Disney: <a href="https://code.org/starwars">Guerre stellari</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, o <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Oceania</a>
-- Per il bambino che ama imparare: <a href="https://code.org/oceans">IA per i mari</a> o <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Crea musica con Scratch</a>
+- Per un bambino che ama imparare: <a href="https://code.org/oceans">L'Intelligenza Artificiale per il mare</a> o <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Crea musica con Scratch</a>
 
 <h3>Poca o nessuna tecnologia?</h3>
 Se utilizzerai poca o nessuna tecnologia, puoi filtrare [le attività dell'Ora del Codice](https://hourofcode.com/us/learn) selezionando "Nessun computer o dispositivo" nella sezione *Tecnologia di classe*.
