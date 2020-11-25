@@ -6,8 +6,15 @@
 #  user_id    :integer
 #  model_id   :string(255)
 #  name       :string(255)
+#  deleted_at :datetime
+#  purged_at  :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#
+# Indexes
+#
+#  index_user_ml_models_on_model_id  (model_id)
+#  index_user_ml_models_on_user_id   (user_id)
 #
 class UserMlModel < ActiveRecord::Base
   belongs_to :user

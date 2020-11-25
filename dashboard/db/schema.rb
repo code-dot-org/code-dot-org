@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201117160845) do
+ActiveRecord::Schema.define(version: 2020_11_24_184316) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1664,12 +1664,16 @@ ActiveRecord::Schema.define(version: 20201117160845) do
     t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true
   end
 
-  create_table "user_ml_models", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "user_ml_models", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.string "model_id"
     t.string "name"
+    t.datetime "deleted_at"
+    t.datetime "purged_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["model_id"], name: "index_user_ml_models_on_model_id"
+    t.index ["user_id"], name: "index_user_ml_models_on_user_id"
   end
 
   create_table "user_module_task_assignments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
