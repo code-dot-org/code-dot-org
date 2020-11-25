@@ -17,7 +17,7 @@
 
 # Join table defining student-teacher relationships for Users
 # (student_user is the student, user is the teacher)
-class Follower < ActiveRecord::Base
+class Follower < ApplicationRecord
   acts_as_paranoid
 
   belongs_to :section
