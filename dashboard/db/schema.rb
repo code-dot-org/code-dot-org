@@ -1598,6 +1598,7 @@ ActiveRecord::Schema.define(version: 20201117160845) do
     t.integer "script_level_id", null: false
     t.datetime "seen_on_feedback_page_at"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
+    t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
 
   create_table "teacher_profiles", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
