@@ -27,7 +27,7 @@ Per maggiori informazioni su come mettere in comunicazione i tuoi dipendenti con
 
 # Come ospitare un evento dell'Ora del Codice con gli studenti
 
-## Guarda questo video per scoprire come fare Promuovi la tua Ora del Codice
+## 1. Promuovi la tua Ora del Codice
 - Promuovi il tuo evento dell'[Ora del Codice]({{ urls/promote }}) ed incoraggia altri ad organizzarlo.
 - Incoraggia gli esperti informatici della tua azienda a far visita ad una scuola della tua città per aiutare a svolgere un'Ora del Codice e stimolare gli studenti a studiare informatica. Possono [iscriversi qui]({{ urls/volunteer_engineer }}) per essere messi in comunicazione con una classe (solo per gli USA).
 

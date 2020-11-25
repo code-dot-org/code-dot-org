@@ -181,9 +181,6 @@ fi:
     invalid_password: Salasanan tulee olla vähintään 6 merkkiä pitkä
     mismatch_password: Antamasi salasanat eivät täsmää
     student_consent: Vahvistan että minulla on huoltajani lupa käyttää Code.org palveluita.
-    agree_us_website: Annan suostumukseni Yhdysvaltalaisen sivuston käyttöön.
-    my_data_to_us: Sivuston käyttötietoni voidaan lähettää, tallentaa ja käsitellä
-      Yhdysvalloissa.
     agree_us_data_transfer_student: "**Hyväksyn, että Code.org voi siirtää tietoja
       (mukaan lukien henkilötiedot) tämän sivuston käytöstä Yhdysvalloille** tietojen
       isännöimiseksi ja käsittelemiseksi."
@@ -193,7 +190,7 @@ fi:
     data_collection_us: Ymmärrän, että Code.org on yhdysvaltalainen voittoa tavoittelematon
       verkkosivusto ja että Yhdysvaltojen tietojen keruuta koskevat lait saattavat
       poiketa suomen laeista.
-    visit_privacy: Lue lisää Code.orgin [Tietosuojakäytäntö](%{privacy_url}) sivuilla.
+    visit_privacy: Lue lisää Code.orgin [Tietosuojakäytäntö(]%{privacy_url}) sivuilla.
     student_terms_markdown: Sähköpostiosoitteita ei tallenneta muodossa, joka antaisi
       meidän ottaa yhteyttä oppilaisiin. Oppilaat eivät koskaan saa sähköpostia sivustolta
       Code.org muutoin kuin salasanan palauttamiseksi. Katso [tietosuojakäytännöstä](http://code.org/privacy)

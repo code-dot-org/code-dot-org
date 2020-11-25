@@ -58,8 +58,8 @@
           "2-3_Artist_Debugging_9_b": "Je hoeft geen ander blok toe te voegen om de volledige draai te krijgen, voeg enkel 60 graden aan het 'draai naar links' blok toe dat er al is!"
         },
         "2-3 Artist Functions 1": {
-          "2-3_Artist_Functions_1_a": "De vierkanten hebben elk zijden van 100 pixels, dat betekent dat je 175 pixels vooruit moet bewegen voor je je tweede vierkant tekent.",
-          "2-3_Artist_Functions_1_b": "Het is oke om overlappende lijnen te gebruiken om je bril te tekenen."
+          "2-3_Artist_Functions_1_a": "De vierkanten hebben zijden van 100 pixels, dat betekent dat je 175 pixels vooruit moet bewegen voordat je je tweede vierkant tekent.",
+          "2-3_Artist_Functions_1_b": "Het is OK om overlappende lijnen te gebruiken als je de bril tekent."
         },
         "2-3 Artist Functions 11": {
           "2-3_Artist_Functions_11_a": "Je moet niet alleen het aantal en de lengte van de zijden binnen de functie wijzigen, maar ook de hoek die de kunstenaar draait tussen iedere zijde."
@@ -68,7 +68,7 @@
           "2-3_Artist_Functions_12_a": "Probeer de code eerst om te zien wat je nog moet toevoegen."
         },
         "2-3 Artist Functions 2": {
-          "2-3_Artist_Functions_2_a": "Je programma: moet:\n\n-   functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   functie gebruiken"
+          "2-3_Artist_Functions_2_a": "Je programma moet:\n\n-   De functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   De functie gebruiken"
         },
         "2-3 Artist Functions 3": {
           "2-3_Artist_Functions_3_a": "\\*\\* 115 + 45 = 160 \\*\\*"
@@ -143,7 +143,7 @@
         },
         "2-3 Bee Functions 9": {
           "2-3_Bee_Functions_8_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
-          "2-3_Bee_Functions_8_b": "Vergeet niet om jouw code binnenin het groene functie blok te plaatsen."
+          "2-3_Bee_Functions_8_b": "Denk er aan dat je je code bouwt binnen het groene functie blok.\n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
         },
         "2-3 Bee Loops 2": {
           "2-3_Bee_Loops_2_a": "Uiteindelijk moet je 4 blokken in jouw lus hebben."
@@ -291,8 +291,8 @@
           "4-5_While_Loops_8_a": "Elk item heeft zijn eigen `herhaal` loop nodig."
         },
         "Course 4 Artist 11": {
-          "Course_4_Artist_11_a": "De halve zeshoek heeft een \\*\\* lengte van 30 \\*\\* en draait rechts met \\*\\* 60 graden \\*\\*.",
-          "Course_4_Artist_11_b": "De driehoek heeft een \\*\\* lengte van 80 \\*\\* en draait naar rechts met \\*\\* 120 graden \\*\\*."
+          "Course_4_Artist_11_a": "De halve zeshoek heeft een **lengte van 30** en draait rechtsom met **60 graden**.",
+          "Course_4_Artist_11_b": "De 2/3 driehoek heeft een **lengte van 80** draait rechtsom met **120 graden**. "
         },
         "Course 4 Artist 12": {
           "Course_4_Artist_12_a": "Elke herhaalde vorm is de combinatie van een **halve zeshoek**, gevolgd door **2/3 van een driehoek**. ",
@@ -603,17 +603,17 @@
           "voyage_aquatic_9a": "Wat een prachtig koraalrif! Blauw koraal geeft de \\*\\* rechte \\*\\* manier aan, en zorg ervoor dat je rood koraal niet \\*\\* links \\*\\* laat liggen!"
         },
         "MC_HOC_2017_01_RETRY": {
-          "MC_HOC_2017_01_RETRY_a": "Sleep een 'naar voren'-blok van de werkplaats naar de werkruimte en maak deze vast onder het 'wanneer uitgevoerd'-blok.",
+          "MC_HOC_2017_01_RETRY_a": "Sleep een 'ga vooruit'-blok uit de toolbox naar de werkruimte en maak deze vast onder het 'bij uitvoeren'-blok.",
           "MC_HOC_2017_01_RETRY_b": "Vergeet niet op 'Uitvoeren' te klikken om de code voor de agent uit te voeren.",
           "MC_HOC_2017_01_RETRY_c": "Wanneer er geen code meer over is voor de agent, kun je de speler bewegen met de pijltoetsen."
         },
         "MC_HOC_2017_01_RETRY_2019": {
-          "MC_HOC_2017_01_RETRY_a": "Sleep een 'naar voren'-blok van de werkplaats naar de werkruimte en maak deze vast onder het 'wanneer uitgevoerd'-blok.",
+          "MC_HOC_2017_01_RETRY_a": "Sleep een 'ga vooruit'-blok uit de toolbox naar de werkruimte en maak deze vast onder het 'bij uitvoeren'-blok.",
           "MC_HOC_2017_01_RETRY_b": "Vergeet niet op 'Uitvoeren' te klikken om de code voor de agent uit te voeren.",
           "MC_HOC_2017_01_RETRY_c": "Wanneer er geen code meer over is voor de agent, kun je de speler bewegen met de pijltoetsen."
         },
         "MC_HOC_2017_01_RETRY_2020": {
-          "MC_HOC_2017_01_RETRY_a": "Sleep een 'naar voren'-blok van de werkplaats naar de werkruimte en maak deze vast onder het 'wanneer uitgevoerd'-blok.",
+          "MC_HOC_2017_01_RETRY_a": "Sleep een 'ga vooruit'-blok uit de toolbox naar de werkruimte en maak deze vast onder het 'bij uitvoeren'-blok.",
           "MC_HOC_2017_01_RETRY_b": "Vergeet niet op 'Uitvoeren' te klikken om de code voor de agent uit te voeren.",
           "MC_HOC_2017_01_RETRY_c": "Wanneer er geen code meer over is voor de agent, kun je de speler bewegen met de pijltoetsen."
         },
@@ -687,13 +687,16 @@
           "MC_HOC_2017_05_Cole_b": "Leid de agent over de rivier, terwijl je een brug bouwt."
         },
         "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_a": "Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_ deze worden uitgevoerd?"
+          "MC_HOC_2017_06_Cole_a": "Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_ deze worden uitgevoerd?",
+          "MC_HOC_2017_06_Cole_b": "Help de Agent om een brug over het water te bouwen! "
         },
         "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_a": "Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_ deze worden uitgevoerd?"
+          "MC_HOC_2017_06_Cole_a": "Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_ deze worden uitgevoerd?",
+          "MC_HOC_2017_06_Cole_b": "Help de Agent om een brug over het water te bouwen! "
         },
         "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_a": "Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_ deze worden uitgevoerd?"
+          "MC_HOC_2017_06_Cole_a": "Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_ deze worden uitgevoerd?",
+          "MC_HOC_2017_06_Cole_b": "Help de Agent om een brug over het water te bouwen! "
         },
         "MC_HOC_2017_07_Cole": {
           "MC_HOC_2017_07_Cole_c": "Al wat je de agent moet laten doen is het pad naar het mijnkarretje vrijmaken.",
@@ -882,10 +885,12 @@
           "courseC_maze_programming_challenge2_b": "De kortste oplossing gebruikt enkel 5 blokken, gebruik makende van de `herhaal` blok!"
         },
         "course3_bee_functions_challenge1": {
-          "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
+          "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
+          "courseE_bee_functions_challenge1_b": "Denk er aan dat je je code bouwt binnen het groene functie blok."
         },
         "course3_bee_functions_challenge2": {
-          "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
+          "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
+          "courseE_bee_functions_challenge1_b": "Denk er aan dat je je code bouwt binnen het groene functie blok."
         },
         "course3_bee_functions_challenge4": {
           "courseF_bee_functions_challenge2_a": "Als er een pad is naar rechts, moet je het volgende doen:\n\n-   Neem nectar of maak honing.\n-   Beweeg naar rechts, in de richting van het zijpad.\n-   Beweeg naar het einde van het zijpad.\n-   Beweeg rechts.\n\nAls je de bovenstaande acties tweemaal herhaalt, zal je klaar zijn om terug te keren via het hoofdpad.\n\n**De volgende hint bevat de volledige oplossing!**",
@@ -1399,23 +1404,29 @@
           "courseD_scrat_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
         },
         "courseE_artist_concept_challenge1": {
-          "courseE_artist_concept_challenge1_a": "De halve zeshoek heeft een \\*\\* lengte van 30 \\*\\* en draait rechts met \\*\\* 60 graden \\*\\*.",
-          "courseE_artist_concept_challenge1_b": "De driehoek heeft een \\*\\* lengte van 80 \\*\\* en draait naar rechts met \\*\\* 120 graden \\*\\*."
+          "courseE_artist_concept_challenge1_a": "De halve zeshoek heeft een **lengte van 30** en draait rechtsom met **60 graden**.",
+          "courseE_artist_concept_challenge1_b": "De 2/3 driehoek heeft een **lengte van 80** draait rechtsom met **120 graden**. ",
+          "courseE_artist_concept_challenge1_c": "Dit is het patroon dat je moet herhalen om deze tekening te krijgen."
         },
         "courseE_artist_concept_challenge1_2018": {
-          "courseE_artist_concept_challenge1_a": "De halve zeshoek heeft een \\*\\* lengte van 30 \\*\\* en draait rechts met \\*\\* 60 graden \\*\\*.",
-          "courseE_artist_concept_challenge1_b": "De driehoek heeft een \\*\\* lengte van 80 \\*\\* en draait naar rechts met \\*\\* 120 graden \\*\\*."
+          "courseE_artist_concept_challenge1_a": "De halve zeshoek heeft een **lengte van 30** en draait rechtsom met **60 graden**.",
+          "courseE_artist_concept_challenge1_b": "De 2/3 driehoek heeft een **lengte van 80** draait rechtsom met **120 graden**. ",
+          "courseE_artist_concept_challenge1_c": "Dit is het patroon dat je moet herhalen om deze tekening te krijgen."
         },
         "courseE_artist_functions1": {
-          "courseE_artist_functions1_a": "De vierkanten hebben elk zijden van 100 pixels, dat betekent dat je 175 pixels vooruit moet bewegen voor je je tweede vierkant tekent.",
-          "courseE_artist_functions1_b": "Het is oke om overlappende lijnen te gebruiken om je bril te tekenen."
+          "courseE_artist_functions1_a": "De vierkanten hebben zijden van 100 pixels, dat betekent dat je 175 pixels vooruit moet bewegen voordat je je tweede vierkant tekent.",
+          "courseE_artist_functions1_b": "Het is OK om overlappende lijnen te gebruiken als je de bril tekent.",
+          "courseE_artist_functions1_c": "Als je een korter programma wil, zou je een 'herhaal' lus kunnen gebruiken om de vierkanten om de brilleglazen te tekenen."
         },
         "courseE_artist_functions1_copy": {
-          "courseE_artist_functions1_a": "De vierkanten hebben elk zijden van 100 pixels, dat betekent dat je 175 pixels vooruit moet bewegen voor je je tweede vierkant tekent.",
-          "courseE_artist_functions1_b": "Het is oke om overlappende lijnen te gebruiken om je bril te tekenen."
+          "courseE_artist_functions1_a": "De vierkanten hebben zijden van 100 pixels, dat betekent dat je 175 pixels vooruit moet bewegen voordat je je tweede vierkant tekent.",
+          "courseE_artist_functions1_b": "Het is OK om overlappende lijnen te gebruiken als je de bril tekent.",
+          "courseE_artist_functions1_c": "Als je een korter programma wil, zou je een 'herhaal' lus kunnen gebruiken om de vierkanten om de brilleglazen te tekenen."
         },
         "courseE_artist_functions2": {
-          "courseD_artist_functions2_a": "Je programma: moet:\n\n-   functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   functie gebruiken"
+          "courseD_artist_functions2_a": "Je programma moet:\n\n-   De functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   De functie gebruiken",
+          "courseD_artist_functions2_b": "De functie die je schrijft moet niet je hele programma bevatten, maar alleen het deel dat een vierkant tekent met zijden van 100 pizels.",
+          "courseD_artist_functions2_c": "Gebruik de 'teken een vierkant'-functie om je functie 'aan te roepen' onder het 'als gestart'-blok. Anders zal de code in je functie niet gebruikt worden."
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_a": "Je programma: moet:\n\n-   functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   functie gebruiken"
@@ -1427,32 +1438,55 @@
           "courseD_artist_functions2_a": "Je programma: moet:\n\n-   functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   functie gebruiken"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "Je programma: moet:\n\n-   functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   functie gebruiken"
+          "courseD_artist_functions2_a": "Je programma moet:\n\n-   De functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   De functie gebruiken",
+          "courseD_artist_functions2_b": "De functie die je schrijft moet niet je hele programma bevatten, maar alleen het deel dat een vierkant tekent met zijden van 100 pizels.",
+          "courseD_artist_functions2_c": "Gebruik de 'teken een vierkant'-functie om je functie 'aan te roepen' onder het 'als gestart'-blok. Anders zal de code in je functie niet gebruikt worden."
         },
         "courseE_artist_functions8": {
-          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
+          "courseD_artist_functions8_f": "Je hebt maar een 'ga vooruit'-blok nodig, maar je hebt flink wat 'spring vooruit'- en/of 'spring achteruit'-blokken nodig.",
+          "courseD_artist_functions8_a": "Maak eerst een functie om 1 vierkant te tekenen, en daarna een functie voor een hele rij vierkantjes.\n\nHoe zou je een 'teken een rij vierkanten'-functie kunen gebruiken om deze tekening te maken?",
+          "courseD_artist_functions8_d": "Om een rij vierkanten te maken:\n\n-   herhaal 3 keer\n    -   teken een vierkant met zijden van **50 pixels**\n    -   spring vooruit met **100 pixels**",
+          "courseD_artist_functions8_b": "Beschouw elke rij in deze tekening als een rij van 3 vierkanten. Hoeveel rijen vierkanten zijn er? Bedenk voor elk van deze rijen, waar je begint met tekenen.\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "Aan het eind van elke rij vierkanten, moet de artiest omlaag en achteruit springen voordat hij de volgende rij vierkanten kan tekenen."
         },
         "courseE_artist_functions8_2018": {
-          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
+          "courseD_artist_functions8_f": "Je hebt maar een 'ga vooruit'-blok nodig, maar je hebt flink wat 'spring vooruit'- en/of 'spring achteruit'-blokken nodig.",
+          "courseD_artist_functions8_a": "Maak eerst een functie om 1 vierkant te tekenen, en daarna een functie voor een hele rij vierkantjes.\n\nHoe zou je een 'teken een rij vierkanten'-functie kunen gebruiken om deze tekening te maken?",
+          "courseD_artist_functions8_d": "Om een rij vierkanten te maken:\n\n-   herhaal 3 keer\n    -   teken een vierkant met zijden van **50 pixels**\n    -   spring vooruit met **100 pixels**",
+          "courseD_artist_functions8_b": "Beschouw elke rij in deze tekening als een rij van 3 vierkanten. Hoeveel rijen vierkanten zijn er? Bedenk voor elk van deze rijen, waar je begint met tekenen.\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)"
         },
         "courseE_artist_functions8_2019": {
-          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
+          "courseD_artist_functions8_f": "Je hebt maar een 'ga vooruit'-blok nodig, maar je hebt flink wat 'spring vooruit'- en/of 'spring achteruit'-blokken nodig.",
+          "courseD_artist_functions8_a": "Maak eerst een functie om 1 vierkant te tekenen, en daarna een functie voor een hele rij vierkantjes.\n\nHoe zou je een 'teken een rij vierkanten'-functie kunen gebruiken om deze tekening te maken?",
+          "courseD_artist_functions8_d": "Om een rij vierkanten te maken:\n\n-   herhaal 3 keer\n    -   teken een vierkant met zijden van **50 pixels**\n    -   spring vooruit met **100 pixels**",
+          "courseD_artist_functions8_b": "Beschouw elke rij in deze tekening als een rij van 3 vierkanten. Hoeveel rijen vierkanten zijn er? Bedenk voor elk van deze rijen, waar je begint met tekenen.\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)"
         },
         "courseE_artist_functions8_2020": {
-          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
+          "courseD_artist_functions8_f": "Je hebt maar een 'ga vooruit'-blok nodig, maar je hebt flink wat 'spring vooruit'- en/of 'spring achteruit'-blokken nodig.",
+          "courseD_artist_functions8_a": "Maak eerst een functie om 1 vierkant te tekenen, en daarna een functie voor een hele rij vierkantjes.\n\nHoe zou je een 'teken een rij vierkanten'-functie kunen gebruiken om deze tekening te maken?",
+          "courseD_artist_functions8_d": "Om een rij vierkanten te maken:\n\n-   herhaal 3 keer\n    -   teken een vierkant met zijden van **50 pixels**\n    -   spring vooruit met **100 pixels**",
+          "courseD_artist_functions8_b": "Beschouw elke rij in deze tekening als een rij van 3 vierkanten. Hoeveel rijen vierkanten zijn er? Bedenk voor elk van deze rijen, waar je begint met tekenen.\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)"
         },
         "courseE_bee_functions6": {
-          "courseE_bee_functions6_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
+          "courseE_bee_functions6_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
+          "courseE_bee_functions6_b": "In deze situatie kan het handig zijn om te bewegenin de functie, maar niet al je `beweeg`-blokken hoeven in de functie te staan."
         },
         "courseE_bee_functions7": {
           "courseE_bee_functions7_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
-          "courseE_bee_functions7_b": "Vergeet niet om jouw code binnenin het groene functie blok te plaatsen."
+          "courseE_bee_functions7_b": "Denk er aan dat je je code bouwt binnen het groene functie blok.\n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)",
+          "courseE_bee_functions7_c": "Deze fundcite moet de bij draaien zodat hij het zijpad kan volgen, de nectar verzamelen, de honing maken, en omdraaien om terug te gaan naar het hoofdpad."
         },
         "courseE_bee_functions_challenge1": {
-          "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
+          "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
+          "courseE_bee_functions_challenge1_b": "Denk er aan dat je je code bouwt binnen het groene functie blok."
         },
         "courseE_bee_functions_challenge2": {
-          "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!"
+          "courseE_bee_functions_challenge1_a": "Als de puzzel moeilijk lijkt, probeer dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er wel!",
+          "courseE_bee_functions_challenge1_b": "Denk er aan dat je je code bouwt binnen het groene functie blok."
         },
         "courseE_farmer_ramp12e": {
           "courseE_farmer_ramp12e_b": "De oplossing van deze puzzel lijkt sterk op de oplossing van de laatste puzzel, maar draait in de andere richting."
@@ -1644,6 +1678,496 @@
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "De oplossing van deze puzzel lijkt sterk op de oplossing van de laatste puzzel, maar draait in de andere richting."
+        },
+        "OPD-K5-projects-2": {
+          "courseE_playLab_scaffold1_a": "Je kunt het blok `geef speler 1 een ??? uiterlijk` gebruiken om een nieuwe speler op het toneel te zetten.",
+          "courseE_playLab_scaffold1_b": "Zet het blok `geef speler 1 een ??? uiterlijk` onder `als gestart` om je speler te laten verschijnen aan het begin van je programma.",
+          "courseE_playLab_scaffold1_c": "Gebruik het blok `gebruik ??? achtergrond` om een achtergrond te kiezen voor je scene."
+        },
+        "OPD-K5-projects-3": {
+          "courseE_playLab_scaffold1_a": "Gebruik het drop down menu van de `wanneer pijltje naar`-gebeurtenis om de richting aan te geven waarover dit blok gaat.",
+          "courseE_playLab_scaffold1_b": "Je zou mu vier `wanneer pijltje naar`-gebeurtenissen moeten hebben, met telkens een beweging in een andere richting.",
+          "courseE_playLab_scaffold1_c": "Als je klaar bent, moet je je speler kunnen bewegen met de pijltjestoetsen!"
+        },
+        "OPD-K5-projects-5": {
+          "courseE_playLab_scaffold4_a": "Gebruik `scoor punt` om een punt toe te voegen, en `verwijder punt` om een punt weg te nemen."
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "course3_playLab_challenge1": {
+          "courseE_playLab_challenge1_a": "Hier zijn wat dingen die je zou kunnen doen als de speler het spel wint:\n\n-   Laat de dinosaurus verdwijnen.\n-   Stop de eekhoorns.\n-   Maak de eekhoorns en de ridder blij.\n-   Verander de achtergrond.\n-   Zorg dat de ridder de spelter bedankt voor de hulp.\n-   Laat alle spelers verdwijnen en toon een boodschap \"Je hebt gewonnen!\".",
+          "courseE_playLab_challenge1_b": "Hier zijn wat dingen die je zou kunnen doen als de speler het spel verliest.:\n\n-   Laat de ridder verdwijnen.\n-   Maak de eekhoorns verdrietig.\n-   Laat de dinosaurus iets zeggen.\n-   Verander de achtergrond.\n-   Laat alle spelers verdwijnen, en toon een boodschap \"Afgelopen uit\"."
+        },
+        "course4_artist_concept_challenge2": {
+          "courseE_artist_concept_challenge2_a": "Zodra je eenmaal een functie hebt gemaakt, kun je hem steeds maar weer opnieuw aanroepen - waar je maar wilt, en hoe vaak je maar wilt!",
+          "courseE_artist_concept_challenge2_b": "Met dit commando kun je naar een willekeurige plaats op het canvas springen."
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseC19_playLab_EOC1": {
+          "courseE_playLab_scaffold1_a": "Je kunt het blok `geef speler 1 een ??? uiterlijk` gebruiken om een nieuwe speler op het toneel te zetten.",
+          "courseE_playLab_scaffold1_b": "Zet het blok `geef speler 1 een ??? uiterlijk` onder `als gestart` om je speler te laten verschijnen aan het begin van je programma.",
+          "courseE_playLab_scaffold1_c": "Gebruik het blok `gebruik ??? achtergrond` om een achtergrond te kiezen voor je scene."
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "courseE_playLab_scaffold1_a": "Je kunt het blok `geef speler 1 een ??? uiterlijk` gebruiken om een nieuwe speler op het toneel te zetten.",
+          "courseE_playLab_scaffold1_b": "Zet het blok `geef speler 1 een ??? uiterlijk` onder `als gestart` om je speler te laten verschijnen aan het begin van je programma.",
+          "courseE_playLab_scaffold1_c": "Gebruik het blok `gebruik ??? achtergrond` om een achtergrond te kiezen voor je scene."
+        },
+        "courseC19_playLab_EOC2": {
+          "courseE_playLab_scaffold1_a": "Gebruik het drop down menu van de `wanneer pijltje naar`-gebeurtenis om de richting aan te geven waarover dit blok gaat.",
+          "courseE_playLab_scaffold1_b": "Je zou mu vier `wanneer pijltje naar`-gebeurtenissen moeten hebben, met telkens een beweging in een andere richting.",
+          "courseE_playLab_scaffold1_c": "Als je klaar bent, moet je je speler kunnen bewegen met de pijltjestoetsen!"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "courseE_playLab_scaffold1_a": "Gebruik het drop down menu van de `wanneer pijltje naar`-gebeurtenis om de richting aan te geven waarover dit blok gaat.",
+          "courseE_playLab_scaffold1_b": "Je zou mu vier `wanneer pijltje naar`-gebeurtenissen moeten hebben, met telkens een beweging in een andere richting.",
+          "courseE_playLab_scaffold1_c": "Als je klaar bent, moet je je speler kunnen bewegen met de pijltjestoetsen!"
+        },
+        "courseC19_playLab_EOC4": {
+          "courseE_playLab_scaffold4_a": "Gebruik `scoor punt` om een punt toe te voegen, en `verwijder punt` om een punt weg te nemen."
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "courseE_playLab_scaffold4_a": "Gebruik `scoor punt` om een punt toe te voegen, en `verwijder punt` om een punt weg te nemen."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_b": "Om 4 zijden te tekenen, moet je het `ga vooruit met 100 pixels` blok in een herhaal lus plaatsen. Zorg ervoor dat de lus 4 keer iets tekent.\n\nVergeet niet, om daarna te draaien!",
+          "courseE_artist_ramp8_c": "Er zouden 2 blokken in je lus moeten zitten: 'ga vooruit' en 'draai rechts met 90 graden'.",
+          "courseD_artist_ramp12_a": "Wat is er hetzelfde als bij een vierkant? En wat is er anders?",
+          "courseD_artist_ramp12_c": "Om een zijde te tekenen, moet je eerst 100 pixels vooruit bewegen, en daarna 120 graden naar rechts draaien. Hoeveel zijden heb je nodig?"
+        },
+        "courseE_artist_concept1": {
+          "courseE_artist_concept1_a": "De zeshoeken hebben zijden van 50 pixels, en je moet steeds 60 graden naar rechts draaien.",
+          "courseE_artist_concept1_b": "Probeer hier een functie voor te maken, zodat je niet steeds opnieuw de code voor een zeshoek moet schrijven.",
+          "courseE_artist_concept1_c": "Gebruik het `dikte instellen`-blok voor elke functieaanroep om de penbreedte aan te passen."
+        },
+        "courseE_artist_concept1_2018": {
+          "courseE_artist_concept1_a": "De zeshoeken hebben zijden van 50 pixels, en je moet steeds 60 graden naar rechts draaien.",
+          "courseE_artist_concept1_b": "Probeer hier een functie voor te maken, zodat je niet steeds opnieuw de code voor een zeshoek moet schrijven.",
+          "courseE_artist_concept1_c": "Gebruik het `dikte instellen`-blok voor elke functieaanroep om de penbreedte aan te passen."
+        },
+        "courseE_artist_concept4": {
+          "courseE_artist_concept4_a": "Er zijn verschillende manieren om deze puzzle op te lossen. Kun jij een plan bedenken?",
+          "courseE_artist_concept4_b": "Probeer eerst een vierkant te tekenen. Maak vervolgens een hele rij vierkanten. En wat komt er dan?",
+          "courseE_artist_concept4_c": "Als je een rij vierkanten getekend hebt, kun je ofwel omdraaien en een rij vierkanten naar links tekenen, ofwel terugspringen naar de linkerkant en de volgende rij naar rechts tekenen. Wat doe je liever?"
+        },
+        "courseE_artist_concept4_2018": {
+          "courseE_artist_concept4_a": "Er zijn verschillende manieren om deze puzzle op te lossen. Kun jij een plan bedenken?",
+          "courseE_artist_concept4_b": "Probeer eerst een vierkant te tekenen. Maak vervolgens een hele rij vierkanten. En wat komt er dan?",
+          "courseE_artist_concept4_c": "Als je een rij vierkanten getekend hebt, kun je ofwel omdraaien en een rij vierkanten naar links tekenen, ofwel terugspringen naar de linkerkant en de volgende rij naar rechts tekenen. Wat doe je liever?"
+        },
+        "courseE_artist_concept_challenge2": {
+          "courseE_artist_concept_challenge2_a": "Zodra je eenmaal een functie hebt gemaakt, kun je hem steeds maar weer opnieuw aanroepen - waar je maar wilt, en hoe vaak je maar wilt!",
+          "courseE_artist_concept_challenge2_b": "Met dit commando kun je naar een willekeurige plaats op het canvas springen."
+        },
+        "courseE_artist_concept_challenge2_2018": {
+          "courseE_artist_concept_challenge2_a": "Zodra je eenmaal een functie hebt gemaakt, kun je hem steeds maar weer opnieuw aanroepen - waar je maar wilt, en hoe vaak je maar wilt!",
+          "courseE_artist_concept_challenge2_b": "Met dit commando kun je naar een willekeurige plaats op het canvas springen."
+        },
+        "courseE_artist_functions10": {
+          "courseD_artist_functions10_b": "Deze tekening lijkt erg veel op de vorige, maar de `teken een rij ...`-functie moet nu een andere vorm tekenen.",
+          "courseD_artist_functions10_a": "Om te voorkomen dat je het `ga vooruit`-blok te vaak gebruikt, kun je een `teken een zeshoek`-functie maken en die functie een aantal keren aanroepen.",
+          "courseD_artist_functions10_c": "Zie je waar deze tekening een `teken een rij zeshoeken`-functie zou kunnen gebruiken?"
+        },
+        "courseE_artist_functions10_2018": {
+          "courseD_artist_functions10_b": "Deze tekening lijkt erg veel op de vorige, maar de `teken een rij ...`-functie moet nu een andere vorm tekenen.",
+          "courseD_artist_functions10_a": "Om te voorkomen dat je het `ga vooruit`-blok te vaak gebruikt, kun je een `teken een zeshoek`-functie maken en die functie een aantal keren aanroepen.",
+          "courseD_artist_functions10_c": "Zie je waar deze tekening een `teken een rij zeshoeken`-functie zou kunnen gebruiken?"
+        },
+        "courseE_artist_functions10_2019": {
+          "courseD_artist_functions10_b": "Deze tekening lijkt erg veel op de vorige, maar de `teken een rij ...`-functie moet nu een andere vorm tekenen.",
+          "courseD_artist_functions10_a": "Om te voorkomen dat je het `ga vooruit`-blok te vaak gebruikt, kun je een `teken een zeshoek`-functie maken en die functie een aantal keren aanroepen.",
+          "courseD_artist_functions10_c": "Zie je waar deze tekening een `teken een rij zeshoeken`-functie zou kunnen gebruiken?"
+        },
+        "courseE_artist_functions10_2020": {
+          "courseD_artist_functions10_b": "Deze tekening lijkt erg veel op de vorige, maar de `teken een rij ...`-functie moet nu een andere vorm tekenen.",
+          "courseD_artist_functions10_a": "Om te voorkomen dat je het `ga vooruit`-blok te vaak gebruikt, kun je een `teken een zeshoek`-functie maken en die functie een aantal keren aanroepen.",
+          "courseD_artist_functions10_c": "Zie je waar deze tekening een `teken een rij zeshoeken`-functie zou kunnen gebruiken?"
+        },
+        "courseE_artist_functions3": {
+          "courseD_artist_functions3_a": "Om deze puzzle op te lossen, hoef je alleen maar een lus toe te voegen die de oorsprinkelijke code 8 keer herhaalt.\n\nAls je niet meer weet wat de oorspronkelijke code was, klik dan rechtsboven op \"Begin opnieuw\".",
+          "courseD_artist_functions3_b": "Je lus moet alle 3 blokken uit de oorspronkelijke code bevatten."
+        },
+        "courseE_artist_functions3_copy": {
+          "courseD_artist_functions3_a": "Om deze puzzle op te lossen, hoef je alleen maar een lus toe te voegen die de oorsprinkelijke code 8 keer herhaalt.\n\nAls je niet meer weet wat de oorspronkelijke code was, klik dan rechtsboven op \"Begin opnieuw\".",
+          "courseD_artist_functions3_b": "Je lus moet alle 3 blokken uit de oorspronkelijke code bevatten."
+        },
+        "courseE_artist_functions4": {
+          "courseD_artist_functions4_a": "Probeer eens een functie te gebruiken!",
+          "courseD_artist_functions4_b": "Begin je funcite te bouwen door een 'teken een ster'-blok uit de toolbox te slepen. Die functie moet dezelfde code bevatten als de vorige puzzle, want je tekent hetzelfde sterren-patroon.",
+          "courseD_artist_functions4_c": "Gebruik het 'teken een ster'-blok om deze functie aan te roepen in je hoofdprogramma. Vergeet niet om na elke ster vooruit te springen!"
+        },
+        "courseE_artist_functions4_copy": {
+          "courseD_artist_functions4_a": "Probeer eens een functie te gebruiken!",
+          "courseD_artist_functions4_b": "Begin je funcite te bouwen door een 'teken een ster'-blok uit de toolbox te slepen. Die functie moet dezelfde code bevatten als de vorige puzzle, want je tekent hetzelfde sterren-patroon.",
+          "courseD_artist_functions4_c": "Gebruik het 'teken een ster'-blok om deze functie aan te roepen in je hoofdprogramma. Vergeet niet om na elke ster vooruit te springen!"
+        },
+        "courseE_artist_functions5": {
+          "courseD_artist_functions5_a": "Niet opgeven! Denk aan wat je tot nu toe geleerd hebt!",
+          "courseD_artist_functions5_b": "Functies maken het makkelijker om de opgeslagen code vanuit overal aan te roepn, niet alleen binnen een lus!",
+          "courseD_artist_functions5_c": "Sleep eerst de code om een ster te tekenen naar de 'teken een ster'-functie. Gebruik daarna deze functie om de drie sterren te tekenen!"
+        },
+        "courseE_artist_functions5_2018": {
+          "courseD_artist_functions5_a": "Niet opgeven! Denk aan wat je tot nu toe geleerd hebt!",
+          "courseD_artist_functions5_b": "Functies maken het makkelijker om de opgeslagen code vanuit overal aan te roepn, niet alleen binnen een lus!"
+        },
+        "courseE_artist_functions5_2019": {
+          "courseD_artist_functions5_a": "Niet opgeven! Denk aan wat je tot nu toe geleerd hebt!",
+          "courseD_artist_functions5_b": "Functies maken het makkelijker om de opgeslagen code vanuit overal aan te roepn, niet alleen binnen een lus!"
+        },
+        "courseE_artist_functions5_2020": {
+          "courseD_artist_functions5_a": "Niet opgeven! Denk aan wat je tot nu toe geleerd hebt!",
+          "courseD_artist_functions5_b": "Functies maken het makkelijker om de opgeslagen code vanuit overal aan te roepn, niet alleen binnen een lus!"
+        },
+        "courseE_artist_functions5_copy": {
+          "courseD_artist_functions5_a": "Niet opgeven! Denk aan wat je tot nu toe geleerd hebt!",
+          "courseD_artist_functions5_b": "Functies maken het makkelijker om de opgeslagen code vanuit overal aan te roepn, niet alleen binnen een lus!",
+          "courseD_artist_functions5_c": "Sleep eerst de code om een ster te tekenen naar de 'teken een ster'-functie. Gebruik daarna deze functie om de drie sterren te tekenen!"
+        },
+        "courseE_artist_functions6": {
+          "grade4_artist_functions_windows0_a": "Maak eerst alleen maar een venster. In de volgende puzzle gaan we weer een functie maken.",
+          "grade4_artist_functions_windows0_b": "Probeer 'geneste' lussen te maken, dus een lus binnenin een andere lus. De binnenste lus zal het vierkant tekenen, en de buitenste lus zal het vierkant vier keer draaien."
+        },
+        "courseE_artist_functions7": {
+          "courseD_artist_functions7_a": "Probeer eerst je functie te maken, en daarna de vensters een voor een toe te voegen.",
+          "courseD_artist_functions7_b": "Je hebt helemaal geen extra 'herhaal'-lus nodig. Laat de artiest gewoon 100 pixels vooruit springen tussen de bovenste vensters, en daarna 150 pixels naar beneden om bij de onderste vensters te komen."
+        },
+        "courseE_artist_functions7_2018": {
+          "courseD_artist_functions7_a": "Probeer eerst je functie te maken, en daarna de vensters een voor een toe te voegen."
+        },
+        "courseE_artist_functions7_2019": {
+          "courseD_artist_functions7_a": "Probeer eerst je functie te maken, en daarna de vensters een voor een toe te voegen."
+        },
+        "courseE_artist_functions7_2020": {
+          "courseD_artist_functions7_a": "Probeer eerst je functie te maken, en daarna de vensters een voor een toe te voegen."
+        },
+        "courseE_artist_functions9": {
+          "courseD_artist_functions9_e": "Zie je de vier plaatsen waar je de `rij van vierkanten` kunt gebruiken voor deze tekening?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Deze puzzle kun je in 3 stukken verdelen:\n\n-   maak de 'teken een vierkant'-functie\n-   maak de 'teken een rij vierkanten'-functie\n-   gebruik de `teken een rij vierkanten`-functie vier keer om de tekening af te maken",
+          "courseD_artist_functions9_b": "Deze tekening kun je maken door 4 keer een rij driehoeken te tekenen, en telkens 60 of 120 graden te draaien voordat je de volgende rij driehoeken tekent.",
+          "courseD_artist_functions9_c": "Om een rij driehoeken te tekenen:\n\n-   herhaal 4 keer\n    -   teken een driehoek\n    -   spring vooruit met 50 pixels",
+          "courseD_artist_functions9_d": "Om deze ruit te tekenen:\n\n-   herhaal 2 keer\n    -   teken een rij driehoeken\n    -   draai met 60 graden\n    -   teken een rij driehoeken\n    -   draai met 120 graden"
+        },
+        "courseE_artist_functions9_2018": {
+          "courseD_artist_functions9_e": "Zie je de vier plaatsen waar je de `rij van vierkanten` kunt gebruiken voor deze tekening?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Deze puzzle kun je in 3 stukken verdelen:\n\n-   maak de 'teken een vierkant'-functie\n-   maak de 'teken een rij vierkanten'-functie\n-   gebruik de `teken een rij vierkanten`-functie vier keer om de tekening af te maken",
+          "courseD_artist_functions9_b": "Deze tekening kun je maken door 4 keer een rij driehoeken te tekenen, en telkens 60 of 120 graden te draaien voordat je de volgende rij driehoeken tekent.",
+          "courseD_artist_functions9_c": "Om een rij driehoeken te tekenen:\n\n-   herhaal 4 keer\n    -   teken een driehoek\n    -   spring vooruit met 50 pixels",
+          "courseD_artist_functions9_d": "Om deze ruit te tekenen:\n\n-   herhaal 2 keer\n    -   teken een rij driehoeken\n    -   draai met 60 graden\n    -   teken een rij driehoeken\n    -   draai met 120 graden"
+        },
+        "courseE_artist_functions9_2019": {
+          "courseD_artist_functions9_e": "Zie je de vier plaatsen waar je de `rij van vierkanten` kunt gebruiken voor deze tekening?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Deze puzzle kun je in 3 stukken verdelen:\n\n-   maak de 'teken een vierkant'-functie\n-   maak de 'teken een rij vierkanten'-functie\n-   gebruik de `teken een rij vierkanten`-functie vier keer om de tekening af te maken",
+          "courseD_artist_functions9_b": "Deze tekening kun je maken door 4 keer een rij driehoeken te tekenen, en telkens 60 of 120 graden te draaien voordat je de volgende rij driehoeken tekent.",
+          "courseD_artist_functions9_c": "Om een rij driehoeken te tekenen:\n\n-   herhaal 4 keer\n    -   teken een driehoek\n    -   spring vooruit met 50 pixels",
+          "courseD_artist_functions9_d": "Om deze ruit te tekenen:\n\n-   herhaal 2 keer\n    -   teken een rij driehoeken\n    -   draai met 60 graden\n    -   teken een rij driehoeken\n    -   draai met 120 graden"
+        },
+        "courseE_artist_functions9_2020": {
+          "courseD_artist_functions9_e": "Zie je de vier plaatsen waar je de `rij van vierkanten` kunt gebruiken voor deze tekening?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Deze puzzle kun je in 3 stukken verdelen:\n\n-   maak de 'teken een vierkant'-functie\n-   maak de 'teken een rij vierkanten'-functie\n-   gebruik de `teken een rij vierkanten`-functie vier keer om de tekening af te maken",
+          "courseD_artist_functions9_b": "Deze tekening kun je maken door 4 keer een rij driehoeken te tekenen, en telkens 60 of 120 graden te draaien voordat je de volgende rij driehoeken tekent.",
+          "courseD_artist_functions9_c": "Om een rij driehoeken te tekenen:\n\n-   herhaal 4 keer\n    -   teken een driehoek\n    -   spring vooruit met 50 pixels",
+          "courseD_artist_functions9_d": "Om deze ruit te tekenen:\n\n-   herhaal 2 keer\n    -   teken een rij driehoeken\n    -   draai met 60 graden\n    -   teken een rij driehoeken\n    -   draai met 120 graden"
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_a": "Als je de functie nog een keer aanroept, kun je hetzelfde ontwerp ook in de laatste hoek tekenen.",
+          "courseE_artist_functions_challenge1_b": "Je kunt ook naar aandere posities `springen`, of het hele ontwerp veranderen, zoals je maar wilt."
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_a": "Als je de functie nog een keer aanroept, kun je hetzelfde ontwerp ook in de laatste hoek tekenen.",
+          "courseE_artist_functions_challenge1_b": "Je kunt ook naar aandere posities `springen`, of het hele ontwerp veranderen, zoals je maar wilt."
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_a": "Als je de functie nog een keer aanroept, kun je hetzelfde ontwerp ook in de laatste hoek tekenen.",
+          "courseE_artist_functions_challenge1_b": "Je kunt ook naar aandere posities `springen`, of het hele ontwerp veranderen, zoals je maar wilt."
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_a": "Als je de functie nog een keer aanroept, kun je hetzelfde ontwerp ook in de laatste hoek tekenen.",
+          "courseE_artist_functions_challenge1_b": "Je kunt ook naar aandere posities `springen`, of het hele ontwerp veranderen, zoals je maar wilt."
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_b": "Om 4 zijden te tekenen, moet je het `ga vooruit met 100 pixels` blok in een herhaal lus plaatsen. Zorg ervoor dat de lus 4 keer iets tekent.\n\nVergeet niet, om daarna te draaien!",
+          "courseE_artist_ramp8_c": "Er zouden 2 blokken in je lus moeten zitten: 'ga vooruit' en 'draai rechts met 90 graden'."
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_b": "Om 4 zijden te tekenen, moet je het `ga vooruit met 100 pixels` blok in een herhaal lus plaatsen. Zorg ervoor dat de lus 4 keer iets tekent.\n\nVergeet niet, om daarna te draaien!",
+          "courseE_artist_ramp8_c": "Er zouden 2 blokken in je lus moeten zitten: 'ga vooruit' en 'draai rechts met 90 graden'."
+        },
+        "courseE_artist_ramp9": {
+          "courseD_artist_ramp12_a": "Wat is er hetzelfde als bij een vierkant? En wat is er anders?",
+          "courseD_artist_ramp12_c": "Om een zijde te tekenen, moet je eerst 100 pixels vooruit bewegen, en daarna 120 graden naar rechts draaien. Hoeveel zijden heb je nodig?"
+        },
+        "courseE_bee_concept1": {
+          "courseE_bee_concept1_b": "Zie je hier een herhalend patroon?",
+          "courseE_bee_concept1_a": "Als je niet ziet hoe je hier geneste lussen kunt gebruiken, schrijf de instructie dan stap voor stap op een stuk papier. Omcirkel het patroon dat je ziet."
+        },
+        "courseE_bee_concept1_2018": {
+          "courseE_bee_concept1_b": "Zie je hier een herhalend patroon?",
+          "courseE_bee_concept1_a": "Als je niet ziet hoe je hier geneste lussen kunt gebruiken, schrijf de instructie dan stap voor stap op een stuk papier. Omcirkel het patroon dat je ziet."
+        },
+        "courseE_bee_concept2": {
+          "courseE_bee_concept2_a": "Zou een `zolang`-lus hier helpen?",
+          "courseE_bee_concept2_d": "Je kunt zelfs lege plekken checken om te zien of honing > 0 is.",
+          "courseE_bee_concept2_b": "Je kunt `zolang`-lussen gebruiken om naar het eind van elk pad te gaan, en om alle honing van elke plek te verzamelen.",
+          "courseE_bee_concept2_c": "Naar welke kant moet de bij heen draaien na elk pad?"
+        },
+        "courseE_bee_concept2_2018": {
+          "courseE_bee_concept2_a": "Zou een `zolang`-lus hier helpen?",
+          "courseE_bee_concept2_b": "Je kunt `zolang`-lussen gebruiken om naar het eind van elk pad te gaan, en om alle honing van elke plek te verzamelen.",
+          "courseE_bee_concept2_c": "Naar welke kant moet de bij heen draaien na elk pad?"
+        },
+        "courseE_bee_concept3": {
+          "courseE_bee_concept3a_a": "Probeer geneste `herhaal` lussen om deze puzzle op te lossen.",
+          "courseE_bee_concept3a_b": "Als je niet ziet waar je de lussen moet plaatsen, schrijf de code dan stap voor stap uit en zoek naar een patroon.",
+          "courseE_bee_concept3a_c": "Er zijn drie groepen bloemen, dus je buitenste `herhaal` lus zou 3 keer moeten herhalen."
+        },
+        "courseE_bee_concept3_2018": {
+          "courseE_bee_concept3a_b": "Als je niet ziet waar je de lussen moet plaatsen, schrijf de code dan stap voor stap uit en zoek naar een patroon."
+        },
+        "courseE_bee_concept4": {
+          "courseE_bee_concept4_a": "Een `als/anders`-instructie zou je hier heel veel kunnen helpen.",
+          "courseE_bee_concept4_b": "Je kunt het patroon van een trap gebruiken om alle bloemen en honingraten te bereiken.",
+          "courseE_bee_concept4_c": "Als je bij een bloem aankomt, hoe vaak moet je dan nectar halen? Is het bij elke bloem hetzelfde aantal?"
+        },
+        "courseE_bee_concept4_2018": {
+          "courseE_bee_concept4_a": "Een `als/anders`-instructie zou je hier heel veel kunnen helpen.",
+          "courseE_bee_concept4_b": "Je kunt het patroon van een trap gebruiken om alle bloemen en honingraten te bereiken.",
+          "courseE_bee_concept4_c": "Als je bij een bloem aankomt, hoe vaak moet je dan nectar halen? Is het bij elke bloem hetzelfde aantal?"
+        },
+        "courseE_bee_concept5": {
+          "courseE_bee_concept5_a": "De bloemen volgen een rechthoekig pad. Je kunt die rechthoek volgen met behulp van `zolang er een pad vooruit is`, ook al hebben de zijden verschillende lengtes.",
+          "courseE_bee_concept5_c": "Hier is een plaatje van een rechthoekig pad dat de bij zou kunnen nemen.",
+          "courseE_bee_concept5_b": "Je kunt op elke plek checken of er een bloem is met een `als`-blok, ook al weet je al dat er geen bloem is."
+        },
+        "courseE_bee_concept5_2018": {
+          "courseE_bee_concept5_a": "De bloemen volgen een rechthoekig pad. Je kunt die rechthoek volgen met behulp van `zolang er een pad vooruit is`, ook al hebben de zijden verschillende lengtes.",
+          "courseE_bee_concept5_c": "Hier is een plaatje van een rechthoekig pad dat de bij zou kunnen nemen.",
+          "courseE_bee_concept5_b": "Je kunt op elke plek checken of er een bloem is met een `als`-blok, ook al weet je al dat er geen bloem is."
+        },
+        "courseE_bee_functions1": {
+          "courseE_bee_functions1_a": "Denk er aan dat `draai linksom` en `draai rechtsom` uitgaan vanuit het gezichtspunt van de bij.",
+          "courseE_bee_functions1_b": "Gebruik een `herhaal` lus bij het verzamelen van de nectar, om je programma korter te maken.",
+          "courseE_bee_functions1_c": "Denk er aan dat `draai linksom` en `draai rechtsom` uitgaan vanuit het gezichtspunt van de bij."
+        },
+        "courseE_bee_functions10": {
+          "courseE_bee_functions10_a": "Je hebt een `terwijl`-lus nodig om alle honing te verzamelen, want de honingraten hebben verschillende inhoud.",
+          "courseE_bee_functions10_b": "Neem het draaien en bewegen op in je functie, zodat je de functie gewoon kunt aanroepen terwijl de bij op het hoofdpad is.",
+          "courseE_bee_functions10_c": "Vergeet niet je functie aan te roepen in het hoofdprogramma!"
+        },
+        "courseE_bee_functions2": {
+          "courseE_bee_functions2_b": "Dit <xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> blok roept de functie aan die we je gegeven hebben.",
+          "courseE_bee_functions2_c": "Je wilt tweemaal vooruit gaan en `get 2 nectar` gebruiken om deze puzzle op te lossen."
+        },
+        "courseE_bee_functions3": {
+          "courseE_bee_functions3_a": "Voor deze puzzle hoeft je functie alleen maar nectar te verzamelen, er hoeft geen enkel `beweeg vooruit` of `draai` blok in.",
+          "courseE_bee_functions3_b": "Roep je `get 5`-functie aan onder het `als gestart`-blok.",
+          "courseE_bee_functions3_c": "Je hoofdprogramma zal zorgen voor alle bewegingen, de functie hoeft alleen te zeggen wat de bij moet doen als hij een bloem heeft bereikt.",
+          "courseE_bee_functions3_d": "Probeer het aangegeven pad te volgen."
+        },
+        "courseE_bee_functions4": {
+          "courseE_bee_functions4_a": "Je functie zal al omlaag en terug bewegen over de zijpaden. Dat hoef je in het hoofdprogramma dus niet meer te doen.",
+          "courseE_bee_functions4_b": "Gebruik het groene `move and get nectar`-blok om deze functie aan te roepen.",
+          "courseE_bee_functions4_c": "Je hoeft de functie niet aan te passen, je kunt hem gewoon gebruiken in je programma."
+        },
+        "courseE_bee_functions5": {
+          "courseE_bee_functions5_a": "Wijzig de functie, zodat de puzzle wordt opgelost zonder dat je iets aan het hoofdprogramma hoeft te veranderen.",
+          "courseE_bee_functions5_c": "Het `beweeg vooruit`-blok kan worden veranderd in een `ga achteruit`-blok. Maak hier gebruik van, zodat je niet helemaal hoeft om te keren aan het eind van het zijpad!",
+          "courseE_bee_functions5_b": "Je functie moet zorgen dat de bij: \n\n-   een draai maakt\n-   vooruit beweegt\n-   alle nectar ophaalt\n-   achteruit gaat\n-   terugdraait naar de oorspronkelijke richting"
+        },
+        "courseE_bee_functions8": {
+          "courseE_bee_functions8_a": "Je functie hoeft alleen maar nectar te verzamelen. Probeer eens een terwijl lus te gebruiken in plaats van een herhaal lus.",
+          "courseE_bee_functions8_b": "Gebruik `terwijl nectar > 0` om er zeker van te zijn dat je alle nectar ophaalt",
+          "courseE_bee_functions8_c": "Je hoofdprogramma moet bewegen volgens een trap-patroon. Denk er aan, je hoofdprogramma bestaat uit de code onder het `als gestart`-blok."
+        },
+        "courseE_bee_functions9": {
+          "courseE_bee_functions9_a": "Je hoeft alleen maar een functie te maken, die -als je bij een bloem aankomt- alle nectar verzamelt. Je kunt hiervoor gewoon precies dezelfde gebruiken als in de vorige puzzle.",
+          "courseE_bee_functions9_b": "Hoewel je nu weet hoeveel nectar de bloemen bevatten, kun je met een `terwijl`-lus zorgen dat een enkele functie werkt voor al deze bloemen."
+        },
+        "courseE_farmer_concept1": {
+          "courseE_farmer_concept1_a": "Je kunt een `zolang er een gat is`-blok gebruiken om een gat te vullen totdat het vlak is.",
+          "courseE_farmer_concept1_b": "Je kunt een trap-patroon volgen om alle gaten te bereiken."
+        },
+        "courseE_farmer_concept1_2018": {
+          "courseE_farmer_concept1_a": "Je kunt een `zolang er een gat is`-blok gebruiken om een gat te vullen totdat het vlak is.",
+          "courseE_farmer_concept1_b": "Je kunt een trap-patroon volgen om alle gaten te bereiken."
+        },
+        "courseE_farmer_concept2": {
+          "courseE_farmer_concept2_a": "De zijpaden zijn wel even lang, maar ze liggen niet altijd even ver uit elkaar. Een lus is hier dus niet handig. Probeer het eens met een functie.",
+          "courseE_farmer_concept2_b": "Het zou hier handig zijn als je een functie had die draait, het zijpad afloopt, pompoenen verzamelt, en terugkeert naar het hoofdpad.",
+          "courseE_farmer_concept2_c": "Je hoofdprogramma kan deze functie aanroepen met het groene `doe iets`-blok."
+        },
+        "courseE_farmer_concept2_2018": {
+          "courseE_farmer_concept2_a": "De zijpaden zijn wel even lang, maar ze liggen niet altijd even ver uit elkaar. Een lus is hier dus niet handig. Probeer het eens met een functie.",
+          "courseE_farmer_concept2_b": "Het zou hier handig zijn als je een functie had die draait, het zijpad afloopt, pompoenen verzamelt, en terugkeert naar het hoofdpad.",
+          "courseE_farmer_concept2_c": "Je hoofdprogramma kan deze functie aanroepen met het groene `doe iets`-blok."
+        },
+        "courseE_farmer_concept3": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Wat zou je moeten doen aan het eind van een pad?",
+          "grade3_robotFarmer_ConditionalsIntro_8_c": "Gebruik een `herhaal`-lus om je code meerdere keren uit te voeren op elk recht pad."
+        },
+        "courseE_farmer_concept3_2018": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Wat zou je moeten doen aan het eind van een pad?",
+          "grade3_robotFarmer_ConditionalsIntro_8_c": "Gebruik een `herhaal`-lus om je code meerdere keren uit te voeren op elk recht pad."
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_a": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien.",
+          "courseE_farmer_functions1_b": "Je hoeft maar een pompoen te plukken. Zou je een lus kunnen gebruiken om de pompoen te bereiken?"
+        },
+        "courseE_farmer_functions10b": {
+          "courseE_farmer_functions10b_a": "Je zult de functie eerst opnieuw moeten maken.",
+          "courseE_farmer_functions10b_b": "Welke kant moet je op draaien na de eerste pompoen?",
+          "courseE_farmer_functions10b_c": "Als je hulp nodig hebt bij het maken van de functie, kijk dan even terug naar de vorige puzzle."
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_a": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien.",
+          "courseE_farmer_functions1_b": "Je hoeft maar een pompoen te plukken. Zou je een lus kunnen gebruiken om de pompoen te bereiken?"
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_a": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien.",
+          "courseE_farmer_functions1_b": "Je hoeft maar een pompoen te plukken. Zou je een lus kunnen gebruiken om de pompoen te bereiken?"
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_a": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien.",
+          "courseE_farmer_functions1_b": "Je hoeft maar een pompoen te plukken. Zou je een lus kunnen gebruiken om de pompoen te bereiken?"
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_a": "Denk goed na over elke stap van de `als/anders`-instructies. Wat moet je doen als je bij een mais-plant staat?",
+          "courseE_farmer_functions1a_b": "Gebruik een `herhaal tot`-blok om bij de pompoen te komen!"
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_b": "Gebruik een `herhaal tot`-blok om bij de pompoen te komen!"
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_b": "Gebruik een `herhaal tot`-blok om bij de pompoen te komen!"
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_b": "Gebruik een `herhaal tot`-blok om bij de pompoen te komen!"
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions2b_a": "je kunt een `herhaal tot er pompoenen zijn`-blok gebruiken om het eind van de beide paden te bereiken.",
+          "courseE_farmer_functions2b_b": "Er groeit geen mais op het tussenpaadje, dus je kunt gewoon vooruit bewegen en draaien.",
+          "courseE_farmer_functions2b_c": "je zut twee aparte `herhaal tot`-blokken moeten gebruiken om alle oogst te pakken te krijgen."
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions2b_b": "Er groeit geen mais op het tussenpaadje, dus je kunt gewoon vooruit bewegen en draaien.",
+          "courseE_farmer_functions2b_c": "je zut twee aparte `herhaal tot`-blokken moeten gebruiken om alle oogst te pakken te krijgen."
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions2b_b": "Er groeit geen mais op het tussenpaadje, dus je kunt gewoon vooruit bewegen en draaien.",
+          "courseE_farmer_functions2b_c": "je zut twee aparte `herhaal tot`-blokken moeten gebruiken om alle oogst te pakken te krijgen."
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions2b_b": "Er groeit geen mais op het tussenpaadje, dus je kunt gewoon vooruit bewegen en draaien.",
+          "courseE_farmer_functions2b_c": "je zut twee aparte `herhaal tot`-blokken moeten gebruiken om alle oogst te pakken te krijgen."
+        },
+        "courseE_farmer_functions2ba": {
+          "courseE_farmer_functions2ba_a": "Gebruik het groene `mais en pompoen`-blok om deze functie aan te roepen.",
+          "courseE_farmer_functions2ba_b": "Sleep alle blokken in de werkruimte samen naar onder `als gestart`, om te zien hoe deze functie werkt."
+        },
+        "courseE_farmer_functions3c": {
+          "courseE_farmer_functions3c_a": "Welke reeks instructies wordt vaak herhaald in dit programma? Kun je die blokken naar de functiedefinitie slepen?",
+          "courseE_farmer_functions3c_b": "Vergeet niet om de functie aan te roepen in het hoofdprogramma op alle plaatsen waar je zojuist blokken hebt verwijderd."
+        },
+        "courseE_farmer_functions4b": {
+          "courseE_farmer_functions4b_b": "Denk er aan dat je aan het eind van elk pad een draai maakt.",
+          "courseE_farmer_functions4b_c": "De groene `mais en pompoen`-blokken kun je vinden in de Functies tab van de gereedschapskist."
+        },
+        "courseE_farmer_functions5c": {
+          "courseE_farmer_functions5c_a": "Zie je in deze puzzle nog meer patronen die je kunt in een lus kunt zetten?"
+        },
+        "courseE_farmer_functions6c": {
+          "courseE_farmer_functions6c_a": "Wijzig je functie zo, dat hij ook checkt of er sla is.",
+          "courseE_farmer_functions6c_b": "Zou een `als/anders` blok helpen om te checken of er sla is op een plek?",
+          "courseE_farmer_functions6c_c": "Vergeet niet, te blijven checken of er mais is!"
+        },
+        "courseE_farmer_functions7b": {
+          "courseE_farmer_functions7b_a": "Je hebt hier geen functie nodig, maar je mag er wel een maken als je dat handig vindt!",
+          "courseE_farmer_functions7b_b": "Gebruik eerst een `als/anders`-blok om te checken of er een plant staat, en draai dan afhankelijk van welke plant je vindt.",
+          "courseE_farmer_functions7b_c": "Een `herhaal tot pompoen`-lus kan je helpen om helemaal door de dwaaltuin te komen."
+        },
+        "courseE_farmer_functions8b": {
+          "courseE_farmer_functions8b_a": "Probeer het programma eens uit, om te zien wat het doet. Wat moet je daarna doen?",
+          "courseE_farmer_functions8b_b": "Sleep alle oorspronkelijke blokken naar een functie, zodat je ze vaker kunt gebruiken.",
+          "courseE_farmer_functions8b_c": "Hoe vaak moet je de functie aanroepen?"
+        },
+        "courseE_farmer_functions9b": {
+          "courseE_farmer_functions9b_a": "Kun je geneste `als`- en `als/anders`-instructies gebruiken om langs het pad te reizen?",
+          "courseE_farmer_functions9b_b": "Gebruik `herhaal tot pompoen` om door alle paden te bewegen.",
+          "courseE_farmer_functions9b_c": "je wilt door de paden bewegen alsof het groter-wordende-vierkanten zijn."
+        },
+        "courseE_farmer_ramp11a": {
+          "courseE_farmer_ramp12_a": "In plaats een 'herhaal'-blok kun je nu een 'zolang er een stapel ligt'-blok gebruiken om de boer te vertellen hoe vaak hij zand moet scheppen.",
+          "courseE_farmer_ramp12_b": "Je hoeft maar een keer voooruit te bewegen om bij het zand te komen."
+        },
+        "courseE_farmer_ramp11a_2018": {
+          "courseE_farmer_ramp12_a": "In plaats een 'herhaal'-blok kun je nu een 'zolang er een stapel ligt'-blok gebruiken om de boer te vertellen hoe vaak hij zand moet scheppen.",
+          "courseE_farmer_ramp12_b": "Je hoeft maar een keer voooruit te bewegen om bij het zand te komen."
+        },
+        "courseE_farmer_ramp11a_2019": {
+          "courseE_farmer_ramp12_a": "In plaats een 'herhaal'-blok kun je nu een 'zolang er een stapel ligt'-blok gebruiken om de boer te vertellen hoe vaak hij zand moet scheppen.",
+          "courseE_farmer_ramp12_b": "Je hoeft maar een keer voooruit te bewegen om bij het zand te komen."
+        },
+        "courseE_farmer_ramp11a_2020": {
+          "courseE_farmer_ramp12_a": "In plaats een 'herhaal'-blok kun je nu een 'zolang er een stapel ligt'-blok gebruiken om de boer te vertellen hoe vaak hij zand moet scheppen.",
+          "courseE_farmer_ramp12_b": "Je hoeft maar een keer voooruit te bewegen om bij het zand te komen."
+        },
+        "courseE_farmer_ramp12f": {
+          "courseE_farmer_ramp12f_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_farmer_ramp12f_2018": {
+          "courseE_farmer_ramp12f_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_farmer_ramp12f_2019": {
+          "courseE_farmer_ramp12f_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_farmer_ramp12f_2020": {
+          "courseE_farmer_ramp12f_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_farmer_ramp12g": {
+          "courseE_farmer_ramp12G_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_farmer_ramp12g_2018": {
+          "courseE_farmer_ramp12G_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_farmer_ramp12g_2019": {
+          "courseE_farmer_ramp12G_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_farmer_ramp12g_2020": {
+          "courseE_farmer_ramp12G_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_playLab_challenge1": {
+          "courseE_playLab_challenge1_a": "Hier zijn wat dingen die je zou kunnen doen als de speler het spel wint:\n\n-   Laat de dinosaurus verdwijnen.\n-   Stop de eekhoorns.\n-   Maak de eekhoorns en de ridder blij.\n-   Verander de achtergrond.\n-   Zorg dat de ridder de spelter bedankt voor de hulp.\n-   Laat alle spelers verdwijnen en toon een boodschap \"Je hebt gewonnen!\".",
+          "courseE_playLab_challenge1_b": "Hier zijn wat dingen die je zou kunnen doen als de speler het spel verliest.:\n\n-   Laat de ridder verdwijnen.\n-   Maak de eekhoorns verdrietig.\n-   Laat de dinosaurus iets zeggen.\n-   Verander de achtergrond.\n-   Laat alle spelers verdwijnen, en toon een boodschap \"Afgelopen uit\"."
+        },
+        "courseE_playLab_scaffold1": {
+          "courseE_playLab_scaffold1_a": "Je kunt het blok `geef speler 1 een ??? uiterlijk` gebruiken om een nieuwe speler op het toneel te zetten.",
+          "courseE_playLab_scaffold1_b": "Zet het blok `geef speler 1 een ??? uiterlijk` onder `als gestart` om je speler te laten verschijnen aan het begin van je programma.",
+          "courseE_playLab_scaffold1_c": "Gebruik het blok `gebruik ??? achtergrond` om een achtergrond te kiezen voor je scene."
+        },
+        "courseE_playLab_scaffold2": {
+          "courseE_playLab_scaffold1_a": "Gebruik het drop down menu van de `wanneer pijltje naar`-gebeurtenis om de richting aan te geven waarover dit blok gaat.",
+          "courseE_playLab_scaffold1_b": "Je zou mu vier `wanneer pijltje naar`-gebeurtenissen moeten hebben, met telkens een beweging in een andere richting.",
+          "courseE_playLab_scaffold1_c": "Als je klaar bent, moet je je speler kunnen bewegen met de pijltjestoetsen!"
+        },
+        "courseE_playLab_scaffold4": {
+          "courseE_playLab_scaffold4_a": "Gebruik `scoor punt` om een punt toe te voegen, en `verwijder punt` om een punt weg te nemen."
+        },
+        "courseE_playLab_scaffold5": {
+          "courseE_playLab_scaffold5_a": "Om dit level te halen, moet je winnen of verliezen.  Gebruik een `eindig het spel als gewonnen`- of `eindig het spel als verloren`-blok als einde."
         }
       }
     }
