@@ -4,8 +4,11 @@ require 'net/http'
 require 'dynamic_config/gatekeeper'
 
 module AzureTextToSpeech
+  # Azure authentication token is valid for 10 minutes, so cache it for 9.
+  # https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech#authentication
   TOKEN_CACHE_TTL = 9.minutes.freeze
 
+  # Requests an authentication token from Azure, or returns the cached token if still valid.
   def self.get_token
     return nil unless allowed?
 
@@ -25,6 +28,7 @@ module AzureTextToSpeech
     nil
   end
 
+  # Requests the list of voices from Azure. Only returns voices that are available in 2+ genders.
   def self.get_voices
     return nil unless allowed?
     token = get_token
