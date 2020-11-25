@@ -53,7 +53,8 @@
                 %button.herohocbutton.herohocbutton-solid-white= I18n.t(entry[:text])
       .right.col-50{style: "text-align: center;"}
         .hero-bot
-          %img{src: "/images/homepage/hoc2020_ai_bot.png"}
+          %a{href: "/ai"}
+            %img{src: "/images/homepage/hoc2020_ai_bot.png"}
   - elsif show_single_hero == "codebytes2020"
     .hero-message-codebytes
       Join us during this year's
