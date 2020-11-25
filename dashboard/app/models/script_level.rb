@@ -33,7 +33,7 @@ require 'cdo/shared_constants'
 # A Script has_many ScriptLevels, and a ScriptLevel has_and_belongs_to_many Levels. However, most ScriptLevels
 # are only associated with one Level. There are some special cases where they can have multiple Levels, such as
 # with the now-deprecated variants feature.
-class ScriptLevel < ActiveRecord::Base
+class ScriptLevel < ApplicationRecord
   include SerializedProperties
   include LevelsHelper
   include SharedConstants
