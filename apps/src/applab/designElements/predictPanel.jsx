@@ -14,11 +14,12 @@ import designMode from '../designMode';
 import elementLibrary from './library';
 import i18n from '@cdo/applab/locale';
 
-class PhotoChooserProperties extends React.Component {
+class PredictPanelProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
+    mlModelDetails: PropTypes.object
   };
 
   render() {
@@ -106,7 +107,7 @@ class PhotoChooserProperties extends React.Component {
   }
 }
 
-class PhotoChooserEvents extends React.Component {
+class PredictPanelEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -145,14 +146,15 @@ class PhotoChooserEvents extends React.Component {
           desc={clickDescription}
           handleInsert={this.insertPhotoSelected}
         />
+        <h1 id="hello">HELLO!?!</h1>
       </div>
     );
   }
 }
 
 export default {
-  PropertyTab: PhotoChooserProperties,
-  EventTab: PhotoChooserEvents,
+  PropertyTab: PredictPanelProperties,
+  EventTab: PredictPanelEvents,
   themeValues: themeValues.photoSelect,
 
   create: function() {
