@@ -1,6 +1,7 @@
+require 'cdo/honeybadger'
+require 'cdo/languages'
 require 'net/http'
 require 'dynamic_config/gatekeeper'
-require 'cdo/languages'
 
 module AzureTextToSpeech
   TOKEN_CACHE_TTL = 9.minutes.freeze
@@ -38,7 +39,7 @@ module AzureTextToSpeech
       voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
 
       response = voice_http_request.request(voice_request)&.body
-      voices = JSON.parse(response)
+      voices = response.length > 2 ? JSON.parse(response) : nil
       return nil unless (voices&.length || 0) > 0
 
       voice_dictionary = {}
@@ -59,21 +60,19 @@ module AzureTextToSpeech
     nil
   end
 
-  private
-
-  def allowed?
+  def self.allowed?
     Gatekeeper.allows('azure_speech_service', default: true) && api_key.present? && region.present?
   end
 
-  def api_key
+  def self.api_key
     CDO.azure_speech_service_key
   end
 
-  def region
+  def self.region
     CDO.azure_speech_service_region
   end
 
-  def timeout
+  def self.timeout
     DCDO.get('azure_speech_service_timeout', 5)
   end
 end
