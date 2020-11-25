@@ -129,7 +129,6 @@ module LessonImportHelper
         activity_section = create_basic_activity_section(match[:substring].strip)
       end
       next unless activity_section
-      puts "#{match[:type]} produced an empty activity section" if activity_section.name.blank? && activity_section.description.blank? && activity_section.tips.blank?
       activity_section.position = position
       position += 1
       activity_section.name = name
