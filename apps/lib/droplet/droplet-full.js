@@ -12273,7 +12273,7 @@ NODE_CATEGORIES = {
   'FunctionExpression': 'functions',
   'FunctionDeclaration': 'functions',
   'AssignmentExpression': 'assignments',
-  'UpdateExpression': 'assignments',
+  'UpdateExpression': 'arithmetic',
   'VariableDeclaration': 'assignments',
   'ReturnStatement': 'returns',
   'IfStatement': 'conditionals',
