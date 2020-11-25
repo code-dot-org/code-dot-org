@@ -1503,6 +1503,7 @@
   "sendLessonTitle": "Wyślij lekcję uczniom",
   "sendLessonDetails": "Uczniowie będą musieli się zalogować przed rozpoczęciem lekcji.",
   "sendLessonCopyLink": "Skopiuj link do lekcji do schowka",
+  "sendLessonLinkCopied": "Skopiowano link!",
   "sendToPhone": "Wyślij na telefon",
   "settings": "Ustawienia",
   "setUpClass": "Skonfiguruj swoją klasę",

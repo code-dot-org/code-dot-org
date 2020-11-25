@@ -1493,6 +1493,25 @@ tr-TR:
         content1: açıklama buraya
       New Challenge Introduction:
         content1: açıklama buraya
+        markdown: "### Yeni Meydan Okuma: Yeni bir widget kullanarak bir Rastgele
+          İkame Şifresini kırın\n\nPeki ya tüm alfabenin yerini değiştirmek yerine,
+          alfabenin her harfini alfabenin farklı bir rastgele harfi ile eşleştirsek?
+          Buna bir **rastgele ikame şifresi** denir.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nŞimdi,
+          gizli mesaj basit bir alfabetik yer değiştirme ile şifrelenmek yerine, **rastgele
+          ikame** ile şifrelenen mesajla karşılaşacaksınız.  \n\n\n\nBunu kırmak çok
+          daha zordur ve daha karmaşık bir araç gerektirir, yani...\n\nDevam et'e
+          tıkladığınızda, size farklı birçok şeyi gösteren **şifreleme aracının daha
+          karmaşık, yeni bir versiyonunu** göreceksiniz.\n\nAma yaptığı şey biraz
+          gizemdir!\n\n### Göreviniz:\n\n * Aracın bu yeni versiyonunda neler olduğunu
+          çözün\n * Hangi bilgiler size sunuluyor?\n * Bu aracın ne yapmanıza olanak
+          sağladığını çözün\n * Her zamanki gibi: bunu kıramazsınız. Bu yüzden bir
+          şeylere tıklayın, etrafa bakının.\n * Bunu çözerseniz, rastgele ikame ile
+          şifrelenen bir mesajı kırabilirsiniz.\n \n### İpucu\n\n* **E** harfinin
+          İngilizcede en çok kullanılan harf olduğunu biliyor muydunuz?\n\n### Yeniden
+          Toplan ve Tartış\n Bununla biraz oynadıktan sonra, ne bulduğunu açıklamak
+          ve neler olduğunu ve bu aracı kullanabileceğiniz çeşitli yolları bildiğinizi
+          doğrulamak için bir kişi - partner, küçük grup, tüm sınıf - ile bir araya
+          gelmelisiniz.\n\n\n"
       OPD-K5 Reviewing Reflections:
         content1: açıklama buraya
       OPD-K5 Stage3aGo:
@@ -1561,8 +1580,50 @@ tr-TR:
           Projelerinizi sunma zamanı! Öğretmeniniz, çalışmanızı sınıf arkadaşlarınıza nasıl sunacağınız hakkında daha fazla ayrıntı verecektir.
       'Technique: Frequency Analysis':
         content1: açıklama buraya
+        markdown: "# İkame Şifrelerini Kırma\n\nRastgele bir ikame şifresini kırmaya
+          yönelik en iyi yöntem, **sıklık analizi** olarak bilinmektedir.\n\nŞuradan
+          alıntılanmıştır: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **Sıklık analizi**, belirli harflerin İngilizcede ve başka dillerde ne kadar
+          *sıklıkla* göründüğüne dayanan bir tekniktir.\n* Örneğin, İngilizce metnin
+          bir bölümü göz önünde bulundurulduğunda, *E*, *T*, *A* ve *O* en yaygın
+          harfler olmasına rağmen *Z*, *Q* ve *X* nadir harflerdir. Benzer şekilde
+          *TH*, *ER*, *ON* ve *AN*, birbirinin yanında bulunan en yaygın harf çiftleridir.\n*
+          Aslında, harflerin dağılımı, İngilizce metninin neredeyse *tüm* örnekleri
+          için nerdeyse aynıdır. \n\n\nÖnceki sayfadaki widget versiyonunu, **sıklık
+          analizi vasıtasıyla bir ikame şifresini kırmanıza** yardım etmeyi amaçlamaktadır.\n\nİngilizce
+          düz yazının tipik bir kısmında harflerin sıklığına kıyasla şifrelenen mesajdaki
+          harflerin sıklığını analiz ederek, bazı harf eşlemelerinin ne olabileceğini
+          daraltmaya başlayabilirsiniz. \n\nAraç, şifrelenmiş metindeki (turuncu)
+          harflerin sıklığının, tipik İngilizceden (mavi) alınan frekanslarla nasıl
+          karşılaştırıldığını gösterir.\n\n### İpucu: Nerede başlamak gerekir?\n\n1.
+          Kısa kelimeleri bulun ve önce bunları \"kırın\". Kaç tane tek harfli kelime
+          biliyorsunuz? (\"a\"). Genel bir 3 harfli kelime \"the\" olmaktadır.\n2.
+          Bunu yaptığınızda, en yaygın harflerden birkaçı için ikameleriniz var. Bu
+          kısmi ikamelere sahip başka kelimelere bakmak ve iyi tahminlerde bulunmak
+          için sezginizi kullanmalısınız.\n3. Yalnızca bir sürü büyük çaba gerektiren
+          harfi bulduktan sonra geri kalanı hızlıca denk gelecektir.\n4. Harflerin
+          sıklıklarını karşılaştırma, mantıklı tahminlerde bulunmak için iyi bir fikir
+          verir.\n\n### Şunu deneyin:\nAşağıdaki animasyon bir kişinin başladığını
+          göstermektedir. İşte denedikleri şey\n\n* Öncelikle karakterleri sıklık
+          bakımından sıralayın. \n* 'The' kelimesi ile eşleşebilecek karakter grubunu
+          tanımlayın.  \nİyi bir başlangıç!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Rastgele ikame iyi mi?\n* Biraz pratikten sonra, rastgele bir ikame şifresini
+          kırmanız ne kadar sürer?\n* Bu iyi mi yoksa değil mi?\n\n\n"
       Terminology Recap:
         content1: açıklama buraya
+        markdown: "# Durdur ve Tekrarla\n\n**Sezar şifresi** ile şifrelenmiş mesajların,
+          özellikle bir sayısal araç ile çözülmesi çok kolaydır. Artık alfabetik bir
+          yer değiştirme şifresini çözme pratiğiniz biraz olduğuna göre (oldukça kolay,
+          ha?) daha zor bir şeyi denemeye çalışalım.\n\n**Teminolojiyi Tekrarla:**\n\n*
+          **Şifreleme** - yalnızca \"yetkili\" tarafların bunu okuyabilmesi için,
+          mesajları gizli tutmak amacıyla mesajların şifresini çözme süreci.\n* **Şifre
+          çözme** - gizli bir mesajı alıp orijinal düz metni yeniden oluşturarak şifrelemeyi
+          geri çeviren bir süreç\n* **Şifre** - şifrelemeyi gerçekleştiren bir teknik
+          (veya algoritma) için genel terim\n* **Sezar şifresi** - Birkaç karakter
+          ile alfabenin yerini değiştiren şifrelemeye yönelik bir teknik.\n* **Şifrelemeyi
+          kırma** - Şifrenin tüm özelliklerini *bilmeden* gizli bir mesajın şifresini
+          çözmeye çalıştığınızda, şifrelemeyi **kırmaya** çalışırsınız.\n\n\nSonraki
+          **Meydan Okumayı** görmek için Devam Et'e tıklayın...\n\n "
       Unit 1 Lesson 2 Overview:
         markdown: |-
           # Genel bakış
@@ -4285,3 +4346,7 @@ tr-TR:
           # Kelimelerin Gücü
 
           Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini öğreneceksiniz.
+      outbreak_story:
+        content1: açıklama buraya
+      outbreak_story2:
+        content1: açıklama buraya

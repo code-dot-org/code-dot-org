@@ -91,7 +91,7 @@ class SendLessonDialog extends Component {
     return (
       <div style={styles.row}>
         <Button
-          id="ui-test-copy-button"
+          id="uitest-copy-button"
           text=""
           icon="link"
           iconStyle={styles.buttonIcon}

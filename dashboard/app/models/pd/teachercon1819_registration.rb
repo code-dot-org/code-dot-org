@@ -17,7 +17,7 @@
 #  index_pd_teachercon1819_registrations_on_user_id              (user_id)
 #
 
-class Pd::Teachercon1819Registration < ActiveRecord::Base
+class Pd::Teachercon1819Registration < ApplicationRecord
   include Pd::Form
   include Pd::Teachercon1819RegistrationConstants
 

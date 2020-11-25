@@ -362,7 +362,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    query_count = 15
+    query_count = 14
     assert_queries query_count do
       get :home
     end
@@ -371,7 +371,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 17
+    query_count = 16
     assert_queries query_count do
       get :home
     end
@@ -380,7 +380,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    query_count = 14
+    query_count = 13
     assert_queries query_count do
       get :home
     end
@@ -390,7 +390,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    query_count = 15
+    query_count = 14
     assert_queries query_count do
       get :home
     end
@@ -399,7 +399,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'teachers cannot see dashboard links' do
     sign_in create(:terms_of_service_teacher)
-    query_count = 13
+    query_count = 12
     assert_queries query_count do
       get :home
     end
@@ -408,7 +408,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'workshop admins see application dashboard links' do
     sign_in create(:workshop_admin, :with_terms_of_service)
-    query_count = 14
+    query_count = 13
     assert_queries query_count do
       get :home
     end
@@ -419,7 +419,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    query_count = 17
+    query_count = 16
     assert_queries query_count do
       get :home
     end
@@ -429,7 +429,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see application dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 17
+    query_count = 16
     assert_queries query_count do
       get :home
     end
@@ -440,7 +440,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    query_count = 15
+    query_count = 14
     assert_queries query_count do
       get :home
     end

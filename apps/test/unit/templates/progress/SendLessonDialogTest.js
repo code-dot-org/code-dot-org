@@ -11,10 +11,10 @@ describe('SendLessonDialog', () => {
       <SendLessonDialog lessonUrl={lessonUrl} showGoogleButton={false} />
     );
 
-    assert.equal(wrapper.find('#ui-test-copy-button').length, 1);
+    assert.equal(wrapper.find('#uitest-copy-button').length, 1);
     assert.equal(
       wrapper
-        .find('#ui-test-copy-button')
+        .find('#uitest-copy-button')
         .at(0)
         .props().icon,
       'link'

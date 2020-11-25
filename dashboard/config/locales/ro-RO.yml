@@ -189,7 +189,7 @@ ro:
     data_collection_us: Înțeleg că Code.org este un site non-profit din SUA, iar legile
       care guvernează colectarea datelor în SUA pot fi diferite de legile din țara
       mea.
-    visit_privacy: Vizitează Politica de Confidențialitate pe Code.org (%{privacy_url})
+    visit_privacy: Vizitează [Politica de Confidențialitate](%{privacy_url}) pe Code.org 
       pentru mai multe informații.
     additional_information: Mai avem nevoie de câteva informaţii adiționale pentru
       a te putea înscrie.

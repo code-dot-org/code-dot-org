@@ -1074,6 +1074,74 @@
           "moving west": "przechodzenie na zachód",
           "patrolling": "patrolowanie",
           "swimming left and right": "pływanie w lewo i prawo"
+        },
+        "outbreak1": {
+          "wandering": "wędrowanie"
+        },
+        "outbreak2": {
+          "wandering": "wędrowanie"
+        },
+        "outbreak3": {
+          "wandering": "wędrowanie"
+        },
+        "outbreak4": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "swimming left and right": "pływanie w lewo i prawo",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie"
+        },
+        "outbreak5": {
+          "wandering": "wędrowanie"
+        },
+        "outbreak6": {
+          "wandering": "wędrowanie"
+        },
+        "outbreak7": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie"
+        },
+        "outbreak8": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie"
+        },
+        "outbreak_freeplay": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie"
         }
       }
     }
