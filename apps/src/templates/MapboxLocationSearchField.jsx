@@ -62,7 +62,7 @@ export class MapboxLocationSearchField extends React.Component {
         ref={el => (this.searchContainerRef = el)}
         id="mapbox-location-search-container"
       >
-        {(this.props.readOnly || !this.props.mapboxAccessToken) && (
+        {(this.props.readOnly || !this.state.mapbox.mapboxAccessToken) && (
           <input
             type={'text'}
             style={this.props.style}
