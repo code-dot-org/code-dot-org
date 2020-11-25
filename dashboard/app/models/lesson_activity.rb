@@ -25,7 +25,7 @@ class LessonActivity < ApplicationRecord
   include SerializedProperties
 
   belongs_to :lesson
-  has_many :activity_sections, dependent: :destroy
+  has_many :activity_sections, -> {order(:position)}, dependent: :destroy
 
   serialized_attrs %w(
     name
