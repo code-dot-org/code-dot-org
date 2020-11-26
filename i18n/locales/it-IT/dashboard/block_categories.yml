@@ -17,6 +17,7 @@ it:
       Game/Score: Gioco/Punteggio
       Games/Score: Gioco/Punteggio
       Groups: Gruppi
+      Input: Input
       Locations: Posizioni
       Logic: Logica
       Loops: Cicli
