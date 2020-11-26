@@ -1,30 +1,35 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import Button from './Button';
+import Button from '../Button';
 import BaseDialog from './BaseDialog';
+import DialogFooter from './teacherDashboard/DialogFooter';
 import Spinner from '../code-studio/pd/components/spinner';
 
 const styles = {
   dialog: {
-    padding: '20px'
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
   }
 };
 
-export default class ReCaptchaDialog extends React.Component {
+export default class ReCaptchaValidationDialog extends React.Component {
   static propTypes = {
-    handleClose: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      disableSubmitButton: true,
+      disableJoinSectionButton: true,
       loadedCaptcha: false
     };
+    this.token = '';
     this.onCaptchaVerification = this.onCaptchaVerification.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.onCaptchaExpiration = this.onCaptchaExpiration.bind(this);
   }
 
@@ -39,9 +44,9 @@ export default class ReCaptchaDialog extends React.Component {
     document.body.appendChild(script);
   }
 
-  // TODO: you need to send this token to the backend to validate it
   onCaptchaVerification(token) {
-    this.setState({disableSubmitButton: false});
+    this.setState({disableJoinSectionButton: false});
+    this.token = token;
   }
 
   componentWillUnmount() {
@@ -50,12 +55,11 @@ export default class ReCaptchaDialog extends React.Component {
   }
 
   onCaptchaExpiration() {
-    this.setState({disableSubmitButton: true});
+    this.setState({disableJoinSectionButton: true});
   }
 
-  handleClose() {
-    this.props.handleClose();
-    this.props.joinSection();
+  handleSubmit() {
+    this.props.handleSubmit(this.token);
   }
 
   render() {
@@ -66,14 +70,9 @@ export default class ReCaptchaDialog extends React.Component {
           fixedWidth={600}
           uncloseable={true}
           style={styles.dialog}
-          handleClose={this.props.handleClose}
           isOpen={this.props.isOpen}
         >
-          <h3>
-            {`Are you a bot?
-            }`}
-          </h3>
-          <hr />
+          <h3>{i18n.verifyNotBot()}</h3>
           {!this.state.loadedCaptcha && <Spinner size="large" />}
           {this.state.loadedCaptcha && (
             <div
@@ -83,14 +82,21 @@ export default class ReCaptchaDialog extends React.Component {
               data-expired-callback="captchaExpired"
             />
           )}
-          <hr />
-          <Button
-            onClick={this.handleClose}
-            color={Button.ButtonColor.orange}
-            text={i18n.joinSection()}
-            style={styles.buttonStyle}
-            disabled={this.state.disableSubmitButton}
-          />
+          <DialogFooter>
+            <Button
+              onClick={this.props.handleCancel}
+              text={i18n.dialogCancel()}
+              color={Button.ButtonColor.gray}
+              className="no-mc"
+            />
+            <Button
+              text={i18n.joinSection()}
+              onClick={this.handleSubmit}
+              color={Button.ButtonColor.orange}
+              className="no-mc ui-confirm-project-delete-button"
+              disabled={this.state.disableJoinSectionButton}
+            />
+          </DialogFooter>
         </BaseDialog>
       </div>
     );
