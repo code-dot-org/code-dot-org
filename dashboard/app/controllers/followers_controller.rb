@@ -23,8 +23,14 @@ class FollowersController < ApplicationController
       @user = User.new(user_type: User::TYPE_STUDENT)
       return render 'student_user_new', formats: [:html]
     end
+
     if @user && @user.display_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
+      # Without concatenating the section code, user is forced to type in code again
+      # Note that @section will be always be defined due to validations in load_section
+      redirection = request.path + '/' + @section.code
+      redirect_to redirection
+      return
     else
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save && @section&.add_student(@user)
