@@ -346,7 +346,6 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @new_student
     4.times do
       post :student_register, params: {section_code: @chris_section.code}
-      @new_student.reload
     end
     assert_equal(I18n.t('follower.captcha_required'), flash[:alert])
   end
