@@ -4458,6 +4458,7 @@ class UserTest < ActiveSupport::TestCase
   test 'section attempts last reset value resets if more than 24 hours has passed' do
     user = create :user
     user.properties = {'section_attempts': 5, 'section_attempts_last_reset': DateTime.now - 1}
+    # invoking display_captcha? will cause the section_attempts values to be reset
     assert_equal false, user.display_captcha?
     assert_equal 0, user.num_failed_section_attempts
   end
