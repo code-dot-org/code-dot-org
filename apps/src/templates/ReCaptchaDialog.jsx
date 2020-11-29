@@ -58,6 +58,9 @@ export default class ReCaptchaValidationDialog extends React.Component {
     this.setState({disableSubmitButton: true});
   }
 
+  // function passed as props must then send token to the Rails backend immediately
+  // for verification.
+  // Must submit a POST request per documentation here: https://developers.google.com/recaptcha/docs/verify
   handleSubmit() {
     this.props.handleSubmit(this.token);
   }
