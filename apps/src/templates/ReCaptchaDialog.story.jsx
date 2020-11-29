@@ -11,6 +11,7 @@ export default storybook => {
         <ReCaptchaDialog
           handleSubmit={() => {}}
           handleCancel={() => {}}
+          submitText="Join section"
           isOpen={true}
         />
       )
