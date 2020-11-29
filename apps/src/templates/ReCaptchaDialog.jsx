@@ -18,7 +18,8 @@ export default class ReCaptchaValidationDialog extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool.isRequired
+    isOpen: PropTypes.bool.isRequired,
+    submitText: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -94,7 +95,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
               className="no-mc"
             />
             <Button
-              text={i18n.joinSection()}
+              text={this.props.submitText}
               onClick={this.handleSubmit}
               color={Button.ButtonColor.orange}
               className="no-mc ui-confirm-project-delete-button"
