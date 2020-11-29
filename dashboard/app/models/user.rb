@@ -124,6 +124,8 @@ class User < ActiveRecord::Base
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
+  scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
+
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
@@ -1008,7 +1010,7 @@ class User < ActiveRecord::Base
       return nil if login.size > max_credential_size || login.utf8mb4?
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
-      from("users IGNORE INDEX(index_users_on_deleted_at)").where(
+      ignore_deleted_at_index.where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
@@ -2257,40 +2259,6 @@ class User < ActiveRecord::Base
     else
       [provider]
     end
-  end
-
-  def num_failed_section_attempts
-    properties['section_attempts'] || 0
-  end
-
-  def reset_section_attempts?
-    num_failed_section_attempts == 0 || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
-  end
-
-  # If 24 hours has passed, reset the section attempts value to zero.
-  # Initialize the key/value pair in properties if it does not yet exist.
-  def reset_failed_section_attempts
-    properties['section_attempts'] = 0
-    properties['section_attempts_last_reset'] = DateTime.now.to_s
-    save(validate: false)
-  end
-
-  # Force user to complete a captcha after 3 failed join section attempts within 24 hours
-  # Check to see if 24 hours have passed. If so, reset to zero.
-  def display_captcha?
-    if reset_section_attempts?
-      reset_failed_section_attempts
-    end
-    num_failed_section_attempts >= 3
-  end
-
-  # Failed section attemps reset every day
-  def increment_section_attempts
-    if reset_section_attempts?
-      reset_failed_section_attempts
-    end
-    properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
-    save(validate: false)
   end
 
   private
