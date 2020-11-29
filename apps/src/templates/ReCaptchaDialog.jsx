@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import Button from '../Button';
+import Button from './Button';
 import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
 import Spinner from '../code-studio/pd/components/spinner';
@@ -24,7 +24,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      disableJoinSectionButton: true,
+      disableSubmitButton: true,
       loadedCaptcha: false
     };
     this.token = '';
@@ -45,7 +45,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
   }
 
   onCaptchaVerification(token) {
-    this.setState({disableJoinSectionButton: false});
+    this.setState({disableSubmitButton: false});
     this.token = token;
   }
 
@@ -55,7 +55,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
   }
 
   onCaptchaExpiration() {
-    this.setState({disableJoinSectionButton: true});
+    this.setState({disableSubmitButton: true});
   }
 
   handleSubmit() {
@@ -77,6 +77,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
           {this.state.loadedCaptcha && (
             <div
               className="g-recaptcha"
+              //TODO: you need to figure out how to set up a config for the correct API keys
               data-sitekey="SECRET"
               data-callback="onSubmit"
               data-expired-callback="captchaExpired"
@@ -94,7 +95,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
               onClick={this.handleSubmit}
               color={Button.ButtonColor.orange}
               className="no-mc ui-confirm-project-delete-button"
-              disabled={this.state.disableJoinSectionButton}
+              disabled={this.state.disableSubmitButton}
             />
           </DialogFooter>
         </BaseDialog>
