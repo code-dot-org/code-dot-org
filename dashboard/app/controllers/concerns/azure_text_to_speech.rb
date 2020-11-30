@@ -18,7 +18,7 @@ module AzureTextToSpeech
       token_http_request.use_ssl = true
       token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
       # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
-      token_http_request.read_timeout = timeout
+      token_http_request.read_timeout = default_timeout
       token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
 
       token_http_request.request(token_request)&.body
@@ -37,8 +37,7 @@ module AzureTextToSpeech
     http_request = Net::HTTP.new(uri.host, uri.port)
     http_request.use_ssl = true
     http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-    # TODO: figure out / set this timeout
-    # http_request.read_timeout = timeout
+    http_request.read_timeout = speech_timeout
     headers = {
       'Authorization': 'Bearer ' + token,
       'Content-Type': 'application/ssml+xml',
@@ -65,7 +64,7 @@ module AzureTextToSpeech
       voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
       voice_http_request.use_ssl = true
       voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      voice_http_request.read_timeout = timeout
+      voice_http_request.read_timeout = default_timeout
       voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
 
       response = voice_http_request.request(voice_request)&.body
@@ -102,8 +101,12 @@ module AzureTextToSpeech
     CDO.azure_speech_service_region
   end
 
-  def self.timeout
-    DCDO.get('azure_speech_service_timeout', 5)
+  def self.default_timeout
+    DCDO.get('azure_speech_service_default_timeout', 5)
+  end
+
+  def self.speech_timeout
+    DCDO.get('azure_speech_service_tts_timeout', 10)
   end
 
   def self.get_voice_by(locale, gender)
