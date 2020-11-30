@@ -135,7 +135,7 @@ describe('Audio API', function() {
         AzureTextToSpeech.getSingleton.restore();
       });
 
-      it('no-ops if appOptions.azureSpeechServiceToken is missing', async function() {
+      it('outputs warning and returns early if appOptions.azureSpeechServiceToken is missing', async function() {
         delete appOptions.azureSpeechServiceToken;
         setAppOptions(appOptions);
         await commands.playSpeech(options);
