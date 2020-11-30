@@ -41,7 +41,10 @@
         &nbsp;
       .left.col-40
         .hero-super-message
-          = hoc_s(:hoc2020_ai_subheader)
+          - if hoc_mode == "actual-hoc"
+            = hoc_s(:hoc2020_ai_subheader_actual_hoc)
+          - else
+            = hoc_s(:hoc2020_ai_subheader)
         .hero-message
           = hoc_s(:hoc2020_ai_header)
         .hero-description
