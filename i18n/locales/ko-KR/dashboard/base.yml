@@ -159,8 +159,6 @@ ko:
     invalid_password: "비밀번호는 최소 6 문자 이상이어야 합니다"
     mismatch_password: "입력한 비밀번호가 일치하지 않습니다."
     student_consent: "본인은 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
-    agree_us_website: "본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다."
-    my_data_to_us: "본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다."
     agree_us_data_transfer_student: '**본인의 이 사이트 사용에 따른 데이터(개인 데이터 포함)를 호스팅 및 처리하기 위해 Code.org가 해당 데이터를 미국에 전송할 수도 있음에 동의합니다. '
     agree_us_data_transfer_teacher: '**본인의(그리고 본인 학생의) 이 사이트 사용에 따른 데이터(개인 데이터 포함)를 호스팅 및 처리하기 위해 Code.org가 해당 데이터를 미국**에 전송할 수도 있음에 동의합니다. '
     data_collection_us: "Code.org는 미국에 있는 비영리 웹사이트로 미국에서 데이터 수집에 적용되는 법과 귀하의 국가에서 적용하는 법이 서로 다를 수 있음을 알고 있습니다."

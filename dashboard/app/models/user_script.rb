@@ -19,7 +19,7 @@
 #  index_user_scripts_on_user_id_and_script_id  (user_id,script_id) UNIQUE
 #
 
-class UserScript < ActiveRecord::Base
+class UserScript < ApplicationRecord
   include SerializedProperties
 
   belongs_to :user

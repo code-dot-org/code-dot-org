@@ -7410,3 +7410,9 @@ sk:
               name: Kurz B
             CS Discoveries:
               name: Objavujeme informatiku
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI pomáha oceánom
+            intro:
+              name: Úvod

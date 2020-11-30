@@ -3205,3 +3205,7 @@ ja:
               name: コース B
             CS Discoveries:
               name: コンピューターサイエンス 発展
+        ml-playground:
+          lessons:
+            intro:
+              name: はじめに
