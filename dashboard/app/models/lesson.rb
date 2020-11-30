@@ -24,7 +24,7 @@ require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
-class Lesson < ActiveRecord::Base
+class Lesson < ApplicationRecord
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -206,7 +206,7 @@ class Lesson < ActiveRecord::Base
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
-  def summarize(include_bonus_levels = false)
+  def summarize(include_bonus_levels = false, for_edit: false)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
@@ -223,7 +223,7 @@ class Lesson < ActiveRecord::Base
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
-        levels: cached_levels.map {|l| l.summarize(false)},
+        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: display_as_unplugged # TODO: Update to use unplugged property
@@ -267,7 +267,7 @@ class Lesson < ActiveRecord::Base
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
   def summarize_for_script_edit
-    summary = summarize.dup
+    summary = summarize(for_edit: true).dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
     summary[:lesson_group_display_name] = lesson_group&.display_name
@@ -297,7 +297,7 @@ class Lesson < ActiveRecord::Base
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,
-      activities: lesson_activities.map(&:summarize_for_edit),
+      activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       courseVersionId: lesson_group.script.course_version&.id
@@ -461,52 +461,6 @@ class Lesson < ActiveRecord::Base
       persisted_objective.save!
       persisted_objective
     end
-  end
-
-  # This method takes lesson and activity data exported from curriculum builder
-  # and updates corresponding fields of this lesson to match it. The expected
-  # input format is as follows:
-  # {
-  #   "title": "Lesson Title",
-  #   "number": 1,
-  #   "student_desc": "Student-facing description",
-  #   "teacher_desc": "Teacher-facing description",
-  #   "activities": [
-  #     {
-  #       "name": "Activity name",
-  #       "duration": "5-10 minutes",
-  #       "content": "Activity markdown"
-  #     },
-  #     ...
-  #   ]
-  # }
-  # @param [Hash] cb_lesson_data - Lesson and activity data to import.
-  def update_from_curriculum_builder(cb_lesson_data = {})
-    # In the future, only levelbuilder should be added to this list.
-    raise unless [:development, :adhoc].include? rack_env
-
-    # course version id should always be present for CSF/CSD/CSP 2020 courses.
-    course_version_id = script&.get_course_version&.id
-    raise unless course_version_id
-
-    if cb_lesson_data.empty?
-      self.lesson_activities = Services::LessonImportHelper.update_lockable_lesson(script_levels, id)
-      self.script_levels = []
-    else
-      self.name = cb_lesson_data['title']
-      self.overview = cb_lesson_data['teacher_desc']
-      self.student_overview = cb_lesson_data['student_desc']
-      self.purpose = cb_lesson_data['cs_content']
-      self.preparation = cb_lesson_data['prep']
-      self.creative_commons_license = cb_lesson_data['creative_commons_license']
-      self.objectives = cb_lesson_data['objectives'].map do |o|
-        Objective.new(description: o["name"])
-      end
-      self.lesson_activities = Services::LessonImportHelper.create_lesson_activities(cb_lesson_data['activities'], script_levels, id)
-      self.resources = Services::LessonImportHelper.create_lesson_resources(cb_lesson_data['resources'], course_version_id)
-      self.script_levels = []
-    end
-    save!
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.

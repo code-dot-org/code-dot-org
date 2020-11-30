@@ -86,8 +86,7 @@ describe('UnitCard', () => {
       addGroup,
       convertGroupToUserFacing,
       convertGroupToNonUserFacing,
-      lessonGroups,
-      levelKeyList: {}
+      lessonGroups
     };
   });
 
