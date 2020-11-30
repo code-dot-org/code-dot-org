@@ -1266,40 +1266,60 @@
           "courseC_harvester_loops_challenge2_a": "Een oplossing van deze puzzel lijkt op een zig-zag. Een andere manier lijkt op een spiraal! Er zijn vele verschillende oplossing op een puzzel zoals deze. Wees volhardend!"
         },
         "courseC_maze_programming5": {
-          "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg voorwaarts` blokken, één draai en nog eens twee `beweeg voorwaarts` blokken."
+          "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken.",
+          "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?"
         },
         "courseC_maze_programming5_2018": {
-          "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg voorwaarts` blokken, één draai en nog eens twee `beweeg voorwaarts` blokken."
+          "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken.",
+          "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?"
         },
         "courseC_maze_programming5_2019": {
-          "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg voorwaarts` blokken, één draai en nog eens twee `beweeg voorwaarts` blokken."
+          "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken.",
+          "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?"
         },
         "courseC_maze_programming5_2020": {
-          "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg voorwaarts` blokken, één draai en nog eens twee `beweeg voorwaarts` blokken."
+          "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken.",
+          "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?"
         },
         "courseC_maze_programming6": {
-          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
+          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseC_maze_programming6_b": "Teken met je vinger de route die de angry bird moet nemen. Welke stappen heb je genomen?",
+          "courseC_maze_programming6_c": "Denk er aan dat je eerst moet draaien, want de angry bird begint met het gezicht naar een muur.",
+          "courseC_maze_programming6_d": "Zit je vast? Probeer deze route eens!"
         },
         "courseC_maze_programming6_2018": {
-          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
+          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseC_maze_programming6_b": "Teken met je vinger de route die de angry bird moet nemen. Welke stappen heb je genomen?",
+          "courseC_maze_programming6_c": "Denk er aan dat je eerst moet draaien, want de angry bird begint met het gezicht naar een muur.",
+          "courseC_maze_programming6_d": "Zit je vast? Probeer deze route eens!"
         },
         "courseC_maze_programming6_2019": {
-          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
+          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseC_maze_programming6_b": "Teken met je vinger de route die de angry bird moet nemen. Welke stappen heb je genomen?",
+          "courseC_maze_programming6_c": "Denk er aan dat je eerst moet draaien, want de angry bird begint met het gezicht naar een muur.",
+          "courseC_maze_programming6_d": "Zit je vast? Probeer deze route eens!"
         },
         "courseC_maze_programming6_2020": {
-          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
+          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseC_maze_programming6_b": "Teken met je vinger de route die de angry bird moet nemen. Welke stappen heb je genomen?",
+          "courseC_maze_programming6_c": "Denk er aan dat je eerst moet draaien, want de angry bird begint met het gezicht naar een muur.",
+          "courseC_maze_programming6_d": "Zit je vast? Probeer deze route eens!"
         },
         "courseC_maze_programming_challenge2": {
-          "courseC_maze_programming_challenge2_b": "De kortste oplossing bevat slechts 5 blokken, waaronder deze blok:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "De kortste oplossing bevat slechts 5 blokken, waaronder dit blok:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>",
+          "courseC_maze_programming_challenge2_a": "_\"Als je me achteruit stuurt, let dan extra goed op dat ik de goede kant op draai!!\"_"
         },
         "courseC_maze_programming_challenge2_2018": {
-          "courseC_maze_programming_challenge2_b": "De kortste oplossing bevat slechts 5 blokken, waaronder deze blok:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "De kortste oplossing bevat slechts 5 blokken, waaronder dit blok:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>",
+          "courseC_maze_programming_challenge2_a": "_\"Als je me achteruit stuurt, let dan extra goed op dat ik de goede kant op draai!!\"_"
         },
         "courseC_maze_programming_challenge2_2019": {
-          "courseC_maze_programming_challenge2_b": "De kortste oplossing bevat slechts 5 blokken, waaronder deze blok:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "De kortste oplossing bevat slechts 5 blokken, waaronder dit blok:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>",
+          "courseC_maze_programming_challenge2_a": "_\"Als je me achteruit stuurt, let dan extra goed op dat ik de goede kant op draai!!\"_"
         },
         "courseC_maze_programming_challenge2_2020": {
-          "courseC_maze_programming_challenge2_b": "De kortste oplossing bevat slechts 5 blokken, waaronder deze blok:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "De kortste oplossing bevat slechts 5 blokken, waaronder dit blok:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>",
+          "courseC_maze_programming_challenge2_a": "_\"Als je me achteruit stuurt, let dan extra goed op dat ik de goede kant op draai!!\"_"
         },
         "courseC_starWars_loops5": {
           "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus."
@@ -1320,46 +1340,70 @@
           "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
         },
         "courseD_artist_nestedLoops3": {
-          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?"
+          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?",
+          "courseD_artist_nestedLoops3_b": "Vergeet niet, een geneste lus te gebruiken om deze puzzle snel op te lossen.",
+          "courseD_artist_nestedLoops3_c": "Gebruik eerst een `herhaal`-lus om een vierkant te maken. Herhaal vervolgens dat vierkant 8 keer, met telkens een sprong van 40 pixels tussendoor."
         },
         "courseD_artist_nestedLoops3_2018": {
-          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?"
+          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?",
+          "courseD_artist_nestedLoops3_b": "Vergeet niet, een geneste lus te gebruiken om deze puzzle snel op te lossen.",
+          "courseD_artist_nestedLoops3_c": "Gebruik eerst een `herhaal`-lus om een vierkant te maken. Herhaal vervolgens dat vierkant 8 keer, met telkens een sprong van 40 pixels tussendoor."
         },
         "courseD_artist_nestedLoops3_2019": {
-          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?"
+          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?",
+          "courseD_artist_nestedLoops3_b": "Vergeet niet, een geneste lus te gebruiken om deze puzzle snel op te lossen.",
+          "courseD_artist_nestedLoops3_c": "Gebruik eerst een `herhaal`-lus om een vierkant te maken. Herhaal vervolgens dat vierkant 8 keer, met telkens een sprong van 40 pixels tussendoor."
         },
         "courseD_artist_nestedLoops3_2020": {
-          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?"
+          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?",
+          "courseD_artist_nestedLoops3_b": "Vergeet niet, een geneste lus te gebruiken om deze puzzle snel op te lossen.",
+          "courseD_artist_nestedLoops3_c": "Gebruik eerst een `herhaal`-lus om een vierkant te maken. Herhaal vervolgens dat vierkant 8 keer, met telkens een sprong van 40 pixels tussendoor."
         },
         "courseD_bee_conditionals7": {
-          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen.",
+          "courseD_bee_conditionals7_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals7_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle.",
+          "courseD_bee_conditionals7_b": "Als er geen bloem onder de wolk is, moet er een honingraat zijn. In deze puzzle hoef je geen rekening te houden met lege grond."
         },
         "courseD_bee_conditionals7_2018": {
-          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen.",
+          "courseD_bee_conditionals7_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals7_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle.",
+          "courseD_bee_conditionals7_b": "Als er geen bloem onder de wolk is, moet er een honingraat zijn. In deze puzzle hoef je geen rekening te houden met lege grond."
         },
         "courseD_bee_conditionals7_2019": {
-          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen.",
+          "courseD_bee_conditionals7_b": "Als er geen bloem onder de wolk is, moet er een honingraat zijn. In deze puzzle hoef je geen rekening te houden met lege grond."
         },
         "courseD_bee_conditionals7_2020": {
-          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen.",
+          "courseD_bee_conditionals7_b": "Als er geen bloem onder de wolk is, moet er een honingraat zijn. In deze puzzle hoef je geen rekening te houden met lege grond."
         },
         "courseD_bee_conditionals7_predict2": {
-          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen."
         },
         "courseD_bee_conditionals7_predict2_2018": {
-          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen."
         },
         "courseD_bee_conditionals7_predict2_2019": {
-          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen."
         },
         "courseD_bee_conditionals7_predict2_2020": {
-          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen."
         },
         "courseD_bee_conditionals8": {
-          "courseD_bee_conditionals8_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals8_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.",
+          "courseD_bee_conditionals8_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals8_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle.",
+          "courseD_bee_conditionals8_c": "Hoe kun je zeker weten dat je tot aan het eind van elk pad reist, hoe lang het pad ook is?",
+          "courseD_bee_conditionals8_d": "Hoewel er vlak voor je een wolk hangt, hoef je daar niet meteen naar toe te gaan. Probeer eens te beginnen met de wolk rechtsonder in je route.\n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)"
         },
         "courseD_bee_conditionals8_2018": {
-          "courseD_bee_conditionals8_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+          "courseD_bee_conditionals8_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.",
+          "courseD_bee_conditionals8_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals8_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle.",
+          "courseD_bee_conditionals8_c": "Hoe kun je zeker weten dat je tot aan het eind van elk pad reist, hoe lang het pad ook is?",
+          "courseD_bee_conditionals8_d": "Hoewel er vlak voor je een wolk hangt, hoef je daar niet meteen naar toe te gaan. Probeer eens te beginnen met de wolk rechtsonder in je route.\n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)"
         },
         "courseD_bee_conditionals8_2019": {
           "courseD_bee_conditionals8_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
@@ -1395,7 +1439,9 @@
           "courseC_maze_programming2_a": "Om het \"beweeg vooruit\" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok \"als gestart\"."
         },
         "courseD_maze_ramp6": {
-          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
+          "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseC_maze_programming6_b": "De angry bird begint met het gezicht naar een muur, dus je moet eerst draaien voordat je vooruit kunt bewegen.",
+          "courseC_maze_programming6_c": "Je kunt telkens 1 blok toevoegen en dan uitvoeren, zodat je kunt zien wat de volgende stap moet zijn."
         },
         "courseD_scrat_ramp2": {
           "courseC_maze_programming2_a": "Om het \"beweeg vooruit\" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok \"als gestart\"."
@@ -1736,7 +1782,8 @@
           "courseE_artist_ramp8_b": "Om 4 zijden te tekenen, moet je het `ga vooruit met 100 pixels` blok in een herhaal lus plaatsen. Zorg ervoor dat de lus 4 keer iets tekent.\n\nVergeet niet, om daarna te draaien!",
           "courseE_artist_ramp8_c": "Er zouden 2 blokken in je lus moeten zitten: 'ga vooruit' en 'draai rechts met 90 graden'.",
           "courseD_artist_ramp12_a": "Wat is er hetzelfde als bij een vierkant? En wat is er anders?",
-          "courseD_artist_ramp12_c": "Om een zijde te tekenen, moet je eerst 100 pixels vooruit bewegen, en daarna 120 graden naar rechts draaien. Hoeveel zijden heb je nodig?"
+          "courseD_artist_ramp12_c": "Om een zijde te tekenen, moet je eerst 100 pixels vooruit bewegen, en daarna 120 graden naar rechts draaien. Hoeveel zijden heb je nodig?",
+          "courseE_artist_ramp8_a": "Om een zijde te tekenen, kun je het `beweeg vooruit met 100 pixels`-blok gebruiken, en de 100 in 200 veranderen."
         },
         "courseE_artist_concept1": {
           "courseE_artist_concept1_a": "De zeshoeken hebben zijden van 50 pixels, en je moet steeds 60 graden naar rechts draaien.",
@@ -1901,11 +1948,13 @@
         },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_b": "Om 4 zijden te tekenen, moet je het `ga vooruit met 100 pixels` blok in een herhaal lus plaatsen. Zorg ervoor dat de lus 4 keer iets tekent.\n\nVergeet niet, om daarna te draaien!",
-          "courseE_artist_ramp8_c": "Er zouden 2 blokken in je lus moeten zitten: 'ga vooruit' en 'draai rechts met 90 graden'."
+          "courseE_artist_ramp8_c": "Er zouden 2 blokken in je lus moeten zitten: 'ga vooruit' en 'draai rechts met 90 graden'.",
+          "courseE_artist_ramp8_a": "Om een zijde te tekenen, kun je het `beweeg vooruit met 100 pixels`-blok gebruiken, en de 100 in 200 veranderen."
         },
         "courseE_artist_ramp8_2": {
           "courseE_artist_ramp8_b": "Om 4 zijden te tekenen, moet je het `ga vooruit met 100 pixels` blok in een herhaal lus plaatsen. Zorg ervoor dat de lus 4 keer iets tekent.\n\nVergeet niet, om daarna te draaien!",
-          "courseE_artist_ramp8_c": "Er zouden 2 blokken in je lus moeten zitten: 'ga vooruit' en 'draai rechts met 90 graden'."
+          "courseE_artist_ramp8_c": "Er zouden 2 blokken in je lus moeten zitten: 'ga vooruit' en 'draai rechts met 90 graden'.",
+          "courseE_artist_ramp8_a": "Om een zijde te tekenen, kun je het `beweeg vooruit met 100 pixels`-blok gebruiken, en de 100 in 200 veranderen."
         },
         "courseE_artist_ramp9": {
           "courseD_artist_ramp12_a": "Wat is er hetzelfde als bij een vierkant? En wat is er anders?",
@@ -2168,6 +2217,798 @@
         },
         "courseE_playLab_scaffold5": {
           "courseE_playLab_scaffold5_a": "Om dit level te halen, moet je winnen of verliezen.  Gebruik een `eindig het spel als gewonnen`- of `eindig het spel als verloren`-blok als einde."
+        },
+        "courseD_artist_nestedLoops1": {
+          "courseD_artist_nestedLoops1_a": "De makkelijkste manier om dit te tekenen is om steeds vooruit te bewegen en naar rechts te draaien.",
+          "courseD_artist_nestedLoops1_b": "Je kunt deze driehoek tekenen met een `herhaal`-lus met twee blokken erin. Welke blokken heb je nodig?",
+          "courseD_artist_nestedLoops1_c": "Probeer de stappen op papier uit te schrijven, en zoek naar een patroon dat je eenvoudiger kunt maken met lussen."
+        },
+        "courseD_artist_nestedLoops1_2018": {
+          "courseD_artist_nestedLoops1_a": "De makkelijkste manier om dit te tekenen is om steeds vooruit te bewegen en naar rechts te draaien.",
+          "courseD_artist_nestedLoops1_b": "Je kunt deze driehoek tekenen met een `herhaal`-lus met twee blokken erin. Welke blokken heb je nodig?",
+          "courseD_artist_nestedLoops1_c": "Probeer de stappen op papier uit te schrijven, en zoek naar een patroon dat je eenvoudiger kunt maken met lussen."
+        },
+        "courseD_artist_nestedLoops1_2019": {
+          "courseD_artist_nestedLoops1_a": "De makkelijkste manier om dit te tekenen is om steeds vooruit te bewegen en naar rechts te draaien.",
+          "courseD_artist_nestedLoops1_b": "Je kunt deze driehoek tekenen met een `herhaal`-lus met twee blokken erin. Welke blokken heb je nodig?",
+          "courseD_artist_nestedLoops1_c": "Probeer de stappen op papier uit te schrijven, en zoek naar een patroon dat je eenvoudiger kunt maken met lussen."
+        },
+        "courseD_artist_nestedLoops1_2020": {
+          "courseD_artist_nestedLoops1_a": "De makkelijkste manier om dit te tekenen is om steeds vooruit te bewegen en naar rechts te draaien.",
+          "courseD_artist_nestedLoops1_b": "Je kunt deze driehoek tekenen met een `herhaal`-lus met twee blokken erin. Welke blokken heb je nodig?",
+          "courseD_artist_nestedLoops1_c": "Probeer de stappen op papier uit te schrijven, en zoek naar een patroon dat je eenvoudiger kunt maken met lussen."
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11a": "Om een zijde te tekenen, kun je het `beweeg vooruit met 100 pixels`-blok gebruiken, en de 100 in 200 veranderen.",
+          "courseD_artist_ramp11b": "Om 4 zijden te tekenen, moet je het `ga vooruit met 200 pixels` blok in een herhaal lus plaatsen. Zorg ervoor dat de lus 4 keer iets tekent.\n\nVergeet niet, om daarna te draaien!",
+          "courseD_artist_ramp11_c": "Vergeet niet om alle `draai`-blokken binnen je lus te plaatsen!"
+        },
+        "courseD_artist_ramp12": {
+          "courseD_artist_ramp12_a": "Je kunt eerst het vierkant tekenen en daarna de driehoek, of andersom!",
+          "courseD_artist_ramp12_b": "Probeer het probleem in 2 delen te splitsen, en 2 lussen te gebruiken."
+        },
+        "courseD_collector_nested_loops_challenge2a": {
+          "courseD_collector_nested_loops_challenge2a_b": "Kun je bedenken hoe je alle 4 juwelen kunt pakken, zonder dat je meer blokken gebruikt dan je nodig hebt om er 2 te pakken?"
+        },
+        "courseD_collector_ramp10": {
+          "courseD_artist_ramp10_a": "in plaats van vier `beweeg vooruit`-blokken voor elke zijde, zou je het eens kunnen proberen met een `beweeg vooruit`-blok binnen in een `herhaal`-lus, op deze manier:\n\n<xml><block type=\"controls_repeat\">\n                                            <title name=\"TIMES\">4</title>\n                                            <statement name=\"DO\">\n                                              <block type=\"maze_moveForward\"/>\n                                            </statement>\n                                          </block></xml>",
+          "courseD_artist_ramp10_b": "Vergeet niet om eerst een schat op te pakken, en daarna te draaien voor de volgende zijde van het vierkant!",
+          "courseD_artist_ramp10_c": "Als je je code eenvoudiger wilt maken, kun je een herhaal lus binnen in een andere herhaal lus plaatsen! Dat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_a": "Als je bij een plek komt waar schatten liggen, kun je `verzamel` gebruiken om een schat op te rapen. voor deze puzzle moet je meerdere keren schatten oprapen!"
+        },
+        "courseD_collector_ramp9": {
+          "courseD_collector_ramp9_a": "Breng Laurel eerst naar de eerste stapel schatten, en verzamel hem. Kun je deze serie instructies herhalen om bij de tweede stapel te komen?",
+          "courseD_collector_ramp9_b": "Als je je code eenvoudiger wilt maken, kun je een herhaal lus binnen in een andere herhaal lus plaatsen! Dat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseD_maze_ramp7": {
+          "courseD_maze_ramp7_a": "Je kunt `herhaal`-blokken gebruiken om een enkel blok of een hele set instructies steeds maar weer te herhalen.",
+          "courseD_maze_ramp7_c": "Als je je code eenvoudiger wilt maken, kun je een herhaal lus binnen in een andere herhaal lus plaatsen! Dat noemen we een **geneste lus** (nested loop).",
+          "courseD_maze_ramp7_b": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_a": "Je kunt `herhaal`-blokken gebruiken om een enkel blok of een hele set instructies steeds maar weer te herhalen.",
+          "courseD_maze_ramp7_b": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat."
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_a": "Je moet in totaal 6 driehoeken tekenen. Na elke driehoek moet je 60 graden draaien en dan de volgende tekenen. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Als je je driehoek tekent met de lus, zou de artiest op het eind dezelfde kant op moeten kijken als in het begin. Dat maakt de 60 graden draai een stuk makkelijker!",
+          "courseD_artist_nestedLoops1a_c": "Als je kleuren wilt gebruiken, gebruik dan het `zet kleur`-blok. Je hoeft niet per se dezelfde  kleuren te gebruiken als in het voorbeeld."
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_b": "Als je je driehoek tekent met de lus, zou de artiest op het eind dezelfde kant op moeten kijken als in het begin. Dat maakt de 60 graden draai een stuk makkelijker!",
+          "courseD_artist_nestedLoops1a_c": "Als je kleuren wilt gebruiken, gebruik dan het `zet kleur`-blok. Je hoeft niet per se dezelfde  kleuren te gebruiken als in het voorbeeld."
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_a": "Je moet in totaal 6 driehoeken tekenen. Na elke driehoek moet je 60 graden draaien en dan de volgende tekenen. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Als je je driehoek tekent met de lus, zou de artiest op het eind dezelfde kant op moeten kijken als in het begin. Dat maakt de 60 graden draai een stuk makkelijker!",
+          "courseD_artist_nestedLoops1a_c": "Als je kleuren wilt gebruiken, gebruik dan het `zet kleur`-blok. Je hoeft niet per se dezelfde  kleuren te gebruiken als in het voorbeeld."
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_a": "Je moet in totaal 6 driehoeken tekenen. Na elke driehoek moet je 60 graden draaien en dan de volgende tekenen. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Als je je driehoek tekent met de lus, zou de artiest op het eind dezelfde kant op moeten kijken als in het begin. Dat maakt de 60 graden draai een stuk makkelijker!",
+          "courseD_artist_nestedLoops1a_c": "Als je kleuren wilt gebruiken, gebruik dan het `zet kleur`-blok. Je hoeft niet per se dezelfde  kleuren te gebruiken als in het voorbeeld."
+        },
+        "courseD_artist_nestedLoops2": {
+          "courseD_artist_nestedLoops2_a": "Nest je lussen door je driehoek-code te omringen met een andere `herhaal`-lus.",
+          "courseD_artist_nestedLoops2_b": "Denk er om dat je het `draai`-blok binnenin de lust plaatst, zodat de artiest na elke driehoek een keer draait."
+        },
+        "courseD_artist_nestedLoops2_2018": {
+          "courseD_artist_nestedLoops2_a": "Nest je lussen door je driehoek-code te omringen met een andere `herhaal`-lus.",
+          "courseD_artist_nestedLoops2_b": "Denk er om dat je het `draai`-blok binnenin de lust plaatst, zodat de artiest na elke driehoek een keer draait."
+        },
+        "courseD_artist_nestedLoops2_2019": {
+          "courseD_artist_nestedLoops2_a": "Nest je lussen door je driehoek-code te omringen met een andere `herhaal`-lus.",
+          "courseD_artist_nestedLoops2_b": "Denk er om dat je het `draai`-blok binnenin de lust plaatst, zodat de artiest na elke driehoek een keer draait."
+        },
+        "courseD_artist_nestedLoops2_2020": {
+          "courseD_artist_nestedLoops2_a": "Nest je lussen door je driehoek-code te omringen met een andere `herhaal`-lus.",
+          "courseD_artist_nestedLoops2_b": "Denk er om dat je het `draai`-blok binnenin de lust plaatst, zodat de artiest na elke driehoek een keer draait."
+        },
+        "courseD_artist_nestedLoops4": {
+          "courseD_artist_nestedLoops4_d": "Om dit correct op te lossen, moet je bewegen **voordat** je draait. Anders zullen je cirkels telkens een heel klein beetje afwijken!",
+          "courseD_artist_nestedLoops4_a": "Om een cirkel te maken:\n\n-   Herhaal 360 keer\n    -   Beweeg 1 pixel vooruit\n    -   Draai 1 graad naar links",
+          "courseD_artist_nestedLoops4_b": "Vergeet niet om steeds 50 pixels vooruit te springen tussen elke twee cirkels.",
+          "courseD_artist_nestedLoops4_c": "Gebruik een geneste lus om je cirkels 4 keer te tekenen."
+        },
+        "courseD_artist_nestedLoops4_2018": {
+          "courseD_artist_nestedLoops4_d": "Om dit correct op te lossen, moet je bewegen **voordat** je draait. Anders zullen je cirkels telkens een heel klein beetje afwijken!",
+          "courseD_artist_nestedLoops4_a": "Om een cirkel te maken:\n\n-   Herhaal 360 keer\n    -   Beweeg 1 pixel vooruit\n    -   Draai 1 graad naar links",
+          "courseD_artist_nestedLoops4_b": "Vergeet niet om steeds 50 pixels vooruit te springen tussen elke twee cirkels.",
+          "courseD_artist_nestedLoops4_c": "Gebruik een geneste lus om je cirkels 4 keer te tekenen."
+        },
+        "courseD_artist_nestedLoops4_2019": {
+          "courseD_artist_nestedLoops4_d": "Om dit correct op te lossen, moet je bewegen **voordat** je draait. Anders zullen je cirkels telkens een heel klein beetje afwijken!",
+          "courseD_artist_nestedLoops4_a": "Om een cirkel te maken:\n\n-   Herhaal 360 keer\n    -   Beweeg 1 pixel vooruit\n    -   Draai 1 graad naar links",
+          "courseD_artist_nestedLoops4_b": "Vergeet niet om steeds 50 pixels vooruit te springen tussen elke twee cirkels.",
+          "courseD_artist_nestedLoops4_c": "Gebruik een geneste lus om je cirkels 4 keer te tekenen."
+        },
+        "courseD_artist_nestedLoops4_2020": {
+          "courseD_artist_nestedLoops4_d": "Om dit correct op te lossen, moet je bewegen **voordat** je draait. Anders zullen je cirkels telkens een heel klein beetje afwijken!",
+          "courseD_artist_nestedLoops4_a": "Om een cirkel te maken:\n\n-   Herhaal 360 keer\n    -   Beweeg 1 pixel vooruit\n    -   Draai 1 graad naar links",
+          "courseD_artist_nestedLoops4_b": "Vergeet niet om steeds 50 pixels vooruit te springen tussen elke twee cirkels.",
+          "courseD_artist_nestedLoops4_c": "Gebruik een geneste lus om je cirkels 4 keer te tekenen."
+        },
+        "courseD_artist_nestedLoops5": {
+          "courseD_artist_nestedLoops5_a": "Dit kan heel makkelijk op de volgende manier:\n\n-   herhaal 4 keer\n    -   maak een cirkel\n    -   spring 50 pixels vooruit\n    -   draai 90 graden rechtsom",
+          "courseD_artist_nestedLoops5_b": "Om een cirkel te maken heb je een herhaal lus nodig die 360 keer herhaalt. In die lus moet je steeds 1 pixel vooruit bewegen en 1 graad draaien."
+        },
+        "courseD_artist_nestedLoops5_2018": {
+          "courseD_artist_nestedLoops5_a": "Dit kan heel makkelijk op de volgende manier:\n\n-   herhaal 4 keer\n    -   maak een cirkel\n    -   spring 50 pixels vooruit\n    -   draai 90 graden rechtsom",
+          "courseD_artist_nestedLoops5_b": "Om een cirkel te maken heb je een herhaal lus nodig die 360 keer herhaalt. In die lus moet je steeds 1 pixel vooruit bewegen en 1 graad draaien."
+        },
+        "courseD_artist_nestedLoops5_2019": {
+          "courseD_artist_nestedLoops5_a": "Dit kan heel makkelijk op de volgende manier:\n\n-   herhaal 4 keer\n    -   maak een cirkel\n    -   spring 50 pixels vooruit\n    -   draai 90 graden rechtsom",
+          "courseD_artist_nestedLoops5_b": "Om een cirkel te maken heb je een herhaal lus nodig die 360 keer herhaalt. In die lus moet je steeds 1 pixel vooruit bewegen en 1 graad draaien."
+        },
+        "courseD_artist_nestedLoops5_2020": {
+          "courseD_artist_nestedLoops5_a": "Dit kan heel makkelijk op de volgende manier:\n\n-   herhaal 4 keer\n    -   maak een cirkel\n    -   spring 50 pixels vooruit\n    -   draai 90 graden rechtsom",
+          "courseD_artist_nestedLoops5_b": "Om een cirkel te maken heb je een herhaal lus nodig die 360 keer herhaalt. In die lus moet je steeds 1 pixel vooruit bewegen en 1 graad draaien."
+        },
+        "courseD_artist_nestedLoops7": {
+          "courseD_artist_nestedLoops7_a": "Je sult hier geneste lussen moeten gebruiken. Gebruik eerst een lus om een vierkant te tekenen. Wat zal de buitenste lus moeten doen, als de binnenste lus een vierkant tekent?",
+          "courseD_artist_nestedLoops7_b": "Gebruik geneste lussen, waarbij de binnenste lus het vierkant tekent.\n\n-   herhaal 6 keer\n    -   teken een vierkant\n    -   sprint **50 pixels** vooruit\n    -   draai **60 graden**"
+        },
+        "courseD_artist_nestedLoops7_2018": {
+          "courseD_artist_nestedLoops7_a": "Je sult hier geneste lussen moeten gebruiken. Gebruik eerst een lus om een vierkant te tekenen. Wat zal de buitenste lus moeten doen, als de binnenste lus een vierkant tekent?",
+          "courseD_artist_nestedLoops7_b": "Gebruik geneste lussen, waarbij de binnenste lus het vierkant tekent.\n\n-   herhaal 6 keer\n    -   teken een vierkant\n    -   sprint **50 pixels** vooruit\n    -   draai **60 graden**"
+        },
+        "courseD_artist_nestedLoops7_2019": {
+          "courseD_artist_nestedLoops7_a": "Je sult hier geneste lussen moeten gebruiken. Gebruik eerst een lus om een vierkant te tekenen. Wat zal de buitenste lus moeten doen, als de binnenste lus een vierkant tekent?",
+          "courseD_artist_nestedLoops7_b": "Gebruik geneste lussen, waarbij de binnenste lus het vierkant tekent.\n\n-   herhaal 6 keer\n    -   teken een vierkant\n    -   sprint **50 pixels** vooruit\n    -   draai **60 graden**"
+        },
+        "courseD_artist_nestedLoops7_2020": {
+          "courseD_artist_nestedLoops7_a": "Je sult hier geneste lussen moeten gebruiken. Gebruik eerst een lus om een vierkant te tekenen. Wat zal de buitenste lus moeten doen, als de binnenste lus een vierkant tekent?",
+          "courseD_artist_nestedLoops7_b": "Gebruik geneste lussen, waarbij de binnenste lus het vierkant tekent.\n\n-   herhaal 6 keer\n    -   teken een vierkant\n    -   sprint **50 pixels** vooruit\n    -   draai **60 graden**"
+        },
+        "courseD_artist_nestedLoops8": {
+          "courseD_artist_nestedLoops8_a": "Om 8 zeshoeken in je tekening te krijgen, moet je tussendoor steeds **45 graden draaien**. Waarom? Want 360 graden (een keer helemaal ronddraaien) gedeeld door 8 (het aantal zeshoeken) is 45 graden.",
+          "courseD_artist_nestedLoops8_b": "Als je vastloopt, kijk dan eerst even naar de vorige puzzle, en verander de dingen die anders zijn.",
+          "courseD_artist_nestedLoops8_c": "Gebruik een geneste lus:\n\n-   Herhaal 8 keer\n    -   teken een zesheok\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoops8_2018": {
+          "courseD_artist_nestedLoops8_a": "Om 8 zeshoeken in je tekening te krijgen, moet je tussendoor steeds **45 graden draaien**. Waarom? Want 360 graden (een keer helemaal ronddraaien) gedeeld door 8 (het aantal zeshoeken) is 45 graden.",
+          "courseD_artist_nestedLoops8_b": "Als je vastloopt, kijk dan eerst even naar de vorige puzzle, en verander de dingen die anders zijn.",
+          "courseD_artist_nestedLoops8_c": "Gebruik een geneste lus:\n\n-   Herhaal 8 keer\n    -   teken een zesheok\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoops8_2019": {
+          "courseD_artist_nestedLoops8_a": "Om 8 zeshoeken in je tekening te krijgen, moet je tussendoor steeds **45 graden draaien**. Waarom? Want 360 graden (een keer helemaal ronddraaien) gedeeld door 8 (het aantal zeshoeken) is 45 graden.",
+          "courseD_artist_nestedLoops8_b": "Als je vastloopt, kijk dan eerst even naar de vorige puzzle, en verander de dingen die anders zijn.",
+          "courseD_artist_nestedLoops8_c": "Gebruik een geneste lus:\n\n-   Herhaal 8 keer\n    -   teken een zesheok\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoops8_2020": {
+          "courseD_artist_nestedLoops8_a": "Om 8 zeshoeken in je tekening te krijgen, moet je tussendoor steeds **45 graden draaien**. Waarom? Want 360 graden (een keer helemaal ronddraaien) gedeeld door 8 (het aantal zeshoeken) is 45 graden.",
+          "courseD_artist_nestedLoops8_b": "Als je vastloopt, kijk dan eerst even naar de vorige puzzle, en verander de dingen die anders zijn.",
+          "courseD_artist_nestedLoops8_c": "Gebruik een geneste lus:\n\n-   Herhaal 8 keer\n    -   teken een zesheok\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoops9": {
+          "courseD_artist_nestedLoops9_a": "Maak eerst een geneste lus zoals je al eerder hebt gedaan, maar deze keer met vierkanten.",
+          "courseD_artist_nestedLoops9_b": "Voeg een tweede setje geneste lussen toe na de eerste set, maar gebruik ditmaal driehoeken.",
+          "courseD_artist_nestedLoops9_c": "Gebruik twee geneste lussen:\n\n-   Herhaal 8 keer\n    -   teken een vierkant\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom\n-   Herhaal 8 keer\n    -   teken een driehoek\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoops9_2018": {
+          "courseD_artist_nestedLoops9_a": "Maak eerst een geneste lus zoals je al eerder hebt gedaan, maar deze keer met vierkanten.",
+          "courseD_artist_nestedLoops9_b": "Voeg een tweede setje geneste lussen toe na de eerste set, maar gebruik ditmaal driehoeken.",
+          "courseD_artist_nestedLoops9_c": "Gebruik twee geneste lussen:\n\n-   Herhaal 8 keer\n    -   teken een vierkant\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom\n-   Herhaal 8 keer\n    -   teken een driehoek\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoops9_2019": {
+          "courseD_artist_nestedLoops9_a": "Maak eerst een geneste lus zoals je al eerder hebt gedaan, maar deze keer met vierkanten.",
+          "courseD_artist_nestedLoops9_b": "Voeg een tweede setje geneste lussen toe na de eerste set, maar gebruik ditmaal driehoeken.",
+          "courseD_artist_nestedLoops9_c": "Gebruik twee geneste lussen:\n\n-   Herhaal 8 keer\n    -   teken een vierkant\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom\n-   Herhaal 8 keer\n    -   teken een driehoek\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoops9_2020": {
+          "courseD_artist_nestedLoops9_a": "Maak eerst een geneste lus zoals je al eerder hebt gedaan, maar deze keer met vierkanten.",
+          "courseD_artist_nestedLoops9_b": "Voeg een tweede setje geneste lussen toe na de eerste set, maar gebruik ditmaal driehoeken.",
+          "courseD_artist_nestedLoops9_c": "Gebruik twee geneste lussen:\n\n-   Herhaal 8 keer\n    -   teken een vierkant\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom\n-   Herhaal 8 keer\n    -   teken een driehoek\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoopsFP": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een zeshoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met code die lijkt op levels die je eerder hebt gedaan, maar dan met cirkels (herhaal 360 keer: beweeg 1 vooruit, draai 1 graad).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een vijfhoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden"
+        },
+        "courseD_artist_nestedLoopsFP_2018": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een zeshoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met code die lijkt op levels die je eerder hebt gedaan, maar dan met cirkels (herhaal 360 keer: beweeg 1 vooruit, draai 1 graad).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een vijfhoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden"
+        },
+        "courseD_artist_nestedLoopsFP_2019": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een zeshoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met code die lijkt op levels die je eerder hebt gedaan, maar dan met cirkels (herhaal 360 keer: beweeg 1 vooruit, draai 1 graad).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een vijfhoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden"
+        },
+        "courseD_artist_nestedLoopsFP_2020": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een zeshoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met code die lijkt op levels die je eerder hebt gedaan, maar dan met cirkels (herhaal 360 keer: beweeg 1 vooruit, draai 1 graad).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een vijfhoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden"
+        },
+        "courseD_artist_nestedLoops_challenge1": {
+          "courseD_artist_nestedLoops_challenge1_a": "Verander eerst de kleur naar blauw, en teken dan een achthoek met zijden van 50 pixels en hoeken van 45 graden linksom.",
+          "courseD_artist_nestedLoops_challenge1_b": "Voeg code toe om de kleur groen te maken, en maak een driehoek met zijden van 50 pixels en hoeken van 120 graden.",
+          "courseD_artist_nestedLoops_challenge1_c": "Nadat je beide vormen hebt getekend, moet je 50 pixels vooruit springen en 90 graden rechtsom draaien.",
+          "courseD_artist_nestedLoops_challenge1_d": "Stop al je code in een `herhaal 4 keer`-lus om het af te maken."
+        },
+        "courseD_artist_nestedLoops_challenge1_2018": {
+          "courseD_artist_nestedLoops_challenge1_a": "Verander eerst de kleur naar blauw, en teken dan een achthoek met zijden van 50 pixels en hoeken van 45 graden linksom.",
+          "courseD_artist_nestedLoops_challenge1_b": "Voeg code toe om de kleur groen te maken, en maak een driehoek met zijden van 50 pixels en hoeken van 120 graden.",
+          "courseD_artist_nestedLoops_challenge1_c": "Nadat je beide vormen hebt getekend, moet je 50 pixels vooruit springen en 90 graden rechtsom draaien.",
+          "courseD_artist_nestedLoops_challenge1_d": "Stop al je code in een `herhaal 4 keer`-lus om het af te maken."
+        },
+        "courseD_artist_nestedLoops_challenge1_2019": {
+          "courseD_artist_nestedLoops_challenge1_a": "Verander eerst de kleur naar blauw, en teken dan een achthoek met zijden van 50 pixels en hoeken van 45 graden linksom.",
+          "courseD_artist_nestedLoops_challenge1_b": "Voeg code toe om de kleur groen te maken, en maak een driehoek met zijden van 50 pixels en hoeken van 120 graden.",
+          "courseD_artist_nestedLoops_challenge1_c": "Nadat je beide vormen hebt getekend, moet je 50 pixels vooruit springen en 90 graden rechtsom draaien.",
+          "courseD_artist_nestedLoops_challenge1_d": "Stop al je code in een `herhaal 4 keer`-lus om het af te maken."
+        },
+        "courseD_artist_nestedLoops_challenge1_2020": {
+          "courseD_artist_nestedLoops_challenge1_a": "Verander eerst de kleur naar blauw, en teken dan een achthoek met zijden van 50 pixels en hoeken van 45 graden linksom.",
+          "courseD_artist_nestedLoops_challenge1_b": "Voeg code toe om de kleur groen te maken, en maak een driehoek met zijden van 50 pixels en hoeken van 120 graden.",
+          "courseD_artist_nestedLoops_challenge1_c": "Nadat je beide vormen hebt getekend, moet je 50 pixels vooruit springen en 90 graden rechtsom draaien.",
+          "courseD_artist_nestedLoops_challenge1_d": "Stop al je code in een `herhaal 4 keer`-lus om het af te maken."
+        },
+        "course2_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "Om een regelmatige achthoek te maken moet de artiest 8 keer 45 graden draaien.",
+          "courseD_artist_nestedLoops_challenge2_b": "Om een vierkant te maken, moet de artiest 4 keer 90 graden draaien."
+        },
+        "courseD_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "Om een regelmatige achthoek te maken moet de artiest 8 keer 45 graden draaien.",
+          "courseD_artist_nestedLoops_challenge2_b": "Om een vierkant te maken, moet de artiest 4 keer 90 graden draaien."
+        },
+        "courseD_artist_nestedLoops_challenge2_2018": {
+          "courseD_artist_nestedLoops_challenge2_a": "Om een regelmatige achthoek te maken moet de artiest 8 keer 45 graden draaien.",
+          "courseD_artist_nestedLoops_challenge2_b": "Om een vierkant te maken, moet de artiest 4 keer 90 graden draaien."
+        },
+        "courseD_artist_nestedLoops_challenge2_2019": {
+          "courseD_artist_nestedLoops_challenge2_a": "Om een regelmatige achthoek te maken moet de artiest 8 keer 45 graden draaien.",
+          "courseD_artist_nestedLoops_challenge2_b": "Om een vierkant te maken, moet de artiest 4 keer 90 graden draaien."
+        },
+        "courseD_artist_nestedLoops_challenge2_2020": {
+          "courseD_artist_nestedLoops_challenge2_a": "Om een regelmatige achthoek te maken moet de artiest 8 keer 45 graden draaien.",
+          "courseD_artist_nestedLoops_challenge2_b": "Om een vierkant te maken, moet de artiest 4 keer 90 graden draaien."
+        },
+        "courseD_collector_debugging1": {
+          "courseD_collector_debugging1_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?",
+          "courseD_collector_debugging1_b": "Zie je een patroon dat je kunt vereenvoudigen met behulp van een `herhaal`-lus?",
+          "courseD_collector_debugging1_c": "Vergeet niet om de `verzamel`-instructie te gebruiken zodra je een schat hebt bereikt."
+        },
+        "courseD_collector_debugging10_predict1": {
+          "courseD_collector_debugging9_a": "Je kunt dit probleem op een heleboel manieren oplossen ...  Maar je hebt hoe dan ook een draai nodig!",
+          "courseD_collector_debugging9_b": "Bedenk eerst hoe je de puzzle wilt oplossen. Zorg er vervolgens stapje voor stapje voor dat de code precies doet wat je in je hoofd hebt."
+        },
+        "courseD_collector_debugging1a_2018": {
+          "courseD_collector_debugging1_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?",
+          "courseD_collector_debugging1_c": "Vergeet niet om de `verzamel`-instructie te gebruiken zodra je een schat hebt bereikt."
+        },
+        "courseD_collector_debugging1a_2019": {
+          "courseD_collector_debugging1_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?",
+          "courseD_collector_debugging1_c": "Vergeet niet om de `verzamel`-instructie te gebruiken zodra je een schat hebt bereikt."
+        },
+        "courseD_collector_debugging1a_2020": {
+          "courseD_collector_debugging1_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?",
+          "courseD_collector_debugging1_c": "Vergeet niet om de `verzamel`-instructie te gebruiken zodra je een schat hebt bereikt."
+        },
+        "courseD_collector_debugging2": {
+          "courseD_collector_debugging2_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?",
+          "courseD_collector_debugging2_b": "Zie je een patroon dat je kunt vereenvoudigen met behulp van een `herhaal`-lus?",
+          "courseD_collector_debugging2_c": "Probeer eerst, alle schatten te verzamelen langs een zijde van het vierkant. Kun je dit herhalen om de schatten te verzamelen langs de andere twee zijdes?"
+        },
+        "courseD_collector_debugging2a_2018": {
+          "courseD_collector_debugging2a_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?"
+        },
+        "courseD_collector_debugging2a_2019": {
+          "courseD_collector_debugging2a_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?"
+        },
+        "courseD_collector_debugging2a_2020": {
+          "courseD_collector_debugging2a_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?"
+        },
+        "courseD_collector_debugging3": {
+          "courseD_collector_debugging3_a": "Is er een plaats waar Laurel iets doet wat niet logisch is? En wat gebeurt er als je die blokken verandert?",
+          "courseD_collector_debugging3_b": "Probeer de code te vereenvoudigen met geneste lussen."
+        },
+        "courseD_collector_debugging3a_2018": {
+          "courseD_collector_debugging3_a": "Is er een plaats waar Laurel iets doet wat niet logisch is? En wat gebeurt er als je die blokken verandert?"
+        },
+        "courseD_collector_debugging3a_2019": {
+          "courseD_collector_debugging3_a": "Is er een plaats waar Laurel iets doet wat niet logisch is? En wat gebeurt er als je die blokken verandert?"
+        },
+        "courseD_collector_debugging3a_2020": {
+          "courseD_collector_debugging3_a": "Is er een plaats waar Laurel iets doet wat niet logisch is? En wat gebeurt er als je die blokken verandert?"
+        },
+        "courseD_collector_debugging4": {
+          "courseD_collector_debugging4_a": "Gebruik het foutopsporing proces een paar keer achter elkaar. \n\nWat veroorzaakt het eerste probleem?\n\nEn als je dat probleem hebt opgelost, wat gaat er dan mis?",
+          "courseD_collector_debugging4_b": "Als je niet zo gauw ziet hoe je het traplooppatrron kunt maken, Probeer het patroon dan eens met je vinger te volgen en zeg de instructies hardop. \n\nVergeet daarbij niet, de richting van de draai te noemen.!",
+          "courseD_collector_debugging4_c": "In deze lus ontbreekt slechts één blok. Weet jij welk blok?"
+        },
+        "courseD_collector_debugging4a_2018": {
+          "courseD_collector_debugging4_a": "Gebruik het foutopsporing proces een paar keer achter elkaar. \n\nWat veroorzaakt het eerste probleem?\n\nEn als je dat probleem hebt opgelost, wat gaat er dan mis?",
+          "courseD_collector_debugging4_b": "Als je niet zo gauw ziet hoe je het traplooppatrron kunt maken, Probeer het patroon dan eens met je vinger te volgen en zeg de instructies hardop. \n\nVergeet daarbij niet, de richting van de draai te noemen.!"
+        },
+        "courseD_collector_debugging4a_2019": {
+          "courseD_collector_debugging4_a": "Gebruik het foutopsporing proces een paar keer achter elkaar. \n\nWat veroorzaakt het eerste probleem?\n\nEn als je dat probleem hebt opgelost, wat gaat er dan mis?",
+          "courseD_collector_debugging4_b": "Als je niet zo gauw ziet hoe je het traplooppatrron kunt maken, Probeer het patroon dan eens met je vinger te volgen en zeg de instructies hardop. \n\nVergeet daarbij niet, de richting van de draai te noemen.!"
+        },
+        "courseD_collector_debugging4a_2020": {
+          "courseD_collector_debugging4_a": "Gebruik het foutopsporing proces een paar keer achter elkaar. \n\nWat veroorzaakt het eerste probleem?\n\nEn als je dat probleem hebt opgelost, wat gaat er dan mis?",
+          "courseD_collector_debugging4_b": "Als je niet zo gauw ziet hoe je het traplooppatrron kunt maken, Probeer het patroon dan eens met je vinger te volgen en zeg de instructies hardop. \n\nVergeet daarbij niet, de richting van de draai te noemen.!"
+        },
+        "courseD_collector_debugging5": {
+          "courseD_collector_debugging5_a": "Begin eens met alleen maar naar de eerste lus te kijken.\n\nWat gebeurt er?\n\nWat zou er moeten gebeuren?\n\nEn wat maak je daaruit op?",
+          "courseD_collector_debugging5_b": "Zodra de eerste lus doet wat je wilt, wat blijft er dan nog over?"
+        },
+        "courseD_collector_debugging6": {
+          "courseD_collector_debugging6_a": "Loop eens door de code met de `Stap` knop. Gaat alles goed bij de eerste stap?\n\nEn bij de tweede?\n\nEn waar gaat het mis?",
+          "courseD_collector_debugging6_b": "Het lijkt er op dat alle benodigde instructies al in het programma staan, er is alleen wat meer nodig.  Hoe kun je de `herhaal`-actie  vaker uitvoeren?"
+        },
+        "courseD_collector_debugging6a_2018": {
+          "courseD_collector_debugging6_a": "Loop eens door de code met de `Stap` knop. Gaat alles goed bij de eerste stap?\n\nEn bij de tweede?\n\nEn waar gaat het mis?"
+        },
+        "courseD_collector_debugging6a_2019": {
+          "courseD_collector_debugging6_a": "Loop eens door de code met de `Stap` knop. Gaat alles goed bij de eerste stap?\n\nEn bij de tweede?\n\nEn waar gaat het mis?"
+        },
+        "courseD_collector_debugging6a_2020": {
+          "courseD_collector_debugging6_a": "Loop eens door de code met de `Stap` knop. Gaat alles goed bij de eerste stap?\n\nEn bij de tweede?\n\nEn waar gaat het mis?"
+        },
+        "courseD_collector_debugging8": {
+          "courseD_collector_debugging8_a": "Zie je een patroon dat je kunt vereenvoudigen met een lus?",
+          "courseD_collector_debugging8_b": "Probeer een geneste lus te gebruiken om her programma korter te maken."
+        },
+        "courseD_collector_debugging9": {
+          "courseD_collector_debugging9_a": "Je kunt dit probleem op een heleboel manieren oplossen ...  Maar je hebt hoe dan ook een draai nodig!",
+          "courseD_collector_debugging9_b": "Bedenk eerst hoe je de puzzle wilt oplossen. Zorg er vervolgens stapje voor stapje voor dat de code precies doet wat je in je hoofd hebt."
+        },
+        "courseD_bee_debugging_challenge1a": {
+          "courseD_bee_debugging_challenge1_b": "Om de puzzle op te lossen, kun je de bij honing laten maken met hetzelfde patroon waarmee hij nectar verzamelt.",
+          "courseD_bee_debugging_challenge1_c": "Als de bij eenmaal op de onderste rij is, laat haar dan onderstaande commando's herhalen:\n\n<xml><block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_honey\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveBackward</title>\n                      </block>\n                    </next>\n                  </block></xml>"
+        },
+        "courseD_bee_conditionals1_predict1": {
+          "courseD_bee_conditionals1_a": "Je zult een `als`-blok nodig hebben om te kunnen zien of er een bloem onder de wolk staat, voordat je probeert nectar te halen."
+        },
+        "courseD_bee_conditionals1_predict1_2018": {
+          "courseD_bee_conditionals1_a": "Je zult een `als`-blok nodig hebben om te kunnen zien of er een bloem onder de wolk staat, voordat je probeert nectar te halen."
+        },
+        "courseD_bee_conditionals1_predict1_2019": {
+          "courseD_bee_conditionals1_a": "Je zult een `als`-blok nodig hebben om te kunnen zien of er een bloem onder de wolk staat, voordat je probeert nectar te halen."
+        },
+        "courseD_bee_conditionals1_predict1_2020": {
+          "courseD_bee_conditionals1_a": "Je zult een `als`-blok nodig hebben om te kunnen zien of er een bloem onder de wolk staat, voordat je probeert nectar te halen."
+        },
+        "courseD_bee_conditionals1_predict1_copy": {
+          "courseD_bee_conditionals1_a": "Je zult een `als`-blok nodig hebben om te kunnen zien of er een bloem onder de wolk staat, voordat je probeert nectar te halen."
+        },
+        "courseD_bee_conditionals2": {
+          "courseD_bee_conditionals2_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals2_b": "Je kunt door dit doolhof lopen met een `herhaal`-lus of met een `zolang er een pad vooruit is`-lus.",
+          "courseD_bee_conditionals2_c": "Je hoeft niet te kijken of er honingraten zijn, in deze puzzle kan er onder een wolk alleen een bloem of lege grond zijn.",
+          "courseD_bee_conditionals2_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals2_2018": {
+          "courseD_bee_conditionals2_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals2_b": "Je kunt door dit doolhof lopen met een `herhaal`-lus of met een `zolang er een pad vooruit is`-lus.",
+          "courseD_bee_conditionals2_c": "Je hoeft niet te kijken of er honingraten zijn, in deze puzzle kan er onder een wolk alleen een bloem of lege grond zijn.",
+          "courseD_bee_conditionals2_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals2_2019": {
+          "courseD_bee_conditionals2_c": "Je hoeft niet te kijken of er honingraten zijn, in deze puzzle kan er onder een wolk alleen een bloem of lege grond zijn."
+        },
+        "courseD_bee_conditionals2_2020": {
+          "courseD_bee_conditionals2_c": "Je hoeft niet te kijken of er honingraten zijn, in deze puzzle kan er onder een wolk alleen een bloem of lege grond zijn."
+        },
+        "courseD_bee_conditionals2_copy": {
+          "courseD_bee_conditionals2_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals2_b": "Je kunt door dit doolhof lopen met een `herhaal`-lus of met een `zolang er een pad vooruit is`-lus.",
+          "courseD_bee_conditionals2_c": "Je hoeft niet te kijken of er honingraten zijn, in deze puzzle kan er onder een wolk alleen een bloem of lege grond zijn.",
+          "courseD_bee_conditionals2_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals3": {
+          "courseD_bee_conditionals3_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals3_b": "Je kunt een `herhaal`-lus of een `zolang`-lus gebruiken om de bij door te laten bewegen. Kies maar welke je handiger vindt.",
+          "courseD_bee_conditionals3_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals3_2018": {
+          "courseD_bee_conditionals3_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals3_b": "Je kunt een `herhaal`-lus of een `zolang`-lus gebruiken om de bij door te laten bewegen. Kies maar welke je handiger vindt.",
+          "courseD_bee_conditionals3_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals3_copy": {
+          "courseD_bee_conditionals3_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals3_b": "Je kunt een `herhaal`-lus of een `zolang`-lus gebruiken om de bij door te laten bewegen. Kies maar welke je handiger vindt.",
+          "courseD_bee_conditionals3_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals4": {
+          "courseD_bee_conditionals4_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals4_c": "Met het <xml><block type=\"maze_untilBlocked\"/></xml> blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
+          "courseD_bee_conditionals4_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals4_2018": {
+          "courseD_bee_conditionals4_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals4_c": "Met het <xml><block type=\"maze_untilBlocked\"/></xml> blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
+          "courseD_bee_conditionals4_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals4_copy": {
+          "courseD_bee_conditionals4_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals4_c": "Met het <xml><block type=\"maze_untilBlocked\"/></xml> blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
+          "courseD_bee_conditionals4_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals5": {
+          "courseD_bee_conditionals5_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals5_a": "Beschouw elke zijde van het rechthoekige pad als een afzonderlijk pad. Maak een geneste lus met een `herhaal`-blok als buitenste lus en een `zolang er een pad vooruit is`-blok als binnenste lus. Langs hoeveel paden moet de bij bzzz-en, voordat ze elke zijde met bloemen gehad heeft?",
+          "courseD_bee_conditionals5_c": "De rechthoek heeft 3 zijden met bloemen, dus de code moet 3 keer herhaald worden. In elke herhaling, moet de bij het pad volgen `zolang er een pad vooruit is`. Om langs het pad te bewegen moet de bij `vooruit bewegen`. Op het pad moet de bij steeds checken of er bloemen zijn. `Als op de bloem`, dan moet de bij `nectar halen`.",
+          "courseD_bee_conditionals5_b": "In het `zolang er een pad vooruit is`-blok moet je vooruit bewegen en kijken of er een bloem is. Hoe check je of er een bloem is? En wat ga je doen als er een bloem is?",
+          "courseD_bee_conditionals5_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals5_2018": {
+          "courseD_bee_conditionals5_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals5_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals5_copy": {
+          "courseD_bee_conditionals5_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals5_a": "Beschouw elke zijde van het rechthoekige pad als een afzonderlijk pad. Maak een geneste lus met een `herhaal`-blok als buitenste lus en een `zolang er een pad vooruit is`-blok als binnenste lus. Langs hoeveel paden moet de bij bzzz-en, voordat ze elke zijde met bloemen gehad heeft?",
+          "courseD_bee_conditionals5_c": "De rechthoek heeft 3 zijden met bloemen, dus de code moet 3 keer herhaald worden. In elke herhaling, moet de bij het pad volgen `zolang er een pad vooruit is`. Om langs het pad te bewegen moet de bij `vooruit bewegen`. Op het pad moet de bij steeds checken of er bloemen zijn. `Als op de bloem`, dan moet de bij `nectar halen`.",
+          "courseD_bee_conditionals5_b": "In het `zolang er een pad vooruit is`-blok moet je vooruit bewegen en kijken of er een bloem is. Hoe check je of er een bloem is? En wat ga je doen als er een bloem is?",
+          "courseD_bee_conditionals5_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
+        },
+        "courseD_bee_conditionals6": {
+          "courseD_bee_conditionals6_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals6_a": "Zorg dat je onder elke wolk checkt of er een honingraat is.",
+          "courseD_bee_conditionals6_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle.",
+          "courseD_bee_conditionals6_b": "Voor deze puzzle hoef je niet te kijken of er bloemen staan onder de wolken.",
+          "courseD_bee_conditionals6_c": "Bestaat er een soort lus waarmee je je code eenvoudiger kunt maken?"
+        },
+        "courseD_bee_conditionals6_2018": {
+          "courseD_bee_conditionals6_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
+          "courseD_bee_conditionals6_a": "Zorg dat je onder elke wolk checkt of er een honingraat is.",
+          "courseD_bee_conditionals6_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle.",
+          "courseD_bee_conditionals6_b": "Voor deze puzzle hoef je niet te kijken of er bloemen staan onder de wolken.",
+          "courseD_bee_conditionals6_c": "Bestaat er een soort lus waarmee je je code eenvoudiger kunt maken?"
+        },
+        "courseD_bee_conditionals6_2019": {
+          "courseD_bee_conditionals6_a": "Zorg dat je onder elke wolk checkt of er een honingraat is.",
+          "courseD_bee_conditionals6_b": "Voor deze puzzle hoef je niet te kijken of er bloemen staan onder de wolken.",
+          "courseD_bee_conditionals6_c": "Bestaat er een soort lus waarmee je je code eenvoudiger kunt maken?"
+        },
+        "courseD_bee_conditionals6_2020": {
+          "courseD_bee_conditionals6_a": "Zorg dat je onder elke wolk checkt of er een honingraat is.",
+          "courseD_bee_conditionals6_b": "Voor deze puzzle hoef je niet te kijken of er bloemen staan onder de wolken.",
+          "courseD_bee_conditionals6_c": "Bestaat er een soort lus waarmee je je code eenvoudiger kunt maken?"
+        },
+        "course2_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
+        },
+        "courseD_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_a": "Kun je een route vinden die elke bloem en elke honingraat bereikt zonder een boom te raken? Je kunt het best een spiraal proberen.",
+          "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
+        },
+        "courseD_bee_conditionals_challenge1_2018": {
+          "courseD_bee_conditionals_challenge1_a": "Kun je een route vinden die elke bloem en elke honingraat bereikt zonder een boom te raken? Je kunt het best een spiraal proberen.",
+          "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
+        },
+        "courseD_bee_conditionals_challenge1_2019": {
+          "courseD_bee_conditionals_challenge1_a": "Kun je een route vinden die elke bloem en elke honingraat bereikt zonder een boom te raken? Je kunt het best een spiraal proberen.",
+          "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
+        },
+        "courseD_bee_conditionals_challenge1_2020": {
+          "courseD_bee_conditionals_challenge1_a": "Kun je een route vinden die elke bloem en elke honingraat bereikt zonder een boom te raken? Je kunt het best een spiraal proberen.",
+          "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_playLab_cond1": {
+          "courseD_playLab_cond1_a": "Om deze puzzle op te lossen, moet je het `verplaats speler 1 omhoog`-blok vastmaken aan de `wanneer pijltje naar boven`-gebeurtenis. En daarna moet je hetzelfde doen voor alle andere richtingen.",
+          "courseD_playLab_cond1_b": "Gebruik de drop-down menus op de `wanneer pijltje`- en `verplaats speler`-blokken om de richting te veranderen.",
+          "courseD_playLab_cond1_c": "Denk er aan dat je Houtpoot naar beide vlaggen moet sturen nadat je op \"Start\" hebt gedrukt!"
+        },
+        "courseD_playLab_cond1_2018": {
+          "courseD_playLab_cond1_a": "Om deze puzzle op te lossen, moet je het `verplaats speler 1 omhoog`-blok vastmaken aan de `wanneer pijltje naar boven`-gebeurtenis. En daarna moet je hetzelfde doen voor alle andere richtingen.",
+          "courseD_playLab_cond1_b": "Gebruik de drop-down menus op de `wanneer pijltje`- en `verplaats speler`-blokken om de richting te veranderen.",
+          "courseD_playLab_cond1_c": "Denk er aan dat je Houtpoot naar beide vlaggen moet sturen nadat je op \"Start\" hebt gedrukt!"
+        },
+        "courseD_playLab_cond2": {
+          "courseD_playLab_cond2_a": "Om deze puzzle op te lossen, moet je het `scoor punt`-blok gebruiken onder de `wanneer speler 1 speler 2 raakt`-gebeurtenis."
+        },
+        "courseD_playLab_cond2_2018": {
+          "courseD_playLab_cond2_a": "Om deze puzzle op te lossen, moet je het `scoor punt`-blok gebruiken onder de `wanneer speler 1 speler 2 raakt`-gebeurtenis."
+        },
+        "courseD_playLab_cond3": {
+          "courseD_playLab_cond3_a": "Je `blijf herhalen`-lus zal 2 blokken moeten bevatten.  Een blok om de draak (speler 2) een ander humeur te geven en een om 1 seconde te wachten voordat de lus weer begint."
+        },
+        "courseD_playLab_cond3_2018": {
+          "courseD_playLab_cond3_a": "Je `blijf herhalen`-lus zal 2 blokken moeten bevatten.  Een blok om de draak (speler 2) een ander humeur te geven en een om 1 seconde te wachten voordat de lus weer begint."
+        },
+        "courseD_playLab_cond3a": {
+          "courseD_playLab_cond3_c": "-   `als` de draak blij is \n    -   `scoor punt`\n    -   `scoor punt`\n\n-   `anders` `scoor punt`"
+        },
+        "courseD_playLab_cond3a_2018": {
+          "courseD_playLab_cond3_c": "-   `als` de draak blij is \n    -   `scoor punt`\n    -   `scoor punt`\n\n-   `anders` `scoor punt`"
+        },
+        "courseD_playLab_cond4": {
+          "courseD_playLab_cond4_a": "Je zult de `als gestart`-gebeurtenis moeten gebruiken om er voor te zorgen dat de ninja de piraat achterna gaat jagen.",
+          "courseD_playLab_cond4_b": "Er is een speciaal blok genaamd `stel elke gemaskerde ninja in om het personage te achtervolgen` dat zorgt dat de ninja de piraat op de hielen blijft zitten!",
+          "courseD_playLab_cond4_c": "Plaats het `eindig het spel als verloren`-blok onder de `wanneer speler 1 speler 3 raakt`-gebeurtenis."
+        },
+        "courseD_playLab_cond4_2018": {
+          "courseD_playLab_cond4_a": "Je zult de `als gestart`-gebeurtenis moeten gebruiken om er voor te zorgen dat de ninja de piraat achterna gaat jagen.",
+          "courseD_playLab_cond4_b": "Er is een speciaal blok genaamd `stel elke gemaskerde ninja in om het personage te achtervolgen` dat zorgt dat de ninja de piraat op de hielen blijft zitten!",
+          "courseD_playLab_cond4_c": "Plaats het `eindig het spel als verloren`-blok onder de `wanneer speler 1 speler 3 raakt`-gebeurtenis."
+        },
+        "courseD_playLab_cond5": {
+          "courseD_playLab_cond5_a": "Gebruik een `als`-blok dat kijkt of de `score > 5` is om deze uitdaging te voltooien.",
+          "courseD_playLab_cond5_b": "Je kunt meer dan een `blijf herhalen`-lus in de werkruimte gebruiken."
+        },
+        "courseD_playLab_cond5_2018": {
+          "courseD_playLab_cond5_a": "Gebruik een `als`-blok dat kijkt of de `score > 5` is om deze uitdaging te voltooien.",
+          "courseD_playLab_cond5_b": "Je kunt meer dan een `blijf herhalen`-lus in de werkruimte gebruiken."
+        },
+        "courseD_playLab_cond6": {
+          "courseD_playLab_cond6_a": "Voeg een `stel de snelheid in`-blok toe aan het begin van her programma, om de ninja langzamer te maken.",
+          "courseD_playLab_cond6_b": "Je zult een `als speler 1 y positie > 255`-blok binnenin een `blijf herhalen`-blok nodig hebben om steeds te blijven checken of de piraat voorbij de octopussen is."
+        },
+        "courseD_playLab_cond6_2018": {
+          "courseD_playLab_cond6_a": "Voeg een `stel de snelheid in`-blok toe aan het begin van her programma, om de ninja langzamer te maken.",
+          "courseD_playLab_cond6_b": "Je zult een `als speler 1 y positie > 255`-blok binnenin een `blijf herhalen`-blok nodig hebben om steeds te blijven checken of de piraat voorbij de octopussen is."
+        },
+        "courseD_artist_binary1": {
+          "courseD_artist_binary1_a": "Vervang de \"???\" in het tekst blok door het binaire plaatje dat je wilt hebben, gecodeerd met nullen en enen.",
+          "courseD_artist_binary1_b": "De artiest zal een wit blokje tekenen voor elke 1 en een zwart blokje voor elke 0.",
+          "courseD_artist_binary1_c": "Je kunt je binaire code op onderstaande manier invoeren:\n\n![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)"
+        },
+        "courseD_artist_binary1_2018": {
+          "courseD_artist_binary1_a": "Vervang de \"???\" in het tekst blok door het binaire plaatje dat je wilt hebben, gecodeerd met nullen en enen.",
+          "courseD_artist_binary1_b": "De artiest zal een wit blokje tekenen voor elke 1 en een zwart blokje voor elke 0.",
+          "courseD_artist_binary1_c": "Je kunt je binaire code op onderstaande manier invoeren:\n\n![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)"
+        },
+        "courseD_artist_binary1_2019": {
+          "courseD_artist_binary1_a": "Vervang de \"???\" in het tekst blok door het binaire plaatje dat je wilt hebben, gecodeerd met nullen en enen.",
+          "courseD_artist_binary1_b": "De artiest zal een wit blokje tekenen voor elke 1 en een zwart blokje voor elke 0.",
+          "courseD_artist_binary1_c": "Je kunt je binaire code op onderstaande manier invoeren:\n\n![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)"
+        },
+        "courseD_artist_binary1_2020": {
+          "courseD_artist_binary1_a": "Vervang de \"???\" in het tekst blok door het binaire plaatje dat je wilt hebben, gecodeerd met nullen en enen.",
+          "courseD_artist_binary1_b": "De artiest zal een wit blokje tekenen voor elke 1 en een zwart blokje voor elke 0.",
+          "courseD_artist_binary1_c": "Je kunt je binaire code op onderstaande manier invoeren:\n\n![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)"
+        },
+        "courseD_artist_binary2": {
+          "courseD_artist_binary2_a": "Klik maar op `Start` om dit programma in actie te zien!"
+        },
+        "courseD_artist_binary2_2018": {
+          "courseD_artist_binary2_a": "Klik maar op `Start` om dit programma in actie te zien!"
+        },
+        "courseD_artist_binary2_2019": {
+          "courseD_artist_binary2_a": "Klik maar op `Start` om dit programma in actie te zien!"
+        },
+        "courseD_artist_binary2_2020": {
+          "courseD_artist_binary2_a": "Klik maar op `Start` om dit programma in actie te zien!"
+        },
+        "courseD_artist_binary3": {
+          "courseD_artist_binary3_a": "Een van de vier binaire patronen in de gereedschapskist zal de puzzle oplossen!",
+          "courseD_artist_binary3_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary3_2018": {
+          "courseD_artist_binary3_a": "Een van de vier binaire patronen in de gereedschapskist zal de puzzle oplossen!",
+          "courseD_artist_binary3_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary3_2019": {
+          "courseD_artist_binary3_a": "Een van de vier binaire patronen in de gereedschapskist zal de puzzle oplossen!",
+          "courseD_artist_binary3_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary3_2020": {
+          "courseD_artist_binary3_a": "Een van de vier binaire patronen in de gereedschapskist zal de puzzle oplossen!",
+          "courseD_artist_binary3_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary4": {
+          "courseD_artist_binary4_a": "Kijk eens naar de eerste 3 blokjes op de bovenste rij. Zou je die kunnen herhalen om dit hele patroon te maken?",
+          "courseD_artist_binary4_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary4_2018": {
+          "courseD_artist_binary4_a": "Kijk eens naar de eerste 3 blokjes op de bovenste rij. Zou je die kunnen herhalen om dit hele patroon te maken?",
+          "courseD_artist_binary4_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary4_2019": {
+          "courseD_artist_binary4_a": "Kijk eens naar de eerste 3 blokjes op de bovenste rij. Zou je die kunnen herhalen om dit hele patroon te maken?",
+          "courseD_artist_binary4_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary4_2020": {
+          "courseD_artist_binary4_a": "Kijk eens naar de eerste 3 blokjes op de bovenste rij. Zou je die kunnen herhalen om dit hele patroon te maken?",
+          "courseD_artist_binary4_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary5": {
+          "courseD_artist_binary5_a": "Probeer het programma eerst eens te uit te voeren, om te kijken wat je alvast hebt.",
+          "courseD_artist_binary5_b": "Je hoeft slechts 2 rijen te verwisselen om een glimlach te maken.",
+          "courseD_artist_binary5_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseD_artist_binary5_2018": {
+          "courseD_artist_binary5_a": "Probeer het programma eerst eens te uit te voeren, om te kijken wat je alvast hebt.",
+          "courseD_artist_binary5_b": "Je hoeft slechts 2 rijen te verwisselen om een glimlach te maken.",
+          "courseD_artist_binary5_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseD_artist_binary5_2019": {
+          "courseD_artist_binary5_a": "Probeer het programma eerst eens te uit te voeren, om te kijken wat je alvast hebt.",
+          "courseD_artist_binary5_b": "Je hoeft slechts 2 rijen te verwisselen om een glimlach te maken.",
+          "courseD_artist_binary5_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseD_artist_binary5_2020": {
+          "courseD_artist_binary5_a": "Probeer het programma eerst eens te uit te voeren, om te kijken wat je alvast hebt.",
+          "courseD_artist_binary5_b": "Je hoeft slechts 2 rijen te verwisselen om een glimlach te maken.",
+          "courseD_artist_binary5_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseD_artist_binary6": {
+          "courseD_artist_binary6_a": "Begin eens linksboven. Hoe ver moet je lezen, voordat het patroon zich begint te herhalen?",
+          "courseD_artist_binary6_b": "Je kunt je binaire string bit voor bit schrijven, en tussendoor steeds testen."
+        },
+        "courseD_artist_binary6_2018": {
+          "courseD_artist_binary6_a": "Begin eens linksboven. Hoe ver moet je lezen, voordat het patroon zich begint te herhalen?",
+          "courseD_artist_binary6_b": "Je kunt je binaire string bit voor bit schrijven, en tussendoor steeds testen."
+        },
+        "courseD_artist_binary6_2019": {
+          "courseD_artist_binary6_a": "Begin eens linksboven. Hoe ver moet je lezen, voordat het patroon zich begint te herhalen?",
+          "courseD_artist_binary6_b": "Je kunt je binaire string bit voor bit schrijven, en tussendoor steeds testen."
+        },
+        "courseD_artist_binary6_2020": {
+          "courseD_artist_binary6_a": "Begin eens linksboven. Hoe ver moet je lezen, voordat het patroon zich begint te herhalen?",
+          "courseD_artist_binary6_b": "Je kunt je binaire string bit voor bit schrijven, en tussendoor steeds testen."
+        },
+        "courseD_artist_binary7": {
+          "courseD_artist_binary7_a": "Begin eens linksboven. Hoe ver moet je lezen, voordat het patroon zich begint te herhalen?",
+          "courseD_artist_binary7_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary7_2018": {
+          "courseD_artist_binary7_a": "Begin eens linksboven. Hoe ver moet je lezen, voordat het patroon zich begint te herhalen?",
+          "courseD_artist_binary7_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary7_2019": {
+          "courseD_artist_binary7_a": "Begin eens linksboven. Hoe ver moet je lezen, voordat het patroon zich begint te herhalen?",
+          "courseD_artist_binary7_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary7_2020": {
+          "courseD_artist_binary7_a": "Begin eens linksboven. Hoe ver moet je lezen, voordat het patroon zich begint te herhalen?",
+          "courseD_artist_binary7_b": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary8": {
+          "courseD_artist_binary8_a": "De spiraal kan je soms in de war brengen.  Probeer de horizontale regels apart te bekijken om dit plaatje te maken.",
+          "courseD_artist_binary8_b": "Probeer het programma eerst eens te uit te voeren, om te kijken wat je alvast hebt.",
+          "courseD_artist_binary8_c": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary8_2018": {
+          "courseD_artist_binary8_a": "De spiraal kan je soms in de war brengen.  Probeer de horizontale regels apart te bekijken om dit plaatje te maken.",
+          "courseD_artist_binary8_b": "Probeer het programma eerst eens te uit te voeren, om te kijken wat je alvast hebt.",
+          "courseD_artist_binary8_c": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary8_2019": {
+          "courseD_artist_binary8_a": "De spiraal kan je soms in de war brengen.  Probeer de horizontale regels apart te bekijken om dit plaatje te maken.",
+          "courseD_artist_binary8_b": "Probeer het programma eerst eens te uit te voeren, om te kijken wat je alvast hebt.",
+          "courseD_artist_binary8_c": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_artist_binary8_2020": {
+          "courseD_artist_binary8_a": "De spiraal kan je soms in de war brengen.  Probeer de horizontale regels apart te bekijken om dit plaatje te maken.",
+          "courseD_artist_binary8_b": "Probeer het programma eerst eens te uit te voeren, om te kijken wat je alvast hebt.",
+          "courseD_artist_binary8_c": "Wees niet bang om fouten te maken!  Probeer binair te schrijven, en draai het programma om te zien wat er gebeurt, ook al weet je nog niet hoe je de puzzle gaat oplossen."
+        },
+        "courseD_playLab_cond6a": {
+          "courseD_playLab_cond6_c": "Voeg een `wacht een seconde`-blok toe aan het begin van de `blijf-herhalen`-lus die de positie van de piraat checkt (maar niet binnenin het `als`-blok) om te voorkomen dat er te vroeg punten worden afgetrokken."
+        },
+        "courseD_playLab_cond6a_2018": {
+          "courseD_playLab_cond6_c": "Voeg een `wacht een seconde`-blok toe aan het begin van de `blijf-herhalen`-lus die de positie van de piraat checkt (maar niet binnenin het `als`-blok) om te voorkomen dat er te vroeg punten worden afgetrokken."
+        },
+        "courseC_collector_prog3": {
+          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+        },
+        "courseC_collector_prog3_2018": {
+          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+        },
+        "courseC_collector_prog3_2019": {
+          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+        },
+        "courseC_collector_prog3_2020": {
+          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+        },
+        "courseC_maze_programming1": {
+          "courseC_maze_programming1_0": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
+        },
+        "courseC_maze_programming1_2018": {
+          "courseC_maze_programming1_0": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
+        },
+        "courseC_maze_programming1_2019": {
+          "courseC_maze_programming1_0": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
+        },
+        "courseC_maze_programming1_2020": {
+          "courseC_maze_programming1_0": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_a": "Als je een <xml><block type=\"maze_moveForward\"/></xml>blok wilt gebruiken, moet je hem uit de gereedschapskist slepen en aan het<xml><block type=\"when_run\"/></xml>-blok plakken.",
+          "courseC_maze_programming2_b": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_a": "Als je een <xml><block type=\"maze_moveForward\"/></xml>blok wilt gebruiken, moet je hem uit de gereedschapskist slepen en aan het<xml><block type=\"when_run\"/></xml>-blok plakken.",
+          "courseC_maze_programming2_b": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_a": "Als je een <xml><block type=\"maze_moveForward\"/></xml>blok wilt gebruiken, moet je hem uit de gereedschapskist slepen en aan het<xml><block type=\"when_run\"/></xml>-blok plakken.",
+          "courseC_maze_programming2_b": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_a": "Als je een <xml><block type=\"maze_moveForward\"/></xml>blok wilt gebruiken, moet je hem uit de gereedschapskist slepen en aan het<xml><block type=\"when_run\"/></xml>-blok plakken.",
+          "courseC_maze_programming2_b": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_a": "Probeer de code eerst uit, om te zien waar het mis gaat.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAls je een blok midden in je code wilt weggooien, moet je eerst de blokken eronder wegslepen naar een ander deel van je werkruimte.\n\nSleep nu het blok dat je weg wilt gooien, terug naar de gereedschapskist.\n\nPlak tenslotte de rest van de blokken vast op de plaats waar ze horen.."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_a": "Probeer de code eerst uit, om te zien waar het mis gaat.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAls je een blok midden in je code wilt weggooien, moet je eerst de blokken eronder wegslepen naar een ander deel van je werkruimte.\n\nSleep nu het blok dat je weg wilt gooien, terug naar de gereedschapskist.\n\nPlak tenslotte de rest van de blokken vast op de plaats waar ze horen.."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_a": "Probeer de code eerst uit, om te zien waar het mis gaat.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAls je een blok midden in je code wilt weggooien, moet je eerst de blokken eronder wegslepen naar een ander deel van je werkruimte.\n\nSleep nu het blok dat je weg wilt gooien, terug naar de gereedschapskist.\n\nPlak tenslotte de rest van de blokken vast op de plaats waar ze horen.."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_a": "Probeer de code eerst uit, om te zien waar het mis gaat.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAls je een blok midden in je code wilt weggooien, moet je eerst de blokken eronder wegslepen naar een ander deel van je werkruimte.\n\nSleep nu het blok dat je weg wilt gooien, terug naar de gereedschapskist.\n\nPlak tenslotte de rest van de blokken vast op de plaats waar ze horen.."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_a": "Denk er om: Als je draait, draai je vanuit het standpunt van de _angry bird_. Dus als je rechtsom draait, kijkt de vogel naar beneden.",
+          "courseC_maze_programming4_b": "Om het pad te volgen:\n\n-   beweeg vooruit\n-   draai\n-   beweeg vooruit\n-   draai de andere kant op\n-   beweeg vooruit"
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_a": "Denk er om: Als je draait, draai je vanuit het standpunt van de _angry bird_. Dus als je rechtsom draait, kijkt de vogel naar beneden.",
+          "courseC_maze_programming4_b": "Om het pad te volgen:\n\n-   beweeg vooruit\n-   draai\n-   beweeg vooruit\n-   draai de andere kant op\n-   beweeg vooruit"
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_a": "Denk er om: Als je draait, draai je vanuit het standpunt van de _angry bird_. Dus als je rechtsom draait, kijkt de vogel naar beneden.",
+          "courseC_maze_programming4_b": "Om het pad te volgen:\n\n-   beweeg vooruit\n-   draai\n-   beweeg vooruit\n-   draai de andere kant op\n-   beweeg vooruit"
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_a": "Denk er om: Als je draait, draai je vanuit het standpunt van de _angry bird_. Dus als je rechtsom draait, kijkt de vogel naar beneden.",
+          "courseC_maze_programming4_b": "Om het pad te volgen:\n\n-   beweeg vooruit\n-   draai\n-   beweeg vooruit\n-   draai de andere kant op\n-   beweeg vooruit"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
+          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
+          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
+          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_a": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
+          "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+        },
+        "courseC_maze_programming8": {
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+        },
+        "courseC_maze_programming8_2018": {
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+        },
+        "courseC_maze_programming8_2019": {
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+        },
+        "courseC_maze_programming8_2020": {
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+        },
+        "courseC_maze_programming_challenge1": {
+          "courseC_maze_programming_challenge1_a": "Er zijn een heleboel manieren om bij het biggetje te komen. Gebruik je vinger om een route te vinden, en codeer vervolgens die route in je programma."
+        },
+        "courseC_maze_programming_challenge1_2018": {
+          "courseC_maze_programming_challenge1_a": "Er zijn een heleboel manieren om bij het biggetje te komen. Gebruik je vinger om een route te vinden, en codeer vervolgens die route in je programma."
+        },
+        "courseC_maze_programming_challenge1_2019": {
+          "courseC_maze_programming_challenge1_a": "Er zijn een heleboel manieren om bij het biggetje te komen. Gebruik je vinger om een route te vinden, en codeer vervolgens die route in je programma."
+        },
+        "courseC_maze_programming_challenge1_2020": {
+          "courseC_maze_programming_challenge1_a": "Er zijn een heleboel manieren om bij het biggetje te komen. Gebruik je vinger om een route te vinden, en codeer vervolgens die route in je programma."
         }
       }
     }
