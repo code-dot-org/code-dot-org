@@ -41,10 +41,6 @@ Code.org is committed to continually improving the accessibility of our tools. A
 
 * [Unplugged lessons](https://code.org/curriculum/unplugged) are designed to be used in a classroom setting without computers and can be adjusted to meet the accommodation needs of individual learners.
 
-### Professional Development
-* Provide additional resources to support teachers building an inclusive classroom.
-* Support requests for disability accommodations from teachers attending Code.org professional development workshops.
-
 ### Advocacy
 * Include students with disabilities as an underrepresented group when considering equity in adoption of computer science education policy.
 * Collect data on students with disabilities to [highlight disparities in participation](https://advocacy.code.org/stateofcs) in computer science classes.

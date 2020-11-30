@@ -354,7 +354,7 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self)
   end
 
-  def summarize(include_prev_next=true)
+  def summarize(include_prev_next=true, for_edit: false)
     kind =
       if level.unplugged?
         LEVEL_KIND.unplugged
@@ -398,7 +398,7 @@ class ScriptLevel < ApplicationRecord
       summary[:sublevels] = level.summarize_sublevels(script_level: self)
     end
 
-    if Rails.application.config.levelbuilder_mode
+    if for_edit
       summary[:key] = level.key
       summary[:skin] = level.try(:skin)
       summary[:videoKey] = level.video_key
@@ -450,8 +450,8 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_edit
-    summary = summarize
+  def summarize_for_lesson_edit
+    summary = summarize(for_edit: true)
     summary[:id] = id
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
