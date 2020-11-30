@@ -5,7 +5,7 @@ title: "#CSforGood in your class"
 <h1>#CSforGood in your class</h1>
 
 <div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
-    <img src="/images/csforgood.png" style="width:100%">
+    <img src="/images/csforgood_1-1.png" style="width:100%">
 </div>
 
 <div class="col-60">

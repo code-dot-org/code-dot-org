@@ -100,7 +100,10 @@ export default class LessonDescriptions extends React.Component {
         importedDescriptions,
         mismatchedLessons
       },
-      this.props.updateLessonDescriptions(this.updatedLessonDescriptions())
+      this.props.updateLessonDescriptions(
+        this.updatedLessonDescriptions(),
+        importedDescriptions.length > 0
+      )
     );
   };
 
@@ -202,15 +205,6 @@ export default class LessonDescriptions extends React.Component {
                     <div key={index}>- {name}</div>
                   ))}
                 </div>
-              )}
-              {hasImported && (
-                <input
-                  name="stage_descriptions"
-                  type="hidden"
-                  defaultValue={JSON.stringify(
-                    this.updatedLessonDescriptions()
-                  )}
-                />
               )}
               <button
                 type="button"

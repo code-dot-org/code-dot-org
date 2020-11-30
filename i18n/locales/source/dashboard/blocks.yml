@@ -1323,7 +1323,7 @@ en:
             '"d"': d
       gamelab_whenLeftArrow:
         text: when left arrow pressed
-      gamelab_whenQuestionAnswered:
+      gamelab_whenPromptAnswered:
         text: when [VAR][0] is answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
@@ -1573,6 +1573,8 @@ en:
             MOVES.Clown: not my-label
       Mikelab_isAnim:
         text: "[SPRITE][0]'s costume is [COSTUME][1]"
+      Mikelab_joinText:
+        text: "[TEXT][0] [NEXT][1]"
       Mikelab_locationAt:
         text: 'location x: [X][0] y: [Y][1]'
       Mikelab_location_picker:

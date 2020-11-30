@@ -15,7 +15,7 @@
 #  index_misc_survey_foorm_submissions_on_foorm_id  (foorm_submission_id) UNIQUE
 #
 
-class Foorm::MiscSurvey < ActiveRecord::Base
+class Foorm::MiscSurvey < ApplicationRecord
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
 

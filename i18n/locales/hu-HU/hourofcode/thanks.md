@@ -1,8 +1,8 @@
 ---
-title: Köszönjük hogy jelentkeztél a Kódolás Órájának megtartására!
+title: Köszönjük hogy jelentkeztél az Hour of Code megtartására!
 ---
 
-# Köszönjük hogy jelentkeztél a Kódolás Órájának megtartására!
+# Köszönjük hogy jelentkeztél az Hour of Code megtartására!
 
 <br /> **A Kódolás Órája kampány {{ campaign_date/full }} fut, új oktató videókkal és más izgalmas friss hírekkel. Időközben, mit tudsz tenni addig?**
 
