@@ -17,7 +17,7 @@ class ProfanityHelperTest < ActionView::TestCase
     assert_equal profanities, find_profanities(text, 'en-US')
   end
 
-  test 'find_profanities: returns null if text is not provided' do
+  test 'find_profanities: returns nil if text is not provided' do
     ProfanityFilter.expects(:find_potential_profanities).never
 
     assert_nil find_profanities('', 'en-US')
