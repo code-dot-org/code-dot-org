@@ -121,7 +121,7 @@ export default class DesignToolbox extends React.Component {
           <DesignToolboxElement
             imageUrl={IMAGE_BASE_URL + 'ml_predict.png'}
             desc={'ML Predict'}
-            elementType={'ML_PREDICT'}
+            elementType={'PREDICT_PANEL'}
             handleDragStart={this.props.handleDragStart}
           />
         )}

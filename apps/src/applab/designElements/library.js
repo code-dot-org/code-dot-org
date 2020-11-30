@@ -28,7 +28,7 @@ var ElementType = utils.makeEnum(
   'CHART',
   'SLIDER',
   'PHOTO_SELECT',
-  'ML_PREDICT'
+  'PREDICT_PANEL'
 );
 
 var elements = {};
@@ -45,7 +45,7 @@ elements[ElementType.SCREEN] = require('./screen');
 elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
 elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
-elements[ElementType.ML_PREDICT] = require('./predictPanel');
+elements[ElementType.PREDICT_PANEL] = require('./predictPanel');
 
 export default {
   ElementType: ElementType,
@@ -142,6 +142,9 @@ export default {
           return ElementType.SCREEN;
         } else if ($(element).hasClass('chart')) {
           return ElementType.CHART;
+        }
+        if ($(element).hasClass('predict-panel')) {
+          return ElementType.PREDICT_PANEL;
         }
         return ElementType.TEXT_AREA;
       case 'img':

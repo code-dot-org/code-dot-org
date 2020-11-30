@@ -37,6 +37,7 @@ class PredictPanelProperties extends React.Component {
           desc={'model id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'model id')}
+          isMLRow
         />
         <PropertyRow
           desc={'width (px)'}
@@ -114,12 +115,9 @@ class PredictPanelEvents extends React.Component {
     onInsertEvent: PropTypes.func.isRequired
   };
 
-  getPhotoSelectedEventCode() {
+  getPredictionEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const commands = [
-      `console.log("${id} photo selected!");`,
-      `console.log(getImageURL("${id}"));`
-    ];
+    const commands = [`console.log("${id} photo selected!");`];
     const callback = `function( ) {\n\t${commands.join('\n\t')}\n}`;
     return `onEvent("${id}", "change", ${callback});`;
   }
@@ -130,7 +128,6 @@ class PredictPanelEvents extends React.Component {
   render() {
     const element = this.props.element;
     const clickName = i18n.designElementPhotoSelectClickName();
-    const clickDescription = i18n.designElementPhotoSelectClickDescription();
 
     return (
       <div id="eventRowContainer">
@@ -143,7 +140,7 @@ class PredictPanelEvents extends React.Component {
         <EventHeaderRow />
         <EventRow
           name={clickName}
-          desc={clickDescription}
+          desc={'Triggered when predict clicked'}
           handleInsert={this.insertPhotoSelected}
         />
         <h1 id="hello">HELLO!?!</h1>
@@ -169,7 +166,7 @@ export default {
     select.add(option2);
     element.appendChild(select);
 
-    element.setAttribute('class', 'img-upload fa fa-robot');
+    element.setAttribute('class', 'predict-panel');
     element.style.margin = '0';
     element.style.borderStyle = 'solid';
     element.style.overflow = 'hidden';

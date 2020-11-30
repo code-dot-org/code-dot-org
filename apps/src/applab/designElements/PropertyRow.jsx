@@ -4,6 +4,7 @@ import color from '../../util/color';
 import * as rowStyle from './rowStyle';
 import * as elementUtils from './elementUtils';
 import * as utils from '../../utils';
+import MLModelSelectorRow from './MLModelSelectorRow';
 
 const LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 
@@ -21,7 +22,8 @@ export default class PropertyRow extends React.Component {
     isMultiLine: PropTypes.bool,
     handleChange: PropTypes.func,
     handleLockChange: PropTypes.func,
-    isIdRow: PropTypes.bool
+    isIdRow: PropTypes.bool,
+    isMLRow: PropTypes.bool
   };
 
   static LockState = LockState;
@@ -116,6 +118,13 @@ export default class PropertyRow extends React.Component {
         <textarea
           value={this.state.value}
           onChange={this.handleChangeInternal}
+        />
+      );
+    } else if (this.props.isMLRow) {
+      inputElement = (
+        <MLModelSelectorRow
+          modelIds={['abc123', 'efg456']}
+          selectedId="abc123"
         />
       );
     } else {

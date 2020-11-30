@@ -118,7 +118,6 @@ class RadioButtonEvents extends React.Component {
           desc={changeDesc}
           handleInsert={this.insertChange}
         />
-        <h1 id="hello">HELLO!?!</h1>
       </div>
     );
   }
