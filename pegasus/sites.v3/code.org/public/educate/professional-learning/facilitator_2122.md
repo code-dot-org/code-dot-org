@@ -6,13 +6,13 @@ theme: responsive
 
 # Facilitating with Code.org
 
-[col-45]
+[col-40]
 
 <img src="/images/fit-450/facilitators.png" width="90%">
 
-[/col-45]
+[/col-40]
 
-[col-55]
+[col-60]
 
 ## Change the face of computer science education - become a Code.org facilitator.
 
@@ -24,7 +24,7 @@ Code.org's Facilitator Development Program is a highly-selective professional le
 <br>
 The Facilitator Development Program application is open to U.S.-based applicants interested in developing as leaders and facilitators for teachers bringing CS education to their students. Preference will be given to applicants who meet or exceed our qualifications (listed below) and priority will be given to applicants who live in a region where Code.org has a <a href="https://code.org/educate/professional-learning/about-partners">Regional Partner</a> or in areas where we are considering future partnerships.
 
-[/col-55]
+[/col-60]
 
 <div style="clear: both;"></div>
 
@@ -36,7 +36,7 @@ The Facilitator Development Program application is open to U.S.-based applicants
 
 [col-40]
 
-<div class="educate-callout-box" style="width: 970px;">
+<div class="educate-callout-box" style="width: 970px"; style="height: 300px">
 "The two facilitators were OUTSTANDING ... They kept us fully engaged and made sure our needs as learners always came first. I looked forward to their sessions every day."
 <br>
 <br>
@@ -162,55 +162,74 @@ Click below to learn more!
   If accepted into the 2021-22 Code.org Facilitator Development program, you will:<br><ul>
   <li>Join a nationwide community of leaders and facilitators in CS education</li>
 <li>Participate in in-person, virtual, and independent facilitator development</li>
-<li>Collaborate with your local Code.org Regional Partner to deliver professional development workshops to teachers on Code.org’s courses, with ongoing support from Code.org and the facilitator community</li>
 <li>Partner with Code.org and our Regional Partners to shape the future of professional learning for thousands of new CS educators across the U.S. and beyond</li>
+<li>Collaborate with your local Code.org Regional Partner to deliver professional development workshops to teachers on Code.org’s courses, with ongoing support from Code.org and the facilitator community</li>
 </p>
 </details>
 <details>
   <summary>**Who should apply?**</summary>
   <p>
   <br/>
-text
+The Facilitator Development Program application is open to anyone who is interested in developing as a leader and facilitator for teachers bringing CS education to their students.  Applicants must <a href="https://code.org/educate/professional-learning/facilitator#qualities">,meet the desired qualifications of a Code.org facilitator"</a>, and preference will be given to those who have:<br><ul>
+<li>Familiarity with the content and philosophy of the Code.org courses (<a href="https://code.org/educate/csd">CS Discoveries"</a> / <a href="https://code.org/educate/csp">CS Principles</a>)
+<li>Recent computer science teaching experience in middle or high school. 
+<li>Some familiarity with <a href="https://code.org/educate/professional-learning/middle-high">the Code.org Professional Learning model,</a> through past experience participating in and/or facilitating Code.org workshops.
+<li>Strong background in best practices for preparing middle school or high school teachers. 
+
 </p>
 </details>
 <details>
   <summary>**What do facilitators receive as a member of the program?**</summary>
   <p>
   <br/>
-text
+Participants accepted into the program will take part in a holistic, high-quality facilitator development program, tailored to their curriculum focus area, that provides hands-on preparation for the following core competencies:<br><ul>
+<li>CS content-area knowledge appropriate for the specific curriculum
+<li>Curriculum philosophy and application of best practices
+<li>Effective practices and strategies for facilitating transformative professional development
+<li>Mastery of Code.org facilitator materials, tools, and other supports available to run successful workshops</ul>
+<br><p>Participants will also receive the following benefits:<br><ul>
+<li>Competitive pay for meeting program commitments
+<li>Access to Code.org facilitator resources for your curriculum focus area (including how-tos, session plans, and tools you can use to successfully deliver content to teachers)
+
 </p>
 </details>
 
 ### Course Overview & Commitments
 When participants apply to the program, they must select one curriculum focus area. Program commitments, qualifications, and benefits vary by focus area. Check out the resources below to learn more:
 <details>
-  <summary>**Computer Science Discoveries Facilitator Development (Grade 6- 10)**</summary>
+  <summary>**Computer Science Discoveries Facilitator Development & Program Commitments  (Grade 6- 10)**</summary>
   <p>
   <br/>
 The CS Discoveries Facilitator Development Program is a one-year program designed for US-based facilitators who wish to deliver Code.org CS Discoveries Professional Learning virtual or in-person workshops to 6th-10th grade teachers in their local region. Facilitators are expected to commit to a multi-year relationship with Code.org and its Regional Partners, and are paid competitively for meeting program commitments.
+<br><br>Once accepted, facilitators commit to meeting or exceeding the following program requirements:<br><p>
+<b>Summer 2021 Facilitator Development</b> - 8 days
+<br><ul>
+<li><b>Five Day Summer Workshop</b>: Facilitator will attend and engage in a five-day Code.org summer workshop hosted by a Code.org Regional Partner. The facilitator’s role during the week will depend on the facilitator’s past experience with the Code.org Professional Learning Program. Most summer workshops are expected to be virtual. 
+<li><b>Facilitator-in-Training Workshop</b>: Facilitators will attend and participate in one 3-day workshop with other facilitators to prepare for the academic year facilitation. <ul>
+<li>Option 1: July 21 - 23, 2021
+<li>Option 2: August 25 - 27, 2021</ul>
+</ul><br><b>Academic Year Facilitator Development, Support and Impact (2021-22)  </b>
+<br><ul>
+<li><b>Reach & Impact:</b>: Facilitators will work with their local Regional Partner and their co-facilitator(s) to plan and lead  virtual or in-person workshops for local teachers in your region.
+<li><b>Deeper Learning:</b>: Facilitators will demonstrate curriculum proficiency, prepare for academic year workshops, and become more comfortable answering teacher questions by completing and submitting written reflections and peer reviews throughout the school year.
+<li><b>On-going development, support and mentorship:</b>: Facilitators will participate in ongoing development and support, including virtual training, independent and co-facilitator preparation, and regular communication with Code.org
+<li><b>Spring Training: </b>: Facilitators will attend a weekend workshop to prepare to co-lead a local five-day summer CS Discoveries workshop in their region (2-3 days).
+<li><b>Program Compliance:</b>: Facilitators will fulfill the above listed commitments and remain in good standing with Code.org and their Regional Partner. Good standing includes being prepared, professional, and committed to growth.
+</ul><br><b>Summer 2022 Facilitator Impact, and beyond (2022-23)</b>
+<br><ul>
+<li><b>CS Discoveries week-long summer workshop:</b>: Facilitators will run a week-long local CS Discoveries workshop in their region for new teachers teaching CS Discoveries in the 2022-23 school year.
+<li><b>Reach & Impact:</b>: Facilitators will work with their local Regional Partner to plan and co-lead virtual or in-person workshops for local teachers in your region in the 2022-23 school year. 
+
 </p>
 </details>
 <details>
-  <summary>**Computer Science Discoveries Facilitator Program Commitments**</summary>
+  <summary>**Computer Science Principles Facilitator Development & Program Commitments (Grades 9 - 12)** </summary>
   <p>
   <br/>
 text
 </p>
 </details>
 <details>
-  <summary>**Computer Science Principles Facilitator Development (Grades 9 - 12)** </summary>
-  <p>
-  <br/>
-text
-</p>
-</details>
-<details>
-  <summary>**Computer Science Principles Facilitator Program Commitments**</summary>
-  <p>
-  <br/>
-text
-</p>
-</details>
 
 ## Have questions or Interested in applying?
 
