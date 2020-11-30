@@ -201,9 +201,6 @@ es-MX:
     mismatch_password: Las dos contraseñas ingresadas no coinciden
     student_consent: Confirmo que tengo la autorización de mis padres o tutores legales
       para utilizar los servicios de Code.org.
-    agree_us_website: Acepto usar un sitio web con sede en Estados Unidos.
-    my_data_to_us: Acepto que se envíen y almacenen datos de mi utilización de este
-      sitio web en Estados Unidos.
     agree_us_data_transfer_student: "**Acepto que Code.org puede transferir datos
       (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos**
       con el fin de alojar y procesar dichos datos."

@@ -177,7 +177,7 @@ class LevelToken extends Component {
             </div>
             <span
               style={styles.levelTokenName}
-              onMouseDown={this.toggleExpand}
+              onClick={this.toggleExpand}
               className="uitest-level-token-name"
             >
               <span style={styles.levelArea}>

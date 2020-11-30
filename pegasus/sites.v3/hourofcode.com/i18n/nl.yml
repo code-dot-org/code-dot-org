@@ -945,6 +945,7 @@ nl:
   highlights_constant_athletes_short_heading: Zet door
   footer_copyright_message: Copyright 2015 Code.org. Alle rechten voorbehouden.
   footer_trademark_message: CodeUur™ is een handelsmerk van Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners
   footer_menu_contact: Neem contact op
   footer_menu_support: Ondersteuning
@@ -1547,7 +1548,7 @@ nl:
   tutorial_n2y_name: Bitt Bott Explores Earth
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_toxicodepython_name: Ontdek Python met Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
@@ -1555,9 +1556,10 @@ nl:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1573,15 +1575,16 @@ nl:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1590,6 +1593,7 @@ nl:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1599,7 +1603,7 @@ nl:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -5381,9 +5385,10 @@ nl:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_toxicodepython_longdescription: Ontdek de basisprincipes van Python zonder
+    enig woord of uitleg. Onze stille leraar zal je verschillende reeksen uitdagingen
+    geven die je ertoe zullen aanzetten om enkele regels te raden en van je eigen
+    fouten te leren.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
     that has taken over the world! Along the way, you'll meet interesting characters
@@ -5409,20 +5414,22 @@ nl:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5468,12 +5475,12 @@ nl:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5492,16 +5499,18 @@ nl:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5521,6 +5530,11 @@ nl:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
+    continues to worsen. Luckily, you can make your voice heard with code through
+    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
+    you can make a second video about any subject you care about! Learn to use loops,
+    sine waves and customized emojis to make a unique project.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5551,11 +5565,11 @@ nl:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -6456,7 +6470,7 @@ nl:
   tutorial_pets_language: Nederlands
   tutorial_petvet_language: Nederlands
   tutorial_superhero_language: Nederlands
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: Nederlands
   tutorial_vidcodetypeface_language: Nederlands
   tutorial_washustorm_language: Nederlands
   tutorial_activitypackets_language: Nederlands
@@ -6469,9 +6483,9 @@ nl:
   tutorial_n2y_language: Nederlands
   tutorial_microsoftarcade_language: Nederlands
   tutorial_csfirstunplugged_language: English, Spanish (Mexico)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: Deens, Nederlands, Engels, Engels (VK), Ests,
+    Frans, Duits, Indonesisch, Italiaans, anders, Pools, Portugees (Brazilië), Portugees
+    (Portugal), Roemeens, Spaans (Spanje), Spaans (Mexico ), Zweeds, Turks
   tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
     Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodedate_language: Nederlands
@@ -6483,6 +6497,7 @@ nl:
     (Mexico)
   tutorial_bsdcause_language: Nederlands
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Nederlands
   tutorial_tttractor_language: Nederlands
   tutorial_codeillusionmickey_language: Nederlands
@@ -6505,6 +6520,7 @@ nl:
   tutorial_codestersdistance_language: Nederlands
   tutorial_itchspace_language: Nederlands
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Nederlands
   tutorial_itchfish_language: Nederlands
   tutorial_bsdwebsite_language: Nederlands
@@ -6512,11 +6528,12 @@ nl:
   tutorial_itchwebcam_language: Nederlands
   tutorial_itchball_language: Nederlands
   tutorial_ttrace_language: Nederlands
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Nederlands
   tutorial_codeguppytext_language: Nederlands
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: Nederlands
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Nederlands
@@ -7180,6 +7197,7 @@ nl:
   tutorial_rpstress_string_detail_grades: Grades 2+
   tutorial_bsdcause_string_detail_grades: Grades 9+
   tutorial_vidcodeanimoji_string_detail_grades: Grades 2+
+  tutorial_vidcodeanimojies_string_detail_grades: Grades 2+
   tutorial_bsdinspire_string_detail_grades: Grades 6+
   tutorial_tttractor_string_detail_grades: Grades 6+
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
@@ -7201,6 +7219,7 @@ nl:
   tutorial_codestersdistance_string_detail_grades: Grades 6+
   tutorial_itchspace_string_detail_grades: Grades 6+
   tutorial_vidcodemagic_string_detail_grades: Grades 2+
+  tutorial_vidcodemagices_string_detail_grades: Grades 2+
   tutorial_codespeakmeal_string_detail_grades: Grades 6+
   tutorial_itchfish_string_detail_grades: Grades 2-8
   tutorial_bsdwebsite_string_detail_grades: Grades 6+
@@ -7212,6 +7231,7 @@ nl:
   tutorial_educodesecret_string_detail_grades: Grades 6+
   tutorial_itchshapes_string_detail_grades: Grades 6+
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Grades 6+
   tutorial_educativechatbot_string_detail_grades: Grades 9+
   tutorial_educodebasics_string_detail_grades: Grades 6+
   tutorial_codehsdesign_string_detail_grades: Grades 6+
@@ -7232,7 +7252,7 @@ nl:
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
   tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_codejika_string_detail_grades: Grades 6+
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
@@ -7285,11 +7305,11 @@ nl:
     Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
-  tutorial_athlete_string_platforms: All modern browsers
+  tutorial_athlete_string_platforms: Alle moderne browsers
   tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_star-wars_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
-  tutorial_gumadventure_string_platforms: All modern browsers
+  tutorial_gumadventure_string_platforms: Alle moderne browsers
   tutorial_mchoc_string_platforms: All modern browsers, Android tablet, iPad, Android
     phone, iPhone
   tutorial_vidnews_string_platforms: Chrome, Firefox
@@ -7300,11 +7320,11 @@ nl:
   tutorial_capython_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_frzn_string_platforms: All modern browsers, Android, iOS
-  tutorial_cocom_string_platforms: All modern browsers
+  tutorial_cocom_string_platforms: Alle moderne browsers
   tutorial_play-lab_string_platforms: All modern browsers, Android, iOS
   tutorial_boxisland_string_platforms: iPad, iPhone
-  tutorial_textcomp_string_platforms: All modern browsers
-  tutorial_encryption_string_platforms: All modern browsers
+  tutorial_textcomp_string_platforms: Alle moderne browsers
+  tutorial_encryption_string_platforms: Alle moderne browsers
   tutorial_kanopixel_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_foos_string_platforms: All modern browsers, Android tablet, iPad, Android
@@ -7324,7 +7344,7 @@ nl:
   tutorial_tinspire_string_platforms: TI-Nspire handheld
   tutorial_itchbounceball_string_platforms: Chrome, Firefox, Android Tablet
   tutorial_vidclim_string_platforms: Chrome, Firefox, Safari
-  tutorial_matlab_string_platforms: All modern browsers
+  tutorial_matlab_string_platforms: Alle moderne browsers
   tutorial_flap_string_platforms: All modern browsers, Android, iOS
   tutorial_galaxy_string_platforms: Android tablet, Android phone
   tutorial_inf_string_platforms: All modern browsers, Android tablet, iPad, Android
@@ -7338,27 +7358,27 @@ nl:
     Firefox, Safari, Android tablet, iPad
   tutorial_art_string_platforms: All modern browsers, Android tablet, iPad, Android
     phone, iPhone
-  tutorial_tynkerbrick_string_platforms: All modern browsers
+  tutorial_tynkerbrick_string_platforms: Alle moderne browsers
   tutorial_itchbio_string_platforms: Chrome, Firefox
   tutorial_itchj_string_platforms: Chrome, Firefox, Android Tablet
   tutorial_tickleo_string_platforms: All modern browsers, iPad, iPhone
   tutorial_hopgeo_string_platforms: iPad and iPhone
   tutorial_tynkermult_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
-  tutorial_monster_string_platforms: All modern browsers
+  tutorial_monster_string_platforms: Alle moderne browsers
   tutorial_tynkerapp_string_platforms: do-not-show
   tutorial_tynkerpup_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_livecode_string_platforms: All modern browsers, Android tablet, iPad, Android
     phone, iPhone
-  tutorial_cocomgame_string_platforms: All modern browsers
+  tutorial_cocomgame_string_platforms: Alle moderne browsers
   tutorial_tynkerspin_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_code-avengers_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_tynkercq_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
-  tutorial_cmgame_string_platforms: All modern browsers
+  tutorial_cmgame_string_platforms: Alle moderne browsers
   tutorial_codesters_string_platforms: do-not-show
   tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
@@ -7369,70 +7389,70 @@ nl:
   tutorial_hopemo_string_platforms: iPad and iPhone
   tutorial_tynkercm_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
-  tutorial_codesterswintergreet_string_platforms: All modern browsers
-  tutorial_codestersc_string_platforms: All modern browsers
-  tutorial_codestersturtle_string_platforms: All modern browsers
-  tutorial_penjee_string_platforms: All modern browsers
-  tutorial_trinket_string_platforms: All modern browsers
+  tutorial_codesterswintergreet_string_platforms: Alle moderne browsers
+  tutorial_codestersc_string_platforms: Alle moderne browsers
+  tutorial_codestersturtle_string_platforms: Alle moderne browsers
+  tutorial_penjee_string_platforms: Alle moderne browsers
+  tutorial_trinket_string_platforms: Alle moderne browsers
   tutorial_frogger_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_tynkereco_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
-  tutorial_mitedarc_string_platforms: All modern browsers
+  tutorial_mitedarc_string_platforms: Alle moderne browsers
   tutorial_khan_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome, Firefox,
     Safari
   tutorial_tynkerd_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_cdmy_string_platforms: Internet Explorer 11, Chrome, Firefox, Safari
-  tutorial_codestersdance_string_platforms: All modern browsers
-  tutorial_codestersbasketball_string_platforms: All modern browsers
+  tutorial_codestersdance_string_platforms: Alle moderne browsers
+  tutorial_codestersbasketball_string_platforms: Alle moderne browsers
   tutorial_nclkarel_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_buildpong_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad
   tutorial_tynkerdrones_string_platforms: Android tablet, iPad
-  tutorial_carla_string_platforms: All modern browsers
+  tutorial_carla_string_platforms: Alle moderne browsers
   tutorial_zulama_string_platforms: Internet Explorer 11, Chrome, Firefox, Safari
   tutorial_capost_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_marco_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codestersflappybike_string_platforms: All modern browsers
-  tutorial_kanopong_string_platforms: All modern browsers
+  tutorial_codestersflappybike_string_platforms: Alle moderne browsers
+  tutorial_kanopong_string_platforms: Alle moderne browsers
   tutorial_tynkerright_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_touchdevelop_string_platforms: do-not-show
   tutorial_tynkercc_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_bamboo_string_platforms: Chrome
-  tutorial_robojav_string_platforms: All modern browsers
+  tutorial_robojav_string_platforms: Alle moderne browsers
   tutorial_roboba_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_knodsnake_string_platforms: All modern browsers
-  tutorial_soccharater_string_platforms: All modern browsers
-  tutorial_silent_string_platforms: All modern browsers
+  tutorial_knodsnake_string_platforms: Alle moderne browsers
+  tutorial_soccharater_string_platforms: Alle moderne browsers
+  tutorial_silent_string_platforms: Alle moderne browsers
   tutorial_robomesh_string_platforms: Internet Explorer 11, Chrome, Firefox
   tutorial_amaze_string_platforms: All modern browsers, Android tablet, iPad, Android
     phone
-  tutorial_codestersds_string_platforms: All modern browsers
-  tutorial_knodtext_string_platforms: All modern browsers
-  tutorial_alicegar_string_platforms: All modern browsers
-  tutorial_codesterstransform_string_platforms: All modern browsers
-  tutorial_flexfrog_string_platforms: All modern browsers
+  tutorial_codestersds_string_platforms: Alle moderne browsers
+  tutorial_knodtext_string_platforms: Alle moderne browsers
+  tutorial_alicegar_string_platforms: Alle moderne browsers
+  tutorial_codesterstransform_string_platforms: Alle moderne browsers
+  tutorial_flexfrog_string_platforms: Alle moderne browsers
   tutorial_codemoji_string_platforms: do-not-show
   tutorial_robobii_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_robobm_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codingrobots_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_robob_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_coders_string_platforms: All modern browsers
+  tutorial_coders_string_platforms: Alle moderne browsers
   tutorial_tynkerhw_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_tynkermh_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_caphoto_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
-  tutorial_mozillahw_string_platforms: All modern browsers
+  tutorial_mozillahw_string_platforms: Alle moderne browsers
   tutorial_ticklep_string_platforms: do-not-show
-  tutorial_bbot_string_platforms: All modern browsers
-  tutorial_scratchg_string_platforms: All modern browsers
+  tutorial_bbot_string_platforms: Alle moderne browsers
+  tutorial_scratchg_string_platforms: Alle moderne browsers
   tutorial_roboticfriends_string_platforms: Unplugged
   tutorial_sjforest_string_platforms: iPad app
   tutorial_sjgreet_string_platforms: iPad app
@@ -7442,7 +7462,7 @@ nl:
   tutorial_chspixel_string_platforms: Unplugged
   tutorial_hummingbird_string_platforms: PC, Mac, Linux, Chromebook downloadable,
     Hummingbird robot
-  tutorial_recoloring_string_platforms: All modern browsers
+  tutorial_recoloring_string_platforms: Alle moderne browsers
   tutorial_bbcchem_string_platforms: do-not-show
   tutorial_floalgo_string_platforms: Unplugged
   tutorial_flocond_string_platforms: Unplugged
@@ -7453,7 +7473,7 @@ nl:
   tutorial_bbcla_string_platforms: do-not-show
   tutorial_bbcsci_string_platforms: do-not-show
   tutorial_tlctour_string_platforms: Unplugged
-  tutorial_codesterstj_string_platforms: All modern browsers
+  tutorial_codesterstj_string_platforms: Alle moderne browsers
   tutorial_tlclocked_string_platforms: Unplugged
   tutorial_baubles_string_platforms: Unplugged
   tutorial_bbcart_string_platforms: do-not-show
@@ -7465,7 +7485,7 @@ nl:
   tutorial_box_string_platforms: do-not-show
   tutorial_hopgame_string_platforms: iPad and iPhone
   tutorial_icontrol_string_platforms: iPad, Sphero robot
-  tutorial_cocomteach_string_platforms: All modern browsers
+  tutorial_cocomteach_string_platforms: Alle moderne browsers
   tutorial_bbcmathii_string_platforms: do-not-show
   tutorial_bbcphys_string_platforms: do-not-show
   tutorial_bitsbox_string_platforms: All modern browsers, iOS
@@ -7474,9 +7494,9 @@ nl:
   tutorial_bbcbio_string_platforms: do-not-show
   tutorial_ticklebb8_string_platforms: iPad, iPhone, BB-8 robot
   tutorial_grok_string_platforms: do-not-show
-  tutorial_ijournalist_string_platforms: All modern browsers
+  tutorial_ijournalist_string_platforms: Alle moderne browsers
   tutorial_bbcmusic_string_platforms: do-not-show
-  tutorial_secretcodes_string_platforms: All modern browsers
+  tutorial_secretcodes_string_platforms: Alle moderne browsers
   tutorial_tlchex_string_platforms: Unplugged
   tutorial_tickles_string_platforms: iPad, iPhone, Sphero robot
   tutorial_ozogame_string_platforms: All modern browsers, iPad, iPhone, Android tablet,
@@ -7486,7 +7506,7 @@ nl:
   tutorial_tlcbrain_string_platforms: Unplugged
   tutorial_hopquiz_string_platforms: iPad and iPhone
   tutorial_unfortunate_string_platforms: Dash and Dot robot
-  tutorial_cha_string_platforms: All modern browsers
+  tutorial_cha_string_platforms: Alle moderne browsers
   tutorial_elaseq_string_platforms: Unplugged, All modern browsers, iPad, Android
     tablet
   tutorial_bbcmathi_string_platforms: do-not-show
@@ -7494,7 +7514,7 @@ nl:
   tutorial_arduino_string_platforms: Arduino Circut Boards
   tutorial_introrobo_string_platforms: iPad, Android tablet, Dash and Dot robot
   tutorial_tlcinvis_string_platforms: Unplugged
-  tutorial_tlcjflap_string_platforms: All modern browsers
+  tutorial_tlcjflap_string_platforms: Alle moderne browsers
   tutorial_procolor_string_platforms: Ozobot robot
   tutorial_spiralsfinch_string_platforms: PC, Mac, Linux, Chromebook downloadable,
     Finch robot
@@ -7502,7 +7522,7 @@ nl:
   tutorial_ticklel_string_platforms: All modern browsers, iPad, iPhone, LEGO WeDo
     robot
   tutorial_spiralsdash_string_platforms: Android tablet, Android phone, Dash robot
-  tutorial_ghdebug_string_platforms: All modern browsers
+  tutorial_ghdebug_string_platforms: Alle moderne browsers
   tutorial_tlckk_string_platforms: Unplugged
   tutorial_firstcomp_string_platforms: Unplugged
   tutorial_mazefinch_string_platforms: All modern browsers, Finch robot
@@ -7514,23 +7534,23 @@ nl:
   tutorial_tlcmind_string_platforms: Unplugged
   tutorial_tlctelebot_string_platforms: Unplugged
   tutorial_tlcaus_string_platforms: Unplugged
-  tutorial_oralhist_string_platforms: All modern browsers
+  tutorial_oralhist_string_platforms: Alle moderne browsers
   tutorial_tlcmicro_string_platforms: Unplugged
-  tutorial_imathematician_string_platforms: All modern browsers
+  tutorial_imathematician_string_platforms: Alle moderne browsers
   tutorial_tlcmagic_string_platforms: Unplugged
-  tutorial_scratchmus_string_platforms: All modern browsers
-  tutorial_scratchanim_string_platforms: All modern browsers
-  tutorial_scratchfly_string_platforms: All modern browsers
-  tutorial_tynkerarc_string_platforms: All modern browsers
+  tutorial_scratchmus_string_platforms: Alle moderne browsers
+  tutorial_scratchanim_string_platforms: Alle moderne browsers
+  tutorial_scratchfly_string_platforms: Alle moderne browsers
+  tutorial_tynkerarc_string_platforms: Alle moderne browsers
   tutorial_grokffpython_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_grokffblock_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_grokeliza_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_tynkercan_string_platforms: All modern browsers
+  tutorial_tynkercan_string_platforms: Alle moderne browsers
   tutorial_grokflags_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android Chrome (mobile-optimized), iOS (mobile-optimized)
   tutorial_robomind_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
-  tutorial_scratchanimwork_string_platforms: All modern browsers
+  tutorial_scratchanimwork_string_platforms: Alle moderne browsers
   tutorial_adventureq_string_platforms: iPad
   tutorial_khan-es_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -7543,16 +7563,16 @@ nl:
   tutorial_kfr_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome, Firefox,
     Safari
   tutorial_app-inventor_string_platforms: Android
-  tutorial_bits_string_platforms: All modern browsers
-  tutorial_blockly_string_platforms: All modern browsers
+  tutorial_bits_string_platforms: Alle moderne browsers
+  tutorial_blockly_string_platforms: Alle moderne browsers
   tutorial_tynker_string_platforms: do-not-show
-  tutorial_baypt_string_platforms: All modern browsers
+  tutorial_baypt_string_platforms: Alle moderne browsers
   tutorial_code-combat_string_platforms: do-not-show
-  tutorial_mky_string_platforms: All modern browsers
+  tutorial_mky_string_platforms: Alle moderne browsers
   tutorial_spellcraft_string_platforms: Windows
   tutorial_pirates_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad, Android phone, iPhone
-  tutorial_csfirst_string_platforms: All modern browsers
+  tutorial_csfirst_string_platforms: Alle moderne browsers
   tutorial_loopedy_string_platforms: iPad, iPhone, Android tablet, Android phone,
     Dash and Dot robot
   tutorial_dsw_string_platforms: do-not-show
@@ -7560,8 +7580,8 @@ nl:
   tutorial_ssw_string_platforms: do-not-show
   tutorial_sswb_string_platforms: do-not-show
   tutorial_kodable-unplugged_string_platforms: Unplugged
-  tutorial_scratch_string_platforms: All modern browsers
-  tutorial_bayes_string_platforms: All modern browsers
+  tutorial_scratch_string_platforms: Alle moderne browsers
+  tutorial_bayes_string_platforms: Alle moderne browsers
   tutorial_gumball_string_platforms: do-not-show
   tutorial_hrm_string_platforms: PC and Mac downloadable
   tutorial_ice-age_string_platforms: do-not-show
@@ -7572,7 +7592,7 @@ nl:
   tutorial_smc_string_platforms: do-not-show
   tutorial_minecraft-2016_string_platforms: do-not-show
   tutorial_thinkersmith-es_string_platforms: All modern browsers, iOS
-  tutorial_pixie_string_platforms: All modern browsers
+  tutorial_pixie_string_platforms: Alle moderne browsers
   tutorial_play_string_platforms: do-not-show
   tutorial_robomind-nl_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
@@ -7584,13 +7604,13 @@ nl:
     Sphero robot
   tutorial_swb_string_platforms: do-not-show
   tutorial_build-a-galaxy_string_platforms: do-not-show
-  tutorial_alicesims_string_platforms: All modern browsers
+  tutorial_alicesims_string_platforms: Alle moderne browsers
   tutorial_tchr_string_platforms: do-not-show
   tutorial_robogame_string_platforms: Android tablet, iPad, Android phone, iPhone,
     Dash and Dot robot
   tutorial_tap_string_platforms: Android tablet, iPad
   tutorial_cintl_string_platforms: do-not-show
-  tutorial_itchstop_string_platforms: All modern browsers
+  tutorial_itchstop_string_platforms: Alle moderne browsers
   tutorial_tynkerpn_string_platforms: All modern browsers, iPad, Android tablet
   tutorial_tynkerpd_string_platforms: All modern browsers, iPad, Android tablet
   tutorial_persistence_string_platforms: Unplugged
@@ -7607,24 +7627,24 @@ nl:
     tablet
   tutorial_kodableadv_string_platforms: Unplugged, All modern browsers, iPad, Android
     tablet
-  tutorial_tynkertj_string_platforms: All modern browsers
-  tutorial_wolframa_string_platforms: All modern browsers
-  tutorial_wolframm_string_platforms: All modern browsers
-  tutorial_wolframspi_string_platforms: All modern browsers
-  tutorial_wolframsph_string_platforms: All modern browsers
-  tutorial_wolframp_string_platforms: All modern browsers
-  tutorial_wolframn_string_platforms: All modern browsers
+  tutorial_tynkertj_string_platforms: Alle moderne browsers
+  tutorial_wolframa_string_platforms: Alle moderne browsers
+  tutorial_wolframm_string_platforms: Alle moderne browsers
+  tutorial_wolframspi_string_platforms: Alle moderne browsers
+  tutorial_wolframsph_string_platforms: Alle moderne browsers
+  tutorial_wolframp_string_platforms: Alle moderne browsers
+  tutorial_wolframn_string_platforms: Alle moderne browsers
   tutorial_soloweb_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad, iPhone
   tutorial_khanweb_string_platforms: All modern browsers, Android tablet
-  tutorial_khandata_string_platforms: All modern browsers
+  tutorial_khandata_string_platforms: Alle moderne browsers
   tutorial_robomeshiq_string_platforms: Internet Explorer 11, Chrome, Firefox, Vex
     IQ Robots
-  tutorial_googlelogo_string_platforms: All modern browsers
+  tutorial_googlelogo_string_platforms: Alle moderne browsers
   tutorial_playtune_string_platforms: Chrome, Firefox, Safari
-  tutorial_computeit_string_platforms: All modern browsers
-  tutorial_codesterssj_string_platforms: All modern browsers
-  tutorial_cmchat_string_platforms: All modern browsers
+  tutorial_computeit_string_platforms: Alle moderne browsers
+  tutorial_codesterssj_string_platforms: Alle moderne browsers
+  tutorial_cmchat_string_platforms: Alle moderne browsers
   tutorial_tynkerdb_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_cmbuild_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_robotrattle_string_platforms: Chrome, Firefox, Android tablet, iPad
@@ -7632,50 +7652,50 @@ nl:
   tutorial_codehsdigipixel_string_platforms: Chrome, Firefox, Safari
   tutorial_ccbinary_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome
   tutorial_codehsturtle_string_platforms: Chrome, Firefox, Safari
-  tutorial_grokhd_string_platforms: All modern browsers
-  tutorial_grokem_string_platforms: All modern browsers
+  tutorial_grokhd_string_platforms: Alle moderne browsers
+  tutorial_grokem_string_platforms: Alle moderne browsers
   tutorial_kodmaze_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_codestersa_string_platforms: All modern browsers
+  tutorial_codestersa_string_platforms: Alle moderne browsers
   tutorial_cmdodo_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkerspace_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_gfbloons_string_platforms: All modern browsers
+  tutorial_gfbloons_string_platforms: Alle moderne browsers
   tutorial_raspipong_string_platforms: Chrome
   tutorial_codehsvr_string_platforms: Chrome, Firefox, Safari
   tutorial_codesterstp_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codestersbb_string_platforms: All modern browsers
-  tutorial_gfcrossyroad_string_platforms: All modern browsers
+  tutorial_codestersbb_string_platforms: Alle moderne browsers
+  tutorial_gfcrossyroad_string_platforms: Alle moderne browsers
   tutorial_googleww_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codehsjsapp_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_gfmihi_string_platforms: All modern browsers
+  tutorial_gfmihi_string_platforms: Alle moderne browsers
   tutorial_hopdropphone_string_platforms: iPad, iPhone
   tutorial_techfaa_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_codehsjsgraph_string_platforms: Chrome, Firefox, Safari
-  tutorial_thunkable_string_platforms: All modern browsers
+  tutorial_thunkable_string_platforms: Alle moderne browsers
   tutorial_hopcrossyroad_string_platforms: iPad, iPhone
   tutorial_switchglitch_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_codecar_string_platforms: Chrome, Firefox
   tutorial_codesterscp_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_grokpetblock_string_platforms: All modern browsers
+  tutorial_grokpetblock_string_platforms: Alle moderne browsers
   tutorial_techbim_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_techfpp_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
-  tutorial_codesterscr_string_platforms: All modern browsers
-  tutorial_grokdisease_string_platforms: All modern browsers
+  tutorial_codesterscr_string_platforms: Alle moderne browsers
+  tutorial_grokdisease_string_platforms: Alle moderne browsers
   tutorial_techec_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_rgbegin_string_platforms: Chrome, Firefox
-  tutorial_myradream_string_platforms: All modern browsers
+  tutorial_myradream_string_platforms: Alle moderne browsers
   tutorial_thinkfun_string_platforms: Chrome, Firefox, Safari
   tutorial_hopfireworks_string_platforms: iPad, iPhone
-  tutorial_grokspace_string_platforms: All modern browsers
+  tutorial_grokspace_string_platforms: Alle moderne browsers
   tutorial_codehspython_string_platforms: Chrome, Firefox, Safari
   tutorial_codehsjava_string_platforms: Chrome, Firefox, Safari
   tutorial_techioda_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
-  tutorial_grokmonster_string_platforms: All modern browsers
+  tutorial_grokmonster_string_platforms: Alle moderne browsers
   tutorial_techmjs_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_techga_string_platforms: All modern browsers, Android tablet, iPad, Windows
@@ -7684,30 +7704,30 @@ nl:
     phone, Android phone, iPhone
   tutorial_techiogsr_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
-  tutorial_groktunnel_string_platforms: All modern browsers
+  tutorial_groktunnel_string_platforms: Alle moderne browsers
   tutorial_stemcod_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad
   tutorial_techikb_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
-  tutorial_kanostreet_string_platforms: All modern browsers
+  tutorial_kanostreet_string_platforms: Alle moderne browsers
   tutorial_nyblebot_string_platforms: Android tablet, iPad, Android phone, iPhone
-  tutorial_codemojijs_string_platforms: All modern browsers
+  tutorial_codemojijs_string_platforms: Alle moderne browsers
   tutorial_techapf_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_techfpjs_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_techlinq_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
-  tutorial_gpbcatapult_string_platforms: All modern browsers
+  tutorial_gpbcatapult_string_platforms: Alle moderne browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone, Screen reader
-  tutorial_alicewonder_string_platforms: All modern browsers
+  tutorial_alicewonder_string_platforms: Alle moderne browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
-  tutorial_cssgrid_string_platforms: All modern browsers
+  tutorial_cssgrid_string_platforms: Alle moderne browsers
   tutorial_jshero_string_platforms: All modern browsers, Android tablet, Android phone
   tutorial_codemojipy_string_platforms: iPad, iPhone
-  tutorial_nclabdrone_string_platforms: All modern browsers
-  tutorial_gpbcircle_string_platforms: All modern browsers
-  tutorial_gpbpaint_string_platforms: All modern browsers
+  tutorial_nclabdrone_string_platforms: Alle moderne browsers
+  tutorial_gpbcircle_string_platforms: Alle moderne browsers
+  tutorial_gpbpaint_string_platforms: Alle moderne browsers
   tutorial_cocomarcade_string_platforms: Alle moderne browsers
   tutorial_techcpp_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
@@ -7735,17 +7755,17 @@ nl:
     Ozobot Bit or Evo robot
   tutorial_ozohabits_string_platforms: All modern browsers, Android tablets, iPads,
     Ozobot Bit or Evo robot
-  tutorial_ozoprogram_string_platforms: All modern browsers
+  tutorial_ozoprogram_string_platforms: Alle moderne browsers
   tutorial_ozopair_string_platforms: All modern browsers, Android tablets, iPads,
     Ozobot Bit or Evo robot
   tutorial_codesnoopy_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
-  tutorial_applabintro_string_platforms: All modern browsers
+  tutorial_applabintro_string_platforms: Alle moderne browsers
   tutorial_cslartist_string_platforms: Unplugged
   tutorial_cslscratchjr_string_platforms: Unplugged
   tutorial_floevents_string_platforms: Unplugged
   tutorial_florobot_string_platforms: Unplugged
-  tutorial_isavesanta_string_platforms: All modern browsers
+  tutorial_isavesanta_string_platforms: Alle moderne browsers
   tutorial_iorder_string_platforms: All modern borwsers
   tutorial_ianimate_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_iloveada_string_platforms: All modern borwsers
@@ -7789,16 +7809,16 @@ nl:
     MINDSTORMS® EV3
   tutorial_legolight_string_platforms: All modern browsers, Android tablet, iPad,
     MINDSTORMS® EV3
-  tutorial_alexa_string_platforms: All modern browsers
-  tutorial_grokpetmicro_string_platforms: All modern browsers
+  tutorial_alexa_string_platforms: Alle moderne browsers
+  tutorial_grokpetmicro_string_platforms: Alle moderne browsers
   tutorial_pirateplunder_string_platforms: Chrome, Firefox
   tutorial_cadj_string_platforms: Chrome, Firefox, Safari
   tutorial_cacrazy_string_platforms: Chrome, Firefox, Safari
   tutorial_cajump_string_platforms: Chrome, Firefox, Safari
   tutorial_carest_string_platforms: Chrome, Firefox, Safari
-  tutorial_accai_string_platforms: All modern browsers
+  tutorial_accai_string_platforms: Alle moderne browsers
   tutorial_vceclipse_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_pmzero_string_platforms: All modern browsers
+  tutorial_pmzero_string_platforms: Alle moderne browsers
   tutorial_hsela_string_platforms: iPad, iPhone
   tutorial_ticklear_string_platforms: iPad, iPhone
   tutorial_bcrobot_string_platforms: Chrome, Firefox, Safari
@@ -7811,26 +7831,26 @@ nl:
     Sphero robot
   tutorial_gameofcodes_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad
-  tutorial_blocklygames_string_platforms: All modern browsers
+  tutorial_blocklygames_string_platforms: Alle moderne browsers
   tutorial_spherohello_string_platforms: iPad, Android tablet, iPhone, Android phone,
     Sphero robot
   tutorial_spheroarcade_string_platforms: iPad, Android tablet, iPhone, Android phone,
     Sphero robot
-  tutorial_bcpy1_string_platforms: All modern browsers
-  tutorial_bcpy2_string_platforms: All modern browsers
-  tutorial_bcjs1_string_platforms: All modern browsers
-  tutorial_bcjs2_string_platforms: All modern browsers
+  tutorial_bcpy1_string_platforms: Alle moderne browsers
+  tutorial_bcpy2_string_platforms: Alle moderne browsers
+  tutorial_bcjs1_string_platforms: Alle moderne browsers
+  tutorial_bcjs2_string_platforms: Alle moderne browsers
   tutorial_3dbearmars_string_platforms: Android tablet, iPad, Android phone, iPhone
-  tutorial_alexaskill_string_platforms: All modern browsers
-  tutorial_bitsboxyak_string_platforms: All modern browsers
-  tutorial_blockscadbargraphs_string_platforms: All modern browsers
-  tutorial_blockscadbirdhouses_string_platforms: All modern browsers
-  tutorial_blockscadclock_string_platforms: All modern browsers
-  tutorial_blockscaddinner_string_platforms: All modern browsers
-  tutorial_blockscadicecream_string_platforms: All modern browsers
-  tutorial_blockscadpizza_string_platforms: All modern browsers
-  tutorial_blockscadsugar_string_platforms: All modern browsers
-  tutorial_bsgridlight_string_platforms: All modern browsers
+  tutorial_alexaskill_string_platforms: Alle moderne browsers
+  tutorial_bitsboxyak_string_platforms: Alle moderne browsers
+  tutorial_blockscadbargraphs_string_platforms: Alle moderne browsers
+  tutorial_blockscadbirdhouses_string_platforms: Alle moderne browsers
+  tutorial_blockscadclock_string_platforms: Alle moderne browsers
+  tutorial_blockscaddinner_string_platforms: Alle moderne browsers
+  tutorial_blockscadicecream_string_platforms: Alle moderne browsers
+  tutorial_blockscadpizza_string_platforms: Alle moderne browsers
+  tutorial_blockscadsugar_string_platforms: Alle moderne browsers
+  tutorial_bsgridlight_string_platforms: Alle moderne browsers
   tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
   tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
@@ -7873,49 +7893,49 @@ nl:
   tutorial_ccwslimer_string_platforms: Microsoft Edge, Chrome, Safari, iPad
   tutorial_codinggalaxy_string_platforms: Android tablet, iPad, iPhone, Unplugged
     (no technology needed)
-  tutorial_boatrace_string_platforms: All modern browsers
-  tutorial_ccplay_string_platforms: All modern browsers
-  tutorial_grinch_string_platforms: All modern browsers
-  tutorial_codehsart_string_platforms: All modern browsers
-  tutorial_codehsbitcoin_string_platforms: All modern browsers
-  tutorial_codehsblockchain_string_platforms: All modern browsers
+  tutorial_boatrace_string_platforms: Alle moderne browsers
+  tutorial_ccplay_string_platforms: Alle moderne browsers
+  tutorial_grinch_string_platforms: Alle moderne browsers
+  tutorial_codehsart_string_platforms: Alle moderne browsers
+  tutorial_codehsbitcoin_string_platforms: Alle moderne browsers
+  tutorial_codehsblockchain_string_platforms: Alle moderne browsers
   tutorial_codehscipher_string_platforms: Unplugged
-  tutorial_codehscollision_string_platforms: All modern browsers
-  tutorial_codehsmath_string_platforms: All modern browsers
-  tutorial_codehsmusic_string_platforms: All modern browsers
-  tutorial_codehssports_string_platforms: All modern browsers
-  tutorial_codemojipizza_string_platforms: All modern browsers
-  tutorial_moonlander_string_platforms: All modern browsers
-  tutorial_sushicards_string_platforms: All modern browsers
+  tutorial_codehscollision_string_platforms: Alle moderne browsers
+  tutorial_codehsmath_string_platforms: Alle moderne browsers
+  tutorial_codehsmusic_string_platforms: Alle moderne browsers
+  tutorial_codehssports_string_platforms: Alle moderne browsers
+  tutorial_codemojipizza_string_platforms: Alle moderne browsers
+  tutorial_moonlander_string_platforms: Alle moderne browsers
+  tutorial_sushicards_string_platforms: Alle moderne browsers
   tutorial_codesparkcreate_string_platforms: All modern browsers, Android tablet,
     iPad, Android phone, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
   tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
   tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
   tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
-  tutorial_codewards_string_platforms: All modern browsers
-  tutorial_olympics_string_platforms: All modern browsers
+  tutorial_codewards_string_platforms: Alle moderne browsers
+  tutorial_olympics_string_platforms: Alle moderne browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
-  tutorial_discovery_string_platforms: All modern browsers
-  tutorial_csfirstname_string_platforms: All modern browsers
+  tutorial_discovery_string_platforms: Alle moderne browsers
+  tutorial_csfirstname_string_platforms: Alle moderne browsers
   tutorial_obstaclecourse_string_platforms: iPad, Screen reader
-  tutorial_edisonmove_string_platforms: All modern browsers
+  tutorial_edisonmove_string_platforms: Alle moderne browsers
   tutorial_edisonspider_string_platforms: All modern browsers, iPad, Android tablets
   tutorial_edisonspotlight_string_platforms: All modern browsers, iPad, Android tablets
-  tutorial_firiapython_string_platforms: All modern browsers
+  tutorial_firiapython_string_platforms: Alle moderne browsers
   tutorial_gamefrootsquid_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_duckpiano_string_platforms: All modern browsers
-  tutorial_gpsound_string_platforms: All modern browsers
+  tutorial_duckpiano_string_platforms: Alle moderne browsers
+  tutorial_gpsound_string_platforms: Alle moderne browsers
   tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
-  tutorial_htmltimetravel_string_platforms: All modern browsers
+  tutorial_htmltimetravel_string_platforms: Alle moderne browsers
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: All modern browsers
+  tutorial_appytappin_string_platforms: Alle moderne browsers
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
   tutorial_imorse_string_platforms: Unplugged
   tutorial_kanohp_string_platforms: Chrome, Safari, Android, iOS
-  tutorial_khanwebpages_string_platforms: All modern browsers
+  tutorial_khanwebpages_string_platforms: Alle moderne browsers
   tutorial_kibobowl_string_platforms: ''
   tutorial_kibodance_string_platforms: ''
   tutorial_buildcharacters_string_platforms: All modern browsers, iPad, iPhone
@@ -7939,7 +7959,7 @@ nl:
   tutorial_ozorandom_string_platforms: ''
   tutorial_ozotroll_string_platforms: ''
   tutorial_peblioart_string_platforms: Chrome, Firefox, Safari
-  tutorial_astropi_string_platforms: All modern browsers
+  tutorial_astropi_string_platforms: Alle moderne browsers
   tutorial_rgart_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad,
     Android phone, iPhone
   tutorial_rgengineer_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad,
@@ -7988,7 +8008,7 @@ nl:
     phone, iPhone
   tutorial_thunkableapps_string_platforms: Chrome, Firefox, Safari, Android tablet,
     iPad, Android phone, iPhone
-  tutorial_toxicodedot_string_platforms: All modern browsers
+  tutorial_toxicodedot_string_platforms: Alle moderne browsers
   tutorial_gcactions_string_platforms: Chrome, Firefox, Android tablet, iPad
   tutorial_gccomparators_string_platforms: Chrome, Firefox, Android tablet, iPad
   tutorial_gcconditions_string_platforms: Chrome, Firefox, Android tablet, iPad
@@ -7998,15 +8018,15 @@ nl:
   tutorial_gcvariables_string_platforms: Chrome, Firefox, Android tablet, iPad
   tutorial_beanything_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_change_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_cooking_string_platforms: All modern browsers
-  tutorial_crystal_string_platforms: All modern browsers
-  tutorial_landscape_string_platforms: All modern browsers
+  tutorial_cooking_string_platforms: Alle moderne browsers
+  tutorial_crystal_string_platforms: Alle moderne browsers
+  tutorial_landscape_string_platforms: Alle moderne browsers
   tutorial_pets_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_petvet_string_platforms: All modern browsers
-  tutorial_superhero_string_platforms: All modern browsers
+  tutorial_petvet_string_platforms: Alle moderne browsers
+  tutorial_superhero_string_platforms: Alle moderne browsers
   tutorial_vidcodeplastic_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_vidcodetypeface_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_washustorm_string_platforms: All modern browsers
+  tutorial_washustorm_string_platforms: Alle moderne browsers
   tutorial_activitypackets_string_platforms: Unplugged, iOS, Android, Kindle, Chrome*
     (*Cue only)
   tutorial_googlerookie_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8015,57 +8035,63 @@ nl:
   tutorial_mazyad_string_platforms: Unplugged
   tutorial_gamemaker_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_allcancodeapps_string_platforms: All modern browsers
+  tutorial_allcancodeapps_string_platforms: Alle moderne browsers
   tutorial_n2y_string_platforms: Unplugged
   tutorial_microsoftarcade_string_platforms: All modern browsers, Screen reader
   tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
-  tutorial_toxicodepython_string_platforms: All modern browsers
-  tutorial_codecombatozaria_string_platforms: All modern browsers
+  tutorial_toxicodepython_string_platforms: Alle moderne browsers
+  tutorial_codecombatozaria_string_platforms: Alle moderne browsers
   tutorial_vidcodedate_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyspace_string_platforms: All modern browsers
+  tutorial_codemonkeyspace_string_platforms: Alle moderne browsers
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_icomputelearn_string_platforms: All modern browsers
+  tutorial_icomputelearn_string_platforms: Alle moderne browsers
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
   tutorial_scigirlsquest_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codespeakbreathe_string_platforms: Chrome, Firefox
   tutorial_vidcodeface_string_platforms: Chrome, Firefox
-  tutorial_educodemaze_string_platforms: All modern browsers
-  tutorial_educoderace_string_platforms: All modern browsers
+  tutorial_educodemaze_string_platforms: Alle moderne browsers
+  tutorial_educoderace_string_platforms: Alle moderne browsers
   tutorial_codespeakchatbot_string_platforms: Chrome, Firefox
   tutorial_gamefrootgames_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone
   tutorial_codespeakgrandparent_string_platforms: Chrome, Firefox
-  tutorial_educodekingdom_string_platforms: All modern browsers
+  tutorial_educodekingdom_string_platforms: Alle moderne browsers
   tutorial_codehsdata_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_educodecake_string_platforms: All modern browsers
+  tutorial_educodecake_string_platforms: Alle moderne browsers
   tutorial_ttsecond_string_platforms: Chrome
   tutorial_bsdtrivia_string_platforms: Chrome
-  tutorial_csfirstdialogue_string_platforms: All modern browsers
+  tutorial_csfirstdialogue_string_platforms: Alle moderne browsers
   tutorial_codemonkeybeaver_string_platforms: All modern browsers, Android tablet,
     iPad
   tutorial_codestersdistance_string_platforms: All modern browsers, Screen reader
-  tutorial_itchspace_string_platforms: All modern browsers
+  tutorial_itchspace_string_platforms: Alle moderne browsers
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
-  tutorial_itchfish_string_platforms: All modern browsers
+  tutorial_itchfish_string_platforms: Alle moderne browsers
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
   tutorial_itchwebcam_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_itchball_string_platforms: All modern browsers
+  tutorial_itchball_string_platforms: Alle moderne browsers
   tutorial_ttrace_string_platforms: Chrome
   tutorial_plethora_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_educodesecret_string_platforms: All modern browsers
-  tutorial_itchshapes_string_platforms: All modern browsers
+  tutorial_educodesecret_string_platforms: Alle moderne browsers
+  tutorial_itchshapes_string_platforms: Alle moderne browsers
   tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_educativechatbot_string_platforms: All modern browsers
-  tutorial_educodebasics_string_platforms: All modern browsers
+  tutorial_vidcodeplastiche_string_platforms: Alle moderne browsers, iPad, zonder
+    kabel
+  tutorial_educativechatbot_string_platforms: Alle moderne browsers
+  tutorial_educodebasics_string_platforms: Alle moderne browsers
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
   tutorial_htmlacademyphp_string_platforms: All modern browsers, Screen reader
@@ -8081,14 +8107,14 @@ nl:
   tutorial_codesterssoccer_string_platforms: All modern browsers, Screen reader
   tutorial_breakoutlock_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
-  tutorial_thunkablemask_string_platforms: All modern browsers
+  tutorial_thunkablemask_string_platforms: Alle moderne browsers
   tutorial_cafarming_string_platforms: Chrome, Firefox
-  tutorial_blocksmithyeti_string_platforms: All modern browsers
+  tutorial_blocksmithyeti_string_platforms: Alle moderne browsers
   tutorial_codecapture_string_platforms: All modern browsers, Android phone, iPhone
   tutorial_codehslitter_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
   tutorial_bsdocean_string_platforms: Chrome
-  tutorial_itchplatformer_string_platforms: All modern browsers
+  tutorial_itchplatformer_string_platforms: Alle moderne browsers
   tutorial_codejika_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_gamefrootclicker_string_platforms: Alle moderne browsers, iPad, zonder
@@ -8096,51 +8122,51 @@ nl:
   tutorial_rmagicequity_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone, Game console app
   tutorial_ttfreestyle_string_platforms: Chrome
-  tutorial_ozobotcolor2_string_platforms: All modern browsers
-  tutorial_ozobotcolor3_string_platforms: All modern browsers
+  tutorial_ozobotcolor2_string_platforms: Alle moderne browsers
+  tutorial_ozobotcolor3_string_platforms: Alle moderne browsers
   tutorial_clcarbon_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_kodablebasics_string_platforms: Unplugged
   tutorial_scigirlscc_string_platforms: Unplugged
   tutorial_irobotpicture_string_platforms: Unplugged
-  tutorial_kcjmyself_string_platforms: All modern browsers
+  tutorial_kcjmyself_string_platforms: Alle moderne browsers
   tutorial_nearpodalgorithms_string_platforms: All modern browsers, Screen reader
   tutorial_kibodrop_string_platforms: Unplugged
-  tutorial_ozobotcolor1_string_platforms: All modern browsers
+  tutorial_ozobotcolor1_string_platforms: Alle moderne browsers
   tutorial_scigirlspixels_string_platforms: Unplugged
-  tutorial_kcjheroines_string_platforms: All modern browsers
-  tutorial_ozobotvalue_string_platforms: All modern browsers
+  tutorial_kcjheroines_string_platforms: Alle moderne browsers
+  tutorial_ozobotvalue_string_platforms: Alle moderne browsers
   tutorial_icodebytes_string_platforms: Unplugged
-  tutorial_clfashion2_string_platforms: All modern browsers
-  tutorial_ai4all_string_platforms: All modern browsers
-  tutorial_cldata_string_platforms: All modern browsers
+  tutorial_clfashion2_string_platforms: Alle moderne browsers
+  tutorial_ai4all_string_platforms: Alle moderne browsers
+  tutorial_cldata_string_platforms: Alle moderne browsers
   tutorial_spheroinputs_string_platforms: Unplugged
   tutorial_edisoncount_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_spheroloops_string_platforms: Unplugged
   tutorial_kiboprogram_string_platforms: Unplugged
   tutorial_hellorubycsin60_string_platforms: Unplugged
-  tutorial_clfashion1_string_platforms: All modern browsers
+  tutorial_clfashion1_string_platforms: Alle moderne browsers
   tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
   tutorial_edisonmystery_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_microbitseaturtles_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
-  tutorial_ozobotknow_string_platforms: All modern browsers
+  tutorial_ozobotknow_string_platforms: Alle moderne browsers
   tutorial_imagilabs_string_platforms: Android phone, iPhone, Unplugged
   tutorial_irobotsimulator_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
-  tutorial_irobotkind_string_platforms: All modern browsers
+  tutorial_irobotkind_string_platforms: Alle moderne browsers
   tutorial_firiavirtual_string_platforms: Microsoft Edge, Chrome
   tutorial_irobotguesscode_string_platforms: Chrome, Android tablet, Android phone
-  tutorial_ozobotnouns_string_platforms: All modern browsers
-  tutorial_nasa3d_string_platforms: All modern browsers
-  tutorial_blupants_string_platforms: All modern browsers
-  tutorial_legodance_string_platforms: All modern browsers
+  tutorial_ozobotnouns_string_platforms: Alle moderne browsers
+  tutorial_nasa3d_string_platforms: Alle moderne browsers
+  tutorial_blupants_string_platforms: Alle moderne browsers
+  tutorial_legodance_string_platforms: Alle moderne browsers
   tutorial_nearpodcoding_string_platforms: All modern browsers, Screen reader
-  tutorial_kcjplastic_string_platforms: All modern browsers
-  tutorial_legojourney_string_platforms: All modern browsers
-  tutorial_legohopper_string_platforms: All modern browsers
+  tutorial_kcjplastic_string_platforms: Alle moderne browsers
+  tutorial_legojourney_string_platforms: Alle moderne browsers
+  tutorial_legohopper_string_platforms: Alle moderne browsers
   tutorial_catrobatembroidery_string_platforms: Android phone, Screen reader
-  tutorial_irobotphone_string_platforms: All modern browsers
-  tutorial_codeguppydraw_string_platforms: All modern browsers
+  tutorial_irobotphone_string_platforms: Alle moderne browsers
+  tutorial_codeguppydraw_string_platforms: Alle moderne browsers
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
   tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_dance2019_string_detail_platforms: ''
@@ -8736,6 +8762,7 @@ nl:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8757,6 +8784,7 @@ nl:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8768,6 +8796,7 @@ nl:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9467,6 +9496,7 @@ nl:
   tutorial_rpstress_string_detail_programming_languages: Blocks
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9488,6 +9518,7 @@ nl:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blocks
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blocks
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9500,6 +9531,7 @@ nl:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blocks
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -10261,27 +10293,27 @@ nl:
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codemonkeyjr_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
-  tutorial_bananatales_string_platforms: All modern browsers
+  tutorial_bananatales_string_platforms: Alle moderne browsers
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
-  tutorial_cacolor_string_platforms: All modern browsers
+  tutorial_cacolor_string_platforms: Alle moderne browsers
   tutorial_kodablebeach_string_platforms: All modern browsers, iPad, iPhone
   tutorial_tynkeren_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_tynkerjavapro_string_platforms: 'All modern browsers '
-  tutorial_grasshopperhack_string_platforms: All modern browsers
+  tutorial_grasshopperhack_string_platforms: Alle moderne browsers
   tutorial_pbskids_string_platforms: Android tablet, iPad, Windows phone, Android
     phone, iPhone, Game console app
-  tutorial_nclabdata_string_platforms: All modern browsers
-  tutorial_grasshopperphoto_string_platforms: All modern browsers
+  tutorial_nclabdata_string_platforms: Alle moderne browsers
+  tutorial_grasshopperphoto_string_platforms: Alle moderne browsers
   tutorial_tynkerpyland_string_platforms: 'All modern browsers '
   tutorial_codeitimages_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_hyperpadenemy_string_platforms: iPad
   tutorial_tynkerpro_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_trashtag_string_platforms: All modern browsers
-  tutorial_casiege_string_platforms: All modern browsers
-  tutorial_thunkableyeet_string_platforms: All modern browsers
+  tutorial_trashtag_string_platforms: Alle moderne browsers
+  tutorial_casiege_string_platforms: Alle moderne browsers
+  tutorial_thunkableyeet_string_platforms: Alle moderne browsers
   tutorial_vidcodedeal_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codehsgeno_string_platforms: All modern browsers
+  tutorial_codehsgeno_string_platforms: Alle moderne browsers
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
@@ -10289,34 +10321,34 @@ nl:
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
-  tutorial_vidcodemap_string_platforms: All modern browsers
+  tutorial_vidcodemap_string_platforms: Alle moderne browsers
   tutorial_robotmagicfarm_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
-  tutorial_codehstriangle_string_platforms: All modern browsers
+  tutorial_codehstriangle_string_platforms: Alle moderne browsers
   tutorial_ttwhitehouse_string_platforms: Chrome, Firefox
   tutorial_modulo_string_platforms: PCs
-  tutorial_codingtown_string_platforms: All modern browsers
+  tutorial_codingtown_string_platforms: Alle moderne browsers
   tutorial_kanoart_string_platforms: Microsoft Edge, Chrome, Android tablet, iPad
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_htmlmuffin_string_platforms: All modern browsers
+  tutorial_htmlmuffin_string_platforms: Alle moderne browsers
   tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_careconfigure_string_platforms: All modern browsers
+  tutorial_careconfigure_string_platforms: Alle moderne browsers
   tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_ozaria_string_platforms: All modern browsers
+  tutorial_ozaria_string_platforms: Alle moderne browsers
   tutorial_ttovum_string_platforms: Chrome, Firefox
   tutorial_ttpassage_string_platforms: Chrome, Firefox
   tutorial_tynkerhtmlen_string_platforms: 'All modern browsers '
   tutorial_ttfrog_string_platforms: Chrome, Firefox
-  tutorial_codemojijava_string_platforms: All modern browsers
+  tutorial_codemojijava_string_platforms: Alle moderne browsers
   tutorial_ccfirewall_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: Alle moderne browsers, iPad, zonder kabel
-  tutorial_baroborav_string_platforms: All modern browsers
-  tutorial_baroboobstacle_string_platforms: All modern browsers
-  tutorial_pbstorytelling_string_platforms: All modern browsers
+  tutorial_baroborav_string_platforms: Alle moderne browsers
+  tutorial_baroboobstacle_string_platforms: Alle moderne browsers
+  tutorial_pbstorytelling_string_platforms: Alle moderne browsers
   tutorial_kibosnow_string_platforms: KIBO Robot Kit
   tutorial_kibohappy_string_platforms: KIBO Robot Kit
   tutorial_rubylove_string_platforms: All modern browsers, Unplugged
@@ -10324,42 +10356,42 @@ nl:
     Android phone, iPhone
   tutorial_spherobaby_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
-  tutorial_toxarchitect_string_platforms: All modern browsers
-  tutorial_idodge_string_platforms: All modern browsers
-  tutorial_firiacodebot_string_platforms: All modern browsers
+  tutorial_toxarchitect_string_platforms: Alle moderne browsers
+  tutorial_idodge_string_platforms: Alle moderne browsers
+  tutorial_firiacodebot_string_platforms: Alle moderne browsers
   tutorial_modlighthouse_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad, iPhone
   tutorial_spherogreen_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
-  tutorial_ozopopstar_string_platforms: All modern browsers
+  tutorial_ozopopstar_string_platforms: Alle moderne browsers
   tutorial_eddesign_string_platforms: All modern browsers, iPad, Android tablets
-  tutorial_edshapeup_string_platforms: All modern browsers
+  tutorial_edshapeup_string_platforms: Alle moderne browsers
   tutorial_ozocolor_string_platforms: Unplugged
-  tutorial_kcjanimals_string_platforms: All modern browsers
+  tutorial_kcjanimals_string_platforms: Alle moderne browsers
   tutorial_icomputeeggs_string_platforms: All modern browers, Android phone, Android
     tablet, iPad, iPhone
   tutorial_rootunplugged_string_platforms: Unplugged
   tutorial_rgtreasure_string_platforms: Unplugged
   tutorial_peblioportraits_string_platforms: Chrome
   tutorial_rootcodebreak_string_platforms: iPad
-  tutorial_microbit14_string_platforms: All modern browsers
-  tutorial_barobomoon_string_platforms: All modern browsers
+  tutorial_microbit14_string_platforms: Alle moderne browsers
+  tutorial_barobomoon_string_platforms: Alle moderne browsers
   tutorial_eddog_string_platforms: All modern browsers, iPad, Android tablets
-  tutorial_microbit15_string_platforms: All modern browsers
-  tutorial_unity_string_platforms: All modern browsers
-  tutorial_blockscadtarget_string_platforms: All modern browsers
-  tutorial_tcadicicles_string_platforms: All modern browsers
-  tutorial_blockscadscale_string_platforms: All modern browsers
-  tutorial_tcadloops_string_platforms: All modern browsers
-  tutorial_phidgets_string_platforms: All modern browsers
-  tutorial_kcjmerry_string_platforms: All modern browsers
+  tutorial_microbit15_string_platforms: Alle moderne browsers
+  tutorial_unity_string_platforms: Alle moderne browsers
+  tutorial_blockscadtarget_string_platforms: Alle moderne browsers
+  tutorial_tcadicicles_string_platforms: Alle moderne browsers
+  tutorial_blockscadscale_string_platforms: Alle moderne browsers
+  tutorial_tcadloops_string_platforms: Alle moderne browsers
+  tutorial_phidgets_string_platforms: Alle moderne browsers
+  tutorial_kcjmerry_string_platforms: Alle moderne browsers
   tutorial_modvariables_string_platforms: All modern browsers, Android tablet, Android
     phone, iPad, iPhone
   tutorial_codestersmicro_string_platforms: 'All modern browsers '
   tutorial_codestersdata_string_platforms: 'All modern browsers '
-  tutorial_ikodexmas_string_platforms: All modern browsers
-  tutorial_rpisensehat_string_platforms: All modern browsers
-  tutorial_modtraits_string_platforms: All modern browsers
+  tutorial_ikodexmas_string_platforms: Alle moderne browsers
+  tutorial_rpisensehat_string_platforms: Alle moderne browsers
+  tutorial_modtraits_string_platforms: Alle moderne browsers
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
   tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
