@@ -80,7 +80,7 @@ Hour of Codeをパソコン、タブレット、スマートフォンで、も�
 Hour of Codeは世界的なイベントです。     Hour of Codeを特別なものにする方法をいくつかご紹介します。
 
 - <a href="https://staging.code.org/certificates">子供がアクティビティを完了したときに授与するコードの時間証明書</a>を印刷します。
-- 自宅または<ahref = "https：// storeでステッカーを印刷</ a>する<ahref =" https://staging.hourofcode.com/us/promote/resources#stickers "mark =" crwd-mark ">ステッカーを印刷する .code.org / "mark =" crwd-mark ">オンラインで購入</a>してください。
+- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
 - 自宅のHour　of　Codeの写真とビデオをソーシャルメディアで共有しましょう。   Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
