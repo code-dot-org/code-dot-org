@@ -46,18 +46,15 @@ social:
 
   .col-50
     .tutorial-tile
-      %a{href: "/oceans"}
-        %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/oceans-overview.png"}
+      %a{href: "/ai"}
+        %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/ai_2020_overview.png"}
       .tutorial-info
         %span
-          %h3.tutorial-info-h=hoc_s(:hoc_overview_oceans_tutorial_header)
+          %h3.tutorial-info-h=hoc_s(:hoc2020_ai_header)
           .smalltext=hoc_s(:hoc_overview_oceans_tutorial_desc)
         %span
-          %a{href: "/oceans"}
+          %a{href: "/ai"}
             %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
-          .tutorial-info-guide
-            %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/9/")}
-              = I18n.t(:hoc_overview_view_teacher_guide)
 
 .tile-container-responsive
   = view :top_hoc_tutorials
