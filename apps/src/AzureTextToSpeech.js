@@ -1,9 +1,6 @@
+import $ from 'jquery';
 import {hashString, findProfanity} from '@cdo/apps/utils';
 import Sounds from '@cdo/apps/Sounds';
-
-// XMLHttpRequest readyState 4 means the request is done.
-// https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
-const READY_STATE_DONE = 4;
 
 /**
  * A packaged response for a requested sound. Used for caching and for playing sound bytes.
@@ -80,15 +77,7 @@ export default class AzureTextToSpeech {
    * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
    */
   createSoundPromise = opts => {
-    const {
-      text,
-      gender,
-      languageCode,
-      url,
-      ssml,
-      token,
-      onProfanityFound
-    } = opts;
+    const {text, gender, languageCode, onProfanityFound} = opts;
     const cachedSound = this.getCachedSound_(languageCode, gender, text);
     const wrappedSetCachedSound = soundResponse => {
       this.setCachedSound_(languageCode, gender, text, soundResponse);
@@ -125,32 +114,23 @@ export default class AzureTextToSpeech {
         return;
       }
 
-      // As of 11/18/2020, jQuery does not support arraybuffer as a responseType; use XMLHttpRequest instead.
-      let request = new XMLHttpRequest();
-      request.open('POST', url, true);
-      request.setRequestHeader('Authorization', `Bearer ${token}`);
-      request.setRequestHeader('Content-Type', 'application/ssml+xml');
-      request.setRequestHeader(
-        'X-Microsoft-OutputFormat',
-        'audio-16khz-32kbitrate-mono-mp3'
-      );
-      request.responseType = 'arraybuffer';
-      request.onreadystatechange = () => {
-        if (request.readyState !== READY_STATE_DONE) {
-          return;
-        }
-
-        if (request.status >= 200 && request.status < 300) {
+      $.ajax({
+        url: '/dashboardapi/v1/text_to_speech/azure',
+        method: 'POST',
+        dataType: 'binary',
+        responseType: 'arraybuffer',
+        data: {text, gender, locale: languageCode}
+      })
+        .done(data => {
           const soundResponse = wrappedCreateSoundResponse({
-            bytes: request.response
+            bytes: data
           });
           wrappedSetCachedSound(soundResponse);
           resolve(soundResponse);
-        } else {
-          resolve(wrappedCreateSoundResponse({error: request.statusText}));
-        }
-      };
-      request.send(ssml);
+        })
+        .fail(xhr => {
+          resolve(wrappedCreateSoundResponse({error: xhr.statusText}));
+        });
     });
   };
 
