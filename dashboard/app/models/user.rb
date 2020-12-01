@@ -2261,24 +2261,26 @@ class User < ActiveRecord::Base
     end
   end
 
+  # The number of times a user has attempted to join a section in the last 24 hours
+  # Returns nil if not section join attempts.
   def num_failed_section_attempts
-    properties['section_attempts'] || 0
+    properties['section_attempts']
   end
 
+  # There are two possible states in which we would want to reset the section attempt values
+  # 1) User has never joined a section and thus the values must be initialized
+  # 2) 24 hours have passed since the user last attempted to join a section
   def reset_section_attempts?
-    num_failed_section_attempts == 0 || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
+    !num_failed_section_attempts || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
   end
 
-  # If 24 hours has passed, reset the section attempts value to zero.
-  # Initialize the key/value pair in properties if it does not yet exist.
   def reset_failed_section_attempts
     properties['section_attempts'] = 0
     properties['section_attempts_last_reset'] = DateTime.now.to_s
     save(validate: false)
   end
 
-  # Force user to complete a captcha after 3 failed join section attempts within 24 hours
-  # Check to see if 24 hours have passed. If so, reset to zero.
+  # Users must complete a captcha when joining a section if they have joined 3 or more in the past 24 hours
   def display_captcha?
     if reset_section_attempts?
       reset_failed_section_attempts
