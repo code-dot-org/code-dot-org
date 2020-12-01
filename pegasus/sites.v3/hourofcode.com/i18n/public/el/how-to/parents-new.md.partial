@@ -3,88 +3,168 @@ title: '"Πώς να" οδηγός για τους γονείς'
 ---
 
 # Πώς να υλοποιήσετε μια Ώρα του Κώδικα μαζί με το παιδί σας
-Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+Η Ώρα του Προγραμματισμού είναι ένας απλός και διασκεδαστικός τρόπος να γνωρίσει το παιδί σας την επιστήμη των υπολογιστών, ίσως και για πρωταρχική φορά- μια δοκιμή θα σας πείσει. Η επιστήμη των υπολογιστών όχι μόνο είναι θεμελιώδης σε όλα τα πεδία μελέτης, αλλά <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">πρόσφατες μελέτες καταδεικνύουν ότι </a>: παιδιά που μελετούν την επιστήμη των υπολογιστών αποδίδουν καλύτερα σε άλλα μαθήματα, είναι άριστοι στην επίλυση προβλημάτων, και είναι<font color="00adbc">17% πιο πιθανό να εγγραφούν σε κολέγιο</b></font>.
 
-You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
+Μπορείς και εσύ να έρθεις στην παρέα των δεκάδων εκατομμυρίων μαθητών από όλον τον κόσμο σε αυτό το παγκόσμιο γεγονός. Μαζί, μπορούμε να εμπνεύσουμε τα παιδιά να μαθαίνουν, να σπάνε στερεότυπά, και να βοηθάμε τα παιδιά να ανακαλύπτουν ενδιαφέροντα που δεν είχαν ανακαλύψει πριν. Το καλύτερο από όλα, έχετε ήδη ό,τι χρειάζεστε για να φέρετε την Ώρα του Προγραμματισμού μέσα στο σπίτι σας!
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
-<h3>What do I need to get started?</h3>
-The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
+<h3>Τι χρειαζόμαστε για να ξεκινήσουμε;</h3>
+Η Ώρα του Προγραμματισμού είναι απλή σε εκτέλεση - ακόμα και για αρχάριους. Δεν χρειάζεστε εμπειρία στην επιστήμη των υπολογιστών ή στην διδασκαλία προκειμένου να προσφέρετε μια διασκεδαστική δραστηριότητα στα παιδιά σας που θα τα κάνει και να μαθαίνουν και να γελάνε ταυτόχρονα.
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+Μπορείτε να δοκιμάσετε την Ώρα του Προγραμματισμού με έναν υπολογιστή, ένα τάμπλετ, ένα έξυπνο τηλέφωνο ή παντελώς χωρίς ρεύμα/βύσμα. Σας παραθέτουμε εδώ έναν τρόπο για να ξεκινήσετε.
 
 ***
 
-## 1) Explore activities and tutorials.
+## 1)Εξερευνήστε δραστηριότητες και εκπαιδευτικά βίντεο.
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-There are countless <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> available to you if you’re working on a computer with internet access. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
+Υπάρχουν πολλές<a href="https://hourofcode.com/us/learn">δραστηριότητες Ώρας του Προγραμματισμού</a>διαθέσιμες για εσάς που δουλεύετε με υπολογιστές με πρόσβαση στο διαδίκτυο. Σας ενθαρρύνουμε να ρίξετε μια ματιά σε κάποιες από τις επιλογές που διαθέτουμε για εσάς προκαταβολικά έτσι ώστε να μπορείτε να οδηγήσετε το παιδί σας προς τις ασκήσεις που θα απολαμβάνει.
 
-All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
+Όλες οι δραστηριότητες που διαθέτουμε συνδυάζουν την επίλυση προβλημάτων και την κριτική σκέψη με διασκέδαση και δημιουργικότητα, αλλά σας παραθέτουμε εδώ κάποιες από τις αγαπημένες δραστηριότητες των μαθητών:
 
-- For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
-- For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
+- Για παιδιά που τους αρέσει να παίζουν:<a href="https://code.org/minecraft">Ναρκαλιευτής</a> ή <a href="https://code.org/dance">Πάρτι Χορού</a>
+- Για τα παιδιά που τους αρέσει ο Ντίσνεϊ:<a href="https://code.org/starwars">Ο Πόλεμος των Άστρων</a><a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Ψυχρά και Ανάποδα</a> ή <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Μοάνα</a>
+- Για το παιδί που του αρέσει να μαθαίνει:<a href="https://code.org/oceans">Al για τους Ωκεανούς<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Φτιάξτε Μουσική από το μηδέν</a></li> </ul> 
+  
+  <p spaces-before="0">
+    
 
-<h3>Low-tech or no-tech?</h3>
-If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.
+<h3>Περιορισμένη ή καθόλου τεχνολογία;</h3>
+Αν θα χρησιμοποιείτε περιορισμένη ή και καθόλου τεχνολογία, μπορείτε να φιλτράρετε<a href="https://hourofcode.com/us/learn">δραστηριότητες της Ώρας του Προγραμματισμού</a> επιλέγοντας "Καθόλου υπολογιστές ή συσκευές" στην ενότητα <em>τεχνολογία τάξης</em>.
+  </p>
+  
+  <p spaces-before="0">
+    <a href="{{ urls/learn }}"><img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" /></a>
+  </p>
+  
+  <p spaces-before="0">
+    Μπορείτε επίσης να ρίξετε μια ματιά σε αυτά τα<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu"> σύντομα βίντεο</a>για περισσότερες ιδέες διευκόλυνσης μιας δραστηριότητας χωρίς τη χρήση ρεύματος/βύσματος στο σπίτι!
+  </p>
 
-[<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
+<h2 spaces-before="0">
+  2) Ετοιμαστείτε από πριν
+</h2>
 
-You can also check out these <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">short videos</a> for more ideas on how to facilitate an unplugged activity at home!
+<p spaces-before="0">
+  Τώρα που έχετε κάποια εκπαιδευτικά βίντεο στο μυαλό σας, μπορεί να σας βοηθήσει αν δοκιμάσετε αυτές τις δραστηριότητες στην συσκευή σας πριν φέρετε το παιδί σας σε επαφή με αυτές.
+</p>
 
-## 2) Prepare ahead of time
-Now that you have some tutorials in mind, it may be helpful to try these activities on your device before introducing them to your child.
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" /></a>
+</p>
 
-[<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  
 
-<h3>More than one child at home?</h3>
-Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
+<h3>Πάνω από ένα παιδί στο σπίτι;</h3>
+Αναλογιστείτε να παρέχετε σε κάθε ένα από τα παιδιά σας με ακουστικά κεφαλής αν θα δουλεύουν σε ξεχωριστές συσκευές. Κατά αυτόν τον τρόπο, θα μπορούν να ασχολούνται παίζοντας με τις δραστηριότητες χωρίς να αποσπάται η προσοχή του ενός από το άλλο.
+</p>
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
+<p spaces-before="0">
+  Αν θα χρησιμοποιείτε μόνο μια συσκευή, ή απλώς θέλετε να κάνετε την Ώρα του Προγραμματισμού που διαθέτετε πιο διαδραστική, δοκιμάστε<a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">τον προγραμματισμό σε ζεύγη</a>. Ο προγραμματισμός σε ζεύγη ενθαρρύνει τα παιδιά να δουλεύουν μαζί. Όταν συνεργάζονται, αλληλοβοηθούνται στην επίλυση προβλημάτων. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
+</p>
 
-<h3>Get the kids excited! </h3>
-This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+<p spaces-before="0">
+  
 
-- Show them an <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">inspirational video</a> that features one of their favorite role models
-- Inspire them with a video on one of the <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">many careers</a> that computer science skills can lead to
-- <a href="https://store.code.org/">Order some swag</a>! You can choose from t-shirts, stickers, or even temporary tattoos. Share it with them right away to get them excited, or save it for the end of your Hour of Code as a special prize.
+<h3>Κάντε τα παιδιά να ενθουσιαστούν! </h3>
+Αυτή είναι μια καλή ευκαιρία να προσθέσετε ένα νέο τύπο δραστηριότητας στην ημέρα του παιδιού σας. Μπορείτε να επεκτείνετε την διασκέδαση πέραν από ένα εκπαιδευτικό βίντεο με αυτές τις προτάσεις:
+</p>
+
+<ul>
+  <li>
+    Δείξτε τους ένα<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">εμπνευσμένο βίντεο που θα τα εμπνεύσει</a>στο οποίο συμμετέχει ένα από τα αγαπημένα τους πρότυπα προς μίμηση
+  </li>
+  <li>
+    Εμπνεύστε τους με ένα βίντεο σε μία από τις<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">πολλές σταδιοδρομίες</a>που μπορούν να οδηγήσουν οι δεξιότητες στην επιστήμη των υπολογιστών
+  </li>
+  <li>
+    <a href="https://store.code.org/">Παραγγείλετε κάποια επώνυμα προϊόντα που φέρουν το εμπορικό μας σήμα</a>! Μπορείτε να επιλέξετε από μπλουζάκια, αυτοκόλλητα, ή ακόμα και προσωρινά τατουάζ. Μοιραστείτε αμέσως μαζί τους ό,τι και αν πάρετε για να τα κάνετε να ενθουσιαστούν, ή φυλάξτε ό,τι και αν πάρετε για το τέλος της Ώρας του Προγραμματισμού για να πάρει τη μορφή ενός ξεχωριστού βραβείου.
+  </li>
+</ul>
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3) Tips for introducing your child to CS
+<h2 spaces-before="0">
+  3)Κολπάκια για να φέρετε σε επαφή το παιδί σας με την Επιστήμη των Υπολογιστών
+</h2>
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+<p spaces-before="0">
+  Δεν πειράζει αν και εσείς και το παιδί σας είστε παντελώς ανίδεοι αναφορικά με την επιστήμη των υπολογιστών. Σας παραθέτουμε εδώ κάποιες ιδέες για να γνωρίσετε την δική σας δραστηριότητα της Ώρα του Προγραμματισμού και να σας βάλει και τους δύο σε σκέψεις γύρω από την επιστήμη των υπολογιστών:
+</p>
 
-- Explain ways that technology impacts our lives, with specific examples that may interest your child. For example, you could talk about medicine or connecting people virtually. Also, check out <a href="https://code.org/csforgood">Code.org/CSforGood</a> for suggested discussion questions.
-- Together, list everyday things that use code in order to work properly.
+<ul>
+  <li>
+    Να εξηγείτε τους τρόπους με τους οποίους η τεχνολογία επηρεάζει την ζωή μας, με συγκεκριμένα παραδείγματα που μπορεί να κινήσουν το ενδιαφέρον των παιδιών σας. Για παράδειγμα, μπορείτε να μιλήσετε για την ιατρική ή την εικονική σύνδεση ανθρώπων. Επίσης, ρίξτε μια ματιά <a href="https://code.org/csforgood">(στον Οργανισμό Προγραμματισμού)Code.org/CSforGood</a> για προτεινόμενες ερωτήσεις συζήτησης.
+  </li>
+  <li>
+    Μαζί, απαριθμήστε καθημερινά πράγματα που χρησιμοποιούν προγραμματισμό προκειμένου να λειτουργήσουν κατάλληλα.
+  </li>
+</ul>
 
-[<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" /></a>
+</p>
 
-<h3>Have girls at home?</h3>
-<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+<p spaces-before="0">
+  
 
-<h3>Problem-solve together</h3>
-Lastly, when your child comes across difficulties it's okay to respond:
-- “I don’t know. Let’s figure this out together.”
-- «Η Τεχνολογία δεν λειτουργεί πάντα με τον τρόπο που θέλουμε.»
-- «Η εκμάθηση προγραμματισμού είναι όπως η εκμάθηση μιας νέας γλώσσας. Δεν τη μιλάς άνετα αμέσως."
+<h3>Έχετε κορίτσια στο σπίτι;</h3>
+<a href="https://code.org/girls">Σας παραθέτουμε εδώ τις προτάσεις μας</a>για να κινήσουμε το ενδιαφέρον τους στην επιστήμη των υπολογιστών. <strong x-id="1">Μια συμβουλή από επαγγελματίες</strong>:Μπορείτε να αρχίσετε λέγοντάς τους ότι θα είναι καταπληκτικοί σε αυτήν την δραστηριότητα!
+</p>
 
-Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+<p spaces-before="0">
+  
+
+<h3>Επιλύστε προβλήματα μαζί</h3>
+Τέλος, όταν το παιδί σας συναντήσει δυσκολίες, μπορούμε κάλλιστα να του αποκριθούμε:
+</p>
+
+<ul>
+  <li>
+    “I don’t know. Let’s figure this out together.”
+  </li>
+  <li>
+    «Η Τεχνολογία δεν λειτουργεί πάντα με τον τρόπο που θέλουμε.»
+  </li>
+  <li>
+    «Η εκμάθηση προγραμματισμού είναι όπως η εκμάθηση μιας νέας γλώσσας. Δεν τη μιλάς άνετα αμέσως."
+  </li>
+</ul>
+
+<p spaces-before="0">
+  Η επιστήμη των υπολογιστών περιστρέφεται γύρω από την εκμάθηση "διόρθωσης" καταστάσεων που δεν τελείωσαν με τον τρόπο που σκεφτόμασταν ότι θα τελείωναν.  Μαζί, εσείς και το παιδί σας μπορείτε να σκεφτείτε δημιουργικούς τρόπους για να επιλύσετε το πρόβλημα!
+</p>
 
 
-## 4) Don’t forget to celebrate!
+<h2 spaces-before="0">
+  4) Μην ξεχάσατε να γιορτάσετε!
+</h2>
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+<p spaces-before="0">
+  Η Ώρα του Προγραμματισμού είναι μια παγκόσμια εκδήλωση, και η οικογένεια σας αξίζει να το γιορτάσει. Σας παραθέτουμε εδώ κάποιους τρόπους να κάνετε την δική σας Ώρα του Προγραμματισμού εξαιρετικά διαφορετική:
+</p>
 
-- Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
-- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+<ul>
+  <li>
+    Τυπώστε<a href="https://staging.code.org/certificates">Πιστοποιητικά της Ώρας του Προγραμματισμού</a>που θα τα απονέμετε όταν το παιδί σας ολοκληρώσει την δραστηριότητά του
+  </li>
+  <li>
+    <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Τυπώστε αυτοκόλλητα</a>στο σπίτι ή<a href="https://store.code.org/">αγοράστε τα διαδικτυακά</a>, ως μια επιπρόσθετη έκπληξη.
+  </li>
+  <li>
+    Μοιραστείτε φωτογραφίες και βίντεο στα μέσα κοινωνικής δικτύωσης από την δική σας "σπιτική" Ώρα του Προγραμματισμού. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  </li>
+</ul>
 
-[<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" /></a>
+</p>
 
 <h2>Τι γίνεται μετά την Ώρα του Κώδικα;</h2>
 
-Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+<p spaces-before="0">
+  Computer science doesn’t have to end with the Hour of Code! Ενώ 90% των γονέων θέλουν το παιδί τους να μάθει επιστήμη υπολογιστών, μολαταύτα τα περισσότερα σχολεία δεν την διδάσκουν ακόμη. Tο σχολικό πρόγραμμα είναι βασισμένο πάνω στον Παγκόσμιο Ιστό (Web) και η χρήση του είναι δωρεάν, για πάντα, ως μια βοήθεια. <a href="https://code.org/yourschool">Μάθετε τον τρόπο με τον οποίο</a>να φέρετε την επιστήμη των υπολογιστών στο σχολείο του παιδιού σας σήμερα.
+</p>

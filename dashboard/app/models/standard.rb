@@ -13,7 +13,7 @@
 #  index_standards_on_organization_and_organization_id  (organization,organization_id) UNIQUE
 #
 
-class Standard < ActiveRecord::Base
+class Standard < ApplicationRecord
   has_and_belongs_to_many :lessons, association_foreign_key: 'stage_id'
 
   def summarize

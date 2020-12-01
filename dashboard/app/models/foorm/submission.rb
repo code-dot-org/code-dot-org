@@ -10,7 +10,7 @@
 #  updated_at   :datetime         not null
 #
 
-class Foorm::Submission < ActiveRecord::Base
+class Foorm::Submission < ApplicationRecord
   has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
   has_one :misc_survey, foreign_key: :foorm_submission_id
 

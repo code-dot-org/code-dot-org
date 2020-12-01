@@ -22,7 +22,7 @@
 # complete the course.
 #
 # Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
-class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
+class Plc::EnrollmentUnitAssignment < ApplicationRecord
   UNIT_STATUS_STATES = [
     START_BLOCKED = 'start_blocked'.freeze,
     IN_PROGRESS = 'in_progress'.freeze,

@@ -15,7 +15,7 @@
 #
 
 # A donor record sourced from the Pegasus CSV.
-class Donor < ActiveRecord::Base
+class Donor < ApplicationRecord
   include Seeded
 
   def self.setup

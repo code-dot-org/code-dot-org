@@ -20,7 +20,7 @@
 #  index_pd_scholarship_infos_on_user_id_and_app_year_and_course  (user_id,application_year,course) UNIQUE
 #
 
-class Pd::ScholarshipInfo < ActiveRecord::Base
+class Pd::ScholarshipInfo < ApplicationRecord
   include Pd::Application::ActiveApplicationModels
   include Pd::Application::ApplicationConstants
   include Pd::WorkshopConstants
