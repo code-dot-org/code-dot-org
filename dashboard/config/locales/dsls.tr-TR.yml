@@ -614,12 +614,18 @@ tr-TR:
           ## Kaynaklar
 
           * [Girdi ve Çıktı - Aktivite Rehberi](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: |-
+          [Girdi ve Çıktı -  Örnek]
+          (https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing) - Aktivite Rehberi ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))
       CSD U1 Lesson 6 Overview:
         markdown: "# Overview\n\nBu derste, işlemenin insanlar ve bilgisayarlar tarafından
           nasıl girdileri çıktılara dönüştürmek için kullanıldığını öğreneceksiniz.\n\n##
           Kelime Hazinesi\n\n* **Algoritma** - Bilgisayarlar tarafından yürütülebilen
           işlemler için belli talimatlar dizisi \n\n## Kaynaklar\n\n* [Kart Sıralama
           Algoritması - Etkinlik Rehberi](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+        teacher_markdown: "* [Kart Sıralama Algoritması](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Örnek ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))"
       CSD U1 Lesson 7 Overview:
         markdown: |
           # Genel Bakış
@@ -629,6 +635,9 @@ tr-TR:
           ## Kaynaklar
 
           * [Depolama ve İşleme - Etkinlik Rehberi](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+        teacher_markdown: "* [Depolama ve İşleme - Örnek](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          - Aktivite Rehberi([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))"
       CSD U1 Lesson 8 Overview:
         markdown: |
           # Genel Bakış
@@ -638,6 +647,9 @@ tr-TR:
           ## Kaynaklar
 
           * [Uygulama Keşfi - Etkinlik Rehberi](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+        teacher_markdown: "* [Uygulama Arama ANAHTARI](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          - Aktivite Rehberi([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)"
       CSD U1 Lesson 9 Overview:
         markdown: |
           # Genel Bakış
@@ -648,6 +660,9 @@ tr-TR:
           * [Uygulamalar ve Problem Çözümü - Proje Rehberi](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Uygulamalar ve Problem Çözümü - Eş Gözden Geçirme](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Uygulamalar ve Problem Çözümü - Değerlendirme Tablosu](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+        teacher_markdown: |-
+          * [Uygulamalar ve Problem Çözümü](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Proje Rehber Örneği ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Uygulamalar ve Problem Çözümü]](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Akran Değerlendirmesi Örneği ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
       CSD U2 Design Project:
         content1: açıklama buraya
       CSD U2 Design Project_2018:
@@ -2106,6 +2121,9 @@ tr-TR:
           ## Kaynaklar
 
           * [Bilgisayar Nedir - Etkinlik Rehberi](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: "[Bilgisayar Nedir - Örnek](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - Aktivite Rehberi([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
       behaviors 1 predict:
         answers:
         - text: Hareketli nesne dönecektir

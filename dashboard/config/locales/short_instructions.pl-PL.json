@@ -2833,10 +2833,11 @@
         "outbreak2": "Zmieniaj zdrowe potwory w chore potwory, gdy się dotykają.",
         "outbreak3": "Zamieniaj potwory w potwory z maskami na twarzach po kliknięciu na nich.",
         "outbreak4": "Zmień liczbę i rozmiar duszków potworów w swojej symulacji.",
-        "outbreak5": "Spraw, aby chore potwory zaczęły zdrowieć, gdy rozpocznie się symulacja i gdy zdrowy potwór dotknie chorego potwora.",
-        "outbreak7": "Utwórz nowy kostium dla potworów odpornych na wirusa i użyj go w swojej symulacji.",
+        "outbreak5": "Utwórz nowy kostium dla potworów odpornych na wirusa i użyj go w swojej symulacji.",
+        "outbreak7": "Spraw, aby chore potwory zaczęły zdrowieć, gdy rozpocznie się symulacja i gdy zdrowy potwór dotknie chorego potwora.",
         "outbreak8": "Udostępnij wiadomość swojej symulacji.",
-        "outbreak_freeplay": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie."
+        "outbreak_freeplay": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie.",
+        "outbreak1": "Utwórz 10 zdrowych duszków i jednego chorego duszka. Zmień ich rozmiar i spraw, by wędrowały."
       }
     }
   }

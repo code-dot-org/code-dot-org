@@ -26,7 +26,7 @@ All of our activities integrate problem-solving and critical-thinking with fun a
 
 - For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
 - For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
+- سیکھنے سے محبت کرنے والے بچے کے لئے:<a href="https://code.org/oceans">سمندروں کے لئے مصنوعی ذہانت</a>یا<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Scratch کے ذریعے موسیقی بنائیں</a>
 
 <h3>Low-tech or no-tech?</h3>
 If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.

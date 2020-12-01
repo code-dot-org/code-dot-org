@@ -5,7 +5,7 @@ title: À propos
 # À Propos de Nous
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Notre vision est que chaque étudiant dans toutes les écoles ait l'opportunité d'étudier l'informatique, comme c'est le cas pour la biologie, la chimie ou les mathématiques. Nous offrons le programme le plus largement utilisé pour l'enseignement de l'informatique à l'école primaire et secondaire et organisons également la campagne annuelle <a href="https://hourofcode.com" > Hour of Code</a > , qui a impliqué 10% de tous les étudiants dans le monde. Code.org est soutenu par des donneurs généreux comme Amazon, Facebook, Google, la Fondation Infosys, Microsoft, et <a href="/about/donors">beaucoup d'autres</a>.
+  Code.org est un organisme sans but lucratif dédié à accroître l'accès à l'informatique dans les écoles et augmenter la participation des femmes et des minorités peu représentées. Notre vision est que chaque étudiant dans toutes les écoles ait l'opportunité d'étudier l'informatique, comme c'est le cas pour la biologie, la chimie ou les mathématiques. Nous offrons le programme le plus largement utilisé pour l'enseignement de l'informatique à l'école primaire et secondaire et organisons également la campagne annuelle <a href="https://hourofcode.com" > Hour of Code</a > , qui a impliqué 10% de tous les étudiants dans le monde. Code.org est soutenu par des donneurs généreux comme Amazon, Facebook, Google, la Fondation Infosys, Microsoft, et <a href="/about/donors">beaucoup d'autres</a>.
 </div>
 
 [col-40]

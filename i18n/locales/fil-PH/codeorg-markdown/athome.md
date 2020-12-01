@@ -1,68 +1,75 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: Pag-aaral ng computer science nang sarado ang mga paaralan bilang tugon sa Covid19
 ---
 
 <a id="top"></a>
 
-# Learning computer science when schools are closed
+# Pag-aaral ng computer science nang sarado ang mga paaralan
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>Nahaharap tayo sa di-kapani-paniwalang mapaghamon na panahon sa pandaigdigang paglaganap ng COVID-19, nakikipaglaban sa lumalaking mga pag-aalala sa kalusugan, ating mga komunidad, at sa ekonomiya. Ang pangkaligtasang mga pamamaraan ay naghahatid ng malawakang pagsasara ng mga paaralan sa buong bansa. </p>
+<p>Gusto naming suportahan ang mga guro, estudyante at ang mga pamilya sa anumang paraan na magagawa namin. Nasa ibaba ang isang set ng mga mapagkukunan ng impormasyon na makakatulong sa inyong estudyante na matuto ng computer science sa bahay. <strong>Mga magulang – kung pinag-iisipan ninyong gumawa ng Code.org account para sa inyong estudyante o tumulong sa kanila sa pag-access sa isang umiiral na account, <a href="https://support.code.org/hc/en-us/articles/360040703792">pakibasa ang primer na ito</a>.</strong></p>
+<p>Pinagsasama-sama rin namin ang ilang <a href="#teacher-support">mapagkukunan ng impormasyon para makatulong sa mga guro na makapagpatuloy sa pagtuturo ng computer science</a> kapag ang kanilang mga estudyante ay nasa internet (remote) o mga silid-aralan na malayo sa iba. </p>
+<p><a href="#apps">Walang computer sa bahay? Tingnan ang mga opsyon sa smartphone</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
+<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
+<div class="clearboth"></div></div>
+
+## Hour of Code: Subukang sumali sa mga nakahihikayat, panimulang mga tutorial
+Subukan ang isang oras na tutorial na dinisenyo para sa lahat ng edad. May daan-daang mga aktibidad at mga tutorial sa higit sa 45 wika.
+* [Dance Party](https://code.org/dance)  - I-code ang isang dance party na nagtatampok ng musika nina Katy Perry, Shawn Mendes, at marami pa.
+* [Minecraft](https://code.org/api/hour/begin/mc) - Gamitin ang inyong pagka-malikhain at skill sa paglutas ng problema para maglakbay at saliksikin ang mga bagong mundo.
+* [AI para sa mga Karagatan](https://code.org/oceans) - Alamin kung paano gamitin ang AI at machine learning para tugunan ang mga problema ng mundo.
+* [Flappy Code](http://studio.code.org/s/flappy/reset) - Isulat ang iyong sariling flappy game code.
+* [Coding sa Astronomiya](https://quorumlanguage.com/hourofcode/astro1.html) - Matuto tungkol sa astronomiya gamit ang Quorum, isang wika na pino-program na magagamit ng mga mag-aaral na bulag o may kapansanan sa paningin.
+* At marami [pang mga tutorial](https://code.org/hourofcode/overview)!
+
+<p><a href="#top">[Balik sa taas]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## Mga Video: Panooron itong madaling 3-5 minutong pang-edukasyong video
 
 {{ athome_videos }}
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Balik sa taas]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+## Alamin ang mga pundamental sa aming mga kurso na nasa sarili kung ano ang gustong bilis
+### **Mabilis na mga kurso**
+Magandang opsyon para sa mga estudyante na makapagsimula nang sila lamang. Matutunan mo ang mga pundamental ng computer science sa drag & drop blocks. Gawin ang iyong sariling mga guhit at mga game. <strong>Tandaan: Ang mga mabilis na kurso ay available lamang sa Ingles, Hindi, Italian, at Espanyol. Para sa ibang mga wika, inirerekumenda namin ang 20-oras na <a href="https://studio.code.org/s/20-hour">Pinabilis na Kurso</a>. Para makita kung ano ang available sa inyong wika, bisitahin ang aming <a href="https://studio.code.org/courses">catalog ng kurso</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Mabilis na Kurso</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Mabilis na Kurso para sa mga nagsisimula pa lamang magbasa</a>
 
 </div>
 <div style="clear: both"></div>
@@ -73,10 +80,10 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Balik sa taas]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## Matutong magdisenyo at gumawa ng apps sa App Lab
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -86,75 +93,84 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-66">
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<p>Ang App Lab ay isang programming environment kung saan pwede kang gumawa ng mga simpleng app. Magdisenyo ng app, i-code sa JavaScript gamit ang alinmang mga block o teksto, at ibahagi ang iyong likha sa pamilya at mga kaibigan.</p>
+<p>Edad 13+, lahat ng modernong browser, Ingles lamang</p>
+<a href="https://code.org/educate/applab"><button>Subukan ito</button></a>
 
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Balik sa taas]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+## Walang computer sa bahay? Subukan ang mga smartphone apps na ito
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Isang kahali-halinang mobile coding game na nagdadala sa mga mag-aaral sa isang kapana-panabik na pakikipagsapalaran, habang nagtuturo sa mga pundamental ng coding, tulad ng algorithms, pagkilala ng pattern, mga pagkakasunod-sunod, mga loop at mga kondisyonal. <i>(para sa lahat ng edad)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning na learn-to-code platform para sa mga bata na edad 5-9. Lutasin ang mga palaisipan at lumikha ng mga laro kasama ang The Foos habang natututong mag-code. <strong>Tandaan: Ang codeSpark ay nag-aalok ng libreng 3 buwan na pagsubok. Kinakailangan ang email address at impormasyon sa credit card ng magulang sa pag-signup.</strong> <i>(para sa mga nagsisimulang matutong magbasa hanggang Grade 5)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Matuto sa coding kasama ang masaya, mabilis na mga aralin sa iyong phone na nagtuturo sa iyo kung paano magsulat ng tunay na JavaScript. Code gamit ang Google Program. <i>(para sa middle school at pataas)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Balik sa taas]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
+## Limitado o walang access sa internet? Tingnan ang mga unplugged na gawain na ito
+* [Hello Ruby](https://www.helloruby.com/play)  - Ang pinaka-pantastiko na paraan para matuto tungkol sa mga computer, teknolohiya at programming. Mga aktibidad sa hanay ng mga paksa ng CS, tulad ng kakayahan na paliit-liitin ang mga problema at lutasin, mapansin ang mga pattern, mag-isip sa paraan ng algorithm, tukuyin at tanggalin ang mga mali sa problema at magtulungan. *(para sa mga edad 4-10)*
+* [CS Unplugged](https://csunplugged.org/en/) - Isang koleksyon ng libreng materyal sa pagtuturo na nagtuturo ng Computer Science sa pamamagitan ng mga kahali-halina na mga laro at mga palaisipan na gumagamit ng mga kard, pisi, krayola at madaming pagtakbo sa paligid. *(para sa mga edad 5-14)*
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Balik sa taas]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Code Break: Matuto mula sa Code.org team at mga espesyal na panauhin!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Ang mga espesyal na panauhin ay sumasali sa Code.org CEO na si Hadi Partovi sa isang lingguhang interactive na silid-aralan para matuto sa mga konsepto ng computer science tulad ng algorithms, artificial intelligence, at encryption.</p>
+<p>Kung hindi mo pa na-check out ang lahat ng mga yugto sa Code Break, hindi pa napakahuli! Hindi isinahimpapawid ang mga live na yugto, ngunit makikita mo ang lahat ng yugto at mga aktibidad sa sariling bilis <a href="https://code.org/break">dito</a>.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## Suporta sa mga guro sa birtwal o mga silid-aralan na magkakalayo sa isa't isa ang mga mag-aaral
+Pakibisita ang <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> para makita ang mga mapagkukunan ng impormasyon at mga mungkahi para sa mga guro sa birtwal o mga kapaligiran ng silid-aralan na magkakalayo ang guro at mga mag-aaral sa isa't isa. Ang mga mapagkukunan ng impormasyon na partikular sa kurso ay maaaring ma-access sa pamamagitan ng pag-click sa link sa ibaba.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Mga Prinsipyo ng Computer Science</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Mga Tuklas sa Computer Science</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Mga Pundamental ng Computer Science</p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Balik sa taas]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

@@ -2783,7 +2783,7 @@ pl:
             Explore project ideas:
               name: Badanie pomysłów na projekt
             'Farmer: Functions (New)':
-              name: 'Farmerka: Funkcje (Nowe)'
+              name: 'Rolnik: Funkcje (Nowe)'
             Final Project - Presentation Day:
               name: Projekt końcowy - dzień prezentacji
             'Final Project - Unplugged: Design Process':
@@ -2982,13 +2982,13 @@ pl:
             Build a Game:
               name: Utwórz grę
             Farmer Conditional with Cards:
-              name: Warunek farmerki z kartami
+              name: Rolnik Warunkowe instrukcje z kartami
             Farmer Debug Relay Programming:
-              name: Programowanie sztafetowe debugowania farmerki
+              name: Rolnik Debugowanie w Programowaniu przekaźnika
             Farmer Graph Paper Programming:
-              name: Programowanie farmerki na papierze milimetrowym
+              name: Rolnik Programowanie na papierze milimetrowym
             Farmer Impacts of Computing:
-              name: Oddziaływanie informatyczne farmerki
+              name: Rolnik Oddziaływanie informatyczne
             'Farmer: While Loops':
               name: 'Farmer: Pętle "dopóki" (whilei)'
             'Maze: Conditionals with Loops':
@@ -7184,8 +7184,8 @@ pl:
                 kostek". Celem zajęć jest tutaj rozpoczęcie budowania umiejętności
                 przenoszenia rzeczywistych sytuacji na scenariusze online i odwrotnie.
             Conditionals:
-              name: Wyrażenie warunkowe w interfejsie Framer
-              description_student: Musisz powiedzieć komputerowi co zrobić w określonych
+              name: Wyrażenie warunkowe z Rolnikiem
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
                 warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
               description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
                 instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
@@ -8028,7 +8028,7 @@ pl:
             Conditionals in Minecraft:
               name: Wyrażenia warunkowe w Minecrafcie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             Envelope Variables:
               name: Zmienne w kopertach
             Variables in Artist:
@@ -8302,7 +8302,7 @@ pl:
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
             Intro to Conditionals with Farmer:
-              name: Wprowadzenie do wyrażeń warunkowych przy pomocy interfejsu Farmer
+              name: Wprowadzenie do wyrażeń warunkowych z Rolnikiem
             'Algorithms: Dice Race':
               name: 'Algorytmy: Wyścig kości'
             Course E Introduction:
@@ -8371,7 +8371,7 @@ pl:
             Conditionals & Loops in Maze:
               name: Pętle warunkowe w Labiryncie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
             Build a Play Lab Game:
@@ -8390,10 +8390,10 @@ pl:
               name: Pętle w Epoce Lodowcowej
         csp3-a:
           title: CSP Jednostak 3 - Podcele grupy A
-          description_short: Alternatywna wersja Działu 3 CSP na potrzeby eksperymentu
-            grupy A z etykietami podcelu.
-          description: W tym dziale wprowadza się koncepcje założycielskie programowania
-            komputerowego dla studentów w Podcelach Grupy A.
+          description_short: Alternatywna wersja CSP Jednostki 3 na potrzeby eksperymentu
+            grupy A.
+          description: W tej jednostce wprowadza się podstawowe koncepcje programowania
+            komputerowego dla uczniów w Podcelach Grupy A.
           lesson_groups:
             csp3_1:
               display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
@@ -8447,7 +8447,7 @@ pl:
             Conditionals in Minecraft:
               name: Wyrażenia warunkowe w Minecrafcie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             'Variables: Envelope Variables':
               name: 'Zmienne: Zmienne w kopertach'
             Variables in Artist:
@@ -8687,18 +8687,18 @@ pl:
             submittable question at end of lessson:
               name: pytanie, które można zadać na końcu lekcji
             all assessment items as standalone assessment levels:
-              name: wszystkie pozycje oceny jako niezależne poziomy oceny
+              name: wszystkie pozycje sprawdzianu jako niezależne poziomy sprawdzianu
             all assessment items clustered in levelgroup:
-              name: wszystkie pozycje ostatniej oceny jako grupa poziomu
+              name: wszystkie pozycje sprawdzianu połczone w grupę poziomu
             submittable if last assessment item:
-              name: do przedłożenia jeśli ostatnia pozycja oceny
+              name: do przedłożenia jeśli ostatnia pozycja sprawdzianu
             assessment sandwiched between app lab levels:
-              name: ocena umiejscowiona pomiędzy poziomami App Lab
+              name: sprawdzian umiejscowiony pomiędzy poziomami App Lab
             all assessment items clustered in levelgroup as a single "test":
-              name: wszystkie pozycje oceny zgrupowane w grupie poziomu jako pojedynczy
-                "test"
+              name: wszystkie pozycje sprawdzianu zgrupowane w grupie poziomu jako
+                pojedynczy "test"
             dummy:
-              name: atrapa
+              name: sztuczny
             CSP 3 updates staging ground:
               name: przyczyna podzielenia aktualizacji CSP 3 na etapy
         hocali:
@@ -8851,7 +8851,7 @@ pl:
             CSD mid-post survey staging:
               name: Podział na etapy ankiety w trakcie badania CSD
             CSP pre survey Test 2017:
-              name: Test wcześniejszej ankiety CSP 2017
+              name: CSP Test 2017 przed ankietą
             CSD mid-post survey 2017 staging:
               name: Podział na etapy ankiety 2017 w trakcie badania CSD
             CSP pre survey 2017 staging:
@@ -10047,7 +10047,7 @@ pl:
             Conditionals in Minecraft:
               name: Wyrażenia warunkowe w Minecrafcie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             'Variables: Envelope Variables':
               name: 'Zmienne: Zmienne w kopertach'
             Variables in Artist:
@@ -10233,7 +10233,7 @@ pl:
             Conditionals & Loops in Maze:
               name: Pętle warunkowe w Labiryncie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
             Build a Play Lab Game:
@@ -10554,7 +10554,7 @@ pl:
                 swoje umiejętności tworzenia sekwencji i debugowania w labiryncie. '
             Conditionals:
               name: Wyrażenia warunkowe z interfejsem Farmer
-              description_student: Musisz powiedzieć komputerowi co zrobić w określonych
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
                 warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
               description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
                 instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
@@ -13046,7 +13046,7 @@ pl:
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Farmer:
-              name: Wyrażenie warunkowe w interfejsie Framer
+              name: Wyrażenie warunkowe z Rolnikiem
             Functions in Minecraft:
               name: Funkcje w Minecrafcie
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
@@ -13600,7 +13600,7 @@ pl:
               name: Warunkowe z kartami
             Conditionals:
               name: Wyrażenia warunkowe z interfejsem Farmer
-              description_student: Musisz powiedzieć komputerowi co zrobić w określonych
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
                 warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
               description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
                 instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
@@ -22484,7 +22484,7 @@ pl:
                 jak również zerknąć na instrukcje warunkowe!
             Conditionals:
               name: Wyrażenia warunkowe z interfejsem Farmer
-              description_student: Musisz powiedzieć komputerowi co zrobić w określonych
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
                 warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
               description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
                 instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
@@ -24647,14 +24647,60 @@ pl:
               name: Czy Code.org lubi Twojego psa?
             AI for Oceans:
               name: AI dla oceanów
+            oceans:
+              name: Uczenie maszynowe z AI dla oceanów
             intro:
               name: Wstęp
+            society:
+              name: Uczenie maszynowe i społeczny oddźwięk
+            decisions:
+              name: Podejmowanie decyzji z modelami
             visualizing:
               name: Wizualizacja danych
+            knn-train:
+              name: Trenuj model z ciągłymi etykietami (KNN)
+            knn-use:
+              name: Utwórz model z ciągłymi etykietami (KNN)
+            knn-app:
+              name: Wykonaj aplikację z ciągłymi etykietami (KNN)
+            svm-train:
+              name: Trenuj model z etykietami kategorialnymi (SVM)
+            svm-use:
+              name: Utwórz model z etykietami kategorialnymi (SVM)
+            svm-app:
+              name: Wykonaj aplikację z etykietami kategorialnymi (SVM)
+            model:
+              name: Karta modelu
+            data:
+              name: Przeglądaj zbiory danych i wybierz jeden dla swojej aplikacji
+            project-app:
+              name: 'Mini-Projekt: Utwórz aplikację ML'
+            miseducation:
+              name: Niewłaściwa edukacja maszyny
+            ethics:
+              name: Etyka
+            ethics-hoc2020:
+              name: AI i etyka Godziny Kodowania 2020
+            hypothesis:
+              name: Tworzenie hipotezy dotyczącej danych
+            goldilocks:
+              name: Zasady Złotowłosej
+            collection:
+              name: Zbieranie własnych danych
+            project:
+              name: Projekt końcowy
             KNN:
               name: KNN
             SVM:
               name: SVM
+            App:
+              name: Tworzenie aplikacji
+            Ethics:
+              name: Etyka
+            Project:
+              name: Projekt końcowy
+            appendix:
+              name: Appendix
           title: Jednostk Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI

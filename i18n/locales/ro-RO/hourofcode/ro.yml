@@ -41,6 +41,11 @@ ro:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
+  hoc2020_ai_header: Explore Artificial Intelligence
+  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
+    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
+    discuss ethics and AI, and more...
   hoc2019_header: Învață informatica. Schimbă lumea!
   hoc2019_header_line1_mobile: Învață informatica.
   hoc2019_header_line2_mobile: Schimbă lumea!
@@ -6694,10 +6699,10 @@ ro:
   tutorial_star-wars_string_detail_grades: Clasele II+
   tutorial_gumadventure_string_detail_grades: Grades 6-8
   tutorial_mchoc_string_detail_grades: Clasele II+
-  tutorial_vidnews_string_detail_grades: Grades 6+
+  tutorial_vidnews_string_detail_grades: Gradul 6 și peste
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
   tutorial_highseas_string_detail_grades: Grades 2-8
-  tutorial_capython_string_detail_grades: Grades 6+
+  tutorial_capython_string_detail_grades: Gradul 6 și peste
   tutorial_frzn_string_detail_grades: Clasele II+
   tutorial_cocom_string_detail_grades: Clasele II+
   tutorial_play-lab_string_detail_grades: Clasele II+
@@ -6707,28 +6712,28 @@ ro:
   tutorial_kanopixel_string_detail_grades: Clasele II+
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerdd_string_detail_grades: Grades 2-8
-  tutorial_tynkerana_string_detail_grades: Grades 6+
+  tutorial_tynkerana_string_detail_grades: Gradul 6 și peste
   tutorial_vidcard_string_detail_grades: Clasele II+
   tutorial_spritebox_string_detail_grades: Grades 2-8
-  tutorial_tynkerch_string_detail_grades: Grades 6+
+  tutorial_tynkerch_string_detail_grades: Gradul 6 și peste
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: do-not-show
   tutorial_code_string_detail_grades: Clasele II+
-  tutorial_tinspire_string_detail_grades: Grades 6+
+  tutorial_tinspire_string_detail_grades: Gradul 6 și peste
   tutorial_itchbounceball_string_detail_grades: Grades 2-8
-  tutorial_vidclim_string_detail_grades: Grades 6+
-  tutorial_matlab_string_detail_grades: Grades 6+
+  tutorial_vidclim_string_detail_grades: Gradul 6 și peste
+  tutorial_matlab_string_detail_grades: Gradul 6 și peste
   tutorial_flap_string_detail_grades: Clasele II+
-  tutorial_galaxy_string_detail_grades: Grades 6+
+  tutorial_galaxy_string_detail_grades: Gradul 6 și peste
   tutorial_inf_string_detail_grades: Grades 2-8
   tutorial_tynkersol_string_detail_grades: Clasele II+
-  tutorial_itchg_string_detail_grades: Grades 6+
+  tutorial_itchg_string_detail_grades: Gradul 6 și peste
   tutorial_como_string_detail_grades: Clasele II+
   tutorial_processfound_string_detail_grades: Clasele IX+
-  tutorial_tynkerhomo_string_detail_grades: Grades 6+
+  tutorial_tynkerhomo_string_detail_grades: Gradul 6 și peste
   tutorial_art_string_detail_grades: Clasele II+
   tutorial_tynkerbrick_string_detail_grades: Clasele II+
-  tutorial_itchbio_string_detail_grades: Grades 6+
+  tutorial_itchbio_string_detail_grades: Gradul 6 și peste
   tutorial_itchj_string_detail_grades: Grades 6-8
   tutorial_tickleo_string_detail_grades: Clasele II+
   tutorial_hopgeo_string_detail_grades: Grades 2-8
@@ -6739,67 +6744,67 @@ ro:
   tutorial_livecode_string_detail_grades: Clasele IX+
   tutorial_cocomgame_string_detail_grades: Clasele II+
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
-  tutorial_code-avengers_string_detail_grades: Grades 6+
+  tutorial_code-avengers_string_detail_grades: Gradul 6 și peste
   tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cmgame_string_detail_grades: Grades 6+
+  tutorial_cmgame_string_detail_grades: Gradul 6 și peste
   tutorial_codesters_string_detail_grades: do-not-show
-  tutorial_qrm_string_detail_grades: Grades 6+
-  tutorial_texas-instruments_string_detail_grades: Grades 6+
-  tutorial_cajava_string_detail_grades: Grades 6+
+  tutorial_qrm_string_detail_grades: Gradul 6 și peste
+  tutorial_texas-instruments_string_detail_grades: Gradul 6 și peste
+  tutorial_cajava_string_detail_grades: Gradul 6 și peste
   tutorial_codehs_string_detail_grades: Clasele IX+
   tutorial_hopemo_string_detail_grades: Grades 2-8
   tutorial_tynkercm_string_detail_grades: Clasele II+
   tutorial_codesterswintergreet_string_detail_grades: Clasele II+
-  tutorial_codestersc_string_detail_grades: Grades 6+
+  tutorial_codestersc_string_detail_grades: Gradul 6 și peste
   tutorial_codestersturtle_string_detail_grades: Clasele II+
-  tutorial_penjee_string_detail_grades: Grades 6+
+  tutorial_penjee_string_detail_grades: Gradul 6 și peste
   tutorial_trinket_string_detail_grades: Clasele II+
-  tutorial_frogger_string_detail_grades: Grades 6+
+  tutorial_frogger_string_detail_grades: Gradul 6 și peste
   tutorial_tynkereco_string_detail_grades: Grades 2-8
   tutorial_mitedarc_string_detail_grades: Grades 6-8
-  tutorial_khan_string_detail_grades: Grades 6+
-  tutorial_tynkerd_string_detail_grades: Grades 6+
+  tutorial_khan_string_detail_grades: Gradul 6 și peste
+  tutorial_tynkerd_string_detail_grades: Gradul 6 și peste
   tutorial_cdmy_string_detail_grades: Clasele IX+
-  tutorial_codestersdance_string_detail_grades: Grades 6+
-  tutorial_codestersbasketball_string_detail_grades: Grades 6+
-  tutorial_nclkarel_string_detail_grades: Grades 6+
+  tutorial_codestersdance_string_detail_grades: Gradul 6 și peste
+  tutorial_codestersbasketball_string_detail_grades: Gradul 6 și peste
+  tutorial_nclkarel_string_detail_grades: Gradul 6 și peste
   tutorial_buildpong_string_detail_grades: Clasele II+
   tutorial_tynkerdrones_string_detail_grades: Clasele II+
-  tutorial_carla_string_detail_grades: Grades 6+
-  tutorial_zulama_string_detail_grades: Grades 6+
-  tutorial_capost_string_detail_grades: Grades 6+
+  tutorial_carla_string_detail_grades: Gradul 6 și peste
+  tutorial_zulama_string_detail_grades: Gradul 6 și peste
+  tutorial_capost_string_detail_grades: Gradul 6 și peste
   tutorial_marco_string_detail_grades: Grades 2-8
-  tutorial_codestersflappybike_string_detail_grades: Grades 6+
+  tutorial_codestersflappybike_string_detail_grades: Gradul 6 și peste
   tutorial_kanopong_string_detail_grades: Grades 6-8
   tutorial_tynkerright_string_detail_grades: Grades 2-8
   tutorial_touchdevelop_string_detail_grades: do-not-show
-  tutorial_tynkercc_string_detail_grades: Grades 6+
+  tutorial_tynkercc_string_detail_grades: Gradul 6 și peste
   tutorial_bamboo_string_detail_grades: Grades 2-5
-  tutorial_robojav_string_detail_grades: Grades 6+
-  tutorial_roboba_string_detail_grades: Grades 6+
+  tutorial_robojav_string_detail_grades: Gradul 6 și peste
+  tutorial_roboba_string_detail_grades: Gradul 6 și peste
   tutorial_knodsnake_string_detail_grades: Grades 6-8
-  tutorial_soccharater_string_detail_grades: Grades 6+
-  tutorial_silent_string_detail_grades: Grades 6+
+  tutorial_soccharater_string_detail_grades: Gradul 6 și peste
+  tutorial_silent_string_detail_grades: Gradul 6 și peste
   tutorial_robomesh_string_detail_grades: Clasele II+
   tutorial_amaze_string_detail_grades: Clasele II+
   tutorial_codestersds_string_detail_grades: Clasele II+
   tutorial_knodtext_string_detail_grades: Grades 6-8
-  tutorial_alicegar_string_detail_grades: Grades 6+
-  tutorial_codesterstransform_string_detail_grades: Grades 6+
-  tutorial_flexfrog_string_detail_grades: Grades 6+
+  tutorial_alicegar_string_detail_grades: Gradul 6 și peste
+  tutorial_codesterstransform_string_detail_grades: Gradul 6 și peste
+  tutorial_flexfrog_string_detail_grades: Gradul 6 și peste
   tutorial_codemoji_string_detail_grades: do-not-show
-  tutorial_robobii_string_detail_grades: Grades 6+
+  tutorial_robobii_string_detail_grades: Gradul 6 și peste
   tutorial_robobm_string_detail_grades: Grades 6-8
   tutorial_codingrobots_string_detail_grades: Clasele II+
-  tutorial_robob_string_detail_grades: Grades 6+
+  tutorial_robob_string_detail_grades: Gradul 6 și peste
   tutorial_coders_string_detail_grades: Clasele IX+
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
   tutorial_tynkermh_string_detail_grades: Grades 2-8
-  tutorial_caphoto_string_detail_grades: Grades 6+
+  tutorial_caphoto_string_detail_grades: Gradul 6 și peste
   tutorial_mozillahw_string_detail_grades: Grades 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Clasele II+
-  tutorial_scratchg_string_detail_grades: Grades 6+
+  tutorial_scratchg_string_detail_grades: Gradul 6 și peste
   tutorial_roboticfriends_string_detail_grades: All ages
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjgreet_string_detail_grades: Pre-reader - Grade 5
@@ -6807,19 +6812,19 @@ ro:
   tutorial_fufafrenz_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcgeo_string_detail_grades: do-not-show
   tutorial_chspixel_string_detail_grades: Clasele IX+
-  tutorial_hummingbird_string_detail_grades: Grades 6+
-  tutorial_recoloring_string_detail_grades: Grades 6+
+  tutorial_hummingbird_string_detail_grades: Gradul 6 și peste
+  tutorial_recoloring_string_detail_grades: Gradul 6 și peste
   tutorial_bbcchem_string_detail_grades: do-not-show
   tutorial_floalgo_string_detail_grades: Clasele II+
   tutorial_flocond_string_detail_grades: Clasele II+
   tutorial_floloops_string_detail_grades: Clasele II+
-  tutorial_pgts_string_detail_grades: Grades 6+
+  tutorial_pgts_string_detail_grades: Gradul 6 și peste
   tutorial_ozo_string_detail_grades: All ages
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
   tutorial_tlctour_string_detail_grades: Clasele II+
   tutorial_codesterstj_string_detail_grades: Clasele II+
-  tutorial_tlclocked_string_detail_grades: Grades 6+
+  tutorial_tlclocked_string_detail_grades: Gradul 6 și peste
   tutorial_baubles_string_detail_grades: Grades 2-8
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Clasele II+
@@ -6841,12 +6846,12 @@ ro:
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: Grades 6-8
-  tutorial_tlchex_string_detail_grades: Grades 6+
+  tutorial_tlchex_string_detail_grades: Gradul 6 și peste
   tutorial_tickles_string_detail_grades: Clasele II+
   tutorial_ozogame_string_detail_grades: All ages
   tutorial_vidcodeio_string_detail_grades: Clasele II+
   tutorial_besttech_string_detail_grades: Clasele IX+
-  tutorial_tlcbrain_string_detail_grades: Grades 6+
+  tutorial_tlcbrain_string_detail_grades: Gradul 6 și peste
   tutorial_hopquiz_string_detail_grades: Grades 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
   tutorial_cha_string_detail_grades: Grades 6-8
@@ -6856,7 +6861,7 @@ ro:
   tutorial_arduino_string_detail_grades: Grades 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
   tutorial_tlcinvis_string_detail_grades: Clasele II+
-  tutorial_tlcjflap_string_detail_grades: Grades 6+
+  tutorial_tlcjflap_string_detail_grades: Gradul 6 și peste
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
   tutorial_spiralsfinch_string_detail_grades: Clasele II+
   tutorial_ozoi_string_detail_grades: All ages
@@ -6868,40 +6873,40 @@ ro:
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
   tutorial_tlccc_string_detail_grades: Grades 2-8
   tutorial_tlcdoodle_string_detail_grades: Grades 2-8
-  tutorial_tlcpunch_string_detail_grades: Grades 6+
+  tutorial_tlcpunch_string_detail_grades: Gradul 6 și peste
   tutorial_finchfract_string_detail_grades: Clasele IX+
-  tutorial_tlcmind_string_detail_grades: Grades 6+
+  tutorial_tlcmind_string_detail_grades: Gradul 6 și peste
   tutorial_tlctelebot_string_detail_grades: Clasele II+
-  tutorial_tlcaus_string_detail_grades: Grades 6+
+  tutorial_tlcaus_string_detail_grades: Gradul 6 și peste
   tutorial_oralhist_string_detail_grades: Clasele IX+
   tutorial_tlcmicro_string_detail_grades: Clasele II+
   tutorial_imathematician_string_detail_grades: Grades 2-8
-  tutorial_tlcmagic_string_detail_grades: Grades 6+
+  tutorial_tlcmagic_string_detail_grades: Gradul 6 și peste
   tutorial_scratchmus_string_detail_grades: Grades 2-8
   tutorial_scratchanim_string_detail_grades: Grades 2-8
   tutorial_scratchfly_string_detail_grades: Grades 2-8
   tutorial_tynkerarc_string_detail_grades: Clasele II+
-  tutorial_grokffpython_string_detail_grades: Grades 6+
-  tutorial_grokffblock_string_detail_grades: Grades 6+
-  tutorial_grokeliza_string_detail_grades: Grades 6+
+  tutorial_grokffpython_string_detail_grades: Gradul 6 și peste
+  tutorial_grokffblock_string_detail_grades: Gradul 6 și peste
+  tutorial_grokeliza_string_detail_grades: Gradul 6 și peste
   tutorial_tynkercan_string_detail_grades: Clasele II+
-  tutorial_grokflags_string_detail_grades: Grades 6+
+  tutorial_grokflags_string_detail_grades: Gradul 6 și peste
   tutorial_robomind_string_detail_grades: Grades 2-8
   tutorial_scratchanimwork_string_detail_grades: Grades 2-8
   tutorial_adventureq_string_detail_grades: Grades 2-5
-  tutorial_khan-es_string_detail_grades: Grades 6+
-  tutorial_kpt_string_detail_grades: Grades 6+
-  tutorial_kpl_string_detail_grades: Grades 6+
-  tutorial_khe_string_detail_grades: Grades 6+
-  tutorial_kfr_string_detail_grades: Grades 6+
-  tutorial_app-inventor_string_detail_grades: Grades 6+
+  tutorial_khan-es_string_detail_grades: Gradul 6 și peste
+  tutorial_kpt_string_detail_grades: Gradul 6 și peste
+  tutorial_kpl_string_detail_grades: Gradul 6 și peste
+  tutorial_khe_string_detail_grades: Gradul 6 și peste
+  tutorial_kfr_string_detail_grades: Gradul 6 și peste
+  tutorial_app-inventor_string_detail_grades: Gradul 6 și peste
   tutorial_bits_string_detail_grades: Grades 2-5
-  tutorial_blockly_string_detail_grades: Grades 6+
+  tutorial_blockly_string_detail_grades: Gradul 6 și peste
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Clasele II+
-  tutorial_spellcraft_string_detail_grades: Grades 6+
+  tutorial_spellcraft_string_detail_grades: Gradul 6 și peste
   tutorial_pirates_string_detail_grades: Grades 2-8
   tutorial_csfirst_string_detail_grades: Clasele II+
   tutorial_loopedy_string_detail_grades: Grades 2-5
@@ -6913,7 +6918,7 @@ ro:
   tutorial_scratch_string_detail_grades: Grades 2-5
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: do-not-show
-  tutorial_hrm_string_detail_grades: Grades 6+
+  tutorial_hrm_string_detail_grades: Gradul 6 și peste
   tutorial_ice-age_string_detail_grades: do-not-show
   tutorial_koapp_string_detail_grades: do-not-show
   tutorial_lightbot-intl_string_detail_grades: Pre-reader - Grade 8
@@ -6929,7 +6934,7 @@ ro:
   tutorial_spherov_string_detail_grades: Clasele II+
   tutorial_swb_string_detail_grades: do-not-show
   tutorial_build-a-galaxy_string_detail_grades: do-not-show
-  tutorial_alicesims_string_detail_grades: Grades 6+
+  tutorial_alicesims_string_detail_grades: Gradul 6 și peste
   tutorial_tchr_string_detail_grades: do-not-show
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
   tutorial_tap_string_detail_grades: Clasele II+
@@ -6948,51 +6953,51 @@ ro:
   tutorial_solopython_string_detail_grades: Clasele IX+
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
   tutorial_kodableadv_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkertj_string_detail_grades: Grades 6+
-  tutorial_wolframa_string_detail_grades: Grades 6+
-  tutorial_wolframm_string_detail_grades: Grades 6+
-  tutorial_wolframspi_string_detail_grades: Grades 6+
-  tutorial_wolframsph_string_detail_grades: Grades 6+
-  tutorial_wolframp_string_detail_grades: Grades 6+
-  tutorial_wolframn_string_detail_grades: Grades 6+
+  tutorial_tynkertj_string_detail_grades: Gradul 6 și peste
+  tutorial_wolframa_string_detail_grades: Gradul 6 și peste
+  tutorial_wolframm_string_detail_grades: Gradul 6 și peste
+  tutorial_wolframspi_string_detail_grades: Gradul 6 și peste
+  tutorial_wolframsph_string_detail_grades: Gradul 6 și peste
+  tutorial_wolframp_string_detail_grades: Gradul 6 și peste
+  tutorial_wolframn_string_detail_grades: Gradul 6 și peste
   tutorial_soloweb_string_detail_grades: Clasele IX+
   tutorial_khanweb_string_detail_grades: Clasele II+
-  tutorial_khandata_string_detail_grades: Grades 6+
+  tutorial_khandata_string_detail_grades: Gradul 6 și peste
   tutorial_robomeshiq_string_detail_grades: Clasele II+
   tutorial_googlelogo_string_detail_grades: Clasele II+
-  tutorial_playtune_string_detail_grades: Grades 6+
+  tutorial_playtune_string_detail_grades: Gradul 6 și peste
   tutorial_computeit_string_detail_grades: Clasele II+
   tutorial_codesterssj_string_detail_grades: Grades 2-8
-  tutorial_cmchat_string_detail_grades: Grades 6+
+  tutorial_cmchat_string_detail_grades: Gradul 6 și peste
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
-  tutorial_cmbuild_string_detail_grades: Grades 6+
+  tutorial_cmbuild_string_detail_grades: Gradul 6 și peste
   tutorial_robotrattle_string_detail_grades: Grades 2-8
   tutorial_codestersh_string_detail_grades: Grades 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Grades 6+
-  tutorial_ccbinary_string_detail_grades: Grades 6+
-  tutorial_codehsturtle_string_detail_grades: Grades 6+
-  tutorial_grokhd_string_detail_grades: Grades 6+
-  tutorial_grokem_string_detail_grades: Grades 6+
+  tutorial_codehsdigipixel_string_detail_grades: Gradul 6 și peste
+  tutorial_ccbinary_string_detail_grades: Gradul 6 și peste
+  tutorial_codehsturtle_string_detail_grades: Gradul 6 și peste
+  tutorial_grokhd_string_detail_grades: Gradul 6 și peste
+  tutorial_grokem_string_detail_grades: Gradul 6 și peste
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
   tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Clasele IX+
   tutorial_raspipong_string_detail_grades: Clasele IX+
-  tutorial_codehsvr_string_detail_grades: Grades 6+
+  tutorial_codehsvr_string_detail_grades: Gradul 6 și peste
   tutorial_codesterstp_string_detail_grades: Grades 6-8
   tutorial_codestersbb_string_detail_grades: Grades 6-8
   tutorial_gfcrossyroad_string_detail_grades: Clasele IX+
   tutorial_googleww_string_detail_grades: Clasele IX+
-  tutorial_codehsjsapp_string_detail_grades: Grades 6+
+  tutorial_codehsjsapp_string_detail_grades: Gradul 6 și peste
   tutorial_gfmihi_string_detail_grades: Clasele IX+
   tutorial_hopdropphone_string_detail_grades: Grades 2-8
   tutorial_techfaa_string_detail_grades: University
   tutorial_codehsjsgraph_string_detail_grades: Clasele IX+
-  tutorial_thunkable_string_detail_grades: Grades 6+
+  tutorial_thunkable_string_detail_grades: Gradul 6 și peste
   tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
-  tutorial_codecar_string_detail_grades: Grades 6+
+  tutorial_codecar_string_detail_grades: Gradul 6 și peste
   tutorial_codesterscp_string_detail_grades: Grades 6-8
   tutorial_grokpetblock_string_detail_grades: Grades 6-8
   tutorial_techbim_string_detail_grades: University
@@ -7004,8 +7009,8 @@ ro:
   tutorial_myradream_string_detail_grades: Grades 2-8
   tutorial_thinkfun_string_detail_grades: Grades 2-8
   tutorial_hopfireworks_string_detail_grades: Grades 2-8
-  tutorial_grokspace_string_detail_grades: Grades 6+
-  tutorial_codehspython_string_detail_grades: Grades 6+
+  tutorial_grokspace_string_detail_grades: Gradul 6 și peste
+  tutorial_codehspython_string_detail_grades: Gradul 6 și peste
   tutorial_codehsjava_string_detail_grades: Clasele IX+
   tutorial_techioda_string_detail_grades: University
   tutorial_grokmonster_string_detail_grades: Grades 2-5
@@ -7013,8 +7018,8 @@ ro:
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
   tutorial_techiogsr_string_detail_grades: University
-  tutorial_groktunnel_string_detail_grades: Grades 6+
-  tutorial_stemcod_string_detail_grades: Grades 6+
+  tutorial_groktunnel_string_detail_grades: Gradul 6 și peste
+  tutorial_stemcod_string_detail_grades: Gradul 6 și peste
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
   tutorial_nyblebot_string_detail_grades: Grades 2-5
@@ -7022,32 +7027,32 @@ ro:
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
-  tutorial_gpbcatapult_string_detail_grades: Grades 6+
-  tutorial_quorumastro_string_detail_grades: Grades 6+
+  tutorial_gpbcatapult_string_detail_grades: Gradul 6 și peste
+  tutorial_quorumastro_string_detail_grades: Gradul 6 și peste
   tutorial_alicewonder_string_detail_grades: Grades 2-5
   tutorial_rginter_string_detail_grades: Grades 6-8
-  tutorial_cssgrid_string_detail_grades: Grades 6+
+  tutorial_cssgrid_string_detail_grades: Gradul 6 și peste
   tutorial_jshero_string_detail_grades: Clasele IX+
   tutorial_codemojipy_string_detail_grades: Grades 2-5
-  tutorial_nclabdrone_string_detail_grades: Grades 6+
-  tutorial_gpbcircle_string_detail_grades: Grades 6+
-  tutorial_gpbpaint_string_detail_grades: Grades 6+
-  tutorial_cocomarcade_string_detail_grades: Grades 6+
+  tutorial_nclabdrone_string_detail_grades: Gradul 6 și peste
+  tutorial_gpbcircle_string_detail_grades: Gradul 6 și peste
+  tutorial_gpbpaint_string_detail_grades: Gradul 6 și peste
+  tutorial_cocomarcade_string_detail_grades: Gradul 6 și peste
   tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Grades 6-8
-  tutorial_codedj_string_detail_grades: Grades 6+
-  tutorial_rgadvan_string_detail_grades: Grades 6+
+  tutorial_codedj_string_detail_grades: Gradul 6 și peste
+  tutorial_rgadvan_string_detail_grades: Gradul 6 și peste
   tutorial_codehsrn_string_detail_grades: Clasele IX+
-  tutorial_codehswd_string_detail_grades: Grades 6+
+  tutorial_codehswd_string_detail_grades: Gradul 6 și peste
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: Grades 6+
-  tutorial_ozoexped_string_detail_grades: Grades 6+
+  tutorial_ozoevo_string_detail_grades: Gradul 6 și peste
+  tutorial_ozoexped_string_detail_grades: Gradul 6 și peste
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
   tutorial_ozoeclipse_string_detail_grades: Clasele II+
-  tutorial_ozosimulator_string_detail_grades: Grades 6+
-  tutorial_ozoalgorithm_string_detail_grades: Grades 6+
-  tutorial_ozotimer_string_detail_grades: Grades 6+
+  tutorial_ozosimulator_string_detail_grades: Gradul 6 și peste
+  tutorial_ozoalgorithm_string_detail_grades: Gradul 6 și peste
+  tutorial_ozotimer_string_detail_grades: Gradul 6 și peste
   tutorial_ozohabits_string_detail_grades: All ages
   tutorial_ozoprogram_string_detail_grades: Grades 2-8
   tutorial_ozopair_string_detail_grades: Clasele II+
@@ -7070,9 +7075,9 @@ ro:
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
   tutorial_lblogic_string_detail_grades: Clasele II+
-  tutorial_lbworld_string_detail_grades: Grades 6+
+  tutorial_lbworld_string_detail_grades: Gradul 6 și peste
   tutorial_lbloops_string_detail_grades: Grades 2-8
-  tutorial_lbtug_string_detail_grades: Grades 6+
+  tutorial_lbtug_string_detail_grades: Gradul 6 și peste
   tutorial_lbpotato_string_detail_grades: Clasele II+
   tutorial_lbguitar_string_detail_grades: Clasele II+
   tutorial_lbio_string_detail_grades: Grades 2-8
@@ -7081,14 +7086,14 @@ ro:
   tutorial_wonzoo_string_detail_grades: Grades 2-5
   tutorial_wontrip_string_detail_grades: Grades 2-8
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wonsecret_string_detail_grades: Grades 6+
+  tutorial_wonsecret_string_detail_grades: Gradul 6 și peste
   tutorial_hsscience_string_detail_grades: Grades 2-8
-  tutorial_popculture_string_detail_grades: Grades 6+
+  tutorial_popculture_string_detail_grades: Gradul 6 și peste
   tutorial_legorobust_string_detail_grades: Clasele II+
   tutorial_legoplants_string_detail_grades: Clasele II+
-  tutorial_legopark_string_detail_grades: Grades 6+
-  tutorial_legodetect_string_detail_grades: Grades 6+
-  tutorial_legolight_string_detail_grades: Grades 6+
+  tutorial_legopark_string_detail_grades: Gradul 6 și peste
+  tutorial_legodetect_string_detail_grades: Gradul 6 și peste
+  tutorial_legolight_string_detail_grades: Gradul 6 și peste
   tutorial_alexa_string_detail_grades: Clasele IX+
   tutorial_grokpetmicro_string_detail_grades: Grades 6-8
   tutorial_pirateplunder_string_detail_grades: Grades 2-8
@@ -7097,24 +7102,24 @@ ro:
   tutorial_cajump_string_detail_grades: Grades 2-8
   tutorial_carest_string_detail_grades: Grades 2-8
   tutorial_accai_string_detail_grades: Grades 2-8
-  tutorial_vceclipse_string_detail_grades: Grades 6+
-  tutorial_pmzero_string_detail_grades: Grades 6+
+  tutorial_vceclipse_string_detail_grades: Gradul 6 și peste
+  tutorial_pmzero_string_detail_grades: Gradul 6 și peste
   tutorial_hsela_string_detail_grades: Grades 2-8
   tutorial_ticklear_string_detail_grades: Grades 2-8
   tutorial_bcrobot_string_detail_grades: Grades 2-8
-  tutorial_bcsnow_string_detail_grades: Grades 6+
+  tutorial_bcsnow_string_detail_grades: Gradul 6 și peste
   tutorial_ifly_string_detail_grades: Clasele II+
   tutorial_idowedo_string_detail_grades: Grades 2-8
-  tutorial_diggindwarf_string_detail_grades: Grades 6+
+  tutorial_diggindwarf_string_detail_grades: Gradul 6 și peste
   tutorial_rmedr_string_detail_grades: Grades 2-8
   tutorial_spheroit_string_detail_grades: Clasele II+
   tutorial_gameofcodes_string_detail_grades: Clasele II+
-  tutorial_blocklygames_string_detail_grades: Grades 6+
-  tutorial_spherohello_string_detail_grades: Grades 6+
-  tutorial_spheroarcade_string_detail_grades: Grades 6+
-  tutorial_bcpy1_string_detail_grades: Grades 6+
-  tutorial_bcpy2_string_detail_grades: Grades 6+
-  tutorial_bcjs1_string_detail_grades: Grades 6+
+  tutorial_blocklygames_string_detail_grades: Gradul 6 și peste
+  tutorial_spherohello_string_detail_grades: Gradul 6 și peste
+  tutorial_spheroarcade_string_detail_grades: Gradul 6 și peste
+  tutorial_bcpy1_string_detail_grades: Gradul 6 și peste
+  tutorial_bcpy2_string_detail_grades: Gradul 6 și peste
+  tutorial_bcjs1_string_detail_grades: Gradul 6 și peste
   tutorial_bcjs2_string_detail_grades: Clasele IX+
   tutorial_3dbearmars_string_detail_grades: Grades 2-8
   tutorial_alexaskill_string_detail_grades: Grades 2-8
@@ -7123,27 +7128,27 @@ ro:
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
   tutorial_blockscadclock_string_detail_grades: Clasele IX+
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
-  tutorial_blockscadicecream_string_detail_grades: Grades 6+
+  tutorial_blockscadicecream_string_detail_grades: Gradul 6 și peste
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
   tutorial_bsgridlight_string_detail_grades: Clasele II+
-  tutorial_bpartscratch_string_detail_grades: Grades 6+
-  tutorial_bpartvid_string_detail_grades: Grades 6+
+  tutorial_bpartscratch_string_detail_grades: Gradul 6 și peste
+  tutorial_bpartvid_string_detail_grades: Gradul 6 și peste
   tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
   tutorial_bpenglishvid_string_detail_grades: Grades 2-8
   tutorial_bphealthscratch_string_detail_grades: Clasele II+
-  tutorial_bphealthvid_string_detail_grades: Grades 6+
+  tutorial_bphealthvid_string_detail_grades: Gradul 6 și peste
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
-  tutorial_bpmathvid_string_detail_grades: Grades 6+
+  tutorial_bpmathvid_string_detail_grades: Gradul 6 și peste
   tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
   tutorial_bpmlkvid_string_detail_grades: Grades 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
   tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
   tutorial_bpsciencevid_string_detail_grades: Grades 6-8
-  tutorial_bptechscratch_string_detail_grades: Grades 6+
-  tutorial_bptechvid_string_detail_grades: Grades 6+
-  tutorial_caflags_string_detail_grades: Grades 6+
+  tutorial_bptechscratch_string_detail_grades: Gradul 6 și peste
+  tutorial_bptechvid_string_detail_grades: Gradul 6 și peste
+  tutorial_caflags_string_detail_grades: Gradul 6 și peste
   tutorial_matariki_string_detail_grades: Grades 2-5
   tutorial_carestaurant_string_detail_grades: Clasele II+
   tutorial_casea_string_detail_grades: Grades 2-5
@@ -7151,37 +7156,37 @@ ro:
   tutorial_ccwslimer_string_detail_grades: Grades 2-8
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
   tutorial_boatrace_string_detail_grades: Clasele II+
-  tutorial_ccplay_string_detail_grades: Grades 6+
+  tutorial_ccplay_string_detail_grades: Gradul 6 și peste
   tutorial_grinch_string_detail_grades: Grades 2-8
   tutorial_codehsart_string_detail_grades: Clasele IX+
   tutorial_codehsbitcoin_string_detail_grades: Clasele IX+
   tutorial_codehsblockchain_string_detail_grades: Clasele IX+
-  tutorial_codehscipher_string_detail_grades: Grades 6+
+  tutorial_codehscipher_string_detail_grades: Gradul 6 și peste
   tutorial_codehscollision_string_detail_grades: Clasele IX+
-  tutorial_codehsmath_string_detail_grades: Grades 6+
-  tutorial_codehsmusic_string_detail_grades: Grades 6+
-  tutorial_codehssports_string_detail_grades: Grades 6+
+  tutorial_codehsmath_string_detail_grades: Gradul 6 și peste
+  tutorial_codehsmusic_string_detail_grades: Gradul 6 și peste
+  tutorial_codehssports_string_detail_grades: Gradul 6 și peste
   tutorial_codemojipizza_string_detail_grades: Grades 2-8
-  tutorial_moonlander_string_detail_grades: Grades 6+
+  tutorial_moonlander_string_detail_grades: Gradul 6 și peste
   tutorial_sushicards_string_detail_grades: Grades 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 6+
-  tutorial_codesterstshirt_string_detail_grades: Grades 6+
+  tutorial_codesterslogo_string_detail_grades: Gradul 6 și peste
+  tutorial_codesterstshirt_string_detail_grades: Gradul 6 și peste
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
   tutorial_codinismhero_string_detail_grades: Clasele II+
   tutorial_discovery_string_detail_grades: Clasele II+
   tutorial_csfirstname_string_detail_grades: Clasele II+
   tutorial_obstaclecourse_string_detail_grades: Clasele II+
-  tutorial_edisonmove_string_detail_grades: Grades 6+
-  tutorial_edisonspider_string_detail_grades: Grades 6+
+  tutorial_edisonmove_string_detail_grades: Gradul 6 și peste
+  tutorial_edisonspider_string_detail_grades: Gradul 6 și peste
   tutorial_edisonspotlight_string_detail_grades: Grades 2-8
-  tutorial_firiapython_string_detail_grades: Grades 6+
-  tutorial_gamefrootsquid_string_detail_grades: Grades 6+
-  tutorial_duckpiano_string_detail_grades: Grades 6+
-  tutorial_gpsound_string_detail_grades: Grades 6+
+  tutorial_firiapython_string_detail_grades: Gradul 6 și peste
+  tutorial_gamefrootsquid_string_detail_grades: Gradul 6 și peste
+  tutorial_duckpiano_string_detail_grades: Gradul 6 și peste
+  tutorial_gpsound_string_detail_grades: Gradul 6 și peste
   tutorial_groklearningpython_string_detail_grades: Clasele IX+
   tutorial_htmltimetravel_string_detail_grades: Clasele IX+
   tutorial_hp_flappy_string_detail_grades: Clasele IX+
@@ -7191,32 +7196,32 @@ ro:
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Grades 2-8
   tutorial_kanohp_string_detail_grades: Grades 2-8
-  tutorial_khanwebpages_string_detail_grades: Grades 6+
+  tutorial_khanwebpages_string_detail_grades: Gradul 6 și peste
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wizard_string_detail_grades: Grades 6+
+  tutorial_wizard_string_detail_grades: Gradul 6 și peste
   tutorial_mbscratchcards_string_detail_grades: Clasele II+
   tutorial_mbswiftplaygrounds_string_detail_grades: Clasele II+
-  tutorial_mbbuttons_string_detail_grades: Grades 6+
-  tutorial_meteor_string_detail_grades: Grades 6+
-  tutorial_ballbounce_string_detail_grades: Grades 6+
-  tutorial_mitcodi_string_detail_grades: Grades 6+
-  tutorial_mitdoodle_string_detail_grades: Grades 6+
-  tutorial_talktome_string_detail_grades: Grades 6+
-  tutorial_mobilecspmap_string_detail_grades: Grades 6+
+  tutorial_mbbuttons_string_detail_grades: Gradul 6 și peste
+  tutorial_meteor_string_detail_grades: Gradul 6 și peste
+  tutorial_ballbounce_string_detail_grades: Gradul 6 și peste
+  tutorial_mitcodi_string_detail_grades: Gradul 6 și peste
+  tutorial_mitdoodle_string_detail_grades: Gradul 6 și peste
+  tutorial_talktome_string_detail_grades: Gradul 6 și peste
+  tutorial_mobilecspmap_string_detail_grades: Gradul 6 și peste
   tutorial_ozorandom_string_detail_grades: Clasele II+
   tutorial_ozotroll_string_detail_grades: Grades 6-8
   tutorial_peblioart_string_detail_grades: Clasele IX+
-  tutorial_astropi_string_detail_grades: Grades 6+
+  tutorial_astropi_string_detail_grades: Gradul 6 și peste
   tutorial_rgart_string_detail_grades: Grades 2-5
   tutorial_rgengineer_string_detail_grades: Grades 2-5
   tutorial_rgmath_string_detail_grades: Grades 2-5
   tutorial_rgscience_string_detail_grades: Grades 2-5
   tutorial_rgtech_string_detail_grades: Grades 2-5
-  tutorial_robotmagic3d_string_detail_grades: Grades 6+
+  tutorial_robotmagic3d_string_detail_grades: Gradul 6 și peste
   tutorial_robotmagicflappy_string_detail_grades: Clasele IX+
   tutorial_scratchadventure_string_detail_grades: Clasele II+
   tutorial_scratchtalk_string_detail_grades: Clasele II+
@@ -7224,14 +7229,14 @@ ro:
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Grades 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
-  tutorial_spherofunctions_string_detail_grades: Grades 6+
+  tutorial_spherofunctions_string_detail_grades: Gradul 6 și peste
   tutorial_spheroinfrared_string_detail_grades: Grades 6-8
   tutorial_spherolightsensor_string_detail_grades: Grades 2-8
   tutorial_spheromansion_string_detail_grades: Grades 2-8
   tutorial_roadblocks_string_detail_grades: Grades 2-8
-  tutorial_spherotext2_string_detail_grades: Grades 6+
-  tutorial_spherotext3_string_detail_grades: Grades 6+
-  tutorial_spherotext4_string_detail_grades: Grades 6+
+  tutorial_spherotext2_string_detail_grades: Gradul 6 și peste
+  tutorial_spherotext3_string_detail_grades: Gradul 6 și peste
+  tutorial_spherotext4_string_detail_grades: Gradul 6 și peste
   tutorial_spheroraptor_string_detail_grades: Grades 2-8
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
   tutorial_stemplanetoids_string_detail_grades: Clasele IX+
@@ -7239,106 +7244,106 @@ ro:
   tutorial_algobot_string_detail_grades: Grades 2-8
   tutorial_thunkableapps_string_detail_grades: Clasele IX+
   tutorial_toxicodedot_string_detail_grades: Grades 2-8
-  tutorial_gcactions_string_detail_grades: Grades 6+
-  tutorial_gccomparators_string_detail_grades: Grades 6+
-  tutorial_gcconditions_string_detail_grades: Grades 6+
-  tutorial_gccreate_string_detail_grades: Grades 6+
-  tutorial_gcevents_string_detail_grades: Grades 6+
-  tutorial_gcloops_string_detail_grades: Grades 6+
-  tutorial_gcvariables_string_detail_grades: Grades 6+
+  tutorial_gcactions_string_detail_grades: Gradul 6 și peste
+  tutorial_gccomparators_string_detail_grades: Gradul 6 și peste
+  tutorial_gcconditions_string_detail_grades: Gradul 6 și peste
+  tutorial_gccreate_string_detail_grades: Gradul 6 și peste
+  tutorial_gcevents_string_detail_grades: Gradul 6 și peste
+  tutorial_gcloops_string_detail_grades: Gradul 6 și peste
+  tutorial_gcvariables_string_detail_grades: Gradul 6 și peste
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: Clasele II+
-  tutorial_landscape_string_detail_grades: Grades 6+
+  tutorial_landscape_string_detail_grades: Gradul 6 și peste
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
-  tutorial_superhero_string_detail_grades: Grades 6+
-  tutorial_vidcodeplastic_string_detail_grades: Grades 6+
-  tutorial_vidcodetypeface_string_detail_grades: Grades 6+
+  tutorial_superhero_string_detail_grades: Gradul 6 și peste
+  tutorial_vidcodeplastic_string_detail_grades: Gradul 6 și peste
+  tutorial_vidcodetypeface_string_detail_grades: Gradul 6 și peste
   tutorial_washustorm_string_detail_grades: Grades 2-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
-  tutorial_googlerookie_string_detail_grades: Grades 6+
+  tutorial_googlerookie_string_detail_grades: Gradul 6 și peste
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
   tutorial_mazyad_string_detail_grades: Pre-reader - Grade 5
   tutorial_gamemaker_string_detail_grades: Clasele II+
   tutorial_duckrace_string_detail_grades: Clasele II+
-  tutorial_allcancodeapps_string_detail_grades: Grades 6+
+  tutorial_allcancodeapps_string_detail_grades: Gradul 6 și peste
   tutorial_n2y_string_detail_grades: Pre-școlar+
   tutorial_microsoftarcade_string_detail_grades: Clasele II+
   tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
-  tutorial_toxicodepython_string_detail_grades: Grades 6+
-  tutorial_codecombatozaria_string_detail_grades: Grades 6+
-  tutorial_vidcodedate_string_detail_grades: Grades 6+
+  tutorial_toxicodepython_string_detail_grades: Gradul 6 și peste
+  tutorial_codecombatozaria_string_detail_grades: Gradul 6 și peste
+  tutorial_vidcodedate_string_detail_grades: Gradul 6 și peste
   tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
   tutorial_codespeakhappy_string_detail_grades: Grades 2-8
-  tutorial_grokimage_string_detail_grades: Grades 6+
+  tutorial_grokimage_string_detail_grades: Gradul 6 și peste
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
   tutorial_rpstress_string_detail_grades: Clasele II+
   tutorial_bsdcause_string_detail_grades: Clasele IX+
   tutorial_vidcodeanimoji_string_detail_grades: Clasele II+
   tutorial_vidcodeanimojies_string_detail_grades: Clasele II+
-  tutorial_bsdinspire_string_detail_grades: Grades 6+
-  tutorial_tttractor_string_detail_grades: Grades 6+
+  tutorial_bsdinspire_string_detail_grades: Gradul 6 și peste
+  tutorial_tttractor_string_detail_grades: Gradul 6 și peste
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
   tutorial_scigirlsquest_string_detail_grades: Grades 2-8
   tutorial_codespeakbreathe_string_detail_grades: Clasele II+
-  tutorial_vidcodeface_string_detail_grades: Grades 6+
-  tutorial_educodemaze_string_detail_grades: Grades 6+
-  tutorial_educoderace_string_detail_grades: Grades 6+
+  tutorial_vidcodeface_string_detail_grades: Gradul 6 și peste
+  tutorial_educodemaze_string_detail_grades: Gradul 6 și peste
+  tutorial_educoderace_string_detail_grades: Gradul 6 și peste
   tutorial_codespeakchatbot_string_detail_grades: Grades 2-8
-  tutorial_gamefrootgames_string_detail_grades: Grades 6+
+  tutorial_gamefrootgames_string_detail_grades: Gradul 6 și peste
   tutorial_codespeakgrandparent_string_detail_grades: Grades 2-8
-  tutorial_educodekingdom_string_detail_grades: Grades 6+
+  tutorial_educodekingdom_string_detail_grades: Gradul 6 și peste
   tutorial_codehsdata_string_detail_grades: Clasele IX+
-  tutorial_educodecake_string_detail_grades: Grades 6+
-  tutorial_ttsecond_string_detail_grades: Grades 6+
-  tutorial_bsdtrivia_string_detail_grades: Grades 6+
+  tutorial_educodecake_string_detail_grades: Gradul 6 și peste
+  tutorial_ttsecond_string_detail_grades: Gradul 6 și peste
+  tutorial_bsdtrivia_string_detail_grades: Gradul 6 și peste
   tutorial_csfirstdialogue_string_detail_grades: Grades 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersdistance_string_detail_grades: Grades 6+
-  tutorial_itchspace_string_detail_grades: Grades 6+
+  tutorial_codestersdistance_string_detail_grades: Gradul 6 și peste
+  tutorial_itchspace_string_detail_grades: Gradul 6 și peste
   tutorial_vidcodemagic_string_detail_grades: Clasele II+
   tutorial_vidcodemagices_string_detail_grades: Clasele II+
-  tutorial_codespeakmeal_string_detail_grades: Grades 6+
+  tutorial_codespeakmeal_string_detail_grades: Gradul 6 și peste
   tutorial_itchfish_string_detail_grades: Grades 2-8
-  tutorial_bsdwebsite_string_detail_grades: Grades 6+
+  tutorial_bsdwebsite_string_detail_grades: Gradul 6 și peste
   tutorial_codespeaktime_string_detail_grades: Grades 2-8
-  tutorial_itchwebcam_string_detail_grades: Grades 6+
+  tutorial_itchwebcam_string_detail_grades: Gradul 6 și peste
   tutorial_itchball_string_detail_grades: Grades 2-8
   tutorial_ttrace_string_detail_grades: Grades 6-8
   tutorial_plethora_string_detail_grades: Clasele II+
-  tutorial_educodesecret_string_detail_grades: Grades 6+
-  tutorial_itchshapes_string_detail_grades: Grades 6+
+  tutorial_educodesecret_string_detail_grades: Gradul 6 și peste
+  tutorial_itchshapes_string_detail_grades: Gradul 6 și peste
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
-  tutorial_vidcodeplastiche_string_detail_grades: Grades 6+
+  tutorial_vidcodeplastiche_string_detail_grades: Gradul 6 și peste
   tutorial_educativechatbot_string_detail_grades: Clasele IX+
-  tutorial_educodebasics_string_detail_grades: Grades 6+
-  tutorial_codehsdesign_string_detail_grades: Grades 6+
-  tutorial_htmlacademyphp_string_detail_grades: Grades 6+
+  tutorial_educodebasics_string_detail_grades: Gradul 6 și peste
+  tutorial_codehsdesign_string_detail_grades: Gradul 6 și peste
+  tutorial_htmlacademyphp_string_detail_grades: Gradul 6 și peste
   tutorial_gamefrootdistance_string_detail_grades: Clasele II+
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Grades 6-8
-  tutorial_cuttle_string_detail_grades: Grades 6+
+  tutorial_cuttle_string_detail_grades: Gradul 6 și peste
   tutorial_bsdjokes_string_detail_grades: Grades 6-8
-  tutorial_rptree_string_detail_grades: Grades 6+
-  tutorial_codestersunity_string_detail_grades: Grades 6+
-  tutorial_codesterssoccer_string_detail_grades: Grades 6+
+  tutorial_rptree_string_detail_grades: Gradul 6 și peste
+  tutorial_codestersunity_string_detail_grades: Gradul 6 și peste
+  tutorial_codesterssoccer_string_detail_grades: Gradul 6 și peste
   tutorial_breakoutlock_string_detail_grades: Grades 2-8
-  tutorial_thunkablemask_string_detail_grades: Grades 6+
+  tutorial_thunkablemask_string_detail_grades: Gradul 6 și peste
   tutorial_cafarming_string_detail_grades: Grades 2-8
   tutorial_blocksmithyeti_string_detail_grades: Clasele IX+
-  tutorial_codecapture_string_detail_grades: Grades 6+
+  tutorial_codecapture_string_detail_grades: Gradul 6 și peste
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
-  tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 6+
+  tutorial_itchplatformer_string_detail_grades: Gradul 6 și peste
+  tutorial_codejika_string_detail_grades: Gradul 6 și peste
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
   tutorial_ozobotcolor2_string_detail_grades: Clasele II+
   tutorial_ozobotcolor3_string_detail_grades: Clasele II+
-  tutorial_clcarbon_string_detail_grades: Grades 6+
+  tutorial_clcarbon_string_detail_grades: Gradul 6 și peste
   tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
   tutorial_scigirlscc_string_detail_grades: Clasele II+
   tutorial_irobotpicture_string_detail_grades: Grades 2-8
@@ -7350,15 +7355,15 @@ ro:
   tutorial_kcjheroines_string_detail_grades: Grades 2-8
   tutorial_ozobotvalue_string_detail_grades: Grades 2-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
-  tutorial_clfashion2_string_detail_grades: Grades 6+
-  tutorial_ai4all_string_detail_grades: Grades 6+
-  tutorial_cldata_string_detail_grades: Grades 6+
+  tutorial_clfashion2_string_detail_grades: Gradul 6 și peste
+  tutorial_ai4all_string_detail_grades: Gradul 6 și peste
+  tutorial_cldata_string_detail_grades: Gradul 6 și peste
   tutorial_spheroinputs_string_detail_grades: Grades 2-8
   tutorial_edisoncount_string_detail_grades: Grades 2-8
   tutorial_spheroloops_string_detail_grades: Grades 2-8
   tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
-  tutorial_clfashion1_string_detail_grades: Grades 6+
+  tutorial_clfashion1_string_detail_grades: Gradul 6 și peste
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
   tutorial_edisonmystery_string_detail_grades: Grades 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
@@ -7366,17 +7371,17 @@ ro:
   tutorial_imagilabs_string_detail_grades: Grades 2-8
   tutorial_irobotsimulator_string_detail_grades: Grades 2-8
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
-  tutorial_firiavirtual_string_detail_grades: Grades 6+
+  tutorial_firiavirtual_string_detail_grades: Gradul 6 și peste
   tutorial_irobotguesscode_string_detail_grades: Grades 2-8
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
-  tutorial_nasa3d_string_detail_grades: Grades 6+
-  tutorial_blupants_string_detail_grades: Grades 6+
+  tutorial_nasa3d_string_detail_grades: Gradul 6 și peste
+  tutorial_blupants_string_detail_grades: Gradul 6 și peste
   tutorial_legodance_string_detail_grades: Grades 6-8
   tutorial_nearpodcoding_string_detail_grades: Clasele IX+
   tutorial_kcjplastic_string_detail_grades: Clasele II+
   tutorial_legojourney_string_detail_grades: Grades 2-8
   tutorial_legohopper_string_detail_grades: Grades 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Grades 6+
+  tutorial_catrobatembroidery_string_detail_grades: Gradul 6 și peste
   tutorial_irobotphone_string_detail_grades: Grades 2-8
   tutorial_codeguppydraw_string_detail_grades: Grades 6-8
   tutorial_codejumper_string_detail_grades: Grades 2-8
@@ -10268,42 +10273,42 @@ ro:
   tutorial_kuborobo_language: English, Spanish
   tutorial_ai-oceans_language: Română
   tutorial_scratchimagine_string_detail_grades: Clasele II+
-  tutorial_codesterspsa_string_detail_grades: Grades 6+
+  tutorial_codesterspsa_string_detail_grades: Gradul 6 și peste
   tutorial_googlehero_string_detail_grades: Grades 2-8
-  tutorial_codestersbball_string_detail_grades: Grades 6+
+  tutorial_codestersbball_string_detail_grades: Gradul 6 și peste
   tutorial_scratchcartoon_string_detail_grades: Clasele II+
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
   tutorial_bananatales_string_detail_grades: Grades 2-8
   tutorial_scratchtales_string_detail_grades: Grades 2-8
-  tutorial_msemoji_string_detail_grades: Grades 6+
-  tutorial_cacolor_string_detail_grades: Grades 6+
+  tutorial_msemoji_string_detail_grades: Gradul 6 și peste
+  tutorial_cacolor_string_detail_grades: Gradul 6 și peste
   tutorial_kodablebeach_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkeren_string_detail_grades: Grades 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Grades 6+
+  tutorial_tynkerjavapro_string_detail_grades: Gradul 6 și peste
   tutorial_grasshopperhack_string_detail_grades: Clasele IX+
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
   tutorial_nclabdata_string_detail_grades: Clasele IX+
   tutorial_grasshopperphoto_string_detail_grades: Clasele IX+
-  tutorial_tynkerpyland_string_detail_grades: Grades 6+
+  tutorial_tynkerpyland_string_detail_grades: Gradul 6 și peste
   tutorial_codeitimages_string_detail_grades: Clasele II+
   tutorial_hyperpadenemy_string_detail_grades: Clasele IX+
   tutorial_tynkerpro_string_detail_grades: Grades 2-8
-  tutorial_trashtag_string_detail_grades: Grades 6+
+  tutorial_trashtag_string_detail_grades: Gradul 6 și peste
   tutorial_casiege_string_detail_grades: Grades 2-8
-  tutorial_thunkableyeet_string_detail_grades: Grades 6+
-  tutorial_vidcodedeal_string_detail_grades: Grades 6+
+  tutorial_thunkableyeet_string_detail_grades: Gradul 6 și peste
+  tutorial_vidcodedeal_string_detail_grades: Gradul 6 și peste
   tutorial_codehsgeno_string_detail_grades: Clasele IX+
   tutorial_hyperpadpong_string_detail_grades: Clasele IX+
   tutorial_tynkerland_string_detail_grades: Grades 2-8
-  tutorial_trinketgirl_string_detail_grades: Grades 6+
+  tutorial_trinketgirl_string_detail_grades: Gradul 6 și peste
   tutorial_rpimosquito_string_detail_grades: Grades 6-8
-  tutorial_tynkermars_string_detail_grades: Grades 6+
-  tutorial_cityx_string_detail_grades: Grades 6+
-  tutorial_vidcodemap_string_detail_grades: Grades 6+
+  tutorial_tynkermars_string_detail_grades: Gradul 6 și peste
+  tutorial_cityx_string_detail_grades: Gradul 6 și peste
+  tutorial_vidcodemap_string_detail_grades: Gradul 6 și peste
   tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
-  tutorial_codehstriangle_string_detail_grades: Grades 6+
+  tutorial_codehstriangle_string_detail_grades: Gradul 6 și peste
   tutorial_ttwhitehouse_string_detail_grades: Clasele II+
-  tutorial_modulo_string_detail_grades: Grades 6+
+  tutorial_modulo_string_detail_grades: Gradul 6 și peste
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: Clasele IX+
@@ -10311,34 +10316,34 @@ ro:
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
   tutorial_stemc_blckhole_string_detail_grades: Clasele IX+
-  tutorial_careconfigure_string_detail_grades: Grades 6+
+  tutorial_careconfigure_string_detail_grades: Gradul 6 și peste
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
   tutorial_ozaria_string_detail_grades: Clasele II+
-  tutorial_ttovum_string_detail_grades: Grades 6+
+  tutorial_ttovum_string_detail_grades: Gradul 6 și peste
   tutorial_ttpassage_string_detail_grades: Grades 2-8
   tutorial_tynkerhtmlen_string_detail_grades: Clasele II+
   tutorial_ttfrog_string_detail_grades: Grades 2-8
   tutorial_codemojijava_string_detail_grades: Grades 6-8
-  tutorial_ccfirewall_string_detail_grades: Grades 6+
+  tutorial_ccfirewall_string_detail_grades: Gradul 6 și peste
   tutorial_htmljs_string_detail_grades: Grades 6-8
   tutorial_ttaqueducts_string_detail_grades: Grades 6-8
-  tutorial_vtgame_string_detail_grades: Grades 6+
-  tutorial_baroborav_string_detail_grades: Grades 6+
+  tutorial_vtgame_string_detail_grades: Gradul 6 și peste
+  tutorial_baroborav_string_detail_grades: Gradul 6 și peste
   tutorial_baroboobstacle_string_detail_grades: Clasele II+
-  tutorial_pbstorytelling_string_detail_grades: Grades 6+
+  tutorial_pbstorytelling_string_detail_grades: Gradul 6 și peste
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
   tutorial_spherosmiles_string_detail_grades: Clasele II+
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
-  tutorial_toxarchitect_string_detail_grades: Grades 6+
+  tutorial_toxarchitect_string_detail_grades: Gradul 6 și peste
   tutorial_idodge_string_detail_grades: Grades 2-8
-  tutorial_firiacodebot_string_detail_grades: Grades 6+
+  tutorial_firiacodebot_string_detail_grades: Gradul 6 și peste
   tutorial_modlighthouse_string_detail_grades: Pre-școlar+
   tutorial_spherogreen_string_detail_grades: Grades 2-8
   tutorial_ozopopstar_string_detail_grades: Grades 2-8
-  tutorial_eddesign_string_detail_grades: Grades 6+
-  tutorial_edshapeup_string_detail_grades: Grades 6+
+  tutorial_eddesign_string_detail_grades: Gradul 6 și peste
+  tutorial_edshapeup_string_detail_grades: Gradul 6 și peste
   tutorial_ozocolor_string_detail_grades: Grades 2-8
   tutorial_kcjanimals_string_detail_grades: Grades 2-8
   tutorial_icomputeeggs_string_detail_grades: Grades 2-8
@@ -10347,21 +10352,21 @@ ro:
   tutorial_peblioportraits_string_detail_grades: Clasele IX+
   tutorial_rootcodebreak_string_detail_grades: Grades 2-8
   tutorial_microbit14_string_detail_grades: Grades 2-8
-  tutorial_barobomoon_string_detail_grades: Grades 6+
+  tutorial_barobomoon_string_detail_grades: Gradul 6 și peste
   tutorial_eddog_string_detail_grades: Grades 2-6
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: Clasele IX+
-  tutorial_blockscadtarget_string_detail_grades: Grades 6+
+  tutorial_blockscadtarget_string_detail_grades: Gradul 6 și peste
   tutorial_tcadicicles_string_detail_grades: Grades 7-8
-  tutorial_blockscadscale_string_detail_grades: Grades 6+
+  tutorial_blockscadscale_string_detail_grades: Gradul 6 și peste
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Clasele IX+
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
-  tutorial_modvariables_string_detail_grades: Grades 6+
+  tutorial_modvariables_string_detail_grades: Gradul 6 și peste
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
-  tutorial_rpisensehat_string_detail_grades: Grades 6+
+  tutorial_rpisensehat_string_detail_grades: Gradul 6 și peste
   tutorial_modtraits_string_detail_grades: Clasele II+
   tutorial_mee_string_detail_grades: Clasele II+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8

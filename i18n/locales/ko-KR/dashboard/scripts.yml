@@ -4304,7 +4304,7 @@ ko:
           title: 메이커 툴 워크숍
           description_audience: 직접 메이커 툴키트 워크숍에 참석한 교사
           description_short: 실황 메이커 툴킷 워크숍을 함께 하기 위한 레벨 진행
-          description: 이 레벨 진행은 실황 메이커 툴킷 워크숍을 함께 하기 위해 의도되었습니다. 툴 또는 CS 개념을 가르치려는 것이 아니라 참석자에게 앱 랩과 메이커 툴 킷을 폭 넓게 소개하는 워크숍 촉진자를 지원하고자 합니다.
+          description: 이 레벨 진행은 실황 메이커 툴킷 워크숍을 함께 하기 위해 의도되었습니다. 툴 또는 CS 개념을 가르치려는 것이 아니라 참석자에게 앱 랩과 메이커 툴 킷을 폭 넓게 소개하는 워크숍 진행자를 지원하고자 합니다.
           lessons:
             App Lab Basics:
               name: 앱 랩 기초
@@ -4947,6 +4947,7 @@ ko:
           title: 과정 A
           assignment_family_title: 과정 A
           description_audience: '나이: 4-7'
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
           description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
           lessons:
             'Debugging: Unspotted Bugs':
@@ -4988,6 +4989,7 @@ ko:
           title: 과정 B
           assignment_family_title: 과정 B
           description_audience: '나이: 5-8'
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개 (과정 A와 유사하지만 더 연령이 높은 학생에게는 더 다양한 내용이 추가됩니다.)
           description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
           lessons:
             'Debugging: Unspotted Bugs':
@@ -5055,6 +5057,7 @@ ko:
           title: 과정 D
           assignment_family_title: 과정 D
           description_audience: '나이: 7-11'
+          description_short: 과정 C에서 나온 개념을 빠르게 다룬 후 알고리즘과 중첩 루프, 조건 등으로 더 깊게 들어 가세요.
           description: 알고리즘과 중첩 루프, while 루프, 조건, 이벤트를 포함하여 새로운 코딩 개념을 배웁니다. 디지털 시민성에 대해 소개 받고 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.  
           lessons:
             Introduction:
@@ -5134,6 +5137,7 @@ ko:
           title: 과정 E
           assignment_family_title: 과정 E
           description_audience: '나이: 8-12'
+          description_short: 과정 C와 D의 개념을 빠르게 다루고 그 다음, 함수로 더 깊게 들어 가세요.
           description: 알고리즘과 루프, 조건, 이벤트로 코딩을 시작하고 그 다음, 함수로 넘어갈 수 있습니다. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
           lesson_groups:
             csf_e_1:
@@ -5270,6 +5274,7 @@ ko:
           title: 과정 F
           assignment_family_title: 과정 F
           description_audience: '나이: 9-13'
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
           description: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
           lesson_groups:
             csf_f_1:
@@ -5380,10 +5385,10 @@ ko:
             Nested Loops in Bee/Zombie:
               name: 벌/좀비 내 중첩 루프
         csdnovice:
-          title: CS 발견 TeacherCon 초보 촉진자
-          description_audience: CSD 초보 촉진자
-          description_short: TeacherCon의 초보 촉진자를 위한 반영 질문.
-          description: '초보 촉진자로서 TeacherCon에 대한 소감을 기록하는 장소. '
+          title: CS 발견 TeacherCon 초보 진행자
+          description_audience: CSD 초보 진행자
+          description_short: TeacherCon의 초보 진행자를 위한 반영 질문.
+          description: '초보 진행자로서 TeacherCon에 대한 소감을 기록하는 장소. '
           lessons:
             Tuesday:
               name: 화요일
@@ -5453,10 +5458,10 @@ ko:
             Participate in a longitudinal study!:
               name: 종단적 연구에 참가하세요!
         cspnovice:
-          title: CS 원리 TeacherCon 초보 촉진자 반영
-          description_audience: CSP 초보 촉진자
-          description_short: TeacherCon의 초보 촉진자를 위한 반영 질문.
-          description: '초보 촉진자로서 TeacherCon에 대한 소감을 기록하는 장소. '
+          title: CS 원리 TeacherCon 초보 진행자 반영
+          description_audience: CSP 초보 진행자
+          description_short: TeacherCon의 초보 진행자를 위한 반영 질문.
+          description: '초보 진행자로서 TeacherCon에 대한 소감을 기록하는 장소. '
           lesson_groups:
             required:
               display_name: 개요
@@ -5493,9 +5498,9 @@ ko:
               name: CSD 목요일
         csp1-dlp:
           title: CSP 단원 1 심화 학습
-          description_audience: CS 원리 교육 중인 촉진자
-          description_short: 'CSP 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CSP 교육 중인 촉진자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org CSP 커리큘럼의 단원 1을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자
+          description_short: 'CSP 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CSP 교육 중인 진행자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org CSP 커리큘럼의 단원 1을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -5510,9 +5515,9 @@ ko:
               name: 단원 1 심화 학습 반영 완료
         csp2-dlp:
           title: CSP 단원 2 심화 학습
-          description_audience: CS 원리 교육 중인 촉진자
-          description_short: '단원 2 CSP 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CSP 교육 중인 촉진자를 위한 심화 학습 계획의 단원 2입니다. 여기서 Code.org CSP 커리큘럼의 단원 2를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자
+          description_short: '단원 2 CSP 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CSP 교육 중인 진행자를 위한 심화 학습 계획의 단원 2입니다. 여기서 Code.org CSP 커리큘럼의 단원 2를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -5527,9 +5532,9 @@ ko:
               name: 단원 2 심화 학습 반영 완료
         csp3-dlp:
           title: CSP 단원 3 심화 학습
-          description_audience: CS 원리 교육 중인 촉진자
-          description_short: '단원 3 CSP 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CSP 교육 중인 촉진자를 위한 심화 학습 계획의 단원 3입니다. 여기서 Code.org CSP 커리큘럼의 단원 3를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자
+          description_short: '단원 3 CSP 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CSP 교육 중인 진행자를 위한 심화 학습 계획의 단원 3입니다. 여기서 Code.org CSP 커리큘럼의 단원 3를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -5542,9 +5547,9 @@ ko:
               name: 단원 3 심화 학습 반영 완료
         csp4-dlp:
           title: CSP 단원 4 심화 학습
-          description_audience: CS 원리 교육 중인 촉진자
-          description_short: 'CSP 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CSP 교육 중인 촉진자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org CSP 커리큘럼의 단원 4를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자
+          description_short: 'CSP 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CSP 교육 중인 진행자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org CSP 커리큘럼의 단원 4를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -5557,9 +5562,9 @@ ko:
               name: 단원 4 심화 학습 반영 완료
         csp5-dlp:
           title: CSP 단원 5 심화 학습
-          description_audience: CS 원리 교육 중인 촉진자
-          description_short: 'CSP 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CSP 교육 중인 촉진자를 위한 심화 학습 계획의 단원 5입니다. 여기서 Code.org CSP 커리큘럼의 단원 5를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자
+          description_short: 'CSP 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CSP 교육 중인 진행자를 위한 심화 학습 계획의 단원 5입니다. 여기서 Code.org CSP 커리큘럼의 단원 5를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -5572,9 +5577,9 @@ ko:
               name: 단원 5 심화 학습 반영 완료
         csd1-dlp:
           title: CS 발견 단원 1 심화 학습
-          description_audience: CS 발견 교육 중인 촉진자
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 1을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 발견 교육 중인 진행자
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 1을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -5587,9 +5592,9 @@ ko:
               name: 단원 1 심화 학습 반영 완료
         csd6-dlp:
           title: CS 발견 단원 6 심화 학습
-          description_audience: CS 발견 교육 중인 촉진자
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 6입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 6을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
+          description_audience: CS 발견 교육 중인 진행자
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 6입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 6을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
           lesson_groups:
             required:
               display_name: 개요
@@ -5602,8 +5607,8 @@ ko:
               name: 단원 6 심화 학습 반영 완료
         csd5-dlp:
           title: CS 발견 단원 5 심화 학습
-          description_audience: CS 발견 교육 중인 촉진자
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
+          description_audience: CS 발견 교육 중인 진행자
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
           description: Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 5입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 5를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
           lesson_groups:
             required:
@@ -5617,9 +5622,9 @@ ko:
               name: 단원 5 심화 학습 반영 완료
         csd4-dlp:
           title: CS 발견 단원 4 심화 학습
-          description_audience: CS 발견 교육 중인 촉진자
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 4를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
+          description_audience: CS 발견 교육 중인 진행자
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 4를 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
           lesson_groups:
             required:
               display_name: 개요
@@ -5632,9 +5637,9 @@ ko:
               name: 단원 4 심화 학습 반영 완료
         csd3-dlp:
           title: CS 발견 단원 3 심화 학습
-          description_audience: CS 발견 교육 중인 촉진자
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 3입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 3을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
+          description_audience: CS 발견 교육 중인 진행자
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 3입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 3을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
           lesson_groups:
             required:
               display_name: 개요
@@ -5647,9 +5652,9 @@ ko:
               name: 단원 3 심화 학습 반영 완료
         csd2-dlp:
           title: CS 발견 단원 2 심화 학습
-          description_audience: CS 발견 교육 중인 촉진자
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 2입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 2을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
+          description_audience: CS 발견 교육 중인 진행자
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 2입니다. 여기서 Code.org CS 발견 커리큘럼의 단원 2을 충분히 숙지했음을 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다.
           lesson_groups:
             required:
               display_name: 개요
@@ -7035,6 +7040,7 @@ ko:
           title: 과정 A (2018)
           assignment_family_title: 과정 A
           description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
           description_audience: '나이: 4-7'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -7236,6 +7242,8 @@ ko:
               name: 스크랫으로 시퀸싱
             Move It, Move It:
               name: 빨리 빨리 움직이자!
+            Copyright and Creativity:
+              name: 페어 플레이하는 것은 멋진 일입니다.
         coursed-2018:
           title: 과정 D (2018)
           assignment_family_title: 과정 D
@@ -7515,6 +7523,8 @@ ko:
               name: 스크랫으로 디버깅
             Programming in Artist:
               name: 코드로 아트 창작
+            'Loops: My Loopy Robotic Friends':
+              name: 내 루피 로봇 친구
             Loops in Artist:
               name: 루프로 모양 그리기
             Nested Loops:
@@ -7601,6 +7611,7 @@ ko:
           title: 과정 F (2018)
           assignment_family_title: 과정 F
           description: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
           description_audience: '나이: 9-13'
           lesson_groups:
             csf_f_1:
@@ -7620,6 +7631,8 @@ ko:
               name: 스크랫으로 디버깅
             Programming in Artist:
               name: 코드로 아트 창작
+            'Loops: My Loopy Robotic Friends':
+              name: 내 루피 로봇 친구
             Loops in Artist:
               name: 루프로 모양 그리기
             Nested Loops in Bee/Zombie:
@@ -8269,9 +8282,9 @@ ko:
               name: 가상 펫 - 인터랙션
         csd1-dlp-18:
           title: CS 발견 단원 1 심화 학습 2018-2019
-          description_audience: CS 발견 교육 중인 촉진자 2018-2019
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org CS 발견 커리큘럼 단원 1의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 발견 교육 중인 진행자 2018-2019
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org CS 발견 커리큘럼 단원 1의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8288,9 +8301,9 @@ ko:
               name: 단원 3 심화 학습 반영 완료
         csd2-dlp-18:
           title: CS 발견 단원 2 심화 학습 2018-2019
-          description_audience: CS 발견 교육 중인 촉진자 2018-2019
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 2입니다. 여기서 Code.org CS 발견 커리큘럼 단원 2의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 발견 교육 중인 진행자 2018-2019
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 2입니다. 여기서 Code.org CS 발견 커리큘럼 단원 2의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. 진행자'
           lesson_groups:
             required:
               display_name: 개요
@@ -8303,9 +8316,9 @@ ko:
               name: 단원 2 심화 학습 반영 완료
         csd3-dlp-18:
           title: CS 발견 단원 3 심화 학습 2018-2019
-          description_audience: CS 발견 교육 중인 촉진자 2018-2019
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 3입니다. 여기서 Code.org CS 발견 커리큘럼 단원 3의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 발견 교육 중인 진행자 2018-2019
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 3입니다. 여기서 Code.org CS 발견 커리큘럼 단원 3의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8318,9 +8331,9 @@ ko:
               name: 단원 3 심화 학습 반영 완료
         csd4-dlp-18:
           title: CS 발견 단원 4 심화 학습 2018-2019
-          description_audience: CS 발견 교육 중인 촉진자 2018-2019
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org CS 발견 커리큘럼 단원 4의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 발견 교육 중인 진행자 2018-2019
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org CS 발견 커리큘럼 단원 4의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8335,9 +8348,9 @@ ko:
               name: 단원 4 심화 학습 반영 완료
         csd5-dlp-18:
           title: CS 발견 단원 5 심화 학습 2018-2019
-          description_audience: CS 발견 교육 중인 촉진자 2018-2019
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 5입니다. 여기서 Code.org CS 발견 커리큘럼 단원 5의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 발견 교육 중인 진행자 2018-2019
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 5입니다. 여기서 Code.org CS 발견 커리큘럼 단원 5의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8350,9 +8363,9 @@ ko:
               name: 단원 5 심화 학습 반영 완료
         csd6-dlp-18:
           title: CS 발견 단원 6 심화 학습 2018-2019
-          description_audience: CS 발견 교육 중인 촉진자 2018-2019
-          description_short: 'CS 발견 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 발견 교육 중인 촉진자를 위한 심화 학습 계획의 단원 6입니다. 여기서 Code.org CS 발견 커리큘럼 단원 6의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 발견 교육 중인 진행자 2018-2019
+          description_short: 'CS 발견 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 6입니다. 여기서 Code.org CS 발견 커리큘럼 단원 6의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8367,9 +8380,9 @@ ko:
               name: 단원 6 심화 학습 반영 완료
         csp1-dlp-18:
           title: CS 원리 단원 1 심화 학습 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 원리 교육 중인 촉진자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org CS 원리 커리큘럼 단원 1의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 원리 교육 중인 진행자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org CS 원리 커리큘럼 단원 1의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8382,9 +8395,9 @@ ko:
               name: 단원 1 심화 학습 반영 완료
         csp2-dlp-18:
           title: CS 원리 단원 2 심화 학습 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 원리 교육 중인 촉진자를 위한 심화 학습 계획의 단원 2입니다. 여기서 Code.org CS 원리 커리큘럼 단원 2의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 원리 교육 중인 진행자를 위한 심화 학습 계획의 단원 2입니다. 여기서 Code.org CS 원리 커리큘럼 단원 2의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8397,9 +8410,9 @@ ko:
               name: 단원 2 심화 학습 반영 완료
         csp3-dlp-18:
           title: CS 원리 단원 3 심화 학습 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 원리 교육 중인 촉진자를 위한 심화 학습 계획의 단원 3입니다. 여기서 Code.org CS 원리 커리큘럼 단원 3의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 원리 교육 중인 진행자를 위한 심화 학습 계획의 단원 3입니다. 여기서 Code.org CS 원리 커리큘럼 단원 3의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8412,9 +8425,9 @@ ko:
               name: 단원 3 심화 학습 반영 완료
         csp4-dlp-18:
           title: CS 원리 단원 4 심화 학습 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 원리 교육 중인 촉진자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org CS 원리 커리큘럼 단원 4의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 원리 교육 중인 진행자를 위한 심화 학습 계획의 단원 4입니다. 여기서 Code.org CS 원리 커리큘럼 단원 4의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8429,9 +8442,9 @@ ko:
               name: 단원 4 심화 학습 반영 완료
         csp5-dlp-18:
           title: CS 원리 단원 5 심화 학습 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 원리 교육 중인 촉진자를 위한 심화 학습 계획의 단원 5입니다. 여기서 Code.org CS 원리 커리큘럼 단원 5의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 원리 교육 중인 진행자를 위한 심화 학습 계획의 단원 5입니다. 여기서 Code.org CS 원리 커리큘럼 단원 5의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8444,9 +8457,9 @@ ko:
               name: 단원 5 심화 학습 반영 완료
         csp-explore-dlp-18:
           title: CS 원리 심화 학습 탐구 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 원리 교육 중인 촉진자를 위한 심화 학습 계획의 탐구 AP 단원 입니다. 여기서 Code.org CS 원리 커리큘럼의 탐구 AP 단원의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 원리 교육 중인 진행자를 위한 심화 학습 계획의 탐구 AP 단원 입니다. 여기서 Code.org CS 원리 커리큘럼의 탐구 AP 단원의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8463,9 +8476,9 @@ ko:
               name: 심화 학습 탐구 반영 완료
         csp-create-dlp-18:
           title: CS 원리 만들기 심화 학습 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 심화 학습 자료 '
-          description: 'Code.org CS 원리 교육 중인 촉진자를 위한 심화 학습 계획의 만들기 AP 단원 입니다. 여기서 Code.org CS 원리 커리큘럼의 만들기 AP 단원의 촉진자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 심화 학습 자료 '
+          description: 'Code.org CS 원리 교육 중인 진행자를 위한 심화 학습 계획의 만들기 AP 단원 입니다. 여기서 Code.org CS 원리 커리큘럼의 만들기 AP 단원의 진행자로서 능숙도를 입증하기 위한 반영 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서 느낀 소감을 제출하면, 또래 검토 항목이 이 페이지 하단에 나올 것입니다. '
           lesson_groups:
             required:
               display_name: 개요
@@ -8489,9 +8502,9 @@ ko:
               name: CSD 과정 후 설문조사 
         csd-novice-18:
           title: CS 발견 초보자 반영 2018-2019
-          description_audience: CS 발견 교육 중인 촉진자 2018-2019
-          description_short: 'CS 발견 교육중인 촉진자를 위한 초보자 반영 자료 '
-          description: CS 발견 교육중인 촉진자를 위한 초보자 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 촉진자 교육 위크엔드에서 우리가 할 일의 기초가 될 것입니다. 
+          description_audience: CS 발견 교육 중인 진행자 2018-2019
+          description_short: 'CS 발견 교육중인 진행자를 위한 초보자 반영 자료 '
+          description: CS 발견 교육중인 진행자를 위한 초보자 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 진행자 교육 위크엔드에서 우리가 할 일의 기초가 될 것입니다. 
           lesson_groups:
             required:
               display_name: 개요
@@ -8526,9 +8539,9 @@ ko:
               name: 4 일차
         csd-apprentice-18:
           title: CS 발견 초보자 반영 2018-2019
-          description_audience: CS 발견 교육 중인 촉진자 2018-2019
-          description_short: 'CS 발견 교육중인 촉진자를 위한 수습생 반영 자료 '
-          description: CS 발견 교육중인 촉진자를 위한 수습생 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 촉진자 교육 위크엔드에서 우리가 할 일의 기초가 될 것입니다. 
+          description_audience: CS 발견 교육 중인 진행자 2018-2019
+          description_short: 'CS 발견 교육중인 진행자를 위한 수습생 반영 자료 '
+          description: CS 발견 교육중인 진행자를 위한 수습생 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 진행자 교육 위크엔드에서 우리가 할 일의 기초가 될 것입니다. 
           lesson_groups:
             required:
               display_name: 개요
@@ -8557,9 +8570,9 @@ ko:
               name: 4 일차
         csp-novice-18:
           title: CS 원리 초보자 반영 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 초보자 반영 자료 '
-          description: CS 원리 교육중인 촉진자를 위한 초보자 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 촉진자 교육 위크엔드에서 우리가 할 일의 기초가 될 것입니다. 
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 초보자 반영 자료 '
+          description: CS 원리 교육중인 진행자를 위한 초보자 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 진행자 교육 위크엔드에서 우리가 할 일의 기초가 될 것입니다. 
           lesson_groups:
             required:
               display_name: 개요
@@ -8588,9 +8601,9 @@ ko:
               name: 4 일차
         csp-apprentice-18:
           title: CS 원리 수습생 반영 2018-2019
-          description_audience: CS 원리 교육 중인 촉진자 2018-2019
-          description_short: 'CS 원리 교육 중인 촉진자를 위한 수습생 반영 자료 '
-          description: CS 원리 교육중인 촉진자를 위한 수습생 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 촉진자 교육 위크엔드에서 우리가 할 일의 기초가 될 것입니다. 
+          description_audience: CS 원리 교육 중인 진행자 2018-2019
+          description_short: 'CS 원리 교육 중인 진행자를 위한 수습생 반영 자료 '
+          description: CS 원리 교육중인 진행자를 위한 수습생 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 진행자 교육 위크엔드에서 우리가 할 일의 기초가 될 것입니다. 
           lesson_groups:
             required:
               display_name: 개요
@@ -8656,6 +8669,8 @@ ko:
               name: 디지털 개인정보 흔적
             Programming in Ice Age:
               name: 스크랫으로 프로그래밍
+            Copyright and Creativity:
+              name: 페어 플레이하는 것은 멋진 일입니다.
             Programming with Rey and BB-8:
               name: 레이와 BB-8로 프로그래밍
             Loops in Ice Age:
@@ -8683,7 +8698,7 @@ ko:
               name: CDEF 교육자를 위한 디버깅
         fit-test:
           title: FIT 트레이닝 연습 PLC 과정
-          description_audience: 교육 중인 촉진자
+          description_audience: 교육 중인 진행자
           description_short: FIT 트레이닝 과정
           description: PLC 과정 진행방식을 보여주는데 사용됩니다
           lesson_groups:
@@ -8845,6 +8860,7 @@ ko:
         coursef-2019:
           title: 과정 F (2019)
           description: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
           description_audience: '나이: 9-13'
           lesson_groups:
             ramp_up:
@@ -8983,6 +8999,7 @@ ko:
             Digital Sharing:
               name: 디지털 공유
               description_student: '이 레슨에서는 소유권과 저작권의 도전과 혜택에 대해 배울 것입니다. '
+              description_teacher: 저작권 및 창의성에서 팀에 의해 컴퓨터 과학 기초를 위해 차용된 이 레슨은 학생들이 특히 디지털 환경에서 소유권과 저작권 존중이라는 도전과 혜택을 이해하도록 돕기 위해 존재합니다. 학생들에게 윤리적 디지털 시민이 되는 중요한 부분으로써 예술가의 권리를 존중하도록 권장합니다. 
             Running Simulations:
               name: 시뮬레이션 실행
             Simulating Experiments:
@@ -9027,6 +9044,7 @@ ko:
             Relay Programming:
               name: 릴레이 프로그래밍
               description_student: 과정 초반에 코드로 그림을 그릴 때를 기억하세요? 이 레슨에서는 팀과 함께 이와 매우 유사할 일을 할 것입니다!
+              description_teacher: 이 활동은 디버깅과 끈기에 관한 짧은 레슨으로 시작하고 그 다음, 시계를 상대로한 경기로 빠르게 이동하여 팀으로 나눠 한 번에 한 지침만 있는 프로그램을 작성합니다.
             Debugging in Collector:
               name: 라우렐로 디버깅
               description_student: 코딩을 하며 문제점에 닥쳤던 적이 있습니까? 이 레슨에서는 디버깅의 비밀에 관해 배울 것입니다. 디버깅은 코드 내 문제를 찾아내고 고치는 과정입니다.
@@ -9229,6 +9247,7 @@ ko:
             Digital Sharing:
               name: 디지털 공유
             Simon Says:
+              name: 사이몬 가라사대
               description_student: 게임을 하고 맞는 결과를 얻기 위해 어떤 명령어가 필요한지 생각해 보세요.
               description_teacher: '이 레슨에서 학생들은 맞는 결과를 산출하기 위해 명령어를 어떻게 제공해야 하는지 생각해 보게 할 의도를 지닌 게임을 할 것입니다. 이것은 그들이 앞으로 하게 될 레슨에서의 스프라이트 랩로 더 넘어 가게 하는 데 도움을 줄 것입니다.'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -9386,7 +9405,7 @@ ko:
               name: 프로젝트 후 테스트
         andrea-test:
           title: andrea-테스트
-          description_audience: 6 -12 교육 중인 촉진자
+          description_audience: 6 -12 교육 중인 진행자
           description_short: 이것은 과정을 만드는 데 있어서 내 스킬을 테스트하기 위한 것입니다.
           description: 과정을 만들려는 시도에 관한 더 긴 설명....여전히 개관과 컨텐츠가 어디에서 왔는지 궁금합니다....
           lesson_groups:
@@ -9532,6 +9551,7 @@ ko:
               description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.  
               description_teacher: 학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때 그들 얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로 창의적이 될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼러런스를 위한 작품 제작에 매우 적합합니다. 
             Picturing Data:
+              name: 데이터 묘사
               description_student: 데이터는 학생들이 그들의 세계를 이해하고 흥미로운 질문에 답을 하는데 도움을 주기 위해 사용할 수 있습니다. 이 레슨에서 학생들은 플레이 랩 프로젝트에서 데이터를 모아 여러 종류의 그래프를 사용해 이를 시각화할 것입니다.
               description_teacher: 데이터는 학생들이 그들의 세계를 이해하고 흥미로운 질문에 답을 하는데 도움을 주기 위해 사용할 수 있습니다. 이 레슨에서 학생들은 플레이 랩 프로젝트에서 데이터를 모아 여러 종류의 그래프를 사용해 이를 시각화할 것입니다.
         csp-mid-survey:
@@ -9555,6 +9575,7 @@ ko:
         coursea-2019:
           title: 과정 A (2019)
           description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
           description_audience: '나이: 4-7'
           lesson_groups:
             csf_digcit:
@@ -9680,6 +9701,7 @@ ko:
               description_student: 이 레슨에서, 우리는 반복 루프를 사용해 댄스 파티를 할 것예요!
               description_teacher: 더 길고, 더 흥미로운 프로그램을 작성하기 위해 시작했기 때문에, 코드에는 종종 많은 반복이 들어 있을 수 있습니다. 이 레슨에서 학생들은 춤에서 반복되는 동작 패턴을 봄으로써 반복이 많이 들어 있는 지시사항을 더 쉽게 소통하기 위한 루프 사용법에 관해 배울 것입니다.  
             The Right App:
+              name: 바른 앱
               description_student: 스마트폰 앱 스케치
               description_teacher: '이 레슨은 학생들에게 컴퓨터 과학이 실생활에서 사람들에게 도움을 줄 수 있음을 인식하게 만듭니다. 먼저, 학생들은 서너 명의 허구의 스마트폰 사용자에게 그들의 필요에 "맞는 앱"을 찾아 주기 위해 그들의 입장이 되어 그들과 공감합니다. 그 다음,  공감력과 창의성을 발휘하여 한 명의 추가적인 사용자의 필요를 만족하는 스마트폰 앱을 스케치합니다.  '
             Loops in Harvester:
@@ -11472,9 +11494,9 @@ ko:
               name: "[OLD] 트래버스 만들기"
         fit2019-novice:
           title: 2019 여름 워크숍 초보자 반영
-          description_audience: 6 - 12 교육 중인 초보 촉진자
-          description_short: '2019 교육 중인 촉진자를 위한 초보자 반영 자료 '
-          description: Code.org 교육중인 촉진자를 위한 초보자 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 촉진자 교육 위크숍에서 우리가 할 일의 기초가 될 것입니다. 
+          description_audience: 6 - 12 교육 중인 초보 진행자
+          description_short: '2019 교육 중인 진행자를 위한 초보자 반영 자료 '
+          description: Code.org 교육중인 진행자를 위한 초보자 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 진행자 교육 위크숍에서 우리가 할 일의 기초가 될 것입니다. 
           lesson_groups:
             required:
               display_name: 개요
@@ -11508,9 +11530,9 @@ ko:
               name: 문제 해결 프로세스
         fit2019-apprentice:
           title: 2019 여름 워크숍 수습생 반영
-          description_audience: 6 - 12 교육 중인 수습생 촉진자
-          description_short: '2019 교육 중인 촉진자를 위한 수습생 반영 자료 '
-          description: Code.org 교육중인 촉진자를 위한 수습생 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 촉진자 교육 위크숍에서 우리가 할 일의 기초가 될 것입니다. 
+          description_audience: 6 - 12 교육 중인 수습생 진행자
+          description_short: '2019 교육 중인 진행자를 위한 수습생 반영 자료 '
+          description: Code.org 교육중인 진행자를 위한 수습생 반영 세트이며 5일 간의 여름 워크숍 동안 진행됩니다. 직접 참여하는 5일 간의 여름 워크숍 동안 매일 반영 프롬프트를 여기서 찾을 수 있습니다. 이 질문은 진행자 교육 위크숍에서 우리가 할 일의 기초가 될 것입니다. 
           lesson_groups:
             required:
               display_name: 개요
@@ -11880,7 +11902,7 @@ ko:
               name: 플레이 랩에서 스토리 말하기
         dlp19-csd-mod-fit:
           title: CS 발견 심화 학습 2019 FiT를 위한 모듈
-          description_audience: CS 발견 교육 중인 촉진자 2019
+          description_audience: CS 발견 교육 중인 진행자 2019
           lesson_groups:
             required:
               display_name: 개요
@@ -11915,7 +11937,7 @@ ko:
               name: CSD 워크숍 1 버그
         dlp19-csd-mod-w1:
           title: 'CS 발견 심화 학습 워크숍 1을 위한 모듈 '
-          description_audience: CS 발견 교육 중인 촉진자 2019
+          description_audience: CS 발견 교육 중인 진행자 2019
           description_short: 학년도 워크숍 1
           lesson_groups:
             required:
@@ -11937,7 +11959,7 @@ ko:
               name: 심화 학습 개관
         dlp19-csd-mod-w2:
           title: CS 발견 심화 학습 워크숍 2를 위한 모듈
-          description_audience: CS 발견 교육 중인 촉진자 2019
+          description_audience: CS 발견 교육 중인 진행자 2019
           lesson_groups:
             required:
               display_name: 개요
@@ -11956,7 +11978,7 @@ ko:
               name: '단계 2: 이해 입증'
         dlp19-csd-mod-w3:
           title: CS 발견 심화 학습 워크숍 3을 위한 모듈
-          description_audience: CS 발견 교육 중인 촉진자 2019
+          description_audience: CS 발견 교육 중인 진행자 2019
           lesson_groups:
             required:
               display_name: 개요
@@ -11973,7 +11995,7 @@ ko:
               name: '단계 2: 이해 입증'
         dlp19-csd-mod-w4:
           title: CS 발견 심화 학습 워크숍 4를 위한 모듈
-          description_audience: CS 발견 교육 중인 촉진자 2019
+          description_audience: CS 발견 교육 중인 진행자 2019
           lesson_groups:
             required:
               display_name: 개요
@@ -12451,6 +12473,8 @@ ko:
               name: 조건
             'Events: The Big Event':
               name: '이벤트: 빅 이벤트'
+            Simon Says:
+              name: 사이몬 가라사대
             Learning Sprites with Sprite Lab:
               name: 스프라이트 랩으로 스프라이트 배우기
             Alien Dance Party with Sprite Lab:
@@ -12589,6 +12613,8 @@ ko:
               name: 조건
             'Events: The Big Event':
               name: '이벤트: 빅 이벤트'
+            Simon Says:
+              name: 사이몬 가라사대
             Learning Sprites with Sprite Lab:
               name: 스프라이트 랩으로 스프라이트 배우기
             Alien Dance Party with Sprite Lab:
@@ -12629,6 +12655,8 @@ ko:
               name: 조건
             'Events: The Big Event':
               name: '이벤트: 빅 이벤트'
+            Simon Says:
+              name: 사이몬 가라사대
             Learning Sprites with Sprite Lab:
               name: 스프라이트 랩으로 스프라이트 배우기
             Alien Dance Party with Sprite Lab:
@@ -13481,6 +13509,7 @@ ko:
         coursea-2020:
           title: 과정 A (2020)
           description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+          description_short: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
           description_audience: '나이: 4-7'
           lesson_groups:
             csf_digcit:
@@ -13601,6 +13630,7 @@ ko:
               description_student: 패턴과 루프를 사용하여 이미지를 완성하세요.
               description_teacher: 루프로 다시 돌아와, 학생들은 설명문의 간단한 시퀸스를 반복하여 이미지를 그리는 법을 배웁니다. 이전 온라인 레슨에서, 루프는 미로를 횡단하여 보물을 모으는데 사용했습니다. 여기서는 루프로 패턴을 만들 것입니다. 이 단계의 끝에서, 학생들은 루프를 사용해 이미지를 만들 기회를 갖게 될 것입니다. 
             The Right App:
+              name: 바른 앱
               description_student: 스마트폰 앱 스케치
               description_teacher: '이 레슨은 학생들에게 컴퓨터 과학이 실생활에서 사람들에게 도움을 줄 수 있음을 인식하게 만듭니다. 먼저, 학생들은 서너 명의 허구의 스마트폰 사용자에게 그들의 필요에 "맞는 앱"을 찾아 주기 위해 그들의 입장이 되어 그들과 공감합니다. 그 다음,  공감력과 창의성을 발휘하여 한 명의 추가적인 사용자의 필요를 만족하는 스마트폰 앱을 스케치합니다.  '
             'Events: The Big Event':
@@ -13698,6 +13728,7 @@ ko:
               description_student: 창의력을 발휘해 플래이 랩에서 게임을 만들 시간입니다!
               description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든 코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 게임을 만들 시간입니다!
             Picturing Data:
+              name: 데이터 묘사
               description_student: 데이터는 학생들이 그들의 세계를 이해하고 흥미로운 질문에 답을 하는데 도움을 주기 위해 사용할 수 있습니다. 이 레슨에서 학생들은 플레이 랩 프로젝트에서 데이터를 모아 여러 종류의 그래프를 사용해 이를 시각화할 것입니다.
               description_teacher: 데이터는 학생들이 그들의 세계를 이해하고 흥미로운 질문에 답을 하는데 도움을 주기 위해 사용할 수 있습니다. 이 레슨에서 학생들은 플레이 랩 프로젝트에서 데이터를 모아 여러 종류의 그래프를 사용해 이를 시각화할 것입니다.
             'End of Course Project: Create a Play Lab Game':
@@ -13741,6 +13772,7 @@ ko:
             Relay Programming:
               name: 릴레이 프로그래밍
               description_student: 과정 초반에 코드로 그림을 그릴 때를 기억하세요? 이 레슨에서는 팀과 함께 이와 매우 유사할 일을 할 것입니다!
+              description_teacher: 이 활동은 디버깅과 끈기에 관한 짧은 레슨으로 시작하고 그 다음, 시계를 상대로한 경기로 빠르게 이동하여 팀으로 나눠 한 번에 한 지침만 있는 프로그램을 작성합니다.
             Debugging in Collector:
               name: 라우렐로 디버깅
               description_student: 코딩을 하며 문제점에 닥쳤던 적이 있습니까? 이 레슨에서는 디버깅의 비밀에 관해 배울 것입니다. 디버깅은 코드 내 문제를 찾아내고 고치는 과정입니다.
@@ -13839,6 +13871,7 @@ ko:
               description_student: 이 재미 있고 도전적인 시리즈에서 일정 조건 하에서 컴퓨터에게 해야 할 일을 말하게  될 것입니다.
               description_teacher: 이 레슨은 학생들에게 `while` 루프와` if / else` 문을 소개합니다. _While 루프_ 는 조건이 참인 한 계속 명령을 반복하는 루프입니다. While 루프는 프로그램이 정확하게 명령을 몇 번 반복해야 하는지 모르지만 프로그래머는 루프가 계속 반복되게 하기 위해 어떤 조건이 참이어야 하는지 알 때 사용합니다. `If / Else` 문은 뭔가가 참일 때만 코드의 전체 섹션을 실행하고 그렇지 않을 때는 다른 것을 실행함으로써 프로그래밍에 유연성을 제공합니다. 
             Simon Says:
+              name: 사이몬 가라사대
               description_student: 게임을 하고 맞는 결과를 얻기 위해 어떤 명령어가 필요한지 생각해 보세요.
               description_teacher: '이 레슨에서 학생들은 맞는 결과를 산출하기 위해 명령어를 어떻게 제공해야 하는지 생각해 보게 할 의도를 지닌 게임을 할 것입니다. 이것은 그들이 앞으로 하게 될 레슨에서의 스프라이트 랩로 더 넘어 가게 하는 데 도움을 줄 것입니다.'
             Learning Sprites with Sprite Lab:
@@ -13898,6 +13931,7 @@ ko:
             Digital Sharing:
               name: 디지털 공유
               description_student: '이 레슨에서는 소유권과 저작권의 도전과 혜택에 대해 배울 것입니다. '
+              description_teacher: 저작권 및 창의성에서 팀에 의해 컴퓨터 과학 기초를 위해 차용된 이 레슨은 학생들이 특히 디지털 환경에서 소유권과 저작권 존중이라는 도전과 혜택을 이해하도록 돕기 위해 존재합니다. 학생들에게 윤리적 디지털 시민이 되는 중요한 부분으로써 예술가의 권리를 존중하도록 권장합니다. 
             Designing for Accessibility:
               name: 접근가능성을 위한 설계
               description_student: '이 레슨에서 학생들은 가상의 앱을 위한 접근 가능한 솔루션을 브레인스토밍하고 설계함으로써 접근 가능성과 공감의 가치에 관해 배울 것입니다.  '
@@ -13905,6 +13939,7 @@ ko:
         coursef-2020:
           title: 과정 F (2020)
           description: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+          description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
           description_audience: '나이: 9-13'
           lesson_groups:
             ramp_up:
@@ -13986,6 +14021,7 @@ ko:
             Digital Sharing:
               name: 디지털 공유
               description_student: '이 레슨에서는 소유권과 저작권의 도전과 혜택에 대해 배울 것입니다. '
+              description_teacher: 저작권 및 창의성에서 팀에 의해 컴퓨터 과학 기초를 위해 차용된 이 레슨은 학생들이 특히 디지털 환경에서 소유권과 저작권 존중이라는 도전과 혜택을 이해하도록 돕기 위해 존재합니다. 학생들에게 윤리적 디지털 시민이 되는 중요한 부분으로써 예술가의 권리를 존중하도록 권장합니다. 
             End of Course Project:
               name: 과정말 프로젝트
               description_student: 이 정도의 큰 프로젝트는 시간과 많은 계획을 들여야 합니다. 영감을 찾고, 계획을 발전시키며, 창의성을 맘껏 발휘해야 합니다!
@@ -14336,7 +14372,7 @@ ko:
             'Lesson 14: Unit Assessment Day':
               name: '레슨 14: 단원  평가일'
         csp-march-virtual:
-          title: CS 원리 20-21 커리큘럼 촉진자를 위한 교육
+          title: CS 원리 20-21 커리큘럼 진행자를 위한 교육
           lessons:
             Kick-off:
               name: 시작
