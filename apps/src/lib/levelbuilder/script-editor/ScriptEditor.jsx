@@ -148,8 +148,7 @@ class ScriptEditor extends React.Component {
       descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
       teacherResources: resources,
-      hasImportedLessonDescriptions: false,
-      isMigrated: this.props.initialIsMigrated
+      hasImportedLessonDescriptions: false
     };
   }
 
@@ -254,7 +253,7 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      is_migrated: this.state.isMigrated
+      is_migrated: this.props.initialIsMigrated
     };
 
     if (this.state.hasImportedLessonDescriptions) {
