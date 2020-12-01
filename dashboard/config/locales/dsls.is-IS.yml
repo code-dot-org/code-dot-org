@@ -68,6 +68,14 @@ is-IS:
         questions:
         - text: Hvaða spjöld eru rétt skoruð ef miðað er við reglur leiksins?
         title: Valspurningar
+        teacher_markdown: |
+          ## Kennarar:
+
+          Það getur verið að nemendur séu haldnir misskilningi og hér er góður staður til að leiðrétta hann. Haldi nemendur að það sé ekki til *neitt* rétt svar, þá eru þeir líklega að misskilja skilyrðingar.
+
+          Hér er myndband sem hjálpar við að skilja hvað er á ferðinni í þessari spurningu:
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"

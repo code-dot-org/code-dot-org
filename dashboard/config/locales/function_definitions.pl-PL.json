@@ -1574,11 +1574,17 @@
         "courseE_artist_concept4": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw a plane of squares": {
+            "name": "narysuj płaszczyznę kwadratów"
           }
         },
         "courseE_artist_concept4_2018": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw a plane of squares": {
+            "name": "narysuj płaszczyznę kwadratów"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1594,21 +1600,45 @@
         "courseE_artist_functions10": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
           }
         },
         "courseE_artist_functions2": {
@@ -1689,16 +1719,25 @@
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "narysuj dom"
+          },
+          "draw a window": {
+            "name": "narysuj okno"
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "narysuj dom"
+          },
+          "draw a window": {
+            "name": "narysuj okno"
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "narysuj dom"
+          },
+          "draw a window": {
+            "name": "narysuj okno"
           }
         },
         "courseE_artist_functions8": {
@@ -1715,6 +1754,9 @@
           },
           "draw square": {
             "name": "narysuj kwadrat"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1723,6 +1765,9 @@
           },
           "draw square": {
             "name": "narysuj kwadrat"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1731,6 +1776,9 @@
           },
           "draw square": {
             "name": "narysuj kwadrat"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -1787,6 +1835,9 @@
           },
           "do something": {
             "name": "wykonaj coś"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -1795,6 +1846,9 @@
           },
           "do something": {
             "name": "wykonaj coś"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -1803,6 +1857,9 @@
           },
           "do something": {
             "name": "wykonaj coś"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functions9": {
@@ -1811,6 +1868,9 @@
           },
           "draw triangle": {
             "name": "narysuj trójkąt"
+          },
+          "draw line of triangles": {
+            "name": "narysuj serię trójkątów"
           }
         },
         "courseE_artist_functions9_2018": {
@@ -1819,6 +1879,9 @@
           },
           "draw triangle": {
             "name": "narysuj trójkąt"
+          },
+          "draw line of triangles": {
+            "name": "narysuj serię trójkątów"
           }
         },
         "courseE_artist_functions9_2019": {
@@ -1827,6 +1890,9 @@
           },
           "draw triangle": {
             "name": "narysuj trójkąt"
+          },
+          "draw line of triangles": {
+            "name": "narysuj serię trójkątów"
           }
         },
         "courseE_artist_functions9_2020": {
@@ -1835,21 +1901,51 @@
           },
           "draw triangle": {
             "name": "narysuj trójkąt"
+          },
+          "draw line of triangles": {
+            "name": "narysuj serię trójkątów"
           }
         },
         "courseE_artist_functionsProj_2018": {
           "draw square": {
             "name": "narysuj kwadrat"
+          },
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functionsProj_2019": {
           "draw square": {
             "name": "narysuj kwadrat"
+          },
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functionsProj_2020": {
           "draw square": {
             "name": "narysuj kwadrat"
+          },
+          "draw hexagon": {
+            "name": "narysuj sześciokąt"
+          },
+          "draw line of hexagons": {
+            "name": "narysuj serię sześciokątów"
+          },
+          "staggered squares": {
+            "name": "rząd kwadratów"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -1920,21 +2016,45 @@
         "courseE_artist_functions_predict2": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw line of polygons": {
+            "name": "narysuj serię wielokątów"
+          },
+          "draw polygon": {
+            "name": "narysuj wielokąt"
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw line of polygons": {
+            "name": "narysuj serię wielokątów"
+          },
+          "draw polygon": {
+            "name": "narysuj wielokąt"
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw line of polygons": {
+            "name": "narysuj serię wielokątów"
+          },
+          "draw polygon": {
+            "name": "narysuj wielokąt"
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "draw line of polygons": {
+            "name": "narysuj serię wielokątów"
+          },
+          "draw polygon": {
+            "name": "narysuj wielokąt"
           }
         },
         "courseE_bee_concept4": {
@@ -2021,6 +2141,9 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "wykonaj coś"
+          },
+          "get pumpkin": {
+            "name": "zbierz dynie"
           }
         },
         "courseE_farmer_concept3": {
@@ -2653,6 +2776,298 @@
         "courseF_bee_variables_6_2020": {
           "collect stairs": {
             "name": "zbierz schody"
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": "narysuj okno"
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
+            "name": "zbierz dynie"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          },
+          "pumpkin square": {
+            "name": "pole z dynią"
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          },
+          "pumpkin square": {
+            "name": "pole z dynią"
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          },
+          "pumpkin square": {
+            "name": "pole z dynią"
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "pumpkin square": {
+            "name": "pole z dynią"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get produce": {
+            "name": "zbierz plon"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "pumpkin square": {
+            "name": "pole z dynią"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get produce": {
+            "name": "zbierz plon"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "pumpkin square": {
+            "name": "pole z dynią"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get produce": {
+            "name": "zbierz plon"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "corn rectangle": {
+            "name": "kukurydza"
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "corn rectangle": {
+            "name": "kukurydza"
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "corn rectangle": {
+            "name": "kukurydza"
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "pick along path": {
+            "name": "zbieraj wzdłuż ścieżki"
+          },
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "check square for corn": {
+            "name": "sprawdź kukurydze"
+          },
+          "get all pumpkins": {
+            "name": "zbierz wszystkie dynie"
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+            "name": "pole ogrodu"
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+            "name": "pole ogrodu"
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": "pole ogrodu"
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+            "name": "pole ogrodu"
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+            "name": "pole ogrodu"
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+            "name": "pole ogrodu"
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+            "name": "pole ogrodu"
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+            "name": "pole ogrodu"
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+            "name": "pole ogrodu"
           }
         }
       }

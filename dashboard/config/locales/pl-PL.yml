@@ -196,10 +196,6 @@ pl:
     student_consent: Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego
       rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie
       Code.org.
-    agree_us_website: Zgadzam się na korzystanie ze strony, której siedziba znajduje
-      się w Stanach Zjednoczonych.
-    my_data_to_us: Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą
-      być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.
     agree_us_data_transfer_student: "**Zgadzam się, że Code.org może przekazywać dane
       (w tym dane osobowe) wynikające z mojego korzystania z tej witryny do Stanów
       Zjednoczonych** w celu hostowania i przetwarzania takich danych."
@@ -212,8 +208,8 @@ pl:
       Zjednoczonych mogą różnić się od przepisów obowiązujących w moim kraju.
 
 '
-    visit_privacy: 'Odwiedź [Politykę prywatności](%{privacy_url}) Code.org, aby
-      dowiedzieć się więcej.
+    visit_privacy: 'Odwiedź [Politykę prywatności](%{privacy_url}) Code.org, aby dowiedzieć
+      się więcej.
 
 '
     student_terms_markdown: Adresy e-mail nie są przechowywane w postaci, która pozwalałaby
@@ -697,6 +693,9 @@ pl:
     code_from_html: Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Zasilany przez Amazon Web Services
+    built_on_github: Oparty na GitHub firmy Microsoft
+    google_copyright: "&Kopiuj; Google Inc. wykorzystane za zgodą. Google Classroom
+      to znak towarowy firmy Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour
       of Code&reg; są znakami handlowymi Code.org."
     copyright: Prawa autorskie

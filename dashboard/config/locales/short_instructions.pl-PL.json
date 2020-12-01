@@ -2829,7 +2829,15 @@
         "scrat 17": "OK, zróbmy to jeszcze raz, aby poćwiczyć - to ćwiczenie nie różni się bardzo od poprzedniego, ale uważaj na ścianę!",
         "scrat 18": "Bloki \"jeśli/w przeciwnym razie\" sprawdzają warunek, a następnie wykonują jedną rzecz ALBO drugą. By sprowadzić mnie do żołędzia, spróbuj użyć tego nowego bloku.",
         "scrat 19": "Jeszcze jedno ćwiczenie z blokiem \"jeśli-w przeciwnym razie\", czy potrafisz je wykonać za pierwszym razem?",
-        "scrat 20": "Czy możesz dodać tylko 3 bloki, aby pomóc mi rozwiązać bardziej skomplikowany labirynt? Jeśli zrobisz to dobrze, to mogę przejść każdą krętą drogę bez względu na jej długość. Pospiesz się! Lód się topi!"
+        "scrat 20": "Czy możesz dodać tylko 3 bloki, aby pomóc mi rozwiązać bardziej skomplikowany labirynt? Jeśli zrobisz to dobrze, to mogę przejść każdą krętą drogę bez względu na jej długość. Pospiesz się! Lód się topi!",
+        "outbreak2": "Zmieniaj zdrowe potwory w chore potwory, gdy się dotykają.",
+        "outbreak3": "Zamieniaj potwory w potwory z maskami na twarzach po kliknięciu na nich.",
+        "outbreak4": "Zmień liczbę i rozmiar duszków potworów w swojej symulacji.",
+        "outbreak5": "Utwórz nowy kostium dla potworów odpornych na wirusa i użyj go w swojej symulacji.",
+        "outbreak7": "Spraw, aby chore potwory zaczęły zdrowieć, gdy rozpocznie się symulacja i gdy zdrowy potwór dotknie chorego potwora.",
+        "outbreak8": "Udostępnij wiadomość swojej symulacji.",
+        "outbreak_freeplay": "Wprowadź dowolne zmiany lub ulepszenia w swoim projekcie.",
+        "outbreak1": "Utwórz 10 zdrowych duszków i jednego chorego duszka. Zmień ich rozmiar i spraw, by wędrowały."
       }
     }
   }

@@ -2175,3 +2175,7 @@ mi:
           lesson_groups:
             lg_1:
               display_name: Ihirangi
+        ml-playground:
+          lessons:
+            intro:
+              name: Kupu Whakataki

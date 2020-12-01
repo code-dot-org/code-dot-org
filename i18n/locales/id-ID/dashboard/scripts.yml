@@ -15410,3 +15410,11 @@ id:
               name: Kursus B
             CS Discoveries:
               name: CS Discoveries
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI for Oceans
+            intro:
+              name: Pendahuluan
+            visualizing:
+              name: Membayangkan data

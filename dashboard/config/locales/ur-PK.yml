@@ -79,8 +79,6 @@ ur:
     valid_password: تصدیق شدہ پاس ورڈ!
     invalid_password: پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے
     mismatch_password: داخل کے گئے دونوں پاس ورڈزمختلف ہیں
-    my_data_to_us: اس ویب سائٹ کے آپ کے استعمال سے کوائف ہو کو بھیجا اور ذخیرہ کرنا
-      یا ریاست ہائے متحدہ امریکہ میں عملدرآمد کیا ۔
     additional_information: ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے.
     user_type_student: Talib-e-ilm
     field_is_required: مطلوب ہے

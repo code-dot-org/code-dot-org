@@ -14,7 +14,7 @@
 #  index_pd_regional_partner_contacts_on_regional_partner_id  (regional_partner_id)
 #  index_pd_regional_partner_contacts_on_user_id              (user_id)
 #
-class Pd::RegionalPartnerContact < ActiveRecord::Base
+class Pd::RegionalPartnerContact < ApplicationRecord
   include Pd::Form
 
   belongs_to :user
