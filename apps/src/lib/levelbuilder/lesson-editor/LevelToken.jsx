@@ -175,7 +175,11 @@ class LevelToken extends Component {
             <div style={styles.reorder} onMouseDown={this.handleDragStart}>
               <i className="fa fa-arrows-v" />
             </div>
-            <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
+            <span
+              style={styles.levelTokenName}
+              onClick={this.toggleExpand}
+              className="uitest-level-token-name"
+            >
               <span style={styles.levelArea}>
                 <span style={styles.titleAndBubble}>
                   <ProgressBubble

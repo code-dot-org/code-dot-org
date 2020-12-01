@@ -18,7 +18,7 @@
 #
 
 module Pd
-  class MiscSurvey < ActiveRecord::Base
+  class MiscSurvey < ApplicationRecord
     include JotFormBackedForm
 
     belongs_to :user
