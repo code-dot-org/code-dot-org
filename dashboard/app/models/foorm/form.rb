@@ -15,7 +15,7 @@
 #  index_foorm_forms_on_name_and_version  (name,version) UNIQUE
 #
 
-class Foorm::Form < ActiveRecord::Base
+class Foorm::Form < ApplicationRecord
   include Seeded
   include Pd::Foorm::Constants
 

@@ -21,9 +21,6 @@ describe('MicroBitBoard', () => {
     window.SerialPort = {};
     board = new MicroBitBoard();
     board.boardClient_ = new MicrobitStubBoard();
-    // Stubbing versions to replicate connection
-    board.boardClient_.firmataVersion = 'Firmata Protocol';
-    board.boardClient_.firmwareVersion = 'micro:bit Firmata';
   });
 
   afterEach(() => {
@@ -35,9 +32,6 @@ describe('MicroBitBoard', () => {
       sinon.stub(board.boardClient_, 'connect').callsFake(() => {
         board.boardClient_.myPort = {write: () => {}};
         sinon.stub(board.boardClient_.myPort, 'write');
-        // Stubbing versions to replicate connection
-        board.boardClient_.firmataVersion = 'Firmata Protocol';
-        board.boardClient_.firmwareVersion = 'micro:bit Firmata';
       });
 
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
@@ -57,10 +51,6 @@ describe('MicroBitBoard', () => {
         sinon.stub(board.boardClient_, 'connect').callsFake(() => {
           board.boardClient_.myPort = {write: () => {}};
           sinon.stub(board.boardClient_.myPort, 'write');
-
-          // Stubbing versions to replicate connection
-          board.boardClient_.firmataVersion = 'Firmata Protocol';
-          board.boardClient_.firmwareVersion = 'micro:bit Firmata';
         });
 
         jsInterpreter = {
@@ -239,40 +229,6 @@ describe('MicroBitBoard', () => {
         expect(board.prewiredComponents_.buttonB).to.be.a('object');
         expect(board.prewiredComponents_.lightSensor).to.be.a('object');
       });
-    });
-  });
-
-  describe(`checkExpectedFirmware()`, () => {
-    it('rejects when the firmata and firmware version are not as expected', done => {
-      board.boardClient_.firmataVersion = 'unexpected';
-      board.boardClient_.firmwareVersion = 'unexpected';
-      board
-        .connect()
-        .then(() => {
-          done(
-            new Error(
-              'Expected promise to reject based on firmata and firmware version, but it resolved'
-            )
-          );
-        })
-        // We expect to hit this case, due to bad firmware and firmata version
-        .catch(done);
-    });
-
-    it('resolves when the firmata and firmware version are as expected', done => {
-      board
-        .connect()
-        .then(() => {
-          // We expect to hit this case, due to expected firmware and firmata version
-          done();
-        })
-        .catch(() => {
-          done(
-            new Error(
-              'Expected promise to resolve based on firmata and firmware version, but it resolved'
-            )
-          );
-        });
     });
   });
 
