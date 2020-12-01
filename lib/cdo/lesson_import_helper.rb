@@ -120,7 +120,7 @@ module LessonImportHelper
         # add the level activity sections here.
         if pullthrough_match[1].blank? || ([1, 2].include?(pullthrough_match[1]) && levels.length == pullthrough_match[2].to_i)
           level_sections = create_activity_sections_by_progression(levels, lesson_activity_id, position)
-          sections += sections
+          sections += level_sections
           levels.clear
           position += level_sections.length
         end
