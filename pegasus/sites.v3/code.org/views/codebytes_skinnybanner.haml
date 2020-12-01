@@ -9,5 +9,10 @@
       = I18n.t(:codebytes_skinny_banner_description)
       = I18n.t(:codebytes_skinny_banner_english_only)
     %p{style:"font-size: 14px; border: 0; color: #4d575f"}
+      :css
+        a {
+          color: #7665a0 !important;
+        }
+      
       != I18n.t(:codebytes_skinny_banner_learn, markdown: :inline, code_bytes_url: "https://code.org/codebytes")
   .clearboth
