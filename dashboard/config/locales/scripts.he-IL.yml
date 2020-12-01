@@ -3293,3 +3293,7 @@ he:
           lessons:
             Lesson:
               name: שיעור
+        ml-playground:
+          lessons:
+            intro:
+              name: מבוא

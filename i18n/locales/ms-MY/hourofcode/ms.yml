@@ -31,10 +31,8 @@ ms:
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
   hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: "  Belajar hari ini,      untuk membina
+    masa depan yang lebih cerah.  "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -44,6 +42,11 @@ ms:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
+  hoc2020_ai_header: Explore Artificial Intelligence
+  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
+    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
+    discuss ethics and AI, and more...
   hoc2019_header: Pelajari sains komputer. Ubah dunia.
   hoc2019_header_line1_mobile: Pelajari sains komputer.
   hoc2019_header_line2_mobile: Ubah dunia.
@@ -58,76 +61,85 @@ ms:
     ialah asas untuk setiap pelajar belajar.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  oceans_landing_title: "  AI for Oceans (Kecerdasan Buatan untuk Lautan)  "
+  oceans_landing_description: "  Belajar tentang pembelajaran mesin dan penggunaan
+    AI dengan beretika.  "
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
-  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
+  oceans_landing_specs: "  Terdapat dalam 25+ bahasa | Gred 3+  "
+  oceans_landing_explanation: "  Sains komputer ialah kursus yang melebihi pengekodan
+    semata-mata! Belajar tentang kecerdasan buatan (AI), pembelajaran mesin, data
+    latihan dan kejadian berat sebelah, sambil meneroka isu etika dan cara AI boleh
+    digunakan untuk mengatasi masalah dunia. Nikmati langkah pertama Code.org dalam
+    perjalanan baharu mengajar lebih banyak tentang AI. Apabila anda menggunakan aktiviti
+    AI for Oceans, anda melatih model pembelajaran mesin sebenar. <a href='#behind-the-scenes'>Pelajari
+    lebih lanjut</a>.  "
+  oceans_landing_explanation_markdown: "  Sains komputer ialah kursus yang melebihi
+    pengekodan semata-mata! Belajar tentang kecerdasan buatan (AI), pembelajaran mesin,
+    data latihan dan kecenderungan, sambil meneroka isu etika dan cara AI boleh digunakan
+    untuk mengatasi masalah dunia. Nikmati langkah pertama Code.org dalam perjalanan
+    baharu mengajar lebih banyak tentang AI. Apabila anda menggunakan aktiviti AI
+    for Oceans, anda melatih model pembelajaran mesin sebenar. [Pelajari lebih lanjut](#di
+    belakang tabir).  "
+  oceans_landing_teacher_resources: "  Sumber Para Guru  "
+  oceans_landing_teacher_resources_desc: "  Rancangan dan aktiviti pelajaran untuk
+    membantu anda mengajar AI, pembelajaran mesin, data latihan dan kejadian berat
+    sebelah, sambil meneroka masalah etika.  "
+  oceans_landing_resource_button: "  Lihat Sumber  "
+  oceans_landing_cs_for_good: "  CS untuk Kebaikan  "
+  oceans_landing_cs_for_good_desc: "  Sumber untuk membantu pelajar memahami peranan
+    yang dimainkan oleh sains komputer dalam mewujudkan dunia yang lebih adil.  "
+  oceans_landing_videos: "  Video tentang AI dan Pembelajaran Mesin  "
+  oceans_behind_the_scenes: "  AI for Oceans (Kecerdasan Buatan untuk Lautan): Di
+    Belakang Tabir  "
+  oceans_behind_the_scenes_1: '  Tahap 2-4 menggunakan model pralatihan yang disediakan
+    oleh <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    projek </a> MobileNet. Model MobileNet ialah <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">rangkaian
+    neural konvolusional</a> yang telah dilatih dalam <a href="http://www.image-net.org/">ImageNet</a>,
+    set data lebih daripada 14 juta imej yang dianotasi dengan tangan bersama perkataan
+    seperti "belon" atau "strawberi". Untuk menyesuaikan model ini dengan data latihan
+    berlabel yang dihasilkan oleh pelajar dalam aktiviti ini, kami menggunakan teknik
+    yang dipanggil sebagai <a href="https://en.wikipedia.org/wiki/Transfer_learning">Pemindahan
+    Pembelajaran</a>. Setiap imej dalam set data latihan dimasukkan ke dalam MobileNet,
+    dalam bentuk piksel, bagi mendapatkan senarai anotasi yang berkemungkinan besar
+    digunakan kepadanya. Kemudian, untuk imej baharu, kami memasukkannya ke dalam
+    MobileNet dan membandingkan senarai anotasi yang dihasilkannya dengan imej daripada
+    set data latihan. Kami mengklasifikasikan imej baharu mengikut label yang sama
+    (seperti "ikan" atau "bukan ikan") dengan imej daripada set latihan yang hasilnya
+    paling serupa.  '
+  oceans_behind_the_scenes_1_markdown: '  Tahap 2-4 menggunakan model pralatihan yang
+    disediakan oleh [TensorFlow](https://www.tensorflow.org/) projek (https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    [MobileNet]. Model MobileNet ialah [rangkaian neural konvolusional](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    yang telah dilatih dalam [ImageNet](http://www.image-net.org/), set data lebih
+    daripada 14 juta imej yang dianotasi dengan tangan bersama perkataan seperti "belon"
+    atau "strawberi". Untuk menyesuaikan model ini dengan data latihan berlabel yang
+    dihasilkan oleh pelajar dalam aktiviti ini, kami menggunakan teknik yang dipanggil
+    sebagai [Pemindahan Pembelajaran](https://en.wikipedia.org/wiki/Transfer_learning).
+    Setiap imej dalam set data latihan dimasukkan ke dalam MobileNet, dalam bentuk
+    piksel, bagi mendapatkan senarai anotasi yang berkemungkinan besar digunakan kepadanya.
+    Kemudian, untuk imej baharu, kami memasukkannya ke dalam MobileNet dan membandingkan
+    senarai anotasi yang dihasilkannya dengan imej daripada set data latihan. Kami
+    mengklasifikasikan imej baharu mengikut label yang sama (seperti "ikan" atau "bukan
+    ikan") dengan imej daripada set latihan yang hasilnya paling serupa.  '
+  oceans_behind_the_scenes_2: '  Tahap 6-8 menggunakan <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Mesin
+    Vektor Sokongan</a> (SVM). Kami melihat setiap komponen ikan (seperti mata, mulut,
+    badan) dan mengumpulkan semua metadata untuk komponen tersebut (seperti bilangan
+    gigi, bentuk badan) kepada vektor nombor untuk setiap ikan. Kami menggunakan vektor
+    ini untuk melatih SVM Berdasarkan data latihan, SVM mengasingkan "ruang" semua
+    kemungkinan ikan kepada dua bahagian, yang sepadan dengan kelas yang kita sedang
+    cuba pelajari (seperti "biru" atau "bukan biru").  '
+  oceans_behind_the_scenes_2_markdown: '  Tahap 6-8 menggunakan [Mesin Vektor Sokongan](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). Kami melihat setiap komponen ikan (seperti mata, mulut, badan) dan mengumpulkan
+    semua metadata untuk komponen tersebut (seperti bilangan gigi, bentuk badan) kepada
+    vektor nombor untuk setiap ikan. Kami menggunakan vektor ini untuk melatih SVM
+    Berdasarkan data latihan, SVM mengasingkan "ruang" semua kemungkinan ikan kepada
+    dua bahagian, yang sepadan dengan kelas yang kita sedang cuba pelajari (seperti
+    "biru" atau "bukan biru").  '
+  social_hoc2019_oceans_title: "  Kecerdasan Buatan untuk Lautan #CSforGood  "
+  social_hoc2019_oceans_desc: "  Belajar tentang AI, pembelajaran mesin, data latihan
+    dan kejadian berat sebelah, sambil meneroka isu etika dan cara AI boleh digunakan
+    untuk mengatasi masalah dunia. Sains komputer ialah kursus yang melebihi pengekodan
+    semata-mata! Nikmati langkah pertama Code.org dalam perjalanan baharu mengajar
+    lebih banyak tentang AI sepanjang kurikulum kami.  "
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
@@ -135,10 +147,11 @@ ms:
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
   hoc_live_join_us: Sertai kami
-  hoc_overview_oceans_tutorial_header: AI for Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
-    learning, training data, and bias, while exploring ethical issues and how AI can
-    be used to address world problems.
+  hoc_overview_oceans_tutorial_header: "  AI for Oceans (Kecerdasan Buatan untuk Lautan)
+    \ "
+  hoc_overview_oceans_tutorial_desc: "  Belajar tentang kecerdasan buatan (AI), pembelajaran
+    mesin, data latihan dan kejadian berat sebelah, sambil meneroka isu etika dan
+    cara AI boleh digunakan untuk mengatasi masalah dunia.  "
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -208,8 +221,8 @@ ms:
   codeorg_homepage_hoc2019_dance_heading: Cuba <span class="highlight-word">baharu
     Majlis Tarian&nbsp!</span>
   codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
-  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
-    closures.
+  codeorg_homepage_special2020_body1: "  Sokongan untuk ibu bapa dan guru yang terpaksa
+    menghadapi penutupan sekolah.  "
   codeorg_homepage_special2020_body2: See our suggested learning resources.
   codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
     resources for learning at home.
@@ -381,7 +394,7 @@ ms:
   how_to_nav_companies: Untuk syarikat swata
   how_to_nav_afterschool_educators: Untuk pendidik program lepas sekolah
   how_to_nav_volunteers: Untuk sukarelawan
-  how_to_nav_virtual: For virtual events
+  how_to_nav_virtual: "  Untuk acara maya  "
   whats_next_header: Apakah seterusnya?
   whats_next_description: Kami akan menghantar bahan dan tip berguna kepada anda untuk
     acara tersebut. Tutorial baru 2015 akan datang tidak lama untuk mana-mana pelayar,
@@ -615,32 +628,35 @@ ms:
     Sains Komputer akan diadakan setiap tahun sebagai tanda penghormatan hari kelahiran
     pakar perintis dalam komputeran <a href='%{grace_hopper}'>Laksamana Grace Murray
     Hopper</a> (December 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: "  Hour of Code (Sejam Mengekod) berlangsung pada
+    setiap tahun semasa [Minggu Pendidikan Sains Komputer](%{csedweek_url}). Minggu
+    Pendidikan Sains Komputer %{campaign_date_year} akan diadakan pada %{campaign_date_full},
+    tetapi anda boleh mengadakan Hour of Code (Sejam Mengekod) sepanjang tahun. Minggu
+    Pendidikan Sains Komputer diadakan setiap tahun bagi memperingati ulang tahun
+    perintis pengkomputeran [Admiral (Laksamana) Grace Murray Hopper](%{grace_hopper})
+    (9 Disember 1906).  "
   hoc_faq_why_cs_q: Mengapa sains komputer?
   hoc_faq_why_cs_a: "<i>Setiap</i> pelajar harus mempunyai peluang untuk belajar sains
     komputer. Ia membantu memupuk kemahiran  penyelesaian masalah, logik dan kreativiti.
     Dengan memulakan lebih awal, pelajar akan mempunyai asas untuk berjaya dalam mana-mana
     laluan kerjaya abad ke-21. Lihat lebih banyak statistik di <a href='http://code.org'>
     Code.org</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: "  _Setiap_ pelajar sepatutnya mempunyai peluang mempelajari
+    sains komputer. Pembelajaran tersebut membantu memupuk kemahiran, logik dan kreativiti
+    penyelesaian masalah. Pelajar akan mempunyai asas untuk berjaya dalam mana-mana
+    laluan kerjaya dalam abad ke-21 dengan memulakan pembelajaran lebih awal. Lihat
+    lebih banyak statistik [di sini](%{stats_url}).  "
   hoc_faq_how_participate_q: Bagaimana saya boleh menyertai Hour of Code?
   hoc_faq_how_participate_a: "<a href='/how-to'>Mula merancang di sini</a> dengan
     membaca dan mengkaji panduan yang kami sediakan. Anda boleh menganjurkan Acara
     Hour of Code di sekolah anda atau dalam komuniti anda &mdash; seperti dalam sebuah
     kelab ekstrakurikulum, pertubuhan bukan berasaskan keuntungan ataupun di tempat
     kerja. Atau, anda boleh cuba sendiri apabila tiba %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "  [Mula merancang di sini](%{howto}) dengan
+    menyemak panduan cara melaksanakan daripada kami. Anda boleh menganjurkan acara
+    Hour of Code (Sejam Mengekod) di sekolah atau di dalam komuniti anda — seperti
+    di kelab kurikulum tambahan, di organisasi bukan keuntungan atau di tempat kerja.
+    Atau, anda boleh mencubanya sendiri apabila %{campaign_date} tiba.  "
   hoc_faq_behind_hoc_q: Siapa di belakang  Hour of Code?
   hoc_faq_behind_hoc_a: Hour of Code dianjurkan oleh <a href='http://code.org'> Code.org</a>,
     badan bukan bertujuan keuntungan awam 501 c 3 khusus untuk memperluaskan penyertaan
@@ -649,11 +665,11 @@ ms:
     gabungan rakan kongsi yang belum pernah berlaku sebelum ini</a> juga telah datang
     bersama untuk menyokong Hour of Code &mdash; termasuk Microsoft, Apple, Amazon,
     Boys and Girls Clubs of America dan Lembaga Pentadbir Kolej.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: "  Hour of Code (Sejam Mengekod) didorong oleh Hour
+    of Code dan Minggu Pendidikan Sains Komputer [Jawatankuasa Penasihat dan Kajian
+    Semula](%{partner_url}) serta gabungan rakan niaga yang belum pernah terjadi sebelum
+    ini, telah bersatu menyokong Hour of Code — termasuk Microsoft, Apple, Amazon,
+    Boys and Girls Clubs of America dan College Board.  "
   hoc_faq_host_q: Saya tidak mengetahui apa-apa berkenaan menulis kod. Adakah saya
     masih boleh menjadi hos kepada acara ini?
   hoc_faq_host_a: Semestinya. Aktiviti Hour of Code adalah berdasarkan bimbingan kendiri.
@@ -662,11 +678,12 @@ ms:
     selainnya, kami akan uruskan. Kami juga mempunyai pilihan untuk setiap peringkat
     usia dan tahap pengalaman, dari tadika dan ke atas. Mulakan perancangan untuk
     acara anda dengan membaca <a href='/how-to'> panduan cara kami</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: "  Sudah tentu. Aktiviti Hour of Code (Sejam Mengekod)
+    adalah mengikut panduan sendiri. Perkara yang perlu anda lakukan ialah [cuba lakukan
+    tutorial semasa kami](%{codeorg_url}/learn), pilih tutorial yang anda mahu dan
+    pilih waktunya — kami akan selesaikan yang lainnya. Kami juga mempunyai pilihan
+    untuk setiap peringkat umur dan pengalaman, dari tadika dan ke atas. Mula merancang
+    acara anda dengan membaca [panduan cara melaksanakan](%{howto}) kami.  "
   hoc_faq_devices_q: Alat apakah yang harus saya gunakan untuk murid-murid saya?
   hoc_faq_devices_a: Tutorial yang tersedia di Code.org boleh diakses melalui semua
     peranti dan pelayar internet. Kamu boleh melihat maklumat lanjut mengenai keperluan
@@ -728,11 +745,12 @@ ms:
     Hour of Code TIDAK secara automatik mencipta suatu akaun Code Studio. Jikalau
     anda ingin mencipta akaun bagi murid-murid anda, sila ikuti <a href='https://youtu.be/_smelV_KISE'>arahan</a>
     di sini.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: "  Tidak. Pendaftaran atau log masuk tidak diperlukan
+    sama sekali untuk pelajar yang mahu mencuba Hour of Code (Sejam Mengekod). Kebanyakan
+    [kursus susulan](%{codeorg_url}/learn/beyond) memerlukan penciptaan akaun bertujuan
+    menyimpan kemajuan pelajar. Mendaftar masuk untuk Hour of Code (Sejam Mengekod)
+    TIDAK secara automatik mencipta akaun Studio Kod. Jika anda mahu mencipta akaun
+    untuk pelajar anda, sila ikuti [arahan](https://youtu.be/_smelV_KISE) ini.  "
   hoc_faq_high_school_q: Aktiviti apakah yang harus saya lakukan dengan pelajar-pelajar
     sekolah menengah?
   hoc_faq_high_school_a: Tutorial Star Wars dan Minecraft kami amat hebat untuk kanakkanak
@@ -743,13 +761,14 @@ ms:
     Seorang pelajar sekolah tinggi sepatutnya dapat menyelesaikan salah satu daripadanya
     dalam masa 30 minit dan kemudian boleh memcuba tutorial yang lebih lanjut dalam
     JavaScript, seperti Akademi Khan atau CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: "  Tutorial Star Wars dan Minecraft kami amat baik
+    untuk pelajar sekolah menengah, terutamanya versi JavaScript Star Wars dan tahap
+    permainan bebas pada kedua-dua tutorial. Secara berselang-seli, kami mengesyorkan
+    supaya mencuba satu daripada tutorial pelajar yang baharu bermula mengenai [%{partner_url}/learn](%{codeorg_url}/learn)
+    untuk memulakan, seperti tutorial dengan Angry Birds atau Anna dan Elsa. Pelajar
+    sekolah menengah sepatutnya boleh menyelesaikannya dalam 30 minit dan kemudian
+    boleh mencuba tutorial lanjutan dalam JavaScript, seperti Khan Academy atau CodeHS.
+    \ "
   hoc_faq_scratch_q: Saya lakukan Scratch untuk Hour of Code, tetapi Bagaimana jika
     murid-murid saya mempunyai iPads dan bukannya komputer riba?
   hoc_faq_scratch_a: Scratch tidak boleh dijalankan pada tablet. Jika pelajar anda
@@ -783,11 +802,12 @@ ms:
     masuk atau mendaftar. Oleh kerana itu, kami mengira peserta-peserta dengan terlebih
     dan terkurang pada masa yang sama. Baca semua butir-butir <a href='%{codeorg_url}/loc'>
     di sini</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: "  Penjejak Hour of Code (Sejam Mengekod bukan ukuran
+    penggunaan yang tepat. Kami tidak mengira ID unik pelajar dengan sempurna apabila
+    menjejaki penyertaan dalam Hour of Code (Sejam Mengekod, terutamanya kerana kami
+    tidak meminta pelajar untuk log masuk atau mendaftar. Akibat daripada itu, kami
+    terlebih dan terkurang hitung bilangan peserta pada masa yang sama. Baca semua
+    butiran [di sini](%{codeorg_url}/loc).  "
   hoc_faq_one_hour_q: Berapa banyak satu boleh belajar dalam satu jam?
   hoc_faq_one_hour_a: Matlamat Hour of Code adalah bukan untuk mengajar sesiapa untuk
     menjadi seorang saintis pakar komputer dalam sejam. Satu jam adalah cukup hanya
@@ -809,12 +829,27 @@ ms:
     adalah sesuatu yang pelajar-pelajar mereka mahu dan guru-guru mereka yang mampu.
     <br/> <br/> Lebih-lebih lagi, apa yang semua peserta boleh belajar dalam sejam
     adalah bahawa kita boleh lakukan ini juga.
-  hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
-
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
-
-    Above all, what all participants can learn in an hour is that we can do this.
+  hoc_faq_one_hour_a_markdown: '  Matlamat Hour of Code (Sejam Mengekod) bukan bertujuan
+    untuk mengajar sesiapa menjadi saintis komputer yang pakar dalam tempoh satu jam.
+    Satu jam hanya cukup untuk mengetahui bahawa sains komputer menyeronokkan dan
+    kreatif, bahawa ia boleh diakses pada semua peringkat umur, untuk semua pelajar,
+    tanpa mengira latar belakang. Ukuran kejayaan kempen ini bukan dalam jumlah yang
+    dipelajari oleh pelajar CS - kejayaan ditunjukkan dalam penyertaan yang besar
+    merentasi kumpulan jantina dan etnik serta sosioekonomi dan peningkatan yang dihasilkan
+    dalam pendaftaran dan penyertaan yang kita lihat dalam kursus CS pada semua peringkat
+    gred. Jutaan guru dan pelajar yang menyertai telah memutuskan untuk melangkaui
+    satu jam - bertujuan belajar sepanjang hari atau sepanjang minggu atau lebih lama
+    lagi dan sebagai hasilnya, ramai pelajar telah memutuskan untuk mendaftar masuk
+    dalam semua kursus (atau bahkan jurusan kolej).      Selain pelajar sedia ada,
+    terdapat "pelajar" lain menjadi pendidik yang memperoleh keyakinan selepas melalui
+    sesi satu jam, mereka boleh mengajar sains komputer walaupun mereka mungkin tidak
+    mempunyai ijazah kolej sebagai saintis komputer. Puluhan ribu guru memutuskan
+    untuk melanjutkan pelajaran dalam bidang sains komputer, sama ada menghadiri PD
+    atau menawarkan kursus susulan dalam talian, atau kedua-duanya. Perkara ini juga
+    terjadi kepada pentadbir sekolah, yang menyedari bahawa sains komputer adalah
+    sesuatu yang dikehendaki oleh pelajar dan guru mereka mampu merealisasikannya.      Paling
+    penting, perkara yang boleh dipelajari oleh semua peserta dalam satu jam ialah
+    kita boleh melakukan ini.  '
   hoc_faq_more_questions_q: Masih mempunyai soalan?
   hoc_faq_more_questions_a: Cuba dapatkan jawapan dari <a href='http://support.code.org'>forum
     sokongan</a>.
@@ -825,20 +860,21 @@ ms:
     mengharapkan semua tutorial dan kurikulum yang disediakan di laman web kami kekal
     selama-lamanya.. Sila layari <a href='/promote'> sumber kami</a> untuk acara cara
     panduan dan sumber lain untuk membantu kejayaan acara Hour of Code anda.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
+  hoc_faq_keep_learning_a_markdown: "  Sesiapa sahaja boleh mengadakan Hour of Code
+    (Sejam Mengekod) pada bila-bila masa. Tutorial Hour of Code (Sejam Mengekod) ini
+    berterusan sepanjang tahun. Anda boleh menjangkakan semua tutorial dan kurikulum
+    kami tersedia secara berkekalan dalam laman web kami. Sila pergi ke [sumber kami](%{promote})
+    untuk panduan cara melaksanakan acara dan sumber lain bagi membantu menjayakan
+    acara Hour of Code (Sejam Mengekod) anda.  "
   hoc_faq_certificates_q: Di mana boleh mencetak Sijil bagi murid-murid saya?
   hoc_faq_certificates_a: Pergi ke kami <a href='%{codeorg_url}/certificates'> Sijil
     Laman</a> di mana anda boleh mencetak Sijil bagi seluruh kelas dahulu. Anda juga
     boleh mencetak <a href='%{codeorg_url}/certificates?course=mc'> Sijil Khas</a>
     untuk pelajar-pelajar yang melakukan Minecraft tutorial.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: "  Pergi ke [halaman sijil](%{codeorg_url}/certificates)
+    kami, supaya anda boleh mencetak sijil untuk seluruh kelas anda dengan lebih awal.
+    Anda juga boleh mencetak [sijil khusus](%{codeorg_url}/certificates?course=mc)
+    untuk pelajar yang sedang menyiapkan tutorial Minecraft.  "
   hoc_faq_logo_q: Adakah terdapat batasan kepada bagaimana aku boleh menggunakan Hour
     of Code logo atau nama?
   hoc_faq_logo_a: Hour of Code ialah tanda dagangan. Kita tidak mahu mengelakkan penggunaannya,
@@ -988,6 +1024,7 @@ ms:
   highlights_constant_athletes_short_heading: Mendorong diri sendiri
   footer_copyright_message: Hak Cipta 2015 Code.org. Semua hak terpelihara.
   footer_trademark_message: Hour of Code™ adalah tanda perniagaan bagi Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Rakan kongsi
   footer_menu_contact: Hubungi kami
   footer_menu_support: Sokongan
@@ -999,11 +1036,12 @@ ms:
     lebih 180 negara dengan suatu Hour of Code.
   learn_banner_beyond: Ingin terus belajar? <a id='learn_banner_beyond'>Cuba lebih
     daripada sejam</a>
-  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
+  learn_banner_beyond_markdown: "  Mahu terus belajar? [Melangkaui satu jam](%{url})
+    \ "
   learn_banner_teachers: 'Guru: <a id=''teacher_banner_host''>Menganjurkan selama
     sejam</a> atau <a id=''teacher_banner_howto''>baca Panduan Bagaimana</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: "  Para guru: [Mengadakannya selama sejam](%{host_url})
+    atau [baca Panduan Cara Melaksanakan](%{howto_url})  "
   learn_robotics_banner_heading: Litar dan Robotik
   learn_robotics_banner_blurb: Mempunyai robot atau kit pengkomputeran fizikal? Gunakan
     mereka dalam aktiviti-aktiviti berikut dan melakukan suatu Hour of Code yang sesuai
@@ -1611,9 +1649,10 @@ ms:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1629,15 +1668,16 @@ ms:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1646,6 +1686,7 @@ ms:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1655,7 +1696,7 @@ ms:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1716,8 +1757,9 @@ ms:
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
   tutorial_meeempathy_name: A Minecraft Tale of Two Villages
-  tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  tutorial_danceparty_shortdescription: "  Mengekod lagu Dance Party untuk dikongsi
+    dengan rakan anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+    Ciara dan 25 artis lagi!  "
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_shortdescription: Memilihlah antara mencipta suatu permainan bola
@@ -3005,8 +3047,9 @@ ms:
   tutorial_dance2019_longdescription: Kod Majlis Tari-Menari untuk berkongsi dengan
     rakan anda. Menampilkan Katy Perry, Shawn Mendes, Panic! Di Disko, Lil Nas X,
     Jonas Brothers, Nicki Minaj, dan 34 lagi!
-  tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  tutorial_danceparty_longdescription: "  Mengekod lagu Dance Party untuk dikongsi
+    dengan rakan anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+    Ciara dan 25 artis lagi!  "
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_longdescription: Memilihlah antara mencipta suatu permainan bola
@@ -5513,11 +5556,13 @@ ms:
     you'll find every puzzle has a solution to make the pets feel better than ever!
   tutorial_superhero_longdescription: Use HTML and CSS pixel art to create your favorite
     superhero masks. Publish and share your creations!
-  tutorial_vidcodeplastic_longdescription: The problem of plastic filling our oceans
-    continues to worsen. Luckily, you can make your voice heard with code through
-    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
-    you can make a second video about any subject you care about! Learn to use loops,
-    sine waves and customized emojis to make a unique project.
+  tutorial_vidcodeplastic_longdescription: "  Masalah plastik dibuang di dalam lautan
+    kita terus menjadi bertambah teruk. Kita bernasib baik, kerana dapat menyuarakan
+    kebimbangan kita dengan kod melalui PSA Pencemaran Plastik. Selepas mengekod PSA
+    mengenai pencemaran plastik dengan menggunakan JavaScript, anda boleh membuat
+    video kedua tentang mana-mana subjek yang anda ambil berat! Belajar menggunakan
+    gelung, gelombang sinus dan emoji yang disesuaikan untuk membuat projek yang unik.
+    \ "
   tutorial_vidcodetypeface_longdescription: Create your own typeface using shapes
     and elements of typography. Type has more elements than you may have realized!
     So far we have talked about fonts and how they are different styles of text. Fonts
@@ -5589,20 +5634,22 @@ ms:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5648,12 +5695,12 @@ ms:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5672,16 +5719,18 @@ ms:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5701,6 +5750,13 @@ ms:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: "  Masalah plastik dibuang di dalam lautan
+    kita terus menjadi bertambah teruk. Kita bernasib baik, kerana dapat menyuarakan
+    kebimbangan kita dengan kod melalui PSA Pencemaran Plastik. Selepas mengekod PSA
+    mengenai pencemaran plastik dengan menggunakan JavaScript, anda boleh membuat
+    video kedua tentang mana-mana subjek yang anda ambil berat! Belajar menggunakan
+    gelung, gelombang sinus dan emoji yang disesuaikan untuk membuat projek yang unik.
+    \ "
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5731,11 +5787,11 @@ ms:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5968,42 +6024,58 @@ ms:
     Bahasa Belanda, Bahasa Inggeris, Bahasa Finland, Bahasa Perancis, Bahasa Jerman,
     Bahasa Greek, Bahasa Hindi, Bahasa Hungary, Bahasa Indonesia, Bahasa Itali, Bahasa
     Jepun, Bahasa Korea, Bahasa Melayu, Bahasa Poland, Bahasa Portugia dan 10 lagi!
-  tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
-    Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
-    Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
+  tutorial_danceparty_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Catalonia,
+    Bahasa Cina, Bahasa Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Greek, Bahasa Hungary, Bahasa Itali, Bahasa Jepun,
+    Bahasa Korea, Bahasa Norway, Bahasa Poland, Bahasa Portugis, Bahasa Rusia, Bahasa
+    Sepanyol, Bahasa Sweden, Bahasa Thai, Bahasa Turki dan Bahasa Vietnam  "
   tutorial_chibitronics_language: Bahasa Inggeris
   tutorial_athlete_language: English, French, Spanish, Italian, Portuguese (Brazil)
-  tutorial_moana_language: English, Arabic, Chinese (Simplified), Chinese (Traditional)
-    Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish,
-    Turkish, Ukrainian, Vietnamese
-  tutorial_star-wars_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish,
-    Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
-    Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
-    Turkish, Ukrainian and 19 more
+  tutorial_moana_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Cina (Diringkaskan),
+    Bahasa Cina (Tradisional), Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Indonesia, Bahasa Itali, Bahasa Jepun, Bahasa
+    Korea, Bahasa Norway, Bahasa Poland, Bahasa Polinesia (Bahasa Samoa), Bahasa Portugis,
+    Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa Ukraine dan
+    Bahasa Vietnam  "
+  tutorial_star-wars_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_gumadventure_language: English only
-  tutorial_mchoc_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish,
-    Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
-    Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
-    Turkish, Ukrainian and 19 more
+  tutorial_mchoc_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_vidnews_language: English only
-  tutorial_kodable-pre_language: English, Arabic, Azerbaijani, German, Greek, Spanish,
-    Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish,
-    Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese
+  tutorial_kodable-pre_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Azerbaijani,
+    Bahasa Jerman, Bahasa Greek, Bahasa Sepanyol, Bahasa Parsi, Bahasa Perancis, Bahasa
+    Indonesia, Bahasa Iceland, Bahasa Itali, Bahasa Korea, Bahasa Belanda, Bahasa
+    Norway, Bahasa Poland, Bahasa Portugis, Bahasa Romania, Bahasa Rusia, Bahasa Serbia,
+    Bahasa Sweden, Bahasa Turki, Bahasa Ukraine, Bahasa Cina  "
   tutorial_highseas_language: English only
   tutorial_capython_language: English, Dutch, Spanish
-  tutorial_frzn_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
-    Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian and 19 more
-  tutorial_cocom_language: English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian,
-    Vietnamese and 9 more
-  tutorial_play-lab_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish,
-    Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
-    Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
-    Turkish, Ukrainian and 19 more
+  tutorial_frzn_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
+  tutorial_cocom_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Perancis, Bahasa Jerman,
+    Bahasa Greek, Bahasa Ibrani, Bahasa Hungary, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Portugis, Bahasa Rusia,
+    Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa Ukraine, Bahasa Vietnam dan
+    9 Bahasa lagi  "
+  tutorial_play-lab_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_boxisland_language: English, Chinese, Croatian, Czech, Danish, Dutch, Finnish,
     French, German, Greek, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean,
     Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian,
@@ -6021,41 +6093,54 @@ ms:
     French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
     Malaysia, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian,
     Spanish, Swedish, Thai
-  tutorial_hoc_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
-    Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian and 19 more
-  tutorial_code_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
-    Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian and 19 more
+  tutorial_hoc_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
+  tutorial_code_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_tinspire_language: English only
   tutorial_itchbounceball_language: English only
   tutorial_vidclim_language: English only
   tutorial_matlab_language: English only
-  tutorial_flap_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
-    Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian and 19 more
-  tutorial_galaxy_language: English, Albanian, Arabic, Bosnian, Chinese, Croatian,
-    Czech, Danish, Dutch, French, German, Hebrew, Indonesian, Italian, Japanese, Korean,
-    Persian, Polish, Portuguese, Romanian, Russian, Slovenian, Spanish, Swedish, Turkish,
-    Vietnamese
-  tutorial_inf_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
-    Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian and 19 more
+  tutorial_flap_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
+  tutorial_galaxy_language: "  Bahasa Inggeris, Bahasa Albania, Bahasa Arab, Bahasa
+    Bosnia, Bahasa Cina, Bahasa Croatia, Bahasa Czech, Bahasa Denmark, Bahasa Belanda,
+    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Indonesia, Bahasa Itali,
+    Bahasa Jepun, Bahasa Korea, Bahasa Parsi, Bahasa Poland, Bahasa Portugis, Bahasa
+    Romania, Bahasa Rusia, Bahasa Slovenia, Bahasa Sepanyol, Bahasa Sweden, Bahasa
+    Turki, Bahasa Vietnam  "
+  tutorial_inf_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_tynkersol_language: English only
   tutorial_itchg_language: English only
-  tutorial_como_language: English, Arabic, Chinese, Czech, French, German, Greek,
-    Hebrew, Japanese, Kazkh, Lithuanian, Polish, Portuguese, Russian, Serbian, Spanish,
-    Turkish, Ukrainian
+  tutorial_como_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Cina, Bahasa Czech,
+    Bahasa Perancis, Bahasa Jerman, Bahasa Greek, Bahasa Ibrani, Bahasa Jepun, Bahasa
+    Kazakh, Bahasa Lithuania, Bahasa Poland, Bahasa Portugis, Bahasa Rusia, Bahasa
+    Serbia, Bahasa Sepanyol, Bahasa Turki, Bahasa Ukraine  "
   tutorial_processfound_language: English only
   tutorial_tynkerhomo_language: English only
-  tutorial_art_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
-    Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian and 19 more
+  tutorial_art_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_tynkerbrick_language: English only
   tutorial_itchbio_language: English only
   tutorial_itchj_language: English only
@@ -6067,10 +6152,12 @@ ms:
   tutorial_tynkerapp_language: English only
   tutorial_tynkerpup_language: English only
   tutorial_livecode_language: English only
-  tutorial_cocomgame_language: English, Arabic, Bulgarian, Chinese, Croatian, Czech,
-    Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian, Vietnamese and 8 more
+  tutorial_cocomgame_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Finland,
+    Bahasa Perancis, Bahasa Jerman, Bahasa Greek, Bahasa Ibrani, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine, Bahasa Vietnam dan 8 Bahasa lagi  "
   tutorial_tynkerspin_language: English only
   tutorial_code-avengers_language: English, Spanish, Dutch, Russian, Portuguese
   tutorial_tynkercq_language: English only
@@ -6247,15 +6334,19 @@ ms:
   tutorial_kodable-unplugged_language: English only
   tutorial_scratch_language: English only
   tutorial_bayes_language: Spanish
-  tutorial_gumball_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish,
-    Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
-    Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
-    Turkish, Ukrainian and 19 more
+  tutorial_gumball_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_hrm_language: Multiple
-  tutorial_ice-age_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish,
-    Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
-    Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
-    Turkish, Ukrainian and 19 more
+  tutorial_ice-age_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_koapp_language: Multiple
   tutorial_lightbot-intl_language: French, Russian, Brazilian Portuguese
   tutorial_rmc_language: Russian
@@ -6263,22 +6354,28 @@ ms:
   tutorial_minecraft-2016_language: Multiple
   tutorial_thinkersmith-es_language: Spanish
   tutorial_pixie_language: Spanish
-  tutorial_play_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
-    Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian and 19 more
+  tutorial_play_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
   tutorial_robomind-nl_language: Dutch
   tutorial_spheroi_language: English only
   tutorial_spherol_language: English only
   tutorial_spherov_language: English only
-  tutorial_swb_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
-    Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian and 19 more
-  tutorial_build-a-galaxy_language: English, Arabic, Bulgarian, Chinese, Croatian,
-    Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian,
-    Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish,
-    Swedish, Turkish, Ukrainian and 19 more
+  tutorial_swb_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
+    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
+    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
+    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
+    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
+    Ukraine dan 19 Bahasa lagi  "
+  tutorial_build-a-galaxy_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria,
+    Bahasa Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa
+    Itali, Bahasa Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland,
+    Bahasa Portugis, Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden,
+    Bahasa Turki, Bahasa Ukraine dan 19 Bahasa lagi  "
   tutorial_alicesims_language: English only
   tutorial_tchr_language: English only
   tutorial_robogame_language: English only
@@ -6294,9 +6391,10 @@ ms:
   tutorial_moveit_language: English only
   tutorial_bigevent_language: English only
   tutorial_gpp_language: English only
-  tutorial_foosgame_language: English, Arabic, German, Spanish, French, Japanese,
-    Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional
-    Chinese, Simplified Chinese, Greek, Italian, Polish
+  tutorial_foosgame_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Jerman, Bahasa
+    Sepanyol, Bahasa Perancis Bahasa Jepun, Bahasa Korea, Bahasa Belanda, Bahasa Portugis,
+    Bahasa Romania, Bahasa Turki, Bahasa Cina Tradisional, Bahasa Cina Diringkaskan,
+    Bahasa Greek, Bahasa Itali, Bahasa Poland  "
   tutorial_solopython_language: English only
   tutorial_kodableint_language: English only
   tutorial_kodableadv_language: English only
@@ -6516,9 +6614,11 @@ ms:
   tutorial_cashield_language: Bahasa Inggeris
   tutorial_ccwslimer_language: Bahasa Inggeris
   tutorial_codinggalaxy_language: Chinese, English
-  tutorial_boatrace_language: Arabic, Chinese (Simplified), Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish,
-    Romanian, Serbian (Cyrillic), Spanish, Ukrainian
+  tutorial_boatrace_language: "  Bahasa Arab, Bahasa Cina (Diringkaskan), Bahasa Czech,
+    Bahasa Denmark, Bahasa Belanda, Bahasa Perancis, Bahasa Jerman, Bahasa Greek,
+    Bahasa Ibrani, Bahasa Hindi, Bahasa Itali, Bahasa Jepun, Bahasa Korea, Bahasa
+    Lain, Bahasa Poland, Bahasa Romania, Bahasa Serbia (huruf Cyril), Bahasa Sepanyol,
+    Bahasa Ukraine  "
   tutorial_ccplay_language: Bahasa Inggeris
   tutorial_grinch_language: Bahasa Inggeris
   tutorial_codehsart_language: Bahasa Inggeris
@@ -6578,8 +6678,10 @@ ms:
   tutorial_ozorandom_language: Bahasa Inggeris
   tutorial_ozotroll_language: Bahasa Inggeris
   tutorial_peblioart_language: Bahasa Inggeris
-  tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
-    Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
+  tutorial_astropi_language: "  Bahasa Arab, Bahasa Denmark, Bahasa Belanda, Bahasa
+    Inggeris, Bahasa Finland, Bahasa Perancis, Bahasa Jerman, Bahasa Greek, Bahasa
+    Hungary, Bahasa Itali, Bahasa Norway (Bahasa Norse Baharu), Bahasa Lain, Bahasa
+    Poland, Bahasa Sepanyol, Bahasa Sweden  "
   tutorial_rgart_language: Bahasa Inggeris
   tutorial_rgengineer_language: Bahasa Inggeris
   tutorial_rgmath_language: Bahasa Inggeris
@@ -6591,28 +6693,39 @@ ms:
   tutorial_scratchtalk_language: English, Spanish
   tutorial_scratchjrstory_language: Bahasa Inggeris
   tutorial_scratchjrtwinkle_language: Bahasa Inggeris
-  tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherocommunity_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherofunctions_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroinfrared_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherolightsensor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheromansion_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_roadblocks_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext2_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext3_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext4_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroraptor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
+  tutorial_spherocomm_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
+    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spherocommunity_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris,
+    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa
+    Korea, Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spherofunctions_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris,
+    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa
+    Korea, Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spheroinfrared_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris,
+    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa
+    Korea, Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spherolightsensor_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris,
+    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa
+    Korea, Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spheromansion_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
+    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_roadblocks_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
+    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spherotext2_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
+    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spherotext3_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
+    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spherotext4_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
+    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
+  tutorial_spheroraptor_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
+    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
+    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
   tutorial_stempiday_language: Bahasa Inggeris
   tutorial_stemplanetoids_language: Bahasa Inggeris
   tutorial_stempong_language: Bahasa Inggeris
@@ -6635,13 +6748,13 @@ ms:
   tutorial_pets_language: Bahasa Inggeris
   tutorial_petvet_language: Bahasa Inggeris
   tutorial_superhero_language: Bahasa Inggeris
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: Bahasa Inggeris
   tutorial_vidcodetypeface_language: Bahasa Inggeris
   tutorial_washustorm_language: Bahasa Inggeris
   tutorial_activitypackets_language: Bahasa Inggeris
   tutorial_googlerookie_language: Bahasa Inggeris
   tutorial_tommyturtle_language: Bahasa Inggeris
-  tutorial_mazyad_language: Arabic, English
+  tutorial_mazyad_language: "  Bahasa Arab, Bahasa Inggeris  "
   tutorial_gamemaker_language: Bahasa Inggeris
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: Bahasa Inggeris
@@ -6662,6 +6775,7 @@ ms:
     (Mexico)
   tutorial_bsdcause_language: Bahasa Inggeris
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Bahasa Inggeris
   tutorial_tttractor_language: Bahasa Inggeris
   tutorial_codeillusionmickey_language: Bahasa Inggeris
@@ -6684,6 +6798,7 @@ ms:
   tutorial_codestersdistance_language: Bahasa Inggeris
   tutorial_itchspace_language: Bahasa Inggeris
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Bahasa Inggeris
   tutorial_itchfish_language: Bahasa Inggeris
   tutorial_bsdwebsite_language: Bahasa Inggeris
@@ -6691,11 +6806,12 @@ ms:
   tutorial_itchwebcam_language: Bahasa Inggeris
   tutorial_itchball_language: Bahasa Inggeris
   tutorial_ttrace_language: Bahasa Inggeris
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Bahasa Inggeris
   tutorial_codeguppytext_language: Bahasa Inggeris
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: Bahasa Inggeris
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Bahasa Inggeris
@@ -7359,6 +7475,7 @@ ms:
   tutorial_rpstress_string_detail_grades: Grades 2+
   tutorial_bsdcause_string_detail_grades: Grades 9+
   tutorial_vidcodeanimoji_string_detail_grades: Grades 2+
+  tutorial_vidcodeanimojies_string_detail_grades: Grades 2+
   tutorial_bsdinspire_string_detail_grades: Grades 6+
   tutorial_tttractor_string_detail_grades: Grades 6+
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
@@ -7380,6 +7497,7 @@ ms:
   tutorial_codestersdistance_string_detail_grades: Grades 6+
   tutorial_itchspace_string_detail_grades: Grades 6+
   tutorial_vidcodemagic_string_detail_grades: Grades 2+
+  tutorial_vidcodemagices_string_detail_grades: Grades 2+
   tutorial_codespeakmeal_string_detail_grades: Grades 6+
   tutorial_itchfish_string_detail_grades: Grades 2-8
   tutorial_bsdwebsite_string_detail_grades: Grades 6+
@@ -7391,6 +7509,7 @@ ms:
   tutorial_educodesecret_string_detail_grades: Grades 6+
   tutorial_itchshapes_string_detail_grades: Grades 6+
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Grades 6+
   tutorial_educativechatbot_string_detail_grades: Grades 9+
   tutorial_educodebasics_string_detail_grades: Grades 6+
   tutorial_codehsdesign_string_detail_grades: Grades 6+
@@ -7411,7 +7530,7 @@ ms:
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
   tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_codejika_string_detail_grades: Grades 6+
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
@@ -8208,6 +8327,8 @@ ms:
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8232,6 +8353,8 @@ ms:
   tutorial_itchspace_string_platforms: All modern browsers
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: All modern browsers
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8243,6 +8366,7 @@ ms:
   tutorial_educodesecret_string_platforms: All modern browsers
   tutorial_itchshapes_string_platforms: All modern browsers
   tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
   tutorial_educativechatbot_string_platforms: All modern browsers
   tutorial_educodebasics_string_platforms: All modern browsers
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8914,6 +9038,7 @@ ms:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8935,6 +9060,7 @@ ms:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8946,6 +9072,7 @@ ms:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9645,6 +9772,7 @@ ms:
   tutorial_rpstress_string_detail_programming_languages: Blocks
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9666,6 +9794,7 @@ ms:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blocks
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blocks
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9678,6 +9807,7 @@ ms:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blocks
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -9863,7 +9993,7 @@ ms:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: "  AI for Oceans (Kecerdasan Buatan untuk Lautan)  "
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -10159,9 +10289,9 @@ ms:
   tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
     app to power through printable puzzles and challenges to crack the code to where
     Root is hiding.
-  tutorial_microbit14_longdescription: Code your way to preserving the oceans using
-    micro:bit. Find out more about Global Goal 14, Life Below Water and learn to code
-    a sea turtle beach light.
+  tutorial_microbit14_longdescription: "  Mengekod cara anda memelihara lautan dengan
+    menggunakan mikro:bit. Ketahui lebih lanjut tentang Matlamat Global 14, Hidupan
+    Di Bawah Air dan belajar mengekod cahaya pantai penyu laut.  "
   tutorial_barobomoon_longdescription: You're one of the pioneer astronauts at the
     first permanent moon base, and while on an expedition away from base, a malfunction
     incapacitates your lunar rover and radio. But with a little ingenuity you can
@@ -10227,9 +10357,10 @@ ms:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: Computer science is about so much more than
-    coding! Learn about AI, machine learning, training data, and bias, while exploring
-    ethical issues and how AI can be used to address world problems.
+  tutorial_ai-oceans_longdescription: "  Sains komputer ialah kursus yang melebihi
+    pengekodan semata-mata! Belajar tentang AI, pembelajaran mesin, data latihan dan
+    kecenderungan, sambil meneroka isu etika dan cara AI boleh digunakan untuk mengatasi
+    masalah dunia.  "
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Bahasa Inggeris
   tutorial_googlehero_language: English, Spanish
@@ -10431,7 +10562,7 @@ ms:
   tutorial_modtraits_string_detail_grades: Grades 2+
   tutorial_mee_string_detail_grades: Grades 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
-  tutorial_ai-oceans_string_detail_grades: Grades 3+
+  tutorial_ai-oceans_string_detail_grades: "  Gred 3+  "
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -10540,8 +10671,8 @@ ms:
   tutorial_modtraits_string_platforms: All modern browsers
   tutorial_mee_string_platforms: iPad, Computers (Windows PC, Mac)
   tutorial_kuborobo_string_platforms: Unplugged
-  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
-    iPads, modern Android phones, iPhones
+  tutorial_ai-oceans_string_platforms: "  Semua pelayar moden, tablet Android moden,
+    iPad, telefon Android moden, iPhone  "
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -10755,7 +10886,8 @@ ms:
   tutorial_mee_string_detail_programming_languages: Blocks
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
-  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
+  tutorial_ai-oceans_string_detail_programming_languages: "  AI dan Pembelajaran Mesin
+    \ "
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

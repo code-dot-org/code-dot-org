@@ -46,10 +46,10 @@ id:
         gender: 'Jenis kelamin'
         edit_header: 'Edit rincian akun'
         finish_sign_up_header: 'Selesaikan pembuatan akun Anda'
-        finish_sign_up_subheader: 'Isilah informasi berikut untuk menyelesaikan pembuatan akun Code.org untuk <strong>%{email}</strong>.'
-        finish_sign_up_subheader_markdown: 'Isilah informasi berikut untuk menyelesaikan pembuatan akun Code.org untuk **%{email}**.'
-        finish_sign_up_subheader_provider: 'Isilah informasi berikut untuk menyelesaikan pembuatan akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider_markdown: 'Isilah informasi berikut untuk menyelesaikan pembuatan akun Code.org dengan **%{provider}** untuk **%{email}**.'
+        finish_sign_up_subheader: 'Isikan informasi berikut untuk menyelesaikan pembuatan akun Code.org untuk <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Isikan informasi berikut untuk menyelesaikan pembuatan akun Code.org untuk **%{email}**.'
+        finish_sign_up_subheader_provider: 'Isikan informasi berikut untuk menyelesaikan pembuatan akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Isikan informasi berikut untuk menyelesaikan pembuatan akun Code.org dengan **%{provider}** untuk **%{email}**.'
         reset_password_token: "Tautan pengaturan ulang kata sandi yang telah Anda ikuti"
         error:
           future: tidak mungkin di masa depan
@@ -156,8 +156,6 @@ id:
     invalid_password: "Kata sandi harus minimal 6 karakter"
     mismatch_password: "kedua password yang anda masukkan tidak sama"
     student_consent: "Saya mengonfirmasi bahwa saya telah menerima izin dari orang tua atau wali saya untuk menggunakan layanan Code.org."
-    agree_us_website: "Saya setuju untuk menggunakan sebuah situs web yang berbasis di Amerika Serikat."
-    my_data_to_us: "Data dari penggunaan saya atas situs ini dapat dikirimkan ke dan disimpan atau diproses di Amerika Serikat."
     agree_us_data_transfer_student: '**Saya setuju bahwa Code.org dapat mengirim data (termasuk data pribadi) dari penggunaan situs ini ke Amerika Serikat** untuk tujuan hosting dan pemrosesan data terkait.'
     agree_us_data_transfer_teacher: '**Saya setuju bahwa Code.org dapat mengirim data (termasuk data pribadi) dari penggunaan situs ini oleh saya (dan murid saya) ke Amerika Serikat** untuk tujuan hosting dan pemrosesan data terkait.'
     data_collection_us: "Saya mengetahui bahwa Code.org adalah situs web nirlaba yang berbasis di AS dan hukum yang mengatur pengumpulan data di AS mungkin berbeda dari hukum di negara saya."

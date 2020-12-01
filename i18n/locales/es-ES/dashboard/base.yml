@@ -156,8 +156,6 @@ es:
     invalid_password: "La Contraseña debe tener al menos 6 caracteres"
     mismatch_password: "Las dos contraseñas  introducidas no coinciden"
     student_consent: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
-    agree_us_website: "Estoy de acuerdo con el uso de un sitio web con sede en los Estados Unidos."
-    my_data_to_us: "Los datos de mi uso de este sitio pueden ser enviados y almacenados o procesados en los Estados Unidos."
     agree_us_data_transfer_student: '**Acepto que Code.org puede transferir datos (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos.'
     agree_us_data_transfer_teacher: '**Acepto que Code.org puede transferir datos (incluyendo datos personales) de mi uso (y el uso de mis estudiantes) de este sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos.'
     data_collection_us: "Entiendo que Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y que las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de mi país."
@@ -544,7 +542,7 @@ es:
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados.<br />La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados.<br />El asombroso mundo de Gumball es marca comercial y &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados. Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados. La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados. Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados. El asombroso mundo de Gumball es marca comercial y &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Powered by Amazon Web Services'
+    powered_by_aws: 'Impulsado por Amazon Web Services'
     trademark: '© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de Hora de Code ® son marcas registradas de Code.org.'
     copyright: 'Derechos de autor'
     more: 'Más'

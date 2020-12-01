@@ -20949,7 +20949,7 @@ tr:
                 öğrenciler, oluşturmak istedikleri sahneyi tanımlar, ihtiyaç duydukları
                 farklı kodu düşünerek hazırlanır, Oyun Laboratuvarında planlarını
                 dener, sonra oluşturduklarını yansıtırlar. Sonunda da oluşturduğu
-                projeleri akranları ile paylaşma şansı olur."
+                projeyi akranları ile paylaşma şansı olur."
               description_teacher: "**Günün Sorusu: Yaratıcılığımızı sergilemek için
                 Oyun Laboratuvarını nasıl kullanabiliriz?**\r\n\r\nŞu ana kadar öğrenilen
                 koda hızlıca göz attıktan sonra ünitenin birinci yaratıcı projesi
@@ -23429,7 +23429,7 @@ tr:
                 öğrenciler, oluşturmak istedikleri sahneyi tanımlar, ihtiyaç duydukları
                 farklı kodu düşünerek hazırlanır, Oyun Laboratuvarında planlarını
                 dener, sonra oluşturduklarını yansıtırlar. Sonunda da oluşturduğu
-                projeleri akranları ile paylaşma şansı olur."
+                projeyi akranları ile paylaşma şansı olur."
               description_teacher: "**Günün Sorusu: Yaratıcılığımızı sergilemek için
                 Oyun Laboratuvarını nasıl kullanabiliriz?**\r\n\r\nŞu ana kadar öğrenilen
                 koda hızlıca göz attıktan sonra ünitenin birinci yaratıcı projesi
@@ -23835,6 +23835,16 @@ tr:
           description_audience: Dahili
           description_short: 'Doğrudan ders planları ile bağlantılı olan ancak diğer
             komut dosyalarında görünmeyen seviyeler. '
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: 'Okyanuslar için Yapay Zeka
+
+'
+            intro:
+              name: Giriş
+            visualizing:
+              name: Veriyi görselleştirme
         2021drafting:
           description_audience: Dahili
           description_short: Dahili

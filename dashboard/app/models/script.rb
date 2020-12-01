@@ -30,7 +30,7 @@ require 'ruby-progressbar'
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
 # A sequence of Levels
-class Script < ActiveRecord::Base
+class Script < ApplicationRecord
   include ScriptConstants
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -152,6 +152,7 @@ class Script < ActiveRecord::Base
     tts
     is_course
     background
+    show_calendar
   )
 
   def self.twenty_hour_script
@@ -1296,7 +1297,9 @@ class Script < ActiveRecord::Base
       hasStandards: has_standards_associations?,
       tts: tts?,
       is_course: is_course?,
-      background: background
+      background: background,
+      updatedAt: updated_at,
+      scriptPath: script_path(self)
     }
 
     #TODO: lessons should be summarized through lesson groups in the future

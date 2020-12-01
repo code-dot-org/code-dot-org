@@ -1461,6 +1461,87 @@
           "collect": {
             "name": "verzamel"
           }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "spel is gewonnen"
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "honing nectar"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "beweeg en maak honing"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "beweeg en maak honing"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "verzamel alle nectar"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "verzamel alle nectar"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "navigeer"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "check en pluk"
+          },
+          "find pumpkin": {
+            "name": "zoek pompoen"
+          },
+          "wander path": {
+            "name": "doorloop pad"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "mais en pompoen"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "mais en pompoen"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "mais en pompoen"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "mais en pompoen"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "mais en pompoen"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "navigeer"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "navigeer"
+          }
         }
       }
     }
