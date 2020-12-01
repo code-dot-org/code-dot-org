@@ -137,11 +137,6 @@ export const commands = {
     const {azureSpeechServiceVoices: voices} = appOptions;
     let {text, gender, language} = opts;
 
-    if (!token) {
-      outputWarning(i18n.textToSpeechTokenMissing());
-      return;
-    }
-
     // Fall back to defaults if requested language/gender combination is not available.
     if (!(voices[language] && voices[language][gender])) {
       language = 'English';
