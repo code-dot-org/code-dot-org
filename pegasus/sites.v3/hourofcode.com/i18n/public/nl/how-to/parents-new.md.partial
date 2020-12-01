@@ -3,88 +3,88 @@ title: Hoe-doen-we-dat gids voor ouders
 ---
 
 # How to do an Hour of Code with your child
-Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+Een Hour of Code uitproberen is een eenvoudige en leuke manier om je kind kennis te laten maken met informatica, misschien wel voor de allereerste keer.     Niet alleen is informatica fundamenteel voor alle vakgebieden, maar <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recente studies tonen aan</a>: kinderen die informatica studeren, presteren beter in andere vakken, blinken uit in het oplossen van problemen en hebben <font color="00adbc"><b>17% meer kans om zich in te schrijven op de universiteit</b></font>.
 
-You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
+Je kunt je aansluiten bij tientallen miljoenen leerlingen wereldwijd in dit wereldwijde evenement.     Samen kunnen we kinderen inspireren om te leren, stereotypen te doorbreken en kinderen te helpen een nieuwe interesse te ontdekken.     Het beste van alles is dat je al alles hebt wat je nodig hebt om het Hour of Code in huis te halen!
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
-<h3>What do I need to get started?</h3>
-The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
+<h3>  Wat heb ik nodig om te beginnen?  </h3>
+  De Hour of Code is eenvoudig uit te voeren - zelfs voor beginners.     Je hoeft geen ervaring te hebben in informatica of onderwijs om een leuke activiteit voor je kinderen mogelijk te maken waardoor ze zowel leren als lachen.
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+Je kunt de Hour of Code uitproberen met een computer, een tablet, een smartphone, of volledig losgekoppeld!     Hier is hoe je moet beginnen.
 
 ***
 
-## 1) Explore activities and tutorials.
+## 1) Verken activiteiten en tutorials.
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-There are countless <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> available to you if you’re working on a computer with internet access. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
+Er zijn talloze <a href="https://hourofcode.com/us/learn">Hour of Code-activiteiten</a> beschikbaar als je werkt op een computer met internettoegang.     We raden je aan om een aantal van de opties van tevoren te bekijken, zodat je je kind kunt helpen bij de oefeningen die hij of zij leuk vindt.
 
-All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
+Al onze activiteiten integreren probleemoplossing en kritisch denken met plezier en creativiteit, maar hier zijn enkele leerlingfavorieten:
 
-- For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
-- For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
+- Voor het kind dat graag speelt: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>  
+- Voor het kind dat van Disney houdt: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
+- Voor het kind dat graag leert: <a href="https://code.org/oceans">AI for Oceans</a> of <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Muziek maken met Scratch</a>  
 
-<h3>Low-tech or no-tech?</h3>
-If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.
+<h3>  Low-tech of no-tech?  </h3>
+  Als je beperkte of geen technologie gebruikt, kun je <a href="https://hourofcode.com/us/learn">Hour of Code-activiteiten</a> filteren door “Geen computers of apparaten” te selecteren in het gedeelte <em>Leslokaaltechnologie</em>.
 
 [<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
 
-You can also check out these <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">short videos</a> for more ideas on how to facilitate an unplugged activity at home!
+Je kunt ook deze <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">korte video’s</a> bekijken voor meer ideeën over hoe je een losgekoppelde activiteit thuis mogelijk kunt maken!
 
-## 2) Prepare ahead of time
-Now that you have some tutorials in mind, it may be helpful to try these activities on your device before introducing them to your child.
+## 2) Bereid je op tijd voor
+Nu je een aantal tutorials in gedachten hebt, kan het nuttig zijn om deze activiteiten op je apparaat uit te proberen voordat je ze aan je kind voorstelt.
 
 [<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
 
-<h3>More than one child at home?</h3>
-Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
+<h3>  Meer dan één kind thuis?  </h3>
+  Overweeg om elk van je kinderen een koptelefoon te geven als ze met aparte apparaten werken.     Op die manier kunnen ze activiteiten met geluid spelen zonder elkaar af te leiden.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. Ze zullen ook inzien dat programmeren sociaal is en samenwerking vereist.
+Als je slechts één apparaat gebruikt, of gewoonweg je Hour of Code interactiever wilt maken, probeer dan <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>.     Pair programming stimuleert kinderen om samen te werken.     Als ze samenwerken, helpen ze elkaar om problemen op te lossen.   Ze zullen ook inzien dat programmeren sociaal is en samenwerking vereist.
 
-<h3>Get the kids excited! </h3>
-This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+<h3>  Maak de kinderen enthousiast!   </h3>
+  Dit is een geweldige kans om een nieuw soort activiteit toe te voegen aan de dag van je kind.     Met deze suggesties kun je het plezier verder brengen dan één tutorial:
 
-- Show them an <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">inspirational video</a> that features one of their favorite role models
-- Inspire them with a video on one of the <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">many careers</a> that computer science skills can lead to
-- <a href="https://store.code.org/">Order some swag</a>! You can choose from t-shirts, stickers, or even temporary tattoos. Share it with them right away to get them excited, or save it for the end of your Hour of Code as a special prize.
+- Laat ze een <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">inspiratievideo</a> zien die een van hun favoriete rolmodellen bevat
+- Inspireer ze met een video over een van de <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">vele carrières</a> waar informaticavaardigheden toe kunnen leiden
+- <a href="https://store.code.org/">Bestel wat swag</a>!     Je kunt kiezen uit T-shirts, stickers of zelfs tijdelijke tatoeages.     Deel het meteen met hen om ze enthousiast te maken, of bewaar het voor het einde van je Hour of Code als een speciale prijs.  
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3) Tips for introducing your child to CS
+## 3) Tips om je kind kennis te laten maken met informatica
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+Het is oké als zowel jij als je kind gloednieuw zijn in informatica.     Hier zijn enkele ideeën om je Hour of Code-activiteit te introduceren en je beiden aan het denken te zetten over informatica:
 
-- Explain ways that technology impacts our lives, with specific examples that may interest your child. For example, you could talk about medicine or connecting people virtually. Also, check out <a href="https://code.org/csforgood">Code.org/CSforGood</a> for suggested discussion questions.
-- Together, list everyday things that use code in order to work properly.
+- Leg uit hoe technologie ons leven beïnvloedt, met specifieke voorbeelden die je kind kunnen interesseren.     Je zou bijvoorbeeld kunnen praten over medicijnen of mensen virtueel met elkaar in contact brengen.     Kijk ook op <a href="https://code.org/csforgood">Code.org/CSforGood</a> voor voorstellen voor gespreksvragen.
+- Maak samen een lijst van alledaagse dingen die code gebruiken om goed te kunnen werken.
 
 [<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
 
-<h3>Have girls at home?</h3>
-<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+<h3>  Heb je meisjes thuis?  </h3>
+  <a href="https://code.org/girls">Dit zijn onze aanbevelingen</a> om hun interesse in de informatica te helpen aanwakkeren.     **Pro-tip**: Je kunt gewoon beginnen met hen te vertellen dat ze er goed in zullen zijn!
 
-<h3>Problem-solve together</h3>
-Lastly, when your child comes across difficulties it's okay to respond:
+<h3>  Samen problemen oplossen  </h3>
+  Ten slotte, als je kind in moeilijkheden komt, is het oké om te reageren:
 - “I don’t know. Laten we het samen uitzoeken”
 - "Technologie werkt niet altijd op de manier waarop we dat willen."
 - "Leren programma is als het leren van een nieuwe taal; je zal het niet gelijk onder de knie hebben."
 
-Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+Informatica gaat over het leren "oplossen" van situaties die niet zijn uitgevallen zoals we dachten.     Samen kunnen jij en je kind creatieve manieren bedenken om het probleem op te lossen!
 
 
-## 4) Don’t forget to celebrate!
+## 4) Vergeet niet te vieren!
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+De Hour of Code is een wereldwijd evenement, en je gezin verdient het om dat te vieren.     Hier zijn enkele manieren om je Hour of Code extra speciaal te maken:
 
-- Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
-- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Druk <a href="https://staging.code.org/certificates">Hour of Code-certificaten</a> af die je je kind toekent als deze zijn of haar activiteit afrondt
+- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Druk stickers</a> af thuis of <a href="https://store.code.org/">koop ze online</a>, als extra verrassing.
+- Deel foto's en video's van je Hour of Code thuis op social media.   Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>Wat komt er na het CodeUur?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+Computer science doesn’t have to end with the Hour of Code!   Hoewel 90% van de ouders wil dat hun kind informatica leert, geven de meeste scholen er nog steeds geen les in.     Om te helpen, is ons lesprogramma webgebaseerd en gratis te gebruiken, voor altijd.     <a href="https://code.org/yourschool">Leer hoe</a> je vandaag nog naar de school van je kind kunt brengen.

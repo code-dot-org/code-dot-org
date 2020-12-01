@@ -405,6 +405,11 @@ class ScriptEditor extends React.Component {
           </label>
           <label>
             Supported locales
+            <HelpTip>
+              <p>
+                A list of other locales supported by this script besides en-US.
+              </p>
+            </HelpTip>
             <p>
               <span>
                 {'Select additional locales supported by this script. Select '}

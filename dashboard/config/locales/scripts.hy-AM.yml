@@ -2463,3 +2463,7 @@ hy:
               name: Կուրս A
             Course B:
               name: Կուրս B
+        ml-playground:
+          lessons:
+            intro:
+              name: ներածություն

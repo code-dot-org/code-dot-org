@@ -17,6 +17,9 @@ Parameters:
 <% if frontends -%>
   DaemonInstanceType:
     Type: String
+  AutoscaleRollingBatchSize:
+    Type: Number
+    Default: 20
 <% end -%>
 <% if options.console -%>
   ConsoleInstanceType:
