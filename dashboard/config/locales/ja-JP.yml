@@ -128,8 +128,6 @@ ja:
     valid_password: 有効なパスワード ！
     invalid_password: パスワードを%d文字以上で入力
     mismatch_password: 入力した 2 つのパスワードが一致しません
-    agree_us_website: 米国に拠点を置くウェブサイトを使用することに同意します。
-    my_data_to_us: 当サイトの利用に関する私の情報は、米国に送信され、米国にて保管または処理される場合があります。
     agree_us_data_transfer_student: "**私は、本サイト使用によるデータ（個人データを含む）を Code.org がホスティングと処理を行うために**米国へ転送することに同意します。"
     agree_us_data_transfer_teacher: "**私は、本サイト使用（私の学生による使用も含む）によるデータ（個人データを含む）を Code.org
       がホスティングと処理を行うために**米国へ転送することに同意します。"

@@ -15,7 +15,7 @@
 
 require 'cdo/chat_client'
 
-class UserPermission < ActiveRecord::Base
+class UserPermission < ApplicationRecord
   belongs_to :user
 
   VALID_PERMISSIONS = [

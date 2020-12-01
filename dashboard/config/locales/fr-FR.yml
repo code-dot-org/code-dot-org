@@ -197,9 +197,6 @@ fr:
     mismatch_password: Les deux mots de passe ne sont pas identiques.
     student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
       tuteur légal d’utiliser les services de Code.org.
-    agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
-    my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées
-      et enregistrées ou traitées aux États-Unis.
     agree_us_data_transfer_student: "**J'accepte que Code.org puisse transférer des
       données (y compris des données personnelles) de mon utilisation de ce site vers
       les États-Unis** afin d'héberger et de traiter lesdites données."
@@ -210,8 +207,8 @@ fr:
     data_collection_us: Je comprends que Code.org est un site Web à but non lucratif
       hébergé aux États-Unis et que les lois régissant la collecte de données aux
       États-Unis peuvent différer des lois de mon pays.
-    visit_privacy: Consultez [la politique de confidentialité](%{privacy_url}) de Code.org
-      pour en savoir plus.
+    visit_privacy: Consultez [la politique de confidentialité](%{privacy_url}) de
+      Code.org pour en savoir plus.
     student_terms_markdown: Les adresses e-mail ne sont pas stockées dans un format
       qui nous permette de contacter les étudiants. Les étudiants ne recevront jamais
       d’e-mail de Code.org sauf lors de la procédure de récupération de mot de passe.

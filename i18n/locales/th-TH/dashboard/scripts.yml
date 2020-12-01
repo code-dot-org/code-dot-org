@@ -2886,3 +2886,7 @@ th:
               name: คอร์ส A
             Course B:
               name: คอร์ส B
+        ml-playground:
+          lessons:
+            intro:
+              name: บทเกริ่นนำ
