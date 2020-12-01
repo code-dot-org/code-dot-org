@@ -55,6 +55,25 @@ class MultipleDatabasesTest < ActionDispatch::IntegrationTest
     script_level = create(:script_level)
     params = {program: 'fake program', testResult: 100, result: 'true'}
     post "/milestone/0/#{script_level.id}", params: params
-    assert_equal({writing: 22, reading: 10}, @role_counter.counts)
+    assert_equal(10, @role_counter.counts[:reading])
+  end
+
+  test "read replica can be disabled via Gatekeeper" do
+    assert ActiveRecord::Base.include? ReadReplicaHelper::GatekeeperReadReplica
+
+    user = create(:admin)
+    sign_in user
+
+    Gatekeeper.set("dashboard_read_replica", value: true)
+    get "https://studio.code.org/admin/level_answers?levels=1"
+    assert_equal 2, @role_counter.counts[:reading]
+
+    @role_counter.reset_counts
+
+    Gatekeeper.set("dashboard_read_replica", value: false)
+    get "https://studio.code.org/admin/level_answers?levels=1"
+    assert_equal 0, @role_counter.counts[:reading]
+
+    Gatekeeper.delete("dashboard_read_replica")
   end
 end

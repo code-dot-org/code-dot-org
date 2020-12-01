@@ -33,8 +33,8 @@ class ChannelToken < ApplicationRecord
     storage_app = StorageApps.new(user_storage_id)
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
-    # Read from primary to minimize write conflicts.
-    ActiveRecord::Base.connected_to(role: :primary) do
+    # Read from write replica to minimize write conflicts.
+    ActiveRecord::Base.connected_to(role: :writing) do
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         # your own channel
         find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
