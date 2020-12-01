@@ -1445,40 +1445,57 @@ nl-NL:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest tekent een vierkant.
+          correct: true
           feedback: Juist!
         - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - {}
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
         - correct: true
           feedback: Juist!
         - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
         - correct: true
           feedback: Juist!
         - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
         - correct: true
           feedback: Juist!
         - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -2930,38 +2947,71 @@ nl-NL:
           ## Hoe maak je veilig gebruik van internet?
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
           feedback: Juist!
-        - {}
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
         - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaand programma. Als je dit programma draait,
+            hoeveel schatten zal Laurel dan verzamelen?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
           feedback: Juist!
-        - {}
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
         - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
           feedback: Juist!
-        - {}
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
         - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
           feedback: Juist!
-        - {}
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
         - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
         - {}
       outbreak_story:
