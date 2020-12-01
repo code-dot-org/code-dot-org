@@ -1,20 +1,27 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+import {actions} from '../redux/applab';
 
-export default class MLModelSelectorRow extends React.Component {
+class MLModelSelectorRow extends React.Component {
   static propTypes = {
     modelIds: PropTypes.array,
-    selectedId: PropTypes.string
+    selectedId: PropTypes.string,
+    setMLModelId: PropTypes.function
   };
 
-  state = {
-    selectedId: this.props.selectedId
+  handleChange = event => {
+    event.preventDefault();
+    this.props.setMLModelId(event.target.value);
   };
 
   render() {
     return (
       <div>
-        <select>
+        <select
+          onChange={event => this.handleChange(event)}
+          value={this.props.selectedId}
+        >
           {this.props.modelIds.map((modelId, index) => {
             return (
               <option key={index} value={modelId}>
@@ -27,3 +34,14 @@ export default class MLModelSelectorRow extends React.Component {
     );
   }
 }
+
+export default connect(
+  state => ({
+    selectedId: state.mlModelDetails.modelId
+  }),
+  dispatch => ({
+    setMLModelId(modelId) {
+      dispatch(actions.setMLModelId(modelId));
+    }
+  })
+)(MLModelSelectorRow);
