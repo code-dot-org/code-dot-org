@@ -26,7 +26,7 @@ class FollowersController < ApplicationController
 
     if @user && @user.display_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
-      # Without concatenating the section code, user is forced to type in code again
+      # Concatenate section code so the user does not have to type in section code again
       # Note that @section will be always be defined due to validations in load_section
       redirection = request.path + '/' + @section.code
       redirect_to redirection
