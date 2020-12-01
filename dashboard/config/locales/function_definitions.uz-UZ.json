@@ -479,6 +479,84 @@
           "do something": {
             "name": "nimadir qilish"
           }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "ko'prik qurish"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "ko'prik qurish"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "ko'prik qurish"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "yo'lni tozalash"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "yo'lni tozalash"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "yo'lni tozalash"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "fix short path": {
+            "name": "qisqa yo'lni tuzatish"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "fix short path": {
+            "name": "qisqa yo'lni tuzatish"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "fix short path": {
+            "name": "qisqa yo'lni tuzatish"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "qisqa ko'prik qurish"
+          },
+          "build long bridge": {
+            "name": "uzun ko'prik qurish"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "qisqa ko'prik qurish"
+          },
+          "build long bridge": {
+            "name": "uzun ko'prik qurish"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "qisqa ko'prik qurish"
+          },
+          "build long bridge": {
+            "name": "uzun ko'prik qurish"
+          }
         }
       }
     }

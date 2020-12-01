@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Guía de la Hora del Código para empresas
 ---
 
 {{ signup_button }}

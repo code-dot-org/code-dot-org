@@ -41,11 +41,12 @@ tr:
     üzerinde dilde sunulmaktadır.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: Hour of Code 2020 yaklaşıyor!
+  hoc2020_ai_header: Yapay Zekayı Keşfedin
+  hoc2020_ai_description: AI ve Makine Öğrenimi tüm dünyamızı etkiliyor. Yapay zekayı
+    yeni bir video serisinde keşfetmek, Okyanuslar için Yapay Zeka eğitimini 25'ten
+    fazla dilde vermek, etik ve yapay zeka konularını tartışmak ve daha fazlası için
+    bize katılın...
   hoc2019_header: Bilgisayar Bilimlerini Öğren, Dünyayı değiştir.
   hoc2019_header_line1_mobile: Bilgisayar Bilimlerini Öğren.
   hoc2019_header_line2_mobile: Dünyayı değiştir.
@@ -1706,7 +1707,7 @@ tr:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: İki Köylü Bir Minecraft Masalı
   tutorial_danceparty_shortdescription: Arkadaşlarınızla paylaşmak için bir Dans Partisi
     kodlayın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 kişi daha!
   tutorial_chibitronics_shortdescription: Kendi hikayenizi ışıklandırmak için bir
@@ -5958,11 +5959,11 @@ tr:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Köylüler ve Serseri Köylüler yüzyıllar boyunca
+    aynı alanı paylaştılar ama birbirleriyle nadiren etkileşime geçtiler. Şimdi kodun
+    gücünü kullanarak iki köyü bir araya getirebilirsin. Oyuncular komşuları için
+    empati ve şefkat deneyimi yaşayacak, iş birliği ve kapsayıcılık hakkında bilgi
+    edinecek ve hepimizi birbirimizden benzersiz kılan çeşitliliği kucaklayacaklar.
   tutorial_dance2019_language: Arapça, Çince, Çekçe, Danca, Felemenkçe, İngilizce,
     Fince, Fransızca, Almanca, Yunanca, Hintçe, Macarca, Endonezyaca, İtalyanca, Japonca,
     Korece, Malayca, Lehçe, Portekizce ve 10 daha fazlası!
@@ -6779,7 +6780,8 @@ tr:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: İngilizce
-  tutorial_meeempathy_language: İngilizce
+  tutorial_meeempathy_language: Çince, Danca, Felemenkçe, İngilizce, Fransızca, İtalyanca,
+    Japonca, Korece, Norveççe, Portekizce, İspanyolca, İsveççe, Türkçe
   tutorial_dance2019_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_danceparty_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_chibitronics_string_detail_grades: Okuma öncesi- 5. Sınıf
