@@ -144,29 +144,13 @@ class VisualizerModal extends React.Component {
       }
       switch (operator) {
         case OperatorType.GREATER_THAN:
-          return records.filter(
-            record =>
-              record[column] > parsedValue &&
-              typeof record[column] === typeof parsedValue
-          );
+          return records.filter(record => record[column] > parsedValue);
         case OperatorType.GREATER_THAN_OR_EQUAL:
-          return records.filter(
-            record =>
-              record[column] >= parsedValue &&
-              typeof record[column] === typeof parsedValue
-          );
+          return records.filter(record => record[column] >= parsedValue);
         case OperatorType.LESS_THAN:
-          return records.filter(
-            record =>
-              record[column] < parsedValue &&
-              typeof record[column] === typeof parsedValue
-          );
+          return records.filter(record => record[column] < parsedValue);
         case OperatorType.LESS_THAN_OR_EQUAL:
-          return records.filter(
-            record =>
-              record[column] <= parsedValue &&
-              typeof record[column] === typeof parsedValue
-          );
+          return records.filter(record => record[column] <= parsedValue);
         default:
           return records.filter(record => record[column] === parsedValue);
       }
