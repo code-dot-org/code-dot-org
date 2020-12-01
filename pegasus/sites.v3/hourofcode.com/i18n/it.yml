@@ -44,6 +44,13 @@ it:
     le età e in oltre 45 lingue.
   social_hoc2020_coming_dates: L'Ora del Codice si svolgerà dal 7 al 13 dicembre 2020.
     L'informatica è fondamentale per l'apprendimento di ogni studente.
+  hoc2020_ai_subheader: L'Ora del Codice sta arrivando!
+  hoc2020_ai_header: Esplora l'intelligenza artificiale
+  hoc2020_ai_description: L'intelligenza artificiale e l'apprendimento automatico
+    stanno influenzando il nostro mondo. Unisciti a noi per esplorare l'IA in una
+    nuova serie di video, addestra l'Intelligenza Artificiale per i Mari in oltre
+    25 lingue, partecipa al dibattito sull'etica e l'intelligenza artificiale e altro
+    ancora ...
   hoc2019_header: Impara l'informatica e cambia il mondo.
   hoc2019_header_line1_mobile: Impara l'informatica.
   hoc2019_header_line2_mobile: Cambia il mondo.
@@ -1767,7 +1774,7 @@ it:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Un racconto di due villaggi di Minecraft
   tutorial_danceparty_shortdescription: Crea un progetto in "Ballando col codice"
     da condividere con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith
     Urban, Ciara e altri 25!
@@ -6186,11 +6193,11 @@ it:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Per secoli, Abitanti e Abitori hanno condiviso
+    lo stesso spazio, ma raramente hanno interagito tra loro. Ora puoi utilizzare
+    la potenza del codice per riunire i due villaggi. I giocatori proveranno empatia
+    e compassione per i vicini, impareranno la cooperazione e l'inclusione e accoglieranno
+    la diversità che rende tutti noi unicamente speciali.
   tutorial_dance2019_language: Arabo, Chinese, Ceco, Danese, Olandese, Italiano, Finlandese,
     Francese, Tedesco, Greco, Hindi, Ungherese, Indonesiano, Italiano, Giapponese,
     Coreano, Malese, Polacco, Portoghese, e altri 10!
@@ -7005,7 +7012,8 @@ it:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Italiano
-  tutorial_meeempathy_language: Italiano
+  tutorial_meeempathy_language: Cinese, danese, olandese, inglese, francese, italiano,
+    giapponese, coreano, norvegese, portoghese, spagnolo, svedese, turco
   tutorial_dance2019_string_detail_grades: Da 7 anni in su
   tutorial_danceparty_string_detail_grades: Da 7 anni in su
   tutorial_chibitronics_string_detail_grades: Da pre-scolare a 11 anni
@@ -7014,10 +7022,10 @@ it:
   tutorial_star-wars_string_detail_grades: Da 7 anni in su
   tutorial_gumadventure_string_detail_grades: Da 11 a 13 anni
   tutorial_mchoc_string_detail_grades: Da 7 anni in su
-  tutorial_vidnews_string_detail_grades: Da 11 anni in su
+  tutorial_vidnews_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kodable-pre_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_highseas_string_detail_grades: Da 7 a 13 anni
-  tutorial_capython_string_detail_grades: Da 11 anni in su
+  tutorial_capython_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_frzn_string_detail_grades: Da 7 anni in su
   tutorial_cocom_string_detail_grades: Da 7 anni in su
   tutorial_play-lab_string_detail_grades: Da 7 anni in su
@@ -7027,28 +7035,28 @@ it:
   tutorial_kanopixel_string_detail_grades: Da 7 anni in su
   tutorial_foos_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tynkerdd_string_detail_grades: Da 7 a 13 anni
-  tutorial_tynkerana_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerana_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_vidcard_string_detail_grades: Da 7 anni in su
   tutorial_spritebox_string_detail_grades: Da 7 a 13 anni
-  tutorial_tynkerch_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerch_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_lightbot_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_hoc_string_detail_grades: non-mostrare
   tutorial_code_string_detail_grades: Da 7 anni in su
-  tutorial_tinspire_string_detail_grades: Da 11 anni in su
+  tutorial_tinspire_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_itchbounceball_string_detail_grades: Da 7 a 13 anni
-  tutorial_vidclim_string_detail_grades: Da 11 anni in su
-  tutorial_matlab_string_detail_grades: Da 11 anni in su
+  tutorial_vidclim_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_matlab_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_flap_string_detail_grades: Da 7 anni in su
-  tutorial_galaxy_string_detail_grades: Da 11 anni in su
+  tutorial_galaxy_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_inf_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkersol_string_detail_grades: Da 7 anni in su
-  tutorial_itchg_string_detail_grades: Da 11 anni in su
+  tutorial_itchg_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_como_string_detail_grades: Da 7 anni in su
   tutorial_processfound_string_detail_grades: Dai 14 anni in su
-  tutorial_tynkerhomo_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerhomo_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_art_string_detail_grades: Da 7 anni in su
   tutorial_tynkerbrick_string_detail_grades: Da 7 anni in su
-  tutorial_itchbio_string_detail_grades: Da 11 anni in su
+  tutorial_itchbio_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_itchj_string_detail_grades: Da 11 a 13 anni
   tutorial_tickleo_string_detail_grades: Da 7 anni in su
   tutorial_hopgeo_string_detail_grades: Da 7 a 13 anni
@@ -7059,67 +7067,67 @@ it:
   tutorial_livecode_string_detail_grades: Dai 14 anni in su
   tutorial_cocomgame_string_detail_grades: Da 7 anni in su
   tutorial_tynkerspin_string_detail_grades: Da pre-scolare a 13 anni
-  tutorial_code-avengers_string_detail_grades: Da 11 anni in su
+  tutorial_code-avengers_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynkercq_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_cmgame_string_detail_grades: Da 11 anni in su
+  tutorial_cmgame_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codesters_string_detail_grades: non-mostrare
-  tutorial_qrm_string_detail_grades: Da 11 anni in su
-  tutorial_texas-instruments_string_detail_grades: Da 11 anni in su
-  tutorial_cajava_string_detail_grades: Da 11 anni in su
+  tutorial_qrm_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_texas-instruments_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cajava_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehs_string_detail_grades: Dai 14 anni in su
   tutorial_hopemo_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkercm_string_detail_grades: Da 7 anni in su
   tutorial_codesterswintergreet_string_detail_grades: Da 7 anni in su
-  tutorial_codestersc_string_detail_grades: Da 11 anni in su
+  tutorial_codestersc_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codestersturtle_string_detail_grades: Da 7 anni in su
-  tutorial_penjee_string_detail_grades: Da 11 anni in su
+  tutorial_penjee_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_trinket_string_detail_grades: Da 7 anni in su
-  tutorial_frogger_string_detail_grades: Da 11 anni in su
+  tutorial_frogger_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynkereco_string_detail_grades: Da 7 a 13 anni
   tutorial_mitedarc_string_detail_grades: Da 11 a 13 anni
-  tutorial_khan_string_detail_grades: Da 11 anni in su
-  tutorial_tynkerd_string_detail_grades: Da 11 anni in su
+  tutorial_khan_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_tynkerd_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_cdmy_string_detail_grades: Dai 14 anni in su
-  tutorial_codestersdance_string_detail_grades: Da 11 anni in su
-  tutorial_codestersbasketball_string_detail_grades: Da 11 anni in su
-  tutorial_nclkarel_string_detail_grades: Da 11 anni in su
+  tutorial_codestersdance_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codestersbasketball_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_nclkarel_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_buildpong_string_detail_grades: Da 7 anni in su
   tutorial_tynkerdrones_string_detail_grades: Da 7 anni in su
-  tutorial_carla_string_detail_grades: Da 11 anni in su
-  tutorial_zulama_string_detail_grades: Da 11 anni in su
-  tutorial_capost_string_detail_grades: Da 11 anni in su
+  tutorial_carla_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_zulama_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_capost_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_marco_string_detail_grades: Da 7 a 13 anni
-  tutorial_codestersflappybike_string_detail_grades: Da 11 anni in su
+  tutorial_codestersflappybike_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kanopong_string_detail_grades: Da 11 a 13 anni
   tutorial_tynkerright_string_detail_grades: Da 7 a 13 anni
   tutorial_touchdevelop_string_detail_grades: non-mostrare
-  tutorial_tynkercc_string_detail_grades: Da 11 anni in su
+  tutorial_tynkercc_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bamboo_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_robojav_string_detail_grades: Da 11 anni in su
-  tutorial_roboba_string_detail_grades: Da 11 anni in su
+  tutorial_robojav_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_roboba_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_knodsnake_string_detail_grades: Da 11 a 13 anni
-  tutorial_soccharater_string_detail_grades: Da 11 anni in su
-  tutorial_silent_string_detail_grades: Da 11 anni in su
+  tutorial_soccharater_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_silent_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robomesh_string_detail_grades: Da 7 anni in su
   tutorial_amaze_string_detail_grades: Da 7 anni in su
   tutorial_codestersds_string_detail_grades: Da 7 anni in su
   tutorial_knodtext_string_detail_grades: Da 11 a 13 anni
-  tutorial_alicegar_string_detail_grades: Da 11 anni in su
-  tutorial_codesterstransform_string_detail_grades: Da 11 anni in su
-  tutorial_flexfrog_string_detail_grades: Da 11 anni in su
+  tutorial_alicegar_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codesterstransform_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_flexfrog_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codemoji_string_detail_grades: non-mostrare
-  tutorial_robobii_string_detail_grades: Da 11 anni in su
+  tutorial_robobii_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robobm_string_detail_grades: Da 11 a 13 anni
   tutorial_codingrobots_string_detail_grades: Da 7 anni in su
-  tutorial_robob_string_detail_grades: Da 11 anni in su
+  tutorial_robob_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_coders_string_detail_grades: Dai 14 anni in su
   tutorial_tynkerhw_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkermh_string_detail_grades: Da 7 a 13 anni
-  tutorial_caphoto_string_detail_grades: Da 11 anni in su
+  tutorial_caphoto_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_mozillahw_string_detail_grades: Da 11 a 13 anni
   tutorial_ticklep_string_detail_grades: non-mostrare
   tutorial_bbot_string_detail_grades: Da 7 anni in su
-  tutorial_scratchg_string_detail_grades: Da 11 anni in su
+  tutorial_scratchg_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_roboticfriends_string_detail_grades: Tutte le età
   tutorial_sjforest_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_sjgreet_string_detail_grades: Da pre-scolare a 11 anni
@@ -7127,19 +7135,19 @@ it:
   tutorial_fufafrenz_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_bbcgeo_string_detail_grades: non-mostrare
   tutorial_chspixel_string_detail_grades: Dai 14 anni in su
-  tutorial_hummingbird_string_detail_grades: Da 11 anni in su
-  tutorial_recoloring_string_detail_grades: Da 11 anni in su
+  tutorial_hummingbird_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_recoloring_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bbcchem_string_detail_grades: non-mostrare
   tutorial_floalgo_string_detail_grades: Da 7 anni in su
   tutorial_flocond_string_detail_grades: Da 7 anni in su
   tutorial_floloops_string_detail_grades: Da 7 anni in su
-  tutorial_pgts_string_detail_grades: Da 11 anni in su
+  tutorial_pgts_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozo_string_detail_grades: Tutte le età
   tutorial_bbcla_string_detail_grades: non-mostrare
   tutorial_bbcsci_string_detail_grades: non-mostrare
   tutorial_tlctour_string_detail_grades: Da 7 anni in su
   tutorial_codesterstj_string_detail_grades: Da 7 anni in su
-  tutorial_tlclocked_string_detail_grades: Da 11 anni in su
+  tutorial_tlclocked_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_baubles_string_detail_grades: Da 7 a 13 anni
   tutorial_bbcart_string_detail_grades: non-mostrare
   tutorial_tlcknight_string_detail_grades: Da 7 anni in su
@@ -7161,12 +7169,12 @@ it:
   tutorial_ijournalist_string_detail_grades: Da 7 a 13 anni
   tutorial_bbcmusic_string_detail_grades: non-mostrare
   tutorial_secretcodes_string_detail_grades: Da 11 a 13 anni
-  tutorial_tlchex_string_detail_grades: Da 11 anni in su
+  tutorial_tlchex_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tickles_string_detail_grades: Da 7 anni in su
   tutorial_ozogame_string_detail_grades: Tutte le età
   tutorial_vidcodeio_string_detail_grades: Da 7 anni in su
   tutorial_besttech_string_detail_grades: Dai 14 anni in su
-  tutorial_tlcbrain_string_detail_grades: Da 11 anni in su
+  tutorial_tlcbrain_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_hopquiz_string_detail_grades: Da 11 a 13 anni
   tutorial_unfortunate_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_cha_string_detail_grades: Da 11 a 13 anni
@@ -7176,7 +7184,7 @@ it:
   tutorial_arduino_string_detail_grades: Da 11 a 13 anni
   tutorial_introrobo_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tlcinvis_string_detail_grades: Da 7 anni in su
-  tutorial_tlcjflap_string_detail_grades: Da 11 anni in su
+  tutorial_tlcjflap_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_procolor_string_detail_grades: Da pre-scolare a 13 anni
   tutorial_spiralsfinch_string_detail_grades: Da 7 anni in su
   tutorial_ozoi_string_detail_grades: Tutte le età
@@ -7188,40 +7196,40 @@ it:
   tutorial_mazefinch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tlccc_string_detail_grades: Da 7 a 13 anni
   tutorial_tlcdoodle_string_detail_grades: Da 7 a 13 anni
-  tutorial_tlcpunch_string_detail_grades: Da 11 anni in su
+  tutorial_tlcpunch_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_finchfract_string_detail_grades: Dai 14 anni in su
-  tutorial_tlcmind_string_detail_grades: Da 11 anni in su
+  tutorial_tlcmind_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tlctelebot_string_detail_grades: Da 7 anni in su
-  tutorial_tlcaus_string_detail_grades: Da 11 anni in su
+  tutorial_tlcaus_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_oralhist_string_detail_grades: Dai 14 anni in su
   tutorial_tlcmicro_string_detail_grades: Da 7 anni in su
   tutorial_imathematician_string_detail_grades: Da 7 a 13 anni
-  tutorial_tlcmagic_string_detail_grades: Da 11 anni in su
+  tutorial_tlcmagic_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_scratchmus_string_detail_grades: Da 7 a 13 anni
   tutorial_scratchanim_string_detail_grades: Da 7 a 13 anni
   tutorial_scratchfly_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkerarc_string_detail_grades: Da 7 anni in su
-  tutorial_grokffpython_string_detail_grades: Da 11 anni in su
-  tutorial_grokffblock_string_detail_grades: Da 11 anni in su
-  tutorial_grokeliza_string_detail_grades: Da 11 anni in su
+  tutorial_grokffpython_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_grokffblock_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_grokeliza_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynkercan_string_detail_grades: Da 7 anni in su
-  tutorial_grokflags_string_detail_grades: Da 11 anni in su
+  tutorial_grokflags_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robomind_string_detail_grades: Da 7 a 13 anni
   tutorial_scratchanimwork_string_detail_grades: Da 7 a 13 anni
   tutorial_adventureq_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_khan-es_string_detail_grades: Da 11 anni in su
-  tutorial_kpt_string_detail_grades: Da 11 anni in su
-  tutorial_kpl_string_detail_grades: Da 11 anni in su
-  tutorial_khe_string_detail_grades: Da 11 anni in su
-  tutorial_kfr_string_detail_grades: Da 11 anni in su
-  tutorial_app-inventor_string_detail_grades: Da 11 anni in su
+  tutorial_khan-es_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_kpt_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_kpl_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_khe_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_kfr_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_app-inventor_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bits_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_blockly_string_detail_grades: Da 11 anni in su
+  tutorial_blockly_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynker_string_detail_grades: non-mostrare
   tutorial_baypt_string_detail_grades: Tutte le età
   tutorial_code-combat_string_detail_grades: non-mostrare
   tutorial_mky_string_detail_grades: Da 7 anni in su
-  tutorial_spellcraft_string_detail_grades: Da 11 anni in su
+  tutorial_spellcraft_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_pirates_string_detail_grades: Da 7 a 13 anni
   tutorial_csfirst_string_detail_grades: Da 7 anni in su
   tutorial_loopedy_string_detail_grades: Da pre-scolare a 11 anni
@@ -7233,7 +7241,7 @@ it:
   tutorial_scratch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_bayes_string_detail_grades: Tutte le età
   tutorial_gumball_string_detail_grades: non-mostrare
-  tutorial_hrm_string_detail_grades: Da 11 anni in su
+  tutorial_hrm_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ice-age_string_detail_grades: non-mostrare
   tutorial_koapp_string_detail_grades: non-mostrare
   tutorial_lightbot-intl_string_detail_grades: Da pre-scolare a 13 anni
@@ -7249,7 +7257,7 @@ it:
   tutorial_spherov_string_detail_grades: Da 7 anni in su
   tutorial_swb_string_detail_grades: non-mostrare
   tutorial_build-a-galaxy_string_detail_grades: non-mostrare
-  tutorial_alicesims_string_detail_grades: Da 11 anni in su
+  tutorial_alicesims_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tchr_string_detail_grades: non-mostrare
   tutorial_robogame_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tap_string_detail_grades: Da 7 anni in su
@@ -7268,51 +7276,51 @@ it:
   tutorial_solopython_string_detail_grades: Dai 14 anni in su
   tutorial_kodableint_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_kodableadv_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_tynkertj_string_detail_grades: Da 11 anni in su
-  tutorial_wolframa_string_detail_grades: Da 11 anni in su
-  tutorial_wolframm_string_detail_grades: Da 11 anni in su
-  tutorial_wolframspi_string_detail_grades: Da 11 anni in su
-  tutorial_wolframsph_string_detail_grades: Da 11 anni in su
-  tutorial_wolframp_string_detail_grades: Da 11 anni in su
-  tutorial_wolframn_string_detail_grades: Da 11 anni in su
+  tutorial_tynkertj_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframa_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframm_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframspi_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframsph_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframp_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframn_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_soloweb_string_detail_grades: Dai 14 anni in su
   tutorial_khanweb_string_detail_grades: Da 7 anni in su
-  tutorial_khandata_string_detail_grades: Da 11 anni in su
+  tutorial_khandata_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robomeshiq_string_detail_grades: Da 7 anni in su
   tutorial_googlelogo_string_detail_grades: Da 7 anni in su
-  tutorial_playtune_string_detail_grades: Da 11 anni in su
+  tutorial_playtune_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_computeit_string_detail_grades: Da 7 anni in su
   tutorial_codesterssj_string_detail_grades: Da 7 a 13 anni
-  tutorial_cmchat_string_detail_grades: Da 11 anni in su
+  tutorial_cmchat_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynkerdb_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_cmbuild_string_detail_grades: Da 11 anni in su
+  tutorial_cmbuild_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robotrattle_string_detail_grades: Da 7 a 13 anni
   tutorial_codestersh_string_detail_grades: Da 7 a 13 anni
-  tutorial_codehsdigipixel_string_detail_grades: Da 11 anni in su
-  tutorial_ccbinary_string_detail_grades: Da 11 anni in su
-  tutorial_codehsturtle_string_detail_grades: Da 11 anni in su
-  tutorial_grokhd_string_detail_grades: Da 11 anni in su
-  tutorial_grokem_string_detail_grades: Da 11 anni in su
+  tutorial_codehsdigipixel_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ccbinary_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehsturtle_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_grokhd_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_grokem_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kodmaze_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_codestersa_string_detail_grades: Da 7 a 13 anni
   tutorial_cmdodo_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tynkerspace_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_gfbloons_string_detail_grades: Dai 14 anni in su
   tutorial_raspipong_string_detail_grades: Dai 14 anni in su
-  tutorial_codehsvr_string_detail_grades: Da 11 anni in su
+  tutorial_codehsvr_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codesterstp_string_detail_grades: Da 11 a 13 anni
   tutorial_codestersbb_string_detail_grades: Da 11 a 13 anni
   tutorial_gfcrossyroad_string_detail_grades: Dai 14 anni in su
   tutorial_googleww_string_detail_grades: Dai 14 anni in su
-  tutorial_codehsjsapp_string_detail_grades: Da 11 anni in su
+  tutorial_codehsjsapp_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_gfmihi_string_detail_grades: Dai 14 anni in su
   tutorial_hopdropphone_string_detail_grades: Da 7 a 13 anni
   tutorial_techfaa_string_detail_grades: Università
   tutorial_codehsjsgraph_string_detail_grades: Dai 14 anni in su
-  tutorial_thunkable_string_detail_grades: Da 11 anni in su
+  tutorial_thunkable_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_hopcrossyroad_string_detail_grades: Da 7 a 13 anni
   tutorial_switchglitch_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_codecar_string_detail_grades: Da 11 anni in su
+  tutorial_codecar_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codesterscp_string_detail_grades: Da 11 a 13 anni
   tutorial_grokpetblock_string_detail_grades: Da 11 a 13 anni
   tutorial_techbim_string_detail_grades: Università
@@ -7324,8 +7332,8 @@ it:
   tutorial_myradream_string_detail_grades: Da 7 a 13 anni
   tutorial_thinkfun_string_detail_grades: Da 7 a 13 anni
   tutorial_hopfireworks_string_detail_grades: Da 7 a 13 anni
-  tutorial_grokspace_string_detail_grades: Da 11 anni in su
-  tutorial_codehspython_string_detail_grades: Da 11 anni in su
+  tutorial_grokspace_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehspython_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehsjava_string_detail_grades: Dai 14 anni in su
   tutorial_techioda_string_detail_grades: Università
   tutorial_grokmonster_string_detail_grades: Da pre-scolare a 11 anni
@@ -7333,8 +7341,8 @@ it:
   tutorial_techga_string_detail_grades: Università
   tutorial_techioan_string_detail_grades: Università
   tutorial_techiogsr_string_detail_grades: Università
-  tutorial_groktunnel_string_detail_grades: Da 11 anni in su
-  tutorial_stemcod_string_detail_grades: Da 11 anni in su
+  tutorial_groktunnel_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_stemcod_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_techikb_string_detail_grades: Università
   tutorial_kanostreet_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_nyblebot_string_detail_grades: Da pre-scolare a 11 anni
@@ -7342,32 +7350,32 @@ it:
   tutorial_techapf_string_detail_grades: Università
   tutorial_techfpjs_string_detail_grades: Università
   tutorial_techlinq_string_detail_grades: Università
-  tutorial_gpbcatapult_string_detail_grades: Da 11 anni in su
-  tutorial_quorumastro_string_detail_grades: Da 11 anni in su
+  tutorial_gpbcatapult_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_quorumastro_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_alicewonder_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rginter_string_detail_grades: Da 11 a 13 anni
-  tutorial_cssgrid_string_detail_grades: Da 11 anni in su
+  tutorial_cssgrid_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_jshero_string_detail_grades: Dai 14 anni in su
   tutorial_codemojipy_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_nclabdrone_string_detail_grades: Da 11 anni in su
-  tutorial_gpbcircle_string_detail_grades: Da 11 anni in su
-  tutorial_gpbpaint_string_detail_grades: Da 11 anni in su
-  tutorial_cocomarcade_string_detail_grades: Da 11 anni in su
+  tutorial_nclabdrone_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gpbcircle_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gpbpaint_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cocomarcade_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_techcpp_string_detail_grades: Università
   tutorial_beetik_string_detail_grades: Da 11 a 13 anni
-  tutorial_codedj_string_detail_grades: Da 11 anni in su
-  tutorial_rgadvan_string_detail_grades: Da 11 anni in su
+  tutorial_codedj_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_rgadvan_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehsrn_string_detail_grades: Dai 14 anni in su
-  tutorial_codehswd_string_detail_grades: Da 11 anni in su
+  tutorial_codehswd_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_turtlerobot_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_ozoevo_string_detail_grades: Da 11 anni in su
-  tutorial_ozoexped_string_detail_grades: Da 11 anni in su
+  tutorial_ozoevo_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ozoexped_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozojourney_string_detail_grades: Da 7 a 13 anni
   tutorial_ozocodes_string_detail_grades: Tutte le età
   tutorial_ozoeclipse_string_detail_grades: Da 7 anni in su
-  tutorial_ozosimulator_string_detail_grades: Da 11 anni in su
-  tutorial_ozoalgorithm_string_detail_grades: Da 11 anni in su
-  tutorial_ozotimer_string_detail_grades: Da 11 anni in su
+  tutorial_ozosimulator_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ozoalgorithm_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ozotimer_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozohabits_string_detail_grades: Tutte le età
   tutorial_ozoprogram_string_detail_grades: Da 7 a 13 anni
   tutorial_ozopair_string_detail_grades: Da 7 anni in su
@@ -7390,9 +7398,9 @@ it:
   tutorial_lbvariables_string_detail_grades: Da 7 a 13 anni
   tutorial_lbfunctions_string_detail_grades: Da 7 a 13 anni
   tutorial_lblogic_string_detail_grades: Da 7 anni in su
-  tutorial_lbworld_string_detail_grades: Da 11 anni in su
+  tutorial_lbworld_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_lbloops_string_detail_grades: Da 7 a 13 anni
-  tutorial_lbtug_string_detail_grades: Da 11 anni in su
+  tutorial_lbtug_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_lbpotato_string_detail_grades: Da 7 anni in su
   tutorial_lbguitar_string_detail_grades: Da 7 anni in su
   tutorial_lbio_string_detail_grades: Da 7 a 13 anni
@@ -7401,14 +7409,14 @@ it:
   tutorial_wonzoo_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_wontrip_string_detail_grades: Da 7 a 13 anni
   tutorial_woncollect_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_wonsecret_string_detail_grades: Da 11 anni in su
+  tutorial_wonsecret_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_hsscience_string_detail_grades: Da 7 a 13 anni
-  tutorial_popculture_string_detail_grades: Da 11 anni in su
+  tutorial_popculture_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_legorobust_string_detail_grades: Da 7 anni in su
   tutorial_legoplants_string_detail_grades: Da 7 anni in su
-  tutorial_legopark_string_detail_grades: Da 11 anni in su
-  tutorial_legodetect_string_detail_grades: Da 11 anni in su
-  tutorial_legolight_string_detail_grades: Da 11 anni in su
+  tutorial_legopark_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_legodetect_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_legolight_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_alexa_string_detail_grades: Dai 14 anni in su
   tutorial_grokpetmicro_string_detail_grades: Da 11 a 13 anni
   tutorial_pirateplunder_string_detail_grades: Da 7 a 13 anni
@@ -7417,24 +7425,24 @@ it:
   tutorial_cajump_string_detail_grades: Da 7 a 13 anni
   tutorial_carest_string_detail_grades: Da 7 a 13 anni
   tutorial_accai_string_detail_grades: Da 7 a 13 anni
-  tutorial_vceclipse_string_detail_grades: Da 11 anni in su
-  tutorial_pmzero_string_detail_grades: Da 11 anni in su
+  tutorial_vceclipse_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_pmzero_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_hsela_string_detail_grades: Da 7 a 13 anni
   tutorial_ticklear_string_detail_grades: Da 7 a 13 anni
   tutorial_bcrobot_string_detail_grades: Da 7 a 13 anni
-  tutorial_bcsnow_string_detail_grades: Da 11 anni in su
+  tutorial_bcsnow_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ifly_string_detail_grades: Da 7 anni in su
   tutorial_idowedo_string_detail_grades: Da 7 a 13 anni
-  tutorial_diggindwarf_string_detail_grades: Da 11 anni in su
+  tutorial_diggindwarf_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_rmedr_string_detail_grades: Da 7 a 13 anni
   tutorial_spheroit_string_detail_grades: Da 7 anni in su
   tutorial_gameofcodes_string_detail_grades: Da 7 anni in su
-  tutorial_blocklygames_string_detail_grades: Da 11 anni in su
-  tutorial_spherohello_string_detail_grades: Da 11 anni in su
-  tutorial_spheroarcade_string_detail_grades: Da 11 anni in su
-  tutorial_bcpy1_string_detail_grades: Da 11 anni in su
-  tutorial_bcpy2_string_detail_grades: Da 11 anni in su
-  tutorial_bcjs1_string_detail_grades: Da 11 anni in su
+  tutorial_blocklygames_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_spherohello_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_spheroarcade_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bcpy1_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bcpy2_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bcjs1_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bcjs2_string_detail_grades: Dai 14 anni in su
   tutorial_3dbearmars_string_detail_grades: Da 7 a 13 anni
   tutorial_alexaskill_string_detail_grades: Da 7 a 13 anni
@@ -7443,27 +7451,27 @@ it:
   tutorial_blockscadbirdhouses_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_blockscadclock_string_detail_grades: Dai 14 anni in su
   tutorial_blockscaddinner_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_blockscadicecream_string_detail_grades: Da 11 anni in su
+  tutorial_blockscadicecream_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_blockscadpizza_string_detail_grades: Da 11 a 13 anni
   tutorial_blockscadsugar_string_detail_grades: Da 11 a 13 anni
   tutorial_bsgridlight_string_detail_grades: Da 7 anni in su
-  tutorial_bpartscratch_string_detail_grades: Da 11 anni in su
-  tutorial_bpartvid_string_detail_grades: Da 11 anni in su
+  tutorial_bpartscratch_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bpartvid_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bpenglishscratch_string_detail_grades: Da 7 a 13 anni
   tutorial_bpenglishvid_string_detail_grades: Da 7 a 13 anni
   tutorial_bphealthscratch_string_detail_grades: Da 7 anni in su
-  tutorial_bphealthvid_string_detail_grades: Da 11 anni in su
+  tutorial_bphealthvid_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bpmathscratch_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_bpmathvid_string_detail_grades: Da 11 anni in su
+  tutorial_bpmathvid_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bpmlkscratch_string_detail_grades: Da 7 a 13 anni
   tutorial_bpmlkvid_string_detail_grades: Da 11 a 13 anni
   tutorial_bpsafetyscratch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_bpsafetyvid_string_detail_grades: Da 11 a 13 anni
   tutorial_bpsciencescratch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_bpsciencevid_string_detail_grades: Da 11 a 13 anni
-  tutorial_bptechscratch_string_detail_grades: Da 11 anni in su
-  tutorial_bptechvid_string_detail_grades: Da 11 anni in su
-  tutorial_caflags_string_detail_grades: Da 11 anni in su
+  tutorial_bptechscratch_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bptechvid_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_caflags_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_matariki_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_carestaurant_string_detail_grades: Da 7 anni in su
   tutorial_casea_string_detail_grades: Da pre-scolare a 11 anni
@@ -7471,37 +7479,37 @@ it:
   tutorial_ccwslimer_string_detail_grades: Da 7 a 13 anni
   tutorial_codinggalaxy_string_detail_grades: Da pre-scolare a 13 anni
   tutorial_boatrace_string_detail_grades: Da 7 anni in su
-  tutorial_ccplay_string_detail_grades: Da 11 anni in su
+  tutorial_ccplay_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_grinch_string_detail_grades: Da 7 a 13 anni
   tutorial_codehsart_string_detail_grades: Dai 14 anni in su
   tutorial_codehsbitcoin_string_detail_grades: Dai 14 anni in su
   tutorial_codehsblockchain_string_detail_grades: Dai 14 anni in su
-  tutorial_codehscipher_string_detail_grades: Da 11 anni in su
+  tutorial_codehscipher_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehscollision_string_detail_grades: Dai 14 anni in su
-  tutorial_codehsmath_string_detail_grades: Da 11 anni in su
-  tutorial_codehsmusic_string_detail_grades: Da 11 anni in su
-  tutorial_codehssports_string_detail_grades: Da 11 anni in su
+  tutorial_codehsmath_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehsmusic_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehssports_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codemojipizza_string_detail_grades: Da 7 a 13 anni
-  tutorial_moonlander_string_detail_grades: Da 11 anni in su
+  tutorial_moonlander_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_sushicards_string_detail_grades: Da 7 a 13 anni
   tutorial_codesparkcreate_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_hardvsoft_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_codestersecard_string_detail_grades: Da 11 a 13 anni
-  tutorial_codesterslogo_string_detail_grades: Da 11 anni in su
-  tutorial_codesterstshirt_string_detail_grades: Da 11 anni in su
+  tutorial_codesterslogo_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codesterstshirt_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codewards_string_detail_grades: Da 7 a 13 anni
   tutorial_olympics_string_detail_grades: Da 7 a 13 anni
   tutorial_codinismhero_string_detail_grades: Da 7 anni in su
   tutorial_discovery_string_detail_grades: Da 7 anni in su
   tutorial_csfirstname_string_detail_grades: Da 7 anni in su
   tutorial_obstaclecourse_string_detail_grades: Da 7 anni in su
-  tutorial_edisonmove_string_detail_grades: Da 11 anni in su
-  tutorial_edisonspider_string_detail_grades: Da 11 anni in su
+  tutorial_edisonmove_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_edisonspider_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_edisonspotlight_string_detail_grades: Da 7 a 13 anni
-  tutorial_firiapython_string_detail_grades: Da 11 anni in su
-  tutorial_gamefrootsquid_string_detail_grades: Da 11 anni in su
-  tutorial_duckpiano_string_detail_grades: Da 11 anni in su
-  tutorial_gpsound_string_detail_grades: Da 11 anni in su
+  tutorial_firiapython_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gamefrootsquid_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_duckpiano_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gpsound_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_groklearningpython_string_detail_grades: Dai 14 anni in su
   tutorial_htmltimetravel_string_detail_grades: Dai 14 anni in su
   tutorial_hp_flappy_string_detail_grades: Dai 14 anni in su
@@ -7511,32 +7519,32 @@ it:
   tutorial_imake_string_detail_grades: Da pre-scolare a 6 anni
   tutorial_imorse_string_detail_grades: Da 7 a 13 anni
   tutorial_kanohp_string_detail_grades: Da 7 a 13 anni
-  tutorial_khanwebpages_string_detail_grades: Da 11 anni in su
+  tutorial_khanwebpages_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kibobowl_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_kibodance_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_buildcharacters_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_designgames_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_makelevels_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_wizard_string_detail_grades: Da 11 anni in su
+  tutorial_wizard_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_mbscratchcards_string_detail_grades: Da 7 anni in su
   tutorial_mbswiftplaygrounds_string_detail_grades: Da 7 anni in su
-  tutorial_mbbuttons_string_detail_grades: Da 11 anni in su
-  tutorial_meteor_string_detail_grades: Da 11 anni in su
-  tutorial_ballbounce_string_detail_grades: Da 11 anni in su
-  tutorial_mitcodi_string_detail_grades: Da 11 anni in su
-  tutorial_mitdoodle_string_detail_grades: Da 11 anni in su
-  tutorial_talktome_string_detail_grades: Da 11 anni in su
-  tutorial_mobilecspmap_string_detail_grades: Da 11 anni in su
+  tutorial_mbbuttons_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_meteor_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ballbounce_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_mitcodi_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_mitdoodle_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_talktome_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_mobilecspmap_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozorandom_string_detail_grades: Da 7 anni in su
   tutorial_ozotroll_string_detail_grades: Da 11 a 13 anni
   tutorial_peblioart_string_detail_grades: Dai 14 anni in su
-  tutorial_astropi_string_detail_grades: Da 11 anni in su
+  tutorial_astropi_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_rgart_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rgengineer_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rgmath_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rgscience_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rgtech_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_robotmagic3d_string_detail_grades: Da 11 anni in su
+  tutorial_robotmagic3d_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robotmagicflappy_string_detail_grades: Dai 14 anni in su
   tutorial_scratchadventure_string_detail_grades: Da 7 anni in su
   tutorial_scratchtalk_string_detail_grades: Da 7 anni in su
@@ -7544,14 +7552,14 @@ it:
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-scolare
   tutorial_spherocomm_string_detail_grades: Da 7 a 13 anni
   tutorial_spherocommunity_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_spherofunctions_string_detail_grades: Da 11 anni in su
+  tutorial_spherofunctions_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_spheroinfrared_string_detail_grades: Da 11 a 13 anni
   tutorial_spherolightsensor_string_detail_grades: Da 7 a 13 anni
   tutorial_spheromansion_string_detail_grades: Da 7 a 13 anni
   tutorial_roadblocks_string_detail_grades: Da 7 a 13 anni
-  tutorial_spherotext2_string_detail_grades: Da 11 anni in su
-  tutorial_spherotext3_string_detail_grades: Da 11 anni in su
-  tutorial_spherotext4_string_detail_grades: Da 11 anni in su
+  tutorial_spherotext2_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_spherotext3_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_spherotext4_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_spheroraptor_string_detail_grades: Da 7 a 13 anni
   tutorial_stempiday_string_detail_grades: Dai 14 anni in su
   tutorial_stemplanetoids_string_detail_grades: Dai 14 anni in su
@@ -7559,106 +7567,106 @@ it:
   tutorial_algobot_string_detail_grades: Da 7 a 13 anni
   tutorial_thunkableapps_string_detail_grades: Dai 14 anni in su
   tutorial_toxicodedot_string_detail_grades: Da 7 a 13 anni
-  tutorial_gcactions_string_detail_grades: Da 11 anni in su
-  tutorial_gccomparators_string_detail_grades: Da 11 anni in su
-  tutorial_gcconditions_string_detail_grades: Da 11 anni in su
-  tutorial_gccreate_string_detail_grades: Da 11 anni in su
-  tutorial_gcevents_string_detail_grades: Da 11 anni in su
-  tutorial_gcloops_string_detail_grades: Da 11 anni in su
-  tutorial_gcvariables_string_detail_grades: Da 11 anni in su
+  tutorial_gcactions_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gccomparators_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gcconditions_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gccreate_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gcevents_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gcloops_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gcvariables_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_beanything_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_change_string_detail_grades: Da 7 a 13 anni
   tutorial_cooking_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_crystal_string_detail_grades: Da 7 anni in su
-  tutorial_landscape_string_detail_grades: Da 11 anni in su
+  tutorial_landscape_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_pets_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_petvet_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_superhero_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodeplastic_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodetypeface_string_detail_grades: Da 11 anni in su
+  tutorial_superhero_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodeplastic_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodetypeface_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_washustorm_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_activitypackets_string_detail_grades: Da pre-scolare a 13 anni
-  tutorial_googlerookie_string_detail_grades: Da 11 anni in su
+  tutorial_googlerookie_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tommyturtle_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_mazyad_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_gamemaker_string_detail_grades: Da 7 anni in su
   tutorial_duckrace_string_detail_grades: Da 7 anni in su
-  tutorial_allcancodeapps_string_detail_grades: Da 11 anni in su
+  tutorial_allcancodeapps_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_n2y_string_detail_grades: Pre-scolare
   tutorial_microsoftarcade_string_detail_grades: Da 7 anni in su
   tutorial_csfirstunplugged_string_detail_grades: Da 7 a 13 anni
-  tutorial_toxicodepython_string_detail_grades: Da 11 anni in su
-  tutorial_codecombatozaria_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodedate_string_detail_grades: Da 11 anni in su
+  tutorial_toxicodepython_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codecombatozaria_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodedate_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codemonkeyspace_string_detail_grades: Da 7 a 13 anni
   tutorial_codespeakhappy_string_detail_grades: Da 7 a 13 anni
-  tutorial_grokimage_string_detail_grades: Da 11 anni in su
+  tutorial_grokimage_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_icomputelearn_string_detail_grades: Da pre-scolare a 13 anni
   tutorial_rpstress_string_detail_grades: Da 7 anni in su
   tutorial_bsdcause_string_detail_grades: Dai 14 anni in su
   tutorial_vidcodeanimoji_string_detail_grades: Da 7 anni in su
   tutorial_vidcodeanimojies_string_detail_grades: Da 7 anni in su
-  tutorial_bsdinspire_string_detail_grades: Da 11 anni in su
-  tutorial_tttractor_string_detail_grades: Da 11 anni in su
+  tutorial_bsdinspire_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_tttractor_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codeillusionmickey_string_detail_grades: Da 7 a 13 anni
   tutorial_scigirlsquest_string_detail_grades: Da 7 a 13 anni
   tutorial_codespeakbreathe_string_detail_grades: Da 7 anni in su
-  tutorial_vidcodeface_string_detail_grades: Da 11 anni in su
-  tutorial_educodemaze_string_detail_grades: Da 11 anni in su
-  tutorial_educoderace_string_detail_grades: Da 11 anni in su
+  tutorial_vidcodeface_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_educodemaze_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_educoderace_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codespeakchatbot_string_detail_grades: Da 7 a 13 anni
-  tutorial_gamefrootgames_string_detail_grades: Da 11 anni in su
+  tutorial_gamefrootgames_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codespeakgrandparent_string_detail_grades: Da 7 a 13 anni
-  tutorial_educodekingdom_string_detail_grades: Da 11 anni in su
+  tutorial_educodekingdom_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehsdata_string_detail_grades: Dai 14 anni in su
-  tutorial_educodecake_string_detail_grades: Da 11 anni in su
-  tutorial_ttsecond_string_detail_grades: Da 11 anni in su
-  tutorial_bsdtrivia_string_detail_grades: Da 11 anni in su
+  tutorial_educodecake_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ttsecond_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bsdtrivia_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_csfirstdialogue_string_detail_grades: Da 7 a 13 anni
   tutorial_codemonkeybeaver_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_codestersdistance_string_detail_grades: Da 11 anni in su
-  tutorial_itchspace_string_detail_grades: Da 11 anni in su
+  tutorial_codestersdistance_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_itchspace_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_vidcodemagic_string_detail_grades: Da 7 anni in su
   tutorial_vidcodemagices_string_detail_grades: Da 7 anni in su
-  tutorial_codespeakmeal_string_detail_grades: Da 11 anni in su
+  tutorial_codespeakmeal_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_itchfish_string_detail_grades: Da 7 a 13 anni
-  tutorial_bsdwebsite_string_detail_grades: Da 11 anni in su
+  tutorial_bsdwebsite_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codespeaktime_string_detail_grades: Da 7 a 13 anni
-  tutorial_itchwebcam_string_detail_grades: Da 11 anni in su
+  tutorial_itchwebcam_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_itchball_string_detail_grades: Da 7 a 13 anni
   tutorial_ttrace_string_detail_grades: Da 11 a 13 anni
   tutorial_plethora_string_detail_grades: Da 7 anni in su
-  tutorial_educodesecret_string_detail_grades: Da 11 anni in su
-  tutorial_itchshapes_string_detail_grades: Da 11 anni in su
+  tutorial_educodesecret_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_itchshapes_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codeguppytext_string_detail_grades: Da 11 a 13 anni
-  tutorial_vidcodeplastiche_string_detail_grades: Da 11 anni in su
+  tutorial_vidcodeplastiche_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_educativechatbot_string_detail_grades: Dai 14 anni in su
-  tutorial_educodebasics_string_detail_grades: Da 11 anni in su
-  tutorial_codehsdesign_string_detail_grades: Da 11 anni in su
-  tutorial_htmlacademyphp_string_detail_grades: Da 11 anni in su
+  tutorial_educodebasics_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehsdesign_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_htmlacademyphp_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_gamefrootdistance_string_detail_grades: Da 7 anni in su
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Da 11 a 13 anni
-  tutorial_cuttle_string_detail_grades: Da 11 anni in su
+  tutorial_cuttle_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bsdjokes_string_detail_grades: Da 11 a 13 anni
-  tutorial_rptree_string_detail_grades: Da 11 anni in su
-  tutorial_codestersunity_string_detail_grades: Da 11 anni in su
-  tutorial_codesterssoccer_string_detail_grades: Da 11 anni in su
+  tutorial_rptree_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codestersunity_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codesterssoccer_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_breakoutlock_string_detail_grades: Da 7 a 13 anni
-  tutorial_thunkablemask_string_detail_grades: Da 11 anni in su
+  tutorial_thunkablemask_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_cafarming_string_detail_grades: Da 7 a 13 anni
   tutorial_blocksmithyeti_string_detail_grades: Dai 14 anni in su
-  tutorial_codecapture_string_detail_grades: Da 11 anni in su
+  tutorial_codecapture_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehslitter_string_detail_grades: Da 11 a 13 anni
   tutorial_bsdocean_string_detail_grades: Da 11 a 13 anni
-  tutorial_itchplatformer_string_detail_grades: Da 11 anni in su
-  tutorial_codejika_string_detail_grades: Da 11 anni in su
+  tutorial_itchplatformer_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codejika_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_gamefrootclicker_string_detail_grades: Da 11 a 13 anni
   tutorial_rmagicequity_string_detail_grades: Da 11 a 13 anni
   tutorial_ttfreestyle_string_detail_grades: Da 11 a 13 anni
   tutorial_ozobotcolor2_string_detail_grades: Da 7 anni in su
   tutorial_ozobotcolor3_string_detail_grades: Da 7 anni in su
-  tutorial_clcarbon_string_detail_grades: Da 11 anni in su
+  tutorial_clcarbon_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kodablebasics_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_scigirlscc_string_detail_grades: Da 7 anni in su
   tutorial_irobotpicture_string_detail_grades: Da 7 a 13 anni
@@ -7670,15 +7678,15 @@ it:
   tutorial_kcjheroines_string_detail_grades: Da 7 a 13 anni
   tutorial_ozobotvalue_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_icodebytes_string_detail_grades: Pre-scolare
-  tutorial_clfashion2_string_detail_grades: Da 11 anni in su
-  tutorial_ai4all_string_detail_grades: Da 11 anni in su
-  tutorial_cldata_string_detail_grades: Da 11 anni in su
+  tutorial_clfashion2_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ai4all_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cldata_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_spheroinputs_string_detail_grades: Da 7 a 13 anni
   tutorial_edisoncount_string_detail_grades: Da 7 a 13 anni
   tutorial_spheroloops_string_detail_grades: Da 7 a 13 anni
   tutorial_kiboprogram_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_hellorubycsin60_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_clfashion1_string_detail_grades: Da 11 anni in su
+  tutorial_clfashion1_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_irobottraffic_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_edisonmystery_string_detail_grades: Da 11 a 13 anni
   tutorial_microbitseaturtles_string_detail_grades: Da 11 a 13 anni
@@ -7686,17 +7694,17 @@ it:
   tutorial_imagilabs_string_detail_grades: Da 7 a 13 anni
   tutorial_irobotsimulator_string_detail_grades: Da 7 a 13 anni
   tutorial_irobotkind_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_firiavirtual_string_detail_grades: Da 11 anni in su
+  tutorial_firiavirtual_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_irobotguesscode_string_detail_grades: Da 7 a 13 anni
   tutorial_ozobotnouns_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_nasa3d_string_detail_grades: Da 11 anni in su
-  tutorial_blupants_string_detail_grades: Da 11 anni in su
+  tutorial_nasa3d_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_blupants_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_legodance_string_detail_grades: Da 11 a 13 anni
   tutorial_nearpodcoding_string_detail_grades: Dai 14 anni in su
   tutorial_kcjplastic_string_detail_grades: Da 7 anni in su
   tutorial_legojourney_string_detail_grades: Da 7 a 13 anni
   tutorial_legohopper_string_detail_grades: Da 7 a 13 anni
-  tutorial_catrobatembroidery_string_detail_grades: Da 11 anni in su
+  tutorial_catrobatembroidery_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_irobotphone_string_detail_grades: Da 7 a 13 anni
   tutorial_codeguppydraw_string_detail_grades: Da 11 a 13 anni
   tutorial_codejumper_string_detail_grades: Da 7 a 13 anni
@@ -10634,42 +10642,42 @@ it:
   tutorial_kuborobo_language: Solo in inglese
   tutorial_ai-oceans_language: Italiano
   tutorial_scratchimagine_string_detail_grades: Da 7 anni in su
-  tutorial_codesterspsa_string_detail_grades: Da 11 anni in su
+  tutorial_codesterspsa_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_googlehero_string_detail_grades: Da 7 a 13 anni
-  tutorial_codestersbball_string_detail_grades: Da 11 anni in su
+  tutorial_codestersbball_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_scratchcartoon_string_detail_grades: Da 7 anni in su
   tutorial_codemonkeyjr_string_detail_grades: Pre-scolare
   tutorial_bananatales_string_detail_grades: Da 7 a 13 anni
   tutorial_scratchtales_string_detail_grades: Da 7 a 13 anni
-  tutorial_msemoji_string_detail_grades: Da 11 anni in su
-  tutorial_cacolor_string_detail_grades: Da 11 anni in su
+  tutorial_msemoji_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cacolor_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kodablebeach_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tynkeren_string_detail_grades: Da 7 a 13 anni
-  tutorial_tynkerjavapro_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerjavapro_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_grasshopperhack_string_detail_grades: Dai 14 anni in su
   tutorial_pbskids_string_detail_grades: Da pre-scolare a 5° primaria
   tutorial_nclabdata_string_detail_grades: Dai 14 anni in su
   tutorial_grasshopperphoto_string_detail_grades: Dai 14 anni in su
-  tutorial_tynkerpyland_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerpyland_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codeitimages_string_detail_grades: Da 7 anni in su
   tutorial_hyperpadenemy_string_detail_grades: Dai 14 anni in su
   tutorial_tynkerpro_string_detail_grades: Da 7 a 13 anni
-  tutorial_trashtag_string_detail_grades: Da 11 anni in su
+  tutorial_trashtag_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_casiege_string_detail_grades: Da 7 a 13 anni
-  tutorial_thunkableyeet_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodedeal_string_detail_grades: Da 11 anni in su
+  tutorial_thunkableyeet_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodedeal_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehsgeno_string_detail_grades: Dai 14 anni in su
   tutorial_hyperpadpong_string_detail_grades: Dai 14 anni in su
   tutorial_tynkerland_string_detail_grades: Da 7 a 13 anni
-  tutorial_trinketgirl_string_detail_grades: Da 11 anni in su
+  tutorial_trinketgirl_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_rpimosquito_string_detail_grades: Da 11 a 13 anni
-  tutorial_tynkermars_string_detail_grades: Da 11 anni in su
-  tutorial_cityx_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodemap_string_detail_grades: Da 11 anni in su
+  tutorial_tynkermars_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cityx_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodemap_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robotmagicfarm_string_detail_grades: Da 7 a 13 anni
-  tutorial_codehstriangle_string_detail_grades: Da 11 anni in su
+  tutorial_codehstriangle_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ttwhitehouse_string_detail_grades: Da 7 anni in su
-  tutorial_modulo_string_detail_grades: Da 11 anni in su
+  tutorial_modulo_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codingtown_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_kanoart_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_dragonscript_string_detail_grades: Dai 14 anni in su
@@ -10677,34 +10685,34 @@ it:
   tutorial_htmlmuffin_string_detail_grades: Da 11 a 13 anni
   tutorial_microsoftpizza_string_detail_grades: Da 11 a 13 anni
   tutorial_stemc_blckhole_string_detail_grades: Dai 14 anni in su
-  tutorial_careconfigure_string_detail_grades: Da 11 anni in su
+  tutorial_careconfigure_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_rpiscratch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_ozaria_string_detail_grades: Da 7 anni in su
-  tutorial_ttovum_string_detail_grades: Da 11 anni in su
+  tutorial_ttovum_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ttpassage_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkerhtmlen_string_detail_grades: Da 7 anni in su
   tutorial_ttfrog_string_detail_grades: Da 7 a 13 anni
   tutorial_codemojijava_string_detail_grades: Da 11 a 13 anni
-  tutorial_ccfirewall_string_detail_grades: Da 11 anni in su
+  tutorial_ccfirewall_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_htmljs_string_detail_grades: Da 11 a 13 anni
   tutorial_ttaqueducts_string_detail_grades: Da 11 a 13 anni
-  tutorial_vtgame_string_detail_grades: Da 11 anni in su
-  tutorial_baroborav_string_detail_grades: Da 11 anni in su
+  tutorial_vtgame_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_baroborav_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_baroboobstacle_string_detail_grades: Da 7 anni in su
-  tutorial_pbstorytelling_string_detail_grades: Da 11 anni in su
+  tutorial_pbstorytelling_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kibosnow_string_detail_grades: Da pre-scolare a 5° primaria
   tutorial_kibohappy_string_detail_grades: Da pre-scolare a 5° primaria
   tutorial_rubylove_string_detail_grades: Da pre-scolare a terza media
   tutorial_spherosmiles_string_detail_grades: Da 7 anni in su
   tutorial_spherobaby_string_detail_grades: Da pre-scolare a 13 anni
-  tutorial_toxarchitect_string_detail_grades: Da 11 anni in su
+  tutorial_toxarchitect_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_idodge_string_detail_grades: Da 7 a 13 anni
-  tutorial_firiacodebot_string_detail_grades: Da 11 anni in su
+  tutorial_firiacodebot_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_modlighthouse_string_detail_grades: Pre-scolare
   tutorial_spherogreen_string_detail_grades: Da 7 a 13 anni
   tutorial_ozopopstar_string_detail_grades: Da 7 a 13 anni
-  tutorial_eddesign_string_detail_grades: Da 11 anni in su
-  tutorial_edshapeup_string_detail_grades: Da 11 anni in su
+  tutorial_eddesign_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_edshapeup_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozocolor_string_detail_grades: Da 7 a 13 anni
   tutorial_kcjanimals_string_detail_grades: Da 7 a 13 anni
   tutorial_icomputeeggs_string_detail_grades: Da 7 a 13 anni
@@ -10713,21 +10721,21 @@ it:
   tutorial_peblioportraits_string_detail_grades: Dai 14 anni in su
   tutorial_rootcodebreak_string_detail_grades: Da 7 a 13 anni
   tutorial_microbit14_string_detail_grades: Da 7 a 13 anni
-  tutorial_barobomoon_string_detail_grades: Da 11 anni in su
+  tutorial_barobomoon_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_eddog_string_detail_grades: Da II primaria a prima media
   tutorial_microbit15_string_detail_grades: Da 7 a 13 anni
   tutorial_unity_string_detail_grades: Dai 14 anni in su
-  tutorial_blockscadtarget_string_detail_grades: Da 11 anni in su
+  tutorial_blockscadtarget_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tcadicicles_string_detail_grades: Da 11 a 13 anni
-  tutorial_blockscadscale_string_detail_grades: Da 11 anni in su
+  tutorial_blockscadscale_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tcadloops_string_detail_grades: Da 11 a 13 anni
   tutorial_phidgets_string_detail_grades: Dai 14 anni in su
   tutorial_kcjmerry_string_detail_grades: Da 7 a 13 anni
-  tutorial_modvariables_string_detail_grades: Da 11 anni in su
+  tutorial_modvariables_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codestersmicro_string_detail_grades: Da 11 a 13 anni
   tutorial_codestersdata_string_detail_grades: Da 11 a 13 anni
   tutorial_ikodexmas_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_rpisensehat_string_detail_grades: Da 11 anni in su
+  tutorial_rpisensehat_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_modtraits_string_detail_grades: Da 7 anni in su
   tutorial_mee_string_detail_grades: Da 7 anni in su
   tutorial_kuborobo_string_detail_grades: Da pre-scolare a terza media

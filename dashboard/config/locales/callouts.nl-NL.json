@@ -12,7 +12,7 @@
           "4-5_Artist_Patterns_Free_Play_1": "Al je favoriete blokken zijn nu ingedeeld in verschillende categorieën. Klik op deze woorden om te zien waar alles is ingedeeld!"
         },
         "4-5 Bee Conditionals 2": {
-          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet voor honingraten te checken."
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
         },
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "Werd het scherm groen? Als dat zo is, klik op 'Afsluiten'. Anders, klik op 'Herstellen', verander je code en klik opnieuw op 'Start'."
@@ -428,31 +428,33 @@
           "courseB_maze_seq3_1": "De grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_collector_prog7": {
-          "courseC_collector_prog7_1": "Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!"
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
         "courseC_collector_prog7_2018": {
-          "courseC_collector_prog7_1": "Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!"
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
         "courseC_collector_prog7_2019": {
-          "courseC_collector_prog7_1": "Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!"
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
         "courseC_collector_prog7_2020": {
-          "courseC_collector_prog7_1": "Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!"
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
         "courseD_bee_conditionals2": {
-          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet voor honingraten te checken."
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan.",
+          "4_5_Bee_Conditionals_2_2": "Hulp nodig? Klik hier om een VIDEO hint te bekijken."
         },
         "courseD_bee_conditionals2_2018": {
-          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet voor honingraten te checken."
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
         },
         "courseD_bee_conditionals2_2019": {
-          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet voor honingraten te checken."
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
         },
         "courseD_bee_conditionals2_2020": {
-          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet voor honingraten te checken."
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
         },
         "courseD_bee_conditionals2_copy": {
-          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet voor honingraten te checken."
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan.",
+          "4_5_Bee_Conditionals_2_2": "Hulp nodig? Klik hier om een VIDEO hint te bekijken."
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "Gebruik de \"maak en cirkel\" blok en wijzig de grootte."
@@ -628,6 +630,113 @@
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11_1": "Je kunt dit getal veranderen.",
+          "courseD_artist_ramp11_2": "Klik hier om het aantal keren in te tikken dat je je code wilt herhalen."
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "Gebruik dit blok om een enkele schat op te rapen."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Je kunt dit getal veranderen.",
+          "courseE_artist_ramp8_2": "Klik hier om het aantal keren in te tikken dat je je code wilt herhalen."
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_1": "Je kunt dit getal veranderen.",
+          "courseE_artist_ramp8_2": "Klik hier om het aantal keren in te tikken dat je je code wilt herhalen."
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "Je kunt dit getal veranderen.",
+          "courseE_artist_ramp8_2": "Klik hier om het aantal keren in te tikken dat je je code wilt herhalen."
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "Je hoeft geen kleuren te gebruiken om deze puzzle op te lossen. Wil je wel kleuren gebruiken, dan kan dit `willekeurige kleur`-blok je helpen."
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "Je hoeft geen kleuren te gebruiken om deze puzzle op te lossen. Wil je wel kleuren gebruiken, dan kan dit `willekeurige kleur`-blok je helpen."
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "Je hoeft geen kleuren te gebruiken om deze puzzle op te lossen. Wil je wel kleuren gebruiken, dan kan dit `willekeurige kleur`-blok je helpen."
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "Je hoeft geen kleuren te gebruiken om deze puzzle op te lossen. Wil je wel kleuren gebruiken, dan kan dit `willekeurige kleur`-blok je helpen."
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
+        },
+        "courseD_playLab_condFP": {
+          "courseD_playLab_condFP_1": "We hebben de blokken in categorieën verdeeld, zodat we je meer instructies kunnen geven om mee te spelen.  Klik hier om te zien waar alle blokken gebleven zijn."
+        },
+        "courseD_playLab_condFP_2018": {
+          "courseD_playLab_condFP_1": "We hebben de blokken in categorieën verdeeld, zodat we je meer instructies kunnen geven om mee te spelen.  Klik hier om te zien waar alle blokken gebleven zijn."
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
+          "courseC_maze_programming7_2": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
+          "courseC_maze_programming7_2": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
+          "courseC_maze_programming7_2": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
+          "courseC_maze_programming7_2": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen."
+        },
+        "courseA_collector_loops1": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops2": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops3": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseB_collector_loops1": {
+          "courseB_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
         }
       }
     }
