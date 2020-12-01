@@ -13,7 +13,7 @@
 #  index_regional_partners_school_districts_on_school_district_id  (school_district_id)
 #
 
-class RegionalPartnersSchoolDistrict < ActiveRecord::Base
+class RegionalPartnersSchoolDistrict < ApplicationRecord
   belongs_to :regional_partner
   belongs_to :school_district
 

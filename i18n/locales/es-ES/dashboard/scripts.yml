@@ -15090,3 +15090,11 @@ es:
               name: Curso B
             CS Discoveries:
               name: Descubrimientos de Ciencias de la Computación
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Inteligencia Artificial para océanos
+            intro:
+              name: Introducción
+            visualizing:
+              name: Visualización de datos

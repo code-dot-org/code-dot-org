@@ -519,7 +519,7 @@ class LessonsControllerTest < ActionController::TestCase
       assessment: true
     )
 
-    existing_summary = existing_script_level.summarize_for_edit
+    existing_summary = existing_script_level.summarize_for_lesson_edit
     assert_equal 1, existing_summary[:activitySectionPosition]
     assert_equal existing_survey.id, existing_summary[:activeId]
     existing_summary[:assessment] = false
@@ -615,7 +615,7 @@ class LessonsControllerTest < ActionController::TestCase
     #     sl 2
     # activity 2
     #   section 2
-    activities_data = @lesson.lesson_activities.map(&:summarize_for_edit)
+    activities_data = @lesson.lesson_activities.map(&:summarize_for_lesson_edit)
     assert_equal 2, activities_data.count
     script_level_data = activities_data.last[:activitySections].first[:scriptLevels].pop
     script_level_data[:activitySectionPosition] = 2
@@ -670,7 +670,7 @@ class LessonsControllerTest < ActionController::TestCase
     #   section 2
     #     sl 2
     #     sl 1
-    activities_data = @lesson.lesson_activities.map(&:summarize_for_edit)
+    activities_data = @lesson.lesson_activities.map(&:summarize_for_lesson_edit)
     assert_equal 2, activities_data.count
     script_level_data = activities_data.first[:activitySections].first[:scriptLevels].pop
     script_level_data[:activitySectionPosition] = 2
@@ -712,7 +712,7 @@ class LessonsControllerTest < ActionController::TestCase
     end
     sl_ids = section.script_levels.map(&:id)
 
-    script_levels_data = section.script_levels.map(&:summarize_for_edit)
+    script_levels_data = section.script_levels.map(&:summarize_for_lesson_edit)
     assert_equal 3, script_levels_data.count
 
     @update_params['activities'] = [

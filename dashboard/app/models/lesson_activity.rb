@@ -25,7 +25,7 @@ class LessonActivity < ApplicationRecord
   include SerializedProperties
 
   belongs_to :lesson
-  has_many :activity_sections, dependent: :destroy
+  has_many :activity_sections, -> {order(:position)}, dependent: :destroy
 
   serialized_attrs %w(
     name
@@ -47,9 +47,9 @@ class LessonActivity < ApplicationRecord
     summary
   end
 
-  def summarize_for_edit
+  def summarize_for_lesson_edit
     summary = summarize
-    summary[:activitySections] = activity_sections.map(&:summarize_for_edit)
+    summary[:activitySections] = activity_sections.map(&:summarize_for_lesson_edit)
     summary
   end
 

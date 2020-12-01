@@ -1477,5 +1477,7 @@
   hoc2018_dance_measure_colon: 'Крок:'
   page_not_found_title: "Сторінка не знайдена"
   page_not_found_header: '404: Сторінка не знайдена'
+  hoc2018_mc_thank_microsoft: "Ми дякуємо Microsoft за підтримку нашого бачення та місії щодо забезпечення кожної дитини можливістю вивчати інформатику та навички, необхідні для досягнення успіху в 21 столітті."
   hoc2019_mc_more_coding_resources: "Більше Coding ресурсів"
   hoc2019_dance_previous_versions: "Шукаєте попередню версію Dance Party?\nНатисніть тут, щоб почати [Частина 1](%{dance_2018_link}) та [Частина 2](%{dance_extras_2018_link}) з останнього року."
+  footer_powered_by_aws: "На потужностях Amazon Web Services"

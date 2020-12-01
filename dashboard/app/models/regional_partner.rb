@@ -22,7 +22,7 @@
 
 require 'state_abbr'
 
-class RegionalPartner < ActiveRecord::Base
+class RegionalPartner < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   has_many :regional_partner_program_managers
