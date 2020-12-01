@@ -3,7 +3,7 @@ title: How-to -opas huoltajille
 ---
 
 # How to do an Hour of Code with your child
-Hour of Coden pelaaminen on yksinkertainen ja hauska tapa esitellä lapsesi tietokonetieteeseen, vaikka ensimmäistä kertaa. Tietokonetieteen perusteita ei käytetä vain kaikilla aloilla, mutta <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">viimeaikaiset tutkimukset osoittavat, että</a> lapset, jotka opiskelevat tietokonetekniikkaa suoriutuvat paljon paremmin muissa oppiaineissa, ongelmanratkaisussa ja <font color="00adbc">todennäköisyys yliopistoon hakemisessa kasvaa</font>.
+Hour of Coden pelaaminen on yksinkertainen ja hauska tapa esitellä lapsesi tietokonetieteeseen, vaikka ensimmäistä kertaa. Tietokonetieteen perusteita ei käytetä vain kaikilla työaloilla, mutta <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">viimeaikaiset tutkimukset osoittavat, että</a> lapset, jotka opiskelevat tietokonetekniikkaa suoriutuvat paljon paremmin muissa oppiaineissa, ongelmanratkaisussa ja <font color="00adbc">todennäköisyys yliopistoon hakemisessa kasvaa</font>.
 
 Voit liittyä kymmeniin miljooniin opiskelijoihin ympäri maailmaa tämän maailmanlaajuisen tapahtuman avulla. Voimme yhdessä rohkaista lapsia ja nuoria oppimaan uutta, rikkomaan stereotypioita ja auttaa heitä löytämään uusia kiinnostuksen kohteita. Ja mikä parasta, sinulla on jo käsissäsi kaikki mitä tarvitset tuodaksesi Hour of Code -kampanjan kotiin!
 
@@ -20,7 +20,7 @@ Voit käyttää Hour of Codea tietokoneella, tabletilla, älyphelimella tai täy
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-Voit käyttää lukemattomia <a href="https://hourofcode.com/us/learn"> Hour of Code -toimintoja</a>, työskennellessäsi nettiyhteyden omaavalla tietokoneella. Kehotamme sinua tutustumaan joihinkin vaihtoehtoihisi etukäteen, jotka auttavat tehtävien ohjaamisessa.
+Voit käyttää lukemattomia <a href="https://hourofcode.com/us/learn"> Hour of Code -toimintoja</a>, työskennellessäsi tietokoneella, jossa on nettiyhteys. Kehotamme sinua tutustumaan joihinkin tehtävien ohjaamiseen auttaviin vaihtoehtoihin jo etukäteen.
 
 Integroimme ongelmanratkaisua ja kriittistä ajattelua hauskanpidon ja luovuuden avulla, mutta tässä on joitain opiskelijoiden suosikkeja:
 

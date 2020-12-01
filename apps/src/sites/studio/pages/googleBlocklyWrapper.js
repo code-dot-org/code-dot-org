@@ -3,6 +3,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
 import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
 import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
+import {CdoFieldImageDropdown} from '@cdo/apps/blocklyAddons/cdoFieldImageDropdown';
 import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
 import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
 import CdoScrollbar from '@cdo/apps/blocklyAddons/cdoScrollbar';
@@ -128,6 +129,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.BlockDragger = CdoBlockDragger;
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
+  blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.blockly_.Input = CdoInput;
   blocklyWrapper.geras.PathObject = CdoPathObject;
   blocklyWrapper.blockly_.Scrollbar = CdoScrollbar;
