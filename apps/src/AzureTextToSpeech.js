@@ -111,11 +111,7 @@ export default class AzureTextToSpeech {
 
     // Otherwise, check the text for profanity and request the TTS sound.
     return new Promise(async resolve => {
-      const profaneWords = await findProfanity(
-        text,
-        languageCode,
-        true /* shouldCache */
-      );
+      const profaneWords = await findProfanity(text, languageCode);
 
       if (profaneWords && profaneWords.length > 0) {
         onProfanityFound(profaneWords);
