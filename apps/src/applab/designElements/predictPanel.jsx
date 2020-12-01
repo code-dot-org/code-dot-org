@@ -143,7 +143,6 @@ class PredictPanelEvents extends React.Component {
           desc={'Triggered when predict clicked'}
           handleInsert={this.insertPhotoSelected}
         />
-        <h1 id="hello">HELLO!?!</h1>
       </div>
     );
   }
