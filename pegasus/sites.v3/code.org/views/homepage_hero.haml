@@ -35,6 +35,32 @@
       = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  - elsif show_single_hero == "hoc2020_ai"
+    .hero-messages-ai
+      .col-10.desktop-feature
+        &nbsp;
+      .left.col-40
+        .hero-super-message
+          - if hoc_mode == "actual-hoc"
+            = hoc_s(:social_hoc2018_hoc_here)
+          - else
+            = hoc_s(:hoc2020_ai_subheader)
+        .hero-message
+          = hoc_s(:hoc2020_ai_header)
+        .hero-description
+          = hoc_s(:hoc2020_ai_description)
+        - actions.each do |entry|
+          - if entry[:type] == "hoc2020_ai_join_us"
+            .action.join_us_ai
+              %a.linktag#hero-hoc{href: entry[:url]}
+                %button.herohocbutton.herohocbutton-solid-white= I18n.t(entry[:text])
+      .right.col-50{style: "text-align: center;"}
+        .hero-bot
+          - if hoc_mode == "actual-hoc"
+            %img{src: "/images/homepage/hoc2020_ai_bot.png"}
+          - else
+            %a{href: "/ai"}
+              %img{src: "/images/homepage/hoc2020_ai_bot.png"}
   - elsif show_single_hero == "codebytes2020"
     .hero-message-codebytes
       Join us during this year's
@@ -84,9 +110,12 @@
         Two headers with inverse media queries conditionally load the correctly-sized image.
       - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
       - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
-      .widehero#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});"}
+      -# Temp: for ai2020, heroes will show/hide resposively, so use widehero_do_not_hide
+      .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
     - else
-      .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}"}
+      -# Temp: for ai2020, heroes will show/hide resposively, so use widehero_do_not_hide
+      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
+
 
   #fullwidth
     - if request.site == 'code.org'
@@ -310,6 +339,8 @@
     var numWideHeroes = $(".widehero").length;
 
     if (numWideHeroes > 1) {
-      timerId = setInterval(cycleImage, #{hero_display_time});
+      // Temporary for ai2020: don't cycle, even though we have multiple
+      // hero backgrounds, because we're using them responsively.
+      //timerId = setInterval(cycleImage, #{hero_display_time});
     }
   });

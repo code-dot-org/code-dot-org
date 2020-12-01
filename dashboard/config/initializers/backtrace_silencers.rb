@@ -8,8 +8,9 @@
 
 # In addition to backtrace silencing, we also want to silence annoying deprecations:
 silenced = [
-  # Added in https://github.com/rails/rails/pull/25337 for Rails 5.1; will be removed in Rails 5.2
-  /The behavior of `[\w\?]*` inside of after callbacks will be changing in the next version of Rails./,
+  /Single arity template handlers are deprecated/,
+  /Dangerous query method \(method whose arguments are used as raw SQL\) called with non-attribute argument\(s\)/,
+  /SourceAnnotationExtractor is deprecated! Use Rails::SourceAnnotationExtractor instead/,
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))

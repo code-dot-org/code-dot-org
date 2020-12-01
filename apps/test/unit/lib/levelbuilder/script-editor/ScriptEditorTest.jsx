@@ -69,7 +69,6 @@ describe('ScriptEditor', () => {
     describe('Teacher Resources', () => {
       it('adds empty resources if passed none', () => {
         const wrapper = createWrapper({});
-
         assert.deepEqual(
           wrapper.find('ScriptEditor').state('teacherResources'),
           [
@@ -121,6 +120,7 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('textarea').length).to.equal(2);
       expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+      expect(wrapper.find('SaveBar').length).to.equal(1);
     });
 
     it('has correct markdown for preview of unit description', () => {
@@ -139,8 +139,8 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({
         initialHidden: false
       });
-      let courseCheckbox = wrapper.find('input[name="is_course"]');
-      let familyNameSelect = wrapper.find('select[name="family_name"]');
+      let courseCheckbox = wrapper.find('.isCourseCheckbox');
+      let familyNameSelect = wrapper.find('.familyNameSelector');
 
       expect(courseCheckbox.props().disabled).to.be.true;
       expect(familyNameSelect.props().value).to.equal('');
@@ -148,11 +148,158 @@ describe('ScriptEditor', () => {
       familyNameSelect.simulate('change', {target: {value: 'Family'}});
 
       // have to re-find the items inorder to see updates
-      courseCheckbox = wrapper.find('input[name="is_course"]');
-      familyNameSelect = wrapper.find('select[name="family_name"]');
+      courseCheckbox = wrapper.find('.isCourseCheckbox');
+      familyNameSelect = wrapper.find('.familyNameSelector');
 
       expect(familyNameSelect.props().value).to.equal('Family');
       expect(courseCheckbox.props().disabled).to.be.false;
+    });
+  });
+
+  describe('Saving Script Editor', () => {
+    it('can save and keep editing', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      let returnData = {
+        updatedAt: '2020-11-06T21:33:32.000Z',
+        scriptPath: '/s/test-script'
+      };
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(returnData)
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(scriptEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+      scriptEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().lastSaved).to.equal(
+        '2020-11-06T21:33:32.000Z'
+      );
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      //check that last saved message is showing
+      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+    });
+
+    it('shows error when save and keep editing has error saving', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      let returnData = 'There was an error';
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        404,
+        {'Content-Type': 'application/json'},
+        returnData
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(scriptEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+      scriptEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal('There was an error');
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(
+        wrapper.find('.saveBar').contains('Error Saving: There was an error')
+      ).to.be.true;
+
+      server.restore();
+    });
+
+    it('can save and close', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      let returnData = {
+        updatedAt: '2020-11-06T21:33:32.000Z',
+        scriptPath: '/s/test-script'
+      };
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(returnData)
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndCloseButton = saveBar.find('button').at(1);
+      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+      saveAndCloseButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(scriptEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+      scriptEditor.update();
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        `/s/test-script${window.location.search}`
+      );
+
+      server.restore();
+    });
+
+    it('shows error when save and keep editing has error saving', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      let returnData = 'There was an error';
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        404,
+        {'Content-Type': 'application/json'},
+        returnData
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndCloseButton = saveBar.find('button').at(1);
+      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+      saveAndCloseButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(scriptEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+
+      scriptEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal('There was an error');
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(
+        wrapper.find('.saveBar').contains('Error Saving: There was an error')
+      ).to.be.true;
+
+      server.restore();
     });
   });
 

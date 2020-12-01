@@ -359,7 +359,7 @@ de-DE:
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für Grundschüler
   studiobar_dance_title: Tanzparty
-  studiobar_dance_body: Kreieren und teilen Sie ihre eigene Tanzparty
+  studiobar_dance_body: Erstelle und teile deine eigene Tanzparty
   studiobar_hoc_title: Die Hour of Code
   studiobar_hoc_body: Mit Angry Birds programmieren lernen
   studiobar_flappy_title: Flappy Code
@@ -1513,8 +1513,8 @@ de-DE:
   kodableunplugged_shortdescription: Eine spaßige Übung ohne Computer
   projguts_shortdescription: Probiere modellieren und simulieren mit Schere/Stein/Papier
   hourofcode_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
-  frozen_shortdescription: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der
-    Magie und Schönheit von Eis zu begleiten.
+  frozen_shortdescription: Lasst uns Code verwenden, um Anna und Elsa bei der Erforschung
+    der Magie und Schönheit von Eis zu begleiten.
   starwars_shortdescription: Lerne, Droiden zu programmieren und erschaffe dein eigenes
     Star Wars Spiel in einer weit, weit entfernten Galaxie.
   playlab_shortdescription: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
@@ -2469,3 +2469,4 @@ de-DE:
   homepage_slot_text_link_express_course: Versuche einen Express-Kurs
   page_not_available_button: Zurück zur Homepage
   ! '': "[empty string]"
+  footer_powered_by_aws: Betrieben von Amazon Web Services

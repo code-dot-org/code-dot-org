@@ -25,12 +25,8 @@ describe('LessonExtrasEditor', () => {
   });
   it('project settings are not visible when lesson extras is not checked', () => {
     const wrapper = mount(<LessonExtrasEditor {...defaultProps} />);
-    expect(wrapper.find('input[name="project_widget_visible"]')).to.have.length(
-      0
-    );
-    expect(
-      wrapper.find('select[name="project_widget_types[]"]')
-    ).to.have.length(0);
+    expect(wrapper.find('input')).to.have.length(1);
+    expect(wrapper.find('select')).to.have.length(0);
   });
 
   it('project settings are visible when lesson extras is checked', () => {
@@ -38,11 +34,7 @@ describe('LessonExtrasEditor', () => {
       <LessonExtrasEditor {...defaultProps} lessonExtrasAvailable={true} />
     );
 
-    expect(wrapper.find('input[name="project_widget_visible"]')).to.have.length(
-      1
-    );
-    expect(
-      wrapper.find('select[name="project_widget_types[]"]')
-    ).to.have.length(1);
+    expect(wrapper.find('input')).to.have.length(2);
+    expect(wrapper.find('select')).to.have.length(1);
   });
 });
