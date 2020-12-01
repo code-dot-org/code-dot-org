@@ -222,27 +222,16 @@ export class TeacherFeedback extends Component {
   };
 
   getFriendlyDate(feedbackSeen) {
-    const today = new Date();
-    const dateFeedbackSeen = new Date(feedbackSeen);
+    const now = moment();
+    const dateFeedbackSeen = moment(feedbackSeen);
+    const daysApart = now.diff(dateFeedbackSeen, 'days');
 
-    //javascript months begin counting at 0
-    const [todayM, todayD, todayY] = [
-      today.getMonth(),
-      today.getDate(),
-      today.getFullYear()
-    ];
-
-    const [m, d, y] = [
-      dateFeedbackSeen.getMonth(),
-      dateFeedbackSeen.getDate(),
-      dateFeedbackSeen.getFullYear()
-    ];
-    if (todayM === m && todayY === y && todayD === d) {
+    if (daysApart === 0) {
       return i18n.today();
-    } else if (todayM === m && todayY === y && todayD === d + 1) {
+    } else if (daysApart === 1) {
       return i18n.yesterday();
     } else {
-      return moment(dateFeedbackSeen).format('l');
+      return dateFeedbackSeen.format('l');
     }
   }
 
