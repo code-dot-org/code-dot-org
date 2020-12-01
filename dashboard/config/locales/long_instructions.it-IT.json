@@ -2545,7 +2545,8 @@
         "courseE_aboutme_2_2020": "![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png) \\_ \"Sono Rikki! Ti aiuterò a creare un bel poster. Prima, clicca la scheda Costumi!\"\\_\n\n1.  Clicca la scheda **Costumi** in alto a sinistra della tua schermata (vicino a **Codice**). \n2.  Modifica il costume iniziale, o aggiungine uno nuovo che ti piace. \n3.  Cambia il costume dello sprite al tuo nel codice sotto.\n4.  Clicca **Esegui** per vedere il nuovo aspetto del tuo sprite!",
         "courseF_bee_conditionals1_predict1": "_\"Questa nuvola mi blocca la visuale!\"_\n\nVedi se c'è un fiore sotto la nuvola. Se c'è un fiore, prendi il nettare.",
         "courseF_bee_conditionals7_predict2": "A volte una nuvola copre un fiore, a volte copre un nido!\n\nUsa il blocco 'if/else' per raccogliere il nettare dai fiori e fare del miele al nido.",
-        "courseF_extras_sim": "# Crea la tua simulazione!\n\nEcco un'altra versione della simulazione. Prova a fare qualche modifica ai costumi dello sprite o al codice sotto. Divertiti a personalizzare la tua simulazione!"
+        "courseF_extras_sim": "# Crea la tua simulazione!\n\nEcco un'altra versione della simulazione. Prova a fare qualche modifica ai costumi dello sprite o al codice sotto. Divertiti a personalizzare la tua simulazione!",
+        "CSD U5 binary video_2019": "## Domande da Considerare\n\n-   Perché tutti i tipi di dati sul computer sono memorizzati come numeri?\n-   Se tutto è memorizzato come un numero, come pensi che il computer capisca la differenza tra numeri, lettere, immagini e suoni?"
       }
     }
   }

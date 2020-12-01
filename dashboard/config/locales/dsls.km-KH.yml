@@ -654,7 +654,8 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: អាន​កូដ​ហើយ​ប៉ាន់ស្មាន​ថា​តើ​កម្មវិធី​នេះ​នឹង​មានរូបរាង​ដូច​ម្តេច​នៅ​ពេល​ដំណើរការ​។
+        title: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -662,7 +663,8 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: អាន​កូដ​ហើយ​ប៉ាន់ស្មាន​ថា​តើ​កម្មវិធី​នេះ​នឹង​មានរូបរាង​ដូច​ម្តេច​នៅ​ពេល​ដំណើរការ​។
+        title: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -670,7 +672,8 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: អាន​កូដ​ហើយ​ប៉ាន់ស្មាន​ថា​តើ​កម្មវិធី​នេះ​នឹង​មានរូបរាង​ដូច​ម្តេច​នៅ​ពេល​ដំណើរការ​។
+        title: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1833,3 +1836,17 @@ km-KH:
           * [The Purpose of Websites - Activity Guide](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
       CSD U1 Lesson 6 Overview:
         markdown: "# ទិដ្ឋភាពទូទៅ"
+      CSD U3 Lesson Overview 1:
+        markdown: |
+          #ទិដ្ឋភាពទូទៅ
+
+          សិស្សនៅក្នុងថ្នាក់រៀនមួយត្រូវបានដាក់ស្នើកិច្ចការស្ទង់មតិដើម្បីអោយពួកគេពិចារណាទៅលើ"បញ្ហា" នៃភាពធុញទ្រាន់និង ការបញ្ចេញមតិផ្ទាល់ខ្លួនរបស់ពួកគេ ហើយធ្វើការឆ្លុះបញ្ចាំងបញ្ហាទាំងនោះទៅលើជីវិតរស់ប្រចាំថ្ងៃរបស់ពួកគេ។ ត្រង់ចំណុចនេះពួកគេនឹងត្រូវស្វែងយល់ពី វិទ្យាសាស្ត្រកុំព្យូទ័រ ជាលក្ខណៈទូទៅ និង ការសរសេរកូដកម្មវិធីក្នុងលក្ខណៈជាទម្រង់លេងជាក់លាក់ណាមួយ ឬក៏ ដើរតួជាយានមួយដែលបង្ហាញពីយោបល់ផ្ទាល់ខ្លួនរបស់ពួកគេ។
+
+
+          ## ធនធាន
+
+          * [CS ក្នុងការកំសាន្ត - ការណែនាំអំពីសកម្មភាព](https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: |+
+          *[វិទ្យាសាស្ត្រកុំព្យូទ័រ(CS) នៅក្នុងលក្ខណៈកម្សាន្ត]
+          (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
+

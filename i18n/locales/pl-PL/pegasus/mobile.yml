@@ -1561,6 +1561,7 @@
   hoc_overview_partner_activities_body: "Strona Godziny Kodowania zawiera ponad 500 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie."
   hoc_overview_partner_activities_link: "Zobacz aktywności"
   hoc_overview_start_tutorial: "Rozpocznij"
+  hoc_overview_more_resources: "Aby uzyskać więcej zasobów na temat angażowania się w zdalną klasę, zapoznaj się z naszym przewodnikiem dotyczącym prowadzenia [wirtualnej Godziny Kodowania] (https://hourofcode.com/us/how-to/virtual). Dla uczniów z ograniczoną technologią lub łącznością lub bez niej, udostępnij ten pakiet [zajęć Godziny Kodowania bez komputera] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).\n"
   hoc_overview_view_teacher_guide: "Zobacz przewodnik nauczyciela"
   hoc2018_creativity: "kreatywność"
   hoc2018_creativity_create: "Utwórz"
@@ -1709,3 +1710,4 @@
   hoc2020_mc_mee_title: "Opowieść Minecrafta o dwóch wioskach"
   hoc2020_mc_mee_description: 'Nowy samouczek Godziny Kodowania dla Minecrafta jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac, Chromebooka i iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
   footer_powered_by_aws: "Zasilany przez Amazon Web Services"
+  footer_built_on_github: "Oparty na GitHub firmy Microsoft"

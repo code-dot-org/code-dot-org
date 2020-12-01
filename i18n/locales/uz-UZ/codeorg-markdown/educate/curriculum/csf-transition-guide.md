@@ -12,7 +12,7 @@ title: Computer Science Fundamentals Transition Guide
 * [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
 * [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
 * [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
+* [Xulosa](#conclusion)
 * [FAQs](#faq)
 
 <a id="overview"></a>
@@ -22,12 +22,12 @@ The landscape of computer science education has changed immensely since the crea
 
 Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
+* Kurs A: Maktabgacha
+* Kurs B: 1-sinf
+* Kurs C: 2-sinf
+* Kurs D: 3-sinf
+* Kurs E: 4-sinf
+* Kurs F: 5-sinf
 * Pre-reader Express Course: Kindergarten - 1st Grade
 * Express Course: 2nd Grade - 5th Grade
 
@@ -123,7 +123,7 @@ No matter how thoroughly students embed themselves in their projects, they are s
 
 <a id="conclusion"></a>
 
-## Conclusion
+## Xulosa
 As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
 
 We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.

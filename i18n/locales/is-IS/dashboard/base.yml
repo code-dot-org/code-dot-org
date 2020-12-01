@@ -550,6 +550,7 @@ is:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Öll réttindi áskilin. Star Wars&#8482;  &copy; %{current_year} Disney og Lucasfilm. Öll réttindi áskilin. Frozen&#8482; &copy; %{current_year} Disney. Öll réttindi áskilin. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Öll réttindi áskilin. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin. The Amazing World of Gumball er vörumerki og &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org notar p5.play, sem er undir <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1 leyfinu</a>.'
     powered_by_aws: 'Knúið af Amazon Web Services'
+    google_copyright: '&copy; Google Inc. notað með leyfi. Google Classroom er vörumerki Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour of Code&reg; eru vörumerki Code.org.'
     copyright: 'Höfundarréttur'
     more: 'Meira'

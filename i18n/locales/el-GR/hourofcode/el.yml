@@ -44,6 +44,12 @@ el:
     45+ γλώσσες για όλες τις ηλικίες.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
+  hoc2020_ai_header: Explore Artificial Intelligence
+  hoc2020_ai_description: Η ΤΝ και η Μηχανική Μάθηση επηρεάζουν ολόκληρο το κόσμο
+    μας. Ελατέ μαζί μας σε μια εξερεύνηση της ΤΝ σε μια νέα σειρά βίντεο, εκπαιδεύστε
+    την ΤΝ για τους Ωκεανούς σε παραπάνω από 25 γλώσσες, συζητήστε ζητήματα ηθικής
+    και τεχνητής νοημοσύνης, και πολλά άλλα...
   hoc2019_header: Μάθετε πληροφορική. Αλλάξτε τον κόσμο.
   hoc2019_header_line1_mobile: Μάθετε πληροφορική.
   hoc2019_header_line2_mobile: Αλλάξτε τον κόσμο.
@@ -647,10 +653,11 @@ el:
     προβλημάτων, η λογική και η δημιουργικότητα. Ξεκινώντας νωρίς, οι μαθητές θα έχουν
     ένα θέμελιο για επιτυχία σε οποιαδήποτε σταδιοδρομία του 21ου αιώνα. Δείτε περισσότερα
     στατιστικά στο <a href='%{stats_url}'>here</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: _Κάθε_ μαθητής θα πρέπει να έχει τη δυνατότητα να μαθαίνει
+    την επιστήμη των υπολογιστών. Βοηθάει στην ανάπτυξη των δεξιοτήτων επίλυσης προβλημάτων,
+    λογικής και δημιουργικότητας. Ξεκινώντας νωρίτερα, οι μαθητές θα έχουν ένα θεμέλιο
+    για επιτυχία σε οποιοδήποτε τυχόν μονοπάτι καριέρας ακολουθήσουν τον 21ο αιώνα.
+    Δείτε περισσότερες στατιστικές [here](%{stats_url}).
   hoc_faq_how_participate_q: Πώς μπορώ να συμμετάσχω στην Ώρα του Κώδικα;
   hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Ξεκινήστε το σχεδιασμό
     εδώ</a> βλέποντας τους οδηγούς. Μπορείτε να οργανώσετε μία εκδήλωση για την Ώρα
@@ -720,14 +727,19 @@ el:
     βίντεο μαζί και πάρτε μέρος εναλλάξ στις λύσεις παζλ ή απαντώντας σε ερωτήσεις.
     <li><b>Πηγαίνετε χωρίς σύνδεση.</b> Προσφέρουμε <a href='%{unplugged_url}'>μαθήματα
     που δεν απαιτούν καθόλου υπολογιστή</a></ul>
-  hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
-
-    _Here are a few options:_
-
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+  hoc_faq_need_computers_a_markdown: "Όχι. Έχουμε εκπαιδευτικά βίντεο Ώρας του Προγραμματισμού
+    που λειτουργούν σε Προσωπικό Υπολογιστή, έξυπνα τηλέφωνα, τάμπλετ, και κάποια
+    δεν χρειάζονται καθόλου υπολογιστή!! Μπορείς να συμμετέχεις από οπουδήποτε και
+    αν είσαι, με ο,τιδήποτε και αν έχεις.\n\n_Σας παραθέτουμε εδώ μερικές επιλογές:_\n\n-
+    **Δουλέψτε σε ζεύγη.** [Έρευνες δείχνουν ότι](%{pair_programming_research}) οι
+    μαθητές μαθαίνουν καλύτερα με τον  [προγραμματισμό με ζεύγη](%{pair_programming_video}),
+    χρησιμοποιώντας από κοινού έναν υπολογιστή και δουλεύοντας μαζί. Ενθαρρύνετε τους
+    μαθητές σας να κάνουν δυάδες. \n\n- **Να χρησιμοποιείτε μια οθόνη προβολής.**
+    Αν έχετε ένα προβολέα και μια οθόνη για ένα υπολογιστή που συνδέεται στον Παγκόσμιο
+    Ιστό, ολόκληρη η ομάδα σας μπορούν να κάνουν μια ώρα του Κώδικα μαζί. Δείτε τμήματα
+    από βίντεο μαζί και εναλλάξ επιλύστε πάζλ ή απαντήστε σε ερωτήσεις.\n- **Στραφείτε
+    προς έναν ανεμπόδιστο, εκτός διαδικτύου τρόπο λειτουργίας.** Προσφέρουμε [εκπαιδευτικά
+    βίντεο που δεν απαιτούν υπολογιστή](%{unplugged_url}) καθόλου."
   hoc_faq_international_q: Μένω στην  <country>.  Πως μπορώ να συμμετέχω διεθνώς;
   hoc_faq_international_a: Οποιοσδήποτε μπορεί να οργανώσει μία εκδήλωση για την Ώρα
     του Κώδικα, οπουδήποτε στον κόσμο. Πέρυσι, μαθητές από όλο τον κόσμο ενώθηκαν
@@ -5404,11 +5416,14 @@ el:
     you'll find every puzzle has a solution to make the pets feel better than ever!
   tutorial_superhero_longdescription: Use HTML and CSS pixel art to create your favorite
     superhero masks. Publish and share your creations!
-  tutorial_vidcodeplastic_longdescription: The problem of plastic filling our oceans
-    continues to worsen. Luckily, you can make your voice heard with code through
-    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
-    you can make a second video about any subject you care about! Learn to use loops,
-    sine waves and customized emojis to make a unique project.
+  tutorial_vidcodeplastic_longdescription: Συνεχίζει να χειροτερεύει το πρόβλημα με
+    το πλαστικό που γεμίζει τους ωκεανούς μας. Ευτυχώς, μπορείτε να κάνετε τη φωνή
+    σας να ακουστεί με τον προγραμματισμό κώδικα μέσω δημόσιων ανακοινώσεων (PSA)
+    για τη Ρύπανση από Πλαστικό . Έπειτα από τον προγραμματισμό κώδικα μιας δημόσιας
+    ανακοίνωσης (PSA) γύρω από την ρύπανση με πλαστικό με τη χρήση JavaScript, μπορείτε
+    να φτιάξετε ένα δεύτερο βίντεο γύρω από οποιοδήποτε θέμα σας ενδιαφέρει! Μάθετε
+    να χρησιμοποιείτε βρόχους, ημιτονοειδές κύματα και προσαρμοσμένα έμοτζι για να
+    κάνετε ένα μοναδικό έργο.
   tutorial_vidcodetypeface_longdescription: Create your own typeface using shapes
     and elements of typography. Type has more elements than you may have realized!
     So far we have talked about fonts and how they are different styles of text. Fonts
@@ -5596,11 +5611,14 @@ el:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
-  tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
-    continues to worsen. Luckily, you can make your voice heard with code through
-    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
-    you can make a second video about any subject you care about! Learn to use loops,
-    sine waves and customized emojis to make a unique project.
+  tutorial_vidcodeplastiche_longdescription: Συνεχίζει να χειροτερεύει το πρόβλημα
+    με το πλαστικό που γεμίζει τους ωκεανούς μας. Ευτυχώς, μπορείτε να κάνετε τη φωνή
+    σας να ακουστεί με τον προγραμματισμό κώδικα μέσω δημόσιων ανακοινώσεων (PSA)
+    για τη Ρύπανση από Πλαστικό . Έπειτα από τον προγραμματισμό κώδικα μιας δημόσιας
+    ανακοίνωσης (PSA) γύρω από την ρύπανση με πλαστικό με τη χρήση JavaScript, μπορείτε
+    να φτιάξετε ένα δεύτερο βίντεο γύρω από οποιοδήποτε θέμα σας ενδιαφέρει! Μάθετε
+    να χρησιμοποιείτε βρόχους, ημιτονοειδές κύματα και προσαρμοσμένα έμοτζι για να
+    κάνετε ένα μοναδικό έργο.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
