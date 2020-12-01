@@ -1270,7 +1270,7 @@
       "content1": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500",
       "questions": [
         {
-          "text": "Choose the best blocks."
+          "text": "Choose the best blocks. Purple flowers have either 0 or 1 nectar."
         }
       ],
       "title": "Bee Conditionals Multiple Choice 2"
