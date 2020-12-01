@@ -256,8 +256,7 @@ describe('VisualizerModal', () => {
         {id: 1, filterCol: 123, chartCol: 2},
         {id: 2, filterCol: 456, chartCol: 3},
         {id: 3, filterCol: 123, chartCol: 5},
-        {id: 4, filterCol: '456', chartCol: 7},
-        {id: 5, filterCol: 0, chartCol: 5}
+        {id: 4, filterCol: 0, chartCol: 5}
       ];
       expect(
         wrapper
@@ -269,7 +268,7 @@ describe('VisualizerModal', () => {
         wrapper
           .instance()
           .filterRecords(records, 'filterCol', '456', OperatorType.LESS_THAN)
-      ).to.deep.equal([records[0], records[2], records[4]]);
+      ).to.deep.equal([records[0], records[2], records[3]]);
 
       expect(
         wrapper
@@ -280,7 +279,7 @@ describe('VisualizerModal', () => {
             '456',
             OperatorType.LESS_THAN_OR_EQUAL
           )
-      ).to.deep.equal([records[0], records[1], records[2], records[4]]);
+      ).to.deep.equal([records[0], records[1], records[2], records[3]]);
 
       expect(
         wrapper
