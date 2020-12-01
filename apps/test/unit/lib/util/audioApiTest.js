@@ -117,8 +117,6 @@ describe('Audio API', function() {
         };
         sinon.stub(AzureTextToSpeech, 'getSingleton').returns(azureTTSStub);
         appOptions = {
-          azureSpeechServiceToken: 'fake-token',
-          azureSpeechServiceUrl: 'https://fake.tts.url',
           azureSpeechServiceVoices: {
             English: {female: 'en-female', languageCode: 'en-US'}
           }
@@ -133,16 +131,6 @@ describe('Audio API', function() {
 
       afterEach(function() {
         AzureTextToSpeech.getSingleton.restore();
-      });
-
-      it('outputs warning and returns early if appOptions.azureSpeechServiceToken is missing', async function() {
-        delete appOptions.azureSpeechServiceToken;
-        setAppOptions(appOptions);
-        await commands.playSpeech(options);
-
-        expect(outputWarningSpy).to.have.been.calledOnce;
-        expect(azureTTSStub.createSoundPromise).not.to.have.been.called;
-        expect(azureTTSStub.enqueueAndPlay).not.to.have.been.called;
       });
 
       it('truncates text longer than MAX_SPEECH_TEXT_LENGTH', async function() {
@@ -179,11 +167,6 @@ describe('Audio API', function() {
         expect(args.text).to.equal('hello world');
         expect(args.gender).to.equal('female');
         expect(args.languageCode).to.equal('en-US');
-        expect(args.url).to.equal('https://fake.tts.url');
-        expect(args.ssml).to.equal(
-          '<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="en-female">hello world</voice></speak>'
-        );
-        expect(args.token).to.equal('fake-token');
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
     });
