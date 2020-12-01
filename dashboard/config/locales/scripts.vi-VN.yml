@@ -7385,3 +7385,11 @@ vi:
           lesson_groups:
             lg_1:
               display_name: Nội dung
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Trí Tuệ Nhân Tạo cho Đại Dương
+            intro:
+              name: Giới thiệu
+            visualizing:
+              name: Làm dự liệu hiển thị được

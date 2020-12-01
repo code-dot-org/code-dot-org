@@ -157,8 +157,6 @@ de:
     invalid_password: "Das Passwort muss mindestens 6 Zeichen lang sein"
     mismatch_password: "Die eingegebenen Passwörter stimmen nicht überein"
     student_consent: "Ich bestätige, dass ich die Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen."
-    agree_us_website: "Ich akzeptiere die Nutzung einer Website mit Sitz in den USA."
-    my_data_to_us: "Daten aus meiner Nutzung dieser Site können in die USA geschickt werden und dort gespeichert und verarbeitet werden."
     agree_us_data_transfer_student: '**Ich stimme zu, dass Code.org Daten (einschließlich personenbezogener Daten) über meine Nutzung dieser Website in die Vereinigten Staaten** zum Zwecke des Hostings und der Verarbeitung solcher Daten übertragen darf.'
     agree_us_data_transfer_teacher: '**Ich stimme zu, dass Code.org Daten (einschließlich personenbezogener Daten) über meine Nutzung (und der Nutzung dieser Website durch meine Studierenden) in die Vereinigten Staaten** zum Zwecke des Hostings und der Verarbeitung solcher Daten übertragen darf.'
     data_collection_us: "Mir ist bekannt, dass Code.org eine in den USA ansässige gemeinnützige Website ist und dass die Gesetze zur Datenerfassung in den USA von den Gesetzen in meinem Land abweichen können."

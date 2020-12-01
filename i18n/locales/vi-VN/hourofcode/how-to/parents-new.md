@@ -3,10 +3,10 @@ title: How-to guide for parents
 ---
 
 # Làm thế nào để cùng thực hiện Giờ lập trình với con của bạn
-Trải nghiệm Giờ Lập Trình là phương pháp đơn giản và thú vị để trẻ làm quen với khoa học máy tính lần đầu tiên trong đời. Đây không chỉ là những kiến thức nên tảng về mọi lĩnh vực trong ngành khoa học máy tính, mà <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">các nghiên cứu gần đây còn cho thấy</a>: trẻ học môn khoa học máy tính có kết quả học tập tốt hơn ở các môn học khác, khả năng giải quyết vấn đề vượt trội và <font color="00adbc">có cơ hội học đại học cao hơn 17%<b>.</p> 
+Trải nghiệm Hour of Code là phương pháp đơn giản và thú vị để trẻ làm quen với khoa học máy tính lần đầu tiên trong đời. Đây không chỉ là những kiến thức nên tảng về mọi lĩnh vực trong ngành khoa học máy tính, mà <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">các nghiên cứu gần đây còn cho thấy</a>: trẻ học môn khoa học máy tính có kết quả học tập tốt hơn ở các môn học khác, khả năng giải quyết vấn đề vượt trội và <font color="00adbc">có cơ hội học đại học cao hơn 17%<b></font>.</p> 
 
 <p spaces-before="0">
-  Bạn có thể tham gia cùng 10 triệu học sinh khác trên toàn thế giới trong sự kiện toàn cầu này. Chúng ta có thể cùng nhau truyền cảm hứng cho trẻ tìm hiểu, phá bỏ mọi khuôn mẫu và giúp trẻ khám phá sở thích hoàn toàn mới. Trên hết, bạn đã có trong tay mọi công cụ cần thiết để mang Giờ Lập Trình về tận ngôi nhà của mình!
+  Bạn có thể tham gia cùng 10 triệu học sinh khác trên toàn thế giới trong sự kiện toàn cầu này. Chúng ta có thể cùng nhau truyền cảm hứng cho trẻ tìm hiểu, phá bỏ mọi khuôn mẫu và giúp trẻ khám phá sở thích hoàn toàn mới. Trên hết, bạn đã có trong tay mọi công cụ cần thiết để mang Hour of Code về tận ngôi nhà của mình!
 </p>
 
 <p spaces-before="0">
@@ -17,11 +17,11 @@ Trải nghiệm Giờ Lập Trình là phương pháp đơn giản và thú vị
   
 
 <h3>Tôi cần những gì để bắt đầu?</h3>
-Tham gia Giờ Lập Trình rất dễ dàng – ngay cả với người mới bắt đầu. Bạn không cần có kinh nghiệm về khoa học máy tính hoặc dạy học để có thể tổ chức hoạt động lý thú cho trẻ, giúp trẻ vừa học, vừa vui đùa.
+Tham gia Hour of Code rất dễ dàng – ngay cả với người mới bắt đầu. Bạn không cần có kinh nghiệm về khoa học máy tính hoặc dạy học để có thể tổ chức hoạt động lý thú cho trẻ, giúp trẻ vừa học, vừa vui đùa.
 </p>
 
 <p spaces-before="0">
-  Bạn có thể thử Giờ Lập Trình trên máy tính, máy tính bảng, điện thoại thông minh hoặc hoàn toàn ngoại tuyến! Sau đây là cách bắt đầu.
+  Bạn có thể thử Hour of Code trên máy tính, máy tính bảng, điện thoại thông minh hoặc hoàn toàn ngoại tuyến! Sau đây là cách bắt đầu.
 </p>
 
 <hr />
@@ -35,7 +35,7 @@ Tham gia Giờ Lập Trình rất dễ dàng – ngay cả với người mới 
 </p>
 
 <p spaces-before="0">
-  Chúng tôi cung cấp vô số <a href="https://hourofcode.com/us/learn">hoạt động trong Giờ Lập Trình</a> nếu bạn sử dụng máy tính có truy cập Internet. Chúng tôi khuyến khích bạn xem trước một số lựa chọn để có thể giúp hướng dẫn trẻ tham gia các hoạt động mà trẻ thích.
+  Chúng tôi cung cấp vô số <a href="https://hourofcode.com/us/learn">hoạt động trong Hour of Code</a> nếu bạn sử dụng máy tính có truy cập Internet. Chúng tôi khuyến khích bạn xem trước một số lựa chọn để có thể giúp hướng dẫn trẻ tham gia các hoạt động mà trẻ thích.
 </p>
 
 <p spaces-before="0">
@@ -58,7 +58,7 @@ Tham gia Giờ Lập Trình rất dễ dàng – ngay cả với người mới 
   
 
 <h3>Không rành hoặc không có điều kiện về công nghệ?</h3>
-Nếu không có hoặc bị giới hạn về thiết bị công nghệ, bạn có thể lọc <a href="https://hourofcode.com/us/learn">các hoạt động trong Giờ Lập Trình</a> bằng cách chọn "Không dùng máy tính hoặc thiết bị" trong mục <em>Thiết bị công nghệ của lớp học</em>.
+Nếu không có hoặc bị giới hạn về thiết bị công nghệ, bạn có thể lọc <a href="https://hourofcode.com/us/learn">các hoạt động trong Hour of Code</a> bằng cách chọn "Không dùng máy tính hoặc thiết bị" trong mục <em>Thiết bị công nghệ của lớp học</em>.
 </p>
 
 <p spaces-before="0">
@@ -89,7 +89,7 @@ Hãy cân nhắc cho mỗi trẻ một chiếc tai nghe nếu trẻ sử dụng 
 </p>
 
 <p spaces-before="0">
-  Nếu bạn chỉ sử dụng một thiết bị duy nhất hoặc đơn giản là muốn tăng tính tương tác cho Giờ Lập Trình, hãy thử<a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">chương trình ghép cặp</a>. Chương trình ghép cặp khuyến khích trẻ hợp tác với nhau. Khi hợp tác, trẻ sẽ giúp nhau giải quyết vấn đề. Các em cũng sẽ thấy được tính xã hội và hợp tác trong khoa học máy tính.
+  Nếu bạn chỉ sử dụng một thiết bị duy nhất hoặc đơn giản là muốn tăng tính tương tác cho Hour of Code, hãy thử<a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">chương trình ghép cặp</a>. Chương trình ghép cặp khuyến khích trẻ hợp tác với nhau. Khi hợp tác, trẻ sẽ giúp nhau giải quyết vấn đề. Các em cũng sẽ thấy được tính xã hội và hợp tác trong khoa học máy tính.
 </p>
 
 <p spaces-before="0">
@@ -107,7 +107,7 @@ Hãy cân nhắc cho mỗi trẻ một chiếc tai nghe nếu trẻ sử dụng 
     Truyền cảm hứng cho trẻ bằng video về một trong <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">rất nhiều nghề nghiệp</a> có sử dụng các kỹ năng của môn khoa học máy tính
   </li>
   <li>
-    <a href="https://store.code.org/">Thể hiện phong cách thật ngầu</a>! Bạn có thể chọn áo thun, sticker hoặc thậm chí là hình xăm giả. Hãy tặng trẻ ngay lập tức để trẻ thêm hứng thú hoặc để dành tới cuối Giờ Lập Trình làm phần thưởng đặc biệt.
+    <a href="https://store.code.org/">Thể hiện phong cách thật ngầu</a>! Bạn có thể chọn áo thun, sticker hoặc thậm chí là hình xăm giả. Hãy tặng trẻ ngay lập tức để trẻ thêm hứng thú hoặc để dành tới cuối Hour of Code làm phần thưởng đặc biệt.
   </li>
 </ul>
 
@@ -118,7 +118,7 @@ Hãy cân nhắc cho mỗi trẻ một chiếc tai nghe nếu trẻ sử dụng 
 </h2>
 
 <p spaces-before="0">
-  Nếu cả bạn và trẻ đều mới làm quen với khoa học máy tính thì cũng không thành vấn đề. Sau đây là một vài ý tưởng để giới thiệu hoạt động trong Giờ Lập Trình và khiến cả bạn và trẻ suy nghĩ về KHMT:
+  Nếu cả bạn và trẻ đều mới làm quen với khoa học máy tính thì cũng không thành vấn đề. Sau đây là một vài ý tưởng để giới thiệu hoạt động trong Hour of Code và khiến cả bạn và trẻ suy nghĩ về KHMT:
 </p>
 
 <ul>
@@ -170,18 +170,18 @@ Cuối cùng, khi trẻ gặp trở ngại, bạn có thể trả lời rằng:
 </h2>
 
 <p spaces-before="0">
-  Giờ Lập Trình là sự kiện toàn cầu nên gia đình bạn hoàn toàn có thể ăn mừng. Sau đây là một số cách để biến Giờ Lập Trình thành một dịp thật đặc biệt:
+  Hour of Code là sự kiện toàn cầu nên gia đình bạn hoàn toàn có thể ăn mừng. Sau đây là một số cách để biến Hour of Code thành một dịp thật đặc biệt:
 </p>
 
 <ul>
   <li>
-    Hãy in <a href="https://staging.code.org/certificates">Giấy chứng nhận Giờ Lập Trình</a> để trao tặng khi trẻ hoàn thành hoạt động của mình
+    Hãy in <a href="https://staging.code.org/certificates">Giấy chứng nhận Hour of Code</a> để trao tặng khi trẻ hoàn thành hoạt động của mình
   </li>
   <li>
     <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Hãy in sticker</a> tại nhà hoặc <a href="https://store.code.org/">mua trực tuyến</a> để thêm phần bất ngờ.
   </li>
   <li>
-    Chia sẻ ảnh và video Giờ Lập Trình tại nhà bạn lên mạng xã hội. Use #HourOfCode and @codeorg so we can highlight your success, too!
+    Chia sẻ ảnh và video Hour of Code tại nhà bạn lên mạng xã hội. Use #HourOfCode and @codeorg so we can highlight your success, too!
   </li>
 </ul>
 

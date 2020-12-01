@@ -160,8 +160,6 @@ zh-TW:
     invalid_password: "密碼必須要 6 個字元以上"
     mismatch_password: "你輸入的兩次密碼不一致"
     student_consent: "我確定我的監護人已允許我使用 Code.org 提供的服務。 "
-    agree_us_website: "我同意使用位於美國境內的網站。"
-    my_data_to_us: "我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。"
     agree_us_data_transfer_student: '**我同意Code.org可能將我使用本網站的相關資料（包括個人資料）傳輸到美國**，用於託管和處理此等資料。'
     agree_us_data_transfer_teacher: '**我同意Code.org可能將我使用（以及我的學生使用）本網站的相關資料（包括個人資料）傳輸到美國**，用於託管和處理此等資料。'
     data_collection_us: "我理解Code.org是一家總部位於美國的非營利性網站，美國有關資料收集的法律可能與我所在國家的法律不同。"

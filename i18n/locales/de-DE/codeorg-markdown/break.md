@@ -1,9 +1,9 @@
 ---
-title: Take a Code Break
+title: Mache eine Programmierpause
 ---
 
 <div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
-<h1>Take a Code Break</h1>
+<h1>Mache eine Programmierpause</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
 <p>Keep computer science fun by taking a Code Break! With a dozen <a href="#activities">episodes and activities</a> to choose from, you can create a cypher with Ashton Kutcher, learn about variables with Yara Shahidi, and even explore how the Internet works with the actual inventor of the Internet, Vint Cerf.</p>
@@ -294,4 +294,12 @@ title: Take a Code Break
 <a href="https://studio.code.org/s/code-break/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
+</div>
+
+<div style="clear: both"></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
 </div>

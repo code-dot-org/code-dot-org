@@ -1561,6 +1561,7 @@
   hoc_overview_partner_activities_body: "Strona Godziny Kodowania zawiera ponad 500 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie."
   hoc_overview_partner_activities_link: "Zobacz aktywności"
   hoc_overview_start_tutorial: "Rozpocznij"
+  hoc_overview_more_resources: "Aby uzyskać więcej zasobów na temat angażowania się w zdalną klasę, zapoznaj się z naszym przewodnikiem dotyczącym prowadzenia [wirtualnej Godziny Kodowania] (https://hourofcode.com/us/how-to/virtual). Dla uczniów z ograniczoną technologią lub łącznością lub bez niej, udostępnij ten pakiet [zajęć Godziny Kodowania bez komputera] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).\n"
   hoc_overview_view_teacher_guide: "Zobacz przewodnik nauczyciela"
   hoc2018_creativity: "kreatywność"
   hoc2018_creativity_create: "Utwórz"
@@ -1658,6 +1659,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "W partnerstwie z: "
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* to kompleksowy program \"od dzieciństwa do kariery\", który inspiruje, kształci i szkoli dzieci i młodzież o niskich dochodach i innych przeciwnościach, aby kontynuowały rozwój kariery w dziedzinie informatyki. <a href='%{amazon_future_engineer_link}' target='_blank'> Dowiedz się więcej </a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* to kompleksowy program od dzieciństwa do kariery, który inspiruje, kształci i szkoli dzieci i młodzież z rodzin o niskich dochodach i pokrzywdzonych w inny sposób, aby kontynuowały zdobywanie zawodu w dziedzinie informatyki. [Więcej informacji](%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Jeśli jesteś uczniem lub nauczycielem we Francji, wypróbuj [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Dowiedz się więcej o programie Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "O programie Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Dowiedz się o programie od przedszkola do kariery firmy Amazon, aby zwiększyć dostęp do edukacji informatycznej. Znajdź informacje o tym, jak wziąć udział w naszych obozach letnich, lekcjach informatyki w szkołach średnich, stypendiach i stażach."
@@ -1703,3 +1705,9 @@
   page_not_available_title: "Strona niedostępna"
   page_not_available_description: "Przepraszamy, ta strona nie jest już dostępna pod tym adresem. Jeśli nadal potrzebujesz dostępu, wyślij e-mail [support@code.org](%{support_email_link})."
   page_not_available_button: "Powrót do strony domowej"
+  hoc2020_mc_available_code_org: "Dostępne na Code.org"
+  hoc2020_mc_available_mee: 'Dostępne w Minecrafcie: Education Edition'
+  hoc2020_mc_mee_title: "Opowieść Minecrafta o dwóch wioskach"
+  hoc2020_mc_mee_description: 'Nowy samouczek Godziny Kodowania dla Minecrafta jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac, Chromebooka i iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
+  footer_powered_by_aws: "Zasilany przez Amazon Web Services"
+  footer_built_on_github: "Oparty na GitHub firmy Microsoft"
