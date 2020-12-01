@@ -3,88 +3,88 @@ title: 保護者用の手引き
 ---
 
 # お子さんと一緒にHour of Codeを学習する方法
-Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+1時間のコードを試してみることは、お子さんにコンピュータサイエンスを紹介するためのシンプルで楽しい方法です。     コンピュータサイエンスは、すべての研究分野の基礎であるだけでなく、<a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">最近の研究では、</a>：コンピュータサイエンスを勉強する子供たちは、他の科目でより良いパフォーマンスを発揮し、問題解決に優れており、<font color="00adbc"><b>大学に入学する可能性が17％以上</b></font>であることが示されています。
 
-You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
+この世界的なイベントに世界中の何千万人もの学生たちと一緒に参加することができます。     私たちと一緒に、子供たちの学習意欲を刺激し、固定観念を打ち破り、子供たちが新たな興味を発見するのを助けることができます。     何よりも、Hour of Codeをご家庭に導入するために必要なものはすべて揃っています。
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
-<h3>What do I need to get started?</h3>
-The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
+<h3>  何が必要ですか？  </h3>
+  Hour of Codeは初心者でも簡単にできます。     あなたの子供たちのために、学習と笑いの両方を得ることができる楽しい活動を促進するために、コンピュータサイエンスの経験や教育の経験は必要ありません。
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+Hour of Codeをパソコン、タブレット、スマートフォンで、もしくは完全な非接続状態でも楽しむことができます！     始める方法を紹介します。
 
 ***
 
-## 1) Explore activities and tutorials.
+## 1) アクティビティやチュートリアルを調べる。
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-There are countless <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> available to you if you’re working on a computer with internet access. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
+インターネットに接続されたコンピュータで作業している場合は、無制限の<a href="https://hourofcode.com/us/learn">Hour of Code 活動</a>が利用できます。     お子さんが楽しみながらエクササイズに取り組めるように、先にいくつかの選択肢を見ておくことをお勧めします。
 
-All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
+私たちの活動はすべて、問題解決と批判的思考を楽しく創造性をもって統合したものですが、ここでは学生のお気に入りのものをいくつかご紹介します。
 
-- For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
-- For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
+- 遊ぶことが大好きなお子さんのために<a href="https://code.org/minecraft">マインクラフト</a> または <a href="https://code.org/dance">ダンスパーティー</a>。
+- ディズニーが大好きなお子さんのために<a href="https://code.org/starwars">スター・ウォーズ</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">アナと雪の女王</a>, または <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">モアナ</a>。
+- 学ぶことが大好きなお子さんのために[AI for Oceans](https://code.org/oceans) や [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg) などがあります。
 
-<h3>Low-tech or no-tech?</h3>
-If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.
+<h3>  ローテクかノーテクか？  </h3>
+  技術の使用が制限されている場合、<a href="https://hourofcode.com/us/learn">Hour of Codeの活動</a>の<em>教室の技術</em>セクションで「コンピュータやデバイスを使用しない」を選択することで、フィルタリングすることができます。
 
 [<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
 
-You can also check out these <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">short videos</a> for more ideas on how to facilitate an unplugged activity at home!
+また、自宅での非接続型のアクティビティを促進する方法の詳細については、これらの<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">ショートビデオ</a>をチェックアウトすることができます。
 
-## 2) Prepare ahead of time
-Now that you have some tutorials in mind, it may be helpful to try these activities on your device before introducing them to your child.
+## 2）事前準備
+さて、いくつかのチュートリアルが頭に入ってきたので、お子さんに導入する前に、これらのアクティビティをデバイス上で試してみるのもいいかもしれません。
 
 [<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
 
-<h3>More than one child at home?</h3>
-Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
+<h3>  家に子供が何人かいますか？  </h3>
+  子どもたちが別々のデバイスで作業する場合は、それぞれにヘッドフォンを用意することを検討してください。     そうすれば、お互いの気を散らすことなく、音で活動をすることができます。
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
+1 台のデバイスしか使わない場合や、 Hour of Code をより魅力あるものにしたい場合は、<a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">ペアプログラミング</a>を試してみてください。     ペアプログラミングは、子どもたちが一緒にやってみること奨励しています。     ペアになると、お互いに助け合って問題を解決していきます。   さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
 
-<h3>Get the kids excited! </h3>
-This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+<h3>  子供たちをワクワクさせましょう！   </h3>
+  これは、お子さんの一日に新しいタイプのアクティビティを追加する絶好の機会です。     これらの提案を利用して、1つのチュートリアルを超えて楽しみを広げることができます。
 
-- Show them an <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">inspirational video</a> that features one of their favorite role models
-- Inspire them with a video on one of the <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">many careers</a> that computer science skills can lead to
-- <a href="https://store.code.org/">Order some swag</a>! You can choose from t-shirts, stickers, or even temporary tattoos. Share it with them right away to get them excited, or save it for the end of your Hour of Code as a special prize.
+- 好きなロールモデルの一人に着目した<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">感動的なビデオ</a>を見せてあげてください。
+- "  <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">コンピュータサイエンスのスキルがもたらすことができる多くのキャリア</a>のいずれかのビデオでそれらを鼓舞します "
+- <a href="https://store.code.org/">スワッグをご注文ください</a>!     Tシャツ、ステッカー、またはシールタトゥーから選ぶことができます。     すぐに共有して相手をわくわくさせたり、特別な賞品として Hour of Code の最後に保存しておくこともできます。  
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3) Tips for introducing your child to CS
+## 3）お子さんのCS導入のコツ
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+あなたもお子さんもコンピュータサイエンスが初めての方でも大丈夫です。     Hour of Codeの活動を紹介し、CSについて考えてもらうためのアイデアをいくつか紹介します。
 
-- Explain ways that technology impacts our lives, with specific examples that may interest your child. For example, you could talk about medicine or connecting people virtually. Also, check out <a href="https://code.org/csforgood">Code.org/CSforGood</a> for suggested discussion questions.
-- Together, list everyday things that use code in order to work properly.
+- テクノロジーが私たちの生活にどのように影響を与えているか、お子さんが興味を持ちそうな具体的な例を挙げながら説明します。     例えば、医療の話をしたり、バーチャルで人と人を繋いだりすることができます。     また、<a href="https://code.org/csforgood">Code.org/CSforGood</a>では、ディスカッションのための質問を提案しています。
+- 一緒に、コードを使用して適切に動作するために日常的に使用するものをリストアップします。
 
 [<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
 
-<h3>Have girls at home?</h3>
-<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+<h3>  家に女の子はいますか？  </h3>
+  <a href="https://code.org/girls">コンピュータサイエンスへの興味に火をつけるのに役立つ、私たちのお勧め品をご紹介します</a>。     **プロによるアドバイス**: まずは、「いいね！」と言うだけで始められます！
 
-<h3>Problem-solve together</h3>
-Lastly, when your child comes across difficulties it's okay to respond:
+<h3>  一緒に問題解決  </h3>
+  最後に、お子さんが困難にぶつかったときには、対応してもいいと思います。
 - “I don’t know. Let’s figure this out together.”
 - 「コンピュータは、思った通りに動くとは限らないんだよ。」
 - 「プログラミングを学ぶということは、新しい言葉を学ぶことと同じなんだ。すぐにペラペラにはなれないよ。」
 
-Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+コンピュータサイエンスは、私たちが思っていたようにはならなかった状況を「デバッグ」する方法を学ぶことがすべてです。     お子さんと一緒に、問題を解決するための創造的な方法を考えてみましょう!
 
 
-## 4) Don’t forget to celebrate!
+## 4) お祝いを忘れずに！
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+Hour of Codeは世界的なイベントです。     Hour of Codeを特別なものにする方法をいくつかご紹介します。
 
-- Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
+- <a href="https://staging.code.org/certificates">子供がアクティビティを完了したときに授与するコードの時間証明書</a>を印刷します。
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- 自宅のHour　of　Codeの写真とビデオをソーシャルメディアで共有しましょう。   Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>Hour of Codeを終えたら？</h2>
 
-Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+Computer science doesn’t have to end with the Hour of Code!   90%の親が子供にコンピュータサイエンスを学ばせたいと思っているにもかかわらず、ほとんどの学校ではまだ教えていません。     お役に立てるように、カリキュラムはウェブ上で、いつまでも無料で利用できるようになっています。     <a href="https://code.org/yourschool">今日からお子さんの学校にCSを導入する方法</a>をご紹介します。

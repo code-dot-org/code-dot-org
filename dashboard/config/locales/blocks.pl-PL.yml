@@ -1294,6 +1294,8 @@ pl:
             '"d"': d
       gamelab_whenLeftArrow:
         text: po naciśnięciu strzałki w lewo
+      gamelab_whenPromptAnswered:
+        text: gdy {VAR} uzyskała odpowiedź
       gamelab_whenRightArrow:
         text: po naciśnięciu strzałki w prawo
       gamelab_whenTouching:

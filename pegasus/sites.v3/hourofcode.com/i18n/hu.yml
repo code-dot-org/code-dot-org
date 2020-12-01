@@ -45,6 +45,11 @@ hu:
     korosztálynak.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
+  hoc2020_ai_header: Explore Artificial Intelligence
+  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
+    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
+    discuss ethics and AI, and more...
   hoc2019_header: Tanulj informatikát. Változtasd meg a világot!
   hoc2019_header_line1_mobile: Tanulj informatikát.
   hoc2019_header_line2_mobile: Változtasd meg a világot!
@@ -960,7 +965,7 @@ hu:
   learn_banner_beyond_markdown: Szeretnél még tovább tanulni? [Egy óránál többet](%{url})
   learn_banner_teachers: 'Tanárok: <a id=''teacher_banner_host''>Tarts egy órát</a>
     vagy <a id=''teacher_banner_howto''>olvasd el az útmutatót</a>'
-  learn_banner_teachers_markdown: 'Tanárok: [Tarts egy órát](%{host_url}) és [olvasd
+  learn_banner_teachers_markdown: 'Tanárok: [Tartson egy órát](%{host_url}) és [olvassa
     el az útmutatót](%{howto_url})'
   learn_robotics_banner_heading: Robotika
   learn_robotics_banner_blurb: Vannak robotjaid? Használd őket az alábbi tevékenységekhez
