@@ -1,98 +1,97 @@
 ---
-title: تعلم علوم الكمبيوتر عند إغلاق المدارس استجابة لمرض كورونا (كوفيد-19)
+title: تعلم علوم الكمبيوتر عند إغلاق المدارس استجابة لـ Covid19
 ---
 
 <a id="top"></a>
 
-# تعلم علوم الكمبيوتر عند إغلاق المدارس
+# تعلم علوم الكمبيوتر بينما تكون المدارس مغلقة
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>نحن نواجه وقتًا صعبًا للغاية مع التفشي العالمي لمرض كورونا (كوفيد-1، حيث نتصارع مع المخاوف المتزايدة بشأن الصحة ومجتمعاتنا والاقتصاد. أدت إجراءات السلامة إلى إغلاق المدارس على نطاق واسع في جميع أنحاء البلاد. </p>
-<p>نريد دعم المعلمين والطلاب والعائلات بأي طريقة ممكنة. فيما يلي مجموعة من الموارد لمساعدة الطالب على تعلم علوم الكمبيوتر في المنزل. <strong>للآباء - إذا كنت تفكر في إنشاء حساب Code.org لطلابك أو مساعدتهم في الوصول إلى حساب موجود، <a href="https://support.code.org/hc/en-us/articles/360040703792">فيرجى قراءة هذا التمهيد</a>.</strong></p>
-<p>نعمل أيضًا على تجهيز <a href="#teacher-support"> موارد لمساعدة المعلمين في منتصف الدورة </a> لمواصلة تدريس علوم الكمبيوتر عندما يكون طلابهم بعيدون. </p>
-<p><a href="#apps">No computer at home? انظر خيارات الهاتف الذكي</a></p>
+<p>نحن نواجه وقتًا مليئًا بالتحديات مع تفشي كوفيد-19 العالمي، حيث نتحمل المخاوف المتزايدة بشأن الصحة ومجتمعاتنا واقتصادنا. أدت تدابير السلامة إلى إغلاق المدارس على نطاق واسع في جميعأنحاء البلاد. </p>
+<p>نريد دعم المعلمين والطلاب والعائلات بأي طريقة ممكنة. فيما يلي مجموعة من الموارد لمساعدة الطالب على تعلم علوم الكمبيوتر في المنزل. <strong> الآباء - إذا كنت تفكر في إنشاء حساب Code.org لطلابك أو مساعدتهم في الوصول إلى حساب موجود<a href = ""https://support.code.org/hc/en- يرجى قراءة هذه المقدمة التمهيدية </a>. </strong> us/articles/ 360040703792 ""></p>
+<p>"كما أننا جمعنا بعض موارد <a href="#teacher-support"> لمساعدة المعلمين لمواصلة تعليم 
+علم الكمبيوتر </a> عندما يتواجد طلابهم في أماكن بعيد أو في صفوف التباعد الاجتماعي. ". </p>
+<p><a href="#apps">لا يوجد جهاز كمبيوتر في المنزل؟ انظر خيارات الهاتف الذكي</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## ساعة من البرمجة: جرب هذه الدروس التمهيدية الجذابة
-جرب برنامجًا تعليميًا مدته ساعة واحدة لجميع الأعمار. هناك المئات من الأنشطة والبرامج التعليمية بأكثر من 45 لغة.
-* [حفلة الرقص](https://code.org/dance) - برمج حفلة راقصة تضم موسيقى لكاتي بيري وشون مينديز والمزيد.
-* [ماينكرافت](https://code.org/api/hour/begin/mc) - استخدم قدراتك الإبداعية ومهاراتك في حل المشكلات لخوض رحلة واستكشاف عوالم جديدة.
-* [الذكاء الاصطناعي من أجل المحيطات](https://code.org/oceans) - تعرّف على كيفية استخدام الذكاء الاصطناعي والتعلم الآلي لمعالجة المشاكل العالمية.
-* [برمج فلابي](http://studio.code.org/s/flappy/reset) - صمم بنفسك لعبة فلابي مستخدمًا تعليماتك البرمجية
-* [البرمجة في علم الفلك](https://quorumlanguage.com/hourofcode/astro1.html) - تعرف على علم الفلك باستخدام Quorum، وهي لغة برمجة متاحة للمتعلمين المكفوفين أو ضعاف البصر.
-* والعديد [من البرامج التعليمية](https://code.org/hourofcode/overview)!
+<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
+<div class="clearboth"></div></div>
+
+## ساعة البرمجة: جرّب هذه البرامج التعليمية التقديمية الجذابة
+جرّب دروس تعليمية لمدة ساعة مصممة لجميع الأعمار. توجد مئات الفعاليات والدروس التعليمية في أكثر من 45 لغة.
+* [ حفلة راقصة ](https://code.org/dance) - أنشئ حفلة رقص تضم موسيقى كاتي بيري وشون مينديز وغيرهما.
+* [ Minecraft ](https://code.org/api/hour/begin/mc) - استخدم إبداعك ومهارتك في حل المشكلات للتنقل واستكشاف عوالم جديدة.
+* [ الذكاء الاصطناعي للمحيطات ](https://code.org/oceans) - تعرف على كيفية استخدام الذكاء الاصطناعي والتعلم الآلي لمعالجة مشاكل العالم.
+* [ Flappy Code ](http://studio.code.org/s/flappy/reset) - اكتب كود لعبة flappy الخاصة بك.
+* [ الترميز في علم الفلك ](https://quorumlanguage.com/hourofcode/astro1.html) - تعرف على علم الفلك باستخدام Quorum، وهي لغة برمجة متاحة للمتعلمين المكفوفين وضعيفي البصر.
+* والعديد من [ المزيد من البرامج التعليمية ](https://code.org/hourofcode/overview)!
+
+<p><a href="#top">[عودة إلى الأعلى]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## الفيديوهات: شاهد هذه الفيديوهات التعليمية السهلة التي تتراوح مدتها من 3 إلى 5 دقائق
+## أفلام الفيديو: شاهد أفلام الفيديو التعليمية السهلة لمدة 3-5 دقائق
 
 {{ athome_videos }}
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[عودة إلى الأعلى]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## تعلم الأساسيات من خلال دورات التعليم الذاتي لدينا
-### **دورات سريعة**
-إنها خيار رائع للطلاب الذين سيبادرون إلى البدء بمفردهم. You'll learn the fundamentals of computer science with drag & drop blocks. صمم رسوماتك وبرامجك الخاصة بنفسك. <i>ملاحظة: الدورات السريعة متاحة حاليًا باللغات الإنجليزية والهندية والإيطالية والإسبانية. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong></p> 
-
-<p spaces-before="0">
-  
+## تعلم المبادئ الأساسية باستخدام دوراتنا ذاتية الوتيرة
+### **الدورات السريعة**
+خيار عظيم للطلاب الذين يبدأون من تلقاء أنفسهم (عصاميين). ستتعلم أساسيات علم الكمبيوتر باستخدام drag &amp: إسقاط الكتل. قم بإنشاء رسوماتك وألعابك الخاصة. "ملاحظة <strong>: تتوفر الدورات السريعة حاليًا فقط باللغات الإنجليزية 
+والهندية والإيطالية والإسبانية.". بالنسبة للغات الأخرى، نوصي بالاستفادة من دوراتنا السريعة التي تستغرق 20 ساعة 
+<a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. لمشاهدة ما يتوفر في لغتك، تفضل بزيارة كتالوج دوراتنا 
+<a href="https://studio.code.org/courses">course catalog</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">دورة سريعة</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/>دوراتنا السريعة 
+<a href="https://code.org/educate/curriculum/express-course">
+Express Course</a>
 
 </div>
 
-</p>
+<div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<p spaces-before="0">
-  <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
-
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">دورة سريعة للأطفال في مرحلة ما قبل تعلم القراءة</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br>دورات سريعة للقراء المسبقين
+<a href="https://studio.code.org/s/pre-express-2019">
+Express Course for pre-readers</a>
 
 </div>
 <div style="clear: both"></div>
 
-</p>
+<hr />
 
-<p spaces-before="0">
-  <hr />
-</p>
-
-<p spaces-before="0">
-  {{ athome_olderstudents }}
-</p>
+{{ athome_olderstudents }}
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
-<p spaces-before="0">
-  <p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[عودة إلى الأعلى]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-</p>
-<h2 spaces-before="0">
-  تعرف على تصميم التطبيقات وإنشائها باستخدام مختبر التطبيقات
-</h2>
+## تعلم تصميم وإنشاء تطبيقات باستخدام مختبر التطبيقات
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -102,100 +101,91 @@ title: تعلم علوم الكمبيوتر عند إغلاق المدارس ا�
 
 <div class="col-66">
 
-<p>مختبر التطبيقات بيئة برمجة يمكنك فيها إنشاء تطبيقات بسيطة. صمم تطبيقًا أو اكتب برنامجًا في JavaScript، إما باستخدام القوالب أو النص، وشارك إبداعاتك مع العائلة والأصدقاء.</p>
-<p>للأعمار من 13 عامًا فما فوق، جميع المتصفحات الحديثة، باللغة الإنجليزية فقط</p>
-<a href="https://code.org/educate/applab"><button>جرب بنفسك</button></a>
+<p>مختبر التطبيقات هو بيئة برمجة تصنع فيها تطبيقات بسيطة. صمّم تطبيقًا وقم بالبرمجة في JavaScript باستخدام إما كتل أو نصوص، وشارك ابتكارك مع الأسرة والأصدقاء.</p>
+<p>الأعمار 13+، جميع المتصفحات الحديثة، اللغة الإنجليزية فقط</p>
+<a href="https://code.org/educate/applab"><button>قم بتجربتها</button></a>
 
 </div>
 
-<p spaces-before="0">
-  <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<div style="clear: both; margin-bottom: 15px"></div>
+<p><a href="#top">[عودة إلى الأعلى]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-</p>
-<h2 spaces-before="0">
-  No computer at home? جرب تطبيقات الهواتف الذكية هذه
-</h2>
+## لا يوجد جهاز كمبيوتر في المنزل؟ قم بتجربة تطبيقات الهواتف الذكية هذه
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>جزيرة الصناديق</strong></h3></a>لعبة برمجة ساحرة للهاتف المحمول تأخذ المتعلمين في مغامرة مثيرة، أثناء تعليمهم أساسيات البرمجة، مثل الخوارزميات والتعرف على الأنماط والتسلسل والحلقات والتعبيرات الشرطية. <i>(لكل الأعمار)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>
+بوكس آيلاند</strong></h3></a>لعبة برمجة نقالة جميلة تأخذ المتعلمين إلى مغامرة مثيرة، بينما تقوم بتعليم أساسيات البرمجة، مثل خوارزميات والتعرف على الأنماط، تسلسلات، حلقات واشتراطات. <i>(لجميع الأعمار)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark </strong></h3></a>منصة لتعلم البرمجة حائزة على جوائز للأطفال من 5 إلى 9 أعوام. يمكنك حل الألغاز وإنشاء ألعاب مع لاعبي الكونغ فو أثناء تعلم البرمجة. <strong>ملاحظة: تقدم codeSpark تجربة مجانية لمدة 3 أشهر. مطلوب عنوان البريد الإلكتروني الخاص بالأب ومعلومات بطاقة الائتمان عند التسجيل.</strong> <i>(للأطفال في مرحلة ما قبل تعلم القراءة حتى الصف الخامس)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_
+medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer
+&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark
+</strong></h3></a>منصة تعليم برمجة حائزة على جائزة للأطفال الذين تتراوح أعمارهم بين 9-5 سنوات. حل الألغاز وإنشاء ألعاب مع Foos أثناء تعلم صياغة الرموز التشفيرية. <strong> ملاحظة: تعرض codeSpark تجربة مجانية لمدة 3 أشهر. يلزم ذكر عنوان البريد الإلكتروني ومعلومات بطاقة الاعتماد لولي الأمر عند تسجيل الدخول
+signup.</strong> <i>(للقراء المسبقين لغاية الفصل 5)</i>
 
 </div>
 
-<p spaces-before="0">
-  <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>الجندب</strong></h3></a>تعلم البرمجة باستخدام دروس ممتعة وسريعة على هاتفك تعلمك الكتابة بلغة JavaScript حقيقية. برنامج للبرمجة مع Google. <i>(للمدرسة الإعدادية وما فوق)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0">
+<strong>Grasshopper</strong></h3></a>تعلم صياغة الرموز التشفيرية مع التسلية، دروس سريعة على هاتفك التي تعلمك كتابة رموز حقيقية في برنامج جافا سكريبت. ترميز باستخدام برنامج جوجل. <i>(للمدرسة المتوسطة فأكثر)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-</p><p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[عودة إلى الأعلى]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-<h2 spaces-before="0">
-  الوصول إلى الإنترنت محدود أو معدوم؟ تحقق من هذه الأنشطة غير المتصلة
-</h2>
+## وصول محدود أو معدوم إلى الإنترنت؟ تحقق من هذه الأنشطة غير الموصولة
+* <[ Hello Ruby ](https://www.helloruby.com/play) - الطريقة الأكثر غرابة في العالم للتعرف على أجهزة الكمبيوتر والتكنولوجيا والبرمجة. تتضمن أنشطة متعلقة بمجموعة من مواضيع علوم الكمبيوتر، مثل القدرة على تحليل المشكلة، وتمييز الأنماط، والتفكير الخوارزمي، وتصحيح المشكلات والعمل معًا. *(للأعمار من 4 إلى 10)*
+* <[ CS Unplugged ](https://csunplugged.org/en/) - مجموعة من المواد التعليمية المجانية التي تُعلِّم علوم الكمبيوتر من خلال إشراك الألعاب والألغاز التي تستخدم البطاقات والخيوط وأقلام التلوين والكثير من الجري هنا وهناك. * (للأعمار من 5 إلى 14 عامًا) *
 
-<ul>
-  <li>
-    <a href="https://www.helloruby.com/play">مرحبًا روبي</a> - الطريقة الأكثر غرابة في العالم للتعرف على أجهزة الكمبيوتر والتكنولوجيا والبرمجة. تتضمن أنشطة متعلقة بمجموعة من مواضيع علوم الكمبيوتر، مثل القدرة على تحليل المشكلة، وتمييز الأنماط، والتفكير الخوارزمي، وتصحيح المشكلات والعمل معًا. <em x-id="3">(للأعمار من 4 إلى 10)</em>
-  </li>
-  <li>
-    <a href="https://csunplugged.org/en/">علوم الكمبيوتر غير المتصلة</a> - مجموعة من المواد التعليمية المجانية التي تعلم علوم الكمبيوتر من خلال الألعاب والألغاز الجذابة التي تستخدم البطاقات والأوتار والأقلام الملونة والكثير من الجري. <em x-id="3">(للأعمار من 5 إلى 14)</em>
-  </li>
-</ul>
-
-<p spaces-before="0">
-  
-
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[عودة إلى الأعلى]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## فك الرموز المشفرة: تعلم من فريق Code.org وضيوف مميزين!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>ينضم ضيوف مميزون إلى المدير التنفيذي لـ Code.org هادي بارتوفي في فصل دراسي أسبوعي تفاعلي لتعلم مفاهيم علم الكمبيوتر مثل الخوارزميات والذكاء الاصطناعي والتشفير.</p>
+<p>إذا لم تكن قد تحققت من جميع حلقات فك الرموز المشفرة، لم يفت الأوان بعد! لم تعد الحلقات المباشرة تروّج الآن، لكن يمكنك مشاهدة جميع الحلقات والأنشطة ذاتية الخطى <a href="https://code.org/break">here</a>.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-</p>
-<h2 spaces-before="0">
-  دعم المعلمين في منتصف الدورة
-</h2>
-
-<p spaces-before="0">
-  نعمل على بناء وسائل دعم للمعلمين الذين يقومون حاليًا بتدريس دوراتنا هنا، وسيتم تحديثها بالموارد والتوصيات فور حصولنا عليها.
-</p>
+## يقدم الدعم للمدرسين في المجال الافتراضي أو في فصول التباعد الاجتماعي
+الرجاء زيارة <a href="https://code.org/alternative-classrooms">
+code.org/alternative-classrooms</a> لمشاهدة الموارد والمقترحات للمدرسين في المجال الافتراضي أو في بيئات التباعد الاجتماعي. يمكن الوصول إلى الموارد الخاصة بدورة محددة عن طريق النقر على الروابط الواردة أدناه.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>مبادئ علوم الكمبيوتر</p></a></div>
-دليل للمعلمين الذين لديهم موارد للمواد التي يمكن للطلاب استخدامها في المنزل لمواصلة التعلم والتحضير لاختبارAP القادم
-
-
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>اكتشافات علوم الكمبيوتر</p></a></div>
-دليل للمعلمين الذين لديهم موارد للمواد التي يمكن للطلاب استخدامها في المنزل لمواصلة تعلم اكتشافات علوم الكمبيوتر
-
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
 </div>
 
-<p spaces-before="0">
-  <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>أساسيات علوم الكمبيوتر</p></a></div>
-دليل للمعلمين الذين لديهم موارد للمواد التي يمكن للطلاب استخدامها في المنزل لمواصلة تعلم أساسيات علوم الكمبيوتر
-
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p> أساسيات علوم الكمبيوتر </p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-</p><p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[عودة إلى الأعلى]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

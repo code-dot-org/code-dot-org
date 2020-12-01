@@ -12,7 +12,7 @@
 #  index_secret_words_on_word  (word) UNIQUE
 #
 
-class SecretWord < ActiveRecord::Base
+class SecretWord < ApplicationRecord
   include Seeded
 
   def self.setup

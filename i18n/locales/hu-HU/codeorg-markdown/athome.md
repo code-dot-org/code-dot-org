@@ -1,68 +1,75 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: Számítástechnikát tanulni, amikor az iskolák zárva vannak a Covid19 miatt
 ---
 
 <a id="top"></a>
 
-# Learning computer science when schools are closed
+# Számítástechnikát tanulni, amikor az iskolák zárva vannak
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>A Covid19 világméretű kitörésével hihetetlenül nehéz időnek nézünk elébe, egyre növekvő aggodalom tölt el bennünket az egészség, a közösségek és a gazdaság miatt. Biztonsági intézkedések részeként iskolákat zárnak be széles körben az egész országban. </p>
+<p>Szeretnénk támogatást nyújtani a tanároknak, a diákoknak és a családoknak a rendelkezésünkre álló minden lehetséges módon. Lejebb egy sor erőforrás található, amelyek segítségével a diákok otthon is el tudják sajátítani a számítástechnikát. <strong>Szülők – ha azon gondolkodnak, hogy nyissanak-e egy fiókot a Code.org honlapon a diákoknak, vagy segítséget akarnak nyújtani egy meglévő fiók megnyitásához, kérjük, hogy először olvassák el ezt az útmutatót <a href="https://support.code.org/hc/en-us/articles/360040703792"></a>.</strong></p>
+<p>Összeállítottunk néhány <a href="#teacher-support">forrást, ezekkel is segítséget kívánunk nyújtani a tanároknak ahhoz, hogy a számítástechnika oktatását folytatni tudják akkor is</a>, amikor a diákjaik távoktatást kapnak vagy olyan tantermekben tartózkodnak, ahol szociális távolságot kell tartani. </p>
+<p><a href="#apps">Nincs számítógép otthon? Nézzük meg, milyen lehetőségeket kínálnak az okostelefonok</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
+<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
+<div class="clearboth"></div></div>
+
+## Code of Hour: Próbálják ki ezeket a kedves, bevezető oktatóanyagokat
+Próbálják ki ezeket a kedves, bevezető oktatóanyagokat. Több száz tevékenység és oktatóanyag áll rendelkezésre több mint 45 nyelven.
+* [Táncos buli](https://code.org/dance) - Kódolj egy táncpartin Katy Perry, Shawn Mendes és mások zenéjére.
+* [Minecraft](https://code.org/api/hour/begin/mc) - Használd a kreativitásod és a problémamegoldó készségeidet, fedezz fel új utakat és új világokat.
+* [Al az óceánokért](https://code.org/oceans) - Ismerd meg, hogy hogyan lehet Alt és a gépi tanulást a világ problémáinak megoldására felhasználni.
+* [Flappy kód](http://studio.code.org/s/flappy/reset) - Írjál egy saját Flappy játékot.
+* [Kódolás csillagászatban](https://quorumlanguage.com/hourofcode/astro1.html) - Ismerd meg a csillagászatot a Quodrum programozási nyelv használatával, amely vak és látássérült tanulók számára áll rendelkezésre.
+* És még [sokkal több oktatóanyag](https://code.org/hourofcode/overview)!
+
+<p><a href="#top">[Vissza a tetejére]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## Videók: Nézd meg ezeket a könnyű, 3-5 perces oktatóvideókat
 
 {{ athome_videos }}
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Vissza a tetejére]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+## Sajátítsd el az alapokat azokon a tanfolyamokon, ahol a saját tempód szerint haladhatsz
+### **Expressz tanfolyamok**
+Nagyszerű lehetőség diákok számára, akik önállóan akarják elkezdeni a tanulást. Elsajátíthatod a számítástechnika alapjai húzd & dobd blokkokban. Készíts saját rajzokat és játékokat. <strong>Megjegyzés: Az expressz tanfolyamok jelenleg csak angol, hindi, olasz és spanyol nyelven állnak rendelkezésre. Más nyelvek esetében javasoljuk a 20 órás <a href="https://studio.code.org/s/20-hour">Gyorsított tanfolyamokat</a>. Ha szeretnéd megnézni, hogy mi áll rendelkezésre a te nyelveden, nézd meg <a href="https://studio.code.org/courses">tanfolyam-katalógusunkat</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express tanfolyamok</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express tanfolyamok olvasni nem tudóknak</a>
 
 </div>
 <div style="clear: both"></div>
@@ -73,10 +80,10 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Vissza a tetejére]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## Tanulj alkalmazásokat tervezni és építeni az App Lab segítségével
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -93,11 +100,11 @@ A great option for students getting started on their own. You'll learn the funda
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Vissza a tetejére]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+## Nincs számítógép otthon? Próbáld ki ezeket az okostelefonra készült alkalmazásokat
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
@@ -113,48 +120,57 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Szöcske</strong></h3></a>Tanulj kódolni a telefonodon szórakoztató és izgalmas leckékkel, amelyek segítségével megtanulhatsz valódi JavaScriptet írni. Kód a Google programmal. <i>(középiskolásoktól fölfele)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Vissza a tetejére]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
+## Nincs internet-hozzáférés vagy csak korlátozott? Nézd meg ezeket a gépnélküli tevékenységet
+* [Hello Ruby](https://www.helloruby.com/play) - A számítógépek, technológiák és programozás elsajátításának legszeszélyesebb módja a világon. Tevékenységek számos számítástechnika témában, például egy probléma lebontása, minták észlelése, algoritmikus gondolkodás, hibakeresés és együttműködés. *(4-10 éveseknek)*
+* [Számítástechnika gépek nélkül](https://csunplugged.org/en/) - Ingyenes oktatóanyagok, amelyek vonzó játékok és rejtvények segítségével tanítják a számítástechnikát, amelyekben kártyákat, zsinórokat, zsírkrétákat használnak, és amelyekben sokat lehet szaladgálni. *(5-14 éveseknek)*
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Vissza a tetejére]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Code Break: Tanulj a Code.org csapatától és különleges vendégeiktől!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Különleges vendégek csatlakoznak hetente a Code.org vezérigazgatójához, Hadi Partovihoz, amikor interaktív órákon lehet megtanulni olyan informatikai fogalmakat, mint az algoritmusok, a mesterséges intelligencia és a titkosítás.</p>
+<p>Ha nem láttad az összes Code Break epizódot, még nem késő! Az élő epizódok már nem kerülnek adásba, de az összes epizód és saját ritmusú tevékenység megtekinthető <a href="https://code.org/break">itt</a>.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## Tanároknak nyújtott támogatás a virtuális vagy a szociális távolságot tartó osztályokban folyó tanításhoz
+Kérjük, látogasson el a <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> weboldalra, nézze meg a virtuális és szociális távolságot tartó tantermi környezetben tanító tanároknak készült erőforrásokat és javaslatokat. A tanfolyam-specifikus források az alábbi linkekre kattintva érhetők el.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>A számítástechnika alapjai</p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Vissza a tetejére]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

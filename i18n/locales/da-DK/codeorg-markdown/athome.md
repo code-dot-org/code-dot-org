@@ -1,68 +1,75 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: Lære om datalogi, når skoler er lukket som svar på Covid19
 ---
 
 <a id="top"></a>
 
-# Learning computer science when schools are closed
+# Lære om datalogi, når skoler er lukket
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>Vi står over for en utrolig udfordrende tid med det globale udbrud af COVID-19, der kæmper med voksende bekymringer over sundhed, vores samfund og økonomi. Sikkerhedsforanstaltninger har medført udbredte skolelukninger over hele landet. </p>
+<p>Vi vil støtte lærere, studerende og familier på enhver måde, vi kan. Nedenfor er et sæt ressourcer, der kan hjælpe din studerende med at lære datalogi derhjemme. <strong>Forældre - hvis du overvejer at oprette en Code.org-konto til din studerende eller hjælpe dem med at få adgang til en eksisterende konto, <a href="https://support.code.org/hc/en-us/articles/360040703792">læs venligst her først</a>.</strong></p>
+<p>Vi sammensætter også nogle <a href="#teacher-support"> ressourcer til at hjælpe lærere med at fortsætte med at undervise i datalogi </a>, når deres elever er i fjerntliggende eller i socialt distancerede klasseværelser. </p>
+<p><a href="#apps">Ingen computer derhjemme? Se smartphone muligheder</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
+<p style="border: 0; color: #4d575f">Deltag den 7-11 december i vores CodeBytes live korte timer!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Deltag hver dag i CS Uddannelsesuge for CodeBytes, 20 minutters interaktiv datalogiundervisning. Streaming live to gange dagligt, CodeBytes er en fantastisk måde for studerende at deltage i en virtuel #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Lær mere på <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
+<div class="clearboth"></div></div>
+
+## Programmeringstime: Prøv disse engagerende, indledende selvstudier
+Prøv en times selvstudie designet til alle aldre. Der er hundredvis af aktiviteter og tutorials på over 45 sprog.
+* [Dansefest](https://code.org/dance)  - Kod et dansefest med musik af Katy Perry, Shawn Mendes og andre.
+* [Minecraft](https://code.org/api/hour/begin/mc) - Brug din kreativitet og problemløsning til at rejse og udforske nye verdener.
+* [AI for Oceans](https://code.org/oceans) - Lær hvordan AI og maskinlæring kan bruges til at løse verdensproblemer.
+* [Flappy-kode](http://studio.code.org/s/flappy/reset) - Skriv din egen flappy spilkode.
+* [Koder i astronomi](https://quorumlanguage.com/hourofcode/astro1.html) - Lær om astronomi ved hjælp af Quorum, et programmeringssprog, der er tilgængeligt for blinde eller synshandicappede.
+* Og mange [flere selvstudier](https://code.org/hourofcode/overview)!
+
+<p><a href="#top">[Tilbage til toppen]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## Videoer: Se disse nemme 3-5 minutters pædagogiske videoer
 
 {{ athome_videos }}
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbage til toppen]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+## Lær de grundlæggende emner med vores kurser i eget tempo
+### **Ekspreskurser**
+En god mulighed for studerende til at komme i gang alene. Du lærer det grundlæggende inden for datalogi med træk & slip blokke. Opret dine egne tegninger og spil. <strong>Bemærk: Ekspreskurser er i øjeblikket kun tilgængelige på engelsk, hindi, italiensk og spansk. For andre sprog anbefaler vi vores 20-timers <a href="https://studio.code.org/s/20-hour">Accelererede kurser</a>. For at se, hvad der er tilgængeligt på dit sprog, besøg vores<a href="https://studio.code.org/courses">katalog med kurser</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Ekspreskurser</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Ekspreskurser til præ-læsere</a>
 
 </div>
 <div style="clear: both"></div>
@@ -73,10 +80,10 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbage til toppen]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## Lær at designe og oprette apps med App Lab
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -86,75 +93,84 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-66">
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<p>App Lab er et programmeringsmiljø, hvor du kan oprette enkle apps. Design en app, koder i JavaScript med enten blokke eller tekst, og del din oprettelse med familie og venner.</p>
+<p>Alderen over 13 år, alle moderne browsere, kun engelsk</p>
+<a href="https://code.org/educate/applab"><button>Prøv det</button></a>
 
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbage til toppen]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+## Ingen computer derhjemme? Prøv disse smartphone muligheder
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Boks Island</strong></h3></a>Et charmerende mobilkodningsspil, der tager eleverne med på et spændende eventyr, mens de lærer det grundlæggende om koder, som algoritmer, mønstergenkendelse, sekvenser, sløjfer og betingelser. <i>(for alle aldre)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Prisvindende lære-at-kode-platform til børn i alderen 5-9. Løs gåder og opret spil med The Foos, mens du lærer at programmere. <strong>Bemærk: codeSpark tilbyder en gratis 3-måneders prøveperiode. Forældres e-mail-adresse og kreditkortoplysninger kræves ved tilmelding. </strong> <i> (for præ-læsere gennem klasse 5) </i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Græshoppe</strong></h3></a>Lær at kode med sjove, hurtige lektioner på din telefon, der lærer dig at skrive ægte JavaScript. En kode med Google-programmet. <i>(til mellemskoleelever og op)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbage til toppen]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
+## Begrænset eller ingen internetadgang? Tjek disse aktiviteter uden adgang
+* [Hej Ruby](https://www.helloruby.com/play)  - Verdens mest lunefulde måde at lære om computere, teknologi og programmering på. Aktiviteter på en række CS-emner, som evnen til at nedbryde et problem, få øje på mønstre, tænke i algoritmer, finde fejl på problemer og arbejde sammen. *(til alderen 4-10)*
+* [CS frakoblet](https://csunplugged.org/en/) - En samling med gratis undervisningsmateriale, der underviser i datalogi gennem engagerende spil og gåder, der bruger kort, snor, farveblyanter og masse andet</a> *(til alderen 5-14)*
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbage til toppen]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Kodebrydning: Lær af Code.org-teamet og specielle gæster!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Særlige gæster slutter sig til Code.org CEO Hadi Partovi i et ugentligt interaktivt klasseværelse for at lære om computervidenskabskoncepter som algoritmer, kunstig intelligens og kryptering.</p>
+<p>Hvis du ikke har tjekket alle Kodebrydning-episoderne, er det ikke for sent! Live-episoder udsendes ikke længere, men du kan se alle episoderne og aktiviteterne i dit eget tempo <a href="https://code.org/break"> her </a>.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## Støtte til lærere i virtuelle eller socialt distancerede klasseværelser
+Besøg venligst <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> for at se ressourcer og forslag til lærere i virtuelle eller socialt distancerede klassemiljøer. Kursus-specifikke ressourcer kan fås ved at klikke på nedenstående links.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Datalogiprincipper</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Datalogi Opdagelser</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Grundlæggende om datalogi</p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Tilbage til toppen]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

@@ -193,10 +193,6 @@ ga:
     mismatch_password: Ní ionann an dá fhocal faire a chuir tú isteach
     student_consent: Dearbhaím gur thug tuismitheoir nó caomhnóir dlíthiúil cead dom
       seirbhísí Code.org a úsáid.
-    agree_us_website: Tuigim go bhfuilim ag baint úsáide as suíomh Gréasáin atá lonnaithe
-      sna Stáit Aontaithe.
-    my_data_to_us: D'fhéadfaí sonraí a bhaineann le mo ghníomhaíocht ar an suíomh
-      seo a sheoladh chuig nó a phróiseáil i Stáit Aontaithe Mheiriceá.
     agree_us_data_transfer_student: "**Aontaím go bhféadfaidh Code.org sonraí (lena
       n-áirítear sonraí pearsanta) a aistriú chuig na Stáit Aontaithe** de bharr gur
       úsáid mé an suíomh seo chun críche amhail sonraí a óstáil agus a phróiseáil."
@@ -986,7 +982,7 @@ ga:
     accept_label_markdown: Glacaim leis na [Téarmaí Seirbhíse](%{tos_url}) agus leis
       [an bPolasaí Príobháideachais](%{privacy_url}).
     accept_tos: Trí chlárú le Code.org, glacann tú leis na [Téarmaí Seirbhíse](%{tos_url})
-      agus leis an [bPolasaí Príobháideachais](%{privacy_url}).
+      agus leis an [Pholasaí Príobháideachais](%{privacy_url}).
     accept: Glacaim Leo
     print: Priontáil
     reminder_desc: Rinneamar leasú ar <a href="%{tos_url}" target="_blank">na Téarmaí
