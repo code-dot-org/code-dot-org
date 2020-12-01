@@ -40,7 +40,8 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -884,6 +885,27 @@
     },
     {
       "chapter": 32,
+      "position": 7,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U77 CFU Libraries AP"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      },
+      "level_keys": [
+        "U77 CFU Libraries AP"
+      ]
+    },
+    {
+      "chapter": 33,
       "position": 1,
       "assessment": null,
       "properties": {
@@ -904,7 +926,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 2,
       "assessment": null,
       "properties": {
@@ -925,7 +947,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "assessment": null,
       "properties": {
@@ -946,7 +968,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "assessment": null,
       "properties": {
@@ -967,7 +989,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "assessment": null,
       "properties": {
@@ -988,7 +1010,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "assessment": null,
       "properties": {
@@ -1009,7 +1031,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "assessment": true,
       "properties": {
@@ -1030,7 +1052,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "assessment": null,
       "properties": {
@@ -1051,7 +1073,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "assessment": true,
       "properties": {
@@ -1408,6 +1430,17 @@
         "level.key": "U7 Libraries Practice 4",
         "script_level.level_keys": [
           "U7 Libraries Practice 4"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U77 CFU Libraries AP",
+        "script_level.level_keys": [
+          "U77 CFU Libraries AP"
         ],
         "lesson.key": "Libraries Practice",
         "lesson_group.key": "csp_libraries",
