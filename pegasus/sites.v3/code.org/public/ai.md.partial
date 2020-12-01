@@ -6,9 +6,10 @@ style_min: true
 social:
   "og:title": "Learn about Artificial Intelligence (AI)"
   "og:description": "Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!"
-  "og:image": "code.org/images/oceans/oceans-overview.png"
-  "og:image:width": 485
-  "og:image:height": 235
+  "og:image": "https://code.org/images/ai/exploring-ai.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:image:src": "https://code.org/images/ai/exploring-ai.png"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -56,14 +57,14 @@ social:
 
 <div class="col-33">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a href="" target="_blank">
+      <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">
         <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-ethics-lp.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI and Ethics</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Students reflect on the ethical implications of AI, then work together to create an “AI Code of Ethics” resource for AI creators and legislators everywhere.</div>
-        <button>View lesson plan</button>
+        <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank"><button>View lesson plan</button></a>
     </span>
   </div>
 </div>
@@ -100,19 +101,61 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
 <div class="col-100" style="width:100%; background-color:#ebe8f1; color:#696969; padding: 10px 40px 0px 40px; border-radius:15px;">
   <h2 style="margin-bottom: 10px">Exploring the Ethics of AI</h2>
   <h3 style="margin-top: 0; margin-bottom: 20px">Join some of our favorite AI experts for a panel discussion on Tuesday, December 8!</h3>
-  <p>We'll discuss some of the cool ways that AI is used, and touch on important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new AI & Ethics lesson plan (coming soon!) for a great introduction to artificial intelligence!</p>
-  <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! Tune in on <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09">Zoom</a> or stream on YouTube (link coming soon!).</p>
-  <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09"><button>Tune in</button></a>
+  <p>We'll discuss some of the cool ways that AI is used, and touch on important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">AI & Ethics lesson plan</a> for a great introduction to the ethics of artificial intelligence!</p>
+  <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! <a href="https://www.addevent.com/event/by5617541" target="_blank">Add it to your calendar</a>, and then tune in on <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09" target="_blank">Zoom</a> or stream on <a href="https://youtu.be/3oqxjPXbynE" target="_blank">YouTube</a>.</p>
+  <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09" target="_blank"><button>Tune in</button></a>
   <h3 style="margin-bottom:10px">Featuring:</h3>
-  <ul>
-    <li><strong>Dr. Amanda Askell</strong>, Research Scientist in Policy, OpenAI</li>
-    <li><strong>Inioluwa Deborah Raji</strong>, AI Research Scientist & Mozilla Fellow</li>
-    <li><strong>Mehran Sahami</strong>, Professor and Associate Chair for Education in Computer Science, Stanford University</li>
-    <li><strong>Natasha Crampton</strong>, Chief Responsible AI Officer, Microsoft</li>
-    <li><strong>Pat Yongpradit</strong>, Chief Academic Officer, Code.org</li>
-  </ul>
-  <br>
-  <br>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/amanda-askell.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Panelist:</i>
+    <br>
+    <strong>Dr. Amanda Askell</strong>
+    <br>
+    Research Scientist in Policy, OpenAI
+    </p>
+  </div>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/deb-raji-2.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Panelist:</i>
+    <br>
+    <strong>Inioluwa Deborah Raji</strong>
+    <br>
+    AI Research Scientist & Mozilla Fellow
+    </p>
+  </div>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/mehran-sahami.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Panelist:</i>
+    <br>
+    <strong>Mehran Sahami</strong>
+    <br>
+    Professor and Associate Chair for Education in Computer Science, Stanford University
+    </p>
+  </div>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/natasha-crampton.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Panelist:</i>
+    <br>
+    <strong>Natasha Crampton</strong>
+    <br>
+    Chief Responsible AI Officer, Microsoft
+    </p>
+  </div>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/pat-panel.png" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Moderator:</i>
+    <br>
+    <strong>Pat Yongpradit</strong>
+    <br>
+    Chief Academic Officer, Code.org
+    </p>
+  </div>
+  <div style="clear: both; margin-bottom: 20px"></div>
 
 </div>
 
@@ -158,7 +201,14 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
 
 <div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
 
-{{ ai_vid_socialimpact }}
+{{ ai_vid_ethics1 }}
+
+</div>
+
+<div style="clear: both"></div>
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_ethics2 }}
 
 </div>
 
@@ -326,7 +376,7 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
     </p>
   </div>
   <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
-    <img src="/images/avatars/pat-panel.png" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <img src="/images/avatars/deb-raji.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
     <p style="text-align:center">
     <i>Panelist:</i>
     <br>
@@ -366,6 +416,4 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
     </p>
   </div>
   <div style="clear: both; margin-bottom: 20px"></div>
-
-
 -->

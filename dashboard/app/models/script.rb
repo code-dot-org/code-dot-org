@@ -30,7 +30,7 @@ require 'ruby-progressbar'
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
 # A sequence of Levels
-class Script < ActiveRecord::Base
+class Script < ApplicationRecord
   include ScriptConstants
   include SharedConstants
   include Rails.application.routes.url_helpers
