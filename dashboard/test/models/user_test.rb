@@ -4443,11 +4443,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'number of section join attempts for new user defaults to zero' do
-    user = create :user
-    assert_equal 0, user.num_failed_section_attempts
-  end
-
   test 'join section attempts hash is initialized for a new user when calling display_captcha' do
     user = create :user
     assert_equal false, user.display_captcha?
