@@ -49,6 +49,12 @@ const style = {
     flexShrink: 0,
     display: 'flex'
   },
+  debugInputWrapperDisabled: {
+    flexGrow: 0,
+    flexShrink: 0,
+    display: 'flex',
+    backgroundColor: '#eee'
+  },
   debugInputPrompt: {
     height: DEBUG_INPUT_HEIGHT,
     display: 'block',
@@ -126,6 +132,7 @@ export default connect(
         PropTypes.object,
         PropTypes.string
       ]).isRequired,
+      debugConsoleDisabled: PropTypes.bool.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
@@ -327,7 +334,13 @@ export default connect(
           >
             {this.displayOutputToConsole()}
           </div>
-          <div style={style.debugInputWrapper}>
+          <div
+            style={
+              this.props.debugConsoleDisabled
+                ? style.debugInputWrapperDisabled
+                : style.debugInputWrapper
+            }
+          >
             <span style={style.debugInputPrompt} onClick={this.focus}>
               &gt;
             </span>
@@ -335,6 +348,7 @@ export default connect(
               type="text"
               spellCheck="false"
               id="debug-input"
+              disabled={this.props.debugConsoleDisabled}
               style={style.debugInput}
               ref={el => (this._debugInput = el)}
               onKeyDown={this.onInputKeyDown}
