@@ -1,7 +1,7 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "codebytes-2020"
+    "/home": "ai-2020"
   },
 
   "banners": {
@@ -63,7 +63,14 @@
       "buttonText": "Learn more",
       "buttonUrl": "http://code.org/codebytes",
       "buttonId": "codebytes"
+    },
+ "ai-2020": {
+      "image": "/images/marketing/AI-2020-540X289.png",
+      "title": "Explore Artificial Intelligence and Machine Learning",
+      "body": "Join us to explore how AI impacts our entire world in a brand new video series, train AI for Oceans in 25+ languages, and hear from a panel of experts during the Ethics of AI livestream on Tuesday, December 8th.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/ai",
+      "buttonId": "2020-ai"
     }
-
   }
 }

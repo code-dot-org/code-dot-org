@@ -1,5 +1,5 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: İnformatikanın Əsasları kursuna keçid üzrə təlimat
 ---
 
 # A-F Tədris Kursları

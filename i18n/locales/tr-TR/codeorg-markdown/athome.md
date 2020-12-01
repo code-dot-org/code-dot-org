@@ -1,68 +1,75 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: Covid 19'dan dolayı okullar kapalıyken bilgisayar bilimi öğrenin
 ---
 
 <a id="top"></a>
 
-# Learning computer science when schools are closed
+# Okullar kapalıyken bilgisayar bilimi öğrenin
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>Küresel COVID-19 salgını ile birlikte son derece zorlu bir zamandan geçiyoruz ve sağlığımız, topluluklarımız ve ekonomi ile ilgili gittikçe artan endişelerle boğuşuyoruz. Güvenlik önlemleri sonucunda ülke çapında okulların geneli kapandı. </p>
+<p>Gücümüz yettiğince, öğretmenleri, öğrencileri ve aileleri desteklemek istiyoruz. Aşağıda, öğrencinizin evde bilgisayar bilimi öğrenmesine yardımcı olmak için bir dizi kaynak bulabilirsiniz. <strong>Veliler - öğrenci için bir Code.org hesabı oluşturmayı veya var olan bir hesaba erişim sağlamalarına yardımcı olmayı istiyorsanız, <a href="https://support.code.org/hc/en-us/articles/360040703792"> lütfen bu kılavuzu okuyun</a>.</strong></p>
+<p>Aynı zamanda, öğrencileri uzaktayken veya sosyal mesafeli sınıflardayken öğretmenlerin bilgisayar bilimi öğretmeye <a href="#teacher-support"> kaldıkları yerden devam etmelerine yardımcı olmaya yönelik bazı kaynakları</a> topluyoruz. </p>
+<p><a href="#apps">Evde bilgisayar yok mu? Akıllı telefon seçeneklerine bakınız</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
+<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
+<div class="clearboth"></div></div>
+
+## Kodlama Saati: Merak uyandıran, giriş niteliğindeki bu dersleri deneyin
+Tüm yaşlara uygun, bir saatlik bir dersi deneyin. Neredeyse 45 dilde, yüzlerce aktivite ve ders mevcut.
+* [Dans Partisi](https://code.org/dance) - Katy Perry, Shawn Mendes ve daha fazlasının müziklerinin bulunduğu bir dans partisi kodlayın.
+* [Minecraft](https://code.org/api/hour/begin/mc) - Seyahat etmek ve yeni dünyalar keşfetmek için yaratıcılığınızı ve problem çözme becerilerinizi kullanın.
+* [Okyanızlar için Yapay Zeka](https://code.org/oceans) - Dünya problemlerini ele almak için Yapay Zeka ve makine öğreniminin nasıl kullanıldığını öğrenin.
+* [Flappy Kodu](http://studio.code.org/s/flappy/reset) - Kendi flappy oyun kodunuzu yazın.
+* [Astronomide Kodlama](https://quorumlanguage.com/hourofcode/astro1.html) - Görme engelli veya görme bozukluğuna sahip bireylerin erişebildiği bir programlama dili olan Quorum'u kullanarak astronomi hakkında bilgi sahibi olun.
+* Ve birçok başka [ders](https://code.org/hourofcode/overview)!
+
+<p><a href="#top">[Başa dön]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## Videolar: Bu 3-5 dakikalık, kolay eğitim videolarını izleyin
 
 {{ athome_videos }}
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+## Bireysel kurslarımız ile temel prensipleri öğrenin
+### **Hızlandırılmış kurslar**
+Kendi kendilerine başlayan öğrenciler için harika bir seçenek. Sürükleme & bırakma blokları ile bilgisayar biliminin temel prensiplerini öğreneceksiniz. Kendi çizimlerinizi ve oyunlarınızı yaratın. <strong>Not: Hızlandırılmış kurslar şuanda yalnızca İngilizce, Hintçe, İtalyanca ve İspanyolca dillerinde mevcuttur. Diğer diller için, 20 saatlik <a href="https://studio.code.org/s/20-hour"> Hızlandırılmış Kursumuzu</a> öneririz. Kendi dilinizde nelerin mevcut olduğunu görmek için, <a href="https://studio.code.org/courses">kurs kataloğumuza</a> bakın.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Hızlandırılmış Kurs</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Okuma öncesi çocuklara yönelik Hızlandırılmış Kurs</a>
 
 </div>
 <div style="clear: both"></div>
@@ -73,10 +80,10 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## App Lab ile uygulama tasarlamayı ve oluşturmayı öğrenin
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -93,11 +100,11 @@ A great option for students getting started on their own. You'll learn the funda
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+## Evde bilgisayar yok mu? Bu akıllı telefon uygulamalarını deneyin
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
@@ -113,48 +120,57 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Telefonunuzda, gerçek JavaScript yazmayı öğreten eğlenceli, hızlı dersler ile kodlama öğrenin. Google Program ile bir Kod. <i>(orta okul ve üstü için)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
+## Sınırlı internet erişimine mi sahipsiniz? Veya internet erişiminiz yok mu? Bağlantı gerektirmeyen şu aktiviteleri deneyin
+* [Hello Ruby](https://www.helloruby.com/play) - Bilgisayarlar, teknoloji ve programlama hakkında bilgi edinmenin en tuhaf yolu. Bir problemi parçalara ayırma, nokta örüntüleri, algoritmik olarak düşünme, problemleri çözme ve birlikte çalışma gibi bir dizi CS konusuna dair aktiviteler. *(4-10 yaş için)*
+* [CS Unplugged](https://csunplugged.org/en/) - Kartlar, ipler, boya kalemleri ve koşma aktivitelerinin kullanıldığı çekici oyunlar ve bulmacalar ile Bilgisayar Bilimini öğreten ücretsiz eğitim materyali koleksiyonu. *(5-14 yaş için)*
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Kod Kırma: Code-org ekibinden ve özel konuklardan öğrenin!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Özel konuklar, algoritmalar, yapay zeka ve şifreleme gibi bilgisayar bilimi kavramlarını öğrenmek için Code.org CEO'su Hadi Partovi ile haftalık, interaktif bir derse katılıyorlar.</p>
+<p>Kod Kırma bölümlerinin hepsine göz atamadınız mı? Henüz geç değil! Canlı bölümler artık yayınlanmıyor ancak tüm bölümleri ve bireysel aktiviteleri <a href="https://code.org/break">burada</a> bulabilirsiniz.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## Öğretmenleri sanal veya sosyal mesafeli sınırlarda destekleyin
+Sanal veya sosyal mesafeli sınıf ortamlarında öğretmenlere yönelik kaynakları ve önerileri görmek için <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a>'u ziyaret edin. Aşağıdaki linklere tıklayarak kursa özgü kaynaklara erişebilirsiniz.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Bilgisayar Biliminin Temel Prensipleri</p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Başa dön]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

@@ -274,6 +274,24 @@ uz:
           lessons:
             Bounce:
               name: Sakrash
+        coursea-2017:
+          title: Kurs A
+          assignment_family_title: Kurs A
+        courseb-2017:
+          title: Kurs B
+          assignment_family_title: Kurs B
+        coursec-2017:
+          title: Kurs C
+          assignment_family_title: Kurs C
+        coursed-2017:
+          title: Kurs D
+          assignment_family_title: Kurs D
+        coursee-2017:
+          title: Kurs E
+          assignment_family_title: Kurs E
+        coursef-2017:
+          title: Kurs F
+          assignment_family_title: Kurs F
         pre-express-2017:
           lessons:
             Spelling Bee:
@@ -326,6 +344,8 @@ uz:
           lessons:
             Lists:
               name: Ro‘yxatlar
+        coursea-2018:
+          assignment_family_title: Kurs A
         express-2018:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -336,7 +356,10 @@ uz:
               name: Estafetali dasturlash
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
+        courseb-2018:
+          assignment_family_title: Kurs B
         coursed-2018:
+          assignment_family_title: Kurs D
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Katakchali varaqda dasturlash
@@ -344,16 +367,21 @@ uz:
               name: Katakchali varaqda dasturlash
             Relay Programming:
               name: Estafetali dasturlash
+        coursec-2018:
+          assignment_family_title: Kurs C
         csd6-2018:
           lessons:
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
         coursee-2018:
+          assignment_family_title: Kurs E
           lessons:
             Internet:
               name: Internet
             Minecraft Hour of Code:
               name: Maynkraft Dasturlash soati
+        coursef-2018:
+          assignment_family_title: Kurs F
         csp1-2018:
           lessons:
             The Internet:
@@ -737,3 +765,9 @@ uz:
               name: Shart buyruqlari
             Functions:
               name: Funksiyalar
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kurs A
+            Course B:
+              name: Kurs B
