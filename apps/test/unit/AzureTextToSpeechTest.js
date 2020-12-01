@@ -202,16 +202,14 @@ describe('AzureTextToSpeech', () => {
 
         describe('on success', () => {
           beforeEach(() => {
-            const url = 'https://fake.tts.url';
             const bytes = new ArrayBuffer();
-            server.respondWith('POST', url, [200, {}, bytes]);
+            sinon
+              .stub(azureTTS, 'convertTextToSpeech')
+              .returns(new Promise(resolve => resolve(bytes)));
             options = {
               text: 'hello',
               gender: 'male',
-              languageCode: 'es-MX',
-              url,
-              token: 'fake-token',
-              ssml: '<speak>hello</speak>'
+              languageCode: 'es-MX'
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
@@ -238,20 +236,19 @@ describe('AzureTextToSpeech', () => {
 
         describe('on failure', () => {
           beforeEach(() => {
-            const url = 'https://fake.tts.url';
-            server.respondWith('POST', url, [400, {}, '']);
+            const statusText = 'Bad Request';
+            sinon
+              .stub(azureTTS, 'convertTextToSpeech')
+              .returns(new Promise((_, reject) => reject({statusText})));
             options = {
               text: 'hello',
               gender: 'male',
-              languageCode: 'es-MX',
-              url,
-              token: 'fake-token',
-              ssml: '<speak>hello</speak>'
+              languageCode: 'es-MX'
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
               ...options,
-              error: 'Bad Request'
+              error: statusText
             });
           });
 

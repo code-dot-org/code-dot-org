@@ -100,37 +100,48 @@ export default class AzureTextToSpeech {
 
     // Otherwise, check the text for profanity and request the TTS sound.
     return new Promise(async resolve => {
-      const profaneWords = await findProfanity(
-        text,
-        languageCode,
-        true /* shouldCache */
-      );
-
-      if (profaneWords && profaneWords.length > 0) {
-        onProfanityFound(profaneWords);
-        const soundResponse = wrappedCreateSoundResponse({profaneWords});
-        wrappedSetCachedSound(soundResponse);
-        resolve(soundResponse);
-        return;
-      }
-
-      $.ajax({
-        url: '/dashboardapi/v1/text_to_speech/azure',
-        method: 'POST',
-        dataType: 'binary',
-        responseType: 'arraybuffer',
-        data: {text, gender, locale: languageCode}
-      })
-        .done(data => {
-          const soundResponse = wrappedCreateSoundResponse({
-            bytes: data
-          });
+      try {
+        const profaneWords = await findProfanity(
+          text,
+          languageCode,
+          true /* shouldCache */
+        );
+        if (profaneWords && profaneWords.length > 0) {
+          onProfanityFound(profaneWords);
+          const soundResponse = wrappedCreateSoundResponse({profaneWords});
           wrappedSetCachedSound(soundResponse);
           resolve(soundResponse);
-        })
-        .fail(xhr => {
-          resolve(wrappedCreateSoundResponse({error: xhr.statusText}));
-        });
+          return;
+        }
+
+        const bytes = await this.convertTextToSpeech(
+          text,
+          gender,
+          languageCode
+        );
+        const soundResponse = wrappedCreateSoundResponse({bytes});
+        wrappedSetCachedSound(soundResponse);
+        resolve(soundResponse);
+      } catch (error) {
+        resolve(wrappedCreateSoundResponse({error: error.statusText}));
+      }
+    });
+  };
+
+  /**
+   *
+   * @param {string} text
+   * @param {string} gender
+   * @param {string} locale
+   * @returns {Promise<ArrayBuffer>} A promise that resolves to an ArrayBuffer.
+   */
+  convertTextToSpeech = (text, gender, locale) => {
+    return $.ajax({
+      url: '/dashboardapi/v1/text_to_speech/azure',
+      method: 'POST',
+      dataType: 'binary',
+      responseType: 'arraybuffer',
+      data: {text, gender, locale}
     });
   };
 
