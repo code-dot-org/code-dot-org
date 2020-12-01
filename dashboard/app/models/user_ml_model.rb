@@ -11,7 +11,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-# Indexes:
+# Indexes
 #
 #  index_user_ml_models_on_model_id  (model_id)
 #  index_user_ml_models_on_user_id   (user_id)
