@@ -42,7 +42,7 @@
       .left.col-40
         .hero-super-message
           - if hoc_mode == "actual-hoc"
-            = hoc_s(:hoc2020_ai_subheader_actual_hoc)
+            = hoc_s(:social_hoc2018_hoc_here)
           - else
             = hoc_s(:hoc2020_ai_subheader)
         .hero-message
@@ -56,8 +56,11 @@
                 %button.herohocbutton.herohocbutton-solid-white= I18n.t(entry[:text])
       .right.col-50{style: "text-align: center;"}
         .hero-bot
-          %a{href: "/ai"}
+          - if hoc_mode == "actual-hoc"
             %img{src: "/images/homepage/hoc2020_ai_bot.png"}
+          - else
+            %a{href: "/ai"}
+              %img{src: "/images/homepage/hoc2020_ai_bot.png"}
   - elsif show_single_hero == "codebytes2020"
     .hero-message-codebytes
       Join us during this year's
