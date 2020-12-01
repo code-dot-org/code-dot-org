@@ -5948,74 +5948,74 @@ es-ES:
       courseD_multi_farmer_while10_predict2:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
+        - text: Este código dejará los hoyos completamente intactos.
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+            de bucle, pero no existe un código para eliminar la tierra de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
-            no existe un código para limpiar la tierra de la pila.
+            no existe un código para eliminar tierra de la pila.
         questions:
         - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+            este puzle?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
+        - text: Este código dejará los hoyos completamente intactos.
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+            de bucle, pero no existe un código para eliminar la tierra de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
-            no existe un código para limpiar la tierra de la pila.
+            no existe un código para eliminar tierra de la pila.
         questions:
         - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+            este puzle?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
+        - text: Este código dejará los hoyos completamente intactos.
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+            de bucle, pero no existe un código para eliminar la tierra de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
-            no existe un código para limpiar la tierra de la pila.
+            no existe un código para eliminar tierra de la pila.
         questions:
         - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+            este puzle?
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
+        - text: Este código dejará los hoyos completamente intactos.
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+            de bucle, pero no existe un código para eliminar la tierra de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
-            no existe un código para limpiar la tierra de la pila.
+            no existe un código para eliminar tierra de la pila.
         questions:
         - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+            este puzle?
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -6030,10 +6030,10 @@ es-ES:
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -6048,10 +6048,10 @@ es-ES:
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -6066,10 +6066,10 @@ es-ES:
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -6101,55 +6101,58 @@ es-ES:
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
@@ -6273,67 +6276,67 @@ es-ES:
             clic en "Ejecutar"?
       courseE_multi_farmer_functions11_predict:
         answers:
-        - text: La cosechadora recogerá dos calabazas.
-          feedback: Incorrecto. La cosechadora no llama a la función `revisar y escoger`
+        - text: La granjera recogerá dos calabazas.
+          feedback: Incorrecto. La granjera no activa la función `revisar y escoger`
             hasta que llega al maíz.
-        - text: La cosechadora recogerá todas las calabazas.
-          feedback: Incorrecto. La cosechadora no llama a la función `revisar y escoger`
+        - text: La granjera recogerá todas las calabazas.
+          feedback: Incorrecto. La granjera no activa la función `revisar y escoger`
             hasta que llega al maíz.
-        - text: La cosechadora recogerá la lechuga.
-          feedback: Incorrecto. La cosechadora solo gira una vez y termina en el maíz.
-        - text: La cosechadora recogerá el maíz.
+        - text: La granjera recogerá la lechuga.
+          feedback: Incorrecto. La granjera solo gira una vez y termina ante el maíz.
+        - text: La granjera recogerá el maíz.
           correct: true
           feedback: "¡Correcto!"
         questions:
-        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - text: La cosechadora recogerá dos calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá dos calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá todas las calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá todas las calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá la lechuga.
+        - text: La granjera recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
-        - text: La cosechadora recogerá el maíz.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá el maíz.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
-        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - text: La cosechadora recogerá dos calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá dos calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá todas las calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá todas las calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá la lechuga.
+        - text: La granjera recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
-        - text: La cosechadora recogerá el maíz.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá el maíz.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
-        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - text: La cosechadora recogerá dos calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá dos calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá todas las calabazas.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá todas las calabazas.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
-        - text: La cosechadora recogerá la lechuga.
+        - text: La granjera recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
-        - text: La cosechadora recogerá el maíz.
-          feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
+        - text: La granjera recogerá el maíz.
+          feedback: Incorrecto. La granjera avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
-        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
+        - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
       courseE_prediction_artistFunction1:
         answers:
         - text: Nada. No se llama a la función en el programa.

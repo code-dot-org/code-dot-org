@@ -36,13 +36,19 @@ fi:
     rakenna kirkkaampi huominen.
   social_hoc2020_cs_important: 'Tietokonetekniikka on tärkeämpää kuin koskaan. Rakennetaan
     haluamamme tulevaisuus. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: "#HourOfCode koskee #CSforGoodia. Opi tänään,
-    rakenna kirkkaampi huominen."
+  social_hoc2020_hoc_is_about_csforgood: "#HourOfCodessa on kyse #CSforGoodista. Opi
+    tänään, rakenna kirkkaampi huominen."
   social_hoc2020_global_movement: Tunnin koodi on maailmanlaajuinen liike, joka tavoittaa
     kymmeniä miljoonia opiskelijoita. Yhden tunnin opetusohjelmat ovat saatavilla
     yli 45 kielellä kaiken ikäisille.
   social_hoc2020_coming_dates: Kooditunti on tulossa 7. – 13. Joulukuuta 2020. Tietojenkäsittelytiede
     on perustava jokaiselle opiskelijalle.
+  hoc2020_ai_subheader: Hour of Code 2020 on tulossa!
+  hoc2020_ai_header: Tutustu Tekoälyyn
+  hoc2020_ai_description: Tekoäly ja koneoppiminen vaikuttavat koko maailmaan. Tule
+    mukaan tekoälyn tutkimiseen uudessa videosarjassamme ja opi tekoälyn salat yli
+    25 kielellä AI for Oceansin avulla, keskustele etiikasta ja tekoälystä ja opi
+    paljon muusta ...
   hoc2019_header: Opi koodaamaan. Muuta maailmaa.
   hoc2019_header_line1_mobile: Opi koodaamaan.
   hoc2019_header_line2_mobile: Muuta maailmaa.
@@ -215,8 +221,8 @@ fi:
   codeorg_homepage_hoc2019_dance_heading: Kokeile uutta <span class="highlight-word">Dance&nbsp;Party!</span>
   codeorg_homepage_hoc2019_dance_heading_markdown: Kokeile uutta ** Dance&nbsp; -tapahtumaa!
     **
-  codeorg_homepage_special2020_body1: Tuki vanhemmille ja opettajille, jotka joutuvat
-    sulkemaan koulun.
+  codeorg_homepage_special2020_body1: Tuki vanhemmille ja opettajille koulujen sulkeutumisen
+    myötä.
   codeorg_homepage_special2020_body2: Katso ehdotetut oppimisresurssimme.
   codeorg_homepage_special2020_body: Jatka oppimista tänä kesänä! Tutustu resursseihimme
     kotona oppimiseen.
@@ -726,10 +732,10 @@ fi:
     kuten Khan Academy tai CodeHS.
   hoc_faq_high_school_a_markdown: Tähtien sota- ja Minecraft-oppaamme ovat upeita
     lukiolaisille, erityisesti Tähtien sota-JavaScript-versio ja molempien opetusohjelmien
-    ilmainen pelitaso. Vaihtoehtoisesti suosittelemme kokeilemaan yhtä aloitusoppaasta
-    [%{partner_url}/learn] (%{codeorg_url}/learn) aloittaaksesi, kuten opetusohjelma
-    Angry Birdsin tai Annan ja Elsan kanssa. Lukion opiskelijan pitäisi pystyä suorittamaan
-    yksi näistä 30 minuutissa ja kokeilla sitten JavaScriptin edistyneempää opetusohjelmaa,
+    ilmainen pelitaso. Vaihtoehtoisesti suosittelemme kokeilemaan yhtä aloitusoppaastamme
+    [%{partner_url}/learn] (%{codeorg_url}/learn), kuten opetusohjelma Angry Birdsin
+    tai Annan ja Elsan kanssa. Lukion opiskelijan pitäisi pystyä suorittamaan yksi
+    näistä 30 minuutissa ja kokeilla sitten JavaScriptin edistyneempää opetusohjelmaa,
     kuten Khan Academy tai CodeHS.
   hoc_faq_scratch_q: Teen Scratch for Hour of Code -tapahtumaa, mutta entä jos opiskelijoillani
     on pikemminkin iPadit kuin kannettavat tietokoneet?
@@ -751,23 +757,23 @@ fi:
     tapahtumien luetteloon osavaltioittain ja löydät tapahtumasi siellä. Lisäksi kun
     otetaan huomioon tuhannet tunnitunnukseen ilmoittautuneet ihmiset, kartan ja tapahtumaluettelon
     päivittäminen kestää yleensä 48 tuntia. Tarkista uudelleen muutaman päivän kuluttua!
-  hoc_faq_map_a_markdown: Olemme pahoillamme, ettet näe tapahtumaasi tunnitunnuksen
+  hoc_faq_map_a_markdown: Olemme pahoillamme, ettet näe tapahtumaasi Hour of Coden
     kartalla. Kymmenien tuhansien ilmoittautuneiden järjestäjien vuoksi kartta yhdistää
     tiedot ja näyttää yhden pisteen useille tapahtumille. Jos napsautat kartan alla
-    olevaa [tapahtumasivu] (%{events_url}) -linkkiä, sinut ohjataan kaikkien tapahtumien
+    olevaa[tapahtumasivu] (%{events_url}) -linkkiä, sinut ohjataan kaikkien tapahtumien
     luetteloon osavaltioittain ja löydät tapahtumasi siellä. Lisäksi kun otetaan huomioon
-    tuhannet tunnitunnukseen ilmoittautuneet ihmiset, kartan ja tapahtumaluettelon
+    tuhannet Hour of Codeen ilmoittautuneet ihmiset, kartan ja tapahtumaluettelon
     päivittäminen kestää yleensä 48 tuntia. Tarkista uudelleen muutaman päivän kuluttua!
   hoc_faq_count_hoc_a: Hour of Code -seuranta ei ole tarkka käytön mittaus. Emme laske
     yksilöllisiä opiskelijakortteja täydellisesti seuratessasi osallistumista tunnitunnukseen,
     varsinkin koska emme vaadi opiskelijoita kirjautumaan sisään tai rekisteröitymään.
     Seurauksena on, että laskemme osallistujia liian paljon ja liian vähän samanaikaisesti.
     Lue kaikki yksityiskohdat <a href='%{codeorg_url}/loc'> täältä </a>.
-  hoc_faq_count_hoc_a_markdown: Hour of Code -seuranta ei ole tarkka käytön mittaus.
-    Emme laske yksilöllisiä opiskelijakortteja täydellisesti seuratessasi osallistumista
-    tunnitunnukseen, varsinkin koska emme vaadi opiskelijoita kirjautumaan sisään
-    tai rekisteröitymään. Seurauksena on, että laskemme osallistujia liian paljon
-    ja liian vähän samanaikaisesti. Lue kaikki yksityiskohdat [täältä] (%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: Hour of Code -trakkeri mittaa käyttöä tarkasti. Emme
+    laske yksilöllisiä opiskelijatunnistuksia täydellisesti seuratessamme Hour of
+    Coden osallistujia, varsinkin koska sisäänkirjatuminen ja rekisteröityminen eivät
+    ole pakollisia. Seurauksena laskemme osallistujia liian paljon ja liian vähän
+    samanaikaisesti. Lue kaikki yksityiskohdat [täältä] (%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Kuinka paljon voi oppia tunnissa?
   hoc_faq_one_hour_a: 'Kooditunnin tavoitteena ei ole opettaa ketään tulemaan tietotekniikan
     asiantuntijaksi tunnissa. Yksi tunti riittää vain oppimaan, että tietojenkäsittelytiede
@@ -787,9 +793,9 @@ fi:
     mitä heidän oppilaansa haluavat ja opettajat kykenevät. <br/> <br/> Ennen kaikkea,
     mitä kaikki osallistujat voivat oppia tunnissa, on se, että voimme tehdä tämän.'
   hoc_faq_one_hour_a_markdown: |-
-    Kooditunnin tavoitteena ei ole opettaa ketään tulemaan tietotekniikan asiantuntijaksi tunnissa. Yksi tunti riittää vain oppimaan, että tietojenkäsittelytiede on hauskaa ja luovaa, että siihen pääsee kaiken ikäisesti kaikille opiskelijoille taustasta riippumatta. Tämän kampanjan onnistumisen mittari ei ole siinä, kuinka paljon CS-opiskelijat oppivat - menestys heijastuu laajaan osallistumiseen sukupuolten sekä etnisten ja sosioekonomisten ryhmien välillä, ja siitä johtuva ilmoittautumisen ja osallistumisen kasvu näemme CS-kursseilla kaikilla tasoilla. Miljoonat osallistuvat opettajat ja opiskelijat ovat päättäneet mennä yli tunnin - oppia koko päivän tai koko viikon tai pidempään, ja monet opiskelijat ovat päättäneet ilmoittautua koko kurssille (tai jopa yliopiston pääaineelle).
+    Hour of Coden tavoitteena ei ole opettaa ketään tulemaan tietotekniikan asiantuntijaksi tunnissa. Yksi tunti riittää vain opettamaan, miten hauskaa ja luovaa tietojenkäsittelytiede voi olla, ja että se sopii kaiken ikäisille taustasta riippumatta. Tämän kampanjan onnistumisen mittari ei ole siinä, kuinka paljon CS-opiskelijat oppivat - menestys heijastuu laajaan osallistumiseen sukupuolten sekä etnisten ja sosioekonomisten ryhmien välillä, ja siitä johtuva ilmoittautumisen ja osallistumisen kasvu näemme CS-kursseilla kaikilla tasoilla. Miljoonat osallistuvat opettajat ja opiskelijat ovat päättäneet mennä yli tunnin - oppia koko päivän tai koko viikon tai pidempään, ja monet opiskelijat ovat päättäneet ilmoittautua koko kurssille (tai jopa yliopiston pääaineelle).
 
-    Opiskelijoiden lisäksi toinen "oppija" on kouluttaja, joka saa tunnin kuluttua luottamuksen opettaa tietojenkäsittelytieteitä, vaikka heillä ei ehkä olisikaan korkeakoulututkintoa tietojenkäsittelytieteen tutkijana. Kymmenet tuhannet opettajat päättävät jatkaa tietojenkäsittelytietoa joko osallistumalla PD: hen tai tarjoamalla jatkokursseja tai molempia. Ja tämä koskee myös kouluvastaavia, jotka ymmärtävät, että tietojenkäsittely on jotain, mitä heidän oppilaansa haluavat ja opettajat kykenevät.
+    Opiskelijoiden lisäksi toinen "oppija" on kouluttaja, joka saa tunnin kuluttua luottamuksen opettaa tietojenkäsittelytieteitä, vaikka heillä ei ehkä olisikaan korkeakoulututkintoa tietojenkäsittelytieteen tutkijana. Kymmenet tuhannet opettajat päättävät jatkaa tietojenkäsittelytietoa joko osallistumalla PD:hen tai tarjoamalla jatkokursseja tai molempia. Ja tämä koskee myös kouluvastaavia, jotka ymmärtävät, että tietojenkäsittely on jotain, mitä heidän oppilaansa haluavat ja opettajat kykenevät.
 
     Ennen kaikkea kaikki osallistujat voivat oppia tunnissa on, että voimme tehdä tämän.
   hoc_faq_more_questions_q: Vielä lisää kysymyksiä?
@@ -802,10 +808,10 @@ fi:
     ja opetussuunnitelmamme ovat jatkuvasti saatavilla sivustollamme. Käy <a href='/promote'>
     resursseissamme </a> tapahtumien oppaita ja muita resursseja, joiden avulla Hour
     of Code -tapahtuma onnistuu.
-  hoc_faq_keep_learning_a_markdown: Kuka tahansa voi isännöidä tunnitunnusta milloin
-    tahansa. Oppaat pysyvät ajan tasalla ympäri vuoden. Voit odottaa, että kaikki
+  hoc_faq_keep_learning_a_markdown: Kuka tahansa voi isännöidä Hour of Codea milloin
+    tahansa. Oppaat pysyvät ajan tasalla ympäri vuoden. Voit luottaa, että kaikki
     opetusohjelmamme ja opetussuunnitelmamme ovat jatkuvasti saatavilla sivustollamme.
-    Käy [resursseissamme] (%{promote}), jos haluat tietoja tapahtuman ohjekirjoista
+    Vieraile [resursseissamme] (%{promote}), jos haluat tietoja tapahtuman ohjekirjoista
     ja muista resursseista, joiden avulla Hour of Code -tapahtuma onnistuu.
   hoc_faq_certificates_q: Mistä voin tulostaa todistuksia opiskelijoille?
   hoc_faq_certificates_a: Siirry <a href='%{codeorg_url}/certificates'> -sertifikaattisivulle
@@ -911,7 +917,7 @@ fi:
   title_past_posters: Past Hour of Code Posters
   title_signup_thanks: Kiitos osallistumisestasi Kooditunnin ylläpitäjäksi!
   title_tutorial_guidelines: Toimintaohjeet
-  title_whole_school: Whole School Participation
+  title_whole_school: Koko koulun osallistuminen
   events_nav_title: Tunnin koodi tapahtumia
   events_nav_all: Kaikki tapahtumat
   events_nav_whole_schools: Kokonaiset koulut
@@ -953,7 +959,7 @@ fi:
   highlights_constant_athletes_short_heading: Haasta itseäsi
   footer_copyright_message: Copyright 2015 Code.org. Kaikki oikeudet pidätetään.
   footer_trademark_message: Hour of Code™ on Code.org:in tavaramerkki.
-  footer_built_on_github: Built on GitHub from Microsoft
+  footer_built_on_github: Rakennettu GitHubille Minecraftin avulla
   footer_menu_partners: Kumppanit
   footer_menu_contact: Ota yhteyttä
   footer_menu_support: Tuki
@@ -965,11 +971,11 @@ fi:
     yli 180 maassa tunnitunnuksella.
   learn_banner_beyond: Haluatko jatkaa oppimista? <a id='learn_banner_beyond'> Yli
     tunti </a>
-  learn_banner_beyond_markdown: Haluatko jatkaa oppimista? [Mene yli tunnin] (%{url})
+  learn_banner_beyond_markdown: Haluatko jatkaa oppimista? [Mene tunnin ohi] (%{url})
   learn_banner_teachers: 'Opettajat: <a id=''teacher_banner_host''> isännöi tunti
     </a> tai <a id=''teacher_banner_howto''> lue käyttöopas </a>'
   learn_banner_teachers_markdown: 'Opettajat: [Isännöi tunti] (%{host_url}) tai [lue
-    ohjeet] (%{howto_url})'
+    Ohjeet] (%{howto_url})'
   learn_robotics_banner_heading: Näytä robotiikan aktiviteetit
   learn_robotics_banner_blurb: Onko sinulla robotteja vai fyysisiä tietokonepaketteja?
     Käytä niitä alla oleviin tehtäviin ja tee konkreettinen tunnitunnus kaiken ikäisille
@@ -1146,101 +1152,111 @@ fi:
   tutorial_roboticfriends_name: Minun Robottiystäväni
   tutorial_sjforest_name: 'ScratchJr: Can I Make a Spooky Forest?'
   tutorial_sjgreet_name: 'ScratchJr: Can I Make My Characters Greet Each Other?'
-  tutorial_sjsunset_name: 'ScratchJr: Can I Make the Sun Set?'
+  tutorial_sjsunset_name: 'ScratchJr: Voinko saada auringon laskemaan?'
   tutorial_fufafrenz_name: fuzzFamily Frenzy
-  tutorial_bbcgeo_name: Bitsbox Coding + Geometry
-  tutorial_chspixel_name: CodeHS Pixel Art
-  tutorial_hummingbird_name: Creating a Game with Hummingbird
-  tutorial_recoloring_name: Recoloring the Universe
-  tutorial_bbcchem_name: Bitsbox Coding + Chemistry
-  tutorial_floalgo_name: 'Coding: Algorithms Lesson Plan'
-  tutorial_flocond_name: 'Coding: Conditionals Lesson Plan'
-  tutorial_floloops_name: 'Coding: For Loops Lesson Plan'
-  tutorial_pgts_name: Rock, Paper, Scissors
-  tutorial_ozo_name: The OzoBlockly Tutorial
-  tutorial_bbcla_name: Bitsbox Coding + Language Arts
-  tutorial_bbcsci_name: Bitsbox Coding + Science
+  tutorial_bbcgeo_name: Bitsbox Koodaus + Geometria
+  tutorial_chspixel_name: CodeHS Pikselitaide
+  tutorial_hummingbird_name: Kolibripelin luominen
+  tutorial_recoloring_name: Avaruuden uudelleenväritys
+  tutorial_bbcchem_name: Bitsbox Koodaus + Kemia
+  tutorial_floalgo_name: 'Koodaus: Algoritmit Tuntisuunnitelma'
+  tutorial_flocond_name: 'Koodaus: Konditionaalien Tuntisuunnitelma'
+  tutorial_floloops_name: 'Koodaus: Looppien Tuntisuunnitelma'
+  tutorial_pgts_name: Kivi, Sakset, Paperi
+  tutorial_ozo_name: " OzoBlockly Tutoriaali"
+  tutorial_bbcla_name: Bitsbox Koodaus + Kielitaide
+  tutorial_bbcsci_name: Bitsbox Koodaus + Tiede
   tutorial_tlctour_name: Tour Guide Activity
   tutorial_codesterstj_name: CS Tech Jam
-  tutorial_tlclocked_name: Locked-In
-  tutorial_baubles_name: Binary Baubles
-  tutorial_bbcart_name: Bitsbox Coding + Art
-  tutorial_tlcknight_name: Knight's Tour Activity
+  tutorial_tlclocked_name: Lukittu sisälle
+  tutorial_baubles_name: Binaariset baublet
+  tutorial_bbcart_name: Bitsbox Koodaus + Taide
+  tutorial_tlcknight_name: Knight's Tour-Aktiviteetti
   tutorial_fufafit_name: fuzzFamily Fitness
   tutorial_ozodance_name: Ozobot Dance-Off
-  tutorial_codingrobotics_name: Intro to Coding through Robotics (ft. Wonder Workshop)
+  tutorial_codingrobotics_name: Johdatus koodaamiseen robotiikan avulla (ft. Wonder
+    Workshop)
   tutorial_box_name: Box Island
-  tutorial_hopgame_name: Hopscotch Game Design Workshop
-  tutorial_icontrol_name: iControl
+  tutorial_hopgame_name: Hopscotch-pelisuunnittelutyöpaja
+  tutorial_icontrol_name: 'iControl
+
+'
   tutorial_cocomteach_name: 'CodeCombat: lærerstyret Aktiviteter'
-  tutorial_bbcmathii_name: Bitsbox Coding + Math (K-2)
-  tutorial_bbcphys_name: Bitsbox Coding + Physics
-  tutorial_bitsbox_name: Build Crazy Apps with Bitsbox
-  tutorial_tlcemo_name: 'Emotion Machine: Create-a-Face Card'
-  tutorial_crd_name: Conditionals with Cards
-  tutorial_bbcbio_name: Bitsbox Coding + Biology
+  tutorial_bbcmathii_name: Bitsbox Koodaus + Matematiikka (K-2)
+  tutorial_bbcphys_name: Bitsbox Koodaus + Fysiikka
+  tutorial_bitsbox_name: Rakenna hulluja sovelluksia Bitsboxilla
+  tutorial_tlcemo_name: 'Emotion Machine: Luo kasvokortti'
+  tutorial_crd_name: Ehtolauseet pelikorteilla
+  tutorial_bbcbio_name: Bitsbox Koodaus + Biologia
   tutorial_ticklebb8_name: BB-8 Swing
-  tutorial_grok_name: Grok Learning
+  tutorial_grok_name: Grok Oppiminen
   tutorial_ijournalist_name: iJournalist
-  tutorial_bbcmusic_name: Bitsbox Coding + Music
-  tutorial_secretcodes_name: Secret Codes Activity
+  tutorial_bbcmusic_name: Bitsbox Koodaus + Musiikki
+  tutorial_secretcodes_name: Salaiset Koodit-tehtävä
   tutorial_tlchex_name: HexaHexaFlexagon Automata Activity
   tutorial_tickles_name: Sphero Run
-  tutorial_ozogame_name: Create an Ozobot Game Level
-  tutorial_vidcodeio_name: Input and Output, Math Activity
-  tutorial_besttech_name: Best Technology Activity
-  tutorial_tlcbrain_name: Brain-in-a-bag Activity
-  tutorial_hopquiz_name: Quiz Creator
-  tutorial_unfortunate_name: A Series of Unfortunate Events
-  tutorial_cha_name: Computer History Activity
-  tutorial_elaseq_name: 'Writing and Coding: ELA Integration with Common Core Standards'
-  tutorial_bbcmathi_name: Bitsbox Coding + Math (3-5)
-  tutorial_tlcpixel_name: Pixel Puzzles
-  tutorial_arduino_name: Arduino Activity
-  tutorial_introrobo_name: Introduction to Robotics
-  tutorial_tlcinvis_name: Invisible Palming Activity
-  tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
-  tutorial_procolor_name: Drive to School with Ozobot
-  tutorial_spiralsfinch_name: Spirals with the Finch
-  tutorial_ozoi_name: Ozobot and OzoCodes Intro
+  tutorial_ozogame_name: Luo Ozobotti Pelitaso
+  tutorial_vidcodeio_name: Syöttö ja Tulo, matematiikkatehtävä
+  tutorial_besttech_name: Paras Teknologiatehtävä
+  tutorial_tlcbrain_name: Brain-in-a-bag -tehtävä
+  tutorial_hopquiz_name: Tietokilpailun Luoja
+  tutorial_unfortunate_name: Surkeiden Sattumusten Sarja
+  tutorial_cha_name: Tietokoneen Historia-tehtävä
+  tutorial_elaseq_name: 'Koodi ja Kirjoitus: ELA Integraatio Yhteisten Perusstandardien
+    kanssa'
+  tutorial_bbcmathi_name: Bitsbox Koodaus + Matematiikka (3-5)
+  tutorial_tlcpixel_name: Pikselipelit
+  tutorial_arduino_name: Arduino -tehtävä
+  tutorial_introrobo_name: Robotiikan Alkeet
+  tutorial_tlcinvis_name: Näkymätön Palming-toiminta
+  tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines
+
+'
+  tutorial_procolor_name: 'Aja kouluun Ozobotin kanssa
+
+'
+  tutorial_spiralsfinch_name: Spiraaleja Finchin kanssa
+  tutorial_ozoi_name: Ozobot ja OzoCodes Intro
   tutorial_ticklel_name: LEGO Bricker
-  tutorial_spiralsdash_name: Draw Spirals with Dash
-  tutorial_ghdebug_name: Grace Hopper Debugging Activity
+  tutorial_spiralsdash_name: Piirrä Spiraaleja Dashin kanssa
+  tutorial_ghdebug_name: Grace Hopperin Virheenkorjaus
   tutorial_tlckk_name: Kriss-Kross Puzzles
-  tutorial_firstcomp_name: My First Computer
-  tutorial_mazefinch_name: Through the Maze with the Finch Robot
-  tutorial_tlccc_name: Compression Code Puzzles
-  tutorial_tlcdoodle_name: Algorithmic Doodle Art
-  tutorial_tlcpunch_name: Punch Card Searching Activity
+  tutorial_firstcomp_name: Ensimmäinen Tietokoneeni
+  tutorial_mazefinch_name: Sokkelon läpi Finch-robotin kanssa
+  tutorial_tlccc_name: Pakkauskoodin Puzzlet
+  tutorial_tlcdoodle_name: Algoritminen Doodle Taide
+  tutorial_tlcpunch_name: Lävistyskortin Hakutehtävä
   tutorial_finchfract_name: Finch Fractals
-  tutorial_tlcmind_name: The Red Black Mind Meld Activity
-  tutorial_tlctelebot_name: The Teleporting Robot Activity
-  tutorial_tlcaus_name: Australian Magician's Dream Activity
-  tutorial_oralhist_name: Oral History Project
-  tutorial_tlcmicro_name: Microwave Racing Video Activity
+  tutorial_tlcmind_name: The Red Black Mind Meld -tehtävä
+  tutorial_tlctelebot_name: Teleporttirobotti-tehtävä
+  tutorial_tlcaus_name: Australian Taikurin Uni-tehtävä
+  tutorial_oralhist_name: 'Suullinen Historia Projekti
+
+'
+  tutorial_tlcmicro_name: Mikroaaltouuninen kilpavideo-tehtävä
   tutorial_imathematician_name: iMathematician
   tutorial_tlcmagic_name: Magical Book Magic
-  tutorial_scratchmus_name: Make Music with Scratch
-  tutorial_scratchanim_name: Animate Your Name with Scratch
-  tutorial_scratchfly_name: Make it Fly with Scratch
+  tutorial_scratchmus_name: Luo Musiikkia Scratchin avulla
+  tutorial_scratchanim_name: Animoi nimesi Scratchilla
+  tutorial_scratchfly_name: Make it Fly Scratchin avulla
   tutorial_tynkerarc_name: Undersea Arcade Game Kit
   tutorial_grokffpython_name: Frozen Fractals (Python Turtle)
   tutorial_grokffblock_name: Frozen Fractals (Blockly Turtle)
-  tutorial_grokeliza_name: Is Eliza Human? (Python)
+  tutorial_grokeliza_name: Onko Eliza ihminen? (Python)
   tutorial_tynkercan_name: Physics Cannon 2-Player Game Kit
-  tutorial_grokflags_name: Flags of the World (Python Turtle)
-  tutorial_robomind_name: Program a virtual robot with RoboMind
-  tutorial_scratchanimwork_name: 'Animate Your Name: Educator Guide'
+  tutorial_grokflags_name: Maailman Liput (Python Turtle)
+  tutorial_robomind_name: Ohjelmoi virtuaalirobotti RoboMindin avulla
+  tutorial_scratchanimwork_name: 'Animoi nimesi: Opettajan Opas'
   tutorial_adventureq_name: Adventure with Q
-  tutorial_khan-es_name: An introduction to JavaScript
-  tutorial_kpt_name: An introduction to JavaScript
-  tutorial_kpl_name: An introduction to JavaScript
-  tutorial_khe_name: An introduction to JavaScript
-  tutorial_kfr_name: An introduction to JavaScript
-  tutorial_app-inventor_name: AppInventor Hour of Code
+  tutorial_khan-es_name: Johdanto JavaScript kieleen
+  tutorial_kpt_name: Johdanto JavaScript kieleen
+  tutorial_kpl_name: Johdanto JavaScript kieleen
+  tutorial_khe_name: Johdanto JavaScript kieleen
+  tutorial_kfr_name: Johdanto JavaScript kieleen
+  tutorial_app-inventor_name: AppInventor Koodaustunti
   tutorial_bits_name: Bits and bricks
   tutorial_blockly_name: Blockly Games Offline
-  tutorial_tynker_name: Build your own game
+  tutorial_tynker_name: Tee oma peli
   tutorial_baypt_name: Code Baymax
   tutorial_code-combat_name: CodeCombat
   tutorial_mky_name: CodeMonkey
@@ -1253,11 +1269,11 @@ fi:
   tutorial_ssw_name: Disney Star Wars
   tutorial_sswb_name: Disney Star Wars
   tutorial_kodable-unplugged_name: fuzzFamily Frenzy
-  tutorial_scratch_name: Get creative with coding
+  tutorial_scratch_name: Ala luovaksi koodaten
   tutorial_bayes_name: Grandes Heroes
-  tutorial_gumball_name: Gumball Play Lab
-  tutorial_hrm_name: Human Resource Machine
-  tutorial_ice-age_name: Ice Age Play Lab
+  tutorial_gumball_name: Gumball Pelilabra
+  tutorial_hrm_name: Henkilöstökone
+  tutorial_ice-age_name: Ice Age Pelilabra
   tutorial_koapp_name: Kodable (myös lukutaidottomille)
   tutorial_lightbot-intl_name: 'Lightbot
 
@@ -1274,31 +1290,37 @@ fi:
   tutorial_thinkersmith-es_name: Mis Amigos Roboticos
   tutorial_pixie_name: PIXIE Challenges
   tutorial_play_name: Pelilabra
-  tutorial_robomind-nl_name: Program a virtual robot
-  tutorial_spheroi_name: 'Blocks 1: Intro'
-  tutorial_spherol_name: 'Blocks 3: Lights'
-  tutorial_spherov_name: 'Blocks 4: Variables'
+  tutorial_robomind-nl_name: Ohjelmoi virtuaalirobotti
+  tutorial_spheroi_name: 'Blocks 1: Johdanto'
+  tutorial_spherol_name: 'Blocks 3: Valot
+
+'
+  tutorial_spherov_name: 'Blocks 4: Muuttujat
+
+'
   tutorial_swb_name: 'Tähtien Sota: Koodista Galaksiksi'
   tutorial_build-a-galaxy_name: 'Tähtien Sota: Koodista Galaksiksi'
-  tutorial_alicesims_name: Storyboarding and Programming with Alice and The Sims
-  tutorial_tchr_name: Teacher Led Lesson Plans
-  tutorial_robogame_name: The Robot Games
-  tutorial_tap_name: Tynker on Tablets
+  tutorial_alicesims_name: Kuvakäsikirjoitus ja ohjelmointi Alicen ja The Simsin kanssa
+  tutorial_tchr_name: Opettajan Johtamat Opetussuunnitelmat
+  tutorial_robogame_name: Robottipeli
+  tutorial_tap_name: Tynker - tableteilla
   tutorial_cintl_name: Kirjoita ensimmäinen oma tietokoneohjelmasi
-  tutorial_itchstop_name: ITCH Stop Frame Animation (Scratch)
-  tutorial_tynkerpn_name: 'Peep: Nature Walk'
-  tutorial_tynkerpd_name: 'Peep: Dance with Friends'
-  tutorial_persistence_name: 'Persistence: Building a Foundation'
+  tutorial_itchstop_name: ITCH Stop Frame -animaatio (naarmu)
+  tutorial_tynkerpn_name: 'Peep: Nature Walk
+
+'
+  tutorial_tynkerpd_name: 'Peep: Tanssi Ystävien Kanssa'
+  tutorial_persistence_name: 'Sitkeys: Perustan Rakentaminen'
   tutorial_getloopy_name: Getting Loopy
   tutorial_createface_name: Create-a-Face
-  tutorial_happymaps_name: Happy Maps
-  tutorial_moveit_name: Move it, Move it!
-  tutorial_bigevent_name: The Big Event
-  tutorial_gpp_name: Graph Paper Programming
-  tutorial_foosgame_name: codeSpark Academy with the Foos - GameMaker
-  tutorial_solopython_name: My First Python Code
-  tutorial_kodableint_name: Introduction to Programming
-  tutorial_kodableadv_name: Advanced Programming Concepts
+  tutorial_happymaps_name: Iloiset kartat
+  tutorial_moveit_name: Liikuta, liikuta!
+  tutorial_bigevent_name: Suuri tapahtuma
+  tutorial_gpp_name: Ruutupaperiohjelmointi
+  tutorial_foosgame_name: codeSpark Academy Foosin kanssa - GameMaker
+  tutorial_solopython_name: Ensimmäinen Python Koodini
+  tutorial_kodableint_name: Ohjelmoinnin Alkeet
+  tutorial_kodableadv_name: Edistyneet Ohjelmointikonseptit
   tutorial_tynkertj_name: Toxic Jungle
   tutorial_wolframa_name: Age in Days
   tutorial_wolframm_name: Random Melodies
@@ -1306,11 +1328,13 @@ fi:
   tutorial_wolframsph_name: Draw a Sphere
   tutorial_wolframp_name: Draw a Polygon
   tutorial_wolframn_name: Ninja Name Generator
-  tutorial_soloweb_name: Your First Webpage in an Hour!
-  tutorial_khanweb_name: 'Khan Academy: Webpages'
+  tutorial_soloweb_name: Ensimmäinen Nettisivusi Tunnissa!
+  tutorial_khanweb_name: 'Khan Academy: Nettisivut
+
+'
   tutorial_khandata_name: 'Khan Academy: Databases'
   tutorial_robomeshiq_name: Ohjelmoi VEX IQ -robotit Blocklyn avulla
-  tutorial_googlelogo_name: Create your own Google logo
+  tutorial_googlelogo_name: Luo oma Google-logosi
   tutorial_playtune_name: Play That Tune App
   tutorial_computeit_name: Compute it
   tutorial_codesterssj_name: Space Jokes
@@ -1321,7 +1345,7 @@ fi:
   tutorial_codestersh_name: Hedgehog Designs
   tutorial_codehsdigipixel_name: Digital Art in Pixels with CodeHS
   tutorial_ccbinary_name: Binary Hero
-  tutorial_codehsturtle_name: Program in Python with Tracy the Turtle
+  tutorial_codehsturtle_name: Luo Pythonia Tracy kilpikonnan kanssa
   tutorial_grokhd_name: Hydrangea Danger
   tutorial_grokem_name: Emoticon Madness
   tutorial_kodmaze_name: Maze Maker Challenges
@@ -1345,7 +1369,7 @@ fi:
   tutorial_switchglitch_name: 'Switch & Glitch: Robot Adventure'
   tutorial_codecar_name: Code Car Simulator
   tutorial_codesterscp_name: The Coordinate Plane
-  tutorial_grokpetblock_name: Virtual Pet (micro:bit Blockly)
+  tutorial_grokpetblock_name: Virtuaalilemmikki (mikro:bit Blocky)
   tutorial_techbim_name: Basic Image Manipulation
   tutorial_techfpp_name: Introduction to Functional Programming with Python
   tutorial_codesterscr_name: Cheer Routines
@@ -2920,9 +2944,9 @@ fi:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_dance2019_longdescription: Koodaa tanssijuhlat jakamaan ystäviesi kanssa.
-    Mukana Katy Perry, Shawn Mendes, Lil Nas X, Panic! Diskolla Jonas Brothers ja
-    monet muut!
+  tutorial_dance2019_longdescription: Koodaa tanssijuhlat ja jaa se ystäviesi kanssa.
+    Mukana Katy Perry, Shawn Mendes, Lil Nas X, Panic! at the Disco ja Jonas Brothers
+    ja monet muut!
   tutorial_danceparty_longdescription: Koodaa tanssibileet jakaaksesi se ystäviesi
     kanssa. Esittelyssä Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ja
     25 muuta!
@@ -5791,44 +5815,44 @@ fi:
     of code to bring the two villages together. Players will experience empathy and
     compassion for their neighbors, learn cooperation and inclusion, and embrace the
     diversity that makes us all uniquely special.
-  tutorial_dance2019_language: Arabia, kiina, tšekki, tanska, hollanti, englanti,
-    suomi, ranska, saksa, kreikka, hindi, unkari, indonesia, italia, japani, korea,
-    malesia, puola, portugali, ja 10 enemmän!
-  tutorial_danceparty_language: Englanti, arabia, katalaani, kiina, tšekki, tanska,
-    hollanti, suomi, ranska, saksa, kreikka, unkari, italia, japani, korea, norja,
-    puola, portugali, venäjä, espanja, ruotsi, thai, turkki ja vietnam
+  tutorial_dance2019_language: Arabia, Kiina, Tšekki, Tanska, Hollanti, Englanti,
+    suomi, Ranska, Saksa,Kreikka, Hindi, Unkari, Indonesia, Italia, Japani, Korea,
+    Malesia, Puola, Portugali, ja 10 muuta!
+  tutorial_danceparty_language: Englanti, Arabia, Katalaani, Kiina, Tšekki, Tanska,
+    Hollanti, Suomi, Ranska, Saksa, Kreikka, Unkari, Italia, Japani, Korea, Norja,
+    Puola, Portugali, Venäjä, Espanja, Ruotsi, Thai, Turkki ja Vietnam
   tutorial_chibitronics_language: Suomi
   tutorial_athlete_language: English, French, Spanish, Italian, Portuguese (Brazil)
-  tutorial_moana_language: Englanti, arabia, kiina (yksinkertaistettu), kiina (perinteinen)
-    tanska, hollanti, suomi, ranska, saksa, indonesia, italia, japani, korea, norja,
-    puola, polynesia (samoa), portugali, venäjä, espanja, ruotsi, turkki, Ukraina,
-    vietnam
-  tutorial_star-wars_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska,
-    hollanti, suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea,
-    norja, persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina
+  tutorial_moana_language: Englanti, Arabia, Kiina (yksinkertaistettu), Kiina (perinteinen)
+    Tanska, Hollanti, Suomi, Ranska, Saksa, Indonesia, Italia, Japani, Korea, Norja,
+    Puola, Polynesia (Samoa), Portugali, Venäjä, Espanja, Ruotsi, Turkki, Ukraina,
+    Vietnam
+  tutorial_star-wars_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska,
+    Hollanti, Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea,
+    Norja, Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina
     ja 19 muuta
   tutorial_gumadventure_language: English only
-  tutorial_mchoc_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_mchoc_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
   tutorial_vidnews_language: English only
-  tutorial_kodable-pre_language: Englanti, arabia, azerbaidžan, saksa, kreikka, espanja,
-    persia, ranska, indonesia, islanti, italia, korea, hollanti, norja, puola, portugali,
-    romania, venäjä, serbia, ruotsi, turkki, ukraina, kiina
+  tutorial_kodable-pre_language: Englanti, Arabia, Azerbaidžan, Saksa, Kreikka, Espanja,
+    Persia, Ranska, Indonesia, Islanti, Italia, Korea, Hollanti, Norja, Puola, Portugali,
+    Romania, Venäjä, Serbia, Ruotsi, Turkki, Ukraina, Kiina
   tutorial_highseas_language: English only
   tutorial_capython_language: English, Dutch, Spanish
-  tutorial_frzn_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_frzn_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
-  tutorial_cocom_language: Englanti, arabia, bulgaria, kiina, tšekki, tanska, hollanti,
-    ranska, saksa, kreikka, heprea, unkari, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, venäjä, espanja, ruotsi, turkki, ukraina, Vietnam ja
+  tutorial_cocom_language: Englanti, Arabia, Bulgaria, Kiina, Tšekki, Tanska, Hollanti,
+    Ranska, Saksa, Kreikka, Heprea, Unkari, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Venäjä, Espanja, Ruotsi, Turkki, Ukraina, Vietnam ja
     9 muuta
-  tutorial_play-lab_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska,
-    hollanti, suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea,
-    norja, persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina
+  tutorial_play-lab_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska,
+    Hollanti, Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea,
+    Norja, Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina
     ja 19 muuta
   tutorial_boxisland_language: English, Chinese, Croatian, Czech, Danish, Dutch, Finnish,
     French, German, Greek, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean,
@@ -5848,39 +5872,39 @@ fi:
     French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
     Malaysia, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian,
     Spanish, Swedish, Thai
-  tutorial_hoc_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_hoc_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
-  tutorial_code_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_code_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
   tutorial_tinspire_language: English only
   tutorial_itchbounceball_language: English only
   tutorial_vidclim_language: English only
   tutorial_matlab_language: English only
-  tutorial_flap_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_flap_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
-  tutorial_galaxy_language: Englanti, albaani, arabia, bosnia, kiina, kroatia, tšekki,
-    tanska, hollanti, ranska, saksa, heprea, indonesia, italia, japani, korea, persia,
-    puola, portugali, romania, venäjä, sloveeni, espanja, ruotsi, turkki, vietnam
-  tutorial_inf_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_galaxy_language: Englanti, Albaani, Arabia, Bosnia, Kiina, Kroatia, Tšekki,
+    Tanska, Hollanti, Ranska, Saksa, Heprea, Indonesia, Italia, Japani, Korea, Persia,
+    Puola, Portugali, Romania, Venäjä, Slovenia, Espanja, Ruotsi, Turkki, Vietnam
+  tutorial_inf_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
   tutorial_tynkersol_language: English only
   tutorial_itchg_language: English only
-  tutorial_como_language: Englanti, arabia, kiina, tšekki, ranska, saksa, kreikka,
-    heprea, japani, kazakstan, liettua, puola, portugali, venäjä, serbia, espanja,
-    turkki, ukraina
+  tutorial_como_language: Englanti, Arabia, Kiina, Tšekki, Ranska, Saksa, Kreikka,
+    Heprea, Japani, Kazakstan, Liettua, Puola, Portugali, Venäjä, Serbia, Espanja,
+    Turkki, Ukraina
   tutorial_processfound_language: English only
   tutorial_tynkerhomo_language: English only
-  tutorial_art_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_art_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
   tutorial_tynkerbrick_language: English only
   tutorial_itchbio_language: English only
@@ -5893,10 +5917,10 @@ fi:
   tutorial_tynkerapp_language: English only
   tutorial_tynkerpup_language: English only
   tutorial_livecode_language: English only
-  tutorial_cocomgame_language: Englanti, arabia, bulgaria, kiina, kroatia, tšekki,
-    tanska, hollanti, suomi, ranska, saksa, kreikka, heprea, italia, japani, korea,
-    norja, persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina,
-    vietnam ja 8 muuta
+  tutorial_cocomgame_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tšekki,
+    Tanska, Hollanti, Suomi, Ranska, Saksa, Kreikka, Heprea, Italia, Japani, Korea,
+    Norja, Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina,
+    Vietnam ja 8 muuta
   tutorial_tynkerspin_language: English only
   tutorial_code-avengers_language: English, Spanish, Dutch, Russian, Portuguese
   tutorial_tynkercq_language: English only
@@ -6073,14 +6097,14 @@ fi:
   tutorial_kodable-unplugged_language: English only
   tutorial_scratch_language: English only
   tutorial_bayes_language: Spanish
-  tutorial_gumball_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_gumball_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
   tutorial_hrm_language: Multiple
-  tutorial_ice-age_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_ice-age_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
   tutorial_koapp_language: Multiple
   tutorial_lightbot-intl_language: French, Russian, Brazilian Portuguese
@@ -6089,21 +6113,21 @@ fi:
   tutorial_minecraft-2016_language: Multiple
   tutorial_thinkersmith-es_language: Spanish
   tutorial_pixie_language: Spanish
-  tutorial_play_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_play_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
   tutorial_robomind-nl_language: Dutch
   tutorial_spheroi_language: English only
   tutorial_spherol_language: English only
   tutorial_spherov_language: English only
-  tutorial_swb_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska, hollanti,
-    suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea, norja,
-    persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina ja
+  tutorial_swb_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska, Hollanti,
+    Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea, Norja,
+    Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina ja
     19 muuta
-  tutorial_build-a-galaxy_language: Englanti, arabia, bulgaria, kiina, kroatia, tanska,
-    hollanti, suomi, ranska, saksa, kreikka, islanti, indonesia, italia, japani, korea,
-    norja, persia, puola, portugali, romania, venäjä, espanja, ruotsi, turkki, Ukraina
+  tutorial_build-a-galaxy_language: Englanti, Arabia, Bulgaria, Kiina, Kroatia, Tanska,
+    Hollanti, Suomi, Ranska, Saksa, Kreikka, Islanti, Indonesia, Italia, Japani, Korea,
+    Norja, Persia, Puola, Portugali, Romania, Venäjä, Espanja, Ruotsi, Turkki, Ukraina
     ja 19 muuta
   tutorial_alicesims_language: English only
   tutorial_tchr_language: English only

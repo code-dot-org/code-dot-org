@@ -12,7 +12,7 @@ title: Tunnin koodi-ohje alueille
 
 ## Get every school participating, every student learning!
 
-### 1. Saa paikallinen koulu mukaan
+### 1. Saa paikalliset koulut mukaasi
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 
