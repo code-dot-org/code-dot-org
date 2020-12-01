@@ -39,11 +39,10 @@ cn:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: 2020编程一小时即将来临！
+  hoc2020_ai_header: 探索人工智能
+  hoc2020_ai_description: 人工智能和机器学习正在影响我们的整个世界。加入我们，在一个新的视频系列中探索人工智能，用超过25种语言训练AI
+    for Oceans，讨论道德与人工智能，等等……
   hoc2019_header: 学习计算机科学，改变世界！
   hoc2019_header_line1_mobile: 学习计算机科学。
   hoc2019_header_line2_mobile: 改变世界！
@@ -469,7 +468,7 @@ cn:
     to express their creativity with computer science. Try your hand at the new tutorials.
     What will you create?
   social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_hoc_here: "《编程一小时》到了!"
   social_hoc2018_join: 编程一小时活动即将开始
   social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
@@ -1441,7 +1440,7 @@ cn:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Minecraft 中两个村庄的故事
   tutorial_danceparty_shortdescription: "  编写一个舞蹈派对，与你的朋友分享。Katy Perry、Madonna、J.
     Balvin、Sia、Keith Urban、Ciara 等超过 25 位歌手将为你带来精彩的表演！"
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
@@ -3937,11 +3936,7 @@ cn:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: 几个世纪以来，村民和灾厄村民们都在同一片土地上生活，但彼此之间很少有往来。而现在，您可以借助代码的力量，将两个村庄团结在一起。用户将体验到对友邻的同理心与同情心，了解协作与包容的概念，并拥抱内心的多样性，而这正是让你我独一无二的原因。
   tutorial_dance2019_language: 支持阿拉伯语、中文、捷克语、丹麦语、荷兰语、英语、芬兰语、法语、德语、希腊语、印地语、匈牙利语、印度尼西亚语、意大利语、日语、韩语、马来语、波兰语、葡萄牙语以及
     10 多门其他语言！
   tutorial_danceparty_language: 多个
@@ -4675,7 +4670,7 @@ cn:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: 英文
-  tutorial_meeempathy_language: 英文
+  tutorial_meeempathy_language: 中文、丹麦语、荷兰语、英语、法语、意大利语、日语、韩语、挪威语、葡萄牙语、西班牙语、瑞典语、土耳其语
   tutorial_dance2019_string_detail_grades: 二年级以上
   tutorial_danceparty_string_detail_grades: 二年级以上
   tutorial_chibitronics_string_detail_grades: 幼儿园到五年级
@@ -6864,7 +6859,7 @@ cn:
   tutorial_khan_string_detail_programming_languages: JavaScript
   tutorial_tynkerd_string_detail_programming_languages: Blocks
   tutorial_cdmy_string_detail_programming_languages: JavaScript
-  tutorial_codestersdance_string_detail_programming_languages: Python
+  tutorial_codestersdance_string_detail_programming_languages: 方块，Python
   tutorial_codestersbasketball_string_detail_programming_languages: Python
   tutorial_nclkarel_string_detail_programming_languages: Karel(简化的Python)
   tutorial_buildpong_string_detail_programming_languages: Blocks, Ready, Unity
@@ -6884,7 +6879,7 @@ cn:
   tutorial_knodsnake_string_detail_programming_languages: JavaScript
   tutorial_soccharater_string_detail_programming_languages: JavaScript
   tutorial_silent_string_detail_programming_languages: JavaScript
-  tutorial_robomesh_string_detail_programming_languages: Python
+  tutorial_robomesh_string_detail_programming_languages: 方块，Python
   tutorial_amaze_string_detail_programming_languages: Blocks, Ready, Unity
   tutorial_codestersds_string_detail_programming_languages: 方块
   tutorial_knodtext_string_detail_programming_languages: Python
@@ -7063,16 +7058,16 @@ cn:
   tutorial_soloweb_string_detail_programming_languages: HTML CSS
   tutorial_khanweb_string_detail_programming_languages: HTML & CSS
   tutorial_khandata_string_detail_programming_languages: SQL
-  tutorial_robomeshiq_string_detail_programming_languages: Python
+  tutorial_robomeshiq_string_detail_programming_languages: 方块，Python
   tutorial_googlelogo_string_detail_programming_languages: Blocks, Scratch
   tutorial_playtune_string_detail_programming_languages: 方块
   tutorial_computeit_string_detail_programming_languages: 不依赖语言
-  tutorial_codesterssj_string_detail_programming_languages: Python
+  tutorial_codesterssj_string_detail_programming_languages: 方块，Python
   tutorial_cmchat_string_detail_programming_languages: Python
   tutorial_tynkerdb_string_detail_programming_languages: Blocks
   tutorial_cmbuild_string_detail_programming_languages: CoffeeScript学习编写代码
   tutorial_robotrattle_string_detail_programming_languages: 方块
-  tutorial_codestersh_string_detail_programming_languages: Python
+  tutorial_codestersh_string_detail_programming_languages: 方块，Python
   tutorial_codehsdigipixel_string_detail_programming_languages: 不依赖语言
   tutorial_ccbinary_string_detail_programming_languages: 方块
   tutorial_codehsturtle_string_detail_programming_languages: Python
@@ -7085,8 +7080,8 @@ cn:
   tutorial_gfbloons_string_detail_programming_languages: 方块
   tutorial_raspipong_string_detail_programming_languages: Python
   tutorial_codehsvr_string_detail_programming_languages: JavaScript
-  tutorial_codesterstp_string_detail_programming_languages: Python
-  tutorial_codestersbb_string_detail_programming_languages: Python
+  tutorial_codesterstp_string_detail_programming_languages: 方块，Python
+  tutorial_codestersbb_string_detail_programming_languages: 方块，Python
   tutorial_gfcrossyroad_string_detail_programming_languages: 方块
   tutorial_googleww_string_detail_programming_languages: 方块
   tutorial_codehsjsapp_string_detail_programming_languages: JavaScript
@@ -7098,7 +7093,7 @@ cn:
   tutorial_hopcrossyroad_string_detail_programming_languages: 跳格子游戏
   tutorial_switchglitch_string_detail_programming_languages: 不依赖语言
   tutorial_codecar_string_detail_programming_languages: C/c++
-  tutorial_codesterscp_string_detail_programming_languages: Python
+  tutorial_codesterscp_string_detail_programming_languages: 方块，Python
   tutorial_grokpetblock_string_detail_programming_languages: 方块
   tutorial_techbim_string_detail_programming_languages: 不依赖语言
   tutorial_techfpp_string_detail_programming_languages: Python
@@ -7276,9 +7271,9 @@ cn:
   tutorial_sushicards_string_detail_programming_languages: 方块
   tutorial_codesparkcreate_string_detail_programming_languages: 方块
   tutorial_hardvsoft_string_detail_programming_languages: ''
-  tutorial_codestersecard_string_detail_programming_languages: Python
+  tutorial_codestersecard_string_detail_programming_languages: 方块，Python
   tutorial_codesterslogo_string_detail_programming_languages: Python
-  tutorial_codesterstshirt_string_detail_programming_languages: Python
+  tutorial_codesterstshirt_string_detail_programming_languages: 方块，Python
   tutorial_codewards_string_detail_programming_languages: CoffeeScript学习编写代码
   tutorial_olympics_string_detail_programming_languages: CoffeeScript学习编写代码
   tutorial_codinismhero_string_detail_programming_languages: Python
@@ -7508,7 +7503,7 @@ cn:
   tutorial_irobotguesscode_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_ozobotnouns_string_detail_programming_languages: Ozobot Color Codes
   tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
-  tutorial_blupants_string_detail_programming_languages: Python
+  tutorial_blupants_string_detail_programming_languages: 方块，Python
   tutorial_legodance_string_detail_programming_languages: 方块
   tutorial_nearpodcoding_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
@@ -7520,7 +7515,7 @@ cn:
   tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_codeguppydraw_string_detail_programming_languages: JavaScript
   tutorial_codejumper_string_detail_programming_languages: 未插电
-  tutorial_meeempathy_string_detail_programming_languages: Python
+  tutorial_meeempathy_string_detail_programming_languages: 方块，Python
   tutorial_scratchimagine_name: Imagine a World
   tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
   tutorial_googlehero_name: Code Your Hero
