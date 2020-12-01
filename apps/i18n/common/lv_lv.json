@@ -128,6 +128,7 @@
   "dropletBlock_mathRandom_description": "Atgriež gadījuma skaitli robežās no 0 (ieskaitot) līdz 1 (neieskaitot)",
   "dropletBlock_mathRandom_signatureOverride": "Matemātika.nejauša secība()",
   "dropletBlock_mathRound_param0": "x",
+  "dropletBlock_mathSqrt_param0": "x",
   "dropletBlock_randomNumber_description": "Atgriež gadījumskaitli diapazonā no min līdz max (ieskaitot).",
   "dropletBlock_randomNumber_param0": "minimālais",
   "dropletBlock_randomNumber_param0_description": "Mazākais atgrieztais skaitlis",

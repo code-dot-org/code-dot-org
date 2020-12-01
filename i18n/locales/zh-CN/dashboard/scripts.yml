@@ -15106,3 +15106,11 @@ zh-CN:
           lesson_groups:
             lesson group:
               display_name: 显示名称
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: 海洋环保中的人工智能
+            intro:
+              name: 介绍
+            visualizing:
+              name: 可视化数据

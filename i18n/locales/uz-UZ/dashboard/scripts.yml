@@ -187,6 +187,8 @@ uz:
               name: Funksiyalar
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
         k5concepts:
@@ -219,6 +221,12 @@ uz:
               name: Ro‘yxatlar
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
+        workshop-gamelab:
+          lessons:
+            Sprites:
+              name: Spraytlar
+            Input:
+              name: Kiritish
         coursee-ramp:
           lessons:
             Conditionals:
@@ -235,6 +243,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -251,6 +261,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -293,6 +305,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -301,6 +315,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -357,6 +373,8 @@ uz:
           lesson_groups:
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             The Artist:
               name: Rassom
@@ -375,6 +393,8 @@ uz:
               name: Estafetali dasturlash
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Spraytlar
             csf_functions:
               display_name: Funksiyalar
         express-2019:
@@ -387,6 +407,8 @@ uz:
               display_name: Funksiyalar
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             Relay Programming:
               name: Estafetali dasturlash
@@ -421,6 +443,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -441,6 +465,10 @@ uz:
           lessons:
             The Internet:
               name: Internet
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Spraytlar
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -521,6 +549,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -565,6 +595,8 @@ uz:
               display_name: Sikllar
             csf_conditionals:
               display_name: Shart buyruqlari
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             Conditionals:
               name: Shart buyruqlari
@@ -574,6 +606,8 @@ uz:
               display_name: Sikllar
             csf_conditionals:
               display_name: Shart buyruqlari
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             Conditionals:
               name: Shart buyruqlari
@@ -607,6 +641,8 @@ uz:
               name: Funksiyalar
             Text:
               name: Matn
+            Sprites:
+              name: Spraytlar
         coursea-2020:
           lesson_groups:
             csf_loops:
@@ -632,12 +668,16 @@ uz:
               name: Estafetali dasturlash
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Spraytlar
             csf_functions:
               display_name: Funksiyalar
         coursef-2020:
           lesson_groups:
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             Internet:
               name: Internet
@@ -651,6 +691,8 @@ uz:
               display_name: Funksiyalar
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_sprites:
+              display_name: Spraytlar
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -684,6 +726,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Sprite Properties:
               name: Sprait hususiyatlari
             Text:
