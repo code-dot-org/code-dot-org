@@ -2262,7 +2262,7 @@ class User < ActiveRecord::Base
   end
 
   # The number of times a user has attempted to join a section in the last 24 hours
-  # Returns nil if not section join attempts.
+  # Returns nil if no section join attempts.
   def num_failed_section_attempts
     properties['section_attempts']
   end
@@ -2288,8 +2288,8 @@ class User < ActiveRecord::Base
     num_failed_section_attempts >= 3
   end
 
-  # Failed section attemps reset every day
   def increment_section_attempts
+    # Failed section attemps reset after 24 hours
     if reset_section_attempts?
       reset_failed_section_attempts
     end
