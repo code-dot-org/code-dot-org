@@ -199,7 +199,7 @@ class FoormEditor extends React.Component {
       .done(result => {
         this.setState({
           lastValidated: moment().format(TIME_FORMAT),
-          validationError: false,
+          validationError: null,
           validationStarted: false
         });
       })
