@@ -281,6 +281,7 @@ en:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
     registered:  "You've registered for %{section_name}."
+    captcha_required: 'Please fill out the CAPTCHA to join this section.'
     error:
       signed_in: 'Please signout before proceeding'
       username_not_found: 'Username %{username} not found'
@@ -454,6 +455,7 @@ en:
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
       clear_response: 'Clear response'
+    student_code_view_diabled: 'Student code cannot be viewed for this activity.'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
