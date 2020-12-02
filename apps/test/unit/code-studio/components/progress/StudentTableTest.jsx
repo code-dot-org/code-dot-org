@@ -13,7 +13,7 @@ const MINIMUM_PROPS = {
 
 const levels = [
   {
-    id: 1,
+    id: 11,
     assessment: null,
     contained: false,
     driver: null,
@@ -27,7 +27,7 @@ const levels = [
     user_id: 1
   },
   {
-    id: 2,
+    id: 22,
     assessment: null,
     contained: false,
     driver: null,
