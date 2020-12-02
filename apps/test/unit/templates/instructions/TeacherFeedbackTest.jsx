@@ -129,7 +129,7 @@ describe('TeacherFeedback', () => {
       i18n.seenByStudent.restore();
     });
 
-    it.skip('displays nicely formatted date if student viewed teacher feedback', () => {
+    it('displays nicely formatted date if student viewed teacher feedback', () => {
       const today = new Date();
       const props = {
         ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,

@@ -1,47 +1,47 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: O‘qituvchi resurslari - MINECRAFT
 ---
 
-# MINECRAFT Hour of Code
+# MINECRAFT bilan Dasturlash soati
 
 {{ hoc_mc_video }}
 
 [col-50]
 
-## Teacher Resources
+## O‘qituvchi resurslari
 
-### Lesson Plans:
+### Dars rejasi:
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [MINECRAFT Dars rejasi](/files/minecraft-lp.pdf)
+- [Minecraft Hour of Code Voyage Aquatic - Minecraft Dasturlash soati Suvli Sayohat darsi uchun javoblar varag‘i va o‘qituvchilar uchun ko‘rsatmalar](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Minecraft Hour of Code Adventurer - Minecraft Dasturlash soati Kod Sarguzashti darsi uchun javoblar varag‘i va o‘qituvchilar uchun ko‘rsatmalar](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Minecraft Hour of Code Designer - Minecraft Dasturlash soati Dizayner darsi uchun javoblar varag‘i va o‘qituvchilar uchun ko‘rsatmalar](/files/minecraft-designer-answer-sheet.pdf)
+- [Qo‘shimcha muammolar](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### Qo‘shimcha mashg‘ulotlar:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Hour of Code - Dasturlash soatidan tashqarida](http://code.org/learn/beyond)
+- [Kompyuter fanlari asoslari: Kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### O‘qituvchilar uchun boshqa manbalar:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [Hour of Code: o‘qituvchilar uchun yo‘riqnoma](https://hourofcode.com/how-to)
+- [Muvaffaqiyatli o‘qituvchilardan eng yaxshi amaliyotlar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Jonli tadbir: [Dasturlash soati bo‘yicha o‘qituvchi uchun qo‘llanma](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Tadbirni rejalashtirishda va boshqarishda yordam beradigan manbalar](https://docs.com/hourofcode2016)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Umumlashma
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+Stiv yoki Aleksni ushbu Minecraft dunyosi bo‘ylab sarguzashtga olib borish uchun kod bloklaridan foydalaning.
 
-**Recommended Age Range:** 6+
+**Tavsiya etilgan yosh:** 6+
 
-**Technology Requirements:** Modern browsers + tablets
+**Talab etilgan texnologiyalar:** Zamonaviy brauzerlar+planshet
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>O‘quv qo‘llanmasini sinab ko‘ring</button></a>
 
 [/col-50]

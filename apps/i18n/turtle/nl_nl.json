@@ -61,7 +61,7 @@
   "lengthFeedback": "Het is goed, behalve de lengte van de beweging.",
   "lengthParameter": "lengte",
   "loopVariable": "teller",
-  "moveBackward": "ga achteruit met",
+  "moveBackward": "beweeg achteruit met",
   "moveEastTooltip": "Beweegt de kunstenaar naar het oosten.",
   "moveDirectionByPixels": "verplaats %1 met %2 pixels",
   "moveForward": "ga vooruit met",
