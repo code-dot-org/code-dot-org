@@ -46,10 +46,10 @@ id:
         gender: 'Jenis kelamin'
         edit_header: 'Edit rincian akun'
         finish_sign_up_header: 'Selesaikan pembuatan akun Anda'
-        finish_sign_up_subheader: 'Isilah informasi berikut untuk menyelesaikan pembuatan akun Code.org untuk <strong>%{email}</strong>.'
-        finish_sign_up_subheader_markdown: 'Isilah informasi berikut untuk menyelesaikan pembuatan akun Code.org untuk **%{email}**.'
-        finish_sign_up_subheader_provider: 'Isilah informasi berikut untuk menyelesaikan pembuatan akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider_markdown: 'Isilah informasi berikut untuk menyelesaikan pembuatan akun Code.org dengan **%{provider}** untuk **%{email}**.'
+        finish_sign_up_subheader: 'Isikan informasi berikut untuk menyelesaikan pembuatan akun Code.org untuk <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Isikan informasi berikut untuk menyelesaikan pembuatan akun Code.org untuk **%{email}**.'
+        finish_sign_up_subheader_provider: 'Isikan informasi berikut untuk menyelesaikan pembuatan akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Isikan informasi berikut untuk menyelesaikan pembuatan akun Code.org dengan **%{provider}** untuk **%{email}**.'
         reset_password_token: "Tautan pengaturan ulang kata sandi yang telah Anda ikuti"
         error:
           future: tidak mungkin di masa depan
@@ -156,8 +156,6 @@ id:
     invalid_password: "Kata sandi harus minimal 6 karakter"
     mismatch_password: "kedua password yang anda masukkan tidak sama"
     student_consent: "Saya mengonfirmasi bahwa saya telah menerima izin dari orang tua atau wali saya untuk menggunakan layanan Code.org."
-    agree_us_website: "Saya setuju untuk menggunakan sebuah situs web yang berbasis di Amerika Serikat."
-    my_data_to_us: "Data dari penggunaan saya atas situs ini dapat dikirimkan ke dan disimpan atau diproses di Amerika Serikat."
     agree_us_data_transfer_student: '**Saya setuju bahwa Code.org dapat mengirim data (termasuk data pribadi) dari penggunaan situs ini ke Amerika Serikat** untuk tujuan hosting dan pemrosesan data terkait.'
     agree_us_data_transfer_teacher: '**Saya setuju bahwa Code.org dapat mengirim data (termasuk data pribadi) dari penggunaan situs ini oleh saya (dan murid saya) ke Amerika Serikat** untuk tujuan hosting dan pemrosesan data terkait.'
     data_collection_us: "Saya mengetahui bahwa Code.org adalah situs web nirlaba yang berbasis di AS dan hukum yang mengatur pengumpulan data di AS mungkin berbeda dari hukum di negara saya."
@@ -808,8 +806,8 @@ id:
       opt_out: "Memilih untuk tidak menjawab"
     submit: "Kirim"
     decline: "Tutup"
-  zendesk_too_young_message: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau minta orang tua Anda  atau guru Anda untuk menghubungi kami. u.'
-  zendesk_too_young_message_markdown: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses [support.code.org](http://support.code.org) tanpa masuk atau minta orang tua Anda atau guru Anda untuk menghubungi kami. u.'
+  zendesk_too_young_message: 'Maaf, pengguna muda tidak bisa masuk ke situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau meminta orang tua atau guru Anda untuk menghubungi kami.'
+  zendesk_too_young_message_markdown: 'Maaf, pengguna muda tidak bisa masuk ke situs pendukung kami. Anda dapat mengakses [support.code.org](http://support.code.org) tanpa masuk atau meminta orang tua atau guru Anda untuk menghubungi kami.'
   progress:
     not_started: belum dimulai
     in_progress: sedang berlangsung
@@ -824,114 +822,114 @@ id:
     all_courses: "Semua kursus"
   project:
     projects: "Proyek"
-    create: "Buat proyek"
+    create: "Buat Proyek"
     create_a_project: 'Buat proyek baru:'
-    new: "Buat baru"
+    new: "Buat Baru"
     exit: "Kembali ke Kursus"
     project_gallery: "Proyek"
     publish: "Publikasikan"
-    unpublish: "Tidak dipublikasikan"
+    unpublish: "Batal publikasi"
     share_title: Bagikan proyek Anda
-    share_copy_link: "Salin link:"
-    share_embed_description: "Anda dapat menyisipkan kode embed ke sebuah halaman HTML untuk menampilkan proyek pada sebuah halaman web."
-    share_u13_warning: "Tanyakan guru Anda sebelum berbagi. Hanya berbagi dengan orang lain di sekolah Anda."
+    share_copy_link: "Salin tautan:"
+    share_embed_description: "Anda dapat menempelkan kode sisipan ke halaman HTML untuk menampilkan proyek di halaman web."
+    share_u13_warning: "Tanyakan guru Anda sebelum berbagi. Hanya berbagi dengan teman sekolah Anda."
     embed: "Sisipan"
     advanced_share: "Tampilkan opsi lanjutan"
     no_projects: "Anda saat ini tidak memiliki proyek. Klik salah satu tombol di atas untuk memulai sebuah proyek."
     name: "Nama"
     updated: "Diperbarui"
-    project_type: "Jenis proyek"
-    help_text: "Klik <strong>Buat aplikasi</strong> atau <strong>Menggambar sesuatu</strong> di bawah ini untuk membuat sebuah proyek Play Lab  atau artis baru! <br/>Anda dapat kembali dan bekerja pada proyek Anda setiap saat."
-    need_help: "Perlu bantuan untuk memulai?"
-    thumbnail_help: "Tidak melihat thumbnail yang benar untuk proyek Anda? Jalankan aplikasi Anda untuk menghasilkan gambar mini baru. Catatan bahwa proses ini memerlukan beberapa jam agar thumbnail dapat disegarkan di mana-mana."
+    project_type: "Jenis Proyek"
+    help_text: "Klik<strong>Buat Aplikasi</strong> atau <strong>Gambar Sesuatu</strong> di bawah untuk memulai proyek baru!<br/>Anda dapat kembali dan mengerjakan proyek kapan saja."
+    need_help: "Coba kursus ini untuk membantu Anda memulai proyek baru"
+    thumbnail_help: "Tidak melihat gambar mini yang benar untuk proyek Anda? Jalankan aplikasi Anda untuk menghasilkan gambar mini baru. Catat bahwa proses ini memerlukan beberapa jam agar gambar mini dapat disegarkan di semua platform."
     saved: "Disimpan"
     not_saved: "Tidak disimpan"
-    view_all: 'Lihat proyek saya'
-    edit_project: 'Sunting Proyek'
-    sharing_disabled: "Maaf, proyek ini tidak tersedia untuk dibagikan. Jika ini adalah proyek Anda atau proyek salah satu siswa Anda, <a href='https://studio.code.org/users/sign_in'>masuk</a>ke akun Anda untuk melihat proyek."
+    view_all: 'Lihat Proyek Saya'
+    edit_project: 'Edit Proyek'
+    sharing_disabled: "Maaf, proyek ini tidak tersedia untuk dibagikan. Jika proyek ini milik Anda atau proyek salah satu murid Anda, <a href='https://studio.code.org/users/sign_in'>masuk</a>ke akun Anda untuk melihat proyek."
     abuse:
-      tos: "Proyek ini telah dilaporkan atas pelanggaran<a href='http://code.org/tos'> Syarat Layanan</a> Code.org dan tidak dapat dibagikan kepada orang lain."
-      policy_violation: "Proyek ini berisi informasi yang tidak dapat dibagikan dengan orang lain. Silahkan hubungi pemilik aplikasi untuk memperbaiki konten aplikasi mereka."
-      contact_us: "Jika kamu yakin ini adalah sebuah kesalahan, mohon <a href='https://code.org/contact'> hubungi kami.</a>"
-      go_to_code_studio: 'Pergi ke Code Studio'
+      tos: "Proyek ini telah dilaporkan karena melanggar <a href='http://code.org/tos'>Ketentuan Layanan</a> Code.org dan tidak dapat dibagikan kepada orang lain."
+      policy_violation: "Proyek ini berisi informasi yang tidak dapat dibagikan dengan orang lain. Silakan hubungi pemilik aplikasi untuk memperbaiki konten aplikasi."
+      contact_us: "Jika Anda yakin ini adalah kesalahan, <a href='https://code.org/contact'> hubungi kami.</a>"
+      go_to_code_studio: 'Buka Code Studio'
       report_abuse_form:
-        intro: 'Jika kamu menghadapi isi konten yang menyerang, berisi ancaman, cyber bully, pelecehan, atau praktek pelanggaran terhadap konten yang kamu miliki ketika menggunakan pembuat aplikasi di Code Studio, mohon lengkapi saja form di bawah ini. Kami akan menanggapi dengan serius laporan kamu, menginvestigasinya, dan akan mengambil tindakan yang tepat.'
+        intro: 'Jika Anda mendapati konten yang menyerang, ancaman, cyber bully, pelecehan, atau praktik pelanggaran hak cipta atas konten yang Anda miliki saat menggunakan aplikasi yang dibuat di Code Studio, mohon lengkapi formulir di bawah ini. Kami akan menanggapi serius laporan Anda, menginvestigasi seperlunya, dan mengambil tindakan yang tepat.'
         validation:
           email: 'Mohon isikan alamat email'
           age: 'Beritahu usia Anda'
-          abuse_type: 'Mohon berikan jawaban bagaimana konten ini melanggar syarat layanan'
+          abuse_type: 'Mohon jelaskan bentuk pelanggaran konten ini terhadap Ketentuan Layanan'
           abuse_detail: 'Mohon berikan rincian mengenai konten yang Anda laporkan'
         abusive_url: 'URL konten sudah dilaporkan'
         abuse_type:
-          question: 'Bagaimana bisa konten ini melanggar tautan%{link_start} Syarat Layanan %{link_end}?'
+          question: 'Bagaimana konten ini melanggar %{link_start} Ketentuan Layanan %{link_end}?'
           harassment: 'Ancaman, cyber bully, pelecehan'
           offensive: 'Konten yang menyerang'
-          infringement: 'Pelanggaran hak cipta'
+          infringement: 'Pelanggaran Hak Cipta'
           other: 'Lain'
         detail: 'Harap memberikan sedetail mungkin mengenai konten yang Anda laporkan.'
-        acknowledge: 'Dengan mengirimkan informasi ini, Anda mengakui ini akan di tangani sesuai dengan syarat %{link_start_privacy} kebijakan privasi%{link_end}dan%{link_start_tos}Syarat Layanantautan%{link_end}'
+        acknowledge: 'Dengan mengirimkan informasi ini, Anda mengakui ini akan di tangani sesuai dengan ketentuan %{link_start_privacy} Kebijakan Privasi%{link_end} dan %{link_start_tos}Ketentuan Layanan%{link_end}.'
   peer_review:
     accepted:
       name: 'Diterima'
       description_markdown: '**Ya**, masukan ini **memenuhi** persyaratan'
     rejected:
       name: 'Ditolak'
-      description_markdown: '**Tidak**, masukan ini **tidak memenhi** persyaratan'
+      description_markdown: '**Tidak**, masukan ini **tidak memenuhi** persyaratan'
     escalated:
-      name: 'Meningkat'
+      name: 'Dieskalasi'
       description: 'Saya ingin seorang instruktur untuk meninjau kiriman ini'
     instructor_feedback: 'Umpan balik instruktur'
-    peer_feedback: 'Peer Feedback'
-    outdated: 'Umpan balik ini telah ditambahkan sebelumnya diserahkan versi'
+    peer_feedback: 'Masukan Sejawat'
+    outdated: 'Masukan ini ditambahkan untuk versi yang dikirim sebelumnya'
     peer_review: 'Penelaahan Sejawat'
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan oleh Code.org.
-    disclaimer_text: Situs ini mungkin memiliki kebijakan privasi yang berbeda dari Code.org's. Kami telah memilih materi pembelajaran pihak ketiga ini karena kami pikir ini berguna bagi Anda. Meskipun kami tidak bertanggung jawab langsung atas konten situs web ini, <a href='%{support_url}'> Hubungi Dukungan </a> jika Anda mendapati konten tersebut tidak pantas, atau jika situs yang ditautkan tidak lagi tersedia.
+    disclaimer: Penafian
+    leaving_domain: Anda sekarang keluar dari domain ini menuju situs yang tidak dioperasikan oleh Code.org.
+    disclaimer_text: Situs ini mungkin memiliki kebijakan privasi yang berbeda dengan Code.org. Kami telah memilih materi pembelajaran pihak ketiga ini dengan pertimbangan kemanfaatannya bagi Anda. Meskipun kami tidak bertanggung jawab langsung atas konten situs web ini, <a href='%{support_url}'>hubungi Dukungan </a> jika Anda mendapati konten tersebut tidak pantas, atau jika situs yang ditautkan tidak lagi tersedia.
   hoc_download:
-    title: 'Kode download jam'
-    capsule_title: 'Apakah kamu mempunyai internet?'
-    capsule_desc: 'Gunakan secara online, berbasis web <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: 'Tidak ada internet?'
-    instructions: 'Petunjuk untuk guru: jika Anda mempunyai layanan Internet yang buruk, tutorial Hour of Code ini tersedia diunduh dan dipasang untuk penggunaan secara luring. Pilih bahasa dan platform Anda, unduh dan pasang di semua komputer di kelas Anda. Anda mungkin ingin menggunakan drive USB untuk mengunduh sekaligus dan memasang di semua komputer. Catatan: siswa tidak dapat masuk ke Code Studio, menyimpan kemajuan, atau mencetak sertifikat. Guru dapat mencetak sertifikat sebelumnya<a href="%{url}">disini</a>.'
+    title: 'Unduhan Hour of Code'
+    capsule_title: 'Apakah Anda punya akses internet?'
+    capsule_desc: 'Gunakan [%{app_name}](%{url}) online berbasis web.'
+    instructions_headline: 'Tidak Ada Internet?'
+    instructions: 'Petunjuk untuk guru: jika layanan Internet Anda buruk, tutorial Hour of Code ini siap diunduh dan diinstal untuk penggunaan offline. Pilih bahasa dan platform Anda, unduh dan instal di semua komputer di kelas Anda. Anda boleh menggunakan drive USB untuk mengunduh sekaligus dan menginstal di semua komputer. Catatan: murid tidak dapat login ke Code Studio, menyimpan kemajuan, atau mencetak sertifikat. Guru dapat mencetak sertifikat terlebih dahulu [here](%{url}).'
     minecraft_name: 'Minecraft Hour Of Code'
     starwars_blocks_name: 'Star Wars: Membangun Galaxy Dengan Kode (Blok)'
     starwars_javascript_name: 'Star Wars: Membangun Galaxy Dengan Kode (JavaScript)'
-    download_message: 'Unduh %{app_name} untuk penggunaan luring (136 Mb)'
+    download_message: 'Unduh %{app_name} untuk penggunaan offline (136 Mb)'
     download_in_Albanian: 'Unduh dalam bahasa Albania:'
     download_in_Arabic: 'Unduh dalam bahasa Arab:'
-    download_in_Azerbaijani: 'Unduh dalam bahasa Azerbaijani:'
+    download_in_Azerbaijani: 'Unduh dalam bahasa Azerbaijan:'
     download_in_Basque: 'Unduh dalam bahasa Basque:'
     download_in_Bosnian: 'Unduh dalam bahasa Bosnia:'
     download_in_Bulgarian: 'Unduh dalam bahasa Bulgaria:'
-    download_in_Catalan: 'Unduh dalam bahasa Catalunya:'
-    download_in_Chinese-Taiwan: 'Unduh dalam Bahasa Cina-Taiwan:'
-    download_in_Chinese: 'Unduh dalam bahasa Cina:'
+    download_in_Catalan: 'Unduh dalam bahasa Katala:'
+    download_in_Chinese-Taiwan: 'Unduh dalam Bahasa Mandarin-Taiwan:'
+    download_in_Chinese: 'Unduh dalam bahasa Mandarin:'
     download_in_Croatian: 'Unduh dalam bahasa Kroasia:'
-    download_in_Czech: 'Unduh dalam bahasa Ceko:'
-    download_in_Danish: 'Unduh dalam Bahasa Denmark:'
+    download_in_Czech: 'Unduh dalam bahasa Ceska:'
+    download_in_Danish: 'Unduh dalam bahasa Denmark:'
     download_in_Dutch: 'Unduh dalam bahasa Belanda:'
-    download_in_English: 'Unduh dalam Bahasa Inggris:'
+    download_in_English: 'Unduh dalam bahasa Inggris:'
     download_in_Finnish: 'Unduh dalam bahasa Finlandia:'
-    download_in_French: 'Unduh dalam bahasa Perancis:'
+    download_in_French: 'Unduh dalam bahasa Prancis:'
     download_in_German: 'Unduh dalam bahasa Jerman:'
     download_in_Greek: 'Unduh dalam bahasa Yunani:'
     download_in_Hebrew: 'Unduh dalam bahasa Ibrani:'
-    download_in_Hungarian: 'Unduh dalam bahasa Hungaria:'
+    download_in_Hungarian: 'Unduh dalam bahasa Hongaria:'
     download_in_Icelandic: 'Unduh dalam bahasa Islandia:'
-    download_in_Indonesian: 'Unduh di Indonesia:'
-    download_in_Irish: 'Unduh di Irlandia:'
-    download_in_Italian: 'Unduh di Italia:'
-    download_in_Japanese: 'Unduh di Jerpang:'
+    download_in_Indonesian: 'Unduh dalam bahasa Indonesia:'
+    download_in_Irish: 'Unduh dalam bahasa Irlandia:'
+    download_in_Italian: 'Unduh dalam bahasa Italia:'
+    download_in_Japanese: 'Unduh dalam bahasa Jepang:'
     download_in_Korean: 'Unduh dalam bahasa Korea:'
-    download_in_Latvian: 'Unduh di Latvian:'
-    download_in_Lithuanian: 'Unduh dalam bahasa Lithuania:'
-    download_in_Norwegian: 'Unduh di Norwegia:'
-    download_in_Norwegian-Nynorsk: 'Unduh di Norwegia-Nynorsk:'
+    download_in_Latvian: 'Unduh dalam bahasa Latvi:'
+    download_in_Lithuanian: 'Unduh dalam bahasa Lituavi:'
+    download_in_Norwegian: 'Unduh dalam bahasa Norwegia:'
+    download_in_Norwegian-Nynorsk: 'Unduh dalam bahasa Norwegia-Nynorsk:'
     download_in_Polish: 'Unduh dalam bahasa Polandia:'
     download_in_Portuguese-Brazil: 'Unduh dalam bahasa Portugis-Brasil:'
     download_in_Portuguese: 'Unduh dalam bahasa Portugis:'
-    download_in_Romanian: 'Unduh dalam bahasa Romania:'
+    download_in_Romanian: 'Unduh dalam bahasa Rumania:'
     download_in_Russian: 'Unduh dalam bahasa Rusia:'
     download_in_Serbian: 'Unduh dalam bahasa Serbia:'
     download_in_Slovenian: 'Unduh dalam bahasa Slovenia:'
@@ -942,39 +940,39 @@ id:
     download_in_Vietnamese: 'Unduh dalam bahasa Vietnam:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
-  locked_stage: 'Isi dari tahap ini tidak terlihat karena tahap ini saat ini terkunci. Guru Anda dapat membuka tahap ini saat ketika tiba waktu mengerjakannya atau meninjau kembali jawaban Anda.'
-  hidden_stage: "Guru Anda tidak mengharapkan Anda berada di sini. Silahkan tanyakan pada guru Anda pelajaran mana yang harus Anda ikuti."
-  hidden_script: "Guru Anda tidak mengharapkan Anda berada di sini. Silahkan tanyakan pada guru Anda ke unit mana Anda harus ikuti."
-  no_course_access_student: "Anda tidak memiliki akses untuk kursus ini. Mohon tanya guru Anda kursus mana yang Anda harus ikuti."
-  no_course_access_teacher: "Anda tidak memiliki akses untuk kursus ini. Jika Anda percaya Anda memiliki akses untuk kursus ini, silakan menulis kepada support@code.org agar kami dapat memperbaiki situasinya."
-  no_script_access_student: "Anda tidak punya akses ke unit ini. Silahkan bertanya pada guru unit mana yang harus aktif."
-  no_script_access_teacher: "Anda tidak punya akses ke unit ini. Jika Anda percaya Anda harus mengakses unit ini,silahkan menulis untuk mendukung @code.org sehingga ketika kita dapat memperbaiki situasi\n"
-  return_unit_overview: 'Pergi ke ikhtisar unit'
-  return_course_overview: 'Pergi ke ikhtisar kursus'
-  view_all_units: 'Melihat semua satuan'
+  locked_stage: 'Konten tahap ini tidak terlihat karena tahap ini saat ini terkunci. Guru Anda dapat membuka tahap ini ketika tiba saatnya mengerjakannya atau meninjau kembali jawaban Anda.'
+  hidden_stage: "Guru Anda tidak menduga Anda ada di sini. Silakan bertanya pada guru Anda pelajaran mana yang harus Anda ikuti."
+  hidden_script: "Guru Anda tidak menduga Anda ada di sini. Silakan bertanya pada guru Anda unit mana yang harus Anda ikuti."
+  no_course_access_student: "Anda tidak memiliki akses ke kursus ini. Silakan bertanya pada guru Anda kursus mana yang harus Anda ikuti."
+  no_course_access_teacher: "Anda tidak memiliki akses ke kursus ini. Jika Anda yakin seharusnya memiliki akses ke kursus ini, silakan menulis ke support@code.org agar kami dapat mengatasi masalahnya."
+  no_script_access_student: "Anda tidak punya akses ke unit ini. Silakan bertanya pada guru unit mana yang harus Anda ikuti."
+  no_script_access_teacher: "Anda tidak punya akses ke unit ini. Jika Anda yakin seharusnya memiliki akses ke unit ini, silakan menulis ke support@code.org agar kami dapat mengatasi masalahnya."
+  return_unit_overview: 'Buka ikhtisar unit'
+  return_course_overview: 'Buka ikhtisar kursus'
+  view_all_units: 'Tampilkan semua unit'
   view_teacher_guide: 'Lihat petunjuk guru'
   pd:
     form_labels:
       first_name: 'Nama Depan'
-      first_name_preferred: 'Pilihan nama pertama'
+      first_name_preferred: 'Nama Depan yang Disukai'
       last_name: 'Nama Belakang'
       email: 'email'
-      email_alternate: 'Email alternatif'
-      gender: 'Identitas gender'
+      email_alternate: 'Email Alternatif'
+      gender: 'Identitas Gender'
       school_name: 'Nama Sekolah'
       school_city: 'Kota sekolah'
       school_country: 'Negara Sekolah'
       colombian_school_city: 'Kota sekolah'
       colombian_school_name: 'Nama Sekolah'
-      ages: 'Umur berapa kamu mengajar tahun ini?'
-      subjects: 'Subjek mana kamu mengajar tahun ini?'
-      resources: 'Sumber daya pendidikan CS mana yang Anda gunakan?'
-      robotics: 'Sumber daya Robotika mana yang Anda gunakan?'
-      workshop_organizer: 'Penyelenggara lokakarya'
+      ages: 'Umur berapa yang Anda ajar tahun ini?'
+      subjects: 'Mata pelajaran apa yang Anda ajarkan tahun ini?'
+      resources: 'Manakah dari materi pembelajaran pendidikan CS berikut yang Anda gunakan?'
+      robotics: 'Manakah dari materi pembelajaran Robotika berikut yang Anda gunakan?'
+      workshop_organizer: 'Penyelenggara Lokakarya'
       workshop_facilitator: 'Fasilitator Lokakarya'
       workshop_course: 'Kursus Lokakarya'
-      email_opt_in: 'Bisa kami email Anda tentang Code.org''s program internasional, update ke kursus kami, atau Berita Sains komputer lainnya?'
-      legal_opt_in: 'Dengan menyerahkan formulir ini, Anda setuju untuk membiarkan Code.org untuk membagikan informasi tentang bagaimana Anda menggunakan Code.org dan materi pembelajaran profesional dengan Rekan Internasional Code.org di negara Anda, distrik sekolah, dan fasilitator. Kami akan membagikan informasi kontak Anda, kursus.unit mana yang Anda gunakan dan menghitung data tentang kelas Anda dengan rekan-rekan ini. Ini termasuk jumlah murid dalam kelas Anda, pembagian demografis dalam kelas Anda, dan nama sekolah dan distrik Anda. Kami tidak akan membagikan informasi apa pun tentang individu murid dengan rekan-rekan kami: semua informasi murid akan tidak-diidentifikasi atau dihitung. Rekan Internasional dan fasilitator kami diwajibkan secara kontrak untuk memperlakukan informasi ini dengan kerahasiaan yang sama seperti Code.org. '
+      email_opt_in: 'Bisakah kami mengirimi Anda email tentang program internasional Code.org, pembaruan kursus, atau berita ilmu komputer lainnya?'
+      legal_opt_in: 'Dengan mengirimkan formulir ini, Anda setuju untuk mengizinkan Code.org membagikan informasi tentang cara Anda menggunakan Code.org dan materi Pembelajaran Profesional kepada Rekan Internasional Code.org di negara Anda, rayon sekolah, dan fasilitator. Kami akan membagikan informasi kontak Anda, kursus/unit mana yang Anda gunakan, dan data agregat tentang kelas Anda kepada rekan-rekan di atas. Data agregat ini meliputi jumlah murid dalam kelas Anda, perincian demografis di kelas Anda, dan nama sekolah dan rayon Anda. Kami tidak akan membagikan informasi apa pun tentang murid perseorangan kepada rekan-rekan kami: semua informasi murid akan dihapus identifikasinya dan dibuat agregat. Rekan Internasional dan fasilitator kami terikat secara kontrak untuk menjaga kerahasiaan informasi ini sama seperti Code.org. '
     form_entries:
       gender:
         male: 'Laki-laki'
@@ -990,7 +988,7 @@ id:
         mexico: 'Meksiko'
         thailand: 'Thailand'
       ages:
-        ages_under_6: '6 tahun'
+        ages_under_6: '< 6 tahun'
         ages_7_8: '7- 8 tahun'
         ages_9_10: '9-10 tahun'
         ages_11_12: '11-12 tahun'
@@ -1020,7 +1018,7 @@ id:
         tynker: 'Tynker'
         other: "Lainnya:"
       robotics:
-        grok: 'Mempelajari Grok'
+        grok: 'Pembelajaran Grok'
         kodable: 'Kodable'
         lego: 'LEGO Education'
         microbit: 'Microbit'
@@ -1038,22 +1036,22 @@ id:
         opt_in_yes: 'Ya'
         opt_in_no: 'Tidak'
     international_opt_in:
-      title: 'Kehadiran Workshop'
-      intro: "Terima Anda telah meluangkan waktu untuk menerima pelatihan pada kurikulum Code.org. Misi kami untuk membawa kesempatan edukasi ilmu komputer kepada semua anak-anak di semua sekolah di seluruh dunia tak akan mungkin tanpa Anda."
-      instructions: "Tolong isi formulir di bawah untuk menunjukkan bahwa 1) Anda menghadiri workshop pelatihan dijalani oleh salah satu rekan internasional Code.org, dan 2) Anda setuju untuk membagikan informasi Anda dengan rekan internasional kami di negara Anda agar mereka dapat membantu perjalanan Anda sebagai seorang guru ilmu komputer."
-      thanks_markdown: "Terima Anda untuk Menyerahkan! Kami menanti untuk membantu Anda selagi Anda mengenal kurikulum dan alat Code.org. Tolong terus bagikan pertanyaan dan masukan Anda dengan kami di [support@code.org](%{support_email_url}) atau dengan mempostingnya di [teacher forum](%{teacher_forum_url})!"
+      title: 'Kehadiran Lokakarya'
+      intro: "Terima kasih telah meluangkan waktu untuk menerima pelatihan tentang kurikulum Code.org. Misi kami untuk menghadirkan kesempatan pendidikan ilmu komputer kepada semua peserta didik di semua sekolah di seluruh dunia tidak mungkin terwujud tanpa Anda."
+      instructions: "Silakan isi formulir berikut untuk menunjukkan bahwa 1) Anda menghadiri workshop pelatihan yang diselenggarakan oleh salah satu rekan internasional Code.org, dan 2) Anda setuju untuk membagikan informasi Anda kepada rekan internasional kami di negara Anda agar dia dapat membantu proses Anda sebagai seorang guru ilmu komputer."
+      thanks_markdown: "Terima kasih sudah mengirimkan! Kami tak sabar untuk membantu Anda mengenal kurikulum dan alat Code.org. Silakan terus sampaikan pertanyaan dan masukan Anda kepada kami di [support@code.org](%{support_email_url}) atau dengan memposting di [forum guru](%{teacher_forum_url})!"
     logged_out:
-      heading: 'Terima Anda atas minat Anda pada Pembelajaran Profesional Program!'
-      body: 'Untuk mulai, Anda perlu masuk ke akun Code.org Anda. Jika Anda ingin informasi lebih lanjut tentang program ini sebelum memulai aplikasi, silakan periksa <a href="%{url}">Pembelajaran Profesional Program overview</a>.'
+      heading: 'Terima kasih sudah berminat pada Program Pembelajaran Profesional!'
+      body: 'Untuk memulai, terlebih dahulu Anda perlu login ke akun Code.org Anda. Jika Anda ingin informasi lebih lanjut tentang program sebelum memulai aplikasi, silakan baca <a href="%{url}">ikhtisar Program Pembelajaran Profesional</a>.'
     not_teacher:
-      body_markdown: 'Terima kasih untuk ketertarikan Anda dalam Pembelajaran Profesional Program Code.org! Anda sedang terdaftar ke dalam akun murid. Silakan buat akun guru atau [go to your user settings](%{user_settings}) untuk mengubah akun Anda dari murid menjadi guru.'
-      more_markdown: 'a Anda ingin informasi lebih lanjut tentang program ini sebelum memulai aplikasi, silakan periksa [Pembelajaran Profesional Program overview](%{pl_overview}).'
+      body_markdown: 'Terima kasih sudah tertarik dengan Program Pembelajaran Profesional Code.org! Anda saat ini masuk ke dalam akun murid. Silakan buat akun guru atau [buka pengaturan pengguna](%{user_settings}) untuk mengubah akun Anda dari murid ke guru.'
+      more_markdown: 'Jika Anda ingin informasi lebih lanjut tentang program ini sebelum memulai aplikasi, silakan baca [ikhtisar Program Pembelajaran Profesional](%{pl_overview}).'
     no_teacher_email:
-      body_markdown: 'Akun Anda tidak memiliki alamat email. Silakan [visit your account settings](%{user_registration}) Untuk menambahkan Alamat email Anda sebelum menyelesaikan formulir ini.'
-  courses_category: 'Seluruh kursus'
+      body_markdown: 'Akun Anda tidak memiliki alamat email. Silakan [buka pengaturan akun Anda](%{user_registration}) untuk menambahkan alamat email sebelum menyelesaikan formulir ini.'
+  courses_category: 'Kursus Lengkap'
   cookie_banner:
-    message: 'Dengan melanjutkan untuk menelusuri situs kami atau mengeklik "Saya setuju," Anda setuju dengan penyimpanan cookies pada komputer atau alat Anda.'
-    more_information: "Lihat Privacy Policy Code.org's."
+    message: 'Dengan melanjutkan penelusuran situs kami atau mengklik "Saya setuju," Anda menyetujui penyimpanan cookies di komputer atau perangkat Anda.'
+    more_information: "Lihat Kebijakan Privasi Code.org."
     accept: 'Saya setuju'
   page_not_found_title: "Halaman tidak ditemukan"
   page_not_found_header: '404: halaman tidak ditemukan'
@@ -1062,13 +1060,13 @@ id:
   copy: 'Salin'
   maker:
     google_oauth:
-      login_with_google: 'Masuk Maker App dengan Google'
-      enter_code: 'Mohon masukkan kode yang disediakan saat Anda masuk lewat Google pada browser standar Anda.'
-      copy_code: 'Silakan salin dan tempel kode ini dalam Maker App untuk masuk ke Code.org.'
-      error_token_expired: 'Token telah kadaluwarsa. Mohon masuk lagi untuk token baru.'
-      error_wrong_provider: 'Penyedia salah. Tolong pastikan Anda masuk ke dalam Google.'
-      error_invalid_user: 'Id pengguna salah. Silakan coba untuk masuk lagi.'
-      error_no_code: 'Mohon masukkan kode masuk Anda.'
+      login_with_google: 'Login ke Maker App dengan Google'
+      enter_code: 'Masukkan kode yang disediakan saat Anda masuk lewat Google pada browser default Anda.'
+      copy_code: 'Salin dan tempel kode ini dalam Maker App untuk login ke Code.org.'
+      error_token_expired: 'Token telah kedaluwarsa. Silakan login lagi untuk token baru.'
+      error_wrong_provider: 'Penyedia salah. Pastikan Anda login dengan Google.'
+      error_invalid_user: 'Id pengguna tidak valid. Silakan coba login lagi.'
+      error_no_code: 'Mohon masukkan kode login Anda.'
   parent_email_banner:
     text: "**Apakah Anda orang tua atau wali?** Tautkan email Anda ke akun ini untuk tetap mendapatkan info terkini mengenai kemajuan dan proyek anak Anda!"
     link_your_email: "Hubungkan email Anda"

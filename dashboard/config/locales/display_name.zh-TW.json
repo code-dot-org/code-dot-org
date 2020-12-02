@@ -395,9 +395,9 @@
         "CSD: Sprites in Game Lab": "影片：角色的介紹",
         "CSD: Sprites in Game Lab_2018": "影片：角色的介紹",
         "CSD: Sprites in Game Lab_2019": "影片：角色的介紹",
-        "Course E: Artist Project": "課程 E 小藝術家專案",
-        "Course E: Artist Project_2018": "課程 E 小藝術家專案",
-        "Course E: Artist Project_2019": "課程 E 小藝術家專案",
+        "Course E: Artist Project": "課程 E -小藝術家專案",
+        "Course E: Artist Project_2018": "課程 E -小藝術家專案",
+        "Course E: Artist Project_2019": "課程 E -小藝術家專案",
         "Course F: Artist Project - Revise_2018": "修訂小藝術家專案\n",
         "Course F: Artist Project_2018": "課程 F 小藝術家專案\n",
         "Course F: Artist Project_2019": "課程 F 小藝術家專案\n",
@@ -489,7 +489,7 @@
         "Video: Intro to CSS_2019": "影片：CSS 介紹",
         "courseA_video_Stevie": "Stevie 和 Big Project",
         "courseA_video_Stevie_2018": "Stevie 和 Big Project",
-        "courseB_video_Unspotted": "沒被發現的蟲蟲",
+        "courseB_video_Unspotted": "沒被發現的程式的錯誤（Bug）",
         "courseB_video_Unspotted_2018": "沒被發現的蟲蟲",
         "courseE_Dogger_2": "小狗示例\n",
         "courseF_artist_for1": "計次迴圈自由發揮（初級）",
@@ -613,7 +613,8 @@
         "csd u5 recommender sample_2019": "應用程式範例",
         "spritelab_extras_repeat": "好多妖精！",
         "CSD U1L01 TFMD_2018": "教學內容概覽",
-        "CSD U1L01 TFMD_2019": "教學內容概覽"
+        "CSD U1L01 TFMD_2019": "教學內容概覽",
+        "outbreak_freeplay": "自由發揮"
       }
     }
   }

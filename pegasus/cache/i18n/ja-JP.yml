@@ -1576,6 +1576,8 @@ ja-JP:
     とパートナーが開発した 100 以上のコンピューター科学のアクティビティを掲載しています。
   hoc_overview_partner_activities_link: アクティビティを表示
   hoc_overview_start_tutorial: はじめる
+  hoc_overview_more_resources: 遠隔クラスルームに関わる方法についての詳細リソースについては、[仮想Hour of Code](https://hourofcode.com/us/how-to/virtual)をホストするためのガイドをご覧ください。技術や接続の制限、あるいは全く無い生徒については、[パソコンを使わないHour
+    of Codeアクティビティー](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)のこのパケットをシェアしてください。
   hoc_overview_view_teacher_guide: 教師用ガイドを表示
   hoc2018_creativity_create: つくる
   hoc2018_creativity_hoc_coming: もうすぐHour of Codeです...
@@ -1657,6 +1659,9 @@ ja-JP:
   hoc2018_dance_video2: ダンスパーティー - イベント
   hoc2018_dance_video3: ダンスパーティー - プロパティ
   hoc2018_dance_video4: ダンスパーティー - 設定
+  hoc2018_mc_thank_microsoft: "  私たちは、すべての子供たちがコンピュータサイエンスと21世紀で成功するためのスキルを学ぶ機会を確保するために、マイクロソフトのビジョンと使命を支援してくださったことに感謝しています。
+    \ "
   homepage_slot_text_title_at_home: '自宅で学習する
 
 '
+  footer_powered_by_aws: Powered by Amazon Web Services

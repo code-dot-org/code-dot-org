@@ -15498,6 +15498,7 @@ en:
               name: Variables Make Demo
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+          name: csp7-2020
         csd2-projects-temp:
           title: CSD Web Projects - TEMP
           description_audience: ''
@@ -18339,6 +18340,7 @@ en:
           description_audience: ''
           description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
           description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          name: outbreak
         apps-for-good:
           lessons:
             Build an App for Good:

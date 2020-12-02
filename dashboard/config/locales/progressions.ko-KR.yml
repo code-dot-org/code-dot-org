@@ -9,14 +9,17 @@ ko:
       Animate Your Scene: 장면을 애니메이트 하라
       Artist Intro with JR Hildebrand: 아티스트 인트로 JR 힐데브랜드
       Artist Intro with JR Hildebrande: 아티스트 인트로 JR 힐데브랜드
-      Artist Project: 예술가 프로젝트
+      Artist Project: Artist Project
       'Artist: Variables': '화가: 변수'
       Attribution: 권한 정보
       Basic Conditionals: 기본 조건
+      Binary Numbers: 바이너리 수
+      Board Events: 보드 이벤트
       Board Input and Output: 보드 입력 및 출력
       Boolean Comparison: 부울 비교
       Build a Screen: 화면 작성하라
       Building an App: 앱 만들기
+      CS Discoveries Post-Course Survey: CS 발견 과정 후 설문 조사
       CS Discoveries Post-course Survey: CS 발견 과정 후 설문 조사
       Cake Defender: 케이크 디펜더
       Challenge Levels: 도전 레벨
@@ -25,9 +28,11 @@ ko:
       Checking for a Winner: 당첨자 확인
       Code Your Own Flappy Game: 자신만의 플래피 게임을 만들어보세요.
       Collector Game: 컬렉터 게임
+      Collisions: 충돌
       Collisions in Games: 게임에서의 충돌
       Color LEDs: 컬러 LED
       Combining Projects: 프로젝트 결합
+      Combining Representations: 표현 결합
       'Conditionals: If Statements': '조건: :"만약에" 문장들'
       'Conditionals: If and If/Else Statements': '조건: "만약에" 와 "만약에/다른" 문장들'
       Create Your Own Animation: 자신만의 애니메이션 만들기
@@ -35,6 +40,7 @@ ko:
       Create your project: 프로젝트 만들기
       Data Visualization: 데이터 시각화
       De-bugging with the Step Button: 스텝버튼으로 디버깅하기
+      Debugging: 디버깅
       Debugging with the Step Button: 스텝버튼으로 디버깅하기
       Demo Apps: 데모 앱
       Design Mode: 디자인 모드
@@ -42,6 +48,7 @@ ko:
       Events: 이벤트
       Events and Linking Screens: 이벤트 및 연결 화면
       Events and Properties: 이벤트 및 속성
+      Example Projects: 예제 프로젝트
       Example projects: 예제 프로젝트
       Expanding Personal Website: 개인 웹 사이트 확장
       Expanding Your Website: Expanding Your Website
@@ -60,7 +67,10 @@ ko:
       Free Play: 자유 플레이
       Functions: 함수
       Functions with Parameters: 함수(값 전달)
+      Getting Properties: 속성 얻기
+      Headings: 제목
       How to Create a Simple Function: 단순 함수를 만드는 방법
+      How to Make a Sprite: SAT 만드는 방법
       Ice Age Loops: 아이스 에이지 루프
       Images and Sounds: 이미지와 소리
       Input Examples: 입력 예제
@@ -68,10 +78,17 @@ ko:
       Intro to For Loops: 루프 소개
       Intro to Sprites: 스프라이트 소개
       Intro to Variables: 변수에 대한 소개
+      Introducing Sprite Lab: 스프라이트 랩 소개
+      Introduction to Arrays: 배열 소개
       Iteration and Parameters: 반복 및 매개변수
+      Keeping Data Secret: 데이터 기밀 유지
+      Keyboard Input: 키보드 인풋
       LED Apps: LED 어플
       Layout with CSS: CSS 레이아웃
+      Lesson Extras: Lesson Extras
       Light Show: 라이트 쇼
+      Linking Pages: 링크 페이지
+      Linking Screens: 화면 링크
       Lists: 리스트
       Loops with the Artist: 아티스트와의 루프
       Make it Interactive: 대화식으로 만들기
@@ -113,18 +130,22 @@ ko:
       Post-Course Survey Instructions: 과정 후 설문 조사 지침
       Practice: 연습
       Prediction: 예측
+      Programming with Rey and BB-8: 레이와 BB-8로 프로그래밍
       Programs that Repeat: 반복하는 프로그램
+      Project: 프로젝트
       Project - Background and Variables: 프로젝트 - 배경 및 변수
       Project - Sprites and Interactions: 프로젝트 - 스프라이트 및 상호작용
       Project Work: 프로젝트 작업
       Properties: 등록 정보
       RGB Exploration: RGB 탐험
       Reading Sensors: 센서 읽기
+      Reflection: 반영
       Repeat Blocks: 반복 블록
       Repeat Blocks with BB-8: BB-8로 블록 반복
       Repeat Blocks with the Artist: 아티스트와 블록 반복
       Repeat Unit Statements: 장치 문장 반복
       Repeat Until Statements: 장치 문장 반복
+      Representing Images: 이미지 표현
       Run a simulation: 시뮬레이션 실행
       Sample Programs: 샘플 프로그램
       Screen Design: 스크린 디자인
@@ -146,14 +167,17 @@ ko:
       The Artist in Code Studio: 코드 스튜디오 아티스트
       The Buzzer: 버저
       The Collector: 컬렉터
+      The Harvester: 수확인
       UI Element Properties: UI 요소 속성
       User Interface: 사용자 인터페이스
       Using Getters and Setters: 게터 및 세터 사용
       Using HTML Tags: HTML 태그 사용
       Using Random Numbers: 난수 사용
       Using the LED: LED 사용
+      Using the Repeat Block: 반복 블록 사용
       Using the Switch: 스위치 사용
       Velocity: 속도
+      Video: 비디오
       Warm Up: 워밍업
       Website Project: 웹사이트 프로젝트
       Wrap-up: 마무리

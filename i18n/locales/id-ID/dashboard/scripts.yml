@@ -16,7 +16,7 @@ id:
         csp_2019_category_name: Dasar dasar CS('19'20)
         cspexams_category_name: Aturan Tes Praktik CS
         csp17_category_name: Aturab CS('17-'18)
-        full_course_category_name: Seluruh kursus
+        full_course_category_name: Kursus Lengkap
         hoc_category_name: Jam kode
         math_category_name: Matematika
         research_studies_category_name: Studi Penelitian
@@ -137,7 +137,7 @@ id:
             Crowdsourcing:
               name: Sumber kerumunan
             Dice Race:
-              name: Dadu ras
+              name: Balap Dadu
             Digital Citizenship:
               name: Kewarganegaraaan Digital
             'Farmer: While Loops':
@@ -171,7 +171,7 @@ id:
             Artist:
               name: Artis
         hourofcode:
-          title: Labirin klasik
+          title: Labirin Klasik
           description: Coba dasar-dasar ilmu komputer dengan karakter dari Angry Birds, Plants vs. Zombies, dan Scrat from Ice Age!
           description_short: Coba dasar-dasar ilmu komputer dengan banyak karakter yang menyenangkan!
           lessons:
@@ -262,9 +262,9 @@ id:
           description: Sebuah seleksi dari level Kursus 4 untuk kegunaan testing.
           lessons:
             Binary:
-              name: Biner
+              name: Binary
             For Loops:
-              name: Untuk Pengulangan
+              name: For Loop
             Functions and Functions with Parameters:
               name: Fungsi dan Fungsi dengan Parameter
             Intro:
@@ -700,7 +700,7 @@ id:
             Controlling Memory with Variables:
               name: Mengontrol Memori dengan Variabel
             Creating Functions:
-              name: Fungsi membuat
+              name: Membuat Function
             Creating functions with Parameters:
               name: Membuat fungsi dengan parameter
             Digital Assistant Project:
@@ -718,7 +718,7 @@ id:
             Introducing Design Mode:
               name: Memasukkan mode desain
             Introduction to Arrays:
-              name: Pengenalan untuk array
+              name: Pengenalan Array
             Introduction to Conditional Logic:
               name: Pengantar Logika kondisional
             Introduction to Digital Assistants:
@@ -746,7 +746,7 @@ id:
             Using Variables in Apps:
               name: Menggunakan variabel dalam aplikasi
             While Loops:
-              name: Perulangan Selagi
+              name: While Loop
             Creating Functions with Parameters:
               name: Membuat fungsi dengan parameter
         algebraPD3:
@@ -1136,7 +1136,7 @@ id:
             Best Practices for Teaching Computer Science:
               name: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
             Computer Science Fundamentals:
-              name: Dasar-dasar ilmu komputer
+              name: Computer Science Fundamentals
             Getting Started:
               name: Dapat Dimulai
             Looking Ahead:
@@ -1628,7 +1628,7 @@ id:
             Image Scroller with Key Events:
               name: Penggulir Gambar dengan Event Kunci
             Introduction to Arrays:
-              name: Pengenalan untuk array
+              name: Pengenalan Array
             Loops and Simulations:
               name: Loop dan Simulasi
             'Practice PT: Create':
@@ -1636,7 +1636,7 @@ id:
             Processing Arrays:
               name: Pengolahan Array
             While Loops:
-              name: Perulangan Selagi
+              name: While Loop
         CSP-Unit3-Support:
           lessons:
             Chunk 1 Overview:
@@ -2029,7 +2029,7 @@ id:
             APIs and Function Parameters:
               name: API dan fungsi parameter
             Creating Functions:
-              name: Fungsi membuat
+              name: Membuat Function
             Creating functions with Parameters:
               name: Membuat fungsi dengan parameter
             Creativity in Algorithms:
@@ -2149,7 +2149,7 @@ id:
             Introducing Design Mode:
               name: Memasukkan mode desain
             Introduction to Arrays:
-              name: Pengenalan untuk array
+              name: Pengenalan Array
             Introduction to Conditional Logic:
               name: Pengantar Logika kondisional
             Introduction to Digital Assistants:
@@ -2169,7 +2169,7 @@ id:
             Using Variables in Apps:
               name: Menggunakan variabel dalam aplikasi
             While Loops:
-              name: Perulangan Selagi
+              name: While Loop
             Edited lessons ABOVE this line:
               name: Pelajaran editan DI ATAS garis ini
             Buttons and Events:
@@ -2640,7 +2640,7 @@ id:
         MikeTest:
           lessons:
             Artist Functions:
-              name: Fungsi Artis
+              name: Function Artis
             Sample Stage:
               name: Tahap Sampel
             The same thing with named levels:
@@ -2781,7 +2781,7 @@ id:
             Sequences & Algorithms:
               name: Urutan & Algoritma
             Unspotted Bugs:
-              name: Masalah tak Terlihat
+              name: Bug Tak Terlihat
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Bug yang Belum Diketemukan'
             'Events Unplugged: The Big Event':
@@ -2927,7 +2927,7 @@ id:
             'Artist: Nested Loops':
               name: 'Artis: Sarang Pengulangan'
             Bee Debugging:
-              name: Lebah Debugging
+              name: Debugging Lebah
             Bounce:
               name: Terpental
             Build a Game:
@@ -3175,13 +3175,13 @@ id:
         k5concepts:
           lessons:
             Binary:
-              name: Biner
+              name: Binary
             Conditionals:
               name: Kondisi
             Events:
               name: kegiatan
             For Loops:
-              name: Untuk Pengulangan
+              name: For Loop
             Functions:
               name: fungsi
             Functions with Parameters:
@@ -3189,11 +3189,11 @@ id:
             Loops:
               name: Loop
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Variables:
               name: variabel
             While Loops:
-              name: Perulangan Selagi
+              name: While Loop
         algebrapdnext:
           description: Mengajarkan aljabar melalui pemrograman fungsional
           lessons:
@@ -3251,7 +3251,7 @@ id:
 
                 Pelajaran ini mungkin akan membutuhkan dua periode perkuliahan atau lebih untuk diselesaikan. Dua masalah pertama mungkin cocok untuk satu periode perkuliahan, tetapi masalah ketiga perlu dialihkan ke hari kedua.
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
               description_student: Dalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Setelah menggodok berbagai kemungkinan definisi untuk komputer, murid di kelas bekerja berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster dan menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan grup murid merevisi poster mereka berdasarkan definisi baru.  
               description_teacher: 'Dalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Untuk memulai pelajaran, murid di kelas akan menggodok berbagai kemungkinan definisi untuk komputer dan menuliskan hasil penggodokan ini di papan. Selanjutnya, murid akan bekerja secara berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster. Grup murid ini akan meletakkan poster mereka di sekitar ruang kelas dan secara singkat menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan murid merevisi poster mereka berdasarkan definisi baru.  '
             Representing Information:
@@ -3670,8 +3670,8 @@ id:
               name: Survei Pascakursus CSD
         minecraft:
           title: Desainer Hour of Code Minecraft
-          description_short: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri.
-          description: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri.
+          description_short: Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda sendiri.
+          description: Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda sendiri.
           lessons:
             Minecraft Hour of Code Designer:
               name: Desainer Hour of Code Minecraft
@@ -3832,7 +3832,7 @@ id:
             Nested Loops in Bee:
               name: Nested Loop dalam Lebah
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Introduction:
               name: Pendahuluan
             Nested Loops Project in Artist:
@@ -3932,7 +3932,7 @@ id:
             The Power of Words:
               name: Kekuatan kata-Kata
             Songwriting with Parameters:
-              name: Penulisan lagu dengan Parameter
+              name: Penulisan Lagu dengan Parameter
             Introduction:
               name: Pendahuluan
             Ice Age Play Lab:
@@ -4118,7 +4118,7 @@ id:
             Prepare your snowflake for 3D printing:
               name: Persiapkan keping salju Anda untuk cetakan 3D
             Binary:
-              name: Biner
+              name: Binary
             Snowflakes:
               name: Keping salju
         sciencepd5:
@@ -4236,7 +4236,7 @@ id:
             Timed Loops:
               name: Loop Berwaktu
             For Loops:
-              name: Untuk Pengulangan
+              name: For Loop
             Physical Input:
               name: Input Fisik
             List and For Loops:
@@ -4290,7 +4290,7 @@ id:
             Sprites:
               name: Sprites
             Input:
-              name: Masukan
+              name: Input
             'Project: Interactive Card':
               name: 'Proyek: Kartu interaktif'
         csd5-draft:
@@ -4447,7 +4447,7 @@ id:
               description_student: Dengan menggunakan konsep daftar dari pelajaran sebelumnya, murid di kelas menulis program yang mengontrol LED sepuluh warna di Circuit Playground.
               description_teacher: Circuit Playground meliputi LED 10 warna di loop yang mengelilingi sisi luar. LED ini dapat diakses dalam code sebagai sebuah daftar yang disebut `colorLeds`. Dengan berpijak pada pemahaman tentang daftar dari pelajaran sebelumnya, murid menulis program yang mengontrol LED warna dengan mengaksesnya dari daftar.
             For Loops:
-              name: Untuk Pengulangan
+              name: For Loop
               description_student: Murid di kelas belajar mengulangi instruksi menggunakan _for loop_, mula-mula dengan mengontrol "robot" melalui kisi-kisi, dan kemudian di App Lab.
               description_teacher: Murid diperkenalkan dengan _for loop_ dalam pelajaran ini sebagai cara mengulang beberapa code dalam jumlah tertentu. Murid memulainya dengan aktivitas tanpa komputer menggunakan loop untuk menyetiri robot melintasi kisi-kisi. Setelah selesai, murid lantas memasukkan pengetahuan mereka ke dalam App Lab untuk menulis program yang mengandalkan pengulangan menggunakan _for loop_.
             Lists and For Loops:
@@ -4789,7 +4789,7 @@ id:
             Exploring Problem Solving:
               name: Eksplorasi Pemecahan Masalah
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
             Representing Information:
               name: Menunjukkan informasi
             Processing with Bits:
@@ -4849,7 +4849,7 @@ id:
             Exploring Problem Solving:
               name: Eksplorasi Pemecahan Masalah
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
             Inputs and Outputs:
               name: Masukan dan keluaran
             Processing:
@@ -5182,7 +5182,7 @@ id:
               description_student: Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!
               description_teacher: Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
               description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             Nested Loops in Artist:
@@ -5281,7 +5281,7 @@ id:
             For Loops in Artist:
               name: For Loop dalam Artis
             Songwriting with Parameters:
-              name: Penulisan lagu dengan Parameter
+              name: Penulisan Lagu dengan Parameter
             Conditionals and Functions in Bee:
               name: Conditional dan Function dalam Lebah
             Functions with Parameters in Artist:
@@ -5378,7 +5378,7 @@ id:
             Nested Loops with Frozen:
               name: Nested Loop dengan Frozen
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Functions in Harvester:
               name: Function dalam Pemanen
         coursef-2017:
@@ -5847,7 +5847,7 @@ id:
             For Loops in Artist:
               name: For Loop dalam Artis
             Songwriting with Parameters:
-              name: Penulisan lagu dengan Parameter
+              name: Penulisan Lagu dengan Parameter
             Functions in Bee:
               name: Fungsi dalam Lebah
             Functions with Parameters in Artist:
@@ -5889,7 +5889,7 @@ id:
             Building a Foundation:
               name: Membangun dasar
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Conditionals & Loops in Harvester:
               name: Kondisional & Loop dalam Pemanen
             Until Loops in Maze:
@@ -5975,7 +5975,7 @@ id:
             Using Simple Commands:
               name: Menggunakan perintah sederhana
             Creating Functions:
-              name: Fungsi membuat
+              name: Membuat Function
             Functions and Top-Down Design:
               name: Fungsi dan desain atas-bawah
             APIs and Function Parameters:
@@ -6093,7 +6093,7 @@ id:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Nested Loops with Frozen:
               name: Nested Loop dengan Frozen
             Intro to Conditionals with Farmer:
@@ -6148,7 +6148,7 @@ id:
             Events in Bounce:
               name: Event dalam Pantulan
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Nested Loops in Artist:
               name: Nested Loop dalam Artis
             Nested Loops Project in Artist:
@@ -6276,7 +6276,7 @@ id:
             Debugging with Scrat:
               name: Debugging dengan Scrat
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Loops in Artist (UPDATED!):
               name: Loop dalam Artis (DIPERBARUI!)
             Sarah test stage:
@@ -6405,7 +6405,7 @@ id:
             For Loops in Artist:
               name: For Loop dalam Artis
             Songwriting with Parameters:
-              name: Penulisan lagu dengan Parameter
+              name: Penulisan Lagu dengan Parameter
             Functions in Bee:
               name: Fungsi dalam Lebah
             Functions with Parameters in Artist:
@@ -6559,7 +6559,7 @@ id:
             Using Simple Commands:
               name: Menggunakan perintah sederhana
             Creating Functions:
-              name: Fungsi membuat
+              name: Membuat Function
             Functions and Top-Down Design:
               name: Fungsi dan desain atas-bawah
             APIs and Function Parameters:
@@ -6587,7 +6587,7 @@ id:
             Personal Innovations:
               name: Inovasi Pribadi
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
             Problem Solving with Big Data:
               name: Pemecahan masalah dengan Data Besar
             Programming - Hour of Code:
@@ -6793,7 +6793,7 @@ id:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Nested Loops with Frozen:
               name: Nested Loop dengan Frozen
             'Algorithms: Dice Race':
@@ -6885,7 +6885,7 @@ id:
             For Loops in Artist:
               name: For Loop dalam Artis
             Songwriting with Parameters:
-              name: Penulisan lagu dengan Parameter
+              name: Penulisan Lagu dengan Parameter
             Functions in Bee:
               name: Fungsi dalam Lebah
             Functions with Parameters in Artist:
@@ -6925,7 +6925,7 @@ id:
             Lights:
               name: Lampu
             For Loops:
-              name: Untuk Pengulangan
+              name: For Loop
             Lists and For Loops:
               name: List dan For Loop
             Timed Loops:
@@ -7209,7 +7209,7 @@ id:
           description_audience: 'Usia: 4-7'
           lessons:
             'Debugging: Unspotted Bugs':
-              name: Masalah tak Terlihat
+              name: Bug Tak Terlihat
               description_teacher: 'Pelajaran ini akan memandu murid menempuh langkah-langkah debugging.  Murid akan mempelajari pertanyaan krusial berikut: "Apa yang terjadi?  Apa yang semestinya terjadi? Apa pesan yang Anda tangkap darinya?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie dan Proyek Besar
@@ -7274,7 +7274,7 @@ id:
             Loops in Artist:
               name: Seni Stiker dengan Loop
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Nested Loops Project in Frozen:
               name: Proyek Nested Loop dalam Frozen
             'How it Works: The Internet':
@@ -7913,7 +7913,7 @@ id:
               description_student: Bersiaplah membuat karya hebat Anda berikutnya. Di sini Anda akan menggunakan loop `for` untuk membuat gambar yang membikin orang terkagum-kagum.
               description_teacher: Dalam pelajaran ini, murid terus berlatih loop 'for', kali ini bersama Artis. Murid akan menyelesaikan puzzle dengan menggabungkan ide-ide tentang variable, loop, dan loop 'for' untuk membuat desain yang kompleks. Pada akhir pelajaran, mereka berkesempatan membuat karya seni sendiri di level bermain bebas.
             Songwriting with Parameters:
-              name: Penulisan lagu dengan Parameter
+              name: Penulisan Lagu dengan Parameter
               description_student: Anda mungkin hendak merilis lagu tunggal berikutnya yang bakal laris! Dalam pelajaran ini, Anda akan belajar apa itu parameter dan caranya dalam membuat beberapa lagu yang sangat merdu!
               description_teacher: Salah satu struktur paling megah di dunia ilmu komputer adalah function. Function (kadang-kadang disebut prosedur) adalah program mini yang dapat Anda gunakan berulang-ulang di dalam program yang lebih besar. Pelajaran ini akan membantu murid secara intuitif memahami alasan mengapa penggabungan potongan code ke dalam function adalah sebuah praktik yang begitu berguna, dan cara mereka dapat menggunakan struktur tersebut meskipun potongan code sedikit berbeda.
             Functions in Bee:
@@ -8041,7 +8041,7 @@ id:
               description_student: 'Dalam pelajaran ini, murid di kelas menerapkan proses pemecahan masalah pada tiga masalah yang berbeda: pencarian kata, pengaturan tempat duduk untuk pesta ulang tahun, dan merencanakan wisata. Masalah semakin bertambah kompleks dan buruk definisinya untuk menitikberatkan betapa sangat membantunya proses pemecahan masalah ketika mengurai jenis masalah seperti ini.'
               description_teacher: "Dalam pelajaran ini, murid menerapkan proses pemecahan masalah pada tiga masalah yang berbeda agar dapat lebih memahami nilai setiap langkah. Mereka akan memecahkan masalah pencarian kata, mengatur tempat duduk untuk pesta ulang tahun, dan merencanakan wisata. Masalah semakin bertambah kompleks dan buruk definisinya untuk menitikberatkan betapa sangat membantunya proses pemecahan masalah ketika mengurai jenis masalah seperti ini. Pelajaran diakhiri dengan murid yang menceritakan pengalaman mereka dengan proses pemecahan masalah. Mereka akan memberi justifikasi pencantuman setiap langkah dan menggodok pertanyaan atau strategi yang dapat membantu mereka mendefinisikan masalah terbuka dengan lebih baik karena definisi masalah sering menjadi langkah paling penting.\\r\n\\r\nPelajaran ini mungkin akan membutuhkan dua periode perkuliahan atau lebih untuk diselesaikan. Dua masalah pertama mungkin cocok untuk satu periode perkuliahan, tetapi masalah ketiga perlu dialihkan ke hari kedua."
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
               description_student: Dalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Setelah menggodok berbagai kemungkinan definisi untuk komputer, murid di kelas bekerja berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster dan menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan grup murid merevisi poster mereka berdasarkan definisi baru.  
               description_teacher: "Dalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Untuk memulai pelajaran, murid di kelas akan menggodok berbagai kemungkinan definisi untuk komputer dan menuliskan hasil penggodokan ini di papan. Selanjutnya, murid akan bekerja secara berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster. Grup murid ini akan meletakkan poster mereka di sekitar ruang kelas dan secara singkat menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan murid merevisi poster mereka berdasarkan definisi baru.\\r"
             Input and Output:
@@ -8293,7 +8293,7 @@ id:
             Using Simple Commands:
               name: Menggunakan perintah sederhana
             Creating Functions:
-              name: Fungsi membuat
+              name: Membuat Function
             Functions and Top-Down Design:
               name: Fungsi dan desain atas-bawah
             APIs and Function Parameters:
@@ -8433,11 +8433,11 @@ id:
             Unit 5 Assessment 2:
               name: Unit 5 penilaian 2
             While Loops:
-              name: Perulangan Selagi
+              name: While Loop
             Loops and Simulations:
               name: Loop dan Simulasi
             Introduction to Arrays:
-              name: Pengenalan untuk array
+              name: Pengenalan Array
             'Building an App: Image Scroller':
               name: 'Membangun aplikasi: Gambar Scroller'
             Unit 5 Assessment 3:
@@ -8886,7 +8886,7 @@ id:
           description_audience: 'Usia: 4-8'
           lessons:
             'Debugging: Unspotted Bugs':
-              name: Masalah tak Terlihat
+              name: Bug Tak Terlihat
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie dan Proyek Besar
             'Real-life Algorithms: Plant a Seed':
@@ -9120,7 +9120,7 @@ id:
             csf_variables:
               display_name: variabel
             csf_for_loops:
-              display_name: Untuk Pengulangan
+              display_name: For Loop
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -9291,7 +9291,7 @@ id:
             csf_conditionals:
               display_name: Kondisi
             csf_binary:
-              display_name: Biner
+              display_name: Binary
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             end_of_course_project:
@@ -9390,7 +9390,7 @@ id:
             csf_impacts:
               display_name: Dampak dari Komputasi
             csf_nested_loops:
-              display_name: Perulangan bercabang
+              display_name: Nested Loop
             csf_functions:
               display_name: fungsi
             end_of_course_project:
@@ -9411,7 +9411,7 @@ id:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Nested Loops with Frozen:
               name: Nested Loop dengan Frozen
             Conditionals with Cards:
@@ -9555,7 +9555,7 @@ id:
             csf_variables:
               display_name: variabel
             csf_for_loops:
-              display_name: Untuk Pengulangan
+              display_name: For Loop
             csf_sprites:
               display_name: Sprites
           lessons:
@@ -9692,7 +9692,7 @@ id:
               description_student: 'Dalam pelajaran ini, murid di kelas menerapkan proses pemecahan masalah pada tiga masalah yang berbeda: pencarian kata, pengaturan tempat duduk untuk pesta ulang tahun, dan merencanakan wisata. Masalah semakin bertambah kompleks dan buruk definisinya untuk menitikberatkan betapa sangat membantunya proses pemecahan masalah ketika mengurai jenis masalah seperti ini.'
               description_teacher: "Dalam pelajaran ini, murid menerapkan proses pemecahan masalah pada tiga masalah yang berbeda agar dapat lebih memahami nilai setiap langkah. Mereka akan memecahkan masalah pencarian kata, mengatur tempat duduk untuk pesta ulang tahun, dan merencanakan wisata. Masalah semakin bertambah kompleks dan buruk definisinya untuk menitikberatkan betapa sangat membantunya proses pemecahan masalah ketika mengurai jenis masalah seperti ini. Pelajaran diakhiri dengan murid yang menceritakan pengalaman mereka dengan proses pemecahan masalah. Mereka akan memberi justifikasi pencantuman setiap langkah dan menggodok pertanyaan atau strategi yang dapat membantu mereka mendefinisikan masalah terbuka dengan lebih baik karena definisi masalah sering menjadi langkah paling penting.\\r\n\\r\nPelajaran ini mungkin akan membutuhkan dua periode perkuliahan atau lebih untuk diselesaikan. Dua masalah pertama mungkin cocok untuk satu periode perkuliahan, tetapi masalah ketiga perlu dialihkan ke hari kedua."
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
               description_student: Dalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Setelah menggodok berbagai kemungkinan definisi untuk komputer, murid di kelas bekerja berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster dan menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan grup murid merevisi poster mereka berdasarkan definisi baru.  
               description_teacher: "Dalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Untuk memulai pelajaran, murid di kelas akan menggodok berbagai kemungkinan definisi untuk komputer dan menuliskan hasil penggodokan ini di papan. Selanjutnya, murid akan bekerja secara berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster. Grup murid ini akan meletakkan poster mereka di sekitar ruang kelas dan secara singkat menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan murid merevisi poster mereka berdasarkan definisi baru.\\r"
             Input and Output:
@@ -9778,7 +9778,7 @@ id:
             csf_sequencing:
               display_name: Urutan
             csf_binary:
-              display_name: Biner
+              display_name: Binary
             csf_loops:
               display_name: Loop
             csf_events:
@@ -10681,7 +10681,7 @@ id:
             Using Simple Commands:
               name: Menggunakan perintah sederhana
             Creating Functions:
-              name: Fungsi membuat
+              name: Membuat Function
             Functions and Top-Down Design:
               name: Fungsi dan desain atas-bawah
             APIs and Function Parameters:
@@ -10775,11 +10775,11 @@ id:
             Unit 5 Assessment 2:
               name: Unit 5 penilaian 2
             While Loops:
-              name: Perulangan Selagi
+              name: While Loop
             Loops and Simulations:
               name: Loop dan Simulasi
             Introduction to Arrays:
-              name: Pengenalan untuk array
+              name: Pengenalan Array
             'Building an App: Image Scroller':
               name: 'Membangun aplikasi: Gambar Scroller'
             Unit 5 Assessment 3:
@@ -11870,7 +11870,7 @@ id:
             csd digital unplugged WIAC L3:
               name: csd digital unplugged WIAC L3
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
             Problem Solving Process:
               name: Proses Pemecahan Masalah
         fit2019-apprentice:
@@ -11930,7 +11930,7 @@ id:
               description_student: 'Dalam pelajaran ini, murid di kelas menerapkan proses pemecahan masalah pada tiga masalah yang berbeda: pencarian kata, pengaturan tempat duduk untuk pesta ulang tahun, dan merencanakan wisata. Masalah semakin bertambah kompleks dan buruk definisinya untuk menitikberatkan betapa sangat membantunya proses pemecahan masalah ketika mengurai jenis masalah seperti ini.'
               description_teacher: "Dalam pelajaran ini, murid menerapkan proses pemecahan masalah pada tiga masalah yang berbeda agar dapat lebih memahami nilai setiap langkah. Mereka akan memecahkan masalah pencarian kata, mengatur tempat duduk untuk pesta ulang tahun, dan merencanakan wisata. Masalah semakin bertambah kompleks dan buruk definisinya untuk menitikberatkan betapa sangat membantunya proses pemecahan masalah ketika mengurai jenis masalah seperti ini. Pelajaran diakhiri dengan murid yang menceritakan pengalaman mereka dengan proses pemecahan masalah. Mereka akan memberi justifikasi pencantuman setiap langkah dan menggodok pertanyaan atau strategi yang dapat membantu mereka mendefinisikan masalah terbuka dengan lebih baik karena definisi masalah sering menjadi langkah paling penting.\\r\n\\r\nPelajaran ini mungkin akan membutuhkan dua periode perkuliahan atau lebih untuk diselesaikan. Dua masalah pertama mungkin cocok untuk satu periode perkuliahan, tetapi masalah ketiga perlu dialihkan ke hari kedua."
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
               description_student: Dalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Setelah menggodok berbagai kemungkinan definisi untuk komputer, murid di kelas bekerja berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster dan menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan grup murid merevisi poster mereka berdasarkan definisi baru.  
               description_teacher: "Dalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Untuk memulai pelajaran, murid di kelas akan menggodok berbagai kemungkinan definisi untuk komputer dan menuliskan hasil penggodokan ini di papan. Selanjutnya, murid akan bekerja secara berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster. Grup murid ini akan meletakkan poster mereka di sekitar ruang kelas dan secara singkat menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan murid merevisi poster mereka berdasarkan definisi baru.\\r"
             Input and Output:
@@ -12491,7 +12491,7 @@ id:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
           lessons:
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
             Input and Output:
               name: Input dan Output
             Processing:
@@ -12570,7 +12570,7 @@ id:
             Loops in Artist:
               name: Loops in Artist
             Nested Loops:
-              name: Perulangan bercabang
+              name: Nested Loop
             Nested Loops Project in Frozen:
               name: Proyek Nested Loop dalam Frozen
             Events in Star Wars:
@@ -12642,7 +12642,7 @@ id:
             Getting Started:
               name: Dapat Dimulai
             Computer Science Fundamentals:
-              name: Dasar-dasar ilmu komputer
+              name: Computer Science Fundamentals
             Looking Ahead:
               name: Melihat ke depan
             'Mastering the Basics: Sequencing':
@@ -12700,7 +12700,7 @@ id:
             Variables:
               name: variabel
             For Loops:
-              name: Untuk Pengulangan
+              name: For Loop
             End-of-course projects:
               name: Proyek akhir-kursus
             Who is this section for?:
@@ -12846,7 +12846,7 @@ id:
             csf_conditionals:
               display_name: Kondisi
             csf_nested_loops:
-              display_name: Perulangan bercabang
+              display_name: Nested Loop
             csf_functions:
               display_name: fungsi
             end_of_course_project:
@@ -13392,7 +13392,7 @@ id:
               description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menerapkan proses pemecahan masalah pada berbagai jenis masalah yang berbeda?**\\r\n\\r\nDalam pelajaran ini, murid di kelas menerapkan proses pemecahan masalah pada tiga masalah yang berbeda: pencarian kata, pengaturan tempat duduk untuk pesta ulang tahun, dan merencanakan wisata. Masalah semakin bertambah kompleks dan buruk definisinya untuk menitikberatkan betapa sangat membantunya proses pemecahan masalah ketika mengurai jenis masalah seperti ini."
               description_teacher: "**Pertanyaan Hari Ini: Bagaimana kita bisa menerapkan proses pemecahan masalah pada berbagai jenis masalah yang berbeda?**\\r\n\\r\nDalam pelajaran ini, murid menerapkan proses pemecahan masalah pada tiga masalah yang berbeda agar dapat lebih memahami nilai setiap langkah. Mereka akan memecahkan pencarian kata, mengatur tempat duduk untuk pesta ulang tahun, dan merancang ulang ruang kelas. Masalah semakin bertambah kompleks dan buruk definisinya untuk menitikberatkan betapa sangat membantunya proses pemecahan masalah ketika mengurai jenis masalah seperti ini. Pelajaran diakhiri dengan murid yang menceritakan pengalaman mereka dengan proses pemecahan masalah. Mereka akan memberi justifikasi pencantuman setiap langkah dan menggodok pertanyaan atau strategi yang dapat membantu mereka mendefinisikan masalah terbuka dengan lebih baik karena definisi masalah sering menjadi langkah paling penting.\\r\n\\r\nPelajaran ini mungkin akan membutuhkan dua periode perkuliahan atau lebih untuk diselesaikan. Dua masalah pertama mungkin cocok untuk satu periode perkuliahan, tetapi masalah ketiga perlu dialihkan ke hari kedua."
             What is a Computer?:
-              name: Apa itu komputer?
+              name: Apa itu Komputer?
               description_student: "**Pertanyaan Hari Ini: Apa itu komputer?**\\r\n\\r\nDalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Setelah menggodok berbagai kemungkinan definisi untuk komputer, murid di kelas bekerja berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster dan menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan murid merevisi poster mereka berdasarkan definisi baru.  "
               description_teacher: "**Pertanyaan Hari Ini: Apa itu komputer?**\\r\n\\r\nDalam pelajaran ini, murid mengembangkan definisi awal tentang sebuah komputer. Untuk memulai pelajaran, murid di kelas akan menggodok berbagai kemungkinan definisi untuk komputer dan menuliskan hasil penggodokan ini di papan. Selanjutnya, murid akan bekerja secara berkelompok untuk mengurutkan gambar menjadi “adalah sebuah komputer” atau “bukan sebuah komputer” di kertas poster. Grup murid ini akan meletakkan poster mereka di sekitar ruang kelas dan secara singkat menjelaskan motivasi mereka dalam memilih beberapa kategorisasi yang paling sulit.  Guru kemudian memperkenalkan definisi komputer dan mempersilakan murid merevisi poster mereka berdasarkan definisi baru.\\r"
             Input and Output:
@@ -13978,7 +13978,7 @@ id:
             csf_sequencing:
               display_name: Urutan
             csf_binary:
-              display_name: Biner
+              display_name: Binary
             csf_loops:
               display_name: Loop
             csf_events:
@@ -14078,7 +14078,7 @@ id:
             csf_conditionals:
               display_name: Kondisi
             csf_binary:
-              display_name: Biner
+              display_name: Binary
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             end_of_course_project:
@@ -14176,7 +14176,7 @@ id:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_nested_loops:
-              display_name: Perulangan bercabang
+              display_name: Nested Loop
             csf_functions:
               display_name: fungsi
             csf_impacts:
@@ -14280,7 +14280,7 @@ id:
             csf_variables:
               display_name: variabel
             csf_for_loops:
-              display_name: Untuk Pengulangan
+              display_name: For Loop
             csf_sprites:
               display_name: Sprites
             end_of_course_project:
@@ -14390,7 +14390,7 @@ id:
             csf_variables:
               display_name: variabel
             csf_for_loops:
-              display_name: Untuk Pengulangan
+              display_name: For Loop
             csf_sprites:
               display_name: Sprites
             end_of_course_project:
@@ -14792,7 +14792,7 @@ id:
             Using Simple Commands:
               name: Menggunakan perintah sederhana
             Creating Functions:
-              name: Fungsi membuat
+              name: Membuat Function
             Functions and Top-Down Design:
               name: Fungsi dan desain atas-bawah
             APIs and Function Parameters:
@@ -14928,11 +14928,11 @@ id:
             Unit 5 Assessment 2:
               name: Unit 5 penilaian 2
             While Loops:
-              name: Perulangan Selagi
+              name: While Loop
             Loops and Simulations:
               name: Loop dan Simulasi
             Introduction to Arrays:
-              name: Pengenalan untuk array
+              name: Pengenalan Array
             'Building an App: Image Scroller':
               name: 'Membangun aplikasi: Gambar Scroller'
             Unit 5 Assessment 3:
@@ -15180,11 +15180,11 @@ id:
             Unit 5 Assessment 2:
               name: Unit 5 penilaian 2
             While Loops:
-              name: Perulangan Selagi
+              name: While Loop
             Loops and Simulations:
               name: Loop dan Simulasi
             Introduction to Arrays:
-              name: Pengenalan untuk array
+              name: Pengenalan Array
             'Building an App: Image Scroller':
               name: 'Membangun aplikasi: Gambar Scroller'
             Unit 5 Assessment 3:
@@ -15221,7 +15221,7 @@ id:
             Variables:
               name: variabel
             For Loops:
-              name: Untuk Pengulangan
+              name: For Loop
             Sprite Lab:
               name: Sprite Lab
             Reviewing your reflections:
@@ -15410,3 +15410,11 @@ id:
               name: Kursus B
             CS Discoveries:
               name: CS Discoveries
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI for Oceans
+            intro:
+              name: Pendahuluan
+            visualizing:
+              name: Membayangkan data

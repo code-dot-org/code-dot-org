@@ -157,8 +157,6 @@ pt:
     invalid_password: "A senha deve ter pelo menos 6 caracteres"
     mismatch_password: "As duas senhas que você digitou são diferentes"
     student_consent: "Confirmo que tenho autorização dos meus pais ou do tutor legal para usar os serviços do Code.org."
-    agree_us_website: "Concordo em usar um site situado nos Estados Unidos."
-    my_data_to_us: "Os dados gerados pelo meu uso deste site podem ser enviados e armazenados ou processados nos Estados Unidos."
     student_terms_markdown: "Os endereços de email não são armazenados em um formulário que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade] (http://code.org/privacy) para mais informações."
     additional_information: "Precisamos de mais informações para continuar com o processo de inscrição."
     user_type_button: "Atualizar Tipo de Conta"
@@ -473,6 +471,7 @@ pt:
     for_parents_and_guardians: "Para os pais e responsáveis"
     link_a_parent_email: "Associe um endereço de e-mail do pai/responsável a esta conta, para se manter atualizado em relação ao progresso e aos projetos do(a) seu(sua) filho(a). Você também poderá utilizar esse e-mail para recuperar sua senha."
     parent_guardian_email_label: "E-mail dos responsáveis"
+    remove_parent_email_label: "Excluir"
     none: "Nenhum"
     only_one_parent_email_supported_warning: "Observação: somente um endereço de e-mail do pai/responsável pode ser cadastrado para cada conta de estudante no momento."
     encrypted: "criptografado"
@@ -986,6 +985,7 @@ pt:
       school_country:
         canada: 'Canadá'
         chile: 'Chile'
+        colombia: 'Colômbia'
         israel: 'Israel'
         malaysia: 'Malásia'
         mexico: 'México'
@@ -1035,6 +1035,7 @@ pt:
         csf_express: 'Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)'
         csd: 'Descobertas da Ciência da Computação'
         csp: 'Princípios da CC'
+        not_applicable: "Não aplicável"
       email_opt_in:
         opt_in_yes: 'Sim'
         opt_in_no: 'Não'
@@ -1043,6 +1044,7 @@ pt:
       intro: "Obrigado por tomar tempo para receber formação sobre o currículo do Code.org. Nossa missão para trazer oportunidades de educação em ciência da computação para todas as crianças em todas as escolas de todo o mundo não seria possível sem você."
       instructions: "Por favor preencha o formulário abaixo para indicar que 1) você participou de um workshop dirigido por um dos parceiros internacionais do Code.org, e 2) você concorda em compartilhar suas informações com o nosso parceiro international em seu país para que nós possamos ajudar a apoiar a sua jornada como um professor de ciência da computação."
       thanks_markdown: "Obrigado por enviar! Estamos ansiosos para atendê-lo conforme você se familiariza com os currículos e as ferramentas do Code.org. Continue compartilhando suas perguntas e feedback conosco escrevendo para [support@code.org](%{support_email_url}) ou postando no [fórum de professores](%{teacher_forum_url})!"
+      facilitator_not_applicable: "Não aplicável"
     logged_out:
       heading: 'Obrigado pelo seu interesse no Programa de Aprendizagem Profissional!'
       body: 'Para começar, primeiro você precisa estar logado em sua conta do Code.org. Se você quiser mais informações sobre o programa antes de iniciar sua aplicação, por favor verifique a <a href="%{url}">visão geral do Programa de Aprendizagem Profissional</a>.'

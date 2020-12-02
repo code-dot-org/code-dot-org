@@ -2919,7 +2919,7 @@
         },
         "courseB_maze_seq5_2018": {
           "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
-          "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
+          "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten um diese Aufgabe zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2019": {
@@ -2941,7 +2941,7 @@
         "courseB_maze_seq6_2018": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
           "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen.",
-          "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
+          "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2019": {
@@ -3005,7 +3005,7 @@
         "courseB_maze_seq9_2018": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
           "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
-          "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
+          "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2019": {
@@ -8661,6 +8661,9 @@
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "Die Lösung zu diesem Rätsel wird sehr nach der Lösung zum letzten Rätsel aussehen, aber drehend in der andere Richtung."
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "NEW_Course_4_Artist_Functions_9_a": "Führe den Code aus bevor du Blöcke hinzufügst. Warum sieht das Bild falsch aus?"
         }
       }
     }

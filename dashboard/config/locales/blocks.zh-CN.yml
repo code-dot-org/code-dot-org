@@ -1208,6 +1208,8 @@ zh-CN:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水底
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 没有
+      gamelab_setBackgroundImageAs:
+        text: 设置背景为 {IMG}
       gamelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
@@ -1217,8 +1219,6 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-      gamelab_setQuestion:
-        text: 为变量{VAR}问问题{QUESTION}
       gamelab_setSizes:
         text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
@@ -1272,8 +1272,6 @@ zh-CN:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 当按左方向键时
-      gamelab_whenQuestionAnswered:
-        text: 当{VAR}被回答
       gamelab_whenRightArrow:
         text: 当按右方向键时
       gamelab_whenTouching:
@@ -1784,7 +1782,6 @@ zh-CN:
             '"stoneBricks"': 石砖
             '"mossyStoneBricks"': 苔石砖
             '"crackedStoneBricks"': 裂石砖
-            '"decorativeStoneBricks"': 装饰性石砖
             '"blueCoralBlock"': 管珊瑚块
             '"pinkCoralBlock"': 脑纹珊瑚块
             '"magentaCoralBlock"': 气泡珊瑚块

@@ -124,11 +124,17 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "2-3 Artist Functions 4": {
@@ -1664,26 +1670,41 @@
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -2055,26 +2076,41 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -3129,6 +3165,26 @@
         "courseF_bee_variables_6_2020": {
           "collect stairs": {
             "name": "merdivenleri topla"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "fonksiyonum"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         }
       }

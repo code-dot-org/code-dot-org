@@ -3,5 +3,16 @@ title 'Machine Learning & Societal Impact'
 description ''
 
 markdown <<MARKDOWN
-Here is another unplugged lesson.
+## Lesson Style: Unplugged
+
+## Curriculum Notes
+- Build on yesterday's lesson to focus more on the societal impacts of machine learning
+- Emphasize real-world impacts rather than fun & toy examples from yesterday
+- Students reflect on uses of Machine Learning & AI in their daily life
+
+## AI-Lab Notes:
+- None
+
+## Dataset Notes:
+- None
 MARKDOWN

@@ -1074,6 +1074,90 @@
           "moving west": "przechodzenie na zachód",
           "patrolling": "patrolowanie",
           "swimming left and right": "pływanie w lewo i prawo"
+        },
+        "outbreak1": {
+          "wandering": "wędrowanie",
+          "recovering": "wyzdrowieć"
+        },
+        "outbreak2": {
+          "wandering": "wędrowanie",
+          "recovering": "wyzdrowieć"
+        },
+        "outbreak3": {
+          "wandering": "wędrowanie",
+          "recovering": "wyzdrowieć"
+        },
+        "outbreak4": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "swimming left and right": "pływanie w lewo i prawo",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie",
+          "recovering": "wyzdrowieć",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
+        },
+        "outbreak5": {
+          "wandering": "wędrowanie",
+          "recovering": "wyzdrowieć"
+        },
+        "outbreak6": {
+          "wandering": "wędrowanie",
+          "recovering": "wyzdrowieć"
+        },
+        "outbreak7": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie",
+          "recovering": "wyzdrowieć",
+          "moving left and right": "poruszając się w lewo i w prawo",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
+        },
+        "outbreak8": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie",
+          "recovering": "wyzdrowieć",
+          "moving left and right": "poruszając się w lewo i w prawo",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
+        },
+        "outbreak_freeplay": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie",
+          "recovering": "wyzdrowieć",
+          "moving left and right": "poruszając się w lewo i w prawo",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek"
         }
       }
     }

@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Hour of Code-tapahtuman How-To
 ---
 
 {{ signup_button }}
@@ -22,7 +22,7 @@ title: Hour of Code Event How-To
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **Muita tapahtumaideoita**: 
     - Invite a local industry leader to discuss his or her work involving computer science.
     - Invite a local politician and have students teach him or her how to code.
     - Have a group of students demonstrate an unplugged activity.

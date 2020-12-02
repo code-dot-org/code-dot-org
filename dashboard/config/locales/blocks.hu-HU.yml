@@ -50,7 +50,7 @@ hu:
             '"measures"': ütem
             '"seconds"': másodperc
       Dancelab_changeColorBy:
-        text: 'módosítás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
+        text: 'változtatás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
         options:
           METHOD:
             '"hue"': színárnyalat
@@ -987,6 +987,8 @@ hu:
         text: kattintott {SPRITE}
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: "{SPRITE} -száma"
       gamelab_createNewSprite:
@@ -997,6 +999,8 @@ hu:
         text: vonszolható
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
+      gamelab_getAllSprites:
+        text: minden sprite
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1012,6 +1016,7 @@ hu:
         options:
           CHOICE:
             '"this"': ez
+            '"other"': egyéb
       gamelab_getTime:
         options:
           UNIT:
@@ -1179,6 +1184,8 @@ hu:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vízalatti
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': téli
             undefined: Semennyit
+      gamelab_setBackgroundImageAs:
+        text: háttér beállítása {IMG}
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL}"
         options:
@@ -1712,7 +1719,6 @@ hu:
             '"stoneBricks"': kőtéglák
             '"mossyStoneBricks"': mohás kőtéglák
             '"crackedStoneBricks"': törött kőtéglák
-            '"decorativeStoneBricks"': dekorációs kőtéglák
             '"blueCoralBlock"': kék korall blokk
             '"pinkCoralBlock"': rózsaszín koráll blokk
             '"magentaCoralBlock"': bíbor korall blokk

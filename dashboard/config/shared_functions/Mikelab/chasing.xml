@@ -5,7 +5,7 @@
     <arg name="target" type="Sprite"/>
     <description/>
   </mutation>
-  <title name="NAME">chasing</title>
+  <title name="NAME" id="chasing">chasing</title>
   <statement name="STACK">
     <block type="gamelab_moveToward">
       <value name="SPRITE">
