@@ -1326,22 +1326,28 @@
           "courseC_maze_programming_challenge2_a": "_\"Als je me achteruit stuurt, let dan extra goed op dat ik de goede kant op draai!!\"_"
         },
         "courseC_starWars_loops5": {
-          "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus."
+          "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg vooruit`, nog een draai, en tenslotte een lus.",
+          "courseC_starWars_loops5_b": "Om omlaag te gaan moet je eerst draaien en daarna vooruit bewegen."
         },
         "courseC_starWars_loops5_copy": {
-          "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus."
+          "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg vooruit`, nog een draai, en tenslotte een lus.",
+          "courseC_starWars_loops5_b": "Om omlaag te gaan moet je eerst draaien en daarna vooruit bewegen."
         },
         "courseC_starWars_loops9": {
-          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2018": {
-          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2019": {
-          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2020": {
-          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseD_artist_nestedLoops3": {
           "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?",
@@ -3137,6 +3143,143 @@
         "courseC_collector_prog_challenge2_2020": {
           "courseC_collector_prog_challenge1_a": "Je kunt op elke plek meer dan een `verzamel`-blok gebruiken.",
           "courseC_collector_prog_challenge1_b": "Ben je de weg kwijt? Probeer deze route om de puzzle op te lossen."
+        },
+        "courseC_starWars_loops1": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2018": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2019": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2020": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops4": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops4_2018": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops4_2019": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops4_2020": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops4_copy": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6_2018": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6_2019": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6_2020": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6_copy": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops8": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2018": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2019": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2020": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_copy": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         }
       }
     }
