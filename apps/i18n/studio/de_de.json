@@ -316,7 +316,7 @@
   "moveSpriteN": "bewege Figur {spriteIndex}",
   "moveDroid": "Droide bewegen",
   "moveDroidN": "bewege Droiden {spriteIndex}",
-  "to": "An",
+  "to": "auf",
   "toXY": "nach x,y",
   "moveDown": "nach unten bewegen",
   "moveDownTooltip": "Bewege ein Element nach unten.",
