@@ -10,6 +10,7 @@ export default storybook => {
         <ProgressPill
           levels={[
             {
+              id: 1,
               url: '/level1',
               status: LevelStatus.perfect
             }
@@ -25,10 +26,12 @@ export default storybook => {
         <ProgressPill
           levels={[
             {
+              id: 1,
               url: '/level1',
               status: LevelStatus.perfect
             },
             {
+              id: 2,
               url: '/level2',
               status: LevelStatus.not_tried
             }
@@ -44,6 +47,7 @@ export default storybook => {
         <ProgressPill
           levels={[
             {
+              id: 1,
               url: '/level1',
               status: LevelStatus.perfect
             }
