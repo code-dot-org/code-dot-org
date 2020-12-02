@@ -586,7 +586,7 @@ he:
     Code.org</a>."
   hoc_faq_why_cs_a_markdown: לכל תלמיד מגיעה ההזדמנות ללמוד מדעי המחשב. תחום זה תורם
     לפיתוח מיומנויות של פתרון בעיות, לוגיקה ויצירתיות. התחלה בגיל צעיר תסלול לתלמידים
-    את הדרך להצלחה בכל נתיב קריירה של המאה ה-21. ראו נתונים סטטיסטיים [here]%{stats_url}).
+    את הדרך להצלחה בכל נתיב קריירה של המאה ה-21. ראו נתונים סטטיסטיים [here](%{stats_url}).
   hoc_faq_how_participate_q: כיצד ניתן להשתתף ב-לHour of Code?
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing
     our how-to guide. You can organize an Hour of Code event at your school or in
@@ -594,8 +594,8 @@ he:
     Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_how_participate_a_markdown: "[התחילו לתכנן כאן](%{howto}) על ידי עיון במדריך
     שלנו. ניתן לארגן אירוע של שעת הקוד בבית הספר שלכם או בקהילתכם - למשל במוסד של
-    חינוך בלתי פורמלי, במוסד ללא כוונת רווח או בעבודה. או פשוט התנסו בו בעצמכם%{campaign_date}
-    בבוא המועד."
+    חינוך בלתי פורמלי, במוסד ללא כוונת רווח או בעבודה. או פשוט התנסו בו בעצמכם בבוא
+    המועד %{campaign_date}."
   hoc_faq_behind_hoc_q: מי עומד מאחורי Hour of Code?
   hoc_faq_behind_hoc_a: שעה של הקוד מאורגן על ידי <a href='http://code.org'> Code.org</a>,
     a חברה הציבורית 501C3 ללא כוונת רווח מוקדשת להרחבת השתתפות במדעי המחשב על-ידי
@@ -627,7 +627,7 @@ he:
     in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
     activities</a> if your school can't accommodate the tutorials!
   hoc_faq_devices_a_markdown: השיעורים באתר Code.or פועלים בכל המכשירים ובכל הדפדפנים.
-    ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [כאן]
+    ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [here]
     (%{codeorg_url}/educate/it). צרכים טכנולוגיים של השיעורים שלא במסגרת אתר Code.org
     מופיעים ב-[%{partner_url}/learn](%{codeorg_url}/learn) בתיאור הספציפי של השיעור.
     אל תשכחו גם להציע [פעילויות ללא מחשב] (%{unplugged_url}) אם בית הספר שלכם אינו
@@ -704,7 +704,7 @@ he:
     to update. Check back in a few days!
   hoc_faq_map_a_markdown: לצערנו אינכם יכולים לראות את האירוע שלכם במפת Hour of Code.
     בשל עשרות אלפי המארגנים שנרשמו, המפה מקבצת את הנתונים ומציגה נקודה אחת לכמה אירועים.
-    לחיצה על הקישור של [דף האירועים]%({%{events_url}) תוביל אתכם לרשימה של כל האירועים
+    לחיצה על הקישור של [דף האירועים](%{events_url}) תוביל אתכם לרשימה של כל האירועים
     לפי מדינה, כך שתוכלו למצוא את האירוע שלכם שם. בנוסף, לנוכח רבבות האנשים הרשומים
     ל-Hour of Code, עדכון המפה ורשימת האירועים אורך 48 שעות. חזרו לבדוק בעוד ימים
     אחדים!
@@ -716,7 +716,7 @@ he:
   hoc_faq_count_hoc_a_markdown: העוקב של Hour of Code אינו כלי מדויק למדידת השימוש.
     איננו מונים בקפידה מזהים ייחודיים של תלמידים במהלך המעקב אחר השתתפות ב-Hour of
     Code, בעיקר מכיוון שאיננו דורשים מהתלמידים להתחבר או להירשם. משום כך, הספירות
-    שלנו מגדילות את מספר המשתתפים בפועל ובו-זמנית גורעות ממנו. לפרטים, קראו [כאן](%{codeorg_url}/loc).
+    שלנו מגדילות את מספר המשתתפים בפועל ובו-זמנית גורעות ממנו. לפרטים, קראו [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: כמה אפשר ללמוד בשעה?
   hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
     an expert computer scientist in one hour. One hour is only enough to learn that
