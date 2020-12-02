@@ -53,7 +53,7 @@
     "CONTROLS_REPEAT_TITLE_REPEAT": "opakuj",
     "CONTROLS_REPEAT_TITLE_TIMES": "krát",
     "CONTROLS_REPEAT_TOOLTIP": "Proveď určité příkazy několikrát.",
-    "CONTROLS_WHILEUNTIL_OPERATOR_UNTIL": "Opakovat do",
+    "CONTROLS_WHILEUNTIL_OPERATOR_UNTIL": "opakuj dokud nenastane",
     "CONTROLS_WHILEUNTIL_OPERATOR_WHILE": "opakuj pokud",
     "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "Pokud je hodnota nepravda, proveď určité příkazy (t. j. příkazy se opakují až do momentu splnění podmínky).",
     "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "Pokud je hodnota pravda, prováděj příkazy.",
