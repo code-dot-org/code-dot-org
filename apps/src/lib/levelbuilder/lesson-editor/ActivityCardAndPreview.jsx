@@ -33,6 +33,7 @@ export default class ActivityCardAndPreview extends Component {
     activitiesCount: PropTypes.number,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
+    clearTargetActivitySection: PropTypes.func.isRequired,
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     activitySectionMetrics: PropTypes.array.isRequired,
@@ -62,6 +63,7 @@ export default class ActivityCardAndPreview extends Component {
             activitiesCount={this.props.activitiesCount}
             setActivitySectionRef={this.props.setActivitySectionRef}
             updateTargetActivitySection={this.props.updateTargetActivitySection}
+            clearTargetActivitySection={this.props.clearTargetActivitySection}
             targetActivityPos={this.props.targetActivityPos}
             targetActivitySectionPos={this.props.targetActivitySectionPos}
             activitySectionMetrics={this.props.activitySectionMetrics}

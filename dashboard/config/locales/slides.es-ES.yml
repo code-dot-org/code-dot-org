@@ -396,9 +396,9 @@ es:
           a crear una línea simple. Más tarde, utilizaremos esto para crear patrones
           más complejos.
       5:
-        text: La pantalla se divide en tres partes principales. A la izquierda, está
-          la superficie de hielo en donde se ejecutará tu programa. Las instrucciones
-          para cada nivel se escriben justo debajo de la superficie.
+        text: Tu pantalla esta dividida en tres partes principales. Una a la izquierda,
+          que es la superficie de hielo dónde tú vas a ejecutar tu programa. Las instrucciones
+          de cada nivel están escritas debajo de la superficie.
       6:
         text: Esta zona media es la caja de herramientas, y cada uno de estos bloques
           es una acción que pueden hacer Elsa y Anna.

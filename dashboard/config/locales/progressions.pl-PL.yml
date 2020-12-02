@@ -25,6 +25,7 @@ pl:
       Challenge: Wyzwanie
       Challenge Levels: Poziomy Wyzwań
       Challenges: Wyzwania
+      Chance: 'Szansa:'
       Change: Zmień
       Checking for a Winner: Szukanie Zwycięzcy
       Code Your Own Flappy Game: Zakoduj Swoją Grę z Flappym
@@ -40,6 +41,7 @@ pl:
       Create Your Own Animation: Utwórz własną animację
       Create a Story: Utwórz Opowieść
       Create your project: Utwórz swój projekt
+      Creating a Simulation: Tworzenie symulacji
       Data Visualization: Wizualizacja Danych
       De-bugging with the Step Button: Debugowanie za pomocą Przycisku Krok
       Debugging: Debugowanie
@@ -77,6 +79,7 @@ pl:
       Keeping Data Secret: Zachowywanie danych w tajemnicy
       Keyboard Input: Wejście z klawiatury
       LED Apps: Aplikacje LED
+      Learning from Simulations: Uczenie się na podstawie symulacji
       Lesson Extras: Dodatki do Lekcji
       Linking Pages: Łączenie stron
       Linking Screens: Łączenie ekranów
@@ -87,10 +90,12 @@ pl:
       Making Sounds: Tworzenie Dźwięków
       Measures: Takty
       More Input: Więcej danych
+      More Monsters: Więcej potworów
       More Parameters: Więcej Parametrów
       Motorcycle: Motocykl
       Orientation: Orientacja
       Pair Programming: Programowanie w parach
+      Programming with Events: Programowanie ze zdarzeniami
       Programming with Rey and BB-8: Programowanie z Reyem i BB-8
       Programs that Repeat: Programy, które Powtarzają
       Project: Projekt
@@ -100,6 +105,7 @@ pl:
       Properties: Właściwości
       RGB Exploration: Eksploracja RGB
       Reading Sensors: Czytanie Czujników
+      Recovery: Odzyskiwanie
       Reflection: Refleksja
       Repeat Blocks: Bloki Powtarzania
       Repeat Blocks with BB-8: Bloki Powtarzania z BB-8
@@ -114,8 +120,10 @@ pl:
       Sensors to Colors: Czujniki do Kolorów
       Setting Properties: Ustawianie Właściwości
       Share Your App: Podziel się swoją aplikacją
+      Share Your Message: Udostępnij swoją wiadomość
       Simple Circuits: Proste układy
       Sprite Lab Project: Projekt Sprite Lab
+      Stopping the Outbreak with Masks: Powstrzymanie epidemii za pomocą masek
       The Artist in Code Studio: Artysta w Code Studio
       The Harvester: Kombajn
       User Interface: Interfejs użytkownika
@@ -124,10 +132,12 @@ pl:
       Using the LED: Stosując LED
       Using the Repeat Block: Korzystanie z bloku powtarzania
       Using the Switch: Stosując Przełącznik
+      Vaccines: Szczepionki
       Velocity: Prędkość
       Video: Wideo
       Warm Up: Rozgrzewka
       Website Project: Projekt Strony internetowej
+      Welcome to Monster Town: Witamy w mieście potworów
       While Loops with the Farmer: Pętle "dopóki" przy pomocy interfejsu Farmer
       Wrap-up: Podsumowanie
       Your Personal Website: Twoja Osobista Strona Internetowa

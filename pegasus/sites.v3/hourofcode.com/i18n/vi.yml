@@ -36,13 +36,19 @@ vi:
     và xây dựng một tương lai tươi sáng hơn.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'Nội dung của #GiờLậpTrình là #LợiÍchCủaKHMT.
+  social_hoc2020_hoc_is_about_csforgood: 'Nội dung của #HourOfCode là #LợiÍchCủaKHMT.
     Hãy học hôm nay và xây dựng một tương lai tươi sáng hơn.'
   social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: Hour of Code 2020 sắp sửa diễn ra!
+  hoc2020_ai_header: Khám phá Trí tuệ Nhân tạo
+  hoc2020_ai_description: Trí Tuệ Nhân Tạo và Học Máy đang ảnh hưởng trên phạm vi
+    toàn thế giới. Hãy cùng chúng tôi khám phá Trí Tuệ Nhân Tạo trong một chuỗi video
+    mới, đào tạo về Trí Tuệ Nhân Tạo cho Đại Dương bằng 25+ ngôn ngữ, bàn luận về
+    đạo đức và Trí Tuệ Nhân Tạo, v.v.
   hoc2019_header: Học khoa học máy tính. Thay đổi thế giới.
   hoc2019_header_line1_mobile: Học khoa học máy tính.
   hoc2019_header_line2_mobile: Thay đổi thế giới.
@@ -612,9 +618,9 @@ vi:
     này vào bất cứ thời gian nào. Sự kiện này được tổ chức nhằm kỷ niệm ngày sinh
     của người đã đặt nền móng cho máy tính <a href='%{grace_hopper}'> Grace Murray
     Hopper</a> (9 tháng 12 năm 1906).
-  hoc_faq_when_is_hoc_a_markdown: Giờ Lập Trình diễn ra hàng năm trong [Tuần Giáo
-    Dục Khoa Học Máy Tính](%{csedweek_url}). Tuần Giáo Dục Khoa Học Máy Tính %{campaign_date_year}
-    diễn ra vào %{campaign_date_full}, nhưng bạn có thể tham gia Giờ Lập Trình vào
+  hoc_faq_when_is_hoc_a_markdown: Hour of Code diễn ra hàng năm trong [Tuần Giáo Dục
+    Khoa Học Máy Tính](%{csedweek_url}). Tuần Giáo Dục Khoa Học Máy Tính %{campaign_date_year}
+    diễn ra vào %{campaign_date_full}, nhưng bạn có thể tham gia Hour of Code vào
     mọi thời điểm trong năm. Tuần Giáo Dục Khoa Học Máy Tính được tổ chức hàng năm
     nhằm kỷ niệm ngày sinh của [Đô Đốc Grace Murray Hopper](%{grace_hopper}) (9/12/1906),
     người đi tiên phong trong lĩnh vực máy tính.
@@ -627,7 +633,7 @@ vi:
   hoc_faq_why_cs_a_markdown: _Mỗi_ em học sinh đều phải có cơ hội được học khoa học
     máy tính. Môn học này giúp rèn luyện kỹ năng giải quyết vấn đề, logic và sáng
     tạo. Nếu bắt đầu học từ sớm, học sinh sẽ có nền tảng để thành công trên con đường
-    sự nghiệp trong thế kỷ 21. Xem thêm số liệu [tại đây](%{stats_url}).
+    sự nghiệp trong thế kỷ 21. Xem thêm số liệu [here](%{stats_url}).
   hoc_faq_how_participate_q: Làm thế nào để tham gia vào Hour of Code?
   hoc_faq_how_participate_a: "<a href='target-resources-how-to'> Bắt đầu lập kế hoạch
     ở đây </a> bằng cách xem hướng dẫn của chúng tôi. Bạn có thể tổ chức một sự kiện
@@ -635,8 +641,8 @@ vi:
     lạc bộ ngoại khóa, chương trình phi lợi nhuận hay tổ chức nó ở nơi làm việc. Hoặc,
     bạn cũng có thể tự trải niệm vào %{campaign_date} khi sự kiện bắt đầu."
   hoc_faq_how_participate_a_markdown: "[Bắt đầu lập kế hoạch tại đây](%{howto}) bằng
-    cách xem qua hướng dẫn thực hiện của chúng tôi. Bạn có thể tổ chức sự kiện Giờ
-    Lập Trình tại trường học hoặc trong cộng đồng của mình – ví dụ như trong câu lạc
+    cách xem qua hướng dẫn thực hiện của chúng tôi. Bạn có thể tổ chức sự kiện Hour
+    of Code tại trường học hoặc trong cộng đồng của mình – ví dụ như trong câu lạc
     bộ ngoại khóa, tổ chức phi lợi nhuận hoặc tại nơi làm việc. Ngoài ra, bạn có thể
     tự mình trải nghiệm vào ngày %{campaign_date}."
   hoc_faq_behind_hoc_q: Những ai đã làm nên Hour of Code?
@@ -647,11 +653,11 @@ vi:
     liên minh chưa từng có của các đối tác</a> đã đến với nhau để hỗ trợ giờ mã, quá
     &mdash; bao gồm Microsoft, Apple, Amazon, chàng trai và cô gái câu lạc bộ của
     Mỹ và hội đồng quản trị trường cao đẳng.
-  hoc_faq_behind_hoc_a_markdown: Chương trình Giờ Lập Trình được thực hiện bởi [Ủy
-    ban Tư vấn và Đánh giá](%{partner_url}) Giờ Lập Trình và Tuần Giáo Dục Khoa Học
+  hoc_faq_behind_hoc_a_markdown: Chương trình Hour of Code được thực hiện bởi Hour
+    of Code và [Ủy ban Tư vấn và Đánh giá](%{partner_url}) Tuần Giáo Dục Khoa Học
     Máy Tính cũng như một liên minh chưa từng có giữa các đối tác cùng nhau hỗ trợ
-    Giờ Lập Trình – bao gồm Microsoft, Apple, Amazon, Hội Nam Sinh và Nữ Sinh Hoa
-    Kỳ và Hội đồng Đại học.
+    Hour of Code – bao gồm Microsoft, Apple, Amazon, Hội Nam Sinh và Nữ Sinh Hoa Kỳ
+    và Hội đồng Đại học.
   hoc_faq_host_q: Tôi không biết điều gì hết về coding/ lập trình. Tôi vẫn có thể
     đến tham dự sự kiện?
   hoc_faq_host_a: Tất nhiên. Các hoạt động Hour of Code đều có hướng dẫn tự động trên
@@ -661,7 +667,7 @@ vi:
     nhiều lựa chọn cho các lứa tuổi và các mức độ người học khác nhau. Băt đầu lên
     kế hoạch cho việc học của bạn bằng việc đọc <a href='/resources/how-to'>Hướng
     dẫn</a> của chúng tôi.
-  hoc_faq_host_a_markdown: Tất nhiên. Các hoạt động của Giờ Lập Trình đều là tự học.
+  hoc_faq_host_a_markdown: Tất nhiên. Các hoạt động của Hour of Code đều là tự học.
     Tất cả những gì bạn cần làm là [xem các bài hướng dẫn hiện hành của chúng tôi](%{codeorg_url}/learn),
     chọn một bài hướng dẫn mà bạn muốn và dành ra một giờ – chúng tôi sẽ giúp bạn
     trong những bước tiếp theo. Chúng tôi cũng có nhiều lựa chọn cho các lứa tuổi
@@ -693,12 +699,12 @@ vi:
     câu đố hoặc trả lời câu hỏi. <li><b>Đi chưa cắm phít được.</b> Chúng tôi cung
     cấp hướng dẫn yêu cầu máy tính không có ở tất cả. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    Không. Chúng tôi có các bài hướng dẫn Giờ Lập Trình hoạt động trên máy tính, điện thoại thông minh, máy tính bảng và một số bài hướng dẫn không yêu cầu sử dụng máy tính! Bạn có thể tham gia ở bất cứ đâu, với bất cứ thiết bị nào mà bạn có.
+    Không. Chúng tôi có các bài hướng dẫn Hour of Code hoạt động trên máy tính, điện thoại thông minh, máy tính bảng và một số bài hướng dẫn không yêu cầu sử dụng máy tính! Bạn có thể tham gia ở bất cứ đâu, với bất cứ thiết bị nào mà bạn có.
 
     _Dưới đây là một vài lựa chọn:_
 
     - **Làm theo cặp.** [Nghiên cứu chỉ ra rằng](%{pair_programming_research}) học sinh sẽ học hiệu quả nhất khi [lập trình theo cặp](%{pair_programming_video}), chia sẻ máy tính và làm việc cùng nhau. Hãy khuyến khích học sinh hợp tác với nhau.
-    - **Sử dụng màn hình và máy chiếu.** Nếu bạn có máy chiếu và màn hình cho máy tính kết nối Web, cả nhóm của bạn có thể cùng nhau tham gia Giờ Lập Trình. Hãy xem các nội dung video cùng nhau và lần lượt giải những câu đố hoặc trả lời câu hỏi.
+    - **Sử dụng màn hình và máy chiếu.** Nếu bạn có máy chiếu và màn hình cho máy tính kết nối Web, cả nhóm của bạn có thể cùng nhau tham gia Hour of Code. Hãy xem các nội dung video cùng nhau và lần lượt giải những câu đố hoặc trả lời câu hỏi.
     - **Học ngoại tuyến.** Chúng tôi có cung cấp các [bài hướng dẫn hoàn toàn không sử dụng máy tính](%{unplugged_url}).
   hoc_faq_international_q: Tôi đang ở <country>. Làm thế nào tôi có thể tham gia các
     sự kiện quốc tế?
@@ -725,10 +731,10 @@ vi:
     các khóa học tiếp theo</a> yêu cầu tạo tài khoản để lưu quá trình học tập của
     học sinh.
   hoc_faq_account_a_markdown: Không. Hoàn toàn không cần thiết phải đăng ký hoặc đăng
-    nhập để tham gia Giờ Lập Trình. Hầu hết [các khóa học nối tiếp](%{codeorg_url}/learn/beyond)
+    nhập để tham gia Hour of Code. Hầu hết [các khóa học nối tiếp](%{codeorg_url}/learn/beyond)
     đều yêu cầu tạo tài khoản để lưu tiến trình của học sinh. Ngoài ra, việc đăng
-    ký Giờ Lập Trình KHÔNG tự động tạo tài khoản Code Studio. Nếu bạn muốn tạo tài
-    khoản cho học sinh của mình, hãy làm theo [hướng dẫn](https://youtu.be/_smelV_KISE).
+    ký Hour of Code KHÔNG tự động tạo tài khoản Code Studio. Nếu bạn muốn tạo tài
+    khoản cho học sinh của mình, hãy làm theo [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Hoạt động nào mà tôi nên áp dụng với học sinh trung học?
   hoc_faq_high_school_a: Với mọi lứa tuổi, chúng tôi khuyên bạn nên thử một trong
     các bản hướng dẫn cho người mới bắt đầu trên <a href='http://code.org/learn'>
@@ -766,12 +772,12 @@ vi:
     signing up for the Hour of Code, the map and event list usually takes 48 hours
     to update. Check back in a few days!
   hoc_faq_map_a_markdown: Chúng tôi rất tiếc nếu bạn không xem được sự kiện của mình
-    trên bản đồ của Giờ Lập Trình. Do hàng chục ngàn người tổ chức đăng ký nên bản
+    trên bản đồ của Hour of Code. Do hàng chục ngàn người tổ chức đăng ký nên bản
     đồ tập hợp các dữ liệu và hiển thị một điểm cho nhiều sự kiện. Nếu bạn nhấn vào
     liên kết [trang bản đồ](%{events_url}) ở phía dưới bản đồ, bạn sẽ được chuyển
     hướng đến một danh sách tất cả các sự kiện theo bang và có thể tìm thấy sự kiện
-    của mình được liệt kê tại đây. Ngoài ra, vì có hàng nghìn người đăng ký Giờ Lập
-    trình, bản đồ và danh sách sự kiện thường mất 48 giờ để cập nhật. Hãy kiểm tra
+    của mình được liệt kê tại đây. Ngoài ra, vì có hàng nghìn người đăng ký Hour of
+    Code, bản đồ và danh sách sự kiện thường mất 48 giờ để cập nhật. Hãy kiểm tra
     lại sau vài ngày nhé!
   hoc_faq_count_hoc_a: Bộ theo dõi "Hour of Code"  không phải là một thước đo chính
     xác của việc sử dụng. Chúng tôi không đếm xem có bao nhiêu cá nhân sinh viên xuất
@@ -779,12 +785,12 @@ vi:
     nhập hoặc đăng ký. Sau cùng, chúng tôi tính số lượng người tham gia nhiều nhất
     và ít nhất cùng một thời điểm. Xem chi tiết <a href='http://code.org/loc'> tại
     đây</a>.
-  hoc_faq_count_hoc_a_markdown: Ứng dụng theo dõi Giờ Lập Trình không phải là công
+  hoc_faq_count_hoc_a_markdown: Ứng dụng theo dõi Hour of Code không phải là công
     cụ theo dõi chính xác quá trình sử dụng. Chúng tôi không sử dụng ID duy nhất của
-    học sinh một cách tuyệt đối khi theo dõi quá trình tham gia Giờ Lập Trình, đặc
+    học sinh một cách tuyệt đối khi theo dõi quá trình tham gia Hour of Code, đặc
     biệt là khi chúng tôi không bắt buộc học sinh phải đăng nhập hoặc đăng ký. Do
     đó, chúng tôi có thể vừa đếm dư và đếm thiếu người tham gia cùng lúc. Hãy đọc
-    tất cả thông tin chi tiết [tại đây](%{codeorg_url}/loc).
+    tất cả thông tin chi tiết [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: How much can one learn in an hour?
   hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
     an expert computer scientist in one hour. One hour is only enough to learn that
@@ -805,7 +811,7 @@ vi:
     capable of. <br/><br/> Above all, what all participants can learn in an hour is
     that we can do this.
   hoc_faq_one_hour_a_markdown: |-
-    Mục tiêu của Giờ Lập Trình không phải là dạy cho tất cả mọi người để trở thành chuyên gia khoa học máy tính trong một giờ. Một giờ chỉ đủ để hiểu rằng khoa học máy tính thật vui và sáng tạo, rằng bất kỳ lứa tuổi nào cũng có thể tiếp cận, dành cho tất cả các em học sinh ở mọi trình độ. Thước đo thành công của chiến dịch này không nằm ở lượng kiến thức mà học sinh KHMT đã học được – mà thành công được phản ánh ở sự tham gia rộng rãi, không phụ thuộc vào giới tính, các nhóm sắc tộc và kinh tế xã hội, cũng như đạt được kết quả là tăng lượng đăng ký và tham gia các khóa học về khoa học máy tính tại tất cả các khối phổ thông. Hàng triệu người tham gia là các thầy cô giáo và các em học sinh đã quyết định dành nhiều hơn một giờ – để học một ngày hoặc một tuần trở lên, và nhờ đó, nhiều học sinh đã quyết định ghi danh vào một khóa học trọn vẹn (hoặc thậm chí một ngành đại học).
+    Mục tiêu của Hour of Code không phải là dạy cho tất cả mọi người để trở thành chuyên gia khoa học máy tính trong một giờ. Một giờ chỉ đủ để hiểu rằng khoa học máy tính thật vui và sáng tạo, rằng bất kỳ lứa tuổi nào cũng có thể tiếp cận, dành cho tất cả các em học sinh ở mọi trình độ. Thước đo thành công của chiến dịch này không nằm ở lượng kiến thức mà học sinh KHMT đã học được – mà thành công được phản ánh ở sự tham gia rộng rãi, không phụ thuộc vào giới tính, các nhóm sắc tộc và kinh tế xã hội, cũng như đạt được kết quả là tăng lượng đăng ký và tham gia các khóa học về khoa học máy tính tại tất cả các khối phổ thông. Hàng triệu người tham gia là các thầy cô giáo và các em học sinh đã quyết định dành nhiều hơn một giờ – để học một ngày hoặc một tuần trở lên, và nhờ đó, nhiều học sinh đã quyết định ghi danh vào một khóa học trọn vẹn (hoặc thậm chí một ngành đại học).
 
     Ngoài các em học sinh, một đối tượng "học viên" khác chính là các nhà giáo dục, những người có được sự tự tin sau một giờ rằng họ có thể dạy môn khoa học máy tính ngay cả khi họ không có văn bằng đại học với tư cách là chuyên gia khoa học máy tính. Hàng chục ngàn giáo viên quyết định theo đuổi khoa học máy tính ở mức độ cao hơn, tham gia khóa chuyên tu hoặc các khóa học trực tuyến nối tiếp, hoặc cả hai. Và điều này cũng đúng với những nhà quản trị trường học, những người nhận ra tiềm năng của khoa học máy tính đối với học sinh và giáo viên của họ.
 
@@ -820,12 +826,12 @@ vi:
     on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
     event how-to guides and other resources to help make your Hour of Code event a
     success.
-  hoc_faq_keep_learning_a_markdown: Bất cứ ai cũng có thể tổ chức một Giờ Lập Trình
+  hoc_faq_keep_learning_a_markdown: Bất cứ ai cũng có thể tổ chức một Hour of Code
     vào bất kỳ lúc nào. Bạn có thể truy cập các bài hướng dẫn quanh năm. Bạn có thể
     an tâm rằng tất cả các bài hướng dẫn và chương trình của chúng tôi sẽ được cung
     cấp vĩnh viên trên trang web. Vui lòng truy cập [các nguồn hỗ trợ của chúng tôi](%{promote})
-    để xem hướng dẫn cho sự kiện và các nguồn hỗ trợ khác để giúp sự kiện Giờ Lập
-    Trình của bạn đạt được thành công.
+    để xem hướng dẫn cho sự kiện và các nguồn hỗ trợ khác để giúp sự kiện Hour of
+    Code của bạn đạt được thành công.
   hoc_faq_certificates_q: Where can I print certificates for my students?
   hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
     page</a> where you can print certificates for your entire class ahead of time.
@@ -840,7 +846,7 @@ vi:
   hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
     but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
     guidelines for usage</a>.
-  hoc_faq_logo_a_markdown: Giờ Lập Trình đã được đăng ký nhãn hiệu. Chúng tôi không
+  hoc_faq_logo_a_markdown: Hour of Code đã được đăng ký nhãn hiệu. Chúng tôi không
     muốn hạn chế việc sử dụng nền tảng này, nhưng chúng tôi muốn đảm bảo rằng việc
     sử dụng nền tảng phải nằm trong những phạm vi nhất định. Vui lòng xem [hướng dẫn
     sử dụng sau đây](%{logo_url}).
@@ -976,6 +982,7 @@ vi:
     sở hữu của Code.org, Mọi trích dẫn từ trang vui lòng ghi rõ nguồn Code.org 2015
   footer_trademark_message: Hour of Code là một tác quyền cá nhân/ thương hiệu của
     Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Đối tác
   footer_menu_contact: Liên hệ với chúng tôi
   footer_menu_support: Hỗ trợ
@@ -1586,9 +1593,10 @@ vi:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1604,15 +1612,16 @@ vi:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1621,6 +1630,7 @@ vi:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1630,7 +1640,7 @@ vi:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1686,7 +1696,7 @@ vi:
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Thêu mã hóa
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
@@ -5364,20 +5374,22 @@ vi:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5423,12 +5435,12 @@ vi:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5447,16 +5459,18 @@ vi:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5476,6 +5490,13 @@ vi:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: Vấn nạn rác thải nhựa lấp đầy các đại
+    dương của chúng ta đang ngày càng trầm trọng. Thật may mắn là bạn có thể đóng
+    góp tiếng nói của mình bằng cách lập trình với Plastic Pollution PSA (PSA ô nhiễm
+    rác thải nhựa). Sau khi lập trình PSA về ô nhiễm rác thải nhựa bằng JavaScript,
+    bạn có thể tạo video thứ hai về bất kỳ đề tài nào bạn quan tâm! Hãy tìm hiểu cách
+    sử dụng vòng lặp, đồ thị hình sin và các biểu tượng cảm xúc tùy chỉnh để tạo ra
+    một dự án thật độc đáo nhé.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5506,11 +5527,11 @@ vi:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5720,8 +5741,8 @@ vi:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Viết mã thiết kế của bạn trên điện
+    thoại Android và khâu nó vào áo phông, quần, túi tập thể dục hoặc giày của bạn!
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -6411,7 +6432,7 @@ vi:
   tutorial_pets_language: Tiếng Việt
   tutorial_petvet_language: Tiếng Việt
   tutorial_superhero_language: Tiếng Việt
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: Tiếng Việt
   tutorial_vidcodetypeface_language: Tiếng Việt
   tutorial_washustorm_language: Tiếng Việt
   tutorial_activitypackets_language: Tiếng Việt
@@ -6438,6 +6459,7 @@ vi:
     (Mexico)
   tutorial_bsdcause_language: Tiếng Việt
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Tiếng Việt
   tutorial_tttractor_language: Tiếng Việt
   tutorial_codeillusionmickey_language: Tiếng Việt
@@ -6460,6 +6482,7 @@ vi:
   tutorial_codestersdistance_language: Tiếng Việt
   tutorial_itchspace_language: Tiếng Việt
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Tiếng Việt
   tutorial_itchfish_language: Tiếng Việt
   tutorial_bsdwebsite_language: Tiếng Việt
@@ -6467,11 +6490,12 @@ vi:
   tutorial_itchwebcam_language: Tiếng Việt
   tutorial_itchball_language: Tiếng Việt
   tutorial_ttrace_language: Tiếng Việt
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Tiếng Việt
   tutorial_codeguppytext_language: Tiếng Việt
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: Tiếng Việt
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Tiếng Việt
@@ -6537,9 +6561,14 @@ vi:
   tutorial_kcjplastic_language: English, French
   tutorial_legojourney_language: Tiếng Việt
   tutorial_legohopper_language: Tiếng Việt
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Tiếng Ả Rập, tiếng Bengali, tiếng Bosnia,
+    tiếng Trung giản thể, tiếng Croatia, tiếng Séc, tiếng Anh, tiếng Anh (Anh), tiếng
+    Pháp, tiếng Đức, tiếng Hindi, tiếng Indonesia, tiếng Ý, tiếng Nhật, tiếng Hàn,
+    tiếng Na Uy (Nynorsk), tiếng khác, tiếng Ba Lan, tiếng Bồ Đào Nha (Brazil), tiếng
+    Bồ Đào Nha ( Bồ Đào Nha), tiếng Nga, tiếng Serbia (Kirin), tiếng Serbia (tiếng
+    Latinh), tiếng Slovak, tiếng Tây Ban Nha (Tây Ban Nha, Mexico), tiếng Swahili,
+    tiếng Thụy Điển, tiếng Tamil, tiếng Thái, tiếng Thổ Nhĩ Kỳ, tiếng Urdu (Pakistan),
+    tiếng Việt
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Tiếng Việt
@@ -6552,10 +6581,10 @@ vi:
   tutorial_star-wars_string_detail_grades: Grades 2+
   tutorial_gumadventure_string_detail_grades: Grades 6-8
   tutorial_mchoc_string_detail_grades: Grades 2+
-  tutorial_vidnews_string_detail_grades: Grades 6+
+  tutorial_vidnews_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
   tutorial_highseas_string_detail_grades: Grades 2-8
-  tutorial_capython_string_detail_grades: Grades 6+
+  tutorial_capython_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_frzn_string_detail_grades: Grades 2+
   tutorial_cocom_string_detail_grades: Grades 2+
   tutorial_play-lab_string_detail_grades: Grades 2+
@@ -6565,28 +6594,28 @@ vi:
   tutorial_kanopixel_string_detail_grades: Grades 2+
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerdd_string_detail_grades: Grades 2-8
-  tutorial_tynkerana_string_detail_grades: Grades 6+
+  tutorial_tynkerana_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_vidcard_string_detail_grades: Grades 2+
   tutorial_spritebox_string_detail_grades: Grades 2-8
-  tutorial_tynkerch_string_detail_grades: Grades 6+
+  tutorial_tynkerch_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: do-not-show
   tutorial_code_string_detail_grades: Grades 2+
-  tutorial_tinspire_string_detail_grades: Grades 6+
+  tutorial_tinspire_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_itchbounceball_string_detail_grades: Grades 2-8
-  tutorial_vidclim_string_detail_grades: Grades 6+
-  tutorial_matlab_string_detail_grades: Grades 6+
+  tutorial_vidclim_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_matlab_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_flap_string_detail_grades: Grades 2+
-  tutorial_galaxy_string_detail_grades: Grades 6+
+  tutorial_galaxy_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_inf_string_detail_grades: Grades 2-8
   tutorial_tynkersol_string_detail_grades: Grades 2+
-  tutorial_itchg_string_detail_grades: Grades 6+
+  tutorial_itchg_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_como_string_detail_grades: Grades 2+
   tutorial_processfound_string_detail_grades: Grades 9+
-  tutorial_tynkerhomo_string_detail_grades: Grades 6+
+  tutorial_tynkerhomo_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_art_string_detail_grades: Grades 2+
   tutorial_tynkerbrick_string_detail_grades: Grades 2+
-  tutorial_itchbio_string_detail_grades: Grades 6+
+  tutorial_itchbio_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_itchj_string_detail_grades: Grades 6-8
   tutorial_tickleo_string_detail_grades: Grades 2+
   tutorial_hopgeo_string_detail_grades: Grades 2-8
@@ -6597,67 +6626,67 @@ vi:
   tutorial_livecode_string_detail_grades: Grades 9+
   tutorial_cocomgame_string_detail_grades: Grades 2+
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
-  tutorial_code-avengers_string_detail_grades: Grades 6+
+  tutorial_code-avengers_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cmgame_string_detail_grades: Grades 6+
+  tutorial_cmgame_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codesters_string_detail_grades: do-not-show
-  tutorial_qrm_string_detail_grades: Grades 6+
-  tutorial_texas-instruments_string_detail_grades: Grades 6+
-  tutorial_cajava_string_detail_grades: Grades 6+
+  tutorial_qrm_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_texas-instruments_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_cajava_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codehs_string_detail_grades: Grades 9+
   tutorial_hopemo_string_detail_grades: Grades 2-8
   tutorial_tynkercm_string_detail_grades: Grades 2+
   tutorial_codesterswintergreet_string_detail_grades: Grades 2+
-  tutorial_codestersc_string_detail_grades: Grades 6+
+  tutorial_codestersc_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codestersturtle_string_detail_grades: Grades 2+
-  tutorial_penjee_string_detail_grades: Grades 6+
+  tutorial_penjee_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_trinket_string_detail_grades: Grades 2+
-  tutorial_frogger_string_detail_grades: Grades 6+
+  tutorial_frogger_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tynkereco_string_detail_grades: Grades 2-8
   tutorial_mitedarc_string_detail_grades: Grades 6-8
-  tutorial_khan_string_detail_grades: Grades 6+
-  tutorial_tynkerd_string_detail_grades: Grades 6+
+  tutorial_khan_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_tynkerd_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_cdmy_string_detail_grades: Grades 9+
-  tutorial_codestersdance_string_detail_grades: Grades 6+
-  tutorial_codestersbasketball_string_detail_grades: Grades 6+
-  tutorial_nclkarel_string_detail_grades: Grades 6+
+  tutorial_codestersdance_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codestersbasketball_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_nclkarel_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_buildpong_string_detail_grades: Grades 2+
   tutorial_tynkerdrones_string_detail_grades: Grades 2+
-  tutorial_carla_string_detail_grades: Grades 6+
-  tutorial_zulama_string_detail_grades: Grades 6+
-  tutorial_capost_string_detail_grades: Grades 6+
+  tutorial_carla_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_zulama_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_capost_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_marco_string_detail_grades: Grades 2-8
-  tutorial_codestersflappybike_string_detail_grades: Grades 6+
+  tutorial_codestersflappybike_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_kanopong_string_detail_grades: Grades 6-8
   tutorial_tynkerright_string_detail_grades: Grades 2-8
   tutorial_touchdevelop_string_detail_grades: do-not-show
-  tutorial_tynkercc_string_detail_grades: Grades 6+
+  tutorial_tynkercc_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_bamboo_string_detail_grades: Grades 2-5
-  tutorial_robojav_string_detail_grades: Grades 6+
-  tutorial_roboba_string_detail_grades: Grades 6+
+  tutorial_robojav_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_roboba_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_knodsnake_string_detail_grades: Grades 6-8
-  tutorial_soccharater_string_detail_grades: Grades 6+
-  tutorial_silent_string_detail_grades: Grades 6+
+  tutorial_soccharater_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_silent_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_robomesh_string_detail_grades: Grades 2+
   tutorial_amaze_string_detail_grades: Grades 2+
   tutorial_codestersds_string_detail_grades: Grades 2+
   tutorial_knodtext_string_detail_grades: Grades 6-8
-  tutorial_alicegar_string_detail_grades: Grades 6+
-  tutorial_codesterstransform_string_detail_grades: Grades 6+
-  tutorial_flexfrog_string_detail_grades: Grades 6+
+  tutorial_alicegar_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codesterstransform_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_flexfrog_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codemoji_string_detail_grades: do-not-show
-  tutorial_robobii_string_detail_grades: Grades 6+
+  tutorial_robobii_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_robobm_string_detail_grades: Grades 6-8
   tutorial_codingrobots_string_detail_grades: Grades 2+
-  tutorial_robob_string_detail_grades: Grades 6+
+  tutorial_robob_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_coders_string_detail_grades: Grades 9+
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
   tutorial_tynkermh_string_detail_grades: Grades 2-8
-  tutorial_caphoto_string_detail_grades: Grades 6+
+  tutorial_caphoto_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_mozillahw_string_detail_grades: Grades 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Grades 2+
-  tutorial_scratchg_string_detail_grades: Grades 6+
+  tutorial_scratchg_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_roboticfriends_string_detail_grades: All ages
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjgreet_string_detail_grades: Pre-reader - Grade 5
@@ -6665,19 +6694,19 @@ vi:
   tutorial_fufafrenz_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcgeo_string_detail_grades: do-not-show
   tutorial_chspixel_string_detail_grades: Grades 9+
-  tutorial_hummingbird_string_detail_grades: Grades 6+
-  tutorial_recoloring_string_detail_grades: Grades 6+
+  tutorial_hummingbird_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_recoloring_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_bbcchem_string_detail_grades: do-not-show
   tutorial_floalgo_string_detail_grades: Grades 2+
   tutorial_flocond_string_detail_grades: Grades 2+
   tutorial_floloops_string_detail_grades: Grades 2+
-  tutorial_pgts_string_detail_grades: Grades 6+
+  tutorial_pgts_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ozo_string_detail_grades: All ages
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
   tutorial_tlctour_string_detail_grades: Grades 2+
   tutorial_codesterstj_string_detail_grades: Grades 2+
-  tutorial_tlclocked_string_detail_grades: Grades 6+
+  tutorial_tlclocked_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_baubles_string_detail_grades: Grades 2-8
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Grades 2+
@@ -6699,12 +6728,12 @@ vi:
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: Grades 6-8
-  tutorial_tlchex_string_detail_grades: Grades 6+
+  tutorial_tlchex_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tickles_string_detail_grades: Grades 2+
   tutorial_ozogame_string_detail_grades: All ages
   tutorial_vidcodeio_string_detail_grades: Grades 2+
   tutorial_besttech_string_detail_grades: Grades 9+
-  tutorial_tlcbrain_string_detail_grades: Grades 6+
+  tutorial_tlcbrain_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_hopquiz_string_detail_grades: Grades 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
   tutorial_cha_string_detail_grades: Grades 6-8
@@ -6714,7 +6743,7 @@ vi:
   tutorial_arduino_string_detail_grades: Grades 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
   tutorial_tlcinvis_string_detail_grades: Grades 2+
-  tutorial_tlcjflap_string_detail_grades: Grades 6+
+  tutorial_tlcjflap_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
   tutorial_spiralsfinch_string_detail_grades: Grades 2+
   tutorial_ozoi_string_detail_grades: All ages
@@ -6726,40 +6755,40 @@ vi:
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
   tutorial_tlccc_string_detail_grades: Grades 2-8
   tutorial_tlcdoodle_string_detail_grades: Grades 2-8
-  tutorial_tlcpunch_string_detail_grades: Grades 6+
+  tutorial_tlcpunch_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_finchfract_string_detail_grades: Grades 9+
-  tutorial_tlcmind_string_detail_grades: Grades 6+
+  tutorial_tlcmind_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tlctelebot_string_detail_grades: Grades 2+
-  tutorial_tlcaus_string_detail_grades: Grades 6+
+  tutorial_tlcaus_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_oralhist_string_detail_grades: Grades 9+
   tutorial_tlcmicro_string_detail_grades: Grades 2+
   tutorial_imathematician_string_detail_grades: Grades 2-8
-  tutorial_tlcmagic_string_detail_grades: Grades 6+
+  tutorial_tlcmagic_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_scratchmus_string_detail_grades: Grades 2-8
   tutorial_scratchanim_string_detail_grades: Grades 2-8
   tutorial_scratchfly_string_detail_grades: Grades 2-8
   tutorial_tynkerarc_string_detail_grades: Grades 2+
-  tutorial_grokffpython_string_detail_grades: Grades 6+
-  tutorial_grokffblock_string_detail_grades: Grades 6+
-  tutorial_grokeliza_string_detail_grades: Grades 6+
+  tutorial_grokffpython_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_grokffblock_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_grokeliza_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tynkercan_string_detail_grades: Grades 2+
-  tutorial_grokflags_string_detail_grades: Grades 6+
+  tutorial_grokflags_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_robomind_string_detail_grades: Grades 2-8
   tutorial_scratchanimwork_string_detail_grades: Grades 2-8
   tutorial_adventureq_string_detail_grades: Grades 2-5
-  tutorial_khan-es_string_detail_grades: Grades 6+
-  tutorial_kpt_string_detail_grades: Grades 6+
-  tutorial_kpl_string_detail_grades: Grades 6+
-  tutorial_khe_string_detail_grades: Grades 6+
-  tutorial_kfr_string_detail_grades: Grades 6+
-  tutorial_app-inventor_string_detail_grades: Grades 6+
+  tutorial_khan-es_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_kpt_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_kpl_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_khe_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_kfr_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_app-inventor_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_bits_string_detail_grades: Grades 2-5
-  tutorial_blockly_string_detail_grades: Grades 6+
+  tutorial_blockly_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Grades 2+
-  tutorial_spellcraft_string_detail_grades: Grades 6+
+  tutorial_spellcraft_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_pirates_string_detail_grades: Grades 2-8
   tutorial_csfirst_string_detail_grades: Grades 2+
   tutorial_loopedy_string_detail_grades: Grades 2-5
@@ -6771,7 +6800,7 @@ vi:
   tutorial_scratch_string_detail_grades: Grades 2-5
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: do-not-show
-  tutorial_hrm_string_detail_grades: Grades 6+
+  tutorial_hrm_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ice-age_string_detail_grades: do-not-show
   tutorial_koapp_string_detail_grades: do-not-show
   tutorial_lightbot-intl_string_detail_grades: Pre-reader - Grade 8
@@ -6787,7 +6816,7 @@ vi:
   tutorial_spherov_string_detail_grades: Grades 2+
   tutorial_swb_string_detail_grades: do-not-show
   tutorial_build-a-galaxy_string_detail_grades: do-not-show
-  tutorial_alicesims_string_detail_grades: Grades 6+
+  tutorial_alicesims_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tchr_string_detail_grades: do-not-show
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
   tutorial_tap_string_detail_grades: Grades 2+
@@ -6806,51 +6835,51 @@ vi:
   tutorial_solopython_string_detail_grades: Grades 9+
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
   tutorial_kodableadv_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkertj_string_detail_grades: Grades 6+
-  tutorial_wolframa_string_detail_grades: Grades 6+
-  tutorial_wolframm_string_detail_grades: Grades 6+
-  tutorial_wolframspi_string_detail_grades: Grades 6+
-  tutorial_wolframsph_string_detail_grades: Grades 6+
-  tutorial_wolframp_string_detail_grades: Grades 6+
-  tutorial_wolframn_string_detail_grades: Grades 6+
+  tutorial_tynkertj_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_wolframa_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_wolframm_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_wolframspi_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_wolframsph_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_wolframp_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_wolframn_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_soloweb_string_detail_grades: Grades 9+
   tutorial_khanweb_string_detail_grades: Grades 2+
-  tutorial_khandata_string_detail_grades: Grades 6+
+  tutorial_khandata_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_robomeshiq_string_detail_grades: Grades 2+
   tutorial_googlelogo_string_detail_grades: Grades 2+
-  tutorial_playtune_string_detail_grades: Grades 6+
+  tutorial_playtune_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_computeit_string_detail_grades: Grades 2+
   tutorial_codesterssj_string_detail_grades: Grades 2-8
-  tutorial_cmchat_string_detail_grades: Grades 6+
+  tutorial_cmchat_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
-  tutorial_cmbuild_string_detail_grades: Grades 6+
+  tutorial_cmbuild_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_robotrattle_string_detail_grades: Grades 2-8
   tutorial_codestersh_string_detail_grades: Grades 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Grades 6+
-  tutorial_ccbinary_string_detail_grades: Grades 6+
-  tutorial_codehsturtle_string_detail_grades: Grades 6+
-  tutorial_grokhd_string_detail_grades: Grades 6+
-  tutorial_grokem_string_detail_grades: Grades 6+
+  tutorial_codehsdigipixel_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_ccbinary_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codehsturtle_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_grokhd_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_grokem_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
   tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+
-  tutorial_codehsvr_string_detail_grades: Grades 6+
+  tutorial_codehsvr_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codesterstp_string_detail_grades: Grades 6-8
   tutorial_codestersbb_string_detail_grades: Grades 6-8
   tutorial_gfcrossyroad_string_detail_grades: Grades 9+
   tutorial_googleww_string_detail_grades: Grades 9+
-  tutorial_codehsjsapp_string_detail_grades: Grades 6+
+  tutorial_codehsjsapp_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_gfmihi_string_detail_grades: Grades 9+
   tutorial_hopdropphone_string_detail_grades: Grades 2-8
   tutorial_techfaa_string_detail_grades: University
   tutorial_codehsjsgraph_string_detail_grades: Grades 9+
-  tutorial_thunkable_string_detail_grades: Grades 6+
+  tutorial_thunkable_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
-  tutorial_codecar_string_detail_grades: Grades 6+
+  tutorial_codecar_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codesterscp_string_detail_grades: Grades 6-8
   tutorial_grokpetblock_string_detail_grades: Grades 6-8
   tutorial_techbim_string_detail_grades: University
@@ -6862,8 +6891,8 @@ vi:
   tutorial_myradream_string_detail_grades: Grades 2-8
   tutorial_thinkfun_string_detail_grades: Grades 2-8
   tutorial_hopfireworks_string_detail_grades: Grades 2-8
-  tutorial_grokspace_string_detail_grades: Grades 6+
-  tutorial_codehspython_string_detail_grades: Grades 6+
+  tutorial_grokspace_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codehspython_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codehsjava_string_detail_grades: Grades 9+
   tutorial_techioda_string_detail_grades: University
   tutorial_grokmonster_string_detail_grades: Grades 2-5
@@ -6871,8 +6900,8 @@ vi:
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
   tutorial_techiogsr_string_detail_grades: University
-  tutorial_groktunnel_string_detail_grades: Grades 6+
-  tutorial_stemcod_string_detail_grades: Grades 6+
+  tutorial_groktunnel_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_stemcod_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
   tutorial_nyblebot_string_detail_grades: Grades 2-5
@@ -6880,32 +6909,32 @@ vi:
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
-  tutorial_gpbcatapult_string_detail_grades: Grades 6+
-  tutorial_quorumastro_string_detail_grades: Grades 6+
+  tutorial_gpbcatapult_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_quorumastro_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_alicewonder_string_detail_grades: Grades 2-5
   tutorial_rginter_string_detail_grades: Grades 6-8
-  tutorial_cssgrid_string_detail_grades: Grades 6+
+  tutorial_cssgrid_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_jshero_string_detail_grades: Grades 9+
   tutorial_codemojipy_string_detail_grades: Grades 2-5
-  tutorial_nclabdrone_string_detail_grades: Grades 6+
-  tutorial_gpbcircle_string_detail_grades: Grades 6+
-  tutorial_gpbpaint_string_detail_grades: Grades 6+
-  tutorial_cocomarcade_string_detail_grades: Grades 6+
+  tutorial_nclabdrone_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gpbcircle_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gpbpaint_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_cocomarcade_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Grades 6-8
-  tutorial_codedj_string_detail_grades: Grades 6+
-  tutorial_rgadvan_string_detail_grades: Grades 6+
+  tutorial_codedj_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_rgadvan_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codehsrn_string_detail_grades: Grades 9+
-  tutorial_codehswd_string_detail_grades: Grades 6+
+  tutorial_codehswd_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: Grades 6+
-  tutorial_ozoexped_string_detail_grades: Grades 6+
+  tutorial_ozoevo_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_ozoexped_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
   tutorial_ozoeclipse_string_detail_grades: Grades 2+
-  tutorial_ozosimulator_string_detail_grades: Grades 6+
-  tutorial_ozoalgorithm_string_detail_grades: Grades 6+
-  tutorial_ozotimer_string_detail_grades: Grades 6+
+  tutorial_ozosimulator_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_ozoalgorithm_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_ozotimer_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ozohabits_string_detail_grades: All ages
   tutorial_ozoprogram_string_detail_grades: Grades 2-8
   tutorial_ozopair_string_detail_grades: Grades 2+
@@ -6928,9 +6957,9 @@ vi:
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
   tutorial_lblogic_string_detail_grades: Grades 2+
-  tutorial_lbworld_string_detail_grades: Grades 6+
+  tutorial_lbworld_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_lbloops_string_detail_grades: Grades 2-8
-  tutorial_lbtug_string_detail_grades: Grades 6+
+  tutorial_lbtug_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_lbpotato_string_detail_grades: Grades 2+
   tutorial_lbguitar_string_detail_grades: Grades 2+
   tutorial_lbio_string_detail_grades: Grades 2-8
@@ -6939,14 +6968,14 @@ vi:
   tutorial_wonzoo_string_detail_grades: Grades 2-5
   tutorial_wontrip_string_detail_grades: Grades 2-8
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wonsecret_string_detail_grades: Grades 6+
+  tutorial_wonsecret_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_hsscience_string_detail_grades: Grades 2-8
-  tutorial_popculture_string_detail_grades: Grades 6+
+  tutorial_popculture_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_legorobust_string_detail_grades: Grades 2+
   tutorial_legoplants_string_detail_grades: Grades 2+
-  tutorial_legopark_string_detail_grades: Grades 6+
-  tutorial_legodetect_string_detail_grades: Grades 6+
-  tutorial_legolight_string_detail_grades: Grades 6+
+  tutorial_legopark_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_legodetect_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_legolight_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_alexa_string_detail_grades: Grades 9+
   tutorial_grokpetmicro_string_detail_grades: Grades 6-8
   tutorial_pirateplunder_string_detail_grades: Grades 2-8
@@ -6955,24 +6984,24 @@ vi:
   tutorial_cajump_string_detail_grades: Grades 2-8
   tutorial_carest_string_detail_grades: Grades 2-8
   tutorial_accai_string_detail_grades: Grades 2-8
-  tutorial_vceclipse_string_detail_grades: Grades 6+
-  tutorial_pmzero_string_detail_grades: Grades 6+
+  tutorial_vceclipse_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_pmzero_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_hsela_string_detail_grades: Grades 2-8
   tutorial_ticklear_string_detail_grades: Grades 2-8
   tutorial_bcrobot_string_detail_grades: Grades 2-8
-  tutorial_bcsnow_string_detail_grades: Grades 6+
+  tutorial_bcsnow_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ifly_string_detail_grades: Grades 2+
   tutorial_idowedo_string_detail_grades: Grades 2-8
-  tutorial_diggindwarf_string_detail_grades: Grades 6+
+  tutorial_diggindwarf_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_rmedr_string_detail_grades: Grades 2-8
   tutorial_spheroit_string_detail_grades: Grades 2+
   tutorial_gameofcodes_string_detail_grades: Grades 2+
-  tutorial_blocklygames_string_detail_grades: Grades 6+
-  tutorial_spherohello_string_detail_grades: Grades 6+
-  tutorial_spheroarcade_string_detail_grades: Grades 6+
-  tutorial_bcpy1_string_detail_grades: Grades 6+
-  tutorial_bcpy2_string_detail_grades: Grades 6+
-  tutorial_bcjs1_string_detail_grades: Grades 6+
+  tutorial_blocklygames_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_spherohello_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_spheroarcade_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_bcpy1_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_bcpy2_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_bcjs1_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_bcjs2_string_detail_grades: Grades 9+
   tutorial_3dbearmars_string_detail_grades: Grades 2-8
   tutorial_alexaskill_string_detail_grades: Grades 2-8
@@ -6981,27 +7010,27 @@ vi:
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
   tutorial_blockscadclock_string_detail_grades: Grades 9+
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
-  tutorial_blockscadicecream_string_detail_grades: Grades 6+
+  tutorial_blockscadicecream_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
   tutorial_bsgridlight_string_detail_grades: Grades 2+
-  tutorial_bpartscratch_string_detail_grades: Grades 6+
-  tutorial_bpartvid_string_detail_grades: Grades 6+
+  tutorial_bpartscratch_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_bpartvid_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
   tutorial_bpenglishvid_string_detail_grades: Grades 2-8
   tutorial_bphealthscratch_string_detail_grades: Grades 2+
-  tutorial_bphealthvid_string_detail_grades: Grades 6+
+  tutorial_bphealthvid_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
-  tutorial_bpmathvid_string_detail_grades: Grades 6+
+  tutorial_bpmathvid_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
   tutorial_bpmlkvid_string_detail_grades: Grades 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
   tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
   tutorial_bpsciencevid_string_detail_grades: Grades 6-8
-  tutorial_bptechscratch_string_detail_grades: Grades 6+
-  tutorial_bptechvid_string_detail_grades: Grades 6+
-  tutorial_caflags_string_detail_grades: Grades 6+
+  tutorial_bptechscratch_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_bptechvid_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_caflags_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_matariki_string_detail_grades: Grades 2-5
   tutorial_carestaurant_string_detail_grades: Grades 2+
   tutorial_casea_string_detail_grades: Grades 2-5
@@ -7009,37 +7038,37 @@ vi:
   tutorial_ccwslimer_string_detail_grades: Grades 2-8
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
   tutorial_boatrace_string_detail_grades: Grades 2+
-  tutorial_ccplay_string_detail_grades: Grades 6+
+  tutorial_ccplay_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_grinch_string_detail_grades: Grades 2-8
   tutorial_codehsart_string_detail_grades: Grades 9+
   tutorial_codehsbitcoin_string_detail_grades: Grades 9+
   tutorial_codehsblockchain_string_detail_grades: Grades 9+
-  tutorial_codehscipher_string_detail_grades: Grades 6+
+  tutorial_codehscipher_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codehscollision_string_detail_grades: Grades 9+
-  tutorial_codehsmath_string_detail_grades: Grades 6+
-  tutorial_codehsmusic_string_detail_grades: Grades 6+
-  tutorial_codehssports_string_detail_grades: Grades 6+
+  tutorial_codehsmath_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codehsmusic_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codehssports_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codemojipizza_string_detail_grades: Grades 2-8
-  tutorial_moonlander_string_detail_grades: Grades 6+
+  tutorial_moonlander_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_sushicards_string_detail_grades: Grades 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 6+
-  tutorial_codesterstshirt_string_detail_grades: Grades 6+
+  tutorial_codesterslogo_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codesterstshirt_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
   tutorial_codinismhero_string_detail_grades: Grades 2+
   tutorial_discovery_string_detail_grades: Grades 2+
   tutorial_csfirstname_string_detail_grades: Grades 2+
   tutorial_obstaclecourse_string_detail_grades: Grades 2+
-  tutorial_edisonmove_string_detail_grades: Grades 6+
-  tutorial_edisonspider_string_detail_grades: Grades 6+
+  tutorial_edisonmove_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_edisonspider_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_edisonspotlight_string_detail_grades: Grades 2-8
-  tutorial_firiapython_string_detail_grades: Grades 6+
-  tutorial_gamefrootsquid_string_detail_grades: Grades 6+
-  tutorial_duckpiano_string_detail_grades: Grades 6+
-  tutorial_gpsound_string_detail_grades: Grades 6+
+  tutorial_firiapython_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gamefrootsquid_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_duckpiano_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gpsound_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_groklearningpython_string_detail_grades: Grades 9+
   tutorial_htmltimetravel_string_detail_grades: Grades 9+
   tutorial_hp_flappy_string_detail_grades: Grades 9+
@@ -7049,32 +7078,32 @@ vi:
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Grades 2-8
   tutorial_kanohp_string_detail_grades: Grades 2-8
-  tutorial_khanwebpages_string_detail_grades: Grades 6+
+  tutorial_khanwebpages_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wizard_string_detail_grades: Grades 6+
+  tutorial_wizard_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_mbscratchcards_string_detail_grades: Grades 2+
   tutorial_mbswiftplaygrounds_string_detail_grades: Grades 2+
-  tutorial_mbbuttons_string_detail_grades: Grades 6+
-  tutorial_meteor_string_detail_grades: Grades 6+
-  tutorial_ballbounce_string_detail_grades: Grades 6+
-  tutorial_mitcodi_string_detail_grades: Grades 6+
-  tutorial_mitdoodle_string_detail_grades: Grades 6+
-  tutorial_talktome_string_detail_grades: Grades 6+
-  tutorial_mobilecspmap_string_detail_grades: Grades 6+
+  tutorial_mbbuttons_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_meteor_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_ballbounce_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_mitcodi_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_mitdoodle_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_talktome_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_mobilecspmap_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ozorandom_string_detail_grades: Grades 2+
   tutorial_ozotroll_string_detail_grades: Grades 6-8
   tutorial_peblioart_string_detail_grades: Grades 9+
-  tutorial_astropi_string_detail_grades: Grades 6+
+  tutorial_astropi_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_rgart_string_detail_grades: Grades 2-5
   tutorial_rgengineer_string_detail_grades: Grades 2-5
   tutorial_rgmath_string_detail_grades: Grades 2-5
   tutorial_rgscience_string_detail_grades: Grades 2-5
   tutorial_rgtech_string_detail_grades: Grades 2-5
-  tutorial_robotmagic3d_string_detail_grades: Grades 6+
+  tutorial_robotmagic3d_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_robotmagicflappy_string_detail_grades: Grades 9+
   tutorial_scratchadventure_string_detail_grades: Grades 2+
   tutorial_scratchtalk_string_detail_grades: Grades 2+
@@ -7082,14 +7111,14 @@ vi:
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Grades 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
-  tutorial_spherofunctions_string_detail_grades: Grades 6+
+  tutorial_spherofunctions_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_spheroinfrared_string_detail_grades: Grades 6-8
   tutorial_spherolightsensor_string_detail_grades: Grades 2-8
   tutorial_spheromansion_string_detail_grades: Grades 2-8
   tutorial_roadblocks_string_detail_grades: Grades 2-8
-  tutorial_spherotext2_string_detail_grades: Grades 6+
-  tutorial_spherotext3_string_detail_grades: Grades 6+
-  tutorial_spherotext4_string_detail_grades: Grades 6+
+  tutorial_spherotext2_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_spherotext3_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_spherotext4_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_spheroraptor_string_detail_grades: Grades 2-8
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
   tutorial_stemplanetoids_string_detail_grades: Grades 9+
@@ -7097,103 +7126,106 @@ vi:
   tutorial_algobot_string_detail_grades: Grades 2-8
   tutorial_thunkableapps_string_detail_grades: Grades 9+
   tutorial_toxicodedot_string_detail_grades: Grades 2-8
-  tutorial_gcactions_string_detail_grades: Grades 6+
-  tutorial_gccomparators_string_detail_grades: Grades 6+
-  tutorial_gcconditions_string_detail_grades: Grades 6+
-  tutorial_gccreate_string_detail_grades: Grades 6+
-  tutorial_gcevents_string_detail_grades: Grades 6+
-  tutorial_gcloops_string_detail_grades: Grades 6+
-  tutorial_gcvariables_string_detail_grades: Grades 6+
+  tutorial_gcactions_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gccomparators_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gcconditions_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gccreate_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gcevents_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gcloops_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_gcvariables_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: Grades 2+
-  tutorial_landscape_string_detail_grades: Grades 6+
+  tutorial_landscape_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
-  tutorial_superhero_string_detail_grades: Grades 6+
-  tutorial_vidcodeplastic_string_detail_grades: Grades 6+
-  tutorial_vidcodetypeface_string_detail_grades: Grades 6+
+  tutorial_superhero_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_vidcodeplastic_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_vidcodetypeface_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_washustorm_string_detail_grades: Grades 2-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
-  tutorial_googlerookie_string_detail_grades: Grades 6+
+  tutorial_googlerookie_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
   tutorial_mazyad_string_detail_grades: Pre-reader - Grade 5
   tutorial_gamemaker_string_detail_grades: Grades 2+
   tutorial_duckrace_string_detail_grades: Grades 2+
-  tutorial_allcancodeapps_string_detail_grades: Grades 6+
+  tutorial_allcancodeapps_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_n2y_string_detail_grades: Pre-reader+
   tutorial_microsoftarcade_string_detail_grades: Grades 2+
   tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
-  tutorial_toxicodepython_string_detail_grades: Grades 6+
-  tutorial_codecombatozaria_string_detail_grades: Grades 6+
-  tutorial_vidcodedate_string_detail_grades: Grades 6+
+  tutorial_toxicodepython_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codecombatozaria_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_vidcodedate_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
   tutorial_codespeakhappy_string_detail_grades: Grades 2-8
-  tutorial_grokimage_string_detail_grades: Grades 6+
+  tutorial_grokimage_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
   tutorial_rpstress_string_detail_grades: Grades 2+
   tutorial_bsdcause_string_detail_grades: Grades 9+
   tutorial_vidcodeanimoji_string_detail_grades: Grades 2+
-  tutorial_bsdinspire_string_detail_grades: Grades 6+
-  tutorial_tttractor_string_detail_grades: Grades 6+
+  tutorial_vidcodeanimojies_string_detail_grades: Grades 2+
+  tutorial_bsdinspire_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_tttractor_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
   tutorial_scigirlsquest_string_detail_grades: Grades 2-8
   tutorial_codespeakbreathe_string_detail_grades: Grades 2+
-  tutorial_vidcodeface_string_detail_grades: Grades 6+
-  tutorial_educodemaze_string_detail_grades: Grades 6+
-  tutorial_educoderace_string_detail_grades: Grades 6+
+  tutorial_vidcodeface_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_educodemaze_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_educoderace_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codespeakchatbot_string_detail_grades: Grades 2-8
-  tutorial_gamefrootgames_string_detail_grades: Grades 6+
+  tutorial_gamefrootgames_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codespeakgrandparent_string_detail_grades: Grades 2-8
-  tutorial_educodekingdom_string_detail_grades: Grades 6+
+  tutorial_educodekingdom_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codehsdata_string_detail_grades: Grades 9+
-  tutorial_educodecake_string_detail_grades: Grades 6+
-  tutorial_ttsecond_string_detail_grades: Grades 6+
-  tutorial_bsdtrivia_string_detail_grades: Grades 6+
+  tutorial_educodecake_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_ttsecond_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_bsdtrivia_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_csfirstdialogue_string_detail_grades: Grades 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersdistance_string_detail_grades: Grades 6+
-  tutorial_itchspace_string_detail_grades: Grades 6+
+  tutorial_codestersdistance_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_itchspace_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_vidcodemagic_string_detail_grades: Grades 2+
-  tutorial_codespeakmeal_string_detail_grades: Grades 6+
+  tutorial_vidcodemagices_string_detail_grades: Grades 2+
+  tutorial_codespeakmeal_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_itchfish_string_detail_grades: Grades 2-8
-  tutorial_bsdwebsite_string_detail_grades: Grades 6+
+  tutorial_bsdwebsite_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codespeaktime_string_detail_grades: Grades 2-8
-  tutorial_itchwebcam_string_detail_grades: Grades 6+
+  tutorial_itchwebcam_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_itchball_string_detail_grades: Grades 2-8
   tutorial_ttrace_string_detail_grades: Grades 6-8
   tutorial_plethora_string_detail_grades: Grades 2+
-  tutorial_educodesecret_string_detail_grades: Grades 6+
-  tutorial_itchshapes_string_detail_grades: Grades 6+
+  tutorial_educodesecret_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_itchshapes_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_educativechatbot_string_detail_grades: Grades 9+
-  tutorial_educodebasics_string_detail_grades: Grades 6+
-  tutorial_codehsdesign_string_detail_grades: Grades 6+
-  tutorial_htmlacademyphp_string_detail_grades: Grades 6+
+  tutorial_educodebasics_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codehsdesign_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_htmlacademyphp_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_gamefrootdistance_string_detail_grades: Grades 2+
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Grades 6-8
-  tutorial_cuttle_string_detail_grades: Grades 6+
+  tutorial_cuttle_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_bsdjokes_string_detail_grades: Grades 6-8
-  tutorial_rptree_string_detail_grades: Grades 6+
-  tutorial_codestersunity_string_detail_grades: Grades 6+
-  tutorial_codesterssoccer_string_detail_grades: Grades 6+
+  tutorial_rptree_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codestersunity_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codesterssoccer_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_breakoutlock_string_detail_grades: Grades 2-8
-  tutorial_thunkablemask_string_detail_grades: Grades 6+
+  tutorial_thunkablemask_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_cafarming_string_detail_grades: Grades 2-8
   tutorial_blocksmithyeti_string_detail_grades: Grades 9+
-  tutorial_codecapture_string_detail_grades: Grades 6+
+  tutorial_codecapture_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
-  tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_itchplatformer_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_codejika_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
   tutorial_ozobotcolor2_string_detail_grades: Grades 2+
   tutorial_ozobotcolor3_string_detail_grades: Grades 2+
-  tutorial_clcarbon_string_detail_grades: Grades 6+
+  tutorial_clcarbon_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
   tutorial_scigirlscc_string_detail_grades: Grades 2+
   tutorial_irobotpicture_string_detail_grades: Grades 2-8
@@ -7205,15 +7237,15 @@ vi:
   tutorial_kcjheroines_string_detail_grades: Grades 2-8
   tutorial_ozobotvalue_string_detail_grades: Grades 2-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
-  tutorial_clfashion2_string_detail_grades: Grades 6+
-  tutorial_ai4all_string_detail_grades: Grades 6+
-  tutorial_cldata_string_detail_grades: Grades 6+
+  tutorial_clfashion2_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_ai4all_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_cldata_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_spheroinputs_string_detail_grades: Grades 2-8
   tutorial_edisoncount_string_detail_grades: Grades 2-8
   tutorial_spheroloops_string_detail_grades: Grades 2-8
   tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
-  tutorial_clfashion1_string_detail_grades: Grades 6+
+  tutorial_clfashion1_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
   tutorial_edisonmystery_string_detail_grades: Grades 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
@@ -7221,17 +7253,17 @@ vi:
   tutorial_imagilabs_string_detail_grades: Grades 2-8
   tutorial_irobotsimulator_string_detail_grades: Grades 2-8
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
-  tutorial_firiavirtual_string_detail_grades: Grades 6+
+  tutorial_firiavirtual_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_irobotguesscode_string_detail_grades: Grades 2-8
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
-  tutorial_nasa3d_string_detail_grades: Grades 6+
-  tutorial_blupants_string_detail_grades: Grades 6+
+  tutorial_nasa3d_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_blupants_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_legodance_string_detail_grades: Grades 6-8
   tutorial_nearpodcoding_string_detail_grades: Grades 9+
   tutorial_kcjplastic_string_detail_grades: Grades 2+
   tutorial_legojourney_string_detail_grades: Grades 2-8
   tutorial_legohopper_string_detail_grades: Grades 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Grades 6+
+  tutorial_catrobatembroidery_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_irobotphone_string_detail_grades: Grades 2-8
   tutorial_codeguppydraw_string_detail_grades: Grades 6-8
   tutorial_codejumper_string_detail_grades: Grades 2-8
@@ -7984,6 +8016,8 @@ vi:
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8008,6 +8042,8 @@ vi:
   tutorial_itchspace_string_platforms: All modern browsers
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: All modern browsers
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8019,6 +8055,7 @@ vi:
   tutorial_educodesecret_string_platforms: All modern browsers
   tutorial_itchshapes_string_platforms: All modern browsers
   tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
   tutorial_educativechatbot_string_platforms: All modern browsers
   tutorial_educodebasics_string_platforms: All modern browsers
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8690,6 +8727,7 @@ vi:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8711,6 +8749,7 @@ vi:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8722,6 +8761,7 @@ vi:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -8794,26 +8834,26 @@ vi:
   tutorial_codeguppydraw_string_detail_platforms: ''
   tutorial_codejumper_string_detail_platforms: ''
   tutorial_meeempathy_string_detail_platforms: ''
-  tutorial_dance2019_string_detail_programming_languages: Blocks
-  tutorial_danceparty_string_detail_programming_languages: Blocks
-  tutorial_chibitronics_string_detail_programming_languages: Blocks
-  tutorial_athlete_string_detail_programming_languages: Blocks
-  tutorial_moana_string_detail_programming_languages: Blocks
+  tutorial_dance2019_string_detail_programming_languages: Khối
+  tutorial_danceparty_string_detail_programming_languages: Khối
+  tutorial_chibitronics_string_detail_programming_languages: Khối
+  tutorial_athlete_string_detail_programming_languages: Khối
+  tutorial_moana_string_detail_programming_languages: Khối
   tutorial_star-wars_string_detail_programming_languages: Blocks, JavaScript
   tutorial_gumadventure_string_detail_programming_languages: Blocks, Scratch
-  tutorial_mchoc_string_detail_programming_languages: Blocks
+  tutorial_mchoc_string_detail_programming_languages: Khối
   tutorial_vidnews_string_detail_programming_languages: JavaScript
-  tutorial_kodable-pre_string_detail_programming_languages: Blocks
+  tutorial_kodable-pre_string_detail_programming_languages: Khối
   tutorial_highseas_string_detail_programming_languages: Blocks, Scratch
   tutorial_capython_string_detail_programming_languages: Python
-  tutorial_frzn_string_detail_programming_languages: Blocks
+  tutorial_frzn_string_detail_programming_languages: Khối
   tutorial_cocom_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
-  tutorial_play-lab_string_detail_programming_languages: Blocks
-  tutorial_boxisland_string_detail_programming_languages: Blocks
+  tutorial_play-lab_string_detail_programming_languages: Khối
+  tutorial_boxisland_string_detail_programming_languages: Khối
   tutorial_textcomp_string_detail_programming_languages: Language independent
   tutorial_encryption_string_detail_programming_languages: Language independent
   tutorial_kanopixel_string_detail_programming_languages: JavaScript, Coffeescript
-  tutorial_foos_string_detail_programming_languages: Blocks
+  tutorial_foos_string_detail_programming_languages: Khối
   tutorial_tynkerdd_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_tynkerana_string_detail_programming_languages: Blocks, Tynker, JavaScript,
@@ -8821,33 +8861,33 @@ vi:
   tutorial_vidcard_string_detail_programming_languages: JavaScript
   tutorial_spritebox_string_detail_programming_languages: Blocks, Java, iOS/Swift
   tutorial_tynkerch_string_detail_programming_languages: JavaScript
-  tutorial_lightbot_string_detail_programming_languages: Blocks
+  tutorial_lightbot_string_detail_programming_languages: Khối
   tutorial_hoc_string_detail_programming_languages: do-not-show
-  tutorial_code_string_detail_programming_languages: Blocks
+  tutorial_code_string_detail_programming_languages: Khối
   tutorial_tinspire_string_detail_programming_languages: TI Basic
   tutorial_itchbounceball_string_detail_programming_languages: Blocks, Scratch
   tutorial_vidclim_string_detail_programming_languages: JavaScript
   tutorial_matlab_string_detail_programming_languages: MATLAB
-  tutorial_flap_string_detail_programming_languages: Blocks
-  tutorial_galaxy_string_detail_programming_languages: Blocks
-  tutorial_inf_string_detail_programming_languages: Blocks
+  tutorial_flap_string_detail_programming_languages: Khối
+  tutorial_galaxy_string_detail_programming_languages: Khối
+  tutorial_inf_string_detail_programming_languages: Khối
   tutorial_tynkersol_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_itchg_string_detail_programming_languages: Blocks
+  tutorial_itchg_string_detail_programming_languages: Khối
   tutorial_como_string_detail_programming_languages: CoffeeScript
   tutorial_processfound_string_detail_programming_languages: Java
   tutorial_tynkerhomo_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_art_string_detail_programming_languages: Blocks
+  tutorial_art_string_detail_programming_languages: Khối
   tutorial_tynkerbrick_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_itchbio_string_detail_programming_languages: Blocks
-  tutorial_itchj_string_detail_programming_languages: Blocks
-  tutorial_tickleo_string_detail_programming_languages: Blocks
+  tutorial_itchbio_string_detail_programming_languages: Khối
+  tutorial_itchj_string_detail_programming_languages: Khối
+  tutorial_tickleo_string_detail_programming_languages: Khối
   tutorial_hopgeo_string_detail_programming_languages: Hopscotch
   tutorial_tynkermult_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_monster_string_detail_programming_languages: Blocks
+  tutorial_monster_string_detail_programming_languages: Khối
   tutorial_tynkerapp_string_detail_programming_languages: do-not-show
   tutorial_tynkerpup_string_detail_programming_languages: Blocks, Tynker
   tutorial_livecode_string_detail_programming_languages: Language independent
@@ -8871,10 +8911,10 @@ vi:
   tutorial_codestersturtle_string_detail_programming_languages: Python
   tutorial_penjee_string_detail_programming_languages: Python
   tutorial_trinket_string_detail_programming_languages: Blocks, Kano Code
-  tutorial_frogger_string_detail_programming_languages: Blocks
+  tutorial_frogger_string_detail_programming_languages: Khối
   tutorial_tynkereco_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_mitedarc_string_detail_programming_languages: Blocks
+  tutorial_mitedarc_string_detail_programming_languages: Khối
   tutorial_khan_string_detail_programming_languages: JavaScript
   tutorial_tynkerd_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
@@ -8883,14 +8923,14 @@ vi:
   tutorial_codestersbasketball_string_detail_programming_languages: Python
   tutorial_nclkarel_string_detail_programming_languages: Karel (simplified Python)
   tutorial_buildpong_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_tynkerdrones_string_detail_programming_languages: Blocks
+  tutorial_tynkerdrones_string_detail_programming_languages: Khối
   tutorial_carla_string_detail_programming_languages: Coffeescript
   tutorial_zulama_string_detail_programming_languages: JavaScript
   tutorial_capost_string_detail_programming_languages: HTML, CSS
-  tutorial_marco_string_detail_programming_languages: Blocks
+  tutorial_marco_string_detail_programming_languages: Khối
   tutorial_codestersflappybike_string_detail_programming_languages: Python
   tutorial_kanopong_string_detail_programming_languages: JavaScript
-  tutorial_tynkerright_string_detail_programming_languages: Blocks
+  tutorial_tynkerright_string_detail_programming_languages: Khối
   tutorial_touchdevelop_string_detail_programming_languages: do-not-show
   tutorial_tynkercc_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
@@ -8902,9 +8942,9 @@ vi:
   tutorial_silent_string_detail_programming_languages: JavaScript
   tutorial_robomesh_string_detail_programming_languages: Blocks, Python
   tutorial_amaze_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_codestersds_string_detail_programming_languages: Blocks
+  tutorial_codestersds_string_detail_programming_languages: Khối
   tutorial_knodtext_string_detail_programming_languages: Python
-  tutorial_alicegar_string_detail_programming_languages: Blocks
+  tutorial_alicegar_string_detail_programming_languages: Khối
   tutorial_codesterstransform_string_detail_programming_languages: Python
   tutorial_flexfrog_string_detail_programming_languages: CSS
   tutorial_codemoji_string_detail_programming_languages: do-not-show
@@ -8923,20 +8963,20 @@ vi:
   tutorial_bbot_string_detail_programming_languages: Visual programming language
   tutorial_scratchg_string_detail_programming_languages: Language independent
   tutorial_roboticfriends_string_detail_programming_languages: Language independent
-  tutorial_sjforest_string_detail_programming_languages: Blocks
-  tutorial_sjgreet_string_detail_programming_languages: Blocks
-  tutorial_sjsunset_string_detail_programming_languages: Blocks
+  tutorial_sjforest_string_detail_programming_languages: Khối
+  tutorial_sjgreet_string_detail_programming_languages: Khối
+  tutorial_sjsunset_string_detail_programming_languages: Khối
   tutorial_fufafrenz_string_detail_programming_languages: Language independent
   tutorial_bbcgeo_string_detail_programming_languages: do-not-show
   tutorial_chspixel_string_detail_programming_languages: JavaScript
-  tutorial_hummingbird_string_detail_programming_languages: Blocks
+  tutorial_hummingbird_string_detail_programming_languages: Khối
   tutorial_recoloring_string_detail_programming_languages: Coffee Script (Pencil Code)
   tutorial_bbcchem_string_detail_programming_languages: do-not-show
   tutorial_floalgo_string_detail_programming_languages: Language independent
   tutorial_flocond_string_detail_programming_languages: Blocks, Language independent
   tutorial_floloops_string_detail_programming_languages: Blocks, Language independent
   tutorial_pgts_string_detail_programming_languages: Language independent
-  tutorial_ozo_string_detail_programming_languages: Blocks
+  tutorial_ozo_string_detail_programming_languages: Khối
   tutorial_bbcla_string_detail_programming_languages: do-not-show
   tutorial_bbcsci_string_detail_programming_languages: do-not-show
   tutorial_tlctour_string_detail_programming_languages: Language independent
@@ -8946,7 +8986,7 @@ vi:
   tutorial_bbcart_string_detail_programming_languages: do-not-show
   tutorial_tlcknight_string_detail_programming_languages: Language independent
   tutorial_fufafit_string_detail_programming_languages: Language independent
-  tutorial_ozodance_string_detail_programming_languages: Blocks
+  tutorial_ozodance_string_detail_programming_languages: Khối
   tutorial_codingrobotics_string_detail_programming_languages: Language independent
   tutorial_box_string_detail_programming_languages: do-not-show
   tutorial_hopgame_string_detail_programming_languages: Hopscotch
@@ -8959,19 +8999,19 @@ vi:
   tutorial_tlcemo_string_detail_programming_languages: Language independent
   tutorial_crd_string_detail_programming_languages: Language independent
   tutorial_bbcbio_string_detail_programming_languages: do-not-show
-  tutorial_ticklebb8_string_detail_programming_languages: Blocks
+  tutorial_ticklebb8_string_detail_programming_languages: Khối
   tutorial_grok_string_detail_programming_languages: do-not-show
   tutorial_ijournalist_string_detail_programming_languages: HTML, CSS
   tutorial_bbcmusic_string_detail_programming_languages: do-not-show
-  tutorial_secretcodes_string_detail_programming_languages: Blocks
+  tutorial_secretcodes_string_detail_programming_languages: Khối
   tutorial_tlchex_string_detail_programming_languages: Language independent
-  tutorial_tickles_string_detail_programming_languages: Blocks
-  tutorial_ozogame_string_detail_programming_languages: Blocks
+  tutorial_tickles_string_detail_programming_languages: Khối
+  tutorial_ozogame_string_detail_programming_languages: Khối
   tutorial_vidcodeio_string_detail_programming_languages: Language independent
   tutorial_besttech_string_detail_programming_languages: Blocks, C/C++
   tutorial_tlcbrain_string_detail_programming_languages: Language independent
   tutorial_hopquiz_string_detail_programming_languages: Hopscotch
-  tutorial_unfortunate_string_detail_programming_languages: Blocks
+  tutorial_unfortunate_string_detail_programming_languages: Khối
   tutorial_cha_string_detail_programming_languages: Language independent
   tutorial_elaseq_string_detail_programming_languages: Language independent
   tutorial_bbcmathi_string_detail_programming_languages: do-not-show
@@ -8981,14 +9021,14 @@ vi:
   tutorial_tlcinvis_string_detail_programming_languages: Language independent
   tutorial_tlcjflap_string_detail_programming_languages: Language independent
   tutorial_procolor_string_detail_programming_languages: Language independent
-  tutorial_spiralsfinch_string_detail_programming_languages: Blocks
+  tutorial_spiralsfinch_string_detail_programming_languages: Khối
   tutorial_ozoi_string_detail_programming_languages: Language independent
-  tutorial_ticklel_string_detail_programming_languages: Blocks
-  tutorial_spiralsdash_string_detail_programming_languages: Blocks
-  tutorial_ghdebug_string_detail_programming_languages: Blocks
+  tutorial_ticklel_string_detail_programming_languages: Khối
+  tutorial_spiralsdash_string_detail_programming_languages: Khối
+  tutorial_ghdebug_string_detail_programming_languages: Khối
   tutorial_tlckk_string_detail_programming_languages: Language independent
   tutorial_firstcomp_string_detail_programming_languages: Language independent
-  tutorial_mazefinch_string_detail_programming_languages: Blocks
+  tutorial_mazefinch_string_detail_programming_languages: Khối
   tutorial_tlccc_string_detail_programming_languages: Language independent
   tutorial_tlcdoodle_string_detail_programming_languages: Language independent
   tutorial_tlcpunch_string_detail_programming_languages: Language independent
@@ -9006,60 +9046,60 @@ vi:
   tutorial_tynkerarc_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_grokffpython_string_detail_programming_languages: Python
-  tutorial_grokffblock_string_detail_programming_languages: Blocks
+  tutorial_grokffblock_string_detail_programming_languages: Khối
   tutorial_grokeliza_string_detail_programming_languages: Python
   tutorial_tynkercan_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_grokflags_string_detail_programming_languages: Python
-  tutorial_robomind_string_detail_programming_languages: Blocks
+  tutorial_robomind_string_detail_programming_languages: Khối
   tutorial_scratchanimwork_string_detail_programming_languages: Blocks, Scratch
-  tutorial_adventureq_string_detail_programming_languages: Blocks
+  tutorial_adventureq_string_detail_programming_languages: Khối
   tutorial_khan-es_string_detail_programming_languages: JavaScript
   tutorial_kpt_string_detail_programming_languages: JavaScript
   tutorial_kpl_string_detail_programming_languages: JavaScript
   tutorial_khe_string_detail_programming_languages: JavaScript
   tutorial_kfr_string_detail_programming_languages: JavaScript
-  tutorial_app-inventor_string_detail_programming_languages: Blocks
+  tutorial_app-inventor_string_detail_programming_languages: Khối
   tutorial_bits_string_detail_programming_languages: Blocks, Language independent
-  tutorial_blockly_string_detail_programming_languages: Blocks
+  tutorial_blockly_string_detail_programming_languages: Khối
   tutorial_tynker_string_detail_programming_languages: do-not-show
-  tutorial_baypt_string_detail_programming_languages: Blocks
+  tutorial_baypt_string_detail_programming_languages: Khối
   tutorial_code-combat_string_detail_programming_languages: do-not-show
   tutorial_mky_string_detail_programming_languages: CoffeeScript
   tutorial_spellcraft_string_detail_programming_languages: Blocks, JavaScript
   tutorial_pirates_string_detail_programming_languages: Blocks, Pirate code
   tutorial_csfirst_string_detail_programming_languages: Scratch
-  tutorial_loopedy_string_detail_programming_languages: Blocks
+  tutorial_loopedy_string_detail_programming_languages: Khối
   tutorial_dsw_string_detail_programming_languages: do-not-show
   tutorial_dswb_string_detail_programming_languages: do-not-show
   tutorial_ssw_string_detail_programming_languages: do-not-show
   tutorial_sswb_string_detail_programming_languages: do-not-show
   tutorial_kodable-unplugged_string_detail_programming_languages: Language independent
   tutorial_scratch_string_detail_programming_languages: Language independent
-  tutorial_bayes_string_detail_programming_languages: Blocks
+  tutorial_bayes_string_detail_programming_languages: Khối
   tutorial_gumball_string_detail_programming_languages: do-not-show
   tutorial_hrm_string_detail_programming_languages: Assembly
   tutorial_ice-age_string_detail_programming_languages: do-not-show
   tutorial_koapp_string_detail_programming_languages: do-not-show
-  tutorial_lightbot-intl_string_detail_programming_languages: Blocks
+  tutorial_lightbot-intl_string_detail_programming_languages: Khối
   tutorial_rmc_string_detail_programming_languages: do-not-show
   tutorial_smc_string_detail_programming_languages: do-not-show
   tutorial_minecraft-2016_string_detail_programming_languages: do-not-show
   tutorial_thinkersmith-es_string_detail_programming_languages: JavaScript
-  tutorial_pixie_string_detail_programming_languages: Blocks
+  tutorial_pixie_string_detail_programming_languages: Khối
   tutorial_play_string_detail_programming_languages: do-not-show
-  tutorial_robomind-nl_string_detail_programming_languages: Blocks
+  tutorial_robomind-nl_string_detail_programming_languages: Khối
   tutorial_spheroi_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherol_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherov_string_detail_programming_languages: Blocks, JavaScript
   tutorial_swb_string_detail_programming_languages: do-not-show
   tutorial_build-a-galaxy_string_detail_programming_languages: do-not-show
-  tutorial_alicesims_string_detail_programming_languages: Blocks
+  tutorial_alicesims_string_detail_programming_languages: Khối
   tutorial_tchr_string_detail_programming_languages: do-not-show
-  tutorial_robogame_string_detail_programming_languages: Blocks
+  tutorial_robogame_string_detail_programming_languages: Khối
   tutorial_tap_string_detail_programming_languages: Blocks, Tynker, JavaScript, Python
   tutorial_cintl_string_detail_programming_languages: do-not-show
-  tutorial_itchstop_string_detail_programming_languages: Blocks
+  tutorial_itchstop_string_detail_programming_languages: Khối
   tutorial_tynkerpn_string_detail_programming_languages: Blocks, Tynker
   tutorial_tynkerpd_string_detail_programming_languages: Blocks, Tynker
   tutorial_persistence_string_detail_programming_languages: Language independent
@@ -9069,7 +9109,7 @@ vi:
   tutorial_moveit_string_detail_programming_languages: Language independent
   tutorial_bigevent_string_detail_programming_languages: Language independent
   tutorial_gpp_string_detail_programming_languages: Language independent
-  tutorial_foosgame_string_detail_programming_languages: Blocks
+  tutorial_foosgame_string_detail_programming_languages: Khối
   tutorial_solopython_string_detail_programming_languages: Python
   tutorial_kodableint_string_detail_programming_languages: Language independent, Symbols
   tutorial_kodableadv_string_detail_programming_languages: Language independent, Javascript
@@ -9085,57 +9125,57 @@ vi:
   tutorial_khandata_string_detail_programming_languages: SQL
   tutorial_robomeshiq_string_detail_programming_languages: Blocks, Python
   tutorial_googlelogo_string_detail_programming_languages: Blocks, Scratch
-  tutorial_playtune_string_detail_programming_languages: Blocks
+  tutorial_playtune_string_detail_programming_languages: Khối
   tutorial_computeit_string_detail_programming_languages: Language independent
   tutorial_codesterssj_string_detail_programming_languages: Blocks, Python
   tutorial_cmchat_string_detail_programming_languages: Python
   tutorial_tynkerdb_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_cmbuild_string_detail_programming_languages: CoffeeScript
-  tutorial_robotrattle_string_detail_programming_languages: Blocks
+  tutorial_robotrattle_string_detail_programming_languages: Khối
   tutorial_codestersh_string_detail_programming_languages: Blocks, Python
   tutorial_codehsdigipixel_string_detail_programming_languages: Language independent
-  tutorial_ccbinary_string_detail_programming_languages: Blocks
+  tutorial_ccbinary_string_detail_programming_languages: Khối
   tutorial_codehsturtle_string_detail_programming_languages: Python
-  tutorial_grokhd_string_detail_programming_languages: Blocks
+  tutorial_grokhd_string_detail_programming_languages: Khối
   tutorial_grokem_string_detail_programming_languages: Python
   tutorial_kodmaze_string_detail_programming_languages: Language independent
   tutorial_codestersa_string_detail_programming_languages: Python
   tutorial_cmdodo_string_detail_programming_languages: CoffeeScript
   tutorial_tynkerspace_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_gfbloons_string_detail_programming_languages: Blocks
+  tutorial_gfbloons_string_detail_programming_languages: Khối
   tutorial_raspipong_string_detail_programming_languages: Python
   tutorial_codehsvr_string_detail_programming_languages: JavaScript
   tutorial_codesterstp_string_detail_programming_languages: Blocks, Python
   tutorial_codestersbb_string_detail_programming_languages: Blocks, Python
-  tutorial_gfcrossyroad_string_detail_programming_languages: Blocks
-  tutorial_googleww_string_detail_programming_languages: Blocks
+  tutorial_gfcrossyroad_string_detail_programming_languages: Khối
+  tutorial_googleww_string_detail_programming_languages: Khối
   tutorial_codehsjsapp_string_detail_programming_languages: JavaScript
-  tutorial_gfmihi_string_detail_programming_languages: Blocks
+  tutorial_gfmihi_string_detail_programming_languages: Khối
   tutorial_hopdropphone_string_detail_programming_languages: Hopscotch
   tutorial_techfaa_string_detail_programming_languages: JavaScript, Language independent
   tutorial_codehsjsgraph_string_detail_programming_languages: JavaScript
-  tutorial_thunkable_string_detail_programming_languages: Blocks
+  tutorial_thunkable_string_detail_programming_languages: Khối
   tutorial_hopcrossyroad_string_detail_programming_languages: Hopscotch
   tutorial_switchglitch_string_detail_programming_languages: Language independent
   tutorial_codecar_string_detail_programming_languages: C/C++
   tutorial_codesterscp_string_detail_programming_languages: Blocks, Python
-  tutorial_grokpetblock_string_detail_programming_languages: Blocks
+  tutorial_grokpetblock_string_detail_programming_languages: Khối
   tutorial_techbim_string_detail_programming_languages: Language independent
   tutorial_techfpp_string_detail_programming_languages: Python
   tutorial_codesterscr_string_detail_programming_languages: Python
   tutorial_grokdisease_string_detail_programming_languages: Python
   tutorial_techec_string_detail_programming_languages: JavaScript
-  tutorial_rgbegin_string_detail_programming_languages: Blocks
-  tutorial_myradream_string_detail_programming_languages: Blocks
+  tutorial_rgbegin_string_detail_programming_languages: Khối
+  tutorial_myradream_string_detail_programming_languages: Khối
   tutorial_thinkfun_string_detail_programming_languages: Language independent
   tutorial_hopfireworks_string_detail_programming_languages: Hopscotch
-  tutorial_grokspace_string_detail_programming_languages: Blocks
+  tutorial_grokspace_string_detail_programming_languages: Khối
   tutorial_codehspython_string_detail_programming_languages: Python
   tutorial_codehsjava_string_detail_programming_languages: Java
   tutorial_techioda_string_detail_programming_languages: Language independent
-  tutorial_grokmonster_string_detail_programming_languages: Blocks
+  tutorial_grokmonster_string_detail_programming_languages: Khối
   tutorial_techmjs_string_detail_programming_languages: JavaScript
   tutorial_techga_string_detail_programming_languages: Language independent
   tutorial_techioan_string_detail_programming_languages: Java
@@ -9144,45 +9184,45 @@ vi:
   tutorial_stemcod_string_detail_programming_languages: JavaScript
   tutorial_techikb_string_detail_programming_languages: Kotlin
   tutorial_kanostreet_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_nyblebot_string_detail_programming_languages: Blocks
+  tutorial_nyblebot_string_detail_programming_languages: Khối
   tutorial_codemojijs_string_detail_programming_languages: JavaScript
   tutorial_techapf_string_detail_programming_languages: Python
   tutorial_techfpjs_string_detail_programming_languages: JavaScript
   tutorial_techlinq_string_detail_programming_languages: C#
-  tutorial_gpbcatapult_string_detail_programming_languages: Blocks
+  tutorial_gpbcatapult_string_detail_programming_languages: Khối
   tutorial_quorumastro_string_detail_programming_languages: Quorum
   tutorial_alicewonder_string_detail_programming_languages: JavaScript
-  tutorial_rginter_string_detail_programming_languages: Blocks
+  tutorial_rginter_string_detail_programming_languages: Khối
   tutorial_cssgrid_string_detail_programming_languages: CSS
   tutorial_jshero_string_detail_programming_languages: JavaScript
   tutorial_codemojipy_string_detail_programming_languages: iOS/Swift, Python
   tutorial_nclabdrone_string_detail_programming_languages: Python
-  tutorial_gpbcircle_string_detail_programming_languages: Blocks
-  tutorial_gpbpaint_string_detail_programming_languages: Blocks
+  tutorial_gpbcircle_string_detail_programming_languages: Khối
+  tutorial_gpbpaint_string_detail_programming_languages: Khối
   tutorial_cocomarcade_string_detail_programming_languages: JavaScript, Python, Lua,
     CoffeeScript
   tutorial_techcpp_string_detail_programming_languages: C/C++
-  tutorial_beetik_string_detail_programming_languages: Blocks
+  tutorial_beetik_string_detail_programming_languages: Khối
   tutorial_codedj_string_detail_programming_languages: JavaScript
   tutorial_rgadvan_string_detail_programming_languages: Blocks, JavaScript, Python
   tutorial_codehsrn_string_detail_programming_languages: JavaScript
   tutorial_codehswd_string_detail_programming_languages: HTML
   tutorial_turtlerobot_string_detail_programming_languages: Language independent
-  tutorial_ozoevo_string_detail_programming_languages: Blocks
+  tutorial_ozoevo_string_detail_programming_languages: Khối
   tutorial_ozoexped_string_detail_programming_languages: OzoCodes
-  tutorial_ozojourney_string_detail_programming_languages: Blocks
+  tutorial_ozojourney_string_detail_programming_languages: Khối
   tutorial_ozocodes_string_detail_programming_languages: OzoCodes
   tutorial_ozoeclipse_string_detail_programming_languages: Blocks, OzoCodes
   tutorial_ozosimulator_string_detail_programming_languages: Language independent
-  tutorial_ozoalgorithm_string_detail_programming_languages: Blocks
-  tutorial_ozotimer_string_detail_programming_languages: Blocks
+  tutorial_ozoalgorithm_string_detail_programming_languages: Khối
+  tutorial_ozotimer_string_detail_programming_languages: Khối
   tutorial_ozohabits_string_detail_programming_languages: OzoCodes
-  tutorial_ozoprogram_string_detail_programming_languages: Blocks
-  tutorial_ozopair_string_detail_programming_languages: Blocks
-  tutorial_codesnoopy_string_detail_programming_languages: Blocks
+  tutorial_ozoprogram_string_detail_programming_languages: Khối
+  tutorial_ozopair_string_detail_programming_languages: Khối
+  tutorial_codesnoopy_string_detail_programming_languages: Khối
   tutorial_applabintro_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_cslartist_string_detail_programming_languages: Blocks
-  tutorial_cslscratchjr_string_detail_programming_languages: Blocks
+  tutorial_cslartist_string_detail_programming_languages: Khối
+  tutorial_cslscratchjr_string_detail_programming_languages: Khối
   tutorial_floevents_string_detail_programming_languages: Language independent
   tutorial_florobot_string_detail_programming_languages: Language independent
   tutorial_isavesanta_string_detail_programming_languages: Blocks, Scratch
@@ -9195,49 +9235,49 @@ vi:
   tutorial_kodpizza_string_detail_programming_languages: Language independent
   tutorial_kodwomen_string_detail_programming_languages: Language independent
   tutorial_tfunplug_string_detail_programming_languages: Language independent
-  tutorial_lbvariables_string_detail_programming_languages: Blocks
-  tutorial_lbfunctions_string_detail_programming_languages: Blocks
-  tutorial_lblogic_string_detail_programming_languages: Blocks
-  tutorial_lbworld_string_detail_programming_languages: Blocks
-  tutorial_lbloops_string_detail_programming_languages: Blocks
-  tutorial_lbtug_string_detail_programming_languages: Blocks
-  tutorial_lbpotato_string_detail_programming_languages: Blocks
-  tutorial_lbguitar_string_detail_programming_languages: Blocks
-  tutorial_lbio_string_detail_programming_languages: Blocks
-  tutorial_wonpuppy_string_detail_programming_languages: Blocks
+  tutorial_lbvariables_string_detail_programming_languages: Khối
+  tutorial_lbfunctions_string_detail_programming_languages: Khối
+  tutorial_lblogic_string_detail_programming_languages: Khối
+  tutorial_lbworld_string_detail_programming_languages: Khối
+  tutorial_lbloops_string_detail_programming_languages: Khối
+  tutorial_lbtug_string_detail_programming_languages: Khối
+  tutorial_lbpotato_string_detail_programming_languages: Khối
+  tutorial_lbguitar_string_detail_programming_languages: Khối
+  tutorial_lbio_string_detail_programming_languages: Khối
+  tutorial_wonpuppy_string_detail_programming_languages: Khối
   tutorial_woncue_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_wonzoo_string_detail_programming_languages: Blocks
-  tutorial_wontrip_string_detail_programming_languages: Blocks
-  tutorial_woncollect_string_detail_programming_languages: Blocks
+  tutorial_wonzoo_string_detail_programming_languages: Khối
+  tutorial_wontrip_string_detail_programming_languages: Khối
+  tutorial_woncollect_string_detail_programming_languages: Khối
   tutorial_wonsecret_string_detail_programming_languages: Blocks, JavaScript
   tutorial_hsscience_string_detail_programming_languages: Hopscotch
   tutorial_popculture_string_detail_programming_languages: Language independent
-  tutorial_legorobust_string_detail_programming_languages: Blocks
-  tutorial_legoplants_string_detail_programming_languages: Blocks
-  tutorial_legopark_string_detail_programming_languages: Blocks
-  tutorial_legodetect_string_detail_programming_languages: Blocks
-  tutorial_legolight_string_detail_programming_languages: Blocks
+  tutorial_legorobust_string_detail_programming_languages: Khối
+  tutorial_legoplants_string_detail_programming_languages: Khối
+  tutorial_legopark_string_detail_programming_languages: Khối
+  tutorial_legodetect_string_detail_programming_languages: Khối
+  tutorial_legolight_string_detail_programming_languages: Khối
   tutorial_alexa_string_detail_programming_languages: JavaScript
   tutorial_grokpetmicro_string_detail_programming_languages: Python, MicroPython
-  tutorial_pirateplunder_string_detail_programming_languages: Blocks
+  tutorial_pirateplunder_string_detail_programming_languages: Khối
   tutorial_cadj_string_detail_programming_languages: Language independent
-  tutorial_cacrazy_string_detail_programming_languages: Blocks
+  tutorial_cacrazy_string_detail_programming_languages: Khối
   tutorial_cajump_string_detail_programming_languages: Language independent
-  tutorial_carest_string_detail_programming_languages: Blocks
+  tutorial_carest_string_detail_programming_languages: Khối
   tutorial_accai_string_detail_programming_languages: Language independent
   tutorial_vceclipse_string_detail_programming_languages: JavaScript
-  tutorial_pmzero_string_detail_programming_languages: Blocks
+  tutorial_pmzero_string_detail_programming_languages: Khối
   tutorial_hsela_string_detail_programming_languages: Hopscotch
-  tutorial_ticklear_string_detail_programming_languages: Blocks
-  tutorial_bcrobot_string_detail_programming_languages: Blocks
-  tutorial_bcsnow_string_detail_programming_languages: Blocks
+  tutorial_ticklear_string_detail_programming_languages: Khối
+  tutorial_bcrobot_string_detail_programming_languages: Khối
+  tutorial_bcsnow_string_detail_programming_languages: Khối
   tutorial_ifly_string_detail_programming_languages: Tynker
   tutorial_idowedo_string_detail_programming_languages: Scratch
   tutorial_diggindwarf_string_detail_programming_languages: JavaScript
-  tutorial_rmedr_string_detail_programming_languages: Blocks
+  tutorial_rmedr_string_detail_programming_languages: Khối
   tutorial_spheroit_string_detail_programming_languages: Blocks, JavaScript
   tutorial_gameofcodes_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_blocklygames_string_detail_programming_languages: Blocks
+  tutorial_blocklygames_string_detail_programming_languages: Khối
   tutorial_spherohello_string_detail_programming_languages: JavaScript
   tutorial_spheroarcade_string_detail_programming_languages: iOS/Swift
   tutorial_bcpy1_string_detail_programming_languages: Python
@@ -9246,16 +9286,16 @@ vi:
   tutorial_bcjs2_string_detail_programming_languages: JavaScript
   tutorial_3dbearmars_string_detail_programming_languages: Language independent (can
     be taught in multiple languages), Uses 3D modeling in augmented reality
-  tutorial_alexaskill_string_detail_programming_languages: Blocks
+  tutorial_alexaskill_string_detail_programming_languages: Khối
   tutorial_bitsboxyak_string_detail_programming_languages: JavaScript
-  tutorial_blockscadbargraphs_string_detail_programming_languages: Blocks
-  tutorial_blockscadbirdhouses_string_detail_programming_languages: Blocks
-  tutorial_blockscadclock_string_detail_programming_languages: Blocks
-  tutorial_blockscaddinner_string_detail_programming_languages: Blocks
-  tutorial_blockscadicecream_string_detail_programming_languages: Blocks
-  tutorial_blockscadpizza_string_detail_programming_languages: Blocks
-  tutorial_blockscadsugar_string_detail_programming_languages: Blocks
-  tutorial_bsgridlight_string_detail_programming_languages: Blocks
+  tutorial_blockscadbargraphs_string_detail_programming_languages: Khối
+  tutorial_blockscadbirdhouses_string_detail_programming_languages: Khối
+  tutorial_blockscadclock_string_detail_programming_languages: Khối
+  tutorial_blockscaddinner_string_detail_programming_languages: Khối
+  tutorial_blockscadicecream_string_detail_programming_languages: Khối
+  tutorial_blockscadpizza_string_detail_programming_languages: Khối
+  tutorial_blockscadsugar_string_detail_programming_languages: Khối
+  tutorial_bsgridlight_string_detail_programming_languages: Khối
   tutorial_bpartscratch_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bpartvid_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bpenglishscratch_string_detail_programming_languages: Blocks, JavaScript
@@ -9272,17 +9312,17 @@ vi:
   tutorial_bpsciencevid_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bptechscratch_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bptechvid_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_caflags_string_detail_programming_languages: Blocks
-  tutorial_matariki_string_detail_programming_languages: Blocks
-  tutorial_carestaurant_string_detail_programming_languages: Blocks
-  tutorial_casea_string_detail_programming_languages: Blocks
-  tutorial_cashield_string_detail_programming_languages: Blocks
-  tutorial_ccwslimer_string_detail_programming_languages: Blocks
-  tutorial_codinggalaxy_string_detail_programming_languages: Blocks
-  tutorial_boatrace_string_detail_programming_languages: Blocks
+  tutorial_caflags_string_detail_programming_languages: Khối
+  tutorial_matariki_string_detail_programming_languages: Khối
+  tutorial_carestaurant_string_detail_programming_languages: Khối
+  tutorial_casea_string_detail_programming_languages: Khối
+  tutorial_cashield_string_detail_programming_languages: Khối
+  tutorial_ccwslimer_string_detail_programming_languages: Khối
+  tutorial_codinggalaxy_string_detail_programming_languages: Khối
+  tutorial_boatrace_string_detail_programming_languages: Khối
   tutorial_ccplay_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
-  tutorial_grinch_string_detail_programming_languages: Blocks
-  tutorial_codehsart_string_detail_programming_languages: Blocks
+  tutorial_grinch_string_detail_programming_languages: Khối
+  tutorial_codehsart_string_detail_programming_languages: Khối
   tutorial_codehsbitcoin_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_codehsblockchain_string_detail_programming_languages: Language independent
@@ -9291,12 +9331,12 @@ vi:
     (can be taught in multiple languages)
   tutorial_codehscollision_string_detail_programming_languages: JavaScript
   tutorial_codehsmath_string_detail_programming_languages: Python
-  tutorial_codehsmusic_string_detail_programming_languages: Blocks
-  tutorial_codehssports_string_detail_programming_languages: Blocks
+  tutorial_codehsmusic_string_detail_programming_languages: Khối
+  tutorial_codehssports_string_detail_programming_languages: Khối
   tutorial_codemojipizza_string_detail_programming_languages: JavaScript
   tutorial_moonlander_string_detail_programming_languages: CoffeeScript
-  tutorial_sushicards_string_detail_programming_languages: Blocks
-  tutorial_codesparkcreate_string_detail_programming_languages: Blocks
+  tutorial_sushicards_string_detail_programming_languages: Khối
+  tutorial_codesparkcreate_string_detail_programming_languages: Khối
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blocks, Python
   tutorial_codesterslogo_string_detail_programming_languages: Python
@@ -9306,15 +9346,15 @@ vi:
   tutorial_codinismhero_string_detail_programming_languages: Python
   tutorial_discovery_string_detail_programming_languages: Blocks, Scratch
   tutorial_csfirstname_string_detail_programming_languages: Blocks, Scratch
-  tutorial_obstaclecourse_string_detail_programming_languages: Blocks
+  tutorial_obstaclecourse_string_detail_programming_languages: Khối
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
-  tutorial_edisonspider_string_detail_programming_languages: Blocks
-  tutorial_edisonspotlight_string_detail_programming_languages: Blocks
+  tutorial_edisonspider_string_detail_programming_languages: Khối
+  tutorial_edisonspotlight_string_detail_programming_languages: Khối
   tutorial_firiapython_string_detail_programming_languages: Python
-  tutorial_gamefrootsquid_string_detail_programming_languages: Blocks
-  tutorial_duckpiano_string_detail_programming_languages: Blocks
-  tutorial_gpsound_string_detail_programming_languages: Blocks
+  tutorial_gamefrootsquid_string_detail_programming_languages: Khối
+  tutorial_duckpiano_string_detail_programming_languages: Khối
+  tutorial_gpsound_string_detail_programming_languages: Khối
   tutorial_groklearningpython_string_detail_programming_languages: Python
   tutorial_htmltimetravel_string_detail_programming_languages: HTML and CSS
   tutorial_hp_flappy_string_detail_programming_languages: Blocks, hyperPad Visual
@@ -9323,11 +9363,11 @@ vi:
   tutorial_icipher_string_detail_programming_languages: ''
   tutorial_iguess_string_detail_programming_languages: ''
   tutorial_imake_string_detail_programming_languages: Unplugged
-  tutorial_imorse_string_detail_programming_languages: Blocks
+  tutorial_imorse_string_detail_programming_languages: Khối
   tutorial_kanohp_string_detail_programming_languages: Blocks, JavaScript
   tutorial_khanwebpages_string_detail_programming_languages: HTML/CSS
-  tutorial_kibobowl_string_detail_programming_languages: Blocks
-  tutorial_kibodance_string_detail_programming_languages: Blocks
+  tutorial_kibobowl_string_detail_programming_languages: Khối
+  tutorial_kibodance_string_detail_programming_languages: Khối
   tutorial_buildcharacters_string_detail_programming_languages: JavaScript, Language
     independent (can be taught in multiple languages)
   tutorial_designgames_string_detail_programming_languages: JavaScript, Language independent
@@ -9335,56 +9375,56 @@ vi:
   tutorial_makelevels_string_detail_programming_languages: JavaScript, Language independent
     (can be taught in multiple languages)
   tutorial_wizard_string_detail_programming_languages: JavaScript
-  tutorial_mbscratchcards_string_detail_programming_languages: Blocks
+  tutorial_mbscratchcards_string_detail_programming_languages: Khối
   tutorial_mbswiftplaygrounds_string_detail_programming_languages: iOS/Swift
-  tutorial_mbbuttons_string_detail_programming_languages: Blocks
-  tutorial_meteor_string_detail_programming_languages: Blocks
-  tutorial_ballbounce_string_detail_programming_languages: Blocks
-  tutorial_mitcodi_string_detail_programming_languages: Blocks
-  tutorial_mitdoodle_string_detail_programming_languages: Blocks
-  tutorial_talktome_string_detail_programming_languages: Blocks
+  tutorial_mbbuttons_string_detail_programming_languages: Khối
+  tutorial_meteor_string_detail_programming_languages: Khối
+  tutorial_ballbounce_string_detail_programming_languages: Khối
+  tutorial_mitcodi_string_detail_programming_languages: Khối
+  tutorial_mitdoodle_string_detail_programming_languages: Khối
+  tutorial_talktome_string_detail_programming_languages: Khối
   tutorial_mobilecspmap_string_detail_programming_languages: Blocks, App Inventor
-  tutorial_ozorandom_string_detail_programming_languages: Blocks
-  tutorial_ozotroll_string_detail_programming_languages: Blocks
+  tutorial_ozorandom_string_detail_programming_languages: Khối
+  tutorial_ozotroll_string_detail_programming_languages: Khối
   tutorial_peblioart_string_detail_programming_languages: JavaScript
   tutorial_astropi_string_detail_programming_languages: Python
-  tutorial_rgart_string_detail_programming_languages: Blocks
-  tutorial_rgengineer_string_detail_programming_languages: Blocks
-  tutorial_rgmath_string_detail_programming_languages: Blocks
-  tutorial_rgscience_string_detail_programming_languages: Blocks
-  tutorial_rgtech_string_detail_programming_languages: Blocks
+  tutorial_rgart_string_detail_programming_languages: Khối
+  tutorial_rgengineer_string_detail_programming_languages: Khối
+  tutorial_rgmath_string_detail_programming_languages: Khối
+  tutorial_rgscience_string_detail_programming_languages: Khối
+  tutorial_rgtech_string_detail_programming_languages: Khối
   tutorial_robotmagic3d_string_detail_programming_languages: Blocks, JavaScript
   tutorial_robotmagicflappy_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_scratchadventure_string_detail_programming_languages: Blocks
-  tutorial_scratchtalk_string_detail_programming_languages: Blocks
+  tutorial_scratchadventure_string_detail_programming_languages: Khối
+  tutorial_scratchtalk_string_detail_programming_languages: Khối
   tutorial_scratchjrstory_string_detail_programming_languages: 'ScratchJr. '
   tutorial_scratchjrtwinkle_string_detail_programming_languages: ScratchJr.
   tutorial_spherocomm_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherocommunity_string_detail_programming_languages: Blocks, Draw
   tutorial_spherofunctions_string_detail_programming_languages: JavaScript
-  tutorial_spheroinfrared_string_detail_programming_languages: Blocks
-  tutorial_spherolightsensor_string_detail_programming_languages: Blocks
-  tutorial_spheromansion_string_detail_programming_languages: Blocks
-  tutorial_roadblocks_string_detail_programming_languages: Blocks
+  tutorial_spheroinfrared_string_detail_programming_languages: Khối
+  tutorial_spherolightsensor_string_detail_programming_languages: Khối
+  tutorial_spheromansion_string_detail_programming_languages: Khối
+  tutorial_roadblocks_string_detail_programming_languages: Khối
   tutorial_spherotext2_string_detail_programming_languages: JavaScript
   tutorial_spherotext3_string_detail_programming_languages: JavaScript
   tutorial_spherotext4_string_detail_programming_languages: JavaScript
-  tutorial_spheroraptor_string_detail_programming_languages: Blocks
+  tutorial_spheroraptor_string_detail_programming_languages: Khối
   tutorial_stempiday_string_detail_programming_languages: JavaScript
   tutorial_stemplanetoids_string_detail_programming_languages: JavaScript
   tutorial_stempong_string_detail_programming_languages: JavaScript
   tutorial_algobot_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
-  tutorial_thunkableapps_string_detail_programming_languages: Blocks
+  tutorial_thunkableapps_string_detail_programming_languages: Khối
   tutorial_toxicodedot_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
-  tutorial_gcactions_string_detail_programming_languages: Blocks
-  tutorial_gccomparators_string_detail_programming_languages: Blocks
-  tutorial_gcconditions_string_detail_programming_languages: Blocks
-  tutorial_gccreate_string_detail_programming_languages: Blocks
-  tutorial_gcevents_string_detail_programming_languages: Blocks
-  tutorial_gcloops_string_detail_programming_languages: Blocks
-  tutorial_gcvariables_string_detail_programming_languages: Blocks
+  tutorial_gcactions_string_detail_programming_languages: Khối
+  tutorial_gccomparators_string_detail_programming_languages: Khối
+  tutorial_gcconditions_string_detail_programming_languages: Khối
+  tutorial_gccreate_string_detail_programming_languages: Khối
+  tutorial_gcevents_string_detail_programming_languages: Khối
+  tutorial_gcloops_string_detail_programming_languages: Khối
+  tutorial_gcvariables_string_detail_programming_languages: Khối
   tutorial_beanything_string_detail_programming_languages: Blocks, Tynker
   tutorial_change_string_detail_programming_languages: Blocks, Tynker
   tutorial_cooking_string_detail_programming_languages: Blocks, Tynker
@@ -9396,17 +9436,17 @@ vi:
   tutorial_superhero_string_detail_programming_languages: HTML, CSS
   tutorial_vidcodeplastic_string_detail_programming_languages: JavaScript
   tutorial_vidcodetypeface_string_detail_programming_languages: JavaScript
-  tutorial_washustorm_string_detail_programming_languages: Blocks
+  tutorial_washustorm_string_detail_programming_languages: Khối
   tutorial_activitypackets_string_detail_programming_languages: Blocks, Wonder, Xylo,
     Blockly
-  tutorial_googlerookie_string_detail_programming_languages: Blocks
+  tutorial_googlerookie_string_detail_programming_languages: Khối
   tutorial_tommyturtle_string_detail_programming_languages: Language independent
-  tutorial_mazyad_string_detail_programming_languages: Blocks
+  tutorial_mazyad_string_detail_programming_languages: Khối
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
-  tutorial_duckrace_string_detail_programming_languages: Blocks
-  tutorial_allcancodeapps_string_detail_programming_languages: Blocks
+  tutorial_duckrace_string_detail_programming_languages: Khối
+  tutorial_allcancodeapps_string_detail_programming_languages: Khối
   tutorial_n2y_string_detail_programming_languages: ''
-  tutorial_microsoftarcade_string_detail_programming_languages: Blocks
+  tutorial_microsoftarcade_string_detail_programming_languages: Khối
   tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
     Scratch
   tutorial_toxicodepython_string_detail_programming_languages: Python
@@ -9414,71 +9454,74 @@ vi:
     Lua, CoffeeScript
   tutorial_vidcodedate_string_detail_programming_languages: JavaScript
   tutorial_codemonkeyspace_string_detail_programming_languages: CoffeeScript
-  tutorial_codespeakhappy_string_detail_programming_languages: Blocks
+  tutorial_codespeakhappy_string_detail_programming_languages: Khối
   tutorial_grokimage_string_detail_programming_languages: Python
   tutorial_icomputelearn_string_detail_programming_languages: Blocks, JavaScript,
     Scratch
-  tutorial_rpstress_string_detail_programming_languages: Blocks
+  tutorial_rpstress_string_detail_programming_languages: Khối
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
-  tutorial_scigirlsquest_string_detail_programming_languages: Blocks
-  tutorial_codespeakbreathe_string_detail_programming_languages: Blocks
+  tutorial_scigirlsquest_string_detail_programming_languages: Khối
+  tutorial_codespeakbreathe_string_detail_programming_languages: Khối
   tutorial_vidcodeface_string_detail_programming_languages: JavaScript
   tutorial_educodemaze_string_detail_programming_languages: JavaScript
   tutorial_educoderace_string_detail_programming_languages: JavaScript
-  tutorial_codespeakchatbot_string_detail_programming_languages: Blocks
-  tutorial_gamefrootgames_string_detail_programming_languages: Blocks
-  tutorial_codespeakgrandparent_string_detail_programming_languages: Blocks
+  tutorial_codespeakchatbot_string_detail_programming_languages: Khối
+  tutorial_gamefrootgames_string_detail_programming_languages: Khối
+  tutorial_codespeakgrandparent_string_detail_programming_languages: Khối
   tutorial_educodekingdom_string_detail_programming_languages: JavaScript
   tutorial_codehsdata_string_detail_programming_languages: JavaScript
   tutorial_educodecake_string_detail_programming_languages: HTML + CSS
   tutorial_ttsecond_string_detail_programming_languages: JavaScript
   tutorial_bsdtrivia_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_csfirstdialogue_string_detail_programming_languages: Blocks, Scratch
-  tutorial_codemonkeybeaver_string_detail_programming_languages: Blocks
+  tutorial_codemonkeybeaver_string_detail_programming_languages: Khối
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: Blocks
+  tutorial_itchspace_string_detail_programming_languages: Khối
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Blocks
+  tutorial_itchfish_string_detail_programming_languages: Khối
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_codespeaktime_string_detail_programming_languages: Blocks
-  tutorial_itchwebcam_string_detail_programming_languages: Blocks
-  tutorial_itchball_string_detail_programming_languages: Blocks
+  tutorial_codespeaktime_string_detail_programming_languages: Khối
+  tutorial_itchwebcam_string_detail_programming_languages: Khối
+  tutorial_itchball_string_detail_programming_languages: Khối
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: Blocks
+  tutorial_itchshapes_string_detail_programming_languages: Khối
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
   tutorial_htmlacademyphp_string_detail_programming_languages: PHP
-  tutorial_gamefrootdistance_string_detail_programming_languages: Blocks
+  tutorial_gamefrootdistance_string_detail_programming_languages: Khối
   tutorial_codesterscovid_string_detail_programming_languages: Python
   tutorial_ttbunker_string_detail_programming_languages: JavaScript
   tutorial_cuttle_string_detail_programming_languages: Blocks, Language independent
     (can be taught in multiple languages)
   tutorial_bsdjokes_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_rptree_string_detail_programming_languages: Blocks
+  tutorial_rptree_string_detail_programming_languages: Khối
   tutorial_codestersunity_string_detail_programming_languages: Python
   tutorial_codesterssoccer_string_detail_programming_languages: Python
   tutorial_breakoutlock_string_detail_programming_languages: Blocks, Language independent
     (can be taught in multiple languages)
-  tutorial_thunkablemask_string_detail_programming_languages: Blocks
+  tutorial_thunkablemask_string_detail_programming_languages: Khối
   tutorial_cafarming_string_detail_programming_languages: Theory course on impacts
     of computing.
   tutorial_blocksmithyeti_string_detail_programming_languages: JavaScript
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Blocks
+  tutorial_itchplatformer_string_detail_programming_languages: Khối
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_gamefrootclicker_string_detail_programming_languages: Blocks
+  tutorial_gamefrootclicker_string_detail_programming_languages: Khối
   tutorial_rmagicequity_string_detail_programming_languages: Blocks, JavaScript
   tutorial_ttfreestyle_string_detail_programming_languages: JavaScript
   tutorial_ozobotcolor2_string_detail_programming_languages: Ozobot Color Codes
@@ -9490,15 +9533,15 @@ vi:
     be taught in multiple languages)
   tutorial_irobotpicture_string_detail_programming_languages: No specific programming
     languages required; unplugged decoding activity with words/phrases
-  tutorial_kcjmyself_string_detail_programming_languages: Blocks
+  tutorial_kcjmyself_string_detail_programming_languages: Khối
   tutorial_nearpodalgorithms_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
-  tutorial_kibodrop_string_detail_programming_languages: Blocks
+  tutorial_kibodrop_string_detail_programming_languages: Khối
   tutorial_ozobotcolor1_string_detail_programming_languages: Ozobot Line Following
     and Color Codes
   tutorial_scigirlspixels_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
-  tutorial_kcjheroines_string_detail_programming_languages: Blocks
+  tutorial_kcjheroines_string_detail_programming_languages: Khối
   tutorial_ozobotvalue_string_detail_programming_languages: Ozobot Color Codes
   tutorial_icodebytes_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
@@ -9507,35 +9550,35 @@ vi:
     taught in multiple languages)
   tutorial_cldata_string_detail_programming_languages: Language independent (can be
     taught in multiple languages)
-  tutorial_spheroinputs_string_detail_programming_languages: Blocks
-  tutorial_edisoncount_string_detail_programming_languages: Blocks
-  tutorial_spheroloops_string_detail_programming_languages: Blocks
-  tutorial_kiboprogram_string_detail_programming_languages: Blocks
+  tutorial_spheroinputs_string_detail_programming_languages: Khối
+  tutorial_edisoncount_string_detail_programming_languages: Khối
+  tutorial_spheroloops_string_detail_programming_languages: Khối
+  tutorial_kiboprogram_string_detail_programming_languages: Khối
   tutorial_hellorubycsin60_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_clfashion1_string_detail_programming_languages: SQL
   tutorial_irobottraffic_string_detail_programming_languages: Blocks, iOS/Swift
-  tutorial_edisonmystery_string_detail_programming_languages: Blocks
+  tutorial_edisonmystery_string_detail_programming_languages: Khối
   tutorial_microbitseaturtles_string_detail_programming_languages: Blocks, JavaScript,
     Python
   tutorial_ozobotknow_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
   tutorial_imagilabs_string_detail_programming_languages: Python
-  tutorial_irobotsimulator_string_detail_programming_languages: Blocks
-  tutorial_irobotkind_string_detail_programming_languages: Blocks
+  tutorial_irobotsimulator_string_detail_programming_languages: Khối
+  tutorial_irobotkind_string_detail_programming_languages: Khối
   tutorial_firiavirtual_string_detail_programming_languages: Python
   tutorial_irobotguesscode_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_ozobotnouns_string_detail_programming_languages: Ozobot Color Codes
   tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
   tutorial_blupants_string_detail_programming_languages: Blocks, Python
-  tutorial_legodance_string_detail_programming_languages: Blocks
+  tutorial_legodance_string_detail_programming_languages: Khối
   tutorial_nearpodcoding_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_kcjplastic_string_detail_programming_languages: Blocks, Also has use of
     a spreadsheet.
-  tutorial_legojourney_string_detail_programming_languages: Blocks
-  tutorial_legohopper_string_detail_programming_languages: Blocks
-  tutorial_catrobatembroidery_string_detail_programming_languages: Blocks
+  tutorial_legojourney_string_detail_programming_languages: Khối
+  tutorial_legohopper_string_detail_programming_languages: Khối
+  tutorial_catrobatembroidery_string_detail_programming_languages: Khối
   tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_codeguppydraw_string_detail_programming_languages: JavaScript
   tutorial_codejumper_string_detail_programming_languages: Unplugged
@@ -10113,42 +10156,42 @@ vi:
     Phần Lan, Pháp, Đức, Hindi, Indonesia, Ý, Nhật, Nga, Tây Ban Nha, Tagalog, Tamil,
     Thái, Thổ Nhĩ Kỳ, Urdu và 15 ngôn ngữ khác!
   tutorial_scratchimagine_string_detail_grades: Grades 2+
-  tutorial_codesterspsa_string_detail_grades: Grades 6+
+  tutorial_codesterspsa_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_googlehero_string_detail_grades: Grades 2-8
-  tutorial_codestersbball_string_detail_grades: Grades 6+
+  tutorial_codestersbball_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_scratchcartoon_string_detail_grades: Grades 2+
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
   tutorial_bananatales_string_detail_grades: Grades 2-8
   tutorial_scratchtales_string_detail_grades: Grades 2-8
-  tutorial_msemoji_string_detail_grades: Grades 6+
-  tutorial_cacolor_string_detail_grades: Grades 6+
+  tutorial_msemoji_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_cacolor_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_kodablebeach_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkeren_string_detail_grades: Grades 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Grades 6+
+  tutorial_tynkerjavapro_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_grasshopperhack_string_detail_grades: Grades 9+
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
   tutorial_nclabdata_string_detail_grades: Grades 9+
   tutorial_grasshopperphoto_string_detail_grades: Grades 9+
-  tutorial_tynkerpyland_string_detail_grades: Grades 6+
+  tutorial_tynkerpyland_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codeitimages_string_detail_grades: Grades 2+
   tutorial_hyperpadenemy_string_detail_grades: Grades 9+
   tutorial_tynkerpro_string_detail_grades: Grades 2-8
-  tutorial_trashtag_string_detail_grades: Grades 6+
+  tutorial_trashtag_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_casiege_string_detail_grades: Grades 2-8
-  tutorial_thunkableyeet_string_detail_grades: Grades 6+
-  tutorial_vidcodedeal_string_detail_grades: Grades 6+
+  tutorial_thunkableyeet_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_vidcodedeal_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codehsgeno_string_detail_grades: Grades 9+
   tutorial_hyperpadpong_string_detail_grades: Grades 9+
   tutorial_tynkerland_string_detail_grades: Grades 2-8
-  tutorial_trinketgirl_string_detail_grades: Grades 6+
+  tutorial_trinketgirl_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_rpimosquito_string_detail_grades: Grades 6-8
-  tutorial_tynkermars_string_detail_grades: Grades 6+
-  tutorial_cityx_string_detail_grades: Grades 6+
-  tutorial_vidcodemap_string_detail_grades: Grades 6+
+  tutorial_tynkermars_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_cityx_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_vidcodemap_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
-  tutorial_codehstriangle_string_detail_grades: Grades 6+
+  tutorial_codehstriangle_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ttwhitehouse_string_detail_grades: Grades 2+
-  tutorial_modulo_string_detail_grades: Grades 6+
+  tutorial_modulo_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: Grades 9+
@@ -10156,34 +10199,34 @@ vi:
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
   tutorial_stemc_blckhole_string_detail_grades: Grades 9+
-  tutorial_careconfigure_string_detail_grades: Grades 6+
+  tutorial_careconfigure_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
   tutorial_ozaria_string_detail_grades: Grades 2+
-  tutorial_ttovum_string_detail_grades: Grades 6+
+  tutorial_ttovum_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ttpassage_string_detail_grades: Grades 2-8
   tutorial_tynkerhtmlen_string_detail_grades: Grades 2+
   tutorial_ttfrog_string_detail_grades: Grades 2-8
   tutorial_codemojijava_string_detail_grades: Grades 6-8
-  tutorial_ccfirewall_string_detail_grades: Grades 6+
+  tutorial_ccfirewall_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_htmljs_string_detail_grades: Grades 6-8
   tutorial_ttaqueducts_string_detail_grades: Grades 6-8
-  tutorial_vtgame_string_detail_grades: Grades 6+
-  tutorial_baroborav_string_detail_grades: Grades 6+
+  tutorial_vtgame_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_baroborav_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_baroboobstacle_string_detail_grades: Grades 2+
-  tutorial_pbstorytelling_string_detail_grades: Grades 6+
+  tutorial_pbstorytelling_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
   tutorial_spherosmiles_string_detail_grades: Grades 2+
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
-  tutorial_toxarchitect_string_detail_grades: Grades 6+
+  tutorial_toxarchitect_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_idodge_string_detail_grades: Grades 2-8
-  tutorial_firiacodebot_string_detail_grades: Grades 6+
+  tutorial_firiacodebot_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_modlighthouse_string_detail_grades: Pre-reader+
   tutorial_spherogreen_string_detail_grades: Grades 2-8
   tutorial_ozopopstar_string_detail_grades: Grades 2-8
-  tutorial_eddesign_string_detail_grades: Grades 6+
-  tutorial_edshapeup_string_detail_grades: Grades 6+
+  tutorial_eddesign_string_detail_grades: Lớp 6+ (11 trở lên)
+  tutorial_edshapeup_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_ozocolor_string_detail_grades: Grades 2-8
   tutorial_kcjanimals_string_detail_grades: Grades 2-8
   tutorial_icomputeeggs_string_detail_grades: Grades 2-8
@@ -10192,21 +10235,21 @@ vi:
   tutorial_peblioportraits_string_detail_grades: Grades 9+
   tutorial_rootcodebreak_string_detail_grades: Grades 2-8
   tutorial_microbit14_string_detail_grades: Grades 2-8
-  tutorial_barobomoon_string_detail_grades: Grades 6+
+  tutorial_barobomoon_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_eddog_string_detail_grades: Grades 2-6
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: Grades 9+
-  tutorial_blockscadtarget_string_detail_grades: Grades 6+
+  tutorial_blockscadtarget_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tcadicicles_string_detail_grades: Grades 7-8
-  tutorial_blockscadscale_string_detail_grades: Grades 6+
+  tutorial_blockscadscale_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Grades 9+
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
-  tutorial_modvariables_string_detail_grades: Grades 6+
+  tutorial_modvariables_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
-  tutorial_rpisensehat_string_detail_grades: Grades 6+
+  tutorial_rpisensehat_string_detail_grades: Lớp 6+ (11 trở lên)
   tutorial_modtraits_string_detail_grades: Grades 2+
   tutorial_mee_string_detail_grades: Grades 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
@@ -10423,33 +10466,33 @@ vi:
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_ai-oceans_string_detail_platforms: ''
-  tutorial_scratchimagine_string_detail_programming_languages: Blocks
+  tutorial_scratchimagine_string_detail_programming_languages: Khối
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blocks, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
-  tutorial_scratchcartoon_string_detail_programming_languages: Blocks
-  tutorial_codemonkeyjr_string_detail_programming_languages: Blocks
+  tutorial_scratchcartoon_string_detail_programming_languages: Khối
+  tutorial_codemonkeyjr_string_detail_programming_languages: Khối
   tutorial_bananatales_string_detail_programming_languages: Python
-  tutorial_scratchtales_string_detail_programming_languages: Blocks
+  tutorial_scratchtales_string_detail_programming_languages: Khối
   tutorial_msemoji_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
   tutorial_cacolor_string_detail_programming_languages: Computational Thinking focused
     so no language
   tutorial_kodablebeach_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
-  tutorial_tynkeren_string_detail_programming_languages: Blocks
+  tutorial_tynkeren_string_detail_programming_languages: Khối
   tutorial_tynkerjavapro_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_grasshopperhack_string_detail_programming_languages: JavaScript
-  tutorial_pbskids_string_detail_programming_languages: Blocks
+  tutorial_pbskids_string_detail_programming_languages: Khối
   tutorial_nclabdata_string_detail_programming_languages: Structured Query Language
     (SQL), specifically PostgreSQL
   tutorial_grasshopperphoto_string_detail_programming_languages: JavaScript
   tutorial_tynkerpyland_string_detail_programming_languages: Python
-  tutorial_codeitimages_string_detail_programming_languages: Blocks
+  tutorial_codeitimages_string_detail_programming_languages: Khối
   tutorial_hyperpadenemy_string_detail_programming_languages: hyperPad Visual Programming
   tutorial_tynkerpro_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_trashtag_string_detail_programming_languages: Blocks
+  tutorial_trashtag_string_detail_programming_languages: Khối
   tutorial_casiege_string_detail_programming_languages: Security theory based
-  tutorial_thunkableyeet_string_detail_programming_languages: Blocks
+  tutorial_thunkableyeet_string_detail_programming_languages: Khối
   tutorial_vidcodedeal_string_detail_programming_languages: JavaScript
   tutorial_codehsgeno_string_detail_programming_languages: Python
   tutorial_hyperpadpong_string_detail_programming_languages: hyperPad Visual Programming
@@ -10465,7 +10508,7 @@ vi:
   tutorial_ttwhitehouse_string_detail_programming_languages: SCSS, CSS
   tutorial_modulo_string_detail_programming_languages: Lua
   tutorial_codingtown_string_detail_programming_languages: JavaScript
-  tutorial_kanoart_string_detail_programming_languages: Blocks
+  tutorial_kanoart_string_detail_programming_languages: Khối
   tutorial_dragonscript_string_detail_programming_languages: JavaScript, HTML
   tutorial_uwcloud_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
@@ -10480,7 +10523,7 @@ vi:
   tutorial_tynkerhtmlen_string_detail_programming_languages: HTML, CSS
   tutorial_ttfrog_string_detail_programming_languages: Blocks, JavaScript
   tutorial_codemojijava_string_detail_programming_languages: Java
-  tutorial_ccfirewall_string_detail_programming_languages: Blocks
+  tutorial_ccfirewall_string_detail_programming_languages: Khối
   tutorial_htmljs_string_detail_programming_languages: JavaScript
   tutorial_ttaqueducts_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_vtgame_string_detail_programming_languages: Tiếng Việt
@@ -10501,37 +10544,37 @@ vi:
   tutorial_modlighthouse_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_spherogreen_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_ozopopstar_string_detail_programming_languages: Blocks
-  tutorial_eddesign_string_detail_programming_languages: Blocks
+  tutorial_ozopopstar_string_detail_programming_languages: Khối
+  tutorial_eddesign_string_detail_programming_languages: Khối
   tutorial_edshapeup_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
-  tutorial_ozocolor_string_detail_programming_languages: Blocks
-  tutorial_kcjanimals_string_detail_programming_languages: Blocks
-  tutorial_icomputeeggs_string_detail_programming_languages: Blocks
-  tutorial_rootunplugged_string_detail_programming_languages: Blocks
-  tutorial_rgtreasure_string_detail_programming_languages: Blocks
+  tutorial_ozocolor_string_detail_programming_languages: Khối
+  tutorial_kcjanimals_string_detail_programming_languages: Khối
+  tutorial_icomputeeggs_string_detail_programming_languages: Khối
+  tutorial_rootunplugged_string_detail_programming_languages: Khối
+  tutorial_rgtreasure_string_detail_programming_languages: Khối
   tutorial_peblioportraits_string_detail_programming_languages: JavaScript
-  tutorial_rootcodebreak_string_detail_programming_languages: Blocks
-  tutorial_microbit14_string_detail_programming_languages: Blocks
+  tutorial_rootcodebreak_string_detail_programming_languages: Khối
+  tutorial_microbit14_string_detail_programming_languages: Khối
   tutorial_barobomoon_string_detail_programming_languages: Blocks, C/C++
-  tutorial_eddog_string_detail_programming_languages: Blocks
-  tutorial_microbit15_string_detail_programming_languages: Blocks
+  tutorial_eddog_string_detail_programming_languages: Khối
+  tutorial_microbit15_string_detail_programming_languages: Khối
   tutorial_unity_string_detail_programming_languages: C#
-  tutorial_blockscadtarget_string_detail_programming_languages: Blocks
-  tutorial_tcadicicles_string_detail_programming_languages: Blocks
-  tutorial_blockscadscale_string_detail_programming_languages: Blocks
-  tutorial_tcadloops_string_detail_programming_languages: Blocks
+  tutorial_blockscadtarget_string_detail_programming_languages: Khối
+  tutorial_tcadicicles_string_detail_programming_languages: Khối
+  tutorial_blockscadscale_string_detail_programming_languages: Khối
+  tutorial_tcadloops_string_detail_programming_languages: Khối
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
     major programming languages. Can easily adapt this project to another language/environment.
-  tutorial_kcjmerry_string_detail_programming_languages: Blocks
+  tutorial_kcjmerry_string_detail_programming_languages: Khối
   tutorial_modvariables_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_codestersmicro_string_detail_programming_languages: Python
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
-  tutorial_modtraits_string_detail_programming_languages: Blocks
-  tutorial_mee_string_detail_programming_languages: Blocks
+  tutorial_modtraits_string_detail_programming_languages: Khối
+  tutorial_mee_string_detail_programming_languages: Khối
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
   tutorial_ai-oceans_string_detail_programming_languages: AI và Học Máy

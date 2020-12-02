@@ -16,7 +16,7 @@
 # An objective represents what students should learn in a lesson
 #
 # @attr [String] description - What the student should learn
-class Objective < ActiveRecord::Base
+class Objective < ApplicationRecord
   include SerializedProperties
 
   belongs_to :lesson

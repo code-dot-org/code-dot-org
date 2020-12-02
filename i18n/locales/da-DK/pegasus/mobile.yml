@@ -1154,6 +1154,7 @@
   hoc_overview_partner_activities_body: "Webstedet En Times Kodning har over 100 databehandlingsaktiviteter for alle aldre og erfaringsniveauer, udviklet af Code.org og partnere."
   hoc_overview_partner_activities_link: "Vis aktiviteter"
   hoc_overview_start_tutorial: "Start"
+  hoc_overview_more_resources: "For at vide mere om, hvordan du får flere ressourcer og interagerer med dit fjernklasserum, se vores guide til hosting af en [virtual Hour of Code](https://hourofcode.com/us/how-to/virtual). For studerende med begrænset eller ingen teknologi eller tilslutningsmuligheder, del denne pakke med [unplugged Hour of Code aktiviteter](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc_overview_view_teacher_guide: "Vis lærervejledning"
   hoc2018_creativity_create: "Opret"
   hoc2018_creativity_what_will_you_create: "Hvad vil du skabe?"
@@ -1205,3 +1206,4 @@
   hoc2018_dance_video4: "Danse fest - Lykønskninger"
   hoc2018_mc_with_microsoft: "I partnerskab med"
   hoc2018_mc_thank_microsoft: "Vi takker Microsoft for at støtte vores vision og mission for at sikre, at hvert barn har mulighed for at lære datalogi og få færdighederne til at få succes i det 21. århundrede."
+  footer_powered_by_aws: "Powered by Amazon Web Services"

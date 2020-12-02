@@ -593,13 +593,13 @@
           "spritelab_comment": "Usa este bloque para dejarte notas a ti o al docente sobre cómo funciona tu código."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica a la computadora que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
+          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica al ordenador que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica a la computadora que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
+          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica al ordenador que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica a la computadora que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
+          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica al ordenador que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
         },
         "Geometric Sun": {
           "4-5_Artist_Patterns_Free_Play_1": "Ahora todos tus bloques favoritos se organizan en categorías.  ¡Haz click sobre estas palabras para verlo todo!"
@@ -642,13 +642,13 @@
           "MC_HOC_2017_03_Cole_1": "¡Este es un bucle \"Repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
         },
         "MC_HOC_2017_04_Cole": {
-          "MC_HOC_2017_04_Cole_a": "El Agent puede flotar sobre el agua, ¡pero el jugador no!"
+          "MC_HOC_2017_04_Cole_a": "El Agente puede flotar sobre el agua, ¡pero el jugador no!"
         },
         "MC_HOC_2017_04_Cole_2019": {
-          "MC_HOC_2017_04_Cole_a": "El Agent puede flotar sobre el agua, ¡pero el jugador no!"
+          "MC_HOC_2017_04_Cole_a": "El Agente puede flotar sobre el agua, ¡pero el jugador no!"
         },
         "MC_HOC_2017_04_Cole_2020": {
-          "MC_HOC_2017_04_Cole_a": "El Agent puede flotar sobre el agua, ¡pero el jugador no!"
+          "MC_HOC_2017_04_Cole_a": "El Agente puede flotar sobre el agua, ¡pero el jugador no!"
         },
         "MC_HOC_2017_06_Cole": {
           "MC_HOC_2017_06_Cole_1": "No puedes tirar esos bloques, pero ¡puedes editarlos!"
@@ -707,7 +707,7 @@
           "sign_in_to_save_project": "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa para guardar este proyecto en tu cuenta!"
         },
         "OPD-K5-forloops-5": {
-          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'for'!"
+          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'desde´'!"
         },
         "OPD-K5-projects-4": {
           "courseE_playLab_scaffold3_1": "Lleva al actor a esta bandera para pasar al nivel siguiente."
@@ -716,10 +716,10 @@
           "spritelab_comment": "Usa este bloque para dejarte notas a ti o al docente sobre cómo funciona tu código."
         },
         "OPD-K5-variables-1": {
-          "grade5_artist_variables_triangles1_1": "Ten en cuenta que ahora los bloques tienen una nueva forma de ingresar números. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
+          "grade5_artist_variables_triangles1_1": "Fíjate en que ahora los bloques tienen una nueva forma para meter números en ellos. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
         },
         "OPD-K5-variables-5": {
-          "courseF_artist_variables3_a": "Usa éste para establecer la variable 'longitud'"
+          "courseF_artist_variables3_a": "Usa esto para establecer el valor de la variable 'longitud'"
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Hemos colocado algunos bloques para que empieces."
@@ -799,12 +799,12 @@
         "behaviors 3a": {
           "behavior_callout": "¿Por qué este comportamiento no funciona para la estrella del medio?",
           "star2_callout": "Quita este bloque 'disfraz' y, en su lugar, usa el bloque \"este sprite\".",
-          "this_sprite_callout": "Recoloca este bloque de disfraz debajo con este."
+          "this_sprite_callout": "Reemplaza el bloque de disfraz de debajo por este otro."
         },
         "behaviors 3a_2020": {
           "behavior_callout": "¿Por qué este comportamiento no funciona para la estrella del medio?",
           "star2_callout": "Quita este bloque 'disfraz' y, en su lugar, usa el bloque \"este sprite\".",
-          "this_sprite_callout": "Recoloca este bloque de disfraz debajo con este."
+          "this_sprite_callout": "Reemplaza el bloque de disfraz de debajo por este otro."
         },
         "behaviors 4": {
           "behaviors_edit": "Haz clic aquí para ver cómo funciona este comportamiento."
@@ -1583,16 +1583,16 @@
           "courseE_playLab_scaffold3_1": "Lleva al actor a esta bandera para pasar al nivel siguiente."
         },
         "courseF_artist_for1": {
-          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"for\" viven aquí."
+          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"desde\" viven aquí."
         },
         "courseF_artist_for1_2018": {
-          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"for\" viven aquí."
+          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"desde\" viven aquí."
         },
         "courseF_artist_for1_2019": {
-          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"for\" viven aquí."
+          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"desde\" viven aquí."
         },
         "courseF_artist_for1_2020": {
-          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"for\" viven aquí."
+          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"desde\" viven aquí."
         },
         "courseF_artist_fwp1": {
           "courseF_artist_fwp1_1": "Haz click en el botón \"editar\" para cambiar el código dentro de la función."
@@ -1604,16 +1604,16 @@
           "courseF_artist_fwp5_1": "Aquí encontrarás la función polígono."
         },
         "courseF_artist_variables3": {
-          "courseF_artist_variables3_a": "Usa éste para establecer la variable 'longitud'"
+          "courseF_artist_variables3_a": "Usa esto para establecer el valor de la variable 'longitud'"
         },
         "courseF_artist_variables3_2018": {
-          "courseF_artist_variables3_a": "Usa éste para establecer la variable 'longitud'"
+          "courseF_artist_variables3_a": "Usa esto para establecer el valor de la variable 'longitud'"
         },
         "courseF_artist_variables3_2019": {
-          "courseF_artist_variables3_a": "Usa éste para establecer la variable 'longitud'"
+          "courseF_artist_variables3_a": "Usa esto para establecer el valor de la variable 'longitud'"
         },
         "courseF_artist_variables3_2020": {
-          "courseF_artist_variables3_a": "Usa éste para establecer la variable 'longitud'"
+          "courseF_artist_variables3_a": "Usa esto para establecer el valor de la variable 'longitud'"
         },
         "courseF_artist_variables6": {
           "courseF_artist_variables6_1": "Las variables pueden ser útiles cuando tienes que cambiar muchas copias del mismo número."
@@ -1646,16 +1646,16 @@
           "courseF_bee_conditionals5_1": "Usa este bloque cuando la longitud del camino cambie (¡como en los lados del rectángulo!)"
         },
         "courseF_bee_for4": {
-          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'for'!"
+          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'desde´'!"
         },
         "courseF_bee_for4_2018": {
-          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'for'!"
+          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'desde´'!"
         },
         "courseF_bee_for4_2019": {
-          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'for'!"
+          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'desde´'!"
         },
         "courseF_bee_for4_2020": {
-          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'for'!"
+          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'desde´'!"
         },
         "courseF_bee_for9": {
           "courseF_bee_for9_1": "Aquí encontrarás el bucle 'matemáticas'."
@@ -1772,16 +1772,16 @@
           "replace_questions": "Usa el menú desplegable para reemplazar \"???\" con un número"
         },
         "grade5_artist_variables_triangles1": {
-          "grade5_artist_variables_triangles1_1": "Ten en cuenta que ahora los bloques tienen una nueva forma de ingresar números. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
+          "grade5_artist_variables_triangles1_1": "Fíjate en que ahora los bloques tienen una nueva forma para meter números en ellos. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
         },
         "grade5_artist_variables_triangles1_2018": {
-          "grade5_artist_variables_triangles1_1": "Ten en cuenta que ahora los bloques tienen una nueva forma de ingresar números. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
+          "grade5_artist_variables_triangles1_1": "Fíjate en que ahora los bloques tienen una nueva forma para meter números en ellos. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
         },
         "grade5_artist_variables_triangles1_2019": {
-          "grade5_artist_variables_triangles1_1": "Ten en cuenta que ahora los bloques tienen una nueva forma de ingresar números. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
+          "grade5_artist_variables_triangles1_1": "Fíjate en que ahora los bloques tienen una nueva forma para meter números en ellos. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
         },
         "grade5_artist_variables_triangles1_2020": {
-          "grade5_artist_variables_triangles1_1": "Ten en cuenta que ahora los bloques tienen una nueva forma de ingresar números. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
+          "grade5_artist_variables_triangles1_1": "Fíjate en que ahora los bloques tienen una nueva forma para meter números en ellos. ¡Estos bloques \"matemáticos\" se pueden sacar y mover!"
         },
         "courseC_video_angles": {
           "courseD_maze_ramp6_1": "Cualquier código que ingreses aquí se repetirá tantas veces como lo indiques, luego continúa ejecutando el resto del programa."

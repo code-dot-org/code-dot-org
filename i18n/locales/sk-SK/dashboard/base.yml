@@ -157,9 +157,7 @@ sk:
     invalid_password: "Heslo musí obsahovať aspoň 6 znakov"
     mismatch_password: "Zadané dve heslá sa nezhodujú"
     student_consent: "Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať stránkua služby Code.org."
-    agree_us_website: "Súhlasím s používaním stránky prevádzkovanej z územia Spojených štátov amerických (USA)."
-    my_data_to_us: "Údaje z používania tejto stránky môžu byť zaslané a uložené alebo spracované v Spojených štátoch amerických (USA)."
-    agree_us_data_transfer_student: '** Súhlasím, že Code.org môže prenášať údaje (vrátane osobných údajov) v rámci môjho používania tejto stránky do Spojených štátov** za účelom umiestňovania a spracovania týchto údajov.'
+    agree_us_data_transfer_student: '**Súhlasím, že Code.org môže prenášať údaje (vrátane osobných údajov) v rámci môjho používania tejto stránky do Spojených štátov** za účelom umiestňovania a spracovania týchto údajov.'
     agree_us_data_transfer_teacher: '** Súhlasím, že Code.org môže prenášať údaje (vrátane osobných údajov) v rámci môjho používania (a používania zo strany mojich študentov) tejto stránky do Spojených štátov** za účelom umiestňovania a spracovania týchto údajov.'
     data_collection_us: "Rozumiem, že Code.org je americká nezisková webová stránka a že zákony upravujúce zhromažďovanie údajov v USA sa môžu líšiť od zákonov v mojej krajine."
     visit_privacy: 'Ďalšie informácie nájdete v [zásadách ochrany osobných údajov](%{privacy_url}) Code.org.'
