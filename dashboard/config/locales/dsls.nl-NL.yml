@@ -1714,40 +1714,76 @@ nl-NL:
         - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict2:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
           feedback: Juist!
-        - {}
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
         - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
           feedback: Juist!
-        - {}
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
         - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
           feedback: Juist!
-        - {}
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
         - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
           feedback: Juist!
-        - {}
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
         - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
