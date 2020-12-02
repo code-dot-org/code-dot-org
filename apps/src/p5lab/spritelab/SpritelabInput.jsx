@@ -9,7 +9,7 @@ const styles = {
     background: 'rgba(34, 42, 51, 0.85)',
     textAlign: 'center',
     position: 'absolute',
-    top: 336, // TODO: Update when playspace resizes
+    bottom: 0,
     width: '100%'
   },
   prompt: {
