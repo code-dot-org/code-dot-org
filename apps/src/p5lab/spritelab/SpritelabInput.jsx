@@ -19,7 +19,11 @@ const styles = {
   promptText: {
     lineHeight: '2em',
     verticalAlign: 'middle',
-    display: 'inline-block'
+    display: 'inline-block',
+    maxWidth: 'calc(100% - 60px)',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
   },
   icon: {
     color: 'white'
