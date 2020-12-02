@@ -7,7 +7,7 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 const defaultProps = {
   selectedStudent: {id: 1, name: 'Student 1'},
   level: {
-    id: 1,
+    id: 123,
     assessment: null,
     contained: false,
     driver: null,
