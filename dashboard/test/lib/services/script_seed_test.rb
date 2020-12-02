@@ -221,7 +221,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
   end
 
   def get_counts
-    [Script, LessonGroup, Lesson, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
+    [Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
   end
 
   def assert_script_trees_equal(s1, s2, script_levels1=nil, script_levels2=nil)
