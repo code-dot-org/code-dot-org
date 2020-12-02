@@ -1650,40 +1650,68 @@ nl-NL:
             op `Start` drukt?
       courseC_multi_starWars_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
           feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
           feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
           feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
           feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict2:
         answers:
         - {}

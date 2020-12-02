@@ -3137,6 +3137,52 @@
         "courseC_collector_prog_challenge2_2020": {
           "courseC_collector_prog_challenge1_a": "Je kunt op elke plek meer dan een `verzamel`-blok gebruiken.",
           "courseC_collector_prog_challenge1_b": "Ben je de weg kwijt? Probeer deze route om de puzzle op te lossen."
+        },
+        "courseC_starWars_loops1": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2018": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2019": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2020": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops4": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\"."
+        },
+        "courseC_starWars_loops4_2018": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\"."
+        },
+        "courseC_starWars_loops4_2019": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\"."
+        },
+        "courseC_starWars_loops4_2020": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\"."
+        },
+        "courseC_starWars_loops4_copy": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\"."
         }
       }
     }
