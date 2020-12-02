@@ -15,6 +15,10 @@ social:
   "og:video:type": ""
 ---
 
+<%
+  show_tune_in_link = DCDO.get('show_2020_ethics_ai_panel_live_links', true)
+%>
+
 <h1>Join us to explore the ethics of AI on Tuesday, December 8!</h1>
 
 <div class="col-40" style="padding-top: 10px; padding-right: 20px; padding-bottom: 20px">
@@ -25,7 +29,9 @@ social:
     <p>AI and Machine Learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications.</p>
     <p>Join our panel of AI experts for a discussion of some of the cool ways that AI is used and important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">AI & Ethics lesson plan</a> for a great introduction to the ethics of artificial intelligence!</p>
     <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! <a href="https://www.addevent.com/event/by5617541" target="_blank">Add it to your calendar</a>, then tune in on Zoom or stream on <a href="https://youtu.be/3oqxjPXbynE" target="_blank">YouTube</a>.</p>
-    <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09" target="_blank"><button>Tune in</button></a>
+    <%== show_tune_in_link ?
+      '<a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09" target="_blank"><button>Tune in</button></a>' : ''
+    %>
 </div>
 
 <div style="clear:both"></div>

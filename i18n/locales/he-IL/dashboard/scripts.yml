@@ -999,6 +999,8 @@ he:
               name: פונקציות
             Variables:
               name: משתנים
+            Sprites:
+              name: דמויות
             Conditionals:
               name: תנאים
         grade2:
@@ -1402,6 +1404,8 @@ he:
           lessons:
             Variables:
               name: משתנים
+            Sprites:
+              name: דמויות
             Conditionals:
               name: תנאים
             Functions:
@@ -1446,6 +1450,8 @@ he:
           lessons:
             Variables:
               name: משתנים
+            Sprites:
+              name: דמויות
             Conditionals:
               name: תנאים
             Functions:
@@ -2047,6 +2053,8 @@ he:
           lessons:
             Variables:
               name: משתנים
+            Sprites:
+              name: דמויות
             Conditionals:
               name: תנאים
             Functions:
@@ -2074,6 +2082,8 @@ he:
               description_teacher: ' '
             Variables:
               name: משתנים
+            Sprites:
+              name: דמויות
             Conditionals:
               name: תנאים
             Functions:
@@ -3263,6 +3273,8 @@ he:
               display_name: בשביל לולאות
             csf_internet:
               display_name: אינטרנט
+            csf_sprites:
+              display_name: דמויות
           lessons:
             'Programming: My Robotic Friends':
               description_student: ' '
@@ -3371,6 +3383,8 @@ he:
           lesson_groups:
             ramp_up:
               display_name: העלה רמה
+            csf_sprites:
+              display_name: דמויות
             csf_functions:
               display_name: פונקציות
           lessons:
@@ -3437,6 +3451,8 @@ he:
               display_name: משתנים
             csf_for_loops:
               display_name: בשביל לולאות
+            csf_sprites:
+              display_name: דמויות
           lessons:
             'Algorithms: Graph Paper Programming':
               description_student: ' '
@@ -3815,6 +3831,8 @@ he:
               description_teacher: ' '
             Variables:
               name: משתנים
+            Sprites:
+              name: דמויות
             Conditionals:
               name: תנאים
             Functions:
@@ -4295,6 +4313,8 @@ he:
           lesson_groups:
             ramp_up:
               display_name: העלה רמה
+            csf_sprites:
+              display_name: דמויות
           lessons:
             Conditionals with Cards:
               name: התניות עם כרטיסים
@@ -4514,6 +4534,8 @@ he:
               description_teacher: ' '
             Variables:
               name: משתנים
+            Sprites:
+              name: דמויות
             Conditionals:
               name: תנאים
             Functions:
@@ -4779,6 +4801,8 @@ he:
               display_name: תנאים
             csf_events:
               display_name: אירועים
+            csf_sprites:
+              display_name: דמויות
             ramp_up:
               display_name: העלה רמה
           lessons:
@@ -4830,6 +4854,8 @@ he:
               display_name: תנאים
             csf_events:
               display_name: אירועים
+            csf_sprites:
+              display_name: דמויות
             ramp_up:
               display_name: העלה רמה
           lessons:
@@ -5082,6 +5108,8 @@ he:
               description_teacher: ' '
             Text:
               name: טקסט
+            Sprites:
+              name: דמויות
         coursea-2020:
           lesson_groups:
             csf_loops:
@@ -5170,6 +5198,8 @@ he:
           lesson_groups:
             ramp_up:
               display_name: העלה רמה
+            csf_sprites:
+              display_name: דמויות
             csf_functions:
               display_name: פונקציות
           lessons:
@@ -5187,6 +5217,8 @@ he:
               display_name: משתנים
             csf_for_loops:
               display_name: בשביל לולאות
+            csf_sprites:
+              display_name: דמויות
           lessons:
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
@@ -5208,6 +5240,8 @@ he:
               display_name: משתנים
             csf_for_loops:
               display_name: בשביל לולאות
+            csf_sprites:
+              display_name: דמויות
           lessons:
             Dance Party:
               name: מסיבת ריקודים
@@ -5655,6 +5689,7 @@ he:
             Variables:
               name: משתנים
             Sprites:
+              name: דמויות
               description_student: ' '
               description_teacher: ' '
             Sprite Properties:
