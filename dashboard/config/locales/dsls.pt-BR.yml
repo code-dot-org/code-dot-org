@@ -1656,6 +1656,56 @@ pt-BR:
           Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
 
 
+        teacher_markdown: |2-
+           Aqui há alguns poucos sites para iniciar os estudos dos alunos. Esses sites são, geralmente, apropriados para escolas, mas como o conteúdo com eles mudam frequentemente, então **nós recomendamos fortemente que voce verifique cada site por conteúdo inapropriado antes de compartilhá-los com os alunos**.
+
+          [key]
+
+          ##  Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Visão geral
+
+          Esse site é focado em notícias sobre a Disney, mas você pode ser surpreendido pelo grande papel que a Ciência da Computação desenvolve em todas as suas diferentes formas de entretenimento. Porque isso não é um site focado em ciência da computação, você terá de utilizar a função de busca para localizar artigos relevantes.
+
+          ### Campos relevantes
+
+          * Filme/TV
+          * Animação
+          * Robótica/Animatronics
+          * Jogos
+
+          ## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Visão Geral
+
+          Videos mostrando uma variedade de pessoas trabalhando em diversas áreas da indústria de jogos, falando sobre o que eles fazem.
+
+          ### Campos Relevantes
+
+          * Jogos
+          * Animação
+          * Arte
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Visão geral
+
+          "Music Think Tank" é um blog direcionado à pessoas trabalhando na indústria musical. Não é apenas um site de ciência da computação, mas buscando por "ciência da computação" ou "programação" revelará alguns artigos interessantes.
+
+          ### Campos Relevantes
+
+          * Música
+
+          ## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Overview
+
+          Enquanto esse podcast não provém muita informação na forma de programação profissional (como pessoa que trabalha profissionalmente), é um ótimo recurso para ver as mais variadas formas nas quais amadores estão fazendo entretenimento com código.
+
+          ### Campos Relevantes
+
+          * Todos
+          [/key]
       CSD U3 Functions Prediction define first:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -8603,16 +8653,7 @@ pt-BR:
           target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
       csd-post-survey-intro-2019:
-        markdown: |+
-          #Pesquisa de pós-curso sobre descobertas da CC
-
-          ** Sua opinião e feedback são importantes para nós! ** Usamos para:
-
-          * entender sua experiência
-          * fazer melhorias no curso
-
-          Obrigado por dedicar um tempo para ajudar a tornar os Princípios da CC ainda melhores!
-
+        markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
       csd-post-survey-levelgroup_2019:
         title: Pesquisa de estudantes ao final do curso do CS Discoveries
       CSD U1 Test:
