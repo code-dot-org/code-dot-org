@@ -32,7 +32,7 @@ module MysqlCheckIndexUsed
       end
     end
   rescue => e
-    raise translate_exception_class(e, sql)
+    raise translate_exception_class(e, sql, [])
   end
 end
 
