@@ -270,6 +270,12 @@ module LessonImportHelper
       activity_section.description = unindent_markdown(description).strip
     else
       activity_section = create_activity_section_with_tip(tip_link_matches[0], tip_match_map)
+      # Sometimes the activity section created won't contain everything it needs to.
+      # Check if the tip link match equals the remark markdown. If not, we should add
+      # the rest of the content.
+      if tip_link_matches[0][0].length < match[1].strip.length
+        activity_section.description += unindent_markdown(match[1].delete_prefix(tip_link_matches[0][0]))
+      end
     end
     activity_section.remarks = true
     activity_section
