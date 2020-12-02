@@ -47,7 +47,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
     # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
     # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-    assert_queries(51) do
+    assert_queries(73) do
       ScriptSeed.seed_from_json(json)
     end
 
@@ -140,6 +140,8 @@ class ScriptSeedTest < ActiveSupport::TestCase
     expected_counts = original_counts.clone
     expected_counts['LessonGroup'] -= 1
     expected_counts['Lesson'] -= 2
+    expected_counts['LessonActivity'] -= 2
+    expected_counts['ActivitySection'] -= 2
     expected_counts['ScriptLevel'] -= 4
     expected_counts['LevelsScriptLevel'] -= 4
     assert_equal expected_counts, get_counts
@@ -167,6 +169,8 @@ class ScriptSeedTest < ActiveSupport::TestCase
     # Deleting the lesson should also delete its two ScriptLevels, and their LevelsScriptLevels.
     expected_counts = original_counts.clone
     expected_counts['Lesson'] -= 1
+    expected_counts['LessonActivity'] -= 1
+    expected_counts['ActivitySection'] -= 1
     expected_counts['ScriptLevel'] -= 2
     expected_counts['LevelsScriptLevel'] -= 2
     assert_equal expected_counts, get_counts
@@ -278,11 +282,23 @@ class ScriptSeedTest < ActiveSupport::TestCase
     end
 
     i = 1
-    script.lessons.each do |lg|
+    script.lessons.each do |lesson|
+      # For now, just create one LessonActivity and ActivitySection per Lesson.
+      activity = lesson.lesson_activities.create(
+        name: 'My Activity',
+        position: 1,
+        key: "#{lesson.name}-activity-1"
+      )
+      section = activity.activity_sections.create(
+        name: 'My Activity Section',
+        position: 1,
+        key: "#{activity.key}-section-1"
+      )
+
       num_script_levels_per_lesson.times do
         game = create :game, name: "#{name_prefix}_game#{i}"
         level = create :level, name: "#{name_prefix}_blockly_#{i}", level_num: "1_2_#{i}", game: game
-        create :script_level, lesson: lg, script: script, levels: [level], challenge: i.even?
+        create :script_level, activity_section: section, activity_section_position: i, lesson: lesson, script: script, levels: [level], challenge: i.even?
         i += 1
       end
     end
