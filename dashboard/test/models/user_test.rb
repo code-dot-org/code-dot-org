@@ -1157,7 +1157,7 @@ class UserTest < ActiveSupport::TestCase
     user_level = UserLevel.find_by(user: user, script: script_level.script, level: script_level.level)
     assert_equal 100, user_level.best_result
     partner_level = UserLevel.find_by(user: partner, script: script_level.script, level: script_level.level)
-    assert_equal nil, partner_level
+    assert_nil partner_level
   end
 
   test 'track_level_progress records progress for partner when pairing' do
@@ -4441,5 +4441,26 @@ class UserTest < ActiveSupport::TestCase
 
       assert migrated_teacher.reload.admin?
     end
+  end
+
+  test 'join section attempts hash is initialized for a new user when calling display_captcha' do
+    user = create :user
+    assert_equal false, user.display_captcha?
+    assert_equal 0, user.properties['section_attempts']
+    assert_equal Date.today, Date.parse(user.properties['section_attempts_last_reset'])
+  end
+
+  test 'section attempts last reset value resets if more than 24 hours has passed' do
+    user = create :user
+    user.properties = {'section_attempts': 5, 'section_attempts_last_reset': DateTime.now - 1}
+    # invoking display_captcha? will cause the section_attempts values to be reset
+    assert_equal false, user.display_captcha?
+    assert_equal 0, user.num_failed_section_attempts
+  end
+
+  test 'section attempts value increments if less than 24 hours has passed' do
+    user = create :user
+    user.increment_section_attempts
+    assert_equal 1, user.properties['section_attempts']
   end
 end

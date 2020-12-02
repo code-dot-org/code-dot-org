@@ -9,6 +9,7 @@ describe('ActivitySectionCard', () => {
   let defaultProps,
     setTargetActivitySection,
     updateTargetActivitySection,
+    clearTargetActivitySection,
     updateActivitySectionMetrics,
     moveActivitySection,
     removeActivitySection,
@@ -19,6 +20,7 @@ describe('ActivitySectionCard', () => {
   beforeEach(() => {
     setTargetActivitySection = sinon.spy();
     updateTargetActivitySection = sinon.spy();
+    clearTargetActivitySection = sinon.spy();
     updateActivitySectionMetrics = sinon.spy();
     moveActivitySection = sinon.spy();
     removeActivitySection = sinon.spy();
@@ -33,6 +35,7 @@ describe('ActivitySectionCard', () => {
       activitiesCount: 1,
       activitySectionMetrics: [],
       updateTargetActivitySection,
+      clearTargetActivitySection,
       updateActivitySectionMetrics,
       setTargetActivitySection,
       targetActivitySectionPos: 1,

@@ -1970,6 +1970,11 @@ cs-CZ:
     Code.org a partnery.
   hoc_overview_partner_activities_link: Zobrazit aktivity
   hoc_overview_start_tutorial: Spustit
+  hoc_overview_more_resources: Chcete-li další prostředky, pomocí kterých se můžete
+    zapojit do naší dálkové učebny, podívejte se na našeho průvodce pořádáním [virtuální
+    „Hodiny programování“](https://hourofcode.com/us/how-to/virtual). Studentům, kteří
+    mají jen omezenou nebo vůbec žádnou techniku nebo připojení, sdílejte tento balíček
+    [aktivit „Hodiny programování“](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Zobrazit příručku učitele
   hoc2018_creativity: kreativita
   hoc2018_creativity_create: Vytvořit
@@ -2072,3 +2077,4 @@ cs-CZ:
   homepage_slot_text_title_at_home: Učte se doma
   homepage_slot_text_blurb_at_home: S těmito podklady to bude hračka
   page_not_available_button: Zpět domů
+  footer_powered_by_aws: Poháněn Amazon Web Services

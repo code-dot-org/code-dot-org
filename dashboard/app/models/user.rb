@@ -77,7 +77,7 @@ require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper
@@ -123,6 +123,8 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
+
+  scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
 
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
@@ -1008,7 +1010,7 @@ class User < ActiveRecord::Base
       return nil if login.size > max_credential_size || login.utf8mb4?
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
-      from("users IGNORE INDEX(index_users_on_deleted_at)").where(
+      ignore_deleted_at_index.where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
@@ -2257,6 +2259,42 @@ class User < ActiveRecord::Base
     else
       [provider]
     end
+  end
+
+  # The number of times a user has attempted to join a section in the last 24 hours
+  # Returns nil if no section join attempts.
+  def num_failed_section_attempts
+    properties['section_attempts']
+  end
+
+  # There are two possible states in which we would want to reset the section attempt values
+  # 1) User has never joined a section and thus the values must be initialized
+  # 2) 24 hours have passed since the user last attempted to join a section
+  def reset_section_attempts?
+    !num_failed_section_attempts || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
+  end
+
+  def reset_failed_section_attempts
+    properties['section_attempts'] = 0
+    properties['section_attempts_last_reset'] = DateTime.now.to_s
+    save(validate: false)
+  end
+
+  # Users must complete a captcha when joining a section if they have joined 3 or more in the past 24 hours
+  def display_captcha?
+    if reset_section_attempts?
+      reset_failed_section_attempts
+    end
+    num_failed_section_attempts >= 3
+  end
+
+  def increment_section_attempts
+    # Failed section attemps reset after 24 hours
+    if reset_section_attempts?
+      reset_failed_section_attempts
+    end
+    properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
+    save(validate: false)
   end
 
   private

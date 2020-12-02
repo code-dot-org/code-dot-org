@@ -40,7 +40,8 @@ describe('The JSDebugger component', () => {
         showDebugButtons: true,
         showDebugConsole: true,
         showDebugWatch: true,
-        showDebugSlider: true
+        showDebugSlider: true,
+        debugConsoleDisabled: false
       })
     );
     getStore().dispatch(actions.initialize({runApp}));
