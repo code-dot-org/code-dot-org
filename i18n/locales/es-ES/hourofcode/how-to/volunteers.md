@@ -10,7 +10,7 @@ title: Hour of Code How-To Guide for Volunteers
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+El pensamiento computacional ayuda a desarrollar habilidades de resolución de problemas, lógica y creatividad. La tecnología está transformando todas las industrias del planeta. Los estudiantes deben aprender no solo como usar la tecnología sino también cómo crearla.
 
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
