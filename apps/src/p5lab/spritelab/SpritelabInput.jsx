@@ -20,7 +20,7 @@ const styles = {
     lineHeight: '2em',
     verticalAlign: 'middle',
     display: 'inline-block',
-    maxWidth: 'calc(100% - 60px)',
+    maxWidth: 'calc(100% - 100px)',
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap'
@@ -39,6 +39,17 @@ const styles = {
   submitButton: {
     padding: 4,
     margin: '2px 5px'
+  },
+  circle: {
+    position: 'absolute',
+    left: 10,
+    paddingRight: 8,
+    paddingTop: 6,
+    fontSize: 11
+  },
+  number: {
+    color: 'rgb(34, 42, 51)',
+    fontSize: 9
   }
 };
 
@@ -80,18 +91,18 @@ class SpritelabInput extends React.Component {
     return (
       <div id="spritelabInputArea" style={styles.container}>
         <div style={styles.prompt}>
-          <span className="fa-stack">
+          <span style={styles.circle} className="fa-stack">
             <i className="fa fa-circle fa-stack-2x" />
-            <strong className="fa-stack-1x" style={{color: '#222A33'}}>
+            <strong className="fa-stack-1x" style={styles.number}>
               {numPrompts}
             </strong>
           </span>
+          <div style={styles.promptText}>{promptText}</div>
           <a onClick={this.toggleCollapsed}>
             <span style={styles.icon} className="fa-stack">
               <i className={`fa fa-${icon} fa-stack-2x`} />
             </span>
           </a>
-          <div style={styles.promptText}>{promptText}</div>
         </div>
         {!this.state.collapsed && (
           <div style={styles.inputRow}>
@@ -104,7 +115,7 @@ class SpritelabInput extends React.Component {
             <button
               style={styles.submitButton}
               type="button"
-              onClick={() => this.userInputSubmit()}
+              onClick={this.userInputSubmit}
             >
               <i className="fa fa-check" />
             </button>
