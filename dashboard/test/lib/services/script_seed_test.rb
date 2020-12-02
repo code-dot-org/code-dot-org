@@ -235,6 +235,14 @@ class ScriptSeedTest < ActiveSupport::TestCase
     assert_attributes_equal s1, s2
     assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
     assert_lessons_equal s1.lessons, s2.lessons
+    assert_lesson_activities_equal(
+      s1.lessons.map(&:lesson_activities).flatten,
+      s2.lessons.map(&:lesson_activities).flatten
+    )
+    assert_activity_sections_equal(
+      s1.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten,
+      s2.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
+    )
     assert_script_levels_equal script_levels1, script_levels2
   end
 
@@ -250,9 +258,21 @@ class ScriptSeedTest < ActiveSupport::TestCase
     end
   end
 
+  def assert_lesson_activities_equal(activities1, activities2)
+    activities1.zip(activities2).each do |a1, a2|
+      assert_attributes_equal(a1, a2, ['key', 'lesson_id', 'position', 'properties'])
+    end
+  end
+
+  def assert_activity_sections_equal(sections1, sections2)
+    sections1.zip(sections2).each do |s1, s2|
+      assert_attributes_equal(s1, s2, ['key', 'lesson_activity_id', 'position', 'properties'])
+    end
+  end
+
   def assert_script_levels_equal(script_levels1, script_levels2)
     script_levels1.zip(script_levels2).each do |sl1, sl2|
-      assert_attributes_equal(sl1, sl2, ['script_id', 'stage_id', 'properties'])
+      assert_attributes_equal(sl1, sl2, ['script_id', 'stage_id', 'activity_section_id', 'properties'])
       # level_names is generated during seeding
       # TODO: should we use a callback or validation to verify that level_keys is always populated correctly?
       assert_equal sl1.properties, sl2.properties.except('level_keys')
