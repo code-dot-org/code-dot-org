@@ -1,0 +1,16 @@
+{
+  "name": "Oceans PWA",
+  "start_url": "/pwa_demo",
+  "display": "standalone",
+  "background_color": "#2A3443",
+  "description": "Oceans HoC Tutorial PWA prototype",
+  "theme_color": "#2A3443",
+  "icons": [
+    {
+      "src": "/hourofcode-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "scope": "/"
+}

@@ -1,0 +1,174 @@
+<head>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <style>
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+      }
+
+      .button:hover {background-color: #3e8e41}
+
+      .button:active {
+        background-color: #3e8e41;
+        transform: translateY(4px);
+      }
+
+      .blinking{
+        animation:blinkingText 1.2s infinite;
+      }
+
+      @keyframes blinkingText{
+        0%{     color: #000;    }
+        49%{    color: #000; }
+        60%{    color: transparent; }
+        99%{    color:transparent;  }
+        100%{   color: #000;    }
+      }
+    </style>
+</head>
+<body>
+  <h1>Oceans PWA</h1>
+  <ul>
+    <li><a href="/s/oceans/stage/1/puzzle/1">Puzzle 1</a></li>
+    <li><a href="/s/oceans/stage/1/puzzle/2">Puzzle 2</a></li>
+    <li><a href="/s/oceans/stage/1/puzzle/3">Puzzle 3</a></li>
+    <li><a href="/s/oceans/stage/1/puzzle/4">Puzzle 4</a></li>
+    <li><a href="/s/oceans/stage/1/puzzle/5">Puzzle 5</a></li>
+    <li><a href="/s/oceans/stage/1/puzzle/6">Puzzle 6</a></li>
+    <li><a href="/s/oceans/stage/1/puzzle/7">Puzzle 7</a></li>
+    <li><a href="/s/oceans/stage/1/puzzle/8">Puzzle 8</a></li>
+  </ul>
+  <button type="button" id="offline-button" class="button" onclick="downloadAssets()">
+    Make Oceans tutorial available offline
+  </button>
+  <span id="download-status" class="blinking" style="visibility:hidden"><i>Downloading...</i></span>
+  <p id="online-status"></p>
+
+  <script>
+    async function downloadAssets() {
+      let resourcesToAdd = [
+        "/assets/application.css",
+        "/assets/application.js",
+        "/assets/css/code-studio.css",
+        "/assets/css/common.css",
+        "/assets/css/fish.css",
+        "/assets/fontawesome-webfont.ttf",
+        "/assets/fontawesome-webfont.woff",
+        "/assets/fontawesome-webfont.woff2",
+        "/assets/js/blockly.js",
+        "/assets/js/code-studio-common.js",
+        "/assets/js/code-studio.js",
+        "/assets/js/common.js",
+        "/assets/js/en_us/blockly_locale.js",
+        "/assets/js/en_us/common_locale.js",
+        "/assets/js/en_us/fish_locale.js",
+        "/assets/js/essential.js",
+        "/assets/js/fish.js",
+        "/assets/js/layouts/_small_footer.js",
+        "/assets/js/levels/_standalone_video.js",
+        "/assets/js/levels/_teacher_markdown.js",
+        "/assets/js/levels/show.js",
+        "/assets/js/vendors.js",
+        "/assets/js/webpack-runtime.js",
+        "/assets/logo.svg",
+        "/assets/spinner-big.gif",
+        "/blockly/media/skins/fish/images/ai-bot-body.png",
+        "/blockly/media/skins/fish/images/ai-bot-closed.png",
+        "/blockly/media/skins/fish/images/ai-bot-no.png",
+        "/blockly/media/skins/fish/images/ai-bot-yes.png",
+        "/blockly/media/skins/fish/images/blue-prediction-frame.png",
+        "/blockly/media/skins/fish/images/blue-scanner.png",
+        "/blockly/media/skins/fish/images/green-prediction-frame.png",
+        "/blockly/media/skins/fish/images/green-scanner.png",
+        "/blockly/media/skins/fish/images/lab-background.png",
+        // "/blockly/media/skins/fish/images/loading.gif",
+        "/blockly/media/skins/fish/images/red-scanner.png",
+        "/blockly/media/skins/fish/images/water-background.png",
+        "/blockly/media/skins/fish/models/group1-shard1of1.bin",
+        "/blockly/media/skins/fish/models/model.json",
+        "/blockly/media/skins/fish/sounds/no_1.mp3",
+        "/blockly/media/skins/fish/sounds/no_2.mp3",
+        "/blockly/media/skins/fish/sounds/no_3.mp3",
+        "/blockly/media/skins/fish/sounds/no_4.mp3",
+        "/blockly/media/skins/fish/sounds/no_5.mp3",
+        "/blockly/media/skins/fish/sounds/no_6.mp3",
+        "/blockly/media/skins/fish/sounds/no_7.mp3",
+        "/blockly/media/skins/fish/sounds/no_8.mp3",
+        "/blockly/media/skins/fish/sounds/no_9.mp3",
+        "/blockly/media/skins/fish/sounds/other_1.mp3",
+        "/blockly/media/skins/fish/sounds/other_2.mp3",
+        "/blockly/media/skins/fish/sounds/other_3.mp3",
+        "/blockly/media/skins/fish/sounds/other_4.mp3",
+        "/blockly/media/skins/fish/sounds/sortno_1.mp3",
+        "/blockly/media/skins/fish/sounds/sortyes_1.mp3",
+        "/blockly/media/skins/fish/sounds/sortyes_2.mp3",
+        "/blockly/media/skins/fish/sounds/sortyes_3.mp3",
+        "/blockly/media/skins/fish/sounds/yes_1.mp3",
+        "/blockly/media/skins/fish/sounds/yes_2.mp3",
+        "/blockly/media/skins/fish/sounds/yes_3.mp3",
+        "/blockly/media/skins/fish/sounds/yes_4.mp3",
+        "/blockly/media/skins/fish/sounds/yes_5.mp3",
+        "/blockly/media/skins/fish/sounds/yes_6.mp3",
+        "/blockly/media/skins/fish/sounds/yes_7.mp3",
+        "/blockly/media/skins/fish/sounds/yes_8.mp3",
+        "/blockly/media/skins/fish/sounds/yes_9.mp3",
+        "/blockly/video-js/video-js.css",
+        "/favicon.ico",
+        "/s/oceans/stage/1/puzzle/1",
+        "/s/oceans/stage/1/puzzle/2",
+        "/s/oceans/stage/1/puzzle/3",
+        "/s/oceans/stage/1/puzzle/4",
+        "/s/oceans/stage/1/puzzle/5",
+        "/s/oceans/stage/1/puzzle/6",
+        "/s/oceans/stage/1/puzzle/7",
+        "/s/oceans/stage/1/puzzle/8",
+        "/shared/css/hamburger.css"
+      ];
+
+      let cacheName = "oceans-pwa-v1";
+      const cache = await caches.open(cacheName);
+      console.log("=====Downloading more assets...=====");
+      document.getElementById("download-status").style.visibility = "visible";
+
+      await cache.addAll(resourcesToAdd);
+
+      document.getElementById("download-status").style.visibility = "hidden";
+      console.log("=====Assets downloaded!=====");
+      alert("Ready to go offline!");
+    }
+
+    function updateOnlineStatus() {
+      document.getElementById('online-status').textContent = "You are " + (navigator.onLine ? "ONLINE" : "OFFLINE");
+    }
+
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+
+    window.addEventListener('load', () => {
+      if ("serviceWorker" in navigator) {
+        console.log("=====Found serviceWorker=====");
+
+        navigator.serviceWorker.register("/serviceWorker.js")
+          .then(registration => {
+            console.log("=====SW is registered, scope is", registration.scope, "=====");
+            console.log(registration);
+          })
+          .catch(
+            error => console.error(error)
+          );
+      } else {
+        console.log("=====No serviceWorker=====");
+      }
+    });
+
+  </script>
+</body>
