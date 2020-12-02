@@ -104,8 +104,14 @@ module LessonImportHelper
     position = 1
     sorted_matches.each do |match|
       activity_section = nil
-      if match[:type] == 'skippable' || match[:type] == 'tip'
+      if match[:type] == 'skippable'
         next
+      elsif match[:type] == 'tip'
+        activity_section = ActivitySection.new
+        key = match[:match][3]&.strip || "#{match[:match][1]}-0"
+        activity_section.tips = [create_tip(key, match[:match][1] || "tip", match[:match][4])]
+        activity_section.key ||= SecureRandom.uuid
+        match[:activity_section_key] = activity_section.key
       elsif match[:type] == 'name'
         name = match[:match][1]
         next
@@ -140,17 +146,18 @@ module LessonImportHelper
     end
 
     # If there are any tips that didn't have a match, put them at the end
-    # TODO ideally, we'd put them in the spot they were written.
-    puts "Adding unpaired tips at the end" if tip_match_map.any? {|_, a| a.count > 0}
-    tip_match_map.each do |key, tip_list|
+    tip_match_map.each do |_, tip_list|
       tip_list.each do |tip|
-        match = tip[:match]
-        activity_section = ActivitySection.new
-        activity_section.position = sections.length + 1
-        activity_section.key ||= SecureRandom.uuid
-        activity_section.tips = [create_tip(key, match[1] || "tip", match[4] || "no markdown found")]
-        sections.push(activity_section)
+        if tip[:paired]
+          sections.reject! {|s| s.key == tip[:activity_section_key]}
+        end
       end
+    end
+
+    final_position = 1
+    sections.each do |section|
+      section.position = final_position
+      final_position += 1
     end
 
     sections
@@ -332,10 +339,11 @@ module LessonImportHelper
     if tip_link_match[1] == 'slide'
       return create_slide_activity_section(tip_link_match[3], tip_match_map)
     end
-    tip = tip_match_map[tip_link_match[2]]&.shift
+    tip = tip_match_map[tip_link_match[2]]&.detect {|t| !t[:paired]}
     unless tip
       return ActivitySection.new(description: tip_link_match[3].strip)
     end
+    tip[:paired] = true
     tip_match = tip[:match]
     activity_section = ActivitySection.new
 
