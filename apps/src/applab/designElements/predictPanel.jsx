@@ -6,13 +6,11 @@ import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
-import EventRow from './EventRow';
 import BorderProperties from './BorderProperties';
 import themeValues from '../themeValues';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
-import i18n from '@cdo/applab/locale';
 
 class PredictPanelProperties extends React.Component {
   static propTypes = {
@@ -114,20 +112,8 @@ class PredictPanelEvents extends React.Component {
     handleChange: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired
   };
-
-  getPredictionEventCode() {
-    const id = elementUtils.getId(this.props.element);
-    const commands = [`console.log("${id} photo selected!");`];
-    const callback = `function( ) {\n\t${commands.join('\n\t')}\n}`;
-    return `onEvent("${id}", "change", ${callback});`;
-  }
-
-  insertPhotoSelected = () =>
-    this.props.onInsertEvent(this.getPhotoSelectedEventCode());
-
   render() {
     const element = this.props.element;
-    const clickName = i18n.designElementPhotoSelectClickName();
 
     return (
       <div id="eventRowContainer">
@@ -138,11 +124,6 @@ class PredictPanelEvents extends React.Component {
           isIdRow={true}
         />
         <EventHeaderRow />
-        <EventRow
-          name={clickName}
-          desc={'Triggered when predict clicked'}
-          handleInsert={this.insertPhotoSelected}
-        />
       </div>
     );
   }
@@ -155,15 +136,9 @@ export default {
 
   create: function() {
     const element = document.createElement('div');
-    element.innerHTML = '<button>Predict</button>';
-    const select = document.createElement('select');
-    const option1 = document.createElement('option');
-    option1.text = 'yes';
-    const option2 = document.createElement('option');
-    option2.text = 'no';
-    select.add(option1);
-    select.add(option2);
-    element.appendChild(select);
+    const predictButton = document.createElement('button');
+    predictButton.textContent = 'Predict';
+    element.appendChild(predictButton);
 
     element.setAttribute('class', 'predict-panel');
     element.style.margin = '0';
@@ -183,12 +158,6 @@ export default {
     element.style.display = 'flex';
     element.style.alignItems = 'center';
     element.style.justifyContent = 'center';
-    const newInput = document.createElement('input');
-    newInput.type = 'file';
-    newInput.accept = 'image/*';
-    newInput.capture = 'camera';
-    newInput.hidden = true;
-    element.appendChild(newInput);
     return element;
   },
   onDeserialize: function(element, updateProperty) {
