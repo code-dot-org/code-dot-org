@@ -14,6 +14,9 @@ class FakeSmtp
 end
 
 class DelivererTest < Minitest::Test
+  ROOT_DIR = Pathname.new(__dir__) + "../../"
+  FIXTURES_DIR = Pathname.new(__dir__) + "fixtures/deliverer/"
+
   def setup
     @fake_smtp = FakeSmtp.new
     Deliverer.any_instance.stubs(:reset_connection).returns(@fake_smtp)

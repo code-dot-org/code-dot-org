@@ -1,0 +1,31 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-02-17T23:24:02.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n    <h3>Biggest</h3>\\n    <h6>Big</h6>\\n    <h4>Medium Big</h4>\\n    <h1>Medium Small</h1>\\n    <h5>Small</h5>\\n    <h2>Smallest</h2>\\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "hide_share_and_remix": "true",
+    "long_instructions": "# Heading Sizes\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n\r\n::: details [**What are headings?**]\r\n\r\nHeadings are the different sized section titles throughout a web page. Headings add structure to your web page by breaking it up so it's easier for a user to read.\r\n:::\r\n\r\n::: details [**How do I make different sized headings?**]\r\nHeadings come in 6 different sizes.  The most common heading is `<h1>` The number 1 in the HTML tag designates that this is the biggest heading. The smallest heading is `<h6>`. You can also try the `<h2>`, `<h3>`, `<h4>`, and `<h5>` tags which get smaller as the number gets larger.\r\n:::\r\n\r\n::: details [**What is HTML?**]\r\nHTML stands for Hypertext Markup Language. HTML is used to add structure to the content of a web page. HTML uses tags to specify where certain structures start and end. These tags are sets of characters not found in the English language so that the content and structure can be differentiated. \r\n:::\r\n\r\n::: details [**What is an HTML element?**]\r\n\r\nAn HTML element is a piece of a website that is marked by a start tag and sometimes closed with an end tag. The element also includes the content inside the tags. For example: \r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\" style=\"width:500px\">\r\n:::\r\n\r\n::: details [**What is an HTML tag?**]\r\n\r\nAn HTML tag is the special set of characters that tells the machine where the start or end of an HTML element is and what type it is.\r\n:::\r\n\r\n</div>\r\n\r\nHeadings can come in different sizes.  In this page, there are six different sized headings, but they are all mixed up.  Can you and your partner figure out how to fix them?\r\n\r\n\r\n\r\nDo This:\r\n* Use the inspector tool to figure out what makes the headings different sizes\r\n* Make sure you and your partner agree on what the different heading tags do.\r\n* Change the tags so that the headings are in order from biggest to smallest, and the text says the correct size, as in the picture below. \r\n\r\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15 PM.png\" style=\"width:100px; float:left\">\r\n",
+    "display_name": "Heading Sizes",
+    "encrypted_examples": "Hn5MwnXRxJHHVioY/kr3I6NQP0IEX8D/Fre94Vnsi799SkjuyBNjHmg02mz7\nrFGyxAQNJiN7Lh/1aHJtOKgbdA==\n",
+    "submittable": "false",
+    "parent_level_id": 18276,
+    "name_suffix": "_2020",
+    "reference_links": [
+      "/docs/concepts/html/html-tags/"
+    ],
+    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "encrypted": "false",
+    "validation_enabled": "true",
+    "mini_rubric": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:22:05 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 20:15:41 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:39:09 +0000\",\"changed\":[\"name\",\"markdown_instructions\",\"display_name\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:21:29 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 00:58:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 00:59:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-23 04:58:32 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-06-29 00:09:26 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-17 19:38:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-18 23:47:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-09-19 22:38:21 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-11-15 00:15:41 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-29 18:12:12 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -1,0 +1,28 @@
+name 'Episode 1 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+Create the design of your choice in the next level using either the Beginner or Intermediate toolboxes. We can't wait to see what you make!
+
+## Ideas
+
+Not sure where to start? Here are some sample projects to help get the ideas flowing. 
+
+### Beginner Projects
+
+![](https://images.code.org/18577410914a357672fd6fbe1a3a2949-image-1584928370120.png)
+![](https://images.code.org/083659cec15ae6f2e6091e29c9fe8b25-image-1584928818484.png)
+![](https://images.code.org/b1d2bc7b0f23130c9f051512b7b85bdc-image-1584929170670.png)
+
+### Intermediate Projects
+
+![](https://images.code.org/322e355afc8c8228ff8d81cd377db983-image-1584930287699.png)
+![](https://images.code.org/51d1b419d68ca29ed8d3324185be6c50-image-1584930771015.png)
+![](https://images.code.org/a1131593bb31e4b030b1a51c4a53c6f2-image-1584931572273.png)
+MARKDOWN

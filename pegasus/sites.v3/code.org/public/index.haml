@@ -11,7 +11,7 @@ jquery: defer
 style_min: true
 ---
 :ruby
-  @header["title"] = hoc_s(:hoc2019_header)
+  @header["title"] = hoc_s(:hoc2020_header)
 
 =inline_css 'homepage.css'
 
@@ -26,13 +26,13 @@ style_min: true
 
   - if request.language == "en"
     = view :curriculum_banner
+    = view :homepage_below_hero_special2020_banner
     = view :homepage_below_hero_announcement
     = view :homepage_below_hero_plane_banner
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement
-    #petitionexpand{style: "display: block"}
-      = view :petition_expand
+    = view :homepage_below_hero_announcement_code_break
 
   = view :homepage_sections
   = view :homepage_gallery

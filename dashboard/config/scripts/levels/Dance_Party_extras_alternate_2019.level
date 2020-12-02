@@ -233,6 +233,16 @@
             <title name="GROUP">sprites</title>
             <title name="SPEED">2</title>
           </block>
+          <block type="Dancelab_startMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
+          <block type="Dancelab_stopMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
         </category>
         <category name="Events">
           <block type="Dancelab_whenKey">

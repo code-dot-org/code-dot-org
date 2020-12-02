@@ -1,11 +1,9 @@
 require_relative 'test_helper'
-require 'cdo/rack/whitelist'
+require 'cdo/rack/allowlist'
 
-class CookieWhitelistTest < Minitest::Test
+class CookieAllowlistTest < Minitest::Test
   include Rack::Test::Methods
 
-  ESCAPED_KEY = '1;2&3=4%'.freeze
-  ESCAPED_VALUE = '3;4&5=6%'.freeze
   HEADERS = REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   COOKIE_CONFIG = {
     behaviors: [
@@ -17,11 +15,6 @@ class CookieWhitelistTest < Minitest::Test
       {
         path: '/some/*',
         cookies: %w(one two),
-        headers: HEADERS
-      },
-      {
-        path: '/weird/*',
-        cookies: %w(one two) << ESCAPED_KEY,
         headers: HEADERS
       }
     ],
@@ -39,7 +32,7 @@ class CookieWhitelistTest < Minitest::Test
       [200, {'Content-Type' => 'text/plain'}, ['OK']]
     end
     Rack::Builder.app do
-      use Rack::Whitelist::Downstream, COOKIE_CONFIG
+      use Rack::Allowlist::Downstream, COOKIE_CONFIG
       run cookie_grabber
     end
   end
@@ -49,10 +42,9 @@ class CookieWhitelistTest < Minitest::Test
     session.set_cookie('one=1')
     session.set_cookie('two=2')
     session.set_cookie('three=3')
-    session.set_cookie(Rack::Utils.escape(ESCAPED_KEY) + '=' + Rack::Utils.escape(ESCAPED_VALUE))
   end
 
-  def test_whitelisted_cookies
+  def test_allowlisted_cookies
     get '/some/'
     assert_nil @request_env['HTTP_COOKIE'].match(/three/)
     assert_equal @request_cookies, {'one' => '1', 'two' => '2'}
@@ -67,12 +59,6 @@ class CookieWhitelistTest < Minitest::Test
   def test_all_cookies
     get '/all/'
     refute_nil @request_env['HTTP_COOKIE'].match(/three/)
-    assert_equal @request_cookies, {'one' => '1', 'two' => '2', 'three' => '3', ESCAPED_KEY => ESCAPED_VALUE}
-  end
-
-  def test_whitelist_escaped_cookie
-    get '/weird/'
-    assert_nil @request_env['HTTP_COOKIE'].match(/three/)
-    assert_equal @request_cookies, {'one' => '1', 'two' => '2', ESCAPED_KEY => ESCAPED_VALUE}
+    assert_equal @request_cookies, {'one' => '1', 'two' => '2', 'three' => '3'}
   end
 end

@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # A script that performs a merge of the test branch into the levelbuilder branch.
 #
@@ -9,7 +11,6 @@ require 'cdo/chat_client'
 require 'cdo/developers_topic'
 require 'cdo/infra_test_topic'
 require 'cdo/github'
-require 'cdo/only_one'
 
 TOPIC_DTL_SOON = 'yes (deploying soon)'.freeze
 TOPIC_DTL_IN_PROGRESS = 'no (in progress)'.freeze
@@ -107,10 +108,10 @@ def main
 rescue Exception => e
   ChatClient.message(
     'levelbuilder',
-    "EXCEPTION: #{e.message}",
+    "<@#{DevelopersTopic.dotd}> EXCEPTION: #{e.message}",
     color: 'red'
   )
   DevelopersTopic.set_dtl TOPIC_DTL_FAILED
 end
 
-main if only_one_running?(__FILE__)
+main

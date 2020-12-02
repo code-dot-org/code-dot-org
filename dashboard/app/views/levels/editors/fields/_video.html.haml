@@ -1,0 +1,20 @@
+- content_for :body_scripts do
+  - video_infos = {}
+  - Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
+  - script_data = { editorvideo: { video_infos: video_infos }.to_json }
+  %script{src: webpack_asset_path('js/levels/editors/fields/_video.js'), data: script_data}
+
+%h1.control-legend{data: {toggle: "collapse", target: "#video_area"}}
+  Video
+
+#video_area.in.collapse
+  %p
+    Add new videos by going to
+    %a{href:"/videos/new"} the add video page
+    - if @level.is_a?(DSLDefined)
+      %p Warning: This is a DSL defined level. You can use the dropdown to find the video key that you'd like to use, but selecting in the dropdown will NOT be sufficient to associate the video with the level. If you'd like to add a video to this level you need to add video_key 'video_key' to the DSL box.
+  = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
+  .video-preview{style: 'display: block'}
+
+  - if (@level.uses_droplet?) || @level.is_a?(Blockly)
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :never_autoplay_video, description: "Never autoplay video"}

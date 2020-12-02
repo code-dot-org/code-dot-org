@@ -1,9 +1,14 @@
 name 'Commute Assess - func 3a - block'
 
-wrong '<pre>in func1<br>in func2</pre>'
-wrong '<pre>func1<br>func2</pre>'
-right '<pre>in func1<br>in func2<br>in func1</pre>'
-wrong '<pre>DISPLAY in func1<br>DISPLAY in func2</pre>'
+wrong '`in func1`  
+`in func2`'
+wrong '`func1`  
+`func2`'
+right '`in func1`  
+`in func2`  
+`in func1`'
+wrong '`DISPLAY in func1`  
+`DISPLAY in func2`'
 wrong 'Nothing is printed'
 wrong 'This script would cause an error'
 

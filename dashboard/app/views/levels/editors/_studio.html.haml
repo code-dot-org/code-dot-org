@@ -1,60 +1,19 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/editors/_studio.js')}
 
-.field
-= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'playlab'}
-.field
-  = f.label :first_sprite_index, 'First sprite index'
-  %p Integer representing which sprite to use for the first character. Default is 0.
-  = f.number_field :first_sprite_index
-.field
-  = f.label :protaganist_sprite_index, 'Protaganist sprite index'
-  %p Integer of the protaganist character (zero indexed, counting from the top left of the grid). This character must touch all the waypoint flags to complete the level. If no value is set, all sprites can collect flags.
-  = f.number_field :protaganist_sprite_index
-.field
-  = f.label :timeout_failure_tick, 'Timeout failure tick'
-  %p Number of 'ticks' to simulate before marking the level as failed. Default is unlimited.  Step speed (above) controls the length of a tick.
-  = f.number_field :timeout_failure_tick
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :timeout_after_when_run, description: "Timeout after all blocks run"}
-  %p When set, if the only event block that had children is when_run, and those commands are finished executing, don't wait for the timeout. If we have additional event blocks that DO have children, we keeping running until timeoutFailureTick or a success/failure condition is met
-.field
-  = f.label :custom_game_type, 'Custom game type'
-  %p Used to tell playlab we want to run some of our custom onTick logic.
-  = f.select :custom_game_type, options_for_select(["", "Big Game", "Rocket Height", "Sam the Bat", "Ninja Cat"], @level.custom_game_type)
-.field
-  = f.label :success_condition, 'Success condition'
-  %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately succeeds.
-  = f.text_area :success_condition, rows: 4
-.field
-  = f.label :failure_condition, 'Failure condition'
-  %p Optional JavaScript function to run every tick. If the function ever return true, the level immediately fails.
-  = f.text_area :failure_condition, rows: 4
-.field
-  = f.label :soft_buttons, 'Controls buttons'
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
-  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :edge_collisions, description: "Edge collisions"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :projectile_collisions, description: "Projectile collisions"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :allow_sprites_outside_playspace, description: "Allow sprites outside playspace"}
-.field
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :sprites_hidden_to_start, description: "Sprites hidden to start"}
-.field
-  = f.label :remove_items_when_actor_collides, 'Remove an item (e.g. a stormtrooper) when the actor collides with it'
-  = boolean_check_box f, :remove_items_when_actor_collides
-.field
-  = f.label :background, 'Default background'
-  = f.text_field :background
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/code_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
+= render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
+= render partial: 'levels/editors/fields/grid', locals: {f: f}
 
-%div.collapsed_area_header{data: {toggle: "collapse", target: "#cs_in_a"}}
-  CS in A Options
-.collapse{id: "cs_in_a"}
-  = render partial: 'levels/editors/cs_in_a', locals: {f: f}
+= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'playlab'}
+= render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
+= render partial: 'levels/editors/fields/studio_fields', locals: {f: f}
+
+= render partial: 'levels/editors/fields/sharing', locals: {f: f}
+= render partial: 'levels/editors/fields/cs_in_a', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}

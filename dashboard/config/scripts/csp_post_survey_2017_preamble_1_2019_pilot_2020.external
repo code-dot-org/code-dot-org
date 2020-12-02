@@ -1,0 +1,26 @@
+name 'csp-post-survey-2017 preamble 1_2019_pilot_2020'
+markdown <<MARKDOWN
+### **This survey is anonymous** 
+
+*Code.org takes your privacy very seriously.* Your responses here will be kept **anonymous**. No one, not even your teacher, can link your responses back to you as an individual.
+
+We do this because we want you to **be as open and honest as possible**. We care about your experience in the course, and we make improvements based on what you say.
+
+* The survey should take **10 minutes or less** to complete.
+
+***
+
+## School in general
+
+#### *First, we want to ask you about your thoughts and feelings about school, in general.*
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## How to see your students' responses to this survey
+
+* You will be able to see the anonymized results of the survey for your students once at least 5 of them have completed it.
+
+* To view the results of this survey please follow the intstructions in the associated lesson plan. 
+
+
+MARKDOWN

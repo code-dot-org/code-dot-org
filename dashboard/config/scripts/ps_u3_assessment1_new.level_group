@@ -1,4 +1,5 @@
 name 'PS U3 Assessment1 new'
+editor_experiment ''
 title 'Test Assessment 1'
 submittable 'true'
 
@@ -12,10 +13,10 @@ level 'PS U3 Q1-5'
 
 page
 level 'PS U3 Q1-6'
-text 'sample external 1'    # External
-level 'PS U3 Q1-7'          # TextMatch
-text 'sample external 2'    # External
-level 'ECSPD your goals'    # FreeResponse
+text 'sample external 1' 
+level 'PS U3 Q1-7'
+text 'sample external 2' 
+level 'ECSPD your goals' 
 
 page
 level 'PS U3 Q1-8'

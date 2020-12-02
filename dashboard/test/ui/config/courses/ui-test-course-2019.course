@@ -1,0 +1,12 @@
+{
+  "name": "ui-test-course-2019",
+  "script_names": [
+    "ui-test-script-in-course-2019"
+  ],
+  "properties": {
+    "family_name": "ui-test-course",
+    "version_year": "2019",
+    "is_stable": true,
+    "visible": true
+  }
+}

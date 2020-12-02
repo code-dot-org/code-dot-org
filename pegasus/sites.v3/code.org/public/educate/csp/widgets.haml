@@ -15,23 +15,14 @@ video_player: true
     = view :display_video_thumbnail, id: 'text_compression', video_code: 'By30SCp-Tsw', play_button: 'center', download_path: 'https://video.code.org/2015/csp/textcompression_blacc.mp4', letterbox: 'false'
     .thumbnail-title Digital Compression with Aloe Blacc
   .tool-desc
-    This widget gives students the chance to compress a piece of text. Students can use this to learn how to identify patterns, store those patterns in a "dictionary," then replace the dictionary pattern with a 1-byte symbol to create a lossless compressed version of text. The widget updates with every keystroke and performs compression calculations so students can see if they’re increasing or decreasing the total file size in real-time as they work. 
+    This widget gives students the chance to compress a piece of text. Students can use this to learn how to identify patterns, store those patterns in a "dictionary," then replace the dictionary pattern with a 1-byte symbol to create a lossless compressed version of text. The widget updates with every keystroke and performs compression calculations so students can see if they’re increasing or decreasing the total file size in real-time as they work.
     %br
     %br
-    A challenge for students: How can you achieve the best compression possible by representing patterns of patterns? Have fun harnessing the power of this compression technique through experimentation, but also be aware that it can go very, very wrong. 
+    A challenge for students: How can you achieve the best compression possible by representing patterns of patterns? Have fun harnessing the power of this compression technique through experimentation, but also be aware that it can go very, very wrong.
     .standalone-tool
       %a{href: CDO.code_org_url('/textcompression'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp2-2018/2/Teacher'), target:'_blank'}
-          Lesson Plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp2/stage/2/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
   .clear
   %br
   %strong Example:
@@ -58,20 +49,11 @@ video_player: true
           Try standalone tool
 
   .clear
-  %h2 Black and White Pixelation  
+  %h2 Black and White Pixelation
   .tool-thumbnail{style: 'border: solid 1px #c6cacd;'}
     = view :display_video_thumbnail, id: 'bw_pixelation', video_code: 'rJOa5Q5a1WM', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/pixelation_bw.mp4', letterbox: 'false'
   .tool-desc
     The black and white version of this widget simply encodes images with 1 bit per pixel—0 is black, 1 is white. Students can encode the width and height of their images with metadata. It’s a great tool for students who are just getting started.
-    %ul.tool-links
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp2-2018/3/Teacher'), target:'_blank'}
-          Lesson Plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp2/stage/3/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
   .clear
   %br
   %strong Example:
@@ -82,15 +64,6 @@ video_player: true
   %img.tool-thumbnail{src: '/images/app-lab/color-pixelation.png'}
   .tool-desc
     The color version of this widget lets students encode each pixel with any number of bits from 1 to 24. This widget will help them understand much more deeply how RGB colors work and why hexadecimal representation is so useful for looking at long strings of binary values. A challenge for students: Try your hand at mixing digital colors by writing the binary for them yourself!
-    %ul.tool-links
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp2-2018/4/Teacher'), target:'_blank'}
-          Lesson plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp2/stage/4/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
   .clear
   %br
   %strong Example:
@@ -118,33 +91,18 @@ video_player: true
       %a{href: CDO.studio_url('/s/frequency_analysis'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp4-2018/7/Teacher'), target:'_blank'}
-          Lesson plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp4-2018/stage/7/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
-
+  .clear{style: "clear: both"}       
   %h2 Vigenere cipher widget
   %img.tool-thumbnail{src: '/images/app-lab/vigenere-cipher.png'}
   .tool-desc
     This widget is used in the same lesson as the random substitution cipher, and allows students to play with a much more sophisticated encryption technique that was considered virtually unbreakable for a very long time. The Vigenère cipher is similar to the Caesar or random substitution ciphers, but the alphabetic shift changes for each letter based on a secret key.
+    %br
+    %strong Note:
+    this widget is no longer used in the Code.org CS Principles curriculum
     .standalone-tool
       %a{href: CDO.studio_url('/s/vigenere'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.code_org_url('/curriculum/csp4-2018/8/Teacher'), target:'_blank'}
-          Lesson Plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp4-2018/stage/8/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
   .clear
   .back-to-top
     %a{href: '#'}
@@ -156,13 +114,13 @@ video_player: true
   .tool-thumbnail
     = view :display_video_thumbnail, id: 'the_internet', video_code: 'Dxcc6ycZ73M', play_button: 'center', letterbox: 'false'
   .tool-desc
-    Similar to a widget, but much larger in scope, the Internet Simulator is designed to let students visualize, experiment with, and solve different kinds of problems associated with networked computers in a hands-on way. Often these problems involve inventing a communication protocol, or inventing ways to encode information that makes transporting it over the Internet feasible. 
+    Similar to a widget, but much larger in scope, the Internet Simulator is designed to let students visualize, experiment with, and solve different kinds of problems associated with networked computers in a hands-on way. Often these problems involve inventing a communication protocol, or inventing ways to encode information that makes transporting it over the Internet feasible.
     %br
     %br
     It is essential to note that we use the Internet Simulator for much more than teaching Internet Protocols. The Internet Simulator contextualizes exploration of much deeper concepts in computer science, like the use of abstraction to solve problems and the binary representation of information. The goal of the Internet Simulator is not merely to present the functionality of the different layers of the Internet, but to provide an opportunity for students to reason about why those structures exist. Eventually, students can also explore how the systems of the Internet are used to solve problems.
     %br
     %br
-    The Simulator is configured differently in each lesson to enforce different rules or expose different behaviors of the Internet around which students must creatively problem-solve. Specifically, each version of the Internet Simulator is configured to mirror a high-level version of the layered Internet Protocol stack. 
+    The Simulator is configured differently in each lesson to enforce different rules or expose different behaviors of the Internet around which students must creatively problem-solve. Specifically, each version of the Internet Simulator is configured to mirror a high-level version of the layered Internet Protocol stack.
     %br
     %br
     With each lesson the Internet Simulator grows in sophistication—as students solve problems, the lessons become customized to ensure that the student is continually challenged. In this way we work from the bottom up, first solving physical coordination problems with sending bits back and forth, then addressing (IP), then packeting (TCP) then name-to-address mapping (DNS) and finally HTTP.
@@ -170,41 +128,7 @@ video_player: true
       %a{href: CDO.code_org_url('/internetsimulator'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links{style: 'margin-left: 40px;'}
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/3/Teacher'), target:'_blank'}
-          Lesson Plan for U1L3: Sending Binary Messages with the Internet Simulator
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/6/Teacher'), target:'_blank'}
-          Lesson Plan for U1L6: Sending Numbers
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/7/Teacher'), target:'_blank'}
-          Lesson Plan for U1L7: Encoding and Sending Formatted Text
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/9/Teacher'), target:'_blank'}
-          Lesson Plan for U1L9: The Need for Addressing
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/10/Teacher'), target:'_blank'}
-          Lesson Plan for U1L10: Routers and Redundancy
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/11/Teacher'), target:'_blank'}
-          Lesson Plan for U1L11: Packings and Making a Reliable Internet
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/12/Teacher'), target:'_blank'}
-          Lesson Plan for U1L12: The Need for DNS
     %br
-  %strong Mapping of Lessons to Internet Concepts
-  %img.tool-thumbnail{src: '/images/app-lab/internet-simulator-lessons.png', style: 'width: 100%'}
-  %br
-  %strong Example:
-  How two students communicate with each other using the internet simulator widget.
   %img.animated-gif{src: CDO.code_org_url('/images/app-lab/netsim-animated.gif')}
   .back-to-top
     %a{href: '#'}

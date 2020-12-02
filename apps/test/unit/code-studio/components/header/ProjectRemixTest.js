@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 
 import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
-
+import * as utils from '@cdo/apps/utils';
 import {UnconnectedProjectRemix as ProjectRemix} from '@cdo/apps/code-studio/components/header/ProjectRemix';
 
 const defaultProps = {
@@ -54,18 +54,18 @@ describe('ProjectRemix', () => {
   });
 
   it('will redirect to sign in if necessary', () => {
-    sinon.stub(window.location, 'assign');
+    sinon.stub(utils, 'navigateToHref');
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
-    expect(window.location.assign.calledOnce).to.be.true;
+    expect(utils.navigateToHref.calledOnce).to.be.true;
     expect(
-      window.location.assign.calledWith(
+      utils.navigateToHref.calledWith(
         '/users/sign_in?user_return_to=/context.html'
       )
     ).to.be.true;
 
-    window.location.assign.restore();
+    utils.navigateToHref.restore();
   });
 
   it('will copy the project', () => {

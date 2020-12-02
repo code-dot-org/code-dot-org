@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/coursed-2017/stage/1/puzzle/1": {
+    "title": "Graph Paper Programming"
+  },
   "https://studio.code.org/s/coursed-2017/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
@@ -130,11 +133,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": " "
-            }
-          ],
           "answers": [
             {
               "text": "The farmer will walk to the end of the path and harvest the pumpkin.",
@@ -157,7 +155,12 @@
               "feedback": "The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end."
             }
           ],
-          "markdown": "Here is a new puzzle type that uses blocks similar to what you have already seen. Can you make a prediction about what will happen when you run the code below?\n\n\n"
+          "markdown": "Here is a new puzzle type that uses blocks similar to what you have already seen. Can you make a prediction about what will happen when you run the code below?\n\n\n",
+          "questions": [
+            {
+              "text": " "
+            }
+          ]
         }
       }
     ]
@@ -207,11 +210,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -232,6 +230,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -304,11 +307,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -329,6 +327,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
             }
           ]
         }
@@ -441,11 +444,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a good look at the code below.  Which drawing will this program make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "A",
@@ -468,7 +466,12 @@
               "feedback": "The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle."
             }
           ],
-          "markdown": "<table>\n<tr><td>A</td><td><img src=\"https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png\" width=\"100px\" style=\"mix-blend-mode: multiply;\"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src=\"https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png\" width=\"100px\" style=\"mix-blend-mode: multiply;\"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src=\"https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png\" width=\"80px\" style=\"mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);\"/></td></tr>\n</table>\n\n<br/><br/>\n\n"
+          "markdown": "<table>\n<tr><td>A</td><td><img src=\"https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png\" width=\"100px\" style=\"mix-blend-mode: multiply;\"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src=\"https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png\" width=\"100px\" style=\"mix-blend-mode: multiply;\"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src=\"https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png\" width=\"80px\" style=\"mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);\"/></td></tr>\n</table>\n\n<br/><br/>\n\n",
+          "questions": [
+            {
+              "text": "Take a good look at the code below. Which drawing will this program make when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -568,6 +571,9 @@
       "courseD_artist_project4a_a": "Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
     }
   },
+  "https://studio.code.org/s/coursed-2017/stage/7/puzzle/1": {
+    "title": "Relay Programming"
+  },
   "https://studio.code.org/s/coursed-2017/stage/8/puzzle/2": {
     "short_instructions": "Fix the error(s) to collect all of the treasure.",
     "long_instructions": "_\"Oh no! I see a problem.\"_\n\nFix the error(s) to collect all of the treasure.",
@@ -642,11 +648,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  Why won't Laurel collect all of the treasure when you click \"Run\"? Warning: This is a tricky question, make sure you read all of the options before answering!"
-            }
-          ],
           "answers": [
             {
               "text": "Laurel will turn the wrong way when making a square.",
@@ -667,6 +668,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below.  Why won't Laurel collect all of the treasure when you click \"Run\"? Warning: This is a tricky question, make sure you read all of the options before answering!"
             }
           ]
         }
@@ -723,11 +729,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing will happen.",
@@ -748,6 +749,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The farmer will remove dirt as long as there is a pile, then stop when the pile is gone"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -807,14 +813,9 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
-            }
-          ],
           "answers": [
             {
-              "text": "Nothing.  This code will leave only level ground.",
+              "text": "Nothing. This code will leave only level ground.",
               "correct": false,
               "feedback": "Incorrect. There is no code to remove dirt from the pile."
             },
@@ -832,6 +833,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `while` loop will handle any size loop, but there is no code to remove dirt from the pile."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
             }
           ]
         }
@@ -856,6 +862,9 @@
       "courseD_farmer_conditionals8_c": "It is possible to solve this without using any `repeat` loops. To do this, you will need to use four `while` loops."
     }
   },
+  "https://studio.code.org/s/coursed-2017/stage/10/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/coursed-2017/stage/11/puzzle/2": {
     "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
@@ -865,11 +874,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
@@ -890,6 +894,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            }
+          ],
+          "questions": [
+            {
+              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click \"Run\"?"
             }
           ]
         }
@@ -973,11 +982,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud."
-            }
-          ],
           "answers": [
             {
               "text": "The bee will get nectar at each flower and honey at each honeycomb.",
@@ -998,6 +1002,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud."
             }
           ]
         }
@@ -1053,11 +1062,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  What do you think will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bird will not move at all.",
@@ -1078,6 +1082,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Take a close look at the code below. What do you think will happen when you click \"Run\"?"
             }
           ]
         }
@@ -1157,11 +1166,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The zombie will turn right immediately and get stuck.",
@@ -1182,6 +1186,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -1268,11 +1277,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will collect all of the crops.",
@@ -1295,7 +1299,12 @@
               "feedback": "The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin."
             }
           ],
-          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n"
+          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n",
+          "questions": [
+            {
+              "text": "Take a close look at the code below. What will happen after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1314,6 +1323,9 @@
     "authored_hints": {
       "courseD_farmer_condLoops_challenge2_a": "The amount of each vegetable in each space can change. A `while` loop can help!"
     }
+  },
+  "https://studio.code.org/s/coursed-2017/stage/14/puzzle/1": {
+    "title": "Unplugged Activity"
   },
   "https://studio.code.org/s/coursed-2017/stage/15/puzzle/1": {
     "short_instructions": "Get Pegleg to the flags to solve this puzzle.",
@@ -1383,9 +1395,11 @@
       "courseD_playLab_condFP_1": "we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went."
     }
   },
+  "https://studio.code.org/s/coursed-2017/stage/16/puzzle/1": {
+    "title": "Binary Images"
+  },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/1": {
     "dsls": {
-      "title": "Binary Drawing",
       "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
     }
   },
@@ -1397,9 +1411,16 @@
       "courseD_artist_binary1_b": "The artist will draw a white space for every 1 and a black space for every 0.",
       "courseD_artist_binary1_c": "This is how you can input your binary code:\n\n[][0]"
     },
-    "function_names": {
-      "draw bit": "draw bit",
-      "draw": "draw"
+    "function_definitions": {
+      "draw bit": {
+        "name": "draw bit"
+      },
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/3": {
@@ -1408,9 +1429,16 @@
     "authored_hints": {
       "courseD_artist_binary2_a": "Just click `Run` to see this program in action!"
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/4": {
@@ -1419,9 +1447,16 @@
       "courseD_artist_binary3_a": "One of the four binary patterns in the toolbox will solve this puzzle!",
       "courseD_artist_binary3_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/5": {
@@ -1430,9 +1465,16 @@
       "courseD_artist_binary4_a": "Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?",
       "courseD_artist_binary4_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/6": {
@@ -1442,9 +1484,16 @@
       "courseD_artist_binary5_b": "You only need to switch two rows to make a smile.",
       "courseD_artist_binary5_c": "If you are having trouble figuring this puzzle out, try writing the binary lines down on a piece of paper and looking for a pattern."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/7": {
@@ -1453,9 +1502,16 @@
       "courseD_artist_binary6_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
       "courseD_artist_binary6_b": "You can build your binary string a bit at a time, and keep testing!"
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/8": {
@@ -1464,9 +1520,16 @@
       "courseD_artist_binary7_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
       "courseD_artist_binary7_b": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/9": {
@@ -1476,25 +1539,34 @@
       "courseD_artist_binary8_b": "Try running the code first to see what you have to work with.",
       "courseD_artist_binary8_c": "Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     }
   },
   "https://studio.code.org/s/coursed-2017/stage/17/puzzle/10": {
     "short_instructions": "Finish the code to create this drawing.",
-    "function_names": {
-      "draw": "draw",
-      "draw bit": "draw bit"
+    "function_definitions": {
+      "draw": {
+        "name": "draw",
+        "parameters": {
+          "binary": "binary"
+        }
+      },
+      "draw bit": {
+        "name": "draw bit"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  Which image will it create after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "A",
@@ -1517,7 +1589,12 @@
               "feedback": "Correct!"
             }
           ],
-          "markdown": "<table>\n<tr>\n\n<td style=\"padding: 0 30px 0 0;\"> <b>A)</b> <img src=\"https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>B)</b> <img src=\"https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>C)</b> <img src=\"https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png\" width=\"100px\"/></td>\n\n\n<td style=\"padding: 0 20px 0 0;\"> <b>D)</b> <img src=\"https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png\" width=\"100px\"/></td>\n</tr></table>\n<br/>\n\n"
+          "markdown": "<table>\n<tr>\n\n<td style=\"padding: 0 30px 0 0;\"> <b>A)</b> <img src=\"https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>B)</b> <img src=\"https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>C)</b> <img src=\"https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png\" width=\"100px\"/></td>\n\n\n<td style=\"padding: 0 20px 0 0;\"> <b>D)</b> <img src=\"https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png\" width=\"100px\"/></td>\n</tr></table>\n<br/>\n\n",
+          "questions": [
+            {
+              "text": "Take a close look at the code below. Which image will it create after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]

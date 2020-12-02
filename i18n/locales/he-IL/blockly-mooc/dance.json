@@ -10,13 +10,13 @@
   "danceFeedbackNeedDifferentDance": "אתם צריכים להשתמש בצעד ריקוד אחר.",
   "danceFeedbackNeedEveryTwoMeasures": "ודאו כי אתם משתמשים בבלוק 'כל 2 תיבות'",
   "danceFeedbackNeedMakeANewDancer": "השתמשו בבלוק `צור חדש` על מנת ליצור רקדן שני.",
-  "danceFeedbackKeyEvent": "ודאו שאתם מוסיפים את הקוד לבלוק ה- <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"למעלה\"</title></block></xml> ולוחצים על המקש בזמן שהריקוד שלכם מתבצע.",
+  "danceFeedbackKeyEvent": "ודאו שאתם מוסיפים את הקוד לבלוק\n <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"למעלה\"</title></block></xml>\nולוחצים על המקש בזמן שהריקוד שלכם מתבצע.",
   "danceFeedbackDidntPress": "ודאו שאתם לוחצים על מקשי החצים בזמן שהריקוד שלכם מתבצע.",
   "danceFeedbackPressedKey": "לחצתם על מקש, אבל הרקדן שלכם לא הגיב.",
   "danceFeedbackNeedTwoDancers": "עליכם ליצור שני רקדנים.",
   "danceFeedbackOnlyOneDancerMoved": "רק אחד מהרקדנים שלכם זז.",
-  "danceFeedbackNeedLead": "עליכם ליצור רקדן מוביל אחד עם בלוק ה-<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
-  "danceFeedbackNeedBackup": "עליכם ליצור קבוצה של רקדני ליווי עם בלוק ה-<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"חדי קרן\"</title><title name=\"LAYOUT\">\"עיגול\"</title></block></xml>.",
+  "danceFeedbackNeedLead": "עליכם גם ליצור רקדן מוביל אחד עם הבלוק\n<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
+  "danceFeedbackNeedBackup": "עליכם ליצור קבוצה של רקדני ליווי עם הבלוק\n<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"חדי קרן\"</title><title name=\"LAYOUT\">\"עיגול\"</title></block></xml>.",
   "danceFeedbackSetSize": "עליכם לשנות את גודלו של אחד מהרקדנים אחרי שהמוזיקה מתחילה להתנגן.",
   "measure": "תיבה:"
 }

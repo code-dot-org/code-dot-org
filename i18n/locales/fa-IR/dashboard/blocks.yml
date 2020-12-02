@@ -1,21 +1,24 @@
----
 fa:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          MOVE1:
+            MOVES.Rest: هیچکدام
+          MOVE2:
+            MOVES.Rest: هیچکدام
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': ثانیه
       Dancelab_changeMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: هیچکدام
       Dancelab_changeMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: هیچکدام
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -28,14 +31,12 @@ fa:
             '"height"': ارتفاع
       Dancelab_doMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: هیچکدام
       Dancelab_doMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: هیچکدام
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -49,6 +50,10 @@ fa:
         options:
           UNIT:
             '"seconds"': ثانیه
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: هیچکدام
       Dancelab_ifTime:
         options:
           UNIT:
@@ -68,6 +73,7 @@ fa:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': الماس
             '"random"': در هم
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -91,47 +97,27 @@ fa:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': الماس
             '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
-      Dancelab_setDanceSpeed:
+      Dancelab_setBackgroundEffect:
         options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
+          EFFECT:
+            '"none"': هیچکدام
+      Dancelab_setBackgroundEffectWithPalette:
         options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+          EFFECT:
+            '"none"': هیچکدام
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -186,6 +172,10 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -199,6 +189,19 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+            '"x"': طول (x)
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -220,6 +223,8 @@ fa:
         text: رنگ تصادفی
       gamelab_randomColor:
         text: رنگ تصادفی
+      gamelab_repeatForever:
+        text: تکرار بی‌پایان
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -294,6 +299,10 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: هیچکدام
       Mikelab_randomColor:
         text: رنگ تصادفی
       Mikelab_repeatUntilComplete:
@@ -351,23 +360,10 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': نشان می دهد
-            '"hide"': پنهان کردن
+            '"random"': در هم
       binary_move:
         options:
           DIR:

@@ -4,7 +4,7 @@
  * and its dependencies (167KB).
  */
 
-export const EXPO_SDK_VERSION = '34.0.0';
+export const EXPO_SDK_VERSION = '36.0.0';
 
 export const PLATFORM_ANDROID = 'android';
 export const PLATFORM_IOS = 'ios';

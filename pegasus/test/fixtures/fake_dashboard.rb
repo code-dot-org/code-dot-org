@@ -224,7 +224,7 @@ module FakeDashboard
   FAKE_DB = {
     users: USERS,
     user_permissions: USER_PERMISSIONS,
-    courses: COURSES,
+    unit_groups: COURSES,
     scripts: SCRIPTS,
     course_scripts: COURSE_SCRIPTS,
     experiments: EXPERIMENTS,

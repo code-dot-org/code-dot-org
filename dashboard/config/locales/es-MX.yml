@@ -133,15 +133,23 @@ es-MX:
       Tendrás que escribir tu contraseña debajo para iniciar sesión.
     use_clever: Lo sentimos, tu cuenta de Code.org no está vinculada a tu %{provider}.
       Por favor, inicia sesión a través de tu Portal Clever.
+    invalid_provider: Disculpe, Las cuentas de %{provider} no pueden ser ligadas a
+      cuentas de Code.org.
+    migration_required: Disculpe, no podemos conectar o desconectar cuentas que aun
+      estén usando la versión antigua de cuentas. Por favor, actualice a la nueva
+      experiencia de cuenta.
     unable_to_connect_provider: No se pudo conectar tu cuenta de Code.org a tu %{provider}.
       Por favor, inténtalo de nuevo.
+    disconnect_successful: "¡Éxito!, Hemos desconectado la cuenta externa de su cuenta
+      de Code.org."
     already_in_use: Tu %{provider} ya está conectado a otra cuenta de Code.org.
     already_linked: La cuenta con tu %{provider} ya está vinculada a tu cuenta de
       Code.org.
     existing_account:
       account_exists: "¡Buenas noticias! Ya tienes una cuenta de Code.org que utiliza
         %{email}"
-      sign_in: Inicia sesión y te vincularemos con tu perfil de %{provider}.
+      sign_in: Por favor, Inicie sesión con su cuenta actual. Entonces podrá vincular
+        si perfil de %{provider} desde la página de "Configuración de Cuenta".
       sign_up: "¿No es tu correo electrónico? ¿Quieres crear una nueva cuenta con
         una dirección de correo electrónico diferente? También vincularemos tu perfil
         de %{provider} si quieres hacerlo."
@@ -191,13 +199,19 @@ es-MX:
     valid_password: "¡Contraseña válida!"
     invalid_password: La contraseña debe tener al menos 6 caracteres
     mismatch_password: Las dos contraseñas ingresadas no coinciden
-    under_13_consent: Si soy menor de 13 años de edad, confirmo que tengo autorización
-      de mi padres o de mi tutor legal para utilizar los servicios de Code.org.
     student_consent: Confirmo que tengo la autorización de mis padres o tutores legales
       para utilizar los servicios de Code.org.
-    agree_us_website: Acepto usar un sitio web con sede en Estados Unidos.
-    my_data_to_us: Acepto que se envíen y almacenen datos de mi utilización de este
-      sitio web en Estados Unidos.
+    agree_us_data_transfer_student: "**Acepto que Code.org puede transferir datos
+      (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos**
+      con el fin de alojar y procesar dichos datos."
+    agree_us_data_transfer_teacher: "**Acepto que Code.org puede transferir datos
+      (incluyendo datos personales) de mi uso (y el uso de mis estudiantes) de este
+      sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos."
+    data_collection_us: Entiendo que Code.org es un sitio web sin fines de lucro con
+      sede en los Estados Unidos y que las leyes que rigen la recopilación de datos
+      en los Estados Unidos pueden diferir de las leyes de mi país.
+    visit_privacy: Consulte la [política de privacidad](%{privacy_url}) de Code.org
+      para obtener más información.
     student_terms_markdown: Las direcciones de correo electrónico no se almacenan
       de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes
       nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten
@@ -218,6 +232,11 @@ es-MX:
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: Debes especificar una preferencia de correo electrónico.
+    parent_account_checkbox: Soy padre o tutor registrándome en lugar de mi hijo
+    parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones
+      ocasionales para el progreso y proyectos de tus hijos, y actualizaciones sobre
+      sus cursos de ciencias de la computación?"
+    parent_account_email_label: Correo electrónico del padre o tutor
   school_info:
     title: Información de la escuela (opcional)
     school_country: País en el que está la escuela
@@ -290,6 +309,7 @@ es-MX:
 '
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
+    parent_email_added_subject: "¡Bienvenido a Code.org!"
   teacher_mailer:
     new_teacher_subject: "¡Bienvenido a Code.org!"
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
@@ -364,6 +384,7 @@ es-MX:
       sections: Secciones
       help_support: Ayuda y soporte
       report_bug: Reportar un error
+      report_abuse: Denunciar abuso
       teacher_community: Comunidad de docentes
       professional_learning: Aprendizaje Profesional
       documentation: Documentación
@@ -399,6 +420,8 @@ es-MX:
       help_us: Ayúdanos
       teach: Enseñar
       about: Acerca de
+      legal_privacy: Política de privacidad
+      legal_tos: Términos de uso
     user:
       classroom: Página de inicio para docentes
       district_dashboard: Panel del distrito
@@ -546,7 +569,19 @@ es-MX:
       o tutor (para recuperar la contraseña)
     update: Actualizar la cuenta
     account_successfully_updated: La cuenta se actualizó correctamente.
+    auth_option_saved: Has vinculado correctamente tu cuenta %{provider} con el correo
+      electrónico %{email}.
+    auth_option_saved_no_email: Has vinculado correctamente tu cuenta %{provider}.
     update_email: Actualizar
+    for_parents_and_guardians: Para padres y tutores
+    link_a_parent_email: Conecta tu correo electrónico como padre o tutor a esta cuenta
+      para mantenerte al tanto del progreso y proyectos de tu hijo
+    parent_guardian_email_label: Correo electrónico del padre o tutor
+    remove_parent_email_label: Quitar
+    none: Ninguna
+    only_one_parent_email_supported_warning: 'Nota: en este momento sólo podemos incluir
+      el correo electrónico de un padre o tutor por cada cuenta de estudiante. '
+    encrypted: encriptado
   user_level:
     completed: Completado
     tried: Intentado
@@ -600,6 +635,8 @@ es-MX:
     no_primary_course: Prueba un curso de Code Studio
     choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
     print_certificate: Imprimir Certificado
+  certificate_sponsor_message: "%{sponsor_name} tuve el generoso gesto de patrocinar
+    tu aprendizaje."
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Ingresa
       un código de sección diferente.
@@ -692,6 +729,7 @@ es-MX:
     download: Descargar el video
     show_notes: Mostrar notas
     show_video: Mostrar el video
+    label: Vídeo
   compatibility:
     upgrade:
       unsupported_message: Tu navegador no es compatible. Por favor, actualízalo a
@@ -850,26 +888,6 @@ es-MX:
         único para tu clase.
       audience: Desde 14 años
       cta: Aprende cómo
-  gallery:
-    students_drew_these_with_code: "¡Los estudiantes usaron código para dibujar esto!"
-    students_made_these_with_code: "¡Los estudiantes usaron código para crear estos!"
-    picture_count: En los pasados <b>%{days}</b> días, los estudiantes han dibujado
-      <b>%{count}</b> imágenes con programas escritos por ellos mismos. Haz clic en
-      las imágenes para ver cada programa en acción.
-    activity_count: En los últimos <b>%{days}</b> días, los estudiantes han escrito
-      sus propios programas informáticos y han creado <b>%{count}</b> aplicaciones
-      y fotos Haz clic en las fotos y capturas de pantalla para ver cada programa
-      en acción.
-    want_to_make_your_own: "¿Quieres crear el tuyo?"
-    how_to_save: En el último nivel de estos tutoriales, haz clic en "Finalizar" y
-      "Guardar" para guardar tu trabajo en la galería.
-    more: Más →
-    caption_by_name_age: por %{name}, edad %{age}
-    caption_time_ago: hace %{time_ago}
-    header: Galería
-    header_playlab: Historias y juegos
-    header_artist: El arte en código
-    report_abuse: Reportar Abuso
   landing:
     prerelease_tutorial: Este tutorial es una versión **beta**. Es objeto de revisión
       a medida que se reciben comentarios y se hacen mejoras.
@@ -880,6 +898,8 @@ es-MX:
     help_support: Ayuda y soporte
     documentation: Documentación
     tutorials: Tutoriales
+  free_response:
+    placeholder: Escribe aquí tu respuesta
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. ¡Intenta de nuevo!
@@ -936,6 +956,8 @@ es-MX:
     open_response_body: "¡Gracias por tu respuesta!"
     correct_title: Correcto
     correct_body: Esa es la respuesta correcta.
+  lesson_extras:
+    bonus_level: Nivel de bonificación
   dialog:
     ok: Aceptar
     startover_title: "¿Seguro que quieres empezar de nuevo?"
@@ -985,6 +1007,8 @@ es-MX:
       y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>.
     accept_label_markdown: Acepto los [términos de servicio](%{tos_url}) y la [política
       de privacidad](%{privacy_url}).
+    accept_tos: Al registrarse a Code.org, usted acepta los [Términos de Servicio](%{tos_url})
+      y nuestra [Póliza de Privacidad](%{privacy_url}).
     accept: Acepto
     print: Imprimir
     reminder_desc: Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos
@@ -998,6 +1022,16 @@ es-MX:
       podrían no estar disponibles para tus estudiantes si no aceptas explícitamente
       los términos actualizados.
     review_terms: Revisa los términos actualizados
+  donor_interstitial:
+    title: Tus cursos gratis de Ciencia de Computación son posible por...
+    subtitle: Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito
+      de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los
+      estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!
+    local_supporters: Simpatizantes Locales
+    global_supporters: Simpatizantes Globales
+    support_codeorg_1: Cada dólar dado a Code.org trae oportunidad a más estudiantes.
+    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
+    get_started: Empieza en Code.org
   school_info_interstitial:
     title: Queremos que cada estudiante pueda acceder a las Ciencias de la Computación.
       ¡Ayúdanos a seguir nuestro progreso!
@@ -1117,89 +1151,7 @@ es-MX:
     instructor_feedback: Comentarios del instructor
     peer_feedback: Comentarios de los compañeros
     outdated: Se añadieron estos comentarios a una versión presentada anteriormente
-  flex_category:
-    required: Resumen
-    content: Contenido
-    practice: Prácticas de Profesor
-    peer_review: Revisión por pares
-    ramp_up: Avanzar
-    main_course: Curso principal
-    extra_course_content: Contenido adicional del curso
-    csf_e_1: Avanzar al Curso E (Opcional)
-    csf_e_2: Contenido del Curso E
-    csf_f_1: Avanzar al Curso F (opcional)
-    csf_f_2: Contenido del Curso F
-    csf_digcit: Ciudadanía digital
-    csf_jigsaw: Rompecabezas
-    csf_sequencing: Secuencias
-    csf_loops: Bucles
-    csf_events: Eventos
-    csf_online_safety: Seguridad en línea
-    csf_binary: Binario
-    csf_data: Datos
-    csf_conditionals: Condicionales
-    csf_sprites: Sprites
-    csf_spritelab: Laboratorio de sprites
-    csf_nested_loops: Bucles anidados
-    csf_functions: Funciones
-    csf_variables: Variables
-    csf_for_loops: Bucles Para
-    csf_internet: Internet
-    csf_impacts: Impactos de la computación
-    csf_warmup: Actividad previa
-    csd1_1: 'Capítulo 1: El proceso de resolución de problemas'
-    csd1_2: 'Capítulo 2: Computadoras y resolución de problemas'
-    csd2_1: 'Capítulo 1: Contenido web y HTML'
-    csd2_2: 'Capítulo 2: Estilos y CCS'
-    csd3_1: 'Capítulo 1: Imágenes y animaciones'
-    csd3_2: 'Capítulo 2: Desarrollo de juegos'
-    csd4_1: 'Capítulo 1: Diseño orientado al usuario'
-    csd4_2: 'Capítulo 2: Prototipos de aplicaciones'
-    csd5_1: 'Capítulo 1: Representación de la información'
-    csd5_2: 'Capítulo 2: Resolución de problemas en los datos'
-    csd6_1: 'Capítulo 1: Programación con hardware'
-    csd6_2: 'Capítulo 2: Desarrollo de prototipos físicos'
-    csd_survey: Encuesta posterior al curso
-    csp1_1: 'Capítulo 1: Representación y transmisión de información'
-    csp1_2: 'Capítulo 2: La invención de Internet'
-    csp2_1: 'Capítulo 1: Codificación y compresión de información compleja'
-    csp2_2: 'Capítulo 2: Manipulación y visualización de datos'
-    csp3_1: 'Capítulo 1: Lenguajes de programación y algoritmos'
-    csp4_1: 'Capítulo 1: El mundo de los grandes datos y la encriptación'
-    csp5_1: 'Capítulo 1: Programación orientada a eventos'
-    csp5_2: 'Capítulo 2: Programación con estructuras de datos'
-    cspSurvey: Encuesta
-    cspAssessment: Evaluación del capítulo
-    csp_ap_1: 'Capítulo 1: Configuración de AP Tech'
-    csp_ap_2: 'Capítulo 2: Explore Performance Task de AP'
-    csp_ap_3: 'Capítulo 3: Create Performance Task de AP'
-    csp_postap_1: 'Capítulo 1: Manipulación y visualización de datos'
-    csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
-    csp2_1_2018: 'Unidad 2: Información digital'
-    csp3_1_2018: 'Unidad 3: Introducción a la programación'
-    csp4_1_2018: 'Unidad 4: Big Data y privacidad'
-    csp_variables: Variables
-    csp_conditionals: Condicionales
-    csp_functions: Funciones
-    csp_project: Proyecto
-    csp_lists: Listas
-    csp_loops: Bucles
-    csp_traversals: Recorridos
-    csp_libraries: Bibliotecas
-    csp_parameters_return_values: Parámetros y valores de retorno
-    dlp: Preguntas para reflexionar
-    time4cs_c1: Everglades y sus ecosistemas
-    time4cs_c2: Cadenas de comida en Everglades
-    time4cs_c3: Vivir en Everglades
-    time4cs_c4: Impactos invasivos en Everglades
-    time4cs_c5: Los ciudadanos efectúan cambios en Everglades
-    time4cs_c6: Condicionales (revisión)
-    k5_getting_started: Primeros pasos
-    k5_csf_intro: Conoce los Cursos de Fundamentos de Ciencias de la Computación
-    k5_coding_concepts: Conceptos de programación y estrategias de enseñanza
-    k5_next_steps: Próximos pasos
-    k5_basic_concepts: Conceptos básicos de programación y prácticas de enseñanza
-    k5_diving_deeper: 'Profundizar: cursos E y F'
+    peer_review: Revisión Por Pares
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia una página que no es operada
@@ -1276,6 +1228,11 @@ es-MX:
     a qué lección deberías estar asignado.
   hidden_script: Tu docente no esperaba que estuvieras aquí. Por favor, pregúntale
     a qué unidad deberías estar asignado.
+  no_course_access_student: No tienes acceso a este curso. Por favor, pregunta a tu
+    profesor a qué curso deberías estar asignado.
+  no_course_access_teacher: No tienes acceso a este curso. Si crees que deberías tener
+    acceso a este curso, escribe a support@code.org para que podamos solucionar la
+    situación.
   no_script_access_student: No tienes acceso a esta unidad. Por favor, pregunta a
     tu docente a qué unidad deberías estar asignado.
   no_script_access_teacher: No tienes acceso a esta unidad. Si crees que debes tenerlo,
@@ -1295,6 +1252,10 @@ es-MX:
       school_name: Nombre de la escuela
       school_city: Ciudad de la escuela
       school_country: País en el que está la escuela
+      colombian_school_city: Establecimiento
+      colombian_school_department: Departamento
+      colombian_school_municipality: Municipio
+      colombian_school_name: Sede
       ages: "¿A qué grupos de edades enseñas este año?"
       subjects: "¿Qué materias enseñas este año?"
       resources: "¿Cuáles de los siguientes recursos educativos de ciencias de la
@@ -1326,6 +1287,7 @@ es-MX:
       school_country:
         canada: Canadá
         chile: Chile
+        colombia: Colombia
         israel: Israel
         malaysia: Malasia
         mexico: México
@@ -1375,6 +1337,7 @@ es-MX:
         csf_express: Fundamentos de Ciencias de la Computación (Pre-Express o Express)
         csd: Descubrimientos de Ciencias de la Computación
         csp: Principios de Ciencias de la Computación
+        not_applicable: No Aplicable
       email_opt_in:
         opt_in_yes: Sí
         opt_in_no: 'No'
@@ -1392,6 +1355,9 @@ es-MX:
         mientras conoces el plan de estudios y las herramientas de Code.org. Si quieres
         compartir tus dudas y sugerencias con nosotros, ¡puedes escribirnos a [support@code.org](%{support_email_url})
         o publicar en el [foro de docentes](%{teacher_forum_url})!"
+      facilitator_not_listed: Mi facilitados no está listado
+      facilitator_not_applicable: No Aplicable
+      organizer_not_listed: Mi organizador no estpa listado
     logged_out:
       heading: "¡Gracias por tu interés en el Programa de Aprendizaje Profesional!"
       body: Para empezar, necesitas iniciar sesión en tu cuenta de Code.org. Si quieres
@@ -1414,16 +1380,29 @@ es-MX:
       que se guarden las cookies en tu computadora o dispositivo.
     more_information: Mira la política de privacidad de Code.org.
     accept: Acepto
-  gdpr_dialog:
-    heading: "¿Aceptas utilizar un sitio web alojado en los Estados Unidos?"
-    message: Es posible que los datos de su utilización de este sitio web se envíen
-      y almacenen en Estados Unidos.
-    link_intro: Para más información, mira nuestra
-    privacy_policy: política de privacidad
-    logout: Cerrar sesión
-    true: Sí
   page_not_found_title: No se encontró la página
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
     la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio.
   page_not_found_button: Volver a la página de inicio
+  copy: Copiar
+  maker:
+    google_oauth:
+      login_with_google: Inicia sesión en la aplicación Maker con Google
+      enter_code: Ingresa el código provisto cuando iniciaste sesión a través de Google
+        en tu navegador predeterminado.
+      copy_code: Copia y pega este código en la aplicación Maker para iniciar sesión
+        en Code.org.
+      error_token_expired: El token ha expirado. Inicia sesión nuevamente para obtener
+        un nuevo token.
+      error_wrong_provider: Proveedor incorrecto. Asegúrate de iniciar sesión con
+        Google.
+      error_invalid_user: ID de usuario inválida. Intenta iniciar sesión de nuevo.
+      error_no_code: Por favor, ingresa tu código de inicio de sesión.
+  parent_email_banner:
+    text: "**¿Eres un padre o tutor?** ¡Conecta tu correo electrónico a esta cuenta
+      para mantenerte al tanto del progreso y proyectos de tu hijo!"
+    link_your_email: Conecta tu correo electrónico
+    not_now: Ahora no
+  behaviors:
+    this_sprite: este sprite

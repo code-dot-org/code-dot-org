@@ -4,11 +4,11 @@ class TextToSpeechTest < ActiveSupport::TestCase
   setup do
     @level_without_instructions = Level.create
     @level_with_instructions = Level.create(
-      {short_instructions: 'regular instructions'}
+      {short_instructions: 'regular instructions that *can* also contain **formatting**'}
     )
     @level_with_instructions_override = Level.create(
       {
-        short_instructions: 'regular instructions',
+        short_instructions: 'regular instructions that *can* also contain **formatting**',
         tts_short_instructions_override: 'override'
       }
     )
@@ -42,7 +42,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
 
   test 'tts_short_instructions_text' do
     assert_equal '', @level_without_instructions.tts_short_instructions_text
-    assert_equal 'regular instructions', @level_with_instructions.tts_short_instructions_text
+    assert_equal "regular instructions that can also contain formatting\n", @level_with_instructions.tts_short_instructions_text
     assert_equal 'override', @level_with_instructions_override.tts_short_instructions_text
   end
 
@@ -54,7 +54,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
 
   test 'tts_short_instructions_audio_file' do
     assert_equal 'sharon22k/180/100/d41d8cd98f00b204e9800998ecf8427e/.mp3', @level_without_instructions.tts_path(@level_without_instructions.tts_short_instructions_text)
-    assert_equal 'sharon22k/180/100/256f8062d43018950cc245de47edf8b8/.mp3', @level_with_instructions.tts_path(@level_with_instructions.tts_short_instructions_text)
+    assert_equal 'sharon22k/180/100/71c7e35e3633b5dfce472bcbed146e9f/.mp3', @level_with_instructions.tts_path(@level_with_instructions.tts_short_instructions_text)
     assert_equal 'sharon22k/180/100/e3b3f56615d1e5f2608d2f1130a7ef54/.mp3', @level_with_instructions_override.tts_path(@level_with_instructions_override.tts_short_instructions_text)
   end
 

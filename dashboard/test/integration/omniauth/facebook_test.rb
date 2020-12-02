@@ -127,6 +127,28 @@ module OmniauthCallbacksControllerTests
       )
     end
 
+    test 'user_type is usually unset on finish_sign_up' do
+      mock_oauth
+
+      get '/users/sign_up'
+      sign_in_through_facebook
+      follow_redirect!
+
+      assert_template partial: '_finish_sign_up'
+      assert_nil assigns(:user).user_type
+    end
+
+    test 'sign_up queryparam can prefill user_type on finish_sign_up' do
+      mock_oauth
+
+      get '/users/sign_up?user[user_type]=teacher'
+      sign_in_through_facebook
+      follow_redirect!
+
+      assert_template partial: '_finish_sign_up'
+      assert_equal 'teacher', assigns(:user).user_type
+    end
+
     private
 
     def mock_oauth

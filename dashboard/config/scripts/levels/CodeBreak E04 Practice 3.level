@@ -1,0 +1,30 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-04-10T18:22:41.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Finish the picture so all 8 possible colors are displayed. ",
+    "long_instructions": "# Color Pixelation: Finish the Picture\r\n**Directions:**\r\n\r\n* Finish the picture so all 8 possible colors are displayed. Type in 0's and 1's to create the different colors. Remember - there are three color channels - red, green, and blue.\r\n    * To make the color **red** we would write: **100** which means:\r\n    \t* 1 in the red channel\r\n        * 0 in the blue channel\r\n        * 0 in the green channel.\r\n    * To make the color **pink**, we would write: **101** which means:\r\n    \t* 1 in the red channel\r\n        * 0 in the blue channel\r\n        * 1 in the green channel  \r\n        \r\n* **Note:** The first three lines of 0's and 1's set up the width, height, and the number of bits per pixel. We are working with 3 bits per pixel. You do not need to change these lines of code. \r\n\r\n![](https://images.code.org/1df24e9ccf781b095f8e18358fb90227-image-1586543407528.png)",
+    "version": "3",
+    "data": "0000 0100\r\n0000 0010\r\n0000 0011\r\n000 001 010 101 ",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "false",
+    "parent_level_id": 1814,
+    "encrypted": "false",
+    "display_name": "Color Pixelation Widget: Finish the Colors",
+    "bubble_choice_description": "Add the missing colors so all 8 possibilities are displayed when using 3 bit color. ",
+    "thumbnail_url": "https://images.code.org/5613857dd5691749de5e5c05464b5ea1-image-1586543710058.gif"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-09 00:42:08 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-04-10 18:30:52 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\",\"video_key\",\"hide_encoding_controls\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 18:32:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-10 18:36:10 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>

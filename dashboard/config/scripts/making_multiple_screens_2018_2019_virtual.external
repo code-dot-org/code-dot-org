@@ -1,0 +1,125 @@
+name 'Making Multiple Screens_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Making and Using Multiple Screens
+
+You may imagine that a typical app has a number of "screens" or views that user goes through as part of using your app.  Below is a typical example with 1) a welcome screen, 2) a screen that plays a game and 3) a "game over" screen.
+
+<img src="https://images.code.org/27065f81b2bf53dea099a76868f66e8e-image-1477324003598.png" style="display: block; margin: auto">
+
+## What's a screen, anyway?
+
+A screen is just a UI element like anything else in Design Mode.  But it has a few special properties:
+
+1. A screen is a UI element that contains other UI elements.
+2. Only one screen can be visible at a time
+3. Only elements that "belong" to a screen will be visible when that screen is active.
+4. **Multiple screens, but only one coding workspace**
+   * Even though your *design elements* might be spread across multiple screens, your code does not get broken up like that.
+   * There is only one coding workspace, that will still house all of your code for the app.
+
+<details><summary>A little bit more about screens...[click to expand]</summary>
+<strong>In reality, screens aren't really "real"*</strong><br>
+
+- A screen is just a convenient way to show and hide certain UI elements
+- Every program you write in App Lab could be done _without_ screens by simply being clever about what elements show and hide at any given time
+- But programs like that are very difficult and annoying to write.  So the concept of a "screen" makes the UI much easier to design.
+
+*If you must know, a screen is just an HTML &lt;div&gt; tag that contains other html elements. To show a screen it is made visible and the other divs are hidden.
+
+</details>
+
+## How to Make a new Screen
+
+<div style="float: left; width: 33%">
+There are two ways to add a screen to your app.  First, make sure you're in <em>Design Mode</em>.
+<br><br>
+<span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Either choose <em>New Screen...</em> from the pulldown menu at the top of the display area. <strong>Note:</strong> you also use this pulldown menu to switch between screens in design mode.
+<br><br>
+<span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Or drag and drop a Screen UI element from the toolbox. <strong>Heads-up: </strong>As soon as you release the screen element, the app will show you a <strong>new blank screen.</strong> You can get back to other screens using the pulldown menu at the top.
+
+</div>
+
+![](https://images.code.org/ed8f45d70a65329597c1623ddd756249-image-1477165123570.png)
+
+## Set a Screen's Properties
+
+<div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Use this pulldown menu to select the screen you want to work on. The list will contain the IDs of all the screens you've created.</p>
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Click on a blank area of the background to select the screen and set its properties. </p>
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+Screens also have IDs.  Like other UI elements, it's a good idea to <em>give your screens descriptive and meaningful IDs</em>.  It makes writing code so much easier.</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+If your screen is full with UI elements and there's no blank area to click to select it, use this pulldown menu. It lists all the UI elements that are part of this screen, including the screen itself.</p>
+</div>
+
+<img src="https://images.code.org/5f8934e6ae0fc2d9dfde8c9a0d93eec2-image-1477249243769.png" style="display: block; margin: auto;">
+
+<div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 50%; float: right">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+Click this button to make this screen the "default screen" which means the screen that will show first when the app is run.</p>
+
+
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>
+Screens don't have many properties but you can set the background of the screen to a color or an image. Images are stretched or squeezed to fit the screen.</p>
+
+</div>
+<div style="clear: both">&nbsp;</div>
+
+## Using the *setScreen* command to change screens with code
+
+The `setScreen` command changes the screen to show whatever screen you want.  You specify the screen by its ID.
+
+<img src="https://images.code.org/005222ed01ade7940963ce149d637286-image-1477168080948.png" style="display: block; margin: auto">
+
+<div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Find <em>setScreen</em> in the UI Elements toolbox and drag it into the code workspace.</p>
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Most of the time you change the screen in response to some user-event. In this case <em>setScreen</em> is being added to a "click" event handler for the image with id: <em>smileyFace</em></p>
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+Select the ID of the screen you want to change to. In this case, when the smiley face is clicked we want to change to the screen that says "goodbye."</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+<strong>Key idea: Multiple Screens - One Coding Workspace.</strong> This is the code that handles a "click" event for an <em>image that is on a different screen</em> - the <em>goodbyeScreen</em>. You can't see that image or that screen right now because the screen isn't selected.  However, the code for <em>everything</em> goes here in the coding workspace.</p>
+
+</div>
+
+### We'll practice making screens and adding code in the next few levels.  Click Continue.  
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This page contains a lot of information and several large diagrams.  But like many other things so far, once you know what you're doing there's not *that* much to it.  Adding a screen fits the same kinds patterns we've used before.
+
+When you encounter large pages like this an instructional option you might consider is **Demo-and-Reference** - demonstrate the key ideas outline on this page for the students, and let them use this page as reference afterward.
+
+This is a technique you might use to have some whole-class interaction mid-lesson where you can also do small checks for understanding.
+
+**Demo and Reference for Adding Screens**
+
+* Have students read the first section "What's a screen anyway" then pause.
+* Do a **demonstration or walk through** of adding a new screen, setting its style, and adding a call to `setScreen`
+* Remind students that this page exists for reference later on.
+* The last two diagrams might be useful to have projected at the front of the room as students continue to work.
+
+MARKDOWN

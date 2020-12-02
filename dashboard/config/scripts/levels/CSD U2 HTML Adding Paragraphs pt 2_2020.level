@@ -1,0 +1,34 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-02-17T23:24:02.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "hide_share_and_remix": "true",
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**What is a paragraph element?**]\r\n\r\nParagraphs are marked by opening(`<p>`) and closing(`</p>`) tags. Paragraphs in HTML can be any length of text from one word to a bunch of sentences. Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.\r\n\r\n:::\r\n\r\n::: details [**How do I make multiple paragraphs?**]\r\n\r\nHere's an example of several paragraph tags in a row. This code would be placed inside of the body of your web page.\r\n\r\n```\r\n<p>This is a paragraph. It has two sentences.</p>\r\n<p>This is another paragraph.</p>\r\n```\r\n\r\n:::\r\n</div>\r\n\r\n# Use Paragraph Tags\r\n\r\nThe `<p>` `</p>` tags or \"paragraph\" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be treated differently, often just spacing it out from other text.\r\n\r\n# Do This\r\n\r\n* Place the text you just wrote inside at least two separate paragraphs by surrounding it with `<p>` and `</p>` tags\r\n* Compare the results with a neighbor. What has changed about the way your text is displayed?",
+    "project_template_level_name": "CSD U2 HTML Adding Paragraphs Template_2020",
+    "encrypted_examples": "V8NvV6NFvPQT2vk5cPxL+493zgouj98hdnsyrDCAbVsqJ9yVf7B+3PWdBhii\n4mn18qfTA+hfsxyl6s1Nbcz6NQ==\n",
+    "submittable": "false",
+    "parent_level_id": 18271,
+    "name_suffix": "_2020",
+    "map_reference": "/docs/concepts/html/html-tags/",
+    "video_key": "csd_weblab_intro_2",
+    "encrypted": "false",
+    "mini_rubric": "true",
+    "validation_enabled": "true",
+    "rubric_performance_level_1": "All texts is contained within paragraph tags.  There are at least two paragraphs created through the proper use of paragraph tags.",
+    "rubric_performance_level_2": "At least some text has been separated out into a paragraph through proper use of paragraph tags.",
+    "rubric_performance_level_3": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",
+    "rubric_performance_level_4": "There are no paragraph tags in the text.",
+    "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images; understand the need for precision when using computer languages and use appropriate syntax.\r\n",
+    "teacher_markdown": "## Using the Tool\r\n\r\nThis level contains a new tab, \"Key Concepts\", that gives guidance on how student work can be evaluated.  This makes the level particularly useful as assessment.  Students can see how their work is evaluated by clicking on the \"Key Concepts\" tab.  Later, any teacher feedback will appear in the same area."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:21:17 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 20:02:21 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:28:51 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-07 18:06:47 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-07-16 21:59:03 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-28 23:11:03 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-09-28 23:14:26 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-03-19 19:58:33 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-19 19:59:17 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-19 20:03:39 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-16 18:28:24 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-16 18:40:30 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-16 18:40:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-16 18:41:50 +0000\",\"changed\":[\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-16 18:42:50 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-30 21:08:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-30 21:08:46 +0000\",\"changed\":[\"encrypted_examples\",\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-19 16:12:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-09-19 21:23:05 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-29 18:08:38 +0000\",\"changed\":[\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

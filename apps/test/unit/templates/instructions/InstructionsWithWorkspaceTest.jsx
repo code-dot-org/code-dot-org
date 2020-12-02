@@ -128,11 +128,5 @@ describe('InstructionsWithWorkspace', () => {
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(151);
     });
-
-    it('skips callback if codeWorkspaceContainer is not initialized', () => {
-      const wrapper = setupComponent({codeWorkspaceHeight: 0});
-      wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).not.to.have.been.called;
-    });
   });
 });

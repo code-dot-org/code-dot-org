@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-
+import * as utils from '../../../utils';
 import {refreshProjectName} from '../../headerRedux';
 
 class ProjectRemix extends React.Component {
@@ -21,7 +21,7 @@ class ProjectRemix extends React.Component {
     ) {
       dashboard.project.serverSideRemix();
     } else if (!this.props.isSignedIn) {
-      window.location.assign(
+      utils.navigateToHref(
         `/users/sign_in?user_return_to=${window.location.pathname}`
       );
     } else {

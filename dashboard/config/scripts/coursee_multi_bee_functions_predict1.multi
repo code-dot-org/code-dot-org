@@ -1,5 +1,5 @@
 name 'courseE_multi_bee_functions_predict1'
-question 'Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?'
+question 'Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed. What will happen when you click "Run"?'
 right 'The same program will work to solve this puzzle, too.', feedback: 'Correct!  It doesn\'t matter that there is a different amount of honey. The function is programmed to handle that.'
 wrong 'The bee won\'t make enough honey.', feedback: 'Incorrect. The function is programmed to handle any amount of honey over 0.'
 wrong 'The bee will try to make too much honey.', feedback: 'Incorrect. The function is programmed to handle any amount of honey over 0.'

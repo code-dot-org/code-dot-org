@@ -53,6 +53,7 @@ et:
   join_section:
     code:
       placeholder: Üksuse kood (ABCDEF)
+      instructions_short: Sisestage oma 6-täheline sektsiooni kood
   add_hint_form:
     placeholder: Palun sisesta oma vihje siia
     submit: Lisa vihje
@@ -126,6 +127,16 @@ et:
     valid_password: Sobilik salasõna!
     invalid_password: Salasõna peab olema vähemalt 6 tähemärgi pikkune
     mismatch_password: Sinu poolt sisestatud salasõnad ei ühti
+    agree_us_data_transfer_student: "**Nõustun, et Code.org võib edastada andmeid
+      (muu hulgas isikuandmeid) selle kohta, kuidas ma seda saiti kasutan, Ameerika
+      Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda."
+    agree_us_data_transfer_teacher: "**Nõustun, et Code.org võib edastada andmeid
+      (muu hulgas isikuandmeid) selle kohta, kuidas ma (ja minu õpilased) seda saiti
+      kasutan, Ameerika Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda."
+    data_collection_us: Saan aru, et Code.org on Ameerika Ühendriikide mittetulunduslik
+      veebisait ja Ameerika Ühendriikides kehtivad andmekaitseseadused võivad erineda
+      minu koduriigis kehtivatest.
+    visit_privacy: Lisateavet leiab veebisaidi Code.org [privaatsuspoliitikast](%{privacy_url}).
     additional_information: Meil on vaja täiendavat teavet, et sind registreerida.
     user_type_label: Konto tüüp
     user_type_teacher: Õpetaja
@@ -185,6 +196,8 @@ et:
       ja Plants vs Zombielt! :-) %{name}
 
 '
+  parent_mailer:
+    parent_email_added_subject: Tere tulemast Code.org!
   teacher_mailer:
     new_teacher_subject: Tere tulemast Code.org!
   section:
@@ -193,6 +206,7 @@ et:
       word: Salajane sõna
       email: E-post
       google_classroom: Google Classroom
+      clever: Tark konto
   follower:
     invite_sent: Kutse saadetud
     added_teacher: "%{name} lisatud kui sinu õpetaja"
@@ -242,6 +256,8 @@ et:
       educate_hoc: KoodiTund
       teach: Õpeta
       about: Info
+      legal_privacy: Privaatsuspoliitika
+      legal_tos: Teenuse tingimused
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
@@ -330,6 +346,9 @@ et:
     create_personal_login_under_13_username: Kasutajanimi (ärge kasutage oma pärisnime!)
     create_personal_login_under_13_parent_email: Lapsevanem/hooldaja e-posti aadress
     update_email: Uuenda
+    parent_guardian_email_label: Lapsevanema/hooldaja e-posti aadress
+    none: Mitte ükski
+    encrypted: krüpteeritud
   user_level:
     completed: Tehtud
     tried: Proovisin
@@ -460,6 +479,7 @@ et:
     download: Lae video alla
     show_notes: Näita märkmeid
     show_video: Näita videot
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a
@@ -575,31 +595,14 @@ et:
       title: Vidinad
       audience: Vanuses 14 +
       cta: Õpi kuidas
-  gallery:
-    students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
-    students_made_these_with_code: Õpilased tegid need koodiga!
-    picture_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
-      pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel, et nende programmide
-      tööd ise näha.
-    activity_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
-      pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel ja ekraanipiltidel,
-      et näha nende programmide tööd.
-    want_to_make_your_own: Tahad teha enda oma?
-    how_to_save: Nende juhendite viimases staadiumis vajuta "Lõpeta" ja "Salvesta",
-      et oma töö galeriisse salvestada.
-    more: Rohkem &rarr;
-    caption_by_name_age: 'Nimi: %{name}, Vanus: %{age}'
-    caption_time_ago: "%{time_ago} tagasi"
-    header: Galerii
-    header_playlab: Play Lab
-    header_artist: Kunstnik
-    report_abuse: Teata rikkumisest
   landing:
     report_bug: Raporteeri veast
     support: Abi saamine
     help_resources: Abiinfo ja ressursid
     help_support: Abi & Klienditugi
     documentation: Dokumentatsioon
+  free_response:
+    placeholder: Sisesta siia oma vastus
   multi:
     wrong_title: Vale vastus
     wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
@@ -805,30 +808,7 @@ et:
     instructor_feedback: Õpetaja tagasiside
     peer_feedback: Kaaslaste tagasiside
     outdated: See tagasiside lisati varem esitatud versioonile
-  flex_category:
-    required: Ülevaade
-    content: Sisu
-    practice: Õpetamise tavad
     peer_review: Vastastikune hindamine
-    csf_f_2: Kursuse F sisu
-    csf_digcit: Digitaalne kodakondsus
-    csf_jigsaw: Pusle
-    csf_loops: Tsüklid
-    csf_events: Sündmused
-    csf_binary: Binaarne
-    csf_conditionals: Tingimuslaused
-    csf_nested_loops: Korduvad tsüklid
-    csf_functions: Funktsioonid
-    csf_variables: Muutujad
-    csf_for_loops: For tsükkel
-    csf_internet: Internet
-    cspSurvey: Uuring
-    csp_variables: Muutujad
-    csp_conditionals: Tingimuslaused
-    csp_functions: Funktsioonid
-    csp_lists: Loendid
-    csp_loops: Tsüklid
-    k5_next_steps: Järgmised sammud
   external_links:
     disclaimer: Lahtiütlemine
     leaving_domain: Olete lahkumas sellest domeenist leheküljele, mida ei halda Code.org.
@@ -902,6 +882,7 @@ et:
     vaadata.
   hidden_stage: Õpetaja ei oodanud, et sa sind siin. Palun küsi oma õpetajalt, millises
     tunnis sa peaksid olema.
+  return_unit_overview: Mine teema ülevaatesse
   return_course_overview: Mine teema ülevaatesse
   view_all_units: Vaata kõik
   view_teacher_guide: Vaata juhendit õpetajatele
@@ -909,6 +890,7 @@ et:
     form_labels:
       email: E-post
       school_name: Kooli nimi
+      colombian_school_name: Kooli nimi
     form_entries:
       gender:
         male: Mees
@@ -920,6 +902,7 @@ et:
         science: Teadus
         la: Keeled
       resources:
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
       robotics:
@@ -929,5 +912,4 @@ et:
         opt_in_no: Ei
   cookie_banner:
     accept: Olen nõus
-  gdpr_dialog:
-    true: Jah
+  copy: Kopeeri

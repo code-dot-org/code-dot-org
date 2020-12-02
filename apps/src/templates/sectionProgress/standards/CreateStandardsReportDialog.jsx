@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import BaseDialog from '../../BaseDialog';
-import {CreateStandardsReportStep1} from './CreateStandardsReportStep1';
-import {CreateStandardsReportStep2} from './CreateStandardsReportStep2';
+import CreateStandardsReportStep1 from './CreateStandardsReportStep1';
+import CreateStandardsReportStep2 from './CreateStandardsReportStep2';
 
 const styles = {
   description: {
@@ -16,14 +16,19 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
   }
 };
 
-class CreateStandardsReportDialog extends Component {
+export class CreateStandardsReportDialog extends Component {
   static propTypes = {
+    sectionId: PropTypes.number,
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    handleNext: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    onCommentChange: PropTypes.func.isRequired
   };
 
   state = {
@@ -31,18 +36,29 @@ class CreateStandardsReportDialog extends Component {
   };
 
   handleNext = () => {
-    this.setState({currentPage: this.state.currentPage + 1});
+    this.setState(
+      {currentPage: this.state.currentPage + 1},
+      this.props.handleNext
+    );
   };
 
   handleBack = () => {
     this.setState({currentPage: this.state.currentPage - 1});
   };
 
+  handleClose = () => {
+    this.setState({currentPage: 1}, this.props.handleClose);
+  };
+
+  handleConfirm = () => {
+    this.setState({currentPage: 1}, this.props.handleConfirm);
+  };
+
   render() {
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
-        handleClose={this.props.handleConfirm}
+        handleClose={this.handleClose}
         useUpdatedStyles
         style={styles.dialog}
       >
@@ -53,7 +69,9 @@ class CreateStandardsReportDialog extends Component {
         {this.state.currentPage === 2 && (
           <CreateStandardsReportStep2
             onBack={this.handleBack}
-            handleConfirm={this.props.handleConfirm}
+            handleConfirm={this.handleConfirm}
+            onCommentChange={this.props.onCommentChange}
+            sectionId={this.props.sectionId}
           />
         )}
       </BaseDialog>

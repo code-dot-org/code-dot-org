@@ -8,20 +8,23 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
-  '#school-info-inputs',
-  '#email-preference-radio'
+  '#school-info-section',
+  '#email-preference-radio',
+  '#teacher-gdpr'
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
   '#gender-dropdown',
   '#age-dropdown',
-  '#student-consent'
+  '#student-consent',
+  '#parent-email-container',
+  '#student-gdpr'
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp, signUpUID, provider} = scriptData;
+const {usIp, signUpUID} = scriptData;
 
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
@@ -36,7 +39,7 @@ $(document).ready(() => {
   function init() {
     setUserType(getUserType());
     renderSchoolInfo();
-    trackPageLoadInOptimizely();
+    renderParentSignUpSection();
   }
 
   let alreadySubmitted = false;
@@ -71,6 +74,28 @@ $(document).ready(() => {
         'input[name="user[school_info_attributes][school_id]"]'
       );
       schoolIdEl.val('');
+    }
+  }
+
+  $('#user_parent_email_preference_opt_in_required').change(function() {
+    // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
+    // allows the parent sign up section of the form.
+    if (getUserType() === '') {
+      $('#user_user_type')
+        .val('student')
+        .change();
+    }
+    renderParentSignUpSection();
+  });
+
+  function renderParentSignUpSection() {
+    let checked = $('#user_parent_email_preference_opt_in_required').is(
+      ':checked'
+    );
+    if (checked) {
+      fadeInFields(['.parent-email-field']);
+    } else {
+      hideFields(['.parent-email-field']);
     }
   }
 
@@ -138,7 +163,7 @@ $(document).ready(() => {
             schoolState={schoolData.schoolState}
             schoolZip={schoolData.schoolZip}
             schoolLocation={schoolData.schoolLocation}
-            useGoogleLocationSearch={schoolData.useGoogleLocationSearch}
+            useLocationSearch={schoolData.useLocationSearch}
             onCountryChange={onCountryChange}
             onSchoolTypeChange={onSchoolTypeChange}
             onSchoolChange={onSchoolChange}
@@ -150,21 +175,6 @@ $(document).ready(() => {
         schoolInfoMountPoint
       );
     }
-  }
-
-  function trackPageLoadInOptimizely() {
-    // record that we have arrived at this stage in the registration process
-    // with Optimizely for the old vs new signup page A/B test.
-    //
-    // TODO elijah: remove this logic once the A/B test has been completed
-    window['optimizely'] = window['optimizely'] || [];
-    window['optimizely'].push({
-      type: 'event',
-      eventName: 'finishSignUpPageLoad',
-      tags: {
-        provider
-      }
-    });
   }
 
   function onCountryChange(_, event) {

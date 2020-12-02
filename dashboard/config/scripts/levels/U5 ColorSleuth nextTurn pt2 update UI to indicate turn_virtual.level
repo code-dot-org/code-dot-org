@@ -1,0 +1,82 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:25.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U5 ColorSleuth Template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "true",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "long_instructions": "# Update the screen to show who the current player is\r\n\r\n<img src=\"https://images.code.org/214101a637c0100af7dd17ff9ec5250e-image-1481211801440.gif\" style=\"float: right\">\r\n\r\nNotice in the design that there are two gray rectangles behind the player scores with ids `player1_highlight` and `player2_highlight`.  `player2_highlight` starts out hidden.\r\n\r\n## Do this:\r\n* Add code to the `if` statement in `switchPlayer` to check the current player.\r\n  * Use the `hideElement` and `showElement` commands (found in the UI controls toolbox) to show and hide these rectangles as a way of indicating whose turn it is.\r\n  * For example if it's player 1's turn, then show `player1_highlight` and hide `player2_highlight`\r\n\r\nWhen you're done you should see the player highlight alternate like the graphic above.\r\n\r\n**TIP**: Make the `player2_highlight` start out hidden by checking the \"hidden\" box for it in design mode.\r\n\r\n<details><summary>Need more help?</summary>\r\n<pre>function switchPlayer(){\r\n  if(currentPlayer==1){\r\n    currentPlayer=2;\r\n    showElement(\"player2_highlight\");\r\n    hideElement(\"player1_highlight\");\r\n  } else {\r\n    currentPlayer=1;\r\n    showElement(\"player1_highlight\");\r\n    hideElement(\"player2_highlight\");\r\n  }\r\n  console.log(\"current player: \"+currentPlayer);\r\n}</pre></details>\r\n\r\n\r\n",
+    "log_conditions": [
+      {
+        "entries": [
+          "showElement"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You should be using showElement to show the appropriate gray box (\"player1_highlight\" or \"player2_highlight\") behind the player score on screen whose turn it is."
+      },
+      {
+        "entries": [
+          "hideElement"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You should be using hideElement to hide the appropriate gray box (\"player1_highlight\" or \"player2_highlight\") behind the player score whose turn it is not."
+      }
+    ],
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "teacher_markdown": "Current working version:\r\n\r\nUpdate made to `switchPlayer` function.\r\n\r\n```\r\nvar currentPlayer = 1;\r\nvar randButtonId = 1;\r\nsetBoard();\r\n\r\nfunction setBoard() {\r\n  var R = randomNumber(0,235);\r\n  var G = randomNumber(0,235);\r\n  var B = randomNumber(0,235);\r\n  var color = rgb(R, G, B);\r\n  setProperty(\"button1\", \"background-color\", color);\r\n  setProperty(\"button2\", \"background-color\", color);\r\n  setProperty(\"button3\", \"background-color\", color);\r\n  setProperty(\"button4\", \"background-color\", color);\r\n\r\n  R = R+20; \r\n  G = G+20;\r\n  B = B+20;\r\n  var diffColor = rgb(R, G, B);\r\n  randButtonId = \"button\"+randomNumber(1,4);\r\n  setProperty(randButtonId, \"background-color\", diffColor);\r\n  console.log(\"correct button is: \"+randButtonId);\r\n}\r\n\r\nfunction checkCorrect(buttonId) {\r\n  console.log(\"checking: \"+buttonId);\r\n  if( buttonId == randButtonId ) {\r\n      console.log(\"You got it right!\");\r\n  } else {\r\n      console.log(\"WRONG\");\r\n  }\r\n  setBoard();\r\n  switchPlayer();\r\n}\r\n\r\nfunction switchPlayer(){\r\n  if(currentPlayer==1){\r\n    currentPlayer=2;\r\n    showElement(\"player2_highlight\");\r\n    hideElement(\"player1_highlight\");\r\n  } else {\r\n    currentPlayer=1;\r\n    showElement(\"player1_highlight\");\r\n    hideElement(\"player2_highlight\");\r\n  }\r\n  console.log(\"current player: \"+currentPlayer);\r\n}\r\n\r\nonEvent(\"button1\", \"click\", function() {\r\n  checkCorrect(\"button1\");\r\n});\r\nonEvent(\"button2\", \"click\", function() {\r\n  checkCorrect(\"button2\");\r\n});\r\nonEvent(\"button3\", \"click\", function() {\r\n  checkCorrect(\"button3\");\r\n});\r\nonEvent(\"button4\", \"click\", function() {\r\n  checkCorrect(\"button4\");\r\n});\r\n```",
+    "parent_level_id": 17261,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-20 16:47:35 +0000\",\"changed\":[\"long_instructions\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-20 16:51:43 +0000\",\"changed\":[\"long_instructions\",\"log_conditions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 13:24:53 +0000\",\"changed\":[\"long_instructions\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

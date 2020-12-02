@@ -22,6 +22,7 @@
   designer_link = CDO.studio_url('/s/minecraft/reset')
 
 %h1.responsive-padding= I18n.t(:minecraft_tutorials)
+%h2= I18n.t(:hoc2020_mc_available_code_org)
 %p.responsive-padding= I18n.t(:minecraft_specs)
 %div{style: "clear:both"}
 
@@ -64,9 +65,15 @@
           %a{href: designer_link, target: '_blank'}
             %button= I18n.t(:minecraft_agent_button)
 
-.clear
-%h2= I18n.t(:hoc2018_mc_educators)
+%div{style: "clear: both; margin-bottom: 40px;"}
+%h3.responsive-padding
+  =I18n.t(:minecraft_no_internet)
+  %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
 
+.clear
+%h2= I18n.t(:hoc2020_mc_available_mee)
+
+= view :minecraft_2020_promo
 = view :minecraft_2019_promo
 
 %div{style: "clear: both; margin-top: 45px;"}

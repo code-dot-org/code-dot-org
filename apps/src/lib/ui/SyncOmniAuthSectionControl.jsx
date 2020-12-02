@@ -3,14 +3,15 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../utils';
-import {OAuthSectionTypes} from '../../templates/teacherDashboard/shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {
   importOrUpdateRoster,
   sectionCode,
   sectionProvider,
   sectionName
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
-import Button, {ButtonColor, ButtonSize} from '../../templates/Button';
+import Button from '../../templates/Button';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const PROVIDER_NAME = {
   [OAuthSectionTypes.clever]: i18n.loginTypeClever(),
@@ -42,8 +43,28 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   onClick = () => {
-    const {sectionCode, sectionName, updateRoster} = this.props;
+    const {
+      sectionId,
+      sectionCode,
+      sectionName,
+      updateRoster,
+      sectionProvider
+    } = this.props;
     const {buttonState} = this.state;
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'sync-oauth-button-click',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          loginType: sectionProvider
+        })
+      },
+      {includeUserId: true}
+    );
+
     if ([IN_PROGRESS, SUCCESS].includes(buttonState)) {
       // Don't acknowledge click events while request is in progress.
       // For now, ignore them on success too - the page reload will take care of it.
@@ -108,12 +129,14 @@ export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
   const providerName = PROVIDER_NAME[provider];
   return (
     <Button
+      __useDeprecatedTag
       text={buttonText(buttonState, providerName)}
-      color={ButtonColor.white}
-      size={ButtonSize.large}
+      color={Button.ButtonColor.gray}
+      size={Button.ButtonSize.default}
       disabled={buttonState === IN_PROGRESS}
       onClick={onClick}
       {...iconProps(buttonState)}
+      style={{float: 'left'}}
     />
   );
 }

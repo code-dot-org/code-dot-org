@@ -1,0 +1,11 @@
+:javascript
+  window.pegasus = window.pegasus || {};
+  window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
+
+  window.dashboard = window.dashboard || {};
+  window.dashboard.CODE_ORG_URL = "#{CDO.code_org_url}";
+
+.amazon-future-engineer-eligibility-container
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/views/amazon_future_engineer_eligibility.js')}

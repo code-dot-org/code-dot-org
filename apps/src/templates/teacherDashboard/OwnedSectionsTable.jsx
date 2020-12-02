@@ -8,7 +8,8 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape, OAuthSectionTypes} from './shapes';
+import {sortableSectionShape} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import SectionActionDropdown from './SectionActionDropdown';
@@ -92,6 +93,7 @@ export const courseLinkFormatter = function(course, {rowData}) {
       )}
       {assignmentPaths.length < 1 && (
         <Button
+          __useDeprecatedTag
           text={i18n.coursesCardAction()}
           href={'/courses'}
           color={Button.ButtonColor.gray}
@@ -131,6 +133,7 @@ export const studentsFormatter = function(studentCount, {rowData}) {
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button
+        __useDeprecatedTag
         text={i18n.addStudents()}
         href={manageStudentsUrl}
         color={Button.ButtonColor.gray}

@@ -1,1 +1,9 @@
-{}
+{
+    "continue": "Nastavi",
+    "areYouSure": "Jesi li siguran?",
+    "cancel": "Odustani",
+    "yes": "Da",
+    "no": "Ne",
+    "run": "Pokreni",
+    "finish": "Kraj"
+}

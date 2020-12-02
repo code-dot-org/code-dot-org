@@ -22,6 +22,39 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  # POST /users/auth/maker_google_oauth2
+  def maker_google_oauth2
+    if params[:secret_code].nil_or_empty?
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_no_code')
+      return render 'maker/login_code'
+    end
+
+    secret = Encryption.decrypt_string_utf8(params[:secret_code])
+    time = DateTime.strptime(secret.slice!(0..19), '%Y%m%dT%H%M%S%z')
+    time_difference = (Time.now - time) / 1.minute
+
+    # Reject - code was generated more than 5 minutes ago or incorrect provider
+    if time_difference >= 5
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_token_expired')
+      return render 'maker/login_code'
+    elsif !secret.ends_with?('google_oauth2')
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_wrong_provider')
+      return render 'maker/login_code'
+    else
+      secret.slice!(AuthenticationOption::GOOGLE)
+    end
+
+    # Check user id all numbers
+    if secret.scan(/\D/).empty?
+      # Look up user and use devise to sign user in
+      user = AuthenticationOption.find_by(credential_type: AuthenticationOption::GOOGLE, authentication_id: secret)&.user
+      sign_in_and_redirect user
+    else
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_invalid_user')
+      render 'maker/login_code'
+    end
+  end
+
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
     user = find_user_by_credential
@@ -52,10 +85,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Call GET /users/auth/:provider/connect and the callback will trigger this code path
   def connect_provider
-    return head(:bad_request) unless can_connect_provider?
+    unless current_user&.migrated?
+      flash.alert = I18n.t('auth.migration_required')
+      return redirect_to edit_user_registration_path
+    end
 
     provider = auth_hash.provider.to_s
-    return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+    unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+      flash.alert = I18n.t('auth.invalid_provider', provider: provider)
+      return redirect_to edit_user_registration_path
+    end
 
     existing_credential_holder = User.find_by_credential type: provider, id: auth_hash.uid
 
@@ -141,12 +180,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     prepare_locale_cookie user
 
-    if allows_silent_takeover(user, auth_hash)
-      user = silent_takeover user, auth_hash
-      sign_in_user user
+    if email_already_taken(user) && AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(provider)
+      return sign_in_user user if auth_already_exists(auth_hash)
+      if allows_silent_takeover(user, auth_hash)
+        user = silent_takeover user, auth_hash
+        return sign_in_user user
+      end
+      return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
     elsif user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_oauth_takeover user
       sign_in_user user
     elsif (looked_up_user = User.find_by_email_or_hashed_email(user.email))
       email_already_taken_redirect \
@@ -187,9 +229,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     prepare_locale_cookie user
 
-    if allows_silent_takeover user, auth_hash
-      user = silent_takeover user, auth_hash
-      sign_in_user user
+    if email_already_taken(user)
+      return sign_in_user user if auth_already_exists(auth_hash)
+      if allows_silent_takeover(user, auth_hash)
+        user = silent_takeover user, auth_hash
+        return sign_in_user user
+      end
+      return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
     else
       register_new_user user
     end
@@ -403,6 +449,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         }
       )
     end
+    # In case we tried to update and failed, reload to make sure our attempted
+    # changes don't stick around.
+    lookup_user.reload
     lookup_user
   end
 
@@ -415,24 +464,29 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_and_redirect user
   end
 
+  def email_already_taken(user)
+    lookup_user = User.find_by_email_or_hashed_email(user.email)
+    return !!lookup_user
+  end
+
+  def auth_already_exists(auth_hash)
+    lookup_user = User.find_by_credential(type: auth_hash.provider, id: auth_hash.uid)
+    return !!lookup_user
+  end
+
   def allows_silent_takeover(oauth_user, auth_hash)
     return false unless auth_hash.provider.present?
     return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     return false if oauth_user.persisted?
 
-    lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
+    lookup_user =
+      AuthenticationOption.where(credential_type: AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES).find_by(hashed_email: User.hash_email(oauth_user.email))&.user ||
+      User.where(hashed_email: User.hash_email(oauth_user.email)).where(provider: AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES).first
     return !!lookup_user
   end
 
   def should_connect_provider?
-    return current_user && session[:connect_provider].present?
-  end
-
-  def can_connect_provider?
-    return false unless current_user&.migrated?
-
-    connect_flag_expiration = session.delete :connect_provider
-    connect_flag_expiration&.future?
+    return current_user && auth_params.fetch("action", nil) == "connect"
   end
 
   def get_connect_provider_errors(auth_option)

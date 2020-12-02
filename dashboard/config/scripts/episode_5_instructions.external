@@ -1,0 +1,26 @@
+name 'Episode 5 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### Sprite Lab Simulations
+Follow along with Sofia as she creates a simulation in Sprite Lab. Watch the first half of the Code Break episode and use this level to code along. 
+
+![](https://images.code.org/396dc7d23692f4dca36091501f62ae1f-image-1587320897997.gif)
+
+
+### App Lab Charts
+Practice building your own charts using sample data.
+
+![](https://images.code.org/b6d01719972c92a45332f89f7a087e11-image-1587314114636.gif)
+
+
+---
+
+Looking for more practice? Check out the [CSP Post-AP Unit: Data Tools](https://studio.code.org/s/csppostap-2019)
+MARKDOWN

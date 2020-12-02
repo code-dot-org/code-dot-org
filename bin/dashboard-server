@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 
+# Any arguments to bin/dashboard-server will get passed through to the rerun command, for example -b to run in background,
+# which allows for pry debugging.
 def main
   dirs = [deploy_dir('lib'), deploy_dir('shared/middleware')]
   dirs += [pegasus_dir] if CDO.dashboard_enable_pegasus
-  rerun = "rerun -p '**/*.{rb,ru,yml}' -d '#{dirs.join(',')}' -i '**/migrations/*.rb' -i 'test/**/*.rb' --"
+  rerun = "rerun -p '**/*.{rb,ru,yml}' -d '#{dirs.join(',')}' -i '**/migrations/*.rb' -i 'test/**/*.rb' #{ARGV.join(' ')} --"
   pids = []
 
   unless CDO.use_my_apps

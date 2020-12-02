@@ -1,0 +1,96 @@
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_grid.js')}
+
+= hidden_field_tag :size, 8
+= f.hidden_field :maze_data
+%h1.control-legend{data: {toggle: "collapse", target: "#grid"}}
+  Grid
+
+#grid.in.collapse
+  - if @level.is_a? Karel
+    #gridEditor
+    :javascript
+      var maze = JSON.parse(#{@level.properties['maze'].try(:to_json) || 'null'});
+      var initialDirt = JSON.parse(#{@level.properties['initial_dirt'].try(:to_json) || 'null'});
+      var serializedMaze = JSON.parse(#{@level.properties['serialized_maze'].try(:to_json) || 'null'});
+
+      var renderGridEditor = function () {
+        var container = document.getElementById('gridEditor');
+        // Fully replace any existing node; otherwise, React tries to be
+        // clever with our initialState and some things don't get properly
+        // updated
+        ReactDOM.unmountComponentAtNode(container)
+        ReactDOM.render(React.createElement(dashboard.GridEditor, {
+          maze: maze,
+          initialDirt: initialDirt,
+          serializedMaze: serializedMaze,
+          skin: $("select[name='level[skin]']").val(),
+          onUpdate: function (serializedData) {
+            $('#level_maze_data').val(JSON.stringify(serializedData));
+          }
+        }), container);
+      };
+
+      $("select[name='level[skin]']").on('change', renderGridEditor);
+      renderGridEditor();
+
+  - elsif @level.is_a?(Studio) || @level.is_a?(Bounce)
+    - skin = 'bounce' if @level.is_a?(Bounce)
+    - skin = 'playlab' if @level.is_a?(Studio)
+    - skin = 'starwarsgrid' if @level.is_a?(Studio) && @level.skin == 'hoc2015x'
+
+    #gridEditor
+    :javascript
+      var container = document.getElementById('gridEditor');
+      var maze = JSON.parse(#{@level.properties['maze'].try(:to_json) || 'null'});
+      var serializedMaze = isNaN(maze[0][0]) ? maze : maze.map(function (row) {
+        return row.map(function (cell) {
+          return { tileType: cell };
+        });
+      });
+
+      ReactDOM.render(React.createElement(dashboard.GridEditor, {
+        serializedMaze: serializedMaze,
+        skin: '#{skin}',
+        onUpdate: function (serializedData) {
+          $('#level_maze_data').val(JSON.stringify(serializedData));
+        }
+      }), container);
+
+  - else
+    .row
+      #mazeTable.span5
+      .label.span3.offset1
+        WHAT THE NUMBERS MEAN:
+        %ul{style: "list-style-type:none;margin:0;"}
+          %li.border 0 = border/wall
+          %li.path 1 = path
+          %li.start 2 = start
+          %li.end 3 = end (for Maze levels only)
+          %li.obstacle 4 = obstacle
+        PLAYLAB:
+        %ul{style: "list-style-type:none;margin:0;"}
+          %li.start 16 = character
+          %li.path 1 = waypoint flag
+
+    :javascript
+      var data = JSON.parse(#{@level.properties['maze'].try(:to_json) || 'null'})
+      function mazeRenderer(instance, td, row, col, prop, value, cellProperties) {
+        var dataValues = ['border','path','start','end','obstacle'];
+        if (parseInt(value) < 5 && parseInt(value) >= 0) {
+            Handsontable.renderers.NumericRenderer.apply(this, arguments);
+            td.className += ' ' + dataValues[parseInt(value)];
+        } else if (parseInt(value) === 16) {
+            Handsontable.renderers.NumericRenderer.apply(this, arguments);
+            td.className += ' start';
+        }
+      }
+      $("#mazeTable").handsontable({
+        data: data, startRows: 8, startCols: 8, maxRows: 8, maxCols: 8, stretchH: 'none',
+        validator: function(value, callback) {
+          callback(parseInt(value) % 1 == 0);
+        }, afterChange: function(changes, source) {
+          $('#level_maze_data').val(JSON.stringify(data));
+        }, cells: function(row, col, prop) {
+          return {renderer: mazeRenderer};
+      }});

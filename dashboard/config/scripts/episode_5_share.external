@@ -1,0 +1,18 @@
+name 'Episode 5 Share'
+editor_experiment ''
+title 'Episode 1 Placeholder'
+description 'description here'
+
+markdown <<MARKDOWN
+# Congratulations!
+
+## You've completed the Weekly Challenges for Episode 5. 
+
+Don't forget to share your projects using the hashtag #CodeBreak or email to <codebreaktech@code.org>. Code.org will re-share the coolest posts. We may even reach out so you can show your projects live on next week’s Code Break!
+
+### Tune in next week for more puzzles and challenges!
+
+More information at [code.org/break](http://code.org/break).
+
+
+MARKDOWN

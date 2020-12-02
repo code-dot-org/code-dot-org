@@ -1,9 +1,9 @@
 name 'cspu5_assess4_robot_2018_2019'
-wrong '<img src="https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png">'
-right '<img src="https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png">'
-wrong '<img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">'
-wrong '<img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">'
-wrong '<img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">'
+wrong 'https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png'
+right 'https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png'
+wrong 'https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png'
+wrong 'https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png'
+wrong 'https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png'
 
 
 markdown <<MARKDOWN

@@ -1,0 +1,14 @@
+name 'CSD U3 - conditionals - Matching_2018_2019_pilot_2020_virtual'
+title 'Matching: Comparison Operators'
+description 'Match the boolean expression to the English description.'
+question "Is the dog sprite's rotation less than the cat sprite's rotation?"
+answer "dog.rotation &lt; cat.rotation"
+question "Is the dog sprite's x less than the cat sprite's x?"
+answer "dog.x &lt; cat.x"
+question "Is the dog sprite's scale greater than the cat sprite's scale?"
+answer "dog.scale &gt; cat.scale"
+question "Is the dog sprite's x greater than the cat sprite's x?"
+answer "dog.x &gt; cat.x"
+question "Is the dog sprite's x equal to the cat sprite's x?"
+answer "dog.x == cat.x"
+

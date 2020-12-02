@@ -34,6 +34,7 @@
   "bird": "pássaro",
   "calloutPutCommandsHereRunStart": "Coloque comandos aqui para que eles sejam executados quando o programa for iniciado",
   "calloutBlocklyPlaceGoUpHere": "Coloque um bloco \"mova para cima\" aqui para ir para cima",
+  "calloutBlocklyPlaceMoveUpHere": "Coloque um bloco \"mover para cima\" aqui para subir",
   "calloutClickEvents": "Coloque no cabeçalho de eventos para ver blocos de função de evento.",
   "calloutUseArrowButtons": "Segure esses botões ou as setas no seu teclado para disparar os eventos de movimento",
   "calloutUseArrowButtonsAutoSteer": "Escondemos o código que você escreveu, mas você ainda pode usar as setas para se mover",

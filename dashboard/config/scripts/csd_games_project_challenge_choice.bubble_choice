@@ -1,0 +1,12 @@
+name 'CSD games project challenge choice'
+editor_experiment ''
+display_name 'Challenges'
+description 'Improve your game with these challenges!'
+
+sublevels
+level 'CSD U3 gamedesign challenge sidewalls'
+level 'CSD U3 gamedesign challenge differentitem'
+level 'CSD U3 gamedesign challenge lives'
+level 'CSD U3 gamedesign challenge backgroundsprites'
+level 'CSD U3 gamedesign challenge background'
+level 'CSD U3 gamedesign challenge gameover'

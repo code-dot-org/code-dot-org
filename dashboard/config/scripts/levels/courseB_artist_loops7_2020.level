@@ -1,0 +1,155 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:47:15.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
+    "x": "50",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This challenge uses **4** loops, one right after another!\",\"hint_id\":\"courseB_artist_loops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/62319ef6096e22e3b857340b6bcdf0d1/courseB_artist_loops7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Notice that every loop makes a stair pattern that goes a different direction.\\n\\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)\",\"hint_id\":\"courseB_artist_loops7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/84b57f20e510be1febe20db13fca95f6/courseB_artist_loops7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The loops should do this:\\n- Loop 1\\n  - Right\\n  - Down\\n  \\n- Loop 2\\n  - Right\\n  - Up\\n\\n- Loop 3\\n  - Left\\n  - Up\\n\\n- Loop 4\\n  - Left\\n  - Down\",\"hint_id\":\"courseB_artist_loops7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a00fb93c25ef2e29f571b7628852fb6b/courseB_artist_loops7.mp3\"}]",
+    "long_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
+    "ideal": "13",
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/8fc2cb860d7b70682430e766bdffee31-image-1478640373096.png\", \"position\": [0,0]}\r\n]",
+    "tts_short_instructions_override": "Challenge: It's a hidden garden! Let's walk around.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 15752,
+    "name_suffix": "_2020",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 03:55:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 22:30:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-16 16:21:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-16 16:22:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown" deletable="false">
+              <title name="TIMES" config="3-10">3</title>
+              <statement name="DO">
+                <block type="simple_move_right">
+                  <next>
+                    <block type="simple_move_down"/>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat_simplified_dropdown" deletable="false">
+                  <title name="TIMES" config="3-10">3</title>
+                  <statement name="DO">
+                    <block type="simple_move_right">
+                      <next>
+                        <block type="simple_move_up"/>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="controls_repeat_simplified_dropdown" deletable="false">
+          <title name="TIMES" config="3-10">3</title>
+        </block>
+        <block type="controls_repeat_simplified_dropdown" deletable="false">
+          <title name="TIMES" config="3-10">3</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="simple_jump_down"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">3</title>
+              <statement name="DO">
+                <block type="simple_move_right">
+                  <next>
+                    <block type="simple_move_down"/>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">3</title>
+                  <statement name="DO">
+                    <block type="simple_move_right">
+                      <next>
+                        <block type="simple_move_up"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">3</title>
+                      <statement name="DO">
+                        <block type="simple_move_left">
+                          <next>
+                            <block type="simple_move_up"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat_simplified_dropdown">
+                          <title name="TIMES" config="3-10">3</title>
+                          <statement name="DO">
+                            <block type="simple_move_left">
+                              <next>
+                                <block type="simple_move_down"/>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

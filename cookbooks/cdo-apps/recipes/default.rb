@@ -45,6 +45,10 @@ apt_package 'enscript'
 # Provides a Dashboard database fixture for Pegasus tests.
 apt_package 'libsqlite3-dev'
 
+# Used to sync content between our Code.org shared Dropbox folder
+# and our git repository.
+apt_package 'unison' if node.chef_environment == 'staging'
+
 # Debian-family packages for building Ruby C extensions
 apt_package %w(
   autoconf
@@ -56,8 +60,6 @@ apt_package %w(
   ncurses-dev
   cmake
 )
-
-include_recipe 'cdo-mysql'
 
 include_recipe 'cdo-ruby'
 
@@ -83,11 +85,12 @@ end
 node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
 
 include_recipe 'cdo-secrets'
+include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
 
-include_recipe 'cdo-cloudwatch-extra-metrics'
-include_recipe 'cdo-cloudwatch-logger' if node[:ec2]
+include_recipe 'cdo-cloudwatch-agent'
+include_recipe 'cdo-syslog'
 
 include_recipe 'cdo-apps::jemalloc' if node['cdo-apps']['jemalloc']
 include_recipe 'cdo-apps::bundle_bootstrap'
@@ -99,7 +102,9 @@ if node['cdo-secrets']["build_apps"] ||
   # TODO keep this logic in sync with `BUILD_PACKAGE` in `package.rake`.
   (node['cdo-apps']['daemon'] && %w[staging test adhoc].include?(node.chef_environment))
   include_recipe 'cdo-nodejs'
+  include_recipe 'cdo-apps::google_chrome'
   include_recipe 'cdo-apps::generate_pdf'
+  apt_package 'parallel' # Used by test-low-memory.sh to run apps tests in parallel
 end
 
 # Workaround for lack of zoneinfo in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3
@@ -132,3 +137,7 @@ include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
 
 # Patch to fix issue with systemd-resolved: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1805183
 include_recipe 'cdo-apps::resolved'
+
+include_recipe 'cdo-apps::rbspy'
+
+include_recipe 'cdo-apps::syslog_permissions'

@@ -1,0 +1,19 @@
+name 'Mar20 Make Plan_0'
+editor_experiment ''
+title 'Summary'
+description 'description here'
+
+markdown <<MARKDOWN
+## Summary of what we have learned
+* How the College Board is changing the course (at a high level)
+* How we have changed our curriculum in response to those changes and feedback
+* How Units 1 and 2 are similar, but still have sizable changes to the prior version
+* What the philosophy behind EIPM is
+* How to model Explore and Investigate lessons to show the role of the teacher
+* How the EIPM arc works in Variables and Traversals
+* How mental models build over time
+* How Make Tasks build over time
+* How assessment works in the new version
+* How to talk to other teachers and stakeholders about the changes.
+
+MARKDOWN

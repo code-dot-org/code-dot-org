@@ -19,14 +19,6 @@ module ScriptConstants
   # a category will be the order in which they appear in the dropdown, and the
   # order of the categories will be their order in the dropdown.
   CATEGORIES = {
-    full_course: [
-      CSP_2017 = 'csp-2017'.freeze,
-      CSP_2018 = 'csp-2018'.freeze,
-      CSP_2019 = 'csp-2019'.freeze,
-      CSD_2017 = 'csd-2017'.freeze,
-      CSD_2018 = 'csd-2018'.freeze,
-      CSD_2019 = 'csd-2019'.freeze,
-    ],
     csf: [
       COURSEA_NAME = 'coursea-2017'.freeze,
       COURSEB_NAME = 'courseb-2017'.freeze,
@@ -56,6 +48,16 @@ module ScriptConstants
       COURSEF_2019_NAME = 'coursef-2019'.freeze,
       EXPRESS_2019_NAME = 'express-2019'.freeze,
       PRE_READER_EXPRESS_2019_NAME = 'pre-express-2019'.freeze,
+    ],
+    csf_2020: [
+      COURSEA_2020_NAME = 'coursea-2020'.freeze,
+      COURSEB_2020_NAME = 'courseb-2020'.freeze,
+      COURSEC_2020_NAME = 'coursec-2020'.freeze,
+      COURSED_2020_NAME = 'coursed-2020'.freeze,
+      COURSEE_2020_NAME = 'coursee-2020'.freeze,
+      COURSEF_2020_NAME = 'coursef-2020'.freeze,
+      EXPRESS_2020_NAME = 'express-2020'.freeze,
+      PRE_READER_EXPRESS_2020_NAME = 'pre-express-2020'.freeze,
     ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
@@ -117,6 +119,14 @@ module ScriptConstants
       CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
       CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
     ],
+    csd_2020: [
+      CSD1_2020_NAME = 'csd1-2020'.freeze,
+      CSD2_2020_NAME = 'csd2-2020'.freeze,
+      CSD3_2020_NAME = 'csd3-2020'.freeze,
+      CSD4_2020_NAME = 'csd4-2020'.freeze,
+      CSD5_2020_NAME = 'csd5-2020'.freeze,
+      CSD6_2020_NAME = 'csd6-2020'.freeze,
+    ],
     csd_2019: [
       CSD1_2019_NAME = 'csd1-2019'.freeze,
       CSD2_2019_NAME = 'csd2-2019'.freeze,
@@ -142,6 +152,18 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
+    csp_2020: [
+      CSP1_2020_NAME = 'csp1-2020'.freeze,
+      CSP2_2020_NAME = 'csp2-2020'.freeze,
+      CSP3_2020_NAME = 'csp3-2020'.freeze,
+      CSP4_2020_NAME = 'csp4-2020'.freeze,
+      CSP5_2020_NAME = 'csp5-2020'.freeze,
+      CSP6_2020_NAME = 'csp6-2020'.freeze,
+      CSP7_2020_NAME = 'csp7-2020'.freeze,
+      CSP8_2020_NAME = 'csp8-2020'.freeze,
+      CSP9_2020_NAME = 'csp9-2020'.freeze,
+      CSP10_2020_NAME = 'csp10-2020'.freeze,
+    ].freeze,
     csp_2019: [
       CSP1_2019_NAME = 'csp1-2019'.freeze,
       CSP2_2019_NAME = 'csp2-2019'.freeze,
@@ -209,20 +231,21 @@ module ScriptConstants
     APPLAB_2HOUR = 'applab-2hour'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
-    FESBINARY = 'fesbinary'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
-    K5_ONLINE_PD = 'K5-OnlinePD'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
+    OUTBREAK = 'outbreak'.freeze,
     PIXELATION = 'pixelation'.freeze,
-    VIGENERE = 'vigenere'.freeze
+    VIGENERE = 'vigenere'.freeze,
+    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
+    K5_ONLINEPD = 'K5-OnlinePD'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
 
-  # A whitelist of all family names for scripts.
+  # An allowlist of all family names for scripts.
   FAMILY_NAMES = [
     # CSF
     COURSEA = 'coursea'.freeze,
@@ -240,6 +263,11 @@ module ScriptConstants
     CSP3 = 'csp3'.freeze,
     CSP4 = 'csp4'.freeze,
     CSP5 = 'csp5'.freeze,
+    CSP6 = 'csp6'.freeze,
+    CSP7 = 'csp7'.freeze,
+    CSP8 = 'csp8'.freeze,
+    CSP9 = 'csp9'.freeze,
+    CSP10 = 'csp10'.freeze,
     CSP_POSTAP = 'csppostap'.freeze,
     CSP_CREATE = 'csp-create'.freeze,
     CSP_EXPLORE = 'csp-explore'.freeze,
@@ -250,7 +278,9 @@ module ScriptConstants
     CSD3 = "csd3".freeze,
     CSD4 = "csd4".freeze,
     CSD5 = "csd5".freeze,
-    CSD6 = "csd6".freeze
+    CSD6 = "csd6".freeze,
+
+    TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
   def self.script_in_category?(category, script)
@@ -318,12 +348,52 @@ module ScriptConstants
     }
   end
 
+  CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
+
   def self.has_congrats_page?(script)
     script == ACCELERATED_NAME ||
       ScriptConstants.script_in_category?(:csf_international, script) ||
-      ScriptConstants.script_in_category?(:csf, script) ||
-      ScriptConstants.script_in_category?(:csf_2018, script) ||
-      ScriptConstants.script_in_category?(:csf_2019, script)
+      CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
+  end
+
+  def self.csf_next_course_recommendation(course_name)
+    # These course names without years in them should be mapped statically to their recommendation.
+    static_mapping = {
+      "course1" => "course2",
+      "course2" => "course3",
+      "course3" => "course4",
+      "accelerated" => "course4",
+      "course4" => "applab"
+    }
+
+    return static_mapping[course_name] if static_mapping.include?(course_name)
+
+    # For CSF courses with years in their name, separate into prefix and year. Determine the recommended
+    # next prefix based on constant mapping, then add the year to the recommended prefix.
+    # Example: coursea-2019 becomes prefix: coursea, year: 2019.
+    # coursea maps to courseb, so return courseb-2019.
+    CSF_COURSE_PATTERNS.each do |r|
+      match_data = r.match(course_name)
+      next unless match_data
+
+      prefix = match_data[1]
+      year = match_data[2]
+
+      return "applab" if %w(coursef express).include?(prefix)
+
+      prefix_mapping = {
+        "coursea" => "courseb",
+        "courseb" => "coursec",
+        "coursec" => "coursed",
+        "coursed" => "coursee",
+        "coursee" => "coursef",
+        "pre-express" => "coursec"
+      }
+
+      return "#{prefix_mapping[prefix]}-#{year}" if prefix_mapping.include?(prefix)
+    end
+
+    return nil
   end
 
   def self.i18n?(script)
@@ -331,6 +401,7 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:csf, script) ||
       ScriptConstants.script_in_category?(:csf_2018, script) ||
       ScriptConstants.script_in_category?(:csf_2019, script) ||
+      ScriptConstants.script_in_category?(:csf_2020, script) ||
       ScriptConstants.script_in_category?(:csd, script) ||
       ScriptConstants.script_in_category?(:csd_2018, script) ||
       ScriptConstants.script_in_category?(:csd_2019, script) ||

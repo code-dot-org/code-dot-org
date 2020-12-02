@@ -1,4 +1,4 @@
-stage 'Stage1'
+lesson 'lesson1', display_name: 'lesson1'
 level 'Level 1'
 level 'UnplugHappyMaps'
 

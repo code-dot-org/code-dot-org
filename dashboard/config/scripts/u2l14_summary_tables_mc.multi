@@ -1,8 +1,10 @@
 name 'U2L14 Summary Tables MC'
+editor_experiment ''
 title 'What\'s it good for?'
 type 'multi2'
 description ''
-question 'Which of the following statements are true about pivot tables? <br> Select <u>two</u> answers.'
+question 'Which of the following statements are true about pivot tables?   
+ Select **two** answers.'
 wrong 'Pivot tables are used to quickly remove errors and inconsistencies from a dataset.'
 right 'Pivot tables are used to quickly perform aggregate computations and groupings on a set of raw data'
 wrong 'Pivot tables are used because they automatically detect and highlight potential trends or patterns in the underlying raw data'

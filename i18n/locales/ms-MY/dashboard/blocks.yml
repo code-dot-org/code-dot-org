@@ -86,9 +86,6 @@ ms:
             MOVES.Kick: Gerakan Bintang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} lakukan {MOVE} {DIR} selamanya"
         options:
@@ -107,9 +104,6 @@ ms:
             MOVES.Kick: Gerakan Bintang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: tukar {SPRITE} {PROPERTY} dengan {VAL}
         options:
@@ -184,9 +178,6 @@ ms:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} lakukan {MOVE} {DIR} sekali"
         options:
@@ -215,9 +206,6 @@ ms:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ulangi setiap {N} corak berirama selepas {START} '
       Dancelab_everySeconds:
@@ -298,10 +286,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_jumpToEach:
         text: lompat {GROUP} ke {LOCATION}
@@ -325,10 +313,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": rawak
       Dancelab_layoutSprites:
         text: susun atur {GROUP} seperti {FORMAT}
@@ -351,8 +339,12 @@ ms:
             '"inner"': dalam segi empat
             '"circle"': bulatan
             '"grid"': grid
+            '"top"': barisan Atas
             '"row"': baris
+            '"bottom"': barisan Bawah
+            '"left"': lajur Kiri
             '"column"': lajur
+            '"right"': lajur Kanan
             '"x"': bersilang-silang
             '"plus"': tambah
             '"random"': rawak
@@ -374,10 +366,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSprite:
         text: "buatkan {COSTUME} \nbaharudipanggil {NAME} di {LOCATION}"
@@ -397,10 +389,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSpriteGroup:
         text: "buat {N} {COSTUME} \nbaharudalam {LAYOUT}"
@@ -485,7 +477,7 @@ ms:
             '"rainbow"': Pelangi
             '"snowflakes"': Salji
             '"text"': Nama Lagu
-            '"galaxy"': Angkasa
+            '"galaxy"': Ruang
             '"sparkles"': Berkilau
             '"spiral"': Lingkaran
             '"disco"': Segi Empat
@@ -502,7 +494,7 @@ ms:
             '"warm"': Hangat
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
-          Tetapkan kesan latar belakang
+          tetapkan kesan latar belakang
           {PALETTE} {EFFECT}
         options:
           EFFECT:
@@ -526,7 +518,7 @@ ms:
             '"snowflakes"': Salji
             '"text"': Nama Lagu
             '"squiggles"': Cacing Kerawit
-            '"galaxy"': Angkasa
+            '"galaxy"': Ruang
             '"sparkles"': Berkilau
             '"spiral"': Lingkaran
             '"disco"': Segi Empat
@@ -936,6 +928,10 @@ ms:
         text: bidadari {SPRITE} bermula {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': saat
       gamelab_changePropBy:
         text: tukar {SPRITE} {PROPERTY} dengan {VAL}
         options:
@@ -976,8 +972,45 @@ ms:
         options:
           CHOICE:
             '"this"': ini
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': saat
       gamelab_hideTitleScreen:
         text: sembunyikan skrin tajuk
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} menyentuh tepi"
       gamelab_jumpTo:
@@ -1021,6 +1054,13 @@ ms:
             '"z"': z
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       gamelab_locationMouse:
         text: lokasi tetikus
       gamelab_locationOf:
@@ -1049,6 +1089,8 @@ ms:
             '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} ke arah {TARGET}
+      gamelab_objectSpritePointer:
+        text: mengklik {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1093,6 +1135,8 @@ ms:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': di bawah permukaan air
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': musim sejuk
             undefined: tiada
+      gamelab_setBackgroundImageAs:
+        text: tetapkan latar belakang ke {IMG}
       gamelab_setProp:
         text: Set {SPRITE} {PROPERTY} Untuk {VAL}
         options:
@@ -1124,6 +1168,8 @@ ms:
           CONDITION:
             '"when"': apabila
             '"while"': semasa
+      gamelab_subjectSpritePointer:
+        text: mengklik {SPRITE}
       gamelab_turn:
         text: Menghidupkan {SPRITE} {DIRECTION} {N} Darjah
         options:
@@ -1207,10 +1253,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_getNext:
         text: dapatkan objek seterusnya
       Mikelab_getProp:
@@ -1242,10 +1288,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_groupDestroy:
         text: keluarkan {SELECT} {COSTUME}
         options:
@@ -1389,10 +1435,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_whenClickedOn:
         text: ketika {SPRITE} diklik
       Mikelab_whenKeyPressed:
@@ -1464,6 +1510,14 @@ ms:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION} 12321
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       aalab_prompt:
         text: bertanya soalan {MESSAGE}
       aalab_scene:
@@ -1475,11 +1529,10 @@ ms:
             '3': '3'
       aalab_setupStory:
         text: cerita persediaan
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"hide"': sembunyi
+            '"random"': rawak
       binary_drawBin:
         text: menarik binari {BIN}
       binary_drawBinScreen:
@@ -1574,7 +1627,6 @@ ms:
             '"stoneBricks"': batu bata
             '"mossyStoneBricks"': batu bata berlumut
             '"crackedStoneBricks"': batu bata retak
-            '"decorativeStoneBricks"': batu bata hiasan
             '"blueCoralBlock"': blok karang biru
             '"pinkCoralBlock"': blok karang merah jambu
             '"magentaCoralBlock"': blok karang magenta

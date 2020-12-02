@@ -3,6 +3,8 @@ uz:
   errors:
     messages:
       not_saved: 'Iltimos, quyidagi xatolarni to‘g‘rilang:'
+      too_young: Bu dars uchun yoshga cheklov bo‘lib, yoshi to‘lmaganlar uchun kirish
+        imkoni yo‘q.
   activerecord:
     errors:
       messages:
@@ -75,22 +77,30 @@ uz:
       word: Sirli so'z
       email: Elektron pochta
   crud:
+    edit: tahrirlash
     submit: Taqdim qilmoq
     confirm: Aminmisiz?
   nav:
     header:
       educate_hoc: Dasturlash soati
+      legal_tos: Xizmat shartlari
     user:
       classroom: O‘qituvchining bosh sahifasi
       create: Yaratmoq
       applab: Ilova labaratoriyasi
       bounce: Sakrash
       iceage: Muzlik davri
+    popup:
+      prizes_link: Batafsil
   teacher:
     panel:
       student: O‘quvchi
   home:
+    student_reg_link: O‘quvchi
+    online: Onlayn
     trynow: Hoziroq sinang
+    try_beta_courses: Yangilik! Boshlang‘ich sinfdagilar uchun beta-mashg‘ulotlarimizni
+      sinab ko‘ring.
   gender:
     none: Javob bermaslikni ma’qul ko‘raman
   user_type:
@@ -119,8 +129,8 @@ uz:
       title: Ilova labaratoriyasi
     unplugged_conditionals:
       title: Shart buyruqlari
-  gallery:
-    report_abuse: Nosozlik haqida xabar berish
+  free_response:
+    placeholder: Javobingizni bu yerga yozing
   multi:
     wrong_title: Noto‘g‘ri javob
     wrong_body: Siz bergan javob noto‘g‘ri. Qaytadan urinib ko‘ring!
@@ -161,17 +171,8 @@ uz:
       report_abuse_form:
         abuse_type:
           other: Boshqa
-  flex_category:
-    csf_jigsaw: Topishmoq
-    csf_loops: Sikllar
-    csf_conditionals: Shart buyruqlari
-    csf_functions: Funksiyalar
-    csf_variables: O‘zgaruvchilar
-    csp_variables: O‘zgaruvchilar
-    csp_conditionals: Shart buyruqlari
-    csp_functions: Funksiyalar
-    csp_lists: Ro‘yxatlar
-    csp_loops: Sikllar
+  hoc_download:
+    minecraft_name: Maynkraft Dasturlash soati
   pd:
     form_labels:
       email: Elektron pochta
@@ -181,5 +182,7 @@ uz:
       subjects:
         cs: Informatika
         math: Matematik
+      resources:
+        khan: Xon Akademiyasi
   cookie_banner:
     accept: Roziman

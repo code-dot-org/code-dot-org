@@ -88,9 +88,6 @@ ur:
             MOVES.Kick: ستارہ
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} {MOVE} {DIR} کو ہمیشہ کیلئے کریں"
         options:
@@ -109,9 +106,6 @@ ur:
             MOVES.Kick: ستارہ
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
         options:
@@ -186,9 +180,6 @@ ur:
             MOVES.XArmsUp: کھینچائی
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} {MOVE} {DIR} کو ایک مرتبہ"
         options:
@@ -217,9 +208,6 @@ ur:
             MOVES.XArmsUp: کھینچائی
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ہر {N} پیمائشوں کو {START} کے بعد دہرائیں '
       Dancelab_everySeconds:
@@ -302,10 +290,10 @@ ur:
             "{x: 100, y: 200}": بائیں
             "{x: 300, y: 200}": درست
             "{x: 200, y: 200}": مرکز
-            "{x: 100, y: 100}": سب سے اوپر بائیں
-            "{x: 300, y: 100}": اوپر دائیں
-            "{x: 100, y: 300}": نیچے بائیں
-            "{x: 300, y: 300}": سب سے نیچے دائیں
+            "{x: 100, y: 100}": بالائی بائیں
+            "{x: 300, y: 100}": بالائی دائیں
+            "{x: 100, y: 300}": ذیلی بائیں
+            "{x: 300, y: 300}": ذیلی دائیں
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_jumpToEach:
         text: "{GROUP} گروپ {LOCATION} پر جست لگائیں"
@@ -329,10 +317,10 @@ ur:
             "{x: 100, y: 200}": بائیں
             "{x: 300, y: 200}": درست
             "{x: 200, y: 200}": مرکز
-            "{x: 100, y: 100}": سب سے اوپر بائیں
-            "{x: 300, y: 100}": اوپر دائیں
-            "{x: 100, y: 300}": نیچے بائیں
-            "{x: 300, y: 300}": سب سے نیچے دائیں
+            "{x: 100, y: 100}": بالائی بائیں
+            "{x: 300, y: 100}": بالائی دائیں
+            "{x: 100, y: 300}": ذیلی بائیں
+            "{x: 300, y: 300}": ذیلی دائیں
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": بےترتیب
       Dancelab_layoutSprites:
         text: لے آؤٹ {GROUP} بطور ایک {FORMAT}
@@ -353,10 +341,15 @@ ur:
           FORMAT:
             '"border"': بارڈر
             '"inner"': مربع کے اندر
+            '"diamond"': ہیرے
             '"circle"': دائرہ بنائیں
             '"grid"': گرڈ
+            '"top"': بالائی قطار
             '"row"': قطار
+            '"bottom"': زیریں قطار
+            '"left"': بایاں کالم
             '"column"': کالم
+            '"right"': دایاں کالم
             '"x"': متقاطع
             '"plus"': جمع کریں
             '"random"': بےترتیب
@@ -378,10 +371,10 @@ ur:
             "{x: 100, y: 200}": بائیں
             "{x: 300, y: 200}": درست
             "{x: 200, y: 200}": مرکز
-            "{x: 100, y: 100}": سب سے اوپر بائیں
-            "{x: 300, y: 100}": اوپر دائیں
-            "{x: 100, y: 300}": نیچے بائیں
-            "{x: 300, y: 300}": سب سے نیچے دائیں
+            "{x: 100, y: 100}": بالائی بائیں
+            "{x: 300, y: 100}": بالائی دائیں
+            "{x: 100, y: 300}": ذیلی بائیں
+            "{x: 300, y: 300}": ذیلی دائیں
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSprite:
         text: ایک نیا {COSTUME} {NAME} کہلانے والا {LOCATION} پر بنائیں
@@ -402,10 +395,10 @@ ur:
             "{x: 100, y: 200}": بائیں
             "{x: 300, y: 200}": درست
             "{x: 200, y: 200}": مرکز
-            "{x: 100, y: 100}": سب سے اوپر بائیں
-            "{x: 300, y: 100}": اوپر دائیں
-            "{x: 100, y: 300}": نیچے بائیں
-            "{x: 300, y: 300}": سب سے نیچے دائیں
+            "{x: 100, y: 100}": بالائی بائیں
+            "{x: 300, y: 100}": بالائی دائیں
+            "{x: 100, y: 300}": ذیلی بائیں
+            "{x: 300, y: 300}": ذیلی دائیں
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": بےترتیب
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
@@ -507,9 +500,7 @@ ur:
             '"vintage"': ونٹیج
             '"warm"': گرم
       Dancelab_setBackgroundEffectWithPalette:
-        text: |-
-          پس منظر کا اثر مقرر کریں
-          {PALETTE} {EFFECT}
+        text: "پس منظر اثر \n{PALETTE} {EFFECT} سیٹ کریں"
         options:
           EFFECT:
             '"none"': کوئی نہيں
@@ -892,7 +883,7 @@ ur:
             '"left"': بائیں
             '"down"': نیچے
             '"right"': درست
-            '"space"': خلا
+            '"space"': جگہ
             '"enter"': داخل کریں
             '"a"': a
             '"b"': b
@@ -945,6 +936,10 @@ ur:
         text: سکرائٹ {SPRITE} شروع ہوتا ہے {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': سیکنڈز
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} کو بذریعہ {VAL} تبدیل کریں"
         options:
@@ -985,8 +980,46 @@ ur:
         options:
           CHOICE:
             '"this"': یہ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': سیکنڈز
       gamelab_hideTitleScreen:
         text: عنوان کی سکرین چھپائیں
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': اوپر
+            '"down"': نیچے
+            '"left"': بائیں
+            '"right"': درست
+            '"space"': خلاء
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': وائے
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} چھونے کناروں ہے"
       gamelab_jumpTo:
@@ -1031,6 +1064,13 @@ ur:
             '"z"': z
       gamelab_locationAt:
         text: 'مقام ایکس: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': مشرق
+            '"South"': جنوب
+            '"West"': مغرب
       gamelab_locationMouse:
         text: ماؤس کا مقام
       gamelab_locationOf:
@@ -1059,6 +1099,8 @@ ur:
             '"West"': مغرب
       gamelab_moveToward:
         text: اقدام {SPRITE} پکسلز {DISTANCE} کی طرف {TARGET}
+      gamelab_objectSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_playSound:
         text: پلے آواز {SOUND}
       gamelab_pointInDirection:
@@ -1103,6 +1145,8 @@ ur:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': پانی کے اندر
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': سردیاں
             undefined: کوئی نہیں
+      gamelab_setBackgroundImageAs:
+        text: پس منظر کو {IMG} پر سیٹ کریں
       gamelab_setProp:
         text: سیٹ {SPRITE} {PROPERTY} کرنے {VAL}
         options:
@@ -1134,6 +1178,8 @@ ur:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
+      gamelab_subjectSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_turn:
         text: باری {SPRITE} {DIRECTION} {N} ڈگری
         options:
@@ -1217,10 +1263,10 @@ ur:
             "{x: 100, y: 200}": بائیں
             "{x: 300, y: 200}": درست
             "{x: 200, y: 200}": مرکز
-            "{x: 100, y: 100}": سب سے اوپر بائیں
-            "{x: 300, y: 100}": اوپر دائیں
-            "{x: 100, y: 300}": نیچے بائیں
-            "{x: 300, y: 300}": سب سے نیچے دائیں
+            "{x: 100, y: 100}": بالائی بائیں
+            "{x: 300, y: 100}": بالائی دائیں
+            "{x: 100, y: 300}": ذیلی بائیں
+            "{x: 300, y: 300}": ذیلی دائیں
       Mikelab_getNext:
         text: اگلا اعتراض حاصل کریں
       Mikelab_getProp:
@@ -1252,10 +1298,10 @@ ur:
             "{x: 100, y: 200}": بائیں
             "{x: 300, y: 200}": درست
             "{x: 200, y: 200}": مرکز
-            "{x: 100, y: 100}": سب سے اوپر بائیں
-            "{x: 300, y: 100}": اوپر دائیں
-            "{x: 100, y: 300}": نیچے بائیں
-            "{x: 300, y: 300}": سب سے نیچے دائیں
+            "{x: 100, y: 100}": بالائی بائیں
+            "{x: 300, y: 100}": بالائی دائیں
+            "{x: 100, y: 300}": ذیلی بائیں
+            "{x: 300, y: 300}": ذیلی دائیں
       Mikelab_groupDestroy:
         text: ہٹائیں {SELECT} {COSTUME}
         options:
@@ -1399,10 +1445,10 @@ ur:
             "{x: 100, y: 200}": بائیں
             "{x: 300, y: 200}": درست
             "{x: 200, y: 200}": مرکز
-            "{x: 100, y: 100}": سب سے اوپر بائیں
-            "{x: 300, y: 100}": اوپر دائیں
-            "{x: 100, y: 300}": نیچے بائیں
-            "{x: 300, y: 300}": سب سے نیچے دائیں
+            "{x: 100, y: 100}": بالائی بائیں
+            "{x: 300, y: 100}": بالائی دائیں
+            "{x: 100, y: 300}": ذیلی بائیں
+            "{x: 300, y: 300}": ذیلی دائیں
       Mikelab_whenClickedOn:
         text: جب {SPRITE} کلک کیا
       Mikelab_whenKeyPressed:
@@ -1478,6 +1524,14 @@ ur:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: بڑھائیں {SPRITE} {DISTANCE} پکسلز {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': مشرق
+            '"South"': جنوب
+            '"West"': مغرب
       aalab_prompt:
         text: سوال پوچھیں {MESSAGE}
       aalab_scene:
@@ -1489,8 +1543,10 @@ ur:
             '3': '3'
       aalab_setupStory:
         text: سیٹ اپ کہانی
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
+        options:
+          OPTION:
+            '"random"': بےترتیب
       binary_drawBin:
         text: بائنری ڈراؤ {BIN}
       binary_drawBinScreen:
@@ -1585,7 +1641,6 @@ ur:
             '"stoneBricks"': پتھر اینٹوں
             '"mossyStoneBricks"': موسی پتھر اینٹوں
             '"crackedStoneBricks"': پھٹے پتھر اینٹوں
-            '"decorativeStoneBricks"': آرائشی پتھر اینٹوں
             '"blueCoralBlock"': نیلے رنگ کے مرجان بلاک
             '"pinkCoralBlock"': گلابی مرجان بلاک
             '"magentaCoralBlock"': میجنٹا مرجان بلاک
@@ -1609,8 +1664,6 @@ ur:
         text: جگہ بنیادی
       craft_placeTorch:
         text: مشعل یہاں رکہیں
-      craft_repeatUntilConduit:
-        text: "[STATEMENT]12321[0] تک دوبارہ کریں"
       craft_repeatUntilGoal:
         text: |-
           مقصد

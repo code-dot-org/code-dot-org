@@ -1,0 +1,81 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:05.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setText": null,
+      "declareAssign_x": null,
+      "assign_x": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "start_blocks": "var count = 0;\r\nsetText(\"countDisplayLabel\", count);\r\nonEvent(\"upButton\", \"click\", function() {\r\n  count = count + 1;\r\n  setText(\"countDisplayLabel\", count);\r\n});\r\nonEvent(\"downButton\", \"click\", function() {\r\n  setText(\"countDisplayLabel\", \"Down\");\r\n});",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" class=\"appModern\" style=\"width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"gamePlayScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 45px; overflow: hidden; word-wrap: break-word; color: rgb(0, 0, 0); max-width: 320px; width: 273px; height: 50px; position: absolute; left: 25px; top: 10px;\" id=\"label1\">Let's Count!</label>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(0, 173, 188); max-width: 320px; width: 191px; height: 111px; position: absolute; left: 120px; top: 100px; font-size: 50px;\" id=\"countDisplayLabel\">?</label>\r\n    <button id=\"upButton\" style=\"padding: 0px; margin: 0px; height: 100px; width: 75px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 215px; background-image: url(https://images.code.org/1d7b0f843677ac68a8ad46b58bdc052a-image-1446046094428.jpg); background-color: rgb(255, 255, 255); background-size: 75px 100px;\" data-canonical-image-url=\"https://images.code.org/1d7b0f843677ac68a8ad46b58bdc052a-image-1446046094428.jpg\"/>\r\n    <button id=\"downButton\" data-canonical-image-url=\"https://images.code.org/f1955f27e2cec1d2b35d98888d299ec5-image-1446046090004.jpg\" style=\"padding: 0px; margin: 0px; width: 75px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 175px; top: 220px; height: 100px; background-image: url(https://images.code.org/f1955f27e2cec1d2b35d98888d299ec5-image-1446046090004.jpg); background-color: rgb(255, 255, 255); background-size: 75px 100px;\"/>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 143px; height: 18px; position: absolute; left: 85px; top: 355px;\" id=\"label6\">Click on the arrows!</label>\r\n  </div>\r\n</div>",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "slider_speed": "1.0",
+    "execute_palette_apis_only": "false",
+    "lock_zero_param_functions": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 17154,
+    "name_suffix": "_virtual",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "short_instructions": "Look at the code for this app and see how the code works to update the count variable when the up arrow is clicked. (Click to see full instructions).",
+    "long_instructions": "# Using Variables in Apps!\r\n<img src=\"https://images.code.org/f156f8d8524c3c0316e4db394e331bdc-image-1446060829590.gif\" style=\"float: right; width: 200px;\">\r\n\r\nLet's build the app you just saw in pieces.  Right now, what the app should do is  shown in the animation to the right.\r\n\r\nOver the next few levels you are going to do a small investigation of two apps that do almost the same thing but *one  works as expected* and *one with a bug* that demonstrates an important concept about using variables in apps.\r\n\r\n# Do This: Misconception Investigation\r\n\r\n**Run this app, which works as expected already.**\r\n   * Study the code until you think you understand what's happening.\r\n   * Pay attention to the code that handles the up arrow being clicked.\r\n   * Click Finish when you are ready. The next version of this you will see has a new bug.\r\n",
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "widget_mode": "false",
+    "libraries_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-11 00:44:42 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:27:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-08 20:48:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-08 20:50:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

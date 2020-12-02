@@ -1,0 +1,62 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2020-05-12T23:32:05.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "embed": "false",
+    "long_instructions": "# Plane Jumper\r\n\r\nHere's another example of a platform jumper, but it has a few more features.  You can use it to get ideas to improve your own game.  For example, there is a coin sprite that gives the player an extra life.\r\n\r\nChoose one or more of the following changes and add them to your game.\r\n* Choose new animations for your player, platform, and items.\r\n* Make it impossible for your player to go off the left or right of the screen.\r\n* Add a different type of item for the player to collect or avoid.\r\n* Add a variable that keeps track of how many lives the player has, and end the game if the player runs out.\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"00ed4000-8dc9-499a-bf27-6cd3387296c0\",\r\n    \"4fac0434-4c7f-4477-907b-c753943a81e1\",\r\n    \"5b7e6459-a8c9-440f-927c-72220aa9f62b\",\r\n    \"2df75dc1-653c-4adc-9259-1f21c4c7e73e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"00ed4000-8dc9-499a-bf27-6cd3387296c0\": {\r\n      \"name\": \"platform\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fv3%252Fanimations%252FB32pHW9dbPe_sWx51DwcBg%252F00ed4000-8dc9-499a-bf27-6cd3387296c0.png%253Fversion%253D9KxPSvZQ17yyvXbq6WFdxNWbgr8lnPOU\",\r\n      \"frameSize\": {\r\n        \"x\": 150,\r\n        \"y\": 20\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"9KxPSvZQ17yyvXbq6WFdxNWbgr8lnPOU\"\r\n    },\r\n    \"4fac0434-4c7f-4477-907b-c753943a81e1\": {\r\n      \"name\": \"redPlane\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fv3%252Fanimations%252FB32pHW9dbPe_sWx51DwcBg%252F4fac0434-4c7f-4477-907b-c753943a81e1.png%253Fversion%253DrMiitpaU_MsCEdlsjI0p0s7hEqu_UGO4\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 73\r\n      },\r\n      \"frameCount\": 4,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"rMiitpaU_MsCEdlsjI0p0s7hEqu_UGO4\"\r\n    },\r\n    \"5b7e6459-a8c9-440f-927c-72220aa9f62b\": {\r\n      \"name\": \"cloud\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fv3%252Fanimations%252FB32pHW9dbPe_sWx51DwcBg%252F5b7e6459-a8c9-440f-927c-72220aa9f62b.png\",\r\n      \"frameSize\": {\r\n        \"x\": 42,\r\n        \"y\": 35\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"F0OXed1.PUTXxeOFAePHacCV4bLdzc5Z\"\r\n    },\r\n    \"2df75dc1-653c-4adc-9259-1f21c4c7e73e\": {\r\n      \"name\": \"medal\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Flevelbuilder-studio.code.org%252Fv3%252Fanimations%252FB32pHW9dbPe_sWx51DwcBg%252F2df75dc1-653c-4adc-9259-1f21c4c7e73e.png%253Fversion%253DM3UBHrq57sk6HOZ6GTFRC0squk7a0VSr\",\r\n      \"frameSize\": {\r\n        \"x\": 40,\r\n        \"y\": 42\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"M3UBHrq57sk6HOZ6GTFRC0squk7a0VSr\"\r\n    }\r\n  }\r\n}",
+    "start_blocks": "var score = 0;\r\nvar lives = 3;\r\nvar player = createSprite(200, -50);\r\nplayer.setAnimation(\"redPlane\");\r\nvar platform1 = createSprite(300, 95);\r\nplatform1.setAnimation(\"platform\");\r\nplatform1.velocityY = 1;\r\nvar platform2 = createSprite(100, 200);\r\nplatform2.setAnimation(\"platform\");\r\nplatform2.velocityY = 1;\r\nvar platform3 = createSprite(100, 305);\r\nplatform3.setAnimation(\"platform\");\r\nplatform3.velocityY = 1;\r\nvar platform4 = createSprite(100, 410);\r\nplatform4.setAnimation(\"platform\");\r\nplatform4.velocityY = 1;\r\nvar item1 = createSprite(randomNumber(50,350), randomNumber(-10, -310));\r\nitem1.setAnimation(\"cloud\");\r\nitem1.velocityY = 5;\r\nvar item2 = createSprite(randomNumber(50,350), randomNumber(-10, -310));\r\nitem2.setAnimation(\"cloud\");\r\nitem2.velocityY = 5;\r\nvar bonus = createSprite(randomNumber(50,350), randomNumber(-10, -1000));\r\nbonus.setAnimation(\"medal\");\r\nbonus.velocityY = 5;\r\nbonus.rotationSpeed = 10;\r\nfunction draw() {\r\n  if (score < 25) {\r\n    background1();\r\n  } else {\r\n    background2();\r\n  }\r\n  loopPlatforms();\r\n  loopItems();\r\n  controlPlayer();\r\n  playerFall();\r\n  catchItems();\r\n  showScore();\r\n  drawSprites();\r\n}\r\nfunction background1() {\r\n  background(\"skyblue\");\r\n  noStroke();\r\n  fill(\"yellow\");\r\n  ellipse(320, 80, 70,70);\r\n}\r\nfunction background2() {\r\n  background(\"salmon\");\r\n  noStroke();\r\n  fill(\"black\");\r\n  ellipse(random(0,400), random(0,400), 3,3);\r\n  ellipse(random(0,400), random(0,400), 3,3);\r\n}\r\nfunction loopPlatforms() {\r\n  if (platform1.y > 410) {\r\n    platform1.y = -10;\r\n    platform1.x = randomNumber(50,350);\r\n  }\r\n  if (platform2.y > 410) {\r\n    platform2.y = -10;\r\n    platform2.x = randomNumber(50,350);\r\n  }\r\n  if (platform3.y > 410) {\r\n    platform3.y = -10;\r\n    platform3.x = randomNumber(50,350);\r\n  }\r\n  \r\n  if (platform4.y > 410) {\r\n    platform4.y = -10;\r\n    platform4.x = randomNumber(50,350);\r\n  }\r\n}\r\nfunction loopItems() {\r\n  if (item1.y > 415) {\r\n    item1.y = randomNumber(-60,-30);\r\n    item1.x = randomNumber(50,350);\r\n  }  \r\n  if (item2.y > 415) {\r\n    item2.y = randomNumber(-60,-30);\r\n    item2.x = randomNumber(50,350);\r\n  }\r\n  if (bonus.y > 415) {\r\n    bonus.y = randomNumber(-1000,-30);\r\n    bonus.x = randomNumber(50,350);\r\n  }\r\n}\r\nfunction controlPlayer() {\r\n  if (keyDown(\"left\") && player.x > 30) {\r\n    player.x = player.x - 5;\r\n  }\r\n  if (keyDown(\"right\") && player.x < 370) {\r\n    player.x = player.x + 5;\r\n  }\r\n  if (keyWentDown(\"up\") && player.y > 0) {\r\n    player.velocityY = -4;\r\n  }\r\n  if (keyWentDown(\"space\") && player.y > 0) {\r\n    player.velocityY = -4;\r\n  }\r\n}\r\nfunction playerFall() {\r\n  player.velocityY = player.velocityY + 0.2;\r\n  player.collide(platform1);\r\n  player.collide(platform2);\r\n  player.collide(platform3);\r\n  player.collide(platform4);\r\n  if (player.y > 415) {\r\n    if (lives > 0) {\r\n      lives = lives - 1;\r\n      player.y = 20;\r\n      player.x = 200;\r\n      player.velocityY = 0;\r\n    } else {\r\n      fill(\"white\");\r\n      textSize(50);\r\n      text(\"GAME OVER\" , 40, 150, 380, 60);\r\n    }\r\n  }\r\n}\r\nfunction catchItems() {\r\n  if (player.isTouching(item1)) {\r\n    score = score + 1;\r\n    item1.y = randomNumber(-100,-30);\r\n    item1.x = randomNumber(50,350);\r\n  }\r\n  if (player.isTouching(item2)) {\r\n    score = score + 1;\r\n    item2.y = randomNumber(-100,-30);\r\n    item2.x = randomNumber(50,350);\r\n  }\r\n  if (player.isTouching(bonus)) {\r\n    lives = lives + 1;\r\n    bonus.y = randomNumber(-1000,-30);\r\n    bonus.x = randomNumber(50,350);\r\n  }\r\n}\r\nfunction showScore() {\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"Score: \", 10,10,50,20);\r\n  text(score, 80, 10, 30,20);\r\n  text(\"Lives: \", 250,10,50,20);\r\n  text(lives, 340, 10, 30,20);\r\n}",
+    "all_animations_single_frame": "false",
+    "instructions_important": "false",
+    "start_in_animation_tab": "false",
+    "show_debug_watch": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "display_name": "Plane Jumper",
+    "parent_level_id": 20915,
+    "name_suffix": "_2020",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "libraries_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-01 23:08:04 +0000\",\"changed\":[\"start_animations\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-01 23:09:07 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-01 23:10:34 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 17:25:57 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-12 23:32:20 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-12 23:33:07 +0000\",\"changed\":[\"embed\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

@@ -3,7 +3,7 @@ css 'unplugged'
 markdown <<MARKDOWN
 # Unit 4 Tool Talk
 
-Unit 4 is a plugged in unit, where students will primarily engage in research to first learn about the type of information that's made available online, and then they use educational discovery tools to explore how that data and information is secured. All lessons will require students to use their computers and they will benefit from logging on to Code Studio to access tools and resources. 
+Unit 4 is a plugged in unit, where students will primarily engage in research to first learn about the type of information that's made available online, and then they use educational discovery tools to explore how that data and information is secured. All lessons will require students to use their computers and they will benefit from logging on to Code Studio to access tools and resources.
 
 ## Videos in Unit 4
 There are several videos used throughout Unit 4 to introduce and give examples of key concepts related to data, security, and encryption. Specifically, you will find videos in the following lessons:
@@ -11,7 +11,7 @@ There are several videos used throughout Unit 4 to introduce and give examples o
 - **Lesson 1: What is Big Data?** | Ted Talk
 - **Lesson 2: Rapid Research - Data Innovations** | Concept Videos and Ted Talk
 - **Lesson 4: The Cost of Free** | Concept Video
-- **Lesson 7: Public Key Cryptography** | Concept Video 
+- **Lesson 7: Public Key Cryptography** | Concept Video
 
 ## External Tools and Resources in Unit 4
 Several lessons in this unit leverage external tools and resources to give students an introduction to Big Data, and how it can be used to identify people.
@@ -24,9 +24,9 @@ Several lessons in this unit leverage external tools and resources to give stude
 - **Lesson 7: Public Key Cryptography** | [Interactive Clock](http://www.visnos.com/demos/clock)
 
 ## Code Studio Tools in Unit 4
-Lessons 5 - 7 take students through a series of discovery lessons related to how digital information on the internet is protected and secured. These lessons rely heavily on educational widgets that are built into Code Studio. 
+Lessons 5 - 7 take students through a series of discovery lessons related to how digital information on the internet is protected and secured. These lessons rely heavily on educational widgets that are built into Code Studio.
 
-- **Lesson 5: Simple Encryption** | [Caesar Cipher Widget](https://studio.code.org/s/csp4/stage/5/puzzle/2) to crack a simple alphabetic shift cipher; [Frequency Analysis Widget](https://studio.code.org/s/csp4/stage/5/puzzle/5) to crack a random substitution cipher
-- **Lesson 6: Encryption with Keys and Passwords** | [Vigenere Cipher Widget](http://studio.code.org/s/csp4/stage/6/puzzle/2)
-- **Lesson 7: Public Key Cryptography** | [Modulo Clock](https://studio.code.org/s/csp4/stage/7/puzzle/4) to explore "clock" arithmetic; [Public Key Crypto Widget](https://studio.code.org/s/csp4/stage/7/puzzle/6) to explore how public key cryptography works
+- **Lesson 5: Simple Encryption** | [Caesar Cipher Widget](https://studio.code.org/s/csp4-2019/stage/5/puzzle/2) to crack a simple alphabetic shift cipher; [Frequency Analysis Widget](https://studio.code.org/s/csp4-2019/stage/5/puzzle/5) to crack a random substitution cipher
+- **Lesson 6: Encryption with Keys and Passwords** | [Vigenere Cipher Widget](http://studio.code.org/s/csp4-2019/stage/6/puzzle/2)
+- **Lesson 7: Public Key Cryptography** | [Modulo Clock](https://studio.code.org/s/csp4-2019/stage/7/puzzle/4) to explore "clock" arithmetic; [Public Key Crypto Widget](https://studio.code.org/s/csp4-2019/stage/7/puzzle/6) to explore how public key cryptography works
 MARKDOWN

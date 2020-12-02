@@ -1,0 +1,97 @@
+{
+  "ko-KR": {
+    "data": {
+      "placeholder_texts": {
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "감사합니다!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "이겼습니다!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "파랑",
+          "f59f10539890569d3b1deb0e4352ab84": "오늘 저는 ....을 입고 있습니다. ",
+          "810f7026db2f96c4e654f4664e44be04": "저지!"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "빨강",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "상당히  ",
+          "c30c9d9f51c03a6d42d66cea54206abd": " 오늘, 그렇지 않아요?",
+          "b92274a5b4513e80f4bd6a8136581578": "그것은 가장 이상한 ~의 그림자 ",
+          "f54929e86cc7510907895070d8b05979": " 전에 보았던!"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "이겼습니다!",
+          "498cd895eb5a102c5aeb977e2b928dee": "감사합니다!"
+        },
+        "Find the Wizard": {
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "셋 까지 세면 나는 사라집니다! 나를 찾기 위해 1부터 400까지 중 한 숫자를 추측하세요!"
+        },
+        "Choose Your Own Adventure": {
+          "c332bf82ea63d21d1d1b701a07ab9afd": "도와주셔서 감사하지만 이제 가야 합니다.",
+          "ba57bb6df12b81e80f79eef5b1ca8fc7": "여기요, 지팡이를 찾았어요!",
+          "c7323ea29d98d5cad8e0828f3f52ef0c": "안돼요! 그건 마녀의 지팡이예요!",
+          "2cef5d66c57efe3994c85f4e1f312849": "아 하! 두 개의 지팡이를 찾았어요! 도와주셨기 때문이에요. 두 번째 것을 가지세요!\t",
+          "24a124016e7eec7a8fef5bc228541533": "아, 걱정하지 말아요! 찾을 수 있을거라 확신해요",
+          "fe724bc07d1e8b57e53ebfd03c0ec4f5": "아, 걱정하지 말아요! 찾을 수 있을거라 확신해요.",
+          "9360086c2f9d62ba563c6fcbfbd9b402": "지금 찾으러 갈께요! 안녕!",
+          "6d411b45e39818da535ba9f8a2cf58e2": "나를 마녀로 변하게 만들었어요!",
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "이 지팡이의 주인을 정말 찾았어요!"
+        },
+        "courseF_playlab_variables1a": {
+          "ea904c9d18bd602705f598372988aaa8": "뭐라고 외쳐야 하나요?",
+          "97a97de7add5e8dcd9f70a407d56968e": "목표!"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "88789b154a4ffbbd84108b0c80f8c464": "브라이언, 몇 살이예요?",
+          "662722f1029078dad7a3683c64d8b922": "와! 나는 ",
+          "ae096fbf24d913754b01a1601672bf62": " 마찬 가지예요!"
+        },
+        "courseF_playlab_variables4b": {
+          "2e1749915d40abd8f43fc2b9dd13649c": "기쁩니다,",
+          "ecb2903fb054395baf72ea1da127be32": "상당히 키가 큽니다 ",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " 세, "
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "d065635d5fffcb3739555ae93006081c": "만나서 반가워요, "
+        },
+        "courseF_playlab_variables8c": {
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "축하합니다, ",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", 색상에 대해 생각하고 있었어요 ",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "미안해요, ",
+          "8622f69e8cf70458a82fc22d8e46372f": ", 색상에 대해 생각하고 있지 않았어요 "
+        },
+        "FoodFight": {
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "점수 ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "레벨 "
+        },
+        "Guess The Number": {
+          "015c8ae47c8964d793ddc123b7ba6b81": "그렇게 어린 사람은 살고 있지 않아요.",
+          "56582da5c99c1bb46ab5dcda003f8c27": "너무 어린.",
+          "781b7711244d030e4ed6e1bfa883364e": "저는 아직 20살이 안됐어요!",
+          "01bab55de9d3319f27c5213b4661c79f": "그렇게 늙지 않았어요!",
+          "5c95950acb6c51d88cc8869eb31f2bdf": "알았어요!",
+          "214e809e9d24f40cc42fa2f04f59a1cf": "내가 이 펭귄을 먹어 치우기 전에 내가 몇 살인지 추측해 보세요!"
+        }
+      }
+    }
+  }
+}

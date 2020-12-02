@@ -142,6 +142,9 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    if endpoint == 'libraries'
+      dont_cache
+    end
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -320,7 +323,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
-    # verify that file type is in our whitelist, and that the user-specified
+    # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
@@ -333,6 +336,9 @@ class FilesApi < Sinatra::Base
       quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     end
+
+    # Block libraries with PII/profanity from being published.
+    return bad_request if endpoint == 'libraries' && ShareFiltering.find_failure(body, request.locale)
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.
@@ -375,7 +381,7 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
-    # verify that file type is in our whitelist, and that the user-specified
+    # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
@@ -592,6 +598,10 @@ class FilesApi < Sinatra::Base
   # manifest.
   #
   def files_put_file(encrypted_channel_id, filename, body)
+    # Rename .jfif file extensions to .jpg because Sinatra does not support .jfif file types.
+    # .jfif files use the same protocol as .jpg files, which is why rename-only is sufficient.
+    filename.gsub!(/(.jfif|.JFIF)/, '.jpg') if File.extname(filename.downcase) == '.jfif'
+
     unescaped_filename = CGI.unescape(filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
@@ -881,13 +891,23 @@ class FilesApi < Sinatra::Base
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
         rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-        if %i(adult racy).include? rating
+
+        case rating
+        when :adult, :racy
           # Incrementing abuse score by 15 to differentiate from manually reported projects
           new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
           FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
           response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
           not_found
+          return
+        when :unknown
+          # Content moderation was unable to scan the image, usually because we've exceeded
+          # the moderation service's request limit.  Return the default image for now and
+          # cache for 1-2 minutes to spread out future requests to the moderation service.
+          cache_for rand(60..120).seconds
+          send_file apps_dir('/static/projects/project_default.png'), type: 'image/png'
+          return
         end
       end
     end

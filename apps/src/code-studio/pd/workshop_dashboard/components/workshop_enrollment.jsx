@@ -8,6 +8,7 @@ import {Tabs, Tab} from 'react-bootstrap';
 import {enrollmentShape} from '../types';
 import WorkshopEnrollmentSchoolInfo from './workshop_enrollment_school_info';
 import WorkshopEnrollmentPreSurvey from './workshop_enrollment_pre_survey';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
@@ -30,8 +31,10 @@ export default class WorkshopEnrollment extends React.Component {
   static defaultProps = {activeTab: 0};
 
   shouldShowPreSurveys() {
-    return ['CS Discoveries', 'CS Principles'].includes(
-      this.props.workshopCourse
+    return (
+      ['CS Discoveries', 'CS Principles'].includes(this.props.workshopCourse) &&
+      this.props.workshopSubject !==
+        SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS
     );
   }
 
@@ -40,7 +43,7 @@ export default class WorkshopEnrollment extends React.Component {
       const signupUrl =
         location.origin + '/pd/workshops/' + this.props.workshopId + '/enroll';
       const signupLink = (
-        <a href={signupUrl} target="_blank">
+        <a href={signupUrl} target="_blank" rel="noopener noreferrer">
           {signupUrl}
         </a>
       );

@@ -88,9 +88,6 @@ ro:
             MOVES.Kick: Stea
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} fă {MOVE} {DIR} tot mereu"
         options:
@@ -109,9 +106,6 @@ ro:
             MOVES.Kick: Stea
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: schimbă {SPRITE} {PROPERTY} cu {VAL}
         options:
@@ -188,9 +182,6 @@ ro:
             MOVES.XArmsUp: Mâini sus
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} fă {MOVE} {DIR} o dată"
         options:
@@ -219,9 +210,6 @@ ro:
             MOVES.XArmsUp: Mâini sus
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'repetă fiecare {N} măsuri după {START} '
       Dancelab_everySeconds:
@@ -357,10 +345,15 @@ ro:
           FORMAT:
             '"border"': margine
             '"inner"': pătrat interior
+            '"diamond"': diamant
             '"circle"': cerc
             '"grid"': rețea
+            '"top"': rândul de sus
             '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
             '"column"': coloană
+            '"right"': coloana dreaptă
             '"x"': încrucişat
             '"plus"': plus
             '"random"': aleator
@@ -968,6 +961,10 @@ ro:
         text: sprite {SPRITE} începe {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
       gamelab_changePropBy:
         text: schimbă {SPRITE} {PROPERTY} cu {VAL}
         options:
@@ -1012,8 +1009,46 @@ ro:
         options:
           CHOICE:
             '"this"': acest
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': secunde
       gamelab_hideTitleScreen:
         text: ascend ecranul cu titlu
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} atinge marginile"
       gamelab_jumpTo:
@@ -1058,6 +1093,13 @@ ro:
             '"z"': z
       gamelab_locationAt:
         text: 'locaţie x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       gamelab_locationMouse:
         text: locația mouse-ului
       gamelab_locationOf:
@@ -1086,6 +1128,8 @@ ro:
             '"West"': Vest
       gamelab_moveToward:
         text: mută {SPRITE} pixeli {DISTANCE} spre {TARGET}
+      gamelab_objectSpritePointer:
+        text: a făcut clic pe {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1110,6 +1154,8 @@ ro:
         text: obiectul {SPRITE} opreşte {BEHAVIOR}
       gamelab_removeTint:
         text: elimină culoarea din {THIS}
+      gamelab_repeatForever:
+        text: repetă pentru totdeauna
       gamelab_setAnimation:
         text: schimbă costumul {THIS} cu {ANIMATION}
       gamelab_setBackground:
@@ -1130,6 +1176,8 @@ ro:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': subacvatic
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': iarna
             undefined: nici unul
+      gamelab_setBackgroundImageAs:
+        text: setează fundalul cu {IMG}
       gamelab_setProp:
         text: setează {SPRITE} {PROPERTY} la {VAL}
         options:
@@ -1163,6 +1211,8 @@ ro:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
+      gamelab_subjectSpritePointer:
+        text: a făcut clic pe {SPRITE}
       gamelab_turn:
         text: întoarce {SPRITE} {DIRECTION} {N} grade
         options:
@@ -1547,6 +1597,14 @@ ro:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: mută {SPRITE} {DISTANCE} pixeli {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       aalab_prompt:
         text: întreabă {MESSAGE}
       aalab_scene:
@@ -1558,12 +1616,10 @@ ro:
             '3': '3'
       aalab_setupStory:
         text: poveste de configurare
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': arată
-            '"hide"': ascunde
+            '"random"': aleator
       binary_drawBin:
         text: trage binar {BIN}
       binary_drawDec:
@@ -1647,7 +1703,6 @@ ro:
             '"stoneBricks"': cărămizi de piatră
             '"mossyStoneBricks"': cărămizi de piatră cu muşchi
             '"crackedStoneBricks"': cărămizi de piatra crăpate
-            '"decorativeStoneBricks"': cărămizi decorative
             '"blueCoralBlock"': bloc de coral albastru
             '"pinkCoralBlock"': bloc de coral roz
             '"magentaCoralBlock"': bloc de coral maro

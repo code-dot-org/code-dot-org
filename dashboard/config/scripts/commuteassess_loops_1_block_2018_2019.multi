@@ -1,4 +1,5 @@
 name 'CommuteAssess - loops 1 - block_2018_2019'
+editor_experiment ''
 question 'How many times will the word “here” be displayed when this code is run?'
 wrong '3'
 wrong '6'
@@ -15,17 +16,13 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 There are a lot of ways to reason about this code.  Here is an annotated version of the code showing how many times each `DISPLAY "here"` statement runs.
 
-```
-REPEAT 2 TIMES
-{
-   DISPLAY "here"    <-- runs twice  (2 "here"s)
-   REPEAT 3 TIMES
-   {
-      DISPLAY "here" <-- runs 3x2 = 6 times (+6 "here"s)
-   }
-   DISPLAY "here"    <-- runs twice  (+2 "here"s)
-}
-```
-
-
+	REPEAT 2 TIMES
+	{
+	   DISPLAY "here"    <-- runs twice  (2 "here"s)
+	   REPEAT 3 TIMES
+	   {
+	      DISPLAY "here" <-- runs 3x2 = 6 times (+6 "here"s)
+	   }
+	   DISPLAY "here"    <-- runs twice  (+2 "here"s)
+	}
 MARKDOWN

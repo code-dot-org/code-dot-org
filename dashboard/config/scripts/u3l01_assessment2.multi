@@ -1,7 +1,6 @@
 name 'U3L01 Assessment2'
 title 'Why Programming? Question 2'
-question 'Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. 
-Which of these is the LEAST basic action in making a sandwich for lunch?'
+question 'Complex actions can have easy-to-follow directions if the most basic actions are identified in simple-to-understand terms. Which of these is the LEAST basic action in making a sandwich for lunch?'
 wrong 'Place slices of bread face side up'
 wrong 'Spread 1 slice with peanut butter'
 wrong 'Spread 1 slice with jelly'

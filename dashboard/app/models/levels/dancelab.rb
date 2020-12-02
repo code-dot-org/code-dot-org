@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -56,12 +56,14 @@ class Dancelab < GamelabJr
   def common_blocks(type)
   end
 
+  # Used by levelbuilders to set a default song on a Dance Party level.
   def self.hoc_songs
-    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest2019.json')[:body].read
+    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest2020_v2.json')[:body].read
     manifest = JSON.parse(manifest_json)
     manifest['songs'].map do |song|
-      name = "#{song['text']}#{song['pg13'] ? ' (PG-13)' : ''}"
-      name = "#{song['2019'] ? '(2019) ' : ''}#{name}"
+      name = song['text']
+      name.prepend("(#{song['yearIntroduced']}) ") if song['yearIntroduced']
+      name.concat(" (PG-13)") if song['pg13']
       [name, song['id']]
     end
   end

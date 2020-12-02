@@ -84,6 +84,7 @@ export default class StartNewProject extends React.Component {
 
         {canViewFullList && (
           <Button
+            __useDeprecatedTag
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
             color={Button.ButtonColor.gray}

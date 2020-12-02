@@ -1,0 +1,18 @@
+name 'Mar20 Part1_1'
+editor_experiment ''
+title 'Overview of the AP Changes and the Curriculum'
+description 'description here'
+
+markdown <<MARKDOWN
+#Get familiar with the Traversals EIPM
+
+##**Goals:**
++ ###  To gain familiarity with the new Data Libraries in App Lab in Unit 5.  
++ ### To be able to see how content “unfolds” for learners in an EIPM sequence.  
++ ### To understand the difference between the Explore, Investigate, and Practice lesson types.  
+
+##**Context for this set of lessons:**
++ ### This is the 5th EIPM sequence students will experience in this course.
++ ### Prior to this, students have learned about variables, conditionals, functions, lists and the basics of for and while loops.  
+    >### **Note:** If you want to see more about what students will be able to do with for loops before this lesson, review U5L7 levels 5 - 9 
+MARKDOWN

@@ -1,0 +1,1127 @@
+{
+ "published": true,
+ "pages": [
+  {
+   "name": "preamable_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "variables_for_testing",
+     "visible": false,
+     "titleLocation": "hidden",
+     "html": "<h2 style=\"background-color: #ffff00\"> Variable Test</h2>\n<ul>\n<li><span style=\"background-color: #ffff00;\">workshop_course: {workshop_course}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshop_subject: {workshop_subject}</span></li>\n<li><span style=\"background-color: #ffff00;\">regional_partner_name: {regional_partner_name}</span></li>\n<li><span style=\"background-color: #ffff00;\">is_virtual: {is_virtual}</span></li>\n<li><span style=\"background-color: #ffff00;\">is_friday_institute: {is_friday_institute}</span></li>\n</ul>"
+    },
+    {
+     "type": "html",
+     "name": "preamble_header_and_text",
+     "html": "<h2>{workshop_course} Summer Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed the Code.org {workshop_course} Summer workshop!</strong></p>\n<p>This survey asks questions about your experience today and the workshop as a whole.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about <strong>10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+    }
+   ]
+  },
+  {
+   "name": "workshop_experience_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "workshop_experience_header",
+     "html": "<p><strong><span style=\"font-size: 14pt;\">Your {workshop_course} Workshop Experience</span></strong></p>"
+    },
+    {
+     "type": "matrix",
+     "name": "overall_success",
+     "title": "How much do you agree or disagree with the following statements about the workshop overall?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly Agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly Agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "more_prepared",
+       "text": "I feel more prepared to teach the material covered in this workshop than before I came."
+      },
+      {
+       "value": "know_where_to_get_help",
+       "text": "I know where to go if I need help preparing to teach this material."
+      },
+      {
+       "value": "suitable_for_my_level",
+       "text": "This professional development was suitable for my level of experience with teaching CS."
+      },
+      {
+       "value": "connected_to_community",
+       "text": "I feel connected to a community of computer science teachers."
+      },
+      {
+       "value": "recommend_to_others",
+       "text": "I would recommend this professional development to others."
+      },
+      {
+       "value": "absolute_best",
+       "text": "This was the absolute best professional development I have ever participated in."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "teacher_engagement",
+     "title": "How much do you agree or disagree with the following statements about your level of engagement in the workshop?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly Agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly Agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "activities_engaging",
+       "text": "I found the activities we did in this workshop interesting and engaging."
+      },
+      {
+       "value": "highly_active",
+       "text": "I was highly active and participated a lot in the workshop activities."
+      },
+      {
+       "value": "talk_about_workshop",
+       "text": "When I'm not in Code.org workshops, I frequently talk about ideas or content from the workshop with others."
+      },
+      {
+       "value": "will_use_in_classroom",
+       "text": "I am definitely planning to make use of ideas and content covered in this workshop in my classroom."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "curriculum_impressions",
+     "title": "Please rate the extent to which you agree or disagree with the following about the {workshop_course} curriculum?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly Agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly Agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "love_curriculum",
+       "text": "I am going to love teaching with this curriculum."
+      },
+      {
+       "value": "effective_for_students",
+       "text": "This curriculum is going to be effective for my students."
+      },
+      {
+       "value": "strategies_are_clear",
+       "text": "The teaching strategies recommended in the curriculum and lesson plans are clear to me."
+      },
+      {
+       "value": "learned_strategies",
+       "text": "I learned teaching strategies in this workshop that I plan to use in my classroom."
+      },
+      {
+       "value": "tools_sensible_easy",
+       "text": "The tools and technologies that are part of the curriculum make sense and are easy to use."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "name": "friday_institute_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question3",
+       "visible": false,
+       "html": "<p><span style=\"background-color: #ffff00;\"> &gt;&gt; FRIDAY-INSTITUTE-SPECIFIC&lt;&lt;</span></p>"
+      },
+      {
+       "type": "radiogroup",
+       "name": "friday_institute_which_tool",
+       "title": "Which video conferencing tool was primarily used for the synchronous (live meeting) portions of the workshop?",
+       "choices": [
+        {
+         "value": "hangouts",
+         "text": "Google Hangouts"
+        },
+        {
+         "value": "zoom",
+         "text": "Zoom"
+        },
+        {
+         "value": "teams",
+         "text": "Microsoft Teams"
+        },
+        {
+         "value": "goto_meeting",
+         "text": "GoToMeeting"
+        },
+        {
+         "value": "skype",
+         "text": "Skype"
+        },
+        {
+         "value": "dont_know",
+         "text": "Don't Know/Unsure"
+        }
+       ],
+       "hasOther": true,
+       "otherText": "Other"
+      },
+      {
+       "type": "matrix",
+       "name": "friday_institute_sync_tools",
+       "title": "Thinking about the video conferencing portions of the workshop, how much do you agree with the following?",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "smoothly_for_all",
+         "text": "Overall the video conferencing technology seemed to work smoothly for all participants."
+        },
+        {
+         "value": "personal_tech_adequate",
+         "text": "My personal technology infrastructure - internet connection, bandwidth, screen size, software - was adequate for participating in the workshop."
+        },
+        {
+         "value": "video_conf_engaging",
+         "text": "I found the video conferencing portions of the workshop highly engaging."
+        }
+       ]
+      },
+      {
+       "type": "matrix",
+       "name": "friday_institute_async_tools",
+       "title": "This workshop also included activities you completed away from the larger group made available through your workshop website in the Friday Institute's Professional Learning and Collaboration Environment (PLACE) ",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "moodle_worked_well_for_all",
+         "text": "Overall the PLACE site seemed to work well for all participants."
+        },
+        {
+         "value": "async_activities_engaging",
+         "text": "I found the activities I did on the PLACE site highly engaging."
+        },
+        {
+         "value": "moodle_organized_positive_exp",
+         "text": "The organization of the PLACE site made sense to me and made for a positive experience."
+        },
+        {
+         "value": "moodle_content_activities",
+         "text": "The content and activities on the PLACE site supported my professional learning and preparation to teach {workshop_course}"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{is_friday_institute} = 'true'"
+    },
+    {
+     "type": "panel",
+     "name": "In_person_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "inperson_panel_header",
+       "visible": false,
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IN-PERSON LOGISTICS AND TOOLS &lt;&lt;</span>"
+      },
+      {
+       "type": "matrix",
+       "name": "logistics_in_person",
+       "title": "To what extent are the following true about this workshop?",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Not at all"
+        },
+        {
+         "value": "2",
+         "text": "Somewhat"
+        },
+        {
+         "value": "3",
+         "text": "Mostly"
+        },
+        {
+         "value": "4",
+         "text": "To a great extent"
+        }
+       ],
+       "rows": [
+        {
+         "value": "clear_communication",
+         "text": "I received clear communication about when and where the workshop would take place."
+        },
+        {
+         "value": "venue_met_needs",
+         "text": "The workshop venue met my learning needs."
+        }
+       ]
+      },
+      {
+       "type": "comment",
+       "name": "venue_and_logistics_FR",
+       "title": "Do you have feedback about the venue and the way logistics were run for the workshop this week? Please be specific and provide suggestions for improvement.",
+       "cols": 60,
+       "rows": 3
+      }
+     ],
+     "visibleIf": "{is_virtual} = 'false'"
+    },
+    {
+     "type": "panel",
+     "name": "virtual_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question11",
+       "visible": false,
+       "html": "<p><span style=\"background-color: #ffff00;\"> &gt;&gt; VIRTUAL-SPECIFIC&lt;&lt;</span></p>"
+      },
+      {
+       "type": "matrix",
+       "name": "logistics_virtual",
+       "title": "To what extent are the following true about participating in this virtual workshop?",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Not at all"
+        },
+        {
+         "value": "2",
+         "text": "Somewhat"
+        },
+        {
+         "value": "3",
+         "text": "Mostly"
+        },
+        {
+         "value": "4",
+         "text": "To a great extent"
+        }
+       ],
+       "rows": [
+        {
+         "value": "clear_communication",
+         "text": "I received clear communication about when the workshop would take place."
+        },
+        {
+         "value": "clear_communication_how_virtually_attend",
+         "text": "I received clear communication about how to virtually attend the workshop."
+        },
+        {
+         "value": "tools_met_needs",
+         "text": "The virtual meeting tool(s) met my learning needs."
+        },
+        {
+         "value": "adequate_internet_tech",
+         "text": "My internet connection and technology was adequate to fully participate."
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{is_virtual} = 'true'"
+    }
+   ]
+  },
+  {
+   "name": "teaching_cs_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "teaching_cs_header",
+     "html": "<h2>Teaching Computer Science: Community and Classroom</h2>"
+    },
+    {
+     "type": "matrix",
+     "name": "cs_community",
+     "title": "How much do you agree or disagree with the following statements about your computer science teaching community?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly Agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly Agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "someone_to_turn_to",
+       "text": "When I need help teaching computer science, I have someone to turn to."
+      },
+      {
+       "value": "know_teacher_leaders",
+       "text": "I know computer science teacher-leaders and role models in my community."
+      },
+      {
+       "value": "part_of_cs_movement",
+       "text": "I feel like I'm part of a broad computer science education movement."
+      },
+      {
+       "value": "see_rp_as_resource",
+       "text": "I see my Regional Partner as a resource and support for computer science education in my community."
+      },
+      {
+       "value": "excited_to_collaborate",
+       "text": "I am excited to collaborate with other computer science teachers in my community."
+      }
+     ]
+    },
+    {
+     "type": "matrix",
+     "name": "blind_spots_and_belonging",
+     "title": "Please rate the extent to which you agree or disagree with the following statements.",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Strongly Disagree"
+      },
+      {
+       "value": "2",
+       "text": "Disagree"
+      },
+      {
+       "value": "3",
+       "text": "Slightly Disagree"
+      },
+      {
+       "value": "4",
+       "text": "Neutral"
+      },
+      {
+       "value": "5",
+       "text": "Slightly Agree"
+      },
+      {
+       "value": "6",
+       "text": "Agree"
+      },
+      {
+       "value": "7",
+       "text": "Strongly Agree"
+      }
+     ],
+     "rows": [
+      {
+       "value": "biases_affect_interactions",
+       "text": "I have biases that affect my interactions with students."
+      },
+      {
+       "value": "students_have_biases",
+       "text": "My students have biases that affect their interactions in the classroom."
+      },
+      {
+       "value": "examining_bias_change_teaching",
+       "text": "Examining some of my biases will change the way I approach teaching."
+      },
+      {
+       "value": "i_influence_belonging",
+       "text": "I am able to influence whether or not students feel like they belong in CS."
+      },
+      {
+       "value": "diversity_increases_belonging",
+       "text": "When my classroom represents the diversity of the school's student body, my students' sense of belonging in computer science improves."
+      }
+     ]
+    },
+    {
+     "type": "html",
+     "name": "future_support_header",
+     "titleLocation": "hidden",
+     "html": "<h2>Future Support</h2>\nOur support doesn’t end with this workshop! We plan follow-up sessions and resources based on your needs."
+    },
+    {
+     "type": "matrix",
+     "name": "development_needs",
+     "title": "Thinking about your future development needs, how important are the following topics to you?",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Not at all important to me"
+      },
+      {
+       "value": "2",
+       "text": "A little important to me"
+      },
+      {
+       "value": "3",
+       "text": "Moderately important to me"
+      },
+      {
+       "value": "4",
+       "text": "Very important to me"
+      }
+     ],
+     "rows": [
+      {
+       "value": "assessment",
+       "text": "Assessing student knowledge and skills."
+      },
+      {
+       "value": "new_pedagogies",
+       "text": "Practicing new teaching strategies or pedagogies."
+      },
+      {
+       "value": "cs_skills",
+       "text": "Practicing computer science skills and concepts myself."
+      },
+      {
+       "value": "equitable_practices",
+       "text": "Practicing and using equitable teaching practices."
+      },
+      {
+       "value": "sharing_with_others",
+       "text": "Connecting and sharing with other computer science teachers."
+      },
+      {
+       "value": "plan_virtual",
+       "text": "Planning for teaching the course virtually."
+      },
+      {
+       "value": "differentiation",
+       "text": "Differentiating content for students."
+      },
+      {
+       "value": "support_urms_in_cs",
+       "text": "Supporting students from racial and ethnic groups who are underrepresented in computer science."
+      },
+      {
+       "value": "tools_updates",
+       "text": "Learning more about updates to Code.org curriculum and tools."
+      }
+     ]
+    },
+    {
+     "type": "comment",
+     "name": "development_needs_FR",
+     "title": "Are there any other development needs or supports you would like to see in followup workshops?",
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "name": "teaching_practices_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "teaching_practices_page_header",
+     "html": "<h2>Teaching Practices</h2>"
+    },
+    {
+     "type": "panel",
+     "name": "csp_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question1",
+       "visible": false,
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS PRINCIPLES&lt;&lt;</span></p>"
+      },
+      {
+       "type": "matrix",
+       "name": "csp_teaching_ap",
+       "title": "Please rate the extent to which you agree or disagree with the following statements about teaching an AP Computer Science course.",
+       "columns": [
+        {
+         "value": "0",
+         "text": "N/A"
+        },
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "skills_to_teach_as_ap",
+         "text": "I have the skills and knowledge that I need to teach this course as an AP course."
+        },
+        {
+         "value": "confident_students_successful",
+         "text": "I’m confident my students can be successful on the AP CS Principles exam."
+        },
+        {
+         "value": "need_support_for_exam_prep",
+         "text": "I’m going to need a lot of extra support to prepare students for the AP exam and performance tasks."
+        },
+        {
+         "value": "workshop_increased_confidence",
+         "text": "This workshop increased my confidence that I can teach CS Principles as an AP course."
+        }
+       ]
+      },
+      {
+       "type": "html",
+       "name": "true_of_me_now_scale_expl",
+       "html": "<h2>Self-assessment of Computer Science Teaching Practices</h2>\n<p>Please use the \"true of me now\" scale to self-assess your current knowledge and skills teaching computer science. Please think about how true it is that you <em>can do</em> certain things <strong>in terms of your own <em>development</em> and <em>preparation</em></strong> for teaching computer science <strong>right now</strong>.  </p>\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\"><caption> </caption>\n<tbody>\n<tr>\n<td style=\"width: 13%; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-size: 13.3333px;\"><strong>N/A</strong></span></td>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 13%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\">Irrelevant</span></td>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me now</strong><br /><em> not well prepared, need more development</em><br /></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong><br /><em>somewhat prepared, in process developing</em></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong><br /><em>well prepared, current strengths</em><br /></span></td>\n</tr>\n</tbody>\n</table>\n\n<p>Below, we ask the degree to which you believe you have <strong>concrete teaching strategies. </strong>A <strong>concrete teaching strategy</strong> is a specific teaching technique, method, or named practice that you could describe or demonstrate to another teacher right now, if asked.</p>"
+      },
+      {
+       "type": "matrix",
+       "name": "codedotorg_teaching_strategies_csp",
+       "title": "Right now, I have concrete teaching strategies to...",
+       "columns": [
+        {
+         "value": "0",
+         "text": "N/A"
+        },
+        {
+         "value": "1",
+         "text": "1"
+        },
+        {
+         "value": "2",
+         "text": "2"
+        },
+        {
+         "value": "3",
+         "text": "3"
+        },
+        {
+         "value": "4",
+         "text": "4"
+        },
+        {
+         "value": "5",
+         "text": "5"
+        },
+        {
+         "value": "6",
+         "text": "6"
+        },
+        {
+         "value": "7",
+         "text": "7"
+        }
+       ],
+       "rows": [
+        {
+         "value": "pair_programming",
+         "text": "ensure that students work collaboratively when writing code."
+        },
+        {
+         "value": "peer_feedback",
+         "text": "create a classroom culture in which students regularly get feedback on their work from their peers."
+        },
+        {
+         "value": "equitable_discussion",
+         "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partner conversations, small-group, or large-group discussions. "
+        },
+        {
+         "value": "normalize_failure",
+         "text": "create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
+        },
+        {
+         "value": "journaling",
+         "text": "provide frequent opportunities for students to do reflective writing as a way to promote sense-making and self-expression."
+        },
+        {
+         "value": "cs_vocab",
+         "text": "support student understanding and use of CS vocabulary."
+        },
+        {
+         "value": "impacts_of_tech",
+         "text": "support students in becoming informed decision makers about the impact of technology."
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{workshop_course} = 'CS Principles'"
+    },
+    {
+     "type": "panel",
+     "name": "csd_panel",
+     "elements": [
+      {
+       "type": "html",
+       "name": "question4",
+       "visible": false,
+       "html": "<p><span style=\"background-color: #ffff00;\">&gt;&gt;IF CS DISCOVERIES&lt;&lt;</span></p>\n"
+      },
+      {
+       "type": "checkbox",
+       "name": "csd_which_units",
+       "title": "Which units of CS Discoveries do you plan to teach in the 2020-2021 school year? ",
+       "description": "Check all that apply",
+       "choices": [
+        {
+         "value": "unit_1",
+         "text": "Unit 1: Problem Solving and Computing"
+        },
+        {
+         "value": "unit_2",
+         "text": "Unit 2: Web Development"
+        },
+        {
+         "value": "unit_3",
+         "text": "Unit 3: Interactive Animations and Games"
+        },
+        {
+         "value": "unit_4",
+         "text": "Unit 4: The Design Process"
+        },
+        {
+         "value": "unit_5",
+         "text": "Unit 5: Data and Society"
+        },
+        {
+         "value": "unit_6",
+         "text": "Unit 6: Physical Computing"
+        },
+        {
+         "value": "none",
+         "text": "None / I am not planning to teach any of these units in 2020-21"
+        }
+       ],
+       "hasOther": true
+      },
+      {
+       "type": "html",
+       "name": "true_of_me_now_scale_expl",
+       "html": "<h2><strong><span style=\"font-size: 14pt;\">Self-assessment of Computer Science Teaching Practices</span></strong></h2>\n<p>Please use the \"true of me now\" scale to self-assess your current knowledge and skills teaching computer science. Please think about how true it is that you <em>can do</em> certain things <strong>in terms of your own <em>development</em> and <em>preparation</em></strong> for teaching computer science <strong>right now</strong>.  </p>\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\"><caption> </caption>\n<tbody>\n<tr>\n<td style=\"width: 13%; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-size: 13.3333px;\"><strong>N/A</strong></span></td>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 13%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\">Irrelevant</span></td>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me now</strong><br /><em> not well prepared, need more development</em><br /></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong><br /><em>somewhat prepared, in process developing</em></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong><br /><em>well prepared, current strengths</em><br /></span></td>\n</tr>\n</tbody>\n</table>\n\n<p>Below, we ask the degree to which you believe you have <strong>concrete teaching strategies. </strong>A <strong>concrete teaching strategy</strong> is a specific teaching technique, method, or named practice that you could describe or demonstrate to another teacher right now, if asked.</p>"
+      },
+      {
+       "type": "matrix",
+       "name": "codedotorg_teaching_strategies_csd",
+       "title": "Right now, I have concrete teaching strategies to...",
+       "columns": [
+        {
+         "value": "1",
+         "text": "N/A"
+        },
+        {
+         "value": "2",
+         "text": "1"
+        },
+        {
+         "value": "3",
+         "text": "2"
+        },
+        {
+         "value": "4",
+         "text": "3"
+        },
+        {
+         "value": "5",
+         "text": "4"
+        },
+        {
+         "value": "6",
+         "text": "5"
+        },
+        {
+         "value": "7",
+         "text": "6"
+        },
+        {
+         "value": "8",
+         "text": "7"
+        }
+       ],
+       "rows": [
+        {
+         "value": "work_collaboratively",
+         "text": "ensure that students work collaboratively."
+        },
+        {
+         "value": "equitable_discussion",
+         "text": "ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, or small-group or large-group discussions."
+        },
+        {
+         "value": "normalize_failure",
+         "text": "create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
+        },
+        {
+         "value": "journaling",
+         "text": "provide frequent opportunities for students to do reflective writing as a way to promote sense-making and self-expression."
+        },
+        {
+         "value": "regular_feedback",
+         "text": "create a classroom culture in which students regularly get feedback on their work."
+        },
+        {
+         "value": "cs_vocab",
+         "text": "support student understanding and use of CS vocabulary."
+        },
+        {
+         "value": "differentiate_instruction",
+         "text": "differentiate instruction to meet student needs."
+        },
+        {
+         "value": "problem_solving_autonomy",
+         "text": "create a culture in which students know where to find and how to use resources to support problem solving."
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{workshop_course} = 'CS Discoveries'"
+    },
+    {
+     "type": "html",
+     "name": "clickTo41",
+     "html": "<p style=\"text-align: left;\"><span style=\"font-size: 14pt;\"><strong>Teaching Philosophy</strong></span></p>\n<p>Below are pairs of statements from computer science teachers describing various teaching philosophies, presented as&nbsp;<strong>Statement A</strong> and&nbsp;<strong>Statement B </strong>like so:&nbsp;&nbsp;</p> <div class='foorm-survey-rating-question-sample'><img src='/shared/images/foorm/foorm_rating_question_sample.png'/></div> <p>Please read each statement carefully and&nbsp;<strong>select the value 1-5</strong> that best shows how closely your own beliefs are to&nbsp;one of the statements in a given pair.&nbsp;Please respond freely based on your personal beliefs and philosophy - there&nbsp;is no wrong way to respond.</p>"
+    },
+    {
+     "type": "html",
+     "name": "lead_learner_statements",
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\"> </div>\n<p> </p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>      </strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"I do not need to have deep expertise in computer science in order to successfully teach it. I have expertise in how to learn, and I can model that for my students as we learn the content together.\"</td>\n<td> </td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"As the teacher, I need to have deep content expertise so that I can properly answer students’ questions and guide instruction appropriately.\"</td>\n</tr>\n</tbody>\n</table>\n<p> </p>"
+    },
+    {
+     "type": "rating",
+     "name": "lead_learner",
+     "title": "Lead Learner. 1. model expertise in how to learn <---> 5. need deep content expertise ",
+     "titleLocation": "hidden",
+     "correctAnswer": 1,
+     "minRateDescription": "Strongly aligned with A",
+     "maxRateDescription": "Strongly aligned with B"
+    },
+    {
+     "type": "html",
+     "name": "prioritize_time_statements",
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\">&nbsp;</div>\n<p>&nbsp;</p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"The teacher should ensure that their time and students&rsquo; access to resources are distributed equally for all.\"</td>\n<td>&nbsp;</td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"It&rsquo;s important that the teacher prioritize their time and resources for students who have the most need.\"</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "rating",
+     "name": "prioritize_time",
+     "title": "Prioritize Time. 1. distribute equally <---> 5. prioritize most need",
+     "titleLocation": "hidden",
+     "correctAnswer": 5,
+     "minRateDescription": "Strongly aligned with A",
+     "maxRateDescription": "Strongly aligned with B"
+    },
+    {
+     "type": "html",
+     "name": "instructional_focus_statements",
+     "html": "<div style=\"width: 100%; height: 3px; background-color: #00adbc;\">&nbsp;</div>\n<p>&nbsp;</p>\n<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n<tr>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement A</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong></span></td>\n<td style=\"padding-top: 10px; text-align: center;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\"><strong>Statement B</strong></span></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered.\"</td>\n<td>&nbsp;</td>\n<td style=\"border: 1px solid black; width: 250px; text-align: left; vertical-align: top;\">\"Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material.\"</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+     "type": "rating",
+     "name": "instructional_focus",
+     "title": "Instructional focus.  1. less material, leave fewer behind <---> 5. more material, some students struggle",
+     "titleLocation": "hidden",
+     "correctAnswer": 1,
+     "minRateDescription": "Strongly aligned with A",
+     "maxRateDescription": "Strongly aligned with B"
+    }
+   ]
+  },
+  {
+   "name": "facilitator_feedback_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "question2",
+     "html": "<h2>Facilitator Feedback</h2>\n<p>Below we present the same sets of questions for each facilitator of your workshop.  Please be thoughtful in your responses for each individual."
+    },
+    {
+     "type": "paneldynamic",
+     "name": "facilitators",
+     "title": "Facilitators",
+     "templateElements": [
+      {
+       "type": "matrix",
+       "name": "facilitator_effectiveness",
+       "title": "During my workshop, {panel.facilitator_name} did the following:",
+       "columns": [
+        {
+         "value": "1",
+         "text": "Strongly Disagree"
+        },
+        {
+         "value": "2",
+         "text": "Disagree"
+        },
+        {
+         "value": "3",
+         "text": "Slightly Disagree"
+        },
+        {
+         "value": "4",
+         "text": "Neutral"
+        },
+        {
+         "value": "5",
+         "text": "Slightly Agree"
+        },
+        {
+         "value": "6",
+         "text": "Agree"
+        },
+        {
+         "value": "7",
+         "text": "Strongly Agree"
+        }
+       ],
+       "rows": [
+        {
+         "value": "demonstrated_knowledge",
+         "text": "Demonstrated knowledge of the curriculum."
+        },
+        {
+         "value": "equitable_workshop_environment",
+         "text": "Built and sustained an equitable learning environment in our workshop."
+        },
+        {
+         "value": "on_track",
+         "text": "Kept the workshop and participants on track."
+        },
+        {
+         "value": "productive_discussions",
+         "text": "Supported productive workshop discussions."
+        },
+        {
+         "value": "create_equity_for_students",
+         "text": "Helped me see ways to create and support an equitable learning environment for my students."
+        },
+        {
+         "value": "healthy_relationship",
+         "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable)."
+        }
+       ]
+      },
+      {
+       "type": "comment",
+       "name": "facilitator_did_well_fr",
+       "title": "What were two things {panel.facilitator_name} did well?",
+       "rows": 2
+      },
+      {
+       "type": "comment",
+       "name": "facilitator_could_improve_fr",
+       "title": "What were two things {panel.facilitator_name} could do better?",
+       "rows": 2
+      }
+     ],
+     "templateTitle": "Facilitator {panel.facilitator_position} - {panel.facilitator_name}",
+     "allowAddPanel": false,
+     "allowRemovePanel": false
+    }
+   ]
+  },
+  {
+   "name": "wrap_up_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "overall_header",
+     "html": "<h2>Overall Workshop Feedback</h2>\n<p>We’d like to hear your feedback about your experience this week overall, <Strong>especially how this professional development could better fit your learning needs, or how it could be improved</strong>.</p>\n"
+    },
+    {
+     "type": "comment",
+     "name": "activities_you_liked",
+     "title": "What were the one or two things you liked most about the activities you did in this workshop and why?",
+     "cols": 6,
+     "rows": 2
+    },
+    {
+     "type": "comment",
+     "name": "activities_youd_change",
+     "title": "What are the one or two things you would change about the activities you did in this workshop?\t",
+     "cols": 60,
+     "rows": 2
+    },
+    {
+     "type": "radiogroup",
+     "name": "permission_to_quote",
+     "title": "I give the workshop organizer permission to quote my written comments from today for use on social media, promotional materials, and other communications.",
+     "choices": [
+      {
+       "value": "yes",
+       "text": "Yes, I give the workshop organizer permission to quote me and use my name."
+      },
+      {
+       "value": "yes_anon",
+       "text": "Yes, I give the workshop organizer permission to quote me, but I want to be anonymous."
+      },
+      {
+       "value": "no",
+       "text": "No, I do not give the workshop organizer my permission."
+      }
+     ]
+    },
+    {
+     "type": "html",
+     "name": "thank_you_header",
+     "html": "<img style='display: block; margin-left: auto; margin-right: auto;', src='/shared/images/foorm/codeheartyou.png'/>\n<p>Thanks from Code.org for your time, commitment and passion for teaching {workshop_course} this year.</p>\n<p><strong>You are making a difference for your students.</strong> We're looking forward to what's next. Onward!</p>"
+    }
+   ]
+  }
+ ],
+ "showTitle": false,
+ "showPageTitles": false
+}

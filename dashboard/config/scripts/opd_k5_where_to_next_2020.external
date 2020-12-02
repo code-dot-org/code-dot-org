@@ -1,0 +1,15 @@
+name 'OPD-K5 where to next_2020'
+editor_experiment ''
+title 'Where to next'
+description 'description here'
+markdown <<MARKDOWN
+# Where to next?
+
+Congratulations! You've completed the basic coding concepts portion of this online professional development course! So, where to next?
+
+## If you are planning to teach Courses E and F
+If you are planning to teach Courses E and F (or you just want to become familiar with some more advanced coding concepts), we recommend you continue onto the <a href="https://studio.code.org/s/k5-onlinepd-2019/stage/8/puzzle/1" target="blank">next concept chunk</a>, which specifically covers the concepts that are introduced in these courses.
+
+## If you are not planning to teach Courses E and F
+If you are not planning to teach Courses E and F, you can skip to the <a href="https://studio.code.org/s/k5-onlinepd-2019/stage/12/puzzle/1" target="blank">"Next Steps" concept chunk.</a>
+MARKDOWN

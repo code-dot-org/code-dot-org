@@ -1,0 +1,49 @@
+name 'How Compound Boolean Expressions Work_2018_2019_virtual'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How Compound Boolean Expressions Work
+
+You learned before that for the Boolean operators `&&`, `||`, and `!` that you can plug in *any* expression that evaluates to true or false on either side of the operator.
+
+Of course, since compound boolean expressions evaluate to true or false, you can *also* use compound boolean expressions *within* other compound boolean expressions to make an even more sophisticated statement.
+
+In fact, there is no limit to how many boolean expressions you can embed within a single statement. 
+
+To prove the point, here's a completely made up long compound boolean expression with *eight* different other expressions. The block version gets particularly nasty-looking:
+
+![](https://images.code.org/11d6275649dff51497af150432c04aad-image-1480370341354.png)
+
+With text we usually use parentheses to cluster expression so we know which should be evaluated together,
+
+`(( expr1 || expr2 && expr3) && expr4) && (expr5 && expr6 || (expr7 || expr8))`
+
+Now this is probably not a useful expression, but the point is that it *could* be evaluated assuming that *expr1* through *expr8* are Booleans.
+
+<br><br>
+
+# A worked example
+
+Let's look an example similar to the one in the video, and we'll breakdown process the computer goes through to evaluate this long expression step-by-step.  In English what we're trying to express is:
+
+* *"If it's a Tuesday or a Thursday, or the person is between the ages of 13 and 21 (including 13 but not 21), then they should get a discount."*
+
+Here is the entire compound boolean expression in an if-statement:
+
+<img src="https://images.code.org/b6c1e73822540099437cf9872fcd264e-image-1480372804124.png" style="display: block; margin: auto">
+
+
+The scenario presented below shows how the expression is evaluated step-by-step to arrive at a single `false` at the very end.  This particular scenario requires *seven computations* of Boolean expressions to whittle it down to the final single value. 
+
+<img src="https://images.code.org/c571c8d2ea00b9393f0fbd9faecb3887-image-1480371959958.png" style="display: block; margin: auto;">
+
+This is the correct result. Since it was a Wedenesday, it wasn't the right day for a discount.  And because the user was 21, but our statement says you have be *under* 21, they also don't qualify on age.
+
+We could test this further with other values for `day` and `age` to verify we're getting the right results.
+
+
+## Click Continue to try it yourself
+
+
+MARKDOWN

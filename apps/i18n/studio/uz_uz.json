@@ -33,6 +33,7 @@
   "catVariables": "O‘zgaruvchilar",
   "continue": "Davom etish",
   "dropletBlock_addCharacter_description": "Sahnaga personaj qo‘shish.",
+  "elseCode": "yoki",
   "for": "for",
   "playlab_lastLevel_continueText": "Bajarildi",
   "hoc2015_lastLevel_continueText": "Bajarildi",
@@ -48,6 +49,7 @@
   "scoreText": "Hisob: {playerScore}",
   "set": "bermoq",
   "setBackgroundTooltip": "Orqa qismga rasm joylashtirish",
+  "showTitleScreenText": "Matn",
   "setSprite": "bermoq",
   "soundRandom": "tasodifiy"
 }

@@ -1,0 +1,15 @@
+name 'CSD Interactive Animations and Games Post-Project Test_pilot_2_virtual'
+title 'Interactive Animations and Games Post-Project Test'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'CSD U3 Test clean code_pilot_2020_virtual'
+level 'CSD U3 Test functions_pilot_2020_virtual'
+level 'CSD U3 Test variables_pilot_2020_virtual'
+level 'CSD U3 Test planning_pilot_2020_virtual'
+level 'CSD U3 Test debugging_pilot_2020_virtual'
+level 'CSD U3 Test comment_pilot_2020_virtual'
+level 'CSD U3 Test debug FR_virtual'
+level 'CSD U3 Test parameter FR_virtual'
+level 'CSD U3 Test collaboration FR_virtual'

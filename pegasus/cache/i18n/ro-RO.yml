@@ -19,6 +19,8 @@ ro-RO:
     font-weight:bold"> planificați-vă Ora de cod</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Ești profesor de informatică ? Vezi alte resurse CSEdWeek</a>'
+  csedweek_banner_teachers_text: Ești profesor de informatică ? Vezi alte resurse
+    CSEdWeek
   n_have_learned_an_hoc: "<h1>Încearcă o</h1><h2>Ora de cod</h2><h3># servit</h3>"
   anybody_can_learn: Oricine poate învăța.
   learn_now: Învaţă Acum
@@ -26,8 +28,6 @@ ro-RO:
     de a învăța informatică
   petition_sign_message: 'Dacă ești de acord, semnează-te cu numele. Alătură-te #
     celorlalți.'
-  petition_sign_message_support: 'Dacă ne sprijini, completează-ți numele. Alătură-te
-    # celorlalți.'
   petition_join_others: 'Alătură-te altor #'
   name: Nume
   email: Email
@@ -228,6 +228,7 @@ ro-RO:
   if_you_enjoyed: Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi
     să încerce acest lucru. Vrem ca toată lumea să învețe.
   personalize_certificate: Personalizează-ți certificatul
+  print_certificates: Tipărește certificatele
   share_achievement: Distribuie realizarea personală
   beyond_hour_message: Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a>
     ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa
@@ -405,6 +406,7 @@ ro-RO:
   homepage_action_text_signpetition: Semnează petiția
   homepage_action_text_wincelebritychat: Câștigă un chat cu o celebritate
   homepage_signpetition_dropdown: Sunt de acord &#x25BE;
+  homepage_signpetition_dropdown_text: Sunt de acord
   homepage_diversity_pledge: Ia-ti angajamentul diversitatii
   homepage_banner_text_prizes: 'Ora de cod revine, 7-13 decembrie. '
   homepage_banner_link_prizes: 'Alatura-te celui mai mare eveniment educational din
@@ -2074,6 +2076,8 @@ ro-RO:
   header_teacher_community: Comunitate profesori
   header_help_support: 'Ajutor și asistență '
   header_report_bug: Raportare problemă
+  header_legal_privacy: Politică de confidențialitate
+  header_legal_tos: Termeni şi condiţii de utilizare
   header_tutorials: Tutoriale
   header_documentation: Documentație
   user_header_label: Salut %{username}
@@ -2147,12 +2151,18 @@ ro-RO:
   account_sign_up_child_accept_terms: Confirm că am permisiunea părintelui sau tutorelui
     meu legal de a utiliza serviciile Code.org.
   hoc_overview_dance_title: Petrecere dansantă
-  hoc_overview_dance_subtitle: Naprogramuj Dance Party a sdílej ji s kamarády. Vystupují
-    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara a dalších 25 umělců!
+  hoc_overview_dance_subtitle: Codează o petrecere dansantă pentru a o partaja cu
+    prietenii. Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara
+    și încă 25!
   hoc_overview_dance_2019_subtitle: Codează o petrecere dansantă pentru a o partaja
     cu prietenii. Împreună cu Katy Perry, Shawn Mendes, Panic! La discotecă, Lil Nas
     X, Jonas Brothers, Nicki Minaj și încă 34!
   hoc_overview_start_tutorial: Începe
+  hoc_overview_more_resources: Pentru mai multe resurse despre modul în care să te
+    implici în clasa ta la distanță, vezi ghidul nostru despre găzduirea unei [Hour
+    of Code virtuală](https://hourofcode.com/us/how-to/virtual). Pentru elevii cu
+    o tehnologie limitată sau fără tehnologie sau conectivitate, distribuie acest
+    pachet de [Activități Hour of Code fără calculator](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc2018_creativity: creativitate
   hoc2018_creativity_create: Crează
   hoc2018_creativity_what_will_you_create: Ce vei creea?
@@ -2275,3 +2285,8 @@ ro-RO:
   hoc2018_dance_video3: Petrecere cu dans - Proprietăţi
   hoc2018_dance_video4: Petrecere cu dans - Felicitări
   hoc2018_mc_with_microsoft: În parteneriat cu â
+  hoc2018_mc_thank_microsoft: Mulțumim Microsoft pentru că ne susține viziunea și
+    misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică
+    și aptitudinile să reușească în secolul 21.
+  ! '': "[șir gol]"
+  footer_powered_by_aws: Susținut de Amazon Web Services

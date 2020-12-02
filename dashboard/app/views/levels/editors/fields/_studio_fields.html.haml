@@ -1,0 +1,25 @@
+.field
+  = f.label :custom_game_type, 'Custom game type'
+  %p Used to tell playlab we want to run some of our custom onTick logic.
+  = f.select :custom_game_type, options_for_select(["", "Big Game", "Rocket Height", "Sam the Bat", "Ninja Cat"], @level.custom_game_type)
+.field
+  = f.label :background, 'Default background'
+  = f.text_field :background
+
+%h1.control-legend{data: {toggle: "collapse", target: "#sprites-and-collisions"}}
+  Sprites and Collisions
+
+#sprites-and-collisions.in.collapse
+  = f.label :first_sprite_index, 'First sprite index'
+  %p Integer representing which sprite to use for the first character. Default is 0.
+  = f.number_field :first_sprite_index
+
+  = f.label :protaganist_sprite_index, 'Protaganist sprite index'
+  %p Integer of the protaganist character (zero indexed, counting from the top left of the grid). This character must touch all the waypoint flags to complete the level. If no value is set, all sprites can collect flags.
+  = f.number_field :protaganist_sprite_index
+
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :edge_collisions, description: "Edge collisions"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :projectile_collisions, description: "Projectile collisions"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :allow_sprites_outside_playspace, description: "Allow sprites outside playspace"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :sprites_hidden_to_start, description: "Sprites hidden to start"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :remove_items_when_actor_collides, description: "Remove an item (e.g. a stormtrooper) when the actor collides with it"}

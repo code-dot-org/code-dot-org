@@ -17,11 +17,13 @@ is:
       Game/Score: Leikur/skor
       Games/Score: Leikir/skor
       Groups: Hópar
+      Input: Inntak
       Locations: Staðir
       Logic: Rökvísi
       Loops: Lykkjur
       Math: Reikningur
       Numbers: Tölur
+      Properties: Eiginleikar
       Sprites: Kvikar
       Text: texti
       Variables: Breytur

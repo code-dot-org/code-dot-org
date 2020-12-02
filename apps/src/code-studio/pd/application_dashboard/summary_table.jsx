@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
-import {StatusColors, ApplicationStatuses} from './constants';
+import {StatusColors, getApplicationStatuses} from './constants';
 import _ from 'lodash';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   table: {
@@ -15,6 +16,12 @@ const styles = {
   },
   tableWrapper: {
     paddingBottom: '30px'
+  },
+  totalsRow: {
+    fontWeight: 'bold',
+    borderTopStyle: 'solid',
+    borderTopWidth: 2,
+    borderTopColor: color.charcoal
   },
   statusCell: StatusColors,
   viewApplicationsButton: {
@@ -47,12 +54,18 @@ export class SummaryTable extends React.Component {
     this.props.canSeeLocked && this.props.applicationType === 'facilitator';
 
   tableBody() {
-    return Object.keys(this.props.data).map((status, i) => {
+    const totals = {
+      locked: 0,
+      all: 0
+    };
+    const categoryRows = Object.keys(this.props.data).map((status, i) => {
       const statusData = this.props.data[status];
+      totals.locked += statusData.locked;
+      totals.all += statusData.total;
       return (
         <tr key={i}>
           <td style={{...styles.statusCell[status]}}>
-            {ApplicationStatuses[this.props.applicationType][status] ||
+            {getApplicationStatuses(this.props.applicationType)[status] ||
               _.upperFirst(status)}
           </td>
           {this.showLocked && <td>{statusData.locked}</td>}
@@ -61,6 +74,16 @@ export class SummaryTable extends React.Component {
         </tr>
       );
     });
+
+    return [
+      ...categoryRows,
+      <tr key="totals-row" style={styles.totalsRow}>
+        <td style={{textAlign: 'right'}}>Total</td>
+        {this.showLocked && <td>{totals.locked}</td>}
+        {this.showLocked && <td>{totals.all - totals.locked}</td>}
+        <td>{totals.all}</td>
+      </tr>
+    ];
   }
 
   handleViewClick = event => {
@@ -83,7 +106,7 @@ export class SummaryTable extends React.Component {
               <th>Status</th>
               {this.showLocked && <th>Locked</th>}
               {this.showLocked && <th>Unlocked</th>}
-              <th>Total</th>
+              <th>Count</th>
             </tr>
           </thead>
           <tbody>{this.tableBody()}</tbody>

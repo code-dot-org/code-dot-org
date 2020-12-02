@@ -31,50 +31,31 @@ describe('CourseOverviewTopRow', () => {
     assert.equal(wrapper.find('Connect(SectionAssigner)').length, 1);
   });
 
-  it('has a button for each resource', () => {
+  it('renders teacher resource dropdown', () => {
     const wrapper = shallow(<CourseOverviewTopRow {...defaultProps} />);
-    assert.equal(wrapper.find('Button').length, 3);
+    assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
     assert.equal(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().text,
-      'Curriculum'
+      wrapper.find('TeacherResourcesDropdown').props().resources[0].type,
+      ResourceType.curriculum
     );
     assert.equal(
-      wrapper
-        .find('Button')
-        .at(1)
-        .props().text,
-      'Professional Learning'
-    );
-    assert.equal(
-      wrapper
-        .find('Button')
-        .at(2)
-        .props().text,
-      'Teacher Forum'
-    );
-
-    assert.equal(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().href,
+      wrapper.find('TeacherResourcesDropdown').props().resources[0].link,
       '/link/to/curriculum'
     );
     assert.equal(
-      wrapper
-        .find('Button')
-        .at(1)
-        .props().href,
+      wrapper.find('TeacherResourcesDropdown').props().resources[1].type,
+      ResourceType.professionalLearning
+    );
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props().resources[1].link,
       '/link/to/professional/learning'
     );
     assert.equal(
-      wrapper
-        .find('Button')
-        .at(2)
-        .props().href,
+      wrapper.find('TeacherResourcesDropdown').props().resources[2].type,
+      ResourceType.teacherForum
+    );
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props().resources[2].link,
       'https://forum.code.org/'
     );
   });

@@ -302,6 +302,67 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
   }
 }
 
+function validateProjectChanged(callback) {
+  getAllFileDataFromBramble((userFiles, error) => {
+    const startSources = webLab_.getStartSources();
+
+    // Don't let an error from bramble block the student from progressing.
+    if (error || userFiles.files.length !== startSources.files.length) {
+      callback(true /* project changed */);
+      return;
+    }
+
+    const changedFile = startSources.files.find(startFile => {
+      const matchingFile = userFiles.files.find(
+        file => file.name === startFile.name
+      );
+      // If startFile doesn't have `data` (and instead has something different
+      // like `url`), this is an image and is stored differently in the
+      // startSources than in bramble. Check for a matching file name, but
+      // don't compare data.
+      // Regex: Compare without whitespace.
+      return (
+        !matchingFile ||
+        (startFile.data &&
+          startFile.data.replace(/\s+/g, '') !==
+            matchingFile.data.replace(/\s+/g, ''))
+      );
+    });
+    callback(!!changedFile);
+  });
+}
+
+function getAllFileDataFromBramble(callback) {
+  const fs = bramble_.getFileSystem();
+  const sh = new fs.Shell();
+  const allFileData = [];
+
+  // enumerate files in the file system off the project root
+  sh.ls(`${weblabRoot}/${currentProjectPath}`, function(err, entries) {
+    // async-chained enumeration: get the file data for i-th file
+    function getEntryFileData(i, callback, err) {
+      if (err) {
+        callback(null, err);
+        return;
+      }
+      if (i < entries.length) {
+        const entry = entries[i];
+        getFileData(entry.path, (err, fileData) => {
+          // also get the file name
+          allFileData.push({name: entry.path, data: fileData.toString()});
+          getEntryFileData(i + 1, callback, err);
+        });
+      } else {
+        // end of list, call completion callback
+        callback({files: allFileData});
+      }
+    }
+
+    // start an async-chained enumeration through the file list
+    getEntryFileData(0, callback, err);
+  });
+}
+
 function uploadAllFilesFromBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
@@ -313,26 +374,26 @@ function uploadAllFilesFromBramble(callback) {
       if (i < entries.length) {
         const entry = entries[i];
         getFileData(entry.path, (err, fileData) => {
-          if (err) {
-            callback();
-          } else {
+          // Always call the callback. If err is undefined, the callback will handle it gracefully.
+          callback(err);
+          if (!err) {
             webLab_.changeProjectFile(
               entry.path,
               fileData,
               (err, versionId) => {
-                if (err) {
-                  callback();
-                } else {
+                callback(err);
+                if (!err) {
                   _lastSyncedVersionId = versionId;
                   getEntryFileData(i + 1, callback);
                 }
-              }
+              },
+              true /* skipPreWriteHook - because we are calling from within the preWriteHook */
             );
           }
         });
       } else {
         // end of list, call completion callback
-        callback(null);
+        callback(null, true /* preWriteHook was successful */);
       }
     }
 
@@ -520,7 +581,8 @@ const brambleHost = {
   onBrambleReady,
   onInspectorChanged,
   startInitialFileSync,
-  syncFiles
+  syncFiles,
+  validateProjectChanged
 };
 
 // Give our interface to our parent

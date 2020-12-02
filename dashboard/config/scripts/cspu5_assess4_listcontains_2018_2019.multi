@@ -1,8 +1,8 @@
 name 'cspu5_assess4_listContains_2018_2019'
-right '<img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">'
-wrong '<img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">'
-wrong '<img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">'
-wrong '<img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">'
+right 'https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png'
+wrong 'https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png'
+wrong 'https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png'
+wrong 'https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png'
 
 
 markdown <<MARKDOWN

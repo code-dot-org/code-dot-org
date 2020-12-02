@@ -64,6 +64,8 @@
   join_section:
     code:
       placeholder: "Seksjonskode (ABCDEF)"
+      instructions_short: "Angi din seksjons kode (6 tegn)"
+      submit: 'Bli med'
   add_hint_form:
     placeholder: 'Skriv inn et hint her'
     submit: 'Legg til hint'
@@ -133,10 +135,11 @@
     valid_password: "Gyldig passord!"
     invalid_password: "Passordet må bestå av minimum seks tegn"
     mismatch_password: "De to passordene du skrev inn samsvarer ikke"
-    under_13_consent: "Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine foreldre eller verge til å bruke tjenestene til Code.org."
     student_consent: "Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse til å bruke tjenestene fra Code.org."
-    agree_us_website: "Jeg aksepterer å bruke et nettsted som er basert i USA."
-    my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
+    agree_us_data_transfer_student: '**Jeg godtar at Code.org kan overføre data (inkludert personopplysninger) fra min bruk av dette nettstedet til USA** med formål om å hoste og behandle slike data.'
+    agree_us_data_transfer_teacher: '**Jeg godtar at Code.org kan overføre data (inkludert personopplysninger) fra min bruk (og mine studenters bruk) av dette nettstedet til USA** med formål om å hoste og behandle slike data.'
+    data_collection_us: "Jeg forstår at Code.org er et non profit-nettsted basert i USA og at lovgivningen for datainnhenting i USA kan være annerledes enn for landet mitt."
+    visit_privacy: 'Besøk [personvernpraksisen](%{privacy_url}) til Code.org for å finne ut mer.'
     additional_information: "Vi trenger noen flere opplysninger for å fortsette registreringen din."
     user_type_button: "Oppdater kontotype"
     user_type_label: "Kontotype"
@@ -216,6 +219,7 @@
       %{name}
   parent_mailer:
     student_associated_subject: 'Logg inn informasjon for Code.org'
+    parent_email_added_subject: 'Velkommen til Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
     delete_teacher_subject: 'Code.org melding: Din konto er slettet'
@@ -287,6 +291,12 @@
       professional_learning: "Profesjonell opplæring"
       documentation: "Dokumentasjon"
       tutorials: "Guide"
+      app_lab_documentation: "Programmerings lab dokumentasjon"
+      app_lab_tutorials: "Programmerings lab veiledning"
+      game_lab_documentation: "Spill lab dokumentasjon"
+      game_lab_tutorials: "Spill lab veiledning"
+      sprite_lab_documentation: "Animerte figurer lab dokumentasjon"
+      sprite_lab_tutorials: "Animerte figurer lab veiledning"
       educate_overview: "Oversikt for lærere"
       educate_elementary: "Barneskole"
       educate_middle: "Ungdomsskole"
@@ -312,11 +322,14 @@
       help_us: "Hjelp oss"
       teach: "Undervis"
       about: "Om"
+      legal_privacy: "Personvern"
+      legal_tos: "Vilkår"
     user:
       classroom: 'Lærerens startside'
       district_dashboard: 'Distrikt skrivebord'
       label: 'Hei %{username}'
       stats: 'Min fremdrift'
+      my_projects: 'Mine prosjekter'
       settings: 'Min konto'
       logout: 'Logg ut'
       signin: 'Logg inn'
@@ -354,6 +367,7 @@
       starwarsblocks: 'Star Wars (blokker)'
       starwarsblocks_hour: 'Star Wars (blokker)'
       weblab: 'Weblaboratoriet'
+      view_all: 'Vis alle prosjekter...'
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: 'Din fremdrift'
@@ -397,6 +411,7 @@
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
     email_confirm_wrong_email: '(Feil e-postadresse?)'
     email_resend_confirm: 'Send bekreftelse på nytt'
+    new_email_hint: '(Kontroller at du kan motta e-post til denne e-postadressen)'
     new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
     current_password_hint: '(vi trenger ditt gjeldende passord for å bekrefte dine endringer)'
     delete: 'Slett kontoen'
@@ -423,6 +438,9 @@
     update: "Oppdater konto"
     account_successfully_updated: "Kontoen er oppdatert."
     update_email: "Oppdater"
+    parent_guardian_email_label: "Foreldre/foresatt epost"
+    none: "Ingen"
+    encrypted: "kryptert"
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -521,6 +539,7 @@
     download: 'Last ned video'
     show_notes: 'Vis notat'
     show_video: 'Vis video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Nettleseren din støttes ikke. Vennligst oppdater til <a href='%{supported_browsers_url}', target='_blank'>en nettleser vi støtter</a>. Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik det er ment."
@@ -636,20 +655,6 @@
       body: "Studenter kan utforske konsepter fra informatikk-prinsipper-kurset vårt selv ved å bruke disse digitale verktøyene. Bruk modulene for seg selv, eller lag en enkeltkonseptøkt for klassen din."
       audience: "Alder 14+"
       cta: "Lær hvordan"
-  gallery:
-    students_drew_these_with_code: "Elever tegnet disse ved å kode."
-    students_made_these_with_code: "Elever laget disse ved å kode."
-    picture_count: "I løpet av de siste <b>%{days}</b> dager har elever tegnet <b>%{count}</b> bilder ved å skrive sine egne dataprogram. Klikk på bildene for å se hvert program kjøre."
-    activity_count: "De siste <b>%{days}</b> dagene har elever laget <b>%{count}</b> apps og bilder ved å skrive sine egne programmer. Klikk på bildene og skjermbilder for å se hvert program i aksjon."
-    want_to_make_your_own: "Vil du lage din egen?"
-    how_to_save: "På siste nivå i disse opplæringene, klikker du \"Avslutt\" og \"Lagre\" for å lagre ditt arbeid i galleriet."
-    more: "Flere &rarr;"
-    caption_by_name_age: "av %{name}, %{age} år"
-    caption_time_ago: "%{time_ago} siden"
-    header: "Galleri"
-    header_playlab: "Spill-lab"
-    header_artist: "Kunstner"
-    report_abuse: "Rapporter misbruk"
   landing:
     report_bug: "Rapporter feil"
     support: "Få hjelp"
@@ -658,6 +663,8 @@
     help_support: "Hjelp og støtte"
     documentation: "Dokumentasjon"
     tutorials: "Guide"
+  free_response:
+    placeholder: "Angi svaret her"
   multi:
     wrong_title: "Feil svar"
     wrong_body: "Svaret du har angitt er ikke riktig.  Prøv på nytt!"
@@ -824,61 +831,7 @@
     instructor_feedback: 'Tilbakemelding fra instruktør'
     peer_feedback: 'Gi tilbakemelding'
     outdated: 'Denne tilbakemeldingen ble gitt på en tidligere versjon av bidraget'
-  flex_category:
-    required: 'Oversikt'
-    content: 'Innhold'
-    practice: 'Undervisningspraksis'
     peer_review: 'Tilbakemelding'
-    main_course: 'Hovedkurs'
-    extra_course_content: 'Ekstra kursinnhold'
-    csf_e_1: 'Oppgrader til Kurs E (Valgfritt)'
-    csf_e_2: 'Kurs E: innhold'
-    csf_f_1: 'Oppgrader til Kurs F (Valgfritt)'
-    csf_f_2: 'Kurs F: innhold'
-    csf_digcit: 'Digitalt statsborgerskap'
-    csf_jigsaw: 'Puslespill'
-    csf_loops: 'Løkker'
-    csf_events: 'Hendelser'
-    csf_binary: 'Binær'
-    csf_conditionals: 'Betingelser'
-    csf_nested_loops: 'Løkker i løkker'
-    csf_functions: 'Funksjoner'
-    csf_variables: 'Variabler'
-    csf_for_loops: 'For-løkker'
-    csf_internet: 'Internett'
-    csd1_1: 'Kapittel 1: Problemløsingsprosessen'
-    csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
-    csd2_1: 'Kapittel 1: Nettinnhold og HTML'
-    csd2_2: 'Kapittel 2: Styling og CSS'
-    csd3_1: 'Kapittel 1: Bilder og animasjoner'
-    csd3_2: 'Kapittel 2: Bygge spill'
-    csd4_1: 'Kapittel 1: Bruke sentrert design'
-    csd4_2: 'Kapittel 2: Prototyping av app'
-    csd5_1: 'Kapittel 1: Representerer informasjon'
-    csd5_2: 'Kapittel 2: Problemløsing med data'
-    csd6_1: 'Kapittel 1: Programmere hardware'
-    csd6_2: 'Kapittel 2: Bygge fysiske prototyper'
-    csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
-    csp1_2: 'Kapittel 2: Finne opp Internett'
-    csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
-    csp2_2: 'Kapittel 2: Manipulere og visualisere data'
-    csp3_1: 'Kapittel 1: Programmeringsspråk og algoritmer'
-    csp4_1: 'Kapittel 1: Verden av Big Data og kryptering'
-    csp5_1: 'Kapittel 1: Hendelsesdrevet programmering'
-    csp5_2: 'Kapittel 2: Programmering med datastrukturer'
-    cspSurvey: 'Undersøkelse'
-    cspAssessment: 'Vurdering av kapittel'
-    csp_ap_1: 'Kapittel 1: AP Tech-oppsett'
-    csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
-    csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
-    csp2_1_2018: 'Enhet 2: Digital informasjon'
-    csp_variables: 'Variabler'
-    csp_conditionals: 'Betingelser'
-    csp_functions: 'Funksjoner'
-    csp_lists: 'Lister'
-    csp_loops: 'Løkker'
-    dlp: 'Spørsmål til refleksjon'
-    k5_next_steps: 'De Neste Trinnene'
   external_links:
     disclaimer: Ansvarsfraskrivelse
     leaving_domain: Du går nå utenfor vårt domene, til et nettsted som ikke drives av code.org.
@@ -955,6 +908,8 @@
       school_name: 'Skolens navn'
       school_city: 'Skolens poststed'
       school_country: 'Landet til skolen'
+      colombian_school_city: 'Skolens poststed'
+      colombian_school_name: 'Skolens navn'
     form_entries:
       gender:
         male: 'Mann'
@@ -988,10 +943,12 @@
         art: 'Kunst'
         other: "Annet:"
       resources:
+        khan: 'Khan akademiet'
         kodable: 'Kodbart'
         scratch: 'Scratch'
         other: "Annet:"
       robotics:
+        grok: 'Grok-læring'
         kodable: 'Kodbart'
         microbit: 'Microbit'
         raspberry: 'Raspberry Pi'
@@ -1004,7 +961,8 @@
   courses_category: 'Alle kurs'
   cookie_banner:
     accept: 'Jeg samtykker'
-  gdpr_dialog:
-    message: 'Dine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA.'
-    logout: 'Logg ut'
-    yes: 'Ja'
+  page_not_found_title: "Side Ikke Funnet"
+  page_not_found_header: '404: Side Ikke Funnet'
+  page_not_found_description: "Siden du leter etter finnes ikke på denne adressen. Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden."
+  page_not_found_button: "Returner hjem"
+  copy: 'Kopier'

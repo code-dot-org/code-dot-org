@@ -1,0 +1,26 @@
+{
+  "data": {
+    "name_s": "Fake Name",
+    "email_s": "name.fake@fabricated.edu",
+    "school_name_s": "Entirely Fabricaed Elementary",
+    "school_type_s": "elementary",
+    "school_address_s": "12345 Fake Dr\r\nSomeplace, WA 55555",
+    "title_I_school_b": "1",
+    "number_students_s": 127,
+    "technology_plan_s": "This is a long text field containing user-submitted information.",
+    "qualifying_school_b": "1",
+    "logistics_plan_path_s": "HourofCodeLogistiscsPlan.pdf"
+  },
+  "processed_data": {
+    "location_p": "12.3456789,-98.7654321",
+    "school_city_s": "Someplace",
+    "school_route_s": "Fake Dr",
+    "school_state_s": "Washington",
+    "school_country_s": "United States",
+    "school_state_code_s": "WA",
+    "school_postal_code_s": "55555",
+    "school_country_code_s": "US",
+    "school_street_number_s": "12345",
+    "school_street_address_s": "12345 Fake Dr"
+  }
+}

@@ -1,0 +1,33 @@
+name 'How Set Property Works_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Picking Colors in App Lab
+
+There are a number of ways you can pick colors in App Lab.
+
+<span style="color: #00adbc; font-size: 150%">1.</span> *background-color* is a string (in quotes) that represents the color. Typically the string is a named color like "red" or a hex value.
+
+![](https://images.code.org/a86a28a1a81b9c4864d0342da7165722-image-1490102661203.png)
+
+<span style="color: #00adbc; font-size: 150%">2.</span> you can also use the `rgb` function to set the color.  The `rgb` function is a convenient way to compose colors by setting each color channel individually.
+
+![](https://images.code.org/7419a12610e617af6c0cde9662ccfd73-image-1490105239707.png)
+
+<span style="color: #00adbc; font-size: 150%">3.</span> You'll notice that the `rgb` function has 4 parameters for the red, green, blue and *alpha* values you want.  The *alpha* value is decimal number between 0 and 1 that represents how opaque the color is (opaque is the opposite of transparent) as a percentage. `1` means fully opaque, and for example `0.5` means 50% opaque.
+
+![](https://images.code.org/443e04e61577e0323961b7df300fd4f9-image-1490104340484.png)
+
+<span style="color: #00adbc; font-size: 150%">4.</span>You can omit the alpha value entirely - it will default to 1.0 - by clicking the parameter arrow to collapse the last parameter. For the app we're making we probably don't need transparent colors so this will make our code simpler to read.
+
+<span style="color: #00adbc; font-size: 150%">5.</span>The `rgb` function actually just returns a color string as well. If we store the value that `rgb` returns in a variable then we can simply plug in that variable as the value for `setProperty` for several different UI elements if we want.  Below we use `myColor` to set both the button color and the icon color of the screen.
+
+![](https://images.code.org/188e7042598338dc4e6b3bbf89d776a7-image-1490104861897.png)
+
+## Let's try it...
+
+
+MARKDOWN

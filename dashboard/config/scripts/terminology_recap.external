@@ -1,28 +1,23 @@
 name 'Terminology Recap'
-encrypted 'BueRooExBNNpPHD40qJDIjKO1AdbNntm8/sftw+qGD8osmhF6yavm0k5JXii
-IPKrmlKEe5D68hj/NFsyLsO1ASlzofeFgq1PHw7WoZFkzVF9m670bA3ryx3i
-6uedg55kXXgFN31KN/cNhxfugnPxio5RfYVzCCi7bgzEwyhp68jrCQmt9am6
-R/FnuZXIp7Pw7pt97bjBi/axpwKkItBSF0h5RZr6GIGjP6qjTT+TaVrauFXT
-FJrJosfJsivpetOMjp+auDqWUw29c5M3KnWZtN7ZJq3oXOwJcxoW1NHpXIPf
-YWpJmuDQq5wpuNN/GGiQv5EJzFn8D5w1m7/kv9qViL4Z+X1UscSTQu191QMm
-EOfdUkV+uIidmu5cYfc4aZ6IhsTpwE9PbpUD5V2yW404HXufApaDFw+fKNT1
-fBc0z8Lr5jXUrHRoNiK/d4eFUH95Hyj342kbz8S7VO1j0x3W812tVkjfAaES
-1C7sxqArfolUB3FiewsVDzcs5Cde+vSKUFNlTBxHXuh1E3hoFPQ3dDbKpyrY
-OaUaTd1Qz4bDBIR5Qo4oVtpvjMi1zLIKvSAQSrNE9OwwInR1RmWJ9MZCCbbX
-9u0BwIpLURYcw86Vp2t3s/3Jj28pcWgQyyG9omab70MGuwgb66ENl7/S8xu4
-btA1hgDzHgNWanEuTT8ifgKSLan9Xv+HDRUa/32YXpTBwgbZc/dcixvLXgwy
-1L+y4/dCFZ+3vSLHZ++7EWIi71ApSr0wLh9SOkY4yT4YcXFIEftm61UA3CUP
-mr2Pqb0docF7AW8T5YdV/N0NnFI7dKxFprg/1JYTwNNRaMSx6TPXwbTBEWdR
-xipDiNFs9l5HIN8ElH3m7wnrPhOlMFZCpwDut49U1yXy3hONFF29euNHT0Hb
-M7bpY1F3/znKDttyxMtkbMOuniAt03S5K2h8UiFJdgijBfaVnli3d7U6LnFs
-MhCRn6luGB47hP2RwQJ9hy4A4ahVmCrJdTf+Gqqhx5i6n2UoSwcJPC04fuDQ
-IuGZbN2XNzPJZpPYsCKvPE25gdlvJ+BQU4ri69Vkkb1oYMkfLKVev5O8vNsM
-/hz+2dynA9bmThHyxd1DC5iS8CSq2XekcaLmDtadrMWjBfsS8CfhnCIqhT2w
-+J+5PWe240Wdcj5p63F+vSBnmgVcltzv7148CwU5luVGHPE4RMpJ+FkH48hW
-EaE8lrURjKDLUMAuQYbFHoxDJmyfAiVmGNMGQ91vTQUwqMftyjFyoL20wk0J
-8QZRW+eydJMf0j4tGZOQ1w+wVDYg6SdpKfo+U3uoMOpei0/TlW1jY+oGHsXA
-rxH0VYPBb5AWowfcGb3+P5uRmGruBzqbYSZ73cOEFMY97ZsjcPgkQVRfB5OV
-7OQNFR034QFG5XEV0eK5kwobkDnBRbjJGBvU8JzzfejpV7xamwtuKsQTkjuJ
-thIp3zHyI0fGI8qA+re8oWIw81SfcCtrwNUJ66j9WOcTl4D2ZN4jnbjV9zPR
-yxE0P4xBnEYHxeY=
-'
+editor_experiment ''
+title 'That was easy, what\'s next?'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Pause and Recap
+
+Messages encrypted with the **Caesar cipher** are very easy to crack, especially with a computational tool. Now that you've had a little practice cracking an alphabetic shift cipher (pretty easy, huh?) let's try something more difficult.
+
+**Recap terminology:**
+
+* **Encryption** - a process of encoding messages to keep them secret, so only "authorized" parties can read it.
+* **Decryption** - a process that reverses encryption, taking a secret message and reproducing the original plain text
+* **Cipher** - the generic term for a technique (or algorithm) that performs encryption
+* **Caesar's Cipher** - a technique for encryption that shifts the alphabet by some number of characters.
+* **Cracking encryption** - When you attempt to decode a secret message *without* knowing all the specifics of the cipher, you are trying to **crack** the encryption. 
+
+
+Click Continue to see the **Next Challenge**...
+
+ 
+MARKDOWN

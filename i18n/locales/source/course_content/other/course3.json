@@ -1,13 +1,9 @@
 {
+  "https://studio.code.org/s/course3/stage/1/puzzle/1": {
+    "title": "Computational Thinking"
+  },
   "https://studio.code.org/s/course3/stage/1/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?",
-      "questions": [
-        {
-          "text": "Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city."
-        }
-      ],
       "answers": [
         {
           "text": "Seattle _____ a _____ _____.",
@@ -25,27 +21,18 @@
           "text": "Eugene is a _____ city.",
           "correct": false
         }
-      ]
+      ],
+      "content1": "Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?",
+      "questions": [
+        {
+          "text": "Seattle is a big city.  \nEugene is a medium city  \nHillview is a small city."
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/1/puzzle/3": {
     "dsls": {
-      "title": "Matching",
-      "content1": "Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.",
-      "questions": [
-        {
-          "text": "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
-        },
-        {
-          "text": "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
-        },
-        {
-          "text": "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
-        },
-        {
-          "text": "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
@@ -59,7 +46,23 @@
         {
           "text": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         }
-      ]
+      ],
+      "content1": "Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.",
+      "questions": [
+        {
+          "text": "**Wheels/side: 2**  \n**Windows/side: 0**"
+        },
+        {
+          "text": "**Wheels/side: 2**  \n**Windows/side: 1**"
+        },
+        {
+          "text": "**Wheels/side: 2**  \n**Windows/side: 6**"
+        },
+        {
+          "text": "**Wheels/side: 3**  \n**Windows/side: 2**"
+        }
+      ],
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course3/stage/2/puzzle/1": {
@@ -122,9 +125,18 @@
   },
   "https://studio.code.org/s/course3/stage/2/puzzle/14": {
     "dsls": {
-      "title": "Maze Match",
+      "answers": [
+        {
+          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        },
+        {
+          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        },
+        {
+          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+        }
+      ],
       "content1": "Match the puzzles to the blocks",
-      "pre_title": "Instructions",
       "questions": [
         {
           "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
@@ -136,28 +148,11 @@
           "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
-        },
-        {
-          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
-        },
-        {
-          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
-        }
-      ]
+      "title": "Maze Match"
     }
   },
   "https://studio.code.org/s/course3/stage/2/puzzle/15": {
     "dsls": {
-      "title": "Maze Multiple Choice",
-      "content1": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks solve the puzzle?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png",
@@ -175,7 +170,14 @@
           "text": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks solve the puzzle?"
+        }
+      ],
+      "title": "Maze Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/2/extras?level_name=course3_maze_debugging_challenge1": {
@@ -204,8 +206,8 @@
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/2": {
-    "short_instructions": "Loop this code using the `repeat` block to complete the square.",
-    "long_instructions": "Loop this code using the `repeat` block to complete the square."
+    "short_instructions": "Loop this code using the `repeat` block to complete the biggest square.",
+    "long_instructions": "Loop this code using the `repeat` block to complete the biggest square."
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/3": {
     "short_instructions": "This rectangular flower bed has a perimeter of 600. The long side has a length of 200. Draw the rectangle using as few blocks as possible.",
@@ -214,8 +216,10 @@
       "4-5_Artist_3_a": "If the flower bed is 600 pixels around and two of the sides are 200 pixels long, here is how to figure out what the short sides add up to:\n\n**600 - 200 - 200 = 200**\n\nThat means both short sides add up to 200 pixels.\n\n**What is 200 / 2?**",
       "4-5_Artist_3_b": "If you can't see where the `repeat` loop goes right away, try coding out the whole solution and look for a pattern."
     },
-    "function_names": {
-      "draw a flower": "draw a flower"
+    "function_definitions": {
+      "draw a flower": {
+        "name": "draw a flower"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/4": {
@@ -239,8 +243,10 @@
   "https://studio.code.org/s/course3/stage/3/puzzle/7": {
     "short_instructions": "This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.",
     "long_instructions": "This equilateral triangle has angles of 60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.",
-    "function_names": {
-      "draw a tree": "draw a tree"
+    "function_definitions": {
+      "draw a tree": {
+        "name": "draw a tree"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/8": {
@@ -249,10 +255,16 @@
     "authored_hints": {
       "4-5_Artist_7_a": "Which angle is the smallest?  At which angle is the artist standing? "
     },
-    "function_names": {
-      "draw triangle": "draw triangle",
-      "draw a circle": "draw a circle",
-      "draw a car": "draw a car"
+    "function_definitions": {
+      "draw triangle": {
+        "name": "draw triangle"
+      },
+      "draw a circle": {
+        "name": "draw a circle"
+      },
+      "draw a car": {
+        "name": "draw a car"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/9": {
@@ -262,9 +274,13 @@
       "4-5_Artist_8_a": "The long sides are 240 pixels each.  That means that the 2 short sides must total:\n\n**800 - 240 - 240 = 320**\n\nWhat is **320/2** ? ",
       "4-5_Artist_8_b": "This image can be done 2 ways!  \n\n-   Draw two rectangles that are **120** long and **160** tall, with an overlapping side\n\n-   Draw one rectangle that is **240** long and **160** tall, then add a line in the middle."
     },
-    "function_names": {
-      "draw circle": "draw circle",
-      "draw goal": "draw goal"
+    "function_definitions": {
+      "draw circle": {
+        "name": "draw circle"
+      },
+      "draw goal": {
+        "name": "draw goal"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/10": {
@@ -291,12 +307,6 @@
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/13": {
     "dsls": {
-      "title": "Artist Multiple Choice",
-      "questions": [
-        {
-          "text": "Which blocks draw a rectangle with a perimeter of 100?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png",
@@ -314,17 +324,17 @@
           "text": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which blocks draw a rectangle with a perimeter of 100?"
+        }
+      ],
+      "title": "Artist Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/14": {
     "dsls": {
-      "title": "Artist Multiple Choice",
-      "questions": [
-        {
-          "text": "Which drawing is symmetric?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png",
@@ -342,22 +352,24 @@
           "text": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which drawing is symmetric?"
+        }
+      ],
+      "title": "Artist Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/15": {
     "short_instructions": "Free Draw!  Draw whatever you are inspired to create.",
     "long_instructions": "Free Draw!  Draw whatever you are inspired to create."
   },
+  "https://studio.code.org/s/course3/stage/4/puzzle/1": {
+    "title": "Functional Suncatchers"
+  },
   "https://studio.code.org/s/course3/stage/4/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png",
-      "questions": [
-        {
-          "text": "Which of the programs below <em>does not</em> make the exact same sequence as Program 1?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png",
@@ -371,12 +383,32 @@
           "text": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png",
+      "questions": [
+        {
+          "text": "Which of the programs below _does not_ make the exact same sequence as Program 1?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/4/puzzle/3": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "**STACK**"
+        },
+        {
+          "text": "**STAMP**"
+        },
+        {
+          "text": "**STAR**"
+        },
+        {
+          "text": "**RAMP**"
+        }
+      ],
       "content1": "Match each program to the word it makes, using the provided group of skills.",
       "content2": "/script_assets/4-5_images/unplugged/suncatchers_1.png",
       "questions": [
@@ -393,20 +425,7 @@
           "text": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         }
       ],
-      "answers": [
-        {
-          "text": "<h4>STACK</h4>"
-        },
-        {
-          "text": "<h4>STAMP</h4>"
-        },
-        {
-          "text": "<h4>STAR</h4>"
-        },
-        {
-          "text": "<h4>RAMP</h4>"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/1": {
@@ -416,8 +435,10 @@
       "2-3_Artist_Functions_1_a": "The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.",
       "2-3_Artist_Functions_1_b": "It is okay to draw overlapping lines to make your glasses."
     },
-    "function_names": {
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/2": {
@@ -426,9 +447,13 @@
     "authored_hints": {
       "2-3_Artist_Functions_2_a": "Your program should:\n\n-   Use function\n-   Move forward 100 + 75 pixels\n-   Use function"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/3": {
@@ -437,9 +462,13 @@
     "authored_hints": {
       "2-3_Artist_Functions_3_a": "**115 + 45 = 160**"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/4": {
@@ -448,8 +477,10 @@
     "authored_hints": {
       "2-3_Artist_Functions_4_a": "The artist needs to turn 120 degrees between each square to complete this design."
     },
-    "function_names": {
-      "draw a square": "draw a square"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/5": {
@@ -458,15 +489,19 @@
     "authored_hints": {
       "2-3_Artist_Functions_11_a": "You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side."
     },
-    "function_names": {
-      "draw a hexagon": "draw a hexagon"
+    "function_definitions": {
+      "draw a hexagon": {
+        "name": "draw a hexagon"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/6": {
     "short_instructions": "Here's that same `draw a hexagon` function. \n\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
     "long_instructions": "Here's that same `draw a hexagon` function. \n\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?",
-    "function_names": {
-      "draw a hexagon": "draw a hexagon"
+    "function_definitions": {
+      "draw a hexagon": {
+        "name": "draw a hexagon"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/7": {
@@ -475,34 +510,35 @@
     "authored_hints": {
       "2-3_Artist_Functions_12_a": "Try running the code first to see what you need to add."
     },
-    "function_names": {
-      "draw a flower": "draw a flower"
+    "function_definitions": {
+      "draw a flower": {
+        "name": "draw a flower"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/8": {
     "short_instructions": "Freeplay: Here is a snowflake function. Experiment with it to create a winter scene! This is a free play level, so there is no puzzle to solve. Have fun!",
     "long_instructions": "**Freeplay:** Here is a snowflake function. Experiment with it to create a winter scene! \n\nThis is a free play level, so there is no puzzle to solve. Have fun!",
-    "function_names": {
-      "draw a snowflake": "draw a snowflake"
+    "function_definitions": {
+      "draw a snowflake": {
+        "name": "draw a snowflake"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/9": {
     "short_instructions": "Freeplay: Here are two functions, one to draw a big gear and one to draw a small gear. Use them to draw the inside of a machine!",
     "long_instructions": "**Freeplay:** Here are two functions, one to draw a big gear and one to draw a small gear.  \n\nUse them to draw the inside of a machine!",
-    "function_names": {
-      "big gear": "big gear",
-      "small gear": "small gear"
+    "function_definitions": {
+      "big gear": {
+        "name": "big gear"
+      },
+      "small gear": {
+        "name": "small gear"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/10": {
     "dsls": {
-      "title": "Artist Functions Multiple Choice One",
-      "content1": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Pick the correct blocks to draw this image using the given functions"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png",
@@ -516,7 +552,14 @@
           "text": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Pick the correct blocks to draw this image using the given functions"
+        }
+      ],
+      "title": "Artist Functions Multiple Choice One"
     }
   },
   "https://studio.code.org/s/course3/stage/5/extras?level_name=course3_artist_functions_challenge1": {
@@ -529,9 +572,13 @@
       "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/5/extras?level_name=course3_artist_functions_challenge2": {
@@ -544,9 +591,13 @@
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/1": {
@@ -555,15 +606,19 @@
   "https://studio.code.org/s/course3/stage/6/puzzle/2": {
     "short_instructions": "Functions are blocks of code that perform a task. Use the \"get 2 nectar\" function to collect the nectar from each flower.",
     "long_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower.",
-    "function_names": {
-      "get 2 nectar": "get 2 nectar"
+    "function_definitions": {
+      "get 2 nectar": {
+        "name": "get 2 nectar"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/3": {
     "short_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time.",
     "long_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time.",
-    "function_names": {
-      "get 5": "get 5"
+    "function_definitions": {
+      "get 5": {
+        "name": "get 5"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/4": {
@@ -572,14 +627,18 @@
     "authored_hints": {
       "2-3_Bee_Functions_4_a": "You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again."
     },
-    "function_names": {
-      "move and get nectar": "move and get nectar"
+    "function_definitions": {
+      "move and get nectar": {
+        "name": "move and get nectar"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/5": {
     "short_instructions": "There is now more nectar at the flowers. Edit the given function so that it collects 4 nectars and use it to collect all of the nectar from the flowers.",
-    "function_names": {
-      "move and get 4": "move and get 4"
+    "function_definitions": {
+      "move and get 4": {
+        "name": "move and get 4"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/6": {
@@ -587,8 +646,10 @@
     "authored_hints": {
       "2-3_Bee_Functions_6_a": "You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again."
     },
-    "function_names": {
-      "move and get 4": "move and get 4"
+    "function_definitions": {
+      "move and get 4": {
+        "name": "move and get 4"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/7": {
@@ -596,8 +657,10 @@
     "authored_hints": {
       "2-3_Bee_Functions_8_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n[][0]"
     },
-    "function_names": {
-      "get 7 nectar make 7 honey": "get 7 nectar make 7 honey"
+    "function_definitions": {
+      "get 7 nectar make 7 honey": {
+        "name": "get 7 nectar make 7 honey"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/8": {
@@ -606,29 +669,37 @@
       "2-3_Bee_Functions_8_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "2-3_Bee_Functions_8_b": "Remember to build your code inside of the green function block.\n\n[][0]"
     },
-    "function_names": {
-      "get 7 make 7": "get 7 make 7"
+    "function_definitions": {
+      "get 7 make 7": {
+        "name": "get 7 make 7"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/9": {
     "short_instructions": "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \n\nCreate a function that collects nectar only from purple flowers that have nectar.",
     "long_instructions": "Purple flowers change between either 1 or 0 nectar each time you run the puzzle.   \n\nCreate a function that collects nectar only from purple flowers that have nectar.",
-    "function_names": {
-      "collect purple nectar": "collect purple nectar"
+    "function_definitions": {
+      "collect purple nectar": {
+        "name": "collect purple nectar"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/10": {
     "short_instructions": "Assessment: Use the given function to collect nectar from each flower.",
     "long_instructions": "**Assessment:** Use the given function to collect nectar from each flower.",
-    "function_names": {
-      "get 7": "get 7"
+    "function_definitions": {
+      "get 7": {
+        "name": "get 7"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/puzzle/11": {
     "short_instructions": "Assessment: Create a function to turn, move forward and make 3 honey, then return the bee to where it started and turn back.",
     "long_instructions": "**Assessment:** Create a function to turn, move forward and make 3 honey, then return the bee to where it started and turn back.",
-    "function_names": {
-      "move and get 3": "move and get 3"
+    "function_definitions": {
+      "move and get 3": {
+        "name": "move and get 3"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/extras?level_name=course3_bee_functions_challenge1": {
@@ -638,9 +709,13 @@
       "courseE_bee_functions_challenge1_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseE_bee_functions_challenge1_b": "Remember to build your code inside of the green function block."
     },
-    "function_names": {
-      "do something": "do something",
-      "get 3 nectar or honey": "get 3 nectar or honey"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "get 3 nectar or honey": {
+        "name": "get 3 nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/6/extras?level_name=course3_bee_functions_challenge2": {
@@ -650,9 +725,13 @@
       "courseE_bee_functions_challenge1_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseE_bee_functions_challenge1_b": "Remember to build your code inside of the green function block."
     },
-    "function_names": {
-      "do something": "do something",
-      "move and collect": "move and collect"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "move and collect": {
+        "name": "move and collect"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/7/puzzle/1": {
@@ -694,34 +773,32 @@
   "https://studio.code.org/s/course3/stage/7/puzzle/7": {
     "short_instructions": "These flowers can have 3, 2, or 1 nectar. \n\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers.",
     "long_instructions": "These flowers can have 3, 2, or 1 nectar. \n\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers.",
-    "function_names": {
-      "check purple flower": "check purple flower"
+    "function_definitions": {
+      "check purple flower": {
+        "name": "check purple flower"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/7/puzzle/8": {
     "short_instructions": "Write the function for `check flower make honey`. \n\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make honey.",
     "long_instructions": "Write the function for `check flower make honey`. \n\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make honey.",
-    "function_names": {
-      "check flower make honey": "check flower make honey"
+    "function_definitions": {
+      "check flower make honey": {
+        "name": "check flower make honey"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/7/puzzle/9": {
     "short_instructions": "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \n\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. ",
     "long_instructions": "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \n\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. ",
-    "function_names": {
-      "get nectar or make honey": "get nectar or make honey"
+    "function_definitions": {
+      "get nectar or make honey": {
+        "name": "get nectar or make honey"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/7/puzzle/10": {
     "dsls": {
-      "title": "Bee Conditionals Multiple Choice",
-      "content1": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png",
-      "content2": "A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?",
-      "questions": [
-        {
-          "text": "Choose the best blocks."
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png",
@@ -739,7 +816,15 @@
           "text": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png",
+      "content2": "A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?",
+      "questions": [
+        {
+          "text": "Choose the best blocks."
+        }
+      ],
+      "title": "Bee Conditionals Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/7/extras?level_name=course3_farmer_condLoops_challenge1": {
@@ -803,13 +888,6 @@
   },
   "https://studio.code.org/s/course3/stage/8/puzzle/12": {
     "dsls": {
-      "title": "Maze Conditionals Multiple Choice",
-      "content1": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks solve the puzzle?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png",
@@ -827,7 +905,14 @@
           "text": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks solve the puzzle?"
+        }
+      ],
+      "title": "Maze Conditionals Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/8/extras?level_name=course3_maze_until_challenge1": {
@@ -838,77 +923,77 @@
     "short_instructions": "Use If/Else blocks to follow the curvy path. At each corner, use the `remove 1` command in a loop to clear the piles.",
     "long_instructions": "Use If/Else blocks to follow the curvy path. At each corner, use the `remove 1` command in a loop to clear the piles."
   },
+  "https://studio.code.org/s/course3/stage/9/puzzle/1": {
+    "title": "Songwriting"
+  },
   "https://studio.code.org/s/course3/stage/9/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/4-5_images/unplugged/songwriting_1_q.png",
-      "questions": [
-        {
-          "text": "What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?"
-        }
-      ],
       "answers": [
         {
           "text": "Lou, Lou, skip to my Lou,",
           "correct": false
         },
         {
-          "text": "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.",
+          "text": "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nSkip to my Lou, my darlin.",
           "correct": true
         },
         {
-          "text": "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,",
+          "text": "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,   \nShoo, fly, shoo,",
           "correct": false
         },
         {
-          "text": "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.",
+          "text": "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,   \nSkip to my Lou, my darlin.",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/unplugged/songwriting_1_q.png",
+      "questions": [
+        {
+          "text": "What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course3/stage/10/puzzle/1": {
+    "title": "Real Life Algorithms: Dice Race"
   },
   "https://studio.code.org/s/course3/stage/10/puzzle/2": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "**Set Player 1 score to 0**"
+        },
+        {
+          "text": "**Player 1 rolls die**"
+        },
+        {
+          "text": "**Add Player 1 roll to total score**"
+        },
+        {
+          "text": "**Compare player scores to see who wins**"
+        }
+      ],
       "content1": "Match the steps in the Dice Race game to the order that they should appear in the algorithm.",
       "questions": [
         {
-          "text": "<h4>1)</h4>"
+          "text": "**1)**"
         },
         {
-          "text": "<h4>2)</h4>"
+          "text": "**2)**"
         },
         {
-          "text": "<h4>3)</h4>"
+          "text": "**3)**"
         },
         {
-          "text": "<h4>4)</h4>"
+          "text": "**4)**"
         }
       ],
-      "answers": [
-        {
-          "text": "<h4>Set Player 1 score to 0</h4>"
-        },
-        {
-          "text": "<h4>Player 1 rolls die</h4>"
-        },
-        {
-          "text": "<h4>Add Player 1 roll to total score</h4>"
-        },
-        {
-          "text": "<h4>Compare player scores to see who wins</h4>"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course3/stage/10/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which one of these items is hardest to describe an algorithm for?"
-        }
-      ],
       "answers": [
         {
           "text": "Brushing your teeth",
@@ -926,7 +1011,13 @@
           "text": "Banana",
           "correct": true
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which one of these items is hardest to describe an algorithm for?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/11/puzzle/1": {
@@ -987,13 +1078,6 @@
   },
   "https://studio.code.org/s/course3/stage/11/puzzle/12": {
     "dsls": {
-      "title": "Artist Loops Multiple Choice",
-      "content1": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks will create the design?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png",
@@ -1011,7 +1095,14 @@
           "text": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks will create the design?"
+        }
+      ],
+      "title": "Artist Loops Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/11/extras?level_name=course2_artist_nestedLoops_challenge1": {
@@ -1075,10 +1166,16 @@
       "courseF_bee_functions_challenge1_1": "What code should you put in this function?",
       "courseF_bee_functions_challenge1_2": "The \"check nectar or honey\" function can be used here if edit it to make honey multiple times."
     },
-    "function_names": {
-      "check nectar or honey": "check nectar or honey",
-      "row of nectar": "row of nectar",
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      },
+      "row of nectar": {
+        "name": "row of nectar"
+      },
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/12/extras?level_name=course3_bee_functions_challenge4": {
@@ -1088,11 +1185,19 @@
       "courseF_bee_functions_challenge2_a": "If there is a path to the right, you should do the following:\n\n-   Get any nectar or make any honey.\n-   Turn right towards the side path.\n-   Move to the end of the side path.\n-   Turn right.\n\nIf you repeat the above actions twice, you will be ready to move back down the main path.\n\n**Only click for another hint if you want to see the full solution!**",
       "courseF_bee_functions_challenge2_b": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "check nectar or honey": "check nectar or honey",
-      "row of nectar": "row of nectar",
-      "rowOfNectar": "rowOfNectar",
-      "move and check": "move and check"
+    "function_definitions": {
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      },
+      "row of nectar": {
+        "name": "row of nectar"
+      },
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      },
+      "move and check": {
+        "name": "move and check"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/13/puzzle/1": {
@@ -1141,13 +1246,6 @@
   },
   "https://studio.code.org/s/course3/stage/13/puzzle/13": {
     "dsls": {
-      "title": "Bee Loops Multiple Choice",
-      "content1": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png",
-      "questions": [
-        {
-          "text": "Which blocks will solve the puzzle?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png",
@@ -1165,7 +1263,14 @@
           "text": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png",
+      "questions": [
+        {
+          "text": "Which blocks will solve the puzzle?"
+        }
+      ],
+      "title": "Bee Loops Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/13/extras?level_name=course3_bee_debugging_challenge1": {
@@ -1215,20 +1320,26 @@
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/7": {
     "short_instructions": "The function is missing something...",
-    "function_names": {
-      "make 3 honey": "make 3 honey"
+    "function_definitions": {
+      "make 3 honey": {
+        "name": "make 3 honey"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/8": {
     "short_instructions": "This function is fine, but it isn't used properly.",
-    "function_names": {
-      "get 5 nectar": "get 5 nectar"
+    "function_definitions": {
+      "get 5 nectar": {
+        "name": "get 5 nectar"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/9": {
     "short_instructions": "Why isn't the bee making enough honey?",
-    "function_names": {
-      "make all honey": "make all honey"
+    "function_definitions": {
+      "make all honey": {
+        "name": "make all honey"
+      }
     }
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/10": {
@@ -1243,14 +1354,6 @@
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/13": {
     "dsls": {
-      "title": "Bee Debug Multiple Choice",
-      "content1": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png",
-      "content2": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png",
-      "questions": [
-        {
-          "text": "Which version of the function will work?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png",
@@ -1268,7 +1371,15 @@
           "text": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png",
+      "content2": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png",
+      "questions": [
+        {
+          "text": "Which version of the function will work?"
+        }
+      ],
+      "title": "Bee Debug Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/15/puzzle/1": {
@@ -1311,21 +1422,23 @@
     "callouts": {
       "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
     },
-    "function_names": {
-      "win game": "win game",
-      "lose game": "lose game",
-      "keep playing": "keep playing"
+    "function_definitions": {
+      "win game": {
+        "name": "win game"
+      },
+      "lose game": {
+        "name": "lose game"
+      },
+      "keep playing": {
+        "name": "keep playing"
+      }
     }
+  },
+  "https://studio.code.org/s/course3/stage/18/puzzle/1": {
+    "title": "Internet"
   },
   "https://studio.code.org/s/course3/stage/18/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
-      "questions": [
-        {
-          "text": "When you try to log on to code.org, which IP address is the DNS most likely to take you to?"
-        }
-      ],
       "answers": [
         {
           "text": "23.23.224.106",
@@ -1343,18 +1456,18 @@
           "text": "54.243.71.82",
           "correct": true
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
+      "questions": [
+        {
+          "text": "When you try to log on to code.org, which IP address is the DNS most likely to take you to?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/18/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
-      "questions": [
-        {
-          "text": "If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?"
-        }
-      ],
       "answers": [
         {
           "text": "code.org",
@@ -1372,17 +1485,21 @@
           "text": "khanacademy.org",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
+      "questions": [
+        {
+          "text": "If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course3/stage/19/puzzle/1": {
+    "title": "Crowdsourcing"
   },
   "https://studio.code.org/s/course3/stage/19/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which of these pictures best represents crowdsourcing?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png",
@@ -1392,17 +1509,17 @@
           "text": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png",
           "correct": true
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which of these pictures best represents crowdsourcing?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/19/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which one of these activities would be best for practicing crowdsourcing?"
-        }
-      ],
       "answers": [
         {
           "text": "Cleaning your room",
@@ -1420,17 +1537,20 @@
           "text": "Washing your face",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which one of these activities would be best for practicing crowdsourcing?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course3/stage/20/puzzle/1": {
+    "title": "Digital Citizenship"
   },
   "https://studio.code.org/s/course3/stage/20/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which piece of information listed below is okay to share on the internet?"
-        }
-      ],
       "answers": [
         {
           "text": "Your birthday",
@@ -1448,7 +1568,13 @@
           "text": "Your parent's credit card number",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which piece of information listed below is okay to share on the internet?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/21/puzzle/1": {

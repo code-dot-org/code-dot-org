@@ -3,10 +3,23 @@ height 'auto'
 
 question ‘The following program is run. Then the user clicks the “bottomButton” TWO TIMES. What will be displayed in the console?’
 
-wrong ‘<pre>aaa<br>bbb<br>ccc<br>ccc<br>ddd</pre>’
-right ‘<pre>bbb<br>ddd<br>ccc<br>ccc</pre>’
-wrong ‘<pre>bbb<br>ddd<br>aaa<br>aaa</pre>’
-wrong ‘<pre>bbb<br>ccc<br>ccc<br>ddd</pre>’
+wrong ‘`aaa`  
+`bbb`  
+`ccc`  
+`ccc`  
+`ddd`’
+right ‘`bbb`  
+`ddd`  
+`ccc`  
+`ccc`’
+wrong ‘`bbb`  
+`ddd`  
+`aaa`  
+`aaa`’
+wrong ‘`bbb`  
+`ccc`  
+`ccc`  
+`ddd`’
 
 
 

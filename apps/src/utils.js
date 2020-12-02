@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
+import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
@@ -779,6 +780,7 @@ export function interpolateColors(from, to, value) {
  * open, including if this page is reloaded or if we navigate away and then back to it. The id will
  * be different for other tabs, including tabs in other browsers or on other machines. Unfortunately,
  * duplicating a browser tab will result in two tabs with the same id, but this is not common.
+ *
  * @returns {string} A string representing a float between 0 and 1.
  */
 export function getTabId() {
@@ -812,4 +814,28 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
 
 export function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Detects profanity in a string.
+ * @param {string} text
+ * @param {string} locale Optional.
+ * @returns {Array<string>|null} Array of profane words.
+ */
+export const findProfanity = (text, locale) => {
+  return $.ajax({
+    url: '/profanity/find',
+    method: 'POST',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify({text, locale})
+  });
+};
+
+/**
+ * Convert a string to an MD5 hash.
+ * @param {string} str
+ * @returns {string} A string representing an MD5 hash.
+ */
+export function hashString(str) {
+  return MD5(str).toString();
 }

@@ -1,4 +1,5 @@
 name 'CSD U3 drawing practice choice'
+editor_experiment ''
 display_name 'Practice'
 description 'Do lots of practice!'
 
@@ -6,3 +7,11 @@ sublevels
 level 'CSD U3 drawing practice 1'
 level 'CSD U3 drawing practice 2'
 level 'CSD U3 drawing practice 3'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

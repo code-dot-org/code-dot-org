@@ -1,5 +1,5 @@
 name 'grade2_multi_collector_A_predict1'
-question 'Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'
+question 'Look closely at the code below. If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?'
 wrong 'Laurel will collect 4 pieces of treasure using this code.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'
 right 'Laurel will try to collect treasure where there is not any and it causes an error.', feedback: 'Correct!'
 wrong 'Laurel will collect all of the treasure.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'

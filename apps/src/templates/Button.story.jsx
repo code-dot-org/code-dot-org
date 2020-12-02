@@ -9,6 +9,7 @@ export default storybook => {
         <div>
           {Object.values(Button.ButtonSize).map(size => (
             <Button
+              __useDeprecatedTag
               size={size}
               text={size}
               href="/foo/bar"
@@ -25,6 +26,7 @@ export default storybook => {
         <div>
           {Object.values(Button.ButtonColor).map(color => (
             <Button
+              __useDeprecatedTag
               color={color}
               text={color}
               href="/foo/bar"
@@ -42,6 +44,7 @@ export default storybook => {
         <div>
           {Object.values(Button.ButtonColor).map(color => (
             <Button
+              __useDeprecatedTag
               disabled
               color={color}
               text={color}
@@ -61,6 +64,7 @@ export default storybook => {
             <div key={`${size}-row`}>
               {Object.values(Button.ButtonColor).map(color => (
                 <Button
+                  __useDeprecatedTag
                   icon="file-text"
                   size={size}
                   color={color}
@@ -77,18 +81,25 @@ export default storybook => {
     },
     {
       name: 'Button with href',
-      story: () => <Button href="/foo/bar" text="Batman & Robin" />
+      story: () => (
+        <Button __useDeprecatedTag href="/foo/bar" text="Batman & Robin" />
+      )
     },
     {
       name: 'Button with onClick',
       story: () => (
-        <Button onClick={() => console.log('click')} text="Batman & Robin" />
+        <Button
+          __useDeprecatedTag
+          onClick={() => console.log('click')}
+          text="Batman & Robin"
+        />
       )
     },
     {
       name: 'orange button with styled icon',
       story: () => (
         <Button
+          __useDeprecatedTag
           href="/foo/bar"
           color={Button.ButtonColor.orange}
           icon="caret-down"
@@ -101,6 +112,7 @@ export default storybook => {
       name: 'pending button',
       story: () => (
         <Button
+          __useDeprecatedTag
           href="/foo/bar"
           size={Button.ButtonSize.large}
           text="Continue"

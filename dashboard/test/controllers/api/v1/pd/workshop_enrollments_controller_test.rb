@@ -52,6 +52,11 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       {},
       {enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id}
     )
+
+    assert_routing(
+      {method: :post, path: "/api/v1/pd/enrollment/#{@enrollment.id}/edit"},
+      {controller: CONTROLLER_PATH, action: 'edit', id: @enrollment.id.to_s}
+    )
   end
 
   test 'admins can see enrollments for all workshops' do
@@ -102,6 +107,18 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     response_json = JSON.parse(@response.body)
     assert_equal 1, response_json.length
     assert_equal @enrollment.email, response_json[0]['email']
+  end
+
+  test 'facilitators can see enrollments in their workshops in csv format' do
+    sign_in @facilitator
+    get :index, params: {workshop_id: @workshop.id, format: :csv}
+    assert_response :success
+
+    response_csv = CSV.parse(@response.body)
+    assert_equal 2, response_csv.length
+    header_row = response_csv[0]
+    enrollment_row = response_csv[1]
+    assert_equal @enrollment.email, enrollment_row[header_row.find_index('Email')]
   end
 
   test 'facilitators cannot see enrollments in workshops they are not facilitating' do
@@ -392,6 +409,24 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal 0, Pd::Attendance.for_workshop(origin_workshop).count
 
     assert_equal 2, destination_workshop.enrollments.length
+  end
+
+  test 'edit' do
+    workshop = create :summer_workshop
+    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', workshop: workshop
+
+    admin = create :workshop_admin
+    sign_in admin
+
+    post :edit, params: {
+      id: enrollment.id,
+      first_name: 'Harry',
+      last_name: 'Potter'
+    }
+
+    enrollment.reload
+    assert_equal 'Harry', enrollment.first_name
+    assert_equal 'Potter', enrollment.last_name
   end
 
   test 'non-workshop-admins cannot move enrollments' do

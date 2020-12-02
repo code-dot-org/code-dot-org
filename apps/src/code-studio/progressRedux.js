@@ -27,6 +27,8 @@ const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
+const USE_DB_PROGRESS = 'progress/USE_DB_PROGRESS';
+const OVERWRITE_PROGRESS = 'progress/OVERWRITE_PROGRESS';
 
 const PEER_REVIEW_ID = -1;
 
@@ -38,6 +40,7 @@ const initialState = {
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
   stages: null,
+  lessonGroups: null,
   scriptId: null,
   scriptName: null,
   scriptTitle: null,
@@ -47,7 +50,7 @@ const initialState = {
   // a mapping of level id to result
   levelProgress: {},
   focusAreaStageIds: [],
-  peerReviewStage: null,
+  peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   postMilestoneDisabled: false,
@@ -57,7 +60,12 @@ const initialState = {
   studentDefaultsSummaryView: true,
   isSummaryView: true,
   hasFullProgress: false,
-  stageExtrasEnabled: false
+  stageExtrasEnabled: false,
+  // Note: usingDbProgress === "user is logged in". However, it is
+  // possible that we can get the user progress back from the DB
+  // prior to having information about the user login state.
+  // TODO: Use sign in state to determine where to source user progress from
+  usingDbProgress: false
 };
 
 /**
@@ -76,7 +84,8 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: processedStages(stages, action.professionalLearningCourse),
-      peerReviewStage: action.peerReviewStage,
+      lessonGroups: action.lessonGroups,
+      peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
@@ -88,10 +97,24 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === USE_DB_PROGRESS) {
+    return {
+      ...state,
+      usingDbProgress: true
+    };
+  }
+
   if (action.type === CLEAR_PROGRESS) {
     return {
       ...state,
       levelProgress: initialState.levelProgress
+    };
+  }
+
+  if (action.type === OVERWRITE_PROGRESS) {
+    return {
+      ...state,
+      levelProgress: action.levelProgress
     };
   }
 
@@ -117,9 +140,9 @@ export default function reducer(state = initialState, action) {
   if (action.type === MERGE_PEER_REVIEW_PROGRESS) {
     return {
       ...state,
-      peerReviewStage: {
-        ...state.peerReviewStage,
-        levels: state.peerReviewStage.levels.map((level, index) => ({
+      peerReviewLessonInfo: {
+        ...state.peerReviewLessonInfo,
+        levels: state.peerReviewLessonInfo.levels.map((level, index) => ({
           ...level,
           ...action.peerReviewsPerformed[index]
         }))
@@ -302,7 +325,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
   // If we have a userId, we can clear any progress in redux and request all progress
   // from the server.
   if (userId) {
-    dispatch({type: CLEAR_PROGRESS});
+    dispatch(clearProgress());
   }
 
   return $.ajax({
@@ -365,7 +388,8 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviewStage,
+  lessonGroups,
+  peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
@@ -379,7 +403,8 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviewStage,
+  lessonGroups,
+  peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
@@ -389,8 +414,21 @@ export const initProgress = ({
   isFullProgress
 });
 
+export const clearProgress = () => ({
+  type: CLEAR_PROGRESS
+});
+
+export const useDbProgress = () => ({
+  type: USE_DB_PROGRESS
+});
+
 export const mergeProgress = levelProgress => ({
   type: MERGE_PROGRESS,
+  levelProgress
+});
+
+export const overwriteProgress = levelProgress => ({
+  type: OVERWRITE_PROGRESS,
   levelProgress
 });
 
@@ -445,8 +483,7 @@ export const queryUserProgress = userId => (dispatch, getState) => {
 export const hasLockableStages = state =>
   state.stages.some(stage => stage.lockable);
 
-export const hasGroups = state =>
-  Object.keys(categorizedLessons(state)).length > 1;
+export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
 /**
  * Extract the relevant portions of a particular lesson/stage from the store.
@@ -473,11 +510,11 @@ export const lessons = state =>
   state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
 /**
- * Extract lesson from our peerReviewStage if we have one. We want this to end up
+ * Extract lesson from our peerReviewLessonInfo if we have one. We want this to end up
  * having the same fields as our non-peer review stages.
  */
 const peerReviewLesson = state => ({
-  ...lessonFromStage(state.peerReviewStage),
+  ...lessonFromStage(state.peerReviewLessonInfo),
   // add some fields that are missing for this stage but required for lessonType
   id: PEER_REVIEW_ID,
   lockable: false,
@@ -485,11 +522,11 @@ const peerReviewLesson = state => ({
 });
 
 /**
- * Extract levels from our peerReviewStage, making sure the levels have the same
+ * Extract levels from our peerReviewLessonInfo, making sure the levels have the same
  * set of fields as our non-peer review levels.
  */
 const peerReviewLevels = state =>
-  state.peerReviewStage.levels.map((level, index) => ({
+  state.peerReviewLessonInfo.levels.map((level, index) => ({
     // These aren't true levels (i.e. we won't have an entry in levelProgress),
     // so always use a specific id that won't collide with real levels
     id: PEER_REVIEW_ID,
@@ -521,13 +558,13 @@ const isCurrentLevel = (currentLevelId, level) => {
  * state.levelProgress
  */
 const levelWithStatus = (
-  {levelProgress, levelPairing = {}, currentLevelId},
+  {levelProgress, levelPairing = {}, currentLevelId, isSublevel = false},
   level
 ) => {
-  if (level.kind !== LevelKind.unplugged) {
+  if (level.kind !== LevelKind.unplugged && !isSublevel) {
     if (!level.title || typeof level.title !== 'number') {
       throw new Error(
-        'Expect all non-unplugged levels to have a numerical title'
+        'Expect all non-unplugged, non-bubble choice sublevel, levels to have a numerical title'
       );
     }
   }
@@ -550,9 +587,21 @@ export const levelsByLesson = ({
   currentLevelId
 }) =>
   stages.map(stage =>
-    stage.levels.map(level =>
-      levelWithStatus({levelProgress, levelPairing, currentLevelId}, level)
-    )
+    stage.levels.map(level => {
+      let statusLevel = levelWithStatus(
+        {levelProgress, levelPairing, currentLevelId},
+        level
+      );
+      if (statusLevel.sublevels) {
+        statusLevel.sublevels = level.sublevels.map(sublevel =>
+          levelWithStatus(
+            {levelProgress, levelPairing, currentLevelId, isSublevel: true},
+            sublevel
+          )
+        );
+      }
+      return statusLevel;
+    })
   );
 
 /**
@@ -563,9 +612,9 @@ export const levelsForLessonId = (state, lessonId) =>
     .find(stage => stage.id === lessonId)
     .levels.map(level => levelWithStatus(state, level));
 
-export const stageExtrasUrl = (state, stageId) =>
+export const lessonExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled
-    ? state.stages.find(stage => stage.id === stageId).stage_extras_level_url
+    ? state.stages.find(stage => stage.id === stageId).lesson_extras_level_url
     : '';
 
 export const isPerfect = (state, levelId) =>
@@ -609,9 +658,11 @@ export function statusForLevel(level, levelProgress) {
   // for each uid). When locked, they will end up not having a per-uid
   // test result, but will have a LOCKED_RESULT for the LevelGroup (which
   // is tracked by ids)
+  // BubbleChoice sublevels will have a level_id
   // Worth noting that in the majority of cases, ids will be a single
   // id here
-  const id = level.uid || bestResultLevelId(level.ids, levelProgress);
+  const id =
+    level.uid || level.level_id || bestResultLevelId(level.ids, levelProgress);
   let status = activityCssClass(levelProgress[id]);
   if (
     level.uid &&
@@ -636,48 +687,63 @@ export function statusForLevel(level, levelProgress) {
 }
 
 /**
- * Groups lessons (aka stages) according to category.
+ * Groups lessons according to LessonGroup.
  * @returns {Object[]}
  * {string} Object.name
  * {string[]} Object.lessonNames
  * {Object[]} Object.stageLevels
  */
-export const categorizedLessons = (state, includeBonusLevels = false) => {
-  let byCategory = {};
+export const groupedLessons = (state, includeBonusLevels = false) => {
+  let byGroup = {};
 
   const allLevels = levelsByLesson(state);
 
-  state.stages.forEach((stage, index) => {
-    const category = stage.flex_category;
-    const lesson = lessonFromStageAtIndex(state, index);
-    let stageLevels = allLevels[index];
-    if (!includeBonusLevels) {
-      stageLevels = stageLevels.filter(level => !level.bonus);
-    }
-
-    byCategory[category] = byCategory[category] || {
-      category,
+  state.lessonGroups.forEach(lessonGroup => {
+    byGroup[lessonGroup.display_name] = {
+      lessonGroup: {
+        id: lessonGroup.id,
+        displayName: lessonGroup.display_name,
+        description: lessonGroup.description,
+        bigQuestions: lessonGroup.big_questions
+      },
       lessons: [],
       levels: []
     };
-
-    byCategory[category].lessons.push(lesson);
-    byCategory[category].levels.push(stageLevels);
   });
 
-  // Peer reviews get their own category, but these levels/lessson are stored
+  state.stages.forEach((lesson, index) => {
+    const group = lesson.lesson_group_display_name;
+    const lessonAtIndex = lessonFromStageAtIndex(state, index);
+    let lessonLevels = allLevels[index];
+    if (!includeBonusLevels) {
+      lessonLevels = lessonLevels.filter(level => !level.bonus);
+    }
+
+    if (byGroup[group]) {
+      byGroup[group].lessons.push(lessonAtIndex);
+      byGroup[group].levels.push(lessonLevels);
+    }
+  });
+
+  // Peer reviews get their own group, but these levels/lesson are stored
   // separately from our other levels/lessons in redux (since they're slightly
   // different)
-  if (state.peerReviewStage) {
-    byCategory['Peer Review'] = {
-      category: 'Peer Review',
+  if (state.peerReviewLessonInfo) {
+    byGroup[state.peerReviewLessonInfo.lesson_group_display_name] = {
+      group: state.peerReviewLessonInfo.lesson_group_display_name,
+      lessonGroup: {
+        id: null, //Peer reviews do not have descriptions or big questions so they won't need an id to track clicks
+        displayName: state.peerReviewLessonInfo.lesson_group_display_name,
+        description: null,
+        bigQuestions: null
+      },
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
   }
 
   // We want to return an array of categories
-  return _.values(byCategory);
+  return _.values(byGroup);
 };
 
 /**
@@ -693,9 +759,13 @@ export const categorizedLessons = (state, includeBonusLevels = false) => {
  */
 export const progressionsFromLevels = levels => {
   const progressions = [];
+  if (levels.length === 0) {
+    return progressions;
+  }
   let currentProgression = {
     start: 0,
     name: levels[0].progression || levels[0].name,
+    displayName: levels[0].progressionDisplayName || levels[0].name,
     levels: [levels[0]]
   };
   levels.slice(1).forEach((level, index) => {
@@ -708,6 +778,7 @@ export const progressionsFromLevels = levels => {
         // + 1 because we sliced off the first element
         start: index + 1,
         name: level.progression || level.name,
+        displayName: level.progressionDisplayName || level.name,
         levels: [level]
       };
     }

@@ -11,8 +11,10 @@ import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
+import projects from '../templates/projects/projectsRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 
 registerReducers({
   header,
@@ -26,8 +28,10 @@ registerReducers({
   isRtl,
   responsive,
   publishDialog,
+  projects,
   verifiedTeacher,
-  currentUser
+  currentUser,
+  arrowDisplay
 });
 
 export {getStore};

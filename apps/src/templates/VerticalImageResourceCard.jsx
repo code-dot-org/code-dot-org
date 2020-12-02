@@ -152,6 +152,7 @@ class VerticalImageResourceCard extends Component {
             )}
           </div>
           <Button
+            __useDeprecatedTag
             href={link}
             color={Button.ButtonColor.gray}
             text={buttonText}

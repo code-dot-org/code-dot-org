@@ -66,6 +66,7 @@ ca:
   join_section:
     code:
       placeholder: Secció Codi (ABCDEF)
+      instructions_short: Introdueixi el seu codi de secció de 6 lletres
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí
     submit: Afegeix pista
@@ -167,13 +168,8 @@ ca:
     valid_password: Contrasenya vàlida!
     invalid_password: La contrasenya ha de tenir almenys 6 caràcters
     mismatch_password: Les dues contrasenyes que has introduït no coincideixen
-    under_13_consent: Si soc menor de 13 anys, confirmo que tinc l'autorització dels
-      meus pares o tutors legals per utilitzar els serveis de Code.org.
     student_consent: Confirmo que tinc l'autorització dels meus pares o tutors legals
       per utilitzar los serveis de Code.org.
-    agree_us_website: Estic d'acord a utilitzar un lloc web basat als Estats Units.
-    my_data_to_us: Les dades del meu ús d'aquest lloc poden ser enviades, emmagatzemades
-      o processades als Estats Units.
     additional_information: Necessitem alguna informació addicional per continuar
       amb la vostra inscripció.
     user_type_button: Actualitzeu el tipus de compte
@@ -293,6 +289,8 @@ ca:
       help_us: Ajuda'ns
       teach: Ensenya
       about: Quant a
+      legal_privacy: Política de privadesa
+      legal_tos: Condicions d'ús
     user:
       classroom: Pàgina d'inici de mestre
       district_dashboard: Quadre de comandament de districte
@@ -370,6 +368,8 @@ ca:
       s''esborrarant els comptes dels seus alumnes.'
     delete_confirm: Esteu segur que voleu suprimir el vostre compte?
     update_email: Actualitza
+    parent_guardian_email_label: E-mail del pare/tutor
+    none: Cap
   user_level:
     completed: Completat
     tried: Provat
@@ -578,28 +578,13 @@ ca:
       title: Condicionals
     widgets:
       title: Ginys
-  gallery:
-    students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
-    students_made_these_with_code: Els estudiants van fer això amb codi!
-    picture_count: En els darrers <b>%{days}</b> dies, els alumnes han elaborat <b>%{count}</b>
-      imatges escrivint els seus propis programes informàtics. Fes clic a les fotos
-      per veure el programa en acció.
-    activity_count: En els darrers <b>%{days}</b> dies, els estudiants han fet <b>%{count}</b>
-      aplicacions i imatges escrivint els seus propis programes informàtics. Fes clic
-      a les fotos i captures de pantalla per veure el programa en acció.
-    want_to_make_your_own: Vols fer el teu propi?
-    more: Més &rarr;
-    caption_by_name_age: per %{name}, %{age} anys
-    caption_time_ago: fa %{time_ago}
-    header: Galeria
-    header_playlab: Play Lab
-    header_artist: Artista
-    report_abuse: Denuncieu un abús
   landing:
     report_bug: Informeu d'errors
     support: Obtenir ajuda
     support_url: support.code.org
     help_support: Ajuda i suport
+  free_response:
+    placeholder: Introdueix la teva resposta aquí
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: La resposta que he introduït no és correcta.  Si us plau, intenta-ho
@@ -711,25 +696,8 @@ ca:
           offensive: Contingut ofensiu
           infringement: Infracció de copyright
           other: Altres
-  flex_category:
-    required: Vista general
-    csf_digcit: Ciutadania digital
-    csf_jigsaw: Puzzle
-    csf_loops: Bucles
-    csf_events: Esdeveniments
-    csf_binary: Binari
-    csf_conditionals: Condicionals
-    csf_spritelab: Laboratori de personatges
-    csf_nested_loops: Bucles imbricats
-    csf_functions: Funcions
-    csf_variables: Variables
-    csf_for_loops: Per bucles
-    csf_internet: Internet
-    csp_variables: Variables
-    csp_conditionals: Condicionals
-    csp_functions: Funcions
-    csp_lists: Llistes
-    csp_loops: Bucles
+  hoc_download:
+    minecraft_name: Hora del Codi de Minecraft
   view_teacher_guide: Veure la guia docent
   pd:
     form_labels:
@@ -754,5 +722,4 @@ ca:
         opt_in_no: 'No'
   cookie_banner:
     accept: D'acord
-  gdpr_dialog:
-    true: Sí
+  copy: Copiar

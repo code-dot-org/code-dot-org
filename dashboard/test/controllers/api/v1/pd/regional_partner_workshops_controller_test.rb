@@ -151,6 +151,14 @@ module Api::V1::Pd
       get :find, params: {state: 'Washington DC'}
     end
 
+    test 'find returns correctly when no partner is found' do
+      sign_in @teacher
+      get :find, params: {state: 'somewhere'}
+
+      expected = {id: nil, name: nil, group: nil, workshops: nil, has_csf: nil}.stringify_keys
+      assert_equal expected, JSON.parse(response.body)
+    end
+
     private
 
     def workshop_in_index_results(expected_workshop)

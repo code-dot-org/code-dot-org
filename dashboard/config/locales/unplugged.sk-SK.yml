@@ -237,7 +237,7 @@ sk:
           ale parametre s ostatnými hodnotami používali iné vzory. Preto potrebujeme
           podmieňovacie príkazy...
       CollisionDetection:
-        title: Kolízna detekcia a Pytagorova veta
+        title: Zisťovanie kolízií a Pytagorova veta
         desc: Určenie toho, kedy sa objekty na obrazovke dotýkajú je dôležitou súčasťou
           väčšiny hier. V tejto lekcii sa pozrieme na to, ako sa Pytagorová veta a
           vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma
@@ -587,6 +587,23 @@ sk:
           živote, konkrétne vytvorením papierového lietadielka. Zameriava sa tiež
           na širšie súvislosti informatiky a podstatnú úlohu, ktorú v našom živote
           hrajú algoritmy.
+      test-uid-passthrough:
+        desc: "# Lekcia Náborových scenárov\r\n\r\n## Potiahni vpravo pre CS\r\nPre
+          tútu lekciu budeme používať nástroj \"Potiahni vpravo pre CS\", ktorý vyvinuli
+          naši partneri z MIT. V tomto nástroji si môžete prečítať profily študentov
+          a zvážiť ich špecifické programovacie prístupy, ktoré využijete na ich presvedčenie
+          zapísať sa do vášho kurzu CS Princípy Informatiky. \r\n\r\n## Ako to funguje\r\nPri
+          prehrávaní Potiahni vpravo pre CS uvidíte rad citátov, ktoré môžete študentom
+          povedať. Citáty, ktoré sa vám pre daného študenta budú zdať najefektívnejšie
+          môžete potiahnuť vpravo, tie, ktoré sa vám nebudú zdať vhodné, potiahnite
+          vľavo. Počas lekcie budeme diskutovať v skupine o vašich názoroch na typy
+          programovacích prístupov, ktoré sú podľa vás najefektívnejšie na pritiahnutie
+          študenta ku kurzu a budete mať možnosť vidieť ako ostatní vo vašej skupine
+          vyberali v jednotlivých debatách.\r\n<br><br><br><br>\r\n\r<span style=\"display:none\">submitButton
+          next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
+          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/><a
+          class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>
+          kliknúť sem pre spustenie Potiahni vpravo pre CS!</a>\r\n\r\n"
       PlantASeed_2019:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
         desc: Táto lekcia na príklade sadenia semienka objasňuje spôsoby, akými používame
@@ -620,8 +637,22 @@ sk:
         title: Zobrazenie dát v grafoch
         desc: " V tejto lekcii študenti zozbierajú dáta z Play Lab projektu alebo
           z reálneho života a použijú ich na formulovanie predpovedí."
+      courseE_unplugged_accessAbility_2019:
+        title: Uľahčenie prístupu
+        desc: Naučte sa o dostupnosti a význame empatie prostredíctvom brainstormingu
+          a dizajnovania dostupných riešení pre hypotetické aplikácie.
+      courseE_simon_says_2019:
+        title: Simon vraví
+        desc: "Zahraj si hru a porozmýšlaj, ktoré príkazy sú potrebné na dosiahnutie
+          správnych výsledkov.\r\n\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Silné heslá
+        desc: Preskúmajte prečo používamé heslá, spoznajte benefity používania hesiel
+          a objavte stretégie pre vytvorenie a zachovanie silného, bezbečného hesla.
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
+        desc: '_Joshova poznámka: na rozdiel od prvej lekcie, túto som naformátoval
+          ako typickú lekciu bez počítača._'
       timeforcs_demo_conditionals:
         title: Podmienky
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria
@@ -629,3 +660,7 @@ sk:
           potiahnem čiernu kartu, ty dostaneš bod."
       TheRightApp_2019:
         title: Správna aplikácia
+        desc: "* Všetci dnes používame počítače, obzvlášť smartfóny. \r\n* Smartfónové
+          aplikácie alebo \"appky\" pomáhajú ľuďom napríklad hovoriť s priateľmi,
+          počúvať hudbu, nakupovať alebo len browsovať internet.\r\n* Pre programátorov
+          je dôležité poznať potreby druhých a zohľadniť ich pri návrhu aplikácií!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

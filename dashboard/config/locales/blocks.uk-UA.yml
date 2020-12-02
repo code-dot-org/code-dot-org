@@ -88,9 +88,6 @@ uk:
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} виконувати рух {MOVE} {DIR} завжди"
         options:
@@ -109,9 +106,6 @@ uk:
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -188,9 +182,6 @@ uk:
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} виконує рух {MOVE} {DIR} один раз"
         options:
@@ -219,13 +210,10 @@ uk:
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'повторювати кожні {N} такти після {START} '
       Dancelab_everySeconds:
-        text: 'кожні {N} {UNIT} '
+        text: 'повторювати кожні {N} {UNIT} '
         options:
           UNIT:
             '"measures"': кроків
@@ -250,6 +238,7 @@ uk:
             '"mid"': середні тони
             '"high"': високі тони
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': розмір
@@ -356,10 +345,15 @@ uk:
           FORMAT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
+            '"diamond"': діамант
             '"circle"': коло
             '"grid"': сітка
+            '"top"': верхня шеренга
             '"row"': ряд
+            '"bottom"': нижня шеренга
+            '"left"': ліва колона
             '"column"': колона
+            '"right"': права колона
             '"x"': хрестик
             '"plus"': плюс
             '"random"': випадковий
@@ -522,8 +516,8 @@ uk:
             '"warm"': Теплий
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
-          встановити ефект тла
-          {PALETTE} {EFFECT}
+          "установити фоновий ефект
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': Немає
@@ -894,6 +888,7 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -939,6 +934,7 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -961,6 +957,14 @@ uk:
         text: налаштування
       Dancelab_whenSetup2:
         text: налаштування
+      gamelab_addBehaviorSimple:
+        text: Спрайт {SPRITE} Починається {BEHAVIOR}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -971,13 +975,28 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} Штрихи {SPRITE2}"
         options:
           CONDITION:
             '"when"': коли
             '"while"': поки
       gamelab_clickedOn:
         text: коли клацнули {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: натиснув {SPRITE}
+      gamelab_comment:
+        text: 'коментар: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "створення нового спрайту \n Називається {NAME} \n з костюмом {COSTUME}
+          \n На {LOCATION}"
+      gamelab_destroy:
+        text: видалити {THIS}
+      gamelab_draggable:
+        text: будучи перетягуваним
+      gamelab_edgesDisplace:
+        text: ребра блок {SPRITE} з рухомим
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': розмір
@@ -986,9 +1005,57 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
             '"tint"': відтінок
+      gamelab_getThisSprite:
+        text: "[CHOICE]спрайт[0]"
+        options:
+          CHOICE:
+            '"this"': це
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
+      gamelab_hideTitleScreen:
+        text: приховати заголовок екрана
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': у
+            '"z"': z
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} торкається країв"
       gamelab_jumpTo:
         text: "{SPRITE} стрибає до {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} Натиснута"
         options:
           CONDITION:
             '"when"': коли
@@ -1023,29 +1090,97 @@ uk:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': у
             '"z"': z
+      gamelab_locationAt:
+        text: 'місце розташування x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
+      gamelab_locationMouse:
+        text: розташування миші
+      gamelab_locationOf:
+        text: розташування {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: зробити нові {ANIMATION_NAME} спрайт на {LOCATION}
       gamelab_mirrorSprite:
+        text: "{SPRITE} Обличчя {DIRECTION}"
         options:
           DIRECTION:
             '"right"': праворуч
             '"left"': ліворуч
+      gamelab_mouseLocation:
+        text: розташування миші
+      gamelab_moveForward:
+        text: Переміщення {SPRITE} {DISTANCE} пікселі вперед
+      gamelab_moveInDirection:
+        text: Переміщення {SPRITE} {DISTANCE} Пікселів {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
+      gamelab_moveToward:
+        text: Переміщення {SPRITE} Пікселів {DISTANCE} До {TARGET}
+      gamelab_objectSpritePointer:
+        text: натиснув {SPRITE}
+      gamelab_playSound:
+        text: ПлейЗвук {SOUND}
+      gamelab_pointInDirection:
+        text: Точки {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
+      gamelab_printText:
+        text: друк {TEXT}
       gamelab_randColor:
         text: випадковий колір
       gamelab_randomColor:
         text: випадковий колір
+      gamelab_randomLocation:
+        text: випадкове розташування
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} все зупиняє"
+      gamelab_removeBehaviorSimple:
+        text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
+      gamelab_removeTint:
+        text: зняти колір з {THIS}
+      gamelab_repeatForever:
+        text: повторювати завжди
+      gamelab_setAnimation:
+        text: Змінити {THIS} костюм, щоб {ANIMATION}
       gamelab_setBackground:
         text: встановити колір тла {COLOR}
       gamelab_setBackgroundImage:
+        text: встановити фон {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': печера
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': суду
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': пустеля
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галактики
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сітка
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': веселка
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': науково-фантастичного
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': зірки
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
+            undefined: немає
+      gamelab_setBackgroundImageAs:
+        text: встановити фон {IMG}
       gamelab_setProp:
+        text: Встановити {SPRITE} {PROPERTY} до {VAL}
         options:
           PROPERTY:
             '"scale"': розмір
@@ -1054,21 +1189,39 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       gamelab_setSizes:
+        text: Встановити {SPRITE} {PROPERTY} до {N}%
         options:
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
             '"height"': висота
+      gamelab_setTint:
+        text: змінити колір {THIS} до {COLOR}
+      gamelab_setupSim:
+        text: |-
+          моделювання установки з
+          {SPRITE1N}{SPRITE1COSTUME}Швидкість{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Швидкість{SPRITE2SPEED}
+          Збір
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: Показати титульний екран {BREAK} Заголовок {TITLE} Текст {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} Натиснув"
         options:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_subjectSpritePointer:
+        text: натиснув {SPRITE}
       gamelab_turn:
+        text: Свою чергу {SPRITE} {DIRECTION} {N} Градусів
         options:
           DIRECTION:
             '"right"': праворуч
             '"left"': ліворуч
+      gamelab_whenDownArrow:
+        text: при натисканні стрілки вниз
       gamelab_whenKey:
         text: коли натиснуто {KEY}
         options:
@@ -1082,7 +1235,18 @@ uk:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenLeftArrow:
+        text: коли натиснуто ліву стрілку
+      gamelab_whenRightArrow:
+        text: при натисканні стрілки праворуч
+      gamelab_whenTouching:
+        text: Коли {SPRITE1} Штрихи {SPRITE2}
+      gamelab_whenUpArrow:
+        text: при натисканні стрілки вгору
+      gamelab_whileDownArrow:
+        text: при натисканні стрілки вниз
       gamelab_whileKey:
+        text: в той час як [KEY]натиснув[0]
         options:
           KEY:
             '"up"': вгору
@@ -1094,6 +1258,31 @@ uk:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whileLeftArrow:
+        text: у той час як натиснута ліва стрілка
+      gamelab_whileRightArrow:
+        text: у той час як натиснута стрілка праворуч
+      gamelab_whileTouching:
+        text: Хоча {SPRITE1} зворушливо {SPRITE2}
+      gamelab_whileUpArrow:
+        text: у той час як натиснута стрілка вгору
+      gamelab_xLocationOf:
+        text: x координата {SPRITE}
+      gamelab_yLocationOf:
+        text: y координата {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: Спрайт {SPRITE} Починається {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'додати навчальні дані: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": об'єкта
+            "{x: 200, y: 100}": риби
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": риби
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": не риба
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": мітка
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": не мітка
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1114,6 +1303,8 @@ uk:
             "{x: 300, y: 100}": верхній правий кут
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
+      Mikelab_getNext:
+        text: отримати наступний об'єкт
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1127,10 +1318,13 @@ uk:
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
       Mikelab_groupChangePropBy:
+        text: Змінити {PROPERTY} з {SELECT} {COSTUME} за {VAL}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
           PROPERTY:
             '"scale"': розмір
             '"rotation"': поворот
@@ -1151,11 +1345,21 @@ uk:
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
       Mikelab_groupDestroy:
+        text: Видалити {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
+      Mikelab_groupDisplace:
+        text: Всі {COSTUME} Блок {COSTUME2} від переміщення
+      Mikelab_groupEdgesDisplace:
+        text: ребра блок {COSTUME} з рухомим
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}Це {PROPERTY}"
         options:
+          SELECT:
+            '"average"': середньому
+            '"this"': це
           PROPERTY:
             '"scale"': розмір
             '"rotation"': поворот
@@ -1163,21 +1367,29 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupRemoveAllBehaviors:
+        text: Зупинити {SELECT} {COSTUME} Поведінки
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} Зупиняється {BEHAVIOR}"
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
       Mikelab_groupRemoveTint:
+        text: зняти колір з {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
       Mikelab_groupSetProp:
+        text: Встановити {PROPERTY} з {SELECT} {COSTUME} до {VAL}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
           PROPERTY:
             '"scale"': розмір
             '"rotation"': поворот
@@ -1185,9 +1397,29 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupSetTint:
+        text: змінити колір {SELECT} {COSTUME} до {COLOR}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
+      Mikelab_groupWhenClickedOn:
+        text: коли натиснув {COSTUME}
+      Mikelab_groupWhenXTouchesY:
+        text: Коли{COSTUME} Штрихи {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: при натисканні на {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          Хоча{COSTUME} зворушливо {COSTUME2}
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} в даний час {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: видалити {TRASH}
+        options:
+          TRASH:
+            object: об'єкта
+            fish: риби
       Mikelab_ifDanceIs:
         text: |-
           якщо {SPRITE} виконує рух {DANCE}
@@ -1205,10 +1437,44 @@ uk:
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
+      Mikelab_ifLabel:
+        text: |-
+          Якщо {DANCE}
+          Зробити {DO1} Ще {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риби
+            MOVES.Clown: мітка
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          Якщо розпізнати об'єкт як {DANCE}
+          Зробити {DO1} Ще {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риби
+            MOVES.Clown: мітка
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          Якщо розпізнати об'єкт як {DANCE}
+          Зробити {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риби
+            MOVES.Clown: не мітка
+      Mikelab_locationAt:
+        text: 'місце розташування x: {X} Y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: випадковий колір
+      Mikelab_removeBehaviorSimple:
+        text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: повторювати завжди
+      Mikelab_sendBad:
+        text: пересунути об' єкт ліворуч
+      Mikelab_sendGood:
+        text: пересунути об' єкт праворуч
       Mikelab_setBG:
         options:
           BG:
@@ -1227,6 +1493,7 @@ uk:
             '"right"': праворуч
             '"left"': ліворуч
       Mikelab_sprite:
+        text: Новий {COSTUME} спрайт на {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -1263,6 +1530,14 @@ uk:
             '"a"': А
             '"s"': Пд
             '"d"': Г
+      Mikelab_whenMouseClicked:
+        text: при натисканні миші
+      Mikelab_whenYesNoClicked:
+        text: коли натиснув {KEY}
+        options:
+          KEY:
+            '"yes"': так
+            '"no"': ні
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1270,34 +1545,111 @@ uk:
             '"down"': стрілка вниз
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
+      Mikelab_xLocationOf:
+        text: x координата {SPRITE}
+      Mikelab_yLocationOf:
+        text: y координата {SPRITE}
       RyanLab_moveForward:
         text: рухатись вперед
       RyanLab_turnLeft:
         text: повернути ліворуч
       RyanLab_turnRight:
         text: повернути праворуч
+      SpriteLab2Beta_spriteSay:
+        text: Спрайт {SPRITE} Сказати {TEXT} Для {SECONDS} Секунд
+      Vector_createSpriteWith:
+        text: |-
+          створіть спрайт
+          зробити{STATEMENT}
+      Vector_log:
+        text: повідомлення журналу {MESSAGE}
       Vector_positionCenter:
         text: посередині
+      Vector_push:
+        text: встановити швидкість {VECTOR}
+      Vector_randomLocation:
+        text: випадкове розташування
+      Vector_setColor:
+        text: набір кольору {COLOR}
       Vector_setSize:
         text: встановити ширину {WIDTH} висоту {HEIGHT}
+      Vector_teleportTo:
+        text: встановити положення {POSITION}
+      Vector_vectorNorth:
+        text: на північ
+      Vector_where:
+        text: Кожен спрайт, де {PROPERTY} є {VALUE} Зробити{STATEMENT}
+        options:
+          PROPERTY:
+            "'shapeColor'": колір
+      aalab_addBehaviorForDuration:
+        text: спрайт алаб {SPRITE} Починається {BEHAVIOR} Для {SECONDS} Секунд
+      aalab_addBehaviorUntilBoolean:
+        text: Спрайт {SPRITE} Починається {BEHAVIOR} Поки {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: новий спрайт під назвою{SPRITE_NAME} з костюмом{ANIMATION_NAME} в локації{LOCATION}
       aalab_goToScene:
+        text: перейти до сцени {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Переміщення {SPRITE} {DISTANCE} Пікселів {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
+      aalab_prompt:
+        text: задати питання {MESSAGE}
       aalab_scene:
+        text: сцена {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_setupStory:
+        text: історія налаштування
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': показати
-            '"hide"': приховати
+            '"random"': випадковий
+      binary_drawBin:
+        text: залучити двійковий {BIN}
+      binary_drawBinScreen:
+        text: |-
+          намалювати екран
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: розіграш десяткового {DEC}
+      binary_drawPixelHere:
+        text: набір пікселів {VAL}
+        options:
+          VAL:
+            '0': вимкнено
+            '1': далі
+            '"toggle"': перемикач
+      binary_drawString:
+        text: намалювати рядок {STR}
+      binary_goTo:
+        text: перейти до {LOC}
+      binary_goToHome:
+        text: перейти до верхньої лівої частини
+      binary_gridSize:
+        text: набір розмір сітки {SIZE}
       binary_move:
+        text: рухатися {DIR}
         options:
           DIR:
             '"up"': вгору
@@ -1347,6 +1699,8 @@ uk:
             "'sand'": пісок
             "'darkPrismarine'": темний призмарин
             "'seaLantern'": морський ліхтар
+      craft_log:
+        text: повідомлення журналу {MESSAGE}
       craft_moveForward:
         text: рухатись вперед
       craft_placeBlock:
@@ -1358,7 +1712,6 @@ uk:
             '"stoneBricks"': кам'яні цеглини
             '"mossyStoneBricks"': кам'яні цеглини з мохом
             '"crackedStoneBricks"': тріснуті кам'яні цеглини
-            '"decorativeStoneBricks"': декоративні кам'яні цеглини
             '"blueCoralBlock"': блок синього коралу
             '"pinkCoralBlock"': блок рожевого коралу
             '"magentaCoralBlock"': блок фіолетового коралу

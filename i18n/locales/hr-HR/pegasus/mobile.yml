@@ -11,12 +11,12 @@
   csedweek_dates: "8. - 14. prosinca 2014."
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Sat Kodiranja</a> dolazi. Pozivamo sve učitelje i organizatore, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planirajte vaš Sat Kodiranja</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Jeste li učitelj Informatike? Pogledajte i druge CSEdWeek resurse</a>'
+  csedweek_banner_teachers_text: "Jeste li učitelj Informatike? Pogledajte i druge CSEdWeek resurse"
   n_have_learned_an_hoc: "<h1>Pokušaj</h1> <h2>Sat Kodiranja</h2> <h3># posluženih</h3>"
   anybody_can_learn: "Svatko može naučiti."
   learn_now: "Nauči sad"
   petition_message: "Svi učenici u svim školama trebaju imati priliku naučiti informatiku"
   petition_sign_message: 'Ako se slažeš, upiši svoje ime. Pridruži se # ostalih.'
-  petition_sign_message_support: 'Ako nas podržavaš, upiši svoje ime. Pridruži se # ostalima.'
   petition_join_others: 'Pridruži se # ostalima'
   name: "Ime"
   email: "E-mail"
@@ -68,6 +68,7 @@
   enter_valid_email: "Unesite ispravnu e-mail adresu, molim"
   get_a_certificate_message: "Poslat ćemo ti potvrdu i obavijest o tome kako možeš <a href='/learn/beyond'>Naučiti više nakon One Hour</a>"
   get_a_certificate_message_after: "Klikni na certifikat da ga preuzmeš ili ispišeš. Nastavi s našim <a href='http://studio.code.org'>drugim tečajevima</a>, ili istraži više mogućnosti na <a href='/learn/beyond'>Saznaj više od Jednog sata kodiranja</a>."
+  get_a_certificate_message_after_markdown: "Klikni na certifikat da ga preuzmeš ili ispišeš. Nastavi s našim [drugim tečajevima](http://studio.code.org), ili istraži više mogućnosti na [Saznaj više od Jednog sata kodiranja](/learn/beyond)."
   thanks_for_submitting: "Hvala na prijavi!"
   if_you_enjoyed: "Ako si uživao/la učeći, pozovi prijatelje da probaju također! Želimo cijeli svijet da nauči."
   personalize_certificate: "Osobno uredi svoju potvrdu"
@@ -195,6 +196,7 @@
   homepage_action_text_learn: "Krenite s učenjem"
   homepage_action_text_signpetition: "Potpišite peticiju"
   homepage_signpetition_dropdown: "Slažem se &#x25BE;"
+  homepage_signpetition_dropdown_text: "Slažem se"
   homepage_banner_text_prizes: 'Sat Kodiranja ponovno dolazi, Prosinac 7-13. '
   homepage_banner_link_prizes: 'Pridruži se najvećem edukacijskom događaju u povijesti. '
   homepage_banner_text_main: "Code.org i College Board udružili su se da poboljšalju raznolikosti u računarstvu."
@@ -890,6 +892,8 @@
   header_courses: "Tečajevi"
   header_project_gallery: "Projekti"
   header_educate_hoc: "Hour of Code"
+  header_legal_privacy: "Pravila privatnosti"
+  header_legal_tos: "Uvjeti"
   user_header_label: "Zdravo, %{username}"
   user_header_settings: "Moj račun"
   user_header_logout: "Odjava"
@@ -899,6 +903,7 @@
   user_header_flappy: "Flappy"
   applab_tile_start_tutorial: "Početak"
   hoc_overview_start_tutorial: "Početak"
+  hoc_overview_more_resources: "Za više informacija o interakciji s virtualnom učionicom, pogledajte naš vodič za organiziranje [virtualnog Sata kodiranja](https://hourofcode.com/us/how-to/virtual). Učenicima s ograničenom tehnologijom ili bez mogućnosti povezivanja na internet podijelite ovaj paket s [izvanmrežnim aktivnostima za Sat kodiranja](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc2018_creativity_create: "Stvori"
   hoc2018_mc_start: "Početak"
   hoc2018_mc_video_title_inspire_girl: "Inspiriraj djevojku"
@@ -908,3 +913,4 @@
   hoc2018_dance_teacher_resources_tile1_button: "Nastavni plan"
   hoc2018_dance_teacher_resources_tile2_button: "Izvanmrežna aktivnost"
   hoc2018_dance_amazon_about_future_engineer_button: "Doznaj više"
+  footer_powered_by_aws: "Potpomognuto s Amazon Web Services"

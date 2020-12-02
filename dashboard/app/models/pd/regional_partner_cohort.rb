@@ -19,7 +19,15 @@
 #  index_pd_regional_partner_cohorts_on_summer_workshop_id   (summer_workshop_id)
 #
 
-class Pd::RegionalPartnerCohort < ActiveRecord::Base
+class Pd::RegionalPartnerCohort < ApplicationRecord
+  ALLOWED_COURSES = [
+    Pd::Workshop::COURSE_CSP,
+    Pd::Workshop::COURSE_CSD,
+    Pd::Workshop::COURSE_ECS,
+    Pd::Workshop::COURSE_CS_IN_A,
+    Pd::Workshop::COURSE_CS_IN_S
+  ]
+
   enum role: {
     teacher: 0,
     facilitator: 1
@@ -33,13 +41,6 @@ class Pd::RegionalPartnerCohort < ActiveRecord::Base
   belongs_to :regional_partner
   belongs_to :summer_workshop, class_name: 'Pd::Workshop'
 
-  ALLOWED_COURSES = [
-    Pd::Workshop::COURSE_CSP,
-    Pd::Workshop::COURSE_CSD,
-    Pd::Workshop::COURSE_ECS,
-    Pd::Workshop::COURSE_CS_IN_A,
-    Pd::Workshop::COURSE_CS_IN_S
-  ]
   validates :course, presence: true, inclusion: {in: ALLOWED_COURSES, allow_blank: true}
 
   # Year format: YYYY-YYYY, e.g. "2016-2017"

@@ -83,9 +83,6 @@ bs:
             MOVES.Kick: Zvijezda
             MOVES.ThisOrThat: Ovo ili ono
             MOVES.Rest: Nijedno
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} radi {MOVE} {DIR} zauvijek"
         options:
@@ -104,9 +101,6 @@ bs:
             MOVES.Kick: Zvijezda
             MOVES.ThisOrThat: Ovo ili ono
             MOVES.Rest: Nijedno
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: izmjeni {SPRITE} {PROPERTY} za {VAL}
         options:
@@ -178,9 +172,6 @@ bs:
             MOVES.XArmsUp: Razvuci
             MOVES.ThisOrThat: Ovo ili ono
             MOVES.Rest: Nijedno
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} uradi {MOVE} {DIR} jednom"
         options:
@@ -209,9 +200,6 @@ bs:
             MOVES.XArmsUp: Razvuci
             MOVES.ThisOrThat: Ovo ili ono
             MOVES.Rest: Nijedno
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         text: 'svako {N} {UNIT} '
         options:
@@ -336,6 +324,7 @@ bs:
           FORMAT:
             '"border"': ivica
             '"inner"': unutar kvadrata
+            '"diamond"': dijamant
             '"circle"': krug
             '"grid"': mreža
             '"row"': red
@@ -398,26 +387,6 @@ bs:
           napravi {N} novi {COSTUME}
           unutar {LAYOUT}
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           COSTUME:
             '"ALIEN"': Vanzemaljci
             '"BEAR"': Medvjedi
@@ -806,6 +775,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenKey:
         text: kada je pritisnuta {KEY} tipka
@@ -835,6 +805,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenPeak:
         text: kada {RANGE} vrhunac
@@ -847,6 +818,10 @@ bs:
         text: postavka
       Dancelab_whenSetup2:
         text: postavka
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_changePropBy:
         text: izmjeni {SPRITE} {PROPERTY} za {VAL}
         options:
@@ -867,6 +842,38 @@ bs:
             '"rotation"': rotacija
             '"direction"': smijer kretanja
             '"tint"': nijanse
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} skoči na {LOCATION}"
       gamelab_keyPressed:
@@ -898,6 +905,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_mirrorSprite:
         options:
@@ -908,6 +916,8 @@ bs:
         text: nasumična boja
       gamelab_randomColor:
         text: nasumična boja
+      gamelab_repeatForever:
+        text: ponavljaj zauvijek
       gamelab_setBackground:
         text: podesi boju pozadine {COLOR}
       gamelab_setBackgroundImage:
@@ -1104,23 +1114,10 @@ bs:
         text: okreni desno
       Vector_positionCenter:
         text: centralna
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': prikaži
-            '"hide"': sakrij
+            '"random"': slučajno odabran
       binary_move:
         options:
           DIR:

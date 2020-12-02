@@ -74,8 +74,10 @@ require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper
@@ -111,7 +113,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
-    seen_oauth_connect_dialog
+    parent_email_banner_dismissed
   )
 
   # Include default devise modules. Others available are:
@@ -121,6 +123,8 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
+
+  scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
 
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
@@ -145,7 +149,7 @@ class User < ActiveRecord::Base
 
   # courses a facilitator is able to teach
   has_many :courses_as_facilitator,
-    class_name: Pd::CourseFacilitator,
+    class_name: 'Pd::CourseFacilitator',
     foreign_key: :facilitator_id,
     dependent: :destroy
 
@@ -177,13 +181,20 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Validate that a user with the same authentication credentials does not already exist.
+  validate on: :create, if: -> {uid.present?} do |user|
+    # If the user has a unique authentication ID, fail if there is an existing User with that ID.
+    other = User.find_by_credential(type: user.provider, id: user.uid)
+    user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
+  end
+
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :user_school_infos
-  after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
+  after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_one :circuit_playground_discount_application
@@ -192,6 +203,7 @@ class User < ActiveRecord::Base
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :sign_ins
   has_many :user_geos, -> {order 'updated_at desc'}
 
   before_validation :normalize_parent_email
@@ -200,6 +212,8 @@ class User < ActiveRecord::Base
   after_create :associate_with_potential_pd_enrollments
 
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
+
+  after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
   before_destroy :soft_delete_channels
 
@@ -211,6 +225,19 @@ class User < ActiveRecord::Base
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
+      )
+    end
+  end
+
+  # Enables/disables email notifications for the parent.
+  def save_parent_email_preference
+    if student? && parent_email.present?
+      EmailPreference.upsert!(
+        email: parent_email,
+        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        ip_address: parent_email_preference_request_ip,
+        source: parent_email_preference_source,
+        form_kind: nil
       )
     end
   end
@@ -359,13 +386,18 @@ class User < ActiveRecord::Base
   attr_accessor :email_preference_source
   attr_accessor :email_preference_form_kind
 
+  attr_accessor :parent_email_update_only
+  attr_accessor :parent_email_preference_opt_in_required
+  attr_accessor :parent_email_preference_opt_in
+  attr_accessor :parent_email_preference_email
+  attr_accessor :parent_email_preference_request_ip
+  attr_accessor :parent_email_preference_source
+
   attr_accessor :data_transfer_agreement_required
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
-
-  has_many :gallery_activities, -> {order 'id desc'}
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
@@ -402,8 +434,8 @@ class User < ActiveRecord::Base
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
-  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -411,23 +443,31 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
-
-  def email_matches_for_oauth_upgrade
-    if user_type == User::TYPE_TEACHER
-      # The stored email must match the passed email
-      unless hashed_email == hashed_email_was
-        errors.add :base, I18n.t('devise.registrations.user.user_type_change_email_mismatch')
-        errors.add :email_mismatch, "Email mismatch" # only used to check for this error's existence
-      end
-    end
-    true
-  end
-
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
+
+  # Validations for adding parent email notifications
+  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
+  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
+
+  def parent_email_preference_opt_in_required?
+    # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
+    # user_type 'student' is the only type which supports have a parent_email associated with it.
+    parent_email_preference_opt_in_required == '1' && user_type == 'student'
+  end
+
+  def parent_email_update_only?
+    parent_email_update_only == '1' && user_type == 'student'
+  end
+
+  def parent_email_preference_setup
+    self.parent_email = parent_email_preference_email
+  end
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
   validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
@@ -590,11 +630,12 @@ class User < ActiveRecord::Base
     nil
   end
 
-  validate :presence_of_email, if: -> {teacher? && purged_at.nil?}
-  validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
+  validate :presence_of_email, if: :teacher_email_required?
+  validate :presence_of_email_or_hashed_email, if:
+      :email_or_hashed_email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
-  validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
+  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
   validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
 
   def requires_email?
@@ -745,18 +786,42 @@ class User < ActiveRecord::Base
   end
 
   def password_required?
+    # If the user is changing their password, then we should run all the password
+    # field verifications.
+    is_changing_password = password.present? || password_confirmation.present?
+    return true if is_changing_password
+
     # Password is not required if the user is not managing their own account
     # (i.e., someone is creating their account for them or the user is using OAuth).
     return false unless managing_own_credentials?
 
     # Password is required for:
-    # New users with no encrypted_password set and users changing their password.
-    new_without_password = !persisted? && encrypted_password.blank?
-    is_changing_password = password.present? || password_confirmation.present?
-    new_without_password || is_changing_password
+    # New users with no encrypted_password set
+    !persisted? && encrypted_password.blank?
   end
 
-  def email_required?
+  # FND-1130: This field will no longer be required
+  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
+
+  # Determines if email is a required field for a teacher.
+  # Currently, we have some old teacher accounts which don't have an email
+  # address associated with them because it wasn't required when they were
+  # created. Those old accounts are allowed to skip the email validation.
+  def teacher_email_required?
+    # non-teachers are not relevant to this method.
+    return false unless teacher? && purged_at.nil?
+
+    # new teacher accounts should always require an email
+    return true unless created_at.present?
+
+    # existing accounts created after the email requirement must have an email.
+    # FND-1130: The created_at exception will no longer be required
+    # Remove the created_at > '2016-06-14 00:00:00' once all teachers have
+    # emails.
+    return created_at.to_datetime > DATE_TEACHER_EMAIL_REQUIREMENT_ADDED
+  end
+
+  def email_or_hashed_email_required?
     return true if teacher?
     return false if manual?
     return false if sponsored?
@@ -887,6 +952,8 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
+    # teachers do not need another adult to have access to their account.
+    self.parent_email = nil
 
     new_attributes = email_preference.nil? ? {} : email_preference
 
@@ -943,7 +1010,7 @@ class User < ActiveRecord::Base
       return nil if login.size > max_credential_size || login.utf8mb4?
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
-      from("users IGNORE INDEX(index_users_on_deleted_at)").where(
+      ignore_deleted_at_index.where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
@@ -965,25 +1032,21 @@ class User < ActiveRecord::Base
   def self.authenticate_with_section_and_secret_words(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_words: params[:secret_words],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_words: params[:secret_words],
+      followers: {section: section}
+    )
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_picture_id: params[:secret_picture_id],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_picture_id: params[:secret_picture_id],
+      followers: {section: section}
+    )
   end
 
   def user_levels_by_level(script)
@@ -1192,10 +1255,10 @@ class User < ActiveRecord::Base
     return false if sections_as_student.empty?
 
     # Can't hide a script that isn't part of a course
-    course = script.try(:course)
-    return false unless course
+    unit_group = script.try(:unit_group)
+    return false unless unit_group
 
-    get_student_hidden_ids(course.id, false).include?(script.id)
+    get_student_hidden_ids(unit_group.id, false).include?(script.id)
   end
 
   # @return {Hash<string,number[]>|number[]}
@@ -1213,10 +1276,10 @@ class User < ActiveRecord::Base
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(course = nil)
-    return [] if !teacher? && course.nil?
+  def get_hidden_script_ids(unit_group = nil)
+    return [] if !teacher? && unit_group.nil?
 
-    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
+    teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(unit_group.id, false)
   end
 
   def student?
@@ -1404,6 +1467,7 @@ class User < ActiveRecord::Base
       raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
       self.child_users = unique_users
       send_devise_notification(:reset_password_instructions, raw, {to: email})
+      return self
     rescue ArgumentError
       errors.add :base, I18n.t('password.reset_errors.invalid_email')
       return nil
@@ -1470,12 +1534,12 @@ class User < ActiveRecord::Base
   end
 
   def assigned_script?(script)
-    section_scripts.include?(script) || section_courses.include?(script&.course)
+    section_scripts.include?(script) || section_courses.include?(script&.unit_group)
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    scripts.map(&:course).compact.concat(section_courses).uniq
+    scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1546,10 +1610,10 @@ class User < ActiveRecord::Base
     primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    unit_group_units_script_ids = courses_as_student.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
 
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
@@ -1581,7 +1645,7 @@ class User < ActiveRecord::Base
 
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:course).compact.uniq
+    all_sections.map(&:unit_group).compact.uniq
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
@@ -1593,8 +1657,8 @@ class User < ActiveRecord::Base
     all_sections.each do |section|
       if section.script.present?
         all_scripts << section.script
-      elsif section.course.present?
-        all_scripts.concat(section.course.default_scripts)
+      elsif section.unit_group.present?
+        all_scripts.concat(section.unit_group.default_scripts)
       end
     end
 
@@ -1615,6 +1679,15 @@ class User < ActiveRecord::Base
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
+  end
+
+  def first_sign_in_date
+    sign_ins.find_by(sign_in_count: 1)&.sign_in_at
+  end
+
+  def days_since_first_sign_in
+    return nil if first_sign_in_date.nil?
+    (DateTime.now - first_sign_in_date.to_datetime).to_i
   end
 
   # This method is meant to indicate a user has made progress (i.e. made a milestone
@@ -1661,11 +1734,12 @@ class User < ActiveRecord::Base
 
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
-  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
+  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false, time_spent: nil)
     new_level_completed = false
     new_csf_level_perfected = false
 
     user_level = nil
+    script = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
         where(user_id: user_id, level_id: level_id, script_id: script_id).
@@ -1695,10 +1769,13 @@ class User < ActiveRecord::Base
         user_level.level_source_id = level_source_id
       end
 
+      total_time_spent = user_level.calculate_total_time_spent(time_spent)
+      user_level.time_spent = total_time_spent if total_time_spent
+
       user_level.atomic_save!
     end
 
-    if pairing_user_ids
+    if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)
       pairing_user_ids.each do |navigator_user_id|
         navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,
@@ -1708,7 +1785,8 @@ class User < ActiveRecord::Base
           submitted: submitted,
           level_source_id: level_source_id,
           pairing_user_ids: nil,
-          is_navigator: true
+          is_navigator: true,
+          time_spent: time_spent
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(
@@ -1917,12 +1995,12 @@ class User < ActiveRecord::Base
       sections.find {|section| section.script_id == script.id}
   end
 
-  def stage_extras_enabled?(script)
-    return false unless script.stage_extras_available?
+  def lesson_extras_enabled?(script)
+    return false unless script.lesson_extras_available?
     return true if teacher?
 
     sections_as_student.any? do |section|
-      section.script_id == script.id && section.stage_extras
+      section.script_id == script.id && section.lesson_extras
     end
   end
 
@@ -2183,10 +2261,46 @@ class User < ActiveRecord::Base
     end
   end
 
+  # The number of times a user has attempted to join a section in the last 24 hours
+  # Returns nil if no section join attempts.
+  def num_failed_section_attempts
+    properties['section_attempts']
+  end
+
+  # There are two possible states in which we would want to reset the section attempt values
+  # 1) User has never joined a section and thus the values must be initialized
+  # 2) 24 hours have passed since the user last attempted to join a section
+  def reset_section_attempts?
+    !num_failed_section_attempts || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
+  end
+
+  def reset_failed_section_attempts
+    properties['section_attempts'] = 0
+    properties['section_attempts_last_reset'] = DateTime.now.to_s
+    save(validate: false)
+  end
+
+  # Users must complete a captcha when joining a section if they have joined 3 or more in the past 24 hours
+  def display_captcha?
+    if reset_section_attempts?
+      reset_failed_section_attempts
+    end
+    num_failed_section_attempts >= 3
+  end
+
+  def increment_section_attempts
+    # Failed section attemps reset after 24 hours
+    if reset_section_attempts?
+      reset_failed_section_attempts
+    end
+    properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
+    save(validate: false)
+  end
+
   private
 
   def hidden_stage_ids(sections)
-    return sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
+    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
   def hidden_script_ids(sections)

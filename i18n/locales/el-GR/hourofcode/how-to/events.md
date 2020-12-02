@@ -4,7 +4,7 @@ title: Οδηγίες για εκδηλώσεις στην Ώρα του Κώδ�
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Πώς να οργανώσετε μία εκδήλωση για την Ώρα του Κώδικα
 
 ### Get your entire school or community involved in an Hour of Code!
 
@@ -22,7 +22,7 @@ title: Οδηγίες για εκδηλώσεις στην Ώρα του Κώδ�
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **Άλλες ιδέες για εκδηλώσεις**: 
     - Invite a local industry leader to discuss his or her work involving computer science.
     - Invite a local politician and have students teach him or her how to code.
     - Have a group of students demonstrate an unplugged activity.

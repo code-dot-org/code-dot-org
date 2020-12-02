@@ -1,0 +1,47 @@
+name 'cspu5_assess3_robot_2018_2019_virtual'
+right 'https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png,150'
+wrong 'https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png,150'
+wrong 'https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png,150'
+wrong 'https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png,150'
+wrong 'https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png,150'
+
+markdown <<MARKDOWN
+The following question asks you to reason about pseudocode involving loops, boolean operators, and the “robot instructions” from the AP Exam Reference guide.  We’ve replicated the relevant sections below to use as reference.
+
+![](https://images.code.org/58fcd9b3e0c6fe44726b9498e83b71aa-image-1477184609147.png)
+
+![](https://images.code.org/d7c26b2332fdec035a2439b41a3609f0-image-1477185258648.png)
+
+![](https://images.code.org/e059a7c5975f69408b5a82da3609eff1-image-1477184621470.png)
+
+A robot is represented as a triangle in a grid of squares.  The initial position and direction of the robot is shown below.  The robot can move onto a white square, but cannot move into a black region.
+
+![](https://images.code.org/6c0e6c8c7ab6f931fd04dd23a2af0cba-image-1477184633672.png)
+
+Consider the following program:
+
+    REPEAT 4 TIMES
+    {
+        REPEAT UNTIL (NOT CAN_MOVE (forward))
+        {
+            MOVE_FORWARD ()
+        }
+        REPEAT UNTIL ( CAN_MOVE(forward) )
+        {
+            ROTATE_LEFT ()
+        }
+    }
+    
+After running the code above, what will the ending location and direction of the robot be?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 11**
+
+Putting the code into words : inside the "REPEAT 4 TIMES" loop, the instructions for the robot is to move forward until it can no longer move forward (hits a black block). Then, it will turn left until it is able to move forward (facing a white block). Going through these instructions four times:
+
+* 1: The robot moves east 2 squares, and turns till it faces west
+* 2: The robot moves west 2 squares (where it started) and turns to face south
+* 3: The robot moves south 3 squares and faces east
+* 4: The robot moves east 3 squares and faces north
+MARKDOWN

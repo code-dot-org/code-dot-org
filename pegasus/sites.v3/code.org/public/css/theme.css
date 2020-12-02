@@ -85,7 +85,7 @@ body {
 
 #pagefooter {
   width: 100%;
-  height: 80px;
+  height: 170px;
   padding: 20px;
   overflow: hidden;
   background-color: #7665a0;
@@ -104,6 +104,11 @@ body {
 #pagefooter .dim {
   display: inline-block;
   opacity: 0.5;
+}
+
+.powered-by-aws {
+  width: 100%;
+  margin-top: 12px;
 }
 
 .whitefooterlink:link {
@@ -142,35 +147,6 @@ a.user-menu-link {
 .user_menu a:hover,
 .user_menu a:active  {
   text-decoration: none;
-}
-
-#user_hero #welcome {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-size: 18px;
-  font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
-}
-
-#user_hero #student_progress {
-  font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero #left_off {
-  font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero #classroom {
-  font-family: 'Gotham 5r', sans-serif;
-  font-weight: normal;
-  font-size:16px;
-  margin-top:10px;
 }
 
 #sign_in_or_user .button-signin {

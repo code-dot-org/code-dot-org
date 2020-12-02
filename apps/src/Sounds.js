@@ -266,7 +266,7 @@ Sounds.prototype.registerByFilenamesAndID = function(soundPaths, soundID) {
 Sounds.prototype.register = function(config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
-  sound.preload();
+  sound.preloadFile();
   return sound;
 };
 
@@ -329,11 +329,31 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
 };
 
 /**
- * @param {!string} url
+ * @param {ArrayBuffer} bytes of the sound to play.
+ * @param {object} playbackOptions config for the playing of the sound.
+ */
+Sounds.prototype.playBytes = function(bytes, playbackOptions) {
+  if (this.isMuted) {
+    return;
+  }
+  let soundConfig = {};
+  soundConfig.forceHTML5 = playbackOptions && playbackOptions.forceHTML5;
+  soundConfig.allowHTML5Mobile =
+    playbackOptions && playbackOptions.allowHTML5Mobile;
+  soundConfig.playAfterLoad = true;
+  soundConfig.playAfterLoadOptions = playbackOptions;
+  soundConfig.bytes = bytes;
+  let sound = new Sound(soundConfig, this.audioContext);
+  sound.preloadBytes();
+  sound.play();
+};
+
+/**
+ * @param {!string} id of the sound. This is a URL for sounds played via playURL.
  * @returns {boolean} whether the given sound is currently playing.
  */
-Sounds.prototype.isPlayingURL = function(url) {
-  var sound = this.soundsById[url];
+Sounds.prototype.isPlaying = function(id) {
+  var sound = this.soundsById[id];
   if (sound) {
     return sound.isPlaying();
   }

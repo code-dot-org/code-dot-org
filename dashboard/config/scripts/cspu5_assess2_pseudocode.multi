@@ -1,27 +1,36 @@
 name 'cspu5_assess2_pseudoCode'
-encrypted '65E6TyPBn/kpC6e8cXKdhiuNd7hVLznRYhM7bo43Uwxt0G8DMhiAhAP/78A2
-aECbiSVKJdomCxFKCmBzvUnQuAFYZZG7QTEawrvfsh/0a/k4k5476H7zJi2h
-0YME7gro/P4AI8c5rd82UiyrnY/VhA/uwOXt9vN9QKHbGIpXp4NT8fauhWoL
-+oRgp9I8eEl8PlcVqnAYhivotMAv0JP3JORd8m9MwuYwgIpyW1QXLAy+jpVJ
-IYKb96Ees5OUuyOYn8TE+bfPmWrOrEAvpmyL5FvvbzI85gziz/vu5wMfjxiX
-H/kbjd3cgVFqL7/2zHL51zjUy3qf5vQPOVHdj7AJW9Y6b1F47K6Ybx2JHT+w
-uyNEq1vCrXY795HqhqVRd5CsDcIFPXNRnJf7MIbZQ1sGVRnOb9sPZtRCB31N
-B7IWadvoyP1Xt0O0bfD1XvS5eQtiwoGE0nSQtUXfy8jOFOvqos/8Dtk0pA1Q
-2PqS/ox6t0xdmkV39peiQTpWlJ/8jOhCRhzxPHYDtVUmKYiA722P4lQEyd9w
-nYSVB6eUqrS/KS+MvbKERkxd46jlrDNbo3U0ALznsiwMJlODkKUjav282DDR
-fhg2QiW9x4B9/o4fx80yPg42hmiXYkjWq0h3K6CSiS5EFbMPy2xLeqHP43v/
-Er6Jh487wmtV+Hu3iqVgzlYHT8mJ6INmdAf+LT9hgdGyBZgnuWVc0yQ03JCW
-zal5ro7u6ZiJcQCxT1uk2LL5tXyxjjyI1XFVmhYHyZqAWxSvPwxnznW3DIdW
-ynnQ74ONNVB/6sTxw4XnhwTXyMQ777Ap7zzCsuZ1FQhwtqTVmYybHBkkj48q
-PDewHes0pmdw5LUakDpIpwEQPJJu5Ka15dJfgpE3BCwKxAWhpm7vDsPaUu+C
-wqqeEQffQE+A7BBZ4Nr+O8WegfTU3KP9a9Fi8kxaslnBgp4zOiaLjcGIbPTS
-aDRMQOH+fyEj4yiuSkBGDV7mqMoUHEFlcDSQ9gd31ve1ka+IgB2qdOV4nqXb
-DjzR+04UUEz/GcOdLWh+wEtqn46EvFHm5tm0BZ1yaN7medn+Ohl7wxEc0Rqj
-20WTtO0j/3Mcb59JC9TSJqPk2/Nvn5RsQOz7TQ3RsmJKCQAhCYavFY34J1lK
-dakyUlf+TGBjWC4dB7AoFG2sGBHSfxKu04aYl/rp96zFrmzBCoZDGXYk5qDF
-xgY4JK3CmKTWuQcNdYoQYE3U/ofVudMEqqEkGMvuyg1GgDEx/kBTMwkf5m81
-hHPcidF5qZh5v4OGEs5xd1MMPs4wSc31M5cEKyWKn1zA/oGU1EMik+bXtqYw
-ngC5cvMq9uMzpyDDPalK6LfubJ9qR602+Dnp4UuPfwhDRF4HCba4ZuhCiua3
-8HxKNrQuqMWqy3qtOwu8+uQjmSesjn3LYtJch0WrPWJUqXl1wu0NBKeuCOXm
-C++HabqXeUeR3o1gqZqgKbm0mA6SovzD
-'
+editor_experiment ''
+right '`You passed!`'
+wrong '`Time to start studying again!`'
+wrong '`You passed` and `Time to start studying again! `'
+wrong 'Nothing will be displayed'
+wrong 'An error will occur on line 7; you cannot have an IF inside an ELSE statement'
+
+markdown <<MARKDOWN
+Consider the following segment given in pseudo code (see reference from previous question):
+
+    IF (grade >= 70)
+    {
+        DISPLAY(“You passed!”)
+    } 
+    ELSE 
+    {
+        IF(grade <= 70){
+          DISPLAY(“Time to start studying again!”)
+        }
+    }
+    
+    
+What will be displayed if grade is set to 70?
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lessons 8, 9** -- nested if similar to else-if
+
+Going through the code line by line if variable grade is set to 70:
+
+* The IF statement checks to see if grade is greater than or equal to 70.
+* Since 70 = 70, the condition is true and the code inside the first IF statement will be executed.
+* "You passed!" is displayed.
+MARKDOWN

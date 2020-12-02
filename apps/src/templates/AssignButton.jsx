@@ -81,6 +81,7 @@ class AssignButton extends React.Component {
       <div>
         <div style={styles.buttonMargin}>
           <Button
+            __useDeprecatedTag
             color={Button.ButtonColor.orange}
             text={i18n.assignToSection()}
             icon="plus"
@@ -105,7 +106,6 @@ export const UnconnectedAssignButton = AssignButton;
 
 export default connect(
   state => ({
-    sections: state.teacherSections.sections,
     hiddenStageState: state.hiddenStage
   }),
   {

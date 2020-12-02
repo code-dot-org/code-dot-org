@@ -7,17 +7,18 @@
   "properties": {
     "instructions_important": "false",
     "allow_user_uploads": "false",
-    "submittable": "false",
+    "submittable": "true",
     "peer_reviewable": "false",
     "optional": "false",
-    "long_instructions": "# Question 1\r\n\r\n> **Note: this is just a test of my markdown skills**\r\n\r\n## What is Deeper Learning?\r\n* A series of reflections designed to help *new* facilitators become more familiar with the philosophy, design and tools that are relevant to the CSD or CSP curricula.\r\n    - facilitators construct responses to prompts based on common teacher questions\r\n    - responses are evaluated by a lead reviewer (experienced facilitators)\r\n    \r\n[Check out the exemplar](https://drive.google.com/open?id=1V9GXBOEiRFkKMRR60LEcSnESqRkgA4AkW_MwihOxt00)\r\n\r\n![facilitator development cycle](https://images.code.org/dc080a2ba6b18078558d7020e1a3457f-image-1544024888859.png)\r\n\r\n<h4>\r\n\r\n</h4> <details>\r\n    <summary> Learn more! </summary>\r\n    <br>\r\n     some additional information could be placed here\r\n</details></h4>\r\n\r\n> Question:  Is water wet?\r\n",
+    "long_instructions": "# Question 1\r\n\r\n### **Note: this is just a test of my markdown skills**\r\n\r\n## What is Deeper Learning?\r\n* A series of reflections designed to help *new* facilitators become more familiar with the philosophy, design and tools that are relevant to the CSD or CSP curricula.\r\n    - facilitators construct responses to prompts based on common teacher questions\r\n    - responses are evaluated by a lead reviewer (experienced facilitators)\r\n    \r\n[Check out the exemplar](https://drive.google.com/open?id=1V9GXBOEiRFkKMRR60LEcSnESqRkgA4AkW_MwihOxt00)\r\n\r\n![facilitator development cycle](https://images.code.org/dc080a2ba6b18078558d7020e1a3457f-image-1544024888859.png)\r\n\r\n<h4>\r\n\r\n</h4> <details>\r\n    <summary> Learn more! </summary>\r\n    <br>\r\n     some additional information could be placed here\r\n</details></h4>\r\n\r\n> Question:  Is water wet?\r\n\r\n![](https://images.code.org/39ecdc80bb8426d58f9754ca24cc7685-image-1583474104929.PNG)",
     "skip_dialog": true,
     "skip_sound": true,
-    "display_name": "Deeper Learning"
+    "display_name": "Deeper Learning",
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-12-04 21:11:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2018-12-05 15:51:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2018-12-05 19:56:03 +0000\",\"changed\":[],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-12-04 21:11:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2018-12-05 15:51:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2018-12-05 19:56:03 +0000\",\"changed\":[],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-02-18 18:11:16 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-02-18 18:29:31 +0000\",\"changed\":[],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-02-18 18:34:45 +0000\",\"changed\":[],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-02-18 18:36:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 01:33:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

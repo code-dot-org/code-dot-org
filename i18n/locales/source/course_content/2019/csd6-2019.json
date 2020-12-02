@@ -1,13 +1,49 @@
 {
+  "https://studio.code.org/s/csd6-2019/stage/1/puzzle/1": {
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "-   [Computing Innovations][0] - Exemplar ([PDF][1] \\| [DOCX][2])"
+  },
   "https://studio.code.org/s/csd6-2019/stage/1/puzzle/2": {
     "dsls": {
-      "markdown": "# Innovation Research\n\nChoose one of the following topics to look into. You'll want to find information about some of the most recent innovative computing devices related to your category.\n\n## Wearable Technology\nWearable technology includes any form of computing that is designed to be worn by the user, whether it's embedded into the clothing or worn as an accessory. Many wearables, such as smart pedometers, overlap somewhat with health and safety as the device is both wearable _and_ intended to help improve your personal health.\n\n## Health and Safety\nThe broad range topic includes both consumer technology (things that you might use to improve your health or safety) and professional technology (gear that a doctor or other professional might use).\n\n## Agriculture\nAgriculture might not be an obvious topic, but technological innovations have had a huge impact on how we approach farming. This includes incorporating computers into existing farm equipment, using sensors and robotics to monitor crops, and analyzing data to improve efficiency and sustainability.\n\n## Manufacturing\nAdvancements in rapid prototyping, industrial robotics, and automation have had a major impact on how goods are produced. Whether it's technology to enable affordable small-scale manufacturing (like 3D printers and laser cutters) or the integration of computers into factory work, there are many interesting areas to research here.\n\n## Art and Design\nThe intersection of artistic expression and computing can yield impressive and unexpected results. While you are less likely to find commercially available products related to art and design, you will find a wide variety of homemade creations that use all manners of computing devices in creative and expressive ways.\n\n## Smart Home\nThe dream of a house that understands and even anticipates your needs is closer than ever. Whether controlled explicitly through voice commands, or by using sensors to monitor and respond to changing conditions, smart home devices take care of any number of mundane or repetitive tasks around the house.\n\n\n# Research Considerations\n\nAs you research devices on your topic, keep the following considerations in mind:\n\n* Focus on hardware based solutions over software programs\n* Focus on recent innovations over old news\n* Follow what interests you\n\nIn addition to the recommended sites listed for each topic, consider looking towards the various crowd funding websites (such as Kickstarter and Indiegogo) to see the products that haven't quite made it off the ground yet.\n\n"
+      "markdown": "# Innovation Research\n\nChoose one of the following topics to look into. You'll want to find information about some of the most recent innovative computing devices related to your category.\n\n## Wearable Technology\nWearable technology includes any form of computing that is designed to be worn by the user, whether it's embedded into the clothing or worn as an accessory. Many wearables, such as smart pedometers, overlap somewhat with health and safety as the device is both wearable _and_ intended to help improve your personal health.\n\n## Health and Safety\nThe broad range topic includes both consumer technology (things that you might use to improve your health or safety) and professional technology (gear that a doctor or other professional might use).\n\n## Agriculture\nAgriculture might not be an obvious topic, but technological innovations have had a huge impact on how we approach farming. This includes incorporating computers into existing farm equipment, using sensors and robotics to monitor crops, and analyzing data to improve efficiency and sustainability.\n\n## Manufacturing\nAdvancements in rapid prototyping, industrial robotics, and automation have had a major impact on how goods are produced. Whether it's technology to enable affordable small-scale manufacturing (like 3D printers and laser cutters) or the integration of computers into factory work, there are many interesting areas to research here.\n\n## Art and Design\nThe intersection of artistic expression and computing can yield impressive and unexpected results. While you are less likely to find commercially available products related to art and design, you will find a wide variety of homemade creations that use all manners of computing devices in creative and expressive ways.\n\n## Smart Home\nThe dream of a house that understands and even anticipates your needs is closer than ever. Whether controlled explicitly through voice commands, or by using sensors to monitor and respond to changing conditions, smart home devices take care of any number of mundane or repetitive tasks around the house.\n\n\n# Research Considerations\n\nAs you research devices on your topic, keep the following considerations in mind:\n\n* Focus on hardware based solutions over software programs\n* Focus on recent innovations over old news\n* Follow what interests you\n\nIn addition to the recommended sites listed for each topic, consider looking towards the various crowd funding websites (such as Kickstarter and Indiegogo) to see the products that haven't quite made it off the ground yet.\n\n",
+      "teacher_markdown": "Here are some recommended sites for students to start their research.  Although these sites are generally appropriate for school, the content within them changes frequently, so **we strongly suggest you check each site for inappropriate content before sharing it with students**.\n\n### Wearable Technology\n\n* [Warable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](http://www.industryweek.com/technology)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n\n"
     }
   },
   "https://studio.code.org/s/csd6-2019/stage/2/puzzle/1": {
-    "dsls": {
-      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Principles even better!\n\n"
-    }
+    "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/2": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)",
+              "correct": false
+            },
+            {
+              "text": "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)",
+              "correct": false
+            },
+            {
+              "text": "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)",
+              "correct": false
+            },
+            {
+              "text": "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Read the code and predict what this app will look like when run."
+            }
+          ],
+          "teacher_markdown": "For many of the programming activities in this unit, design mode elements have already been created.  One helpful tip for students is that they can hover over any of these elements to see the element's id.\n",
+          "title": "Make a Prediction"
+        }
+      }
+    ]
   },
   "https://studio.code.org/s/csd6-2019/stage/2/puzzle/3": {
     "long_instructions": "# Changing the Text\n\nThe `setProperty` block can be used to change lots of things about your design elements, including the text they contain.\n\n# Do This\n\n-   Drag out a `setProperty` block\n-   For the first parameter, select \"name\" (the element's id)\n-   For the second parameter, select \"text\" (the property you want to set)\n-   For the third parameter, write your name in quotes (the value to set)\n\n_Note: We've removed the Design Mode tab for now so you can practice working with `setProperty`, but it'll come back later once you're building apps of your own._"
@@ -51,7 +87,8 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/3/puzzle/2": {
     "display_name": "Hardware and Software",
-    "long_instructions": "## Questions to Consider\n\n-   What's the difference between hardware and software?\n-   What does the operating system of a computer do?"
+    "long_instructions": "## Questions to Consider\n\n-   What's the difference between hardware and software?\n-   What does the operating system of a computer do?",
+    "teacher_markdown": "## Discussion Goals\n\nThe goal of this discussion is to highlight the difference between hardware and software.  Students should understand that hardware is the physical part of the computer, such as the chips and the wires, and the software is the programs that are running on the computer.  The operating system of the computer allows all the software on the computer to run at the same time, deciding how the different hardware resources will be shared."
   },
   "https://studio.code.org/s/csd6-2019/stage/3/puzzle/3": {
     "display_name": "Circuit Playground: Introduction"
@@ -81,7 +118,6 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/3/puzzle/10": {
     "dsls": {
-      "title": "Make an App Using the LED",
       "content1": "description here",
       "markdown": "# LED Apps\n\nIn the last level, you made an app to control the LED with different buttons on the screen.   In the next two levels, you'll see some other examples of apps, then have a chance to make one of your own.\n\nAs you look at the examples, think of what code might be useful for the app that you and your partner want to create.\n"
     }
@@ -320,6 +356,7 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/8/puzzle/8": {
     "long_instructions": "# Functions with Parameters\n\nMost of the existing functions you use in App Lab need inputs, or **parameters**, to pass the function necessary information. For example, when changing a screen, you pass the ID of that screen as a parameter, which looks like `setScreen(\"win\")`.\n\nThese parameters show up as a variable that can be used inside the function, and you can create functions that use parameters too!\n\n# Do This\n\n<div markdown=\"1\" style=\"float:right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\nInstead of a separate function to move the red and the blue players, we've created one function called `movePlayer()` that takes the ID of the player image as a parameter called `player`. Inside this function, you can use `player` any place where you need to specify the ID of the player you want to control.\n\n-   Find where `movePlayer()` is defined ( [Show me where][1] )\n-   Inside the `movePlayer()` definition:\n    -   Get the current \"y\" property of the player and save it to a variable called `player_y`\n    -   Increase the value of `player_y` by 10\n    -   Set the \"y\" property of player to your new value `player_y`\n\nOnce you've added your code, test it. You should see that _both buttons_ work even though we only created one function - cool!",
+    "teacher_markdown": "### Exposure to Functions with Parameters\n\nParameters are a powerful way to make functions more useful by giving them specific input. We are introducing this here primarily as a way to expose students to this concept, but functions with parameters won't be taught thoroughly until chapter 2. For students who are interested in experimenting more with this technique now, direct them to [the documentation][0].",
     "callouts": {
       "CSD_U6_movePlayer": "Define movePlayer() here"
     }
@@ -347,7 +384,8 @@
     "long_instructions": "# Make It Your Own\n\nYou just walked through someone else's plan for creating a program, so now it's time to make it your own. What additional features or challenges do you want to create?\n\n# Do This\n\nSelect one of the challenges below to add to the game or come up with a challenge of your own.\n\n-   Change the look and layout of the screens\n-   Use the buzzer or the led to show when one of the buttons has been clicked\n-   Set the \"icon-color\" property of \"winner\\_image\" to the winning color\n-   Make the emojis start out sad, change to meh halfway, and end up happy\n-   Use a variable and conditionals to make sure that players can only move their emojis when the \"game\" screen is showing"
   },
   "https://studio.code.org/s/csd6-2019/stage/9/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   [Make a Game][1] - Sample Marked Rubrics 1 ([PDF][2] \\| [DOCX][3])\n-   [Make a Game][4] - Sample Marked Rubrics 2 ([PDF][5] \\| [DOCX][6])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd6-2019/stage/9/puzzle/2": {
     "display_name": "Demo - Bug Grab",
@@ -376,12 +414,18 @@
   "https://studio.code.org/s/csd6-2019/stage/9/puzzle/9": {
     "long_instructions": "# Finishing Touches and Testing\n\nAt this point you should have most of your program in place. Now you need to add whatever finishing touches are needed and do a little testing. When your app is ready, have your classmates try it out. See if you can find any bugs, confusing design choices, or missing features you'd like to work on.\n\nOnce you're all done with this version of your program, click Submit to turn it in."
   },
+  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/10": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/1": {
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/2": {
     "display_name": "Video: Introduction to Arrays",
-    "long_instructions": "## Questions to Consider\n\n-   When might an array be more useful than a variable?\n-   Why do you always need to assign an array to a variable?\n-   How can you access the elements in your array?"
+    "long_instructions": "## Questions to Consider\n\n-   When might an array be more useful than a variable?\n-   Why do you always need to assign an array to a variable?\n-   How can you access the elements in your array?",
+    "teacher_markdown": "## Discussion Goals\n\nThis is the first introduction to arrays, and students will have an opportunity to try them out in the lesson, so understanding why arrays are helpful and the general ways that can use them is more important than the particular syntax or commands in the video.  Students should understand that arrays are intended to hold several pieces of information, usually all of the same type.  Just like any other piece of information, it needs to be assigned to a variable for a programmer to find it again.  Programmers can access each element of the array by its **index**, or its position number in the array.  Students will have a chance to practice the exact syntax in the lesson."
   },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/3": {
     "contained levels": [
@@ -410,31 +454,31 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/9": {
     "dsls": {
-      "title": "Using Arrays",
+      "answers": [
+        {
+          "text": "https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png,200px",
+          "correct": false
+        },
+        {
+          "text": "https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png,200px",
+          "correct": false
+        },
+        {
+          "text": "https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png,200px",
+          "correct": false
+        },
+        {
+          "text": "https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png,200px",
+          "correct": true
+        }
+      ],
+      "markdown": "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08 PM.png)\n",
       "questions": [
         {
           "text": "What will App Lab display when the code on the left is run?"
         }
       ],
-      "answers": [
-        {
-          "text": "<img src=\"https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54 PM.png\" width=\"200px\" />",
-          "correct": false
-        },
-        {
-          "text": "<img src=\"https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34 PM.png\" width=\"200px\" />",
-          "correct": false
-        },
-        {
-          "text": "<img src=\"https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11 PM.png\" width=\"200px\" />",
-          "correct": false
-        },
-        {
-          "text": "<img src=\"https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png\" width=\"200px\"",
-          "correct": true
-        }
-      ],
-      "markdown": "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08 PM.png)\n"
+      "title": "Using Arrays"
     }
   },
   "https://studio.code.org/s/csd6-2019/stage/10/puzzle/10": {
@@ -544,7 +588,8 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/12/puzzle/4": {
     "display_name": "Video: For Loops",
-    "long_instructions": "## Questions to Consider\n\n-   What are loops used for in programming?\n-   Where do loops go in your code?"
+    "long_instructions": "## Questions to Consider\n\n-   What are loops used for in programming?\n-   Where do loops go in your code?",
+    "teacher_markdown": "## Discussion Questions\n\nFor-loops are a very powerful construct, but this introduction intentionally only covers a small part of their functionality.  As students are more comfortable with loops, more functionality will be introduced.  For now, students should know that they can use a for loop to repeat a segment of code multiple times.  The segment should go wherever in the program that code will be run.   (This aspect of loops is highlighted to keep students from treating loops like functions and placing them at the bottom of the code.)"
   },
   "https://studio.code.org/s/csd6-2019/stage/12/puzzle/5": {
     "contained levels": [
@@ -635,7 +680,8 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/14/puzzle/3": {
     "display_name": "Functions with Parameters",
-    "long_instructions": "## Questions to Consider\n\n-   How do parameters make functions more useful?\n-   How do you know when you can combine multiple functions into one?"
+    "long_instructions": "## Questions to Consider\n\n-   How do parameters make functions more useful?\n-   How do you know when you can combine multiple functions into one?",
+    "teacher_markdown": "## Discussion Goals\n\nStudents will have a chance to practice defining functions with parameters in the lesson, so it's not necessary for them to understand the exact process. Students should understand that parameters are useful because they let programmers use the same function to solve problems that are very similar, but with slight differences.  If multiple functions are almost alike, but have a small difference, students may want to combine those functions into one, and use a parameter to account for the difference."
   },
   "https://studio.code.org/s/csd6-2019/stage/14/puzzle/4": {
     "long_instructions": "# Clouds\n\nThis program makes the clouds move when you blow on the sound sensor, but it's not finished.\n\n# Do This\n\n-   Create a new function `moveCloud(name)` that will move any cloud.\n    -   (Hint: you will use almost all the same code as the `moveCloud0` function)\n-   Call your new `moveCloud(name)` function inside the event block, once for each cloud name.\n    -   (Hint: this is similar to how the `loopCloud(name)` function is called many times.)"
@@ -700,10 +746,12 @@
     ]
   },
   "https://studio.code.org/s/csd6-2019/stage/15/puzzle/4": {
-    "display_name": "Circuits and LEDs"
+    "display_name": "Circuits and LEDs",
+    "teacher_markdown": "#### Learning More About LEDs\n\nWe include LED sequins in the Circuit Playground classroom pack, but if you're careful you can use just about any LEDs you like. To learn more about pairing LEDs with the proper resistor, check out [Adafruit's LED primer][0]."
   },
   "https://studio.code.org/s/csd6-2019/stage/15/puzzle/5": {
-    "long_instructions": "# Wire a Circuit\n\nYou can use any of the numbered pads to add additional circuits to your board. Let's use pin 2 to add another LED.\n\n# Do This\n\n-   Using a wire, connect pin 2 to the positive (+) side of an LED\n-   Using another wire, connect the negative (-) side of the LED to a ground (GND) pin (it doesn't matter which one)\n-   Run this program to test your circuit. If it worked, your LED should turn on.\n\n_Debugging Tip: LEDs only work if the electricity is flowing from positive to negative. If your LED doesn't light up, make sure that it's oriented the right way._"
+    "long_instructions": "# Wire a Circuit\n\nYou can use any of the numbered pads to add additional circuits to your board. Let's use pin 2 to add another LED.\n\n# Do This\n\n-   Using a wire, connect pin 2 to the positive (+) side of an LED\n-   Using another wire, connect the negative (-) side of the LED to a ground (GND) pin (it doesn't matter which one)\n-   Run this program to test your circuit. If it worked, your LED should turn on.\n\n_Debugging Tip: LEDs only work if the electricity is flowing from positive to negative. If your LED doesn't light up, make sure that it's oriented the right way._",
+    "teacher_markdown": "### Why Are We Talking Pins?\n\nYou may notice that in the early levels of this lesson students are programming in a much different way than they have before, directly manipulating pins. The `digitalWrite()` and `pinMode()` commands are useful to get our wiring set up quickly, but are not the core concerns of this lesson. As soon as students are comfortable wiring LED circuits we will introduce techniques to control those LEDs with the higher level commands that have been used up to this point (like `led.on()` and `led.off()`)."
   },
   "https://studio.code.org/s/csd6-2019/stage/15/puzzle/6": {
     "long_instructions": "# Creating Board Objects\n\nYou might have noticed that the new blocks we're using are in a different toolbox drawer. The **Circuit** drawer contains all of the board objects that are built into the Circuit Playground, but when you start wiring your own circuits the Maker Toolkit no longer knows where everything is.\n\nThe new **Maker** drawer contains general purpose commands instead of ones that are customized for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()` commands you've seen, it includes commands to create new objects on the board that can be programmed in the same way as the blocks in the **Circuit** drawer. The `var myLed = createLed()` command, for example, creates a new LED object that behaves just like the `led` blocks you've been using.\n\n# Do This\n\nNow that you're creating new board objects that we don't have blocks for, you'll need to work in text mode. You can still drag out blocks that you're familiar with from the **Circuit** drawer, you'll just need to change the name of the object.\n\n-   Keep your LED wired just as it was before (connected to pin 2)\n-   Make sure you're in text mode, not block mode.\n-   Drag out an `led.blink()` block below the comment `// Blink myLed`.\n-   Replace the text `led` with `myLed`.\n-   Test your code."
@@ -738,7 +786,8 @@
     "long_instructions": "# Smart Bike - Final Touches\n\nAt this point your smart bike should have all of its basic functionality in place. Now is your chance to add any finishing touches.\n\n# Do This\n\nYou may want to divide and conquer at this point, allowing some members of your group to focus on the physical aspects of the prototype while others work on improving the code. As this is a prototype, don't worry about making everything perfect, but do try to ensure that the prototype communicates your design well enough to test and get feedback."
   },
   "https://studio.code.org/s/csd6-2019/stage/16/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   [Prototype an Innovation][1] - Sample Marked Rubrics 1 ([PDF][2] \\| [DOCX][3])\n-   [Prototype an Innovation][4] - Peer Review 1 ([PDF][5] \\| [DOCX][6])\n-   [Prototype an Innovation][7] - Sample Marked Rubrics 2 ([PDF][8] \\| [DOCX][9])\n-   [Prototype an Innovation][10] - Peer Review 2 ([PDF][11] \\| [DOCX][12])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd6-2019/stage/16/puzzle/2": {
     "dsls": {
@@ -763,5 +812,25 @@
   },
   "https://studio.code.org/s/csd6-2019/stage/16/puzzle/8": {
     "long_instructions": "# Finishing Touches\n\nAdd any finishing touches still needed to make your innovation awesome. If you have time, test out your innovation with some potential users to gather feedback and find opportunities for improvement. When you're totally finished, click the \"Submit\" button to turn it in!"
+  },
+  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/9": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd6-2019/lockable/1/puzzle/1": {
+    "dsls": {
+      "title": "Physical Computing Post-Project Test"
+    }
+  },
+  "https://studio.code.org/s/csd6-2019/lockable/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Discoveries even better!\n\n"
+    }
+  },
+  "https://studio.code.org/s/csd6-2019/lockable/2/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries End of Semester Student Survey"
+    }
   }
 }

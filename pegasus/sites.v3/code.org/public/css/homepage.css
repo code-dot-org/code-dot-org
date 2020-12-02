@@ -131,24 +131,143 @@ body.modal-open .supreme-container{
   font-family: 'Gotham 5r', sans-serif !important;
   font-size: 44px;
   line-height: 44px;
-  color: white;
+  color: #00ADBC;
   margin-top: 0px;
   margin-bottom: 20px;
 }
 
-#homepage .hero-message-second {
-  font-family: 'Gotham 5r', sans-serif !important;
-  font-size: 44px;
-  line-height: 44px;
-  color: white;
-  margin-bottom: 40px;
+#homepage .hero-message p {
+  margin-bottom: 0px;
 }
 
 #homepage .hero-sub-message {
-  color: white;
+  color: #4d575f;
   font-size: 24px;
   line-height: 32px;
-  margin-bottom: 40px;
+}
+
+#homepage .hero-message-codebytes a {
+  font-family: 'Gotham 5r', sans-serif !important;
+}
+
+.codebytes-img {
+  width: 750px;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+#homepage .hero-message-codebytes {
+  color: #4d575f;
+  clear: both;
+}
+
+@media screen and (min-width: 601px) {
+  #homepage .hero-message-codebytes {
+    margin: 15px auto 15px auto;
+    font-size: 24px;
+    line-height: 32px;
+    width: 750px;
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #homepage .hero-message-codebytes {
+    margin: 0 auto 30px auto;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+#homepage .hero-messages-ai {
+  text-align: left;
+}
+
+#homepage .hero-description {
+  text-align: left;
+  line-height: 1.3;
+}
+
+#homepage .join_us_ai {
+  text-align:left;
+  color:  #143441;
+}
+
+/* desktop */
+@media screen and (min-width: 601px) {
+  #homepage .hero-messages-ai .hero-super-message {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 16px;
+    margin-top: 30px;
+  }
+
+  #homepage .hero-messages-ai .hero-message {
+    font-size: 44px;
+    color: #3CFFF8;
+    margin-bottom: 16px;
+  }
+
+  #homepage .hero-messages-ai .hero-description {
+    font-size: 18px;
+    color: white;
+    max-width: 650px;
+    margin-bottom: 16px;
+  }
+
+  #homepage .join_us_ai {
+    margin-bottom: 80px;
+  }
+
+  #homepage .hero-bot img {
+    width: 350px;
+    margin-top: -45px;
+  }
+}
+
+/* mobile */
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #homepage .hero-messages-ai .hero-super-message {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  #homepage .hero-messages-ai .hero-message {
+    font-size: 34px;
+    color: #3CFFF8;
+    text-align: center;
+  }
+
+  #homepage .hero-messages-ai .hero-description {
+    font-size: 18px;
+    color: white;
+  }
+
+  #homepage .join_us_ai {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+
+  #homepage .hero-bot img {
+    width: 200px;
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #homepage .hero-sub-message {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #homepage .hero-sub-message {
+    margin-bottom: 130px;
+  }
 }
 
 #homepage .action .video-play-icon {
@@ -161,7 +280,7 @@ body.modal-open .supreme-container{
 
 .curriculum-banner {
   width: 100%;
-  background-color: black;
+  background-color: rgb(118,101,160);
   text-align: center;
   color: white;
   padding: 14px;
@@ -245,6 +364,11 @@ body.modal-open .supreme-container{
 #homepage #actions .herohocbutton-hollow-white {
   background-color: initial;
   border-color: white;
+}
+
+#homepage #actions .herohocbutton-solid-yellow {
+  background-color: #FFA400;
+  border-color: #FFA400;
 }
 
 #homepage #actions #hero-video {

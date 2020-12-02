@@ -1,8 +1,8 @@
-import {getProjectDatabase} from './firebaseUtils';
+import {getProjectDatabase, getPathRef} from './firebaseUtils';
 import _ from 'lodash';
 
 export function getColumnsRef(database, tableName) {
-  return database.child(`metadata/tables/${tableName}/columns`);
+  return getPathRef(database, `metadata/tables/${tableName}/columns`);
 }
 
 /**
@@ -27,27 +27,18 @@ export function getColumnRefByName(tableName, columnName) {
     });
 }
 
-// TODO: De-dupe this function with getColumnNamesFromRecords() below
-export function parseColumnsFromRecords(records) {
-  const columnNames = [];
-  Object.keys(records).forEach(id => {
-    const record = JSON.parse(records[id]);
-    Object.keys(record).forEach(column => {
-      if (columnNames.indexOf(column) === -1) {
-        columnNames.push(column);
-      }
-    });
-  });
-  return columnNames;
-}
-
 export function getColumnNamesFromRecords(records) {
-  const columnNames = ['id'];
+  const columnNames = [];
   Object.keys(records).forEach(id => {
     const record = JSON.parse(records[id]);
     Object.keys(record).forEach(columnName => {
       if (columnNames.indexOf(columnName) === -1) {
-        columnNames.push(columnName);
+        if (columnName === 'id') {
+          // Make sure 'id' is first column
+          columnNames.unshift(columnName);
+        } else {
+          columnNames.push(columnName);
+        }
       }
     });
   });
@@ -92,8 +83,8 @@ export function renameColumnName(tableName, oldName, newName) {
  * @param {string} tableName
  * @returns {Promise} Promise containing an array of column names.
  */
-export function getColumnNamesSnapshot(tableName) {
-  const columnsRef = getColumnsRef(getProjectDatabase(), tableName);
+export function getColumnNamesSnapshot(database, tableName) {
+  const columnsRef = getColumnsRef(database, tableName);
   return columnsRef.once('value').then(snapshot => {
     const columnsData = snapshot.val() || {};
     return _.values(columnsData).map(column => column.columnName);
@@ -118,23 +109,18 @@ export function onColumnsChange(database, tableName, callback) {
 /**
  *
  * @param {string} tableName
- * @param {Array.<string>} existingColumnNames
+ * @param {Array.<string>} columns
  * @returns {*}
  */
-export function addMissingColumns(tableName) {
-  return getColumnNamesSnapshot(tableName).then(existingColumnNames => {
-    const recordsRef = getProjectDatabase().child(
-      `storage/tables/${tableName}/records`
-    );
-    return recordsRef.once('value').then(snapshot => {
-      const recordsData = snapshot.val() || {};
-      getColumnNamesFromRecords(recordsData).forEach(columnName => {
+export function addMissingColumns(tableName, columns) {
+  return getColumnNamesSnapshot(getProjectDatabase(), tableName).then(
+    existingColumnNames => {
+      let columnsRef = getColumnsRef(getProjectDatabase(), tableName);
+      columns.forEach(columnName => {
         if (!existingColumnNames.includes(columnName)) {
-          getColumnsRef(getProjectDatabase(), tableName)
-            .push()
-            .set({columnName});
+          columnsRef.push().set({columnName});
         }
       });
-    });
-  });
+    }
+  );
 }

@@ -14,9 +14,11 @@ import {
   toggleHiddenStage,
   isStageHiddenForSection
 } from '@cdo/apps/code-studio/hiddenStageRedux';
+import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import SendLesson from './SendLesson';
 
 const styles = {
   buttonContainer: {
@@ -34,9 +36,10 @@ const styles = {
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
+    lessonUrl: PropTypes.string,
 
     // redux provided
-    sectionId: PropTypes.string,
+    section: sectionShape,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -44,42 +47,71 @@ class ProgressLessonTeacherInfo extends React.Component {
     toggleHiddenStage: PropTypes.func.isRequired
   };
 
-  onClickHiddenToggle = value => {
-    const {scriptName, sectionId, lesson, toggleHiddenStage} = this.props;
+  constructor(props) {
+    super(props);
+    this.onClickHiddenToggle = this.onClickHiddenToggle.bind(this);
+    this.firehoseData = this.firehoseData.bind(this);
+  }
+
+  onClickHiddenToggle(value) {
+    const {scriptName, section, lesson, toggleHiddenStage} = this.props;
+    const sectionId = (section && section.id.toString()) || '';
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
-    firehoseClient.putRecord({
-      study: 'hidden-lessons',
-      study_group: 'v0',
-      event: value,
-      data_json: JSON.stringify({
-        script_name: scriptName,
-        section_id: sectionId,
-        lesson_id: lesson.id,
-        lesson_name: lesson.name
-      })
-    });
-  };
+    firehoseClient.putRecord(
+      {
+        study: 'hidden-lessons',
+        study_group: 'v0',
+        event: value,
+        data_json: JSON.stringify(this.firehoseData())
+      },
+      {includeUserId: true}
+    );
+  }
+
+  firehoseData() {
+    const {scriptName, section, lesson} = this.props;
+    return {
+      script_name: scriptName,
+      section_id: section && section.id,
+      lesson_id: lesson.id,
+      lesson_name: lesson.name
+    };
+  }
 
   render() {
     const {
-      sectionId,
+      section,
       scriptAllowsHiddenStages,
       hiddenStageState,
       hasNoSections,
-      lesson
+      lesson,
+      lessonUrl
     } = this.props;
 
+    const sectionId = (section && section.id.toString()) || '';
     const showHiddenForSectionToggle =
-      sectionId && scriptAllowsHiddenStages && !hasNoSections;
+      section && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden =
       scriptAllowsHiddenStages &&
       isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
+    const courseId =
+      (section && section.code && parseInt(section.code.substring(2))) || null;
+    const loginRequiredLessonUrl = lessonUrl + '?login_required=true';
+    const shouldRender =
+      lesson.lesson_plan_html_url ||
+      (lesson.lockable && !hasNoSections) ||
+      lessonUrl ||
+      showHiddenForSectionToggle;
+    if (!shouldRender) {
+      return null;
+    }
 
     return (
       <TeacherInfoBox>
         {lesson.lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
             <Button
+              __useDeprecatedTag
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
               icon="file-text"
@@ -90,6 +122,17 @@ class ProgressLessonTeacherInfo extends React.Component {
           </div>
         )}
         {lesson.lockable && !hasNoSections && <StageLock lesson={lesson} />}
+        {lessonUrl && (
+          <div style={styles.buttonContainer}>
+            <SendLesson
+              lessonUrl={loginRequiredLessonUrl}
+              lessonTitle={lesson.name}
+              courseid={courseId}
+              analyticsData={JSON.stringify(this.firehoseData())}
+              buttonStyle={styles.button}
+            />
+          </div>
+        )}
         {showHiddenForSectionToggle && (
           <HiddenForSectionToggle
             hidden={!!isHidden}
@@ -105,7 +148,8 @@ export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId.toString(),
+    section:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId],
     scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,

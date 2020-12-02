@@ -19,14 +19,14 @@ uk-UA:
     text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
+  csedweek_banner_teachers_text: Ви вчитель інформатики? Перегляньте інші ресурси
+    з предмету
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
   anybody_can_learn: Кожен може вчитися.
   learn_now: Почати навчання
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
   petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до
     # інших.'
-  petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я.
-    Приєднайтесь до # інших.'
   petition_join_others: 'Приєднатися до # інших'
   name: Ім’я
   email: Електронна пошта
@@ -215,6 +215,7 @@ uk-UA:
   if_you_enjoyed: Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати
     увесь світ.
   personalize_certificate: Персоналізувати ваш сертифікат
+  print_certificates: Друкувати сертифікати
   share_achievement: Поділитись досягненнями
   beyond_hour_message: Продовжуйте навчання на <a href='http://studio.code.org'>інших
     курсах</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза
@@ -403,6 +404,7 @@ uk-UA:
   homepage_action_text_signpetition: Підписати петицію
   homepage_action_text_wincelebritychat: Виграй чат зі знаменітостю
   homepage_signpetition_dropdown: Підписати нашу петицію &#x25BE;
+  homepage_signpetition_dropdown_text: Погоджуюся
   homepage_diversity_pledge: Приєднатись до петиції про різноманіття
   homepage_banner_text_prizes: 'Година коду наближається знову, 7-13 грудня. '
   homepage_banner_link_prizes: 'Приєднуйтесь до найбільшої освітньої події в історії. '
@@ -600,6 +602,7 @@ uk-UA:
   video_title_my_name_is_aracely: Мене звати Араклі
   video_1min: 1 хв
   video_2min: 2 хв
+  video_3min: 3 хв
   video_5min: 5 хв
   speak_another_language: Інша мова?
   help_translate: Допоможіть нам з перекладом.
@@ -850,6 +853,7 @@ uk-UA:
     їхні відповіді на питання з відкритими формулюваннями, обираючи призначений курс
     з випадного меню вгорі.
   dashboard_sections_new_section: Нова група
+  dashboard_sections_new_google_section: Імпорт розділу з Google Classroom
   dashboard_sections_jumbotron_instruction: Створюйте нові групи і додавайте до них
     учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження
     прогресу та керування обліковими записами.
@@ -906,7 +910,7 @@ uk-UA:
   dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному
     на рядок:'
   dashboard_students_new_google_classroom_section: Щоб додати учнів, використуйте
-    <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після
+    <a href='http://classroom.google.com' target='_blank'>Google Клас</a>, а тоді
     клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі.
   dashboard_students_new_section: Ви створили нову групу! Тепер додавайте учнів, використовуючи
     кнопки <b>Додати учня</b> та <b>Додати учнів</b>.
@@ -1075,6 +1079,7 @@ uk-UA:
   carousel_heading_webpages: Навчіться створювати веб-сторінки
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
+  carousel_heading_mobtabelem: Для телефонів і планшетів
   educator_notes: Інформація для вчителя
   teach_led_lesson_plans: Плани уроків для вчителів
   learn_footer_all_tutorials: Перегляньте<a href="https://code.org/educate/allhourofcode">вичерпний
@@ -1160,6 +1165,33 @@ uk-UA:
   coursee_name: Курс Ґ
   coursef-draft_name: Курс Д
   coursef_name: Курс Д
+  coursea-2017_name: Курс А (2017)
+  courseb-2017_name: Курс B (2017)
+  coursec-2017_name: Курс C (2017)
+  coursed-2017_name: Курс D (2017)
+  coursee-2017_name: Курс E (2017)
+  coursef-2017_name: Курс F (2017)
+  coursea-2018_name: Курс А (2018)
+  courseb-2018_name: Курс В (2018)
+  coursec-2018_name: Курс С (2018)
+  coursed-2018_name: Курс D (2018)
+  coursee-2018_name: Курс Е (2018)
+  coursef-2018_name: Курс F (2018)
+  coursea-2019_name: Курс А (2019)
+  courseb-2019_name: Курс В (2019)
+  coursec-2019_name: Курс С (2019)
+  coursed-2019_name: Курс D (2019)
+  coursee-2019_name: Курс Е (2019)
+  coursef-2019_name: Курс F (2019)
+  coursea-2020_name: Курс А (2020)
+  courseb-2020_name: Курс В (2020)
+  coursec-2020_name: Курс С (2020)
+  coursed-2020_name: Курс D (2020)
+  coursee-2020_name: Курс Е (2020)
+  coursef-2020_name: Курс F (2020)
+  express-2018_name: Експрес курс (2018)
+  csd2_name: 'Блок 2: Веб-розробка'
+  csd3_name: 'Блок 3: Анімація та ігри'
   accelerated_name: Прискорений курс
   20-hour_name: Прискорений курс
   algebra_name: Інформатика в алгебрі
@@ -1866,6 +1898,7 @@ uk-UA:
     працюватимуть.
   flappy_shortcode: махати
   header_home: Головна
+  header_my_dashboard: Моя майстерня
   header_courses: курси
   header_course_catalog: Каталог курсів
   header_project_gallery: Проекти
@@ -1898,10 +1931,13 @@ uk-UA:
   header_teacher_community: Спільнота вчителів
   header_help_support: 'Допомога та підтримка '
   header_report_bug: Сповістити про проблему
+  header_legal_privacy: Політика конфіденційності
+  header_legal_tos: Умови надання послуг
   header_tutorials: Навчальні матеріали
   header_documentation: Документація
   user_header_label: Привіт %{username}
   user_header_team: Команда
+  user_header_my_projects: Мої проекти
   user_header_settings: Мій профіль
   user_header_logout: Вийти
   user_header_signin: Увійти
@@ -1911,6 +1947,7 @@ uk-UA:
   user_header_dance: Танцювальна вечірка
   user_header_minecraft: Майнкрафт
   user_header_flappy: Пурх
+  sign_in_instruct_secret: Виберіть їх секрет %{secret}.
   applab_tile_start_tutorial: Початок
   aquatic_name: 'Minecraft: Водна подорож'
   account_sign_up_email_opt_in: Чи можемо ми сповіщати вас про оновлення курсів, локальних
@@ -1925,6 +1962,10 @@ uk-UA:
     Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Нікі Мінаж та 34 інших виконавців та груп!
   hoc_overview_start_tutorial: Початок
+  hoc_overview_more_resources: Щоб отримати додаткові ресурси для навчання з класом
+    дистанційно, див. наш посібник з розміщення [віртуального Hour of Code](https://hourofcode.com/us/how-to/virtual).
+    Що стосується учнів, які мають технологічні обмеження або проблеми з підключенням,
+    ви можете надіслати їм цей пакет для [роботи з Hour of Code без підключення](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc2018_creativity: творчість
   hoc2018_creativity_create: Створити
   hoc2018_creativity_hoc_coming: Наближається Година коду…
@@ -1960,6 +2001,7 @@ uk-UA:
     відео</a> з фахівцями зі сфери технологій
   hoc2018_mc_video_1min: 1 хв
   hoc2018_mc_video_2min: 2 хв
+  hoc2018_mc_video_3min: 3 хв
   hoc2018_mc_video_5min: 5 хв
   hoc2018_mc_video_title_steph_curry: Година коду зі Стефом Каррі
   hoc2018_mc_video_title_sports: Постарайся! Навчитись може кожен.
@@ -1975,6 +2017,8 @@ uk-UA:
   hoc2018_mc_homepage_join_us: Приєднуйтесь
   hoc2018_mc_homepage_try_it: Спробувати
   hoc2018_dance_party_main_heading: Танцювальна вечірка
+  hoc2018_dance_party_subheading: Допоможіть перекласти Dance Party
+  hoc2018_dance_create_your_own_dance_title: Створіть власну Dance Party
   hoc2018_dance_party_box_title: Танцювальна вечірка
   hoc2018_dance_party_box_description: Закодуй танцювальну вечірку і поділися з друзями!
   hoc2018_dance_party_button: Початок
@@ -1997,5 +2041,16 @@ uk-UA:
   hoc2018_dance_view_creativity_video_playlist: Що таке креативність? Перегляньте
     всі серії (5 хв)
   hoc2018_dance_amazon_about_future_engineer_button: Дізнайтеся більше
+  hoc2018_dance_amazon_try_coding_this_summer_button: Приєднатися до табору
   hoc2018_dance_measure: Крок
   hoc2018_dance_measure_colon: 'Крок:'
+  page_not_found_title: Сторінка не знайдена
+  page_not_found_header: '404: Сторінка не знайдена'
+  hoc2018_mc_thank_microsoft: Ми дякуємо Microsoft за підтримку нашого бачення та
+    місії щодо забезпечення кожної дитини можливістю вивчати інформатику та навички,
+    необхідні для досягнення успіху в 21 столітті.
+  hoc2019_mc_more_coding_resources: Більше Coding ресурсів
+  hoc2019_dance_previous_versions: |-
+    Шукаєте попередню версію Dance Party?
+    Натисніть тут, щоб почати [Частина 1](%{dance_2018_link}) та [Частина 2](%{dance_extras_2018_link}) з останнього року.
+  footer_powered_by_aws: На потужностях Amazon Web Services

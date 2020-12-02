@@ -53,7 +53,11 @@ class ExternalRedirectDialog extends React.Component {
           <p>
             {i18n.redirectExplanation()}
             <span>
-              <a target="_blank" href={studio('/report_abuse')}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={studio('/report_abuse')}
+              >
                 {i18n.reportAbuse()}
               </a>
             </span>
@@ -63,11 +67,13 @@ class ExternalRedirectDialog extends React.Component {
       footer = (
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             onClick={this.props.handleClose}
             text={i18n.goBack()}
             color={Button.ButtonColor.gray}
           />
           <Button
+            __useDeprecatedTag
             onClick={() => this.handleRedirect(url)}
             text={i18n.continue()}
             color={Button.ButtonColor.orange}
@@ -85,6 +91,7 @@ class ExternalRedirectDialog extends React.Component {
       footer = (
         <DialogFooter rightAlign>
           <Button
+            __useDeprecatedTag
             onClick={this.props.handleClose}
             text={i18n.dialogOK()}
             color={Button.ButtonColor.gray}

@@ -20,26 +20,26 @@ vi:
             '"SLOTH"': con lười
             '"UNICORN"': Kỳ lân
           MOVE1:
-            MOVES.Roll: Cuộn cơ thể
+            MOVES.Roll: Cuộn người
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
             MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
-            MOVES.Clown: Chú hề
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
           MOVE2:
-            MOVES.Roll: Cuộn cơ thể
+            MOVES.Roll: Cuộn người
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
             MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
-            MOVES.Clown: Chú hề
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
@@ -77,20 +77,17 @@ vi:
             '"next"': "(Tiếp theo)"
             '"prev"': "(Trước)"
             '"rand"': "(Ngẫu nhiên)"
-            MOVES.Roll: Cuộn cơ thể
+            MOVES.Roll: Cuộn người
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
             MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
-            MOVES.Clown: Chú hề
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} {MOVE} {DIR} mãi mãi"
         options:
@@ -98,20 +95,17 @@ vi:
             '"next"': "(Tiếp theo)"
             '"prev"': "(Trước)"
             '"rand"': "(Ngẫu nhiên)"
-            MOVES.Roll: Cuộn cơ thể
+            MOVES.Roll: Cuộn người
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
             MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
-            MOVES.Clown: Chú hề
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
         options:
@@ -166,7 +160,7 @@ vi:
           MOVE:
             '"rand"': "(Ngẫu nhiên)"
             MOVES.XBend: Uốn cong
-            MOVES.Roll: Cuộn cơ thể
+            MOVES.Roll: Cuộn người
             MOVES.XClapSide: Vỗ tay
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Dab: Đáp
@@ -175,7 +169,7 @@ vi:
             MOVES.Drop: Thả
             MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
-            MOVES.Clown: Chú hề
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Đầu + Hông
             MOVES.XHop: Nhảy lên
             MOVES.XHighKick: Đá chân
@@ -188,16 +182,13 @@ vi:
             MOVES.XArmsUp: Kéo dãn
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} {MOVE} {DIR} một lần"
         options:
           MOVE:
             '"rand"': "(Ngẫu nhiên)"
             MOVES.XBend: Uốn cong
-            MOVES.Roll: Cuộn cơ thể
+            MOVES.Roll: Cuộn người
             MOVES.XClapSide: Vỗ tay
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Dab: Đáp
@@ -206,7 +197,7 @@ vi:
             MOVES.Drop: Thả
             MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
-            MOVES.Clown: Chú hề
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Đầu + Hông
             MOVES.XHop: Nhảy lên
             MOVES.XHighKick: Đá chân
@@ -219,9 +210,6 @@ vi:
             MOVES.XArmsUp: Kéo dãn
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'lặp lại sau mỗi {N} nhịp sau khi {START} '
       Dancelab_everySeconds:
@@ -273,13 +261,13 @@ vi:
         options:
           DANCE:
             MOVES.ClapHigh: Vỗ tay cao
-            MOVES.Clown: Chú hề
+            MOVES.Clown: Gangnam
             MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
             MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
-            MOVES.Roll: Cuộn cơ thể
+            MOVES.Roll: Cuộn người
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
@@ -304,10 +292,10 @@ vi:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
             "{x: 200, y: 200}": giữa
-            "{x: 100, y: 100}": trên trái
-            "{x: 300, y: 100}": trên phải
-            "{x: 100, y: 300}": dưới trái
-            "{x: 300, y: 300}": dưới phải
+            "{x: 100, y: 100}": trên cùng bên trái
+            "{x: 300, y: 100}": trên cùng bên phải
+            "{x: 100, y: 300}": phía dưới bên trái
+            "{x: 300, y: 300}": góc phải ở phía dưới
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ngẫu nhiên
       Dancelab_jumpToEach:
         text: lệnh cho {GROUP} nhảy tới {LOCATION}
@@ -332,10 +320,10 @@ vi:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
             "{x: 200, y: 200}": giữa
-            "{x: 100, y: 100}": trên trái
-            "{x: 300, y: 100}": trên phải
-            "{x: 100, y: 300}": dưới trái
-            "{x: 300, y: 300}": dưới phải
+            "{x: 100, y: 100}": trên cùng bên trái
+            "{x: 300, y: 100}": trên cùng bên phải
+            "{x: 100, y: 300}": phía dưới bên trái
+            "{x: 300, y: 300}": góc phải ở phía dưới
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ngẫu nhiên
       Dancelab_layoutSprites:
         text: bố trí {GROUP} như là {FORMAT}
@@ -357,10 +345,15 @@ vi:
           FORMAT:
             '"border"': đường biên
             '"inner"': hình vuông bên trong
+            '"diamond"': kim cương
             '"circle"': vòng tròn
             '"grid"': lưới
+            '"top"': hàng trên cùng
             '"row"': hàng
+            '"bottom"': hàng dưới cùng
+            '"left"': cột trái
             '"column"': cột
+            '"right"': cột phải
             '"x"': criss-cross
             '"plus"': cộng
             '"random"': ngẫu nhiên
@@ -386,10 +379,10 @@ vi:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
             "{x: 200, y: 200}": giữa
-            "{x: 100, y: 100}": trên trái
-            "{x: 300, y: 100}": trên phải
-            "{x: 100, y: 300}": dưới trái
-            "{x: 300, y: 300}": dưới phải
+            "{x: 100, y: 100}": trên cùng bên trái
+            "{x: 300, y: 100}": trên cùng bên phải
+            "{x: 100, y: 300}": phía dưới bên trái
+            "{x: 300, y: 300}": góc phải ở phía dưới
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ngẫu nhiên
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -415,10 +408,10 @@ vi:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
             "{x: 200, y: 200}": giữa
-            "{x: 100, y: 100}": trên trái
-            "{x: 300, y: 100}": trên phải
-            "{x: 100, y: 300}": dưới trái
-            "{x: 300, y: 300}": dưới phải
+            "{x: 100, y: 100}": trên cùng bên trái
+            "{x: 300, y: 100}": trên cùng bên phải
+            "{x: 100, y: 300}": phía dưới bên trái
+            "{x: 300, y: 300}": góc phải ở phía dưới
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ngẫu nhiên
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
@@ -499,11 +492,11 @@ vi:
             '"fireworks"': พลุ
             '"swirl"': Thôi miên
             '"kaleidoscope"': Kính vạn hoa
-            '"lasers"': Sàn nhảy laze
+            '"lasers"': Sàn nhảy laser
             '"splatter"': Tiếng lộp độp của sơn
             '"rainbow"': Cầu vồng
             '"snowflakes"': Tuyết
-            '"text"': Tiêu đề bài hát
+            '"text"': Tên bài hát
             '"galaxy"': Không gian
             '"sparkles"': Lấp lánh
             '"spiral"': Xoắn ốc
@@ -511,13 +504,13 @@ vi:
             '"stars"': Sao
           PALETTE:
             '"rave"': Đen và trắng
-            '"cool"': Xanh
+            '"cool"': Mát mẻ
             '"electronic"': ไฟฟ้า
             '"iceCream"': ไอศกรีม
             '"default"': Sáng
             '"neon"': Đèn Neon
             '"tropical"': Nhiệt đới
-            '"vintage"': Cổ điển
+            '"vintage"': Vintage
             '"warm"': Đỏ
       Dancelab_setBackgroundEffectWithPalette:
         text: thiết lập hiệu ứng nền {PALETTE} {EFFECT}
@@ -535,29 +528,29 @@ vi:
             '"growing_stars"': Ngôi sao lớn dần
             '"swirl"': Thôi miên
             '"kaleidoscope"': Kính vạn hoa
-            '"lasers"': Sàn nhảy laze
+            '"lasers"': Sàn nhảy laser
             '"splatter"': Tiếng lộp độp của sơn
             '"rainbow"': Cầu vồng
             '"ripples_random"': Gợn sóng ngẫu nhiên
             '"ripples"': Gợn sóng
             '"snowflakes"': Tuyết
-            '"text"': Tiêu đề bài hát
+            '"text"': Tên bài hát
             '"squiggles"': Nét nguệch ngoạc
             '"galaxy"': Không gian
             '"sparkles"': Lấp lánh
             '"spiral"': Xoắn ốc
             '"disco"': Hình vuông
             '"stars"': Sao
-            '"music_wave"': คลื่น
+            '"music_wave"': Sóng
           PALETTE:
             '"rave"': Đen và trắng
-            '"cool"': Xanh
+            '"cool"': Mát mẻ
             '"electronic"': ไฟฟ้า
             '"iceCream"': ไอศกรีม
             '"default"': Sáng
             '"neon"': Đèn Neon
             '"tropical"': Nhiệt đới
-            '"vintage"': Cổ điển
+            '"vintage"': Vintage
             '"warm"': Đỏ
       Dancelab_setDanceSpeed:
         text: thay đổi tốc độ nhảy của {SPRITE} thành {SPEED}
@@ -597,15 +590,15 @@ vi:
           EFFECT:
             '"none"': Không có
             '"bubbles"': Bong bóng
-            '"confetti"': Hoa giấy
+            '"confetti"': Pháo hoa giấy
             '"hearts_red"': Trái tim
             '"music_notes"': Nốt nhạc
             '"pineapples"': Trái dứa
             '"pizzas"': Pizza
-            '"smiling_poop"': Đuôi tàu
+            '"smiling_poop"': Cục phân
             '"rain"': Mưa
             '"floating_rainbows"': Cầu vồng
-            '"smile_face"': Mặt cười
+            '"smile_face"': Nụ cười
             '"spotlight"': Tiêu điểm
             '"color_lights"': Ánh đèn sân khấu
             '"raining_tacos"': Taco
@@ -617,17 +610,17 @@ vi:
             '"rand"': "(Ngẫu nhiên)"
             '"bubbles"': Bong bóng
             '"hearts_colorful"': Trái tim sặc sỡ
-            '"confetti"': Hoa giấy
+            '"confetti"': Pháo hoa giấy
             '"emojis"': Emoji
             '"hearts_red"': Trái tim
             '"music_notes"': Nốt nhạc
             '"paint_drip"': Sơn nhỏ giọt
             '"pineapples"': Trái dứa
             '"pizzas"': Pizza
-            '"smiling_poop"': Đuôi tàu
+            '"smiling_poop"': Cục phân
             '"rain"': Mưa
             '"floating_rainbows"': Cầu vồng
-            '"smile_face"': Mặt cười
+            '"smile_face"': Nụ cười
             '"spotlight"': Tiêu điểm
             '"color_lights"': Ánh đèn sân khấu
             '"exploding_stars"': Lóe sáng
@@ -861,7 +854,7 @@ vi:
         text: dịch {STRING}
         options:
           STRING:
-            '"music_wave"': คลื่น
+            '"music_wave"': Sóng
             '"ripples"': Gợn sóng
             '"ripples_random"': Gợn sóng ngẫu nhiên
             '"quads"': Góc
@@ -962,6 +955,10 @@ vi:
         text: sprite {SPRITE} bắt đầu {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': giây
       gamelab_changePropBy:
         text: thay đổi {PROPERTY} {SPRITE} theo {VAL}
         options:
@@ -1007,8 +1004,45 @@ vi:
         options:
           CHOICE:
             '"this"': điều này
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': giây
       gamelab_hideTitleScreen:
         text: ẩn màn hình tiêu đề
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} đang chạm vào các cạnh"
       gamelab_jumpTo:
@@ -1052,6 +1086,13 @@ vi:
             '"z"': z
       gamelab_locationAt:
         text: 'vị trí x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Phía Bắc
+            '"East"': Phía Đông
+            '"South"': Phía Nam
+            '"West"': Phía Tây
       gamelab_locationMouse:
         text: vị trí chuột
       gamelab_locationOf:
@@ -1080,6 +1121,8 @@ vi:
             '"West"': Phía Tây
       gamelab_moveToward:
         text: di chuyển {SPRITE} pixel {DISTANCE} hướng {TARGET}
+      gamelab_objectSpritePointer:
+        text: nhấp {SPRITE}
       gamelab_playSound:
         text: Âm thanh chơi {SOUND}
       gamelab_pointInDirection:
@@ -1104,6 +1147,8 @@ vi:
         text: sprite {SPRITE} điểm dừng {BEHAVIOR}
       gamelab_removeTint:
         text: loại bỏ màu từ {THIS}
+      gamelab_repeatForever:
+        text: lặp lại mãi mãi
       gamelab_setAnimation:
         text: thay đổi {THIS} trang phục để {ANIMATION}
       gamelab_setBackground:
@@ -1133,6 +1178,8 @@ vi:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': mùa
               đông
             undefined: không
+      gamelab_setBackgroundImageAs:
+        text: thiết lập nền để {IMG}
       gamelab_setProp:
         text: bộ {SPRITE} [PROPERTY]123_321[1] để {VAL}
         options:
@@ -1166,6 +1213,8 @@ vi:
           CONDITION:
             '"when"': khi nào
             '"while"': Lặp khi
+      gamelab_subjectSpritePointer:
+        text: nhấp {SPRITE}
       gamelab_turn:
         text: lần lượt {SPRITE} {DIRECTION} {N} độ
         options:
@@ -1252,10 +1301,10 @@ vi:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
             "{x: 200, y: 200}": giữa
-            "{x: 100, y: 100}": trên trái
-            "{x: 300, y: 100}": trên phải
-            "{x: 100, y: 300}": dưới trái
-            "{x: 300, y: 300}": dưới phải
+            "{x: 100, y: 100}": trên cùng bên trái
+            "{x: 300, y: 100}": trên cùng bên phải
+            "{x: 100, y: 300}": phía dưới bên trái
+            "{x: 300, y: 300}": góc phải ở phía dưới
       Mikelab_getNext:
         text: lấy đối tượng tiếp theo
       Mikelab_getProp:
@@ -1293,10 +1342,10 @@ vi:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
             "{x: 200, y: 200}": giữa
-            "{x: 100, y: 100}": trên trái
-            "{x: 300, y: 100}": trên phải
-            "{x: 100, y: 300}": dưới trái
-            "{x: 300, y: 300}": dưới phải
+            "{x: 100, y: 100}": trên cùng bên trái
+            "{x: 300, y: 100}": trên cùng bên phải
+            "{x: 100, y: 300}": phía dưới bên trái
+            "{x: 300, y: 300}": góc phải ở phía dưới
       Mikelab_groupDestroy:
         text: loại bỏ {SELECT} {COSTUME}
         options:
@@ -1380,13 +1429,13 @@ vi:
         options:
           DANCE:
             MOVES.ClapHigh: Vỗ tay cao
-            MOVES.Clown: Chú hề
+            MOVES.Clown: Gangnam
             MOVES.Dab: Đáp
             MOVES.DoubleJam: Giảm gấp đôi
             MOVES.Drop: Thả
             MOVES.Floss: Chỉ tơ nha khoa
             MOVES.Fresh: Tươi
-            MOVES.Roll: Cuộn cơ thể
+            MOVES.Roll: Cuộn người
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
@@ -1455,10 +1504,10 @@ vi:
             "{x: 100, y: 200}": trái
             "{x: 300, y: 200}": phải
             "{x: 200, y: 200}": giữa
-            "{x: 100, y: 100}": trên trái
-            "{x: 300, y: 100}": trên phải
-            "{x: 100, y: 300}": dưới trái
-            "{x: 300, y: 300}": dưới phải
+            "{x: 100, y: 100}": trên cùng bên trái
+            "{x: 300, y: 100}": trên cùng bên phải
+            "{x: 100, y: 300}": phía dưới bên trái
+            "{x: 300, y: 300}": góc phải ở phía dưới
       Mikelab_whenClickedOn:
         text: khi {SPRITE} nhấp
       Mikelab_whenKeyPressed:
@@ -1549,6 +1598,14 @@ vi:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Di chuyển {SPRITE} {DISTANCE} Pixel {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Phía Bắc
+            '"East"': Phía Đông
+            '"South"': Phía Nam
+            '"West"': Phía Tây
       aalab_prompt:
         text: đặt câu hỏi {MESSAGE}
       aalab_scene:
@@ -1560,12 +1617,10 @@ vi:
             '3': '3'
       aalab_setupStory:
         text: câu chuyện thiết lập
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': hiển thị
-            '"hide"': ẩn
+            '"random"': ngẫu nhiên
       binary_drawBin:
         text: vẽ nhị phân {BIN}
       binary_drawBinScreen:
@@ -1660,7 +1715,6 @@ vi:
             '"stoneBricks"': gạch đá
             '"mossyStoneBricks"': gạch đá phủ đầy rêu
             '"crackedStoneBricks"': gạch đá bị nứt
-            '"decorativeStoneBricks"': gạch đá trang trí
             '"blueCoralBlock"': khối san hô màu xanh
             '"pinkCoralBlock"': khối san hô màu hồng
             '"magentaCoralBlock"': khối san hô đỏ tươi

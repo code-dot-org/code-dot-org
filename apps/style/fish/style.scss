@@ -3,10 +3,6 @@
 }
 
 button {
-  background-color: white;
-  font-size: 120%;
-  border-radius: 5px;
-  border: none;
   padding: 1.5% 3%;
 
   &:active {
@@ -14,35 +10,20 @@ button {
   }
 }
 
-#container-react {
-  font-size: 18px;
+#pondTextMarkdown p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-/*
- * Primary aim is to fit the width up to 0.9 of the screen width.
- * Secondary aim is that the vertical fits on the screen.
- * (0.9 lets us get the native 930px on a 1024px screen.. though with
- * a bit of a manual adjustment up due to rounding.)
- *
- * e.g.
- * Given a screen min-width of 800px, the screen min-height should be
- * (800 * 0.9) / 16 * 9 + 110 (where the 110 represents the header height).
- * And the max-width of the container should be (800 * 0.9).
- * And the font-size is (18px * (800 * 0.9 / 930)
- */
-@media screen {
-  #container { max-width: 480px; }
-  #container-react { font-size: calc(18px * 480 / 930); }
+#pondTextMarkdown strong {
+  color: #eb5757;
+  font-weight: normal;
+  font-family: "Gotham 4r", arial, sans-serif;
 }
-@media screen and (min-width: 800px) and (min-height: 515px) {
-  #container { max-width: 720px; }
-  #container-react { font-size: calc(18px * 720 / 930); }
-}
-@media screen and (min-width: 1024px) and (min-height: 628px) {
-  #container { max-width: 930px; }
-  #container-react { font-size: calc(18px * 930 / 930); }
-}
-@media screen and (min-width: 1137px) and (min-height: 685px) {
-  #container { max-width: 1024px; }
-  #container-react { font-size: calc(18px * 1024 / 930); }
+
+#pondTextMarkdown em {
+  color: #56c568;
+  font-style: normal;
+  font-family: "Gotham 4r", arial, sans-serif;
 }

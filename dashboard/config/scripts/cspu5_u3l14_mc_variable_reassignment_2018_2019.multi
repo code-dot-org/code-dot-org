@@ -1,9 +1,9 @@
 name 'CSPU5_U3L14 - MC variable reassignment_2018_2019'
 wrong 'a:3 &nbsp; b:7 &nbsp; c:10'
 wrong 'a:10 &nbsp; b:10 &nbsp; c:10’
-wrong 'a:10 &nbsp; b:10 &nbsp;  c:20'
-wrong 'a:10 &nbsp; b:17 &nbsp;  c:17'
-right 'a:10 &nbsp; b:17 &nbsp;  c:27'
+wrong 'a:10 &nbsp; b:10 &nbsp; c:20'
+wrong 'a:10 &nbsp; b:17 &nbsp; c:17'
+right 'a:10 &nbsp; b:17 &nbsp; c:27'
 wrong 'Code does not execute due to error'
 
 markdown <<MARKDOWN

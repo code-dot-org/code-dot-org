@@ -5,12 +5,45 @@ zh:
   language: English
   front_title: 加入史上最大的學習活動， %{campaign_date}
   coming_soon: 即將推出
-  campaign_date_start_short: 12 月 5 日
-  campaign_date_start_long: 12 月 4 日
-  campaign_date_short: 12月4日-10日
-  campaign_date_full: 12 月 4 日 - 10 日
-  campaign_date_year: '2017'
-  campaign_date_full_year: 2017 年 12 月的 4-10 日
+  campaign_date_start_short: 12 月 7 日
+  campaign_date_start_long: 12 月 7 日
+  campaign_date_short: 12月7日13日
+  campaign_date_full: 12 月 7 日 - 13 日
+  campaign_date_year: '2020'
+  campaign_date_full_year: 2020 年 12 月的 7-13 日
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2020'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2020'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2020'
+  africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: "  馬上開始學習，打造更美好的明天。  "
+  hoc2020_header_with_line_break_markdown: "  馬上開始學習，      打造更美好的明天。  "
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: "  #HourOfCode 是關於 #CSforGood 的。馬上開始學習，打造更美好的明天。
+    \ "
+  social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
+    of millions of students. One-hour tutorials are available in 45+ languages for
+    all ages.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
+  hoc2020_ai_subheader: 2020一小時玩程式即將來臨！
+  hoc2020_ai_header: 探索人工智慧
+  hoc2020_ai_description: 人工智慧和機器學習正在影響我們的整個世界。加入我們，在一個新的視訊系列中探索人工智慧，用超過25種語言訓練AI
+    for Oceans，討論道德與人工智慧，等等……
   hoc2019_header: 學電腦科學以改變世界
   hoc2019_header_line1_mobile: 學電腦科學以
   hoc2019_header_line2_mobile: 改變世界
@@ -24,39 +57,74 @@ zh:
   social_hoc2019_coming_dates: 程式設計一小時將於 2019 年 12 月 9 日至 15 日舉辦。電腦科學對於每個學生而言都是重要的基礎知識。
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
+  oceans_landing_title: "  保護海洋的人工智慧 (AI for Oceans)  "
+  oceans_landing_description: "  瞭解機器學習和 AI 的道德使用。  "
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: "  有 25 種以上的語言可供選擇｜3 年級以上學生  "
+  oceans_landing_explanation: "  電腦科學的意義遠不止於編碼！瞭解人工智慧 (AI)、機器學習、訓練資料和偏見，同時探索倫理問題以及如何利用
+    AI 來解決世界問題。享受 Code.org，在新的旅程中邁出的第一步，教授更多關於 AI 的知識。當你使用 AI for Oceans 活動時，你將會訓練真正的機器學習模型。<a
+    href='#behind-the-scenes'>瞭解更多</a>。  "
+  oceans_landing_explanation_markdown: "  電腦科學的意義遠不止於編碼！瞭解人工智慧 (AI)、機器學習、訓練資料和偏見，同時探索倫理問題以及如何利用
+    AI 來解決世界問題。享受 Code.org，在新的旅程中邁出的第一步，教授更多關於 AI 的知識。當你使用 AI for Oceans 活動時，你將會訓練真正的機器學習模型。[瞭解更多]（#幕後花絮）。
+    \ "
+  oceans_landing_teacher_resources: "  教師資源  "
+  oceans_landing_teacher_resources_desc: "  課程計劃和活動，幫助你教授 AI、機器學習、訓練資料和偏見，同時探索道德問題。
+    \ "
+  oceans_landing_resource_button: "  檢視資源  "
+  oceans_landing_cs_for_good: "  電腦科學的益處  "
+  oceans_landing_cs_for_good_desc: "  提供資源幫助學生暸解電腦科學在創造一個更公平的世界方面可以發揮的作用。  "
+  oceans_landing_videos: "  關於 AI 和機器學習的視訊  "
+  oceans_behind_the_scenes: "  保護海洋的人工智慧：幕後花絮  "
+  oceans_behind_the_scenes_1: '  2-4 年級使用 <a href="https://www.tensorflow.org/">TensorFlow</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">MobileNet</a>
+    專案提供的預訓練模型。MobileNet 模型是一個<a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">卷積神經網路</a>，它已經在
+    <a href="http://www.image-net.org/">ImageNet</a> 上進行了訓練——ImageNet 是一個由超過 1400
+    萬張圖片組成的資料集，這些圖片用「氣球」或「草莓」等詞語進行了人工註釋。為了用學生在這個活動中產生的標記訓練資料來定製這個模型，我們使用了一種叫做<a href="https://en.wikipedia.org/wiki/Transfer_learning">遷移學習</a>的技術。訓練資料集中的每張圖片都會以畫素的形式被輸入到
+    MobileNet，以獲得最有可能與之對應的註釋列表。然後，在遇到新的圖像時，我們將其輸入到 MobileNet，並將其產生的註釋列表與訓練資料集中的註釋列表進行比較。我們用與訓練集中結果最相似的圖像相同的標籤（如「魚」或「不是魚」）對新圖像進行分類。  '
+  oceans_behind_the_scenes_1_markdown: "  2-4 年級使用 [TensorFlow] (https://www.tensorflow.org/)
+    [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    專案提供的預訓練模型。MobileNet 模型是一個 [卷積神經網路](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)，它已經在
+    [ImageNet] (http://www.image-net.org/) 上進行了訓練，這個資料集由超過 1400 萬張圖片組成，圖片都用「氣球」或「草莓」等單詞做了人工註釋。為了用學生在這個活動中產生的標記訓練資料來定製這個模型，我們使用了一種叫做
+    [遷移學習] (https://en.wikipedia.org/wiki/Transfer_learning) 的技術。訓練資料集中的每張圖片都會以畫素的形式被輸入到
+    MobileNet，以獲得最有可能與之對應的註釋列表。然後，在遇到新的圖像時，我們將其輸入到 MobileNet，並將其產生的註釋列表與訓練資料集中的註釋列表進行比較。我們用與訓練集中結果最相似的圖像相同的標籤（如「魚」或「不是魚」）對新圖像進行分類。
+    \ "
+  oceans_behind_the_scenes_2: '  6-8 年級使用<a href="https://en.wikipedia.org/wiki/Support-vector_machine">支援向量機</a>
+    (SVM)。我們觀察魚的各個組成部分（如眼睛、嘴巴、身體），並將這些組成部分的所有元資料（如牙齒數量、身體形狀）組合成每條魚的數字向量。我們使用這些向量來訓練
+    SVM。根據訓練資料，SVM 將所有可能是魚的「空間」分成兩部分，這兩部分對應於我們嘗試學習的類別（如「藍色」或「非藍色」）。  '
+  oceans_behind_the_scenes_2_markdown: "  6-8 年級使用 [支援向量機](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM)。我們觀察魚的各個組成部分（如眼睛、嘴巴、身體），並將這些組成部分的所有元資料（如牙齒數量、身體形狀）組合成每條魚的數字向量。我們使用這些向量來訓練
+    SVM。根據訓練資料，SVM 將所有可能是魚的「空間」分成兩部分，這兩部分對應於我們嘗試學習的類別（如「藍色」或「非藍色」）。  "
+  social_hoc2019_oceans_title: "  AI for Oceans #CSforGood  "
+  social_hoc2019_oceans_desc: "  瞭解人工智慧、機器學習、訓練資料和偏見，同時探討倫理問題以及如何利用人工智慧來解決世界問題。電腦科學的意義遠不止於編碼！享受
+    Code.org，在新的旅程中邁出第一步，透過我們的課程教授更多關於 AI 的知識。  "
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_join_us: 加入我們
+  hoc_overview_oceans_tutorial_header: "  保護海洋的人工智慧 (AI for Oceans)  "
+  hoc_overview_oceans_tutorial_desc: "  瞭解人工智慧 (AI)、機器學習、訓練資料和偏見，同時探索倫理問題以及如何利用 AI
+    來解決世界問題。  "
   ai_video_title_what_is_ai: What is AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
   ai_video_title_ethics_of_ai: Ethics of AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
   activity: Activity
   name: Name
   description: Description
   audience: Audience
   ai_resource_header: Teach and Learn about AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
   ai_resource_ml_for_kids: Machine Learning for Kids
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
@@ -75,18 +143,20 @@ zh:
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
   ai_activity_header: Activities Powered by AI and ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_teachable: Teachable Machine
   ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
     and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_experiments: AI Experiments with Google
   ai_activity_experiments_desc: Start exploring machine learning through pictures,
     drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -98,10 +168,22 @@ zh:
   codeorg_homepage_hoc2018_musician_before: 特色
   codeorg_homepage_hoc2018_musician_after: 還有更多！
   codeorg_homepage_hoc2018_video: 觀賞影片
-  hourofcode_homepage_hoc2018_header_line1: 任何人都可以在任何地方組織一小時編程活動。一小時教學課程提供超過 45 種語言。無需經驗。
+  hourofcode_homepage_hoc2018_header_line1: 任何人都可以在任何地方舉辦一小時玩程式活動。一小時教程支援了超過 45 種語言，你不一定要有相關經驗。
   hourofcode_homepage_hoc2018_header_line2: 年齡 4 - 104。
   hoc2018_tutorial_mchoc_description: 用程式積木帶著 Alex 或 Steve 在 Minecraft 遊戲世界中四處冒險。
   codeorg_homepage_hoc2019_dance_heading: 嘗試新版 <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: "  為面臨學校停課的家長和教師提供支援。  "
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: '開始《代碼小憩》！您每週的靈感、社區和電腦科學。
+
+'
+  codeorg_homepage_code_break_link_text: 進一步學習
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -114,13 +196,6 @@ zh:
   front_watch_regular_video: 觀賞影片
   front_volunteers: 徵求專門技術志願者
   front_start_learning: 開始學習
-  gdpr_dialog_heading: Do you agree to using a web site based in the United States?
-  gdpr_dialog_message: Data from your use of this site may be sent to and stored or
-    processed in the United States.
-  gdpr_dialog_link_intro: 詳情請見
-  gdpr_dialog_privacy_policy: 隱私條款
-  gdpr_dialog_logout: 登出
-  gdpr_dialog_yes: 是
   header_menu_resources: 資源
   header_menu_faq: 常見問題與解答
   header_menu_how_to: 活動指南
@@ -267,6 +342,7 @@ zh:
   how_to_nav_companies: 針對企業
   how_to_nav_afterschool_educators: 針對課後的教育者
   how_to_nav_volunteers: 針對志工
+  how_to_nav_virtual: "  對於虛擬活動  "
   whats_next_header: 接下來？
   whats_next_description: 我們會針對你的活動寄給你一些素材和有用的提示。2015 新的課程不久將會出來，每一種瀏覽器或智慧型手機都可以用
     -- 甚至也有不用電腦的課程！<a href='http://code.org/learn'>試試目前的課程</a>
@@ -332,6 +408,9 @@ zh:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: 而每年的 12 月，您的班級都可以與全世界數百萬名學生一起在慶祝「電腦科學教育周」之餘參加「程式設計一小時」活動。我們將在
     10 月開放年度慶祝活動的註冊。
   signup_header: 在 %{campaign_date} 舉辦一場一小時的程式設計課程活動，並在這裡註冊。
@@ -375,6 +454,7 @@ zh:
   signup_send_posters_address_placeholder: 這個地址不會被分享在我們的地圖上
   signup_event_type_in_school: 在學校內
   signup_event_type_out_of_school: 校外團體
+  signup_event_type_at_home: Home
   signup_submit_census_label: 提交
   signup_submit_census_error_message: 我們很抱歉發生錯誤。請再次嘗試提交表單。
   signup_submit_label: 註冊
@@ -419,6 +499,7 @@ zh:
   map_legend_cs_tech_jam: 特殊活動
   map_warning: Hour of Code的地圖只顯示首 200,000 起已註冊事件。要查看所有已註冊事件，請使用 <a href='%{events_url}'>
     事件頁面</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: 一小時玩程式活動來囉
   meta_tag_og_description: 一小時玩程式是一個全球性的活動，觸及數千萬個來自 180 多個國家，30 多種語言，由 4 歲到 104 歲的學生。
   meta_tag_twitter_title: 一小時玩程式活動來囉
@@ -434,66 +515,122 @@ zh:
   hoc_faq_what_is_hoc_a: Hour of Code 是個一小時介紹計算機科學的活動，希望在揭開程式設計的神秘面紗的同時，說明它是任何人都可以學習的基礎知識，期望能擴展人們在計算機科學領域的參與。查看<a
     href='%{tutorials}'>教程和活動</a>。這個草根活動得到了<a href='%{partners}'>400 個合作夥伴</a>和來自世界
     20 萬名教師的支持。
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: 試試教程
   hoc_faq_when_is_hoc_q: 何時舉辦一小時玩程式活動？
   hoc_faq_when_is_hoc_a: 一小時學程式活動主要是在<a href='%{csedweek_url}'>計算機科學教育週</a>期間展開，%{campaign_date_year}
     計算機科學教育週是 %{campaign_date_full}，但你還是可以隨時隨地舉辦一小時玩程式活動。每年舉辦的計算機科學教育週是為了紀念世界最早的女性程式設計師
     <a href='%{grace_hopper}'>Grace Murray Hopper</a> (December 9, 1906)。
+  hoc_faq_when_is_hoc_a_markdown: "  每年 12 月初 的[電腦科學教育週] (%{csedweek_url}) 期間，都會舉辦一小時玩程式活動。%{campaign_date_year}
+    電腦科學教育週的時間為 %{campaign_date_full}，但你全年都可以舉辦「一小時玩程式」活動。電腦科學教育週每年舉行一次，以紀念計算機先驅 [海軍上將
+    Grace Murray Hopper] (%{grace_hopper}) 的誕辰（1906 年 12 月 9 日）。  "
   hoc_faq_why_cs_q: 為何是資訊科學？
   hoc_faq_why_cs_a: "<i>每個</i> 學生都應該有機會學習電腦科學。它有助於培養解決問題的技能、 邏輯和創造力。提早開始，學生將有在任何一個
     21 世紀的職業生涯成功的基礎。在 <a href='HTTP://code.org'> Code.org</a> 上觀看更多的統計資料。"
+  hoc_faq_why_cs_a_markdown: "  每個學生都應該有機會學習電腦科學。它有助於培養解決問題的技能、邏輯和創造力。儘早開始學習能幫助學生在
+    21 世紀任何職業道路上的成功奠定基礎。可在 [這裡] (%{stats_url}) 檢視更多統計資料。  "
   hoc_faq_how_participate_q: 要如何參加一小時玩程式活動？
   hoc_faq_how_participate_a: 觀看完我們的活動指引就可以<a href='/how-to'>開始在這裡計劃</a>。你能在你的學校或你的社區，組織個一小時玩程式活動&mdash;
     就像在進行一個課外活動，非營利的活動或是一個工作。或者，在%{campaign_date} 到來之前自己先體驗。
+  hoc_faq_how_participate_a_markdown: "  檢視我們的指南，[按這裡開始規劃] (%{howto})。你可以在你的學校或社群組織一次「一小時玩程式」活動——比如在課外俱樂部、非營利組織或工作場所。或者，當
+    %{campaign_date} 到來時，你也可以自己嘗試一下。  "
   hoc_faq_behind_hoc_q: 一小時玩程式活動是由誰支持的？
   hoc_faq_behind_hoc_a: 一小時玩程式是由 Code. org 策劃，屬於 501c3 非營利組織，活動在<a href='%{partner_url}'>計算機科學教育週</a>展開，致力於在學校推廣計算機科學教育，並增加了女性和弱勢學生學習計算機的機會。同時，這是一個<a
     href='Http://code. org/about/partners'>前所未有的夥伴聯盟</a>&mdash; 支持者包括微軟、蘋果、亞馬遜、Boys
     and Girls Clubs of America 以及各大學理事會。
+  hoc_faq_behind_hoc_a_markdown: "  「一小時玩程式」由「一小時玩程式」和電腦科學教育週 [諮詢和評審委員會](%{partner_url})
+    推動，此外還有前所未有的合作伙伴聯盟共同支援「一小時玩程式」，包括微軟、蘋果、亞馬遜、美國男孩女孩俱樂部和大學委員會等等。  "
   hoc_faq_host_q: 我對寫程式一無所知，這樣能舉辦活動嗎？
   hoc_faq_host_a: 當然，「一小時玩程式活動」是可以自學得。你要做的就是<a href='%{codeorg_url}/learn'>體驗我們目前的教程</a>，挑選你想要的教程&mdash;
     後續就放心的交給我們。我們為不同年齡不同程度的人，提供了許多選擇。先閱讀我們的 <a href='target-resources-how-to'>活動指引</a>，並開始規劃您的活動。
+  hoc_faq_host_a_markdown: "  當然了。一小時玩程式活動側重於自我指導。你所要做的就是 [嘗試我們當前的教程] (%{codeorg_url}/learn)，選擇你想要的教程，並選擇一個小時的時間——其餘的事情我們會處理。我們還為幼兒園以上的每個不同年齡段和經驗水平的人提供了不同選擇。馬上閱讀我們的
+    [指南] (%{howto})，開始規劃你的活動。  "
   hoc_faq_devices_q: 我應該使用什麼設備給我的學生？
   hoc_faq_devices_a: 'Code.org 教學課程可以在所有的裝置跟瀏覽器上使用。您可以在 <a href=''%{codeorg_url}/educate/it''>
     找到關於 Code.org 教學課程的軟硬體需求詳情。關於非 Code.org 的教學課程的軟硬體需求，可以在教學的描述中找到 <a href="%{codeorg_url}/learn">。別忘了，如果您的學校沒有電腦或沒有相關的資源，我們也有不用電腦也可以進行的活動課程喔！
 
 '
+  hoc_faq_devices_a_markdown: "  Code.org 的教程可以在所有裝置和瀏覽器上使用。你可以在 [這裡] (%{codeorg_url}/educate/it)
+    看到更多關於 Code.org 教程技術需求的資訊。非 Code.org 教程的技術需求可以在 [%{partner_url}/learn] (%{codeorg_url}/learn)
+    的教程具體說明中找到。不要忘了，如果你的學校不能滿足教程的要求，我們還提供 [不插電活動] (%{unplugged_url})！  "
   hoc_faq_need_computers_q: 我要給每個參與者提供電腦嗎？
   hoc_faq_need_computers_a: 不需要，一小時玩程式活動可以在電腦、手機、平板上執行，有些活動甚至根本不需要計算機。無論你在哪裡，不管設備是什麼，你都可以參加。<p><i>這裡有幾個方式：</i>
     <br><ul><li><b>兩兩合作。</b><a href='%{pair_programming_research}'>研究顯示</a>，學生在<a
     href='%{pair_programming_video}'>合作編程</a>時的學習效果最好，透過在一台電腦上協同，也可以讓你的學生學習合作。<li><b>使用投影螢幕，</b>如果你有一部投影機和有可以電腦連線的大螢幕，你的整個團體就可以一起進行活動，一起觀看影片，輪流解決關卡或回答問題。<li><b>不插電活動，</b>我們提供了<a
     href='%{unplugged_url}'>不需要電腦的教學內容</a>。</ul>
+  hoc_faq_need_computers_a_markdown: "  我們的 Hour of Code 教程可以在電腦、智慧手機、平板電腦上使用，有些甚至不需要電腦！無論你在哪裡，無論你條件如何，你都可以加入。
+    \     _這裡有幾個選項：_       - **配對合作。**[研究表明] (%{pair_programming_research}) 學生在 [配對程式設計](%{pair_programming_video})
+    中共享一臺電腦共同學習，效果最好。鼓勵學生雙人合作。   - **使用投影螢幕。**如果你有一臺投影儀和螢幕給連上網路的電腦用，你的整個小組就可以一起進行「一小時玩程式」。一起觀看視訊部分，然後輪流解謎或回答問題。
+    \  - **不插電。**我們提供完全 [不需要電腦的教程] (%{unplugged_url})。  "
   hoc_faq_international_q: 我在 <country>。我如何參與國際活動？
   hoc_faq_international_a: 任何人都可以在任何一個地方舉辦一小時玩程式活動。去年，全世界有許多的學生共同參與了這個活動。<a href='target-resources'>進一步了解</a>。
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: 我該如何製作一小時玩程式的教程？
   hoc_faq_tutorial_a: 如果您有興趣成為教程合作夥伴，請<a href='/tutorial-guidelines'>參閱我們的指南和說明</a>。
     我們想要舉辦各種各樣有吸引力的選擇，但主要目標是優化對於計算機科學新手的學生和教師的體驗。
+  hoc_faq_tutorial_a_markdown: "  如果你有興趣成為教程合作伙伴，請 [參見我們的指南和說明] (%{tutorial_guidelines})。我們希望舉辦各種引人入勝的活動，但主要目標是為剛接觸電腦科學的學生和教師優化體驗。
+    \ "
   hoc_faq_account_q: 學生是否需要使用帳戶登錄？
   hoc_faq_account_a: 不，學生體驗一小時玩程式的過程中，完全不需要註冊或登入。只有大多數<a href='%{codeorg_url}/learn/beyond'>後續課程</a>才需要建立帳戶以保存學生的學習進度。同時，一小時玩程式上註冊的帳戶並沒有自動與
     Code Studio 的帳戶關聯。如果你想為你的學生建立帳戶，請參考<a href='https://youtu.be/_smelV_KISE'>這些指引</a>。
+  hoc_faq_account_a_markdown: "  不，學生完全不需要註冊或登入就可以嘗試「一小時玩程式」。大多數 [後續課程] (%{codeorg_url}/learn/beyond)
+    則需要建立賬戶來儲存學生的學習進度。另外，註冊「一小時玩程式」並不會自動建立一個 Code Studio 賬戶。如果你想為你的學生建立賬戶，請按照以下 [說明](https://youtu.be/_smelV_KISE)
+    操作。  "
   hoc_faq_high_school_q: 我應該和高中生一起做哪些活動？
   hoc_faq_high_school_a: 我們的《星際大戰》和《我的世界》教程對高中生來說是很好的的選擇，尤其是《星球大戰》的 JavaScript 版本和這兩個教程的自由發揮關卡。或者,
     我們建議一開始可以在 <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 裡選個入門教程，比方說憤怒鳥，或安娜和艾莎公主。高中生應該能夠在
     30 分鐘內完成其中一個，然後進行更進階的教程，比如汗學院或 CodeHS 的 JavaScript 相關課程。
+  hoc_faq_high_school_a_markdown: "  我們的《星球大戰》和《我的世界》教程很適合高中生，尤其是《星球大戰》JavaScript
+    版和兩個教程上的免費遊戲關卡。另外，我們建議嘗試從 [%{partner_url}/learn] (%{codeorg_url}/learn) 上的某個初級教程開始，比如《憤怒的小鳥》或《安娜和艾爾莎》的教程。一個高中生應該可以在
+    30 分鐘內完成其中的一個教程，然後可以嘗試更高階的 JavaScript 教程，比如可汗學院或 CodeHS。  "
   hoc_faq_scratch_q: 我正用 Scratch 辦一小時玩程式活動，但是如果我的學生有 iPad 而不是筆記型電腦，怎麼辦呢？
   hoc_faq_scratch_a: Scratch無法在平板電腦上執行。如果你的學生年紀小，他們可以使用 ScratchJR--它是iPad應用程式。如果你有看一下<a
     href='http://code.org/learn'> Code.org/learn</a>的教學課程，你會在Code.org找到其他在iPad可行的教學，例如Tynker、Lightbot或CodeSpark。
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: 你如何計算代碼小時數？
   hoc_faq_map_q: 為什麼我在地圖上看不到我的點？
   hoc_faq_map_a: 我們很抱歉，您在“小時代碼”地圖上看不到您的活動。 由於成千上萬的組織者註冊，地圖匯總數據並顯示一個點的幾個事件。 如果您點擊地圖上方的號碼，您將被定向到按州列出的所有事件列表，並可以在此列出您的事件。
     此外，鑑於成千上萬的人註冊了“小時代碼”，地圖和事件列表通常需要48小時才能更新。 幾天后再回來看看！
+  hoc_faq_map_a_markdown: "  很抱歉，在「一小時玩程式」地圖上看不到你的活動。由於有成千上萬的組織者註冊，所以地圖彙總了所有資料，並在一個點上顯示多個活動。如果你點選地圖下方的
+    [活動頁面] (%{events_url}) 連結，你會被引導到一個按州劃分的所有活動列表上，你可以在那裡找到你的活動列表。此外，由於有成千上萬的人報名參加「一小時玩程式」，地圖和活動列表通常需要
+    48 小時才能更新。請在幾天後再來檢視！  "
   hoc_faq_count_hoc_a: 小時的代碼的跟蹤器不是使用精確測量。我們不會計算特定學生的詳細Id當我們正在跟蹤代碼小時的參與，特別是因為我們不要求學生登錄或註冊。作為一個結果，我們過度計數和不足計數的參與者，在同一時間。閱讀所有的細節
     <a href='HTTP://code.org/loc'> 在這裡</a>。
+  hoc_faq_count_hoc_a_markdown: "  一小時玩程式追蹤器並不能精確測量使用情況。當我們追蹤「一小時玩程式」的參與情況時，我們並不能完美地計算出唯一的學生
+    ID，特別是因為我們並不要求學生登入或註冊。因此，我們會同時多算和少算參與者。在 [這裡] 閱讀所有細節 (%{codeorg_url}/loc)。  "
   hoc_faq_one_hour_q: 一個小時能學多少？
   hoc_faq_one_hour_a: "「一小時的程式設計課程」目的並不是在一小時內把大家教成資訊科學的專家。一小時的時間是剛好讓大家瞭解到資訊科學是門有趣且有創意的學問，而且適合所有年紀、所有學生學習，不管是什麼背景。這個活動的成功不是以學生學了多少資訊科學的知識來衡量的，而是體現在參與族群、性別、經濟背景等的多元化，讓我們可以看到資訊科學在所有年齡層中遍地開花。上百萬的老師與學生在一小時的體驗之後決定繼續下去
     -- 學習一整天、一整個星期甚至更長時間，而且有許多學生決定最後主修資訊科學。<br/><br/>除了學生之外，另一個「得到好處」的是老師們。因為有些老師並沒有資訊科學的學位，但經過這一小時的體驗之後，他們變得有自信，可以教好資訊科學相關的課程。也有成千上萬的老師決定再深入一點研究資訊科學，有些去參與線上課程，甚至有人去進修。有些學校的管理團隊也瞭解到，資訊科學是他們的學生與老師可以一起學習的課程。<br/><br/>總結來說，我們希望一小時的體驗能帶給大家更多未來的可能性。"
+  hoc_faq_one_hour_a_markdown: "  「一小時玩程式」的目標不是要教任何人在一小時內成為電腦科學家或者專家。一個小時的時間只夠讓大家瞭解到電腦科學是有趣的、有創造力的，是所有年齡段、所有學生（無論什麼背景）都能接觸到的。衡量這項活動成功與否的標準並不在於學生學到了多少電腦科學知識——而在於讓不同性別、種族和社會經濟群體廣泛參與，以及由此帶來的各年級電腦科學課程入學率和參與率的提高。數以百萬計的教師和學生參與活動之後都決定要超越一個小時——學習一整天或一整週或更長的時間，還有許多學生因此決定報讀一整門課程（甚至大學專業）。
+    \     除了學生群體，教育者同時也是另一群「學習者」，他們在這一小時後獲得了信心，認為自己可以教授電腦科學，即使他們可能沒有電腦科學的大學學位。數以萬計的教師決定進一步鑽研電腦科學，要麼參加
+    PD，要麼提供後續的線上課程，或者兩者兼而有之。這同樣也適用於學校管理者，他們意識到電腦科學是他們的學生想要學系的，而且他們的老師也有能力勝任教學任務。      最重要的是，所有參與者在一小時內都能學到的是：我們可以做到。
+    \ "
   hoc_faq_more_questions_q: 還有疑問？
   hoc_faq_more_questions_a: 請嘗試在 <a href='HTTP://support.code.org'> 支援論壇 </a> 中找到答案。
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: 在一小時玩程式活動之後，我可以繼續學習什麼？
   hoc_faq_keep_learning_a: 任何人、任何時間都可以舉辦一小時玩程式活動。所有的教程都會永久保留在網站上。請到<a href='/promote'>我們的資源</a>看看如何辦理活動的活動指引，還有相關的資源，幫助你辦理一場成功的活動。
+  hoc_faq_keep_learning_a_markdown: "  任何人在任何時候都可以舉辦「一小時玩程式」活動。教程全年不間斷。放心，我們所有的教程和課程都會在我們的網站上永久保留。請到
+    [我們的資源] (%{promote}) 檢視活動指南和其他資源，以幫助你的「一小時玩程式」活動獲得成功。  "
   hoc_faq_certificates_q: 我在哪裡可以為學生列印證書？
   hoc_faq_certificates_a: 到我們的<a href='%{codeorg_url}/certificates'>認證網頁</a>，您可以在那裡提前先把整個班的認證印好。
+  hoc_faq_certificates_a_markdown: "  就我們的 [證書頁面] (%{codeorg_url}/certificates)，在這裡你可以提前列印全班的證書。你也可以列印
+    [特殊證書] (%{codeorg_url}/certificates?course=mc) 給正在學習《我的世界》教程的學生。  "
   hoc_faq_logo_q: 當我使用一小時玩程式的標誌或名稱時，有什麼限制嗎？
   hoc_faq_logo_a: Hour of Code 是個商標，我們不想限制使用，但我們必須確保它被使用時符合一些條件，請參考<a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>這些使用指南</a>。
+  hoc_faq_logo_a_markdown: "  Hour of Code 是一個商標。我們不想阻止它的使用，但我們希望確保它的使用符合一些限制。請參閱
+    [使用指南] (%{logo_url})。  "
   stats_hoc_2013_image_alt: 2013 一小時玩程式的統計資料
   stats_growth: 活動在最快的時間內觸及了 1500 萬的使用者。
   stats_i18n: 支援超過 45 種語言
@@ -507,6 +644,8 @@ zh:
   stats_girls_more: 體驗過資訊科學的女孩已經比過去 70 年的總和還多。
   stats_females: 女性參與計算機科學只佔高中課程，大學課程和勞動力的20％。
   stats_females_more: 在代碼的一個小時內, 女性組成了<b>50% 的所有參與者</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: "“每一天都取得相同的結果 - 100％的參與。” - 尼娜尼科爾斯Peery，老師"
   stats_student: "“我知道這是一個一生一次的機會。” - 馬里亞納阿爾扎特，五年級學生"
   stats_michael: "“我從來沒有見過我的學生對學習這麼興奮。” - 老師Michael Clark"
@@ -586,7 +725,8 @@ zh:
   highlights_title: 焦點訊息
   highlights_header: 一小時玩程式焦點訊息
   highlights_description: 一些我們最愛的一小時玩程式活動花絮。
-  higlights_see_more: 查看更多亮點
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: 閱讀全文
   highlights_watchvideo: 觀賞影片
   highlights_facebook: 在 Facebook 分享
@@ -604,6 +744,7 @@ zh:
   highlights_constant_athletes_short_heading: 鞭策自己
   footer_copyright_message: 版權所有 %{current_year} Code.org 保留所有權利
   footer_trademark_message: Hour of Code™是 Code.org 的商標。
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: 合作夥伴和顧問
   footer_menu_contact: 聯絡我們
   footer_menu_support: 支援服務
@@ -612,7 +753,10 @@ zh:
   learn_banner_heading: 一小時玩程式
   learn_banner_blurb: 體驗為所有年齡層設計的一小時玩程式教程（支援超過 45 種語言）。參加超過 180 個國家、數以百萬計的學生、教師都加入的一小時玩程式活動。
   learn_banner_beyond: 想要不斷地學習嗎？ <a id='learn_banner_beyond'> 超越一小時</a>
+  learn_banner_beyond_markdown: "  想繼續學習？[超越一小時] (%{url})  "
   learn_banner_teachers: 教師： <a id='teacher_banner_host'>辦理一小時的活動</a>或<a id='teacher_banner_howto'>觀看活動指引</a>
+  learn_banner_teachers_markdown: "  教師：[主持一小時] (%{host_url}) 或 [閱讀指南] (%{howto_url})
+    \ "
   learn_robotics_banner_heading: 機器人與電路
   learn_robotics_banner_blurb: 用過機器人技術嗎？透過以下活動使用機器人技術，提供任何年紀的學生一堂實際的「一小時程式設計課程」！
   tutorial_dance2019_name: 舞蹈派對 2019
@@ -1195,8 +1339,126 @@ zh:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
-  tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_csfirstunplugged_name: CS First Unplugged
+  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
+  tutorial_vidcodedate_name: Climate Clock
+  tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
+  tutorial_codespeakhappy_name: Code a Happy Place Meditation App
+  tutorial_grokimage_name: Image Magic with Python
+  tutorial_icomputelearn_name: Learn Coding with iCompute
+  tutorial_rpstress_name: Stress ball
+  tutorial_bsdcause_name: Support My Cause
+  tutorial_vidcodeanimoji_name: Animoji
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
+  tutorial_tttractor_name: Tractor Traversal
+  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
+    Mickey'
+  tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
+  tutorial_codespeakbreathe_name: Code a Meditation Breathing App
+  tutorial_vidcodeface_name: Facetracking
+  tutorial_educodemaze_name: Design Your Own Maze!
+  tutorial_educoderace_name: Code your own racing game!
+  tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
+  tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
+  tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
+  tutorial_educodekingdom_name: Defend the Kingdom!
+  tutorial_codehsdata_name: Coding with Data Visualizations
+  tutorial_educodecake_name: Bake a Cake With HTML!
+  tutorial_ttsecond_name: Second Team
+  tutorial_bsdtrivia_name: Trivia Game Maker
+  tutorial_csfirstdialogue_name: Dialogue
+  tutorial_codemonkeybeaver_name: Beaver Achiever
+  tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
+  tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
+  tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
+  tutorial_codespeakmeal_name: Code a Healthy Meal App
+  tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
+  tutorial_bsdwebsite_name: My Favorites Website
+  tutorial_codespeaktime_name: Code a Time Capsule in Scratch
+  tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
+  tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
+  tutorial_ttrace_name: Race Condition
+  tutorial_plethora_name: 'Plethora: Cause and Effect'
+  tutorial_educodesecret_name: Uncover the Agency's Secrets!
+  tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
+  tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
+  tutorial_educativechatbot_name: Build your own chatbot in Python
+  tutorial_educodebasics_name: Learn the Basics!
+  tutorial_codehsdesign_name: Supporting Artists with Code
+  tutorial_htmlacademyphp_name: 'Intro to PHP: Create an Online Store from Scratch'
+  tutorial_gamefrootdistance_name: 'COVID-19 Simulator: Learn about social distancing
+    through computer science.'
+  tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
+  tutorial_ttbunker_name: The Bunker
+  tutorial_cuttle_name: Computational Thinking and Programming Challenge
+  tutorial_bsdjokes_name: Jokes and Riddles
+  tutorial_rptree_name: Tree life simulator
+  tutorial_codestersunity_name: 'Codesters: Unity Mural'
+  tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
+  tutorial_breakoutlock_name: 'Haspy and Lockit: Code Buddies'
+  tutorial_thunkablemask_name: Beaver in a Mask
+  tutorial_cafarming_name: Old MacDonald hacked a farm. AI, AI drone!
+  tutorial_blocksmithyeti_name: Don't Yeet the Yeti
+  tutorial_codecapture_name: Learn Programming With JavaScript​ In A Jiffy​
+  tutorial_codehslitter_name: Coding for a Litter-Free Community
+  tutorial_bsdocean_name: Life Below Water
+  tutorial_itchplatformer_name: 'iTCHcode: Scratch 3.0 Platformer Tutorial'
+  tutorial_codejika_name: 'CodeJIKA: 5 Minute Website'
+  tutorial_gamefrootclicker_name: Learn Variables. Code your own Clicker Game.
+  tutorial_rmagicequity_name: Equity vs. Equality
+  tutorial_ttfreestyle_name: Functional Freestyle
+  tutorial_ozobotcolor2_name: 'Introduction to Color Codes 02:  Drawing Color Codes'
+  tutorial_ozobotcolor3_name: 'Introduction to Color Codes 03: Directionality'
+  tutorial_clcarbon_name: Build Your Own Carbon Calculator
+  tutorial_kodablebasics_name: 'Coding Basics: Unplugged'
+  tutorial_scigirlscc_name: 'SciGirls: Code Creators'
+  tutorial_irobotpicture_name: 'Seeing the Whole Picture: Coded Messages'
+  tutorial_kcjmyself_name: Let me introduce myself!
+  tutorial_nearpodalgorithms_name: 'Coding: Algorithms '
+  tutorial_kibodrop_name: KIBO Craft and Build Drop Test
+  tutorial_ozobotcolor1_name: 'Introduction to Color Codes 01: Line Following'
+  tutorial_scigirlspixels_name: 'SciGirls: Passion for Pixels'
+  tutorial_kcjheroines_name: Our Heroines
+  tutorial_ozobotvalue_name: What's My Value?
+  tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
+  tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
+  tutorial_ai4all_name: AI & Drawing
+  tutorial_cldata_name: Welcome to Data Superpower
+  tutorial_spheroinputs_name: Inputs and Outputs Unplugged
+  tutorial_edisoncount_name: Teach Edison to count to 9
+  tutorial_spheroloops_name: Loops Unplugged
+  tutorial_kiboprogram_name: Let's Program Each Other
+  tutorial_hellorubycsin60_name: Computer Science in 60 seconds
+  tutorial_clfashion1_name: Fashionistas of Data Science - Class 1
+  tutorial_irobottraffic_name: 'Traffic Bot: Code Your Own Traffic Signal'
+  tutorial_edisonmystery_name: Edison and the mystery line
+  tutorial_microbitseaturtles_name: Saving Sea Turtles
+  tutorial_ozobotknow_name: 'Introduction to Ozobot: Get to Know Evo'
+  tutorial_imagilabs_name: 'Imagine it. Code it. Wear it. '
+  tutorial_irobotsimulator_name: Simulator Code Break
+  tutorial_irobotkind_name: 'Robot Feelings: The Kind Playground'
+  tutorial_firiavirtual_name: 'CodeSpace: Virtual Robotics with Python'
+  tutorial_irobotguesscode_name: Guess the Code
+  tutorial_ozobotnouns_name: Picking Out Irregular Plural Nouns
+  tutorial_nasa3d_name: 'Universe in 3D:  modeling and printing cosmic objects'
+  tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
+  tutorial_legodance_name: Break Dance
+  tutorial_nearpodcoding_name: 'Topic Spark: Coding '
+  tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
+  tutorial_legojourney_name: Create a Journey with LEGO Education
+  tutorial_legohopper_name: Hopper Race
+  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_irobotphone_name: Telephone Drawing
+  tutorial_codeguppydraw_name: Draw with code
+  tutorial_codejumper_name: 'Networks: Messages of Kindness'
+  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_danceparty_shortdescription: "  編寫一個舞蹈派對，與你的朋友分享。Katy Perry、Madonna、J.
+    Balvin、Sia、Keith Urban、Ciara 等超過 25 位歌手將為你帶來精彩的表演！  "
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_shortdescription: 選擇製作一個籃球遊戲或是混合搭配多種不同的運動！
@@ -2051,11 +2313,10 @@ zh:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
-  tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  tutorial_dance2019_longdescription: "  編寫一個舞蹈派對，與你的朋友分享。Katy Perry, Shawn Mendes,
+    Lil Nas X, Panic！At The Disco, Jonas Brothers, 還有更多！  "
+  tutorial_danceparty_longdescription: "  編寫一個舞蹈派對，與你的朋友分享。Katy Perry、Madonna、J. Balvin、Sia、Keith
+    Urban、Ciara 等超過 25 位歌手將為你帶來精彩的表演！  "
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_longdescription: 選擇製作一個籃球遊戲或是混合搭配多種不同的運動！
@@ -2211,7 +2472,6 @@ zh:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: 這個數字明信片開始學習HTML和CSS是容易和有趣的。 了解如何添加標題，段落，圖片和鏈接來創建節日賀卡或生日慶祝活動，以便與朋友和家人分享。
   tutorial_marco_longdescription: 學生根據原始故事玩一個冒險遊戲。 他們通過每個級別指導Marco（主要角色），以 Hour of
     Code 使用的可視化編程語言的形式向他提供分步說明。 他們引入了序列命令，迭代和條件，甚至沒有註意到它。
@@ -3168,18 +3428,17 @@ zh:
     they will create a program to teach their KIBO to dance to the music. Students
     will learn how to create a program to express an idea (in this case, a dance),
     with a focus on sequencing ability.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -3217,30 +3476,29 @@ zh:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -3302,7 +3560,7 @@ zh:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -3376,11 +3634,9 @@ zh:
     you'll find every puzzle has a solution to make the pets feel better than ever!
   tutorial_superhero_longdescription: Use HTML and CSS pixel art to create your favorite
     superhero masks. Publish and share your creations!
-  tutorial_vidcodeplastic_longdescription: The problem of plastic filling our oceans
-    continues to worsen. Luckily, you can make your voice heard with code through
-    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
-    you can make a second video about any subject you care about! Learn to use loops,
-    sine waves and customized emojis to make a unique project.
+  tutorial_vidcodeplastic_longdescription: "   塑料充斥海洋的問題持續惡化。幸運的是，你可以透過塑料汙染公益廣告用程式碼發出你的聲音。在使用
+    JavaScript 編寫一個關於塑料汙染的公益廣告後，你可以再製作一個有關你關心的任意主題的視訊！學會使用迴圈、正弦波和自定義表情來製作一個獨特的專案。
+    \ "
   tutorial_vidcodetypeface_longdescription: Create your own typeface using shapes
     and elements of typography. Type has more elements than you may have realized!
     So far we have talked about fonts and how they are different styles of text. Fonts
@@ -3418,6 +3674,422 @@ zh:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_microsoftarcade_longdescription: Play fun arcade games, design your own
+    sprites, and learn the basics of coding your own game with MakeCode Arcade.
+  tutorial_csfirstunplugged_longdescription: No computer or internet? No problem.
+    Try the CS First Unplugged activities to explore how computer science can solve
+    problems like helping people stay connected while apart. 'Plugged in' Scratch
+    activities are available too!
+  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
+    word or explanation. Our silent teacher will give you several series of challenges
+    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
+    a hero in an epic adventure. You must use the power of coding to defeat a darkness
+    that has taken over the world! Along the way, you'll meet interesting characters
+    and travel to different lands, practicing coding concepts like sequences, loops,
+    debugging, and decomposition. In the end, you'll design a playable game that you
+    can share with your friends!
+  tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
+    relevant intersection of math, environmental science, and computer science. In
+    this Hour of Code activity, students will be guided through the construction of
+    their own climate clock. They will engage with objects, properties, variables,
+    functions, and loops, and customize their message to convey their message for
+    the world and their hopes for the future. '
+  tutorial_codemonkeyspace_longdescription: 'Write real code to help the monkey astronaut
+    catch bananas in space! '
+  tutorial_codespeakhappy_longdescription: Learn to program a meditation app that
+    transports you to your 'happy place.'
+  tutorial_grokimage_longdescription: Use the programming language Python to make
+    speedy changes to images. Make fun image editing programs and make your own image
+    filter!
+  tutorial_icomputelearn_longdescription: When you learn to code with iCompute you
+    program your own fantastic interactive stories, games, and animations. Following
+    our creative, fun, activities means that you will develop computational thinking
+    as well as coding skills!
+  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
+    can squash!
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Support
+    My Cause focuses on designing and coding a landing page that will collect data
+    from supporters of your favorite cause. #codeisyourvoice'
+  tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
+    an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
+  tutorial_bsdinspire_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them.They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The People
+    Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
+    have been an inspiration to you. #codeisyourvoice'
+  tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
+    down on his luck, and his fields have become a mess. But he's just obtained a
+    fancy new tractor with a repeating code system using loops that just might save
+    everything. Help learn how the tractor works to water all the crops in his fields.
+  tutorial_codeillusionmickey_longdescription: Embark on a magical coding adventure
+    with Mickey! Learn how to draw, color, and move shapes as you master the introduction
+    to Media Art using JavaScript.
+  tutorial_scigirlsquest_longdescription: 'In this online coding adventure, youth
+    take Subby the submarine through underwater challenges, using code to find various
+    items and collect scientific data on the ocean floor. '
+  tutorial_codespeakbreathe_longdescription: Learn to program meditation app that
+    will guide users through a mindful breathing exercise.
+  tutorial_vidcodeface_longdescription: Use a facetracking library to code your own
+    custom face filter, like the ones you use on social media.
+  tutorial_educodemaze_longdescription: Design a maze, complete with monsters and
+    locked passages. Use variables, loops, and strings to help your hero navigate
+    the world you've created.
+  tutorial_educoderace_longdescription: Learn computer science as you unleash the
+    racer in you! Invent and customize your very own car, all while gaining a deeper
+    understanding of objects and how video games are made.
+  tutorial_codespeakchatbot_longdescription: Learn how to code a chatbot, a computer
+    program you can have a conversation with, while learning about the famous women
+    pioneers of computer science.
+  tutorial_gamefrootgames_longdescription: Learn to code a real game like Super Mario
+    Bros. Students that are ready to go beyond Scratch and Tynker will be introduced
+    to real games industry practice, creative coding concepts, how to publish their
+    own unique game and start working towards a career in the games industry. The
+    tutorial is all about level design, choosing a character, animating and coding
+    your character to move around.
+  tutorial_codespeakgrandparent_longdescription: Learn to code a digital card to spread
+    joy to someone special in your life.
+  tutorial_educodekingdom_longdescription: The Kingdom is under attack! Plan powerful
+    defenses to help repel the invaders. Master the power of arrays in order to create
+    your very own wave of monsters in your own tower defense game!
+  tutorial_codehsdata_longdescription: Learn about the power of using data visualizations
+    to display data in meaningful and easy to understand ways. Use our graph generator
+    to create visually appealing graphs and learn how coding is used to create beautiful
+    data.
+  tutorial_educodecake_longdescription: Learn HTML as you bake a cake with chef Roland.
+    Shape and style your custom creation with your newfound knowledge of tags and
+    classes.
+  tutorial_ttsecond_longdescription: Can you deliver the Open Protocol? You've snuck
+    aboard the capital ship, and now you must evade the security drones long enough
+    to open access for all. Quickly examine conditional statements to find out whether
+    you're safe or not from the dastardly cybervision. If not, it's to the airlock!
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Trivia
+    Game Maker focuses on building an interactive trivia game where you also get to
+    come up with the trivia questions. #codeisyourvoice'
+  tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
+    Get creative while communicating with code in Scratch with CS First!
+  tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
+    into this beaver's natural habitat with a fun-packed coding activity that will
+    jump-start your coding education. Beavers can swim, collect wood, and build dams.
+    This little beaver needs your help. Use the simple blocks of code to complete
+    the dam in the lake so the water remains calm, build a house, and make smoothies!
+  tutorial_codestersdistance_longdescription: Learn the basics of coding in Python,
+    then create a program that calculates the distance between two sprites to make
+    sure they are social distancing or need to wear a mask.
+  tutorial_itchspace_longdescription: This tutorial takes you through the creation
+    of a classic Space Invaders game using the Scratch MIT programming language. Subscribe
+    to the RokCoder YouTube channel for more Scratch-based videos and tutorials! Each
+    video is a bite-sized tutorial (approximately ten minutes in length) that contains
+    its own specific end goals. The final result is a high quality Scratch arcade
+    game.
+  tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
+    using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
+  tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
+    healthy food decisions.
+  tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
+    shark chasing and eating fish disrupted when a diver is eaten accidentally.
+  tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. ''The My Favourites
+    Website focuses on creating a webpage of the top 3 things you are interested in
+    or love doing. #codeisyourvoice'
+  tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
+    to record and reflect on your life right now.
+  tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
+    own augmented reality virtual space.
+  tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
+    about loops and conditionals within loops
+  tutorial_ttrace_longdescription: By calling functions and designing classes, players
+    program their own race car to be fast, nimble, and powerful; during races, they
+    can then hack their competitors' vehicles to scramble their controls.
+  tutorial_plethora_longdescription: 'In this Plethora activity you will solve visual
+    fun challenges and learn the concepts of cause and effect and user interaction. '
+  tutorial_educodesecret_longdescription: Explore the worlds of secrets with Agent
+    Smith as you dive deeper into learning if statements, strings, for-in loops. Help
+    Agent Smith find the culprits and configure the Agency's operating system for
+    their new users with Python.
+  tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
+    also learn how to calculate how much you need to turn for any shape.
+  tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
+    creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: "   塑料充斥海洋的問題持續惡化。幸運的是，你可以透過塑料汙染公益廣告用程式碼發出你的聲音。在使用
+    JavaScript 編寫一個關於塑料汙染的公益廣告後，你可以再製作一個有關你關心的任意主題的視訊！學會使用迴圈、正弦波和自定義表情來製作一個獨特的專案。
+    \ "
+  tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
+    and Machine Learning, as well as programing your own chatbot!
+  tutorial_educodebasics_longdescription: Learn some programming fundamentals and
+    create your own game in the process!
+  tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
+    artists and build their own Online Shop mockup, using HTML. '
+  tutorial_htmlacademyphp_longdescription: Meet Dumpo the Little Elephant, a senior
+    programmer at a web design studio, who is developing an online store. Together
+    you will learn the basics of PHP in an engaging way. You will work with web scripts
+    and learn the variables, add PHP-scripts into the layout and interact with databases
+    while creating a true-to-life web project.
+  tutorial_gamefrootdistance_longdescription: 'In COVID-19: Stop the Spread, you can
+    modify the ''Staying home'' factor and code a simple news clicker. The activity
+    illustrates how social distancing has a direct impact on how fast a virus like
+    COVID-19 can spread. Students and teachers will gain a small insight into virus
+    science, the effects a virus can have on society, and at the same time level up
+    their digital fluency skills.'
+  tutorial_codesterscovid_longdescription: Learn the basics of coding in Python while
+    creating your own PSA about how we can stop the spread of COVID-19. Design your
+    own animated interactive PSA to share critical information about the importance
+    of social distancing, wearing a mask, quarantining, and other measures.
+  tutorial_ttbunker_longdescription: You found The Bunker, and all its secrets will
+    be yours, once you crack its encryption. An army approaches, and you must hold
+    the perimeter using the power of programming. Code individual towers, setting
+    range, damage, and more special powers by adding new lines of code and changing
+    values. Survive long enough to learn how classes and instances can make you even
+    more powerful.
+  tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
+    tasks and learn all about computational thinking.
+  tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Jokes and
+    Riddles focuses on creating a set of interactive cards that contain your favorite
+    jokes and riddles and the answers! #codeisyourvoice'
+  tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
+    varying the health of a forest and levels of deforestation impact trees, wildlife
+    and the amount of CO2 absorbed. You should already know how Scratch coordinates
+    and variables work.
+  tutorial_codestersunity_longdescription: Learn the basics of coding in Python including
+    lists, loops, and sprites. Then create a mural using a loop to access each sprite
+    stored in a list.
+  tutorial_codesterssoccer_longdescription: Learn the basics of coding in Python,
+    then create a program that shoots a soccer ball into the goal. To aim your shot
+    you'll first need to estimate the slope of the line. Good luck!
+  tutorial_breakoutlock_longdescription: 'Haspy the Robot needs your help! She needs
+    your knowledge of loops, algorithms, and coding to help her fix Lockit''s code
+    and reboot her system. '
+  tutorial_thunkablemask_longdescription: Learn how to build a mobile app that gives
+    you points for knowing how to wear your mask correctly!
+  tutorial_cafarming_longdescription: Computer science can help feed a hungry world.
+    Farmers are using technology to grow food in smarter and more sustainable ways.
+    Agribots and drones can monitor, water, and spray crops, and even tackle those
+    pesky weeds! Learn about how AI, Computer Vision, and the Internet of Things are
+    used on the farm.
+  tutorial_blocksmithyeti_longdescription: Oh no! Someone trapped the Yeti! Only YOU
+    and your programmable smart cannon can save the Yeti and feed their friends. Students
+    will use JavaScript to save the Yeti with this fun interactive self-paced lesson.
+  tutorial_codecapture_longdescription: 'Take your first steps into the world of programming
+    with JavaScript, using just pen-and-paper and your mobile phone! '
+  tutorial_codehslitter_longdescription: 'Learn how you can use programming to help
+    solve one of the world''s biggest problems: litter and waste! In this Choose-Your-Own-Adventure
+    Hour of Code, you have the choice between the basics of Python or the basics of
+    Web Design. Whichever you choose, you will explore how you can use computer science
+    to decrease the amount of litter in your community.'
+  tutorial_bsdocean_longdescription: Life below Water sheds light on a pressing issue
+    that we face nowadays - our environment. This project focuses on guiding you to
+    code your very own webpage on protecting our waters.
+  tutorial_itchplatformer_longdescription: An easy to follow tutorial for how to create
+    a simple platformer game using Scratch.
+  tutorial_codejika_longdescription: A great introduction to coding using HTML and
+    CSS. Code a few lines, see immediate output without getting caught up in the Hows
+    and Whys by creating a nice landing page with a two-color gradient background,
+    name and website launch date.
+  tutorial_gamefrootclicker_longdescription: Learners code their own Clicker Game
+    and in the process learn about variables, different data types, conditional logic,
+    comparative operators, and gain some valuable insights into how professional game
+    developers design and make real games. By the end of the tutorial you will have
+    coded different variable types, published a game, and engaged with computer science
+    in an indigenous context.
+  tutorial_rmagicequity_longdescription: 'Explore concepts related to reducing inequality
+    with code: limited resources, equality, equity and liberation. Use variables and
+    functions in a self guided block environment. Finish by animating the 3D actors.'
+  tutorial_ttfreestyle_longdescription: You're the choreographer and director of a
+    new music video! Type real code to place and control dancers, scenery, and more.
+    Just make sure to capitalize and punctuate correctly, otherwise the whole thing
+    will just be static.
+  tutorial_ozobotcolor2_longdescription: Students will learn the basic functionality
+    of Ozobot. Students will learn how to draw Color Codes Ozobot can read.
+  tutorial_ozobotcolor3_longdescription: Students will learn how to program the bot
+    to travel left, right, and straight with Color Codes.
+  tutorial_clcarbon_longdescription: A python lesson plan that will teach students
+    how to make a carbon footprint calculator that calculates footprint based on a
+    short quiz about daily life, then gives comparison metrics (ie this is the same
+    amount of carbon as xxxx), and suggests ways to be more eco-friendly.
+  tutorial_kodablebasics_longdescription: No computer? No problem! Learn basic programming
+    skills and practice using core coding commands without the use of a device.
+  tutorial_scigirlscc_longdescription: Help your students learn to write pseudocode!
+    Computer programmers often start projects by using everyday language to write
+    out what they want to happen in their code–this is called pseudocode.Youth will
+    work in groups to write pseudocode for a simple movement or dance move.
+  tutorial_irobotpicture_longdescription: Robots have lots of sensors that work together
+    to help the robot understand everything around it. Just like sensors, our friends
+    can often see, hear, feel or understand things that we cannot. In this activity,
+    work together to help decode secret messages and crack the code!
+  tutorial_kcjmyself_longdescription: In this activity, you'll learn how to use Scratch
+    to code an animation all about you! Design a custom character to represent yourself,
+    make it move around, and add different backdrops to show off your hometown. This
+    project is simple enough for kids to complete by themselves or with support from
+    a grown up.
+  tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
+    an algorithm as a set of step-by-step directions. Students learn to create, test,
+    and fix an algorithm to complete a specific task. '
+  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
+    the students will become engineers, learning the steps of the Engineering Design
+    Process. They will create models out of craft and recycled materials, then they
+    will test the sturdiness of their models by dropping them from ankle height. This
+    is an unplugged activity; KIBO robots are optional.
+  tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
+    of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
+    for the bot to follow.
+  tutorial_scigirlspixels_longdescription: 'In this unplugged activity, you will learn
+    what a pixel is and how to send a simple black and white image to a friend! '
+  tutorial_kcjheroines_longdescription: In this activity, you'll learn about different
+    Canadian women who have made history. Using Scratch, you'll learn how to code
+    a video game celebrating their lives and accomplishments. Choose a heroine, customize
+    their costume and backdrop, code movements and goals for your game, and keep score.
+    This project is simple enough for kids to complete by themselves or with support
+    from a grown up.
+  tutorial_ozobotvalue_longdescription: Students will use their Ozobot to randomly
+    select a place value, identify the same place value in a three-digit number, and
+    write out the number.
+  tutorial_icodebytes_longdescription: Learn computer science without tech! Fun unplugged
+    computing activities for children aged 5-7 to do in class or at home with their
+    families. The activities help develop computational thinking skills in a really
+    fun way. Divided into the fundamental principles of computer science, and involve
+    creating algorithms, thinking logically, spotting patterns and finding or making
+    rules.
+  tutorial_clfashion2_longdescription: Are you a fashion conscious data scientist
+    with an interest in code? Join in the Fashionista of Data Science classes to learn
+    how coding & fashion go hand-in-hand! We will use SQL code along with data science
+    to investigate marketing, line styles, and store operations.
+  tutorial_ai4all_longdescription: 'This Byte of AI is meant to be a quick and fun
+    teacher-facilitated way to begin to become familiar with some core ideas of modern
+    AI including: how data becomes output in an AI model, how human biases enter datasets,
+    and how AI can be used in diverse fields including art and creativity. Students
+    learn these things by exploring drawing in Google Quick, Draw!'
+  tutorial_cldata_longdescription: 'Discover data science, one of the most valuable
+    skills, and see the world! Does data science sound dry and scary, like math? Fear
+    not. This introductory class will show you that you are already experts of data
+    and data science is full of fun and interesting insights related to topics such
+    as soccer, music, art, and your favorite books. Materials ready for in person
+    or remote learning settings. '
+  tutorial_spheroinputs_longdescription: 'This activity will get you thinking about
+    the common computer science coding concept of inputs and outputs and how this
+    idea relates to using computer science for good. '
+  tutorial_edisoncount_longdescription: 'Introduce the key computational concepts
+    of inputs and outputs using Edison robots and the block-based programming language
+    EdBlocks in this student led activity. Utilize the Edison robot''s drive function
+    through a set of progressive programming tasks. Creating programs for the robot
+    to ''trace'' requires the application of sequential thinking and an understanding
+    of the input-process-output cycle. '
+  tutorial_spheroloops_longdescription: 'This activity will get you thinking about
+    the common computer science coding concept of loops and how this concept relates
+    to using computer science for good. '
+  tutorial_kiboprogram_longdescription: In this lesson, children will learn about
+    sequencing in programming and about the symbols that make up a programming language
+    like KIBO's. Students will create their own programming symbols and act out programs
+    with their own movement. Finally, they can translate these movement programs into
+    programs for KIBO.
+  tutorial_hellorubycsin60_longdescription: 'Have you ever wondered what travels inside
+    the wires of your computer? Or why computer parts look like a tiny city? Or what
+    really is an algorithm? These 30 self-paced one minute videos are aimed for 5-9
+    year olds, followed by an activity the kids can complete at home. Topics include
+    code, hardware, networks, AI and other interesting ideas. '
+  tutorial_clfashion1_longdescription: Are you a fashion conscious data scientist
+    with an interest in code? Join in the Fashionista of Data Science classes to learn
+    how coding & fashion go hand-in-hand! We will use SQL code along with data science
+    to investigate marketing, line styles, and store operations.
+  tutorial_irobottraffic_longdescription: Traffic signals are a staple of safety in
+    our everyday lives. Code your own traffic light with the Root robot and learn
+    about the inventor!
+  tutorial_edisonmystery_longdescription: Kick-start student's exploration of using
+    Edison's line tracker using Edison robots and the Scratch-based programming language
+    EdScratch in this student led activity. Students first become familiar with the
+    Edison robot's line tracking sensor technology and experiment with the red LED
+    on different colored surfaces. They will then move on to mastering a mystery line
+    using the concept of algorithms.
+  tutorial_microbitseaturtles_longdescription: Create a prototype of a low-power,
+    red LED beach light that can be used for lighting on beach paths which is also
+    safe for sea turtles.
+  tutorial_ozobotknow_longdescription: In this lesson, students will be introduced
+    to the hardware and robotics components of Ozobot Evo.
+  tutorial_imagilabs_longdescription: 'Program a blinking heart, a rocketship taking
+    off, your name, or anything your imagination comes up with! To start off, we''ll
+    teach you how to program a heart in your favourite color and then make it blink
+    to the rhythm of your favorite song. Join our community of imagiCoders to share
+    and exchange designs. Upload your creations on your imagiCharm so you can proudly
+    wear your code wherever you go! '
+  tutorial_irobotsimulator_longdescription: Learn how to create and download coding
+    projects with this activity packet! Solve all puzzles with the Root simbot in
+    the virtual arena to reveal the secret message at the end!
+  tutorial_irobotkind_longdescription: Our robot is still learning how to make kind
+    choices when playing with friends. In this game, help Root practice by making
+    four kind decisions in a row. If Root makes a bad choice, it has to start all
+    the way at the beginning again! Let's play together!
+  tutorial_firiavirtual_longdescription: Learn Python programming with a powerful
+    3D robotics simulator. You'll complete challenging missions in a virtual environment
+    with realistic physics. Missions teach you the code to control motors, LEDs, and
+    other peripherals on CodeBot. And Sandbox mode lets you get creative with unlimited
+    Python coding possibilities. It's easy to get started with CodeSpace Simulation!
+  tutorial_irobotguesscode_longdescription: Put a new spin on Pictionary through code!
+    Students can use code to make predictions about what pictures, songs, or words
+    the Root SimBot will create. Code your own Pictionary creation, too!
+  tutorial_ozobotnouns_longdescription: In this lesson, students will identify the
+    correct way to spell and use irregular plural nouns and use Color Codes to program
+    their Ozobot to move to the correct irregular plural nouns by either turning left
+    or right and use the noun in a sentence.
+  tutorial_nasa3d_longdescription: Learn about exploding stars, 3D models and codeblocks!  This
+    spacey activity takes you through the basics of 3D modeling in astronomy using
+    the free browser-based Tinkercad. Students can progress from creating simple 3D
+    shapes to working with actual NASA data on exploded stars, testing in augmented
+    reality, and using loops and time-based changes with codeblocks.
+  tutorial_blupants_longdescription: Train a real autonomous robot to pick up blocks
+    and deploy them to the goal by navigating through an obstacle course. Start with
+    drag-and-drop interface, and advance to Python as you get more experienced.
+  tutorial_legodance_longdescription: Synchronize motor movements of a break dancer
+    to keep in rhythm with light and beats.
+  tutorial_nearpodcoding_longdescription: In this 25-30 minute Nearpod featuring Flocabulary
+    topic spark, students are introduced to coding through a hip hop video and Nearpod's
+    signature interactive features. This lesson features the Flocabulary video Coding.
+  tutorial_kcjplastic_longdescription: We're challenging you to use data visualization
+    to develop a plastic pollution solution! Discover where plastic waste comes from
+    and why it has become a global problem. Then reflect on your own plastic use,
+    estimate how much waste you could reduce over time, and design an invention or
+    alternative that could help. Kids can complete this project by themselves or with
+    support from a grown up.
+  tutorial_legojourney_longdescription: 'Journeys are exciting!  Challenge students
+    to remix our Grasshopper Journey project in order to create a new journey and
+    find different ways for a SPIKE Prime inspired virtual grasshopper to move using
+    Scratch 3.0! In addition to CS skills, this teacher facilitated activity can also
+    be used to support areas such as language arts, science and the arts. '
+  tutorial_legohopper_longdescription: Design multiple prototypes to find the most
+    effective way to move a robot without using wheels.
+  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
+    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_irobotphone_longdescription: In this coding challenge, students will work
+    together remotely to create a collective program that draws a picture. Modeled
+    after the classic game of Telephone, students will receive, remix, and pass along
+    code down the telephone chain. Will your team fulfill the Picture Goal by the
+    time you reach the end?
+  tutorial_codeguppydraw_longdescription: Quick introduction to text-based coding
+    using fun and engaging type-in JavaScript programs
+  tutorial_codejumper_longdescription: In this lesson from the Code Jumper curriculum,
+    learners explore networks in a hands-on unplugged experience using typical materials
+    found in a classroom. The theme for this lesson is around messages of kindness
+    to others. This lesson has been specifically designed to be accessible for students
+    with visual impairments.
+  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
+    the same space but seldom interacted with each other. Now you can use the power
+    of code to bring the two villages together. Players will experience empathy and
+    compassion for their neighbors, learn cooperation and inclusion, and embrace the
+    diversity that makes us all uniquely special.
   tutorial_dance2019_language: 支持阿拉伯語、中文、捷克語、丹麥語、荷蘭語、英語、芬蘭語、法語、德語、希臘語、印地語、匈牙利語、印尼語、義大利語、日語、韓語、馬來語、波蘭語、葡萄牙語以及
     10 多門其他語言！
   tutorial_danceparty_language: 多個
@@ -3912,9 +4584,8 @@ zh:
   tutorial_cashield_language: English
   tutorial_ccwslimer_language: English
   tutorial_codinggalaxy_language: 繁體中文, English
-  tutorial_boatrace_language: Arabic, Chinese (Simplified), Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish,
-    Romanian, Serbian (Cyrillic), Spanish, Ukrainian
+  tutorial_boatrace_language: "  阿拉伯語、中文（簡體）、捷克語、丹麥語、荷蘭語、法語、德語、希臘語、希伯來語、印地語、義大利語、日語、韓語、其他、波蘭語、羅馬尼亞語、塞爾維亞語（西里爾語）、西班牙語、烏克蘭語
+    \ "
   tutorial_ccplay_language: English
   tutorial_grinch_language: English
   tutorial_codehsart_language: English
@@ -3974,8 +4645,8 @@ zh:
   tutorial_ozorandom_language: English
   tutorial_ozotroll_language: English
   tutorial_peblioart_language: English
-  tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
-    Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
+  tutorial_astropi_language: "  阿拉伯語、丹麥語、荷蘭語、英語、芬蘭語、法語、德語、希臘語、匈牙利語、義大利語、挪威語 (Nynorsk)、其他、波蘭語、西班牙語、瑞典語
+    \ "
   tutorial_rgart_language: English
   tutorial_rgengineer_language: English
   tutorial_rgmath_language: English
@@ -3987,28 +4658,26 @@ zh:
   tutorial_scratchtalk_language: English, Spanish
   tutorial_scratchjrstory_language: English
   tutorial_scratchjrtwinkle_language: English
-  tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherocommunity_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherofunctions_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroinfrared_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherolightsensor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheromansion_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_roadblocks_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext2_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext3_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext4_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroraptor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
+  tutorial_spherocomm_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語  "
+  tutorial_spherocommunity_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
+  tutorial_spherofunctions_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
+  tutorial_spheroinfrared_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
+  tutorial_spherolightsensor_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
+  tutorial_spheromansion_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
+  tutorial_roadblocks_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語  "
+  tutorial_spherotext2_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
+  tutorial_spherotext3_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
+  tutorial_spherotext4_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
+  tutorial_spheroraptor_language: "  阿拉伯語、中文、英語、法語、德語、希伯來語、義大利語、日語、韓語、挪威語、西班牙語、瑞典語
+    \ "
   tutorial_stempiday_language: English
   tutorial_stemplanetoids_language: English
   tutorial_stempong_language: English
@@ -4042,6 +4711,131 @@ zh:
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: English
   tutorial_n2y_language: English
+  tutorial_microsoftarcade_language: English
+  tutorial_csfirstunplugged_language: English, Spanish (Mexico)
+  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
+    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
+    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
+    Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodedate_language: English
+  tutorial_codemonkeyspace_language: English, English (UK), Hebrew
+  tutorial_codespeakhappy_language: English
+  tutorial_grokimage_language: English, English (UK)
+  tutorial_icomputelearn_language: English
+  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
+    (Mexico)
+  tutorial_bsdcause_language: English
+  tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_bsdinspire_language: English
+  tutorial_tttractor_language: English
+  tutorial_codeillusionmickey_language: English
+  tutorial_scigirlsquest_language: English
+  tutorial_codespeakbreathe_language: English
+  tutorial_vidcodeface_language: English
+  tutorial_educodemaze_language: English, English (UK)
+  tutorial_educoderace_language: English, English (UK)
+  tutorial_codespeakchatbot_language: English
+  tutorial_gamefrootgames_language: English
+  tutorial_codespeakgrandparent_language: English
+  tutorial_educodekingdom_language: English, English (UK)
+  tutorial_codehsdata_language: English
+  tutorial_educodecake_language: English, English (UK)
+  tutorial_ttsecond_language: English
+  tutorial_bsdtrivia_language: English
+  tutorial_csfirstdialogue_language: English, Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
+    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codestersdistance_language: English
+  tutorial_itchspace_language: English
+  tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_codespeakmeal_language: English
+  tutorial_itchfish_language: English
+  tutorial_bsdwebsite_language: English
+  tutorial_codespeaktime_language: English
+  tutorial_itchwebcam_language: English
+  tutorial_itchball_language: English
+  tutorial_ttrace_language: English
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
+  tutorial_educodesecret_language: English, English (UK)
+  tutorial_itchshapes_language: English
+  tutorial_codeguppytext_language: English
+  tutorial_vidcodeplastiche_language: English, Hebrew
+  tutorial_educativechatbot_language: English
+  tutorial_educodebasics_language: English, English (UK)
+  tutorial_codehsdesign_language: English
+  tutorial_htmlacademyphp_language: English
+  tutorial_gamefrootdistance_language: English
+  tutorial_codesterscovid_language: English
+  tutorial_ttbunker_language: English
+  tutorial_cuttle_language: English
+  tutorial_bsdjokes_language: English
+  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
+    (Mexico)
+  tutorial_codestersunity_language: English
+  tutorial_codesterssoccer_language: English
+  tutorial_breakoutlock_language: English
+  tutorial_thunkablemask_language: English
+  tutorial_cafarming_language: English
+  tutorial_blocksmithyeti_language: English
+  tutorial_codecapture_language: English, English (UK)
+  tutorial_codehslitter_language: English, English (UK)
+  tutorial_bsdocean_language: English
+  tutorial_itchplatformer_language: English
+  tutorial_codejika_language: English, English (UK)
+  tutorial_gamefrootclicker_language: English
+  tutorial_rmagicequity_language: English, English (UK)
+  tutorial_ttfreestyle_language: English
+  tutorial_ozobotcolor2_language: English
+  tutorial_ozobotcolor3_language: English
+  tutorial_clcarbon_language: English, English (UK)
+  tutorial_kodablebasics_language: English
+  tutorial_scigirlscc_language: English, Spanish (Mexico)
+  tutorial_irobotpicture_language: English
+  tutorial_kcjmyself_language: English, French
+  tutorial_nearpodalgorithms_language: English
+  tutorial_kibodrop_language: English, English (UK)
+  tutorial_ozobotcolor1_language: English
+  tutorial_scigirlspixels_language: English, Spanish (Mexico)
+  tutorial_kcjheroines_language: English, French
+  tutorial_ozobotvalue_language: English
+  tutorial_icodebytes_language: English
+  tutorial_clfashion2_language: English, English (UK)
+  tutorial_ai4all_language: English
+  tutorial_cldata_language: English, English (UK)
+  tutorial_spheroinputs_language: English
+  tutorial_edisoncount_language: English
+  tutorial_spheroloops_language: English
+  tutorial_kiboprogram_language: English, English (UK)
+  tutorial_hellorubycsin60_language: English, English (UK)
+  tutorial_clfashion1_language: English, English (UK)
+  tutorial_irobottraffic_language: English
+  tutorial_edisonmystery_language: English
+  tutorial_microbitseaturtles_language: English, English (UK)
+  tutorial_ozobotknow_language: English
+  tutorial_imagilabs_language: English, English (UK)
+  tutorial_irobotsimulator_language: English
+  tutorial_irobotkind_language: English, English (UK)
+  tutorial_firiavirtual_language: English, English (UK)
+  tutorial_irobotguesscode_language: English
+  tutorial_ozobotnouns_language: English
+  tutorial_nasa3d_language: English
+  tutorial_blupants_language: English
+  tutorial_legodance_language: English
+  tutorial_nearpodcoding_language: English
+  tutorial_kcjplastic_language: English, French
+  tutorial_legojourney_language: English
+  tutorial_legohopper_language: English
+  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
+    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
+    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_irobotphone_language: English, English (UK)
+  tutorial_codeguppydraw_language: English, English (UK)
+  tutorial_codejumper_language: English
+  tutorial_meeempathy_language: English
   tutorial_dance2019_string_detail_grades: 年級 2+
   tutorial_danceparty_string_detail_grades: 年級 2+
   tutorial_chibitronics_string_detail_grades: 年級 2-5
@@ -4621,6 +5415,122 @@ zh:
   tutorial_duckrace_string_detail_grades: 年級 2+
   tutorial_allcancodeapps_string_detail_grades: 年級 6+
   tutorial_n2y_string_detail_grades: 學前+
+  tutorial_microsoftarcade_string_detail_grades: 年級 2+
+  tutorial_csfirstunplugged_string_detail_grades: 年級 2-8
+  tutorial_toxicodepython_string_detail_grades: 年級 6+
+  tutorial_codecombatozaria_string_detail_grades: 年級 6+
+  tutorial_vidcodedate_string_detail_grades: 年級 6+
+  tutorial_codemonkeyspace_string_detail_grades: 年級 2-8
+  tutorial_codespeakhappy_string_detail_grades: 年級 2-8
+  tutorial_grokimage_string_detail_grades: 年級 6+
+  tutorial_icomputelearn_string_detail_grades: 學前 - 年級 8
+  tutorial_rpstress_string_detail_grades: 年級 2+
+  tutorial_bsdcause_string_detail_grades: 年級 9+
+  tutorial_vidcodeanimoji_string_detail_grades: 年級 2+
+  tutorial_vidcodeanimojies_string_detail_grades: 年級 2+
+  tutorial_bsdinspire_string_detail_grades: 年級 6+
+  tutorial_tttractor_string_detail_grades: 年級 6+
+  tutorial_codeillusionmickey_string_detail_grades: 年級 2-8
+  tutorial_scigirlsquest_string_detail_grades: 年級 2-8
+  tutorial_codespeakbreathe_string_detail_grades: 年級 2+
+  tutorial_vidcodeface_string_detail_grades: 年級 6+
+  tutorial_educodemaze_string_detail_grades: 年級 6+
+  tutorial_educoderace_string_detail_grades: 年級 6+
+  tutorial_codespeakchatbot_string_detail_grades: 年級 2-8
+  tutorial_gamefrootgames_string_detail_grades: 年級 6+
+  tutorial_codespeakgrandparent_string_detail_grades: 年級 2-8
+  tutorial_educodekingdom_string_detail_grades: 年級 6+
+  tutorial_codehsdata_string_detail_grades: 年級 9+
+  tutorial_educodecake_string_detail_grades: 年級 6+
+  tutorial_ttsecond_string_detail_grades: 年級 6+
+  tutorial_bsdtrivia_string_detail_grades: 年級 6+
+  tutorial_csfirstdialogue_string_detail_grades: 年級 2-8
+  tutorial_codemonkeybeaver_string_detail_grades: 學前 - 年級 5
+  tutorial_codestersdistance_string_detail_grades: 年級 6+
+  tutorial_itchspace_string_detail_grades: 年級 6+
+  tutorial_vidcodemagic_string_detail_grades: 年級 2+
+  tutorial_vidcodemagices_string_detail_grades: 年級 2+
+  tutorial_codespeakmeal_string_detail_grades: 年級 6+
+  tutorial_itchfish_string_detail_grades: 年級 2-8
+  tutorial_bsdwebsite_string_detail_grades: 年級 6+
+  tutorial_codespeaktime_string_detail_grades: 年級 2-8
+  tutorial_itchwebcam_string_detail_grades: 年級 6+
+  tutorial_itchball_string_detail_grades: 年級 2-8
+  tutorial_ttrace_string_detail_grades: 年級 6-8
+  tutorial_plethora_string_detail_grades: 年級 2+
+  tutorial_educodesecret_string_detail_grades: 年級 6+
+  tutorial_itchshapes_string_detail_grades: 年級 6+
+  tutorial_codeguppytext_string_detail_grades: 年級 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: 年級 6+
+  tutorial_educativechatbot_string_detail_grades: 年級 9+
+  tutorial_educodebasics_string_detail_grades: 年級 6+
+  tutorial_codehsdesign_string_detail_grades: 年級 6+
+  tutorial_htmlacademyphp_string_detail_grades: 年級 6+
+  tutorial_gamefrootdistance_string_detail_grades: 年級 2+
+  tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
+  tutorial_ttbunker_string_detail_grades: 年級 6-8
+  tutorial_cuttle_string_detail_grades: 年級 6+
+  tutorial_bsdjokes_string_detail_grades: 年級 6-8
+  tutorial_rptree_string_detail_grades: 年級 6+
+  tutorial_codestersunity_string_detail_grades: 年級 6+
+  tutorial_codesterssoccer_string_detail_grades: 年級 6+
+  tutorial_breakoutlock_string_detail_grades: 年級 2-8
+  tutorial_thunkablemask_string_detail_grades: 年級 6+
+  tutorial_cafarming_string_detail_grades: 年級 2-8
+  tutorial_blocksmithyeti_string_detail_grades: 年級 9+
+  tutorial_codecapture_string_detail_grades: 年級 6+
+  tutorial_codehslitter_string_detail_grades: 年級 6-8
+  tutorial_bsdocean_string_detail_grades: 年級 6-8
+  tutorial_itchplatformer_string_detail_grades: 年級 6+
+  tutorial_codejika_string_detail_grades: 年級 6+
+  tutorial_gamefrootclicker_string_detail_grades: 年級 6-8
+  tutorial_rmagicequity_string_detail_grades: 年級 6-8
+  tutorial_ttfreestyle_string_detail_grades: 年級 6-8
+  tutorial_ozobotcolor2_string_detail_grades: 年級 2+
+  tutorial_ozobotcolor3_string_detail_grades: 年級 2+
+  tutorial_clcarbon_string_detail_grades: 年級 6+
+  tutorial_kodablebasics_string_detail_grades: 學前 - 年級 5
+  tutorial_scigirlscc_string_detail_grades: 年級 2+
+  tutorial_irobotpicture_string_detail_grades: 年級 2-8
+  tutorial_kcjmyself_string_detail_grades: 年級 2-8
+  tutorial_nearpodalgorithms_string_detail_grades: 學前 - 年級 5
+  tutorial_kibodrop_string_detail_grades: 學前 - 年級 5
+  tutorial_ozobotcolor1_string_detail_grades: 年級 2+
+  tutorial_scigirlspixels_string_detail_grades: 年級 2+
+  tutorial_kcjheroines_string_detail_grades: 年級 2-8
+  tutorial_ozobotvalue_string_detail_grades: 年級 2-5
+  tutorial_icodebytes_string_detail_grades: 學前
+  tutorial_clfashion2_string_detail_grades: 年級 6+
+  tutorial_ai4all_string_detail_grades: 年級 6+
+  tutorial_cldata_string_detail_grades: 年級 6+
+  tutorial_spheroinputs_string_detail_grades: 年級 2-8
+  tutorial_edisoncount_string_detail_grades: 年級 2-8
+  tutorial_spheroloops_string_detail_grades: 年級 2-8
+  tutorial_kiboprogram_string_detail_grades: 學前 - 年級 5
+  tutorial_hellorubycsin60_string_detail_grades: 學前 - 年級 5
+  tutorial_clfashion1_string_detail_grades: 年級 6+
+  tutorial_irobottraffic_string_detail_grades: 年級 2-5
+  tutorial_edisonmystery_string_detail_grades: 年級 6-8
+  tutorial_microbitseaturtles_string_detail_grades: 年級 6-8
+  tutorial_ozobotknow_string_detail_grades: 年級 2+
+  tutorial_imagilabs_string_detail_grades: 年級 2-8
+  tutorial_irobotsimulator_string_detail_grades: 年級 2-8
+  tutorial_irobotkind_string_detail_grades: 學前 - 年級 5
+  tutorial_firiavirtual_string_detail_grades: 年級 6+
+  tutorial_irobotguesscode_string_detail_grades: 年級 2-8
+  tutorial_ozobotnouns_string_detail_grades: 年級 2-5
+  tutorial_nasa3d_string_detail_grades: 年級 6+
+  tutorial_blupants_string_detail_grades: 年級 6+
+  tutorial_legodance_string_detail_grades: 年級 6-8
+  tutorial_nearpodcoding_string_detail_grades: 年級 9+
+  tutorial_kcjplastic_string_detail_grades: 年級 2+
+  tutorial_legojourney_string_detail_grades: 年級 2-8
+  tutorial_legohopper_string_detail_grades: 年級 2-8
+  tutorial_catrobatembroidery_string_detail_grades: 年級 6+
+  tutorial_irobotphone_string_detail_grades: 年級 2-8
+  tutorial_codeguppydraw_string_detail_grades: 年級 6-8
+  tutorial_codejumper_string_detail_grades: 年級 2-8
+  tutorial_meeempathy_string_detail_grades: 年級 2+
   tutorial_dance2019_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, 不插電
   tutorial_danceparty_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_chibitronics_string_platforms: 所有的主流瀏覽器
@@ -5194,7 +6104,7 @@ zh:
   tutorial_groklearningpython_string_platforms: 所有的主流瀏覽器
   tutorial_htmltimetravel_string_platforms: 所有的主流瀏覽器
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: 不插電活動
+  tutorial_appytappin_string_platforms: 所有的主流瀏覽器
   tutorial_icipher_string_platforms: 不插電活動
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: 不插電活動
@@ -5286,6 +6196,130 @@ zh:
   tutorial_duckrace_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_allcancodeapps_string_platforms: 所有的主流瀏覽器
   tutorial_n2y_string_platforms: 不插電活動
+  tutorial_microsoftarcade_string_platforms: 所有的主流瀏覽器
+  tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
+  tutorial_toxicodepython_string_platforms: 所有的主流瀏覽器
+  tutorial_codecombatozaria_string_platforms: 所有的主流瀏覽器
+  tutorial_vidcodedate_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_codemonkeyspace_string_platforms: 所有的主流瀏覽器
+  tutorial_codespeakhappy_string_platforms: Chrome, Firefox
+  tutorial_grokimage_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_icomputelearn_string_platforms: 所有的主流瀏覽器
+  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_bsdcause_string_platforms: Chrome
+  tutorial_vidcodeanimoji_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_vidcodeanimojies_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_bsdinspire_string_platforms: Chrome
+  tutorial_tttractor_string_platforms: Chrome
+  tutorial_codeillusionmickey_string_platforms: Chrome
+  tutorial_scigirlsquest_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_codespeakbreathe_string_platforms: Chrome, Firefox
+  tutorial_vidcodeface_string_platforms: Chrome, Firefox
+  tutorial_educodemaze_string_platforms: 所有的主流瀏覽器
+  tutorial_educoderace_string_platforms: 所有的主流瀏覽器
+  tutorial_codespeakchatbot_string_platforms: Chrome, Firefox
+  tutorial_gamefrootgames_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone
+  tutorial_codespeakgrandparent_string_platforms: Chrome, Firefox
+  tutorial_educodekingdom_string_platforms: 所有的主流瀏覽器
+  tutorial_codehsdata_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_educodecake_string_platforms: 所有的主流瀏覽器
+  tutorial_ttsecond_string_platforms: Chrome
+  tutorial_bsdtrivia_string_platforms: Chrome
+  tutorial_csfirstdialogue_string_platforms: 所有的主流瀏覽器
+  tutorial_codemonkeybeaver_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_codestersdistance_string_platforms: 所有的主流瀏覽器
+  tutorial_itchspace_string_platforms: 所有的主流瀏覽器
+  tutorial_vidcodemagic_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_vidcodemagices_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_codespeakmeal_string_platforms: Chrome, Firefox
+  tutorial_itchfish_string_platforms: 所有的主流瀏覽器
+  tutorial_bsdwebsite_string_platforms: Chrome
+  tutorial_codespeaktime_string_platforms: Chrome, Firefox
+  tutorial_itchwebcam_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_itchball_string_platforms: 所有的主流瀏覽器
+  tutorial_ttrace_string_platforms: Chrome
+  tutorial_plethora_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_educodesecret_string_platforms: 所有的主流瀏覽器
+  tutorial_itchshapes_string_platforms: 所有的主流瀏覽器
+  tutorial_codeguppytext_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_vidcodeplastiche_string_platforms: 所有的主流瀏覽器, iPad
+  tutorial_educativechatbot_string_platforms: 所有的主流瀏覽器
+  tutorial_educodebasics_string_platforms: 所有的主流瀏覽器
+  tutorial_codehsdesign_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_htmlacademyphp_string_platforms: 所有的主流瀏覽器
+  tutorial_gamefrootdistance_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_codesterscovid_string_platforms: 所有的主流瀏覽器
+  tutorial_ttbunker_string_platforms: Chrome
+  tutorial_cuttle_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_bsdjokes_string_platforms: Chrome
+  tutorial_rptree_string_platforms: Chrome, Firefox
+  tutorial_codestersunity_string_platforms: 所有的主流瀏覽器
+  tutorial_codesterssoccer_string_platforms: 所有的主流瀏覽器
+  tutorial_breakoutlock_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_thunkablemask_string_platforms: 所有的主流瀏覽器
+  tutorial_cafarming_string_platforms: Chrome, Firefox
+  tutorial_blocksmithyeti_string_platforms: 所有的主流瀏覽器
+  tutorial_codecapture_string_platforms: All modern browsers, Android phone, iPhone
+  tutorial_codehslitter_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_bsdocean_string_platforms: Chrome
+  tutorial_itchplatformer_string_platforms: 所有的主流瀏覽器
+  tutorial_codejika_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_gamefrootclicker_string_platforms: 所有的主流瀏覽器, iPad
+  tutorial_rmagicequity_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone, Game console app
+  tutorial_ttfreestyle_string_platforms: Chrome
+  tutorial_ozobotcolor2_string_platforms: 所有的主流瀏覽器
+  tutorial_ozobotcolor3_string_platforms: 所有的主流瀏覽器
+  tutorial_clcarbon_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_kodablebasics_string_platforms: 不插電活動
+  tutorial_scigirlscc_string_platforms: 不插電活動
+  tutorial_irobotpicture_string_platforms: 不插電活動
+  tutorial_kcjmyself_string_platforms: 所有的主流瀏覽器
+  tutorial_nearpodalgorithms_string_platforms: 所有的主流瀏覽器
+  tutorial_kibodrop_string_platforms: 不插電活動
+  tutorial_ozobotcolor1_string_platforms: 所有的主流瀏覽器
+  tutorial_scigirlspixels_string_platforms: 不插電活動
+  tutorial_kcjheroines_string_platforms: 所有的主流瀏覽器
+  tutorial_ozobotvalue_string_platforms: 所有的主流瀏覽器
+  tutorial_icodebytes_string_platforms: 不插電活動
+  tutorial_clfashion2_string_platforms: 所有的主流瀏覽器
+  tutorial_ai4all_string_platforms: 所有的主流瀏覽器
+  tutorial_cldata_string_platforms: 所有的主流瀏覽器
+  tutorial_spheroinputs_string_platforms: 不插電活動
+  tutorial_edisoncount_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_spheroloops_string_platforms: 不插電活動
+  tutorial_kiboprogram_string_platforms: 不插電活動
+  tutorial_hellorubycsin60_string_platforms: 不插電活動
+  tutorial_clfashion1_string_platforms: 所有的主流瀏覽器
+  tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_edisonmystery_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_microbitseaturtles_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_ozobotknow_string_platforms: 所有的主流瀏覽器
+  tutorial_imagilabs_string_platforms: Android phone, iPhone, Unplugged
+  tutorial_irobotsimulator_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_irobotkind_string_platforms: 所有的主流瀏覽器
+  tutorial_firiavirtual_string_platforms: Microsoft Edge, Chrome
+  tutorial_irobotguesscode_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_ozobotnouns_string_platforms: 所有的主流瀏覽器
+  tutorial_nasa3d_string_platforms: 所有的主流瀏覽器
+  tutorial_blupants_string_platforms: 所有的主流瀏覽器
+  tutorial_legodance_string_platforms: 所有的主流瀏覽器
+  tutorial_nearpodcoding_string_platforms: 所有的主流瀏覽器
+  tutorial_kcjplastic_string_platforms: 所有的主流瀏覽器
+  tutorial_legojourney_string_platforms: 所有的主流瀏覽器
+  tutorial_legohopper_string_platforms: 所有的主流瀏覽器
+  tutorial_catrobatembroidery_string_platforms: Android phone, Screen reader
+  tutorial_irobotphone_string_platforms: 所有的主流瀏覽器
+  tutorial_codeguppydraw_string_platforms: 所有的主流瀏覽器
+  tutorial_codejumper_string_platforms: Unplugged, Sreen reader
+  tutorial_meeempathy_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -5866,6 +6900,125 @@ zh:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_microsoftarcade_string_detail_platforms: ''
+  tutorial_csfirstunplugged_string_detail_platforms: ''
+  tutorial_toxicodepython_string_detail_platforms: ''
+  tutorial_codecombatozaria_string_detail_platforms: ''
+  tutorial_vidcodedate_string_detail_platforms: ''
+  tutorial_codemonkeyspace_string_detail_platforms: ''
+  tutorial_codespeakhappy_string_detail_platforms: ''
+  tutorial_grokimage_string_detail_platforms: ''
+  tutorial_icomputelearn_string_detail_platforms: ''
+  tutorial_rpstress_string_detail_platforms: ''
+  tutorial_bsdcause_string_detail_platforms: ''
+  tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
+  tutorial_bsdinspire_string_detail_platforms: ''
+  tutorial_tttractor_string_detail_platforms: ''
+  tutorial_codeillusionmickey_string_detail_platforms: ''
+  tutorial_scigirlsquest_string_detail_platforms: ''
+  tutorial_codespeakbreathe_string_detail_platforms: ''
+  tutorial_vidcodeface_string_detail_platforms: ''
+  tutorial_educodemaze_string_detail_platforms: ''
+  tutorial_educoderace_string_detail_platforms: ''
+  tutorial_codespeakchatbot_string_detail_platforms: ''
+  tutorial_gamefrootgames_string_detail_platforms: ''
+  tutorial_codespeakgrandparent_string_detail_platforms: ''
+  tutorial_educodekingdom_string_detail_platforms: ''
+  tutorial_codehsdata_string_detail_platforms: ''
+  tutorial_educodecake_string_detail_platforms: ''
+  tutorial_ttsecond_string_detail_platforms: ''
+  tutorial_bsdtrivia_string_detail_platforms: ''
+  tutorial_csfirstdialogue_string_detail_platforms: ''
+  tutorial_codemonkeybeaver_string_detail_platforms: ''
+  tutorial_codestersdistance_string_detail_platforms: ''
+  tutorial_itchspace_string_detail_platforms: ''
+  tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
+  tutorial_codespeakmeal_string_detail_platforms: ''
+  tutorial_itchfish_string_detail_platforms: ''
+  tutorial_bsdwebsite_string_detail_platforms: ''
+  tutorial_codespeaktime_string_detail_platforms: ''
+  tutorial_itchwebcam_string_detail_platforms: ''
+  tutorial_itchball_string_detail_platforms: ''
+  tutorial_ttrace_string_detail_platforms: ''
+  tutorial_plethora_string_detail_platforms: ''
+  tutorial_educodesecret_string_detail_platforms: ''
+  tutorial_itchshapes_string_detail_platforms: ''
+  tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
+  tutorial_educativechatbot_string_detail_platforms: ''
+  tutorial_educodebasics_string_detail_platforms: ''
+  tutorial_codehsdesign_string_detail_platforms: ''
+  tutorial_htmlacademyphp_string_detail_platforms: ''
+  tutorial_gamefrootdistance_string_detail_platforms: ''
+  tutorial_codesterscovid_string_detail_platforms: ''
+  tutorial_ttbunker_string_detail_platforms: ''
+  tutorial_cuttle_string_detail_platforms: ''
+  tutorial_bsdjokes_string_detail_platforms: ''
+  tutorial_rptree_string_detail_platforms: ''
+  tutorial_codestersunity_string_detail_platforms: ''
+  tutorial_codesterssoccer_string_detail_platforms: ''
+  tutorial_breakoutlock_string_detail_platforms: ''
+  tutorial_thunkablemask_string_detail_platforms: ''
+  tutorial_cafarming_string_detail_platforms: ''
+  tutorial_blocksmithyeti_string_detail_platforms: ''
+  tutorial_codecapture_string_detail_platforms: ''
+  tutorial_codehslitter_string_detail_platforms: ''
+  tutorial_bsdocean_string_detail_platforms: ''
+  tutorial_itchplatformer_string_detail_platforms: ''
+  tutorial_codejika_string_detail_platforms: ''
+  tutorial_gamefrootclicker_string_detail_platforms: ''
+  tutorial_rmagicequity_string_detail_platforms: ''
+  tutorial_ttfreestyle_string_detail_platforms: ''
+  tutorial_ozobotcolor2_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_ozobotcolor3_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_clcarbon_string_detail_platforms: ''
+  tutorial_kodablebasics_string_detail_platforms: ''
+  tutorial_scigirlscc_string_detail_platforms: ''
+  tutorial_irobotpicture_string_detail_platforms: ''
+  tutorial_kcjmyself_string_detail_platforms: ''
+  tutorial_nearpodalgorithms_string_detail_platforms: ''
+  tutorial_kibodrop_string_detail_platforms: KIBO Robot Kit (optional)
+  tutorial_ozobotcolor1_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_scigirlspixels_string_detail_platforms: ''
+  tutorial_kcjheroines_string_detail_platforms: ''
+  tutorial_ozobotvalue_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_icodebytes_string_detail_platforms: ''
+  tutorial_clfashion2_string_detail_platforms: ''
+  tutorial_ai4all_string_detail_platforms: ''
+  tutorial_cldata_string_detail_platforms: ''
+  tutorial_spheroinputs_string_detail_platforms: ''
+  tutorial_edisoncount_string_detail_platforms: ''
+  tutorial_spheroloops_string_detail_platforms: ''
+  tutorial_kiboprogram_string_detail_platforms: KIBO Robot Kit (optional)
+  tutorial_hellorubycsin60_string_detail_platforms: ''
+  tutorial_clfashion1_string_detail_platforms: ''
+  tutorial_irobottraffic_string_detail_platforms: Root robot
+  tutorial_edisonmystery_string_detail_platforms: ''
+  tutorial_microbitseaturtles_string_detail_platforms: ''
+  tutorial_ozobotknow_string_detail_platforms: Ozobot Evo (optional)
+  tutorial_imagilabs_string_detail_platforms: imagiCharm
+  tutorial_irobotsimulator_string_detail_platforms: ''
+  tutorial_irobotkind_string_detail_platforms: Root robot (optional)
+  tutorial_firiavirtual_string_detail_platforms: ''
+  tutorial_irobotguesscode_string_detail_platforms: Root robot
+  tutorial_ozobotnouns_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_nasa3d_string_detail_platforms: ''
+  tutorial_blupants_string_detail_platforms: Lego Ev3, Alphabot2, DIY Raspberry Pi
+    robot or DIY Beaglebone Blue robot
+  tutorial_legodance_string_detail_platforms: LEGO Education SPIKE Prime
+  tutorial_nearpodcoding_string_detail_platforms: ''
+  tutorial_kcjplastic_string_detail_platforms: ''
+  tutorial_legojourney_string_detail_platforms: ''
+  tutorial_legohopper_string_detail_platforms: LEGO Education SPIKE Prime robot
+  tutorial_catrobatembroidery_string_detail_platforms: Embroidery machine for stitching
+    and USB or network port, plus support of the DST format (standard embroidery file
+    format).
+  tutorial_irobotphone_string_detail_platforms: Root robot (optional)
+  tutorial_codeguppydraw_string_detail_platforms: ''
+  tutorial_codejumper_string_detail_platforms: ''
+  tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: 積木式
   tutorial_danceparty_string_detail_programming_languages: 積木式
   tutorial_chibitronics_string_detail_programming_languages: 積木式
@@ -6356,8 +7509,8 @@ zh:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: 積木式
-  tutorial_csfirstname_string_detail_programming_languages: 積木式
+  tutorial_discovery_string_detail_programming_languages: 積木式, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: 積木式, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: 積木式
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
@@ -6453,6 +7606,133 @@ zh:
   tutorial_duckrace_string_detail_programming_languages: 積木式
   tutorial_allcancodeapps_string_detail_programming_languages: 積木式
   tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_microsoftarcade_string_detail_programming_languages: 積木式
+  tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
+    Scratch
+  tutorial_toxicodepython_string_detail_programming_languages: Python
+  tutorial_codecombatozaria_string_detail_programming_languages: JavaScript, Python,
+    Lua, CoffeeScript
+  tutorial_vidcodedate_string_detail_programming_languages: JavaScript
+  tutorial_codemonkeyspace_string_detail_programming_languages: CoffeeScript
+  tutorial_codespeakhappy_string_detail_programming_languages: 積木式
+  tutorial_grokimage_string_detail_programming_languages: Python
+  tutorial_icomputelearn_string_detail_programming_languages: Blocks, JavaScript,
+    Scratch
+  tutorial_rpstress_string_detail_programming_languages: 積木式
+  tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
+  tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_tttractor_string_detail_programming_languages: JavaScript
+  tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
+  tutorial_scigirlsquest_string_detail_programming_languages: 積木式
+  tutorial_codespeakbreathe_string_detail_programming_languages: 積木式
+  tutorial_vidcodeface_string_detail_programming_languages: JavaScript
+  tutorial_educodemaze_string_detail_programming_languages: JavaScript
+  tutorial_educoderace_string_detail_programming_languages: JavaScript
+  tutorial_codespeakchatbot_string_detail_programming_languages: 積木式
+  tutorial_gamefrootgames_string_detail_programming_languages: 積木式
+  tutorial_codespeakgrandparent_string_detail_programming_languages: 積木式
+  tutorial_educodekingdom_string_detail_programming_languages: JavaScript
+  tutorial_codehsdata_string_detail_programming_languages: JavaScript
+  tutorial_educodecake_string_detail_programming_languages: HTML + CSS
+  tutorial_ttsecond_string_detail_programming_languages: JavaScript
+  tutorial_bsdtrivia_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_csfirstdialogue_string_detail_programming_languages: 積木式, Scratch
+  tutorial_codemonkeybeaver_string_detail_programming_languages: 積木式
+  tutorial_codestersdistance_string_detail_programming_languages: Python
+  tutorial_itchspace_string_detail_programming_languages: 積木式
+  tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
+  tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
+  tutorial_itchfish_string_detail_programming_languages: 積木式
+  tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_codespeaktime_string_detail_programming_languages: 積木式
+  tutorial_itchwebcam_string_detail_programming_languages: 積木式
+  tutorial_itchball_string_detail_programming_languages: 積木式
+  tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
+  tutorial_plethora_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_educodesecret_string_detail_programming_languages: Python
+  tutorial_itchshapes_string_detail_programming_languages: 積木式
+  tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
+  tutorial_educativechatbot_string_detail_programming_languages: Python
+  tutorial_educodebasics_string_detail_programming_languages: JavaScript
+  tutorial_codehsdesign_string_detail_programming_languages: HTML
+  tutorial_htmlacademyphp_string_detail_programming_languages: PHP
+  tutorial_gamefrootdistance_string_detail_programming_languages: 積木式
+  tutorial_codesterscovid_string_detail_programming_languages: Python
+  tutorial_ttbunker_string_detail_programming_languages: JavaScript
+  tutorial_cuttle_string_detail_programming_languages: Blocks, Language independent
+    (can be taught in multiple languages)
+  tutorial_bsdjokes_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_rptree_string_detail_programming_languages: 積木式
+  tutorial_codestersunity_string_detail_programming_languages: Python
+  tutorial_codesterssoccer_string_detail_programming_languages: Python
+  tutorial_breakoutlock_string_detail_programming_languages: Blocks, Language independent
+    (can be taught in multiple languages)
+  tutorial_thunkablemask_string_detail_programming_languages: 積木式
+  tutorial_cafarming_string_detail_programming_languages: Theory course on impacts
+    of computing.
+  tutorial_blocksmithyeti_string_detail_programming_languages: JavaScript
+  tutorial_codecapture_string_detail_programming_languages: JavaScript
+  tutorial_codehslitter_string_detail_programming_languages: Python, HTML
+  tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_itchplatformer_string_detail_programming_languages: 積木式
+  tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_gamefrootclicker_string_detail_programming_languages: 積木式
+  tutorial_rmagicequity_string_detail_programming_languages: 積木式, JavaScript
+  tutorial_ttfreestyle_string_detail_programming_languages: JavaScript
+  tutorial_ozobotcolor2_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_ozobotcolor3_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_clcarbon_string_detail_programming_languages: Python
+  tutorial_kodablebasics_string_detail_programming_languages: Blocks, JavaScript,
+    Language independent (can be taught in multiple languages)
+  tutorial_scigirlscc_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_irobotpicture_string_detail_programming_languages: No specific programming
+    languages required; unplugged decoding activity with words/phrases
+  tutorial_kcjmyself_string_detail_programming_languages: 積木式
+  tutorial_nearpodalgorithms_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_kibodrop_string_detail_programming_languages: 積木式
+  tutorial_ozobotcolor1_string_detail_programming_languages: Ozobot Line Following
+    and Color Codes
+  tutorial_scigirlspixels_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_kcjheroines_string_detail_programming_languages: 積木式
+  tutorial_ozobotvalue_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_icodebytes_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_clfashion2_string_detail_programming_languages: SQL
+  tutorial_ai4all_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_cldata_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_spheroinputs_string_detail_programming_languages: 積木式
+  tutorial_edisoncount_string_detail_programming_languages: 積木式
+  tutorial_spheroloops_string_detail_programming_languages: 積木式
+  tutorial_kiboprogram_string_detail_programming_languages: 積木式
+  tutorial_hellorubycsin60_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_clfashion1_string_detail_programming_languages: SQL
+  tutorial_irobottraffic_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_edisonmystery_string_detail_programming_languages: 積木式
+  tutorial_microbitseaturtles_string_detail_programming_languages: 積木式, JavaScript,
+    Python
+  tutorial_ozobotknow_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_imagilabs_string_detail_programming_languages: Python
+  tutorial_irobotsimulator_string_detail_programming_languages: 積木式
+  tutorial_irobotkind_string_detail_programming_languages: 積木式
+  tutorial_firiavirtual_string_detail_programming_languages: Python
+  tutorial_irobotguesscode_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_ozobotnouns_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
+  tutorial_blupants_string_detail_programming_languages: 積木式, Python
+  tutorial_legodance_string_detail_programming_languages: 積木式
+  tutorial_nearpodcoding_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
+  tutorial_kcjplastic_string_detail_programming_languages: Blocks, Also has use of
+    a spreadsheet.
+  tutorial_legojourney_string_detail_programming_languages: 積木式
+  tutorial_legohopper_string_detail_programming_languages: 積木式
+  tutorial_catrobatembroidery_string_detail_programming_languages: 積木式
+  tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_codeguppydraw_string_detail_programming_languages: JavaScript
+  tutorial_codejumper_string_detail_programming_languages: 不插電活動
+  tutorial_meeempathy_string_detail_programming_languages: 積木式, Python
   tutorial_scratchimagine_name: Imagine a World
   tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
   tutorial_googlehero_name: Code Your Hero
@@ -6500,7 +7780,7 @@ zh:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: 奧佳睿
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -6552,6 +7832,7 @@ zh:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: Minecraft 編碼時刻：永恆 AI
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
+  tutorial_ai-oceans_name: "  保護海洋的人工智慧 (AI for Oceans)  "
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -6591,8 +7872,8 @@ zh:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -6711,9 +7992,9 @@ zh:
     useful phrases into different languages.
   tutorial_ozaria_longdescription: 定制化你的英雄及去天山的旅程，需要闖過15個關卡，設計屬於你自己的遊戲，才能幫助拯救奧佳睿的世界。
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -6842,9 +8123,8 @@ zh:
   tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
     app to power through printable puzzles and challenges to crack the code to where
     Root is hiding.
-  tutorial_microbit14_longdescription: Code your way to preserving the oceans using
-    micro:bit. Find out more about Global Goal 14, Life Below Water and learn to code
-    a sea turtle beach light.
+  tutorial_microbit14_longdescription: "  使用 micro:bit 來編寫代碼保護海洋。瞭解更多關於全球目標 14，水底生命的資訊，並學習為海龜沙灘燈光編寫代碼。
+    \ "
   tutorial_barobomoon_longdescription: You're one of the pioneer astronauts at the
     first permanent moon base, and while on an expedition away from base, a malfunction
     incapacitates your lunar rover and radio. But with a little ingenuity you can
@@ -6909,6 +8189,8 @@ zh:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
+  tutorial_ai-oceans_longdescription: "  電腦科學的意義遠不止於編碼！瞭解人工智慧、機器學習、訓練資料和偏見，同時探討倫理問題以及如何利用人工智慧來解決世界問題。
+    \ "
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: English
   tutorial_googlehero_language: English, Spanish
@@ -7007,6 +8289,7 @@ zh:
   tutorial_modtraits_language: English
   tutorial_mee_language: 英語（美國）、英語（英國）、德語、西班牙文（西班牙）、西班牙文（墨西哥）、法語（法國）、法語（加拿大）、義大利文、日語、韓語、葡萄牙文（巴西）、葡萄牙文（葡萄牙）、俄語、中文（簡體）、中文（繁體）、土耳其文、波蘭文、印尼語、烏克蘭文、希臘文、保加利亞文、匈牙利文、芬蘭文、丹麥文、瑞典文、挪威語、斯洛伐克文、捷克文、荷蘭文
   tutorial_kuborobo_language: English, Spanish
+  tutorial_ai-oceans_language: English
   tutorial_scratchimagine_string_detail_grades: 年級 2+
   tutorial_codesterspsa_string_detail_grades: 年級 6+
   tutorial_googlehero_string_detail_grades: 年級 2-8
@@ -7105,12 +8388,13 @@ zh:
   tutorial_modtraits_string_detail_grades: 年級 2+
   tutorial_mee_string_detail_grades: 年級 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
+  tutorial_ai-oceans_string_detail_grades: "  3 年級以上  "
   tutorial_scratchimagine_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_codesterspsa_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_googlehero_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_codestersbball_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_scratchcartoon_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
-  tutorial_codemonkeyjr_string_platforms: Android平板電腦, iPad, Android手機, iPhone
+  tutorial_codemonkeyjr_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
   tutorial_bananatales_string_platforms: 所有的主流瀏覽器
   tutorial_scratchtales_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -7207,6 +8491,8 @@ zh:
   tutorial_modtraits_string_platforms: 所有的主流瀏覽器
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: 不插電活動
+  tutorial_ai-oceans_string_platforms: "  所有現代瀏覽器、現代 Android 平板電腦、iPad、現代 Android
+    手機、iPhone  "
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -7308,9 +8594,10 @@ zh:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: 積木式
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: 積木式
+  tutorial_googlehero_string_detail_programming_languages: 積木式, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: 積木式
   tutorial_codemonkeyjr_string_detail_programming_languages: 積木式
@@ -7415,6 +8702,7 @@ zh:
   tutorial_mee_string_detail_programming_languages: 積木式
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
+  tutorial_ai-oceans_string_detail_programming_languages: "  AI 和機器學習  "
   school_not_found_heading: 我們找不到你的學校。請輸入更多資訊。
   school_name: 學校名稱
   school_name_error: 需填寫學校名稱。
@@ -7458,3 +8746,4 @@ zh:
   some: 一些
   all: 所有
   dont_know: 我不知道
+  language_label: Language

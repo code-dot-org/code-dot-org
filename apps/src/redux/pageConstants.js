@@ -28,11 +28,13 @@ var ALLOWED_KEYS = new Set([
   'showDebugConsole',
   'showDebugWatch',
   'showDebugSlider',
+  'debugConsoleDisabled',
   'showMakerToggle',
   'locale',
   'hasContainedLevels',
   'isDroplet',
   'isBlockly',
+  'isBramble',
   'isMinecraft',
   'runButtonText',
   'visualizationHasPadding',
@@ -69,7 +71,8 @@ var ALLOWED_KEYS = new Set([
   'expoCancelApkBuild',
   'allowExportExpo',
   'widgetMode',
-  'librariesEnabled'
+  'librariesEnabled',
+  'validationEnabled'
 ]);
 
 const initialState = {

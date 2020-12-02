@@ -41,20 +41,20 @@ mr:
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
       Dancelab_atTimestamp:
-        text: after {TIMESTAMP} {UNIT}
+        text: "{TIMESTAMP} {UNIT} नंतर"
         options:
           UNIT:
             '"measures"': मापे
             '"seconds"': सेकंद
       Dancelab_changeColorBy:
-        text: change {COLOR} {METHOD} by {AMOUNT}
+        text: "{COLOR} {METHOD} ला {AMOUNT} ने बदला"
         options:
           METHOD:
             '"hue"': छटा
             '"saturation"': संपृक्तता
             '"brightness"': चमक
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} do {MOVE} {DIR} forever"
+        text: "{GROUP} नेहेमी {MOVE} {DIR} करतात"
         options:
           GROUP:
             '"ALIEN"': एलियन
@@ -83,11 +83,8 @@ mr:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} do {MOVE} {DIR} forever"
+        text: "{SPRITE} नेहेमी {MOVE} {DIR} करतात"
         options:
           MOVE:
             '"next"': "(Next)"
@@ -104,9 +101,6 @@ mr:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: change {SPRITE} {PROPERTY} by {VAL}
         options:
@@ -118,7 +112,7 @@ mr:
             '"x"': आडवी स्थिती
             '"y"': उभी स्थिती
       Dancelab_changePropEachBy:
-        text: change {GROUP} {PROPERTY} by {VAL}
+        text: "{GROUP} {PROPERTY} ला {VAL} ने बदला"
         options:
           GROUP:
             '"ALIEN"': एलियन
@@ -140,7 +134,7 @@ mr:
             '"x"': आडवी स्थिती
             '"y"': उभी स्थिती
       Dancelab_doMoveEachLR:
-        text: "{GROUP} do {MOVE} {DIR} once"
+        text: "{GROUP} एकदा {MOVE} {DIR} करतात"
         options:
           GROUP:
             '"ALIEN"': एलियन
@@ -179,11 +173,8 @@ mr:
             MOVES.XArmsUp: पसरा
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} do {MOVE} {DIR} once"
+        text: "{SPRITE} एकदा {MOVE} {DIR} करतात"
         options:
           MOVE:
             '"rand"': "(Previous)"
@@ -210,9 +201,6 @@ mr:
             MOVES.XArmsUp: पसरा
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -249,7 +237,7 @@ mr:
             '"y"': उभी स्थिती
             '"tint"': रंग
       Dancelab_getTime:
-        text: current time in {UNIT}
+        text: "{UNIT} मध्ये सध्याची वेळ"
         options:
           UNIT:
             '"measures"': मापे
@@ -272,9 +260,7 @@ mr:
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
       Dancelab_ifTime:
-        text: |-
-          "if {UNIT} is {OP} {N}
-          {DO1} {DO2}"
+        text: "जर {UNIT}, {OP} {N} \n{DO1} {DO2} असेल"
         options:
           UNIT:
             '"measures"': मापे
@@ -284,7 +270,7 @@ mr:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} वर जा {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": वर
@@ -342,6 +328,7 @@ mr:
             '"FROG"': बेडूक
             '"MOOSE"': मूस
             '"PINEAPPLE"': अननस
+            '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
           LOCATION:
             "{x: 200, y: 100}": वर
@@ -350,8 +337,8 @@ mr:
             "{x: 300, y: 200}": उजवा
       Dancelab_makeNewDanceSprite:
         text: |-
-          "make a new {COSTUME}
-          called {NAME} at {LOCATION}"
+          {LOCATION} वर
+          {NAME} नावाचे एक नवीन {COSTUME} बनवा
         options:
           COSTUME:
             '"BEAR"': अस्वल
@@ -359,6 +346,7 @@ mr:
             '"FROG"': बेडूक
             '"MOOSE"': मूस
             '"PINEAPPLE"': अननस
+            '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
           LOCATION:
             "{x: 200, y: 100}": वर
@@ -366,9 +354,7 @@ mr:
             "{x: 100, y: 200}": डावा
             "{x: 300, y: 200}": उजवा
       Dancelab_makeNewDanceSpriteGroup:
-        text: |-
-          make {N} new {COSTUME}
-          in a {LAYOUT}
+        text: "{N} नवीन {COSTUME} \nएका {LAYOUT} मध्ये बनवा"
         options:
           'N':
             '2': '2'
@@ -412,7 +398,7 @@ mr:
             '"x"': क्रिस-क्रॉस
             '"plus"': प्लस
       Dancelab_mixColors:
-        text: mix {COLOR1} and {COLOR2}
+        text: "{COLOR1} आणि {COLOR2} यांचे मिश्रण करा"
       Dancelab_nMeasures:
         text: "{N} measures"
       Dancelab_onPointerDown:
@@ -424,7 +410,7 @@ mr:
       Dancelab_randomColor:
         text: कोणताही रंग
       Dancelab_setBackground:
-        text: set background color {COLOR}
+        text: पार्श्वभूमीचा रंग {COLOR} करा
       Dancelab_setBackgroundEffect:
         text: |-
           "set background effect
@@ -525,7 +511,7 @@ mr:
             '0.5': संथ
             '0.25': फार संथ
       Dancelab_setForegroundEffect:
-        text: set foreground effect {EFFECT}
+        text: अग्रभूमीचा प्रभाव {EFFECT} करा
         options:
           EFFECT:
             '"none"': कुठलेच नाही
@@ -543,7 +529,7 @@ mr:
             '"color_lights"': स्टेज लाइट्स
             '"raining_tacos"': टाको
       Dancelab_setForegroundEffectExtended:
-        text: set foreground effect {EFFECT}
+        text: अग्रभूमीचा प्रभाव {EFFECT} करा
         options:
           EFFECT:
             '"none"': कुठलेच नाही
@@ -562,7 +548,7 @@ mr:
             '"color_lights"': स्टेज लाइट्स
             '"raining_tacos"': टाको
       Dancelab_setProp:
-        text: 'set {SPRITE} {PROPERTY} to {VAL} '
+        text: "{SPRITE} {PROPERTY} ला {VAL} वर सेट करा "
         options:
           PROPERTY:
             '"scale"': आकार
@@ -595,7 +581,7 @@ mr:
             '"y"': उभी स्थिती
             '"tint"': रंग
       Dancelab_setPropRandom:
-        text: randomize {SPRITE} {PROPERTY}
+        text: "{SPRITE} {PROPERTY} ला अनियत करा"
         options:
           PROPERTY:
             '"scale"': आकार
@@ -606,7 +592,7 @@ mr:
             '"y"': उभी स्थिती
             '"tint"': रंग
       Dancelab_setPropRandomEach:
-        text: randomize {GROUP} {PROPERTY}
+        text: "{GROUP} {PROPERTY} ला अनियत करा"
         options:
           GROUP:
             '"ALIEN"': एलियन
@@ -629,7 +615,7 @@ mr:
             '"y"': उभी स्थिती
             '"tint"': रंग
       Dancelab_setTint:
-        text: set {SPRITE} tint to {VAL}
+        text: "{SPRITE} चा रंग {VAL} सेट करा"
       Dancelab_setTintEach:
         text: set {THIS} tint to {VAL}
         options:
@@ -661,7 +647,7 @@ mr:
             '"SHARK"': शार्क
             '"UNICORN"': यूनिकॉर्न
       Dancelab_setTintInline:
-        text: set {SPRITE} tint to {VAL}
+        text: "{SPRITE} चा रंग {VAL} सेट करा"
       Dancelab_setVisible:
         text: set {SPRITE} visible to {VISIBILITY}
         options:
@@ -687,7 +673,7 @@ mr:
             'true': दृश्य
             'false': अदृश्य
       Dancelab_startMapping:
-        text: "{SPRITE} begins {PROPERTY} following {RANGE}"
+        text: "{SPRITE} {RANGE} नंतर {PROPERTY} सुरू करते"
         options:
           PROPERTY:
             '"scale"': आकार
@@ -729,7 +715,7 @@ mr:
             '"mid"': मिड
             '"treble"': ट्रेबल
       Dancelab_stopMapping:
-        text: "{SPRITE} stops {PROPERTY} following {RANGE}"
+        text: "{SPRITE} {RANGE} नंतर {PROPERTY} थांबवते"
         options:
           PROPERTY:
             '"scale"': आकार
@@ -794,7 +780,7 @@ mr:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: when {KEY} pressed
+        text: जेव्हा {KEY} दाबली जाते
         options:
           KEY:
             '"up"': वर
@@ -848,6 +834,10 @@ mr:
         text: सेटअप
       Dancelab_whenSetup2:
         text: सेटअप
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': सेकंद
       gamelab_changePropBy:
         text: change {SPRITE} {PROPERTY} by {VAL}
         options:
@@ -863,8 +853,44 @@ mr:
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
             '"tint"': रंग
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': सेकंद
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': वर
+            '"down"': खाली
+            '"left"': डावा
+            '"right"': उजवा
+            '"space"': स्पेस
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
       gamelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} वर जा {LOCATION}"
       gamelab_keyPressed:
         options:
           KEY:
@@ -907,7 +933,7 @@ mr:
       gamelab_randomColor:
         text: कोणताही रंग
       gamelab_setBackground:
-        text: set background color {COLOR}
+        text: पार्श्वभूमीचा रंग {COLOR} करा
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -930,7 +956,7 @@ mr:
             '"right"': उजवा
             '"left"': डावा
       gamelab_whenKey:
-        text: when {KEY} pressed
+        text: जेव्हा {KEY} दाबली जाते
         options:
           KEY:
             '"up"': वर
@@ -1036,7 +1062,7 @@ mr:
             "{x: 100, y: 200}": डावा
             "{x: 300, y: 200}": उजवा
       Mikelab_whenKeyPressed:
-        text: when {KEY} pressed
+        text: जेव्हा {KEY} दाबली जाते
       aalab_goToScene:
         options:
           SCENE:
@@ -1057,7 +1083,7 @@ mr:
             '"left"': डावा
             '"right"': उजवा
       binary_whenKey:
-        text: when {KEY} pressed
+        text: जेव्हा {KEY} दाबली जाते
         options:
           KEY:
             '"up"': वर

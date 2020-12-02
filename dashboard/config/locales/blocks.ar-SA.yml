@@ -27,7 +27,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Kick: الركل
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
@@ -40,7 +40,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Kick: الركل
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
@@ -86,14 +86,11 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Kick: الركل
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} للأبد"
         options:
@@ -108,14 +105,11 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Kick: الركل
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
         options:
@@ -179,7 +173,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.XHeadHips: الرأس +الوركين
             MOVES.XHop: هوب
             MOVES.XHighKick: ركلة
@@ -193,9 +187,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} مرة واحدة"
         options:
@@ -211,7 +202,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.XHeadHips: الرأس +الوركين
             MOVES.XHop: هوب
             MOVES.XHighKick: ركلة
@@ -225,9 +216,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_eval:
         text: تقييم{CODE}
       Dancelab_everyMeasuresRange:
@@ -281,7 +269,7 @@ ar:
         options:
           DANCE:
             MOVES.ClapHigh: التصفيق بصوت عالٍ
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Dab: التربيت
             MOVES.DoubleJam: الحفلة الموسيقية المزدوجة
             MOVES.Drop: السقوط
@@ -366,15 +354,20 @@ ar:
           FORMAT:
             '"border"': الحدود
             '"inner"': مربع داخلي
+            '"diamond"': ماسة
             '"circle"': دائرة
             '"grid"': شبكة
+            '"top"': الصف العلوي
             '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
             '"column"': عمود
+            '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
             '"random"': عشوائي
       Dancelab_makeAnonymousDanceSprite:
-        text: جعل جديده {COSTUME} في {LOCATION}
+        text: قم بإنشاء {COSTUME} جديد في {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': كائن فضائى
@@ -509,7 +502,7 @@ ar:
             '"disco_ball"': كرة ديسكو
             '"fireworks"': مفرقعات
             '"swirl"': هيبنو
-            '"kaleidoscope"': منظار النماذج المتغيرة «مشكال
+            '"kaleidoscope"': رسم مختلف الألوان
             '"lasers"': أرضية رقص بالليزر
             '"splatter"': رشاش الطلاء
             '"rainbow"': ألوان
@@ -522,13 +515,13 @@ ar:
             '"stars"': نجوم
           PALETTE:
             '"rave"': أسود وأبيض
-            '"cool"': الأزرق بدرجاته
+            '"cool"': رائع
             '"electronic"': إلكتروني
             '"iceCream"': آيس كريم
             '"default"': ضوء
             '"neon"': نيون
             '"tropical"': استوائي
-            '"vintage"': عتيق
+            '"vintage"': الأحمر بدرجاته
             '"warm"': الأحمر بدرجاته
       Dancelab_setBackgroundEffectWithPalette:
         text: عيّن تأثيرات الخلفية {PALETTE} {EFFECT}
@@ -545,7 +538,7 @@ ar:
             '"flowers"': زهور
             '"growing_stars"': النجوم المتنامية
             '"swirl"': هيبنو
-            '"kaleidoscope"': منظار النماذج المتغيرة «مشكال
+            '"kaleidoscope"': رسم مختلف الألوان
             '"lasers"': أرضية رقص بالليزر
             '"splatter"': رشاش الطلاء
             '"rainbow"': ألوان
@@ -562,13 +555,13 @@ ar:
             '"music_wave"': أمواج
           PALETTE:
             '"rave"': أسود وأبيض
-            '"cool"': الأزرق بدرجاته
+            '"cool"': رائع
             '"electronic"': إلكتروني
             '"iceCream"': آيس كريم
             '"default"': ضوء
             '"neon"': نيون
             '"tropical"': استوائي
-            '"vintage"': عتيق
+            '"vintage"': الأحمر بدرجاته
             '"warm"': الأحمر بدرجاته
       Dancelab_setDanceSpeed:
         text: غيّر سرعة الرقص {SPRITE} إلى {SPEED}
@@ -608,15 +601,15 @@ ar:
           EFFECT:
             '"none"': لا شيء
             '"bubbles"': فقاعات
-            '"confetti"': قصاصات من الورق
+            '"confetti"': نثار
             '"hearts_red"': قلوب
-            '"music_notes"': نوتات موسيقية
+            '"music_notes"': نغمات موسيقية
             '"pineapples"': أناناس
             '"pizzas"': بيتزا
-            '"smiling_poop"': مؤخرة السفينة
+            '"smiling_poop"': مفرقعات
             '"rain"': مطر
             '"floating_rainbows"': أقواس قزح
-            '"smile_face"': وجه مبتسم
+            '"smile_face"': ابتسامات
             '"spotlight"': ضوء كشاف
             '"color_lights"': أضواء المسرح
             '"raining_tacos"': شطائر التاكو
@@ -628,17 +621,17 @@ ar:
             '"rand"': "(عشوائي)"
             '"bubbles"': فقاعات
             '"hearts_colorful"': قلوب ملونة
-            '"confetti"': قصاصات من الورق
+            '"confetti"': نثار
             '"emojis"': الرموز التعبيرية
             '"hearts_red"': قلوب
-            '"music_notes"': نوتات موسيقية
+            '"music_notes"': نغمات موسيقية
             '"paint_drip"': الطلاء بالتنقيط
             '"pineapples"': أناناس
             '"pizzas"': بيتزا
-            '"smiling_poop"': مؤخرة السفينة
+            '"smiling_poop"': مفرقعات
             '"rain"': مطر
             '"floating_rainbows"': أقواس قزح
-            '"smile_face"': وجه مبتسم
+            '"smile_face"': ابتسامات
             '"spotlight"': ضوء كشاف
             '"color_lights"': أضواء المسرح
             '"exploding_stars"': النجمي
@@ -690,7 +683,7 @@ ar:
             '"y"': الموضع الرأسي
             '"tint"': لون خفيف
       Dancelab_setPropRandomEach:
-        text: Randomize {GROUP} {PROPERTY}
+        text: قم بالترتيب العشوائي {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: الكل
@@ -902,7 +895,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': y
+            '"y"': ص
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -948,7 +941,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': y
+            '"y"': ص
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -975,6 +968,10 @@ ar:
         text: العفريت {SPRITE} يبدا {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': ثوان
       gamelab_changePropBy:
         text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
         options:
@@ -1019,8 +1016,47 @@ ar:
         options:
           CHOICE:
             '"this"': هذا
+            '"other"': أخرى
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': ثوان
       gamelab_hideTitleScreen:
         text: إخفاء شاشة العنوان
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+            '"a"': أ
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': ي
+            '"k"': ك
+            '"l"': أنا
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': ف
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': ص
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} هو لمس الحواف"
       gamelab_jumpTo:
@@ -1061,10 +1097,17 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': y
+            '"y"': ص
             '"z"': z
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
       gamelab_locationMouse:
         text: موقع الماوس
       gamelab_locationOf:
@@ -1093,6 +1136,8 @@ ar:
             '"West"': غرب
       gamelab_moveToward:
         text: نقل {SPRITE} العنصورات {DISTANCE} نحو {TARGET}
+      gamelab_objectSpritePointer:
+        text: النقر {SPRITE}
       gamelab_playSound:
         text: بلاي ساوند {SOUND}
       gamelab_pointInDirection:
@@ -1117,6 +1162,8 @@ ar:
         text: العفريت {SPRITE} توقف {BEHAVIOR}
       gamelab_removeTint:
         text: إزالة اللون من {THIS}
+      gamelab_repeatForever:
+        text: التكرار للأبد
       gamelab_setAnimation:
         text: تغيير {THIS} زي ل {ANIMATION}
       gamelab_setBackground:
@@ -1140,6 +1187,8 @@ ar:
               الماء
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': الشتاء
             undefined: لا شيء
+      gamelab_setBackgroundImageAs:
+        text: تعيين الخلفية إلى {IMG}
       gamelab_setProp:
         text: تعيين {SPRITE} {PROPERTY} ل {VAL}
         options:
@@ -1173,6 +1222,8 @@ ar:
           CONDITION:
             '"when"': عندما
             '"while"': التكرار طالما
+      gamelab_subjectSpritePointer:
+        text: النقر {SPRITE}
       gamelab_turn:
         text: دوره {SPRITE} {DIRECTION} {N} درجه
         options:
@@ -1203,9 +1254,9 @@ ar:
       gamelab_whenUpArrow:
         text: عند الضغط على السهم لأعلى
       gamelab_whileDownArrow:
-        text: بينما ضغط السهم لأسفل
+        text: طالما السهم لأسفل مضغوط
       gamelab_whileKey:
-        text: بينما تم الضغط على {KEY}
+        text: طالما تم الضغط على {KEY}
         options:
           KEY:
             '"up"': الأعلى
@@ -1218,13 +1269,13 @@ ar:
             '"s"': s
             '"d"': d
       gamelab_whileLeftArrow:
-        text: بينما ضغط السهم الأيسر
+        text: طالما السهم لليسار مضغوط
       gamelab_whileRightArrow:
-        text: بينما تم الضغط على السهم الأيمن
+        text: طالما السهم لليمين مضغوط
       gamelab_whileTouching:
-        text: بينما {SPRITE1} هو لمس {SPRITE2}
+        text: طالما {SPRITE1} يلمس {SPRITE2}
       gamelab_whileUpArrow:
-        text: بينما ضغط السهم لأعلى
+        text: طالما السهم لأعلى مضغوط
       gamelab_xLocationOf:
         text: x إحداثيات {SPRITE}
       gamelab_yLocationOf:
@@ -1275,7 +1326,7 @@ ar:
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupChangeAnim:
-        text: تغيير {SELECT} {COSTUME} في {COSTUME2}
+        text: قم بتغيير {SELECT} {COSTUME} في {COSTUME2}
         options:
           SELECT:
             '"all"': الكل
@@ -1293,7 +1344,7 @@ ar:
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupCreateNewSprite:
-        text: جعل جديده {COSTUME} في {LOCATION}
+        text: قم بإنشاء {COSTUME} جديد في {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": أعلى
@@ -1371,7 +1422,7 @@ ar:
         text: أثناء النقر على {COSTUME}
       Mikelab_groupWhileTouchingAny:
         text: |-
-          بينما{COSTUME} هو لمس {COSTUME2}
+          طالما {COSTUME} يلمس {COSTUME2}
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} حاليا {BEHAVIOR}"
@@ -1388,7 +1439,7 @@ ar:
         options:
           DANCE:
             MOVES.ClapHigh: التصفيق بصوت عالٍ
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Dab: التربيت
             MOVES.DoubleJam: الحفلة الموسيقية المزدوجة
             MOVES.Drop: السقوط
@@ -1480,7 +1531,7 @@ ar:
             '"w"': W
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': د
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1491,7 +1542,7 @@ ar:
             '"w"': W
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': د
       Mikelab_whenMouseClicked:
         text: عند النقر على الماوس
       Mikelab_whenYesNoClicked:
@@ -1557,6 +1608,14 @@ ar:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: نقل {SPRITE} {DISTANCE} العنصورات {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
       aalab_prompt:
         text: طرح السؤال {MESSAGE}
       aalab_scene:
@@ -1568,12 +1627,10 @@ ar:
             '3': '3'
       aalab_setupStory:
         text: قصة الإعداد
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': إظهار
-            '"hide"': إخفاء
+            '"random"': عشوائي
       binary_drawBin:
         text: رسم ثنائي {BIN}
       binary_drawBinScreen:
@@ -1668,7 +1725,6 @@ ar:
             '"stoneBricks"': أحجار الطوب
             '"mossyStoneBricks"': أحجار الطوب المطحلبة
             '"crackedStoneBricks"': أحجار الطوب المتصدعة
-            '"decorativeStoneBricks"': أحجار الطوب التزيينية
             '"blueCoralBlock"': كتلة المرجان الأزرق
             '"pinkCoralBlock"': كتلة المرجان الوردي
             '"magentaCoralBlock"': كتلة المرجان الأرجواني

@@ -12,7 +12,7 @@
     "long_instructions": "# Add images\r\n\r\nFor each screen, add the images that you want by dragging the \"image\" icon onto the screen and changing it to match your design.\r\n\r\n# Do this\r\n\r\n* Find the \"image\" icon in the Design Toolbox and drag it onto the screen.\r\n* Choose your image by finding the \"image\" property in the workspace and clicking \"choose\".\r\n  * You can upload your own image or choose from the icons aleady there.\r\n* Repeat this for all the images on both screens.",
     "mini_rubric": "false",
     "submittable": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -35,11 +35,19 @@
     "project_template_level_name": "Science earthquake project_copy",
     "parent_level_id": 19051,
     "name_suffix": "_copy",
+    "map_reference": "/docs/concepts/app-lab/design-mode/index.html",
+    "video_key": "csd_applab_designmode_short",
+    "libraries_enabled": "false",
+    "code_functions": {
+      "setScreen": null
+    },
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-08-20 07:26:17 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:29:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"hide_view_data_button\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:34:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:36:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:40:24 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:45:00 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-08-20 07:26:17 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:29:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"hide_view_data_button\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:34:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:36:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:40:24 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 07:45:00 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-01-06 19:09:51 +0000\",\"changed\":[\"never_autoplay_video\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-01-06 19:25:50 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

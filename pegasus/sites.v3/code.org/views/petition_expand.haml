@@ -62,7 +62,8 @@
             = I18n.t :homepage_diversity_pledge
         %button{onclick: "expandPetition();", style: "margin-top: 0px; margin-bottom:5px"}
           -if request.language  == 'en'
-            = I18n.t :homepage_signpetition_dropdown
+            = I18n.t :homepage_signpetition_dropdown_text
+            != "&#x25BE;"
           -else
             = I18n.t :hoc2014_support
         -# Temp: English only until we have translations.
@@ -147,7 +148,7 @@
     this.showEmailError(false);
     this.showNoError(true);
 
-    // Do not send the email or name server-side for under thirteen users for
+    // Do not send the email or name server-side for under sixteen users for
     // privacy reasons.
     if (parseInt(document.getElementById('age').value) < 16) {
       document.getElementById('email').value = 'anonymous@code.org';

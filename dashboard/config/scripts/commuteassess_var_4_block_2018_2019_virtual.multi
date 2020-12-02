@@ -1,0 +1,13 @@
+name 'CommuteAssess - Var 4 - block_2018_2019_virtual'
+question 'What are x, y and z equal to after this script is run?'
+right 'x is equal to 8; y is equal to 8; z is equal to 12'
+wrong 'x is equal to 8; y is equal to 4; z is equal to 84'
+wrong 'x is equal to 8; y is equal to 8; z is equal to 16'
+wrong 'x is equal to 8; y is equal to 8; z is equal to "x + y"'
+wrong 'x is equal to 8; y is equal to 4, 8; z is equal to 12'
+markdown <<MARKDOWN
+![](https://images.code.org/8186e70383504626932ad42b8ee808a7-image-1482507302084.png)
+
+<!-- Block: ![](https://images.code.org/aa74bad52b060cb751511310218cc6df-image-1482297813938.png)
+-->
+MARKDOWN

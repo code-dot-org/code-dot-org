@@ -4,7 +4,7 @@ editor_experiment ''
 
 
 
-description 'Which of the following is considered a potential effect of the <em>GroceryGrabbr</em> app rather than a function of the <em>GroceryGrabbr</em> app?'
+description 'Which of the following is considered a potential effect of the _GroceryGrabbr_ app rather than a function of the _GroceryGrabbr_ app?'
 right 'Using the app may result in the user being able to spend less time shopping for groceries and more time with their family and friends.'
 wrong 'Using the app allows users to locate grocery items on a list.'
 wrong 'The app enables users to receive a notification that the app is ready to be used when they enter the grocery store'

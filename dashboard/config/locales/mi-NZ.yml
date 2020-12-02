@@ -211,9 +211,15 @@ mi:
     access_denied: Kāore i a koe te mana uru ki tēnei %{model}.
   nav:
     header:
-      finished_hoc: Kua oti i au taku Hour of Code
+      finished_hoc: Kua oti i ahau!
       sign_in_to_save: Takiuru atu ki te tiaki i aku mahi
+      course_catalog: Whārangi Akoranga
       project_gallery: Ngā Tūmahi
+      help_support: Māngai tautoko
+      report_bug: Pūrongo mai to raru
+      about: Whakamārama
+      legal_privacy: Kaupapahere Tūmataitinga
+      legal_tos: Ngā Ture Ratonga
     user:
       district_dashboard: Paemana ā-Rohe
       label: Tēnā koe %{username}
@@ -231,6 +237,7 @@ mi:
       artist: Rehetoi
       bounce: Tupana
       calc: Calc
+      dance: Te Pāti Kanikani
       eval: Eval
       flappy: Flappy
       frozen: Frozen
@@ -290,6 +297,7 @@ mi:
       mukua ina mukua tō ake pūkete.'
     delete_confirm: Āe rānei e hiahia ana koe ki te muku i tō pūkete?
     update_email: Whakahou
+    none: Kore
   user_level:
     completed: Kua oti
     tried: Kua ngana
@@ -397,8 +405,9 @@ mi:
     trademark: He moko te &copy; Code. org, %{current_year}. Code. org&reg; te tohu
       CODE me Hour of Code&reg; o Code.org.
     copyright: Manatārua
+    more: Nui ake
     feedback: Tuku urupare
-    translate: Āwhinatia mātou ki te whakamāori ki tō reo
+    translate: Āwhinatia mātou ki te whakamāori to mātou rauemi
     support: Tautoko
     tos_short: Ngā Ture
     tos: Ngā Ture Ratonga
@@ -474,6 +483,10 @@ mi:
         kia mahi ai, ā, tiria tō taupānga i te wā poto noa iho.
       audience: Pakeke 13+
       cta: Ako me pēhea
+    dance:
+      title: Te Pāti Kanikani
+    dance-2019:
+      title: Te Pāti Kanikani
     hoc:
       title: Rīrapa Tauhira
       body: Whakamātauria ngā mahi waiwai o te pūtaiao rorohiko. He miriona tāngata
@@ -537,30 +550,13 @@ mi:
       title: Ngā Here
     widgets:
       cta: Ako me pēhea
-  gallery:
-    students_drew_these_with_code: Nā ngā ākonga ēnei i tā me te waehere!
-    students_made_these_with_code: Nā ngā ākonga ēnei i hanga me te waehere!
-    picture_count: I ngā rangi <b>%{days}</b> kua hipa, kua tuhia e ngā ākonga ngā
-      pikitia <b>%{count}</b> mā te tuhi i o rātou ake papatono rorohiko. Pāwhiritia
-      ngā pikitia kia kitea ai te rere o ia papatono.
-    activity_count: I ngā rangi <b>%{days}</b> kua hipa, kua hangaia e ngā ākonga
-      ngā taupānga me ngā pikitia <b>%{count}</b> mā te tuhi i o rātou ake papatono
-      rorohiko. Pāwhiritia ngā pikitia me ngā topenga mata kia kitea ai te rere o
-      ia papatono.
-    want_to_make_your_own: E hiahia ana koe ki te hanga i tō ake?
-    how_to_save: I te taumata whakamutunga o ēnei whakaakoranga, pāwhiritia the "Whakamutu"
-      me te "Tiaki" kia tiaki āu mahi ki te taiwhanga.
-    more: Mea Atu Anō &rarr;
-    caption_by_name_age: nā %{name}, %{age} tau te pakeke
-    caption_time_ago: "%{time_ago} i mua"
-    header: Taiwhainga
-    header_playlab: Ngā pūrākau me ngā kēmu
-    header_artist: Toi waehere
-    report_abuse: Pūrongohia te Tūkino
   landing:
     report_bug: Pūrongotia tētahi Iro
     support: Tono Āwhina
     help_resources: Te Āwhina me ngā Rauemi
+    help_support: Māngai tautoko
+  free_response:
+    placeholder: Whakaurua tō whakautu i konei
   multi:
     wrong_title: Whakautu hē
     wrong_body: E hē ana te whakautu nāu i whakauru. Tēnā whakamātau anō!
@@ -776,26 +772,7 @@ mi:
     instructor_feedback: Urupare Kaitohutohu
     peer_feedback: Urupare Hoa
     outdated: I tāpiritia tēnei urupare mō tētahi putanga tāpaetanga o mua
-  flex_category:
-    content: Ihirangi
-    practice: Huarahi Whakaako
     peer_review: Arotake ā-Hoa
-    csf_digcit: Te Kirirarautanga Matihiko
-    csf_jigsaw: Pangahono
-    csf_loops: Ngā Koromeke
-    csf_events: Ngā Takunetanga
-    csf_binary: Tāhūrua
-    csf_conditionals: Ngā Here
-    csf_nested_loops: Ngā Koromeke Tauroto
-    csf_functions: Ngā Taumahi
-    csf_variables: Ngā Taurangi
-    csf_for_loops: Mō Ngā Koromeke
-    csf_internet: Te Ipurangi
-    csp_variables: Ngā Taurangi
-    csp_conditionals: Ngā Here
-    csp_functions: Ngā Taumahi
-    csp_lists: Ngā Rārangi
-    csp_loops: Ngā Koromeke
   external_links:
     disclaimer: Karo
     leaving_domain: E puta ana koe i tēnei rohe ināianei ki tētahi pae kāore i te
@@ -873,6 +850,7 @@ mi:
     ki te tirohia anō rānei o whakautu.
   hidden_stage: Kāore tō pouako i whakaaro ka eke koe ki konei. Tēnā uia tō pouako
     kia mōhio ai koe ko tēhea te akoranga e tika ana mōu i tēnei wā.
+  return_unit_overview: Haere ki te tirohanga whānui o te kōwae ako
   return_course_overview: Haere ki te tirohanga whānui o te kōwae ako
   view_teacher_guide: Tirohia te aratohu kaiako
   pd:
@@ -891,5 +869,4 @@ mi:
       email_opt_in:
         opt_in_yes: Āe
         opt_in_no: Kāore
-  gdpr_dialog:
-    true: Āe
+  copy: Tārua

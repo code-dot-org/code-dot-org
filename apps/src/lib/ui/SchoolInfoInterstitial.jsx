@@ -77,7 +77,8 @@ export default class SchoolInfoInterstitial extends React.Component {
         school_type: PropTypes.string,
         school_name: PropTypes.string,
         full_address: PropTypes.string
-      }).isRequired
+      }).isRequired,
+      mapboxAccessToken: PropTypes.string
     }).isRequired,
     onClose: PropTypes.func.isRequired
   };
@@ -332,12 +333,14 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   render() {
     const showErrors = Object.keys(this.state.errors).length > 0;
+    const {mapboxAccessToken} = this.props.scriptData;
     return (
       <BaseDialog
         useUpdatedStyles
         isOpen={this.state.isOpen}
         handleClose={this.props.onClose}
         uncloseable
+        overflow={'visible'}
       >
         <div style={styles.container}>
           <div style={styles.heading}>{i18n.schoolInfoInterstitialTitle()}</div>
@@ -359,13 +362,15 @@ export default class SchoolInfoInterstitial extends React.Component {
               ncesSchoolId={this.state.ncesSchoolId}
               schoolName={this.state.schoolName}
               schoolLocation={this.state.schoolLocation}
-              useGoogleLocationSearch={true}
+              useLocationSearch={true}
               showErrors={showErrors}
               showRequiredIndicator={true}
+              mapboxAccessToken={mapboxAccessToken}
             />
           </div>
           <div style={styles.bottom}>
             <Button
+              __useDeprecatedTag
               onClick={this.dismissSchoolInfoForm}
               style={styles.button}
               color="gray"
@@ -374,6 +379,7 @@ export default class SchoolInfoInterstitial extends React.Component {
               id="dismiss-button"
             />
             <Button
+              __useDeprecatedTag
               onClick={this.handleSchoolInfoSubmit}
               style={styles.button}
               size="large"

@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This script incrementally populates the pegasus form_geos table using
 # geolocation of the ip_address.
@@ -8,7 +10,6 @@ require 'active_support'
 require 'active_support/core_ext/object/blank'
 require 'cdo/db'
 require 'cdo/geocoder'
-require 'cdo/only_one'
 require 'retryable'
 
 BATCH_SIZE = 1000
@@ -34,4 +35,4 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+main

@@ -1,0 +1,90 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:52.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
+      "randomNumber_min_max": null,
+      "setPosition": null,
+      "setWidth": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "long_instructions": "\r\n# Play with different event types\r\n\r\n<img src=\"https://images.code.org/9f013bd84577eb2498061757e18a72f4-image-1444322870272.46.06 AM.png\" style=\"float: right\">\r\n\r\nIf you haven't yet, you should experiment with different event types with your `onEvent` blocks.  The ones that will work best here are mouse-related ones such as:\r\n  * click\r\n  * mousemove\r\n  * mousedown\r\n  * mouseup\r\n  * mouseover\r\n\r\nThere are also some events that capture events from using the keyboard. These are interesting, but they do not work easily with buttons. We'll stick to mouse events for now, and get to keyboard events later.\r\n\r\n**Do this:** Experiment with each of the ones that start with \"mouse...\".\r\n\r\n**How?** Use the drop down in the event block to select different mouse-related events.  Then run the program and see what happens when you use the mouse on the button.\r\n\r\nOnce you've have played a little bit, click **\"Finish\"** to move on.\r\n",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "parent_level_id": 17083,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"click_button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 110px; top: 205px;\">click</button><button id=\"mousedown_button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 12px; position: absolute; left: 190px; top: 85px;\">mousedown</button><button id=\"mouseover_button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; position: absolute; left: 30px; top: 325px;\">mouseover</button><button id=\"mouseup_button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 12px; position: absolute; left: 30px; top: 85px;\">mouseup</button><button id=\"mousemove_button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; position: absolute; left: 190px; top: 325px;\">mousemove</button></div></div>",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "start_blocks": "onEvent(\"click_button\", \"click\", function(){\r\nsetProperty(\"click_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"mousedown_button\", \"mousedown\", function(){\r\nsetProperty(\"mousedown_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"mouseup_button\", \"mouseup\", function(){\r\nsetProperty(\"mouseup_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"mouseover_button\", \"mouseover\", function(){\r\nsetProperty(\"mouseover_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"mousemove_button\", \"mousemove\", function(){\r\nsetProperty(\"mousemove_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "removed template and turtle",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 22:24:12 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2018-09-19 20:10:50 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-07-30 17:36:40 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2020-04-01 20:03:31 +0000\",\"changed\":[\"notes\",\"code_functions\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-01 20:05:19 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-01 20:14:09 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_html\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 16:07:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 16:08:51 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 19:22:58 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 16:17:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

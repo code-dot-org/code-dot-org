@@ -37,9 +37,10 @@ import {
   ScoreableQuestions as FacilitatorScoreableQuestions,
   ValidScores as FacilitatorValidScores
 } from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
+import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import _ from 'lodash';
 import {
-  ApplicationStatuses,
+  getApplicationStatuses,
   ApplicationFinalStatuses,
   ApplicationTypes,
   ScholarshipStatusRequiredStatuses
@@ -48,7 +49,7 @@ import {FacilitatorScoringFields} from './detail_view/facilitator_scoring_fields
 import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
-import MarkdownSpan from '../components/markdownSpan';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const styles = {
   notes: {
@@ -131,7 +132,7 @@ export class DetailViewContents extends React.Component {
       course: PropTypes.oneOf(['csf', 'csd', 'csp']),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
-      regional_partner_emails_sent_by_system: PropTypes.bool,
+      update_emails_sent_by_system: PropTypes.bool,
       regional_partner_id: PropTypes.number,
       locked: PropTypes.bool,
       notes: PropTypes.string,
@@ -248,7 +249,6 @@ export class DetailViewContents extends React.Component {
   }
 
   componentWillMount() {
-    this.statuses = ApplicationStatuses[this.props.viewType];
     if (
       this.props.applicationData.application_type ===
         ApplicationTypes.facilitator &&
@@ -291,14 +291,17 @@ export class DetailViewContents extends React.Component {
       this.setState({
         cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
                               applicant's status to ${
-                                ApplicationStatuses[this.props.viewType][
-                                  event.target.value
-                                ]
+                                getApplicationStatuses(
+                                  this.props.viewType,
+                                  this.props.applicationData
+                                    .update_emails_sent_by_system
+                                )[event.target.value]
                               }.`,
         showCantSaveStatusDialog: true
       });
     } else if (
-      this.props.applicationData.regional_partner_emails_sent_by_system &&
+      this.props.applicationData.regional_partner_id &&
+      this.props.applicationData.update_emails_sent_by_system &&
       !workshopAssigned &&
       ['accepted_no_cost_registration', 'registration_sent'].includes(
         event.target.value
@@ -574,8 +577,14 @@ export class DetailViewContents extends React.Component {
     return (
       <ScholarshipDropdown
         scholarshipStatus={this.state.scholarship_status}
+        dropdownOptions={
+          CourseSpecificScholarshipDropdownOptions[
+            this.props.applicationData.course
+          ]
+        }
         onChange={this.handleScholarshipStatusChange}
         disabled={!this.state.editing}
+        isWorkshopAdmin={this.props.isWorkshopAdmin}
       />
     );
   };
@@ -613,14 +622,6 @@ export class DetailViewContents extends React.Component {
             >
               Delete Application
             </MenuItem>
-            <ConfirmationDialog
-              show={this.state.showDeleteApplicationConfirmation}
-              onOk={this.handleDeleteApplicationConfirmed}
-              onCancel={this.handleDeleteApplicationCancel}
-              headerText="Delete Application"
-              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
-              okText="Delete"
-            />
             {this.props.applicationData.registered_fit_weekend && (
               <MenuItem
                 style={styles.delete}
@@ -643,11 +644,26 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     } else {
-      return <Button onClick={this.handleEditClick}>Edit</Button>;
+      return [
+        <Button id="edit" key="edit" onClick={this.handleEditClick}>
+          Edit
+        </Button>,
+        <Button
+          id="delete"
+          key="delete"
+          onClick={this.handleDeleteApplicationClick}
+        >
+          Delete
+        </Button>
+      ];
     }
   };
 
   renderStatusSelect = () => {
+    const statuses = getApplicationStatuses(
+      this.props.viewType,
+      this.props.applicationData.update_emails_sent_by_system
+    );
     const selectControl = (
       <div>
         <FormControl
@@ -661,9 +677,9 @@ export class DetailViewContents extends React.Component {
           onChange={this.handleStatusChange}
           style={styles.statusSelect}
         >
-          {Object.keys(this.statuses).map((status, i) => (
+          {Object.keys(statuses).map((status, i) => (
             <option value={status} key={i}>
-              {this.statuses[status]}
+              {statuses[status]}
             </option>
           ))}
         </FormControl>
@@ -690,6 +706,14 @@ export class DetailViewContents extends React.Component {
         {selectControl}
         <InputGroup.Button style={styles.editButton}>
           {this.renderEditButtons()}
+          <ConfirmationDialog
+            show={this.state.showDeleteApplicationConfirmation}
+            onOk={this.handleDeleteApplicationConfirmed}
+            onCancel={this.handleDeleteApplicationCancel}
+            headerText="Delete Application"
+            bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+            okText="Delete"
+          />
         </InputGroup.Button>
       </InputGroup>
     );
@@ -717,7 +741,7 @@ export class DetailViewContents extends React.Component {
   renderHeader = () => {
     const rubricURL =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? 'https://drive.google.com/file/d/1070Jf9VKtuJLOQJTCaO7fxUWyLOEHBdK/view'
+        ? 'https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view'
         : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
 
     return (
@@ -740,7 +764,7 @@ export class DetailViewContents extends React.Component {
           {this.renderPointsSection()}
 
           <h4>
-            <a target="_blank" href={rubricURL}>
+            <a target="_blank" rel="noopener noreferrer" href={rubricURL}>
               View Rubric
             </a>
           </h4>
@@ -1043,10 +1067,12 @@ export class DetailViewContents extends React.Component {
                           'schoolStatsAndPrincipalApprovalSection') && (
                         <tr key={j}>
                           <td style={styles.questionColumn}>
-                            <MarkdownSpan>
-                              {this.labelOverrides[key] ||
-                                this.pageLabels[header][key]}
-                            </MarkdownSpan>
+                            <InlineMarkdown
+                              markdown={
+                                this.labelOverrides[key] ||
+                                this.pageLabels[header][key]
+                              }
+                            />
                           </td>
                           <td style={styles.answerColumn}>
                             {this.renderAnswer(
@@ -1163,7 +1189,11 @@ export class DetailViewContents extends React.Component {
           <h4>{this.props.applicationData.principal_approval_state}</h4>
           <p>
             Link to principal approval form:{' '}
-            <a href={principalApprovalUrl} target="_blank">
+            <a
+              href={principalApprovalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {principalApprovalUrl}
             </a>
           </p>

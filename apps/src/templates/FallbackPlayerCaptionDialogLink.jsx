@@ -77,12 +77,14 @@ class FallbackPlayerCaptionDialog extends Component {
             style={styles.dialogLink}
             href={pegasus('/educate/it')}
             target="_blank"
+            rel="noopener noreferrer"
           >
             {i18n.fallbackVideoClosedCaptioningDialogBodyLink()}
           </a>
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             className="ui-test-fallback-player-caption-dialog-close"
             text={i18n.fallbackVideoClosedCaptioningDialogClose()}
             onClick={this.props.handleClose}

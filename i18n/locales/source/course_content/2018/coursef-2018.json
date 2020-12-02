@@ -1,7 +1,9 @@
 {
+  "https://studio.code.org/s/coursef-2018/stage/1/puzzle/1": {
+    "title": "My Robotic Friends"
+  },
   "https://studio.code.org/s/coursef-2018/stage/2/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### Have you ever wanted to tell someone exactly what to do? Do they always listen to you?\n\n### Today, you'll be telling a machine what to do, step by step- and it will listen!\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
     }
@@ -101,14 +103,15 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/2/puzzle/13": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"algorithms\"!**  \n\n\n\n### **An algorithm is just a list of steps to finish a task**. The fun thing about algorithms is that you get to decide what happens, step by step.  \n\n### When you write an algorithm for a machine, this is called a **program**.  \n\n---\n\n## **Vocab to Know**\n\n* ### **Algorithm** - A list of steps to finish a task\n\n* ### **Program** - An algorithm that has been coded into something that can be run by a machine\n"
     }
   },
+  "https://studio.code.org/s/coursef-2018/stage/3/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title"
+  },
   "https://studio.code.org/s/coursef-2018/stage/4/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# In this lesson...\n\n### What do you think of when you think about bugs? \n\n### When most people think about bugs, they think about creepy crawly things. In computer science, bugs aren't alive, but they can still be tricky.\n\n### The puzzles in this lesson have already been solved for you! But not so fast- they don't seem to be working yet. Are bugs behind all this? \n\n---\n\n## Blocks to Know\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
     }
@@ -174,11 +177,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -200,6 +198,11 @@
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
             }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
+            }
           ]
         }
       }
@@ -210,7 +213,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/4/puzzle/12": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"debugging\"!**\n\n### **A bug is something that goes wrong.** It is an error in a program. When you find and fix those errors, you are **debugging** a problem.\n\n### You have to practice **persistence**, another word for not giving up, in order to find and fix all the bugs.\n\n---\n\n## **Vocab to Know**\n\n* ### **Bug** - Part of a program that does not work correctly\n\n* ### **Debugging** - Finding and fixing problems in an algorithm or program\n\n* ### **Persistence** - Not giving up\n"
     }
@@ -234,9 +236,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/5/puzzle/5": {
@@ -247,8 +256,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/5/puzzle/6": {
@@ -289,11 +300,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with three equal sides.",
@@ -315,6 +321,11 @@
               "correct": false,
               "feedback": "The artist draws a square."
             }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen when you click \"Run\"?"
+            }
           ]
         }
       }
@@ -335,9 +346,11 @@
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
   },
+  "https://studio.code.org/s/coursef-2018/stage/6/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title"
+  },
   "https://studio.code.org/s/coursef-2018/stage/7/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# In this lesson...\n\n### Imagine you want your character to move forward **5** times. This would be pretty easy- just drag out **5** move forward blocks. Now, imagine you want your character to move forward **5,000** times! \n\n### How long would it take you to drag out **5,000** blocks? \n\n### Wish there was an easy way to do this? There is!\n\n---\n\n## Blocks to Know\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
     }
@@ -380,7 +393,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/7/puzzle/13": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"loops\"!**  \n\n### **A loop is the action of doing something over and over again.** Another word for doing something again is repeat.\n\n### Loops are really useful for repeating patterns. It might be helpful to write out your program without any loops first, then try to find a pattern. \n\n### When you see one, stick that pattern into a `repeat` block!\n\n---\n\n## **Vocab to Know**\n\n* ### **Loop** - The action of doing something over and over again\n\n* ### **Repeat** - Do something again\n"
     }
@@ -404,7 +416,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/8/puzzle/3": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### Have you ever wondered what would happen if you put a loop *inside another loop*? \n\n### It might just make you go loopy!\n\n### If a normal loop is good at repeating patterns, what do you think a loop inside another loop would be good at? Let's find out!\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
     }
@@ -415,11 +426,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -440,6 +446,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -512,11 +523,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -538,6 +544,11 @@
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
             }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
+            }
           ]
         }
       }
@@ -545,7 +556,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/8/puzzle/15": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"nested loops\"!**\n\n### **A nested loop is a loop within a loop.** Think of it like an outer loop, with another loop that got all comfy and cozy and nested inside the outer loop. \n\n### Nested loops are great for repeating patterns of patterns. They can be very powerful if used correctly!\n\n---\n\n## **Vocab to Know**\n\n### __Nested Loops__ - A loop within a loop\n\n"
     }
@@ -618,9 +628,11 @@
       "courseD_artist_project4a_a": "Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
     }
   },
+  "https://studio.code.org/s/coursef-2018/stage/10/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/coursef-2018/stage/11/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### **Conditions** are things that can be true or false. \n\n### You will learn how to use conditions in a program to make things happen `while`, `until`, or `if` something is true!\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
     }
@@ -688,7 +700,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/11/puzzle/14": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"conditionals\"!**\n\n### Conditionals are super useful in computer science. Imagine logging in to your favorite website and typing in your password. The website has to use conditionals to check *if* the password you entered matches the password it has saved for your username. \n\n### `If` it matches, log in! \n\n### `Else`, give the user an error.  \n\n---\n\n## **Vocab to Know**\n\n* ### **Condition** - Something a program checks before allowing an action\n\n* ### **Conditionals** - Statements that only run under certain conditions\n\n"
     }
@@ -779,8 +790,10 @@
     "callouts": {
       "Function_intro_Ryan_1": "This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace."
     },
-    "function_names": {
-      "build bridge": "build bridge"
+    "function_definitions": {
+      "build bridge": {
+        "name": "build bridge"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/12/puzzle/9": {
@@ -792,8 +805,10 @@
       "MC_HOC_2017_07_Cole_a": "To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.",
       "MC_HOC_2017_07_Cole_b": "Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle."
     },
-    "function_names": {
-      "clear path": "clear path"
+    "function_definitions": {
+      "clear path": {
+        "name": "clear path"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/12/puzzle/10": {
@@ -804,9 +819,13 @@
       "MC_HOC_2017_10_Cole_b": "Don't know where to go?  See if you can find the dotted line!",
       "MC_HOC_2017_10_Cole_a": "Use functions to make solving this puzzle easier!"
     },
-    "function_names": {
-      "fix long path": "fix long path",
-      "fix short path": "fix short path"
+    "function_definitions": {
+      "fix long path": {
+        "name": "fix long path"
+      },
+      "fix short path": {
+        "name": "fix short path"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/12/puzzle/11": {
@@ -821,9 +840,13 @@
     "callouts": {
       "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but Steve and Alex can't!  "
     },
-    "function_names": {
-      "build short bridge": "build short bridge",
-      "build long bridge": "build long bridge"
+    "function_definitions": {
+      "build short bridge": {
+        "name": "build short bridge"
+      },
+      "build long bridge": {
+        "name": "build long bridge"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/12/puzzle/12": {
@@ -833,10 +856,20 @@
     "authored_hints": {
       "MC_HOC_2017_13_Cole_a": "Try having the Agent build some minecart tracks so you can explore the world!"
     },
-    "function_names": {
-      "function 1": "function 1",
-      "function 2": "function 2"
+    "function_definitions": {
+      "function 1": {
+        "name": "function 1"
+      },
+      "function 2": {
+        "name": "function 2"
+      }
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/13/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
+  },
+  "https://studio.code.org/s/coursef-2018/stage/14/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/15/puzzle/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
@@ -859,7 +892,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/15/puzzle/3": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### *Variables* are placeholders for information that can change.  Having a placeholder makes it possible to write a program, even when you won't know all of your values until later!\n\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n\n\n"
     }
@@ -868,11 +900,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with 50 pixel sides.",
@@ -893,6 +920,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides."
+            }
+          ],
+          "questions": [
+            {
+              "text": "We have set the variable \"length\" to 50. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -962,14 +994,18 @@
     "callouts": {
       "courseF_bee_functions_1_2018_1": "You can find your variables under here!"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/2": {
     "short_instructions": "Edit your solution in one place so that the bee can collect all of the honey and nectar.",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/3": {
@@ -978,50 +1014,58 @@
     "authored_hints": {
       "courseF_beevariables_3a": "To subtract one from the variable, you can use this code in your program:\n[blockly block][0]"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/4": {
     "short_instructions": "Edit the code to work for this puzzle.",
     "long_instructions": "\"Un-BEE-lievable!\"\n\nEdit the code to make it work for this puzzle.",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/5": {
     "short_instructions": "Create your own code to solve this puzzle",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/6": {
     "short_instructions": "**Challenge** Now give this puzzle a try!",
-    "function_names": {
-      "collect stairs": "collect stairs"
+    "function_definitions": {
+      "collect stairs": {
+        "name": "collect stairs"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/7": {
     "short_instructions": "This puzzle is a little different.  What do you need to do to solve it?",
-    "function_names": {
-      "collect": "collect"
+    "function_definitions": {
+      "collect": {
+        "name": "collect"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/16/puzzle/8": {
     "short_instructions": "How many nectar will the bee collect from this flower?",
-    "function_names": {
-      "move and increment": "move and increment",
-      "collect": "collect"
+    "function_definitions": {
+      "move and increment": {
+        "name": "move and increment"
+      },
+      "collect": {
+        "name": "collect"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "title": "Bee Variables Multi",
-          "questions": [
-            {
-              "text": "Look at the code below.  How many units of nectar will the bee collect at the end?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee won't collect any nectar because the variable isn't called \"gather\".",
@@ -1043,7 +1087,13 @@
               "correct": false,
               "feedback": "The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units."
             }
-          ]
+          ],
+          "questions": [
+            {
+              "text": "Look at the code below. How many units of nectar will the bee collect at the end?"
+            }
+          ],
+          "title": "Bee Variables Multi"
         }
       }
     ]
@@ -1091,7 +1141,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/17/puzzle/6": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"variables\"!**\n\n### In order to use a variable, it needs a name and a value. The name doesn't change, but the value can. This way you can use the name of the variable as a placeholder wherever you want in your program! \n\n---\n\n## **Vocab to Know**\n\n### **Variable** - A placeholder for a piece of information that can change\n\n"
     }
@@ -1116,6 +1165,9 @@
       "courseF_artist_variables_challenge2_d": "**Solution:**\n\n[Solution][0]"
     }
   },
+  "https://studio.code.org/s/coursef-2018/stage/18/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.ForLoopFun_2018.title"
+  },
   "https://studio.code.org/s/coursef-2018/stage/19/puzzle/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
     "authored_hints": {
@@ -1133,7 +1185,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/19/puzzle/3": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### Today you'll be learning about a new kind of `repeat` loop. Here is a preview of the block you'll be using:\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n### *For*tunately, this new loop will make solving puzzles like this really easy!\n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n\n"
     }
@@ -1142,11 +1193,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and collect all of the nectar from every flower. ",
@@ -1169,7 +1215,12 @@
               "feedback": "The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
             }
           ],
-          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n"
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n",
+          "questions": [
+            {
+              "text": "Read the code below. What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1251,7 +1302,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/19/puzzle/14": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"for loops\"!**\n\n### **For loops are loops where you set the start, stop, and step values.**\n\n### This new kind of `repeat` loop gives you more control over when you loop starts, when it ends, and what your loop should increase by every time it runs.\n\n### More control means you can solve puzzles a lot faster! \n\n---\n\n## **Vocab to Know**\n\n### **For loop** - For loops are loops that have a predetermined beginning, end, and increment (step interval)\n\n"
     }
@@ -1259,8 +1309,10 @@
   "https://studio.code.org/s/coursef-2018/stage/19/extras?level_name=courseF_bee_for_challenge1_2018": {
     "short_instructions": "Use this `for loop` to collect all of the nectar. ",
     "long_instructions": "You can use this `for loop` to collect all of the nectar. Un-bee-lievable!\n\nThere are a few actions that you will want to `repeat 'counter' times`.",
-    "function_names": {
-      "move and get nectar with counter": "move and get nectar with counter"
+    "function_definitions": {
+      "move and get nectar with counter": {
+        "name": "move and get nectar with counter"
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/19/extras?level_name=courseF_bee_for_challenge2_2018": {
@@ -1355,11 +1407,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a straight line that increases in thickness from one side of the play space to the other.",
@@ -1382,7 +1429,12 @@
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
             }
           ],
-          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n"
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1466,7 +1518,21 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/2": {
     "short_instructions": "Change the behavior inside the `___ begins ___` block to make the alien start spinning around.",
-    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  "
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/3": {
     "display_name": "How to Make a Sprite"
@@ -1485,7 +1551,20 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/7": {
     "short_instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
-    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked."
+    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/8": {
     "short_instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
@@ -1493,7 +1572,20 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/22/puzzle/9": {
     "short_instructions": "Now create your own alien disco!",
-    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other"
+    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/1": {
     "short_instructions": "What do you think will happen if you press \"Run\" and then click on her?",
@@ -1507,7 +1599,21 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/2": {
     "short_instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
-    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
+    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/3": {
     "short_instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
@@ -1515,19 +1621,67 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/4": {
     "short_instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
-    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!"
+    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/5": {
     "short_instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
-    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  "
+    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/6": {
     "short_instructions": "Add an apple that returns the giraffe back to regular size when they touch.",
-    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  "
+    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/23/puzzle/7": {
     "short_instructions": "Freeplay: What more can you make your giraffe do? ",
-    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  "
+    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/24/puzzle/1": {
     "display_name": "Video: CS Matters"
@@ -1539,18 +1693,54 @@
     "callouts": {
       "InspirationalArtwork_1": "Try using the `comment` block under this label to leave yourself notes inside your program!"
     },
-    "function_names": {
-      "draw a loop": "draw a loop",
-      "n-sided shape": "n-sided shape",
-      "draw spiral circle": "draw spiral circle"
+    "function_definitions": {
+      "draw a loop": {
+        "name": "draw a loop",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      },
+      "n-sided shape": {
+        "name": "n-sided shape",
+        "description": "The shape changes based on how many sides it currently has.  It takes two parameters, length and sides. Length "
+      },
+      "draw spiral circle": {
+        "name": "draw spiral circle",
+        "parameters": {
+          "size": "size"
+        }
+      }
     }
   },
   "https://studio.code.org/s/coursef-2018/stage/24/puzzle/3": {
-    "display_name": "Sprite Lab Example Project"
+    "display_name": "Sprite Lab Example Project",
+    "behavior_names": {
+      "flying south and loop": "flying south and loop",
+      "drive south and loop": "drive south and loop",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "being hungry": "being hungry",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "swimming left and right": "swimming left and right"
+    },
+    "placeholder_texts": {
+      "cbada13e4c1e0a4ce8a6778941fb48de": "Get Coins. Don't Crash!",
+      "6b90c9823ff75e6a78aa63b392e7315a": "Score: ",
+      "e8a10c04d72b2f135dabe360c4bdd534": "You win!",
+      "498cd895eb5a102c5aeb977e2b928dee": "Thank you!"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/25/puzzle/1": {
     "dsls": {
-      "title": "Begin planning your project",
       "content1": "description here",
       "markdown": "# The Design Process\nDesigning software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.\n\nThis process is useful for all kinds of things, but we are going to focus on using it for app design.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\" alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n* **Define**\n  * What kind of app would you like to create?\n  * What are your constraints?\n  * What does success look like?\n* **Prepare**\n  * Brainstorm / research possible elements\n  * Compare pros and cons\n  * Make a plan\n* **Try**\n  * Put your plan into action\n* **Reflect**\n  * How do your results compare to the goals you set while defining the app?\n  * What can you learn from this or do better next time?\n  * What new problems have you discovered?\n\n# What it Looks Like\nOver the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  \n\nHere is what the coming weeks will hold as we learn more about the design process:\n\n1. **Define & Prepare**\n   * Play existing games to get ideas and understand limitations\n   * Brainstorm and plan your new or modified app\n1. **Try**\n   * Follow your plan to build an app\n1. **Reflect & Edit**\n   * Swap apps with another group to help make your projects better\n1. **Present**\n   * Show off your final product!\n"
     }
@@ -1559,7 +1749,21 @@
     "display_name": "Course F Artist Project"
   },
   "https://studio.code.org/s/coursef-2018/stage/26/puzzle/2": {
-    "display_name": "Course F Sprite Lab Project"
+    "display_name": "Course F Sprite Lab Project",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
   },
   "https://studio.code.org/s/coursef-2018/stage/27/puzzle/1": {
     "display_name": "Revise Artist Project"
@@ -1569,7 +1773,6 @@
   },
   "https://studio.code.org/s/coursef-2018/stage/28/puzzle/1": {
     "dsls": {
-      "title": "Prepare for yur presentation",
       "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
   }

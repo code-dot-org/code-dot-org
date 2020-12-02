@@ -2,7 +2,7 @@
 hi-IN:
   hour_of_code: आवर ऑफ़ कोड
   hello: हैलो वर्ल्ड
-  'yes': हाँ
+  'yes': हां
   'no': नहीं
   select_language: कृपया अपनी भाषा चुनें
   upgrade_ie_message: Code.org जल्द ही Internet Explorer 8, 9, और 10 को समर्थित करना
@@ -19,6 +19,7 @@ hi-IN:
     font-weight:bold"> आपके ऑवर ऑफ़ कोड  का प्लान करे</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें</a>'
+  csedweek_banner_teachers_text: " तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें"
   n_have_learned_an_hoc: |-
     का प्रयास एक कोड के घंटे सेवा की
      code ke ek ghante dha koshish karo
@@ -27,9 +28,6 @@ hi-IN:
   petition_message: हर स्कूल में हर छात्र को कंप्यूटर विज्ञान सीखने का अवसर होना चाहिए
   petition_sign_message: यदि आप सहमत हैं, तो अपना नाम साइन करें और ऑवर ऑफ़ कोड अन्य
     लोगों के साथ हमारी मेलिंग सूची में शामिल हों।
-  petition_sign_message_support: |-
-    यदि आप हमें समर्थन, अपना नाम साइन इन करें।  # दूसरों में शामिल हों।
-    Agar aap hamare samarthan kartha hein, up ne nam ko sankhet karo. Log nal shamil ho
   petition_join_others: |-
     # दूसरों में शामिल हों
     Log nal shaamil ho
@@ -234,6 +232,7 @@ hi-IN:
   if_you_enjoyed: यदि आपको सीखने में मज़ा आया, तो अपने दोस्तों से भी इसे आजमाने को
     कहें!  हम चाहते हैं कि पूरी दुनिया इसे सीखे।
   personalize_certificate: आपके प्रमाण पत्र को व्यक्तिगत करें
+  print_certificates: प्रमाण-पत्र प्रिंट करें
   share_achievement: आपकी उपलब्धि साझा करें
   beyond_hour_message: हमारे <a href='http://studio.code.org'>अन्य कोर्सों के साथ
     आगे बढ़ते रहें</a>, या <a href='/learn/beyond'>घंटे से आगे कैसे सीखें</a> के और
@@ -410,6 +409,7 @@ hi-IN:
   homepage_action_text_signpetition: याचना पर हस्ताक्षर करें
   homepage_action_text_wincelebritychat: सेलिब्रिटी चैट जीतें
   homepage_signpetition_dropdown: मैं सहमत हूं &#x25BE;
+  homepage_signpetition_dropdown_text: मैं सहमत हूँ
   homepage_diversity_pledge: विविधता संकल्प लें
   homepage_banner_text_prizes: 'आवर ऑफ़ कोड दुबारा 7-13 दिसम्बर को आ रहा है। '
   homepage_banner_link_prizes: 'इतिहास में सबसे बड़े सीखने के कार्यक्रम में शामिल
@@ -716,7 +716,7 @@ hi-IN:
     आपको ईमेल भेज सकते हैं?
   volunteer_engineer_submission_field_email_preference_privacy: "(हमारी गोपनीयता नीति
     देखें)"
-  volunteer_engineer_submission_field_email_preference_yes: हाँ
+  volunteer_engineer_submission_field_email_preference_yes: हां
   volunteer_engineer_submission_field_email_preference_no: नहीं
   volunteer_engineer_submission_final_paragraph: आपको मानचित्र पर सूचीबद्ध किया जाएगा,
     ताकि स्थानीय अध्यापक आवर ऑफ़ कोड या स्वयं सेवकों के लिए अन्य अवसरों हेतु आपसे
@@ -851,7 +851,7 @@ hi-IN:
   dashboard_landing_loading: लोड हो रहा है...
   dashboard_action_cancel: रद्द करें
   dashboard_action_delete: मिटाएँ
-  dashboard_action_delete_yes: हाँ
+  dashboard_action_delete_yes: हां
   dashboard_action_delete_no: नहीं
   dashboard_action_confirm: मिटाएँ?
   dashboard_action_done: हो गया
@@ -1256,9 +1256,16 @@ hi-IN:
   coursed-2019_name: कोर्स D (2019)
   coursee-2019_name: कोर्स E (2019)
   coursef-2019_name: कोर्स F (2019)
+  coursea-2020_name: कोर्स A (2019)
+  courseb-2020_name: कोर्स B (2019)
+  coursec-2020_name: कोर्स C (2019)
+  coursed-2020_name: कोर्स D (2019)
+  coursee-2020_name: कोर्स E (2019)
+  coursef-2020_name: कोर्स F (2019)
   pre-express-2018_name: पूर्व-पाठक एक्सप्रेस कोर्स (2018)
   express-2019_name: एक्सप्रेस कोर्स (2019)
   pre-express-2019_name: पूर्व-पाठक एक्सप्रेस कोर्स (2019)
+  express-2020_name: एक्सप्रेस कोर्स (2019)
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: त्वरित पाठ्यक्रम
   express_name: एक्सप्रेस कोर्स
@@ -2067,6 +2074,8 @@ hi-IN:
   header_teacher_community: अध्यापक समुदाय
   header_help_support: 'सहायता और समर्थन '
   header_report_bug: समस्या की रिपोर्ट करें
+  header_legal_privacy: गोपनीयता नीति
+  header_legal_tos: सेवा की शर्तें
   header_tutorials: ट्यूटोरियल
   app_lab_documentation: ऐप लैब दस्तावेज
   app_lab_tutorials: ऐप लैब ट्यूटोरियल्स
@@ -2159,6 +2168,9 @@ hi-IN:
   hoc_overview_dance_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी को
     कोड करें। इसमें कैटी पेरी, मैडोना, जे, बाल्विन, सिया, कीथ अर्बन, कियारा और 25
     और को पेश करें!
+  hoc_overview_dance_2019_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी
+    को कोड करें।पेश करते हैं कैटी पेरी, शॉन मेंडेस, पैनिक को! डिस्को, लिल नास एक्स,
+    जोनास ब्रदर्स, निकी मिनाज और 34 और में!
   hoc_overview_title: ऑवर ऑफ़ कोड गतिविधियां code.org के तरफ से
   hoc_overview_subtitle: <a href="https://hourofcode.com">आवर ऑफ़ कोड</a> एक वैश्विक
     अभियान है, जो 180 से अधिक देशों में लाखों छात्रों तक पहुंच रहा है। कोई भी, कहीं
@@ -2353,3 +2365,8 @@ hi-IN:
   hoc2018_mc_thank_microsoft: हम Microsoft का धन्यवाद करते हैं कि उन्हें यह सुनिश्चित
     करने के हमारे दृष्टिकोण और उद्देश्य को सहयोग किया कि प्रत्येक बच्चे के पास कंप्यूटर
     साइंस सीखने और 21वीं सदी में सफल होने के लिए कौशल हों।
+  homepage_slot_text_title_at_home: 'घर पर सीखें
+
+'
+  page_not_available_button: मुख्य पृष्ठ पर वापस जाएं
+  footer_powered_by_aws: अमेज़ॅन वेब सर्विसेज द्वारा संचालित

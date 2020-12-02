@@ -47,6 +47,7 @@
   "jumpBackward": "springe rückwärts um",
   "jumpForward": "springe vorwärts um",
   "jumpToOverDown": "springe zu %1 über %2 nach unten",
+  "jumpToPosition": "springe an die Position %1",
   "jumpByDirection": "springe mit %1 um %2 Pixel",
   "jumpTooltip": "Bewegt den Künstler, ohne Spuren zu hinterlassen.",
   "jumpEastTooltip": "Bewegt den Künstler nach Osten, ohne Spuren zu hinterlassen.",

@@ -1,8 +1,8 @@
 name 'CSPFinal_Question_4_original'
-wrong 'The weight of <code>A-to-C</code> increases by 2 (total cost: 4)'
-wrong 'The weight of <code>A-to-C</code> increases by 3 (total cost: 5)'
-wrong 'The weight of <code>A-to-C</code> increases by 4 (total cost: 6)'
-right 'The weight of <code>A-to-C</code> increases by 5 (total cost: 7)'
+wrong 'The weight of `A-to-C` increases by 2 (total cost: 4)'
+wrong 'The weight of `A-to-C` increases by 3 (total cost: 5)'
+wrong 'The weight of `A-to-C` increases by 4 (total cost: 6)'
+right 'The weight of `A-to-C` increases by 5 (total cost: 7)'
 markdown <<MARKDOWN
 This question refers to the same network diagram from the previous question.
 

@@ -1,0 +1,67 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:58.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setScreen": null,
+      "setPosition": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "HGPdR2c47xYncuWr3I5Kw3Y1l364l/E6qAYCddJoL2DSb84rJ5ezp3yCQd5T\n2q1q\n",
+    "embed": "false",
+    "short_instructions": "Make a 2 screen app with a black screen and a white screen. (Click to see detailed instructions)",
+    "long_instructions": "# Second Screen\r\n\r\nUp until now our apps have only been able to have one view. With Design Mode we can now make multiple screens and switch between them!\r\n\r\n**Goal:** Make a 2 screen app with a black screen and a white screen. \r\n\r\n<img src=\"https://images.code.org/e35a6f494cf6f0c57c66a1aef651cdb0-image-1444353622241.gif\" style=\"width: 250px; float: right\">\r\n\r\n# Do This:\r\n\r\nSwitch to Design Mode and **add a second screen**. There are two ways to add a second screen: \r\n\r\n* Drag out <img src=\"https://images.code.org/4337b39cfd797ed9289b70fb6cb365fb-image-1444353631083.17.39 PM.png\" style=\"width: 50px\"> from the Design Toolbox. Check out the screen dropdown menu at the top right of the app window. You should now have two screens!  <img src=\"https://images.code.org/b48d978335701888b744702f25f11b28-image-1444353746012.17.07 PM.png\" style=\"width: 75px\"> \r\n* From the screen dropdown menu at the top right of the app window click *New Screen*. \r\n\r\nMake screen1 white and screen2 black. **Set the background color for a screen in the Properties tab**.  Make sure to rename the screens with appropriate IDs.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.625); display: block;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"helloScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(0, 173, 188);\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(255, 255, 255); max-width: 320px; width: 215px; height: 80px; position: absolute; left: 55px; top: 70px; font-size: 75px;\" id=\"label1\">Hello!</label>\r\n    <img data-canonical-image-url=\"icon://fa-smile-o\" id=\"smileyFace\" style=\"height: 185px; width: 185px; position: absolute; left: 65px; top: 155px; margin: 0px;\" data-icon-color=\"#ffffff\"/> \r\n      </div>\r\n</div>",
+    "parent_level_id": 17113,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

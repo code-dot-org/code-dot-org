@@ -13,7 +13,6 @@ import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
-import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   iconContainer: {
@@ -86,12 +85,12 @@ class SettingsCog extends Component {
       this.showConfirmation();
     } else {
       // Disable without confirmation is okay.
-      project.toggleMakerEnabled();
+      project.setMakerEnabled(null);
     }
   };
 
-  confirmEnableMaker = () => {
-    project.toggleMakerEnabled();
+  confirmEnableMaker = apiEnabled => {
+    project.setMakerEnabled(apiEnabled);
     this.hideConfirmation();
   };
 
@@ -113,9 +112,8 @@ class SettingsCog extends Component {
   }
 
   areLibrariesEnabled() {
-    let experimentOn = experiments.isEnabled(experiments.STUDENT_LIBRARIES);
     let pageConstants = getStore().getState().pageConstants;
-    return experimentOn || (pageConstants && pageConstants.librariesEnabled);
+    return pageConstants && pageConstants.librariesEnabled;
   }
 
   render() {

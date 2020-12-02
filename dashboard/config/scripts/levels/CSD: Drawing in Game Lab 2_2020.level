@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-18T17:57:11.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "video_key": "csd_gamelab_draw_2",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Drawing in Game Lab - Part 2",
+    "parent_level_id": 18440,
+    "name_suffix": "_2020",
+    "long_instructions": "## Questions to Consider\r\n\r\n* What’s the difference between stroke and fill?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nStroke controls the border color of the shape, and fill controls the color inside of it."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-15 05:38:19 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 05:38:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

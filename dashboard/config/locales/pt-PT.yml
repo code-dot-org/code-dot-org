@@ -134,6 +134,13 @@ pt:
     unable_to_connect_provider: Foi impossível ligar a tua conta da Code.org à tua
       conta do %{provider}. Por favor tenta outra vez.
     already_in_use: A tua conta %{provider} já está conectada a outra conta da Code.org.
+    already_linked: A sua conta %{provider} já está conectada à sua conta Code.org.
+    existing_account:
+      account_exists: Boas notícias! Já tem uma conta Code.org que usa %{email}
+      sign_in: Por favor inicie sessão e nós iremos ligar o seu %{provider} perfil.
+      sign_up: 'Não é o seu email? Quer criar uma nova conta com um email diferente?
+        Nós também vamos conectar o seu %{provider} perfil  se decidir criar uma nova
+        conta. '
   signup_form:
     email_signup: Regista-te com o teu endereço de email
     student_count: "%{count} alunos já criaram uma conta."
@@ -172,13 +179,20 @@ pt:
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavras-passe que digitaste não correspondem
-    under_13_consent: Se eu tiver menos de 13 anos de idade, confirmo que tenho autorização
-      dos meus pais ou do encarregado de educação para usar os serviços da Code.org.
     student_consent: Eu confirmo que tenho autorização dos meus pais ou do encarregado
       de educação para usar os serviços da Code.org.
-    agree_us_website: Eu concordo em usar um sítio web situado nos Estados Unidos.
-    my_data_to_us: Os dados gerados do meu uso deste site poderão ser enviados e armazenados
-      ou processados nos Estados Unidos.
+    agree_us_data_transfer_student: "**Eu aceito que a Code.org pode transferir dados
+      (incluindo dados pessoais) da utilização que faço deste site para os Estados
+      Unidos** com o objetivo de hospedar e processar tais dados."
+    agree_us_data_transfer_teacher: "**Eu aceito que a Code.org pode transferir dados
+      (incluindo dados pessoais) da utilização que faço deste site (incluindo o meu
+      uso como estudante) para os Estados Unidos** com o objetivo de hospedar e processar
+      tais dados."
+    data_collection_us: Compreendo que o Code.org é um site sem fins lucrativos com
+      sede nos EUA e que as leis que regulam a recolha de dados nos EUA podem diferir
+      da legislação no meu país.
+    visit_privacy: Consulta a [Política de Privacidade](%{privacy_url}) do Code.org
+      para saberes mais.
     student_terms_markdown: Os endereços de email não são armazenados num formulário
       que nos permita contactar os estudantes. Os estudantes nunca receberão emails
       da Code.org, exceto para a recuperação da palavra-passe. Vê a nossa [política
@@ -199,6 +213,7 @@ pt:
     email_preference_yes: Sim
     email_preference_no: Não
     email_preference_required: Deves especificar uma preferência de email.
+    parent_account_email_label: Email dos pais ou do encarregado de educação
   school_info:
     title: Informação da escola (opcional)
     school_country: País da escola
@@ -251,6 +266,8 @@ pt:
       submit: OK
     reset_errors:
       captcha_required: Por favor preenche o CAPTCHA para redefinires a tua palavra-passe.
+      invalid_email: Parece que se inscreveu com um email inválido. Por favor envie
+        um email para support@code.org para receber um link para recuperar a senha.
     change_form:
       title: Alterar palavra-passe
       new_password: Nova palavra-passe
@@ -268,6 +285,7 @@ pt:
       %{name}
   parent_mailer:
     student_associated_subject: Informações do início de sessão para a Code.org
+    parent_email_added_subject: Bem-vindo(a) à Code.org!
   teacher_mailer:
     new_teacher_subject: Bem-vindo(a) à Code.org!
     delete_teacher_subject: 'Notificação da Code.org: A tua conta foi apagada'
@@ -323,6 +341,7 @@ pt:
     header:
       finished_hoc: Acabei!
       sign_in_to_save: Inicia sessão para guardares o teu progresso
+      my_dashboard: O Meu Painel de Controlo
       course_catalog: Catálogo de Cursos
       project_gallery: Projetos
       sections: Turmas
@@ -356,6 +375,8 @@ pt:
       help_us: Ajuda-nos
       teach: Ensina
       about: Sobre
+      legal_privacy: Política de privacidade
+      legal_tos: Termos de utilização
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel de regiões
@@ -375,6 +396,7 @@ pt:
       applab: Laboratório de aplicações
       artist: Artista
       bounce: Bounce
+      calc: Calc
       dance: Festa da Dança
       flappy: Flappy Bird
       frozen: Frozen
@@ -465,6 +487,10 @@ pt:
     update: Atualizar conta
     account_successfully_updated: Conta atualizada com sucesso.
     update_email: Atualizar
+    for_parents_and_guardians: Para os Pais e Encarregados de Educação
+    parent_guardian_email_label: Email dos pais ou do encarregado de educação
+    none: Nenhum
+    encrypted: encriptado
   user_level:
     completed: Concluído
     tried: Tentado
@@ -611,6 +637,9 @@ pt:
         nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas
         algumas funcionalidade podem não estar disponíveis.
       link: Saber mais
+      oceans_unsupported_browser: Este browser não é suportado para este tutorial.
+        Por favor tente visitar esta página usando Edge, Chrome, Firefox, ou outro
+        browser mais moderno.
   slow_loading: Isto está a demorar mais do que o habitual...
   try_reloading: Tente recarregar a página
   next_stage: Já está! Continua para a próxima etapa
@@ -683,6 +712,8 @@ pt:
     gamelab:
       audience: Maiores de 13 anos
       cta: Saber mais
+    hoc-encryption:
+      title: Encriptação Simples
     weblab:
       audience: Maiores de 13 anos
       cta: Saber mais
@@ -723,26 +754,9 @@ pt:
       title: Widgets
       audience: Maiores de 14 anos
       cta: Saber mais
-  gallery:
-    students_drew_these_with_code: Alunos criaram isso com programação!
-    students_made_these_with_code: Os alunos criaram isso com programação!
-    picture_count: Nos <b>%{days}</b> dias anteriores, alunos criaram <b>%{count}</b>
-      imagens desenvolvendo seus próprios programas de computador. Clique nas imagens
-      para ver cada programa em execução.
-    activity_count: Nos últimos <b>%{days}</b> dias, os alunos criaram <b>%{count}</b>
-      aplicativos e figuras escrevendo seus próprios programas de computador. Clique
-      nas figuras e capturas de tela para ver cada programa em funcionamento.
-    want_to_make_your_own: Queres criar o teu próprio programa?
-    how_to_save: No último nível destes tutoriais, clique em "Concluir" e "Salvar"
-      para salvar o seu trabalho na galeria.
-    more: Mais &rarr;
-    caption_by_name_age: por %{name}, com %{age}
-    caption_time_ago: há %{time_ago}
-    header: Galeria
-    header_playlab: Laboratório
-    header_artist: Artista
-    report_abuse: Denunciar abuso
   landing:
+    prerelease_tutorial: Este tutorial está na versão beta. Ele está sujeito a revisões
+      conforme são recebidos feedbacks e melhorias são feitas.
     report_bug: Comunicar um problema
     support: Obter ajuda
     support_url: "//support.code.org"
@@ -750,6 +764,8 @@ pt:
     help_support: Ajuda e suporte
     documentation: Documentação
     tutorials: Tutoriais
+  free_response:
+    placeholder: Insira sua resposta aqui
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A tua resposta não está correta. Não desistas! Volta tentar!
@@ -762,10 +778,14 @@ pt:
     correct_body: Obrigado por publicar a sua resposta.
   level_group:
     wrong_title: Obrigado
+    wrong_body: Obrigado por submeter respostas.
     correct_title: Obrigado
+    correct_body: Obrigado por submeter respostas.
   level_group-submittable:
     wrong_title: Obrigado
+    wrong_body: Obrigado por submeter respostas.
     correct_title: Obrigado
+    correct_body: Obrigado por submeter respostas.
     unsubmit-title: Remove a tua avaliação
     submit-incomplete-title: Submete a tua avaliação
     submit-complete-title: Submete a tua avaliação
@@ -805,16 +825,30 @@ pt:
     age: Idade
     header: Atualização de informações da conta
   terms_interstitial:
+    title: Termos de Utilização e Política de Privacidade actualizados.
     tos: Termos de utilização
     privacy: Política de privacidade
     privacy_notice: Aviso de Privacidade
     accept: Aceitar
     print: Imprimir
+    review_terms: Rever termos actualizados
   school_info_interstitial:
+    message: Por favor introduza a informação da sua escola abaixo.
+    message_with_suggestion: Por favor verifique que a seguinte informação está correcta
+      ou actualize-a se necessário.
     save: Guardar
   race_interstitial:
+    title: 'Opcional: Ajude-nos a seguir o seu progresso de forma a melhorarmos a
+      diversidade na ciência da computação.'
     races:
+      white: Branco
+      black: Negro ou afro-americano
+      hispanic: Hispânico ou Latino
+      asian: Asiático
+      hawaiian: Nativos do Hawai ou de outras Ilhas do Pacífico
+      american_indian: Indo-americano/Nativo do Alasca
       other: Outro
+      opt_out: Prefiro não dizer
     submit: OK
     decline: Fechar
   zendesk_too_young_message: Pedimos desculpa, mas os utilizadores mais jovens não
@@ -845,9 +879,15 @@ pt:
     exit: Voltar ao curso
     project_gallery: Projetos
     publish: Publicar
+    unpublish: Remover publicação
     share_title: Partilha o teu projeto
     share_copy_link: 'Copia a ligação:'
+    share_u13_warning: 'Pergunta ao teu professor antes de partilhar. Partilha apenas
+      com os teus amigos na tua escola. '
     embed: Incorporar
+    advanced_share: Mostrar opções avançadas
+    no_projects: De momento não tens projectos. Clica num dos botões em cima para
+      começares um projecto.
     name: Nome
     updated: Última atualização
     project_type: Tipo de projeto
@@ -893,33 +933,14 @@ pt:
   peer_review:
     accepted:
       name: Aceite
+      description_markdown: "**Sim**, esta submissão **satisfaz** os requisitos. "
     rejected:
       name: Recusado
+      description_markdown: "**Não**, esta submissão **não satisfaz** os requisitos. "
     escalated:
       name: Reencaminhado
+      description: Gostaria que um instrutor revisse esta proposta.
     instructor_feedback: Opinião do Instrutor
-  flex_category:
-    required: Visão geral
-    content: Conteúdo
-    practice: Práticas de Ensino
-    csf_digcit: Cidadania digital
-    csf_jigsaw: Quebra-cabeças
-    csf_loops: Ciclos
-    csf_events: Eventos
-    csf_binary: Binário
-    csf_conditionals: Condicionais
-    csf_nested_loops: Laços aninhados
-    csf_functions: Funções
-    csf_variables: Variáveis
-    csf_for_loops: Ciclos "for"
-    csf_internet: Internet
-    csp2_1_2018: 'Unidade 1: Informação Digital'
-    csp_variables: Variáveis
-    csp_conditionals: Condicionais
-    csp_functions: Funções
-    csp_lists: Listas
-    csp_loops: Ciclos
-    k5_next_steps: Próximos Passos
   hoc_download:
     title: Hora das transferências de Código
     capsule_title: Tem Internet?
@@ -952,6 +973,7 @@ pt:
       email: E-mail
       school_name: Nome da escola
       school_country: País da escola
+      colombian_school_name: Nome da escola
     form_entries:
       gender:
         male: Masculino
@@ -973,8 +995,7 @@ pt:
         opt_in_no: Não
   cookie_banner:
     accept: Concordar
-  gdpr_dialog:
-    true: Sim
   page_not_found_description: A página que estavas a procurar não existe neste endereço.
     Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página
     inicial.
+  copy: Copiar

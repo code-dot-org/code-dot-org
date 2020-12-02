@@ -7,7 +7,7 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {PROJECT_TYPE_MAP} from './projectConstants';
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -131,7 +131,12 @@ class ProjectsList extends React.Component {
       this.props.studioUrlPrefix
     }/projects/${type}/${channel}/view`;
     return (
-      <a href={url} style={tableLayoutStyles.link} target="_blank">
+      <a
+        href={url}
+        style={tableLayoutStyles.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {name}
       </a>
     );

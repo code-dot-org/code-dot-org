@@ -12,8 +12,11 @@
   - @slides = get_slides_by_video_key(@level.video_key)
 
   - unless @level.video_full_width
-    %h1= "Video: #{video.localized_name}"
-  %div= render(inline: @level.long_instructions, type: :md) if @level.long_instructions
+    %h1= "#{t('video.label')}: #{video.localized_name}"
+  - long_instructions = @level.localized_long_instructions
+  - if long_instructions
+    / Markdown will be rendered clientside by _standalone_video.js
+    .markdown-container{data: {markdown: long_instructions}}
 
   .video-content
   - if @slides
@@ -22,19 +25,21 @@
 
   %br/
 
+  .below-video-left{style: "float: left; max-width: 80%"}
+    .video-link= link_to t('video.download'), video.download
+
+    - if @slides
+      .slides-link
+        |
+        %a.show-notes{href: ''}= t('video.show_notes')
+        %a.show-video{href: '', style: "display: none"}= t('video.show_video')
+
+    #fallback-player-caption-dialog-link
+
   - if @level.video_full_width
-    .buttons.buttons-right-aligned
+    .buttons.below-video-right{style: "float: right; max-width: 20%"}
       %a.btn.btn-large.btn-primary.next-stage.submitButton
         =t('continue')
-  .video-link= link_to t('video.download'), video.download
-
-  - if @slides
-    .slides-link
-      |
-      %a.show-notes{href: ''}= t('video.show_notes')
-      %a.show-video{href: '', style: "display: none"}= t('video.show_video')
-
-  #fallback-player-caption-dialog-link
 
   %br/
   %br/
@@ -44,4 +49,4 @@
       %a.btn.btn-large.btn-primary.next-stage.submitButton
         =t('continue')
 
-  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.teacher_markdown}}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.localized_teacher_markdown}}

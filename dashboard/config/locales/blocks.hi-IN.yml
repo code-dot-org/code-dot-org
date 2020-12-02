@@ -7,6 +7,7 @@ hi:
           बदलता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -60,6 +61,7 @@ hi:
         text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -87,9 +89,6 @@ hi:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} हमेशा {MOVE} {DIR} करता है"
         options:
@@ -108,16 +107,13 @@ hi:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
         options:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -125,6 +121,7 @@ hi:
         text: "{GROUP} {PROPERTY} के {VAL} तक बदलें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -140,7 +137,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -148,6 +145,7 @@ hi:
         text: "{GROUP} एक बार {MOVE} {DIR} करता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -185,9 +183,6 @@ hi:
             MOVES.XArmsUp: ज़ोर से खींचें
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} एक बार {MOVE} {DIR} करता है"
         options:
@@ -216,9 +211,6 @@ hi:
             MOVES.XArmsUp: ज़ोर से खींचें
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'प्रत्येक {N} प्रविधियों को {START} के बाद दोहराएं '
       Dancelab_everySeconds:
@@ -252,7 +244,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -310,6 +302,7 @@ hi:
         text: "{GROUP} से {LOCATION} पर जाएं"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -337,6 +330,7 @@ hi:
         text: "{GROUP} को {FORMAT} के रूप में लेआउट दें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -352,10 +346,15 @@ hi:
           FORMAT:
             '"border"': बॉर्डर
             '"inner"': अंदर वर्ग
+            '"diamond"': हीरा
             '"circle"': गोला
             '"grid"': ग्रिड
+            '"top"': सबसे ऊपर की पंक्ति
             '"row"': पंक्ति
+            '"bottom"': सबसे नीचे की पंक्ति
+            '"left"': बायां कॉलम
             '"column"': कॉलम
+            '"right"': दायां कॉलम
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
             '"random"': यादृच्छिक
@@ -563,6 +562,7 @@ hi:
         text: "{GROUP} की डांस स्पीड {SPEED} पर सेट करें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -628,7 +628,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -636,6 +636,7 @@ hi:
         text: "{GROUP} {PROPERTY} को {VAL} पर सेट करें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -651,7 +652,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -662,7 +663,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -671,6 +672,7 @@ hi:
         text: "{GROUP} {PROPERTY} को बेतरतीब करें"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -686,7 +688,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -697,6 +699,7 @@ hi:
         text: "{THIS} रंगत को {VAL} पर सेट करें"
         options:
           THIS:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -713,6 +716,7 @@ hi:
         text: "{THIS} रंगत को {VAL} पर सेट करें"
         options:
           THIS:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -737,6 +741,7 @@ hi:
         text: "{THIS} दृश्यता को {VISIBILITY} पर सेट करें"
         options:
           THIS:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -758,7 +763,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -771,6 +776,7 @@ hi:
         text: "{GROUP} {PROPERTY} निम्न {RANGE} पर शुरू करता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -786,7 +792,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -801,7 +807,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -815,6 +821,7 @@ hi:
         text: "{GROUP} {PROPERTY} निम्न {RANGE} पर रोकता है"
         options:
           GROUP:
+            sprites: सभी
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': सभी भालू
             '"CAT"': सभी बिल्लियां
@@ -830,7 +837,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -947,6 +954,10 @@ hi:
         text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू करता है
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': सेकंड
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
         options:
@@ -993,8 +1004,46 @@ hi:
           CHOICE:
             '"this"': यह
             '"other"': अन्य
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': सेकंड
       gamelab_hideTitleScreen:
         text: शीर्षक स्क्रीन छुपाएं
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ऊपर
+            '"down"': नीचे
+            '"left"': बाएं
+            '"right"': सही
+            '"space"': अंतरिक्ष
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} किनारों को छू रहा है"
       gamelab_jumpTo:
@@ -1039,6 +1088,13 @@ hi:
             '"z"': z
       gamelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': उत्तर
+            '"East"': पूर्व
+            '"South"': दक्षिण
+            '"West"': पश्चिम
       gamelab_locationMouse:
         text: माउस का स्थान
       gamelab_locationOf:
@@ -1067,6 +1123,8 @@ hi:
             '"West"': पश्चिम
       gamelab_moveToward:
         text: "{SPRITE} पिक्सल्स {DISTANCE} को {TARGET} की ओर घुमाएं"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} पर क्लिक किया"
       gamelab_playSound:
         text: प्लेसाउंड {SOUND}
       gamelab_pointInDirection:
@@ -1091,6 +1149,8 @@ hi:
         text: स्प्राइट {SPRITE} ने{BEHAVIOR} बंद कर दिया
       gamelab_removeTint:
         text: "{THIS} से रंग हटाएं"
+      gamelab_repeatForever:
+        text: हमेशा दोहराएं
       gamelab_setAnimation:
         text: "{THIS} कॉस्ट्यूम को {ANIMATION} में बदलें"
       gamelab_setBackground:
@@ -1115,6 +1175,8 @@ hi:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': सर्दी
               का मोसम
             undefined: कोई नहीं
+      gamelab_setBackgroundImageAs:
+        text: पृष्ठभूमि के तौर पर {IMG} सेट करें
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें"
         options:
@@ -1130,7 +1192,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
       gamelab_setTint:
         text: "{THIS} का रंग {COLOR} पर सेट करें"
       gamelab_setupSim:
@@ -1148,6 +1210,8 @@ hi:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} पर क्लिक किया"
       gamelab_turn:
         text: "{SPRITE} {DIRECTION} {N} डिग्रियां बदलें"
         options:
@@ -1252,11 +1316,13 @@ hi:
         text: "{SELECT} {COSTUME} को {COSTUME2} में बदलें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupChangePropBy:
         text: "{SELECT} {COSTUME} की {PROPERTY} को  {VAL} में बदलें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
           PROPERTY:
             '"scale"': आकार
@@ -1281,6 +1347,7 @@ hi:
         text: "{SELECT} {COSTUME} हटाएं"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupDisplace:
         text: सभी {COSTUME} {COSTUME2} को मूव होने से रोकते हैं
@@ -1302,21 +1369,25 @@ hi:
         text: "{SELECT} {COSTUME} व्यवहार रोकें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} {BEHAVIOR} को रोकता है"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupRemoveTint:
         text: "{SELECT} {COSTUME} से रंग हटाएं"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupSetProp:
         text: "{SELECT} {COSTUME} की {PROPERTY} को {VAL} में बदलें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
           PROPERTY:
             '"scale"': आकार
@@ -1328,6 +1399,7 @@ hi:
         text: "{SELECT} {COSTUME} के रंग को {COLOR} से बदलें"
         options:
           SELECT:
+            '"all"': सभी
             '"this"': यह
       Mikelab_groupWhenClickedOn:
         text: जब {COSTUME} पर क्लिक किया
@@ -1440,11 +1512,9 @@ hi:
             '"down"': नीचे तीर
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
-            '"w"': W
+            '"w"': पश्चिम
             '"a"': A
-            '"s"': |-
-              S
-              S
+            '"s"': दक्षिण
             '"d"': D
       Mikelab_whenKeyReleased:
         options:
@@ -1453,11 +1523,9 @@ hi:
             '"down"': नीचे तीर
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
-            '"w"': W
+            '"w"': पश्चिम
             '"a"': A
-            '"s"': |-
-              S
-              S
+            '"s"': दक्षिण
             '"d"': D
       Mikelab_whenMouseClicked:
         text: when mouse clicked
@@ -1481,9 +1549,9 @@ hi:
       RyanLab_moveForward:
         text: आगे जाएं
       RyanLab_turnLeft:
-        text: बाएँ मुड़ें
+        text: बाएं मुड़ें
       RyanLab_turnRight:
-        text: दाएँ मुड़ें
+        text: दाएं मुड़ें
       SpriteLab2Beta_spriteSay:
         text: स्प्राइट {SPRITE} {TEXT} को {SECONDS} सेकंड तक कहता है
       Vector_createSpriteWith:
@@ -1526,6 +1594,14 @@ hi:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE} {DISTANCE} पिक्सल्स को {DIRECTION} की ओर घुमाएं"
+        options:
+          DIRECTION:
+            '"North"': उत्तर
+            '"East"': पूर्व
+            '"South"': दक्षिण
+            '"West"': पश्चिम
       aalab_prompt:
         text: सवाल पूछें {MESSAGE}
       aalab_scene:
@@ -1537,12 +1613,10 @@ hi:
             '3': '3'
       aalab_setupStory:
         text: सेटअप कहानी
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': दिखाएं
-            '"hide"': छुपाएँ
+            '"random"': यादृच्छिक
       binary_drawBin:
         text: युग्मक चित्रित करें {BIN}
       binary_drawBinScreen:
@@ -1633,7 +1707,6 @@ hi:
             '"stoneBricks"': कृत्रिम पत्थर की ईंटें
             '"mossyStoneBricks"': कृत्रिम पत्थर की दलदले रंग की ईंटें
             '"crackedStoneBricks"': कृत्रिम पत्थर की दरारों वाली ईंटें
-            '"decorativeStoneBricks"': कृत्रिम पत्थर की सजावटी ईंटें
             '"blueCoralBlock"': नीला मूंगा ब्लॉक
             '"pinkCoralBlock"': गुलाबी मूंगा ब्लॉक
             '"magentaCoralBlock"': मैजेंटा मूंगा ब्लॉक

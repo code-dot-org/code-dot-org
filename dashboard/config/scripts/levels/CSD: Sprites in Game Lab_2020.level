@@ -1,0 +1,25 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-18T17:57:18.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "video_key": "csd_gamelab_sprites_1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Introduction to Sprites",
+    "parent_level_id": 18478,
+    "name_suffix": "_2020",
+    "long_instructions": "## Questions to Consider\r\n\r\n* What is a sprite?\r\n* What are properties?\r\n* What problem do sprites solve?\r\n",
+    "teacher_markdown": "## Discussion Goals\r\n\r\n**Key Vocabulary:**\r\n\r\n* **Sprite** - A character on the screen with properties that describe its location, movement, and look.\r\n* **Property** - A label for a characteristic of a sprite, such as its location and appearance.\r\n* **Dot Notation** - the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.\r\n\r\nSprites are a very complex concept, and students may have difficulty understanding exactly what they are.  The most important aspect for students to understand is that sprites allow them to organize a lot of information about something that they want to draw to the screen.  \r\n\r\nStudents should make the connection between properties and variables, that both hold information that their program needs to run.  Properties are accessed through their sprites, and Game Lab sprites already have specific properties that are automatically created when students create each sprite, such as x position, height, and rotation.  \r\n\r\nSprites solve the problem of organizing a lot of information about how something should be drawn to a screen.  Rather than creating new variables to hold all of that information, sprites use properties to hold all of the information about one thing that is drawn to the screen.\r\n\r\n**Content Corner:** The sprite is a type of data called an **object**. While we aren't yet explicitly introducing the concept of objects, students do need to understand that a sprite is a different type of value from the ones we've seen before, one that can hold references to many more values.",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-15 17:00:53 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-28 06:18:37 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

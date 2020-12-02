@@ -1,21 +1,28 @@
 name 'CSP Unit 5 AP-Style Assessment _2020'
-encrypted 'NuWoZ66XjmSAbD4D3FvqMXTP6TzFQkgvT7+878Y3upt+XVUyulrfwGZvW5ft
-G7di2m0QGWX3QmydgvgAbR+iuQusDjUMzTgtEJ0RXpOHJdSUPXE1ft6sd0K7
-mCwA5HhKI5tn1OJzNDjEi0lpFn6oAkSc9g+ViSZfFClV0tvgs+gZJRGTFyRW
-6YHiwK4fUNI7Qm2QFo8XjWR+LmyhNP3p8tG5mNGTtN//Qg/3xfbb6p55j7A2
-dHdflbEorafSN09/h3lLK+2uH9PIgmTpNa5KgUNzSQe1ievBJ6UZnlwNIU8V
-STmXWfIRT0F2bmLFlwIaMdw3dwSnPuoS6pV+RHDfRgr1wiGBYLmK0gVg/qio
-fwAjzFxEGZCLDKUSy5mFPpfWiibFFV5JnC2NED4ALBwp0UysDk+FMdO5geEO
-uGcZ01FnMEGZaHLVYenfCWdMB1nT2aIiaC0NXcy4OZQ6t1pAMF6qIM1lxt3d
-9el8S43dzE5XJMSWPLFl7dgTyVSWCLssOTk4TR8Vf4ly08GjHTl0fjeO1SiE
-nm/CUpxXbQChx42KVaiMZ9yITFyB1lpaDzGFp5EeSSe3eBywi/lyeCGDAeid
-uqnBRSZddx13e/DL1ugoikWtgeqN46XEaOO2NdRUt8duR31GQF57dS1Y2gWf
-dMMBcRvv9ybb/tlh4RDlb6FmacnF6ES4hGyLdICgcCOSxczMD0p8I2Tu7j9Q
-nI5BGyJZ/IioT6PXm7DKHbd0SYq99FlWtUIPqGRJzxZ0SlDyJTby6WroCaKw
-Ga2DecKs6dDIGS06gycjOZkpfVAoXiSVYWYcbDcGSEP80cA8KjSSCD2OgBmV
-qdHiYeZmRe3fwaomifkz1MyLL3IZZVTJMGcd1RU5rnNo6CaYfS/x80c18F1Z
-TmdAPCwSACmBk18cwBnCEV/VCiRmVcQgSaqeNuUs3Q15vENfGcUDp3/+Nvaj
-46hxYLmZsYBqTF9bwiQ6/PqpkmmlL2A8hv+cGHf17Aj7y2D+RgVnKYH3wLFd
-CShmuyhnR0z9fJGGq9tslk2CLf4JwNujuXYlwGfrMZy7GNW9k/MkaMtGtAKD
-cxXi+AUbUn/0UhKvxwyvxUiH9t1ZiYvFeTn+7vmrvaJVnC/Io+k=
-'
+editor_experiment ''
+
+title 'CS Principles Unit 5 Assessment'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_2020'
+level 'csp-u5-exam1-data-abstraction_2020'
+level 'csp-u5-exam1-fill-in-thelist-traversal_2020'
+level 'csp-u5-exam1-change-array-element_2020'
+level 'csp-u5-exam1-array-length-access_2020'
+level 'csp-u5-exam1-modify-list-print_2020'
+
+page
+level 'csp-u5-exam1-while-loop-leap-two_2020'
+level 'csp-u5-exam1-normal-for-loop_2020'
+level 'csp-u5-exam1-gaussian-summation_2020'
+level 'csp-u5-exam1-robot_2020'
+level 'csp-u5-exam1-list-iteration-1_2020'
+
+page
+level 'csp-u5-exam1-list-iteration-2_2020'
+level 'csp-u5-exam1-list-iteration-3_2020'
+level 'csp-u5-exam1-simulation-1_2020'
+level 'csp-u5-exam1-simulation-2_2020'
+level 'csp-u5-exam1-simulation-3_2020'

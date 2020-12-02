@@ -1,0 +1,11 @@
+name 'CodeBreak Episode 3 Video'
+editor_experiment ''
+display_as_unplugged 'false'
+use_large_video_player 'true'
+video_key 'csp_concept_encryption' 
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# More about Encryption
+
+Want to learn more? Watch this video with Mia Gil Epner. 
+MARKDOWN

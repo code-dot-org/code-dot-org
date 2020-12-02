@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/express-2017/stage/1/puzzle/1": {
+    "title": "Graph Paper Programming"
+  },
   "https://studio.code.org/s/express-2017/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
@@ -60,11 +63,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. Scrat will not move at all.",
@@ -85,6 +83,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
             }
           ]
         }
@@ -147,6 +150,9 @@
       "courseD_artist_ramp12_c": "To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?"
     }
   },
+  "https://studio.code.org/s/express-2017/stage/3/puzzle/1": {
+    "title": "Building a Foundation"
+  },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/2": {
     "short_instructions": "Fix the code to help get Scrat get to the acorn.",
     "long_instructions": "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn.",
@@ -207,11 +213,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -232,6 +233,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
             }
           ]
         }
@@ -277,6 +283,9 @@
       "courseD_collector_debugging_challenge2_c": "Finally, collect the remaining treasure. Add these blocks to your program.\n\n[blockly block][0]",
       "courseD_collector_debugging_challenge2_d": "Here is the complete solution for this puzzle.\n\n[blockly block][0]"
     }
+  },
+  "https://studio.code.org/s/express-2017/stage/5/puzzle/1": {
+    "title": "Unplugged Activity"
   },
   "https://studio.code.org/s/express-2017/stage/6/puzzle/2": {
     "short_instructions": "Move forward by 60 pixels to complete this puzzle.",
@@ -380,11 +389,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -405,6 +409,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -477,11 +486,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -502,6 +506,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
             }
           ]
         }
@@ -595,6 +604,18 @@
       "courseD_artist_project4a_a": "Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
     }
   },
+  "https://studio.code.org/s/express-2017/stage/9/puzzle/1": {
+    "title": "Internet"
+  },
+  "https://studio.code.org/s/express-2017/stage/10/puzzle/1": {
+    "title": "Unplugged Activity"
+  },
+  "https://studio.code.org/s/express-2017/stage/11/puzzle/1": {
+    "title": "Unplugged Activity"
+  },
+  "https://studio.code.org/s/express-2017/stage/12/puzzle/1": {
+    "title": "The Big Event"
+  },
   "https://studio.code.org/s/express-2017/stage/14/puzzle/1": {
     "short_instructions": "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target."
   },
@@ -655,6 +676,9 @@
   "https://studio.code.org/s/express-2017/stage/15/puzzle/10": {
     "short_instructions": "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
   },
+  "https://studio.code.org/s/express-2017/stage/16/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/express-2017/stage/17/puzzle/1": {
     "short_instructions": "Move to the pile of dirt and use the `remove` block to remove it.",
     "long_instructions": "_\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"_  \n\nMove to the pile of dirt and use the `remove` block to remove it.",
@@ -684,11 +708,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing will happen.",
@@ -709,6 +728,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The farmer will remove dirt as long as there is a pile, then stop when the pile is gone"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -768,14 +792,9 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
-            }
-          ],
           "answers": [
             {
-              "text": "Nothing.  This code will leave only level ground.",
+              "text": "Nothing. This code will leave only level ground.",
               "correct": false,
               "feedback": "Incorrect. There is no code to remove dirt from the pile."
             },
@@ -793,6 +812,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `while` loop will handle any size loop, but there is no code to remove dirt from the pile."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
             }
           ]
         }
@@ -828,11 +852,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  What do you think will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bird will not move at all.",
@@ -853,6 +872,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Take a close look at the code below. What do you think will happen when you click \"Run\"?"
             }
           ]
         }
@@ -932,11 +956,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The zombie will turn right immediately and get stuck.",
@@ -957,6 +976,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -1171,11 +1195,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will collect all of the crops.",
@@ -1198,7 +1217,12 @@
               "feedback": "The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin."
             }
           ],
-          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n"
+          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n",
+          "questions": [
+            {
+              "text": "Take a close look at the code below. What will happen after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1217,6 +1241,9 @@
     "authored_hints": {
       "courseD_farmer_condLoops_challenge2_a": "The amount of each vegetable in each space can change. A `while` loop can help!"
     }
+  },
+  "https://studio.code.org/s/express-2017/stage/21/puzzle/1": {
+    "title": "Envelope Variables"
   },
   "https://studio.code.org/s/express-2017/stage/22/puzzle/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
@@ -1241,11 +1268,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with 50 pixel sides.",
@@ -1266,6 +1288,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides."
+            }
+          ],
+          "questions": [
+            {
+              "text": "We have set the variable \"length\" to 50. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -1399,6 +1426,10 @@
     },
     "callouts": {
       "courseF_playlab_variables1a_1": "The toolbox has been organized into categories to make it easier to find the blocks you need."
+    },
+    "placeholder_texts": {
+      "ea904c9d18bd602705f598372988aaa8": "What should I shout?",
+      "97a97de7add5e8dcd9f70a407d56968e": "Goal!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/23/puzzle/2": {
@@ -1406,6 +1437,11 @@
     "long_instructions": "We can make sentences more interesting by mixing pieces of text with variables.\n\nInsert the variable `color` into the middle of a sentence by putting it into the empty slot in the `join` block.",
     "authored_hints": {
       "courseF_playlab_variables2b_a": "What do you think Kiki will say when you hit `Run`?"
+    },
+    "placeholder_texts": {
+      "48d6215903dff56238e52e8891380c8f": "blue",
+      "f59f10539890569d3b1deb0e4352ab84": "Today, I'm wearing my ",
+      "810f7026db2f96c4e654f4664e44be04": " jersey!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/23/puzzle/3": {
@@ -1413,17 +1449,20 @@
     "long_instructions": "Help Kiki have a conversation with Brian by using the variable `age` in all of the places where age `12` should be used. ",
     "authored_hints": {
       "courseF_playlab_variables3b_a": "There are two blocks with empty spaces: an `actor say` block, and a `join` block. Add the variable blocks there!"
+    },
+    "placeholder_texts": {
+      "88789b154a4ffbbd84108b0c80f8c464": "How old are you, Brian?",
+      "662722f1029078dad7a3683c64d8b922": "Wow! I'm ",
+      "ae096fbf24d913754b01a1601672bf62": " too!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/23/puzzle/4": {
+    "placeholder_texts": {
+      "d065635d5fffcb3739555ae93006081c": "Pleasure to meet you, "
+    },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What would happen if the user entered the name \"Ali\" at the prompt?"
-            }
-          ],
           "answers": [
             {
               "text": "The pirate would say, \"Pleasure to meet you, Ali.\" and that is all.",
@@ -1446,7 +1485,12 @@
               "feedback": "Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate's sentence. "
             }
           ],
-          "markdown": "**This puzzle uses a new block called the `ask` block.**\n\nThe `ask` block stops the program and prompts the user to enter some text. \n\nWhatever text the user enters is then saved to the variable shown at the end of the `ask` block.  In this case, it's the variable `name`.\n"
+          "markdown": "**This puzzle uses a new block called the `ask` block.**\n\nThe `ask` block stops the program and prompts the user to enter some text. \n\nWhatever text the user enters is then saved to the variable shown at the end of the `ask` block.  In this case, it's the variable `name`.\n",
+          "questions": [
+            {
+              "text": "What would happen if the user entered the name \"Ali\" at the prompt?"
+            }
+          ]
         }
       }
     ]
@@ -1456,7 +1500,12 @@
     "long_instructions": "Now, Pirate Pegleg has some questions for Brian.\n\nThis code uses an `ask` block, so you can type Brian's answers after you click \"Run\". \n\nPut the variables in the correct places to create this conversation.",
     "authored_hints": {
       "courseF_playlab_variables4b_a": "You don’t need any more blocks from the toolbox here.",
-      "courseF_playlab_variables4b_b": "Put the two `age` variables and one `name` variable where they make the most sense in the conversation."
+      "courseF_playlab_variables4b_b": "Put the two `age` variables and the two `name` variables where they make the most sense in the conversation."
+    },
+    "placeholder_texts": {
+      "2e1749915d40abd8f43fc2b9dd13649c": "It be a pleasure, ",
+      "ecb2903fb054395baf72ea1da127be32": "Ye be pretty tall for a ",
+      "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " year old, "
     }
   },
   "https://studio.code.org/s/express-2017/stage/23/puzzle/6": {
@@ -1468,6 +1517,13 @@
     },
     "callouts": {
       "courseF_playlab_variables5c_1": "You will find your variable block in here."
+    },
+    "placeholder_texts": {
+      "bda9643ac6601722a28f238714274da4": "red",
+      "ff800dc7251afead2cdf9c569ff5c9bc": "It is quite  ",
+      "c30c9d9f51c03a6d42d66cea54206abd": " today, isn't it?",
+      "b92274a5b4513e80f4bd6a8136581578": "That's the strangest shade of ",
+      "f54929e86cc7510907895070d8b05979": " I ever did see!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/23/puzzle/7": {
@@ -1495,6 +1551,12 @@
     "long_instructions": "Use the `join` block (in the toolbox under \"Text\") to make the win/lose messages more personal by incorporating both the `codename` and the `color` variables into the responses.",
     "authored_hints": {
       "courseF_playlab_variables8c_a": "The `join` block goes into an `actor say` block, and lets you use your variables in larger sentences."
+    },
+    "placeholder_texts": {
+      "bec312aa7dbfb0c284d221d2aa8e9ffd": "Congrats, ",
+      "cd0d7bbbbb604e524bfc25effa78095d": ", I was thinking of the color ",
+      "8460ae10541cf8ded22a4e899ddfc0bb": "Sorry, ",
+      "8622f69e8cf70458a82fc22d8e46372f": ", I was not thinking of the color "
     }
   },
   "https://studio.code.org/s/express-2017/stage/23/puzzle/10": {
@@ -1510,6 +1572,13 @@
     "long_instructions": "Use these blocks to make the actors share a knock-knock joke. Change the punchline and setup to tell your own joke!",
     "authored_hints": {
       "courseF_playlab_variables_challenge1_a": "You will need additional blocks from the tool box to get the actors to talk.\n\n[blockly block][0]"
+    },
+    "placeholder_texts": {
+      "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
+      "8292c7cbebf598e875ccd0c008958922": " who?",
+      "40f4f24106dde9234f43bf30465647e0": "Knock knock.",
+      "3986de660e6560710c546cb2f22c12f3": "Who's there?",
+      "812febf38bfe564d348136e1b9e71bcd": "Megabytes!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/23/extras?level_name=courseF_playlab_variables_challenge2": {
@@ -1519,7 +1588,13 @@
       "courseF_playlab_variables_challenge2_a": "Add and subtract points to the `score` variable when sprites collide.",
       "courseF_playlab_variables_challenge2_b": "You can change how far you move your sprite each time one of the arrow keys is pressed.",
       "courseF_playlab_variables_challenge2_c": "**Solution:**\n\n[blockly block][0]"
+    },
+    "placeholder_texts": {
+      "6b90c9823ff75e6a78aa63b392e7315a": "Score: "
     }
+  },
+  "https://studio.code.org/s/express-2017/stage/24/puzzle/1": {
+    "title": "For Loop Fun"
   },
   "https://studio.code.org/s/express-2017/stage/25/puzzle/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
@@ -1540,11 +1615,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and collect all of the nectar from every flower. ",
@@ -1567,7 +1637,12 @@
               "feedback": "Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
             }
           ],
-          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n"
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n",
+          "questions": [
+            {
+              "text": "Read the code below. What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1650,8 +1725,10 @@
   "https://studio.code.org/s/express-2017/stage/25/extras?level_name=courseF_bee_for_challenge1": {
     "short_instructions": "Use this `for loop` to collect all of the nectar. ",
     "long_instructions": "You can use this `for loop` to collect all of the nectar. Un-bee-lievable!\n\nThere are a few actions that you will want to `repeat 'counter' times`.",
-    "function_names": {
-      "move and get nectar with counter": "move and get nectar with counter"
+    "function_definitions": {
+      "move and get nectar with counter": {
+        "name": "move and get nectar with counter"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/25/extras?level_name=courseF_bee_for_challenge2": {
@@ -1746,11 +1823,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a straight line that increases in thickness from one side of the play space to the other.",
@@ -1773,7 +1845,12 @@
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
             }
           ],
-          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n"
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1807,17 +1884,15 @@
       "courseF_artist_for_challenge2_d": "**Solution:**\n\n[blockly block][0]\n\n[][1]"
     }
   },
+  "https://studio.code.org/s/express-2017/stage/27/puzzle/1": {
+    "title": "Songwriting With Parameters"
+  },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/2": {
     "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
@@ -1840,7 +1915,12 @@
               "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
             }
           ],
-          "markdown": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar **once**. \n"
+          "markdown": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar **once**. \n",
+          "questions": [
+            {
+              "text": "If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1855,9 +1935,13 @@
     "callouts": {
       "courseF_bee_conditionals2_2": "The toolbox is now in category mode.  All of the blocks you need are beneath these labels!"
     },
-    "function_names": {
-      "move and check": "move and check",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "move and check": {
+        "name": "move and check"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/4": {
@@ -1896,11 +1980,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will get nectar at each flower, otherwise it will make honey.",
@@ -1923,7 +2002,12 @@
               "feedback": "The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey."
             }
           ],
-          "markdown": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be **one** flower or **one** honeycomb under each cloud. \n"
+          "markdown": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be **one** flower or **one** honeycomb under each cloud. \n",
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What do you think will happen after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1956,8 +2040,10 @@
     "callouts": {
       "courseF_bee_functions2_1": "This block calls a function.  Click this \"edit\" button to see what is inside!"
     },
-    "function_names": {
-      "get only nectar": "get only nectar"
+    "function_definitions": {
+      "get only nectar": {
+        "name": "get only nectar"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/13": {
@@ -1969,8 +2055,10 @@
       "courseF_bee_functions3_c": "Use the green `only make honey` block to call your function.",
       "courseF_bee_functions3_d": "Check out this path."
     },
-    "function_names": {
-      "only make honey": "only make honey"
+    "function_definitions": {
+      "only make honey": {
+        "name": "only make honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/14": {
@@ -1980,8 +2068,10 @@
       "courseF_bee_functions3a_a": "Your function for this puzzle only needs to get nectar or make honey, it shouldn't have any `move forward` or `turn` blocks in it. ",
       "courseF_bee_functions3a_b": "Use a stairstep pattern to check the first four clouds."
     },
-    "function_names": {
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/15": {
@@ -1991,9 +2081,13 @@
       "courseF_bee_functions4_a": "Your function should travel down the side paths and return the bee back to the main road.  You don't need to add that part to your main program.",
       "courseF_bee_functions4_b": "Try building the program and using the function blocks as you expect the function to behave, then create the function."
     },
-    "function_names": {
-      "move and check": "move and check",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "move and check": {
+        "name": "move and check"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/16": {
@@ -2004,9 +2098,13 @@
       "courseF_bee_functions5a_b": "Use a `while` loop to travel down all of the main paths, since they are different lengths.",
       "courseF_bee_functions5a_c": "Within your `while` loop, make sure to move forward, then use your function to check for a path."
     },
-    "function_names": {
-      "move and check": "move and check",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "move and check": {
+        "name": "move and check"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/17": {
@@ -2023,8 +2121,10 @@
     "callouts": {
       "courseF_bee_functions6_1": "Don't forget to look in here for more blocks that might help make this easier!"
     },
-    "function_names": {
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "get nectar make honey": {
+        "name": "get nectar make honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/19": {
@@ -2035,8 +2135,10 @@
       "courseF_bee_functions7_b": "Remember to build code inside of the green function block.\n\n[blockly block][0]",
       "courseF_bee_functions7_c": "Which way should you turn if there is a honeycomb? What about a flower? What if there is nothing?"
     },
-    "function_names": {
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "get nectar make honey": {
+        "name": "get nectar make honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/20": {
@@ -2046,8 +2148,10 @@
       "courseF_bee_functions7_a": "You can look back at the last puzzle to see your function.",
       "courseF_bee_functions7_b": "Try drawing a path through this maze with your finger. Where will the bee have to make a decision?"
     },
-    "function_names": {
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "get nectar make honey": {
+        "name": "get nectar make honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/puzzle/21": {
@@ -2057,9 +2161,13 @@
       "courseF_bee_functions8a_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseF_bee_functions8a_b": "Remember to build code inside of the function editor."
     },
-    "function_names": {
-      "do something": "do something",
-      "get nectar make honey": "get nectar make honey"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "get nectar make honey": {
+        "name": "get nectar make honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/extras?level_name=courseF_bee_functions_challenge1": {
@@ -2072,10 +2180,16 @@
       "courseF_bee_functions_challenge1_1": "What code should you put in this function?",
       "courseF_bee_functions_challenge1_2": "The \"check nectar or honey\" function can be used here if edit it to make honey multiple times."
     },
-    "function_names": {
-      "row of nectar": "row of nectar",
-      "rowOfNectar": "rowOfNectar",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "row of nectar": {
+        "name": "row of nectar"
+      },
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/28/extras?level_name=courseF_bee_functions_challenge2": {
@@ -2085,10 +2199,16 @@
       "courseF_bee_functions_challenge2_a": "If there is a path to the right, you should do the following:\n\n-   Get any nectar or make any honey.\n-   Turn right towards the side path.\n-   Move to the end of the side path.\n-   Turn right.\n\nIf you repeat the above actions twice, you will be ready to move back down the main path.\n\n**Only click for another hint if you want to see the full solution!**",
       "courseF_bee_functions_challenge2_b": "**Solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar",
-      "move and check": "move and check",
-      "check nectar or honey": "check nectar or honey"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      },
+      "move and check": {
+        "name": "move and check"
+      },
+      "check nectar or honey": {
+        "name": "check nectar or honey"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/2": {
@@ -2102,28 +2222,49 @@
     "callouts": {
       "courseF_artist_fwp1_1": "Click the \"edit\" button to change the code inside the function."
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "checker": "checker",
-      "do something": "do something",
-      "Make gingham": "Make gingham",
-      "black outline": "black outline"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "checker": {
+        "name": "checker",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "Make gingham": {
+        "name": "Make gingham",
+        "parameters": {
+          "size": "size"
+        }
+      },
+      "black outline": {
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/4": {
     "short_instructions": "Edit the function to accept a parameter called `length`.",
     "long_instructions": "Edit the function to accept a parameter called `length`.  \n\nThe sides of each square should be 25 pixels larger than the last.  The first square has 25 pixel sides. Replace the '???' with the correct values to draw the picture.",
-    "function_names": {
-      "draw a square": "draw a square"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square",
+        "description": "draw a square with a length parameter",
+        "parameters": {
+          "length": "length"
+        }
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you run this program?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will use the same function to draw two different sized boxes.",
@@ -2146,7 +2287,12 @@
               "feedback": "The program uses parameters to allow a single function to create two different size boxes."
             }
           ],
-          "markdown": "We have added parameters to the 'draw a square' function.  Click the blue \"edit\" button to see the entire function definition.\n\n\n"
+          "markdown": "We have added parameters to the 'draw a square' function.  Click the blue \"edit\" button to see the entire function definition.\n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you run this program?"
+            }
+          ]
         }
       }
     ]
@@ -2158,12 +2304,36 @@
       "courseF_artist_fwp2_a": "You need to click the \"edit\" button to get into the function.  Once you're there, add a parameter called `length` and use it inside your `move forward` block!",
       "courseF_artist_fwp2_b": "When calling your function, use a `for loop` for the best possible code!"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "checker": "checker",
-      "do something": "do something",
-      "Make gingham": "Make gingham",
-      "black outline": "black outline"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square",
+        "description": "draw a square with length parameter\n",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "checker": {
+        "name": "checker",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "Make gingham": {
+        "name": "Make gingham",
+        "parameters": {
+          "size": "size"
+        }
+      },
+      "black outline": {
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/7": {
@@ -2173,11 +2343,32 @@
       "courseF_artist_fwp3_a": "This gets easier if you put it all in a `for` loop.",
       "courseF_artist_fwp3_b": "Be sure to turn 90 degrees between each square!\n\n[][0]"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw a square2": "draw a square2",
-      "filled square": "filled square",
-      "black outline": "black outline"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a square2": {
+        "name": "draw a square2",
+        "parameters": {
+          "size": "size"
+        }
+      },
+      "filled square": {
+        "name": "filled square",
+        "parameters": {
+          "size": "size",
+          "color": "color"
+        }
+      },
+      "black outline": {
+        "name": "black outline",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/8": {
@@ -2190,8 +2381,15 @@
     "callouts": {
       "courseF_artist_fwp4_1": "To complete your polygon, make sure you are always turning by 360 ÷ `sides` degrees."
     },
-    "function_names": {
-      "draw a polygon": "draw a polygon"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "description": "draw a polygon with sides and length paramater",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/9": {
@@ -2206,8 +2404,14 @@
     "callouts": {
       "courseF_artist_fwp5_1": "You will find the polygon function in here."
     },
-    "function_names": {
-      "draw a polygon": "draw a polygon"
+    "function_definitions": {
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/10": {
@@ -2217,8 +2421,14 @@
       "courseF_artist_fwp6_a": "It's okay to run the program a few times to figure out how the function works with different parameters.",
       "courseF_artist_fwp6_b": "You don't need to add any `move` or `turn` blocks to finish this code."
     },
-    "function_names": {
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/11": {
@@ -2228,8 +2438,15 @@
       "courseF_artist_fwp7_a": "Feeling lost after trying a couple of ideas? Try clicking the \"Start over\" button in the upper right-hand corner.",
       "courseF_artist_fwp7_b": "Your new `min` variable should go in the first slot in your `for` loop, inside the function."
     },
-    "function_names": {
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/12": {
@@ -2239,8 +2456,15 @@
       "courseF_artist_fwp8_a": "If your function is correct, you shouldn't need to change it for this puzzle.",
       "courseF_artist_fwp8_b": "The only thing you should need to do between function calls is change the color of the line."
     },
-    "function_names": {
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/puzzle/13": {
@@ -2249,15 +2473,63 @@
     "authored_hints": {
       "courseF_artist_fwp9_a": "Try one of these drawings.\n[][0]"
     },
-    "function_names": {
-      "draw a star": "draw a star",
-      "draw a circle": "draw a circle",
-      "draw a pinwheel": "draw a pinwheel",
-      "draw a triangle": "draw a triangle",
-      "draw a shape": "draw a shape",
-      "draw a house": "draw a house",
-      "draw a square": "draw a square",
-      "draw a spiral edge": "draw a spiral edge"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star",
+        "description": "draw a star with given points and sides of given length",
+        "parameters": {
+          "points": "points",
+          "length": "length"
+        }
+      },
+      "draw a circle": {
+        "name": "draw a circle",
+        "description": "draw a circle of given radius",
+        "parameters": {
+          "radius": "radius"
+        }
+      },
+      "draw a pinwheel": {
+        "name": "draw a pinwheel",
+        "parameters": {
+          "sides": "sides",
+          "length": "length",
+          "repeat": "repeat"
+        }
+      },
+      "draw a triangle": {
+        "name": "draw a triangle",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a shape": {
+        "name": "draw a shape",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      },
+      "draw a house": {
+        "name": "draw a house",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a square": {
+        "name": "draw a square",
+        "parameters": {
+          "length": "length"
+        }
+      },
+      "draw a spiral edge": {
+        "name": "draw a spiral edge",
+        "parameters": {
+          "length": "length",
+          "sides": "sides",
+          "min": "min"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/extras?level_name=courseF_artist_fwp_challenge1": {
@@ -2267,11 +2539,26 @@
       "courseF_artist_fwp_challenge1_b": "This is a series of polygons with sides that are counter pixels long.",
       "courseF_artist_fwp_challenge1_c": "Each polygon is called from inside a for loop that goes from 3 down to 6 by an increment of 1. What shapes is it making?"
     },
-    "function_names": {
-      "draw background": "draw background",
-      "draw a polygon": "draw a polygon",
-      "draw a square 20": "draw a square 20",
-      "do something": "do something"
+    "function_definitions": {
+      "draw background": {
+        "name": "draw background",
+        "parameters": {
+          "color": "color"
+        }
+      },
+      "draw a polygon": {
+        "name": "draw a polygon",
+        "parameters": {
+          "sides": "sides"
+        }
+      },
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/29/extras?level_name=courseF_artist_fwp_challenge2": {
@@ -2285,10 +2572,20 @@
       "courseF_artist_fwp_challenge1_e": "Both the color of each octagon and the width of the pen are controlled by the `counter` variable.",
       "courseF_artist_fwp_challenge1_f": "**Solution:**\n\n[Solution Blocks][0]"
     },
-    "function_names": {
-      "draw a square 20": "draw a square 20",
-      "do something": "do something",
-      "draw an octagon": "draw an octagon"
+    "function_definitions": {
+      "draw a square 20": {
+        "name": "draw a square 20",
+        "description": "draw a square of size 20 pixels"
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "draw an octagon": {
+        "name": "draw an octagon",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/puzzle/1": {
@@ -2311,8 +2608,10 @@
     "callouts": {
       "courseF_bee_fwp2_a": "The block that calls your function lives in here."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/puzzle/3": {
@@ -2326,8 +2625,10 @@
     "callouts": {
       "courseF_bee_fwp3_1": "This same function can be used when checking for empty spaces as well as clouds."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar"
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/puzzle/4": {
@@ -2340,8 +2641,13 @@
     "callouts": {
       "courseF_bee_fwp4_1": "Press the \"edit\" button to add a parameter to this function."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/puzzle/5": {
@@ -2351,8 +2657,13 @@
       "courseF_bee_fwp5_a": "Count the number of spaces you need to check in each stretch and use those numbers as your parameters to the function call.",
       "courseF_bee_fwp5_a_b": "Remember to turn between each function call."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar",
+        "parameters": {
+          "width": "width"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/puzzle/6": {
@@ -2362,8 +2673,13 @@
       "courseF_bee_fwp6_a": "Which block automatically increments a variable that you could use as a parameter?",
       "courseF_bee_fwp6_b": "Try using a `for` loop to solve this puzzle."
     },
-    "function_names": {
-      "rowOfNectar": "rowOfNectar"
+    "function_definitions": {
+      "rowOfNectar": {
+        "name": "rowOfNectar",
+        "parameters": {
+          "width": "width"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/puzzle/7": {
@@ -2373,8 +2689,13 @@
       "courseF_bee_fwp7_a": "You don't need a second parameter for this function, only a second `if` statement.",
       "courseF_bee_fwp7_b": "Add an `if` statement in your function so the bee checks for both honeycombs and flowers."
     },
-    "function_names": {
-      "rowOfNectarOrHoney": "rowOfNectarOrHoney"
+    "function_definitions": {
+      "rowOfNectarOrHoney": {
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/puzzle/8": {
@@ -2383,23 +2704,28 @@
       "courseF_bee_fwp8_a": "How could a `for` loop help in this puzzle?",
       "courseF_bee_fwp8_b": "Since the spiral gets smaller as you go in, your `for` loop should count down."
     },
-    "function_names": {
-      "rowOfNectarOrHoney": "rowOfNectarOrHoney"
+    "function_definitions": {
+      "rowOfNectarOrHoney": {
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/puzzle/9": {
     "short_instructions": "Use your new function to solve this puzzle.",
-    "function_names": {
-      "rowOfNectarOrHoney": "rowOfNectarOrHoney"
+    "function_definitions": {
+      "rowOfNectarOrHoney": {
+        "name": "rowOfNectarOrHoney",
+        "parameters": {
+          "width": "width"
+        }
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will not collect any nectar or honey.",
@@ -2422,7 +2748,12 @@
               "feedback": "Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter."
             }
           ],
-          "markdown": "Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue \"edit\" button on the function to see what is inside before answering the question below.\n\n\n"
+          "markdown": "Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue \"edit\" button on the function to see what is inside before answering the question below.\n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -2439,8 +2770,13 @@
       "courseF_bee_fwp_challenge1_d2": "After the `for loop` you can just `move backward` **length times**.",
       "courseF_bee_fwp_challenge1_e": "**Here is the solution:**\n\n[blockly block][0]"
     },
-    "function_names": {
-      "pick row": "pick row"
+    "function_definitions": {
+      "pick row": {
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/30/extras?level_name=courseF_bee_fwp_challenge2": {
@@ -2455,8 +2791,13 @@
     "callouts": {
       "courseF_bee_fwp_challenge2_callout1": "This function will do a good job with corn, but what about the other vegetables?"
     },
-    "function_names": {
-      "pick row": "pick row"
+    "function_definitions": {
+      "pick row": {
+        "name": "pick row",
+        "parameters": {
+          "length": "length"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/31/puzzle/1": {
@@ -2468,43 +2809,102 @@
     "callouts": {
       "InspirationalArtwork_1": "Try using the new `comment` block under this label to leave yourself notes inside your program!"
     },
-    "function_names": {
-      "n-sided shape": "n-sided shape",
-      "draw a loop": "draw a loop",
-      "draw spiral circle": "draw spiral circle"
+    "function_definitions": {
+      "n-sided shape": {
+        "name": "n-sided shape",
+        "description": "The shape changes based on how many sides it currently has.  It takes two parameters, length and sides. Length ",
+        "parameters": {
+          "sides": "sides",
+          "length": "length"
+        }
+      },
+      "draw a loop": {
+        "name": "draw a loop",
+        "parameters": {
+          "length": "length",
+          "sides": "sides"
+        }
+      },
+      "draw spiral circle": {
+        "name": "draw spiral circle",
+        "parameters": {
+          "size": "size"
+        }
+      }
     }
   },
   "https://studio.code.org/s/express-2017/stage/31/puzzle/3": {
     "short_instructions": "This is an example of a game you can make in play lab.",
-    "function_names": {
-      "level_up": "level_up",
-      "score_points": "score_points"
+    "function_definitions": {
+      "level_up": {
+        "name": "level_up",
+        "description": "Increase \"level\" by 1, reset points to 0, increase enemy speed, and choose a random background."
+      },
+      "score_points": {
+        "name": "score_points",
+        "description": "Adds the given number of points to the player_score variable.",
+        "parameters": {
+          "points": "points"
+        }
+      }
+    },
+    "placeholder_texts": {
+      "62f1b3a41b5eef66a4b2382bb2ab24f4": "Score ",
+      "cc2ecba4e56986752892c0e68c8e32e0": "Level "
     }
   },
   "https://studio.code.org/s/express-2017/stage/31/puzzle/4": {
     "short_instructions": "Build whatever you want. This is an example of a number-guessing game!",
-    "function_names": {
-      "check guess": "check guess"
+    "function_definitions": {
+      "check guess": {
+        "name": "check guess",
+        "parameters": {
+          "theGuess": "theGuess"
+        }
+      }
+    },
+    "placeholder_texts": {
+      "015c8ae47c8964d793ddc123b7ba6b81": "No one alive is that young.",
+      "56582da5c99c1bb46ab5dcda003f8c27": "Too young.",
+      "781b7711244d030e4ed6e1bfa883364e": "I'm not even 20 yet!",
+      "01bab55de9d3319f27c5213b4661c79f": "Not that old!",
+      "5c95950acb6c51d88cc8869eb31f2bdf": "You got it!",
+      "214e809e9d24f40cc42fa2f04f59a1cf": "Guess how old I am before I gobble up this penguin!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/31/puzzle/5": {
     "short_instructions": "You can do whatever you want in play lab! Here's an example of choose your own adventure story in play lab.",
-    "function_names": {
-      "witch ending": "witch ending",
-      "story": "story",
-      "starting path": "starting path"
+    "function_definitions": {
+      "witch ending": {
+        "name": "witch ending"
+      },
+      "story": {
+        "name": "story"
+      },
+      "starting path": {
+        "name": "starting path"
+      }
+    },
+    "placeholder_texts": {
+      "fe724bc07d1e8b57e53ebfd03c0ec4f5": "Ah, no worries! I'm sure I can find it.",
+      "9360086c2f9d62ba563c6fcbfbd9b402": "I'll be off to find it now! Goodbye!",
+      "6d411b45e39818da535ba9f8a2cf58e2": "It turned me into a witch!",
+      "73af7ec7b0065fb5eb15d6c0ca695ed3": "I should really find the owner of this wand!",
+      "c332bf82ea63d21d1d1b701a07ab9afd": "Thank you for your help, but now I must get going",
+      "ba57bb6df12b81e80f79eef5b1ca8fc7": "Hey, I found a wand!",
+      "c7323ea29d98d5cad8e0828f3f52ef0c": "Oh no! It's a witches wand! ",
+      "2cef5d66c57efe3994c85f4e1f312849": "Ah-ha! I’ve found two wands! For your help, take the second one!\t",
+      "24a124016e7eec7a8fef5bc228541533": "Ah, no worries! I’m sure I can find it"
     }
   },
   "https://studio.code.org/s/express-2017/stage/32/puzzle/1": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "# The Design Process\nDesigning software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.\n\nThis process is useful for all kinds of things, but we are going to focus on using it for app design.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\" alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n* **Define**\n  * What kind of app would you like to create?\n  * What are your constraints?\n  * What does success look like?\n* **Prepare**\n  * Brainstorm / research possible elements\n  * Compare pros and cons\n  * Make a plan\n* **Try**\n  * Put your plan into action\n* **Reflect**\n  * How do your results compare to the goals you set while defining the app?\n  * What can you learn from this or do better next time?\n  * What new problems have you discovered?\n\n# What it Looks Like\nOver the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  \n\nHere is what the coming weeks will hold as we learn more about the design process:\n\n1. **Define & Prepare**\n   * Play existing games to get ideas and understand limitations\n   * Brainstorm and plan your new or modified app\n1. **Try**\n   * Follow your plan to build an app\n1. **Reflect & Edit**\n   * Swap apps with another group to help make your projects better\n1. **Present**\n   * Show off your final product!\n"
     }
   },
   "https://studio.code.org/s/express-2017/stage/35/puzzle/1": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }

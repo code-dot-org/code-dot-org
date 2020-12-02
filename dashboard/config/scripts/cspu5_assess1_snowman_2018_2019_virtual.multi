@@ -1,0 +1,27 @@
+name 'cspu5_assess1_snowman_2018_2019_virtual'
+wrong 'https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png'
+wrong 'https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png'
+right 'https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png'
+wrong 'https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png'
+wrong 'https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png'
+
+markdown <<MARKDOWN
+A student decides to draw a series of three dots (sort of like a snowman) as shown in the diagram.  She wants each dot to be half the radius of the previous dot, and for the center to be on the edge of the dot below it.  She writes the following code segment to do it:  
+
+![](https://images.code.org/16c96afc2286ae96b1a3c25d4a129e7b-image-1475972395807.png)
+
+![](https://images.code.org/e9be34a1c379275dfd4b0061f0a44536-image-1518821067902.25.45 AM.png)
+
+She is not sure about the size though, and wants to be able to quickly experiment with the drawing by changing only one number - the radius of the bottom dot - and for the rest of the code to size and scale the drawing accordingly. How should she adjust lines 2 and 3 of her code to implement this change?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4** -- requires application of variable assignment via math expression + transfer of turtle drawing.
+
+Since the student wants each dot to be half the radius of the previous dot, this means the next dot's radius is multiplied by one half of the dot below it. Therefore, "middle" will be one half of the bottom dot and the "top" will be one half of the middle dot. In other words,
+
+* var middle = bottom/2;
+* var top = middle/2;
+
+The main concept of this problem is that the student only wants to change the radius of the bottom dot, and since the next dot is half of the previous, the variables "middle" and "top" can be changed accordingly.
+MARKDOWN

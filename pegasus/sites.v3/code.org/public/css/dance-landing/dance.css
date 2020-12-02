@@ -19,7 +19,7 @@
 }
 
 .dance-try-button {
-  font-size: 18px;
+  font-size: 15px;
   height: 40px;
   background-color: white;
   border-color: white;
@@ -67,6 +67,11 @@ a.translate-link:hover {
   text-align: right;
 }
 
+.dance-text-versions-container {
+  margin-top: 10px;
+  text-align: right;
+}
+
 .dance-chevron-icon {
   display: inline;
   color: rgb(0, 173, 188);
@@ -93,9 +98,8 @@ a:hover {
 
 .sponsor-logo-with-text {
   display: flex;
-  justify-content: center;
   font-size: 24px;
-  margin-top: 60px;
+  margin-top: 10px;
   clear: both;
   padding-top: 30px;
   text-align: center;
@@ -161,6 +165,12 @@ a:hover {
   }
 
   .dance-text-icon-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 5px;
+  }
+
+  .dance-text-versions-container {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-right: 5px;
@@ -267,6 +277,11 @@ a:hover {
 }
 
 .new-announcement .highlight-word {
+  color: rgb(89, 202, 211);
+}
+
+.highlight-strong strong  {
+  font-family: 'Gotham 5r', sans-serif;
   color: rgb(89, 202, 211);
 }
 

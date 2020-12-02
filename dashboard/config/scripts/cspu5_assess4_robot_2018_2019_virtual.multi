@@ -1,0 +1,45 @@
+name 'cspu5_assess4_robot_2018_2019_virtual'
+wrong 'https://images.code.org/493d0f3a90cad524285c24bb8723e860-image-1477859439220.png'
+right 'https://images.code.org/0b6408f61606bf7d48c677b12bbcba9e-image-1477859497782.png'
+wrong 'https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png'
+wrong 'https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png'
+wrong 'https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png'
+
+
+markdown <<MARKDOWN
+A robot starts in a grid facing north (B3).  What is the robot’s location and direction after the following program is executed?
+
+    data = ["F", "F", "R", "F", "L", "F", "R", "R", "F"]
+    FOR EACH move IN data
+    {
+        IF ( move = "F" AND CAN_MOVE(forward) )
+        {
+            MOVE_FORWARD()
+        }
+        ELSE IF (move = "R"){
+          rotate_right()
+        } 
+        ELSE IF ( move = "L") {
+            rotate_left()
+        }
+    }
+
+
+
+![](https://images.code.org/62576d0a385796a6863c4f07c4f0d962-image-1477859605917.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Starting off with the robot at B3 and that data = ["F", "F", "R", "F", "L", "F", "R", "R", "F"], let's go through each index of the data:
+
+* "F" - the robot can move forward and is at B2
+* "F" - the robot can move forward and is at B1
+* "R" - the robot turns right and is facing east
+* "F" - the robot can move forward and is at C1
+* "L" - the robot turns left and is facing north
+* "F" - the robot cannot move forward, nothing happens
+* "R" - the robot turns right and is facing east
+* "R" - the robot turns right and is facing south
+* "F" - the robot can move forward and ends up at C2
+
+MARKDOWN

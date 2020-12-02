@@ -14,38 +14,48 @@ class CurriculumTrackingPixelController < ApplicationController
       # For ease of querying we attempt to parse the url into meaningful chunks.
       # EXAMPLE:
       # /csf-18/pre-express/11/
-      split_url = curriculum_page.split('/')
-      # ["", "csf-18", "pre-express", "11"]
+      # /es-mx/csf-1718/coursec/10/'
+      split_url = curriculum_page.split('/').reject(&:empty?)
+      # ["csf-18", "pre-express", "11"]
+      # ["es-mx", "csf-1718", "coursec", "10"]
 
-      if split_url.length > 1
+      non_en = split_url[0]&.length == 5 && !!split_url[0].match(/\S{2}-\S{2}/)
+
+      locale = non_en ? split_url.shift : "en-us"
+
+      unless split_url.empty?
         # csf, csd, csp including version year, algebra or hoc
-        csx = split_url[1]
+        csx = split_url[0]
       end
 
-      if split_url.length > 2
+      if split_url.length > 1
         # csf -> coursea, courseb, ..., pre-express, express
         # csd/csp -> unit1, unit2, ...
         # algebra -> courseA, courseB
         # hoc -> plugged, unplugged
-        course_or_unit = split_url[2]
+        course_or_unit = split_url[1]
       end
 
-      if split_url.length > 3
+      if split_url.length > 2
         # lesson number, standards, vocab, resources
-        lesson = split_url[3]
+        lesson = split_url[2]
       end
 
       FirehoseClient.instance.put_record(
-        study: STUDY_NAME,
-        study_group: 'v1',
-        event: EVENT_NAME,
-        user_id: user_id,
-        data_string: curriculum_page,
-        data_json: {
-          csx: csx,
-          course_or_unit: course_or_unit,
-          lesson: lesson
-        }.to_json
+        :analysis,
+        {
+          study: STUDY_NAME,
+          study_group: 'v1',
+          event: EVENT_NAME,
+          user_id: user_id,
+          data_string: curriculum_page,
+          data_json: {
+            locale: locale,
+            csx: csx,
+            course_or_unit: course_or_unit,
+            lesson: lesson
+          }.to_json
+        }
       )
     end
 

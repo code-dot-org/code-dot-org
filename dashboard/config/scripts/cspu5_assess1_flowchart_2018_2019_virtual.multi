@@ -1,0 +1,19 @@
+name 'cspu5_assess1_flowchart_2018_2019_virtual'
+wrong 'a is bigger'
+wrong 'b'
+wrong '5'
+right '10'
+wrong 'Nothing will be displayed'
+
+
+markdown <<MARKDOWN
+Consider the following flow chart showing a process for program execution.  Given that a = 5, and b = 10, what will be displayed by the program?
+
+![](https://images.code.org/41b0153a6075970cba4741d6a81e71e3-image-1475973004769.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8** -- condiitonals, if statments
+
+The statement is "a < b" and since a = 5, b = 10, and 5 is less than 10, then the statement is true. Following the arrow for a "true" statement, the computer is told to print the value of b. As the value of b is 10, the program will display "10."
+MARKDOWN

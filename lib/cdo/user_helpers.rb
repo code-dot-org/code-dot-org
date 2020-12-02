@@ -8,7 +8,7 @@ module UserHelpers
   USERNAME_MAX_LENGTH = 20
 
   def self.generate_username(queryable, name)
-    prefix = name.downcase.
+    prefix = name.split(' ').first.downcase.
       gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..USERNAME_MAX_LENGTH - 5].
       squish.
       tr(' ', '_')
@@ -62,7 +62,7 @@ SQL
 
   def self.random_donor
     weight = SecureRandom.random_number
-    PEGASUS_DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
+    PEGASUS_DB[:cdo_donors].all.find {|d| d[:weight_f] - weight >= 0}
   end
 
   def self.sponsor_message(user)
@@ -84,6 +84,7 @@ SQL
   # Return the highest age range for the given birthday, e.g.
   # 18+, 13+, 8+ or 4+
   def self.age_range_from_birthday(birthday)
+    return "unknown" unless birthday
     age = age_from_birthday(birthday)
     age_cutoff = AGE_CUTOFFS.find {|cutoff| cutoff <= age}
     age_cutoff ? "#{age_cutoff}+" : nil

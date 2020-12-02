@@ -1,6 +1,6 @@
-login_required 'true'
+login_required true
 
-stage 'While Loops'
+lesson 'While Loops', display_name: 'While Loops'
 level 'U3L28 Student Lesson Introduction'
 level 'U3 - Loops - 1'
 level 'U3 - Loops - 2'
@@ -24,7 +24,7 @@ level 'U3 - Loops - 14'
 level 'U3 - Loops - 15'
 level 'U3L28 Free Response Wrap Up', assessment: true
 
-stage 'Loops and Simulations'
+lesson 'Loops and Simulations', display_name: 'Loops and Simulations'
 level 'U3L29 Student Lesson Introduction'
 level 'U3 - Simulation - Intro'
 level 'U3 - Simulation - 1'
@@ -38,7 +38,7 @@ level 'U3 - Simulation - 5'
 level 'U3 Simulations Hypotheses Reflections'
 level 'U3 - Simulation - 6'
 
-stage 'Introduction to Arrays'
+lesson 'Introduction to Arrays', display_name: 'Introduction to Arrays'
 level 'U3L30 Student Lesson Introduction'
 level 'U3 - Arrays - createFirstArray'
 level 'U3 - Arrays - appendItem'
@@ -67,7 +67,7 @@ level 'U3 - Arrays - favThings keepPlaying'
 level 'U3 - Arrays - Wrap Up 1'
 level 'U3 - Arrays - Wrap Up 2'
 
-stage 'Image Scroller with Key Events'
+lesson 'Image Scroller with Key Events', display_name: 'Image Scroller with Key Events'
 level 'U3L31 Student Lesson Introduction'
 level 'U3 - Keys - Demo App'
 level 'U3L25 - drag out key event'
@@ -80,7 +80,7 @@ level 'U3 - Keys - Add Image URLs'
 level 'U3 - Keys - Final Image Scroller'
 level 'U3- Keys - Code Refactoring Exit Ticket', assessment: true
 
-stage 'Processing Arrays'
+lesson 'Processing Arrays', display_name: 'Processing Arrays'
 level 'U3L32 Student Lesson Introduction'
 level 'U3 - Loops And Arrays - Intro For Loop'
 level 'U3 - Loops And Arrays - Print Array'
@@ -96,7 +96,7 @@ level 'U3 - Loops And Arrays - Make it a Function - add list parameter'
 level 'U3 - Loops And Arrays - General Search Param'
 level 'U3 - Loops And Arrays - Find Min'
 
-stage 'Functions with Return Values'
+lesson 'Functions with Return Values', display_name: 'Functions with Return Values'
 level 'U3L27 Student Lesson Introduction'
 level 'U3 - Arrays and Loops - Explain Functions with Returns'
 level 'U3 - Return Values - useMinVal'
@@ -106,7 +106,7 @@ level 'U3 - Return Values - debuggingConstrain'
 level 'U3 - Return Values - constrainTurtle'
 level 'U3 - Return Values - wrapTurtle'
 
-stage 'Canvas and Arrays in Apps'
+lesson 'Canvas and Arrays in Apps', display_name: 'Canvas and Arrays in Apps'
 level 'U3L33 Student Lesson Introduction'
 level 'U3 - Canvas - introCanvas'
 level 'U3 - Canvas - 200dots'
@@ -127,6 +127,7 @@ level 'U3 - Canvas - sprayPaint'
 level 'U3 - Canvas - sketch'
 level 'U3L33 Free Response Getting Started', assessment: true
 
-stage 'Practice PT: Create'
+lesson 'Practice PT: Create', display_name: 'Practice PT: Create'
 level 'U3L34 Student Lesson Introduction'
 level 'U3 - Practice Create Performance Task'
+

@@ -1,0 +1,10 @@
+name 'coursee_prediction_artistfunction2_2018_2019_2020'
+question 'What will happen when you press the "Run" button?'
+wrong 'The artist will solve the puzzle correctly.', feedback: 'Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".'
+right 'The artist will draw four squares in a window pattern.', feedback: 'Correct!'
+wrong 'The artist will draw only one line of squares.', feedback: 'Incorrect. The program does not call "draw line of polygons".'
+wrong 'The artist will draw four squares on top of one another.', feedback: 'Incorrect. The loop turns 90 degrees between calls to "draw polygon".'
+
+markdown <<MARKDOWN
+
+MARKDOWN

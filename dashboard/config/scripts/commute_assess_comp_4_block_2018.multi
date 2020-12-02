@@ -1,13 +1,13 @@
 name 'Commute Assess - comp 4 - block_2018'
-right 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
-wrong 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
-wrong 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
-wrong 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
-wrong 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+right 'displays `true` if the number 100 is in the list'
+wrong 'displays `true` if the first number in the list is 100'
+wrong 'displays `true` if the last number in the list is 100'
+wrong 'displays `true` if there are 100 numbers in the list'
+wrong 'displays `true` or `false` 100 times'
 
 
 markdown <<MARKDOWN
-For the following problem, assume <span style="font-family: monospace">list</span> is a variable that contains a list of random integers. What does this program do?
+For the following problem, assume `list` is a variable that contains a list of random integers. What does this program do?
 
 ![](https://images.code.org/f71c5157d0a49a81a0a40fbcc991fd66-image-1483468129007.png)
 MARKDOWN

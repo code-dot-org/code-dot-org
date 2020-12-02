@@ -65,7 +65,11 @@ describe('ConfirmRemoveStudentDialog', () => {
           <div>
             <SafeMarkdown markdown={i18n.removeStudentBody1()} />
             <p>
-              <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+              <a
+                href={RELEASE_OR_DELETE_RECORDS_EXPLANATION}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {i18n.learnMore()}
               </a>
             </p>
@@ -99,15 +103,21 @@ describe('ConfirmRemoveStudentDialog', () => {
           <div>
             <SafeMarkdown markdown={i18n.removeStudentBody1()} />
             <p>
-              <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+              <a
+                href={RELEASE_OR_DELETE_RECORDS_EXPLANATION}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {i18n.learnMore()}
               </a>
             </p>
             <div>
               <p>{i18n.removeStudentBody2()}</p>
               <Button
+                __useDeprecatedTag
                 text={i18n.removeStudentSendHomeInstructions()}
                 target="_blank"
+                rel="noopener noreferrer"
                 href={ADD_A_PERSONAL_LOGIN_HELP_URL}
                 color={Button.ButtonColor.blue}
                 size={Button.ButtonSize.large}

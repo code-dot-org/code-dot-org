@@ -1,7 +1,9 @@
 {
+  "https://studio.code.org/s/coursee-2018/stage/1/puzzle/1": {
+    "title": "My Robotic Friends"
+  },
   "https://studio.code.org/s/coursee-2018/stage/2/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### Have you ever wanted to tell someone exactly what to do? Do they always listen to you?\n\n### Today, you'll be telling a machine what to do, step by step- and it will listen!\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
     }
@@ -101,14 +103,15 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/2/puzzle/13": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"algorithms\"!**  \n\n\n\n### **An algorithm is just a list of steps to finish a task**. The fun thing about algorithms is that you get to decide what happens, step by step.  \n\n### When you write an algorithm for a machine, this is called a **program**.  \n\n---\n\n## **Vocab to Know**\n\n* ### **Algorithm** - A list of steps to finish a task\n\n* ### **Program** - An algorithm that has been coded into something that can be run by a machine\n"
     }
   },
+  "https://studio.code.org/s/coursee-2018/stage/3/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title"
+  },
   "https://studio.code.org/s/coursee-2018/stage/4/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# In this lesson...\n\n### What do you think of when you think about bugs? \n\n### When most people think about bugs, they think about creepy crawly things. In computer science, bugs aren't alive, but they can still be tricky.\n\n### The puzzles in this lesson have already been solved for you! But not so fast- they don't seem to be working yet. Are bugs behind all this? \n\n---\n\n## Blocks to Know\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
     }
@@ -174,11 +177,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -200,6 +198,11 @@
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
             }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
+            }
           ]
         }
       }
@@ -210,7 +213,6 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/4/puzzle/12": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"debugging\"!**\n\n### **A bug is something that goes wrong.** It is an error in a program. When you find and fix those errors, you are **debugging** a problem.\n\n### You have to practice **persistence**, another word for not giving up, in order to find and fix all the bugs.\n\n---\n\n## **Vocab to Know**\n\n* ### **Bug** - Part of a program that does not work correctly\n\n* ### **Debugging** - Finding and fixing problems in an algorithm or program\n\n* ### **Persistence** - Not giving up\n"
     }
@@ -234,9 +236,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/5/puzzle/5": {
@@ -247,8 +256,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/5/puzzle/6": {
@@ -289,11 +300,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with three equal sides.",
@@ -315,6 +321,11 @@
               "correct": false,
               "feedback": "The artist draws a square."
             }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen when you click \"Run\"?"
+            }
           ]
         }
       }
@@ -335,9 +346,11 @@
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
   },
+  "https://studio.code.org/s/coursee-2018/stage/6/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title"
+  },
   "https://studio.code.org/s/coursee-2018/stage/7/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# In this lesson...\n\n### Imagine you want your character to move forward **5** times. This would be pretty easy- just drag out **5** move forward blocks. Now, imagine you want your character to move forward **5,000** times! \n\n### How long would it take you to drag out **5,000** blocks? \n\n### Wish there was an easy way to do this? There is!\n\n---\n\n## Blocks to Know\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
     }
@@ -380,7 +393,6 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/7/puzzle/13": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"loops\"!**  \n\n### **A loop is the action of doing something over and over again.** Another word for doing something again is repeat.\n\n### Loops are really useful for repeating patterns. It might be helpful to write out your program without any loops first, then try to find a pattern. \n\n### When you see one, stick that pattern into a `repeat` block!\n\n---\n\n## **Vocab to Know**\n\n* ### **Loop** - The action of doing something over and over again\n\n* ### **Repeat** - Do something again\n"
     }
@@ -404,7 +416,6 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/8/puzzle/3": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### Have you ever wondered what would happen if you put a loop *inside another loop*? \n\n### It might just make you go loopy!\n\n### If a normal loop is good at repeating patterns, what do you think a loop inside another loop would be good at? Let's find out!\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
     }
@@ -415,11 +426,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -440,6 +446,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -512,11 +523,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -538,6 +544,11 @@
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
             }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
+            }
           ]
         }
       }
@@ -545,7 +556,6 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/8/puzzle/15": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"nested loops\"!**\n\n### **A nested loop is a loop within a loop.** Think of it like an outer loop, with another loop that got all comfy and cozy and nested inside the outer loop. \n\n### Nested loops are great for repeating patterns of patterns. They can be very powerful if used correctly!\n\n---\n\n## **Vocab to Know**\n\n### __Nested Loops__ - A loop within a loop\n\n"
     }
@@ -618,9 +628,11 @@
       "courseD_artist_project4a_a": "Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
     }
   },
+  "https://studio.code.org/s/coursee-2018/stage/10/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/coursee-2018/stage/11/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### **Conditions** are things that can be true or false. \n\n### You will learn how to use conditions in a program to make things happen `while`, `until`, or `if` something is true!\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
     }
@@ -631,11 +643,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing will happen.",
@@ -656,6 +663,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The farmer will remove dirt as long as there is a pile, then stop when the pile is gone"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -725,10 +737,15 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/11/puzzle/15": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"conditionals\"!**\n\n### Conditionals are super useful in computer science. Imagine logging in to your favorite website and typing in your password. The website has to use conditionals to check *if* the password you entered matches the password it has saved for your username. \n\n### `If` it matches, log in! \n\n### `Else`, give the user an error.  \n\n---\n\n## **Vocab to Know**\n\n* ### **Condition** - Something a program checks before allowing an action\n\n* ### **Conditionals** - Statements that only run under certain conditions\n\n"
     }
+  },
+  "https://studio.code.org/s/coursee-2018/stage/12/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title"
+  },
+  "https://studio.code.org/s/coursee-2018/stage/14/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.SongwritingParameters_2018.title"
   },
   "https://studio.code.org/s/coursee-2018/stage/15/puzzle/1": {
     "display_name": "Homestead",
@@ -816,8 +833,10 @@
     "callouts": {
       "Function_intro_Ryan_1": "This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace."
     },
-    "function_names": {
-      "build bridge": "build bridge"
+    "function_definitions": {
+      "build bridge": {
+        "name": "build bridge"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/15/puzzle/9": {
@@ -829,8 +848,10 @@
       "MC_HOC_2017_07_Cole_a": "To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.",
       "MC_HOC_2017_07_Cole_b": "Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle."
     },
-    "function_names": {
-      "clear path": "clear path"
+    "function_definitions": {
+      "clear path": {
+        "name": "clear path"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/15/puzzle/10": {
@@ -841,9 +862,13 @@
       "MC_HOC_2017_10_Cole_b": "Don't know where to go?  See if you can find the dotted line!",
       "MC_HOC_2017_10_Cole_a": "Use functions to make solving this puzzle easier!"
     },
-    "function_names": {
-      "fix long path": "fix long path",
-      "fix short path": "fix short path"
+    "function_definitions": {
+      "fix long path": {
+        "name": "fix long path"
+      },
+      "fix short path": {
+        "name": "fix short path"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/15/puzzle/11": {
@@ -858,9 +883,13 @@
     "callouts": {
       "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but Steve and Alex can't!  "
     },
-    "function_names": {
-      "build short bridge": "build short bridge",
-      "build long bridge": "build long bridge"
+    "function_definitions": {
+      "build short bridge": {
+        "name": "build short bridge"
+      },
+      "build long bridge": {
+        "name": "build long bridge"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/15/puzzle/12": {
@@ -870,9 +899,13 @@
     "authored_hints": {
       "MC_HOC_2017_13_Cole_a": "Try having the Agent build some minecart tracks so you can explore the world!"
     },
-    "function_names": {
-      "function 1": "function 1",
-      "function 2": "function 2"
+    "function_definitions": {
+      "function 1": {
+        "name": "function 1"
+      },
+      "function 2": {
+        "name": "function 2"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/2": {
@@ -896,8 +929,10 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "check square for corn": "check square for corn"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/4": {
@@ -911,8 +946,10 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "check square for corn": "check square for corn"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/5": {
@@ -921,17 +958,25 @@
     "authored_hints": {
       "courseE_farmer_functions2ba_a": "Use the green `get all pumpkins` block to make sure you get all of the pumpkins!"
     },
-    "function_names": {
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/6": {
     "short_instructions": "Try on a longer path.",
     "long_instructions": "Great!  Try your functions out on a longer path.",
-    "function_names": {
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/7": {
@@ -941,10 +986,16 @@
       "coursee_farmer_functions3c1_2018_a": "You'll need to use the `pick along path` function three times to solve this puzzle.",
       "coursee_farmer_functions3c1_2018_b": "What code do you need to add to get around the corners?"
     },
-    "function_names": {
-      "pick along path": "pick along path",
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/8": {
@@ -957,8 +1008,10 @@
       "courseE_farmer_functions7a1_2018_a": "Create your function under the `functions` section in the toolbox.",
       "courseE_farmer_functions7a1_2018_b": "Don't forget to use your function when you're done making it!"
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/10": {
@@ -968,8 +1021,10 @@
       "courseE_farmer_functions8a1_2018a": "Start this puzzle off by coding the same function you made in the last puzzle.",
       "courseE_farmer_functions8a1_2018b": "After the function runs the first time, you'll need to make one extra turn before you can run it again."
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/11": {
@@ -980,18 +1035,28 @@
       "courseE_farmer_functions9a1_2018b": "Use the same steps from the previous puzzle to solve the first half of this puzzle.",
       "courseE_farmer_functions9a1_2018c": "You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again."
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/12": {
     "short_instructions": "Use everything that you've learned so far to solve this puzzle!",
     "long_instructions": "**Challenge:** Use everything that you've learned so far to solve this puzzle in 19 blocks or less!",
-    "function_names": {
-      "pick along path": "pick along path",
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins",
-      "pumpkin square": "pumpkin square"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      },
+      "pumpkin square": {
+        "name": "pumpkin square"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/13": {
@@ -1000,30 +1065,43 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "pick along path": "pick along path",
-      "check for corn": "check for corn",
-      "corn rectangle": "corn rectangle",
-      "lettuce stairs": "lettuce stairs"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check for corn": {
+        "name": "check for corn"
+      },
+      "corn rectangle": {
+        "name": "corn rectangle"
+      },
+      "lettuce stairs": {
+        "name": "lettuce stairs"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/16/puzzle/14": {
     "long_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
-    "function_names": {
-      "pick along path": "pick along path",
-      "pumpkin square": "pumpkin square",
-      "check square for corn": "check square for corn",
-      "get produce": "get produce",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "pumpkin square": {
+        "name": "pumpkin square"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get produce": {
+        "name": "get produce"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at the functions defined below.  What will the harvester pick?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will pick two pumpkins.",
@@ -1045,25 +1123,32 @@
               "correct": false,
               "feedback": "Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce."
             }
+          ],
+          "questions": [
+            {
+              "text": "Look at the functions defined below. What will the harvester pick?"
+            }
           ]
         }
       }
     ]
   },
+  "https://studio.code.org/s/coursee-2018/stage/17/puzzle/1": {
+    "title": "Digital Sharing"
+  },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/1": {
     "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. The function is not called in the program.",
@@ -1085,6 +1170,11 @@
               "correct": true,
               "feedback": "Correct! The function is called two times in the program, with a jump in between."
             }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
+            }
           ]
         }
       }
@@ -1101,16 +1191,22 @@
     "callouts": {
       "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/3": {
     "short_instructions": "Build a function that will create this star.",
     "long_instructions": "Build a function that will create this star.\n\n* * *\n\n-   Each arm of the star is 25 pixels long\n-   You need to turn 45 degrees to get 8 arms\n-   It is okay to go forward and backward over the same arm",
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/4": {
@@ -1121,8 +1217,10 @@
       "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
       "courseD_artist_functions5_c": "Start by creating your `draw a star` function, then use this function to draw the three stars!"
     },
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/5": {
@@ -1132,9 +1230,13 @@
       "courseD_artist_functions7_a": "Try creating your function first then add windows one at a time.",
       "courseD_artist_functions7_b": "To get from the top windows to the bottom windows, simply turn the artist right, jump 150 pixels, then turn the artist right again!  Now the artist will be facing the correct direction to finish the rest of the house!"
     },
-    "function_names": {
-      "draw a window": "draw a window",
-      "draw a house": "draw a house"
+    "function_definitions": {
+      "draw a window": {
+        "name": "draw a window"
+      },
+      "draw a house": {
+        "name": "draw a house"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/6": {
@@ -1143,9 +1245,13 @@
     "callouts": {
       "courseD_artist_functions8_1": "Your blocks to create functions have been moved under this label in the toolbox."
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "do something": "do something"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/7": {
@@ -1156,10 +1262,16 @@
       "courseD_artist_functions8_a": "Start by making a function for a square, then try making a function for a line of squares.",
       "courseD_artist_functions8_d": "To make a line of squares,\n\n-   repeat 3 times\n    -   draw a square\n    -   jump forward **100 pixels**"
     },
-    "function_names": {
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square",
-      "do something": "do something"
+    "function_definitions": {
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/8": {
@@ -1170,11 +1282,19 @@
       "courseD_artist_functions8_a": "The second line of squares is just a 180 degree turn different than the first!",
       "courseD_artist_functions8_c": "At the end of each line of squares, the artist only needs to turn 180 degrees before drawing the next line of squares.  Put the whole thing in a repeat loop to set you up for the next exercise!"
     },
-    "function_names": {
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square",
-      "do something": "do something",
-      "staggered squares": "staggered squares"
+    "function_definitions": {
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/9": {
@@ -1187,11 +1307,19 @@
       "courseD_artist_functions8_c": "At the end of each set of staggered squares, the artist will need to jump down and backward before he draws the next set of staggered squares.",
       "courseD_artist_functions8_g": "[][0]"
     },
-    "function_names": {
-      "do something": "do something",
-      "staggered squares": "staggered squares",
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/10": {
@@ -1204,10 +1332,16 @@
       "courseD_artist_functions9_c": "To draw a line of triangles:\n\n-   repeat 4 times\n    -   draw a triangle\n    -   jump forward 50 pixels",
       "courseD_artist_functions9_d": "To draw the diamond:\n\n-   repeat 2 times\n    -   draw a line of triangles\n    -   turn 60 degrees\n    -   draw a line of triangles\n    -   turn 120 degrees"
     },
-    "function_names": {
-      "do something": "do something",
-      "draw triangle": "draw triangle",
-      "draw line of triangles": "draw line of triangles"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "draw triangle": {
+        "name": "draw triangle"
+      },
+      "draw line of triangles": {
+        "name": "draw line of triangles"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/11": {
@@ -1218,26 +1352,33 @@
       "courseD_artist_functions10_a": "To avoid using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.",
       "courseD_artist_functions10_c": "Do you see where this drawing could use a function called `line of hexagons`?\n\n[][0]"
     },
-    "function_names": {
-      "do something": "do something",
-      "draw hexagon": "draw hexagon",
-      "draw line of hexagons": "draw line of hexagons"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "draw hexagon": {
+        "name": "draw hexagon"
+      },
+      "draw line of hexagons": {
+        "name": "draw line of hexagons"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/12": {
-    "function_names": {
-      "draw line of polygons": "draw line of polygons",
-      "draw polygon": "draw polygon",
-      "do something": "do something"
+    "function_definitions": {
+      "draw line of polygons": {
+        "name": "draw line of polygons"
+      },
+      "draw polygon": {
+        "name": "draw polygon"
+      },
+      "do something": {
+        "name": "do something"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press the \"Run\" button?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will solve the puzzle correctly.",
@@ -1259,6 +1400,11 @@
               "correct": false,
               "feedback": "Incorrect. The loop turns 90 degrees between calls to \"draw polygon\"."
             }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press the \"Run\" button?"
+            }
           ]
         }
       }
@@ -1267,12 +1413,22 @@
   "https://studio.code.org/s/coursee-2018/stage/18/puzzle/13": {
     "short_instructions": "**Inspiration:** Use what you've learned to make whatever you want!",
     "long_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \n\nCan you make something like this pinwheel?",
-    "function_names": {
-      "draw hexagon": "draw hexagon",
-      "draw line of hexagons": "draw line of hexagons",
-      "staggered squares": "staggered squares",
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square"
+    "function_definitions": {
+      "draw hexagon": {
+        "name": "draw hexagon"
+      },
+      "draw line of hexagons": {
+        "name": "draw line of hexagons"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/extras?level_name=courseE_artist_functions_challenge1_2018": {
@@ -1286,9 +1442,13 @@
       "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/18/extras?level_name=courseE_artist_functions_challenge2_2018": {
@@ -1301,9 +1461,13 @@
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/19/puzzle/1": {
@@ -1346,8 +1510,10 @@
       "courseE_artist_concept1_b": "Try using a function here so you don't have to write the code for a hexagon over and over again.",
       "courseE_artist_concept1_c": "Use the `set width` block before each function call to change the pen width."
     },
-    "function_names": {
-      "draw a hexagon": "draw a hexagon"
+    "function_definitions": {
+      "draw a hexagon": {
+        "name": "draw a hexagon"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/19/puzzle/6": {
@@ -1365,8 +1531,10 @@
       "courseE_farmer_concept2_b": "A function which turns, goes down the path, gathers pumpkins, and returns to the main horizontal path could be helpful here.",
       "courseE_farmer_concept2_c": "Your main program can call this function with the green `do something` block."
     },
-    "function_names": {
-      "get pumpkin": "get pumpkin"
+    "function_definitions": {
+      "get pumpkin": {
+        "name": "get pumpkin"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/19/puzzle/8": {
@@ -1394,10 +1562,16 @@
       "courseE_artist_concept4_b": "Try creating one square. Then make a line of squares.  What comes next?",
       "courseE_artist_concept4_c": "After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw a line of squares": "draw a line of squares",
-      "draw a plane of squares": "draw a plane of squares"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw a plane of squares": {
+        "name": "draw a plane of squares"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/19/extras?level_name=courseE_artist_concept_challenge1_2018": {
@@ -1408,8 +1582,10 @@
       "courseE_artist_concept_challenge1_b": "The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. ",
       "courseE_artist_concept_challenge1_c": "This is the design you want to repeat to make the full shape:\n\n[][0]"
     },
-    "function_names": {
-      "do something": "do something"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/19/extras?level_name=courseE_artist_concept_challenge2_2018": {
@@ -1419,8 +1595,10 @@
       "courseE_artist_concept_challenge2_a": "Once you define a function, you can call it over and over again - whenever and wherever you want!",
       "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n[blockly block][0]"
     },
-    "function_names": {
-      "draw pinwheel": "draw pinwheel"
+    "function_definitions": {
+      "draw pinwheel": {
+        "name": "draw pinwheel"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/20/puzzle/1": {
@@ -1473,7 +1651,21 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/21/puzzle/2": {
     "short_instructions": "Change the behavior inside the `___ begins ___` block to make the alien start spinning around.",
-    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  "
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/21/puzzle/3": {
     "display_name": "How to Make a Sprite"
@@ -1492,7 +1684,20 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/21/puzzle/7": {
     "short_instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
-    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked."
+    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/21/puzzle/8": {
     "short_instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
@@ -1500,7 +1705,20 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/21/puzzle/9": {
     "short_instructions": "Now create your own alien disco!",
-    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other"
+    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/22/puzzle/1": {
     "short_instructions": "What do you think will happen if you press \"Run\" and then click on her?",
@@ -1514,7 +1732,21 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/22/puzzle/2": {
     "short_instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
-    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
+    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/22/puzzle/3": {
     "short_instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
@@ -1522,19 +1754,67 @@
   },
   "https://studio.code.org/s/coursee-2018/stage/22/puzzle/4": {
     "short_instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
-    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!"
+    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/22/puzzle/5": {
     "short_instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
-    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  "
+    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/22/puzzle/6": {
     "short_instructions": "Add an apple that returns the giraffe back to regular size when they touch.",
-    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  "
+    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/22/puzzle/7": {
     "short_instructions": "Freeplay: What more can you make your giraffe do? ",
-    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  "
+    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/23/puzzle/1": {
     "display_name": "Video: CS Matters"
@@ -1546,17 +1826,39 @@
     "callouts": {
       "4-5_Artist_Patterns_Free_Play_1": "All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!"
     },
-    "function_names": {
-      "draw a door": "draw a door",
-      "draw grass": "draw grass",
-      "draw windows": "draw windows",
-      "rectangle": "rectangle",
-      "sun": "sun",
-      "diamond": "diamond",
-      "window": "window",
-      "draw a house": "draw a house",
-      "triangle": "triangle",
-      "square": "square"
+    "function_definitions": {
+      "draw a door": {
+        "name": "draw a door"
+      },
+      "draw grass": {
+        "name": "draw grass"
+      },
+      "draw windows": {
+        "name": "draw windows"
+      },
+      "rectangle": {
+        "name": "rectangle",
+        "description": "lol"
+      },
+      "sun": {
+        "name": "sun"
+      },
+      "diamond": {
+        "name": "diamond"
+      },
+      "window": {
+        "name": "window"
+      },
+      "draw a house": {
+        "name": "draw a house"
+      },
+      "triangle": {
+        "name": "triangle"
+      },
+      "square": {
+        "name": "square",
+        "description": "lol"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/23/puzzle/3": {
@@ -1566,25 +1868,74 @@
     "callouts": {
       "4-5_Artist_Patterns_Free_Play_2": "Try using the new `comment` block under this label to leave yourself notes inside your program!"
     },
-    "function_names": {
-      "25 pixel square": "25 pixel square",
-      "draw head": "draw head",
-      "draw eye": "draw eye"
+    "function_definitions": {
+      "25 pixel square": {
+        "name": "25 pixel square"
+      },
+      "draw head": {
+        "name": "draw head"
+      },
+      "draw eye": {
+        "name": "draw eye"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/23/puzzle/4": {
-    "display_name": "Bunny "
+    "display_name": "Bunny ",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "being hungry": "being hungry",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "swimming left and right": "swimming left and right"
+    },
+    "placeholder_texts": {
+      "40d7755b0c04b15ca69f0f8d8c510f91": "Feed the bunny!",
+      "498cd895eb5a102c5aeb977e2b928dee": "Thank you!"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/23/puzzle/5": {
     "display_name": "Dogger Example",
-    "function_names": {
-      "stop_everything": "stop_everything",
-      "lose": "lose"
+    "function_definitions": {
+      "stop_everything": {
+        "name": "stop_everything"
+      },
+      "lose": {
+        "name": "lose"
+      }
+    },
+    "behavior_names": {
+      "drive left": "drive left",
+      "drive right": "drive right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "e8a10c04d72b2f135dabe360c4bdd534": "You win!",
+      "8437002ea42b64a5fd68abfb2ab8dae0": "Game over.",
+      "c865bfd8e0c78020ace8e1376d3cc9ad": "You lost."
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/24/puzzle/1": {
     "dsls": {
-      "title": "Begin planning your project",
       "content1": "description here",
       "markdown": "# The Design Process\nDesigning software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.\n\nThis process is useful for all kinds of things, but we are going to focus on using it for app design.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\" alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n* **Define**\n  * What kind of app would you like to create?\n  * What are your constraints?\n  * What does success look like?\n* **Prepare**\n  * Brainstorm / research possible elements\n  * Compare pros and cons\n  * Make a plan\n* **Try**\n  * Put your plan into action\n* **Reflect**\n  * How do your results compare to the goals you set while defining the app?\n  * What can you learn from this or do better next time?\n  * What new problems have you discovered?\n\n# What it Looks Like\nOver the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  \n\nHere is what the coming weeks will hold as we learn more about the design process:\n\n1. **Define & Prepare**\n   * Play existing games to get ideas and understand limitations\n   * Brainstorm and plan your new or modified app\n1. **Try**\n   * Follow your plan to build an app\n1. **Reflect & Edit**\n   * Swap apps with another group to help make your projects better\n1. **Present**\n   * Show off your final product!\n"
     }
@@ -1593,12 +1944,31 @@
     "display_name": "Course E Artist Project"
   },
   "https://studio.code.org/s/coursee-2018/stage/25/puzzle/2": {
-    "display_name": "Course E Sprite Lab Project"
+    "display_name": "Course E Sprite Lab Project",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
   },
   "https://studio.code.org/s/coursee-2018/stage/26/puzzle/1": {
     "dsls": {
-      "title": "Prepare for yur presentation",
       "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
+  },
+  "https://studio.code.org/s/coursee-2018/stage/27/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.Internet_2018.title"
+  },
+  "https://studio.code.org/s/coursee-2018/stage/28/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.Crowdsourcing_2018.title"
   }
 }

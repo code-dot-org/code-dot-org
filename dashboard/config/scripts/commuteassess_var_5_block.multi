@@ -1,10 +1,18 @@
 name 'CommuteAssess - Var 5 - block'
 question 'What is displayed when this code is run?'
 
-right '<pre>11<br>13<br>18</pre>'
-wrong '<pre>11<br>11<br>11</pre>'
-wrong '<pre>x<br>x<br>x + 5</pre>'
-wrong '<pre>18<br>18<br>18</pre>'
+right '`11`  
+`13`  
+`18`'
+wrong '`11`  
+`11`  
+`11`'
+wrong '`x`  
+`x`  
+`x + 5`'
+wrong '`18`  
+`18`  
+`18`'
 wrong 'Nothing will be printed’
 wrong 'This code will cause on error'
 

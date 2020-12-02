@@ -116,8 +116,8 @@ Then /^I navigate to the public gallery via the gallery switcher$/ do
   steps <<-STEPS
     Then I click selector "#uitest-gallery-switcher div:contains(Public Projects)"
     Then check that I am on "http://studio.code.org/projects/public"
-    And I wait until element "#public-gallery" is visible
-    And element "#react-personal-projects" is not visible
+    And I wait until element "#uitest-public-projects" is visible
+    And element "#uitest-personal-projects" is not visible
   STEPS
 end
 
@@ -125,8 +125,8 @@ Then /^I navigate to the personal gallery via the gallery switcher$/ do
   steps <<-STEPS
     Then I click selector "#uitest-gallery-switcher div:contains(My Projects)"
     Then check that I am on "http://studio.code.org/projects"
-    And I wait until element "#public-gallery" is not visible
-    And element "#react-personal-projects" is visible
+    And I wait until element "#uitest-personal-projects" is visible
+    And element "#uitest-public-projects" is not visible
   STEPS
 end
 

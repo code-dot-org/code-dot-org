@@ -7,6 +7,9 @@ require_relative '../helpers/form_helpers'
 class HocEventReviewTest < Minitest::Test
   describe 'HocEventReview' do
     before do
+      if HocEventReview.events.count > 0
+        PEGASUS_DB[:forms].where(kind: HocEventReview.kind).delete
+      end
       assert_empty HocEventReview.events, 'Precondition: No HOC events in test DB'
     end
 
@@ -101,12 +104,24 @@ class HocEventReviewTest < Minitest::Test
       end
     end
 
+    it 'only finds events with processed data' do
+      with_form country: 'US', state: 'CA', has_processed_data: false do
+        with_form country: 'US', state: 'OR' do
+          with_form country: 'MX' do
+            actual = HocEventReview.events
+            assert_equal 2, actual.size
+          end
+        end
+      end
+    end
+
     # Helper to temporarily create a form row for testing retrieval methods.
     def with_form(
       review: nil,
       special_event: nil,
       state: nil,
-      country: nil
+      country: nil,
+      has_processed_data: true
     )
       # Necessary stubs for the insert_or_upsert_form helper
       stubs(:dashboard_user).returns(nil)
@@ -116,10 +131,6 @@ class HocEventReviewTest < Minitest::Test
       data = HocEventReviewTest.fake_data.merge(
         special_event_flag_b: special_event
       )
-      processed_data = {
-        location_country_code_s: country,
-        location_state_code_s: state
-      }
 
       # Add fake row
       row = insert_or_upsert_form(
@@ -130,7 +141,15 @@ class HocEventReviewTest < Minitest::Test
       # Adjust fake row
       form = Form.find(id: row[:id])
       form.update(review: review) unless review.nil?
-      form.update(processed_data: processed_data.to_json)
+
+      if has_processed_data
+        processed_data = {
+          location_country_code_s: country,
+          location_state_code_s: state
+        }
+        form.update(processed_data: processed_data.to_json)
+      end
+
       form.refresh
 
       # Run enclosed logic

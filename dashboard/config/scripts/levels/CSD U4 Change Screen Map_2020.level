@@ -1,0 +1,19 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-02-18T17:28:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Changing Screens",
+    "teacher_markdown": "#### Limited Programming Required\r\n\r\nThe goal of this unit is to get students thinking about the role design plays in developing a product and to help them build empathy for end users. This is not a programming focused unit, and the extent to which students will be expected to program is represented in its entirety here. Students will get a chance to delve deeper into App Lab, and to learn more about how `onEvent` works, in unit 6.",
+    "reference": "/docs/concepts/app-lab/changing-screens/index.html",
+    "parent_level_id": 19056,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-06 16:37:26 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-06 16:41:08 +0000\",\"changed\":[\"display_name\",\"teacher_markdown\",\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-20 00:17:18 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</Map>

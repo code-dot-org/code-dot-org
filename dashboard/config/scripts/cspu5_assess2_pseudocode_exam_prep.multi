@@ -1,7 +1,7 @@
 name 'cspu5_assess2_pseudoCode_exam_prep'
-right '<code>You passed!</code>'
-wrong '<code>Time to start studying again!</code>'
-wrong '<code>You passed!</code> and <code>Time to start studying again! </code>'
+right '`You passed!`'
+wrong '`Time to start studying again!`'
+wrong '`You passed!` and `Time to start studying again! `'
 wrong 'Nothing will be displayed'
 wrong 'An error will occur on line 7; you cannot have an IF inside an ELSE statement'
 

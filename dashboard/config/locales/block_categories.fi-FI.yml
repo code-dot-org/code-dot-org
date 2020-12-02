@@ -3,7 +3,7 @@ fi:
   data:
     block_categories:
       Actions: Toiminnot
-      Advanced: Lisäasetukset
+      Advanced: Edistyneet
       Behaviors: Käyttäytymiset
       Brushes: Harjat
       Color: Väri
@@ -11,7 +11,7 @@ fi:
       Comments: Kommentit
       Conditionals: Ehtolausekkeet
       Dancers: Tanssijat
-      Default: Oletusarvo
+      Default: Oletus
       Events: Tapahtumat
       Functions: Funktiot
       'Functions ': 'Funktiot '

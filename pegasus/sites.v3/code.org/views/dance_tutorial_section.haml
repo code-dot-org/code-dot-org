@@ -1,7 +1,5 @@
 - hide_keep_on_dancing_tile = DCDO.get('hide_dance_followup', nil)
 
-%link{href: "/css/tutorial-promo.css", type: "text/css", rel: "stylesheet"}
-
 .dance-clear-element
 .tutorial-promo-container.dance-party-container
   .img-container
@@ -9,12 +7,12 @@
     %img.img-dance-stars.desktop-only{src: "/images/fit-300x300/homepage/hoc2019_dance_stars_mobile.png"}
     %img.img-dance-stars.tablet-only{src: "/images/fit-520/homepage/hoc2019_dance_stars.png"}
     %img.img-dance-stars.mobile-only{src: "/images/fit-300x300/homepage/hoc2019_dance_stars_mobile.png"}
-    .new-announcement.desktop-only
-      = hoc_s(:codeorg_homepage_hoc2019_dance_heading)
-    .new-announcement-tablet.tablet-only
-      = hoc_s(:codeorg_homepage_hoc2019_dance_heading)
-    .new-announcement-mobile.mobile-only
-      = hoc_s(:codeorg_homepage_hoc2019_dance_heading)
+    .new-announcement.desktop-only.highlight-strong
+      != hoc_s(:codeorg_homepage_hoc2019_dance_heading_markdown, markdown: :inline)
+    .new-announcement-tablet.tablet-only.highlight-strong
+      != hoc_s(:codeorg_homepage_hoc2019_dance_heading_markdown, markdown: :inline)
+    .new-announcement-mobile.mobile-only.highlight-strong
+      != hoc_s(:codeorg_homepage_hoc2019_dance_heading_markdown, markdown: :inline)
 
   .col-25.specific-tutorial.right-tutorial.dance-tutorial
     .tutorial-box

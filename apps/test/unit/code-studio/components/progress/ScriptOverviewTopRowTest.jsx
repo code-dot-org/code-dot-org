@@ -10,10 +10,10 @@ import {
   COMPLETED
 } from '@cdo/apps/code-studio/components/progress/ScriptOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const defaultProps = {
   sectionsForDropdown: [],
@@ -42,11 +42,13 @@ describe('ScriptOverviewTopRow', () => {
         <div>
           <div>
             <Button
+              __useDeprecatedTag
               href="/s/test-script/next"
               text={i18n.tryNow()}
               size={Button.ButtonSize.large}
             />
             <Button
+              __useDeprecatedTag
               href="//support.code.org"
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
@@ -75,6 +77,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <Button
+          __useDeprecatedTag
           href="/s/test-script/next"
           text={i18n.continue()}
           size={Button.ButtonSize.large}
@@ -95,6 +98,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <Button
+          __useDeprecatedTag
           href="/s/test-script/next"
           text={i18n.printCertificate()}
           size={Button.ButtonSize.large}
@@ -146,19 +150,18 @@ describe('ScriptOverviewTopRow', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <div>
-          <DropdownButton
-            text={i18n.teacherResources()}
-            color={Button.ButtonColor.blue}
-          >
-            <a href="https://example.com/a" target="_blank">
-              {i18n.curriculum()}
-            </a>
-            <a href="https://example.com/b" target="_blank">
-              {i18n.vocabulary()}
-            </a>
-          </DropdownButton>
-        </div>
+        <TeacherResourcesDropdown
+          resources={[
+            {
+              type: ResourceType.curriculum,
+              link: 'https://example.com/a'
+            },
+            {
+              type: ResourceType.vocabulary,
+              link: 'https://example.com/b'
+            }
+          ]}
+        />
       )
     ).to.be.true;
   });

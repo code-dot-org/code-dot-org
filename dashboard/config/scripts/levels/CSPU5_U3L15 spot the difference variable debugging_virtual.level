@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T21:25:05.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free response: Spot and Fix the Bug",
+    "long_instructions": "Respond to the following questions about your investigation into the bug with the counting game. Feel free to go back and look at the game again (but do so in another tab or be sure to click \"Submit\" to save your work!):\n\n- From the user's perspective, what was the difference between the first version of the game and the one with the bug?\n- From looking at the code, what specifically was the difference between the two, and why is that an issue?\n- How did you fix the bug?\n",
+    "encrypted_solution": "1eChH54bnYGTWKhr7ZodUU0EDV3gLVcahCAkuXXHu2z1wx1w5+ODpCzgmeUy\nvLnJZ5NlUSJ58f6wvNiu/LwrDSWOve9XJLpxR3tz569F3TVxebA6gGyjVDjN\nXncUYCPTeAU6wsR1yFWpSyZeJcZynD5Fu7Bby1ONupxxBbgBDZ3fWWBPos9v\nhGfmciRGrTEsDhRdi+errtZ/2DR68a2RBzhiZyu/ts7f2D6/Q+ngztzUxyGA\nx27WFzxTXWqBz9byALIUfj0KNKNgGdxGaExYk3x1ANiMY3SzVZ6BHZ+gqHKW\n3Mo6ozmyE5ddRbglr3L12Pue6i46Ru1D4bFIPDll+QBcTp0J7ICORT4Ut4EY\nDZ+yP29Ni5yBn/mj4f0YeaoI66Fvclfrj6oFwLvGKSfxx1BJF4dSgwQ+rFWX\nYauzRVtbaKiGgF/9rya/RPjr31TYLw05kcjAncG5Lkft04GQbKhw9L/O2zLM\nVxP/aNkW2zAK1dQlvHHpqtvZrOn2PNMsPsptH39l2TNU2BfTOht9loA9/n+y\n+khcdqY0GpTkZQOTPHv4ONFap1XWb8BhmQJVeV8b/6gGpzS3rviV1oFt4Gw6\niPXmu78fx1cn2t39G9u2EmbK3w6rtwhnoVeEeSF17V2viSHTcEJ7mowAv6Rx\n9HHbo2qN41fFoOAgKd7HGfPfHgQ4LHxotmX6E4OZ2ZrFJoF0T94ygt2t4Ybp\n5/qv5F/+GanqO108EF9DPbWDTSoPwNcjCAyCJzN8FGuawPpshdi99J/Xrvn6\nO7SJc5YMkoNablfe+tCEIFK01G73OEdn2PxMsrYphH3ZTsmaFScknVmpUIgg\nMx447SLCztO0ARI8ZTR+3keOnGK24SPTVcKF9y5aajktlafsEqOtp845n/is\nMKH8zwsw+U7R2cbD71VXYcU0J4Sxmjlgv8LIpDLE42sUWMmi5JdVKAOQdt8d\n62F/nck5s54/rwdfOHhEUik5rwjPozeT1eET8E6srY5TtBgnbeMeSTQ46Gre\nb9A23Hy8fU1Sk+/e5KAyuPw+9ibRWc7iKO6aDngp7B8FDm/W32ujZx6Q5Svm\ncECCbyX5GoWmDay3HHSuSL7y94YGypXLCNSLI4WaWba6HkYZ/o78TtM20T8H\n8BTs3vjDA31L2U8MWivqV9RjsYOqenr4a1ARkBCefH5ZY2evc8lhnLSdX33f\nZBRtHZvdTC3ie5VyyEXGYL93fS4LqGlmmBydf6ZGd9pMkspdU0XGTdKGsR2H\nSTL/RqpFp39hA/eFk2CanNNYkBtBO090It8JpEqBB0smMSZJ9b00YlFEnsFx\n2ZWOiyMduumLFdCPnUuprmjJHmOI0Qb8yx/VaqCf694hoSTJtcBSero/GlpF\nZVqPKkc=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17156,
+    "name_suffix": "_virtual"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

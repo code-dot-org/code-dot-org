@@ -20,7 +20,7 @@
           data: {levelBuilderEditScript: @script_data.to_json}}
 
 - if @show_all_instructions
-  - @script.stages.each do |stage|
+  - @script.lessons.each do |stage|
     %br
       %h1= stage.localized_title
       %br

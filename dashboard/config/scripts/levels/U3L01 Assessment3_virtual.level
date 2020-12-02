@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T16:55:56.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Programming Language Features",
+    "long_instructions": "Describe the features of a programming language that make it different from the language you typically use in everyday life. Explain why a programming language must be created in this way.\n\n",
+    "encrypted_solution": "qaGLoOEDYgrXKj0Zx3plTjq5cyFC1svrhnPnLlyIVbnAiIIrXMcIQkd92P+Q\nxUxS9TR+fjA8wnRJArus8OfmMhxW2EQOOpdO+E/S4WGvzgGzg+fCtGkfh0j8\nWeq+b0/p0YzkXXm8TOj/jbsQ0Bp0XtFhZAPTwjwvRdrtkZ8LMohUt/bClr2o\ntI0LMJmM/IEb0TuApfJ7QmICEUWRoyUbGhPnBRJTaZ6Ig8sUP+R30R7WIoP/\nCyvbck5gVsLjv7mva7F3hH2lh6bzoOpJlKlRUfEJMF3EE5xnQ+dDygbKMPOj\niVSe3+wyBx2o/YaHgJUa0LY2nF3V14K4KRQOwvQHfyvFkEZ/LHh6o3ymlMdE\nLE91+5oFistwZrgsGLatQNJYQc/Oj5OuriTpoLq7YeLbUcA7HddlpLK5mb9d\nURcZg+WQJ5zxsL4I9zwvl40R2eGnO4YJdX7D4dlnRf5sFPVlea1TdaNLeAN6\nTW/p1AZYkIyvXI/P00UvgDDkwvqHdL8D\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16872,
+    "name_suffix": "_virtual"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

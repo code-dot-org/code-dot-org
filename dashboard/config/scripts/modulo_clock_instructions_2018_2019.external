@@ -1,4 +1,5 @@
 name 'Modulo Clock Instructions_2018_2019'
+editor_experiment ''
 markdown <<MARKDOWN
 # Clock Arithmetic (Modulo)
 
@@ -33,9 +34,9 @@ Try the following for each:
 
 | "Enter a number" | "with clock size..." |
 |:-----:|:-----:|
-| 45 | 311 |
+| 45 | 31 |
 | 300 | 311 |
-| 356 | 311 |
+| 356 | 3111 |
 
 Also try:
 

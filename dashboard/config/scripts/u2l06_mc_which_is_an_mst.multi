@@ -1,17 +1,28 @@
 name 'U2L06 - MC: Which is an MST?'
-encrypted 'Crylh8RHt/M1/muc/rPcAqkfuS5zKc400ZCqDoL1vzR6E4NJMVGl7Uf6udjy
-x+8HwVNOd+R220EkgFgDdtZOw1+/qSvU/Xx5RDC4Upjp0PVmnqdVoA4Jb5no
-jqJTL94VFYv+lARd3D+BZXeGUnVwX1pXMFjYpWWQQC1Jc1boDqZPKHyJEnAy
-GO1OvDtxeFXdA4JZ38qncP0aqii/e4C5lG6JcB9SvDqh+UsO9tEfejYjvKQU
-e6rBp0/h802Z2XGJ0sOeGGAS5yU/87q1dp0zhw+1hLsxiZQh9irsUBtCrQQT
-VXeV38gjhQKiMfuctOgLAVMEYqo8sUrxdlh+p0o1bOuphxARoz3Y4Do9dPIN
-iCXqB79GSwU9pMBrXIo84sy57T5SDdH2qu7plC6ahzSijlNBAyNJr2c49U7F
-HxTkt2AzY05onjTvgotVz298K1HAlx4FpZFhaM8PtV6Bg4ZJ+ayzY7oF14sy
-2tWIDkFuCwLXTAL89syiXTEho3DvKXE3dRp0FWw/DU6tGMYK6rV8DVO6n6xM
-+wPq8t9xxukQ0aBvB6M6c2NuFzIp7qGIp0zISYvG80aCSTfl2BgBu2yoJvA+
-1JZpSfB1nv9PGms/JeWreMmN/GluykgmIFO1emsiAyZUMh9Nl8EPR/lNhI4M
-IiVHX7df2SkfC+6MP7eiLtOoMmuBK7saQhBjZ7np09cBMjsj35AW0B5XJW26
-e0YZ2RYbclKCV2poWiFTsrzUvqaRVsu/pdKXh+/As5BOqh/A1+FhVKkXTJ7c
-I4npto433M55Y4TbiGo7sTmiFSG1aoSBJfYri62kY9PrPouj7ucy2M7YZNiZ
-nm+0tRMsvDrQshcj9Mpl2Gs8rZr0VPiUDlewwYZdvgQ//5isBwxU13Z3
-'
+editor_experiment ''
+title 'Which one is the MST?'
+question 'The images below all show the same map (or graph) but have different paths between the points highlighted.  
+Please choose the image that is highlighting a Minimum Spanning Tree for the map.  
+NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.  
+ 
+<img src=\'https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png\'>'
+wrong 'A'
+wrong 'B'
+right 'C'
+wrong 'D'
+wrong 'E'
+
+markdown <<MARKDOWN
+The images below all show the same map (or graph) but have different paths between the points highlighted.
+
+Please choose the image that is highlighting a Minimum Spanning Tree for the map.
+
+NOTE: The “distance” between points is depicted by the number of line segments connecting any two points.
+
+![](https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answer: C
+MARKDOWN

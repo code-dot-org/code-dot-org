@@ -1,0 +1,7 @@
+name 'CSD games istouching practice choice_virtual_2020'
+display_name 'Collision Practice'
+description 'Practice using collision detection with these activities.'
+
+sublevels
+level 'CSD U3 collision detection practice debugistouching_virtual_2020'
+level 'CSD U3 collision detection challenge collider circle_virtual_2020'

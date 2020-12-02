@@ -1,8 +1,8 @@
 {
   "continue": "Pokračovat",
-  "nextLevel": "Gratulujeme! Dokončil jsi toto puzzle.",
+  "nextLevel": "Dobrá práce! Úloha úspěšně splněna.",
   "no": "Ne",
-  "numBlocksNeeded": "Tato hádanka může být vyřešena s %1 blocky.",
+  "numBlocksNeeded": "Tato hádanka může být vyřešena pomoci %1 bloků.",
   "reinfFeedbackMsg": "Můžeš stisknout tlačítko \"Zkusit znovu\" a vrátit se zpět ke své hře.",
   "share": "Sdílet",
   "shareGame": "Sdílej svou hru:",

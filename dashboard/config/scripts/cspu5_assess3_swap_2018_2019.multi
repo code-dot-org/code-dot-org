@@ -1,8 +1,8 @@
 name 'cspu5_assess3_swap_2018_2019'
-wrong '<img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">'
-wrong '<img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">'
-right '<img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">'
-wrong '<img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">'
+wrong 'https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png'
+wrong 'https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png'
+right 'https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png'
+wrong 'https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png'
 
 
 markdown <<MARKDOWN

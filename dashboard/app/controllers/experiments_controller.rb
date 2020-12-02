@@ -10,7 +10,7 @@ class ExperimentsController < ApplicationController
       return
     end
 
-    unless CourseScript.find_by(experiment_name: params[:experiment_name])
+    unless UnitGroupUnit.find_by(experiment_name: params[:experiment_name])
       redirect_to '/', flash: {alert: "Unknown experiment name '#{params[:experiment_name]}'."}
       return
     end

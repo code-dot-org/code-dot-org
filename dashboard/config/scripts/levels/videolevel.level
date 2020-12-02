@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-19T18:07:44.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csp_concept_internet_wires_cables_wifi",
+    "long_instructions": "[Video guide and questions](https://docs.google.com/document/d/1k-qKthfOewieVcWgsAP8v2hW-dh3CbK-f7oXlHpF6Cs/edit)",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "teacher_markdown": "One of the goals of this lesson is to help students understand why binary is important. This video about the Internet was created for the Code.org Computer Science Principles course. The video could be used to help motivate why binary is important in computer science.",
+    "parent_level_id": 1910
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-29 13:31:57 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":37,\"changed_by_email\":\"brook@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

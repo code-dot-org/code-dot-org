@@ -1,0 +1,56 @@
+name 'Color Sleuth - Epilogue_2018_2019_virtual'
+title 'title'
+description 'description here'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Color Sleuth - Epilogue
+
+## There are a million ways to do this
+
+We hope that following the conversation between Alexis and Michael helped to demonstrate both that:
+
+* Writing any program requires making a lot of decisions
+* Those decisions often require creativity and problem-solving
+
+But Alexis and Michael came up with *just one way* to write the program out of many many possibilities.  If they had started a different way, or made different decisions along the way, the actual code may have come out much differently, even if the program worked the same.
+
+## Writing code is a form of personal expression
+
+This fact - there are so many ways to go about writing the code for an app - is what people find so cool, fun, and engaging about programming.
+
+It's surprising to many people who haven't programmed before that, like any piece of writing, writing code is not like solving a math problem.  It's a creative undertaking and the resulting code provides view into the mind of the author.
+
+As evidence, just look at your classmates' solutions for how to end the Color Sleuth game.  Even if two people chose the same end game condition - let's say the "first to 10" rule - did they write the code the same way? Probably not.  Would you be interested to see the code of someone else who tried to write the same end game condition as you? Probably! You might be interested to see how someone else went about it.
+
+## Is Alexis and Michael's conversation actually realistic?
+
+The conversation between Alexis and Michael has been optimized for this lesson - it's shorter than what is probably realistic, and also Alexis and Michael didn't really make any bad decisions.  They made decisions and came up with ideas that people with a *bit* more experience might.  Most of the time the things you try out, solutions you come up with, don't all work.  Many times you start down one path and realize you might want to start over.  That's ok.  
+
+While you might not always have as smooth a path to a solution as Alexis and Michael, the way that they are portrayed talking to each other *is realistic*. In fact, it captures many of the elements of the *actual conversations* between the authors of Color Sleuth app as they developed it for this lesson.
+
+## How people actually collaborate
+
+If you study the elements of Alexis and Michael's conversation, the realistic part is *the way they talk to each other about writing code*.  It's **not like solving a math problem, but more like figuring out how to build something**.
+
+Here are the elements modeled in the conversation that we hope you take to heart and use when you are collaborating to write programs:
+
+* Approach someone to ask them to be a "thought partner"
+* Suggest solutions as *options* rather than correct answers
+* Recognize that you are picking one path of many toward a working program
+* Sketch things out on paper as you go
+* Use earlier decisions to form a foundation, a set of patterns, to build on later
+* Take a small step and verify it works before making more decisions
+* Don't write the code from top to bottom, but fill it in with pieces
+* Start with small, manageable pieces, then build and combine to make something bigger
+
+## Onward
+
+As you move forward try to collaborate in this way.  It's not about getting the right answer, it's about finding a path that works.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Use this epilogue as the foundation for wrap up.  Either have students read it, review it out loud.
+
+
+MARKDOWN

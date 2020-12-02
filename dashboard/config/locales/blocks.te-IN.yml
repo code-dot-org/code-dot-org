@@ -83,9 +83,6 @@ te:
             MOVES.Kick: స్టార్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} చేయండి {MOVE} {DIR} ఎప్పటికీ"
         options:
@@ -104,9 +101,6 @@ te:
             MOVES.Kick: స్టార్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
         options:
@@ -178,9 +172,6 @@ te:
             MOVES.XArmsUp: స్ట్రెచ్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} చేయండి {MOVE} {DIR} ఒకసారి"
         options:
@@ -209,9 +200,6 @@ te:
             MOVES.XArmsUp: స్ట్రెచ్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -255,8 +243,8 @@ te:
             '"seconds"': సెకండ్లు
       Dancelab_ifDanceIs:
         text: |-
-          "ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
-          {DO1} {DO2}"
+          ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: క్లాప్ హై
@@ -272,8 +260,8 @@ te:
             MOVES.Rest: ఏదీ కాదు
       Dancelab_ifTime:
         text: |-
-          "ఒకవేళ {UNIT} అయితే {OP} {N}
-          {DO1} {DO2}"
+          ఒకవేళ {UNIT} అయితే {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': మెజర్స్
@@ -340,6 +328,7 @@ te:
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
             '"SHARK"': షార్క్
           LOCATION:
             "{x: 200, y: 100}": టాప్
@@ -357,6 +346,7 @@ te:
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
             '"SHARK"': షార్క్
           LOCATION:
             "{x: 200, y: 100}": టాప్
@@ -453,6 +443,7 @@ te:
             '"vintage"': వింటేజ్
             '"warm"': వామ్
       Dancelab_setBackgroundEffectWithPalette:
+        text: "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{PALETTE} {EFFECT} సెట్ చేయండి"
         options:
           EFFECT:
             '"none"': ఏదీ కాదు
@@ -833,6 +824,10 @@ te:
         text: సెటప్
       Dancelab_whenSetup2:
         text: సెటప్
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': సెకండ్లు
       gamelab_changePropBy:
         text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
         options:
@@ -848,6 +843,42 @@ te:
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
             '"tint"': టింట్
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': సెకండ్లు
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': అప్
+            '"down"': డౌన్
+            '"left"': ఎడమ
+            '"right"': కుడి
+            '"space"': స్పేస్
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} జంప్ చేయండి {LOCATION} కు"
       gamelab_keyPressed:
@@ -981,8 +1012,8 @@ te:
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       Mikelab_ifDanceIs:
         text: |-
-          "ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
-          {DO1} {DO2}"
+          ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: క్లాప్ హై

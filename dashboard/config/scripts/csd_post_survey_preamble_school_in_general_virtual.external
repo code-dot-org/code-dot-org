@@ -1,0 +1,10 @@
+name 'csd-post-survey-preamble-school-in-general_virtual'
+markdown <<MARKDOWN
+## School in general
+
+#### *First, we want to ask you about your thoughts and feelings about school, in general.*
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,0 +1,9 @@
+name 'CSD games collisions practice choice_virtual_2020'
+display_name 'Collisions Practice'
+description 'Practice using the new collisions blocks.'
+
+sublevels
+level 'CSD U3 collisions types_virtual_2020'
+level 'CSD U3 collisions types2_virtual_2020'
+level 'CSD U3 collisions types3_virtual_2020'
+level 'CSD U3 collisions types4_virtual_2020'

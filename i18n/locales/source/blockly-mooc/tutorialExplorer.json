@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Poor or no internet",
   "filterPlatformNoComputers": "No computers or devices",
+  "filterPlatformScreenReader": "Screen reader",
   "filterTopics": "Topics",
   "filterTopicsScience": "Science",
   "filterTopicsMath": "Math",

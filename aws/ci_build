@@ -19,6 +19,8 @@
 # NOTE: running `touch build-started` (or running the `bin/start-build` script)
 # is an easy way to force a rebuild without needing to make a commit.
 #
+require_relative '../lib/cdo/only_one'
+exit(0) unless only_one_running?(__FILE__)
 
 require 'active_support/inflector'
 require_relative '../deployment'
@@ -31,7 +33,6 @@ require 'cdo/honeybadger'
 require 'cdo/infra_production_topic'
 require 'cdo/rake_utils'
 require 'cdo/test_server_status'
-require 'cdo/only_one'
 require 'cdo/metrics_helper'
 require 'dynamic_config/dcdo'
 require 'aws-sdk-cloudwatch'
@@ -76,11 +77,12 @@ def build
     git_revision_short = GitUtils.git_revision_short
 
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
-    Honeybadger.notify_new_release(rack_env, git_revision)
     write_build_status rack_env, git_revision_short, :start
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
+
+    Honeybadger.notify_new_release(rack_env, git_revision)
 
     status = begin
       result = RakeUtils.rake_stream_output 'ci'
@@ -185,7 +187,21 @@ def main
 
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
+        ChatClient.log "*** Before you manually re-run a test, please ensure that the cabal who owns that test is actively tracking de-flaking. ***", color: 'yellow'
       end
+    end
+
+    if CDO.test_system?
+      tests_over_flake_threshold = `./bin/test_flakiness -x 0.2`
+      flake_factor_message = {}
+      if tests_over_flake_threshold.empty?
+        flake_factor_message[:color] = 'green'
+        flake_factor_message[:message] = "Hooray! There are no UI tests over 0.2 flakiness."
+      else
+        flake_factor_message[:color] = 'red'
+        flake_factor_message[:message] = "Tests exceeding 0.2 flakiness threshold: <br/><pre>#{tests_over_flake_threshold}</pre><br/><br/> Please ensure these tests are being investigated!"
+      end
+      ChatClient.log flake_factor_message[:message], color: flake_factor_message[:color]
     end
 
     emit_deploy_metric(rack_env.to_s.titleize, status == 0)
@@ -263,4 +279,4 @@ rescue => error
   ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
 end
 
-main if only_one_running?(__FILE__)
+main

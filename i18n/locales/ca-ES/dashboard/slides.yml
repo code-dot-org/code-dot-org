@@ -266,6 +266,26 @@ ca:
       1:
         text: "Fins ara heu estat fent una animació o una història que fa exactament la mateixa cosa cada vegada que s'executa. Ara podeu fer un joc interactiu que de fet podeu jugar."
       2:
+    starwars_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Alguns exemples d'esdeveniments s'activen amb un clic del ratolí, una tecla de fletxa o quan es toca la pantalla."
+      5:
+      6:
+      7:
+      8:
+      9:
+    starwars_blocks_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Alguns exemples d'esdeveniments s'activen amb un clic del ratolí, una tecla de fletxa o quan es toca la pantalla."
+      5:
+      6:
+      7:
     mc_intro:
       1:
         text: "Em dic Jens Bergensten però em coneixen com Jeb. Jo sóc el desenvolupador cap de Minecraft, aquí a Mojang a Estocolm. Crec que era als onze o dotze anys que vaig començar a programar perquè volia fer jocs. Un dels amics del meu pare em va dir que per a fer jocs cal aprendre a programar. Així és com vaig començar. M'agrada dissenyar i imaginar l'arquitectura dels jocs. Això és el que realment m'agrada de Minecraft."
@@ -338,6 +358,7 @@ ca:
       2:
       3:
       4:
+        text: "La pantalla es divideix en 3 parts. L'esquerra és l'espai del joc on el programa s'executarà. Les instruccions per a cada nivell estan escrites a sota."
       5:
       6:
         text: "L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem el nostre programa."
@@ -349,6 +370,7 @@ ca:
       2:
       3:
       4:
+        text: "La pantalla es divideix en 3 parts. L'esquerra és l'espai del joc on el programa s'executarà. Les instruccions per a cada nivell estan escrites a sota."
       5:
       6:
         text: "L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem el nostre programa."

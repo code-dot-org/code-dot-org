@@ -310,7 +310,7 @@ function installBoolean(blockly, generator, gensym) {
   ];
 
   generator.functional_boolean = function() {
-    return this.getTitleValue('VAL');
+    return this.getTitleValue('VAL') === 'true';
   };
 }
 

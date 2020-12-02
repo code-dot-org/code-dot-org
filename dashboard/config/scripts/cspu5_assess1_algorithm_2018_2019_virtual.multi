@@ -1,0 +1,39 @@
+name 'cspu5_assess1_algorithm_2018_2019_virtual'
+wrong 'Benjamin Franklin was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.'
+wrong 'apple was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.'
+wrong 'Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors.'
+right 'Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors.'
+wrong 'Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.'
+
+
+
+markdown <<MARKDOWN
+A programmer wrote an essay for his history class, and realized he has confused the names of Benjamin Franklin and Alexander Graham Bell. Instead of going through the whole paper and changing the names, he used the following incorrect algorithm in an attempt replace every occurrence of “Benjamin Franklin” with “Alexander Graham Bell” and vise versa:
+
+* First, change all occurrences of “Benjamin Franklin” to “apple”
+* Then, change all occurrences of “apple” to “Alexander Graham Bell”.
+* Then, change all occurrences of “Alexander Graham Bell” to "Benjamin Franklin”.
+
+ Here is an example of one of the sentences from the paper:
+
+_Alexander Graham Bell was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors._
+
+Which of the following is the result of running the described incorrect algorithm on the sentence above?
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4**
+
+Strategy: Go through the algorithm and keep track of the changes for each line
+
+* Start "Alexander Graham Bell was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors."
+* Change all “Benjamin Franklin” to “apple”
+* Current: "Alexander Graham Bell was born 141 years before apple, so he was never able to telephone his neighbors."
+* Change all “apple” to “Alexander Graham Bell”
+* Current: "Alexander Graham Bell was born 141 years before Alexander Graham Bell, so he was never able to telephone his neighbors.
+* Change all “Alexander Graham Bell” to Benjamin Franklin”
+* Final: "Benjamin Franklin was born 141 years before Benjamin Franklin, so he was never able to telephone his neighbors."
+
+The algorithm is incorrect because the last two steps should be switched.
+MARKDOWN

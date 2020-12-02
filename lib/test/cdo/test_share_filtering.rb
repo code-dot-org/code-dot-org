@@ -2,15 +2,6 @@ require_relative '../test_helper'
 require 'cdo/share_filtering'
 
 class ShareFilteringTest < Minitest::Test
-  def setup
-    Geocoder.configure(lookup: :test)
-    Geocoder::Lookup::Test.add_stub(
-      '1600 Pennsylvania Ave NW, Washington, DC 20500',
-      [{types: 'street_address'}]
-    )
-    Geocoder::Lookup::Test.set_default_stub([{types: []}])
-  end
-
   # @param title_name [String] The name of the title of the program.
   # @param title_text [String] The text of the title of the program.
   # @return [String] A sample program.
@@ -49,6 +40,10 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_with_phone_number
+    Geocoder.
+      stubs(:find_potential_street_address).
+      returns(nil)
+
     program = generate_program('My Phone Number', '123-456-7890')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
@@ -57,7 +52,7 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_with_profanity
-    WebPurify.stubs(:find_potential_profanity).returns('damn')
+    WebPurify.stubs(:find_potential_profanities).returns(['damn'])
 
     program = generate_program('My Profanity', 'damn')
     assert_equal(
@@ -74,7 +69,7 @@ class ShareFilteringTest < Minitest::Test
     innocent_program = generate_program('My Innocent Program', 'funny tofu')
 
     # Stub WebPurify because we expect our custom blocking to handle this case.
-    WebPurify.stubs(:find_potential_profanity).returns(nil)
+    WebPurify.stubs(:find_potential_profanities).returns(nil)
 
     # Blocked in English
     assert_equal(
@@ -107,7 +102,7 @@ class ShareFilteringTest < Minitest::Test
     innocent_program = generate_program('My Innocent Program', 'fickle')
 
     # Stub WebPurify because we expect our custom blocking to handle this case.
-    WebPurify.stubs(:find_potential_profanity).returns(nil)
+    WebPurify.stubs(:find_potential_profanities).returns(nil)
 
     # Blocked in English
     assert_equal(
@@ -149,5 +144,12 @@ class ShareFilteringTest < Minitest::Test
     program = '<xml><block type="when_run" deletable="false"><next>'\
       '<block type="studio_showTitleScreen"></block></next></block></xml>'
     assert_nil ShareFiltering.find_share_failure(program, 'en')
+  end
+
+  def test_find_name_failure_calls_find_failure
+    text = 'project title'
+    locale = 'en'
+    ShareFiltering.expects(:find_failure).with(text, locale).returns nil
+    assert_nil ShareFiltering.find_name_failure(text, locale)
   end
 end

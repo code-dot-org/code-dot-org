@@ -1,19 +1,6 @@
-.field
-  = f.label :cipher
-  %p If level is to be used only for a single type of cipher, set that here to disable select features specific to the other kind of cipher.
-  = f.select :cipher, options_for_select(@level.class.ciphers, @level.cipher)
-
-.field
-  = f.label :texts
-  %p Encrypted texts in JSON array format. Each text should have both a title and a message, e.g.:
-  %div
-    %pre{:style => '-webkit-user-select: text'}
-      = preserve do
-        :escaped
-          [
-            {"title": "Sample Message (easy)", "message": "Srryvat zl jnl guebhtu gur qnexarff."},
-            {"title": "Sample Message (hard)", "message": "Npd ulk vy krg lycrpdkgj epctopkgda un krg lynparvuypebg gyj un krg ogakgdy aqvdpb pds un krg Mpbpfi bvga p aspbb lydgmpdjgj igbbuo aly."}
-          ]
-  = f.text_area :texts, placeholder: '[]', rows: 4, value: @level.properties['texts']
-  :javascript
-    levelbuilder.initializeCodeMirror('level_texts', 'javascript');
+= render partial: 'levels/editors/fields/frequency_analysis_fields', locals: {f: f}
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}

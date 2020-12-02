@@ -1,0 +1,248 @@
+{
+  "script": {
+    "name": "deepdive-debugging",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "deepdive-debugging"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Debugging for AB Educators",
+      "name": "Debugging for AB Educators",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging for AB Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    },
+    {
+      "key": "Debugging for CDEF Educators",
+      "name": "Debugging for CDEF Educators",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging for CDEF Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AB_debug_Laurel1"
+        ],
+        "lesson.key": "Debugging for AB Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      },
+      "level_keys": [
+        "AB_debug_Laurel1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AB_Debug_Artist1"
+        ],
+        "lesson.key": "Debugging for AB Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      },
+      "level_keys": [
+        "AB_Debug_Artist1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AB_Debug_PlayLab3"
+        ],
+        "lesson.key": "Debugging for AB Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      },
+      "level_keys": [
+        "AB_Debug_PlayLab3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CDEF_debugging_farmer1"
+        ],
+        "lesson.key": "Debugging for CDEF Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      },
+      "level_keys": [
+        "CDEF_debugging_farmer1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CDEF_debugging_Artist1"
+        ],
+        "lesson.key": "Debugging for CDEF Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      },
+      "level_keys": [
+        "CDEF_debugging_Artist1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CDEF_debugging_flappy2"
+        ],
+        "lesson.key": "Debugging for CDEF Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      },
+      "level_keys": [
+        "CDEF_debugging_flappy2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "AB_debug_Laurel1",
+        "script_level.level_keys": [
+          "AB_debug_Laurel1"
+        ],
+        "lesson.key": "Debugging for AB Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AB_Debug_Artist1",
+        "script_level.level_keys": [
+          "AB_Debug_Artist1"
+        ],
+        "lesson.key": "Debugging for AB Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AB_Debug_PlayLab3",
+        "script_level.level_keys": [
+          "AB_Debug_PlayLab3"
+        ],
+        "lesson.key": "Debugging for AB Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CDEF_debugging_farmer1",
+        "script_level.level_keys": [
+          "CDEF_debugging_farmer1"
+        ],
+        "lesson.key": "Debugging for CDEF Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CDEF_debugging_Artist1",
+        "script_level.level_keys": [
+          "CDEF_debugging_Artist1"
+        ],
+        "lesson.key": "Debugging for CDEF Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CDEF_debugging_flappy2",
+        "script_level.level_keys": [
+          "CDEF_debugging_flappy2"
+        ],
+        "lesson.key": "Debugging for CDEF Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    }
+  ]
+}

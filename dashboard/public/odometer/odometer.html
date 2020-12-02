@@ -95,7 +95,7 @@
 
     function setAllOdos(val) {
       odoVal = val; //setGlobal for incrementing
-      for (var i in allOdos) {
+      for (var i = 0; i < allOdos.length; i++) {
         allOdos[i].set(val);
       }
 

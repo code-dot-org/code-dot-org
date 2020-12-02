@@ -1,5 +1,6 @@
 name 'Commute Assess - comp 2 - block'
-question 'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?'
+editor_experiment ''
+question 'The procedure `op4` takes in 3 numbers, what does this procedure do?'
 right 'Returns the largest of the three numbers'
 wrong 'Set all three inputs to a temporary value'
 wrong 'Return the smallest of the three numbers '

@@ -1,0 +1,71 @@
+name 'How Dropdown Menus Work_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How Dropdown Menus Work
+<img src="https://images.code.org/ba241edf138c3b4a75c85a1f930d4fb2-image-1479564920405.png" style="float: right">
+
+A dropdown menu provides a fixed list of choices for a user to choose from.  If you're expecting only a fixed set of responses from a user then it's a good alternative to a plain text input box.  For example, if you want the user to select a day of the week.
+
+**Dropdown menu v. text input**
+
+Choosing a day of the week is an example of when it's **a good idea to use a dropdown menu** because there are only 7 days of the week, but there are countless ways a user might type it if you used a text input box.  Rather than trying to figure out what the user typed, you can provide your own list.  It makes it much easier to check.
+
+
+
+<div style="clear: both"> </div>
+
+## Add and populate in Design Mode
+
+<div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 66%; float: right">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+In Design Mode click and drag a dropdown onto the screen</p>
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+Don't forget to give it a meaningful id</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
+Add the list of options that you want here, each one on its own line. By default the <em>options</em> box shows only two lines, but you can add as many lines as you want.</p>
+
+</div>
+
+![](https://images.code.org/dd775e2cd6752f424d51d643bb5d6542-image-1479498782151.png)
+
+
+## How to get what the user chose
+
+To get the value the user selected from the dropdown menu is very similar to getting the text out of a text input.
+
+<div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%">
+
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+The event type "change" gets triggered when the user has made a new selection. The "change" event fires when the user releases the mouse button on a new selection. (You don't want "click" because that would trigger the moment the user clicked the arrow to open up the menu in the first place.)
+</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+You get the value that was selected the <em>same way you get data out of a text input box</em> with <code>getText(id)</code>.  If you call <code>getText(id)</code> on a dropdown menu it returns the <em>currently selected value</em> in the menu.</p>
+
+</div>
+
+![](https://images.code.org/9e55319b7bc4ff4d5edbaa927bfa1d69-image-1587062006990.png)
+
+## A worked example
+Here is an example that uses an *if* statement with a dropdown.
+
+* The program lets the user pick a day of the week and display a message.
+* Study the code and read through the commentary on the right side.
+* An image of the app is shown at the left after the user has selected Wednesday.
+
+<img src="https://images.code.org/bcc8601a9008645cd86ec00c15c678db-image-1479588076093.png" style="float: left; margin-right: 20px;">
+<br>
+<span style="color: #00adbc; font-weight: bold; font-size: 125%">1.</span> When the dropdown changes<br><br>
+<span style="color: #00adbc; font-weight: bold; font-size: 125%">2.</span> Save in a <strong>variable</strong> the beginning of a message that will eventually be displayed to the user: “It’s &lt;name of day&gt;!“<br><br>
+<span style="color: #00adbc; font-weight: bold; font-size: 125%">3.</span> Check the current value of the dropdown to see <strong>if it's “Friday”</strong><br><br>
+<span style="color: #00adbc; font-weight: bold">4.</span> <strong>Add text to the message</strong>. <em>Either</em> “Whoo hoo…” if it’s Friday, <em>or</em> “Aw…” if it’s not.<br><br>
+<span style="color: #00adbc; font-weight: bold">5.</span> Finally, <strong>set the text of a label</strong> on the screen to the message that was constructed.
+
+MARKDOWN

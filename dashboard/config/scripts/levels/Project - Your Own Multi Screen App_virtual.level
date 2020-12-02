@@ -1,0 +1,85 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:00.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "playSound": null,
+      "setPosition": null,
+      "setSize": null,
+      "setScreen": null,
+      "hideElement": null,
+      "showElement": null,
+      "deleteElement": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "comment": null,
+      "stopSound": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Create your multi-screen app. (Click to see full instructions.)",
+    "long_instructions": "# Multi Screen App\r\nYou will be creating your own multi-screen app to practice designing user interfaces and writing event-driven programs. \r\n\r\n**Look at the Project Guide and Planning Sheets before programming**.\r\n\r\n# NOTE: Bigger toolbox\r\n\r\n* You may notice that we've included all of the commands you know so far in the coding toolbox **plus a few more**\r\n* Remember you can hover over a command to see documentation for it.\r\n* You can also just try it out to see what it does.\r\n\r\n# Requirements Reminder\r\n* Your app must have a purpose\r\n* Your app will have at least **4 screens**.\r\n* Your app should include **text, images, buttons, and sound**.\r\n* There should be **no “getting stuck” on any screen.**  It should always be possible to navigate from a screen in your app to some other screen. \r\n* Your program code should follow **good style**.\r\n* Your user interface should be **intuitive to use**.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "true",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "hGzQtsTLrdL4zrG3nCby0NOickNx7yLCMnT+quAlVLI5tPmaUfivij+8mwBX\nBHG+MJ1Nn2/SlO+oPWQvnkczhA==\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "palette_category_at_start": "uicontrols",
+    "parent_level_id": 17122,
+    "name_suffix": "_virtual",
+    "show_debug_watch": "true",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

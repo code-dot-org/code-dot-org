@@ -7,7 +7,6 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {showExportDialog} from './components/exportDialogRedux';
 import project from './initApp/project';
-import i18n from './i18n';
 
 export function exportProject() {
   project.saveIfSourcesChanged().then(() => {
@@ -26,7 +25,6 @@ export function exportProject() {
       <Provider store={getStore()}>
         <ExportDialog
           isProjectLevel={!!project.isProjectLevel()}
-          i18n={i18n}
           md5SavedSources={project.md5CurrentSources()}
           isAbusive={project.exceedsAbuseThreshold()}
           channelId={project.getCurrentId()}

@@ -1,16 +1,19 @@
 - lesson_plans ||= nil
 - ages ||= nil
 - cta_text ||= nil
+- heading_style = 'position: absolute; color: white; margin-top: 20px; margin-left: 30px;'
+- heading_font_size ||= nil
+- heading_style = heading_font_size ? "#{heading_style} font-size: #{heading_font_size};": heading_style
 
 .courseblock-span6.courseblock-wide-large{style: "height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;"}
   #courseblock-header{style: 'position: relative; height: 80px;'}
     %a{:href=>cta_link, style: 'position: absolute;'}
       %img{src: img, style: "width: 100%;"}
-    %h3{style: 'position: absolute; color: white; margin-top: 20px; margin-left: 30px;'}= title
+    %h3{style: heading_style}= title
   #courseblock-content{style: 'padding-left: 20px; padding-right: 20px;'}
     - unless ages.nil?
       %h4= ages
-    .smalltext{style: 'min-height: 120px; margin-bottom: 10px;'}= description
+    .smalltext{style: 'min-height: 120px; margin-bottom: 10px;'}!= description
     - unless cta_text.nil?
       %a{:href=>cta_link}
         %button{style: "margin-left: 10px; margin-top: 20px;"}!= cta_text

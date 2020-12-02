@@ -14,6 +14,7 @@ describe('SeeMoreCourses', () => {
     assert(
       wrapper.containsMatchingElement(
         <Button
+          __useDeprecatedTag
           color={Button.ButtonColor.gray}
           icon="caret-down"
           text="View more"

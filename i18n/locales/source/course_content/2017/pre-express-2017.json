@@ -1,15 +1,25 @@
 {
   "https://studio.code.org/s/pre-express-2017/stage/1/puzzle/1": {
-    "display_name": "Unspotted Bugs"
+    "display_name": "Unspotted Bugs",
+    "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/q2BQ1a][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch!\n\nQ1) In this story, what do \"bugs\" do?\n\nQ2) In computer science, programmers talk about having \"bugs\" in their code.  What do you think that means?\n\nQ3) How did Jasmine and JD find the bugs that they were looking for?\n\nQ4) Can you remember this way of looking for bugs?\n\n-   Walk through step-by-step.\n-   Is everything good at the first step?\n-   Is everything good at the second step?\n-   The third?\n-   If you find something wrong, look around that place for the \"bug\".\n-   When you find the bug, give it a name, and say it out loud!"
   },
   "https://studio.code.org/s/pre-express-2017/stage/2/puzzle/1": {
-    "display_name": "Stevie and the Big Project"
+    "display_name": "Stevie and the Big Project",
+    "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/SZHo4z][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch! \n\nQ1) What two big words did Stevie learn in this story?\n\nQ2) What does it mean to be \"frustrated\"?\n\nQ3) Have you ever been frustrated?\n\nQ4) What are some things that you can do when you feel yourself getting frustrated?\n\nQ5)  What is \"persistence\"?\n\nQ6) Why is persistence a good thing?\n\nQ7) What are some things you can do to help yourself be persistent?"
+  },
+  "https://studio.code.org/s/pre-express-2017/stage/3/puzzle/1": {
+    "title": "Real-life Algorithms: Plant a Seed"
   },
   "https://studio.code.org/s/pre-express-2017/stage/4/puzzle/2": {
     "dsls": {
-      "title": "The computer is your friend",
       "markdown": "# Behaving in the Computer Lab\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\" target=\"_new\">\n<button>\nGo to lesson plan\n</button> \n</a>\n\n<br/><br/>\n<a class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
     }
+  },
+  "https://studio.code.org/s/pre-express-2017/stage/5/puzzle/1": {
+    "title": "Your Digital Footprint"
+  },
+  "https://studio.code.org/s/pre-express-2017/stage/6/puzzle/1": {
+    "title": "Unplugged Activity"
   },
   "https://studio.code.org/s/pre-express-2017/stage/7/puzzle/2": {
     "short_instructions": "Play with these blocks to see what they make the bird do! \n\nGet the bird to the pig to complete the level.",
@@ -208,6 +218,9 @@
     "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "long_instructions": "[][0] _\"Keep going!\"_"
   },
+  "https://studio.code.org/s/pre-express-2017/stage/9/puzzle/1": {
+    "title": "Unplugged Activity"
+  },
   "https://studio.code.org/s/pre-express-2017/stage/10/puzzle/2": {
     "short_instructions": "This is Laurel the Adventurer!  Can you move her around and get treasure?",
     "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
@@ -393,9 +406,14 @@
       "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
       "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
     },
-    "function_names": {
-      "potential solution": "potential solution"
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
     }
+  },
+  "https://studio.code.org/s/pre-express-2017/stage/12/puzzle/1": {
+    "title": "The Big Event"
   },
   "https://studio.code.org/s/pre-express-2017/stage/13/puzzle/1": {
     "short_instructions": "Need a better playlab/events combo"

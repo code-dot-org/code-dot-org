@@ -1,0 +1,21 @@
+{
+  "data": {
+    "email_s": "name.fake@fabricated.edu",
+    "event_annual_s": "Yes",
+    "prize_choice_s": "Skype",
+    "event_country_s": "United States",
+    "event_experience_s": "Great",
+    "event_technology_s": "Pair programming, sharing a device",
+    "event_tutorials_ss": ["Make a Flappy Game"],
+    "event_improvement_s": "",
+    "teacher_first_year_s": "Yes",
+    "teacher_how_heard_ss": ["Email from Code.org"],
+    "event_location_type_s": "Public school",
+    "teacher_description_s": "Other",
+    "students_number_girls_s": "50",
+    "students_number_total_s": "80",
+    "teacher_plan_teach_cs_s": "",
+    "students_grade_levels_ss": ["5th", "3rd", "4th"]
+  },
+  "processed_data": { "prize_code_s": "SKYPE-12345-67890-ABCDE-FGHIJ" }
+}

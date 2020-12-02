@@ -2,7 +2,7 @@
 title: Hour of Code begivenhed - vejledning
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -22,7 +22,7 @@ title: Hour of Code begivenhed - vejledning
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **Andre eventideer:**: 
     - Inviter en lokal fagekspert eller ildsjæl til at fortælle om hvordan programmering indgår i hans eller hendes arbejde.
     - Inviter en lokalpolitiker og få eleverne til at lære ham eller hende hvordan man programmerer.
     - Få en gruppe af elever til at vise en øvelse uden brug af computer.
@@ -62,4 +62,4 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 | 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                               |
 | 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                           |
 
-{{ signup_button }}
+{{ tilmeld_knap }}

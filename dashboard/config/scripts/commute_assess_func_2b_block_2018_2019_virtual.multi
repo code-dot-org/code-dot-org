@@ -1,0 +1,63 @@
+name 'Commute Assess - func 2b - block_2018_2019_virtual'
+editor_experiment ''
+wrong '`9`'
+right '`21`'
+wrong '`81`'
+wrong 'nothing is printed'
+wrong 'this script would cause an error'
+markdown <<MARKDOWN
+What will be displayed when this code is run?
+
+![](https://images.code.org/2a2d0ace59f44d8817ca7ef1aad18949-image-1482508898388.png)
+
+*These procedures are shown for your reference - they are the same as the last question.*
+
+![](https://images.code.org/0e5c121af945f2f4a975eab32ebbac05-image-1482508093713.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The way to reason about nested function calls like this is to work from the inside out.
+Find and evaluate the inner-most function call which returns a value you can plug into the next call.
+
+An analogy is basic arithmetic using parentheses. Something like this:
+
+
+    ((5 + 3) - (4 * 6) / 5 * (2 + 3))
+
+
+
+The way you would evaluate that arithmetic is to first compute the stuff inside the inner-most parentheses and then work outward.
+
+Here is the breakdown for this problem.
+
+    DISPLAY (op1 (op3 (4), 5)) 
+                  -------       <-- op3(4) returns 4*4
+                     ||
+    DISPLAY (op1 (   16  , 5))  
+             ----------------   <-- op1(16,5) returns 16+5
+                     ||
+    DISPLAY (        21      )  
+
+    DISPLAY (21)  <-- Displays "21"
+
+
+A generic example of this would be to imagine a function called MIN(a,b) which returns the smaller of two values a and b.  You could plug in any numbers like MIN(22, 7) which would return 7, or MIN(5, 17) which would return 5.
+
+You could nest calls to MIN inside each other to find the MIN of 4 values like so:
+
+    MIN (MIN (22, 7), MIN (5, 17))
+         -----------                <-- evaluates to 7
+              |
+    MIN (     7     , MIN (5, 17))
+                      -----------   <-- evaluates to 5
+                           |
+    MIN (     7     ,      5     )
+    ------------------------------  <-- now the outer MIN can run using 7 and 5
+                    |
+                    5 
+
+The outer-most MIN here needs values to compute with, so the inner-most calls must run first to evaluate to a single value.
+
+
+
+MARKDOWN

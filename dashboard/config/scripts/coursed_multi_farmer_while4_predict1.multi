@@ -1,5 +1,5 @@
 name 'courseD_multi_farmer_while4_predict1'
-question 'Look closely at the code below.  What will happen after you click "Run"?'
+question 'Look closely at the code below. What will happen after you click "Run"?'
 wrong 'Nothing will happen.', feedback: 'Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone'
 wrong 'The farmer will never stop removing dirt.', feedback: 'Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone'
 right 'The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.', feedback: 'Correct!'

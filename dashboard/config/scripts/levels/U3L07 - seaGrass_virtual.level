@@ -1,0 +1,145 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:12.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Add a parameter to drawSeagrass that controls the number of waves in the grass. (Click to see full instructions)",
+    "long_instructions": "# Controlling Loops with Parameters\r\n\r\n<img src=\"https://images.code.org/37d6dbcab707f67485ab3b0cc2a1cae9-image-1443114033511.png\" style=\"width: 200px; float: right\">\r\n\r\nThis time you will modify one of the lower-level functions - `drawSeagrass`. Notice that the current version of `drawSeagrass` actually uses a loop. We want to modify this function so that we control the number of times it loops with **a parameter**.\r\n\r\n# Do This:\r\n\r\n* **Look at** the `drawSeagrass` function to see how it currently works.\r\n\r\n* **Add a parameter** that will be used to indicate how many waves the seagrass makes.\r\n\r\n<img src=\"https://images.code.org/1f2f0c5e1fc17e541760c4f0fd24b13b-image-1447887194713.7.10 drawSeagrass add param.gif\" style=\"width:350px;padding-left:22px;\">\r\n\r\n* **Modify the `'for` loop** so that it uses that **parameter** as the number of times to repeat.\r\n\r\n  ![](https://images.code.org/23e8e43ec4853c0bdbbbd50b9651300a-image-1443113032135.gif)\r\n\r\n* Finally, **modify `drawAllSeagrass`** to call this new two-param version of `drawSeagrass` supplying a reasonable random value for the second parameter as well.\r\n\r\n<img src=\"https://images.code.org/4f15021cd9cebb62562665d3ddc82c51-image-1447885963677.PNG\" style=\"width:400px;padding-left:22px;\">",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3L07 - underTheSeaLoopsTemplate_virtual",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "hide_view_data_button": "true",
+    "submittable": "false",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "41PWd2ri+4Qh5xAK1oo+KogfB75rM4jjELIccHGzEtDspbhGyo0hW6CTBS3z\nJ8HjAFUGEM13HZYGdIwYSbcnWA==\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "drawSeagrass:2"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the drawSeagrass function will have two parameters - one for the radius of the arc and another for the number of 'waves' it will draw.  Is it possible you modified the function definition, but didn't actually call the 2-parameter version?  Check out drawAllSeagrass to make sure that you CALL drawSeagrass with  values for the two parameters."
+      },
+      {
+        "entries": [
+          "drawAllSeaStars:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllSeaStars function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawSeaStar:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 5,
+        "message": "drawAllSeaStars: App lab is expecting that you write a loop that runs at least 5 times and repeatedly calls two commands: moveTo(x,y) and drawSeaStar(size).  It appears as though the sequence is slightly different or you're not running the loop 5 times."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawSeaStar:1",
+          "[forInit]",
+          "[forTest]",
+          "[forUpdate]",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 3,
+        "message": "App lab is expecting that the drawSeaStar function will contain a loop.  See part one of the instructions."
+      },
+      {
+        "entries": [
+          "drawAllFish:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllFish function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawFish:4",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 15,
+        "message": "drawAllFish: App lab is expecting that you write a loop that runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
+      },
+      {
+        "entries": [
+          "drawAllBubbles:0",
+          "[forInit]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "App lab is expecting that the first line of code inside the drawAllBubbles function is the loop."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "drawBubble:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 200,
+        "message": "drawAllBubbles: App lab is expecting that you would simply 'wrap a loop around' the existing code that was inside the drawAllBubbles function - a looping of two commands: moveTo(x,y) and drawBubble(size). And that that loop would run 200 times or more.  It appears as though the sequence is slightly different or you're not running the loop 200 times."
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* made a call to a 2-param version of `drawSeagrass(radius, numWaves)`.  The order of the parameters does not matter for our check - only that a 2-param version was *called*.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 16966,
+    "name_suffix": "_virtual",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "This level should be replaced to demonstrate adding params with function param expando - which didn't exist when this level was written.",
+  "audit_log": "[{\"changed_at\":\"2017-11-29 22:48:16 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-29 22:48:41 +0000\",\"changed\":[\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-09-19 18:25:36 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-02-18 15:14:40 +0000\",\"changed\":[\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-01 15:50:20 +0000\",\"changed\":[\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,0 +1,30 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-03-17T21:09:57.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD U2 Project Template_virtual",
+    "hide_share_and_remix": "true",
+    "long_instructions": "# Review Your Project\r\n\r\nYou're almost ready to publish your project, but you should check one more time that you have fulfilled all the requirements for this project.\r\n\r\n# Do This\r\n* Check that you are comfortable sharing all the information that's on your site.\r\n* Check that all of your images are correctly attributed, and that you have the right to put them on your site.\r\n* Check that your project includes everything included in the project rubric.\r\n* Use comments and whitespace to make your website readable.\r\n* Ask a classmate to help you find any potential problems with your site.\r\n",
+    "submittable": "false",
+    "parent_level_id": 20058,
+    "name_suffix": "_virtual",
+    "reference_links": [
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/html/formatting-html/"
+    ],
+    "map_reference": "/docs/concepts/html/hyperlinks/",
+    "encrypted": "false",
+    "mini_rubric": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 23:44:19 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:13:53 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:37:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</Weblab>

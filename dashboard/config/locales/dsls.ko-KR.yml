@@ -3,336 +3,347 @@ ko-KR:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: 객관식
-        questions:
-        - text: 주어진 이미지를 위한 알고리즘을 고르세요.
         answers:
         - text: 사각형에서 시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.
         - text: 사격형으로부터 시작하여<br/>사각형의 오른쪽에 삼각형을 넣고<br/>사각형의 아래쪽에 평행 사변형을 넣고<br/>평행사변형의
             오른쪽에 삼각형을 넣습니다
+          correct: true
         - text: 사각형으로 시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요
         - text: 사각형으로 시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요
-      2-3 Algorithms Multi 2:
+        questions:
+        - text: 주어진 이미지를 위한 알고리즘을 고르세요.
         title: 객관식
+      2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         content1: 삼각형에서 시작해서<br/>삼각형 아래에 사각형을 그리고<br/>사각형 아래에 또 다른 삼각형을 그리세요.
         questions:
         - text: 어떤 이미지가 이 알고리즘으로 만들 수 <em>없나요?</em>
+        title: 객관식
+      2-3 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Big Event Match 1:
-        title: 맞추기
         content2: 단추에 알맞은 춤 동작을 고르세요.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: 맞추기
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: 맞추기
         content2: 키를 사용해 코드와 글자를 맞추세요.
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: 맞추기
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: 객관식
         questions:
         - text: 게임의 규칙에 따라 정확하게 점수가 부여된 카드 세트는?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: 객관식
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: 반복을 이용해 이 순차실행을 간단히 할 수 있을까요?
+        title: 객관식
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: 맞추기
         content1: 프로그램에 그리드,격자무늬를 맞추세요
         questions:
         - {}
         - {}
         - {}
+        title: 맞추기
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: 객관식
         questions:
         - text: 어떤 프로그램이 이 그림을 그릴 수 있을까요?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: 객관식
       2-3 Maze Match 2:
-        title: 미로 퍼즐 짝맞추기
+        answers:
+        - {}
+        - {}
+        - {}
         content1: 퍼즐 블록 맞추기
-        pre_title: 소개
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: 미로 퍼즐 짝맞추기
       2-3 Maze Multi 2:
+        answers:
+        - text: 어떤 블럭들이 나를 돼지에게 갈 수 있게 해줄까요?
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: 어떤 블럭들이 나를 돼지에게 갈 수 있게 해줄까요?
         title: 미로 퍼즐 객관식
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: 객관식
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      2-3 Relay Programming Multi 2:
         title: 객관식
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: 어떤 프로그램이 오류가 없을까요?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: 객관식
       2-3 artist debug multi 1:
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         questions:
         - {}
-        answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
-        title: 예술가 함수 다중선택1
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: 주어진 함수들을 사용해서 이미지를 그리기 위해 적당한 블럭들을 선택하세요.
+        title: 예술가 함수 다중선택1
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: 똑같이 맞춰 그리기
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: 예술가 반복 다중 선택
         questions:
         - text: 이 반복으로 어떤 모양이 만들어질까요?
+        title: 예술가 반복 다중 선택
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist loops multi 2:
-        title: 예술가 반복 다중 선택
+        - correct: true
         questions:
         - text: 이 프로그램으로 어떤 모양이 만들어질까요?
+        title: 예술가 반복 다중 선택
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: 예술가 똑같이 그리기
         content1: 블럭들을 사용해서 똑같은 모양을 맞추세요.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: 예술가 똑같이 그리기
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: 다음 중 맞는 것은?
+      2-3 bee conditionals multi 3:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: 가장 적합한 블록들을 고르세요.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        title: 꿀벌 반복 다중선택1
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: 어떤 블록을 사용해야 꽃꿀을 모두 모을 수 있을까요?
+        title: 꿀벌 반복 다중선택1
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: 미로 퍼즐 맞추기1
         content1: 퍼즐 블록 맞추기
         questions:
         - {}
         - {}
         - {}
+        title: 미로 퍼즐 맞추기1
+      2-3 maze multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 maze multi 1:
-        title: 미로 퍼즐 객관식1
         questions:
         - text: 다음중 어떤 블록들이 정답일까요?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 미로 퍼즐 객관식1
       4-5 Algorithms Match 1:
-        title: 맞추기
+        answers:
+        - text: "<h4>Player 1 점수를 0점으로</h4>"
+        - text: "<h4>Player 1이 주사위를 굴립니다.</h4>"
+        - text: "<h4>Player 1 점수를 총점으로 합칩니다.</h4>"
+        - text: "<h4>누가 이겼는지 비교합니다.</h4>"
         content1: 알고리즘에서 나타나도록 주사위 레이스 게임에서 단계들을 맞추세요.
         questions:
         - text: "<h4>1)</h4>"
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Player 1 점수를 0점으로</h4>"
-        - text: "<h4>Player 1이 주사위를 굴립니다.</h4>"
-        - text: "<h4>Player 1 점수를 총점으로 합칩니다.</h4>"
-        - text: "<h4>누가 이겼는지 비교합니다.</h4>"
+        title: 맞추기
       4-5 Algorithms Multi 1:
-        title: 객관식
-        questions:
-        - text: 다음 중 알고리즘으로 표현하기 가장 어려운 것은?
         answers:
         - text: 양치질
         - text: 쿠키를 굽고
         - text: 식료품 리스트를 쇼핑
         - text: 바나나
+          correct: true
+        questions:
+        - text: 다음 중 알고리즘으로 표현하기 가장 어려운 것은?
+        title: 객관식
       4-5 Computational Thinking Match 1:
-        title: 맞추기
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: 각각의 자동차들이 조각내어졌습니다. 자동차들의 짝을 맞추세요.
         questions:
         - text: "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
         - text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
         - text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
         - text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
-        answers:
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
+        title: 맞추기
       4-5 Computational Thinking Multi 1:
-        title: 객관식
-        content1: "? 3개의 문장이 있습니다. 주어진 3개의 패턴을 정확히 만들어낼 수 있는 것은 무엇일까요?"
-        questions:
-        - text: 시애틀은 대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다.
         answers:
         - text: 시애틀 _____ _____ _____입니다.
         - text: _____은 _____ 도시입니다.
+          correct: true
         - text: _____ _____는 _____입니다.
         - text: Eugene는 _____ 도시입니다.
-      4-5 Crowdsourcing Multi 1:
-        title: 객관식
+        content1: "? 3개의 문장이 있습니다. 주어진 3개의 패턴을 정확히 만들어낼 수 있는 것은 무엇일까요?"
         questions:
-        - text: 다음 크라우드 소싱을 가장 잘 표현하는 것은?
+        - text: 시애틀은 대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다.
+        title: 객관식
+      4-5 Crowdsourcing Multi 1:
         answers:
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
-      4-5 Crowdsourcing Multi 2:
-        title: 객관식
+          correct: true
         questions:
-        - text: 클라우드소싱을 연습하기에 가장 좋은 활동은?
+        - text: 다음 크라우드 소싱을 가장 잘 표현하는 것은?
+        title: 객관식
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: 방 청소
+          correct: true
         - text: 디저트를 먹는
         - text: 머리를 빗질하는
         - text: 세수하는
-      4-5 Digital Footprint Multi 1:
-        title: 객관식
         questions:
-        - text: 다음 중 인터넷을 통해 공유하기 적당한 정보는?
+        - text: 클라우드소싱을 연습하기에 가장 좋은 활동은?
+        title: 객관식
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: 생일
         - text: 좋아하는 음식
+          correct: true
         - text: 주소
         - text: 부모의 신용 카드 번호
-      4-5 Internet Multi 1:
+        questions:
+        - text: 다음 중 인터넷을 통해 공유하기 적당한 정보는?
         title: 객관식
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: code.org에 접속하기 위해 사용하는 IP 주소로 가장 적당한 것은?
+        title: 객관식
+      4-5 Internet Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Internet Multi 2:
-        title: 객관식
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: IP 주소 100.42.50.110 을 입력하면 나오는 웹페이지는?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: 객관식
-        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
-        questions:
-        - text: 코러스로 정의하여 호출될 때마다 반복될 이 노래의 가장 큰 구절은 무엇인가?
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+          correct: true
         - text: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
             in the buttermilk, <br/>Shoo, fly, shoo,"
         - text: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the
             buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo,
             fly, shoo, <br/>Skip to my Lou, my darlin."
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
+        questions:
+        - text: 코러스로 정의하여 호출될 때마다 반복될 이 노래의 가장 큰 구절은 무엇인가?
+        title: 객관식
       4-5 Suncatchers Match 1:
-        title: 맞추기
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: 주어진 방법들의 프로그램과 단어를 맞추세요.
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
@@ -340,128 +351,125 @@ ko-KR:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: 맞추기
       4-5 Suncatchers Multi 1:
-        title: 객관식
-        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        questions:
-        - text: 아래 프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?
         answers:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
+        questions:
+        - text: 아래 프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?
+        title: 객관식
       4-5 artist loops multi 1:
-        title: 예술가 반복 다중 선택
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: 어떤 블럭이 같은 모양을 만들어낼 수 있을까요?
+        title: 예술가 반복 다중 선택
+      4-5 artist multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 artist multi 1:
-        title: 예술가 객관식
         questions:
         - text: 둘레의 길이가 100인 사각형을 그리는 블록들은?
+        title: 예술가 객관식
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: 예술가 객관식
         questions:
         - text: 대칭을 그릴 수 있는 것은?
+        title: 예술가 객관식
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: 꿀벌 조건선택 객관식
         content2: "? 분홍 꽃에는 3, 2, 1의 꽃꿀이 있을 수 있습니다. 분홍 꽃에서 가능한 꽃꿀을 확인할 수 있는 블럭은?"
         questions:
         - text: 가장 적합한 블록들을 고르세요.
+        title: 꿀벌 조건선택 객관식
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: 꿀벌 디버깅 객관식
         questions:
         - text: 제대로 동작하는 함수는?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 꿀벌 디버깅 객관식
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
         title: 꿀벌 반복 객관식
-        questions:
-        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
         title: 미로 퍼즐 조건 객관식
-        questions:
-        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: 미로 퍼즐 짝맞추기
-        content1: 퍼즐 블록 맞추기
-        pre_title: 소개
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: 퍼즐 블록 맞추기
+        questions:
+        - {}
+        - {}
+        - {}
+        title: 미로 퍼즐 짝맞추기
       4-5 maze multi 1:
-        title: 미로 퍼즐 객관식
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 미로 퍼즐 객관식
       Begin planning your project:
-        title: 제목화면 주제
         content1: 설명 입력
       Begin planning your project_2018:
         content1: 설명 입력
       Begin planning your project_2018_2019:
         content1: 설명 입력
+      Begin planning your project_2018_2019_2020:
+        content1: 설명 입력
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U1 Lesson 5 Overview:
@@ -522,87 +530,78 @@ ko-KR:
           * [앱과 문제해결 - 동료검토](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [앱과 문제해결 - 채점표](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 Design Project_2018:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 Design Project_2018_2019:
-        title: 제목화면 주제
+        content1: 설명 입력
+      CSD U2 L1 Overview:
         content1: 설명 입력
       CSD U2 L2 Overview:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 L3 Overview:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 L4 Overview:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 L5 Overview:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 L6 Overview:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 Lesson 6 Overview:
         content1: 설명 입력
       CSD U2 expand project:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 expand project_2018:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 expand project_2018_2019:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -615,71 +614,71 @@ ko-KR:
       CSD U2 project guide_2018_2019:
         content1: 설명 입력
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: 제목화면 주제
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 제목화면 주제
       CSD U3 Boolean MC_2018:
-        title: 제목화면 주제
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 제목화면 주제
       CSD U3 Boolean MC_2018_2019:
-        title: 제목화면 주제
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 제목화면 주제
       CSD U3 Card Examples_2018:
         content1: 설명 입력
       CSD U3 Card Examples_2018_2019:
@@ -688,122 +687,119 @@ ko-KR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U3 combining rep_2018:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U3 combining rep_2018_2019:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -821,13 +817,10 @@ ko-KR:
       CSD U3 platform intro_2018_2019:
         content1: 설명 입력
       CSD U5 Encryption 1:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 Encryption 1_2018:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 Encryption 1_2018_2019:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 Encryption 2:
         content1: 설명 입력
@@ -836,7 +829,6 @@ ko-KR:
       CSD U5 Encryption 2_2018_2019:
         content1: 설명 입력
       CSD U5 L13 SFLP Interpreting Data:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 crosstab warmup:
         content1: 설명 입력
@@ -845,22 +837,16 @@ ko-KR:
       CSD U5 crosstab warmup_2018_2019:
         content1: 설명 입력
       CSD U5 data visualization:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 data visualization_2018:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 data visualization_2018_2019:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 student record:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 student record_2018:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U5 student record_2018_2019:
-        title: 제목화면 주제
         content1: 설명 입력
       CSD U6 LED create intro:
         content1: 설명 입력
@@ -869,28 +855,28 @@ ko-KR:
       CSD U6 LED create intro_2018_2019:
         content1: 설명 입력
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 final intro:
         content1: 설명 입력
@@ -899,234 +885,410 @@ ko-KR:
       CSD U6 final intro_2018_2019:
         content1: 설명 입력
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "# 계속 춤추세요! \n\n파트 2에서는 자신만의 프로젝트를 만듭니다. 여기에는 퍼즐은 없어요. 대신, 더 복잡한
+          댄스 파티를 만드는 다양한 방법들을 보여주는 프로젝트들은 많죠. 다음 레벨들은 _어떤 순서로든_ 할 수 있습니다. \n\n여기저기
+          둘러보며 이전 레벨에서 어떤 식으로 되었는지 알아보거나 여러 프로젝트의 개념을 섞어보세요. 모두 써 보고, 마음에 드는 걸 고른
+          다음, 그걸 저 프로젝트에 추가하는 데 시간을 쏟으며 자신의 것으로 만드세요. \n\n<a class=\"btn btn-large
+          btn-primary next-stage submitButton pull-right\">계속</a>\n\n <div class=\"clearfix\">\n\n</div>
+          <div style=\"float: left; margin: 10px\"> \n<a href=\"2\"> \n<h2>\n 앞뒤로
+          \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"3\">
+          \n<h2> \n더 많은 단추\n </h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"4\"> \n<h2>
+          \n대형을 갖추세요 \n</h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"5\">
+          \n<h2> \n어디 갔어요?\n </h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"6\">
+          \n<h2> \n댄스 크루 \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"7\"> \n<h2>
+          \n4분음표 \n</h2>\n\n <img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin: 10px\">\n <a href=\"8\"> \n<h2>\n
+          저음, 중음, 고음 \n</h2>\n\n <img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"9\">\n
+          <h2> \n빨리빨리, 천천히 천천히\n </h2> \n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n
+          </div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # 춤을 계속!
+
+          2 부에서는 자신 만의 프로젝트를 만들 것입니다. 여기에는 퍼즐이 없습니다. 대신 더 복잡한 댄스 파티를 만드는 다른 방법을 보여주는 많은 프로젝트가 있습니다.
+
+          이 수준은 _ 어떤 순서로든 수행 할 수 있습니다. 이전 단계에서 어떤 작업이 수행되었는지 살펴 보거나 프로젝트간에 개념을 결합하십시오. 모두 사용 해보고 좋아하는 것을 고르고 자신의 프로젝트를 만들기 위해 프로젝트에 추가하는 데 시간을 투자하십시오.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">계속</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          앞뒤로
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          이상의 버튼
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          가져 형성을
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          어디로 갔습니까?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          댄스 대원
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          쿼터 노트
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          베이스, 미드, 고음
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          속도로 상하로 천천히
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Internet Simulator Setup:
         content1: 설명 입력
       Internet Simulator Setup 2:
-        title: 제목화면 주제
         content1: 설명 입력
       Internet Simulator Setup 3:
         content1: 설명 입력
       K-1 Artist 1 Multi 1:
-        title: 객관식
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: 객관식
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: 어떤 블록들이 사각형을 그릴 수 있을까요?
+        title: 객관식
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: 맞추기
         content2: 형태에 따라 모양을 맞추세요.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: 객관식
-        questions:
-        - text: 꽃꿀은 몇 개 일까요?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: 객관식
-        questions:
-        - text: 꽃꿀은 몇 개 일까요?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: 맞추기
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: 꽃꿀은 몇 개 일까요?
+        title: 객관식
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: 꽃꿀은 몇 개 일까요?
+        title: 객관식
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: 블럭을 맞추세요.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: 맞추기
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: 맞추기
         content2: 단추에 알맞은 춤 동작을 고르세요.
         questions:
         - {}
         - {}
         - {}
+        title: 맞추기
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: 객관식
+        - correct: true
         questions:
         - text: 디지털 흔적을 <strong>가장 적게</strong> 남기는 동물은?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
         title: 객관식
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: 반복을 이용해 이 순차실행을 간단히 할 수 있을까요?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Happy Maps Multi 1:
         title: 객관식
-        questions:
-        - text: 어떤 방향키로 플러브를 보물로 보낼 수 있을까요?
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
         - {}
         - {}
-      K-1 Keep it Private Multi 1:
+        questions:
+        - text: 어떤 방향키로 플러브를 보물로 보낼 수 있을까요?
         title: 객관식
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: 온라인으로 공유하지 <strong>말아야 할</strong> 정보는?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: 객관식
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: 마지막 블록으로 적절한 것은?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: 객관식
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: 같은 반복 블럭은?
+        title: 객관식
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: 객관식
+        - correct: true
         questions:
         - text: 적절한 반복 블록을 고르세요.
+        title: 객관식
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: 맞추기
+        - {}
         content2: 퍼즐들과 블럭들을 맞추세요.
-        pre_title: 소개
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: 맞추기
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: 미로
         questions:
         - text: 이 레벨을 해결할 수 있는 답은?
+        title: 미로
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: 객관식
         questions:
         - text: 어떤 알고리즘이 플러브를 꽃에 보낼 수 있을까요?
+        title: 객관식
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: 객관식
+        - correct: true
         questions:
         - text: 이 알고리즘의 처음에 시작해야하는 단계는?
+        title: 객관식
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
-        title: 객관식
         questions:
         - text: 이 알고리즘의 빈 칸에 채워야 하는 것은?
+        title: 객관식
+      K-1 Word Search Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 1:
-        title: 객관식
         questions:
         - text: '"이동하기" 블록은?'
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
         title: 객관식
-        questions:
-        - text: 말한 단어는?
+      K-1 Word Search Multi 3:
         answers:
         - text: 집합
         - text: 사각형
+          correct: true
         - text: 아래쪽
+        questions:
+        - text: 말한 단어는?
+        title: 객관식
       Multi-Screen Apps:
-        title: 제목화면 주제
         content1: 설명 입력
       New Challenge Introduction:
-        title: 제목화면 주제
+        content1: 설명 입력
+      OPD-K5 Reviewing Reflections:
         content1: 설명 입력
       OPD-K5 Stage3aGo:
-        title: 제목화면 주제
+        content1: 설명 입력
+      OPD-K5 Stage3aGo_copy:
+        content1: 설명 입력
+      OPD-K5 conditionals introduced:
+        content1: 설명 입력
+      OPD-K5 debugging:
+        content1: 설명 입력
+      OPD-K5 diving deeper intro:
+        content1: 설명 입력
+      OPD-K5 events introduced:
+        content1: 설명 입력
+      OPD-K5 for loops:
+        content1: 설명 입력
+      OPD-K5 for loops intro:
+        content1: 설명 입력
+      OPD-K5 for loops introduction:
+        content1: 설명 입력
+      OPD-K5 functions introduced:
+        content1: 설명 입력
+      OPD-K5 journaling:
+        content1: 설명 입력
+      OPD-K5 lesson implementation planning:
+        content1: 설명 입력
+      OPD-K5 lesson plans:
+        content1: 설명 입력
+      OPD-K5 loops introduced:
+        content1: 설명 입력
+      OPD-K5 project:
+        content1: 설명 입력
+      OPD-K5 projects introduction:
+        content1: 설명 입력
+      OPD-K5 role_of_teacher:
+        content1: 설명 입력
+      OPD-K5 sequencing introduced:
+        content1: 설명 입력
+      OPD-K5 sprite lab:
+        content1: 설명 입력
+      OPD-K5 sprite lab introduction:
+        content1: 설명 입력
+      OPD-K5 sprite lab unplugged:
+        content1: 설명 입력
+      OPD-K5 sprite lab video:
+        content1: 설명 입력
+      OPD-K5 types of lessons:
+        content1: 설명 입력
+      OPD-K5 using lesson plans:
+        content1: 설명 입력
+      OPD-K5 variables:
+        content1: 설명 입력
+      OPD-K5 variables introduction:
+        content1: 설명 입력
+      OPD-K5 variables unplugged:
+        content1: 설명 입력
+      OPD-K5 where to next:
+        content1: 설명 입력
+      OPD-K5-projects-1:
         content1: 설명 입력
       Prepare for your presentation:
-        title: 제목화면 주제
         content1: 설명 입력
       'Technique: Frequency Analysis':
         content1: 설명 입력
@@ -1160,661 +1322,1422 @@ ko-KR:
 
           * [컴퓨터는 무엇인가? - 활동가이드](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
+        answers:
+        - feedback: 틀렸습니다.
+        - correct: true
+          feedback: 맞습니다!
+        - feedback: 틀렸습니다.
+        - feedback: 틀림
         questions:
         - {}
+      behaviors 1 predict_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: 틀렸습니다.
+        - correct: true
+          feedback: 맞습니다!
+        - feedback: 틀렸습니다.
         - feedback: 틀림
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
+        - feedback: 틀렸습니다.
+        - correct: true
+          feedback: 맞습니다!
         - {}
         - feedback: 틀림
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - feedback: 틀렸습니다.
+        - correct: true
+          feedback: 맞습니다!
+        - {}
+        - feedback: 틀림
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 세 개의 똑같은 변으로 삼각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - text: 아티스트는 단일 선을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - text: 아티스트는 사각형을 그립니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 아티스트는 사각형을 그립니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 세 개의 똑같은 변으로 삼각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - text: 아티스트는 단일 선을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 아티스트는 사각형을 그립니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 세 개의 똑같은 변으로 삼각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - text: 아티스트는 단일 선을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 아티스트는 사각형을 그립니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: 아티스트는 세 개의 똑같은 변으로 삼각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - text: 아티스트는 단일 선을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 아티스트는 사각형을 그립니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: '12'
+          correct: true
+          feedback: 맞습니다!
+        - text: '15'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: 잘 모르겠음.
+          feedback: 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모으게 됩니까?
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: '12'
+          correct: true
+          feedback: 맞습니다!
+        - text: '15'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: 잘 모르겠음.
+          feedback: 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모으게 됩니까?
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: '12'
+          correct: true
+          feedback: 맞습니다!
+        - text: '15'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: 잘 모르겠음.
+          feedback: 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모으게 됩니까?
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: '12'
+          correct: true
+          feedback: 맞습니다!
+        - text: '15'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: 잘 모르겠음.
+          feedback: 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모으게 됩니까?
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 프로그램은 실패하지 않습니다. 스크랫은 도토리로 갈 것입니다.
+          feedback: 틀렸습니다. 스크랫은 마지막 회전을 한 후 잘못된 길로 갑니다.
+        - text: 스크랫은 마지막 회전을 한 후 잘못된 길로 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 스크랫은 역시 한 단계 적게 밟아 결국 도토리로 갈 수 없었습니다.
+          feedback: 틀렸습니다. 스크랫이 잘못된 길로 방향을 바꾼 후 역시 한 단계 적게 밟는 일이 발생합니다.
+        - text: 잘 모르겠음.
+          feedback: '첫 번째 오류는 스크랫이 마지막 회전 후 잘못된 길로 간 것입니다. '
+        questions:
+        - text: 아래 코드를 자세히 보세요. 이 프로그램을 실패하게 만들 첫 번째 버그는 무엇입니까?
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 프로그램은 실패하지 않습니다. 스크랫은 도토리로 갈 것입니다.
+          feedback: 틀렸습니다. 스크랫은 마지막 회전을 한 후 잘못된 길로 갑니다.
+        - text: 스크랫은 마지막 회전을 한 후 잘못된 길로 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 스크랫은 역시 한 단계 적게 밟아 결국 도토리로 갈 수 없었습니다.
+          feedback: 틀렸습니다. 스크랫이 잘못된 길로 방향을 바꾼 후 역시 한 단계 적게 밟는 일이 발생합니다.
+        - text: 잘 모르겠음.
+          feedback: '첫 번째 오류는 스크랫이 마지막 회전 후 잘못된 길로 간 것입니다. '
+        questions:
+        - text: 아래 코드를 자세히 보세요. 이 프로그램을 실패하게 만들 첫 번째 버그는 무엇입니까?
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - text: 프로그램은 실패하지 않습니다. 스크랫은 도토리로 갈 것입니다.
+          feedback: 틀렸습니다. 스크랫은 마지막 회전을 한 후 잘못된 길로 갑니다.
+        - text: 스크랫은 마지막 회전을 한 후 잘못된 길로 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 스크랫은 역시 한 단계 적게 밟아 결국 도토리로 갈 수 없었습니다.
+          feedback: 틀렸습니다. 스크랫이 잘못된 길로 방향을 바꾼 후 역시 한 단계 적게 밟는 일이 발생합니다.
+        - text: 잘 모르겠음.
+          feedback: '첫 번째 오류는 스크랫이 마지막 회전 후 잘못된 길로 간 것입니다. '
         questions:
-        - {}
+        - text: 아래 코드를 자세히 보세요. 이 프로그램을 실패하게 만들 첫 번째 버그는 무엇입니까?
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - text: 잘 모르겠음.
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 새는 결국 돼지에게서 한 단계 덜 가게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 가게 해줍니다.
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 가게 해줍니다.
+        - text: 잘 모르겠음.
+          feedback: 이 코드는 새를 돼지에게 다 가게 해 줍니다.
+        questions:
+        - text: 아래 코드를 매우 주의 깊게 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 새는 결국 돼지에게서 한 단계 덜 가게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 가게 해줍니다.
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 가게 해줍니다.
+        - text: 잘 모르겠음.
+          feedback: 이 코드는 새를 돼지에게 다 가게 해 줍니다.
+        questions:
+        - text: 아래 코드를 매우 주의 깊게 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 새는 결국 돼지에게서 한 단계 덜 가게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 가게 해줍니다.
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 가게 해줍니다.
+        - text: 잘 모르겠음.
+          feedback: 이 코드는 새를 돼지에게 다 가게 해 줍니다.
+        questions:
+        - text: 아래 코드를 매우 주의 깊게 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: 새는 결국 돼지에게서 한 단계 덜 가게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 가게 해줍니다.
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 가게 해줍니다.
+        - text: 잘 모르겠음.
+          feedback: 이 코드는 새를 돼지에게 다 가게 해 줍니다.
+        questions:
+        - text: 아래 코드를 매우 주의 깊게 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8은 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 하지 않습니다.
+        - text: BB-8은 단지 한 공간 만 이동합니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 하지 않습니다.
+        - text: BB-8은 5번 이동하고 고철 모두를 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
         - text: 잘 모르겠음
+          feedback: 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만듭니다.
+        questions:
+        - text: '"실행"을 클릭하면 무슨 일이 일어날거라고 생각하세요?'
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8은 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 하지 않습니다.
+        - text: BB-8은 단지 한 공간 만 이동합니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 하지 않습니다.
+        - text: BB-8은 5번 이동하고 고철 모두를 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
         - text: 잘 모르겠음
+          feedback: 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만듭니다.
+        questions:
+        - text: '"실행"을 클릭하면 무슨 일이 일어날거라고 생각하세요?'
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8은 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 하지 않습니다.
+        - text: BB-8은 단지 한 공간 만 이동합니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 하지 않습니다.
+        - text: BB-8은 5번 이동하고 고철 모두를 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
         - text: 잘 모르겠음
+          feedback: 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만듭니다.
+        questions:
+        - text: '"실행"을 클릭하면 무슨 일이 일어날거라고 생각하세요?'
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - text: BB-8은 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 하지 않습니다.
+        - text: BB-8은 단지 한 공간 만 이동합니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 하지 않습니다.
+        - text: BB-8은 5번 이동하고 고철 모두를 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음
+          feedback: 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만듭니다.
+        questions:
+        - text: '"실행"을 클릭하면 무슨 일이 일어날거라고 생각하세요?'
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8은 첫 번째 루프로는 너무 멀리 갈 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게
+            합니다.
+        - text: BB-8은 고철 모두를 얻기 위해 첫 번째 루프 안에서 충분히 멀리 이동하지 않을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: BB-8은 문제 없이 고철 모두를 수집할 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게
+            합니다.
+        - text: 잘 모르겠음.
+          feedback: 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게 합니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8은 첫 번째 루프로는 너무 멀리 갈 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게
+            합니다.
+        - text: BB-8은 고철 모두를 얻기 위해 첫 번째 루프 안에서 충분히 멀리 이동하지 않을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: BB-8은 문제 없이 고철 모두를 수집할 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게
+            합니다.
+        - text: 잘 모르겠음.
+          feedback: 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게 합니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: BB-8은 첫 번째 루프로는 너무 멀리 갈 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게
+            합니다.
+        - text: BB-8은 고철 모두를 얻기 위해 첫 번째 루프 안에서 충분히 멀리 이동하지 않을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: BB-8은 문제 없이 고철 모두를 수집할 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게
+            합니다.
+        - text: 잘 모르겠음.
+          feedback: 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게 합니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8은 첫 번째 루프로는 너무 멀리 갈 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게
+            합니다.
+        - text: BB-8은 고철 모두를 얻기 위해 첫 번째 루프 안에서 충분히 멀리 이동하지 않을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: BB-8은 문제 없이 고철 모두를 수집할 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게
+            합니다.
+        - text: 잘 모르겠음.
+          feedback: 첫 번째 루프는 BB-8이 3개의 공간으로 앞으로 이동해야 할 때 단지 2개의 공간으로만 앞으로 이동하게 합니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: 틀렸습니다.
         - text: B
+          feedback: 틀렸습니다.
         - text: C
+          feedback: 틀렸습니다.
         - text: D
+          correct: true
+          feedback: 맞습니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 어떤 이미지가 만들어 집니까?
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: 틀렸습니다.
         - text: B
+          feedback: 틀렸습니다.
         - text: C
+          feedback: 틀렸습니다.
         - text: D
+          correct: true
+          feedback: 맞습니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 어떤 이미지가 만들어 집니까?
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: 틀렸습니다.
         - text: B
+          feedback: 틀렸습니다.
         - text: C
+          feedback: 틀렸습니다.
         - text: D
+          correct: true
+          feedback: 맞습니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 어떤 이미지가 만들어 집니까?
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          feedback: 틀렸습니다.
+        - text: B
+          feedback: 틀렸습니다.
+        - text: C
+          feedback: 틀렸습니다.
+        - text: D
+          correct: true
+          feedback: 맞습니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 어떤 이미지가 만들어 집니까?
       courseD_multi_artist_nestedLoops9_predict1:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
+          feedback: 맞습니다!
         - text: B
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
         - text: C
-        - {}
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        - text: 잘 모르겠음.
+          feedback: 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        questions:
+        - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
+          feedback: 맞습니다!
         - text: B
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
         - text: C
-        - {}
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        - text: 잘 모르겠음.
+          feedback: 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        questions:
+        - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
+          feedback: 맞습니다!
         - text: B
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
         - text: C
-        - {}
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        - text: 잘 모르겠음.
+          feedback: 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        questions:
+        - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: 맞습니다!
+        - text: B
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        - text: C
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        - text: 잘 모르겠음.
+          feedback: 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        questions:
+        - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다."
+        questions:
+        - text: 구름이 시야를 가리고 있습니다. 이 구름 아래에 꽃이 있을 수 있습니다. 꽃이 있으면, 벌은 과즙을 한 번 모아야 합니다.
+            꽃이 없으면 벌은 아무것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라 생각하세요?
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다."
+        questions:
+        - text: 구름이 시야를 가리고 있습니다. 이 구름 아래에 꽃이 있을 수 있습니다. 꽃이 있으면, 벌은 과즙을 한 번 모아야 합니다.
+            꽃이 없으면 벌은 아무것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라 생각하세요?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다."
+        questions:
+        - text: 구름이 시야를 가리고 있습니다. 이 구름 아래에 꽃이 있을 수 있습니다. 꽃이 있으면, 벌은 과즙을 한 번 모아야 합니다.
+            꽃이 없으면 벌은 아무것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라 생각하세요?
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다."
+        questions:
+        - text: 구름이 시야를 가리고 있습니다. 이 구름 아래에 꽃이 있을 수 있습니다. 꽃이 있으면, 벌은 과즙을 한 번 모아야 합니다.
+            꽃이 없으면 벌은 아무것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라 생각하세요?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다."
+        questions:
+        - text: 구름이 시야를 가리고 있습니다. 이 구름 아래에 꽃이 있을 수 있습니다. 꽃이 있으면, 벌은 과즙을 한 번 모아야 합니다.
+            꽃이 없으면 벌은 아무것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라 생각하세요?
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 벌은 꽃에서 과즙과 벌집에서 꿀을 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 벌은 꽃과 벌집 모두에서 과즙을 얻으려 할 것입니다.
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 벌에게 꽃에서 과즙과 벌집에서 꿀을 얻게 합니다.
+        - text: 벌은 꽃과 벌집 모두에서 꿀을 얻으려 할 것입니다.
+          feedback: 틀렸습니다. 틀렸습니다. '만약 꽃에서' 블록은 벌에게 꽃에서 과즙과 벌집에서 꿀을 얻게 합니다..
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 벌에게 꽃에서 과즙과 벌집에서 꿀을 얻게 합니다."
+        questions:
+        - text: '아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어지리라 생각하세요? 기억하세요:  *한*개의 벌집에는
+            벌만 있거나 또는 각 구름 뒤에는 *한*송이 꽃만 있습니다.'
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 벌은 꽃에서 과즙과 벌집에서 꿀을 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 벌은 꽃과 벌집 모두에서 과즙을 얻으려 할 것입니다.
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 벌에게 꽃에서 과즙과 벌집에서 꿀을 얻게 합니다.
+        - text: 벌은 꽃과 벌집 모두에서 꿀을 얻으려 할 것입니다.
+          feedback: 틀렸습니다. 틀렸습니다. '만약 꽃에서' 블록은 벌에게 꽃에서 과즙과 벌집에서 꿀을 얻게 합니다..
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 벌에게 꽃에서 과즙과 벌집에서 꿀을 얻게 합니다."
+        questions:
+        - text: '아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어지리라 생각하세요? 기억하세요:  *한*개의 벌집에는
+            벌만 있거나 또는 각 구름 뒤에는 *한*송이 꽃만 있습니다.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+          feedback: 맞습니다!
+        - text: 벌은 꽃과 벌집 모두에서 과즙을 얻으려 할 것입니다.
+        - text: 벌은 꽃과 벌집 모두에서 꿀을 얻으려 할 것입니다.
+        - text: 잘 모르겠음.
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: 맞습니다!
+        - text: 벌은 꽃과 벌집 모두에서 과즙을 얻으려 할 것입니다.
+        - text: 벌은 꽃과 벌집 모두에서 꿀을 얻으려 할 것입니다.
+        - text: 잘 모르겠음.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 벌이 앞으로 이동하여 오직 한 번 만 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 단지 2 유닛의 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 모든 과즙을 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        questions:
+        - text: 아래 중첩 루프를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 벌이 앞으로 이동하여 오직 한 번 만 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 단지 2 유닛의 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 모든 과즙을 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        questions:
+        - text: 아래 중첩 루프를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 벌이 앞으로 이동하여 오직 한 번 만 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 단지 2 유닛의 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 모든 과즙을 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        questions:
+        - text: 아래 중첩 루프를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - text: 벌이 앞으로 이동하여 오직 한 번 만 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 단지 2 유닛의 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 모든 과즙을 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 벌은 앞으로 이동과 과즙 수집이라는 반복된 액션을 반복하여 퍼즐을 풉니다.
+        questions:
+        - text: 아래 중첩 루프를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: '8'
+          correct: true
+          feedback: 맞습니다!
+        - text: '12'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: 잘 모르겠음.
+          feedback: 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다. 이 모두는 2회
+            일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 벌은 얼마나 많은 꿀을 만들 수 있습니까?
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: '8'
+          correct: true
+          feedback: 맞습니다!
+        - text: '12'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: 잘 모르겠음.
+          feedback: 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다. 이 모두는 2회
+            일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 벌은 얼마나 많은 꿀을 만들 수 있습니까?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: '8'
+          correct: true
+          feedback: 맞습니다!
+        - text: '12'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: 잘 모르겠음.
+          feedback: 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다. 이 모두는 2회
+            일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 벌은 얼마나 많은 꿀을 만들 수 있습니까?
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: '8'
+          correct: true
+          feedback: 맞습니다!
+        - text: '12'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: 잘 모르겠음.
+          feedback: 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다. 이 모두는 2회
+            일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 벌은 얼마나 많은 꿀을 만들 수 있습니까?
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 사각형을 만들 때 라우렐이 잘못된 길로 갈 것입니다.
+          feedback: 틀렸습니다. 이것은 부분적으로는 맞았지만 루프 역시 보물 모두를 얻을 정도로 충분하게 길게 실행하지 않습니다.
+        - text: '루프가 라우렐이 보물 모두를 얻을 정도로 충분하게 길게 실행되지 않습니다. '
+          feedback: 틀렸습니다. 이것은 부분적으로는 맞았지만 벌 역시 사각형을 만들려 할 때 잘못된 길로 갑니다.
+        - text: 라우렐은 잘못된 길로 갔고 *또한* 루프는 라우렐이 보물 모두를 얻을 정도로 충분하게 길게 실행되지 않습니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 라우렐은 잘못된 길로 갔고 *또한* 루프는 라우렐이 보물 모두를 얻을 정도로 충분하게 길게 실행되지 않습니다.
+        questions:
+        - text: '아래 코드를 자세히 보세요. "실행"을 클릭했을 때 라우렐이 왜 보물 모두를 모을 수 없을 까요? 경고: 이것은 까다로운
+            문제이며, 답을 하기 전에 반드시 모든 옵션을 읽어 보세요. '
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 수확인은 모든 작물을 모을 것입니다.
+          feedback: 틀렸습니다. 호박을 모으기 위한 코드는 여기에 없습니다.
+        - text: 수확인은 그가 택한 경로에서 작물을 모으지 못할 것입니다.
+          feedback: 틀렸습니다. 코드는 수확인에게 계단 패턴을 반복해서 가능한 한 마주치는 많은 옥수수 또는 상추를 모으게 만듭니다.
+            그녀는 호박은 따지 않을 것입니다.
+        - text: 수확인은 호박을 제외한 모든 작물을 모을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 코드는 수확인에게 계단 패턴을 반복해서 가능한 한 마주치는 많은 옥수수 또는 상추를 모으게 만듭니다. 그녀는 호박은
+            따지 않을 것입니다.
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 무슨 일이 벌어질까요?
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: 수확인은 모든 작물을 모을 것입니다.
         - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 무슨 일이 벌어질까요?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
+        - text: 수확인은 모든 작물을 모을 것입니다.
         - {}
+        - correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 무슨 일이 벌어질까요?
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: 수확인은 모든 작물을 모을 것입니다.
         - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 무슨 일이 벌어질까요?
       courseD_multi_farmer_ramp13:
+        answers:
+        - text: 농부는 경로 끝까지 걸어가 호박을 수확할 것입니다.
+          feedback: '틀렸습니다. ''호박 따기'' 블록이 루프 안에 있어 농부는 끝에서가 아니라 각 단계에서 호박을 따려 할 것입니다.                                                                                              '
+        - text: 농부는 각 사각형에서 호박을 따려하지만 결코 호박까지 가지 못할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 농부는 네 개의 공간을 걸어가 그 다음 한 개의 호박을 따려할 것입니다.
+          feedback: '틀렸습니다. ''호박 따기'' 블록이 루프 안에 있어 농부는 끝에서가 아니라 각 단계에서 호박을 따려 할 것입니다.                                                                                              '
+        - text: 잘 모르겠음.
+          feedback: "'호박 따기' 블록이 루프 안에 있어 농부는 끝에서가 아니라 각 단계에서 호박을 따려 할 것입니다.                                                                                              "
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        markdown: 여기 이미 전에 보았던 것과 유사한 블록을 사용하는 새 퍼즐 유형이 있습니다. 아래 코드를 실행하면 어떤 일이 벌어질
+          지 예측해 볼 수 있어요?
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아무 일도 벌어지지 않습니다. 이 코드는 단지 평지만을 남길 거예요.
+          feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 이 코드는 흙더미를 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 이 코드는 구멍을 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          feedback: 틀렸습니다. '동안' 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 잘 모르겠음.
+          feedback: "'동안' 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다."
+        questions:
+        - text: 아래 코드를 잘 보세요. 이 퍼즐을 끝에 무엇이 남아 있을까요?
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아무 일도 벌어지지 않습니다. 이 코드는 단지 평지만을 남길 거예요.
+          feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 이 코드는 흙더미를 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 이 코드는 구멍을 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          feedback: 틀렸습니다. '동안' 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 잘 모르겠음.
+          feedback: "'동안' 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다."
+        questions:
+        - text: 아래 코드를 잘 보세요. 이 퍼즐을 끝에 무엇이 남아 있을까요?
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아무 일도 벌어지지 않습니다. 이 코드는 단지 평지만을 남길 거예요.
+          feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 이 코드는 흙더미를 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 이 코드는 구멍을 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          feedback: 틀렸습니다. '동안' 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 잘 모르겠음.
+          feedback: "'동안' 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다."
+        questions:
+        - text: 아래 코드를 잘 보세요. 이 퍼즐을 끝에 무엇이 남아 있을까요?
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: 아무 일도 벌어지지 않습니다. 이 코드는 단지 평지만을 남길 거예요.
+          feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 이 코드는 흙더미를 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 이 코드는 구멍을 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          feedback: 틀렸습니다. '동안' 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 잘 모르겠음.
+          feedback: "'동안' 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다."
+        questions:
+        - text: 아래 코드를 잘 보세요. 이 퍼즐을 끝에 무엇이 남아 있을까요?
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아무 일도 일어나지 않을 거예요.
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: '농부는 절대 흙 제거하는 일을 중단하지 않을 거예요. '
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아무 일도 일어나지 않을 거예요.
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: '농부는 절대 흙 제거하는 일을 중단하지 않을 거예요. '
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아무 일도 일어나지 않을 거예요.
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: '농부는 절대 흙 제거하는 일을 중단하지 않을 거예요. '
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - text: 아무 일도 일어나지 않을 거예요.
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: '농부는 절대 흙 제거하는 일을 중단하지 않을 거예요. '
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 좀비가 즉시 우회전하여 막히게 될 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 좀비는 해바라기로 갈 것입니다.
+          feedback: 틀렸습니다. 이 코드에서는 똑바로 갈 수 있는지 보기 위해 보기 *전*에 우회전을 찾습니다. 이 때문에 퍼즐은
+            실패합니다.
+        - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
+          feedback: 틀렸습니다. 좀비는 우회전 또는 직선 경로만을 찾습니다. 결코 좌회전하기 위해 살펴 보지 않아 거의 즉시 막힙니다.
+        - text: 잘 모르겠음.
+          feedback: 이 코드에서는 똑바로 갈 수 있는지 보기 위해 보기 *전*에 우회전을 찾습니다. 이 때문에 퍼즐은 실패합니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: 맞습니다!
+        - text: 좀비는 해바라기로 갈 것입니다.
+        - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
+        - text: 잘 모르겠음.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+          feedback: 맞습니다!
+        - text: 좀비는 해바라기로 갈 것입니다.
+        - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
+        - text: 잘 모르겠음.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: 맞습니다!
+        - text: 좀비는 해바라기로 갈 것입니다.
+        - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
+        - text: 잘 모르겠음.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 새는 전혀 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를
+            때까지 계속 합니다!
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 앞으로 이동하여 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 코드는 안전한 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에
+            다다를 때까지 계속 합니다!
+        - text: 잘 모르겠음.
+          feedback: 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를 때까지 계속
+            합니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질거라 생각하세요?
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 새는 전혀 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를
+            때까지 계속 합니다!
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 앞으로 이동하여 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 코드는 안전한 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에
+            다다를 때까지 계속 합니다!
+        - text: 잘 모르겠음.
+          feedback: 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를 때까지 계속
+            합니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질거라 생각하세요?
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 새는 전혀 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를
+            때까지 계속 합니다!
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 앞으로 이동하여 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 코드는 안전한 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에
+            다다를 때까지 계속 합니다!
+        - text: 잘 모르겠음.
+          feedback: 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를 때까지 계속
+            합니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질거라 생각하세요?
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: 새는 전혀 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를
+            때까지 계속 합니다!
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 앞으로 이동하여 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 코드는 안전한 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에
+            다다를 때까지 계속 합니다!
+        - text: 잘 모르겠음.
+          feedback: 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를 때까지 계속
+            합니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질거라 생각하세요?
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아무 것도 없어요. 스크랫이 전혀 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. "앞으로 이동" 블럭을 "반복" 블럭 안에 넣으면 스크랫이 앞으로 세 번 이동합니다.
+        - text: '스크랫은 세 번 앞으로 이동하고 그 다음, 세 번 더 앞으로 이동하여 도토리에 도착할 수 있을 거예요! '
+          correct: true
+          feedback: 맞습니다!
+        - text: '스크랫은 앞으로 이동하고 그 다음, 회전하고 충돌할 거예요! '
+          feedback: 틀렸습니다. "앞으로 이동" 블럭을 "반복" 블럭 안에 넣으면 스크랫이 앞으로 세 번 이동합니다.
+        - text: 잘 모르겠음.
+          feedback: ' "앞으로 이동" 블럭을 "반복" 블럭 안에 넣으면 스크랫이 앞으로 세 번 이동할 거예요. 그 다음 회전하고
+            세 번 더 앞으로 이동하여 도토리에 도착하게 될거예요!'
+        questions:
+        - text: 이 코드는 새 블록을 사용합니다. "실행"을 누르면 무슨 일이 벌어질거라 생각하세요?
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 동일한 프로그램이 이 퍼즐을 푸는데도 효과가 있을 것입니다.
+          correct: true
+          feedback: 맞습니다! 꿀이 양이 다르게 있다는 것은 문제가 되지 않습니다. 함수는 이를 취급하도록 프로그램되어 있습니다.
+        - text: 벌은 꿀을 충분하게 만들지 못할 것입니다.
+          feedback: 틀렸습니다. 함수는 수량이 0 이상인 꿀을 취급하도록 프로그램되어 있습니다.
+        - text: 벌은 너무 많은 꿀을 만들려 할 것입니다.
+          feedback: 틀렸습니다. 함수는 수량이 0 이상인 꿀을 취급하도록 프로그램되어 있습니다.
+        - text: 잘 모르겠음.
+          feedback: 프로그램은 이 퍼즐을 푸는 데도 효과가 있을 것입니다. 수량이 0 이상인 꿀을 취급하도록 프로그램되어 있습니다.
+        questions:
+        - text: 지난 번 퍼즐과 정확히 똑같은 프로그램이 여기 있지만 이 퍼즐에서 모드는 꿀의 양은 변경되었습니다. "실행"을 클릭하면
+            무슨 일이 벌어집니까?
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 수확인은 두 개의 호박을 딸 것입니다.
+          feedback: 틀렸습니다. 수확인은 옥수수로 갈 때까지 "확인과 따기"를 호출하지 않습니다.
+        - text: 수확인은 호박을 모두 딸 거예요.
+          feedback: 틀렸습니다. 수확인은 옥수수로 갈 때까지 "확인과 따기"를 호출하지 않습니다.
+        - text: 수확인은 상추를 딸 거예요.
+          feedback: 틀렸습니다. 수확인은 한 번만 회전하고 옥수수에서 끝냅니다.
+        - text: 수확인은 옥수수를 딸 거예요.
+          correct: true
+          feedback: 맞습니다!
+        questions:
+        - text: 아래 정의된 함수를 보세요. 수확인은 무엇을 딸까요?
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 수확인은 두 개의 호박을 딸 것입니다.
+        - text: 수확인은 호박을 모두 딸 거예요.
+        - text: 수확인은 상추를 딸 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 수확인은 옥수수를 딸 거예요.
+        questions:
+        - text: 아래 정의된 함수를 보세요. 수확인은 무엇을 딸까요?
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 수확인은 두 개의 호박을 딸 것입니다.
+        - text: 수확인은 호박을 모두 딸 거예요.
+        - text: 수확인은 상추를 딸 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 수확인은 옥수수를 딸 거예요.
+        questions:
+        - text: 아래 정의된 함수를 보세요. 수확인은 무엇을 딸까요?
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: 수확인은 두 개의 호박을 딸 것입니다.
+        - text: 수확인은 호박을 모두 딸 거예요.
+        - text: 수확인은 상추를 딸 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 수확인은 옥수수를 딸 거예요.
+        questions:
+        - text: 아래 정의된 함수를 보세요. 수확인은 무엇을 딸까요?
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 한 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 겹쳐지는 두 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 사각형의 각 변의 길이는 단지 100 픽셀이지만 아티스트는 함수 사이에서 175 픽셀 점프합니다.
+        - text: 아티스트는 두 개의 사각형 그 사이에 작은 간격을 두고 그릴 것입니다.
+          correct: true
+          feedback: 맛습니다. 함수는 프록그램에서 두 번 호출되었고 그 사이에 점프가 한번 있었습니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 한 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 겹쳐지는 두 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 사각형의 각 변의 길이는 단지 100 픽셀이지만 아티스트는 함수 사이에서 175 픽셀 점프합니다.
+        - text: 아티스트는 두 개의 사각형 그 사이에 작은 간격을 두고 그릴 것입니다.
+          correct: true
+          feedback: 맛습니다. 함수는 프록그램에서 두 번 호출되었고 그 사이에 점프가 한번 있었습니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 한 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 겹쳐지는 두 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 사각형의 각 변의 길이는 단지 100 픽셀이지만 아티스트는 함수 사이에서 175 픽셀 점프합니다.
+        - text: 아티스트는 두 개의 사각형 그 사이에 작은 간격을 두고 그릴 것입니다.
+          correct: true
+          feedback: 맛습니다. 함수는 프록그램에서 두 번 호출되었고 그 사이에 점프가 한번 있었습니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 한 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 겹쳐지는 두 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 사각형의 각 변의 길이는 단지 100 픽셀이지만 아티스트는 함수 사이에서 175 픽셀 점프합니다.
+        - text: 아티스트는 두 개의 사각형 그 사이에 작은 간격을 두고 그릴 것입니다.
+          correct: true
+          feedback: 맛습니다. 함수는 프록그램에서 두 번 호출되었고 그 사이에 점프가 한번 있었습니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 한 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 겹쳐지는 두 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 사각형의 각 변의 길이는 단지 100 픽셀이지만 아티스트는 함수 사이에서 175 픽셀 점프합니다.
+        - text: 아티스트는 두 개의 사각형 그 사이에 작은 간격을 두고 그릴 것입니다.
+          correct: true
+          feedback: 맛습니다. 함수는 프록그램에서 두 번 호출되었고 그 사이에 점프가 한번 있었습니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: 맞습니다!
         - {}
-        - {}
+        - text: 잘 모르겠음.
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: 맞습니다!
         - {}
+        - text: 잘 모르겠음.
+        questions:
         - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: 맞습니다!
+        - {}
+        - text: 잘 모르겠음.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 플레이 공간의 한 쪽에서 다른 쪽으로 가며 두께가 증가하는 직선을 그릴 거예요.
+          feedback: 틀렸습니다. 아티스트는 "위한" 루프의 반복과 반복 사이에서 회전합니다.
+        - text: '아티스트는 ''위한'' 루프 전체의 각 시간에 나선형을 그리고 선은 더 길고 더 가느러질거예요. '
+          feedback: 틀렸습니다. '위한' 루프 전체의 각 시간에 아티스트는 또한 더 두꺼운 더 긴 선을 그립니다.
+        - text: '아티스트는 ''위한'' 루프 전체의 각 시간에 나선형을 그리고 선은 더 길고 더 두꺼워 질거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 틀렸습니다. '위한' 루프 전체의 각 시간에 아티스트는 또한 더 두꺼운 더 긴 선을 그립니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 플레이 공간의 한 쪽에서 다른 쪽으로 가며 두께가 증가하는 직선을 그릴 거예요.
+          feedback: 틀렸습니다. 아티스트는 "위한" 루프의 반복과 반복 사이에서 회전합니다.
+        - text: '아티스트는 ''위한'' 루프 전체의 각 시간에 나선형을 그리고 선은 더 길고 더 가느러질거예요. '
+          feedback: 틀렸습니다. '위한' 루프 전체의 각 시간에 아티스트는 또한 더 두꺼운 더 긴 선을 그립니다.
+        - text: '아티스트는 ''위한'' 루프 전체의 각 시간에 나선형을 그리고 선은 더 길고 더 두꺼워 질거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 틀렸습니다. '위한' 루프 전체의 각 시간에 아티스트는 또한 더 두꺼운 더 긴 선을 그립니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 플레이 공간의 한 쪽에서 다른 쪽으로 가며 두께가 증가하는 직선을 그릴 거예요.
+          feedback: 틀렸습니다. 아티스트는 "위한" 루프의 반복과 반복 사이에서 회전합니다.
+        - text: '아티스트는 ''위한'' 루프 전체의 각 시간에 나선형을 그리고 선은 더 길고 더 가느러질거예요. '
+          feedback: 틀렸습니다. '위한' 루프 전체의 각 시간에 아티스트는 또한 더 두꺼운 더 긴 선을 그립니다.
+        - text: '아티스트는 ''위한'' 루프 전체의 각 시간에 나선형을 그리고 선은 더 길고 더 두꺼워 질거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 틀렸습니다. '위한' 루프 전체의 각 시간에 아티스트는 또한 더 두꺼운 더 긴 선을 그립니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - text: 아티스트는 플레이 공간의 한 쪽에서 다른 쪽으로 가며 두께가 증가하는 직선을 그릴 거예요.
+          feedback: 틀렸습니다. 아티스트는 "위한" 루프의 반복과 반복 사이에서 회전합니다.
+        - text: '아티스트는 ''위한'' 루프 전체의 각 시간에 나선형을 그리고 선은 더 길고 더 가느러질거예요. '
+          feedback: 틀렸습니다. '위한' 루프 전체의 각 시간에 아티스트는 또한 더 두꺼운 더 긴 선을 그립니다.
+        - text: '아티스트는 ''위한'' 루프 전체의 각 시간에 나선형을 그리고 선은 더 길고 더 두꺼워 질거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: 잘 모르겠음.
+          feedback: 틀렸습니다. '위한' 루프 전체의 각 시간에 아티스트는 또한 더 두꺼운 더 긴 선을 그립니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 동일한 함수를 사용하여 두 개의 다른 크기의 상자를 그릴 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는 두 개의 다른 함수를 사용하여 두 개의 다른 크기의 상자를 그릴 거예요.
+          feedback: 틀렸습니다. 매개변수를 사용하면 한 개의 단일 함수로 여러 개의 결과물을 만들 수 있습니다.
+        - text: 아티스트는 두 개의 다른 함수를 사용하여 동일 크기의 상자를 두 번 그릴 거예요.
+          feedback: 틀렸습니다. 매개변수를 사용하면 한 개의 단일 함수로 여러 개의 결과물을 만들 수 있습니다.
+        - text: 잘 모르겠음.
+          feedback: 프로그램은 한 개의 단일 함수로 두 개의 다른 크기의 상자를 만들게 하는 매개변수를 사용합니다.
+        questions:
+        - text: 이 프로그램을 실행할 때 무슨 일이 일어납니까?
+        markdown: |+
+          매개변수를 '사각형 그리기' 함수에 추가했습니다. 파란색 "편집" 버튼을 클릭하여 전체 함수 정의를 보세요.
+
+
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 50 픽셀 변을 갖는 삼각형을 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는  3 픽셀 변을 갖는 50개 변 다각형을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `반복` 루프 안에 있어야 합니다.
+        - text: 아티스트는 50도 회전을 갖는 세 개의 열린 변을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `회전` 블록 안에 서 사용되어야 할 것입니다.
+        - text: 잘 모르겠음.
+          feedback: "`길이` 변수는 50에 설정하고 `앞으로 이동` 블록 안에서 사용될 것이며 그래서 아티스트는 50 픽셀 변을
+            가진 삼각형을 그릴 것입니다."
+        questions:
+        - text: 변수 "길이"를 50에 설정했습니다. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 50 픽셀 변을 갖는 삼각형을 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는  3 픽셀 변을 갖는 50개 변 다각형을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `반복` 루프 안에 있어야 합니다.
+        - text: 아티스트는 50도 회전을 갖는 세 개의 열린 변을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `회전` 블록 안에 서 사용되어야 할 것입니다.
+        - text: 잘 모르겠음.
+          feedback: "`길이` 변수는 50에 설정하고 `앞으로 이동` 블록 안에서 사용될 것이며 그래서 아티스트는 50 픽셀 변을
+            가진 삼각형을 그릴 것입니다."
+        questions:
+        - text: 변수 "길이"를 50에 설정했습니다. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 50 픽셀 변을 갖는 삼각형을 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는  3 픽셀 변을 갖는 50개 변 다각형을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `반복` 루프 안에 있어야 합니다.
+        - text: 아티스트는 50도 회전을 갖는 세 개의 열린 변을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `회전` 블록 안에 서 사용되어야 할 것입니다.
+        - text: 잘 모르겠음.
+          feedback: "`길이` 변수는 50에 설정하고 `앞으로 이동` 블록 안에서 사용될 것이며 그래서 아티스트는 50 픽셀 변을
+            가진 삼각형을 그릴 것입니다."
+        questions:
+        - text: 변수 "길이"를 50에 설정했습니다. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - text: 아티스트는 50 픽셀 변을 갖는 삼각형을 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는  3 픽셀 변을 갖는 50개 변 다각형을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `반복` 루프 안에 있어야 합니다.
+        - text: 아티스트는 50도 회전을 갖는 세 개의 열린 변을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `회전` 블록 안에 서 사용되어야 할 것입니다.
+        - text: 잘 모르겠음.
+          feedback: "`길이` 변수는 50에 설정하고 `앞으로 이동` 블록 안에서 사용될 것이며 그래서 아티스트는 50 픽셀 변을
+            가진 삼각형을 그릴 것입니다."
+        questions:
+        - text: 변수 "길이"를 50에 설정했습니다. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할것이라고 가정합니다.
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할것이라고 가정합니다."
+        questions:
+        - text: 꽃이 없으면 벌은 아무것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라
+            생각하세요?
+        markdown: 구름이 시야를 가리고 있어요. 이 구름 아래에 꽃이 있을 거예요. 꽃이 있으면, 벌이 과즙을 **한 번** 모아야
+          합니다.
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 벌은 꽃에서 과즙을 얻을 거예요, 그렇지 않으면 꿀을 만들 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 벌은 꽃과 벌집 모두에서 과즙을 얻으려 할 것입니다.
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 벌에게 꽃에서 과즙을 얻게 하고 꽃이 없으면 꿀을 만들게 합니다 (그러므로
+            벌집).
+        - text: 벌은 꽃과 벌집 모두에서 꿀을 얻으려 할 것입니다.
+          feedback: 틀렸습니다. 틀렸습니다. '만약 꽃에서' 블록은 벌에게 꽃에서 과즙과 벌집에서 꿀을 얻게 합니다.
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 벌에게 꽃에서 과즙을 얻게 하고, 그렇지 않으면  꿀을 만들게 합니다."
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어질거라고 생각해요?
+        markdown: '종종 구름이 꽃을 덮고, 종종, 구름이 벌집을 덮습니다! 어쨌든, 각 구름 아래에는 **한송이**꽃 또는 **한개**의
+          벌집만 있을 것입니다. '
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '벌은 앞으로 이동하여 꽃에서 과즙 모두를 모을 거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        - text: '벌은 앞으로 이동하고 한 개를 제외하고 모든 꽃에서 과즙 모두를 모을 거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 앞으로 이동하여 각 꽃에서 한 개의 과즙을 모을 거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        - text: '벌은 앞으로 이동하여 꽃에서 있는 것 보다 더 많은 과즙을 모으려 할거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        questions:
+        - text: 아래 코드를 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: '벌은 앞으로 이동하여 꽃에서 과즙 모두를 모을 거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        - text: '벌은 앞으로 이동하고 한 개를 제외하고 모든 꽃에서 과즙 모두를 모을 거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 앞으로 이동하여 각 꽃에서 한 개의 과즙을 모을 거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
         - {}
-        - {}
-        - {}
-        - {}
+        questions:
+        - text: 아래 코드를 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
+        - text: '벌은 앞으로 이동하여 꽃에서 과즙 모두를 모을 거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        - text: '벌은 앞으로 이동하고 한 개를 제외하고 모든 꽃에서 과즙 모두를 모을 거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 앞으로 이동하여 각 꽃에서 한 개의 과즙을 모을 거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
         - {}
+        questions:
+        - text: 아래 코드를 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: '벌은 앞으로 이동하여 꽃에서 과즙 모두를 모을 거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        - text: '벌은 앞으로 이동하고 한 개를 제외하고 모든 꽃에서 과즙 모두를 모을 거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 앞으로 이동하여 각 꽃에서 한 개의 과즙을 모을 거예요. '
+          feedback: 틀렸습니다. `위한` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
         - {}
-        - {}
-        - {}
+        questions:
+        - text: 아래 코드를 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 벌은 과즙도 꿀도 모으지 않을 거예요.
+          feedback: '틀렸습니다. 함수는 매개변수를 통과하는 것만큼 많은 과즙 또는 꿀을 모으도록 설정되었습니다. '
+        - text: '벌은 세 개의 과즙 또는 꿀을 그 다음에는 두 개의 과즙 또는 꿀을 계단 패턴으로 모을 거예요. '
+          correct: true
+          feedback: '맞습니다. 함수는 매개변수를 통과하는 것만큼 많은 과즙 또는 꿀을 모으도록 설정되었습니다. '
+        - text: '벌은 루프의 각 반복에서 한 개의 과즙 또는 꿀 만 모을 거예요. '
+          feedback: '틀렸습니다. 함수는 매개변수를 통과하는 것만큼 많은 과즙 또는 꿀을 모으도록 설정되었습니다. '
+        - text: 잘 모르겠음.
+          feedback: '함수 내부 보기를 클릭하면 그것이 매개변수를 통과하는 것만큼 많은 과즙 또는 꿀을 모으도록 설정되었음을 볼 수
+            있습니다. '
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
+        markdown: '구름 아래에 정확히 1개의 과즙을 가진 꽃 또는 정확히 1개의 꿀을 가진 벌집이 있습니다. 함수 위 파란색 "편집"
+          버튼을 클릭하여 아래 질문에 답을 하기 전에 내부에 무엇이 있는지 보세요.  '
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 해적은 "알리 만나서 반가워요,"라고 말할 거예요. 그리고 그게 끝이예요.
+          correct: true
+          feedback: '맞습니다. '
+        - text: 해적은 "만나서 반가워요,"라고 말할 거예요. 그리고 그게 끝이예요.
+          feedback: 틀렸습니다. `연결` 블록은 제공된 이름을 해적의 문장에 삽입한다는 점에 유의하세요.
+        - text: 해적은 "알리,"라고 말할 거예요. 그리고 그게 끝이예요.
+          feedback: 틀렸습니다. `연결` 블록은 제공된 이름을 해적의 문장에 삽입한다는 점에 유의하세요.
+        - text: 잘 모르겠음.
+          feedback: '틀렸습니다. `연결` 블록은 제공된 이름 (알리)을 해적의 문장에 삽입한다는 점에 유의하세요. '
+        questions:
+        - text: '사용자가 이름 "알리"를 입력하면 어떻게 될까요? '
+        markdown: "**이 퍼즐은 `요청` 블록이라 불리는 새 블록을 사용합니다.**\n\n`요청` 블록은 프로그램을 중단하고 사용자에게
+          텍스트를 입력하도록 유도합니다. \n\n사용자가 어떤 텍스트를 입력하든 `요청` 블록 끝에서 보이는 변수에 저장됩니다. 이 경우에는
+          `이름` 변수입니다.\n"
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 퍼즐을 맞게 풀 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 선 그리기" 대신 "다각형 그리기"를 사용합니다.
+        - text: 아티스트는 네 개의 사각형을 창문 패턴으로 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는 사각형의 한 라인만 그릴 것입니다.
+          feedback: 틀렸습니다. 프로그램은 "다각형 선 그리기"를 호출하지 않습니다.
+        - text: 아티스트는 네 개의 사각형을 서로 위에 그릴 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 그리기"를 위해 호출과 호출 사이에 90도 회전을 합니다.
+        questions:
+        - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 퍼즐을 맞게 풀 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 선 그리기" 대신 "다각형 그리기"를 사용합니다.
+        - text: 아티스트는 네 개의 사각형을 창문 패턴으로 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는 사각형의 한 라인만 그릴 것입니다.
+          feedback: 틀렸습니다. 프로그램은 "다각형 선 그리기"를 호출하지 않습니다.
+        - text: 아티스트는 네 개의 사각형을 서로 위에 그릴 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 그리기"를 위해 호출과 호출 사이에 90도 회전을 합니다.
+        questions:
+        - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 아티스트는 퍼즐을 맞게 풀 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 선 그리기" 대신 "다각형 그리기"를 사용합니다.
+        - text: 아티스트는 네 개의 사각형을 창문 패턴으로 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는 사각형의 한 라인만 그릴 것입니다.
+          feedback: 틀렸습니다. 프로그램은 "다각형 선 그리기"를 호출하지 않습니다.
+        - text: 아티스트는 네 개의 사각형을 서로 위에 그릴 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 그리기"를 위해 호출과 호출 사이에 90도 회전을 합니다.
+        questions:
+        - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: 아티스트는 퍼즐을 맞게 풀 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 선 그리기" 대신 "다각형 그리기"를 사용합니다.
+        - text: 아티스트는 네 개의 사각형을 창문 패턴으로 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는 사각형의 한 라인만 그릴 것입니다.
+          feedback: 틀렸습니다. 프로그램은 "다각형 선 그리기"를 호출하지 않습니다.
+        - text: 아티스트는 네 개의 사각형을 서로 위에 그릴 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 그리기"를 위해 호출과 호출 사이에 90도 회전을 합니다.
+        questions:
+        - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # Overview
@@ -1824,27 +2747,95 @@ ko-KR:
           ## Resources
 
           * [알루미늄 보트](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 활동가이드 (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csf_be_a_super_digital_citizen:
+        content1: 설명 입력
+      csf_password_power-up:
+        content1: 설명 입력
+      csf_putting_a_stop_to_online_meanness:
+        content1: 설명 입력
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # 나의 온라인 마을
+
+          ## 온라인에서 안전한 장소를 가는 방법은 무엇일까?
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 라우렐은 보물 모두를 모을 것입니다.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 잘 모르겠음.
+          feedback: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        questions:
+        - text: 아래 코드를 자세히 보세요. 코드가 끝까지 실행되면 (오류를 무시하고) 라우렐은 몇 개의 보물을 얻을 수 있을까요?
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 라우렐은 보물 모두를 모을 것입니다.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 잘 모르겠음.
+          feedback: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 라우렐은 보물 모두를 모을 것입니다.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 잘 모르겠음.
+          feedback: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
         questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
+        - text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 라우렐은 보물 모두를 모을 것입니다.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 잘 모르겠음.
+          feedback: 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        questions:
         - {}
-        - {}
-        - {}
-        - {}
+      gradek1_activity_beNice:
+        markdown: "# 컴퓨터 실습실에서의 동작"
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          # Overview
+
+          이 수업은 가능한 한 많은 동전을 담을 수 있는 알루미늄 호일 보트를 설계하기 위해 그룹으로 진행됩니다. 수업이 끝나면 그룹은 이 활동을 통한 자신의 경험을 회상하고 코스의 나머지  수업에 필요한 문제 해결 유형과 연관 지어 봅니다.
+
+          ## Resources
+
+          * [알루미늄 보트](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 활동가이드 (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      courseF_external_variableConstant:
+        markdown: "<h2>변수에 관한 그 이상</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>변수를 ....상수로서
+          사용하는 한 가지 훌륭한 방법을 이제 막 배웠습니다!  \n변수를 상수로서 사용할 때, 한 번에 값 하나를 설정하고 그 다음, \"실행\"을
+          클릭한 후 변경하지 않고 그 *동일한* 값을 프로그램에서 여러 번 사용할 것입니다.  </h3>\n<br/><hr/>\n<h3>시리즈의
+          다음 부분에서는 프로그램 안에서 변*하는* 변수로 코드를 작성할 것입니다.</h3>\n\n"
+      courseD_EOC_2020:
+        display_name: 과정말 프로젝트
+      courseE_EOC_2020:
+        display_name: 과정말 프로젝트
+      courseExpress_EOC_2020:
+        display_name: 과정말 프로젝트
+      courseF_EOC_2020:
+        display_name: 과정말 프로젝트
+      outbreak_story:
+        content1: 설명 입력
+      outbreak_story2:
+        content1: 설명 입력

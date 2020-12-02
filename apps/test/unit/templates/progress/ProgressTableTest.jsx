@@ -7,24 +7,24 @@ import {
 } from '@cdo/apps/templates/progress/ProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import ProgressGroup from '@cdo/apps/templates/progress/ProgressGroup';
+import LessonGroup from '@cdo/apps/templates/progress/LessonGroup';
 
 const FAKE_LESSONS = [];
 const FAKE_LEVELS = [];
 const FAKE_LESSON_1 = {
-  category: 'jazz',
+  lessonGroup: {displayName: 'jazz'},
   lessons: FAKE_LESSONS,
   levels: FAKE_LEVELS
 };
 const FAKE_LESSON_2 = {
-  category: 'samba',
+  lessonGroup: {displayName: 'samba'},
   lessons: FAKE_LESSONS,
   levels: FAKE_LEVELS
 };
 const DEFAULT_PROPS = {
   isPlc: false,
   isSummaryView: false,
-  categorizedLessons: [FAKE_LESSON_1]
+  groupedLessons: [FAKE_LESSON_1]
 };
 
 describe('ProgressTable', () => {
@@ -74,28 +74,28 @@ describe('ProgressTable', () => {
     );
   });
 
-  it('renders multiple lessons as ProgressGroups', () => {
+  it('renders multiple lessons as LessonGroups', () => {
     const wrapper = shallow(
       <ProgressTable
         {...DEFAULT_PROPS}
-        categorizedLessons={[FAKE_LESSON_1, FAKE_LESSON_2]}
+        groupedLessons={[FAKE_LESSON_1, FAKE_LESSON_2]}
       />,
       {disableLifecycleMethods: true}
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <ProgressGroup
-          key={FAKE_LESSON_1.category}
+        <LessonGroup
+          key={FAKE_LESSON_1.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          groupName={FAKE_LESSON_1.category}
+          lessonGroup={FAKE_LESSON_1.lessonGroup}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
           lessons={FAKE_LESSON_1.lessons}
           levelsByLesson={FAKE_LESSON_1.levels}
         />
-        <ProgressGroup
-          key={FAKE_LESSON_2.category}
+        <LessonGroup
+          key={FAKE_LESSON_2.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          groupName={FAKE_LESSON_2.category}
+          lessonGroup={FAKE_LESSON_2.lessonGroup}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
           lessons={FAKE_LESSON_2.lessons}
           levelsByLesson={FAKE_LESSON_2.levels}

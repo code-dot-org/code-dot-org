@@ -21,6 +21,8 @@ function drawBackground() {
 
 function updateTitle() {
   this.fill('black');
+  this.stroke('white');
+  this.strokeWeight(3);
   this.textAlign(this.CENTER, this.CENTER);
   this.textSize(50);
   this.text(coreLibrary.title, 0, 0, 400, 200);
@@ -38,6 +40,9 @@ export const commands = {
   },
 
   // Action commands
+  bounceOff(spriteArg, targetArg) {
+    actionCommands.bounceOff(spriteArg, targetArg);
+  },
   changePropBy(spriteArg, prop, val) {
     actionCommands.changePropBy(spriteArg, prop, val);
   },
@@ -46,8 +51,20 @@ export const commands = {
     actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
+  isCostumeEqual(spriteArg, costumeName) {
+    return actionCommands.isCostumeEqual(spriteArg, costumeName);
+  },
+
+  isKeyPressed(key) {
+    return actionCommands.isKeyPressed.apply(this, [key]);
+  },
+
   isTouchingEdges(spriteArg) {
     return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
+  },
+
+  isTouchingSprite(spriteArg, targetArg) {
+    return actionCommands.isTouchingSprite(spriteArg, targetArg);
   },
 
   jumpTo(spriteArg, location) {
@@ -76,6 +93,10 @@ export const commands = {
 
   setProp(spriteArg, prop, val) {
     actionCommands.setProp.apply(this, [spriteArg, prop, val]);
+  },
+
+  setPrompt(promptText, variableName, callback) {
+    worldCommands.setPrompt(promptText, variableName, callback);
   },
 
   setTint(spriteArg, color) {
@@ -108,6 +129,10 @@ export const commands = {
   },
 
   // Event commands
+  atTime(n, unit, callback) {
+    eventCommands.atTime(n, unit, callback);
+  },
+
   checkTouching(condition, sprite1, sprite2, callback) {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
   },
@@ -116,13 +141,25 @@ export const commands = {
     eventCommands.keyPressed(condition, key, callback);
   },
 
+  repeatForever(callback) {
+    eventCommands.repeatForever(callback);
+  },
+
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
+  },
+
+  whenPromptAnswered(variableName, callback) {
+    eventCommands.whenPromptAnswered(variableName, callback);
   },
 
   // Location commands
   locationAt(x, y) {
     return locationCommands.locationAt(x, y);
+  },
+
+  locationModifier(distance, direction, location) {
+    return locationCommands.locationModifier(distance, direction, location);
   },
 
   locationMouse() {
@@ -138,8 +175,8 @@ export const commands = {
   },
 
   // Sprite commands
-  countByAnimation(animation) {
-    return spriteCommands.countByAnimation(animation);
+  countByAnimation(spriteArg) {
+    return spriteCommands.countByAnimation(spriteArg);
   },
 
   createNewSprite(name, animation, location) {
@@ -170,6 +207,14 @@ export const commands = {
     ]);
   },
 
+  makeNumSprites(num, animation) {
+    for (let i = 0; i < num; i++) {
+      spriteCommands.makeSprite.apply(this, [
+        {animation: animation, location: locationCommands.randomLocation()}
+      ]);
+    }
+  },
+
   setAnimation(spriteArg, animation) {
     spriteCommands.setAnimation(spriteArg, animation);
   },
@@ -177,6 +222,10 @@ export const commands = {
   // World commands
   comment(text) {
     worldCommands.comment(text);
+  },
+
+  getTime(unit) {
+    return worldCommands.getTime.apply(this, [unit]);
   },
 
   hideTitleScreen() {
@@ -192,6 +241,9 @@ export const commands = {
   },
   setBackgroundImage(img) {
     worldCommands.setBackgroundImage.apply(this, [img]);
+  },
+  setBackgroundImageAs(img) {
+    worldCommands.setBackgroundImageAs.apply(this, [img]);
   },
   showTitleScreen(title, subtitle) {
     worldCommands.showTitleScreen(title, subtitle);

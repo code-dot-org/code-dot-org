@@ -93,6 +93,7 @@
   "moveRight": "gerak ke kanan",
   "moveUp": "gerak ke atas",
   "moveForward": "bergerak ke hadapan",
+  "moveBackward": "bergerak ke belakang dengan",
   "nextLevel": "Tahniah! Anda telah melengkapkan puzzle ini.",
   "no": "Tidak",
   "numBlocksNeeded": "Puzzle ini boleh diselesaikan dengan %1 blok.",

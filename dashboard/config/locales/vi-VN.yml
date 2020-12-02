@@ -66,6 +66,7 @@ vi:
   join_section:
     code:
       placeholder: Phần mã (ABCDEF)
+      instructions_short: Nhập mã 6 chữ cái của bạn
   add_hint_form:
     placeholder: Vui lòng nhập gợi ý của bạn ở đây
     submit: Thêm gợi ý
@@ -171,13 +172,8 @@ vi:
     valid_password: Mật khẩu hợp lệ!
     invalid_password: Mật khẩu phải có ít nhất 6 ký tự
     mismatch_password: Hai mật khẩu bạn nhập không khớp
-    under_13_consent: Nếu dưới 13 tuổi, tôi xác nhận rằng tôi đã được cha mẹ hoặc
-      người giám hộ hợp pháp cho phép sử dụng các dịch vụ trên Code.org.
     student_consent: Tôi xác nhận rằng tôi có bố mẹ hoặc người giám hộ hợp pháp cho
       phép sử dụng dịch vụ Code.org.
-    agree_us_website: Tôi đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ.
-    my_data_to_us: Dữ liệu từ việc tôi sử dụng trang web này có thể được gửi đến và
-      lưu trữ hoặc xử lý tại Hoa Kỳ.
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
       ký cho bạn.
     user_type_button: Cập nhật tài khoản
@@ -194,6 +190,13 @@ vi:
     email_preference_yes: Đồng ý
     email_preference_no: Không
     email_preference_required: Bạn phải có một tài khoản email tham chiếu.
+    parent_account_checkbox: Tôi là phụ huynh/người giám hộ đăng ký nhân danh con
+      của tôi
+    parent_account_email_progress_permission: Liệu chúng tôi có thể gửi thư điện tử
+      chứa những cập nhật thường xuyên về tiến trình và các bài tập cũng như cập nhật
+      về khóa học và khoa học máy tính của trẻ cho bạn không? [(Xem Chính sách riêng
+      tư của chúng tôi)](%{privacy_policy_url})
+    parent_account_email_label: Email của phụ huynh hoặc người giám hộ
   school_info:
     title: Thông tin trường học (không bắt buộc)
     school_country: Quốc gia
@@ -260,6 +263,7 @@ vi:
       vs. Zombies! :-) \n\n%{name}\n"
   parent_mailer:
     student_associated_subject: Thông tin đăng nhập vào Code.org
+    parent_email_added_subject: Chào mừng tới Code.org!
   teacher_mailer:
     new_teacher_subject: Chào mừng tới Code.org!
     delete_teacher_subject: 'Code.org thông báo: tài khoản của bạn đã bị xóa'
@@ -327,7 +331,7 @@ vi:
           đăng nhập với tên (%{username}) và mật khẩu đã thiết lập
   nav:
     header:
-      finished_hoc: Tôi đã hoàn thành giờ mã của tôi
+      finished_hoc: Tôi đã hoàn thành!
       sign_in_to_save: Đăng nhập để lưu lại những tiến bộ của bạn
       my_dashboard: Bảng điều khiển của tôi
       course_catalog: Danh mục khóa học
@@ -363,6 +367,8 @@ vi:
       help_us: Giúp đỡ chúng tôi
       teach: Dạy
       about: Thông tin
+      legal_privacy: Chính sách riêng tư
+      legal_tos: Các điều khoản của Code.org
     user:
       classroom: Trang chủ giáo viên
       district_dashboard: khu vực điều khiển
@@ -399,6 +405,7 @@ vi:
       minecraft_hero: Minecraft Hero
       playlab: Phòng trò chơi
       playlab_k1: Kho trò chơi (dành cho trẻ chưa biết đọc)
+      scratch: Scratch
       starwars: Cuộc Chiến Giữa Các Vì Sao
       weblab: Kho Web
     popup:
@@ -444,6 +451,7 @@ vi:
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
     email_confirm_wrong_email: "(Địa chỉ email sai?)"
     email_resend_confirm: Gửi lại hướng dẫn xác nhận
+    new_email_hint: "(Hãy chắc chắc bạn có thể nhận được email bằng địa chỉ này.)"
     new_password_hint: "(để trống nếu bạn không muốn thay đổi nó)"
     current_password_hint: "(chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)"
     delete: Xóa tài khoản của bạn
@@ -488,6 +496,14 @@ vi:
     enter_parent_email: Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho
       việc khôi phục mật khẩu)
     update_email: Cập nhật
+    for_parents_and_guardians: Dành cho Phụ huynh và Người giám hộ
+    link_a_parent_email: Liên kết địa chỉ email phụ huynh/người giám hộ với tài khoản
+      này để luôn được cập nhật về tiến triển và các bài tập của con bạn. Bạn cũng
+      sẽ có thể sử dụng địa chỉ email này để khôi phục mật khẩu.
+    parent_guardian_email_label: Email của phụ huynh/người giám hộ
+    none: Không có
+    only_one_parent_email_supported_warning: 'Lưu ý: Hiện tại, chúng tôi chỉ có thể
+      hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh.'
   user_level:
     completed: Đã hoàn thành
     tried: thử lại
@@ -614,6 +630,7 @@ vi:
     download: Tải video xuống
     show_notes: Hiện ghi chú
     show_video: Hiển thị Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Trình duyệt của bạn không được hỗ trợ. Hãy nâng cấp trình
@@ -743,6 +760,7 @@ vi:
     sports:
       body: Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao.
     text-compression:
+      title: Nén văn bản
       body: Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản
         bằng cách thay thế các mẫu với các ký hiệu.
     unplugged:
@@ -766,27 +784,6 @@ vi:
         học của bạn.
       audience: Độ tuổi 14+
       cta: Học cách làm
-  gallery:
-    students_drew_these_with_code: Các học sinh/sinh viên đã vẽ chúng bằng cách lập
-      trình!
-    students_made_these_with_code: Các học sinh/sinh viên đã tạo ra chúng bằng cách
-      lập trình!
-    picture_count: Trong <b>%{days}</b> ngày vừa qua, các học sinh/sinh viên đã vẽ
-      <b>%{count}</b> bức ảnh bằng cách tự viết các chương trình máy tính. Click vào
-      những bức ảnh này để xem mỗi chương trình.
-    activity_count: Trong <b>%{days}</b> ngày vừa qua, học sinh đã thực hiện <b>%{count}</b>
-      các ứng dụng và hình ảnh bằng cách tự viết các chương trình máy tính. Nhấp vào
-      hình ảnh và ảnh chụp màn hình để xem mỗi chương trình trong hành động.
-    want_to_make_your_own: Bạn muốn tự tạo chương trình này?
-    how_to_save: Ở bài cuối cùng của những hướng dẫn này, nhấn "Hoàn thành" và "Lưu"
-      để lưu dự án của bạn vào trong thư viện.
-    more: Nhiều &rarr;
-    caption_by_name_age: bởi  %{name}, %{age} tuổi
-    caption_time_ago: "%{time_ago} trước"
-    header: Bộ sưu tập
-    header_playlab: Phòng trò chơi
-    header_artist: Nghệ sĩ
-    report_abuse: Báo cáo lạm dụng
   landing:
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
@@ -794,6 +791,8 @@ vi:
     help_support: Giúp đỡ và hỗ trợ
     documentation: Tài liệu
     tutorials: Hướng dẫn
+  free_response:
+    placeholder: Nhập câu trả lời của bạn ở đây
   multi:
     wrong_title: Câu trả lời không chính xác
     wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!
@@ -895,6 +894,8 @@ vi:
       mật</a>
     accept_label_markdown: Tôi đồng ý với cập nhật [Điều khoản dịch vụ](%{tos_url})và
       [Chính sách bảo mật](%{privacy_url})
+    accept_tos: Bằng việc đăng ký trên Code.org, bạn đồng ý với [Điều khoản Dịch vụ](%{tos_url})
+      và [Chính sách Bảo mật](%{privacy_url} của chúng tôi).
     accept: Đồng ý
     print: In
     review_terms: Xem những điều khoản mới
@@ -1019,33 +1020,12 @@ vi:
       name: Bị từ chối
     escalated:
       name: Đã tăng cấp
-  flex_category:
-    required: Tổng quan
-    content: Nội dung
-    csf_digcit: Dân kỹ thuật số
-    csf_jigsaw: Ghép hình
-    csf_sequencing: Chuỗi tuần tự
-    csf_loops: Vòng lặp
-    csf_events: Các sự kiện
-    csf_binary: Nhị phân
-    csf_conditionals: Điều kiện
-    csf_nested_loops: Vòng lặp lồng nhau
-    csf_functions: Các hàm
-    csf_variables: Các biến
-    csf_for_loops: Cho vòng lặp
-    csf_internet: Kết nối mạng
-    csp_variables: Các biến
-    csp_conditionals: Điều kiện
-    csp_functions: Các hàm
-    csp_lists: Danh sách
-    csp_loops: Vòng lặp
-    k5_getting_started: Bắt đầu
-    k5_next_steps: Bước tiếp theo
   external_links:
     disclaimer: Miễn trừ trách nhiệm
   hoc_download:
     title: Tải giờ của mã
     instructions_headline: Không có Internet?
+    minecraft_name: Minecraft Hour of Code
     download_in_Albanian: 'Tải xuống bằng Tiếng Albania:'
     download_in_Arabic: 'Tải xuống bằng tiếng Ả Rập:'
     download_in_Azerbaijani: 'Tải về tại Azerbaijan:'
@@ -1102,6 +1082,8 @@ vi:
       school_name: Tên trường
       school_city: Thành phố của trường
       school_country: Quốc gia
+      colombian_school_city: Thành phố của trường
+      colombian_school_name: Tên trường
     form_entries:
       gender:
         male: Nam
@@ -1112,12 +1094,20 @@ vi:
         math: thuật toán
         science: Khoa học
         la: Nghệ thuật ngôn ngữ
+      resources:
+        khan: Học viện Khan
+        scratch: Scratch
+      robotics:
+        grok: Tìm hiểu Grok
       email_opt_in:
         opt_in_yes: Đồng ý
         opt_in_no: Không
   cookie_banner:
     accept: Tôi đồng ý
-  gdpr_dialog:
-    message: Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu
-      trữ hoặc xử lý tại Hoa Kỳ.
-    true: Đồng ý
+  copy: Sao chép
+  parent_email_banner:
+    text: "**Bạn có phải là phụ huynh hay người giám hộ không?** Hãy liên kết thư
+      điện tử của bạn với tài khoản này để cập nhật thông tin về tiến triển và các
+      bài tập của trẻ!"
+    link_your_email: Liên kết thư điện tử của bạn
+    not_now: Để sau

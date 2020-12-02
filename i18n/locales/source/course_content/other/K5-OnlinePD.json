@@ -25,7 +25,7 @@
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/1/puzzle/7": {
-    "long_instructions": "## Getting Started: Why Computer Science (CS) Fundamentals?\n\nYou'll complete this free, self-paced course using the same learning platform you can use in your classroom with your students. \n\nLet's start by learning a bit about what Computer Science (CS) Fundamentals is, and how it's worked for teachers and students around the globe. In the next level, we'll cover how to interact with the CS Fundamentals learning platform, which you'll be using to complete this course.\n\n> ## Reflect\n>\n> What are your first impressions of CS Fundamentals?\n>\n> [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.\n>\n> <a href=\"http://ctt.ec/Bfjw3\" target=\"blank\"><button class=\"default\">Share on Twitter >></button></a><br><br>\n> Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2]."
+    "long_instructions": "## Getting Started: Why Computer Science (CS) Fundamentals?\n\nYou'll complete this free, self-paced course using the same learning platform you can use in your classroom with your students. \n\nLet's start by learning a bit about what Computer Science (CS) Fundamentals is, and how it's worked for teachers and students around the globe. In the next level, we'll cover how to interact with the CS Fundamentals learning platform, which you'll be using to complete this course.\n\n> ## Reflect\n>\n> What are your first impressions of CS Fundamentals?\n>\n> [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.\n>\n> <a href=\"http://ctt.ec/Bfjw3\" target=\"blank\">Share on Twitter >></a>\n>\n> Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2]."
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/1/puzzle/8": {
     "dsls": {
@@ -91,7 +91,6 @@
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/4/puzzle/2": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "# Sequencing > Unplugged Lessons\n\nAs we mentioned, we like to introduce computer science topics with unplugged lessons. Then, we use bridging activities to transition into the online lessons later. Beginning with these unplugged lessons introduces concepts in a fun and friendly way. Then, students already feel familiar with the concept by the time that they get to the online lessons, and can relate the online lessons back to the unplugged activity.\n\nFor these programming stages that you will be going through, we will also start with examples of unplugged lessons. Read through the following lesson plan and watch the accompanying videos, thinking about how you would implement this in your classroom with your students.\n<br/>\n***\n<br/>\nWe will start with sequencing. At its base, this style of computer science is about **sequences**. A sequence is a special ordering that something follows. In these puzzles, we want to find the right sequence of instructions to tell the computer what to do. This list of instructions is called an **algorithm**.  Once that algorithm gets coded up into a language that can be read by a machine, it becomes a **program**.\n<br/>\n<br/>\n\n**1. Review the \"[Happy Maps](https://curriculum.code.org/csf/coursea/5/)\" Lesson Plan from Course A.**\n<br/>\nRemember that Course A is meant for Kindergarten students. Sequencing comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.\n\n<br/>\n\n**2. Watch the student video: Happy Maps**\n<br/>\nThis is a video that you would show your students to help introduce the concept of sequencing and kick off the unplugged lesson.\n\n[![](https://images.code.org/f00fb02e8f24d57e88d396eb0f2c5cce-image-1571253011379.09.54 PM.png)](https://youtube.com/watch?v=hrnhiKAQ1_k)\n\n[Can't see the video? Click here](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)  \n\n<br/>\n\n**3. Watch the teacher video: How to facilitate \"Happy Maps\"**\n<br/>\n\n[![](https://images.code.org/ab93b99493bfe68acc24aaaaf66d4129-image-1571253013543.10.01 PM.png)](https://youtube.com/watch?v=En6Bshuqljg)\n\n<br/>\n\n\n**4. Review other unplugged lessons that introduce sequencing:**\n\n- Course A (Kindergarten): [Real-Life Algorithms: Plant a Seed](https://curriculum.code.org/csf-18/coursea/3/)\n- Course B (Grade 1): [My Robotic Friends Jr.](https://curriculum.code.org/csf-18/coursea/3/), [Move It, Move It](https://curriculum.code.org/csf-18/courseb/1/)\n- Course C (Grade 2): [Paper Planes](https://curriculum.code.org/csf-18/coursec/4/)\n- Course D (Grade 3): [Graph Paper Programming](https://curriculum.code.org/csf-18/coursed/1/)\n- Course E, Course F (Grades 4, 5): [My Robotic Friends](https://curriculum.code.org/csf-18/coursee/1/)\n\n\n---\n\n\n> ## Reflect\n> How would you explain the concept of programming (including sequencing and algorithms) to your students? Share your thoughts in <a href=\"http://forum.code.org/t/teaching-sequencing/408\">our forum</a>.\n\n> <a href=\"http://forum.code.org/t/teaching-sequencing/408\" target=\"blank\"><button class=\"plc\">Discuss in the forums >></button></a>\n\nAfter commenting in the forum, return here and click below to move on.\n\nIn the next stage, we'll add some complexity to our programs through the addition of loops.\n"
     }
@@ -232,11 +231,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
@@ -257,6 +251,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            }
+          ],
+          "questions": [
+            {
+              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click \"Run\"?"
             }
           ]
         }
@@ -336,24 +335,25 @@
     "callouts": {
       "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
     },
-    "function_names": {
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/5": {
     "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. The function is not called in the program.",
@@ -375,6 +375,11 @@
               "correct": true,
               "feedback": "Correct! The function is called two times in the program, with a jump in between."
             }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
+            }
           ]
         }
       }
@@ -391,9 +396,13 @@
     "callouts": {
       "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/7": {
@@ -412,8 +421,10 @@
       "courseD_artist_functions4_b": "Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.",
       "courseD_artist_functions4_c": "Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!"
     },
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/9": {
@@ -424,8 +435,10 @@
       "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
       "courseD_artist_functions5_c": "Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!"
     },
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/7/puzzle/10": {

@@ -1,0 +1,115 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-02-25T15:52:20.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "farmer",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1,\"value\":-2,\"range\":-2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":-1,\"range\":-4}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":-1,\"range\":-4},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1,\"value\":-1,\"range\":-4},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":-1,\"range\":-1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":-1,\"range\":-1}]]",
+    "short_instructions": "Challenge: Fill all of these holes using as few blocks as possible. ",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "1",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You are going to need to use more than one `while` loop.\",\"hint_id\":\"courseD_farmer_conditionals8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7c9248afe7a125b3ce277a65cb4b18fb/courseD_farmer_conditionals8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.\",\"hint_id\":\"courseD_farmer_conditionals8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89295605fb9415e4c9ed2cc14adf2192/courseD_farmer_conditionals8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.\",\"hint_id\":\"courseD_farmer_conditionals8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5b0b7d391cc30565d486afbd3f936397/courseD_farmer_conditionals8.mp3\"}]",
+    "instructions_important": "false",
+    "ideal": "7",
+    "long_instructions": "**Challenge:** Fill all of these holes using as few blocks as possible. ",
+    "parent_level_id": 15117,
+    "name_suffix": "_2020",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "shape_shift": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-01 01:39:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_dig"/>
+        <block type="maze_fill"/>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="maze_untilBlockedOrNotClear">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="maze_untilBlockedOrNotClear">
+          <title name="DIR">holePresent</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">6</title>
+              <statement name="DO">
+                <block type="maze_untilBlockedOrNotClear">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_untilBlockedOrNotClear">
+                      <title name="DIR">holePresent</title>
+                      <statement name="DO">
+                        <block type="maze_fill"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

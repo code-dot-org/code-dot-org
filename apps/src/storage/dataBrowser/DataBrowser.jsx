@@ -101,8 +101,6 @@ class DataBrowser extends React.Component {
     // from redux state
     tableListMap: PropTypes.object.isRequired,
     view: PropTypes.oneOf(Object.keys(DataView)),
-    keyValueData: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
-      .isRequired,
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
@@ -223,8 +221,7 @@ DataBrowser.TabType = TabType;
 export default connect(
   state => ({
     view: state.data.view,
-    tableListMap: state.data.tableListMap || {},
-    keyValueData: state.data.keyValueData || {}
+    tableListMap: state.data.tableListMap || {}
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {

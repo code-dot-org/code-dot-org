@@ -91,7 +91,11 @@ class ErrorDialogStack extends React.Component {
             </p>
             <p>
               {msg.contactWithoutEmail()}{' '}
-              <a href={pegasus('/contact')} target="_blank">
+              <a
+                href={pegasus('/contact')}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://code.org/contact
               </a>
               .
@@ -99,12 +103,14 @@ class ErrorDialogStack extends React.Component {
             <DialogFooter>
               {error.error_cause && (
                 <Button
+                  __useDeprecatedTag
                   text={msg.delete() + ' "' + animationName + '"'}
                   onClick={() => this.handleDeleteChoice(error.error_cause)}
                   color="red"
                 />
               )}
               <Button
+                __useDeprecatedTag
                 text={msg.reloadPage()}
                 onClick={() => this.handleReloadChoice(error.error_cause)}
               />
