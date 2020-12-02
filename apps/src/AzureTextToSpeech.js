@@ -55,8 +55,7 @@ export default class AzureTextToSpeech {
 
   /**
    *
-   * @param {Promise<SoundResponse>} soundPromise A promise that returns a SoundResponse when resolved.
-   * playback configuration options.
+   * @param {function} soundPromise A thunk that returns promise, which resolves to a SoundResponse.
    */
   enqueueAndPlay = soundPromise => {
     this.enqueue_(soundPromise);
@@ -226,8 +225,8 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Add a promise to the end of the queue.
-   * @param {Promise<SoundResponse>} promise A promise that returns a SoundResponse when resolved.
+   * Add to the end of the queue.
+   * @param {function} promise A thunk that returns promise, which resolves to a SoundResponse.
    * @private
    */
   enqueue_ = promise => {
@@ -235,8 +234,8 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Get the next promise in the queue.
-   * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
+   * Get the next item in the queue.
+   * @returns {function} A thunk that returns promise, which resolves to a SoundResponse.
    * @private
    */
   dequeue_ = () => {
