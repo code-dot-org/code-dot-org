@@ -91,12 +91,14 @@ class SpritelabInput extends React.Component {
     return (
       <div id="spritelabInputArea" style={styles.container}>
         <div style={styles.prompt}>
-          <span style={styles.circle} className="fa-stack">
-            <i className="fa fa-circle fa-stack-2x" />
-            <strong className="fa-stack-1x" style={styles.number}>
-              {numPrompts}
-            </strong>
-          </span>
+          {numPrompts > 1 && (
+            <span style={styles.circle} className="fa-stack">
+              <i className="fa fa-circle fa-stack-2x" />
+              <strong className="fa-stack-1x" style={styles.number}>
+                {numPrompts}
+              </strong>
+            </span>
+          )}
           <div style={styles.promptText}>{promptText}</div>
           <a onClick={this.toggleCollapsed}>
             <span style={styles.icon} className="fa-stack">
