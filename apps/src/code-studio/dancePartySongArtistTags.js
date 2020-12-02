@@ -7,7 +7,7 @@
 
 export const SongTitlesToArtistTwitterHandle = {
   backtoyou_selenagomez: 'SelenaGomez',
-  bornthisway_ladygaga: 'LadyGaga',
+  bornthisway_ladygaga: 'ladygaga',
   callmemaybe_carlyraejepsen: 'CarlyRaeJepsen',
   cantfeelmyface_theweeknd: 'TheWeeknd',
   cantholdus_macklemore: 'Macklemore',
@@ -50,8 +50,16 @@ export const SongTitlesToArtistTwitterHandle = {
   starships_nickiminaj: 'NICKIMINAJ',
   sucker_jonasbrothers: 'JonasBrothers',
   // 2020 Songs
+  dancemonkey_tonesandi: 'tonesandimusic',
+  dernieredanse_indila: 'Indila',
+  dontstartnow_dualipa: 'DUALIPA',
+  euphoria_loreen: 'LOREEN_TALHAOUI',
   ilkadimisenat_kenandogulu: 'kenandogulu',
+  jerusalema_masterkg: 'MasterKGsa',
   odetocode_brendandominicpaolini: 'CodeWeekEU',
+  rainonme_ladygagaftarianagrande: 'ladygaga',
+  savagelove_jasonderulo: 'jasonderulo',
+  sayso_dojacat: 'DojaCat',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
   synthesize: 'codeorg',
