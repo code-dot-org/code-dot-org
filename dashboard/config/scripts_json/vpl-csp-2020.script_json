@@ -7,7 +7,8 @@
     "properties": {
       "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "pilot_experiment": "20-21-virtual-AYW-CSP"
+      "pilot_experiment": "20-21-virtual-AYW-CSP",
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
@@ -115,7 +116,7 @@
     },
     {
       "key": "Module 7",
-      "name": "Module 7",
+      "name": "Module 7: Tools and structure in Unit 9 - Data",
       "absolute_position": 7,
       "lockable": false,
       "relative_position": 7,
@@ -129,7 +130,7 @@
     },
     {
       "key": "Module 8",
-      "name": "Module 8",
+      "name": "Module 8: Building community and preparing students for the AP Exam",
       "absolute_position": 8,
       "lockable": false,
       "relative_position": 8,
@@ -1513,41 +1514,314 @@
       "position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Overview"
+        "progression": "Module 7 overview (~5 minutes)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VirtualPLComingSoon"
+          "CSP-PL Module 7 - Workshop Overview"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "vpl-csp-2020"
       },
       "level_keys": [
-        "VirtualPLComingSoon"
+        "CSP-PL Module 7 - Workshop Overview"
       ]
     },
     {
       "chapter": 67,
-      "position": 1,
+      "position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Overview"
+        "progression": "Overview of Unit 9 - Data (~10 minutes)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VirtualPLComingSoon"
+          "CSP-PL M7 - Unit 9 Overview"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Unit 9 Overview"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Google Trends tool (~20 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Google Trends"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Google Trends"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Data Visualizer tool (~45 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 1"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Data Viz 1"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Data Visualizer tool (~45 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 2"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Data Viz 2"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Data Visualizer tool (~45 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 3"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Data Viz 3"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Data Visualizer tool (~45 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 4"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Data Viz 4"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 7 asynchronous wrap-up (~10 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 7 Wrap Up"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP - Module 7 Wrap Up"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 8 overview (~5 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL Module 8 - Workshop Overview"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "vpl-csp-2020"
       },
       "level_keys": [
-        "VirtualPLComingSoon"
+        "CSP-PL Module 8 - Workshop Overview"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Connecting to the CS community (~15 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Community 1"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Community 1"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Connecting to the CS community (~15 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Community 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Community 2"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - MC Exam 1"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M8 - MC Exam 1"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Exam 2"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 3"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Exam 3"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 8 asynchronous wrap-up (~10 minutes)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 8 Wrap Up"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      },
+      "level_keys": [
+        "CSP - Module 8 Wrap Up"
       ]
     }
   ],
@@ -2269,9 +2543,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VirtualPLComingSoon",
+        "level.key": "CSP-PL Module 7 - Workshop Overview",
         "script_level.level_keys": [
-          "VirtualPLComingSoon"
+          "CSP-PL Module 7 - Workshop Overview"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -2280,9 +2554,152 @@
     },
     {
       "seeding_key": {
-        "level.key": "VirtualPLComingSoon",
+        "level.key": "CSP-PL M7 - Unit 9 Overview",
         "script_level.level_keys": [
-          "VirtualPLComingSoon"
+          "CSP-PL M7 - Unit 9 Overview"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Google Trends",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Google Trends"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Data Viz 1",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 1"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Data Viz 2",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 2"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Data Viz 3",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 3"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Data Viz 4",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 4"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 7 Wrap Up",
+        "script_level.level_keys": [
+          "CSP - Module 7 Wrap Up"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL Module 8 - Workshop Overview",
+        "script_level.level_keys": [
+          "CSP-PL Module 8 - Workshop Overview"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Community 1",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Community 1"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Community 2",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Community 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - MC Exam 1",
+        "script_level.level_keys": [
+          "CSP-PL M8 - MC Exam 1"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Exam 2",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Exam 3",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 3"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 8 Wrap Up",
+        "script_level.level_keys": [
+          "CSP - Module 8 Wrap Up"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
