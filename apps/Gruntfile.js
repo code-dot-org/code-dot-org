@@ -13,6 +13,7 @@ var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var sass = require('node-sass');
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var ManifestPlugin = require('webpack-manifest-plugin');
+var WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = function(grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -758,6 +759,8 @@ describe('entry tests', () => {
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact'
+
+    // registerSw: './src/sties/studio/pages/registerSw.js'
   };
 
   // Create a config for each of our bundles
@@ -1001,6 +1004,28 @@ describe('entry tests', () => {
             }
             return file;
           }
+        }),
+        // new WorkboxPlugin.InjectManifest({
+        //   swSrc: './sw.js',
+        //   swDest: './service-worker-workbox.js'
+        // })
+        new WorkboxPlugin.GenerateSW({
+          // these options encourage the ServiceWorkers to get in there fast
+          // and not allow any straggling "old" SWs to hang around
+          clientsClaim: true,
+          skipWaiting: true,
+          include: [/\.(?:svg)$/],
+          // exclude: [/\.(?:png|jpg|jpeg|svg|gif)$/],
+          runtimeCaching: [
+            {
+              urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+              handler: 'CacheFirst',
+              options: {
+                expiration: {maxEntries: 10},
+                cacheName: 'pwa-demo2-images'
+              }
+            }
+          ]
         })
       ],
       minify: minify,

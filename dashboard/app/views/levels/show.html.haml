@@ -74,6 +74,7 @@
 %button.btn.btn-success{type: "button", onclick: "backToDemoPage()", style: "position:absolute;left:10px;bottom:50px"}
   Back to the Demo page
 
+-# = "Service worker code #{webpack_asset_path('js/service-worker.js')}"
 :javascript
   function backToDemoPage() {
     window.location.href = '/pwa_demo';
