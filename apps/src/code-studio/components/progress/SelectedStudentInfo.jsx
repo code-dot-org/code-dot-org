@@ -7,6 +7,7 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {studentShape} from './StudentTable';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 
@@ -47,7 +48,7 @@ export class SelectedStudentInfo extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
     selectedStudent: PropTypes.object,
-    level: PropTypes.object,
+    level: levelType,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired
   };

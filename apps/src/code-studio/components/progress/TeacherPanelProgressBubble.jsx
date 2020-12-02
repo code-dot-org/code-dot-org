@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -8,6 +7,7 @@ import {
   levelProgressStyle
 } from '@cdo/apps/templates/progress/progressStyles';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 /**
  * A TeacherPanelProgressBubble represents progress for a specific level in the TeacherPanel. It can be a circle
@@ -53,7 +53,7 @@ const styles = {
 
 export class TeacherPanelProgressBubble extends React.Component {
   static propTypes = {
-    level: PropTypes.object.isRequired
+    level: levelType.isRequired
   };
 
   render() {

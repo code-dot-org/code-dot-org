@@ -12,7 +12,7 @@ describe('ProgressionDetails', () => {
     };
   });
 
-  it('renders default props', () => {
+  it('renders default props and ProgressLevelSet', () => {
     const wrapper = shallow(<ProgressionDetails {...defaultProps} />);
     expect(wrapper.find('ProgressLevelSet').length).to.equal(1);
   });

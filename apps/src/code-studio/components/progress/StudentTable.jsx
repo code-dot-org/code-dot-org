@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 const styles = {
   table: {
@@ -62,7 +63,7 @@ class StudentTable extends React.Component {
     students: PropTypes.arrayOf(studentShape).isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired,
-    levels: PropTypes.array,
+    levels: PropTypes.arrayOf(levelType),
     sectionId: PropTypes.number,
     scriptName: PropTypes.string
   };

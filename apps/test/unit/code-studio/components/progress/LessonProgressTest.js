@@ -8,6 +8,7 @@ describe('LessonProgress', () => {
   const defaultProps = {
     levels: [
       {
+        id: 1,
         status: LevelStatus.not_tried
       }
     ],

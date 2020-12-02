@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 export const levelType = PropTypes.shape({
   status: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   url: PropTypes.string,
   name: PropTypes.string,
   icon: PropTypes.string,
