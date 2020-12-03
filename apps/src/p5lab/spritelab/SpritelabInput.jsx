@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import React from 'react';
-import {popPrompt} from './spritelabInputModule';
+import {PromptType, popPrompt} from './spritelabInputModule';
 import * as coreLibrary from './coreLibrary';
 
 const styles = {
@@ -64,15 +64,23 @@ class SpritelabInput extends React.Component {
     collapsed: false
   };
 
-  userInputSubmit() {
+  userInputSubmit(value) {
     const variableName =
       this.props.inputList[0] && this.props.inputList[0].variableName;
     if (!variableName) {
       return;
     }
     this.props.onPromptAnswer();
-    coreLibrary.onPromptAnswer(variableName, this.state.userInput);
+    coreLibrary.onPromptAnswer(variableName, value);
+  }
+
+  onTextSubmit() {
+    this.userInputSubmit(this.state.userInput);
     this.setState({userInput: ''});
+  }
+
+  onMultipleChoiceSubmit(e) {
+    this.userInputSubmit(e.target.value);
   }
 
   toggleCollapsed = () =>
@@ -81,13 +89,59 @@ class SpritelabInput extends React.Component {
     });
 
   render() {
-    const icon = this.state.collapsed ? 'angle-right' : 'angle-down';
-    const numPrompts = this.props.inputList.length;
-    const promptText =
-      this.props.inputList[0] && this.props.inputList[0].promptText;
-    if (!promptText) {
+    const inputInfo = this.props.inputList[0];
+    if (!inputInfo) {
       return null;
     }
+    const icon = this.state.collapsed ? 'angle-right' : 'angle-down';
+    const numPrompts = this.props.inputList.length;
+    const promptText = inputInfo.promptText;
+
+    let inputRow;
+    switch (inputInfo.promptType) {
+      case PromptType.TEXT:
+        inputRow = (
+          <div style={styles.inputRow}>
+            <input
+              style={styles.inputArea}
+              type="text"
+              onChange={event => this.setState({userInput: event.target.value})}
+              value={this.state.userInput || ''}
+            />
+            <button
+              style={styles.submitButton}
+              type="button"
+              onClick={this.onTextSubmit.bind(this)}
+            >
+              <i className="fa fa-check" />
+            </button>
+          </div>
+        );
+        break;
+      case PromptType.MULTIPLE_CHOICE:
+        inputRow = (
+          <div>
+            {inputInfo.choices.map(
+              choice =>
+                choice && (
+                  <button
+                    key={choice}
+                    style={styles.submitButton}
+                    type="button"
+                    value={choice}
+                    onClick={this.onMultipleChoiceSubmit.bind(this)}
+                  >
+                    {choice}
+                  </button>
+                )
+            )}
+          </div>
+        );
+        break;
+      default:
+        console.warn(`unknown prompt type: ${inputInfo.promptType}`);
+    }
+
     return (
       <div id="spritelabInputArea" style={styles.container}>
         <div style={styles.prompt}>
@@ -106,23 +160,7 @@ class SpritelabInput extends React.Component {
             </span>
           </a>
         </div>
-        {!this.state.collapsed && (
-          <div style={styles.inputRow}>
-            <input
-              style={styles.inputArea}
-              type="text"
-              onChange={event => this.setState({userInput: event.target.value})}
-              value={this.state.userInput || ''}
-            />
-            <button
-              style={styles.submitButton}
-              type="button"
-              onClick={this.userInputSubmit}
-            >
-              <i className="fa fa-check" />
-            </button>
-          </div>
-        )}
+        {!this.state.collapsed && inputRow}
       </div>
     );
   }
