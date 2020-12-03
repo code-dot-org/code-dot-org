@@ -29,12 +29,13 @@ const styles = {
     color: 'white'
   },
   inputRow: {
-    padding: 0
+    padding: 0,
+    marginBottom: 2,
+    marginTop: 2
   },
   inputArea: {
     width: 'calc(100% - 80px)',
-    marginBottom: 2,
-    marginTop: 2
+    margin: 0
   },
   submitButton: {
     padding: 4,
@@ -50,6 +51,15 @@ const styles = {
   number: {
     color: 'rgb(34, 42, 51)',
     fontSize: 9
+  },
+  choiceButton: {
+    fontSize: 15,
+    padding: 5,
+    margin: '0px 8px',
+    maxWidth: 'calc(33% - 16px)',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
   }
 };
 
@@ -120,13 +130,13 @@ class SpritelabInput extends React.Component {
         break;
       case PromptType.MULTIPLE_CHOICE:
         inputRow = (
-          <div>
+          <div style={styles.inputRow}>
             {inputInfo.choices.map(
               choice =>
                 choice && (
                   <button
                     key={choice}
-                    style={styles.submitButton}
+                    style={styles.choiceButton}
                     type="button"
                     value={choice}
                     onClick={this.onMultipleChoiceSubmit.bind(this)}
