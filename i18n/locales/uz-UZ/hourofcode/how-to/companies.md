@@ -82,7 +82,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- Kompaniyangizning dasturiy ta'minot muhandislarini nima uchun kompyuter fanlarini o‘rganishga qaror qilganliklari va ular ishlayotgan loyihalari to‘g‘risida gaplashishga taklif qiling.
 - If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 
 ### 3. Plan your technology needs
@@ -120,7 +120,7 @@ Once you have a solid roadmap for your event, you can then start inviting studen
 
 After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
+- Ishtirokchilar va talabalar uchun \[Sertifikatlarni chop etish\] ({{ urls/certificates }}).
 - [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 

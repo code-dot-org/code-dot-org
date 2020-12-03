@@ -1,68 +1,75 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: Studiază informatica atunci când școlile sunt închise ca răspuns la Covid19
 ---
 
 <a id="top"></a>
 
-# Learning computer science when schools are closed
+# Studiază informatica atunci când școlile sunt închise
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>Ne confruntăm cu o perioadă incredibil de dificilă, cu izbucnirea globală a COVID-19, care se luptă cu preocupări tot mai mari privind sănătatea, comunitățile noastre și economia. Măsurile de siguranță au adus închiderea extensivă a școlilor în toată țara. </p>
+<p>Dorim să sprijim profesorii, studenții și familiile în orice mod posibil. Mai jos este un set de resurse pentru a ajuta ca elevul tău să învețe informatică de acasă. <strong>Părinți - dacă luați în considerare să creați un cont Code.org pentru elevul vostru sau să îi ajutați să acceseze un cont deja existent, <a href="https://support.code.org/hc/en-us/articles/360040703792">vă rugăm să citiți acest document</a>.</strong></p>
+<p>De asemenea, compilăm câteva <a href="#teacher-support">resurse pentru a-i ajuta pe profesori să continue să predea informatica</a>când elevii lor se află în clase la distanță sau în distanțare socială. </p>
+<p><a href="#apps">Nu ai computer acasă? Vezi opțiunile telefoanelor smart</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
+<p style="border: 0; color: #4d575f">Vino alături de noi între 7-11 decembrie pentru mini-lecțiile noastre live CodeBytes!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Vino alături de noi în fiecare zi din Săptămâna Educației CS pentru CodeBytes, lecții de informatică interactivă de 20 de minute. Flux live de două ori pe zi, CodeBytes este un mod ideal pentru studenți să participe la o #Hour of Code virtuală!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Află mai multe la <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
+<div class="clearboth"></div></div>
+
+## Hour of Code: Încearcă aceste tutoriale introductive antrenante
+Încearcă un tutorial de o oră pentru toate vârstele. Există sute de activități și tutoriale în peste 45 de limbi.
+* [Petrecere Dansantă](https://code.org/dance) - Creează o petrecere dansantă cu muzica lui Katy Perry, Shawn Mendes și a multor altora.
+* [Minecraft](https://code.org/api/hour/begin/mc) - Folosește-ți creativitatea și abilitatea de a rezolva probleme pentru a călători și explora noi lumi.
+* [IA pentru Oceane](https://code.org/oceans) - Află cum IA și învățarea automată pot fi utilizate pentru abordarea problemelor mondiale.
+* [Cod Flappy](http://studio.code.org/s/flappy/reset) - Scrie propriul tău cod flappy de joc.
+* [Codare în Astronomie](https://quorumlanguage.com/hourofcode/astro1.html) - Învață despre astronomie folosind Quorum, un limbaj de programare accesibil pentru elevii orbi sau cu deficiențe de vedere.
+* Și mult mai multe [tutoriale](https://code.org/hourofcode/overview)!
+
+<p><a href="#top">[Sus]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## Videoclipuri: Privește aceste videoclipuri educaționale ușoare de 3-5 minute
 
 {{ athome_videos }}
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Sus]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+## Învață elementele fundamentale în cursurile noastre în ritm propriu
+### **Cursuri expres**
+O mare opțiune pentru studenți să pornească pe cont propriu. Vei învăța elementele fundamentale ale informaticii cu selectarea & tragerea blocurilor. Crează-ți propriile desene și jocuri. <strong>Notă: Cursurile exprese sunt disponibile în prezent doar în limbile engleză, hindi, italiană și spaniolă. Pentru alte limbi, recomandăm <a href="https://studio.code.org/s/20-hour">Cursurile noastre Accelerate</a> de 20 de ore. Pentru a vedea dacă este disponibil în limba ta, vizitează <a href="https://studio.code.org/courses">catalogul cursului</a></strong> nostru.
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Curs Expres</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Curs Expres pentru preșcolari</a>
 
 </div>
 <div style="clear: both"></div>
@@ -73,10 +80,10 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Sus]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## Învață să proiectezi și să dezvolți aplicații cu App Lab
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -86,75 +93,84 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-66">
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<p>App Lab este un mediu de programare, în care faci aplicații simple. Proiectează o aplicație, codifică în JavaScript fie cu blocuri sau text și distribuie creația ta familiei sau prietenilor.</p>
+<p>Peste 13 ani, toate browserele moderne, numai în engleză</p>
+<a href="https://code.org/educate/applab"><button>Încearcă-l</button></a>
 
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Sus]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+## Nu ai computer acasă? Încearcă aceste aplicații smartphone
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Insula Cutiilo</strong></h3></a>Un joc de programare pentru mobile care duce elevii într-o aventură captivantă, în timp ce învață elementele de bază ale programării, precum algoritmi, recunoașterea tiparelor, succesiuni, bucle și condiționale. <i>(pentru toate vârstele)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Platforma de învățare a codului cu premii pentru copii cu vârste cuprinse între 5 și 9 ani. Rezolvă puzzle-urile și creează jocuri cu The Foos în timp ce înveți să codifici. <strong>Notă: codeSpark îți oferă o testare gratuită de 3 luni. La autentificare sunt necesare adresa de email pi cardul de credit al părinților.</strong> <i>(pentru preșcolari până la Clasa a 5-a)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Lăcustă</strong></h3></a>Învață codificarea cu distracție, lecții rapide pe telefon, care te învață să scrii adevăratul JavaScript. Un Cod cu Programul Google. <i>(pentru gimnaziu și liceu)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Sus]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
+## Acces limitat sau zero la internet? Verifică aceste activități libere
+* [Bună, Ruby](https://www.helloruby.com/play) - Cel mai ciudat mod al lumii de a învăța despre computere, tehnologie și programare. Activități pe o gamă de subiecte CS, precum abilitatea de a decompune o problemă, a recunoaște tipare, a gândi în mod algoritmic, a depana problemele și a lucra împreună. *(pentru vârstele 4-10 ani)*
+* [CS Deschisă](https://csunplugged.org/en/) - O colecție de materiale de învățare gratuite, care te învață Informatica (CS) prin intermediul jocurilor și puzzle-urilor care utilizează cărți de joc, corzi, creioane și multă distracție. *(pentru vârste între 5-14)*
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Sus]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Code Break: Învață de la echipa și oaspeții speciali ai Code.org!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Oaspeți speciali se alătură Directorului general al Code.org, Hadi Partovi, într-o clasă interactivă săptămânală, pentru a preda conceptele informaticii precum algoritmi, inteligența artificială și criptarea.</p>
+<p>Dacă nu ai verificat toate episoadele Code Break, nu este prea târziu! Episoadele live nu mai sunt transmise, dar poți vedea toate episoadele și activitățile personalizate<a href="https://code.org/break">aici</a>.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## Suport pentru profesori în clasele virtuale sau cu distanțare socială
+Te rugăm să vizitezi<a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> pentru a vedea resursele și sugestiile pentru profesori în mediile claselor virtuale sau de distanțare socială. Resursele specifice cursurilor pot fi accesare apăsând pe link-urile de mai jos.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Principiile Informaticii</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Descoperirile Informaticii</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Elementele Fundamentale ale Informaticii</p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[Sus]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

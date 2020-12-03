@@ -6,28 +6,28 @@ title: Computer Science Fundamentals Transition Guide
 
 ## Table of Contents
 
-* [Overview](#overview)
+* [Přehled](#overview)
 * [Teaching the new courses](#newcourses)
 * [Circle-Time Stories (Courses A and B)](#circletime)
 * [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
 * [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
 * [End of Course Projects (Courses E & F)](#endofcourse)
 * [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [Nejčastější dotazy](#faq)
 
 <a id="overview"></a>
 
-## Overview
+## Přehled
 The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
 
 Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
+* Kurz A: Mateřská škola
+* Kurz B: První třída
+* Kurz C: Druhá třída
+* Kurz D: Třetí třída
+* Kurz E: Čtvrtá třída
+* Kurz F: Pátá třída
 * Pre-reader Express Course: Kindergarten - 1st Grade
 * Express Course: 2nd Grade - 5th Grade
 
@@ -54,7 +54,7 @@ Some concepts are difficult to teach through activities and puzzles alone, espec
 
 Here is how the circle-time stories are intended to be used:
 
-### Read the appropriate story to your class
+### Přečtěte své třídě příslušný příběh
   - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
   - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
   - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
@@ -89,9 +89,9 @@ In some instances, we end our lessons with free-play style levels.  These levels
 Some final notes for this area:
 
 * Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
+* Videa často pomáhají.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
 * Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Je v pořádku používat nápovědy!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
 
 <a id="unplugged"></a>
 
@@ -130,13 +130,13 @@ We hope this overview has been insightful.  If you have any questions or comment
 
 <a id="faq"></a>
 
-## FAQs
+## Nejčastější dotazy
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Otázka                                                                                                                                                      | Odpověď                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
+| **Spouštíte novou sadu kurzů - znamená to, že končíte s kurzy 1-4?**                                                                                        | Ne. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
+| **When can we start using Courses A-F?**                                                                                                                    | Kurzy A-F jsou nyní dostupné!                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Některé z mých oblíbených lekcí/úkolů v kurzech A-F chybí!**                                                                                              | Nebojte se! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                             |
 | **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
 | **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
 

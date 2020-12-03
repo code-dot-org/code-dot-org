@@ -50,7 +50,7 @@ hu:
             '"measures"': ütem
             '"seconds"': másodperc
       Dancelab_changeColorBy:
-        text: 'módosítás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
+        text: 'változtatás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
         options:
           METHOD:
             '"hue"': színárnyalat
@@ -987,6 +987,8 @@ hu:
         text: kattintott {SPRITE}
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: "{SPRITE} -száma"
       gamelab_createNewSprite:
@@ -997,6 +999,8 @@ hu:
         text: vonszolható
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
+      gamelab_getAllSprites:
+        text: minden sprite
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1012,6 +1016,7 @@ hu:
         options:
           CHOICE:
             '"this"': ez
+            '"other"': egyéb
       gamelab_getTime:
         options:
           UNIT:

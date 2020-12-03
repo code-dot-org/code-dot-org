@@ -211,7 +211,7 @@
   "challengeLevelPassText": "Je zou het echter gedaan kunnen hebben {idealBlocks, plural, one {met slechts 1 blok} other {zonder blokken}}. Kan je je programma nog beter maken?",
   "challengeLevelPerfectTitle": "De uitdaging is afgerond!",
   "challengeLevelSkip": "Sla voorlopig over",
-  "challengeLevelStart": "Ik ben klaar!",
+  "challengeLevelStart": "Ik ben er klaar voor!",
   "challengeLevelTitle": "Uitdaging puzzel!",
   "changeEmailModal_currentPassword_isRequired": "Huidig wachtwoord is vereist.",
   "changeEmailModal_currentPassword_label": "Huidig wachtwoord",
