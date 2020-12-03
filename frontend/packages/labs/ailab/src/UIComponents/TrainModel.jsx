@@ -6,8 +6,7 @@ import train, { availableTrainers } from "../train";
 import {
   setShowPredict,
   setPercentDataToReserve,
-  readyToTrain,
-  validationMessages
+  readyToTrain
 } from "../redux";
 import { TRAINING_DATA_PERCENTS, styles } from "../constants";
 
@@ -16,12 +15,12 @@ class TrainModel extends Component {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     readyToTrain: PropTypes.bool,
-    validationMessages: PropTypes.array,
     setShowPredict: PropTypes.func.isRequired,
     selectedTrainer: PropTypes.string,
     percentDataToReserve: PropTypes.number,
     setPercentDataToReserve: PropTypes.func,
-    modelSize: PropTypes.number
+    modelSize: PropTypes.number,
+    mode: PropTypes.object
   };
 
   handleChange = event => {
@@ -38,38 +37,30 @@ class TrainModel extends Component {
   render() {
     return (
       <div id="train-model" style={styles.panel}>
-        <div style={styles.largeText}>Are you ready to train the model?</div>
-        <div style={styles.validationMessages}>
-          {this.props.validationMessages.map((msg, index) => {
-            return msg.readyToTrain ? (
-              <p key={index} style={styles.ready}>
-                {msg.successString}{" "}
-              </p>
-            ) : (
-              <p key={index} style={styles.error}>
-                {msg.errorString}{" "}
-              </p>
-            );
-          })}
-        </div>
-        <div>How much of the data would you like to reserve for testing?</div>
-        <form>
-          <label>
-            Percent of dataset to reserve:{' '}
-            <select
-              value={this.props.percentDataToReserve}
-              onChange={this.handleChange}
-            >
-              {TRAINING_DATA_PERCENTS.map((percent, index) => {
-                return (
-                  <option key={index} value={percent}>
-                    {percent}
-                  </option>
-                );
-              })}
-            </select>
-          </label>
-        </form>
+        {! this.props.mode.hideChooseReserve && (
+          <div>
+            <div style={styles.largeText}>Are you ready to train the model?</div>
+
+            <div>How much of the data would you like to reserve for testing?</div>
+            <form>
+              <label>
+                Percent of dataset to reserve:{' '}
+                <select
+                  value={this.props.percentDataToReserve}
+                  onChange={this.handleChange}
+                >
+                  {TRAINING_DATA_PERCENTS.map((percent, index) => {
+                    return (
+                      <option key={index} value={percent}>
+                        {percent}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+            </form>
+          </div>
+        )}
         {this.props.readyToTrain && (
           <div>
             <p/>
@@ -100,9 +91,9 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedTrainer: state.selectedTrainer,
     readyToTrain: readyToTrain(state),
-    validationMessages: validationMessages(state),
     percentDataToReserve: state.percentDataToReserve,
-    modelSize: state.modelSize
+    modelSize: state.modelSize,
+    mode: state.mode
   }),
   dispatch => ({
     setShowPredict(showPredict) {

@@ -21,7 +21,9 @@ export const styles = {
 
   container: {
     fontFamily: '"Gotham 4r", sans-serif',
-    position: 'relative'
+    position: 'relative',
+    float: 'left',
+    width: '70%'
   },
 
   largeText: {
@@ -38,8 +40,7 @@ export const styles = {
     padding: 20,
     backgroundColor: 'rgb(230,230,230)',
     borderRadius: 5,
-    width: 'calc(70% - 100px)',
-    marginTop: 20,
+    xwidth: 'calc(70% - 100px)',
     border: 'solid 1px black'
   },
 
@@ -53,12 +54,26 @@ export const styles = {
 
   validationMessages: {
     position: 'fixed',
-    bottom: 20,
+    bottom: 80,
     right: 20,
     width: 'calc(30% - 20px)',
     padding: 20,
     backgroundColor: 'rgba(0,0,0,0.8)',
     borderRadius: 5
+  },
+
+  validationMessagesLight: {
+    float: 'left',
+    marginLeft: 10,
+    width: 'calc(30% - 20px)',
+    padding: 10,
+    backgroundColor: 'rgb(230,230,230)',
+    border: 'solid 1px black',
+    borderRadius: 5,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 18,
+    boxSizing: 'border-box',
+    overflow: 'scroll'
   },
 
   finePrint: {
@@ -71,5 +86,51 @@ export const styles = {
     borderRadius: 5,
     backgroundColor: 'rgb(180,180,180)',
     border: 'solid 1px white'
-  }
+  },
+
+  tabContainer: {
+    overflow: 'hidden',
+    marginTop: 10
+  },
+
+  tab: {
+    float: 'left',
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    color: 'white',
+    padding: '5px 30px 5px 30px',
+    marginRight: 1,
+    marginBottom: 2,
+    cursor: 'pointer',
+    border: 'solid 3px white',
+    borderRadius: 3,
+    fontFamily: '"Gotham 4r", sans-serif',
+  },
+
+  currentTab: {
+    border: 'solid 3px #7ad9f7',
+    borderRadius: 3
+  },
+
+  disabledTab: {
+    backgroundColor: 'rgb(160,160,160)',
+    color: 'rgb(230,230,230)',
+    pointerEvents: 'none',
+    cursor: 'initial'
+  },
+
+  previousButton: {
+    position: 'fixed',
+    left: 20,
+    bottom: 20,
+    fontSize: 30,
+    cursor: 'pointer'
+  },
+
+  nextButton: {
+    position: 'fixed',
+    right: 20,
+    bottom: 20,
+    fontSize: 30,
+    cursor: 'pointer'
+  },
 };

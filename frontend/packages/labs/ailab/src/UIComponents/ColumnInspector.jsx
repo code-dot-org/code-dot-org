@@ -19,7 +19,8 @@ class ColumnInspector extends Component {
     uniqueOptionsByColumn: PropTypes.object,
     getRangesByColumn: PropTypes.func,
     rangesByColumn: PropTypes.object,
-    metadata: PropTypes.object
+    metadata: PropTypes.object,
+    mode: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -64,10 +65,17 @@ class ColumnInspector extends Component {
               {this.props.selectedColumns.map((column, index) => {
                 return (
                   <div key={index}>
-                    {this.props.columnsByDataType[column] && (
-                      <label>
-                        {column}: {this.getMetadataColumnType(column)}
-                        {!this.getMetadataColumnType(column) && (
+                    <label>
+                      {this.props.mode.hideSpecifyColunns &&
+                        this.props.columnsByDataType[column] && (
+                          <div>
+                            {column}: {this.getMetadataColumnType(column)}
+                          </div>
+                        )}
+                      {(!this.getMetadataColumnType(column) ||
+                        !this.props.mode.hideSpecifyColunns) && (
+                        <div>
+                          {column}: &nbsp;
                           <select
                             onChange={event =>
                               this.handleChangeDataType(event, column)
@@ -82,9 +90,10 @@ class ColumnInspector extends Component {
                               );
                             })}
                           </select>
-                        )}
-                      </label>
-                    )}
+                        </div>
+                      )}
+                    </label>
+
                     {this.props.columnsByDataType[column] ===
                       ColumnTypes.CATEGORICAL && (
                       <div>
@@ -168,7 +177,8 @@ export default connect(
     columnsByDataType: state.columnsByDataType,
     uniqueOptionsByColumn: getOptionFrequenciesByColumn(state),
     rangesByColumn: getRangesByColumn(state),
-    metadata: state.metadata
+    metadata: state.metadata,
+    mode: state.mode
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

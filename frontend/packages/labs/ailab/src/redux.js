@@ -45,6 +45,9 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
+const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
+const GO_PREVIOUS_PANEL = "GO_PREVIOUS_PANEL";
+const GO_NEXT_PANEL = "GO_NEXT_PANEL";
 
 // Action creators
 export function setMode(mode) {
@@ -152,6 +155,18 @@ export function setTrainedModel(trainedModel) {
   return { type: SET_TRAINED_MODEL, trainedModel };
 }
 
+export function setCurrentPanel(currentPanel) {
+  return { type: SET_CURRENT_PANEL, currentPanel };
+}
+
+export function goPreviousPanel() {
+  return { type: GO_PREVIOUS_PANEL };
+}
+
+export function goNextPanel() {
+  return { type: GO_NEXT_PANEL };
+}
+
 const initialState = {
   csvfile: undefined,
   jsonfile: undefined,
@@ -172,7 +187,8 @@ const initialState = {
   testData: {},
   prediction: {},
   modelSize: undefined,
-  trainedModel: undefined
+  trainedModel: undefined,
+  currentPanel: "selectDataset"
 };
 
 // Reducer
@@ -202,10 +218,16 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_IMPORTED_METADATA) {
-    return {
+    var newState = {
       ...state,
       metadata: action.metadata
-    };
+    }
+
+    if (state.mode && state.mode.datasets && state.mode.datasets.length > 1 && state.mode.hideSelectLabel) {
+      newState.labelColumn = action.metadata.defaultLabelColumn
+    }
+
+    return newState;
   }
   if (action.type === SET_SELECTED_TRAINER) {
     return {
@@ -296,7 +318,8 @@ export default function rootReducer(state = initialState, action) {
   }
   if (action.type === RESET_STATE) {
     return {
-      ...initialState
+      ...initialState,
+      mode: state.mode
     };
   }
   if (action.type === SET_MODEL_SIZE) {
@@ -311,6 +334,32 @@ export default function rootReducer(state = initialState, action) {
       trainedModel: action.trainedModel
     };
   }
+  if (action.type === SET_CURRENT_PANEL) {
+    return {
+      ...state,
+      currentPanel: action.currentPanel
+    };
+  }
+  /*if (action.type === GO_PREVIOUS_PANEL) {
+    const currentPanelIndex = panelList.findIndex(element=>element.id === state.currentPanel);
+    const nextPanelIndex = currentPanelIndex - 1;
+    const nextPanelId = panelList[nextPanelIndex].id;
+
+    return {
+      ...state,
+      currentPanel: nextPanelId
+    };
+  }
+  if (action.type === GO_NEXT_PANEL) {
+    const currentPanelIndex = panelList.findIndex(element=>element.id === state.currentPanel);
+    const nextPanelIndex = currentPanelIndex + 1;
+    const nextPanelId = panelList[nextPanelIndex].id;
+
+    return {
+      ...state,
+      currentPanel: nextPanelId
+    };
+  }*/
   return state;
 }
 
@@ -512,62 +561,72 @@ export function getSummaryStat(state) {
 }
 
 export function validationMessages(state) {
-  const validationMessages = [];
-  validationMessages.push({
+  const validationMessages = {};
+  validationMessages['notEnoughData'] = {
+    panel: 'dataDisplay',
     readyToTrain: datasetUploaded(state),
     errorString: "There is not enough data to train a model.",
     successString: `There are ${state.data.length} rows of data.`
-  });
-  validationMessages.push({
+  };
+  validationMessages['columnNames'] = {
+    panel: 'dataDisplay',
     readyToTrain: uniqueColumnNames(state),
     errorString:
       "Each column must have a name, and column names must be unique.",
     successString: "Each column has a unique name."
-  });
-  validationMessages.push({
+  };
+  validationMessages['emptyCells'] = {
+    panel: 'dataDisplay',
     readyToTrain: noEmptyCells(state),
     errorString: "There can't be any empty cells.",
     successString: "Each cell has a value!"
-  });
-  validationMessages.push({
+  };
+  validationMessages['selectLabel'] = {
+    panel: 'selectFeatures',
     readyToTrain: oneLabelSelected(state),
     errorString: "Please designate one column as the label column.",
     successString: "Label column has been selected."
-  });
-  validationMessages.push({
+  };
+  validationMessages['selectFeatures'] = {
+    panel: 'selectFeatures',
     readyToTrain: minOneFeatureSelected(state),
     errorString: "Please select at least one feature to train.",
     successString: "At least one feature is selected."
-  });
-  validationMessages.push({
+  };
+  validationMessages['columnUsage'] = {
+    panel: 'selectFeatures',
     readyToTrain: uniqLabelFeaturesSelected(state),
     errorString:
       "A column can not be selected as a both a feature and a label.",
     successString: "Label and feature(s) columns are unique."
-  });
-  validationMessages.push({
+  };
+  validationMessages['columnData'] = {
+    panel: 'selectFeatures',
     readyToTrain: selectedColumnsHaveDatatype(state),
     errorString:
       "Feature and label columns must contain only continuous or categorical data.",
     successString:
       "Selected features and label contain continuous or categorical data"
-  });
-  validationMessages.push({
+  };
+  validationMessages['continuousNumbers'] = {
+    panel: 'selectFeatures',
     readyToTrain: continuousColumnsHaveOnlyNumbers(state),
     errorString: "Continuous columns should contain only numbers.",
     successString: "Continuous columns contain only numbers."
-  });
-  validationMessages.push({
+  };
+  validationMessages['training'] = {
+    panel: 'selectTrainer',
     readyToTrain: trainerSelected(state),
     errorString: "Please select a training algorithm.",
     successString: "Training algorithm selected."
-  });
-  validationMessages.push({
+  };
+  validationMessages['compatibleLabel'] = {
+    panel: 'selectTrainer',
     readyToTrain: compatibleLabelAndTrainer(state),
     errorString:
       "The label datatype must be compatible with the training algorithm.",
     successString: "The label datatype and training algorithm are compatible."
-  });
+  };
   return validationMessages;
 }
 

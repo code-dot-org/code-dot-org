@@ -31,3 +31,18 @@ export const allDatasets = [
     metadataPath: "datasets/videogame_sales.json"
   }
 ];
+
+
+export function getAvailableDatasets(specificDatasets) {
+  if (specificDatasets && specificDatasets.length > 1) {
+    return allDatasets.filter(dataset => {
+      return specificDatasets.includes(dataset.id);
+    });
+  } else {
+    return allDatasets;
+  }
+}
+
+export function getDefaultLabelForDataset(datasetId) {
+  return allDatasets.find(dataset => { return dataset.id === datasetId; });
+}

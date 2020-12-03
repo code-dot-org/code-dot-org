@@ -3,18 +3,17 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
-  isDataUploaded,
   setLabelColumn,
   setSelectedFeatures,
   setShowPredict,
   getSelectableFeatures,
-  getSelectableLabels
+  getSelectableLabels,
+  validationMessages
 } from "../redux";
 import { styles } from "../constants";
 
 class SelectFeatures extends Component {
   static propTypes = {
-    isDataUploaded: PropTypes.bool,
     features: PropTypes.array,
     labelColumn: PropTypes.string,
     setLabelColumn: PropTypes.func.isRequired,
@@ -22,7 +21,9 @@ class SelectFeatures extends Component {
     setSelectedFeatures: PropTypes.func.isRequired,
     setShowPredict: PropTypes.func.isRequired,
     selectableFeatures: PropTypes.array,
-    selectableLabels: PropTypes.array
+    selectableLabels: PropTypes.array,
+    validationMessages: PropTypes.object,
+    mode: PropTypes.object
   };
 
   handleChangeSelect = event => {
@@ -38,61 +39,76 @@ class SelectFeatures extends Component {
   };
 
   render() {
+    const validationMessageLabel = this.props.validationMessages["selectLabel"];
+    const validationMessageFeature = this.props.validationMessages["selectFeatures"];
+
     return (
       <div id="select-features">
-        {this.props.isDataUploaded && (
-          <div style={styles.panel}>
-            {this.props.selectableLabels.length > 0 && (
-              <form>
-                <label>
-                  <div style={styles.largeText}>Which column contains the labels for your dataset?</div>
-                  <p>
-                    The label is the column you'd like to train the model to
-                    predict.
-                  </p>
-                  <select
-                    value={this.props.labelColumn}
-                    onChange={this.handleChangeSelect}
-                  >
-                    <option>{""}</option>
-                    {this.props.selectableLabels.map((feature, index) => {
-                      return (
-                        <option key={index} value={feature}>
-                          {feature}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </label>
-              </form>
-            )}
-            {this.props.selectableFeatures.length > 0 && (
-              <form>
-                <p/>
-                <label>
-                  <div style={styles.largeText}>Which features are you interested in training on?</div>
-                  <p>
-                    Features are the attributes the model will use to make a
-                    prediction.
-                  </p>
-                  <select
-                    multiple={true}
-                    value={this.props.selectedFeatures}
-                    onChange={this.handleChangeMultiSelect}
-                  >
-                    {this.props.selectableFeatures.map((feature, index) => {
-                      return (
-                        <option key={index} value={feature}>
-                          {feature}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </label>
-              </form>
-            )}
-          </div>
-        )}
+        <div style={styles.panel}>
+          {!this.props.mode.hideSelectLabel && this.props.selectableLabels.length > 0 && (
+            <form>
+              <label>
+                <div style={styles.largeText}>
+                  Which column contains the labels for your dataset?
+                </div>
+                <p>
+                  The label is the column you'd like to train the model to
+                  predict.
+                </p>
+                {/*{!validationMessageLabel.readyToTrain && (
+                  <div style={styles.error}>
+                    {validationMessageLabel.errorString}
+                  </div>
+                )}*/}
+                <select
+                  value={this.props.labelColumn}
+                  onChange={this.handleChangeSelect}
+                >
+                  <option>{""}</option>
+                  {this.props.selectableLabels.map((feature, index) => {
+                    return (
+                      <option key={index} value={feature}>
+                        {feature}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+            </form>
+          )}
+          {this.props.selectableFeatures.length > 0 && (
+            <form>
+              <p />
+              <label>
+                <div style={styles.largeText}>
+                  Which features are you interested in training on?
+                </div>
+                <p>
+                  Features are the attributes the model will use to make a
+                  prediction.
+                </p>
+                {/*!validationMessageFeature.readyToTrain && (
+                  <div style={styles.error}>
+                    {validationMessageFeature.errorString}
+                  </div>
+                )*/}
+                <select
+                  multiple={true}
+                  value={this.props.selectedFeatures}
+                  onChange={this.handleChangeMultiSelect}
+                >
+                  {this.props.selectableFeatures.map((feature, index) => {
+                    return (
+                      <option key={index} value={feature}>
+                        {feature}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+            </form>
+          )}
+        </div>
       </div>
     );
   }
@@ -100,11 +116,12 @@ class SelectFeatures extends Component {
 
 export default connect(
   state => ({
-    isDataUploaded: isDataUploaded(state),
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     selectableFeatures: getSelectableFeatures(state),
-    selectableLabels: getSelectableLabels(state)
+    selectableLabels: getSelectableLabels(state),
+    validationMessages: validationMessages(state),
+    mode: state.mode
   }),
   dispatch => ({
     setSelectedFeatures(selectedFeatures) {
