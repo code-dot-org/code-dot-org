@@ -110,7 +110,6 @@ class LessonEditor extends Component {
       })
     })
       .done(data => {
-        console.log(data);
         if (shouldCloseAfterSave) {
           navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
         } else {
