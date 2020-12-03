@@ -95,6 +95,7 @@ class ScriptEditor extends React.Component {
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool,
+    initialIsMigrated: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -251,7 +252,8 @@ class ScriptEditor extends React.Component {
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
-      resourceTypes: this.state.teacherResources.map(resource => resource.type)
+      resourceTypes: this.state.teacherResources.map(resource => resource.type),
+      is_migrated: this.props.initialIsMigrated
     };
 
     if (this.state.hasImportedLessonDescriptions) {
