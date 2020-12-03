@@ -20,7 +20,6 @@ import {loadScript} from './sectionProgressLoader';
 import {
   ViewType,
   scriptDataPropType,
-  tooltipIdForStudent,
   tooltipIdForLessonNumber
 } from './sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -31,7 +30,6 @@ import {
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
-import moment from 'moment';
 
 const styles = {
   heading: {
@@ -83,9 +81,7 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    showStandardsIntroDialog: PropTypes.bool,
-    studentTimestamps: PropTypes.object,
-    localeCode: PropTypes.string
+    showStandardsIntroDialog: PropTypes.bool
   };
 
   componentDidMount() {
@@ -146,35 +142,8 @@ class SectionProgress extends Component {
         {stage.name}
       </ReactTooltip>
     ));
-
-    const studentTimestamps = this.props.studentTimestamps || {};
-    const studentTooltips = Object.keys(studentTimestamps).map(studentId => (
-      <ReactTooltip
-        id={tooltipIdForStudent(studentId)}
-        key={tooltipIdForStudent(studentId)}
-        role="tooltip"
-        wrapper="span"
-        effect="solid"
-      >
-        <span style={styles.studentTooltip}>
-          {i18n.lastProgress()}
-          <br />
-          {this.tooltipTextForStudent(studentId)}
-        </span>
-      </ReactTooltip>
-    ));
-
-    return lessonTooltips.concat(studentTooltips);
+    return lessonTooltips;
   }
-
-  tooltipTextForStudent = studentId => {
-    const {localeCode} = this.props;
-    if (localeCode) {
-      moment.locale(localeCode);
-    }
-    const timestamp = this.props.studentTimestamps[studentId];
-    return timestamp ? moment(timestamp).calendar() : i18n.none();
-  };
 
   navigateToScript = () => {
     firehoseClient.putRecord(
@@ -280,12 +249,7 @@ export default connect(
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentScriptData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo,
-    studentTimestamps:
-      state.sectionProgress.studentLastUpdateByScript[
-        state.scriptSelection.scriptId
-      ],
-    localeCode: state.locales.localeCode
+    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),
   dispatch => ({
     setScriptId(scriptId) {

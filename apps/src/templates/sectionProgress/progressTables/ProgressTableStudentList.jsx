@@ -13,7 +13,9 @@ export default class ProgressTableStudentList extends React.Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
-    headers: PropTypes.arrayOf(PropTypes.string).isRequired
+    headers: PropTypes.arrayOf(PropTypes.string).isRequired,
+    studentTimestamps: PropTypes.object,
+    localeCode: PropTypes.string
   };
 
   constructor(props) {
@@ -24,7 +26,7 @@ export default class ProgressTableStudentList extends React.Component {
   }
 
   studentNameFormatter(value, {rowData}) {
-    const {section, scriptData} = this.props;
+    const {section, scriptData, studentTimestamps, localeCode} = this.props;
     return (
       <ProgressTableStudentName
         name={value}
@@ -32,6 +34,8 @@ export default class ProgressTableStudentList extends React.Component {
         sectionId={section.id}
         scriptName={scriptData.name}
         scriptId={scriptData.id}
+        lastTimestamp={studentTimestamps[rowData.id]}
+        localeCode={localeCode}
       />
     );
   }

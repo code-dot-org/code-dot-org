@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import ProgressTableSummaryView from './ProgressTableSummaryView';
 import ProgressTableDetailView from './ProgressTableDetailView';
 import ProgressTableStudentList from './ProgressTableStudentList';
@@ -40,6 +42,12 @@ export const DetailViewContainer = synchronized(
 
 function synchronized(StudentList, ContentView, studentHeaders) {
   class Synchronized extends React.Component {
+    static propTypes = {
+      // From redux
+      studentTimestamps: PropTypes.object,
+      localeCode: PropTypes.string
+    };
+
     constructor(props) {
       super(props);
       this.needTweakLastColumns = false;
@@ -60,6 +68,8 @@ function synchronized(StudentList, ContentView, studentHeaders) {
             <StudentList
               ref={r => (this.studentList = r)}
               headers={studentHeaders}
+              studentTimestamps={this.props.studentTimestamps}
+              localeCode={this.props.localeCode}
               {...this.props}
             />
           </div>
@@ -74,10 +84,18 @@ function synchronized(StudentList, ContentView, studentHeaders) {
       );
     }
   }
+
   Synchronized.displayName = `Synchronized(${getDisplayName(
     StudentList
   )},${getDisplayName(ContentView)})`;
-  return Synchronized;
+
+  return connect(state => ({
+    studentTimestamps:
+      state.sectionProgress.studentLastUpdateByScript[
+        state.scriptSelection.scriptId
+      ],
+    localeCode: state.locales.localeCode
+  }))(Synchronized);
 }
 
 function getDisplayName(WrappedComponent) {
