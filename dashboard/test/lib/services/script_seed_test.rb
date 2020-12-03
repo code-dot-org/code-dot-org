@@ -97,6 +97,30 @@ class ScriptSeedTest < ActiveSupport::TestCase
     assert_equal 'updated visible after', script.lessons.first.visible_after
   end
 
+  test 'seed updates lesson activities' do
+    script = create_script_tree
+
+    script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      lesson = script.lessons.first
+      lesson.lesson_activities.first.update!(name: 'Updated Activity Name')
+      lesson.lesson_activities.create(
+        name: 'New Activity Name',
+        position: 2,
+        key: "#{lesson.name}-activity-2"
+      )
+    end
+
+    ScriptSeed.seed_from_json(json)
+    script.reload
+
+    assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+    lesson = script.lessons.first
+    assert_equal(
+      ['Updated Activity Name', 'New Activity Name'],
+      lesson.lesson_activities.map(&:name)
+    )
+  end
+
   test 'seed updates script_levels' do
     script = create_script_tree
     new_level = create :level
