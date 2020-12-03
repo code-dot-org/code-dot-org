@@ -360,6 +360,19 @@
         },
         "frozen snowflake branch": {
           "frozen_snowflake_branch": "השתמש בבלוק \"צור ענף של פתית שלג\""
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
+          "": " "
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
+          "": " "
+        },
+        "outbreak2": {
+          "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
+          "pointerlocation": "גררו בלוק נושא לכאן."
+        },
+        "outbreak7": {
+          "costumes_callout": "לחצו להכנת תחפושת חדשה"
         }
       }
     }

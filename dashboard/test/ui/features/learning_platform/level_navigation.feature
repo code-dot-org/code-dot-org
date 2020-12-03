@@ -14,3 +14,12 @@ Scenario: External Markdown Level
   And I wait to see ".submitButton"
   Then I click ".submitButton" to load a new page
   And I wait until I am on "http://studio.code.org/s/allthethings/stage/21/puzzle/2"
+
+Scenario: Complete an auto-success level signed-out, continue, the auto-success level should show up as completed
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/14"
+  And I rotate to landscape
+  And I wait to see ".submitButton"
+  Then I click ".submitButton" to load a new page
+  And I wait until I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
+  And I wait for the page to fully load
+  And I verify progress in the header of the current page is "perfect" for level 14

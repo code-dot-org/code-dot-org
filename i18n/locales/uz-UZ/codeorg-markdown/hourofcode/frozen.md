@@ -1,44 +1,44 @@
 ---
-title: Teacher Resources - Code with Anna and Elsa
+title: O‘qituvchi resurslari - Anna va Elza bilan kod yozing (Code with Anna and Elsa)
 ---
 
-# Code with Anna and Elsa: An Hour of Code Tutorial
+# Anna va Elza bilan kod yozing: Dasturlash soati qo‘llanmasi
 
 {{ hoc_frozen_video }}
 
 [col-50]
 
-## Teacher Resources
+## O‘qituvchi resurslari
 
-### Lesson Plans:
+### Dars rejasi:
 
-- [Code with Anna and Elsa]({{ hoc_frozen_cb_url }})
-- [Answer Sheet](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
-- OPTIONAL: [The Drawing Machine](http://code.org/curriculum/misc/hocunplugged/Teacher)
+- [Anna va Elza bilan kod yozing]({{ hoc_frozen_cb_url }})
+- [Javoblar varag‘i](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
+- IXTIYORIY:[Rasm chizish mashinasi](http://code.org/curriculum/misc/hocunplugged/Teacher)
 
-### Extension Activities:
+### Qo‘shimcha mashg‘ulotlar:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Hour of Code - Dasturlash soatidan tashqarida](http://code.org/learn/beyond)
+- [Kompyuter Fanlari Asoslari: Kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### O‘qituvchilar uchun boshqa manbalar:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: o‘qituvchilar uchun yo‘riqnoma](https://hourofcode.com/how-to)
+- [Muvaffaqiyatli o‘qituvchilardan eng yaxshi amaliyotlar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Jonli tadbir: [Dasturlash soati bo‘yicha o‘qituvchi uchun qo‘llanma](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Umumlashma
 
-Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+Anna va Elza muzning sehri va go'zalligini o'rganayapti, ularga koddan foydalanib qo‘shilaylik. Siz konkida uchish paytida qor parchalari va naqshlarni yaratasiz va yaratilgan ajoyibotlarni do'stlaringiz bilan baham ko'rishingiz mumkin!
 
-**Recommended Age Range:** 8+
+**Tavsiya etilgan yosh:** 8+
 
-**Technology Requirements:** Modern browsers + tablets
+**Talab etilgan texnologiyalar:** Zamonaviy brauzerlar+planshet
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/frozen/reset"><button>O‘quv qo‘llanmasini sinab ko‘ring</button></a>
 
 [/col-50]

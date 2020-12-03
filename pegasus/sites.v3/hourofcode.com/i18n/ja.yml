@@ -40,11 +40,9 @@ ja:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: Hour of Code 2020が登場します！
+  hoc2020_ai_header: 人工知能を活用してください
+  hoc2020_ai_description: AIとマシーンラーニングは、全世界に影響を及ぼしています。新ビデオシリーズでAIを活用し、25か国語以上の言語でOceans用のAIを訓練し、倫理やAIなどを議論してください。
   hoc2019_header: コンピューターサイエンスを学ぼう。世界を変えよう。
   hoc2019_header_line1_mobile: コンピューターサイエンスを学ぼう。
   hoc2019_header_line2_mobile: 世界を変えよう。
@@ -1464,7 +1462,7 @@ ja:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Minecraft 2 つの村の物語
   tutorial_danceparty_shortdescription: "  ダンスパーティーをコード化して友達と共有しましょう。ケイティ・ペリー、マドンナ、J・バルビン、シア、キース・アーバン、シアラ、その他25曲を収録!
     \ "
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
@@ -5278,11 +5276,8 @@ ja:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: 何世紀にもわたって、村人たちと邪悪な村人たちは同じところに住んでいましたが、交流することは滅多にありませんでした。コードのパワーを使って、2
+    つの村を 1 つにまとめましょう。プレイヤーは隣人に対する共感と思いやりを経験して、協力とインクルージョンを学び、私たち全員をユニークで特別なものにする多様性を受け入れます。
   tutorial_dance2019_language: アラビア語、中国語、チェコ語、デンマーク語、オランダ語、英語、フィンランド語、フランス語、ドイツ語、ギリシャ語、ヒンディー語、ハンガリー語、インドネシア語、イタリア語、日本語、韓国語、マレー語、ポーランド語、ポルトガル語、その他10カ国語！
   tutorial_danceparty_language: "  英語、アラビア語、カタロニア語、中国語、チェコ語、デンマーク語、オランダ語、フィンランド語、フランス語、ドイツ語、ギリシャ語、ハンガリー語、イタリア語、日本語、韓国語、ノルウェー語、ポーランド語、ポルトガル語、ロシア語、スペイン語、スウェーデン語、タイ語、トルコ語、ベトナム語
     \ "
@@ -6022,7 +6017,7 @@ ja:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: 日本語
-  tutorial_meeempathy_language: 日本語
+  tutorial_meeempathy_language: 中国語、デンマーク語、オランダ語、英語、フランス語、イタリア語、日本語、韓国語、ノルウェー語、ポルトガル語、スペイン語、スウェーデン語、トルコ語
   tutorial_dance2019_string_detail_grades: 小学2年生～
   tutorial_danceparty_string_detail_grades: 小学2年生～
   tutorial_chibitronics_string_detail_grades: 幼児〜小学5年

@@ -414,7 +414,7 @@ class ActivitySectionCard extends Component {
             <OrderControls
               name={
                 this.props.activitySection.displayName ||
-                this.props.activitySection.key
+                'Unnamed Activity Section'
               }
               move={this.handleMoveActivitySection}
               remove={this.handleRemoveActivitySection}
