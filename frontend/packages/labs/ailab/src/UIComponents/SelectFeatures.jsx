@@ -39,9 +39,6 @@ class SelectFeatures extends Component {
   };
 
   render() {
-    const validationMessageLabel = this.props.validationMessages["selectLabel"];
-    const validationMessageFeature = this.props.validationMessages["selectFeatures"];
-
     return (
       <div id="select-features">
         <div style={styles.panel}>
@@ -55,11 +52,6 @@ class SelectFeatures extends Component {
                   The label is the column you'd like to train the model to
                   predict.
                 </p>
-                {/*{!validationMessageLabel.readyToTrain && (
-                  <div style={styles.error}>
-                    {validationMessageLabel.errorString}
-                  </div>
-                )}*/}
                 <select
                   value={this.props.labelColumn}
                   onChange={this.handleChangeSelect}
@@ -87,11 +79,6 @@ class SelectFeatures extends Component {
                   Features are the attributes the model will use to make a
                   prediction.
                 </p>
-                {/*!validationMessageFeature.readyToTrain && (
-                  <div style={styles.error}>
-                    {validationMessageFeature.errorString}
-                  </div>
-                )*/}
                 <select
                   multiple={true}
                   value={this.props.selectedFeatures}

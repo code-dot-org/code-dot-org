@@ -44,18 +44,17 @@ class SelectDataset extends Component {
 
     parseCSV(csvPath, true, false);
 
-    self = this;
     parseJSON(jsonPath, result => {
       console.log("json done");
-      if (self.props.mode.hideSpecifyColunns) {
+      if (this.props.mode.hideSpecifyColunns) {
         for (const field of result.fields) {
-          self.props.setColumnsByDataType(field.id, field.type);
+          this.props.setColumnsByDataType(field.id, field.type);
         }
       }
 
       if (this.props.mode.hideSelectLabel) {
         // Use the manifest's default label instead.
-        self.props.setLabelColumn(result.defaultLabelColumn);
+        this.props.setLabelColumn(result.defaultLabelColumn);
       }
     });
   };

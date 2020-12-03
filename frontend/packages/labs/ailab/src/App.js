@@ -20,17 +20,8 @@ import {
 } from "./redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPlay,
-  faPause,
-  faBackward,
-  faForward,
-  faEraser,
-  faCheck,
   faSquare,
-  faCheckSquare,
-  faBan,
-  faInfo,
-  faTrash
+  faCheckSquare
 } from "@fortawesome/free-regular-svg-icons";
 
 const panelList = [

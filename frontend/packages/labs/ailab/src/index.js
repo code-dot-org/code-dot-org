@@ -8,8 +8,7 @@ import rootReducer, {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
-  setColumnsByDataType,
-  setLabelColumn
+  setColumnsByDataType
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
