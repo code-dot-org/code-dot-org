@@ -17,6 +17,9 @@ import hashEmail from '@cdo/apps/code-studio/hashEmail';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
+// Conditionally enable "why-did-you-render" dev experiment
+import '@cdo/apps/util/whyDidYouRender';
+
 const store = getStore();
 store.dispatch(setRtlFromDOM());
 
