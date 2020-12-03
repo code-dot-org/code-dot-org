@@ -66,14 +66,14 @@ class ColumnInspector extends Component {
                 return (
                   <div key={index}>
                     <label>
-                      {this.props.mode.hideSpecifyColunns &&
+                      {this.props.mode && this.props.mode.hideSpecifyColunns &&
                         this.props.columnsByDataType[column] && (
                           <div>
                             {column}: {this.getMetadataColumnType(column)}
                           </div>
                         )}
                       {(!this.getMetadataColumnType(column) ||
-                        !this.props.mode.hideSpecifyColunns) && (
+                        !(this.props.mode && this.props.mode.hideSpecifyColunns)) && (
                         <div>
                           {column}: &nbsp;
                           <select

@@ -42,32 +42,33 @@ class SelectFeatures extends Component {
     return (
       <div id="select-features">
         <div style={styles.panel}>
-          {!this.props.mode.hideSelectLabel && this.props.selectableLabels.length > 0 && (
-            <form>
-              <label>
-                <div style={styles.largeText}>
-                  Which column contains the labels for your dataset?
-                </div>
-                <p>
-                  The label is the column you'd like to train the model to
-                  predict.
-                </p>
-                <select
-                  value={this.props.labelColumn}
-                  onChange={this.handleChangeSelect}
-                >
-                  <option>{""}</option>
-                  {this.props.selectableLabels.map((feature, index) => {
-                    return (
-                      <option key={index} value={feature}>
-                        {feature}
-                      </option>
-                    );
-                  })}
-                </select>
-              </label>
-            </form>
-          )}
+          {!(this.props.mode && this.props.mode.hideSelectLabel) &&
+            this.props.selectableLabels.length > 0 && (
+              <form>
+                <label>
+                  <div style={styles.largeText}>
+                    Which column contains the labels for your dataset?
+                  </div>
+                  <p>
+                    The label is the column you'd like to train the model to
+                    predict.
+                  </p>
+                  <select
+                    value={this.props.labelColumn}
+                    onChange={this.handleChangeSelect}
+                  >
+                    <option>{""}</option>
+                    {this.props.selectableLabels.map((feature, index) => {
+                      return (
+                        <option key={index} value={feature}>
+                          {feature}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </label>
+              </form>
+            )}
           {this.props.selectableFeatures.length > 0 && (
             <form>
               <p />
