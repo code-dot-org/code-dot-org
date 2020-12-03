@@ -198,12 +198,10 @@ module ScriptSeed
 
     # Destroy any existing activities that weren't in the imported list
     # Destroy before import, otherwise position gets messed up.
-    existing_activities = seed_context.script.lessons.map(&:lesson_activities).flatten
+    existing_activities = LessonActivity.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     destroy_outdated_objects(LessonActivity, existing_activities, activities_to_import, seed_context)
     LessonActivity.import! activities_to_import, on_duplicate_key_update: get_columns(LessonActivity)
-    seed_context.script.reload
-    seed_context.script.lessons.map(&:lesson_activities).flatten
-    #  LessonActivity.where(script: Script.find_by_name(seed_context.script.name))
+    LessonActivity.joins(:lesson).where('stages.script_id' => seed_context.script.id)
   end
 
   def self.import_activity_sections(sections_data, seed_context)
@@ -218,12 +216,10 @@ module ScriptSeed
 
     # Destroy any existing activities that weren't in the imported list
     # Destroy before import, otherwise position gets messed up.
-    existing_sections = seed_context.script.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
+    existing_sections = ActivitySection.joins(lesson_activity: :lesson).where('stages.script_id' => seed_context.script.id)
     destroy_outdated_objects(ActivitySection, existing_sections, sections_to_import, seed_context)
     ActivitySection.import! sections_to_import, on_duplicate_key_update: get_columns(ActivitySection)
-    seed_context.script.reload
-    seed_context.script.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
-    # ActivitySection.where(script: seed_context.script)
+    ActivitySection.joins(lesson_activity: :lesson).where('stages.script_id' => seed_context.script.id)
   end
 
   def self.import_script_levels(script_levels_data, seed_context)
