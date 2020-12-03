@@ -40,8 +40,8 @@ export default class ReCaptchaValidationDialog extends React.Component {
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
     script.id = 'captcha';
-    window.onSubmit = token => this.onCaptchaVerification(token);
-    window.captchaExpired = () => this.onCaptchaExpiration();
+    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
+    window.onCaptchaExpired = () => this.onCaptchaExpiration();
     script.onload = () => this.setState({loadedCaptcha: true});
     document.body.appendChild(script);
   }
@@ -84,8 +84,8 @@ export default class ReCaptchaValidationDialog extends React.Component {
             <div
               className="g-recaptcha"
               data-sitekey={siteKey}
-              data-callback="onSubmit"
-              data-expired-callback="captchaExpired"
+              data-callback="onCaptchaSubmit"
+              data-expired-callback="onCaptchaExpired"
             />
           )}
           <DialogFooter>
@@ -93,13 +93,11 @@ export default class ReCaptchaValidationDialog extends React.Component {
               onClick={handleCancel}
               text={i18n.dialogCancel()}
               color={Button.ButtonColor.gray}
-              className="no-mc"
             />
             <Button
               text={submitText}
               onClick={this.handleSubmit}
               color={Button.ButtonColor.orange}
-              className="no-mc ui-confirm-project-delete-button"
               disabled={!this.state.submitButtonEnabled}
             />
           </DialogFooter>
