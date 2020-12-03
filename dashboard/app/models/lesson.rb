@@ -320,7 +320,8 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_show),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       objectives: objectives.map(&:summarize_for_lesson_show),
-      is_teacher: user&.teacher?
+      is_teacher: user&.teacher?,
+      assessmentOpportunities: assessment_opportunities
     }
   end
 

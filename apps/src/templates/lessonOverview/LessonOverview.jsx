@@ -132,6 +132,9 @@ class LessonOverview extends Component {
             <h2>{i18n.purpose()}</h2>
             <SafeMarkdown markdown={lesson.purpose} />
 
+            <h2>{i18n.assessmentOpportunities()}</h2>
+            <SafeMarkdown markdown={lesson.assessmentOpportunities} />
+
             <h2>{i18n.agenda()}</h2>
             <LessonAgenda activities={this.props.activities} />
           </div>
