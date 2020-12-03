@@ -1,0 +1,69 @@
+@import 'color';
+@import 'style-constants';
+
+$row-height: 42px;
+$max-height: 680px;
+$student-list-width: 170px;
+$content-view-width: $content-width - $student-list-width;
+
+.progress-table {
+  table {
+    border: 1px solid;
+    border-color: $border-gray;
+  }
+  th {
+    padding: 0px;
+    background-color: $table-header;
+    border-width: 0px 1px 2px 0px;
+    border-color: $border-gray;
+    height: 100%;
+  }
+  tr {
+    height: $row-height;
+  }
+  tr:nth-child(even) {
+    background-color: $background_gray;
+  }
+  .student-list {
+    table {
+      width: $student-list-width;
+    }
+    td,
+    th {
+      width: $student-list-width;
+      border-right: 0px;
+      padding: 10px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      a {
+        color: $teal;
+      }
+    }
+    th {
+      background-color: $table-header;
+      color: $charcoal;
+    }
+  }
+  .content-view {
+    thead,
+    tbody {
+      max-width: $content-view-width;
+    }
+    th,
+    td {
+      min-width: 40px;
+      padding: 0px;
+    }
+    td {
+      border-right: 1px solid;
+      border-color: $border-gray;
+    }
+  }
+}
+
+:export {
+  MAX_BODY_HEIGHT: $max-height / 1px;
+  CONTENT_VIEW_WIDTH: $content-view-width / 1px;
+}

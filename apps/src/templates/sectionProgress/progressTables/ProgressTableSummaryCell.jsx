@@ -1,12 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
-class StudentProgressSummaryCell extends Component {
+const style = {
+  margin: '9px 8px'
+};
+
+class ProgressTableSummaryCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
-    style: PropTypes.object,
     statusCounts: PropTypes.object,
     assessmentStage: PropTypes.bool,
     onSelectDetailView: PropTypes.func
@@ -34,7 +37,7 @@ class StudentProgressSummaryCell extends Component {
 
     return (
       <div
-        style={this.props.style}
+        style={style}
         onClick={this.props.onSelectDetailView}
         className="uitest-summary-cell"
       >
@@ -50,4 +53,4 @@ class StudentProgressSummaryCell extends Component {
   }
 }
 
-export default Radium(StudentProgressSummaryCell);
+export default Radium(ProgressTableSummaryCell);
