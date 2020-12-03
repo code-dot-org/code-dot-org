@@ -50,20 +50,36 @@ class SchoolStatsByYear < ApplicationRecord
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] Optional, the CSV file parsing options.
-  def self.merge_from_csv(filename, options = {col_sep: "\t", headers: true, quote_char: "\x00"})
+  def self.merge_from_csv(filename, options = {col_sep: "\t", headers: true, quote_char: "\x00"}, dry_run = false)
+    new_school_stats = 0
+    updated_school_stats = 0
+    unchanged_school_stats = 0
+
     CSV.read(filename, options).each do |row|
       parsed = yield row
       loaded = find_by(primary_keys.map(&:to_sym).map {|k| [k, parsed[k]]}.to_h)
       if loaded.nil?
         begin
-          SchoolStatsByYear.new(parsed).save!
+          SchoolStatsByYear.new(parsed).save! unless dry_run
+          new_school_stats += 1
         rescue ActiveRecord::InvalidForeignKey
           puts parsed[:school_id]
         end
       else
         loaded.assign_attributes(parsed)
-        loaded.update!(parsed) if loaded.changed?
+        if loaded.changed?
+          loaded.update!(parsed) unless dry_run
+          updated_school_stats += 1
+        else
+          unchanged_school_stats += 1
+        end
       end
+
+      # Make prettier?
+      CDO.log.info "School Stats By Years seeding: done processing #{filename}.\n"\
+        "#{new_school_stats} school stats added.\n"\
+        "#{updated_school_stats} school stats updated.\n"\
+        "#{unchanged_school_stats} school stats in import with no updates.\n"
     end
   end
 

@@ -92,22 +92,49 @@ class SchoolDistrict < ApplicationRecord
     end
   end
 
-  # Loads/merges the data from a CSV into the schools table.
+  def self.dry_seed_s3_object(bucket, filepath, import_options, &test)
+    AWS::S3.seed_from_file(bucket, filepath, true) do |filename|
+      SchoolDistrict.merge_from_csv(filename, import_options, true, true, &test)
+    end
+    CDO.log.info "This is a dry run. No data is written to the database."
+  end
+
+  # Loads/merges the data from a CSV into the school districts table.
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true)
-    CSV.read(filename, options).each do |row|
-      parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
-      loaded = find_by_id(parsed[:id])
-      if loaded.nil?
-        SchoolDistrict.new(parsed).save!
-      elsif write_updates
-        loaded.assign_attributes(parsed)
-        loaded.update!(parsed) if loaded.changed?
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, dry_run = false)
+    ActiveRecord::Base.transaction do
+      new_districts = []
+      updated_districts = 0
+      unchanged_districts = 0
+
+      CSV.read(filename, options).each do |row|
+        parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
+        loaded = find_by_id(parsed[:id])
+        if loaded.nil?
+          SchoolDistrict.new(parsed).save! unless dry_run
+          new_districts << parsed
+        elsif write_updates
+          loaded.assign_attributes(parsed)
+          if loaded.changed?
+            loaded.update!(parsed) unless dry_run
+            updated_districts += 1
+          else
+            unchanged_districts += 1
+          end
+        end
       end
     end
+
+    # Make prettier?
+    CDO.log.info "School District seeding: done processing #{filename}.\n"\
+      "#{new_districts.length} new districts added.\n"\
+      "Districts added:\n"\
+      "#{new_districts.map {|district| district[:name]}.join("\n")}\n"\
+      "#{updated_districts} districts updated.\n"\
+      "#{unchanged_districts} districts in import with no updates.\n"
   end
 
   # Download the data in the table to a CSV file.

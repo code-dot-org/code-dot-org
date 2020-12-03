@@ -287,21 +287,56 @@ class School < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true)
-    CSV.read(filename, options).each do |row|
-      parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
-      loaded = find_by_id(parsed[:id])
-      if loaded.nil?
-        begin
-          School.new(parsed).save!
-        rescue ActiveRecord::RecordNotUnique
-          CDO.log.info "Record with NCES ID #{parsed[:id]} and state school ID #{parsed[:state_school_id]} not unique, not added"
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, dry_run = false)
+    new_schools = []
+    updated_schools = 0
+    unchanged_schools = 0
+    duplicate_schools = []
+
+    ActiveRecord::Base.transaction do
+      CSV.read(filename, options).each do |row|
+        parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
+        loaded = find_by_id(parsed[:id])
+        if loaded.nil?
+          begin
+            School.new(parsed).save! unless dry_run
+            new_schools << parsed
+          rescue ActiveRecord::RecordNotUnique
+            # NCES ID and state school ID are required to be unique,
+            # so this error would occur if two rows with different NCES IDs
+            # had the same state school ID.
+            CDO.log.info "Record with NCES ID #{parsed[:id]} and state school ID #{parsed[:state_school_id]} not unique, not added"
+            duplicate_schools << parsed
+          end
+        elsif write_updates
+          loaded.assign_attributes(parsed)
+          if loaded.changed?
+            loaded.update!(parsed) unless dry_run
+            updated_schools += 1
+          else
+            unchanged_schools += 1
+          end
         end
-      elsif write_updates == true
-        loaded.assign_attributes(parsed)
-        loaded.update!(parsed) if loaded.changed?
       end
     end
+
+    # Make prettier?
+    CDO.log.info "School seeding: done processing #{filename}.\n"\
+      "#{new_schools.length} new schools added.\n"\
+      "Schools added:\n"\
+      "#{new_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}\n"\
+      "#{duplicate_schools.length} duplicate schools skipped.\n"\
+      "Duplicate schools skipped:\n"\
+      "#{duplicate_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}\n"\
+      "#{updated_schools} schools updated.\n"\
+      "#{unchanged_schools} schools in import with no updates.\n"
+  end
+
+  def self.dry_seed_s3_object(bucket, filepath, import_options, &test)
+    AWS::S3.seed_from_file(bucket, filepath, true) do |filename|
+      merge_from_csv(filename, import_options, true, true, &test)
+    end
+    CDO.log.info "This is a dry run. No data is written to the database."
   end
 
   # Download the data in the table to a CSV file.
