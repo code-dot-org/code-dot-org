@@ -3071,9 +3071,9 @@
         "outbreak2": "Convierte monstruos sanos en monstruos enfermos cuando se tocan.",
         "outbreak3": "Convierte monstruos en monstruos con máscaras faciales cuando haces clic en ellos.",
         "outbreak4": "Cambia el número y el tamaño de los sprites de monstruos para tu simulación.",
-        "outbreak5": "Crea un nuevo disfraz para monstruos con inmunidad al virus y úsalo en tu simulación.",
+        "outbreak5": "Haz que los monstruos enfermos comiencen a recuperarse cuando empiece la simulación y cuando un monstruo sano toque a un monstruo enfermo.",
         "outbreak6": "Agrega un porcentaje de probabilidad de que los monstruos se enfermen cada vez que monstruos sanos toquen monstruos enfermos. Haz esto para todas las combinaciones de monstruos con y sin máscaras.",
-        "outbreak7": "Haz que los monstruos enfermos comiencen a recuperarse cuando comience la simulación y cuando un monstruo sano toque a un monstruo enfermo.",
+        "outbreak7": "Crea un nuevo disfraz para monstruos con inmunidad al virus y úsalo en tu simulación.",
         "outbreak8": "Comparte un mensaje con tu simulación.",
         "outbreak_freeplay": "Realiza los cambios o mejoras que desee en tu proyecto. "
       }

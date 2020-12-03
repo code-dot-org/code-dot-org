@@ -910,7 +910,7 @@ uk-UA:
   dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному
     на рядок:'
   dashboard_students_new_google_classroom_section: Щоб додати учнів, використуйте
-    <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після
+    <a href='http://classroom.google.com' target='_blank'>Google Клас</a>, а тоді
     клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі.
   dashboard_students_new_section: Ви створили нову групу! Тепер додавайте учнів, використовуючи
     кнопки <b>Додати учня</b> та <b>Додати учнів</b>.
@@ -1962,6 +1962,10 @@ uk-UA:
     Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Нікі Мінаж та 34 інших виконавців та груп!
   hoc_overview_start_tutorial: Початок
+  hoc_overview_more_resources: Щоб отримати додаткові ресурси для навчання з класом
+    дистанційно, див. наш посібник з розміщення [віртуального Hour of Code](https://hourofcode.com/us/how-to/virtual).
+    Що стосується учнів, які мають технологічні обмеження або проблеми з підключенням,
+    ви можете надіслати їм цей пакет для [роботи з Hour of Code без підключення](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc2018_creativity: творчість
   hoc2018_creativity_create: Створити
   hoc2018_creativity_hoc_coming: Наближається Година коду…

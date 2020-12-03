@@ -389,6 +389,11 @@ sk:
       1:
         text: "V tomto príklade je tvojou úlohou dostať zombíka k slnečnici. Mohli by sme použiť 5 blokov \"posun sa dopredu\", alebo môžeme počítaču povedať, nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného opakovacieho bloku."
       2:
+    C4_conditionals:
+      1:
+        text: "Máme nový blok, ktorý sa volá blok ak / inak. Je to podmienka rovnako ako blok ak, ktorý ste používali v predošlých úlohách. Ale teraz je na spodu bloku nová časť, ktorá hovorí inak. Blok ak / inak umožňuje včele rozhodnúť sa medzi dvoma sadami akcií. Ak je včela pri kvete, vykoná sadu akcií, ktoré zadáte v prvej časti, kde sa hovorí, vykonaj ak. Ak včela nie je pri kvete, vykoná sadu akcií, ktoré vložíte na miesto, kde je uvedené inak."
+      2:
+        text: "Podmienky ak určujú, ako sú počítače schopné prijímať rozhodnutia. Ľudia nastavujú pre počítač podmienky, ktoré hovoria, že ak sa počítač vyskytne v určitej situácii, urobí jedno. Inak urobí druhé. Horná časť nášho bloku ak / inak hovorí, ak je pri kvete. Horná časť nášho bloku by však mohla hovoriť aj iné veci, napríklad ak sa nektár rovná 2 alebo je pred nami cesta, náš blok sa bude správať rovnako. To znamená, ak je vyhlásenie v hornej časti pravdivé, vykoná sa prvá sada akcií. Ale ak je vyhlásenie v hornej časti nepravdivé, vykoná sa druhá sada akcií."
     infinity_playlab_events:
       1:
         text: "Teraz sa naučíme o niečom, čo programátori hier používajú každý deň. Sú to Udalosti. Udalosť hovorí tvojmu programu, aby čakal na to, keď sa niečo stane. A potom, keď sa to stane, program vykoná nejakú aktivitu. Príkladmi udalostí sú napríklad čakanie na kliknutie myši, stlačenie šípky alebo ťuknutie na obrazovku."

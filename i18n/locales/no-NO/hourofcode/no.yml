@@ -1644,7 +1644,7 @@
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Et Minecraft-eventyr om to landsbyer
   tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
@@ -5701,11 +5701,11 @@
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: I århundrer har landsbyboerne og ondsbyboerne
+    levd i samme område, men de samhandler sjelden med hverandre. Nå kan du bruke
+    kode til å bringe de to landsbyene sammen. Spillere vil oppleve empati og medfølelse
+    for sine naboer, lære samarbeid og inkludering, og omfavne mangfoldet som gjør
+    oss alle unike og spesielle.
   tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
     French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
     Malay, Polish, Portuguese, and 10 more!
@@ -6507,59 +6507,60 @@
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Norsk Bokmål
-  tutorial_meeempathy_language: Norsk Bokmål
-  tutorial_dance2019_string_detail_grades: Grades 2+
-  tutorial_danceparty_string_detail_grades: Grades 2+
+  tutorial_meeempathy_language: Kinesisk, dansk, nederlandsk, engelsk, fransk, italiensk,
+    japansk, koreansk, norsk, portugisisk, spansk, svensk og tyrkisk
+  tutorial_dance2019_string_detail_grades: Klasse 2+
+  tutorial_danceparty_string_detail_grades: Klasse 2+
   tutorial_chibitronics_string_detail_grades: Grades 2-5
-  tutorial_athlete_string_detail_grades: Grades 2+
-  tutorial_moana_string_detail_grades: Grades 2+
-  tutorial_star-wars_string_detail_grades: Grades 2+
+  tutorial_athlete_string_detail_grades: Klasse 2+
+  tutorial_moana_string_detail_grades: Klasse 2+
+  tutorial_star-wars_string_detail_grades: Klasse 2+
   tutorial_gumadventure_string_detail_grades: Grades 6-8
-  tutorial_mchoc_string_detail_grades: Grades 2+
+  tutorial_mchoc_string_detail_grades: Klasse 2+
   tutorial_vidnews_string_detail_grades: Grades 6+
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
   tutorial_highseas_string_detail_grades: Grades 2-8
   tutorial_capython_string_detail_grades: Grades 6+
-  tutorial_frzn_string_detail_grades: Grades 2+
-  tutorial_cocom_string_detail_grades: Grades 2+
-  tutorial_play-lab_string_detail_grades: Grades 2+
+  tutorial_frzn_string_detail_grades: Klasse 2+
+  tutorial_cocom_string_detail_grades: Klasse 2+
+  tutorial_play-lab_string_detail_grades: Klasse 2+
   tutorial_boxisland_string_detail_grades: All ages
   tutorial_textcomp_string_detail_grades: Grades 9+
   tutorial_encryption_string_detail_grades: Grades 9+
-  tutorial_kanopixel_string_detail_grades: Grades 2+
+  tutorial_kanopixel_string_detail_grades: Klasse 2+
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerdd_string_detail_grades: Grades 2-8
   tutorial_tynkerana_string_detail_grades: Grades 6+
-  tutorial_vidcard_string_detail_grades: Grades 2+
+  tutorial_vidcard_string_detail_grades: Klasse 2+
   tutorial_spritebox_string_detail_grades: Grades 2-8
   tutorial_tynkerch_string_detail_grades: Grades 6+
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: do-not-show
-  tutorial_code_string_detail_grades: Grades 2+
+  tutorial_code_string_detail_grades: Klasse 2+
   tutorial_tinspire_string_detail_grades: Grades 6+
   tutorial_itchbounceball_string_detail_grades: Grades 2-8
   tutorial_vidclim_string_detail_grades: Grades 6+
   tutorial_matlab_string_detail_grades: Grades 6+
-  tutorial_flap_string_detail_grades: Grades 2+
+  tutorial_flap_string_detail_grades: Klasse 2+
   tutorial_galaxy_string_detail_grades: Grades 6+
   tutorial_inf_string_detail_grades: Grades 2-8
-  tutorial_tynkersol_string_detail_grades: Grades 2+
+  tutorial_tynkersol_string_detail_grades: Klasse 2+
   tutorial_itchg_string_detail_grades: Grades 6+
-  tutorial_como_string_detail_grades: Grades 2+
+  tutorial_como_string_detail_grades: Klasse 2+
   tutorial_processfound_string_detail_grades: Grades 9+
   tutorial_tynkerhomo_string_detail_grades: Grades 6+
-  tutorial_art_string_detail_grades: Grades 2+
-  tutorial_tynkerbrick_string_detail_grades: Grades 2+
+  tutorial_art_string_detail_grades: Klasse 2+
+  tutorial_tynkerbrick_string_detail_grades: Klasse 2+
   tutorial_itchbio_string_detail_grades: Grades 6+
   tutorial_itchj_string_detail_grades: Grades 6-8
-  tutorial_tickleo_string_detail_grades: Grades 2+
+  tutorial_tickleo_string_detail_grades: Klasse 2+
   tutorial_hopgeo_string_detail_grades: Grades 2-8
   tutorial_tynkermult_string_detail_grades: Grades 2-8
   tutorial_monster_string_detail_grades: Pre-reader - Grade 8
   tutorial_tynkerapp_string_detail_grades: do-not-show
   tutorial_tynkerpup_string_detail_grades: Pre-reader - Grade 5
   tutorial_livecode_string_detail_grades: Grades 9+
-  tutorial_cocomgame_string_detail_grades: Grades 2+
+  tutorial_cocomgame_string_detail_grades: Klasse 2+
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
   tutorial_code-avengers_string_detail_grades: Grades 6+
   tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
@@ -6570,12 +6571,12 @@
   tutorial_cajava_string_detail_grades: Grades 6+
   tutorial_codehs_string_detail_grades: Grades 9+
   tutorial_hopemo_string_detail_grades: Grades 2-8
-  tutorial_tynkercm_string_detail_grades: Grades 2+
-  tutorial_codesterswintergreet_string_detail_grades: Grades 2+
+  tutorial_tynkercm_string_detail_grades: Klasse 2+
+  tutorial_codesterswintergreet_string_detail_grades: Klasse 2+
   tutorial_codestersc_string_detail_grades: Grades 6+
-  tutorial_codestersturtle_string_detail_grades: Grades 2+
+  tutorial_codestersturtle_string_detail_grades: Klasse 2+
   tutorial_penjee_string_detail_grades: Grades 6+
-  tutorial_trinket_string_detail_grades: Grades 2+
+  tutorial_trinket_string_detail_grades: Klasse 2+
   tutorial_frogger_string_detail_grades: Grades 6+
   tutorial_tynkereco_string_detail_grades: Grades 2-8
   tutorial_mitedarc_string_detail_grades: Grades 6-8
@@ -6585,8 +6586,8 @@
   tutorial_codestersdance_string_detail_grades: Grades 6+
   tutorial_codestersbasketball_string_detail_grades: Grades 6+
   tutorial_nclkarel_string_detail_grades: Grades 6+
-  tutorial_buildpong_string_detail_grades: Grades 2+
-  tutorial_tynkerdrones_string_detail_grades: Grades 2+
+  tutorial_buildpong_string_detail_grades: Klasse 2+
+  tutorial_tynkerdrones_string_detail_grades: Klasse 2+
   tutorial_carla_string_detail_grades: Grades 6+
   tutorial_zulama_string_detail_grades: Grades 6+
   tutorial_capost_string_detail_grades: Grades 6+
@@ -6602,9 +6603,9 @@
   tutorial_knodsnake_string_detail_grades: Grades 6-8
   tutorial_soccharater_string_detail_grades: Grades 6+
   tutorial_silent_string_detail_grades: Grades 6+
-  tutorial_robomesh_string_detail_grades: Grades 2+
-  tutorial_amaze_string_detail_grades: Grades 2+
-  tutorial_codestersds_string_detail_grades: Grades 2+
+  tutorial_robomesh_string_detail_grades: Klasse 2+
+  tutorial_amaze_string_detail_grades: Klasse 2+
+  tutorial_codestersds_string_detail_grades: Klasse 2+
   tutorial_knodtext_string_detail_grades: Grades 6-8
   tutorial_alicegar_string_detail_grades: Grades 6+
   tutorial_codesterstransform_string_detail_grades: Grades 6+
@@ -6612,7 +6613,7 @@
   tutorial_codemoji_string_detail_grades: do-not-show
   tutorial_robobii_string_detail_grades: Grades 6+
   tutorial_robobm_string_detail_grades: Grades 6-8
-  tutorial_codingrobots_string_detail_grades: Grades 2+
+  tutorial_codingrobots_string_detail_grades: Klasse 2+
   tutorial_robob_string_detail_grades: Grades 6+
   tutorial_coders_string_detail_grades: Grades 9+
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
@@ -6620,7 +6621,7 @@
   tutorial_caphoto_string_detail_grades: Grades 6+
   tutorial_mozillahw_string_detail_grades: Grades 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
-  tutorial_bbot_string_detail_grades: Grades 2+
+  tutorial_bbot_string_detail_grades: Klasse 2+
   tutorial_scratchg_string_detail_grades: Grades 6+
   tutorial_roboticfriends_string_detail_grades: All ages
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
@@ -6632,41 +6633,41 @@
   tutorial_hummingbird_string_detail_grades: Grades 6+
   tutorial_recoloring_string_detail_grades: Grades 6+
   tutorial_bbcchem_string_detail_grades: do-not-show
-  tutorial_floalgo_string_detail_grades: Grades 2+
-  tutorial_flocond_string_detail_grades: Grades 2+
-  tutorial_floloops_string_detail_grades: Grades 2+
+  tutorial_floalgo_string_detail_grades: Klasse 2+
+  tutorial_flocond_string_detail_grades: Klasse 2+
+  tutorial_floloops_string_detail_grades: Klasse 2+
   tutorial_pgts_string_detail_grades: Grades 6+
   tutorial_ozo_string_detail_grades: All ages
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
-  tutorial_tlctour_string_detail_grades: Grades 2+
-  tutorial_codesterstj_string_detail_grades: Grades 2+
+  tutorial_tlctour_string_detail_grades: Klasse 2+
+  tutorial_codesterstj_string_detail_grades: Klasse 2+
   tutorial_tlclocked_string_detail_grades: Grades 6+
   tutorial_baubles_string_detail_grades: Grades 2-8
   tutorial_bbcart_string_detail_grades: do-not-show
-  tutorial_tlcknight_string_detail_grades: Grades 2+
+  tutorial_tlcknight_string_detail_grades: Klasse 2+
   tutorial_fufafit_string_detail_grades: Grades 2-5
   tutorial_ozodance_string_detail_grades: All ages
   tutorial_codingrobotics_string_detail_grades: Pre-reader - Grade 5
   tutorial_box_string_detail_grades: do-not-show
   tutorial_hopgame_string_detail_grades: Grades 2-8
   tutorial_icontrol_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cocomteach_string_detail_grades: Grades 2+
+  tutorial_cocomteach_string_detail_grades: Klasse 2+
   tutorial_bbcmathii_string_detail_grades: do-not-show
   tutorial_bbcphys_string_detail_grades: do-not-show
   tutorial_bitsbox_string_detail_grades: Grades 2-8
   tutorial_tlcemo_string_detail_grades: Grades 2-8
   tutorial_crd_string_detail_grades: Grades 6-8
   tutorial_bbcbio_string_detail_grades: do-not-show
-  tutorial_ticklebb8_string_detail_grades: Grades 2+
+  tutorial_ticklebb8_string_detail_grades: Klasse 2+
   tutorial_grok_string_detail_grades: do-not-show
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: Grades 6-8
   tutorial_tlchex_string_detail_grades: Grades 6+
-  tutorial_tickles_string_detail_grades: Grades 2+
+  tutorial_tickles_string_detail_grades: Klasse 2+
   tutorial_ozogame_string_detail_grades: All ages
-  tutorial_vidcodeio_string_detail_grades: Grades 2+
+  tutorial_vidcodeio_string_detail_grades: Klasse 2+
   tutorial_besttech_string_detail_grades: Grades 9+
   tutorial_tlcbrain_string_detail_grades: Grades 6+
   tutorial_hopquiz_string_detail_grades: Grades 6-8
@@ -6677,12 +6678,12 @@
   tutorial_tlcpixel_string_detail_grades: Grades 2-8
   tutorial_arduino_string_detail_grades: Grades 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
-  tutorial_tlcinvis_string_detail_grades: Grades 2+
+  tutorial_tlcinvis_string_detail_grades: Klasse 2+
   tutorial_tlcjflap_string_detail_grades: Grades 6+
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
-  tutorial_spiralsfinch_string_detail_grades: Grades 2+
+  tutorial_spiralsfinch_string_detail_grades: Klasse 2+
   tutorial_ozoi_string_detail_grades: All ages
-  tutorial_ticklel_string_detail_grades: Grades 2+
+  tutorial_ticklel_string_detail_grades: Klasse 2+
   tutorial_spiralsdash_string_detail_grades: Grades 2-8
   tutorial_ghdebug_string_detail_grades: Grades 2-8
   tutorial_tlckk_string_detail_grades: Grades 2-5
@@ -6693,20 +6694,20 @@
   tutorial_tlcpunch_string_detail_grades: Grades 6+
   tutorial_finchfract_string_detail_grades: Grades 9+
   tutorial_tlcmind_string_detail_grades: Grades 6+
-  tutorial_tlctelebot_string_detail_grades: Grades 2+
+  tutorial_tlctelebot_string_detail_grades: Klasse 2+
   tutorial_tlcaus_string_detail_grades: Grades 6+
   tutorial_oralhist_string_detail_grades: Grades 9+
-  tutorial_tlcmicro_string_detail_grades: Grades 2+
+  tutorial_tlcmicro_string_detail_grades: Klasse 2+
   tutorial_imathematician_string_detail_grades: Grades 2-8
   tutorial_tlcmagic_string_detail_grades: Grades 6+
   tutorial_scratchmus_string_detail_grades: Grades 2-8
   tutorial_scratchanim_string_detail_grades: Grades 2-8
   tutorial_scratchfly_string_detail_grades: Grades 2-8
-  tutorial_tynkerarc_string_detail_grades: Grades 2+
+  tutorial_tynkerarc_string_detail_grades: Klasse 2+
   tutorial_grokffpython_string_detail_grades: Grades 6+
   tutorial_grokffblock_string_detail_grades: Grades 6+
   tutorial_grokeliza_string_detail_grades: Grades 6+
-  tutorial_tynkercan_string_detail_grades: Grades 2+
+  tutorial_tynkercan_string_detail_grades: Klasse 2+
   tutorial_grokflags_string_detail_grades: Grades 6+
   tutorial_robomind_string_detail_grades: Grades 2-8
   tutorial_scratchanimwork_string_detail_grades: Grades 2-8
@@ -6722,10 +6723,10 @@
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: do-not-show
-  tutorial_mky_string_detail_grades: Grades 2+
+  tutorial_mky_string_detail_grades: Klasse 2+
   tutorial_spellcraft_string_detail_grades: Grades 6+
   tutorial_pirates_string_detail_grades: Grades 2-8
-  tutorial_csfirst_string_detail_grades: Grades 2+
+  tutorial_csfirst_string_detail_grades: Klasse 2+
   tutorial_loopedy_string_detail_grades: Grades 2-5
   tutorial_dsw_string_detail_grades: do-not-show
   tutorial_dswb_string_detail_grades: do-not-show
@@ -6743,29 +6744,29 @@
   tutorial_smc_string_detail_grades: do-not-show
   tutorial_minecraft-2016_string_detail_grades: do-not-show
   tutorial_thinkersmith-es_string_detail_grades: Grades 2-5
-  tutorial_pixie_string_detail_grades: Grades 2+
+  tutorial_pixie_string_detail_grades: Klasse 2+
   tutorial_play_string_detail_grades: do-not-show
   tutorial_robomind-nl_string_detail_grades: Grades 2-8
-  tutorial_spheroi_string_detail_grades: Grades 2+
-  tutorial_spherol_string_detail_grades: Grades 2+
-  tutorial_spherov_string_detail_grades: Grades 2+
+  tutorial_spheroi_string_detail_grades: Klasse 2+
+  tutorial_spherol_string_detail_grades: Klasse 2+
+  tutorial_spherov_string_detail_grades: Klasse 2+
   tutorial_swb_string_detail_grades: do-not-show
   tutorial_build-a-galaxy_string_detail_grades: do-not-show
   tutorial_alicesims_string_detail_grades: Grades 6+
   tutorial_tchr_string_detail_grades: do-not-show
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tap_string_detail_grades: Grades 2+
+  tutorial_tap_string_detail_grades: Klasse 2+
   tutorial_cintl_string_detail_grades: do-not-show
   tutorial_itchstop_string_detail_grades: Grades 2-8
   tutorial_tynkerpn_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerpd_string_detail_grades: Pre-reader - Grade 5
   tutorial_persistence_string_detail_grades: Pre-reader+
   tutorial_getloopy_string_detail_grades: Pre-reader+
-  tutorial_createface_string_detail_grades: Grades 2+
+  tutorial_createface_string_detail_grades: Klasse 2+
   tutorial_happymaps_string_detail_grades: Pre-reader+
   tutorial_moveit_string_detail_grades: Pre-reader+
   tutorial_bigevent_string_detail_grades: Pre-reader+
-  tutorial_gpp_string_detail_grades: Grades 2+
+  tutorial_gpp_string_detail_grades: Klasse 2+
   tutorial_foosgame_string_detail_grades: Pre-reader - Grade 5
   tutorial_solopython_string_detail_grades: Grades 9+
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
@@ -6778,12 +6779,12 @@
   tutorial_wolframp_string_detail_grades: Grades 6+
   tutorial_wolframn_string_detail_grades: Grades 6+
   tutorial_soloweb_string_detail_grades: Grades 9+
-  tutorial_khanweb_string_detail_grades: Grades 2+
+  tutorial_khanweb_string_detail_grades: Klasse 2+
   tutorial_khandata_string_detail_grades: Grades 6+
-  tutorial_robomeshiq_string_detail_grades: Grades 2+
-  tutorial_googlelogo_string_detail_grades: Grades 2+
+  tutorial_robomeshiq_string_detail_grades: Klasse 2+
+  tutorial_googlelogo_string_detail_grades: Klasse 2+
   tutorial_playtune_string_detail_grades: Grades 6+
-  tutorial_computeit_string_detail_grades: Grades 2+
+  tutorial_computeit_string_detail_grades: Klasse 2+
   tutorial_codesterssj_string_detail_grades: Grades 2-8
   tutorial_cmchat_string_detail_grades: Grades 6+
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
@@ -6866,13 +6867,13 @@
   tutorial_ozoexped_string_detail_grades: Grades 6+
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
-  tutorial_ozoeclipse_string_detail_grades: Grades 2+
+  tutorial_ozoeclipse_string_detail_grades: Klasse 2+
   tutorial_ozosimulator_string_detail_grades: Grades 6+
   tutorial_ozoalgorithm_string_detail_grades: Grades 6+
   tutorial_ozotimer_string_detail_grades: Grades 6+
   tutorial_ozohabits_string_detail_grades: All ages
   tutorial_ozoprogram_string_detail_grades: Grades 2-8
-  tutorial_ozopair_string_detail_grades: Grades 2+
+  tutorial_ozopair_string_detail_grades: Klasse 2+
   tutorial_codesnoopy_string_detail_grades: Pre-reader - Grade 5
   tutorial_applabintro_string_detail_grades: Grades 9+
   tutorial_cslartist_string_detail_grades: Pre-reader - Grade 5
@@ -6891,23 +6892,23 @@
   tutorial_tfunplug_string_detail_grades: Grades 6-8
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
-  tutorial_lblogic_string_detail_grades: Grades 2+
+  tutorial_lblogic_string_detail_grades: Klasse 2+
   tutorial_lbworld_string_detail_grades: Grades 6+
   tutorial_lbloops_string_detail_grades: Grades 2-8
   tutorial_lbtug_string_detail_grades: Grades 6+
-  tutorial_lbpotato_string_detail_grades: Grades 2+
-  tutorial_lbguitar_string_detail_grades: Grades 2+
+  tutorial_lbpotato_string_detail_grades: Klasse 2+
+  tutorial_lbguitar_string_detail_grades: Klasse 2+
   tutorial_lbio_string_detail_grades: Grades 2-8
   tutorial_wonpuppy_string_detail_grades: Grades 2-5
-  tutorial_woncue_string_detail_grades: Grades 2+
+  tutorial_woncue_string_detail_grades: Klasse 2+
   tutorial_wonzoo_string_detail_grades: Grades 2-5
   tutorial_wontrip_string_detail_grades: Grades 2-8
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
   tutorial_wonsecret_string_detail_grades: Grades 6+
   tutorial_hsscience_string_detail_grades: Grades 2-8
   tutorial_popculture_string_detail_grades: Grades 6+
-  tutorial_legorobust_string_detail_grades: Grades 2+
-  tutorial_legoplants_string_detail_grades: Grades 2+
+  tutorial_legorobust_string_detail_grades: Klasse 2+
+  tutorial_legoplants_string_detail_grades: Klasse 2+
   tutorial_legopark_string_detail_grades: Grades 6+
   tutorial_legodetect_string_detail_grades: Grades 6+
   tutorial_legolight_string_detail_grades: Grades 6+
@@ -6925,12 +6926,12 @@
   tutorial_ticklear_string_detail_grades: Grades 2-8
   tutorial_bcrobot_string_detail_grades: Grades 2-8
   tutorial_bcsnow_string_detail_grades: Grades 6+
-  tutorial_ifly_string_detail_grades: Grades 2+
+  tutorial_ifly_string_detail_grades: Klasse 2+
   tutorial_idowedo_string_detail_grades: Grades 2-8
   tutorial_diggindwarf_string_detail_grades: Grades 6+
   tutorial_rmedr_string_detail_grades: Grades 2-8
-  tutorial_spheroit_string_detail_grades: Grades 2+
-  tutorial_gameofcodes_string_detail_grades: Grades 2+
+  tutorial_spheroit_string_detail_grades: Klasse 2+
+  tutorial_gameofcodes_string_detail_grades: Klasse 2+
   tutorial_blocklygames_string_detail_grades: Grades 6+
   tutorial_spherohello_string_detail_grades: Grades 6+
   tutorial_spheroarcade_string_detail_grades: Grades 6+
@@ -6948,12 +6949,12 @@
   tutorial_blockscadicecream_string_detail_grades: Grades 6+
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
-  tutorial_bsgridlight_string_detail_grades: Grades 2+
+  tutorial_bsgridlight_string_detail_grades: Klasse 2+
   tutorial_bpartscratch_string_detail_grades: Grades 6+
   tutorial_bpartvid_string_detail_grades: Grades 6+
   tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
   tutorial_bpenglishvid_string_detail_grades: Grades 2-8
-  tutorial_bphealthscratch_string_detail_grades: Grades 2+
+  tutorial_bphealthscratch_string_detail_grades: Klasse 2+
   tutorial_bphealthvid_string_detail_grades: Grades 6+
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
   tutorial_bpmathvid_string_detail_grades: Grades 6+
@@ -6967,12 +6968,12 @@
   tutorial_bptechvid_string_detail_grades: Grades 6+
   tutorial_caflags_string_detail_grades: Grades 6+
   tutorial_matariki_string_detail_grades: Grades 2-5
-  tutorial_carestaurant_string_detail_grades: Grades 2+
+  tutorial_carestaurant_string_detail_grades: Klasse 2+
   tutorial_casea_string_detail_grades: Grades 2-5
   tutorial_cashield_string_detail_grades: Grades 2-8
   tutorial_ccwslimer_string_detail_grades: Grades 2-8
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
-  tutorial_boatrace_string_detail_grades: Grades 2+
+  tutorial_boatrace_string_detail_grades: Klasse 2+
   tutorial_ccplay_string_detail_grades: Grades 6+
   tutorial_grinch_string_detail_grades: Grades 2-8
   tutorial_codehsart_string_detail_grades: Grades 9+
@@ -6993,10 +6994,10 @@
   tutorial_codesterstshirt_string_detail_grades: Grades 6+
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
-  tutorial_codinismhero_string_detail_grades: Grades 2+
-  tutorial_discovery_string_detail_grades: Grades 2+
-  tutorial_csfirstname_string_detail_grades: Grades 2+
-  tutorial_obstaclecourse_string_detail_grades: Grades 2+
+  tutorial_codinismhero_string_detail_grades: Klasse 2+
+  tutorial_discovery_string_detail_grades: Klasse 2+
+  tutorial_csfirstname_string_detail_grades: Klasse 2+
+  tutorial_obstaclecourse_string_detail_grades: Klasse 2+
   tutorial_edisonmove_string_detail_grades: Grades 6+
   tutorial_edisonspider_string_detail_grades: Grades 6+
   tutorial_edisonspotlight_string_detail_grades: Grades 2-8
@@ -7020,8 +7021,8 @@
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
   tutorial_wizard_string_detail_grades: Grades 6+
-  tutorial_mbscratchcards_string_detail_grades: Grades 2+
-  tutorial_mbswiftplaygrounds_string_detail_grades: Grades 2+
+  tutorial_mbscratchcards_string_detail_grades: Klasse 2+
+  tutorial_mbswiftplaygrounds_string_detail_grades: Klasse 2+
   tutorial_mbbuttons_string_detail_grades: Grades 6+
   tutorial_meteor_string_detail_grades: Grades 6+
   tutorial_ballbounce_string_detail_grades: Grades 6+
@@ -7029,7 +7030,7 @@
   tutorial_mitdoodle_string_detail_grades: Grades 6+
   tutorial_talktome_string_detail_grades: Grades 6+
   tutorial_mobilecspmap_string_detail_grades: Grades 6+
-  tutorial_ozorandom_string_detail_grades: Grades 2+
+  tutorial_ozorandom_string_detail_grades: Klasse 2+
   tutorial_ozotroll_string_detail_grades: Grades 6-8
   tutorial_peblioart_string_detail_grades: Grades 9+
   tutorial_astropi_string_detail_grades: Grades 6+
@@ -7040,8 +7041,8 @@
   tutorial_rgtech_string_detail_grades: Grades 2-5
   tutorial_robotmagic3d_string_detail_grades: Grades 6+
   tutorial_robotmagicflappy_string_detail_grades: Grades 9+
-  tutorial_scratchadventure_string_detail_grades: Grades 2+
-  tutorial_scratchtalk_string_detail_grades: Grades 2+
+  tutorial_scratchadventure_string_detail_grades: Klasse 2+
+  tutorial_scratchtalk_string_detail_grades: Klasse 2+
   tutorial_scratchjrstory_string_detail_grades: Grades 2-5
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Grades 2-8
@@ -7071,7 +7072,7 @@
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
-  tutorial_crystal_string_detail_grades: Grades 2+
+  tutorial_crystal_string_detail_grades: Klasse 2+
   tutorial_landscape_string_detail_grades: Grades 6+
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
@@ -7083,11 +7084,11 @@
   tutorial_googlerookie_string_detail_grades: Grades 6+
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
   tutorial_mazyad_string_detail_grades: Pre-reader - Grade 5
-  tutorial_gamemaker_string_detail_grades: Grades 2+
-  tutorial_duckrace_string_detail_grades: Grades 2+
+  tutorial_gamemaker_string_detail_grades: Klasse 2+
+  tutorial_duckrace_string_detail_grades: Klasse 2+
   tutorial_allcancodeapps_string_detail_grades: Grades 6+
   tutorial_n2y_string_detail_grades: Pre-reader+
-  tutorial_microsoftarcade_string_detail_grades: Grades 2+
+  tutorial_microsoftarcade_string_detail_grades: Klasse 2+
   tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
   tutorial_toxicodepython_string_detail_grades: Grades 6+
   tutorial_codecombatozaria_string_detail_grades: Grades 6+
@@ -7096,15 +7097,15 @@
   tutorial_codespeakhappy_string_detail_grades: Grades 2-8
   tutorial_grokimage_string_detail_grades: Grades 6+
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
-  tutorial_rpstress_string_detail_grades: Grades 2+
+  tutorial_rpstress_string_detail_grades: Klasse 2+
   tutorial_bsdcause_string_detail_grades: Grades 9+
-  tutorial_vidcodeanimoji_string_detail_grades: Grades 2+
-  tutorial_vidcodeanimojies_string_detail_grades: Grades 2+
+  tutorial_vidcodeanimoji_string_detail_grades: Klasse 2+
+  tutorial_vidcodeanimojies_string_detail_grades: Klasse 2+
   tutorial_bsdinspire_string_detail_grades: Grades 6+
   tutorial_tttractor_string_detail_grades: Grades 6+
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
   tutorial_scigirlsquest_string_detail_grades: Grades 2-8
-  tutorial_codespeakbreathe_string_detail_grades: Grades 2+
+  tutorial_codespeakbreathe_string_detail_grades: Klasse 2+
   tutorial_vidcodeface_string_detail_grades: Grades 6+
   tutorial_educodemaze_string_detail_grades: Grades 6+
   tutorial_educoderace_string_detail_grades: Grades 6+
@@ -7120,8 +7121,8 @@
   tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersdistance_string_detail_grades: Grades 6+
   tutorial_itchspace_string_detail_grades: Grades 6+
-  tutorial_vidcodemagic_string_detail_grades: Grades 2+
-  tutorial_vidcodemagices_string_detail_grades: Grades 2+
+  tutorial_vidcodemagic_string_detail_grades: Klasse 2+
+  tutorial_vidcodemagices_string_detail_grades: Klasse 2+
   tutorial_codespeakmeal_string_detail_grades: Grades 6+
   tutorial_itchfish_string_detail_grades: Grades 2-8
   tutorial_bsdwebsite_string_detail_grades: Grades 6+
@@ -7129,7 +7130,7 @@
   tutorial_itchwebcam_string_detail_grades: Grades 6+
   tutorial_itchball_string_detail_grades: Grades 2-8
   tutorial_ttrace_string_detail_grades: Grades 6-8
-  tutorial_plethora_string_detail_grades: Grades 2+
+  tutorial_plethora_string_detail_grades: Klasse 2+
   tutorial_educodesecret_string_detail_grades: Grades 6+
   tutorial_itchshapes_string_detail_grades: Grades 6+
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
@@ -7138,7 +7139,7 @@
   tutorial_educodebasics_string_detail_grades: Grades 6+
   tutorial_codehsdesign_string_detail_grades: Grades 6+
   tutorial_htmlacademyphp_string_detail_grades: Grades 6+
-  tutorial_gamefrootdistance_string_detail_grades: Grades 2+
+  tutorial_gamefrootdistance_string_detail_grades: Klasse 2+
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Grades 6-8
   tutorial_cuttle_string_detail_grades: Grades 6+
@@ -7158,17 +7159,17 @@
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
-  tutorial_ozobotcolor2_string_detail_grades: Grades 2+
-  tutorial_ozobotcolor3_string_detail_grades: Grades 2+
+  tutorial_ozobotcolor2_string_detail_grades: Klasse 2+
+  tutorial_ozobotcolor3_string_detail_grades: Klasse 2+
   tutorial_clcarbon_string_detail_grades: Grades 6+
   tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
-  tutorial_scigirlscc_string_detail_grades: Grades 2+
+  tutorial_scigirlscc_string_detail_grades: Klasse 2+
   tutorial_irobotpicture_string_detail_grades: Grades 2-8
   tutorial_kcjmyself_string_detail_grades: Grades 2-8
   tutorial_nearpodalgorithms_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodrop_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozobotcolor1_string_detail_grades: Grades 2+
-  tutorial_scigirlspixels_string_detail_grades: Grades 2+
+  tutorial_ozobotcolor1_string_detail_grades: Klasse 2+
+  tutorial_scigirlspixels_string_detail_grades: Klasse 2+
   tutorial_kcjheroines_string_detail_grades: Grades 2-8
   tutorial_ozobotvalue_string_detail_grades: Grades 2-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
@@ -7184,7 +7185,7 @@
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
   tutorial_edisonmystery_string_detail_grades: Grades 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
-  tutorial_ozobotknow_string_detail_grades: Grades 2+
+  tutorial_ozobotknow_string_detail_grades: Klasse 2+
   tutorial_imagilabs_string_detail_grades: Grades 2-8
   tutorial_irobotsimulator_string_detail_grades: Grades 2-8
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
@@ -7195,20 +7196,22 @@
   tutorial_blupants_string_detail_grades: Grades 6+
   tutorial_legodance_string_detail_grades: Grades 6-8
   tutorial_nearpodcoding_string_detail_grades: Grades 9+
-  tutorial_kcjplastic_string_detail_grades: Grades 2+
+  tutorial_kcjplastic_string_detail_grades: Klasse 2+
   tutorial_legojourney_string_detail_grades: Grades 2-8
   tutorial_legohopper_string_detail_grades: Grades 2-8
   tutorial_catrobatembroidery_string_detail_grades: Grades 6+
   tutorial_irobotphone_string_detail_grades: Grades 2-8
   tutorial_codeguppydraw_string_detail_grades: Grades 6-8
   tutorial_codejumper_string_detail_grades: Grades 2-8
-  tutorial_meeempathy_string_detail_grades: Grades 2+
+  tutorial_meeempathy_string_detail_grades: Klasse 2+
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
-  tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_danceparty_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
-  tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_moana_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_star-wars_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_gumadventure_string_platforms: All modern browsers
@@ -7236,7 +7239,8 @@
   tutorial_tynkerana_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_vidcard_string_platforms: Chrome
-  tutorial_spritebox_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_spritebox_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_tynkerch_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_lightbot_string_platforms: All modern browsers, Android tablet, iPad, Android
@@ -7254,7 +7258,8 @@
   tutorial_tynkersol_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_itchg_string_platforms: Chrome, Firefox, Android Tablet
-  tutorial_como_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_como_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_processfound_string_platforms: Chrome, Firefox, Safari
   tutorial_tynkerhomo_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
@@ -7317,7 +7322,8 @@
   tutorial_zulama_string_platforms: Internet Explorer 11, Chrome, Firefox, Safari
   tutorial_capost_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
-  tutorial_marco_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_marco_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codestersflappybike_string_platforms: All modern browsers
   tutorial_kanopong_string_platforms: All modern browsers
   tutorial_tynkerright_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
@@ -7327,7 +7333,8 @@
     Firefox, Safari
   tutorial_bamboo_string_platforms: Chrome
   tutorial_robojav_string_platforms: All modern browsers
-  tutorial_roboba_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_roboba_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_knodsnake_string_platforms: All modern browsers
   tutorial_soccharater_string_platforms: All modern browsers
   tutorial_silent_string_platforms: All modern browsers
@@ -7340,10 +7347,14 @@
   tutorial_codesterstransform_string_platforms: All modern browsers
   tutorial_flexfrog_string_platforms: All modern browsers
   tutorial_codemoji_string_platforms: do-not-show
-  tutorial_robobii_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_robobm_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codingrobots_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_robob_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_robobii_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_robobm_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_codingrobots_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_robob_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_coders_string_platforms: All modern browsers
   tutorial_tynkerhw_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -7442,9 +7453,12 @@
   tutorial_scratchanim_string_platforms: All modern browsers
   tutorial_scratchfly_string_platforms: All modern browsers
   tutorial_tynkerarc_string_platforms: All modern browsers
-  tutorial_grokffpython_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_grokffblock_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_grokeliza_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_grokffpython_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_grokffblock_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_grokeliza_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_tynkercan_string_platforms: All modern browsers
   tutorial_grokflags_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android Chrome (mobile-optimized), iOS (mobile-optimized)
@@ -7546,9 +7560,11 @@
   tutorial_codesterssj_string_platforms: All modern browsers
   tutorial_cmchat_string_platforms: All modern browsers
   tutorial_tynkerdb_string_platforms: All modern browsers, iPad
-  tutorial_cmbuild_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_cmbuild_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_robotrattle_string_platforms: Chrome, Firefox, Android tablet, iPad
-  tutorial_codestersh_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codestersh_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codehsdigipixel_string_platforms: Chrome, Firefox, Safari
   tutorial_ccbinary_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome
   tutorial_codehsturtle_string_platforms: Chrome, Firefox, Safari
@@ -7556,16 +7572,20 @@
   tutorial_grokem_string_platforms: All modern browsers
   tutorial_kodmaze_string_platforms: All modern browsers, iPad
   tutorial_codestersa_string_platforms: All modern browsers
-  tutorial_cmdodo_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_cmdodo_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_tynkerspace_string_platforms: All modern browsers, iPad, Unplugged
   tutorial_gfbloons_string_platforms: All modern browsers
   tutorial_raspipong_string_platforms: Chrome
   tutorial_codehsvr_string_platforms: Chrome, Firefox, Safari
-  tutorial_codesterstp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codesterstp_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codestersbb_string_platforms: All modern browsers
   tutorial_gfcrossyroad_string_platforms: All modern browsers
-  tutorial_googleww_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codehsjsapp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_googleww_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_codehsjsapp_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_gfmihi_string_platforms: All modern browsers
   tutorial_hopdropphone_string_platforms: iPad, iPhone
   tutorial_techfaa_string_platforms: All modern browsers, Android tablet, iPad, Windows
@@ -7576,7 +7596,8 @@
   tutorial_switchglitch_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_codecar_string_platforms: Chrome, Firefox
-  tutorial_codesterscp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codesterscp_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_grokpetblock_string_platforms: All modern browsers
   tutorial_techbim_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
@@ -7717,7 +7738,8 @@
   tutorial_cajump_string_platforms: Chrome, Firefox, Safari
   tutorial_carest_string_platforms: Chrome, Firefox, Safari
   tutorial_accai_string_platforms: All modern browsers
-  tutorial_vceclipse_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vceclipse_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_pmzero_string_platforms: All modern browsers
   tutorial_hsela_string_platforms: iPad, iPhone
   tutorial_ticklear_string_platforms: iPad, iPhone
@@ -7783,7 +7805,8 @@
     Screen reader
   tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
-  tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_caflags_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_matariki_string_platforms: All modern browsers, Android tablet, iPad, Unplugged
   tutorial_carestaurant_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
@@ -7872,8 +7895,8 @@
     Android phone, iPhone
   tutorial_robotmagic3d_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Android tablet, iPad
-  tutorial_robotmagicflappy_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_robotmagicflappy_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_scratchadventure_string_platforms: Chrome, Safari, Android tablet, iPad
   tutorial_scratchtalk_string_platforms: Chrome, Safari, Android tablet, iPad
   tutorial_scratchjrstory_string_platforms: Android tablet, iPad
@@ -7934,27 +7957,32 @@
   tutorial_tommyturtle_string_platforms: Android tablet, iPad, Android phone, iPhone
   tutorial_mazyad_string_platforms: Unplugged
   tutorial_gamemaker_string_platforms: All modern browsers, iPad
-  tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_duckrace_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_allcancodeapps_string_platforms: All modern browsers
   tutorial_n2y_string_platforms: Unplugged
   tutorial_microsoftarcade_string_platforms: All modern browsers, Screen reader
   tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
   tutorial_toxicodepython_string_platforms: All modern browsers
   tutorial_codecombatozaria_string_platforms: All modern browsers
-  tutorial_vidcodedate_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodedate_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codemonkeyspace_string_platforms: All modern browsers
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
-  tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_grokimage_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_icomputelearn_string_platforms: All modern browsers
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
-  tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_vidcodeanimoji_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_vidcodeanimojies_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
-  tutorial_scigirlsquest_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scigirlsquest_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_codespeakbreathe_string_platforms: Chrome, Firefox
   tutorial_vidcodeface_string_platforms: Chrome, Firefox
   tutorial_educodemaze_string_platforms: All modern browsers
@@ -7964,13 +7992,14 @@
     Windows phone
   tutorial_codespeakgrandparent_string_platforms: Chrome, Firefox
   tutorial_educodekingdom_string_platforms: All modern browsers
-  tutorial_codehsdata_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codehsdata_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_educodecake_string_platforms: All modern browsers
   tutorial_ttsecond_string_platforms: Chrome
   tutorial_bsdtrivia_string_platforms: Chrome
   tutorial_csfirstdialogue_string_platforms: All modern browsers
-  tutorial_codemonkeybeaver_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_codemonkeybeaver_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_codestersdistance_string_platforms: All modern browsers, Screen reader
   tutorial_itchspace_string_platforms: All modern browsers
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
@@ -7981,21 +8010,24 @@
   tutorial_itchfish_string_platforms: All modern browsers
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_itchwebcam_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_itchball_string_platforms: All modern browsers
   tutorial_ttrace_string_platforms: Chrome
-  tutorial_plethora_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_plethora_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_educodesecret_string_platforms: All modern browsers
   tutorial_itchshapes_string_platforms: All modern browsers
-  tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codeguppytext_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
   tutorial_educativechatbot_string_platforms: All modern browsers
   tutorial_educodebasics_string_platforms: All modern browsers
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
   tutorial_htmlacademyphp_string_platforms: All modern browsers, Screen reader
-  tutorial_gamefrootdistance_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_gamefrootdistance_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_codesterscovid_string_platforms: All modern browsers, Screen reader
   tutorial_ttbunker_string_platforms: Chrome
   tutorial_cuttle_string_platforms: All modern browsers, Android tablet, iPad, Windows
@@ -8022,7 +8054,8 @@
   tutorial_ttfreestyle_string_platforms: Chrome
   tutorial_ozobotcolor2_string_platforms: All modern browsers
   tutorial_ozobotcolor3_string_platforms: All modern browsers
-  tutorial_clcarbon_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_clcarbon_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_kodablebasics_string_platforms: Unplugged
   tutorial_scigirlscc_string_platforms: Unplugged
   tutorial_irobotpicture_string_platforms: Unplugged
@@ -8038,13 +8071,15 @@
   tutorial_ai4all_string_platforms: All modern browsers
   tutorial_cldata_string_platforms: All modern browsers
   tutorial_spheroinputs_string_platforms: Unplugged
-  tutorial_edisoncount_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_edisoncount_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_spheroloops_string_platforms: Unplugged
   tutorial_kiboprogram_string_platforms: Unplugged
   tutorial_hellorubycsin60_string_platforms: Unplugged
   tutorial_clfashion1_string_platforms: All modern browsers
   tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
-  tutorial_edisonmystery_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_edisonmystery_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_microbitseaturtles_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
   tutorial_ozobotknow_string_platforms: All modern browsers
@@ -8066,7 +8101,8 @@
   tutorial_irobotphone_string_platforms: All modern browsers
   tutorial_codeguppydraw_string_platforms: All modern browsers
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -10067,11 +10103,11 @@
     finsk, dansk, svensk, norsk, slovakisk, tsjekkisk, nederlandsk
   tutorial_kuborobo_language: English, Spanish
   tutorial_ai-oceans_language: Norsk Bokmål
-  tutorial_scratchimagine_string_detail_grades: Grades 2+
+  tutorial_scratchimagine_string_detail_grades: Klasse 2+
   tutorial_codesterspsa_string_detail_grades: Grades 6+
   tutorial_googlehero_string_detail_grades: Grades 2-8
   tutorial_codestersbball_string_detail_grades: Grades 6+
-  tutorial_scratchcartoon_string_detail_grades: Grades 2+
+  tutorial_scratchcartoon_string_detail_grades: Klasse 2+
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
   tutorial_bananatales_string_detail_grades: Grades 2-8
   tutorial_scratchtales_string_detail_grades: Grades 2-8
@@ -10085,7 +10121,7 @@
   tutorial_nclabdata_string_detail_grades: Grades 9+
   tutorial_grasshopperphoto_string_detail_grades: Grades 9+
   tutorial_tynkerpyland_string_detail_grades: Grades 6+
-  tutorial_codeitimages_string_detail_grades: Grades 2+
+  tutorial_codeitimages_string_detail_grades: Klasse 2+
   tutorial_hyperpadenemy_string_detail_grades: Grades 9+
   tutorial_tynkerpro_string_detail_grades: Grades 2-8
   tutorial_trashtag_string_detail_grades: Grades 6+
@@ -10102,21 +10138,21 @@
   tutorial_vidcodemap_string_detail_grades: Grades 6+
   tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
   tutorial_codehstriangle_string_detail_grades: Grades 6+
-  tutorial_ttwhitehouse_string_detail_grades: Grades 2+
+  tutorial_ttwhitehouse_string_detail_grades: Klasse 2+
   tutorial_modulo_string_detail_grades: Grades 6+
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: Grades 9+
-  tutorial_uwcloud_string_detail_grades: Grades 2+
+  tutorial_uwcloud_string_detail_grades: Klasse 2+
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
   tutorial_stemc_blckhole_string_detail_grades: Grades 9+
   tutorial_careconfigure_string_detail_grades: Grades 6+
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
-  tutorial_ozaria_string_detail_grades: Grades 2+
+  tutorial_ozaria_string_detail_grades: Klasse 2+
   tutorial_ttovum_string_detail_grades: Grades 6+
   tutorial_ttpassage_string_detail_grades: Grades 2-8
-  tutorial_tynkerhtmlen_string_detail_grades: Grades 2+
+  tutorial_tynkerhtmlen_string_detail_grades: Klasse 2+
   tutorial_ttfrog_string_detail_grades: Grades 2-8
   tutorial_codemojijava_string_detail_grades: Grades 6-8
   tutorial_ccfirewall_string_detail_grades: Grades 6+
@@ -10124,12 +10160,12 @@
   tutorial_ttaqueducts_string_detail_grades: Grades 6-8
   tutorial_vtgame_string_detail_grades: Grades 6+
   tutorial_baroborav_string_detail_grades: Grades 6+
-  tutorial_baroboobstacle_string_detail_grades: Grades 2+
+  tutorial_baroboobstacle_string_detail_grades: Klasse 2+
   tutorial_pbstorytelling_string_detail_grades: Grades 6+
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
-  tutorial_spherosmiles_string_detail_grades: Grades 2+
+  tutorial_spherosmiles_string_detail_grades: Klasse 2+
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
   tutorial_toxarchitect_string_detail_grades: Grades 6+
   tutorial_idodge_string_detail_grades: Grades 2-8
@@ -10162,19 +10198,25 @@
   tutorial_codestersdata_string_detail_grades: Grades 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
   tutorial_rpisensehat_string_detail_grades: Grades 6+
-  tutorial_modtraits_string_detail_grades: Grades 2+
-  tutorial_mee_string_detail_grades: Grades 2+
+  tutorial_modtraits_string_detail_grades: Klasse 2+
+  tutorial_mee_string_detail_grades: Klasse 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_ai-oceans_string_detail_grades: Grades 3+
-  tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scratchimagine_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_codesterspsa_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_googlehero_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
+  tutorial_codestersbball_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
+  tutorial_scratchcartoon_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_codemonkeyjr_string_platforms: All modern browsers, Android tablet, iPad,
     Android phone, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
-  tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scratchtales_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
   tutorial_cacolor_string_platforms: All modern browsers
   tutorial_kodablebeach_string_platforms: All modern browsers, iPad, iPhone
@@ -10186,19 +10228,22 @@
   tutorial_nclabdata_string_platforms: All modern browsers
   tutorial_grasshopperphoto_string_platforms: All modern browsers
   tutorial_tynkerpyland_string_platforms: 'All modern browsers '
-  tutorial_codeitimages_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codeitimages_string_platforms: Datamaskiner (Windows PC, Mac), Android
+    (Chromebook), iPad
   tutorial_hyperpadenemy_string_platforms: iPad
   tutorial_tynkerpro_string_platforms: All modern browsers, iPad
   tutorial_trashtag_string_platforms: All modern browsers
   tutorial_casiege_string_platforms: All modern browsers
   tutorial_thunkableyeet_string_platforms: All modern browsers
-  tutorial_vidcodedeal_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodedeal_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_codehsgeno_string_platforms: All modern browsers
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone, Screen reader
-  tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_rpimosquito_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
   tutorial_vidcodemap_string_platforms: All modern browsers
@@ -10210,12 +10255,14 @@
   tutorial_codingtown_string_platforms: All modern browsers
   tutorial_kanoart_string_platforms: Microsoft Edge, Chrome, Android tablet, iPad
   tutorial_dragonscript_string_platforms: Chrome
-  tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_uwcloud_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
   tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
-  tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_rpiscratch_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_ozaria_string_platforms: All modern browsers
   tutorial_ttovum_string_platforms: Chrome, Firefox
   tutorial_ttpassage_string_platforms: Chrome, Firefox

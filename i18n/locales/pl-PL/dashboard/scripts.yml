@@ -15589,6 +15589,7 @@ pl:
           title: Przerwanie
           description_short: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
           description: 'Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.'
+          name: epidemia
         apps-for-good:
           lessons:
             Build an App for Good:

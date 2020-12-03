@@ -1,43 +1,43 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: O‘qituvchi resurslari - Kartalar bilan shartli bayonotlar (Conditionals with Cards)
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# Kartalar bilan shartli bayonotlar: Dasturlash soati qo‘llanmasi
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## O‘qituvchi resurslari
 
-### Lesson Plans:
+### Dars rejasi:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [Kartalar bilan shartli bayonotlar](/files/ConditionalsHoC.pdf)
+- Video: [Sinfxonada kartalar yo'rdamida shartli bayonotlarni o'rganish](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### Qo‘shimcha mashg‘ulotlar:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Hour of Code - Dasturlash soatidan tashqarida](http://code.org/learn/beyond)
+- [Kompyuter fanlari asoslari: Kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### O‘qituvchilar uchun boshqa manbalar:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: o‘qituvchilar uchun yo‘riqnoma](https://hourofcode.com/how-to)
+- [Muvaffaqiyatli o‘qituvchilardan eng yaxshi amaliyotlar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Jonli tadbir: [Dasturlash soati bo‘yicha o‘qituvchi uchun qo‘llanma](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Umumlashma
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+Ushbu "kompyutersiz" faoliyatda algoritmlar va shartli bayonotlar haqida kartalar to‘plami yordamida o‘rganing. Talabalar ushbu mashg‘ulotni jamoada bajaradilar va har bir jamoaga bitta karta to‘plami kerak.
 
-**Recommended Age Range:** 8-12
+**Tavsiya etilgan yosh:** 8-12
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**Talab etilgan texnologiyalar:** Hech qanday! Bu "kompyutersiz" mashg‘ulot bo'lib, uni o‘tish uchun bitta karta to‘plami kerak xolos.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>Mashg‘ulotni yuklab oling</button></a>
 
 [/col-50]

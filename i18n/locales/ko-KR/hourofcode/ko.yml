@@ -42,11 +42,10 @@ ko:
     위한 한 시간 분량의 튜토리얼이 45개 이상의 언어로 제공됩니다.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: 아워오브코드 2020이 다가오고 있습니다!
+  hoc2020_ai_header: 인공 지능 탐구
+  hoc2020_ai_description: AI와 머신 러닝이 우리 전 세계에 영향을 미치고 있습니다. 새로운 비디오 시리즈에서 AI를 탐구하고,
+    25개 언어로 AI를 Oceans에 대해서 훈련시키고, 윤리와 AI에 대해 논의하는 등, 많은 것을 저희와 함께 하십시오...
   hoc2019_header: 컴퓨터 과학을 배우세요. 세상을 바꾸세요.
   hoc2019_header_line1_mobile: 컴퓨터 과학을 배우세요.
   hoc2019_header_line2_mobile: 세상을 바꾸세요.
@@ -1528,7 +1527,7 @@ ko:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: 두 마을의 Minecraft 이야기
   tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_shortdescription: 스토리를 밝혀주는 종이 회로 프로그램.
@@ -4295,11 +4294,9 @@ ko:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: 주민들과 우민들은 수백 년 동안 같은 곳에 살면서도 서로 교류하는 일이 별로
+    없었습니다. 이제 여러분은 코딩의 힘으로 두 마을을 하나로 묶어줄 수 있습니다. 플레이어들은 이웃들에 대한 동정과 사랑을 경험하고, 협동과
+    포용에 대해 배우고, 우리 모두를 개성적으로 만들어주는 다양성을 받아들이게 될 것입니다.
   tutorial_dance2019_language: 아랍어, 중국어, 체코어, 덴마크어, 네덜란드어, 영어, 핀란드어, 프랑스어, 독일어, 그리스어,
     힌디어, 헝가리어, 인도네시아어, 이탈리아어, 일본어, 한국어, 말레이어, 폴란드어, 포르투갈어 등 10개 언어가 제공됩니다!
   tutorial_danceparty_language: 영어, 아랍어, 카탈로니아어, 중국어, 체코어, 덴마크어, 네덜란드어, 핀란드어, 프랑스어,
@@ -5072,7 +5069,8 @@ ko:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: 한국어
-  tutorial_meeempathy_language: 한국어
+  tutorial_meeempathy_language: 중국어, 덴마크어, 네덜란드어, 영어, 프랑스어, 이탈리아어, 일본어, 한국어, 노르웨이어,
+    포르투갈어, 스페인어, 스웨덴어, 터키어
   tutorial_dance2019_string_detail_grades: 초등 2학년 이상
   tutorial_danceparty_string_detail_grades: 초등 2학년 이상
   tutorial_chibitronics_string_detail_grades: 2-5학년
