@@ -428,16 +428,16 @@
           "courseB_maze_seq3_1": "De grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_collector_prog7": {
-          "courseC_collector_prog7_1": "Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!"
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
         "courseC_collector_prog7_2018": {
-          "courseC_collector_prog7_1": "Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!"
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
         "courseC_collector_prog7_2019": {
-          "courseC_collector_prog7_1": "Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!"
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
         "courseC_collector_prog7_2020": {
-          "courseC_collector_prog7_1": "Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!"
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan.",
@@ -713,6 +713,45 @@
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen."
+        },
+        "courseA_collector_loops1": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops2": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops3": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseB_collector_loops1": {
+          "courseB_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
         }
       }
     }

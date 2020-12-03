@@ -7798,10 +7798,37 @@ es-MX:
         title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
       csf_be_a_super_digital_citizen:
         content1: descripción aquí
+        markdown: |-
+          # Súper Ciudadano Digital
+
+          ## ¿Cómo podemos ser observadores al ver ciberbulling?
       csf_password_power-up:
         content1: descripción aquí
+        markdown: |-
+          #  Prepara tu Contraseña
+
+          ## Tips para Contraseñas para Recordar
+
+          * Empieza con una **frase** de memoria.
+          * Solo tus **padres** deben de saber tus contraseñas.
+          * Nunca uses una información **privada** en tu contraseña
+          * Crea una contraseña con al menos **8** caracteres.
+          * Usa letras, números, y **símbolos** en tu contraseña.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: descripción aquí
+        markdown: |-
+          # Detén el Maltrato
+
+          ## ¿Qué deberías hacer si alguien es malo contigo en línea?
+
+          * **P**ara y vete.
+          * **A**hora dile a un adulto confiable.
+          * **R**ecuerda sitios seguros primero.
+          * **A**l hacer una pausa, piensa.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
@@ -7887,9 +7914,9 @@ es-MX:
           ## ¿Qué información es buena para obtener en tu huellas digitales?
       csf_safety_in_my_online_neighborhood:
         markdown: |-
-          # Mi Barrio en Línea
+          # Mi Colonia en Línea
 
-          ## ¿Cómo navegas en la Red sin riesgo?
+          ## ¿Cómo vas a lugares en línea de manera segura?
       csd-post-survey-2018-markdown-with-link-to-survey:
         markdown: |+
           # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación

@@ -1445,40 +1445,57 @@ nl-NL:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest tekent een vierkant.
+          correct: true
           feedback: Juist!
         - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - {}
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
         - correct: true
           feedback: Juist!
         - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
         - correct: true
           feedback: Juist!
         - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
         - correct: true
           feedback: Juist!
         - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1633,76 +1650,140 @@ nl-NL:
             op `Start` drukt?
       courseC_multi_starWars_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
           feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
           feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
           feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
           feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
         questions:
-        - {}
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict2:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
           feedback: Juist!
-        - {}
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
         - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
           feedback: Juist!
-        - {}
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
         - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
           feedback: Juist!
-        - {}
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
         - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
           feedback: Juist!
-        - {}
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
         - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -2930,38 +3011,71 @@ nl-NL:
           ## Hoe maak je veilig gebruik van internet?
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
           feedback: Juist!
-        - {}
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
         - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
-        - {}
+        - text: Kijk eens goed naar onderstaand programma. Als je dit programma draait,
+            hoeveel schatten zal Laurel dan verzamelen?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
           feedback: Juist!
-        - {}
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
         - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
           feedback: Juist!
-        - {}
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
         - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
           feedback: Juist!
-        - {}
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
         - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
         - {}
       outbreak_story:

@@ -1218,16 +1218,20 @@
           "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
         },
         "courseC_collector_prog1": {
-          "courseC_collector_prog1_b": "De simpelste oplossing is éénmaal voorwaarts te bewegen, en de schat te nemen."
+          "courseC_collector_prog1_b": "De eenvoudigste oplossing is om een stap vooruit te bewegen, en dan de schat op te rapen.",
+          "courseC_collector_prog1_a": "Wanneer je op een plak staat waar een schat ligt, kun je het <xml><block type=\"collector_collect\"/></xml>-blok gebruiken om het op te rapen."
         },
         "courseC_collector_prog1_2018": {
-          "courseC_collector_prog1_b": "De simpelste oplossing is éénmaal voorwaarts te bewegen, en de schat te nemen."
+          "courseC_collector_prog1_b": "De eenvoudigste oplossing is om een stap vooruit te bewegen, en dan de schat op te rapen.",
+          "courseC_collector_prog1_a": "Wanneer je op een plak staat waar een schat ligt, kun je het <xml><block type=\"collector_collect\"/></xml>-blok gebruiken om het op te rapen."
         },
         "courseC_collector_prog1_2019": {
-          "courseC_collector_prog1_b": "De simpelste oplossing is éénmaal voorwaarts te bewegen, en de schat te nemen."
+          "courseC_collector_prog1_b": "De eenvoudigste oplossing is om een stap vooruit te bewegen, en dan de schat op te rapen.",
+          "courseC_collector_prog1_a": "Wanneer je op een plak staat waar een schat ligt, kun je het <xml><block type=\"collector_collect\"/></xml>-blok gebruiken om het op te rapen."
         },
         "courseC_collector_prog1_2020": {
-          "courseC_collector_prog1_b": "De simpelste oplossing is éénmaal voorwaarts te bewegen, en de schat te nemen."
+          "courseC_collector_prog1_b": "De eenvoudigste oplossing is om een stap vooruit te bewegen, en dan de schat op te rapen.",
+          "courseC_collector_prog1_a": "Wanneer je op een plak staat waar een schat ligt, kun je het <xml><block type=\"collector_collect\"/></xml>-blok gebruiken om het op te rapen."
         },
         "courseC_flappy_events1": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -1322,22 +1326,28 @@
           "courseC_maze_programming_challenge2_a": "_\"Als je me achteruit stuurt, let dan extra goed op dat ik de goede kant op draai!!\"_"
         },
         "courseC_starWars_loops5": {
-          "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus."
+          "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg vooruit`, nog een draai, en tenslotte een lus.",
+          "courseC_starWars_loops5_b": "Om omlaag te gaan moet je eerst draaien en daarna vooruit bewegen."
         },
         "courseC_starWars_loops5_copy": {
-          "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus."
+          "courseC_starWars_loops5_a": "De beste oplossing gebruikt eerst een draai, vervolgens een enkele `beweeg vooruit`, nog een draai, en tenslotte een lus.",
+          "courseC_starWars_loops5_b": "Om omlaag te gaan moet je eerst draaien en daarna vooruit bewegen."
         },
         "courseC_starWars_loops9": {
-          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2018": {
-          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2019": {
-          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_starWars_loops9_2020": {
-          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+          "course_starWars_loops9_b": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen.",
+          "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseD_artist_nestedLoops3": {
           "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?",
@@ -1562,7 +1572,7 @@
           "courseF_artist_for_challenge1_a": "De `pendikte` is 1. De eerste vierkant heeft en zijde van 50 pixels. Ieder volgend vierkant is 50 pixels breder dan het vorige.",
           "courseF_artist_for_challenge1_b": "De ondoorzichtigheid van de brush is telkens `teller`/2.",
           "courseF_artist_for_challenge1_c": "Vergeet niet om, nadat je elk vierkant maakt, terug te springen, te draaien, opnieuw terug te springen en nog eens te draaien!",
-          "courseF_artist_for_challenge1_d": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_picker\">\n<title name=\"COLOUR\">#0000cd</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">50</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">350</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">50</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"alpha\" inline=\"true\" id=\"alpha\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">DIVIDE</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"math_number\">\n<title name=\"NUM\">4</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"jump\" inline=\"true\">\n<title name=\"DIR\">jumpBackward</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n<next>\n<block type=\"jump\" inline=\"true\">\n<title name=\"DIR\">jumpBackward</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnLeft</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">90</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseF_artist_for_challenge1_d": "**Oplossing:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseF_artist_for_challenge1_2018": {
           "courseF_artist_for_challenge1_a": "De `pendikte` is 1. De eerste vierkant heeft en zijde van 50 pixels. Ieder volgend vierkant is 50 pixels breder dan het vorige.",
@@ -1689,7 +1699,7 @@
         },
         "courseF_bee_for_challenge2": {
           "courseF_bee_for_challenge2_c": "Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.\n\nDe andere 'voor`lus heeft slechts één standaard lus nodig om`counter\\` keer honing te maken.",
-          "courseF_bee_for_challenge2_d": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_for\" inline=\"true\">\n<title name=\"VAR\">counter</title>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">3</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_moveForward\"/>\n</statement>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_nectar\"/>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_moveForward\"/>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n<next>\n<block type=\"controls_for\" inline=\"true\">\n<title name=\"VAR\">counter</title>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_moveForward\">\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"maze_moveForward\">\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_honey\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseF_bee_for_challenge2_d": "**Oplossing:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseF_bee_for_challenge2_2018": {
           "courseF_bee_for_challenge2_c": "Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.\n\nDe andere 'voor`lus heeft slechts één standaard lus nodig om`counter\\` keer honing te maken.",
@@ -1711,13 +1721,13 @@
         },
         "courseF_bee_functions_challenge2": {
           "courseF_bee_functions_challenge2_a": "Als er een pad is naar rechts, moet je het volgende doen:\n\n-   Neem nectar of maak honing.\n-   Beweeg naar rechts, in de richting van het zijpad.\n-   Beweeg naar het einde van het zijpad.\n-   Beweeg rechts.\n\nAls je de bovenstaande acties tweemaal herhaalt, zal je klaar zijn om terug te keren via het hoofdpad.\n\n**De volgende hint bevat de volledige oplossing!**",
-          "courseF_bee_functions_challenge2_b": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"math_number\">\n<title name=\"NUM\">4</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_untilBlocked\">\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"maze_if\">\n<title name=\"DIR\">isPathRight</title>\n<statement name=\"DO\">\n<block type=\"procedures_callnoreturn\" id=\"function\">\n<mutation name=\"move and check\"></mutation>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n<block type=\"procedures_defnoreturn\" editable=\"false\">\n<mutation></mutation>\n<title name=\"NAME\">move and check</title>\n<statement name=\"STACK\">\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"procedures_callnoreturn\">\n<mutation name=\"check nectar or honey\"></mutation>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n<next>\n<block type=\"maze_untilBlocked\">\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</statement>\n</block>\n<block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n<mutation></mutation>\n<title name=\"NAME\">check nectar or honey</title>\n<statement name=\"STACK\">\n<block type=\"bee_whileNectarAmount\">\n<title name=\"ARG1\">nectarRemaining</title>\n<title name=\"OP\">&gt;</title>\n<title name=\"ARG2\">0</title>\n<statement name=\"DO\">\n<block type=\"maze_nectar\"/>\n</statement>\n<next>\n<block type=\"bee_whileNectarAmount\">\n<title name=\"ARG1\">honeyAvailable</title>\n<title name=\"OP\">&gt;</title>\n<title name=\"ARG2\">0</title>\n<statement name=\"DO\">\n<block type=\"maze_honey\"/>\n</statement>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</xml>"
+          "courseF_bee_functions_challenge2_b": "**Oplossing:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseF_bee_fwp_challenge1": {
           "courseF_bee_fwp_challenge1_e": "**Oplossing:**\n\n<xml>\n<block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n<mutation>\n<arg name=\"length\"/>\n</mutation>\n<title name=\"NAME\">pick row</title>\n<statement name=\"STACK\">\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_for\" inline=\"true\">\n<title name=\"VAR\">counter</title>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"parameters_get\">\n<title name=\"VAR\">length</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"harvester_corn\"/>\n</statement>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"parameters_get\">\n<title name=\"VAR\">length</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveBackward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block></xml>"
         },
         "courseF_playlab_variables_challenge2": {
-          "courseF_playlab_variables_challenge2_c": "**Oplossing:**\n\n<xml>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">up</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">1</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">down</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">4</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">8</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">right</title>\n<next>\n<block type=\"studio_moveDistanceParams\" inline=\"true\">\n<title name=\"SPRITE\">0</title>\n<title name=\"DIR\">2</title>\n<value name=\"DISTANCE\">\n<block type=\"math_number\">\n<title name=\"NUM\">25</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">3</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">2</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">ADD</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">3</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">2</title>\n<next>\n<block type=\"studio_setScore\" inline=\"false\">\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"studio_getScore\"/>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</next>\n</block>\n</xml>"
+          "courseF_playlab_variables_challenge2_c": "**Oplossing:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
@@ -2691,16 +2701,16 @@
           "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "Om deze puzzle op te lossen, moet je het `verplaats speler 1 omhoog`-blok vastmaken aan de `wanneer pijltje naar boven`-gebeurtenis. En daarna moet je hetzelfde doen voor alle andere richtingen.",
@@ -2899,16 +2909,24 @@
           "courseD_playLab_cond6_c": "Voeg een `wacht een seconde`-blok toe aan het begin van de `blijf-herhalen`-lus die de positie van de piraat checkt (maar niet binnenin het `als`-blok) om te voorkomen dat er te vroeg punten worden afgetrokken."
         },
         "courseC_collector_prog3": {
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier.",
+          "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
+          "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?"
         },
         "courseC_collector_prog3_2018": {
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier.",
+          "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
+          "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?"
         },
         "courseC_collector_prog3_2019": {
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier.",
+          "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
+          "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?"
         },
         "courseC_collector_prog3_2020": {
-          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
+          "courseC_collector_prog3_c": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier.",
+          "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
+          "courseC_collector_prog3_b": "Gebruik de `Stap`-knop eens om je code blok voor blok (of regel voor regel) uit te voeren.  Zie je waar het programma fout loopt?"
         },
         "courseC_maze_programming1": {
           "courseC_maze_programming1_0": "Zorg dat de blokken volledig in elkaar geklikt zijn, en klik daarna nog een keer op `Start`."
@@ -3009,6 +3027,259 @@
         },
         "courseC_maze_programming_challenge1_2020": {
           "courseC_maze_programming_challenge1_a": "Er zijn een heleboel manieren om bij het biggetje te komen. Gebruik je vinger om een route te vinden, en codeer vervolgens die route in je programma."
+        },
+        "courseC_collector_prog2": {
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+        },
+        "courseC_collector_prog2_2018": {
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+        },
+        "courseC_collector_prog2_2019": {
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+        },
+        "courseC_collector_prog2_2020": {
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+        },
+        "courseC_collector_prog4": {
+          "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_c": "Probeer deze route eens."
+        },
+        "courseC_collector_prog4_2018": {
+          "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_c": "Probeer deze route eens."
+        },
+        "courseC_collector_prog4_2019": {
+          "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_c": "Probeer deze route eens."
+        },
+        "courseC_collector_prog4_2020": {
+          "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_c": "Probeer deze route eens."
+        },
+        "courseC_collector_prog5": {
+          "courseC_collector_prog5_a": "Werkt het goed bij de eerste stap?\nWerkt het goed bij de tweede stap? \nWaar begint het mis te gaan?\"",
+          "courseC_collector_prog5_b": "Als je een fout hebt opgelost en het programma werkt nog steeds niet goed, gebruik dan bovenstaande stappen om de volgende fout te vinden.",
+          "courseC_collector_prog5_c": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog5_d": "Gebruik deze route om de schat te verzamelen."
+        },
+        "courseC_collector_prog5_2018": {
+          "courseC_collector_prog5_a": "Werkt het goed bij de eerste stap?\nWerkt het goed bij de tweede stap? \nWaar begint het mis te gaan?\"",
+          "courseC_collector_prog5_b": "Als je een fout hebt opgelost en het programma werkt nog steeds niet goed, gebruik dan bovenstaande stappen om de volgende fout te vinden.",
+          "courseC_collector_prog5_c": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog5_d": "Gebruik deze route om de schat te verzamelen."
+        },
+        "courseC_collector_prog5_2019": {
+          "courseC_collector_prog5_a": "Werkt het goed bij de eerste stap?\nWerkt het goed bij de tweede stap? \nWaar begint het mis te gaan?\"",
+          "courseC_collector_prog5_b": "Als je een fout hebt opgelost en het programma werkt nog steeds niet goed, gebruik dan bovenstaande stappen om de volgende fout te vinden.",
+          "courseC_collector_prog5_c": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog5_d": "Gebruik deze route om de schat te verzamelen."
+        },
+        "courseC_collector_prog5_2020": {
+          "courseC_collector_prog5_a": "Werkt het goed bij de eerste stap?\nWerkt het goed bij de tweede stap? \nWaar begint het mis te gaan?\"",
+          "courseC_collector_prog5_b": "Als je een fout hebt opgelost en het programma werkt nog steeds niet goed, gebruik dan bovenstaande stappen om de volgende fout te vinden.",
+          "courseC_collector_prog5_c": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog5_d": "Gebruik deze route om de schat te verzamelen."
+        },
+        "courseC_collector_prog6": {
+          "courseC_collector_prog6_a": "Kun je er achter komen wat er fout gaat?\n\nGebruik de `Stap`-knop om fouten te vinden door je code stap voor stap uit te voeren.",
+          "courseC_collector_prog6_b": "Zit je vast?  Probeer deze route om de schatten te verzamelen."
+        },
+        "courseC_collector_prog6_2018": {
+          "courseC_collector_prog6_a": "Kun je er achter komen wat er fout gaat?\n\nGebruik de `Stap`-knop om fouten te vinden door je code stap voor stap uit te voeren.",
+          "courseC_collector_prog6_b": "Zit je vast?  Probeer deze route om de schatten te verzamelen."
+        },
+        "courseC_collector_prog6_2019": {
+          "courseC_collector_prog6_a": "Kun je er achter komen wat er fout gaat?\n\nGebruik de `Stap`-knop om fouten te vinden door je code stap voor stap uit te voeren.",
+          "courseC_collector_prog6_b": "Zit je vast?  Probeer deze route om de schatten te verzamelen."
+        },
+        "courseC_collector_prog6_2020": {
+          "courseC_collector_prog6_a": "Kun je er achter komen wat er fout gaat?\n\nGebruik de `Stap`-knop om fouten te vinden door je code stap voor stap uit te voeren.",
+          "courseC_collector_prog6_b": "Zit je vast?  Probeer deze route om de schatten te verzamelen."
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_a": "Er staan al een heleboel goede instructies in je werkplaats.  Je hoeft niets weg te gooien om deze puzzle op te lossen.",
+          "courseC_collector_prog7_b": "Mis je een blok dat je nodig hebt om de avonturier in de juiste richting te bewegen?  Pak dan een blok uit de gereedschapskist.",
+          "courseC_collector_prog7_c": "Zie je zo gauw geen route om alle schatten te verzamelen?  Gebruik dan deze route!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_a": "Er staan al een heleboel goede instructies in je werkplaats.  Je hoeft niets weg te gooien om deze puzzle op te lossen.",
+          "courseC_collector_prog7_b": "Mis je een blok dat je nodig hebt om de avonturier in de juiste richting te bewegen?  Pak dan een blok uit de gereedschapskist.",
+          "courseC_collector_prog7_c": "Zie je zo gauw geen route om alle schatten te verzamelen?  Gebruik dan deze route!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_a": "Er staan al een heleboel goede instructies in je werkplaats.  Je hoeft niets weg te gooien om deze puzzle op te lossen.",
+          "courseC_collector_prog7_b": "Mis je een blok dat je nodig hebt om de avonturier in de juiste richting te bewegen?  Pak dan een blok uit de gereedschapskist.",
+          "courseC_collector_prog7_c": "Zie je zo gauw geen route om alle schatten te verzamelen?  Gebruik dan deze route!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_a": "Er staan al een heleboel goede instructies in je werkplaats.  Je hoeft niets weg te gooien om deze puzzle op te lossen.",
+          "courseC_collector_prog7_b": "Mis je een blok dat je nodig hebt om de avonturier in de juiste richting te bewegen?  Pak dan een blok uit de gereedschapskist.",
+          "courseC_collector_prog7_c": "Zie je zo gauw geen route om alle schatten te verzamelen?  Gebruik dan deze route!"
+        },
+        "courseC_collector_prog_challenge1": {
+          "courseC_collector_prog_challenge1_a": "Je kunt het `verzamel`-blok een heleboel keren gebruiken om alle extra schatten te verzamelen."
+        },
+        "courseC_collector_prog_challenge1_2018": {
+          "courseC_collector_prog_challenge1_a": "Je kunt het `verzamel`-blok een heleboel keren gebruiken om alle extra schatten te verzamelen."
+        },
+        "courseC_collector_prog_challenge1_2019": {
+          "courseC_collector_prog_challenge1_a": "Je kunt het `verzamel`-blok een heleboel keren gebruiken om alle extra schatten te verzamelen."
+        },
+        "courseC_collector_prog_challenge1_2020": {
+          "courseC_collector_prog_challenge1_a": "Je kunt het `verzamel`-blok een heleboel keren gebruiken om alle extra schatten te verzamelen."
+        },
+        "courseC_collector_prog_challenge2": {
+          "courseC_collector_prog_challenge1_a": "Je kunt op elke plek meer dan een `verzamel`-blok gebruiken.",
+          "courseC_collector_prog_challenge1_b": "Ben je de weg kwijt? Probeer deze route om de puzzle op te lossen."
+        },
+        "courseC_collector_prog_challenge2_2018": {
+          "courseC_collector_prog_challenge1_a": "Je kunt op elke plek meer dan een `verzamel`-blok gebruiken.",
+          "courseC_collector_prog_challenge1_b": "Ben je de weg kwijt? Probeer deze route om de puzzle op te lossen."
+        },
+        "courseC_collector_prog_challenge2_2019": {
+          "courseC_collector_prog_challenge1_a": "Je kunt op elke plek meer dan een `verzamel`-blok gebruiken.",
+          "courseC_collector_prog_challenge1_b": "Ben je de weg kwijt? Probeer deze route om de puzzle op te lossen."
+        },
+        "courseC_collector_prog_challenge2_2020": {
+          "courseC_collector_prog_challenge1_a": "Je kunt op elke plek meer dan een `verzamel`-blok gebruiken.",
+          "courseC_collector_prog_challenge1_b": "Ben je de weg kwijt? Probeer deze route om de puzzle op te lossen."
+        },
+        "courseC_starWars_loops1": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2018": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2019": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops1_2020": {
+          "courseC_starWars_loops1_a": "Als BB-8 over schroot heen rolt, pakt hij het vanzelf op.",
+          "courseC_starWars_loops1_c": "Je wilt vijf maal vooruit gaan om deze puzzle op te lossen."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2_a": "Als je code wilt herhalen, sleep dan een `herhaal`-lus uit de gereedschapskist, en stop het gewenste blok er in."
+        },
+        "courseC_starWars_loops4": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops4_2018": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops4_2019": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops4_2020": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops4_copy": {
+          "courseC_starWars_loops4_c": "Als je op de kleine pijl naast \"linksom\" klikt, kun je het veranderen in \"rechtsom\".",
+          "courseC_starWars_loops4_a": "Gebruik twee `herhaal`-blokken.",
+          "courseC_starWars_loops4_b": "Elke `herhaal`-lus zal slechts 1 instructie bevatten: `beweeg vooruit`."
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_a": "Vind je niet dat dit patroon er uit ziet als een paar heel grote treden van een trap? Kijk eens of je kunt gebruiken wat je de vorige puzzles geleerd hebt, om alle draaien te maken.",
+          "courseC_starWars_loops10_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6_2018": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6_2019": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6_2020": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops6_copy": {
+          "courseC_starWars_loops6_a": "Schrijf alle zetten eens op een stuk patroon. Zie je er een patroon in?",
+          "courseC_starWars_loops6_b": "Als je kortere code wilt, kun je een `herhaal`-lus binnenin een andere gebruiken!\\\nDat noemen we een **geneste lus** (nested loop)."
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_a": "Dit patroon ziet er moeilijker uit dan het is! Begin met een simpel trap patroon. Bereik je daarmee alle schroot?",
+          "courseC_starWars_loops7_b": "Als je deze puzzle moeilijk vindt, schrijf dan alle zetten eens uit op een stuk papier, en kijk of je er een patroon in ziet."
+        },
+        "courseC_starWars_loops8": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2018": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2019": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2020": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_copy": {
+          "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
+          "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         }
       }
     }

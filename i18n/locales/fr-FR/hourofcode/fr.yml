@@ -30,11 +30,9 @@ fr:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  hoc2020_header: Apprenez maintenant pour construire un avenir plus brillant
+  hoc2020_header_with_line_break_markdown: "Apprenez maintenant, \n\npour construire
+    un avenir plus brillant."
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -44,11 +42,12 @@ fr:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: L'Heure de Code 2020 sera bientôt disponible!
+  hoc2020_ai_header: Explorez l'intelligence artificielle
+  hoc2020_ai_description: L'IA et l'apprentissage automatique ont un impact sur notre
+    monde. Rejoignez-nous pour explorer l'IA dans une nouvelle série de vidéos, former
+    l'IA pour les océans dans plus de 25 langues, nous parlerons de l'éthique et de
+    l'IA, et de bien d'autres choses encore...
   hoc2019_header: Apprends l'informatique. Change le monde.
   hoc2019_header_line1_mobile: Apprends l'informatique.
   hoc2019_header_line2_mobile: Change le monde.
@@ -560,7 +559,7 @@ fr:
     to express their creativity with computer science. Try your hand at the new tutorials.
     What will you create?
   social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_hoc_here: L'Heure du Code est ici!
   social_hoc2018_join: Une Heure de Code va arriver
   social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
@@ -1718,7 +1717,7 @@ fr:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Un histoire Minecraft à propos de deux villages
   tutorial_danceparty_shortdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !
@@ -5889,11 +5888,12 @@ fr:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Depuis des siècles, les villageois et les illageois
+    partagent le même espace, mais n’interagissent que très rarement. Nous pouvons
+    maintenant utiliser la puissance du code pour réunir ces deux villages. Les joueurs
+    ressentiront de l’empathie et de la compassion pour leurs voisins, apprendront
+    la coopération et l’inclusion, et découvriront la diversité qui nous rend tous
+    si uniques.
   tutorial_dance2019_language: Arabe, chinois, tchèque, danois, néerlandais, anglais,
     finnois, français, allemand, grec, hindi, hongrois, indonésien, italien, japonais,
     coréen, malais, polonais, portugais et 10 autres !
@@ -6695,7 +6695,8 @@ fr:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Français
-  tutorial_meeempathy_language: Français
+  tutorial_meeempathy_language: Chinois, danois, néerlandais, anglais, français, italien,
+    japonais, coréen, norvégien, portugais, espagnol, suédois, turc
   tutorial_dance2019_string_detail_grades: 2ème année scolaire et plus
   tutorial_danceparty_string_detail_grades: 2ème année scolaire et plus
   tutorial_chibitronics_string_detail_grades: Grades 2-5
