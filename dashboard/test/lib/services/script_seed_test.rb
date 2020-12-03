@@ -179,7 +179,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       # TODO: should these be handled automatically by callbacks?
       script.lesson_groups.each {|lg| lg.update(position: lg.position - 1)}
       script.lessons.each_with_index {|l, i| l.update(relative_position: i + 1)}
-      script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
+      script.fix_script_level_positions
     end
 
     ScriptSeed.seed_from_json(json)
@@ -210,7 +210,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
       script.reload
       # TODO: should these be handled automatically by a callback? It is for absolute_position somehow.
       script.lessons.each {|l| l.update(relative_position: l.relative_position - 1)}
-      script.script_levels.each_with_index {|sl, i| sl.update(chapter: i + 1)}
+      script.fix_script_level_positions
     end
 
     ScriptSeed.seed_from_json(json)
