@@ -37,13 +37,19 @@ el:
     χτίστε ένα καλύτερο αύριο.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    today, build a brighter tomorrow.'
+  social_hoc2020_hoc_is_about_csforgood: 'Η #Ώρα του Προγραμματισμού πρόκειται για
+    την #ΕΥγιαΚαλό. Μάθετε σήμερα, χτίστε ένα καλύτερο αύριο.'
   social_hoc2020_global_movement: Η Ώρα του Κώδικα είναι ένα παγκόσμιο κίνημα που
     υλοποιείται από δεκάδες εκατομμύρια μαθητές. Ωριαία μαθήματα είναι διαθέσιμα σε
     45+ γλώσσες για όλες τις ηλικίες.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: Η Ώρα του Προγραμματισμού πλησιάζει!
+  hoc2020_ai_header: Εξερευνήστε την τεχνητή νοημοσύνη
+  hoc2020_ai_description: Η ΤΝ και η Μηχανική Μάθηση επηρεάζουν ολόκληρο το κόσμο
+    μας. Ελατέ μαζί μας σε μια εξερεύνηση της ΤΝ σε μια νέα σειρά βίντεο, εκπαιδεύστε
+    την ΤΝ για τους Ωκεανούς σε παραπάνω από 25 γλώσσες, συζητήστε ζητήματα ηθικής
+    και τεχνητής νοημοσύνης, και πολλά άλλα...
   hoc2019_header: Μάθετε πληροφορική. Αλλάξτε τον κόσμο.
   hoc2019_header_line1_mobile: Μάθετε πληροφορική.
   hoc2019_header_line2_mobile: Αλλάξτε τον κόσμο.
@@ -89,46 +95,52 @@ el:
     πιο δίκαιου κόσμου.
   oceans_landing_videos: Βίντεο για την ΤΝ και την Μηχανική Μάθηση
   oceans_behind_the_scenes: 'ΤΝ για τους Ωκεανούς: Πίσω από τα Παρασκήνια'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
+  oceans_behind_the_scenes_1: Επίπεδα 2-4 χρησιμοποιούν ένα μοντέλο προκαταρκτικής
+    κατάρτισης από τον οργανισμό <a href="https://www.tensorflow.org/" >TensorFlow</a><a
+    href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">MobileNet</a>
+    έργο. Το μοντέλο MobileNet είναι ένα <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">συνελικτικό
+    νευρωνικό δίκτυο</a> που έχει εκπαιδευτεί και καταρτιστεί σε <a href="http://www.image-net.org/">ImageNet</a>,
+    ένα σύνολο δεδομένων άνω των 14 εκατομμυρίων εικόνων με χειρόγραφες σημειώσεις
+    με λέξεις όπως "μπαλόνι" ή "φράουλα". Προκειμένου να προσαρμόσουμε αυτό το μοντέλο
+    με τα γνωστά δεδομένα εκπαίδευσης που παράγει ο μαθητής σε αυτή τη δραστηριότητα,
+    χρησιμοποιούμε μια τεχνική που ονομάζεται <a href="https://en.wikipedia.org/wiki/Transfer_learning">Μεταφορά
+    Γνώσης</a>. Κάθε εικόνα στο σύνολο δεδομένων εκπαίδευσης τροφοδοτείται στο MobileNet,
+    με τη μορφή εικονοστοιχείων, για την απόκτηση μιας λίστας σημειώσεων που είναι
+    πιο πιθανό να εφαρμόζεται σε αυτό. Έπειτα, για μια νέα εικόνα, την τροφοδοτούμε
+    στο MobileNet και συγκρίνουμε την συνεπαγόμενη λίστα της σημειώσεων με αυτές από
+    το σύνολο δεδομένων εκπαίδευσης. Ταξινομούμε την νέα εικόνα με την ίδια ετικέτα
+    (όπως "ψάρι" ή "όχι ψάρι") όπως οι εικόνες από το σύνολο εκπαίδευσης με τα πιο
+    όμοια αποτελέσματα.
+  oceans_behind_the_scenes_1_markdown: "Επίπεδα 2-4 χρησιμοποιούν ένα μοντέλο προκαταρκτικής
+    κατάρτισης παρεχόμενο από τον οργανισμό \n[TensorFlow] (https://www.tensorflow.org/)
+    [MobileNet] \nΤο μοντέλο MobileNet είναι ένα [συνελικτικό νευρωνικό δίκτυο] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    που έχει εκπαιδευτεί και καταρτιστεί σε [ImageNet](http://www.image-net.org/),
+    ένα σύνολο δεδομένων άνω των 14 εκατομμυρίων εικόνων με χειρόγραφες σημειώσεις
+    με λέξεις όπως \"μπαλόνι\" ή \"φράουλα\". Προκειμένου να προσαρμόσουμε αυτό το
+    μοντέλο με τα γνωστά δεδομένα εκπαίδευσης που παράγει ο μαθητής σε αυτή τη δραστηριότητα,
+    χρησιμοποιούμε μια τεχνική που ονομάζεται Μεταφορά Γνώσης [https://en.wikipedia.org/wiki/Transfer_learning].
+    Κάθε εικόνα στο σύνολο δεδομένων εκπαίδευσης τροφοδοτείται στο MobileNet, με τη
+    μορφή εικονοστοιχείων, για την απόκτηση μιας λίστας σημειώσεων που είναι πιο πιθανό
+    να εφαρμόζεται σε αυτό. Έπειτα, για μια νέα εικόνα, την τροφοδοτούμε στο MobileNet
+    και συγκρίνουμε την συνεπαγόμενη λίστα της σημειώσεων με αυτές από το σύνολο δεδομένων
+    εκπαίδευσης. Ταξινομούμε την νέα εικόνα με την ίδια ετικέτα (όπως \"ψάρι\" ή \"όχι
+    ψάρι\") όπως οι εικόνες από το σύνολο εκπαίδευσης με τα πιο όμοια αποτελέσματα."
+  oceans_behind_the_scenes_2: Επίπεδα 6-8 χρησιμοποιούν μια <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Μηχανή
+    διανυσματικής υποστήριξης</a>(ΜΔΥ). Παρατηρούμε κάθε χαρακτηριστικό του ψαριού
+    (όπως τα μάτια, το στόμα, το σώμα) και συγκεντρώνουμε όλα τα μεταδεδομένα για
+    τα χαρακτηριστικά (όπως ο αριθμός των δοντιών, το σχήμα του σώματος) σε ένα διάνυσμα
+    αριθμών για κάθε ψάρι. Χρησιμοποιούμε αυτά τα διανύσματα για να εκπαιδεύσουμε
+    την ΜΔΥ. Με βάση τα δεδομένα εκπαίδευσης, η ΜΔΥ ξεχωρίζει το ¨διάστημα" όλων των
+    πιθανών ψαριών σε δύο μέρη, που αντιστοιχούν στις τάξεις που θέλουμε να μάθουμε
+    (όπως "μπλε" ή "όχι μπλε").
+  oceans_behind_the_scenes_2_markdown: Επίπεδα 6-8 χρησιμοποιούν μια [Μηχανή διανυσματικής
+    υποστήριξης] (https://en.wikipedia.org/wiki/Support-vector_machine) (ΜΔΥ). Παρατηρούμε
+    κάθε χαρακτηριστικό του ψαριού (όπως τα μάτια, το στόμα, το σώμα) και συγκεντρώνουμε
+    όλα τα μεταδεδομένα για τα χαρακτηριστικά (όπως ο αριθμός των δοντιών, το σχήμα
+    του σώματος) σε ένα διάνυσμα αριθμών για κάθε ψάρι. Χρησιμοποιούμε αυτά τα διανύσματα
+    για να εκπαιδεύσουμε την ΜΔΥ. Με βάση τα δεδομένα εκπαίδευσης, η ΜΔΥ ξεχωρίζει
+    το ¨διάστημα" όλων των πιθανών ψαριών σε δύο μέρη, που αντιστοιχούν στις τάξεις
+    που θέλουμε να μάθουμε (όπως "μπλε" ή "όχι μπλε").
   social_hoc2019_oceans_title: 'ΤΝ για τους Ωκεανούς #ΕΥγιαΚαλό'
   social_hoc2019_oceans_desc: Μάθετε για την ΤΝ, τη μηχανική μάθηση, τα δεδομένα εκπαίδευσης
     και τη μεροληψία, καθώς εξετάζετε ηθικά θέματα και το πώς μπορεί να χρησιμοποιηθεί
@@ -641,10 +653,11 @@ el:
     προβλημάτων, η λογική και η δημιουργικότητα. Ξεκινώντας νωρίς, οι μαθητές θα έχουν
     ένα θέμελιο για επιτυχία σε οποιαδήποτε σταδιοδρομία του 21ου αιώνα. Δείτε περισσότερα
     στατιστικά στο <a href='%{stats_url}'>here</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: _Κάθε_ μαθητής θα πρέπει να έχει τη δυνατότητα να μαθαίνει
+    την επιστήμη των υπολογιστών. Βοηθάει στην ανάπτυξη των δεξιοτήτων επίλυσης προβλημάτων,
+    λογικής και δημιουργικότητας. Ξεκινώντας νωρίτερα, οι μαθητές θα έχουν ένα θεμέλιο
+    για επιτυχία σε οποιοδήποτε τυχόν μονοπάτι καριέρας ακολουθήσουν τον 21ο αιώνα.
+    Δείτε περισσότερες στατιστικές [here](%{stats_url}).
   hoc_faq_how_participate_q: Πώς μπορώ να συμμετάσχω στην Ώρα του Κώδικα;
   hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Ξεκινήστε το σχεδιασμό
     εδώ</a> βλέποντας τους οδηγούς. Μπορείτε να οργανώσετε μία εκδήλωση για την Ώρα
@@ -662,11 +675,12 @@ el:
     καθώς και από μια άνευ προηγουμένου συμμαχία εταίρων που έχουν έρθει μαζί για
     να υποστηρίξουν την Ώρα του Κώδικα &mdash; συμπεριλαμβανομένων των Microsoft,
     Apple, Amazon, Boys and Girls Clubs της Αμερικής και του Συμβουλίου Ακαδημίας.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: Η Ώρα του Προγραμματισμού τελεί υπό την αιγίδα της
+    Ώρας του Προγραμματισμού και της Εβδομάδας Εκπαίδευσης για την Επιστήμη των Υπολογιστών
+    [Advisory and Review Committees](%{partner_url}) καθώς και μια πρωτόγνωρη συνομοσπονδία
+    συνεταίρων που έχουν ενωθεί για να υποστηρίζουν την Ώρα του Προγραμματισμού —
+    συμπεριλαμβανομένου των Microsoft, Apple, Amazon, Boys and Girls Clubs of America
+    και το College Board.
   hoc_faq_host_q: Δεν ξέρω τίποτα από προγραμματισμό. Μπορώ να διοργανώσω κι εγώ μια
     εκδήλωση;?
   hoc_faq_host_a: Βεβαίως, οι δραστηριότητες της Ώρας του Κώδικα είναι αυτο-κατευθυνόμενες.
@@ -713,14 +727,19 @@ el:
     βίντεο μαζί και πάρτε μέρος εναλλάξ στις λύσεις παζλ ή απαντώντας σε ερωτήσεις.
     <li><b>Πηγαίνετε χωρίς σύνδεση.</b> Προσφέρουμε <a href='%{unplugged_url}'>μαθήματα
     που δεν απαιτούν καθόλου υπολογιστή</a></ul>
-  hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
-
-    _Here are a few options:_
-
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+  hoc_faq_need_computers_a_markdown: "Όχι. Έχουμε εκπαιδευτικά βίντεο Ώρας του Προγραμματισμού
+    που λειτουργούν σε Προσωπικό Υπολογιστή, έξυπνα τηλέφωνα, τάμπλετ, και κάποια
+    δεν χρειάζονται καθόλου υπολογιστή!! Μπορείς να συμμετέχεις από οπουδήποτε και
+    αν είσαι, με ο,τιδήποτε και αν έχεις.\n\n_Σας παραθέτουμε εδώ μερικές επιλογές:_\n\n-
+    **Δουλέψτε σε ζεύγη.** [Έρευνες δείχνουν ότι](%{pair_programming_research}) οι
+    μαθητές μαθαίνουν καλύτερα με τον  [προγραμματισμό με ζεύγη](%{pair_programming_video}),
+    χρησιμοποιώντας από κοινού έναν υπολογιστή και δουλεύοντας μαζί. Ενθαρρύνετε τους
+    μαθητές σας να κάνουν δυάδες. \n\n- **Να χρησιμοποιείτε μια οθόνη προβολής.**
+    Αν έχετε ένα προβολέα και μια οθόνη για ένα υπολογιστή που συνδέεται στον Παγκόσμιο
+    Ιστό, ολόκληρη η ομάδα σας μπορούν να κάνουν μια ώρα του Κώδικα μαζί. Δείτε τμήματα
+    από βίντεο μαζί και εναλλάξ επιλύστε πάζλ ή απαντήστε σε ερωτήσεις.\n- **Στραφείτε
+    προς έναν ανεμπόδιστο, εκτός διαδικτύου τρόπο λειτουργίας.** Προσφέρουμε [εκπαιδευτικά
+    βίντεο που δεν απαιτούν υπολογιστή](%{unplugged_url}) καθόλου."
   hoc_faq_international_q: Μένω στην  <country>.  Πως μπορώ να συμμετέχω διεθνώς;
   hoc_faq_international_a: Οποιοσδήποτε μπορεί να οργανώσει μία εκδήλωση για την Ώρα
     του Κώδικα, οπουδήποτε στον κόσμο. Πέρυσι, μαθητές από όλο τον κόσμο ενώθηκαν
@@ -748,11 +767,13 @@ el:
     ΔΕΝ δημιουργείται αυτόματα ένας λογαριασμός τύπου Code Studio. Αν επιθυμείτε να
     δημιουργήσετε λογαριασμούς για τους μαθητές σας παρακαλούμε ακολουθήστε τις εξής
     <a href='https://youtu.be/_smelV_KISE'>οδηγίες</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: Όχι. Απολύτως καμιά εγγραφή ή σύνδεση δεν απαιτείται
+    για μαθητές για να δοκιμάσουν την Ώρα του Προγραμματισμού. Τα περισσότερα από
+    τα [μαθήματα του σχολικού προγράμματος από το νηπιαγωγείο έως το λύκειο](%{codeorg_url}/learn/beyond)
+    θέλουν την δημιουργία λογαριασμού για να αποθηκεύουν την πρόοδο του μαθητή. Επίσης,
+    η εγγραφή στην Ώρα του Προγραμματισμού ΔΕΝ δημιουργεί ένα λογαριασμό Code Studio
+    αυτόματα. Αν δεν θέλετε να δημιουργήσετε λογαριασμούς για τους μαθητές σας, σας
+    παρακαλούμε να ακολουθήσετε αυτές τις [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Ποια δραστηριότητα πρέπει να κάνω με μαθητές λυκείου;
   hoc_faq_high_school_a: Για όλες τις ηλικίες, εμείς προτείνουμε να δοκιμάσετε ένα
     από τα μαθήματα αρχαρίων  <a href='http://code.org/learn'> Code.org/learn</a>
@@ -832,11 +853,11 @@ el:
     τους μπορούν. <br/> <br/> Πάνω απ 'όλα, αυτό που όλοι οι συμμετέχοντες μπορούν
     να μάθουν σε μια ώρα είναι ότι μπορούμε να το καταφέρουμε.
   hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+    Ο στόχος της Ώρας του Προγραμματισμού δεν είναι να διδάξει οποιονδήποτε να γίνει ένας ειδήμονας επιστήμονας στους υπολογιστές σε μια ώρα. Μια ώρα αρκεί μόνο για να μάθουμε ότι η επιστήμη των υπολογιστών είναι διασκεδαστική και δημιουργική, ότι είναι προσβάσιμη σε όλες τις ηλικίες, για όλους τους μαθητές, ανεξαρτήτως υπόβαθρου. Το μέτρο της επιτυχίας αυτής της εκστρατείας δεν είναι να δείξει πόση επιστήμη των υπολογιστών μπορούν να μάθουν οι μαθητές - η επιτυχία σηματοδοτείται από την ευρεία συμμετοχή από όλα τα γένη και τις εθνικές και κοινωνικοοικονομικές μονάδες βλέπουμε στα μαθήματα της επιστήμης των υπολογιστών σε όλες τις βαθμίδες εκπαιδευτικού επιπέδου. Εκατομμύρια από συμμετέχοντες δασκάλους και μαθητές έχουν αποφασίσει να ξεπεράσουν την μία ώρα - να μαθαίνουν για μια ολόκληρη ημέρα ή ολόκληρη εβδομάδα ή και παραπάνω, και πολλοί μαθητές έχουν αποφασίσει να εγγραφούν σε ένα ολόκληρο μάθημα ( ή ακόμα σε ένα τομέα κολεγιακών σπουδών) ως εκ του αποτελέσματος.
 
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+    Πέραν από τους μαθητές, ένας άλλος "εκπαιδευόμενος" είναι ο εκπαιδευτής που αποκτά την πεποίθηση ότι έπειτα από μια ώρα μπορεί να διδάξει την επιστήμη των υπολογιστών αν και μπορεί να μην έχει ένα κολεγιακό δίπλωμα επιστήμονα των υπολογιστών. Δεκάδες χιλιάδες δασκάλων αποφασίζουν να ακολουθήσουν την επιστήμη των υπολογιστών εκτενέστερα και περαιτέρω, είτε παρακολουθώντας ένα Διδακτορικό, είτε προσφέροντας διαδικτυακά μαθήματα των τάξεων του νηπιαγωγείου έως το λύκειο, ή και τα δύο. Και αυτό ισχύει επίσης και για τους διοικητές σχολείων, που συνειδητοποιούν ότι η επιστήμη των υπολογιστών είναι μια επιστήμη που οι μαθητές θέλουν και οι δάσκαλοι είναι ικανοί να διδάξουν.
 
-    Above all, what all participants can learn in an hour is that we can do this.
+    Πάνω απ' όλα, όμως, αυτό που όλοι οι συμμετέχοντες μπορούν να μάθουν σε μια ώρα είναι ότι μπορούμε να το κατορθώσουμε.
   hoc_faq_more_questions_q: Έχετε ακόμα ερωτήσεις;
   hoc_faq_more_questions_a: Προσπαθείστε να βρείτε μια απάντηση στο <a href='http://support.code.org'>φόρουμ
     υποστήριξης</a>.
@@ -847,11 +868,13 @@ el:
     όλα τα μαθήματα και το πρόγραμμα σπουδών μας είναι διαθέσιμα στον ιστότοπό μας
     πάντα. Μεταβείτε στις παρακάτω <a href='/promote'>τοποθεσίες</a> για συμβουλές
     και οδηγούς για να βοηθήσετε την εκδήλωσής σας να έχει επιτυχία.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
+  hoc_faq_keep_learning_a_markdown: Οποιοσδήποτε μπορεί να φιλοξενήσει μια Ώρα του
+    Προγραμματισμού οποιαδήποτε στιγμή. Τα εκπαιδευτικά βίντεο μένουν στον αέρα κατά
+    την διάρκεια όλου του χρόνου. Μπορείτε λοιπόν να το θεωρείται αναμενόμενο όλα
+    τα εκπαιδευτικά βίντεο μας και το σχολικό πρόγραμμά μας να είναι διαθέσιμο στον
+    ιστότοπό μας επ' αόριστον. Παρακαλούμε να επισκεφθείτε [τις πηγές μας](%{promote})
+    για οδηγούς καθοδήγησης για εκδηλώσεις και άλλες πηγές που θα σας βοηθήσουν να
+    κάνετε την δική σας εκδήλωση Ώρας Προγραμματισμού μια επιτυχία.
   hoc_faq_certificates_q: Πού μπορώ να εκτυπώσω πιστοποιητικά για τους μαθητές μου;
   hoc_faq_certificates_a: Μεταβείτε στη <a href='%{codeorg_url}/certificates'> σελίδα
     πιστοποιητικών</a> όπου μπορείτε να εκτυπώσετε τα πιστοποιητικά για ολόκληρη την
@@ -1010,6 +1033,7 @@ el:
   footer_copyright_message: Πνευματικά δικαιώματα Code.org 2015. Όλα τα δικαιώματα
     είναι κατοχυρωμένα.
   footer_trademark_message: Η Ώρα του κώδικα ™ είναι εμπορικό σήμα της Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Συνεργάτες
   footer_menu_contact: Επικοινωνείστε μαζί μας
   footer_menu_support: Υποστήριξη
@@ -1626,9 +1650,10 @@ el:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1644,15 +1669,16 @@ el:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1661,6 +1687,7 @@ el:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1670,7 +1697,7 @@ el:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -5389,11 +5416,14 @@ el:
     you'll find every puzzle has a solution to make the pets feel better than ever!
   tutorial_superhero_longdescription: Use HTML and CSS pixel art to create your favorite
     superhero masks. Publish and share your creations!
-  tutorial_vidcodeplastic_longdescription: The problem of plastic filling our oceans
-    continues to worsen. Luckily, you can make your voice heard with code through
-    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
-    you can make a second video about any subject you care about! Learn to use loops,
-    sine waves and customized emojis to make a unique project.
+  tutorial_vidcodeplastic_longdescription: Συνεχίζει να χειροτερεύει το πρόβλημα με
+    το πλαστικό που γεμίζει τους ωκεανούς μας. Ευτυχώς, μπορείτε να κάνετε τη φωνή
+    σας να ακουστεί με τον προγραμματισμό κώδικα μέσω δημόσιων ανακοινώσεων (PSA)
+    για τη Ρύπανση από Πλαστικό . Έπειτα από τον προγραμματισμό κώδικα μιας δημόσιας
+    ανακοίνωσης (PSA) γύρω από την ρύπανση με πλαστικό με τη χρήση JavaScript, μπορείτε
+    να φτιάξετε ένα δεύτερο βίντεο γύρω από οποιοδήποτε θέμα σας ενδιαφέρει! Μάθετε
+    να χρησιμοποιείτε βρόχους, ημιτονοειδές κύματα και προσαρμοσμένα έμοτζι για να
+    κάνετε ένα μοναδικό έργο.
   tutorial_vidcodetypeface_longdescription: Create your own typeface using shapes
     and elements of typography. Type has more elements than you may have realized!
     So far we have talked about fonts and how they are different styles of text. Fonts
@@ -5465,20 +5495,22 @@ el:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5524,12 +5556,12 @@ el:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5548,16 +5580,18 @@ el:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5577,6 +5611,14 @@ el:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: Συνεχίζει να χειροτερεύει το πρόβλημα
+    με το πλαστικό που γεμίζει τους ωκεανούς μας. Ευτυχώς, μπορείτε να κάνετε τη φωνή
+    σας να ακουστεί με τον προγραμματισμό κώδικα μέσω δημόσιων ανακοινώσεων (PSA)
+    για τη Ρύπανση από Πλαστικό . Έπειτα από τον προγραμματισμό κώδικα μιας δημόσιας
+    ανακοίνωσης (PSA) γύρω από την ρύπανση με πλαστικό με τη χρήση JavaScript, μπορείτε
+    να φτιάξετε ένα δεύτερο βίντεο γύρω από οποιοδήποτε θέμα σας ενδιαφέρει! Μάθετε
+    να χρησιμοποιείτε βρόχους, ημιτονοειδές κύματα και προσαρμοσμένα έμοτζι για να
+    κάνετε ένα μοναδικό έργο.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5607,11 +5649,11 @@ el:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5842,16 +5884,17 @@ el:
     diversity that makes us all uniquely special.
   tutorial_dance2019_language: Αραβικά, Κινέζικα, Τσέχικα, Δανέζικα, Ολλανδικά, Αγγλικά,
     Φινλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Χίντι, Ουγγρικά, Ινδονησιακά, Ιταλικά,
-    Ιαπωνικά, Κορεατικά, Μαλαισιανά, Πολωνικά, της Πορτογαλικά, και 10 ακόμη!
-  tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
-    Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
-    Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
+    Ιαπωνικά, Κορεατικά, Μαλαισιανή γλώσσα, Πολωνικά, Πορτογαλικά, και 10 ακόμη!
+  tutorial_danceparty_language: Αγγλικά, Αραβικά, Κατανικά, Κινέζικα, Τσέχικα, Δανέζικα,
+    Ολλανδικά, Φιλανδικά, Γαλλικά, Γερμανικά, Ουγγαρέζικα, Ιταλικά, Ιαπωνικά, Κορεάτικα,
+    Νορβηγικά, Πολωνικά, Πορτογαλικά, Ρώσικα, Ισπανικά, Σουηδικά, Ταϊλανδέζικα, Τουρκικά
+    και Βιετναμέζικα
   tutorial_chibitronics_language: ελληνικά
   tutorial_athlete_language: Αγγλικά, Γαλλικά, Ισπανικά, Ιταλικά, Πορτογαλικά (Βραζιλίας)
-  tutorial_moana_language: English, Arabic, Chinese (Simplified), Chinese (Traditional)
-    Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish,
-    Turkish, Ukrainian, Vietnamese
+  tutorial_moana_language: Αγγλικά, Αραβικά, Κινέζικα (απλοποιημένα), Κινέζικα (Παραδοσιακά),
+    Δανέζικα, Ολλανδικά, Φιλανδικά, Γαλλικά, Γερμανικά, Ινδονησιακά, Ιταλικά, Ιαπωνικά,
+    Κορεάτικα, Νορβηγικά, Πολωνέζικα,  Πολυνησιακά (γλώσσα Σαμόα ή Σαμοανή γλώσσα),
+    Πορτογαλικά, Ρωσικά, Ισπανικά, Σουηδικά, Τουρκικά, Ουκρανικά, Βιετναμέζικα
   tutorial_star-wars_language: Αγγλικά, Αραβικά, Βουλγαρικά, Κινέζικα, Κροατικά, Δανικά,
     Ολλανδικά, Φινλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Ισλανδικά, Ινδονησιακά, Ιταλικά,
     Ιαπωνικά, Κορεατικά, Νορβηγικά, Περσικά, Πολωνικά, Πορτογαλικά, Ρουμανικά, Ρωσικά,
@@ -5862,19 +5905,20 @@ el:
     Ιαπωνικά, Κορεατικά, Νορβηγικά, Περσικά, Πολωνικά, Πορτογαλικά, Ρουμανικά, Ρωσικά,
     Ισπανικά, Σουηδικά, Τουρκικά, Ουκρανικά και 19 ακόμη
   tutorial_vidnews_language: English only
-  tutorial_kodable-pre_language: English, Arabic, Azerbaijani, German, Greek, Spanish,
-    Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish,
-    Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese
+  tutorial_kodable-pre_language: Αγγλικά, Αραβικά, Αζερμπαϊτζάν, Γερμανικά, Ελληνικά,
+    Ισπανικά, Περσικά, Γαλλικά, Ινδονησιακά, Ισλανδικά, Ιταλικά, Κορεάτικα, Ολλανδικά,
+    Νορβηγικά, Πολωνικά, Πορτογαλικά, Ρωμανικά, Ρωσικά, Σερβικά, Σουηδικά, Τουρκικά,
+    Ουκρανικά, Κινέζικα
   tutorial_highseas_language: English only
   tutorial_capython_language: English, Dutch, Spanish
   tutorial_frzn_language: Αγγλικά, Αραβικά, Βουλγαρικά, Κινέζικα, Κροατικά, Δανικά,
     Ολλανδικά, Φινλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Ισλανδικά, Ινδονησιακά, Ιταλικά,
     Ιαπωνικά, Κορεατικά, Νορβηγικά, Περσικά, Πολωνικά, Πορτογαλικά, Ρουμανικά, Ρωσικά,
     Ισπανικά, Σουηδικά, Τουρκικά, Ουκρανικά και 19 ακόμη
-  tutorial_cocom_language: English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian,
-    Vietnamese and 9 more
+  tutorial_cocom_language: Αγγλικά, Αραβικά, Βουλγαρικά, Κινέζικα, Τσέχικα, Δανέζικα,
+    Ολλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Εβραϊκά, Ουγγρικά, Ινδονησιακά, Ιταλικά,
+    Ιαπωνικά, Κορεάτικα, Νορβηγικά, Περσικά, Πολωνικά, Πορτογαλικά, Ρώσικα, Ισπανικά,
+    Σουηδικά, Τουρκικά, Ουκρανικά, Βιετναμέζικα και 9 άλλες
   tutorial_play-lab_language: Αγγλικά, Αραβικά, Βουλγαρικά, Κινέζικα, Κροατικά, Δανικά,
     Ολλανδικά, Φινλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Ισλανδικά, Ινδονησιακά, Ιταλικά,
     Ιαπωνικά, Κορεατικά, Νορβηγικά, Περσικά, Πολωνικά, Πορτογαλικά, Ρουμανικά, Ρωσικά,
@@ -5913,19 +5957,19 @@ el:
     Ολλανδικά, Φινλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Ισλανδικά, Ινδονησιακά, Ιταλικά,
     Ιαπωνικά, Κορεατικά, Νορβηγικά, Περσικά, Πολωνικά, Πορτογαλικά, Ρουμανικά, Ρωσικά,
     Ισπανικά, Σουηδικά, Τουρκικά, Ουκρανικά και 19 ακόμη
-  tutorial_galaxy_language: English, Albanian, Arabic, Bosnian, Chinese, Croatian,
-    Czech, Danish, Dutch, French, German, Hebrew, Indonesian, Italian, Japanese, Korean,
-    Persian, Polish, Portuguese, Romanian, Russian, Slovenian, Spanish, Swedish, Turkish,
-    Vietnamese
+  tutorial_galaxy_language: Αγγλικά, Αλβανικά, Αραβικά, Βοσνιακά, Κινέζικα, Κροατικά,
+    Τσέχικα, Δανέζικα, Ολλανδικά, Γαλλικά, Γερμανικά, Εβραϊκά, Ινδονησιακά, Ιταλικά,
+    Ιαπωνικά, Κορεάτικα, Περσικά, Πολωνικά, Πορτογαλικά, Ρουμανικά, Ρωσικά, Σλοβενικά,
+    Ισπανικά, Σουηδικά, Τούρκικα, Βιετναμέζικα
   tutorial_inf_language: Αγγλικά, Αραβικά, Βουλγαρικά, Κινέζικα, Κροατικά, Δανικά,
     Ολλανδικά, Φινλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Ισλανδικά, Ινδονησιακά, Ιταλικά,
     Ιαπωνικά, Κορεατικά, Νορβηγικά, Περσικά, Πολωνικά, Πορτογαλικά, Ρουμανικά, Ρωσικά,
     Ισπανικά, Σουηδικά, Τουρκικά, Ουκρανικά και 19 ακόμη
   tutorial_tynkersol_language: English only
   tutorial_itchg_language: English only
-  tutorial_como_language: English, Arabic, Chinese, Czech, French, German, Greek,
-    Hebrew, Japanese, Kazkh, Lithuanian, Polish, Portuguese, Russian, Serbian, Spanish,
-    Turkish, Ukrainian
+  tutorial_como_language: Αγγλικά, Αραβικά, Κινεζικά, Τσέχικα, Γαλλικά, Γερμανικά,
+    Ελληνικά, Εβραϊκά, Ιαπωνικά, καζακικά, Λιθουανικά, Πολωνικά, Πορτογαλικά, Ρώσικα,
+    Σέρβικα, Ισπανικά, Τουρκικά, Ουκρανικά
   tutorial_processfound_language: English only
   tutorial_tynkerhomo_language: English only
   tutorial_art_language: Αγγλικά, Αραβικά, Βουλγαρικά, Κινέζικα, Κροατικά, Δανικά,
@@ -5943,10 +5987,10 @@ el:
   tutorial_tynkerapp_language: English only
   tutorial_tynkerpup_language: English only
   tutorial_livecode_language: English only
-  tutorial_cocomgame_language: English, Arabic, Bulgarian, Chinese, Croatian, Czech,
-    Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian, Vietnamese and 8 more
+  tutorial_cocomgame_language: Αγγλικά, Αραβικά, Βουλγάρικα, Κινέζικα, Κροατικά, Τσέχικα,
+    Δανέζικα, Ολλανδικά, Φιλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Εβραϊκά, Ιταλικά,
+    Ιαπωνικά, Κορεάτικα, Νορβηγικά, Περσικά, Πολωνικά, Πορτογαλικά, Ρουμάνικα, Ρώσικα,
+    Ισπανικά, Σουηδικά, Τουρκικά, Ουκρανικά, Βιετναμέζικα και 8 άλλες
   tutorial_tynkerspin_language: English only
   tutorial_code-avengers_language: Αγγλικά, Ισπανικά, Ολλανδικά, Ρωσικά, Πορτογαλικά
   tutorial_tynkercq_language: English only
@@ -6170,9 +6214,9 @@ el:
   tutorial_moveit_language: English only
   tutorial_bigevent_language: English only
   tutorial_gpp_language: English only
-  tutorial_foosgame_language: English, Arabic, German, Spanish, French, Japanese,
-    Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional
-    Chinese, Simplified Chinese, Greek, Italian, Polish
+  tutorial_foosgame_language: Αγγλικά, Αραβικά, Γερμανικά, Ισπανικά, Γαλλικά, Ιαπωνικά,
+    Κορεάτικα, Ολλανδικά, Πορτογαλικά, Πορτογαλικά Βραζιλίας, Ρουμανικά, Τουρκικά,
+    Παραδοσιακά Κινέζικα, Απλοποιημένα Κινέζικα, Ελληνικά, Ιταλικά, Πολωνικά
   tutorial_solopython_language: English only
   tutorial_kodableint_language: English only
   tutorial_kodableadv_language: English only
@@ -6392,9 +6436,9 @@ el:
   tutorial_cashield_language: ελληνικά
   tutorial_ccwslimer_language: ελληνικά
   tutorial_codinggalaxy_language: Chinese, English
-  tutorial_boatrace_language: Arabic, Chinese (Simplified), Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish,
-    Romanian, Serbian (Cyrillic), Spanish, Ukrainian
+  tutorial_boatrace_language: Αραβικά, Κινέζικα (απλοποιημένα), Τσέχικα, Δανέζικα,
+    Ολλανδικά, Γαλλικά, Γερμανικά, Ελληνικά, Εβραϊκά, Χίντι, Ιταλικά, Ιαπωνικά, Κορεάτικα,
+    Άλλες γλώσσες, Πολωνικά, Ρουμανικά, Σερβικά (Κυριλλικά), Ισπανικά, Ουκρανικά
   tutorial_ccplay_language: ελληνικά
   tutorial_grinch_language: ελληνικά
   tutorial_codehsart_language: ελληνικά
@@ -6455,8 +6499,9 @@ el:
   tutorial_ozorandom_language: ελληνικά
   tutorial_ozotroll_language: ελληνικά
   tutorial_peblioart_language: ελληνικά
-  tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
-    Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
+  tutorial_astropi_language: Αραβικά, Δανέζικα, Ολλανδικά, Αγγλικά, Φιλανδικά, Γαλλικά,
+    Γερμανικά, Ελληνικά, Ουγγρικά, Ιταλικά, Νορβηγικά (Νέα Νορβηγική γλώσσα), Άλλες
+    γλώσσες, Πολωνικά, Ισπανικά, Σουηδικά
   tutorial_rgart_language: ελληνικά
   tutorial_rgengineer_language: ελληνικά
   tutorial_rgmath_language: ελληνικά
@@ -6512,7 +6557,7 @@ el:
   tutorial_pets_language: ελληνικά
   tutorial_petvet_language: ελληνικά
   tutorial_superhero_language: ελληνικά
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: ελληνικά
   tutorial_vidcodetypeface_language: ελληνικά
   tutorial_washustorm_language: ελληνικά
   tutorial_activitypackets_language: ελληνικά
@@ -6535,10 +6580,11 @@ el:
   tutorial_codespeakhappy_language: ελληνικά
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: ελληνικά
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: Αραβικά, Ολλανδικά, Αγγλικά, Αγγλικά (Ηνωμένου Βασιλείου),
+    Γαλλικά, Ισπανικά (Μεξικού)
   tutorial_bsdcause_language: ελληνικά
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: ελληνικά
   tutorial_tttractor_language: ελληνικά
   tutorial_codeillusionmickey_language: ελληνικά
@@ -6556,11 +6602,12 @@ el:
   tutorial_ttsecond_language: ελληνικά
   tutorial_bsdtrivia_language: ελληνικά
   tutorial_csfirstdialogue_language: English, Spanish (Mexico)
-  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
-    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: Αραβικά, Κινέζικα (Απλοποιημένα), Αγγλικά, Εβραϊκά,
+    Ιαπωνικά, Ισπανικά (Ισπανίας), Ισπανικά (Μεξικού)
   tutorial_codestersdistance_language: ελληνικά
   tutorial_itchspace_language: ελληνικά
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: ελληνικά
   tutorial_itchfish_language: ελληνικά
   tutorial_bsdwebsite_language: ελληνικά
@@ -6568,11 +6615,12 @@ el:
   tutorial_itchwebcam_language: ελληνικά
   tutorial_itchball_language: ελληνικά
   tutorial_ttrace_language: ελληνικά
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Αραβικά, Κινέζικα (Απλοποιημένα), Αγγλικά, Εβραϊκά,
+    Πορτογαλικά (Βραζιλίας)
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: ελληνικά
   tutorial_codeguppytext_language: ελληνικά
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: ελληνικά
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: ελληνικά
@@ -6582,8 +6630,8 @@ el:
   tutorial_ttbunker_language: ελληνικά
   tutorial_cuttle_language: ελληνικά
   tutorial_bsdjokes_language: ελληνικά
-  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rptree_language: Αραβικά, Ολλανδικά, Αγγλικά, Αγγλικά (Ηνωμένου Βασιλείου),
+    Γαλλικά, Ισπανικά (Μεξικού)
   tutorial_codestersunity_language: ελληνικά
   tutorial_codesterssoccer_language: ελληνικά
   tutorial_breakoutlock_language: ελληνικά
@@ -6638,9 +6686,10 @@ el:
   tutorial_kcjplastic_language: Αγγλικά, Γαλλικά
   tutorial_legojourney_language: ελληνικά
   tutorial_legohopper_language: ελληνικά
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Αραβικά, Βεγγαλική γλώσσα -γλώσσα της Ινδίας-,
+    Κινέζικα (Απλοποιημένα), Κροατικά, Τσέχικα, Αγγλικά, Γαλλικά, Γερμανικά, Χίντι,
+    Ινδονησιακά, Ιταλικά, Ιαπωνικά, Κορεάτικα, Νορβηγικά (Νέα Νορβηγική γλώσσα), Πολωνικά,
+    Πορτογαλικά, και πολλές άλλες!
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: ελληνικά
@@ -7249,6 +7298,8 @@ el:
   tutorial_bsdcause_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και άνω'
   tutorial_vidcodeanimoji_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και
     άνω'
+  tutorial_vidcodeanimojies_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και
+    άνω'
   tutorial_bsdinspire_string_detail_grades: Grades 6+
   tutorial_tttractor_string_detail_grades: Grades 6+
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
@@ -7271,6 +7322,8 @@ el:
   tutorial_codestersdistance_string_detail_grades: Grades 6+
   tutorial_itchspace_string_detail_grades: Grades 6+
   tutorial_vidcodemagic_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
+  tutorial_vidcodemagices_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και
+    άνω'
   tutorial_codespeakmeal_string_detail_grades: Grades 6+
   tutorial_itchfish_string_detail_grades: Grades 2-8
   tutorial_bsdwebsite_string_detail_grades: Grades 6+
@@ -7282,6 +7335,7 @@ el:
   tutorial_educodesecret_string_detail_grades: Grades 6+
   tutorial_itchshapes_string_detail_grades: Grades 6+
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Grades 6+
   tutorial_educativechatbot_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και
     άνω'
   tutorial_educodebasics_string_detail_grades: Grades 6+
@@ -7304,7 +7358,7 @@ el:
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
   tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_codejika_string_detail_grades: Grades 6+
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
@@ -8105,6 +8159,8 @@ el:
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8129,6 +8185,8 @@ el:
   tutorial_itchspace_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8140,6 +8198,7 @@ el:
   tutorial_educodesecret_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_itchshapes_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
   tutorial_educativechatbot_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_educodebasics_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8811,6 +8870,7 @@ el:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8832,6 +8892,7 @@ el:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8843,6 +8904,7 @@ el:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9542,6 +9604,7 @@ el:
   tutorial_rpstress_string_detail_programming_languages: Μπλοκ
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9563,6 +9626,7 @@ el:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Μπλοκ
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Μπλοκ
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9575,6 +9639,7 @@ el:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Μπλοκ
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -10056,9 +10121,11 @@ el:
   tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
     app to power through printable puzzles and challenges to crack the code to where
     Root is hiding.
-  tutorial_microbit14_longdescription: Code your way to preserving the oceans using
-    micro:bit. Find out more about Global Goal 14, Life Below Water and learn to code
-    a sea turtle beach light.
+  tutorial_microbit14_longdescription: Με τη βοήθεια του προγραμματισμού κώδικα ανοίξτε
+    δρόμους για τη διατήρηση των ωκεανών με τη χρήση των micro:bit. Ανακαλύψτε περισσότερα
+    για τους Στόχους Βιώσιμης Ανάπτυξης 14, Ζωή Κάτω από την επιφάνεια των υδάτων
+    και μάθετε να προγραμματίζετε κώδικα για ένα φως παραλίας κατάλληλο για θαλάσσιες
+    χελώνες.
   tutorial_barobomoon_longdescription: You're one of the pioneer astronauts at the
     first permanent moon base, and while on an expedition away from base, a malfunction
     incapacitates your lunar rover and radio. But with a little ingenuity you can
@@ -10124,9 +10191,11 @@ el:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: Computer science is about so much more than
-    coding! Learn about AI, machine learning, training data, and bias, while exploring
-    ethical issues and how AI can be used to address world problems.
+  tutorial_ai-oceans_longdescription: Η επιστήμη των υπολογιστών είναι πολλά παραπάνω
+    από προγραμματισμό κώδικα! Μάθετε για την τεχνητή νοημοσύνη (ΤΝ), τη μηχανική
+    μάθηση, τα δεδομένα εκπαίδευσης, και τη μεροληψία, εξερευνώντας ταυτόχρονα ηθικά
+    ζητήματα και τον τρόπο με τον οποίο η ΤΝ μπορεί να χρησιμοποιηθεί για να επιλύσει
+    τα προβλήματα στον κόσμο.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: ελληνικά
   tutorial_googlehero_language: English, Spanish
@@ -10230,7 +10299,9 @@ el:
     Ουκρανικά, Ελληνικά, Βουλγαρικά, Ουγγρικά, Φινλανδικά, Δανέζικα, Σουηδικά, Νορβηγικά,
     Σλοβακικά, Τσέχικα, Ολλανδικά
   tutorial_kuborobo_language: English, Spanish
-  tutorial_ai-oceans_language: ελληνικά
+  tutorial_ai-oceans_language: Ελληνικά, Τσέχικα, Κινέζικα, Δανέζικα, Αγγλικά, Φιλανδικά,
+    Γαλλικά, Γερμανικά, Χίντι, Ινδονησιακά, Ιταλικά, Ιαπωνικά, Ρωσικά, Ισπανικά, Τάγκαλoγκ,
+    Ταμίλ, Ταϊλανδέζικα, Τούρκικα, Ουρντού, και 15 ακόμη!
   tutorial_scratchimagine_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και
     άνω'
   tutorial_codesterspsa_string_detail_grades: Grades 6+
@@ -10335,7 +10406,7 @@ el:
   tutorial_modtraits_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_mee_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
-  tutorial_ai-oceans_string_detail_grades: Grades 3+
+  tutorial_ai-oceans_string_detail_grades: Τρίτη δημοτικού +
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
@@ -10444,8 +10515,8 @@ el:
   tutorial_modtraits_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
-  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
-    iPads, modern Android phones, iPhones
+  tutorial_ai-oceans_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης, σύγχρονα
+    τάμπλετ Android, σύγχρονα τηλέφωνα Android, iPhone
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -10659,7 +10730,7 @@ el:
   tutorial_mee_string_detail_programming_languages: Μπλοκ
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
-  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
+  tutorial_ai-oceans_string_detail_programming_languages: Al και η Μηχανική Μάθηση
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

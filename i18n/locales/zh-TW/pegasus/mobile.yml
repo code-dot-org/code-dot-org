@@ -1537,6 +1537,7 @@
   hoc_overview_partner_activities_body: "一小時玩程式的網站匯集了由 Code.org 及其合作夥伴所設計的超過 500 多項計算機科學活動，適用於所有年齡和不同經驗水平的人。"
   hoc_overview_partner_activities_link: "查看活動"
   hoc_overview_start_tutorial: "開始"
+  hoc_overview_more_resources: "有關如何參與遠端教室的更多資源，請參見[虛擬一小時玩程式（Hour of Code）](https://hourofcode.com/us/how-to/virtual）舉辦指南（。對於那些缺乏技術條件或網路連接的學生，[請共用這個[不插電一小時玩程式（Hour of Code）](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf）活動]包。"
   hoc_overview_view_teacher_guide: "檢視教學指引"
   hoc2018_creativity: "創造力"
   hoc2018_creativity_create: "建立"
@@ -1679,3 +1680,4 @@
   page_not_available_title: "沒有可用的頁面"
   page_not_available_description: "我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎mail 給我們[support@code.org](%{support_email_link})，告知您的需求"
   page_not_available_button: "返回主頁"
+  footer_powered_by_aws: "Powered by Amazon Web Services"

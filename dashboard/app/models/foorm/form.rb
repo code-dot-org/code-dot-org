@@ -15,7 +15,7 @@
 #  index_foorm_forms_on_name_and_version  (name,version) UNIQUE
 #
 
-class Foorm::Form < ActiveRecord::Base
+class Foorm::Form < ApplicationRecord
   include Seeded
   include Pd::Foorm::Constants
 
@@ -129,12 +129,12 @@ class Foorm::Form < ActiveRecord::Base
       filled_questions = Foorm::Form.fill_in_library_items(questions)
     rescue StandardError => e
       errors.append(e.message)
-      return
+      return errors
     end
     filled_questions.deep_symbolize_keys!
     element_names = Set.new
-    filled_questions[:pages].each do |page|
-      page[:elements].each do |element_data|
+    filled_questions[:pages]&.each do |page|
+      page[:elements]&.each do |element_data|
         # validate_element will throw an exception if the element is invalid
         Foorm::Form.validate_element(element_data, element_names)
       rescue StandardError => e

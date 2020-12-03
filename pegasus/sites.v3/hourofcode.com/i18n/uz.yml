@@ -43,6 +43,11 @@ uz:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
+  hoc2020_ai_header: Explore Artificial Intelligence
+  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
+    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
+    discuss ethics and AI, and more...
   hoc2019_header: Learn computer science. Change the world.
   hoc2019_header_line1_mobile: Learn computer science.
   hoc2019_header_line2_mobile: Change the world.
@@ -933,6 +938,9 @@ uz:
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ and Hora del Código® are trademarks of Code.org.
+    Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com,
+    Inc. or its affiliates in the United States and/or other countries.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners and Advisors
   footer_menu_contact: Contact us
   footer_menu_support: Support
@@ -1543,9 +1551,10 @@ uz:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1561,15 +1570,16 @@ uz:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1578,6 +1588,7 @@ uz:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1587,7 +1598,7 @@ uz:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -5313,20 +5324,22 @@ uz:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5372,12 +5385,12 @@ uz:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5396,16 +5409,18 @@ uz:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5425,6 +5440,11 @@ uz:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
+    continues to worsen. Luckily, you can make your voice heard with code through
+    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
+    you can make a second video about any subject you care about! Learn to use loops,
+    sine waves and customized emojis to make a unique project.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5455,11 +5475,11 @@ uz:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5704,16 +5724,16 @@ uz:
     Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
     Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
     Turkish, Ukrainian and 19 more
-  tutorial_gumadventure_language: English only
+  tutorial_gumadventure_language: Faqat ingliz tilida
   tutorial_mchoc_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish,
     Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
     Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
     Turkish, Ukrainian and 19 more
-  tutorial_vidnews_language: English only
+  tutorial_vidnews_language: Faqat ingliz tilida
   tutorial_kodable-pre_language: English, Arabic, Azerbaijani, German, Greek, Spanish,
     Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish,
     Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese
-  tutorial_highseas_language: English only
+  tutorial_highseas_language: Faqat ingliz tilida
   tutorial_capython_language: English, Dutch, Spanish
   tutorial_frzn_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
     Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
@@ -5731,16 +5751,16 @@ uz:
     French, German, Greek, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean,
     Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian,
     Vietnamese
-  tutorial_textcomp_language: English only
-  tutorial_encryption_language: English only
-  tutorial_kanopixel_language: English only
+  tutorial_textcomp_language: Faqat ingliz tilida
+  tutorial_encryption_language: Faqat ingliz tilida
+  tutorial_kanopixel_language: Faqat ingliz tilida
   tutorial_foos_language: Chinese, English, French, German, Italian, Japanese, Korean,
     Malay, Portuguese (Brazil), Spanish, Swedish, Thai
-  tutorial_tynkerdd_language: English only
-  tutorial_tynkerana_language: English only
-  tutorial_vidcard_language: English only
+  tutorial_tynkerdd_language: Faqat ingliz tilida
+  tutorial_tynkerana_language: Faqat ingliz tilida
+  tutorial_vidcard_language: Faqat ingliz tilida
   tutorial_spritebox_language: English, Brazilian Portuguese
-  tutorial_tynkerch_language: English only
+  tutorial_tynkerch_language: Faqat ingliz tilida
   tutorial_lightbot_language: English, Chinese, Croatian, Czech, Danish, Dutch, Finnish,
     French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
     Malaysia, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian,
@@ -5753,10 +5773,10 @@ uz:
     Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
     Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
     Ukrainian and 19 more
-  tutorial_tinspire_language: English only
-  tutorial_itchbounceball_language: English only
-  tutorial_vidclim_language: English only
-  tutorial_matlab_language: English only
+  tutorial_tinspire_language: Faqat ingliz tilida
+  tutorial_itchbounceball_language: Faqat ingliz tilida
+  tutorial_vidclim_language: Faqat ingliz tilida
+  tutorial_matlab_language: Faqat ingliz tilida
   tutorial_flap_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
     Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
     Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
@@ -5769,232 +5789,232 @@ uz:
     Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
     Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
     Ukrainian and 19 more
-  tutorial_tynkersol_language: English only
-  tutorial_itchg_language: English only
+  tutorial_tynkersol_language: Faqat ingliz tilida
+  tutorial_itchg_language: Faqat ingliz tilida
   tutorial_como_language: English, Arabic, Chinese, Czech, French, German, Greek,
     Hebrew, Japanese, Kazkh, Lithuanian, Polish, Portuguese, Russian, Serbian, Spanish,
     Turkish, Ukrainian
-  tutorial_processfound_language: English only
-  tutorial_tynkerhomo_language: English only
+  tutorial_processfound_language: Faqat ingliz tilida
+  tutorial_tynkerhomo_language: Faqat ingliz tilida
   tutorial_art_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
     Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
     Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
     Ukrainian and 19 more
-  tutorial_tynkerbrick_language: English only
-  tutorial_itchbio_language: English only
-  tutorial_itchj_language: English only
-  tutorial_tickleo_language: English only
-  tutorial_hopgeo_language: English only
-  tutorial_tynkermult_language: English only
+  tutorial_tynkerbrick_language: Faqat ingliz tilida
+  tutorial_itchbio_language: Faqat ingliz tilida
+  tutorial_itchj_language: Faqat ingliz tilida
+  tutorial_tickleo_language: Faqat ingliz tilida
+  tutorial_hopgeo_language: Faqat ingliz tilida
+  tutorial_tynkermult_language: Faqat ingliz tilida
   tutorial_monster_language: English, Spanish, Portuguese, Italian, French, German,
     Polish, Turkish
-  tutorial_tynkerapp_language: English only
-  tutorial_tynkerpup_language: English only
-  tutorial_livecode_language: English only
+  tutorial_tynkerapp_language: Faqat ingliz tilida
+  tutorial_tynkerpup_language: Faqat ingliz tilida
+  tutorial_livecode_language: Faqat ingliz tilida
   tutorial_cocomgame_language: English, Arabic, Bulgarian, Chinese, Croatian, Czech,
     Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean,
     Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
     Ukrainian, Vietnamese and 8 more
-  tutorial_tynkerspin_language: English only
+  tutorial_tynkerspin_language: Faqat ingliz tilida
   tutorial_code-avengers_language: English, Spanish, Dutch, Russian, Portuguese
-  tutorial_tynkercq_language: English only
-  tutorial_cmgame_language: English only
-  tutorial_codesters_language: English only
+  tutorial_tynkercq_language: Faqat ingliz tilida
+  tutorial_cmgame_language: Faqat ingliz tilida
+  tutorial_codesters_language: Faqat ingliz tilida
   tutorial_qrm_language: English, German
-  tutorial_texas-instruments_language: English only
+  tutorial_texas-instruments_language: Faqat ingliz tilida
   tutorial_cajava_language: English, Dutch, Spanish
-  tutorial_codehs_language: English, Spanish
-  tutorial_hopemo_language: English only
-  tutorial_tynkercm_language: English only
-  tutorial_codesterswintergreet_language: English, Spanish
-  tutorial_codestersc_language: English, Spanish
-  tutorial_codestersturtle_language: English, Spanish
-  tutorial_penjee_language: English only
+  tutorial_codehs_language: Inglizcha, Ispancha
+  tutorial_hopemo_language: Faqat ingliz tilida
+  tutorial_tynkercm_language: Faqat ingliz tilida
+  tutorial_codesterswintergreet_language: Inglizcha, Ispancha
+  tutorial_codestersc_language: Inglizcha, Ispancha
+  tutorial_codestersturtle_language: Inglizcha, Ispancha
+  tutorial_penjee_language: Faqat ingliz tilida
   tutorial_trinket_language: Chinese (Simplified), English, Korean, Spanish
   tutorial_frogger_language: English, Spanish, Italian, French, German, and Dutch
-  tutorial_tynkereco_language: English only
-  tutorial_mitedarc_language: English only
+  tutorial_tynkereco_language: Faqat ingliz tilida
+  tutorial_mitedarc_language: Faqat ingliz tilida
   tutorial_khan_language: Czech, English, Portuguese (Brazil), Spanish
-  tutorial_tynkerd_language: English only
-  tutorial_cdmy_language: English, Spanish
-  tutorial_codestersdance_language: English, Spanish
-  tutorial_codestersbasketball_language: English, Spanish
-  tutorial_nclkarel_language: Multiple
+  tutorial_tynkerd_language: Faqat ingliz tilida
+  tutorial_cdmy_language: Inglizcha, Ispancha
+  tutorial_codestersdance_language: Inglizcha, Ispancha
+  tutorial_codestersbasketball_language: Inglizcha, Ispancha
+  tutorial_nclkarel_language: Ko‘p tillarda
   tutorial_buildpong_language: English, Portuguese, Russian, and Spanish
-  tutorial_tynkerdrones_language: English only
-  tutorial_carla_language: English only
-  tutorial_zulama_language: English, Spanish
+  tutorial_tynkerdrones_language: Faqat ingliz tilida
+  tutorial_carla_language: Faqat ingliz tilida
+  tutorial_zulama_language: Inglizcha, Ispancha
   tutorial_capost_language: English, Dutch, Spanish, Russian
-  tutorial_marco_language: Multiple
-  tutorial_codestersflappybike_language: English, Spanish
-  tutorial_kanopong_language: English only
-  tutorial_tynkerright_language: English only
-  tutorial_touchdevelop_language: English only
-  tutorial_tynkercc_language: English only
-  tutorial_bamboo_language: English only
-  tutorial_robojav_language: English only
-  tutorial_roboba_language: Multiple
-  tutorial_knodsnake_language: English only
-  tutorial_soccharater_language: English only
-  tutorial_silent_language: Multiple
-  tutorial_robomesh_language: English only
+  tutorial_marco_language: Ko‘p tillarda
+  tutorial_codestersflappybike_language: Inglizcha, Ispancha
+  tutorial_kanopong_language: Faqat ingliz tilida
+  tutorial_tynkerright_language: Faqat ingliz tilida
+  tutorial_touchdevelop_language: Faqat ingliz tilida
+  tutorial_tynkercc_language: Faqat ingliz tilida
+  tutorial_bamboo_language: Faqat ingliz tilida
+  tutorial_robojav_language: Faqat ingliz tilida
+  tutorial_roboba_language: Ko‘p tillarda
+  tutorial_knodsnake_language: Faqat ingliz tilida
+  tutorial_soccharater_language: Faqat ingliz tilida
+  tutorial_silent_language: Ko‘p tillarda
+  tutorial_robomesh_language: Faqat ingliz tilida
   tutorial_amaze_language: English, Portuguese, Russian, and Spanish
-  tutorial_codestersds_language: English, Spanish
-  tutorial_knodtext_language: English only
-  tutorial_alicegar_language: English only
-  tutorial_codesterstransform_language: English, Spanish
-  tutorial_flexfrog_language: Multiple
-  tutorial_codemoji_language: English only
-  tutorial_robobii_language: Multiple
-  tutorial_robobm_language: Multiple
-  tutorial_codingrobots_language: Multiple
-  tutorial_robob_language: Multiple
+  tutorial_codestersds_language: Inglizcha, Ispancha
+  tutorial_knodtext_language: Faqat ingliz tilida
+  tutorial_alicegar_language: Faqat ingliz tilida
+  tutorial_codesterstransform_language: Inglizcha, Ispancha
+  tutorial_flexfrog_language: Ko‘p tillarda
+  tutorial_codemoji_language: Faqat ingliz tilida
+  tutorial_robobii_language: Ko‘p tillarda
+  tutorial_robobm_language: Ko‘p tillarda
+  tutorial_codingrobots_language: Ko‘p tillarda
+  tutorial_robob_language: Ko‘p tillarda
   tutorial_coders_language: English, French
-  tutorial_tynkerhw_language: English only
-  tutorial_tynkermh_language: English only
+  tutorial_tynkerhw_language: Faqat ingliz tilida
+  tutorial_tynkermh_language: Faqat ingliz tilida
   tutorial_caphoto_language: English, Dutch, Spanish
-  tutorial_mozillahw_language: English only
+  tutorial_mozillahw_language: Faqat ingliz tilida
   tutorial_ticklep_language: Chinese (Traditional), Danish, English, French, Japanese
   tutorial_bbot_language: Dutch, Suomi, English
-  tutorial_scratchg_language: English only
-  tutorial_roboticfriends_language: English, Spanish
-  tutorial_sjforest_language: English only
-  tutorial_sjgreet_language: English only
-  tutorial_sjsunset_language: English only
-  tutorial_fufafrenz_language: English only
-  tutorial_bbcgeo_language: English only
-  tutorial_chspixel_language: English only
-  tutorial_hummingbird_language: English only
-  tutorial_recoloring_language: English only
-  tutorial_bbcchem_language: English only
-  tutorial_floalgo_language: English only
-  tutorial_flocond_language: English only
-  tutorial_floloops_language: English only
-  tutorial_pgts_language: English only
-  tutorial_ozo_language: English only
-  tutorial_bbcla_language: English only
-  tutorial_bbcsci_language: English only
-  tutorial_tlctour_language: English only
-  tutorial_codesterstj_language: English only
-  tutorial_tlclocked_language: English only
-  tutorial_baubles_language: English only
-  tutorial_bbcart_language: English only
-  tutorial_tlcknight_language: English only
-  tutorial_fufafit_language: English only
-  tutorial_ozodance_language: English only
-  tutorial_codingrobotics_language: English only
-  tutorial_box_language: Multiple
-  tutorial_hopgame_language: English only
-  tutorial_icontrol_language: English only
-  tutorial_cocomteach_language: English only
-  tutorial_bbcmathii_language: English only
-  tutorial_bbcphys_language: English only
-  tutorial_bitsbox_language: English only
-  tutorial_tlcemo_language: English only
-  tutorial_crd_language: English only
-  tutorial_bbcbio_language: English only
+  tutorial_scratchg_language: Faqat ingliz tilida
+  tutorial_roboticfriends_language: Inglizcha, Ispancha
+  tutorial_sjforest_language: Faqat ingliz tilida
+  tutorial_sjgreet_language: Faqat ingliz tilida
+  tutorial_sjsunset_language: Faqat ingliz tilida
+  tutorial_fufafrenz_language: Faqat ingliz tilida
+  tutorial_bbcgeo_language: Faqat ingliz tilida
+  tutorial_chspixel_language: Faqat ingliz tilida
+  tutorial_hummingbird_language: Faqat ingliz tilida
+  tutorial_recoloring_language: Faqat ingliz tilida
+  tutorial_bbcchem_language: Faqat ingliz tilida
+  tutorial_floalgo_language: Faqat ingliz tilida
+  tutorial_flocond_language: Faqat ingliz tilida
+  tutorial_floloops_language: Faqat ingliz tilida
+  tutorial_pgts_language: Faqat ingliz tilida
+  tutorial_ozo_language: Faqat ingliz tilida
+  tutorial_bbcla_language: Faqat ingliz tilida
+  tutorial_bbcsci_language: Faqat ingliz tilida
+  tutorial_tlctour_language: Faqat ingliz tilida
+  tutorial_codesterstj_language: Faqat ingliz tilida
+  tutorial_tlclocked_language: Faqat ingliz tilida
+  tutorial_baubles_language: Faqat ingliz tilida
+  tutorial_bbcart_language: Faqat ingliz tilida
+  tutorial_tlcknight_language: Faqat ingliz tilida
+  tutorial_fufafit_language: Faqat ingliz tilida
+  tutorial_ozodance_language: Faqat ingliz tilida
+  tutorial_codingrobotics_language: Faqat ingliz tilida
+  tutorial_box_language: Ko‘p tillarda
+  tutorial_hopgame_language: Faqat ingliz tilida
+  tutorial_icontrol_language: Faqat ingliz tilida
+  tutorial_cocomteach_language: Faqat ingliz tilida
+  tutorial_bbcmathii_language: Faqat ingliz tilida
+  tutorial_bbcphys_language: Faqat ingliz tilida
+  tutorial_bitsbox_language: Faqat ingliz tilida
+  tutorial_tlcemo_language: Faqat ingliz tilida
+  tutorial_crd_language: Faqat ingliz tilida
+  tutorial_bbcbio_language: Faqat ingliz tilida
   tutorial_ticklebb8_language: Chinese (Traditional), Danish, Dutch, English, French
-  tutorial_grok_language: English only
-  tutorial_ijournalist_language: English only
-  tutorial_bbcmusic_language: English only
-  tutorial_secretcodes_language: English only
-  tutorial_tlchex_language: English only
-  tutorial_tickles_language: Multiple
-  tutorial_ozogame_language: English only
-  tutorial_vidcodeio_language: English only
-  tutorial_besttech_language: English only
-  tutorial_tlcbrain_language: English only
-  tutorial_hopquiz_language: English only
-  tutorial_unfortunate_language: English only
-  tutorial_cha_language: English only
-  tutorial_elaseq_language: English only
-  tutorial_bbcmathi_language: English only
-  tutorial_tlcpixel_language: English only
-  tutorial_arduino_language: English only
-  tutorial_introrobo_language: English only
-  tutorial_tlcinvis_language: English only
-  tutorial_tlcjflap_language: English only
-  tutorial_procolor_language: English only
-  tutorial_spiralsfinch_language: English only
-  tutorial_ozoi_language: English only
-  tutorial_ticklel_language: Multiple
-  tutorial_spiralsdash_language: English only
-  tutorial_ghdebug_language: English only
-  tutorial_tlckk_language: English only
-  tutorial_firstcomp_language: English only
-  tutorial_mazefinch_language: English only
-  tutorial_tlccc_language: English only
-  tutorial_tlcdoodle_language: English only
-  tutorial_tlcpunch_language: English only
-  tutorial_finchfract_language: English only
-  tutorial_tlcmind_language: English only
-  tutorial_tlctelebot_language: English only
-  tutorial_tlcaus_language: English only
-  tutorial_oralhist_language: English only
-  tutorial_tlcmicro_language: English only
-  tutorial_imathematician_language: English only
-  tutorial_tlcmagic_language: English only
+  tutorial_grok_language: Faqat ingliz tilida
+  tutorial_ijournalist_language: Faqat ingliz tilida
+  tutorial_bbcmusic_language: Faqat ingliz tilida
+  tutorial_secretcodes_language: Faqat ingliz tilida
+  tutorial_tlchex_language: Faqat ingliz tilida
+  tutorial_tickles_language: Ko‘p tillarda
+  tutorial_ozogame_language: Faqat ingliz tilida
+  tutorial_vidcodeio_language: Faqat ingliz tilida
+  tutorial_besttech_language: Faqat ingliz tilida
+  tutorial_tlcbrain_language: Faqat ingliz tilida
+  tutorial_hopquiz_language: Faqat ingliz tilida
+  tutorial_unfortunate_language: Faqat ingliz tilida
+  tutorial_cha_language: Faqat ingliz tilida
+  tutorial_elaseq_language: Faqat ingliz tilida
+  tutorial_bbcmathi_language: Faqat ingliz tilida
+  tutorial_tlcpixel_language: Faqat ingliz tilida
+  tutorial_arduino_language: Faqat ingliz tilida
+  tutorial_introrobo_language: Faqat ingliz tilida
+  tutorial_tlcinvis_language: Faqat ingliz tilida
+  tutorial_tlcjflap_language: Faqat ingliz tilida
+  tutorial_procolor_language: Faqat ingliz tilida
+  tutorial_spiralsfinch_language: Faqat ingliz tilida
+  tutorial_ozoi_language: Faqat ingliz tilida
+  tutorial_ticklel_language: Ko‘p tillarda
+  tutorial_spiralsdash_language: Faqat ingliz tilida
+  tutorial_ghdebug_language: Faqat ingliz tilida
+  tutorial_tlckk_language: Faqat ingliz tilida
+  tutorial_firstcomp_language: Faqat ingliz tilida
+  tutorial_mazefinch_language: Faqat ingliz tilida
+  tutorial_tlccc_language: Faqat ingliz tilida
+  tutorial_tlcdoodle_language: Faqat ingliz tilida
+  tutorial_tlcpunch_language: Faqat ingliz tilida
+  tutorial_finchfract_language: Faqat ingliz tilida
+  tutorial_tlcmind_language: Faqat ingliz tilida
+  tutorial_tlctelebot_language: Faqat ingliz tilida
+  tutorial_tlcaus_language: Faqat ingliz tilida
+  tutorial_oralhist_language: Faqat ingliz tilida
+  tutorial_tlcmicro_language: Faqat ingliz tilida
+  tutorial_imathematician_language: Faqat ingliz tilida
+  tutorial_tlcmagic_language: Faqat ingliz tilida
   tutorial_scratchmus_language: English, Catalan, German, Italian, Norwegian, Portuguese,
     Spanish
   tutorial_scratchanim_language: English, French, German, Italian, Norwegian, Portuguese,
     Spanish
   tutorial_scratchfly_language: English, Catalan, Italian, Norwegian, Portuguese
-  tutorial_tynkerarc_language: English only
-  tutorial_grokffpython_language: English only
-  tutorial_grokffblock_language: English only
-  tutorial_grokeliza_language: English only
-  tutorial_tynkercan_language: English only
-  tutorial_grokflags_language: English only
+  tutorial_tynkerarc_language: Faqat ingliz tilida
+  tutorial_grokffpython_language: Faqat ingliz tilida
+  tutorial_grokffblock_language: Faqat ingliz tilida
+  tutorial_grokeliza_language: Faqat ingliz tilida
+  tutorial_tynkercan_language: Faqat ingliz tilida
+  tutorial_grokflags_language: Faqat ingliz tilida
   tutorial_robomind_language: English, Dutch
-  tutorial_scratchanimwork_language: English only
+  tutorial_scratchanimwork_language: Faqat ingliz tilida
   tutorial_adventureq_language: Chinese (Simplified), English
-  tutorial_khan-es_language: Spanish
+  tutorial_khan-es_language: Ispancha
   tutorial_kpt_language: Portuguese
   tutorial_kpl_language: Polish
   tutorial_khe_language: Hebrew
   tutorial_kfr_language: French
-  tutorial_app-inventor_language: English only
+  tutorial_app-inventor_language: Faqat ingliz tilida
   tutorial_bits_language: English, German
   tutorial_blockly_language: English, Spanish, French, 40 others
-  tutorial_tynker_language: English only
+  tutorial_tynker_language: Faqat ingliz tilida
   tutorial_baypt_language: Portuguese
-  tutorial_code-combat_language: Multiple
-  tutorial_mky_language: Multiple
-  tutorial_spellcraft_language: English only
+  tutorial_code-combat_language: Ko‘p tillarda
+  tutorial_mky_language: Ko‘p tillarda
+  tutorial_spellcraft_language: Faqat ingliz tilida
   tutorial_pirates_language: English, Danish, German
-  tutorial_csfirst_language: English only
-  tutorial_loopedy_language: English only
-  tutorial_dsw_language: English, Spanish
-  tutorial_dswb_language: English, Spanish
-  tutorial_ssw_language: English, Spanish
-  tutorial_sswb_language: English, Spanish
-  tutorial_kodable-unplugged_language: English only
-  tutorial_scratch_language: English only
-  tutorial_bayes_language: Spanish
+  tutorial_csfirst_language: Faqat ingliz tilida
+  tutorial_loopedy_language: Faqat ingliz tilida
+  tutorial_dsw_language: Inglizcha, Ispancha
+  tutorial_dswb_language: Inglizcha, Ispancha
+  tutorial_ssw_language: Inglizcha, Ispancha
+  tutorial_sswb_language: Inglizcha, Ispancha
+  tutorial_kodable-unplugged_language: Faqat ingliz tilida
+  tutorial_scratch_language: Faqat ingliz tilida
+  tutorial_bayes_language: Ispancha
   tutorial_gumball_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish,
     Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
     Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
     Turkish, Ukrainian and 19 more
-  tutorial_hrm_language: Multiple
+  tutorial_hrm_language: Ko‘p tillarda
   tutorial_ice-age_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish,
     Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese,
     Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish,
     Turkish, Ukrainian and 19 more
-  tutorial_koapp_language: Multiple
+  tutorial_koapp_language: Ko‘p tillarda
   tutorial_lightbot-intl_language: French, Russian, Brazilian Portuguese
-  tutorial_rmc_language: Russian
-  tutorial_smc_language: English, Spanish
-  tutorial_minecraft-2016_language: Multiple
-  tutorial_thinkersmith-es_language: Spanish
-  tutorial_pixie_language: Spanish
+  tutorial_rmc_language: Ruscha
+  tutorial_smc_language: Inglizcha, Ispancha
+  tutorial_minecraft-2016_language: Ko‘p tillarda
+  tutorial_thinkersmith-es_language: Ispancha
+  tutorial_pixie_language: Ispancha
   tutorial_play_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
     Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
     Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
     Ukrainian and 19 more
   tutorial_robomind-nl_language: Dutch
-  tutorial_spheroi_language: English only
-  tutorial_spherol_language: English only
-  tutorial_spherov_language: English only
+  tutorial_spheroi_language: Faqat ingliz tilida
+  tutorial_spherol_language: Faqat ingliz tilida
+  tutorial_spherov_language: Faqat ingliz tilida
   tutorial_swb_language: English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch,
     Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean,
     Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
@@ -6003,202 +6023,202 @@ uz:
     Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian,
     Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish,
     Swedish, Turkish, Ukrainian and 19 more
-  tutorial_alicesims_language: English only
-  tutorial_tchr_language: English only
-  tutorial_robogame_language: English only
-  tutorial_tap_language: English only
+  tutorial_alicesims_language: Faqat ingliz tilida
+  tutorial_tchr_language: Faqat ingliz tilida
+  tutorial_robogame_language: Faqat ingliz tilida
+  tutorial_tap_language: Faqat ingliz tilida
   tutorial_cintl_language: Azerbaijani, Serbian
-  tutorial_itchstop_language: English only
-  tutorial_tynkerpn_language: English only
-  tutorial_tynkerpd_language: English only
-  tutorial_persistence_language: English only
-  tutorial_getloopy_language: English only
-  tutorial_createface_language: English only
-  tutorial_happymaps_language: English only
-  tutorial_moveit_language: English only
-  tutorial_bigevent_language: English only
-  tutorial_gpp_language: English only
+  tutorial_itchstop_language: Faqat ingliz tilida
+  tutorial_tynkerpn_language: Faqat ingliz tilida
+  tutorial_tynkerpd_language: Faqat ingliz tilida
+  tutorial_persistence_language: Faqat ingliz tilida
+  tutorial_getloopy_language: Faqat ingliz tilida
+  tutorial_createface_language: Faqat ingliz tilida
+  tutorial_happymaps_language: Faqat ingliz tilida
+  tutorial_moveit_language: Faqat ingliz tilida
+  tutorial_bigevent_language: Faqat ingliz tilida
+  tutorial_gpp_language: Faqat ingliz tilida
   tutorial_foosgame_language: English, Arabic, German, Spanish, French, Japanese,
     Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional
     Chinese, Simplified Chinese, Greek, Italian, Polish
-  tutorial_solopython_language: English only
-  tutorial_kodableint_language: English only
-  tutorial_kodableadv_language: English only
-  tutorial_tynkertj_language: English only
-  tutorial_wolframa_language: English only
-  tutorial_wolframm_language: English only
-  tutorial_wolframspi_language: English only
-  tutorial_wolframsph_language: English only
-  tutorial_wolframp_language: English only
-  tutorial_wolframn_language: English only
-  tutorial_soloweb_language: English only
+  tutorial_solopython_language: Faqat ingliz tilida
+  tutorial_kodableint_language: Faqat ingliz tilida
+  tutorial_kodableadv_language: Faqat ingliz tilida
+  tutorial_tynkertj_language: Faqat ingliz tilida
+  tutorial_wolframa_language: Faqat ingliz tilida
+  tutorial_wolframm_language: Faqat ingliz tilida
+  tutorial_wolframspi_language: Faqat ingliz tilida
+  tutorial_wolframsph_language: Faqat ingliz tilida
+  tutorial_wolframp_language: Faqat ingliz tilida
+  tutorial_wolframn_language: Faqat ingliz tilida
+  tutorial_soloweb_language: Faqat ingliz tilida
   tutorial_khanweb_language: Czech, English, Portuguese (Brazil), Spanish
   tutorial_khandata_language: Czech, English, Portuguese (Brazil), Spanish
-  tutorial_robomeshiq_language: English only
-  tutorial_googlelogo_language: English only
-  tutorial_playtune_language: English only
+  tutorial_robomeshiq_language: Faqat ingliz tilida
+  tutorial_googlelogo_language: Faqat ingliz tilida
+  tutorial_playtune_language: Faqat ingliz tilida
   tutorial_computeit_language: English, French, German, Indonesian, Italian, Portuguese,
     Romanian, Spanish
   tutorial_codesterssj_language: English, Chinese (Traditional), Spanish
-  tutorial_cmchat_language: English only
+  tutorial_cmchat_language: Faqat ingliz tilida
   tutorial_tynkerdb_language: Chinese (Simplified), English, French, German, Japanese,
     Spanish
   tutorial_cmbuild_language: Chinese (Simplified), English, Hebrew, Japanese
-  tutorial_robotrattle_language: English only
+  tutorial_robotrattle_language: Faqat ingliz tilida
   tutorial_codestersh_language: Chinese (Traditional), English, Spanish
-  tutorial_codehsdigipixel_language: English only
-  tutorial_ccbinary_language: English only
-  tutorial_codehsturtle_language: English only
-  tutorial_grokhd_language: English only
-  tutorial_grokem_language: English only
-  tutorial_kodmaze_language: English only
+  tutorial_codehsdigipixel_language: Faqat ingliz tilida
+  tutorial_ccbinary_language: Faqat ingliz tilida
+  tutorial_codehsturtle_language: Faqat ingliz tilida
+  tutorial_grokhd_language: Faqat ingliz tilida
+  tutorial_grokem_language: Faqat ingliz tilida
+  tutorial_kodmaze_language: Faqat ingliz tilida
   tutorial_codestersa_language: Chinese (Traditional), English, Spanish
   tutorial_cmdodo_language: English, Hebrew
   tutorial_tynkerspace_language: Chinese (Simplified), English, French, German, Japanese,
     Spanish
-  tutorial_gfbloons_language: English only
-  tutorial_raspipong_language: English only
-  tutorial_codehsvr_language: English only
+  tutorial_gfbloons_language: Faqat ingliz tilida
+  tutorial_raspipong_language: Faqat ingliz tilida
+  tutorial_codehsvr_language: Faqat ingliz tilida
   tutorial_codesterstp_language: Chinese (Simplified), English, Spanish
   tutorial_codestersbb_language: Chinese (Traditional), English, Spanish
-  tutorial_gfcrossyroad_language: English only
-  tutorial_googleww_language: English only
-  tutorial_codehsjsapp_language: English only
-  tutorial_gfmihi_language: English only
-  tutorial_hopdropphone_language: English only
-  tutorial_techfaa_language: English only
-  tutorial_codehsjsgraph_language: English only
-  tutorial_thunkable_language: Multiple
-  tutorial_hopcrossyroad_language: English only
-  tutorial_switchglitch_language: English only
-  tutorial_codecar_language: English only
+  tutorial_gfcrossyroad_language: Faqat ingliz tilida
+  tutorial_googleww_language: Faqat ingliz tilida
+  tutorial_codehsjsapp_language: Faqat ingliz tilida
+  tutorial_gfmihi_language: Faqat ingliz tilida
+  tutorial_hopdropphone_language: Faqat ingliz tilida
+  tutorial_techfaa_language: Faqat ingliz tilida
+  tutorial_codehsjsgraph_language: Faqat ingliz tilida
+  tutorial_thunkable_language: Ko‘p tillarda
+  tutorial_hopcrossyroad_language: Faqat ingliz tilida
+  tutorial_switchglitch_language: Faqat ingliz tilida
+  tutorial_codecar_language: Faqat ingliz tilida
   tutorial_codesterscp_language: Chinese (Traditional), English, Spanish
-  tutorial_grokpetblock_language: English only
-  tutorial_techbim_language: English only
-  tutorial_techfpp_language: English only
+  tutorial_grokpetblock_language: Faqat ingliz tilida
+  tutorial_techbim_language: Faqat ingliz tilida
+  tutorial_techfpp_language: Faqat ingliz tilida
   tutorial_codesterscr_language: Chinese (Traditional), English, Spanish
-  tutorial_grokdisease_language: English only
-  tutorial_techec_language: English only
-  tutorial_rgbegin_language: English only
-  tutorial_myradream_language: English only
-  tutorial_thinkfun_language: English only
-  tutorial_hopfireworks_language: English only
-  tutorial_grokspace_language: English only
-  tutorial_codehspython_language: English only
-  tutorial_codehsjava_language: English only
-  tutorial_techioda_language: English only
-  tutorial_grokmonster_language: English only
-  tutorial_techmjs_language: English only
-  tutorial_techga_language: English only
-  tutorial_techioan_language: English only
-  tutorial_techiogsr_language: English only
-  tutorial_groktunnel_language: English only
-  tutorial_stemcod_language: English only
-  tutorial_techikb_language: English only
-  tutorial_kanostreet_language: English only
-  tutorial_nyblebot_language: English only
-  tutorial_codemojijs_language: English only
-  tutorial_techapf_language: English only
-  tutorial_techfpjs_language: English only
-  tutorial_techlinq_language: English only
-  tutorial_gpbcatapult_language: English only
-  tutorial_quorumastro_language: English only
-  tutorial_alicewonder_language: English only
-  tutorial_rginter_language: English only
-  tutorial_cssgrid_language: Multiple
+  tutorial_grokdisease_language: Faqat ingliz tilida
+  tutorial_techec_language: Faqat ingliz tilida
+  tutorial_rgbegin_language: Faqat ingliz tilida
+  tutorial_myradream_language: Faqat ingliz tilida
+  tutorial_thinkfun_language: Faqat ingliz tilida
+  tutorial_hopfireworks_language: Faqat ingliz tilida
+  tutorial_grokspace_language: Faqat ingliz tilida
+  tutorial_codehspython_language: Faqat ingliz tilida
+  tutorial_codehsjava_language: Faqat ingliz tilida
+  tutorial_techioda_language: Faqat ingliz tilida
+  tutorial_grokmonster_language: Faqat ingliz tilida
+  tutorial_techmjs_language: Faqat ingliz tilida
+  tutorial_techga_language: Faqat ingliz tilida
+  tutorial_techioan_language: Faqat ingliz tilida
+  tutorial_techiogsr_language: Faqat ingliz tilida
+  tutorial_groktunnel_language: Faqat ingliz tilida
+  tutorial_stemcod_language: Faqat ingliz tilida
+  tutorial_techikb_language: Faqat ingliz tilida
+  tutorial_kanostreet_language: Faqat ingliz tilida
+  tutorial_nyblebot_language: Faqat ingliz tilida
+  tutorial_codemojijs_language: Faqat ingliz tilida
+  tutorial_techapf_language: Faqat ingliz tilida
+  tutorial_techfpjs_language: Faqat ingliz tilida
+  tutorial_techlinq_language: Faqat ingliz tilida
+  tutorial_gpbcatapult_language: Faqat ingliz tilida
+  tutorial_quorumastro_language: Faqat ingliz tilida
+  tutorial_alicewonder_language: Faqat ingliz tilida
+  tutorial_rginter_language: Faqat ingliz tilida
+  tutorial_cssgrid_language: Ko‘p tillarda
   tutorial_jshero_language: English, German
-  tutorial_codemojipy_language: English only
-  tutorial_nclabdrone_language: English only
-  tutorial_gpbcircle_language: English only
-  tutorial_gpbpaint_language: English only
-  tutorial_cocomarcade_language: Multiple
-  tutorial_techcpp_language: English only
-  tutorial_beetik_language: English, Spanish
+  tutorial_codemojipy_language: Faqat ingliz tilida
+  tutorial_nclabdrone_language: Faqat ingliz tilida
+  tutorial_gpbcircle_language: Faqat ingliz tilida
+  tutorial_gpbpaint_language: Faqat ingliz tilida
+  tutorial_cocomarcade_language: Ko‘p tillarda
+  tutorial_techcpp_language: Faqat ingliz tilida
+  tutorial_beetik_language: Inglizcha, Ispancha
   tutorial_codedj_language: English, French
-  tutorial_rgadvan_language: English only
-  tutorial_codehsrn_language: English only
-  tutorial_codehswd_language: English only
-  tutorial_turtlerobot_language: English only
-  tutorial_ozoevo_language: English only
-  tutorial_ozoexped_language: English only
-  tutorial_ozojourney_language: English only
-  tutorial_ozocodes_language: English only
-  tutorial_ozoeclipse_language: English only
-  tutorial_ozosimulator_language: English only
-  tutorial_ozoalgorithm_language: English only
-  tutorial_ozotimer_language: English only
-  tutorial_ozohabits_language: English only
-  tutorial_ozoprogram_language: English only
-  tutorial_ozopair_language: English only
+  tutorial_rgadvan_language: Faqat ingliz tilida
+  tutorial_codehsrn_language: Faqat ingliz tilida
+  tutorial_codehswd_language: Faqat ingliz tilida
+  tutorial_turtlerobot_language: Faqat ingliz tilida
+  tutorial_ozoevo_language: Faqat ingliz tilida
+  tutorial_ozoexped_language: Faqat ingliz tilida
+  tutorial_ozojourney_language: Faqat ingliz tilida
+  tutorial_ozocodes_language: Faqat ingliz tilida
+  tutorial_ozoeclipse_language: Faqat ingliz tilida
+  tutorial_ozosimulator_language: Faqat ingliz tilida
+  tutorial_ozoalgorithm_language: Faqat ingliz tilida
+  tutorial_ozotimer_language: Faqat ingliz tilida
+  tutorial_ozohabits_language: Faqat ingliz tilida
+  tutorial_ozoprogram_language: Faqat ingliz tilida
+  tutorial_ozopair_language: Faqat ingliz tilida
   tutorial_codesnoopy_language: English, Chinese, Dutch, French, German, Italian,
     Korean, Malay, Portuguese, Spanish, Swedish, Thai
-  tutorial_applabintro_language: English only
-  tutorial_cslartist_language: English only
-  tutorial_cslscratchjr_language: English only
-  tutorial_floevents_language: English only
-  tutorial_florobot_language: English only
-  tutorial_isavesanta_language: English only
-  tutorial_iorder_language: English only
-  tutorial_ianimate_language: English only
-  tutorial_iloveada_language: English only
-  tutorial_kodflash_language: English only
-  tutorial_kodchoose_language: English only
-  tutorial_kodpizzapre_language: English only
-  tutorial_kodpizza_language: English only
-  tutorial_kodwomen_language: English only
-  tutorial_tfunplug_language: English only
-  tutorial_lbvariables_language: English only
-  tutorial_lbfunctions_language: English only
-  tutorial_lblogic_language: English only
-  tutorial_lbworld_language: English only
-  tutorial_lbloops_language: English only
-  tutorial_lbtug_language: English only
-  tutorial_lbpotato_language: English only
-  tutorial_lbguitar_language: English only
-  tutorial_lbio_language: English only
-  tutorial_wonpuppy_language: English only
-  tutorial_woncue_language: English only
-  tutorial_wonzoo_language: English only
-  tutorial_wontrip_language: English only
-  tutorial_woncollect_language: English only
-  tutorial_wonsecret_language: English only
-  tutorial_hsscience_language: English only
-  tutorial_popculture_language: English only
-  tutorial_legorobust_language: English only
-  tutorial_legoplants_language: English only
-  tutorial_legopark_language: English only
-  tutorial_legodetect_language: English only
-  tutorial_legolight_language: English only
-  tutorial_alexa_language: English only
-  tutorial_grokpetmicro_language: English only
-  tutorial_pirateplunder_language: English only
-  tutorial_cadj_language: English only
-  tutorial_cacrazy_language: English only
-  tutorial_cajump_language: English only
-  tutorial_carest_language: English only
+  tutorial_applabintro_language: Faqat ingliz tilida
+  tutorial_cslartist_language: Faqat ingliz tilida
+  tutorial_cslscratchjr_language: Faqat ingliz tilida
+  tutorial_floevents_language: Faqat ingliz tilida
+  tutorial_florobot_language: Faqat ingliz tilida
+  tutorial_isavesanta_language: Faqat ingliz tilida
+  tutorial_iorder_language: Faqat ingliz tilida
+  tutorial_ianimate_language: Faqat ingliz tilida
+  tutorial_iloveada_language: Faqat ingliz tilida
+  tutorial_kodflash_language: Faqat ingliz tilida
+  tutorial_kodchoose_language: Faqat ingliz tilida
+  tutorial_kodpizzapre_language: Faqat ingliz tilida
+  tutorial_kodpizza_language: Faqat ingliz tilida
+  tutorial_kodwomen_language: Faqat ingliz tilida
+  tutorial_tfunplug_language: Faqat ingliz tilida
+  tutorial_lbvariables_language: Faqat ingliz tilida
+  tutorial_lbfunctions_language: Faqat ingliz tilida
+  tutorial_lblogic_language: Faqat ingliz tilida
+  tutorial_lbworld_language: Faqat ingliz tilida
+  tutorial_lbloops_language: Faqat ingliz tilida
+  tutorial_lbtug_language: Faqat ingliz tilida
+  tutorial_lbpotato_language: Faqat ingliz tilida
+  tutorial_lbguitar_language: Faqat ingliz tilida
+  tutorial_lbio_language: Faqat ingliz tilida
+  tutorial_wonpuppy_language: Faqat ingliz tilida
+  tutorial_woncue_language: Faqat ingliz tilida
+  tutorial_wonzoo_language: Faqat ingliz tilida
+  tutorial_wontrip_language: Faqat ingliz tilida
+  tutorial_woncollect_language: Faqat ingliz tilida
+  tutorial_wonsecret_language: Faqat ingliz tilida
+  tutorial_hsscience_language: Faqat ingliz tilida
+  tutorial_popculture_language: Faqat ingliz tilida
+  tutorial_legorobust_language: Faqat ingliz tilida
+  tutorial_legoplants_language: Faqat ingliz tilida
+  tutorial_legopark_language: Faqat ingliz tilida
+  tutorial_legodetect_language: Faqat ingliz tilida
+  tutorial_legolight_language: Faqat ingliz tilida
+  tutorial_alexa_language: Faqat ingliz tilida
+  tutorial_grokpetmicro_language: Faqat ingliz tilida
+  tutorial_pirateplunder_language: Faqat ingliz tilida
+  tutorial_cadj_language: Faqat ingliz tilida
+  tutorial_cacrazy_language: Faqat ingliz tilida
+  tutorial_cajump_language: Faqat ingliz tilida
+  tutorial_carest_language: Faqat ingliz tilida
   tutorial_accai_language: English, French, Italian, and Dutch
-  tutorial_vceclipse_language: English only
-  tutorial_pmzero_language: English only
-  tutorial_hsela_language: English only
-  tutorial_ticklear_language: English only
+  tutorial_vceclipse_language: Faqat ingliz tilida
+  tutorial_pmzero_language: Faqat ingliz tilida
+  tutorial_hsela_language: Faqat ingliz tilida
+  tutorial_ticklear_language: Faqat ingliz tilida
   tutorial_bcrobot_language: Chinese, English, French, German, Norwegian, Slovenian,
     Spanish
   tutorial_bcsnow_language: Chinese, English, French, German, Norwegian, Slovenian,
     Spanish
-  tutorial_ifly_language: English only
-  tutorial_idowedo_language: English only
-  tutorial_diggindwarf_language: English only
-  tutorial_rmedr_language: English only
-  tutorial_spheroit_language: English only
+  tutorial_ifly_language: Faqat ingliz tilida
+  tutorial_idowedo_language: Faqat ingliz tilida
+  tutorial_diggindwarf_language: Faqat ingliz tilida
+  tutorial_rmedr_language: Faqat ingliz tilida
+  tutorial_spheroit_language: Faqat ingliz tilida
   tutorial_gameofcodes_language: English, Portuguese, Russian, and Spanish
   tutorial_blocklygames_language: English, Spanish, French, 40 others
-  tutorial_spherohello_language: English only
+  tutorial_spherohello_language: Faqat ingliz tilida
   tutorial_spheroarcade_language: Chinese (Simplified), English, French, German, Japanese,
     Spanish
-  tutorial_bcpy1_language: English only
-  tutorial_bcpy2_language: English only
-  tutorial_bcjs1_language: English only
-  tutorial_bcjs2_language: English only
+  tutorial_bcpy1_language: Faqat ingliz tilida
+  tutorial_bcpy2_language: Faqat ingliz tilida
+  tutorial_bcjs1_language: Faqat ingliz tilida
+  tutorial_bcjs2_language: Faqat ingliz tilida
   tutorial_3dbearmars_language: Ingliz
   tutorial_alexaskill_language: Ingliz
   tutorial_bitsboxyak_language: Ingliz
@@ -6312,8 +6332,8 @@ uz:
   tutorial_rgtech_language: Ingliz
   tutorial_robotmagic3d_language: Ingliz
   tutorial_robotmagicflappy_language: Ingliz
-  tutorial_scratchadventure_language: English, Spanish
-  tutorial_scratchtalk_language: English, Spanish
+  tutorial_scratchadventure_language: Inglizcha, Ispancha
+  tutorial_scratchtalk_language: Inglizcha, Ispancha
   tutorial_scratchjrstory_language: Ingliz
   tutorial_scratchjrtwinkle_language: Ingliz
   tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
@@ -6360,7 +6380,7 @@ uz:
   tutorial_pets_language: Ingliz
   tutorial_petvet_language: Ingliz
   tutorial_superhero_language: Ingliz
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: Ingliz
   tutorial_vidcodetypeface_language: Ingliz
   tutorial_washustorm_language: Ingliz
   tutorial_activitypackets_language: Ingliz
@@ -6381,26 +6401,27 @@ uz:
   tutorial_vidcodedate_language: Ingliz
   tutorial_codemonkeyspace_language: English, English (UK), Hebrew
   tutorial_codespeakhappy_language: Ingliz
-  tutorial_grokimage_language: English, English (UK)
+  tutorial_grokimage_language: Ingliz, Ingliz (UK)
   tutorial_icomputelearn_language: Ingliz
   tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
     (Mexico)
   tutorial_bsdcause_language: Ingliz
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Ingliz
   tutorial_tttractor_language: Ingliz
   tutorial_codeillusionmickey_language: Ingliz
   tutorial_scigirlsquest_language: Ingliz
   tutorial_codespeakbreathe_language: Ingliz
   tutorial_vidcodeface_language: Ingliz
-  tutorial_educodemaze_language: English, English (UK)
-  tutorial_educoderace_language: English, English (UK)
+  tutorial_educodemaze_language: Ingliz, Ingliz (UK)
+  tutorial_educoderace_language: Ingliz, Ingliz (UK)
   tutorial_codespeakchatbot_language: Ingliz
   tutorial_gamefrootgames_language: Ingliz
   tutorial_codespeakgrandparent_language: Ingliz
-  tutorial_educodekingdom_language: English, English (UK)
+  tutorial_educodekingdom_language: Ingliz, Ingliz (UK)
   tutorial_codehsdata_language: Ingliz
-  tutorial_educodecake_language: English, English (UK)
+  tutorial_educodecake_language: Ingliz, Ingliz (UK)
   tutorial_ttsecond_language: Ingliz
   tutorial_bsdtrivia_language: Ingliz
   tutorial_csfirstdialogue_language: English, Spanish (Mexico)
@@ -6409,6 +6430,7 @@ uz:
   tutorial_codestersdistance_language: Ingliz
   tutorial_itchspace_language: Ingliz
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Ingliz
   tutorial_itchfish_language: Ingliz
   tutorial_bsdwebsite_language: Ingliz
@@ -6416,13 +6438,14 @@ uz:
   tutorial_itchwebcam_language: Ingliz
   tutorial_itchball_language: Ingliz
   tutorial_ttrace_language: Ingliz
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
-  tutorial_educodesecret_language: English, English (UK)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
+  tutorial_educodesecret_language: Ingliz, Ingliz (UK)
   tutorial_itchshapes_language: Ingliz
   tutorial_codeguppytext_language: Ingliz
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: Ingliz
-  tutorial_educodebasics_language: English, English (UK)
+  tutorial_educodebasics_language: Ingliz, Ingliz (UK)
   tutorial_codehsdesign_language: Ingliz
   tutorial_htmlacademyphp_language: Ingliz
   tutorial_gamefrootdistance_language: Ingliz
@@ -6438,45 +6461,45 @@ uz:
   tutorial_thunkablemask_language: Ingliz
   tutorial_cafarming_language: Ingliz
   tutorial_blocksmithyeti_language: Ingliz
-  tutorial_codecapture_language: English, English (UK)
-  tutorial_codehslitter_language: English, English (UK)
+  tutorial_codecapture_language: Ingliz, Ingliz (UK)
+  tutorial_codehslitter_language: Ingliz, Ingliz (UK)
   tutorial_bsdocean_language: Ingliz
   tutorial_itchplatformer_language: Ingliz
-  tutorial_codejika_language: English, English (UK)
+  tutorial_codejika_language: Ingliz, Ingliz (UK)
   tutorial_gamefrootclicker_language: Ingliz
-  tutorial_rmagicequity_language: English, English (UK)
+  tutorial_rmagicequity_language: Ingliz, Ingliz (UK)
   tutorial_ttfreestyle_language: Ingliz
   tutorial_ozobotcolor2_language: Ingliz
   tutorial_ozobotcolor3_language: Ingliz
-  tutorial_clcarbon_language: English, English (UK)
+  tutorial_clcarbon_language: Ingliz, Ingliz (UK)
   tutorial_kodablebasics_language: Ingliz
   tutorial_scigirlscc_language: English, Spanish (Mexico)
   tutorial_irobotpicture_language: Ingliz
   tutorial_kcjmyself_language: English, French
   tutorial_nearpodalgorithms_language: Ingliz
-  tutorial_kibodrop_language: English, English (UK)
+  tutorial_kibodrop_language: Ingliz, Ingliz (UK)
   tutorial_ozobotcolor1_language: Ingliz
   tutorial_scigirlspixels_language: English, Spanish (Mexico)
   tutorial_kcjheroines_language: English, French
   tutorial_ozobotvalue_language: Ingliz
   tutorial_icodebytes_language: Ingliz
-  tutorial_clfashion2_language: English, English (UK)
+  tutorial_clfashion2_language: Ingliz, Ingliz (UK)
   tutorial_ai4all_language: Ingliz
-  tutorial_cldata_language: English, English (UK)
+  tutorial_cldata_language: Ingliz, Ingliz (UK)
   tutorial_spheroinputs_language: Ingliz
   tutorial_edisoncount_language: Ingliz
   tutorial_spheroloops_language: Ingliz
-  tutorial_kiboprogram_language: English, English (UK)
-  tutorial_hellorubycsin60_language: English, English (UK)
-  tutorial_clfashion1_language: English, English (UK)
+  tutorial_kiboprogram_language: Ingliz, Ingliz (UK)
+  tutorial_hellorubycsin60_language: Ingliz, Ingliz (UK)
+  tutorial_clfashion1_language: Ingliz, Ingliz (UK)
   tutorial_irobottraffic_language: Ingliz
   tutorial_edisonmystery_language: Ingliz
-  tutorial_microbitseaturtles_language: English, English (UK)
+  tutorial_microbitseaturtles_language: Ingliz, Ingliz (UK)
   tutorial_ozobotknow_language: Ingliz
-  tutorial_imagilabs_language: English, English (UK)
+  tutorial_imagilabs_language: Ingliz, Ingliz (UK)
   tutorial_irobotsimulator_language: Ingliz
-  tutorial_irobotkind_language: English, English (UK)
-  tutorial_firiavirtual_language: English, English (UK)
+  tutorial_irobotkind_language: Ingliz, Ingliz (UK)
+  tutorial_firiavirtual_language: Ingliz, Ingliz (UK)
   tutorial_irobotguesscode_language: Ingliz
   tutorial_ozobotnouns_language: Ingliz
   tutorial_nasa3d_language: Ingliz
@@ -6489,13 +6512,13 @@ uz:
   tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
     Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
     Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
-  tutorial_irobotphone_language: English, English (UK)
-  tutorial_codeguppydraw_language: English, English (UK)
+  tutorial_irobotphone_language: Ingliz, Ingliz (UK)
+  tutorial_codeguppydraw_language: Ingliz, Ingliz (UK)
   tutorial_codejumper_language: Ingliz
   tutorial_meeempathy_language: Ingliz
   tutorial_dance2019_string_detail_grades: Grades 2+
   tutorial_danceparty_string_detail_grades: Grades 2+
-  tutorial_chibitronics_string_detail_grades: Grades 2-5
+  tutorial_chibitronics_string_detail_grades: 2-5-sinflar
   tutorial_athlete_string_detail_grades: Grades 2+
   tutorial_moana_string_detail_grades: Grades 2+
   tutorial_star-wars_string_detail_grades: Grades 2+
@@ -6503,47 +6526,47 @@ uz:
   tutorial_mchoc_string_detail_grades: Grades 2+
   tutorial_vidnews_string_detail_grades: Grades 6+
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
-  tutorial_highseas_string_detail_grades: Grades 2-8
+  tutorial_highseas_string_detail_grades: 2-8-sinflar
   tutorial_capython_string_detail_grades: Grades 6+
   tutorial_frzn_string_detail_grades: Grades 2+
   tutorial_cocom_string_detail_grades: Grades 2+
   tutorial_play-lab_string_detail_grades: Grades 2+
   tutorial_boxisland_string_detail_grades: All ages
-  tutorial_textcomp_string_detail_grades: Grades 9+
-  tutorial_encryption_string_detail_grades: Grades 9+
+  tutorial_textcomp_string_detail_grades: 9+ sinflar
+  tutorial_encryption_string_detail_grades: 9+ sinflar
   tutorial_kanopixel_string_detail_grades: Grades 2+
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkerdd_string_detail_grades: Grades 2-8
+  tutorial_tynkerdd_string_detail_grades: 2-8-sinflar
   tutorial_tynkerana_string_detail_grades: Grades 6+
   tutorial_vidcard_string_detail_grades: Grades 2+
-  tutorial_spritebox_string_detail_grades: Grades 2-8
+  tutorial_spritebox_string_detail_grades: 2-8-sinflar
   tutorial_tynkerch_string_detail_grades: Grades 6+
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: do-not-show
   tutorial_code_string_detail_grades: Grades 2+
   tutorial_tinspire_string_detail_grades: Grades 6+
-  tutorial_itchbounceball_string_detail_grades: Grades 2-8
+  tutorial_itchbounceball_string_detail_grades: 2-8-sinflar
   tutorial_vidclim_string_detail_grades: Grades 6+
   tutorial_matlab_string_detail_grades: Grades 6+
   tutorial_flap_string_detail_grades: Grades 2+
   tutorial_galaxy_string_detail_grades: Grades 6+
-  tutorial_inf_string_detail_grades: Grades 2-8
+  tutorial_inf_string_detail_grades: 2-8-sinflar
   tutorial_tynkersol_string_detail_grades: Grades 2+
   tutorial_itchg_string_detail_grades: Grades 6+
   tutorial_como_string_detail_grades: Grades 2+
-  tutorial_processfound_string_detail_grades: Grades 9+
+  tutorial_processfound_string_detail_grades: 9+ sinflar
   tutorial_tynkerhomo_string_detail_grades: Grades 6+
   tutorial_art_string_detail_grades: Grades 2+
   tutorial_tynkerbrick_string_detail_grades: Grades 2+
   tutorial_itchbio_string_detail_grades: Grades 6+
   tutorial_itchj_string_detail_grades: Grades 6-8
   tutorial_tickleo_string_detail_grades: Grades 2+
-  tutorial_hopgeo_string_detail_grades: Grades 2-8
-  tutorial_tynkermult_string_detail_grades: Grades 2-8
+  tutorial_hopgeo_string_detail_grades: 2-8-sinflar
+  tutorial_tynkermult_string_detail_grades: 2-8-sinflar
   tutorial_monster_string_detail_grades: Pre-reader - Grade 8
   tutorial_tynkerapp_string_detail_grades: do-not-show
   tutorial_tynkerpup_string_detail_grades: Pre-reader - Grade 5
-  tutorial_livecode_string_detail_grades: Grades 9+
+  tutorial_livecode_string_detail_grades: 9+ sinflar
   tutorial_cocomgame_string_detail_grades: Grades 2+
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
   tutorial_code-avengers_string_detail_grades: Grades 6+
@@ -6553,8 +6576,8 @@ uz:
   tutorial_qrm_string_detail_grades: Grades 6+
   tutorial_texas-instruments_string_detail_grades: Grades 6+
   tutorial_cajava_string_detail_grades: Grades 6+
-  tutorial_codehs_string_detail_grades: Grades 9+
-  tutorial_hopemo_string_detail_grades: Grades 2-8
+  tutorial_codehs_string_detail_grades: 9+ sinflar
+  tutorial_hopemo_string_detail_grades: 2-8-sinflar
   tutorial_tynkercm_string_detail_grades: Grades 2+
   tutorial_codesterswintergreet_string_detail_grades: Grades 2+
   tutorial_codestersc_string_detail_grades: Grades 6+
@@ -6562,11 +6585,11 @@ uz:
   tutorial_penjee_string_detail_grades: Grades 6+
   tutorial_trinket_string_detail_grades: Grades 2+
   tutorial_frogger_string_detail_grades: Grades 6+
-  tutorial_tynkereco_string_detail_grades: Grades 2-8
+  tutorial_tynkereco_string_detail_grades: 2-8-sinflar
   tutorial_mitedarc_string_detail_grades: Grades 6-8
   tutorial_khan_string_detail_grades: Grades 6+
   tutorial_tynkerd_string_detail_grades: Grades 6+
-  tutorial_cdmy_string_detail_grades: Grades 9+
+  tutorial_cdmy_string_detail_grades: 9+ sinflar
   tutorial_codestersdance_string_detail_grades: Grades 6+
   tutorial_codestersbasketball_string_detail_grades: Grades 6+
   tutorial_nclkarel_string_detail_grades: Grades 6+
@@ -6575,13 +6598,13 @@ uz:
   tutorial_carla_string_detail_grades: Grades 6+
   tutorial_zulama_string_detail_grades: Grades 6+
   tutorial_capost_string_detail_grades: Grades 6+
-  tutorial_marco_string_detail_grades: Grades 2-8
+  tutorial_marco_string_detail_grades: 2-8-sinflar
   tutorial_codestersflappybike_string_detail_grades: Grades 6+
   tutorial_kanopong_string_detail_grades: Grades 6-8
-  tutorial_tynkerright_string_detail_grades: Grades 2-8
+  tutorial_tynkerright_string_detail_grades: 2-8-sinflar
   tutorial_touchdevelop_string_detail_grades: do-not-show
   tutorial_tynkercc_string_detail_grades: Grades 6+
-  tutorial_bamboo_string_detail_grades: Grades 2-5
+  tutorial_bamboo_string_detail_grades: 2-5-sinflar
   tutorial_robojav_string_detail_grades: Grades 6+
   tutorial_roboba_string_detail_grades: Grades 6+
   tutorial_knodsnake_string_detail_grades: Grades 6-8
@@ -6599,9 +6622,9 @@ uz:
   tutorial_robobm_string_detail_grades: Grades 6-8
   tutorial_codingrobots_string_detail_grades: Grades 2+
   tutorial_robob_string_detail_grades: Grades 6+
-  tutorial_coders_string_detail_grades: Grades 9+
-  tutorial_tynkerhw_string_detail_grades: Grades 2-8
-  tutorial_tynkermh_string_detail_grades: Grades 2-8
+  tutorial_coders_string_detail_grades: 9+ sinflar
+  tutorial_tynkerhw_string_detail_grades: 2-8-sinflar
+  tutorial_tynkermh_string_detail_grades: 2-8-sinflar
   tutorial_caphoto_string_detail_grades: Grades 6+
   tutorial_mozillahw_string_detail_grades: Grades 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
@@ -6613,7 +6636,7 @@ uz:
   tutorial_sjsunset_string_detail_grades: Pre-reader - Grade 5
   tutorial_fufafrenz_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcgeo_string_detail_grades: do-not-show
-  tutorial_chspixel_string_detail_grades: Grades 9+
+  tutorial_chspixel_string_detail_grades: 9+ sinflar
   tutorial_hummingbird_string_detail_grades: Grades 6+
   tutorial_recoloring_string_detail_grades: Grades 6+
   tutorial_bbcchem_string_detail_grades: do-not-show
@@ -6627,97 +6650,97 @@ uz:
   tutorial_tlctour_string_detail_grades: Grades 2+
   tutorial_codesterstj_string_detail_grades: Grades 2+
   tutorial_tlclocked_string_detail_grades: Grades 6+
-  tutorial_baubles_string_detail_grades: Grades 2-8
+  tutorial_baubles_string_detail_grades: 2-8-sinflar
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Grades 2+
-  tutorial_fufafit_string_detail_grades: Grades 2-5
+  tutorial_fufafit_string_detail_grades: 2-5-sinflar
   tutorial_ozodance_string_detail_grades: All ages
   tutorial_codingrobotics_string_detail_grades: Pre-reader - Grade 5
   tutorial_box_string_detail_grades: do-not-show
-  tutorial_hopgame_string_detail_grades: Grades 2-8
+  tutorial_hopgame_string_detail_grades: 2-8-sinflar
   tutorial_icontrol_string_detail_grades: Pre-reader - Grade 5
   tutorial_cocomteach_string_detail_grades: Grades 2+
   tutorial_bbcmathii_string_detail_grades: do-not-show
   tutorial_bbcphys_string_detail_grades: do-not-show
-  tutorial_bitsbox_string_detail_grades: Grades 2-8
-  tutorial_tlcemo_string_detail_grades: Grades 2-8
+  tutorial_bitsbox_string_detail_grades: 2-8-sinflar
+  tutorial_tlcemo_string_detail_grades: 2-8-sinflar
   tutorial_crd_string_detail_grades: Grades 6-8
   tutorial_bbcbio_string_detail_grades: do-not-show
   tutorial_ticklebb8_string_detail_grades: Grades 2+
   tutorial_grok_string_detail_grades: do-not-show
-  tutorial_ijournalist_string_detail_grades: Grades 2-8
+  tutorial_ijournalist_string_detail_grades: 2-8-sinflar
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: Grades 6-8
   tutorial_tlchex_string_detail_grades: Grades 6+
   tutorial_tickles_string_detail_grades: Grades 2+
   tutorial_ozogame_string_detail_grades: All ages
   tutorial_vidcodeio_string_detail_grades: Grades 2+
-  tutorial_besttech_string_detail_grades: Grades 9+
+  tutorial_besttech_string_detail_grades: 9+ sinflar
   tutorial_tlcbrain_string_detail_grades: Grades 6+
   tutorial_hopquiz_string_detail_grades: Grades 6-8
-  tutorial_unfortunate_string_detail_grades: Grades 2-5
+  tutorial_unfortunate_string_detail_grades: 2-5-sinflar
   tutorial_cha_string_detail_grades: Grades 6-8
   tutorial_elaseq_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
-  tutorial_tlcpixel_string_detail_grades: Grades 2-8
+  tutorial_tlcpixel_string_detail_grades: 2-8-sinflar
   tutorial_arduino_string_detail_grades: Grades 6-8
-  tutorial_introrobo_string_detail_grades: Grades 2-5
+  tutorial_introrobo_string_detail_grades: 2-5-sinflar
   tutorial_tlcinvis_string_detail_grades: Grades 2+
   tutorial_tlcjflap_string_detail_grades: Grades 6+
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
   tutorial_spiralsfinch_string_detail_grades: Grades 2+
   tutorial_ozoi_string_detail_grades: All ages
   tutorial_ticklel_string_detail_grades: Grades 2+
-  tutorial_spiralsdash_string_detail_grades: Grades 2-8
-  tutorial_ghdebug_string_detail_grades: Grades 2-8
-  tutorial_tlckk_string_detail_grades: Grades 2-5
+  tutorial_spiralsdash_string_detail_grades: 2-8-sinflar
+  tutorial_ghdebug_string_detail_grades: 2-8-sinflar
+  tutorial_tlckk_string_detail_grades: 2-5-sinflar
   tutorial_firstcomp_string_detail_grades: Pre-reader - Grade 1
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tlccc_string_detail_grades: Grades 2-8
-  tutorial_tlcdoodle_string_detail_grades: Grades 2-8
+  tutorial_tlccc_string_detail_grades: 2-8-sinflar
+  tutorial_tlcdoodle_string_detail_grades: 2-8-sinflar
   tutorial_tlcpunch_string_detail_grades: Grades 6+
-  tutorial_finchfract_string_detail_grades: Grades 9+
+  tutorial_finchfract_string_detail_grades: 9+ sinflar
   tutorial_tlcmind_string_detail_grades: Grades 6+
   tutorial_tlctelebot_string_detail_grades: Grades 2+
   tutorial_tlcaus_string_detail_grades: Grades 6+
-  tutorial_oralhist_string_detail_grades: Grades 9+
+  tutorial_oralhist_string_detail_grades: 9+ sinflar
   tutorial_tlcmicro_string_detail_grades: Grades 2+
-  tutorial_imathematician_string_detail_grades: Grades 2-8
+  tutorial_imathematician_string_detail_grades: 2-8-sinflar
   tutorial_tlcmagic_string_detail_grades: Grades 6+
-  tutorial_scratchmus_string_detail_grades: Grades 2-8
-  tutorial_scratchanim_string_detail_grades: Grades 2-8
-  tutorial_scratchfly_string_detail_grades: Grades 2-8
+  tutorial_scratchmus_string_detail_grades: 2-8-sinflar
+  tutorial_scratchanim_string_detail_grades: 2-8-sinflar
+  tutorial_scratchfly_string_detail_grades: 2-8-sinflar
   tutorial_tynkerarc_string_detail_grades: Grades 2+
   tutorial_grokffpython_string_detail_grades: Grades 6+
   tutorial_grokffblock_string_detail_grades: Grades 6+
   tutorial_grokeliza_string_detail_grades: Grades 6+
   tutorial_tynkercan_string_detail_grades: Grades 2+
   tutorial_grokflags_string_detail_grades: Grades 6+
-  tutorial_robomind_string_detail_grades: Grades 2-8
-  tutorial_scratchanimwork_string_detail_grades: Grades 2-8
-  tutorial_adventureq_string_detail_grades: Grades 2-5
+  tutorial_robomind_string_detail_grades: 2-8-sinflar
+  tutorial_scratchanimwork_string_detail_grades: 2-8-sinflar
+  tutorial_adventureq_string_detail_grades: 2-5-sinflar
   tutorial_khan-es_string_detail_grades: Grades 6+
   tutorial_kpt_string_detail_grades: Grades 6+
   tutorial_kpl_string_detail_grades: Grades 6+
   tutorial_khe_string_detail_grades: Grades 6+
   tutorial_kfr_string_detail_grades: Grades 6+
   tutorial_app-inventor_string_detail_grades: Grades 6+
-  tutorial_bits_string_detail_grades: Grades 2-5
+  tutorial_bits_string_detail_grades: 2-5-sinflar
   tutorial_blockly_string_detail_grades: Grades 6+
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Grades 2+
   tutorial_spellcraft_string_detail_grades: Grades 6+
-  tutorial_pirates_string_detail_grades: Grades 2-8
+  tutorial_pirates_string_detail_grades: 2-8-sinflar
   tutorial_csfirst_string_detail_grades: Grades 2+
-  tutorial_loopedy_string_detail_grades: Grades 2-5
+  tutorial_loopedy_string_detail_grades: 2-5-sinflar
   tutorial_dsw_string_detail_grades: do-not-show
   tutorial_dswb_string_detail_grades: do-not-show
   tutorial_ssw_string_detail_grades: do-not-show
   tutorial_sswb_string_detail_grades: do-not-show
-  tutorial_kodable-unplugged_string_detail_grades: Grades 2-8
-  tutorial_scratch_string_detail_grades: Grades 2-5
+  tutorial_kodable-unplugged_string_detail_grades: 2-8-sinflar
+  tutorial_scratch_string_detail_grades: 2-5-sinflar
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: do-not-show
   tutorial_hrm_string_detail_grades: Grades 6+
@@ -6727,10 +6750,10 @@ uz:
   tutorial_rmc_string_detail_grades: do-not-show
   tutorial_smc_string_detail_grades: do-not-show
   tutorial_minecraft-2016_string_detail_grades: do-not-show
-  tutorial_thinkersmith-es_string_detail_grades: Grades 2-5
+  tutorial_thinkersmith-es_string_detail_grades: 2-5-sinflar
   tutorial_pixie_string_detail_grades: Grades 2+
   tutorial_play_string_detail_grades: do-not-show
-  tutorial_robomind-nl_string_detail_grades: Grades 2-8
+  tutorial_robomind-nl_string_detail_grades: 2-8-sinflar
   tutorial_spheroi_string_detail_grades: Grades 2+
   tutorial_spherol_string_detail_grades: Grades 2+
   tutorial_spherov_string_detail_grades: Grades 2+
@@ -6741,7 +6764,7 @@ uz:
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
   tutorial_tap_string_detail_grades: Grades 2+
   tutorial_cintl_string_detail_grades: do-not-show
-  tutorial_itchstop_string_detail_grades: Grades 2-8
+  tutorial_itchstop_string_detail_grades: 2-8-sinflar
   tutorial_tynkerpn_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerpd_string_detail_grades: Pre-reader - Grade 5
   tutorial_persistence_string_detail_grades: Pre-reader+
@@ -6752,7 +6775,7 @@ uz:
   tutorial_bigevent_string_detail_grades: Pre-reader+
   tutorial_gpp_string_detail_grades: Grades 2+
   tutorial_foosgame_string_detail_grades: Pre-reader - Grade 5
-  tutorial_solopython_string_detail_grades: Grades 9+
+  tutorial_solopython_string_detail_grades: 9+ sinflar
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
   tutorial_kodableadv_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkertj_string_detail_grades: Grades 6+
@@ -6762,158 +6785,158 @@ uz:
   tutorial_wolframsph_string_detail_grades: Grades 6+
   tutorial_wolframp_string_detail_grades: Grades 6+
   tutorial_wolframn_string_detail_grades: Grades 6+
-  tutorial_soloweb_string_detail_grades: Grades 9+
+  tutorial_soloweb_string_detail_grades: 9+ sinflar
   tutorial_khanweb_string_detail_grades: Grades 2+
   tutorial_khandata_string_detail_grades: Grades 6+
   tutorial_robomeshiq_string_detail_grades: Grades 2+
   tutorial_googlelogo_string_detail_grades: Grades 2+
   tutorial_playtune_string_detail_grades: Grades 6+
   tutorial_computeit_string_detail_grades: Grades 2+
-  tutorial_codesterssj_string_detail_grades: Grades 2-8
+  tutorial_codesterssj_string_detail_grades: 2-8-sinflar
   tutorial_cmchat_string_detail_grades: Grades 6+
-  tutorial_tynkerdb_string_detail_grades: Grades 2-5
+  tutorial_tynkerdb_string_detail_grades: 2-5-sinflar
   tutorial_cmbuild_string_detail_grades: Grades 6+
-  tutorial_robotrattle_string_detail_grades: Grades 2-8
-  tutorial_codestersh_string_detail_grades: Grades 2-8
+  tutorial_robotrattle_string_detail_grades: 2-8-sinflar
+  tutorial_codestersh_string_detail_grades: 2-8-sinflar
   tutorial_codehsdigipixel_string_detail_grades: Grades 6+
   tutorial_ccbinary_string_detail_grades: Grades 6+
   tutorial_codehsturtle_string_detail_grades: Grades 6+
   tutorial_grokhd_string_detail_grades: Grades 6+
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersa_string_detail_grades: Grades 2-8
+  tutorial_codestersa_string_detail_grades: 2-8-sinflar
   tutorial_cmdodo_string_detail_grades: Grades 3-5
-  tutorial_tynkerspace_string_detail_grades: Grades 2-5
-  tutorial_gfbloons_string_detail_grades: Grades 9+
-  tutorial_raspipong_string_detail_grades: Grades 9+
+  tutorial_tynkerspace_string_detail_grades: 2-5-sinflar
+  tutorial_gfbloons_string_detail_grades: 9+ sinflar
+  tutorial_raspipong_string_detail_grades: 9+ sinflar
   tutorial_codehsvr_string_detail_grades: Grades 6+
   tutorial_codesterstp_string_detail_grades: Grades 6-8
   tutorial_codestersbb_string_detail_grades: Grades 6-8
-  tutorial_gfcrossyroad_string_detail_grades: Grades 9+
-  tutorial_googleww_string_detail_grades: Grades 9+
+  tutorial_gfcrossyroad_string_detail_grades: 9+ sinflar
+  tutorial_googleww_string_detail_grades: 9+ sinflar
   tutorial_codehsjsapp_string_detail_grades: Grades 6+
-  tutorial_gfmihi_string_detail_grades: Grades 9+
-  tutorial_hopdropphone_string_detail_grades: Grades 2-8
-  tutorial_techfaa_string_detail_grades: University
-  tutorial_codehsjsgraph_string_detail_grades: Grades 9+
+  tutorial_gfmihi_string_detail_grades: 9+ sinflar
+  tutorial_hopdropphone_string_detail_grades: 2-8-sinflar
+  tutorial_techfaa_string_detail_grades: Universitet
+  tutorial_codehsjsgraph_string_detail_grades: 9+ sinflar
   tutorial_thunkable_string_detail_grades: Grades 6+
-  tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
-  tutorial_switchglitch_string_detail_grades: Grades 2-5
+  tutorial_hopcrossyroad_string_detail_grades: 2-8-sinflar
+  tutorial_switchglitch_string_detail_grades: 2-5-sinflar
   tutorial_codecar_string_detail_grades: Grades 6+
   tutorial_codesterscp_string_detail_grades: Grades 6-8
   tutorial_grokpetblock_string_detail_grades: Grades 6-8
-  tutorial_techbim_string_detail_grades: University
-  tutorial_techfpp_string_detail_grades: University
-  tutorial_codesterscr_string_detail_grades: Grades 2-8
-  tutorial_grokdisease_string_detail_grades: Grades 9+
-  tutorial_techec_string_detail_grades: University
-  tutorial_rgbegin_string_detail_grades: Grades 2-5
-  tutorial_myradream_string_detail_grades: Grades 2-8
-  tutorial_thinkfun_string_detail_grades: Grades 2-8
-  tutorial_hopfireworks_string_detail_grades: Grades 2-8
+  tutorial_techbim_string_detail_grades: Universitet
+  tutorial_techfpp_string_detail_grades: Universitet
+  tutorial_codesterscr_string_detail_grades: 2-8-sinflar
+  tutorial_grokdisease_string_detail_grades: 9+ sinflar
+  tutorial_techec_string_detail_grades: Universitet
+  tutorial_rgbegin_string_detail_grades: 2-5-sinflar
+  tutorial_myradream_string_detail_grades: 2-8-sinflar
+  tutorial_thinkfun_string_detail_grades: 2-8-sinflar
+  tutorial_hopfireworks_string_detail_grades: 2-8-sinflar
   tutorial_grokspace_string_detail_grades: Grades 6+
   tutorial_codehspython_string_detail_grades: Grades 6+
-  tutorial_codehsjava_string_detail_grades: Grades 9+
-  tutorial_techioda_string_detail_grades: University
-  tutorial_grokmonster_string_detail_grades: Grades 2-5
-  tutorial_techmjs_string_detail_grades: University
-  tutorial_techga_string_detail_grades: University
-  tutorial_techioan_string_detail_grades: University
-  tutorial_techiogsr_string_detail_grades: University
+  tutorial_codehsjava_string_detail_grades: 9+ sinflar
+  tutorial_techioda_string_detail_grades: Universitet
+  tutorial_grokmonster_string_detail_grades: 2-5-sinflar
+  tutorial_techmjs_string_detail_grades: Universitet
+  tutorial_techga_string_detail_grades: Universitet
+  tutorial_techioan_string_detail_grades: Universitet
+  tutorial_techiogsr_string_detail_grades: Universitet
   tutorial_groktunnel_string_detail_grades: Grades 6+
   tutorial_stemcod_string_detail_grades: Grades 6+
-  tutorial_techikb_string_detail_grades: University
-  tutorial_kanostreet_string_detail_grades: Grades 2-5
-  tutorial_nyblebot_string_detail_grades: Grades 2-5
-  tutorial_codemojijs_string_detail_grades: Grades 2-5
-  tutorial_techapf_string_detail_grades: University
-  tutorial_techfpjs_string_detail_grades: University
-  tutorial_techlinq_string_detail_grades: University
+  tutorial_techikb_string_detail_grades: Universitet
+  tutorial_kanostreet_string_detail_grades: 2-5-sinflar
+  tutorial_nyblebot_string_detail_grades: 2-5-sinflar
+  tutorial_codemojijs_string_detail_grades: 2-5-sinflar
+  tutorial_techapf_string_detail_grades: Universitet
+  tutorial_techfpjs_string_detail_grades: Universitet
+  tutorial_techlinq_string_detail_grades: Universitet
   tutorial_gpbcatapult_string_detail_grades: Grades 6+
   tutorial_quorumastro_string_detail_grades: Grades 6+
-  tutorial_alicewonder_string_detail_grades: Grades 2-5
+  tutorial_alicewonder_string_detail_grades: 2-5-sinflar
   tutorial_rginter_string_detail_grades: Grades 6-8
   tutorial_cssgrid_string_detail_grades: Grades 6+
-  tutorial_jshero_string_detail_grades: Grades 9+
-  tutorial_codemojipy_string_detail_grades: Grades 2-5
+  tutorial_jshero_string_detail_grades: 9+ sinflar
+  tutorial_codemojipy_string_detail_grades: 2-5-sinflar
   tutorial_nclabdrone_string_detail_grades: Grades 6+
   tutorial_gpbcircle_string_detail_grades: Grades 6+
   tutorial_gpbpaint_string_detail_grades: Grades 6+
   tutorial_cocomarcade_string_detail_grades: Grades 6+
-  tutorial_techcpp_string_detail_grades: University
+  tutorial_techcpp_string_detail_grades: Universitet
   tutorial_beetik_string_detail_grades: Grades 6-8
   tutorial_codedj_string_detail_grades: Grades 6+
   tutorial_rgadvan_string_detail_grades: Grades 6+
-  tutorial_codehsrn_string_detail_grades: Grades 9+
+  tutorial_codehsrn_string_detail_grades: 9+ sinflar
   tutorial_codehswd_string_detail_grades: Grades 6+
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
   tutorial_ozoevo_string_detail_grades: Grades 6+
   tutorial_ozoexped_string_detail_grades: Grades 6+
-  tutorial_ozojourney_string_detail_grades: Grades 2-8
+  tutorial_ozojourney_string_detail_grades: 2-8-sinflar
   tutorial_ozocodes_string_detail_grades: All ages
   tutorial_ozoeclipse_string_detail_grades: Grades 2+
   tutorial_ozosimulator_string_detail_grades: Grades 6+
   tutorial_ozoalgorithm_string_detail_grades: Grades 6+
   tutorial_ozotimer_string_detail_grades: Grades 6+
   tutorial_ozohabits_string_detail_grades: All ages
-  tutorial_ozoprogram_string_detail_grades: Grades 2-8
+  tutorial_ozoprogram_string_detail_grades: 2-8-sinflar
   tutorial_ozopair_string_detail_grades: Grades 2+
   tutorial_codesnoopy_string_detail_grades: Pre-reader - Grade 5
-  tutorial_applabintro_string_detail_grades: Grades 9+
+  tutorial_applabintro_string_detail_grades: 9+ sinflar
   tutorial_cslartist_string_detail_grades: Pre-reader - Grade 5
   tutorial_cslscratchjr_string_detail_grades: Pre-reader - Grade 5
-  tutorial_floevents_string_detail_grades: Grades 2-8
-  tutorial_florobot_string_detail_grades: Grades 2-8
-  tutorial_isavesanta_string_detail_grades: Grades 2-8
-  tutorial_iorder_string_detail_grades: Grades 2-8
-  tutorial_ianimate_string_detail_grades: Grades 2-8
-  tutorial_iloveada_string_detail_grades: Grades 2-5
+  tutorial_floevents_string_detail_grades: 2-8-sinflar
+  tutorial_florobot_string_detail_grades: 2-8-sinflar
+  tutorial_isavesanta_string_detail_grades: 2-8-sinflar
+  tutorial_iorder_string_detail_grades: 2-8-sinflar
+  tutorial_ianimate_string_detail_grades: 2-8-sinflar
+  tutorial_iloveada_string_detail_grades: 2-5-sinflar
   tutorial_kodflash_string_detail_grades: Pre-reader - Grade 5
-  tutorial_kodchoose_string_detail_grades: Grades 2-5
+  tutorial_kodchoose_string_detail_grades: 2-5-sinflar
   tutorial_kodpizzapre_string_detail_grades: Pre-reader - Grade 1
-  tutorial_kodpizza_string_detail_grades: Grades 2-5
-  tutorial_kodwomen_string_detail_grades: Grades 2-8
+  tutorial_kodpizza_string_detail_grades: 2-5-sinflar
+  tutorial_kodwomen_string_detail_grades: 2-8-sinflar
   tutorial_tfunplug_string_detail_grades: Grades 6-8
-  tutorial_lbvariables_string_detail_grades: Grades 2-8
-  tutorial_lbfunctions_string_detail_grades: Grades 2-8
+  tutorial_lbvariables_string_detail_grades: 2-8-sinflar
+  tutorial_lbfunctions_string_detail_grades: 2-8-sinflar
   tutorial_lblogic_string_detail_grades: Grades 2+
   tutorial_lbworld_string_detail_grades: Grades 6+
-  tutorial_lbloops_string_detail_grades: Grades 2-8
+  tutorial_lbloops_string_detail_grades: 2-8-sinflar
   tutorial_lbtug_string_detail_grades: Grades 6+
   tutorial_lbpotato_string_detail_grades: Grades 2+
   tutorial_lbguitar_string_detail_grades: Grades 2+
-  tutorial_lbio_string_detail_grades: Grades 2-8
-  tutorial_wonpuppy_string_detail_grades: Grades 2-5
+  tutorial_lbio_string_detail_grades: 2-8-sinflar
+  tutorial_wonpuppy_string_detail_grades: 2-5-sinflar
   tutorial_woncue_string_detail_grades: Grades 2+
-  tutorial_wonzoo_string_detail_grades: Grades 2-5
-  tutorial_wontrip_string_detail_grades: Grades 2-8
+  tutorial_wonzoo_string_detail_grades: 2-5-sinflar
+  tutorial_wontrip_string_detail_grades: 2-8-sinflar
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
   tutorial_wonsecret_string_detail_grades: Grades 6+
-  tutorial_hsscience_string_detail_grades: Grades 2-8
+  tutorial_hsscience_string_detail_grades: 2-8-sinflar
   tutorial_popculture_string_detail_grades: Grades 6+
   tutorial_legorobust_string_detail_grades: Grades 2+
   tutorial_legoplants_string_detail_grades: Grades 2+
   tutorial_legopark_string_detail_grades: Grades 6+
   tutorial_legodetect_string_detail_grades: Grades 6+
   tutorial_legolight_string_detail_grades: Grades 6+
-  tutorial_alexa_string_detail_grades: Grades 9+
+  tutorial_alexa_string_detail_grades: 9+ sinflar
   tutorial_grokpetmicro_string_detail_grades: Grades 6-8
-  tutorial_pirateplunder_string_detail_grades: Grades 2-8
+  tutorial_pirateplunder_string_detail_grades: 2-8-sinflar
   tutorial_cadj_string_detail_grades: Grades 6-8
-  tutorial_cacrazy_string_detail_grades: Grades 2-8
-  tutorial_cajump_string_detail_grades: Grades 2-8
-  tutorial_carest_string_detail_grades: Grades 2-8
-  tutorial_accai_string_detail_grades: Grades 2-8
+  tutorial_cacrazy_string_detail_grades: 2-8-sinflar
+  tutorial_cajump_string_detail_grades: 2-8-sinflar
+  tutorial_carest_string_detail_grades: 2-8-sinflar
+  tutorial_accai_string_detail_grades: 2-8-sinflar
   tutorial_vceclipse_string_detail_grades: Grades 6+
   tutorial_pmzero_string_detail_grades: Grades 6+
-  tutorial_hsela_string_detail_grades: Grades 2-8
-  tutorial_ticklear_string_detail_grades: Grades 2-8
-  tutorial_bcrobot_string_detail_grades: Grades 2-8
+  tutorial_hsela_string_detail_grades: 2-8-sinflar
+  tutorial_ticklear_string_detail_grades: 2-8-sinflar
+  tutorial_bcrobot_string_detail_grades: 2-8-sinflar
   tutorial_bcsnow_string_detail_grades: Grades 6+
   tutorial_ifly_string_detail_grades: Grades 2+
-  tutorial_idowedo_string_detail_grades: Grades 2-8
+  tutorial_idowedo_string_detail_grades: 2-8-sinflar
   tutorial_diggindwarf_string_detail_grades: Grades 6+
-  tutorial_rmedr_string_detail_grades: Grades 2-8
+  tutorial_rmedr_string_detail_grades: 2-8-sinflar
   tutorial_spheroit_string_detail_grades: Grades 2+
   tutorial_gameofcodes_string_detail_grades: Grades 2+
   tutorial_blocklygames_string_detail_grades: Grades 6+
@@ -6922,87 +6945,87 @@ uz:
   tutorial_bcpy1_string_detail_grades: Grades 6+
   tutorial_bcpy2_string_detail_grades: Grades 6+
   tutorial_bcjs1_string_detail_grades: Grades 6+
-  tutorial_bcjs2_string_detail_grades: Grades 9+
-  tutorial_3dbearmars_string_detail_grades: Grades 2-8
-  tutorial_alexaskill_string_detail_grades: Grades 2-8
-  tutorial_bitsboxyak_string_detail_grades: Grades 2-8
-  tutorial_blockscadbargraphs_string_detail_grades: Grades 2-5
-  tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
-  tutorial_blockscadclock_string_detail_grades: Grades 9+
-  tutorial_blockscaddinner_string_detail_grades: Grades 2-5
+  tutorial_bcjs2_string_detail_grades: 9+ sinflar
+  tutorial_3dbearmars_string_detail_grades: 2-8-sinflar
+  tutorial_alexaskill_string_detail_grades: 2-8-sinflar
+  tutorial_bitsboxyak_string_detail_grades: 2-8-sinflar
+  tutorial_blockscadbargraphs_string_detail_grades: 2-5-sinflar
+  tutorial_blockscadbirdhouses_string_detail_grades: 2-5-sinflar
+  tutorial_blockscadclock_string_detail_grades: 9+ sinflar
+  tutorial_blockscaddinner_string_detail_grades: 2-5-sinflar
   tutorial_blockscadicecream_string_detail_grades: Grades 6+
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
   tutorial_bsgridlight_string_detail_grades: Grades 2+
   tutorial_bpartscratch_string_detail_grades: Grades 6+
   tutorial_bpartvid_string_detail_grades: Grades 6+
-  tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
-  tutorial_bpenglishvid_string_detail_grades: Grades 2-8
+  tutorial_bpenglishscratch_string_detail_grades: 2-8-sinflar
+  tutorial_bpenglishvid_string_detail_grades: 2-8-sinflar
   tutorial_bphealthscratch_string_detail_grades: Grades 2+
   tutorial_bphealthvid_string_detail_grades: Grades 6+
-  tutorial_bpmathscratch_string_detail_grades: Grades 2-5
+  tutorial_bpmathscratch_string_detail_grades: 2-5-sinflar
   tutorial_bpmathvid_string_detail_grades: Grades 6+
-  tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
+  tutorial_bpmlkscratch_string_detail_grades: 2-8-sinflar
   tutorial_bpmlkvid_string_detail_grades: Grades 6-8
-  tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
+  tutorial_bpsafetyscratch_string_detail_grades: 2-5-sinflar
   tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
-  tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
+  tutorial_bpsciencescratch_string_detail_grades: 2-5-sinflar
   tutorial_bpsciencevid_string_detail_grades: Grades 6-8
   tutorial_bptechscratch_string_detail_grades: Grades 6+
   tutorial_bptechvid_string_detail_grades: Grades 6+
   tutorial_caflags_string_detail_grades: Grades 6+
-  tutorial_matariki_string_detail_grades: Grades 2-5
+  tutorial_matariki_string_detail_grades: 2-5-sinflar
   tutorial_carestaurant_string_detail_grades: Grades 2+
-  tutorial_casea_string_detail_grades: Grades 2-5
-  tutorial_cashield_string_detail_grades: Grades 2-8
-  tutorial_ccwslimer_string_detail_grades: Grades 2-8
+  tutorial_casea_string_detail_grades: 2-5-sinflar
+  tutorial_cashield_string_detail_grades: 2-8-sinflar
+  tutorial_ccwslimer_string_detail_grades: 2-8-sinflar
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
   tutorial_boatrace_string_detail_grades: Grades 2+
   tutorial_ccplay_string_detail_grades: Grades 6+
-  tutorial_grinch_string_detail_grades: Grades 2-8
-  tutorial_codehsart_string_detail_grades: Grades 9+
-  tutorial_codehsbitcoin_string_detail_grades: Grades 9+
-  tutorial_codehsblockchain_string_detail_grades: Grades 9+
+  tutorial_grinch_string_detail_grades: 2-8-sinflar
+  tutorial_codehsart_string_detail_grades: 9+ sinflar
+  tutorial_codehsbitcoin_string_detail_grades: 9+ sinflar
+  tutorial_codehsblockchain_string_detail_grades: 9+ sinflar
   tutorial_codehscipher_string_detail_grades: Grades 6+
-  tutorial_codehscollision_string_detail_grades: Grades 9+
+  tutorial_codehscollision_string_detail_grades: 9+ sinflar
   tutorial_codehsmath_string_detail_grades: Grades 6+
   tutorial_codehsmusic_string_detail_grades: Grades 6+
   tutorial_codehssports_string_detail_grades: Grades 6+
-  tutorial_codemojipizza_string_detail_grades: Grades 2-8
+  tutorial_codemojipizza_string_detail_grades: 2-8-sinflar
   tutorial_moonlander_string_detail_grades: Grades 6+
-  tutorial_sushicards_string_detail_grades: Grades 2-8
+  tutorial_sushicards_string_detail_grades: 2-8-sinflar
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
   tutorial_codesterslogo_string_detail_grades: Grades 6+
   tutorial_codesterstshirt_string_detail_grades: Grades 6+
-  tutorial_codewards_string_detail_grades: Grades 2-8
-  tutorial_olympics_string_detail_grades: Grades 2-8
+  tutorial_codewards_string_detail_grades: 2-8-sinflar
+  tutorial_olympics_string_detail_grades: 2-8-sinflar
   tutorial_codinismhero_string_detail_grades: Grades 2+
   tutorial_discovery_string_detail_grades: Grades 2+
   tutorial_csfirstname_string_detail_grades: Grades 2+
   tutorial_obstaclecourse_string_detail_grades: Grades 2+
   tutorial_edisonmove_string_detail_grades: Grades 6+
   tutorial_edisonspider_string_detail_grades: Grades 6+
-  tutorial_edisonspotlight_string_detail_grades: Grades 2-8
+  tutorial_edisonspotlight_string_detail_grades: 2-8-sinflar
   tutorial_firiapython_string_detail_grades: Grades 6+
   tutorial_gamefrootsquid_string_detail_grades: Grades 6+
   tutorial_duckpiano_string_detail_grades: Grades 6+
   tutorial_gpsound_string_detail_grades: Grades 6+
-  tutorial_groklearningpython_string_detail_grades: Grades 9+
-  tutorial_htmltimetravel_string_detail_grades: Grades 9+
-  tutorial_hp_flappy_string_detail_grades: Grades 9+
-  tutorial_appytappin_string_detail_grades: Grades 2-5
-  tutorial_icipher_string_detail_grades: Grades 2-5
+  tutorial_groklearningpython_string_detail_grades: 9+ sinflar
+  tutorial_htmltimetravel_string_detail_grades: 9+ sinflar
+  tutorial_hp_flappy_string_detail_grades: 9+ sinflar
+  tutorial_appytappin_string_detail_grades: 2-5-sinflar
+  tutorial_icipher_string_detail_grades: 2-5-sinflar
   tutorial_iguess_string_detail_grades: Pre-reader - Grade 5
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
-  tutorial_imorse_string_detail_grades: Grades 2-8
-  tutorial_kanohp_string_detail_grades: Grades 2-8
+  tutorial_imorse_string_detail_grades: 2-8-sinflar
+  tutorial_kanohp_string_detail_grades: 2-8-sinflar
   tutorial_khanwebpages_string_detail_grades: Grades 6+
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
-  tutorial_designgames_string_detail_grades: Grades 2-5
+  tutorial_designgames_string_detail_grades: 2-5-sinflar
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
   tutorial_wizard_string_detail_grades: Grades 6+
   tutorial_mbscratchcards_string_detail_grades: Grades 2+
@@ -7016,36 +7039,36 @@ uz:
   tutorial_mobilecspmap_string_detail_grades: Grades 6+
   tutorial_ozorandom_string_detail_grades: Grades 2+
   tutorial_ozotroll_string_detail_grades: Grades 6-8
-  tutorial_peblioart_string_detail_grades: Grades 9+
+  tutorial_peblioart_string_detail_grades: 9+ sinflar
   tutorial_astropi_string_detail_grades: Grades 6+
-  tutorial_rgart_string_detail_grades: Grades 2-5
-  tutorial_rgengineer_string_detail_grades: Grades 2-5
-  tutorial_rgmath_string_detail_grades: Grades 2-5
-  tutorial_rgscience_string_detail_grades: Grades 2-5
-  tutorial_rgtech_string_detail_grades: Grades 2-5
+  tutorial_rgart_string_detail_grades: 2-5-sinflar
+  tutorial_rgengineer_string_detail_grades: 2-5-sinflar
+  tutorial_rgmath_string_detail_grades: 2-5-sinflar
+  tutorial_rgscience_string_detail_grades: 2-5-sinflar
+  tutorial_rgtech_string_detail_grades: 2-5-sinflar
   tutorial_robotmagic3d_string_detail_grades: Grades 6+
-  tutorial_robotmagicflappy_string_detail_grades: Grades 9+
+  tutorial_robotmagicflappy_string_detail_grades: 9+ sinflar
   tutorial_scratchadventure_string_detail_grades: Grades 2+
   tutorial_scratchtalk_string_detail_grades: Grades 2+
-  tutorial_scratchjrstory_string_detail_grades: Grades 2-5
+  tutorial_scratchjrstory_string_detail_grades: 2-5-sinflar
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
-  tutorial_spherocomm_string_detail_grades: Grades 2-8
-  tutorial_spherocommunity_string_detail_grades: Grades 2-5
+  tutorial_spherocomm_string_detail_grades: 2-8-sinflar
+  tutorial_spherocommunity_string_detail_grades: 2-5-sinflar
   tutorial_spherofunctions_string_detail_grades: Grades 6+
   tutorial_spheroinfrared_string_detail_grades: Grades 6-8
-  tutorial_spherolightsensor_string_detail_grades: Grades 2-8
-  tutorial_spheromansion_string_detail_grades: Grades 2-8
-  tutorial_roadblocks_string_detail_grades: Grades 2-8
+  tutorial_spherolightsensor_string_detail_grades: 2-8-sinflar
+  tutorial_spheromansion_string_detail_grades: 2-8-sinflar
+  tutorial_roadblocks_string_detail_grades: 2-8-sinflar
   tutorial_spherotext2_string_detail_grades: Grades 6+
   tutorial_spherotext3_string_detail_grades: Grades 6+
   tutorial_spherotext4_string_detail_grades: Grades 6+
-  tutorial_spheroraptor_string_detail_grades: Grades 2-8
+  tutorial_spheroraptor_string_detail_grades: 2-8-sinflar
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
-  tutorial_stemplanetoids_string_detail_grades: Grades 9+
-  tutorial_stempong_string_detail_grades: Grades 9+
-  tutorial_algobot_string_detail_grades: Grades 2-8
-  tutorial_thunkableapps_string_detail_grades: Grades 9+
-  tutorial_toxicodedot_string_detail_grades: Grades 2-8
+  tutorial_stemplanetoids_string_detail_grades: 9+ sinflar
+  tutorial_stempong_string_detail_grades: 9+ sinflar
+  tutorial_algobot_string_detail_grades: 2-8-sinflar
+  tutorial_thunkableapps_string_detail_grades: 9+ sinflar
+  tutorial_toxicodedot_string_detail_grades: 2-8-sinflar
   tutorial_gcactions_string_detail_grades: Grades 6+
   tutorial_gccomparators_string_detail_grades: Grades 6+
   tutorial_gcconditions_string_detail_grades: Grades 6+
@@ -7054,16 +7077,16 @@ uz:
   tutorial_gcloops_string_detail_grades: Grades 6+
   tutorial_gcvariables_string_detail_grades: Grades 6+
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
-  tutorial_change_string_detail_grades: Grades 2-8
-  tutorial_cooking_string_detail_grades: Grades 2-5
+  tutorial_change_string_detail_grades: 2-8-sinflar
+  tutorial_cooking_string_detail_grades: 2-5-sinflar
   tutorial_crystal_string_detail_grades: Grades 2+
   tutorial_landscape_string_detail_grades: Grades 6+
-  tutorial_pets_string_detail_grades: Grades 2-5
+  tutorial_pets_string_detail_grades: 2-5-sinflar
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
   tutorial_superhero_string_detail_grades: Grades 6+
   tutorial_vidcodeplastic_string_detail_grades: Grades 6+
   tutorial_vidcodetypeface_string_detail_grades: Grades 6+
-  tutorial_washustorm_string_detail_grades: Grades 2-5
+  tutorial_washustorm_string_detail_grades: 2-5-sinflar
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
   tutorial_googlerookie_string_detail_grades: Grades 6+
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
@@ -7073,50 +7096,53 @@ uz:
   tutorial_allcancodeapps_string_detail_grades: Grades 6+
   tutorial_n2y_string_detail_grades: Pre-reader+
   tutorial_microsoftarcade_string_detail_grades: Grades 2+
-  tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
+  tutorial_csfirstunplugged_string_detail_grades: 2-8-sinflar
   tutorial_toxicodepython_string_detail_grades: Grades 6+
   tutorial_codecombatozaria_string_detail_grades: Grades 6+
   tutorial_vidcodedate_string_detail_grades: Grades 6+
-  tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
-  tutorial_codespeakhappy_string_detail_grades: Grades 2-8
+  tutorial_codemonkeyspace_string_detail_grades: 2-8-sinflar
+  tutorial_codespeakhappy_string_detail_grades: 2-8-sinflar
   tutorial_grokimage_string_detail_grades: Grades 6+
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
   tutorial_rpstress_string_detail_grades: Grades 2+
-  tutorial_bsdcause_string_detail_grades: Grades 9+
+  tutorial_bsdcause_string_detail_grades: 9+ sinflar
   tutorial_vidcodeanimoji_string_detail_grades: Grades 2+
+  tutorial_vidcodeanimojies_string_detail_grades: Grades 2+
   tutorial_bsdinspire_string_detail_grades: Grades 6+
   tutorial_tttractor_string_detail_grades: Grades 6+
-  tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
-  tutorial_scigirlsquest_string_detail_grades: Grades 2-8
+  tutorial_codeillusionmickey_string_detail_grades: 2-8-sinflar
+  tutorial_scigirlsquest_string_detail_grades: 2-8-sinflar
   tutorial_codespeakbreathe_string_detail_grades: Grades 2+
   tutorial_vidcodeface_string_detail_grades: Grades 6+
   tutorial_educodemaze_string_detail_grades: Grades 6+
   tutorial_educoderace_string_detail_grades: Grades 6+
-  tutorial_codespeakchatbot_string_detail_grades: Grades 2-8
+  tutorial_codespeakchatbot_string_detail_grades: 2-8-sinflar
   tutorial_gamefrootgames_string_detail_grades: Grades 6+
-  tutorial_codespeakgrandparent_string_detail_grades: Grades 2-8
+  tutorial_codespeakgrandparent_string_detail_grades: 2-8-sinflar
   tutorial_educodekingdom_string_detail_grades: Grades 6+
-  tutorial_codehsdata_string_detail_grades: Grades 9+
+  tutorial_codehsdata_string_detail_grades: 9+ sinflar
   tutorial_educodecake_string_detail_grades: Grades 6+
   tutorial_ttsecond_string_detail_grades: Grades 6+
   tutorial_bsdtrivia_string_detail_grades: Grades 6+
-  tutorial_csfirstdialogue_string_detail_grades: Grades 2-8
+  tutorial_csfirstdialogue_string_detail_grades: 2-8-sinflar
   tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersdistance_string_detail_grades: Grades 6+
   tutorial_itchspace_string_detail_grades: Grades 6+
   tutorial_vidcodemagic_string_detail_grades: Grades 2+
+  tutorial_vidcodemagices_string_detail_grades: Grades 2+
   tutorial_codespeakmeal_string_detail_grades: Grades 6+
-  tutorial_itchfish_string_detail_grades: Grades 2-8
+  tutorial_itchfish_string_detail_grades: 2-8-sinflar
   tutorial_bsdwebsite_string_detail_grades: Grades 6+
-  tutorial_codespeaktime_string_detail_grades: Grades 2-8
+  tutorial_codespeaktime_string_detail_grades: 2-8-sinflar
   tutorial_itchwebcam_string_detail_grades: Grades 6+
-  tutorial_itchball_string_detail_grades: Grades 2-8
+  tutorial_itchball_string_detail_grades: 2-8-sinflar
   tutorial_ttrace_string_detail_grades: Grades 6-8
   tutorial_plethora_string_detail_grades: Grades 2+
   tutorial_educodesecret_string_detail_grades: Grades 6+
   tutorial_itchshapes_string_detail_grades: Grades 6+
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
-  tutorial_educativechatbot_string_detail_grades: Grades 9+
+  tutorial_vidcodeplastiche_string_detail_grades: Grades 6+
+  tutorial_educativechatbot_string_detail_grades: 9+ sinflar
   tutorial_educodebasics_string_detail_grades: Grades 6+
   tutorial_codehsdesign_string_detail_grades: Grades 6+
   tutorial_htmlacademyphp_string_detail_grades: Grades 6+
@@ -7128,15 +7154,15 @@ uz:
   tutorial_rptree_string_detail_grades: Grades 6+
   tutorial_codestersunity_string_detail_grades: Grades 6+
   tutorial_codesterssoccer_string_detail_grades: Grades 6+
-  tutorial_breakoutlock_string_detail_grades: Grades 2-8
+  tutorial_breakoutlock_string_detail_grades: 2-8-sinflar
   tutorial_thunkablemask_string_detail_grades: Grades 6+
-  tutorial_cafarming_string_detail_grades: Grades 2-8
-  tutorial_blocksmithyeti_string_detail_grades: Grades 9+
+  tutorial_cafarming_string_detail_grades: 2-8-sinflar
+  tutorial_blocksmithyeti_string_detail_grades: 9+ sinflar
   tutorial_codecapture_string_detail_grades: Grades 6+
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
   tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_codejika_string_detail_grades: Grades 6+
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
@@ -7145,45 +7171,45 @@ uz:
   tutorial_clcarbon_string_detail_grades: Grades 6+
   tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
   tutorial_scigirlscc_string_detail_grades: Grades 2+
-  tutorial_irobotpicture_string_detail_grades: Grades 2-8
-  tutorial_kcjmyself_string_detail_grades: Grades 2-8
+  tutorial_irobotpicture_string_detail_grades: 2-8-sinflar
+  tutorial_kcjmyself_string_detail_grades: 2-8-sinflar
   tutorial_nearpodalgorithms_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodrop_string_detail_grades: Pre-reader - Grade 5
   tutorial_ozobotcolor1_string_detail_grades: Grades 2+
   tutorial_scigirlspixels_string_detail_grades: Grades 2+
-  tutorial_kcjheroines_string_detail_grades: Grades 2-8
-  tutorial_ozobotvalue_string_detail_grades: Grades 2-5
+  tutorial_kcjheroines_string_detail_grades: 2-8-sinflar
+  tutorial_ozobotvalue_string_detail_grades: 2-5-sinflar
   tutorial_icodebytes_string_detail_grades: Pre-reader
   tutorial_clfashion2_string_detail_grades: Grades 6+
   tutorial_ai4all_string_detail_grades: Grades 6+
   tutorial_cldata_string_detail_grades: Grades 6+
-  tutorial_spheroinputs_string_detail_grades: Grades 2-8
-  tutorial_edisoncount_string_detail_grades: Grades 2-8
-  tutorial_spheroloops_string_detail_grades: Grades 2-8
+  tutorial_spheroinputs_string_detail_grades: 2-8-sinflar
+  tutorial_edisoncount_string_detail_grades: 2-8-sinflar
+  tutorial_spheroloops_string_detail_grades: 2-8-sinflar
   tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
   tutorial_clfashion1_string_detail_grades: Grades 6+
-  tutorial_irobottraffic_string_detail_grades: Grades 2-5
+  tutorial_irobottraffic_string_detail_grades: 2-5-sinflar
   tutorial_edisonmystery_string_detail_grades: Grades 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
   tutorial_ozobotknow_string_detail_grades: Grades 2+
-  tutorial_imagilabs_string_detail_grades: Grades 2-8
-  tutorial_irobotsimulator_string_detail_grades: Grades 2-8
+  tutorial_imagilabs_string_detail_grades: 2-8-sinflar
+  tutorial_irobotsimulator_string_detail_grades: 2-8-sinflar
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
   tutorial_firiavirtual_string_detail_grades: Grades 6+
-  tutorial_irobotguesscode_string_detail_grades: Grades 2-8
-  tutorial_ozobotnouns_string_detail_grades: Grades 2-5
+  tutorial_irobotguesscode_string_detail_grades: 2-8-sinflar
+  tutorial_ozobotnouns_string_detail_grades: 2-5-sinflar
   tutorial_nasa3d_string_detail_grades: Grades 6+
   tutorial_blupants_string_detail_grades: Grades 6+
   tutorial_legodance_string_detail_grades: Grades 6-8
-  tutorial_nearpodcoding_string_detail_grades: Grades 9+
+  tutorial_nearpodcoding_string_detail_grades: 9+ sinflar
   tutorial_kcjplastic_string_detail_grades: Grades 2+
-  tutorial_legojourney_string_detail_grades: Grades 2-8
-  tutorial_legohopper_string_detail_grades: Grades 2-8
+  tutorial_legojourney_string_detail_grades: 2-8-sinflar
+  tutorial_legohopper_string_detail_grades: 2-8-sinflar
   tutorial_catrobatembroidery_string_detail_grades: Grades 6+
-  tutorial_irobotphone_string_detail_grades: Grades 2-8
+  tutorial_irobotphone_string_detail_grades: 2-8-sinflar
   tutorial_codeguppydraw_string_detail_grades: Grades 6-8
-  tutorial_codejumper_string_detail_grades: Grades 2-8
+  tutorial_codejumper_string_detail_grades: 2-8-sinflar
   tutorial_meeempathy_string_detail_grades: Grades 2+
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
@@ -7934,6 +7960,8 @@ uz:
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -7958,6 +7986,8 @@ uz:
   tutorial_itchspace_string_platforms: All modern browsers
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: All modern browsers
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -7969,6 +7999,7 @@ uz:
   tutorial_educodesecret_string_platforms: All modern browsers
   tutorial_itchshapes_string_platforms: All modern browsers
   tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
   tutorial_educativechatbot_string_platforms: All modern browsers
   tutorial_educodebasics_string_platforms: All modern browsers
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8640,6 +8671,7 @@ uz:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8661,6 +8693,7 @@ uz:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8672,6 +8705,7 @@ uz:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9369,6 +9403,7 @@ uz:
   tutorial_rpstress_string_detail_programming_languages: Blocks
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9390,6 +9425,7 @@ uz:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blocks
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blocks
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9402,6 +9438,7 @@ uz:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blocks
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -9954,21 +9991,21 @@ uz:
   tutorial_ai-oceans_longdescription: Computer science is about so much more than
     coding! Learn about AI, machine learning, training data, and bias, while exploring
     ethical issues and how AI can be used to address world problems.
-  tutorial_scratchimagine_language: English, Spanish
+  tutorial_scratchimagine_language: Inglizcha, Ispancha
   tutorial_codesterspsa_language: Ingliz
-  tutorial_googlehero_language: English, Spanish
+  tutorial_googlehero_language: Inglizcha, Ispancha
   tutorial_codestersbball_language: Ingliz
-  tutorial_scratchcartoon_language: English, Spanish
+  tutorial_scratchcartoon_language: Inglizcha, Ispancha
   tutorial_codemonkeyjr_language: Ingliz
   tutorial_bananatales_language: Ingliz
-  tutorial_scratchtales_language: English, Spanish
+  tutorial_scratchtales_language: Inglizcha, Ispancha
   tutorial_msemoji_language: Ingliz
   tutorial_cacolor_language: Ingliz
   tutorial_kodablebeach_language: English, Other
   tutorial_tynkeren_language: Ingliz
   tutorial_tynkerjavapro_language: Ingliz
   tutorial_grasshopperhack_language: Ingliz
-  tutorial_pbskids_language: English, Spanish
+  tutorial_pbskids_language: Inglizcha, Ispancha
   tutorial_nclabdata_language: Ingliz
   tutorial_grasshopperphoto_language: Ingliz
   tutorial_tynkerpyland_language: Ingliz
@@ -10000,7 +10037,7 @@ uz:
   tutorial_stemc_blckhole_language: Ingliz
   tutorial_careconfigure_language: Ingliz
   tutorial_rpiscratch_language: Ingliz
-  tutorial_ozaria_language: English, Spanish
+  tutorial_ozaria_language: Inglizcha, Ispancha
   tutorial_ttovum_language: Ingliz
   tutorial_ttpassage_language: Ingliz
   tutorial_tynkerhtmlen_language: Ingliz
@@ -10055,61 +10092,61 @@ uz:
     French (France), German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean,
     Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
     Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
-  tutorial_kuborobo_language: English, Spanish
+  tutorial_kuborobo_language: Inglizcha, Ispancha
   tutorial_ai-oceans_language: Arabic, Czech, Chinese, Danish, Dutch, English, Finnish,
     French, German, Hindi, Indonesian, Italian, Japanese, Russian, Spanish, Tagalog,
     Tamil, Thai, Turkish, Urdu, and 15 more!
   tutorial_scratchimagine_string_detail_grades: Grades 2+
   tutorial_codesterspsa_string_detail_grades: Grades 6+
-  tutorial_googlehero_string_detail_grades: Grades 2-8
+  tutorial_googlehero_string_detail_grades: 2-8-sinflar
   tutorial_codestersbball_string_detail_grades: Grades 6+
   tutorial_scratchcartoon_string_detail_grades: Grades 2+
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
-  tutorial_bananatales_string_detail_grades: Grades 2-8
-  tutorial_scratchtales_string_detail_grades: Grades 2-8
+  tutorial_bananatales_string_detail_grades: 2-8-sinflar
+  tutorial_scratchtales_string_detail_grades: 2-8-sinflar
   tutorial_msemoji_string_detail_grades: Grades 6+
   tutorial_cacolor_string_detail_grades: Grades 6+
   tutorial_kodablebeach_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkeren_string_detail_grades: Grades 2-8
+  tutorial_tynkeren_string_detail_grades: 2-8-sinflar
   tutorial_tynkerjavapro_string_detail_grades: Grades 6+
-  tutorial_grasshopperhack_string_detail_grades: Grades 9+
+  tutorial_grasshopperhack_string_detail_grades: 9+ sinflar
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
-  tutorial_nclabdata_string_detail_grades: Grades 9+
-  tutorial_grasshopperphoto_string_detail_grades: Grades 9+
+  tutorial_nclabdata_string_detail_grades: 9+ sinflar
+  tutorial_grasshopperphoto_string_detail_grades: 9+ sinflar
   tutorial_tynkerpyland_string_detail_grades: Grades 6+
   tutorial_codeitimages_string_detail_grades: Grades 2+
-  tutorial_hyperpadenemy_string_detail_grades: Grades 9+
-  tutorial_tynkerpro_string_detail_grades: Grades 2-8
+  tutorial_hyperpadenemy_string_detail_grades: 9+ sinflar
+  tutorial_tynkerpro_string_detail_grades: 2-8-sinflar
   tutorial_trashtag_string_detail_grades: Grades 6+
-  tutorial_casiege_string_detail_grades: Grades 2-8
+  tutorial_casiege_string_detail_grades: 2-8-sinflar
   tutorial_thunkableyeet_string_detail_grades: Grades 6+
   tutorial_vidcodedeal_string_detail_grades: Grades 6+
-  tutorial_codehsgeno_string_detail_grades: Grades 9+
-  tutorial_hyperpadpong_string_detail_grades: Grades 9+
-  tutorial_tynkerland_string_detail_grades: Grades 2-8
+  tutorial_codehsgeno_string_detail_grades: 9+ sinflar
+  tutorial_hyperpadpong_string_detail_grades: 9+ sinflar
+  tutorial_tynkerland_string_detail_grades: 2-8-sinflar
   tutorial_trinketgirl_string_detail_grades: Grades 6+
   tutorial_rpimosquito_string_detail_grades: Grades 6-8
   tutorial_tynkermars_string_detail_grades: Grades 6+
   tutorial_cityx_string_detail_grades: Grades 6+
   tutorial_vidcodemap_string_detail_grades: Grades 6+
-  tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
+  tutorial_robotmagicfarm_string_detail_grades: 2-8-sinflar
   tutorial_codehstriangle_string_detail_grades: Grades 6+
   tutorial_ttwhitehouse_string_detail_grades: Grades 2+
   tutorial_modulo_string_detail_grades: Grades 6+
-  tutorial_codingtown_string_detail_grades: Grades 2-5
-  tutorial_kanoart_string_detail_grades: Grades 2-5
-  tutorial_dragonscript_string_detail_grades: Grades 9+
+  tutorial_codingtown_string_detail_grades: 2-5-sinflar
+  tutorial_kanoart_string_detail_grades: 2-5-sinflar
+  tutorial_dragonscript_string_detail_grades: 9+ sinflar
   tutorial_uwcloud_string_detail_grades: Grades 2+
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
-  tutorial_stemc_blckhole_string_detail_grades: Grades 9+
+  tutorial_stemc_blckhole_string_detail_grades: 9+ sinflar
   tutorial_careconfigure_string_detail_grades: Grades 6+
-  tutorial_rpiscratch_string_detail_grades: Grades 2-5
+  tutorial_rpiscratch_string_detail_grades: 2-5-sinflar
   tutorial_ozaria_string_detail_grades: Grades 2+
   tutorial_ttovum_string_detail_grades: Grades 6+
-  tutorial_ttpassage_string_detail_grades: Grades 2-8
+  tutorial_ttpassage_string_detail_grades: 2-8-sinflar
   tutorial_tynkerhtmlen_string_detail_grades: Grades 2+
-  tutorial_ttfrog_string_detail_grades: Grades 2-8
+  tutorial_ttfrog_string_detail_grades: 2-8-sinflar
   tutorial_codemojijava_string_detail_grades: Grades 6-8
   tutorial_ccfirewall_string_detail_grades: Grades 6+
   tutorial_htmljs_string_detail_grades: Grades 6-8
@@ -10124,35 +10161,35 @@ uz:
   tutorial_spherosmiles_string_detail_grades: Grades 2+
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
   tutorial_toxarchitect_string_detail_grades: Grades 6+
-  tutorial_idodge_string_detail_grades: Grades 2-8
+  tutorial_idodge_string_detail_grades: 2-8-sinflar
   tutorial_firiacodebot_string_detail_grades: Grades 6+
   tutorial_modlighthouse_string_detail_grades: Pre-reader+
-  tutorial_spherogreen_string_detail_grades: Grades 2-8
-  tutorial_ozopopstar_string_detail_grades: Grades 2-8
+  tutorial_spherogreen_string_detail_grades: 2-8-sinflar
+  tutorial_ozopopstar_string_detail_grades: 2-8-sinflar
   tutorial_eddesign_string_detail_grades: Grades 6+
   tutorial_edshapeup_string_detail_grades: Grades 6+
-  tutorial_ozocolor_string_detail_grades: Grades 2-8
-  tutorial_kcjanimals_string_detail_grades: Grades 2-8
-  tutorial_icomputeeggs_string_detail_grades: Grades 2-8
-  tutorial_rootunplugged_string_detail_grades: Grades 2-8
+  tutorial_ozocolor_string_detail_grades: 2-8-sinflar
+  tutorial_kcjanimals_string_detail_grades: 2-8-sinflar
+  tutorial_icomputeeggs_string_detail_grades: 2-8-sinflar
+  tutorial_rootunplugged_string_detail_grades: 2-8-sinflar
   tutorial_rgtreasure_string_detail_grades: Pre-reader - Grade 5
-  tutorial_peblioportraits_string_detail_grades: Grades 9+
-  tutorial_rootcodebreak_string_detail_grades: Grades 2-8
-  tutorial_microbit14_string_detail_grades: Grades 2-8
+  tutorial_peblioportraits_string_detail_grades: 9+ sinflar
+  tutorial_rootcodebreak_string_detail_grades: 2-8-sinflar
+  tutorial_microbit14_string_detail_grades: 2-8-sinflar
   tutorial_barobomoon_string_detail_grades: Grades 6+
   tutorial_eddog_string_detail_grades: Grades 2-6
-  tutorial_microbit15_string_detail_grades: Grades 2-8
-  tutorial_unity_string_detail_grades: Grades 9+
+  tutorial_microbit15_string_detail_grades: 2-8-sinflar
+  tutorial_unity_string_detail_grades: 9+ sinflar
   tutorial_blockscadtarget_string_detail_grades: Grades 6+
   tutorial_tcadicicles_string_detail_grades: Grades 7-8
   tutorial_blockscadscale_string_detail_grades: Grades 6+
   tutorial_tcadloops_string_detail_grades: Grades 5-6
-  tutorial_phidgets_string_detail_grades: Grades 9+
-  tutorial_kcjmerry_string_detail_grades: Grades 2-8
+  tutorial_phidgets_string_detail_grades: 9+ sinflar
+  tutorial_kcjmerry_string_detail_grades: 2-8-sinflar
   tutorial_modvariables_string_detail_grades: Grades 6+
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
-  tutorial_ikodexmas_string_detail_grades: Grades 2-5
+  tutorial_ikodexmas_string_detail_grades: 2-5-sinflar
   tutorial_rpisensehat_string_detail_grades: Grades 6+
   tutorial_modtraits_string_detail_grades: Grades 2+
   tutorial_mee_string_detail_grades: Grades 2+
@@ -10531,10 +10568,10 @@ uz:
   administrator: Administrator
   parent: Parent
   volunteer_or_advocate: Volunteer/Community Advocate
-  other: Other
-  other_describe: Other (please describe below)
-  none: None
-  some: Some
-  all: All
-  dont_know: I don't know
-  language_label: Language
+  other: Boshqa
+  other_describe: Boshqa (iltimos, quyida tavsiflang)
+  none: Hech qaysi
+  some: Ba'zi
+  all: Barcha
+  dont_know: Bilmayman
+  language_label: Til

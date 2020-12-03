@@ -16,7 +16,7 @@
 #  index_school_districts_on_state          (state)
 #
 
-class SchoolDistrict < ActiveRecord::Base
+class SchoolDistrict < ApplicationRecord
   include Seeded
 
   has_many :regional_partners_school_districts

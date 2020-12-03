@@ -536,6 +536,23 @@ sk:
           by sme použiť 5 blokov "posun sa dopredu", alebo môžeme počítaču povedať,
           nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného
           opakovacieho bloku.
+    C4_conditionals:
+      1:
+        text: Máme nový blok, ktorý sa volá blok ak / inak. Je to podmienka rovnako
+          ako blok ak, ktorý ste používali v predošlých úlohách. Ale teraz je na spodu
+          bloku nová časť, ktorá hovorí inak. Blok ak / inak umožňuje včele rozhodnúť
+          sa medzi dvoma sadami akcií. Ak je včela pri kvete, vykoná sadu akcií, ktoré
+          zadáte v prvej časti, kde sa hovorí, vykonaj ak. Ak včela nie je pri kvete,
+          vykoná sadu akcií, ktoré vložíte na miesto, kde je uvedené inak.
+      2:
+        text: Podmienky ak určujú, ako sú počítače schopné prijímať rozhodnutia. Ľudia
+          nastavujú pre počítač podmienky, ktoré hovoria, že ak sa počítač vyskytne
+          v určitej situácii, urobí jedno. Inak urobí druhé. Horná časť nášho bloku
+          ak / inak hovorí, ak je pri kvete. Horná časť nášho bloku by však mohla
+          hovoriť aj iné veci, napríklad ak sa nektár rovná 2 alebo je pred nami cesta,
+          náš blok sa bude správať rovnako. To znamená, ak je vyhlásenie v hornej
+          časti pravdivé, vykoná sa prvá sada akcií. Ale ak je vyhlásenie v hornej
+          časti nepravdivé, vykoná sa druhá sada akcií.
     infinity_playlab_events:
       1:
         text: Teraz sa naučíme o niečom, čo programátori hier používajú každý deň.
@@ -1689,6 +1706,36 @@ sk:
         text: "No, bolo to trochu divné. Ako to, že sépie vedia programovať? Dokonca
           som si myslela, že nemajú prsty. Takže teraz už vieme, čo sú cykly. Pomocou
           nich určite natrafíme na \nďalšie poklady."
+    mc_2018_conditionals:
+      1:
+        text: Wow! Ďalšie tri úlohy vyriešené! Chytili sme...lososa. Nie tak vzrušujúce
+          ako hromada zlata, ale berieme to, čo dostaneme. A mám taký pocit, že ulita
+          lodenky sa bude hodiť neskôr. Zaujímalo by ma, čo sa skrýva v týchto ruinách.
+          Možno ďalšia nápoveda! Pozrime sa dovnútra.
+      2:
+        text: Volám sa Netty a vítam ťa v mojich ruinách. Rozhodujeme sa vždy na základe
+          podmienok. Keď to vyzerá na dážď, zoberieme si dáždnik. Ak sme hladní, dáme
+          si niečo pod zub.
+      3:
+        text: Ak zbadáme creepera, z diaľky sa mu vyhneme. Aj počítače robia takéto
+          typy rozhodnutí. Pomocou kódu môžu naozaj reagovať na podmienky.
+      4:
+        text: Ak chceš naprogramovať takúto odpoveď pomocou príkazov, vyber si blok
+          s podmienkou ak.
+      5:
+        text: Na vytvorenie príkazu vyber rozbaľovaciu ponuku.
+      6:
+        text: "Napríklad, keď napíšeš príkaz \"ak cesta doprava\" a do podmienky uvedieš
+          príkaz otoč sa vpravo, potom keď Steve dosiahne otvorenú cestu vpravo, zakaždým
+          zabočí doprava. Ak neexistuje východ vpravo, nezabočí doprava. Tieto príkazy
+          s podmienkou sú užitočné, keď spustíš kód v nepredvídateľných situáciách,
+          ako sú napr. tajuplné ruiny \npodmorských jaskýň."
+      7:
+        text: Skús použiť bloky s podmienkou ak a zopakuj si kód.
+      8:
+        text: Wow! Nettyine ruiny sú úžasné. Musím sa už odsťahovať od svojich rodičov.
+          Čo si myslíš? Sú podmienky správnou voľbou na vyriešenie záverečných úloh?
+          Dajme tomu šancu.
     hoc_dance_warmup_2019:
       1:
         text: 'Hodina Kódu | Tanečná Párty: Zahrej sa'

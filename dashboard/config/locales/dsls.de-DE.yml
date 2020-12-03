@@ -3505,13 +3505,28 @@ de-DE:
             dieses Programm scheitern lässt? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Scrat wird die Eichel erreichen. Es gibt keine Fehler in diesem Code.
+          correct: true
+          feedback: Falsch. Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
+            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
+        - text: Scrat wird die Eichel nicht erreichen, da er sich in die falsche Richtung
+            dreht.
+          correct: true
+          feedback: Richtig! Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
+            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
+        - text: Scrat wird die Eichel nicht erreichen, da es nicht genug 'vorwärts
+            bewegen' Blöcke gibt.
+          correct: true
+          feedback: Richtig! Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
+            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
         - text: Ich weiß es nicht.
           correct: true
+          feedback: In diesem Code befinden sich zwei Fehler. Zunächst dreht sich
+            Scrat in die falsche Richtung. Anschließend bewegt sich Scrat nicht oft
+            genug vorwärts, um die Eichel zu erreichen.
         questions:
-        - {}
+        - text: Suche nach Fehlern in diesem Code. Wird Scrat die Eichel erreichen
+            oder gibt es ein Problem?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
@@ -5237,8 +5252,25 @@ de-DE:
 
       courseExpress_EOC_2020:
         display_name: Projekt am Ende des Kurses
+        description: Du hast die letzte Lektion des Express-Kurses erreicht! Wähle
+          ein Projekt zum Erstellen.
       courseExpress_project_exemplars_2019_2020:
         content1: Test Markdown Lehrbuchseite
+        markdown: |+
+          # Beispielprojekte
+
+          Du beginnst gleich mit deinem Abschlussprojekt. Bevor du anfängst, schau dir noch kurz diese Beispielprojekte an.
+
+          | Panik! in der Disco (Tanzparty) | Strandszene(Künstler) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Tanze los, während deine Backup-Tänzer für Stimmung sorgen  | Versuche Farben und Hintergrund dieser Szene zu ergänzen! |
+
+          | Blumen aus Schneeflocken (Frozen) | Flugzeugspiel (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Werde kreativ mit Funktionen! | Versuche dieses Spiel um Text und Punktestand zu ergänzen! |
+
       courseF_EOC_2020:
         description: Du hast das Ende von Kurs F erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
@@ -6449,5 +6481,19 @@ de-DE:
           * [Aluminiumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (kopiere als [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       outbreak_story:
         content1: hier die Beschreibung
+        markdown: |
+          # Ausbruch: Codieren Sie Ihre eigene Simulation
+
+          ## Willkommen in Monster Town!
+          Monster Town war normalerweise ein glücklicher und gesunder Ort. Die Monster von Monster Town liebten es, ihre Freunde zu besuchen.
+
+          ## Ein Virus kommt in die Stadt
+          Eines Tages wurde einem der Monster schlecht. Das Monster hatte einen ** Virus ** gefangen! Ein Virus ist ein winziger Keim, der Sie krank machen kann. Die anderen Monster waren nicht allzu besorgt. Sie besuchten immer wieder ihre Freunde.
+
+          ## Das Virus verbreitet sich
+          Bald wurden zwei weitere Monster darauf krank. Es war der gleiche Virus! Es scheint, dass sie den Virus von ihrem Freund bekommen haben.
+
+          ## Ausbruch!
+          Das Virus breitete sich langsam auf andere Monster in der Nähe aus. Die gesunde Monster begannen sich Sorgen zu machen, dass sie alle krank werden würden. Die kranken Monster begannen sich Sorgen zu machen, dass sie das Virus an alle anderen weitergeben würden.
       outbreak_story2:
         content1: hier die Beschreibung

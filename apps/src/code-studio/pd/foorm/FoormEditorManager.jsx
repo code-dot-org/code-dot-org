@@ -100,6 +100,15 @@ class FoormEditorManager extends React.Component {
   render() {
     return (
       <div>
+        <h1>Foorm Editor</h1>
+        <p>
+          Interface for creating and making updates to Foorm surveys. Check out
+          our{' '}
+          <a href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor">
+            How To
+          </a>{' '}
+          to get started.
+        </p>
         <div>
           <DropdownButton id="load_config" title="Load Survey...">
             {this.state.formattedConfigurationOptions}

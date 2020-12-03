@@ -41,6 +41,12 @@ tr:
     üzerinde dilde sunulmaktadır.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: Hour of Code 2020 yaklaşıyor!
+  hoc2020_ai_header: Yapay Zekayı Keşfedin
+  hoc2020_ai_description: AI ve Makine Öğrenimi tüm dünyamızı etkiliyor. Yapay zekayı
+    yeni bir video serisinde keşfetmek, Okyanuslar için Yapay Zeka eğitimini 25'ten
+    fazla dilde vermek, etik ve yapay zeka konularını tartışmak ve daha fazlası için
+    bize katılın...
   hoc2019_header: Bilgisayar Bilimlerini Öğren, Dünyayı değiştir.
   hoc2019_header_line1_mobile: Bilgisayar Bilimlerini Öğren.
   hoc2019_header_line2_mobile: Dünyayı değiştir.
@@ -976,6 +982,7 @@ tr:
   highlights_constant_athletes_short_heading: Kendini zorla
   footer_copyright_message: Copyright 2015 Code.org. Tüm hakları saklıdır.
   footer_trademark_message: Hour of Code™ ve Hora del Código®, Code.org ticari markalarıdır.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Ortaklar
   footer_menu_contact: Bize Ulaşın
   footer_menu_support: Destek
@@ -1585,7 +1592,7 @@ tr:
   tutorial_n2y_name: Bitt Bott Dünyayı Keşfediyor
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_toxicodepython_name: Silent Teacher ile Python'u keşfedin
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
@@ -1593,9 +1600,10 @@ tr:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1611,15 +1619,16 @@ tr:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1628,6 +1637,7 @@ tr:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastik Kirliliği Kamu Spotu
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1637,7 +1647,7 @@ tr:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1693,11 +1703,11 @@ tr:
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Kodlu Nakış
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: İki Köylü Bir Minecraft Masalı
   tutorial_danceparty_shortdescription: Arkadaşlarınızla paylaşmak için bir Dans Partisi
     kodlayın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 kişi daha!
   tutorial_chibitronics_shortdescription: Kendi hikayenizi ışıklandırmak için bir
@@ -5540,9 +5550,10 @@ tr:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_toxicodepython_longdescription: Herhangi bir kelime veya açıklama olmadan
+    Python'un temellerini keşfedin. Sessiz öğretmenimiz size bazı kuralları tahmin
+    etmenize ve kendi hatalarınızdan ders çıkarmanıza yol açacak çeşitli zorluklar
+    sunacak.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
     that has taken over the world! Along the way, you'll meet interesting characters
@@ -5568,20 +5579,22 @@ tr:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5627,12 +5640,12 @@ tr:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5651,16 +5664,18 @@ tr:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5680,6 +5695,12 @@ tr:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: Okyanuslarımızı dolduran plastik problemi
+    gittikçe kötüleşiyor. Neyse ki Plastik Kirliliği Kamu Spotu yardımıyla kodlama
+    ile sesinizi duyurabilirsiniz. JavaScript kullanarak plastik kirliliği üzerine
+    bir Kamu Spotu kodladıktan sonra, önemsediğiniz herhangi bir konu hakkında ikinci
+    bir video üretebilirsiniz! Özgün bir proje yaratmak için döngüler, sinüs dalgaları
+    ve kişiselleştirilmiş emojiler kullanmayı öğrenin.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5710,11 +5731,11 @@ tr:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5924,8 +5945,8 @@ tr:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Tasarımınızı Android telefonunuzda
+    kodlayın ve tişörtünüze, pantolonunuza, spor çantanıza veya ayakkabılarınıza dikin!
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -5938,11 +5959,11 @@ tr:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Köylüler ve Serseri Köylüler yüzyıllar boyunca
+    aynı alanı paylaştılar ama birbirleriyle nadiren etkileşime geçtiler. Şimdi kodun
+    gücünü kullanarak iki köyü bir araya getirebilirsin. Oyuncular komşuları için
+    empati ve şefkat deneyimi yaşayacak, iş birliği ve kapsayıcılık hakkında bilgi
+    edinecek ve hepimizi birbirimizden benzersiz kılan çeşitliliği kucaklayacaklar.
   tutorial_dance2019_language: Arapça, Çince, Çekçe, Danca, Felemenkçe, İngilizce,
     Fince, Fransızca, Almanca, Yunanca, Hintçe, Macarca, Endonezyaca, İtalyanca, Japonca,
     Korece, Malayca, Lehçe, Portekizce ve 10 daha fazlası!
@@ -6620,7 +6641,7 @@ tr:
   tutorial_pets_language: İngilizce
   tutorial_petvet_language: İngilizce
   tutorial_superhero_language: İngilizce
-  tutorial_vidcodeplastic_language: İngilizce, İbranice
+  tutorial_vidcodeplastic_language: İngilizce
   tutorial_vidcodetypeface_language: İngilizce
   tutorial_washustorm_language: İngilizce
   tutorial_activitypackets_language: İngilizce
@@ -6633,9 +6654,10 @@ tr:
   tutorial_n2y_language: İngilizce
   tutorial_microsoftarcade_language: İngilizce
   tutorial_csfirstunplugged_language: İngilizce, İspanyolca (Meksika)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: danca, hollandaca, ingilizce, ingilizce (İngiltere),
+    estonca, fransızca, almanca, endonezya dili, italyanca, diğer, lehçe, portekizce
+    (Brezilya), portekizce (Portekiz), romence, ispanyolca (İspanya), ispanyolca (Meksika)
+    ), isveççe, türkçe
   tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
     Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodedate_language: İngilizce
@@ -6647,6 +6669,7 @@ tr:
     (Mexico)
   tutorial_bsdcause_language: İngilizce
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: İngilizce
   tutorial_tttractor_language: İngilizce
   tutorial_codeillusionmickey_language: İngilizce
@@ -6669,6 +6692,7 @@ tr:
   tutorial_codestersdistance_language: İngilizce
   tutorial_itchspace_language: İngilizce
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: İngilizce
   tutorial_itchfish_language: İngilizce
   tutorial_bsdwebsite_language: İngilizce
@@ -6676,11 +6700,12 @@ tr:
   tutorial_itchwebcam_language: İngilizce
   tutorial_itchball_language: İngilizce
   tutorial_ttrace_language: İngilizce
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: İngilizce
   tutorial_codeguppytext_language: İngilizce
+  tutorial_vidcodeplastiche_language: İngilizce, İbranice
   tutorial_educativechatbot_language: İngilizce
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: İngilizce
@@ -6746,13 +6771,17 @@ tr:
   tutorial_kcjplastic_language: İngilizce, Fransızca
   tutorial_legojourney_language: İngilizce
   tutorial_legohopper_language: İngilizce
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Arapça, Bengalce, Boşnakça, Basitleştirilmiş
+    Çince, Hırvatça, Çekçe, İngilizce, İngilizce (İngiltere), Fransızca, Almanca,
+    Hintçe, Endonezce, İtalyanca, Japonca, Korece, Norveççe (Nynorsk), Diğer, Lehçe,
+    Portekizce (Brezilya), Portekizce ( Portekiz), Rusça, Sırpça (Kiril), Sırpça (Latin),
+    Slovakça, İspanyolca (İspanya, Meksika), Swahili, İsveççe, Tamilce, Tayca, Türkçe,
+    Urduca (Pakistan), Vietnamca
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: İngilizce
-  tutorial_meeempathy_language: İngilizce
+  tutorial_meeempathy_language: Çince, Danca, Felemenkçe, İngilizce, Fransızca, İtalyanca,
+    Japonca, Korece, Norveççe, Portekizce, İspanyolca, İsveççe, Türkçe
   tutorial_dance2019_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_danceparty_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_chibitronics_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -6761,10 +6790,10 @@ tr:
   tutorial_star-wars_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_gumadventure_string_detail_grades: 6-8. Sınıflar
   tutorial_mchoc_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_vidnews_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_vidnews_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kodable-pre_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_highseas_string_detail_grades: 2-8. Sınıflar
-  tutorial_capython_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_capython_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_frzn_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_cocom_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_play-lab_string_detail_grades: 2. ve üzeri Sınıflar
@@ -6774,28 +6803,28 @@ tr:
   tutorial_kanopixel_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_foos_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_tynkerdd_string_detail_grades: 2-8. Sınıflar
-  tutorial_tynkerana_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tynkerana_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_vidcard_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_spritebox_string_detail_grades: 2-8. Sınıflar
-  tutorial_tynkerch_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tynkerch_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_lightbot_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_hoc_string_detail_grades: gösterme
   tutorial_code_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_tinspire_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tinspire_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_itchbounceball_string_detail_grades: 2-8. Sınıflar
-  tutorial_vidclim_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_matlab_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_vidclim_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_matlab_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_flap_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_galaxy_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_galaxy_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_inf_string_detail_grades: 2-8. Sınıflar
   tutorial_tynkersol_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_itchg_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_itchg_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_como_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_processfound_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_tynkerhomo_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tynkerhomo_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_art_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_tynkerbrick_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_itchbio_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_itchbio_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_itchj_string_detail_grades: 6-8. Sınıflar
   tutorial_tickleo_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_hopgeo_string_detail_grades: 2-8. Sınıflar
@@ -6806,67 +6835,67 @@ tr:
   tutorial_livecode_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_cocomgame_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_tynkerspin_string_detail_grades: Okuma Öncesi- 8. Sınıf
-  tutorial_code-avengers_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_code-avengers_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tynkercq_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_cmgame_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_cmgame_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codesters_string_detail_grades: gösterme
-  tutorial_qrm_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_texas-instruments_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_cajava_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_qrm_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_texas-instruments_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_cajava_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codehs_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_hopemo_string_detail_grades: 2-8. Sınıflar
   tutorial_tynkercm_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_codesterswintergreet_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_codestersc_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codestersc_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codestersturtle_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_penjee_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_penjee_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_trinket_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_frogger_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_frogger_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tynkereco_string_detail_grades: 2-8. Sınıflar
   tutorial_mitedarc_string_detail_grades: 6-8. Sınıflar
-  tutorial_khan_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_tynkerd_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_khan_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_tynkerd_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_cdmy_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_codestersdance_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codestersbasketball_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_nclkarel_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codestersdance_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codestersbasketball_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_nclkarel_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_buildpong_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_tynkerdrones_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_carla_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_zulama_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_capost_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_carla_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_zulama_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_capost_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_marco_string_detail_grades: 2-8. Sınıflar
-  tutorial_codestersflappybike_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codestersflappybike_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kanopong_string_detail_grades: 6-8. Sınıflar
   tutorial_tynkerright_string_detail_grades: 2-8. Sınıflar
   tutorial_touchdevelop_string_detail_grades: gösterme
-  tutorial_tynkercc_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tynkercc_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bamboo_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_robojav_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_roboba_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_robojav_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_roboba_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_knodsnake_string_detail_grades: 6-8. Sınıflar
-  tutorial_soccharater_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_silent_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_soccharater_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_silent_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_robomesh_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_amaze_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_codestersds_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_knodtext_string_detail_grades: 6-8. Sınıflar
-  tutorial_alicegar_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codesterstransform_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_flexfrog_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_alicegar_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codesterstransform_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_flexfrog_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codemoji_string_detail_grades: gösterme
-  tutorial_robobii_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_robobii_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_robobm_string_detail_grades: 6-8. Sınıflar
   tutorial_codingrobots_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_robob_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_robob_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_coders_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_tynkerhw_string_detail_grades: 2-8. Sınıflar
   tutorial_tynkermh_string_detail_grades: 2-8. Sınıflar
-  tutorial_caphoto_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_caphoto_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_mozillahw_string_detail_grades: 6-8. Sınıflar
   tutorial_ticklep_string_detail_grades: gösterme
   tutorial_bbot_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_scratchg_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_scratchg_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_roboticfriends_string_detail_grades: Bütün Yaşlar
   tutorial_sjforest_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_sjgreet_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -6874,19 +6903,19 @@ tr:
   tutorial_fufafrenz_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_bbcgeo_string_detail_grades: gösterme
   tutorial_chspixel_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_hummingbird_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_recoloring_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_hummingbird_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_recoloring_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bbcchem_string_detail_grades: gösterme
   tutorial_floalgo_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_flocond_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_floloops_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_pgts_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_pgts_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ozo_string_detail_grades: Bütün Yaşlar
   tutorial_bbcla_string_detail_grades: gösterme
   tutorial_bbcsci_string_detail_grades: gösterme
   tutorial_tlctour_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_codesterstj_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_tlclocked_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tlclocked_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_baubles_string_detail_grades: 2-8. Sınıflar
   tutorial_bbcart_string_detail_grades: gösterme
   tutorial_tlcknight_string_detail_grades: 2. ve üzeri Sınıflar
@@ -6908,12 +6937,12 @@ tr:
   tutorial_ijournalist_string_detail_grades: 2-8. Sınıflar
   tutorial_bbcmusic_string_detail_grades: gösterme
   tutorial_secretcodes_string_detail_grades: 6-8. Sınıflar
-  tutorial_tlchex_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tlchex_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tickles_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_ozogame_string_detail_grades: Bütün Yaşlar
   tutorial_vidcodeio_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_besttech_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_tlcbrain_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tlcbrain_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_hopquiz_string_detail_grades: 6-8. Sınıflar
   tutorial_unfortunate_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_cha_string_detail_grades: 6-8. Sınıflar
@@ -6923,7 +6952,7 @@ tr:
   tutorial_arduino_string_detail_grades: 6-8. Sınıflar
   tutorial_introrobo_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_tlcinvis_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_tlcjflap_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tlcjflap_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_procolor_string_detail_grades: Okuma Öncesi- 8. Sınıf
   tutorial_spiralsfinch_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_ozoi_string_detail_grades: Bütün Yaşlar
@@ -6935,40 +6964,40 @@ tr:
   tutorial_mazefinch_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_tlccc_string_detail_grades: 2-8. Sınıflar
   tutorial_tlcdoodle_string_detail_grades: 2-8. Sınıflar
-  tutorial_tlcpunch_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tlcpunch_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_finchfract_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_tlcmind_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tlcmind_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tlctelebot_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_tlcaus_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tlcaus_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_oralhist_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_tlcmicro_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_imathematician_string_detail_grades: 2-8. Sınıflar
-  tutorial_tlcmagic_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tlcmagic_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_scratchmus_string_detail_grades: 2-8. Sınıflar
   tutorial_scratchanim_string_detail_grades: 2-8. Sınıflar
   tutorial_scratchfly_string_detail_grades: 2-8. Sınıflar
   tutorial_tynkerarc_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_grokffpython_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_grokffblock_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_grokeliza_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_grokffpython_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_grokffblock_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_grokeliza_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tynkercan_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_grokflags_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_grokflags_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_robomind_string_detail_grades: 2-8. Sınıflar
   tutorial_scratchanimwork_string_detail_grades: 2-8. Sınıflar
   tutorial_adventureq_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_khan-es_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_kpt_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_kpl_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_khe_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_kfr_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_app-inventor_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_khan-es_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_kpt_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_kpl_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_khe_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_kfr_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_app-inventor_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bits_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_blockly_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_blockly_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tynker_string_detail_grades: gösterme
   tutorial_baypt_string_detail_grades: Bütün Yaşlar
   tutorial_code-combat_string_detail_grades: gösterme
   tutorial_mky_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_spellcraft_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_spellcraft_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_pirates_string_detail_grades: 2-8. Sınıflar
   tutorial_csfirst_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_loopedy_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -6980,7 +7009,7 @@ tr:
   tutorial_scratch_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_bayes_string_detail_grades: Bütün Yaşlar
   tutorial_gumball_string_detail_grades: gösterme
-  tutorial_hrm_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_hrm_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ice-age_string_detail_grades: gösterme
   tutorial_koapp_string_detail_grades: gösterme
   tutorial_lightbot-intl_string_detail_grades: Okuma Öncesi- 8. Sınıf
@@ -6996,7 +7025,7 @@ tr:
   tutorial_spherov_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_swb_string_detail_grades: gösterme
   tutorial_build-a-galaxy_string_detail_grades: gösterme
-  tutorial_alicesims_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_alicesims_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tchr_string_detail_grades: gösterme
   tutorial_robogame_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_tap_string_detail_grades: 2. ve üzeri Sınıflar
@@ -7015,51 +7044,51 @@ tr:
   tutorial_solopython_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_kodableint_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_kodableadv_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_tynkertj_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_wolframa_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_wolframm_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_wolframspi_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_wolframsph_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_wolframp_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_wolframn_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tynkertj_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_wolframa_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_wolframm_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_wolframspi_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_wolframsph_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_wolframp_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_wolframn_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_soloweb_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_khanweb_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_khandata_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_khandata_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_robomeshiq_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_googlelogo_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_playtune_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_playtune_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_computeit_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_codesterssj_string_detail_grades: 2-8. Sınıflar
-  tutorial_cmchat_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_cmchat_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tynkerdb_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_cmbuild_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_cmbuild_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_robotrattle_string_detail_grades: 2-8. Sınıflar
   tutorial_codestersh_string_detail_grades: 2-8. Sınıflar
-  tutorial_codehsdigipixel_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_ccbinary_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codehsturtle_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_grokhd_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_grokem_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codehsdigipixel_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_ccbinary_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codehsturtle_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_grokhd_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_grokem_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kodmaze_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_codestersa_string_detail_grades: 2-8. Sınıflar
   tutorial_cmdodo_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_tynkerspace_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_gfbloons_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_raspipong_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_codehsvr_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codehsvr_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codesterstp_string_detail_grades: 6-8. Sınıflar
   tutorial_codestersbb_string_detail_grades: 6-8. Sınıflar
   tutorial_gfcrossyroad_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_googleww_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_codehsjsapp_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codehsjsapp_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_gfmihi_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_hopdropphone_string_detail_grades: 2-8. Sınıflar
   tutorial_techfaa_string_detail_grades: Üniversite
   tutorial_codehsjsgraph_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_thunkable_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_thunkable_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_hopcrossyroad_string_detail_grades: 2-8. Sınıflar
   tutorial_switchglitch_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_codecar_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codecar_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codesterscp_string_detail_grades: 6-8. Sınıflar
   tutorial_grokpetblock_string_detail_grades: 6-8. Sınıflar
   tutorial_techbim_string_detail_grades: Üniversite
@@ -7071,8 +7100,8 @@ tr:
   tutorial_myradream_string_detail_grades: 2-8. Sınıflar
   tutorial_thinkfun_string_detail_grades: 2-8. Sınıflar
   tutorial_hopfireworks_string_detail_grades: 2-8. Sınıflar
-  tutorial_grokspace_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codehspython_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_grokspace_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codehspython_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codehsjava_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_techioda_string_detail_grades: Üniversite
   tutorial_grokmonster_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -7080,8 +7109,8 @@ tr:
   tutorial_techga_string_detail_grades: Üniversite
   tutorial_techioan_string_detail_grades: Üniversite
   tutorial_techiogsr_string_detail_grades: Üniversite
-  tutorial_groktunnel_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_stemcod_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_groktunnel_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_stemcod_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_techikb_string_detail_grades: Üniversite
   tutorial_kanostreet_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_nyblebot_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -7089,32 +7118,32 @@ tr:
   tutorial_techapf_string_detail_grades: Üniversite
   tutorial_techfpjs_string_detail_grades: Üniversite
   tutorial_techlinq_string_detail_grades: Üniversite
-  tutorial_gpbcatapult_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_quorumastro_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_gpbcatapult_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_quorumastro_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_alicewonder_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rginter_string_detail_grades: 6-8. Sınıflar
-  tutorial_cssgrid_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_cssgrid_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_jshero_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_codemojipy_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_nclabdrone_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gpbcircle_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gpbpaint_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_cocomarcade_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_nclabdrone_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gpbcircle_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gpbpaint_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_cocomarcade_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_techcpp_string_detail_grades: Üniversite
   tutorial_beetik_string_detail_grades: 6-8. Sınıflar
-  tutorial_codedj_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_rgadvan_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codedj_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_rgadvan_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codehsrn_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_codehswd_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codehswd_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_turtlerobot_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_ozoevo_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_ozoexped_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_ozoevo_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_ozoexped_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ozojourney_string_detail_grades: 2-8. Sınıflar
   tutorial_ozocodes_string_detail_grades: Bütün Yaşlar
   tutorial_ozoeclipse_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_ozosimulator_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_ozoalgorithm_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_ozotimer_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_ozosimulator_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_ozoalgorithm_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_ozotimer_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ozohabits_string_detail_grades: Bütün Yaşlar
   tutorial_ozoprogram_string_detail_grades: 2-8. Sınıflar
   tutorial_ozopair_string_detail_grades: 2. ve üzeri Sınıflar
@@ -7137,9 +7166,9 @@ tr:
   tutorial_lbvariables_string_detail_grades: 2-8. Sınıflar
   tutorial_lbfunctions_string_detail_grades: 2-8. Sınıflar
   tutorial_lblogic_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_lbworld_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_lbworld_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_lbloops_string_detail_grades: 2-8. Sınıflar
-  tutorial_lbtug_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_lbtug_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_lbpotato_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_lbguitar_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_lbio_string_detail_grades: 2-8. Sınıflar
@@ -7148,14 +7177,14 @@ tr:
   tutorial_wonzoo_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_wontrip_string_detail_grades: 2-8. Sınıflar
   tutorial_woncollect_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_wonsecret_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_wonsecret_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_hsscience_string_detail_grades: 2-8. Sınıflar
-  tutorial_popculture_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_popculture_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_legorobust_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_legoplants_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_legopark_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_legodetect_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_legolight_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_legopark_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_legodetect_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_legolight_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_alexa_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_grokpetmicro_string_detail_grades: 6-8. Sınıflar
   tutorial_pirateplunder_string_detail_grades: 2-8. Sınıflar
@@ -7164,24 +7193,24 @@ tr:
   tutorial_cajump_string_detail_grades: 2-8. Sınıflar
   tutorial_carest_string_detail_grades: 2-8. Sınıflar
   tutorial_accai_string_detail_grades: 2-8. Sınıflar
-  tutorial_vceclipse_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_pmzero_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_vceclipse_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_pmzero_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_hsela_string_detail_grades: 2-8. Sınıflar
   tutorial_ticklear_string_detail_grades: 2-8. Sınıflar
   tutorial_bcrobot_string_detail_grades: 2-8. Sınıflar
-  tutorial_bcsnow_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_bcsnow_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ifly_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_idowedo_string_detail_grades: 2-8. Sınıflar
-  tutorial_diggindwarf_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_diggindwarf_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_rmedr_string_detail_grades: 2-8. Sınıflar
   tutorial_spheroit_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_gameofcodes_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_blocklygames_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_spherohello_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_spheroarcade_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_bcpy1_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_bcpy2_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_bcjs1_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_blocklygames_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_spherohello_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_spheroarcade_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_bcpy1_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_bcpy2_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_bcjs1_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bcjs2_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_3dbearmars_string_detail_grades: 2-8. Sınıflar
   tutorial_alexaskill_string_detail_grades: 2-8. Sınıflar
@@ -7190,27 +7219,27 @@ tr:
   tutorial_blockscadbirdhouses_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_blockscadclock_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_blockscaddinner_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_blockscadicecream_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_blockscadicecream_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_blockscadpizza_string_detail_grades: 6-8. Sınıflar
   tutorial_blockscadsugar_string_detail_grades: 6-8. Sınıflar
   tutorial_bsgridlight_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_bpartscratch_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_bpartvid_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_bpartscratch_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_bpartvid_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bpenglishscratch_string_detail_grades: 2-8. Sınıflar
   tutorial_bpenglishvid_string_detail_grades: 2-8. Sınıflar
   tutorial_bphealthscratch_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_bphealthvid_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_bphealthvid_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bpmathscratch_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_bpmathvid_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_bpmathvid_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bpmlkscratch_string_detail_grades: 2-8. Sınıflar
   tutorial_bpmlkvid_string_detail_grades: 6-8. Sınıflar
   tutorial_bpsafetyscratch_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_bpsafetyvid_string_detail_grades: 6-8. Sınıflar
   tutorial_bpsciencescratch_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_bpsciencevid_string_detail_grades: 6-8. Sınıflar
-  tutorial_bptechscratch_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_bptechvid_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_caflags_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_bptechscratch_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_bptechvid_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_caflags_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_matariki_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_carestaurant_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_casea_string_detail_grades: Okuma öncesi- 5. Sınıf
@@ -7218,37 +7247,37 @@ tr:
   tutorial_ccwslimer_string_detail_grades: 2-8. Sınıflar
   tutorial_codinggalaxy_string_detail_grades: Okuma Öncesi- 8. Sınıf
   tutorial_boatrace_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_ccplay_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_ccplay_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_grinch_string_detail_grades: 2-8. Sınıflar
   tutorial_codehsart_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_codehsbitcoin_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_codehsblockchain_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_codehscipher_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codehscipher_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codehscollision_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_codehsmath_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codehsmusic_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codehssports_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codehsmath_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codehsmusic_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codehssports_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codemojipizza_string_detail_grades: 2-8. Sınıflar
-  tutorial_moonlander_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_moonlander_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_sushicards_string_detail_grades: 2-8. Sınıflar
   tutorial_codesparkcreate_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_hardvsoft_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_codestersecard_string_detail_grades: 6-8. Sınıflar
-  tutorial_codesterslogo_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codesterstshirt_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codesterslogo_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codesterstshirt_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codewards_string_detail_grades: 2-8. Sınıflar
   tutorial_olympics_string_detail_grades: 2-8. Sınıflar
   tutorial_codinismhero_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_discovery_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_csfirstname_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_obstaclecourse_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_edisonmove_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_edisonspider_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_edisonmove_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_edisonspider_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_edisonspotlight_string_detail_grades: 2-8. Sınıflar
-  tutorial_firiapython_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gamefrootsquid_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_duckpiano_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gpsound_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_firiapython_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gamefrootsquid_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_duckpiano_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gpsound_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_groklearningpython_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_htmltimetravel_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_hp_flappy_string_detail_grades: 9. ve üzeri Sınıflar
@@ -7258,32 +7287,32 @@ tr:
   tutorial_imake_string_detail_grades: Okuma Öncesi- 1. Sınıf
   tutorial_imorse_string_detail_grades: 2-8. Sınıflar
   tutorial_kanohp_string_detail_grades: 2-8. Sınıflar
-  tutorial_khanwebpages_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_khanwebpages_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kibobowl_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_kibodance_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_buildcharacters_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_designgames_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_makelevels_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_wizard_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_wizard_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_mbscratchcards_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_mbswiftplaygrounds_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_mbbuttons_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_meteor_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_ballbounce_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_mitcodi_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_mitdoodle_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_talktome_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_mobilecspmap_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_mbbuttons_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_meteor_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_ballbounce_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_mitcodi_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_mitdoodle_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_talktome_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_mobilecspmap_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ozorandom_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_ozotroll_string_detail_grades: 6-8. Sınıflar
   tutorial_peblioart_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_astropi_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_astropi_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_rgart_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rgengineer_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rgmath_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rgscience_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_rgtech_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_robotmagic3d_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_robotmagic3d_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_robotmagicflappy_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_scratchadventure_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_scratchtalk_string_detail_grades: 2. ve üzeri Sınıflar
@@ -7291,14 +7320,14 @@ tr:
   tutorial_scratchjrtwinkle_string_detail_grades: Okul Öncesi
   tutorial_spherocomm_string_detail_grades: 2-8. Sınıflar
   tutorial_spherocommunity_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_spherofunctions_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_spherofunctions_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_spheroinfrared_string_detail_grades: 6-8. Sınıflar
   tutorial_spherolightsensor_string_detail_grades: 2-8. Sınıflar
   tutorial_spheromansion_string_detail_grades: 2-8. Sınıflar
   tutorial_roadblocks_string_detail_grades: 2-8. Sınıflar
-  tutorial_spherotext2_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_spherotext3_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_spherotext4_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_spherotext2_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_spherotext3_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_spherotext4_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_spheroraptor_string_detail_grades: 2-8. Sınıflar
   tutorial_stempiday_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_stemplanetoids_string_detail_grades: 9. ve üzeri Sınıflar
@@ -7306,103 +7335,106 @@ tr:
   tutorial_algobot_string_detail_grades: 2-8. Sınıflar
   tutorial_thunkableapps_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_toxicodedot_string_detail_grades: 2-8. Sınıflar
-  tutorial_gcactions_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gccomparators_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gcconditions_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gccreate_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gcevents_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gcloops_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_gcvariables_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_gcactions_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gccomparators_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gcconditions_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gccreate_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gcevents_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gcloops_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_gcvariables_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_beanything_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_change_string_detail_grades: 2-8. Sınıflar
   tutorial_cooking_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_crystal_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_landscape_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_landscape_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_pets_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_petvet_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_superhero_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_vidcodeplastic_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_vidcodetypeface_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_superhero_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_vidcodeplastic_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_vidcodetypeface_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_washustorm_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_activitypackets_string_detail_grades: Okuma Öncesi- 8. Sınıf
-  tutorial_googlerookie_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_googlerookie_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tommyturtle_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_mazyad_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_gamemaker_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_duckrace_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_allcancodeapps_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_allcancodeapps_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_n2y_string_detail_grades: Okuma Öncesi ve üzeri
   tutorial_microsoftarcade_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_csfirstunplugged_string_detail_grades: 2-8. Sınıflar
-  tutorial_toxicodepython_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codecombatozaria_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_vidcodedate_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_toxicodepython_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codecombatozaria_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_vidcodedate_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codemonkeyspace_string_detail_grades: 2-8. Sınıflar
   tutorial_codespeakhappy_string_detail_grades: 2-8. Sınıflar
-  tutorial_grokimage_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_grokimage_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_icomputelearn_string_detail_grades: Okuma Öncesi- 8. Sınıf
   tutorial_rpstress_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_bsdcause_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_vidcodeanimoji_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_bsdinspire_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_tttractor_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_vidcodeanimojies_string_detail_grades: 2. ve üzeri Sınıflar
+  tutorial_bsdinspire_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_tttractor_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codeillusionmickey_string_detail_grades: 2-8. Sınıflar
   tutorial_scigirlsquest_string_detail_grades: 2-8. Sınıflar
   tutorial_codespeakbreathe_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_vidcodeface_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_educodemaze_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_educoderace_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_vidcodeface_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_educodemaze_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_educoderace_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codespeakchatbot_string_detail_grades: 2-8. Sınıflar
-  tutorial_gamefrootgames_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_gamefrootgames_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codespeakgrandparent_string_detail_grades: 2-8. Sınıflar
-  tutorial_educodekingdom_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_educodekingdom_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codehsdata_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_educodecake_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_ttsecond_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_bsdtrivia_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_educodecake_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_ttsecond_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_bsdtrivia_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_csfirstdialogue_string_detail_grades: 2-8. Sınıflar
   tutorial_codemonkeybeaver_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_codestersdistance_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_itchspace_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codestersdistance_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_itchspace_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_vidcodemagic_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_codespeakmeal_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_vidcodemagices_string_detail_grades: 2. ve üzeri Sınıflar
+  tutorial_codespeakmeal_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_itchfish_string_detail_grades: 2-8. Sınıflar
-  tutorial_bsdwebsite_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_bsdwebsite_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codespeaktime_string_detail_grades: 2-8. Sınıflar
-  tutorial_itchwebcam_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_itchwebcam_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_itchball_string_detail_grades: 2-8. Sınıflar
   tutorial_ttrace_string_detail_grades: 6-8. Sınıflar
   tutorial_plethora_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_educodesecret_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_itchshapes_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_educodesecret_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_itchshapes_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codeguppytext_string_detail_grades: 6-8. Sınıflar
+  tutorial_vidcodeplastiche_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_educativechatbot_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_educodebasics_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codehsdesign_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_htmlacademyphp_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_educodebasics_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codehsdesign_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_htmlacademyphp_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_gamefrootdistance_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: 6-8. Sınıflar
-  tutorial_cuttle_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_cuttle_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_bsdjokes_string_detail_grades: 6-8. Sınıflar
-  tutorial_rptree_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codestersunity_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codesterssoccer_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_rptree_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codestersunity_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codesterssoccer_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_breakoutlock_string_detail_grades: 2-8. Sınıflar
-  tutorial_thunkablemask_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_thunkablemask_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_cafarming_string_detail_grades: 2-8. Sınıflar
   tutorial_blocksmithyeti_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_codecapture_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codecapture_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codehslitter_string_detail_grades: 6-8. Sınıflar
   tutorial_bsdocean_string_detail_grades: 6-8. Sınıflar
-  tutorial_itchplatformer_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_codejika_string_detail_grades: 2-8. Sınıflar
+  tutorial_itchplatformer_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_codejika_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_gamefrootclicker_string_detail_grades: 6-8. Sınıflar
   tutorial_rmagicequity_string_detail_grades: 6-8. Sınıflar
   tutorial_ttfreestyle_string_detail_grades: 6-8. Sınıflar
   tutorial_ozobotcolor2_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_ozobotcolor3_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_clcarbon_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_clcarbon_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kodablebasics_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_scigirlscc_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_irobotpicture_string_detail_grades: 2-8. Sınıflar
@@ -7414,15 +7446,15 @@ tr:
   tutorial_kcjheroines_string_detail_grades: 2-8. Sınıflar
   tutorial_ozobotvalue_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_icodebytes_string_detail_grades: Okul Öncesi
-  tutorial_clfashion2_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_ai4all_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_cldata_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_clfashion2_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_ai4all_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_cldata_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_spheroinputs_string_detail_grades: 2-8. Sınıflar
   tutorial_edisoncount_string_detail_grades: 2-8. Sınıflar
   tutorial_spheroloops_string_detail_grades: 2-8. Sınıflar
   tutorial_kiboprogram_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_hellorubycsin60_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_clfashion1_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_clfashion1_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_irobottraffic_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_edisonmystery_string_detail_grades: 6-8. Sınıflar
   tutorial_microbitseaturtles_string_detail_grades: 6-8. Sınıflar
@@ -7430,17 +7462,17 @@ tr:
   tutorial_imagilabs_string_detail_grades: 2-8. Sınıflar
   tutorial_irobotsimulator_string_detail_grades: 2-8. Sınıflar
   tutorial_irobotkind_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_firiavirtual_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_firiavirtual_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_irobotguesscode_string_detail_grades: 2-8. Sınıflar
   tutorial_ozobotnouns_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_nasa3d_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_blupants_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_nasa3d_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_blupants_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_legodance_string_detail_grades: 6-8. Sınıflar
   tutorial_nearpodcoding_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_kcjplastic_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_legojourney_string_detail_grades: 2-8. Sınıflar
   tutorial_legohopper_string_detail_grades: 2-8. Sınıflar
-  tutorial_catrobatembroidery_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_catrobatembroidery_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_irobotphone_string_detail_grades: 2-8. Sınıflar
   tutorial_codeguppydraw_string_detail_grades: 6-8. Sınıflar
   tutorial_codejumper_string_detail_grades: 2-8. Sınıflar
@@ -8202,6 +8234,8 @@ tr:
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Bütün modern tarayıcılar, Android tablet,
     Ipad
+  tutorial_vidcodeanimojies_string_platforms: Bütün modern tarayıcılar, Android tablet,
+    Ipad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8228,6 +8262,8 @@ tr:
   tutorial_itchspace_string_platforms: Bütün modern tarayıcılar
   tutorial_vidcodemagic_string_platforms: Bütün modern tarayıcılar, Android tablet,
     Ipad
+  tutorial_vidcodemagices_string_platforms: Bütün modern tarayıcılar, Android tablet,
+    Ipad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Bütün modern tarayıcılar
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8241,6 +8277,7 @@ tr:
   tutorial_itchshapes_string_platforms: Bütün modern tarayıcılar
   tutorial_codeguppytext_string_platforms: Bütün modern tarayıcılar, Android tablet,
     Ipad
+  tutorial_vidcodeplastiche_string_platforms: Tüm modern tarayıcılar, iPad
   tutorial_educativechatbot_string_platforms: Bütün modern tarayıcılar
   tutorial_educodebasics_string_platforms: Bütün modern tarayıcılar
   tutorial_codehsdesign_string_platforms: Tüm modern tarayıcılar, Android tablet,
@@ -8915,6 +8952,7 @@ tr:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8936,6 +8974,7 @@ tr:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8947,6 +8986,7 @@ tr:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9629,6 +9669,7 @@ tr:
   tutorial_rpstress_string_detail_programming_languages: Bloklar
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9650,6 +9691,7 @@ tr:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Bloklar
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Bloklar
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9662,6 +9704,7 @@ tr:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Bloklar
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -10346,42 +10389,42 @@ tr:
   tutorial_kuborobo_language: Sadece İngilizce
   tutorial_ai-oceans_language: İngilizce
   tutorial_scratchimagine_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_codesterspsa_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codesterspsa_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_googlehero_string_detail_grades: 2-8. Sınıflar
-  tutorial_codestersbball_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codestersbball_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_scratchcartoon_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_codemonkeyjr_string_detail_grades: Okul Öncesi
   tutorial_bananatales_string_detail_grades: 2-8. Sınıflar
   tutorial_scratchtales_string_detail_grades: 2-8. Sınıflar
-  tutorial_msemoji_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_cacolor_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_msemoji_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_cacolor_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kodablebeach_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_tynkeren_string_detail_grades: 2-8. Sınıflar
-  tutorial_tynkerjavapro_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tynkerjavapro_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_grasshopperhack_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_pbskids_string_detail_grades: Okul Öncesi-5. Sınıf
   tutorial_nclabdata_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_grasshopperphoto_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_tynkerpyland_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tynkerpyland_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codeitimages_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_hyperpadenemy_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_tynkerpro_string_detail_grades: 2-8. Sınıflar
-  tutorial_trashtag_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_trashtag_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_casiege_string_detail_grades: 2-8. Sınıflar
-  tutorial_thunkableyeet_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_vidcodedeal_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_thunkableyeet_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_vidcodedeal_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codehsgeno_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_hyperpadpong_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_tynkerland_string_detail_grades: 2-8. Sınıflar
-  tutorial_trinketgirl_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_trinketgirl_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_rpimosquito_string_detail_grades: 6-8. Sınıflar
-  tutorial_tynkermars_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_cityx_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_vidcodemap_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_tynkermars_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_cityx_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_vidcodemap_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_robotmagicfarm_string_detail_grades: 2-8. Sınıflar
-  tutorial_codehstriangle_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_codehstriangle_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ttwhitehouse_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_modulo_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_modulo_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codingtown_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_kanoart_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_dragonscript_string_detail_grades: 9. ve üzeri Sınıflar
@@ -10389,34 +10432,34 @@ tr:
   tutorial_htmlmuffin_string_detail_grades: 6-8. Sınıflar
   tutorial_microsoftpizza_string_detail_grades: 6-8. Sınıflar
   tutorial_stemc_blckhole_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_careconfigure_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_careconfigure_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_rpiscratch_string_detail_grades: Okuma öncesi- 5. Sınıf
   tutorial_ozaria_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_ttovum_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_ttovum_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ttpassage_string_detail_grades: 2-8. Sınıflar
   tutorial_tynkerhtmlen_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_ttfrog_string_detail_grades: 2-8. Sınıflar
   tutorial_codemojijava_string_detail_grades: 6-8. Sınıflar
-  tutorial_ccfirewall_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_ccfirewall_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_htmljs_string_detail_grades: 6-8. Sınıflar
   tutorial_ttaqueducts_string_detail_grades: 6-8. Sınıflar
-  tutorial_vtgame_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_baroborav_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_vtgame_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_baroborav_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_baroboobstacle_string_detail_grades: 2. ve üzeri Sınıflar
-  tutorial_pbstorytelling_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_pbstorytelling_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_kibosnow_string_detail_grades: Okul Öncesi-5. Sınıf
   tutorial_kibohappy_string_detail_grades: Okul Öncesi-5. Sınıf
   tutorial_rubylove_string_detail_grades: Okul Öncesi-8. Sınıf
   tutorial_spherosmiles_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_spherobaby_string_detail_grades: Okuma Öncesi- 8. Sınıf
-  tutorial_toxarchitect_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_toxarchitect_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_idodge_string_detail_grades: 2-8. Sınıflar
-  tutorial_firiacodebot_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_firiacodebot_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_modlighthouse_string_detail_grades: Okuma Öncesi ve üzeri
   tutorial_spherogreen_string_detail_grades: 2-8. Sınıflar
   tutorial_ozopopstar_string_detail_grades: 2-8. Sınıflar
-  tutorial_eddesign_string_detail_grades: 6 ve üzeri Sınıflar
-  tutorial_edshapeup_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_eddesign_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
+  tutorial_edshapeup_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_ozocolor_string_detail_grades: 2-8. Sınıflar
   tutorial_kcjanimals_string_detail_grades: 2-8. Sınıflar
   tutorial_icomputeeggs_string_detail_grades: 2-8. Sınıflar
@@ -10425,21 +10468,21 @@ tr:
   tutorial_peblioportraits_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_rootcodebreak_string_detail_grades: 2-8. Sınıflar
   tutorial_microbit14_string_detail_grades: 2-8. Sınıflar
-  tutorial_barobomoon_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_barobomoon_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_eddog_string_detail_grades: 2-6. Sınıflar
   tutorial_microbit15_string_detail_grades: 2-8. Sınıflar
   tutorial_unity_string_detail_grades: 9. ve üzeri Sınıflar
-  tutorial_blockscadtarget_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_blockscadtarget_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tcadicicles_string_detail_grades: 6-8. Sınıflar
-  tutorial_blockscadscale_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_blockscadscale_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_tcadloops_string_detail_grades: 6-8. Sınıflar
   tutorial_phidgets_string_detail_grades: 9. ve üzeri Sınıflar
   tutorial_kcjmerry_string_detail_grades: 2-8. Sınıflar
-  tutorial_modvariables_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_modvariables_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_codestersmicro_string_detail_grades: 6-8. Sınıflar
   tutorial_codestersdata_string_detail_grades: 6-8. Sınıflar
   tutorial_ikodexmas_string_detail_grades: Okuma öncesi- 5. Sınıf
-  tutorial_rpisensehat_string_detail_grades: 6 ve üzeri Sınıflar
+  tutorial_rpisensehat_string_detail_grades: 6+ Sınıflar (11 ve üzeri)
   tutorial_modtraits_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_mee_string_detail_grades: 2. ve üzeri Sınıflar
   tutorial_kuborobo_string_detail_grades: Okul Öncesi-8. Sınıf

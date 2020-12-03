@@ -159,8 +159,6 @@ ko:
     invalid_password: "비밀번호는 최소 6 문자 이상이어야 합니다"
     mismatch_password: "입력한 비밀번호가 일치하지 않습니다."
     student_consent: "본인은 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
-    agree_us_website: "본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다."
-    my_data_to_us: "본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다."
     agree_us_data_transfer_student: '**본인의 이 사이트 사용에 따른 데이터(개인 데이터 포함)를 호스팅 및 처리하기 위해 Code.org가 해당 데이터를 미국에 전송할 수도 있음에 동의합니다. '
     agree_us_data_transfer_teacher: '**본인의(그리고 본인 학생의) 이 사이트 사용에 따른 데이터(개인 데이터 포함)를 호스팅 및 처리하기 위해 Code.org가 해당 데이터를 미국**에 전송할 수도 있음에 동의합니다. '
     data_collection_us: "Code.org는 미국에 있는 비영리 웹사이트로 미국에서 데이터 수집에 적용되는 법과 귀하의 국가에서 적용하는 법이 서로 다를 수 있음을 알고 있습니다."
@@ -317,10 +315,17 @@ ko:
       sections: "섹션"
       help_support: "도움말 및 지원"
       report_bug: "버그 보고"
+      report_abuse: "학대 사례 신고"
       teacher_community: "교사 커뮤니티"
       professional_learning: "전문 학습"
       documentation: "문서"
       tutorials: "튜토리얼"
+      app_lab_documentation: "웹 랩 문서화"
+      app_lab_tutorials: "앱 랩 튜토리얼"
+      game_lab_documentation: "게임 랩 문서화"
+      game_lab_tutorials: "게임 랩 튜토리얼"
+      sprite_lab_documentation: "스프라이트 랩 문서화"
+      sprite_lab_tutorials: "스프라이트 랩 튜토리얼"
       web_lab_documentation: "웹 랩 문서화"
       educate_overview: "교사 개요"
       educate_elementary: "초등학교"
@@ -347,6 +352,7 @@ ko:
       help_us: "도움주기"
       teach: "가르치기"
       about: "소개"
+      legal: "개인정보 보호 및 법률"
       legal_privacy: "개인정보보호 정책"
       legal_tos: "이용 약관"
     user:
@@ -354,6 +360,7 @@ ko:
       district_dashboard: '대시보드 구역'
       label: '안녕하세요? %{username} 님'
       stats: '코드 스튜디오'
+      my_projects: '내 프로젝트'
       settings: '내 계정'
       logout: '로그아웃'
       signin: '로그인'
@@ -516,6 +523,7 @@ ko:
     no_primary_course: "Code Studio 과정들을 해보세요."
     choose_next_course: "아래의 Code Studio 과정을 해보세요."
     print_certificate: "인증서 인쇄"
+  certificate_sponsor_message: "%{sponsor_name}가 학습을 후원하기 위해 선물을 했습니다."
   move_students:
     new_section_dne: "죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
     section_code_cant_be_current_section: "현재 섹션과 새로운 섹션은 동일할 수 없습니다."
@@ -546,6 +554,7 @@ ko:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a> 아래에 라이센스를 사용 합니다.'
     powered_by_aws: 'Powered by Amazon Web Services'
+    built_on_github: 'Microsoft의 GitHub 위에 구축'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: '저작권'
     more: '더 많은'
@@ -1074,6 +1083,9 @@ ko:
     more_information: "Code.org의 개인정보 보호정책 참조."
     accept: '동의합니다'
   page_not_found_title: "페이지를 찾을 수 없습니다."
+  page_not_found_header: '404: 페이지를 찾을 수 없습니다'
+  page_not_found_description: "찾고 계신 페이지는 이 주소에 존재하지 않습니다. 웹 주소를 확인하여 다시 제출하세요. 또는 홈페이지로 되돌아 가세요."
+  page_not_found_button: "홈으로 되돌아 가기"
   copy: '복사'
   maker:
     google_oauth:

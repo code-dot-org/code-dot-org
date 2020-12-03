@@ -2437,7 +2437,7 @@ cs:
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
               description_student: Když použij cykly `dokud`, můžeš udělat úžasné věci!
-              description_teacher: V této lekci se studenti naučí o cyklech `dokud` (until). Studenti budou stavět programy, v nichž hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného bodu.
+              description_teacher: V této lekci se studenti naučí o cyklech `opakuj dokud nenastane` (until). Studenti budou stavět programy, v nichž hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného bodu.
             Conditionals with Cards:
               name: Podmínky s kartami
               description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží.\\r\n\\r "
@@ -3402,7 +3402,7 @@ cs:
             Until Loops in Maze:
               name: Cykly dokud (until) v bludišti
               description_student: Když použij cykly `dokud`, můžeš udělat úžasné věci!
-              description_teacher: V této lekci se studenti naučí o cyklech `dokud` (until). Studenti budou stavět programy, v nichž hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného bodu.
+              description_teacher: V této lekci se studenti naučí o cyklech `opakuj dokud nenastane` (until). Studenti budou stavět programy, v nichž hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného bodu.
             Conditionals & Loops in Harvester:
               name: Zahradničení s podmínkami
               description_teacher: Studenti si procvičí cykly `pokud` (while), `dokud` (until) a příkazy `když / jinak`. Všechny tyto bloky využívají podmínky. Procvičováním všech tří se studenti naučí psát komplexní a flexibilní kód.
@@ -3666,3 +3666,9 @@ cs:
               name: Kurz B
             CS Discoveries:
               name: Objevujeme informatiku
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI pomáhá oceánům
+            intro:
+              name: Úvod

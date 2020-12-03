@@ -44,6 +44,11 @@ id:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: Hour of Code 2020 akan segera hadir!
+  hoc2020_ai_header: Jelajahi Kecerdasan Buatan (Artificial Intelligence)
+  hoc2020_ai_description: AI dan Machine Learning berdampak terhadap dunia kita. Bergabunglah
+    dengan kami untuk menjelajahi AI dalam seri video baru, latih AI for Oceans dalam
+    lebih dari 25 bahasa, diskusikan etika dan AI, dan masih banyak lagi ...
   hoc2019_header: Ubahlah dunia dengan belajar ilmu komputer!
   hoc2019_header_line1_mobile: Belajarlah ilmu komputer.
   hoc2019_header_line2_mobile: Ubahlah dunia.
@@ -555,7 +560,7 @@ id:
     to express their creativity with computer science. Try your hand at the new tutorials.
     What will you create?
   social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_hoc_here: Hour of Code telah tiba!
   social_hoc2018_join: Hour of Code akan segera hadir
   social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
@@ -969,6 +974,7 @@ id:
   highlights_constant_athletes_short_heading: Paksa dirimu
   footer_copyright_message: Hak cipta 2015 Code.org. Semua hak dilindungi.
   footer_trademark_message: Hour of Code™ adalah merek dagang dari Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Mitra-mitra
   footer_menu_contact: Hubungi kami
   footer_menu_support: Dukungan
@@ -1573,7 +1579,7 @@ id:
   tutorial_n2y_name: Bitt Bott Explores Earth
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_toxicodepython_name: Temukan Python dengan Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
@@ -1581,9 +1587,10 @@ id:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1599,15 +1606,16 @@ id:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1616,6 +1624,7 @@ id:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1625,7 +1634,7 @@ id:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1681,7 +1690,7 @@ id:
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Bordir Berkode
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
@@ -5630,9 +5639,10 @@ id:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_toxicodepython_longdescription: Temukan dasar-dasar Python tanpa kata atau
+    penjelasan apa pun. Guru diam kami akan memberi Anda beberapa rangkaian tantangan
+    yang akan membuat Anda menebak beberapa aturan dan belajar dari kesalahan Anda
+    sendiri.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
     that has taken over the world! Along the way, you'll meet interesting characters
@@ -5658,20 +5668,22 @@ id:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5717,12 +5729,12 @@ id:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5741,16 +5753,18 @@ id:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5770,6 +5784,12 @@ id:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: Masalah plastik yang mencemari lautan
+    kita terus memburuk. Untungnya, Anda dapat menyampaikan suara Anda dengan code
+    melalui Plastic Pollution PSA. Setelah membuat coding PSA tentang polusi plastik
+    dengan JavaScript, Anda dapat membuat video kedua tentang apa pun yang Anda minati!
+    Belajar menggunakan loop, gelombang sinus, dan emoji khusus untuk membuat proyek
+    yang unik.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5800,11 +5820,11 @@ id:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -6014,8 +6034,8 @@ id:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Kode desain Anda di ponsel Android
+    Anda dan tempelkan di T-shirt, celana, tas olahraga, atau sepatu Anda!
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -6714,7 +6734,7 @@ id:
   tutorial_pets_language: Bahasa Indonesia
   tutorial_petvet_language: Bahasa Indonesia
   tutorial_superhero_language: Bahasa Indonesia
-  tutorial_vidcodeplastic_language: Inggris, Ibrani
+  tutorial_vidcodeplastic_language: Bahasa Indonesia
   tutorial_vidcodetypeface_language: Bahasa Indonesia
   tutorial_washustorm_language: Bahasa Indonesia
   tutorial_activitypackets_language: Bahasa Indonesia
@@ -6727,9 +6747,9 @@ id:
   tutorial_n2y_language: Bahasa Indonesia
   tutorial_microsoftarcade_language: Bahasa Indonesia
   tutorial_csfirstunplugged_language: English, Spanish (Mexico)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: Denmark, Belanda, Inggris, Inggris (Inggris),
+    Estonia, Prancis, Jerman, Indonesia, Italia, Lainnya, Polandia, Portugis (Brasil),
+    Portugis (Portugal), Rumania, Spanyol (Spanyol), Spanyol (Meksiko ), Swedia, Turki.
   tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
     Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodedate_language: Bahasa Indonesia
@@ -6740,6 +6760,7 @@ id:
   tutorial_rpstress_language: Arab, Belanda, Inggris, Inggris (UK), Spanyol (Meksiko)
   tutorial_bsdcause_language: Bahasa Indonesia
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Bahasa Indonesia
   tutorial_tttractor_language: Bahasa Indonesia
   tutorial_codeillusionmickey_language: Bahasa Indonesia
@@ -6762,6 +6783,7 @@ id:
   tutorial_codestersdistance_language: Bahasa Indonesia
   tutorial_itchspace_language: Bahasa Indonesia
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Bahasa Indonesia
   tutorial_itchfish_language: Bahasa Indonesia
   tutorial_bsdwebsite_language: Bahasa Indonesia
@@ -6774,6 +6796,7 @@ id:
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Bahasa Indonesia
   tutorial_codeguppytext_language: Bahasa Indonesia
+  tutorial_vidcodeplastiche_language: Inggris, Ibrani
   tutorial_educativechatbot_language: Bahasa Indonesia
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Bahasa Indonesia
@@ -6838,9 +6861,11 @@ id:
   tutorial_kcjplastic_language: Inggris, Perancis
   tutorial_legojourney_language: Bahasa Indonesia
   tutorial_legohopper_language: Bahasa Indonesia
-  tutorial_catrobatembroidery_language: Arab, Bengali, Bosnia, Mandarin (Sederhana),
-    Kroasia, Ceko, Inggris, Prancis, Jerman, Hindi, Indonesia, Italia, Jepang, Korea,
-    Norwegia (Nynorsk), Polandia, Portugis, dan masih banyak lagi!
+  tutorial_catrobatembroidery_language: Arab, Bengali, Bosnia, Cina Sederhana, Kroasia,
+    Ceko, Englisch, Inggris (UK), Prancis, Jerman, Hindi, Indonesia, Italia, Jepang,
+    Korea, Norsk (Nynorsk), Lainnya, Polandia, Portugis (Brasil), Portugis ( Portugal),
+    Rusia, Serbia (Sirilik), Serbia (Latin), Slowakia, Spanyol (Spanyol, Meksiko),
+    Swahili, Swedia, Tamil, Thailand, Turki, Urdu (Pakistan), Vietnam
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Bahasa Indonesia
@@ -6853,10 +6878,10 @@ id:
   tutorial_star-wars_string_detail_grades: Tingkat 2+
   tutorial_gumadventure_string_detail_grades: Kelas 6-8
   tutorial_mchoc_string_detail_grades: Tingkat 2+
-  tutorial_vidnews_string_detail_grades: Kelas 6+
+  tutorial_vidnews_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
   tutorial_highseas_string_detail_grades: Grades 2-8
-  tutorial_capython_string_detail_grades: Kelas 6+
+  tutorial_capython_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_frzn_string_detail_grades: Tingkat 2+
   tutorial_cocom_string_detail_grades: Tingkat 2+
   tutorial_play-lab_string_detail_grades: Tingkat 2+
@@ -6866,28 +6891,28 @@ id:
   tutorial_kanopixel_string_detail_grades: Tingkat 2+
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerdd_string_detail_grades: Grades 2-8
-  tutorial_tynkerana_string_detail_grades: Kelas 6+
+  tutorial_tynkerana_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_vidcard_string_detail_grades: Tingkat 2+
   tutorial_spritebox_string_detail_grades: Grades 2-8
-  tutorial_tynkerch_string_detail_grades: Kelas 6+
+  tutorial_tynkerch_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: do-not-show
   tutorial_code_string_detail_grades: Tingkat 2+
-  tutorial_tinspire_string_detail_grades: Kelas 6+
+  tutorial_tinspire_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_itchbounceball_string_detail_grades: Grades 2-8
-  tutorial_vidclim_string_detail_grades: Kelas 6+
-  tutorial_matlab_string_detail_grades: Kelas 6+
+  tutorial_vidclim_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_matlab_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_flap_string_detail_grades: Tingkat 2+
-  tutorial_galaxy_string_detail_grades: Kelas 6+
+  tutorial_galaxy_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_inf_string_detail_grades: Grades 2-8
   tutorial_tynkersol_string_detail_grades: Tingkat 2+
-  tutorial_itchg_string_detail_grades: Kelas 6+
+  tutorial_itchg_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_como_string_detail_grades: Tingkat 2+
   tutorial_processfound_string_detail_grades: Tingkat 9+
-  tutorial_tynkerhomo_string_detail_grades: Kelas 6+
+  tutorial_tynkerhomo_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_art_string_detail_grades: Tingkat 2+
   tutorial_tynkerbrick_string_detail_grades: Tingkat 2+
-  tutorial_itchbio_string_detail_grades: Kelas 6+
+  tutorial_itchbio_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_itchj_string_detail_grades: Kelas 6-8
   tutorial_tickleo_string_detail_grades: Tingkat 2+
   tutorial_hopgeo_string_detail_grades: Grades 2-8
@@ -6898,67 +6923,67 @@ id:
   tutorial_livecode_string_detail_grades: Tingkat 9+
   tutorial_cocomgame_string_detail_grades: Tingkat 2+
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
-  tutorial_code-avengers_string_detail_grades: Kelas 6+
+  tutorial_code-avengers_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cmgame_string_detail_grades: Kelas 6+
+  tutorial_cmgame_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codesters_string_detail_grades: do-not-show
-  tutorial_qrm_string_detail_grades: Kelas 6+
-  tutorial_texas-instruments_string_detail_grades: Kelas 6+
-  tutorial_cajava_string_detail_grades: Kelas 6+
+  tutorial_qrm_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_texas-instruments_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_cajava_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codehs_string_detail_grades: Tingkat 9+
   tutorial_hopemo_string_detail_grades: Grades 2-8
   tutorial_tynkercm_string_detail_grades: Tingkat 2+
   tutorial_codesterswintergreet_string_detail_grades: Tingkat 2+
-  tutorial_codestersc_string_detail_grades: Kelas 6+
+  tutorial_codestersc_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codestersturtle_string_detail_grades: Tingkat 2+
-  tutorial_penjee_string_detail_grades: Kelas 6+
+  tutorial_penjee_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_trinket_string_detail_grades: Tingkat 2+
-  tutorial_frogger_string_detail_grades: Kelas 6+
+  tutorial_frogger_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tynkereco_string_detail_grades: Grades 2-8
   tutorial_mitedarc_string_detail_grades: Kelas 6-8
-  tutorial_khan_string_detail_grades: Kelas 6+
-  tutorial_tynkerd_string_detail_grades: Kelas 6+
+  tutorial_khan_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_tynkerd_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_cdmy_string_detail_grades: Tingkat 9+
-  tutorial_codestersdance_string_detail_grades: Kelas 6+
-  tutorial_codestersbasketball_string_detail_grades: Kelas 6+
-  tutorial_nclkarel_string_detail_grades: Kelas 6+
+  tutorial_codestersdance_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codestersbasketball_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_nclkarel_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_buildpong_string_detail_grades: Tingkat 2+
   tutorial_tynkerdrones_string_detail_grades: Tingkat 2+
-  tutorial_carla_string_detail_grades: Kelas 6+
-  tutorial_zulama_string_detail_grades: Kelas 6+
-  tutorial_capost_string_detail_grades: Kelas 6+
+  tutorial_carla_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_zulama_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_capost_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_marco_string_detail_grades: Grades 2-8
-  tutorial_codestersflappybike_string_detail_grades: Kelas 6+
+  tutorial_codestersflappybike_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_kanopong_string_detail_grades: Kelas 6-8
   tutorial_tynkerright_string_detail_grades: Grades 2-8
   tutorial_touchdevelop_string_detail_grades: do-not-show
-  tutorial_tynkercc_string_detail_grades: Kelas 6+
+  tutorial_tynkercc_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bamboo_string_detail_grades: Grades 2-5
-  tutorial_robojav_string_detail_grades: Kelas 6+
-  tutorial_roboba_string_detail_grades: Kelas 6+
+  tutorial_robojav_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_roboba_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_knodsnake_string_detail_grades: Kelas 6-8
-  tutorial_soccharater_string_detail_grades: Kelas 6+
-  tutorial_silent_string_detail_grades: Kelas 6+
+  tutorial_soccharater_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_silent_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_robomesh_string_detail_grades: Tingkat 2+
   tutorial_amaze_string_detail_grades: Tingkat 2+
   tutorial_codestersds_string_detail_grades: Tingkat 2+
   tutorial_knodtext_string_detail_grades: Kelas 6-8
-  tutorial_alicegar_string_detail_grades: Kelas 6+
-  tutorial_codesterstransform_string_detail_grades: Kelas 6+
-  tutorial_flexfrog_string_detail_grades: Kelas 6+
+  tutorial_alicegar_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codesterstransform_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_flexfrog_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codemoji_string_detail_grades: do-not-show
-  tutorial_robobii_string_detail_grades: Kelas 6+
+  tutorial_robobii_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_robobm_string_detail_grades: Kelas 6-8
   tutorial_codingrobots_string_detail_grades: Tingkat 2+
-  tutorial_robob_string_detail_grades: Kelas 6+
+  tutorial_robob_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_coders_string_detail_grades: Tingkat 9+
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
   tutorial_tynkermh_string_detail_grades: Grades 2-8
-  tutorial_caphoto_string_detail_grades: Kelas 6+
+  tutorial_caphoto_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_mozillahw_string_detail_grades: Kelas 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Tingkat 2+
-  tutorial_scratchg_string_detail_grades: Kelas 6+
+  tutorial_scratchg_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_roboticfriends_string_detail_grades: Semua umur
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjgreet_string_detail_grades: Pre-reader - Grade 5
@@ -6966,19 +6991,19 @@ id:
   tutorial_fufafrenz_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcgeo_string_detail_grades: do-not-show
   tutorial_chspixel_string_detail_grades: Tingkat 9+
-  tutorial_hummingbird_string_detail_grades: Kelas 6+
-  tutorial_recoloring_string_detail_grades: Kelas 6+
+  tutorial_hummingbird_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_recoloring_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bbcchem_string_detail_grades: do-not-show
   tutorial_floalgo_string_detail_grades: Tingkat 2+
   tutorial_flocond_string_detail_grades: Tingkat 2+
   tutorial_floloops_string_detail_grades: Tingkat 2+
-  tutorial_pgts_string_detail_grades: Kelas 6+
+  tutorial_pgts_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ozo_string_detail_grades: Semua umur
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
   tutorial_tlctour_string_detail_grades: Tingkat 2+
   tutorial_codesterstj_string_detail_grades: Tingkat 2+
-  tutorial_tlclocked_string_detail_grades: Kelas 6+
+  tutorial_tlclocked_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_baubles_string_detail_grades: Grades 2-8
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Tingkat 2+
@@ -7000,12 +7025,12 @@ id:
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: Kelas 6-8
-  tutorial_tlchex_string_detail_grades: Kelas 6+
+  tutorial_tlchex_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tickles_string_detail_grades: Tingkat 2+
   tutorial_ozogame_string_detail_grades: Semua umur
   tutorial_vidcodeio_string_detail_grades: Tingkat 2+
   tutorial_besttech_string_detail_grades: Tingkat 9+
-  tutorial_tlcbrain_string_detail_grades: Kelas 6+
+  tutorial_tlcbrain_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_hopquiz_string_detail_grades: Kelas 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
   tutorial_cha_string_detail_grades: Kelas 6-8
@@ -7015,7 +7040,7 @@ id:
   tutorial_arduino_string_detail_grades: Kelas 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
   tutorial_tlcinvis_string_detail_grades: Tingkat 2+
-  tutorial_tlcjflap_string_detail_grades: Kelas 6+
+  tutorial_tlcjflap_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
   tutorial_spiralsfinch_string_detail_grades: Tingkat 2+
   tutorial_ozoi_string_detail_grades: Semua umur
@@ -7027,40 +7052,40 @@ id:
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
   tutorial_tlccc_string_detail_grades: Grades 2-8
   tutorial_tlcdoodle_string_detail_grades: Grades 2-8
-  tutorial_tlcpunch_string_detail_grades: Kelas 6+
+  tutorial_tlcpunch_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_finchfract_string_detail_grades: Tingkat 9+
-  tutorial_tlcmind_string_detail_grades: Kelas 6+
+  tutorial_tlcmind_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tlctelebot_string_detail_grades: Tingkat 2+
-  tutorial_tlcaus_string_detail_grades: Kelas 6+
+  tutorial_tlcaus_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_oralhist_string_detail_grades: Tingkat 9+
   tutorial_tlcmicro_string_detail_grades: Tingkat 2+
   tutorial_imathematician_string_detail_grades: Grades 2-8
-  tutorial_tlcmagic_string_detail_grades: Kelas 6+
+  tutorial_tlcmagic_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_scratchmus_string_detail_grades: Grades 2-8
   tutorial_scratchanim_string_detail_grades: Grades 2-8
   tutorial_scratchfly_string_detail_grades: Grades 2-8
   tutorial_tynkerarc_string_detail_grades: Tingkat 2+
-  tutorial_grokffpython_string_detail_grades: Kelas 6+
-  tutorial_grokffblock_string_detail_grades: Kelas 6+
-  tutorial_grokeliza_string_detail_grades: Kelas 6+
+  tutorial_grokffpython_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_grokffblock_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_grokeliza_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tynkercan_string_detail_grades: Tingkat 2+
-  tutorial_grokflags_string_detail_grades: Kelas 6+
+  tutorial_grokflags_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_robomind_string_detail_grades: Grades 2-8
   tutorial_scratchanimwork_string_detail_grades: Grades 2-8
   tutorial_adventureq_string_detail_grades: Grades 2-5
-  tutorial_khan-es_string_detail_grades: Kelas 6+
-  tutorial_kpt_string_detail_grades: Kelas 6+
-  tutorial_kpl_string_detail_grades: Kelas 6+
-  tutorial_khe_string_detail_grades: Kelas 6+
-  tutorial_kfr_string_detail_grades: Kelas 6+
-  tutorial_app-inventor_string_detail_grades: Kelas 6+
+  tutorial_khan-es_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_kpt_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_kpl_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_khe_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_kfr_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_app-inventor_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bits_string_detail_grades: Grades 2-5
-  tutorial_blockly_string_detail_grades: Kelas 6+
+  tutorial_blockly_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: Semua umur
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Tingkat 2+
-  tutorial_spellcraft_string_detail_grades: Kelas 6+
+  tutorial_spellcraft_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_pirates_string_detail_grades: Grades 2-8
   tutorial_csfirst_string_detail_grades: Tingkat 2+
   tutorial_loopedy_string_detail_grades: Grades 2-5
@@ -7072,7 +7097,7 @@ id:
   tutorial_scratch_string_detail_grades: Grades 2-5
   tutorial_bayes_string_detail_grades: Semua umur
   tutorial_gumball_string_detail_grades: do-not-show
-  tutorial_hrm_string_detail_grades: Kelas 6+
+  tutorial_hrm_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ice-age_string_detail_grades: do-not-show
   tutorial_koapp_string_detail_grades: do-not-show
   tutorial_lightbot-intl_string_detail_grades: Pre-reader - Grade 8
@@ -7088,7 +7113,7 @@ id:
   tutorial_spherov_string_detail_grades: Tingkat 2+
   tutorial_swb_string_detail_grades: do-not-show
   tutorial_build-a-galaxy_string_detail_grades: do-not-show
-  tutorial_alicesims_string_detail_grades: Kelas 6+
+  tutorial_alicesims_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tchr_string_detail_grades: do-not-show
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
   tutorial_tap_string_detail_grades: Tingkat 2+
@@ -7107,51 +7132,51 @@ id:
   tutorial_solopython_string_detail_grades: Tingkat 9+
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
   tutorial_kodableadv_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkertj_string_detail_grades: Kelas 6+
-  tutorial_wolframa_string_detail_grades: Kelas 6+
-  tutorial_wolframm_string_detail_grades: Kelas 6+
-  tutorial_wolframspi_string_detail_grades: Kelas 6+
-  tutorial_wolframsph_string_detail_grades: Kelas 6+
-  tutorial_wolframp_string_detail_grades: Kelas 6+
-  tutorial_wolframn_string_detail_grades: Kelas 6+
+  tutorial_tynkertj_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_wolframa_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_wolframm_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_wolframspi_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_wolframsph_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_wolframp_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_wolframn_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_soloweb_string_detail_grades: Tingkat 9+
   tutorial_khanweb_string_detail_grades: Tingkat 2+
-  tutorial_khandata_string_detail_grades: Kelas 6+
+  tutorial_khandata_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_robomeshiq_string_detail_grades: Tingkat 2+
   tutorial_googlelogo_string_detail_grades: Tingkat 2+
-  tutorial_playtune_string_detail_grades: Kelas 6+
+  tutorial_playtune_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_computeit_string_detail_grades: Tingkat 2+
   tutorial_codesterssj_string_detail_grades: Grades 2-8
-  tutorial_cmchat_string_detail_grades: Kelas 6+
+  tutorial_cmchat_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
-  tutorial_cmbuild_string_detail_grades: Kelas 6+
+  tutorial_cmbuild_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_robotrattle_string_detail_grades: Grades 2-8
   tutorial_codestersh_string_detail_grades: Grades 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Kelas 6+
-  tutorial_ccbinary_string_detail_grades: Kelas 6+
-  tutorial_codehsturtle_string_detail_grades: Kelas 6+
-  tutorial_grokhd_string_detail_grades: Kelas 6+
-  tutorial_grokem_string_detail_grades: Kelas 6+
+  tutorial_codehsdigipixel_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_ccbinary_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codehsturtle_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_grokhd_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_grokem_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
   tutorial_cmdodo_string_detail_grades: Grades 2-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Tingkat 9+
   tutorial_raspipong_string_detail_grades: Tingkat 9+
-  tutorial_codehsvr_string_detail_grades: Kelas 6+
+  tutorial_codehsvr_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codesterstp_string_detail_grades: Kelas 6-8
   tutorial_codestersbb_string_detail_grades: Kelas 6-8
   tutorial_gfcrossyroad_string_detail_grades: Tingkat 9+
   tutorial_googleww_string_detail_grades: Tingkat 9+
-  tutorial_codehsjsapp_string_detail_grades: Kelas 6+
+  tutorial_codehsjsapp_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_gfmihi_string_detail_grades: Tingkat 9+
   tutorial_hopdropphone_string_detail_grades: Grades 2-8
   tutorial_techfaa_string_detail_grades: University
   tutorial_codehsjsgraph_string_detail_grades: Tingkat 9+
-  tutorial_thunkable_string_detail_grades: Kelas 6+
+  tutorial_thunkable_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
-  tutorial_codecar_string_detail_grades: Kelas 6+
+  tutorial_codecar_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codesterscp_string_detail_grades: Kelas 6-8
   tutorial_grokpetblock_string_detail_grades: Kelas 6-8
   tutorial_techbim_string_detail_grades: University
@@ -7163,8 +7188,8 @@ id:
   tutorial_myradream_string_detail_grades: Grades 2-8
   tutorial_thinkfun_string_detail_grades: Grades 2-8
   tutorial_hopfireworks_string_detail_grades: Grades 2-8
-  tutorial_grokspace_string_detail_grades: Kelas 6+
-  tutorial_codehspython_string_detail_grades: Kelas 6+
+  tutorial_grokspace_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codehspython_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codehsjava_string_detail_grades: Tingkat 9+
   tutorial_techioda_string_detail_grades: University
   tutorial_grokmonster_string_detail_grades: Grades 2-5
@@ -7172,8 +7197,8 @@ id:
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
   tutorial_techiogsr_string_detail_grades: University
-  tutorial_groktunnel_string_detail_grades: Kelas 6+
-  tutorial_stemcod_string_detail_grades: Kelas 6+
+  tutorial_groktunnel_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_stemcod_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
   tutorial_nyblebot_string_detail_grades: Grades 2-5
@@ -7181,32 +7206,32 @@ id:
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
-  tutorial_gpbcatapult_string_detail_grades: Kelas 6+
-  tutorial_quorumastro_string_detail_grades: Kelas 6+
+  tutorial_gpbcatapult_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_quorumastro_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_alicewonder_string_detail_grades: Grades 2-5
   tutorial_rginter_string_detail_grades: Kelas 6-8
-  tutorial_cssgrid_string_detail_grades: Kelas 6+
+  tutorial_cssgrid_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_jshero_string_detail_grades: Tingkat 9+
   tutorial_codemojipy_string_detail_grades: Grades 2-5
-  tutorial_nclabdrone_string_detail_grades: Kelas 6+
-  tutorial_gpbcircle_string_detail_grades: Kelas 6+
-  tutorial_gpbpaint_string_detail_grades: Kelas 6+
-  tutorial_cocomarcade_string_detail_grades: Kelas 6+
+  tutorial_nclabdrone_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gpbcircle_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gpbpaint_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_cocomarcade_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Kelas 6-8
-  tutorial_codedj_string_detail_grades: Kelas 6+
-  tutorial_rgadvan_string_detail_grades: Kelas 6+
+  tutorial_codedj_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_rgadvan_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codehsrn_string_detail_grades: Tingkat 9+
-  tutorial_codehswd_string_detail_grades: Kelas 6+
+  tutorial_codehswd_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: Kelas 6+
-  tutorial_ozoexped_string_detail_grades: Kelas 6+
+  tutorial_ozoevo_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_ozoexped_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: Semua umur
   tutorial_ozoeclipse_string_detail_grades: Tingkat 2+
-  tutorial_ozosimulator_string_detail_grades: Kelas 6+
-  tutorial_ozoalgorithm_string_detail_grades: Kelas 6+
-  tutorial_ozotimer_string_detail_grades: Kelas 6+
+  tutorial_ozosimulator_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_ozoalgorithm_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_ozotimer_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ozohabits_string_detail_grades: Semua umur
   tutorial_ozoprogram_string_detail_grades: Grades 2-8
   tutorial_ozopair_string_detail_grades: Tingkat 2+
@@ -7229,9 +7254,9 @@ id:
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
   tutorial_lblogic_string_detail_grades: Tingkat 2+
-  tutorial_lbworld_string_detail_grades: Kelas 6+
+  tutorial_lbworld_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_lbloops_string_detail_grades: Grades 2-8
-  tutorial_lbtug_string_detail_grades: Kelas 6+
+  tutorial_lbtug_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_lbpotato_string_detail_grades: Tingkat 2+
   tutorial_lbguitar_string_detail_grades: Tingkat 2+
   tutorial_lbio_string_detail_grades: Grades 2-8
@@ -7240,14 +7265,14 @@ id:
   tutorial_wonzoo_string_detail_grades: Grades 2-5
   tutorial_wontrip_string_detail_grades: Grades 2-8
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wonsecret_string_detail_grades: Kelas 6+
+  tutorial_wonsecret_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_hsscience_string_detail_grades: Grades 2-8
-  tutorial_popculture_string_detail_grades: Kelas 6+
+  tutorial_popculture_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_legorobust_string_detail_grades: Tingkat 2+
   tutorial_legoplants_string_detail_grades: Tingkat 2+
-  tutorial_legopark_string_detail_grades: Kelas 6+
-  tutorial_legodetect_string_detail_grades: Kelas 6+
-  tutorial_legolight_string_detail_grades: Kelas 6+
+  tutorial_legopark_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_legodetect_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_legolight_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_alexa_string_detail_grades: Tingkat 9+
   tutorial_grokpetmicro_string_detail_grades: Kelas 6-8
   tutorial_pirateplunder_string_detail_grades: Grades 2-8
@@ -7256,24 +7281,24 @@ id:
   tutorial_cajump_string_detail_grades: Grades 2-8
   tutorial_carest_string_detail_grades: Grades 2-8
   tutorial_accai_string_detail_grades: Grades 2-8
-  tutorial_vceclipse_string_detail_grades: Kelas 6+
-  tutorial_pmzero_string_detail_grades: Kelas 6+
+  tutorial_vceclipse_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_pmzero_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_hsela_string_detail_grades: Grades 2-8
   tutorial_ticklear_string_detail_grades: Grades 2-8
   tutorial_bcrobot_string_detail_grades: Grades 2-8
-  tutorial_bcsnow_string_detail_grades: Kelas 6+
+  tutorial_bcsnow_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ifly_string_detail_grades: Tingkat 2+
   tutorial_idowedo_string_detail_grades: Grades 2-8
-  tutorial_diggindwarf_string_detail_grades: Kelas 6+
+  tutorial_diggindwarf_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_rmedr_string_detail_grades: Grades 2-8
   tutorial_spheroit_string_detail_grades: Tingkat 2+
   tutorial_gameofcodes_string_detail_grades: Tingkat 2+
-  tutorial_blocklygames_string_detail_grades: Kelas 6+
-  tutorial_spherohello_string_detail_grades: Kelas 6+
-  tutorial_spheroarcade_string_detail_grades: Kelas 6+
-  tutorial_bcpy1_string_detail_grades: Kelas 6+
-  tutorial_bcpy2_string_detail_grades: Kelas 6+
-  tutorial_bcjs1_string_detail_grades: Kelas 6+
+  tutorial_blocklygames_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_spherohello_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_spheroarcade_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_bcpy1_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_bcpy2_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_bcjs1_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bcjs2_string_detail_grades: Tingkat 9+
   tutorial_3dbearmars_string_detail_grades: Grades 2-8
   tutorial_alexaskill_string_detail_grades: Grades 2-8
@@ -7282,27 +7307,27 @@ id:
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
   tutorial_blockscadclock_string_detail_grades: Tingkat 9+
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
-  tutorial_blockscadicecream_string_detail_grades: Kelas 6+
+  tutorial_blockscadicecream_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_blockscadpizza_string_detail_grades: Kelas 6-8
   tutorial_blockscadsugar_string_detail_grades: Kelas 6-8
   tutorial_bsgridlight_string_detail_grades: Tingkat 2+
-  tutorial_bpartscratch_string_detail_grades: Kelas 6+
-  tutorial_bpartvid_string_detail_grades: Kelas 6+
+  tutorial_bpartscratch_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_bpartvid_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
   tutorial_bpenglishvid_string_detail_grades: Grades 2-8
   tutorial_bphealthscratch_string_detail_grades: Tingkat 2+
-  tutorial_bphealthvid_string_detail_grades: Kelas 6+
+  tutorial_bphealthvid_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
-  tutorial_bpmathvid_string_detail_grades: Kelas 6+
+  tutorial_bpmathvid_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
   tutorial_bpmlkvid_string_detail_grades: Kelas 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
   tutorial_bpsafetyvid_string_detail_grades: Kelas 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
   tutorial_bpsciencevid_string_detail_grades: Kelas 6-8
-  tutorial_bptechscratch_string_detail_grades: Kelas 6+
-  tutorial_bptechvid_string_detail_grades: Kelas 6+
-  tutorial_caflags_string_detail_grades: Kelas 6+
+  tutorial_bptechscratch_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_bptechvid_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_caflags_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_matariki_string_detail_grades: Grades 2-5
   tutorial_carestaurant_string_detail_grades: Tingkat 2+
   tutorial_casea_string_detail_grades: Grades 2-5
@@ -7310,37 +7335,37 @@ id:
   tutorial_ccwslimer_string_detail_grades: Grades 2-8
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
   tutorial_boatrace_string_detail_grades: Tingkat 2+
-  tutorial_ccplay_string_detail_grades: Kelas 6+
+  tutorial_ccplay_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_grinch_string_detail_grades: Grades 2-8
   tutorial_codehsart_string_detail_grades: Tingkat 9+
   tutorial_codehsbitcoin_string_detail_grades: Tingkat 9+
   tutorial_codehsblockchain_string_detail_grades: Tingkat 9+
-  tutorial_codehscipher_string_detail_grades: Kelas 6+
+  tutorial_codehscipher_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codehscollision_string_detail_grades: Tingkat 9+
-  tutorial_codehsmath_string_detail_grades: Kelas 6+
-  tutorial_codehsmusic_string_detail_grades: Kelas 6+
-  tutorial_codehssports_string_detail_grades: Kelas 6+
+  tutorial_codehsmath_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codehsmusic_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codehssports_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codemojipizza_string_detail_grades: Grades 2-8
-  tutorial_moonlander_string_detail_grades: Kelas 6+
+  tutorial_moonlander_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_sushicards_string_detail_grades: Grades 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Kelas 6-8
-  tutorial_codesterslogo_string_detail_grades: Kelas 6+
-  tutorial_codesterstshirt_string_detail_grades: Kelas 6+
+  tutorial_codesterslogo_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codesterstshirt_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
   tutorial_codinismhero_string_detail_grades: Tingkat 2+
   tutorial_discovery_string_detail_grades: Tingkat 2+
   tutorial_csfirstname_string_detail_grades: Tingkat 2+
   tutorial_obstaclecourse_string_detail_grades: Tingkat 2+
-  tutorial_edisonmove_string_detail_grades: Kelas 6+
-  tutorial_edisonspider_string_detail_grades: Kelas 6+
+  tutorial_edisonmove_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_edisonspider_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_edisonspotlight_string_detail_grades: Grades 2-8
-  tutorial_firiapython_string_detail_grades: Kelas 6+
-  tutorial_gamefrootsquid_string_detail_grades: Kelas 6+
-  tutorial_duckpiano_string_detail_grades: Kelas 6+
-  tutorial_gpsound_string_detail_grades: Kelas 6+
+  tutorial_firiapython_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gamefrootsquid_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_duckpiano_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gpsound_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_groklearningpython_string_detail_grades: Tingkat 9+
   tutorial_htmltimetravel_string_detail_grades: Tingkat 9+
   tutorial_hp_flappy_string_detail_grades: Tingkat 9+
@@ -7350,32 +7375,32 @@ id:
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Grades 2-8
   tutorial_kanohp_string_detail_grades: Grades 2-8
-  tutorial_khanwebpages_string_detail_grades: Kelas 6+
+  tutorial_khanwebpages_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wizard_string_detail_grades: Kelas 6+
+  tutorial_wizard_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_mbscratchcards_string_detail_grades: Tingkat 2+
   tutorial_mbswiftplaygrounds_string_detail_grades: Tingkat 2+
-  tutorial_mbbuttons_string_detail_grades: Kelas 6+
-  tutorial_meteor_string_detail_grades: Kelas 6+
-  tutorial_ballbounce_string_detail_grades: Kelas 6+
-  tutorial_mitcodi_string_detail_grades: Kelas 6+
-  tutorial_mitdoodle_string_detail_grades: Kelas 6+
-  tutorial_talktome_string_detail_grades: Kelas 6+
-  tutorial_mobilecspmap_string_detail_grades: Kelas 6+
+  tutorial_mbbuttons_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_meteor_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_ballbounce_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_mitcodi_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_mitdoodle_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_talktome_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_mobilecspmap_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ozorandom_string_detail_grades: Tingkat 2+
   tutorial_ozotroll_string_detail_grades: Kelas 6-8
   tutorial_peblioart_string_detail_grades: Tingkat 9+
-  tutorial_astropi_string_detail_grades: Kelas 6+
+  tutorial_astropi_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_rgart_string_detail_grades: Grades 2-5
   tutorial_rgengineer_string_detail_grades: Grades 2-5
   tutorial_rgmath_string_detail_grades: Grades 2-5
   tutorial_rgscience_string_detail_grades: Grades 2-5
   tutorial_rgtech_string_detail_grades: Grades 2-5
-  tutorial_robotmagic3d_string_detail_grades: Kelas 6+
+  tutorial_robotmagic3d_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_robotmagicflappy_string_detail_grades: Tingkat 9+
   tutorial_scratchadventure_string_detail_grades: Tingkat 2+
   tutorial_scratchtalk_string_detail_grades: Tingkat 2+
@@ -7383,14 +7408,14 @@ id:
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Grades 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
-  tutorial_spherofunctions_string_detail_grades: Kelas 6+
+  tutorial_spherofunctions_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_spheroinfrared_string_detail_grades: Kelas 6-8
   tutorial_spherolightsensor_string_detail_grades: Grades 2-8
   tutorial_spheromansion_string_detail_grades: Grades 2-8
   tutorial_roadblocks_string_detail_grades: Grades 2-8
-  tutorial_spherotext2_string_detail_grades: Kelas 6+
-  tutorial_spherotext3_string_detail_grades: Kelas 6+
-  tutorial_spherotext4_string_detail_grades: Kelas 6+
+  tutorial_spherotext2_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_spherotext3_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_spherotext4_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_spheroraptor_string_detail_grades: Grades 2-8
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
   tutorial_stemplanetoids_string_detail_grades: Tingkat 9+
@@ -7398,103 +7423,106 @@ id:
   tutorial_algobot_string_detail_grades: Grades 2-8
   tutorial_thunkableapps_string_detail_grades: Tingkat 9+
   tutorial_toxicodedot_string_detail_grades: Grades 2-8
-  tutorial_gcactions_string_detail_grades: Kelas 6+
-  tutorial_gccomparators_string_detail_grades: Kelas 6+
-  tutorial_gcconditions_string_detail_grades: Kelas 6+
-  tutorial_gccreate_string_detail_grades: Kelas 6+
-  tutorial_gcevents_string_detail_grades: Kelas 6+
-  tutorial_gcloops_string_detail_grades: Kelas 6+
-  tutorial_gcvariables_string_detail_grades: Kelas 6+
+  tutorial_gcactions_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gccomparators_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gcconditions_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gccreate_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gcevents_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gcloops_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_gcvariables_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: Tingkat 2+
-  tutorial_landscape_string_detail_grades: Kelas 6+
+  tutorial_landscape_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
-  tutorial_superhero_string_detail_grades: Kelas 6+
-  tutorial_vidcodeplastic_string_detail_grades: Kelas 6+
-  tutorial_vidcodetypeface_string_detail_grades: Kelas 6+
+  tutorial_superhero_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_vidcodeplastic_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_vidcodetypeface_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_washustorm_string_detail_grades: Grades 2-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
-  tutorial_googlerookie_string_detail_grades: Kelas 6+
+  tutorial_googlerookie_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
   tutorial_mazyad_string_detail_grades: Pre-reader - Grade 5
   tutorial_gamemaker_string_detail_grades: Tingkat 2+
   tutorial_duckrace_string_detail_grades: Tingkat 2+
-  tutorial_allcancodeapps_string_detail_grades: Kelas 6+
+  tutorial_allcancodeapps_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_n2y_string_detail_grades: Pra-pembaca+
   tutorial_microsoftarcade_string_detail_grades: Tingkat 2+
   tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
-  tutorial_toxicodepython_string_detail_grades: Kelas 6+
-  tutorial_codecombatozaria_string_detail_grades: Kelas 6+
-  tutorial_vidcodedate_string_detail_grades: Kelas 6+
+  tutorial_toxicodepython_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codecombatozaria_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_vidcodedate_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
   tutorial_codespeakhappy_string_detail_grades: Grades 2-8
-  tutorial_grokimage_string_detail_grades: Kelas 6+
+  tutorial_grokimage_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
   tutorial_rpstress_string_detail_grades: Tingkat 2+
   tutorial_bsdcause_string_detail_grades: Tingkat 9+
   tutorial_vidcodeanimoji_string_detail_grades: Tingkat 2+
-  tutorial_bsdinspire_string_detail_grades: Kelas 6+
-  tutorial_tttractor_string_detail_grades: Kelas 6+
+  tutorial_vidcodeanimojies_string_detail_grades: Tingkat 2+
+  tutorial_bsdinspire_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_tttractor_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
   tutorial_scigirlsquest_string_detail_grades: Grades 2-8
   tutorial_codespeakbreathe_string_detail_grades: Tingkat 2+
-  tutorial_vidcodeface_string_detail_grades: Kelas 6+
-  tutorial_educodemaze_string_detail_grades: Kelas 6+
-  tutorial_educoderace_string_detail_grades: Kelas 6+
+  tutorial_vidcodeface_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_educodemaze_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_educoderace_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codespeakchatbot_string_detail_grades: Grades 2-8
-  tutorial_gamefrootgames_string_detail_grades: Kelas 6+
+  tutorial_gamefrootgames_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codespeakgrandparent_string_detail_grades: Grades 2-8
-  tutorial_educodekingdom_string_detail_grades: Kelas 6+
+  tutorial_educodekingdom_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codehsdata_string_detail_grades: Tingkat 9+
-  tutorial_educodecake_string_detail_grades: Kelas 6+
-  tutorial_ttsecond_string_detail_grades: Kelas 6+
-  tutorial_bsdtrivia_string_detail_grades: Kelas 6+
+  tutorial_educodecake_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_ttsecond_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_bsdtrivia_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_csfirstdialogue_string_detail_grades: Grades 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersdistance_string_detail_grades: Kelas 6+
-  tutorial_itchspace_string_detail_grades: Kelas 6+
+  tutorial_codestersdistance_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_itchspace_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_vidcodemagic_string_detail_grades: Tingkat 2+
-  tutorial_codespeakmeal_string_detail_grades: Kelas 6+
+  tutorial_vidcodemagices_string_detail_grades: Tingkat 2+
+  tutorial_codespeakmeal_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_itchfish_string_detail_grades: Grades 2-8
-  tutorial_bsdwebsite_string_detail_grades: Kelas 6+
+  tutorial_bsdwebsite_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codespeaktime_string_detail_grades: Grades 2-8
-  tutorial_itchwebcam_string_detail_grades: Kelas 6+
+  tutorial_itchwebcam_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_itchball_string_detail_grades: Grades 2-8
   tutorial_ttrace_string_detail_grades: Kelas 6-8
   tutorial_plethora_string_detail_grades: Tingkat 2+
-  tutorial_educodesecret_string_detail_grades: Kelas 6+
-  tutorial_itchshapes_string_detail_grades: Kelas 6+
+  tutorial_educodesecret_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_itchshapes_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codeguppytext_string_detail_grades: Kelas 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_educativechatbot_string_detail_grades: Tingkat 9+
-  tutorial_educodebasics_string_detail_grades: Kelas 6+
-  tutorial_codehsdesign_string_detail_grades: Kelas 6+
-  tutorial_htmlacademyphp_string_detail_grades: Kelas 6+
+  tutorial_educodebasics_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codehsdesign_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_htmlacademyphp_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_gamefrootdistance_string_detail_grades: Tingkat 2+
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Kelas 6-8
-  tutorial_cuttle_string_detail_grades: Kelas 6+
+  tutorial_cuttle_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_bsdjokes_string_detail_grades: Kelas 6-8
-  tutorial_rptree_string_detail_grades: Kelas 6+
-  tutorial_codestersunity_string_detail_grades: Kelas 6+
-  tutorial_codesterssoccer_string_detail_grades: Kelas 6+
+  tutorial_rptree_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codestersunity_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codesterssoccer_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_breakoutlock_string_detail_grades: Grades 2-8
-  tutorial_thunkablemask_string_detail_grades: Kelas 6+
+  tutorial_thunkablemask_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_cafarming_string_detail_grades: Grades 2-8
   tutorial_blocksmithyeti_string_detail_grades: Tingkat 9+
-  tutorial_codecapture_string_detail_grades: Kelas 6+
+  tutorial_codecapture_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codehslitter_string_detail_grades: Kelas 6-8
   tutorial_bsdocean_string_detail_grades: Kelas 6-8
-  tutorial_itchplatformer_string_detail_grades: Kelas 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_itchplatformer_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_codejika_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_gamefrootclicker_string_detail_grades: Kelas 6-8
   tutorial_rmagicequity_string_detail_grades: Kelas 6-8
   tutorial_ttfreestyle_string_detail_grades: Kelas 6-8
   tutorial_ozobotcolor2_string_detail_grades: Tingkat 2+
   tutorial_ozobotcolor3_string_detail_grades: Tingkat 2+
-  tutorial_clcarbon_string_detail_grades: Kelas 6+
+  tutorial_clcarbon_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
   tutorial_scigirlscc_string_detail_grades: Tingkat 2+
   tutorial_irobotpicture_string_detail_grades: Grades 2-8
@@ -7506,15 +7534,15 @@ id:
   tutorial_kcjheroines_string_detail_grades: Grades 2-8
   tutorial_ozobotvalue_string_detail_grades: Grades 2-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
-  tutorial_clfashion2_string_detail_grades: Kelas 6+
-  tutorial_ai4all_string_detail_grades: Kelas 6+
-  tutorial_cldata_string_detail_grades: Kelas 6+
+  tutorial_clfashion2_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_ai4all_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_cldata_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_spheroinputs_string_detail_grades: Grades 2-8
   tutorial_edisoncount_string_detail_grades: Grades 2-8
   tutorial_spheroloops_string_detail_grades: Grades 2-8
   tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
-  tutorial_clfashion1_string_detail_grades: Kelas 6+
+  tutorial_clfashion1_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
   tutorial_edisonmystery_string_detail_grades: Kelas 6-8
   tutorial_microbitseaturtles_string_detail_grades: Kelas 6-8
@@ -7522,17 +7550,17 @@ id:
   tutorial_imagilabs_string_detail_grades: Grades 2-8
   tutorial_irobotsimulator_string_detail_grades: Grades 2-8
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
-  tutorial_firiavirtual_string_detail_grades: Kelas 6+
+  tutorial_firiavirtual_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_irobotguesscode_string_detail_grades: Grades 2-8
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
-  tutorial_nasa3d_string_detail_grades: Kelas 6+
-  tutorial_blupants_string_detail_grades: Kelas 6+
+  tutorial_nasa3d_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_blupants_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_legodance_string_detail_grades: Kelas 6-8
   tutorial_nearpodcoding_string_detail_grades: Tingkat 9+
   tutorial_kcjplastic_string_detail_grades: Tingkat 2+
   tutorial_legojourney_string_detail_grades: Grades 2-8
   tutorial_legohopper_string_detail_grades: Grades 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Kelas 6+
+  tutorial_catrobatembroidery_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_irobotphone_string_detail_grades: Grades 2-8
   tutorial_codeguppydraw_string_detail_grades: Kelas 6-8
   tutorial_codejumper_string_detail_grades: Grades 2-8
@@ -8276,6 +8304,8 @@ id:
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Semua browser modern, tablet Android,
     iPad
+  tutorial_vidcodeanimojies_string_platforms: Semua browser modern, tablet Android,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8299,6 +8329,8 @@ id:
   tutorial_codestersdistance_string_platforms: Semua peramban modern
   tutorial_itchspace_string_platforms: Semua peramban modern
   tutorial_vidcodemagic_string_platforms: Semua browser modern, tablet Android, iPad
+  tutorial_vidcodemagices_string_platforms: Semua browser modern, tablet Android,
+    iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Semua peramban modern
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8310,6 +8342,7 @@ id:
   tutorial_educodesecret_string_platforms: Semua peramban modern
   tutorial_itchshapes_string_platforms: Semua peramban modern
   tutorial_codeguppytext_string_platforms: Semua browser modern, tablet Android, iPad
+  tutorial_vidcodeplastiche_string_platforms: Semua browser modern, iPad
   tutorial_educativechatbot_string_platforms: Semua peramban modern
   tutorial_educodebasics_string_platforms: Semua peramban modern
   tutorial_codehsdesign_string_platforms: Semua browser modern, tablet Android, iPad,
@@ -8981,6 +9014,7 @@ id:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -9002,6 +9036,7 @@ id:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -9013,6 +9048,7 @@ id:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9712,6 +9748,7 @@ id:
   tutorial_rpstress_string_detail_programming_languages: Blok
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9733,6 +9770,7 @@ id:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blok
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blok
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9745,6 +9783,7 @@ id:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blok
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -10404,42 +10443,42 @@ id:
     Prancis, Jerman, Hindi, Indonesia, Italia, Jepang, Rusia, Spanyol, Tagalog, Tamil,
     Thai, Turki, Urdu, dan 15 bahasa lainnya!
   tutorial_scratchimagine_string_detail_grades: Tingkat 2+
-  tutorial_codesterspsa_string_detail_grades: Kelas 6+
+  tutorial_codesterspsa_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_googlehero_string_detail_grades: Grades 2-8
-  tutorial_codestersbball_string_detail_grades: Kelas 6+
+  tutorial_codestersbball_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_scratchcartoon_string_detail_grades: Tingkat 2+
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
   tutorial_bananatales_string_detail_grades: Grades 2-8
   tutorial_scratchtales_string_detail_grades: Grades 2-8
-  tutorial_msemoji_string_detail_grades: Kelas 6+
-  tutorial_cacolor_string_detail_grades: Kelas 6+
+  tutorial_msemoji_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_cacolor_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_kodablebeach_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkeren_string_detail_grades: Grades 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Kelas 6+
+  tutorial_tynkerjavapro_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_grasshopperhack_string_detail_grades: Tingkat 9+
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
   tutorial_nclabdata_string_detail_grades: Tingkat 9+
   tutorial_grasshopperphoto_string_detail_grades: Tingkat 9+
-  tutorial_tynkerpyland_string_detail_grades: Kelas 6+
+  tutorial_tynkerpyland_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codeitimages_string_detail_grades: Tingkat 2+
   tutorial_hyperpadenemy_string_detail_grades: Tingkat 9+
   tutorial_tynkerpro_string_detail_grades: Grades 2-8
-  tutorial_trashtag_string_detail_grades: Kelas 6+
+  tutorial_trashtag_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_casiege_string_detail_grades: Grades 2-8
-  tutorial_thunkableyeet_string_detail_grades: Kelas 6+
-  tutorial_vidcodedeal_string_detail_grades: Kelas 6+
+  tutorial_thunkableyeet_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_vidcodedeal_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codehsgeno_string_detail_grades: Tingkat 9+
   tutorial_hyperpadpong_string_detail_grades: Tingkat 9+
   tutorial_tynkerland_string_detail_grades: Grades 2-8
-  tutorial_trinketgirl_string_detail_grades: Kelas 6+
+  tutorial_trinketgirl_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_rpimosquito_string_detail_grades: Kelas 6-8
-  tutorial_tynkermars_string_detail_grades: Kelas 6+
-  tutorial_cityx_string_detail_grades: Kelas 6+
-  tutorial_vidcodemap_string_detail_grades: Kelas 6+
+  tutorial_tynkermars_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_cityx_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_vidcodemap_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
-  tutorial_codehstriangle_string_detail_grades: Kelas 6+
+  tutorial_codehstriangle_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ttwhitehouse_string_detail_grades: Tingkat 2+
-  tutorial_modulo_string_detail_grades: Kelas 6+
+  tutorial_modulo_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: Tingkat 9+
@@ -10447,34 +10486,34 @@ id:
   tutorial_htmlmuffin_string_detail_grades: Kelas 6-8
   tutorial_microsoftpizza_string_detail_grades: Kelas 6-8
   tutorial_stemc_blckhole_string_detail_grades: Tingkat 9+
-  tutorial_careconfigure_string_detail_grades: Kelas 6+
+  tutorial_careconfigure_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
   tutorial_ozaria_string_detail_grades: Tingkat 2+
-  tutorial_ttovum_string_detail_grades: Kelas 6+
+  tutorial_ttovum_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ttpassage_string_detail_grades: Grades 2-8
   tutorial_tynkerhtmlen_string_detail_grades: Tingkat 2+
   tutorial_ttfrog_string_detail_grades: Grades 2-8
   tutorial_codemojijava_string_detail_grades: Kelas 6-8
-  tutorial_ccfirewall_string_detail_grades: Kelas 6+
+  tutorial_ccfirewall_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_htmljs_string_detail_grades: Kelas 6-8
   tutorial_ttaqueducts_string_detail_grades: Kelas 6-8
-  tutorial_vtgame_string_detail_grades: Kelas 6+
-  tutorial_baroborav_string_detail_grades: Kelas 6+
+  tutorial_vtgame_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_baroborav_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_baroboobstacle_string_detail_grades: Tingkat 2+
-  tutorial_pbstorytelling_string_detail_grades: Kelas 6+
+  tutorial_pbstorytelling_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
   tutorial_spherosmiles_string_detail_grades: Tingkat 2+
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
-  tutorial_toxarchitect_string_detail_grades: Kelas 6+
+  tutorial_toxarchitect_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_idodge_string_detail_grades: Grades 2-8
-  tutorial_firiacodebot_string_detail_grades: Kelas 6+
+  tutorial_firiacodebot_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_modlighthouse_string_detail_grades: Pra-pembaca+
   tutorial_spherogreen_string_detail_grades: Grades 2-8
   tutorial_ozopopstar_string_detail_grades: Grades 2-8
-  tutorial_eddesign_string_detail_grades: Kelas 6+
-  tutorial_edshapeup_string_detail_grades: Kelas 6+
+  tutorial_eddesign_string_detail_grades: Kelas 6+ (11 ke atas)
+  tutorial_edshapeup_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_ozocolor_string_detail_grades: Grades 2-8
   tutorial_kcjanimals_string_detail_grades: Grades 2-8
   tutorial_icomputeeggs_string_detail_grades: Grades 2-8
@@ -10483,21 +10522,21 @@ id:
   tutorial_peblioportraits_string_detail_grades: Tingkat 9+
   tutorial_rootcodebreak_string_detail_grades: Grades 2-8
   tutorial_microbit14_string_detail_grades: Grades 2-8
-  tutorial_barobomoon_string_detail_grades: Kelas 6+
+  tutorial_barobomoon_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_eddog_string_detail_grades: Grades 2-6
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: Tingkat 9+
-  tutorial_blockscadtarget_string_detail_grades: Kelas 6+
+  tutorial_blockscadtarget_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tcadicicles_string_detail_grades: Kelas 6-8
-  tutorial_blockscadscale_string_detail_grades: Kelas 6+
+  tutorial_blockscadscale_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_tcadloops_string_detail_grades: Kelas 6-8
   tutorial_phidgets_string_detail_grades: Tingkat 9+
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
-  tutorial_modvariables_string_detail_grades: Kelas 6+
+  tutorial_modvariables_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_codestersmicro_string_detail_grades: Kelas 6-8
   tutorial_codestersdata_string_detail_grades: Kelas 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
-  tutorial_rpisensehat_string_detail_grades: Kelas 6+
+  tutorial_rpisensehat_string_detail_grades: Kelas 6+ (11 ke atas)
   tutorial_modtraits_string_detail_grades: Tingkat 2+
   tutorial_mee_string_detail_grades: Tingkat 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8

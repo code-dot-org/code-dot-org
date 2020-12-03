@@ -3066,7 +3066,16 @@
         "scrat 20": "¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto más complejo? Si lo haces correctamente puedo caminar cualquier camino curvo sin importar su longitud. !Date prisa! ¡El hielo se está derritiendo!",
         "Fish Tank 5-validated_2019": "Este pez es muy aventurero y quiere conocer a nuevos animales marinos. \n\nAgrega otro sprite en el acuario. ¡Le puedes dar cualquier disfraz menos el que le diste al pez!",
         "Fish Tank 5-validated_2020": "Este pez es muy aventurero y quiere conocer a nuevos animales marinos. \n\nAgrega otro sprite en el acuario. ¡Le puedes dar cualquier disfraz menos el que le diste al pez!",
-        "OPD-K5-spritelab-6": "Este pez es muy aventurero y quiere conocer a nuevos animales marinos. \n\nAgrega otro sprite en el acuario. ¡Le puedes dar cualquier disfraz menos el que le diste al pez!"
+        "OPD-K5-spritelab-6": "Este pez es muy aventurero y quiere conocer a nuevos animales marinos. \n\nAgrega otro sprite en el acuario. ¡Le puedes dar cualquier disfraz menos el que le diste al pez!",
+        "outbreak1": "Crea 10 sprites saludables y 1 sprite enfermo. Cambia su tamaño y hazlos deambular.",
+        "outbreak2": "Convierte monstruos sanos en monstruos enfermos cuando se tocan.",
+        "outbreak3": "Convierte monstruos en monstruos con máscaras faciales cuando haces clic en ellos.",
+        "outbreak4": "Cambia el número y el tamaño de los sprites de monstruos para tu simulación.",
+        "outbreak5": "Haz que los monstruos enfermos comiencen a recuperarse cuando empiece la simulación y cuando un monstruo sano toque a un monstruo enfermo.",
+        "outbreak6": "Agrega un porcentaje de probabilidad de que los monstruos se enfermen cada vez que monstruos sanos toquen monstruos enfermos. Haz esto para todas las combinaciones de monstruos con y sin máscaras.",
+        "outbreak7": "Crea un nuevo disfraz para monstruos con inmunidad al virus y úsalo en tu simulación.",
+        "outbreak8": "Comparte un mensaje con tu simulación.",
+        "outbreak_freeplay": "Realiza los cambios o mejoras que desee en tu proyecto. "
       }
     }
   }

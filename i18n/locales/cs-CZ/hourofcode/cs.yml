@@ -1,7 +1,7 @@
 ---
 cs:
-  site_name: HODINA KÓDU
-  hour_of_code: Hodina kódu
+  site_name: HODINA PROGRAMOVÁNÍ
+  hour_of_code: Hodina programování
   language: Čeština
   front_title: Připojte se k největší vzdělávací akce v dějinách, Prosinec 7-13, 2015
   coming_soon: Bude to brzy
@@ -11,31 +11,31 @@ cs:
   campaign_date_full: Prosinec 7-13
   campaign_date_year: '2016'
   campaign_date_full_year: Prosinec 7.-13, 2020
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_start_short: 1. října
+  latam_campaign_date_start_long: 1. října
+  latam_campaign_date_short: 1. října až 18. prosince
+  latam_campaign_date_full: 1. října až 18. prosince
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  latam_campaign_date_full_year: 1. října 2020 až 18. prosince 2020
+  europe_campaign_date_start_short: 10. října
+  europe_campaign_date_start_long: 10. října
+  europe_campaign_date_short: 10. až 25. října
+  europe_campaign_date_full: 10. až 25. října
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: 10. až 25. října 2020
+  africa_campaign_date_start_short: 1. října
+  africa_campaign_date_start_long: 1. října
+  africa_campaign_date_short: 1. až 31. října
+  africa_campaign_date_full: 1. až 31. října
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_full_year: 1. až 31. října 2020
   hoc2020_header: Učte se dnes, vybudujte zářnější zítřek.
   hoc2020_header_with_line_break_markdown: |-
     Učte se dnes,
 
     vybudujte zářnější zítřek.
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
+  social_hoc2020_cs_important: 'Počítačové vědy mají větší význam než kdykoli dříve.
+    Vybudujme budoucnost, jakou si přejeme. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: Hodina programování (#HourOfCode) je o Počítačové
     vědě pro dobro (#CSforGood). Učte se dnes, vybudujte zářnější zítřek.
   social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
@@ -43,6 +43,12 @@ cs:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: "„Hodina programování 2020“ přichází!"
+  hoc2020_ai_header: Probádejte umělou inteligenci
+  hoc2020_ai_description: Umělá inteligence a strojové učení ovlivňují celý náš svět.
+    Přidejte se k nám a bádejte o umělé inteligenci v této nové řadě videí, trénujte
+    umělou inteligenci pro oceány ve více než 25 jazycích, diskutujte o etice a o
+    umělé inteligenci, a další...
   hoc2019_header: Naučte se informatiku. Změňte svět!
   hoc2019_header_line1_mobile: Naučte se informatiku.
   hoc2019_header_line2_mobile: Změňte svět!
@@ -196,7 +202,7 @@ cs:
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
-  codeorg_homepage_hoc2018_header_line1: The Hour of Code is coming...
+  codeorg_homepage_hoc2018_header_line1: Hodina programování se blíží…
   codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Co vytvoříš?
   codeorg_homepage_hoc2018_header_line3: Give flight to imagination and birth to innovation.
@@ -284,17 +290,17 @@ cs:
   company_ChathamCountySchools: Chatham County Schools
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
-  company_chesterfieldschools: Chesterfield County Public Schools
-  company_codebrooklyn: Code Brooklyn
-  company_cps: Chicago Public Schools
-  company_ccsd: Clark County School District
-  company_cloverparkschooldistrict: Clover Park School District
-  company_ccsoh: Columbus City School District
-  company_cresskillboe: Cresskill Public Schools
-  company_dallasisd: Dallas Independent School District
+  company_chesterfieldschools: Veřejné školy ve okrese Chesterfield
+  company_codebrooklyn: Programování Brooklyn
+  company_cps: Veřejné školy ve městě Chicago
+  company_ccsd: Školní okrsek Clark County
+  company_cloverparkschooldistrict: Školní okrsek Clover Park
+  company_ccsoh: Školní okrsek Columbus City
+  company_cresskillboe: Veřejné školy ve městě Cresskill
+  company_dallasisd: Nezávislý školní okrsek ve městě Dallas
   company_disney: Disney
-  company_dpsk12: Denver Public Schools
-  company_dcsdk12: Douglas County Schools
+  company_dpsk12: Veřejné školy ve městě Denver
+  company_dcsdk12: Školy v Douglas County
   company_dpsnc: Veřejné školy v Durhamu
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
@@ -604,19 +610,19 @@ cs:
     Pomáhá to podporovat dovednost, logiku a tvořivost při řešení problémů. Hned na
     začátku studenti získají základy pro úspěch v jakékoliv profesní dráze 21.století.
     Více ve statistikách na <a href='http://code.org'>Code.org</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: _Každý_ student by měl mít příležitost učit se počítačovou
+    vědu. Pomáhá to v něm rozvíjet schopnost řešit problémy, logiku a kreativitu.
+    Když začnou včas, budou mít studenti základ pro úspěch na jakékoli kariérní dráze
+    21. století. Na další statistiky se můžete podívat [tady](%{stats_url}).
   hoc_faq_how_participate_q: Jak se zúčastnit akce Hodina kódu?
   hoc_faq_how_participate_a: "<a href='/how-to'>Naplánujte ji zde</a> tím, že si prohlídnete
     náši příručku. Hodinu kódu můžete organizovat na vaší škole nebo ve vaší komunitě,
     jako je mimoškolní klub, případně v práci. Můžete to zkusit i sami, jakmile začneme
     (datum: %{campaign_date})."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[Začít plánovat můžete tady](%{howto}) přečtením
+    našeho návodného průvodce. Akci „Hodina programování“ můžete pořádat ve své škole
+    nebo v jiném společenství — jako třeba v mimoškolním klubu, neziskové organizaci,
+    nebo v práci. Nebo to prostě zkuste sami, až přijde %{campaign_date}."
   hoc_faq_behind_hoc_q: Kdo je v pořádá akci Hodina kódu?
   hoc_faq_behind_hoc_a: Hodina kódu je organizována <a href='http://code.org'>Code.org</a>,
     veřejnou nezisková organizací (US § 501 c3), která se věnuje zvyšování zájmu o
@@ -624,33 +630,36 @@ cs:
     dispozici na více školách. Též se <a href='%{codeorg_url}/about/partners'>velká
     skupina partnerů</a> spojila k podpoře této akce &mdash; Microsoftu, Apple, Amazon,
     Boys and Girls Clubs of America, College Board a další.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: "„Hodina programování“ je založena na našem „Týdnu
+    hodin programování a vzdělávání v počítačových vědách“  [Komise pro vzdělávání
+    a inspekci](%{partner_url}), jakož i na naší bezprecedentní spolupráci s partnery,
+    kteří se daly dohromady, aby podpořili „Hodinu programování“ — sem patří mimo
+    jiné Microsoft, Apple, Amazon, skupina „Boys and Girls Clubs of America“ („Klub
+    hochů a dívek Ameriky“) a Vysokoškolský panel."
   hoc_faq_host_q: Nevím nic o kódování. Mohu uspořádat takovou akci?
   hoc_faq_host_a: Samozřejmě. Aktivity Hodiny kódu jsou samostatně vedené. Vše, co
     musíte udělat je <a href='%{codeorg_url}/learn'> zkusit naše aktuální kurzy</a>,
     vybrat kurz, který chcete, a hodinu &mdash; my se postaráme o zbytek. Máme také
     možnosti pro každý věk a úroveň zkušeností - od školky a dále. Začněte plánovat
     vaše události čtením <a href='/how-to'>průvodce</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: Samozřejmě. Aktivity „Hodiny programování“ probíhají pod
+    vlastním vedením. Jediné, co musíte udělat, je [zkusit naše aktuální výukové kurzy](%{codeorg_url}/learn),
+    vybrat si výukový kurz dle vlastní preference a vybrat si hodinu —  o ostatek
+    se postaráme my. Máme také možnosti pro všechny věkové kategorie a pro všechny
+    úrovně zkušeností, od školky výše. Chcete-li začít plánovat svou akci, nejprve
+    si přečtěte [návodného průvodce](%{howto}).
   hoc_faq_devices_q: Jaké zařízení mám pro své studenty použít?
   hoc_faq_devices_a: Code.org kurzy fungují na všech zařízeních a prohlížečích. Více
     informací o technických záležitostech lekcí Code.org najdete ve <a href='%{codeorg_url}/educate/it'>
     videu</a>. Technické požadavky pro jiné než Code.org lekce najdete <a href='%{codeorg_url}/learn'>zde</a>
     v popisku konkrétního kurzu. Nezapomeňte, že pokud vaše škola nemůže přizpůsobit
     kurzy nabízíme také jiné aktivity!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Výukové kurzy Code.org fungují na všech zařízeních a
+    prohlížečích. Další informace o technických potřebách pro výukové kurzy Code.org
+    najdete [zde](%{codeorg_url}/educate/it). Technické potřeby pro výukové kurzy
+    jiné než Code.org najdete na [%{partner_url}/learn](%{codeorg_url}/learn) v popisu
+    konkrétního výukového kurzu.  Jestliže Vaše škola nemůže využít výukových kurzů,
+    nezapomeňte, že nabízíme také [aktivity bez elektřiny](%{unplugged_url})!
   hoc_faq_need_computers_q: Potřebuji počítač pro každého účastníka?
   hoc_faq_need_computers_a: Ne. Máme lekce, které fungují na počítačích, smartphonech,
     tabletech a některé nevyžadují počítač vůbec! Můžete se připojit kdekoliv jste
@@ -662,13 +671,13 @@ cs:
     videa, střídejte se v řešení úkolů nebo odpovědí. <li><b>Bez připojení.</b> Nabízíme
     i kurzy, které nevyžadují počítač.</ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Ne. Máme výukové kurzy „Hodinny programování“, které fungují na PC, inteligentních telefonech, tabletech, i některé, na které vůbec není potřeba žádný počítač! Můžete se přidat odkudkoli a s čímkoli.
 
-    _Here are a few options:_
+    _Tady je několik možností:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Práce ve dvojicích.** [Výzkumy ukazují, že](%{pair_programming_research}) studenti se nejlépe učí při [programování ve dvojicích](%{pair_programming_video}), když sdílejí počítač a pracují společně. Vybídněte své studenty, aby utvořili dvojice.
+    - **Používejte promítačku.** Jestliže máte projektor a plátno k používání spolu s počítačem připojeným k webu, může celá Vaše skupina dělat Hodinu programování společně. Sledujte videa společně a střídejte se při řešení hlavolamů a zodpovídání otázek.
+    - **Vypněte.** Nabízíme [výukové kurzy nevyžadující vůbec žádný počítač](%{unplugged_url}).
   hoc_faq_international_q: Jsem v České republice (<country>). Jakým způsobem se mohu
     zúčastnit?
   hoc_faq_international_a: Kdokoliv může organizovat Hodinu kódu kdekoliv na světě.
@@ -682,10 +691,10 @@ cs:
     href='/tutorial-guidelines'>naše pokyny a instrukce</a>. Rádi bychom pořádali
     i řadu dalších možností, ale hlavním cílem je předat zkušenosti studentům a učitelům,
     pro které je informatika něco úplně nového.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a_markdown: Jestliže máte zájem stát se partnerem výukového kurzu
+    [podívejte se na naše směrnice a doporučení](%{tutorial_guidelines}). Rádi bychom
+    pořádali mnoho různých zajímavých možností, ale primárním cílem je optimalizovat
+    prožitek pro studenty a učitele, pro které jsou počítačové vědy nové.
   hoc_faq_account_q: Potřebují se studenti přihlásit pomocí účtu? Budu si muset založit
     svůj účet?
   hoc_faq_account_a: Ne. Aby si studenti mohli vyzkoušet Hodinu kódu, není potřeba
@@ -693,24 +702,26 @@ cs:
     kurzů</a> vyžaduje účet pro uložení postupu. Registrace na Hodině kódu nevytvoří
     automaticky účet v Code Studio. Pokud chcete pro studenty vytvořit účty, následujte
     tyto <a href='https://youtu.be/_smelV_KISE'>instrukce</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: Ne. K tomu, aby student vyzkoušel Hodinu programování
+    není potřeba naprosto žádná registrace ani přihlášení. Většina [pokračovacích
+    kurzů](%{codeorg_url}/learn/beyond) vyžaduje k uložení pokroku studenta vytvoření
+    účtu. Dále pak, přihlášením k „Hodině programování“ NEVYTVÁŘÍTE automaticky účet
+    na Code Studio. Jestliže chcete svým studentům vytvořit účty, postupujte prosím
+    podle následujících [pokynů](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Které činnosti bych měl(a) dělat se studenty středních škol?
   hoc_faq_high_school_a: Přes všechny věkové kategorie doporučujeme vyzkoušet jeden
     ze začátečnických kurzů na <a href='%{codeorg_url}/learn'>%{partner_url}/učit</a>
     se začít, jako například kurz s Angry Birds nebo s Annou a Elsou. Student střední
     školy by měl být schopen dokončit jeden z nich za 30 minut a poté může vyzkoušet
     pokročilejší kurz v JavaScriptu, Khan Academy nebo CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Naše výukové kurzy „Hvězdné války“ a Minecraft jsou
+    ideální pro vysokoškoláky, zejména verze Hvězdných válek v jazyce JavaScript a
+    volně hratelná úroveň obou těchto výukových kurzů. Alternativně doporučujeme vyzkoušet
+    některý z našich výukových kurzů pro začátečníky na [%{partner_url}/learn](%{codeorg_url}/learn),
+    kde můžete začít, jako například výukový kurz s Angry Birds nebo s Annou a Elsou.
+    Středoškolský student by měl být schopen absolvovat některý z těchto kurzů do
+    30 minut a pak může vyzkoušet pokročilejší výukový kurz v jazyce JavaScript, jako
+    například Khan Academy nebo CodeHS.
   hoc_faq_scratch_q: Pro Hodinu kódu používám Scratch, ale co když mí studenti mají
     iPady a ne notebooky ?
   hoc_faq_scratch_a: Scratch nefunguje na tabletech. Jsou-li vaši studenti velmi mladí,
@@ -739,11 +750,11 @@ cs:
     Nepočítáme unikátní ID studentů vždy dobře, protože nevyžadujeme, aby se studenti
     přihlašovali nebo registrovali. Ve výsledku současně počítáme více i méně. Přečtěte
     si veškeré detaily <a href='%{codeorg_url}/loc'>zde</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: Sledovač „Hodiny programování“ není přesným měřidlem
+    užívání. Při sledování účasti v hodině programování nepočítáme přesně unikátní
+    ID studentů, zejména proto, že nevyžadujeme, aby se student přihlásil nebo zaregistroval.
+    Následkem toho nepočítáme účastníky přesně. Všechny podrobnosti si můžete přečíst
+    [zde](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Kolik toho můžu za hodinu naučit?
   hoc_faq_one_hour_a: Cílem Hodiny kódu není někoho učit tak, aby se stal expertem
     v informatice za hodinu. Hodina stačí pouze na to, abychom ukázali, že informatika
@@ -761,11 +772,11 @@ cs:
     co jejich studenti chtějí a učitelé jsou schopni. <br/><br/> V závěru, vše co
     se studenti mohou za hodinu naučit je, že to můžeme zvládnout.
   hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+    Cílem „Hodiny programování“ není vyučit někoho během jedné hodiny tak, aby se stal expertem na počítačové vědy. Jedna hodina stačí jen na to, abyste se naučili, že počítačová věda je zábavná a tvořivá, že je dostupná lidem všech věkových kategorií, je pro všechny studenty, bez ohledu na jejich pozadí. Měřítkem úspěchu této kampaně není to, kolik se studenti počítačových věd naučí - úspěch je reflektován širokou účastí obou pohlaví a etnických a socioekonomických skupin a výsledným zvýšením účasti a zapojení, které vidíme v kurzech počítačových věd na všech úrovních. Miliony zúčastněných učitelů a studentů se rozhodlo pro více než jednu hodinu -  učit se celý den nebo celý týden nebo déle, a mnoho studentů se následkem toho rozhodlo zapsat se na celý kurz (nebo i na vysokoškolskou přednášku).
 
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+    Kromě studentů je dalším „učícím se“ vzdělavatel, který získá během jedné hodiny sebedůvěru, že umí vyučovat počítačové vědy, ačkoli univerzitní diplom na výuku počítačových věd třeba nemá. Desítky tisíc učitelů se rozhodují pokračovat v počítačových vědách dále, ať už absolvováním PD studia nebo nabízením následných online kurzů, nebo obojím. A toto platí i pro vedení škol, které si uvědomí, že počítačové vědy jsou něčím, co jejich studenti chtějí a čeho jsou jejich učitelé schopni.
 
-    Above all, what all participants can learn in an hour is that we can do this.
+    Nadevše je potřeba zdůraznit, že tím, co se všichni účastníci mohou během jedné hodiny dozvědět, je, že to dokážeme.
   hoc_faq_more_questions_q: Máte ještě další otázky?
   hoc_faq_more_questions_a: Zkuste najít odpověď na našem <a href='http://support.code.org'>fóru
     pro podporu</a>.
@@ -783,10 +794,10 @@ cs:
   hoc_faq_certificates_q: Kde mohu vytisknout certifikáty pro své studenty?
   hoc_faq_certificates_a: Přejděte na naši <a href='%{codeorg_url}/certificates'>
     stránku s certifikáty</a>, kde můžete dopředu tisknout certifikáty pro celou třídu.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Přejděte na naši [stránku certifikátů](%{codeorg_url}/certificates),
+    kde můžete předem vytisknout certifikáty pro celou třídu. Dále můžete vytisknout
+    [speciální certifikáty](%{codeorg_url}/certificates?course=mc) pro studenty vykonávající
+    výukový kurz Minecraft.
   hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
     name?
   hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
@@ -923,6 +934,7 @@ cs:
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright 2015 Code.org. Všechna práva vyhrazena.
   footer_trademark_message: Hour of Code™ je ochranná známka společnosti Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partneři
   footer_menu_contact: Kontaktujte nás
   footer_menu_support: Podpora
@@ -1364,7 +1376,7 @@ cs:
   tutorial_diggindwarf_name: Diggin' Dwarf
   tutorial_rmedr_name: Program a simulated VEX EDR V5 robot using Google Blockly
   tutorial_spheroit_name: 'Blocks 2: If/Then Else'
-  tutorial_gameofcodes_name: Game Of Codes
+  tutorial_gameofcodes_name: Programovací hra
   tutorial_blocklygames_name: Blockly Games
   tutorial_spherohello_name: 'Text 1: Hello World'
   tutorial_spheroarcade_name: Sphero Arcade Playground
@@ -1532,9 +1544,10 @@ cs:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1550,15 +1563,16 @@ cs:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1567,6 +1581,7 @@ cs:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1576,7 +1591,7 @@ cs:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1632,7 +1647,7 @@ cs:
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Kódovaná výšivka
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
@@ -5304,20 +5319,22 @@ cs:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5363,12 +5380,12 @@ cs:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5387,16 +5404,18 @@ cs:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5416,6 +5435,12 @@ cs:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: Problém plastů zaplňujících oceány se
+    nadále zhoršuje. Naštěstí můžete nechat zaznít svůj hlas programováním na Plastic
+    Pollution PSA. Po naprogramování PSA o znečištění plastem pomocí jazyka JavaScript
+    můžete udělat druhé video o jakémkoli předmětu, na kterém Vám záleží! Naučte se
+    používat cykly, sinové vlny a přizpůsobená emoji tak, abyste vytvořili unikátní
+    projekt.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5446,11 +5471,11 @@ cs:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5660,8 +5685,8 @@ cs:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Kódujte svůj design na telefonu Android
+    a přišijte jej na tričko, kalhoty, tašku do posilovny nebo boty!
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -5679,19 +5704,21 @@ cs:
     of code to bring the two villages together. Players will experience empathy and
     compassion for their neighbors, learn cooperation and inclusion, and embrace the
     diversity that makes us all uniquely special.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
-  tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
-    Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
-    Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
+  tutorial_dance2019_language: arabština, čínština, čeština, dánština, holandština,
+    angličtina, finština, francouzština, němčina, řečtina, hindština, maďarština,
+    indonéština, italština, japonština, korejština, malajština, polština, portugalština
+    a 10 dalších jazyků!
+  tutorial_danceparty_language: angličtina, arabština, katalánština, čínština, čeština,
+    dánština, holandština, finština, francouzština, němčina, řečtina, maďarština,
+    italština, japonština, korejština, norština, polština, portugalština, ruština,
+    španělština, švédština, thajština, turečtina a vietnamština
   tutorial_chibitronics_language: Čeština
   tutorial_athlete_language: angličtina, francouzština, italština, portugalština (Brazílie),
     španělština
-  tutorial_moana_language: English, Arabic, Chinese (Simplified), Chinese (Traditional)
-    Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish,
-    Turkish, Ukrainian, Vietnamese
+  tutorial_moana_language: angličtina, arabština, čínština (zjednodušená), čínština
+    (tradiční), dánština, holandština, finština, francouzština, němčina, indonéština,
+    italština, japonština, korejština, norština, polština, polynéština (samojská),
+    portugalština, ruština, španělština, švédština, turečtina, ukrajinština, vietnamština
   tutorial_star-wars_language: angličtina, arabština, bulharština, čínština, dánština,
     finština, francouzština, chorvatština, indonéština, islandština, italština, japonština,
     korejština, němčina, nizozemština, norština, perština, polština, portugalština,
@@ -5704,9 +5731,10 @@ cs:
     rumunština, ruština, řečtina, španělština, švédština, turečtina, ukrajinština
     a 19 dalších
   tutorial_vidnews_language: English only
-  tutorial_kodable-pre_language: English, Arabic, Azerbaijani, German, Greek, Spanish,
-    Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish,
-    Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese
+  tutorial_kodable-pre_language: angličtina, arabština, ázerbájdžánština, němčina,
+    řečtina, španělština, perština, francouzština, indonéština, islandština, italština,
+    korejština, holandština, norština, polština, portugalština, rumunština, ruština,
+    srbština, švédština, turečtina, ukrajinština, čínština
   tutorial_highseas_language: English only
   tutorial_capython_language: English, Dutch, Spanish
   tutorial_frzn_language: angličtina, arabština, bulharština, čínština, dánština,
@@ -5714,10 +5742,11 @@ cs:
     korejština, němčina, nizozemština, norština, perština, polština, portugalština,
     rumunština, ruština, řečtina, španělština, švédština, turečtina, ukrajinština
     a 19 dalších
-  tutorial_cocom_language: English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian,
-    Vietnamese and 9 more
+  tutorial_cocom_language: angličtina, arabština, bulharština, čínština, čeština,
+    dánština, holandština, francouzština, němčina, řečtina, hebrejština, maďarština,
+    indonéština, italština, japonština, korejština, norština, perština, polština,
+    portugalština, ruština, španělština, švédština, turečtina, ukrajinština, vietnamština
+    a 9 dalších jazyků
   tutorial_play-lab_language: angličtina, arabština, bulharština, čínština, dánština,
     finština, francouzština, chorvatština, indonéština, islandština, italština, japonština,
     korejština, němčina, nizozemština, norština, perština, polština, portugalština,
@@ -5760,10 +5789,10 @@ cs:
     korejština, němčina, nizozemština, norština, perština, polština, portugalština,
     rumunština, ruština, řečtina, španělština, švédština, turečtina, ukrajinština
     a 19 dalších
-  tutorial_galaxy_language: English, Albanian, Arabic, Bosnian, Chinese, Croatian,
-    Czech, Danish, Dutch, French, German, Hebrew, Indonesian, Italian, Japanese, Korean,
-    Persian, Polish, Portuguese, Romanian, Russian, Slovenian, Spanish, Swedish, Turkish,
-    Vietnamese
+  tutorial_galaxy_language: angličtina, albánština, arabština, bosenština, čínština,
+    chorvatština, čeština, dánština, holandština, francouzština, hebrejština, indonéština,
+    italština, japonština, korejština, perština, polština, portugalština, rumunština,
+    ruština, slovinština, španělština, švédština, turečtina, vietnamština
   tutorial_inf_language: angličtina, arabština, bulharština, čínština, dánština, finština,
     francouzština, chorvatština, indonéština, islandština, italština, japonština,
     korejština, němčina, nizozemština, norština, perština, polština, portugalština,
@@ -5771,9 +5800,9 @@ cs:
     a 19 dalších
   tutorial_tynkersol_language: English only
   tutorial_itchg_language: English only
-  tutorial_como_language: English, Arabic, Chinese, Czech, French, German, Greek,
-    Hebrew, Japanese, Kazkh, Lithuanian, Polish, Portuguese, Russian, Serbian, Spanish,
-    Turkish, Ukrainian
+  tutorial_como_language: angličtina, arabština, čínština, čeština, francouzština,
+    němčina, řečtina, hebrejština, japonština, kazaština, litevština, polština, portugalština,
+    ruština, srbština, španělština, turečtina, ukrajinština
   tutorial_processfound_language: English only
   tutorial_tynkerhomo_language: English only
   tutorial_art_language: angličtina, arabština, bulharština, čínština, dánština, finština,
@@ -5792,10 +5821,11 @@ cs:
   tutorial_tynkerapp_language: English only
   tutorial_tynkerpup_language: English only
   tutorial_livecode_language: English only
-  tutorial_cocomgame_language: English, Arabic, Bulgarian, Chinese, Croatian, Czech,
-    Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian, Vietnamese and 8 more
+  tutorial_cocomgame_language: angličtina, arabština, bulharština, čínština, chorvatština,
+    čeština, dánština, holandština, finština, francouzština, němčina, řečtina, hebrejština,
+    italština, japonština, korejština, norština, perština, polština, portugalština,
+    rumunština, ruština, španělština, švédština, turečtina, ukrajinština, vietnamština
+    a 8 dalších jazyků
   tutorial_tynkerspin_language: English only
   tutorial_code-avengers_language: English, Spanish, Dutch, Russian, Portuguese
   tutorial_tynkercq_language: English only
@@ -6025,9 +6055,9 @@ cs:
   tutorial_moveit_language: English only
   tutorial_bigevent_language: English only
   tutorial_gpp_language: English only
-  tutorial_foosgame_language: English, Arabic, German, Spanish, French, Japanese,
-    Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional
-    Chinese, Simplified Chinese, Greek, Italian, Polish
+  tutorial_foosgame_language: angličtina, arabština, němčina, španělština, francouzština,
+    japonština, korejština, holandština, portugalština, brazilská portugalština, rumunština,
+    turečtina, tradiční čínština, zjednodušená čínština, řečtina, italština, polština
   tutorial_solopython_language: English only
   tutorial_kodableint_language: English only
   tutorial_kodableadv_language: English only
@@ -6249,9 +6279,10 @@ cs:
   tutorial_cashield_language: Čeština
   tutorial_ccwslimer_language: Čeština
   tutorial_codinggalaxy_language: Chinese, English
-  tutorial_boatrace_language: Arabic, Chinese (Simplified), Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish,
-    Romanian, Serbian (Cyrillic), Spanish, Ukrainian
+  tutorial_boatrace_language: arabština, čínština (zjednodušená), čeština, dánština,
+    holandština, francouzština, němčina, řečtina, hebrejština, hindština, italština,
+    japonština, korejština, ostatní, polština, rumunština, srbština (cyrilice), španělština,
+    ukrajinština
   tutorial_ccplay_language: Čeština
   tutorial_grinch_language: Čeština
   tutorial_codehsart_language: Čeština
@@ -6313,8 +6344,9 @@ cs:
   tutorial_ozorandom_language: Čeština
   tutorial_ozotroll_language: Čeština
   tutorial_peblioart_language: Čeština
-  tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
-    Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
+  tutorial_astropi_language: arabština, dánština, holandština, angličtina, finština,
+    francouzština, němčina, řečtina, maďarština, italština, norština (Nynorsk), ostatní,
+    polština, španělština, švédština
   tutorial_rgart_language: Čeština
   tutorial_rgengineer_language: Čeština
   tutorial_rgmath_language: Čeština
@@ -6326,28 +6358,34 @@ cs:
   tutorial_scratchtalk_language: English, Spanish
   tutorial_scratchjrstory_language: Čeština
   tutorial_scratchjrtwinkle_language: Čeština
-  tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherocommunity_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherofunctions_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroinfrared_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherolightsensor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheromansion_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_roadblocks_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext2_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext3_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext4_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroraptor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
+  tutorial_spherocomm_language: arabština, čínština, angličtina, francouzština, němčina,
+    hebrejština, italština, japonština, korejština, norština, španělština, švédština
+  tutorial_spherocommunity_language: arabština, čínština, angličtina, francouzština,
+    němčina, hebrejština, italština, japonština, korejština, norština, španělština,
+    švédština
+  tutorial_spherofunctions_language: arabština, čínština, angličtina, francouzština,
+    němčina, hebrejština, italština, japonština, korejština, norština, španělština,
+    švédština
+  tutorial_spheroinfrared_language: arabština, čínština, angličtina, francouzština,
+    němčina, hebrejština, italština, japonština, korejština, norština, španělština,
+    švédština
+  tutorial_spherolightsensor_language: arabština, čínština, angličtina, francouzština,
+    němčina, hebrejština, italština, japonština, korejština, norština, španělština,
+    švédština
+  tutorial_spheromansion_language: arabština, čínština, angličtina, francouzština,
+    němčina, hebrejština, italština, japonština, korejština, norština, španělština,
+    švédština
+  tutorial_roadblocks_language: arabština, čínština, angličtina, francouzština, němčina,
+    hebrejština, italština, japonština, korejština, norština, španělština, švédština
+  tutorial_spherotext2_language: arabština, čínština, angličtina, francouzština, němčina,
+    hebrejština, italština, japonština, korejština, norština, španělština, švédština
+  tutorial_spherotext3_language: arabština, čínština, angličtina, francouzština, němčina,
+    hebrejština, italština, japonština, korejština, norština, španělština, švédština
+  tutorial_spherotext4_language: arabština, čínština, angličtina, francouzština, němčina,
+    hebrejština, italština, japonština, korejština, norština, španělština, švédština
+  tutorial_spheroraptor_language: arabština, čínština, angličtina, francouzština,
+    němčina, hebrejština, italština, japonština, korejština, norština, španělština,
+    švédština
   tutorial_stempiday_language: Čeština
   tutorial_stemplanetoids_language: Čeština
   tutorial_stempong_language: Čeština
@@ -6370,13 +6408,13 @@ cs:
   tutorial_pets_language: Čeština
   tutorial_petvet_language: Čeština
   tutorial_superhero_language: Čeština
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: Čeština
   tutorial_vidcodetypeface_language: Čeština
   tutorial_washustorm_language: Čeština
   tutorial_activitypackets_language: Čeština
   tutorial_googlerookie_language: Čeština
   tutorial_tommyturtle_language: Čeština
-  tutorial_mazyad_language: Arabic, English
+  tutorial_mazyad_language: arabština, angličtina
   tutorial_gamemaker_language: Čeština
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: Čeština
@@ -6393,10 +6431,11 @@ cs:
   tutorial_codespeakhappy_language: Čeština
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: Čeština
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: arabština, holandština, angličtina, angličtina (Spojené
+    království), francouzština, španělština (Mexiko)
   tutorial_bsdcause_language: Čeština
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Čeština
   tutorial_tttractor_language: Čeština
   tutorial_codeillusionmickey_language: Čeština
@@ -6414,11 +6453,12 @@ cs:
   tutorial_ttsecond_language: Čeština
   tutorial_bsdtrivia_language: Čeština
   tutorial_csfirstdialogue_language: English, Spanish (Mexico)
-  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
-    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: arabština, čínština (zjednodušená), angličtina,
+    hebrejština, japonština, španělština (Španělsko), španělština (Mexiko)
   tutorial_codestersdistance_language: Čeština
   tutorial_itchspace_language: Čeština
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Čeština
   tutorial_itchfish_language: Čeština
   tutorial_bsdwebsite_language: Čeština
@@ -6426,11 +6466,12 @@ cs:
   tutorial_itchwebcam_language: Čeština
   tutorial_itchball_language: Čeština
   tutorial_ttrace_language: Čeština
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: arabština, čínština (zjednodušená), angličtina, hebrejština,
+    portugalština (brazilská)
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Čeština
   tutorial_codeguppytext_language: Čeština
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: Čeština
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Čeština
@@ -6440,8 +6481,8 @@ cs:
   tutorial_ttbunker_language: Čeština
   tutorial_cuttle_language: Čeština
   tutorial_bsdjokes_language: Čeština
-  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rptree_language: arabština, holandština, angličtina, angličtina (Spojené
+    království), francouzština, španělština (Mexiko)
   tutorial_codestersunity_language: Čeština
   tutorial_codesterssoccer_language: Čeština
   tutorial_breakoutlock_language: Čeština
@@ -6496,9 +6537,13 @@ cs:
   tutorial_kcjplastic_language: English, French
   tutorial_legojourney_language: Čeština
   tutorial_legohopper_language: Čeština
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Arabština, bengálština, bosenština, zjednodušená
+    čínština, chorvatština, čeština, angličtina, angličtina (Velká Británie), francouzština,
+    němčina, hindština, indonéština, italština, japonština, korejština, norština (Nynorsk),
+    ostatní, polština, portugalština (Brazílie), portugalština ( Portugalsko), ruština,
+    srbština (cyrilice), srbština (latinka), slovenština, španělština (Španělsko,
+    Mexiko), svahilština, švédština, tamilština, thajština, turečtina, urdština (Pákistán),
+    vietnamština
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Čeština
@@ -6511,10 +6556,10 @@ cs:
   tutorial_star-wars_string_detail_grades: Stupně 2 a vyšší
   tutorial_gumadventure_string_detail_grades: Grades 6-8
   tutorial_mchoc_string_detail_grades: Stupně 2 a vyšší
-  tutorial_vidnews_string_detail_grades: Grades 6+
+  tutorial_vidnews_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
   tutorial_highseas_string_detail_grades: Grades 2-8
-  tutorial_capython_string_detail_grades: Grades 6+
+  tutorial_capython_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_frzn_string_detail_grades: Stupně 2 a vyšší
   tutorial_cocom_string_detail_grades: Stupně 2 a vyšší
   tutorial_play-lab_string_detail_grades: Stupně 2 a vyšší
@@ -6524,28 +6569,28 @@ cs:
   tutorial_kanopixel_string_detail_grades: Stupně 2 a vyšší
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerdd_string_detail_grades: Grades 2-8
-  tutorial_tynkerana_string_detail_grades: Grades 6+
+  tutorial_tynkerana_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_vidcard_string_detail_grades: Stupně 2 a vyšší
   tutorial_spritebox_string_detail_grades: Grades 2-8
-  tutorial_tynkerch_string_detail_grades: Grades 6+
+  tutorial_tynkerch_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: do-not-show
   tutorial_code_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tinspire_string_detail_grades: Grades 6+
+  tutorial_tinspire_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_itchbounceball_string_detail_grades: Grades 2-8
-  tutorial_vidclim_string_detail_grades: Grades 6+
-  tutorial_matlab_string_detail_grades: Grades 6+
+  tutorial_vidclim_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_matlab_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_flap_string_detail_grades: Stupně 2 a vyšší
-  tutorial_galaxy_string_detail_grades: Grades 6+
+  tutorial_galaxy_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_inf_string_detail_grades: Grades 2-8
   tutorial_tynkersol_string_detail_grades: Stupně 2 a vyšší
-  tutorial_itchg_string_detail_grades: Grades 6+
+  tutorial_itchg_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_como_string_detail_grades: Stupně 2 a vyšší
   tutorial_processfound_string_detail_grades: Stupně 9 a vyšší
-  tutorial_tynkerhomo_string_detail_grades: Grades 6+
+  tutorial_tynkerhomo_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_art_string_detail_grades: Stupně 2 a vyšší
   tutorial_tynkerbrick_string_detail_grades: Stupně 2 a vyšší
-  tutorial_itchbio_string_detail_grades: Grades 6+
+  tutorial_itchbio_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_itchj_string_detail_grades: Grades 6-8
   tutorial_tickleo_string_detail_grades: Stupně 2 a vyšší
   tutorial_hopgeo_string_detail_grades: Grades 2-8
@@ -6556,67 +6601,67 @@ cs:
   tutorial_livecode_string_detail_grades: Stupně 9 a vyšší
   tutorial_cocomgame_string_detail_grades: Stupně 2 a vyšší
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
-  tutorial_code-avengers_string_detail_grades: Grades 6+
+  tutorial_code-avengers_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cmgame_string_detail_grades: Grades 6+
+  tutorial_cmgame_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codesters_string_detail_grades: do-not-show
-  tutorial_qrm_string_detail_grades: Grades 6+
-  tutorial_texas-instruments_string_detail_grades: Grades 6+
-  tutorial_cajava_string_detail_grades: Grades 6+
+  tutorial_qrm_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_texas-instruments_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cajava_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codehs_string_detail_grades: Stupně 9 a vyšší
   tutorial_hopemo_string_detail_grades: Grades 2-8
   tutorial_tynkercm_string_detail_grades: Stupně 2 a vyšší
   tutorial_codesterswintergreet_string_detail_grades: Stupně 2 a vyšší
-  tutorial_codestersc_string_detail_grades: Grades 6+
+  tutorial_codestersc_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codestersturtle_string_detail_grades: Stupně 2 a vyšší
-  tutorial_penjee_string_detail_grades: Grades 6+
+  tutorial_penjee_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_trinket_string_detail_grades: Stupně 2 a vyšší
-  tutorial_frogger_string_detail_grades: Grades 6+
+  tutorial_frogger_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tynkereco_string_detail_grades: Grades 2-8
   tutorial_mitedarc_string_detail_grades: Grades 6-8
-  tutorial_khan_string_detail_grades: Grades 6+
-  tutorial_tynkerd_string_detail_grades: Grades 6+
+  tutorial_khan_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tynkerd_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_cdmy_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codestersdance_string_detail_grades: Grades 6+
-  tutorial_codestersbasketball_string_detail_grades: Grades 6+
-  tutorial_nclkarel_string_detail_grades: Grades 6+
+  tutorial_codestersdance_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codestersbasketball_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_nclkarel_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_buildpong_string_detail_grades: Stupně 2 a vyšší
   tutorial_tynkerdrones_string_detail_grades: Stupně 2 a vyšší
-  tutorial_carla_string_detail_grades: Grades 6+
-  tutorial_zulama_string_detail_grades: Grades 6+
-  tutorial_capost_string_detail_grades: Grades 6+
+  tutorial_carla_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_zulama_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_capost_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_marco_string_detail_grades: Grades 2-8
-  tutorial_codestersflappybike_string_detail_grades: Grades 6+
+  tutorial_codestersflappybike_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_kanopong_string_detail_grades: Grades 6-8
   tutorial_tynkerright_string_detail_grades: Grades 2-8
   tutorial_touchdevelop_string_detail_grades: do-not-show
-  tutorial_tynkercc_string_detail_grades: Grades 6+
+  tutorial_tynkercc_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_bamboo_string_detail_grades: Grades 2-5
-  tutorial_robojav_string_detail_grades: Grades 6+
-  tutorial_roboba_string_detail_grades: Grades 6+
+  tutorial_robojav_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_roboba_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_knodsnake_string_detail_grades: Grades 6-8
-  tutorial_soccharater_string_detail_grades: Grades 6+
-  tutorial_silent_string_detail_grades: Grades 6+
+  tutorial_soccharater_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_silent_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_robomesh_string_detail_grades: Stupně 2 a vyšší
   tutorial_amaze_string_detail_grades: Stupně 2 a vyšší
   tutorial_codestersds_string_detail_grades: Stupně 2 a vyšší
   tutorial_knodtext_string_detail_grades: Grades 6-8
-  tutorial_alicegar_string_detail_grades: Grades 6+
-  tutorial_codesterstransform_string_detail_grades: Grades 6+
-  tutorial_flexfrog_string_detail_grades: Grades 6+
+  tutorial_alicegar_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codesterstransform_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_flexfrog_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codemoji_string_detail_grades: do-not-show
-  tutorial_robobii_string_detail_grades: Grades 6+
+  tutorial_robobii_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_robobm_string_detail_grades: Grades 6-8
   tutorial_codingrobots_string_detail_grades: Stupně 2 a vyšší
-  tutorial_robob_string_detail_grades: Grades 6+
+  tutorial_robob_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_coders_string_detail_grades: Stupně 9 a vyšší
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
   tutorial_tynkermh_string_detail_grades: Grades 2-8
-  tutorial_caphoto_string_detail_grades: Grades 6+
+  tutorial_caphoto_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_mozillahw_string_detail_grades: Grades 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Stupně 2 a vyšší
-  tutorial_scratchg_string_detail_grades: Grades 6+
+  tutorial_scratchg_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_roboticfriends_string_detail_grades: All ages
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjgreet_string_detail_grades: Pre-reader - Grade 5
@@ -6624,19 +6669,19 @@ cs:
   tutorial_fufafrenz_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcgeo_string_detail_grades: do-not-show
   tutorial_chspixel_string_detail_grades: Stupně 9 a vyšší
-  tutorial_hummingbird_string_detail_grades: Grades 6+
-  tutorial_recoloring_string_detail_grades: Grades 6+
+  tutorial_hummingbird_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_recoloring_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_bbcchem_string_detail_grades: do-not-show
   tutorial_floalgo_string_detail_grades: Stupně 2 a vyšší
   tutorial_flocond_string_detail_grades: Stupně 2 a vyšší
   tutorial_floloops_string_detail_grades: Stupně 2 a vyšší
-  tutorial_pgts_string_detail_grades: Grades 6+
+  tutorial_pgts_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ozo_string_detail_grades: All ages
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
   tutorial_tlctour_string_detail_grades: Stupně 2 a vyšší
   tutorial_codesterstj_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tlclocked_string_detail_grades: Grades 6+
+  tutorial_tlclocked_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_baubles_string_detail_grades: Grades 2-8
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Stupně 2 a vyšší
@@ -6658,12 +6703,12 @@ cs:
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: Grades 6-8
-  tutorial_tlchex_string_detail_grades: Grades 6+
+  tutorial_tlchex_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tickles_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozogame_string_detail_grades: All ages
   tutorial_vidcodeio_string_detail_grades: Stupně 2 a vyšší
   tutorial_besttech_string_detail_grades: Stupně 9 a vyšší
-  tutorial_tlcbrain_string_detail_grades: Grades 6+
+  tutorial_tlcbrain_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_hopquiz_string_detail_grades: Grades 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
   tutorial_cha_string_detail_grades: Grades 6-8
@@ -6673,7 +6718,7 @@ cs:
   tutorial_arduino_string_detail_grades: Grades 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
   tutorial_tlcinvis_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tlcjflap_string_detail_grades: Grades 6+
+  tutorial_tlcjflap_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
   tutorial_spiralsfinch_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozoi_string_detail_grades: All ages
@@ -6685,40 +6730,40 @@ cs:
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
   tutorial_tlccc_string_detail_grades: Grades 2-8
   tutorial_tlcdoodle_string_detail_grades: Grades 2-8
-  tutorial_tlcpunch_string_detail_grades: Grades 6+
+  tutorial_tlcpunch_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_finchfract_string_detail_grades: Stupně 9 a vyšší
-  tutorial_tlcmind_string_detail_grades: Grades 6+
+  tutorial_tlcmind_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tlctelebot_string_detail_grades: Stupně 2 a vyšší
-  tutorial_tlcaus_string_detail_grades: Grades 6+
+  tutorial_tlcaus_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_oralhist_string_detail_grades: Stupně 9 a vyšší
   tutorial_tlcmicro_string_detail_grades: Stupně 2 a vyšší
   tutorial_imathematician_string_detail_grades: Grades 2-8
-  tutorial_tlcmagic_string_detail_grades: Grades 6+
+  tutorial_tlcmagic_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_scratchmus_string_detail_grades: Grades 2-8
   tutorial_scratchanim_string_detail_grades: Grades 2-8
   tutorial_scratchfly_string_detail_grades: Grades 2-8
   tutorial_tynkerarc_string_detail_grades: Stupně 2 a vyšší
-  tutorial_grokffpython_string_detail_grades: Grades 6+
-  tutorial_grokffblock_string_detail_grades: Grades 6+
-  tutorial_grokeliza_string_detail_grades: Grades 6+
+  tutorial_grokffpython_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokffblock_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokeliza_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tynkercan_string_detail_grades: Stupně 2 a vyšší
-  tutorial_grokflags_string_detail_grades: Grades 6+
+  tutorial_grokflags_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_robomind_string_detail_grades: Grades 2-8
   tutorial_scratchanimwork_string_detail_grades: Grades 2-8
   tutorial_adventureq_string_detail_grades: Grades 2-5
-  tutorial_khan-es_string_detail_grades: Grades 6+
-  tutorial_kpt_string_detail_grades: Grades 6+
-  tutorial_kpl_string_detail_grades: Grades 6+
-  tutorial_khe_string_detail_grades: Grades 6+
-  tutorial_kfr_string_detail_grades: Grades 6+
-  tutorial_app-inventor_string_detail_grades: Grades 6+
+  tutorial_khan-es_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_kpt_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_kpl_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_khe_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_kfr_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_app-inventor_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_bits_string_detail_grades: Grades 2-5
-  tutorial_blockly_string_detail_grades: Grades 6+
+  tutorial_blockly_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Stupně 2 a vyšší
-  tutorial_spellcraft_string_detail_grades: Grades 6+
+  tutorial_spellcraft_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_pirates_string_detail_grades: Grades 2-8
   tutorial_csfirst_string_detail_grades: Stupně 2 a vyšší
   tutorial_loopedy_string_detail_grades: Grades 2-5
@@ -6730,7 +6775,7 @@ cs:
   tutorial_scratch_string_detail_grades: Grades 2-5
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: do-not-show
-  tutorial_hrm_string_detail_grades: Grades 6+
+  tutorial_hrm_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ice-age_string_detail_grades: do-not-show
   tutorial_koapp_string_detail_grades: do-not-show
   tutorial_lightbot-intl_string_detail_grades: Pre-reader - Grade 8
@@ -6746,7 +6791,7 @@ cs:
   tutorial_spherov_string_detail_grades: Stupně 2 a vyšší
   tutorial_swb_string_detail_grades: do-not-show
   tutorial_build-a-galaxy_string_detail_grades: do-not-show
-  tutorial_alicesims_string_detail_grades: Grades 6+
+  tutorial_alicesims_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tchr_string_detail_grades: do-not-show
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
   tutorial_tap_string_detail_grades: Stupně 2 a vyšší
@@ -6765,51 +6810,51 @@ cs:
   tutorial_solopython_string_detail_grades: Stupně 9 a vyšší
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
   tutorial_kodableadv_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkertj_string_detail_grades: Grades 6+
-  tutorial_wolframa_string_detail_grades: Grades 6+
-  tutorial_wolframm_string_detail_grades: Grades 6+
-  tutorial_wolframspi_string_detail_grades: Grades 6+
-  tutorial_wolframsph_string_detail_grades: Grades 6+
-  tutorial_wolframp_string_detail_grades: Grades 6+
-  tutorial_wolframn_string_detail_grades: Grades 6+
+  tutorial_tynkertj_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_wolframa_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_wolframm_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_wolframspi_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_wolframsph_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_wolframp_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_wolframn_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_soloweb_string_detail_grades: Stupně 9 a vyšší
   tutorial_khanweb_string_detail_grades: Stupně 2 a vyšší
-  tutorial_khandata_string_detail_grades: Grades 6+
+  tutorial_khandata_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_robomeshiq_string_detail_grades: Stupně 2 a vyšší
   tutorial_googlelogo_string_detail_grades: Stupně 2 a vyšší
-  tutorial_playtune_string_detail_grades: Grades 6+
+  tutorial_playtune_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_computeit_string_detail_grades: Stupně 2 a vyšší
   tutorial_codesterssj_string_detail_grades: Grades 2-8
-  tutorial_cmchat_string_detail_grades: Grades 6+
+  tutorial_cmchat_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
-  tutorial_cmbuild_string_detail_grades: Grades 6+
+  tutorial_cmbuild_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_robotrattle_string_detail_grades: Grades 2-8
   tutorial_codestersh_string_detail_grades: Grades 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Grades 6+
-  tutorial_ccbinary_string_detail_grades: Grades 6+
-  tutorial_codehsturtle_string_detail_grades: Grades 6+
-  tutorial_grokhd_string_detail_grades: Grades 6+
-  tutorial_grokem_string_detail_grades: Grades 6+
+  tutorial_codehsdigipixel_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ccbinary_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehsturtle_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokhd_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_grokem_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
   tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Stupně 9 a vyšší
   tutorial_raspipong_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehsvr_string_detail_grades: Grades 6+
+  tutorial_codehsvr_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codesterstp_string_detail_grades: Grades 6-8
   tutorial_codestersbb_string_detail_grades: Grades 6-8
   tutorial_gfcrossyroad_string_detail_grades: Stupně 9 a vyšší
   tutorial_googleww_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehsjsapp_string_detail_grades: Grades 6+
+  tutorial_codehsjsapp_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_gfmihi_string_detail_grades: Stupně 9 a vyšší
   tutorial_hopdropphone_string_detail_grades: Grades 2-8
   tutorial_techfaa_string_detail_grades: University
   tutorial_codehsjsgraph_string_detail_grades: Stupně 9 a vyšší
-  tutorial_thunkable_string_detail_grades: Grades 6+
+  tutorial_thunkable_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
-  tutorial_codecar_string_detail_grades: Grades 6+
+  tutorial_codecar_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codesterscp_string_detail_grades: Grades 6-8
   tutorial_grokpetblock_string_detail_grades: Grades 6-8
   tutorial_techbim_string_detail_grades: University
@@ -6821,8 +6866,8 @@ cs:
   tutorial_myradream_string_detail_grades: Grades 2-8
   tutorial_thinkfun_string_detail_grades: Grades 2-8
   tutorial_hopfireworks_string_detail_grades: Grades 2-8
-  tutorial_grokspace_string_detail_grades: Grades 6+
-  tutorial_codehspython_string_detail_grades: Grades 6+
+  tutorial_grokspace_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehspython_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codehsjava_string_detail_grades: Stupně 9 a vyšší
   tutorial_techioda_string_detail_grades: University
   tutorial_grokmonster_string_detail_grades: Grades 2-5
@@ -6830,8 +6875,8 @@ cs:
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
   tutorial_techiogsr_string_detail_grades: University
-  tutorial_groktunnel_string_detail_grades: Grades 6+
-  tutorial_stemcod_string_detail_grades: Grades 6+
+  tutorial_groktunnel_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_stemcod_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
   tutorial_nyblebot_string_detail_grades: Grades 2-5
@@ -6839,32 +6884,32 @@ cs:
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
-  tutorial_gpbcatapult_string_detail_grades: Grades 6+
-  tutorial_quorumastro_string_detail_grades: Grades 6+
+  tutorial_gpbcatapult_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_quorumastro_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_alicewonder_string_detail_grades: Grades 2-5
   tutorial_rginter_string_detail_grades: Grades 6-8
-  tutorial_cssgrid_string_detail_grades: Grades 6+
+  tutorial_cssgrid_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_jshero_string_detail_grades: Stupně 9 a vyšší
   tutorial_codemojipy_string_detail_grades: Grades 2-5
-  tutorial_nclabdrone_string_detail_grades: Grades 6+
-  tutorial_gpbcircle_string_detail_grades: Grades 6+
-  tutorial_gpbpaint_string_detail_grades: Grades 6+
-  tutorial_cocomarcade_string_detail_grades: Grades 6+
+  tutorial_nclabdrone_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gpbcircle_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gpbpaint_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cocomarcade_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Grades 6-8
-  tutorial_codedj_string_detail_grades: Grades 6+
-  tutorial_rgadvan_string_detail_grades: Grades 6+
+  tutorial_codedj_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_rgadvan_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codehsrn_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehswd_string_detail_grades: Grades 6+
+  tutorial_codehswd_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: Grades 6+
-  tutorial_ozoexped_string_detail_grades: Grades 6+
+  tutorial_ozoevo_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ozoexped_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
   tutorial_ozoeclipse_string_detail_grades: Stupně 2 a vyšší
-  tutorial_ozosimulator_string_detail_grades: Grades 6+
-  tutorial_ozoalgorithm_string_detail_grades: Grades 6+
-  tutorial_ozotimer_string_detail_grades: Grades 6+
+  tutorial_ozosimulator_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ozoalgorithm_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ozotimer_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ozohabits_string_detail_grades: All ages
   tutorial_ozoprogram_string_detail_grades: Grades 2-8
   tutorial_ozopair_string_detail_grades: Stupně 2 a vyšší
@@ -6887,9 +6932,9 @@ cs:
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
   tutorial_lblogic_string_detail_grades: Stupně 2 a vyšší
-  tutorial_lbworld_string_detail_grades: Grades 6+
+  tutorial_lbworld_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_lbloops_string_detail_grades: Grades 2-8
-  tutorial_lbtug_string_detail_grades: Grades 6+
+  tutorial_lbtug_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_lbpotato_string_detail_grades: Stupně 2 a vyšší
   tutorial_lbguitar_string_detail_grades: Stupně 2 a vyšší
   tutorial_lbio_string_detail_grades: Grades 2-8
@@ -6898,14 +6943,14 @@ cs:
   tutorial_wonzoo_string_detail_grades: Grades 2-5
   tutorial_wontrip_string_detail_grades: Grades 2-8
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wonsecret_string_detail_grades: Grades 6+
+  tutorial_wonsecret_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_hsscience_string_detail_grades: Grades 2-8
-  tutorial_popculture_string_detail_grades: Grades 6+
+  tutorial_popculture_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_legorobust_string_detail_grades: Stupně 2 a vyšší
   tutorial_legoplants_string_detail_grades: Stupně 2 a vyšší
-  tutorial_legopark_string_detail_grades: Grades 6+
-  tutorial_legodetect_string_detail_grades: Grades 6+
-  tutorial_legolight_string_detail_grades: Grades 6+
+  tutorial_legopark_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_legodetect_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_legolight_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_alexa_string_detail_grades: Stupně 9 a vyšší
   tutorial_grokpetmicro_string_detail_grades: Grades 6-8
   tutorial_pirateplunder_string_detail_grades: Grades 2-8
@@ -6914,24 +6959,24 @@ cs:
   tutorial_cajump_string_detail_grades: Grades 2-8
   tutorial_carest_string_detail_grades: Grades 2-8
   tutorial_accai_string_detail_grades: Grades 2-8
-  tutorial_vceclipse_string_detail_grades: Grades 6+
-  tutorial_pmzero_string_detail_grades: Grades 6+
+  tutorial_vceclipse_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_pmzero_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_hsela_string_detail_grades: Grades 2-8
   tutorial_ticklear_string_detail_grades: Grades 2-8
   tutorial_bcrobot_string_detail_grades: Grades 2-8
-  tutorial_bcsnow_string_detail_grades: Grades 6+
+  tutorial_bcsnow_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ifly_string_detail_grades: Stupně 2 a vyšší
   tutorial_idowedo_string_detail_grades: Grades 2-8
-  tutorial_diggindwarf_string_detail_grades: Grades 6+
+  tutorial_diggindwarf_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_rmedr_string_detail_grades: Grades 2-8
   tutorial_spheroit_string_detail_grades: Stupně 2 a vyšší
   tutorial_gameofcodes_string_detail_grades: Stupně 2 a vyšší
-  tutorial_blocklygames_string_detail_grades: Grades 6+
-  tutorial_spherohello_string_detail_grades: Grades 6+
-  tutorial_spheroarcade_string_detail_grades: Grades 6+
-  tutorial_bcpy1_string_detail_grades: Grades 6+
-  tutorial_bcpy2_string_detail_grades: Grades 6+
-  tutorial_bcjs1_string_detail_grades: Grades 6+
+  tutorial_blocklygames_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_spherohello_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_spheroarcade_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bcpy1_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bcpy2_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bcjs1_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_bcjs2_string_detail_grades: Stupně 9 a vyšší
   tutorial_3dbearmars_string_detail_grades: Grades 2-8
   tutorial_alexaskill_string_detail_grades: Grades 2-8
@@ -6940,27 +6985,27 @@ cs:
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
   tutorial_blockscadclock_string_detail_grades: Stupně 9 a vyšší
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
-  tutorial_blockscadicecream_string_detail_grades: Grades 6+
+  tutorial_blockscadicecream_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
   tutorial_bsgridlight_string_detail_grades: Stupně 2 a vyšší
-  tutorial_bpartscratch_string_detail_grades: Grades 6+
-  tutorial_bpartvid_string_detail_grades: Grades 6+
+  tutorial_bpartscratch_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bpartvid_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
   tutorial_bpenglishvid_string_detail_grades: Grades 2-8
   tutorial_bphealthscratch_string_detail_grades: Stupně 2 a vyšší
-  tutorial_bphealthvid_string_detail_grades: Grades 6+
+  tutorial_bphealthvid_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
-  tutorial_bpmathvid_string_detail_grades: Grades 6+
+  tutorial_bpmathvid_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
   tutorial_bpmlkvid_string_detail_grades: Grades 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
   tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
   tutorial_bpsciencevid_string_detail_grades: Grades 6-8
-  tutorial_bptechscratch_string_detail_grades: Grades 6+
-  tutorial_bptechvid_string_detail_grades: Grades 6+
-  tutorial_caflags_string_detail_grades: Grades 6+
+  tutorial_bptechscratch_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bptechvid_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_caflags_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_matariki_string_detail_grades: Grades 2-5
   tutorial_carestaurant_string_detail_grades: Stupně 2 a vyšší
   tutorial_casea_string_detail_grades: Grades 2-5
@@ -6968,37 +7013,37 @@ cs:
   tutorial_ccwslimer_string_detail_grades: Grades 2-8
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
   tutorial_boatrace_string_detail_grades: Stupně 2 a vyšší
-  tutorial_ccplay_string_detail_grades: Grades 6+
+  tutorial_ccplay_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_grinch_string_detail_grades: Grades 2-8
   tutorial_codehsart_string_detail_grades: Stupně 9 a vyšší
   tutorial_codehsbitcoin_string_detail_grades: Stupně 9 a vyšší
   tutorial_codehsblockchain_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehscipher_string_detail_grades: Grades 6+
+  tutorial_codehscipher_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codehscollision_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codehsmath_string_detail_grades: Grades 6+
-  tutorial_codehsmusic_string_detail_grades: Grades 6+
-  tutorial_codehssports_string_detail_grades: Grades 6+
+  tutorial_codehsmath_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehsmusic_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehssports_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codemojipizza_string_detail_grades: Grades 2-8
-  tutorial_moonlander_string_detail_grades: Grades 6+
+  tutorial_moonlander_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_sushicards_string_detail_grades: Grades 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 6+
-  tutorial_codesterstshirt_string_detail_grades: Grades 6+
+  tutorial_codesterslogo_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codesterstshirt_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
   tutorial_codinismhero_string_detail_grades: Stupně 2 a vyšší
   tutorial_discovery_string_detail_grades: Stupně 2 a vyšší
   tutorial_csfirstname_string_detail_grades: Stupně 2 a vyšší
   tutorial_obstaclecourse_string_detail_grades: Stupně 2 a vyšší
-  tutorial_edisonmove_string_detail_grades: Grades 6+
-  tutorial_edisonspider_string_detail_grades: Grades 6+
+  tutorial_edisonmove_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_edisonspider_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_edisonspotlight_string_detail_grades: Grades 2-8
-  tutorial_firiapython_string_detail_grades: Grades 6+
-  tutorial_gamefrootsquid_string_detail_grades: Grades 6+
-  tutorial_duckpiano_string_detail_grades: Grades 6+
-  tutorial_gpsound_string_detail_grades: Grades 6+
+  tutorial_firiapython_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gamefrootsquid_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_duckpiano_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gpsound_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_groklearningpython_string_detail_grades: Stupně 9 a vyšší
   tutorial_htmltimetravel_string_detail_grades: Stupně 9 a vyšší
   tutorial_hp_flappy_string_detail_grades: Stupně 9 a vyšší
@@ -7008,32 +7053,32 @@ cs:
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Grades 2-8
   tutorial_kanohp_string_detail_grades: Grades 2-8
-  tutorial_khanwebpages_string_detail_grades: Grades 6+
+  tutorial_khanwebpages_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wizard_string_detail_grades: Grades 6+
+  tutorial_wizard_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_mbscratchcards_string_detail_grades: Stupně 2 a vyšší
   tutorial_mbswiftplaygrounds_string_detail_grades: Stupně 2 a vyšší
-  tutorial_mbbuttons_string_detail_grades: Grades 6+
-  tutorial_meteor_string_detail_grades: Grades 6+
-  tutorial_ballbounce_string_detail_grades: Grades 6+
-  tutorial_mitcodi_string_detail_grades: Grades 6+
-  tutorial_mitdoodle_string_detail_grades: Grades 6+
-  tutorial_talktome_string_detail_grades: Grades 6+
-  tutorial_mobilecspmap_string_detail_grades: Grades 6+
+  tutorial_mbbuttons_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_meteor_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ballbounce_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_mitcodi_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_mitdoodle_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_talktome_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_mobilecspmap_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ozorandom_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozotroll_string_detail_grades: Grades 6-8
   tutorial_peblioart_string_detail_grades: Stupně 9 a vyšší
-  tutorial_astropi_string_detail_grades: Grades 6+
+  tutorial_astropi_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_rgart_string_detail_grades: Grades 2-5
   tutorial_rgengineer_string_detail_grades: Grades 2-5
   tutorial_rgmath_string_detail_grades: Grades 2-5
   tutorial_rgscience_string_detail_grades: Grades 2-5
   tutorial_rgtech_string_detail_grades: Grades 2-5
-  tutorial_robotmagic3d_string_detail_grades: Grades 6+
+  tutorial_robotmagic3d_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_robotmagicflappy_string_detail_grades: Stupně 9 a vyšší
   tutorial_scratchadventure_string_detail_grades: Stupně 2 a vyšší
   tutorial_scratchtalk_string_detail_grades: Stupně 2 a vyšší
@@ -7041,14 +7086,14 @@ cs:
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Grades 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
-  tutorial_spherofunctions_string_detail_grades: Grades 6+
+  tutorial_spherofunctions_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_spheroinfrared_string_detail_grades: Grades 6-8
   tutorial_spherolightsensor_string_detail_grades: Grades 2-8
   tutorial_spheromansion_string_detail_grades: Grades 2-8
   tutorial_roadblocks_string_detail_grades: Grades 2-8
-  tutorial_spherotext2_string_detail_grades: Grades 6+
-  tutorial_spherotext3_string_detail_grades: Grades 6+
-  tutorial_spherotext4_string_detail_grades: Grades 6+
+  tutorial_spherotext2_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_spherotext3_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_spherotext4_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_spheroraptor_string_detail_grades: Grades 2-8
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
   tutorial_stemplanetoids_string_detail_grades: Stupně 9 a vyšší
@@ -7056,103 +7101,106 @@ cs:
   tutorial_algobot_string_detail_grades: Grades 2-8
   tutorial_thunkableapps_string_detail_grades: Stupně 9 a vyšší
   tutorial_toxicodedot_string_detail_grades: Grades 2-8
-  tutorial_gcactions_string_detail_grades: Grades 6+
-  tutorial_gccomparators_string_detail_grades: Grades 6+
-  tutorial_gcconditions_string_detail_grades: Grades 6+
-  tutorial_gccreate_string_detail_grades: Grades 6+
-  tutorial_gcevents_string_detail_grades: Grades 6+
-  tutorial_gcloops_string_detail_grades: Grades 6+
-  tutorial_gcvariables_string_detail_grades: Grades 6+
+  tutorial_gcactions_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gccomparators_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gcconditions_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gccreate_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gcevents_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gcloops_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_gcvariables_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: Stupně 2 a vyšší
-  tutorial_landscape_string_detail_grades: Grades 6+
+  tutorial_landscape_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
-  tutorial_superhero_string_detail_grades: Grades 6+
-  tutorial_vidcodeplastic_string_detail_grades: Grades 6+
-  tutorial_vidcodetypeface_string_detail_grades: Grades 6+
+  tutorial_superhero_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidcodeplastic_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidcodetypeface_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_washustorm_string_detail_grades: Grades 2-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
-  tutorial_googlerookie_string_detail_grades: Grades 6+
+  tutorial_googlerookie_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
   tutorial_mazyad_string_detail_grades: Pre-reader - Grade 5
   tutorial_gamemaker_string_detail_grades: Stupně 2 a vyšší
   tutorial_duckrace_string_detail_grades: Stupně 2 a vyšší
-  tutorial_allcancodeapps_string_detail_grades: Grades 6+
+  tutorial_allcancodeapps_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_n2y_string_detail_grades: Předčtenář a vyšší
   tutorial_microsoftarcade_string_detail_grades: Stupně 2 a vyšší
   tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
-  tutorial_toxicodepython_string_detail_grades: Grades 6+
-  tutorial_codecombatozaria_string_detail_grades: Grades 6+
-  tutorial_vidcodedate_string_detail_grades: Grades 6+
+  tutorial_toxicodepython_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codecombatozaria_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidcodedate_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
   tutorial_codespeakhappy_string_detail_grades: Grades 2-8
-  tutorial_grokimage_string_detail_grades: Grades 6+
+  tutorial_grokimage_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
   tutorial_rpstress_string_detail_grades: Stupně 2 a vyšší
   tutorial_bsdcause_string_detail_grades: Stupně 9 a vyšší
   tutorial_vidcodeanimoji_string_detail_grades: Stupně 2 a vyšší
-  tutorial_bsdinspire_string_detail_grades: Grades 6+
-  tutorial_tttractor_string_detail_grades: Grades 6+
+  tutorial_vidcodeanimojies_string_detail_grades: Stupně 2 a vyšší
+  tutorial_bsdinspire_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_tttractor_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
   tutorial_scigirlsquest_string_detail_grades: Grades 2-8
   tutorial_codespeakbreathe_string_detail_grades: Stupně 2 a vyšší
-  tutorial_vidcodeface_string_detail_grades: Grades 6+
-  tutorial_educodemaze_string_detail_grades: Grades 6+
-  tutorial_educoderace_string_detail_grades: Grades 6+
+  tutorial_vidcodeface_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_educodemaze_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_educoderace_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codespeakchatbot_string_detail_grades: Grades 2-8
-  tutorial_gamefrootgames_string_detail_grades: Grades 6+
+  tutorial_gamefrootgames_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codespeakgrandparent_string_detail_grades: Grades 2-8
-  tutorial_educodekingdom_string_detail_grades: Grades 6+
+  tutorial_educodekingdom_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codehsdata_string_detail_grades: Stupně 9 a vyšší
-  tutorial_educodecake_string_detail_grades: Grades 6+
-  tutorial_ttsecond_string_detail_grades: Grades 6+
-  tutorial_bsdtrivia_string_detail_grades: Grades 6+
+  tutorial_educodecake_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ttsecond_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_bsdtrivia_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_csfirstdialogue_string_detail_grades: Grades 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersdistance_string_detail_grades: Grades 6+
-  tutorial_itchspace_string_detail_grades: Grades 6+
+  tutorial_codestersdistance_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_itchspace_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_vidcodemagic_string_detail_grades: Stupně 2 a vyšší
-  tutorial_codespeakmeal_string_detail_grades: Grades 6+
+  tutorial_vidcodemagices_string_detail_grades: Stupně 2 a vyšší
+  tutorial_codespeakmeal_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_itchfish_string_detail_grades: Grades 2-8
-  tutorial_bsdwebsite_string_detail_grades: Grades 6+
+  tutorial_bsdwebsite_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codespeaktime_string_detail_grades: Grades 2-8
-  tutorial_itchwebcam_string_detail_grades: Grades 6+
+  tutorial_itchwebcam_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_itchball_string_detail_grades: Grades 2-8
   tutorial_ttrace_string_detail_grades: Grades 6-8
   tutorial_plethora_string_detail_grades: Stupně 2 a vyšší
-  tutorial_educodesecret_string_detail_grades: Grades 6+
-  tutorial_itchshapes_string_detail_grades: Grades 6+
+  tutorial_educodesecret_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_itchshapes_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_educativechatbot_string_detail_grades: Stupně 9 a vyšší
-  tutorial_educodebasics_string_detail_grades: Grades 6+
-  tutorial_codehsdesign_string_detail_grades: Grades 6+
-  tutorial_htmlacademyphp_string_detail_grades: Grades 6+
+  tutorial_educodebasics_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codehsdesign_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_htmlacademyphp_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_gamefrootdistance_string_detail_grades: Stupně 2 a vyšší
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Grades 6-8
-  tutorial_cuttle_string_detail_grades: Grades 6+
+  tutorial_cuttle_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_bsdjokes_string_detail_grades: Grades 6-8
-  tutorial_rptree_string_detail_grades: Grades 6+
-  tutorial_codestersunity_string_detail_grades: Grades 6+
-  tutorial_codesterssoccer_string_detail_grades: Grades 6+
+  tutorial_rptree_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codestersunity_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codesterssoccer_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_breakoutlock_string_detail_grades: Grades 2-8
-  tutorial_thunkablemask_string_detail_grades: Grades 6+
+  tutorial_thunkablemask_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_cafarming_string_detail_grades: Grades 2-8
   tutorial_blocksmithyeti_string_detail_grades: Stupně 9 a vyšší
-  tutorial_codecapture_string_detail_grades: Grades 6+
+  tutorial_codecapture_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
-  tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_itchplatformer_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_codejika_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
   tutorial_ozobotcolor2_string_detail_grades: Stupně 2 a vyšší
   tutorial_ozobotcolor3_string_detail_grades: Stupně 2 a vyšší
-  tutorial_clcarbon_string_detail_grades: Grades 6+
+  tutorial_clcarbon_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
   tutorial_scigirlscc_string_detail_grades: Stupně 2 a vyšší
   tutorial_irobotpicture_string_detail_grades: Grades 2-8
@@ -7164,15 +7212,15 @@ cs:
   tutorial_kcjheroines_string_detail_grades: Grades 2-8
   tutorial_ozobotvalue_string_detail_grades: Grades 2-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
-  tutorial_clfashion2_string_detail_grades: Grades 6+
-  tutorial_ai4all_string_detail_grades: Grades 6+
-  tutorial_cldata_string_detail_grades: Grades 6+
+  tutorial_clfashion2_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_ai4all_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cldata_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_spheroinputs_string_detail_grades: Grades 2-8
   tutorial_edisoncount_string_detail_grades: Grades 2-8
   tutorial_spheroloops_string_detail_grades: Grades 2-8
   tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
-  tutorial_clfashion1_string_detail_grades: Grades 6+
+  tutorial_clfashion1_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
   tutorial_edisonmystery_string_detail_grades: Grades 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
@@ -7180,17 +7228,17 @@ cs:
   tutorial_imagilabs_string_detail_grades: Grades 2-8
   tutorial_irobotsimulator_string_detail_grades: Grades 2-8
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
-  tutorial_firiavirtual_string_detail_grades: Grades 6+
+  tutorial_firiavirtual_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_irobotguesscode_string_detail_grades: Grades 2-8
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
-  tutorial_nasa3d_string_detail_grades: Grades 6+
-  tutorial_blupants_string_detail_grades: Grades 6+
+  tutorial_nasa3d_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_blupants_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_legodance_string_detail_grades: Grades 6-8
   tutorial_nearpodcoding_string_detail_grades: Stupně 9 a vyšší
   tutorial_kcjplastic_string_detail_grades: Stupně 2 a vyšší
   tutorial_legojourney_string_detail_grades: Grades 2-8
   tutorial_legohopper_string_detail_grades: Grades 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Grades 6+
+  tutorial_catrobatembroidery_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_irobotphone_string_detail_grades: Grades 2-8
   tutorial_codeguppydraw_string_detail_grades: Grades 6-8
   tutorial_codejumper_string_detail_grades: Grades 2-8
@@ -7942,6 +7990,8 @@ cs:
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -7966,6 +8016,8 @@ cs:
   tutorial_itchspace_string_platforms: Všechny moderní prohlížeče
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Všechny moderní prohlížeče
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -7977,6 +8029,7 @@ cs:
   tutorial_educodesecret_string_platforms: Všechny moderní prohlížeče
   tutorial_itchshapes_string_platforms: Všechny moderní prohlížeče
   tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
   tutorial_educativechatbot_string_platforms: Všechny moderní prohlížeče
   tutorial_educodebasics_string_platforms: Všechny moderní prohlížeče
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8648,6 +8701,7 @@ cs:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8669,6 +8723,7 @@ cs:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8680,6 +8735,7 @@ cs:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9379,6 +9435,7 @@ cs:
   tutorial_rpstress_string_detail_programming_languages: Bloky
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9400,6 +9457,7 @@ cs:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Bloky
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Bloky
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9412,6 +9470,7 @@ cs:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Bloky
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -10070,42 +10129,42 @@ cs:
   tutorial_kuborobo_language: English, Spanish
   tutorial_ai-oceans_language: Čeština
   tutorial_scratchimagine_string_detail_grades: Stupně 2 a vyšší
-  tutorial_codesterspsa_string_detail_grades: Grades 6+
+  tutorial_codesterspsa_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_googlehero_string_detail_grades: Grades 2-8
-  tutorial_codestersbball_string_detail_grades: Grades 6+
+  tutorial_codestersbball_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_scratchcartoon_string_detail_grades: Stupně 2 a vyšší
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
   tutorial_bananatales_string_detail_grades: Grades 2-8
   tutorial_scratchtales_string_detail_grades: Grades 2-8
-  tutorial_msemoji_string_detail_grades: Grades 6+
-  tutorial_cacolor_string_detail_grades: Grades 6+
+  tutorial_msemoji_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cacolor_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_kodablebeach_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkeren_string_detail_grades: Grades 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Grades 6+
+  tutorial_tynkerjavapro_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_grasshopperhack_string_detail_grades: Stupně 9 a vyšší
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
   tutorial_nclabdata_string_detail_grades: Stupně 9 a vyšší
   tutorial_grasshopperphoto_string_detail_grades: Stupně 9 a vyšší
-  tutorial_tynkerpyland_string_detail_grades: Grades 6+
+  tutorial_tynkerpyland_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codeitimages_string_detail_grades: Stupně 2 a vyšší
   tutorial_hyperpadenemy_string_detail_grades: Stupně 9 a vyšší
   tutorial_tynkerpro_string_detail_grades: Grades 2-8
-  tutorial_trashtag_string_detail_grades: Grades 6+
+  tutorial_trashtag_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_casiege_string_detail_grades: Grades 2-8
-  tutorial_thunkableyeet_string_detail_grades: Grades 6+
-  tutorial_vidcodedeal_string_detail_grades: Grades 6+
+  tutorial_thunkableyeet_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidcodedeal_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codehsgeno_string_detail_grades: Stupně 9 a vyšší
   tutorial_hyperpadpong_string_detail_grades: Stupně 9 a vyšší
   tutorial_tynkerland_string_detail_grades: Grades 2-8
-  tutorial_trinketgirl_string_detail_grades: Grades 6+
+  tutorial_trinketgirl_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_rpimosquito_string_detail_grades: Grades 6-8
-  tutorial_tynkermars_string_detail_grades: Grades 6+
-  tutorial_cityx_string_detail_grades: Grades 6+
-  tutorial_vidcodemap_string_detail_grades: Grades 6+
+  tutorial_tynkermars_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_cityx_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_vidcodemap_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
-  tutorial_codehstriangle_string_detail_grades: Grades 6+
+  tutorial_codehstriangle_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ttwhitehouse_string_detail_grades: Stupně 2 a vyšší
-  tutorial_modulo_string_detail_grades: Grades 6+
+  tutorial_modulo_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: Stupně 9 a vyšší
@@ -10113,34 +10172,34 @@ cs:
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
   tutorial_stemc_blckhole_string_detail_grades: Stupně 9 a vyšší
-  tutorial_careconfigure_string_detail_grades: Grades 6+
+  tutorial_careconfigure_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
   tutorial_ozaria_string_detail_grades: Stupně 2 a vyšší
-  tutorial_ttovum_string_detail_grades: Grades 6+
+  tutorial_ttovum_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ttpassage_string_detail_grades: Grades 2-8
   tutorial_tynkerhtmlen_string_detail_grades: Stupně 2 a vyšší
   tutorial_ttfrog_string_detail_grades: Grades 2-8
   tutorial_codemojijava_string_detail_grades: Grades 6-8
-  tutorial_ccfirewall_string_detail_grades: Grades 6+
+  tutorial_ccfirewall_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_htmljs_string_detail_grades: Grades 6-8
   tutorial_ttaqueducts_string_detail_grades: Grades 6-8
-  tutorial_vtgame_string_detail_grades: Grades 6+
-  tutorial_baroborav_string_detail_grades: Grades 6+
+  tutorial_vtgame_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_baroborav_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_baroboobstacle_string_detail_grades: Stupně 2 a vyšší
-  tutorial_pbstorytelling_string_detail_grades: Grades 6+
+  tutorial_pbstorytelling_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
   tutorial_spherosmiles_string_detail_grades: Stupně 2 a vyšší
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
-  tutorial_toxarchitect_string_detail_grades: Grades 6+
+  tutorial_toxarchitect_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_idodge_string_detail_grades: Grades 2-8
-  tutorial_firiacodebot_string_detail_grades: Grades 6+
+  tutorial_firiacodebot_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_modlighthouse_string_detail_grades: Předčtenář a vyšší
   tutorial_spherogreen_string_detail_grades: Grades 2-8
   tutorial_ozopopstar_string_detail_grades: Grades 2-8
-  tutorial_eddesign_string_detail_grades: Grades 6+
-  tutorial_edshapeup_string_detail_grades: Grades 6+
+  tutorial_eddesign_string_detail_grades: Známky 6+ (11 a vyšší)
+  tutorial_edshapeup_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_ozocolor_string_detail_grades: Grades 2-8
   tutorial_kcjanimals_string_detail_grades: Grades 2-8
   tutorial_icomputeeggs_string_detail_grades: Grades 2-8
@@ -10149,21 +10208,21 @@ cs:
   tutorial_peblioportraits_string_detail_grades: Stupně 9 a vyšší
   tutorial_rootcodebreak_string_detail_grades: Grades 2-8
   tutorial_microbit14_string_detail_grades: Grades 2-8
-  tutorial_barobomoon_string_detail_grades: Grades 6+
+  tutorial_barobomoon_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_eddog_string_detail_grades: Grades 2-6
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: Stupně 9 a vyšší
-  tutorial_blockscadtarget_string_detail_grades: Grades 6+
+  tutorial_blockscadtarget_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tcadicicles_string_detail_grades: Grades 7-8
-  tutorial_blockscadscale_string_detail_grades: Grades 6+
+  tutorial_blockscadscale_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Stupně 9 a vyšší
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
-  tutorial_modvariables_string_detail_grades: Grades 6+
+  tutorial_modvariables_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
-  tutorial_rpisensehat_string_detail_grades: Grades 6+
+  tutorial_rpisensehat_string_detail_grades: Známky 6+ (11 a vyšší)
   tutorial_modtraits_string_detail_grades: Stupně 2 a vyšší
   tutorial_mee_string_detail_grades: Stupně 2 a vyšší
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
