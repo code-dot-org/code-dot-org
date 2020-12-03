@@ -176,6 +176,31 @@ class ScriptSeedTest < ActiveSupport::TestCase
     assert_equal expected_counts, get_counts
   end
 
+  test 'seed deletes lesson activities' do
+    script = create_script_tree
+    original_counts = get_counts
+
+    script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+      script.lessons.first.lesson_activities.first.destroy!
+      script.fix_script_level_positions
+    end
+
+    ScriptSeed.seed_from_json(json)
+    script.reload
+
+    assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+    assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
+    assert_equal (1..4).to_a, script.lessons.map(&:relative_position)
+    assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
+    # Deleting the activity should also delete its two ScriptLevels, and their LevelsScriptLevels.
+    expected_counts = original_counts.clone
+    expected_counts['LessonActivity'] -= 1
+    expected_counts['ActivitySection'] -= 1
+    expected_counts['ScriptLevel'] -= 2
+    expected_counts['LevelsScriptLevel'] -= 2
+    assert_equal expected_counts, get_counts
+  end
+
   test 'seed deletes script_levels' do
     script = create_script_tree
     original_counts = get_counts
