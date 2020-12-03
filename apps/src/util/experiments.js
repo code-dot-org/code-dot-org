@@ -34,6 +34,7 @@ experiments.SPRITELAB_INPUT = 'spritelabInput';
 experiments.TIME_SPENT = 'time-spent';
 experiments.APPLAB_ML = 'applab-ml';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
+experiments.WHY_DID_YOU_RENDER = 'why-did-you-render';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
