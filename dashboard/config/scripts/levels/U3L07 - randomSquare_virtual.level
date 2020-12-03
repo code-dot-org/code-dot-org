@@ -1,0 +1,109 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:11.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "forLoop_i_0_4": null,
+      "functionParams_none": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "functionParams_n": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "callMyFunction": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "callMyFunction_n": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "comment": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "oNA2Cr2+PBE0z1rrjD7TIPVeH6imutdR0Zz98BVgzSGblgCEaimwmo37WYH1\ntPWm\n",
+    "embed": "false",
+    "short_instructions": "Draw the figure using a loop. (Click to see full instructions)",
+    "long_instructions": "# Practice Using Loops - Part 2\r\n\r\nLet's look at the second example from the video. \r\n\r\nUse a `for` loop to call a function that you wrote.  We've provided the code for the `drawSquare` function for you. \r\n\r\n**Drag out** a `for` loop.\r\n\r\n**Inside the loop** add a call to `drawSquare`, and a call to `turnRight`.\r\n\r\n![](https://images.code.org/c4037292ac237ac60919fae2c24790db-image-1443104130552.gif)\r\n\r\n**Run the program** to see what's happening.\r\n\r\n# Do This:\r\nChange the number of loop iterations to draw a lot of squares.  Try to create the figure shown below (or something similar).  HINT: the image below has 72 squares in it.\r\n\r\n![](https://images.code.org/e4d3f180b2f1e421a96d40ecacce029a-image-1443104869913.gif)\r\n\r\nOnce you've played enough to get the hang of calling a function from inside a loop then **move on**.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "0.9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "start_blocks": "// Insert your code here\r\n\r\n// Draw a Square of the given size\r\nfunction drawSquare(size){\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n}",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]",
+          "drawSquare:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 72,
+        "message": "App Lab is expecting you to have a loop that runs at least 72 times and calls drawSquare each time in the loop."
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 16956,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

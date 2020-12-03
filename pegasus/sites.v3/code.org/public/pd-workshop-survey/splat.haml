@@ -82,7 +82,7 @@ title: "Professional Development Workshop Survey"
   window.pdWorkshopSurvey = {
     enrollmentCode: "#{enrollment_code}",
     course: "#{course}",
-    facilitatorSpecificQuestions: #{facilitator_specific_questions.to_json}
+    facilitatorSpecificQuestions: #{facilitator_specific_questions.to_json.html_safe}
   };
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}

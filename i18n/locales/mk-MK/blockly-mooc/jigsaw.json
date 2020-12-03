@@ -1,10 +1,6 @@
 {
   "continue": "Продолжи",
-  "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
-  "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
   "reinfFeedbackMsg": "Можете да го притиснете \"Обиди се повторно\" копчето за да се врати во игра на својата игра.",
   "share": "Сподели",
-  "shareGame": "Споделија твојата игра:",
-  "yes": "Yes"
+  "shareGame": "Споделија твојата игра:"
 }

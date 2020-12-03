@@ -1,0 +1,12 @@
+{
+  "is-IS": {
+    "data": {
+      "behavior_names": {
+        "courseF_extras_sim": {
+          "wandering 2": "ráfandi 2",
+          "wandering 1": "ráfandi 1"
+        }
+      }
+    }
+  }
+}

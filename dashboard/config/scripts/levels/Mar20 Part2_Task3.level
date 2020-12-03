@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-16T22:36:33.000Z",
+  "level_num": "custom",
+  "user_id": 838,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Unit 5 Guided Exploration: Part 2\r\n\r\n## **Task 3:**\r\n\r\n+ ### Review **U5L12 - Traversals Make** in CodeStudio starting on Level 2. Try making the app in Level 3.  (~7 mins)\r\n\r\n\r\n+ ### Use the response box below to document your answer to the following:\r\n\r\n     > How does this Make task compare to the Lists and Loops Make tasks?  What skills are students practicing?  \r\n\r\n\r\n \r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21786
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-07 03:59:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:00:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:01:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:02:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:03:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:04:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:04:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:07:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:08:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:43:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:44:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:44:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:45:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:55:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:56:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:58:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 22:00:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 22:01:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 22:07:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 22:12:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 22:22:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 22:25:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 22:40:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-18 17:45:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -18,7 +18,8 @@ export default class AnimationPreview extends React.Component {
     playBehavior: PropTypes.oneOf([
       PlayBehavior.ALWAYS_PLAY,
       PlayBehavior.NEVER_PLAY
-    ])
+    ]),
+    onPreviewLoad: PropTypes.func
   };
 
   state = {
@@ -27,7 +28,7 @@ export default class AnimationPreview extends React.Component {
     scaledSourceSize: {x: 0, y: 0},
     scaledFrameSize: {x: 0, y: 0},
     extraTopMargin: 0,
-    wrappedSourceUrl: ''
+    extraLeftMargin: 0
   };
 
   componentWillMount() {
@@ -90,7 +91,6 @@ export default class AnimationPreview extends React.Component {
     const yScale = innerHeight / nextAnimation.frameSize.y;
     const scale = Math.min(1, Math.min(xScale, yScale));
     const scaledFrameSize = scaleVector2(nextAnimation.frameSize, scale);
-    const sourceUrl = nextProps.sourceUrl ? nextProps.sourceUrl : EMPTY_IMAGE;
     const sourceSize = nextAnimation.sourceSize
       ? nextAnimation.sourceSize
       : {x: 1, y: 1};
@@ -99,7 +99,7 @@ export default class AnimationPreview extends React.Component {
       scaledSourceSize: scaleVector2(sourceSize, scale),
       scaledFrameSize: scaledFrameSize,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),
-      wrappedSourceUrl: `url('${sourceUrl}')`
+      extraLeftMargin: Math.ceil((innerWidth - scaledFrameSize.x) / 2)
     });
   }
 
@@ -110,7 +110,7 @@ export default class AnimationPreview extends React.Component {
       scaledSourceSize,
       scaledFrameSize,
       extraTopMargin,
-      wrappedSourceUrl
+      extraLeftMargin
     } = this.state;
 
     const row = Math.floor(currentFrame / framesPerRow);
@@ -123,17 +123,23 @@ export default class AnimationPreview extends React.Component {
       height: this.props.height,
       textAlign: 'center'
     };
-    const imageStyle = {
+    const cropStyle = {
       width: scaledFrameSize.x,
       height: scaledFrameSize.y,
+      overflow: 'hidden',
       marginTop: MARGIN_PX + extraTopMargin,
-      marginLeft: MARGIN_PX,
+      marginLeft: MARGIN_PX + extraLeftMargin,
       marginRight: MARGIN_PX,
-      marginBottom: MARGIN_PX,
-      backgroundImage: wrappedSourceUrl,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: scaledSourceSize.x,
-      backgroundPosition: xOffset + 'px ' + yOffset + 'px'
+      marginBottom: MARGIN_PX
+    };
+
+    const imageStyle = {
+      maxWidth: 'none',
+      maxHeight: 'none',
+      width: scaledSourceSize.x,
+      height: scaledSourceSize.y,
+      marginLeft: xOffset,
+      marginTop: yOffset
     };
 
     return (
@@ -151,7 +157,13 @@ export default class AnimationPreview extends React.Component {
             : null
         }
       >
-        <img src={EMPTY_IMAGE} style={imageStyle} />
+        <div style={cropStyle}>
+          <img
+            onLoad={this.props.onPreviewLoad}
+            src={this.props.sourceUrl || EMPTY_IMAGE}
+            style={imageStyle}
+          />
+        </div>
       </div>
     );
   }

@@ -1,0 +1,14 @@
+name 'CSP U7 20-21 Student Pilot Survey'
+editor_experiment ''
+title 'Pilot Student Survey'
+description 'Survey for student participating in the CSP Pilot.'
+
+markdown <<MARKDOWN
+## Unit 7 Student Pilot Survey
+
+After completing the unit, please fill out this short survey.
+
+<a class="btn btn-large btn-primary" href="https://form.jotform.com/92414021213137?uid=<user_id/>&unit=7"> Take the student survey</a>
+
+
+MARKDOWN

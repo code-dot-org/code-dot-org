@@ -25,12 +25,12 @@ Processing arrays of information is much more interesting and powerful when we c
 
 ## Introduced Code
 
-* [circle](//docs.code.org/applab/circle/)
-* [clearCanvas](//docs.code.org/applab/clearCanvas/)
-* [line](//docs.code.org/applab/line/)
-* [setActiveCanvas](//docs.code.org/applab/setActiveCanvas/)
-* [setFillColor](//docs.code.org/applab/setFillColor/)
-* [setStrokeColor](//docs.code.org/applab/setStrokeColor/)
+* [circle](//studio.code.org/docs/applab/circle/)
+* [clearCanvas](//studio.code.org/docs/applab/clearCanvas/)
+* [line](//studio.code.org/docs/applab/line/)
+* [setActiveCanvas](//studio.code.org/docs/applab/setActiveCanvas/)
+* [setFillColor](//studio.code.org/docs/applab/setFillColor/)
+* [setStrokeColor](//studio.code.org/docs/applab/setStrokeColor/)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

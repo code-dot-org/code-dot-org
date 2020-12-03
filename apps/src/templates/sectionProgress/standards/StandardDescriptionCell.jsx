@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {LessonIcons} from './standardsConstants';
 
 const styles = {
   main: {
@@ -16,26 +19,73 @@ const styles = {
     display: 'flex',
     flexDirection: 'row'
   },
+  lessonBoxes: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+  lessonBox: {
+    marginBottom: 10
+  },
   lessonsAreaTitle: {
-    marginRight: 10
+    marginRight: 10,
+    width: '30%'
+  },
+  tooltip: {
+    textAlign: 'center'
+  },
+  tooltipLessonName: {
+    fontFamily: '"Gotham 7r", sans-serif'
   }
 };
 
 class StandardDescriptionCell extends Component {
   static propTypes = {
     description: PropTypes.string,
-    lessonsForStandardStatus: PropTypes.array
+    lessonsForStandardStatus: PropTypes.array,
+    isViewingReport: PropTypes.bool
   };
 
   getLessonBoxes = () => {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
+        const icon = lesson.unplugged
+          ? LessonIcons.UNPLUGGED
+          : LessonIcons.PLUGGED;
+        const percentComplete =
+          (lesson.numStudentsCompleted / lesson.numStudents).toFixed(2) * 100;
         return (
-          <ProgressBoxForLessonNumber
-            key={lesson.lessonNumber}
-            completed={lesson.completed}
-            lessonNumber={lesson.lessonNumber}
-          />
+          <span key={lesson.name} style={styles.lessonBox}>
+            {!this.props.isViewingReport && (
+              <ReactTooltip
+                id={lesson.name}
+                key={lesson.name}
+                role="tooltip"
+                wrapper="span"
+                effect="solid"
+                place="top"
+              >
+                <div style={styles.tooltip}>
+                  <div style={styles.tooltipLessonName}>
+                    {lesson.name} <FontAwesome icon={icon} />
+                  </div>
+                  <div>
+                    {i18n.completedStudentPercent({
+                      percentComplete: percentComplete
+                    })}
+                  </div>
+                </div>
+              </ReactTooltip>
+            )}
+            <ProgressBoxForLessonNumber
+              key={lesson.lessonNumber}
+              completed={lesson.completed}
+              inProgress={lesson.inProgress}
+              lessonNumber={lesson.lessonNumber}
+              tooltipId={lesson.name}
+              linkToLessonPlan={lesson.url}
+            />
+          </span>
         );
       });
     } else {
@@ -59,7 +109,7 @@ class StandardDescriptionCell extends Component {
           <span style={styles.lessonsAreaTitle}>
             {i18n.availableLessons({numLessons: this.getNumberLessons()})}
           </span>
-          {this.getLessonBoxes()}
+          <div style={styles.lessonBoxes}>{this.getLessonBoxes()}</div>
         </div>
       </div>
     );

@@ -17,17 +17,17 @@
 #  index_pd_teachercon1819_registrations_on_user_id              (user_id)
 #
 
-class Pd::Teachercon1819Registration < ActiveRecord::Base
+class Pd::Teachercon1819Registration < ApplicationRecord
   include Pd::Form
   include Pd::Teachercon1819RegistrationConstants
-
-  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
-  belongs_to :regional_partner, class_name: 'RegionalPartner'
-  belongs_to :user
 
   YES = 'Yes'.freeze
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze
+
+  belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
+  belongs_to :regional_partner, class_name: 'RegionalPartner'
+  belongs_to :user
 
   after_create :update_application_status
   def update_application_status

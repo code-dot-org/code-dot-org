@@ -331,7 +331,7 @@ exports.calcBlockGetVar = function(variableName) {
 /**
  * Generate the xml for a math block (either calc or eval apps).
  * @param {string} type Type for this block
- * @param {Object.<string,string} inputs Dictionary mapping input name to the
+ * @param {Object.<string,string>} inputs Dictionary mapping input name to the
      xml for that input
  * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
  */
@@ -433,7 +433,7 @@ exports.cleanBlocks = function(blocksDom) {
 
 /**
  * Adds any functions from functionsXml to blocksXml. If a function with the
- * same name is already present in blocksXml, it won't be added again.
+ * same id is already present in blocksXml, it won't be added again.
  */
 exports.appendNewFunctions = function(blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
@@ -446,13 +446,14 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     let startBlocksDocument = startBlocksDom.ownerDocument.evaluate
       ? startBlocksDom.ownerDocument
       : document;
-    const name = ownerDocument.evaluate(
-      'title[@name="NAME"]/text()',
+    const node = ownerDocument.evaluate(
+      'title[@name="NAME"]',
       func,
       null,
-      XPathResult.STRING_TYPE,
+      XPathResult.FIRST_ORDERED_NODE_TYPE,
       null
-    ).stringValue;
+    ).singleNodeValue;
+    const name = node && node.id;
     const type = ownerDocument.evaluate(
       '@type',
       func,
@@ -462,7 +463,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
+        `//block[@type="${type}"]/title[@id="${name}"]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -514,6 +515,9 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
  * @property {boolean} defer Indicates that this input should be wrapped in a
  *   function before being passed into func, so that evaluation can be deferred
  *   until later.
+ * @property {boolean} variableInput Indicates that an input is a variable. The block
+ *   will have a dropown selector populated with all the variables in the program.
+ *   The generated code will be the variable, which will be defined as a global variable in the program.
  */
 
 /**
@@ -529,6 +533,7 @@ const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
 const STATEMENT_INPUT = 'statement';
 const FIELD_INPUT = 'field';
+const VARIABLE_INPUT = 'variable';
 
 /**
  * Splits a blockText into labelled inputs, each match will a label followed by
@@ -595,6 +600,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         mode = STATEMENT_INPUT;
       } else if (arg.empty) {
         mode = DUMMY_INPUT;
+      } else if (arg.variableInput) {
+        mode = VARIABLE_INPUT;
       } else {
         mode = VALUE_INPUT;
       }
@@ -606,7 +613,8 @@ const determineInputs = function(text, args, strictTypes = []) {
         type: arg.type,
         options: arg.options,
         assignment: arg.assignment,
-        defer: arg.defer
+        defer: arg.defer,
+        customOptions: arg.customOptions
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
@@ -697,6 +705,49 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
+    }
+  },
+  [VARIABLE_INPUT]: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      // Make sure the variable name gets declared at the top of the program
+      block.getVars = function() {
+        return {
+          [Blockly.Variables.DEFAULT_CATEGORY]: [
+            block.getTitleValue(inputConfig.name)
+          ]
+        };
+      };
+
+      // The following functions make sure that the variable naming/renaming options work for this block
+      block.renameVar = function(oldName, newName) {
+        if (
+          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+        ) {
+          block.setTitleValue(newName, inputConfig.name);
+        }
+      };
+      block.removeVar = function(oldName) {
+        if (
+          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+        ) {
+          block.dispose(true, true);
+        }
+      };
+      block.superSetTitleValue = block.setTitleValue;
+      block.setTitleValue = function(newValue, name) {
+        if (name === inputConfig.name && block.blockSpace.isFlyout) {
+          newValue = Blockly.Variables.generateUniqueName(newValue);
+        }
+        block.superSetTitleValue(newValue, name);
+      };
+
+      // Add the variable field to the block
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
+    },
+    generateCode(block, inputConfig) {
+      return block.getTitleValue(inputConfig.name);
     }
   },
   [FIELD_INPUT]: {
@@ -825,7 +876,7 @@ exports.createJsWrapperBlockCreator = function(
 ) {
   const {ORDER_FUNCTION_CALL, ORDER_MEMBER, ORDER_NONE} = Blockly.JavaScript;
 
-  const generator = blockly.Generator.get('JavaScript');
+  const generator = blockly.getGenerator();
 
   const inputTypes = {
     ...STANDARD_INPUT_TYPES,
@@ -866,6 +917,7 @@ exports.createJsWrapperBlockCreator = function(
    * @param {boolean} opts.simpleValue Just return the field value of the block.
    * @param {string[]} opts.extraArgs Additional arguments to pass into the generated function.
    * @param {string[]} opts.callbackParams Parameters to add to the generated callback function.
+   * @param {string[]} opts.miniToolboxBlocks
    * @param {?string} helperCode The block's helper code, to verify the func.
    *
    * @returns {string} the name of the generated block
@@ -889,7 +941,8 @@ exports.createJsWrapperBlockCreator = function(
       inline,
       simpleValue,
       extraArgs,
-      callbackParams
+      callbackParams,
+      miniToolboxBlocks
     },
     helperCode,
     pool
@@ -996,17 +1049,85 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
+        if (miniToolboxBlocks) {
+          var toggle = new Blockly.FieldIcon('+');
+          var miniToolboxXml = '<xml>';
+          miniToolboxBlocks.forEach(block => {
+            miniToolboxXml += `\n <block type="${block}"></block>`;
+          });
+          miniToolboxXml += '\n</xml>';
+          // Block.isMiniFlyoutOpen is used in the blockly repo to track whether or not the horizontal flyout is open.
+          this.isMiniFlyoutOpen = false;
+          // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
+          Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
+            if (this.isMiniFlyoutOpen) {
+              toggle.setText('+');
+            } else {
+              toggle.setText('-');
+            }
+            this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
+            this.render();
+            // If the mini flyout just opened, make sure mini-toolbox blocks are updated with the right thumbnails.
+            // This has to happen after render() because some browsers don't render properly if the elements are not
+            // visible. The root cause is that getComputedTextLength returns 0 if a text element is not visible, so
+            // the thumbnail image overlaps the label in Firefox, Edge, and IE.
+            if (this.isMiniFlyoutOpen) {
+              let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
+              let rootInputBlocks = this.getConnections_(true /* all */)
+                .filter(function(connection) {
+                  return connection.type === Blockly.INPUT_VALUE;
+                })
+                .map(function(connection) {
+                  return connection.targetBlock();
+                });
+              miniToolboxBlocks.forEach(function(block, index) {
+                block.shadowBlockValue_(rootInputBlocks[index]);
+              });
+            }
+          });
+          // Use window.appOptions, not global appOptions, because the levelbuilder
+          // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
+          // there
+          if (
+            !window.appOptions ||
+            (window.appOptions.level.miniToolbox &&
+              !window.appOptions.readonlyWorkspace)
+          ) {
+            this.appendDummyInput()
+              .appendTitle(toggle)
+              .appendTitle(' ');
+          }
+          this.initMiniFlyout(miniToolboxXml);
+        }
+
         // For mini-toolbox, indicate which blocks should receive the duplicate on drag
         // behavior and indicates the sibling block to shadow the value from
-        if (blockText === 'clicked {SPRITE}') {
+        if (this.type === 'gamelab_clickedSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
-          this.setBlockToShadow('gamelab_allSpritesWithAnimation');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_spriteClicked' &&
+              root.getConnections_()[1] &&
+              root.getConnections_()[1].targetBlock()
+          );
         }
-        if (blockText === 'subject sprite') {
+        if (this.type === 'gamelab_subjectSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_checkTouching' &&
+              root.getConnections_()[1] &&
+              root.getConnections_()[1].targetBlock()
+          );
         }
-        if (blockText === 'object sprite') {
+        if (this.type === 'gamelab_objectSpritePointer') {
           this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
+          this.setBlockToShadow(
+            root =>
+              root.type === 'gamelab_checkTouching' &&
+              root.getConnections_()[2] &&
+              root.getConnections_()[2].targetBlock()
+          );
         }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
@@ -1075,6 +1196,17 @@ exports.createJsWrapperBlockCreator = function(
           values.push(`function (${params}) {\n${handlerCode}}`);
         } else {
           values.push(`function () {\n${handlerCode}}`);
+        }
+      }
+
+      if (this.type === 'gamelab_setPrompt') {
+        const input = this.getInput('VAR');
+        if (input) {
+          const targetBlock = input.connection.targetBlock();
+          if (targetBlock && targetBlock.type === 'variables_get') {
+            const varName = Blockly.JavaScript.blockToCode(targetBlock)[0];
+            values.push(`function(val) {${varName} = val;}`);
+          }
         }
       }
 

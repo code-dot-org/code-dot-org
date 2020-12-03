@@ -1,12 +1,12 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2018-02-07T20:50:05.000Z",
-  "user_id": 1,
   "properties": {
     "video_key": "C1_building_foundation",
     "name_suffix": "_2018"
   },
+  "game_id": 31,
+  "created_at": "2018-02-07T20:50:05.000Z",
+  "user_id": 1,
   "published": true
 }]]></config>
 </Unplugged>

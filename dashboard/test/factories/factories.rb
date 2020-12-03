@@ -3,10 +3,33 @@ require 'cdo/activity_constants'
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
-  factory :course_script do
+  factory :course_offering do
+    sequence(:key) {|n| "bogus-course-offering-#{n}"}
+    sequence(:display_name) {|n| "bogus-course-offering-#{n}"}
   end
 
-  factory :course do
+  factory :course_version do
+    sequence(:key) {|n| "202#{n - 1}"}
+    sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
+    with_unit_group
+
+    trait :with_unit_group do
+      association(:content_root, factory: :unit_group)
+    end
+
+    trait :with_unit do
+      association(:content_root, factory: :script, is_course: true)
+    end
+
+    trait :with_course_offering do
+      association :course_offering
+    end
+  end
+
+  factory :unit_group_unit do
+  end
+
+  factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
   end
 
@@ -29,9 +52,9 @@ FactoryGirl.define do
     end
   end
 
-  factory :section_hidden_stage do
+  factory :section_hidden_lesson do
     section
-    stage
+    lesson
   end
 
   factory :section_hidden_script do
@@ -49,7 +72,7 @@ FactoryGirl.define do
 
   factory :user do
     birthday Time.zone.today - 21.years
-    email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
+    email {("#{user_type}_#{SecureRandom.uuid}@code.org")}
     password "00secret"
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
@@ -153,25 +176,7 @@ FactoryGirl.define do
         ops_first_name 'District'
         ops_last_name 'Person'
       end
-      # Creates a teacher optionally enrolled in a workshop,
-      # or marked attended on either all (true) or a specified list of workshop sessions.
-      factory :pd_workshop_participant do
-        transient do
-          workshop nil
-          enrolled true
-          attended false
-        end
-        after(:create) do |teacher, evaluator|
-          raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          if evaluator.attended
-            attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
-            attended_sessions.each do |session|
-              create :pd_attendance, session: session, teacher: teacher
-            end
-          end
-        end
-      end
+
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
@@ -194,6 +199,20 @@ FactoryGirl.define do
       trait :without_email do
         after(:create) do |user|
           user.update_primary_contact_info new_email: '', new_hashed_email: ''
+          user.save validate: false
+        end
+      end
+
+      # We added validation to user accounts and some time which required
+      # teacher accounts to have emails. However, there were already existing
+      # teacher accounts which didn't have an email. Some of these have not yet
+      # been updated, so we need to make sure our system can handle them
+      # gracefully.
+      # FND-1130: This trait will no longer be required
+      trait :before_email_validation do
+        after(:create) do |user|
+          # Account created one day before the requirements were added.
+          user.created_at = User::DATE_TEACHER_EMAIL_REQUIREMENT_ADDED - 1
           user.save validate: false
         end
       end
@@ -287,6 +306,16 @@ FactoryGirl.define do
       end
     end
 
+    # We have some tests which want to create student accounts which don't have any authentication setup.
+    # Using this will put the user into an invalid state.
+    trait :without_encrypted_password do
+      after(:create) do |user|
+        user.encrypted_password = nil
+        user.password = nil
+        user.save validate: false
+      end
+    end
+
     trait :sso_provider do
       encrypted_password nil
       provider %w(facebook windowslive clever).sample
@@ -325,6 +354,11 @@ FactoryGirl.define do
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
+    trait :microsoft_v2_sso_provider do
+      sso_provider_with_token
+      provider 'microsoft_v2_auth'
+    end
+
     trait :powerschool_sso_provider do
       untrusted_email_sso_provider
       provider 'powerschool'
@@ -357,7 +391,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: "abcd#{user.id}",
+          authentication_id: SecureRandom.uuid,
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
@@ -374,7 +408,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh',
+          authentication_id: SecureRandom.uuid,
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
@@ -418,7 +452,7 @@ FactoryGirl.define do
     association :user
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     credential_type AuthenticationOption::EMAIL
-    authentication_id {User.hash_email email}
+    authentication_id SecureRandom.uuid
 
     factory :google_authentication_option do
       credential_type AuthenticationOption::GOOGLE
@@ -645,12 +679,6 @@ FactoryGirl.define do
     level_source
   end
 
-  factory :gallery_activity do
-    user
-    user_level {create(:user_level)}
-    level_source {create(:level_source, :with_image, level: user_level.level)}
-  end
-
   factory :assessment_activity do
     user
     script
@@ -658,7 +686,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script do
+  factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
 
     factory :csf_script do
@@ -694,8 +722,8 @@ FactoryGirl.define do
       assessment true
     end
 
-    stage do |script_level|
-      create(:stage, script: script_level.script)
+    lesson do |script_level|
+      create(:lesson, script: script_level.script)
     end
 
     trait :with_autoplay_video do
@@ -721,7 +749,7 @@ FactoryGirl.define do
     end
 
     position do |script_level|
-      (script_level.stage.script_levels.maximum(:position) || 0) + 1 if script_level.stage
+      (script_level.lesson.script_levels.maximum(:position) || 0) + 1 if script_level.lesson
     end
 
     properties do |script_level|
@@ -743,25 +771,56 @@ FactoryGirl.define do
     end
   end
 
-  factory :stage do
-    sequence(:name) {|n| "Bogus Stage #{n}"}
+  factory :lesson_group do
+    sequence(:key) {|n| "Bogus Lesson Group #{n}"}
     script
 
-    absolute_position do |stage|
-      (stage.script.stages.maximum(:absolute_position) || 0) + 1
+    position do |lesson_group|
+      (lesson_group.script.lesson_groups.maximum(:position) || 0) + 1
+    end
+  end
+
+  factory :lesson do
+    sequence(:name) {|n| "Bogus Lesson #{n}"}
+    sequence(:key) {|n| "Bogus-Lesson-#{n}"}
+    script
+
+    absolute_position do |lesson|
+      (lesson.script.lessons.maximum(:absolute_position) || 0) + 1
     end
 
     # relative_position is actually the same as absolute_position in our factory
     # (i.e. it doesnt try to count lockable/non-lockable)
-    relative_position do |stage|
-      ((stage.script.stages.maximum(:absolute_position) || 0) + 1).to_s
+    relative_position do |lesson|
+      ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
     end
+  end
+
+  factory :resource do
+    url 'fake.url'
+    name 'fake name'
+  end
+
+  factory :objective do
+    description 'fake description'
   end
 
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
     script_level
+  end
+
+  factory :lesson_activity do
+    sequence(:key) {|n| "lesson-activity-#{n}"}
+    sequence(:position)
+    lesson
+  end
+
+  factory :activity_section do
+    sequence(:key) {|n| "activity-section-#{n}"}
+    sequence(:position)
+    lesson_activity
   end
 
   factory :activity do
@@ -854,11 +913,8 @@ FactoryGirl.define do
     # create real sublevels, and update pages to match.
     trait :with_sublevels do
       after(:create) do |lg|
-        sublevels = [create(:sublevel), create(:sublevel), create(:sublevel)]
-        lg.properties['pages'] = [
-          {levels: [sublevels[0].name, sublevels[1].name]},
-          {levels: [sublevels[2].name]}
-        ]
+        levels_and_texts_by_page = [[create(:sublevel), create(:sublevel)], [create(:sublevel)]]
+        lg.update_levels_and_texts_by_page(levels_and_texts_by_page)
       end
     end
   end
@@ -1055,6 +1111,14 @@ FactoryGirl.define do
       grade_07_offered true
       grade_08_offered true
     end
+
+    # Schools eligible for circuit playground discount codes
+    # are schools where over 50% of students are eligible
+    # for free and reduced meals.
+    trait :is_maker_high_needs_school do
+      frl_eligible_total 51
+      students_total 100
+    end
   end
 
   # Default school to public school. More specific factories below
@@ -1063,6 +1127,8 @@ FactoryGirl.define do
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).next).to_s}
+    address_line1 "123 Sample St"
+    address_line2 "attn: Main Office"
     city "Seattle"
     state "WA"
     zip "98122"
@@ -1080,6 +1146,12 @@ FactoryGirl.define do
     trait :is_k8_school do
       after(:create) do |school|
         build :school_stats_by_year, :is_k8_school, school: school
+      end
+    end
+
+    trait :is_maker_high_needs_school do
+      after(:create) do |school|
+        create :school_stats_by_year, :is_maker_high_needs_school, school: school
       end
     end
   end
@@ -1116,15 +1188,27 @@ FactoryGirl.define do
     group 1
   end
 
+  factory :regional_partner_with_mappings, parent: :regional_partner do
+    sequence(:name) {|n| "Partner#{n}"}
+    group 1
+    mappings do
+      [
+        create(
+          :pd_regional_partner_mapping,
+          zip_code: 98143,
+          state: nil
+        )
+      ]
+    end
+  end
+
   factory :regional_partner_with_summer_workshops, parent: :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     contact_name "Contact Name"
     contact_email "contact@code.org"
     group 1
-    apps_open_date_csp_teacher {(Date.current - 1.day).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current + 4.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
     csd_cost 10
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."
@@ -1217,10 +1301,43 @@ FactoryGirl.define do
     association :script_level
   end
 
-  factory :validated_user_level do
-    time_spent 10
-    user_level_id 1
+  factory :teacher_score do
+    association :user_level
+    association :teacher
   end
 
   factory :donor_school
+
+  factory :contact_rollups_raw do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:sources) {|n| "dashboard.table_#{n}"}
+    data {{opt_in: true}}
+    data_updated_at {Time.now.utc}
+  end
+
+  factory :contact_rollups_processed do
+    transient do
+      data_updated_at {Time.now.utc}
+    end
+
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'opt_in' => true}}
+
+    after(:build) do |contact, evaluator|
+      contact.data[:updated_at] = evaluator.data_updated_at
+    end
+  end
+
+  factory :contact_rollups_final do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'opt_in' => true}}
+  end
+
+  factory :contact_rollups_pardot_memory do
+    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:pardot_id) {|n| n}
+    pardot_id_updated_at {Time.now.utc - 1.hour}
+    data_synced {{db_Opt_In: 'No'}}
+    data_synced_at {Time.now.utc}
+  end
 end

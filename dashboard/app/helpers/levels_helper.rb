@@ -1,8 +1,15 @@
 require 'cdo/script_config'
+require 'cdo/redcarpet/inline'
+require 'cdo/honeybadger'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
+require 'cdo/firehose'
+require 'cdo/languages'
+require 'net/http'
+require 'uri'
+require 'json'
 
 module LevelsHelper
   include ApplicationHelper
@@ -15,20 +22,20 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      if script_level.stage.lockable?
-        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+      if script_level.lesson.lockable?
+        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       else
-        puzzle_page_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:puzzle_page])
+        puzzle_page_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       end
     elsif params[:sublevel_position]
-      sublevel_script_stage_script_level_path(script_level.script, script_level.stage, script_level, params[:sublevel_position])
-    elsif script_level.stage.lockable?
-      script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
+      sublevel_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+    elsif script_level.lesson.lockable?
+      script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
-      query_params = params.merge(id: script_level.id)
-      script_stage_extras_path(script_level.script.name, script_level.stage.relative_position, query_params)
+      query_params = params.merge(level_name: script_level.level.name)
+      script_stage_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
     else
-      script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
+      script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
     end
   end
 
@@ -171,7 +178,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.stage.absolute_position,
+        stage_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
         next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @stage)
       )
@@ -233,14 +240,12 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
       elsif @level.is_a? Widget
         widget_options
-      elsif @level.is_a? Scratch
-        scratch_options
       elsif @level.unplugged?
         unplugged_options
       else
@@ -254,7 +259,7 @@ module LevelsHelper
     end
 
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if I18n.en? && can_view_teacher_markdown?
+    @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if can_view_teacher_markdown?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -307,10 +312,12 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
+    use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
+        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
@@ -333,19 +340,6 @@ module LevelsHelper
     app_options
   end
 
-  def scratch_options
-    app_options = {
-      baseUrl: Blockly.base_url,
-      skin: {},
-      app: 'scratch',
-    }
-    app_options[:level] = @level.properties.camelize_keys
-    app_options[:level][:scratch] = true
-    app_options[:level][:editCode] = false
-    app_options.merge! view_options.camelize_keys
-    app_options
-  end
-
   def set_tts_options(level_options, app_options)
     # Text to speech - set url to empty string if the instructions are empty
     if @script && @script.text_to_speech_enabled?
@@ -357,15 +351,19 @@ module LevelsHelper
   end
 
   def set_hint_prompt_options(level_options)
-    if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
+    # Default was selected based on analysis of calculated thresholds for
+    # levels in Courses 2, 3, 4 and the 2017 versions of Courses A-F. See PR
+    # #36507 for more details.
+    default_hint_prompt_attempts_threshold = 6.5
+    if @script&.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold || default_hint_prompt_attempts_threshold
     end
   end
 
   def set_puzzle_position_options(level_options)
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
   end
 
   # Options hash for non-blockly puzzle apps
@@ -462,10 +460,76 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
+      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
     fb_options
+  end
+
+  def get_azure_speech_service_token(region, api_key, timeout)
+    token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
+    token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
+    token_http_request.use_ssl = true
+    token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
+    token_http_request.read_timeout = timeout
+    token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
+
+    token_http_request.request(token_request)&.body
+  rescue => e
+    Honeybadger.notify(e, error_message: 'Request for authentication token from Azure Speech Service failed')
+    nil
+  end
+
+  def get_azure_speech_service_voices(region, token, timeout)
+    Rails.cache.fetch("azure_speech_service/voices") do
+      voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
+      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
+      voice_http_request.use_ssl = true
+      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      voice_http_request.read_timeout = timeout
+      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
+
+      response = voice_http_request.request(voice_request)&.body
+      response.length >= 2 ? JSON.parse(response) : []
+    end
+  rescue => e
+    Honeybadger.notify(e, error_message: 'Request for list of voices from Azure Speech Service failed')
+    nil
+  end
+
+  def azure_speech_service_options
+    return {} unless Gatekeeper.allows('azure_speech_service', default: true) &&
+      @level.game.use_azure_speech_service? &&
+      CDO.azure_speech_service_region.present? &&
+      CDO.azure_speech_service_key.present?
+
+    # First, get the token and region
+    options = {}
+    timeout = DCDO.get('azure_speech_service_timeout', 5)
+    region = CDO.azure_speech_service_region
+    options[:token] = get_azure_speech_service_token(region, CDO.azure_speech_service_key, timeout)
+    return {} unless options[:token].present?
+    options[:url] = "https://#{region}.tts.speech.microsoft.com/cognitiveservices/v1"
+
+    # Then, get the list of voices
+    voices = get_azure_speech_service_voices(region, options[:token], timeout)
+    return {} unless (voices&.length || 0) > 0
+    voice_dictionary = {}
+    voices.each do |voice|
+      native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
+      next if native_locale_name.empty?
+      native_name_s = native_locale_name[0][:native_name_s]
+      voice_dictionary[native_name_s] ||= {}
+      voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
+      voice_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
+    end
+
+    # Only keep voices that contain 2+ genders and a languageCode
+    options[:voices] = voice_dictionary.reject {|_, opt| opt.length < 3}
+
+    options
   end
 
   # Options hash for Blockly
@@ -485,7 +549,7 @@ module LevelsHelper
     # ScriptLevel-dependent option
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.stage_total : 1
+    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
 
     # Edit blocks-dependent options
@@ -556,7 +620,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
     app_options[:isStartMode] = @is_start_mode || false
@@ -580,10 +644,10 @@ module LevelsHelper
 
     # Request-dependent option
     if request
-      app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+      app_options[:isUS] = request.location.try(:country_code) == 'US' ||
           (!Rails.env.production? && request.location.try(:country_code) == 'RD')
     end
-    app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
+    app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
 
     if (@game && @game.owns_footer_for_share?) || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
@@ -601,12 +665,16 @@ module LevelsHelper
       art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
       code_from_html: URI.escape(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
+      built_on_github: I18n.t('footer.built_on_github'),
+      google_copyright: URI.escape(I18n.t('footer.google_copyright'))
     }
   end
 
   def match_answer_as_image(path, width)
-    "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+    attrs = {src: path.strip}
+    attrs[:width] = width.strip if width
+    content_tag(:img, '', attrs)
   end
 
   def match_answer_as_embedded_blockly(path)
@@ -666,11 +734,12 @@ module LevelsHelper
     return unless text
 
     path, width = text.split(',')
-    return match_answer_as_image(path, width) if %w(.jpg .png .gif).include? File.extname(path)
+    return match_answer_as_image(path, width) if %w(.jpg .png .gif).include? File.extname(path).downcase
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    text
+    @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
+    @@markdown_renderer.render(text).html_safe
   end
 
   def level_title
@@ -683,7 +752,7 @@ module LevelsHelper
         end
       stage = @script_level.name
       position = @script_level.position
-      if @script_level.script.stages.many?
+      if @script_level.script.lessons.many?
         "#{script}: #{stage} ##{position}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
@@ -732,7 +801,7 @@ module LevelsHelper
   def session_id
     # session.id may not be available on the first visit unless we write to the session first.
     session['init'] = true
-    session.id
+    session.id.to_s
   end
 
   def user_or_session_id
@@ -782,7 +851,22 @@ module LevelsHelper
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
-      error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
+      if current_user.teachers.any?
+        error_message = I18n.t("errors.messages.teacher_must_accept_terms")
+      else
+        error_message = I18n.t("errors.messages.too_young")
+        FirehoseClient.instance.put_record(
+          :analysis,
+          {
+            study: "redirect_under_13",
+            event: "student_with_no_teacher_redirected",
+            user_id: current_user.id,
+            data_json: {
+              game: level.game.name
+            }.to_json
+          }
+        )
+      end
       redirect_to '/', flash: {alert: error_message}
       return true
     end

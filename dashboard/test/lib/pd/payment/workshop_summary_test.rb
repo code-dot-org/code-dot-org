@@ -31,5 +31,21 @@ module Pd::Payment
       assert_nil report[:organizer_name]
       assert_nil report[:organizer_id]
     end
+
+    test 'workshop summary reports nil for attendance count for all sessions attendance for admin workshop' do
+      @ended_admin_workshop = create :admin_workshop, :ended
+      @workshop_summary = WorkshopSummary.new(
+        workshop: @ended_admin_workshop,
+        pay_period: 'a pay period',
+        num_days: 1,
+        num_hours: 6,
+        min_attendance_days: 1,
+        calculator_class: PaymentCalculatorBase,
+        attendance_count_per_session: [1]
+      )
+      report = @workshop_summary.generate_organizer_report_line_item
+
+      assert_nil report[:num_scholarship_teachers_attending_all_sessions]
+    end
   end
 end

@@ -1,7 +1,7 @@
 professional_learning_course 'ECS Support'
-login_required 'true'
+login_required true
 
-stage 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started'
 level 'ECS Phase 3 Unit3 Welcome'
 level 'ECS Phase 3 Unit 3 Overview'
 level 'PDECS tour'
@@ -9,11 +9,11 @@ level 'PLC- check your progress'
 level 'ECSPD Unit 3 Outline'
 level 'ECSPD P3 Plan'
 
-stage 'Intro to Unit 3'
+lesson 'Intro to Unit 3', display_name: 'Intro to Unit 3'
 level 'ECSPD Unit3 Connections'
 level 'ECSPD Unit 3 Lesson Overview'
 
-stage 'Teaching Strategies'
+lesson 'Teaching Strategies', display_name: 'Teaching Strategies'
 level 'Forum-ECSPD-Unit 3-Teaching Practice'
 level 'ECSPD Unit 3 Expertise'
 level 'ECSPD Phase 3 - Unit 3 - Teaching Practice'
@@ -21,7 +21,7 @@ level 'ECSPD jsfiddle'
 level 'ECSPD Unit 3 Strategy Review'
 level 'ECSPD strategies'
 
-stage 'Unit 3 Day-by-Day'
+lesson 'Unit 3 Day-by-Day', display_name: 'Unit 3 Day-by-Day'
 level 'ECSPD Unit 3 Stage 6 Overview'
 level 'ECSPD U3 D 1-2 Intro'
 level 'ECSPD U3 D 3-4 Intro'
@@ -35,7 +35,7 @@ level 'ECSPD U3 D 17-19 Intro'
 level 'ECSPD U3 D 20-21 Intro'
 level 'ECSPD U3 D 22-25 Intro'
 
-stage 'Unit 3 Challenge'
+lesson 'Unit 3 Challenge', display_name: 'Unit 3 Challenge'
 level 'ECSPD-unit2 What is the Challenge'
 level 'ECSPD U3 Challenges'
 level 'ECS Unit 3 Challenge Selection', named: true
@@ -45,5 +45,6 @@ level 'CSPPD3-u2 reflect on challenge'
 level 'CSPPD3-u2 expectations'
 level 'ECS Unit 3 Challenge Submission', named: true
 
-stage 'Close & Next Steps'
+lesson 'Close & Next Steps', display_name: 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
+

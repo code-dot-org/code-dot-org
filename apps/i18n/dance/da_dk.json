@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Du trykkede på en tast, men din danser reagerede ikke.",
   "danceFeedbackNeedTwoDancers": "Du skal skabe to dansere.",
   "danceFeedbackOnlyOneDancerMoved": "Kun en af dine dansere bevægede sig.",
-  "danceFeedbackNeedLead": "Du skal også skabe første danser med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> blokken.",
+  "danceFeedbackNeedLead": "Du skal også skabe første danser med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> blokken.",
   "danceFeedbackNeedBackup": "Du skal oprette en gruppe af baggrundsdansere med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blokken.",
   "danceFeedbackSetSize": "Du skal ændre størrelsen på mindst en danser ved brug af et event."
 }

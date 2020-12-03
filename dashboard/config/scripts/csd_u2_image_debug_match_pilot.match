@@ -1,16 +1,17 @@
 name 'CSD U2 image debug match_pilot'
+editor_experiment ''
 display_name 'Image Bug Match'
 description 'Match the buggy HTML code with the description of its bug.'
 question 'The `src` attribute is spelled incorrectly.'
-answer '<img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png">'
+answer 'https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34 PM.png'
 question 'The `src` and `alt` attributes are switched'
-answer '<img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png">'
-question 'The the file extension (.jpg) is missing from the image address'
-answer '<img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png">'
+answer 'https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01 PM.png'
+question 'The file extension (.jpg) is missing from the image address'
+answer 'https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47 PM.png'
 question 'The image address is not given as a `src` attribute'
-answer '<img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png">'
+answer 'https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40 PM.png'
 question 'There is a space in the file name'
-answer '<img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png">'
+answer 'https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24 PM.png'
 
 markdown <<MARKDOWN
 

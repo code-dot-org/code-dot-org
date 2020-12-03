@@ -6,16 +6,6 @@ hr:
         options:
           UNIT:
             '"seconds"': sekunde
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -26,16 +16,6 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
-      Dancelab_doMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -68,6 +48,7 @@ hr:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -97,47 +78,11 @@ hr:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -192,6 +137,10 @@ hr:
             '"right"': desno
             '"space"': svemir
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -209,6 +158,19 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -230,6 +192,8 @@ hr:
         text: nasumično odabrana boja
       gamelab_randomColor:
         text: nasumično odabrana boja
+      gamelab_repeatForever:
+        text: ponavljaj zauvijek
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -376,23 +340,10 @@ hr:
         text: okreni ulijevo
       RyanLab_turnRight:
         text: okreni udesno
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': prikaži
-            '"hide"': sakrij
+            '"random"': slučajno odabran
       binary_move:
         options:
           DIR:

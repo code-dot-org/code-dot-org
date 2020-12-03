@@ -13,4 +13,9 @@ $(document).ready(function() {
     'level_markdown_textarea',
     'markdown'
   );
+  initializeEmbeddedMarkdownEditor(
+    $('#level_dsl_text'),
+    'level_teacher_markdown_textarea',
+    'teacher_markdown'
+  );
 });

@@ -1,0 +1,22 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-03-17T21:09:55.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**What does the body selector do?**]\r\n\r\nBecause the content of the web page is all inside the `body` tag, the body selector gives style rules for everything on the web page.\r\n\r\n:::\r\n\r\n::: details [**What does the border-style property do?**]\r\n\r\nThe `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_border-style.asp\" target=\"_new\">W3Schools - CSS border-style Property</a>\r\n\r\n:::\r\n\r\n::: details [**What does the border-radius property do?**]\r\n\r\nThe `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/css3_pr_border-radius.asp\" target=\"_new\">W3Schools - CSS3 border-radius property</a>\r\n\r\n:::\r\n\r\n::: details [**What does the float property do?**]\r\n\r\nThe `float` property makes an element \"float\", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_class_float.asp\" target=\"_new\">W3Schools - CSS float Property</a>\r\n\r\n\r\n:::\r\n</div>\r\n\r\n# Layout and Style\r\n\r\n* Look through web page below for new styles.\r\n* Open the style sheet\r\n* With your partner, discuss which parts of the CSS code you think are making the page appear different.\r\n  * What makes the entire page blue?\r\n  * How are the images positioned to the left of all the other elements?\r\n\r\nIn the next few levels, you'll be changing and adding new styles on this page.",
+    "instructions_important": "false",
+    "project_template_level_name": "CSDU2 - layout style template_virtual",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "parent_level_id": 20042,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:42:09 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-07-14 17:05:33 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-27 01:44:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-02-27 01:46:06 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-02-27 01:51:20 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-07-12 20:47:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:53:22 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-05-23 00:23:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-08-01 03:03:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-10 22:29:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]"
+}]]></config>
+</Weblab>

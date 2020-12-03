@@ -1,0 +1,174 @@
+{
+  "lv-LV": {
+    "data": {
+      "authored_hints": {
+        "2-3 Artist 1 new": {
+          "2-3_Artist_1_new_a": "Ja izmantosi bloku 'pārvietoties uz priekšu par 100 punktiem', es uzzīmēšu līniju automātiski.",
+          "2-3_Artist_1_new_b": "Vai ir problēmas stūrī pagriezties? Izmanto bloku 'pagriezt pa labi par 90 grādiem'."
+        },
+        "2-3 Artist 11": {
+          "2-3_Artist_11_a": "Vai ir problēmas ar leņķiem? Nepieciešams veikt 360 grādu pagriezienu 8 reizēs. Cik ir 360/8? "
+        },
+        "2-3 Artist 12": {
+          "2-3_Artist_12_a": "Riņķī ir 360 grādu. Ja mākslinieks ciklā katru reizi pagriežas par 1 grādu, tad viņam vajadzēs to atkārtot 360 reizes."
+        },
+        "2-3 Artist 2 new": {
+          "2-3_Artist_2_new_a": "Šķiet, mākslinieks neskatās uz pareizo pusi. Vai vari viņu pagriezt, pirms zīmēt līniju?"
+        },
+        "2-3 Artist 3new": {
+          "2-3_Artist_3new_a": "Cik ir 100-70? Izpētot stāsta problēmu, tik augstai jābūt cepurei!",
+          "2-3_Artist_3new_b": "Šķiet, mākslinieks neskatās uz pareizo pusi. Vai vari viņu pagriezt, pirms zīmēt līniju?"
+        },
+        "2-3 Artist 4": {
+          "2-3_Artist_4_a": "Lai pabeigtu māju, mums tikai ir jāuzzīmē kvadrāts!"
+        },
+        "2-3 Artist 6": {
+          "2-3_Artist_6_c": "Katrai trijstūra malai ir tāds pats garums kā katrai kvadrāta malai... 100 pikseļi!"
+        },
+        "2-3 Artist 8": {
+          "2-3_Artist_8_a": "Ja 200 sadala uz pusēm, cik punktu platam jābūt katram kvadrātam?"
+        },
+        "2-3 Artist Debugging 2": {
+          "2-3_Artist_Debugging_2_a": "Padoms: Katra ūsa ir 75 punktus gara."
+        },
+        "2-3 Artist Debugging 3": {
+          "2-3_Artist_Debugging_3_b": "Ja programma tiek izpildīta pārāk ātri, lai saprastu kas notiek, izmēģini to palēnināt ar slīdni."
+        },
+        "2-3 Artist Debugging 7": {
+          "2-3_Artist_Debugging_7_a": "Kas notiks, ja mākslinieks pārvietosies vai leks atpakaļ pēc tam, kad uzzīmēs pirmo līniju?"
+        },
+        "2-3 Artist Debugging 9": {
+          "2-3_Artist_Debugging_9_a": "Māksliniekam jāpagriežas 60 grādus pa kreisi, pirms viņš sāk zīmēt!"
+        },
+        "2-3 Artist Functions 1": {
+          "2-3_Artist_Functions_1_a": "Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.",
+          "2-3_Artist_Functions_1_b": "Tas nekas, ja zīmējot brilles līnijas pārklājas."
+        },
+        "2-3 Artist Functions 12": {
+          "2-3_Artist_Functions_12_a": "Pamēģini vispirms palaist kodu, lai apskatītos ko nepieciešams pievienot."
+        },
+        "2-3 Artist Functions 2": {
+          "2-3_Artist_Functions_2_a": "Tavai programmai nepieciešams:\n\n-   izmantot funkciju\n-   pārvietoties uz priekšu 100+75 punktus\n-   izmantot funkciju"
+        },
+        "2-3 Artist Functions 3": {
+          "2-3_Artist_Functions_3_a": "**115 + 45 = 160**"
+        },
+        "2-3 Artist Functions 4": {
+          "2-3_Artist_Functions_4_a": "Māksliniekam starp katru kvadrātu nepieciešams pagriezties par 120 grādiem, lai pabeigtu zīmējumu."
+        },
+        "2-3 Artist Loops New 12": {
+          "2-3_Artist Loops_New_12_c": "Māksliniekam jāpagriežas pa labi tikai par 60 grādiem, lai veidotos plats leņķis."
+        },
+        "2-3 Artist Nested Loops 1": {
+          "2-3_Artist_Nested_Loops_1_a": "Atceries ciklā ievietot visus pelēkos blokus."
+        },
+        "2-3 Artist Nested Loops 3": {
+          "2-3_Artist_Nested_Loops_3_a": "Vajadzīga palīdzība ar leņķiem? **360/12=30**",
+          "2-3_Artist_Nested_Loops_3_b": "Atceries ievietot ciklā visu pelēko kodu kopā ar savu pagriešanās bloku."
+        },
+        "2-3 Artist Nested Loops 4": {
+          "2-3_Artist_Nested_Loops_3_a": "Vajadzīga palīdzība ar leņķiem? **360/12=30**"
+        },
+        "2-3 Artist Nested Loops 5": {
+          "2-3_Artist_Nested_Loops_5_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        },
+        "2-3 Artist Nested Loops 7": {
+          "2-3_Artist_Nested_Loops_7_a": "Cik tālu nepieciešams pagriezties katrā ciklā?\n\nCik ir 360/10?"
+        },
+        "2-3 Artist Nested Loops 9": {
+          "2-3_Artist_Nested_Loops_9_a": "Vajadzīga palīdzība atrodot pareizo leņķi?\n\n**360 / 12 = 30**"
+        },
+        "2-3 Bee Conditionals 6": {
+          "2-3_Bee_Conditionals_6_a": "Atceries: kad tiek palaista programma, violeto ziedu nektāru skaits mainās starp 0 un 1!"
+        },
+        "2-3 Bee Loops 3": {
+          "2-3_Bee_Loops_3_a": "Ciklā jābūt 6 blokiem."
+        },
+        "2-3 Bee Loops 3B": {
+          "2-3_Bee_Loops_3B_a": "Vajadzīgi divi dažādi 'atkārtot' cikli, viens aiz otra."
+        },
+        "2-3 Bee Loops 4": {
+          "2-3_Bee_Loops_4_a": "Beigās ciklā jābūt pieciem blokiem."
+        },
+        "2-3 Maze 1": {
+          "2-3_Maze_1_a": "Lai izmantotu \"pārvietot uz priekšu\" bloku, pārvelc to no rīku joslas uz darba virsmu un pievieno to \"kad izpilda\" blokam."
+        },
+        "4-5 Artist 7": {
+          "4-5_Artist_7_a": "Kurš leņķis ir pats mazākais? Uz kura leņķa stāv mākslinieks? "
+        },
+        "4-5 Artist 8": {
+          "4-5_Artist_8_a": "Garākās malas katra ir 240 punktus gara.  Tas nozīmē, ka 2 īsākās malas kopā ir:\n\n**800 - 240 - 240 = 320**\n\nCik ir **320/2** ? "
+        },
+        "4-5 Nested Loops 12": {
+          "4-5_Nested_Loops_12_a": "**360 / 36 = ?**"
+        },
+        "Course 4 Artist 6": {
+          "Course_4_Artist_6_a": "Te ir 3 trīsstūri 360 grādu pagriezienā...cik daudz reižu 3 ietilpst iekš 360?"
+        },
+        "Course 4 Artist 9": {
+          "Course_4_Artist_9_a": "Nepieciešams uzzināt cik daudz pagriezties? \n\nCik ir 360 dalīt ar 10?"
+        },
+        "Course 4 Artist Vars 6": {
+          "Course_4_Artist_Vars_6_a": "Lai uzzīmētu regulāru daudzstūri, pagriezies **360/malas** katru reizi."
+        },
+        "Course 4 Bee Params 7": {
+          "notice_pattern": "Vai redzi pēc kāda principa mainās nektāru skaits? "
+        },
+        "Course 4 SCF 1": {
+          "Course_4_SCF_1_a": "Katram sešstūrim mala ir 40 punktus gara."
+        },
+        "Course 4 SCF 2": {
+          "Course_4_SCF_2_a": "Katram astoņstūrim mala ir 40 punktus gara.",
+          "Course_4_SCF_2_b": "Katrā horizontālajā līnijā ir 136 punktu lēciens starp katru astoņstūri."
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "Centieties, lai Robots Aģents uzbūvē dažus tiltus, lai Alekss vai Stīvs varētu staigāt ap kartes malām."
+        },
+        "OPD-K5-variables-1": {
+          "grade5_artist_variables_triangles1_b": "Izmanto 'atkārtot' ciklu, lai kods būtu īsāks."
+        },
+        "course2_maze_programming_challenge2": {
+          "courseC_maze_programming_challenge2_b": "Īsākais risinājums iespējams ar tikai 5 blokiem, bet tas izmanto \"atkārtot\" bloku!"
+        },
+        "courseD_artist_nestedLoops3": {
+          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        },
+        "courseD_artist_nestedLoops3_2018": {
+          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        },
+        "courseD_artist_nestedLoops3_2019": {
+          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        },
+        "courseD_artist_nestedLoops3_2020": {
+          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        },
+        "courseE_artist_functions1": {
+          "courseE_artist_functions1_a": "Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.",
+          "courseE_artist_functions1_b": "Tas nekas, ja zīmējot brilles līnijas pārklājas."
+        },
+        "courseE_artist_functions1_copy": {
+          "courseE_artist_functions1_a": "Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.",
+          "courseE_artist_functions1_b": "Tas nekas, ja zīmējot brilles līnijas pārklājas."
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_a": "Tavai programmai nepieciešams:\n\n-   izmantot funkciju\n-   pārvietoties uz priekšu 100+75 punktus\n-   izmantot funkciju"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_a": "Tavai programmai nepieciešams:\n\n-   izmantot funkciju\n-   pārvietoties uz priekšu 100+75 punktus\n-   izmantot funkciju"
+        },
+        "grade5_artist_variables_triangles1": {
+          "grade5_artist_variables_triangles1_b": "Izmanto 'atkārtot' ciklu, lai kods būtu īsāks."
+        },
+        "grade5_artist_variables_triangles1_2018": {
+          "grade5_artist_variables_triangles1_b": "Izmanto 'atkārtot' ciklu, lai kods būtu īsāks."
+        },
+        "grade5_artist_variables_triangles1_2019": {
+          "grade5_artist_variables_triangles1_b": "Izmanto 'atkārtot' ciklu, lai kods būtu īsāks."
+        },
+        "grade5_artist_variables_triangles1_2020": {
+          "grade5_artist_variables_triangles1_b": "Izmanto 'atkārtot' ciklu, lai kods būtu īsāks."
+        }
+      }
+    }
+  }
+}

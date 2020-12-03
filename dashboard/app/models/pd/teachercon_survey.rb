@@ -13,11 +13,8 @@
 #  index_pd_teachercon_surveys_on_pd_enrollment_id  (pd_enrollment_id) UNIQUE
 #
 
-class Pd::TeacherconSurvey < ActiveRecord::Base
+class Pd::TeacherconSurvey < ApplicationRecord
   include Pd::FacilitatorSpecificForm
-
-  belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
-  validates_presence_of :pd_enrollment
 
   DISAGREES = [
     'Strongly Disagree',
@@ -40,6 +37,9 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
     "Leaning toward B",
     "Strongly aligned with B",
   ].freeze
+
+  belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
+  validates_presence_of :pd_enrollment
 
   def self.public_fields
     (

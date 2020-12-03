@@ -16,8 +16,9 @@
       Location:
   %div.span2
     = @workshop.location_name
-    %br
-    = @workshop.location_address
+    - if @workshop.location_address.present?
+      %br
+      = @workshop.location_address
 
 %div.row
   %div.span2{style: 'text-align: right'}

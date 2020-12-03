@@ -14,7 +14,7 @@ import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.j
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
 import {EXPO_SDK_VERSION, PLATFORM_ANDROID} from './exporterConstants';
 
-const EXPO_REACT_NATIVE_WEBVIEW_VERSION = '7.2.4';
+const EXPO_REACT_NATIVE_WEBVIEW_VERSION = '7.4.3';
 
 export function createPackageFilesFromZip(zip, appName) {
   const moduleList = [];

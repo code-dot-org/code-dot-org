@@ -5,6 +5,8 @@ import * as elementUtils from './designElements/elementUtils';
 import * as applabConstants from './constants';
 import {assets as assetsApi} from '../clientApi';
 
+let DATA_PREFIX_REGEX = applabConstants.DATA_URL_PREFIX_REGEX;
+
 export const importableScreenShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   willReplace: PropTypes.bool.isRequired,
@@ -165,6 +167,12 @@ export function importScreensAndAssets(projectId, screens, assets) {
     }
 
     allAssetsToCopy = Object.keys(allAssetsToCopy);
+
+    // Remove data url assets as they are too long for our copy api
+    allAssetsToCopy = allAssetsToCopy.filter(
+      asset => !DATA_PREFIX_REGEX.test(asset)
+    );
+
     if (allAssetsToCopy.length > 0) {
       assetsApi.copyAssets(projectId, allAssetsToCopy, finishImporting, xhr => {
         console.error('Failed to copy assets:', xhr);

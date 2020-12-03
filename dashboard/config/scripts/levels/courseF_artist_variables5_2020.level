@@ -1,0 +1,351 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:56:23.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Add another set of loops at the end of your code to add three more triangles. This time, move forward and up!",
+    "x": "50",
+    "y": "150",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "35",
+    "slider_speed": ".5",
+    "disable_param_editing": "true",
+    "free_play": "false",
+    "embed": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "callout_json": "[]",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "examples_required": "false",
+    "never_autoplay_video": "false",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The second half of your code should look almost the same as the first half, except you will be turning *left*, jumping, then turning *right*.\",\"hint_id\":\"courseF_artist_variables5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0ef202ba94d4bfa80119017cd642faa3/courseF_artist_variables5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The first half of your code will draw three triangles, and the second half will draw the other three.\",\"hint_id\":\"courseF_artist_variables5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57cafdbf9e20dbd8645558cfdc9b8e04/courseF_artist_variables5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by duplicating the code in the first half of your program, then alter it to make the design shown.\",\"hint_id\":\"courseF_artist_variables5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7cd8ffe1836582cb375f5005de6f642e/courseF_artist_variables5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the pattern your artist will follow:\\n\\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)\",\"hint_id\":\"courseF_artist_variables5_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5b0d983195113f00eeaa3fbae586d801/courseF_artist_variables5.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "name_suffix": "_2020",
+    "parent_level_id": 14821,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-17 21:27:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-10-12 20:50:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-12 20:55:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 23:47:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false" movable="false">
+              <title name="VAR">length</title>
+              <value name="VALUE">
+                <block type="math_number" movable="false">
+                  <title name="NUM">50</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number" can_disconnect_from_parent="false">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="math_number" can_disconnect_from_parent="false">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_move" inline="true">
+                          <title name="DIR">moveForward</title>
+                          <value name="VALUE">
+                            <block type="variables_get">
+                              <title name="VAR">length</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" inline="true">
+                              <title name="DIR">turnLeft</title>
+                              <value name="VALUE">
+                                <block type="math_number" can_disconnect_from_parent="false">
+                                  <title name="NUM">120</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="jump" inline="true">
+                          <title name="DIR">jumpForward</title>
+                          <value name="VALUE">
+                            <block type="variables_get">
+                              <title name="VAR">length</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" inline="true">
+                              <title name="DIR">turnRight</title>
+                              <value name="VALUE">
+                                <block type="math_number" can_disconnect_from_parent="false">
+                                  <title name="NUM">90</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="jump" inline="true">
+                                  <title name="DIR">jumpForward</title>
+                                  <value name="VALUE">
+                                    <block type="variables_get">
+                                      <title name="VAR">length</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn" inline="true">
+                                      <title name="DIR">turnLeft</title>
+                                      <value name="VALUE">
+                                        <block type="math_number" can_disconnect_from_parent="false">
+                                          <title name="NUM">90</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="variables_get">
+          <title name="VAR">length</title>
+        </block>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="jump" inline="true">
+          <title name="DIR">jumpForward</title>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number" movable="false" can_disconnect_from_parent="false">
+              <title name="NUM">120</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true" limit="4">
+          <value name="TIMES">
+            <block type="math_number" movable="false" can_disconnect_from_parent="false">
+              <title name="NUM">3</title>
+            </block>
+          </value>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false">
+              <title name="VAR">length</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">50</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_move" inline="true">
+                          <title name="DIR">moveForward</title>
+                          <value name="VALUE">
+                            <block type="variables_get">
+                              <title name="VAR">length</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" inline="true">
+                              <title name="DIR">turnLeft</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">120</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="jump" inline="true">
+                          <title name="DIR">jumpForward</title>
+                          <value name="VALUE">
+                            <block type="variables_get">
+                              <title name="VAR">length</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" inline="true">
+                              <title name="DIR">turnRight</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">90</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="jump" inline="true">
+                                  <title name="DIR">jumpForward</title>
+                                  <value name="VALUE">
+                                    <block type="variables_get">
+                                      <title name="VAR">length</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_turn" inline="true">
+                                      <title name="DIR">turnLeft</title>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <title name="NUM">90</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move" inline="true">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump" inline="true">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump" inline="true">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn" inline="true">
+                                          <title name="DIR">turnRight</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

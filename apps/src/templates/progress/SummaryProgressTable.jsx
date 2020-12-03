@@ -26,6 +26,7 @@ class SummaryProgressTable extends React.Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
+    minimal: PropTypes.bool,
 
     // redux provided
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
@@ -34,7 +35,7 @@ class SummaryProgressTable extends React.Component {
   };
 
   render() {
-    const {lessons, levelsByLesson, viewAs} = this.props;
+    const {lessons, levelsByLesson, viewAs, minimal} = this.props;
 
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
@@ -42,16 +43,18 @@ class SummaryProgressTable extends React.Component {
 
     return (
       <table style={styles.table}>
-        <thead>
-          <tr style={styles.headerRow}>
-            <td style={rowStyles.col1}>
-              <div style={rowStyles.colText}>{i18n.lessonName()}</div>
-            </td>
-            <td style={rowStyles.col2}>
-              <div style={rowStyles.colText}>{i18n.progress()}</div>
-            </td>
-          </tr>
-        </thead>
+        {!minimal && (
+          <thead>
+            <tr style={styles.headerRow}>
+              <td style={rowStyles.col1}>
+                <div style={rowStyles.colText}>{i18n.lessonName()}</div>
+              </td>
+              <td style={rowStyles.col2}>
+                <div style={rowStyles.colText}>{i18n.progress()}</div>
+              </td>
+            </tr>
+          </thead>
+        )}
         <tbody>
           {/*Filter our lessons to those that will be rendered, and then make
             every other (remaining) one dark */

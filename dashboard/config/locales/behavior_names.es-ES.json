@@ -1,0 +1,100 @@
+{
+  "es-ES": {
+    "data": {
+      "behavior_names": {
+        "behaviors 1": {
+          "mystery behavior": "comportamiento misterioso",
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 1_2020": {
+          "mystery behavior": "comportamiento misterioso",
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 2": {
+          "flying": "volando",
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 2_2020": {
+          "flying": "volando",
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 3": {
+          "zooming east": "acercándose al este",
+          "driving east": "dirigiéndose al este"
+        },
+        "behaviors 3_2020": {
+          "zooming east": "acercándose al este",
+          "driving east": "dirigiéndose al este"
+        },
+        "behaviors 3a": {
+          "zooming east": "acercándose al este",
+          "driving east": "dirigiéndose al este"
+        },
+        "behaviors 3a_2020": {
+          "zooming east": "acercándose al este",
+          "driving east": "dirigiéndose al este"
+        },
+        "behaviors 4": {
+          "move south and west": "moverse hacia el sur y el oeste",
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 4_2020": {
+          "move south and west": "moverse hacia el sur y el oeste",
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 6": {
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 6_2020": {
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 7": {
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors 7_2020": {
+          "running east": "corriendo hacia el este\n"
+        },
+        "behaviors free play": {
+          "spinning and growing": "girando y creciendo"
+        },
+        "behaviors free play_2020": {
+          "spinning and growing": "girando y creciendo"
+        },
+        "Virtual Pet 1_2019": {
+          "mystery": "Misterio"
+        },
+        "Virtual Pet 1_2020": {
+          "mystery": "Misterio"
+        },
+        "Virtual Pet 3_2019": {
+          "wandering2": "vagabundeando2",
+          "moving east2": "avanzando hacia el este2",
+          "spinning left2": "girando hacia la izquierda2",
+          "spinning right2": "girando a la derecha2",
+          "shrinking2": "encogiendo2",
+          "growing2": "creciendo2",
+          "moving south2": "avanzando hacia el sur2",
+          "swimming left and right2": "nadando hacia la izquierda y la derecha2",
+          "moving north2": "avanzando hacia el norte2",
+          "jittering2": "sufriendo2",
+          "moving west2": "avanzando hacia el oeste2",
+          "patrolling2": "vigilando2"
+        },
+        "Virtual Pet 3_2020": {
+          "wandering2": "vagabundeando2",
+          "moving east2": "avanzando hacia el este2",
+          "spinning left2": "girando hacia la izquierda2",
+          "spinning right2": "girando a la derecha2",
+          "shrinking2": "encogiendo2",
+          "growing2": "creciendo2",
+          "moving south2": "avanzando hacia el sur2",
+          "swimming left and right2": "nadando hacia la izquierda y la derecha2",
+          "moving north2": "avanzando hacia el norte2",
+          "jittering2": "sufriendo2",
+          "moving west2": "avanzando hacia el oeste2",
+          "patrolling2": "vigilando2"
+        }
+      }
+    }
+  }
+}

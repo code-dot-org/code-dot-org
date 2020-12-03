@@ -20,7 +20,9 @@ class EditTableRow extends React.Component {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
     record: PropTypes.object.isRequired,
-    readOnly: PropTypes.bool
+    readOnly: PropTypes.bool,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -48,14 +50,22 @@ class EditTableRow extends React.Component {
   }
 
   handleSave = () => {
-    this.setState({isSaving: true});
-    const newRecord = _.mapValues(this.state.newInput, castValue);
-    FirebaseStorage.updateRecord(
-      this.props.tableName,
-      newRecord,
-      this.resetState,
-      msg => console.warn(msg)
-    );
+    this.props.hideError();
+    try {
+      const newRecord = _.mapValues(this.state.newInput, inputString =>
+        castValue(inputString, /* allowUnquotedStrings */ false)
+      );
+      this.setState({isSaving: true});
+      FirebaseStorage.updateRecord(
+        this.props.tableName,
+        newRecord,
+        this.resetState,
+        msg => console.warn(msg)
+      );
+    } catch (e) {
+      this.setState({isSaving: false});
+      this.props.showError();
+    }
   };
 
   resetState = () => {
@@ -92,7 +102,7 @@ class EditTableRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr style={dataStyles.row} className="uitest-data-table-row">
         {this.props.columnNames.map(columnName => (
           <td key={columnName} style={dataStyles.cell}>
             {this.state.isEditing && columnName !== 'id' ? (

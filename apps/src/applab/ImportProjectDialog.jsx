@@ -52,6 +52,7 @@ export class ImportProjectDialog extends React.Component {
             <a
               href={`${window.dashboard.CODE_ORG_URL}/applab/docs/import`}
               target="_blank"
+              rel="noopener noreferrer"
             >
               Learn More
             </a>

@@ -3,7 +3,8 @@ import {
   apiValidateType,
   apiValidateTypeAndRange
 } from '../../util/javascriptMode';
-import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
+import {BOARD_EVENT_ALIASES} from './boards/circuitPlayground/PlaygroundConstants';
+import MicroBitBoard from './boards/microBit/MicroBitBoard';
 
 /** @private {CircuitPlaygroundBoard} */
 let board;
@@ -106,7 +107,8 @@ export function boardConnected() {
  */
 export function onBoardEvent(opts) {
   let {component, event, callback} = opts;
-  if (BOARD_EVENT_ALIASES[event]) {
+  // Look up aliases for CircuitPlaygroundBoard
+  if (BOARD_EVENT_ALIASES[event] && !(board instanceof MicroBitBoard)) {
     event = BOARD_EVENT_ALIASES[event];
   }
   component.on(event, callback);
@@ -130,4 +132,22 @@ export function createLed(opts) {
 export function createButton(opts) {
   apiValidateType(opts, 'createButton', 'pin', opts.pin, 'pinid');
   return board.createButton(opts.pin);
+}
+
+/**
+ * Create a Button component on the current maker board attached to the
+ * specified pin. Validate that pin is between 0 and 2 (for MB captouch)
+ * @param {number} opts.pin
+ */
+export function createCapacitiveTouchSensor(opts) {
+  apiValidateTypeAndRange(
+    opts,
+    'createCapacitiveTouchSensor',
+    'pin',
+    opts.pin,
+    'pinid',
+    0,
+    2
+  );
+  return board.createCapacitiveTouchSensor(opts.pin);
 }

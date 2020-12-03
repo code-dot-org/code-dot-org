@@ -64,12 +64,14 @@ class PublishDialog extends Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.close}
             color={Button.ButtonColor.gray}
             className="no-mc"
           />
           <Button
+            __useDeprecatedTag
             text={i18n.publish()}
             onClick={this.confirm}
             color={Button.ButtonColor.orange}

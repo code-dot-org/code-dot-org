@@ -1,0 +1,167 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:01.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 0
+        },
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Define a function called drawSide() which draws three steps and moves the turtle to prepare for the next side (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "slider_speed": "0.1",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "encrypted_examples": "3iiZVSpcbkKXrwXy1SXLoBJH+gKZibNd/8CCc7xlseSJrwimrLVl5bLVS0Lp\nCqZS\n",
+    "long_instructions": "# Do This:\r\n\r\n<img src=\"https://images.code.org/5f20ab5fd8b95754e8cfc948a4b41522-image-1441772307480.png\" style=\"float:right\" width=200>\r\n\r\nWe are going to continue to build up towards a diamond by **defining** a function that draws one side of the diamond. If you look at the whole image we are trying to draw, you'll notice that each of 4 sides is comprised of 3 calls to `drawStep()`, plus a few extra moves (shown in orange).\r\n\r\nRight now we'll write the code for one of those sides. So...\r\n\r\n**Define** a new function named `drawSide()` which makes three calls in a row to `drawStep()` followed by a `moveForward()` and `right()`.\r\n\r\n**Replace** the original function call to `drawStep()` with a call to your newly defined `drawSide()` function.\r\n\r\nThe diagrams below show the intended actions.\r\n\r\n![](https://images.code.org/480f6787e4d2daf34d67642e25b29de6-image-1441772552026.png)\r\n\r\n![](https://images.code.org/02f52d406854d6f86535adf2f593ccc9-image-1441772709549.gif)\r\n\r\n\r\n\r\n\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "U3L03 - drawDiamond Template_virtual",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "true",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem - no loops, please."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem - use only turnLeft()."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function. You can use this knowledge later, but for now, try to stick to the constraints of this problem and just write a function called right()."
+      },
+      {
+        "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function. You can use this knowledge later, but for now, try to stick to the constraints of this problem and just write a function called right()."
+      },
+      {
+        "entries": [
+          "drawSide"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to define \"function drawSide()\" and make a call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
+      },
+      {
+        "entries": [
+          "drawStep"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to define \"function drawStep\" and make a call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
+      },
+      {
+        "entries": [
+          "right"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "Your code should be calling right()."
+      },
+      {
+        "entries": [
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 7,
+        "message": "It doesn't seem like you are moving forward enough times to draw a side.  It should be at least 7 line segments long. "
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "parent_level_id": 16901,
+    "name_suffix": "_virtual",
+    "expand_debugger": "false",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-28 22:32:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 03:41:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-15 19:54:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

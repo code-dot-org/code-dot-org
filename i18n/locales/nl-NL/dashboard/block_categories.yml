@@ -17,12 +17,14 @@ nl:
       Game/Score: Spel/Score
       Games/Score: Spellen/Score
       Groups: Groepen
+      Input: Invoer
       Locations: Locaties
       Logic: Logica
       Loops: Lussen
       Math: wiskundige
       Numbers: Getallen
       Properties: Eigenschappen
+      Sprites: Sprites
       Text: Tekst
       Variables: Variabelen
       'Variables ': 'Variabelen '

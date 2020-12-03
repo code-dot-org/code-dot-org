@@ -1,12 +1,16 @@
+<%
+require 'cdo/cloud_formation/vpc'
+self.class.include VPC
+-%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   Lambda layer for functions used in CloudFormation Custom Resources.
   Note: Admin permissions are required to manage this stack.
 Parameters:
-  SlackEndpoint:
+  SessionChannel:
+    Description: Channel to post Slack session audit messages.
     Type: String
-    NoEcho: true
 Resources:
   AMIManager:
     Type: AWS::Lambda::Function
@@ -121,9 +125,9 @@ Resources:
       Code: <%=js_zip ['slackCloudWatchEvent.js']%>
       Environment:
         Variables:
-          SLACK_ENDPOINT: !Ref SlackEndpoint
+          SLACK_ENDPOINT: '{{resolve:secretsmanager:production/cdo/slack_endpoint}}'
       Handler: slackCloudWatchEvent.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs10.x
       Timeout: 30
       Role: !GetAtt BasicLambdaRole.Arn
   BasicLambdaRole:
@@ -171,47 +175,19 @@ Resources:
                 - 's3:PutObjectAcl'
                 - 'S3:DeleteObject'
               Resource: !Sub "arn:aws:s3:::*"
-  GlueConfiguration:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: Adjusts Glue Configuration property.
-      FunctionName: GlueConfiguration
-      Handler: index.handler
-      Role: !GetAtt GlueConfigurationRole.Arn
-      Code:
-        ZipFile: <%=js 'glueConfiguration.js'%>
-      Timeout: 30
-      Runtime: nodejs6.10
-  GlueConfigurationRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-        - Effect: Allow
-          Principal: {Service: [lambda.amazonaws.com]}
-          Action: ['sts:AssumeRole']
-      Path: /
-      ManagedPolicyArns:
-      - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-      Policies:
-      - PolicyName: GluePolicy
-        PolicyDocument:
-          Version: '2012-10-17'
-          Statement:
-            - Effect: Allow
-              Action:
-                - 'glue:UpdateCrawler'
-              Resource: '*'
   S3PartitionCloudFrontLog:
     Type: AWS::Lambda::Function
     Properties:
       Description: 'Partition CloudFront Access Log stored on S3.'
       FunctionName: S3PartitionCloudFrontLog
+      Environment:
+        Variables:
+          ATHENA_DB: elb_logs
+          ATHENA_TABLE: cloudfront_logs
       Code:
         ZipFile: <%=js 's3PartitionCloudFrontLog.js'%>
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs12.x
       Timeout: 30
       Role: !GetAtt S3LogsRole.Arn
   S3LogsRole:
@@ -238,6 +214,11 @@ Resources:
             - 's3:PutObjectAcl'
             - 's3:DeleteObject'
             Resource: "arn:aws:s3:::cdo-logs/*"
+          - Effect: Allow
+            Action:
+            - "glue:CreatePartition"
+            - "glue:GetPartition"
+            Resource: '*'
   S3BucketConfiguration:
     Type: AWS::Lambda::Function
     Properties:
@@ -264,6 +245,94 @@ Resources:
           };
       Timeout: 30
       Runtime: nodejs6.10
+  FastSnapshotRestore:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Enables EBS Fast Snapshot Restore for the given AMI snapshot.'
+      FunctionName: FastSnapshotRestore
+      Code: <%=lambda_zip 'fast_snapshot_restore.rb', 'cfn_response.rb' %>
+      Handler: fast_snapshot_restore.handler
+      Runtime: ruby2.5
+      MemorySize: 1024
+      Timeout: 30
+      Role: !GetAtt FastSnapshotRestoreRole.Arn
+  FastSnapshotRestoreRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'lambda'%>
+      Path: /
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']
+      Policies:
+      - PolicyName: root
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            - "ec2:EnableFastSnapshotRestores"
+            - "ec2:DisableFastSnapshotRestores"
+            - "ec2:DescribeImages"
+            Resource: '*'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  LambdaSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for VPC-internal Lambda functions.
+      VpcId: !ImportValue VPC
+  SSMSessionSlack:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'SSM Session Slack event handler'
+      FunctionName: SSMSessionSlack
+      Code: <%=ruby_zip 'ssm_session_slack' %>
+      Environment:
+        Variables:
+          SLACK_API_TOKEN: '{{resolve:secretsmanager:lambda/ssm_session_slack_token}}'
+          SLACK_CHANNEL: !Ref SessionChannel
+          FREEGEOIP_HOST: !ImportValue geocoder-DNSName
+          AUDIT_LOG_PATH: /admin/auditlogs
+      Handler: ssm_session_slack.handler
+      Runtime: ruby2.7
+      MemorySize: 1024
+      Timeout: 30
+      Role: !GetAtt SSMSessionSlackRole.Arn
+      VpcConfig:
+        SecurityGroupIds: [!Ref LambdaSecurityGroup]
+        SubnetIds: <%=subnets.to_json%>
+  SSMSessionSlackRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'lambda'%>
+      Path: /
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole']
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ['ec2:DescribeTags']
+                Resource: '*'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  SessionEvent:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: !Sub "Session events for ${AWS::StackName}."
+      EventPattern:
+        source: [aws.ssm]
+        detail-type: [AWS API Call via CloudTrail]
+        detail:
+          eventSource: [ssm.amazonaws.com]
+          eventName: [StartSession]
+          responseElements:
+            sessionId: [exists: true]
+      State: ENABLED
+      Targets: [{Id: SessionEventTarget, Arn: !GetAtt SSMSessionSlack.Arn}]
+  SessionEventPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt SSMSessionSlack.Arn
+      Action: 'lambda:InvokeFunction'
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt SessionEvent.Arn
 Outputs:
   AMIManager:
     Value: !GetAtt AMIManager.Arn

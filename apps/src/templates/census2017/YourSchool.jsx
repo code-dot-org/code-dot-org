@@ -31,6 +31,10 @@ const styles = {
     fontSize: 20,
     marginLeft: 25,
     marginRight: 25
+  },
+
+  banner: {
+    marginBottom: 35
   }
 };
 

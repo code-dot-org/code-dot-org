@@ -1,0 +1,44 @@
+{
+  "he-IL": {
+    "data": {
+      "title": {
+        "BigEvent": "האירוע הגדול",
+        "BigEvent_2018": "האירוע הגדול",
+        "BinaryBracelets": "צמידים בינארים",
+        "BinaryBracelets_2018": "צמידים בינארים",
+        "BinaryImages": "תמונות בינאריות",
+        "BinaryImages_2018": "תמונות בינאריות",
+        "ComputationalThinking": "חשיבה חישובית",
+        "Conditionals": "תנאים",
+        "Conditionals_2018": "תנאים",
+        "ForLoopFun": "כיף עם לולאת \"עבור\"",
+        "GettingLoopy": "עוברים ללולאות",
+        "GettingLoopy_2018": "עוברים ללולאות",
+        "GraphPaperProgramming": "תכנות לנייר משבצות",
+        "GraphPaperProgramming_2018": "תכנות לנייר משבצות",
+        "Internet": "אינטרנט",
+        "MoveIt": "זוזו, זוזו",
+        "MoveItMoveIt_2018": "זוזו, זוזו",
+        "PaperPlanes": "אלגוריתמים מהחיים: מטוסי נייר",
+        "PaperPlanes_2018": "אלגוריתמים מהחיים: מטוסי נייר",
+        "PlantASeed": "אלגוריתמים מהחיים: שתול זרעון",
+        "PlantASeed_2018": "אלגוריתמים מהחיים: שתול זרעון",
+        "RelayProgramming": "הרץ פעולה בשנית",
+        "RelayProgramming_2018": "הרץ פעולה בשנית",
+        "SongwritingParameters": "כתיבת שירים",
+        "SongwritingWithParameters": "כתיבת שירים",
+        "TangramAlgorithms": "טנגרם אלגוריתמים",
+        "UnplugHappyMaps": "מפות שמחות",
+        "UnplugHappyMaps_2018": "מפות שמחות",
+        "courseB_unplugged_MRF": "פעילות ללא עבודה במחשב",
+        "courseB_unplugged_MRF_2018": "חברי הרובוטיים",
+        "courseB_unplugged_loopyMRF": "פעילות ללא עבודה במחשב",
+        "courseC_Unplugged_ScreenOutTheMean": "פעילות ללא עבודה במחשב",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "פעילות ללא עבודה במחשב",
+        "courseD_unplugged_digitalCitizenship": "פעילות ללא עבודה במחשב",
+        "courseD_unplugged_digitalCitizenship_2018": "פעילות ללא עבודה במחשב",
+        "courseF_unplugged_powerOfWords": "פעילות ללא עבודה במחשב"
+      }
+    }
+  }
+}

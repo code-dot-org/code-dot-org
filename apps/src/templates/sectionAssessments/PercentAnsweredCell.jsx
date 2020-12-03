@@ -10,9 +10,7 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
-    height: '100%'
-  },
-  overviewMain: {
+    height: '100%',
     padding: 10
   },
   icon: {
@@ -20,8 +18,7 @@ const styles = {
   },
   value: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    marginRight: 10
+    fontFamily: '"Gotham 5r", sans-serif'
   }
 };
 
@@ -34,7 +31,9 @@ class PercentAnsweredCell extends Component {
     percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
     displayAnswer: PropTypes.string,
-    isSurvey: PropTypes.bool
+    isSurvey: PropTypes.bool,
+    mainLayoutStyle: PropTypes.object,
+    valueLayoutStyle: PropTypes.object
   };
 
   getBackgroundColor = percentValue => {
@@ -67,8 +66,8 @@ class PercentAnsweredCell extends Component {
       backgroundColor: this.getBackgroundColor(percentValue)
     };
     return (
-      <div style={{...styles.main, ...backgroundCSS, ...styles.overviewMain}}>
-        <div style={styles.value}>
+      <div style={{...this.props.mainLayoutStyle, ...backgroundCSS}}>
+        <div style={{...styles.value, ...this.props.valueLayoutStyle}}>
           {percentValue >= 0 && <span>{`${percentValue}%`}</span>}
           {percentValue < 0 && <span>{'-'}</span>}
         </div>
@@ -83,7 +82,9 @@ class PercentAnsweredCell extends Component {
 }
 
 PercentAnsweredCell.defaultProps = {
-  percentValue: -1
+  percentValue: -1,
+  mainLayoutStyle: styles.main,
+  valueLayoutStyle: {marginRight: 10}
 };
 
 export default PercentAnsweredCell;

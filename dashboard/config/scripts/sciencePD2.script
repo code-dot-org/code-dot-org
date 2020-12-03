@@ -1,35 +1,35 @@
-professional_learning_course ‘CS in Science Support'
-login_required 'true'
+professional_learning_course 'CS in Science Support'
+login_required true
 
-stage 'Welcome!'
+lesson 'Welcome!', display_name: 'Welcome!'
 level 'sciPD2b intro'
 level 'PDECS tour'
 level 'PD check your progress'
 level 'sciPD2 timeline'
 
-stage 'Review StarLogo Nova'
+lesson 'Review StarLogo Nova', display_name: 'Review StarLogo Nova'
 level 'sciPD2 StarLogoNova'
 level 'sciPD StarLogo intro 1'
 
-stage 'Creating Breeds in Starlogo Nova'
+lesson 'Creating Breeds in Starlogo Nova', display_name: 'Creating Breeds in Starlogo Nova'
 level 'sciPD2 breed2a'
 level 'sciPD2 breed2b'
 
-stage 'Revisiting Agent Movement'
+lesson 'Revisiting Agent Movement', display_name: 'Revisiting Agent Movement'
 level 'sciPD2 breed3a'
 level 'sciPD2 breed3b'
 
-stage 'Epidemic Model Extensions'
+lesson 'Epidemic Model Extensions', display_name: 'Epidemic Model Extensions'
 level 'sciPD2 breed4a'
 level 'sciPD2 breed4b'
 level 'sciPD2 breed4c'
 level 'sciPD2 breed4d'
 
-stage 'Thinking Ahead to Implementation'
+lesson 'Thinking Ahead to Implementation', display_name: 'Thinking Ahead to Implementation'
 level 'sciPD2 implement1'
 level 'sciPD2 implement2'
 
-stage 'Wrap-Up'
+lesson 'Wrap-Up', display_name: 'Wrap-Up'
 level 'sciPD2 thanks'
 level 'sciPD2b reflection'
 level 'sciPD2b end'

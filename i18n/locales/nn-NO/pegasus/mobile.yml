@@ -12,12 +12,12 @@
   csedweek_dates: "3.-9. desember, 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodetimen</a> nærmar seg. Til alle lærarar og arrangørar<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planlegg kodetimen din</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Er du en lærar i IT? Sjå andre CSEdWeek-ressursar</a>'
+  csedweek_banner_teachers_text: "Er du en lærar i IT? Sjå andre CSEdWeek-ressursar"
   n_have_learned_an_hoc: "<h1>Prøv ein</h1><h2>Kodetime</h2><h3># har prøvd</h3>"
   anybody_can_learn: "Alle kan læra."
   learn_now: "Lær no"
   petition_message: "Alle elevar på alle skular burde få høve til å lære koding"
   petition_sign_message: 'Om du er einig, skriv under med namnet ditt. Gå saman med # andre.'
-  petition_sign_message_support: 'Signér om du støttar oss, registrer namnet ditt og bli med på epostlista vår med # andre.'
   petition_join_others: 'Bli med # andre'
   name: "Namn"
   email: "E-post"
@@ -148,6 +148,9 @@
   thanks_for_submitting: "Takk for at du sendte inn!"
   if_you_enjoyed: "Hvis du likte opplæringa, kan du be venane dine om å prøve det også!  Vi vil at heile verda skal lære."
   personalize_certificate: "Tilpass diplomet"
+  print_certificates: "Skriv ut diplomar"
+  print_ice_art_from_frozen: "Print iskunst fra Frozen-opplæringen"
+  print_one_here_certificates: "Print en her."
   share_achievement: "Del det du har klart"
   beyond_hour_message: "Hald fram med dei <a href='http://studio.code.org'>andre kursa våre</a>, eller utforsk muligheitene for å <a href='/learn/beyond'>lære meir etter Kodetimen</a>."
   leaderboards_for_hoc: "Resultatliste for Kodetimen."
@@ -307,6 +310,7 @@
   homepage_action_text_signpetition: "Signér oppropet"
   homepage_action_text_wincelebritychat: "Vinn ein kjendis-chat"
   homepage_signpetition_dropdown: "Eg er einig &#x25BE;"
+  homepage_signpetition_dropdown_text: "Eg er einig"
   homepage_diversity_pledge: "Slå eit slag for mangfaldet"
   homepage_banner_text_prizes: 'Kodetimen kjem tilbake, 7.-13. desember. '
   homepage_banner_link_prizes: 'Bli med på det største læringsarrangementet i historia.'
@@ -1389,6 +1393,8 @@
   header_teacher_community: "Lærarforum"
   header_help_support: 'Hjelp og støtte'
   header_report_bug: "Rapporter feil"
+  header_legal_privacy: "Personvern"
+  header_legal_tos: "Vilkår"
   header_tutorials: "Rettleiingar"
   app_lab_documentation: "Dokumentasjon i App-lab"
   app_lab_tutorials: "Øvingar i App-lab"
@@ -1591,3 +1597,5 @@
   hoc2019_mc_mee_description2: "Få tilgang til gratisressursar som oppgåveplan, videoar, programmeringspensum og opplæring for lærarar."
   hoc2019_mc_more_coding_resources: "Fleire koderessursar"
   hoc2019_dance_previous_versions: "Ser du etter ein tidlegare versjon av Dansefest? \nKlikk her for å starte [Del 1](%{dance_2018_link}) og [Del 2](%{dance_extras_2018_link}) frå i fjor."
+  page_not_available_button: "Gå heim"
+  footer_powered_by_aws: "Drive av Amazon Web Services"

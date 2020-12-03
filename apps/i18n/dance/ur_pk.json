@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "آپ نے ایک کلید دبائی، لیکن آپ کے ڈانسر نے کوئی جواب نہیں دیا۔.",
   "danceFeedbackNeedTwoDancers": "آپ کو دو ڈانسرز بنانے کی ضرورت ہے۔.",
   "danceFeedbackOnlyOneDancerMoved": "آپ کے ڈانسرز میں سے صرف ایک ہی منتقل ہوا۔.",
-  "danceFeedbackNeedLead": "آپ کو <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> بلاک کے ساتھ ایک قیادتی ڈانسر تیار کرنے کی بھی ضرورت ہے۔.",
+  "danceFeedbackNeedLead": "آپ کو <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> بلاک کے ساتھ ایک قیادتی ڈانسر تیار کرنے کی بھی ضرورت ہے۔.",
   "danceFeedbackNeedBackup": "آپ کو <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> بلاک کے ساتھ بیک اپ ڈانسرز کا ایک گروپ بنانے کی ضرورت ہے۔.",
   "danceFeedbackSetSize": "میوزک شروع ہونے کے بعد آپ کو کم از کم ایک ڈانسر کا سائز تبدیل کرنے کی ضرورت ہے۔.",
   "measure": "پیمائش:"

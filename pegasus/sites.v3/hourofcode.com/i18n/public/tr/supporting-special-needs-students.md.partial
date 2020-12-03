@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: '"Hour of Code"da, özel eğitime ihtiyacı olan öğrencileri desteklemek'
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# "Hour of Code"da, engelli öğrencileri desteklemek
 
-Bilgisayar bilimi eğitimi haftasında herkes bir saatlik kodlama saati etkinliğini deneyebilir. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Bilgisayar bilimi eğitimi haftasında herkes bir saatlik kodlama saati etkinliğini deneyebilir. Otizmli, DEHB'li veya başka öğrenme farklılıkları olan öğrenciler genellikle programlamayı sevdiklerini keşfederler. Sınıfınızdaki tüm öğrencileri, denemeleri için teşvik edin! Sınıfınız için kurgulayacağınız bu deneyimi ödüllendirirken tamamlamak yerine katılmayı baz alın. Bir saat içinde kaç tane bulmaca veya görevi tamamladıkları fark etmeksizin, katılan herkese bir [sertifika]({{ supporting-special-needs-students/certificate }}) verebilirsiniz. [Çiftli programlama](https://www.youtube.com/watch?v=vgkahOzFH2Q), öğrencilere problemleri çözerken birlikte çalışmayı ve iş birliğini öğretmenin mükemmel bir yoludur.
 
-## Fit a variety of needs with unplugged and online tutorials
+## Çeşitli ihtiyaçları bağımsız ve çevrimiçi eğitim içerikleriyle karşılayın
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+Sınıfınızdaki her bir öğrenciye uygun aktiviteyi bulmak için, hem çevrimiçi seçenekleri hem de bilgisayar gerektirmeyen "bağımsız" seçenekleri göz önünde bulundurun. Bağımsız aktiviteler öğrencilerin bilgisayar bilimi kavramlarıyla çalışmalarına olanak sağlar. [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) isimli bulmaca, öğretmenlerin, öğrenci davranışları üzerinde kontrol sağlayabilmesi yoluyla, içeriği her bir öğrencinin yetenekleri doğrultusunda belirlemeleri için mükemmel bir fırsat sunar.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+Diğer öğrenciler için ise, doğrudan bilgisayarda çalışmak, bağımsız seçeneğe oranla daha fazla katılım sağlamalarına olanak tanıyabilir. Örneğin işitme yetersizliği olan öğrenciler, çevrimiçi eğitim içeriklerinde tam bir katılım gösterebilirler.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+Ayrıca, en kapsamlı seçenek, erişilebilir bir bilgisayar laboratuvarı veya dizüstü bilgisayarların olup olmamasına göre de değişecektir.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+Örneğin hareket kabiliyeti ya da el becerileri kısıtlı olan öğrencileriniz var mı? Öğrencilerinizin, okulunuzda teknolojiye erişimleri varsa öğrencilerinize veya teknoloji eğitimi veren öğretmene mevcut bilgisayarları ne şekilde kullandıklarını sorun.
 
-## Sensory Impairments
+## Duyu Yetersizlikleri
 
-### Students who are blind or low vision
+### Görme engelli öğrenciler
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. Bir Kodlama Saati'nden daha fazlasını istiyorsanız, Quorum ekibi ekstra müfredat ve araç da sunuyor.
+Ekran okuyucusu kullanan öğrenciler için [Yeni başlayanlar için Quorum eğitimi ](https://quorumlanguage.com/hourofcode/astro1.html) ya da [Deneyimli kullanıcılar için Quorum eğitimi](https://quorumlanguage.com/hourofcode/part1.html) başlamak için idealdir. Quorum, ekran okuyucusu kullanıcılarının erişebilmesini sağlamak üzere tasarlanan yorumlamalı bir dil olarak ortaya çıkmıştır. Zamanla herhangi bir kullanıcı için tasarlanan genel amaçlı bir programla dili haline geldi. Hour of Code eğitim içeriğinden tüm sınıfınızla faydalanabilirsiniz. Bir Kodlama Saati'nden daha fazlasını istiyorsanız, Quorum ekibi ekstra müfredat ve araç da sunuyor.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+Öğrencileriniz, teknoloji dersinde kullandıkları her şeyi Hour of Code'da da kullanabilirler. Bunlar, daha büyük monitör, yazılım ekranını büyütme, işletim sisteminde yüksek kontrast ayarları, sesle kontrol vb. olabilir.
 
-### Students who are deaf or hard of hearing
+### İşitme engelli öğrenciler
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+[Code.org eğitim içerikleri](https://studio.code.org/)nin tümü, sesli veya sessiz kullanılabilecek şekilde tasarlanmıştır. Tüm videolar alt yazılıdır. Bazı öğrenciler, daha yüksek ses düzeyi için kulaklıklarından da faydalanabilirler.
 
 ## Daha fazla bilgi edinin
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+Bilgisayar bilimi eğitimi ve özel eğitim ihtiyacı olan öğrenciler hakkında daha fazla bilgi edinmek için [bu çevrimiçi kitabı]({{ supporting-special-needs-students/book }}) okumanızı öneriyoruz.

@@ -6,21 +6,5 @@
   "spritelabFeedbackMoveFishLeftRight": "魚のスプライトは左か右へ動かなければなりません。ビヘイビアーを変えてみよう。",
   "spritelabFeedbackChangeBackgroundColor": "バックグラウンドを白以外の色に変えてください。",
   "spritelabFeedbackCreateTwoSprites": "かっきり二つのスプライトを作ってください。",
-  "spritelabFeedbackTwoSpritesWithCostumes": "スプライトたちは別のコスチュームを着なければなりません。",
-  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "",
-  "spritelabFeedbackClickSprite": "",
-  "spritelabFeedbackUseSpinningBehavior": "",
-  "spritelabFeedbackPinkAlienBehavior": "",
-  "spritelabFeedbackCreateThreeAliens": "",
-  "spritelabFeedbackAliensNotInLine": "",
-  "spritelabFeedbackYellowAlienBehavior": "",
-  "spritelabFeedbackNoAlienColor": "",
-  "spritelabFeedbackNeedAlienStopBehavior": "",
-  "spritelabFeedbackBlueAlienBehavior": "",
-  "spritelabFeedbackUseCostume": "",
-  "spritelabFeedbackThreeSpritesWithCostumes": "",
-  "spritelabFeedbackMoveUpNotDown": "",
-  "spritelabFeedbackRobotFasterThanRover": "",
-  "spritelabFeedbackDifferentStarRotation": "",
-  "spritelabFeedbackAstronautMoveToCorner": ""
+  "spritelabFeedbackTwoSpritesWithCostumes": "スプライトたちは別のコスチュームを着なければなりません。"
 }

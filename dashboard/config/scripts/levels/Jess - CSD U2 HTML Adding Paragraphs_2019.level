@@ -1,0 +1,28 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-03-17T19:25:46.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n\\n\\n </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "hide_share_and_remix": "true",
+    "long_instructions": "# Add Text to the Body\r\n\r\nWhen you start any Web Lab project, it will automatically add `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>` tags to your project. When you add content to your projects, you'll need to do it between the `<body>` and `</body>` tags because it should be part of the body of your webpage.\r\n\r\n# Do This\r\n\r\n* Write three separate sentences about any topic you like inside of the body tags of your web page.\r\n* Hit \"Refresh and Save\" if you don't see the changes in the preview area.\r\n* Compare your work with a neighbor. Make sure you're placing code in the same place.\r\n",
+    "project_template_level_name": "CSD U2 HTML Adding Paragraphs Template_2019",
+    "submittable": "false",
+    "encrypted_examples": "rtFix6eYQgG6zZUgDBirN7tR9CkPWdX5PZN1Z24ByL0FmgOaouTaPGhBaWDJ\nqXCfBHM6wIdsiy94XYmAkl3GxA==\n",
+    "parent_level_id": 15853,
+    "name_suffix": "_2019",
+    "map_reference": "/docs/csd-1718/html_tags/index.html",
+    "video_key": "csd_weblab_intro_2",
+    "encrypted": "false",
+    "mini_rubric": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-12 23:30:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-20 20:00:32 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-24 16:27:55 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-07 18:04:05 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-07 18:04:48 +0000\",\"changed\":[\"encrypted_examples\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-24 19:32:42 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2020-03-17 19:26:34 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

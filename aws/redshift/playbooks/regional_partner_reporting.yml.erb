@@ -7,33 +7,7 @@ targets:
     username:  dev
     password:  <%= CDO.redshift_password %>
 steps:
-  - name: regional-partner-step-1
-    queries:
-      - name: quarterly_workshop_attendance
-        file: tables/quarterly_workshop_attendance.sql
-      - name: csf_workshop_attendance
-        file: tables/csf_workshop_attendance.sql
-      - name: student-activity-csf
-        file: tables/student_activity_csf.sql
-      - name: student-activity-csp-csd
-        file: tables/student_activity_csp_csd.sql
-      - name: teacher-most-progress-csf
-        file: tables/teacher_most_progress_csf.sql
-      - name: teacher-most-progress-csp-csd
-        file: tables/teacher_most_progress_csp_csd.sql
-  - name: regional-partner-step-2
-    queries:
-      - name: regional-partner-stats-csf
-        file: tables/regional_partner_stats_csf.sql
-      - name: regional-partner-stats-csp-csd
-        file: tables/regional_partner_stats_csp_csd.sql
   - name: school-and-state-stats
     queries:
-      - name: city-year-stats
-        file: tables/outreach_stats_by_year.sql
       - name: school-level-stats
-        file: tables/school_activity_stats.sql
-  - name: regional-partner-roster
-    queries:
-       - name: roster
-         file: tables/regional_partner_stats_for_roster.sql
+        file: tables/school_activity_stats.sql	

@@ -20,8 +20,14 @@
 # (which we will no longer hold going forward).  Associated routes and views have been removed.
 # Archival and removal of this model is tracked in https://codedotorg.atlassian.net/browse/PLC-341
 #
-class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
+class Pd::FacilitatorProgramRegistration < ApplicationRecord
   include Pd::ProgramRegistrationForm
+
+  TEACHERCON_DECLINE = 'No - I\'m no longer interested'.freeze
+  TEACHERCON_ALTERNATE = 'No - but I need to attend a different date.'.freeze
+  TRAINING_DECLINE = 'No'.freeze
+  TRAINING_ALTERNATE = 'I want to participate in the program, but I\'m no longer able to attend these dates.'.freeze
+  TRAINING_ALTERNATE_DECLINE = 'I am no longer interested in the Code.org Facilitator Development Program.'.freeze
 
   def self.required_fields
     [
@@ -47,12 +53,6 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
       :subjects_taught,
     ].freeze
   end
-
-  TEACHERCON_DECLINE = 'No - I\'m no longer interested'.freeze
-  TEACHERCON_ALTERNATE = 'No - but I need to attend a different date.'.freeze
-  TRAINING_DECLINE = 'No'.freeze
-  TRAINING_ALTERNATE = 'I want to participate in the program, but I\'m no longer able to attend these dates.'.freeze
-  TRAINING_ALTERNATE_DECLINE = 'I am no longer interested in the Code.org Facilitator Development Program.'.freeze
 
   def self.options
     super.merge(

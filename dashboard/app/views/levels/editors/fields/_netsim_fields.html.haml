@@ -1,0 +1,344 @@
+%h2 NetSim settings
+
+.field
+  = f.label :skin
+  = f.select :skin, options_for_select(@level.class.skins, @level.skin)
+
+%h1.control-legend{data: {toggle: "collapse", target: "#lobby"}}
+  Lobby configuration
+
+#lobby.in.collapse
+  %table.checkboxes
+    %tr
+      %td= boolean_check_box f, :show_clients_in_lobby
+      %td= f.label :show_clients_in_lobby, 'Show Clients in Lobby'
+      %td Whether client nodes should appear in the lobby list at all.
+    %tr
+      %td= boolean_check_box f, :show_routers_in_lobby
+      %td= f.label :show_routers_in_lobby, 'Show Routers/Rooms in Lobby'
+      %td
+        Whether router nodes (or broadcast rooms) should appear in the
+        lobby list at all.
+    %tr
+      %td= boolean_check_box f, :can_connect_to_clients
+      %td= f.label :can_connect_to_clients, 'Can connect to clients'
+      %td
+        Whether the student can connect directly to other students' client
+        nodes.
+    %tr
+      %td= boolean_check_box f, :can_connect_to_routers
+      %td= f.label :can_connect_to_routers, 'Can connect to routers/rooms'
+      %td Whether the student can connect to router nodes (or broadcast rooms).
+    %tr
+      %td= boolean_check_box f, :show_add_router_button
+      %td= f.label :show_add_router_button, 'Show "Add Router/Room" Button'
+      %td
+        Whether the "Add Router" (or "Add Room") button should be available
+        to students.
+    %tr
+      %td= boolean_check_box f, :show_log_browser_button
+      %td= f.label :show_log_browser_button, 'Show "Log Browser" Button in Lobby'
+      %td
+        Whether the Log Browser is available from the lobby.
+        <br />Opening the browser from the lobby shows logs from all routers.
+        <br />Note: The button will <em>always</em> show up on the Router tab
+        (if present) regardless of this setting.
+
+%h1.control-legend{data: {toggle: "collapse", target: "#simulation"}}
+  Simulation Configuration
+
+#simulation.in.collapse
+  .field
+    = f.label :message_granularity, 'Message Granularity'
+    %p
+      Whether the simulator puts a single bit into storage at a time, or a whole
+      packet. Should use 'bits' for variant 1 (levels about the coordination
+      problem), and 'packets' for levels where the coordination problem is
+      abstracted away.
+    = f.select :message_granularity, options_for_select(@level.class.message_granularity_options, @level.message_granularity)
+    %p
+      Note: Using "packet" granularity just means a whole message is sent when
+      you click Send.  It does not necessarily:
+      %ul
+        %li Surface the concept of a "packet" to the student
+        %li Limit packet size (see "Default packet size")
+        %li Let the student compose multiple packets (see "Show 'Add Packet' button")
+        %li Use headers or packet counts (see "Client packet header format")
+  .field
+    %table.checkboxes
+      %tr
+        %td= boolean_check_box f, :automatic_receive
+        %td{style: "white-space: nowrap"}= f.label :automatic_receive, 'Auto-receive'
+        %td
+          Whether the local node will watch the message table and automatically
+          pick up messages directed to itself, dumping them into the message log.
+          If false, some other method must be used for receiving data (like a
+          manual 'receive' button)
+      %tr
+        %td= boolean_check_box f, :broadcast_mode
+        %td{style: "white-space: nowrap"}= f.label :broadcast_mode, 'Broadcast Mode'
+        %td
+          Turns routers into "rooms" where any packets sent will go to everyone
+          present in the room. (Recommended to hide the Router tab when using this)
+      %tr
+        %td= boolean_check_box f, :connected_routers
+        %td{style: "white-space: nowrap"}= f.label :connected_routers, 'Connected routers'
+        %td
+          When unchecked, each router or room exists in isolation and will have
+          no contact with other routers or rooms.  When checked, it is possible
+          for messages to travel between routers, connecting the whole shard.
+          Messages with a toAddress not found in the local subnet will be sent
+          toward the first matching node found elsewhere on the shard.
+  .field
+    = f.label :minimum_extra_hops, 'Minimum extra hops'
+    %p
+      Fewest non-destination routers an inter-router message should try to visit
+      before going to its destination router.  Number of hops can be lower if
+      network conditions don't allow it.
+    = f.number_field :minimum_extra_hops
+  .field
+    = f.label :maximum_extra_hops, 'Maximum extra hops'
+    %p
+      Most non-destination routers an inter-router message should try to visit
+      before going to its destination router.
+    = f.number_field :maximum_extra_hops
+
+%h1.control-legend{data: {toggle: "collapse", target: "#packet"}}
+  Packet Headers
+
+#packet.in.collapse
+  .field
+    = f.label :address_format, 'Address format'
+    %p
+      Specify how many bits wide an address is within the simulation and how it
+      should be divided up into a hierarchy. This format will be applied to any
+      "fromAddress" or "toAddress" header fields in the packet specification.
+      Default is "4".
+    = f.text_field :address_format, placeholder: 'e.g. 8.8.8.8'
+    %p
+      Format resembles IPv4 dot-decimal notation, but the numbers specify the
+      number of bits for each section.
+    %p
+      Examples:
+      <br/>"<tt>8.8</tt>" - 16-bit address, represented as two 8-bit integers.
+      <br/>"<tt>4</tt>" - 4 bit address represented as one 4-bit integer.
+      <br/>"<tt>8.4</tt>" - 12-bit address, represented as an 8-bit integer
+      followed by a 4-bit integer
+    %p
+      Routers will assign addresses matching the configured format.  When the
+      address has more than one part, the router will include its own ID in
+      the second-to-last part of the address.
+      For example, a two-part address might be "14.4" for a client connected
+      to Router #14.
+  .field
+    = f.label :packet_count_bit_width, 'Packet info field bit-width'
+    %p
+      How many bits are used for the 'packetIndex' or 'packetCount' header types.
+      Default is 4.
+    = f.number_field :packet_count_bit_width
+  .field
+    = f.label :router_expects_packet_header, 'Router expects packet header'
+    %p
+      The header format the router uses to parse incoming packets and figure out
+      where to route them.
+    = f.text_area :router_expects_packet_header, placeholder: 'Router packet header format', rows: 4
+    :javascript
+        levelbuilder.initializeCodeMirror('level_router_expects_packet_header', 'javascript');
+    %p
+      Packet headers can be customized to different header column combinations,
+      orderings, and sizes with a JSON spec.  This can safely be left empty
+      <tt>[]</tt> in "Broadcast Mode."
+    %p
+      Example:
+      <tt>["toAddress", "fromAddress"]</tt>
+    %p Valid header keys are "toAddress", "fromAddress", "packetIndex" and "packetCount"
+    %p
+      These fields are also backwards-compatible with the old key/bits format,
+      but the "bits" part will be ignored because header column widths are now
+      defined using the "Address format" and "Packet info field bit-width",
+      above.
+  .field
+    = f.label :client_initial_packet_header, 'Client initial packet header'
+    %p
+      The header format used by the local client node when generating/parsing
+      packets, which affects the layout of the send panel and log panels.
+      Usually the same as the router format, unless the lesson asks students to
+      manually compose their header.
+    = f.text_area :client_initial_packet_header, placeholder: 'Client packet header format', rows: 4
+    :javascript
+        levelbuilder.initializeCodeMirror('level_client_initial_packet_header', 'javascript');
+
+%h1.control-legend{data: {toggle: "collapse", target: "#network"}}
+  Network Visualization
+
+#network.in.collapse
+  .field
+    %table.checkboxes
+      %tr
+        %td= boolean_check_box f, :show_hostname_in_graph
+        %td= f.label :show_hostname_in_graph, 'Show hostname in graph'
+        %td
+          If checked, show the user's generated hostname (e.g. "brad4") instead
+          of their usual display name (e.g. "Brad")
+
+%h1.control-legend{data: {toggle: "collapse", target: "#send-message"}}
+  Send a Message Panel
+
+#send-message.in.collapse
+  .field
+    %table.checkboxes
+      %tr
+        %td= boolean_check_box f, :show_add_packet_button
+        %td= f.label :show_add_packet_button, 'Show "Add Packet" button'
+        %td Whether the "Add Packet" button should appear in the footer of the send widget
+      %tr
+        %td= boolean_check_box f, :show_packet_size_control
+        %td= f.label :show_packet_size_control, 'Show packet size control'
+        %td Whether the packet size slider should appear in the footer of the send widget
+  .field
+    = f.label :default_packet_size_limit, 'Default packet size'
+    %p
+      The initial maximum packet size.  If the control is not shown, this will be
+      the fixed packet size for the level.  Should be a positive number, or "Infinity"
+    = f.text_field :default_packet_size_limit, placeholder: 'Default packet size'
+
+%h1.control-legend{data: {toggle: "collapse", target: "#tabs"}}
+  Tabs
+
+#tabs.in.collapse
+  .field
+    = f.label :show_tabs, 'Visible tabs'
+    %p
+      An array of tabs to appear beneath the network visualization.  Does not
+      determine tab order; tabs always appear in the order "Instructions,
+      My Device, Router, DNS." Valid tab names are "instructions", "my_device",
+      "router" and "dns".  Example: <tt>["my_device", "router"]</tt>
+    = f.text_area :show_tabs, placeholder: 'Which tabs to show?', rows: 4
+    :javascript
+        levelbuilder.initializeCodeMirror('level_show_tabs', 'javascript');
+  .field
+    = f.label :default_tab_index, 'Default tab index'
+    %p
+      The zero-based index of the tab that should be active by default, which
+      depends on which tabs you have enabled.
+    = f.number_field :default_tab_index
+
+%h1.control-legend{data: {toggle: "collapse", target: "#my-device"}}
+  My Device Tab
+
+#my-device.in.collapse
+  .field
+    = f.label :show_encoding_controls, 'Show which encoding controls?'
+    %p
+      An array of encoding types ("ascii", "binary", etc.) which should have
+      visible checkbox controls on the "My Device" tab.  Valid encoding names are
+      "a_and_b", "binary", "hexadecimal", "decimal" and "ascii".
+      Example: <tt>["a_and_b", "binary", "ascii"]</tt>
+    = f.text_area :show_encoding_controls, placeholder: 'Which encodings can the student control?', rows: 4
+    :javascript
+        levelbuilder.initializeCodeMirror('level_show_encoding_controls', 'javascript');
+  .field
+    = f.label :default_enabled_encodings, 'Default enabled encodings'
+    %p
+      An array of encoding types ("ascii", "binary", etc.) to enable on page load.
+      An encoding enabled here but omitted from the visible controls becomes
+      mandatory and cannot be disabled by the student.  Valid encoding names are
+      "a_and_b", "binary", "hexadecimal", "decimal" and "ascii".
+      Example: <tt>["a_and_b", "binary", "ascii"]</tt>
+    = f.text_area :default_enabled_encodings, placeholder: 'Which encodings are enabled by default?', rows: 4
+    :javascript
+        levelbuilder.initializeCodeMirror('level_default_enabled_encodings', 'javascript');
+  .field
+    %table.checkboxes
+      %tr
+        %td= boolean_check_box f, :show_metronome
+        %td= f.label :show_metronome, 'Show metronome'
+        %td Whether the visual metronome is visible on the "My Device" tab.
+      %tr
+        %td= boolean_check_box f, :show_pulse_rate_slider
+        %td= f.label :show_pulse_rate_slider, 'Show pulse rate control'
+        %td If checked, show a bitrate control that uses "seconds per pulse."
+      %tr
+        %td= boolean_check_box f, :show_bit_rate_control
+        %td= f.label :show_bit_rate_control, 'Show bit rate control'
+        %td If checked, show a bitrate control that uses "bits per second."
+      %tr
+        %td= boolean_check_box f, :lock_bit_rate_control
+        %td= f.label :lock_bit_rate_control, 'Lock bit rate control'
+        %td Whether the bit rate slider can be manipulated by the student (does not affect pulse rate slider)
+      %tr
+        %td= boolean_check_box f, :show_chunk_size_control
+        %td= f.label :show_chunk_size_control, 'Show chunk size control'
+        %td Whether the chunk size slider should be displayed on the "My Device" tab.
+      %tr
+        %td= boolean_check_box f, :lock_chunk_size_control
+        %td= f.label :lock_chunk_size_control, 'Lock chunk size control'
+        %td Whether the chunk size slider can be manipulated by the student
+  .field
+    = f.label :default_bit_rate_bits_per_second
+    %p
+      Default local device bit rate on level load.  Also sets the pulse rate for
+      levels with the metronome (still expressed here in bits per second).
+      The metronome will appear paused if an "Infinity" bitrate is used.
+    = f.text_field :default_bit_rate_bits_per_second, placeholder: 'Bit rate in bits per second, e.g. "1024" or "Infinity".'
+  .field
+    = f.label :default_chunk_size_bits
+    %p
+      Default chunk size on level load.  Chunk size affects how binary gets
+      formatted and how it is interpreted to decimal and ASCII.
+    = f.text_field :default_chunk_size_bits, placeholder: 'Chunk size in bits, e.g. "8".'
+
+%h1.control-legend{data: {toggle: "collapse", target: "#router"}}
+  Router Tab
+
+#router.in.collapse
+  .field
+    %table.checkboxes
+      %tr
+        %td= boolean_check_box f, :show_router_bandwidth_control
+        %td= f.label :show_router_bandwidth_control, 'Show router bandwidth control'
+        %td Whether the student can change the max bandwidth of the router in the simulation.
+      %tr
+        %td= boolean_check_box f, :show_router_memory_control
+        %td= f.label :show_router_memory_control, 'Show router memory control'
+        %td Whether the student can change the maximum queue memory of the router in the simulation.
+  .field
+    = f.label :default_router_bandwidth
+    %p
+      The initial maximum bandwidth of the router, given in bits per second.
+      The control on the router tab snaps to powers of two, so it's probably
+      ideal to give a power of two here.  Can also use "Infinity".
+    = f.text_field :default_router_bandwidth, placeholder: 'Bandwidth in bits per second, e.g. "1024" or "Infinity".'
+  .field
+    = f.label :default_router_memory
+    %p
+      The initial maximum queue memory of the router, given in bits.  Once the
+      total size of messages queued for the router exceeds this value, incoming
+      packets will be dropped.  The control on the router tab snaps to powers of
+      two, so it's probably ideal to give a power of two here.
+      Can also use "Infinity".
+    = f.text_field :default_router_memory, placeholder: 'Memory in bits, e.g. "1024" or "Infinity".'
+  .field
+    = f.label :default_random_drop_chance, 'Default random drop chance'
+    %p
+      Odds that a packet that would otherwise be successfully routed will instead
+      be dropped by the router for no reason, to simulate unreliable network
+      conditions.  Given as a value in the range (0-1) where 0 indicates 0% drop
+      rate (fully reliable) and 1 indicates 100% drop rate (routing will not work
+      at all!)
+    = f.number_field :default_random_drop_chance, :min => 0, :max => 1, :step => 0.01
+
+%h1.control-legend{data: {toggle: "collapse", target: "#dns"}}
+  DNS Tab
+
+#dns.in.collapse
+  .field
+    %table.checkboxes
+      %tr
+        %td= boolean_check_box f, :show_dns_mode_control
+        %td= f.label :show_dns_mode_control, 'Show DNS mode control'
+        %td Whether the student can change the DNS mode of the simulator.
+  .field
+    = f.label :default_dns_mode, 'Default DNS Mode'
+    %p Which DNS mode to use initially, regardless of whether the mode control is displayed
+    = f.select :default_dns_mode, options_for_select(@level.class.dns_modes, @level.default_dns_mode)

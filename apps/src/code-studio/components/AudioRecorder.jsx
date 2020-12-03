@@ -168,6 +168,7 @@ export default class AudioRecorder extends React.Component {
               </div>
             )}
             <Button
+              __useDeprecatedTag
               onClick={this.toggleRecord}
               id="start-stop-record"
               style={assetButtonStyles.button}
@@ -178,6 +179,7 @@ export default class AudioRecorder extends React.Component {
               disabled={this.state.audioName.length === 0 || this.state.loading}
             />
             <Button
+              __useDeprecatedTag
               onClick={this.onCancel}
               id="cancel-record"
               style={assetButtonStyles.button}

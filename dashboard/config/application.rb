@@ -26,15 +26,15 @@ module Dashboard
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
-      require 'cdo/rack/whitelist'
+      require 'cdo/rack/allowlist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
-      config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
+      config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
 
       require 'rack/cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Cache, ignore_headers: []
 
-      config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
+      config.middleware.insert_after Rack::Cache, Rack::Allowlist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
     end
 
@@ -84,7 +84,7 @@ module Dashboard
     # config.time_zone = 'Central Time (US & Canada)'
 
     # By default, config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = ['en-US']

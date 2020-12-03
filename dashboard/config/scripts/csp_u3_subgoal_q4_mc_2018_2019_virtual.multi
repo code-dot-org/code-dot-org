@@ -1,0 +1,39 @@
+name 'csp_U3_subgoal_q4_mc_2018_2019_virtual'
+wrong 'Calling the parameters of a function  
+ ![](https://images.code.org/0f141813c72d90d60db0cccede38c5c6-image-1506463453209.png)'
+right 'Defining the parameters of a function  
+ ![](https://images.code.org/ed7e88443a6c04022684aacf0c2a0692-image-1506699220170.png)'
+wrong 'Moving the turtle around the screen  
+ ![](https://images.code.org/cc173669b9c299ead986cfd3519e9360-image-1506463402006.png)'
+wrong 'Orienting the direction of the turtle   
+ ![](https://images.code.org/1d9d2d6a43abcb2150686ae2ccddf3a6-image-1506463416525.png)'
+wrong 'Setting pen properties   
+ ![](https://images.code.org/47185975f515e79e8712bd19235d8442-image-1506463438591.png)' 
+wrong 'None of the above'
+
+
+markdown <<MARKDOWN
+Consider these various uses of `randomNumber`.  Each answer describes the use and shows a code example. Which one of the following is NOT a valid use of `randomNumber`
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The answer gets at the difference between defining a function's parameters and calling that function.  Since `randomNumber` returns a value (a number) it can be used in places where you would otherwise provide a numeric value.
+
+For example, you don't define a function with a numeric parameter.  This doesn't make sense:
+
+`function drawShape(50){ ... }` <-- don't do this.
+
+Instead you *define* the function with a named parameter like so:
+
+`function drawShape(size){ ... }`  
+
+and then *call* it, supplying a value for that parameter like so:
+
+`drawShape(50);` 
+
+In the case of this question we're using randomNumber in place of that value for the function *call*.
+
+`drawShape( randomNumber(25,75) );`
+
+MARKDOWN

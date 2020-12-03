@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T17:04:36.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "# Prediction - keyDown()\r\n\r\nThe `keyDown()` block is the first of a new set of blocks that will let us get input from the user. This is the first step on our road to actually making games! See if you can predict how the `keyDown()` block works. You will **not write any code**.\r\n\r\n# Do This\r\n* Read the program carefully.\r\n* **Make a prediction about how the code will run** and write it in the box below. Be specific!\r\n* Run the program.\r\n* While the program is running, press the space bar on your keyboard.\r\n* Were you correct? Were you surprised?",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16091,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-22 19:01:20 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-20 22:22:52 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-03-15 16:58:27 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-18 20:13:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

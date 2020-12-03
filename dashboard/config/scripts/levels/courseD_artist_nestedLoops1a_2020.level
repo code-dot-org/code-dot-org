@@ -1,0 +1,276 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:54:22.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Now loop the triangle 6 times. ",
+    "x": "200",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "24",
+    "slider_speed": ".6",
+    "free_play": "false",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "long_instructions": "Now loop the triangle 6 times. \r\n\r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next. ",
+    "examples_required": "false",
+    "never_autoplay_video": "false",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to draw a total of 6 triangles. After finishing each triangle, rotate 60 degrees and move to start the next triangle.\\n\\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)\",\"hint_id\":\"courseD_artist_nestedLoops1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/474568e40ebe2dd4779b27eda50bd122/courseD_artist_nestedLoops1a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you create your triangle with a loop, the artist should be facing the same way as they started. This will make the 60 degree turns a lot easier.\",\"hint_id\":\"courseD_artist_nestedLoops1a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/edb2c01cded6160eabf1262b0a4c7990/courseD_artist_nestedLoops1a.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you want colors, use the `set color` block in your code. You don't have to match the colors in the template image.\",\"hint_id\":\"courseD_artist_nestedLoops1a_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/75743025bab125c32a2dc8e250f5c154/courseD_artist_nestedLoops1a.mp3\"}]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_artist_nestedLoops1a_1\",\r\n  \"callout_text\": \"You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 15086,
+    "name_suffix": "_2020",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 21:39:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-11 19:44:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 19:27:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:21:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-31 23:46:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">60</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">120</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random" id="callMe"/>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true">
+              <value name="COLOUR">
+                <block type="colour_random"/>
+              </value>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">120</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">60</title>
+                      <next>
+                        <block type="draw_colour" inline="true">
+                          <value name="COLOUR">
+                            <block type="colour_random"/>
+                          </value>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">3</title>
+                              <statement name="DO">
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">100</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE" config="45,60,90,120,180">120</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE" config="45,60,90,120,180">60</title>
+                                  <next>
+                                    <block type="draw_colour" inline="true">
+                                      <value name="COLOUR">
+                                        <block type="colour_random"/>
+                                      </value>
+                                      <next>
+                                        <block type="controls_repeat">
+                                          <title name="TIMES">3</title>
+                                          <statement name="DO">
+                                            <block type="draw_move_by_constant">
+                                              <title name="DIR">moveForward</title>
+                                              <title name="VALUE">100</title>
+                                              <next>
+                                                <block type="draw_turn_by_constant_dropdown">
+                                                  <title name="DIR">turnRight</title>
+                                                  <title name="VALUE" config="45,60,90,120,180">120</title>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="draw_turn_by_constant_dropdown">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE" config="45,60,90,120,180">60</title>
+                                              <next>
+                                                <block type="draw_colour" inline="true">
+                                                  <value name="COLOUR">
+                                                    <block type="colour_random"/>
+                                                  </value>
+                                                  <next>
+                                                    <block type="controls_repeat">
+                                                      <title name="TIMES">3</title>
+                                                      <statement name="DO">
+                                                        <block type="draw_move_by_constant">
+                                                          <title name="DIR">moveForward</title>
+                                                          <title name="VALUE">100</title>
+                                                          <next>
+                                                            <block type="draw_turn_by_constant_dropdown">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE" config="45,60,90,120,180">120</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </statement>
+                                                      <next>
+                                                        <block type="draw_turn_by_constant_dropdown">
+                                                          <title name="DIR">turnRight</title>
+                                                          <title name="VALUE" config="45,60,90,120,180">60</title>
+                                                          <next>
+                                                            <block type="draw_colour" inline="true">
+                                                            <value name="COLOUR">
+                                                            <block type="colour_random"/>
+                                                            </value>
+                                                            <next>
+                                                            <block type="controls_repeat">
+                                                            <title name="TIMES">3</title>
+                                                            <statement name="DO">
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">100</title>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant_dropdown">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE" config="45,60,90,120,180">120</title>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant_dropdown">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE" config="45,60,90,120,180">60</title>
+                                                            <next>
+                                                            <block type="draw_colour" inline="true">
+                                                            <value name="COLOUR">
+                                                            <block type="colour_random"/>
+                                                            </value>
+                                                            <next>
+                                                            <block type="controls_repeat">
+                                                            <title name="TIMES">3</title>
+                                                            <statement name="DO">
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">100</title>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant_dropdown">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE" config="45,60,90,120,180">120</title>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

@@ -2,24 +2,22 @@
 # Your crowdin's credentials
 #
 "project_identifier" : "hour-of-code"
-"base_path" : "../../i18n/locales/source/hourofcode"
+"base_path" : "../../i18n/locales"
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
 "api_key" : ""
-
-"preserve_hierarchy": true
 
 #
 # Files configuration
 #
 files: [
   {
-    "source": "/en.yml",
+    "source": "/source/hourofcode/en.yml",
     "translation": "/%language%/hourofcode/%original_file_name%",
     "update_option": "update_as_unapproved"
   }, {
-    "source": "/**/*.md",
+    "source": "/source/hourofcode/**/*.md",
     "translation": "/%language%/hourofcode/**/%file_name%.md",
     "update_option": "update_as_unapproved"
   }

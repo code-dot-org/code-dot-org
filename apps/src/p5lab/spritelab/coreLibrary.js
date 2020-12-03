@@ -2,6 +2,7 @@ var spriteId = 0;
 var nativeSpriteMap = {};
 var inputEvents = [];
 var behaviors = [];
+var userInputEventCallbacks = {};
 
 export var background;
 export var title = '';
@@ -14,6 +15,7 @@ export function reset() {
   behaviors = [];
   background = 'white';
   title = subtitle = '';
+  userInputEventCallbacks = {};
 }
 
 /**
@@ -23,6 +25,9 @@ export function reset() {
  * the specified id/name, or a list containing all sprites with the specified animation.
  */
 export function getSpriteArray(spriteArg) {
+  if (!spriteArg) {
+    return [];
+  }
   if (spriteArg.hasOwnProperty('id')) {
     let sprite = nativeSpriteMap[spriteArg.id];
     if (sprite) {
@@ -38,9 +43,13 @@ export function getSpriteArray(spriteArg) {
     }
   }
   if (spriteArg.costume) {
-    return Object.values(nativeSpriteMap).filter(
-      sprite => sprite.getAnimationLabel() === spriteArg.costume
-    );
+    if (spriteArg.costume === 'all') {
+      return Object.values(nativeSpriteMap);
+    } else {
+      return Object.values(nativeSpriteMap).filter(
+        sprite => sprite.getAnimationLabel() === spriteArg.costume
+      );
+    }
   }
   return [];
 }
@@ -142,8 +151,70 @@ export function deleteSprite(spriteId) {
   delete nativeSpriteMap[spriteId];
 }
 
+export function registerPrompt(promptText, variableName, setterCallback) {
+  if (!userInputEventCallbacks[variableName]) {
+    userInputEventCallbacks[variableName] = {
+      setterCallbacks: [],
+      userCallbacks: []
+    };
+  }
+  userInputEventCallbacks[variableName].setterCallbacks.push(setterCallback);
+}
+
+export function registerPromptAnswerCallback(variableName, userCallback) {
+  if (!userInputEventCallbacks[variableName]) {
+    userInputEventCallbacks[variableName] = {
+      setterCallbacks: [],
+      userCallbacks: []
+    };
+  }
+  userInputEventCallbacks[variableName].userCallbacks.push(userCallback);
+}
+
+export function onPromptAnswer(variableName, userInput) {
+  const callbacks = userInputEventCallbacks[variableName];
+  if (callbacks) {
+    // Make sure to call the setter callback to set the variable
+    // before the user callback, which may rely on the variable's new value
+    callbacks.setterCallbacks.forEach(callback => {
+      callback(userInput);
+    });
+    callbacks.userCallbacks.forEach(callback => {
+      callback();
+    });
+  }
+}
+
 export function addEvent(type, args, callback) {
   inputEvents.push({type: type, args: args, callback: callback});
+}
+
+function atTimeEvent(inputEvent, p5Inst) {
+  if (inputEvent.args.unit === 'seconds') {
+    const previousTime = inputEvent.previousTime || 0;
+    inputEvent.previousTime = p5Inst.World.seconds;
+    // There are many ticks per second, but we only want to fire the event once (on the first tick where
+    // World.seconds matches the event argument)
+    if (
+      p5Inst.World.seconds === inputEvent.args.n &&
+      previousTime !== inputEvent.args.n
+    ) {
+      // Call callback with no extra args
+      return [{}];
+    }
+  } else if (inputEvent.args.unit === 'frames') {
+    if (p5Inst.frameCount === inputEvent.args.n) {
+      // Call callback with no extra args
+      return [{}];
+    }
+  }
+  // Don't call callback
+  return [];
+}
+
+function repeatForeverEvent(inputEvent, p5Inst) {
+  // No condition to check, just always call callback with no extra args
+  return [{}];
 }
 
 function whenPressEvent(inputEvent, p5Inst) {
@@ -198,7 +269,10 @@ function whenTouchEvent(inputEvent) {
         if (!firedOnce) {
           // Sprites are overlapping, and we haven't fired yet for this collision,
           // so we should fire the callback
-          callbackArgList.push({sprite: sprite.id, target: target.id});
+          callbackArgList.push({
+            subjectSprite: sprite.id,
+            objectSprite: target.id
+          });
           firedOnce = true;
         }
       } else {
@@ -221,7 +295,10 @@ function whileTouchEvent(inputEvent) {
   sprites.forEach(sprite => {
     targets.forEach(target => {
       if (sprite.overlap(target)) {
-        callbackArgList.push({sprite: sprite.id, target: target.id});
+        callbackArgList.push({
+          subjectSprite: sprite.id,
+          objectSprite: target.id
+        });
       }
     });
   });
@@ -234,7 +311,7 @@ function whenClickEvent(inputEvent, p5Inst) {
     let sprites = getSpriteArray(inputEvent.args.sprite);
     sprites.forEach(sprite => {
       if (p5Inst.mouseIsOver(sprite)) {
-        callbackArgList.push({sprite: sprite.id});
+        callbackArgList.push({clickedSprite: sprite.id});
       }
     });
   }
@@ -246,14 +323,27 @@ function whileClickEvent(inputEvent, p5Inst) {
   let sprites = getSpriteArray(inputEvent.args.sprite);
   sprites.forEach(sprite => {
     if (p5Inst.mousePressedOver(sprite)) {
-      callbackArgList.push({sprite: sprite.id});
+      callbackArgList.push({clickedSprite: sprite.id});
     }
   });
   return callbackArgList;
 }
 
-function checkEvent(inputEvent, p5Inst) {
+/**
+ * @param {Object} inputEvent
+ * @param p5Inst - the running P5 instance
+ * Checks whether the condition of the event is met, and if so, returns the arguments to pass to the user's
+ * callback function. An event can trigger multiple invocations of the callback in a single tick of the
+ * draw loop, so this will return an array of callback arguments.
+ * @return {Array.<Object>} Each element of this array gives the arguments that will be passed
+ * to the event callback.
+ */
+function getCallbackArgListForEvent(inputEvent, p5Inst) {
   switch (inputEvent.type) {
+    case 'atTime':
+      return atTimeEvent(inputEvent, p5Inst);
+    case 'repeatForever':
+      return repeatForeverEvent(inputEvent, p5Inst);
     case 'whenpress':
       return whenPressEvent(inputEvent, p5Inst);
     case 'whilepress':
@@ -271,7 +361,7 @@ function checkEvent(inputEvent, p5Inst) {
 
 export function runEvents(p5Inst) {
   inputEvents.forEach(inputEvent => {
-    let callbackArgList = checkEvent(inputEvent, p5Inst);
+    let callbackArgList = getCallbackArgListForEvent(inputEvent, p5Inst);
     callbackArgList.forEach(args => {
       inputEvent.callback(args);
     });

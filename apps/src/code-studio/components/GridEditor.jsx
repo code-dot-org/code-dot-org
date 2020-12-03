@@ -191,6 +191,25 @@ export default class GridEditor extends React.Component {
     });
   };
 
+  /**
+   * Compute the number of unique map configurations, which is the product of the number
+   * of options for each Cell.
+   */
+  computeNumMaps = grid => {
+    if (this.props.skin === 'playlab' || this.props.skin === 'starwarsgrid') {
+      // Variable map configurations are not supported in these skins.
+      return 1;
+    }
+    let numMaps = 1;
+    grid.forEach(row => {
+      row.forEach(cell => {
+        let numPossibilitiesForCell = cell.getPossibleGridAssets().length;
+        numMaps *= numPossibilitiesForCell;
+      });
+    });
+    return numMaps;
+  };
+
   render() {
     const cells = this.state.cells;
 
@@ -229,6 +248,8 @@ export default class GridEditor extends React.Component {
       }
     }
 
+    const numMaps = this.computeNumMaps(cells);
+
     return (
       <div className="row">
         <div className="span5">
@@ -240,6 +261,11 @@ export default class GridEditor extends React.Component {
             setCopiedCells={this.setCopiedCells}
             onSelectionChange={this.changeSelection}
           />
+          {numMaps > 1 && (
+            <p>{`This configuration will generate ${numMaps} maps.
+            We run student code against each possible map, so if this number is large,
+            performance will suffer.`}</p>
+          )}
           {selectedCellJson}
           {pasteButton}
         </div>

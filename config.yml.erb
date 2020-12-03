@@ -153,7 +153,6 @@ dashboard_honeybadger_api_key: !Secret
 pegasus_honeybadger_api_key:   !Secret
 
 # Zendesk
-zendesk_secret:    !Secret
 zendesk_dev_token: !Secret
 
 # Webpurify
@@ -170,6 +169,7 @@ google_maps_secret:       !Secret
 ga_account:               !Secret
 ga_profile_id:            !Secret
 google_safe_browsing_key: !Secret
+gdrive_export_secret:     !Secret
 
 # Mapbox
 mapbox_upload_token:
@@ -205,6 +205,7 @@ slack_endpoint_broken_links:
 # in Applab.
 firebase_name: cdo-v3-<%=env%>
 firebase_secret: !Secret
+firebase_shared_secret: !Secret
 firebase_channel_id_suffix: ''
 firebase_max_channel_writes_per_15_sec: 300
 firebase_max_channel_writes_per_60_sec: 600
@@ -212,6 +213,10 @@ firebase_max_table_count: 10
 firebase_max_table_rows: 20000
 firebase_max_record_size: 4096
 firebase_max_property_size: 4096
+
+# Azure keys for speech service
+azure_speech_service_key: !Secret
+azure_speech_service_region: !Secret
 
 # Configuration Options for Pusher.com integration
 # Optional for most devs, very useful if working on Internet Simulator
@@ -233,14 +238,18 @@ new_relic_license_key:
 newrelic_logging: false
 
 # Credentials for Google-federated AWS access.
+# (Deprecated: move these configuration values to AWS config file)
 aws_role:
 google_client_id:
 google_client_secret:
 
-# Static AWS SDK credentials (prefer Google-federated authentication if possible).
+# Default AWS region for the application.
 aws_region: us-east-1
-aws_access_key:
-aws_secret_key:
+
+# Amazon Future Engineer integration
+afe_pardot_form_handler_url:
+csta_jotform_api_key: !Secret
+csta_jotform_form_id: !Secret
 
 ### Service configurations (urls, endpoints, etc)
 
@@ -317,7 +326,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net <%=pegasus_hostname%> <%=dashboard_hostname%>
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx cuantrix.gilasw.com <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
 skip_locales:
 secret_pictures_csv:
 no_https_store:
@@ -358,17 +367,6 @@ cache_assets_in_memory:
 # Encryption key required for decoding certain protected level sources.
 # Contributors should ask a Code.org engineer for this if needed.
 properties_encryption_key: !Secret
-
-# NOTE: When a new language is added to this set, make sure to also update
-# the redirection rules for the cdo-curriculum S3 bucket by running the
-# aws/s3/cdo-curriculum/redirection_rules.rb script. Otherwise, all links to
-# CB for that language will attempt to point to the language-specific version
-# of that content, even if we haven't translated that content yet.
-#
-# See the LANGUAGES setting in
-# https://github.com/mrjoshida/curriculumbuilder/blob/master/curriculumBuilder/settings.py
-# for the languages currently supported in CurriculumBuilder itself
-curriculum_languages: ['es-mx', 'it-it', 'th-th', 'sk-sk']
 
 start_circle_builds_branch:
 start_circle_builds_token:
@@ -451,6 +449,11 @@ bundler_use_sudo: <%=chef_managed%>
 daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>
 
+# Used to export data on professional learning to gsheets
+applications_2020_2021_gsheet_key: !Secret
+enrollments_summer_2020_gsheet_key:
+applications_2021_2022_gsheet_key: !Secret
+
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
 build_blockly: false
@@ -528,3 +531,9 @@ dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%
 dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
 pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
 pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
+
+# Configurations for making calls to the Immersive Reader API on Azure
+imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
+imm_reader_client_id:
+imm_reader_client_secret: !Secret
+imm_reader_subdomain:     cdo-immersive-reader-<%=env%>

@@ -1,0 +1,15 @@
+name 'courseF_markdown_variables_end_2019_2020'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **You just learned "variables"!**
+
+### In order to use a variable, it needs a name and a value. The name doesn't change, but the value can. This way you can use the name of the variable as a placeholder wherever you want in your program! 
+
+---
+
+## **Vocab to Know**
+
+### **Variable** - A placeholder for a piece of information that can change
+
+MARKDOWN

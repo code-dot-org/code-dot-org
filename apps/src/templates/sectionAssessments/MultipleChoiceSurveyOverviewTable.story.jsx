@@ -1,5 +1,5 @@
 import React from 'react';
-import {UnconnectedMultipleChoiceSurveyOverviewTable} from './MultipleChoiceSurveyOverviewTable';
+import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
 import i18n from '@cdo/locale';
 
 const multipleChoiceSurveyData = [
@@ -13,7 +13,8 @@ const multipleChoiceSurveyData = [
       {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 20},
       {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 20}
     ],
-    notAnswered: 10
+    notAnswered: 10,
+    totalAnswered: 20
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ const multipleChoiceSurveyData = [
       {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 20},
       {multipleChoiceOption: i18n.answerOptionF(), percentAnswered: 10}
     ],
-    notAnswered: 30
+    notAnswered: 30,
+    totalAnswered: 20
   },
   {
     id: 3,
@@ -40,7 +42,8 @@ const multipleChoiceSurveyData = [
       {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 5},
       {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 5}
     ],
-    notAnswered: 5
+    notAnswered: 5,
+    totalAnswered: 20
   },
   {
     id: 4,
@@ -56,7 +59,8 @@ const multipleChoiceSurveyData = [
       {multipleChoiceOption: i18n.answerOptionF(), percentAnswered: 32},
       {multipleChoiceOption: i18n.answerOptionG(), percentAnswered: 5}
     ],
-    notAnswered: 0
+    notAnswered: 0,
+    totalAnswered: 20
   }
 ];
 
@@ -68,10 +72,8 @@ export default storybook => {
         name: 'Assessment multiple choice with 7 answers',
         description: 'Ability to see assessment overview for a section',
         story: () => (
-          <UnconnectedMultipleChoiceSurveyOverviewTable
+          <MultipleChoiceSurveyOverviewTable
             multipleChoiceSurveyData={multipleChoiceSurveyData}
-            openDialog={() => {}}
-            setQuestionIndex={() => {}}
           />
         )
       },
@@ -79,15 +81,13 @@ export default storybook => {
         name: 'Assessment multiple choice with 3 answers',
         description: 'Ability to see assessment overview for a section',
         story: () => (
-          <UnconnectedMultipleChoiceSurveyOverviewTable
+          <MultipleChoiceSurveyOverviewTable
             multipleChoiceSurveyData={multipleChoiceSurveyData.map(question => {
               return {
                 ...question,
                 answers: question.answers.slice(0, 2)
               };
             })}
-            openDialog={() => {}}
-            setQuestionIndex={() => {}}
           />
         )
       }

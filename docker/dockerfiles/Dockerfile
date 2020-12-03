@@ -1,6 +1,6 @@
 # Based on Code.org CircleCI-dependencies Dockerfile in .circle directory
-# Pushed to Docker Hub at wintercdo/code-dot-org:0.7
-FROM ubuntu:14.04
+# Pushed to Docker Hub at wjordan/code-dot-org:2020-09-10
+FROM ubuntu:18.04
 
 USER root
 
@@ -11,16 +11,17 @@ RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 RUN locale-gen C.UTF-8 || true
 ENV LANG=C.UTF-8
 
+# essential tools
+RUN apt-get update && \
+    apt-get install -y curl apt-transport-https sudo
+
 # add circleci user
 RUN groupadd --gid 3434 circleci \
   && useradd --uid 3434 --gid circleci --shell /bin/bash --create-home circleci \
   && echo 'circleci ALL=NOPASSWD: ALL' >> /etc/sudoers.d/50-circleci
 
-# essential tools
-RUN apt-get update && \
-    apt-get install -y curl apt-transport-https
-
 # add yarn
+RUN apt-get install -y gnupg
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
@@ -91,7 +92,7 @@ RUN curl -sSL -o /tmp/mysql-apt-config_0.8.12-1_all.deb https://dev.mysql.com/ge
   && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     mysql-server \
     libmysqlclient-dev
-RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld \
+RUN chown -R mysql:mysql /var/lib/mysql \
   && service mysql start \
   && echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql \
   && chown -R mysql:mysql /var/lib/mysql /var/run/mysqld \
@@ -99,10 +100,13 @@ RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld \
 
 # install a couple more things from config.yml
 RUN apt-get update && apt-get -y install parallel libmagickwand-dev imagemagick
-
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel
+
+RUN curl -sSL -o /tmp/pdftk-java_3.0.2-2_all.deb https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.2-2_all.deb \
+  && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/pdftk-java_3.0.2-2_all.deb || apt-get -fy install \
+  && rm -rf /tmp/pdftk-java_3.0.2-2_all.deb
 RUN apt-get update
-RUN apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
+RUN apt-get install -y libicu-dev enscript moreutils libmysqlclient-dev libsqlite3-dev
 RUN wget https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb \
 	&& dpkg -i tidy-5.4.0-64bit.deb \
 	&& rm tidy-5.4.0-64bit.deb
@@ -125,8 +129,8 @@ USER circleci
 RUN mkdir -p "$(rbenv root)"/plugins
 RUN git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
-RUN rbenv install 2.5.0
-RUN eval "$(rbenv init -)" && rbenv global 2.5.0 && rbenv rehash && gem install bundler -v 1.17
+RUN rbenv install 2.5.8
+RUN eval "$(rbenv init -)" && rbenv global 2.5.8 && rbenv rehash && gem install bundler -v 1.17
 # This bashrc file will be used whenever someone runs bash in interactive mode.
 # This is mostly intended for the use case where you want to start a shell into a running container with
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.
@@ -138,6 +142,7 @@ RUN sudo apt-get install -y software-properties-common && sudo add-apt-repositor
 RUN sudo apt-get install -y jq
 
 # en_US.UTF-8 locale not available by default
+RUN sudo apt-get install -y locales
 RUN sudo locale-gen en_US.UTF-8
 
 COPY entrypoint.sh /entrypoint.sh

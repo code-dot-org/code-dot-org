@@ -129,7 +129,8 @@ const styles = {
     float: 'left',
     display: 'flex',
     justifyContent: 'flex-start',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: color.white
   },
   tilePadding: {
     marginRight: 35

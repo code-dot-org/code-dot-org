@@ -40,3 +40,7 @@ export var checkbox = {
   fontSize: 20,
   paddingLeft: 2
 };
+
+export var link = {
+  cursor: 'pointer'
+};

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-17T17:04:50.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_gamelab_velocity",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Velocity",
+    "parent_level_id": 16134,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n\r\n* Why might you want to use a velocity block instead of the counter pattern?\r\n* Give an example of a counter pattern and how you could use a velocity block instead.\r\n",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nIt may not be obvious to students why the velocity block is so powerful.  The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that).  If students are having trouble of thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\r\n\r\nAs students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 23:42:06 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-18 23:49:45 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -10,9 +10,46 @@ nn:
   campaign_date_short: 4.-10. des
   campaign_date_full: 4.-10. desember
   campaign_date_year: '2017'
-  campaign_date_full_year: 4.-10. desember, 2017
-  hoc2019_header: Lær deg informatikk. Endre verda.
-  hoc2019_header_line1_mobile: Lær deg informatikk.
+  campaign_date_full_year: 7.-13. desember, 2020
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_year: '2017'
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
+  europe_campaign_date_year: '2017'
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
+  africa_campaign_date_year: '2017'
+  africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header_with_line_break_markdown: |-
+    Learn today,
+
+    build a brighter tomorrow.
+  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
+    we want. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
+    today, build a brighter tomorrow.'
+  social_hoc2020_global_movement: Kodetimen er ei verdensomsfattande rørsle som når
+    ut til titalls millionar elevar. Læringsopplegg på ein time fins på over 45 språk
+    og passar folk i alle aldrar.
+  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
+    science is foundational for every student to learn.
+  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
+  hoc2020_ai_header: Explore Artificial Intelligence
+  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
+    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
+    discuss ethics and AI, and more...
+  hoc2019_header: Lær deg programmering. Så kan du endre verda.
+  hoc2019_header_line1_mobile: Lær deg programmering.
   hoc2019_header_line2_mobile: Endre verda.
   social_hoc2019_every_sudent: 'Kvar elev har potensialet til å endra verda. Hjelp
     dei i gong. #CSforGood'
@@ -25,69 +62,138 @@ nn:
     er eit fundament kvar elev kan lære.
   social_hoc2019_dance: Med Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj og 34 andre!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: 'Explore machine learning by teaching “A.I.” to recognize
-    fish. #CSforGood'
-  oceans_landing_specs: English only | Ages 11+
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS For Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_learn_more: Learn more about AI and Machine Learning
-  social_hoc2019_oceans_title: 'AI for Oceans #CSForGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
+  oceans_landing_title: AI for hav
+  oceans_landing_description: 'Utforsk maskinlæring ved å lære "A.I." til å kjenne
+    att fisk. #CSforGood'
+  cs_for_good_hashtag: "#CSforGood"
+  oceans_landing_specs: Berre på engelsk | Alder 11+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI For Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about AI, machine learning, training data,
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
     and bias, while exploring ethical issues and how AI can be used to address world
-    problems.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
+  oceans_landing_teacher_resources: Lærerressursar
+  oceans_landing_teacher_resources_desc: Timeplanar og aktivitetar som hjelper deg
+    med å undervise AI, maskinlæring, treningsdata og bias, medan du utforskar etiske
+    problem.
+  oceans_landing_resource_button: Vis ressursar
+  oceans_landing_cs_for_good: Programmering for det gode
+  oceans_landing_cs_for_good_desc: Ressursar for å hjelpe elevane med å forstå rolla
+    datavitskap kan ha i å skapa ei meir rettferdig verd.
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
+  social_hoc2019_oceans_title: 'AI for hav #CSForGood'
+  social_hoc2019_oceans_desc: 'Lær om AI, maskinlæring, treningsdata og bias medan
+    ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
+    Datavitskap er om så mykje meir enn koding! Bli med Code.org sine første steg
+    på ny reise for å lære meir om AI gjennom pensumet vårt. '
+  hoc_live: Hour of Code Live
+  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
+    of all ages and abilities, including those without computers, are welcome. Join
+    our mailing list to receive recordings of the episodes and resources to continue
+    learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_join_us: Bli med
+  hoc_overview_oceans_tutorial_header: AI for hav
+  hoc_overview_oceans_tutorial_desc: Lær om AI, maskinlæring, treningsdata og bias
+    medan ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
+  ai_video_title_what_is_ai: Kva er AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
+  ai_video_title_phone_knows_dog: Korleis veit telefonen din at dette er ein hund?
+  ai_video_title_what_is_ml: Kva er maskinlæring?
+  ai_video_title_ml_big_small_prickly: 'Maskinlæring: Løyse problem som er store,
+    små og pittesmå'
+  ai_video_title_ethics_of_ai: Etikk i AI
+  ai_video_title_ml_human_bias: Maskinlæring og menneskelege bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
+  activity: Aktivitet
+  name: Namn
+  description: Skildring
+  audience: Publikum
+  ai_resource_header: Undervis og lær om AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
+  ai_resource_ml_for_kids: Maskinlæring for barn
+  ai_resource_ml_for_kids_desc: Tren opp ein maskinlæringsmodell med tekst, tal og
+    bilde og bruk det til å lage spel i Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Maskinlæring for barn'
+  ai_resouce_ibm_ml_for_kids_desc: Praktiske aktivitetar for å introdusere enkel maskinlæringsmodellar
+    til elevar gjennom spel og interaktive prosjekt.
+  ai_resource_ecs: 'ESC: Kunstig intelligens (AI)'
+  ai_resource_ecs_desc: Ein ny alternativ læreplan for Exploring Computer Science
+    (ECS)-pensumet.
+  ai_resource_elements_ai: Elementar i AI
+  ai_resource_elements_ai_desc: Ein serie med gratis nettkurs utforma av Reaktor og
+    universitetet i Helsinki.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
-  ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_mixlab: MixLab
-  ai_activity_mixlab_desc: Make music using voice commands.
-  ai_activity_gaugan: GauGAN Beta
-  ai_activity_gaugan_desc: Paint photo-realistic landscapes with the help of AI.
+  ai_resource_cognimates_desc: Ein AI-utdanningsplattform for å bygge spel, programmere
+    robotar og opplæring.
+  ai_audience_k12: Grunnskulen (Treng å kunne lese)
+  ai_audience_hs: Vidaregåande skule
+  ai_activity_header: Aktivitetar med AI og ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Teikn kjapt!
+  ai_activity_quick_draw_desc: Kan eit nevralt nettverk lære seg å kjenne att krusedullar?
+  ai_activity_teachable: Maskin du kan lære opp
+  ai_activity_teachable_desc: 'Lær opp ei datamaskin til å kjenne att dine bilete,
+    lydar og poseringar. '
+  ai_activity_experiments: AI-eksperiment med Google
+  ai_activity_experiments_desc: Utforsk maskinlæring gjennom bilete, teikningar, språk,
+    musikk og meir.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: Gå vidare med <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org-kurs</a>
   codeorg_homepage_hoc2018_dance_heading: Lag din eigen <span class="highlight-word">dansefest</span>
@@ -105,6 +211,18 @@ nn:
   hoc2018_tutorial_mchoc_description: Minecraft er tilbake i Kodetimen med ei heilt
     ny oppgåve! Reis gjennom Minecraft med kode.
   codeorg_homepage_hoc2019_dance_heading: Prøv den nye <span class="highlight-word">Dansefesten!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: Keep learning this summer! Take a look at our
+    resources for learning at home.
+  codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
+    classroom this semester? View our resources.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Les meir
   cookie_banner_message: Ved å fortsatt bruke nettstaden vår eller ved å klikke på
     "Eg godtar", godtar du lagring av cookies på datamaskina eller eininga di.
   cookie_banner_more_information: Sjå Code.org sine Retningslinjer for personvern.
@@ -119,13 +237,6 @@ nn:
   front_watch_regular_video: Sjå videoen
   front_volunteers: Vi treng fleire tekniske frivillige
   front_start_learning: Start læringa
-  gdpr_dialog_heading: Godtar du å nytte deg av ein nettstad basert i USA?
-  gdpr_dialog_message: Data frå bruken av denne nettstaden kan bli sendt til, bli
-    lagra og prosessert i USA.
-  gdpr_dialog_link_intro: For detaljar, sjå våre
-  gdpr_dialog_privacy_policy: retningslinjer for personvern
-  gdpr_dialog_logout: Logg ut
-  gdpr_dialog_yes: Ja
   header_menu_resources: Ressursar
   header_menu_faq: Spørsmål og svar
   header_menu_how_to: Slik gjer du
@@ -273,6 +384,7 @@ nn:
   how_to_nav_companies: For næringslivet
   how_to_nav_afterschool_educators: For SFO
   how_to_nav_volunteers: For frivillege
+  how_to_nav_virtual: For virtual events
   whats_next_header: Kva er det neste?
   whats_next_description: Vi vil sende deg materiell og tips for gjennomføring av
     kodetimen din. <a href='http://code.org/learn'> Prøv oppgåver</a> for kva som
@@ -308,9 +420,10 @@ nn:
     200 opplæringsprogram og leksjonar</i>! Finn aktivitetar for ulike fagområde,
     ulike plattformar og elevar på alle erfaringsnivå.
   front_join_us_robotics: Har du roboter?
-  front_join_us_robotics_link: Takk til våre samarbeidspartnere innen automasjon og
-    robotikk for å støtte Kodetimen! Om klasserommet ditt har roboter, klikk på logoane
-    for å finne ein robot-aktivitet!
+  front_join_us_robotics_link: Ønsker du eit sett med fysisk programmeringsdingsar
+    og robotar du kan bruke med elevane dine? Partnarane våre gir sett til 75 klasserom!
+    Registrer deg på Kodetimen for å delta (Klasserom blir valgt av Code.org. Berre
+    for USA)
   front_join_us_teacher: Er du ein lærar?
   front_join_us_inspire: Inspirer elevane med
   front_join_us_inspire_link: Kodetimen i klasserommet.
@@ -349,6 +462,9 @@ nn:
     er tilgjengelege heile året. <a href='%{hoc_activities_url}'>Prøv ein aktivitet</a>
     eller les våre<a href='%{howto_guide_url}'>Slik-gjer-du-det-guidar</a> for å planlegge
     ei hending i klasserommet ditt.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: Og kvart år i desember kan klassen din bli med millionar
     av elevar frå heile verda i feiringa av kodeveka med Kodetimen. Vi opnar opp for
     den årlege registreringa i oktober.
@@ -398,6 +514,7 @@ nn:
   signup_send_posters_address_placeholder: Denne adressa vil ikkje bli vist på kartet
   signup_event_type_in_school: På ein skule
   signup_event_type_out_of_school: Utanfor skulen
+  signup_event_type_at_home: Home
   signup_submit_census_label: Send inn
   signup_submit_census_error_message: Vi beklager. Feil. Prøv å sende skjemaet ein
     gong til.
@@ -442,8 +559,8 @@ nn:
   map_legend_title: Tegnforklaring
   map_legend_hoc_events: Kodetimearrangement
   map_legend_cs_tech_jam: Spesialarrangement
-  map_warning: Kodetimen-kartet viser berre dei 200.000 første registrerte arrangementa.
-    Alle registrerte arrangement kan du sjå på <a href='%{events_url}'>arrangement-sida.</a>
+  map_warning: Ei full liste av arrangement kan du sjå på <a href='%{events_url}'>arrangement-sida</a>.
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: 'Kodetimen: Alle kan lære'
   meta_tag_og_description: Kodetimen er ei verdensomsfattande rørsle som når ut til
     titalls millionar elevar i meir enn 180 land og fins på over 45 språk.
@@ -461,6 +578,13 @@ nn:
   hoc_faq_what_is_hoc_a: |-
     Kodetimen starta som ein timeslang introduksjon til datavitskap, designa for å avmystifisere koding og vise at alle kan lære det grunnleggande og for å auka deltaking innan dataprogrammering.
      Det har sidan blitt ein verdsomfattande innsatsi å feire dataprogrammering, som starta som aktivitetar på ein time, men som har utvida seg til all slags engasjement i samfunnet. Sjekk ut <a href='%{tutorials}'>øvingar og aktivitetar</a>. Denne grasrotkampanjen er støtta av over <a href='%{partners}'>400 partnarar</a> og 200.000 lærarar og pedagogar over heile verda.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Prøv oppgåvene
   hoc_faq_when_is_hoc_q: Når er kodetimen?
   hoc_faq_when_is_hoc_a: 'Kodetimen skjer kvart år i løpet av <a href=''%{csedweek_url}''>Kodeveka:
@@ -468,34 +592,63 @@ nn:
     vil skje %{campaign_date_full}, men du kan arrangere Kodetimen når som helst i
     løpet av året. Computer Science Education Week vert halde årleg til minne om datapioneren
     <a href=''%{grace_hopper}''>Admiral Grace Murray Hopper</a> (9. desember, 1906).'
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Kvifor informatikk?
   hoc_faq_why_cs_a: "<i>Alle</i> studentar burde ha mogelegheita til å lære datavitskap.
     Det fostrar problemløysingseigenskaper, logikk og kreativitet. Ved å byrje tidleg
     får elevane eit grunnlag for suksess i kva som helst karrieresti for det 21. århundret.
     Sjå meir statistikk på <a href='%{stats_url}'>her</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Korleis deltek eg i ein Kodetime?
   hoc_faq_how_participate_a: "<a href='/how-to'>start planlegginga</a>. Du kan organisere
     en kodetime for skulen din eller for nærmiljøet &mdash; til dømes ein fritidsklubb,
     ein veldedig organisasjon eller på arbeidsplassen din. Eller, bare prøv det på
     eiga hand når vi kjem til %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Kven står bak Kodetimen?
   hoc_faq_behind_hoc_a: Kodetimen er organisert av Hour of Code og Computer Science
     Education Week<a href='%{partner_url}'>Rådgjevings- og vurderingskomitear</a>,
     samt ei stor gruppe bedrifter som har gått saman for å støtte Kodetimen &mdash;
     inkludert Microsoft, Apple, Amazon, Boys and Girls Clubs of America og College
     Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Eg veit ingenting om koding. Kan eg framleis vere vert for ein Kodetime?
   hoc_faq_host_a: Sjølvsagt! Kodetimeaktivitetar er brukarstyrte. Alt du treng er
     å <a href='%{codeorg_url}/learn'>sjå på våre oppdaterte rettleiingar</a>, plukke
     den du ynskjer, og velgje ein &mdash; me gjer resten. Me har også val for alle
     aldre og erfaringsnivå, frå barnehagen og opp. Start hendingsplanleggjinga ved
     å lese vår <a href='/how-to'>veiledning</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Kva slags datamaskiner/einingar bør eg bruke for elevane mine?
   hoc_faq_devices_a: Code.org sine rettleiingar fungerer på alle einingar og nettlesarar.
     Du finn meir informasjon om tekniske behov <a href='%{codeorg_url}/educate/it'>her</a>.
     Tekniske behov for opplæring utanfor Code.org finn du <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     i skildringa av kvar enkelt rettleiing. Ikkje gløym at vi også tilbyr <a href='%{unplugged_url}'>opplegg
     utan datamaskiner</a> dersom skulen ikkje kan tilrettelegge med utstyr!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Treng eg datamaskiner til kvar deltakar?
   hoc_faq_need_computers_a: Nei. Vi har Kodetime-rettleiingar som fungerar på PC,
     smarttelefonar, nettbrett og nokre som ikkje treng datamaskiner i det heile teke.
@@ -508,21 +661,41 @@ nn:
     runder der kvar og ein løyser gåter eller svarar på spørsmål<li><b>Heilt utan
     straum.</b> VI har også <a href='%{unplugged_url}'>rettleiingar som ikkje krev
     datamaskiner</a> i det heile teke.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Eg er i <country>. Korleis kan eg delta internasjonalt?
   hoc_faq_international_a: Kven som helst kan organisere eit Kodetime-arrangement,
     kor som helst i verda. I fjor deltok elevar over heile verda saman i Kodetimen.
     Finn ut meir <a href='/promote'> her</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Korleis kan eg lage ei veiledning for Kodetimen?
   hoc_faq_tutorial_a: Om du er interessert i å bli ein rettleiingsspartner, <a href='target-tutorial-guidelines'>sjå
     våre retningslinjer og instruksjonar</a>. Vi ynskjer å skape mange ulike mogelegheiter,
     men primærmålet er å optimalisere erfaringa for elevane og lærarane som er nye
     innan datavitskap.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Må elevane logge på med ein konto?
   hoc_faq_account_a: Nei. Registrering eller innlogging er ikkje naudsynt for at elevar
     skal prøve Kodetimen. Dei fleste <a href='%{codeorg_url}/learn/beyond'>kursa for
     viderekommande</a> krev ein konto for å kunne lagre framgangen til eleven. Når
     du registrerer deg for Kodetimen lagar IKKJE automatisk ein Code Studio-konto.
     Dersom du ønsker å lage kontoar for elevande dine, følg desse <a href='https://youtu.be/_smelV_KISE'>instruksjonane</a>.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Kva for aktivitet bør eg gjere med elevar i vidaregåande
     skule?
   hoc_faq_high_school_a: Oppgåvene på Star Wars og Minecraft er bra for vidaregåande,
@@ -531,24 +704,48 @@ nn:
     for å starte, til dømes oppgåva med Angry Birds eller med Anna og Elsa frå Frost.
     Ein elev i vidaregåande skule bør klare desse på 30 minutt og kan gå vidare til
     ei meir avansert oppgåve i JavaScript, frå for eksempel Khan Academy eller CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Eg skal bruke Scratch i Kodetimen, men kva om elevane har iPads
     i staden for laptops?
   hoc_faq_scratch_a: Scratch køyrer ikkje på nettbrett. Om elvane er unge, kan dei
     bruke appen ScratchJR for iPad (for dei som kan lese). Om du ser på oppgåvene
     på<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> kan du finne andre oppgåver
     som passar for iPad - frå Code.org, Tynker, Lightbot eller CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Hvordan tel de kodetimar?
   hoc_faq_map_q: Kvifor ser eg ikkje min prikk på kartet?
   hoc_faq_map_a: Vi er veldig lei oss for at du ikkje ser arrangementet ditt på kartet
     over Kodetimen. Fordi titusenvis av organisatorar melder seg på vil kartet samle
-    fleire arrangement under kvar prikk. Viss du klikkar på nummeret over kartet vil
-    du få opp ei liste over alle arrangement for kvar region og finne arrangementet
-    ditt der. I tillegg vil det ofte ta opp til 48 timar før kartet oppdaterar seg
-    på grunn av det er tusenvis av påmeldingar. Sjekk igjen om nokre få dagar!
+    fleire arrangement under kvar prikk. Viss du klikkar på <a href='%{events_url}'>sida
+    for arrangement</a>-lenka under kartet vil du få opp ei liste over alle arrangement
+    for kvar region og finne arrangementet ditt der. I tillegg vil det ofte ta opp
+    til 48 timar før kartet oppdaterar seg på grunn av det er tusenvis av påmeldingar.
+    Sjekk igjen om nokre få dagar!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Teljaren for Kodetimen er ikkje heilt nøyaktig. Vi tel ikkje
     unike elevar eksakt når vi måler deltakinga på Kodetimen, særskilt kjem dette
     av at vi ikkje krev innlogging eller registrering. Dette fører til at vi både
     tel for mange og for få heile tida. Les fleire detaljar om dette <a href='%{codeorg_url}/loc'>her</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Hvor mye kan ein lære i ein time?
   hoc_faq_one_hour_a: Målet til Kodetimen er ikkje at nokon skal bli ekspert i informatikk
     eller koding på ein time. Ein time er berre nok til å lære at informatikk er moro
@@ -565,25 +762,44 @@ nn:
     nettbaserte kurs. Dette gjeld også for skulesjefar som vil forstå at informatikk
     er noko elevane ønskjer og lærarane meistrar.<br/><br/>Det viktigaste av alt er
     at alle deltakarane i løpet av den timen skjønar at dette får vi til.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Har du framleis fleire spørsmål?
   hoc_faq_more_questions_a: Sjå om du finn eit svar i vårt <a href='http://support.code.org'>brukarstøtteforum</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Korleis held eg fram med læringa etter Kodetimen?
   hoc_faq_keep_learning_a: Kven som helst kan halde ein Kodetime når som helst. Rettleiingane
     vert haldne oppdatert heile året. Du kan forvente at alle rettleiingar og oppgåver
     er tilgjengelege på nettsida vår i overskueleg framtid. Besøk <a href='/promote'>ressurssida
     vår</a> for rettleiing om korleis halde ein Kodetime eller andre ressursar for
     å hjelpe deg å gjere Kodetimen til ein suksess.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Korleis kan eg skrive ut kursbevisa for elevane mine?
   hoc_faq_certificates_a: Gå til sida vår for <a href='%{codeorg_url}/certificates'>kursbevis</a>
     der du kan skrive ut kursbevis for heile klassa på førehand. Du kan også skrive
     ut <a href='%{codeorg_url}/certificates?course=mc'> spesielle kursbevis</a> for
     elevar på Minecraft-opplæringa.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Er der avgrensningar på korleis eg kan nytte Kodtimen sitt namn
     og logo?
   hoc_faq_logo_a: Kodetimen er eit varemerke. Vi ønskjer ikkje å hindre bruken av
     det, men vi vil sikre oss at bruken er innanfor visse avgrensingar. Vær venleg
     og sjå <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>desse
     retningslinjene for bruk</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Tal frå Kodetimen 2013
   stats_growth: Det var den raskaste til å oppnå 15 millionar brukarar.
   stats_i18n: Elevene lærer på over 45 språk
@@ -599,6 +815,8 @@ nn:
   stats_females: Kvinneandelen i informatikk er berre 20% i høgskulekurs. universitetsfag
     og i næringslivet.
   stats_females_more: I Kodetimen utgjer elevar som er jenter <b>50 % av alle deltakarar</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: "«Kvar dag gav det same resultatet &mdash; 100 % engasjement.» – Nina
     Nichols Peery, lærar"
   stats_student: "«Eg visste dette var ein <b>sjanse eg berre ville få éin gong i
@@ -686,7 +904,8 @@ nn:
   highlights_title: Høgdepunkt
   highlights_header: Kodetimen sine høgdepunkt
   highlights_description: Nokre av våre favorittaugneblink frå Kodetimen.
-  higlights_see_more: Sjå fleire høgdepunkt
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: Les meir
   highlights_watchvideo: Sjå videoen
   highlights_facebook: Del på Facebook
@@ -713,6 +932,7 @@ nn:
   footer_copyright_message: Copyright %{current_year} Code.org. Alle rettigheiter
     reservert.
   footer_trademark_message: Varemerket Hour of Code™ høyrer til Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partnarar
   footer_menu_contact: Kontakt oss
   footer_menu_support: Støtte
@@ -723,8 +943,11 @@ nn:
     Bli med millionar av elevar og lærarar i over 180 land på ein Kodetime.
   learn_banner_beyond: Vil du lære meir? <a id='learn_banner_beyond'>Lær meir enn
     ein Kodetime</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: Lærarar:<a id='teacher_banner_host'>Vær vert for ein time</a>eller<a
     id='teacher_banner_howto'>les slik-gjer-du-guiden</a>
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ROBOTIKK
   learn_robotics_banner_blurb: Har du robotar eller fysiske programmeringssett? Bruk
     dei i aktivitetane nedanfor og lag ein handfast Kodetime for alle aldrar! Nokre
@@ -1007,7 +1230,7 @@ nn:
   tutorial_playtune_name: Spel melodien-appen
   tutorial_computeit_name: Rekn det ut
   tutorial_codesterssj_name: Vitsar i verdsrommet
-  tutorial_cmchat_name: Python-chatbot
+  tutorial_cmchat_name: Trivia-chatbot
   tutorial_tynkerdb_name: Dragesprenging
   tutorial_cmbuild_name: Spelbyggar
   tutorial_robotrattle_name: Robot-rangle
@@ -1139,9 +1362,9 @@ nn:
   tutorial_cadj_name: DR DJ Device
   tutorial_cacrazy_name: Kod ville skapningar
   tutorial_cajump_name: Hoppande syltetøy
-  tutorial_carest_name: Robo-restaurant puzzler
+  tutorial_carest_name: 'Oppgåvespel: Robo-restaurant'
   tutorial_accai_name: Accenture Intelligent Space Exploration
-  tutorial_vceclipse_name: Code the Eclipse
+  tutorial_vceclipse_name: Kod formørkelsen
   tutorial_pmzero_name: Pac-Man ZERO
   tutorial_hsela_name: 'Telling stories: ELA + coding'
   tutorial_ticklear_name: What's AR?
@@ -1211,8 +1434,8 @@ nn:
   tutorial_codesparkcreate_name: codeSpark Academy med Foos - Lag spel
   tutorial_hardvsoft_name: Team maskinvare vs Team programvare
   tutorial_codestersecard_name: Lag eit e-kort
-  tutorial_codesterslogo_name: Firmalogo
-  tutorial_codesterstshirt_name: T-skjortedesign med monogram
+  tutorial_codesterslogo_name: Design eigen logo
+  tutorial_codesterstshirt_name: Programmer initialane dine
   tutorial_codewards_name: Redd den undersjøiske byen!
   tutorial_olympics_name: C.A.T.S. går for Robot-OL
   tutorial_codinismhero_name: Programmere helten
@@ -1247,31 +1470,31 @@ nn:
   tutorial_mbbuttons_name: 'Introduksjon til BBCs micro:bit: Animasjon og knappar'
   tutorial_meteor_name: Lag eit spel med fallande meteorar til BBC micro:bit
   tutorial_ballbounce_name: Ball Bounce Mobile App
-  tutorial_mitcodi_name: Codi the Bee
-  tutorial_mitdoodle_name: Digital Doodle Mobile App
-  tutorial_talktome_name: Talk to Me Mobile App
-  tutorial_mobilecspmap_name: Map Tour App
-  tutorial_ozorandom_name: Ozobot Random Story Generator
+  tutorial_mitcodi_name: Bia Codi
+  tutorial_mitdoodle_name: Digital Doodle-mobilapp
+  tutorial_talktome_name: Snakk til meg-mobilapp
+  tutorial_mobilecspmap_name: Turkart-app
+  tutorial_ozorandom_name: Ozobot - den tilfeldige forteljingsgeneratoren
   tutorial_ozotroll_name: Trollet Evo
-  tutorial_peblioart_name: 'Interactive Art: Bringing Art to Life with Code'
+  tutorial_peblioart_name: 'Interaktiv kunst: Gi kunst liv med koding'
   tutorial_astropi_name: 'Astro Pi: Mission Zero'
-  tutorial_rgart_name: RoboGarden STEAM - Art
-  tutorial_rgengineer_name: RoboGarden STEAM - Engineering
-  tutorial_rgmath_name: RoboGarden STEAM - Math
-  tutorial_rgscience_name: RoboGarden STEAM - Science
-  tutorial_rgtech_name: RoboGarden STEAM - Technology
-  tutorial_robotmagic3d_name: " Animate a 3D Logo"
-  tutorial_robotmagicflappy_name: 3D Flappy Bird
-  tutorial_scratchadventure_name: Animate an Adventure Game
-  tutorial_scratchtalk_name: Create Animations That Talk
-  tutorial_scratchjrstory_name: 'We Can Create a Story Together! '
-  tutorial_scratchjrtwinkle_name: Twinkle, Twinkle Little Star Class Collaboration
-  tutorial_spherocomm_name: Communication
-  tutorial_spherocommunity_name: Your Community
-  tutorial_spherofunctions_name: Fun Fun Functions
-  tutorial_spheroinfrared_name: 'BOLT: Infrared'
-  tutorial_spherolightsensor_name: 'BOLT: Light Sensor'
-  tutorial_spheromansion_name: 'Jurassic Code: Mansion Mayhem'
+  tutorial_rgart_name: RoboGarden STEAM - Kunst
+  tutorial_rgengineer_name: RoboGarden STEAM - Ingeniørfag
+  tutorial_rgmath_name: RoboGarden STEAM - Matte
+  tutorial_rgscience_name: RoboGarden STEAM - Vitenskap
+  tutorial_rgtech_name: RoboGarden STEAM - Teknologi
+  tutorial_robotmagic3d_name: " Animer ein 3D-logo"
+  tutorial_robotmagicflappy_name: Flaksefugl i 3D
+  tutorial_scratchadventure_name: Animer eit eventyrspel
+  tutorial_scratchtalk_name: Lag animasjonar som snakkar
+  tutorial_scratchjrstory_name: 'Vi kan lage ei forteljing saman! '
+  tutorial_scratchjrtwinkle_name: Twinkle, Twinkle Little Star - Klassesamarbeid
+  tutorial_spherocomm_name: Kommunikasjon
+  tutorial_spherocommunity_name: Fellesskapet ditt
+  tutorial_spherofunctions_name: Kjempekjekke funksjonar
+  tutorial_spheroinfrared_name: 'BOLT: Infrarød'
+  tutorial_spherolightsensor_name: 'BOLT: Lyssensor'
+  tutorial_spheromansion_name: 'Jurassic-kode: Mansion Mayhem'
   tutorial_roadblocks_name: Vegsperringar
   tutorial_spherotext2_name: 'Tekst 2: betingelsar'
   tutorial_spherotext3_name: 'Tekst 3: lys'
@@ -1310,6 +1533,124 @@ nn:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
+  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_csfirstunplugged_name: CS First Unplugged
+  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
+  tutorial_vidcodedate_name: Climate Clock
+  tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
+  tutorial_codespeakhappy_name: Code a Happy Place Meditation App
+  tutorial_grokimage_name: Image Magic with Python
+  tutorial_icomputelearn_name: Learn Coding with iCompute
+  tutorial_rpstress_name: Stress ball
+  tutorial_bsdcause_name: Support My Cause
+  tutorial_vidcodeanimoji_name: Animoji
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
+  tutorial_tttractor_name: Tractor Traversal
+  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
+    Mickey'
+  tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
+  tutorial_codespeakbreathe_name: Code a Meditation Breathing App
+  tutorial_vidcodeface_name: Facetracking
+  tutorial_educodemaze_name: Design Your Own Maze!
+  tutorial_educoderace_name: Code your own racing game!
+  tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
+  tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
+  tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
+  tutorial_educodekingdom_name: Defend the Kingdom!
+  tutorial_codehsdata_name: Coding with Data Visualizations
+  tutorial_educodecake_name: Bake a Cake With HTML!
+  tutorial_ttsecond_name: Second Team
+  tutorial_bsdtrivia_name: Trivia Game Maker
+  tutorial_csfirstdialogue_name: Dialogue
+  tutorial_codemonkeybeaver_name: Beaver Achiever
+  tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
+  tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
+  tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
+  tutorial_codespeakmeal_name: Code a Healthy Meal App
+  tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
+  tutorial_bsdwebsite_name: My Favorites Website
+  tutorial_codespeaktime_name: Code a Time Capsule in Scratch
+  tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
+  tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
+  tutorial_ttrace_name: Race Condition
+  tutorial_plethora_name: 'Plethora: Cause and Effect'
+  tutorial_educodesecret_name: Uncover the Agency's Secrets!
+  tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
+  tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastisk forurensing PSA
+  tutorial_educativechatbot_name: Build your own chatbot in Python
+  tutorial_educodebasics_name: Learn the Basics!
+  tutorial_codehsdesign_name: Supporting Artists with Code
+  tutorial_htmlacademyphp_name: 'Intro to PHP: Create an Online Store from Scratch'
+  tutorial_gamefrootdistance_name: 'COVID-19 Simulator: Learn about social distancing
+    through computer science.'
+  tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
+  tutorial_ttbunker_name: The Bunker
+  tutorial_cuttle_name: Computational Thinking and Programming Challenge
+  tutorial_bsdjokes_name: Jokes and Riddles
+  tutorial_rptree_name: Tree life simulator
+  tutorial_codestersunity_name: 'Codesters: Unity Mural'
+  tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
+  tutorial_breakoutlock_name: 'Haspy and Lockit: Code Buddies'
+  tutorial_thunkablemask_name: Beaver in a Mask
+  tutorial_cafarming_name: Old MacDonald hacked a farm. AI, AI drone!
+  tutorial_blocksmithyeti_name: Don't Yeet the Yeti
+  tutorial_codecapture_name: Learn Programming With JavaScript​ In A Jiffy​
+  tutorial_codehslitter_name: Coding for a Litter-Free Community
+  tutorial_bsdocean_name: Life Below Water
+  tutorial_itchplatformer_name: 'iTCHcode: Scratch 3.0 Platformer Tutorial'
+  tutorial_codejika_name: 'CodeJIKA: 5 Minute Website'
+  tutorial_gamefrootclicker_name: Learn Variables. Code your own Clicker Game.
+  tutorial_rmagicequity_name: Equity vs. Equality
+  tutorial_ttfreestyle_name: Functional Freestyle
+  tutorial_ozobotcolor2_name: 'Introduction to Color Codes 02:  Drawing Color Codes'
+  tutorial_ozobotcolor3_name: 'Introduction to Color Codes 03: Directionality'
+  tutorial_clcarbon_name: Build Your Own Carbon Calculator
+  tutorial_kodablebasics_name: 'Coding Basics: Unplugged'
+  tutorial_scigirlscc_name: 'SciGirls: Code Creators'
+  tutorial_irobotpicture_name: 'Seeing the Whole Picture: Coded Messages'
+  tutorial_kcjmyself_name: Let me introduce myself!
+  tutorial_nearpodalgorithms_name: 'Coding: Algorithms '
+  tutorial_kibodrop_name: KIBO Craft and Build Drop Test
+  tutorial_ozobotcolor1_name: 'Introduction to Color Codes 01: Line Following'
+  tutorial_scigirlspixels_name: 'SciGirls: Passion for Pixels'
+  tutorial_kcjheroines_name: Our Heroines
+  tutorial_ozobotvalue_name: What's My Value?
+  tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
+  tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
+  tutorial_ai4all_name: AI & Drawing
+  tutorial_cldata_name: Welcome to Data Superpower
+  tutorial_spheroinputs_name: Inputs and Outputs Unplugged
+  tutorial_edisoncount_name: Teach Edison to count to 9
+  tutorial_spheroloops_name: Loops Unplugged
+  tutorial_kiboprogram_name: Let's Program Each Other
+  tutorial_hellorubycsin60_name: Computer Science in 60 seconds
+  tutorial_clfashion1_name: Fashionistas of Data Science - Class 1
+  tutorial_irobottraffic_name: 'Traffic Bot: Code Your Own Traffic Signal'
+  tutorial_edisonmystery_name: Edison and the mystery line
+  tutorial_microbitseaturtles_name: Saving Sea Turtles
+  tutorial_ozobotknow_name: 'Introduction to Ozobot: Get to Know Evo'
+  tutorial_imagilabs_name: 'Imagine it. Code it. Wear it. '
+  tutorial_irobotsimulator_name: Simulator Code Break
+  tutorial_irobotkind_name: 'Robot Feelings: The Kind Playground'
+  tutorial_firiavirtual_name: 'CodeSpace: Virtual Robotics with Python'
+  tutorial_irobotguesscode_name: Guess the Code
+  tutorial_ozobotnouns_name: Picking Out Irregular Plural Nouns
+  tutorial_nasa3d_name: 'Universe in 3D:  modeling and printing cosmic objects'
+  tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
+  tutorial_legodance_name: Break Dance
+  tutorial_nearpodcoding_name: 'Topic Spark: Coding '
+  tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
+  tutorial_legojourney_name: Create a Journey with LEGO Education
+  tutorial_legohopper_name: Hopper Race
+  tutorial_catrobatembroidery_name: Kodet broderi
+  tutorial_irobotphone_name: Telephone Drawing
+  tutorial_codeguppydraw_name: Draw with code
+  tutorial_codejumper_name: 'Networks: Messages of Kindness'
+  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
   tutorial_danceparty_shortdescription: Programmer ein dansefest du kan dele med venene
     dine. Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
   tutorial_chibitronics_shortdescription: Programmer ein papirkrets til å lyse opp
@@ -2655,8 +2996,8 @@ nn:
     pop up when clicked.
   tutorial_itchg_longdescription: "Name-IT has you create a game of recognition! \n\nThe
     ending project has students creating a game to name the States of Australia!\n\nYou'll
-    first walk through an and follow directions to create a game to label the three
-    phases of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
+    first walk through and follow directions to create a game to label the three phases
+    of the water cycle. You'll make a fully functioning game, including scoring!\n\nFrom
     the coding side you'll learn about variables, conditionals, lists, concatenating
     strings and much, much more. These are coding techniques you'll be able to re-use
     in other projects as you progress on to build your new coding skills!\n\nYou can
@@ -2684,7 +3025,7 @@ nn:
 
     Create a game to name the parts of a biological cell. Learn the parts of the cell while you make the game, and play it again as many times as you need to refresh your memory!
 
-    You'll first walk through an and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
+    You'll first walk through and follow directions to create a game to label the three phases of the water cycle. You'll make a fully functioning game, including scoring!
 
     From the coding side you'll learn about variables, conditionals, lists, concatenating strings and much, much more. These are coding techniques you'll be able to re-use in other projects as you progress on to build your new coding skills!
 
@@ -2859,7 +3200,6 @@ nn:
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
     existing game code. Then publish and share your game with friends and family.
-    A scripted lesson guide is included for teachers.
   tutorial_capost_longdescription: Starting to learn HTML and CSS is easy and fun
     with this digital postcard. Learn about adding headings, paragraphs, images and
     links to create a holiday card or birthday celebration to share with friends and
@@ -2976,24 +3316,9 @@ nn:
   tutorial_mozillahw_longdescription: Learners will remix JavaScript code to change
     the words on a website, learning about composing for the web, coding JavaScript
     values, and remixing Web content.
-  tutorial_ticklep_longdescription: "Det du kan oppnå\nPapegøye-drone som er kompatibel
-    med Tickle-appen, er kjent for sine fantastiske flygeeigenskapar. Ved å bruke
-    Tickle-appen kan du få dei til å fly på innovative måtar og utføre fantastiske
-    show i lufta. Samtidig som du lærer deg programmeringskonsept medan du prøver
-    å nå målet. \n(Utstyr du treng: Rolling Spider/Airborn Night Airborne Cargo)\n\nØving
-    og utføring\n- Programmer ei drone til å ta av, flippe fleire gongar og lande.\n-
-    Få ei drone til å fly framover i ei spesiell fart for ei spesifisert varigheit
-    til eit mål, og deretter flytt bakover til startpunktet.\n-Programmer ei Papegøye-drone
-    til å fly langs eit kvadrat og ei trekanta rute ved å snu til spesifikke retningsvinklar
-    og fly.\n- Bruk rørslesensorar på eininga di og programmerer ruter for å styre
-    ei drone. Til dømes kan du programmere drona til å fly til høgre når eininga di
-    blir tilta til høgre, fly framover når den blir tiltar framover. Når du ristar
-    på eninga di, kan drona då utføra ein flip i lufta!\n\nDet du kan lære deg\n-
-    Bli kjent med visuell prgrammering.\n- Lære kodekonsepta \"løkke\": ei kontrollsetning
-    som spesifiserer køyring som lar koden bli repetert fleire gongar.  \n- Lær to
-    relaterte fysikkkonsept: 1) Lineære forhold mellom fart, tid og avstand; 2) hastigheit,
-    ein vektor som skidra verdien til farta med ei retning. \n- Forstå retningsvinklar
-    (0 til 369 gradar)."
+  tutorial_ticklep_longdescription: 'Med Tickle, ein brukarvenleg programmeringsapp,
+    kan du lett programmere eiPapegøye-drone til å svømme på ulike måtar berre ved
+    å dra og sleppe kodeblokker saman for å lage ein kommando den skal følge. '
   tutorial_bbot_longdescription: "With these 3 one-hour coding activities, you don't
     need any programming knowledge or experience to teach your students about programming!
     You can teach programming in a fun and easy way. Go over the activities and download
@@ -3043,7 +3368,7 @@ nn:
     grade example, we have lesson plans on this concept scaffolded for K-5.
   tutorial_bbcgeo_longdescription: Standarbasert time for klassar frå 5. klasse. Ta
     med elevane til datalabben med teiknepapir og bygg appar med geometri.
-  tutorial_chspixel_longdescription: After learning about how graphics work, studetns
+  tutorial_chspixel_longdescription: After learning about how graphics work, students
     will create their own Color by Pixel programs. The lesson plan consists of four
     parts, each covering a specific topic. The entire five-part Color by Pixel lesson
     is designed to run approximately one hour.
@@ -3147,11 +3472,11 @@ nn:
     the clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!
   tutorial_hopgame_longdescription: "Keep the fun going! Use this project-based guide
-    to facilitate a game design workshop, hackathon, or in-class series. \n\nMake:
-    \n1. Cross the Road\n2. Geometry Jumper\n3. Quiz Creator\n4. Falling Bird \n5.
-    Subway Skaters\n6. Escape the Room\n\nEach includes discussion questions, differentiation,
-    and a video tutorial. \n\nStudents can build off your instructions to customize
-    their games. No prior experience required."
+    to facilitate a game design workshop, hackathon, or in-class series. Make Cross
+    the Road, Geometry Jumper, Quiz Creator, Falling Bird, Subway Skaters, and Escape
+    the Room. Each includes discussion questions, differentiation, and a video tutorial.
+    \n\nStudents can build off your instructions to customize their games. No prior
+    experience required."
   tutorial_icontrol_longdescription: |-
     This teacher facilitated lesson, adapted for the Hour of Code, provides pupils with an opportunity to explore physical programming through robotics - Sphero.
 
@@ -3241,7 +3566,7 @@ nn:
     chance to learn more.
   tutorial_elaseq_longdescription: Students will examine the concept of sequence in
     the context of reading and writing. Through grade level aligned ELA lessons, students
-    will apply their knowledge of sequence to farther their understanding of the role
+    will apply their knowledge of sequence to further their understanding of the role
     sequence plays in programming.
   tutorial_bbcmathi_longdescription: Standards-based lesson plan for grades 3-5. Take
     your kids to the computer lab with worksheets in hand, and build apps involving
@@ -3350,7 +3675,7 @@ nn:
     to human computer interaction (HCI) and in particular why so many gadgets areharder
     to use than need be. Design does make a difference and it is important that interfaces
     are evaluated to check they are easy to use.
-  tutorial_imathematician_longdescription: "This, teacher led, activity provides the
+  tutorial_imathematician_longdescription: "This teacher led activity provides the
     opportunity for pupils to use a cross curricular approach to computer science
     and mathematics.  \n\nPupils will create a computer program to solve a variation
     of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
@@ -3870,7 +4195,7 @@ nn:
   tutorial_codehspython_longdescription: Learn the basics of coding with the Python
     programming language by writing programs that you can interact with! This hour
     will cover printing, variables, math, and getting information from users. Write
-    a program that take in and stores data from a user and returns a unique response!
+    a program that takes in and stores data from a user and returns a unique response!
   tutorial_codehsjava_longdescription: Koding i Java med CodeHS
   tutorial_techioda_longdescription: This useful tutorial will interactively teach
     you how to be able to calculate the shortest path between two nodes in a graph
@@ -4108,9 +4433,9 @@ nn:
     are well suited for and finish the lesson by designing their own robot to solve
     a specific problem.
   tutorial_isavesanta_longdescription: In this teacher-led festive activity, adapted
-    for the Hour of Code, the children explore create a computer game using Scratch
-    to save Santa. They design algorithms, use conditional statements as well as test
-    and debug their work. Includes step-by-step lesson plan, pupil resources, support
+    for the Hour of Code, the children create a computer game using Scratch to save
+    Santa. They design algorithms, use conditional statements as well as test and
+    debug their work. Includes step-by-step lesson plan, pupil resources, support
     cards and pre-written program templates.
   tutorial_iorder_longdescription: This teacher led activity, adapted for the Hour
     of Code, develops computational thinking and coding skills using Scratch 2.0.
@@ -4721,18 +5046,17 @@ nn:
     eit program som får KIBO til å danse til musikken. Elelvar vil lære seg korleis
     å skape eit program til å uttrykke ein idé (i dette tilfellet ein dans), med eit
     fokus på å kunne sekvensiere.
-  tutorial_buildcharacters_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
+  tutorial_buildcharacters_longdescription: What are some character traits you can
+    identify in books or people you know? Design your own fuzz and use code to modify
+    its properties and bring your character to life! Featuring JavaScript for upper
     elementary.
   tutorial_designgames_longdescription: The most popular pre-reader app now includes
     a digital Maker Space! Make levels, design games, or build characters. Choose
     your activity and start creating with Kodable!  Featuring JavaScript for upper
     elementary.
-  tutorial_makelevels_longdescription: The most popular pre-reader app now includes
-    a digital Maker Space! Make levels, design games, or build characters. Choose
-    your activity and start creating with Kodable!  Featuring JavaScript for upper
-    elementary.
+  tutorial_makelevels_longdescription: Can you build a symmetrical maze? A maze with
+    right angles? Get creative and complete maze-building challenges with basic coding
+    concepts. Aligned with K-5 Common Core math.
   tutorial_wizard_longdescription: Journey into the world of Code Magic as a Code
     Wizard. Learn to create and cast spells to customize your castle.
   tutorial_mbscratchcards_longdescription: Connect the physical world of micro:bit
@@ -4770,30 +5094,29 @@ nn:
   tutorial_astropi_longdescription: Code a message and check the ambient air temperature
     on board the ISS using an online simulator of the Astro Pi computer's Sense HAT.
   tutorial_rgart_longdescription: Looking for an easy and intuitive way to teach your
-    students to code? RoboGarden STEAM Activities has fused code practicing with STEAM
-    learning and gamified missions in multiple activities. In the art activity, the
-    student understand color mixing concepts while using coding blocks to solve challenges
+    students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the art activity, the student
+    understand color mixing concepts while using coding blocks to solve challenges
     in the birthday party.
   tutorial_rgengineer_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the engineering
-    activity, the student learns basic robotics while using coding blocks to solve
-    challenges in the Christmas party.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the engineering activity, the
+    student learns basic robotics while using coding blocks to solve challenges in
+    the Christmas party.
   tutorial_rgmath_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the math activity,
-    the student practices counting, addition and subtraction while solving some coding
-    challenges.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the math activity, the student
+    practices counting, addition and subtraction while solving some coding challenges.
   tutorial_rgscience_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the science activity,
-    the student goes through a journey to the space solving multiple coding challenges
-    and know more about space elements and science facts.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the science activity, the student
+    goes through a journey to the space solving multiple coding challenges and know
+    more about space elements and science facts.
   tutorial_rgtech_longdescription: Looking for an easy and intuitive way to teach
-    your students to code? RoboGarden STEAM Activities has fused code practicing with
-    STEAM learning and gamified missions in multiple activities. In the technology
-    activity, the student goes through a journey to the volcanic islands solving multiple
-    coding challenges by understanding basic concepts of Technology.
+    your students to code? RoboGarden STEAM has fused code practicing with STEAM learning
+    and gamified missions in multiple activities. In the technology activity, the
+    student goes through a journey to the volcanic islands solving multiple coding
+    challenges by understanding basic concepts of Technology.
   tutorial_robotmagic3d_longdescription: Use your imagination to create an animated
     3D logo of your name, your favorite sports team or anything you want. Use code
     to make 3D models and letters come alive with fun. At the end you can download
@@ -4855,7 +5178,7 @@ nn:
     and area of a circle, but have you ever wondered where this number comes from
     or how to calculate it? In this coding activity you will randomly generate points
     similar to a very bad player shooting darts at a dart board. The percentage of
-    darts that land inside the circle can help us calculate Pi Then change the colors
+    darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
   tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
     Asteroids and Lunar Lander games is simpler than you might think? Did you know
@@ -4971,6 +5294,424 @@ nn:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_microsoftarcade_longdescription: Play fun arcade games, design your own
+    sprites, and learn the basics of coding your own game with MakeCode Arcade.
+  tutorial_csfirstunplugged_longdescription: No computer or internet? No problem.
+    Try the CS First Unplugged activities to explore how computer science can solve
+    problems like helping people stay connected while apart. 'Plugged in' Scratch
+    activities are available too!
+  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
+    word or explanation. Our silent teacher will give you several series of challenges
+    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
+    a hero in an epic adventure. You must use the power of coding to defeat a darkness
+    that has taken over the world! Along the way, you'll meet interesting characters
+    and travel to different lands, practicing coding concepts like sequences, loops,
+    debugging, and decomposition. In the end, you'll design a playable game that you
+    can share with your friends!
+  tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
+    relevant intersection of math, environmental science, and computer science. In
+    this Hour of Code activity, students will be guided through the construction of
+    their own climate clock. They will engage with objects, properties, variables,
+    functions, and loops, and customize their message to convey their message for
+    the world and their hopes for the future. '
+  tutorial_codemonkeyspace_longdescription: 'Write real code to help the monkey astronaut
+    catch bananas in space! '
+  tutorial_codespeakhappy_longdescription: Learn to program a meditation app that
+    transports you to your 'happy place.'
+  tutorial_grokimage_longdescription: Use the programming language Python to make
+    speedy changes to images. Make fun image editing programs and make your own image
+    filter!
+  tutorial_icomputelearn_longdescription: When you learn to code with iCompute you
+    program your own fantastic interactive stories, games, and animations. Following
+    our creative, fun, activities means that you will develop computational thinking
+    as well as coding skills!
+  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
+    can squash!
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Support
+    My Cause focuses on designing and coding a landing page that will collect data
+    from supporters of your favorite cause. #codeisyourvoice'
+  tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
+    an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
+  tutorial_bsdinspire_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them.They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The People
+    Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
+    have been an inspiration to you. #codeisyourvoice'
+  tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
+    down on his luck, and his fields have become a mess. But he's just obtained a
+    fancy new tractor with a repeating code system using loops that just might save
+    everything. Help learn how the tractor works to water all the crops in his fields.
+  tutorial_codeillusionmickey_longdescription: Embark on a magical coding adventure
+    with Mickey! Learn how to draw, color, and move shapes as you master the introduction
+    to Media Art using JavaScript.
+  tutorial_scigirlsquest_longdescription: 'In this online coding adventure, youth
+    take Subby the submarine through underwater challenges, using code to find various
+    items and collect scientific data on the ocean floor. '
+  tutorial_codespeakbreathe_longdescription: Learn to program meditation app that
+    will guide users through a mindful breathing exercise.
+  tutorial_vidcodeface_longdescription: Use a facetracking library to code your own
+    custom face filter, like the ones you use on social media.
+  tutorial_educodemaze_longdescription: Design a maze, complete with monsters and
+    locked passages. Use variables, loops, and strings to help your hero navigate
+    the world you've created.
+  tutorial_educoderace_longdescription: Learn computer science as you unleash the
+    racer in you! Invent and customize your very own car, all while gaining a deeper
+    understanding of objects and how video games are made.
+  tutorial_codespeakchatbot_longdescription: Learn how to code a chatbot, a computer
+    program you can have a conversation with, while learning about the famous women
+    pioneers of computer science.
+  tutorial_gamefrootgames_longdescription: Learn to code a real game like Super Mario
+    Bros. Students that are ready to go beyond Scratch and Tynker will be introduced
+    to real games industry practice, creative coding concepts, how to publish their
+    own unique game and start working towards a career in the games industry. The
+    tutorial is all about level design, choosing a character, animating and coding
+    your character to move around.
+  tutorial_codespeakgrandparent_longdescription: Learn to code a digital card to spread
+    joy to someone special in your life.
+  tutorial_educodekingdom_longdescription: The Kingdom is under attack! Plan powerful
+    defenses to help repel the invaders. Master the power of arrays in order to create
+    your very own wave of monsters in your own tower defense game!
+  tutorial_codehsdata_longdescription: Learn about the power of using data visualizations
+    to display data in meaningful and easy to understand ways. Use our graph generator
+    to create visually appealing graphs and learn how coding is used to create beautiful
+    data.
+  tutorial_educodecake_longdescription: Learn HTML as you bake a cake with chef Roland.
+    Shape and style your custom creation with your newfound knowledge of tags and
+    classes.
+  tutorial_ttsecond_longdescription: Can you deliver the Open Protocol? You've snuck
+    aboard the capital ship, and now you must evade the security drones long enough
+    to open access for all. Quickly examine conditional statements to find out whether
+    you're safe or not from the dastardly cybervision. If not, it's to the airlock!
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Trivia
+    Game Maker focuses on building an interactive trivia game where you also get to
+    come up with the trivia questions. #codeisyourvoice'
+  tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
+    Get creative while communicating with code in Scratch with CS First!
+  tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
+    into this beaver's natural habitat with a fun-packed coding activity that will
+    jump-start your coding education. Beavers can swim, collect wood, and build dams.
+    This little beaver needs your help. Use the simple blocks of code to complete
+    the dam in the lake so the water remains calm, build a house, and make smoothies!
+  tutorial_codestersdistance_longdescription: Learn the basics of coding in Python,
+    then create a program that calculates the distance between two sprites to make
+    sure they are social distancing or need to wear a mask.
+  tutorial_itchspace_longdescription: This tutorial takes you through the creation
+    of a classic Space Invaders game using the Scratch MIT programming language. Subscribe
+    to the RokCoder YouTube channel for more Scratch-based videos and tutorials! Each
+    video is a bite-sized tutorial (approximately ten minutes in length) that contains
+    its own specific end goals. The final result is a high quality Scratch arcade
+    game.
+  tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
+    using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
+  tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
+    healthy food decisions.
+  tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
+    shark chasing and eating fish disrupted when a diver is eaten accidentally.
+  tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. ''The My Favourites
+    Website focuses on creating a webpage of the top 3 things you are interested in
+    or love doing. #codeisyourvoice'
+  tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
+    to record and reflect on your life right now.
+  tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
+    own augmented reality virtual space.
+  tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
+    about loops and conditionals within loops
+  tutorial_ttrace_longdescription: By calling functions and designing classes, players
+    program their own race car to be fast, nimble, and powerful; during races, they
+    can then hack their competitors' vehicles to scramble their controls.
+  tutorial_plethora_longdescription: 'In this Plethora activity you will solve visual
+    fun challenges and learn the concepts of cause and effect and user interaction. '
+  tutorial_educodesecret_longdescription: Explore the worlds of secrets with Agent
+    Smith as you dive deeper into learning if statements, strings, for-in loops. Help
+    Agent Smith find the culprits and configure the Agency's operating system for
+    their new users with Python.
+  tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
+    also learn how to calculate how much you need to turn for any shape.
+  tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
+    creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
+    continues to worsen. Luckily, you can make your voice heard with code through
+    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
+    you can make a second video about any subject you care about! Learn to use loops,
+    sine waves and customized emojis to make a unique project.
+  tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
+    and Machine Learning, as well as programing your own chatbot!
+  tutorial_educodebasics_longdescription: Learn some programming fundamentals and
+    create your own game in the process!
+  tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
+    artists and build their own Online Shop mockup, using HTML. '
+  tutorial_htmlacademyphp_longdescription: Meet Dumpo the Little Elephant, a senior
+    programmer at a web design studio, who is developing an online store. Together
+    you will learn the basics of PHP in an engaging way. You will work with web scripts
+    and learn the variables, add PHP-scripts into the layout and interact with databases
+    while creating a true-to-life web project.
+  tutorial_gamefrootdistance_longdescription: 'In COVID-19: Stop the Spread, you can
+    modify the ''Staying home'' factor and code a simple news clicker. The activity
+    illustrates how social distancing has a direct impact on how fast a virus like
+    COVID-19 can spread. Students and teachers will gain a small insight into virus
+    science, the effects a virus can have on society, and at the same time level up
+    their digital fluency skills.'
+  tutorial_codesterscovid_longdescription: Learn the basics of coding in Python while
+    creating your own PSA about how we can stop the spread of COVID-19. Design your
+    own animated interactive PSA to share critical information about the importance
+    of social distancing, wearing a mask, quarantining, and other measures.
+  tutorial_ttbunker_longdescription: You found The Bunker, and all its secrets will
+    be yours, once you crack its encryption. An army approaches, and you must hold
+    the perimeter using the power of programming. Code individual towers, setting
+    range, damage, and more special powers by adding new lines of code and changing
+    values. Survive long enough to learn how classes and instances can make you even
+    more powerful.
+  tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
+    tasks and learn all about computational thinking.
+  tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Jokes and
+    Riddles focuses on creating a set of interactive cards that contain your favorite
+    jokes and riddles and the answers! #codeisyourvoice'
+  tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
+    varying the health of a forest and levels of deforestation impact trees, wildlife
+    and the amount of CO2 absorbed. You should already know how Scratch coordinates
+    and variables work.
+  tutorial_codestersunity_longdescription: Learn the basics of coding in Python including
+    lists, loops, and sprites. Then create a mural using a loop to access each sprite
+    stored in a list.
+  tutorial_codesterssoccer_longdescription: Learn the basics of coding in Python,
+    then create a program that shoots a soccer ball into the goal. To aim your shot
+    you'll first need to estimate the slope of the line. Good luck!
+  tutorial_breakoutlock_longdescription: 'Haspy the Robot needs your help! She needs
+    your knowledge of loops, algorithms, and coding to help her fix Lockit''s code
+    and reboot her system. '
+  tutorial_thunkablemask_longdescription: Learn how to build a mobile app that gives
+    you points for knowing how to wear your mask correctly!
+  tutorial_cafarming_longdescription: Computer science can help feed a hungry world.
+    Farmers are using technology to grow food in smarter and more sustainable ways.
+    Agribots and drones can monitor, water, and spray crops, and even tackle those
+    pesky weeds! Learn about how AI, Computer Vision, and the Internet of Things are
+    used on the farm.
+  tutorial_blocksmithyeti_longdescription: Oh no! Someone trapped the Yeti! Only YOU
+    and your programmable smart cannon can save the Yeti and feed their friends. Students
+    will use JavaScript to save the Yeti with this fun interactive self-paced lesson.
+  tutorial_codecapture_longdescription: 'Take your first steps into the world of programming
+    with JavaScript, using just pen-and-paper and your mobile phone! '
+  tutorial_codehslitter_longdescription: 'Learn how you can use programming to help
+    solve one of the world''s biggest problems: litter and waste! In this Choose-Your-Own-Adventure
+    Hour of Code, you have the choice between the basics of Python or the basics of
+    Web Design. Whichever you choose, you will explore how you can use computer science
+    to decrease the amount of litter in your community.'
+  tutorial_bsdocean_longdescription: Life below Water sheds light on a pressing issue
+    that we face nowadays - our environment. This project focuses on guiding you to
+    code your very own webpage on protecting our waters.
+  tutorial_itchplatformer_longdescription: An easy to follow tutorial for how to create
+    a simple platformer game using Scratch.
+  tutorial_codejika_longdescription: A great introduction to coding using HTML and
+    CSS. Code a few lines, see immediate output without getting caught up in the Hows
+    and Whys by creating a nice landing page with a two-color gradient background,
+    name and website launch date.
+  tutorial_gamefrootclicker_longdescription: Learners code their own Clicker Game
+    and in the process learn about variables, different data types, conditional logic,
+    comparative operators, and gain some valuable insights into how professional game
+    developers design and make real games. By the end of the tutorial you will have
+    coded different variable types, published a game, and engaged with computer science
+    in an indigenous context.
+  tutorial_rmagicequity_longdescription: 'Explore concepts related to reducing inequality
+    with code: limited resources, equality, equity and liberation. Use variables and
+    functions in a self guided block environment. Finish by animating the 3D actors.'
+  tutorial_ttfreestyle_longdescription: You're the choreographer and director of a
+    new music video! Type real code to place and control dancers, scenery, and more.
+    Just make sure to capitalize and punctuate correctly, otherwise the whole thing
+    will just be static.
+  tutorial_ozobotcolor2_longdescription: Students will learn the basic functionality
+    of Ozobot. Students will learn how to draw Color Codes Ozobot can read.
+  tutorial_ozobotcolor3_longdescription: Students will learn how to program the bot
+    to travel left, right, and straight with Color Codes.
+  tutorial_clcarbon_longdescription: A python lesson plan that will teach students
+    how to make a carbon footprint calculator that calculates footprint based on a
+    short quiz about daily life, then gives comparison metrics (ie this is the same
+    amount of carbon as xxxx), and suggests ways to be more eco-friendly.
+  tutorial_kodablebasics_longdescription: No computer? No problem! Learn basic programming
+    skills and practice using core coding commands without the use of a device.
+  tutorial_scigirlscc_longdescription: Help your students learn to write pseudocode!
+    Computer programmers often start projects by using everyday language to write
+    out what they want to happen in their code–this is called pseudocode.Youth will
+    work in groups to write pseudocode for a simple movement or dance move.
+  tutorial_irobotpicture_longdescription: Robots have lots of sensors that work together
+    to help the robot understand everything around it. Just like sensors, our friends
+    can often see, hear, feel or understand things that we cannot. In this activity,
+    work together to help decode secret messages and crack the code!
+  tutorial_kcjmyself_longdescription: In this activity, you'll learn how to use Scratch
+    to code an animation all about you! Design a custom character to represent yourself,
+    make it move around, and add different backdrops to show off your hometown. This
+    project is simple enough for kids to complete by themselves or with support from
+    a grown up.
+  tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
+    an algorithm as a set of step-by-step directions. Students learn to create, test,
+    and fix an algorithm to complete a specific task. '
+  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
+    the students will become engineers, learning the steps of the Engineering Design
+    Process. They will create models out of craft and recycled materials, then they
+    will test the sturdiness of their models by dropping them from ankle height. This
+    is an unplugged activity; KIBO robots are optional.
+  tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
+    of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
+    for the bot to follow.
+  tutorial_scigirlspixels_longdescription: 'In this unplugged activity, you will learn
+    what a pixel is and how to send a simple black and white image to a friend! '
+  tutorial_kcjheroines_longdescription: In this activity, you'll learn about different
+    Canadian women who have made history. Using Scratch, you'll learn how to code
+    a video game celebrating their lives and accomplishments. Choose a heroine, customize
+    their costume and backdrop, code movements and goals for your game, and keep score.
+    This project is simple enough for kids to complete by themselves or with support
+    from a grown up.
+  tutorial_ozobotvalue_longdescription: Students will use their Ozobot to randomly
+    select a place value, identify the same place value in a three-digit number, and
+    write out the number.
+  tutorial_icodebytes_longdescription: Learn computer science without tech! Fun unplugged
+    computing activities for children aged 5-7 to do in class or at home with their
+    families. The activities help develop computational thinking skills in a really
+    fun way. Divided into the fundamental principles of computer science, and involve
+    creating algorithms, thinking logically, spotting patterns and finding or making
+    rules.
+  tutorial_clfashion2_longdescription: Are you a fashion conscious data scientist
+    with an interest in code? Join in the Fashionista of Data Science classes to learn
+    how coding & fashion go hand-in-hand! We will use SQL code along with data science
+    to investigate marketing, line styles, and store operations.
+  tutorial_ai4all_longdescription: 'This Byte of AI is meant to be a quick and fun
+    teacher-facilitated way to begin to become familiar with some core ideas of modern
+    AI including: how data becomes output in an AI model, how human biases enter datasets,
+    and how AI can be used in diverse fields including art and creativity. Students
+    learn these things by exploring drawing in Google Quick, Draw!'
+  tutorial_cldata_longdescription: 'Discover data science, one of the most valuable
+    skills, and see the world! Does data science sound dry and scary, like math? Fear
+    not. This introductory class will show you that you are already experts of data
+    and data science is full of fun and interesting insights related to topics such
+    as soccer, music, art, and your favorite books. Materials ready for in person
+    or remote learning settings. '
+  tutorial_spheroinputs_longdescription: 'This activity will get you thinking about
+    the common computer science coding concept of inputs and outputs and how this
+    idea relates to using computer science for good. '
+  tutorial_edisoncount_longdescription: 'Introduce the key computational concepts
+    of inputs and outputs using Edison robots and the block-based programming language
+    EdBlocks in this student led activity. Utilize the Edison robot''s drive function
+    through a set of progressive programming tasks. Creating programs for the robot
+    to ''trace'' requires the application of sequential thinking and an understanding
+    of the input-process-output cycle. '
+  tutorial_spheroloops_longdescription: 'This activity will get you thinking about
+    the common computer science coding concept of loops and how this concept relates
+    to using computer science for good. '
+  tutorial_kiboprogram_longdescription: In this lesson, children will learn about
+    sequencing in programming and about the symbols that make up a programming language
+    like KIBO's. Students will create their own programming symbols and act out programs
+    with their own movement. Finally, they can translate these movement programs into
+    programs for KIBO.
+  tutorial_hellorubycsin60_longdescription: 'Have you ever wondered what travels inside
+    the wires of your computer? Or why computer parts look like a tiny city? Or what
+    really is an algorithm? These 30 self-paced one minute videos are aimed for 5-9
+    year olds, followed by an activity the kids can complete at home. Topics include
+    code, hardware, networks, AI and other interesting ideas. '
+  tutorial_clfashion1_longdescription: Are you a fashion conscious data scientist
+    with an interest in code? Join in the Fashionista of Data Science classes to learn
+    how coding & fashion go hand-in-hand! We will use SQL code along with data science
+    to investigate marketing, line styles, and store operations.
+  tutorial_irobottraffic_longdescription: Traffic signals are a staple of safety in
+    our everyday lives. Code your own traffic light with the Root robot and learn
+    about the inventor!
+  tutorial_edisonmystery_longdescription: Kick-start student's exploration of using
+    Edison's line tracker using Edison robots and the Scratch-based programming language
+    EdScratch in this student led activity. Students first become familiar with the
+    Edison robot's line tracking sensor technology and experiment with the red LED
+    on different colored surfaces. They will then move on to mastering a mystery line
+    using the concept of algorithms.
+  tutorial_microbitseaturtles_longdescription: Create a prototype of a low-power,
+    red LED beach light that can be used for lighting on beach paths which is also
+    safe for sea turtles.
+  tutorial_ozobotknow_longdescription: In this lesson, students will be introduced
+    to the hardware and robotics components of Ozobot Evo.
+  tutorial_imagilabs_longdescription: 'Program a blinking heart, a rocketship taking
+    off, your name, or anything your imagination comes up with! To start off, we''ll
+    teach you how to program a heart in your favourite color and then make it blink
+    to the rhythm of your favorite song. Join our community of imagiCoders to share
+    and exchange designs. Upload your creations on your imagiCharm so you can proudly
+    wear your code wherever you go! '
+  tutorial_irobotsimulator_longdescription: Learn how to create and download coding
+    projects with this activity packet! Solve all puzzles with the Root simbot in
+    the virtual arena to reveal the secret message at the end!
+  tutorial_irobotkind_longdescription: Our robot is still learning how to make kind
+    choices when playing with friends. In this game, help Root practice by making
+    four kind decisions in a row. If Root makes a bad choice, it has to start all
+    the way at the beginning again! Let's play together!
+  tutorial_firiavirtual_longdescription: Learn Python programming with a powerful
+    3D robotics simulator. You'll complete challenging missions in a virtual environment
+    with realistic physics. Missions teach you the code to control motors, LEDs, and
+    other peripherals on CodeBot. And Sandbox mode lets you get creative with unlimited
+    Python coding possibilities. It's easy to get started with CodeSpace Simulation!
+  tutorial_irobotguesscode_longdescription: Put a new spin on Pictionary through code!
+    Students can use code to make predictions about what pictures, songs, or words
+    the Root SimBot will create. Code your own Pictionary creation, too!
+  tutorial_ozobotnouns_longdescription: In this lesson, students will identify the
+    correct way to spell and use irregular plural nouns and use Color Codes to program
+    their Ozobot to move to the correct irregular plural nouns by either turning left
+    or right and use the noun in a sentence.
+  tutorial_nasa3d_longdescription: Learn about exploding stars, 3D models and codeblocks!  This
+    spacey activity takes you through the basics of 3D modeling in astronomy using
+    the free browser-based Tinkercad. Students can progress from creating simple 3D
+    shapes to working with actual NASA data on exploded stars, testing in augmented
+    reality, and using loops and time-based changes with codeblocks.
+  tutorial_blupants_longdescription: Train a real autonomous robot to pick up blocks
+    and deploy them to the goal by navigating through an obstacle course. Start with
+    drag-and-drop interface, and advance to Python as you get more experienced.
+  tutorial_legodance_longdescription: Synchronize motor movements of a break dancer
+    to keep in rhythm with light and beats.
+  tutorial_nearpodcoding_longdescription: In this 25-30 minute Nearpod featuring Flocabulary
+    topic spark, students are introduced to coding through a hip hop video and Nearpod's
+    signature interactive features. This lesson features the Flocabulary video Coding.
+  tutorial_kcjplastic_longdescription: We're challenging you to use data visualization
+    to develop a plastic pollution solution! Discover where plastic waste comes from
+    and why it has become a global problem. Then reflect on your own plastic use,
+    estimate how much waste you could reduce over time, and design an invention or
+    alternative that could help. Kids can complete this project by themselves or with
+    support from a grown up.
+  tutorial_legojourney_longdescription: 'Journeys are exciting!  Challenge students
+    to remix our Grasshopper Journey project in order to create a new journey and
+    find different ways for a SPIKE Prime inspired virtual grasshopper to move using
+    Scratch 3.0! In addition to CS skills, this teacher facilitated activity can also
+    be used to support areas such as language arts, science and the arts. '
+  tutorial_legohopper_longdescription: Design multiple prototypes to find the most
+    effective way to move a robot without using wheels.
+  tutorial_catrobatembroidery_longdescription: Kod designen din på Android-telefonen
+    din og sy den på T-skjorten, buksen, gymbag eller sko!
+  tutorial_irobotphone_longdescription: In this coding challenge, students will work
+    together remotely to create a collective program that draws a picture. Modeled
+    after the classic game of Telephone, students will receive, remix, and pass along
+    code down the telephone chain. Will your team fulfill the Picture Goal by the
+    time you reach the end?
+  tutorial_codeguppydraw_longdescription: Quick introduction to text-based coding
+    using fun and engaging type-in JavaScript programs
+  tutorial_codejumper_longdescription: In this lesson from the Code Jumper curriculum,
+    learners explore networks in a hands-on unplugged experience using typical materials
+    found in a classroom. The theme for this lesson is around messages of kindness
+    to others. This lesson has been specifically designed to be accessible for students
+    with visual impairments.
+  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
+    the same space but seldom interacted with each other. Now you can use the power
+    of code to bring the two villages together. Players will experience empathy and
+    compassion for their neighbors, learn cooperation and inclusion, and embrace the
+    diversity that makes us all uniquely special.
   tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
     French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
     Malay, Polish, Portuguese, and 10 more!
@@ -5648,6 +6389,134 @@ nn:
   tutorial_duckrace_language: Engelsk, tysk
   tutorial_allcancodeapps_language: Norsk Nynorsk
   tutorial_n2y_language: Norsk Nynorsk
+  tutorial_microsoftarcade_language: Norsk Nynorsk
+  tutorial_csfirstunplugged_language: English, Spanish (Mexico)
+  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
+    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
+    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
+    Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodedate_language: Norsk Nynorsk
+  tutorial_codemonkeyspace_language: English, English (UK), Hebrew
+  tutorial_codespeakhappy_language: Norsk Nynorsk
+  tutorial_grokimage_language: English, English (UK)
+  tutorial_icomputelearn_language: Norsk Nynorsk
+  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
+    (Mexico)
+  tutorial_bsdcause_language: Norsk Nynorsk
+  tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_bsdinspire_language: Norsk Nynorsk
+  tutorial_tttractor_language: Norsk Nynorsk
+  tutorial_codeillusionmickey_language: Norsk Nynorsk
+  tutorial_scigirlsquest_language: Norsk Nynorsk
+  tutorial_codespeakbreathe_language: Norsk Nynorsk
+  tutorial_vidcodeface_language: Norsk Nynorsk
+  tutorial_educodemaze_language: English, English (UK)
+  tutorial_educoderace_language: English, English (UK)
+  tutorial_codespeakchatbot_language: Norsk Nynorsk
+  tutorial_gamefrootgames_language: Norsk Nynorsk
+  tutorial_codespeakgrandparent_language: Norsk Nynorsk
+  tutorial_educodekingdom_language: English, English (UK)
+  tutorial_codehsdata_language: Norsk Nynorsk
+  tutorial_educodecake_language: English, English (UK)
+  tutorial_ttsecond_language: Norsk Nynorsk
+  tutorial_bsdtrivia_language: Norsk Nynorsk
+  tutorial_csfirstdialogue_language: English, Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
+    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codestersdistance_language: Norsk Nynorsk
+  tutorial_itchspace_language: Norsk Nynorsk
+  tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_codespeakmeal_language: Norsk Nynorsk
+  tutorial_itchfish_language: Norsk Nynorsk
+  tutorial_bsdwebsite_language: Norsk Nynorsk
+  tutorial_codespeaktime_language: Norsk Nynorsk
+  tutorial_itchwebcam_language: Norsk Nynorsk
+  tutorial_itchball_language: Norsk Nynorsk
+  tutorial_ttrace_language: Norsk Nynorsk
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
+  tutorial_educodesecret_language: English, English (UK)
+  tutorial_itchshapes_language: Norsk Nynorsk
+  tutorial_codeguppytext_language: Norsk Nynorsk
+  tutorial_vidcodeplastiche_language: English, Hebrew
+  tutorial_educativechatbot_language: Norsk Nynorsk
+  tutorial_educodebasics_language: English, English (UK)
+  tutorial_codehsdesign_language: Norsk Nynorsk
+  tutorial_htmlacademyphp_language: Norsk Nynorsk
+  tutorial_gamefrootdistance_language: Norsk Nynorsk
+  tutorial_codesterscovid_language: Norsk Nynorsk
+  tutorial_ttbunker_language: Norsk Nynorsk
+  tutorial_cuttle_language: Norsk Nynorsk
+  tutorial_bsdjokes_language: Norsk Nynorsk
+  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
+    (Mexico)
+  tutorial_codestersunity_language: Norsk Nynorsk
+  tutorial_codesterssoccer_language: Norsk Nynorsk
+  tutorial_breakoutlock_language: Norsk Nynorsk
+  tutorial_thunkablemask_language: Norsk Nynorsk
+  tutorial_cafarming_language: Norsk Nynorsk
+  tutorial_blocksmithyeti_language: Norsk Nynorsk
+  tutorial_codecapture_language: English, English (UK)
+  tutorial_codehslitter_language: English, English (UK)
+  tutorial_bsdocean_language: Norsk Nynorsk
+  tutorial_itchplatformer_language: Norsk Nynorsk
+  tutorial_codejika_language: English, English (UK)
+  tutorial_gamefrootclicker_language: Norsk Nynorsk
+  tutorial_rmagicequity_language: English, English (UK)
+  tutorial_ttfreestyle_language: Norsk Nynorsk
+  tutorial_ozobotcolor2_language: Norsk Nynorsk
+  tutorial_ozobotcolor3_language: Norsk Nynorsk
+  tutorial_clcarbon_language: English, English (UK)
+  tutorial_kodablebasics_language: Norsk Nynorsk
+  tutorial_scigirlscc_language: English, Spanish (Mexico)
+  tutorial_irobotpicture_language: Norsk Nynorsk
+  tutorial_kcjmyself_language: Engelsk, fransk
+  tutorial_nearpodalgorithms_language: Norsk Nynorsk
+  tutorial_kibodrop_language: English, English (UK)
+  tutorial_ozobotcolor1_language: Norsk Nynorsk
+  tutorial_scigirlspixels_language: English, Spanish (Mexico)
+  tutorial_kcjheroines_language: Engelsk, fransk
+  tutorial_ozobotvalue_language: Norsk Nynorsk
+  tutorial_icodebytes_language: Norsk Nynorsk
+  tutorial_clfashion2_language: English, English (UK)
+  tutorial_ai4all_language: Norsk Nynorsk
+  tutorial_cldata_language: English, English (UK)
+  tutorial_spheroinputs_language: Norsk Nynorsk
+  tutorial_edisoncount_language: Norsk Nynorsk
+  tutorial_spheroloops_language: Norsk Nynorsk
+  tutorial_kiboprogram_language: English, English (UK)
+  tutorial_hellorubycsin60_language: English, English (UK)
+  tutorial_clfashion1_language: English, English (UK)
+  tutorial_irobottraffic_language: Norsk Nynorsk
+  tutorial_edisonmystery_language: Norsk Nynorsk
+  tutorial_microbitseaturtles_language: English, English (UK)
+  tutorial_ozobotknow_language: Norsk Nynorsk
+  tutorial_imagilabs_language: English, English (UK)
+  tutorial_irobotsimulator_language: Norsk Nynorsk
+  tutorial_irobotkind_language: English, English (UK)
+  tutorial_firiavirtual_language: English, English (UK)
+  tutorial_irobotguesscode_language: Norsk Nynorsk
+  tutorial_ozobotnouns_language: Norsk Nynorsk
+  tutorial_nasa3d_language: Norsk Nynorsk
+  tutorial_blupants_language: Norsk Nynorsk
+  tutorial_legodance_language: Norsk Nynorsk
+  tutorial_nearpodcoding_language: Norsk Nynorsk
+  tutorial_kcjplastic_language: Engelsk, fransk
+  tutorial_legojourney_language: Norsk Nynorsk
+  tutorial_legohopper_language: Norsk Nynorsk
+  tutorial_catrobatembroidery_language: Arabisk, bengalsk, bosnisk, forenklet kinesisk,
+    kroatisk, tsjekkisk, engelsk, engelsk (Storbritannia), fransk, tysk, hindi, indonesisk,
+    italiensk, japansk, koreansk, norsk (nynorsk), annet, polsk, portugisisk (Brasil),
+    portugisisk ( Portugal), russisk, serbisk (kyrillisk), serbisk (latin), slovakisk,
+    spansk (Spania, Mexico), swahili, svensk, tamil, thai, tyrkisk, urdu (Pakistan),
+    vietnamesisk
+  tutorial_irobotphone_language: English, English (UK)
+  tutorial_codeguppydraw_language: English, English (UK)
+  tutorial_codejumper_language: Norsk Nynorsk
+  tutorial_meeempathy_language: Norsk Nynorsk
   tutorial_dance2019_string_detail_grades: Frå 2. klasse
   tutorial_danceparty_string_detail_grades: Frå 2. klasse
   tutorial_chibitronics_string_detail_grades: Grades 2-5
@@ -5937,7 +6806,7 @@ nn:
   tutorial_grokem_string_detail_grades: Frå 6. klasse
   tutorial_kodmaze_string_detail_grades: Frå ikkje-lesar til 5. klasse
   tutorial_codestersa_string_detail_grades: Frå 2. - 8. klasse
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Frå 8. klasse
   tutorial_raspipong_string_detail_grades: Frå 8. klasse
@@ -6227,10 +7096,126 @@ nn:
   tutorial_duckrace_string_detail_grades: Frå 2. klasse
   tutorial_allcancodeapps_string_detail_grades: Frå 6. klasse
   tutorial_n2y_string_detail_grades: Pre-reader+
+  tutorial_microsoftarcade_string_detail_grades: Frå 2. klasse
+  tutorial_csfirstunplugged_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_toxicodepython_string_detail_grades: Frå 6. klasse
+  tutorial_codecombatozaria_string_detail_grades: Frå 6. klasse
+  tutorial_vidcodedate_string_detail_grades: Frå 6. klasse
+  tutorial_codemonkeyspace_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_codespeakhappy_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_grokimage_string_detail_grades: Frå 6. klasse
+  tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
+  tutorial_rpstress_string_detail_grades: Frå 2. klasse
+  tutorial_bsdcause_string_detail_grades: Frå 8. klasse
+  tutorial_vidcodeanimoji_string_detail_grades: Frå 2. klasse
+  tutorial_vidcodeanimojies_string_detail_grades: Frå 2. klasse
+  tutorial_bsdinspire_string_detail_grades: Frå 6. klasse
+  tutorial_tttractor_string_detail_grades: Frå 6. klasse
+  tutorial_codeillusionmickey_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_scigirlsquest_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_codespeakbreathe_string_detail_grades: Frå 2. klasse
+  tutorial_vidcodeface_string_detail_grades: Frå 6. klasse
+  tutorial_educodemaze_string_detail_grades: Frå 6. klasse
+  tutorial_educoderace_string_detail_grades: Frå 6. klasse
+  tutorial_codespeakchatbot_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_gamefrootgames_string_detail_grades: Frå 6. klasse
+  tutorial_codespeakgrandparent_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_educodekingdom_string_detail_grades: Frå 6. klasse
+  tutorial_codehsdata_string_detail_grades: Frå 8. klasse
+  tutorial_educodecake_string_detail_grades: Frå 6. klasse
+  tutorial_ttsecond_string_detail_grades: Frå 6. klasse
+  tutorial_bsdtrivia_string_detail_grades: Frå 6. klasse
+  tutorial_csfirstdialogue_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_codemonkeybeaver_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_codestersdistance_string_detail_grades: Frå 6. klasse
+  tutorial_itchspace_string_detail_grades: Frå 6. klasse
+  tutorial_vidcodemagic_string_detail_grades: Frå 2. klasse
+  tutorial_vidcodemagices_string_detail_grades: Frå 2. klasse
+  tutorial_codespeakmeal_string_detail_grades: Frå 6. klasse
+  tutorial_itchfish_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_bsdwebsite_string_detail_grades: Frå 6. klasse
+  tutorial_codespeaktime_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_itchwebcam_string_detail_grades: Frå 6. klasse
+  tutorial_itchball_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_ttrace_string_detail_grades: Frå 6.-8. klasse
+  tutorial_plethora_string_detail_grades: Frå 2. klasse
+  tutorial_educodesecret_string_detail_grades: Frå 6. klasse
+  tutorial_itchshapes_string_detail_grades: Frå 6. klasse
+  tutorial_codeguppytext_string_detail_grades: Frå 6.-8. klasse
+  tutorial_vidcodeplastiche_string_detail_grades: Frå 6. klasse
+  tutorial_educativechatbot_string_detail_grades: Frå 8. klasse
+  tutorial_educodebasics_string_detail_grades: Frå 6. klasse
+  tutorial_codehsdesign_string_detail_grades: Frå 6. klasse
+  tutorial_htmlacademyphp_string_detail_grades: Frå 6. klasse
+  tutorial_gamefrootdistance_string_detail_grades: Frå 2. klasse
+  tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
+  tutorial_ttbunker_string_detail_grades: Frå 6.-8. klasse
+  tutorial_cuttle_string_detail_grades: Frå 6. klasse
+  tutorial_bsdjokes_string_detail_grades: Frå 6.-8. klasse
+  tutorial_rptree_string_detail_grades: Frå 6. klasse
+  tutorial_codestersunity_string_detail_grades: Frå 6. klasse
+  tutorial_codesterssoccer_string_detail_grades: Frå 6. klasse
+  tutorial_breakoutlock_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_thunkablemask_string_detail_grades: Frå 6. klasse
+  tutorial_cafarming_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_blocksmithyeti_string_detail_grades: Frå 8. klasse
+  tutorial_codecapture_string_detail_grades: Frå 6. klasse
+  tutorial_codehslitter_string_detail_grades: Frå 6.-8. klasse
+  tutorial_bsdocean_string_detail_grades: Frå 6.-8. klasse
+  tutorial_itchplatformer_string_detail_grades: Frå 6. klasse
+  tutorial_codejika_string_detail_grades: Frå 6. klasse
+  tutorial_gamefrootclicker_string_detail_grades: Frå 6.-8. klasse
+  tutorial_rmagicequity_string_detail_grades: Frå 6.-8. klasse
+  tutorial_ttfreestyle_string_detail_grades: Frå 6.-8. klasse
+  tutorial_ozobotcolor2_string_detail_grades: Frå 2. klasse
+  tutorial_ozobotcolor3_string_detail_grades: Frå 2. klasse
+  tutorial_clcarbon_string_detail_grades: Frå 6. klasse
+  tutorial_kodablebasics_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_scigirlscc_string_detail_grades: Frå 2. klasse
+  tutorial_irobotpicture_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_kcjmyself_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_nearpodalgorithms_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_kibodrop_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_ozobotcolor1_string_detail_grades: Frå 2. klasse
+  tutorial_scigirlspixels_string_detail_grades: Frå 2. klasse
+  tutorial_kcjheroines_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_ozobotvalue_string_detail_grades: Grades 2-5
+  tutorial_icodebytes_string_detail_grades: Pre-reader
+  tutorial_clfashion2_string_detail_grades: Frå 6. klasse
+  tutorial_ai4all_string_detail_grades: Frå 6. klasse
+  tutorial_cldata_string_detail_grades: Frå 6. klasse
+  tutorial_spheroinputs_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_edisoncount_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_spheroloops_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_kiboprogram_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_hellorubycsin60_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_clfashion1_string_detail_grades: Frå 6. klasse
+  tutorial_irobottraffic_string_detail_grades: Grades 2-5
+  tutorial_edisonmystery_string_detail_grades: Frå 6.-8. klasse
+  tutorial_microbitseaturtles_string_detail_grades: Frå 6.-8. klasse
+  tutorial_ozobotknow_string_detail_grades: Frå 2. klasse
+  tutorial_imagilabs_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_irobotsimulator_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_irobotkind_string_detail_grades: Frå ikkje-lesar til 5. klasse
+  tutorial_firiavirtual_string_detail_grades: Frå 6. klasse
+  tutorial_irobotguesscode_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_ozobotnouns_string_detail_grades: Grades 2-5
+  tutorial_nasa3d_string_detail_grades: Frå 6. klasse
+  tutorial_blupants_string_detail_grades: Frå 6. klasse
+  tutorial_legodance_string_detail_grades: Frå 6.-8. klasse
+  tutorial_nearpodcoding_string_detail_grades: Frå 8. klasse
+  tutorial_kcjplastic_string_detail_grades: Frå 2. klasse
+  tutorial_legojourney_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_legohopper_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_catrobatembroidery_string_detail_grades: Frå 6. klasse
+  tutorial_irobotphone_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_codeguppydraw_string_detail_grades: Frå 6.-8. klasse
+  tutorial_codejumper_string_detail_grades: Frå 2. - 8. klasse
+  tutorial_meeempathy_string_detail_grades: Frå 2. klasse
   tutorial_dance2019_string_platforms: Alle moderne nettlesarar, Android nettbrett,
     iPad, Fråkobla
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_chibitronics_string_platforms: All modern browsers
+  tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
   tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_star-wars_string_platforms: All modern browsers, Android tablet, iPad,
@@ -6306,7 +7291,7 @@ nn:
     Firefox, Safari, Android tablet, iPad
   tutorial_cmgame_string_platforms: All modern browsers
   tutorial_codesters_string_platforms: do-not-show
-  tutorial_qrm_string_platforms: All modern browsers
+  tutorial_qrm_string_platforms: All modern browsers, Screen reader
   tutorial_texas-instruments_string_platforms: TI-84, TI-83 graphing calculators
   tutorial_cajava_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -6643,7 +7628,7 @@ nn:
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
   tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -6776,26 +7761,38 @@ nn:
   tutorial_blockscadpizza_string_platforms: All modern browsers
   tutorial_blockscadsugar_string_platforms: All modern browsers
   tutorial_bsgridlight_string_platforms: All modern browsers
-  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_bpartscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpartvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpenglishscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpenglishvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bphealthscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bphealthvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmathvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bpmlkvid_string_platforms: All modern browsers, Android tablet, iPad, Screen
+    reader
   tutorial_bpsafetyscratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsafetyvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_bpsciencescratch_string_platforms: All modern browsers, Android tablet,
-    iPad
-  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad
+    iPad, Screen reader
+  tutorial_bpsciencevid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechscratch_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_matariki_string_platforms: Alle moderne nettlesarar, Android nettbrett,
     iPad, Fråkobla
@@ -6825,9 +7822,9 @@ nn:
   tutorial_codesparkcreate_string_platforms: All modern browsers, Android tablet,
     iPad, Android phone, iPhone
   tutorial_hardvsoft_string_platforms: Unplugged
-  tutorial_codestersecard_string_platforms: All modern browsers
-  tutorial_codesterslogo_string_platforms: All modern browsers
-  tutorial_codesterstshirt_string_platforms: All modern browsers
+  tutorial_codestersecard_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterslogo_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterstshirt_string_platforms: All modern browsers, Screen reader
   tutorial_codewards_string_platforms: All modern browsers
   tutorial_olympics_string_platforms: All modern browsers
   tutorial_codinismhero_string_platforms: Android tablet, Android phone
@@ -6841,10 +7838,10 @@ nn:
   tutorial_gamefrootsquid_string_platforms: All modern browsers, iPad
   tutorial_duckpiano_string_platforms: All modern browsers
   tutorial_gpsound_string_platforms: All modern browsers
-  tutorial_groklearningpython_string_platforms: All modern browsers
+  tutorial_groklearningpython_string_platforms: All modern browsers, Screen reader
   tutorial_htmltimetravel_string_platforms: All modern browsers
   tutorial_hp_flappy_string_platforms: iPad
-  tutorial_appytappin_string_platforms: Unplugged
+  tutorial_appytappin_string_platforms: All modern browsers
   tutorial_icipher_string_platforms: Unplugged
   tutorial_iguess_string_platforms: Android tablet, iPad, iPhone
   tutorial_imake_string_platforms: Unplugged
@@ -6894,27 +7891,27 @@ nn:
   tutorial_scratchjrstory_string_platforms: Android tablet, iPad
   tutorial_scratchjrtwinkle_string_platforms: Android tablet, iPad
   tutorial_spherocomm_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherocommunity_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spherofunctions_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheroinfrared_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherolightsensor_string_platforms: All modern browsers, Android tablet,
-    iPad, Android phone, iPhone
+    iPad, Android phone, iPhone, Screen reader
   tutorial_spheromansion_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_roadblocks_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext2_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext3_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spherotext4_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_spheroraptor_string_platforms: All modern browsers, Android tablet, iPad,
-    Android phone, iPhone
+    Android phone, iPhone, Screen reader
   tutorial_stempiday_string_platforms: Chrome, Firefox, Safari, Android tablet, iPad
   tutorial_stemplanetoids_string_platforms: Chrome, Firefox, Safari, Android tablet,
     iPad
@@ -6952,6 +7949,136 @@ nn:
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_allcancodeapps_string_platforms: All modern browsers
   tutorial_n2y_string_platforms: Unplugged
+  tutorial_microsoftarcade_string_platforms: All modern browsers, Screen reader
+  tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
+  tutorial_toxicodepython_string_platforms: All modern browsers
+  tutorial_codecombatozaria_string_platforms: All modern browsers
+  tutorial_vidcodedate_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codemonkeyspace_string_platforms: All modern browsers
+  tutorial_codespeakhappy_string_platforms: Chrome, Firefox
+  tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_icomputelearn_string_platforms: All modern browsers
+  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_bsdcause_string_platforms: Chrome
+  tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_bsdinspire_string_platforms: Chrome
+  tutorial_tttractor_string_platforms: Chrome
+  tutorial_codeillusionmickey_string_platforms: Chrome
+  tutorial_scigirlsquest_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codespeakbreathe_string_platforms: Chrome, Firefox
+  tutorial_vidcodeface_string_platforms: Chrome, Firefox
+  tutorial_educodemaze_string_platforms: All modern browsers
+  tutorial_educoderace_string_platforms: All modern browsers
+  tutorial_codespeakchatbot_string_platforms: Chrome, Firefox
+  tutorial_gamefrootgames_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone
+  tutorial_codespeakgrandparent_string_platforms: Chrome, Firefox
+  tutorial_educodekingdom_string_platforms: All modern browsers
+  tutorial_codehsdata_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_educodecake_string_platforms: All modern browsers
+  tutorial_ttsecond_string_platforms: Chrome
+  tutorial_bsdtrivia_string_platforms: Chrome
+  tutorial_csfirstdialogue_string_platforms: All modern browsers
+  tutorial_codemonkeybeaver_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_codestersdistance_string_platforms: All modern browsers, Screen reader
+  tutorial_itchspace_string_platforms: All modern browsers
+  tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_codespeakmeal_string_platforms: Chrome, Firefox
+  tutorial_itchfish_string_platforms: All modern browsers
+  tutorial_bsdwebsite_string_platforms: Chrome
+  tutorial_codespeaktime_string_platforms: Chrome, Firefox
+  tutorial_itchwebcam_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_itchball_string_platforms: All modern browsers
+  tutorial_ttrace_string_platforms: Chrome
+  tutorial_plethora_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_educodesecret_string_platforms: All modern browsers
+  tutorial_itchshapes_string_platforms: All modern browsers
+  tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
+  tutorial_educativechatbot_string_platforms: All modern browsers
+  tutorial_educodebasics_string_platforms: All modern browsers
+  tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_htmlacademyphp_string_platforms: All modern browsers, Screen reader
+  tutorial_gamefrootdistance_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_codesterscovid_string_platforms: All modern browsers, Screen reader
+  tutorial_ttbunker_string_platforms: Chrome
+  tutorial_cuttle_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
+  tutorial_bsdjokes_string_platforms: Chrome
+  tutorial_rptree_string_platforms: Chrome, Firefox
+  tutorial_codestersunity_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterssoccer_string_platforms: All modern browsers, Screen reader
+  tutorial_breakoutlock_string_platforms: All modern browsers, Android tablet, iPad,
+    Android phone, iPhone
+  tutorial_thunkablemask_string_platforms: All modern browsers
+  tutorial_cafarming_string_platforms: Chrome, Firefox
+  tutorial_blocksmithyeti_string_platforms: All modern browsers
+  tutorial_codecapture_string_platforms: All modern browsers, Android phone, iPhone
+  tutorial_codehslitter_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_bsdocean_string_platforms: Chrome
+  tutorial_itchplatformer_string_platforms: All modern browsers
+  tutorial_codejika_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
+  tutorial_gamefrootclicker_string_platforms: All modern browsers, iPad
+  tutorial_rmagicequity_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone, Game console app
+  tutorial_ttfreestyle_string_platforms: Chrome
+  tutorial_ozobotcolor2_string_platforms: All modern browsers
+  tutorial_ozobotcolor3_string_platforms: All modern browsers
+  tutorial_clcarbon_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_kodablebasics_string_platforms: Unplugged
+  tutorial_scigirlscc_string_platforms: Unplugged
+  tutorial_irobotpicture_string_platforms: Unplugged
+  tutorial_kcjmyself_string_platforms: All modern browsers
+  tutorial_nearpodalgorithms_string_platforms: All modern browsers, Screen reader
+  tutorial_kibodrop_string_platforms: Unplugged
+  tutorial_ozobotcolor1_string_platforms: All modern browsers
+  tutorial_scigirlspixels_string_platforms: Unplugged
+  tutorial_kcjheroines_string_platforms: All modern browsers
+  tutorial_ozobotvalue_string_platforms: All modern browsers
+  tutorial_icodebytes_string_platforms: Unplugged
+  tutorial_clfashion2_string_platforms: All modern browsers
+  tutorial_ai4all_string_platforms: All modern browsers
+  tutorial_cldata_string_platforms: All modern browsers
+  tutorial_spheroinputs_string_platforms: Unplugged
+  tutorial_edisoncount_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_spheroloops_string_platforms: Unplugged
+  tutorial_kiboprogram_string_platforms: Unplugged
+  tutorial_hellorubycsin60_string_platforms: Unplugged
+  tutorial_clfashion1_string_platforms: All modern browsers
+  tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_edisonmystery_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_microbitseaturtles_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_ozobotknow_string_platforms: All modern browsers
+  tutorial_imagilabs_string_platforms: Android phone, iPhone, Unplugged
+  tutorial_irobotsimulator_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_irobotkind_string_platforms: All modern browsers
+  tutorial_firiavirtual_string_platforms: Microsoft Edge, Chrome
+  tutorial_irobotguesscode_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_ozobotnouns_string_platforms: All modern browsers
+  tutorial_nasa3d_string_platforms: All modern browsers
+  tutorial_blupants_string_platforms: All modern browsers
+  tutorial_legodance_string_platforms: All modern browsers
+  tutorial_nearpodcoding_string_platforms: All modern browsers, Screen reader
+  tutorial_kcjplastic_string_platforms: All modern browsers
+  tutorial_legojourney_string_platforms: All modern browsers
+  tutorial_legohopper_string_platforms: All modern browsers
+  tutorial_catrobatembroidery_string_platforms: Android phone, Screen reader
+  tutorial_irobotphone_string_platforms: All modern browsers
+  tutorial_codeguppydraw_string_platforms: All modern browsers
+  tutorial_codejumper_string_platforms: Unplugged, Sreen reader
+  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -7532,6 +8659,125 @@ nn:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
+  tutorial_microsoftarcade_string_detail_platforms: ''
+  tutorial_csfirstunplugged_string_detail_platforms: ''
+  tutorial_toxicodepython_string_detail_platforms: ''
+  tutorial_codecombatozaria_string_detail_platforms: ''
+  tutorial_vidcodedate_string_detail_platforms: ''
+  tutorial_codemonkeyspace_string_detail_platforms: ''
+  tutorial_codespeakhappy_string_detail_platforms: ''
+  tutorial_grokimage_string_detail_platforms: ''
+  tutorial_icomputelearn_string_detail_platforms: ''
+  tutorial_rpstress_string_detail_platforms: ''
+  tutorial_bsdcause_string_detail_platforms: ''
+  tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
+  tutorial_bsdinspire_string_detail_platforms: ''
+  tutorial_tttractor_string_detail_platforms: ''
+  tutorial_codeillusionmickey_string_detail_platforms: ''
+  tutorial_scigirlsquest_string_detail_platforms: ''
+  tutorial_codespeakbreathe_string_detail_platforms: ''
+  tutorial_vidcodeface_string_detail_platforms: ''
+  tutorial_educodemaze_string_detail_platforms: ''
+  tutorial_educoderace_string_detail_platforms: ''
+  tutorial_codespeakchatbot_string_detail_platforms: ''
+  tutorial_gamefrootgames_string_detail_platforms: ''
+  tutorial_codespeakgrandparent_string_detail_platforms: ''
+  tutorial_educodekingdom_string_detail_platforms: ''
+  tutorial_codehsdata_string_detail_platforms: ''
+  tutorial_educodecake_string_detail_platforms: ''
+  tutorial_ttsecond_string_detail_platforms: ''
+  tutorial_bsdtrivia_string_detail_platforms: ''
+  tutorial_csfirstdialogue_string_detail_platforms: ''
+  tutorial_codemonkeybeaver_string_detail_platforms: ''
+  tutorial_codestersdistance_string_detail_platforms: ''
+  tutorial_itchspace_string_detail_platforms: ''
+  tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
+  tutorial_codespeakmeal_string_detail_platforms: ''
+  tutorial_itchfish_string_detail_platforms: ''
+  tutorial_bsdwebsite_string_detail_platforms: ''
+  tutorial_codespeaktime_string_detail_platforms: ''
+  tutorial_itchwebcam_string_detail_platforms: ''
+  tutorial_itchball_string_detail_platforms: ''
+  tutorial_ttrace_string_detail_platforms: ''
+  tutorial_plethora_string_detail_platforms: ''
+  tutorial_educodesecret_string_detail_platforms: ''
+  tutorial_itchshapes_string_detail_platforms: ''
+  tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
+  tutorial_educativechatbot_string_detail_platforms: ''
+  tutorial_educodebasics_string_detail_platforms: ''
+  tutorial_codehsdesign_string_detail_platforms: ''
+  tutorial_htmlacademyphp_string_detail_platforms: ''
+  tutorial_gamefrootdistance_string_detail_platforms: ''
+  tutorial_codesterscovid_string_detail_platforms: ''
+  tutorial_ttbunker_string_detail_platforms: ''
+  tutorial_cuttle_string_detail_platforms: ''
+  tutorial_bsdjokes_string_detail_platforms: ''
+  tutorial_rptree_string_detail_platforms: ''
+  tutorial_codestersunity_string_detail_platforms: ''
+  tutorial_codesterssoccer_string_detail_platforms: ''
+  tutorial_breakoutlock_string_detail_platforms: ''
+  tutorial_thunkablemask_string_detail_platforms: ''
+  tutorial_cafarming_string_detail_platforms: ''
+  tutorial_blocksmithyeti_string_detail_platforms: ''
+  tutorial_codecapture_string_detail_platforms: ''
+  tutorial_codehslitter_string_detail_platforms: ''
+  tutorial_bsdocean_string_detail_platforms: ''
+  tutorial_itchplatformer_string_detail_platforms: ''
+  tutorial_codejika_string_detail_platforms: ''
+  tutorial_gamefrootclicker_string_detail_platforms: ''
+  tutorial_rmagicequity_string_detail_platforms: ''
+  tutorial_ttfreestyle_string_detail_platforms: ''
+  tutorial_ozobotcolor2_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_ozobotcolor3_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_clcarbon_string_detail_platforms: ''
+  tutorial_kodablebasics_string_detail_platforms: ''
+  tutorial_scigirlscc_string_detail_platforms: ''
+  tutorial_irobotpicture_string_detail_platforms: ''
+  tutorial_kcjmyself_string_detail_platforms: ''
+  tutorial_nearpodalgorithms_string_detail_platforms: ''
+  tutorial_kibodrop_string_detail_platforms: KIBO Robot Kit (optional)
+  tutorial_ozobotcolor1_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_scigirlspixels_string_detail_platforms: ''
+  tutorial_kcjheroines_string_detail_platforms: ''
+  tutorial_ozobotvalue_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_icodebytes_string_detail_platforms: ''
+  tutorial_clfashion2_string_detail_platforms: ''
+  tutorial_ai4all_string_detail_platforms: ''
+  tutorial_cldata_string_detail_platforms: ''
+  tutorial_spheroinputs_string_detail_platforms: ''
+  tutorial_edisoncount_string_detail_platforms: ''
+  tutorial_spheroloops_string_detail_platforms: ''
+  tutorial_kiboprogram_string_detail_platforms: KIBO Robot Kit (optional)
+  tutorial_hellorubycsin60_string_detail_platforms: ''
+  tutorial_clfashion1_string_detail_platforms: ''
+  tutorial_irobottraffic_string_detail_platforms: Root robot
+  tutorial_edisonmystery_string_detail_platforms: ''
+  tutorial_microbitseaturtles_string_detail_platforms: ''
+  tutorial_ozobotknow_string_detail_platforms: Ozobot Evo (optional)
+  tutorial_imagilabs_string_detail_platforms: imagiCharm
+  tutorial_irobotsimulator_string_detail_platforms: ''
+  tutorial_irobotkind_string_detail_platforms: Root robot (optional)
+  tutorial_firiavirtual_string_detail_platforms: ''
+  tutorial_irobotguesscode_string_detail_platforms: Root robot
+  tutorial_ozobotnouns_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_nasa3d_string_detail_platforms: ''
+  tutorial_blupants_string_detail_platforms: Lego Ev3, Alphabot2, DIY Raspberry Pi
+    robot or DIY Beaglebone Blue robot
+  tutorial_legodance_string_detail_platforms: LEGO Education SPIKE Prime
+  tutorial_nearpodcoding_string_detail_platforms: ''
+  tutorial_kcjplastic_string_detail_platforms: ''
+  tutorial_legojourney_string_detail_platforms: ''
+  tutorial_legohopper_string_detail_platforms: LEGO Education SPIKE Prime robot
+  tutorial_catrobatembroidery_string_detail_platforms: Embroidery machine for stitching
+    and USB or network port, plus support of the DST format (standard embroidery file
+    format).
+  tutorial_irobotphone_string_detail_platforms: Root robot (optional)
+  tutorial_codeguppydraw_string_detail_platforms: ''
+  tutorial_codejumper_string_detail_platforms: ''
+  tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Blokker
   tutorial_danceparty_string_detail_programming_languages: Blokker
   tutorial_chibitronics_string_detail_programming_languages: Blokker
@@ -8025,8 +9271,8 @@ nn:
   tutorial_codewards_string_detail_programming_languages: CoffeeScript
   tutorial_olympics_string_detail_programming_languages: CoffeeScript
   tutorial_codinismhero_string_detail_programming_languages: Python
-  tutorial_discovery_string_detail_programming_languages: Blokker
-  tutorial_csfirstname_string_detail_programming_languages: Blokker
+  tutorial_discovery_string_detail_programming_languages: Blokker, Scratch
+  tutorial_csfirstname_string_detail_programming_languages: Blokker, Scratch
   tutorial_obstaclecourse_string_detail_programming_languages: Blokker
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, et tekstbasert
     programmeringsspråk basert på Python.
@@ -8127,6 +9373,142 @@ nn:
   tutorial_duckrace_string_detail_programming_languages: Blokker
   tutorial_allcancodeapps_string_detail_programming_languages: Blokker
   tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_microsoftarcade_string_detail_programming_languages: Blokker
+  tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
+    Scratch
+  tutorial_toxicodepython_string_detail_programming_languages: Python
+  tutorial_codecombatozaria_string_detail_programming_languages: Javascript, Python
+  tutorial_vidcodedate_string_detail_programming_languages: JavaScript
+  tutorial_codemonkeyspace_string_detail_programming_languages: CoffeeScript
+  tutorial_codespeakhappy_string_detail_programming_languages: Blokker
+  tutorial_grokimage_string_detail_programming_languages: Python
+  tutorial_icomputelearn_string_detail_programming_languages: Blocks, JavaScript,
+    Scratch
+  tutorial_rpstress_string_detail_programming_languages: Blokker
+  tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
+  tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_tttractor_string_detail_programming_languages: JavaScript
+  tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
+  tutorial_scigirlsquest_string_detail_programming_languages: Blokker
+  tutorial_codespeakbreathe_string_detail_programming_languages: Blokker
+  tutorial_vidcodeface_string_detail_programming_languages: JavaScript
+  tutorial_educodemaze_string_detail_programming_languages: JavaScript
+  tutorial_educoderace_string_detail_programming_languages: JavaScript
+  tutorial_codespeakchatbot_string_detail_programming_languages: Blokker
+  tutorial_gamefrootgames_string_detail_programming_languages: Blokker
+  tutorial_codespeakgrandparent_string_detail_programming_languages: Blokker
+  tutorial_educodekingdom_string_detail_programming_languages: JavaScript
+  tutorial_codehsdata_string_detail_programming_languages: JavaScript
+  tutorial_educodecake_string_detail_programming_languages: HTML + CSS
+  tutorial_ttsecond_string_detail_programming_languages: JavaScript
+  tutorial_bsdtrivia_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_csfirstdialogue_string_detail_programming_languages: Blokker, Scratch
+  tutorial_codemonkeybeaver_string_detail_programming_languages: Blokker
+  tutorial_codestersdistance_string_detail_programming_languages: Python
+  tutorial_itchspace_string_detail_programming_languages: Blokker
+  tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
+  tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
+  tutorial_itchfish_string_detail_programming_languages: Blokker
+  tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_codespeaktime_string_detail_programming_languages: Blokker
+  tutorial_itchwebcam_string_detail_programming_languages: Blokker
+  tutorial_itchball_string_detail_programming_languages: Blokker
+  tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
+  tutorial_plethora_string_detail_programming_languages: Språk-uavhengig (kan undervisast
+    i fleire språk)
+  tutorial_educodesecret_string_detail_programming_languages: Python
+  tutorial_itchshapes_string_detail_programming_languages: Blokker
+  tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
+  tutorial_educativechatbot_string_detail_programming_languages: Python
+  tutorial_educodebasics_string_detail_programming_languages: JavaScript
+  tutorial_codehsdesign_string_detail_programming_languages: HTML
+  tutorial_htmlacademyphp_string_detail_programming_languages: PHP
+  tutorial_gamefrootdistance_string_detail_programming_languages: Blokker
+  tutorial_codesterscovid_string_detail_programming_languages: Python
+  tutorial_ttbunker_string_detail_programming_languages: JavaScript
+  tutorial_cuttle_string_detail_programming_languages: Blocks, Language independent
+    (can be taught in multiple languages)
+  tutorial_bsdjokes_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_rptree_string_detail_programming_languages: Blokker
+  tutorial_codestersunity_string_detail_programming_languages: Python
+  tutorial_codesterssoccer_string_detail_programming_languages: Python
+  tutorial_breakoutlock_string_detail_programming_languages: Blocks, Language independent
+    (can be taught in multiple languages)
+  tutorial_thunkablemask_string_detail_programming_languages: Blokker
+  tutorial_cafarming_string_detail_programming_languages: Theory course on impacts
+    of computing.
+  tutorial_blocksmithyeti_string_detail_programming_languages: JavaScript
+  tutorial_codecapture_string_detail_programming_languages: JavaScript
+  tutorial_codehslitter_string_detail_programming_languages: Python, HTML
+  tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_itchplatformer_string_detail_programming_languages: Blokker
+  tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_gamefrootclicker_string_detail_programming_languages: Blokker
+  tutorial_rmagicequity_string_detail_programming_languages: Blokker, JavaScript
+  tutorial_ttfreestyle_string_detail_programming_languages: JavaScript
+  tutorial_ozobotcolor2_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_ozobotcolor3_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_clcarbon_string_detail_programming_languages: Python
+  tutorial_kodablebasics_string_detail_programming_languages: Blocks, JavaScript,
+    Language independent (can be taught in multiple languages)
+  tutorial_scigirlscc_string_detail_programming_languages: Språk-uavhengig (kan undervisast
+    i fleire språk)
+  tutorial_irobotpicture_string_detail_programming_languages: No specific programming
+    languages required; unplugged decoding activity with words/phrases
+  tutorial_kcjmyself_string_detail_programming_languages: Blokker
+  tutorial_nearpodalgorithms_string_detail_programming_languages: Språk-uavhengig
+    (kan undervisast i fleire språk)
+  tutorial_kibodrop_string_detail_programming_languages: Blokker
+  tutorial_ozobotcolor1_string_detail_programming_languages: Ozobot Line Following
+    and Color Codes
+  tutorial_scigirlspixels_string_detail_programming_languages: Språk-uavhengig (kan
+    undervisast i fleire språk)
+  tutorial_kcjheroines_string_detail_programming_languages: Blokker
+  tutorial_ozobotvalue_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_icodebytes_string_detail_programming_languages: Språk-uavhengig (kan undervisast
+    i fleire språk)
+  tutorial_clfashion2_string_detail_programming_languages: SQL
+  tutorial_ai4all_string_detail_programming_languages: Språk-uavhengig (kan undervisast
+    i fleire språk)
+  tutorial_cldata_string_detail_programming_languages: Språk-uavhengig (kan undervisast
+    i fleire språk)
+  tutorial_spheroinputs_string_detail_programming_languages: Blokker
+  tutorial_edisoncount_string_detail_programming_languages: Blokker
+  tutorial_spheroloops_string_detail_programming_languages: Blokker
+  tutorial_kiboprogram_string_detail_programming_languages: Blokker
+  tutorial_hellorubycsin60_string_detail_programming_languages: Språk-uavhengig (kan
+    undervisast i fleire språk)
+  tutorial_clfashion1_string_detail_programming_languages: SQL
+  tutorial_irobottraffic_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_edisonmystery_string_detail_programming_languages: Blokker
+  tutorial_microbitseaturtles_string_detail_programming_languages: Blokker, JavaScript,
+    Python
+  tutorial_ozobotknow_string_detail_programming_languages: Språk-uavhengig (kan undervisast
+    i fleire språk)
+  tutorial_imagilabs_string_detail_programming_languages: Python
+  tutorial_irobotsimulator_string_detail_programming_languages: Blokker
+  tutorial_irobotkind_string_detail_programming_languages: Blokker
+  tutorial_firiavirtual_string_detail_programming_languages: Python
+  tutorial_irobotguesscode_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_ozobotnouns_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
+  tutorial_blupants_string_detail_programming_languages: Blokker, Python
+  tutorial_legodance_string_detail_programming_languages: Blokker
+  tutorial_nearpodcoding_string_detail_programming_languages: Språk-uavhengig (kan
+    undervisast i fleire språk)
+  tutorial_kcjplastic_string_detail_programming_languages: Blocks, Also has use of
+    a spreadsheet.
+  tutorial_legojourney_string_detail_programming_languages: Blokker
+  tutorial_legohopper_string_detail_programming_languages: Blokker
+  tutorial_catrobatembroidery_string_detail_programming_languages: Blokker
+  tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_codeguppydraw_string_detail_programming_languages: JavaScript
+  tutorial_codejumper_string_detail_programming_languages: Unplugged
+  tutorial_meeempathy_string_detail_programming_languages: Blokker, Python
   tutorial_scratchimagine_name: Imagine a World
   tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
   tutorial_googlehero_name: Code Your Hero
@@ -8174,7 +9556,7 @@ nn:
   tutorial_careconfigure_name: ReconFigure of Speech
   tutorial_rpiscratch_name: Scratch 3.0 phrasebook
   tutorial_ozaria_name: Ozaria by CodeCombat
-  tutorial_ttovum_name: Ovum City
+  tutorial_ttovum_name: Ovun City
   tutorial_ttpassage_name: The Passage
   tutorial_tynkerhtmlen_name: Affordable and Clean Energy (HTML)
   tutorial_ttfrog_name: Frog Squash
@@ -8226,6 +9608,7 @@ nn:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Kodetimen i Minecraft: nyttig kunstig intelligens '
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
+  tutorial_ai-oceans_name: AI for hav
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -8265,8 +9648,8 @@ nn:
     Room style project, the learner joins Marlee and Tyrell as they learn about binary
     numbers, light, color, and more to unravel Professor Photon's Color Conundrum,
     and restore color to the world's devices.
-  tutorial_kodablebeach_longdescription: Learn to program using basic commands and
-    clean up the beach to protect ocean life.
+  tutorial_kodablebeach_longdescription: Save the beach babies! Learn to program using
+    basic commands and clean up the beach to protect ocean life.
   tutorial_tynkeren_longdescription: 'Part of the UN Sustainable Development Goals
     project, this coding prompt shows off projects exploring renewable energy, energy
     efficiency, and access to energy. Readers can play with working projects and advanced
@@ -8390,9 +9773,9 @@ nn:
     where you learn to type real code, navigate through 15 game levels, and make your
     own game in order to help save the world of Ozaria.
   tutorial_ttovum_longdescription: Can you control the chaos? Hack your way into the
-    cyberpunk world of Ovum City. Debug broken code, solve puzzles, and upgrade your
+    cyberpunk world of Ovun City. Debug broken code, solve puzzles, and upgrade your
     hardware as you explore self guided open world. Don't get caught by the drones!
-    It's up to you how Ovum City evolves.
+    It's up to you how Ovun City evolves.
   tutorial_ttpassage_longdescription: Immerse yourself in an alien world to help Ada
     escape unknown dangers. Play through this 2D platforming self-guided adventure
     and learn coding techniques along the way. Players will become familiar with coding
@@ -8589,6 +9972,9 @@ nn:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Norsk Nynorsk
   tutorial_googlehero_language: English, Spanish
@@ -8691,6 +10077,7 @@ nn:
     (tradisjonell), tyrkisk, Polsk, indonesisk, ukrainsk, gresk, bulgarsk, ungarsk,
     finsk, dansk, svensk, norsk, slovakisk, tsjekkisk, nederlandsk
   tutorial_kuborobo_language: English, Spanish
+  tutorial_ai-oceans_language: Norsk Nynorsk
   tutorial_scratchimagine_string_detail_grades: Frå 2. klasse
   tutorial_codesterspsa_string_detail_grades: Frå 6. klasse
   tutorial_googlehero_string_detail_grades: Frå 2. - 8. klasse
@@ -8789,12 +10176,14 @@ nn:
   tutorial_modtraits_string_detail_grades: Frå 2. klasse
   tutorial_mee_string_detail_grades: Frå 2. klasse
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
+  tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codemonkeyjr_string_platforms: Android tablet, iPad, Android phone, iPhone
+  tutorial_codemonkeyjr_string_platforms: All modern browsers, Android tablet, iPad,
+    Android phone, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
   tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_msemoji_string_platforms: Chrome, Safari
@@ -8819,7 +10208,7 @@ nn:
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone
+    Windows phone, Android phone, iPhone, Screen reader
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
@@ -8834,7 +10223,7 @@ nn:
   tutorial_dragonscript_string_platforms: Chrome
   tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_htmlmuffin_string_platforms: All modern browsers
-  tutorial_microsoftpizza_string_platforms: All modern browsers
+  tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
   tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
@@ -8845,7 +10234,7 @@ nn:
   tutorial_ttfrog_string_platforms: Chrome, Firefox
   tutorial_codemojijava_string_platforms: All modern browsers
   tutorial_ccfirewall_string_platforms: All modern browsers, iPad
-  tutorial_htmljs_string_platforms: All modern browsers
+  tutorial_htmljs_string_platforms: All modern browsers, Screen reader
   tutorial_ttaqueducts_string_platforms: Chrome, Firefox
   tutorial_vtgame_string_platforms: All modern browsers, iPad
   tutorial_baroborav_string_platforms: All modern browsers
@@ -8896,6 +10285,8 @@ nn:
   tutorial_modtraits_string_platforms: All modern browsers
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Unplugged
+  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
+    iPads, modern Android phones, iPhones
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -8997,9 +10388,10 @@ nn:
   tutorial_modtraits_string_detail_platforms: GoPiGo
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
+  tutorial_ai-oceans_string_detail_platforms: ''
   tutorial_scratchimagine_string_detail_programming_languages: Blokker
   tutorial_codesterspsa_string_detail_programming_languages: Python
-  tutorial_googlehero_string_detail_programming_languages: Blokker
+  tutorial_googlehero_string_detail_programming_languages: Blokker, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
   tutorial_scratchcartoon_string_detail_programming_languages: Blokker
   tutorial_codemonkeyjr_string_detail_programming_languages: Blokker
@@ -9108,6 +10500,7 @@ nn:
   tutorial_mee_string_detail_programming_languages: Blokker
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
+  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
   school_not_found_heading: Vi kunne ikkje finne skulen din. Skriv inn meir informasjon.
   school_name: Skulenamn
   school_name_error: Skulenamn er påkrevd.
@@ -9163,3 +10556,4 @@ nn:
   some: Some
   all: All
   dont_know: Jeg vet ikke
+  language_label: Language

@@ -5,9 +5,9 @@ def format_email_address(email, name='')
   "#{name} <#{email}>".strip
 end
 %>
-to: <%= format_email_address(volunteer_email_s, volunteer_name_s).inspect %>
+to: <%= format_email_address(volunteer_email_s, volunteer_name_s).inspect.html_safe %>
 from: 'Code.org Volunteers <volunteers@code.org>'
-reply-to: <%= format_email_address(email_s, name_s).inspect %>
+reply-to: <%= format_email_address(email_s, name_s).inspect.html_safe %>
 subject: "A teacher is requesting your help"
 ---
 
@@ -18,15 +18,9 @@ Hi <%= volunteer_name_s %>,
 <%= name_s %> is a teacher at <%= school_name_s %>. They found you on the [volunteer site](https://code.org/volunteer/local) and after reviewing your profile specifically requested if you could help their class. They would like it if you could:
 
 <ul>
-<% if type_task_onsite_b %>
-  <li> visit the classroom for technical help and inspiration
-<% end %>
-<% if type_task_remote_b %>
-  <li> Skype into the classroom to say a few words of inspiration to the kids
-<% end %>
-<% if type_task_mentor_b %>
-  <li> be a mentor to help prepare them for coding with their students
-<% end %>
+<% if type_task_onsite_b %><li> visit the classroom for technical help and inspiration<% end %>
+<% if type_task_remote_b %><li> Skype into the classroom to say a few words of inspiration to the kids<% end %>
+<% if type_task_mentor_b %><li> be a mentor to help prepare them for coding with their students<% end %>
 </ul>
 
 We won't release your email directly to a teacher, so they're waiting for you to write back.
@@ -60,6 +54,6 @@ Getting too many email requests? It means there aren't enough volunteers in your
 
 - [Unsubscribe from additional teacher requests **this year**](<%= update_preferences %>)
 - [Unsubscribe from teacher requests **forever**](<%= update_preferences %>)
-- [Unsubscribe from all Code.org emails](<%= unsubscribe_link %>)
+- [Unsubscribe from all Code.org emails](<%= local_assigns.fetch(:unsubscribe_link, "") %>)
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

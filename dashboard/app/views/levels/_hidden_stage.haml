@@ -1,7 +1,7 @@
 - hidden = local_assigns[:hidden]
 - unless @script.nil?
   #hidden-stage{style: hidden ? 'display: none' : '' }
-    %div{style: 'margin-bottom: 15px' }
+    %div{style: 'margin-bottom: 15px; margin-top: 10px' }
       =t('hidden_stage')
     %a{href: script_path(@script)}
       %button.btn.btn-large.btn-primary

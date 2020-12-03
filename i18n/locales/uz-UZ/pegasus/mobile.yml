@@ -10,12 +10,22 @@
   csedweek_dates: "8-14 dekabr, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Dasturlash soati</a> yaqinlashmoqda. Barcha o''qituvchi va tashkilotchilarni <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">o‘z Dasturlash soatlarini rejalashtirishga</a> chaqiramiz.'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini ham ko‘ring.</a>'
+  csedweek_banner_teachers_text: "Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini ham ko‘ring."
   n_have_learned_an_hoc: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>o‘tganlar: #</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served #Try an #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Har kim o‘rganishi mumkin."
   learn_now: "Hoziroq o‘rganing"
   petition_message: "Har bir maktabning har bir o‘quvchisida informatikani o‘rganish imkoniyati bo‘lishi kerak"
   petition_sign_message: 'Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga # qo‘shiling.'
-  petition_sign_message_support: 'Agar qo‘llab-quvvatlasangiz, ismingizni kiriting. Boshqalarga # qo‘shiling.'
   petition_join_others: 'Boshqalarga # qo‘shiling'
   name: "Ismi"
   email: "Elektron pochta"
@@ -24,6 +34,7 @@
   twentyhours_heading: "Informatika kursiga kirish darsini sinab ko‘ring"
   twentyhours_text: "Ilk Dasturlash soatini tugatdingizmi? Quyidagi kurslar orqali informatika va dasturlash asoslarini o‘rganing."
   og_title: 'Har bir bola imkoniyat uchun munosib'
+  og_title_soon: "Dasturlash soati yaqinlashmoqda"
   og_title_here: "Kod yozish soati yetib keldi!"
   og_description: "Maktablardagi har bir o'quvchi Informatika o'rganishga munosib. Chunki bu dunyoni o'zgartirmoqda."
   csedweek_og_title: "Informatika ta’limi haftaligi"
@@ -126,7 +137,7 @@
   continue_learning_body: "O‘rganishning turli yo‘llari bor: onlayn tarzda, maktabda yoki yozgi oromgohda o‘rganishingiz mumkin."
   learn_next_level: "Boshqa Dasturlash studiyasi kursini sinab ko‘ring"
   learn_online: "Boshqa kurslarni onlayn tarzda sinab ko‘ring"
-  learn_classes: "Mahalliy darslar toping"
+  learn_classes: "Mahalliy darslarni toping"
   just_did_hoc: 'Men #HourOfCode''ni o‘tdim - siz ham sinab ko‘ring! @codeorg'
   learn_hoc: "Dasturlash soatini o‘ting"
   beyond_hoc: "Dasturlash soatidan tashqari"
@@ -202,6 +213,8 @@
   homepage_hero_text_stat_loc: "2,5 millionta qiz Dasturlash studiyasiga qo‘shildi."
   homepage_hero_text_stat_students: "Dasturlash studiyasida #student_count ta o‘quvchi ro‘yxatdan o‘tgan."
   homepage_hero_text_stat_served: 'Dasturlash soatini #served kishi o‘tdi.'
+  homepage_hero_hoc_is_coming: "Dasturlash soati yaqinlashmoqda"
+  homepage_hero_hoc_is_here: "Dasturlash soati keldi"
   homepage_slot_text_hoc: "Dasturlash soati"
   homepage_slot_text_frozen: "Muzyurak: Anna va Elza bilan"
   homepage_slot_text_studio: "Barcha mashg‘ulotlarimiz"
@@ -218,6 +231,7 @@
   homepage_action_text_learn: "O‘rganishni boshlang"
   homepage_action_text_signpetition: "Murojaatni imzolang"
   homepage_signpetition_dropdown: "Roziman: &#x25BE;"
+  homepage_signpetition_dropdown_text: "Roziman"
   homepage_diversity_pledge: "Turli qatlamdagi insonlarni jalb qiling"
   homepage_banner_text_prizes: 'Dasturlash soati 7-13 dekabr kunlari yana kelmoqda.'
   homepage_banner_link_prizes: 'Tarixdagi eng katta o‘quv tadbiriga qo‘shiling. '
@@ -295,17 +309,24 @@
   starwars_javascript_specs: "Faqat inglizcha | Zamonaviy brauzerlar | Yosh: 11+"
   starwars_blocks_title: "Bloklar"
   starwars_blocks_description: "Ko‘chuvchi bloklardan foydalaning."
+  starwars_blocks_specs: "Many languages | Modern browsers, smartphones, tablets | Yosh: 6-106"
   starwars_platform_text: "Zamonaviy brauzerlar, smartfonlar, planshetlar"
   mc_name: "Maynkraft Dasturlash soati"
   mc_longdescription: "Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod bloklaridan foydalaning."
   mc_shortdescription: "Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod bloklaridan foydalaning."
+  mc_gradelevel: "Yosh: 6-106"
   mc_platformtext: "Zamonaviy brauzerlar, smartfonlar, planshetlar"
+  mc_specs: "Many languages | Modern browsers and tablets | Yosh: 6-106"
   minecraft_agent_button: "Boshlash"
   minecraft_designer_button: "Boshlash"
   minecraft_adventurer_button: "Boshlash"
   minecraft_subtitle: "Maynkraft Dasturlash soati"
   sports_watch_video: "Videoni ko‘ring"
   video_title_inspire_girl: "Qizlarni ruhlantiring"
+  video_title_schools_dont_teach: "Aksariyat maktablar nimani o'rgatmaydi?"
+  video_title_obama: "Prezident Obama informatika haqida"
+  video_title_hoc_is_here: "Dasturlash soati keldi - Har kim o'rganishi mumkin"
+  video_title_anybody_can_learn: "Har kim o'rganishi mumkin"
   volunteer_engineer_submission_title: "O‘quvchi va ko‘ngillilarni Dasturlash soatiga jalb qiling."
   volunteer_engineer_submission_subtitle_generic: 'Bu yil (7-13 dekabr, 2015) 100 000 o‘qituvchi o‘z sinflarida Dasturlash soatini o‘tishmoqchi. Ularga yordamingiz kerak! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} ta o‘qituvchilar ko‘ngillilarni shu dekabrda bo‘ladigan Informatika haftaligida Dasturlash soatiga yordam berishga chaqiradi. <br>%{num_volunteers} ta ko‘ngillilar ro‘yxatdan o‘tishgan. Ularga qo‘shiling."
@@ -402,6 +423,16 @@
   dashboard_students_completed_levels: "O‘tilgan bosqichlar"
   dashboard_students_total_lines: "Kod satrlari"
   dashboard_students_secret_word_title: "Sirli so'z"
+  dashboard_course1: 'Kurs 1:'
+  dashboard_course2: 'Kurs 2:'
+  dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Kurs 4: '
+  dashboard_coursea: 'Kurs A: '
+  dashboard_courseb: 'Kurs B: '
+  dashboard_coursec: 'Kurs C: '
+  dashboard_coursed: 'Kurs D: '
+  dashboard_coursee: 'Kurs E: '
+  dashboard_coursef: 'Kurs F: '
   dashboard_sequence: "Ketma-ketlik"
   dashboard_grade_other: "Boshqa"
   dashboard_login_word: "So'z"
@@ -416,50 +447,206 @@
   learn_hoc_prizes: "Har bir o‘qituvchi uchun atalgan sovg‘alar haqida <a href=\"https://hourofcode.com/prizes\">xabardor bo‘ling</a>."
   previous: "Avvalgi"
   next: "Keyingi"
+  khan_name: "JavaScript bilan tanishish"
+  khanes_name: "JavaScript bilan tanishish"
+  khanpt_name: "JavaScript bilan tanishish"
+  khanhe_name: "JavaScript bilan tanishish"
+  khanfr_name: "JavaScript bilan tanishish"
+  khanpl_name: "JavaScript bilan tanishish"
   blockly_name: "Blokli"
+  coursea-draft_name: Kurs A
+  coursea_name: "Kurs A"
+  courseb-draft_name: Kurs B
+  courseb_name: "Kurs B"
+  coursec-draft_name: Kurs C
+  coursec_name: "Kurs C"
+  coursed-draft_name: Kurs D
+  coursed_name: "Kurs D"
+  coursee-draft_name: Kurs E
+  coursee_name: "Kurs E"
+  coursef-draft_name: Kurs F
+  coursef_name: "Kurs F"
+  coursea-2017_name: Kurs A (2017)
+  courseb-2017_name: Kurs B (2017)
+  coursec-2017_name: Kurs C (2017)
+  coursed-2017_name: Kurs D (2017)
+  coursee-2017_name: Kurs E (2017)
+  coursef-2017_name: Kurs F (2017)
+  express-2018_name: Ekspress Kurs (2018)
+  pre-express-2018_name: Maktabgacha ekspress kurs (2018)
+  pre-express-2019_name: Maktabgacha ekspress kurs (2019)
+  pre-express-2020_name: Maktabgacha ekspress kurs (2020)
+  pre-express_name: Maktabgacha ekspress kurs
   iceage_name: "Muzlik davri"
   applab_name: "Ilova labaratoriyasi"
+  codeorg_gradelevel: "Yosh: 4-104"
+  codeintl_gradelevel: "Yosh: 4-104"
+  khan_gradelevel: "O'rta maktab +"
+  khanes_gradelevel: "O'rta maktab +"
+  khanpt_gradelevel: "O'rta maktab +"
+  khanhe_gradelevel: "O'rta maktab +"
+  khanfr_gradelevel: "O'rta maktab +"
+  khanpl_gradelevel: "O'rta maktab +"
+  tynker_gradelevel: "Yosh: 5-13"
+  scratch_gradelevel: "Yosh: 8+"
   lightbot_gradelevel: "Barcha yoshdagilar uchun"
   thinkersmith_gradelevel: "Barcha yoshdagilar uchun"
+  condcards_gradelevel: "Yosh: 8-12"
   lightbotintl_gradelevel: "Barcha yoshdagilar uchun"
   codehs_gradelevel: "Yuqori sinflar"
   codecademy_gradelevel: "Yuqori sinflar"
+  codecombat_gradelevel: "O'rta maktab +"
+  codemonkey_gradelevel: "O'rta maktab +"
+  codeavengers_gradelevel: "O'rta maktab +"
   processing_gradelevel: "Yuqori sinflar"
+  robomind_gradelevel: "8-13 yosh"
+  groklearning_gradelevel: "O'rta maktab +"
+  quorum_gradelevel: "O'rta maktab +"
   codespark_gradelevel: "Boshlang‘ich sinflar"
   kodable_gradelevel: "Boshlang‘ich sinflar"
+  tynkerapp_gradelevel: "Yosh: 5-13"
+  robomindnl_gradelevel: "8-13 yosh"
+  flappy_gradelevel: "Yosh: 6-106"
   bitsbox_gradelevel: "Boshlang‘ich sinflar"
   makeschool_gradelevel: "Yuqori sinflar"
   touchdevelop_gradelevel: "Yuqori sinflar"
+  appinventor_gradelevel: "O'rta maktab +"
   blockly_gradelevel: "Barcha yoshdagilar uchun"
+  thinkersmith2_gradelevel: "Yosh: 8+"
+  kodableunplugged_gradelevel: "8-13 yosh"
+  projguts_gradelevel: "Yosh: 10-13"
+  hourofcode_gradelevel: "Yosh: 6-106"
+  frozen_gradelevel: "Yosh: 8-108"
+  starwars_gradelevel: "Yosh: 6-106"
+  playlab_gradelevel: "Yosh: 6-14"
+  infinity_gradelevel: "Yosh: 6-14"
+  artist_gradelevel: "Yosh: 8-108"
+  monstercoding_gradelevel: "Yosh: 5-13"
+  allcancode_gradelevel: "Yosh: 5-10"
+  csfirst_gradelevel: "Yosh: 9-14"
   boxisland_gradelevel: "Boshlang‘ich sinflar"
+  codesters_gradelevel: "Yosh: 12-14"
+  texasinstruments_gradelevel: "Yosh: 13-16"
+  teacherled_gradelevel: "Yosh: 5+"
+  course2_gradelevel: "Yosh: 6-18"
+  coursea_gradelevel: "Yosh: 4-7"
+  courseb_gradelevel: "Yosh: 5-8"
+  coursec_gradelevel: "Yosh: 6-10"
+  coursed_gradelevel: "Yosh: 7-11"
+  coursee_gradelevel: "Yosh: 8-12"
+  coursef_gradelevel: "Yosh: 9-13"
+  coursea-2017_gradelevel: 'Yosh: 4-7'
+  courseb-2017_gradelevel: 'Yosh: 5-8'
+  coursec-2017_gradelevel: 'Yosh: 6-10'
+  coursed-2017_gradelevel: 'Yosh: 7-11'
+  coursee-2017_gradelevel: 'Yosh: 8-12'
+  coursef-2017_gradelevel: 'Yosh: 9-13'
+  coursea-2018_gradelevel: 'Yosh: 4-7'
+  courseb-2018_gradelevel: 'Yosh: 5-8'
+  coursec-2018_gradelevel: 'Yosh: 6-10'
+  coursed-2018_gradelevel: 'Yosh: 7-11'
+  coursee-2018_gradelevel: 'Yosh: 8-12'
+  coursef-2018_gradelevel: 'Yosh: 9-13'
+  coursea-2019_gradelevel: 'Yosh: 4-7'
+  courseb-2019_gradelevel: 'Yosh: 5-8'
+  coursec-2019_gradelevel: 'Yosh: 6-10'
+  coursed-2019_gradelevel: 'Yosh: 7-11'
+  coursee-2019_gradelevel: 'Yosh: 8-12'
+  coursef-2019_gradelevel: 'Yosh: 9-13'
   codeorg_platformtext: "Zamonaviy brauzerlar, smartfonlar, planshetlar"
   codeintl_platformtext: "Zamonaviy brauzerlar, smartfonlar, planshetlar"
+  thinkersmithspanish_platformtext: "Kompyutersiz"
+  khan_platformtext: "Zamonaviy brauzerlar"
+  khanes_platformtext: "Zamonaviy brauzerlar"
+  khanpt_platformtext: "Zamonaviy brauzerlar"
+  khanhe_platformtext: "Zamonaviy brauzerlar"
+  khanfr_platformtext: "Zamonaviy brauzerlar"
+  khanpl_platformtext: "Zamonaviy brauzerlar"
+  tynker_platformtext: "Zamonaviy brauzerlar"
+  thinkersmith_platformtext: "Kompyutersiz"
+  condcards_platformtext: "Kompyutersiz"
+  codecademy_platformtext: "Zamonaviy brauzerlar. iOS, Android apps"
+  codecombat_platformtext: "Zamonaviy brauzerlar (Follow-on course requires $$)"
+  codemonkey_platformtext: "Zamonaviy brauzerlar"
+  codeavengers_platformtext: "Zamonaviy brauzerlar"
+  processing_platformtext: "Zamonaviy brauzerlar"
+  robomind_platformtext: "Zamonaviy brauzerlar, Mobile web"
+  groklearning_platformtext: "Zamonaviy brauzerlar"
+  quorum_platformtext: "Zamonaviy brauzerlar. Screen-readers supported"
+  robomindnl_platformtext: "Zamonaviy brauzerlar, Mobile web"
   flappy_platformtext: "Zamonaviy brauzerlar, smartfonlar, planshetlar"
+  bitsbox_platformtext: "Zamonaviy brauzerlar"
+  blockly_platformtext: "Faqat zamonaviy brauzerlar"
+  thinkersmith2_platformtext: "Kompyutersiz"
+  kodableunplugged_platformtext: "Kompyutersiz"
+  projguts_platformtext: "Kompyutersiz"
   hourofcode_platformtext: "Zamonaviy brauzerlar, smartfonlar, planshetlar"
   playlab_platformtext: "Zamonaviy brauzerlar, smartfonlar, planshetlar"
+  monstercoding_platformtext: "Zamonaviy brauzerlar, iOS, Android"
+  allcancode_platformtext: "Zamonaviy brauzerlar, iOS"
+  csfirst_platformtext: "Zamonaviy brauzerlar"
+  codesters_platformtext: "Zamonaviy brauzerlar"
   teacherled_platformtext: "Zamonaviy brauzerlar, smartfonlar, planshetlar"
+  khan_shortdescription: "JavaScript bilan rasm chizishni o'rganing"
+  khanes_shortdescription: "JavaScript bilan rasm chizishni o'rganing"
+  khanpt_shortdescription: "JavaScript bilan rasm chizishni o'rganing"
+  khanhe_shortdescription: "JavaScript bilan rasm chizishni o'rganing"
+  khanfr_shortdescription: "JavaScript bilan rasm chizishni o'rganing"
+  khanpl_shortdescription: "JavaScript bilan rasm chizishni o'rganing"
   w3schools_beyond_name: "HTML bilib oling"
+  codeorg_beyond_gradelevel: "Yosh: 4-104"
+  khan_beyond_gradelevel: "O'rta maktab +"
+  tynker_beyond_gradelevel: "Yosh: 5-13"
+  scratch_beyond_gradelevel: "Yosh: 8+"
   lightbot_beyond_gradelevel: "Barcha yoshdagilar uchun"
   codecademy_beyond_gradelevel: "Yuqori sinflar"
   kodable_beyond_gradelevel: "Boshlang‘ich sinflar"
   scratchjr_beyond_gradelevel: "Boshlang‘ich sinflar"
+  hopscotch_beyond_gradelevel: "O'rta maktab +"
+  pocketcode_beyond_gradelevel: "O'rta maktab +"
+  groklearning_beyond_gradelevel: "O'rta maktab +"
   hacketyhack_beyond_gradelevel: "Yuqori sinflar"
+  robomind_beyond_gradelevel: "8-13 yosh"
   makeschool_beyond_gradelevel: "Yuqori sinflar"
+  appinventor_beyond_gradelevel: "O'rta maktab +"
   touchdevelop_beyond_gradelevel: "Yuqori sinflar"
   codehs_beyond_gradelevel: "Yuqori sinflar"
   edx_beyond_gradelevel: "Universitut"
   coursera_beyond_gradelevel: "Universitut"
   udacity_beyond_gradelevel: "Universitut"
   teachingtree_beyond_gradelevel: "Universitut"
+  kodu_beyond_gradelevel: "Yosh: 8+"
+  cargobot_beyond_gradelevel: "Yosh: 8+"
+  kidsruby_beyond_gradelevel: "Yosh: 12+"
+  w3schools_beyond_gradelevel: "Yosh: 12+"
+  codeavengers_beyond_gradelevel: "O'rta maktab +"
+  mozilla_beyond_gradelevel: "Yosh: 12+"
+  codecombat_beyond_gradelevel: "O'rta maktab +"
+  lego_beyond_gradelevel: "O'rta maktab +"
+  finch_beyond_gradelevel: "Yosh: 8+"
   processing_beyond_gradelevel: "Yuqori sinflar"
+  alice_beyond_gradelevel: "O'rta maktab +"
+  sphero_beyond_gradelevel: "Yosh: 8+"
+  tynker_beyond_platformtext: "Zamonaviy brauzerlar ($$ required)"
+  codecademy_beyond_platformtext: "Zamonaviy brauzerlar. iOS, Android apps"
+  groklearning_beyond_platformtext: "Zamonaviy brauzerlar"
+  robomind_beyond_platformtext: "Zamonaviy brauzerlar, Mobile web"
+  processing_beyond_platformtext: "Zamonaviy brauzerlar"
+  khan_beyond_shortdescription: "JavaScript bilan rasm chizishni o'rganing"
   flappy_shortcode: "qanot qoqmoq"
   header_courses: "Kurslar"
   header_educate_hoc: "Dasturlash soati"
+  header_legal_tos: "Xizmat shartlari"
+  applab_tile_title: "Intro to App Lab (Yosh: 13+)"
   applab_tile_start_tutorial: "Boshlash"
   hoc_overview_start_tutorial: "Boshlash"
   hoc2018_creativity_create: "Yaratmoq"
   hoc2018_mc_start: "Boshlash"
   hoc2018_mc_video_title_inspire_girl: "Qizlarni ruhlantiring"
+  hoc2018_mc_video_title_schools_dont_teach: "Aksariyat maktablar nimani o'rgatmaydi?"
+  hoc2018_mc_video_title_obama: "Prezident Obama informatika haqida"
+  hoc2018_mc_video_title_hoc_is_here: "Dasturlash soati keldi - Har kim o'rganishi mumkin"
+  hoc2018_mc_video_title_anybody_can_learn: "Har kim o'rganishi mumkin"
   hoc2018_mc_homepage_join_us: "Bizga qo'shiling"
   hoc2018_mc_homepage_try_it: "Sinab ko‘ring"
   hoc2018_dance_party_button: "Boshlash"

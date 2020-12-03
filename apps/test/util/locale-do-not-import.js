@@ -16,4 +16,4 @@ var context = require.context(
 );
 context.keys().forEach(context);
 
-module.exports = window.blockly.common_locale;
+module.exports = window.locales.common_locale;

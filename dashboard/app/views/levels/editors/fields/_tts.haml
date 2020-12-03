@@ -1,12 +1,13 @@
 .field
   = f.label :text_to_speech_overrides
-  %p By default, Text-to-Speech will use the Short and Long Instructions texts as its sources. You can override them individually here if you wish to tweak the pronunciation.
+  %p By default, Text-to-Speech will use the Instructions text as its source. You can override here if you wish to tweak the pronunciation.
   #tts-error.alert.alert-error{style: "display: none"}
     #alert-content
   .row
-    .span6
-      %h5 Short Instructions
-      = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+    - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab))
+      .span6
+        %h5 Short Instructions
+        = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
     .span6
       %h5 Long Instructions
       = f.text_area :tts_long_instructions_override, placeholder: '', rows: 4, class:"input-block-level"

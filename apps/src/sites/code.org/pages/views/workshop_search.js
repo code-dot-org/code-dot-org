@@ -1,203 +1,227 @@
-/* globals google */
+/* globals mapboxgl, MapboxGeocoder */
 
 import $ from 'jquery';
-import MarkerClusterer from 'node-js-marker-clusterer';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import colors from '@cdo/apps/util/color';
 
-const markerCustererOptions = {
-  imagePath: getScriptData('workshopSearch').imagePath,
-  gridSize: 10
-};
-
-var gmap,
-  markersByLocation = {},
-  infoWindow,
-  markerClusterer;
+var map;
 
 $(document).ready(function() {
-  initializeMap();
-  loadWorkshops();
+  initializeMapboxMap();
+  map.on('load', loadMapboxWorkshops);
 });
 
-function initializeMap() {
-  var mapOptions = {
-    center: new google.maps.LatLng(37.6, -95.665),
-    zoom: 4,
-    minZoom: 2,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+function initializeMapboxMap() {
+  map = new mapboxgl.Map({
+    container: 'mapbox-map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-95.665, 37.6],
+    zoom: 3
+  });
+
+  map.dragRotate.disable();
+  map.scrollZoom.disable();
+  map.dragPan.disable();
+  map.addControl(
+    new mapboxgl.NavigationControl({showCompass: false}),
+    'bottom-right'
+  );
+  const enableMouseControls = () => {
+    map.scrollZoom.enable();
+    map.dragPan.enable();
   };
+  // Enable mouse controls when the map is clicked
+  map.on('click', enableMouseControls);
+  // Enable mouse controls when the zoom (+/-) buttons are pressed
+  map.on('zoom', enableMouseControls);
 
-  gmap = new google.maps.Map(document.getElementById('gmap'), mapOptions);
-  infoWindow = new google.maps.InfoWindow();
+  var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl,
+    marker: false,
+    types: 'country,region,district,postcode,locality,place'
+  });
+  document.getElementById('mapboxgeocoder').appendChild(geocoder.onAdd(map));
 }
 
-function loadWorkshops() {
-  markerClusterer = new MarkerClusterer(gmap, [], markerCustererOptions);
-
+function loadMapboxWorkshops() {
   const deepDiveOnly = $('#properties').attr('data-deep-dive-only');
-  let url = '/dashboardapi/v1/pd/k5workshops';
+  let url = '/dashboardapi/v1/pd/k5workshops?geojson=1';
   if (deepDiveOnly !== undefined) {
-    url += '?deep_dive_only=1';
+    url += '&deep_dive_only=1';
   }
-
-  $.get(url)
-    .done(function(data) {
-      processPdWorkshops(data);
-    })
-    .always(completeProcessingPdWorkshops);
-}
-
-function processPdWorkshops(workshops) {
-  $.each(workshops, function(i, workshop) {
-    var location = workshop.processed_location;
-    var latLng = new google.maps.LatLng(location.latitude, location.longitude);
-    var hash = latLng.toUrlValue();
-
-    var infoWindowContent = '';
-
-    if (markersByLocation[hash] === undefined) {
-      infoWindowContent = compileHtml(workshop, true);
-      markersByLocation[hash] = createNewMarker(
-        latLng,
-        workshop.location_name,
-        infoWindowContent,
-        workshop.subject
-      );
-    } else {
-      // Extend existing marker.
-      infoWindowContent = compileHtml(workshop, false);
-      markersByLocation[hash].infoWindowContent += infoWindowContent;
-      // Upgrade any marker containing a deep dive workshop to the deep dive icon
-      if (workshop.subject === SubjectNames.SUBJECT_CSF_201) {
-        markersByLocation[hash].icon = {url: iconForSubject(workshop.subject)};
-      }
+  map.addSource('workshops', {
+    type: 'geojson',
+    data: url,
+    cluster: true,
+    clusterRadius: 20,
+    clusterMaxZoom: 12,
+    clusterProperties: {
+      clustered_workshop_count: ['+', ['get', 'workshop_count']]
     }
   });
+
+  placeClusters();
+  placeIntroWorkshops();
+  placeDeepDiveWorkshops();
 }
 
-function createNewMarker(latLng, title, infoWindowContent, subject) {
-  var marker = new google.maps.Marker({
-    position: latLng,
-    map: gmap,
-    title: title,
-    infoWindowContent: infoWindowContent,
-    icon: {url: iconForSubject(subject)}
+function placeClusters() {
+  map.addLayer({
+    id: 'workshop-clusters',
+    type: 'circle',
+    source: 'workshops',
+    filter: ['has', 'point_count'],
+    paint: {
+      'circle-color': colors.purple,
+      'circle-radius': 20,
+      'circle-blur': 0.75
+    }
   });
-  google.maps.event.addListener(marker, 'click', function() {
-    infoWindow.setContent(this.get('infoWindowContent'));
-    infoWindow.open(gmap, this);
+  map.addLayer({
+    id: 'workshop-clusters-count',
+    type: 'symbol',
+    source: 'workshops',
+    filter: ['has', 'point_count'],
+    layout: {
+      'text-field': ['get', 'clustered_workshop_count'],
+      'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+      'text-size': 12,
+      'text-allow-overlap': true
+    }
   });
-  markerClusterer.addMarker(marker);
-  return marker;
+  map.on('click', 'workshop-clusters', function(e) {
+    var features = map.queryRenderedFeatures(e.point, {
+      layers: ['workshop-clusters']
+    });
+    var clusterId = features[0].properties.cluster_id;
+    map
+      .getSource('workshops')
+      .getClusterExpansionZoom(clusterId, function(err, zoom) {
+        if (err) {
+          console.log(err);
+          return;
+        }
+
+        map.easeTo({
+          center: features[0].geometry.coordinates,
+          zoom: zoom
+        });
+      });
+  });
+  map.on('mouseenter', 'workshop-clusters', function() {
+    map.getCanvas().style.cursor = 'pointer';
+  });
 }
 
-function iconForSubject(subject) {
-  if (subject === SubjectNames.SUBJECT_CSF_201) {
-    return 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png';
-  }
-  return 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png';
+function placeIntroWorkshops() {
+  map.loadImage('/images/map-markers/blank-marker.png', (error, image) => {
+    if (error) {
+      console.log(error);
+      return;
+    }
+    map.addImage('marker', image);
+    map.addLayer({
+      id: 'intro-workshops',
+      type: 'symbol',
+      source: 'workshops',
+      filter: [
+        'all',
+        ['==', 'show_deep_dive_marker', 'false'],
+        ['!has', 'point_count']
+      ],
+      layout: {
+        'icon-image': 'marker',
+        'icon-anchor': 'bottom',
+        'icon-allow-overlap': true
+      }
+    });
+  });
+  map.on('click', 'intro-workshops', onMarkerClick);
+  map.on('mouseenter', 'intro-workshops', function() {
+    map.getCanvas().style.cursor = 'pointer';
+  });
 }
 
-function completeProcessingPdWorkshops() {
-  addGeocomplete();
+function placeDeepDiveWorkshops() {
+  map.loadImage('/images/map-markers/star-marker.png', (error, image) => {
+    if (error) {
+      console.log(error);
+      return;
+    }
+    map.addImage('star-marker', image);
+    map.addLayer({
+      id: 'deep-dive-workshops',
+      type: 'symbol',
+      source: 'workshops',
+      filter: [
+        'all',
+        ['==', 'show_deep_dive_marker', 'true'],
+        ['!has', 'point_count']
+      ],
+      layout: {
+        'icon-image': 'star-marker',
+        'icon-anchor': 'bottom',
+        'icon-allow-overlap': true
+      }
+    });
+  });
+  map.on('click', 'deep-dive-workshops', onMarkerClick);
+  map.on('mouseenter', 'deep-dive-workshops', function() {
+    map.getCanvas().style.cursor = 'pointer';
+  });
 }
 
-function compileHtml(workshop, first) {
+function onMarkerClick(e) {
+  var coordinates = e.features[0].geometry.coordinates.slice();
+  var workshops = JSON.parse(e.features[0].properties['workshops']);
+  const description = compileMapboxPopupHtml(workshops, false);
+
+  const popup = new mapboxgl.Popup({className: 'popup'})
+    .setLngLat(coordinates)
+    .setHTML(description);
+  popup.addTo(map);
+}
+
+function compileMapboxPopupHtml(workshops, first) {
   // Compile HTML.
   var html = '';
 
-  if (first) {
-    html += '<div class="workshop-item workshop-item-first">';
-  } else {
-    html += '<div class="workshop-item">';
-  }
-  html +=
-    '<div class="workshop-location-name"><strong>' +
-    workshop.location_name +
-    '</strong></div>';
-
-  // Add the workshop subject
-  html +=
-    '<div class="workshop-subject">' + workshop.subject + ' Workshop</div>';
-
-  // Add the date(s).
-  html += '<div class="workshop-dates">';
-  $.each(workshop.sessions, function(i, session) {
+  workshops.forEach((workshop, i) => {
+    if (i === 0) {
+      html += '<div class="workshop-item workshop-item-first">';
+    } else {
+      html += '<div class="workshop-item">';
+    }
     html +=
-      '<div class="workshop-date" style="white-space: nowrap;">' +
-      session +
-      '</div>';
+      '<div class="workshop-location-name"><strong>' +
+      workshop.location_name +
+      '</strong></div>';
+
+    // Add the workshop subject
+    html +=
+      '<div class="workshop-subject">' + workshop.subject + ' Workshop</div>';
+
+    // Add the date(s).
+    html += '<div class="workshop-dates">';
+    const sessions = workshop.sessions;
+    $.each(sessions, function(i, session) {
+      html +=
+        '<div class="workshop-date" style="white-space: nowrap;">' +
+        session +
+        '</div>';
+    });
+    html += '</div>';
+
+    var code_studio_root = $('#properties').attr('data-studio-url');
+    var url = code_studio_root + '/pd/workshops/' + workshop.id + '/enroll';
+    if (workshop.id) {
+      html +=
+        '<div class="workshop-link"><a style="" href=' +
+        url +
+        '>Info and Signup</a></div>';
+    }
+    html += '</div>';
   });
-  html += '</div>';
-
-  var code_studio_root = $('#properties').attr('data-studio-url');
-  var url = code_studio_root + '/pd/workshops/' + workshop.id + '/enroll';
-  if (workshop.id) {
-    html +=
-      '<div class="workshop-link"><a style="" href=' +
-      url +
-      '>Info and Signup</a></div>';
-  }
-  html += '</div>';
 
   return html;
-}
-
-function addGeocomplete() {
-  var geocomplete_options = {
-    country: 'us'
-  };
-
-  if (html5_storage_supported() && localStorage['geocomplete'] !== undefined) {
-    geocomplete_options.location = localStorage['geocomplete'];
-  }
-
-  $('#geocomplete')
-    .geocomplete(geocomplete_options)
-    .bind('geocode:result', function(event, result) {
-      gmap.fitBounds(result.geometry.viewport);
-
-      var bounds = gmap.getBounds();
-      var marker_found = false;
-
-      while (!marker_found && gmap.getZoom() > 4) {
-        $.each(markersByLocation, function(index, marker) {
-          if (bounds.contains(marker.getPosition())) {
-            marker_found = true;
-          }
-        });
-
-        if (!marker_found) {
-          gmap.setZoom(gmap.getZoom() - 1);
-          bounds = gmap.getBounds();
-        }
-      }
-
-      if (html5_storage_supported()) {
-        localStorage['geocomplete'] = result.formatted_address;
-      }
-    });
-
-  $('#btn-submit').click(function() {
-    $('#geocomplete').trigger('geocode');
-  });
-
-  $('#btn-reset').click(function() {
-    $('#geocomplete').val('');
-    gmap.setCenter(new google.maps.LatLng(37.6, -95.665));
-    gmap.setZoom(4);
-    infoWindow.close();
-    if (html5_storage_supported()) {
-      localStorage.removeItem('geocomplete');
-    }
-  });
-}
-
-function html5_storage_supported() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch (e) {
-    return false;
-  }
 }

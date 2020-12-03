@@ -1,0 +1,3017 @@
+{
+  "mn-MN": {
+    "data": {
+      "function_definitions": {
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "дэлгэрэнгүй"
+          },
+          "draw eyebrow": {
+            "name": "хөмсөг зурах"
+          },
+          "draw pupil": {
+            "name": "хүүхэн хараа зурах"
+          }
+        },
+        "2-3 Artist 3.4": {
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a car": {
+            "name": "машин зурах"
+          }
+        },
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "name": "зурах_шулуун",
+            "parameters": {
+              "width": "өргөн",
+              "height": "өндөр"
+            }
+          }
+        },
+        "2-3 Artist Debugging 10": {
+          "draw square": {
+            "name": "квадрат -г зураарай",
+            "parameters": {
+              "width": "өргөн",
+              "height": "өндөр"
+            }
+          },
+          "jump to controller top left": {
+            "name": "удирдлагын зүүн дээд рүү үсрэх"
+          },
+          "jump to middle": {
+            "name": "дунд руу үсрэх"
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a button": {
+            "name": "товч татах"
+          },
+          "draw cord": {
+            "name": "утас татах"
+          },
+          "draw R pad": {
+            "name": "R дэвсгэрийг татах"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw left leg": {
+            "name": "зүүн хөлийг зурах"
+          },
+          "draw right leg": {
+            "name": "баруун хөлийг зурах"
+          },
+          "draw body and arms": {
+            "name": "их бие, гарыг зурах"
+          },
+          "draw a head": {
+            "name": "толгой зурах"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw right leg": {
+            "name": "баруун хөлийг зурах"
+          },
+          "draw sitting stick figure": {
+            "name": "сууж буй савааны зургийг зурах"
+          },
+          "draw head": {
+            "name": "толгой зурах"
+          },
+          "draw arms": {
+            "name": "гар зурах"
+          },
+          "jump to neck": {
+            "name": "хүзүү рүү шилжих"
+          },
+          "draw left leg": {
+            "name": "зүүн хөлийг зурах"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw O": {
+            "name": "O-г зурах"
+          },
+          "draw D": {
+            "name": "D-г зурах"
+          },
+          "draw E": {
+            "name": "E-г зурах"
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "2-3 Artist Functions 10": {
+          "big gear": {
+            "name": "том араа"
+          },
+          "small gear": {
+            "name": "жижиг араа"
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "цэцэг зурах"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "цасан ширхэг зурах"
+          }
+        },
+        "2-3 Bee Functions 1": {
+          "get 2 nectar": {
+            "name": "2 шүүс цуглуулах"
+          }
+        },
+        "2-3 Bee Functions 10": {
+          "collect purple nectar": {
+            "name": "хөх ягаан шүүсийг цуглуулаарай"
+          }
+        },
+        "2-3 Bee Functions 2": {
+          "get 5": {
+            "name": "5-г цуглуулах"
+          }
+        },
+        "2-3 Bee Functions 4": {
+          "move and get nectar": {
+            "name": "хөдөлж, шүүс цуглуул"
+          }
+        },
+        "2-3 Bee Functions 5": {
+          "move and get 4": {
+            "name": "хөдөлж 4-г аваарай"
+          }
+        },
+        "2-3 Bee Functions 6": {
+          "move and get 4": {
+            "name": "хөдөлж 4-г аваарай"
+          }
+        },
+        "2-3 Bee Functions 8": {
+          "get 7 nectar make 7 honey": {
+            "name": "7 шүүс цуглуулах 7 зөгийн бал хийх"
+          }
+        },
+        "2-3 Bee Functions 9": {
+          "get 7 make 7": {
+            "name": "7-г цуглуулж 7-г хийгээрэй"
+          }
+        },
+        "2-3 Bee Functions Assessment 1": {
+          "get 7": {
+            "name": "7-г аваарай"
+          }
+        },
+        "2-3 Bee Functions Assessment 2": {
+          "move and get 3": {
+            "name": "хөдөлж 3-г аваарай"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "цэцэг зурах"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "мод зурах"
+          }
+        },
+        "4-5 Artist 7": {
+          "draw triangle": {
+            "name": "гурвалжин зурах"
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a car": {
+            "name": "машин зурах"
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "тойрог зураарай"
+          },
+          "draw goal": {
+            "name": "гоолын хаалга зураарай"
+          }
+        },
+        "4-5 Bee Conditionals 7": {
+          "check purple flower": {
+            "name": "хөх ягаан цэцгийг шалгах"
+          }
+        },
+        "4-5 Bee Conditionals 8": {
+          "check flower make honey": {
+            "name": "цэцгийг шалгаж зөгийн бал хийгээрэй"
+          }
+        },
+        "4-5 Bee Conditionals Assessment 1": {
+          "get nectar or make honey": {
+            "name": "шүүс цуглуулах эсвэл зөгийн бал хийх"
+          }
+        },
+        "4-5 Bee Debugging 7": {
+          "make 3 honey": {
+            "name": "3 зөгийн бал хийгээрэй"
+          }
+        },
+        "4-5 Bee Debugging 8": {
+          "get 5 nectar": {
+            "name": "5 шүүс цуглуулах"
+          }
+        },
+        "4-5 Bee Debugging 9": {
+          "make all honey": {
+            "name": "бүх зөгийн балыг хийх"
+          }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "тоглоомонд хожлоо"
+          }
+        },
+        "Choose Your Own Adventure": {
+          "witch ending": {
+            "name": "шуламтай төгсгөл"
+          },
+          "story": {
+            "name": "түүх"
+          },
+          "starting path": {
+            "name": "эхлэх зам"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          }
+        },
+        "Course 4 Bee Params 1": {
+          "get 3 nectar": {
+            "name": "3 шүүс цуглуулах"
+          }
+        },
+        "Course 4 Bee Params 2": {
+          "get 3 nectar": {
+            "name": "3 шүүс цуглуулах"
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "name": "3 шүүс цуглуулах"
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "name": "3 шүүс цуглуулах"
+          }
+        },
+        "Course 4 Bee Params 5": {
+          "get 5 nectar": {
+            "name": "5 шүүс цуглуулах"
+          }
+        },
+        "Course 4 Bee Params 6": {
+          "get 5 nectar": {
+            "name": "5 шүүс цуглуулах"
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "name": "олон шүүс цуглуулах"
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "name": "шүүс цуглуулах зөгийн бал хийх",
+            "parameters": {
+              "honey": "зөгийн бал"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "үсрэх"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "level_up": {
+            "name": "түвшин_ахих"
+          },
+          "score_points": {
+            "name": "оноо_авах",
+            "parameters": {
+              "points": "цэгүүд"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "үсрэх"
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "name": "үсрэх",
+            "parameters": {
+              "height": "өндөр",
+              "actor": "жүжигчин"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 4": {
+          "patrol": {
+            "name": "эргүүл"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "name": "эргүүл",
+            "parameters": {
+              "actor": "жүжигчин"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "name": "эргүүл",
+            "parameters": {
+              "actor": "жүжигчин"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "name": "эргүүл",
+            "parameters": {
+              "actor": "жүжигчин",
+              "speed": "хурд"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "name": "эргүүл",
+            "parameters": {
+              "actor": "жүжигчин",
+              "speed": "хурд"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "name": "оноо_авах",
+            "parameters": {
+              "points": "цэгүүд"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "оноо тохируулах"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "оноо тохируулах"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw a line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамын зурах"
+          },
+          "shift down/forward": {
+            "name": "доош/урагш шилжих"
+          },
+          "shift down/backward": {
+            "name": "доош/арагш шилжих"
+          },
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": "шүүс цуглуулах",
+            "parameters": {
+              "counter": "тоологч"
+            }
+          }
+        },
+        "Course 4 SCF 1b": {
+          "make honey up and over": {
+            "name": "зөгийн бал хийж, давтаарай"
+          }
+        },
+        "Course 4 SCF 2": {
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          },
+          "draw octagons": {
+            "name": "найман өнцөгт зурах"
+          },
+          "draw an octagon": {
+            "name": "найман өнцөгт зурах"
+          },
+          "shift down": {
+            "name": "доош шилжих"
+          }
+        },
+        "Course 4 SCF 3": {
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw an octagon": {
+            "name": "найман өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "Course E: Play Lab Project": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "Find the Wizard": {
+          "check guess": {
+            "name": "таамаглалаа шалгаарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "FoodFight": {
+          "level_up": {
+            "name": "түвшин_ахих"
+          },
+          "score_points": {
+            "name": "оноо_авах",
+            "parameters": {
+              "points": "цэгүүд"
+            }
+          }
+        },
+        "Geometric Sun": {
+          "draw a door": {
+            "name": "хаалга зурах"
+          },
+          "draw grass": {
+            "name": "өвс зурах"
+          },
+          "draw windows": {
+            "name": "цонх зурах"
+          },
+          "rectangle": {
+            "name": "тэгш өнцөгт"
+          },
+          "sun": {
+            "name": "нар"
+          },
+          "diamond": {
+            "name": "алмааз"
+          },
+          "window": {
+            "name": "цонх"
+          },
+          "draw a house": {
+            "name": "байшин зурах"
+          },
+          "triangle": {
+            "name": "гурвалжин"
+          },
+          "square": {
+            "name": "квадрат"
+          }
+        },
+        "Geometric Sun_2018": {
+          "draw a door": {
+            "name": "хаалга зурах"
+          },
+          "draw grass": {
+            "name": "өвс зурах"
+          },
+          "draw windows": {
+            "name": "цонх зурах"
+          },
+          "rectangle": {
+            "name": "тэгш өнцөгт"
+          },
+          "sun": {
+            "name": "нар"
+          },
+          "diamond": {
+            "name": "алмааз"
+          },
+          "window": {
+            "name": "цонх"
+          },
+          "draw a house": {
+            "name": "байшин зурах"
+          },
+          "triangle": {
+            "name": "гурвалжин"
+          },
+          "square": {
+            "name": "квадрат"
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "таамаглалаа шалгаарай"
+          }
+        },
+        "InspirationalArtwork": {
+          "n-sided shape": {
+            "name": "n-талт дүрс",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a loop": {
+            "name": "гогцоо зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw spiral circle": {
+            "name": "спираль тойрог зурах",
+            "parameters": {
+              "size": "хэмжээ"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "name": "гогцоо зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "n-sided shape": {
+            "name": "n-талт дүрс"
+          },
+          "draw spiral circle": {
+            "name": "спираль тойрог зурах",
+            "parameters": {
+              "size": "хэмжээ"
+            }
+          }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": "дээвэр зураарай"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "тэгш өнцөгт зураарай"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "тэгш өнцөгт зураарай"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "empty function": {
+            "name": "хоосон функц"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw a square 40": {
+            "name": "квадрат 40-г зураарай"
+          },
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "гурвалжин зурах"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "Draw a triangle": {
+            "name": "Гурвалжин зурах"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a hexagon": {
+            "name": "зургаан өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "name": "спираль ирмэгийг зураарай",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "description": "гурвалжин зурах"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "гурвалжин зурах"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "name": "урттай гурвалжин зураарай",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "name": "таван өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a hexagon": {
+            "name": "зургаан өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a sqaure": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "name": "урттай гурвалжин зураарай",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "name": "үсрэх",
+            "parameters": {
+              "height": "өндөр",
+              "actor": "жүжигчин"
+            }
+          },
+          "patrol": {
+            "name": "эргүүл",
+            "parameters": {
+              "actor": "жүжигчин",
+              "speed": "хурд"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "үсрэх",
+            "parameters": {
+              "height": "өндөр",
+              "actor": "жүжигчин"
+            }
+          },
+          "patrol": {
+            "name": "эргүүл",
+            "parameters": {
+              "actor": "жүжигчин",
+              "speed": "хурд"
+            }
+          }
+        },
+        "Robot Doodle": {
+          "25 pixel square": {
+            "name": "25 пикселийн квадрат"
+          },
+          "draw head": {
+            "name": "толгой зурах"
+          },
+          "draw eye": {
+            "name": "нүд зурах"
+          }
+        },
+        "Robot Doodle_2018": {
+          "25 pixel square": {
+            "name": "25 пикселийн квадрат"
+          },
+          "draw head": {
+            "name": "толгой зурах"
+          },
+          "draw eye": {
+            "name": "нүд зурах"
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "цэцэг зурах"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "дүрс зурах"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "миний функц"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"энгийн\" шийдэл"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "боломжит шийдэл"
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "get 3 nectar or honey": {
+            "name": "3 шүүс эсвэл бал цуглуул"
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "move and collect": {
+            "name": "хөдөлж, цуглуул"
+          }
+        },
+        "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+            "name": "шүүс эсвэл бал шалгаарай"
+          },
+          "row of nectar": {
+            "name": "шүүсний эгнээ"
+          },
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ"
+          }
+        },
+        "course3_bee_functions_challenge4": {
+          "check nectar or honey": {
+            "name": "шүүс эсвэл бал шалгаарай"
+          },
+          "row of nectar": {
+            "name": "шүүсний эгнээ"
+          },
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ"
+          },
+          "move and check": {
+            "name": "хөдөлж, шалгаарай"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "win game": {
+            "name": "тоглоомд хожих"
+          },
+          "lose game": {
+            "name": "тоглоомд хожигдох"
+          },
+          "keep playing": {
+            "name": "үргэлжлүүлэн тоглох"
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "course4_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "хавчаар зурах"
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "draw background": {
+            "name": "суурь өнгийг зурах",
+            "parameters": {
+              "color": "өнгө"
+            }
+          },
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах"
+          },
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "эгнээ сонгох",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "эгнээ сонгох",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"энгийн\" шийдэл"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "боломжит шийдэл"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "боломжит шийдэл"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "боломжит шийдэл"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "боломжит шийдэл"
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "name": "дөл зурах",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "гал зурах"
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "name": "дөл зурах",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "гал зурах"
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "name": "дөл зурах",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "гал зурах"
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "name": "дөл зурах",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "гал зурах"
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "өргөгч"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "өргөгч"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "өргөгч"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "өргөгч"
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw bit": {
+            "name": "бит зурах"
+          },
+          "draw": {
+            "name": "зурах"
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw a plane of squares": {
+            "name": "квадратуудын хавтгайг зураарай"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw a plane of squares": {
+            "name": "квадратуудын хавтгайг зураарай"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "хавчаар зурах"
+          }
+        },
+        "courseE_artist_concept_challenge2_2018": {
+          "draw pinwheel": {
+            "name": "хавчаар зурах"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a window": {
+            "name": "цонх зурах"
+          },
+          "draw a house": {
+            "name": "байшин зурах"
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a window": {
+            "name": "цонх зурах"
+          },
+          "draw a house": {
+            "name": "байшин зурах"
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": "цонх зурах"
+          }
+        },
+        "courseE_artist_functions7_2020": {
+          "draw a window": {
+            "name": "цонх зурах"
+          },
+          "draw a house": {
+            "name": "байшин зурах"
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw triangle": {
+            "name": "гурвалжин зурах"
+          },
+          "draw line of triangles": {
+            "name": "гурвалжны шугамыг зур"
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw triangle": {
+            "name": "гурвалжин зурах"
+          },
+          "draw line of triangles": {
+            "name": "гурвалжны шугамыг зур"
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw triangle": {
+            "name": "гурвалжин зурах"
+          },
+          "draw line of triangles": {
+            "name": "гурвалжны шугамыг зур"
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw triangle": {
+            "name": "гурвалжин зурах"
+          },
+          "draw line of triangles": {
+            "name": "гурвалжны шугамыг зур"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "my design": {
+            "name": "миний загвар"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "draw line of polygons": {
+            "name": "олон өнцөгтийн шугамыг зурах"
+          },
+          "draw polygon": {
+            "name": "олон өнцөгт зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "draw line of polygons": {
+            "name": "олон өнцөгтийн шугамыг зурах"
+          },
+          "draw polygon": {
+            "name": "олон өнцөгт зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "draw line of polygons": {
+            "name": "олон өнцөгтийн шугамыг зурах"
+          },
+          "draw polygon": {
+            "name": "олон өнцөгт зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "draw line of polygons": {
+            "name": "олон өнцөгтийн шугамыг зурах"
+          },
+          "draw polygon": {
+            "name": "олон өнцөгт зурах"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "балны шүүс"
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "хөдөлж зөгийн бал хийгээрэй"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "хөдөлж зөгийн бал хийгээрэй"
+          }
+        },
+        "courseE_bee_functions2": {
+          "get 2 nectar": {
+            "name": "2 шүүс цуглуулах"
+          }
+        },
+        "courseE_bee_functions3": {
+          "get 5": {
+            "name": "5-г цуглуулах"
+          }
+        },
+        "courseE_bee_functions4": {
+          "move and get nectar": {
+            "name": "хөдөлж, шүүс цуглуул"
+          }
+        },
+        "courseE_bee_functions5": {
+          "move and get 4": {
+            "name": "хөдөлж 4-г аваарай"
+          }
+        },
+        "courseE_bee_functions6": {
+          "get 7 nectar make 7 honey": {
+            "name": "7 шүүс цуглуулах 7 зөгийн бал хийх"
+          }
+        },
+        "courseE_bee_functions7": {
+          "get 7 make 7": {
+            "name": "7-г цуглуулж 7-г хийгээрэй"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "бүх шүүсийг цуглуулах"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "бүх шүүсийг цуглуулах"
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "get 3 nectar or honey": {
+            "name": "3 шүүс эсвэл бал цуглуул"
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "move and collect": {
+            "name": "хөдөлж, цуглуул"
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "get pumpkin": {
+            "name": "хулуу авах"
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
+            "name": "хулуу авах"
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "залуурдах"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "шалга, сонго"
+          },
+          "find pumpkin": {
+            "name": "хулууг ол"
+          },
+          "wander path": {
+            "name": "замаар яв"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "эрдэнэ шиш, хулуу"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "эрдэнэ шиш, хулуу"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "эрдэнэ шиш, хулуу"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "эрдэнэ шиш, хулуу"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "эрдэнэ шиш, хулуу"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "залуурдах"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "залуурдах"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "win game": {
+            "name": "тоглоомд хожих"
+          },
+          "lose game": {
+            "name": "тоглоомд хожигдох"
+          },
+          "keep playing": {
+            "name": "үргэлжлүүлэн тоглох"
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "checker": {
+            "name": "шалгагч",
+            "parameters": {
+              "size": "хэмжээ",
+              "color": "өнгө"
+            }
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "Make gingham": {
+            "name": "Даавуу хийгээрэй",
+            "parameters": {
+              "size": "хэмжээ"
+            }
+          },
+          "black outline": {
+            "name": "хар тойм",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_artist_fwp2": {
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "checker": {
+            "name": "шалгагч",
+            "parameters": {
+              "size": "хэмжээ",
+              "color": "өнгө"
+            }
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "Make gingham": {
+            "name": "Даавуу хийгээрэй",
+            "parameters": {
+              "size": "хэмжээ"
+            }
+          },
+          "black outline": {
+            "name": "хар тойм",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square2": {
+            "name": "квадрат2-г зураарай",
+            "parameters": {
+              "size": "хэмжээ"
+            }
+          },
+          "filled square": {
+            "name": "бөглөсөн квадрат",
+            "parameters": {
+              "size": "хэмжээ",
+              "color": "өнгө"
+            }
+          },
+          "black outline": {
+            "name": "хар тойм",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "name": "спираль ирмэгийг зураарай",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "name": "спираль ирмэгийг зураарай",
+            "parameters": {
+              "length": "урт",
+              "min": "хамгийн бага"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "name": "спираль ирмэгийг зураарай",
+            "parameters": {
+              "length": "урт",
+              "min": "хамгийн бага"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "points": "цэгүүд",
+              "length": "урт"
+            }
+          },
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a spiral edge": {
+            "name": "спираль ирмэгийг зураарай",
+            "parameters": {
+              "length": "урт",
+              "min": "хамгийн бага"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "draw background": {
+            "name": "суурь өнгийг зурах",
+            "parameters": {
+              "color": "өнгө"
+            }
+          },
+          "draw a polygon": {
+            "name": "олон өнцөгт зурах"
+          },
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "draw a square 20": {
+            "name": "квадрат 20-г зураарай"
+          },
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw an octagon": {
+            "name": "найман өнцөгт зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_bee_conditionals2": {
+          "move and check": {
+            "name": "хөдөлж, шалгаарай"
+          },
+          "check nectar or honey": {
+            "name": "шүүс эсвэл бал шалгаарай"
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "зөвхөн шүүсийг цуглуулах"
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "зөвхөн зөгийн бал хийх"
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": "шүүс эсвэл бал шалгаарай"
+          }
+        },
+        "courseF_bee_functions4": {
+          "move and check": {
+            "name": "хөдөлж, шалгаарай"
+          },
+          "check nectar or honey": {
+            "name": "шүүс эсвэл бал шалгаарай"
+          }
+        },
+        "courseF_bee_functions5a": {
+          "move and check": {
+            "name": "хөдөлж, шалгаарай"
+          },
+          "check nectar or honey": {
+            "name": "шүүс эсвэл бал шалгаарай"
+          }
+        },
+        "courseF_bee_functions6": {
+          "get nectar make honey": {
+            "name": "шүүс цуглуулах зөгийн бал хийх"
+          }
+        },
+        "courseF_bee_functions7": {
+          "get nectar make honey": {
+            "name": "шүүс цуглуулах зөгийн бал хийх"
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "get nectar make honey": {
+            "name": "шүүс цуглуулах зөгийн бал хийх"
+          }
+        },
+        "courseF_bee_functionsPre7": {
+          "get nectar make honey": {
+            "name": "шүүс цуглуулах зөгийн бал хийх"
+          }
+        },
+        "courseF_bee_functions_challenge1": {
+          "row of nectar": {
+            "name": "шүүсний эгнээ"
+          },
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ"
+          },
+          "check nectar or honey": {
+            "name": "шүүс эсвэл бал шалгаарай"
+          }
+        },
+        "courseF_bee_functions_challenge2": {
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ"
+          },
+          "move and check": {
+            "name": "хөдөлж, шалгаарай"
+          },
+          "check nectar or honey": {
+            "name": "шүүс эсвэл бал шалгаарай"
+          }
+        },
+        "courseF_bee_fwp2": {
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ"
+          }
+        },
+        "courseF_bee_fwp3": {
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ"
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ",
+            "parameters": {
+              "width": "өргөн"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "name": "шүүсНийэгнээ",
+            "parameters": {
+              "width": "өргөн"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "name": "шүүсНийэгнээЭсвэлЗөгийнбал",
+            "parameters": {
+              "width": "өргөн"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "name": "шүүсНийэгнээЭсвэлЗөгийнбал",
+            "parameters": {
+              "width": "өргөн"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "name": "шүүсНийэгнээЭсвэлЗөгийнбал",
+            "parameters": {
+              "width": "өргөн"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "эгнээ сонгох",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "эгнээ сонгох",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "цуглуулах"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "цуглуулах"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "цуглуулах"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "цуглуулах"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "цуглуулах"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "цуглуулах"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "name": "зурах"
+          },
+          "draw bit": {
+            "name": "бит зурах"
+          }
+        }
+      }
+    }
+  }
+}

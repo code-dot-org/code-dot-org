@@ -179,6 +179,8 @@ az:
     header:
       finished_hoc: Kod Saatımı bitirdim
       sign_in_to_save: Nəticələri itirməmək üçün daxil olun
+      my_dashboard: İdarəetmə panelim
+      course_catalog: Kurs kataloqu
       project_gallery: Layihə qalereyası
       sections: Bölmələr
       teacher_community: Müəllim icması
@@ -209,6 +211,8 @@ az:
       help_us: Bizə kömək edin
       teach: Öyrədin
       about: Haqqımızda
+      legal_privacy: Məxfilik siyasəti
+      legal_tos: Xidmət şərtləri
     user:
       classroom: Müəllimin ev səhifəsi
       label: Salam %{username}
@@ -226,6 +230,7 @@ az:
       artist: Rəssam
       bounce: Tullan
       calc: Hesablama
+      dance: Rəqs şənliyi
       eval: Qiymət
       flappy: Flappy
       frozen: Buzlu ürək
@@ -266,6 +271,7 @@ az:
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: "(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)"
     update_email: Yenilə
+    none: Heç biri
   user_level:
     completed: Tamamlandı
     tried: Yoxlanıldı
@@ -348,6 +354,10 @@ az:
     applab:
       title: Proqram Labı
       audience: 13+ yaş
+    dance:
+      title: Rəqs şənliyi
+    dance-2019:
+      title: Rəqs şənliyi
     hoc:
       title: Ənənəvi labirint
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
@@ -390,24 +400,13 @@ az:
       audience: 4+ yaş
     unplugged_conditionals:
       title: Şərti ifadələr
-  gallery:
-    students_made_these_with_code: Şagirdlər bunları kod yazmaqla edib!
-    picture_count: Ötən <b>%{days}</b> gün ərzində şagirdlər öz kompüter proqramlarını
-      yazaraq <b>%{count}</b> şəkil çəkib. Hər proqramın necə işlədiyini görmək üçün
-      şəkilləri klikləyin.
-    activity_count: Ötən <b>%{days}</b> gün ərzində, şagirdlər öz kompüter proqramlarını
-      yazaraq <b>%{count}</b> mobil əlavə və şəkil düzəldib. Hər proqramın necə işlədiyini
-      görmək üçün şəkil və ekran təsvirlərini klikləyin.
-    want_to_make_your_own: Özünüz üçün də birini düzəltmək istərdiniz?
-    more: Daha çox &rarr;
-    header: Qalereya
-    header_playlab: Oyun labı
-    header_artist: Rəssam
   landing:
     support: Kömək istə
     support_url: "//support.code.org"
     documentation: Təlimat və sənədlər
     tutorials: Dərsliklər
+  free_response:
+    placeholder: Cavabınızı buraya daxil edin
   multi:
     wrong_title: Yanlış cavab
     wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!
@@ -489,28 +488,14 @@ az:
       name: Qəbul edildi
     rejected:
       name: Rədd edildi
-  flex_category:
-    required: Yekun
-    content: Məzmun
-    practice: Öyrədici proqramlar
-    csf_jigsaw: Mozaika
-    csf_loops: dövrlər
-    csf_events: Hadisələr
-    csf_binary: İkilik
-    csf_conditionals: Şərti ifadələr
-    csf_functions: funksiyalar
-    csf_variables: dəyişənlər
-    csf_internet: İnternet
-    csp_variables: dəyişənlər
-    csp_conditionals: Şərti ifadələr
-    csp_functions: funksiyalar
-    csp_lists: Siyahılar
-    csp_loops: dövrlər
   hoc_download:
     title: Kod saatı yükləmələr
     capsule_title: Internetiniz varmı?
     instructions_headline: Əlaqə yoxdur?
     minecraft_name: Maynkraft Kod Saatı
+    download_in_English: 'İngilizcə yükləyin:'
+    download_in_Spanish: 'İspanca yükləyin:'
+    windows: Windows
     mac: Mac OS X
   pd:
     survey:
@@ -519,6 +504,7 @@ az:
     form_labels:
       email: E-poçt
       school_name: Məktəbin adı
+      colombian_school_name: Məktəbin adı
     form_entries:
       gender:
         male: Kişi
@@ -545,5 +531,4 @@ az:
       title: Məşğələdə iştirak
   cookie_banner:
     accept: Razıyam
-  gdpr_dialog:
-    true: Bəli
+  copy: Köçür

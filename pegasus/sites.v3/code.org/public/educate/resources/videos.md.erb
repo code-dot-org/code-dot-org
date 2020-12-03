@@ -8,7 +8,73 @@ style_min: true
 
 # Video library
 
-We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. Our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos.
+We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. Our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see bottom of page for the licensing restrictions on use of these videos.
+
+<h2>How AI Works</h2>
+<p style="margin-bottom: 25px">With an introduction by Microsoft CEO Satya Nadella, this series of short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making.</p>
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/Ok-xpKjKp2g'}
+twitter = {:url=>'https://youtu.be/Ok-xpKjKp2g', :related=>'codeorg', :text=>'Introducing How AI Works @codeorg'} %>
+<%=view :display_video_thumbnail, id: "introducing_ai", video_code: "Ok-xpKjKp2g", caption: "Introducing How AI Works", play_button: 'center', letterbox: 'false', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/KHbwOetbmbs'}
+twitter = {:url=>'https://youtu.be/KHbwOetbmbs', :related=>'codeorg', :text=>'What is Machine Learning? @codeorg'} %>
+<%=view :display_video_thumbnail, id: "what_is_ml", video_code: "OeU5m6vRyCk", caption: "What is Machine Learning?", play_button: 'center', letterbox: 'false', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/x2mRoFNm22g'}
+twitter = {:url=>'https://youtu.be/x2mRoFNm22g', :related=>'codeorg', :text=>'Training Data & Bias @codeorg'} %>
+<%=view :display_video_thumbnail, id: "training_data_and_bias", video_code: "x2mRoFNm22g", caption: "Training Data & Bias", play_button: 'center', letterbox: 'false', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/x2mRoFNm22gg'}
+twitter = {:url=>'https://youtu.be/x2mRoFNm22g', :related=>'codeorg', :text=>'Neural Networks @codeorg'} %>
+<%=view :display_video_thumbnail, id: "neural_networks", video_code: "JrXazCEACVo", caption: "Neural Networks", play_button: 'center', letterbox: 'false', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div style="clear: both"></div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/2hXG8v8p0KM'}
+twitter = {:url=>'https://youtu.be/2hXG8v8p0KM', :related=>'codeorg', :text=>'Computer Vision @codeorg'} %>
+<%=view :display_video_thumbnail, id: "computer_vision", video_code: "2hXG8v8p0KM", caption: "Computer Vision", play_button: 'center', letterbox: 'false', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/tJQSyzBUAew'}
+twitter = {:url=>'https://youtu.be/tJQSyzBUAew', :related=>'codeorg', :text=>'Ethics & AI: Equal Access and Algorithmic Bias @codeorg'} %>
+<%=view :display_video_thumbnail, id: "bias_and_access", video_code: "tJQSyzBUAew", caption: "Ethics & AI: Equal Access and Algorithmic Bias", play_button: 'center', letterbox: 'false', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div style="clear: both"></div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/zNxw5gJtHLc'}
+twitter = {:url=>'https://youtu.be/zNxw5gJtHLc', :related=>'codeorg', :text=>'Ethics & AI: Privacy and the Future of Work @codeorg'} %>
+<%=view :display_video_thumbnail, id: "automation_and_privacy", video_code: "zNxw5gJtHLc", caption: "Ethics & AI: Privacy and the Future of Work", play_button: 'center', letterbox: 'false', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div style="clear: both"></div>
 
 ## How Computers Work
 
@@ -149,7 +215,7 @@ twitter = {:url=>'https://www.youtube.com/watch?t=66&v=15aqFQQVBWU', :related=>'
 
 <% facebook = {:u=>'https://youtu.be/By30SCp-Tsw'}
 twitter = {:url=>'https://youtu.be/By30SCp-Tsw', :related=>'codeorg', :text=>'Aloe Blacc explains DIGITAL COMPRESSION @codeorg'} %>
-<%=view :display_video_thumbnail, id: "compression", video_code: "By30SCp-Tsw", caption: "Aloe Blacc explains DIGITAL COMPRESSION", play_button: 'center', facebook: facebook, twitter: twitter %>
+<%=view :display_video_thumbnail, id: "compression", video_code: "By30SCp-Tsw", caption: "Aloe Blacc explains DIGITAL COMPRESSION", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/textcompression_blacc_short.mp4"%>
 
 [/col-50]
 
@@ -232,9 +298,7 @@ twitter = {:url=>'https://youtu.be/eZqKqI8AvnA', :related=>'codeorg', :text=>'PE
 
 ---
 
-Code.org’s library of videos may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge. If you are interested in licensing Code.org materials for commercial purposes, [contact us](/contact).
-
-The celebrities and video "cast" members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
+**For terms of use, please see "Your License to Use Code.org Videos, Tutorials, Data, and APIs" in our [Terms of Service](/tos).**
 
 ![image](/images/cc-logo.png)
 

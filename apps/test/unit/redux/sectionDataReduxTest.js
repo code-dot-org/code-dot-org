@@ -17,7 +17,7 @@ const fakeSectionData = {
     id: 300,
     name: 'csp2'
   },
-  stage_extras: false
+  lesson_extras: false
 };
 
 const sortedFakeSectionData = {

@@ -130,7 +130,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Add 15 fish to the image by writing drawAllFish with a loop. (Click to see full instructions)",
-    "long_instructions": "# Add Fish\r\n\r\nThe next high-level function you will write is `drawAllFish`. A version of `drawFish` with parameters has been provided for you to use.\r\n\r\n# Do This:\r\n\r\n* **Read** the `drawFish` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Add a loop** to `drawAllFish`.\r\n\r\n* **Place the commands already inside the function in your loop.** This way your code will **move the turtle randomly** around the **top 360 pixels** of the image and draw **15 fish** of random size between **5 and 20** using `drawFish`.\r\n\r\n* Once you have your loop working try calling `drawFish` with random values for its `red`, `green`, and `blue` parameters to get differently colored fish.\r\n\r\n![](https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35 PM.png)",
+    "long_instructions": "# Add Fish\r\n\r\nThe next high-level function you will write is `drawAllFish`. A version of `drawFish` with parameters has been provided for you to use.\r\n\r\n# Do This:\r\n\r\n* **Read** the `drawFish` function to know how it works and what **parameters** it accepts.\r\n\r\n* **Add a loop** to `drawAllFish`.\r\n\r\n* **Place the commands already inside the function in your loop.** This way your code will **move the turtle randomly** around the **top 360 rows of pixels** of the image and draw **15 fish** of random size between **5 and 20** using `drawFish`.\r\n\r\n* Once you have your loop working try calling `drawFish` with random ranges of values for its `red`, `green`, and `blue` parameters to get differently colored fish.\r\n\r\n![](https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -212,12 +212,14 @@
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
+    "encrypted": "false",
     "preload_asset_list": null,
-    "encrypted": "false"
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-18 14:57:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-01 15:48:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-18 14:57:34 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-01 15:48:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-13 23:11:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

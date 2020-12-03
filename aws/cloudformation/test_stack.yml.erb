@@ -1,0 +1,34 @@
+<%
+commit = ENV['COMMIT'] || `git rev-parse HEAD`.split.first
+ami = commit[0..4]
+-%>
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: Minimal test stack for AMI-builder.
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t3.large
+  ImageId:
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+Resources:
+  # Stack-specific IAM permissions applied to both daemon and frontends.
+  CDOPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      Description: !Sub "Application permissions for ${AWS::StackName}."
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          # Instance-bootstrap CloudFormation hook.
+          - Effect: Allow
+            Action: 'cloudformation:SignalResource'
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
+<%=
+  component 'ami',
+    ami: ami,
+    frontend_device_name: '/dev/xvda',
+    frontend_policies: [Ref: 'CDOPolicy'],
+    ssh_key_name: SSH_KEY_NAME
+-%>

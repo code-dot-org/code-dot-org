@@ -1,0 +1,21 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-03-17T21:10:01.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n      \"data\": \"body{\\n  text-align: center;\\n  background-color: gray;\\n}\\nimg {\\n  width: 500px;\\n  border-color:black;\\n  border-style: ridge;\\n  border-width: 5px;\\n}\\nh1 {\\n  font-size: 50px;\\n}\\nh2 {\\n  font-size: 40px;\\n}\\nh5 {\\n  font-size: 15px;\\n} \\n\\n.winter {\\n  color: lightskyblue;\\n} \\n\\n.spring {\\n  \\n}\"\r\n    },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n<head>\\n  <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n</head>\\n<body>\\n  <h1>Seasons!</h1>\\n  <h5>Changing, Fleeting, Cycle</h5> \\n\\n<!-- Winter-->\\n  <h2 class=\\\"winter\\\">Winter</h2>\\n  <h5 class=\\\"winter\\\">arctic</h5>\\n  <h5 class=\\\"winter\\\">cozy</h5>\\n  <h5 class=\\\"winter\\\">enchanted</h5>\\n  <h5>snowy</h5>\\n  <h5 class=\\\"winter\\\">white</h5>\\n  <img src=\\\"winter.jpg\\\"\\n       alt=\\\"Winter woods\\\">\\n\\n  <p>from EpicV27 on Wikimedia Commons - GFDL</p>\\n\\n<!-- Spring-->\\n  <h2>Spring</h2>\\n  <h5>blooming</h5>\\n  <h5>flourishing </h5>\\n  <h5>invigorating</h5>\\n  <h5>pretty</h5>\\n  <h5>rainy</h5>\\n  <img src=\\\"spring.jpg\\\"\\n       alt=\\\"Spring Flowers\\\" >\\n\\n<p>from Pexels - CC0</p>\\n\\n  <!-- Summer-->\\n  <h2>Summer</h2>\\n  <h5>beautiful</h5>\\n  <h5>bright</h5>\\n  <h5>cheerful</h5>\\n  <h5>hot</h5>\\n  <h5>sunny</h5>\\n  <img src=\\\"summer.jpg\\\"\\n       alt=\\\"Summer Beach\\\" >\\n\\n<p>from Rukiasan on StockKite - CC0</p>\\n\\n  <!-- Fall-->\\n  <h2>Fall</h2>\\n  <h5>brisk</h5>\\n  <h5>changing</h5>\\n  <h5>colorful</h5>\\n  <h5>crisp </h5>\\n  <h5>vibrant</h5>\\n  <img src=\\\"fall.jpeg\\\" \\n       alt=\\\"Bench in fall\\\" >\\n\\n<p>from Pexels - CC0</p>\\n\\n</body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"fall.jpeg\",\r\n      \"url\": \"https://images.code.org/af65eef6f0583e53ad1dc3881043475a-image-1477537217120.jpeg\"\r\n    },\r\n    {\r\n      \"name\": \"winter.jpg\",\r\n      \"url\": \"https://images.code.org/4d02e12b2d9d0d8f620c506a08311794-image-1477537217119.JPG\"\r\n    },\r\n    {\r\n      \"name\": \"spring.jpg\",\r\n      \"url\": \"https://images.code.org/2dd7913eb4666e951be8f081baa6f516-image-1477537217120.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"summer.jpg\",\r\n      \"url\": \"https://images.code.org/c6e3e970b26089108b0b439d859fda01-image-1477537217120.jpg\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "parent_level_id": 20074,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-10 18:00:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-10 18:01:57 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-13 04:23:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-13 04:24:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</Weblab>

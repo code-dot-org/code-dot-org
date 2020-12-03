@@ -1,4 +1,5 @@
 name 'Variable Scope: Local vs. Global_2018_2019'
+editor_experiment ''
 title 'U3L19 - variable scope explanation pt2'
 description 'description here'
 css 'unplugged'
@@ -6,14 +7,7 @@ css 'unplugged'
 
 markdown <<MARKDOWN
 # Creating Variables in the Right Place
-<style>
 
-td{
- width: 400px;
- vertical-align: top;
-}
-
-</style>
 <table>
 <tr>
   <td>

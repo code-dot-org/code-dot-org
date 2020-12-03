@@ -106,10 +106,12 @@ class JsDebugger extends React.Component {
     debugConsole: PropTypes.bool.isRequired,
     debugWatch: PropTypes.bool.isRequired,
     debugSlider: PropTypes.bool.isRequired,
+    debugConsoleDisabled: PropTypes.bool.isRequired,
     appType: PropTypes.string.isRequired,
     isDebuggerPaused: PropTypes.bool.isRequired,
     isDebuggingSprites: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
+    isEditWhileRun: PropTypes.bool.isRequired,
     stepSpeed: PropTypes.number.isRequired,
     isOpen: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
@@ -132,7 +134,9 @@ class JsDebugger extends React.Component {
       watchersHidden: false,
       open: props.isOpen,
       openedHeight: 120,
-      consoleWidth: 0
+      consoleWidth: 0,
+      // For Google Analytics to see if student has opened the debugger
+      userInteracted: false
     };
   }
 
@@ -244,6 +248,9 @@ class JsDebugger extends React.Component {
   }
 
   onMouseUpDebugResizeBar = () => {
+    if (this.props.debugButtons) {
+      this.setState({userInteracted: true});
+    }
     // If we have been tracking mouse moves, remove the handler now:
     if (this._draggingDebugResizeBar) {
       document.body.removeEventListener(
@@ -295,6 +302,9 @@ class JsDebugger extends React.Component {
     if (this.props.isOpen) {
       this.props.close();
     } else {
+      if (this.props.debugButtons) {
+        this.setState({userInteracted: true});
+      }
       this.props.open();
     }
   };
@@ -453,7 +463,7 @@ class JsDebugger extends React.Component {
 
   render() {
     const {appType, isAttached, canRunNext, isRunning} = this.props;
-    const hasFocus = this.props.isDebuggerPaused;
+    const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';
 
@@ -572,7 +582,7 @@ class JsDebugger extends React.Component {
               />
               <span style={styles.noUserSelect} className="header-text">
                 {this.state.watchersHidden
-                  ? 'Show Watch'
+                  ? i18n.debugShowWatchHeader()
                   : i18n.debugWatchHeader()}
               </span>
             </PaneSection>
@@ -606,11 +616,17 @@ class JsDebugger extends React.Component {
             />
           )}
         </PaneHeader>
-        {this.props.debugButtons && <DebugButtons style={openStyle} />}
+        {this.props.debugButtons && (
+          <DebugButtons
+            style={openStyle}
+            userInteracted={this.state.userInteracted}
+          />
+        )}
         {this.props.debugConsole && (
           <DebugConsole
             style={openStyle}
             debugButtons={this.props.debugButtons}
+            debugConsoleDisabled={this.props.debugConsoleDisabled}
             debugWatch={showWatchPane}
             ref={debugConsole => (this._debugConsole = debugConsole)}
           />
@@ -642,8 +658,10 @@ export default connect(
     debugConsole: !!state.pageConstants.showDebugConsole,
     debugWatch: !!state.pageConstants.showDebugWatch,
     debugSlider: !!state.pageConstants.showDebugSlider,
+    debugConsoleDisabled: !!state.pageConstants.debugConsoleDisabled,
     appType: state.pageConstants.appType,
     isRunning: state.runState.isRunning,
+    isEditWhileRun: state.runState.isEditWhileRun,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     isDebuggingSprites: state.runState.isDebuggingSprites,
     stepSpeed: state.runState.stepSpeed,

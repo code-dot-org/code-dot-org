@@ -1,0 +1,14 @@
+#about_nav
+  %span.about_list
+    - current_url = request.path_info
+    - pages = {'Editing Code.org Templates'=>'/editing',
+               'Template Concepts'=>'/editing/concepts',
+               'Markdown'=>'/editing/markdown',
+               'Useful Partials'=>'/editing/partials'}
+    - pages.each_pair do |label, url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr
+

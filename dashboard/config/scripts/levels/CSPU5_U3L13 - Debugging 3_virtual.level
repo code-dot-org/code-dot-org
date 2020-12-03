@@ -1,0 +1,84 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:53.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
+    "start_blocks": "onEvent(\"button1\", \"click\", function(){\r\n  setProperty(\"screen1\", \"background-color\", \"green\");\r\n});\r\nonEvent(\"screen1\", \"click\", function(){\r\n  setProperty(\"screen1\", \"background-color\", \"yellow\");\r\n});\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 85px; width: 150px; font-size: 32px; color: rgb(0, 0, 0); background-color: rgb(238, 238, 0); position: absolute; left: 85px; border-style: solid; border-width: 1px; border-color: rgb(0, 0, 0); border-radius: 3px; font-family: Arial, Helvetica, sans-serif; top: 280px;\">Yellow!</button><button id=\"button2\" style=\"padding: 0px; margin: 0px; height: 85px; font-size: 32px; color: rgb(0, 0, 0); background-color: rgb(0, 111, 0); position: absolute; left: 85px; border-style: solid; border-width: 1px; border-color: rgb(0, 0, 0); border-radius: 3px; font-family: Arial, Helvetica, sans-serif; width: 150px; top: 85px;\">Green!</button></div></div>",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "long_instructions": "# Debugging Logical Errors\r\n\r\nHere is a program that generates no errors but still does not work as intended. We call these **logical errors**.\r\n\r\nWe've introduced a logical error or two for you to debug.\r\n\r\n**Do this:**\r\n1. **Investigate the code and make a prediction.** What *should* happen here?\r\n2. **Run the program** and experiment to see what's wrong.\r\n3. **Reflect.** Were you right?  Why or why not?\r\n4. **Fix it.** Make it work as intended.\r\n5. **Repeat, if needed.**\r\n\r\n<details>\r\n\r\n<summary><strong>Need a hint? Click here.</strong>\r\n</summary>\r\nBoth events should be checking for clicks on <i>buttons</i>, not the screen. Make sure each button changes the screen color in a way that makes sense.\r\n</details>\r\n",
+    "instructions_important": "false",
+    "parent_level_id": 17088,
+    "name_suffix": "_virtual",
+    "show_debug_watch": "true",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-01 21:17:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 15:39:42 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"start_html\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 15:40:07 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 15:42:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-06 15:20:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-21 18:49:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 20:46:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>
