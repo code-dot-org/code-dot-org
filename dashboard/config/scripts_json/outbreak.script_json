@@ -218,7 +218,8 @@
       "position": 9,
       "assessment": null,
       "properties": {
-        "progression": "Immunity and Vaccines"
+        "progression": "Vaccines",
+        "challenge": true
       },
       "named_level": null,
       "bonus": null,

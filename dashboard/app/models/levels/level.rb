@@ -25,7 +25,7 @@
 
 require 'cdo/shared_constants'
 
-class Level < ActiveRecord::Base
+class Level < ApplicationRecord
   include SharedConstants
 
   belongs_to :game
@@ -623,6 +623,7 @@ class Level < ActiveRecord::Base
       owner: user&.name,
       url: "/levels/#{id}/edit",
       icon: icon,
+      key: key,
       kind: unplugged? ? LEVEL_KIND.unplugged : LEVEL_KIND.puzzle,
       title: try(:title),
       isUnplugged: display_as_unplugged?,
