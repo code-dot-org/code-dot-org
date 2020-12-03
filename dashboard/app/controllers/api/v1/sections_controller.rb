@@ -164,6 +164,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: scripts
   end
 
+  # GET /api/v1/sections/verify_recaptcha
+  # Get the recaptcha site key for frontend and whether current user requires captcha verification
+  def verify_recaptcha
+    site_key = CDO.recaptcha_site_key
+    should_display_captcha = current_user.display_captcha?
+    render json: {displayCaptcha?: should_display_captcha, key: site_key}
+  end
+
   private
 
   def find_follower
