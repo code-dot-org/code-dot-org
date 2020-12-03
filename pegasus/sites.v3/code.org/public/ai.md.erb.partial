@@ -15,13 +15,18 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+
+<%
+  show_tune_in_link = DCDO.get('show_2020_ethics_ai_panel_live_links', true)
+%>
+
 <link href="/css/tools.css" rel="stylesheet">
 <link href="/css/ai-videos.css" rel="stylesheet">
 
 <a id="top"></a>
 <h1 style="margin-top:30px; margin-bottom:20px">Learn about Artificial Intelligence (AI)</h1>
 <p>AI and Machine Learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications.</p>
-<p>Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!</p> 
+<p>Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!</p>
 <div style="clear: both; margin-bottom: 20px"></div>
 <br>
 
@@ -103,7 +108,9 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
   <h3 style="margin-top: 0; margin-bottom: 20px">Join some of our favorite AI experts for a panel discussion on Tuesday, December 8!</h3>
   <p>We'll discuss some of the cool ways that AI is used, and touch on important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">AI & Ethics lesson plan</a> for a great introduction to the ethics of artificial intelligence!</p>
   <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! <a href="https://www.addevent.com/event/by5617541" target="_blank">Add it to your calendar</a>, and then tune in on Zoom or stream on <a href="https://youtu.be/3oqxjPXbynE" target="_blank">YouTube</a>.</p>
-  <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09" target="_blank"><button>Tune in</button></a>
+  <%== show_tune_in_link ?
+    '<a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09" target="_blank"><button>Tune in</button></a>' : ''
+  %>
   <h3 style="margin-bottom:10px">Featuring:</h3>
   <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
     <img src="/images/avatars/amanda-askell.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">

@@ -1022,7 +1022,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    assert_includes response.body, 'Teacher view is not available for this puzzle'
+    assert_includes response.body, 'Student code cannot be viewed for this activity.'
   end
 
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
