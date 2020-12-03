@@ -318,7 +318,7 @@ describe('SpriteLab Core Library', () => {
         mouseIsOverStub.withArgs(sprite3).returns(false);
 
         coreLibrary.addEvent('whenclick', {sprite: {costume: 'a'}}, extraArgs =>
-          eventLog.push(extraArgs.sprite + ' was clicked')
+          eventLog.push(extraArgs.clickedSprite + ' was clicked')
         );
 
         coreLibrary.runEvents(p5Wrapper.p5);
@@ -339,7 +339,7 @@ describe('SpriteLab Core Library', () => {
         mouseIsOverStub.withArgs(sprite2).returns(true);
 
         coreLibrary.addEvent('whenclick', {sprite: {costume: 'a'}}, extraArgs =>
-          eventLog.push(extraArgs.sprite + ' was clicked')
+          eventLog.push(extraArgs.clickedSprite + ' was clicked')
         );
 
         coreLibrary.runEvents(p5Wrapper.p5);
@@ -500,14 +500,18 @@ describe('SpriteLab Core Library', () => {
           'whentouch',
           {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
-            eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
+            eventLog.push(
+              `when: ${extraArgs.subjectSprite}, ${extraArgs.objectSprite}`
+            )
         );
 
         coreLibrary.addEvent(
           'whiletouch',
           {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
-            eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
+            eventLog.push(
+              `while: ${extraArgs.subjectSprite}, ${extraArgs.objectSprite}`
+            )
         );
 
         coreLibrary.runEvents(p5Wrapper.p5);
@@ -525,7 +529,9 @@ describe('SpriteLab Core Library', () => {
           'whentouch',
           {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
-            eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
+            eventLog.push(
+              `when: ${extraArgs.subjectSprite}, ${extraArgs.objectSprite}`
+            )
         );
 
         coreLibrary.runEvents(p5Wrapper.p5);
@@ -543,7 +549,9 @@ describe('SpriteLab Core Library', () => {
           'whentouch',
           {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
-            eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
+            eventLog.push(
+              `when: ${extraArgs.subjectSprite}, ${extraArgs.objectSprite}`
+            )
         );
 
         coreLibrary.runEvents(p5Wrapper.p5);
@@ -561,7 +569,9 @@ describe('SpriteLab Core Library', () => {
           'whiletouch',
           {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
-            eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
+            eventLog.push(
+              `while: ${extraArgs.subjectSprite}, ${extraArgs.objectSprite}`
+            )
         );
 
         coreLibrary.runEvents(p5Wrapper.p5);
@@ -581,7 +591,9 @@ describe('SpriteLab Core Library', () => {
           'whentouch',
           {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
           extraArgs =>
-            eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
+            eventLog.push(
+              `when: ${extraArgs.subjectSprite}, ${extraArgs.objectSprite}`
+            )
         );
         coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when: 0, 2']);
@@ -610,7 +622,9 @@ describe('SpriteLab Core Library', () => {
           'whiletouch',
           {sprite1: {costume: 'a'}, sprite2: {costume: 'a'}},
           extraArgs =>
-            eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
+            eventLog.push(
+              `while: ${extraArgs.subjectSprite}, ${extraArgs.objectSprite}`
+            )
         );
 
         coreLibrary.runEvents(p5Wrapper.p5);

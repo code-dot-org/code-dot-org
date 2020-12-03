@@ -1,0 +1,31 @@
+name 'Episode 5 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+### Sprite Lab
+
+* The beginner Sprite Lab levels includes a copy of the working virus simulation code. Modify it by changing the sprite costumes or adding more sprites to the screen. 
+
+* For the intermediate Sprite Lab level, challenge yourself to add new features to the simulation. What if you added walls to simulate social distancing? Could you add a counter to count how many sprites are infected? 
+
+![](https://images.code.org/54973efa1836c39317c1a765aff74c51-image-1587323315532.gif) ![](https://images.code.org/d27a65ce0a8a13f0c950ee829e372586-image-1587323330029.gif)
+
+
+### App Lab
+
+Work through your choice of two different challenge levels using Covide-19 data. 
+
+* In the first App Lab level, you'll see the complete working app demoed during this week's Code Break. What new features can you add? Consider adding buttons so the user can choose to chart cases or deaths or both. Will the user compare two states or two countries or a mix of both? The choice is up to you.
+
+* In the second App Lab level, you have the opportunity to create an app that provides useful information for your local area. See an example [here](https://studio.code.org/projects/applab/U9JROAvweDWRp_EpkDlGqxEuJGMX31e33xM4BFlWoiA/view)
+
+![](https://images.code.org/456b69fd537f9d9c96465e40c4c234a1-image-1587308104802.gif) 
+![](https://images.code.org/833fa7c5ea83b24381dcfeedaa246e40-image-1587307966080.gif)
+
+MARKDOWN

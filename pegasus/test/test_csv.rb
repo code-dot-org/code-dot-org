@@ -21,4 +21,16 @@ class CSVTest < Minitest::Test
     donors_with_max_weight = DB[:cdo_donors].where(weight_f: 1.0)
     assert_equal donors_with_max_weight.count, 1
   end
+
+  # confirm that the cdo-state-policy.csv has the appropriate columns for
+  # the CS landscape report at code.org/advocacy/landscape.pdf
+  def test_policy_columns_exist
+    state_policy_csv = CSV.read('./data/cdo-state-promote.csv')
+    columns = %w(state_plan_t standards_t funding_t certification_t preservice_t
+                 state_cs_t hs_t count_t higher_ed_t)
+    columns.each do |column_name|
+      column = state_policy_csv.first.find_index(column_name)
+      assert !column.nil?, "cdo-state-promote.csv missing column #{column_name}"
+    end
+  end
 end

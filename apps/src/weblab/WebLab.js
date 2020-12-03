@@ -168,6 +168,7 @@ WebLab.prototype.init = function(config) {
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
     this.studioApp_.alertIfCompletedWhilePairing(config);
     this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     let finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -186,10 +187,11 @@ WebLab.prototype.init = function(config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    documentationUrl: 'https://docs.code.org/weblab/',
+    documentationUrl: 'https://studio.code.org/docs/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted
+    isSubmitted: !!config.level.submitted,
+    validationEnabled: !!config.level.validationEnabled
   });
 
   this.readOnly = config.readonlyWorkspace;
@@ -234,6 +236,7 @@ WebLab.prototype.init = function(config) {
   }
 
   function onRefreshPreview() {
+    this.studioApp_.debouncedSilentlyReport(this.level.id);
     project.autosave(() => {
       if (this.brambleHost) {
         this.brambleHost.refreshPreview();
@@ -297,22 +300,47 @@ WebLab.prototype.init = function(config) {
   };
 };
 
-WebLab.prototype.onFinish = function(submit) {
-  const onComplete = submit
-    ? onSubmitComplete
-    : this.studioApp_.onContinue.bind(this.studioApp_);
+WebLab.prototype.reportResult = function(submit, validated) {
+  let onComplete, testResult;
+
+  if (validated) {
+    testResult = TestResults.FREE_PLAY;
+    onComplete = submit
+      ? onSubmitComplete
+      : this.studioApp_.onContinue.bind(this.studioApp_);
+  } else {
+    testResult = TestResults.FREE_PLAY_UNCHANGED_FAIL;
+    onComplete = submit
+      ? onSubmitComplete
+      : () => {
+          this.studioApp_.displayFeedback({
+            feedbackType: testResult,
+            level: this.level
+          });
+        };
+  }
 
   project.autosave(() => {
     this.studioApp_.report({
       app: 'weblab',
       level: this.level.id,
-      result: true,
-      testResult: TestResults.FREE_PLAY,
+      result: validated,
+      testResult: testResult,
       program: this.getCurrentFilesVersionId() || '',
       submitted: submit,
       onComplete: onComplete
     });
   });
+};
+
+WebLab.prototype.onFinish = function(submit) {
+  if (this.level.validationEnabled) {
+    this.brambleHost.validateProjectChanged(validated =>
+      this.reportResult(submit, validated)
+    );
+  } else {
+    this.reportResult(submit, true /* validated */);
+  }
 };
 
 WebLab.prototype.getCodeAsync = function() {
@@ -379,7 +407,12 @@ WebLab.prototype.renameProjectFile = function(filename, newFilename, callback) {
 };
 
 // Called by Bramble when a file has been changed or created
-WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
+WebLab.prototype.changeProjectFile = function(
+  filename,
+  fileData,
+  callback,
+  skipPreWriteHook
+) {
   filesApi.putFile(
     filename,
     fileData,
@@ -389,7 +422,8 @@ WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
       callback(new Error(xhr.status));
-    }
+    },
+    skipPreWriteHook
   );
 };
 
@@ -400,6 +434,10 @@ WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
  */
 WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   filesApi.registerBeforeFirstWriteHook(hook);
+  filesApi.registerErrorAction(() => {
+    dashboard.assets.hideAssetManager();
+    getStore().dispatch(actions.changeShowError(true));
+  });
 };
 
 // Called by Bramble when project has changed

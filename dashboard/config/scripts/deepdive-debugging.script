@@ -1,11 +1,12 @@
 hidden false
 
-stage 'Debugging for AB Educators'
+lesson 'Debugging for AB Educators', display_name: 'Debugging for AB Educators'
 level 'AB_debug_Laurel1'
 level 'AB_Debug_Artist1'
 level 'AB_Debug_PlayLab3'
 
-stage 'Debugging for CDEF Educators'
+lesson 'Debugging for CDEF Educators', display_name: 'Debugging for CDEF Educators'
 level 'CDEF_debugging_farmer1'
 level 'CDEF_debugging_Artist1'
 level 'CDEF_debugging_flappy2'
+

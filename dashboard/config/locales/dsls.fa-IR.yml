@@ -3,9 +3,6 @@ fa-IR:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: انتخاب چندگانه
-        questions:
-        - text: یک الگوریتم را برای تصویر ارائه شده انتخاب کنید.
         answers:
         - text: با یک مربع شروع کن<br/>یک مثلث بالای مربع قرار بده<br/>یک مثلث زیر
             مربع قرار بده
@@ -14,226 +11,232 @@ fa-IR:
             مثلث در راست متوازی الاضلاع قرار بده
         - text: با یک مربع شروع کن<br/>یک مثلث زیر مربع قرار بده<br/>یک متوازی الاضلاع
             در راست مثلث قرار بده
-      2-3 Algorithms Multi 2:
-        title: انتخاب چندگانه
-        content1: با یک مثلث شروع کن<br/>یک مربع زیر مثلث قرار بده<br/>مثلث دیگری
-          زیر مربع قرار بده
         questions:
-        - text: کدام تصویر این الگوریتم را دنبال <em>نمی</em> کند؟
+        - text: یک الگوریتم را برای تصویر ارائه شده انتخاب کنید.
+        title: انتخاب چندگانه
+      2-3 Algorithms Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
+        content1: با یک مثلث شروع کن<br/>یک مربع زیر مثلث قرار بده<br/>مثلث دیگری
+          زیر مربع قرار بده
+        questions:
+        - text: کدام تصویر این الگوریتم را دنبال <em>نمی</em> کند؟
+        title: انتخاب چندگانه
       2-3 Big Event Match 1:
-        title: تطبیق کردن
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: ترکیب دکمه ها را با حرکت های رقص تطبیق کن.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: تطبیق کردن
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: تطبیق کردن
         content2: از کلید برای تطبیق هر کد با حرفش استفاده کن
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: تطبیق کردن
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Conditionals Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: با توجه به قواعد بازی کدام دسته از کارتها به درستی امتیاز گرفته؟
+        title: انتخاب چندگانه
+      2-3 Getting Loopy Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Getting Loopy Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: شما چگونه این توالی را با حلقه ها ساده میکنید؟
+        title: انتخاب چندگانه
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: تطبیق کردن
         content1: مختصات را با برنامه جور کنید.
         questions:
         - {}
         - {}
         - {}
+        title: تطبیق کردن
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 Graph Paper Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: 'کدام برنامه این تصویر را درست میکند؟
 
 '
-        answers:
-        - {}
-        - {}
-        - {}
+        title: انتخاب چندگانه
       2-3 Maze Match 2:
-        title: تطبیق هزارتو
+        answers:
+        - {}
+        - {}
+        - {}
         content1: پازل ها را با بلوکها تطبیق کن
-        pre_title: دستورالعمل ها
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: تطبیق هزارتو
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
         title: چندگزینه ای هزارتو
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: انتخاب چندگانه
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
-      2-3 Relay Programming Multi 2:
+        questions:
+        - {}
         title: انتخاب چندگانه
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
         questions:
         - text: کدام زوج تصویر-برنامه اشتباه ندارد؟
+        title: انتخاب چندگانه
+      2-3 artist debug multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist debug multi 1:
+        - {}
         questions:
         - {}
+      2-3 artist functions multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist functions multi 1:
-        title: چندگزینه ای توابع هنرمند یک
         questions:
         - text: بلوک های صحیح را برای رسم این تصویر با استفاده از توابع داده شده انتخاب
             کن
+        title: چندگزینه ای توابع هنرمند یک
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: حلقه را با شکل منطبق سازید
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist loops multi 1:
-        title: چندگزینه ای حلقه‌های هنرمند
         questions:
         - text: کدام شکل با این حلقه ساخته شده است؟
+        title: چندگزینه ای حلقه‌های هنرمند
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist loops multi 2:
-        title: چندگزینه ای حلقه‌های هنرمند
         questions:
         - text: کدام شکل توسط این برنامه ساخته شده است؟
+        title: چندگزینه ای حلقه‌های هنرمند
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: تطبیق هنرمند
         content1: اشکال را با بلوک هایی که آن را کامل میسازند،مرتبط کن.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: تطبیق هنرمند
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: کدام مقایسه ی زیر درست است؟
+      2-3 bee conditionals multi 3:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: بهترین بلوک ها را انتخاب کنید
+      2-3 bee loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee loops multi 1:
-        title: چندگزینه ای حلقه‌های زنبور عسل یک
         questions:
         - text: کدام بلوک تمام شهد را جمع آوری میکند؟
+        title: چندگزینه ای حلقه‌های زنبور عسل یک
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: بازی هزارتوی یک
         content1: پازل ها را با بلوکها تطبیق کن
         questions:
         - {}
         - {}
         - {}
+        title: بازی هزارتوی یک
+      2-3 maze multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 maze multi 1:
-        title: چندگزینه ای هزارتوی یک
+        - {}
         questions:
         - text: کدام گروه از بلوک ها جواب صحیح است?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: چندگزینه ای هزارتوی یک
       4-5 Algorithms Match 1:
-        title: تطبیق کردن
+        answers:
+        - text: "<h4>امتیاز بازیکن 1 را 0 کن</h4>"
+        - text: "<h4>بازیکن 1 تاس میاندازد</h4>"
+        - text: "<h4>شمارۀ تاس بازیکن 1 را به امتیاز کل اضافه کن</h4>"
+        - text: "<h4>امتیاز بازیکنان را مقایسه کن تا ببینی کی برده</h4>"
         content1: مراحل مسابقه تاس انداختن را به ترتیبی که باید در الگوریتم ظاهر شوند
           مرتب کن.
         questions:
@@ -241,22 +244,22 @@ fa-IR:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>امتیاز بازیکن 1 را 0 کن</h4>"
-        - text: "<h4>بازیکن 1 تاس میاندازد</h4>"
-        - text: "<h4>شمارۀ تاس بازیکن 1 را به امتیاز کل اضافه کن</h4>"
-        - text: "<h4>امتیاز بازیکنان را مقایسه کن تا ببینی کی برده</h4>"
+        title: تطبیق کردن
       4-5 Algorithms Multi 1:
-        title: انتخاب چندگانه
-        questions:
-        - text: تعریف یک الگوریتم برای کدام یک از این موارد سختتر است؟
         answers:
         - text: مسواک کردن دندان هایتان
         - text: پخت کلوچه
         - text: خرید کردن از لیست مواد غذایی
         - text: موز
+        questions:
+        - text: تعریف یک الگوریتم برای کدام یک از این موارد سختتر است؟
+        title: انتخاب چندگانه
       4-5 Computational Thinking Match 1:
-        title: تطبیق کردن
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: هر یک از این وسایل نقلیه به قطعات کوچکتر تجزیه شده است. هر خودرو
           را با لیست اجزایش تطبیق کن.
         questions:
@@ -264,79 +267,79 @@ fa-IR:
         - text: "<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 1</h3>"
         - text: "<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 6</h3>"
         - text: "<h3>طرف/چرخها: 3<br/>طرف/پنجره ها: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: تطبیق کردن
       4-5 Computational Thinking Multi 1:
-        title: انتخاب چندگانه
-        questions:
-        - text: سیاتل یک شهر بزرگ است. <br/> یوجین یک شهر متوسط است<br/> هیل ویو یک
-            شهر کوچک است.
         answers:
         - text: سیاتل یک _____ _____ _____.
         - text: _____ یک شهر_____ است.
         - text: _____ یک _____ _____ است.
         - text: یوجین یک شهر_____ است.
-      4-5 Crowdsourcing Multi 1:
-        title: انتخاب چندگانه
         questions:
-        - text: کدام یک از این تصاویر بهتر کمکگیری جمعی را نشان میدهد؟
+        - text: سیاتل یک شهر بزرگ است. <br/> یوجین یک شهر متوسط است<br/> هیل ویو یک
+            شهر کوچک است.
+        title: انتخاب چندگانه
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
         - {}
-      4-5 Crowdsourcing Multi 2:
-        title: انتخاب چندگانه
         questions:
-        - text: کدام یک از این فعالیت ها برای تمرین کمکگیری جمعی بهترین خواهد بود؟
+        - text: کدام یک از این تصاویر بهتر کمکگیری جمعی را نشان میدهد؟
+        title: انتخاب چندگانه
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: تمیز کردن اتاقتان
         - text: خوردن دسرتان
         - text: شانه زدن موهایتان
         - text: شستن صورتتان
-      4-5 Digital Footprint Multi 1:
-        title: انتخاب چندگانه
         questions:
-        - text: کدام یک از اطلاعات ذکر شده در زیر برای اشتراک گذاری در اینترنت بلامانع
-            است؟
+        - text: کدام یک از این فعالیت ها برای تمرین کمکگیری جمعی بهترین خواهد بود؟
+        title: انتخاب چندگانه
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: تولدتان
         - text: غذای موردعلاقه تان
         - text: آدرستان
         - text: شماره ی کارت اعتباری والدینتان
-      4-5 Internet Multi 1:
+        questions:
+        - text: کدام یک از اطلاعات ذکر شده در زیر برای اشتراک گذاری در اینترنت بلامانع
+            است؟
         title: انتخاب چندگانه
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: هنگامی که شما سعی می کنید به code.org وارد شوید، DNS شما را به احتمال
             زیاد به کدام آدرس آی پی خواهد برد؟
+        title: انتخاب چندگانه
+      4-5 Internet Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Internet Multi 2:
-        title: انتخاب چندگانه
         questions:
         - text: اگر DNS شما را به صفحه ای به آدرس آی پی 100.42.50.110 فرستاده است،
             در کدام وبسایت قرار دارید؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: انتخاب چندگانه
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: لو، لو، بپر به لوی من
         - text: لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر
             به لوی من، <br/>بپر به لوی من، عزیز من.
         - {}
         - {}
+        questions:
+        - {}
+        title: انتخاب چندگانه
       4-5 Suncatchers Match 1:
-        title: تطبیق کردن
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: هر برنامه را با کلمه ای که میسازد تطبیق کن، با استفاده از مجموعه
           مهارت های ارائه شده.
         questions:
@@ -344,110 +347,106 @@ fa-IR:
         - {}
         - {}
         - {}
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: تطبیق کردن
       4-5 Suncatchers Multi 1:
-        title: انتخاب چندگانه
+        answers:
+        - {}
+        - {}
+        - {}
         questions:
         - text: کدامیک از برنامه های زیر دقیقا همان دنباله ی برنامه ی 1 را <em> نمی
             سازد</em>?
+        title: انتخاب چندگانه
+      4-5 artist loops multi 1:
         answers:
         - {}
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: چندگزینه ای حلقه‌های هنرمند
+        - {}
         questions:
         - text: چه بلوکهایی طرح را ایجاد خواهند کرد؟
+        title: چندگزینه ای حلقه‌های هنرمند
+      4-5 artist multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 artist multi 1:
-        title: چندگزینه ای هنرمند
         questions:
         - text: چه بلوکهایی مستطیلی با محیط 100 میکشند؟
+        title: چندگزینه ای هنرمند
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 artist multi 2:
-        title: چندگزینه ای هنرمند
         questions:
         - text: کدام نقاشی متقارن است؟
+        title: چندگزینه ای هنرمند
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee conditionals multi 1:
-        title: چندگزینه ای شرطی های زنبور عسل
         questions:
         - text: بهترین بلوک ها را انتخاب کنید
+        title: چندگزینه ای شرطی های زنبور عسل
+      4-5 bee debug multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee debug multi 1:
-        title: چند گزینه ای اشکال زدایی زنبور عسل
         questions:
         - text: کدام نسخۀ تابع کار خواهد کرد؟
+        title: چند گزینه ای اشکال زدایی زنبور عسل
+      4-5 bee loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee loops multi 1:
-        title: چندگزینه ای حلقه های زنبور عسل
         questions:
         - text: چه بلوکهایی پازل را حل خواهد کرد؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: چندگزینه ای حلقه های زنبور عسل
       4-5 maze conditionals multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: کدام بلوک این معما را حل میکند؟?
         title: چندگزینه ای شرطی های هزارتو
-        questions:
-        - text: کدام بلوک این معما را حل میکند؟?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: تطبیق هزارتو
-        content1: پازل ها را با بلوکها تطبیق کن
-        pre_title: دستورالعمل ها
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: پازل ها را با بلوکها تطبیق کن
+        questions:
+        - {}
+        - {}
+        - {}
+        title: تطبیق هزارتو
       4-5 maze multi 1:
-        title: چندگزینه ای هزارتو
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: کدام بلوک این معما را حل میکند؟?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: چندگزینه ای هزارتو
       Begin planning your project:
-        title: عنوان
         content1: توضیحات اینجا
       Begin planning your project_2018:
         content1: توضیحات اینجا
       Begin planning your project_2018_2019:
+        content1: توضیحات اینجا
+      Begin planning your project_2018_2019_2020:
         content1: توضیحات اینجا
       CSD Header Size MC:
         answers:
@@ -468,87 +467,78 @@ fa-IR:
         - {}
         - {}
       CSD U2 Design Project:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 Design Project_2018:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 Design Project_2018_2019:
-        title: عنوان
+        content1: توضیحات اینجا
+      CSD U2 L1 Overview:
         content1: توضیحات اینجا
       CSD U2 L2 Overview:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 L3 Overview:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 L4 Overview:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 L5 Overview:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 L6 Overview:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 Lesson 6 Overview:
         content1: توضیحات اینجا
       CSD U2 expand project:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 expand project_2018:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 expand project_2018_2019:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -561,71 +551,71 @@ fa-IR:
       CSD U2 project guide_2018_2019:
         content1: توضیحات اینجا
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: عنوان
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: عنوان
       CSD U3 Boolean MC_2018:
-        title: عنوان
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: عنوان
       CSD U3 Boolean MC_2018_2019:
-        title: عنوان
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: عنوان
       CSD U3 Card Examples_2018:
         content1: توضیحات اینجا
       CSD U3 Card Examples_2018_2019:
@@ -649,107 +639,104 @@ fa-IR:
         - {}
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U3 combining rep_2018:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U3 combining rep_2018_2019:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -767,13 +754,10 @@ fa-IR:
       CSD U3 platform intro_2018_2019:
         content1: توضیحات اینجا
       CSD U5 Encryption 1:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 Encryption 1_2018:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 Encryption 1_2018_2019:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 Encryption 2:
         content1: توضیحات اینجا
@@ -782,7 +766,6 @@ fa-IR:
       CSD U5 Encryption 2_2018_2019:
         content1: توضیحات اینجا
       CSD U5 L13 SFLP Interpreting Data:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 crosstab warmup:
         content1: توضیحات اینجا
@@ -791,22 +774,16 @@ fa-IR:
       CSD U5 crosstab warmup_2018_2019:
         content1: توضیحات اینجا
       CSD U5 data visualization:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 data visualization_2018:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 data visualization_2018_2019:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 student record:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 student record_2018:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U5 student record_2018_2019:
-        title: عنوان
         content1: توضیحات اینجا
       CSD U6 LED create intro:
         content1: توضیحات اینجا
@@ -815,28 +792,28 @@ fa-IR:
       CSD U6 LED create intro_2018_2019:
         content1: توضیحات اینجا
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 final intro:
         content1: توضیحات اینجا
@@ -845,917 +822,1215 @@ fa-IR:
       CSD U6 final intro_2018_2019:
         content1: توضیحات اینجا
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       Internet Simulator Setup:
         content1: توضیحات اینجا
       Internet Simulator Setup 2:
-        title: عنوان
         content1: توضیحات اینجا
       Internet Simulator Setup 3:
         content1: توضیحات اینجا
       K-1 Artist 1 Multi 1:
-        title: انتخاب چندگانه
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: کدام بلوک این معما را حل میکند؟
+        title: انتخاب چندگانه
+      K-1 Artist 1 Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 1 Multi 2:
-        title: انتخاب چندگانه
         questions:
         - text: کدام بلوک مربع رسم میکند؟
+        title: انتخاب چندگانه
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: تطبیق کردن
         content2: اشکال را بر اساس نوع تطبیق کن.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: انتخاب چندگانه
-        questions:
-        - text: چند تا شهد گل اینجاست؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: انتخاب چندگانه
-        questions:
-        - text: چند تا شهد گل اینجاست؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: تطبیق کردن
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: چند تا شهد گل اینجاست؟
+        title: انتخاب چندگانه
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: چند تا شهد گل اینجاست؟
+        title: انتخاب چندگانه
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: بلوکها را تطبیق کن
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: تطبیق کردن
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: تطبیق کردن
         content2: ترکیب دکمه ها را با حرکت های رقص تطبیق کن.
         questions:
         - {}
         - {}
         - {}
+        title: تطبیق کردن
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Digital Footprint Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: کدام حیوان رد پای دیجیتالی دارد که او را <strong>نا امن ترین</strong>میکند؟
+        title: انتخاب چندگانه
+      K-1 Getting Loopy Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Getting Loopy Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: شما چگونه این توالی را با حلقه ها ساده میکنید؟
+        title: انتخاب چندگانه
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: انتخاب چندگانه
+        - {}
         questions:
         - text: کدام جهت فِلِرب را به گنج میرساند؟
+        title: انتخاب چندگانه
+      K-1 Keep it Private Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Keep it Private Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: کدام اطلاعات را شما <strong>نباید</strong> بر روی اینترنت به اشتراک
             بگذارید؟
+        title: انتخاب چندگانه
+      K-1 Maze Debugging Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Debugging Multi 1:
-        title: انتخاب چندگانه
+        - {}
         questions:
         - text: کدام گزینه باید بلوک نهایی باشد؟
+        title: انتخاب چندگانه
+      K-1 Maze Loops Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: کدام بلوک این اسم را تکرار میکند؟
+        title: انتخاب چندگانه
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Loops Multi 2:
-        title: انتخاب چندگانه
         questions:
         - text: بلوک تکرار  کننده صحیح را انتخاب کنید.
+        title: انتخاب چندگانه
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: تطبیق کردن
+        - {}
         content2: پازل ها و بلوکها را تطبیق کن
-        pre_title: دستورالعمل ها
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: تطبیق کردن
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Maze Multiple Choice 2:
-        title: پیچ و خم
         questions:
         - text: کدام پاسخ  معمای این سطح را حل میکند؟
+        title: پیچ و خم
+      K-1 Move It Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Move It Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: کدام الگوریتم فِلِرب را به گل ها میرساند؟
+        title: انتخاب چندگانه
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: کدام مرحله باید در ابتدای این الگوریتم برود؟
+        title: انتخاب چندگانه
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
         - {}
         - {}
-      K-1 Plant a Seed Multi 2:
-        title: انتخاب چندگانه
         questions:
         - text: کدام مرحله باید جای خالی را برای این الگوریتم پر کند؟
+        title: انتخاب چندگانه
+      K-1 Word Search Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Word Search Multi 1:
-        title: انتخاب چندگانه
         questions:
         - text: چه بلوکهایی "حرکت" را هجی میکنند؟
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
         title: انتخاب چندگانه
-        questions:
-        - text: کدام کلمه هجی شده است؟
+      K-1 Word Search Multi 3:
         answers:
         - text: مجموعه
         - text: مربع
         - text: جنوب
+        questions:
+        - text: کدام کلمه هجی شده است؟
+        title: انتخاب چندگانه
       Multi-Screen Apps:
-        title: عنوان
         content1: توضیحات اینجا
       New Challenge Introduction:
-        title: عنوان
+        content1: توضیحات اینجا
+      OPD-K5 Reviewing Reflections:
         content1: توضیحات اینجا
       OPD-K5 Stage3aGo:
-        title: عنوان
+        content1: توضیحات اینجا
+      OPD-K5 Stage3aGo_copy:
+        content1: توضیحات اینجا
+      OPD-K5 conditionals introduced:
+        content1: توضیحات اینجا
+      OPD-K5 debugging:
+        content1: توضیحات اینجا
+      OPD-K5 diving deeper intro:
+        content1: توضیحات اینجا
+      OPD-K5 events introduced:
+        content1: توضیحات اینجا
+      OPD-K5 for loops:
+        content1: توضیحات اینجا
+      OPD-K5 for loops intro:
+        content1: توضیحات اینجا
+      OPD-K5 for loops introduction:
+        content1: توضیحات اینجا
+      OPD-K5 functions introduced:
+        content1: توضیحات اینجا
+      OPD-K5 journaling:
+        content1: توضیحات اینجا
+      OPD-K5 lesson implementation planning:
+        content1: توضیحات اینجا
+      OPD-K5 lesson plans:
+        content1: توضیحات اینجا
+      OPD-K5 loops introduced:
+        content1: توضیحات اینجا
+      OPD-K5 project:
+        content1: توضیحات اینجا
+      OPD-K5 projects introduction:
+        content1: توضیحات اینجا
+      OPD-K5 role_of_teacher:
+        content1: توضیحات اینجا
+      OPD-K5 sequencing introduced:
+        content1: توضیحات اینجا
+      OPD-K5 sprite lab:
+        content1: توضیحات اینجا
+      OPD-K5 sprite lab introduction:
+        content1: توضیحات اینجا
+      OPD-K5 sprite lab unplugged:
+        content1: توضیحات اینجا
+      OPD-K5 sprite lab video:
+        content1: توضیحات اینجا
+      OPD-K5 types of lessons:
+        content1: توضیحات اینجا
+      OPD-K5 using lesson plans:
+        content1: توضیحات اینجا
+      OPD-K5 variables:
+        content1: توضیحات اینجا
+      OPD-K5 variables introduction:
+        content1: توضیحات اینجا
+      OPD-K5 variables unplugged:
+        content1: توضیحات اینجا
+      OPD-K5 where to next:
+        content1: توضیحات اینجا
+      OPD-K5-projects-1:
         content1: توضیحات اینجا
       Prepare for your presentation:
-        title: عنوان
         content1: توضیحات اینجا
       'Technique: Frequency Analysis':
         content1: توضیحات اینجا
       Terminology Recap:
         content1: توضیحات اینجا
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: الف
         - text: ب
         - text: ج
         - text: د
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: الف
         - text: ب
         - text: ج
         - text: د
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: الف
         - text: ب
         - text: ج
         - text: د
-      courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: الف
         - text: ب
         - text: ج
+        - text: د
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: الف
+        - text: ب
+        - text: ج
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: الف
         - text: ب
         - text: ج
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: الف
         - text: ب
         - text: ج
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: الف
+        - text: ب
+        - text: ج
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: توضیحات اینجا
+      csf_password_power-up:
+        content1: توضیحات اینجا
+      csf_putting_a_stop_to_online_meanness:
+        content1: توضیحات اینجا
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}

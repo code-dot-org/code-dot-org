@@ -20,7 +20,7 @@ import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
-import LibraryClientApi from './libraries/LibraryClientApi';
+import QRCode from 'qrcode.react';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -123,6 +123,20 @@ const styles = {
     transform: 'translate(-50%,-50%)',
     msTransform: 'translate(-50%,-50%)',
     WebkitTransform: 'translate(-50%,-50%)'
+  },
+  sendToPhoneContainer: {
+    width: '100%',
+    marginTop: 15
+  },
+  sendToPhoneLeft: {
+    float: 'left',
+    width: '70%',
+    paddingRight: 20,
+    boxSizing: 'border-box'
+  },
+  sendToPhoneRight: {
+    float: 'right',
+    width: '30%'
   }
 };
 
@@ -143,9 +157,6 @@ function checkImageReachability(imageUrl, callback) {
  */
 class ShareAllowedDialog extends React.Component {
   static propTypes = {
-    i18n: PropTypes.shape({
-      t: PropTypes.func.isRequired
-    }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
     icon: PropTypes.string,
@@ -269,23 +280,16 @@ class ShareAllowedDialog extends React.Component {
     const facebookShareUrl =
       'https://www.facebook.com/sharer/sharer.php?u=' +
       encodeURIComponent(this.props.shareUrl);
-    const twitterShareUrlDefault =
-      'https://twitter.com/intent/tweet?url=' +
-      encodeURIComponent(this.props.shareUrl) +
-      '&amp;text=Check%20out%20what%20I%20made%20@codeorg' +
-      '&amp;hashtags=HourOfCode&amp;related=codeorg';
-    // Check out the dance I made featuring @artist on @codeorg! URL #HourOfCode
-    const twitterShareUrlDance =
-      'https://twitter.com/intent/tweet?url=' +
-      '&amp;text=Check%20out%20the%20dance%20I%20made%20featuring%20@' +
-      artistTwitterHandle +
-      '%20on%20@codeorg!%20' +
-      encodeURIComponent(this.props.shareUrl) +
-      '&amp;hashtags=HourOfCode&amp;related=codeorg';
 
-    const twitterShareUrl = artistTwitterHandle
-      ? twitterShareUrlDance
-      : twitterShareUrlDefault;
+    const tweetText = artistTwitterHandle
+      ? `Check out the dance I made featuring @${artistTwitterHandle} on @codeorg!`
+      : 'Check out what I made on @codeorg!';
+    const twitterShareUrl =
+      'https://twitter.com/intent/tweet?text=' +
+      encodeURIComponent(tweetText) +
+      '&url=' +
+      encodeURIComponent(this.props.shareUrl) +
+      '&hashtags=HourOfCode&related=codeorg';
 
     const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;
@@ -305,7 +309,6 @@ class ShareAllowedDialog extends React.Component {
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
-    let libraryClientAPI = new LibraryClientApi(this.props.channelId);
     return (
       <div>
         <BaseDialog
@@ -339,14 +342,14 @@ class ShareAllowedDialog extends React.Component {
                 className={modalClass}
                 style={{position: 'relative'}}
               >
-                <p className="dialog-title">
-                  {this.props.i18n.t('project.share_title')}
-                </p>
+                <p className="dialog-title">{i18n.shareTitle()}</p>
                 {this.props.isAbusive && (
                   <AbuseError
                     i18n={{
-                      tos: this.props.i18n.t('project.abuse.tos'),
-                      contact_us: this.props.i18n.t('project.abuse.contact_us')
+                      tos: i18n.tosLong({url: 'http://code.org/tos'}),
+                      contact_us: i18n.contactUs({
+                        url: 'https://code.org/contact'
+                      })
                     }}
                     className="alert-error"
                     style={styles.abuseStyle}
@@ -354,18 +357,14 @@ class ShareAllowedDialog extends React.Component {
                   />
                 )}
                 {showShareWarning && (
-                  <p style={styles.shareWarning}>
-                    {this.props.i18n.t('project.share_u13_warning')}
-                  </p>
+                  <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
                 )}
                 <div style={{clear: 'both'}}>
                   <div style={styles.thumbnail}>
                     <img style={styles.thumbnailImg} src={thumbnailUrl} />
                   </div>
                   <div>
-                    <p style={{fontSize: 20}}>
-                      {this.props.i18n.t('project.share_copy_link')}
-                    </p>
+                    <p style={{fontSize: 20}}>{i18n.shareCopyLink()}</p>
                     <input
                       type="text"
                       id="sharing-input"
@@ -436,6 +435,7 @@ class ShareAllowedDialog extends React.Component {
                         <a
                           href={facebookShareUrl}
                           target="_blank"
+                          rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             this.props.onClickPopup.bind(this),
                             'facebook'
@@ -448,6 +448,7 @@ class ShareAllowedDialog extends React.Component {
                         <a
                           href={twitterShareUrl}
                           target="_blank"
+                          rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             this.props.onClickPopup.bind(this),
                             'twitter'
@@ -460,12 +461,25 @@ class ShareAllowedDialog extends React.Component {
                   )}
                 </div>
                 {this.state.showSendToPhone && (
-                  <SendToPhone
-                    channelId={this.props.channelId}
-                    appType={this.props.appType}
-                    isLegacyShare={false}
-                    styles={{label: {marginTop: 15, marginBottom: 0}}}
-                  />
+                  <div>
+                    <div style={styles.sendToPhoneContainer}>
+                      <div style={styles.sendToPhoneLeft}>
+                        <SendToPhone
+                          channelId={this.props.channelId}
+                          appType={this.props.appType}
+                          isLegacyShare={false}
+                        />
+                      </div>
+                      <div style={styles.sendToPhoneRight}>
+                        <label>{i18n.scanQRCode()}</label>
+                        <QRCode
+                          value={this.props.shareUrl + '?qr=true'}
+                          size={90}
+                        />
+                      </div>
+                    </div>
+                    <div style={{clear: 'both'}} />
+                  </div>
                 )}
                 {canPublish && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
@@ -485,7 +499,6 @@ class ShareAllowedDialog extends React.Component {
                   {isDroplet && (
                     <AdvancedShareOptions
                       allowExportExpo={this.props.allowExportExpo}
-                      i18n={this.props.i18n}
                       shareUrl={this.props.shareUrl}
                       exportApp={this.props.exportApp}
                       expanded={this.state.showAdvancedOptions}
@@ -500,7 +513,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        <LibraryCreationDialog clientApi={libraryClientAPI} />
+        <LibraryCreationDialog channelId={this.props.channelId} />
       </div>
     );
   }

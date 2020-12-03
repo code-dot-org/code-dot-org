@@ -1,13 +1,9 @@
 {
+  "https://studio.code.org/s/course2/stage/1/puzzle/1": {
+    "title": "Graph Paper Programming"
+  },
   "https://studio.code.org/s/course2/stage/1/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png",
-      "questions": [
-        {
-          "text": "Which program makes this image?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png",
@@ -21,12 +17,29 @@
           "text": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png",
+      "questions": [
+        {
+          "text": "Which program makes this image?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/1/puzzle/3": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
+        }
+      ],
       "content1": "Match the grid to the program.",
       "questions": [
         {
@@ -39,57 +52,43 @@
           "text": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        }
-      ]
+      "title": "Matching"
     }
+  },
+  "https://studio.code.org/s/course2/stage/2/puzzle/1": {
+    "title": "Real-life Algorithms: Paper Planes"
   },
   "https://studio.code.org/s/course2/stage/2/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
+      "answers": [
+        {
+          "text": "Start with a square  \nPut a triangle above the square  \nPut a triangle below the square",
+          "correct": false
+        },
+        {
+          "text": "Start with a square  \nPut a triangle right of square  \nPut a parallelogram below square  \nPut triangle right of parallelogram",
+          "correct": true
+        },
+        {
+          "text": "Start with a square  \nPut a parallelogram above the square  \nPut a triangle right of the parallelogram",
+          "correct": false
+        },
+        {
+          "text": "Start with a square  \nPut a triangle below the square  \nPut a parallelogram right of the triangle",
+          "correct": false
+        }
+      ],
       "content1": "/script_assets/2-3_images/unplugged/algorithms_1_q.png",
       "questions": [
         {
           "text": "Choose an algorithm for the image provided."
         }
       ],
-      "answers": [
-        {
-          "text": "Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square",
-          "correct": false
-        },
-        {
-          "text": "Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram",
-          "correct": true
-        },
-        {
-          "text": "Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram",
-          "correct": false
-        },
-        {
-          "text": "Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle",
-          "correct": false
-        }
-      ]
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/2/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square",
-      "questions": [
-        {
-          "text": "Which image does <em>not</em> follow this algorithm?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png",
@@ -107,7 +106,14 @@
           "text": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "Start with a triangle  \nPut a square below the triangle  \nPut another triangle below the square",
+      "questions": [
+        {
+          "text": "Which image does _not_ follow this algorithm?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/3/puzzle/1": {
@@ -146,13 +152,6 @@
   },
   "https://studio.code.org/s/course2/stage/3/puzzle/10": {
     "dsls": {
-      "title": "Maze Multiple Choice",
-      "content1": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500",
-      "questions": [
-        {
-          "text": "Which set of blocks will get me to the pig?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png",
@@ -170,14 +169,30 @@
           "text": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500",
+      "questions": [
+        {
+          "text": "Which set of blocks will get me to the pig?"
+        }
+      ],
+      "title": "Maze Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/3/puzzle/11": {
     "dsls": {
-      "title": "Maze Match",
+      "answers": [
+        {
+          "text": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
+        }
+      ],
       "content1": "Match the puzzles to the blocks",
-      "pre_title": "Instructions",
       "questions": [
         {
           "text": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
@@ -189,17 +204,7 @@
           "text": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
-        }
-      ]
+      "title": "Maze Match"
     }
   },
   "https://studio.code.org/s/course2/stage/3/extras?level_name=course2_maze_programming_challenge1": {
@@ -240,9 +245,13 @@
   "https://studio.code.org/s/course2/stage/4/puzzle/4": {
     "short_instructions": "The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks. Each line is 50 pixels long.",
     "long_instructions": "The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks. Each line is 50 pixels long.",
-    "function_names": {
-      "draw a circle": "draw a circle",
-      "draw a car": "draw a car"
+    "function_definitions": {
+      "draw a circle": {
+        "name": "draw a circle"
+      },
+      "draw a car": {
+        "name": "draw a car"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/4/puzzle/5": {
@@ -274,8 +283,14 @@
     "authored_hints": {
       "2-3_Artist_7_a": "The easiest way to solve this puzzle is to draw the first square and end with the artist pointing down before starting your second square."
     },
-    "function_names": {
-      "draw_rect": "draw_rect"
+    "function_definitions": {
+      "draw_rect": {
+        "name": "draw_rect",
+        "parameters": {
+          "width": "width",
+          "height": "height"
+        }
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/4/puzzle/9": {
@@ -295,7 +310,20 @@
   },
   "https://studio.code.org/s/course2/stage/4/puzzle/12": {
     "dsls": {
-      "title": "Artist Matching",
+      "answers": [
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
+        }
+      ],
       "content1": "Match the shape with the blocks that complete it.",
       "questions": [
         {
@@ -311,20 +339,7 @@
           "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
-        }
-      ]
+      "title": "Artist Matching"
     }
   },
   "https://studio.code.org/s/course2/stage/4/extras?level_name=course2_artist_prog_challenge1": {
@@ -341,15 +356,11 @@
       "courseC_artist_prog_challenge2_a": "You can put commands inside `repeat` block to loop them over and over. Try it!\n\n[blockly block][0]"
     }
   },
+  "https://studio.code.org/s/course2/stage/5/puzzle/1": {
+    "title": "Getting Loopy"
+  },
   "https://studio.code.org/s/course2/stage/5/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png",
-      "questions": [
-        {
-          "text": "How would you simplify this sequence with loops?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png",
@@ -367,7 +378,14 @@
           "text": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png",
+      "questions": [
+        {
+          "text": "How would you simplify this sequence with loops?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/6/puzzle/1": {
@@ -435,13 +453,6 @@
   },
   "https://studio.code.org/s/course2/stage/6/puzzle/13": {
     "dsls": {
-      "title": "Maze Multiple Choice One",
-      "content1": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Which set of blocks is the correct answer?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png",
@@ -459,12 +470,29 @@
           "text": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Which set of blocks is the correct answer?"
+        }
+      ],
+      "title": "Maze Multiple Choice One"
     }
   },
   "https://studio.code.org/s/course2/stage/6/puzzle/14": {
     "dsls": {
-      "title": "Maze Match One",
+      "answers": [
+        {
+          "text": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
+        }
+      ],
       "content1": "Match the puzzles to the blocks",
       "questions": [
         {
@@ -477,17 +505,7 @@
           "text": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
-        }
-      ]
+      "title": "Maze Match One"
     }
   },
   "https://studio.code.org/s/course2/stage/6/extras?level_name=course2_maze_loops_challenge1": {
@@ -531,8 +549,10 @@
     "authored_hints": {
       "2-3_Artist_11_a": "Having trouble with the angles? You need to go 360 degrees in 8 turns.  What is 360/8? "
     },
-    "function_names": {
-      "x": "x"
+    "function_definitions": {
+      "x": {
+        "name": "x"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/7/puzzle/6": {
@@ -541,10 +561,16 @@
     "authored_hints": {
       "2-3_Artist_12_a": "There are 360 degrees in a circle, so if the artist turns 1 degree each time through the loop, he'll need to go through 360 times."
     },
-    "function_names": {
-      "details": "details",
-      "draw eyebrow": "draw eyebrow",
-      "draw pupil": "draw pupil"
+    "function_definitions": {
+      "details": {
+        "name": "details"
+      },
+      "draw eyebrow": {
+        "name": "draw eyebrow"
+      },
+      "draw pupil": {
+        "name": "draw pupil"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/7/puzzle/7": {
@@ -594,7 +620,20 @@
   },
   "https://studio.code.org/s/course2/stage/7/puzzle/14": {
     "dsls": {
-      "title": "Artist Loops Matching 1",
+      "answers": [
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
+        }
+      ],
       "content2": "Match the loop to the shape",
       "questions": [
         {
@@ -610,31 +649,40 @@
           "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
-        }
-      ]
+      "title": "Artist Loops Matching 1"
     }
   },
   "https://studio.code.org/s/course2/stage/7/puzzle/15": {
     "dsls": {
-      "title": "Artist Loops Multiple Choice",
+      "answers": [
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png",
+          "correct": false
+        },
+        {
+          "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png",
+          "correct": true
+        }
+      ],
       "content1": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500",
       "questions": [
         {
           "text": "Which shape is made by this program?"
         }
       ],
+      "title": "Artist Loops Multiple Choice"
+    }
+  },
+  "https://studio.code.org/s/course2/stage/7/puzzle/16": {
+    "dsls": {
       "answers": [
         {
           "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png",
@@ -646,42 +694,20 @@
         },
         {
           "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png",
-          "correct": false
+          "correct": true
         },
         {
           "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png",
-          "correct": true
+          "correct": false
         }
-      ]
-    }
-  },
-  "https://studio.code.org/s/course2/stage/7/puzzle/16": {
-    "dsls": {
-      "title": "Artist Loops Multiple Choice",
+      ],
       "content1": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500",
       "questions": [
         {
           "text": "Which shape is made by this loop?"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png",
-          "correct": false
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png",
-          "correct": false
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png",
-          "correct": true
-        },
-        {
-          "text": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png",
-          "correct": false
-        }
-      ]
+      "title": "Artist Loops Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/8/puzzle/1": {
@@ -761,13 +787,6 @@
   },
   "https://studio.code.org/s/course2/stage/8/puzzle/14": {
     "dsls": {
-      "title": "Bee Loops Multiple Choice One",
-      "content1": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks collect all of the nectar?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png",
@@ -785,7 +804,14 @@
           "text": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks collect all of the nectar?"
+        }
+      ],
+      "title": "Bee Loops Multiple Choice One"
     }
   },
   "https://studio.code.org/s/course2/stage/8/extras?level_name=course2_harvester_loops_challenge1": {
@@ -807,15 +833,11 @@
       "courseC_harvester_loops_challenge2_d": "This spiral pattern can be coded with just 18 blocks!\n\n[][0]"
     }
   },
+  "https://studio.code.org/s/course2/stage/9/puzzle/1": {
+    "title": "Relay Programming"
+  },
   "https://studio.code.org/s/course2/stage/9/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png",
-      "questions": [
-        {
-          "text": "Which program **does not** create this image?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png",
@@ -829,17 +851,18 @@
           "text": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png",
           "correct": true
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png",
+      "questions": [
+        {
+          "text": "Which program **does not** create this image?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/9/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which image-program combo does not contain mistakes?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png",
@@ -853,7 +876,13 @@
           "text": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png",
           "correct": true
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which image-program combo does not contain mistakes?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/10/puzzle/1": {
@@ -945,23 +974,47 @@
   "https://studio.code.org/s/course2/stage/11/puzzle/4": {
     "short_instructions": "The code that we have for the leg and foot is wrong. \n\nCan you fix it?",
     "long_instructions": "The code that we have for the leg and foot is wrong. \n\nCan you fix it?",
-    "function_names": {
-      "draw left leg": "draw left leg",
-      "draw right leg": "draw right leg",
-      "draw body and arms": "draw body and arms",
-      "draw a head": "draw a head"
+    "function_definitions": {
+      "draw left leg": {
+        "name": "draw left leg"
+      },
+      "draw right leg": {
+        "name": "draw right leg"
+      },
+      "draw body and arms": {
+        "name": "draw body and arms",
+        "parameters": {
+          "armlength": "armlength",
+          "bodylength": "bodylength"
+        }
+      },
+      "draw a head": {
+        "name": "draw a head"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/5": {
     "short_instructions": "Looks like I'm sitting on a chair that’s missing a leg!\n\nEdit the code to draw the last leg.",
     "long_instructions": "Looks like I'm sitting on a chair that’s missing a leg!\n\nEdit the code to draw the last leg.",
-    "function_names": {
-      "draw right leg": "draw right leg",
-      "draw sitting stick figure": "draw sitting stick figure",
-      "draw head": "draw head",
-      "draw arms": "draw arms",
-      "jump to neck": "jump to neck",
-      "draw left leg": "draw left leg"
+    "function_definitions": {
+      "draw right leg": {
+        "name": "draw right leg"
+      },
+      "draw sitting stick figure": {
+        "name": "draw sitting stick figure"
+      },
+      "draw head": {
+        "name": "draw head"
+      },
+      "draw arms": {
+        "name": "draw arms"
+      },
+      "jump to neck": {
+        "name": "jump to neck"
+      },
+      "draw left leg": {
+        "name": "draw left leg"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/6": {
@@ -970,10 +1023,16 @@
     "authored_hints": {
       "2-3_Artist_Debugging_7_a": "What happens if you have the artist move or jump backward after he draws the first line?"
     },
-    "function_names": {
-      "draw O": "draw O",
-      "draw D": "draw D",
-      "draw E": "draw E"
+    "function_definitions": {
+      "draw O": {
+        "name": "draw O"
+      },
+      "draw D": {
+        "name": "draw D"
+      },
+      "draw E": {
+        "name": "draw E"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/7": {
@@ -998,14 +1057,32 @@
       "2-3_Artist_Debugging_10_a": "Remember, you want the control panel 10 pixels _wider_...so be sure to **add** 10 to whatever number you change.",
       "2-3_Artist_Debugging_10_b": "**Trial and error is perfectly fine here!**  \n\nStart by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you get too lost, just click \"Start over\" and your code will be reset."
     },
-    "function_names": {
-      "draw square": "draw square",
-      "jump to controller top left": "jump to controller top left",
-      "jump to middle": "jump to middle",
-      "draw a circle": "draw a circle",
-      "draw a button": "draw a button",
-      "draw cord": "draw cord",
-      "draw R pad": "draw R pad"
+    "function_definitions": {
+      "draw square": {
+        "name": "draw square",
+        "parameters": {
+          "width": "width",
+          "height": "height"
+        }
+      },
+      "jump to controller top left": {
+        "name": "jump to controller top left"
+      },
+      "jump to middle": {
+        "name": "jump to middle"
+      },
+      "draw a circle": {
+        "name": "draw a circle"
+      },
+      "draw a button": {
+        "name": "draw a button"
+      },
+      "draw cord": {
+        "name": "draw cord"
+      },
+      "draw R pad": {
+        "name": "draw R pad"
+      }
     }
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/10": {
@@ -1018,13 +1095,6 @@
   },
   "https://studio.code.org/s/course2/stage/11/puzzle/12": {
     "dsls": {
-      "title": "Artist Debugging Multiple Choice 1",
-      "content1": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700",
-      "questions": [
-        {
-          "text": "What would you need to fix to make this a finished circle?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png",
@@ -1042,18 +1112,21 @@
           "text": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700",
+      "questions": [
+        {
+          "text": "What would you need to fix to make this a finished circle?"
+        }
+      ],
+      "title": "Artist Debugging Multiple Choice 1"
     }
+  },
+  "https://studio.code.org/s/course2/stage/12/puzzle/1": {
+    "title": "Conditionals"
   },
   "https://studio.code.org/s/course2/stage/12/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/2-3_images/unplugged/conditionals_1_q.png",
-      "questions": [
-        {
-          "text": "According to the rules of the game, which set of cards is scored correctly?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png",
@@ -1071,7 +1144,15 @@
           "text": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/unplugged/conditionals_1_q.png",
+      "questions": [
+        {
+          "text": "According to the rules of the game, which set of cards is scored correctly?"
+        }
+      ],
+      "teacher_markdown": "## Teachers:\n\nStudents might be operating off of a misconception, and this is a great place to tease that out.  If students think that there is *no* correct answer, then they probably have a misunderstanding around conditionals.\n\nHere is a video that helps explain what is going on in this question:\n\nhttps://youtu.be/TbUaEnAYPjI\n",
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/13/puzzle/1": {
@@ -1140,12 +1221,6 @@
   },
   "https://studio.code.org/s/course2/stage/13/puzzle/14": {
     "dsls": {
-      "title": "Bee Conditionals Multiple Choice 1",
-      "questions": [
-        {
-          "text": "Which comparison below is true?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png",
@@ -1163,18 +1238,17 @@
           "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which comparison below is true?"
+        }
+      ],
+      "title": "Bee Conditionals Multiple Choice 1"
     }
   },
   "https://studio.code.org/s/course2/stage/13/puzzle/15": {
     "dsls": {
-      "title": "Bee Conditionals Multiple Choice 2",
-      "content1": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500",
-      "questions": [
-        {
-          "text": "Choose the best blocks."
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png",
@@ -1192,7 +1266,14 @@
           "text": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500",
+      "questions": [
+        {
+          "text": "Choose the best blocks. Purple flowers have either 0 or 1 nectar."
+        }
+      ],
+      "title": "Bee Conditionals Multiple Choice 2"
     }
   },
   "https://studio.code.org/s/course2/stage/13/extras?level_name=course2_bee_conditionals_challenge2": {
@@ -1213,25 +1294,11 @@
       "courseD_bee_conditionals_challenge1_b": "In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square."
     }
   },
+  "https://studio.code.org/s/course2/stage/14/puzzle/1": {
+    "title": "Binary Bracelets"
+  },
   "https://studio.code.org/s/course2/stage/14/puzzle/2": {
     "dsls": {
-      "title": "Matching",
-      "content1": "/script_assets/2-3_images/unplugged/binary_1_q.png, 250",
-      "content2": "Use the key to match each code to its letter",
-      "questions": [
-        {
-          "text": "<strong>N</strong>"
-        },
-        {
-          "text": "<strong>O</strong>"
-        },
-        {
-          "text": "<strong>P</strong>"
-        },
-        {
-          "text": "<strong>Q</strong>"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
@@ -1245,12 +1312,45 @@
         {
           "text": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/unplugged/binary_1_q.png, 250",
+      "content2": "Use the key to match each code to its letter",
+      "questions": [
+        {
+          "text": "**N**"
+        },
+        {
+          "text": "**O**"
+        },
+        {
+          "text": "**P**"
+        },
+        {
+          "text": "**Q**"
+        }
+      ],
+      "title": "Matching"
     }
+  },
+  "https://studio.code.org/s/course2/stage/15/puzzle/1": {
+    "title": "The Big Event"
   },
   "https://studio.code.org/s/course2/stage/15/puzzle/2": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        },
+        {
+          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
+        }
+      ],
       "content1": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png",
       "content2": "Match the button combination to the dance moves.",
       "questions": [
@@ -1267,20 +1367,7 @@
           "text": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        },
-        {
-          "text": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course2/stage/16/puzzle/1": {
@@ -1313,15 +1400,11 @@
   "https://studio.code.org/s/course2/stage/16/puzzle/10": {
     "short_instructions": "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
   },
+  "https://studio.code.org/s/course2/stage/18/puzzle/1": {
+    "title": "Your Digital Footprint"
+  },
   "https://studio.code.org/s/course2/stage/18/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png",
-      "questions": [
-        {
-          "text": "Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png",
@@ -1335,7 +1418,14 @@
           "text": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png",
           "correct": true
         }
-      ]
+      ],
+      "content1": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png",
+      "questions": [
+        {
+          "text": "Which animal has the digital footprint that leaves him or her the **most unsafe**?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course2/stage/19/puzzle/1": {

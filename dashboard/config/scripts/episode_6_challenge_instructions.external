@@ -1,0 +1,52 @@
+name 'Episode 6 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+### Protocols
+
+In this week's Code Break, Sofia sent messages using light bulb. Come up with your own system for sending messages using the [Protocols - Challenge guide](https://docs.google.com/document/d/1ClQkjvpyuRccPDidCp1FGtjPMyD-uOLr6xIQkyf3ggw/edit?usp=sharing).
+
+![](https://images.code.org/23003a9dcfdc00c97356cb1328ccaabb-image-1588085395749.gif) ![](https://images.code.org/cbbd550b5c1007e34b9425b14bede250-image-1588086568167.png)
+
+### Build a Website
+
+After watching the videos introducing Web Lab in the practice level, try your hand at building your own website! On the next level, there are two different set-ups: choose the right one for you.
+
+**Beginner Set-Up:** Basic HTML page with no CSS. Focus on using tags correctly.
+
+Samples
+
+* Get To Know Me, Barry Beaver!
+	* [Website](https://codeprojects.org/1LMLpo40j6Izag4beOy-H1BHy5P65hMnSiKs0TMExCI/index.html)
+    * [Code](https://studio.code.org/projects/weblab/1LMLpo40j6Izag4beOy-H1BHy5P65hMnSiKs0TMExCI/view)
+* My Cute Animal Fan Page!
+	* [Website](https://codeprojects.org/NPSmsaKa-sfg7XEDSU7zoSmNAVbfl-FrmImf_4d6aiM/index.html)
+    * [Code](https://studio.code.org/projects/weblab/NPSmsaKa-sfg7XEDSU7zoSmNAVbfl-FrmImf_4d6aiM/view)
+    
+![](https://images.code.org/41df67237c45eae71ab158f3a633edb9-image-1587998091524.png) ![](https://images.code.org/c05dc17d58accf8e6ffc19c02509fc9a-image-1587998328591.png)
+
+**Intermediate Set-Up:** HTML page and CSS page set up for you! Try your hand at building a simple page and adding style like color and font-size. 
+
+Samples
+
+* Presley Penguin's Blog
+	* [Website](https://codeprojects.org/fc9IJrZGo4cOZ1wYzZeRgIult2K0CPJaJ6iQqSMw8nw/index.html)
+    * [Code](https://studio.code.org/projects/weblab/fc9IJrZGo4cOZ1wYzZeRgIult2K0CPJaJ6iQqSMw8nw/view)
+* Super Shoes
+	* [Website](https://codeprojects.org/HjriHIxsXUKgdkaAZX6_jZg_iYCMl5WaaBfJ7WbWeRQ/index.html)
+    * [Code](https://studio.code.org/projects/weblab/HjriHIxsXUKgdkaAZX6_jZg_iYCMl5WaaBfJ7WbWeRQ/view)
+* At Home Dance Party
+	* [Website](https://codeprojects.org/eZOqH3E5OpwkAn0OavMh2TD4uA88m6BrUQxRCtiHqcA/)
+    * [Code](https://studio.code.org/projects/weblab/eZOqH3E5OpwkAn0OavMh2TD4uA88m6BrUQxRCtiHqcA/view)
+* Fun Facts
+	* [Website](https://codeprojects.org/688bFvMh0Ssp-O0tLHTiJGdGm4BB61U6BzBGMlPuGz8/)
+    * [Code](https://studio.code.org/projects/weblab/688bFvMh0Ssp-O0tLHTiJGdGm4BB61U6BzBGMlPuGz8/view)
+
+![](https://images.code.org/c0c0dc848b0bc50b5dac5ed2780544b1-image-1588083463775.png)
+MARKDOWN

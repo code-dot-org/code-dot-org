@@ -3,10 +3,10 @@ import React from 'react';
 import ToggleGroup from '../ToggleGroup';
 import color from '@cdo/apps/util/color';
 import {connect} from 'react-redux';
-import {setCurrentView, ViewType} from './sectionProgressRedux';
+import {setCurrentView} from './sectionProgressRedux';
+import {ViewType} from './sectionProgressConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   toggleButton: {
@@ -17,14 +17,17 @@ const styles = {
 };
 
 /**
- * A toggle that provides a way to switch between detail and summary views of
+ * A toggle that provides a way to switch between detail, summary, and standards views of
  * the progress a section of students have made in a course. Teacher view.
  */
 class SectionProgressToggle extends React.Component {
   static propTypes = {
+    showStandardsToggle: PropTypes.bool,
+    // Redux provided
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
-    sectionId: PropTypes.number
+    sectionId: PropTypes.number,
+    scriptId: PropTypes.number
   };
 
   onChange = selectedToggle => {
@@ -36,7 +39,8 @@ class SectionProgressToggle extends React.Component {
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
           old_view: this.props.currentView,
-          new_view: selectedToggle
+          new_view: selectedToggle,
+          script_id: this.props.scriptId
         })
       },
       {includeUserId: true}
@@ -45,8 +49,7 @@ class SectionProgressToggle extends React.Component {
   };
 
   render() {
-    const {currentView} = this.props;
-
+    const {currentView, showStandardsToggle} = this.props;
     return (
       <ToggleGroup
         selected={currentView}
@@ -68,11 +71,12 @@ class SectionProgressToggle extends React.Component {
         >
           <div>{i18n.levels()}</div>
         </button>
-        {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
+        {showStandardsToggle && (
           <button
             type="button"
             value={ViewType.STANDARDS}
             style={styles.toggleButton}
+            id="uitest-standards-toggle"
           >
             <div>{i18n.standards()}</div>
           </button>
@@ -87,7 +91,8 @@ export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 export default connect(
   state => ({
     currentView: state.sectionProgress.currentView,
-    sectionId: state.sectionProgress.section.id
+    sectionId: state.sectionData.section.id,
+    scriptId: state.scriptSelection.scriptId
   }),
   dispatch => ({
     setCurrentView(viewType) {

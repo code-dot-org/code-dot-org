@@ -802,7 +802,7 @@ applabCommands.drawImageURL = function(opts) {
   );
 
   var callback = function(success) {
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null, success);
     }
   };
@@ -1004,7 +1004,7 @@ applabCommands.getAttribute = function(opts) {
   return divApplab.contains(element) ? String(element[attribute]) : false;
 };
 
-// Whitelist of HTML Element attributes which can be modified, to
+// Allowlist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
 var MUTABLE_ATTRIBUTES = ['scrollTop'];
 
@@ -1159,7 +1159,7 @@ applabCommands.getImageURL = function(opts) {
       return element.getAttribute('data-canonical-image-url');
     } else if (
       element.tagName === 'LABEL' &&
-      element.className === 'img-upload'
+      $(element).hasClass('img-upload')
     ) {
       var fileObj = element.children[0].files[0];
       if (fileObj) {
@@ -1532,6 +1532,20 @@ applabCommands.onEvent = function(opts) {
           opts.eventName,
           applabCommands.onEventFired.bind(this, opts)
         );
+
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        if (opts.eventName === 'mousedown') {
+          domElement.addEventListener(
+            'touchstart',
+            applabCommands.onEventFired.bind(this, opts)
+          );
+        }
+        if (opts.eventName === 'mouseup') {
+          domElement.addEventListener(
+            'touchend',
+            applabCommands.onEventFired.bind(this, opts)
+          );
+        }
         // To allow INPUT type="range" (Slider) events to work on downlevel browsers, we need to
         // register a 'change' listener whenever an 'input' listner is requested.  Downlevel
         // browsers typically only sent 'change' events.
@@ -1549,6 +1563,11 @@ applabCommands.onEvent = function(opts) {
       case 'mousemove':
         domElement.addEventListener(
           opts.eventName,
+          applabCommands.onEventFired.bind(this, opts)
+        );
+        // Touch events will be mapped to mouse events in the EventSandboxer
+        domElement.addEventListener(
+          'touchmove',
           applabCommands.onEventFired.bind(this, opts)
         );
         // Additional handler needed to ensure correct calculation of
@@ -2099,7 +2118,7 @@ applabCommands.drawChart = function(opts) {
     chartApi.warnings.forEach(function(warning) {
       outputWarning(warning.message);
     });
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
   };
@@ -2206,7 +2225,7 @@ applabCommands.drawChartFromRecords = function(opts) {
     chartApi.warnings.forEach(function(warning) {
       outputWarning(warning.message);
     });
-    if (opts.callback) {
+    if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
   };

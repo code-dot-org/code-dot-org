@@ -2,7 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import sinon from 'sinon';
+import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -14,9 +16,10 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
+    sinon.stub(progressLoader, 'loadScript');
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
-      loadScript: () => {},
+      setCurrentView: () => {},
       setScriptId: () => {},
       scriptId: 1,
       section: {
@@ -35,12 +38,20 @@ describe('SectionProgress', () => {
             levels: [{id: 789}]
           }
         ],
-        excludeCsfColumnInLegend: true
+        csf: true,
+        hasStandards: true
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
-      showStandardsIntroDialog: false
+      showStandardsIntroDialog: false,
+      studentTimestamps: {
+        1: Date.now()
+      }
     };
+  });
+
+  afterEach(() => {
+    progressLoader.loadScript.restore();
   });
 
   it('loading data shows loading icon', () => {
@@ -55,12 +66,12 @@ describe('SectionProgress', () => {
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('summary view shows summary view and legend', () => {
+  it('shows summary view', () => {
     const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
     expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
   });
 
-  it('detail view shows detail view and legend', () => {
+  it('shows detail view', () => {
     const wrapper = shallow(
       <UnconnectedSectionProgress
         {...DEFAULT_PROPS}
@@ -68,5 +79,26 @@ describe('SectionProgress', () => {
       />
     );
     expect(wrapper.find('#uitest-detail-view').exists()).to.be.true;
+  });
+
+  it('shows standards view', () => {
+    const wrapper = shallow(
+      <UnconnectedSectionProgress
+        {...DEFAULT_PROPS}
+        currentView={ViewType.STANDARDS}
+      />
+    );
+    expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
+  });
+
+  it('shows student timestamps', () => {
+    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
+    const tooltip = wrapper.find('#tooltipIdForStudent1');
+    expect(
+      tooltip
+        .children()
+        .first()
+        .text()
+    ).to.contain('Today');
   });
 });

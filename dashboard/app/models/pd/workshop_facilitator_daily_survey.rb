@@ -3,8 +3,8 @@
 # Table name: pd_workshop_facilitator_daily_surveys
 #
 #  id             :integer          not null, primary key
-#  form_id        :integer          not null
-#  submission_id  :integer          not null
+#  form_id        :bigint           not null
+#  submission_id  :bigint           not null
 #  user_id        :integer          not null
 #  pd_session_id  :integer
 #  pd_workshop_id :integer          not null
@@ -25,42 +25,14 @@
 #  index_pd_workshop_facilitator_daily_surveys_unique             (form_id,user_id,pd_session_id,facilitator_id) UNIQUE
 #
 
+# NOTE: This is a legacy model and no new surveys should be added here. All new surveys should use Foorm.
+# This class is no longer actively synced via our JotForm cron jobs (fill_jotform_placeholders,
+# sync_jotforms, process_jotform_data).
+
 module Pd
-  class WorkshopFacilitatorDailySurvey < ActiveRecord::Base
+  class WorkshopFacilitatorDailySurvey < ApplicationRecord
     include JotFormBackedForm
     include Pd::WorkshopSurveyConstants
-
-    belongs_to :user
-    belongs_to :pd_session, class_name: 'Pd::Session'
-    belongs_to :pd_workshop, class_name: 'Pd::Workshop'
-    belongs_to :facilitator, class_name: 'User', foreign_key: 'facilitator_id'
-
-    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
-      message: 'already has a submission for this workshop, session, facilitator, and form'
-
-    before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}
-    def set_workshop_from_session
-      self.pd_workshop_id = pd_session&.pd_workshop_id
-    end
-
-    # @override
-    def self.attribute_mapping
-      {
-        user_id: 'userId',
-        pd_session_id: 'sessionId',
-        pd_workshop_id: 'workshopId',
-        facilitator_id: 'facilitatorId',
-        day: 'day'
-      }
-    end
-
-    validates_presence_of(
-      :user_id,
-      :pd_workshop_id,
-      :pd_session_id,
-      :facilitator_id,
-      :day
-    )
 
     # Different categories have different valid days
     # Not identical to the one in WorkshopDailySurvey
@@ -83,7 +55,38 @@ module Pd
       CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
     }
 
+    belongs_to :user
+    belongs_to :pd_session, class_name: 'Pd::Session'
+    belongs_to :pd_workshop, class_name: 'Pd::Workshop'
+    belongs_to :facilitator, class_name: 'User', foreign_key: 'facilitator_id'
+
+    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
+      message: 'already has a submission for this workshop, session, facilitator, and form'
+
+    validates_presence_of(
+      :user_id,
+      :pd_workshop_id,
+      :pd_session_id,
+      :facilitator_id,
+      :day
+    )
     validate :day_for_subject
+
+    before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}
+    def set_workshop_from_session
+      self.pd_workshop_id = pd_session&.pd_workshop_id
+    end
+
+    # @override
+    def self.attribute_mapping
+      {
+        user_id: 'userId',
+        pd_session_id: 'sessionId',
+        pd_workshop_id: 'workshopId',
+        facilitator_id: 'facilitatorId',
+        day: 'day'
+      }
+    end
 
     def self.form_ids_for_subjects(subjects)
       subjects.map do |subject|

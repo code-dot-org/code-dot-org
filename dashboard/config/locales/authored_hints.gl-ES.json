@@ -1,0 +1,28 @@
+{
+  "gl-ES": {
+    "data": {
+      "authored_hints": {
+        "courseB_collector_loops_challenge2a": {
+          "courseB_collector_loops_challenge2a_a": "Se algo sae mal, tenta depuralo. Non te rindas!",
+          "courseB_collector_loops_challenge2a_b": "Mira esta opción para percorrer o labirinto. Ves algún patrón que poidas repetir?",
+          "courseB_collector_loops_challenge2a_c": "Para recoller todo o tesouro, precisarás engadir dous bloques <xml> <block type=\"collector_collect\"/></xml> no teu bucle ou colocar o bloque dentro do seu propio bucle \"repetir\"."
+        },
+        "courseB_collector_loops_challenge2a_2018": {
+          "courseB_collector_loops_challenge2a_a": "Se algo sae mal, tenta depuralo. Non te rindas!",
+          "courseB_collector_loops_challenge2a_b": "Mira esta opción para percorrer o labirinto. Ves algún patrón que poidas repetir?",
+          "courseB_collector_loops_challenge2a_c": "Para recoller todo o tesouro, precisarás engadir dous bloques <xml> <block type=\"collector_collect\"/></xml> no teu bucle ou colocar o bloque dentro do seu propio bucle \"repetir\"."
+        },
+        "courseB_collector_loops_challenge2a_2019": {
+          "courseB_collector_loops_challenge2a_a": "Se algo sae mal, tenta depuralo. Non te rindas!",
+          "courseB_collector_loops_challenge2a_b": "Mira esta opción para percorrer o labirinto. Ves algún patrón que poidas repetir?",
+          "courseB_collector_loops_challenge2a_c": "Para recoller todo o tesouro, precisarás engadir dous bloques <xml> <block type=\"collector_collect\"/></xml> no teu bucle ou colocar o bloque dentro do seu propio bucle \"repetir\"."
+        },
+        "courseB_collector_loops_challenge2a_2020": {
+          "courseB_collector_loops_challenge2a_a": "Se algo sae mal, tenta depuralo. Non te rindas!",
+          "courseB_collector_loops_challenge2a_b": "Mira esta opción para percorrer o labirinto. Ves algún patrón que poidas repetir?",
+          "courseB_collector_loops_challenge2a_c": "Para recoller todo o tesouro, precisarás engadir dous bloques <xml> <block type=\"collector_collect\"/></xml> no teu bucle ou colocar o bloque dentro do seu propio bucle \"repetir\"."
+        }
+      }
+    }
+  }
+}

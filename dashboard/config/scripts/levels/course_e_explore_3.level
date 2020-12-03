@@ -15,9 +15,6 @@
       "moveSouth": null,
       "moveWest": null
     },
-    "goal_override": {
-      "goalAnimation": null
-    },
     "edit_code": true,
     "maze": "[[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "contained_level_names": null

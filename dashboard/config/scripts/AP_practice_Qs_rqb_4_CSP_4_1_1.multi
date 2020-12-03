@@ -1,15 +1,8 @@
 name 'AP_practice_Qs_rqb_4_CSP_4_1_1'
-wrong 'First, change all occurrences of "goats" to "sheep."
-Then, change all occurrences of "sheep" to "goats."'
-wrong 'First, change all occurrences of "goats" to "sheep."
-Then, change all occurrences of "sheep" to "goats."
-Last, change all occurrences of "foxes" to "sheep."'
-right 'First, change all occurrences of "goats" to "foxes."
-Then, change all occurrences of "sheep" to "goats."
-Last, change all occurrences of "foxes" to "sheep."'
-wrong 'First, change all occurrences of "goats" to "foxes."
-Then, change all occurrences of "foxes" to "sheep."
-Last, change all occurrences of "sheep" to "goats."'
+wrong 'First, change all occurrences of "goats" to "sheep." Then, change all occurrences of "sheep" to "goats."'
+wrong 'First, change all occurrences of "goats" to "sheep." Then, change all occurrences of "sheep" to "goats." Last, change all occurrences of "foxes" to "sheep."'
+right 'First, change all occurrences of "goats" to "foxes." Then, change all occurrences of "sheep" to "goats." Last, change all occurrences of "foxes" to "sheep."'
+wrong 'First, change all occurrences of "goats" to "foxes." Then, change all occurrences of "foxes" to "sheep." Last, change all occurrences of "sheep" to "goats."'
 markdown <<MARKDOWN
 A programmer completes the user manual for a video game she has developed and realizes she has reversed the roles of goats and sheep throughout the text. Consider the programmer\'s goal of changing all occurrences of "goats" to "sheep" and all occurrences of "sheep" to "goats." The programmer will use the fact that the word "foxes" does not appear anywhere in the original text. 
 

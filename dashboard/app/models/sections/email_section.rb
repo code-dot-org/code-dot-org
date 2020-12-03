@@ -19,6 +19,7 @@
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
 #  hidden            :boolean          default(FALSE), not null
+#  autoplay_enabled  :boolean          default(FALSE), not null
 #
 # Indexes
 #

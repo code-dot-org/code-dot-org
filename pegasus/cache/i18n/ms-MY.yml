@@ -17,6 +17,8 @@ ms-MY:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Adakah anda seorang guru Sains Komputer? Sila lihat sumber
     lain Minggu Pendidikan Sains Komputer</a>'
+  csedweek_banner_teachers_text: Adakah anda seorang guru Sains Komputer? Sila lihat
+    sumber lain Minggu Pendidikan Sains Komputer
   anybody_can_learn: Sesiapapun boleh belajar.
   learn_now: Pelajari Sekarang
   petition_message: Setiap pelajar di setiap sekolah perlu diberi peluang untuk mempelajari
@@ -155,6 +157,7 @@ ms-MY:
   homepage_action_text_watchvideo: Tonton Video
   homepage_action_text_signpetition: Tandatangan petisyen
   homepage_signpetition_dropdown: Tandatangan petisyen kami &#x25BE;
+  homepage_signpetition_dropdown_text: saya setuju
   homepage_banner_text_link: Ketahui lebih lanjut
   homepage_banner_privacy_link: Ketahui lebih lanjut
   homepage_banner_20k_teachers_link: Ketahui lebih lanjut
@@ -162,6 +165,7 @@ ms-MY:
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Sesiapa pun boleh belajar. Mulakan hari ini
   homepage_slot_text_link_hoc: Cuba Hour of Code
+  homepage_slot_text_blurb_students: Jelajahi semua tutorial kami
   homepage_slot_text_link_codestudio: Cuba Code Studio
   homepage_slot_text_link_local: Cari kelas tempatan
   homepage_slot_text_link_othercourses: Lain-lain kursus dalam talian
@@ -414,7 +418,10 @@ ms-MY:
   header_project_gallery: Projek
   header_educate_hoc: Hour of Code
   header_about: Tentang
+  header_help_support: 'Bantuan dan sokongan '
   header_report_bug: Laporkan masalah
+  header_legal_privacy: Dasar Privasi
+  header_legal_tos: Terma Perkhidmatan
   user_header_label: Hi %{username}
   user_header_settings: Akaun saya
   user_header_logout: Daftar keluar
@@ -441,3 +448,7 @@ ms-MY:
   hoc2018_dance_amazon_about_future_engineer_button: Ketahui lebih lanjut
   hoc2018_dance_measure: Corak Berirama
   hoc2018_dance_measure_colon: 'Corak Berirama:'
+  hoc2018_mc_thank_microsoft: "  Kami mengucapkan terima kasih kepada Microsoft kerana
+    menyokong wawasan dan misi kami untuk memastikan setiap kanak-kanak mempunyai
+    peluang mempelajari sains komputer dan kemahiran untuk berjaya pada abad ke-21.
+    \ "

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
-var craftMsg = require('./locale');
+var craftMsg = require('../locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
@@ -396,6 +396,15 @@ Craft.init = function(config) {
             );
             visualizationColumn.style.width = this.nativeVizWidth + 'px';
           }
+
+          // Prevent Phaser from scrolling up on iPhones when it receives a resize event.
+          Craft.gameController.game.device.whenReady(
+            () => {
+              Craft.gameController.game.scale.compatibility.scrollTo = false;
+            },
+            this,
+            false
+          );
         },
         twitter: {
           text: 'Share on Twitter',

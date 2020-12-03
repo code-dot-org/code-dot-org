@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T21:25:43.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Free Response: Why Refactor?\n\nWhy is refactoring your code important?\n",
+    "encrypted_solution": "jzn1qL1wOuIas0Vb0C0nu/bWCTvWlE5CVk2tM9UISR/8vl8HWFeVV8ItDZr2\n/twG9Bi3RG8kLBhtyvCKDXMDd5K3+YDxRlgkM/9kF+k+VeL5ERqb+7G72pH5\nxSqf+LtYR2GNiKWSH8Tnv8y6pXZXlT6schoRAHptoYLc0blpITaIkyAhsyhj\neinzRb5syR7mTweHzTMPewntXqdZ9CTE39wI6D84Tl0UWhSM8JsUUt6xXPpH\nuxh+7EcDqwGB7wtJdMHZ5MxCZi5s+CPgySDuHef5QXKGRMcVAjCyKpyxAP5a\nX51U4Wm8HrtVj00wdCMoM8yYP5rY4uRPwMeV8jkAq+ZstCjuaWq930fht8J9\nhJvbD9JNDYDHb4MqSfoyYTxhvxQfuPqYCGg9+xTJUEKR8pXyYcxWTH46Ms7P\nmG5U594hjmpV0e7vYsV/GCwc4KvjT55dE9xcb9GAO0NKbfHUnImm8IJjOFQi\nf4xRJ5Oit15wJCJRHAqXbhOFho+be+BRvy48FgwASw7Ge9j1Ix9oZQ==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17373,
+    "name_suffix": "_virtual"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

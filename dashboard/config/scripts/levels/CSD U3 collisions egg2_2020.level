@@ -1,0 +1,97 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2020-02-18T17:57:52.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "playSound": {
+        "paletteParams": [
+          "url"
+        ],
+        "params": [
+          "\"sound://default.mp3\""
+        ]
+      },
+      "comment_GameLab": null,
+      "var sprite = createSprite": null,
+      "isTouching": null,
+      "velocityX": null,
+      "velocityY": null,
+      "visible": null,
+      "comment_Sprites": null,
+      "ifBlock": null,
+      "comment_Control": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "console.log": null,
+      "comment_Variables": null,
+      "stopSound": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Making Sounds\r\n\r\nYou can also use code to play a blender sound.\r\n\r\n# Do This\r\n\r\nUse the `playSound` block from the \"World\" drawer to play the \"https://studio.code.org/docs/sounds/blender.mp3\" sound when the apple touches the blender.  You will need to paste the address of the sound into the block, so it looks like this: ![](https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png)\r\n",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "palette_category_at_start": "gamelab",
+    "all_animations_single_frame": "true",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "start_in_animation_tab": "false",
+    "encrypted_examples": "7eCBMjEaj+rj6c2mnyjA04+ex4IG2Vn7zbXKLOkw265KlQqdkVKlhQGBRRkA\nYw+PDwAzJywbJlDYKz9+lzIaZg==\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 18623,
+    "name_suffix": "_2020",
+    "reference_links": [
+      "/docs/concepts/javascript/if-statements/"
+    ],
+    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "start_blocks": "var apple = createSprite(200, -50);\r\napple.setAnimation(\"apple\");\r\napple.velocityY = 5;\r\n\r\nvar blender = createSprite(200, 330);\r\nblender.setAnimation(\"blender\");\r\n\r\n\r\nfunction draw() {\r\n  if (__) {\r\n    blender.x = 200 + randomNumber(-5,5);\r\n  }\r\n\r\n\r\n  background(\"skyblue\");\r\n  strokeWeight(0);\r\n  fill(\"sienna\");\r\n  rect(0, 340, 400, 60);\r\n  \r\n  drawSprites();\r\n}",
+    "libraries_enabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"33abeb33-4d74-48ad-958a-8fe0ca059aef\",\r\n    \"c680e284-3529-4a3f-9a0d-7b65bf9dff17\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"33abeb33-4d74-48ad-958a-8fe0ca059aef\": {\r\n      \"name\": \"blender\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/Ry9L40IAPQb_SBIhQoEEEg/33abeb33-4d74-48ad-958a-8fe0ca059aef.png?version=JEBesmONW8evB2Ly4opA_lv3fhwrjB4S\",\r\n      \"frameSize\": {\r\n        \"x\": 88,\r\n        \"y\": 134\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"JEBesmONW8evB2Ly4opA_lv3fhwrjB4S\"\r\n    },\r\n    \"c680e284-3529-4a3f-9a0d-7b65bf9dff17\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/Ry9L40IAPQb_SBIhQoEEEg/c680e284-3529-4a3f-9a0d-7b65bf9dff17.png?version=97qBNp.sfx0CANl37kuXZKGfFkJZpaeY\",\r\n      \"frameSize\": {\r\n        \"x\": 40,\r\n        \"y\": 44\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"97qBNp.sfx0CANl37kuXZKGfFkJZpaeY\"\r\n    }\r\n  }\r\n}",
+    "display_name": "Add Sounds",
+    "thumbnail_url": "https://images.code.org/5bba6a59ca6ac44e190f0a56d2c31752-image-1585767709528.gif",
+    "bubble_choice_description": "Learn how to play sounds in Game Lab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 17:25:18 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:25:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:26:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:27:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-29 20:19:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-23 00:08:09 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 17:10:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 18:58:33 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 19:03:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 19:35:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-07 18:49:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

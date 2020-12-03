@@ -1,16 +1,14 @@
 #!/usr/bin/env ruby
 require_relative '../../../deployment'
-require 'cdo/rack/rackup'
 require 'cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require 'cdo/rack/rackup'
 require 'cdo/rake_utils'
 CDO.log.level = Logger::WARN
 
-def main
-  ENV['HONEYBADGER_ENV'] = 'test'
-  Rack.with_rackup(pegasus_dir, port: CDO.pdf_port_markdown) do |params|
-    RakeUtils.rake '--rakefile', pegasus_dir('sites/virtual/generate_curriculum_pdfs.rake'), "base_url=http://localhost.code.org:#{params[:port]}/"
-    exit $?.exitstatus
-  end
+ENV['HONEYBADGER_ENV'] = 'test'
+Rack.with_rackup(pegasus_dir, port: CDO.pdf_port_markdown) do |params|
+  RakeUtils.rake '--rakefile', pegasus_dir('sites/virtual/generate_curriculum_pdfs.rake'), "base_url=http://localhost.code.org:#{params[:port]}/"
+  exit $?.exitstatus
 end
-
-main if only_one_running?(__FILE__)

@@ -1,4 +1,5 @@
 login_required true
 
-stage 'Subgoal Labels Study Opt-In'
+lesson 'Subgoal Labels Study Opt-In', display_name: 'Subgoal Labels Study Opt-In'
 level 'csp_subgoal_labels_consent_intro', progression: 'Click here to participate in the subgoal labels study'
+

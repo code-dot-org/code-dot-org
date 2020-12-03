@@ -1,0 +1,12 @@
+name 'CSD games random challenge_2020'
+display_name 'Challenges: Random Numbers'
+description 'Try out these extra challenges with random numbers.'
+
+sublevels
+
+level 'CSD U3 Random rgb_pilot'
+level 'CSD U3 Random add_pilot'
+level 'CSD U3 Random multiply_pilot'
+level 'CSD U3 Random line_pilot'
+level 'CSD U3 Random arc_pilot'
+level 'CSD U3 Random free play_pilot'

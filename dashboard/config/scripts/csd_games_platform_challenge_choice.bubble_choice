@@ -1,0 +1,11 @@
+name 'CSD games platform challenge choice'
+editor_experiment ''
+display_name 'Challenges'
+description 'Improve your game with these challenges!'
+
+sublevels
+level 'CSD U3 platform challenge animationfacing'
+level 'CSD U3 platform challenge lives'
+level 'CSD U3 platform challenge differentitem'
+level 'CSD U3 platform challenge sidewalls'
+level 'CSD U3 platform challenge animations'

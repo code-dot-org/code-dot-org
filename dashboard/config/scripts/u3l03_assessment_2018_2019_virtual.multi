@@ -1,0 +1,19 @@
+name 'U3L03 Assessment_2018_2019_virtual'
+title 'Multiple Choice: False Statements about Functions'
+
+question 'Which of the following is NOT a true statement about functions?'
+
+wrong 'Functions are reusable programming abstractions.'
+wrong 'Functions help reduce the complexity of writing and maintaining programs.'
+wrong 'Functions help break a problem into logical chunks.'
+wrong 'Once defined, a function can be called many times from different parts of a program.'
+right 'Functions cannot make calls to other functions written by the same programmer.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+* Functions cannot make calls to other functions written by the same programmer.
+MARKDOWN

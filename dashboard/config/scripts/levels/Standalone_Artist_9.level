@@ -15,7 +15,7 @@
     "slider_speed": ".8",
     "free_play": "true",
     "embed": "false",
-    "long_instructions": "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!\r\n\r\n",
+    "long_instructions": "Now go ahead and make whatever picture you'd like! You've even got some new blocks and an empty function that you can make do whatever you want!\r\n\r\n",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -29,7 +29,26 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "never_autoplay_video": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "discard_background": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-09 05:19:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-09 05:20:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-09 05:20:45 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
@@ -63,17 +82,23 @@
         <block type="draw_width_inline">
           <title name="WIDTH">1</title>
         </block>
+        <block type="sticker">
+          <title name="VALUE">Alien</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">rainbowLine</title>
+        </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="draw_colour" inline="true">
+        <block type="draw_colour">
           <value name="COLOUR">
             <block type="colour_picker">
               <title name="COLOUR">#ff0000</title>
             </block>
           </value>
         </block>
-        <block type="draw_colour" inline="true">
+        <block type="draw_colour">
           <value name="COLOUR">
             <block type="colour_random"/>
           </value>

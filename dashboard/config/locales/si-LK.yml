@@ -181,6 +181,7 @@ si:
     type:
       word: රහස් පදය
       email: විද්‍යුත් තැපැල
+      clever: දක්ෂ ගිණුම
   follower:
     invite_sent: ආරාධනාව යවන ලදී
     added_teacher: "%{name} ඔබේ ගුරුවරයා ලෙස එක් කරන ලදි"
@@ -223,6 +224,8 @@ si:
       project_gallery: ව්යාපෘති
       educate_hoc: Hour of Code
       stats: සංඛ්‍යාන
+      legal_privacy: රහස්‍යතා ප්‍රතිපත්තිය
+      legal_tos: සේවා නියම
     user:
       classroom: ගුරු මුල් පිටුව
       district_dashboard: දිස්ත්‍රික්ක උපකරණ පුවරුව
@@ -307,6 +310,7 @@ si:
       ගිණුම් ඉවත් නොවේ.'
     delete_confirm: ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?
     update_email: යාවත්කාලීන කරන්න
+    parent_guardian_email_label: මාපිය/භාරකරු e-තැපෑල
   user_level:
     completed: සම්පූර්ණයි
     tried: උත්සාහ කරනලදී
@@ -544,29 +548,13 @@ si:
       title: කන්ඩිෂනලස්
     widgets:
       cta: කෙසේදැයි දැනගන්න
-  gallery:
-    students_drew_these_with_code: සිසුන් මේවා ඇන්දේ කේත මගිනි!
-    students_made_these_with_code: සිසුන් මේවා කේත මගින් නිර්මාණය කර ඇත!
-    picture_count: පසුගිය දවස් <b>%{days}</b> තුල සිසුන් ඔවුන්ගේම වැඩසටහන් කේතනය කිරීමෙන්
-      චිත්‍ර <b>%{count}</b> ක් අඳින ලදි. වැඩසටහන ධාවනය කිරීමට චිත්‍ර මත ක්ලික් කරන්න.
-    activity_count: "අතීතයේ, <b>%{days}</b>  , සිසුන් apps සහ පින්තුර <b>%{count}</b>
-      නිමානය කරේ ඔවුන්ගේම \nපරිගණක වැඩසටහන්, එක් එක් වැඩසටහන බැලීමට පින්තූර සහ තිරපිටපත්
-      මත ක්ලික් කරන්න."
-    want_to_make_your_own: ඔබේම නිර්මාණයක් හදමු ද?
-    how_to_save: 'මෙම නිබන්ධන අවසන් මට්ටම වලදී , ගැලරිය හි  ගබඩා කිරීම සදහා "අවසානයි"
-      සහ "සුරකින්න" බොත්තම් මත ඔබන්න '
-    more: තව &rarr;
-    caption_by_name_age: "%{name} විසින්, වයස %{age}"
-    caption_time_ago: "%{time_ago} පෙර"
-    header: ගැලරිය
-    header_playlab: කථා සහ ක්‍රීඩා
-    header_artist: කේත කලාව
-    report_abuse: අනිසි භාවිතයක් වාර්තා කරන්න
   landing:
     report_bug: දෝෂය වාර්තා කරන්න
     support: උපකාර ලබාගන්න
     support_url: "//support.code.org"
     help_resources: උදවු සහ සම්පත්
+  free_response:
+    placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
   multi:
     wrong_title: පිළිතුර වැරදියි
     wrong_body: ඔබ ඇතුලත් කල පිළිතුර වැරදියි. කරුණාකර නැවත උත්සාහ කරන්න!
@@ -774,30 +762,7 @@ si:
     outdated: කලින් ඉදිරිපත් කල සංස්කරණයක් සඳහා මෙම ප්‍රතිචාරය එක් කරන ලදී
     review_in_progress: සමාලෝචනයට සූදානම්
     review_new_submission: අලුත් ඉදිරිපත් කිරීමක් සමාලෝචනය කරන්න
-  flex_category:
-    required: දළ විශ්ලේෂණය
-    content: අන්තර්ගතය
-    practice: ඉගැන්වීමේ පිළිවෙත්
     peer_review: සමූහ විමර්ශනය
-    csf_digcit: ඩිජිටල් පුරවැසිකම
-    csf_jigsaw: පින්තූර ප්‍රෙහේලිකාව
-    csf_loops: ලූපයන්
-    csf_events: වැඩසටහන්
-    csf_binary: ද්විමය
-    csf_data: දත්ත
-    csf_conditionals: කන්ඩිෂනලස්
-    csf_nested_loops: නැවත නැවත සිදුවන ලුප
-    csf_functions: ශ්‍රිතයන්
-    csf_variables: විචල්‍යන්
-    csf_for_loops: ලූපයන් සඳහා
-    csf_internet: අන්තර්ජාලය
-    csp2_1_2018: '2වන ඒකකය: අංකිත තොරතුරු'
-    csp_variables: විචල්‍යන්
-    csp_conditionals: කන්ඩිෂනලස්
-    csp_functions: ශ්‍රිතයන්
-    csp_lists: ලැයිස්තු
-    csp_loops: ලූපයන්
-    k5_next_steps: ඉදිරි පියවර
   external_links:
     disclaimer: වියාචනය
     leaving_domain: දැන් ඔබට Code.org විසින් ක්‍රියාත්මක නොවන බව අඩවියකට, යොමුකරයි.
@@ -822,6 +787,8 @@ si:
     starwars_javascript_name: 'Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)'
     download_message: අන්තර්ජාලය නැතිව භාවිත කිරීමට %{app_name} ඇප් එක බාගත කරන්න
       (136MB)
+    download_in_English: 'ඉංග්රීසි බසින් බාගන්න:'
+    download_in_Spanish: 'ස්පාඤ්ඤ බසින් බාගන්න:'
     windows: ජනේලය
     mac: මැක් OS X
   locked_stage: මෙම අදියර දැනට අහුරා ඇති නිසා මෙම අදියරේ අන්තර්ගතය දැකගත නොහැක. එහි
@@ -829,6 +796,7 @@ si:
     ගුරුවරයාට එය අගුල් ඇරිය හැක.
   hidden_stage: ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ
     ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න.
+  return_unit_overview: ඒකක දළ විශ්ලේෂණයට යන්න
   return_course_overview: ඒකක දළ විශ්ලේෂණයට යන්න
   pd:
     form_labels:
@@ -844,6 +812,7 @@ si:
         science: විද්‍යාව
         la: භාෂා අධ්‍යනය
       resources:
+        khan: ඛාන් ඇකඩමිය
         kodable: කෝඩබල්
         lightbot: Lightbot
       robotics:
@@ -855,5 +824,4 @@ si:
         opt_in_no: නැහැ
   cookie_banner:
     accept: මම එකඟයි
-  gdpr_dialog:
-    true: ඔව්
+  copy: පිටපත් කරන්න

@@ -18,10 +18,10 @@ markdown <<MARKDOWN
 
 ## New Blocks
 
-*  **[Define a function](//docs.code.org/applab/functionParams_none/)** - `function myFunction() {
+*  **[Define a function](//studio.code.org/docs/applab/functionParams_none/)** - `function myFunction() {
     // function body
 }`
-*  **[Call a function](//docs.code.org/applab/callMyFunction/)** - `Call a function`
+*  **[Call a function](//studio.code.org/docs/applab/callMyFunction/)** - `Call a function`
 
 ## Resources
 

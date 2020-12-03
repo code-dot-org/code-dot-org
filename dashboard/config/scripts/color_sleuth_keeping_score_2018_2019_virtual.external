@@ -1,0 +1,134 @@
+name 'Color Sleuth - Keeping score_2018_2019_virtual'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Updating the Score
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Okay, now let's think about our if statement in checkCorrect and how to update the score properly. How do you want scoring to work?</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>I think I want to make it so that if you guess correctly you get 1 point, but if you get it wrong you lose 3 points!</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Okay cool. To do that though we need to know which player's score to update.</p>
+
+<p style="text-align: center"> MICHAEL  </p>
+
+<p>Right. To update the score we actually need to know two things: </p>
+
+<ol>
+<li>If the correct button was pressed or not and </li>
+
+<li>Which player's score we need to update</li>
+</ol>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Well, first of all, it sounds like we need new global variables to keep track of each player's score.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Right.  Let me make a note of it.</p>
+
+</div>
+<img src="https://images.code.org/c0b4c32edeb6ec0c970273c406d67a4c-image-1481697127214.PNG" alt="" style="display: block; margin: auto;">
+
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>And to know which player's score to update we can just nest some if-statements inside our current one.  Let me hack out some pseudocode:</p>
+
+</div>
+
+<img src="https://images.code.org/b0bc443fc879241600121f7b51a47157-image-1481218418095.png" alt="" style="display: block; margin: auto;">
+
+<div style="width: 400px; margin: auto">
+
+<p>Ugh.  Just writing that down felt like a lot.</p>
+
+<p style="text-align: center"> MICHAEL  </p>
+
+<p>Yeah, I was thinking we could use a series of compound expressions like this.  </p>
+
+</div>
+
+<img src="https://images.code.org/f54131bd28b0477fd5fc2b7ed6440fb8-image-1481218431055.png" alt="" style="display: block; margin: auto;"/> 
+
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> MICHAEL  </p>
+
+<p>Blech.  Not much better. </p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>I just thought of a 3rd option...and don't hate me for suggesting this, but...we could make another function called something like <code>updateScoreBy(amountToAdd)</code>.</p>
+
+<p>And this function's whole job is to figure out whose turn it is and add the amount given in the parameter to the correct player's score.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Mmmmm. Interesting.  But what if we need to subtract from the score? Do we need a new function?</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Actually, No! We can just give a negative number to the parameter if we want to subtract! If we <em>add</em> <code>-3</code> to the score that's the same as subtracting.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Oh, that's clever!  Will it save us code?</p>
+
+<p style="text-align: center"> ALEXIS </p>
+<p> Maybe, let me sketch it out. </p>
+
+</div>
+<img src="https://images.code.org/509a7b68e35cee73d4c6386bc8c80bc0-image-1481697267243.PNG" alt="" style="display: block; margin: auto;">
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>So, the <em>total</em> amount of code is about the same as the if-statements, but I think this is <em>SO much easier to read</em>.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>I agree. Look how clean and easy to read checkCorrect is this way.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>So, you convinced me, we need to add another function.  I'm sensing a pattern.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Yeah, we're going to need to do the same kind of thing we did before:</p>
+
+<ol>
+<li>Add global variables for player1 and player2 scores</li>
+
+<li>Add a new function to update the score</li>
+
+<li>Call that function from the appropriate places.</li>
+</ol>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>That's basically what we had to do last time.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Yup. Let's do it again but for this new problem.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Let's get coding!</p>
+
+</div>
+
+## Click continue to do it
+MARKDOWN

@@ -1,0 +1,536 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+J M Weatherwax High School,WA-14005-3476,530003000007,010152,Computer Programming,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Anacortes High School,WA-29103-2467,530015000016,010157,AP Computer Science A,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Anacortes High School,WA-29103-2467,530015000016,021009,Robotics,unspecified,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cap Sante High School,WA-29103-5176,530015003303,010205,Computer Gaming and Design,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arlington High School,WA-31016-2523,530024000023,010011,Computer Science Principles,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arlington High School,WA-31016-2523,530024000023,010012,Exploring Computer Science,unspecified,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Arlington High School,WA-31016-2523,530024000023,021009,Robotics,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weston High School,WA-31016-4287,530024002074,010011,Computer Science Principles,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weston High School,WA-31016-4287,530024002074,010152,Computer Programming,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Weston High School,WA-31016-4287,530024002074,021009,Robotics,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Asotin Jr Sr High,WA-02420-2434,530028000028,010151,Business Programming,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Senior High School,WA-17408-2795,530030000032,010152,Computer Programming,unspecified,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Senior High School,WA-17408-2795,530030000032,010157,AP Computer Science A,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Senior High School,WA-17408-2795,530030000032,021009,Robotics,unspecified,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Riverside High School,WA-17408-4474,530030002445,010152,Computer Programming,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Riverside High School,WA-17408-4474,530030002445,010157,AP Computer Science A,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Riverside High School,WA-17408-4474,530030002445,021009,Robotics,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Mountainview High School,WA-17408-5037,530030002978,010152,Computer Programming,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Mountainview High School,WA-17408-5037,530030002978,010157,AP Computer Science A,unspecified,50,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Auburn Mountainview High School,WA-17408-5037,530030002978,021009,Robotics,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bainbridge High School,WA-18303-2395,530033000043,010152,Computer Programming,unspecified,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bainbridge High School,WA-18303-2395,530033000043,010157,AP Computer Science A,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bainbridge High School,WA-18303-2395,530033000043,021009,Robotics,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodward Middle School,WA-18303-4505,530033002452,010156,Computer Programming-Other Language,unspecified,110,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Homelink River,WA-06119-1875,530038002857,010011,Computer Science Principles,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Homelink River,WA-06119-1875,530038002857,010153,Visual Basic (VB) Programming 10153,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Homelink River,WA-06119-1875,530038002857,010205,Computer Gaming and Design,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bellevue High School,WA-17405-2701,530039000060,010152,Computer Programming,unspecified,137,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bellevue High School,WA-17405-2701,530039000060,010157,AP Computer Science A,unspecified,79,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highland Middle School,WA-17405-3166,530039000068,010156,Computer Programming-Other Language,unspecified,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sammamish Senior High,WA-17405-3282,530039000085,010152,Computer Programming,unspecified,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sammamish Senior High,WA-17405-3282,530039000085,010157,AP Computer Science A,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tyee Middle School,WA-17405-3283,530039000094,010156,Computer Programming-Other Language,unspecified,119,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tyee Middle School,WA-17405-3283,530039000094,021009,Robotics,unspecified,64,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chinook Middle School,WA-34003-3361,530585000862,010156,Computer Programming-Other Language,unspecified,104,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chinook Middle School,WA-34003-3361,530585000862,021009,Robotics,unspecified,105,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tillicum Middle School,WA-17405-3435,530039000093,010156,Computer Programming-Other Language,unspecified,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tillicum Middle School,WA-17405-3435,530039000093,021009,Robotics,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newport Senior High School,WA-17405-3486,530039000078,010152,Computer Programming,unspecified,161,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newport Senior High School,WA-17405-3486,530039000078,010157,AP Computer Science A,unspecified,55,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+International School,WA-17405-3522,530039003149,010152,Computer Programming,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+International School,WA-17405-3522,530039003149,010157,AP Computer Science A,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Interlake Senior High School,WA-17405-3588,530039000072,010152,Computer Programming,unspecified,98,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Interlake Senior High School,WA-17405-3588,530039000072,010157,AP Computer Science A,unspecified,96,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Odle Middle School,WA-17405-3631,530039000079,010156,Computer Programming-Other Language,unspecified,121,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Odle Middle School,WA-17405-3631,530039000079,021009,Robotics,unspecified,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bellevue Big Picture School,WA-17405-5240,530039003354,010156,Computer Programming-Other Language,unspecified,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bellingham High School,WA-37501-2553,530042000099,010157,AP Computer Science A,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Squalicum High School,WA-37501-4515,530042002693,010157,AP Computer Science A,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel High School,WA-27403-2807,530048000119,010152,Computer Programming,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bethel High School,WA-27403-2807,530048000119,010157,AP Computer Science A,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spanaway Lake High School,WA-27403-4158,530048001821,010152,Computer Programming,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spanaway Lake High School,WA-27403-4158,530048001821,010157,AP Computer Science A,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Graham Kapowsin High School,WA-27403-5033,530048003003,010152,Computer Programming,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Graham Kapowsin High School,WA-27403-5033,530048003003,010157,AP Computer Science A,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Blaine High School,WA-37503-3136,530057000132,021009,Robotics,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bremerton High School,WA-18100-3109,530066000139,010152,Computer Programming,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bremerton High School,WA-18100-3109,530066000139,010157,AP Computer Science A,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Sound Technical Skills Center,WA-18100-4038,530066002081,010205,Computer Gaming and Design,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bridgeport High School,WA-09075-2788,530072000151,010157,AP Computer Science A,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bridgeport High School,WA-09075-2788,530072000151,021009,Robotics,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bridgeport Middle School,WA-09075-4213,530072001271,021009,Robotics,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burlington Edison High School,WA-29100-2362,530078000155,010152,Computer Programming,unspecified,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Burlington Edison High School,WA-29100-2362,530078000155,010157,AP Computer Science A,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Camas High School,WA-06117-4567,530081003152,010157,AP Computer Science A,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Camas High School,WA-06117-4567,530081003152,021009,Robotics,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade High School,WA-31002-3407,530267000391,021009,Robotics,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Kitsap High School,WA-18401-2615,530108000177,010152,Computer Programming,unspecified,59,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Kitsap High School,WA-18401-2615,530108000177,010157,AP Computer Science A,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Kitsap High School,WA-18401-2615,530108000177,021009,Robotics,unspecified,73,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Kitsap Middle School,WA-18401-3237,530108000178,010152,Computer Programming,unspecified,63,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Kitsap Middle School,WA-18401-3237,530108000178,021009,Robotics,unspecified,105,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairview Middle School,WA-18401-3791,530108000183,010152,Computer Programming,unspecified,60,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fairview Middle School,WA-18401-3791,530108000183,021009,Robotics,unspecified,68,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olympic High School,WA-18401-4100,530108001753,010157,AP Computer Science A,unspecified,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgetop Middle School,WA-18401-4249,530108002056,021009,Robotics,unspecified,116,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Barker Creek Community School,WA-18401-5472,530108003622,021009,Robotics,unspecified,68,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Valley High School,WA-32356-3065,530111000191,010152,Computer Programming,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Valley High School,WA-32356-3065,530111000191,010157,AP Computer Science A,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Central Valley High School,WA-32356-3065,530111000191,021009,Robotics,unspecified,63,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+University High School,WA-32356-3415,530111000204,010152,Computer Programming,unspecified,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+University High School,WA-32356-3415,530111000204,010157,AP Computer Science A,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+University High School,WA-32356-3415,530111000204,021009,Robotics,unspecified,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Spokane Valley Tech,WA-32356-5278,530111003387,010157,AP Computer Science A,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centralia High School,WA-21401-2166,530114000206,010157,AP Computer Science A,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Centralia High School,WA-21401-2166,530114000206,021009,Robotics,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+W F West High School,WA-21302-2799,530117000217,021009,Robotics,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cheney High School,WA-32360-3610,530123000223,010152,Computer Programming,unspecified,53,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cheney High School,WA-32360-3610,530123000223,010157,AP Computer Science A,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cheney High School,WA-32360-3610,530123000223,021009,Robotics,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Quartzite Learning,unspecified,unspecified,010152,Computer Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jenkins Junior/Senior High,WA-33036-2404,530126000230,021009,Robotics,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chimacum High School,WA-16049-3275,530129000233,010152,Computer Programming,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chimacum High School,WA-16049-3275,530129000233,010157,AP Computer Science A,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cle Elum Roslyn High School,WA-19404-2329,530135000240,010152,Computer Programming,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Firwood,WA-27400-2041,530141000271,010152,Computer Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover Park High School,WA-27400-2425,530141000250,010152,Computer Programming,unspecified,89,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Clover Park High School,WA-27400-2425,530141000250,010157,AP Computer Science A,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mann Middle School,WA-27400-3297,530141000264,021009,Robotics,unspecified,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakes High School,WA-27400-3456,530141000261,010152,Computer Programming,unspecified,113,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakes High School,WA-27400-3456,530141000261,010157,AP Computer Science A,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodbrook Middle School,WA-27400-3500,530141000272,021009,Robotics,unspecified,84,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrison Prep School,WA-27400-5027,530141003000,010157,AP Computer Science A,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrison Prep School,WA-27400-5027,530141003000,021009,Robotics,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colton School,WA-38306-2588,530150000277,010152,Computer Programming,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia High And Elementary,WA-33206-3508,530156000278,010011,Computer Science Principles,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Colville Senior High School,WA-33115-3310,530163000282,010157,AP Computer Science A,unspecified,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Coupeville High School,WA-15204-2625,530180000290,010156,Computer Programming-Other Language,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Crescent School,WA-05313-3473,530183000292,021009,Robotics,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Creston Jr-Sr High School,WA-22073-2863,530186000294,021009,Robotics,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Darrington High School,WA-31330-3188,530198000301,010011,Computer Science Principles,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Davenport Senior High School,WA-22207-3173,530201000303,010011,Computer Science Principles,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Valley High School,WA-39090-2344,530537000805,010011,Computer Science Principles,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Valley High School,WA-39090-2344,530537000805,010157,AP Computer Science A,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+East Valley High School,WA-39090-2344,530537000805,021009,Robotics,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastmont Senior High,WA-09206-2727,530231000318,021009,Robotics,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edmonds eLearning Academy,WA-31015-1519,530240002205,010012,Exploring Computer Science,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edmonds Heights K-12,WA-31015-1966,530240003139,010205,Computer Gaming and Design,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Edmonds Woodway High School,WA-31015-3123,530240002673,010012,Exploring Computer Science,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountlake Terrace High School,WA-31015-3303,530240000356,010011,Computer Science Principles,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountlake Terrace High School,WA-31015-3303,530240000356,010152,Computer Programming,unspecified,112,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountlake Terrace High School,WA-31015-3303,530240000356,010155,Java Programming 10155,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountlake Terrace High School,WA-31015-3303,530240000356,021009,Robotics,unspecified,62,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meadowdale High School,WA-31015-3464,530240000352,010012,Exploring Computer Science,unspecified,80,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meadowdale High School,WA-31015-3464,530240000352,010157,AP Computer Science A,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lynnwood High School,WA-31015-3755,530240000346,010011,Computer Science Principles,unspecified,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lynnwood High School,WA-31015-3755,530240000346,021009,Robotics,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Scriber Lake High School,WA-31015-3854,530240000338,010205,Computer Gaming and Design,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Morgan Middle School,WA-19401-2453,530246000367,010012,Exploring Computer Science,unspecified,175,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ellensburg High School,WA-19401-2996,530246000365,010011,Computer Science Principles,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Entiat Middle and High School,WA-04127-3317,530255000374,010012,Exploring Computer Science,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Entiat Middle and High School,WA-04127-3317,530255000374,021009,Robotics,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Enumclaw Sr High School,WA-17216-3330,530000100379,010152,Computer Programming,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Everett High School,WA-31002-2126,530267000395,010019,AP Computer Science Principles,unspecified,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Everett High School,WA-31002-2126,530267000395,010157,AP Computer Science A,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Everett High School,WA-31002-2126,530267000395,010205,Computer Gaming and Design,unspecified,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Everett High School,WA-31002-2126,530267000395,021009,Robotics,unspecified,83,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade High School,WA-31002-3407,530267000391,010019,AP Computer Science Principles,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade High School,WA-31002-3407,530267000391,010157,AP Computer Science A,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade High School,WA-31002-3407,530267000391,021009,Robotics,unspecified,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry M. Jackson High School,WA-31002-4438,530267001726,010019,AP Computer Science Principles,unspecified,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry M. Jackson High School,WA-31002-4438,530267001726,010152,Computer Programming,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry M. Jackson High School,WA-31002-4438,530267001726,010155,Java Programming 10155,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry M. Jackson High School,WA-31002-4438,530267001726,010157,AP Computer Science A,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henry M. Jackson High School,WA-31002-4438,530267001726,021009,Robotics,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evergreen High School,WA-17401-3099,530354000526,010151,Business Programming,unspecified,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evergreen High School,WA-17401-3099,530354000526,010157,AP Computer Science A,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High School,WA-06114-4162,530270001834,010151,Business Programming,unspecified,61,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mountain View High School,WA-06114-4162,530270001834,010157,AP Computer Science A,unspecified,45,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,WA-06114-4523,530270002711,010151,Business Programming,unspecified,62,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Heritage High School,WA-06114-4523,530270002711,010157,AP Computer Science A,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union High School,WA-06114-5111,530270003222,010151,Business Programming,unspecified,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Union High School,WA-06114-5111,530270003222,010157,AP Computer Science A,unspecified,94,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henrietta Lacks Health and Bioscience High School,WA-06114-5310,530270003463,010151,Business Programming,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henrietta Lacks Health and Bioscience High School,WA-06114-5310,530270003463,010157,AP Computer Science A,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Federal Way Public Academy,WA-17210-1789,530282002719,021009,Robotics,unspecified,60,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Federal Way High School,WA-17210-2417,530282000435,010152,Computer Programming,unspecified,117,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Federal Way High School,WA-17210-2417,530282000435,010157,AP Computer Science A,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Federal Way High School,WA-17210-2417,530282000435,021009,Robotics,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Jefferson High School,WA-17210-3584,530282000451,010152,Computer Programming,unspecified,101,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Jefferson High School,WA-17210-3584,530282000451,010159,IB Computer Science,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thomas Jefferson High School,WA-17210-3584,530282000451,021009,Robotics,unspecified,63,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Decatur High School,WA-17210-3766,530282000434,010152,Computer Programming,unspecified,71,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Decatur High School,WA-17210-3766,530282000434,010157,AP Computer Science A,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Todd Beamer High School,WA-17210-4570,530282003154,010011,Computer Science Principles,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Todd Beamer High School,WA-17210-4570,530282003154,010152,Computer Programming,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Todd Beamer High School,WA-17210-4570,530282003154,010157,AP Computer Science A,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TAFA at Saghalie,WA-17210-5473,530282003610,021009,Robotics,unspecified,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ferndale High School,WA-37502-2488,530285000460,010019,AP Computer Science Principles,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fife High School,WA-27417-2773,530288000465,010152,Computer Programming,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Fife High School,WA-27417-2773,530288000465,010157,AP Computer Science A,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin Pierce High School,WA-27402-2876,530294000475,010152,Computer Programming,unspecified,66,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington High School,WA-27402-3648,530294000483,010011,Computer Science Principles,unspecified,65,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Garfield at Palouse High School,WA-38302-1962,530300003135,021009,Robotics,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Goldendale High School,WA-20404-2856,530309000490,021009,Robotics,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Goldendale Middle School,WA-20404-3393,530309000491,021009,Robotics,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Grandview High School,WA-39200-2555,530315000499,021009,Robotics,unspecified,114,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granger High School,WA-39204-3314,530318000502,021009,Robotics,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Granite Falls High School,WA-31332-2580,530321000506,010152,Computer Programming,unspecified,53,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Excel Public Charter School,WA-17906-5377,530033203536,010012,Exploring Computer Science,unspecified,141,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harrington High School,WA-22204-3113,530336000512,021009,Robotics,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highline High School,WA-17401-2325,530354000531,010151,Business Programming,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Highline High School,WA-17401-2325,530354000531,010157,AP Computer Science A,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evergreen High School,WA-17401-3099,530354000526,010151,Business Programming,unspecified,79,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Evergreen High School,WA-17401-3099,530354000526,010157,AP Computer Science A,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tyee High School,WA-17401-3483,530354000555,010151,Business Programming,unspecified,76,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tyee High School,WA-17401-3483,530354000555,010157,AP Computer Science A,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Raisbeck Aviation High School,WA-17401-3553,530354002974,010152,Computer Programming,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Raisbeck Aviation High School,WA-17401-3553,530354002974,021009,Robotics,unspecified,104,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Issaquah High School,WA-17411-3385,530375000574,010157,AP Computer Science A,unspecified,94,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Issaquah High School,WA-17411-3385,530375000574,021009,Robotics,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty Sr High School,WA-17411-3962,530375000576,010152,Computer Programming,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty Sr High School,WA-17411-3962,530375000576,010157,AP Computer Science A,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty Sr High School,WA-17411-3962,530375000576,021009,Robotics,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyline High School,WA-17411-4495,530375002567,010159,IB Computer Science,unspecified,124,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pacific Cascade Middle School,WA-17411-5200,530375003337,021009,Robotics,unspecified,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kalama High School,WA-08402-5545,530381003659,010152,Computer Programming,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kalama High School,WA-08402-5545,530381003659,021009,Robotics,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kelso High School,WA-08458-2266,530000300593,010157,AP Computer Science A,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennewick High School,WA-03017-2826,530393000605,010152,Computer Programming,unspecified,59,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kennewick High School,WA-03017-2826,530393000605,010157,AP Computer Science A,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kamiakin High School,WA-03017-3731,530393000604,010152,Computer Programming,unspecified,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Southridge High School,WA-03017-4484,530393002009,010152,Computer Programming,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kent-Meridian High School,WA-17415-2797,530396000621,010152,Computer Programming,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kentridge High School,WA-17415-3640,530396000622,010151,Business Programming,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kentridge High School,WA-17415-3640,530396000622,010152,Computer Programming,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kentridge High School,WA-17415-3640,530396000622,010157,AP Computer Science A,unspecified,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meeker Middle School,WA-17415-3764,530396000624,021009,Robotics,unspecified,116,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mattson Middle School,WA-17415-4127,530396001780,021009,Robotics,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kentwood High School,WA-17415-4128,530396001840,010054,Data Systems/Processing 10054,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kentwood High School,WA-17415-4128,530396001840,010152,Computer Programming,unspecified,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kentwood High School,WA-17415-4128,530396001840,010157,AP Computer Science A,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedar Heights Middle School,WA-17415-4440,530396001142,021009,Robotics,unspecified,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northwood Middle School,WA-17415-4485,530396002521,021009,Robotics,unspecified,49,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kentlake High School,WA-17415-4492,530396002570,010152,Computer Programming,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mill Creek Middle School,WA-17415-5016,530396002986,021009,Robotics,unspecified,102,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kettle Falls High School,WA-33212-4206,530399001967,010152,Computer Programming,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kettle Falls High School,WA-33212-4206,530399001967,021009,Robotics,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kittitas High School,WA-19403-2766,530405000643,010011,Computer Science Principles,unspecified,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kittitas High School,WA-19403-2766,530405000643,021009,Robotics,unspecified,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+La Center Home School Academy,WA-06101-5326,530417003451,010012,Exploring Computer Science,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+La Conner High School,WA-29311-2276,530411000646,010205,Computer Gaming and Design,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+International Community School,WA-17414-1706,530423002568,010157,AP Computer Science A,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Futures School,WA-17414-1804,530423002727,010152,Computer Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Washington High,WA-17414-2739,530423000674,010157,AP Computer Science A,unspecified,40,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lake Washington High,WA-17414-2739,530423000674,021009,Robotics,unspecified,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Redmond High,WA-17414-3528,530423000679,010157,AP Computer Science A,unspecified,74,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Juanita High,WA-17414-3771,530423000670,010152,Computer Programming,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Juanita High,WA-17414-3771,530423000670,010157,AP Computer Science A,unspecified,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastlake High School,WA-17414-4439,530423001141,010152,Computer Programming,unspecified,64,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eastlake High School,WA-17414-4439,530423001141,010157,AP Computer Science A,unspecified,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tesla STEM High School,WA-17414-5265,530423003432,010152,Computer Programming,unspecified,216,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tesla STEM High School,WA-17414-5265,530423003432,010155,Java Programming 10155,unspecified,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tesla STEM High School,WA-17414-5265,530423003432,010157,AP Computer Science A,unspecified,37,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tesla STEM High School,WA-17414-5265,530423003432,021009,Robotics,unspecified,95,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Network for Innovative Careers,WA-17414-5958,530423003289,010152,Computer Programming,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Network for Innovative Careers,WA-17414-5958,530423003289,010205,Computer Gaming and Design,unspecified,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Liberty High School,WA-32362-3416,530438000693,021009,Robotics,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+R A Long High School,WA-08122-2416,530447000709,010157,AP Computer Science A,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mark Morris High School,WA-08122-3151,530447000703,010157,AP Computer Science A,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cascade Middle School,WA-06114-3785,530270000414,010152,Computer Programming,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lyle High School,WA-20406-3111,530459000718,010152,Computer Programming,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lyle Middle School,WA-20406-3643,530459002931,010152,Computer Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lynden High School,WA-37504-4201,530462002259,010152,Computer Programming,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lynden High School,WA-37504-4201,530462002259,010155,Java Programming 10155,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mabton Jr. Sr. High,WA-39120-5289,530465003406,021009,Robotics,unspecified,55,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manson High School,WA-04019-2623,530474000728,010152,Computer Programming,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manson High School,WA-04019-2623,530474000728,010157,AP Computer Science A,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Manson Middle School,WA-04019-5286,530474003427,010152,Computer Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mary M. Knight School,WA-23311-5444,530480003571,021009,Robotics,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marysville Mountain View Arts & Technology High School,WA-31025-1927,530486003102,010156,Computer Programming-Other Language,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marysville Mountain View High School,WA-31025-1927,530486003102,010156,Computer Programming-Other Language,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Marysville Getchell High School,WA-31025-5478,530486003607,010205,Computer Gaming and Design,unspecified,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mead Senior High School,WA-32354-2402,530492000749,010152,Computer Programming,unspecified,68,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mt Spokane High School,WA-32354-4491,530492002599,010152,Computer Programming,unspecified,95,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverpoint Academy,WA-32354-5268,530492003421,010157,AP Computer Science A,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Medical Lake High School,WA-32326-2890,530495000755,010151,Business Programming,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Medical Lake High School,WA-32326-2890,530495000755,010157,AP Computer Science A,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mercer Island High School,WA-17400-3029,530498000761,010152,Computer Programming,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mercer Island High School,WA-17400-3029,530498000761,010157,AP Computer Science A,unspecified,85,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Meridian High School,WA-37505-2554,530501000768,021009,Robotics,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pacific Crest Innovation Academy,WA-30031-5480,530504003616,010152,Computer Programming,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sky Valley Education Center,WA-31103-1777,530513002675,010155,Java Programming 10155,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sky Valley Education Center,WA-31103-1777,530513002675,010156,Computer Programming-Other Language,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sky Valley Education Center,WA-31103-1777,530513002675,010205,Computer Gaming and Design,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sky Valley Education Center,WA-31103-1777,530513002675,021009,Robotics,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe High School,WA-31103-4528,530513002760,010152,Computer Programming,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Monroe High School,WA-31103-4528,530513002760,010157,AP Computer Science A,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Montesano Jr-Sr High,WA-14066-2180,530516000780,021009,Robotics,unspecified,86,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Frontier Middle School,WA-13161-2673,530522002625,010152,Computer Programming,unspecified,126,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Moses Lake High School,WA-13161-3215,530522000792,010156,Computer Programming-Other Language,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia Basin Technical Skills Center ,WA-13161-5273,530522003392,010011,Computer Science Principles,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Baker Senior High,WA-37507-2343,530531000803,021009,Robotics,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skagit Academy,WA-29320-1992,530540003006,010011,Computer Science Principles,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Vernon High School,WA-29320-2295,530540000813,010152,Computer Programming,unspecified,193,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Vernon High School,WA-29320-2295,530540000813,010157,AP Computer Science A,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Vernon High School,WA-29320-2295,530540000813,021009,Robotics,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mariner High School,WA-31006-3688,530543000818,021009,Robotics,unspecified,87,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Voyager Middle School,WA-31006-4425,530543000719,021009,Robotics,unspecified,123,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harbour Pointe Middle School,WA-31006-4430,530543001185,010152,Computer Programming,unspecified,88,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Harbour Pointe Middle School,WA-31006-4430,530543001185,021009,Robotics,unspecified,89,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kamiak High School,WA-31006-4433,530543001188,010157,AP Computer Science A,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kamiak High School,WA-31006-4433,530543001188,021009,Robotics,unspecified,50,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Napavine Jr Sr High School,WA-21014-2273,530549000827,010011,Computer Science Principles,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Naselle Jr Sr High Schools,WA-25155-3295,530552000831,010152,Computer Programming,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Newport High School,WA-26056-2518,530561000833,021009,Robotics,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeside High School,WA-32325-4333,530564002321,010152,Computer Programming,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lakeside High School,WA-32325-4333,530564002321,010206,Mobile Applications,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Beach Senior High School,WA-14064-2728,530570000842,010152,Computer Programming,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Beach Senior High School,WA-14064-2728,530570000842,021009,Robotics,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Beach Junior High School,WA-14064-3788,530570002039,010152,Computer Programming,unspecified,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pal Program,WA-18400-1733,530576002653,010205,Computer Gaming and Design,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Kitsap High School,WA-18400-3236,530576000852,010152,Computer Programming,unspecified,54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kingston High School,WA-18400-5085,530576003201,010152,Computer Programming,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kingston High School,WA-18400-5085,530576003201,010157,AP Computer Science A,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Kingston High School,WA-18400-5085,530576003201,021009,Robotics,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+James A. Taylor High School,WA-23403-1680,530579002577,010156,Computer Programming-Other Language,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Mason Senior High School,WA-23403-3175,530579000859,010011,Computer Science Principles,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Thurston High School,WA-34003-3010,530585000869,021009,Robotics,unspecified,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timberline High School,WA-34003-3710,530585000872,010151,Business Programming,unspecified,64,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Timberline High School,WA-34003-3710,530585000872,021009,Robotics,unspecified,53,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Ridge High School,WA-34003-4427,530585001208,010151,Business Programming,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+River Ridge High School,WA-34003-4427,530585001208,021009,Robotics,unspecified,113,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northport High School,WA-33211-2958,530588000874,010156,Computer Programming-Other Language,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Northshore Networks,WA-17417-1814,530591002730,010019,AP Computer Science Principles,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bothell High School,WA-17417-3106,530591000876,010019,AP Computer Science Principles,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bothell High School,WA-17417-3106,530591000876,010152,Computer Programming,unspecified,59,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bothell High School,WA-17417-3106,530591000876,010154,C++ Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bothell High School,WA-17417-3106,530591000876,010156,Computer Programming-Other Language,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bothell High School,WA-17417-3106,530591000876,010157,AP Computer Science A,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bothell High School,WA-17417-3106,530591000876,021009,Robotics,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Inglemoor HS,WA-17417-3492,530591000884,010019,AP Computer Science Principles,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Inglemoor HS,WA-17417-3492,530591000884,010152,Computer Programming,unspecified,59,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Inglemoor HS,WA-17417-3492,530591000884,010157,AP Computer Science A,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Inglemoor HS,WA-17417-3492,530591000884,010159,IB Computer Science,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Inglemoor HS,WA-17417-3492,530591000884,021009,Robotics,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Secondary Academy for Success,WA-17417-3811,530591000892,021009,Robotics,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodinville HS,WA-17417-4208,530591001994,010019,AP Computer Science Principles,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodinville HS,WA-17417-4208,530591001994,010152,Computer Programming,unspecified,98,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodinville HS,WA-17417-4208,530591001994,010157,AP Computer Science A,unspecified,71,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodinville HS,WA-17417-4208,530591001994,021009,Robotics,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Creek High School,WA-17417-5481,530591003617,010019,AP Computer Science Principles,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Creek High School,WA-17417-5481,530591003617,010152,Computer Programming,unspecified,100,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Creek High School,WA-17417-5481,530591003617,010157,AP Computer Science A,unspecified,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Creek High School,WA-17417-5481,530591003617,021009,Robotics,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Harbor High School,WA-15201-2974,530594000903,010153,Visual Basic (VB) Programming 10153,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Harbor High School,WA-15201-2974,530594000903,010157,AP Computer Science A,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oak Harbor High School,WA-15201-2974,530594000903,021009,Robotics,unspecified,60,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Whidbey Middle School,WA-15201-3939,530594000901,021009,Robotics,unspecified,116,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oakville High School,WA-14400-2283,530600000909,021009,Robotics,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Odessa High School,WA-22105-2443,530612000916,010152,Computer Programming,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Okanogan High School,WA-24105-2246,530615000920,010012,Exploring Computer Science,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olympia High School,WA-34111-3132,530618000937,010157,AP Computer Science A,unspecified,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olympia High School,WA-34111-3132,530618000937,021009,Robotics,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Capital High School,WA-34111-3960,530618000923,021009,Robotics,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Olympia Regional Learning Academy,WA-34111-5078,530618003205,021009,Robotics,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Virtual Academy Omak High School,WA-24019-5197,530622003304,010152,Computer Programming,unspecified,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Virtual Academy Omak High School,WA-24019-5197,530622003304,010154,C++ Programming,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Virtual Academy Omak High School,WA-24019-5197,530622003304,010156,Computer Programming-Other Language,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orcas Island High School,WA-28137-2750,530630000945,010152,Computer Programming,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oroville Middle-High School,WA-24410-2706,530642000951,010152,Computer Programming,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Oroville Middle-High School,WA-24410-2706,530642000951,021009,Robotics,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orting High School,WA-27344-2942,530645000953,010157,AP Computer Science A,unspecified,19,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orting High School,WA-27344-2942,530645000953,021009,Robotics,unspecified,59,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Palouse High School,WA-38301-2634,530654000152,021009,Robotics,unspecified,6,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pasco Senior High School,WA-11001-2917,530657000969,010151,Business Programming,unspecified,86,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pasco Senior High School,WA-11001-2917,530657000969,021009,Robotics,unspecified,89,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chiawana High School,WA-11001-5164,530657003292,010152,Computer Programming,unspecified,228,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chiawana High School,WA-11001-5164,530657003292,010156,Computer Programming-Other Language,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chiawana High School,WA-11001-5164,530657003292,010205,Computer Gaming and Design,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chiawana High School,WA-11001-5164,530657003292,021009,Robotics,unspecified,75,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Pateros High School,WA-24122-2397,530660000975,010152,Computer Programming,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Henderson Bay Alt High School,WA-27401-1516,530669002463,010153,Visual Basic (VB) Programming 10153,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peninsula High School,WA-27401-2681,530669000985,010019,AP Computer Science Principles,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peninsula High School,WA-27401-2681,530669000985,010152,Computer Programming,unspecified,46,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peninsula High School,WA-27401-2681,530669000985,010153,Visual Basic (VB) Programming 10153,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peninsula High School,WA-27401-2681,530669000985,010157,AP Computer Science A,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Peninsula High School,WA-27401-2681,530669000985,021009,Robotics,unspecified,55,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gig Harbor High,WA-27401-4081,530669001793,010152,Computer Programming,unspecified,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gig Harbor High,WA-27401-4081,530669001793,010153,Visual Basic (VB) Programming 10153,unspecified,4,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gig Harbor High,WA-27401-4081,530669001793,010157,AP Computer Science A,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gig Harbor High,WA-27401-4081,530669001793,021009,Robotics,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Port Angeles High School,WA-05121-2908,530682001002,010011,Computer Science Principles,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Port Angeles High School,WA-05121-2908,530682001002,010152,Computer Programming,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Prescott Jr Sr High,WA-36402-3575,530687001010,010152,Computer Programming,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Emerald Ridge High School,WA-27003-4540,530696002809,010157,AP Computer Science A,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Quincy High School,WA-13144-3088,530708001055,010019,AP Computer Science Principles,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rainier Senior High School,WA-34307-2468,530711001058,021009,Robotics,unspecified,17,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Reardan Middle-Senior High School,WA-22009-2478,530721001063,010152,Computer Programming,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Renton Senior High School,WA-17403-2475,530723001082,010152,Computer Programming,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Renton Senior High School,WA-17403-2475,530723001082,010153,Visual Basic (VB) Programming 10153,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Renton Senior High School,WA-17403-2475,530723001082,021009,Robotics,unspecified,67,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hazen Senior High School,WA-17403-3630,530723001080,010153,Visual Basic (VB) Programming 10153,unspecified,88,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hazen Senior High School,WA-17403-3630,530723001080,010154,C++ Programming,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hazen Senior High School,WA-17403-3630,530723001080,010157,AP Computer Science A,unspecified,42,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hazen Senior High School,WA-17403-3630,530723001080,021009,Robotics,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lindbergh Senior High School,WA-17403-3741,530723001077,010153,Visual Basic (VB) Programming 10153,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lindbergh Senior High School,WA-17403-3741,530723001077,010154,C++ Programming,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lindbergh Senior High School,WA-17403-3741,530723001077,010157,AP Computer Science A,unspecified,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lindbergh Senior High School,WA-17403-3741,530723001077,021009,Robotics,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Chief Joseph Middle School,WA-03400-2785,530732001250,021009,Robotics,unspecified,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanford High School,WA-03400-3833,530732001095,010012,Exploring Computer Science,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanford High School,WA-03400-3833,530732001095,010157,AP Computer Science A,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hanford High School,WA-03400-3833,530732001095,021009,Robotics,unspecified,94,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Three Rivers Home Link,WA-03400-5165,530732003273,021009,Robotics,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Leona Libby Middle School,WA-03400-5493,530732003606,010012,Exploring Computer Science,unspecified,98,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Leona Libby Middle School,WA-03400-5493,530732003606,021009,Robotics,unspecified,202,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ridgefield High School,WA-06122-2390,530735001105,010156,Computer Programming-Other Language,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Riverside Middle School,WA-32416-3466,530744001114,021009,Robotics,unspecified,106,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARADE,WA-17407-1854,530456002797,010154,C++ Programming,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedarcrest High School,WA-17407-3524,530456000716,010154,C++ Programming,unspecified,41,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedarcrest High School,WA-17407-3524,530456000716,010157,AP Computer Science A,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cedarcrest High School,WA-17407-3524,530456000716,021009,Robotics,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rochester High School,WA-34401-4326,530747002267,021009,Robotics,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Royal High School,WA-13160-3516,530762001123,010151,Business Programming,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Royal High School,WA-13160-3516,530762001123,010157,AP Computer Science A,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Friday Harbor High School,WA-28149-2879,530765001125,021009,Robotics,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Seattle World School,WA-17001-1596,530771001311,010155,Java Programming 10155,unspecified,170,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High School,WA-17001-2182,530771001168,010152,Computer Programming,unspecified,56,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Franklin High School,WA-17001-2182,530771001168,010155,Java Programming 10155,unspecified,62,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ballard High School,WA-17001-2220,530771001138,010152,Computer Programming,unspecified,92,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ballard High School,WA-17001-2220,530771001138,010155,Java Programming 10155,unspecified,25,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ballard High School,WA-17001-2220,530771001138,021009,Robotics,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Seattle High School,WA-17001-2234,530771001262,010019,AP Computer Science Principles,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Seattle High School,WA-17001-2234,530771001262,010152,Computer Programming,unspecified,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roosevelt High School,WA-17001-2285,530771001239,010152,Computer Programming,unspecified,119,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Roosevelt High School,WA-17001-2285,530771001239,021009,Robotics,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Garfield High School,WA-17001-2306,530771001171,010152,Computer Programming,unspecified,119,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Garfield High School,WA-17001-2306,530771001171,010157,AP Computer Science A,unspecified,59,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cleveland High School STEM,WA-17001-2392,530771001150,010019,AP Computer Science Principles,unspecified,60,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cleveland High School STEM,WA-17001-2392,530771001150,010152,Computer Programming,unspecified,153,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Cleveland High School STEM,WA-17001-2392,530771001150,021009,Robotics,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ingraham High School,WA-17001-3276,530771001187,010152,Computer Programming,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ingraham High School,WA-17001-3276,530771001187,010155,Java Programming 10155,unspecified,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ingraham High School,WA-17001-3276,530771001187,010159,IB Computer Science,unspecified,34,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rainier Beach High School,WA-17001-3327,530771001236,010152,Computer Programming,unspecified,76,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nathan Hale High School,WA-17001-3479,530771001222,010019,AP Computer Science Principles,unspecified,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Nathan Hale High School,WA-17001-3479,530771001222,010152,Computer Programming,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+State Street High School,WA-29101-1537,530774002148,010152,Computer Programming,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sedro Woolley Senior High School,WA-29101-2150,530774001279,010152,Computer Programming,unspecified,96,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sedro Woolley Senior High School,WA-29101-2150,530774001279,010156,Computer Programming-Other Language,unspecified,48,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Selah High School,WA-39119-2388,530777001282,010011,Computer Science Principles,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Selkirk High School,WA-26070-5226,530780003344,010011,Computer Science Principles,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Selkirk High School,WA-26070-5226,530780003344,010157,AP Computer Science A,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sequim Senior High,WA-05323-2471,530783001289,010152,Computer Programming,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sequim Senior High,WA-05323-2471,530783001289,021009,Robotics,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shelton High School,WA-23309-3241,530790001295,021009,Robotics,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shorecrest High School,WA-17412-3343,530792001315,010157,AP Computer Science A,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shorecrest High School,WA-17412-3343,530792001315,010205,Computer Gaming and Design,unspecified,52,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shorecrest High School,WA-17412-3343,530792001315,021009,Robotics,unspecified,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shorewood High School,WA-17412-3921,530792001317,010011,Computer Science Principles,unspecified,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shorewood High School,WA-17412-3921,530792001317,010019,AP Computer Science Principles,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shorewood High School,WA-17412-3921,530792001317,010157,AP Computer Science A,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shorewood High School,WA-17412-3921,530792001317,010205,Computer Gaming and Design,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shorewood High School,WA-17412-3921,530792001317,021009,Robotics,unspecified,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skykomish High School,WA-17404-2513,530798001321,010205,Computer Gaming and Design,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Snohomish High School,WA-31201-2428,530802001328,010157,AP Computer Science A,unspecified,28,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Glacier Peak High School,WA-31201-5128,530802003217,010157,AP Computer Science A,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Si High School,WA-17410-2850,530804001330,010011,Computer Science Principles,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Si High School,WA-17410-2850,530804001330,010152,Computer Programming,unspecified,119,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Si High School,WA-17410-2850,530804001330,010154,C++ Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mount Si High School,WA-17410-2850,530804001330,010157,AP Computer Science A,unspecified,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Bend High School,WA-25118-2214,530810001337,021009,Robotics,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Explorer Academy,WA-18402-1718,530816002575,010011,Computer Science Principles,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Explorer Academy,WA-18402-1718,530816002575,010155,Java Programming 10155,unspecified,5,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Explorer Academy,WA-18402-1718,530816002575,010205,Computer Gaming and Design,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Kitsap High School,WA-18402-2272,530816001357,010011,Computer Science Principles,unspecified,23,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Kitsap High School,WA-18402-2272,530816001357,010152,Computer Programming,unspecified,89,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Kitsap High School,WA-18402-2272,530816001357,010157,AP Computer Science A,unspecified,44,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+South Kitsap High School,WA-18402-2272,530816001357,021009,Robotics,unspecified,71,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Central High School,WA-32081-2106,530825001399,010152,Computer Programming,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+North Central High School,WA-32081-2106,530825001399,010157,AP Computer Science A,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lewis & Clark High School,WA-32081-2172,530825001388,010152,Computer Programming,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lewis & Clark High School,WA-32081-2172,530825001388,010157,AP Computer Science A,unspecified,115,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rogers High School,WA-27003-3645,530696001028,010152,Computer Programming,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Rogers High School,WA-27003-3645,530696001028,010157,AP Computer Science A,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bryant Center,WA-32081-3008,530825002764,010152,Computer Programming,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shadle Park High School,WA-32081-3189,530825001407,010152,Computer Programming,unspecified,60,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shaw Middle School,WA-32081-3257,530825001408,010152,Computer Programming,unspecified,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Shaw Middle School,WA-32081-3257,530825001408,010157,AP Computer Science A,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ferris High School,WA-32081-3412,530825001385,010152,Computer Programming,unspecified,31,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Ferris High School,WA-32081-3412,530825001385,010157,AP Computer Science A,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+On Track Academy,WA-32081-5250,530825003378,010152,Computer Programming,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+On Track Academy,WA-32081-5250,530825003378,010157,AP Computer Science A,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+The Community School,WA-32081-5301,530825003401,010152,Computer Programming,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wind River Middle School,WA-30303-3800,530852001437,021009,Robotics,unspecified,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sultan Senior High School,WA-31311-4274,530855002168,010152,Computer Programming,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sumner High School,WA-27320-3247,530861001446,010152,Computer Programming,unspecified,80,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Bonney Lake High School,WA-27320-4585,530861002998,010152,Computer Programming,unspecified,99,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunnyside High School,WA-39201-2959,530867001449,010157,AP Computer Science A,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Sunnyside High School,WA-39201-2959,530867001449,021009,Robotics,unspecified,206,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stadium,WA-27010-2084,530870001502,010054,Data Systems/Processing 10054,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilson,WA-27010-3246,530870001513,010054,Data Systems/Processing 10054,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Foss,WA-27010-3880,530870001466,010054,Data Systems/Processing 10054,unspecified,3,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Science and Math Institute,WA-27010-5169,530870003286,021009,Robotics,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tahoma Senior High School,WA-17409-2849,530876001519,010152,Computer Programming,unspecified,233,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tahoma Senior High School,WA-17409-2849,530876001519,010157,AP Computer Science A,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tahoma Senior High School,WA-17409-2849,530876001519,021009,Robotics,unspecified,141,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tenino Middle School,WA-34402-3795,530882001523,021009,Robotics,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Thorp Elem & Jr Sr High,WA-19400-2514,530885001525,021009,Robotics,unspecified,9,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Toledo High School,WA-21237-2616,530891001527,010205,Computer Gaming and Design,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Toledo High School,WA-21237-2616,530891001527,021009,Robotics,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tonasket High School,WA-24404-2679,530894001530,010011,Computer Science Principles,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Toppenish Middle School,WA-39202-2264,530897001535,010152,Computer Programming,unspecified,463,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Toppenish High School,WA-39202-2900,530897001534,021009,Robotics,unspecified,100,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Foster Senior High School,WA-17406-2848,530813001341,010011,Computer Science Principles,unspecified,11,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tumwater High School,WA-34033-3362,530910001544,010011,Computer Science Principles,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tumwater High School,WA-34033-3362,530910001544,010152,Computer Programming,unspecified,58,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tumwater High School,WA-34033-3362,530910001544,010157,AP Computer Science A,unspecified,18,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Tumwater High School,WA-34033-3362,530910001544,021009,Robotics,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+New Market Skills Center,WA-34033-4225,530910002186,010157,AP Computer Science A,unspecified,36,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+A G West Black Hills High School,WA-34033-4500,530910002602,010152,Computer Programming,unspecified,24,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+A G West Black Hills High School,WA-34033-4500,530910002602,021009,Robotics,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Curtis Senior High,WA-27083-3600,530918001549,010156,Computer Programming-Other Language,unspecified,30,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Curtis Senior High,WA-27083-3600,530918001549,010157,AP Computer Science A,unspecified,20,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Hudson's Bay High School,WA-06037-3081,530927001569,010152,Computer Programming,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Mcloughlin Middle School,WA-06037-3146,530927001577,010152,Computer Programming,unspecified,26,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia River High,WA-06037-3423,530927001557,010152,Computer Programming,unspecified,43,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia River High,WA-06037-3423,530927001557,010159,IB Computer Science,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jason Lee Middle School,WA-06037-3543,530927001570,010152,Computer Programming,unspecified,71,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Gaiser Middle School,WA-06037-3902,530927001562,010152,Computer Programming,unspecified,47,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Alki Middle School,WA-06037-4406,530927000578,010152,Computer Programming,unspecified,22,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Discovery Middle School,WA-06037-4503,530927002018,010152,Computer Programming,unspecified,106,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyview High School,WA-06037-4504,530927002555,010152,Computer Programming,unspecified,100,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyview High School,WA-06037-4504,530927002555,010157,AP Computer Science A,unspecified,16,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Skyview High School,WA-06037-4504,530927002555,021009,Robotics,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Jefferson Middle School,WA-06037-4591,530927002944,010152,Computer Programming,unspecified,62,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vancouver iTech Preparatory,WA-06037-5271,530927003415,010152,Computer Programming,unspecified,115,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vancouver iTech Preparatory,WA-06037-5271,530927003415,010157,AP Computer Science A,unspecified,35,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Student Link,WA-17402-1938,530930003112,010152,Computer Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vashon Island High School,WA-17402-2419,530930001591,010151,Business Programming,unspecified,1,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Vashon Island High School,WA-17402-2419,530930001591,010157,AP Computer Science A,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wahkiakum High School,WA-35200-3467,530933001594,021009,Robotics,unspecified,8,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walla Walla High School,WA-36140-3468,530945001609,010152,Computer Programming,unspecified,61,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Walla Walla High School,WA-36140-3468,530945001609,010157,AP Computer Science A,unspecified,32,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Garrison Middle School,WA-36140-3510,530945001601,010151,Business Programming,unspecified,69,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Washington Youth Academy,WA-34979-5302,530032403412,021009,Robotics,unspecified,333,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Waterville High School,WA-09209-2162,530960001628,010152,Computer Programming,unspecified,7,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Dishman Hills High School,WA-32363-1628,530969002244,010152,Computer Programming,unspecified,12,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Valley High School,WA-39208-3074,530972001654,010151,Business Programming,unspecified,29,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+West Valley High School,WA-39208-3074,530972001654,010152,Computer Programming,unspecified,15,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST VALLEY VIRTUAL ACADEMY 9-12,WA-39208-5506,530972003614,010205,Computer Gaming and Design,unspecified,2,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+White River High School,WA-27416-4569,530978003153,010011,Computer Science Principles,unspecified,33,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+White River High School,WA-27416-4569,530978003153,021009,Robotics,unspecified,14,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Columbia High School,WA-20405-2330,530981001664,021009,Robotics,unspecified,10,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Wilbur Secondary School,WA-22200-3289,530984001668,021009,Robotics,unspecified,21,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Winlock Senior High,WA-21232-3597,530993001676,010152,Computer Programming,unspecified,27,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Woodland High School,WA-08404-3546,531005001682,010152,Computer Programming,unspecified,38,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Davis High School,WA-39007-2116,531011001689,021009,Robotics,unspecified,90,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower High School,WA-39007-3206,531011001690,010152,Computer Programming,unspecified,51,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Eisenhower High School,WA-39007-3206,531011001690,021009,Robotics,unspecified,151,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Lewis & Clark Middle School,WA-39007-3615,531011001698,021009,Robotics,unspecified,83,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stanton Academy,WA-39007-4093,531011001713,010152,Computer Programming,unspecified,13,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Stanton Academy,WA-39007-4093,531011001713,021009,Robotics,unspecified,57,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Yelm High School 12,WA-34002-2633,531014001716,010012,Exploring Computer Science,unspecified,54,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

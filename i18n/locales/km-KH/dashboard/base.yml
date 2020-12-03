@@ -15,11 +15,19 @@ km:
     messages:
       not_saved: 'សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់'
       too_young: 'មានបម្រាមសម្រាប់អាយុរបស់អ្នកប្រើប្រាស់នៅទីនេះ ហើយមិនអនុញ្ញាតិអោយប្រើប្រាស់សម្រាប់សិស្សដែលមានអាយុតិចពេក។'
+      teacher_must_accept_terms: 'មាតិកានេះមានការរឹតត្បិតតាមអាយុ ហើយមិនមានសម្រាប់សិស្សក្មេងៗទេ។ សុំឱ្យគ្រូរបស់អ្នកទទួលយកលក្ខខណ្ឌនៃសេវាកម្មដែលបានធ្វើឱ្យទាន់សម័យនេះ ដើម្បីឱ្យអ្នកចូលប្រើមាតិកានេះ។ គ្រូរបស់អ្នកអាចធ្វើវាបានដោយចូលទៅក្នុងស្ទូឌីយោកូដហើយចុចប៊ូតុង "ពិនិត្យឡើងវិញនូវលក្ខខណ្ឌដែលបានធ្វើបច្ចុប្បន្នភាព" នៅខាងលើគេហទំព័រដើមកូដស្ទូឌីយ៉ូ។'
+      pair_programmer: 'អ្នកកំពុងតែសរសេរកម្មវិធីជាគូរជាមួយនឹងសិស្សម្នាក់ដែលមិនអាចចូលមកប្រើប្រាស់មាតិកានេះបាននោះទេ។ ដើម្បីចូលប្រើប្រាស់មាតិកានេះ ចូរបញ្ឈប់ការសរសេរកម្មវិធីជាគូរ រួចព្យាយាមម្តងទៀត។'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "គឺមិនត្រឹមត្រូវទេ។ ចូរចំណាំថាតំណភ្ជាប់នីមួយៗអាចប្រើប្រាស់បានតែម្តងប៉ុណ្ណោះ ដើម្បីធ្វើការផ្លាស់ប្តូរលេខសម្ងាត់ ហើយមានតែតំណភ្ជាប់ថ្មីៗបង្អស់ដែលផ្ញើអោយអ្នកទើបអាចដំណើរការបាន។"
       messages:
         blank: "ត្រូវការ"
         blank_plural: "តម្រូវអោយមាន"
+        invalid: "មិនត្រឹមត្រូវ"
         invalid_plural: "មិនត្រឹមត្រូវ"
     attributes:
       user:
@@ -37,6 +45,12 @@ km:
         age: 'អាយុ'
         gender: 'ភេទ'
         edit_header: 'កែសម្រួល​ព័ត៌មាន​គណនី'
+        finish_sign_up_header: 'បញ្ចប់ការបង្កើតគណនីរបស់អ្នក'
+        finish_sign_up_subheader: 'ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ Code.org សម្រាប់ <strong>%{email}</strong>។'
+        finish_sign_up_subheader_markdown: 'ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ Code.org សម្រាប់ **%{email}**។'
+        finish_sign_up_subheader_provider: 'ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ Code.org ជាមួយនឹង <strong>%{provider}</strong> សម្រាប់ <strong>%{email}</strong>។'
+        finish_sign_up_subheader_provider_markdown: 'ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ Code.org ជាមួយនឹង **%{provider}** សម្រាប់ **%{email}**។'
+        reset_password_token: "តំណភ្ជាប់សម្រាប់ការផ្លាស់ប្តូរលេខសម្ងាត់ដែលអ្នកបានធ្វើតាម"
         error:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
   hello: "សួស្ដី​ពិភពលោក"
@@ -54,7 +68,11 @@ km:
   heading_x_of_y: "%{heading}​ (ទំព័រទី %{x} នៃ %{y})"
   join_section:
     code:
+      title: 'ចូលរួមផ្នែកមួយនៅលើ Code.org'
       placeholder: "ផ្នែកនៃការសរសេរកូដ (ABCDEF)"
+      instructions: "សូមបញ្ចូលលេខកូដជាអក្សរចំនួន៦តួអក្សរ ដែលគ្រូរបស់អ្នកបានចែករំលែកជាមួយអ្នក (ឧទាហរណ៍៖ \"ABCDEF\") ដើម្បីចូលរួមផ្នែករបស់ពួកគេ។"
+      instructions_short: "សូមធ្វើការវាយបញ្ចូលនូវផ្នែកកូដ៦ខ្ទង់។"
+      submit: 'ចូលរួម'
   add_hint_form:
     placeholder: 'សូមវាយបញ្ចូលនូវតម្រុយនៃកូដរបស់អ្នក។'
     submit: 'ដាក់តម្រុយសម្រាបសម្កាល់'
@@ -79,8 +97,11 @@ km:
   prize: 'រង្វាន់'
   more_info: 'ព័ត៌មាន​បន្ថែម'
   auth:
+    continue_with: 'បន្តជាមួយ %{provider}'
     sign_in_with: 'ចូល​គណនី​ជាមួយ %{provider}'
     signed_in: 'បាន​ចូល​គណនី!'
+    signed_out_markdown: '### អ្នកបានចាកចេញពី [Code.org](%{url})។'
+    sign_out_of_markdown: 'អ្នក​បាន​ប្រើ %{provider} ដើម្បី​ចូល។ ចុច​ទីនេះ %{url} ដើម្បី​ចេញ​ពី %{provider}។'
     already_signedup: 'បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?'
     notyet_signedup: "មិន​បាន​ចូលរួម​ទេ?"
     google_oauth2: 'គណនី Google'
@@ -90,10 +111,15 @@ km:
     microsoft_v2_auth: 'គណនី Microsoft'
     clever: 'គណនេយ្យមានលក្ខណៈពេញលេញ'
     forgot_password: 'បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?'
+    migration_success: 'ជោគជ័យ! អ្នកបានធ្វើបច្ចុប្បន្នភាពបទពិសោធន៍គណនីថ្មីរបស់យើង។'
+    demigration_success: 'បទពិសោធន៍គណនីថ្មី គឺត្រូវបានបិទនៅលើគណនីរបស់អ្នក។'
     need_confirmation: "មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?"
     need_unlock: "មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?"
     not_linked: "សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​ សូមធ្វើការដំណើរការគណនេយ្យរបស់អ្នកដោយវាយបញ្ចូលលេខសំងាត់នៅខាងក្រោម។"
     use_clever: "សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​ សូមចូលទៅដំណើរការគណនេយ្យ Clever Portal របស់អ្នកជំនួសវិញ។"
+    invalid_provider: "សុំទោស គណនី %{provider} មិនអាចតភ្ជាប់ទៅកាន់គណនី Code.org ទេ។"
+    migration_required: "សុំទោស យើងមិនអាចតភ្ជាប់ ឬ ផ្តាច់គណនីដែលកំពុងប្រើប្រាស់ជាមួយនឹងបទពិសោធន៍គណនីចាស់នោះទេ។ សូមធ្វើការបន្ទាន់សម័យទៅកាន់បទពិសោធន៍ថ្មីនៃគណនី។"
+    unable_to_connect_provider: "មិនអាចភ្ជាប់គណនី Code.org របស់អ្នកជាមួយនឹងគណនី %{provider} ។ សូមព្យាយាមម្តងទៀត។"
   signup_form:
     student_count: '%{count} កូនសិស្សបានធ្វើការបង្កើតគណនេយ្យរួចហើយ។'
     teacher_count: '%{count}​ លោកគ្រូអ្នកគ្រូបានធ្វើការបង្កើតគណនេយ្យរួចហើយ។'
@@ -191,6 +217,7 @@ km:
       %{name}
   parent_mailer:
     student_associated_subject: 'ព័ត៌មាននៃការចូលទៅកាន់គណនីសម្រាប់ Code.org'
+    parent_email_added_subject: 'សូមស្វាគមន៏មកកាន់Code.org!'
   teacher_mailer:
     new_teacher_subject: 'សូមស្វាគមន៏មកកាន់Code.org!'
   section:
@@ -277,6 +304,8 @@ km:
       help_us: "ជួយពួកយើង"
       teach: "បង្រៀន"
       about: "អំពី"
+      legal_privacy: "សិទ្ធបុគ្គល"
+      legal_tos: "លក្ខខណ្ឌ"
     user:
       classroom: 'ទំព័រដើមគ្រូបង្រៀន'
       label: 'សួស្តី%{username}'
@@ -355,6 +384,9 @@ km:
     enter_new_login_info: 'សូមធ្វើការវាយចូលនូវព័ត៌មាននៃការប្រើប្រាស់គណនីរបស់អ្នក'
     confirm_secret_words: 'ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់'
     update_email: "កែលម្អរ"
+    parent_guardian_email_label: "អាស័យដ្ឋានសារអេឡិចត្រូនិចរបស់ឪពុកម្តាយ រឺ អ្នកណែរនាំ"
+    none: "គ្មាន"
+    encrypted: "បានអុីនគ្រីប"
   user_level:
     completed: 'បាន​បញ្ចប់'
     tried: 'បាន​ព្យាយាម'
@@ -373,6 +405,7 @@ km:
     see_details: មើលសេចក្តីលម្អិត
     view_course: មើលបន្ថែមអំពីមុខវិជ្ជា
     trynow: 'រៀនបន្ថែមទៀត'
+    try_beta_courses: 'ថ្មី! សាកល្បងវគ្គសិក្សាសាកល្បងរបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥ ។'
   share:
     title: "រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម"
     description: "រាល់គ្នាអាចរៀនបាននូវមុខវិជ្ជាវិទ្យាសាស្រ្តកំុព្យូទ័រ។​ អាចបង្កើតហ្គេម កម្មវិធីនិងគូររូបផ្សេងៗជាមួយការសរសេរកូដ។"
@@ -404,6 +437,7 @@ km:
     notes: 'គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។'
     autoplay_option: 'ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ'
     download: 'ទាញយក​វីដេអូ'
+    label: 'វីដេអូ'
   compatibility:
     upgrade:
       link: "សិក្សាបន្ថែម"
@@ -431,10 +465,6 @@ km:
       body: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
     unplugged_conditionals:
       title: "លក្ខខណ្ឌ"
-  gallery:
-    want_to_make_your_own: "តើ​ចង់​បង្កើត​របស់​អ្នក​មែនទេ?"
-    more: "ច្រើន​ទៀត &rarr;"
-    report_abuse: "រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ"
   multi:
     wrong_title: "សំណួរ​មិន​ត្រឹមត្រូវ"
     wrong_body: "សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!"
@@ -474,6 +504,7 @@ km:
     races:
       other: "ផ្សេងៗ"
     submit: "ដាក់ស្នើរ"
+    decline: "បិទ"
   project:
     projects: "គម្រោង"
     project_gallery: "គម្រោង"
@@ -483,23 +514,16 @@ km:
       report_abuse_form:
         abuse_type:
           other: 'ផ្សេងៗ'
-  flex_category:
-    csf_loops: 'រង្វិល​ជុំ'
-    csf_events: 'ព្រឹត្តិការណ៍'
-    csf_conditionals: 'លក្ខខណ្ឌ'
-    csf_functions: 'អនុ​គមន៍'
-    csf_variables: 'អ​ថេរ'
-    csp_variables: 'អ​ថេរ'
-    csp_conditionals: 'លក្ខខណ្ឌ'
-    csp_functions: 'អនុ​គមន៍'
-    csp_lists: 'បញ្ជី'
-    csp_loops: 'រង្វិល​ជុំ'
+  hoc_download:
+    minecraft_name: 'Minecraft Hour of Code'
   pd:
     form_labels:
       email: 'អ៊ីមែល'
       school_name: 'ឈ្មោះរបស់សាលា'
       school_city: 'ទីក្រុងរបស់សាលា'
       school_country: 'សាលាក្នុងប្រទេស'
+      colombian_school_city: 'ទីក្រុងរបស់សាលា'
+      colombian_school_name: 'ឈ្មោះរបស់សាលា'
     form_entries:
       gender:
         male: 'ប្រុស'
@@ -515,5 +539,4 @@ km:
         opt_in_no: 'ទេ'
   cookie_banner:
     accept: 'ខ្ញុំ​យល់​ព្រម'
-  gdpr_dialog:
-    yes: 'យល់ព្រម'
+  copy: 'ចម្លង'

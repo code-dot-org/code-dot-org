@@ -13,14 +13,15 @@
 #  index_pd_pre_workshop_surveys_on_pd_enrollment_id  (pd_enrollment_id) UNIQUE
 #
 
-class Pd::PreWorkshopSurvey < ActiveRecord::Base
+class Pd::PreWorkshopSurvey < ApplicationRecord
   include Pd::Form
 
   UNIT_NOT_STARTED = 'I have not started teaching the course yet'
 
   belongs_to :pd_enrollment, class_name: 'Pd::Enrollment'
-  validates_presence_of :pd_enrollment
   has_one :workshop, through: :pd_enrollment
+
+  validates_presence_of :pd_enrollment
 
   # PreWorkshopSurvey has dynamic options based on the workshop
   def dynamic_options

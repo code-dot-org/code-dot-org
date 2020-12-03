@@ -1,4 +1,3 @@
-import {tables} from './datasetManifest.json';
 /** @file Utility functions for the data browser. */
 
 /**
@@ -19,7 +18,7 @@ export const ChartType = {
   CROSS_TAB: 4
 };
 
-export function getDatasetInfo(tableName) {
+export function getDatasetInfo(tableName, tables = []) {
   return tables.find(table => table.name === tableName);
 }
 
@@ -75,17 +74,34 @@ export function toBoolean(val) {
 
 /**
  * Convert a string to a boolean or number if possible.
- * @param val
+ * @param inputString
  * @returns {string|number|boolean}
  */
-export function castValue(val) {
+export function castValue(inputString, allowUnquotedStrings) {
+  // 1. Remove leading and trailing whitespace
+  inputString = inputString.trim();
+  // 2. Check for '', undefined, and null
+  if (inputString === '') {
+    // This happens when the text area is blank, so interpret as undefined.
+    return undefined;
+  }
+  if (inputString === 'undefined') {
+    return undefined;
+  } else if (inputString === 'null') {
+    return null;
+  }
+  // 3. Attempt to parse as number, string, or boolean
   try {
-    return JSON.parse(val);
-  } catch (e) {
-    if (e instanceof SyntaxError) {
-      return val;
+    const parsed = JSON.parse(inputString);
+    if (typeof parsed === 'object') {
+      throw new Error('Invalid entry type: object');
     }
-    throw new Error(`Unexpected error parsing JSON: ${e}`);
+    return parsed;
+  } catch (e) {
+    if (e instanceof SyntaxError && allowUnquotedStrings) {
+      return inputString;
+    }
+    throw e;
   }
 }
 
@@ -95,20 +111,9 @@ export function castValue(val) {
  * @returns {string}
  */
 export function editableValue(val) {
-  if (val === null || val === undefined) {
-    return '';
+  if (val === undefined) {
+    return 'undefined';
   }
-  if (typeof val === 'string') {
-    try {
-      JSON.parse(val);
-    } catch (e) {
-      // The value is a string which is not parseable as JSON (e.g. 'foo' but not 'true'
-      // or '1'). Therefore, it is safe to return it without stringifying it, and
-      // calling castValue on the result will return the original input.
-      return val;
-    }
-  }
-
   return JSON.stringify(val);
 }
 
@@ -118,8 +123,11 @@ export function editableValue(val) {
  * @returns {string}
  */
 export function displayableValue(val) {
-  if (val === null || val === undefined || val === '') {
-    return '';
+  if (val === null) {
+    return 'null';
+  } else if (val === undefined) {
+    return 'undefined';
+  } else {
+    return JSON.stringify(val);
   }
-  return JSON.stringify(val);
 }

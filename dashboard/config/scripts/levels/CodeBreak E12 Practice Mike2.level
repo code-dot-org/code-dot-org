@@ -1,0 +1,1214 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2020-06-09T15:46:29.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "parent_level_id": 23335,
+    "display_name": "Beg: Functions Game",
+    "block_pool": "gamelab",
+    "include_shared_functions": "false",
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"409c9fc2-0ceb-4e1d-8cf1-2ea455c2e7e9\",\r\n    \"3e33313b-fd42-42ba-b566-e6a075f743e4\",\r\n    \"d1d1d57e-b8a8-4c7f-a963-3ebee9789378\",\r\n    \"e5890ea3-459c-4424-89af-f0cbfd32c81f\",\r\n    \"15f5df0d-feca-49a1-9289-bf6fec864ef3\",\r\n    \"7c41db2d-f944-4f43-b260-3204bdbf669b\",\r\n    \"12716e74-cfc3-49df-8e7d-3f4f95497d34\",\r\n    \"48e843de-3c53-4caf-bf96-9144d266ac17\",\r\n    \"f52890f2-ad80-4f8d-bcc8-c3fd548e25b3\",\r\n    \"97a7fa59-05ca-4b65-b6bb-2f47533bcc32\",\r\n    \"b08ac886-5775-48b5-b6b9-ef06d832bc26\",\r\n    \"1e4066e0-6a95-430d-b9c3-e8d84992d946\",\r\n    \"c1a43068-e78d-4f54-ba62-653171d19b17\",\r\n    \"2dc1905c-3851-4590-b4a7-52167d05c64a\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"409c9fc2-0ceb-4e1d-8cf1-2ea455c2e7e9\": {\r\n      \"name\": \"animation_2\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/v0u2RzgmzJ2qK6dwi_kuXB6hR.8mCxbJ/background_living_room.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"sig24ht2ysKYe9JLFutvoTf5jNPzaqss\"\r\n    },\r\n    \"3e33313b-fd42-42ba-b566-e6a075f743e4\": {\r\n      \"name\": \"animation_2_2\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/S1w4dHP4xOjp4Q6WZsJpY6tUZMRzf0F_/again.png\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 47\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"Q55FR5ykP4FBDAM8hLyOj1Q5cLMjL2ra\"\r\n    },\r\n    \"d1d1d57e-b8a8-4c7f-a963-3ebee9789378\": {\r\n      \"name\": \"animation_2_2_2\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/YeV6FGK6.WR39apZi3g4FjZfSva_LQPw/outlet.png\",\r\n      \"frameSize\": {\r\n        \"x\": 53,\r\n        \"y\": 97\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"qJv8PuwpTTvlHwfV9YKmyj81.u8MzcMh\"\r\n    },\r\n    \"e5890ea3-459c-4424-89af-f0cbfd32c81f\": {\r\n      \"name\": \"animation_4\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/9g2KGK4PpEudVSotlpcW7EuHu6vYsnN4/computer_chip2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 46,\r\n        \"y\": 16\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"j5iQF49F13VQqZ.70Di2Pj__0Up.E1__\"\r\n    },\r\n    \"15f5df0d-feca-49a1-9289-bf6fec864ef3\": {\r\n      \"name\": \"animation_4_copy_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/5JiNpJME87Y2nk.itoisP1.tLhMGWp6s/computer_chip1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 58,\r\n        \"y\": 54\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"AxiXkyHZ4tbFpSIeVBWrrAoHGI7AVvSW\"\r\n    },\r\n    \"7c41db2d-f944-4f43-b260-3204bdbf669b\": {\r\n      \"name\": \"animation_3\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/mdk_.JpMGYK0ChDGrdJfeelnxZgsa.Aj/power_cord.png\",\r\n      \"frameSize\": {\r\n        \"x\": 94,\r\n        \"y\": 63\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"PuQumIk9ayiya8BEvOt.ry1xhHHk.SKO\"\r\n    },\r\n    \"12716e74-cfc3-49df-8e7d-3f4f95497d34\": {\r\n      \"name\": \"animation_3_copy_2\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/rv72KIRRBbpgYPYRP5MPa4fSNhvHQiIG/charging_power_cord.png\",\r\n      \"frameSize\": {\r\n        \"x\": 94,\r\n        \"y\": 63\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"VQ1vndPWbksb05SwR4c9OaaWofMFm5oY\"\r\n    },\r\n    \"48e843de-3c53-4caf-bf96-9144d266ac17\": {\r\n      \"name\": \"animation_3_copy_1_copy_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/4gyCFOlQ_VpgEJ9Lccf4tOj6VpOLNQcd/computer_mouse.png\",\r\n      \"frameSize\": {\r\n        \"x\": 91,\r\n        \"y\": 55\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"xxsnlIcPM01DO4UsKQVb_ICII3VXM3cl\"\r\n    },\r\n    \"f52890f2-ad80-4f8d-bcc8-c3fd548e25b3\": {\r\n      \"name\": \"animation_2_2_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/hTUNuR.d.0FTFabDhw_WclwMBTvwTqy0/laptop.png\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 96\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"CJm4WK6zY084M_6Q_JfsRbxk9v5jMtTN\"\r\n    },\r\n    \"97a7fa59-05ca-4b65-b6bb-2f47533bcc32\": {\r\n      \"name\": \"animation_2_copy_2\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/pGzRV2hpRLU0yvI8zjZLtfGoA2VsnPiZ/keyboard.png\",\r\n      \"frameSize\": {\r\n        \"x\": 91,\r\n        \"y\": 45\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"N_TN82XCyFg5qxDnmgis1HNo2pmzZia5\"\r\n    },\r\n    \"b08ac886-5775-48b5-b6b9-ef06d832bc26\": {\r\n      \"name\": \"animation_2_copy_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/7C7GNGBTRzwRJ8UPpTDzTYQx5krT_HrS/laptop_screen.png\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 33\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \".Z7btVH1v9_dVpyL646JEywCINrxij3P\"\r\n    },\r\n    \"1e4066e0-6a95-430d-b9c3-e8d84992d946\": {\r\n      \"name\": \"animation_2_copy_1_copy_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/qfKw6aiPdMK5wTh9AWahx9KH12VbdVw8/laptop_black_screen.png\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 33\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"Yx1I_rOpHdze8m83qwwR72YwfQjiP.wz\"\r\n    },\r\n    \"c1a43068-e78d-4f54-ba62-653171d19b17\": {\r\n      \"name\": \"animation_2_copy_1_copy_1_copy_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/level_animations/b6IFFuECEkhDAvtnNVvHSi2dJyu3lCUm/laptop_warning_screen.png\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 33\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"ek02DVm0qQXGTmyN3XVXG2DP_KATXIeG\"\r\n    },\r\n    \"2dc1905c-3851-4590-b4a7-52167d05c64a\": {\r\n      \"name\": \"soap\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ/category_generic_items/soap.png\",\r\n      \"frameSize\": {\r\n        \"x\": 97,\r\n        \"y\": 97\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": null\r\n    }\r\n  }\r\n}",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "long_instructions": "**Do This:** Code along with Sofia as she finishes the Build a Computer game during the episode. ",
+    "bubble_choice_description": "Build your own game in Sprite Lab! Use functions to check if the player won or to reset the game. Look at the code in the samples on the previous level if you need some help. ",
+    "thumbnail_url": "https://images.code.org/d09b82d362286316f90236ffb214f95f-image-1591111691238.gif",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-18 20:22:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:24:00 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:27:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:29:21 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:14 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:30:37 +0000\",\"changed\":[\"free_play\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:32:43 +0000\",\"changed\":[\"name\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:33:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:35:42 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:39:01 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 21:02:26 +0000\",\"changed\":[\"hide_custom_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-10-03 16:02:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:02:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:06:54 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-03 16:07:10 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"include_shared_functions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-24 17:51:16 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-26 17:44:53 +0000\",\"changed\":[\"toolbox_blocks\",\"helper_libraries\",\"use_default_sprites\",\"hide_animation_mode\",\"start_in_animation_tab\",\"all_animations_single_frame\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 17:47:58 +0000\",\"changed\":[\"toolbox_blocks\",\"start_in_animation_tab\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 18:34:01 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-26 18:35:13 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\",\"start_animations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-02 15:59:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-06 14:58:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-08-23 16:04:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-12-09 13:17:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-27 16:15:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 16:19:27 +0000\",\"changed\":[\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 16:52:24 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 17:54:05 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-27 17:54:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-27 18:27:03 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 18:51:02 +0000\",\"changed\":[\"toolbox_blocks\",\"include_shared_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-30 01:31:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-11 14:23:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"short_instructions\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-11 14:29:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-11 15:13:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-11 18:01:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-12 14:41:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-12 14:47:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-12 14:51:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-06-02 15:28:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-06-02 15:32:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-06-02 16:41:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-06-08 19:54:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-06-09 15:01:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:10:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:10:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:11:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:16:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:18:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:30:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:31:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:32:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:32:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:33:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:34:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:34:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:35:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:36:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:36:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:43:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:49:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:52:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-09 15:53:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false" editable="false">
+          <next>
+            <block type="variables_set" deletable="false" movable="false" editable="false">
+              <title name="VAR">parts</title>
+              <value name="VALUE">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">0</title>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" deletable="false" movable="false" editable="false">
+                  <mutation name="reset game"/>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_4"</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_2_1"</title>
+            </block>
+          </value>
+          <next>
+            <block type="math_change">
+              <title name="VAR">parts</title>
+              <value name="DELTA">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <title name="SOUND">sound://category_collect/puzzle_game_item_select_04.mp3</title>
+                  <next>
+                    <block type="gamelab_jumpTo">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"animation_4"</title>
+                        </block>
+                      </value>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <title name="LOCATION">{"x":224,"y":226}</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_turn">
+                          <title name="DIRECTION">"right"</title>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <title name="ANIMATION">"animation_4"</title>
+                            </block>
+                          </value>
+                          <value name="N">
+                            <block type="math_number">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_removeBehaviorSimple">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <title name="ANIMATION">"animation_4"</title>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_draggable"/>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_copy_1_copy_1"</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_2_1"</title>
+            </block>
+          </value>
+          <next>
+            <block type="math_change">
+              <title name="VAR">parts</title>
+              <value name="DELTA">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <title name="SOUND">sound://category_collect/puzzle_game_item_select_04.mp3</title>
+                  <next>
+                    <block type="gamelab_setAnimation">
+                      <title name="ANIMATION">"animation_2_copy_1_copy_1_copy_1"</title>
+                      <value name="THIS">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"animation_2_copy_1_copy_1"</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_jumpTo">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <title name="ANIMATION">"animation_2_copy_1_copy_1_copy_1"</title>
+                            </block>
+                          </value>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <title name="LOCATION">{"x":195,"y":170}</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_removeBehaviorSimple">
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <title name="ANIMATION">"animation_2_copy_1_copy_1_copy_1"</title>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_draggable"/>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_copy_2"</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_2_1"</title>
+            </block>
+          </value>
+          <next>
+            <block type="math_change">
+              <title name="VAR">parts</title>
+              <value name="DELTA">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <title name="SOUND">sound://category_collect/puzzle_game_item_select_04.mp3</title>
+                  <next>
+                    <block type="gamelab_jumpTo">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"animation_2_copy_2"</title>
+                        </block>
+                      </value>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <title name="LOCATION">{"x":200,"y":230}</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_removeBehaviorSimple">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <title name="ANIMATION">"animation_2_copy_2"</title>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_draggable"/>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_4_copy_1"</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_2_1"</title>
+            </block>
+          </value>
+          <next>
+            <block type="math_change">
+              <title name="VAR">parts</title>
+              <value name="DELTA">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <title name="SOUND">sound://category_collect/puzzle_game_item_select_04.mp3</title>
+                  <next>
+                    <block type="gamelab_jumpTo">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"animation_4_copy_1"</title>
+                        </block>
+                      </value>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <title name="LOCATION">{"x":183,"y":225}</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_removeBehaviorSimple">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <title name="ANIMATION">"animation_4_copy_1"</title>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_draggable"/>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_3_copy_1_copy_1"</title>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_2_1"</title>
+            </block>
+          </value>
+          <next>
+            <block type="math_change">
+              <title name="VAR">parts</title>
+              <value name="DELTA">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <title name="SOUND">sound://category_collect/puzzle_game_item_select_04.mp3</title>
+                  <next>
+                    <block type="gamelab_jumpTo">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"animation_3_copy_1_copy_1"</title>
+                        </block>
+                      </value>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <title name="LOCATION">{"x":291,"y":229}</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_removeBehaviorSimple">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <title name="ANIMATION">"animation_3_copy_1_copy_1"</title>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_draggable"/>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_copy_2"</title>
+            </block>
+          </value>
+          <next>
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <title name="OP">GTE</title>
+                  <value name="A">
+                    <block type="variables_get">
+                      <title name="VAR">parts</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">6</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_setAnimation">
+                  <title name="ANIMATION">"animation_2_copy_1"</title>
+                  <value name="THIS">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <title name="ANIMATION">"animation_2_copy_1_copy_1_copy_1"</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_playSound">
+                      <title name="SOUND">sound://category_objects/switch.mp3</title>
+                      <next>
+                        <block type="gamelab_playSound">
+                          <title name="SOUND">sound://category_transition/unfreeze.mp3</title>
+                          <next>
+                            <block type="gamelab_makeNewSpriteAnon">
+                              <title name="ANIMATION_NAME">"animation_2_2"</title>
+                              <value name="LOCATION">
+                                <block type="gamelab_location_picker">
+                                  <title name="LOCATION">{"x":322,"y":345}</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"animation_2_2"</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_playSound">
+              <title name="SOUND">sound://category_slide/retro_game_short_powerup.mp3</title>
+              <next>
+                <block type="gamelab_destroy">
+                  <value name="THIS">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <title name="ANIMATION">"animation_2_2"</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="reset game"/>
+                      <next>
+                        <block type="variables_set">
+                          <title name="VAR">parts</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">0</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">reset game</title>
+          <statement name="STACK">
+            <block type="gamelab_destroy" deletable="false" movable="false" editable="false">
+              <value name="THIS">
+                <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false" editable="false">
+                  <title name="ANIMATION">"animation_3_copy_2"</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_destroy">
+                  <value name="THIS">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <title name="ANIMATION">"animation_2_copy_1"</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_destroy">
+                      <value name="THIS">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <title name="ANIMATION">"animation_4"</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_destroy">
+                          <value name="THIS">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <title name="ANIMATION">"animation_4_copy_1"</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_destroy">
+                              <value name="THIS">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <title name="ANIMATION">"animation_3_copy_1_copy_1"</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_destroy">
+                                  <value name="THIS">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <title name="ANIMATION">"animation_2_copy_2"</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_destroy">
+                                      <value name="THIS">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <title name="ANIMATION">"animation_2_2_1"</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_destroy">
+                                          <value name="THIS">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <title name="ANIMATION">"animation_2"</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="gamelab_makeNewSpriteAnon">
+                                              <title name="ANIMATION_NAME">"animation_2"</title>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_locationAt">
+                                                  <value name="X">
+                                                    <block type="math_number">
+                                                      <title name="NUM">200</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="Y">
+                                                    <block type="math_number">
+                                                      <title name="NUM">200</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_setProp">
+                                                  <title name="PROPERTY">"scale"</title>
+                                                  <value name="SPRITE">
+                                                    <block type="gamelab_allSpritesWithAnimation">
+                                                      <title name="ANIMATION">"animation_2"</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="VAL">
+                                                    <block type="math_number">
+                                                      <title name="NUM">400</title>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="gamelab_makeNewSpriteAnon">
+                                                      <title name="ANIMATION_NAME">"animation_2_2_2"</title>
+                                                      <value name="LOCATION">
+                                                        <block type="gamelab_locationAt">
+                                                          <value name="X">
+                                                            <block type="math_number">
+                                                            <title name="NUM">47</title>
+                                                            </block>
+                                                          </value>
+                                                          <value name="Y">
+                                                            <block type="math_number">
+                                                            <title name="NUM">142</title>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="gamelab_setProp">
+                                                          <title name="PROPERTY">"scale"</title>
+                                                          <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_2_2_2"</title>
+                                                            </block>
+                                                          </value>
+                                                          <value name="VAL">
+                                                            <block type="math_number">
+                                                            <title name="NUM">60</title>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <title name="ANIMATION_NAME">"animation_3"</title>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <title name="LOCATION">{"x":67,"y":347}</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_setProp">
+                                                            <title name="PROPERTY">"scale"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_3"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="VAL">
+                                                            <block type="math_number">
+                                                            <title name="NUM">125</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <title name="ANIMATION_NAME">"animation_3_copy_1_copy_1"</title>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <title name="LOCATION">{"x":342,"y":348}</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <title name="ANIMATION_NAME">"animation_2_2_1"</title>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <title name="LOCATION">{"x":201,"y":205}</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_setProp">
+                                                            <title name="PROPERTY">"scale"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_2_2_1"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="VAL">
+                                                            <block type="math_number">
+                                                            <title name="NUM">125</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <title name="ANIMATION_NAME">"animation_4_copy_1"</title>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <title name="LOCATION">{"x":56,"y":44}</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_setProp">
+                                                            <title name="PROPERTY">"scale"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_4_copy_1"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="VAL">
+                                                            <block type="math_number">
+                                                            <title name="NUM">75</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <title name="ANIMATION_NAME">"animation_4"</title>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <title name="LOCATION">{"x":207,"y":345}</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_setProp">
+                                                            <title name="PROPERTY">"scale"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_4"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="VAL">
+                                                            <block type="math_number">
+                                                            <title name="NUM">110</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <title name="ANIMATION_NAME">"animation_2_copy_1_copy_1"</title>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <title name="LOCATION">{"x":169,"y":41}</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_setProp">
+                                                            <title name="PROPERTY">"scale"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_2_copy_1_copy_1"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="VAL">
+                                                            <block type="math_number">
+                                                            <title name="NUM">125</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_makeNewSpriteAnon">
+                                                            <title name="ANIMATION_NAME">"animation_2_copy_2"</title>
+                                                            <value name="LOCATION">
+                                                            <block type="gamelab_location_picker">
+                                                            <title name="LOCATION">{"x":329,"y":45}</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_setProp">
+                                                            <title name="PROPERTY">"scale"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_2_copy_2"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="VAL">
+                                                            <block type="math_number">
+                                                            <title name="NUM">125</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_addBehaviorSimple">
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_2_copy_2"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="BEHAVIOR">
+                                                            <block type="gamelab_draggable"/>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_addBehaviorSimple">
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_3_copy_1_copy_1"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="BEHAVIOR">
+                                                            <block type="gamelab_draggable"/>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_addBehaviorSimple">
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_4"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="BEHAVIOR">
+                                                            <block type="gamelab_draggable"/>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_addBehaviorSimple">
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_4_copy_1"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="BEHAVIOR">
+                                                            <block type="gamelab_draggable"/>
+                                                            </value>
+                                                            <next>
+                                                            <block type="gamelab_addBehaviorSimple">
+                                                            <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <title name="ANIMATION">"animation_2_copy_1_copy_1"</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="BEHAVIOR">
+                                                            <block type="gamelab_draggable"/>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="gamelab_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#99ff99</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setBackgroundImage">
+            <title name="IMG">"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"</title>
+          </block>
+          <block type="gamelab_printText">
+            <value name="TEXT">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_playSound">
+            <title name="SOUND">Choose</title>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"animation_2"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">{"x":200,"y":200}</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_allSpritesWithAnimation">
+            <title name="ANIMATION">"animation_2"</title>
+          </block>
+          <block type="gamelab_destroy">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setAnimation">
+            <title name="ANIMATION">"animation_2"</title>
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_createNewSprite">
+            <title name="NAME">mySprite</title>
+            <title name="COSTUME">"animation_2"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">{"x":200,"y":200}</title>
+              </block>
+            </value>
+          </block>
+          <block type="sprite_variables_get">
+            <title name="VAR">mySprite</title>
+          </block>
+          <block type="gamelab_getProp">
+            <title name="PROPERTY">"scale"</title>
+            <value name="SPRITE">
+              <block type="sprite_variables_get">
+                <title name="VAR">mySprite</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Locations">
+          <block type="gamelab_randomLocation"/>
+          <block type="gamelab_location_picker">
+            <title name="LOCATION">{"x":200,"y":200}</title>
+          </block>
+          <block type="gamelab_locationAt">
+            <value name="X">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+            <value name="Y">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_locationOf">
+            <value name="SPRITE">
+              <block type="sprite_variables_get">
+                <title name="VAR">mySprite</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_locationMouse"/>
+        </category>
+        <category name="Actions">
+          <block type="gamelab_setTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeTint">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveInDirection">
+            <title name="DIRECTION">"North"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="DISTANCE">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_turn">
+            <title name="DIRECTION">"right"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="N">
+              <block type="math_number">
+                <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp">
+            <title name="PROPERTY">"scale"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number">
+                <title name="NUM">50</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_changePropBy">
+            <title name="PROPERTY">"scale"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_jumpTo">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="LOCATION">
+              <block type="gamelab_randomLocation"/>
+            </value>
+          </block>
+          <block type="gamelab_moveForward">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="DISTANCE">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_moveToward">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="DISTANCE">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+            <value name="TARGET">
+              <block type="gamelab_locationOf">
+                <value name="SPRITE">
+                  <block type="sprite_variables_get">
+                    <title name="VAR">mySprite</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_edgesDisplace">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_keyPressed">
+            <title name="CONDITION">"when"</title>
+            <title name="KEY">"up"</title>
+          </block>
+          <block type="gamelab_spriteClicked">
+            <title name="CONDITION">"when"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_checkTouching">
+            <title name="CONDITION">"when"</title>
+            <value name="SPRITE1">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+            <value name="SPRITE2">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Behaviors" custom="Behavior">
+          <block type="gamelab_addBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_removeAllBehaviors">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"animation_2"</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_draggable"/>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="math_change">
+            <title name="VAR">i</title>
+            <value name="DELTA">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_arithmetic">
+            <title name="OP">ADD</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_random_int">
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if">
+            <value name="IF0">
+              <block type="logic_compare">
+                <title name="OP">EQ</title>
+              </block>
+            </value>
+          </block>
+          <block type="logic_compare">
+            <title name="OP">EQ</title>
+          </block>
+          <block type="logic_operation">
+            <title name="OP">AND</title>
+          </block>
+          <block type="logic_boolean">
+            <title name="BOOL">TRUE</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Text">
+          <block type="gamelab_printText">
+            <value name="TEXT">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="text">
+            <title name="TEXT"/>
+          </block>
+          <block type="text_join_simple" inputcount="2"/>
+          <block type="gamelab_showTitleScreen">
+            <value name="TITLE">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="SUBTITLE">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_hideTitleScreen"/>
+        </category>
+        <category name="Comments">
+          <block type="gamelab_comment">
+            <title name="COMMENT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

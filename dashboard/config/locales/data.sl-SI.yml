@@ -381,6 +381,8 @@ sl:
           BELOW
         maze_wordsearch_k_20: To je preizkus! Premakni me v eno smer, nato v drugo,
           da črkujem besedo STORY
+        turtle_ec_1_2: 'Zdaj pa poskusi narisati kvadrat. Svojo najljubšo barvo lahko
+          izbireš z ukazom: "izberi barvo pisala" (ang.: "pick color").'
         turtle_ec_1_10: 'Uspelo ti je! Zdaj lahko narišeš, kar želiš. Nekaj idej:
           možic, snežinka ali spirala. Pri tem lahko uporabiš tudi blok "širina pisala".
           Veliko zabave!'
@@ -462,6 +464,9 @@ sl:
         C4_loops_zombie: Zanke
         C4_bee_conditional: Čebelica pogoji
         C4_variables_artist: Spremenljivke - Umetnik
+        C4_math_artist: Upravljanje umetnika s pomočjo matematike
+        C4_function_edit: Urejanje funkcij
+        C4_function_create: Ustvarjanje funkcij
         C4_function_parameters: Funkcije s parametri
         C4_conditionals: Pogoji
         C4_unplugged_variables: Spremenljivke v ovojnicah

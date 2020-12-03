@@ -1,0 +1,18 @@
+name 'VPL - CSD - Module 2 CI - Conditionals'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Curriculum Investigation: U3L14 Conditionals
+
+## Overview
+
+In the following activities, you will engage in activities that your students will complete as a part of Unit 3 Lesson 14: Conditionals. As you work through these activities to gain a better understanding of Unit 3 content, also think about your role as the teacher. Where might students encounter bugs in this lesson? How can you support them in the process of debugging?
+
+## Investigation Goal
+
+* Use conditionals to react to changes in variables and sprite properties 
+
+![](https://images.code.org/cc449c230a18075a38e9001b28f10c29-image-1594952880436.23.58 PM.png)
+MARKDOWN

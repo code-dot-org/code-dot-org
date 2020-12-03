@@ -163,11 +163,58 @@ describe('Enroll Form', () => {
     });
   });
 
+  describe('CSP Returning Teachers Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="CS Principles"
+          workshop_subject={SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS}
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+          collect_demographics={false}
+        />
+      );
+    });
+
+    ['years_teaching', 'years_teaching_cs'].forEach(question => {
+      it('displays questions specific to this workshop type', () => {
+        assert(enrollForm.exists('#' + question));
+      });
+    });
+
+    ['taught_ap_before', 'planning_to_teach_ap'].forEach(question => {
+      it('displays questions specific to this workshop type', () => {
+        assert(enrollForm.exists({groupName: question}));
+      });
+    });
+
+    ['role', 'previous_courses', 'replace_existing'].forEach(question => {
+      it('displays questions not relevant for this workshop type', () => {
+        refute(enrollForm.exists('#' + question));
+      });
+    });
+
+    ['csf_intro_intent', 'csf_intro_other_factors'].forEach(question => {
+      it('displays questions not relevant for this workshop type', () => {
+        refute(enrollForm.exists({groupName: question}));
+      });
+    });
+  });
+
   describe('Enroll Form', () => {
     let enrollForm;
     beforeEach(() => {
       sinon.spy(jQuery, 'ajax');
+    });
+    afterEach(() => {
+      jQuery.ajax.restore();
+    });
 
+    function renderForm() {
       enrollForm = shallow(
         <EnrollForm
           workshop_id={props.workshop_id}
@@ -178,12 +225,11 @@ describe('Enroll Form', () => {
           onSubmissionComplete={props.onSubmissionComplete}
         />
       );
-    });
-    afterEach(() => {
-      jQuery.ajax.restore();
-    });
+    }
 
     it('submits other school_info fields when no school_id', () => {
+      renderForm();
+
       const school_info = {
         school_name: 'Hogwarts School of Witchcraft and Wizardry',
         school_state: 'Washington',
@@ -213,6 +259,8 @@ describe('Enroll Form', () => {
     });
 
     it("doesn't submit other school_info fields when school_id is selected", () => {
+      renderForm();
+
       const params = {
         first_name: 'Rubeus',
         last_name: 'Hagrid',
@@ -236,6 +284,63 @@ describe('Enroll Form', () => {
       expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal(
         expectedData
       );
+    });
+
+    it('disables submit button after submit', () => {
+      renderForm();
+
+      const params = {
+        first_name: 'Rubeus',
+        last_name: 'Hagrid',
+        email: props.email,
+        school_info: {
+          school_id: '60001411118',
+          school_name: 'Summit Leadership Academy High Desert',
+          school_state: 'CA',
+          school_type: 'charter',
+          school_zip: '92345'
+        },
+        grades_teaching: ['Kindergarten']
+      };
+      enrollForm.setState(params);
+
+      // Submit button should stay enabled if invalid data was provided.
+      // In this case, no "role" was included, which is a required field.
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.false;
+      enrollForm.find('#submit').simulate('click');
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.false;
+
+      // Submit button becomes disabled once legitimate submission is made.
+      enrollForm.setState({role: 'Librarian'});
+      enrollForm.find('#submit').simulate('click');
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.true;
+    });
+
+    it('first name is set when rendered as a student', () => {
+      // Sometimes a teacher has a student account and fills out this
+      // form.  That's fine; they'll be upgraded to a teacher account
+      // later.
+      // In the initial state for a student account, we pass a first_name
+      // prop but never an email prop, which caused a bug in the past.
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="CS Fundamentals"
+          first_name={'Student'}
+          email={''}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+        />
+      );
+      expect(enrollForm.state('email')).to.equal('');
+      expect(enrollForm.state('first_name')).to.equal('Student');
+
+      // If I submit in this state, first name should not be one
+      // of the validation errors.
+      enrollForm.find('#submit').simulate('click');
+      expect(jQuery.ajax.called).to.be.false;
+      expect(enrollForm.state('errors')).to.have.property('email');
+      expect(enrollForm.state('errors')).not.to.have.property('first_name');
     });
   });
 });

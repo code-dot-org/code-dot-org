@@ -1,0 +1,232 @@
+<%
+# Template component to deploy AMI-backed frontends to an autoscaling group with rolling updates.
+
+# String to append to AMI logical resources that get replaced on every build.
+# Typically a portion of the commit hash.
+ami ||= raise('ami string required')
+
+# Shell script to run when building/updating the AMI-creating instance.
+build_ami ||= <<SH
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+STACK=${AWS::StackName}
+RESOURCE_ID=AMICreate#{ami}
+STATUS=SUCCESS
+REGION=${AWS::Region}
+SH
+
+# Shell script to run when building/updating each frontend instance.
+build_frontend ||= <<SH
+sleep 10
+SH
+
+# Array of IAM managed policies to attach to the frontend role.
+frontend_policies ||= []
+
+# Array of properties to append to the frontend AutoScalingGroup resource.
+frontend_properties ||= {}
+
+image_id ||= {Ref: 'ImageId'}.to_json
+ssh_key_name ||= {Ref: 'SSHKeyName'}.to_json
+instance_type ||= {Ref: 'InstanceType'}.to_json
+
+ami_timeout ||= 'PT10M'
+frontend_timeout ||= 'PT10M'
+lifecycle_timeout ||= 1200 # seconds = 20 minutes
+frontend_volume_size ||= 16
+frontend_device_name ||= '/dev/sda1'
+-%>
+  FrontendRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'ec2'%>
+      Policies:
+        - PolicyName: LifecycleHook
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: 'autoscaling:CompleteLifecycleAction'
+                Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
+      ManagedPolicyArns: <%=frontend_policies.to_json%>
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  FrontendInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties: {Roles: [!Ref FrontendRole]}
+  # Signal when the instance is fully provisioned and ready for AMI creation.
+  AMICreate<%=ami%>:
+    Type: AWS::CloudFormation::WaitCondition
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: <%=ami_timeout%>
+        Count: 1
+  WebServerAMI:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: <%=image_id%>
+      InstanceType: <%=instance_type%>
+      IamInstanceProfile: !Ref FrontendInstanceProfile
+      SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
+      SubnetId: <%=subnets.first.to_json%>
+      KeyName: <%=ssh_key_name%>
+      BlockDeviceMappings:
+        - DeviceName: <%=frontend_device_name%>
+          Ebs:
+            VolumeSize: <%=frontend_volume_size%>
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -x
+          # UserData bootstrap script for CloudFormation stack instances.
+
+          # Modify cloud-init to re-run this user-data script every time instance restarts.
+          # Ref: http://stackoverflow.com/a/10455027
+          sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
+
+          <%=indent(build_ami, 10)%>
+          # Signal CloudFormation resource.
+          aws cloudformation signal-resource \
+            --unique-id $INSTANCE_ID \
+            --stack-name $STACK \
+            --logical-resource-id $RESOURCE_ID \
+            --status $STATUS \
+            --region $REGION \
+            || true
+
+          shutdown -h now
+  AMI<%=ami%>: <%= lambda_fn 'AMIManager',
+    DependsOn: "AMICreate#{ami}",
+    InstanceId: {Ref: "WebServerAMI" } %>
+  FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
+    ImageIds: [{Ref: "AMI#{ami}" }],
+    AvailabilityZones: AVAILABILITY_ZONES
+  %>
+  ASGCount: <%= lambda_fn 'CountASG',
+    Default: {
+      MinSize: 2,
+      MaxSize: 20,
+      DesiredCapacity: 2
+    },
+    AutoScalingGroupTags: [
+      {Key: 'aws:cloudformation:stack-id', Value: {Ref: 'AWS::StackId'}},
+      {Key: 'aws:cloudformation:logical-id', Value: 'Frontends'}
+    ],
+    LaunchConfiguration: {Ref: 'FrontendLaunchConfig'}
+  %>
+  Frontends:
+    DependsOn: [ASGCount]
+    Type: AWS::AutoScaling::AutoScalingGroup
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: <%=frontend_timeout%>
+        Count: !GetAtt [ASGCount, DesiredCapacity]
+      AutoScalingCreationPolicy:
+        MinSuccessfulInstancesPercent: 80
+    UpdatePolicy:
+      AutoScalingRollingUpdate:
+        MaxBatchSize: !Ref AutoscaleRollingBatchSize
+        MinInstancesInService: !GetAtt [ASGCount, DesiredCapacity]
+        MinSuccessfulInstancesPercent: 80
+        PauseTime: <%=frontend_timeout%>
+        SuspendProcesses: [ScheduledActions]
+        WaitOnResourceSignals: true
+    Properties:
+      AutoScalingGroupName: !Sub "Frontends-${AWS::StackName}"
+      VPCZoneIdentifier: <%= subnets.to_json %>
+      LaunchConfigurationName: !Ref FrontendLaunchConfig
+      MinSize: !GetAtt [ASGCount, MinSize]
+      MaxSize: !GetAtt [ASGCount, MaxSize]
+      DesiredCapacity: !GetAtt [ASGCount, DesiredCapacity]
+      HealthCheckType: EC2 # TODO: use ELB health check that returns healthy even when fully loaded.
+      HealthCheckGracePeriod: 2000
+      <%=indent(add_properties(frontend_properties), 6)%>
+      MetricsCollection:
+        - Granularity: 1Minute
+  FrontendLaunchConfig:
+    Type: AWS::AutoScaling::LaunchConfiguration
+    DependsOn: FastSnapshotRestore
+    Properties:
+      ImageId: !GetAtt [AMI<%=ami%>, ImageId]
+      InstanceType: <%=instance_type%>
+      IamInstanceProfile: !Ref FrontendInstanceProfile
+      SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
+      KeyName: <%=ssh_key_name%>
+      BlockDeviceMappings:
+        - DeviceName: <%=frontend_device_name%>
+          Ebs:
+            VolumeSize: <%=frontend_volume_size * 2%> # Double volume size to leave room for logs written to disk
+            VolumeType: gp2
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -x
+          # UserData bootstrap script for CloudFormation stack instances.
+          # Note: Every time this script's contents change,
+          # the LaunchConfiguration will be replaced in the CloudFormation stack.
+
+          STACK=${AWS::StackName}
+          REGION=${AWS::Region}
+
+          INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+          <%=indent(build_frontend, 10)%>
+          if [ $? -eq 0 ]
+          then
+            CFN_STATUS=SUCCESS
+            LIFECYCLE_ACTION=CONTINUE
+          else
+            CFN_STATUS=FAILURE
+            LIFECYCLE_ACTION=ABANDON
+          fi
+
+          # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
+          LIFECYCLE_HOOK=WebServerHook-${AWS::StackName}
+          AUTO_SCALING_GROUP=Frontends-${AWS::StackName}
+          if [ -n "$LIFECYCLE_HOOK" ] && [ -n "$AUTO_SCALING_GROUP" ]; then
+            aws autoscaling complete-lifecycle-action \
+              --lifecycle-action-result $LIFECYCLE_ACTION \
+              --instance-id $INSTANCE_ID \
+              --lifecycle-hook-name $LIFECYCLE_HOOK \
+              --auto-scaling-group-name $AUTO_SCALING_GROUP \
+              --region $REGION \
+              || true
+          fi
+
+          # Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
+          RESOURCE_ID=Frontends
+          aws cloudformation signal-resource \
+            --status $CFN_STATUS \
+            --unique-id $INSTANCE_ID \
+            --stack-name $STACK \
+            --logical-resource-id $RESOURCE_ID \
+            --region $REGION \
+            || true
+  CPUScalingPolicy:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AutoScalingGroupName: !Ref Frontends
+      EstimatedInstanceWarmup: 300
+      PolicyType: TargetTrackingScaling
+      TargetTrackingConfiguration:
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ASGAverageCPUUtilization
+        TargetValue: 50
+  WebServerHook:
+    Type: AWS::AutoScaling::LifecycleHook
+    Properties:
+      LifecycleHookName: !Sub "WebServerHook-${AWS::StackName}"
+      AutoScalingGroupName: !Ref Frontends
+      LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
+      DefaultResult: ABANDON
+      HeartbeatTimeout: <%=lifecycle_timeout%>
+      NotificationTargetARN: !Ref WebServerHookTopicNew
+      RoleARN: !GetAtt WebServerHookRole.Arn
+  WebServerHookTopicNew: {Type: 'AWS::SNS::Topic'}
+  WebServerHookRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'autoscaling'%>
+      Policies:
+        - PolicyName: snsPublish
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: 'sns:Publish'
+                Resource: !Ref WebServerHookTopicNew
+      PermissionsBoundary: !ImportValue IAM-DevPermissions

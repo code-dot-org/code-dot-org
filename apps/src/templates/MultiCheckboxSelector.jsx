@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from '../util/color';
+import _ from 'lodash';
 
 const MARGIN = 10;
 export const styles = {
@@ -42,7 +43,10 @@ class MultiCheckboxSelector extends Component {
     itemPropName: PropTypes.string,
     style: PropTypes.any,
     disabled: PropTypes.bool,
-    noHeader: PropTypes.bool
+    noHeader: PropTypes.bool,
+    // For cases where items are objects and we need to do a deep comparison to
+    // determine if they're selected.
+    checkById: PropTypes.bool
   };
 
   static defaultProps = {
@@ -66,17 +70,35 @@ class MultiCheckboxSelector extends Component {
   };
 
   toggle = item => {
-    const index = this.props.selected.indexOf(item);
-    if (index >= 0) {
-      // remove it
-      this.props.onChange([
-        ...this.props.selected.slice(0, index),
-        ...this.props.selected.slice(index + 1)
-      ]);
+    if (this.props.checkById) {
+      let selectedItems = [];
+      if (_.map(this.props.selected, 'id').includes(item.id)) {
+        selectedItems = _.remove(this.props.selected, function(selection) {
+          return selection.id !== item.id;
+        });
+      } else {
+        selectedItems = _.concat(this.props.selected, item);
+      }
+      this.props.onChange(selectedItems, item);
     } else {
-      // add it
-      this.props.onChange(this.props.selected.concat([item]));
+      const index = this.props.selected.indexOf(item);
+      if (index >= 0) {
+        // remove it
+        this.props.onChange([
+          ...this.props.selected.slice(0, index),
+          ...this.props.selected.slice(index + 1)
+        ]);
+      } else {
+        // add it
+        this.props.onChange(this.props.selected.concat([item]));
+      }
     }
+  };
+
+  checked = item => {
+    return this.props.checkById
+      ? _.map(this.props.selected, 'id').includes(item.id)
+      : this.props.selected.includes(item);
   };
 
   render() {
@@ -100,7 +122,7 @@ class MultiCheckboxSelector extends Component {
               <input
                 style={styles.checkbox}
                 type="checkbox"
-                checked={this.props.selected.includes(item)}
+                checked={this.checked(item)}
                 onChange={() => this.toggle(item)}
                 disabled={this.props.disabled}
               />

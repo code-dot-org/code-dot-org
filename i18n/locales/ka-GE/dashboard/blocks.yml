@@ -27,17 +27,11 @@ ka:
           MOVE:
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -61,17 +55,11 @@ ka:
           MOVE:
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
             '"rand"': შემთხვევითი
             MOVES.Rest: არცერთი
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -134,6 +122,7 @@ ka:
           GROUP:
             sprites: ყველა
           FORMAT:
+            '"diamond"': ბრილიანტი
             '"grid"': ბადე
             '"row"': მწკრივი
             '"column"': სვეტი
@@ -176,26 +165,6 @@ ka:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": შემთხვევითი
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': ბრილიანტი
             '"grid"': ბადე
@@ -381,6 +350,10 @@ ka:
         text: დაყენება
       Dancelab_whenSetup2:
         text: დაყენება
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': წამები
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -407,6 +380,24 @@ ka:
         options:
           CHOICE:
             '"other"': სხვა
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': წამები
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -424,6 +415,13 @@ ka:
             '"w"': w
             '"x"': x
             '"y"': 'y'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': ჩრდილოეთი
+            '"East"': აღმოსავლეთი
+            '"South"': სამრხეთი
+            '"West"': აღმოსავლეთი
       gamelab_locationMouse:
         text: თაგვის მდებარეობა
       gamelab_mirrorSprite:
@@ -453,6 +451,8 @@ ka:
         text: შემთხვევითი ფერი
       gamelab_randomLocation:
         text: შემთხვევითი მდებარეობა
+      gamelab_repeatForever:
+        text: მუდამ გამეორება
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -696,23 +696,17 @@ ka:
         text: შემთხვევითი მდებარეობა
       Vector_vectorNorth:
         text: ჩრდილოეთი
-      aalab_goToScene:
+      aalab_moveInDirection:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_showHideSprite:
+          DIRECTION:
+            '"North"': ჩრდილოეთი
+            '"East"': აღმოსავლეთი
+            '"South"': სამრხეთი
+            '"West"': აღმოსავლეთი
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': ჩვენება
-            '"hide"': დამალვა
+            '"random"': შემთხვევითი
       binary_move:
         options:
           DIR:

@@ -33,28 +33,24 @@ class HocSyncUtils
   end
 
   def self.sync_out
-    rename_downloads_from_crowdin_code_to_locale
+    rename_yml_to_locale
     copy_from_i18n_source_to_hoc
     restore_sanitized_headers
   end
 
-  def self.rename_downloads_from_crowdin_code_to_locale
+  def self.rename_yml_to_locale
     puts "Updating crowdin codes to our locale codes..."
     Languages.get_hoc_languages.each do |prop|
-      puts "Renaming #{prop[:locale_s]}.yml to #{prop[:unique_language_s]}.yml"
       # move downloaded folders to root source directory and rename from
       # language to locale
-      crowdin_dir = File.join(I18N_SOURCE_DIR, "hourofcode", prop[:crowdin_name_s])
       dest_dir = "i18n/locales/#{prop[:locale_s]}"
-      next unless File.directory?(crowdin_dir)
-
-      FileUtils.cp_r File.join(crowdin_dir, '.'), dest_dir
-      FileUtils.rm_r crowdin_dir
+      next unless File.directory?(dest_dir)
 
       # replace the crowdin code in the file itself with our own unique
       # language code
       old_path = File.join(dest_dir, "hourofcode/en.yml")
       crowdin_translation_data = YAML.load_file(old_path)
+      next unless File.exist?(old_path)
       new_translation_data = {}
       new_translation_data[prop[:unique_language_s]] = crowdin_translation_data.values.first
 
@@ -63,17 +59,6 @@ class HocSyncUtils
       File.write(new_path, new_translation_data.to_yaml)
       FileUtils.rm old_path
     end
-
-    # Now, any remaining directories named after the language name (rather than
-    # the four-letter language code) represent languages downloaded from
-    # crowdin that aren't in our system. We expect this to happen whenever a
-    # language has been enabled for our project on crowdin before it gets added
-    # to our system; we do this pretty often because that allows us to start
-    # collecting translations for a language in advance of enabling it.
-    #
-    # So although these directories are neither bad nor unexpected, they're
-    # still unwanted. So we remove them.
-    FileUtils.rm_r(Dir.glob(File.join(I18N_SOURCE_DIR, "hourofcode", "[A-Z]*")))
   end
 
   def self.copy_from_i18n_source_to_hoc
@@ -101,8 +86,6 @@ class HocSyncUtils
         FileUtils.mkdir_p(dest_dir)
         FileUtils.cp(source_path, File.join(dest_dir, dest_name))
       end
-
-      puts "Copied locale #{prop[:unique_language_s]}"
     end
   end
 
@@ -115,8 +98,8 @@ class HocSyncUtils
   # values from the original source.
   def self.sanitize_hoc_file(path)
     header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-    sanitize_header!(header)
-    write_markdown_with_header(content, header, path)
+    I18nScriptUtils.sanitize_header!(header)
+    I18nScriptUtils.write_markdown_with_header(content, header, path)
   end
 
   # In the sync in, we slice the YAML headers of the files we upload to crowdin
@@ -131,30 +114,12 @@ class HocSyncUtils
         # that extension unless we check both with and without.
         source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
       end
+      next unless File.exist? source_path
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
       header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-      sanitize_header!(header)
+      I18nScriptUtils.sanitize_header!(header)
       restored_header = source_header.merge(header)
-      write_markdown_with_header(content, restored_header, path)
+      I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
     end
-  end
-
-  def self.write_markdown_with_header(markdown, header, path)
-    open(path, 'w') do |f|
-      unless header.empty?
-        f.write(I18nScriptUtils.to_crowdin_yaml(header))
-        f.write("---\n\n")
-      end
-      f.write(markdown)
-    end
-  end
-
-  # Reduce the header metadata we include in markdown files down to just the
-  # subset of content we want to allow translators to translate.
-  #
-  # Right now, this is just page titles but it could be expanded to include
-  # any English content (description, social share stuff, etc).
-  def self.sanitize_header!(header)
-    header.slice!("title")
   end
 end

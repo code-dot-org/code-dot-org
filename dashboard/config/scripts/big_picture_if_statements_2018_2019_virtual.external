@@ -1,0 +1,28 @@
+name 'Big Picture: If-statements_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Big-Picture: If-statements
+
+
+### Word Soup: If-statements, Conditionals, Selection
+
+* **If-statements** exist so that your program can adapt, respond, or make choices about whether or not to execute certain portions of code based on some condition that you check while the program is executing.  
+
+* Because it involves checking conditions, these statements are sometimes called **conditional statements**, or sometimes just **conditionals**.
+
+* A conditional statement (if-statement) requires a **conditional expression**, something that is either **true** or **false** and it's what an if-statement uses to decide whether or not to execute a certain portion of code.
+
+* A generic term used by the AP CSP Framework for this is **Selection**. As in: your program can *select* whether or not to run certain blocks of code.
+
+### **Key Idea: If-statements are how programs adapt and respond to conditions on the ground.**
+
+The whole point is to be able to handle cases where you can’t know ahead of time whether or when certain conditions will exist in your program.  So you have to write code to say something like: “Okay, at this point in the program, if *such and such* is true, then do *this*, otherwise do *that*.”
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

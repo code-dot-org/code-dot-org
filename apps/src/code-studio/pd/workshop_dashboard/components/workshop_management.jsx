@@ -10,7 +10,8 @@ import {
   SubjectNames
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
-import {PermissionPropType, Organizer, ProgramManager} from '../permission';
+import {PermissionPropType} from '../permission';
+import {useFoormSurvey} from '../workshop_summary_utils';
 
 export class WorkshopManagement extends React.Component {
   static contextTypes = {
@@ -26,7 +27,8 @@ export class WorkshopManagement extends React.Component {
     editUrl: PropTypes.string,
     onDelete: PropTypes.func,
     showSurveyUrl: PropTypes.bool,
-    date: PropTypes.string
+    date: PropTypes.string,
+    endDate: PropTypes.string
   };
 
   static defaultProps = {
@@ -39,17 +41,23 @@ export class WorkshopManagement extends React.Component {
 
     if (props.showSurveyUrl) {
       let surveyBaseUrl;
-      if (this.use_daily_survey_route()) {
+      let workshop_date = props.endDate
+        ? new Date(props.endDate)
+        : new Date(props.date);
+
+      if (useFoormSurvey(props.subject, workshop_date)) {
+        surveyBaseUrl = 'workshop_daily_survey_results';
+      } else if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';
       } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = 'local_summer_workshop_survey_results';
-      } else {
-        surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager)
-          ? 'organizer_survey_results'
-          : 'survey_results';
       }
 
-      this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
+      if (surveyBaseUrl) {
+        this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
+      } else {
+        this.surveyUrl = null;
+      }
     }
   }
 
@@ -62,11 +70,14 @@ export class WorkshopManagement extends React.Component {
         this.props.subject
       );
 
+    // 2018-08-01 is when we started using JotForm.  Don't change this date here.
     let new_facilitator_weekend =
       workshop_date >= new Date('2018-08-01') &&
       ['CS Discoveries', 'CS Principles'].includes(this.props.course) &&
       this.props.subject !== SubjectNames.SUBJECT_FIT;
 
+    // 2019-05-20 is when we started using a JotForm survey for Deep Dive workshops.
+    // Don't change this date here.
     let new_csf_201 =
       workshop_date >= new Date('2019-05-20') &&
       this.props.subject === SubjectNames.SUBJECT_CSF_201;
@@ -137,7 +148,7 @@ export class WorkshopManagement extends React.Component {
   }
 
   renderSurveyButton() {
-    if (!this.props.showSurveyUrl) {
+    if (!this.props.showSurveyUrl || !this.surveyUrl) {
       return null;
     }
 

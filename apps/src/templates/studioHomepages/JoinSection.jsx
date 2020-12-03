@@ -149,6 +149,7 @@ export default class JoinSection extends React.Component {
             placeholder={i18n.joinSectionPlaceholder()}
           />
           <Button
+            __useDeprecatedTag
             onClick={this.joinSection}
             color={Button.ButtonColor.gray}
             text={i18n.joinSection()}

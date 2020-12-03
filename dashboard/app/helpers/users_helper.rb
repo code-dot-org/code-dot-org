@@ -7,12 +7,6 @@ module UsersHelper
   include ApplicationHelper
   include SharedConstants
 
-  ACCT_TAKEOVER_EXPIRATION = 'account_takeover_expiration'
-  ACCT_TAKEOVER_PROVIDER = 'clever_link_flag'
-  ACCT_TAKEOVER_UID = 'clever_takeover_id'
-  ACCT_TAKEOVER_OAUTH_TOKEN = 'clever_takeover_token'
-  ACCT_TAKEOVER_FORCE_TAKEOVER = 'force_clever_takeover'
-
   # Move section membership and (for teachers) section ownership from source_user to
   # destination_user and destroy source_user.
   # Returns a boolean - true if all steps were successful, false otherwise.
@@ -57,110 +51,21 @@ module UsersHelper
     false
   end
 
-  # If Clever takeover flags are present, the current account (user) is the one that the person just
-  # logged into (to prove ownership), and all the Clever details are migrated over, including sections.
-  def check_and_apply_oauth_takeover(user)
-    if account_takeover_in_progress?
-      provider = session[ACCT_TAKEOVER_PROVIDER]
-      uid = session[ACCT_TAKEOVER_UID]
-      oauth_token = session[ACCT_TAKEOVER_OAUTH_TOKEN]
-      clear_takeover_session_variables
-
-      existing_account = User.find_by_credential(type: provider, id: uid)
-      # No-op if move_sections_and_destroy_source_user fails
-      return unless move_sections_and_destroy_source_user(
-        source_user: existing_account,
-        destination_user: user,
-        takeover_type: 'oauth',
-        provider: provider,
-      )
-
-      if user.migrated?
-        success = user.add_credential(
-          type: provider,
-          id: uid,
-          email: user.email,
-          hashed_email: user.hashed_email,
-          data: {
-            oauth_token: oauth_token
-          }.to_json
-        )
-        unless success
-          # We want to know when this fails
-          Honeybadger.notify(
-            error_class: 'Failed to create AuthenticationOption during signup oauth takeover',
-            error_message: "Failed for user with id #{user.id}"
-          )
-        end
-      else
-        user.provider = provider
-        user.uid = uid
-        user.oauth_token = oauth_token
-        user.save
-      end
-    end
-  end
-
   def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit-v2',
-      event: "#{type}-account-takeover", # Silent or OAuth takeover
-      user_id: source_user.id, # User account being "taken over" (deleted)
-      data_int: destination_user.id, # User account after takeover
-      data_string: provider, # OAuth provider
-      data_json: {
-        user_type: destination_user.user_type,
-        error: error,
-      }.to_json
+      :analysis,
+      {
+        study: 'user-soft-delete-audit-v2',
+        event: "#{type}-account-takeover", # Silent or OAuth takeover
+        user_id: source_user.id, # User account being "taken over" (deleted)
+        data_int: destination_user.id, # User account after takeover
+        data_string: provider, # OAuth provider
+        data_json: {
+          user_type: destination_user.user_type,
+          error: error,
+        }.to_json
+      }
     )
-  end
-
-  def begin_account_takeover(provider:, uid:, oauth_token:, force_takeover:)
-    session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-    session[ACCT_TAKEOVER_PROVIDER] = provider
-    session[ACCT_TAKEOVER_UID] = uid
-    session[ACCT_TAKEOVER_OAUTH_TOKEN] = oauth_token
-    session[ACCT_TAKEOVER_FORCE_TAKEOVER] = force_takeover
-  end
-
-  def clear_takeover_session_variables
-    return if session.empty?
-    session.delete ACCT_TAKEOVER_EXPIRATION
-    session.delete ACCT_TAKEOVER_PROVIDER
-    session.delete ACCT_TAKEOVER_UID
-    session.delete ACCT_TAKEOVER_OAUTH_TOKEN
-    session.delete ACCT_TAKEOVER_FORCE_TAKEOVER
-  end
-
-  def account_takeover_in_progress?
-    session[ACCT_TAKEOVER_EXPIRATION]&.future?
-  end
-
-  def takeover_manager_options_json
-    return {}.to_json unless account_takeover_in_progress?
-
-    {
-      cleverLinkFlag: session[ACCT_TAKEOVER_PROVIDER],
-      userIDToMerge: session[ACCT_TAKEOVER_UID],
-      mergeAuthToken: session[ACCT_TAKEOVER_OAUTH_TOKEN],
-      forceConnect: session[ACCT_TAKEOVER_FORCE_TAKEOVER],
-    }.to_json
-  end
-
-  def sign_out_but_preserve_takeover_state
-    expiration = session[ACCT_TAKEOVER_EXPIRATION]
-    provider = session[ACCT_TAKEOVER_PROVIDER]
-    uid = session[ACCT_TAKEOVER_UID]
-    oauth_token = session[ACCT_TAKEOVER_OAUTH_TOKEN]
-    force_takeover = session[ACCT_TAKEOVER_FORCE_TAKEOVER]
-
-    sign_out(current_user)
-
-    session[ACCT_TAKEOVER_EXPIRATION] = expiration
-    session[ACCT_TAKEOVER_PROVIDER] = provider
-    session[ACCT_TAKEOVER_UID] = uid
-    session[ACCT_TAKEOVER_OAUTH_TOKEN] = oauth_token
-    session[ACCT_TAKEOVER_FORCE_TAKEOVER] = force_takeover
   end
 
   # Summarize a user and their progress within a certain script.
@@ -184,7 +89,7 @@ module UsersHelper
       end
     end
 
-    user_data[:current_stage] = user.next_unpassed_progression_level(script).stage.id unless exclude_level_progress || script.script_levels.empty?
+    user_data[:current_stage] = user.next_unpassed_progression_level(script)&.lesson&.id unless exclude_level_progress || script.script_levels.empty?
 
     user_data.compact
   end
@@ -213,10 +118,8 @@ module UsersHelper
       user_data[:isTeacher] = true if user.teacher?
       user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
       user_data[:linesOfCode] = user.total_lines
-    else
-      user_data[:linesOfCode] = client_state.lines
+      user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
-    user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     user_data
   end
 
@@ -259,13 +162,44 @@ module UsersHelper
   #   A collection of UserLevel ids where the user was pairing.
   # @return [Hash<Integer, Hash>]
   #   a map from level_id to a progress summary for the level.
-  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:)
+  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:, include_timestamp: false)
     levels = {}
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
         sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel(user)&.id : nil
+        if level.is_a?(BubbleChoice) # we have a parent level
+          # get progress for sublevels to save in levels hash
+          level.sublevels.each do |sublevel|
+            ul = user_levels_by_level.try(:[], sublevel.id)
+            completion_status = activity_css_class(ul)
+            # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
+            submitted = !!ul.try(:submitted) &&
+              !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
+            readonly_answers = !!ul.try(:readonly_answers)
+            locked = ul.try(:locked?, sl.lesson) || sl.lesson.lockable? && !ul
+            if completion_status == LEVEL_STATUS.not_tried
+              # for now, we don't allow authorized teachers to be "locked"
+              if locked && !user.authorized_teacher?
+                levels[level_id] = {
+                  status: LEVEL_STATUS.locked
+                }
+              end
+              next
+            end
+            levels[sublevel.id] = {
+              status: completion_status,
+              result: ul.try(:best_result) || 0,
+              submitted: submitted ? true : nil,
+              readonly_answers: readonly_answers ? true : nil,
+              paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
+              locked: locked ? true : nil,
+              last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
+              time_spent: ul&.time_spent&.to_i
+            }.compact
+          end
+        end
         contained_level_id = level.contained_levels.try(:first).try(:id)
 
         ul = user_levels_by_level.try(:[], sublevel_id || contained_level_id || level_id)
@@ -274,7 +208,7 @@ module UsersHelper
         submitted = !!ul.try(:submitted) &&
           !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
         readonly_answers = !!ul.try(:readonly_answers)
-        locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
+        locked = ul.try(:locked?, sl.lesson) || sl.lesson.lockable? && !ul
 
         if completion_status == LEVEL_STATUS.not_tried
           # for now, we don't allow authorized teachers to be "locked"
@@ -293,6 +227,8 @@ module UsersHelper
           readonly_answers: readonly_answers ? true : nil,
           paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
           locked: locked ? true : nil,
+          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
+          time_spent: ul&.time_spent&.to_i
         }.compact
 
         # Just in case this level has multiple pages, in which case we add an additional
@@ -334,19 +270,11 @@ module UsersHelper
     end
 
     # Go through each page.
-    level.properties["pages"].each do |page|
+    level.pages.each do |page|
       page_valid_result_count = 0
 
-      # Construct an array of the embedded level names used on the page.
-      embedded_level_names = []
-      page["levels"].each do |level_name|
-        embedded_level_names << level_name
-      end
-
-      # Retrieve the level information for those embedded levels.  These results
-      # won't necessarily match the order of level names as requested, but
-      # fortunately we are just accumulating a count and don't mind the order.
-      embedded_levels = Level.where(name: embedded_level_names).to_a
+      # Retrieve the level information for the embedded levels.
+      embedded_levels = page.levels
       embedded_levels.reject! {|l| l.type == 'FreeResponse' && l.optional == 'true'}
       embedded_levels.each do |embedded_level|
         level_id = embedded_level.id

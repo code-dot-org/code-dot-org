@@ -1,5 +1,5 @@
 /** @file Stubbable core setup check behavior for the setup page. */
-import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
+import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
 import {
   isCodeOrgBrowser,
@@ -7,6 +7,8 @@ import {
   gtChrome33,
   isChromeOS
 } from './browserChecks';
+import {BOARD_TYPE, detectBoardTypeFromPort} from './boardUtils';
+import MicroBitBoard from '../boards/microBit/MicroBitBoard';
 
 export default class SetupChecker {
   port = null;
@@ -50,16 +52,22 @@ export default class SetupChecker {
   /**
    * @return {Promise}
    */
-  detectCorrectFirmware() {
-    this.boardController = new CircuitPlaygroundBoard(this.port);
-    return this.boardController.connectToFirmware();
+  detectCorrectFirmware(boardType) {
+    if (boardType === BOARD_TYPE.MICROBIT) {
+      this.boardController = new MicroBitBoard(this.port);
+      return this.boardController.checkExpectedFirmware();
+    } else {
+      this.boardController = new CircuitPlaygroundBoard(this.port);
+      return this.boardController.connectToFirmware();
+    }
   }
 
   /**
-   * @return {Promise}
+   * Return the type of board connected to port.
+   * @return {string}
    */
   detectBoardType() {
-    return this.boardController.detectBoardType();
+    return detectBoardTypeFromPort(this.port);
   }
 
   /**

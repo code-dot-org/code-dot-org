@@ -1,0 +1,19 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-02-18T17:28:33.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Multi-Screen Apps",
+    "teacher_markdown": "#### Cards to Screens\r\n\r\nTo simplify the prototyping process, teams can think of each card that they created in the Paper Prototyping as a separate screen in the App Lab iteration of their app. In reality, screens that are very similar can often be developed as a single screen with content that changes based on user interaction. In the next lesson students will see some examples of how that could work, but it's not expected that they incorporated that kind of functionality in this project.",
+    "reference": "/docs/concepts/app-lab/multi-screen-apps/index.html",
+    "parent_level_id": 16343,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-06 16:37:26 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-20 00:15:51 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</Map>

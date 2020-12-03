@@ -1,9 +1,10 @@
 name 'CSD U3 Sprite Movement Predict Multi_2018'
+editor_experiment ''
 question 'Read this program and predict which of the following animations will be produced.'
-wrong "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>"
-wrong "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>"
-right "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>"
-wrong "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>"
+wrong "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+wrong "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+right "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+wrong "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
 
 markdown <<MARKDOWN
 

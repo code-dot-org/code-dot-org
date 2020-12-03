@@ -4,7 +4,7 @@ Applitools Eyes is a service that lets us upload and compare screenshots of our 
 
 ## Getting an account
 
-Code.org employees as of this writing should receive login details for a shared account. If not, contact Jeremy about getting an account.
+Code.org employees as of this writing should receive login details for a shared account. If not, contact Anthony about getting an account.
 
 ## Add your feature to the eyes file
 

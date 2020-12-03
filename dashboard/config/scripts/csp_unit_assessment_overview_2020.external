@@ -1,0 +1,78 @@
+name 'csp_unit_assessment_overview_2020'
+editor_experiment ''
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# CS Principles Assessment
+
+Read the information below carefully so that you have everything you need before you start and know how to navigate the assessment.
+
+## Things you need
+
+* **Scratch paper and pencil**
+ * There are a few questions for which you might want to do some scratch work on paper.
+
+## How to take the test
+
+* Read each question and select the best answer from the choices provided
+* Every selection you make is automatically saved, but you can change it if you want.
+* Use the orange buttons "Next Page" and "Previous Page" to go forward and backward in the test. Your responses will be saved whether you go forward or backward.
+
+    ![](https://images.code.org/9e697f11d15376aa513dea510dd464d3-image-1463597394595.png)
+
+* You can also navigate using the bubbles at the top of the screen.
+    * Yellow - means you've visited a page but haven't answered all the questions yet.
+    * Green - means you've answered all the questions on a page.
+
+    ![](https://images.code.org/51c792652b3e922665221bba16a8c37c-image-1463598805414.png)
+
+* When you're ready to submit your test go to the LAST page and you'll see a purple "Submit" button. Once you click "submit" the test is sent to your teacher.
+
+    ![](https://images.code.org/194d1918efc8ce3f8621de4e6b2558f3-image-1463597268503.png)
+
+* Note that it is also possible to "unsubmit" your test.  You should **only do this in rare cases** - when you submit the test your teacher sees the time it was submitted.
+* **Make sure** you are clear with your teacher that it's okay to unsubmit and re-submit - you don't want your entire test invalidated because you submitted after you were supposed to be done.
+
+   ![](https://images.code.org/ab068a26c8a230a0180f6f9c5c8d45bf-image-1463600680236.png)
+
+## Good Luck!
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Using these assessments
+
+This assessment is **designed to be in the "style" of the AP** multiple choice assessments but have been written by the Code.org staff. They may in some instances feature language or environments that are specific to the Code.org curriculum.
+
+This assessment is designed to be used in conjunction with the unit project to assess student learning of the objectives in this unit.
+
+---
+
+#### F.A.Q. -- How to prepare, administer, and review assessments
+
+Please see our running **[F.A.Q. document here](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)** which contains:
+
+* screenshots on how to prepare, administer, and review assessments
+* addresses common issues/problems
+
+
+#### Quick summary of how to see / review student answers
+
+1. Go to your [Teacher Dashboard](https://code.org/teacher-dashboard#/)
+2. Select your CS Principles section
+3. You'll see a number of purple tabs including Text Responses, Assessments, etc.
+4. Click **Assessments/Surveys**
+5. From the course selector dropdown, **select the unit that this assessment appeared in (e.g. Unit 1: The Internet)**
+6. For all students who have *submitted* their assessment, you will see two tables:
+  * The first table is a summary view summarizing the percentage correct from all the students who submitted, including the timestamp they submitted on
+  * The second table is a comprehensive list of each answer to each question submitted by each student
+
+    Above both of these tables is a **Download (or export) as csv** button - allowing you to process answers in a spreadsheet (recommended).
+
+7. If you need to allow a student to UNSUBMIT their test, direct the student to navigate to the last page of the test and press "Unsubmit."
+
+**NOTE about UNSUBMITTING:** 
+
+You should make clear rules with your students about unsubmitting a test. Students might think this is a good way to change an answer after the test is over (i.e. cheat) but you'll see a timestamp of when the student submitted the test.  
+
+It's suggested that you simply establish that you will not consider scoring or grading any tests after a particular time.  If it was not submitted before the specified deadline, it's like you didn't receive it.
+MARKDOWN

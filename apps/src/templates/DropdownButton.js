@@ -49,6 +49,8 @@ class DropdownButton extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     color: PropTypes.oneOf(Object.values(Button.ButtonColor)).isRequired,
+    size: PropTypes.string,
+    onClick: PropTypes.func,
     children: props => {
       React.Children.map(props.children, child => {
         if (child.type !== 'a') {
@@ -94,24 +96,38 @@ class DropdownButton extends Component {
       this.collapseDropdown();
     } else {
       this.expandDropdown();
+      if (this.props.onClick) {
+        this.props.onClick();
+      }
     }
   };
 
   onClickChild = (event, childProps) => {
-    this.collapseDropdown();
+    /*
+      In LessonNavigationDropdown we create sections which we want
+      to be able to expand and collapse. Use the no-navigation class
+      name allows us to mark when we want the dropdown to collapse for
+      each click component
+     */
+    if (childProps.className !== 'no-navigation') {
+      this.collapseDropdown();
+    }
+
     if (childProps.onClick) {
       childProps.onClick(event);
     }
   };
 
   render() {
-    const {text, color} = this.props;
+    const {text, color, size} = this.props;
     const {dropdownOpen} = this.state;
 
     return (
       <div style={styles.main}>
         <Button
+          __useDeprecatedTag
           text={text}
+          size={size}
           onClick={this.toggleDropdown}
           icon={dropdownOpen ? 'caret-up' : 'caret-down'}
           iconStyle={styles.icon}
@@ -127,7 +143,8 @@ class DropdownButton extends Component {
                 key={index}
                 style={{
                   ...styles.anchor,
-                  ...(index > 0 && styles.nonFirstAnchor)
+                  ...(index > 0 && styles.nonFirstAnchor),
+                  ...child.props.style
                 }}
               />
             ))}

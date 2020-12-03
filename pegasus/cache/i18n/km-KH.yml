@@ -20,14 +20,14 @@ km-KH:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">តើអ្នកជាគ្រូបង្រៀនផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រ? សូមមើលធនធាន
     CSEdWeek ដ៏ទៃទៀត</a>'
+  csedweek_banner_teachers_text: តើអ្នកជាគ្រូបង្រៀនផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រ? សូមមើលធនធាន
+    CSEdWeek ដ៏ទៃទៀត
   n_have_learned_an_hoc: "<h1>សាកល្បង</h1><h2>កម្មវិធី Hour of Code</h2><h3># ដែលបានផ្តល់ឲ</h3>"
   anybody_can_learn: គ្រប់គ្នាអាចរៀនបាន។
   learn_now: ចាប់ផ្ដើមរៀននៅពេលនេះ
   petition_message: សិស្សទាំងអស់ដែលរៀននៅសាលារៀន គួរតែមានឱកាសបានរៀនអំពីវិទ្យាសាស្រ្តកុំព្យូទ័រ
   petition_sign_message: 'ប្រសិនបើអ្នកយល់ព្រម, ចុះហត្ថលេខាលើឈ្មោះរបស់អ្នក។ ចូលរួម
     # ជាមួយអ្នកដ៏ទៃទៀត។'
-  petition_sign_message_support: 'ប្រសិនបើអ្នកគាំទ្រយើង, ចុះហត្ថលេខាលើឈ្មោះរបស់អ្នក។
-    ចូលរួម # ជាមួយអ្នកដ៏ទៃទៀត។'
   petition_join_others: 'ចូលរួម # ជាមួយអ្នកដ៏ទៃទៀត'
   name: ឈ្មោះ
   email: អ៊ីមែល
@@ -189,6 +189,7 @@ km-KH:
   if_you_enjoyed: ប្រសិនបើអ្នកសប្បាយក្នុងការសិក្សា ចូរប្រាប់មិត្តរបស់អ្នកដើម្បីសាកល្បងវាដែរ!
     យើងចង់អោយមនុស្សគ្រប់គ្នាបានរៀន។
   personalize_certificate: ធ្វើវិញ្ញាបនបត្រផ្ទាល់ខ្លួនរបស់អ្នក
+  print_certificates: បោះពុម្ពវិញ្ញាបនប័ត្រ
   share_achievement: ចែករំលែកសមិទ្ធផលរបស់អ្នក
   beyond_hour_message: សូមបន្តដំណើរជាមួយ <a href='http://studio.code.org'>មេរៀនដ៏ទៃទៀត</a>របស់ពួកយើង
     ឬស្វែងរកជំរើសបន្ថែមដោយទៅកាន់ <a href='/learn/beyond'>រៀនលើសពីមួយម៉ោង</a>។
@@ -359,6 +360,7 @@ km-KH:
   homepage_action_text_signpetition: ចុះហត្ថលេខាលើញត្តិ
   homepage_action_text_wincelebritychat: ឈ្នះការជជែកជាមួយតារាល្បី
   homepage_signpetition_dropdown: ខ្ញុំយល់ព្រម &#x25BE;
+  homepage_signpetition_dropdown_text: ខ្ញុំ​យល់​ព្រម
   homepage_diversity_pledge: បង្កើនការចូលរួមពីគ្រប់ទិសទីពិសេសគឺស្រ្តីនិងសិស្សដែលបានទទួលការរើសអើង។
   homepage_banner_text_prizes: 'កម្មវិធី Hour of Code ហ្នឹងត្រលប់មកវិញសារជាថ្មីនៅថ្ងៃទី
     ៧ដល់១៣ ខែធ្នូ។ '
@@ -740,6 +742,7 @@ km-KH:
     Code.org ដើម្បីជួយសិស្សរបស់អ្នកត្រៀមលក្ខណៈសម្រាប់ការធ្វើតេស្តចូលរៀន ។ ដើម្បីប្រើប្រាស់ការវាស់ស្ទង់ទាំងនេះ
     ដំបូងជ្រើសមេរៀនសំរាប់ថ្នាក់របស់អ្នក រួចជ្រើសរើសមេរៀនចេញពីតារាងជម្រើសខាងលើហើយអ្នកនឹងឃើញចំលើយនៅទីនោះ។
   dashboard_navigation_section_community: ការ​គាំទ្រ
+  dashboard_sections_close: បិទ
   dashboard_students_name: ឈ្មោះ
   dashboard_students_male: ប្រុស
   dashboard_students_female: ស្រី
@@ -811,6 +814,8 @@ km-KH:
   header_about: អំពី
   header_teacher_community: សមាគមន៏នៃគ្រូបង្រៀន
   header_report_bug: រាយការណ៌អំពីកំហុសរបស់កម្មវិធី
+  header_legal_privacy: សិទ្ធបុគ្គល
+  header_legal_tos: លក្ខខណ្ឌ
   user_header_label: សួស្តី%{username}
   user_header_team: ក្រុម
   user_header_settings: គណនី​របស់​ខ្ញុំ

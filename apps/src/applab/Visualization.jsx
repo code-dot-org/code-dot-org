@@ -64,7 +64,7 @@ class Visualization extends React.Component {
       : applabConstants.APP_WIDTH
   };
 
-  handleDisableMaker = () => project.toggleMakerEnabled();
+  handleDisableMaker = () => project.setMakerEnabled(null);
 
   handleTryAgain = () => {
     studioApp().resetButtonClick();

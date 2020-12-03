@@ -12,10 +12,14 @@
     "submittable": "true",
     "allow_user_uploads": "true",
     "peer_reviewable": "false",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "encrypted": "false",
+    "optional": "false",
+    "encrypted_solution": "LLw6cjmcxedkdJfP5+AHxroSW+xWMfgN2P1ErnUIhqCsO6NC12OuK7rMGipm\nKDw3\n"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-08-06 17:31:29 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-08-06 17:31:53 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

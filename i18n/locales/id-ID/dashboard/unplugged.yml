@@ -71,7 +71,7 @@ id:
         title: Gelang biner
         desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
       DigitalFootprint:
-        title: Digital Footprint Kamu
+        title: Digital Footprint Anda
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
       ComputationalThinking:
         title: Berpikir secara komputasi
@@ -107,7 +107,7 @@ id:
         title: Untuk Loop Fun
         desc: Kita tahu bahwa loop memungkinkan kita untuk melakukan sesuatu berulang kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan struktur tambahan yang dibangun langsung di dalam.
       SongwritingWithParameters:
-        title: Parameter penulis lagu
+        title: Menulis Lagu Dengan Parameter
         desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
       BinaryImages:
         title: gambar Biner
@@ -131,24 +131,25 @@ id:
         title: Pendeteksian Benturan dan Teorema Pythagoras
         desc: Menentukan kapan objek pada layar sentuh merupakan aspek penting dari sebagian besar permainan. Dalam pelajaran ini kita akan melihat bagaimana Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau karakter game) yang menyentuh.
       courseA_unplugged_loops:
+        title: Loop Tanpa Komputer
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       courseB_unplugged_MRF:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Dalam perjalanan ini, anda akan 'program' teman-teman anda!
       courseB_unplugged_loopyMRF:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Seperti di "Teman Robot Saya", anda akan"memprogram" teman-teman anda, tapi kali ini dengan loop!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       courseD_unplugged_digitalCitizenship:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital.
       courseE_unplugged_privateInformation:
         title: 'Pendidikan Akal Sehat: Privasi dan Informasi Pribadi '
         desc: Hari ini anda akan belajar perbedaan antara privasi dan informasi pribadi!
       courseF_unplugged_powerOfWords:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       deeper learning description:
         desc: 'terjemahan hilang: en-US.data.unplugged.desc'
@@ -165,7 +166,7 @@ id:
         title: Acara besar
         desc: Para siswa diperkenalkan kepada konsep pemrograman "peristiwa", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan.
       courseB_unplugged_digitalFootprint:
-        title: Digital Footprint Kamu
+        title: Digital Footprint Anda
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
       courseC_unplugged_buildingAFoundation:
         title: Membangun dasar
@@ -192,9 +193,10 @@ id:
         title: gambar Biner
         desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga.
       courseE_unplugged_diceRace:
+        title: 'Algoritme Dunia Nyata: Lomba Dadu'
         desc: Pelajaran ini memanggil cara kita menggunakan algoritma dalam kehidupan kita sehari-hari. Sebagai bagian dari itu, siswa akan mengidentifikasi dan menuliskan algoritma untuk game balapan dadu.
       courseE_unplugged_songwritingParameters:
-        title: Penulisan lagu dengan Parameter
+        title: Penulisan Lagu dengan Parameter
         desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh fungsi).
       courseE_unplugged_internet:
         title: Internet
@@ -215,14 +217,19 @@ id:
         title: Untuk Loop Fun
         desc: Kita tahu bahwa loop memungkinkan kita untuk melakukan sesuatu berulang kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan struktur tambahan yang dibangun langsung di dalam.
       courseF_unplugged_songwritingParameters:
-        title: Parameter penulis lagu
+        title: Menulis Lagu Dengan Parameter
         desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
       swipeRightPassThrough:
         title: Sesi Skenario Perekrutan
+        desc: "# Sesi Skenario Perekrutan\\r\n\\r\n## Usap ke Kanan untuk CS\\r\nUntuk sesi ini, kami akan menggunakan alat bernama \"Swipe Right for CS\", yang telah dikembangkan oleh partner kami di MIT. Dalam Swipe Right for CS, Anda akan membaca beberapa profil siswa sampai selesai dan menimbang pernyataan khusus yang mungkin Anda gunakan untuk meyakinkan siswa tersebut agar mau mendaftar kursus CS Principles Anda. \\r\n\\r\n### Cara Kerjanya\\r\nKetika memutar permainan Swipe Right for CS, Anda akan melihat sederet kutipan yang akan Anda ucapkan kepada masing-masing siswa. Anda harus mengusap kutipan ke kanan yang Anda rasa akan efektif dalam meyakinkan siswa agar mau mendaftar kursus dan mengusap pernyataan ke kiri yang menurut Anda tidak akan efektif. Selama sesi, kami sebagai kelompok akan mendiskusikan pikiran-pikiran Anda tentang jenis pernyataan yang paling efektif dalam menjaring siswa untuk mendaftar di CS, dan Anda berpeluang melihat bagaimana para peserta lain dalam lokakarya Anda mengusap masing-masing argumen. \\r\n\\r\n\\r\nKetika Anda mengklik lanjutkan di bawah ini, kami akan membawa Anda ke permainan, dan meneruskan alamat email Code.org yang Anda gunakan untuk masuk."
       swipeRightPassThrough-test123:
         title: Sesi Skenario Perekrutan
+        desc: "# Sesi Skenario Perekrutan\\r\n\\r\n## Usap ke Kanan untuk CS\\r\nUntuk sesi ini, kami akan menggunakan alat bernama \"Swipe Right for CS\", yang telah dikembangkan oleh partner kami di MIT. Dalam Swipe Right for CS, Anda akan membaca beberapa profil siswa sampai selesai dan menimbang pernyataan khusus yang mungkin Anda gunakan untuk meyakinkan siswa tersebut agar mau mendaftar kursus CS Principles Anda. \\r\n\\r\n### Cara Kerjanya\\r\nKetika memutar permainan Swipe Right for CS, Anda akan melihat sederet kutipan yang akan Anda ucapkan kepada masing-masing siswa. Anda harus mengusap kutipan ke kanan yang Anda rasa akan efektif dalam meyakinkan siswa agar mau mendaftar kursus dan mengusap pernyataan ke kiri yang menurut Anda tidak akan efektif. Selama sesi, kami sebagai kelompok akan mendiskusikan pikiran-pikiran Anda tentang jenis pernyataan yang paling efektif dalam menjaring siswa untuk mendaftar di CS, dan Anda berpeluang melihat bagaimana para peserta lain dalam lokakarya Anda mengusap masing-masing argumen. \\r\n\\r\n\\r\nKetika Anda mengklik lanjutkan di bawah ini, kami akan membawa Anda ke permainan, dan meneruskan alamat email Code.org yang Anda gunakan untuk masuk."
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Teman-teman robot saya
+        desc: Belajar memprogram dengan menulis kode untuk teman-teman Anda!
       PlantASeed_2018:
         title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
         desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting.
@@ -233,6 +240,7 @@ id:
         title: Pergi ke tempat-tempat dengan aman
         desc: Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet.
       courseA_unplugged_loops_2018:
+        title: Loop Tanpa Komputer
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       BigEvent_2018:
         title: Acara besar
@@ -241,16 +249,16 @@ id:
         title: Pemrograman grafis diatas kertas
         desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       Conditionals_2018:
         title: Kondisi
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
       DigitalFootprint_2018:
-        title: Digital Footprint Kamu
+        title: Digital Footprint Anda
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
       BinaryImages_2018:
         title: gambar Biner
@@ -266,29 +274,67 @@ id:
         desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
       MoveItMoveIt_2018:
         title: Gerakkan itu, Gerakkan itu
+      courseB_unplugged_CnC_2018:
+        title: Berkreasi dan Bermain Jujur itu Hebat
+        desc: Dipinjamkan ke  Computer Science Fundamentals oleh tim yang bekerja di bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu para murid memahami proses kreatif dalam berbagi dan inspirasi.  Bersamaan dengan itu, promosi ungkapan kreatif dan perlunya kejujuran dalam karya kreatif menyusul nomor dua.
+      courseE_unplugged_CnC_2018:
+        title: Berbagi Secara Digital
+        desc: Meminjam Dasar-Dasar Ilmu Komputer dari tim di bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu siswa memahami tantangan dan manfaat menghargai hak milik dan hak cipta, terutama di lingkungan digital. Para siswa perlu didorong untuk menghargai hak-hak artis sebagai unsur penting menjadi seorang warga digital yang beretika.
       RelayProgramming_2018:
         title: Pemrograman bergiliran
+        desc: Aktivitas ini akan dimulai dengan pelajaran singkat tentang debugging dan kegigihan, lalu segera beralih ke berpacu dengan waktu pada saat para siswa menyebar ke dalam tim dan bekerja sama untuk membuat sebuah program, satu instruksi setiap saat.
       courseB_unplugged_MRF_2019:
         title: Teman-teman robot saya
+        desc: Belajar memprogram dengan menulis kode untuk teman-teman Anda!
+      BuildingAFoundation_2019:
+        title: 'terjemahan tidak ada: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'terjemahan tidak ada: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Teman-teman Robot Saya yang Mengulang-ulang
       Conditionals_2019:
         title: Kondisi
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'terjemahan tidak ada: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'terjemahan tidak ada: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'terjemahan tidak ada: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'terjemahan tidak ada: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'terjemahan tidak ada: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'terjemahan tidak ada: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Pemrograman grafis diatas kertas
         desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar.
       RelayProgramming_2018_2019:
         title: Pemrograman bergiliran
+        desc: Aktivitas ini akan dimulai dengan pelajaran singkat tentang debugging dan kegigihan, lalu segera beralih ke berpacu dengan waktu pada saat para siswa menyebar ke dalam tim dan bekerja sama untuk membuat sebuah program, satu instruksi setiap saat.
       courseD_unplugged_digitalCitizenship_2019:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara Digital.
       BinaryImages_2019:
         title: gambar Biner
         desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga.
+      courseE_unplugged_privateInformation_2019:
+        title: Informasi Privat dan Pribadi
+        desc: Dikembangkan oleh Common Sense Education, pelajaran ini mengajarkan perbedaan antara informasi yang aman untuk dibagikan secara online dengan informasi yang tidak aman.
+      SongwritingParameters_2019:
+        title: 'terjemahan tidak ada: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'terjemahan tidak ada: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Berbagi Secara Digital
+        desc: Meminjam Dasar-Dasar Ilmu Komputer dari tim di bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu siswa memahami tantangan dan manfaat menghargai hak milik dan hak cipta, terutama di lingkungan digital. Para siswa perlu didorong untuk menghargai hak-hak artis sebagai unsur penting menjadi seorang warga digital yang beretika.
+      Internet_2019:
+        title: 'terjemahan tidak ada: en-US.data.unplugged.Internet_2018.title'
+        desc: 'terjemahan tidak ada: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'terjemahan tidak ada: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'terjemahan tidak ada: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Dapat berulang-ulang
         desc: Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang) melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian diminta untuk mengulanginya.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Kegiatan tanpa komputer
+        title: Aktivitas Offline
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       BigEvent_2019:
         title: Acara besar
@@ -299,6 +345,8 @@ id:
       PaperPlanes_2019:
         title: 'Algoritma kehidupan nyata: Pesawat Kertas'
         desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma memainkan peranan yang amat penting.
+      test-uid-passthrough:
+        desc: "# Sesi Skenario Perekrutan\\r\n\\r\n## Usap ke Kanan untuk CS\\r\nUntuk sesi ini, kami akan menggunakan alat bernama \"Swipe Right for CS\", yang telah dikembangkan oleh partner kami di MIT. Dalam Swipe Right for CS, Anda akan membaca beberapa profil siswa sampai selesai dan menimbang pernyataan khusus yang mungkin Anda gunakan untuk meyakinkannya agar mau mendaftar kursus CS Principles Anda. \\r\n\\r\n## Cara Kerjanya\\r\nKetika memutar permainan Swipe Right for CS, Anda akan melihat sederet kutipan yang akan Anda ucapkan kepada masing-masing siswa. Anda harus mengusap kutipan ke kanan yang Anda rasa akan efektif dalam meyakinkan siswa tersebut agar mau mendaftar kursus dan mengusap pernyataan ke kiri yang menurut Anda tidak akan efektif. Selama sesi, kami sebagai kelompok akan mendiskusikan pikiran-pikiran Anda tentang jenis pernyataan yang paling efektif dalam menjaring siswa untuk mendaftar di CS, dan Anda berpeluang melihat bagaimana para peserta lain dalam lokakarya Anda mengusap masing-masing argumen. \\r\n<br><br><br><br>\\r\n\\r\n<span style=\"display:none\">submitButton next-stage</span>\\r\n\\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\"> Klik di sini untuk memainkan Swipe Right for CS!</a>\\r\n\\r."
       PlantASeed_2019:
         title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
         desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting.
@@ -309,14 +357,34 @@ id:
         title: Pergi ke tempat-tempat dengan aman
         desc: Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet.
       courseA_unplugged_loops_2019:
+        title: Loop Tanpa Komputer
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       MoveItMoveIt_2019:
         title: Gerakkan itu, Gerakkan itu
       DigitalFootprint_2019:
-        title: Digital Footprint Kamu
+        title: Digital Footprint Anda
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
+      courseB_unplugged_CnC_2019:
+        title: Berkreasi dan Bermain Jujur itu Hebat
+        desc: Dipinjamkan ke  Computer Science Fundamentals oleh tim yang bekerja di bidang Hak Cipta dan Kreativitas, pelajaran ini hadir untuk membantu para murid memahami proses kreatif dalam berbagi dan inspirasi.  Bersamaan dengan itu, promosi ungkapan kreatif dan perlunya kejujuran dalam karya kreatif menyusul nomor dua.
+      GraphingData_2019:
+        title: Penggambaran Data
+        desc: Dalam pelajaran ini, siswa akan mengumpulkan data dari proyek Play Lab atau skenario dunia nyata dan menggunakannya untuk membuat prediksi.
+      courseE_unplugged_accessAbility_2019:
+        title: Kemampuan Akses
+        desc: Pelajari tentang aksesibilitas dan nilai empati melalui curah gugasan dan desain solusi yang mudah diakses untuk aplikasi hipotetis.
+      courseE_simon_says_2019:
+        title: Simon Mengatakan
+        desc: "Mainkan permainan dan pikirkan perintah apa saja yang dibutuhkan untuk mendapatkan hasil yang tepat.\\r\n\\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Kata Sandi yang Kuat
+        desc: Telusuri alasan orang menggunakan kata sandi, pelajari manfaat menggunakan kata sandi, dan temukan strategi untuk membuat dan mempertahankan kata sandi yang kuat dan aman.
       timeforcs_demo_crowdsourcing:
         title: Sumber kerumunan
+        desc: '_Catatan Josh: berbeda dengan pelajaran pertama, saya sudah memformat pelajaran ini seperti unplugged lesson yang biasa._'
       timeforcs_demo_conditionals:
         title: Kondisi
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
+      TheRightApp_2019:
+        title: Aplikasi yang Tepat
+        desc: "* Semua orang menggunakan komputer dewasa ini, terutama telepon pintar.\\r\n* Aplikasi telepon pintar, atau \"aplikasi\", membantu orang melakukan hal-hal seperti berbicara dengan teman, mendengarkan musik, berbelanja, atau sekadar menjelajahi web.\\r\n* Pemrogram perlu memahami kebutuhan orang lain dan merancang aplikasi dengan mempertimbangkan kebutuhan tersebut!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"

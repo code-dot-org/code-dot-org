@@ -46,31 +46,40 @@
       <button id="publish-to-project-gallery-button">
           <%= msg.publish() %>
       </button>
-    <% } else if (options.saveToLegacyGalleryUrl && !options.disableSaveToGallery) { %>
-      <button id="save-to-legacy-gallery-button">
-        <%= msg.saveAndPublish() %>
-      </button>
     <% } %>
     <% if (options.downloadReplayVideo) { %>
       <!-- Mount point for DownloadReplayVideoButton component. -->
       <span id="download-replay-video-container"></span>
     <% } %>
-    <% if (options.sendToPhone) { %>
-      <button id="sharing-phone">
-        <i class="fa fa-mobile fa-lg"></i>
-        <%= msg.sendToPhone() %>
-      </button>
-    <% } %>
+    <button id="sharing-phone">
+      <i class="fa fa-mobile fa-lg"></i>
+      &nbsp;
+      <%= msg.sendToPhone() %>
+    </button>
     <div id="download-replay-video-error" style="font-size: 12px; display: none;">
       <%= msg.downloadReplayVideoButtonError() %>
     </div>
   </div>
-  <div id="send-to-phone" style="display: none">
-    <label for="phone">Enter a US phone number:</label>
-    <input type="tel" id="phone" name="phone" />
-    <button id="phone-submit" onClick="return false;">Send</button>
-    <div id="phone-charges">A text message will be sent via <a href="http://twilio.com" target="_blank">Twilio</a>. Charges may apply to the recipient.</div>
-  </div>
+
 <% } %>
 
+</div>
+
+<% /* Always show the "Send to phone" button, and when it's clicked to toggle
+    * the section below into view, the QR Code, but only show the phone number
+    * in that section below when options.isUS is true, which is done
+    * for US users. */ %>
+<div id="send-to-phone" style="display: none">
+  <% if (options.isUS) { %>
+    <div id="send-to-phone-left">
+      <label for="phone">Enter a US phone number:</label>
+      <input type="tel" id="phone" name="phone" />
+      <button id="phone-submit" onClick="return false;">Send</button>
+      <div id="phone-charges">A text message will be sent via <a href="http://twilio.com" target="_blank">Twilio</a>. Charges may apply to the recipient.</div>
+    </div>
+  <% } %>
+  <div id="send-to-phone-right">
+    <label><%= msg.scanQRCode() %></label>
+    <div id="send-to-phone-qr-code"></div>
+  </div>
 </div>

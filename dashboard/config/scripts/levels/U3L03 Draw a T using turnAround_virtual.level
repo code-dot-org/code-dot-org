@@ -1,0 +1,153 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:00.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 0
+        },
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Draw a plus sign using the provided version of turnAround().  (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "slider_speed": "0.1",
+    "start_blocks": "function turnAround(){\r\n  turnLeft();\r\n  turnLeft();\r\n}",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "encrypted_examples": "LWhgsLs7uYom59/CnNUVNnKei0bWps+MnDHWc/IY1E04ThmI9epw094RGM0Z\n6GfG\n",
+    "long_instructions": "# Do This:\r\nGet some more practice **calling** a function by using `turnAround()` along with your old friend the `moveForward()` function to create a plus sign that is centered at the turtle's first position, as shown below. Even though you just wrote this function, we've already **defined** `turnAround()` for you. Remember, add lines of code that call the function *above* the definition.\r\n\r\n*NOTE: the turtle should end where it started, which is also the middle of the plus sign, as shown below. Each of the four segments of the plus sign are one `moveForward()` long.* \r\n\r\n![](https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14 AM.png)",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "true",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem - use only turnLeft()."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
+          "turnAround"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to define a function called turnAround and call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
+      },
+      {
+        "entries": [
+          "moveForward",
+          "moveForward",
+          "moveForward",
+          "moveForward"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "It doesn't seem like you are drawing enough line segments to draw the figure."
+      }
+    ],
+    "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "teacher_markdown": "The exemplar programs have been written in the style that will be favored in this curriculum. These choices do not affect the functionality of a program but may affect the clarity with which a program can be read. In practice, so long as a consistent style is used, then programs will be easier to read and write.\r\n    \r\n**camelCase:** Function names are written in the camelCase. \"Camel Case\" refers to a stylized way of writing compound words or phrases. This means that multi-word function names are made a single word which begins in lowercase and uses uppercase letters to indicate the start of a new word. For example: camelCaseFunction()\r\n    \r\n**Function Definitions at Bottom:** Function definitions appear at the bottom of the program. This is done so that the first line of the program is the first line of code actually run. The opposite format is also very common.\r\n    \r\n**Functions Names Can't Start with Numbers:** In most programming languages, including JavaScript, function names are not allowed to begin with numbers or most symbols. Underscore, however, is allowed.",
+    "parent_level_id": 16894,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:52:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,17 +1,17 @@
 Before('@as_student') do
-  steps "Given I create a student named \"Test #{rand(100000)}_Student\""
+  steps "Given I create a student named \"Student #{rand(100000)}\""
 end
 
 Before('@as_young_student') do
-  steps "Given I create a young student named \"Test #{rand(100000)}_Student\""
+  steps "Given I create a young student named \"Student #{rand(100000)}\""
 end
 
 Before('@as_taught_student') do
-  steps "Given I create a teacher-associated student named \"Taught #{rand(100000)}_Student\""
+  steps "Given I create a teacher-associated student named \"Student #{rand(100000)}\""
 end
 
 Before('@as_authorized_taught_student') do
-  steps "Given I create an authorized teacher-associated student named \"Taught #{rand(100000)}_Student\""
+  steps "Given I create an authorized teacher-associated student named \"Student #{rand(100000)}\""
 end
 
 Before('@as_teacher') do

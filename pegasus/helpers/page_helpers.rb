@@ -41,7 +41,7 @@ def inline_css(css)
     $log.warn "Too much inlined CSS in page! [#{@total_css} bytes]" if @total_css > max_inline_css
   end
 
-  <<-HTML
+  <<-HTML.html_safe
 <style>
 #{css_string.indent(2)}
 </style>
@@ -86,5 +86,5 @@ def youtube_embed(youtube_url)
     youtube_id = $5
   end
 
-  %Q{<iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/#{youtube_id}" frameborder="0" allowfullscreen></iframe>}
+  %Q{<iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/#{youtube_id}" frameborder="0" allowfullscreen></iframe>}.html_safe
 end

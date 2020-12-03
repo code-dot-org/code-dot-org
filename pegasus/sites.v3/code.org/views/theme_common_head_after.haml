@@ -13,5 +13,5 @@
 %script{src: webpack_asset_path('js/vendors.js')}
 %script{:defer => "defer", src: webpack_asset_path("js/code.org/views/theme_common_head_after.js")}
 
-- if header['chart']
+- if @header['chart']
   %script{src:'https://www.google.com/jsapi'}

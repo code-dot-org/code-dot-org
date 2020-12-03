@@ -3,10 +3,10 @@ type 'multi2'
 height '80'
 layout 'wrap'
 
-right '<img src="https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG" width=350>'
-wrong '<img src="https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG" width=350>'
-wrong '<img src="https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG">'
-right '<img src="https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG">'
+right 'https://images.code.org/a2a9c7c5a2ac9c73b0d3fe799fc89d57-image-1461456640433.PNG,350'
+wrong 'https://images.code.org/646c5bb5dea427f7b537afcdd641a3ce-image-1461456642237.PNG,350'
+wrong 'https://images.code.org/c0618fe6b648c39fe966f2a4e5478cd8-image-1461456643692.PNG'
+right 'https://images.code.org/b725cf145af5a2de80660713a9e64319-image-1461456645301.PNG'
 
 
 markdown <<MARKDOWN

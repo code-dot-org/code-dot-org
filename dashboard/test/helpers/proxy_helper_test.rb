@@ -43,7 +43,7 @@ class ProxyHelperTest < ActionView::TestCase
     hostname = 'resolves.to.private.ip.example.net'
 
     IPSocket.expects(:getaddress).with(hostname).returns('169.254.0.0')
-    IPSocket.expects(:getaddress).with(CDO.dashboard_hostname).returns('127.0.0.1')
+    ProxyHelper.stubs(:dashboard_ip_address).returns('127.0.0.1')
     refute allowed_ip_address?('resolves.to.private.ip.example.net')
   end
 

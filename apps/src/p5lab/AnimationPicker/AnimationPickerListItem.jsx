@@ -46,6 +46,9 @@ const styles = {
     whiteSpace: 'nowrap',
     overflow: 'hidden'
   },
+  noLabel: {
+    paddingBottom: 10
+  },
   labelIcon: {
     fontStyle: 'italic'
   },
@@ -58,27 +61,44 @@ class AnimationPickerListItem extends React.Component {
   static propTypes = {
     animationProps: shapes.AnimationProps,
     icon: PropTypes.string,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
     category: PropTypes.string
   };
 
+  state = {
+    loaded: false
+  };
+
   render() {
+    const rootStyle = [styles.root, !this.props.label && styles.noLabel];
+
     const thumbnailStyle = [
       styles.thumbnail,
-      this.props.icon && styles.thumbnailIcon
+      this.props.icon && styles.thumbnailIcon,
+      this.props.animationProps && {
+        display: this.state.loaded ? 'block' : 'none'
+      }
     ];
 
-    const labelStyle = [styles.label, this.props.icon && styles.labelIcon];
+    const labelStyle = [
+      styles.label,
+      this.props.icon && styles.labelIcon,
+      this.props.animationProps && {
+        display: this.state.loaded ? 'block' : 'none'
+      }
+    ];
 
     const iconImageSrc = this.props.category
-      ? `/blockly/media/gamelab/animation-previews/${this.props.category}.png`
+      ? `/blockly/media/gamelab/animation-previews/category_${
+          this.props.category
+        }.png`
       : '';
 
     return (
       <div
-        style={styles.root}
+        style={rootStyle}
         onClick={this.props.onClick}
         className="uitest-animation-picker-item"
       >
@@ -92,6 +112,7 @@ class AnimationPickerListItem extends React.Component {
               playBehavior={
                 !this.props.playAnimations ? PlayBehavior.NEVER_PLAY : null
               }
+              onPreviewLoad={() => this.setState({loaded: true})}
             />
           )}
           {this.props.icon && <i className={'fa fa-' + this.props.icon} />}
@@ -103,7 +124,7 @@ class AnimationPickerListItem extends React.Component {
             />
           )}
         </div>
-        <div style={labelStyle}>{this.props.label}</div>
+        {this.props.label && <div style={labelStyle}>{this.props.label}</div>}
       </div>
     );
   }

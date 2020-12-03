@@ -1,0 +1,583 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+KIRKSVILLE AREA TECH. CTR.,MO-001091-1100001091,291674000915,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIRKSVILLE AREA TECH. CTR.,MO-001091-1100001091,291674000915,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIRKSVILLE AREA TECH. CTR.,MO-001091-1100001091,291674000915,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIRKSVILLE AREA TECH. CTR.,MO-001091-1100001091,291674000915,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIRKSVILLE AREA TECH. CTR.,MO-001091-1100001091,291674000915,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ADAIR CO. HIGH,MO-001092-1050001092,290579000125,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH ANDREW HIGH,MO-002089-1050002089,292271001251,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAVANNAH HIGH,MO-002097-1050002097,292757001693,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TARKIO HIGH,MO-003031-1050003031,292994002067,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROCK PORT HIGH,MO-003032-1050003032,292679001613,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COMMUNITY HIGH,MO-004106-1050004106,291002000319,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VAN-FAR JR./SR. HIGH,MO-004109-1050004109,293078002124,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DAVIS H. HART CAREER CTR.,MO-004110-1100004110,292081001135,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHWEST MIDDLE,MO-005121-3000005121,292871002801,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CASSVILLE HIGH,MO-005123-1050005123,290817000219,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CASSVILLE HIGH,MO-005123-1050005123,290817000219,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PURDY HIGH,MO-005124-1050005124,292562001502,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MONETT HIGH,MO-005128-1050005128,292112001162,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MONETT HIGH,MO-005128-1050005128,292112001162,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERAL MIDDLE,MO-006101-3000006101,291851002719,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ADRIAN SR. HIGH,MO-007123-1050007123,290285000002,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ADRIAN SR. HIGH,MO-007123-1050007123,290285000002,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ADRIAN SR. HIGH,MO-007123-1050007123,290285000002,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HUME HIGH,MO-007125-1050007125,291533000699,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HUME HIGH,MO-007125-1050007125,291533000699,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINCOLN HIGH,MO-008106-1050008106,291867001016,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COLE CAMP HIGH,MO-008111-1050008111,290990000293,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MEADOW HEIGHTS MIDDLE SCHOOL,MO-009077-3000009077,292364003339,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MEADOW HEIGHTS MIDDLE SCHOOL,MO-009077-3000009077,292364003339,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HALLSVILLE HIGH,MO-010089-1050010089,291356000578,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARRISBURG HIGH,MO-010092-1050010092,291371000599,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FREDERICK DOUGLASS HIGH,MO-010093-1020010093,290100002281,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JEFFERSON MIDDLE SCHOOL,MO-010093-2050010093,290100000304,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAKLAND MIDDLE SCHOOL,MO-010093-2060010093,290100001402,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAKLAND MIDDLE SCHOOL,MO-010093-2060010093,290100001402,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST MIDDLE SCHOOL,MO-010093-2075010093,290100000317,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ANN HAWKINS GENTRY MIDDLE,MO-010093-3000010093,290100000841,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SMITHTON MIDDLE,MO-010093-3040010093,290100001408,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JOHN B. LANGE MIDDLE,MO-010093-3060010093,290100001946,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MID-BUCHANAN SR. HIGH,MO-011078-1050011078,291194000445,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAFAYETTE HIGH,MO-011082-1080011082,292706001660,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POPLAR BLUFF TECH. CAREER CTR.,MO-012109-1100012109,292545001466,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POPLAR BLUFF TECH. CAREER CTR.,MO-012109-1100012109,292545001466,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EUGENE FIELD ELEM.,MO-012109-4020012109,292545001467,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAKE ROAD ELEM.,MO-012109-4080012109,292545001471,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAK GROVE ELEM.,MO-012109-5040012109,292545001474,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+O'NEAL ELEM.,MO-012109-5060012109,292545001473,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TWIN RIVERS HIGH,MO-012110-1050012110,293052002095,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PENNEY HIGH,MO-013055-1050013055,291359000580,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PENNEY HIGH,MO-013055-1050013055,291359000580,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PENNEY HIGH,MO-013055-1050013055,291359000580,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+POLO HIGH,MO-013059-1050013059,292541001465,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRAYMER HIGH,MO-013061-1050013061,290582000127,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FULTON SR. HIGH,MO-014129-1050014129,291255000524,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FULTON MIDDLE,MO-014129-3000014129,291255002525,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMDENTON HIGH,MO-015002-1050015002,290699000175,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMDENTON HIGH,MO-015002-1050015002,290699000175,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMDENTON HIGH,MO-015002-1050015002,290699000175,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMDENTON HIGH,MO-015002-1050015002,290699000175,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-016096-1050016096,290712000186,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAPE GIRARDEAU CAR & TECH CTR.,MO-016096-1100016096,290712000192,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL JR. HIGH,MO-016096-2050016096,290712000185,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL JR. HIGH,MO-016096-2050016096,290712000185,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MIDDLE SCHOOL,MO-017125-3000017125,290738000311,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VAN BUREN HIGH,MO-018050-1050018050,293075002121,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RAYMORE-PECULIAR SR. HIGH,MO-019142-1050019142,292373001424,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RAYMORE-PECULIAR SR. HIGH,MO-019142-1050019142,292373001424,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SHERWOOD HIGH,MO-019144-1050019144,291032000335,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAST LYNNE ELEM.,MO-019147-4020019147,291116000384,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAST LYNNE ELEM.,MO-019147-4020019147,291116000384,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PLEASANT HILL HIGH,MO-019148-1050019148,292533001461,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARRISONVILLE MIDDLE,MO-019149-3000019149,291376002659,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARRISONVILLE MIDDLE,MO-019149-3000019149,291376002659,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HARRISONVILLE MIDDLE,MO-019149-3000019149,291376002659,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DREXEL HIGH,MO-019150-1050019150,291107000379,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BELTON HIGH,MO-019152-1050019152,290462000055,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STOCKTON HIGH,MO-020001-1050020001,292952002044,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STOCKTON HIGH,MO-020001-1050020001,292952002044,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STOCKTON MIDDLE,MO-020001-3000020001,292952000089,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EL DORADO SPRINGS HIGH,MO-020002-1050020002,291131000398,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EL DORADO SPRINGS HIGH,MO-020002-1050020002,291131000398,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EL DORADO SPRINGS MIDDLE,MO-020002-3000020002,291131002660,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EL DORADO SPRINGS MIDDLE,MO-020002-3000020002,291131002660,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KEYTESVILLE HIGH,MO-021150-1050021150,291653000905,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALISBURY HIGH,MO-021151-1050021151,292752001685,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHADWICK HIGH,MO-022088-1050022088,290843000246,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NIXA HIGH,MO-022089-1050022089,292253000424,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NIXA HIGH,MO-022089-1050022089,292253000424,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SPARTA HIGH,MO-022090-1050022090,292874001776,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLEVER HIGH,MO-022092-1050022092,290978000282,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLEVER HIGH,MO-022092-1050022092,290978000282,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OZARK HIGH,MO-022093-1050022093,292343001351,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OZARK HIGH,MO-022093-1050022093,292343001351,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OZARK HIGH,MO-022093-1050022093,292343001351,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OZARK JR. HIGH,MO-022093-2050022093,292343002438,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SPOKANE HIGH,MO-022094-1050022094,292880001779,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLARK CO. MIDDLE,MO-023101-3000023101,291638001656,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLARK CO. MIDDLE,MO-023101-3000023101,291638001656,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KEARNEY HIGH,MO-024086-1050024086,291645000894,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SMITHVILLE MIDDLE,MO-024087-3000024087,292841000070,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EXCELSIOR SPRINGS HIGH,MO-024089-1075024089,291165000420,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EXCELSIOR SPRINGS HIGH,MO-024089-1075024089,291165000420,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EXCELSIOR SPRINGS MIDDLE,MO-024089-3000024089,291165000418,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HIGH,MO-024090-1050024090,291854001011,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HIGH,MO-024090-1050024090,291854001011,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HIGH,MO-024090-1050024090,291854001011,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY NORTH HIGH SCHOOL,MO-024090-1070024090,291854003148,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY NORTH HIGH SCHOOL,MO-024090-1070024090,291854003148,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH KANSAS CITY HIGH,MO-024093-1050024093,292280001284,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAK PARK HIGH,MO-024093-1075024093,292280001286,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAK PARK HIGH,MO-024093-1075024093,292280001286,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STALEY HIGH,MO-024093-1080024093,292280003083,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STALEY HIGH,MO-024093-1080024093,292280003083,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WINNETONKA HIGH,MO-024093-1090024093,292280001293,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WINNETONKA HIGH,MO-024093-1090024093,292280001293,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMERON HIGH,MO-025001-1050025001,290702000176,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMERON HIGH,MO-025001-1050025001,290702000176,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMERON VETERANS MIDDLE,MO-025001-3000025001,290702000177,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LATHROP HIGH,MO-025002-1050025002,291797000960,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LATHROP HIGH,MO-025002-1050025002,291797000960,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PLATTSBURG HIGH,MO-025003-1050025003,292529001458,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLINTON CO. R-III MIDDLE,MO-025003-3000025003,292529000846,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLINTON CO. R-III MIDDLE,MO-025003-3000025003,292529000846,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLAIR OAKS HIGH,MO-026002-1050026002,290993000295,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EUGENE HIGH,MO-026005-1050026005,291155000411,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEWIS AND CLARK MIDDLE,MO-026006-3000026006,291619000476,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEWIS AND CLARK MIDDLE,MO-026006-3000026006,291619000476,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THOMAS JEFFERSON MIDDLE,MO-026006-3020026006,291619000495,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THOMAS JEFFERSON MIDDLE,MO-026006-3020026006,291619000495,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOONSLICK TECHNICAL EDUC. CTR.,MO-027061-1100027061,290558000101,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOONSLICK TECHNICAL EDUC. CTR.,MO-027061-1100027061,290558000101,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DADEVILLE SR. HIGH,MO-029002-1050029002,291044000345,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH DAVIESS ELEM.,MO-031118-4020031118,291563000740,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OSBORN HIGH,MO-032054-1050032054,292325001338,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNION STAR HIGH,MO-032056-1050032056,293060002103,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SALEM SR. HIGH,MO-033090-1050033090,292709001678,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AVA MIDDLE,MO-034124-3000034124,290405002548,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AVA MIDDLE,MO-034124-3000034124,290405002548,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AVA MIDDLE,MO-034124-3000034124,290405002548,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MALDEN HIGH,MO-035092-1050035092,291989001058,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAMPBELL HIGH,MO-035093-1050035093,290705000180,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PACIFIC HIGH,MO-036126-1050036126,292346001356,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNION HIGH,MO-036131-1050036131,293057002101,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLARK-VITT ELEM.,MO-036131-4010036131,293057002096,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BEAUFORT ELEM.,MO-036131-4020036131,293057002097,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL ELEM.,MO-036131-4040036131,293057002098,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST. CLAIR HIGH,MO-036136-1050036136,292910001864,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SULLIVAN SR. HIGH,MO-036137-1050036137,292976002057,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SULLIVAN MIDDLE,MO-036137-3000036137,292976002056,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON HIGH,MO-036139-1050036139,293111002163,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON HIGH,MO-036139-1050036139,293111002163,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HERMANN HIGH,MO-037039-1050037039,291428000646,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HERMANN MIDDLE,MO-037039-3000037039,291428002464,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALBANY HIGH,MO-038046-1050038046,290297000010,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALBANY HIGH,MO-038046-1050038046,290297000010,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ALBANY MIDDLE,MO-038046-3000038046,290297001478,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLARD HIGH,MO-039133-1050039133,293201002243,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLARD HIGH,MO-039133-1050039133,293201002243,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLARD INTERMEDIATE NORTH,MO-039133-4000039133,293201002879,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLARD INTERMEDIATE-SOUTH,MO-039133-4090039133,293201002879,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+REPUBLIC HIGH,MO-039134-1050039134,292622001541,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+REPUBLIC HIGH,MO-039134-1050039134,292622001541,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+REPUBLIC MIDDLE,MO-039134-3000039134,292622002302,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ASH GROVE HIGH,MO-039135-1050039135,290327000028,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ASH GROVE HIGH,MO-039135-1050039135,290327000028,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ASH GROVE HIGH,MO-039135-1050039135,290327000028,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STRAFFORD HIGH,MO-039137-1050039137,292964002050,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STRAFFORD ELEM.,MO-039137-4020039137,292964002049,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LOGAN-ROGERSVILLE HIGH,MO-039139-1050039139,291917001037,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LOGAN-ROGERSVILLE HIGH,MO-039139-1050039139,291917001037,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LOGAN-ROGERSVILLE MIDDLE,MO-039139-3050039139,291917002433,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-039141-1050039141,292886001786,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-039141-1050039141,292886001786,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-039141-1050039141,292886001786,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-039141-1050039141,292886001786,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GLENDALE HIGH,MO-039141-1075039141,292886001796,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HILLCREST HIGH,MO-039141-1080039141,292886001800,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KICKAPOO HIGH,MO-039141-1085039141,292886001804,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARKVIEW HIGH,MO-039141-1095039141,292886001808,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARKVIEW HIGH,MO-039141-1095039141,292886001808,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PERSHING MIDDLE,MO-039141-3080039141,292886001811,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILSON'S CREEK 5-6 INTER. CTR.,MO-039141-4830039141,292886002865,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FAIR GROVE HIGH,MO-039142-1050039142,291170000429,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PLEASANT VIEW ELEM.,MO-040103-4020040103,291344000571,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TRENTON MIDDLE,MO-040107-3000040107,293036002573,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH HARRISON HIGH,MO-041002-1050041002,290000201642,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WINDSOR HIGH,MO-042111-1050042111,293211002255,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MONTROSE HIGH,MO-042121-1050042121,292136001175,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLINTON TECHNICAL SCH.,MO-042124-1100042124,290986000285,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLINTON TECHNICAL SCH.,MO-042124-1100042124,290986000285,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SKYLINE HIGH,MO-043001-1050043001,291432002372,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SKYLINE MIDDLE,MO-043001-3000043001,291432002794,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SKYLINE ELEM.,MO-043001-4020043001,291432002371,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WHEATLAND HIGH,MO-043002-1050043002,293192002235,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEAUBLEAU HIGH,MO-043003-1050043003,293146002181,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HERMITAGE HIGH,MO-043004-1050043004,291431000649,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUND CITY HIGH,MO-044083-1050044083,292148001180,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUND CITY HIGH,MO-044083-1050044083,292148001180,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY SR. HIGH,MO-046130-1050046130,292154001186,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH CENTRAL CAREER CTR.,MO-046134-1100046134,293168002216,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FAIRVIEW ELEM.,MO-046140-4020046140,291185000435,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FAIRVIEW ELEM.,MO-046140-4020046140,291185000435,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH IRON HIGH,MO-047060-1050047060,292847001759,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ARCADIA VALLEY HIGH,MO-047062-1050047062,290315000022,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORT OSAGE HIGH,MO-048066-1050048066,291229000496,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORT OSAGE HIGH,MO-048066-1050048066,291229000496,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORT OSAGE HIGH,MO-048066-1050048066,291229000496,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CAR. & TECH. CTR. AT FT. OSAGE,MO-048066-1100048066,291229000488,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OSAGE TRAIL MIDDLE,MO-048066-3000048066,291229000494,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLUE SPRINGS HIGH,MO-048068-1050048068,290531000085,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLUE SPRINGS HIGH SCHOOL CAMPU,MO-048068-1060048068,290531002735,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLUE SPRINGS SOUTH HIGH,MO-048068-1075048068,290531000170,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BLUE SPRINGS SOUTH HIGH,MO-048068-1075048068,290531000170,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAIN VALLEY HIGH,MO-048069-1050048069,291308000546,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAIN VALLEY HIGH,MO-048069-1050048069,291308000546,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAIN VALLEY SOUTH MIDDLE SCHL,MO-048069-3000048069,291308002463,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAK GROVE HIGH,MO-048070-1050048070,292301001317,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAK GROVE HIGH,MO-048070-1050048070,292301001317,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAK GROVE MIDDLE,MO-048070-3000048070,292301001318,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEE'S SUMMIT SR. HIGH,MO-048071-1050048071,291830000983,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEE'S SUMMIT SR. HIGH,MO-048071-1050048071,291830000983,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEE'S SUMMIT NORTH HIGH,MO-048071-1070048071,291830001481,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEE'S SUMMIT NORTH HIGH,MO-048071-1070048071,291830001481,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEE'S SUMMIT WEST HIGH,MO-048071-1085048071,291830002795,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEE'S SUMMIT WEST HIGH,MO-048071-1085048071,291830002795,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RUSKIN HIGH SCHOOL,MO-048072-1050048072,291434003156,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RUSKIN HIGH SCHOOL,MO-048072-1050048072,291434003156,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RAYTOWN SR. HIGH,MO-048073-1050048073,292607001525,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RAYTOWN SR. HIGH,MO-048073-1050048073,292607001525,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RAYTOWN SOUTH SR. HIGH,MO-048073-1075048073,292607001526,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RAYTOWN SOUTH SR. HIGH,MO-048073-1075048073,292607001526,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRANDVIEW SR. HIGH,MO-048074-1050048074,291314000556,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TRUMAN HIGH,MO-048077-1050048077,291548000722,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TRUMAN HIGH,MO-048077-1050048077,291548000722,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLIAM CHRISMAN HIGH,MO-048077-1075048077,291548000724,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILLIAM CHRISMAN HIGH,MO-048077-1075048077,291548000724,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VAN HORN HIGH,MO-048077-1090048077,291548003096,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VAN HORN HIGH,MO-048077-1090048077,291548003096,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VAN HORN HIGH,MO-048077-1090048077,291548003096,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINCOLN COLLEGE PREP.,MO-048078-1220048078,291640000844,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTHEAST HIGH,MO-048078-1340048078,291640000860,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EAST HIGH SCHOOL,MO-048078-1580048078,291640000880,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTHEAST HIGH SCHOOL,MO-048078-1670048078,291640003097,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTER SR. HIGH,MO-048080-1050048080,290825000225,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTER MIDDLE,MO-048080-2100048080,290825000230,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNIVERSITY ACADEMY-MIDDLE,MO-048901-3925048901,290002702914,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GUADALUPE CENTERS HIGH SCHOOL,MO-048902-1925048902,290002902741,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GUADALUPE CENTERS HIGH SCHOOL,MO-048902-1925048902,290002902741,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRONTIER SCHL OF EXCELLENCE-U,MO-048922-1920048922,290059003181,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRONTIER SCHL OF INNOVATION-M,MO-048922-3935048922,290059003182,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRONTIER SCHL OF EXCELLENCE-M,MO-048922-3940048922,290059003180,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRONTIER SCHOOL OF INNOVATION,MO-048922-6975048922,290059003127,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRONTIER SCHOOL OF INNOVATION,MO-048922-6975048922,290059003127,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Christina Hess,MO-049137-1050049137,291614000745,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARTHAGE JR. HIGH,MO-049142-2050049142,290746000208,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARTHAGE JR. HIGH,MO-049142-2050049142,290746000208,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTHWEST HIGH,MO-050001-1050050001,292289001309,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HILLSBORO HIGH,MO-050003-1050050003,291443000675,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HILLSBORO HIGH,MO-050003-1050050003,291443000675,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HERCULANEUM HIGH,MO-050005-1050050005,291425000639,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HERCULANEUM HIGH,MO-050005-1050050005,291425000639,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HERCULANEUM HIGH,MO-050005-1050050005,291425000639,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FESTUS SR. HIGH,MO-050006-1050050006,291203000481,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FOX SR. HIGH,MO-050012-1050050012,291230000506,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FOX SR. HIGH,MO-050012-1050050012,291230000506,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SECKMAN SR. HIGH,MO-050012-1070050012,291230001981,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SECKMAN SR. HIGH,MO-050012-1070050012,291230001981,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESOTO SR. HIGH,MO-050014-1050050014,291050000350,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESOTO SR. HIGH,MO-050014-1050050014,291050000350,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESOTO JR. HIGH,MO-050014-2050050014,291050000349,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DESOTO JR. HIGH,MO-050014-2050050014,291050000349,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOLDEN MIDDLE,MO-051152-3000051152,291449000679,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CREST RIDGE HIGH,MO-051154-1050051154,290832002276,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KNOB NOSTER HIGH,MO-051155-1050051155,291683000932,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KNOB NOSTER HIGH,MO-051155-1050051155,291683000932,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KNOB NOSTER MIDDLE,MO-051155-3000051155,291683002290,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEETON HIGH,MO-051156-1050051156,291836000987,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEETON HIGH,MO-051156-1050051156,291836000987,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WARRENSBURG AREA CAREER CTR.,MO-051159-1100051159,293102002147,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WARRENSBURG MIDDLE,MO-051159-3000051159,293102002142,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KNOX CO. HIGH,MO-052096-1050052096,291128000397,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CONWAY HIGH SCHOOLS,MO-053111-1050053111,291011000324,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEBANON SR. HIGH,MO-053113-1050053113,291827000972,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEBANON TECH. & CAREER CTR.,MO-053113-1100053113,291827000970,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEBANON TECH. & CAREER CTR.,MO-053113-1100053113,291827000970,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JOEL E. BARBER ELEM.,MO-053114-4020053114,291700000940,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JOEL E. BARBER ELEM.,MO-053114-4020053114,291700000940,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAFAYETTE CO. HIGH,MO-054039-1050054039,291440000672,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ODESSA HIGH,MO-054041-1050054041,292310001325,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ODESSA HIGH,MO-054041-1050054041,292310001325,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ODESSA HIGH,MO-054041-1050054041,292310001325,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SANTA FE HIGH,MO-054042-1050054042,290300000013,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WELLINGTON-NAPOLEON HIGH,MO-054043-1050054043,293156002199,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WELLINGTON-NAPOLEON HIGH,MO-054043-1050054043,293156002199,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PIERCE CITY HIGH,MO-055105-1050055105,292511001441,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARIONVILLE HIGH,MO-055106-1050055106,292031001077,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MT. VERNON HIGH,MO-055108-1050055108,292160001189,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MT. VERNON HIGH,MO-055108-1050055108,292160001189,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AURORA HIGH,MO-055110-1050055110,290402000031,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VERONA HIGH,MO-055111-1050055111,293081002128,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CANTON HIGH,MO-056015-1050056015,290708000182,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGHLAND JR.-SR. HIGH,MO-056017-1050056017,291846000993,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SILEX HIGH,MO-057001-1050057001,292829001748,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ELSBERRY HIGH,MO-057002-1050057002,291140000407,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ELSBERRY HIGH,MO-057002-1050057002,291140000407,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IDA CANNON MIDDLE,MO-057002-3000057002,291140001990,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IDA CANNON MIDDLE,MO-057002-3000057002,291140001990,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IDA CANNON MIDDLE,MO-057002-3000057002,291140001990,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TROY BUCHANAN HIGH,MO-057003-1050057003,293045002090,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TROY BUCHANAN HIGH,MO-057003-1050057003,293045002090,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WINFIELD HIGH,MO-057004-1050057004,293219002257,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINN CO. HIGH,MO-058106-1050058106,290600000143,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUCKLIN HIGH,MO-058107-1050058107,290609000147,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUCKLIN HIGH,MO-058107-1050058107,290609000147,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUCKLIN ELEM.,MO-058107-4020058107,290609000146,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MEADVILLE HIGH,MO-058108-1050058108,292064001108,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARCELINE HIGH,MO-058109-1050058109,292005001070,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAND RIVER TECHNICAL SCH.,MO-059117-1100059117,290876000258,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCDONALD COUNTY HIGH,MO-060077-1050060077,292061001104,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCDONALD COUNTY HIGH,MO-060077-1050060077,292061001104,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCDONALD COUNTY HIGH,MO-060077-1050060077,292061001104,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MACON AREA VOC. SCH.,MO-061156-1100061156,291941001051,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FREDERICKTOWN HIGH,MO-062072-1050062072,291254000516,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VIENNA HIGH,MO-063066-1050063066,293087002134,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+VIENNA HIGH,MO-063066-1050063066,293087002134,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARIES CO. MIDDLE,MO-063067-3000063067,290000102547,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARION CO. HIGH,MO-064072-1050064072,292028001075,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ELDON CAREER CTR.,MO-066102-1100066102,291134000404,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ELDON CAREER CTR.,MO-066102-1100066102,291134000404,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OSAGE HIGH,MO-066105-1050066105,292763001697,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OSAGE HIGH,MO-066105-1050066105,292763001697,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OSAGE MIDDLE,MO-066105-2050066105,292763001020,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+IBERIA HIGH,MO-066107-1050066107,291542000703,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+A. J. MARTIN ELEM.,MO-067055-4060067055,291122000385,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MADISON HIGH,MO-069108-1050069108,291984001055,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PORTAGEVILLE HIGH,MO-072068-1050072068,290000302458,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEW MADRID R-I TECH SKILLS CTR,MO-072074-1100072074,290000401492,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SENECA JUNIOR HIGH,MO-073106-3000073106,292790002446,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEOSHO HIGH,MO-073108-1050073108,292181001209,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEOSHO HIGH,MO-073108-1050073108,292181001209,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEOSHO JR. HIGH,MO-073108-2050073108,292181001208,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH NODAWAY JR.-SR. HIGH,MO-074197-1050074197,292169001194,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTHWEST TECHNICAL SCH.,MO-074201-1100074201,292049001094,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THAYER SR. HIGH,MO-075085-1050075085,293027002069,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CHAMOIS HIGH,MO-076081-1050076081,290849000250,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FATIMA ELEM.,MO-076083-4060076083,293183002229,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DORA HIGH,MO-077103-1050077103,291095000375,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DELTA C-7 HIGH,MO-078009-1050078009,290573000120,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARUTHERSVILLE HIGH,MO-078012-1050078012,290747000214,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTHWEST HIGH,MO-080116-1050080116,291527000695,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SMITHTON HIGH,MO-080119-1050080119,292838001752,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GREEN RIDGE HIGH,MO-080121-1050080121,291329000564,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SMITH-COTTON HIGH SCHOOL,MO-080125-1050080125,292783001709,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SMITH-COTTON HIGH SCHOOL,MO-080125-1050080125,292783001709,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOWLING GREEN HIGH,MO-082100-1050082100,290566000115,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOWLING GREEN MIDDLE,MO-082100-3000082100,290566000601,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOWLING GREEN ELEM.,MO-082100-4020082100,290566000112,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRANKFORD ELEM.,MO-082100-4060082100,290566000114,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLOPTON HIGH,MO-082101-1050082101,292514001445,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST PLATTE HIGH,MO-083002-1050083002,293171002220,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PLATTE COUNTY HIGH,MO-083003-1050083003,292523001456,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEAD INNOVATION STUDIO,MO-083005-1020083005,292355003313,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARK HILL HIGH,MO-083005-1050083005,292355001371,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARK HILL HIGH,MO-083005-1050083005,292355001371,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARK HILL SOUTH HIGH,MO-083005-1080083005,292355002413,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PARK HILL SOUTH HIGH,MO-083005-1080083005,292355002413,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOLIVAR HIGH,MO-084001-1050084001,290537000092,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOLIVAR HIGH,MO-084001-1050084001,290537000092,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BOLIVAR MIDDLE,MO-084001-3000084001,290537002423,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FAIR PLAY HIGH,MO-084002-1050084002,291173000431,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HALFWAY SECONDARY,MO-084003-1050084003,291353000576,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HALFWAY SECONDARY,MO-084003-1050084003,291353000576,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HUMANSVILLE HIGH,MO-084004-1050084004,291530000697,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HUMANSVILLE HIGH,MO-084004-1050084004,291530000697,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARION C. EARLY HIGH,MO-084005-1050084005,292016001073,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PLEASANT HOPE HIGH,MO-084006-1050084006,292535001463,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PLEASANT HOPE HIGH,MO-084006-1050084006,292535001463,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAQUEY R-V MIDDLE,MO-085045-3000085045,291788001027,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WAYNESVILLE SR. HIGH,MO-085046-1050085046,293144002175,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WAYNESVILLE CAREER CENTER,MO-085046-1100085046,293144002177,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DIXON HIGH,MO-085048-1050085048,291083000369,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGBEE HIGH,MO-088075-1050088075,291437000667,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIGBEE MIDDLE SCHOOL,MO-088075-3000088075,291437000667,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WESTRAN HIGH,MO-088080-1050088080,293186002232,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOBERLY MIDDLE,MO-088081-3000088081,292110002561,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RICHMOND HIGH,MO-089089-1050089089,292648001554,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NAYLOR HIGH,MO-091091-1050091091,292172001198,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NAYLOR HIGH,MO-091091-1050091091,292172001198,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CURRENT RIVER CAREER CENTER,MO-091092-1100091092,291092000370,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT NORTH HIGH,MO-092087-1050092087,290837000239,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT NORTH HIGH,MO-092087-1050092087,290837000239,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT NORTH HIGH,MO-092087-1050092087,290837000239,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT SOUTH HIGH,MO-092087-1075092087,290837002490,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT SOUTH HIGH,MO-092087-1075092087,290837002490,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT SOUTH HIGH,MO-092087-1075092087,290837002490,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT EAST HIGH,MO-092087-1080092087,290837002978,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT EAST HIGH,MO-092087-1080092087,290837002978,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT EAST HIGH,MO-092087-1080092087,290837002978,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT WEST HIGH,MO-092087-1090092087,290837002624,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT WEST HIGH,MO-092087-1090092087,290837002624,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FT. ZUMWALT WEST HIGH,MO-092087-1090092087,290837002624,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BARNWELL MIDDLE,MO-092088-3000092088,292895002307,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BARNWELL MIDDLE,MO-092088-3000092088,292895002307,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BARNWELL MIDDLE,MO-092088-3000092088,292895002307,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BARNWELL MIDDLE,MO-092088-3000092088,292895002307,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOLLENBECK MIDDLE,MO-092088-3100092088,292895001855,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOLLENBECK MIDDLE,MO-092088-3100092088,292895001855,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOLLENBECK MIDDLE,MO-092088-3100092088,292895001855,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FRANCIS HOWELL MIDDLE,MO-092088-3200092088,292895000220,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAEGER MIDDLE,MO-092088-3300092088,292895001884,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SAEGER MIDDLE,MO-092088-3300092088,292895001884,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRYAN MIDDLE,MO-092088-3400092088,292895002698,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMIL E. HOLT SR. HIGH,MO-092089-1050092089,293165002208,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMIL E. HOLT SR. HIGH,MO-092089-1050092089,293165002208,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EMIL E. HOLT SR. HIGH,MO-092089-1050092089,293165002208,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TIMBERLAND HIGH,MO-092089-1060092089,293165002844,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+TIMBERLAND HIGH,MO-092089-1060092089,293165002844,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HIGH SCHOOL,MO-092089-1070092089,293165003227,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LIBERTY HIGH SCHOOL,MO-092089-1070092089,293165003227,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST. CHARLES HIGH,MO-092090-1050092090,292892001848,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST. CHARLES HIGH,MO-092090-1050092090,292892001848,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ST. CHARLES WEST HIGH,MO-092090-1075092090,292892001851,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LEWIS & CLARK CAREER CTR.,MO-092090-1100092090,292892001842,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orchard Farm High School,MO-092091-1050092091,292316001331,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+Orchard Farm High School,MO-092091-1050092091,292316001331,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FARMINGTON SR. HIGH,MO-094078-1050094078,291191000440,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FARMINGTON SR. HIGH,MO-094078-1050094078,291191000440,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH CO. SR. HIGH,MO-094083-1050094083,290543000100,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH CO. MIDDLE,MO-094083-3000094083,290543000645,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-094086-1050094086,292917001869,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STE. GENEVIEVE SR. HIGH,MO-095059-1050095059,292937002033,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STE. GENEVIEVE SR. HIGH,MO-095059-1050095059,292937002033,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAZELWOOD CENTRAL HIGH,MO-096088-1050096088,291383000622,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAZELWOOD CENTRAL HIGH,MO-096088-1050096088,291383000622,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAZELWOOD EAST HIGH,MO-096088-1060096088,291383002696,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAZELWOOD EAST HIGH,MO-096088-1060096088,291383002696,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAZELWOOD WEST HIGH,MO-096088-1075096088,291383000625,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HAZELWOOD WEST HIGH,MO-096088-1075096088,291383000625,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+STEAM ACADEMY MIDDLE SCHOOL,MO-096089-3010096089,unspecified,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PATTONVILLE SR. HIGH,MO-096090-1050096090,292370001421,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PATTONVILLE SR. HIGH,MO-096090-1050096090,292370001421,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PATTONVILLE SR. HIGH,MO-096090-1050096090,292370001421,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PATTONVILLE SR. HIGH,MO-096090-1050096090,292370001421,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PATTONVILLE HEIGHTS MIDDLE,MO-096090-3050096090,292370001417,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EUREKA SR. HIGH,MO-096091-1050096091,292685001621,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+EUREKA SR. HIGH,MO-096091-1050096091,292685001621,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAFAYETTE SR. HIGH,MO-096091-1075096091,292685001624,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LAFAYETTE SR. HIGH,MO-096091-1075096091,292685001624,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARQUETTE SR. HIGH,MO-096091-1080096091,292685000657,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARQUETTE SR. HIGH,MO-096091-1080096091,292685000657,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARQUETTE SR. HIGH,MO-096091-1080096091,292685000657,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROCKWOOD SUMMIT SR. HIGH,MO-096091-1085096091,292685000665,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROCKWOOD SUMMIT SR. HIGH,MO-096091-1085096091,292685000665,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROCKWOOD VALLEY MIDDLE,MO-096091-3000096091,292685002688,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CRESTVIEW MIDDLE,MO-096091-3020096091,292685000670,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LASALLE SPRINGS MIDDLE,MO-096091-3040096091,292685000671,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WILDWOOD MIDDLE,MO-096091-3050096091,292685002785,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROCKWOOD SOUTH MIDDLE,MO-096091-3060096091,292685000706,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SELVIDGE MIDDLE,MO-096091-3080096091,292685000712,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIRKWOOD SR. HIGH,MO-096092-1050096092,291677000926,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINDBERGH SR. HIGH,MO-096093-1050096093,291869001026,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINDBERGH SR. HIGH,MO-096093-1050096093,291869001026,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LINDBERGH SR. HIGH,MO-096093-1050096093,291869001026,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MEHLVILLE HIGH SCHOOL,MO-096094-1050096094,292067001115,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAKVILLE SR. HIGH,MO-096094-1075096094,292067001118,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARGARET BUERKLE MIDDLE,MO-096094-3000096094,292067001114,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+OAKVILLE MIDDLE,MO-096094-3020096094,292067001117,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WASHINGTON MIDDLE,MO-096094-3040096094,292067001123,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BERNARD MIDDLE,MO-096094-3060096094,292067003032,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-096095-1050096095,292358001379,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-096095-1050096095,292358001379,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-096095-1050096095,292358001379,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-096095-1050096095,292358001379,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL HIGH,MO-096095-1050096095,292358001379,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HIGH,MO-096095-1075096095,292358001393,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HIGH,MO-096095-1075096095,292358001393,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HIGH,MO-096095-1075096095,292358001393,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH HIGH,MO-096095-1075096095,292358001393,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST HIGH,MO-096095-1080096095,292358001404,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST HIGH,MO-096095-1080096095,292358001404,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST HIGH,MO-096095-1080096095,292358001404,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST HIGH,MO-096095-1080096095,292358001404,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEST HIGH,MO-096095-1080096095,292358001404,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH HIGH,MO-096095-1090096095,292358001394,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH HIGH,MO-096095-1090096095,292358001394,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AFFTON HIGH,MO-096098-1050096098,290291000009,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AFFTON HIGH,MO-096098-1050096098,290291000009,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AFFTON HIGH,MO-096098-1050096098,290291000009,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+AFFTON HIGH,MO-096098-1050096098,290291000009,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRENTWOOD HIGH,MO-096101-1050096101,290588000131,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRENTWOOD HIGH,MO-096101-1050096101,290588000131,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLAYTON HIGH,MO-096102-1050096102,290972000275,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+JENNINGS HIGH,MO-096104-1050096104,291629000769,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LADUE HORTON WATKINS HIGH,MO-096106-1050096106,291782000946,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+LADUE HORTON WATKINS HIGH,MO-096106-1050096106,291782000946,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RITENOUR SR. HIGH,MO-096110-1050096110,292664001573,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RITENOUR SR. HIGH,MO-096110-1050096110,292664001573,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RITENOUR SR. HIGH,MO-096110-1050096110,292664001573,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNIVERSITY CITY SR. HIGH,MO-096112-1050096112,293066002113,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNIVERSITY CITY SR. HIGH,MO-096112-1050096112,293066002113,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNIVERSITY CITY SR. HIGH,MO-096112-1050096112,293066002113,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+UNIVERSITY CITY SR. HIGH,MO-096112-1050096112,293066002113,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRITTANY WOODS,MO-096112-2000096112,293066002511,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRITTANY WOODS,MO-096112-2000096112,293066002511,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEBSTER GROVES HIGH,MO-096114-1050096114,293153002197,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WEBSTER GROVES HIGH,MO-096114-1050096114,293153002197,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HIXSON MIDDLE,MO-096114-3000096114,293153002194,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTH TECHNICAL,MO-096119-1100096119,292676001604,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH TECHNICAL,MO-096119-1150096119,292676001607,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MIAMI ELEM.,MO-097116-4020097116,292084001140,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUEKER MIDDLE,MO-097129-3000097129,292041001083,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BUEKER MIDDLE,MO-097129-3000097129,292041001083,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SWEET SPRINGS HIGH,MO-097131-1050097131,292988002064,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SWEET SPRINGS HIGH,MO-097131-1050097131,292988002064,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SCHUYLER CO. HIGH,MO-098080-1050098080,292766001702,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SCOTLAND CO. HIGH,MO-099082-1050099082,292070001127,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+THOMAS W. KELLY HIGH,MO-100061-1050100061,290489000059,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ORAN HIGH SCHOOL,MO-100065-1050100065,292313001327,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH SHELBY HIGH,MO-102085-1050102085,292811001728,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+RICHLAND HIGH,MO-103127-1050103127,292640001548,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+PUXICO HIGH,MO-103130-1050103130,292565001508,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+DEXTER HIGH,MO-103132-1050103132,291077000363,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+T. S. HILL MIDDLE,MO-103132-3000103132,291077000362,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GALENA HIGH,MO-104042-1050104042,291263000528,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GALENA HIGH,MO-104042-1050104042,291263000528,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORSYTH HIGH,MO-106003-1050106003,291224000487,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORSYTH HIGH,MO-106003-1050106003,291224000487,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORSYTH HIGH,MO-106003-1050106003,291224000487,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRANSON HIGH,MO-106004-1050106004,290576000122,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BRANSON HIGH,MO-106004-1050106004,290576000122,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOLLISTER HIGH,MO-106005-1050106005,291455000684,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOLLISTER HIGH,MO-106005-1050106005,291455000684,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+HOUSTON HIGH,MO-107152-1050107152,291484000688,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NEVADA MIDDLE,MO-108142-3000108142,292184001216,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTHEAST VERNON CO. R-I HIGH,MO-108147-1050108147,292760001695,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NORTHEAST VERNON CO. R-I HIGH,MO-108147-1050108147,292760001695,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WRIGHT CITY MIDDLE,MO-109002-3000109002,293231002576,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WRIGHT CITY WEST ELEM.,MO-109002-4020109002,293231002265,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WRIGHT CITY EAST ELEM,MO-109002-4040109002,293231003138,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NIANGUA HIGH,MO-112099-1050112099,292250001233,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+NIANGUA MIDDLE SCHOOL,MO-112099-3000112099,292250003343,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORDLAND HIGH,MO-112101-1050112101,291218000485,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+FORDLAND HIGH,MO-112101-1050112101,291218000485,991196,AP COMPUTER SCIENCE:  PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARSHFIELD HIGH,MO-112102-1050112102,292043001090,100415,COMPUTER SCIENCE PRINCIPLES,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MARSHFIELD HIGH,MO-112102-1050112102,292043001090,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SEYMOUR MIDDLE,MO-112103-3000112103,292793001580,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WORTH CO. HIGH,MO-113001-1050113001,293230002264,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WORTH CO. HIGH,MO-113001-1050113001,293230002264,34400,COMPUTER SCIENCE I,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+WORTH CO. HIGH,MO-113001-1050113001,293230002264,34401,COMPUTER SCIENCE II,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOUNTAIN GROVE HIGH,MO-114114-1050114114,292151001182,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MANSFIELD HIGH,MO-114115-1050114115,291998001063,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MILLER CAREER ACADEMY,MO-115115-1100115115,292928002767,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+BEAUMONT CTE HIGH SCHOOL,MO-115115-1250115115,292928001882,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CLEVELAND NJROTC ACADEMY,MO-115115-1440115115,292928002313,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARNAHAN SCH. OF THE FUTURE,MO-115115-1500115115,292928002873,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CARNAHAN SCH. OF THE FUTURE,MO-115115-1500115115,292928002873,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COLLEGIATE SCHOOL OF MED/BIO,MO-115115-1510115115,292928003231,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+COLLEGIATE SCHOOL OF MED/BIO,MO-115115-1510115115,292928003231,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+METRO HIGH,MO-115115-1560115115,292928001976,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MCKINLEY CLASS. LEADERSHIP AC.,MO-115115-1570115115,292928002990,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+ROOSEVELT HIGH,MO-115115-1680115115,292928001994,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SUMNER HIGH,MO-115115-1800115115,292928002009,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CENTRAL VISUAL/PERF. ARTS HIGH,MO-115115-1860115115,292928002013,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+CONFLUENCE PREPARATORY ACADEMY,MO-115906-1920115906,290057903102,100416,COMPUTER SCIENCE ESSENTIALS,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAND CENTER ARTS ACADEMY HIGH,MO-115906-1945115906,290057903342,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAND CENTER ARTS ACAD MIDDLE,MO-115906-3920115906,290057903345,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH CITY,MO-115906-6932115906,290057903079,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+SOUTH CITY,MO-115906-6932115906,290057903079,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIPP ST. LOUIS HIGH,MO-115914-1905115914,290059103314,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+KIPP VICTORY ACADEMY,MO-115914-6971115914,290059103245,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,991105,COMPUTER SCIENCE,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+MOCAP HIGH SCHOOL,MO-401401-1050401401,290060703228,991195,AP Computer Science A,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAFF CAREER CENTER,MO-640121-0640121,290000800821,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAFF CAREER CENTER,MO-640121-0640121,290000800821,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified
+GRAFF CAREER CENTER,MO-640121-0640121,290000800821,34355,COMPUTER PROGRAMMING,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified,unspecified

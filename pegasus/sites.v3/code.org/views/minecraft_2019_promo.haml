@@ -5,10 +5,10 @@
   mee_title = I18n.t(:hoc2019_mc_mee_title)
   mee_description1 = I18n.t(:hoc2019_mc_mee_description1)
   mee_description2 = I18n.t(:hoc2019_mc_mee_description2)
-  mee_link = "https://aka.ms/minecrafthourofcode"
+  mee_link = "www.education.minecraft.net/hour-of-code-2019"
   mee_link_text = I18n.t(:hoc2018_mc_educators_box1_button)
 
-.tutorial-promo-container
+.tutorial-promo-container{style: "margin-top: 25px"}
   .img-container
     %img.background-img{src: mee_image}
   .col-50.specific-tutorial.right-tutorial{style: "right: 10px; top: 10px; height: initial"}
@@ -22,5 +22,4 @@
       %a{href: mee_link, target: '_blank'}
         %button.tutorial-button{style: "color: #4d575f; background-color: white; border-color: white; font-size: 14px"}
           = mee_link_text
-      %img{style: "position: absolute; top: 10px; right: 10px; width: 60px", src: '/images/mc/new_tag.png'}
   .clear

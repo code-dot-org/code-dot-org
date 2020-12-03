@@ -345,7 +345,7 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
 end
 
 When /^I (?:open|close) the small footer menu$/ do
-  menu_selector = 'div.small-footer-base a.more-link'
+  menu_selector = 'div.small-footer-base button.more-link'
   steps %{
     Then I wait until element "#{menu_selector}" is visible
     And I click selector "#{menu_selector}"
@@ -354,6 +354,23 @@ end
 
 When /^I press menu item "([^"]*)"$/ do |menu_item_text|
   menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
+  steps %{
+    Then I wait until element "#{menu_item_selector}" is visible
+    And I click selector "#{menu_item_selector}"
+  }
+end
+
+When /^I (?:open|close) the help menu$/ do
+  help_menu_button_selector = '#help-icon'
+  steps %{
+    Then I wait until element "#{help_menu_button_selector}" is visible
+    And I click selector "#{help_menu_button_selector}"
+    Then I wait to see "#help-contents"
+  }
+end
+
+When /^I press help menu item "([^"]*)"$/ do |help_menu_item_id|
+  menu_item_selector = "#help-contents #{help_menu_item_id}"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
@@ -567,10 +584,6 @@ end
 
 Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}")
-end
-
-Then /^mark the current level as completed on the client/ do
-  @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
 end
 
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
@@ -871,6 +884,7 @@ Then(/^I set slider speed to medium/) do
 end
 
 Then(/^I slow down execution speed$/) do
+  @browser.execute_script("Maze.shouldSpeedUpInfiniteLoops = false;")
   @browser.execute_script("Maze.scale.stepSpeed = 10;")
 end
 
@@ -992,6 +1006,98 @@ Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
   )
 end
 
+Given(/^I create a temp script and lesson$/) do
+  response = browser_request(
+    url: '/api/test/create_script',
+    method: 'POST'
+  )
+  data = JSON.parse(response)
+  @temp_script_name = data['script_name']
+  @temp_lesson_id = data['lesson_id']
+  puts "created temp script named '#{@temp_script_name}' and temp lesson with id #{@temp_lesson_id}"
+end
+
+Given(/^I view the temp script overview page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}"
+    And I wait until element "#script-title" is visible
+  }
+end
+
+Given(/^I view the temp script (legacy|gui) edit page$/) do |type|
+  params = type == 'gui' ? '?beta=1' : ''
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit#{params}"
+    And I wait until element ".edit_script" is visible
+  }
+end
+
+Given(/^I try to view the temp script legacy edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+  }
+end
+
+Given(/^I view the temp lesson edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/lessons/#{@temp_lesson_id}/edit"
+    And I wait until element "#edit-container" is visible
+  }
+end
+
+Given (/^I remove the temp script from the cache$/) do
+  browser_request(
+    url: '/api/test/invalidate_script',
+    method: 'POST',
+    body: {script_name: @temp_script_name}
+  )
+end
+
+Given(/^I delete the temp script and lesson$/) do
+  browser_request(
+    url: '/api/test/destroy_script',
+    method: 'POST',
+    body: {script_name: @temp_script_name}
+  )
+end
+
+Given(/^I create a temp multi level$/) do
+  @temp_level_name = "temp-level-#{Time.now.to_i}-#{rand(1_000_000)}"
+  steps "And I am on \"http://studio.code.org/levels/new?type=Multi\""
+  steps 'And I enter temp level multi dsl text'
+  steps 'And I click "input[type=\'submit\']" to load a new page'
+  @temp_level_id = @browser.current_url.split('/')[-2]
+  puts "created temp level with id #{@temp_level_id}"
+end
+
+Given(/^I enter temp level multi dsl text$/) do
+  dsl = <<~DSL
+    name '#{@temp_level_name}'
+    title 'title'
+    description 'description here'
+    question 'Question'
+    wrong 'incorrect answer'
+    right 'correct answer'
+  DSL
+  steps 'And I clear the text from element "#level_dsl_text"'
+  steps "And I press keys #{dsl.dump} for element \"#level_dsl_text\""
+end
+
+Given(/^I check I am on the temp level (show|edit) page$/) do |page|
+  suffix = (page == 'edit') ? '/edit' : ''
+  url = "http://studio.code.org/levels/#{@temp_level_id}#{suffix}"
+  url = replace_hostname(url)
+  expect(@browser.current_url.split('?').first).to eq(url)
+end
+
+Given(/^I delete the temp level$/) do
+  browser_request(
+    url: '/api/test/destroy_level',
+    method: 'POST',
+    body: {id: @temp_level_id}
+  )
+end
+
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end
@@ -1005,6 +1111,10 @@ def generate_user(name)
     email: email
   }
   return email, password
+end
+
+def find_test_user_by_name(name)
+  User.find_by(email: @users[name][:email])
 end
 
 And /^I check the pegasus URL$/ do
@@ -1077,7 +1187,7 @@ And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and uni
 
   individual_steps %Q{
     And I press the save button to create a new section
-    And I wait for the dialog to close
+    And I wait for the dialog to close using jQuery
     Then I should see the section table
   }
 end
@@ -1086,6 +1196,13 @@ And /^I dismiss the language selector$/ do
   steps %Q{
     And I click selector ".close" if I see it
     And I wait until I don't see selector ".close"
+  }
+end
+
+And /^I dismiss the teacher panel$/ do
+  steps %Q{
+    And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
+    And I wait until I see selector ".teacher-panel > .show-handle > .fa-chevron-left"
   }
 end
 
@@ -1105,6 +1222,13 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')
+end
+
+And(/^I create a levelbuilder named "([^"]*)"$/) do |name|
+  steps %{
+    Given I create a teacher named "#{name}"
+    And I get levelbuilder access
+  }
 end
 
 def sign_up(name)
@@ -1199,7 +1323,8 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
           password_confirmation: password,
           name: name,
           age: '16',
-          terms_of_service_version: '1'
+          terms_of_service_version: '1',
+          sign_in_count: 2
         }.merge(user_opts)
       },
       code: code
@@ -1207,9 +1332,11 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
   end
 end
 
-And(/^I create a (young )?student named "([^"]*)"( and go home)?$/) do |young, name, home|
+And(/^I create a (young )?student( who has never signed in)? named "([^"]*)"( and go home)?$/) do |young, new_account, name, home|
   age = young ? '10' : '16'
-  create_user(name, age: age)
+  sign_in_count = new_account ? 0 : 2
+
+  create_user(name, age: age, sign_in_count: sign_in_count)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
@@ -1220,8 +1347,10 @@ And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   )
 end
 
-And(/^I create a teacher named "([^"]*)"( and go home)?$/) do |name, home|
-  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes')
+And(/^I create a teacher( who has never signed in)? named "([^"]*)"( and go home)?$/) do |new_account, name, home|
+  sign_in_count = new_account ? 0 : 2
+
+  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes', sign_in_count: sign_in_count)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
@@ -1239,7 +1368,12 @@ And(/^I get hidden script access$/) do
   browser_request(url: '/api/test/hidden_script_access', method: 'POST')
 end
 
+And(/^I get levelbuilder access$/) do
+  browser_request(url: '/api/test/levelbuilder_access', method: 'POST')
+end
+
 And(/^I save the section url$/) do
+  wait_short_until {steps 'Then I should see the section table'}
   section_code = @browser.execute_script <<-SCRIPT
     return document
       .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
@@ -1297,6 +1431,12 @@ When(/^I am not signed in/) do
   steps 'element ".header_user:contains(Sign in)" is visible'
 end
 
+And(/^I delete the cookie named "([^"]*)"$/) do |cookie_name|
+  if @browser.manage.all_cookies.any? {|cookie| cookie[:name] == cookie_name}
+    @browser.manage.delete_cookie cookie_name
+  end
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
@@ -1341,6 +1481,11 @@ end
 
 When /^I press keys "([^"]*)"$/ do |keys|
   @browser.action.send_keys(*convert_keys(keys)).perform
+end
+
+When /^I clear the text from element "([^"]*)"$/ do |selector|
+  element = @browser.find_element(:css, selector)
+  element.clear
 end
 
 # Press backspace repeatedly to clear an element.  Handy for React.
@@ -1509,6 +1654,13 @@ Then /^I open the stage lock dialog$/ do
   wait_short_until {jquery_is_element_visible('.modal-body')}
 end
 
+Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
+  wait_for_jquery
+  wait_short_until {@browser.execute_script("return $('.uitest-sendlesson').length") > lesson_num}
+  @browser.execute_script("$('.uitest-sendlesson').eq(#{lesson_num - 1}).children().first().click()")
+  wait_short_until {jquery_is_element_visible('.modal')}
+end
+
 Then /^I unlock the stage for students$/ do
   # allow editing
   @browser.execute_script("$('.modal-body button').first().click()")
@@ -1556,6 +1708,15 @@ Then /^"([^"]*)" contains the saved timestamp$/ do |css|
   expect(@timestamp).to eq(timestamp)
 end
 
+Then /^I save the text from "([^"]*)"$/ do |css|
+  @saved_text = @browser.find_element(css: css).text
+end
+
+Then /^"([^"]*)" contains the saved text$/ do |css|
+  saved_text = @browser.find_element(css: css).text
+  expect(@saved_text).to eq(saved_text)
+end
+
 When /^I switch to text mode$/ do
   steps <<-STEPS
     When I press "show-code-header"
@@ -1590,6 +1751,10 @@ When /^I wait for the dialog to close$/ do
   steps 'When I wait until element ".modal" is gone'
 end
 
+When /^I wait for the dialog to close using jQuery$/ do
+  steps 'When I wait until element ".modal" is not visible'
+end
+
 Then /^I should see the section table$/ do
   steps 'Then I see ".uitest-owned-sections"'
 end
@@ -1613,6 +1778,7 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
 end
 
 Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
+  wait_short_until {steps 'Then I should see the section table'}
   @section_id = get_section_id_from_table(row_index)
 end
 
@@ -1638,6 +1804,13 @@ Then /^I navigate to teacher dashboard for the section I saved$/ do
   expect(@section_id).to be > 0
   steps %{
     Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}"
+  }
+end
+
+Then /^I navigate to teacher dashboard for the section I saved with experiment "([^"]*)"$/ do |experiment_name|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}?enableExperiments=#{experiment_name}"
   }
 end
 
@@ -1699,6 +1872,17 @@ Then /^I navigate to the saved URL$/ do
   steps %Q{Then I am on "#{saved_url}"}
 end
 
+channel_id = nil
+Then /^I save the channel id$/ do
+  channel_id = @browser.execute_script('return (appOptions && appOptions.channel)')
+end
+
+And /^I type the saved channel id into element "([^"]*)"/ do |selector|
+  individual_steps %Q{
+    And I press keys "#{channel_id}" for element "#{selector}"
+  }
+end
+
 Then /^I sign out using jquery$/ do
   code = <<-JAVASCRIPT
     window.signOutComplete = false;
@@ -1719,6 +1903,13 @@ Then /^I open the Manage Assets dialog$/ do
   steps <<-STEPS
     Then I click selector ".settings-cog"
     And I click selector ".pop-up-menu-item"
+  STEPS
+end
+
+Then /^I open the Manage Libraries dialog$/ do
+  steps <<-STEPS
+    Then I click selector ".settings-cog"
+    And I click selector ".pop-up-menu-item:contains(Manage Libraries)"
   STEPS
 end
 

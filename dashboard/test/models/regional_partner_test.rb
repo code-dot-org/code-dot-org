@@ -46,6 +46,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal ['Zip code is invalid'], regional_partner.errors.full_messages
   end
 
+  test 'Fails lookup with nil zip' do
+    assert_equal RegionalPartner.find_by_zip(nil), [nil, nil]
+  end
+
   test 'assign program manager to regional partner assigns program manager' do
     regional_partner = create :regional_partner
     program_manager = create :teacher
@@ -68,11 +72,9 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     regional_partner_wa.mappings.find_or_create_by!(state: "WA")
 
     regional_partner_wa_98104 = create :regional_partner, name: "partner_WA_98104"
-    regional_partner_wa_98104.mappings.find_or_create_by!(state: "WA")
     regional_partner_wa_98104.mappings.find_or_create_by!(zip_code: "98104")
 
     regional_partner_wa_98105 = create :regional_partner, name: "partner_WA_98105"
-    regional_partner_wa_98105.mappings.find_or_create_by!(state: "WA")
     regional_partner_wa_98105.mappings.find_or_create_by!(zip_code: "98105")
 
     regional_partner_ny = create :regional_partner, name: "partner_NY"
@@ -88,13 +90,6 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     regional_partner_70808 = create :regional_partner, name: "partner_70808"
     regional_partner_70808.mappings.find_or_create_by!(zip_code: "70808")
-
-    regional_partner_fl_32313 = create :regional_partner, name: "partner_FL_32313"
-    regional_partner_fl_32313.mappings.find_or_create_by!(state: "FL")
-    regional_partner_fl_32313.mappings.find_or_create_by!(zip_code: "32313")
-
-    regional_partner_32313 = create :regional_partner, name: "partner_32313"
-    regional_partner_32313.mappings.find_or_create_by!(zip_code: "32313")
 
     create :regional_partner, name: "partner_nomappings"
 
@@ -127,12 +122,8 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     # state=WA/zip=98104 [state matches many, zip matches one]
     assert_equal regional_partner_wa_98104, RegionalPartner.find_by_region("98104", "WA")
 
-    # state=WA [state matches many, indeterminate result]
-    assert_includes [regional_partner_wa, regional_partner_wa_98104, regional_partner_wa_98105],
-      RegionalPartner.find_by_region(nil, "WA")
-
-    # zip=32313 [zip matches many, indeterminate result]
-    assert_includes [regional_partner_fl_32313, regional_partner_32313], RegionalPartner.find_by_region("32313", nil)
+    # state=WA [state matches partner that covers whole state, not specific zips in state]
+    assert_equal regional_partner_wa, RegionalPartner.find_by_region(nil, "WA")
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -221,7 +212,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   test 'regional_partner_summer_workshop_open' do
     regional_partner = nil
     Timecop.freeze Time.zone.local(2018, 9, 27, 21, 25) do
-      regional_partner = create :regional_partner_alabama, :with_apps_priority_deadline_date
+      regional_partner = create :regional_partner_with_summer_workshops, :with_apps_priority_deadline_date
 
       assert_equal "Contact Name", regional_partner.contact_name
       assert_equal "contact@code.org", regional_partner.contact_email

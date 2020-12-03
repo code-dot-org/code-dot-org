@@ -2,17 +2,27 @@
 fa:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          MOVE1:
+            MOVES.Rest: هیچکدام
+          MOVE2:
+            MOVES.Rest: هیچکدام
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': ثانیه
       Dancelab_changeMoveEachLR:
         options:
+          MOVE:
+            MOVES.Rest: هیچکدام
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: هیچکدام
           DIR:
             '1': "→"
             "-1": "←"
@@ -28,11 +38,15 @@ fa:
             '"height"': ارتفاع
       Dancelab_doMoveEachLR:
         options:
+          MOVE:
+            MOVES.Rest: هیچکدام
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: هیچکدام
           DIR:
             '1': "→"
             "-1": "←"
@@ -49,6 +63,10 @@ fa:
         options:
           UNIT:
             '"seconds"': ثانیه
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: هیچکدام
       Dancelab_ifTime:
         options:
           UNIT:
@@ -68,6 +86,7 @@ fa:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': الماس
             '"random"': در هم
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -116,6 +135,14 @@ fa:
             '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -132,6 +159,14 @@ fa:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': هیچکدام
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -296,6 +331,10 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: هیچکدام
       Mikelab_randomColor:
         text: رنگ تصادفی
       Mikelab_repeatUntilComplete:
@@ -365,11 +404,10 @@ fa:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': نشان می دهد
-            '"hide"': پنهان کردن
+            '"random"': در هم
       binary_move:
         options:
           DIR:

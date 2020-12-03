@@ -1,0 +1,14 @@
+{
+  "az-AZ": {
+    "data": {
+      "long_instructions": {
+        "2-3 Artist 4": "Bu pişik üçün evi tamamlamağa mənə kömək edin.",
+        "2-3 Artist 9 NEW": "Bu çərpələngi bitirin",
+        "2-3 Artist Free Play": "Sərbəst oyun! Nə istəyirsinizə çəkin.",
+        "2-3 Artist Nested Loops Free Play": "Sərbəst oyun, içiçə dövrlərlə fısqırıq bir şey çək.",
+        "course4_artist_fwp_challenge1": "Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və ya onu silin və tamamilə fərqlisi ilə əvəzləyin)",
+        "courseE_bee_functions3": "Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün \"get 5\" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin."
+      }
+    }
+  }
+}

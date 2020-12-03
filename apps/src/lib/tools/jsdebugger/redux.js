@@ -47,6 +47,10 @@ export function isPaused(state) {
   return state.runState.isDebuggerPaused;
 }
 
+export function isEditWhileRun(state) {
+  return state.runState.isEditWhileRun;
+}
+
 function getObserver(state) {
   return getRoot(state).observer;
 }
@@ -83,6 +87,7 @@ export const selectors = {
   getCommandHistory,
   getJSInterpreter,
   isPaused,
+  isEditWhileRun,
   isAttached,
   canRunNext,
   getLogOutput,

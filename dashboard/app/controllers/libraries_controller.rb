@@ -1,6 +1,7 @@
 class LibrariesController < ApplicationController
-  before_action :require_levelbuilder_mode, except: :show
-  load_and_authorize_resource find_by: :name, except: :show
+  before_action :authenticate_user!, only: :get_updates
+  before_action :require_levelbuilder_mode, except: [:show, :get_updates]
+  load_and_authorize_resource find_by: :name, except: [:show, :get_updates]
 
   def show
     render plain: Library.content_from_cache(params[:id])
@@ -28,6 +29,17 @@ class LibrariesController < ApplicationController
   def destroy
     @library.destroy
     redirect_to(libraries_path, notice: 'Library Deleted')
+  end
+
+  # GET /libraries/get_updates
+  #
+  # @param params[:libraries] [Array<Object>] Formatted as follows:
+  #   [{channel_id: 'abc123', version: 'xyz987'}]
+  # @returns [Array<String>] The libraries from the given libraries that have been updated
+  #   (e.g., that library has a different latestLibraryVersion than the given version).
+  def get_updates
+    libraries = params[:libraries].present? ? JSON.parse(params[:libraries]) : []
+    render json: ProjectsList.fetch_updated_library_channels(libraries)
   end
 
   private

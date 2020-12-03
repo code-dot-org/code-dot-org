@@ -156,14 +156,25 @@ class ChannelsApi < Sinatra::Base
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
+    # Set libraryPublishedAt timestamp if we are publishing a project library.
+    publish_library = value.delete('publishLibrary')
+    value = value.merge('libraryPublishedAt' => Time.now) if publish_library
+
     # Channels for project-backed levels are created without a project_type. The
     # type is then determined by client-side logic when the project is updated.
     project_type = value.delete('projectType')
 
     begin
-      value = StorageApps.new(get_storage_id).update(id, value, request.ip, project_type: project_type)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
+      value = StorageApps.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => e
+      if e.class == ProfanityPrivacyError
+        dont_cache
+        status 422
+        content_type :json
+        return {nameFailure: e.flagged_text}.to_json
+      else
+        bad_request
+      end
     end
 
     dont_cache

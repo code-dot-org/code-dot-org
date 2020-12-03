@@ -1,0 +1,22 @@
+name 'CommuteAssess - loops 5 - block_2018_2019_virtual'
+question 'What will be displayed when this code is run?'
+wrong '`5`  
+`4`  
+`3`  
+`2`  
+`1`  
+`0`'
+wrong '`5`  
+`3`  
+`1`'
+right '`3`  
+`1`  
+`-1`'
+wrong '`3`  
+`1`'
+wrong '`3`'
+wrong 'it will be different each time you run it'
+
+markdown <<MARKDOWN
+![](https://images.code.org/da1c6db6f537c72748389671691619a0-image-1483468367249.png)
+MARKDOWN

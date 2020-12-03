@@ -1,4 +1,4 @@
 #warning-banner{style: 'display: none;'}
   %i.fa.fa-warning.warning-sign
   &nbsp;
-  = TextRender.safe_markdown I18n.t("compatibility_unsupported_browser_markdown").gsub(/%{supported_browsers_url}/, 'https://support.code.org/hc/en-us/articles/202591743')
+  = I18n.t("compatibility_unsupported_browser_markdown", supported_browsers_url: 'https://support.code.org/hc/en-us/articles/202591743', markdown: true).html_safe

@@ -1,6 +1,6 @@
 name 'CSD validator Matching'
 title 'Matching: Web Page Fundamentals'
-description 'Predict the purpose of these HTML elements.  Try to match the HTML element to their purpose.'
+description 'Predict the purpose of these HTML elements. Try to match the HTML element to their purpose.'
 question 'Defines high level information about web page'
 answer '&lt;head&gt;'
 question 'Starts and ends the HTML document'

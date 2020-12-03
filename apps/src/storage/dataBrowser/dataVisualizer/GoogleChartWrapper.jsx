@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {ChartType, ignoreMissingValues} from '../dataUtils';
+import {GOOGLE_CHART_AREA} from './constants';
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
+import msg from '@cdo/locale';
 
 class GoogleChartWrapper extends React.Component {
   static propTypes = {
+    style: PropTypes.object,
     records: PropTypes.array.isRequired,
     numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     chartType: PropTypes.number.isRequired,
@@ -19,17 +22,29 @@ class GoogleChartWrapper extends React.Component {
 
   aggregateRecordsByColumn = (records, columnName) => {
     const counts = _.countBy(records, r => r[columnName]);
+    const isNumeric = this.props.numericColumns.includes(columnName);
 
-    return _.map(counts, (count, key) => ({[columnName]: key, count}));
+    const mapped = _.map(counts, (count, key) => ({
+      [columnName]: isNumeric ? parseFloat(key) : key,
+      count
+    }));
+    return _.sortBy(mapped, columnName);
   };
 
   componentDidMount() {
     this.updateChart();
+    window.addEventListener('resize', this.debouncedUpdate);
   }
 
   componentDidUpdate() {
     this.updateChart();
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.debouncedUpdate);
+  }
+
+  debouncedUpdate = _.debounce(() => this.updateChart(), 50);
 
   updateChart() {
     if (!this.chartArea) {
@@ -38,7 +53,16 @@ class GoogleChartWrapper extends React.Component {
     let chart;
     let chartData;
     let columns;
-    let options = {};
+    let options = {
+      title: this.props.chartTitle || '',
+      legend: {position: 'none'},
+      hAxis: {
+        format: '#.#' // Round values to 1 decimal place
+      },
+      vAxis: {
+        format: '#.#' // Round values to 1 decimal place
+      }
+    };
 
     switch (this.props.chartType) {
       case ChartType.BAR_CHART:
@@ -51,6 +75,8 @@ class GoogleChartWrapper extends React.Component {
             records,
             this.props.selectedColumn1
           );
+          options.hAxis.title = this.props.selectedColumn1;
+          options.vAxis.title = msg.count();
           columns = [this.props.selectedColumn1, 'count'];
         }
         break;
@@ -61,6 +87,10 @@ class GoogleChartWrapper extends React.Component {
           chartData = ignoreMissingValues(this.props.records, [
             this.props.selectedColumn1
           ]);
+          options.hAxis.title = this.props.selectedColumn1;
+          options.hAxis.titleTextStyle = {italic: false};
+          options.vAxis.title = msg.count();
+          options.vAxis.titleTextStyle = {italic: false};
           columns = [this.props.selectedColumn1];
         }
         break;
@@ -71,6 +101,8 @@ class GoogleChartWrapper extends React.Component {
             this.props.selectedColumn1,
             this.props.selectedColumn2
           ]);
+          options.hAxis.title = this.props.selectedColumn1;
+          options.vAxis.title = this.props.selectedColumn2;
           columns = [this.props.selectedColumn1, this.props.selectedColumn2];
         }
         break;
@@ -84,7 +116,13 @@ class GoogleChartWrapper extends React.Component {
   }
 
   render() {
-    return <div ref={element => (this.chartArea = element)} />;
+    return (
+      <div
+        id={GOOGLE_CHART_AREA}
+        ref={element => (this.chartArea = element)}
+        style={this.props.style}
+      />
+    );
   }
 }
 

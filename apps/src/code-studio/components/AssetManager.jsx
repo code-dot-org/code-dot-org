@@ -20,6 +20,12 @@ export const AudioErrorType = {
   INITIALIZE: 'initialize',
   SAVE: 'save'
 };
+export const ImageMode = {
+  FILE: 'file',
+  ICON: 'icon',
+  URL: 'url',
+  DEFAULT: 'default'
+};
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -370,7 +376,7 @@ export default class AssetManager extends React.Component {
       assetList = (
         <div>
           <div
-            style={{maxHeight: '330px', overflowY: 'scroll', margin: '1em 0'}}
+            style={{maxHeight: '380px', overflowY: 'scroll', margin: '1em 0'}}
           >
             <table style={{width: '100%'}}>
               <tbody>{rows}</tbody>

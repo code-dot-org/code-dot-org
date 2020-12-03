@@ -3,7 +3,7 @@ cs:
   data:
     unplugged:
       Unplug1:
-        title: Úvod do počítačové vědy
+        title: Úvod do informatiky
         desc: Tato lekce představí koncept informatiky a vysvětlí, co dělá počítačový
           vědec. Také dá studentům možnost zkusit si roli počítačového vědce. Na konci
           lekce každý student shrne to, co se naučil. Možná, že nebudete chtít dětem
@@ -22,12 +22,11 @@ cs:
           s jiným skupinami a nakreslí monstrum, založené na tom co algoritmus popisuje.
           Je kresba to, co původní tým zamýšlel?
       Unplug3:
-        title: Programování Na Milimetrovém Papíru
-        desc: Programováním jeden s druhým pro nakreslení obrázků, studenti začnou
-          chápat, o čem v programování opravdu jde. Třída začne se  vzájemnou instruktáží
-          studentů  k barevným čtvercům na milimetrovém papíru ve snaze reprodukovat
-          existující obrázek.  Když zbude čas, lze probrat  obrázky, které studenti
-          vytvořili.
+        title: Programování na čtverečkovaném papíru
+        desc: Programováním jeden druhého na kreslení obrázků, studenti začnou chápat,
+          o čem v programování opravdu jde. Hodina začne vzájemnou instruktáží studentů  ke
+          kreslení obrázků na čtverečkovaný papír ve snaze reprodukovat existující
+          obrázek.  Když zbude čas, lze použít i obrázky, které vytvořili sami studenti.
       Unplug4:
         title: Algoritmy
         desc: Tato lekce pokrývá algoritmy.  Pomocí tangram tvarů  a milimetrového
@@ -64,10 +63,10 @@ cs:
           hry pomoci třídy, dozvědět se o účinnosti abstrakce.
       Unplug9:
         title: Štafetové Programování
-        desc: V této lekci vezmeme myšlenku z předchozí aktivity (4. programování
-          s milimetrovým papírem) a využití těchto dovednost ke zdůraznění významu
-          dokončení programů, které fungují v posloupnosti a často kontrolních programů
-          pro "chyby".
+        desc: Tato lekce se inspiruje předchozí aktivitou (Programování na čtverečkovaném
+          papíru) a využije získané dovednost ke zdůraznění důležitosti dokončení
+          programů, které fungují v posloupnosti a nutnosti časté kontroly programů
+          na chyby.
       Unplug10:
         title: Internet
         desc: V této lekci studenti předstírají tok přes internet po celou dobu učení
@@ -91,26 +90,26 @@ cs:
           životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také
           na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       BuildingAFoundation:
-        title: Budování nadace
+        title: Budování základů
         desc: Studenti vytváří strukturu jen s pomocí poskytnutých zásob. Struktury
           musí dokončit úkol (dosáhnout určité výšky nebo nést určitou hmotnost),
           a studenti diskutují představu, že je trvalá, když věci se komplikují.
       GettingLoopy:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
           taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
           instruováni to opakovat.
       RelayProgramming:
         title: Relay programování
-        desc: Studenti běží štafetový závod, kde kreslí pomlčky přes dvůr, aby napsali
-          algoritmus založený na obrázku "programování s milimetrovým papírem". Mohou
-          psát pouze jednu instrukci v době, a pokud je někde chyba, budou muset vymazat
-          vše zpět do tohoto bodu.
+        desc: Studenti běží štafetový závod, ve kterém napíšou algoritmus na kreslení
+          obrázku ve stylu "Programování na čtverečkovaný papír". V každém kole mohou
+          napsát pouze jednu instrukci a pokud někde najdou chybu, budou muset vymazat
+          všechny instrukce zapsány po této chybě.
       Conditionals:
         title: Podmínky
-        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a
-          vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod"
-          a "Vytáhnu-li černou kartu, dostanu bod."
+        desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a
+          vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a
+          "Vytáhnu-li si černou kartu, ty dostaneš bod."
       BigEvent:
         title: Velká událost
         desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou
@@ -121,9 +120,9 @@ cs:
         desc: Internet je mocný, ale občas nebezpečné místo. Učitelé představit, jak
           zůstat v bezpečí při procházení Internetu.
       GraphPaperProgramming:
-        title: Programování Na Milimetrovém Papíru
-        desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
-          příkazů k řízení svých spolužáků k reprodukci výkresu.
+        title: Programování na čtverečkovaném papíru
+        desc: Pomocí předdefinovaných příkazu studenti napíší algoritmus (sada instrukcí),
+          na základě kterých spolužáci zreprodukují obrázek.
       PaperPlanes:
         title: 'Algoritmy ze života: Papírová letadla'
         desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě,
@@ -135,13 +134,14 @@ cs:
           jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než
           jedním způsobem.
       DigitalFootprint:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
       ComputationalThinking:
         title: Aritmetické Myšlení
-        desc: Studenti používají kroky počítačového myšlení (rozklad, souhlas se vzorem,
-          abstrakce, algoritmus), aby přišli na to jak hrát hru bez instrukcí.
+        desc: Studenti používají jednotlivé kroky aritmetického myšlení (rozklad,
+          shoda vzoru, abstrakce, algoritmus), aby přišli na to, jak hrát hru bez
+          instrukcí.
       FunctionalSuncatchers:
         title: Funkční náhrdelníky
         desc: Studenti vytvoří algoritmus s proměnnými a funkcemi (kusy kódu, který
@@ -237,8 +237,11 @@ cs:
           většiny her. V této lekci se budeme zabývat, jak Pythagorova věta a vzorec
           vzdálenosti slouží k měření vzdálenosti mezi dvěma body v rovině a pak se
           rozhodnout, zda tyto dva body (nebo postavy her) se dotýkají.
+      courseA_unplugged_loops:
+        desc: V téhle lekci se naučíme cykly!
       courseB_unplugged_MRF:
         title: Aktivita bez počítače
+        desc: V téhle lekci budeš "programovat" své přátele!
       courseB_unplugged_loopyMRF:
         title: Aktivita bez počítače
       courseC_Unplugged_ScreenOutTheMean:
@@ -266,11 +269,11 @@ cs:
           akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře
           vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
       courseB_unplugged_digitalFootprint:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
       courseC_unplugged_buildingAFoundation:
-        title: Budování nadace
+        title: Budování základů
         desc: Studenti vytváří strukturu jen s pomocí poskytnutých zásob. Struktury
           musí dokončit úkol (dosáhnout určité výšky nebo nést určitou hmotnost),
           a studenti diskutují představu, že je trvalá, když věci se komplikují.
@@ -280,7 +283,7 @@ cs:
           konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší
           obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       courseC_unplugged_gettingLoopy:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
           taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
           instruováni to opakovat.
@@ -290,20 +293,20 @@ cs:
           jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než
           jedním způsobem.
       courseD_unplugged_graphPaperProgramming:
-        title: Programování Na Milimetrovém Papíru
-        desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
-          příkazů k řízení svých spolužáků k reprodukci výkresu.
+        title: Programování na čtverečkovaném papíru
+        desc: Pomocí předdefinovaných příkazu studenti napíší algoritmus (sada instrukcí),
+          na základě kterých spolužáci zreprodukují obrázek.
       courseD_unplugged_relayProgramming:
-        title: Relay programování
-        desc: Studenti běží štafetový závod, kde kreslí pomlčky přes dvůr, aby napsali
-          algoritmus založený na obrázku "programování s milimetrovým papírem". Mohou
-          psát pouze jednu instrukci v době, a pokud je někde chyba, budou muset vymazat
-          vše zpět do tohoto bodu.
+        title: Štafetové programování
+        desc: Studenti běží štafetový závod, ve kterém napíšou algoritmus na kreslení
+          obrázku ve stylu "Programování na čtverečkovaný papír". V každém kole mohou
+          napsát pouze jednu instrukci a pokud někde najdou chybu, budou muset vymazat
+          všechny instrukce zapsány po této chybě.
       courseD_unplugged_conditionalsCards:
         title: Podmínky s kartami
-        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a
-          vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod"
-          a "Vytáhnu-li černou kartu, dostanu bod."
+        desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a
+          vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a
+          "Vytáhnu-li si černou kartu, ty dostaneš bod."
       courseD_unplugged_binaryImages:
         title: Binární obrázky
         desc: Ačkoli mnoho lidí si myslí binárně, doslovně jako  nuly a jedničky,
@@ -355,7 +358,7 @@ cs:
           znova ve větším programu. Tato lekce vám pomůže studentům intuitivně pochopit,
           proč kombinace kousky kódu do funkce je užitečnou praxí.  '
       courseB_unplugged_MRF_2018:
-        title: Mí robotičtí přátelé
+        title: Moji robotičtí přátelé
       PlantASeed_2018:
         title: 'Algoritmy ze života: Zasadit semínko'
         desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním
@@ -369,26 +372,28 @@ cs:
         title: Cestování bezpečně
         desc: Internet je mocný, ale občas nebezpečné místo. Učitelé představit, jak
           zůstat v bezpečí při procházení Internetu.
+      courseA_unplugged_loops_2018:
+        desc: V téhle lekci se naučíme cykly!
       BigEvent_2018:
         title: Velká událost
         desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou
           akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře
           vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
       GraphPaperProgramming_2018:
-        title: Programování Na Milimetrovém Papíru
-        desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
-          příkazů k řízení svých spolužáků k reprodukci výkresu.
+        title: Programování na čtverečkovaném papíru
+        desc: Pomocí předdefinovaných příkazu studenti napíší algoritmus (sada instrukcí),
+          na základě kterých spolužáci zreprodukují obrázek.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktivita bez počítače
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktivita bez počítače
       Conditionals_2018:
         title: Podmínky
-        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a
-          vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod"
-          a "Vytáhnu-li černou kartu, dostanu bod."
+        desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a
+          vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a
+          "Vytáhnu-li si černou kartu, ty dostaneš bod."
       DigitalFootprint_2018:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
       BinaryImages_2018:
@@ -404,7 +409,7 @@ cs:
           konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší
           obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       GettingLoopy_2018:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
           taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
           instruováni to opakovat.
@@ -416,20 +421,28 @@ cs:
       MoveItMoveIt_2018:
         title: Pohyb, pohyb
       RelayProgramming_2018:
-        title: Relay programování
+        title: Štafetové programování
+        desc: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle
+          přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat
+          na napsání programu postupně po jednom pokynu.
       courseB_unplugged_MRF_2019:
-        title: Mí robotičtí přátelé
+        title: Moji robotičtí přátelé
+      courseB_unplugged_loopyMRF_2019:
+        title: Moji zacyklení robotičtí přátelé (ml.)
       Conditionals_2019:
         title: Podmínky
-        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a
-          vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod"
-          a "Vytáhnu-li černou kartu, dostanu bod."
+        desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a
+          vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a
+          "Vytáhnu-li si černou kartu, ty dostaneš bod."
       GraphPaperProgramming_2019:
-        title: Programování Na Milimetrovém Papíru
-        desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
-          příkazů k řízení svých spolužáků k reprodukci výkresu.
+        title: Programování na čtverečkovaném papíru
+        desc: Pomocí předdefinovaných příkazu studenti napíší algoritmus (sada instrukcí),
+          na základě kterých spolužáci zreprodukují obrázek.
       RelayProgramming_2018_2019:
-        title: Relay programování
+        title: Štafetové programování
+        desc: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle
+          přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat
+          na napsání programu postupně po jednom pokynu.
       courseD_unplugged_digitalCitizenship_2019:
         title: Aktivita bez počítače
       BinaryImages_2019:
@@ -440,7 +453,7 @@ cs:
           jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace
           (např. obrázky a barvy).
       GettingLoopy_2019:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
           taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
           instruováni to opakovat.
@@ -474,16 +487,36 @@ cs:
         title: Cestování bezpečně
         desc: Internet je mocný, ale občas nebezpečné místo. Učitelé představit, jak
           zůstat v bezpečí při procházení Internetu.
+      courseA_unplugged_loops_2019:
+        desc: V téhle lekci se naučíme cykly!
       MoveItMoveIt_2019:
         title: Pohyb, pohyb
       DigitalFootprint_2019:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
+      GraphingData_2019:
+        title: Zobrazení dat
+      courseE_simon_says_2019:
+        title: Kuba řekl
+        desc: "Zahraj si hru a přemýšlej, jaké příkazy jsou potřeba, abys došel ke
+          správnému výsledku.\r\n\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Silná hesla
+        desc: Zjisti, proč lidé používají hesla, nauč se výhody používání hesel a
+          objev postupy pro vytváření a udržování silných a bezpečných hesel.
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
+        desc: '_Poznámka od Joshe: na rozdíl od první lekce jsem tuto připravil jako
+          klasickou lekci bez počítače._'
       timeforcs_demo_conditionals:
         title: Podmínky
-        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a
-          vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod"
-          a "Vytáhnu-li černou kartu, dostanu bod."
+        desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a
+          vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a
+          "Vytáhnu-li si černou kartu, ty dostaneš bod."
+      TheRightApp_2019:
+        desc: "* Každý používá počítače, hlavně chytré telefony. \r\n* Aplikace pro
+          chytré telefony, neboli \"appky\", pomáhají lidem dělat věci jako povídat
+          si s přáteli, poslouchat hudbu, nakupovat, nebo jen procházet web.\r\n*
+          Je důležité, aby programátoři rozuměli potřebám ostatních a navrhovali aplikace
+          s ohledem na ně!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

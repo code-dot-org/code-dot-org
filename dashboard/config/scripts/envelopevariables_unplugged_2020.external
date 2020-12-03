@@ -1,0 +1,10 @@
+name 'EnvelopeVariables-Unplugged_2020'
+video_key 'C4_unplugged_variables'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Envelope Variables
+
+Variables allow for a lot of freedom in computer science. This lesson helps to explain what variables are and how we can use them in many different ways.
+MARKDOWN

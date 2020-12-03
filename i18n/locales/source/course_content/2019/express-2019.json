@@ -90,7 +90,7 @@
     "short_instructions": "Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key. Do the drop-clap as fast as you can!",
     "long_instructions": "It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key.\n\n**Use the keys to get the Robot to do the drop-clap-drop-clap as fast as you can!**",
     "authored_hints": {
-      "validation": "**How do I pass this level?**\n\n-   Use the `when left arrow pressed` block to make the Robot do a dance move when you press it.\n\n_This level ends after 7 measures._"
+      "validation": "**How do I pass this level?**\n\n-   Use the `when arrow arrow pressed` block to make the Robot do a dance move when you press it.\n\n_This level ends after 7 measures._"
     }
   },
   "https://studio.code.org/s/express-2019/stage/1/puzzle/12": {
@@ -199,11 +199,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read through the code below very carefully.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bird will end up one step short of the pig.",
@@ -224,6 +219,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "This code gets the bird perfectly to the pig."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Read through the code below very carefully. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -310,11 +310,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -335,6 +330,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
             }
           ]
         }
@@ -446,11 +446,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at this code carefully. What do you think will happen when the program runs?"
-            }
-          ],
           "answers": [
             {
               "text": "Laurel will collect 4 pieces of treasure using this code.",
@@ -471,6 +466,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Laurel tries to collect treasure where there is none and it causes an error."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look at this code carefully. What do you think will happen when the program runs?"
             }
           ]
         }
@@ -514,9 +514,16 @@
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "function_names": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/5/puzzle/5": {
@@ -527,8 +534,10 @@
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "function_names": {
-      "booster": "booster"
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/5/puzzle/6": {
@@ -569,11 +578,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with three equal sides.",
@@ -594,6 +598,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The artist draws a square."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -629,11 +638,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What do you think will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "BB-8 will not move.",
@@ -654,6 +658,11 @@
               "text": "I don't know",
               "correct": false,
               "feedback": "The repeat block will make the BB-8 move forward 5 times."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What do you think will happen when you click \"Run\"?"
             }
           ]
         }
@@ -733,11 +742,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "BB-8 will travel too far in the first loop.",
@@ -758,6 +762,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -813,6 +822,7 @@
   "https://studio.code.org/s/express-2019/stage/7/puzzle/4": {
     "short_instructions": "Get the artist to the center of the play area, then draw a sticker. ",
     "long_instructions": "**Free Play:** Let's build something bigger, one step at a time!\n\nGet the artist to the center of the play area using the [blockly block][0] block, then use the [blockly block][1] block to make something appear.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][2]\n[expandable][3]\n[expandable][4]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops1a_a": "This is the first block you will need:\n\n[blockly block][0]",
       "courseC_artist_loops1a_b": "Use this block to draw the sticker!\n\n[blockly block][0]"
@@ -824,6 +834,7 @@
   "https://studio.code.org/s/express-2019/stage/7/puzzle/5": {
     "short_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the turn and repeat blocks to make different patterns.",
     "long_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the `turn` and `repeat` blocks to make different patterns.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops2a_a": "Inside your loop, you will want to jump to the middle, then turn, then draw a sticker.",
       "courseC_artist_loops2a_b": "Click on the number at the top of the `repeat` loop to change how many times it repeats."
@@ -832,6 +843,7 @@
   "https://studio.code.org/s/express-2019/stage/7/puzzle/6": {
     "short_instructions": "Now add a second sticker!",
     "long_instructions": "So much fun!  \n\nNow, add a second sticker right on top of the first one to make an image like the ones below.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting.\n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops3a_a": "You will want to add just one block inside of your loop, after the first sticker.",
       "courseC_artist_loops3a_b": "Your program should look like this!\n\n[blockly block][0]\n\nYou can use any stickers you like!"
@@ -840,6 +852,7 @@
   "https://studio.code.org/s/express-2019/stage/7/puzzle/7": {
     "short_instructions": "Edit your code so that you jump forward between drawing the two stickers.",
     "long_instructions": "Edit your code so that you jump forward between drawing the two stickers. In this puzzle, make sure you have `jump to the middle center position` inside of your loop, so you stay in the center!\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops4a_a": "Use this block to jump forward:\n\n[blockly block][0]\n\nDon't forget to change how far!",
       "courseC_artist_loops4a_b": "Your program should look like this!\n\n[blockly block][0]"
@@ -855,6 +868,7 @@
   "https://studio.code.org/s/express-2019/stage/7/puzzle/9": {
     "short_instructions": "Try adding lines!",
     "long_instructions": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n\n-   Try using the `set pattern` block before you start your loop to make a work of art!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops5b_a": "Use this block to set the pattern of your lines:\n\n[blockly block][0]",
       "courseC_artist_loops5b_b": "To make a design like the one above, you will want to move backward the same amount that you move forward.",
@@ -864,6 +878,7 @@
   "https://studio.code.org/s/express-2019/stage/7/puzzle/10": {
     "short_instructions": "Add another sticker!",
     "long_instructions": "Add a third sticker anywhere in the loop that you want! What does it look like now?\n\n-   Change the pattern on your brush for more variety!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops6a_a": "To make a design like the one above, jump forward less than 75 pixels between each sticker."
     }
@@ -871,13 +886,15 @@
   "https://studio.code.org/s/express-2019/stage/7/puzzle/11": {
     "short_instructions": "Play with the loops and angles.",
     "long_instructions": "Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?\n\n-   Try changing how many times you spin\n    -   Try a 60 degree turn for 6 times around\n    -   Try a 20 degree turn for 18 times around\n\n* * *\n\nThe first image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops7a_a": "A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?\nCheck the suggested rotations to see that this works!"
     }
   },
   "https://studio.code.org/s/express-2019/stage/7/puzzle/12": {
     "short_instructions": "Now try something on your own!",
-    "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]"
+    "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2019/stage/8/puzzle/1": {
     "short_instructions": "Help the bee collect all of the nectar.",
@@ -902,11 +919,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -927,6 +939,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -999,11 +1016,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -1024,6 +1036,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
             }
           ]
         }
@@ -1210,7 +1227,8 @@
     }
   },
   "https://studio.code.org/s/express-2019/stage/10/puzzle/14": {
-    "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far."
+    "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here."
   },
   "https://studio.code.org/s/express-2019/stage/11/puzzle/2": {
     "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
@@ -1221,11 +1239,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
@@ -1246,6 +1259,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            }
+          ],
+          "questions": [
+            {
+              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click \"Run\"?"
             }
           ]
         }
@@ -1312,31 +1330,31 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud."
-            }
-          ],
           "answers": [
             {
-              "text": "The bee will get nectar at each flower and honey at each honeycomb.",
+              "text": "The bee will get nectar at each flower and make honey at each honeycomb.",
               "correct": true,
               "feedback": "Correct!"
             },
             {
               "text": "The bee will try to get nectar from both flowers and honeycomb.",
               "correct": false,
-              "feedback": "Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb."
+              "feedback": "Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb."
             },
             {
               "text": "The bee will try to get honey from both flowers and honeycomb.",
               "correct": false,
-              "feedback": "Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.."
+              "feedback": "Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb.."
             },
             {
               "text": "I don't know.",
               "correct": false,
-              "feedback": "The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb."
+              "feedback": "The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud."
             }
           ]
         }
@@ -1406,11 +1424,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing will happen.",
@@ -1431,6 +1444,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The farmer will remove dirt as long as there is a pile, then stop when the pile is gone"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -1493,14 +1511,9 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
-            }
-          ],
           "answers": [
             {
-              "text": "Nothing.  This code will leave only level ground.",
+              "text": "Nothing. This code will leave only level ground.",
               "correct": false,
               "feedback": "Incorrect. There is no code to remove dirt from the pile."
             },
@@ -1518,6 +1531,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `while` loop will handle any size loop, but there is no code to remove dirt from the pile."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
             }
           ]
         }
@@ -1596,11 +1614,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  What do you think will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bird will not move at all.",
@@ -1621,6 +1634,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Take a close look at the code below. What do you think will happen when you click \"Run\"?"
             }
           ]
         }
@@ -1684,11 +1702,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The zombie will pass the correct path and end up going back and forth forever.",
@@ -1709,6 +1722,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "In this code, the zombie will pass the correct path and end up going back and forth forever."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -1753,7 +1771,7 @@
     "short_instructions": "Collect all of the corn and lettuce, then grab the pumpkin at the end.",
     "long_instructions": "_\"What a bountiful crop!\"_\n\nThis field has clusters of corn and lettuce growing together -- with one pumpkin at the end.  Can you harvest everything?",
     "authored_hints": {
-      "courseD_farmer_condLoops5_a": "There is a new loop: `repeat until at pumpkin`. Can you see how to use it in this puzzle?",
+      "courseD_farmer_condLoops5_a": "There is a new loop: `repeat until there are pumpkins`. Can you see how to use it in this puzzle?",
       "courseD_farmer_condLoops5_b": "There could be more than one corn or lettuce plant in each spot. Use a `while` loop to gather all of them!"
     }
   },
@@ -1787,11 +1805,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will collect all of the crops.",
@@ -1814,7 +1827,12 @@
               "feedback": "The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin."
             }
           ],
-          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n"
+          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n",
+          "questions": [
+            {
+              "text": "Take a close look at the code below. What will happen after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1920,8 +1938,10 @@
     "callouts": {
       "Function_intro_Ryan_1": "This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace."
     },
-    "function_names": {
-      "build bridge": "build bridge"
+    "function_definitions": {
+      "build bridge": {
+        "name": "build bridge"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/16/puzzle/9": {
@@ -1933,8 +1953,10 @@
       "MC_HOC_2017_07_Cole_a": "To solve this puzzle, figure out what the `clear path` function does and call it as many times as you need using the small green `clear path` block from the toolbox.",
       "MC_HOC_2017_07_Cole_b": "Try mixing the function blocks with other blocks from the toolbox to help you solve this puzzle."
     },
-    "function_names": {
-      "clear path": "clear path"
+    "function_definitions": {
+      "clear path": {
+        "name": "clear path"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/16/puzzle/10": {
@@ -1945,9 +1967,13 @@
       "MC_HOC_2017_10_Cole_b": "Don't know where to go?  See if you can find the dotted line!",
       "MC_HOC_2017_10_Cole_a": "Use functions to make solving this puzzle easier!"
     },
-    "function_names": {
-      "fix long path": "fix long path",
-      "fix short path": "fix short path"
+    "function_definitions": {
+      "fix long path": {
+        "name": "fix long path"
+      },
+      "fix short path": {
+        "name": "fix short path"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/16/puzzle/11": {
@@ -1962,9 +1988,13 @@
     "callouts": {
       "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but Steve and Alex can't!  "
     },
-    "function_names": {
-      "build short bridge": "build short bridge",
-      "build long bridge": "build long bridge"
+    "function_definitions": {
+      "build short bridge": {
+        "name": "build short bridge"
+      },
+      "build long bridge": {
+        "name": "build long bridge"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/16/puzzle/12": {
@@ -1974,9 +2004,13 @@
     "authored_hints": {
       "MC_HOC_2017_13_Cole_a": "Try having the Agent build some minecart tracks so you can explore the world!"
     },
-    "function_names": {
-      "function 1": "function 1",
-      "function 2": "function 2"
+    "function_definitions": {
+      "function 1": {
+        "name": "function 1"
+      },
+      "function 2": {
+        "name": "function 2"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/2": {
@@ -2000,8 +2034,10 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "check square for corn": "check square for corn"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/4": {
@@ -2015,8 +2051,10 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "check square for corn": "check square for corn"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/5": {
@@ -2025,17 +2063,25 @@
     "authored_hints": {
       "courseE_farmer_functions2ba_a": "Use the green `get all pumpkins` block to make sure you get all of the pumpkins!"
     },
-    "function_names": {
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/6": {
     "short_instructions": "Try on a longer path.",
     "long_instructions": "Great!  Try your functions out on a longer path.",
-    "function_names": {
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/7": {
@@ -2045,10 +2091,16 @@
       "coursee_farmer_functions3c1_2018_a": "You'll need to use the `pick along path` function three times to solve this puzzle.",
       "coursee_farmer_functions3c1_2018_b": "What code do you need to add to get around the corners?"
     },
-    "function_names": {
-      "pick along path": "pick along path",
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/8": {
@@ -2061,8 +2113,10 @@
       "courseE_farmer_functions7a1_2018_a": "Create your function under the `functions` section in the toolbox.",
       "courseE_farmer_functions7a1_2018_b": "Don't forget to use your function when you're done making it!"
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/10": {
@@ -2072,8 +2126,10 @@
       "courseE_farmer_functions8a1_2018a": "Start this puzzle off by coding the same function you made in the last puzzle.",
       "courseE_farmer_functions8a1_2018b": "After the function runs the first time, you'll need to make one extra turn before you can run it again."
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/11": {
@@ -2084,18 +2140,28 @@
       "courseE_farmer_functions9a1_2018b": "Use the same steps from the previous puzzle to solve the first half of this puzzle.",
       "courseE_farmer_functions9a1_2018c": "You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again."
     },
-    "function_names": {
-      "garden square": "garden square"
+    "function_definitions": {
+      "garden square": {
+        "name": "garden square"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/12": {
     "short_instructions": "Use everything that you've learned so far to solve this puzzle!",
     "long_instructions": "**Challenge:** Use everything that you've learned so far to solve this puzzle in 19 blocks or less!",
-    "function_names": {
-      "pick along path": "pick along path",
-      "check square for corn": "check square for corn",
-      "get all pumpkins": "get all pumpkins",
-      "pumpkin square": "pumpkin square"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      },
+      "pumpkin square": {
+        "name": "pumpkin square"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/13": {
@@ -2104,30 +2170,43 @@
     "callouts": {
       "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
     },
-    "function_names": {
-      "pick along path": "pick along path",
-      "check for corn": "check for corn",
-      "corn rectangle": "corn rectangle",
-      "lettuce stairs": "lettuce stairs"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "check for corn": {
+        "name": "check for corn"
+      },
+      "corn rectangle": {
+        "name": "corn rectangle"
+      },
+      "lettuce stairs": {
+        "name": "lettuce stairs"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/17/puzzle/14": {
     "long_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
-    "function_names": {
-      "pick along path": "pick along path",
-      "pumpkin square": "pumpkin square",
-      "check square for corn": "check square for corn",
-      "get produce": "get produce",
-      "get all pumpkins": "get all pumpkins"
+    "function_definitions": {
+      "pick along path": {
+        "name": "pick along path"
+      },
+      "pumpkin square": {
+        "name": "pumpkin square"
+      },
+      "check square for corn": {
+        "name": "check square for corn"
+      },
+      "get produce": {
+        "name": "get produce"
+      },
+      "get all pumpkins": {
+        "name": "get all pumpkins"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at the functions defined below.  What will the harvester pick?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will pick two pumpkins.",
@@ -2149,6 +2228,11 @@
               "correct": false,
               "feedback": "Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce."
             }
+          ],
+          "questions": [
+            {
+              "text": "Look at the functions defined below. What will the harvester pick?"
+            }
           ]
         }
       }
@@ -2156,18 +2240,17 @@
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/1": {
     "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. The function is not called in the program.",
@@ -2189,6 +2272,11 @@
               "correct": true,
               "feedback": "Correct! The function is called two times in the program, with a jump in between."
             }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
+            }
           ]
         }
       }
@@ -2205,16 +2293,22 @@
     "callouts": {
       "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/3": {
     "short_instructions": "Build a function that will create this star.",
     "long_instructions": "Build a function that will create this star.\n\n* * *\n\n-   Each arm of the star is 25 pixels long\n-   You need to turn 45 degrees to get 8 arms\n-   It is okay to go forward and backward over the same arm",
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/4": {
@@ -2225,8 +2319,10 @@
       "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
       "courseD_artist_functions5_c": "Start by creating your `draw a star` function, then use this function to draw the three stars!"
     },
-    "function_names": {
-      "draw a star": "draw a star"
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/5": {
@@ -2236,9 +2332,10 @@
       "courseD_artist_functions7_a": "Try creating your function first then add windows one at a time.",
       "courseD_artist_functions7_b": "To get from the top windows to the bottom windows, simply turn the artist right, jump 150 pixels, then turn the artist right again!  Now the artist will be facing the correct direction to finish the rest of the house!"
     },
-    "function_names": {
-      "draw a window": "draw a window",
-      "draw a house": "draw a house"
+    "function_definitions": {
+      "draw a window": {
+        "name": "draw a window"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/6": {
@@ -2247,9 +2344,13 @@
     "callouts": {
       "courseD_artist_functions8_1": "Your blocks to create functions have been moved under this label in the toolbox."
     },
-    "function_names": {
-      "draw a square": "draw a square",
-      "do something": "do something"
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/7": {
@@ -2260,10 +2361,16 @@
       "courseD_artist_functions8_a": "Start by making a function for a square, then try making a function for a line of squares.",
       "courseD_artist_functions8_d": "To make a line of squares,\n\n-   repeat 3 times\n    -   draw a square\n    -   jump forward **100 pixels**"
     },
-    "function_names": {
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square",
-      "do something": "do something"
+    "function_definitions": {
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/8": {
@@ -2274,11 +2381,19 @@
       "courseD_artist_functions8_a": "The second line of squares is just a 180 degree turn different than the first!",
       "courseD_artist_functions8_c": "At the end of each line of squares, the artist only needs to turn 180 degrees before drawing the next line of squares.  Put the whole thing in a repeat loop to set you up for the next exercise!"
     },
-    "function_names": {
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square",
-      "do something": "do something",
-      "staggered squares": "staggered squares"
+    "function_definitions": {
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      },
+      "do something": {
+        "name": "do something"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/9": {
@@ -2291,11 +2406,19 @@
       "courseD_artist_functions8_c": "At the end of each set of staggered squares, the artist will need to jump down and backward before he draws the next set of staggered squares.",
       "courseD_artist_functions8_g": "[][0]"
     },
-    "function_names": {
-      "do something": "do something",
-      "staggered squares": "staggered squares",
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/10": {
@@ -2308,10 +2431,16 @@
       "courseD_artist_functions9_c": "To draw a line of triangles:\n\n-   repeat 4 times\n    -   draw a triangle\n    -   jump forward 50 pixels",
       "courseD_artist_functions9_d": "To draw the diamond:\n\n-   repeat 2 times\n    -   draw a line of triangles\n    -   turn 60 degrees\n    -   draw a line of triangles\n    -   turn 120 degrees"
     },
-    "function_names": {
-      "do something": "do something",
-      "draw triangle": "draw triangle",
-      "draw line of triangles": "draw line of triangles"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "draw triangle": {
+        "name": "draw triangle"
+      },
+      "draw line of triangles": {
+        "name": "draw line of triangles"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/11": {
@@ -2322,26 +2451,33 @@
       "courseD_artist_functions10_a": "To avoid using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.",
       "courseD_artist_functions10_c": "Do you see where this drawing could use a function called `line of hexagons`?\n\n[][0]"
     },
-    "function_names": {
-      "do something": "do something",
-      "draw hexagon": "draw hexagon",
-      "draw line of hexagons": "draw line of hexagons"
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      },
+      "draw hexagon": {
+        "name": "draw hexagon"
+      },
+      "draw line of hexagons": {
+        "name": "draw line of hexagons"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/puzzle/12": {
-    "function_names": {
-      "draw line of polygons": "draw line of polygons",
-      "draw polygon": "draw polygon",
-      "do something": "do something"
+    "function_definitions": {
+      "draw line of polygons": {
+        "name": "draw line of polygons"
+      },
+      "draw polygon": {
+        "name": "draw polygon"
+      },
+      "do something": {
+        "name": "do something"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press the \"Run\" button?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will solve the puzzle correctly.",
@@ -2363,6 +2499,11 @@
               "correct": false,
               "feedback": "Incorrect. The loop turns 90 degrees between calls to \"draw polygon\"."
             }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press the \"Run\" button?"
+            }
           ]
         }
       }
@@ -2371,12 +2512,22 @@
   "https://studio.code.org/s/express-2019/stage/18/puzzle/13": {
     "short_instructions": "**Inspiration:** Use what you've learned to make whatever you want!",
     "long_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \n\nCan you make something like this pinwheel?",
-    "function_names": {
-      "draw hexagon": "draw hexagon",
-      "draw line of hexagons": "draw line of hexagons",
-      "staggered squares": "staggered squares",
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square"
+    "function_definitions": {
+      "draw hexagon": {
+        "name": "draw hexagon"
+      },
+      "draw line of hexagons": {
+        "name": "draw line of hexagons"
+      },
+      "staggered squares": {
+        "name": "staggered squares"
+      },
+      "draw a line of squares": {
+        "name": "draw a line of squares"
+      },
+      "draw square": {
+        "name": "draw square"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/extras?level_name=courseE_artist_functions_challenge1_2019": {
@@ -2390,9 +2541,13 @@
       "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/18/extras?level_name=courseE_artist_functions_challenge2_2019": {
@@ -2405,9 +2560,13 @@
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
       "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
     },
-    "function_names": {
-      "my design": "my design",
-      "do something": "do something"
+    "function_definitions": {
+      "my design": {
+        "name": "my design"
+      },
+      "do something": {
+        "name": "do something"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/19/puzzle/1": {
@@ -2431,7 +2590,6 @@
   },
   "https://studio.code.org/s/express-2019/stage/19/puzzle/3": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### *Variables* are placeholders for information that can change.  Having a placeholder makes it possible to write a program, even when you won't know all of your values until later!\n\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n\n\n"
     }
@@ -2440,11 +2598,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with 50 pixel sides.",
@@ -2465,6 +2618,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides."
+            }
+          ],
+          "questions": [
+            {
+              "text": "We have set the variable \"length\" to 50. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -2534,14 +2692,18 @@
     "callouts": {
       "courseF_bee_functions_1_2018_1": "You can find your variables under here!"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/20/puzzle/2": {
     "short_instructions": "Edit your solution in one place so that the bee can collect all of the honey and nectar.",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/20/puzzle/3": {
@@ -2550,8 +2712,10 @@
     "authored_hints": {
       "courseF_bee_variables_3_2019_1": "To subtract one from the variable, you can use this code in your program:\n[blockly block][0]"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/20/puzzle/4": {
@@ -2560,43 +2724,49 @@
     "authored_hints": {
       "courseF_bee_variables_4_2019_1": "Instead of subtracting 1 from `gather`, add 1 each time instead. What should value should the variable have at first?"
     },
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/20/puzzle/5": {
     "short_instructions": "Create your own code to solve this puzzle",
-    "function_names": {
-      "collect row": "collect row"
+    "function_definitions": {
+      "collect row": {
+        "name": "collect row"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/20/puzzle/6": {
     "short_instructions": "**Challenge** Now give this puzzle a try!",
-    "function_names": {
-      "collect stairs": "collect stairs"
+    "function_definitions": {
+      "collect stairs": {
+        "name": "collect stairs"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/20/puzzle/7": {
     "short_instructions": "This puzzle is a little different.  What do you need to do to solve it?",
-    "function_names": {
-      "collect": "collect"
+    "function_definitions": {
+      "collect": {
+        "name": "collect"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/20/puzzle/8": {
     "short_instructions": "How many nectar will the bee collect from this flower?",
-    "function_names": {
-      "move and increment": "move and increment",
-      "collect": "collect"
+    "function_definitions": {
+      "move and increment": {
+        "name": "move and increment"
+      },
+      "collect": {
+        "name": "collect"
+      }
     },
     "contained levels": [
       {
         "dsls": {
-          "title": "Bee Variables Multi",
-          "questions": [
-            {
-              "text": "Look at the code below.  How many units of nectar will the bee collect at the end?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee won't collect any nectar because the variable isn't called \"gather\".",
@@ -2618,7 +2788,13 @@
               "correct": false,
               "feedback": "The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units."
             }
-          ]
+          ],
+          "questions": [
+            {
+              "text": "Look at the code below. How many units of nectar will the bee collect at the end?"
+            }
+          ],
+          "title": "Bee Variables Multi"
         }
       }
     ]
@@ -2660,13 +2836,13 @@
   "https://studio.code.org/s/express-2019/stage/21/puzzle/5": {
     "short_instructions": "**Freeplay:** Take what you've learned and make your own drawing. ",
     "long_instructions": "**Freeplay:** Take what you've learned and make your own drawing. \n\nHow can you use variables with squares, pentagons, or hexagons?",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseF_artist_variablesFP_a": "Try one of these three drawings.\n[][0]"
     }
   },
   "https://studio.code.org/s/express-2019/stage/21/puzzle/6": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"variables\"!**\n\n### In order to use a variable, it needs a name and a value. The name doesn't change, but the value can. This way you can use the name of the variable as a placeholder wherever you want in your program! \n\n---\n\n## **Vocab to Know**\n\n### **Variable** - A placeholder for a piece of information that can change\n\n"
     }
@@ -2708,7 +2884,6 @@
   },
   "https://studio.code.org/s/express-2019/stage/22/puzzle/3": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### Today you'll be learning about a new kind of `repeat` loop. Here is a preview of the block you'll be using:\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n### *For*tunately, this new loop will make solving puzzles like this really easy!\n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n\n"
     }
@@ -2717,11 +2892,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and collect all of the nectar from every flower. ",
@@ -2744,7 +2914,12 @@
               "feedback": "The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
             }
           ],
-          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n"
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n",
+          "questions": [
+            {
+              "text": "Read the code below. What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -2826,7 +3001,6 @@
   },
   "https://studio.code.org/s/express-2019/stage/22/puzzle/14": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"for loops\"!**\n\n### **For loops are loops where you set the start, stop, and step values.**\n\n### This new kind of `repeat` loop gives you more control over when you loop starts, when it ends, and what your loop should increase by every time it runs.\n\n### More control means you can solve puzzles a lot faster! \n\n---\n\n## **Vocab to Know**\n\n### **For loop** - For loops are loops that have a predetermined beginning, end, and increment (step interval)\n\n"
     }
@@ -2834,8 +3008,10 @@
   "https://studio.code.org/s/express-2019/stage/22/extras?level_name=courseF_bee_for_challenge1_2019": {
     "short_instructions": "Use this `for loop` to collect all of the nectar. ",
     "long_instructions": "You can use this `for loop` to collect all of the nectar. Un-bee-lievable!\n\nThere are a few actions that you will want to `repeat 'counter' times`.",
-    "function_names": {
-      "move and get nectar with counter": "move and get nectar with counter"
+    "function_definitions": {
+      "move and get nectar with counter": {
+        "name": "move and get nectar with counter"
+      }
     }
   },
   "https://studio.code.org/s/express-2019/stage/22/extras?level_name=courseF_bee_for_challenge2_2019": {
@@ -2930,11 +3106,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a straight line that increases in thickness from one side of the play space to the other.",
@@ -2957,7 +3128,12 @@
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
             }
           ],
-          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n"
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -2965,6 +3141,7 @@
   "https://studio.code.org/s/express-2019/stage/23/puzzle/12": {
     "short_instructions": "Free Play: Try using the `counter` variable with other drawing elements to make magical images like this one.",
     "long_instructions": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\n\n[][0]",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseF_artist_for10_a": "The image in the drawing was made using a counter for the `set alpha` and `counter` / 10 as a brush size.",
       "courseF_artist_for10_b": "The image in the drawing uses a turn of 61 degrees.",
@@ -3003,33 +3180,104 @@
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/3": {
     "short_instructions": "Change the tumbleweed into any kind of fish!",
-    "long_instructions": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking [blockly block][0].\n\nBe sure to also update this sprite's costume in [blockly block][1]."
+    "long_instructions": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking [blockly block][0].\n\nBe sure to also update this sprite's costume in [blockly block][1].",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must have at least one fish sprite with an active behavior.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/4": {
     "short_instructions": "Change the fish's behavior so that it swims left and right.",
     "long_instructions": "The fish is getting dizzy! \n\nChange the fish's behavior so that it swims left and right.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least one fish sprite with an active behavior.\n-   The fish sprite needs to move left and right. This can be done by changing its behavior to `swimming left and right`.",
     "callouts": {
       "spritelab_comment": "Use this block to leave yourself or your teacher notes about how your code works."
+    },
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
     }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/5": {
     "short_instructions": "Use the `set background color` block to make the background any color.",
-    "long_instructions": "Our fish tank needs some water! \n\nUse [blockly block][0] to make the background any color. We recommend blue!"
+    "long_instructions": "Our fish tank needs some water! \n\nUse [blockly block][0] to make the background any color. We recommend blue!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _PROGRESSION NAME_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the background to something other than white.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/6": {
     "display_name": "How to Make a Sprite"
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/7": {
     "short_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
-    "long_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!"
+    "long_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create exactly two unique sprites, and one must be a fish.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/8": {
     "short_instructions": "Add a behavior to the fish's new friend.",
-    "long_instructions": "What do you want your fish’s new friend to do?\n\nAdd a behavior and watch them go!"
+    "long_instructions": "What do you want your fish’s new friend to do?\n\nAdd a behavior and watch them go!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Each sprite must have an active behavior.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/9": {
     "short_instructions": "Use some new blocks from the toolbox to make your fish tank special!",
-    "long_instructions": "We've added a lot of new blocks to the toolbox.   \n\nPlay with them to make your fish tank special!"
+    "long_instructions": "We've added a lot of new blocks to the toolbox.   \n\nPlay with them to make your fish tank special!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/1": {
     "contained levels": [
@@ -3044,31 +3292,120 @@
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/3": {
     "short_instructions": "Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning!",
-    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.\n\nReplace the behavior block in [blockly block][0] to a different one that will make the alien start spinning!"
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.\n\nReplace the behavior block in [blockly block][0] to a different one that will make the alien start spinning!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must click the sprite after pressing `Run`.\n-   The sprite needs to spin.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/4": {
     "short_instructions": "Create a new sprite that looks like a pink alien, then make it do a any move when it's clicked.  ",
-    "long_instructions": "Create a new sprite that looks like a pink alien. <img src=\"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png\" width=\"3%\"></img>\n\nMake it do any move you want when it's clicked. Try using a new move this time!"
+    "long_instructions": "Create a new sprite that looks like a pink alien. <img src=\"https://studio.code.org/api/v1/animation-library/spritelab/2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu/category_characters/alienPink.png\" width=\"3%\"></img>\n\nMake it do any move you want when it's clicked. Try using a new move this time!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create a pink alien sprite.\n-   The pink alien sprite must start a behavior when clicked.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/5": {
     "short_instructions": "Create a third sprite that looks like a yellow alien, make it do a dance when clicked, and set all of your aliens to stand in a horizontal line.",
-    "long_instructions": "Form an alien dance crew! \n\n-   Create a third sprite that looks like a yellow alien, and make it begin a dance move when clicked.\n-   Set all of your aliens to stand in a horizontal line, like this:\n\n[][0]"
+    "long_instructions": "Form an alien dance crew! \n\n-   Create a third sprite that looks like a yellow alien, and make it begin a dance move when clicked.\n-   Set all of your aliens to stand in a horizontal line, like this:\n\n[][0]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must create three sprites using the blue alien, pink alien, and yellow alien costumes.\n-   Students must arrange the alien sprites in a horizontal line (within 50 pixels).\n-   The yellow alien sprite needs to start a behavior when clicked.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/6": {
     "short_instructions": "Create a single keypress event using the keypress event block. For this event, make it so that when a key is pressed, each of your aliens changes color!",
-    "long_instructions": "<!-- We can change all kinds of things in this program when you click on the sprites. Add code to change the color of each alien when it gets clicked. -->\n\nLet's try using a different kind of event. \n\nCreate a single keypress event using [blockly block][0]. \n\nFor this event, make it so that when a key is pressed, each of your aliens changes color! Choose any key you like, but if you are using a touch screen we recommend _up_, _down_, _left_, or _right_."
+    "long_instructions": "<!-- We can change all kinds of things in this program when you click on the sprites. Add code to change the color of each alien when it gets clicked. -->\n\nLet's try using a different kind of event. \n\nCreate a single keypress event using [blockly block][0]. \n\nFor this event, make it so that when a key is pressed, each of your aliens changes color! Choose any key you like, but if you are using a touch screen we recommend _up_, _down_, _left_, or _right_.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the color of each of the three alien sprites.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/7": {
     "short_instructions": "Add a sprite that looks like a bell, then add an event that makes each alien stop dancing when it is clicked.",
-    "long_instructions": "These aliens are running wild! Let's calm them down by ringing a bell.\n\nFirst add a new sprite that looks like a bell.\n\nThen add an event that makes each alien stop dancing when the bell is clicked, using [blockly block][0]!"
+    "long_instructions": "These aliens are running wild! Let's calm them down by ringing a bell.\n\nFirst add a new sprite that looks like a bell.\n\nThen add an event that makes each alien stop dancing when the bell is clicked, using [blockly block][0]!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   All alien sprites must stop their behaviors.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/8": {
     "short_instructions": "Make the blue alien begin a new dance when the pink alien touches it. Use the `when touches` event.",
-    "long_instructions": "For the pink alien, fun is contagious! Touching it makes anyone want to dance! \n\nUse [blockly block][0] to make the blue alien begin a new dance move when the pink alien touches it."
+    "long_instructions": "For the pink alien, fun is contagious! Touching it makes anyone want to dance! \n\nUse [blockly block][0] to make the blue alien begin a new dance move when the pink alien touches it.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   The blue alien sprite needs to start a new behavior.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/9": {
     "short_instructions": "Now create your own alien disco!",
-    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create another alien that does another move when clicked.\n-   Make aliens do more dance moves when they touch each other."
+    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create another alien that does another move when clicked.\n-   Make aliens do more dance moves when they touch each other.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least one costume in their project.\n-   Students must create three sprites with unique costumes."
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/1": {
     "short_instructions": "Make a prediction!",
@@ -3076,14 +3413,25 @@
     "callouts": {
       "behaviors_edit": "Click here to see how this behavior works."
     },
+    "behavior_names": {
+      "mystery behavior": "mystery behavior",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
+    },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Click the \"edit\" button to see how the `mystery behavior` works. Study the code inside, then make a prediction."
-            }
-          ],
           "answers": [
             {
               "text": "The sprite will spin",
@@ -3105,6 +3453,11 @@
               "correct": false,
               "feedback": "Incorrect"
             }
+          ],
+          "questions": [
+            {
+              "text": "Click the \"edit\" button to see how the `mystery behavior` works. Study the code inside, then make a prediction."
+            }
           ]
         }
       }
@@ -3115,6 +3468,22 @@
     "long_instructions": "Fly the rocket to the stars!\n\n-   Change the behavior of the rocket so that it flies upwards in the display area.",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which direction does the rocket need to move?"
+    },
+    "behavior_names": {
+      "flying": "flying",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/3": {
@@ -3122,11 +3491,27 @@
     "long_instructions": "Help the rover outrun the robot!\n\n-   Edit the behavior of the rover sprite (top) so that it goes faster than the robot.",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+    },
+    "behavior_names": {
+      "zooming east": "zooming east",
+      "driving east": "driving east",
+      "wandering": "wandering",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/4": {
     "short_instructions": "Debug: Make all of the stars spin the same way!",
-    "long_instructions": "The [blockly block][0] block should be used instead of the `costume` block. This will make it work for any sprite, regardless of the costume it uses.\n\n**Debug:** Make all of the stars spin the same way!",
+    "long_instructions": "Edit the `spinning right` behavior. The [blockly block][0] block should be used instead of the `costume` block. This will make it work for any sprite, regardless of the costume it uses.\n\n**Debug:** Make all of the stars spin the same way!",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
     },
@@ -3134,6 +3519,22 @@
       "behavior_callout": "Why isn't this behavior working for the middle star?",
       "star2_callout": "Remove this costume block and use the \"this sprite\" block instead.",
       "this_sprite_callout": "Replace the costume block below with this."
+    },
+    "behavior_names": {
+      "spinning right": "spinning right",
+      "zooming east": "zooming east",
+      "driving east": "driving east",
+      "wandering": "wandering",
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/5": {
@@ -3142,14 +3543,25 @@
     "callouts": {
       "behaviors_edit": "Click here to see how this behavior works."
     },
+    "behavior_names": {
+      "move south and west": "move south and west",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
+    },
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Make a prediction. Which way will the satellite move towards the galaxy?"
-            }
-          ],
           "answers": [
             {
               "text": "Left then down",
@@ -3171,6 +3583,11 @@
               "correct": false,
               "feedback": "Incorrect"
             }
+          ],
+          "questions": [
+            {
+              "text": "Make a prediction. Which way will the satellite move towards the galaxy?"
+            }
           ]
         }
       }
@@ -3190,8 +3607,12 @@
   "https://studio.code.org/s/express-2019/stage/26/puzzle/7": {
     "short_instructions": "Free play: Create your own outer space scene!",
     "long_instructions": "**Free play:** Create your own outer space scene!",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
     "callouts": {
       "behaviors_edit": "Add code to this behavior."
+    },
+    "behavior_names": {
+      "spinning and growing": "spinning and growing"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+6": {
@@ -3199,6 +3620,22 @@
     "long_instructions": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.\n\n[][0]",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+    },
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving east": "moving east",
+      "rolling": "rolling",
+      "running east": "running east",
+      "wandering": "wandering",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+7": {
@@ -3207,45 +3644,154 @@
     "authored_hints": {
       "behaviors_hint1": "You can create a new behavior that uses two different actions or combine two existing behaviors.",
       "sprites_idea1": "For fun, you can use a similar behavior to make a ship fly off into space or a character run to the foreground. Try changing the background and sprite costumes in your scene!\n\n[][0]\n\n[][1]"
+    },
+    "behavior_names": {
+      "moving north": "moving north",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "rolling": "rolling",
+      "running east": "running east",
+      "wandering": "wandering",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/1": {
-    "long_instructions": "**Free Play**: Whoa! Check out this cool pet! \n\nWhile reading the code below, ask yourself:\n\n-   How do you command the pet to move? \n-   What happens when the pet touches the ice cream cone? How about the pepper?\n-   How is the `energy` variable used? How can you check the pet's current `energy` value?\n\nRun the code and play with the pet! When you are done, click **Finish**."
+    "long_instructions": "**Free Play**: Whoa! Check out this cool pet! \n\nWhile reading the code below, ask yourself:\n\n-   How do you command the pet to move? \n-   What happens when the pet touches the ice cream cone? How about the pepper?\n-   How is the `energy` variable used? How can you check the pet's current `energy` value?\n\nRun the code and play with the pet! When you are done, click **Finish**.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "mystery": "mystery",
+      "spinning right": "spinning right",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "growing": "growing",
+      "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "22661453237feb87f1b00dd17bc39666": "Yum! Energy increased!",
+      "4ac000226dd5bc7fc14ecde063245731": "Yuck! Energy reset!"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/2": {
     "long_instructions": "Now it's your turn to create your own virtual pet! Start by giving it a look you like.\n\n1.  Click the **Costumes** tab at the top-left of your screen (next to **Code**). \n2.  Edit the starting costume, or add a new one that you like. \n3.  Change the sprite's costume to your own in the code below.\n4.  Click **Run** to see your pet's new look!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "callouts": {
       "": "Click here!"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
     }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/3": {
-    "long_instructions": "Create events to make your pet move on command!\n\nStart by using [blockly block][0] along with [blockly block][1] to make your pet move North **while** the up arrow is pressed.\n\nRepeat the above for the other three directions (South, West, East) and arrow keys (down, left, right)!"
+    "long_instructions": "Create events to make your pet move on command!\n\nStart by using [blockly block][0] along with [blockly block][1] to make your pet move North **while** the up arrow is pressed.\n\nRepeat the above for the other three directions (South, West, East) and arrow keys (down, left, right)!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "wandering2": "wandering2",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "moving east2": "moving east2",
+      "shrinking": "shrinking",
+      "spinning left2": "spinning left2",
+      "growing": "growing",
+      "spinning right2": "spinning right2",
+      "moving south": "moving south",
+      "shrinking2": "shrinking2",
+      "swimming left and right": "swimming left and right",
+      "growing2": "growing2",
+      "moving south2": "moving south2",
+      "swimming left and right2": "swimming left and right2",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "moving north2": "moving north2",
+      "patrolling": "patrolling",
+      "jittering2": "jittering2",
+      "moving west2": "moving west2",
+      "patrolling2": "patrolling2"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/4": {
-    "long_instructions": "Let's make some wandering food!\n\n1.  Add **two** sprites to your world. \n2.  Make one sprite look like what your pet **likes** to eat, and the other look like what it **doesn't** like to eat.\n3.  Make each food sprite begin the **wandering** behavior immediately after it appears."
+    "long_instructions": "Let's make some wandering food!\n\n1.  Add **two** sprites to your world. \n2.  Make one sprite look like what your pet **likes** to eat, and the other look like what it **doesn't** like to eat.\n3.  Make each food sprite begin the **wandering** behavior immediately after it appears.",
+    "teacher_markdown": "This lesson contains a **mini-project** called \\*Virtual Pet. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least three sprites.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/5": {
-    "long_instructions": "Use [blockly block][0] with [blockly block][1] to **simulate** \"eating\" in your virtual world!\n\n1.  Create an event that makes one of your food sprites jump to a random location when your pet touches it.\n2.  Repeat the above for the other food sprite."
+    "long_instructions": "Use [blockly block][0] with [blockly block][1] to **simulate** \"eating\" in your virtual world!\n\n1.  Create an event that makes one of your food sprites jump to a random location when your pet touches it.\n2.  Repeat the above for the other food sprite.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/6": {
-    "long_instructions": "Use [blockly block][0] along with [blockly block][1] to make eating food affect your pet's energy! The more energy it has, the faster it moves! \n\n1.  Set the variable `energy` to 5 when the program starts.\n2.  When your pet eats food it **likes**, add 1 to `energy`.\n3.  When your pet eats food it **doesn't like**, set `energy` back to 5.\n4.  Change each arrow key event so that your pet now moves `energy` pixels instead of a specific number."
+    "long_instructions": "Use [blockly block][0] along with [blockly block][1] to make eating food affect your pet's energy! The more energy it has, the faster it moves! \n\n1.  Set the variable `energy` to 5 when the program starts.\n2.  When your pet eats food it **likes**, add 1 to `energy`.\n3.  When your pet eats food it **doesn't like**, set `energy` back to 5.\n4.  Change each arrow key event so that your pet now moves `energy` pixels instead of a specific number.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/7": {
-    "long_instructions": "You can check your pet's `energy` value with [blockly block][0], a new block found in the `World` category! \n\nCreate an event that makes the value of `energy` be printed when the pet sprite is clicked. "
+    "long_instructions": "You can check your pet's `energy` value with [blockly block][0], a new block found in the `World` category! \n\nCreate an event that makes the value of `energy` be printed when the pet sprite is clicked. ",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/8": {
     "short_instructions": "**Free Play:** What more can you make your pet do? Try anything you like!",
-    "long_instructions": "**Free Play:** Your virtual pet is _VIRTUALLY AWESOME!_ \n\nWhat more can you do? Try these ideas:\n\n-   Change the background to a color or an image.\n-   Print more! Try printing _\"Yum! Energy increased!\"_ when the pet eats food it likes, or _\"Yuck! Energy reset!\"_ when it eats food it doesn't like.\n-   Add another sprite that interacts with your pet in a different way. How about a **toy** sprite?\n-   Add another variable that can affect your pet or the world. What might `happiness` or `age` do?\n-   Experiment with behaviors! Try editing the **wandering** behavior to slow down or speed up the food sprites (hint: their \"speed\" is currently 5...)."
+    "long_instructions": "**Free Play:** Your virtual pet is _VIRTUALLY AWESOME!_ \n\nWhat more can you do? Try these ideas:\n\n-   Change the background to a color or an image.\n-   Print more! Try printing _\"Yum! Energy increased!\"_ when the pet eats food it likes, or _\"Yuck! Energy reset!\"_ when it eats food it doesn't like.\n-   Add another sprite that interacts with your pet in a different way. How about a **toy** sprite?\n-   Add another variable that can affect your pet or the world. What might `happiness` or `age` do?\n-   Experiment with behaviors! Try editing the **wandering** behavior to slow down or speed up the food sprites (hint: their \"speed\" is currently 5...).",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2019/stage/28/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |\n|---|---|\n| [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Arist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
     }
   },
   "https://studio.code.org/s/express-2019/stage/28/puzzle/2": {
-    "display_name": "Course F Sprite Lab Project"
+    "display_name": "Course F Sprite Lab Project",
+    "behavior_names": {
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "wandering": "wandering"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/28/puzzle/3": {
     "display_name": "Course F Artist Project"

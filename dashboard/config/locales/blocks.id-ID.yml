@@ -25,10 +25,10 @@ id:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
-            MOVES.DoubleJam: Double Down
+            MOVES.DoubleJam: Gandakan
             MOVES.Drop: Jatuh
             MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
+            MOVES.Fresh: Segar
             MOVES.Clown: Badut
             MOVES.Kick: Bintang
             MOVES.ThisOrThat: Ini atau Itu
@@ -37,10 +37,10 @@ id:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
-            MOVES.DoubleJam: Double Down
+            MOVES.DoubleJam: Gandakan
             MOVES.Drop: Jatuh
             MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
+            MOVES.Fresh: Segar
             MOVES.Clown: Badut
             MOVES.Kick: Bintang
             MOVES.ThisOrThat: Ini atau Itu
@@ -49,7 +49,7 @@ id:
         text: setelah {TIMESTAMP}{UNIT}
         options:
           UNIT:
-            '"measures"': birama
+            '"measures"': langkah
             '"seconds"': detik
       Dancelab_changeColorBy:
         text: ubah {COLOR}{METHOD} dengan {AMOUNT}
@@ -82,17 +82,14 @@ id:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
-            MOVES.DoubleJam: Double Down
+            MOVES.DoubleJam: Gandakan
             MOVES.Drop: Jatuh
             MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
+            MOVES.Fresh: Segar
             MOVES.Clown: Badut
             MOVES.Kick: Bintang
             MOVES.ThisOrThat: Ini atau Itu
             MOVES.Rest: Tidak Ada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} melakukan {MOVE} {DIR} selamanya"
         options:
@@ -103,17 +100,14 @@ id:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
-            MOVES.DoubleJam: Double Down
+            MOVES.DoubleJam: Gandakan
             MOVES.Drop: Jatuh
             MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
+            MOVES.Fresh: Segar
             MOVES.Clown: Badut
             MOVES.Kick: Bintang
             MOVES.ThisOrThat: Ini atau Itu
             MOVES.Rest: Tidak Ada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: ubah {SPRITE} {PROPERTY} dengan {VAL}
         options:
@@ -173,10 +167,10 @@ id:
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
             MOVES.XFever: Disko
-            MOVES.DoubleJam: Double Down
+            MOVES.DoubleJam: Gandakan
             MOVES.Drop: Jatuh
             MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
+            MOVES.Fresh: Segar
             MOVES.Clown: Badut
             MOVES.XHeadHips: Kepala + Paha
             MOVES.XHop: Melompat
@@ -190,9 +184,6 @@ id:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Ini atau Itu
             MOVES.Rest: Tidak Ada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} melakukan {MOVE} {DIR} sekali"
         options:
@@ -204,10 +195,10 @@ id:
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Dab: Oleskan
             MOVES.XFever: Disko
-            MOVES.DoubleJam: Double Down
+            MOVES.DoubleJam: Gandakan
             MOVES.Drop: Jatuh
             MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
+            MOVES.Fresh: Segar
             MOVES.Clown: Badut
             MOVES.XHeadHips: Kepala + Paha
             MOVES.XHop: Melompat
@@ -221,22 +212,19 @@ id:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Ini atau Itu
             MOVES.Rest: Tidak Ada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
-        text: 'ulangi setiap {N} birama setelah {START} '
+        text: 'ulangi setiap {N} langkah setelah {START} '
       Dancelab_everySeconds:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': birama
+            '"measures"': langkah
             '"seconds"': detik
       Dancelab_everySecondsRange:
         text: 'setiap {N} {UNIT} dari {START} hingga {STOP} '
         options:
           UNIT:
-            measures: Birama
+            measures: Langkah
             seconds: Detik
       Dancelab_everyVerseChorus:
         text: 'setiap {UNIT} '
@@ -248,9 +236,9 @@ id:
         text: dapatkan {RANGE}
         options:
           RANGE:
-            '"low"': Kecil
+            '"low"': bas
             '"mid"': Sedang
-            '"high"': Besar
+            '"high"': tribel
       Dancelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -266,7 +254,7 @@ id:
         text: waktu saat ini di {UNIT}
         options:
           UNIT:
-            '"measures"': birama
+            '"measures"': langkah
             '"seconds"': detik
       Dancelab_ifDanceIs:
         text: |-
@@ -277,10 +265,10 @@ id:
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Clown: Badut
             MOVES.Dab: Oleskan
-            MOVES.DoubleJam: Double Down
+            MOVES.DoubleJam: Gandakan
             MOVES.Drop: Jatuh
             MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
+            MOVES.Fresh: Segar
             MOVES.Roll: Body Roll
             MOVES.Kick: Bintang
             MOVES.ThisOrThat: Ini atau Itu
@@ -291,7 +279,7 @@ id:
           {DO1} {DO2}"
         options:
           UNIT:
-            '"measures"': birama
+            '"measures"': langkah
             '"seconds"': detik
           OP:
             '">"': ">"
@@ -306,9 +294,9 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
-            "{x: 100, y: 100}": atas-kiri
-            "{x: 300, y: 100}": atas-kanan
-            "{x: 100, y: 300}": bawah-kiri
+            "{x: 100, y: 100}": kiri atas
+            "{x: 300, y: 100}": kanan atas
+            "{x: 100, y: 300}": kiri bawah
             "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_jumpToEach:
@@ -334,9 +322,9 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
-            "{x: 100, y: 100}": atas-kiri
-            "{x: 300, y: 100}": atas-kanan
-            "{x: 100, y: 300}": bawah-kiri
+            "{x: 100, y: 100}": kiri atas
+            "{x: 300, y: 100}": kanan atas
+            "{x: 100, y: 300}": kiri bawah
             "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": acak
       Dancelab_layoutSprites:
@@ -359,10 +347,15 @@ id:
           FORMAT:
             '"border"': batas
             '"inner"': di dalam persegi
-            '"circle"': lingkaran
+            '"diamond"': berlian
+            '"circle"': loop
             '"grid"': Kisi
+            '"top"': baris atas
             '"row"': baris
+            '"bottom"': baris bawah
+            '"left"': kolom kiri
             '"column"': kolom
+            '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
             '"random"': acak
@@ -388,9 +381,9 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
-            "{x: 100, y: 100}": atas-kiri
-            "{x: 300, y: 100}": atas-kanan
-            "{x: 100, y: 300}": bawah-kiri
+            "{x: 100, y: 100}": kiri atas
+            "{x: 300, y: 100}": kanan atas
+            "{x: 100, y: 300}": kiri bawah
             "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSprite:
@@ -417,9 +410,9 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
-            "{x: 100, y: 100}": atas-kiri
-            "{x: 300, y: 100}": atas-kanan
-            "{x: 100, y: 300}": bawah-kiri
+            "{x: 100, y: 100}": kiri atas
+            "{x: 300, y: 100}": kanan atas
+            "{x: 100, y: 300}": kiri bawah
             "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": acak
       Dancelab_makeNewDanceSpriteGroup:
@@ -464,7 +457,7 @@ id:
             '"border"': batas
             '"inner"': di dalam persegi
             '"diamond"': berlian
-            '"circle"': lingkaran
+            '"circle"': loop
             '"grid"': Kisi
             '"top"': baris atas
             '"row"': baris
@@ -491,8 +484,8 @@ id:
         text: tetapkan warna latar belakang {COLOR}
       Dancelab_setBackgroundEffect:
         text: |-
-          "tetapkan efek latar belakang
-          {EFFECT} {PALETTE}"
+          tetapkan efek latar belakang
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Tidak Ada
@@ -785,9 +778,9 @@ id:
             '"y"': posisi vertikal
             '"tint"': Mewarnai
           RANGE:
-            '"bass"': Kecil
+            '"bass"': bas
             '"mid"': Sedang
-            '"treble"': Besar
+            '"treble"': tribel
       Dancelab_startMappingEach:
         text: "{GROUP} memulai {PROPERTY} menyusul {RANGE}"
         options:
@@ -814,9 +807,9 @@ id:
             '"y"': posisi vertikal
             '"tint"': Mewarnai
           RANGE:
-            '"bass"': Kecil
+            '"bass"': bas
             '"mid"': Sedang
-            '"treble"': Besar
+            '"treble"': tribel
       Dancelab_stopMapping:
         text: "{SPRITE} menghentikan {PROPERTY} mengikuti {RANGE}"
         options:
@@ -830,9 +823,9 @@ id:
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
           RANGE:
-            '"bass"': Kecil
+            '"bass"': bas
             '"mid"': Sedang
-            '"treble"': Besar
+            '"treble"': tribel
       Dancelab_stopMappingEach:
         text: "{GROUP} menghentikan {PROPERTY} menyusul {RANGE}"
         options:
@@ -860,9 +853,9 @@ id:
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
           RANGE:
-            '"bass"': Kecil
+            '"bass"': bas
             '"mid"': Sedang
-            '"treble"': Besar
+            '"treble"': tribel
       Dancelab_translateStrings:
         text: terjemahkan {STRING}
         options:
@@ -917,7 +910,7 @@ id:
             '"left"': kiri
             '"down"': turun
             '"right"': kanan
-            '"space"': ruang
+            '"space"': ruang Angkasa
             '"enter"': enter
             '"a"': a
             '"b"': b
@@ -959,9 +952,9 @@ id:
         text: ketika puncak {RANGE}
         options:
           RANGE:
-            '0': Kecil
+            '0': bas
             '1': Sedang
-            '2': Besar
+            '2': tribel
       Dancelab_whenSetup:
         text: setelan
       Dancelab_whenSetup2:
@@ -970,6 +963,10 @@ id:
         text: sprite {SPRITE} dimulai {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       gamelab_changePropBy:
         text: ubah {SPRITE} {PROPERTY} dengan {VAL}
         options:
@@ -1015,8 +1012,47 @@ id:
         options:
           CHOICE:
             '"this"': ini
+            '"other"': lainnya
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': detik
       gamelab_hideTitleScreen:
         text: menyembunyikan judul layar
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': spasi
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} menyentuh tepi"
       gamelab_jumpTo:
@@ -1061,6 +1097,13 @@ id:
             '"z"': z
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       gamelab_locationMouse:
         text: Lokasi tetikus
       gamelab_locationOf:
@@ -1077,6 +1120,8 @@ id:
             '"left"': kiri
       gamelab_mouseLocation:
         text: Lokasi tetikus
+      gamelab_moveBackward:
+        text: pindah {SPRITE} {DISTANCE} piksel mundur
       gamelab_moveForward:
         text: move {SPRITE} {DISTANCE} piksel maju
       gamelab_moveInDirection:
@@ -1089,6 +1134,8 @@ id:
             '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} menuju {TARGET}
+      gamelab_objectSpritePointer:
+        text: diklik {SPRITE}
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1113,6 +1160,8 @@ id:
         text: sprite {SPRITE} Berhenti {BEHAVIOR}
       gamelab_removeTint:
         text: hapus warna dari {THIS}
+      gamelab_repeatForever:
+        text: Ulangi selamanya
       gamelab_setAnimation:
         text: perubahan {THIS} kostum untuk {ANIMATION}
       gamelab_setBackground:
@@ -1135,6 +1184,8 @@ id:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': musim
               dingin
             undefined: Tak satupun
+      gamelab_setBackgroundImageAs:
+        text: atur latar belakang ke {IMG}
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} ke {VAL}
         options:
@@ -1168,12 +1219,16 @@ id:
           CONDITION:
             '"when"': ketika
             '"while"': Selagi
+      gamelab_subjectSpritePointer:
+        text: diklik {SPRITE}
       gamelab_turn:
         text: belok {SPRITE} {DIRECTION} {N} derajat
         options:
           DIRECTION:
             '"right"': kanan
             '"left"': kiri
+      gamelab_updateTitleWithColor:
+        text: tampilkan layar judul {BREAK} judul {TITLE} warna {COLOR}
       gamelab_whenDownArrow:
         text: saat panah bawah ditekan
       gamelab_whenKey:
@@ -1253,9 +1308,9 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
-            "{x: 100, y: 100}": atas-kiri
-            "{x: 300, y: 100}": atas-kanan
-            "{x: 100, y: 300}": bawah-kiri
+            "{x: 100, y: 100}": kiri atas
+            "{x: 300, y: 100}": kanan atas
+            "{x: 100, y: 300}": kiri bawah
             "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_getNext:
@@ -1295,9 +1350,9 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
-            "{x: 100, y: 100}": atas-kiri
-            "{x: 300, y: 100}": atas-kanan
-            "{x: 100, y: 300}": bawah-kiri
+            "{x: 100, y: 100}": kiri atas
+            "{x: 300, y: 100}": kanan atas
+            "{x: 100, y: 300}": kiri bawah
             "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_groupDestroy:
@@ -1385,10 +1440,10 @@ id:
             MOVES.ClapHigh: Tepuk tangan di atas
             MOVES.Clown: Badut
             MOVES.Dab: Oleskan
-            MOVES.DoubleJam: Double Down
+            MOVES.DoubleJam: Gandakan
             MOVES.Drop: Jatuh
             MOVES.Floss: Floss
-            MOVES.Fresh: Fresh
+            MOVES.Fresh: Segar
             MOVES.Roll: Body Roll
             MOVES.Kick: Bintang
             MOVES.ThisOrThat: Ini atau Itu
@@ -1457,9 +1512,9 @@ id:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": Tengah
-            "{x: 100, y: 100}": atas-kiri
-            "{x: 300, y: 100}": atas-kanan
-            "{x: 100, y: 300}": bawah-kiri
+            "{x: 100, y: 100}": kiri atas
+            "{x: 300, y: 100}": kanan atas
+            "{x: 100, y: 300}": kiri bawah
             "{x: 300, y: 300}": bawah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Acak
       Mikelab_whenClickedOn:
@@ -1468,10 +1523,10 @@ id:
         text: ketika {KEY} ditekan
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': panah ke atas
+            '"down"': panah ke bawah
+            '"left"': panah ke kiri
+            '"right"': panah ke kanan
             '"w"': B
             '"a"': A
             '"s"': S
@@ -1479,10 +1534,10 @@ id:
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': panah ke atas
+            '"down"': panah ke bawah
+            '"left"': panah ke kiri
+            '"right"': panah ke kanan
             '"w"': B
             '"a"': A
             '"s"': S
@@ -1498,10 +1553,10 @@ id:
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': panah keatas
-            '"down"': panah kebawah
-            '"left"': panah kekiri
-            '"right"': panah kekanan
+            '"up"': panah ke atas
+            '"down"': panah ke bawah
+            '"left"': panah ke kiri
+            '"right"': panah ke kanan
       Mikelab_xLocationOf:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
@@ -1552,6 +1607,14 @@ id:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       aalab_prompt:
         text: ajukan pertanyaan {MESSAGE}
       aalab_scene:
@@ -1563,12 +1626,10 @@ id:
             '3': '3'
       aalab_setupStory:
         text: cerita penyiapan
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': tampilkan
-            '"hide"': Sembunyikan
+            '"random"': acak
       binary_drawBin:
         text: menggambar biner {BIN}
       binary_drawBinScreen:
@@ -1663,7 +1724,6 @@ id:
             '"stoneBricks"': batu bata
             '"mossyStoneBricks"': batu bata berlumut
             '"crackedStoneBricks"': batu bata batu retak
-            '"decorativeStoneBricks"': batu bata dekoratif
             '"blueCoralBlock"': blok karang biru
             '"pinkCoralBlock"': blok karang merah muda
             '"magentaCoralBlock"': blok karang magenta

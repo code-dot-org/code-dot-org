@@ -1,0 +1,430 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Autaugaville School,AL-001-0015,10024001408,520006,Computer Programming Basic I,1,1,1,0,0,0,1,0,0
+Marbury High School,AL-001-0050,10024000046,520007,"Computer Science A, AP",1,0,0,0,0,0,0,0,0
+Marbury Middle School,AL-001-0052,10024002159,520045,Computer Science Discoveries,19,10,2,0,0,0,8,0,0
+Marbury Middle School,AL-001-0052,10024002159,450012,Introduction to Programming,3,3,0,0,0,0,1,1,0
+Prattville High School,AL-001-0086,10024000048,520007,"Computer Science A, AP",2,0,0,0,0,0,0,0,0
+Prattville High School,AL-001-0086,10024000048,520018,"Computer Science Principles, AP",89,38,17,1,2,0,12,2,1
+Daphne High School,AL-002-0035,10027001759,520018,"Computer Science Principles, AP",16,3,1,2,0,0,1,0,0
+Fairhope High School,AL-002-0065,10027000100,520006,Computer Programming Basic I,1,0,0,0,0,0,0,0,0
+Fairhope High School,AL-002-0065,10027000100,520007,"Computer Science A, AP",17,4,0,0,0,0,1,1,0
+Fairhope High School,AL-002-0065,10027000100,520018,"Computer Science Principles, AP",20,6,1,0,0,0,4,1,0
+Hayden High School,AL-005-0050,10042000208,520007,"Computer Science A, AP",2,2,0,1,0,0,2,0,0
+JB Pennington High School,AL-005-0060,10042000209,520006,Computer Programming Basic I,1,0,0,0,0,0,0,0,0
+JB Pennington High School,AL-005-0060,10042000209,520007,"Computer Science A, AP",4,0,0,1,0,0,1,0,0
+Pleasant Valley High School,AL-008-0135,10054001488,520006,Computer Programming Basic I,1,0,0,0,0,0,0,0,0
+Pleasant Valley High School,AL-008-0135,10054001488,520006,Computer Programming Basic I,2,0,1,0,0,0,0,0,0
+Wellborn High School,AL-008-0200,10054001489,520018,"Computer Science Principles, AP",18,12,3,0,0,0,13,0,0
+White Plains High School,AL-008-0210,10054000250,520007,"Computer Science A, AP",6,2,0,0,0,0,1,0,0
+Lafayette High School,AL-009-0080,10060000263,520043,Exploring Computer Science,6,1,5,0,0,0,2,0,0
+Valley High School,AL-009-0140,10060000271,520043,Exploring Computer Science,6,0,4,0,0,0,2,1,0
+Valley High School,AL-009-0140,10060000271,520054,Introduction to Python-MSIA (one credit),3,0,1,0,0,0,1,1,0
+Isabella High School,AL-011-0060,10066000261,520045,Computer Science Discoveries,60,0,4,3,0,0,18,7,0
+Isabella High School,AL-011-0060,10066000261,520045,Computer Science Discoveries,34,34,0,1,0,0,15,2,0
+Kinston School,AL-016-0020,10081000323,520006,Computer Programming Basic I,1,0,0,0,0,0,0,0,0
+New Brockton High School,AL-016-0040,10081001494,520006,Computer Programming Basic I,1,0,0,0,0,0,0,0,0
+Red Level High School,AL-020-0060,10093000362,520045,Computer Science Discoveries,38,17,6,0,0,0,26,2,0
+Cold Springs High School,AL-022-0030,10102000374,520043,Exploring Computer Science,12,5,0,0,0,0,4,4,0
+Fairview High School,AL-022-0060,10102000377,520006,Computer Programming Basic I,5,0,0,2,0,0,5,0,1
+Fairview High School,AL-022-0060,10102000377,520018,"Computer Science Principles, AP",15,5,0,2,0,0,7,0,0
+Good Hope High School,AL-022-0080,10102000379,520006,Computer Programming Basic I,2,0,0,0,0,0,1,0,0
+Holly Pond High School,AL-022-0100,10102000381,520018,"Computer Science Principles, AP",8,0,0,0,0,0,4,0,0
+Vinemont High School,AL-022-0140,10102000385,520018,"Computer Science Principles, AP",24,5,0,1,0,0,9,1,0
+West Point High School,AL-022-0160,10102000387,520018,"Computer Science Principles, AP",34,10,0,1,0,0,10,3,0
+South Dale Middle School,AL-023-0080,10105000393,560032,Computer Science for Innovators and Makers - PLTW,76,23,31,2,0,0,56,5,0
+Dallas County High School,AL-024-0020,10111000397,520043,Exploring Computer Science,19,14,11,0,0,0,8,0,0
+Crossville High School,AL-025-0045,10114001860,520007,"Computer Science A, AP",14,7,1,9,0,0,6,1,0
+Fyffe High School,AL-025-0065,10114000415,520007,"Computer Science A, AP",33,11,0,0,6,0,15,4,0
+Fyffe High School,AL-025-0065,10114000415,520043,Exploring Computer Science,17,6,0,1,3,0,7,1,0
+Geraldine School,AL-025-0070,10114000416,520006,Computer Programming Basic I,1,0,0,0,0,0,0,0,0
+Geraldine School,AL-025-0070,10114000416,520045,Computer Science Discoveries,104,51,1,32,22,0,71,13,9
+Ider School,AL-025-0100,10114000419,520006,Computer Programming Basic I,5,0,0,0,1,0,1,0,0
+Ider School,AL-025-0100,10114000419,520006,Computer Programming Basic I,1,0,0,0,0,0,0,1,0
+Ider School,AL-025-0100,10114000419,520006,Computer Programming Basic I,1,1,0,0,0,0,0,0,0
+Sylvania School,AL-025-0150,10114000424,520045,Computer Science Discoveries,38,18,0,7,7,0,26,6,4
+Sylvania School,AL-025-0150,10114000424,520045,Computer Science Discoveries,33,19,0,3,8,0,18,6,1
+Sylvania School,AL-025-0150,10114000424,520050,Introduction to Computer Science-TEALS,29,6,0,1,10,0,14,2,0
+Elmore County High School,AL-026-0010,10129000463,520006,Computer Programming Basic I,4,0,0,0,0,0,0,0,0
+Elmore County High School,AL-026-0010,10129000463,520007,"Computer Science A, AP",1,0,0,0,0,0,1,0,0
+Holtville High School,AL-026-0020,10129000465,520006,Computer Programming Basic I,1,0,0,0,0,0,0,0,0
+Holtville High School,AL-026-0020,10129000465,520018,"Computer Science Principles, AP",11,2,0,0,0,0,6,0,0
+Holtville High School,AL-026-0020,10129000465,520043,Exploring Computer Science,20,7,0,0,0,0,10,1,0
+Millbrook Middle School,AL-026-0023,10129001660,560032,Computer Science for Innovators and Makers - PLTW,21,10,6,0,0,0,11,2,0
+Millbrook Middle School,AL-026-0023,10129001660,560029,App Creators - PLTW,21,9,13,0,0,0,15,4,0
+Stanhope Elmore High School,AL-026-0050,10129000468,520043,Exploring Computer Science,29,4,9,0,1,0,11,5,1
+Wetumpka High School,AL-026-0070,10129000471,520018,"Computer Science Principles, AP",13,4,1,0,0,0,2,0,0
+Escambia County High School,AL-027-0025,10135000484,520043,Exploring Computer Science,7,4,6,0,0,0,5,0,0
+Escambia County Middle School,AL-027-0040,10135000485,520045,Computer Science Discoveries,45,24,38,1,1,0,31,3,0
+Glencoe High School,AL-028-0060,10138000498,520006,Computer Programming Basic I,5,0,0,0,0,0,2,0,0
+Sardis High School,AL-028-0120,10138000505,520046,Computer Science Essentials - PLTW,20,10,0,4,0,0,13,4,0
+Southside High School,AL-028-0130,10138000506,520006,Computer Programming Basic I,8,0,0,0,0,0,1,0,0
+Southside High School,AL-028-0130,10138000506,520007,"Computer Science A, AP",4,0,0,0,0,0,0,0,0
+Fayette County High School,AL-029-0025,10147001787,520007,"Computer Science A, AP",17,12,2,1,0,0,8,0,0
+Phil Campbell High School,AL-030-0030,10159000544,520054,Introduction to Python-MSIA (one credit),31,16,0,5,0,0,5,4,0
+Red Bay High School,AL-030-0040,10159000545,520043,Exploring Computer Science,20,13,0,0,1,0,0,2,0
+Greene County High School,AL-032-0030,10168000576,520043,Exploring Computer Science,19,13,19,0,0,0,10,1,0
+Robert Brown Middle School,AL-032-0040,10168001520,520052,CS Makers,13,5,11,0,0,0,8,0,0
+Greensboro High School,AL-033-0043,10171002162,520018,"Computer Science Principles, AP",11,8,11,0,0,0,10,0,0
+Hale County High School,AL-033-0050,10171000588,520018,"Computer Science Principles, AP",13,6,6,1,0,0,6,0,1
+Hale County Middle School,AL-033-0055,10171002411,520045,Computer Science Discoveries,22,9,10,0,1,0,11,0,1
+North Jackson High School,AL-036-0075,10183001751,520018,"Computer Science Principles, AP",5,1,0,0,0,0,4,0,0
+North Sand Mountain School,AL-036-0080,10183000662,520007,"Computer Science A, AP",9,5,0,0,2,0,2,0,0
+Minor Middle School,AL-037-0078,10192000687,520045,Computer Science Discoveries,83,31,68,4,1,0,71,20,0
+Minor Middle School,AL-037-0078,10192000687,560032,Computer Science for Innovators and Makers - PLTW,73,39,56,5,0,0,66,10,1
+Bragg Middle School,AL-037-0095,10192000689,520045,Computer Science Discoveries,67,25,9,5,0,0,21,13,2
+Clay-Chalkville High School,AL-037-0185,10192000469,520018,"Computer Science Principles, AP",24,6,15,1,0,0,7,1,0
+Clay-Chalkville High School,AL-037-0185,10192000469,520043,Exploring Computer Science,53,12,40,3,0,0,38,4,0
+Clay-Chalkville Middle School,AL-037-0190,10192000472,520045,Computer Science Discoveries,34,8,27,1,0,0,25,6,0
+Corner High School,AL-037-0210,10192000698,520018,"Computer Science Principles, AP",10,1,0,0,0,0,1,0,0
+Corner High School,AL-037-0210,10192000698,520050,Introduction to Computer Science-TEALS,20,3,0,0,1,0,5,3,0
+Corner Middle School,AL-037-0211,10192002174,520045,Computer Science Discoveries,50,20,1,2,0,0,24,5,0
+Erwin Middle School,AL-037-0275,10192002182,520045,Computer Science Discoveries,31,13,30,1,0,0,29,10,1
+Center Point High School,AL-037-0280,10192000702,520043,Exploring Computer Science,24,2,22,2,0,0,21,1,1
+Fultondale High School,AL-037-0295,10192000704,520045,Computer Science Discoveries,48,27,28,18,0,0,39,9,6
+Gardendale High School,AL-037-0310,10192000706,520018,"Computer Science Principles, AP",13,2,2,1,0,0,3,2,1
+Gardendale High School,AL-037-0310,10192000706,520050,Introduction to Computer Science-TEALS,24,4,6,1,0,0,7,7,0
+Irondale Middle School,AL-037-0431,10192002117,560032,Computer Science for Innovators and Makers - PLTW,16,6,10,5,0,0,15,2,2
+McAdory Middle School,AL-037-0528,10192002166,520045,Computer Science Discoveries,22,8,10,9,0,0,20,1,2
+McAdory Middle School,AL-037-0528,10192002166,450012,Introduction to Programming,43,8,23,6,0,0,23,3,2
+McAdory Middle School,AL-037-0528,10192002166,560029,App Creators - PLTW,16,6,4,3,0,0,9,2,1
+Minor High School,AL-037-0585,10192001752,520007,"Computer Science A, AP",1,0,1,0,0,0,1,0,0
+Minor High School,AL-037-0585,10192001752,520018,"Computer Science Principles, AP",10,6,9,0,0,0,8,1,0
+Minor High School,AL-037-0585,10192001752,520050,Introduction to Computer Science-TEALS,24,9,20,0,0,0,21,4,0
+North Jefferson Middle School,AL-037-0662,10192002079,520045,Computer Science Discoveries,25,4,2,3,0,1,12,4,2
+Hueytown Middle School,AL-037-0730,10192000735,520045,Computer Science Discoveries,24,6,13,3,0,0,18,1,1
+Pleasant Grove High School,AL-037-0735,10192000737,520043,Exploring Computer Science,41,16,33,0,0,0,31,5,0
+Pleasant Grove High School,AL-037-0735,10192000737,520045,Computer Science Discoveries,33,17,26,2,0,0,27,0,2
+Jefferson County International Baccalaureate School,AL-037-0737,10192002421,520045,Computer Science Discoveries,25,4,11,1,0,0,3,0,0
+Jefferson County International Baccalaureate School,AL-037-0737,10192002421,450012,Introduction to Programming,24,5,4,1,0,0,3,0,0
+Rudd Middle School,AL-037-0790,10192001543,520045,Computer Science Discoveries,108,39,63,25,1,0,84,12,6
+Shades Valley High School,AL-037-0795,10192000744,520018,"Computer Science Principles, AP",48,23,15,6,0,0,9,0,0
+Shades Valley High School,AL-037-0795,10192000744,520018,"Computer Science Principles, AP",13,5,10,0,0,0,7,1,1
+South Lamar School,AL-038-0055,10195001720,520018,"Computer Science Principles, AP",25,13,4,0,0,0,9,1,0
+Sulligent School,AL-038-0060,10195000756,520018,"Computer Science Principles, AP",48,24,2,1,0,0,16,0,0
+Lamar County High-Intermediate,AL-038-0090,10195001511,520018,"Computer Science Principles, AP",23,11,1,2,0,0,4,0,1
+Brooks High School,AL-039-0020,10201000764,520018,"Computer Science Principles, AP",15,4,0,0,1,0,3,0,0
+Central High School,AL-039-0030,10201000765,520018,"Computer Science Principles, AP",21,10,0,0,0,0,5,0,0
+Central High School,AL-039-0030,10201000765,520045,Computer Science Discoveries,12,8,0,0,0,0,4,0,0
+Lauderdale County High School,AL-039-0070,10201000767,520018,"Computer Science Principles, AP",18,12,0,0,0,0,5,0,0
+Lauderdale County High School,AL-039-0070,10201000767,520045,Computer Science Discoveries,66,32,4,2,0,0,22,2,0
+Lexington School,AL-039-0080,10201000770,520018,"Computer Science Principles, AP",29,13,0,0,0,0,5,0,0
+Lexington School,AL-039-0080,10201000770,520045,Computer Science Discoveries,69,37,0,1,0,0,26,10,0
+Rogers High School,AL-039-0110,10201000772,520018,"Computer Science Principles, AP",23,6,0,0,0,0,8,0,0
+Wilson High School,AL-039-0140,10201000775,520018,"Computer Science Principles, AP",14,6,0,0,0,0,7,0,0
+East Lawrence High School,AL-040-0020,10204001546,520045,Computer Science Discoveries,44,18,5,0,3,1,13,2,0
+Lawrence County High School,AL-040-0090,10204000783,520006,Computer Programming Basic I,1,0,0,0,0,0,1,0,0
+Beulah High School,AL-041-0020,10207000791,520018,"Computer Science Principles, AP",9,3,1,0,0,0,6,0,0
+Loachapoka High School,AL-041-0030,10207000792,560032,Computer Science for Innovators and Makers - PLTW,6,3,4,1,0,0,5,0,0
+Loachapoka High School,AL-041-0030,10207000792,560029,App Creators - PLTW,15,6,8,3,0,0,14,2,2
+Smiths Station High School,AL-041-0060,10207000795,520006,Computer Programming Basic I,11,1,1,2,0,1,2,0,0
+Smiths Station High School,AL-041-0060,10207000795,520006,Computer Programming Basic I,18,5,4,3,0,0,10,4,0
+Ardmore High School,AL-042-0010,10210000797,520006,Computer Programming Basic I,3,2,0,0,0,0,0,0,0
+Ardmore High School,AL-042-0010,10210000797,520018,"Computer Science Principles, AP",5,0,0,0,0,0,2,1,0
+Ardmore High School,AL-042-0010,10210000797,520018,"Computer Science Principles, AP",33,19,0,1,0,0,6,0,0
+Ardmore High School,AL-042-0010,10210000797,520045,Computer Science Discoveries,177,72,3,14,2,0,67,4,1
+Ardmore High School,AL-042-0010,10210000797,560030,Basic Programming for Engineers,6,1,0,0,1,0,3,1,0
+Clements High School,AL-042-0020,10210000799,520045,Computer Science Discoveries,17,7,2,2,0,0,10,0,0
+East Limestone High School,AL-042-0030,10210000800,520018,"Computer Science Principles, AP",56,24,10,1,2,0,16,1,0
+East Limestone High School,AL-042-0030,10210000800,520018,"Computer Science Principles, AP",3,0,1,0,0,0,1,0,0
+East Limestone High School,AL-042-0030,10210000800,520045,Computer Science Discoveries,88,39,17,5,0,0,28,0,0
+East Limestone High School,AL-042-0030,10210000800,520015,Software Development,5,1,2,0,0,0,3,0,0
+East Limestone High School,AL-042-0030,10210000800,560030,Basic Programming for Engineers,3,2,0,0,0,0,1,0,0
+Elkmont High School,AL-042-0050,10210001549,520018,"Computer Science Principles, AP",10,1,0,0,0,0,2,0,0
+Elkmont High School,AL-042-0050,10210001549,520018,"Computer Science Principles, AP",1,1,0,1,0,0,1,0,0
+Elkmont High School,AL-042-0050,10210001549,520015,Software Development,1,0,0,0,0,0,0,0,0
+Tanner High School,AL-042-0120,10210000808,520018,"Computer Science Principles, AP",10,6,2,3,0,0,6,0,0
+Tanner High School,AL-042-0120,10210000808,520018,"Computer Science Principles, AP",2,2,1,1,0,0,2,1,0
+Tanner High School,AL-042-0120,10210000808,520045,Computer Science Discoveries,14,7,5,5,0,0,9,1,1
+Tanner High School,AL-042-0120,10210000808,520015,Software Development,3,1,0,1,1,0,2,0,0
+Tanner High School,AL-042-0120,10210000808,560030,Basic Programming for Engineers,2,2,0,2,0,0,2,0,0
+West Limestone High School,AL-042-0140,10210000810,520018,"Computer Science Principles, AP",28,18,0,6,1,0,14,0,0
+West Limestone High School,AL-042-0140,10210000810,520018,"Computer Science Principles, AP",2,0,0,0,0,0,1,0,0
+West Limestone High School,AL-042-0140,10210000810,520045,Computer Science Discoveries,65,27,1,7,0,0,24,1,2
+West Limestone High School,AL-042-0140,10210000810,520015,Software Development,2,0,0,0,0,0,1,1,0
+West Limestone High School,AL-042-0140,10210000810,560030,Basic Programming for Engineers,2,1,0,0,0,0,2,0,0
+Booker T Washington High,AL-044-0010,10219001811,520018,"Computer Science Principles, AP",14,9,11,2,0,0,7,0,0
+Notasulga High School,AL-044-0060,10219000824,520045,Computer Science Discoveries,17,7,12,0,0,0,10,1,0
+Tuskegee Institute Middle School,AL-044-0100,10219000826,520052,CS Makers,56,26,55,0,0,0,34,2,0
+Buckhorn High School,AL-045-0030,10222001683,520007,"Computer Science A, AP",11,3,1,0,1,0,2,1,0
+Buckhorn High School,AL-045-0030,10222001683,520018,"Computer Science Principles, AP",28,10,10,0,4,0,8,0,0
+Buckhorn High School,AL-045-0030,10222001683,520046,Computer Science Essentials - PLTW,57,8,12,2,6,0,16,9,0
+Hazel Green High School,AL-045-0070,10222000836,520006,Computer Programming Basic I,15,1,2,0,2,0,3,1,0
+Hazel Green High School,AL-045-0070,10222000836,520007,"Computer Science A, AP",8,1,0,0,5,0,4,0,0
+Hazel Green High School,AL-045-0070,10222000836,520018,"Computer Science Principles, AP",12,3,0,0,2,0,1,0,0
+Sparkman High School,AL-045-0190,10222000848,520007,"Computer Science A, AP",29,3,4,1,1,0,1,0,0
+Sparkman High School,AL-045-0190,10222000848,520018,"Computer Science Principles, AP",56,19,9,4,1,0,11,2,0
+Sparkman High School,AL-045-0190,10222000848,520018,"Computer Science Principles, AP",47,19,14,0,0,0,10,1,0
+Sweet Water High School,AL-046-0090,10225000857,520018,"Computer Science Principles, AP",5,4,1,0,0,0,4,1,0
+Hackleburg High School,AL-047-0070,10231000866,520007,"Computer Science A, AP",4,0,0,0,0,0,3,0,0
+Hamilton Middle School,AL-047-0080,10231000867,520045,Computer Science Discoveries,19,9,0,0,0,0,3,0,0
+Phillips High School,AL-047-0110,10231000869,520045,Computer Science Discoveries,17,8,0,1,0,0,14,0,0
+Asbury High School,AL-048-0030,10000600872,520018,"Computer Science Principles, AP",27,12,1,10,0,1,6,4,3
+Asbury High School,AL-048-0030,10000600872,520018,"Computer Science Principles, AP",24,14,0,8,0,0,5,2,1
+Douglas High School,AL-048-0100,10000600878,520018,"Computer Science Principles, AP",6,3,0,3,0,0,5,0,1
+Kate D Smith DAR High School,AL-048-0140,10000600883,520018,"Computer Science Principles, AP",12,2,0,0,0,0,5,0,0
+Denton Magnet School of Technology,AL-049-0070,10237000897,560032,Computer Science for Innovators and Makers - PLTW,114,31,74,5,0,0,42,2,1
+Denton Magnet School of Technology,AL-049-0070,10237000897,560029,App Creators - PLTW,38,18,18,2,0,1,7,3,0
+Baker High School,AL-049-0100,10237000899,520018,"Computer Science Principles, AP",24,3,5,0,0,0,4,0,0
+Baker High School,AL-049-0100,10237000899,520015,Software Development,18,1,3,1,0,0,2,1,0
+Alma Bryant High School,AL-049-0136,10237000989,520018,"Computer Science Principles, AP",16,9,0,0,0,0,4,0,0
+WP Davidson High School,AL-049-0230,10237000912,520007,"Computer Science A, AP",11,1,2,0,0,0,0,0,0
+WP Davidson High School,AL-049-0230,10237000912,520018,"Computer Science Principles, AP",40,15,12,1,0,0,2,0,0
+WP Davidson High School,AL-049-0230,10237000912,520015,Software Development,23,11,5,2,0,1,4,0,0
+Clark-Shaw Magnet School,AL-049-0410,10237000931,560032,Computer Science for Innovators and Makers - PLTW,46,18,26,0,0,0,14,3,0
+Mary G Montgomery High School,AL-049-0460,10237000934,520007,"Computer Science A, AP",16,3,2,0,0,0,3,3,0
+Mary G Montgomery High School,AL-049-0460,10237000934,520043,Exploring Computer Science,29,9,8,2,0,0,11,3,0
+Mary G Montgomery High School,AL-049-0460,10237000934,520046,Computer Science Essentials - PLTW,21,1,3,4,0,0,3,1,0
+Murphy High School,AL-049-0530,10237000942,520018,"Computer Science Principles, AP",33,12,22,3,0,0,9,1,0
+Pillans Middle School,AL-049-0595,10237000946,560032,Computer Science for Innovators and Makers - PLTW,29,9,22,0,0,0,21,7,1
+Theodore High School,AL-049-0715,10237001688,520018,"Computer Science Principles, AP",27,11,8,0,1,0,7,0,0
+John L Leflore Magnet School,AL-049-0730,10237000962,520015,Software Development,21,8,20,0,0,0,17,2,0
+J F Shields High School,AL-050-0055,10240000979,520043,Exploring Computer Science,9,4,9,0,0,0,6,1,0
+Brewbaker Technology Magnet High School,AL-051-0097,10243001457,520043,Exploring Computer Science,12,2,8,0,0,0,2,0,0
+Jefferson Davis High School,AL-051-0370,10243001024,520006,Computer Programming Basic I,1,0,1,0,0,0,0,0,0
+Jefferson Davis High School,AL-051-0370,10243001024,520043,Exploring Computer Science,23,11,18,3,0,0,12,0,1
+Jefferson Davis High School,AL-051-0370,10243001024,520014,Java Programming,4,2,4,0,0,0,2,0,0
+Jefferson Davis High School,AL-051-0370,10243001024,520015,Software Development,2,1,1,1,0,0,2,0,0
+Loveless Academic Magnet Program High School,AL-051-0387,10243001417,520007,"Computer Science A, AP",14,4,2,0,0,0,1,0,0
+Loveless Academic Magnet Program High School,AL-051-0387,10243001417,520018,"Computer Science Principles, AP",17,7,5,0,0,0,1,0,1
+Lanier Senior High School,AL-051-0390,10243001036,520007,"Computer Science A, AP",16,9,16,0,0,0,6,1,0
+Lanier Senior High School,AL-051-0390,10243001036,520018,"Computer Science Principles, AP",10,6,10,0,0,0,9,0,0
+Lanier Senior High School,AL-051-0390,10243001036,520043,Exploring Computer Science,24,16,22,2,0,0,21,1,0
+Lanier Senior High School,AL-051-0390,10243001036,520014,Java Programming,1,1,1,0,0,0,0,0,0
+Lee High School,AL-051-0400,10243001035,520043,Exploring Computer Science,9,4,8,1,0,0,5,0,0
+Lee High School,AL-051-0400,10243001035,520014,Java Programming,1,0,1,0,0,0,0,0,0
+Lee High School,AL-051-0400,10243001035,520015,Software Development,1,0,0,0,0,0,0,0,0
+Park Crossing High School,AL-051-0478,10243002214,520018,"Computer Science Principles, AP",12,3,8,0,0,0,2,0,1
+Park Crossing High School,AL-051-0478,10243002214,520043,Exploring Computer Science,54,18,41,1,0,0,13,1,5
+Park Crossing High School,AL-051-0478,10243002214,520014,Java Programming,4,0,3,0,0,0,2,0,0
+Park Crossing High School,AL-051-0478,10243002214,520015,Software Development,2,0,1,0,0,0,1,0,0
+Albert P Brewer High School,AL-052-0005,10248001696,520018,"Computer Science Principles, AP",14,4,0,0,0,0,4,0,0
+Falkville High School,AL-052-0060,10248001044,520018,"Computer Science Principles, AP",7,2,1,0,0,0,3,0,0
+Falkville High School,AL-052-0060,10248001044,520045,Computer Science Discoveries,49,19,0,2,1,0,23,7,0
+Priceville Junior High School,AL-052-0147,10248001871,520045,Computer Science Discoveries,108,47,0,4,0,0,31,5,1
+Priceville High School,AL-052-0150,10248001048,520018,"Computer Science Principles, AP",22,9,1,0,1,0,5,0,0
+West Morgan Middle School,AL-052-0177,10248001864,520045,Computer Science Discoveries,24,11,1,8,0,0,11,0,0
+West Morgan High School,AL-052-0180,10248001052,520006,Computer Programming Basic I,1,0,0,0,0,0,0,0,0
+Francis Marion School,AL-053-0025,10267001734,520018,"Computer Science Principles, AP",23,17,23,0,0,0,12,1,0
+Francis Marion School,AL-053-0025,10267001734,520043,Exploring Computer Science,18,10,18,0,0,0,11,0,0
+Aliceville High School,AL-054-0020,10273001098,520046,Computer Science Essentials - PLTW,4,1,4,0,0,0,4,0,0
+Gordo High School,AL-054-0070,10273001104,520046,Computer Science Essentials - PLTW,8,4,3,1,0,0,5,1,0
+Gordo High School,AL-054-0070,10273001104,560029,App Creators - PLTW,94,42,27,8,0,0,55,11,2
+Pickens County High School,AL-054-0080,10273001102,520046,Computer Science Essentials - PLTW,5,3,2,0,0,0,4,1,0
+Pickens County High School,AL-054-0080,10273001102,560032,Computer Science for Innovators and Makers - PLTW,18,9,10,1,0,0,13,1,0
+Pickens County High School,AL-054-0080,10273001102,560029,App Creators - PLTW,33,15,25,0,0,0,31,7,0
+Russell County High School,AL-057-0065,10288001802,520018,"Computer Science Principles, AP",34,21,22,3,0,0,11,1,0
+Russell County High School,AL-057-0065,10288001802,520043,Exploring Computer Science,56,27,30,3,0,0,31,4,0
+Russell County High School,AL-057-0065,10288001802,520014,Java Programming,18,10,9,4,0,0,9,1,0
+Ashville High School,AL-058-0010,10306201362,520031,Introduction to Programming - NAF,4,2,0,1,0,0,3,2,0
+Ragland High School,AL-058-0120,10306201376,520031,Introduction to Programming - NAF,1,0,0,0,0,0,0,1,0
+Springville High School,AL-058-0130,10306201377,520018,"Computer Science Principles, AP",4,0,1,0,0,0,0,0,0
+Springville High School,AL-058-0130,10306201377,520031,Introduction to Programming - NAF,4,1,1,0,0,0,1,1,0
+Saint Clair County High School,AL-058-0140,10306201367,520007,"Computer Science A, AP",2,0,0,0,0,0,0,0,0
+Saint Clair County High School,AL-058-0140,10306201367,520031,Introduction to Programming - NAF,4,1,0,1,0,0,3,0,0
+Calera High,AL-059-0010,10303001170,520018,"Computer Science Principles, AP",14,6,3,1,0,0,2,1,0
+Chelsea High School,AL-059-0020,10303001171,520018,"Computer Science Principles, AP",36,16,0,2,0,0,3,1,0
+Chelsea Middle School,AL-059-0023,10303000031,560029,App Creators - PLTW,25,2,6,1,0,0,4,2,0
+Helena High School,AL-059-0051,10303002191,520018,"Computer Science Principles, AP",86,25,10,1,0,0,13,3,0
+Montevallo High School,AL-059-0060,10303001177,520018,"Computer Science Principles, AP",7,1,2,1,0,0,3,0,0
+Oak Mountain High School,AL-059-0081,10303001189,520018,"Computer Science Principles, AP",104,37,11,2,0,0,4,3,0
+Oak Mountain High School,AL-059-0081,10303001189,520018,"Computer Science Principles, AP",81,26,8,4,0,0,8,1,1
+Oak Mountain Middle School,AL-059-0084,10303000124,520045,Computer Science Discoveries,11,2,1,1,0,0,1,0,0
+Shelby County High School,AL-059-0090,10303001174,520018,"Computer Science Principles, AP",8,6,0,0,1,0,3,0,0
+Sumter Central High School,AL-060-0080,10309002201,520018,"Computer Science Principles, AP",26,17,25,0,0,0,10,0,0
+Sumter Central High School,AL-060-0080,10309002201,520043,Exploring Computer Science,27,12,27,0,0,0,16,4,0
+Sumter Central High School,AL-060-0080,10309002201,520050,Introduction to Computer Science-TEALS,20,11,20,0,0,0,13,0,0
+BB Comer Memorial High School,AL-061-0020,10318001210,520018,"Computer Science Principles, AP",19,8,6,0,1,0,14,0,0
+BB Comer Memorial High School,AL-061-0020,10318001210,520043,Exploring Computer Science,23,10,10,0,0,1,20,0,0
+BB Comer Memorial High School,AL-061-0020,10318001210,520045,Computer Science Discoveries,78,38,21,5,0,0,61,6,0
+Childersburg High School,AL-061-0050,10318001213,520018,"Computer Science Principles, AP",11,5,3,1,0,0,7,0,0
+Childersburg Middle School,AL-061-0051,10318001756,560029,App Creators - PLTW,42,22,16,0,0,0,25,0,0
+Talladega County Central High,AL-061-0060,10318001215,520043,Exploring Computer Science,13,9,10,0,0,0,12,1,0
+Munford High School,AL-061-0120,10318001220,520018,"Computer Science Principles, AP",10,6,1,0,0,0,4,0,0
+Dadeville High School,AL-062-0020,10321001229,520018,"Computer Science Principles, AP",19,12,8,0,0,0,10,0,0
+Brookwood Middle School,AL-063-0025,10339001540,520045,Computer Science Discoveries,69,22,1,6,0,0,41,9,3
+Brookwood High School,AL-063-0030,10339001274,520015,Software Development,17,1,2,0,0,0,7,4,0
+Echols Middle School,AL-063-0075,10339001462,520045,Computer Science Discoveries,32,7,2,5,0,0,10,3,6
+Hillcrest High School,AL-063-0100,10339000052,520018,"Computer Science Principles, AP",29,10,7,1,0,0,4,0,0
+Hillcrest Middle School,AL-063-0105,10339001280,520045,Computer Science Discoveries,58,21,37,2,0,0,33,1,1
+Hillcrest Middle School,AL-063-0105,10339001280,520045,Computer Science Discoveries,24,4,7,1,0,0,8,1,0
+Davis-Emerson Middle School,AL-063-0115,10339002088,520045,Computer Science Discoveries,103,32,50,25,0,0,85,10,12
+Northside High School,AL-063-0160,10339001287,520018,"Computer Science Principles, AP",1,0,0,0,0,0,0,0,0
+Collins-Riverside Middle School,AL-063-0170,10339001289,520045,Computer Science Discoveries,69,23,40,9,2,0,51,13,3
+Tuscaloosa County High School,AL-063-0180,10339001291,520006,Computer Programming Basic I,13,4,4,1,0,0,5,0,1
+Tuscaloosa County High School,AL-063-0180,10339001291,520007,"Computer Science A, AP",7,1,1,0,0,0,2,0,0
+Tuscaloosa County High School,AL-063-0180,10339001291,520018,"Computer Science Principles, AP",26,7,1,2,0,0,9,2,0
+Tuscaloosa County High School,AL-063-0180,10339001291,520015,Software Development,10,3,4,0,0,0,1,0,0
+Carbon Hill High School,AL-064-0020,10345000135,520043,Exploring Computer Science,10,6,0,0,0,0,6,0,1
+Addison High School,AL-067-0010,10358001356,520006,Computer Programming Basic I,2,0,0,0,0,0,2,0,0
+Albertville Middle School,AL-101-0010,10000500870,520045,Computer Science Discoveries,153,40,2,86,0,0,45,4,21
+Benjamin Russell High School,AL-102-0020,10003000003,520046,Computer Science Essentials - PLTW,32,9,14,1,0,0,19,3,1
+Thompson High School,AL-103-0050,10019001183,520007,"Computer Science A, AP",13,1,1,2,0,0,2,0,0
+Thompson High School,AL-103-0050,10019001183,520018,"Computer Science Principles, AP",11,2,2,1,0,0,1,0,0
+Thompson High School,AL-103-0050,10019001183,520054,Introduction to Python-MSIA (one credit),8,0,1,1,0,0,2,0,0
+Andalusia High School,AL-104-0010,10006000007,520007,"Computer Science A, AP",1,1,0,0,0,0,0,0,0
+Anniston High School,AL-105-0010,10009000011,520018,"Computer Science Principles, AP",22,10,18,2,0,0,12,2,0
+Anniston High School,AL-105-0010,10009000011,520045,Computer Science Discoveries,16,11,14,1,0,0,10,0,0
+Arab High School,AL-106-0020,10010000028,520018,"Computer Science Principles, AP",15,7,0,0,0,0,3,0,0
+Athens High School,AL-107-0030,10012001472,520018,"Computer Science Principles, AP",25,10,1,4,0,0,7,1,0
+Athens High School,AL-107-0030,10012001472,520015,Software Development,6,1,0,1,0,0,2,0,0
+Etowah High School,AL-109-0025,10018000033,520018,"Computer Science Principles, AP",3,1,0,0,0,0,1,0,0
+Etowah High School,AL-109-0025,10018000033,520043,Exploring Computer Science,8,2,0,2,0,0,6,2,0
+Auburn High School,AL-110-0010,10021000036,520007,"Computer Science A, AP",1,0,0,0,0,0,0,0,0
+Auburn High School,AL-110-0010,10021000036,520007,"Computer Science A, AP",28,6,3,1,0,0,0,0,1
+Auburn High School,AL-110-0010,10021000036,520018,"Computer Science Principles, AP",19,3,1,0,0,0,0,1,1
+Auburn Junior High School,AL-110-0020,10021000037,520006,Computer Programming Basic I,8,3,0,0,0,0,1,1,1
+Bessemer City High School,AL-113-0080,10033000087,520043,Exploring Computer Science,26,1,22,4,0,0,10,1,2
+George Washington Carver High School,AL-114-0095,10039001468,520018,"Computer Science Principles, AP",3,1,3,0,0,0,2,0,0
+George Washington Carver High School,AL-114-0095,10039001468,520043,Exploring Computer Science,8,7,8,0,0,0,6,1,0
+George Washington Carver High School,AL-114-0095,10039001468,520050,Introduction to Computer Science-TEALS,23,7,22,1,0,0,12,4,0
+Huffman High School-Magnet,AL-114-0390,10039000141,520043,Exploring Computer Science,32,14,28,3,0,0,17,4,0
+Huffman High School-Magnet,AL-114-0390,10039000141,520050,Introduction to Computer Science-TEALS,34,15,31,3,0,0,18,2,1
+Jackson-Olin High School,AL-114-0415,10039000164,520018,"Computer Science Principles, AP",20,11,18,2,0,0,9,0,1
+Ramsay High School,AL-114-0720,10039000176,520018,"Computer Science Principles, AP",22,13,22,0,0,0,11,0,0
+Wenonah High School,AL-114-0858,10039000192,520018,"Computer Science Principles, AP",23,14,23,0,0,0,13,0,0
+Woodlawn High School-Magnet,AL-114-0920,10039000198,520043,Exploring Computer Science,18,11,16,1,0,0,15,1,0
+Woodlawn High School-Magnet,AL-114-0920,10039000198,520054,Introduction to Python-MSIA (one credit),20,9,16,1,0,0,14,1,0
+Boaz High School,AL-115-0060,10001200874,520006,Computer Programming Basic I,2,0,0,1,0,0,1,0,0
+Boaz High School,AL-115-0060,10001200874,520007,"Computer Science A, AP",1,0,0,0,0,0,0,0,0
+TR Miller High School,AL-116-0030,10045000216,520018,"Computer Science Principles, AP",11,5,0,0,0,0,2,0,0
+Chickasaw Middle School,AL-121-0015,10018802428,520045,Computer Science Discoveries,89,33,64,3,0,0,70,14,1
+Chickasaw City High School,AL-121-0020,10018802194,520007,"Computer Science A, AP",7,2,4,0,0,0,4,0,0
+Chickasaw City High School,AL-121-0020,10018802194,520043,Exploring Computer Science,15,7,6,4,0,0,8,1,2
+Cullman High School,AL-125-0020,10099000370,520007,"Computer Science A, AP",1,0,0,0,0,0,0,0,0
+Cullman High School,AL-125-0020,10099000370,520018,"Computer Science Principles, AP",32,14,0,1,0,0,6,0,0
+Austin High School,AL-127-0010,10117000426,520007,"Computer Science A, AP",2,0,0,0,0,0,0,0,0
+Austin High School,AL-127-0010,10117000426,520018,"Computer Science Principles, AP",43,14,11,7,0,1,16,1,0
+Austin Middle School,AL-127-0023,10117000081,520045,Computer Science Discoveries,24,7,10,5,0,1,16,6,2
+Decatur High School,AL-127-0030,10117000429,520018,"Computer Science Principles, AP",43,21,7,6,0,0,13,0,0
+Coppinville School,AL-132-0030,10132000474,520045,Computer Science Discoveries,30,14,5,5,1,0,13,3,0
+Enterprise High School,AL-132-0050,10132000476,520007,"Computer Science A, AP",1,1,0,0,0,0,0,0,0
+Enterprise High School,AL-132-0050,10132000476,520018,"Computer Science Principles, AP",26,9,3,3,0,0,3,1,0
+Enterprise High School,AL-132-0050,10132000476,520043,Exploring Computer Science,47,9,8,5,1,0,18,2,3
+Eufaula High School,AL-133-0010,10141000511,520007,"Computer Science A, AP",2,0,0,0,0,0,0,0,0
+Eufaula High School,AL-133-0010,10141000511,520018,"Computer Science Principles, AP",18,4,5,2,0,0,5,1,0
+Eufaula High School,AL-133-0010,10141000511,520043,Exploring Computer Science,52,18,23,3,0,0,18,3,2
+Moorer Middle School,AL-133-0030,10141000513,520045,Computer Science Discoveries,80,31,45,7,0,0,38,7,1
+Moorer Middle School,AL-133-0030,10141000513,520052,CS Makers,29,13,16,3,0,0,16,0,0
+Fairfield High Preparatory School,AL-137-0020,10144000516,520043,Exploring Computer Science,16,7,16,0,0,0,10,3,0
+Fairfield High Preparatory School,AL-137-0020,10144000516,520045,Computer Science Discoveries,29,11,29,0,0,0,22,2,1
+Florence High School,AL-141-0020,10153000528,520007,"Computer Science A, AP",33,14,8,1,0,0,9,0,0
+Florence Middle School,AL-141-0100,10153000536,520045,Computer Science Discoveries,107,20,35,11,0,0,59,9,3
+Fort Payne High School,AL-143-0020,10156000538,520006,Computer Programming Basic I,1,0,0,0,1,0,1,0,0
+Gulf Shores High School,#N/A,10020202473,520018,"Computer Science Principles, AP",7,1,0,0,0,0,2,0,0
+Guntersville Middle School,AL-154-0010,10169000579,520045,Computer Science Discoveries,45,18,0,1,0,0,9,1,0
+Guntersville High School,AL-154-0040,10169000582,520018,"Computer Science Principles, AP",13,4,0,2,0,0,3,0,0
+Haleyville High School,AL-155-0030,10172000594,520007,"Computer Science A, AP",3,3,0,0,0,0,1,0,0
+Haleyville Middle School,AL-155-0035,10172001885,520045,Computer Science Discoveries,118,55,2,3,0,0,54,1,1
+Hartselle Junior High School,AL-156-0030,10173000598,520045,Computer Science Discoveries,54,3,1,1,1,0,10,6,0
+Hartselle High School,AL-156-0040,10173000599,520006,Computer Programming Basic I,50,9,1,4,0,0,9,0,0
+Hartselle High School,AL-156-0040,10173000599,520018,"Computer Science Principles, AP",53,22,0,0,0,0,4,0,0
+Homewood High School,AL-157-0035,10176000608,520018,"Computer Science Principles, AP",1,1,0,0,0,0,0,0,0
+Homewood High School,AL-157-0035,10176000608,520050,Introduction to Computer Science-TEALS,5,1,1,3,0,0,1,0,1
+Homewood High School,AL-157-0035,10176000608,520014,Java Programming,2,0,0,1,0,0,0,0,0
+Spain Park High School,AL-158-0010,10000701456,520007,"Computer Science A, AP",19,4,1,2,0,0,1,0,0
+Spain Park High School,AL-158-0010,10000701456,520018,"Computer Science Principles, AP",4,0,2,1,0,0,1,0,1
+Spain Park High School,AL-158-0010,10000701456,520018,"Computer Science Principles, AP",13,2,2,1,0,0,1,0,1
+Spain Park High School,AL-158-0010,10000701456,520018,"Computer Science Principles, AP",24,3,0,0,0,0,1,0,0
+Spain Park High School,AL-158-0010,10000701456,520043,Exploring Computer Science,1,0,0,0,0,0,0,0,0
+Spain Park High School,AL-158-0010,10000701456,520050,Introduction to Computer Science-TEALS,13,0,6,2,0,0,2,5,1
+Spain Park High School,AL-158-0010,10000701456,520050,Introduction to Computer Science-TEALS,13,1,3,0,0,0,5,3,2
+Spain Park High School,AL-158-0010,10000701456,520014,Java Programming,10,1,1,0,0,0,1,2,0
+Hoover High School,AL-158-0400,10000700251,520007,"Computer Science A, AP",3,0,0,0,0,0,0,0,0
+Hoover High School,AL-158-0400,10000700251,520007,"Computer Science A, AP",18,1,3,0,0,0,0,0,0
+Hoover High School,AL-158-0400,10000700251,520018,"Computer Science Principles, AP",15,4,5,0,0,0,5,0,0
+Hoover High School,AL-158-0400,10000700251,520018,"Computer Science Principles, AP",25,9,11,0,0,0,5,1,0
+Hoover High School,AL-158-0400,10000700251,520050,Introduction to Computer Science-TEALS,8,0,4,0,0,0,1,0,0
+Hoover High School,AL-158-0400,10000700251,520050,Introduction to Computer Science-TEALS,6,0,4,0,0,0,2,1,0
+Hoover High School,AL-158-0400,10000700251,520014,Java Programming,11,1,0,1,0,0,1,0,0
+Chapman Middle School,#N/A,10180001527,560032,Computer Science for Innovators and Makers - PLTW,12,5,5,2,0,0,5,2,0
+Hampton Cove Middle School,AL-159-0138,10180002093,560029,App Creators - PLTW,42,13,3,3,0,0,3,4,0
+Huntsville High School,AL-159-0160,10180000631,520007,"Computer Science A, AP",16,6,0,0,0,0,0,0,0
+Huntsville High School,AL-159-0160,10180000631,520007,"Computer Science A, AP",1,0,0,1,0,0,0,0,0
+Huntsville High School,AL-159-0160,10180000631,520018,"Computer Science Principles, AP",7,3,0,0,0,0,0,0,0
+Huntsville High School,AL-159-0160,10180000631,400033,GameMaker Programming - Zulama,5,0,1,1,0,0,0,1,0
+Huntsville High School,AL-159-0160,10180000631,400038,Unity 3D Programming - Zulama,14,1,1,1,1,0,0,1,0
+Huntsville Junior High School,AL-159-0170,10180000632,560032,Computer Science for Innovators and Makers - PLTW,113,28,50,12,1,0,50,10,6
+Jemison High School,AL-159-0172,10180002419,520007,"Computer Science A, AP",1,1,0,0,0,0,0,0,0
+Jemison High School,AL-159-0172,10180002419,520043,Exploring Computer Science,12,4,10,2,0,0,7,2,2
+Virgil Grissom High School,AL-159-0340,10180000629,520018,"Computer Science Principles, AP",11,1,0,1,0,0,0,0,0
+Virgil Grissom High School,AL-159-0340,10180000629,520046,Computer Science Essentials - PLTW,20,2,4,3,0,0,4,2,1
+Whitesburg Middle School,AL-159-0400,10180001531,560032,Computer Science for Innovators and Makers - PLTW,27,8,7,7,0,0,8,2,1
+Whitesburg Middle School,AL-159-0400,10180001531,560029,App Creators - PLTW,51,22,16,22,0,0,29,3,8
+New Century Technology High School,AL-159-0460,10180001374,520007,"Computer Science A, AP",18,6,1,1,0,0,2,1,0
+New Century Technology High School,AL-159-0460,10180001374,520018,"Computer Science Principles, AP",25,13,9,2,0,2,3,1,0
+New Century Technology High School,AL-159-0460,10180001374,520015,Software Development,27,8,7,2,0,0,2,2,0
+Jasper High School,AL-163-0040,10189000678,520046,Computer Science Essentials - PLTW,19,9,1,0,0,0,2,1,0
+Leeds High School,AL-167-0030,10001102096,520018,"Computer Science Principles, AP",10,2,2,1,0,0,2,1,0
+Bob Jones High School,AL-169-0080,10000800831,520043,Exploring Computer Science,48,10,2,3,0,1,3,2,0
+Bob Jones High School,AL-169-0080,10000800831,520015,Software Development,14,2,0,1,0,0,0,2,0
+Discovery Middle School,AL-169-0082,10000800495,560032,Computer Science for Innovators and Makers - PLTW,51,15,4,4,0,0,9,6,0
+Discovery Middle School,AL-169-0082,10000800495,560029,App Creators - PLTW,18,3,4,2,1,0,3,0,1
+Liberty Middle School,AL-169-0083,10000801798,560032,Computer Science for Innovators and Makers - PLTW,80,24,6,9,0,0,5,6,3
+James Clemens High School,AL-169-0095,10000802198,520018,"Computer Science Principles, AP",21,5,1,1,0,0,0,3,0
+James Clemens High School,AL-169-0095,10000802198,520043,Exploring Computer Science,13,4,1,1,0,0,3,1,0
+James Clemens High School,AL-169-0095,10000802198,520043,Exploring Computer Science,31,9,4,0,0,0,2,2,1
+James Clemens High School,AL-169-0095,10000802198,520015,Software Development,25,3,1,1,1,0,0,2,0
+Mountain Brook High School,AL-175-0050,10249001056,520007,"Computer Science A, AP",12,3,0,1,0,0,0,0,0
+Mountain Brook High School,AL-175-0050,10249001056,520018,"Computer Science Principles, AP",56,18,0,2,0,0,0,2,0
+Mountain Brook High School,AL-175-0050,10249001056,520018,"Computer Science Principles, AP",50,16,1,2,0,0,1,1,0
+Mountain Brook Junior High School,AL-175-0060,10249001057,520045,Computer Science Discoveries,4,0,0,0,0,0,0,0,0
+Mountain Brook Junior High School,AL-175-0060,10249001057,560032,Computer Science for Innovators and Makers - PLTW,21,0,1,0,0,0,0,2,0
+Mountain Brook Junior High School,AL-175-0060,10249001057,520044,Programming with Robots,21,4,0,2,0,0,0,2,0
+Mountain Brook Junior High School,AL-175-0060,10249001057,560029,App Creators - PLTW,21,3,0,0,0,0,0,1,0
+Muscle Shoals High School,AL-176-0040,10252001062,520018,"Computer Science Principles, AP",28,9,2,1,0,0,5,2,0
+Pelham High School,AL-177-0085,10019402399,520018,"Computer Science Principles, AP",6,2,1,0,0,0,0,0,0
+Pelham High School,AL-177-0085,10019402399,520046,Computer Science Essentials - PLTW,52,6,11,9,0,0,13,0,2
+Pelham Park Middle School,AL-177-0087,10019402398,520045,Computer Science Discoveries,44,16,4,11,0,0,12,3,1
+Oneonta Middle School,AL-178-0015,10255002355,520045,Computer Science Discoveries,71,36,2,24,0,0,35,9,6
+Oneonta High School,AL-178-0020,10255001064,520007,"Computer Science A, AP",1,0,0,1,0,0,1,0,0
+Oneonta High School,AL-178-0020,10255001064,520018,"Computer Science Principles, AP",8,0,0,3,0,0,2,0,0
+Opelika High School,AL-179-0055,10258001070,520007,"Computer Science A, AP",1,1,1,0,0,0,0,0,0
+Opelika High School,AL-179-0055,10258001070,520018,"Computer Science Principles, AP",11,1,2,2,0,0,5,0,0
+Opelika High School,AL-179-0055,10258001070,520043,Exploring Computer Science,6,0,3,2,0,0,5,1,1
+Opelika Middle School,AL-179-0060,10258001071,560029,App Creators - PLTW,41,10,23,6,0,0,30,12,1
+Oxford High School,AL-181-0020,10263501075,520007,"Computer Science A, AP",9,1,0,0,0,0,0,0,0
+Oxford High School,AL-181-0020,10263501075,520018,"Computer Science Principles, AP",28,5,4,6,0,0,10,2,0
+Oxford High School,AL-181-0020,10263501075,520045,Computer Science Discoveries,22,4,9,2,0,0,12,2,0
+Carroll High School,AL-182-0010,10264001080,520018,"Computer Science Principles, AP",20,10,6,0,0,0,9,0,0
+Duran Junior High School,AL-183-0080,10265001570,450012,Introduction to Programming,15,3,1,3,0,0,7,0,0
+Central High School,AL-184-0030,10270001088,520007,"Computer Science A, AP",4,1,1,0,0,0,1,1,0
+Central High School,AL-184-0030,10270001088,520007,"Computer Science A, AP",1,1,1,0,0,0,1,0,0
+Central High School,AL-184-0030,10270001088,520018,"Computer Science Principles, AP",41,10,16,4,0,0,16,2,0
+Central High School,AL-184-0030,10270001088,520043,Exploring Computer Science,45,14,25,3,0,0,26,1,1
+Central High School,AL-184-0030,10270001088,520014,Java Programming,19,5,6,3,0,0,9,1,0
+Central Freshman Academy,AL-184-0035,10270002140,520043,Exploring Computer Science,66,20,38,9,1,0,46,1,0
+Pike Road High School,AL-186-0015,10019502441,520018,"Computer Science Principles, AP",6,1,3,0,0,0,1,0,0
+Pike Road High School,AL-186-0015,10019502441,520046,Computer Science Essentials - PLTW,38,9,15,1,0,0,7,2,0
+Pike Road High School,AL-186-0015,10019502441,520015,Software Development,5,0,0,0,0,0,0,0,0
+Saraland High School,AL-187-0635,10018502137,520007,"Computer Science A, AP",2,0,0,0,0,0,1,0,0
+Handley High School,AL-188-0020,10285001126,520007,"Computer Science A, AP",6,3,2,0,0,1,4,0,0
+Handley High School,AL-188-0020,10285001126,520043,Exploring Computer Science,11,4,3,1,0,0,2,0,0
+Russellville Middle School,AL-189-0020,10291001141,520045,Computer Science Discoveries,25,9,5,10,0,0,16,4,2
+Russellville High School,AL-189-0030,10291001142,520007,"Computer Science A, AP",5,0,0,4,0,0,2,1,0
+Russellville High School,AL-189-0030,10291001142,520007,"Computer Science A, AP",1,1,0,1,0,0,0,0,0
+Russellville High School,AL-189-0030,10291001142,520018,"Computer Science Principles, AP",46,11,1,21,0,0,29,1,2
+Russellville High School,AL-189-0030,10291001142,520043,Exploring Computer Science,32,7,3,17,0,0,25,3,3
+Russellville High School,AL-189-0030,10291001142,400038,Unity 3D Programming - Zulama,2,0,0,1,0,0,2,0,0
+The R.B.Hudson STEAM Academy,AL-191-0120,10297001161,450012,Introduction to Programming,72,32,72,0,0,0,60,7,0
+Sheffield High School,AL-192-0050,10300001164,520007,"Computer Science A, AP",2,0,0,0,0,0,1,0,0
+Sheffield High School,AL-192-0050,10300001164,520018,"Computer Science Principles, AP",18,7,9,1,0,0,7,0,0
+Sheffield Junior High School,AL-192-0055,10300000160,520045,Computer Science Discoveries,36,16,11,3,0,0,20,0,0
+Nichols-Lawson Middle School,AL-193-0035,10312002100,520045,Computer Science Discoveries,79,35,37,4,0,0,47,8,2
+Sylacauga High School,AL-193-0050,10312001200,520043,Exploring Computer Science,23,9,5,3,0,0,11,0,0
+Satsuma High School,AL-196-0020,10018902195,520018,"Computer Science Principles, AP",7,2,1,0,0,0,2,0,0
+Tarrant High School,AL-197-0030,10327001240,520043,Exploring Computer Science,15,6,7,7,0,0,9,2,0
+Tarrant High School,AL-197-0030,10327001240,520045,Computer Science Discoveries,28,12,10,13,1,1,10,0,1
+Tarrant High School,AL-197-0030,10327001240,560032,Computer Science for Innovators and Makers - PLTW,31,17,24,4,2,0,11,1,0
+Tarrant High School,AL-197-0030,10327001240,520054,Introduction to Python-MSIA (one credit),7,3,4,3,0,0,4,1,0
+Paul W Bryant High School,AL-200-0055,10336002101,520018,"Computer Science Principles, AP",13,6,13,0,0,0,2,1,0
+Northridge High School,AL-200-0075,10336002102,520043,Exploring Computer Science,18,3,7,2,0,0,8,4,1
+Central High School,AL-200-0160,10336001608,520018,"Computer Science Principles, AP",4,2,3,0,0,0,1,0,0
+Central High School,AL-200-0160,10336001608,520043,Exploring Computer Science,14,8,14,0,0,0,6,0,0
+Deshler High School,AL-201-0010,10342001297,520018,"Computer Science Principles, AP",12,4,0,1,0,0,3,0,1
+Deshler High School,AL-201-0010,10342001297,520046,Computer Science Essentials - PLTW,34,6,3,0,0,0,13,4,0
+Vestavia Hills High School,AL-202-0020,10343001304,520018,"Computer Science Principles, AP",30,10,0,2,0,0,2,1,0
+Vestavia Hills High School,AL-202-0020,10343001304,520044,Programming with Robots,18,5,1,0,0,0,1,1,0
+Vestavia Hills High School,AL-202-0020,10343001304,520015,Software Development,17,3,2,0,0,0,4,1,0
+Hewitt-Trussville High School,AL-205-0890,10001301682,520007,"Computer Science A, AP",2,1,0,0,0,0,0,0,0
+Hewitt-Trussville High School,AL-205-0890,10001301682,520018,"Computer Science Principles, AP",38,14,6,0,0,0,0,1,0
+Hewitt-Trussville High School,AL-205-0890,10001301682,520046,Computer Science Essentials - PLTW,29,3,3,1,0,0,3,2,1

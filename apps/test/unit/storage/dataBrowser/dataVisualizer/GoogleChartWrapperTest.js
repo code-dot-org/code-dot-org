@@ -29,20 +29,33 @@ describe('GoogleChartWrapper', () => {
           numericColumns={['category2', 'category3']}
           chartType={ChartType.BAR_CHART}
           selectedColumn1="category1"
+          chartTitle="Title"
         />
       );
 
       const expectedChartData = [
-        {category1: 'red', count: 2},
         {category1: 'blue', count: 1},
-        {category1: 'green', count: 1}
+        {category1: 'green', count: 1},
+        {category1: 'red', count: 2}
       ];
+      const expectedChartOptions = {
+        title: 'Title',
+        legend: {position: 'none'},
+        hAxis: {
+          title: 'category1',
+          format: '#.#'
+        },
+        vAxis: {
+          title: 'Count',
+          format: '#.#'
+        }
+      };
 
       expect(spy).to.have.been.calledOnce;
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category1', 'count'],
-        {}
+        expectedChartOptions
       ]);
     });
 
@@ -53,6 +66,21 @@ describe('GoogleChartWrapper', () => {
         {category1: 'red', category2: 3, category3: 10},
         {category1: 'green', category2: 4, category3: 10}
       ];
+      const expectedChartOptions = {
+        title: 'Title',
+        legend: {position: 'none'},
+        hAxis: {
+          title: 'category2',
+          format: '#.#',
+          titleTextStyle: {italic: false}
+        },
+        vAxis: {
+          title: 'Count',
+          format: '#.#',
+          titleTextStyle: {italic: false}
+        }
+      };
+
       mount(
         <GoogleChartWrapper
           records={expectedChartData}
@@ -60,6 +88,7 @@ describe('GoogleChartWrapper', () => {
           chartType={ChartType.HISTOGRAM}
           selectedColumn1="category2"
           bucketSize="2"
+          chartTitle="Title"
         />
       );
 
@@ -67,7 +96,7 @@ describe('GoogleChartWrapper', () => {
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category2'],
-        {histogram: {bucketSize: '2'}}
+        {...expectedChartOptions, histogram: {bucketSize: '2'}}
       ]);
     });
 
@@ -78,6 +107,19 @@ describe('GoogleChartWrapper', () => {
         {category1: 'red', category2: 3, category3: 10},
         {category1: 'green', category2: 4, category3: 10}
       ];
+      const expectedChartOptions = {
+        title: 'Title',
+        legend: {position: 'none'},
+        hAxis: {
+          title: 'category2',
+          format: '#.#'
+        },
+        vAxis: {
+          title: 'category3',
+          format: '#.#'
+        }
+      };
+
       mount(
         <GoogleChartWrapper
           records={expectedChartData}
@@ -85,13 +127,14 @@ describe('GoogleChartWrapper', () => {
           chartType={ChartType.SCATTER_PLOT}
           selectedColumn1="category2"
           selectedColumn2="category3"
+          chartTitle="Title"
         />
       );
       expect(spy).to.have.been.calledOnce;
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category2', 'category3'],
-        {}
+        expectedChartOptions
       ]);
     });
   });

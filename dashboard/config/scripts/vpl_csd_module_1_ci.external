@@ -1,0 +1,30 @@
+name 'VPL - CSD - Module 1 - CI'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Curriculum Investigation
+
+**Estimated Time:** 60 minutes
+
+## Overview
+
+In the following activities, you will investigate three additional lessons in Unit 3. Many of the activities you will complete are activities that your students will complete as a part of their Unit 3 work. As you work through these activities, you will continue to reflect on your role as the teacher during a programming lesson. 
+
+## Curriculum Investigation Goals
+
+During this lesson investigation, you will investigate three lessons from Unit 3. There is one specific goal for each task coupled with a series of optional activities. Complete as many of the activities as you need to complete in order to feel like you have achieved the specific goal for the lesson. Participants with more CS experience will likely need to complete fewer activities to reach the goal than participants who are new to CS. Remember to make a choice that best meets your needs. 
+
+* Lesson 11: The Draw Loop
+	* **Goal:** Use a draw loop to add movement to sprites in Game Lab
+* Lesson 12: Sprite Movement
+	* **Goal:** Use a counter pattern to animate sprites in Game Lab
+* Lesson 14: Conditionals 
+	* **Goal:** Use conditionals to react to changes in variables and sprite properties
+
+
+
+
+
+MARKDOWN

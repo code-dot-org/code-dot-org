@@ -19,25 +19,6 @@ module Api::V1::Pd
 
     API = '/api/v1/pd/workshops'
 
-    test_user_gets_response_for(
-      :workshop_survey_report,
-      user: :workshop_admin,
-      params: -> {{workshop_id: @workshop.id}}
-    )
-
-    test 'facilitators can view their survey' do
-      sign_in @facilitator
-      get :workshop_survey_report, params: {workshop_id: @workshop.id}
-      assert_response :success
-
-      @controller = WorkshopSurveyReportController.new
-
-      other_facilitator = create :facilitator
-      other_workshop = create(:workshop, organizer: @program_manager, facilitators: [other_facilitator])
-      get :workshop_survey_report, params: {workshop_id: other_workshop.id}
-      assert_response :forbidden
-    end
-
     test 'teachercon survey report for facilitator' do
       teachercon_1 = create :workshop, :teachercon, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
       teachercon_2 = create :workshop, :teachercon, facilitators: teachercon_1.facilitators, num_sessions: 5, num_completed_surveys: 10
@@ -182,13 +163,6 @@ module Api::V1::Pd
       )
     end
 
-    test_user_gets_response_for(
-      :workshop_survey_report,
-      response: :forbidden,
-      user: :teacher,
-      params: -> {{workshop_id: @workshop.id}}
-    )
-
     test 'facilitators cannot see results for other types of workshops' do
       workshop = create :csf_intro_workshop, facilitators: [@facilitator]
       sign_in @facilitator
@@ -200,34 +174,6 @@ module Api::V1::Pd
       assert result['errors']&.present?
       assert result['errors'].first["message"]&.start_with?(
         'Action generic_survey_report should not be used for this workshop'
-      )
-    end
-
-    test 'facilitators see filtered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @facilitator,
-        expected_facilitator_name_filter: @facilitator.name
-      )
-    end
-
-    test 'workshop admins see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: create(:workshop_admin),
-        expected_facilitator_name_filter: nil
-      )
-    end
-
-    test 'workshop organizers see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @workshop.organizer,
-        expected_facilitator_name_filter: nil
-      )
-    end
-
-    test 'program managers see unfiltered facilitator specific results' do
-      assert_workshop_survey_report_facilitator_query(
-        user: @program_manager,
-        expected_facilitator_name_filter: nil
       )
     end
 
@@ -273,16 +219,6 @@ module Api::V1::Pd
     end
 
     private
-
-    def assert_workshop_survey_report_facilitator_query(user:, expected_facilitator_name_filter:)
-      @controller.expects(:generate_summary_report).with do |params|
-        params[:facilitator_name] == expected_facilitator_name_filter
-      end
-
-      sign_in user
-      get :workshop_survey_report, params: {workshop_id: @workshop.id}
-      assert_response :success
-    end
 
     def build_sample_data
       facilitator_1 = create(:facilitator, name: 'Cersei')

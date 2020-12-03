@@ -7,13 +7,24 @@ import {
   getStore
 } from '@cdo/apps/redux';
 import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
-import {reducer, isEnabled, isAvailable} from '@cdo/apps/lib/kits/maker/redux';
-import * as dropletConfig from '@cdo/apps/lib/kits/maker/dropletConfig';
+import dropletConfig, {
+  configMicrobit,
+  configCircuitPlayground
+} from '@cdo/apps/lib/kits/maker/dropletConfig';
 import MakerError from '@cdo/apps/lib/kits/maker/MakerError';
+import {reducer, isEnabled, isAvailable} from '@cdo/apps/lib/kits/maker/redux';
 
 describe('maker/toolkit.js', () => {
   it('exports dropletConfig as-is', () => {
     expect(maker.dropletConfig).to.equal(dropletConfig);
+  });
+
+  it('exports configMicrobit as-is', () => {
+    expect(maker.configMicrobit).to.equal(configMicrobit);
+  });
+
+  it('exports configCircuitPlayground as-is', () => {
+    expect(maker.configCircuitPlayground).to.equal(configCircuitPlayground);
   });
 
   it('exports MakerError as-is', () => {

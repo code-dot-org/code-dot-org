@@ -12,12 +12,12 @@
   csedweek_dates: "Ika 18-14 ng Disyembre, 2014"
   csedweek_banner_hoc: 'Ang <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> ay parating na. Tinatawagan ang lahat ng guro at mga organizer, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">pagplanuhan ang iyong Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource para sa CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource para sa CSEdWeek"
   n_have_learned_an_hoc: "<h1> Subukan ang</h1><h2>Hour of Code</h2><h3>#served</h3>"
   anybody_can_learn: "Lahat ay puwedeng matuto."
   learn_now: "Matuto Ngayon"
   petition_message: "Ang bawat estudyante sa bawat paaralan ay dapat may pagkakataon na matuto ng computer science"
   petition_sign_message: 'Kung ikaw ang sumasang-ayon, isulat ang iyong pangalan. Sumali sa # pang iba.'
-  petition_sign_message_support: 'Kung ikaw ay sumusuporta sa amin, isulat ang iyong pangalan. At sumali sa # iba.'
   petition_join_others: 'Sumali sa # iba'
   name: "Pangalan"
   email: "Email"
@@ -26,7 +26,7 @@
   twentyhours_heading: "Subukan ang aming Intro sa kurso ng Computer Science"
   twentyhours_text: "Tapos ka na sa iyong unang Hour of Code? Matuto pa ng ibang computer science at mga programming concept sa follow-up na kurso na ito."
   og_title: 'Code.org: Kahit Sino ay Maaaring Matuto'
-  og_title_soon: "Ang Hour of Code ay paparating na"
+  og_title_soon: "Paparating ang Oras ng Code"
   og_title_here: "Ang Hour of Code ay nandito na!"
   og_description: "Bawat estudyante sa bawat paaralan ay dapat magkaroon ng pagkakataon na makapag-aral ng computer science."
   og_description_celeb: "Subukan ang mga bagong tutoryal, manalo ng isang celebrity video na chat para sa iyong sarili o sa iyong klase!"
@@ -147,6 +147,7 @@
   thanks_for_submitting: "Salamat sa pag-submit!"
   if_you_enjoyed: "Kung ikaw ang natuwang matuto, sabihan ang iyong mga kaibigan na subukan rin ito! Gusto namin na buong mundo ay matuto."
   personalize_certificate: "Gawing pansarili ang iyong certificate"
+  print_certificates: "Magprinta ng mga sertipiko"
   share_achievement: "Ibahagi ang iyong achievement"
   beyond_hour_message: "Magpatuloy sa <a href='http://studio.code.org'>ibang kurso</a>, o kaya tingnan ang ibang option upang <a href='/learn/beyond'>Matuto ng higit sa Isang Oras</a>."
   leaderboards_for_hoc: "Mga leaderboard para sa Hour of Code."
@@ -227,6 +228,7 @@
   studiobar_elementary_title: "Mga kurso pang elementary"
   studiobar_elementary_body: "Ang tatlong bagong kurso namin para sa K&#8209;5"
   studiobar_dance_title: "Dance Party"
+  studiobar_dance_body: "Likhain at ibahagi ang iyong sariling Dance Party"
   studiobar_hoc_title: "Ang Hour of Code"
   studiobar_hoc_body: "Matutong mag-code gamit ang Angry Birds"
   studiobar_flappy_title: "Flappy Code"
@@ -286,7 +288,7 @@
   homepage_hero_text_stat_loc: "8.5 milyong kababaihan ang naka-enrol para matuto sa Code.org"
   homepage_hero_text_stat_students: "#student_count na mga account ng estudyante sa Code.org"
   homepage_hero_text_stat_served: 'Ang Hour of Code #served nakahanda na'
-  homepage_hero_hoc_is_coming: "Ang Hour of Code ay paparating na"
+  homepage_hero_hoc_is_coming: "Paparating ang Oras ng Code"
   homepage_hero_hoc_is_here: "Ang Hour of Code ay nandito na"
   homepage_slot_text_hoc: "Ang Hour of Code"
   homepage_slot_text_frozen: "Frozen kasama sina Anna at Elsa"
@@ -309,6 +311,7 @@
   homepage_action_text_signpetition: "Mag-sign sa petisyon"
   homepage_action_text_wincelebritychat: "Manalo ng isang celebrity chat"
   homepage_signpetition_dropdown: "Mag-sign sa aming petisyon & # x25BE;"
+  homepage_signpetition_dropdown_text: "Ako ay sumasang-ayon"
   homepage_diversity_pledge: "Tanggapin ang kayamuan na pangako"
   homepage_banner_text_prizes: 'Ang Hour of Code ay darating ulit, sa ika-7 hanggang ika-13 ng Disyembre. '
   homepage_banner_link_prizes: 'Sumali sa pinakamalaking pag-aaral na pangyayari sa buong kasaysayan. '
@@ -1371,6 +1374,8 @@
   header_teacher_community: "Komunidad ng mga Guro"
   header_help_support: 'Tulong at suporta '
   header_report_bug: "I-report ang problema"
+  header_legal_privacy: "Patakaran sa Pagkapribado"
+  header_legal_tos: "Mga Alituntunin ng Serbisyo"
   header_tutorials: "Mga Tutorial"
   header_documentation: "Dokumentasyon"
   user_header_label: "Mabuhay %{username}"
@@ -1416,6 +1421,8 @@
   applab-intro_name: Panimula ng App Lab
   applab_tile_start_tutorial: "Panimula"
   hoc_overview_dance_title: "Dance Party"
+  hoc_overview_dance_subtitle: "I-code ang isang Dance Party para ibahagi sa iyong mga kaibigan. Itinatampok sina Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, at karagdagang 25 pa!"
+  hoc_overview_dance_2019_subtitle: "I-code ang isang Dance Party para ibahagi sa iyong mga kaibigan. Itinatampok sina Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, at karagdagang 34 pa!"
   hoc_overview_start_tutorial: "Panimula"
   hoc2018_creativity_create: "I-create"
   hoc2018_mc_page_title: "Mga Tutoryal sa Minecraft Hour of Code"
@@ -1461,3 +1468,5 @@
   hoc2018_dance_amazon_scholarship_programs_button: "Mag-apply ngayon"
   hoc2018_dance_measure: "Measure"
   hoc2018_dance_measure_colon: 'Measure:'
+  hoc2018_mc_thank_microsoft: " Nagpapasalamat kami sa Microsoft sa pagsuporta sa aming bisyon at misyon na matiyak na ang bawat bata ay may pagkakataon na matuto ng computer science at sa mga skill para magtagumpay sa ika-21 siglo.  "
+  footer_powered_by_aws: "Pinagana sa pamamagitan ng Amazon Web Services"

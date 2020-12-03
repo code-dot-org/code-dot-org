@@ -2,10 +2,10 @@ name 'CSPFinal_Question_31'
 height '40'
 layout 'wrap'
 
-wrong '<img src="https://images.code.org/80e70fdb66626fe67908081c847f973f-image-1463331326861.PNG">'
-wrong '<img src="https://images.code.org/d72f1bcab09967cccfafc07fd54fc5a9-image-1463331329567.PNG" >'
-wrong '<img src="https://images.code.org/634ae5b044ca4a0fdf5b32e16a1626ff-image-1463331332131.PNG">'
-right '<img src="https://images.code.org/5be3b5baf6c8f34fadf63f6706c6cc54-image-1463331334777.PNG">'
+wrong 'https://images.code.org/80e70fdb66626fe67908081c847f973f-image-1463331326861.PNG'
+wrong 'https://images.code.org/d72f1bcab09967cccfafc07fd54fc5a9-image-1463331329567.PNG'
+wrong 'https://images.code.org/634ae5b044ca4a0fdf5b32e16a1626ff-image-1463331332131.PNG'
+right 'https://images.code.org/5be3b5baf6c8f34fadf63f6706c6cc54-image-1463331334777.PNG'
 
 
 markdown <<MARKDOWN

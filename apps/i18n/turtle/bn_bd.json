@@ -34,6 +34,8 @@
   "left": "বামে",
   "lengthParameter": "দৈর্ঘ্য",
   "loopVariable": "গণক",
+  "moveBackward": "পেছনে চলুন",
+  "moveForward": "সামনে এগিয়ে যান",
   "penDown": "পেন্সিল নিচে",
   "penUp": "পেন্সিল তোল",
   "pixels": "পিক্সেলগুলো",
@@ -46,6 +48,8 @@
   "showTurtle": "শিল্পী প্রদর্শন করুন",
   "sizeParameter": "আকার",
   "step": "ধাপ",
+  "turnLeft": "বামে যান",
+  "turnRight": "ডানে যান",
   "widthTooltip": "পেন্সিলের প্রস্থ পরিবর্তন করে।",
   "wrongColour": "আপনার ছবির রঙ ভুল আছে।  এই ধাঁধার জন্য এটি %1 করা প্রয়োজন।"
 }

@@ -1,18 +1,21 @@
 import React from 'react';
 import {UnconnectedRosterDialog as RosterDialog} from './RosterDialog';
-import {OAuthSectionTypes} from './shapes';
-import ExampleDialogButton from '../../util/ExampleDialogButton';
-
-const ROSTER_DIALOG_CLOSE_CALLBACKS = ['handleImport', 'handleCancel'];
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {stubRailsAuthenticityToken} from '../../../test/util/stubRailsAuthenticityToken';
 
 export default storybook => {
-  return storybook.storiesOf('Dialogs/RosterDialog', module).addStoryTable([
-    {
-      name: 'Select a Classroom',
-      description: 'Dialog for choosing a Google Classroom from the API.',
-      story: () => (
-        <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
+  storybook = storybook
+    .storiesOf('Dialogs/RosterDialog', module)
+    .addDecorator(dialogIsOpen)
+    .addDecorator(railsAuthenticityTokenIsStubbed);
+
+  // Add stories for every provider type
+  [OAuthSectionTypes.google_classroom, OAuthSectionTypes.clever].forEach(
+    provider => {
+      storybook = storybook
+        .add(`${provider}: Select a section`, () => (
           <RosterDialog
+            rosterProvider={provider}
             classrooms={[
               {
                 id: '123',
@@ -39,102 +42,33 @@ export default storybook => {
                 enrollment_code: '12gjl42'
               }
             ]}
-            studioUrl=""
-            provider={OAuthSectionTypes.google_classroom}
           />
-        </ExampleDialogButton>
-      )
-    },
-    {
-      name: 'Classrooms loading',
-      description: 'Dialog shown when data is loading from the API.',
-      story: () => (
-        <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
+        ))
+        .add(`${provider}: Loading...`, () => (
+          <RosterDialog rosterProvider={provider} />
+        ))
+        .add(`${provider}: No sections found`, () => (
+          <RosterDialog rosterProvider={provider} classrooms={[]} />
+        ))
+        .add(`${provider}: Load error`, () => (
           <RosterDialog
-            studioUrl=""
-            provider={OAuthSectionTypes.google_classroom}
-          />
-        </ExampleDialogButton>
-      )
-    },
-    {
-      name: 'No Google Classrooms found',
-      description:
-        'Dialog shown when no Google Classrooms are returned from the API.',
-      story: () => (
-        <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
-          <RosterDialog
-            classrooms={[]}
-            studioUrl=""
-            provider={OAuthSectionTypes.google_classroom}
-          />
-        </ExampleDialogButton>
-      )
-    },
-    {
-      name: 'Failed to load classrooms',
-      description: 'Dialog shown when an error is returned from the API.',
-      story: () => (
-        <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
-          <RosterDialog
+            rosterProvider={provider}
             loadError={{status: 403, message: 'Sample error message.'}}
-            studioUrl=""
-            provider={OAuthSectionTypes.google_classroom}
           />
-        </ExampleDialogButton>
-      )
-    },
-    {
-      name: 'Clever Classroom',
-      description: 'Dialog for choosing a Clever section from the API.',
-      story: () => (
-        <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
-          <RosterDialog
-            provider={OAuthSectionTypes.clever}
-            classrooms={[
-              {
-                id: '123',
-                name: 'New Test Classroom',
-                section: '321',
-                enrollment_code: '1000'
-              },
-              {
-                id: '456',
-                name: 'Other Test Classroom',
-                section: '3A',
-                enrollment_code: '1001'
-              },
-              {
-                id: '101',
-                name: 'Intro to CS',
-                section: '45',
-                enrollment_code: '1002'
-              },
-              {
-                id: '102',
-                name: 'Intro to CS',
-                section: '55',
-                enrollment_code: '1003'
-              }
-            ]}
-            studioUrl=""
-          />
-        </ExampleDialogButton>
-      )
-    },
-    {
-      name: 'No Clever sections found',
-      description:
-        'Dialog shown when no Clever sections are returned from the API.',
-      story: () => (
-        <ExampleDialogButton closeCallbacks={ROSTER_DIALOG_CLOSE_CALLBACKS}>
-          <RosterDialog
-            provider={OAuthSectionTypes.clever}
-            classrooms={[]}
-            studioUrl=""
-          />
-        </ExampleDialogButton>
-      )
+        ));
     }
-  ]);
+  );
+  return storybook;
 };
+
+// Sets the isOpen prop to true for each story, so that the dialog is
+// open by default when the story is viewed.
+function dialogIsOpen(story) {
+  return React.cloneElement(story(), {isOpen: true});
+}
+
+// Stubs the DOM-dependent behavior of the RailsAuthenticityToken component
+function railsAuthenticityTokenIsStubbed(story) {
+  stubRailsAuthenticityToken();
+  return story();
+}

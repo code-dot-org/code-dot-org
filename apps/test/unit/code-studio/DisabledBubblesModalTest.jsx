@@ -18,6 +18,7 @@ describe('DisabledBubblesModal', () => {
             <div>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://support.code.org/hc/en-us/articles/115002660852"
               >
                 {i18n.learnMore()}

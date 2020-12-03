@@ -89,8 +89,28 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
   end
 
+  test 'pre_workshop_survey_url' do
+    csp_summer_workshop = build :csp_summer_workshop
+    csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
+
+    csp_academic_year_workshop = build :csp_academic_year_workshop
+    csp_academic_year_workshop_enrollment = build :pd_enrollment, workshop: csp_academic_year_workshop
+
+    csf_deep_dive_workshop = build :csf_deep_dive_workshop
+    csf_201_workshop_enrollment = build :pd_enrollment, workshop: csf_deep_dive_workshop
+
+    csf_intro_workshop = build :csf_intro_workshop
+    csf_intro_workshop_enrollment = build :pd_enrollment, workshop: csf_intro_workshop
+
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
+      URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
+    assert_nil csp_academic_year_workshop_enrollment.pre_workshop_survey_url
+    assert_equal '/pd/workshop_survey/csf/pre201', URI(csf_201_workshop_enrollment.pre_workshop_survey_url).path
+    assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
+  end
+
   test 'exit_survey_url' do
-    csf_workshop = create :csf_workshop, :ended
+    csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
@@ -105,18 +125,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     local_summer_workshop = create :csp_summer_workshop, :ended
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
 
-    teachercon_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
-    teachercon_enrollment = create :pd_enrollment, workshop: teachercon_workshop
+    csp_wfrt = create :csp_wfrt, :ended
+    csp_wfrt_enrollment = create :pd_enrollment, workshop: csp_wfrt
 
     code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
-    assert_equal code_org_url["/pd-workshop-survey/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
-    assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_survey/post/#{teachercon_enrollment.code}"], teachercon_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do
@@ -195,6 +215,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.update(last_name: '')
   end
 
+  test 'email must be unique on enrollments within a workshop' do
+    enrollment = create :pd_enrollment
+    duplicate_enrollment = build :pd_enrollment,
+      email: enrollment.email,
+      workshop: enrollment.workshop
+
+    duplicate_enrollment.save
+    assert duplicate_enrollment.errors.added?(:email, 'already enrolled in workshop')
+
+    duplicate_enrollment.email = 'another_email@email.com'
+    assert duplicate_enrollment.valid?
+  end
+
   test 'full_name' do
     enrollment = create :pd_enrollment
     enrollment.full_name = 'SplitFirst SplitLast'
@@ -257,30 +290,22 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'filter_for_survey_completion' do
-    teachercon1 = create :workshop, :teachercon, num_enrollments: 1
-    teachercon2 = create :workshop, :ended, :teachercon, enrolled_and_attending_users: 1
-    teachercon3 = create :workshop, :ended, :teachercon, enrolled_and_attending_users: 1
-
-    create :pd_teachercon_survey, pd_enrollment: teachercon3.enrollments.first
-
     enrollments = [
       enrollment_no_survey = create(:pd_enrollment),
-      enrollment_with_unprocessed_survey = create(:pd_enrollment),
-      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234),
-      enrollment_in_unfinished_teachercon = teachercon1.enrollments.first,
-      enrollment_in_finished_teachercon = teachercon2.enrollments.first,
-      enrollment_in_finished_teachercon_did_survey = teachercon3.enrollments.first,
+      enrollment_with_processed_survey = create(:pd_enrollment, :from_user)
     ]
 
-    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey, enrollment_in_finished_teachercon_did_survey]
-    without_surveys = [enrollment_no_survey, enrollment_in_unfinished_teachercon, enrollment_in_finished_teachercon]
-    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where:
-        [
-          {source_id: enrollment_with_unprocessed_survey.id.to_s},
-          {source_id: enrollment_with_processed_survey.id.to_s}
-        ]
-      )
-    )
+    existing_survey = create :csf_intro_post_foorm_submission,
+      :answers_high,
+      form_name: "surveys/pd/workshop_csf_intro_post"
+
+    create :csf_intro_post_workshop_submission,
+      foorm_submission: existing_survey,
+      user: enrollment_with_processed_survey.user,
+      pd_workshop_id: enrollment_with_processed_survey.workshop.id
+
+    with_surveys = [enrollment_with_processed_survey]
+    without_surveys = [enrollment_no_survey]
 
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
@@ -295,7 +320,14 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
 
     # complete survey
-    create :pd_workshop_daily_survey, pd_workshop: workshop, user: enrollment.user
+    existing_survey = create :daily_workshop_day_5_foorm_submission,
+      :answers_high,
+      form_name: "surveys/pd/summer_workshop_post_survey"
+
+    create :day_5_workshop_foorm_submission,
+      foorm_submission: existing_survey,
+      user: enrollment.user,
+      pd_workshop_id: enrollment.workshop.id
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
@@ -304,14 +336,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
-    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
-
-    # complete survey
-    create :pd_workshop_daily_survey,
-      pd_workshop: workshop,
-      user: enrollment.user,
-      form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 'post_workshop'),
-      day: 1
+    # academic year surveys should always return [] since we do not show post-surveys in the dashboard
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
@@ -611,5 +636,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     # initially creates scholarship info with YES_CDO status
     assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
+  end
+
+  test 'find matching application for an enrollment' do
+    workshop = create :workshop
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, user: teacher, workshop: workshop
+    application = create :pd_teacher2021_application, user: teacher
+
+    assert_nil enrollment.application_id
+
+    application.update(pd_workshop_id: workshop.id)
+
+    # Can only link an enrollment to an application when the application is assigned to the same workshop
+    assert_equal application.id, enrollment.application_id
   end
 end

@@ -3,7 +3,7 @@ fi:
   data:
     game:
       name:
-        Unplug1: Johdanto tietojenkäsittelyyn
+        Unplug1: Johdanto tietotekniikkaan
         Maze: Sokkelo
         Multi: Monivalintajuttuja
         Unplug2: Laskennallinen ajattelu
@@ -215,7 +215,7 @@ fi:
         maze_karel_2_2: Olemme määrittäneet oman lohkon "täytä 5", joka löytyy "Funktiot"-valikosta.
           Auta minua täyttämään kuopat sen avulla.
         maze_karel_2_3: Käytä uutta "täytä 5" -funktiolohkoa ja laita minut täyttämään
-          kuopat. Sinun täytyy raahata "täytä 5" lohko "Funktiot"-valikosta.
+          kuopat. Sinun täytyy vetää "täytä 5" -lohko "Funktiot" -valikosta.
         maze_karel_2_4: Määritä uusi funktio joka poistaa 7 lapiollista maata. Käytä
           sitä sitten luodaksesi ohjelman, joka auttaa minua poistamaan kasat.
         maze_karel_2_5: Luo uusi funktio, joka poistaa 6 lapiollista kasasta ja käytä
@@ -244,9 +244,9 @@ fi:
         turtle_3_4: Kokeile keksitko, miten voisit käyttää "piirrä neliö" ja "piirrä
           kolmio" -funktiota (ja paria muuta lohkoa) talon piirtämiseen. Piirrä talo
           leijonan ympärille.
-        turtle_3_5: 'Luo nyt uusi "piirrä talo" funktio. Piirrä sitten talo kahdelle
-          kissalle. Vihje: luo uusi funktio raahaamalla "suorittaaksesi jotain" -lohko
-          ja muuta "jotain"-tekstin tilalle funktion nimi ("piirrä talo").'
+        turtle_3_5: 'Luo nyt uusi "piirrä talo" funktio ja piirrä sillä talo kahdelle
+          kissalle. Vihje: luo uusi funktio vetämällä "suorittaaksesi jotain" -lohko
+          ja muuta "jotain" -tekstin tilalle funktion nimi ("piirrä talo").'
         turtle_3_6: 'Käyttäen "piirrä neliö" -funktiota esimerkkinä, lisää syöte "pituus"
           "piirrä kolmio" -funtiolle. Tämän jälkeen piirrä eri kokoisia kolmioita.
           (Vihje: klikkaa tähteä funktion vasemmassa yläkulmassa)'
@@ -302,7 +302,7 @@ fi:
         maze_3_3: Miten pääsisin possun luo? Varmistathan, etten törmää TNT-laatikoihin!
         maze_3_4: Argh! Kirjoita minulle ohjelma, jolla pääsen TNT-laatikoiden ohi
           possun luo.
-        Custom_builder: Piirrä haluamanlaisesi taso vetämällä lohkoja työkaluista
+        Custom_builder: Piirrä sellainen taso kuin haluat vetämällä lohkoja työkaluista
           työtilaan. Valitse "Suorita" kun olet valmis.
         jigsaw_1: Klikkaa lohkoa
         jigsaw_2: Vedä lohko kohteeseen
@@ -433,7 +433,7 @@ fi:
           valmis, paina Lopeta antaaksesi ystäviesi koettaa peliäsi heidän puhelimillaan,
           tableteillaan ja tietokoneillaan!
         studio_gumball_hello1: Anais haluaisi saada uusia ystäviä. Voitko auttaa häntä
-          sanomaan "hei" raahamalla "sanoa"-palikan työskentelyalueelle ja kirjoittamalla
+          sanomaan "hei" vetämällä "sano" -palikan työskentelyalueelle ja kirjoittamalla
           sen sisään sanan "hei"?
         studio_gumball_hello2: Darwin (näyttelijä 1) ja hänen veljensä Gumball (näyttelijä
           2) ovat menossa kouluun.  Auta heitä tervehtimään toisiaan käyttämällä "sano"-palikkaa
@@ -607,7 +607,7 @@ fi:
         CSF_collector_repeat_loops: Kerääjä toisto silmukat
         CSF_collector_text_blocks: 'TK perusteet: Keräilijä'
         CSF_create_functions: Funktioiden luominen
-        CSF_EF_cs_matters: Tietojenkäsittelytiede on tärkeää
+        CSF_EF_cs_matters: Tietotekniikka on tärkeää
         CSF_maze_intro_k1_blocks: Tutustuminen Code Studio:on
         CSF_maze_intro_text_blocks: Tutustuminen Code Studio:on
         CSF_my_robotic_friends: Robottiystäväni
@@ -698,11 +698,18 @@ fi:
         applab_intro_designmode: Sovelluslabra - Suunnittelumoodi
         applab_intro_share: Sovelluslabra - Jaa Sovelluksesi
         CSF_loops_AB: Silmukat
+        hoc_dance_warmup: Tanssibileet - Lämmittely
+        hoc_dance_congrats: Tanssibileet - Bileet päälle!
         csd_pair_programming: Pariohjelmointi
         csd_applab_parameters: Parametrilliset funktiot
+        hoc_dance_congrats_2019: Tanssibileet 2019 - Bileet päälle!
+        hoc_dance_warmup_2019: Tanssibileet 2019 - Lämmittely
+        hoc_dance_events_2019: Tanssibileet 2019 - Tapahtumat
+        hoc_dance_measures_2019: Tanssibileet 2019 - Mittayksiköt
+        hoc_dance_properties_2019: Tanssibileet 2019 - Ominaisuudet
     callout:
       text:
-        drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan
+        drag_blocks: Vedä "liiku" -lohko ja napsauta se kiinni toisen lohkon alalaitaan
         run: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
         watch_again: Klikkaa tästä jos haluat katsella videon uudelleen
         gray_block_explanation: Harmaita lohkoja ei voi poistaa. Pystytkö silti ratkaisemaan
@@ -760,7 +767,7 @@ fi:
           muuta kokoa.
         frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa
         frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
-        playlab_drag_say: Raahaa "sano"-lohko tähän ja kirjoita "hei"
+        playlab_drag_say: Vedä "sano" -lohko tähän ja kirjoita "hei"
         playlab_use_twice: Käytä tätä lohkoa kahdesti ja muista muuttaa hahmon numeroa
         playlab_move_girl: Käytä "liiku oikealle" -lohkoa liikuttamaan tennistyttöä
         playlab_play_sound: Lisää "soita ääni"-lohko tähän
@@ -773,11 +780,11 @@ fi:
         place_variable: Vedä muuttujasi tähän lohkoon
         bee_for_loop: Vedä suurin lukumäärä nektaria, jonka haluat mehiläisen keräävän
           tähän
-        place_counter_variable: Raahaa laskurimuuttujasi tähän lohkoon
+        place_counter_variable: Vedä laskurimuuttujasi tähän lohkoon
         function_editor_draw_square: Tämä on funktionsi määritelmä. Nämä lohkot ajetaan
           joka kerta kun käytät "piirrä neliö" -lohkoa
         change_here: Tee muutoksesi tähän
-        write_draw_square_function: Piirrä neliö raahaamalla lohkoja työkaluista tänne
+        write_draw_square_function: Piirrä neliö vetämällä lohkoja työkaluista tänne
         write_draw_triangle_function: Piirrä kolmio vetämällä lohkoja työkaluista
           tänne
         edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa

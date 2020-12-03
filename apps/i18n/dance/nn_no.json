@@ -10,5 +10,13 @@
   "danceFeedbackNeedDifferentDance": "Du må bruke ein annan dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Sørg for at du bruker ‘for kvar andre takt’-blokka",
   "danceFeedbackNeedMakeANewDancer": "Bruk ‘lag ny’-blokka til å lage ein ny dansar.",
+  "danceFeedbackKeyEvent": "Sørg for at du legg til noko kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"opp\"</title></block></xml>-blokka og trykker under dansen.",
+  "danceFeedbackDidntPress": "Sørg for å trykke på piltastane dine under dansen.",
+  "danceFeedbackPressedKey": "Du trykka på ein tast, men dansaren din responderte ikkje.",
+  "danceFeedbackNeedTwoDancers": "Du må lage to dansarar.",
+  "danceFeedbackOnlyOneDancerMoved": "Berre ein av dansarane rørte på seg.",
+  "danceFeedbackNeedLead": "Du må også lage ein hoveddansar med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>-blokka.",
+  "danceFeedbackNeedBackup": "Du må lage ei gruppe med bakgrunnsdansarar med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"sirkel\"</title></block></xml>-blokka.",
+  "danceFeedbackSetSize": "Du må endre storleiken på minst ein dansar etter musikker startar.",
   "measure": "Takt:"
 }

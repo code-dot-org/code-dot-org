@@ -15,7 +15,7 @@
   "danceFeedbackPressedKey": "Has presionado una tecla, pero tu bailarín no responde.",
   "danceFeedbackNeedTwoDancers": "Tienes que crear dos bailarines.",
   "danceFeedbackOnlyOneDancerMoved": "Solo se ha movido uno de tus bailarines.",
-  "danceFeedbackNeedLead": "También necesitas crear un bailarín principal con el bloque <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml>.",
+  "danceFeedbackNeedLead": "También necesitas crear un bailarín principal con el bloque <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
   "danceFeedbackNeedBackup": "Necesitas crear un grupo de bailarines secundarios con el bloque <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORNIO\"</title><title name=\"LAYOUT\">\"círculo\"</title></block></xml>.",
   "danceFeedbackSetSize": "Necesitas cambiar el tamaño de al menos un bailarín una vez que empieza la música.",
   "measure": "Medida:"

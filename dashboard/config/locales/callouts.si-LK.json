@@ -1,0 +1,173 @@
+{
+  "si-LK": {
+    "data": {
+      "callouts": {
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "සම්පූර්ණ රවුමක් ඇඳීමට බූතයාට චලනය විය යුතු වාර ගණන ඇතුලත් කරන්න"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "\"Repeat\" කොටස දැනට ඇති කොටස් මතින් යොදන්න"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "Counter විචල්‍ය මෙම කොටස තුලට ඇදගෙන දමන්න"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "\"Repeat\" කොටස දැනට ඇති කොටස් මතින් යොදන්න"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "නිවැරදි අගයක් \"length\" වෙත යෙදීමට මෙම කොටස භාවිත කරන්න."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "නිවැරදි අගයක් \"length\" වෙත යෙදීමට මෙම කොටස භාවිත කරන්න."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "අංශක 360 පැති ගණනින් බෙදා සෑම කෝණයකම අගට අංශක වලින් ලබාගන්න."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "මෙම ක්‍රියාකරක සකස්කිරීමට සහ මී මැස්සාට මල් පැණි ලබා ගැනීමට හැකි වන සේ දිශාව හරවා වෙනස් කිරීම සඳහා මෙම බොත්තම භාවිත කරන්න."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "විධාන නැවත නැවතත් ක්‍රියාත්මක කරවීමට loop එක තුලට විධාන ඇතුල් කරන්න"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "ඔබගේ කාර්ය වෙනස් කිරීම සදහා මෙයමත ක්ලික් කරන්න."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "ඔබගේ ක්‍රියාකාරකමට පරාමිතීයක් එකතු කිරීම සදහා සංස්කරණය කිරීම ක්ලික් කරන්න"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "ක්‍රියකරන්නාව එහා මෙහා කිරිමර ඊතල භාවිතා කරන්න"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "මෙම ප්‍රතිපලය සිදුවනවිට ශබ්දයක් නිකුත් වෙන්න."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "ඉහතට ඊතලය එබූ විට, කුමන බ්ලොක් එක මගින් Baymax ඉහලට යොමු කරයි ද?",
+          "Infinity_move_directions_callout_arrow": "භාවිතා කරන්න මේ ඊතල සුක්කානම අල්ලා ගැනීමට"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "චලනයවන බ්ලොක් එක මෙයට එක්කරන්න"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "තියෙන තැනින් කොටස අහක් කරන්න මෙහි ඇතුලත"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "ඔබගේ කාර්ය වෙනස් කිරීම සදහා මෙයමත ක්ලික් කරන්න."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "ඔබගේ කාර්ය වෙනස් කිරීම සදහා මෙයමත ක්ලික් කරන්න."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "\"කාර්යන්\" ඉවත්වියම විවෘත කිරීමට මෙතන ක්ලික් කරන්න, පසුව \"යම් කාර්යක් නිර්මාණය කරන්න\" බොත්තම ක්ලික් කරන්න."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "ඔබගේ ක්‍රියාකාරකමට පරාමිතීයක් එකතු කිරීම සදහා සංස්කරණය කිරීම ක්ලික් කරන්න",
+          "add_and_drag_parameter": "ඔබේ පරාමිතියේ නම මෙතනට ඇතුලත් කරන්න. ඊළඟට add ක්ලික් කරලා ශ්‍රිතයේ නිර්වචනය ඒකට ඇදලා දාන්න"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "ප්‍රශ්නාර්ථ ලකුණ සදහා ආදේශ වීමට මෙහි ඇති දිගෙහි විචල්‍ය අදින්න"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "මෙම මෙවලම් කොටුව නව පෙනුමක් ගත්තා! දැන් \"ක්‍රියාවන්\" බිලොක් මෙතන ඇත."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "විවිධ හිම කැබැලි නිර්මාණය කිරීමට මෙම ඩ්‍රොප් ඩවුන් මෙනු එක භාවිත කරන්න!"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "ඔබට ආරම්භ කිරීම සදහා අපි මෙහි බ්ලොක් කිහිපයක් දමා ඇත"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "ඔබට ආරම්භ කිරීම සදහා අපි මෙහි බ්ලොක් කිහිපයක් දමා ඇත"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "ඔබට ආරම්භ කිරීම සදහා අපි මෙහි බ්ලොක් කිහිපයක් දමා ඇත"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "මෙම කේතය ඔබේ නිවසේ ඉදිකිරිම ආරම්භ කරනවා. ඔබට පුලුවන්ද මෙය අවසන් කරන්න?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "මෙම කේතය ඔබේ නිවසේ ඉදිකිරිම ආරම්භ කරනවා. ඔබට පුලුවන්ද මෙය අවසන් කරන්න?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "මෙම කේතය ඔබේ නිවසේ ඉදිකිරිම ආරම්භ කරනවා. ඔබට පුලුවන්ද මෙය අවසන් කරන්න?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "ඔබේ වැඩසටහන උත්සාහ කිරීමට \"දුවන්න\" ඔබන්න"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "ඔබේ වැඩසටහන උත්සාහ කිරීමට \"දුවන්න\" ඔබන්න"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "ඔබේ වැඩසටහන උත්සාහ කිරීමට \"දුවන්න\" ඔබන්න"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "මෙතන ක්‍රියාව නැවත නැවත කරන්න පුළුවන් කොටස් දැමීමෙන්"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "මෙතන ක්‍රියාව නැවත නැවත කරන්න පුළුවන් කොටස් දැමීමෙන්"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "මෙතන ක්‍රියාව නැවත නැවත කරන්න පුළුවන් කොටස් දැමීමෙන්"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "මෙම කේතය ලවා ඇතිදැයි සොයාබලයි, ඉදිරියට යාම සදහා ඔබගේ අදහසක් ඇතුලත් කල හැකිද?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "මෙම කේතය ලවා ඇතිදැයි සොයාබලයි, ඉදිරියට යාම සදහා ඔබගේ අදහසක් ඇතුලත් කල හැකිද?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "මෙම කේතය ලවා ඇතිදැයි සොයාබලයි, ඉදිරියට යාම සදහා ඔබගේ අදහසක් ඇතුලත් කල හැකිද?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "මෙම යකඩ මගේ කරගන්න!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "මෙම යකඩ මගේ කරගන්න!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "මෙම යකඩ මගේ කරගන්න!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "\"create a circle\" කොටස අරගෙන ප්‍රමාණය වෙනස් කරන්න."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) මෙම කොටස අලු පැහැති කොටස් මතින් යොදන්න",
+          "repeat_blocks_2": "(2) \"Repeat\" කොටස මෙතැනට ගෙනැවිත් අනිත් කොටස් එය ඇතුලට ඇතුලු කරන්න"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "\"???\" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "මෙම හැඩතලය සෑදීමට repeat කොටස භාවිත කරන්න."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "මෙම හැඩතලය සෑදීමට repeat කොටස භාවිත කරන්න."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "විවිධ හිම කැබැලි නිර්මාණය කිරීමට මෙම ඩ්‍රොප් ඩවුන් මෙනු එක භාවිත කරන්න!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "එල්සා ව ඉදිරියට ගමන් කරවීම සඳහා \"When Run\" කොටස යටට \"Move Forward\" කොටසක් රැගෙන විත් දමන්න"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "කොටස භාවිත කර එල්සාව හරවන්න. ඩ්‍රොප් ඩවුන් මෙනුවෙන් ඇය කොපමණ වාරයක් හැරවිය යුතුද යන්න තෝරන්න"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "\"create a snowflake branch\" කොටස පාවිච්චි කරන්න"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "මෙතන තවත් බ්ලොක් අමුණන්න සමචතුරශ්‍රයක් නිර්මාණය කිරීමට"
+        },
+        "frozen square loop": {
+          "replace_questions": "\"???\" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "\"???\" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "\"???\" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න"
+        }
+      }
+    }
+  }
+}
