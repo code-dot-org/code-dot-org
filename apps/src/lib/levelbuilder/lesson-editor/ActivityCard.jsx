@@ -183,7 +183,7 @@ class ActivityCard extends Component {
             </label>
           </div>
           <OrderControls
-            name={activity.key || '(none)'}
+            name={activity.displayName || 'Unnamed Activity'}
             move={this.handleMoveActivity}
             remove={this.handleRemoveActivity}
           />
