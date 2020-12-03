@@ -53,6 +53,7 @@ class Lesson < ApplicationRecord
     preparation
     announcements
     visible_after
+    assessment_opportunities
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
@@ -290,6 +291,7 @@ class Lesson < ApplicationRecord
       name: name,
       overview: overview,
       studentOverview: student_overview,
+      assessmentOpportunities: assessment_opportunities,
       assessment: assessment,
       unplugged: unplugged,
       lockable: lockable,
