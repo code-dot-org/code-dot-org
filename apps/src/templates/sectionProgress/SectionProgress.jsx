@@ -5,8 +5,8 @@ import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
-import SummaryView from '@cdo/apps/templates/sectionProgress/summary/SummaryView';
-import DetailView from '@cdo/apps/templates/sectionProgress/detail/DetailView';
+import SummaryView from '@cdo/apps/templates/sectionProgress/progressTables/SummaryView';
+import DetailView from '@cdo/apps/templates/sectionProgress/progressTables/DetailView';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -20,9 +20,9 @@ import {loadScript} from './sectionProgressLoader';
 import {
   ViewType,
   scriptDataPropType,
-  tooltipIdForStudent
+  tooltipIdForStudent,
+  tooltipIdForLessonNumber
 } from './sectionProgressConstants';
-import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   setScriptId,

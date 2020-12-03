@@ -31,3 +31,6 @@ export const ViewType = {
 
 export const tooltipIdForStudent = studentId =>
   `tooltipIdForStudent${studentId}`;
+
+export const tooltipIdForLessonNumber = lessonNumber =>
+  `tooltipForLesson${lessonNumber}`;
