@@ -1,5 +1,6 @@
 import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
 import {SAMPLE_INTERVAL} from './MicroBitConstants';
+import {isNodeSerialAvailable} from '../../portScanning';
 
 export const ACCEL_EVENT_ID = 27;
 
@@ -9,12 +10,45 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     this.digitalCallbacks = [];
   }
 
-  connectBoard() {
+  connectBoard(port) {
     return Promise.resolve()
-      .then(() => this.connect())
+      .then(() => this.setSerialPort(port))
       .then(() => {
         return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
       });
+  }
+
+  // Used in setSerialPort, which is copied from setSerialPort in MBFirmataClient,
+  // as a wrapper. Lifted into its own function because of linting.
+  dataReceived(data) {
+    if (this.inbufCount + data.length < this.inbuf.length) {
+      this.inbuf.set(data, this.inbufCount);
+      this.inbufCount += data.length;
+      this.processFirmatMessages();
+    }
+  }
+
+  setSerialPort(port) {
+    if (isNodeSerialAvailable()) {
+      return super.setSerialPort(port);
+    } else {
+      // Use the given port. Assume the port has been opened by the caller.
+
+      this.myPort = port;
+      this.myPort.on('data', this.dataReceived.bind(this));
+      this.requestFirmataVersion();
+      this.requestFirmwareVersion();
+
+      // get the board serial number (used to determine board version)
+      this.boardVersion = '';
+
+      // Above code is directly from setSerialPort in MBFirmataClient.
+      // Returning an empty promise below because Chrome Serial Port doesn't return
+      // .list() as a promise, as expected in MBFirmataClient. Because of the empty
+      // promise we don't set this.boardVersion. As of this edit, we do not use the
+      // boardVersion in our MB integration so no impact.
+      return Promise.resolve();
+    }
   }
 
   setPinMode(pin, mode) {

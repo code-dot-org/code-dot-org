@@ -6,9 +6,9 @@ level 'outbreak2', progression: 'Programming with Events'
 level 'outbreak3', progression: 'Stopping the Outbreak with Masks'
 level 'outbreak_story2', progression: 'Learning from Simulations'
 level 'outbreak4', progression: 'More Monsters'
-level 'outbreak7', progression: 'Vaccines'
-level 'outbreak6', progression: 'Chance', challenge: true
 level 'outbreak5', progression: 'Recovery'
+level 'outbreak6', progression: 'Chance', challenge: true
+level 'outbreak7', progression: 'Vaccines', challenge: true
 level 'outbreak8', progression: 'Share Your Message'
 level 'outbreak_freeplay', progression: 'Free Play'
 

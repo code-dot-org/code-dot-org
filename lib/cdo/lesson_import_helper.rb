@@ -280,7 +280,7 @@ module LessonImportHelper
     # Looks for tips that look like "!!!tip <tip-0>" followed by text. It will
     # capture the text until it hits either the end of the string or a line that
     # starts with a non-whitespace character.
-    regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=(^\S|^$))/
+    regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=(^\S|\z))/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
@@ -331,7 +331,6 @@ module LessonImportHelper
       return ActivitySection.new(description: tip_link_match[3].strip)
     end
     tip_match = tip[:match]
-    tip_match_map.delete(tip_link_match[2]) if tip_match
     activity_section = ActivitySection.new
 
     # Sometimes theres the the slide icon here as well. Check for that and apply if needed.
