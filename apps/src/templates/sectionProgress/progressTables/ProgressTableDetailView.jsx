@@ -72,7 +72,7 @@ export default class ProgressTableDetailView extends React.Component {
           highlighted={stageData.position === this.props.lessonOfInterest}
           tooltipId={tooltipIdForLessonNumber(columnIndex + 1)}
           onClick={() => this.onLessonClick(stageData.position)}
-          includeArrow={true}
+          includeArrow={levels.length > 1}
         />
       </div>
     );

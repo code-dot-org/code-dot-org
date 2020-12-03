@@ -246,23 +246,21 @@ class SectionProgress extends Component {
               className="fa-pulse fa-3x"
             />
           )}
-          {levelDataInitialized && (
+          {levelDataInitialized && currentView === ViewType.SUMMARY && (
             <div id="uitest-summary-view" style={summaryStyle}>
               <SummaryView />
             </div>
           )}
-          {levelDataInitialized && (
+          {levelDataInitialized && currentView === ViewType.DETAIL && (
             <div id="uitest-detail-view" style={detailStyle}>
               <DetailView />
             </div>
           )}
           {levelDataInitialized && this.renderTooltips()}
-          {levelDataInitialized && (
+          {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView
-                showStandardsIntroDialog={
-                  currentView === ViewType.STANDARDS && showStandardsIntroDialog
-                }
+                showStandardsIntroDialog={showStandardsIntroDialog}
               />
             </div>
           )}
