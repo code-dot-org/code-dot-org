@@ -46,8 +46,6 @@ const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
-const GO_PREVIOUS_PANEL = "GO_PREVIOUS_PANEL";
-const GO_NEXT_PANEL = "GO_NEXT_PANEL";
 
 // Action creators
 export function setMode(mode) {
@@ -157,14 +155,6 @@ export function setTrainedModel(trainedModel) {
 
 export function setCurrentPanel(currentPanel) {
   return { type: SET_CURRENT_PANEL, currentPanel };
-}
-
-export function goPreviousPanel() {
-  return { type: GO_PREVIOUS_PANEL };
-}
-
-export function goNextPanel() {
-  return { type: GO_NEXT_PANEL };
 }
 
 const initialState = {
@@ -340,26 +330,6 @@ export default function rootReducer(state = initialState, action) {
       currentPanel: action.currentPanel
     };
   }
-  /*if (action.type === GO_PREVIOUS_PANEL) {
-    const currentPanelIndex = panelList.findIndex(element=>element.id === state.currentPanel);
-    const nextPanelIndex = currentPanelIndex - 1;
-    const nextPanelId = panelList[nextPanelIndex].id;
-
-    return {
-      ...state,
-      currentPanel: nextPanelId
-    };
-  }
-  if (action.type === GO_NEXT_PANEL) {
-    const currentPanelIndex = panelList.findIndex(element=>element.id === state.currentPanel);
-    const nextPanelIndex = currentPanelIndex + 1;
-    const nextPanelId = panelList[nextPanelIndex].id;
-
-    return {
-      ...state,
-      currentPanel: nextPanelId
-    };
-  }*/
   return state;
 }
 

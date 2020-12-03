@@ -12,8 +12,6 @@ import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
 import {
-  goPreviousPanel,
-  goNextPanel,
   setCurrentPanel,
   validationMessages,
   getSelectedColumns,
@@ -113,8 +111,6 @@ class App extends Component {
     data: PropTypes.array,
     saveTrainedModel: PropTypes.func,
     currentPanel: PropTypes.string,
-    goPreviousPanel: PropTypes.func,
-    goNextPanel: PropTypes.func,
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
     selectedColumns: PropTypes.array,
@@ -141,66 +137,12 @@ class App extends Component {
     const {
       mode,
       currentPanel,
-      goPreviousPanel,
-      goNextPanel,
       setCurrentPanel,
       validationMessages
     } = this.props;
 
     return (
       <div>
-        {/*
-        <div style={styles.validationMessagesLight}>
-          {panelList
-            .filter(panel => {
-              return isPanelVisible(panel.id, mode);
-            })
-            .map(panel => {
-              return (
-                <div
-                  key={panel.id}
-                  style={{ fontSize: 21, cursor: "pointer", marginBottom: 2 }}
-                  xstyle={this.getStyle(panel.id)}
-                  onClick={() => setCurrentPanel(panel.id)}
-                >
-                  <div style={{backgroundColor: 'black', color: 'white', padding: 8, overflow: 'hidden'}}>
-                    <div style={{float: 'left'}}>
-                      {panel.label}
-                    </div>
-                    <div style={{float: 'right', marginRight: 20}}>
-                      {'>'}
-                    </div>
-                  </div>
-
-                  <div style={{fontSize: 16}}>
-                    {Object.keys(validationMessages)
-                      .filter(
-                        messageKey =>
-                          validationMessages[messageKey].panel === panel.id
-                      )
-                      .map((key, index) => {
-                        return validationMessages[key].readyToTrain ? (
-                          <p key={index} style={styles.ready}>
-                            <FontAwesomeIcon icon={faCheckSquare} />
-                            &nbsp;
-                            {validationMessages[key].successString}{" "}
-                          </p>
-                        ) : (
-                          <p key={index} style={styles.error}>
-                            <FontAwesomeIcon icon={faSquare} />
-                            &nbsp;
-                            {validationMessages[key].errorString}{" "}
-                          </p>
-                        );
-                      })}
-                    </div>
-                </div>
-              );
-            })}
-        </div>
-        */}
-
-
         <div style={styles.tabContainer}>
           {panelList
             .filter(panel => {
@@ -233,46 +175,33 @@ class App extends Component {
               <SaveModel saveTrainedModel={this.props.saveTrainedModel} />
             )}
           </div>
-          {/*
-          <button style={styles.previousButton} onClick={goPreviousPanel}>
-            Previous
-          </button>
-          &nbsp; &nbsp; &nbsp;
-          <button style={styles.nextButton} onClick={goNextPanel}>
-            Next
-          </button>
-          */}
+
           <div style={styles.validationMessagesLight}>
             {Object.keys(validationMessages).filter(
-                messageKey =>
-                  validationMessages[messageKey].panel === currentPanel
-              ).length === 0 && (
-              <div>
-                Carry on.
-              </div>
-            )}
+              messageKey =>
+                validationMessages[messageKey].panel === currentPanel
+            ).length === 0 && <div>Carry on.</div>}
             {Object.keys(validationMessages)
               .filter(
                 messageKey =>
                   validationMessages[messageKey].panel === currentPanel
               )
               .map((key, index) => {
-              return validationMessages[key].readyToTrain ? (
-                <p key={index} style={styles.ready}>
-                  <FontAwesomeIcon icon={faCheckSquare} />
-                  &nbsp;
-                  {validationMessages[key].successString}{" "}
-                </p>
-              ) : (
-                <p key={index} style={styles.error}>
-                  <FontAwesomeIcon icon={faSquare} />
-                  &nbsp;
-                  {validationMessages[key].errorString}{" "}
-                </p>
-              );
-            })}
+                return validationMessages[key].readyToTrain ? (
+                  <p key={index} style={styles.ready}>
+                    <FontAwesomeIcon icon={faCheckSquare} />
+                    &nbsp;
+                    {validationMessages[key].successString}{" "}
+                  </p>
+                ) : (
+                  <p key={index} style={styles.error}>
+                    <FontAwesomeIcon icon={faSquare} />
+                    &nbsp;
+                    {validationMessages[key].errorString}{" "}
+                  </p>
+                );
+              })}
           </div>
-
         </div>
       </div>
     );
@@ -292,12 +221,6 @@ export default connect(
     accuracyCheckExamples: state.accuracyCheckExamples
   }),
   dispatch => ({
-    goPreviousPanel() {
-      dispatch(goPreviousPanel());
-    },
-    goNextPanel() {
-      dispatch(goNextPanel());
-    },
     setCurrentPanel(panel) {
       dispatch(setCurrentPanel(panel));
     }

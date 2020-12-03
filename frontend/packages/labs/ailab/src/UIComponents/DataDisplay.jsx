@@ -37,66 +37,56 @@ class DataDisplay extends Component {
 
     return (
       <div id="data-display">
-
         <div style={styles.panel}>
           <div style={styles.largeText}>Imported Data</div>
           {this.state.showRawData && (
             <div>
               <div style={styles.finePrint}>
-                {/*
-                <table style={{whiteSpace: "nowrap"}}>
-                  {data.length > 0 && (
-                    <tbody>
-                      {Object.keys(data[0]).map((key, index) => {
-                        return (
-                          <tr key={index}>
-                            <td style={{display: "inline-block", width: 140, backgroundColor: "black", color: "white", textAlign: 'left'}}>
-                              {key}
-                            </td>
-                            {data.map((row, index) => {
-                              return (
-                                <td key={index} style={{display: "inline-block", width: 120, textAlign: 'right'}}>
-                                  {row[key]}
-                                </td>
-                              );
-                            })}
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  )}
-                </table>
-
-                <br/>
-                <br/>
-                */}
-
-                <table style={{whiteSpace: "nowrap"}}>
+                <table style={{ whiteSpace: "nowrap" }}>
                   <thead>
                     <tr>
-                      {data.length > 0 && Object.keys(data[0]).map(key => {
-                        return (
-                          <th key={key} style={{display: "inline-block", width: 120, backgroundColor: "black", color: "white", textAlign: 'right'}}>
-                            {key}
-                          </th>
-                        );
-                      })}
+                      {data.length > 0 &&
+                        Object.keys(data[0]).map(key => {
+                          return (
+                            <th
+                              key={key}
+                              style={{
+                                display: "inline-block",
+                                width: 120,
+                                backgroundColor: "black",
+                                color: "white",
+                                textAlign: "right"
+                              }}
+                            >
+                              {key}
+                            </th>
+                          );
+                        })}
                     </tr>
                   </thead>
                   <tbody>
-                    {data.length > 0 && data.map((row, index) => {
-                      return (
-                        <tr key={index}>
-                          {data.length > 0 && Object.keys(row).map(key => {
-                            return (
-                              <td key={key} style={{display: "inline-block", width: 120, textAlign: 'right'}}>
-                                {row[key]}
-                              </td>
-                            );
-                          })}
-                        </tr>
-                      );
-                    })}
+                    {data.length > 0 &&
+                      data.map((row, index) => {
+                        return (
+                          <tr key={index}>
+                            {data.length > 0 &&
+                              Object.keys(row).map(key => {
+                                return (
+                                  <td
+                                    key={key}
+                                    style={{
+                                      display: "inline-block",
+                                      width: 120,
+                                      textAlign: "right"
+                                    }}
+                                  >
+                                    {row[key]}
+                                  </td>
+                                );
+                              })}
+                          </tr>
+                        );
+                      })}
                   </tbody>
                 </table>
               </div>

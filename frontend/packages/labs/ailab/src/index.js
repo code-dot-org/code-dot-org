@@ -56,19 +56,7 @@ const processMode = mode => {
       });
 
       store.dispatch(setCurrentPanel("dataDisplay"));
-
-      /*if (mode.hideSelectLabel) {
-        // Use the manifest's default label instead.
-        store.dispatch(setLabelColumn(mode.datasets[0].defaultLabelColumn));
-      }*/
     }
-
-    if (mode.datasets && mode.datasets.length > 1) {
-      // pre-fill a subset of datasets available.  No user upload.
-
-    }
-
-
   } else {
     store.dispatch(setCurrentPanel("selectDataset"));
   }
