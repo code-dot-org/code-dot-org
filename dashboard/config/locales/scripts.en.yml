@@ -15498,6 +15498,7 @@ en:
               name: Variables Make Demo
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+          name: csp7-2020
         csd2-projects-temp:
           title: CSD Web Projects - TEMP
           description_audience: ''
@@ -18209,14 +18210,15 @@ en:
             Module 6:
               name: 'Module 6: Introduction to the Create Performance Task'
             Module 7:
-              name: Module 7
+              name: 'Module 7: Tools and structure in Unit 9 - Data'
             Module 8:
-              name: Module 8
+              name: 'Module 8: Building community and preparing students for the AP Exam'
           lesson_groups: {}
           title: CS Principles Virtual Professional Learning
           description_audience: ''
           description_short: ''
           description: ''
+          name: vpl-csp-2020
         curriculum-sandbox-levels:
           lessons:
             Course A:
