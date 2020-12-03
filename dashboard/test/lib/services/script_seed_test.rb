@@ -38,7 +38,13 @@ class ScriptSeedTest < ActiveSupport::TestCase
     script.destroy!
     # This is currently:
     #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-    #   13 queries - two for each model, + one extra query each for Lessons, ScriptLevels and LevelsScriptLevels
+    #   19 queries - two for each model, + one extra query each for Lessons,
+    #     LessonActivities, ActivitySections, ScriptLevels and LevelsScriptLevels.
+    #     These 2-3 queries per model are to (1) delete old entries, (2) import
+    #     new/updated entries, and then (3) fetch the result for use by the next
+    #     layer down in the hierarchy.
+    #   12 queries - ScriptLevel validations related to having an activity_section.
+    #     These would be good candidates to eliminate in future optimization.
     #   8 queries, one for each LevelsScriptLevel.
     #   9 queries, 1 to populate the Game.by_name cache, and 8 to look up Game objects by id.
     #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
@@ -47,7 +53,7 @@ class ScriptSeedTest < ActiveSupport::TestCase
     # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
     # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
     # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-    assert_queries(73) do
+    assert_queries(52) do
       ScriptSeed.seed_from_json(json)
     end
 
