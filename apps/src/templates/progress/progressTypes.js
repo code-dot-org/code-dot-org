@@ -27,6 +27,7 @@ export const studentType = PropTypes.shape({
 const levelShape = {
   id: PropTypes.number.isRequired,
   levelNumber: PropTypes.number,
+  bubbleTitle: PropTypes.string,
   kind: PropTypes.string,
   url: PropTypes.string,
   name: PropTypes.string,
