@@ -121,6 +121,30 @@ class ScriptSeedTest < ActiveSupport::TestCase
     )
   end
 
+  test 'seed updates activity sections' do
+    script = create_script_tree
+
+    script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      activity = script.lessons.first.lesson_activities.first
+      activity.activity_sections.first.update!(name: 'Updated Section Name')
+      activity.activity_sections.create(
+        name: 'New Section Name',
+        position: 2,
+        key: "#{activity.key}-section-2"
+      )
+    end
+
+    ScriptSeed.seed_from_json(json)
+    script.reload
+
+    assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+    activity = script.lessons.first.lesson_activities.first
+    assert_equal(
+      ['Updated Section Name', 'New Section Name'],
+      activity.activity_sections.map(&:name)
+    )
+  end
+
   test 'seed updates script_levels' do
     script = create_script_tree
     new_level = create :level
