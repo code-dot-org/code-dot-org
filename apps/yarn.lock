@@ -13056,12 +13056,22 @@ react@~15.4.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
+reactabular-sticky@^8.14.0:
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/reactabular-sticky/-/reactabular-sticky-8.14.0.tgz#28834976700eacfe509b0afb7205bc31e50be727"
+  integrity sha512-xVcByimsWTG47mPioMedzIZA/PUqq1s7tZTW1Ylv/QA+DMU6TJnkLe39u5RSkTOmLGn5HjadT1pyN1qAqaH3ig==
+
 reactabular-table@^8.14.0:
   version "8.14.0"
   resolved "https://registry.yarnpkg.com/reactabular-table/-/reactabular-table-8.14.0.tgz#2ce05de47d499db91678fa9518505ea509bf3d7f"
   integrity sha512-F3qOa7yJCi1hnxsESmo2QBWVl1RQfUfZhMhpG81zOxDQKsk/nsXlq/5aBtQ17NadYI6PDdMNourNs+255GpmFQ==
   dependencies:
     classnames "^2.2.5"
+
+reactabular-virtualized@^8.18.0:
+  version "8.18.0"
+  resolved "https://registry.yarnpkg.com/reactabular-virtualized/-/reactabular-virtualized-8.18.0.tgz#2e911ba520562b6a853766b336aa86be97307219"
+  integrity sha512-WKCQglT3E1YlbDv/kRWZ36LIPkdiHjeenzxLCEod1EMbWG4f5oUHXCqPp1jr/buA7hNHyhAEffL6Dwb357tIhA==
 
 reactcss@^1.2.0:
   version "1.2.2"
