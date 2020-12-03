@@ -134,8 +134,8 @@ export default class AnimationPreview extends React.Component {
     };
 
     const imageStyle = {
-      maxWidth: 'none',
-      maxHeight: 'none',
+      maxWidth: '100%',
+      maxHeight: '100%',
       width: scaledSourceSize.x,
       height: scaledSourceSize.y,
       marginLeft: xOffset,
