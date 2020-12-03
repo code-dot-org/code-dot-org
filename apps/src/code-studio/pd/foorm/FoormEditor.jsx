@@ -8,8 +8,9 @@ import PropTypes from 'prop-types';
 import Foorm from './Foorm';
 import FontAwesome from '../../../templates/FontAwesome';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import {Button} from 'react-bootstrap';
+import {Button, Tabs, Tab} from 'react-bootstrap';
 import moment from 'moment';
+import Spinner from '../components/spinner';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -21,29 +22,26 @@ const styles = {
   foormEditor: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    width: '100%'
+    justifyContent: 'space-between',
+    width: '100%',
+    marginBottom: 10
   },
   editor: {
-    minWidth: 560
+    minWidth: 560,
+    width: '48%',
+    marginRight: 12,
+    marginTop: 57
   },
   options: {
     minWidth: 215
   },
   preview: {
-    width: '45%',
+    width: '48%',
     marginRight: 12
   },
   editorHeader: {
     display: 'flex',
     justifyContent: 'space-between'
-  },
-  editorAndOptions: {
-    minWidth: 560,
-    display: 'flex',
-    flexDirection: 'column',
-    width: '45%',
-    marginRight: 12
   },
   previewBox: {
     border: '1px solid #eee'
@@ -54,6 +52,12 @@ const styles = {
   },
   validateButton: {
     marginLeft: 0
+  },
+  livePreview: {
+    marginTop: 15
+  },
+  spinner: {
+    marginTop: 5
   }
 };
 
@@ -102,7 +106,8 @@ class FoormEditor extends React.Component {
       libraryError: false,
       libraryErrorMessage: null,
       lastValidated: null,
-      validationError: null
+      validationError: null,
+      validationStarted: false
     };
   }
 
@@ -181,6 +186,7 @@ class FoormEditor extends React.Component {
   };
 
   validateQuestions = () => {
+    this.setState({validationStarted: true});
     $.ajax({
       url: '/api/v1/pd/foorm/validate_form',
       type: 'post',
@@ -193,33 +199,187 @@ class FoormEditor extends React.Component {
       .done(result => {
         this.setState({
           lastValidated: moment().format(TIME_FORMAT),
-          validationError: false
+          validationError: null,
+          validationStarted: false
         });
       })
       .fail(result => {
         this.setState({
           lastValidated: moment().format(TIME_FORMAT),
-          validationError: result.responseJSON.error
+          validationError:
+            (result.responseJSON && result.responseJSON.error) ||
+            'Unknown error.',
+          validationStarted: false
         });
       });
   };
 
+  renderVariables() {
+    return (
+      <div style={styles.options} className="foorm-options">
+        {!this.props.formHasError && !this.state.libraryError && (
+          <div>
+            <form>
+              <label>
+                workshop_course <br />
+                <input
+                  type="text"
+                  value={this.state.workshop_course}
+                  onChange={e =>
+                    this.setState({workshop_course: e.target.value})
+                  }
+                />
+              </label>
+              <label>
+                workshop_subject <br />
+                <input
+                  type="text"
+                  value={this.state.workshop_subject}
+                  onChange={e =>
+                    this.setState({workshop_subject: e.target.value})
+                  }
+                />
+              </label>
+              <label>
+                num_facilitators
+                <br />
+                <input
+                  type="number"
+                  value={this.state.num_facilitators}
+                  onChange={this.updateFacilitators}
+                />
+              </label>
+              <label>
+                regional_partner_name <br />
+                <input
+                  type="text"
+                  value={this.state.regional_partner_name}
+                  onChange={e =>
+                    this.setState({regional_partner_name: e.target.value})
+                  }
+                />
+              </label>
+              <label>
+                is_virtual <br />
+                <input
+                  type="boolean"
+                  value={this.state.is_virtual}
+                  onChange={e => this.setState({is_virtual: e.target.value})}
+                />
+              </label>
+              <label>
+                is_friday_institute <br />
+                <input
+                  type="boolean"
+                  value={this.state.is_friday_institute}
+                  onChange={e =>
+                    this.setState({is_friday_institute: e.target.value})
+                  }
+                />
+              </label>
+
+              <label>
+                day <br />
+                <input
+                  type="number"
+                  value={this.state.day}
+                  onChange={e => this.setState({day: e.target.value})}
+                />
+              </label>
+              <label>
+                workshop_agenda <br />
+                <input
+                  type="text"
+                  value={this.state.workshop_agenda}
+                  onChange={e =>
+                    this.setState({workshop_agenda: e.target.value})
+                  }
+                />
+              </label>
+            </form>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  renderPreview() {
+    return (
+      <div className="foorm-preview">
+        <div style={styles.previewBox}>
+          {this.props.formHasError && (
+            <div style={styles.errorMessage}>
+              <FontAwesome icon="exclamation-triangle" /> There is a parsing
+              error in the survey configuration. Errors are noted on the left
+              side of the editor.
+            </div>
+          )}
+          {this.state.libraryError && (
+            <div style={styles.errorMessage}>
+              <FontAwesome icon="exclamation-triangle" />
+              {`There is an error in the use of at least one library question. The error is: ${
+                this.state.libraryErrorMessage
+              }`}
+            </div>
+          )}
+          {this.state.formPreviewQuestions &&
+            !this.props.formHasError &&
+            !this.state.libraryError && (
+              // key allows us to force re-render when preview is called
+              <Foorm
+                formQuestions={this.state.formPreviewQuestions}
+                formName={'preview'}
+                formVersion={0}
+                submitApi={'/none'}
+                key={`form-${this.state.formKey}`}
+                surveyData={{
+                  facilitators: this.state.facilitators,
+                  num_facilitators: this.state.num_facilitators,
+                  workshop_course: this.state.workshop_course,
+                  workshop_subject: this.state.workshop_subject,
+                  regional_partner_name: this.state.regional_partner_name,
+                  is_virtual: this.state.is_virtual,
+                  day: this.state.day,
+                  is_friday_institute: this.state.is_friday_institute,
+                  workshop_agenda: this.state.workshop_agenda
+                }}
+              />
+            )}
+        </div>
+      </div>
+    );
+  }
+
   render() {
     return (
-      <div style={styles.foormEditor}>
-        <div style={styles.editorAndOptions}>
+      <div>
+        {this.props.formName && (
+          <div style={styles.editorHeader}>
+            <h2>
+              {`${this.props.formName}, version ${this.props.formVersion}`}
+              <br />
+              {`Form State: ${
+                this.props.isFormPublished ? 'Published' : 'Draft'
+              }`}
+            </h2>
+          </div>
+        )}
+        <div style={styles.livePreview}>
+          <ToggleGroup
+            onChange={this.livePreviewToggled}
+            selected={this.state.livePreviewStatus}
+          >
+            <button type="button" value={PREVIEW_ON}>
+              Live Preview On
+            </button>
+            <button type="button" value={PREVIEW_OFF}>
+              Live Preview Off
+            </button>
+          </ToggleGroup>
+        </div>
+        <div style={styles.foormEditor}>
+          {/* textarea is filled by populateCodeMirror()*/}
           <div style={styles.editor} className="foorm-editor">
-            {this.props.formName && (
-              <div style={styles.editorHeader}>
-                <h3>{`${this.props.formName}, version ${
-                  this.props.formVersion
-                }`}</h3>
-                <h3>{`Form State: ${
-                  this.props.isFormPublished ? 'Published' : 'Draft'
-                }`}</h3>
-              </div>
-            )}
-            {/* textarea is filled by populateCodeMirror()*/}
             <textarea
               ref="content"
               // 3rd parameter specifies number of spaces to insert
@@ -230,109 +390,30 @@ class FoormEditor extends React.Component {
               onChange={() => {}}
             />
           </div>
-          <div style={styles.options} className="foorm-options">
-            {!this.props.formHasError && !this.state.libraryError && (
-              <div>
-                <form>
-                  <h3>Survey Variables</h3>
-                  <label>
-                    workshop_course <br />
-                    <input
-                      type="text"
-                      value={this.state.workshop_course}
-                      onChange={e =>
-                        this.setState({workshop_course: e.target.value})
-                      }
-                    />
-                  </label>
-                  <label>
-                    workshop_subject <br />
-                    <input
-                      type="text"
-                      value={this.state.workshop_subject}
-                      onChange={e =>
-                        this.setState({workshop_subject: e.target.value})
-                      }
-                    />
-                  </label>
-                  <label>
-                    num_facilitators
-                    <br />
-                    <input
-                      type="number"
-                      value={this.state.num_facilitators}
-                      onChange={this.updateFacilitators}
-                    />
-                  </label>
-                  <label>
-                    regional_partner_name <br />
-                    <input
-                      type="text"
-                      value={this.state.regional_partner_name}
-                      onChange={e =>
-                        this.setState({regional_partner_name: e.target.value})
-                      }
-                    />
-                  </label>
-                  <label>
-                    is_virtual <br />
-                    <input
-                      type="boolean"
-                      value={this.state.is_virtual}
-                      onChange={e =>
-                        this.setState({is_virtual: e.target.value})
-                      }
-                    />
-                  </label>
-                  <label>
-                    is_friday_institute <br />
-                    <input
-                      type="boolean"
-                      value={this.state.is_friday_institute}
-                      onChange={e =>
-                        this.setState({is_friday_institute: e.target.value})
-                      }
-                    />
-                  </label>
 
-                  <label>
-                    day <br />
-                    <input
-                      type="number"
-                      value={this.state.day}
-                      onChange={e => this.setState({day: e.target.value})}
-                    />
-                  </label>
-                  <label>
-                    workshop_agenda <br />
-                    <input
-                      type="text"
-                      value={this.state.workshop_agenda}
-                      onChange={e =>
-                        this.setState({workshop_agenda: e.target.value})
-                      }
-                    />
-                  </label>
-                </form>
-                <ToggleGroup
-                  onChange={this.livePreviewToggled}
-                  selected={this.state.livePreviewStatus}
-                >
-                  <button type="button" value={PREVIEW_ON}>
-                    Live Preview On
-                  </button>
-                  <button type="button" value={PREVIEW_OFF}>
-                    Live Preview Off
-                  </button>
-                </ToggleGroup>
-                <br />
-                <Button
-                  style={styles.validateButton}
-                  onClick={this.validateQuestions}
-                >
-                  Validate
-                </Button>
-                {this.state.lastValidated && (
+          <Tabs
+            style={styles.preview}
+            defaultActiveKey="preview"
+            id="preview-tabs"
+          >
+            <Tab eventKey={'preview'} title={'Preview'} id="preview">
+              {this.renderPreview()}
+            </Tab>
+            <Tab eventKey="variables" title="Survey Variables" id="variables">
+              {this.renderVariables()}
+            </Tab>
+            <Tab eventKey="validation" title="Validation" id="validation">
+              <Button
+                style={styles.validateButton}
+                onClick={this.validateQuestions}
+              >
+                Validate
+              </Button>
+              <br />
+              {this.state.validationStarted ? (
+                <Spinner style={styles.spinner} />
+              ) : (
+                this.state.lastValidated && (
                   <div style={styles.validationInfo}>
                     {this.state.validationError && (
                       <FontAwesome icon="exclamation-triangle" />
@@ -346,53 +427,10 @@ class FoormEditor extends React.Component {
                     {this.state.validationError &&
                       `Validation error: ${this.state.validationError}`}
                   </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-        <div style={styles.preview} className="foorm-preview">
-          <h3>Preview</h3>
-          <div style={styles.previewBox}>
-            {this.props.formHasError && (
-              <div style={styles.errorMessage}>
-                <FontAwesome icon="exclamation-triangle" /> There is a parsing
-                error in the survey configuration. Errors are noted on the left
-                side of the editor.
-              </div>
-            )}
-            {this.state.libraryError && (
-              <div style={styles.errorMessage}>
-                <FontAwesome icon="exclamation-triangle" />
-                {`There is an error in the use of at least one library question. The error is: ${
-                  this.state.libraryErrorMessage
-                }`}
-              </div>
-            )}
-            {this.state.formPreviewQuestions &&
-              !this.props.formHasError &&
-              !this.state.libraryError && (
-                // key allows us to force re-render when preview is called
-                <Foorm
-                  formQuestions={this.state.formPreviewQuestions}
-                  formName={'preview'}
-                  formVersion={0}
-                  submitApi={'/none'}
-                  key={`form-${this.state.formKey}`}
-                  surveyData={{
-                    facilitators: this.state.facilitators,
-                    num_facilitators: this.state.num_facilitators,
-                    workshop_course: this.state.workshop_course,
-                    workshop_subject: this.state.workshop_subject,
-                    regional_partner_name: this.state.regional_partner_name,
-                    is_virtual: this.state.is_virtual,
-                    day: this.state.day,
-                    is_friday_institute: this.state.is_friday_institute,
-                    workshop_agenda: this.state.workshop_agenda
-                  }}
-                />
+                )
               )}
-          </div>
+            </Tab>
+          </Tabs>
         </div>
       </div>
     );
