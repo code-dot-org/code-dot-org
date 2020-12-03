@@ -25,7 +25,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      disableSubmitButton: true,
+      submitButtonEnabled: false,
       loadedCaptcha: false
     };
     this.token = '';
@@ -45,21 +45,21 @@ export default class ReCaptchaValidationDialog extends React.Component {
     document.body.appendChild(script);
   }
 
-  onCaptchaVerification(token) {
-    this.setState({disableSubmitButton: false});
-    this.token = token;
-  }
-
   componentWillUnmount() {
     const captchaScript = document.getElementById('captcha');
     captchaScript.remove();
   }
 
-  onCaptchaExpiration() {
-    this.setState({disableSubmitButton: true});
+  onCaptchaVerification(token) {
+    this.setState({submitButtonEnabled: true});
+    this.token = token;
   }
 
-  // function passed as props must then send token to the Rails backend immediately
+  onCaptchaExpiration() {
+    this.setState({submitButtonEnabled: false});
+  }
+
+  // Function passed as props must then send token to the Rails backend immediately
   // for verification.
   // Must submit a POST request per documentation here: https://developers.google.com/recaptcha/docs/verify
   handleSubmit() {
@@ -99,7 +99,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
               onClick={this.handleSubmit}
               color={Button.ButtonColor.orange}
               className="no-mc ui-confirm-project-delete-button"
-              disabled={this.state.disableSubmitButton}
+              disabled={!this.state.submitButtonEnabled}
             />
           </DialogFooter>
         </BaseDialog>
