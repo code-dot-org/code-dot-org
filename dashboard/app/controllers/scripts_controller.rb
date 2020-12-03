@@ -197,6 +197,7 @@ class ScriptsController < ApplicationController
       :tts,
       :is_stable,
       :is_course,
+      :show_calendar,
       :announcements,
       :pilot_experiment,
       :editor_experiment,
