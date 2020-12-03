@@ -474,7 +474,41 @@ P5Lab.prototype.init = function(config) {
         ];
       }
     });
-  }
+  } //else {
+  // check if initialAnimationList has backgrounds
+  // if it doesn't add it from defaultSprites.json
+  // let hasBackgrounds = false;
+  // let configDictionary = {};
+  // initialAnimationList.orderedKeys.forEach(key => {
+  //   const name = initialAnimationList.propsByKey[key].name;
+  //   configDictionary[name] = key;
+  // });
+  // defaultSprites.orderedKeys.forEach(key => {
+  //   if (
+  //     defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
+  //     configDictionary[defaultSprites.propsByKey[key].name]
+  //   ) {
+  //     hasBackgrounds = true;
+  //   }
+  // });
+  // // initialAnimationList.orderedKeys.forEach(key => {
+  // //   if (
+  // //     initialAnimationList.propsByKey[key].categories.includes('backgrounds')
+  // //   ) {
+  // //     hasBackgrounds = true;
+  // //   }
+  // // });
+  // if (!hasBackgrounds) {
+  //   defaultSprites.orderedKeys.forEach(key => {
+  //     if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
+  //       initialAnimationList.orderedKeys.push(key);
+  //       initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
+  //     }
+  //     // add the backgrounds
+  //   });
+  // }
+  // }
+  console.log(initialAnimationList);
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,
