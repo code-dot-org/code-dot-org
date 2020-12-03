@@ -474,9 +474,8 @@ P5Lab.prototype.init = function(config) {
         ];
       }
     });
-  } else {
-    // check if initialAnimationList has backgrounds
-    // if it doesn't add it from defaultSprites.json
+  } else if (this.isSpritelab) {
+    // check if initialAnimationList has backgrounds. If it doesn't add it from defaultSprites.json
     let hasBackgrounds = false;
     let configDictionary = {};
     initialAnimationList.orderedKeys.forEach(key => {
@@ -492,16 +491,15 @@ P5Lab.prototype.init = function(config) {
       }
     });
     if (!hasBackgrounds) {
+      // add the backgrounds from defaultSprites
       defaultSprites.orderedKeys.forEach(key => {
         if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
           initialAnimationList.orderedKeys.push(key);
           initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
         }
-        // add the backgrounds
       });
     }
   }
-  console.log(initialAnimationList);
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,
