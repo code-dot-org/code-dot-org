@@ -43,10 +43,15 @@ export const init = (activities, levelKeyList, searchOptions) => ({
   searchOptions
 });
 
-export const addActivity = (activityPosition, activityKey) => ({
+export const addActivity = (
+  activityPosition,
+  activityKey,
+  activitySectionKey
+) => ({
   type: ADD_ACTIVITY,
   activityPosition,
-  activityKey
+  activityKey,
+  activitySectionKey
 });
 
 export const updateActivityField = (
@@ -320,7 +325,13 @@ function activities(state = [], action) {
       newState.push({
         ...emptyActivity,
         key: action.activityKey,
-        position: action.activityPosition
+        position: action.activityPosition,
+        activitySections: [
+          {
+            ...emptyActivitySection,
+            key: action.activitySectionKey
+          }
+        ]
       });
       updateActivityPositions(newState);
       break;
@@ -377,7 +388,6 @@ function activities(state = [], action) {
     }
     case MOVE_ACTIVITY_SECTION: {
       const activityIndex = action.activityPosition - 1;
-
       const activitySections = newState[activityIndex].activitySections;
 
       const activitySectionIndex = action.activitySectionPosition - 1;
@@ -385,7 +395,6 @@ function activities(state = [], action) {
         action.direction === 'up'
           ? activitySectionIndex - 1
           : activitySectionIndex + 1;
-
       if (
         activitySectionSwapIndex >= 0 &&
         activitySectionSwapIndex <= activitySections.length - 1
@@ -653,7 +662,7 @@ export default {
 };
 
 export const emptyActivitySection = {
-  key: 'activity-section-1',
+  key: 'activitySection-1',
   displayName: '',
   levels: [],
   tips: [],

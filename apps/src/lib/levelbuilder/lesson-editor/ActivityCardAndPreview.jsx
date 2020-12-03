@@ -30,6 +30,7 @@ const styles = {
 export default class ActivityCardAndPreview extends Component {
   static propTypes = {
     activity: activityShape,
+    generateActivitySectionKey: PropTypes.func.isRequired,
     activitiesCount: PropTypes.number,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
@@ -60,6 +61,7 @@ export default class ActivityCardAndPreview extends Component {
         <div style={styles.editor}>
           <ActivityCard
             activity={activity}
+            generateActivitySectionKey={this.props.generateActivitySectionKey}
             activitiesCount={this.props.activitiesCount}
             setActivitySectionRef={this.props.setActivitySectionRef}
             updateTargetActivitySection={this.props.updateTargetActivitySection}
