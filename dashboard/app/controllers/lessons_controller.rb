@@ -60,6 +60,7 @@ class LessonsController < ApplicationController
       :name,
       :overview,
       :student_overview,
+      :assessment_opportunities,
       :assessment,
       :unplugged,
       :creative_commons_license,
