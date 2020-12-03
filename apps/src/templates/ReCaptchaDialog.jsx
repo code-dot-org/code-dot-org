@@ -19,7 +19,8 @@ export default class ReCaptchaValidationDialog extends React.Component {
     handleSubmit: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    submitText: PropTypes.string.isRequired
+    submitText: PropTypes.string.isRequired,
+    siteKey: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -67,6 +68,7 @@ export default class ReCaptchaValidationDialog extends React.Component {
   }
 
   render() {
+    const {siteKey, isOpen, handleCancel, submitText} = this.props;
     return (
       <div>
         <BaseDialog
@@ -74,28 +76,27 @@ export default class ReCaptchaValidationDialog extends React.Component {
           fixedWidth={600}
           uncloseable={true}
           style={styles.dialog}
-          isOpen={this.props.isOpen}
+          isOpen={isOpen}
         >
           <h3>{i18n.verifyNotBot()}</h3>
           {!this.state.loadedCaptcha && <Spinner size="large" />}
           {this.state.loadedCaptcha && (
             <div
               className="g-recaptcha"
-              //TODO: you need to figure out how to set up a config for the correct API keys
-              data-sitekey="SECRET"
+              data-sitekey={siteKey}
               data-callback="onSubmit"
               data-expired-callback="captchaExpired"
             />
           )}
           <DialogFooter>
             <Button
-              onClick={this.props.handleCancel}
+              onClick={handleCancel}
               text={i18n.dialogCancel()}
               color={Button.ButtonColor.gray}
               className="no-mc"
             />
             <Button
-              text={this.props.submitText}
+              text={submitText}
               onClick={this.handleSubmit}
               color={Button.ButtonColor.orange}
               className="no-mc ui-confirm-project-delete-button"
