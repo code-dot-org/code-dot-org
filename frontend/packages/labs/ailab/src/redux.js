@@ -726,3 +726,11 @@ export function getShowSelectLabels(state) {
     getSelectableLabels(state).length > 0
   );
 }
+
+export function getSpecifiedDatasets(state) {
+  return state.mode && state.mode.datasets;
+}
+
+export function getShowChooseReserve(state) {
+  return !(state.mode && state.mode.hideChooseReserve);
+}

@@ -6,7 +6,8 @@ import train, { availableTrainers } from "../train";
 import {
   setShowPredict,
   setPercentDataToReserve,
-  readyToTrain
+  readyToTrain,
+  getShowChooseReserve
 } from "../redux";
 import { TRAINING_DATA_PERCENTS, styles } from "../constants";
 
@@ -19,8 +20,7 @@ class TrainModel extends Component {
     selectedTrainer: PropTypes.string,
     percentDataToReserve: PropTypes.number,
     setPercentDataToReserve: PropTypes.func,
-    modelSize: PropTypes.number,
-    mode: PropTypes.object
+    modelSize: PropTypes.number
   };
 
   handleChange = event => {
@@ -35,9 +35,11 @@ class TrainModel extends Component {
   };
 
   render() {
+    const {showChooseReseve} = this.props;
+
     return (
       <div id="train-model" style={styles.panel}>
-        {!(this.props.mode && this.props.mode.hideChooseReserve) && (
+        {showChooseReseve && (
           <div>
             <div style={styles.largeText}>
               Are you ready to train the model?
@@ -97,7 +99,7 @@ export default connect(
     readyToTrain: readyToTrain(state),
     percentDataToReserve: state.percentDataToReserve,
     modelSize: state.modelSize,
-    mode: state.mode
+    showChooseReseve: getShowChooseReserve(state)
   }),
   dispatch => ({
     setShowPredict(showPredict) {

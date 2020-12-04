@@ -22,8 +22,7 @@ class SelectFeatures extends Component {
     setShowPredict: PropTypes.func.isRequired,
     selectableFeatures: PropTypes.array,
     showSelectLabels: PropTypes.bool,
-    selectableLabels: PropTypes.array,
-    mode: PropTypes.object
+    selectableLabels: PropTypes.array
   };
 
   handleChangeSelect = event => {
@@ -112,8 +111,7 @@ export default connect(
     selectedFeatures: state.selectedFeatures,
     selectableFeatures: getSelectableFeatures(state),
     showSelectLabels: getShowSelectLabels(state),
-    selectableLabels: getSelectableLabels(state),
-    mode: state.mode
+    selectableLabels: getSelectableLabels(state)
   }),
   dispatch => ({
     setSelectedFeatures(selectedFeatures) {

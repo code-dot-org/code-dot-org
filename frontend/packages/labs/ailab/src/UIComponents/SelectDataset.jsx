@@ -7,7 +7,8 @@ import {
   setSelectedJSON,
   resetState,
   setColumnsByDataType,
-  setLabelColumn
+  setLabelColumn,
+  getSpecifiedDatasets
 } from "../redux";
 import { parseCSV } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
@@ -22,8 +23,7 @@ class SelectDataset extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    resetState: PropTypes.func.isRequired,
-    mode: PropTypes.object
+    resetState: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -67,7 +67,7 @@ class SelectDataset extends Component {
   };
 
   render() {
-    const specifiedDatasets = this.props.mode && this.props.mode.datasets;
+    const specifiedDatasets = this.props.specifiedDatasets;
     const datasets = getAvailableDatasets(specifiedDatasets);
 
     return (
@@ -117,7 +117,7 @@ export default connect(
   state => ({
     csvfile: state.csvfile,
     jsonfile: state.jsonfile,
-    mode: state.mode
+    specifiedDatasets: getSpecifiedDatasets(state)
   }),
   dispatch => ({
     resetState() {
