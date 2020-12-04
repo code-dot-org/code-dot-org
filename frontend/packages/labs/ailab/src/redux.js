@@ -21,6 +21,8 @@ import {
 
 import { ColumnTypes, MLTypes } from "./constants.js";
 
+import {store} from './index';
+
 // Action types
 const RESET_STATE = "RESET_STATE";
 const SET_MODE = "SET_MODE";
@@ -613,4 +615,81 @@ export function getEmptyCellDetails(state) {
     return `Column: ${cellDetails.column} Row: ${cellDetails.row}`;
   });
   return emptyCellLocations;
+}
+
+
+export function getPanelVisible(panel) {
+  const mode = store.getState().mode;
+
+  if (panel === "selectDataset") {
+    if (mode && mode.datasets && mode.datasets.length === 1) {
+      return false;
+    }
+  }
+
+  if (panel === "saveModel") {
+    if (mode && mode.hideSave) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+export const panelList = [
+  { id: "selectDataset", label: "Import" },
+  { id: "dataDisplay", label: "Data" },
+  { id: "selectFeatures", label: "Features" },
+  { id: "columnInspector", label: "Columns" },
+  { id: "selectTrainer", label: "Trainer" },
+  { id: "trainModel", label: "Train" },
+  { id: "results", label: "Results" },
+  { id: "predict", label: "Predict" },
+  { id: "saveModel", label: "Save" }
+];
+
+export function getPanelEnabled(panel) {
+  const state = store.getState();
+
+  if (panel === "dataDisplay") {
+    if (state.data.length === 0) {
+      return false;
+    }
+  }
+
+  if (panel === "columnInspector") {
+    if (getSelectedColumns(state).length === 0) {
+      return false;
+    }
+  }
+
+  if (panel === "selectFeatures") {
+    if (!isDataUploaded(state)) {
+      return false;
+    }
+  }
+
+  if (panel === "trainModel") {
+    if (!readyToTrain(state)) {
+      return false;
+    }
+  }
+
+  if (panel === "results") {
+    if (
+      !state.showPredict ||
+      state.percentDataToReserve === 0 ||
+      state.accuracyCheckExamples.length === 0
+    ) {
+      return false;
+    }
+  }
+
+  // Also see if the previous panel was visible, recursively.
+  const panelIndex = panelList.findIndex(element => element.id === panel);
+  if (panelIndex > 0) {
+    return getPanelEnabled(panelList[panelIndex - 1].id);
+  }
+
+  return true;
 }
