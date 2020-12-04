@@ -6,7 +6,8 @@ import {
   getSelectedColumns,
   setColumnsByDataType,
   getOptionFrequenciesByColumn,
-  getRangesByColumn
+  getRangesByColumn,
+  getColumnTypeReadOnly
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 
@@ -18,9 +19,7 @@ class ColumnInspector extends Component {
     setColumnsByDataType: PropTypes.func.isRequired,
     uniqueOptionsByColumn: PropTypes.object,
     getRangesByColumn: PropTypes.func,
-    rangesByColumn: PropTypes.object,
-    metadata: PropTypes.object,
-    mode: PropTypes.object
+    rangesByColumn: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -28,19 +27,12 @@ class ColumnInspector extends Component {
     this.props.setColumnsByDataType(feature, event.target.value);
   };
 
-  getMetadataColumnType(column) {
-    return (
-      this.props.metadata.fields &&
-      this.props.metadata.fields.find(field => {
-        return field.id === column;
-      }).type
-    );
-  }
-
   render() {
+    const {selectedColumns, columnsByDataType, uniqueOptionsByColumn, rangesByColumn} = this.props;
+
     return (
       <div id="column-inspector">
-        {this.props.selectedColumns.length > 0 && (
+        {selectedColumns.length > 0 && (
           <div style={styles.panel}>
             <div style={styles.largeText}>
               Describe the data in each of your selected columns
@@ -62,25 +54,24 @@ class ColumnInspector extends Component {
               machine learning model.
             </p>
             <form>
-              {this.props.selectedColumns.map((column, index) => {
+              {selectedColumns.map((column, index) => {
                 return (
                   <div key={index}>
                     <label>
-                      {this.props.mode && this.props.mode.hideSpecifyColunns &&
-                        this.props.columnsByDataType[column] && (
+                      {getColumnTypeReadOnly(column) && (
                           <div>
-                            {column}: {this.getMetadataColumnType(column)}
+                            {column}: {columnsByDataType[column]}
                           </div>
                         )}
-                      {(!this.getMetadataColumnType(column) ||
-                        !(this.props.mode && this.props.mode.hideSpecifyColunns)) && (
+
+                      {!getColumnTypeReadOnly(column) && (
                         <div>
                           {column}: &nbsp;
                           <select
                             onChange={event =>
                               this.handleChangeDataType(event, column)
                             }
-                            value={this.props.columnsByDataType[column]}
+                            value={columnsByDataType[column]}
                           >
                             {Object.values(ColumnTypes).map((option, index) => {
                               return (
@@ -94,13 +85,13 @@ class ColumnInspector extends Component {
                       )}
                     </label>
 
-                    {this.props.columnsByDataType[column] ===
+                    {columnsByDataType[column] ===
                       ColumnTypes.CATEGORICAL && (
                       <div>
                         <p>
                           {
                             Object.keys(
-                              this.props.uniqueOptionsByColumn[column]
+                              uniqueOptionsByColumn[column]
                             ).length
                           }{" "}
                           unique values for {column}:{" "}
@@ -115,7 +106,7 @@ class ColumnInspector extends Component {
                             </thead>
                             <tbody>
                               {Object.keys(
-                                this.props.uniqueOptionsByColumn[column]
+                                uniqueOptionsByColumn[column]
                               )
                                 .sort()
                                 .map((option, index) => {
@@ -124,7 +115,7 @@ class ColumnInspector extends Component {
                                       <td>{option}</td>
                                       <td>
                                         {
-                                          this.props.uniqueOptionsByColumn[
+                                          uniqueOptionsByColumn[
                                             column
                                           ][option]
                                         }
@@ -137,21 +128,21 @@ class ColumnInspector extends Component {
                         </div>
                       </div>
                     )}
-                    {this.props.columnsByDataType[column] ===
+                    {columnsByDataType[column] ===
                       ColumnTypes.CONTINUOUS && (
                       <div>
-                        {this.props.rangesByColumn[column] && (
+                        {rangesByColumn[column] && (
                           <div>
-                            {isNaN(this.props.rangesByColumn[column].min) && (
+                            {isNaN(rangesByColumn[column].min) && (
                               <p style={styles.error}>
                                 Continuous columns should contain only numbers.
                               </p>
                             )}
-                            {!isNaN(this.props.rangesByColumn[column].min) && (
+                            {!isNaN(rangesByColumn[column].min) && (
                               <div style={styles.subPanel}>
-                                min: {this.props.rangesByColumn[column].min}
+                                min: {rangesByColumn[column].min}
                                 <br />
-                                max: {this.props.rangesByColumn[column].max}
+                                max: {rangesByColumn[column].max}
                               </div>
                             )}
                           </div>
@@ -176,9 +167,7 @@ export default connect(
     selectedColumns: getSelectedColumns(state),
     columnsByDataType: state.columnsByDataType,
     uniqueOptionsByColumn: getOptionFrequenciesByColumn(state),
-    rangesByColumn: getRangesByColumn(state),
-    metadata: state.metadata,
-    mode: state.mode
+    rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

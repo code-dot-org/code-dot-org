@@ -124,17 +124,19 @@ class App extends Component {
   };
 
   render() {
-    const {
-      currentPanel,
-      setCurrentPanel,
-      validationMessages
-    } = this.props;
+    const { currentPanel, setCurrentPanel, validationMessages } = this.props;
 
     return (
       <div>
-        <PanelTabs currentPanel={currentPanel} setCurrentPanel={setCurrentPanel}/>
-        <Panels currentPanel={currentPanel}  />
-        <ValidationMessages currentPanel={currentPanel} validationMessages={validationMessages}/>
+        <PanelTabs
+          currentPanel={currentPanel}
+          setCurrentPanel={setCurrentPanel}
+        />
+        <Panels currentPanel={currentPanel} />
+        <ValidationMessages
+          currentPanel={currentPanel}
+          validationMessages={validationMessages}
+        />
       </div>
     );
   }
@@ -143,7 +145,7 @@ class App extends Component {
 export default connect(
   state => ({
     currentPanel: state.currentPanel,
-    validationMessages: validationMessages(state),
+    validationMessages: validationMessages(state)
   }),
   dispatch => ({
     setCurrentPanel(panel) {

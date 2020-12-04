@@ -2,7 +2,13 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setSelectedCSV, setSelectedJSON, resetState, setColumnsByDataType, setLabelColumn } from "../redux";
+import {
+  setSelectedCSV,
+  setSelectedJSON,
+  resetState,
+  setColumnsByDataType,
+  setLabelColumn
+} from "../redux";
 import { parseCSV } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
 import { allDatasets, getAvailableDatasets } from "../datasetManifest";
@@ -28,10 +34,11 @@ class SelectDataset extends Component {
     };
   }
 
-
   handleDatasetSelect = event => {
     const assetPath = global.__ml_playground_asset_public_path__;
-    const dataset = allDatasets.find(dataset => dataset.id === event.target.value);
+    const dataset = allDatasets.find(
+      dataset => dataset.id === event.target.value
+    );
     const csvPath = assetPath + dataset.path;
     const jsonPath = assetPath + dataset.metadataPath;
 
@@ -79,17 +86,12 @@ class SelectDataset extends Component {
         <div style={styles.largeText}>Which dataset would you like to use?</div>
         <form>
           <div style={styles.subPanel}>
-            <div>
-              Select a dataset from the collection
-            </div>
+            <div>Select a dataset from the collection</div>
             <select onChange={this.handleDatasetSelect}>
               <option>{""}</option>
               {datasets.map(dataset => {
                 return (
-                  <option
-                    key={dataset["id"]}
-                    value={dataset["id"]}
-                  >
+                  <option key={dataset["id"]} value={dataset["id"]}>
                     {dataset["name"]}
                   </option>
                 );

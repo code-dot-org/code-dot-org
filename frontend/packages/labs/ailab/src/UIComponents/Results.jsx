@@ -21,19 +21,17 @@ class Results extends Component {
       <div id="results">
         <div style={styles.panel}>
           <p>
-            {this.props.percentDataToReserve}% of the training data was
-            reserved to test the accuracy of the newly trained model.
+            {this.props.percentDataToReserve}% of the training data was reserved
+            to test the accuracy of the newly trained model.
           </p>
           <div>
             {this.props.summaryStat.type === MLTypes.REGRESSION && (
               <div>
                 <div>
-                  The average difference between expected and predicted
-                  labels is:
+                  The average difference between expected and predicted labels
+                  is:
                 </div>
-                <div style={styles.subPanel}>
-                  {this.props.summaryStat.stat}
-                </div>
+                <div style={styles.subPanel}>{this.props.summaryStat.stat}</div>
               </div>
             )}
             {this.props.summaryStat.type === MLTypes.CLASSIFICATION && (
@@ -68,9 +66,7 @@ class Results extends Component {
                         return <td key={i}>{example}</td>;
                       })}
                       <td>{this.props.accuracyCheckLabels[index]}</td>
-                      <td>
-                        {this.props.accuracyCheckPredictedLabels[index]}
-                      </td>
+                      <td>{this.props.accuracyCheckPredictedLabels[index]}</td>
                       {this.props.accuracyCheckLabels[index] ===
                         this.props.accuracyCheckPredictedLabels[index] && (
                         <td style={styles.ready}>&#x2713;</td>
@@ -82,14 +78,12 @@ class Results extends Component {
             </table>
           </div>
         </div>
-
       </div>
     );
   }
 }
 
 export default connect(state => ({
-
   selectedFeatures: state.selectedFeatures,
   labelColumn: state.labelColumn,
   summaryStat: getSummaryStat(state),

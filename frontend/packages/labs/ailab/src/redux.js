@@ -21,7 +21,7 @@ import {
 
 import { ColumnTypes, MLTypes } from "./constants.js";
 
-import {store} from './index';
+import { store } from "./index";
 
 // Action types
 const RESET_STATE = "RESET_STATE";
@@ -163,7 +163,7 @@ const initialState = {
   csvfile: undefined,
   jsonfile: undefined,
   data: [],
-  metadata: {},
+  metadata: undefined,
   selectedTrainer: undefined,
   columnsByDataType: {},
   selectedFeatures: [],
@@ -213,10 +213,15 @@ export default function rootReducer(state = initialState, action) {
     var newState = {
       ...state,
       metadata: action.metadata
-    }
+    };
 
-    if (state.mode && state.mode.datasets && state.mode.datasets.length > 1 && state.mode.hideSelectLabel) {
-      newState.labelColumn = action.metadata.defaultLabelColumn
+    if (
+      state.mode &&
+      state.mode.datasets &&
+      state.mode.datasets.length > 1 &&
+      state.mode.hideSelectLabel
+    ) {
+      newState.labelColumn = action.metadata.defaultLabelColumn;
     }
 
     return newState;
@@ -534,66 +539,66 @@ export function getSummaryStat(state) {
 
 export function validationMessages(state) {
   const validationMessages = {};
-  validationMessages['notEnoughData'] = {
-    panel: 'dataDisplay',
+  validationMessages["notEnoughData"] = {
+    panel: "dataDisplay",
     readyToTrain: datasetUploaded(state),
     errorString: "There is not enough data to train a model.",
     successString: `There are ${state.data.length} rows of data.`
   };
-  validationMessages['columnNames'] = {
-    panel: 'dataDisplay',
+  validationMessages["columnNames"] = {
+    panel: "dataDisplay",
     readyToTrain: uniqueColumnNames(state),
     errorString:
       "Each column must have a name, and column names must be unique.",
     successString: "Each column has a unique name."
   };
-  validationMessages['emptyCells'] = {
-    panel: 'dataDisplay',
+  validationMessages["emptyCells"] = {
+    panel: "dataDisplay",
     readyToTrain: noEmptyCells(state),
     errorString: "There can't be any empty cells.",
     successString: "Each cell has a value!"
   };
-  validationMessages['selectLabel'] = {
-    panel: 'selectFeatures',
+  validationMessages["selectLabel"] = {
+    panel: "selectFeatures",
     readyToTrain: oneLabelSelected(state),
     errorString: "Please designate one column as the label column.",
     successString: "Label column has been selected."
   };
-  validationMessages['selectFeatures'] = {
-    panel: 'selectFeatures',
+  validationMessages["selectFeatures"] = {
+    panel: "selectFeatures",
     readyToTrain: minOneFeatureSelected(state),
     errorString: "Please select at least one feature to train.",
     successString: "At least one feature is selected."
   };
-  validationMessages['columnUsage'] = {
-    panel: 'selectFeatures',
+  validationMessages["columnUsage"] = {
+    panel: "selectFeatures",
     readyToTrain: uniqLabelFeaturesSelected(state),
     errorString:
       "A column can not be selected as a both a feature and a label.",
     successString: "Label and feature(s) columns are unique."
   };
-  validationMessages['columnData'] = {
-    panel: 'selectFeatures',
+  validationMessages["columnData"] = {
+    panel: "selectFeatures",
     readyToTrain: selectedColumnsHaveDatatype(state),
     errorString:
       "Feature and label columns must contain only continuous or categorical data.",
     successString:
       "Selected features and label contain continuous or categorical data"
   };
-  validationMessages['continuousNumbers'] = {
-    panel: 'selectFeatures',
+  validationMessages["continuousNumbers"] = {
+    panel: "selectFeatures",
     readyToTrain: continuousColumnsHaveOnlyNumbers(state),
     errorString: "Continuous columns should contain only numbers.",
     successString: "Continuous columns contain only numbers."
   };
-  validationMessages['training'] = {
-    panel: 'selectTrainer',
+  validationMessages["training"] = {
+    panel: "selectTrainer",
     readyToTrain: trainerSelected(state),
     errorString: "Please select a training algorithm.",
     successString: "Training algorithm selected."
   };
-  validationMessages['compatibleLabel'] = {
-    panel: 'selectTrainer',
+  validationMessages["compatibleLabel"] = {
+    panel: "selectTrainer",
     readyToTrain: compatibleLabelAndTrainer(state),
     errorString:
       "The label datatype must be compatible with the training algorithm.",
@@ -616,7 +621,6 @@ export function getEmptyCellDetails(state) {
   });
   return emptyCellLocations;
 }
-
 
 export function getPanelVisible(panel) {
   const mode = store.getState().mode;
@@ -692,4 +696,26 @@ export function getPanelEnabled(panel) {
   }
 
   return true;
+}
+
+export function getMetadataColumnType(column) {
+  return (
+    this.props.metadata.fields &&
+    this.props.metadata.fields.find(field => {
+      return field.id === column;
+    }).type
+  );
+}
+
+export function getColumnTypeReadOnly(column) {
+  const state = store.getState();
+
+  const metadataColumnType =
+    state.metadata &&
+    state.metadata.fields &&
+    state.metadata.fields.find(field => {
+      return field.id === column;
+    }).type;
+
+  return metadataColumnType && state.mode && state.mode.hideSpecifyColunns;
 }
