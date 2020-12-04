@@ -59,8 +59,6 @@ const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', ''];
 class ScriptEditor extends React.Component {
   static propTypes = {
     id: PropTypes.number,
-    beta: PropTypes.bool,
-    betaWarning: PropTypes.string,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     initialHidden: PropTypes.bool,
@@ -96,7 +94,7 @@ class ScriptEditor extends React.Component {
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
-    initialIsMigrated: PropTypes.bool,
+    isMigrated: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -189,7 +187,7 @@ class ScriptEditor extends React.Component {
     const videoKeysBefore = (
       this.props.initialLessonLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
-    const scriptText = this.props.beta ? '' : this.state.lessonLevelData;
+    const scriptText = this.props.isMigrated ? '' : this.state.lessonLevelData;
     const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (
@@ -234,7 +232,7 @@ class ScriptEditor extends React.Component {
       project_widget_visible: this.state.projectWidgetVisible,
       project_widget_types: this.state.projectWidgetTypes,
       lesson_extras_available: this.state.lessonExtrasAvailable,
-      script_text: this.props.beta
+      script_text: this.props.isMigrated
         ? getSerializedLessonGroups(
             this.props.lessonGroups,
             this.props.levelKeyList
@@ -256,7 +254,7 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      is_migrated: this.props.initialIsMigrated
+      is_migrated: this.props.isMigrated
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -286,7 +284,6 @@ class ScriptEditor extends React.Component {
   };
 
   render() {
-    const {betaWarning} = this.props;
     const textAreaRows = this.state.lessonLevelData
       ? this.state.lessonLevelData.split('\n').length + 5
       : 10;
@@ -688,7 +685,7 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
-          {!this.props.beta && (
+          {!this.props.isMigrated && (
             <label>
               Curriculum Path
               <input
@@ -733,7 +730,7 @@ class ScriptEditor extends React.Component {
               this.setState({projectWidgetTypes})
             }
           />
-          {!this.props.beta && (
+          {!this.props.isMigrated && (
             <LessonDescriptions
               scriptName={this.props.name}
               currentDescriptions={this.props.i18nData.stageDescriptions}
@@ -823,16 +820,10 @@ class ScriptEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
-          {this.props.beta ? (
+          {this.props.isMigrated ? (
             <UnitCard />
           ) : (
             <div>
-              {betaWarning || (
-                <a href="?beta=true">
-                  Try the beta Script Editor (will reload the page without
-                  saving)
-                </a>
-              )}
               <textarea
                 id="script_text"
                 rows={textAreaRows}
