@@ -12,7 +12,6 @@
         "artist"
       ],
       "lesson_extras_available": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/express/{LESSON}",
       "version_year": "2021",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
@@ -21,7 +20,10 @@
           "teacherForum",
           "https://forum.code.org/c/csf"
         ]
-      ]
+      ],
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0,
+      "is_course": true
     },
     "new_name": null,
     "family_name": "express",

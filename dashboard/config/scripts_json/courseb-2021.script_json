@@ -18,27 +18,16 @@
       "has_lesson_plan": true,
       "teacher_resources": [
         [
-          "lessonPlans",
-          "https://curriculum.code.org/csf-20/courseb/"
-        ],
-        [
           "teacherForum",
           "https://forum.code.org/c/csf"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csf-20/courseb/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csf-20/courseb/standards/"
         ],
         [
           "curriculumGuide",
           "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         ]
       ],
-      "peer_reviews_to_complete": 0
+      "peer_reviews_to_complete": 0,
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": "courseb",

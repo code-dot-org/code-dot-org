@@ -2,12 +2,12 @@ hideable_lessons true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csf"]]
 lesson_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'express'
 version_year '2021'
 curriculum_umbrella 'CSF'
+is_course true
 
 lesson_group 'csf_warmup', display_name: 'Warm-Up'
 lesson 'Dance Party', display_name: 'Dance Party'
