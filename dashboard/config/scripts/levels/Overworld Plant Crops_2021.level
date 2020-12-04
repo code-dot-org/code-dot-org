@@ -1,0 +1,129 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2020-12-04T22:23:55.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"farmlandWet\",\"water\",\"farmlandWet\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"farmlandWet\",\"water\",\"farmlandWet\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"farmlandWet\",\"water\",\"farmlandWet\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"farmlandWet\",\"water\",\"farmlandWet\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"farmlandWet\",\"water\",\"farmlandWet\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"farmlandWet\",\"water\",\"farmlandWet\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"flowerOxeeye\",\"tallGrass\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"flowerDandelion\",\"tallGrass\",\"tallGrass\",\"tallGrass\",\"flowerDandelion\",\"\",\"\",\"\",\"\",\"\",\"\",\"flowerDandelion\",\"\",\"flowerDandelion\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"flowerDandelion\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"flowerDandelion\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"tallGrass\"]",
+    "action_plane": "[\"\",\"\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"houseRightC\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"houseRightB\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"houseRightA\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"houseBottomD\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "fluff_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "player_start_position": "[4, 7]",
+    "player_start_direction": "0",
+    "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.solutionMapMatchesResultMap(\r\n            [\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"cropWheat\", \"\", \"cropWheat\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"\r\n            ]);\r\n}",
+    "short_instructions": "It’s good to plan ahead. Plant crops on both sides of the water so you don’t get hungry later on.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "is_daytime": "true",
+    "ideal": "11",
+    "embed": "false",
+    "free_play": "false",
+    "grid_width": "10",
+    "grid_height": "10",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `plant crop` block to plant a crop in the space where you are standing.\",\"hint_id\":\"mc_7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fa3a54d82401b82d1702877d177ed5a9/Overworld Plant Crops.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Both stripes of dark brown land by the water need to be filled with crops.\",\"hint_id\":\"mc_7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e47070564e384a962f88f4ea02623b76/Overworld Plant Crops.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can put more than one block inside of a `repeat` loop.\",\"hint_id\":\"mc_7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/964e78e57d5e92e779408cea2ba63b73/Overworld Plant Crops.mp3\"}]",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "use_score": "false",
+    "is_event_level": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "level_verification_timeout": "0",
+    "use_player": "false",
+    "hint_prompt_attempts_threshold": 7,
+    "parent_level_id": 21240,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 15:25:10 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:48:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-26 00:43:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 22:32:08 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_plantCrop"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+        </block>
+        <block type="craft_shear"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+              <statement name="DO">
+                <block type="craft_plantCrop">
+                  <next>
+                    <block type="craft_moveForward"/>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="craft_turn">
+                  <title name="DIR">right</title>
+                  <next>
+                    <block type="craft_moveForward">
+                      <next>
+                        <block type="craft_moveForward">
+                          <next>
+                            <block type="craft_turn">
+                              <title name="DIR">right</title>
+                              <next>
+                                <block type="controls_repeat_dropdown">
+                                  <title name="TIMES" config="2-10">6</title>
+                                  <statement name="DO">
+                                    <block type="craft_moveForward">
+                                      <next>
+                                        <block type="craft_plantCrop"/>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Craft>
