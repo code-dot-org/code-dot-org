@@ -469,12 +469,7 @@ module LevelsHelper
 
   def azure_speech_service_options
     return {} unless @level.game.use_azure_speech_service?
-
-    {
-      token: AzureTextToSpeech.get_token,
-      url: "https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/v1",
-      voices: AzureTextToSpeech.get_voices
-    }
+    {voices: AzureTextToSpeech.get_voices || {}}
   end
 
   # Options hash for Blockly
