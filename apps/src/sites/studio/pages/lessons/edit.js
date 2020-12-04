@@ -98,6 +98,9 @@ $(document).ready(function() {
         initialDisplayName={lessonData.name}
         initialOverview={lessonData.overview || ''}
         initialStudentOverview={lessonData.studentOverview || ''}
+        initialAssessmentOpportunities={
+          lessonData.assessmentOpportunities || ''
+        }
         initialUnplugged={lessonData.unplugged}
         initialLockable={lessonData.lockable}
         initialCreativeCommonsLicense={lessonData.creativeCommonsLicense}
