@@ -47,11 +47,12 @@ class FoormEditorManager extends React.Component {
     return formNamesAndVersions.map((formNameAndVersion, i) => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
+      const formId = formNameAndVersion['id'];
       return (
         <MenuItem
           key={i}
           eventKey={i}
-          onClick={() => this.loadConfiguration(formName, formVersion)}
+          onClick={() => this.loadConfiguration(formName, formVersion, formId)}
         >
           {`${formName}, version ${formVersion}`}
         </MenuItem>
@@ -59,11 +60,10 @@ class FoormEditorManager extends React.Component {
     });
   }
 
-  loadConfiguration(formName, formVersion) {
+  loadConfiguration(formName, formVersion, formId) {
     $.ajax({
-      url: '/api/v1/pd/foorm/form_data',
-      type: 'get',
-      data: {name: formName, version: formVersion}
+      url: `/api/v1/pd/foorm/form/${formId}`,
+      type: 'get'
     })
       .done(result => {
         this.props.updateFormData(result);
@@ -71,6 +71,7 @@ class FoormEditorManager extends React.Component {
           showCodeMirror: true,
           formName: formName,
           formVersion: formVersion,
+          formId: formId,
           hasLoadError: false
         });
         this.props.resetCodeMirror(result['questions']);
@@ -81,6 +82,7 @@ class FoormEditorManager extends React.Component {
           showCodeMirror: true,
           formName: null,
           formVersion: null,
+          formId: null,
           hasLoadError: true
         });
         this.props.resetCodeMirror({});
@@ -92,6 +94,7 @@ class FoormEditorManager extends React.Component {
       showCodeMirror: true,
       formName: null,
       formVersion: null,
+      formId: null,
       hasLoadError: false
     });
     this.props.resetCodeMirror({});
@@ -125,6 +128,7 @@ class FoormEditorManager extends React.Component {
             populateCodeMirror={this.props.populateCodeMirror}
             formName={this.state.formName}
             formVersion={this.state.formVersion}
+            formId={this.state.formId}
           />
         )}
       </div>
