@@ -19726,3 +19726,167 @@ en:
             csp_unit10_2020:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
           name: csp10-2021
+        coursea-2021:
+          title: Course A (2020)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+          description_audience: 'Ages: 4-7'
+          lessons:
+            Safety in My Online Neighborhood:
+              key: Safety in My Online Neighborhood
+              name: Safety in My Online Neighborhood
+              description_student: Learn how to go places safely online.
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                The power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.
+            Learn to Drag and Drop:
+              key: Learn to Drag and Drop
+              name: Learn to Drag and Drop
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+            'Programming: Happy Maps':
+              key: 'Programming: Happy Maps'
+              name: Happy Maps
+              description_student: Write instructions to get the Flurb to the fruit.
+              description_teacher: 'This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.'
+            Sequencing with Scrat:
+              key: Sequencing with Scrat
+              name: Sequencing with Scrat
+              description_student: Program Scrat to reach the acorn.
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
+            Programming in Ice Age:
+              key: Programming in Ice Age
+              name: Programming with Scrat
+              description_student: Write programs to help Scrat reach the acorn.
+              description_teacher: Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+            Programming with Rey and BB-8:
+              key: Programming with Rey and BB-8
+              name: Programming with Rey and BB-8
+              description_student: Help BB-8 collect the scrap metal.
+              description_teacher: In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
+            'Loops: Happy Loops':
+              key: 'Loops: Happy Loops'
+              name: Happy Loops
+              description_student: Help the Flurb solve bigger problems using loops.
+              description_teacher: This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.
+            Loops in Ice Age:
+              key: Loops in Ice Age
+              name: Loops with Scrat
+              description_student: Help Scrat cover more ground using loops.
+              description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to get to the acorn more efficiently on Code.org.
+            Loops in Collector:
+              key: Loops in Collector
+              name: Loops with Laurel
+              description_student: Help Laurel the adventurer collect the treasure underground.
+              description_teacher: In this lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze and picking corn. Here, loops are used to collect treasure in open cave spaces.
+            Ocean Scene with Loops:
+              key: Ocean Scene with Loops
+              name: Ocean Scene with Loops
+              description_student: Use loops and patterns to finish the images.
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+            'Events: The Big Event':
+              key: 'Events: The Big Event'
+              name: The Big Event Jr.
+              description_student: Move and shout when your teachers presses buttons on a giant remote.
+              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+            Events in Play Lab:
+              key: Events in Play Lab
+              name: On the Move with Events
+              description_student: Create your own game or story.
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+          name: coursea-2021
+        courseb-2021:
+          title: Course B (2020)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_audience: 'Ages: 5-8'
+          lessons:
+            Digital Trails:
+              key: Digital Trails
+              name: Digital Trails
+              description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
+              description_teacher: |-
+                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
+
+                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Does what you do online always stay online? Students learn that the information they share online leaves a digital footprint or "trail." Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.
+            Move It, Move It:
+              key: Move It, Move It
+              name: Move It, Move It
+              description_student: Program your classmates to step carefully from place to place.
+              description_teacher: This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course.  In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.
+            Sequencing in Maze:
+              key: Sequencing in Maze
+              name: Sequencing with Angry Birds
+              description_student: Help Red the Angry Bird follow the path to the naughty pig.
+              description_teacher: Using characters from Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+            Programming in Maze:
+              key: Programming in Maze
+              name: Programming with Angry Birds
+              description_student: Create programs to help the Angry Bird move through the maze.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+            Programming in Harvester:
+              key: Programming in Harvester
+              name: Programming with Harvester
+              description_student: Help the Harvester collect vegetables along a path.
+              description_teacher: 'Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. '
+            'Loops: Getting Loopy':
+              key: 'Loops: Getting Loopy'
+              name: Getting Loopy
+              description_student: In this lesson, we'll have a dance party using repeat loops!
+              description_teacher: As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.
+            Loops in Harvester:
+              key: Loops in Harvester
+              name: Loops with Harvester
+              description_student: Help the Harvester collect even more, using loops!
+              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to pick corn more efficiently on Code.org.
+            Loops in Collector:
+              key: Loops in Collector
+              name: Loops with Laurel
+              description_student: Program Laurel the adventurer to collect treasure in an open cave.
+              description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
+            Loops in Artist:
+              key: Loops in Artist
+              name: Drawing Gardens with Loops
+              description_student: Use patterns and loops to finish the images.
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+            The Right App:
+              key: The Right App
+              name: The Right App
+              description_student: Sketch your own smartphone app.
+              description_teacher: 'This lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user. '
+            'Events: The Big Event':
+              key: 'Events: The Big Event'
+              name: The Big Event Jr.
+              description_student: Move or shout when your teacher presses buttons on a giant remote.
+              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+            Events in Play Lab:
+              key: Events in Play Lab
+              name: A Royal Battle with Events
+              description_student: Use events to create a story or make an interactive game.
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_impacts:
+              display_name: Impacts of Computing
+            csf_events:
+              display_name: Events
+          name: courseb-2021
