@@ -41,7 +41,7 @@ CDO.log.info "Called with options: #{options}"
 # all possible affected users
 START_USER_ID = 71_826_397
 END_USER_ID = 71_929_059
-BATCH_SIZE = 500
+BATCH_SIZE = 200
 
 changes_committed = 0
 changes_rolled_back = 0
