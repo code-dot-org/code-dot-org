@@ -80,6 +80,7 @@ export default function initPage(scriptEditorData) {
         initialIsCourse={scriptData.is_course}
         hasCourse={scriptEditorData.has_course}
         initialShowCalendar={scriptData.showCalendar}
+        initialIsMigrated={scriptData.is_migrated}
       />
     </Provider>,
     document.querySelector('.edit_container')

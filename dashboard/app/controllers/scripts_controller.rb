@@ -198,6 +198,7 @@ class ScriptsController < ApplicationController
       :is_stable,
       :is_course,
       :show_calendar,
+      :is_migrated,
       :announcements,
       :pilot_experiment,
       :editor_experiment,

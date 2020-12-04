@@ -47,7 +47,8 @@ describe('LessonEditor', () => {
       initialPreparation: '- One',
       initialAnnouncements: [],
       relatedLessons: [],
-      initialObjectives: []
+      initialObjectives: [],
+      initialAssessmentOpportunities: 'Assessment Opportunities'
     };
   });
 
@@ -78,11 +79,11 @@ describe('LessonEditor', () => {
       'purpose'
     ).to.be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
-    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(4);
+    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(5);
     expect(wrapper.find('input').length).to.equal(19);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(7);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });
