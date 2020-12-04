@@ -1,0 +1,3212 @@
+{
+  "script": {
+    "name": "csp4-2021",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}",
+      "version_year": "2021",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "project_sharing": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-20/unit4/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-20/unit4/standards/"
+        ]
+      ],
+      "is_migrated": true,
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp4-2021"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_variables",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Variables"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "csp_conditionals",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Conditionals"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "csp_functions",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Functions"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "csp_project",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Variables Explore",
+      "name": "Variables Explore",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Variables Investigate",
+      "name": "Variables Investigate",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Variables Practice",
+      "name": "Variables Practice",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Variables Make",
+      "name": "Variables Make",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Conditionals Explore",
+      "name": "Conditionals Explore",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Conditionals Investigate",
+      "name": "Conditionals Investigate",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Conditionals Practice",
+      "name": "Conditionals Practice",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Conditional Make",
+      "name": "Conditional Make",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Functions Explore / Investigate",
+      "name": "Functions Explore / Investigate",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Functions Practice",
+      "name": "Functions Practice",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Functions Make",
+      "name": "Functions Make",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Project - Decision Maker App Part 1",
+      "name": "Project - Decision Maker App Part 1",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Project - Decision Maker App Part 2",
+      "name": "Project - Decision Maker App Part 2",
+      "absolute_position": 13,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Project - Decision Maker App Part 3",
+      "name": "Project - Decision Maker App Part 3",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "Lesson 15: Assessment Day",
+      "name": "Lesson 15: Assessment Day",
+      "absolute_position": 15,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 15: Assessment Day",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L1 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L1 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4 My Pet Rock Example App_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4 My Pet Rock Example App_2021"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L01 Poetry App_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L01 Poetry App_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L01 Thermostat App_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L01 Thermostat App_2021"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 L02 CYU MC_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U1 L02 CYU MC_2021"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L2 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L2 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v1"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v1_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v1_2021"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v1"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v1 Code_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v1 Code_2021"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v2"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v2_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v2_2021"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v3"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v3_2021"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v3"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3 pt2_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v3 pt2_2021"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 7,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 CYU Exit Ticket_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L02 CYU Exit Ticket_2021"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L3 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L3 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Assigning Numbers and Strings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 1_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variables numbers practice 1_2021"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Assigning Numbers and Strings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 4_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variables numbers practice 4_2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 1_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 1_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 3_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 3_2021"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 2_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 2_2021"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 5_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 5_2021"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 6_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 6_2021"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Debugging Scope Issues"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variable Scope: Local vs. Global_2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "Debugging Scope Issues"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Scope Issue_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Scope Issue_2021"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+        "progression": "Putting it Together"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 4_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 4_2021"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 12,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding: AP Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L3 CFU Variables Psuedocode_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L3 CFU Variables Psuedocode_2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 13,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding: AP Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L3 CFU Variables Randomness Psuedocode_2021"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L4 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L4 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Try the Photo Liker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project_2021"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L04 Variables Make Project_2021"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Make the Photo Liker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project Submit_2021"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L04 Variables Make Project Submit_2021"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L5 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L5 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L05 CYU Exit Ticket_2021"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L05 CYU Exit Ticket_2021"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L6 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L6 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if Statements_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L06 Introduction to Conditionals: if Statements_2021"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L06 Lemon Hunter App v1 Code_2021"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Else Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if-else Statements_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L06 Introduction to Conditionals: if-else Statements_2021"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Else Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Else Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v2 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L06 Lemon Hunter App v2 Code_2021"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators: AND OR"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators: AND OR"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v3 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L06 Lemon Hunter App v3 Code_2021"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Patterns: If-else-if"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Checking Multiple Conditions with If-elseif_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "Checking Multiple Conditions with If-elseif_2021"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 10,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 CYU Exit Ticket_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L06 CYU Exit Ticket_2021"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L7 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L7 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 1_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 1_2021"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 2_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 2_2021"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 3_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 3_2021"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 10_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 10_2021"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 4_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 4_2021"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 5_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 5_2021"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 6_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 6_2021"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice equivalent expressions_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice equivalent expressions_2021"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 7_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 7_2021"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 8_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 8_2021"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 12,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding: AP Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L10 CFU Conditionals Psuedocode_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L10 CFU Conditionals Psuedocode_2021"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 13,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding: AP Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L10 CFU Conditionals Psuedocode 2_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L10 CFU Conditionals Psuedocode 2_2021"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L8 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L8 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Try to the Museum Ticket Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L08 Conditionals Make Project Sample_2021"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L08 Conditionals Make Project Sample_2021"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Make the Museum Ticket Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator_2021"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L08 Museum Ticket Generator_2021"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L9 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L9 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Explore Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L09 Functions Song_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L09 Functions Song_2021"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Declaring and Calling Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L09 Intro to Functions Video_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L09 Intro to Functions Video_2021"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Declaring and Calling Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L09 Score Clicker Investigate_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L09 Score Clicker Investigate_2021"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Declaring and Calling Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L09 Thermostat App v7_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L09 Thermostat App v7_2021"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Update Screen Pattern"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "updateScreen Pattern_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "updateScreen Pattern_2021"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 7,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4 L09 CFU Exit Ticket_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4 L09 CFU Exit Ticket_2021"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L10 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L10 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice Calling Functions 1_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L10 Functions Practice Calling Functions 1_2021"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 1_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L10 Functions Practice 1_2021"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 2_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L10 Functions Practice 2_2021"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 3_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L10 Functions Practice 3_2021"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Build Practice 2_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L10 Functions Build Practice 2_2021"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Function Scope"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Debugging Variable Scope and Functions_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "Debugging Variable Scope and Functions_2021"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Function Scope"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Scope Practice 1 v2_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L10 Functions Scope Practice 1 v2_2021"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "When to Declare Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "When to Make Functions Map_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "When to Make Functions Map_2021"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "When to Declare Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Making Functions Practice_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L10 Making Functions Practice_2021"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 11,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding: AP Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L10 CFU Functions Psuedocode_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4L10 CFU Functions Psuedocode_2021"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L11 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L11 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 1 2020_2021"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 1 2020_2021"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Make the Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 2020_2021"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 2020_2021"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L12 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L12 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L12 Practice PT 1_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L12 Practice PT 1_2021"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L12 Practice PT 2_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L12 Practice PT 2_2021"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L13 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L13 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Create the Screens"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 1_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L13 Practice PT 1_2021"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Create the Variables"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 2_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L13 Practice PT 2_2021"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Create the Function"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 3_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L13 Practice PT 3_2021"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Add onEvents"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 4_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L13 Practice PT 4_2021"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L14 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L14 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Test Your Decision Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L14 Practice PT 1_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L14 Practice PT 1_2021"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Submit Your Decision Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L14 Practice PT 2_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "U4 L14 Practice PT 2_2021"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L15 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Lesson 15: Assessment Day",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP U4L15 SFLP 20-21_2021"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 4 Exam"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Unit 4 Assessment_2021"
+        ],
+        "lesson.key": "Lesson 15: Assessment Day",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      },
+      "level_keys": [
+        "CSP 20-21 Unit 4 Assessment_2021"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L1 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L1 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4 My Pet Rock Example App_2021",
+        "script_level.level_keys": [
+          "CSP U4 My Pet Rock Example App_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L01 Poetry App_2021",
+        "script_level.level_keys": [
+          "U4 L01 Poetry App_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L01 Thermostat App_2021",
+        "script_level.level_keys": [
+          "U4 L01 Thermostat App_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 L02 CYU MC_2021",
+        "script_level.level_keys": [
+          "U1 L02 CYU MC_2021"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L2 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L2 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v1_2021",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v1_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v1 Code_2021",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v1 Code_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v2_2021",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v2_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v3_2021",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v3 pt2_2021",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3 pt2_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 CYU Exit Ticket_2021",
+        "script_level.level_keys": [
+          "U4 L02 CYU Exit Ticket_2021"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L3 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L3 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables numbers practice 1_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 1_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables numbers practice 4_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 4_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 1_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 1_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 3_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 3_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 2_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 2_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 5_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 5_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 6_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 6_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variable Scope: Local vs. Global_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Scope Issue_2021",
+        "script_level.level_keys": [
+          "U4 L03 Scope Issue_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 4_2021",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 4_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L3 CFU Variables Psuedocode_2021",
+        "script_level.level_keys": [
+          "U4L3 CFU Variables Psuedocode_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L3 CFU Variables Randomness Psuedocode_2021",
+        "script_level.level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode_2021"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L4 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L4 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L04 Variables Make Project_2021",
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project_2021"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L04 Variables Make Project Submit_2021",
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project Submit_2021"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L5 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L5 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Introduction to Conditionals: Boolean Expressions_2021",
+        "script_level.level_keys": [
+          "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L05 CYU Exit Ticket_2021",
+        "script_level.level_keys": [
+          "U4 L05 CYU Exit Ticket_2021"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L6 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L6 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: if Statements_2021",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if Statements_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Lemon Hunter App v1 Code_2021",
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: if-else Statements_2021",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if-else Statements_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: if-else-if Statements_2021",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Lemon Hunter App v2 Code_2021",
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v2 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Lemon Hunter App v3 Code_2021",
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v3 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Checking Multiple Conditions with If-elseif_2021",
+        "script_level.level_keys": [
+          "Checking Multiple Conditions with If-elseif_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 CYU Exit Ticket_2021",
+        "script_level.level_keys": [
+          "U4 L06 CYU Exit Ticket_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L7 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L7 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 1_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 1_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 2_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 2_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 3_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 3_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 10_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 10_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 4_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 4_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 5_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 5_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 6_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 6_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice equivalent expressions_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice equivalent expressions_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 7_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 7_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 8_2021",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 8_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L10 CFU Conditionals Psuedocode_2021",
+        "script_level.level_keys": [
+          "U4L10 CFU Conditionals Psuedocode_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L10 CFU Conditionals Psuedocode 2_2021",
+        "script_level.level_keys": [
+          "U4L10 CFU Conditionals Psuedocode 2_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L8 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L8 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L08 Conditionals Make Project Sample_2021",
+        "script_level.level_keys": [
+          "U4 L08 Conditionals Make Project Sample_2021"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08 Museum Ticket Generator_2021",
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator_2021"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L9 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L9 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L09 Functions Song_2021",
+        "script_level.level_keys": [
+          "U4 L09 Functions Song_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L09 Intro to Functions Video_2021",
+        "script_level.level_keys": [
+          "U4L09 Intro to Functions Video_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L09 Score Clicker Investigate_2021",
+        "script_level.level_keys": [
+          "U4 L09 Score Clicker Investigate_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L09 Thermostat App v7_2021",
+        "script_level.level_keys": [
+          "U4 L09 Thermostat App v7_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "updateScreen Pattern_2021",
+        "script_level.level_keys": [
+          "updateScreen Pattern_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4 L09 CFU Exit Ticket_2021",
+        "script_level.level_keys": [
+          "CSP U4 L09 CFU Exit Ticket_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L10 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L10 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Practice Calling Functions 1_2021",
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice Calling Functions 1_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Practice 1_2021",
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 1_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Practice 2_2021",
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 2_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Practice 3_2021",
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 3_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Build Practice 2_2021",
+        "script_level.level_keys": [
+          "U4 L10 Functions Build Practice 2_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Debugging Variable Scope and Functions_2021",
+        "script_level.level_keys": [
+          "Debugging Variable Scope and Functions_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Scope Practice 1 v2_2021",
+        "script_level.level_keys": [
+          "U4 L10 Functions Scope Practice 1 v2_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "When to Make Functions Map_2021",
+        "script_level.level_keys": [
+          "When to Make Functions Map_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Making Functions Practice_2021",
+        "script_level.level_keys": [
+          "U4 L10 Making Functions Practice_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L10 CFU Functions Psuedocode_2021",
+        "script_level.level_keys": [
+          "U4L10 CFU Functions Psuedocode_2021"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L11 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L11 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 1 2020_2021",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 1 2020_2021"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 2020_2021",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 2020_2021"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L12 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L12 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L12 Practice PT 1_2021",
+        "script_level.level_keys": [
+          "U4 L12 Practice PT 1_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L12 Practice PT 2_2021",
+        "script_level.level_keys": [
+          "U4 L12 Practice PT 2_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L13 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L13 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L13 Practice PT 1_2021",
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 1_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L13 Practice PT 2_2021",
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 2_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L13 Practice PT 3_2021",
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 3_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L13 Practice PT 4_2021",
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 4_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L14 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L14 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L14 Practice PT 1_2021",
+        "script_level.level_keys": [
+          "U4 L14 Practice PT 1_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L14 Practice PT 2_2021",
+        "script_level.level_keys": [
+          "U4 L14 Practice PT 2_2021"
+        ],
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L15 SFLP 20-21_2021",
+        "script_level.level_keys": [
+          "CSP U4L15 SFLP 20-21_2021"
+        ],
+        "lesson.key": "Lesson 15: Assessment Day",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Unit 4 Assessment_2021",
+        "script_level.level_keys": [
+          "CSP 20-21 Unit 4 Assessment_2021"
+        ],
+        "lesson.key": "Lesson 15: Assessment Day",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2021"
+      }
+    }
+  ]
+}
