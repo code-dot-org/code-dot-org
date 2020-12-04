@@ -99,6 +99,7 @@ class LevelToken extends Component {
     removeLevel: PropTypes.func.isRequired,
 
     // from redux
+    levelKeyList: PropTypes.object.isRequired,
     toggleExpand: PropTypes.func
   };
 
@@ -224,7 +225,9 @@ class LevelToken extends Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    levelKeyList: state.levelKeyList
+  }),
   {
     toggleExpand
   }
