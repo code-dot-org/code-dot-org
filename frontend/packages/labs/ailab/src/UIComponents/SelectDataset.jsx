@@ -51,18 +51,7 @@ class SelectDataset extends Component {
 
     parseCSV(csvPath, true, false);
 
-    parseJSON(jsonPath, result => {
-      if (this.props.mode && this.props.mode.hideSpecifyColunns) {
-        for (const field of result.fields) {
-          this.props.setColumnsByDataType(field.id, field.type);
-        }
-      }
-
-      if (this.props.mode && this.props.mode.hideSelectLabel) {
-        // Use the manifest's default label instead.
-        this.props.setLabelColumn(result.defaultLabelColumn);
-      }
-    });
+    parseJSON(jsonPath);
   };
 
   handleUploadSelect = event => {

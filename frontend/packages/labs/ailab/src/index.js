@@ -46,13 +46,7 @@ const processMode = mode => {
       parseCSV(assetPath + item.path, true, false);
 
       // Also retrieve model metadata and set column data types.
-      parseJSON(assetPath + item.metadataPath, result => {
-        if (mode.hideSpecifyColunns) {
-          for (const field of result.fields) {
-            store.dispatch(setColumnsByDataType(field.id, field.type));
-          }
-        }
-      });
+      parseJSON(assetPath + item.metadataPath);
 
       store.dispatch(setCurrentPanel("dataDisplay"));
     }
