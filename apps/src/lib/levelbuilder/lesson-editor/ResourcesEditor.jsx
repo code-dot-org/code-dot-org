@@ -150,7 +150,7 @@ class ResourcesEditor extends Component {
     this.props.editResource(resource);
   };
 
-  handleRemove = resource => {
+  handleRemoveResourceDialogOpen = resource => {
     this.setState({resourceToRemove: resource, confirmRemovalDialogOpen: true});
   };
 
@@ -257,7 +257,9 @@ class ResourcesEditor extends Component {
                     <div
                       style={styles.remove}
                       className="unit-test-remove-resource"
-                      onMouseDown={() => this.handleRemove(resource)}
+                      onMouseDown={() =>
+                        this.handleRemoveResourceDialogOpen(resource)
+                      }
                     >
                       <i className="fa fa-times" />
                     </div>
