@@ -301,13 +301,15 @@ class LessonEditor extends Component {
           />
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection
-          title="Resources"
-          collapsed={true}
-          fullWidth={true}
-        >
-          <ResourcesEditor courseVersionId={this.props.courseVersionId} />
-        </CollapsibleEditorSection>
+        {this.props.courseVersionId && (
+          <CollapsibleEditorSection
+            title="Resources"
+            collapsed={true}
+            fullWidth={true}
+          >
+            <ResourcesEditor courseVersionId={this.props.courseVersionId} />
+          </CollapsibleEditorSection>
+        )}
 
         <CollapsibleEditorSection
           title="Objectives"
