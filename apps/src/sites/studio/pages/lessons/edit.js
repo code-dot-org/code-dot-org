@@ -18,7 +18,6 @@ $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
   const searchOptions = getScriptData('searchOptions');
-  const levelKeyList = getScriptData('levelKeyList');
 
   const activities = lessonData.activities;
   const objectives = lessonData.objectives || [];
@@ -85,7 +84,7 @@ $(document).ready(function() {
   registerReducers({...reducers, resources: resourcesEditor});
   const store = getStore();
 
-  store.dispatch(init(activities, levelKeyList, searchOptions));
+  store.dispatch(init(activities, searchOptions));
   store.dispatch(initResources(lessonData.resources || []));
 
   ReactDOM.render(

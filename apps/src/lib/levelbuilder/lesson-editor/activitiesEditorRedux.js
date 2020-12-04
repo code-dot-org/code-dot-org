@@ -36,10 +36,9 @@ export const NEW_LEVEL_ID = -1;
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const init = (activities, levelKeyList, searchOptions) => ({
+export const init = (activities, searchOptions) => ({
   type: INIT,
   activities,
-  levelKeyList,
   searchOptions
 });
 
@@ -553,37 +552,10 @@ function activities(state = [], action) {
   return newState;
 }
 
-function levelKeyList(state = {}, action) {
-  switch (action.type) {
-    case INIT:
-      return action.levelKeyList;
-  }
-  return state;
-}
-
 function searchOptions(state = {}, action) {
   switch (action.type) {
     case INIT:
       return action.searchOptions;
-  }
-  return state;
-}
-
-function levelNameToIdMap(state = {}, action) {
-  switch (action.type) {
-    case INIT: {
-      if (!action.levelKeyList) {
-        // This can be falsy if the new editor experiment is not enabled
-        return state;
-      }
-
-      const levelNameToIdMap = {};
-      Object.keys(action.levelKeyList).forEach(levelId => {
-        const levelKey = action.levelKeyList[levelId];
-        levelNameToIdMap[levelKey] = +levelId;
-      });
-      return levelNameToIdMap;
-    }
   }
   return state;
 }
@@ -647,9 +619,7 @@ function validateScriptLevel(scriptLevel, location) {
 
 export default {
   activities,
-  levelKeyList,
-  searchOptions,
-  levelNameToIdMap
+  searchOptions
 };
 
 export const emptyActivitySection = {

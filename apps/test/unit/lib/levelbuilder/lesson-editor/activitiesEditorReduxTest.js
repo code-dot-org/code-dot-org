@@ -27,7 +27,6 @@ import _ from 'lodash';
 import {expect, assert} from '../../../../util/reconfiguredChai';
 
 const getInitialState = () => ({
-  levelKeyList: {},
   activities: _.cloneDeep(sampleActivities)
 });
 

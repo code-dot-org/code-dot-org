@@ -2,13 +2,6 @@ import React from 'react';
 import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {action} from '@storybook/addon-actions';
 
-const levelKeyList = {
-  1: 'Level One',
-  2: 'Level Two',
-  3: 'Level Three',
-  4: 'blockly:Studio:playlab_1'
-};
-
 const levelNameToIdMap = {
   'Level One': 1,
   'Level Two': 2,
@@ -62,7 +55,6 @@ export default storybook => {
       story: () => (
         <div style={{width: 800}}>
           <LevelTokenDetails
-            levelKeyList={levelKeyList}
             levelNameToIdMap={levelNameToIdMap}
             chooseLevel={action('chooseLevel')}
             addVariant={action('addVariant')}
@@ -82,7 +74,6 @@ export default storybook => {
       story: () => (
         <div style={{width: 800}}>
           <LevelTokenDetails
-            levelKeyList={levelKeyList}
             levelNameToIdMap={levelNameToIdMap}
             chooseLevel={action('chooseLevel')}
             addVariant={action('addVariant')}
