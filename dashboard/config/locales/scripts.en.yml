@@ -19501,3 +19501,228 @@ en:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithms'
           name: csp6-2021
+        csp7-2021:
+          title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
+          description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
+          description_audience: ''
+          lessons:
+            Parameters and Return Explore:
+              key: Parameters and Return Explore
+              name: Parameters and Return Explore
+              description_student: ''
+              description_teacher: ''
+            Parameters and Return Investigate:
+              key: Parameters and Return Investigate
+              name: Parameters and Return Investigate
+              description_student: ''
+              description_teacher: ''
+            Parameters and Return Practice:
+              key: Parameters and Return Practice
+              name: Parameters and Return Practice
+              description_student: ''
+              description_teacher: ''
+            Parameters and Return Make:
+              key: Parameters and Return Make
+              name: Parameters and Return Make
+              description_student: ''
+              description_teacher: ''
+            Libraries Explore:
+              key: Libraries Explore
+              name: Libraries Explore
+              description_student: ''
+              description_teacher: ''
+            Libraries Investigate:
+              key: Libraries Investigate
+              name: Libraries Investigate
+              description_student: ''
+              description_teacher: ''
+            Libraries Practice:
+              key: Libraries Practice
+              name: Libraries Practice
+              description_student: ''
+              description_teacher: ''
+            Project - Make a Library Part 1:
+              key: Project - Make a Library Part 1
+              name: Project - Make a Library Part 1
+              description_student: ''
+              description_teacher: ''
+            Project - Make a Library Part 2:
+              key: Project - Make a Library Part 2
+              name: Project - Make a Library Part 2
+              description_student: ''
+              description_teacher: ''
+            Project - Make a Library Part 3:
+              key: Project - Make a Library Part 3
+              name: Project - Make a Library Part 3
+              description_student: ''
+              description_teacher: ''
+            'Lesson 11: Assessment Day':
+              key: 'Lesson 11: Assessment Day'
+              name: 'Lesson 11: Assessment Day'
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters and Return Values
+            csp_libraries:
+              display_name: Libraries
+          name: csp7-2021
+        csp8-2021:
+          title: CSP Unit 8 - Create PT Prep ('20-'21)
+          description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
+          description_short: Practice and complete the Create Performance Task (PT).
+          description_audience: ''
+          lessons:
+            Create PT - Review the Task:
+              key: Create PT - Review the Task
+              name: Create PT - Review the Task
+              description_student: ''
+              description_teacher: ''
+            Create PT - Make a Plan:
+              key: Create PT - Make a Plan
+              name: Create PT - Make a Plan
+              description_student: ''
+              description_teacher: ''
+            Create PT - Complete the Task:
+              key: Create PT - Complete the Task
+              name: Create PT - Complete the Task
+              description_student: ''
+              description_teacher: ''
+          lesson_groups: {}
+          name: csp8-2021
+        csp9-2021:
+          title: CSP Unit 9 - Data ('20-'21)
+          description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
+          description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
+          description_audience: ''
+          lessons:
+            Learning From Data:
+              key: Learning From Data
+              name: Learning From Data
+              description_student: ''
+              description_teacher: ''
+            Exploring One Column:
+              key: Exploring One Column
+              name: Exploring One Column
+              description_student: ''
+              description_teacher: ''
+            Filtering and Cleaning Data:
+              key: Filtering and Cleaning Data
+              name: Filtering and Cleaning Data
+              description_student: ''
+              description_teacher: ''
+            Exploring Two Columns:
+              key: Exploring Two Columns
+              name: Exploring Two Columns
+              description_student: ''
+              description_teacher: ''
+            Big Data, Crowdsourcing, and Machine Learning:
+              key: Big Data, Crowdsourcing, and Machine Learning
+              name: Big Data, Crowdsourcing, and Machine Learning
+              description_student: ''
+              description_teacher: ''
+            Machine Learning and Bias:
+              key: Machine Learning and Bias
+              name: Machine Learning and Bias
+              description_student: ''
+              description_teacher: ''
+            Project - Tell a Data Story - Part 1:
+              key: Project - Tell a Data Story - Part 1
+              name: Project - Tell a Data Story - Part 1
+              description_student: ''
+              description_teacher: ''
+            Project - Tell a Data Story - Part 2:
+              key: Project - Tell a Data Story - Part 2
+              name: Project - Tell a Data Story - Part 2
+              description_student: ''
+              description_teacher: ''
+            'Lesson 9: Assessment Day':
+              key: 'Lesson 9: Assessment Day'
+              name: 'Lesson 9: Assessment Day'
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Data'
+          name: csp9-2021
+        csp10-2021:
+          title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
+          description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
+          description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
+          description_audience: ''
+          lessons:
+            Project - Innovation Simulation Part 1:
+              key: Project - Innovation Simulation Part 1
+              name: Project - Innovation Simulation Part 1
+              description_student: ''
+              description_teacher: ''
+            Project - Innovation Simulation Part 2:
+              key: Project - Innovation Simulation Part 2
+              name: Project - Innovation Simulation Part 2
+              description_student: ''
+              description_teacher: ''
+            Data Policies and Privacy:
+              key: Data Policies and Privacy
+              name: Data Policies and Privacy
+              description_student: ''
+              description_teacher: ''
+            The Value of Privacy:
+              key: The Value of Privacy
+              name: The Value of Privacy
+              description_student: ''
+              description_teacher: ''
+            Project - Innovation Simulation Part 3:
+              key: Project - Innovation Simulation Part 3
+              name: Project - Innovation Simulation Part 3
+              description_student: ''
+              description_teacher: ''
+            Security Risks Part 1:
+              key: Security Risks Part 1
+              name: Security Risks Part 1
+              description_student: ''
+              description_teacher: ''
+            Security Risks Part 2:
+              key: Security Risks Part 2
+              name: Security Risks Part 2
+              description_student: ''
+              description_teacher: ''
+            'Project: Innovation Simulation Part 4':
+              key: 'Project: Innovation Simulation Part 4'
+              name: 'Project: Innovation Simulation Part 4'
+              description_student: ''
+              description_teacher: ''
+            Protecting Data Part 1:
+              key: Protecting Data Part 1
+              name: Protecting Data Part 1
+              description_student: ''
+              description_teacher: ''
+            Protecting Data Part 2:
+              key: Protecting Data Part 2
+              name: Protecting Data Part 2
+              description_student: ''
+              description_teacher: ''
+            'Project: Innovation Simulation Part 5':
+              key: 'Project: Innovation Simulation Part 5'
+              name: 'Project: Innovation Simulation Part 5'
+              description_student: ''
+              description_teacher: ''
+            'Project: Innovation Simulation Part 6':
+              key: 'Project: Innovation Simulation Part 6'
+              name: 'Project: Innovation Simulation Part 6'
+              description_student: ''
+              description_teacher: ''
+            'Project: Innovation Simulation Part 7':
+              key: 'Project: Innovation Simulation Part 7'
+              name: 'Project: Innovation Simulation Part 7'
+              description_student: ''
+              description_teacher: ''
+            'Lesson 14: Unit Assessment Day':
+              key: 'Lesson 14: Unit Assessment Day'
+              name: 'Lesson 14: Unit Assessment Day'
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unit 10: Cybersecurity and Global Impacts'
+          name: csp10-2021
