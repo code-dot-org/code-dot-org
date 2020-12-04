@@ -421,9 +421,9 @@ class ScriptEditor extends React.Component {
             <HelpTip>
               <p>
                 Check to enable the calendar view on the Unit Overview Page. The
-                The calendar displays each lesson and generally how long it will
-                will take as well how many weeks the unit is expected to take in
-                in general. (Actual calendar UI coming soon!)
+                calendar displays each lesson and generally how long it will
+                take as well how many weeks the unit is expected to take in
+                general. (Actual calendar UI coming soon!)
               </p>
             </HelpTip>
           </label>
