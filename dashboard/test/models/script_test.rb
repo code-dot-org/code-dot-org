@@ -875,6 +875,20 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script.summarize(false)[:lessons]
   end
 
+  test 'summarize includes show_calendar' do
+    script = create(:script, name: 'calendar-script')
+
+    script.show_calendar = true
+    assert script.show_calendar
+    summary = script.summarize
+    assert summary[:showCalendar]
+
+    script.show_calendar = false
+    refute script.show_calendar
+    summary = script.summarize
+    refute summary[:showCalendar]
+  end
+
   test 'summarize includes has_verified_resources' do
     script = create(:script, name: 'resources-script')
 
