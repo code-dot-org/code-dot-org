@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ReactTooltip from 'react-tooltip';
 import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
@@ -17,17 +16,12 @@ import {
   setCurrentView
 } from './sectionProgressRedux';
 import {loadScript} from './sectionProgressLoader';
-import {
-  ViewType,
-  scriptDataPropType,
-  tooltipIdForLessonNumber
-} from './sectionProgressConstants';
+import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   setScriptId,
   validScriptPropType
 } from '@cdo/apps/redux/scriptSelectionRedux';
-import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
 
@@ -84,11 +78,18 @@ class SectionProgress extends Component {
     showStandardsIntroDialog: PropTypes.bool
   };
 
+  constructor(props) {
+    super(props);
+    this.onChangeScript = this.onChangeScript.bind(this);
+    this.onChangeLevel = this.onChangeLevel.bind(this);
+    this.navigateToScript = this.navigateToScript.bind(this);
+  }
+
   componentDidMount() {
     loadScript(this.props.scriptId, this.props.section.id);
   }
 
-  onChangeScript = scriptId => {
+  onChangeScript(scriptId) {
     this.props.setScriptId(scriptId);
     loadScript(scriptId, this.props.section.id);
 
@@ -105,9 +106,9 @@ class SectionProgress extends Component {
       },
       {includeUserId: true}
     );
-  };
+  }
 
-  onChangeLevel = lessonOfInterest => {
+  onChangeLevel(lessonOfInterest) {
     this.props.setLessonOfInterest(lessonOfInterest);
 
     firehoseClient.putRecord(
@@ -123,29 +124,9 @@ class SectionProgress extends Component {
       },
       {includeUserId: true}
     );
-  };
-
-  // ReactTooltip must be rendered outside of the grid, otherwise the css
-  // position property of the grid elements will mess up the tooltip position.
-  renderTooltips() {
-    const lessonTooltips = this.props.scriptData.stages.map(stage => (
-      <ReactTooltip
-        id={tooltipIdForLessonNumber(stage.position)}
-        key={tooltipIdForLessonNumber(stage.position)}
-        role="tooltip"
-        wrapper="span"
-        effect="solid"
-      >
-        {stageIsAllAssessment(stage.levels) && (
-          <FontAwesome icon="check-circle" style={styles.icon} />
-        )}
-        {stage.name}
-      </ReactTooltip>
-    ));
-    return lessonTooltips;
   }
 
-  navigateToScript = () => {
+  navigateToScript() {
     firehoseClient.putRecord(
       {
         study: 'teacher_dashboard_actions',
@@ -158,7 +139,7 @@ class SectionProgress extends Component {
       },
       {includeUserId: true}
     );
-  };
+  }
 
   render() {
     const {
@@ -225,7 +206,6 @@ class SectionProgress extends Component {
               <DetailView />
             </div>
           )}
-          {levelDataInitialized && this.renderTooltips()}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView

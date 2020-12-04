@@ -3,10 +3,7 @@ import * as Table from 'reactabular-table';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
-import {
-  scriptDataPropType,
-  tooltipIdForLessonNumber
-} from '../sectionProgressConstants';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {
   summarizeProgressInStage,
@@ -41,11 +38,12 @@ export default class ProgressTableSummaryView extends React.Component {
     const stageData = this.props.scriptData.stages[columnIndex];
     return (
       <ProgressTableLessonNumber
+        name={stageData.name}
         number={stageData.relative_position}
         lockable={stageData.lockable}
         highlighted={stageData.position === this.props.lessonOfInterest}
-        tooltipId={tooltipIdForLessonNumber(columnIndex + 1)}
         onClick={() => this.props.onClickLesson(stageData.position)}
+        isAssessment={stageIsAllAssessment(stageData.levels)}
       />
     );
   }

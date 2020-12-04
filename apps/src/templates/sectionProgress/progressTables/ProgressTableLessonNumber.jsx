@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactTooltip from 'react-tooltip';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
@@ -37,28 +38,47 @@ const styles = {
     height: 6,
     transform: 'rotate(-45deg)',
     WebkitTransform: 'rotate(-45deg)'
+  },
+  icon: {
+    paddingRight: 5
   }
 };
 
 class ProgressTableLessonNumber extends React.Component {
   static propTypes = {
+    name: PropTypes.string.isRequired,
     number: PropTypes.number.isRequired,
     lockable: PropTypes.bool.isRequired,
     highlighted: PropTypes.bool.isRequired,
-    tooltipId: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
-    includeArrow: PropTypes.bool
+    includeArrow: PropTypes.bool,
+    isAssessment: PropTypes.bool
   };
 
+  tooltipId() {
+    return `tooltipForLesson${this.props.number}`;
+  }
+
+  renderTooltip() {
+    const id = this.tooltipId();
+    return (
+      <ReactTooltip
+        id={id}
+        key={id}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        {this.props.isAssessment && (
+          <FontAwesome icon="check-circle" style={styles.icon} />
+        )}
+        {this.props.name}
+      </ReactTooltip>
+    );
+  }
+
   render() {
-    const {
-      number,
-      lockable,
-      highlighted,
-      includeArrow,
-      tooltipId,
-      onClick
-    } = this.props;
+    const {number, lockable, highlighted, includeArrow, onClick} = this.props;
 
     const highlightStyle = highlighted ? styles.highlight : {};
     return (
@@ -66,8 +86,9 @@ class ProgressTableLessonNumber extends React.Component {
         style={{...styles.container, ...highlightStyle}}
         onClick={onClick}
         data-tip
-        data-for={tooltipId}
+        data-for={this.tooltipId()}
       >
+        {this.renderTooltip()}
         {lockable ? <FontAwesome icon="lock" /> : number}
         {includeArrow && <span style={styles.line} />}
         {includeArrow && <span style={styles.arrow} />}

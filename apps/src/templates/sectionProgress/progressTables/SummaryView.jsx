@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
 import {
   getCurrentScriptData,
   jumpToLessonDetails
@@ -24,11 +22,6 @@ class SummaryView extends React.Component {
     ),
     onClickLesson: PropTypes.func.isRequired
   };
-
-  // Re-attaches mouse handlers on tooltip targets to tooltips.  Called
-  // after the virtualized MultiGrid component scrolls, which may cause
-  // target cells to be created or destroyed.
-  afterScroll = _.debounce(ReactTooltip.rebuild, 10);
 
   render() {
     return (
