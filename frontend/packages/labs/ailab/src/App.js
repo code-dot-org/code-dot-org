@@ -142,7 +142,7 @@ class App extends Component {
     const { currentPanel, setCurrentPanel, validationMessages } = this.props;
 
     return (
-      <div>
+      <div style={styles.app}>
         <PanelTabs
           currentPanel={currentPanel}
           setCurrentPanel={setCurrentPanel}
