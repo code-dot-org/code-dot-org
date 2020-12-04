@@ -41,6 +41,7 @@ CDO.log.info "Called with options: #{options}"
 # all possible affected users
 START_USER_ID = 71_826_397
 END_USER_ID = 71_929_059
+BATCH_SIZE = 250
 
 changes_committed = 0
 changes_rolled_back = 0
@@ -50,7 +51,9 @@ User.after_rollback {changes_rolled_back += 1}
 # Address case 1 - generate username
 usernames_generated = 0
 generate_username_errors = 0
-User.where(username: nil).where.not(provider: nil).find_in_batches(start: START_USER_ID, finish: END_USER_ID) do |user_batch|
+User.where(username: nil).
+  where.not(provider: nil).
+  find_in_batches(start: START_USER_ID, finish: END_USER_ID, batch_size: BATCH_SIZE) do |user_batch|
   ActiveRecord::Base.transaction do
     user_batch.each do |user|
       usernames_generated += 1
@@ -69,7 +72,8 @@ end
 # Address case 2 - delete invalid rows
 users_destroyed = 0
 destroy_user_errors = 0
-User.where(provider: nil).find_in_batches(start: START_USER_ID, finish: END_USER_ID) do |user_batch|
+User.where(provider: nil).
+  find_in_batches(start: START_USER_ID, finish: END_USER_ID, batch_size: BATCH_SIZE) do |user_batch|
   ActiveRecord::Base.transaction do
     user_batch.each do |user|
       users_destroyed += 1
