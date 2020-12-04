@@ -110,8 +110,7 @@ class SpritelabInput extends React.Component {
   constructSpriteMap = memoize(animationPropsByKey => {
     const spriteMap = {};
     Object.values(animationPropsByKey).forEach(
-      animation =>
-        (spriteMap[`animation_${animation.name}`] = animation.sourceUrl)
+      animation => (spriteMap[`image_${animation.name}`] = animation.sourceUrl)
     );
     return spriteMap;
   });
