@@ -41,7 +41,7 @@ CDO.log.info "Called with options: #{options}"
 # all possible affected users
 START_USER_ID = 71_826_397
 END_USER_ID = 71_929_059
-BATCH_SIZE = 250
+BATCH_SIZE = 500
 
 changes_committed = 0
 changes_rolled_back = 0
@@ -54,18 +54,18 @@ generate_username_errors = 0
 User.where(username: nil).
   where.not(provider: nil).
   find_in_batches(start: START_USER_ID, finish: END_USER_ID, batch_size: BATCH_SIZE) do |user_batch|
-  ActiveRecord::Base.transaction do
-    user_batch.each do |user|
+  user_batch.each do |user|
+    ActiveRecord::Base.transaction do
       usernames_generated += 1
       user.username = UserHelpers.generate_username(User.with_deleted, user.name)
       CDO.log.info "Generated username: id=#{user.id}, username=#{user.username}"
       user.save!
-    rescue Exception => e
-      generate_username_errors += 1
-      CDO.log.error e
-    end
 
-    raise ActiveRecord::Rollback unless options[:actually_update]
+      raise ActiveRecord::Rollback unless options[:actually_update]
+    end
+  rescue Exception => e
+    generate_username_errors += 1
+    CDO.log.error e
   end
 end
 
@@ -74,17 +74,17 @@ users_destroyed = 0
 destroy_user_errors = 0
 User.where(provider: nil).
   find_in_batches(start: START_USER_ID, finish: END_USER_ID, batch_size: BATCH_SIZE) do |user_batch|
-  ActiveRecord::Base.transaction do
-    user_batch.each do |user|
+  user_batch.each do |user|
+    ActiveRecord::Base.transaction do
       users_destroyed += 1
       CDO.log.info "Destroying user: id=#{user.id}"
       user.destroy
-    rescue Exception => e
-      destroy_user_errors += 1
-      CDO.log.error e
-    end
 
-    raise ActiveRecord::Rollback unless options[:actually_update]
+      raise ActiveRecord::Rollback unless options[:actually_update]
+    end
+  rescue Exception => e
+    destroy_user_errors += 1
+    CDO.log.error e
   end
 end
 
