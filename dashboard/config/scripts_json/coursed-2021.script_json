@@ -7,7 +7,6 @@
     "properties": {
       "hideable_lessons": true,
       "lesson_extras_available": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursed/{LESSON}",
       "version_year": "2021",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
@@ -20,7 +19,9 @@
           "curriculumGuide",
           "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         ]
-      ]
+      ],
+      "peer_reviews_to_complete": 0,
+      "is_course": true
     },
     "new_name": null,
     "family_name": "coursed",
