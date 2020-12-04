@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import React from 'react';
+import memoize from 'memoize-one';
+import * as shapes from '../shapes';
 import {PromptType, popPrompt} from './spritelabInputModule';
 import * as coreLibrary from './coreLibrary';
 
@@ -60,11 +62,18 @@ const styles = {
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap'
+  },
+  choiceSprite: {
+    margin: '0px 8px',
+    height: 32,
+    width: 32,
+    objectFit: 'contain'
   }
 };
 
 class SpritelabInput extends React.Component {
   static propTypes = {
+    animationList: shapes.AnimationList.isRequired,
     inputList: PropTypes.array.isRequired,
     onPromptAnswer: PropTypes.func.isRequired
   };
@@ -90,7 +99,8 @@ class SpritelabInput extends React.Component {
   }
 
   onMultipleChoiceSubmit(e) {
-    this.userInputSubmit(e.target.value);
+    console.log(e);
+    this.userInputSubmit(e.target.getAttribute('value'));
   }
 
   toggleCollapsed = () =>
@@ -98,7 +108,19 @@ class SpritelabInput extends React.Component {
       collapsed: !this.state.collapsed
     });
 
+  constructSpriteMap = memoize(animationPropsByKey => {
+    const spriteMap = {};
+    Object.values(animationPropsByKey).forEach(
+      animation =>
+        (spriteMap[`animation_${animation.name}`] = animation.sourceUrl)
+    );
+    return spriteMap;
+  });
+
   render() {
+    const spriteMap = this.constructSpriteMap(
+      this.props.animationList.propsByKey
+    );
     const inputInfo = this.props.inputList[0];
     if (!inputInfo) {
       return null;
@@ -128,26 +150,35 @@ class SpritelabInput extends React.Component {
           </div>
         );
         break;
-      case PromptType.MULTIPLE_CHOICE:
+      case PromptType.MULTIPLE_CHOICE: {
+        const choices = inputInfo.choices.filter(choice => !!choice);
         inputRow = (
           <div style={styles.inputRow}>
-            {inputInfo.choices.map(
-              choice =>
-                choice && (
-                  <button
-                    key={choice}
-                    style={styles.choiceButton}
-                    type="button"
-                    value={choice}
-                    onClick={this.onMultipleChoiceSubmit.bind(this)}
-                  >
-                    {choice}
-                  </button>
-                )
+            {choices.map(choice =>
+              !!spriteMap[choice] ? (
+                <img
+                  key={choice}
+                  style={styles.choiceSprite}
+                  src={spriteMap[choice]}
+                  value={choice}
+                  onClick={this.onMultipleChoiceSubmit.bind(this)}
+                />
+              ) : (
+                <button
+                  key={choice}
+                  style={styles.choiceButton}
+                  type="button"
+                  value={choice}
+                  onClick={this.onMultipleChoiceSubmit.bind(this)}
+                >
+                  {choice}
+                </button>
+              )
             )}
           </div>
         );
         break;
+      }
       default:
         console.warn(`unknown prompt type: ${inputInfo.promptType}`);
     }
@@ -178,6 +209,7 @@ class SpritelabInput extends React.Component {
 
 export default connect(
   state => ({
+    animationList: state.animationList,
     inputList: state.spritelabInputList || []
   }),
   dispatch => ({

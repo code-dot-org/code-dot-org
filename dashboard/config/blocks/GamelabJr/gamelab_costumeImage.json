@@ -1,7 +1,8 @@
 {
   "category": "Logic",
   "config": {
-    "func": "costumeImage",
+    "name": "costumeImage",
+    "expression": "('animation_' + VALUE)",
     "blockText": "{COSTUME}",
     "args": [
       {
