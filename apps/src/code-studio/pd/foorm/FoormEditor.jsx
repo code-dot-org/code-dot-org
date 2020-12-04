@@ -234,7 +234,7 @@ class FoormEditor extends React.Component {
 
   save = () => {
     $.ajax({
-      url: `/foorm/form/${this.props.formId}`,
+      url: `/foorm/forms/${this.props.formId}/update_questions`,
       type: 'put',
       contentType: 'application/json',
       processData: false,
