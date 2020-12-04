@@ -28,9 +28,3 @@ export const ViewType = {
   DETAIL: 'detail', // levels
   STANDARDS: 'standards'
 };
-
-export const tooltipIdForStudent = studentId =>
-  `tooltipIdForStudent${studentId}`;
-
-export const tooltipIdForLessonNumber = lessonNumber =>
-  `tooltipForLesson${lessonNumber}`;

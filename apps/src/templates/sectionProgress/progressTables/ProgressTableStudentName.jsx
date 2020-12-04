@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
-import {tooltipIdForStudent} from '../sectionProgressConstants';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../../lib/util/firehose';
 import i18n from '@cdo/locale';
@@ -45,9 +44,13 @@ export default class ProgressTableStudentName extends React.PureComponent {
     );
   }
 
+  tooltipId() {
+    return `tooltipIdForStudent${this.props.studentId}`;
+  }
+
   renderTooltip() {
-    const {studentId, lastTimestamp, localeCode} = this.props;
-    const tooltipId = tooltipIdForStudent(studentId);
+    const {lastTimestamp, localeCode} = this.props;
+    const id = this.tooltipId();
     if (localeCode) {
       moment.locale(localeCode);
     }
@@ -56,8 +59,8 @@ export default class ProgressTableStudentName extends React.PureComponent {
       : i18n.none();
     return (
       <ReactTooltip
-        id={tooltipId}
-        key={tooltipId}
+        id={id}
+        key={id}
         role="tooltip"
         wrapper="span"
         effect="solid"
@@ -74,7 +77,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
   render() {
     const {name, studentId, sectionId, scriptName} = this.props;
     const studentUrl = scriptUrlForStudent(sectionId, scriptName, studentId);
-    const tooltipId = tooltipIdForStudent(studentId);
+    const tooltipId = this.tooltipId();
 
     return (
       <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>

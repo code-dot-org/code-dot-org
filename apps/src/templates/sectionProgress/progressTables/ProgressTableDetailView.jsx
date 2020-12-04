@@ -3,12 +3,12 @@ import * as Table from 'reactabular-table';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
-import {
-  scriptDataPropType,
-  tooltipIdForLessonNumber
-} from '../sectionProgressConstants';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import {levelProgressWithStatus} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  levelProgressWithStatus,
+  stageIsAllAssessment
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
@@ -59,6 +59,15 @@ export default class ProgressTableDetailView extends React.Component {
     const levels = stageData.levels;
     return (
       <div style={styles.headerContainer}>
+        <ProgressTableLessonNumber
+          name={stageData.name}
+          number={stageData.relative_position}
+          lockable={stageData.lockable}
+          highlighted={stageData.position === this.props.lessonOfInterest}
+          onClick={() => this.onLessonClick(stageData.position)}
+          includeArrow={levels.length > 1}
+          isAssessment={stageIsAllAssessment(levels)}
+        />
         <div style={styles.dummyProgress}>
           {this.renderDetailCell(
             dummyStudent,
@@ -66,14 +75,6 @@ export default class ProgressTableDetailView extends React.Component {
             this.dummyProgressForLevels(levels)
           )}
         </div>
-        <ProgressTableLessonNumber
-          number={stageData.relative_position}
-          lockable={stageData.lockable}
-          highlighted={stageData.position === this.props.lessonOfInterest}
-          tooltipId={tooltipIdForLessonNumber(columnIndex + 1)}
-          onClick={() => this.onLessonClick(stageData.position)}
-          includeArrow={levels.length > 1}
-        />
       </div>
     );
   }
