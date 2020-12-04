@@ -7,8 +7,8 @@ import {
   setSelectedFeatures,
   setShowPredict,
   getSelectableFeatures,
-  getSelectableLabels,
-  validationMessages
+  getShowSelectLabels,
+  getSelectableLabels
 } from "../redux";
 import { styles } from "../constants";
 
@@ -21,8 +21,8 @@ class SelectFeatures extends Component {
     setSelectedFeatures: PropTypes.func.isRequired,
     setShowPredict: PropTypes.func.isRequired,
     selectableFeatures: PropTypes.array,
+    showSelectLabels: PropTypes.bool,
     selectableLabels: PropTypes.array,
-    validationMessages: PropTypes.object,
     mode: PropTypes.object
   };
 
@@ -39,37 +39,41 @@ class SelectFeatures extends Component {
   };
 
   render() {
+    const {
+      showSelectLabels,
+      selectableLabels,
+      labelColumn,
+      selectableFeatures,
+      selectedFeatures
+    } = this.props;
+
     return (
       <div id="select-features">
         <div style={styles.panel}>
-          {!(this.props.mode && this.props.mode.hideSelectLabel) &&
-            this.props.selectableLabels.length > 0 && (
-              <form>
-                <label>
-                  <div style={styles.largeText}>
-                    Which column contains the labels for your dataset?
-                  </div>
-                  <p>
-                    The label is the column you'd like to train the model to
-                    predict.
-                  </p>
-                  <select
-                    value={this.props.labelColumn}
-                    onChange={this.handleChangeSelect}
-                  >
-                    <option>{""}</option>
-                    {this.props.selectableLabels.map((feature, index) => {
-                      return (
-                        <option key={index} value={feature}>
-                          {feature}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </label>
-              </form>
-            )}
-          {this.props.selectableFeatures.length > 0 && (
+          {showSelectLabels && (
+            <form>
+              <label>
+                <div style={styles.largeText}>
+                  Which column contains the labels for your dataset?
+                </div>
+                <p>
+                  The label is the column you'd like to train the model to
+                  predict.
+                </p>
+                <select value={labelColumn} onChange={this.handleChangeSelect}>
+                  <option>{""}</option>
+                  {selectableLabels.map((feature, index) => {
+                    return (
+                      <option key={index} value={feature}>
+                        {feature}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+            </form>
+          )}
+          {selectableFeatures.length > 0 && (
             <form>
               <p />
               <label>
@@ -82,10 +86,10 @@ class SelectFeatures extends Component {
                 </p>
                 <select
                   multiple={true}
-                  value={this.props.selectedFeatures}
+                  value={selectedFeatures}
                   onChange={this.handleChangeMultiSelect}
                 >
-                  {this.props.selectableFeatures.map((feature, index) => {
+                  {selectableFeatures.map((feature, index) => {
                     return (
                       <option key={index} value={feature}>
                         {feature}
@@ -107,8 +111,8 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     selectableFeatures: getSelectableFeatures(state),
+    showSelectLabels: getShowSelectLabels(state),
     selectableLabels: getSelectableLabels(state),
-    validationMessages: validationMessages(state),
     mode: state.mode
   }),
   dispatch => ({

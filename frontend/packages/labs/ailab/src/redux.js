@@ -719,3 +719,10 @@ export function getColumnTypeReadOnly(column) {
 
   return metadataColumnType && state.mode && state.mode.hideSpecifyColunns;
 }
+
+export function getShowSelectLabels(state) {
+  return (
+    !(state.mode && state.mode.hideSelectLabel) &&
+    getSelectableLabels(state).length > 0
+  );
+}
