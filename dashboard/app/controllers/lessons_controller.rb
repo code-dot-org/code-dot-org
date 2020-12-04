@@ -26,6 +26,7 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_lesson_edit
     @related_lessons = @lesson.summarize_related_lessons
     @search_options = Level.search_options
+    @level_key_list = Level.key_list
     view_options(full_width: true)
   end
 
