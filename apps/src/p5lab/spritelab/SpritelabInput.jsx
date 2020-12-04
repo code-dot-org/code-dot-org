@@ -99,7 +99,6 @@ class SpritelabInput extends React.Component {
   }
 
   onMultipleChoiceSubmit(e) {
-    console.log(e);
     this.userInputSubmit(e.target.getAttribute('value'));
   }
 
@@ -154,10 +153,10 @@ class SpritelabInput extends React.Component {
         const choices = inputInfo.choices.filter(choice => !!choice);
         inputRow = (
           <div style={styles.inputRow}>
-            {choices.map(choice =>
+            {choices.map((choice, index) =>
               !!spriteMap[choice] ? (
                 <img
-                  key={choice}
+                  key={choice + index}
                   style={styles.choiceSprite}
                   src={spriteMap[choice]}
                   value={choice}
@@ -165,7 +164,7 @@ class SpritelabInput extends React.Component {
                 />
               ) : (
                 <button
-                  key={choice}
+                  key={choice + index}
                   style={styles.choiceButton}
                   type="button"
                   value={choice}
