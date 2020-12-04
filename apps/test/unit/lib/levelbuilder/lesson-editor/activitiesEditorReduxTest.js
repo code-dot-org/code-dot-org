@@ -13,8 +13,6 @@ import reducers, {
   removeTip,
   addLevel,
   removeLevel,
-  setActiveVariant,
-  setLevelField,
   setScriptLevelField,
   reorderLevel,
   moveLevelToActivitySection,
@@ -221,48 +219,6 @@ describe('activitiesEditorRedux reducer tests', () => {
       assert.deepEqual(
         nextState[0].activitySections[2].scriptLevels.map(s => s.id),
         [11]
-      );
-    });
-
-    it('set active variant', () => {
-      const nextState = reducer(initialState, setActiveVariant(1, 3, 1, 2))
-        .activities;
-      assert.equal(
-        nextState[0].activitySections[2].scriptLevels[0].activeId,
-        2
-      );
-    });
-
-    it('set level field', () => {
-      let nextState = reducer(
-        initialState,
-        setLevelField(1, 3, 1, {videoKey: '_a_'})
-      );
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
-          .videoKey,
-        '_a_'
-      );
-      nextState = reducer(nextState, setLevelField(1, 3, 1, {skin: '_b_'}));
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
-          .skin,
-        '_b_'
-      );
-      nextState = reducer(
-        nextState,
-        setLevelField(1, 3, 1, {conceptDifficulty: '_c_'})
-      );
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
-          .conceptDifficulty,
-        '_c_'
-      );
-      nextState = reducer(nextState, setLevelField(1, 3, 1, {concepts: '_d_'}));
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
-          .concepts,
-        '_d_'
       );
     });
 
