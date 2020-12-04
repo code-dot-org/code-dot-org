@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {
-  chooseLevel,
-  setScriptLevelField
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {setScriptLevelField} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
@@ -52,7 +49,6 @@ class LevelTokenDetails extends Component {
     activityPosition: PropTypes.number.isRequired,
 
     //redux
-    chooseLevel: PropTypes.func.isRequired,
     setScriptLevelField: PropTypes.func.isRequired
   };
 
@@ -108,7 +104,6 @@ export const UnconnectedLevelTokenDetails = LevelTokenDetails;
 export default connect(
   state => ({}),
   {
-    chooseLevel,
     setScriptLevelField
   }
 )(LevelTokenDetails);
