@@ -22,6 +22,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquare, faCheckSquare } from "@fortawesome/free-regular-svg-icons";
 
 class PanelTabs extends Component {
+  static propTypes = {
+    currentPanel: PropTypes.string,
+    setCurrentPanel: PropTypes.func
+  };
+
   getTabStyle(panel) {
     if (getPanelEnabled(panel)) {
       if (panel === this.props.currentPanel) {
@@ -35,7 +40,7 @@ class PanelTabs extends Component {
   }
 
   render() {
-    const { currentPanel, setCurrentPanel } = this.props;
+    const { setCurrentPanel } = this.props;
 
     return (
       <div style={styles.tabContainer}>
@@ -60,8 +65,13 @@ class PanelTabs extends Component {
 }
 
 class Panels extends Component {
+  static propTypes = {
+    currentPanel: PropTypes.string,
+    saveTrainedModel: PropTypes.func
+  };
+
   render() {
-    const { currentPanel } = this.props;
+    const { currentPanel, saveTrainedModel } = this.props;
 
     return (
       <div style={{ marginTop: 20 }}>
@@ -75,7 +85,7 @@ class Panels extends Component {
           {currentPanel === "results" && <Results />}
           {currentPanel === "predict" && <Predict />}
           {currentPanel === "saveModel" && (
-            <SaveModel saveTrainedModel={this.props.saveTrainedModel} />
+            <SaveModel saveTrainedModel={saveTrainedModel} />
           )}
         </div>
       </div>
@@ -84,6 +94,11 @@ class Panels extends Component {
 }
 
 class ValidationMessages extends Component {
+  static propTypes = {
+    currentPanel: PropTypes.string,
+    validationMessages: PropTypes.object
+  };
+
   render() {
     const { currentPanel, validationMessages } = this.props;
 

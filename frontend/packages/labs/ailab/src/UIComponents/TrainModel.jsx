@@ -20,7 +20,8 @@ class TrainModel extends Component {
     selectedTrainer: PropTypes.string,
     percentDataToReserve: PropTypes.number,
     setPercentDataToReserve: PropTypes.func,
-    modelSize: PropTypes.number
+    modelSize: PropTypes.number,
+    showChooseReseve: PropTypes.bool
   };
 
   handleChange = event => {

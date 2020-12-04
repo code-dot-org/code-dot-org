@@ -23,7 +23,8 @@ class SelectDataset extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    resetState: PropTypes.func.isRequired
+    resetState: PropTypes.func.isRequired,
+    specifiedDatasets: PropTypes.arrayOf(PropTypes.object)
   };
 
   constructor(props) {
