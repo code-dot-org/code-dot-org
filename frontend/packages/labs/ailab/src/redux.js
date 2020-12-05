@@ -47,6 +47,7 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
+const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 
 // Action creators
@@ -155,6 +156,10 @@ export function setTrainedModel(trainedModel) {
   return { type: SET_TRAINED_MODEL, trainedModel };
 }
 
+export function setTrainedModelDetails(trainedModelDetails) {
+  return { type: SET_TRAINED_MODEL_DETAILS, trainedModelDetails };
+}
+
 export function setCurrentPanel(currentPanel) {
   return { type: SET_CURRENT_PANEL, currentPanel };
 }
@@ -180,6 +185,7 @@ const initialState = {
   prediction: {},
   modelSize: undefined,
   trainedModel: undefined,
+  trainedModelDetails: {},
   currentPanel: "selectDataset"
 };
 
@@ -329,6 +335,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       trainedModel: action.trainedModel
+    };
+  }
+  if (action.type === SET_TRAINED_MODEL_DETAILS) {
+    return {
+      ...state,
+      trainedModelDetails: action.trainedModelDetails
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
@@ -620,6 +632,17 @@ export function getEmptyCellDetails(state) {
     return `Column: ${cellDetails.column} Row: ${cellDetails.row}`;
   });
   return emptyCellLocations;
+}
+
+export function getTrainedModelDataToSave(state) {
+  const dataToSave = {};
+  dataToSave.selectedTrainer = state.selectedTrainer;
+  dataToSave.trainedModel = state.trainedModel;
+  dataToSave.name = state.trainedModelDetails.name;
+  dataToSave.description = state.trainedModelDetails.description;
+  dataToSave.summaryStat = getSummaryStat(state);
+
+  return dataToSave;
 }
 
 export function getShowSelectLabels(state) {
