@@ -12,6 +12,7 @@ import {Button, Tabs, Tab} from 'react-bootstrap';
 import moment from 'moment';
 import color from '@cdo/apps/util/color';
 import Spinner from '../components/spinner';
+import _ from 'lodash';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -30,26 +31,28 @@ const styles = {
   editor: {
     minWidth: 560,
     width: '48%',
-    marginRight: 12,
-    marginTop: 57
+    marginRight: 12
   },
   options: {
-    minWidth: 215
+    minWidth: 215,
+    marginLeft: 5
   },
   preview: {
     width: '48%',
     marginRight: 12
   },
-  editorHeader: {
-    display: 'flex',
-    justifyContent: 'space-between'
+  surveyTitle: {
+    marginBottom: 0
+  },
+  surveyState: {
+    marginTop: 0
   },
   previewBox: {
     border: '1px solid #eee'
   },
   validationInfo: {
     marginTop: 10,
-    marginBottom: 10
+    marginLeft: 10
   },
   validateButton: {
     marginLeft: 0
@@ -70,11 +73,18 @@ const styles = {
   saveButton: {
     margin: '10px 50px 10px 20px'
   },
-  livePreview: {
-    marginTop: 15
-  },
   spinner: {
     marginTop: 5
+  },
+  validation: {
+    display: 'flex'
+  },
+  helperButtons: {
+    marginTop: 15,
+    marginBottom: 15
+  },
+  livePreview: {
+    marginTop: 8
   }
 };
 
@@ -170,9 +180,9 @@ class FoormEditor extends React.Component {
     }
   };
 
-  previewFoorm = () => {
-    if (this.state.livePreviewStatus === PREVIEW_ON) {
-      // fill in form with any library items
+  // use debounce to only call once per second
+  fillFormWithLibraryItems = _.debounce(
+    function() {
       $.ajax({
         url: '/api/v1/pd/foorm/form_with_library_items',
         type: 'post',
@@ -196,6 +206,15 @@ class FoormEditor extends React.Component {
             libraryErrorMessage: result.responseJSON.error
           });
         });
+    },
+    1000,
+    {leading: true}
+  );
+
+  previewFoorm = () => {
+    if (this.state.livePreviewStatus === PREVIEW_ON) {
+      // fill in form with any library items
+      this.fillFormWithLibraryItems();
     }
   };
 
@@ -390,42 +409,86 @@ class FoormEditor extends React.Component {
     return (
       <div>
         {this.props.formName && (
-          <div style={styles.editorHeader}>
-            <h2>
+          <div>
+            <h2 style={styles.surveyTitle}>
               {`${this.props.formName}, version ${this.props.formVersion}`}
-              <br />
+            </h2>
+            <h3 style={styles.surveyState}>
               {`Form State: ${
                 this.props.isFormPublished ? 'Published' : 'Draft'
               }`}
-            </h2>
+            </h3>
           </div>
         )}
-        <div style={styles.livePreview}>
-          <ToggleGroup
-            onChange={this.livePreviewToggled}
-            selected={this.state.livePreviewStatus}
-          >
-            <button type="button" value={PREVIEW_ON}>
-              Live Preview On
-            </button>
-            <button type="button" value={PREVIEW_OFF}>
-              Live Preview Off
-            </button>
-          </ToggleGroup>
-        </div>
-        <div style={styles.foormEditor}>
-          {/* textarea is filled by populateCodeMirror()*/}
-          <div style={styles.editor} className="foorm-editor">
-            <textarea
-              ref="content"
-              // 3rd parameter specifies number of spaces to insert
-              // into the output JSON string for readability purposes.
-              // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-              value={JSON.stringify(this.props.formQuestions, null, 2)}
-              // Change handler is required for this element, but changes will be handled by the code mirror.
-              onChange={() => {}}
-            />
+        <div style={styles.helperButtons}>
+          <div style={styles.livePreview}>
+            <ToggleGroup
+              onChange={this.livePreviewToggled}
+              selected={this.state.livePreviewStatus}
+            >
+              <button type="button" value={PREVIEW_ON}>
+                Live Preview On
+              </button>
+              <button type="button" value={PREVIEW_OFF}>
+                Live Preview Off
+              </button>
+            </ToggleGroup>
           </div>
+          <div style={styles.validation}>
+            <Button
+              style={styles.validateButton}
+              onClick={this.validateQuestions}
+              className="btn"
+            >
+              Validate
+            </Button>
+            <br />
+            {this.state.validationStarted ? (
+              <Spinner style={styles.spinner} />
+            ) : (
+              this.state.lastValidated && (
+                <div style={styles.validationInfo}>
+                  {this.state.validationError && (
+                    <FontAwesome icon="exclamation-triangle" />
+                  )}
+                  {` Form was last validated at ${
+                    this.state.lastValidated
+                  }. Validation status: ${
+                    this.state.validationError ? 'Invalid.' : 'Valid.'
+                  }`}
+                  <br />
+                  {this.state.validationError &&
+                    `Validation error: ${this.state.validationError}`}
+                </div>
+              )
+            )}
+          </div>
+        </div>
+
+        <div style={styles.foormEditor}>
+          <Tabs
+            style={styles.editor}
+            defaultActiveKey="editor"
+            id="editor-tabs"
+          >
+            <Tab eventKey={'editor'} title={'Editor'} id={'editor'}>
+              {/* textarea is filled by populateCodeMirror()*/}
+              <div className="foorm-editor">
+                <textarea
+                  ref="content"
+                  // 3rd parameter specifies number of spaces to insert
+                  // into the output JSON string for readability purposes.
+                  // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+                  value={JSON.stringify(this.props.formQuestions, null, 2)}
+                  // Change handler is required for this element, but changes will be handled by the code mirror.
+                  onChange={() => {}}
+                />
+              </div>
+            </Tab>
+            <Tab eventKey="variables" title="Variables" id="variables">
+              {this.renderVariables()}
+            </Tab>
+          </Tabs>
 
           <Tabs
             style={styles.preview}
@@ -434,37 +497,6 @@ class FoormEditor extends React.Component {
           >
             <Tab eventKey={'preview'} title={'Preview'} id="preview">
               {this.renderPreview()}
-            </Tab>
-            <Tab eventKey="variables" title="Survey Variables" id="variables">
-              {this.renderVariables()}
-            </Tab>
-            <Tab eventKey="validation" title="Validation" id="validation">
-              <Button
-                style={styles.validateButton}
-                onClick={this.validateQuestions}
-              >
-                Validate
-              </Button>
-              <br />
-              {this.state.validationStarted ? (
-                <Spinner style={styles.spinner} />
-              ) : (
-                this.state.lastValidated && (
-                  <div style={styles.validationInfo}>
-                    {this.state.validationError && (
-                      <FontAwesome icon="exclamation-triangle" />
-                    )}
-                    {` Form was last validated at ${
-                      this.state.lastValidated
-                    }. Validation status: ${
-                      this.state.validationError ? 'Invalid.' : 'Valid.'
-                    }`}
-                    <br />
-                    {this.state.validationError &&
-                      `Validation error: ${this.state.validationError}`}
-                  </div>
-                )
-              )}
             </Tab>
           </Tabs>
         </div>
