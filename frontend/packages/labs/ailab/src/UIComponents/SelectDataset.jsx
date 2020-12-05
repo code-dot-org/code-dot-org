@@ -24,7 +24,7 @@ class SelectDataset extends Component {
     csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     resetState: PropTypes.func.isRequired,
-    specifiedDatasets: PropTypes.arrayOf(PropTypes.object)
+    specifiedDatasets: PropTypes.arrayOf(PropTypes.string)
   };
 
   constructor(props) {
