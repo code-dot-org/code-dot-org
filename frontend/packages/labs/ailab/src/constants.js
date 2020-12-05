@@ -105,13 +105,13 @@ export const styles = {
     marginRight: 1,
     marginBottom: 2,
     cursor: 'pointer',
-    border: 'solid 3px white',
+    border: 'solid 5px white',
     borderRadius: 3,
-    fontFamily: '"Gotham 4r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif'
   },
 
   currentTab: {
-    border: 'solid 3px #7ad9f7',
+    border: 'solid 5px #7ad9f7',
     borderRadius: 3
   },
 
