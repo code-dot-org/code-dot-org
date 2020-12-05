@@ -267,14 +267,14 @@
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak_freeplay"
+          "outbreak_freeplay_choice"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak_freeplay"
+        "outbreak_freeplay_choice"
       ]
     }
   ],
@@ -391,9 +391,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak_freeplay",
+        "level.key": "outbreak_freeplay_choice",
         "script_level.level_keys": [
-          "outbreak_freeplay"
+          "outbreak_freeplay_choice"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
