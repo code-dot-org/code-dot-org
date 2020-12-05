@@ -21,7 +21,10 @@ var clientState = require('@cdo/apps/code-studio/clientState');
 import {TestResults} from '@cdo/apps/constants';
 
 $(document).ready(() => {
-  // Get the user's progress on this script
+  // Workaround to get the logged-in user's progress on this script
+  // when we loaded a standalone video on a cached script level.
+  // Logged out user progress will be in the session storage. Non-
+  // cached script progress will just be replaced with the same data.
   $.ajax(
     `/api/user_progress` +
       `/${appOptions.scriptName}` +
