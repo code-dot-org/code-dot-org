@@ -14,12 +14,18 @@ require_relative '../../../dashboard/config/environment'
 # 1. If the user passed valid data to the join section endpoint, the inserted row
 #    was valid except that the username field was missing. We fix these by
 #    calling generate_username to generate the username.
-# 2. If the user passed invalid data to the join section endpoint, the inserted row
-#    would contain the invalid data as well as have a missing provider field. We fix
-#    these row by (soft) deleting them.  In many cases, students were not able to
-#    access these accounts. For a small number of cases (n=25), students have
-#    accessed these accounts. For the students who successfully joined a section
-#    (n=9), we will reach out to the teacher to explain the situation.
+# 2. If the user passed invalid data to the join section endpoint, a row with the
+#    invalid data was inserted but then failed in complete migrate_to_multi_auth,
+#    leaving the provider field null. We fix these rows by (soft) deleting them.
+#    Note: in many cases, students were not able to access these accounts. For a
+#    small number of cases (n=25), students have accessed these accounts. For the
+#    students who successfully joined a section (n=9), we will reach out to the
+#    teacher to explain the situation.
+#
+# The version of this script in commit 73fa1624bd6fe7b5c0b6904342adba12fffdfe12 was
+# the one that was run in production on 12/4/2020 starting just before 3:45 PM PST.
+# Please note that we _did_ see some impact to database performance while running
+# this script, even on the upgraded HoC db instance.
 
 CDO.log = Logger.new(STDOUT)
 ActiveRecord::Base.record_timestamps = false
