@@ -622,6 +622,24 @@ export function getEmptyCellDetails(state) {
   return emptyCellLocations;
 }
 
+export function getShowSelectLabels(state) {
+  return (
+    !(state.mode && state.mode.hideSelectLabel) &&
+    getSelectableLabels(state).length > 0
+  );
+}
+
+export function getSpecifiedDatasets(state) {
+  return state.mode && state.mode.datasets;
+}
+
+export function getShowChooseReserve(state) {
+  return !(state.mode && state.mode.hideChooseReserve);
+}
+
+
+/* These are helper functions which might belong elsewhere. */
+
 export function getPanelVisible(panel) {
   const mode = store.getState().mode;
 
@@ -698,15 +716,6 @@ export function getPanelEnabled(panel) {
   return true;
 }
 
-export function getMetadataColumnType(column) {
-  return (
-    this.props.metadata.fields &&
-    this.props.metadata.fields.find(field => {
-      return field.id === column;
-    }).type
-  );
-}
-
 export function getColumnTypeReadOnly(column) {
   const state = store.getState();
 
@@ -718,19 +727,4 @@ export function getColumnTypeReadOnly(column) {
     }).type;
 
   return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
-}
-
-export function getShowSelectLabels(state) {
-  return (
-    !(state.mode && state.mode.hideSelectLabel) &&
-    getSelectableLabels(state).length > 0
-  );
-}
-
-export function getSpecifiedDatasets(state) {
-  return state.mode && state.mode.datasets;
-}
-
-export function getShowChooseReserve(state) {
-  return !(state.mode && state.mode.hideChooseReserve);
 }
