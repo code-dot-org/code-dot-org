@@ -9,7 +9,7 @@ const sampleModes = {
   level_3_1: {
     datasets: ["candy", "titanic", "foods"],
     hideSelectLabel: true,
-    hideSpecifyColunns: true,
+    hideSpecifyColumns: true,
     hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
@@ -18,7 +18,7 @@ const sampleModes = {
   level_3_3: {
     datasets: ["candy", "titanic", "foods"],
     hideSelectLabel: true,
-    hideSpecifyColunns: true,
+    hideSpecifyColumns: true,
     hideChooseReserve: true,
     hideModelCard: true
   },

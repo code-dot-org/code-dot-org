@@ -717,7 +717,7 @@ export function getColumnTypeReadOnly(column) {
       return field.id === column;
     }).type;
 
-  return metadataColumnType && state.mode && state.mode.hideSpecifyColunns;
+  return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
 }
 
 export function getShowSelectLabels(state) {
