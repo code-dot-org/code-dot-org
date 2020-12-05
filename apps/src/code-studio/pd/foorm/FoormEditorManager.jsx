@@ -113,10 +113,16 @@ class FoormEditorManager extends React.Component {
           to get started.
         </p>
         <div>
-          <DropdownButton id="load_config" title="Load Survey...">
+          <DropdownButton
+            id="load_config"
+            title="Load Survey..."
+            className="btn"
+          >
             {this.state.formattedConfigurationOptions}
           </DropdownButton>
-          <Button onClick={this.initializeEmptyCodeMirror}>New Survey</Button>
+          <Button onClick={this.initializeEmptyCodeMirror} className="btn">
+            New Survey
+          </Button>
         </div>
         {this.state.hasLoadError && (
           <div style={styles.loadError}>
