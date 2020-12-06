@@ -8,7 +8,7 @@ module Cdo
     # @param [String] id - Unique identifier to throttle on.
     # @param [Integer] limit - Number of requests allowed over period.
     # @param [Integer] period - Period of time in seconds.
-    # @param [Integer] throttle_for - How long id should stay throttled. Optional.
+    # @param [Integer] throttle_for - How long id should stay throttled in seconds. Optional.
     # Defaults to Cdo::Throttle.throttle_time.
     # @returns [Boolean] Whether or not the request should be throttled.
     def self.throttle(id, limit, period, throttle_for = throttle_time)
