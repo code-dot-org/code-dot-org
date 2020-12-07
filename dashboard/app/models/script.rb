@@ -24,7 +24,6 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
-require 'services/script_seed'
 require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]

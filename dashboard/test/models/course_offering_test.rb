@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'services/script_seed'
 
 class CourseOfferingTest < ActiveSupport::TestCase
   test "course offering associations" do
@@ -26,7 +25,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "ScriptSeed.seed_from_json_file creates CourseOffering and CourseVersion if is_course is true" do
     script_file = File.join(self.class.fixture_path, 'test-new-seed-course-offering.script_json')
-    script = ScriptSeed.seed_from_json_file(script_file)
+    script = Services::ScriptSeed.seed_from_json_file(script_file)
 
     offering = script.course_version.course_offering
     assert_equal 'xyz', offering.key

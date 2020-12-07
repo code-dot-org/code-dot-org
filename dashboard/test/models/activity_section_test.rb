@@ -45,7 +45,7 @@ class ActivitySectionTest < ActiveSupport::TestCase
     lesson = create :lesson, lesson_group: lesson_group, script: script
     lesson_activity = create :lesson_activity, lesson: lesson
     activity_section = create :activity_section, lesson_activity: lesson_activity
-    seed_context = ScriptSeed::SeedContext.new(
+    seed_context = Services::ScriptSeed::SeedContext.new(
       script: script,
       lesson_groups: script.lesson_groups.to_a,
       lessons: script.lessons.to_a,
