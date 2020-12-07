@@ -3,6 +3,7 @@ require 'services/script_seed'
 
 # When adding a new model, update the following:
 # - serialize_seeding_json
+# - seed_from_json
 # - get_counts
 # - create_script_tree
 # - assert_script_trees_equal
