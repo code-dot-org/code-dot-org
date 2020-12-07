@@ -75,7 +75,6 @@ class SchoolStatsByYear < ApplicationRecord
         end
       end
 
-      # Make prettier?
       CDO.log.info "School Stats By Years seeding: done processing #{filename}.\n"\
         "#{new_school_stats} school stats added.\n"\
         "#{updated_school_stats} school stats updated.\n"\

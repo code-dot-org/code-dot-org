@@ -92,11 +92,11 @@ class SchoolDistrict < ApplicationRecord
     end
   end
 
-  def self.dry_seed_s3_object(bucket, filepath, import_options, &test)
+  def self.dry_seed_s3_object(bucket, filepath, import_options, &block)
     AWS::S3.seed_from_file(bucket, filepath, true) do |filename|
-      SchoolDistrict.merge_from_csv(filename, import_options, true, true, &test)
+      merge_from_csv(filename, import_options, true, true, &block)
     end
-    CDO.log.info "This is a dry run. No data is written to the database."
+    CDO.log.info "This is a dry run. No data written to the database."
   end
 
   # Loads/merges the data from a CSV into the school districts table.
@@ -128,7 +128,6 @@ class SchoolDistrict < ApplicationRecord
       end
     end
 
-    # Make prettier?
     CDO.log.info "School District seeding: done processing #{filename}.\n"\
       "#{new_districts.length} new districts added.\n"\
       "Districts added:\n"\
