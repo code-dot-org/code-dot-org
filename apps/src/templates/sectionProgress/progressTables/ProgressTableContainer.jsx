@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import ProgressTableSummaryView from './ProgressTableSummaryView';
 import ProgressTableDetailView from './ProgressTableDetailView';
 import ProgressTableStudentList from './ProgressTableStudentList';
+import {scriptDataPropType} from '../sectionProgressConstants';
 import styleConstants from '@cdo/apps/styleConstants';
 import i18n from '@cdo/locale';
 
@@ -43,6 +44,7 @@ export const DetailViewContainer = synchronized(
 function synchronized(StudentList, ContentView, studentHeaders) {
   class Synchronized extends React.Component {
     static propTypes = {
+      scriptData: scriptDataPropType.isRequired,
       // From redux
       studentTimestamps: PropTypes.object,
       localeCode: PropTypes.string
@@ -50,7 +52,6 @@ function synchronized(StudentList, ContentView, studentHeaders) {
 
     constructor(props) {
       super(props);
-      this.needTweakLastColumns = false;
       this.onScroll = this.onScroll.bind(this);
       this.studentList = null;
       this.contentView = null;
@@ -70,6 +71,10 @@ function synchronized(StudentList, ContentView, studentHeaders) {
               headers={studentHeaders}
               studentTimestamps={this.props.studentTimestamps}
               localeCode={this.props.localeCode}
+              needsGutter={
+                ContentView.widthForScript(this.props.scriptData) >
+                parseInt(progressTableStyles.CONTENT_VIEW_WIDTH)
+              }
               {...this.props}
             />
           </div>

@@ -6,10 +6,11 @@ import sectionProgress, {
 import scriptSelection, {
   setValidScripts
 } from '@cdo/apps/redux/scriptSelectionRedux';
+import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 
-const STUDENT_COUNT = 250;
+const STUDENT_COUNT = 30;
 
 export function createStore() {
   const section = {
@@ -22,7 +23,12 @@ export function createStore() {
     section.students.push({id: i, name: 'Student' + i});
   }
   try {
-    registerReducers({sectionProgress, sectionData, scriptSelection});
+    registerReducers({
+      sectionProgress,
+      sectionData,
+      scriptSelection,
+      locales
+    });
   } catch {}
   const store = createStoreWithReducers();
   store.dispatch(setSection(section));

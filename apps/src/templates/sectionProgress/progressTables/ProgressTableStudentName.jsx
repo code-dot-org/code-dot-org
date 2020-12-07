@@ -5,8 +5,13 @@ import moment from 'moment';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../../lib/util/firehose';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
+import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
 const styles = {
+  link: {
+    color: color.teal
+  },
   tooltip: {
     display: 'flex',
     textAlign: 'center'
@@ -80,10 +85,19 @@ export default class ProgressTableStudentName extends React.PureComponent {
     const tooltipId = this.tooltipId();
 
     return (
-      <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+      <div
+        style={progressStyles.studentListContent}
+        data-tip
+        data-for={tooltipId}
+        aria-describedby={tooltipId}
+      >
         {this.renderTooltip()}
         {studentUrl && (
-          <a href={studentUrl} onClick={this.recordStudentNameClick}>
+          <a
+            style={styles.link}
+            href={studentUrl}
+            onClick={this.recordStudentNameClick}
+          >
             {name}
           </a>
         )}
