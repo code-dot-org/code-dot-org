@@ -1,5 +1,5 @@
 {
-  "defaultLabelColumn": "Name",
+  "defaultLabelColumn": "Survived",
   "fields": [
   	{
   		"id": "Survived",
