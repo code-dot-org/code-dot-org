@@ -3,7 +3,7 @@ import * as Table from 'reactabular-table';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
-import {scriptDataPropType} from '../sectionProgressConstants';
+import {scriptDataPropType, gutterHeader} from '../sectionProgressConstants';
 import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {
   levelProgressWithStatus,
@@ -14,6 +14,7 @@ import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 import ProgressTableLevelIcon from './ProgressTableLevelIcon';
 import progressTableStyles from './progressTableStyles.scss';
+import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
 const styles = {
   headerContainer: {
@@ -28,6 +29,22 @@ const styles = {
 const dummyStudent = {id: -1, name: ''};
 
 export default class ProgressTableDetailView extends React.Component {
+  static widthForScript(scriptData) {
+    return scriptData.stages.reduce((stageSum, stage) => {
+      return (
+        stageSum +
+        stage.levels.reduce((levelSum, level) => {
+          return (
+            levelSum +
+            (progressStyles.BUBBLE_CONTAINER_WIDTH +
+              (level.sublevels || []).length *
+                progressStyles.LETTER_BUBBLE_CONTAINER_WIDTH)
+          );
+        }, 0)
+      );
+    }, 0);
+  }
+
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
@@ -48,6 +65,14 @@ export default class ProgressTableDetailView extends React.Component {
     this.onLessonClick = this.onLessonClick.bind(this);
     this.header = null;
     this.body = null;
+  }
+
+  needsGutter() {
+    return (
+      this.props.section.students.length *
+        parseInt(progressTableStyles.ROW_HEIGHT) >
+      parseInt(progressTableStyles.MAX_BODY_HEIGHT)
+    );
   }
 
   onLessonClick(lessonPosition) {
@@ -126,6 +151,12 @@ export default class ProgressTableDetailView extends React.Component {
       lessonHeaders.push({header: {formatters: [this.lessonNumberFormatter]}});
       levelHeaders.push({header: {formatters: [this.levelIconFormatter]}});
     });
+
+    // Account for scrollbar in table body
+    if (this.needsGutter) {
+      lessonHeaders.push(gutterHeader);
+      levelHeaders.push(gutterHeader);
+    }
 
     return (
       <Table.Provider

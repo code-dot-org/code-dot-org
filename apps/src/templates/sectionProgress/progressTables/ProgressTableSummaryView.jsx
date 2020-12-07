@@ -3,7 +3,7 @@ import * as Table from 'reactabular-table';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import PropTypes from 'prop-types';
-import {scriptDataPropType} from '../sectionProgressConstants';
+import {scriptDataPropType, gutterHeader} from '../sectionProgressConstants';
 import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {
   summarizeProgressInStage,
@@ -15,6 +15,12 @@ import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 import progressTableStyles from './progressTableStyles.scss';
 
 export default class ProgressTableSummaryView extends React.Component {
+  static widthForScript(scriptData) {
+    return (
+      scriptData.stages.length * parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
+    );
+  }
+
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
@@ -32,6 +38,14 @@ export default class ProgressTableSummaryView extends React.Component {
     this.progressCellFormatter = this.progressCellFormatter.bind(this);
     this.header = null;
     this.body = null;
+  }
+
+  needsGutter() {
+    return (
+      this.props.section.students.length *
+        parseInt(progressTableStyles.ROW_HEIGHT) >
+      parseInt(progressTableStyles.MAX_BODY_HEIGHT)
+    );
   }
 
   lessonNumberFormatter(_, {columnIndex}) {
@@ -71,13 +85,24 @@ export default class ProgressTableSummaryView extends React.Component {
       this.props.scriptData.stages.length;
 
     const columns = [];
+    const headers = [];
     this.props.scriptData.stages.forEach(_ => {
       columns.push({
         props: {style: {width: columnWidth}},
-        header: {formatters: [this.lessonNumberFormatter]},
         cell: {formatters: [this.progressCellFormatter]}
       });
+      headers.push({
+        header: {
+          props: {style: {width: columnWidth}},
+          formatters: [this.lessonNumberFormatter]
+        }
+      });
     });
+
+    // Account for scrollbar in table body
+    if (this.needsGutter()) {
+      headers.push(gutterHeader);
+    }
 
     return (
       <Table.Provider
@@ -94,6 +119,7 @@ export default class ProgressTableSummaryView extends React.Component {
           style={{overflow: 'hidden'}}
           ref={r => (this.header = r && r.getRef())}
           tableBody={this.body}
+          headerRows={[headers]}
         />
         <Virtualized.Body
           rows={this.props.section.students}
