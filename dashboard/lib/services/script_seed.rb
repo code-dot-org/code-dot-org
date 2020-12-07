@@ -227,9 +227,10 @@ module ScriptSeed
     script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
 
     script_levels_to_import = script_levels_data.map do |sl_data|
-      # Everything that doesn't start with the 'script_level' prefix in the seeding_key hash is used
-      # to identify the Lesson that the ScriptLevel should belong to.
-      stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}]
+      # Extract the parts of the ScriptLevel's seeding_key which are used to
+      # identify the Lesson by its seeding_key.
+      lesson_seed_keys = %w(lesson.key lesson_group.key script.name)
+      stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| lesson_seed_keys.include?(k)}]
       raise 'No stage found' if stage.nil?
 
       section_key = sl_data['seeding_key']['script_level.activity_section.key']
