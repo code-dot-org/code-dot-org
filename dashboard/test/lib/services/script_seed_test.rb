@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'services/script_seed'
 
 # When adding a new model, update the following:
 # - serialize_seeding_json
@@ -12,6 +11,8 @@ require 'services/script_seed'
 #
 # Also add a new test case which tests adding, creating, and deleting your new model.
 class ScriptSeedTest < ActiveSupport::TestCase
+  include Services
+
   setup do
     Game.game_cache = nil
   end
