@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import {
   setLabelColumn,
   setSelectedFeatures,
-  setShowPredict,
   getSelectableFeatures,
   getShowSelectLabels,
   getSelectableLabels
@@ -19,7 +18,6 @@ class SelectFeatures extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     selectedFeatures: PropTypes.array,
     setSelectedFeatures: PropTypes.func.isRequired,
-    setShowPredict: PropTypes.func.isRequired,
     selectableFeatures: PropTypes.array,
     showSelectLabels: PropTypes.bool,
     selectableLabels: PropTypes.array
@@ -27,14 +25,12 @@ class SelectFeatures extends Component {
 
   handleChangeSelect = event => {
     this.props.setLabelColumn(event.target.value);
-    this.props.setShowPredict(false);
   };
 
   handleChangeMultiSelect = event => {
     this.props.setSelectedFeatures(
       Array.from(event.target.selectedOptions, item => item.value)
     );
-    this.props.setShowPredict(false);
   };
 
   render() {
@@ -119,9 +115,6 @@ export default connect(
     },
     setLabelColumn(labelColumn) {
       dispatch(setLabelColumn(labelColumn));
-    },
-    setShowPredict(showPredict) {
-      dispatch(setShowPredict(showPredict));
     }
   })
 )(SelectFeatures);

@@ -42,7 +42,6 @@ const SET_ACCURACY_CHECK_PREDICTED_LABELS =
   "SET_ACCURACY_CHECK_PREDICTED_LABELS";
 const SET_TRAINING_EXAMPLES = "SET_TRAINING_EXAMPLES";
 const SET_TRAINING_LABELS = "SET_TRAINING_LABELS";
-const SET_SHOW_PREDICT = "SET_SHOW_PREDICT";
 const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
@@ -132,10 +131,6 @@ export function setTrainingLabels(trainingLabels) {
   return { type: SET_TRAINING_LABELS, trainingLabels };
 }
 
-export function setShowPredict(showPredict) {
-  return { type: SET_SHOW_PREDICT, showPredict };
-}
-
 export function setTestData(testData) {
   return { type: SET_TEST_DATA, testData };
 }
@@ -180,7 +175,6 @@ const initialState = {
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
-  showPredict: false,
   testData: {},
   prediction: {},
   modelSize: undefined,
@@ -299,12 +293,6 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       accuracyCheckPredictedLabels: action.predictedLabels
-    };
-  }
-  if (action.type === SET_SHOW_PREDICT) {
-    return {
-      ...state,
-      showPredict: action.showPredict
     };
   }
   if (action.type === SET_TEST_DATA) {
@@ -722,7 +710,6 @@ export function getPanelEnabled(panel) {
 
   if (panel === "results") {
     if (
-      !state.showPredict ||
       state.percentDataToReserve === 0 ||
       state.accuracyCheckExamples.length === 0
     ) {
