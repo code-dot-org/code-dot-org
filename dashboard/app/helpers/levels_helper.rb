@@ -460,7 +460,7 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
+      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
@@ -752,6 +752,25 @@ module LevelsHelper
   def lab_user_id
     plaintext_id = "#{@view_options[:channel]}:#{user_or_session_id}"
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
+  end
+
+  def firebase_shared_auth_token
+    return nil unless CDO.firebase_shared_secret
+
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    payload = {
+      uid: user_or_session_id,
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
+    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
+
+    # TODO(dave): cache token generator across requests
+    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_shared_secret)
+    generator.create_token(payload, options)
   end
 
   # Assign a firebase authentication token based on the firebase secret,
