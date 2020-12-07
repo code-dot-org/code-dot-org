@@ -101,7 +101,7 @@ class ActivitySection < ApplicationRecord
     {
       'activity_section.key': key,
       'lesson_activity.key': my_lesson_activity.key
-    }
+    }.stringify_keys
   end
 
   private
