@@ -233,7 +233,7 @@ module ScriptSeed
       stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| lesson_seed_keys.include?(k)}]
       raise 'No stage found' if stage.nil?
 
-      section_key = sl_data['seeding_key']['script_level.activity_section.key']
+      section_key = sl_data['seeding_key']['activity_section.key']
       section_id = section_key && seed_context.activity_sections.find {|section| section.key == section_key}.id
 
       # Unlike the other models, we must explicitly check for an existing ScriptLevel to update, since its
