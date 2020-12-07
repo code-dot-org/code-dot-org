@@ -1301,6 +1301,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_202751) do
     t.string "city", null: false
     t.string "state", null: false
     t.string "zip", null: false
+    t.string "last_known_school_year_open", limit: 9
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name", "city"], name: "index_school_districts_on_name_and_city", type: :fulltext
@@ -1380,9 +1381,9 @@ ActiveRecord::Schema.define(version: 2020_12_01_202751) do
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
     t.string "state_school_id"
     t.string "school_category"
-    t.integer "last_known_year_open"
+    t.string "last_known_school_year_open", limit: 9
     t.index ["id"], name: "index_schools_on_id", unique: true
-    t.index ["last_known_year_open"], name: "index_schools_on_last_known_year_open"
+    t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
     t.index ["state_school_id"], name: "index_schools_on_state_school_id", unique: true
