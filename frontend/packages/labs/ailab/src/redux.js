@@ -600,11 +600,14 @@ export function getEmptyCellDetails(state) {
 
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
-  dataToSave.selectedTrainer = state.selectedTrainer;
-  dataToSave.trainedModel = state.trainedModel;
   dataToSave.name = state.trainedModelDetails.name;
   dataToSave.description = state.trainedModelDetails.description;
+  dataToSave.selectedTrainer = state.selectedTrainer;
+  dataToSave.selectedFeatures = state.selectedFeatures;
+  dataToSave.featureNumberKey = state.featureNumberKey;
+  dataToSave.labelColumn = state.labelColumn;
   dataToSave.summaryStat = getSummaryStat(state);
+  dataToSave.trainedModel = state.trainedModel;
 
   return dataToSave;
 }
