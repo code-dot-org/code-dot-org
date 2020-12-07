@@ -1,3 +1,9 @@
 {
+  "clicked": "натиснуто",
+  "clickedSprite": "спрайт натиснуто",
+  "subject": "тема",
+  "subjectSprite": "спрайт теми",
+  "object": "об'єкт ",
+  "objectSprite": "спрайт об'єкту",
   "shareGame": "Поділитись своєю грою:"
 }

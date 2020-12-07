@@ -44,7 +44,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 ## 5. Start your Hour of Code off with an inspiring video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Ishtirokchilarni ilhomlantirish va kompyuter fanlari hayotimizning har bir qismiga qanday ta'sir qilishini muhokama qilish orqali "Kod soati"ni boshlang.
 
 **Show an inspirational video:**
 

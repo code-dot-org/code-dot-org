@@ -1,42 +1,42 @@
 ---
-title: Teacher Resources - Write your first computer program
+title: O‘qituvchi resurslari - Birinchi kompyuter dasturingizni yarating
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# Birinchi kompyuter dasturingizni yarating: Dasturlash soati qo‘llanmasi
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Teacher Resources
+## O‘qituvchi resurslari
 
-### Lesson Plans:
+### Dars rejasi:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [Birinchi kompyuter dasturingizni yarating]({{ hoc_hourofcode_cb_url }})
 
-### Extension Activities:
+### Qo‘shimcha mashg‘ulotlar:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Hour of Code - Dasturlash soatidan tashqarida](http://code.org/learn/beyond)
+- [Kompyuter fanlari asoslari: Kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### O‘qituvchilar uchun boshqa manbalar:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: o‘qituvchilar uchun yo‘riqnoma](https://hourofcode.com/how-to)
+- [Muvaffaqiyatli o‘qituvchilardan eng yaxshi amaliyotlar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Jonli tadbir: [Dasturlash soati bo‘yicha o‘qituvchi uchun qo‘llanma](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Umumlashma
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+"Drag and drop" dasturlash yordamida kompyuter fanlarining asosiy tushunchalarini o‘rganing. Bu Bill Geyts, Mark Sukerberg, "Angry Birds" and "Plants va Zombies" ishtirokidagi video ma'ruzalar bilan o‘yinga o‘xshash, mustaqil o‘rganadigan o‘quv qo‘llanma. Takroriy sikllar, shartli bayonotlar va asosiy algoritmlarni o‘rganing. 37 ta tilda taqdim etilgan.
 
-**Recommended Age Range:** 4-104
+**Tavsiya etilgan yosh:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Talab etilgan texnologiyalar:** Zamonaviy brauzer, smartfon+planshet
 
-<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>O‘quv qo‘llanmasini sinab ko‘ring</button></a>
 
 [/col-50]
