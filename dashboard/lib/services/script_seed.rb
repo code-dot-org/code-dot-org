@@ -117,6 +117,8 @@ module ScriptSeed
       script_data = data['script']
       lesson_groups_data = data['lesson_groups']
       lessons_data = data['lessons']
+      lesson_activities_data = data['lesson_activities']
+      activity_sections_data = data['activity_sections']
       script_levels_data = data['script_levels']
       levels_script_levels_data = data['levels_script_levels']
       seed_context = SeedContext.new
@@ -124,6 +126,8 @@ module ScriptSeed
       seed_context.script = import_script(script_data)
       seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
       seed_context.lessons = import_lessons(lessons_data, seed_context)
+      seed_context.lesson_activities = import_lesson_activities(lesson_activities_data, seed_context)
+      seed_context.activity_sections = import_activity_sections(activity_sections_data, seed_context)
 
       # Because ScriptLevel's seeding_key depends on the keys of its associated Levels, we can
       # improve performance by loading all of it here into the SeedContext.
@@ -182,6 +186,46 @@ module ScriptSeed
     Lesson.where(script: seed_context.script)
   end
 
+  def self.import_lesson_activities(activities_data, seed_context)
+    activities_to_import = activities_data.map do |activity_data|
+      lesson_id = seed_context.lessons.select {|l| l.key == activity_data['seeding_key']['lesson.key']}.first&.id
+      raise 'No lesson found' if lesson_id.nil?
+
+      activity_attrs = activity_data.except('seeding_key')
+      activity_attrs['lesson_id'] = lesson_id
+      LessonActivity.new(activity_attrs)
+    end
+
+    # Destroy any existing activities that weren't in the imported list
+    # Destroy before import, otherwise position gets messed up.
+    existing_activities = seed_context.script.lessons.map(&:lesson_activities).flatten
+    destroy_outdated_objects(LessonActivity, existing_activities, activities_to_import, seed_context)
+    LessonActivity.import! activities_to_import, on_duplicate_key_update: get_columns(LessonActivity)
+    seed_context.script.reload
+    seed_context.script.lessons.map(&:lesson_activities).flatten
+    #  LessonActivity.where(script: Script.find_by_name(seed_context.script.name))
+  end
+
+  def self.import_activity_sections(sections_data, seed_context)
+    sections_to_import = sections_data.map do |section_data|
+      lesson_activity_id = seed_context.lesson_activities.select {|la| la.key == section_data['seeding_key']['lesson_activity.key']}.first&.id
+      raise "No lesson activity found with key #{section_data['seeding_key']['lesson_activity.key']}" if lesson_activity_id.nil?
+
+      section_attrs = section_data.except('seeding_key')
+      section_attrs['lesson_activity_id'] = lesson_activity_id
+      ActivitySection.new(section_attrs)
+    end
+
+    # Destroy any existing activities that weren't in the imported list
+    # Destroy before import, otherwise position gets messed up.
+    existing_sections = seed_context.script.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
+    destroy_outdated_objects(ActivitySection, existing_sections, sections_to_import, seed_context)
+    ActivitySection.import! sections_to_import, on_duplicate_key_update: get_columns(ActivitySection)
+    seed_context.script.reload
+    seed_context.script.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
+    # ActivitySection.where(script: seed_context.script)
+  end
+
   def self.import_script_levels(script_levels_data, seed_context)
     lessons_by_seeding_key = seed_context.lessons.index_by {|l| l.seeding_key(seed_context)}
     script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
@@ -192,12 +236,16 @@ module ScriptSeed
       stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}]
       raise 'No stage found' if stage.nil?
 
+      section_key = sl_data['seeding_key']['script_level.activity_section.key']
+      section_id = section_key && seed_context.activity_sections.find {|section| section.key == section_key}.id
+
       # Unlike the other models, we must explicitly check for an existing ScriptLevel to update, since its
       # logical unique key is not a unique index on the table, so we can't just rely on on_duplicate_key_update: :all.
       # TODO: this can be simplified / avoided if we add a new unique identifier field to ScriptLevel.
       script_level_to_import = script_levels_by_seeding_key[sl_data['seeding_key']] || ScriptLevel.new
       script_level_attrs = sl_data.except('seeding_key')
       script_level_attrs['script_id'] = seed_context.script.id
+      script_level_attrs['activity_section_id'] = section_id if section_id
       script_level_attrs['stage_id'] = stage.id
       script_level_to_import.assign_attributes(script_level_attrs)
       script_level_to_import
