@@ -12,9 +12,6 @@ import resourcesEditor, {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
 
-//TODO Remove once we hook up real level data
-import {levelKeyList} from '../../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
-
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
@@ -31,8 +28,7 @@ $(document).ready(function() {
   registerReducers({...reducers, resources: resourcesEditor});
   const store = getStore();
 
-  //TODO Switch to using real data once we have activity data
-  store.dispatch(init(activities, levelKeyList, searchOptions));
+  store.dispatch(init(activities, searchOptions));
   store.dispatch(initResources(lessonData.resources || []));
 
   ReactDOM.render(
