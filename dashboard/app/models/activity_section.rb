@@ -29,6 +29,7 @@ class ActivitySection < ApplicationRecord
   include SerializedProperties
 
   belongs_to :lesson_activity
+  has_one :script, through: :lesson_activity
   has_one :lesson, through: :lesson_activity
 
   has_many :script_levels, -> {order(:activity_section_position)}, dependent: :destroy
