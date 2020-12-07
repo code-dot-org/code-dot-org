@@ -797,6 +797,7 @@ FactoryGirl.define do
   end
 
   factory :resource do
+    association :course_version, factory: :course_version
     url 'fake.url'
     name 'fake name'
   end
