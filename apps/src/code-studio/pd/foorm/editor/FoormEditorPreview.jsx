@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Foorm from './Foorm';
+import Foorm from '../Foorm';
 import {connect} from 'react-redux';
 
 const styles = {
