@@ -4,10 +4,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import train, { availableTrainers } from "../train";
 import {
-  setShowPredict,
   setPercentDataToReserve,
   readyToTrain,
-  getShowChooseReserve
+  getShowChooseReserve,
 } from "../redux";
 import { TRAINING_DATA_PERCENTS, styles } from "../constants";
 
@@ -16,27 +15,24 @@ class TrainModel extends Component {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     readyToTrain: PropTypes.bool,
-    setShowPredict: PropTypes.func.isRequired,
     selectedTrainer: PropTypes.string,
     percentDataToReserve: PropTypes.number,
     setPercentDataToReserve: PropTypes.func,
     modelSize: PropTypes.number,
-    showChooseReseve: PropTypes.bool
+    showChooseReseve: PropTypes.bool,
   };
 
   handleChange = event => {
     this.props.setPercentDataToReserve(parseInt(event.target.value));
-    this.props.setShowPredict(false);
   };
 
   onClickTrainModel = () => {
     train.init();
     train.onClickTrain();
-    this.props.setShowPredict(true);
   };
 
   render() {
-    const {showChooseReseve} = this.props;
+    const { showChooseReseve } = this.props;
 
     return (
       <div id="train-model" style={styles.panel}>
@@ -100,14 +96,11 @@ export default connect(
     readyToTrain: readyToTrain(state),
     percentDataToReserve: state.percentDataToReserve,
     modelSize: state.modelSize,
-    showChooseReseve: getShowChooseReserve(state)
+    showChooseReseve: getShowChooseReserve(state),
   }),
   dispatch => ({
-    setShowPredict(showPredict) {
-      dispatch(setShowPredict(showPredict));
-    },
     setPercentDataToReserve(percentDataToReserve) {
       dispatch(setPercentDataToReserve(percentDataToReserve));
-    }
+    },
   })
 )(TrainModel);

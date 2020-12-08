@@ -354,10 +354,24 @@ export function getCategoricalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
 }
 
+function isColumnReadOnly(state, column) {
+  const metadataColumnType =
+    state.metadata &&
+    state.metadata.fields &&
+    state.metadata.fields.find(field => {
+      return field.id === column;
+    }).type;
+
+  return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
+}
+
 export function getSelectedColumns(state) {
   return state.selectedFeatures
     .concat(state.labelColumn)
-    .filter(column => column !== undefined && column !== "");
+    .filter(column => column !== undefined && column !== "")
+    .map(columnId => {
+      return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
+    });
 }
 
 export function getSelectedCategoricalColumns(state) {
@@ -729,17 +743,4 @@ export function getPanels(state) {
     .map(panel => {
       return { ...panel, enabled: isPanelEnabled(state, panel.id) };
     });
-}
-
-export function getColumnTypeReadOnly(column) {
-  const state = store.getState();
-
-  const metadataColumnType =
-    state.metadata &&
-    state.metadata.fields &&
-    state.metadata.fields.find(field => {
-      return field.id === column;
-    }).type;
-
-  return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
 }
