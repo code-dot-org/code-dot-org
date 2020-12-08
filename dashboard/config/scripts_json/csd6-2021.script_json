@@ -22,28 +22,11 @@
       "project_sharing": true,
       "teacher_resources": [
         [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-20/unit6/"
-        ],
-        [
           "teacherForum",
           "https://forum.code.org/c/csd"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-20/unit6/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-20/unit6/standards/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csd-20/unit6/code/"
         ]
       ],
-      "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": "csd6",

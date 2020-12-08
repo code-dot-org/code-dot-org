@@ -15,28 +15,11 @@
       "project_sharing": true,
       "teacher_resources": [
         [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-20/unit3/"
-        ],
-        [
           "teacherForum",
           "https://forum.code.org/c/csd3"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-20/unit3/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-20/unit3/standards/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csd-20/unit3/code/"
         ]
       ],
-      "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
