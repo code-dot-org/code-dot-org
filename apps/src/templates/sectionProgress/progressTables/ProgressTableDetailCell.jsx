@@ -1,25 +1,24 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {
   levelType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
-import ProgressTableUnpluggedBubble from './ProgressTableUnpluggedBubble';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import color from '@cdo/apps/util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import _ from 'lodash';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+
+const UNPLUGGED_BUBBLE_WIDTH = getUnpluggedWidth();
 
 const styles = {
   container: {
     ...progressStyles.flexBetween,
     position: 'relative',
     whiteSpace: 'nowrap'
-  },
-  diamondContainer: {
-    // Height needed only by IE to get diamonds to line up properly
-    height: 36
   },
   background: {
     height: 10,
@@ -34,7 +33,22 @@ const styles = {
   }
 };
 export default class ProgressTableDetailCell extends React.Component {
-  static whyDidYouRender = true;
+  static widthForLevels(levels) {
+    return (
+      levels.reduce((sum, level) => {
+        return (
+          sum +
+          (level.isUnplugged
+            ? UNPLUGGED_BUBBLE_WIDTH
+            : progressStyles.BUBBLE_CONTAINER_WIDTH) +
+          (level.sublevels || []).length *
+            progressStyles.LETTER_BUBBLE_CONTAINER_WIDTH
+        );
+      }, 0) +
+      2 * progressStyles.CELL_PADDING
+    );
+  }
+
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
@@ -111,29 +125,14 @@ export default class ProgressTableDetailCell extends React.Component {
     const paired = levelProgress && levelProgress.paired;
     const url = this.buildBubbleUrl(level);
 
-    if (level.isUnplugged) {
-      return (
-        <div key={level.id} onClick={_ => this.recordBubbleClick(level.id)}>
-          <ProgressTableUnpluggedBubble levelStatus={status} url={url} />
-        </div>
-      );
-    }
-
-    const conceptContainer =
-      (level.isConceptLevel && styles.diamondContainer) || {};
     return (
-      <div
-        key={`${level.id}_${level.levelNumber}`}
-        style={{
-          ...styles.container,
-          ...conceptContainer
-        }}
-      >
+      <div key={`${level.id}_${level.levelNumber}`} style={styles.container}>
         <div onClick={_ => this.recordBubbleClick(level.id)}>
           <ProgressTableLevelBubble
             levelStatus={status}
             levelKind={level.kind}
             disabled={!!level.bonus && !stageExtrasEnabled}
+            unplugged={level.isUnplugged}
             bonus={level.bonus}
             paired={paired}
             concept={level.isConceptLevel}
@@ -154,4 +153,47 @@ export default class ProgressTableDetailCell extends React.Component {
       </div>
     );
   }
+}
+
+/**
+ * The width of the unplugged bubble depends on the localization of the text,
+ * but our table needs to know its rendered width for determining column width,
+ * so we calculate the width here by adding the element to the dom, getting its
+ * width, then removing it.
+ *
+ * Note: it would make more sense to put this code in the same file with the
+ * ProgressTableLevelBubble component, but due to JSX compilation the class
+ * symbol for the component is undefined in that file.
+ */
+function getUnpluggedWidth() {
+  // Create invisible container
+  const outer = document.createElement('div');
+  outer.style.visibility = 'hidden';
+  document.body.appendChild(outer);
+
+  // Create React element
+  const unpluggedElement = React.createElement(
+    ProgressTableLevelBubble,
+    {
+      levelStatus: LevelStatus.not_tried,
+      unplugged: true,
+      disabled: false,
+      url: ''
+    },
+    null
+  );
+
+  // Render node and fetch from DOM
+  const unpluggedNode = ReactDOM.findDOMNode(
+    ReactDOM.render(unpluggedElement, outer)
+  );
+
+  // Store the width
+  const width = unpluggedNode.offsetWidth;
+
+  // Remove temporary elements from DOM
+  ReactDOM.unmountComponentAtNode(outer);
+  outer.parentNode.removeChild(outer);
+
+  return width;
 }

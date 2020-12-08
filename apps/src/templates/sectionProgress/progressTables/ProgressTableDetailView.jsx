@@ -14,34 +14,17 @@ import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 import ProgressTableLevelIcon from './ProgressTableLevelIcon';
 import progressTableStyles from './progressTableStyles.scss';
-import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
 const styles = {
   headerContainer: {
     height: '100%'
-  },
-  dummyProgress: {
-    height: 0,
-    opacity: 0
   }
 };
-
-const dummyStudent = {id: -1, name: ''};
 
 export default class ProgressTableDetailView extends React.Component {
   static widthForScript(scriptData) {
     return scriptData.stages.reduce((stageSum, stage) => {
-      return (
-        stageSum +
-        stage.levels.reduce((levelSum, level) => {
-          return (
-            levelSum +
-            (progressStyles.BUBBLE_CONTAINER_WIDTH +
-              (level.sublevels || []).length *
-                progressStyles.LETTER_BUBBLE_CONTAINER_WIDTH)
-          );
-        }, 0)
-      );
+      return stageSum + ProgressTableDetailCell.widthForLevels(stage.levels);
     }, 0);
   }
 
@@ -93,13 +76,6 @@ export default class ProgressTableDetailView extends React.Component {
           includeArrow={levels.length > 1}
           isAssessment={stageIsAllAssessment(levels)}
         />
-        <div style={styles.dummyProgress}>
-          {this.renderDetailCell(
-            dummyStudent,
-            levels,
-            this.dummyProgressForLevels(levels)
-          )}
-        </div>
       </div>
     );
   }
@@ -148,8 +124,20 @@ export default class ProgressTableDetailView extends React.Component {
     const columns = [];
     this.props.scriptData.stages.forEach((stage, index) => {
       columns.push({cell: {formatters: [this.detailCellFormatter]}});
-      lessonHeaders.push({header: {formatters: [this.lessonNumberFormatter]}});
-      levelHeaders.push({header: {formatters: [this.levelIconFormatter]}});
+      lessonHeaders.push({
+        header: {
+          props: {
+            // Our top header needs explicit width
+            style: {
+              minWidth: ProgressTableDetailCell.widthForLevels(stage.levels)
+            }
+          },
+          formatters: [this.lessonNumberFormatter]
+        }
+      });
+      levelHeaders.push({
+        header: {formatters: [this.levelIconFormatter]}
+      });
     });
 
     // Account for scrollbar in table body

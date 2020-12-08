@@ -54,6 +54,5 @@ function getScrollbarWidth() {
   // Removing temporary elements from the DOM
   outer.parentNode.removeChild(outer);
 
-  console.log('width: ', scrollbarWidth);
   return scrollbarWidth;
 }

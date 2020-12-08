@@ -2,6 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import i18n from '@cdo/locale';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
@@ -54,6 +55,18 @@ const styles = {
   bonusDisabled: {
     backgroundColor: color.lighter_gray,
     color: color.white
+  },
+  unpluggedContainer: {
+    ...progressStyles.flex,
+    borderRadius: 20,
+    padding: '6px 10px',
+    margin: '3px 0px',
+    position: 'relative'
+  },
+  unpluggedText: {
+    ...progressStyles.font,
+    fontSize: 12,
+    letterSpacing: -0.12
   }
 };
 
@@ -62,6 +75,7 @@ class ProgressTableLevelBubble extends React.PureComponent {
     levelStatus: PropTypes.string,
     levelKind: PropTypes.string,
     disabled: PropTypes.bool.isRequired,
+    unplugged: PropTypes.bool,
     smallBubble: PropTypes.bool,
     bonus: PropTypes.bool,
     paired: PropTypes.bool,
@@ -70,21 +84,36 @@ class ProgressTableLevelBubble extends React.PureComponent {
     url: PropTypes.string.isRequired
   };
 
-  mainStyle() {
+  levelStyle() {
     const {levelStatus, levelKind, disabled} = this.props;
     return {
-      ...styles.main,
       ...(!disabled && progressStyles.hoverStyle),
       ...progressStyles.levelProgressStyle(levelStatus, levelKind, disabled)
+    };
+  }
+
+  mainStyle() {
+    return {
+      ...styles.main,
+      ...this.levelStyle()
     };
   }
 
   bigStyle() {
     const {disabled, bonus, concept} = this.props;
     return {
+      ...this.mainStyle(),
       ...(concept && styles.largeDiamond),
       ...(disabled && bonus && styles.bonusDisabled)
     };
+  }
+
+  renderUnplugged() {
+    return (
+      <div style={{...styles.unpluggedContainer, ...this.levelStyle()}}>
+        <div style={styles.unpluggedText}>{i18n.unpluggedActivity()}</div>
+      </div>
+    );
   }
 
   renderSmallBubble() {
@@ -114,7 +143,7 @@ class ProgressTableLevelBubble extends React.PureComponent {
     const {bonus, paired, concept} = this.props;
     return (
       <div style={styles.container}>
-        <div style={{...this.mainStyle(), ...this.bigStyle()}}>
+        <div style={this.bigStyle()}>
           <div
             style={{
               ...progressStyles.flex,
@@ -135,6 +164,8 @@ class ProgressTableLevelBubble extends React.PureComponent {
       <a href={this.props.url} style={progressStyles.link}>
         {this.props.smallBubble
           ? this.renderSmallBubble()
+          : this.props.unplugged
+          ? this.renderUnplugged()
           : this.renderBigBubble()}
       </a>
     );
