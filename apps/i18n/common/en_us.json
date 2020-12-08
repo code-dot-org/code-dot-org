@@ -667,7 +667,7 @@
   "dropletBlock_playSound_description": "Plays the MP3 sound file from the specified URL.",
   "dropletBlock_playSound_param0_description": "The URL to a sound file. Can be a project asset name or external URL.",
   "dropletBlock_playSound_param1_description": "If true, loop the sound until asked to stop.",
-  "dropletBlock_playSpeech_description": "Plays the specified text as speech with a voice in the specified gender. Powered by Microsoft Azure.",
+  "dropletBlock_playSpeech_description": "Plays the specified text as speech with a voice in the specified gender. Powered by Microsoft Azure AI.",
   "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
   "dropletBlock_randomNumber_param0": "min",
   "dropletBlock_randomNumber_param0_description": "The minimum number returned",
