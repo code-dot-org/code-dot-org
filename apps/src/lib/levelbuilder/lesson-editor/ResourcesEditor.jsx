@@ -7,6 +7,7 @@ import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
 import AddResourceDialog from './AddResourceDialog';
 import Button from '@cdo/apps/templates/Button';
+import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {
   addResource,
@@ -67,7 +68,8 @@ class ResourcesEditor extends Component {
     this.state = {
       resourceInput: '',
       searchValue: '',
-      newResourceDialogOpen: false
+      newResourceDialogOpen: false,
+      confirmRemovalDialogOpen: false
     };
   }
 
@@ -148,8 +150,17 @@ class ResourcesEditor extends Component {
     this.props.editResource(resource);
   };
 
-  handleRemove = key => {
-    this.props.removeResource(key);
+  handleRemoveResourceDialogOpen = resource => {
+    this.setState({resourceToRemove: resource, confirmRemovalDialogOpen: true});
+  };
+
+  handleRemoveResourceDialogClose = () => {
+    this.setState({resourceToRemove: null, confirmRemovalDialogOpen: false});
+  };
+
+  removeResource = () => {
+    this.props.removeResource(this.state.resourceToRemove.key);
+    this.handleRemoveResourceDialogClose();
   };
 
   handleEdit = resource => {
@@ -179,6 +190,20 @@ class ResourcesEditor extends Component {
             handleClose={this.handleNewResourceDialogClose}
             existingResource={this.state.editingResource}
             courseVersionId={this.props.courseVersionId}
+          />
+        )}
+        {this.state.confirmRemovalDialogOpen && (
+          <Dialog
+            body={`Are you sure you want to remove resource "${
+              this.state.resourceToRemove.name
+            }" from this lesson?`}
+            cancelText="Cancel"
+            confirmText="Delete"
+            confirmType="danger"
+            isOpen={this.state.confirmRemovalDialogOpen}
+            handleClose={this.handleRemoveResourceDialogClose}
+            onCancel={this.handleRemoveResourceDialogClose}
+            onConfirm={this.removeResource}
           />
         )}
         Resources
@@ -231,7 +256,10 @@ class ResourcesEditor extends Component {
                     </div>
                     <div
                       style={styles.remove}
-                      onMouseDown={() => this.handleRemove(resource.key)}
+                      className="unit-test-remove-resource"
+                      onMouseDown={() =>
+                        this.handleRemoveResourceDialogOpen(resource)
+                      }
                     >
                       <i className="fa fa-times" />
                     </div>
