@@ -367,9 +367,11 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson removing and adding resources' do
-    resource_to_keep = create :resource
-    resource_to_add = create :resource
-    resource_to_remove = create :resource
+    course_version = create :course_version
+    resource_to_keep = create :resource, course_version: course_version
+    resource_to_add = create :resource, course_version: course_version
+    resource_to_remove = create :resource, course_version: course_version
+    @lesson.script.course_version = course_version
 
     @lesson.resources << resource_to_keep
     @lesson.resources << resource_to_remove
