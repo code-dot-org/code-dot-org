@@ -121,7 +121,7 @@ def main(options)
     end
     script.fix_script_level_positions
 
-    script.update!(show_calendar: !!cb_unit['show_calendar'])
+    script.update!(show_calendar: !!cb_unit['show_calendar'], is_migrated: true)
 
     puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"
   end
