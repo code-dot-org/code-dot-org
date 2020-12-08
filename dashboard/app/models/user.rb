@@ -77,7 +77,7 @@ require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper

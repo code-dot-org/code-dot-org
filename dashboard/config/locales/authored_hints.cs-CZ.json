@@ -2713,7 +2713,7 @@
           "courseD_collector_debugging9_a": "Je několik cest, jak tuto úlohu vyřešit... ale všechny zahrnují otočky!"
         },
         "courseD_farmer_condLoops5_2019": {
-          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
+          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud nenastane - tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
         },
         "courseD_farmer_condLoops6_2018": {
           "courseD_farmer_condLoops6_a": "Využij cyklus `pokud je cesta vpřed` nebo blok `když je cesta vpřed / jinak`, abys posunul(a) farmářku dále přes spirálu.",
@@ -3093,10 +3093,10 @@
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2018": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2019": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2020": {
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"

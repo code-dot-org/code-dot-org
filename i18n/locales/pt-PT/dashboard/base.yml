@@ -154,8 +154,6 @@ pt:
     invalid_password: "A palavra-passe tem de ter, pelo menos, 6 caracteres"
     mismatch_password: "As duas palavras-passe que digitaste não correspondem"
     student_consent: "Eu confirmo que tenho autorização dos meus pais ou do encarregado de educação para usar os serviços da Code.org."
-    agree_us_website: "Eu concordo em usar um sítio web situado nos Estados Unidos."
-    my_data_to_us: "Os dados gerados do meu uso deste site poderão ser enviados e armazenados ou processados nos Estados Unidos."
     agree_us_data_transfer_student: '**Eu aceito que a Code.org pode transferir dados (incluindo dados pessoais) da utilização que faço deste site para os Estados Unidos** com o objetivo de hospedar e processar tais dados.'
     agree_us_data_transfer_teacher: '**Eu aceito que a Code.org pode transferir dados (incluindo dados pessoais) da utilização que faço deste site (incluindo o meu uso como estudante) para os Estados Unidos** com o objetivo de hospedar e processar tais dados.'
     data_collection_us: "Compreendo que o Code.org é um site sem fins lucrativos com sede nos EUA e que as leis que regulam a recolha de dados nos EUA podem diferir da legislação no meu país."

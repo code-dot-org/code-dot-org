@@ -190,6 +190,8 @@ km:
           lessons:
             Lists:
               name: បញ្ជី
+            Designing Screens with Code:
+              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         workshop-gamelab:
           lessons:
             Input:
@@ -202,6 +204,10 @@ km:
           lessons:
             Lists:
               name: បញ្ជី
+            Designing Screens with Code:
+              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
+            Designing Screens with Code_:
+              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         csd3-draft:
           lessons:
             Variables:
@@ -283,6 +289,10 @@ km:
           lessons:
             Internet:
               name: អ៊ីនធឺណិត
+        csd6-2018:
+          lessons:
+            Designing Screens with Code:
+              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         coursee-2018:
           lessons:
             Internet:
@@ -372,6 +382,10 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
+        csd6-2019:
+          lessons:
+            Designing Screens with Code:
+              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -538,6 +552,10 @@ km:
               display_name: បញ្ជី
             csp_loops:
               display_name: រង្វិល​ជុំ
+        csd6-2020:
+          lessons:
+            Designing Screens with Code:
+              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         csd3-2020:
           lessons:
             Variables:

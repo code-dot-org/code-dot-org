@@ -157,8 +157,6 @@ pt:
     invalid_password: "A senha deve ter pelo menos 6 caracteres"
     mismatch_password: "As duas senhas que você digitou são diferentes"
     student_consent: "Confirmo que tenho autorização dos meus pais ou do tutor legal para usar os serviços do Code.org."
-    agree_us_website: "Concordo em usar um site situado nos Estados Unidos."
-    my_data_to_us: "Os dados gerados pelo meu uso deste site podem ser enviados e armazenados ou processados nos Estados Unidos."
     student_terms_markdown: "Os endereços de email não são armazenados em um formulário que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade] (http://code.org/privacy) para mais informações."
     additional_information: "Precisamos de mais informações para continuar com o processo de inscrição."
     user_type_button: "Atualizar Tipo de Conta"

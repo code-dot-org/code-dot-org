@@ -570,10 +570,10 @@
           "validation": "**Bagaimana cara lulus dari level ini?**\n\n-   Gunakan blok `ketika panah kiri ditekan` untuk membuat Robot melakukan gerakan tari ketika Anda menekannya.\n\n_Level ini akan berakhir setelah 7 birama._"
         },
         "CourseE_HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Lihat **Mercusuar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimana Anda dapat menggunakan persyaratan tersebut untuk melewati Monumen Laut?"
+          "voyage_aquatic_10a": "Lihat **Lentera Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimana Anda dapat menggunakan kondisional pada lentera laut untuk melewati Monumen Laut?"
         },
         "CourseE_HOC 2018 Level_10_2020": {
-          "voyage_aquatic_10a": "Lihat **Mercusuar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimana Anda dapat menggunakan persyaratan tersebut untuk melewati Monumen Laut?"
+          "voyage_aquatic_10a": "Lihat **Lentera Laut** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimana Anda dapat menggunakan kondisional pada lentera laut untuk melewati Monumen Laut?"
         },
         "CourseE_HOC 2018 Level_7a": {
           "aquatic7": "Anda bisa menggunakan blok jalan if untuk membantu berbelok."
@@ -667,16 +667,16 @@
           "alternate": "Blok yang berganti terdapat dalam kategori \"Penari\"."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_b": "Jika Anda menyebut fungsi dengan benar, ini adalah jalan yang akan Anda tempuh...",
-          "Function_intro_Ryan_a": "Anda dapat menyebut fungsi berulang kali di dalam program Anda!  Coba sebut dua kali untuk memecahkan puzzle ini."
+          "Function_intro_Ryan_b": "Jika Anda memanggil function dengan benar, ini adalah jalan yang akan Anda tempuh...",
+          "Function_intro_Ryan_a": "Anda dapat memanggil function berulang kali di dalam program Anda!  Coba panggil dua kali untuk memecahkan puzzle ini"
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_b": "Jika Anda menyebut fungsi dengan benar, ini adalah jalan yang akan Anda tempuh...",
-          "Function_intro_Ryan_a": "Anda dapat menyebut fungsi berulang kali di dalam program Anda!  Coba sebut dua kali untuk memecahkan puzzle ini."
+          "Function_intro_Ryan_b": "Jika Anda memanggil function dengan benar, ini adalah jalan yang akan Anda tempuh...",
+          "Function_intro_Ryan_a": "Anda dapat memanggil function berulang kali di dalam program Anda!  Coba panggil dua kali untuk memecahkan puzzle ini"
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_b": "Jika Anda menyebut fungsi dengan benar, ini adalah jalan yang akan Anda tempuh...",
-          "Function_intro_Ryan_a": "Anda dapat menyebut fungsi berulang kali di dalam program Anda!  Coba sebut dua kali untuk memecahkan puzzle ini."
+          "Function_intro_Ryan_b": "Jika Anda memanggil function dengan benar, ini adalah jalan yang akan Anda tempuh...",
+          "Function_intro_Ryan_a": "Anda dapat memanggil function berulang kali di dalam program Anda!  Coba panggil dua kali untuk memecahkan puzzle ini"
         },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Lihat **Mercusuar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Bagaimana Anda dapat menggunakan persyaratan tersebut untuk melewati Monumen Laut?"
@@ -745,31 +745,31 @@
           "MC_HOC_2017_04POINT5_RYAN_a": "Agent hanya perlu mencapai pelat tekanan pertama untuk memungkinkan Alex atau Steve lewat menuju kapak."
         },
         "MC_HOC_2017_04_Cole": {
-          "MC_HOC_2017_04_Cole_a": "Agent perlu `bergerak maju` 7 kali.  Bagaimana Anda dapat menggunakan loop `repeat` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_a": "Agent perlu `move forward` 7 kali.  Bagaimana Anda dapat menggunakan loop `repeat` untuk mewujudkannya?",
           "MC_HOC_2017_04_Cole_c": "Tekan \"Jalankan\"!\n\nAnda dapat menjalankan kode Anda meskipun tidak benar.  Jalankan dan atur ulang kode Anda berulang kali hingga Anda mengetahui apa yang salah.",
           "MC_HOC_2017_04_Cole_b": "Setelah Agent mencapai pelat tekanan, ia akan membuka pintu untuk pemain."
         },
         "MC_HOC_2017_04_Cole_2019": {
-          "MC_HOC_2017_04_Cole_a": "Agent perlu `bergerak maju` 7 kali.  Bagaimana Anda dapat menggunakan loop `repeat` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_a": "Agent perlu `move forward` 7 kali.  Bagaimana Anda dapat menggunakan loop `repeat` untuk mewujudkannya?",
           "MC_HOC_2017_04_Cole_c": "Tekan \"Jalankan\"!\n\nAnda dapat menjalankan kode Anda meskipun tidak benar.  Jalankan dan atur ulang kode Anda berulang kali hingga Anda mengetahui apa yang salah.",
           "MC_HOC_2017_04_Cole_b": "Setelah Agent mencapai pelat tekanan, ia akan membuka pintu untuk pemain."
         },
         "MC_HOC_2017_04_Cole_2020": {
-          "MC_HOC_2017_04_Cole_a": "Agent perlu `bergerak maju` 7 kali.  Bagaimana Anda dapat menggunakan loop `repeat` untuk mewujudkannya?",
+          "MC_HOC_2017_04_Cole_a": "Agent perlu `move forward` 7 kali.  Bagaimana Anda dapat menggunakan loop `repeat` untuk mewujudkannya?",
           "MC_HOC_2017_04_Cole_c": "Tekan \"Jalankan\"!\n\nAnda dapat menjalankan kode Anda meskipun tidak benar.  Jalankan dan atur ulang kode Anda berulang kali hingga Anda mengetahui apa yang salah.",
           "MC_HOC_2017_04_Cole_b": "Setelah Agent mencapai pelat tekanan, ia akan membuka pintu untuk pemain."
         },
         "MC_HOC_2017_05_Cole": {
           "MC_HOC_2017_05_Cole_a": "Tahukah Anda bahwa Anda dapat memasukkan lebih dari satu bagian kode ke dalam satu loop?  Coba bergerak maju **dan** menempatkan papan ke dalam `repeat` untuk menyelesaikan puzzle ini.",
-          "MC_HOC_2017_05_Cole_b": "Dapatkan Agent melintasi sungai, membangun jembatan ketika Anda pergi."
+          "MC_HOC_2017_05_Cole_b": "Bawa Agent melintasi sungai, dengan membangun jembatan di sepanjang prosesnya."
         },
         "MC_HOC_2017_05_Cole_2019": {
           "MC_HOC_2017_05_Cole_a": "Tahukah Anda bahwa Anda dapat memasukkan lebih dari satu bagian kode ke dalam satu loop?  Coba bergerak maju **dan** menempatkan papan ke dalam `repeat` untuk menyelesaikan puzzle ini.",
-          "MC_HOC_2017_05_Cole_b": "Dapatkan Agent melintasi sungai, membangun jembatan ketika Anda pergi."
+          "MC_HOC_2017_05_Cole_b": "Bawa Agent melintasi sungai, dengan membangun jembatan di sepanjang prosesnya."
         },
         "MC_HOC_2017_05_Cole_2020": {
           "MC_HOC_2017_05_Cole_a": "Tahukah Anda bahwa Anda dapat memasukkan lebih dari satu bagian kode ke dalam satu loop?  Coba bergerak maju **dan** menempatkan papan ke dalam `repeat` untuk menyelesaikan puzzle ini.",
-          "MC_HOC_2017_05_Cole_b": "Dapatkan Agent melintasi sungai, membangun jembatan ketika Anda pergi."
+          "MC_HOC_2017_05_Cole_b": "Bawa Agent melintasi sungai, dengan membangun jembatan di sepanjang prosesnya."
         },
         "MC_HOC_2017_06_Cole": {
           "MC_HOC_2017_06_Cole_a": "Bagaimana kali loop ini berjalan?  Berapa kali hal ini _harus_ dijalankan?",
@@ -785,18 +785,18 @@
         },
         "MC_HOC_2017_07_Cole": {
           "MC_HOC_2017_07_Cole_c": "Yang perlu dilakukan Agen adalah menghapus jalan ke Kereta Tambang.",
-          "MC_HOC_2017_07_Cole_a": "Untuk memecahkan puzzle ini, cari tahu fungsi `bersihkan jalan` dan sebut sebanyak yang Anda butuhkan menggunakan blok `bersihkan jalan` kecil berwarna hijau dari kotak perlengkapan.",
-          "MC_HOC_2017_07_Cole_b": "Coba campurkan blok fungsi dengan blok lain dari kotak perlengkapan untuk membantu Anda mengatasi puzzle ini."
+          "MC_HOC_2017_07_Cole_a": "Untuk memecahkan puzzle ini, cari tahu function `clear path` dan panggil sebanyak yang Anda butuhkan menggunakan blok `clear path` kecil berwarna hijau dari toolbox.",
+          "MC_HOC_2017_07_Cole_b": "Coba campurkan blok function dengan blok lain dari toolbox untuk membantu Anda mengatasi puzzle ini."
         },
         "MC_HOC_2017_07_Cole_2019": {
           "MC_HOC_2017_07_Cole_c": "Yang perlu dilakukan Agen adalah menghapus jalan ke Kereta Tambang.",
-          "MC_HOC_2017_07_Cole_a": "Untuk memecahkan puzzle ini, cari tahu fungsi `bersihkan jalan` dan sebut sebanyak yang Anda butuhkan menggunakan blok `bersihkan jalan` kecil berwarna hijau dari kotak perlengkapan.",
-          "MC_HOC_2017_07_Cole_b": "Coba campurkan blok fungsi dengan blok lain dari kotak perlengkapan untuk membantu Anda mengatasi puzzle ini."
+          "MC_HOC_2017_07_Cole_a": "Untuk memecahkan puzzle ini, cari tahu function `clear path` dan panggil sebanyak yang Anda butuhkan menggunakan blok `clear path` kecil berwarna hijau dari toolbox.",
+          "MC_HOC_2017_07_Cole_b": "Coba campurkan blok function dengan blok lain dari toolbox untuk membantu Anda mengatasi puzzle ini."
         },
         "MC_HOC_2017_07_Cole_2020": {
           "MC_HOC_2017_07_Cole_c": "Yang perlu dilakukan Agen adalah menghapus jalan ke Kereta Tambang.",
-          "MC_HOC_2017_07_Cole_a": "Untuk memecahkan puzzle ini, cari tahu fungsi `bersihkan jalan` dan sebut sebanyak yang Anda butuhkan menggunakan blok `bersihkan jalan` kecil berwarna hijau dari kotak perlengkapan.",
-          "MC_HOC_2017_07_Cole_b": "Coba campurkan blok fungsi dengan blok lain dari kotak perlengkapan untuk membantu Anda mengatasi puzzle ini."
+          "MC_HOC_2017_07_Cole_a": "Untuk memecahkan puzzle ini, cari tahu function `clear path` dan panggil sebanyak yang Anda butuhkan menggunakan blok `clear path` kecil berwarna hijau dari toolbox.",
+          "MC_HOC_2017_07_Cole_b": "Coba campurkan blok function dengan blok lain dari toolbox untuk membantu Anda mengatasi puzzle ini."
         },
         "MC_HOC_2017_10_RETRY": {
           "MC_HOC_2017_10_Cole_b": "Tidak tahu harus ke mana? Lihat apakah Anda dapat menemukan garis putus-putus!",
@@ -929,10 +929,10 @@
         },
         "OPD-K5-variables-5": {
           "courseF_artist_variables3_a": "Variabel `length` akan digunakan di dua tempat dalam kode: Di sepanjang sisi segitiga, dan sesuai jumlah gerakan maju di antara segitiga.",
-          "courseF_artist_variables3_b": "Blok angka dengan nilai 50 seharusnya hanya berada di satu tempat: setelah blok `atur panjang`."
+          "courseF_artist_variables3_b": "Blok angka dengan nilai 50 seharusnya hanya berada di satu tempat: setelah blok `set length`."
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_a": "Kode Anda tidak akan jauh berbeda dengan yang ada di puzzle terakhir, kecuali Anda perlu mengganti seniman untuk melompat ke bawah, lalu memutar balik untuk bersiap menggambar segitiga berikutnya.",
+          "courseF_artist_variables4_a": "Kode Anda tidak akan jauh berbeda dengan yang ada di puzzle terakhir, kecuali Anda perlu memutar artis untuk melompat ke bawah, lalu memutar balik untuk bersiap menggambar segitiga berikutnya.",
           "courseF_artist_variables4_c": "Ini adalah pola yang artis Anda akan ikuti:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         },
         "OPD-K5-variables-7": {
@@ -1107,17 +1107,17 @@
           "mc_10_c": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu."
         },
         "Underground Mining Coal": {
-          "mc_9_a": "Apakah Anda menghadap ke arah yang benar? Blok `destroy block` menghancurkan blok di depan Anda.",
+          "mc_9_a": "Apakah Anda menghadap ke arah yang benar? `Destroy block` menghancurkan blok di depan Anda.",
           "mc_9_b": "Bintik hitam di dinding adalah batu bara! Gunakan `destroy block` di sini untuk menambang batu bara.",
           "mc_9_c": "Gunakan `place torch` untuk meletakkan obor di kotak yang Anda pijak."
         },
         "Underground Mining Coal_2019": {
-          "mc_9_a": "Apakah Anda menghadap ke arah yang benar? Blok `destroy block` menghancurkan blok di depan Anda.",
+          "mc_9_a": "Apakah Anda menghadap ke arah yang benar? `Destroy block` menghancurkan blok di depan Anda.",
           "mc_9_b": "Bintik hitam di dinding adalah batu bara! Gunakan `destroy block` di sini untuk menambang batu bara.",
           "mc_9_c": "Gunakan `place torch` untuk meletakkan obor di kotak yang Anda pijak."
         },
         "Underground Mining Coal_2020": {
-          "mc_9_a": "Apakah Anda menghadap ke arah yang benar? Blok `destroy block` menghancurkan blok di depan Anda.",
+          "mc_9_a": "Apakah Anda menghadap ke arah yang benar? `Destroy block` menghancurkan blok di depan Anda.",
           "mc_9_b": "Bintik hitam di dinding adalah batu bara! Gunakan `destroy block` di sini untuk menambang batu bara.",
           "mc_9_c": "Gunakan `place torch` untuk meletakkan obor di kotak yang Anda pijak."
         },
@@ -1128,38 +1128,38 @@
           "behavior hint": "Coba sunting perilaku!\n\n-   Ke arah mana roket perlu bergerak?"
         },
         "behaviors 3": {
-          "behavior hint": "Coba sunting perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap peri?"
+          "behavior hint": "Coba edit perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap sprite?"
         },
         "behaviors 3_2020": {
-          "behavior hint": "Coba sunting perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap peri?"
+          "behavior hint": "Coba edit perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap sprite?"
         },
         "behaviors 3a": {
-          "behavior hint": "Coba sunting perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap peri?"
+          "behavior hint": "Coba edit perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap sprite?"
         },
         "behaviors 3a_2020": {
-          "behavior hint": "Coba sunting perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap peri?"
+          "behavior hint": "Coba edit perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap sprite?"
         },
         "behaviors 5": {
           "target hint": "Anda dapat memilih salah satu dari empat kapal. Yang manakah yang diinginkan oleh astronot?",
-          "behavior hint": "Sunting perilaku untuk memecahkan puzzle. Peri astronot perlu bergerak ke dua arah yang berbeda untuk berhenti secara diagonal."
+          "behavior hint": "Edit perilaku untuk memecahkan puzzle ini. Sprite astronot perlu bergerak ke dua arah yang berbeda untuk membentuk arah gerakan diagonal."
         },
         "behaviors 5_2020": {
           "target hint": "Anda dapat memilih salah satu dari empat kapal. Yang manakah yang diinginkan oleh astronot?",
-          "behavior hint": "Sunting perilaku untuk memecahkan puzzle. Peri astronot perlu bergerak ke dua arah yang berbeda untuk berhenti secara diagonal."
+          "behavior hint": "Edit perilaku untuk memecahkan puzzle ini. Sprite astronot perlu bergerak ke dua arah yang berbeda untuk membentuk arah gerakan diagonal."
         },
         "behaviors 6": {
-          "behavior hint": "Coba sunting perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap peri?"
+          "behavior hint": "Coba edit perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap sprite?"
         },
         "behaviors 6_2020": {
-          "behavior hint": "Coba sunting perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap peri?"
+          "behavior hint": "Coba edit perilaku! \n\n-   Nilai mana yang mengendalikan kecepatan setiap sprite?"
         },
         "behaviors 7": {
           "behaviors_hint1": "Anda dapat membuat perilaku baru yang menggunakan dua tindakan berbeda atau menggabungkan dua perilaku yang ada.",
-          "sprites_idea1": "Untuk bersenang-senang, Anda dapat menggunakan perilaku serupa untuk membuat kapal terbang ke luar angkasa atau sifat berlari ke bagian depan. Coba ubah latar dan kostum peri di adegan Anda!\n\n![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)\n\n![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)"
+          "sprites_idea1": "Untuk bersenang-senang, Anda dapat menggunakan perilaku serupa untuk membuat kapal terbang ke luar angkasa atau sebuah karakter berlari ke bagian depan. Coba ubah latar belakang dan kostum sprite di adegan Anda!\n\n![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)\n\n![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)"
         },
         "behaviors 7_2020": {
           "behaviors_hint1": "Anda dapat membuat perilaku baru yang menggunakan dua tindakan berbeda atau menggabungkan dua perilaku yang ada.",
-          "sprites_idea1": "Untuk bersenang-senang, Anda dapat menggunakan perilaku serupa untuk membuat kapal terbang ke luar angkasa atau sifat berlari ke bagian depan. Coba ubah latar dan kostum peri di adegan Anda!\n\n![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)\n\n![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)"
+          "sprites_idea1": "Untuk bersenang-senang, Anda dapat menggunakan perilaku serupa untuk membuat kapal terbang ke luar angkasa atau sebuah karakter berlari ke bagian depan. Coba ubah latar belakang dan kostum sprite di adegan Anda!\n\n![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)\n\n![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)"
         },
         "comment_intro_maze_2018": {
           "courseC_maze_programming4_a": "Komentar juga bermanfaat ketika orang lain mencoba membaca kode Anda.",
@@ -1720,20 +1720,20 @@
           "courseA_harvester_loops1_a": "Setelah Anda bergerak menuju beberapa jagung, gunakan blok ini untuk mengambilnya!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops2": {
-          "courseA_harvester_loops2_a": "Kode Anda akan memiliki **empat** blok `bergerak ke barat` <xml><block type=\"maze_moveWest\"/></xml> \n\ndan **empat** blok `ambil jagung` <xml><block type=\"harvester_corn\"/></xml>.",
-          "courseA_harvester_loops2_b": "Jika Anda masih mengalami masalah, coba ucapkan langkah-langkahnya dengan lantang."
+          "courseA_harvester_loops2_a": "Kode Anda akan memiliki **empat** blok `move west` <xml><block type=\"maze_moveWest\"/></xml> \n\ndan **empat** blok `pick corn` <xml><block type=\"harvester_corn\"/></xml>.",
+          "courseA_harvester_loops2_b": "Jika Anda masih kesulitan, coba ucapkan langkah-langkahnya dengan lantang. "
         },
         "courseA_harvester_loops2_2019": {
           "courseA_harvester_loops2_a": "Kode Anda akan memiliki **empat** blok \n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n `bergerak ke barat` dan **empat** blok <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
-          "courseA_harvester_loops2_b": "Jika Anda masih mengalami masalah, coba ucapkan langkah-langkahnya dengan lantang."
+          "courseA_harvester_loops2_b": "Jika Anda masih kesulitan, coba ucapkan langkah-langkahnya dengan lantang. "
         },
         "courseA_harvester_loops2_2020": {
           "courseA_harvester_loops2_a": "Kode Anda akan memiliki **empat** blok \n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n `bergerak ke barat` dan **empat** blok <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
-          "courseA_harvester_loops2_b": "Jika Anda masih mengalami masalah, coba ucapkan langkah-langkahnya dengan lantang."
+          "courseA_harvester_loops2_b": "Jika Anda masih kesulitan, coba ucapkan langkah-langkahnya dengan lantang. "
         },
         "courseA_harvester_loops3": {
           "courseA_harvester_loops3_a": "Gunakan blok `repeat` seperti ini untuk membantu Anda!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Untuk mengulang kode, pindahkan keluar loop `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>), lalu letakkan blok yang Anda inginkan di dalamnya."
+          "courseA_harvester_loops3_b": "Untuk mengulang kode, pindahkan loop `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) keluar, lalu letakkan blok yang Anda inginkan ke dalamnya. "
         },
         "courseA_harvester_loops3_2019": {
           "courseA_harvester_loops3_a": "Gunakan blok `repeat` seperti ini untuk membantu Anda!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
@@ -1741,62 +1741,62 @@
         },
         "courseA_harvester_loops3_2020": {
           "courseA_harvester_loops3_a": "Gunakan blok `repeat` seperti ini untuk membantu Anda!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Untuk mengulang kode, pindahkan keluar loop `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>), lalu letakkan blok yang Anda inginkan di dalamnya."
+          "courseA_harvester_loops3_b": "Untuk mengulang kode, pindahkan loop `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) keluar, lalu letakkan blok yang Anda inginkan ke dalamnya. "
         },
         "courseA_harvester_loops4": {
-          "courseA_harvester_loops4_a": "Jangan takut menekan `Jalankan` untuk melihat apa yang terjadi!",
-          "courseA_harvester_loops4_b": "Ada Bagaimana potong jagung? Berapa kali kode Anda diulang?"
+          "courseA_harvester_loops4_a": "Jangan takut menekan `Run` untuk melihat apa yang terjadi!",
+          "courseA_harvester_loops4_b": "Ada berapa tongkol jagung di sana? Berapa kali kode Anda diulang?"
         },
         "courseA_harvester_loops4_2019": {
-          "courseA_harvester_loops4_a": "Jangan takut menekan `Jalankan` untuk melihat apa yang terjadi!",
-          "courseA_harvester_loops4_b": "Ada Bagaimana potong jagung? Berapa kali kode Anda diulang?"
+          "courseA_harvester_loops4_a": "Jangan takut menekan `Run` untuk melihat apa yang terjadi!",
+          "courseA_harvester_loops4_b": "Ada berapa tongkol jagung di sana? Berapa kali kode Anda diulang?"
         },
         "courseA_harvester_loops4_2020": {
-          "courseA_harvester_loops4_a": "Jangan takut menekan `Jalankan` untuk melihat apa yang terjadi!",
-          "courseA_harvester_loops4_b": "Ada Bagaimana potong jagung? Berapa kali kode Anda diulang?"
+          "courseA_harvester_loops4_a": "Jangan takut menekan `Run` untuk melihat apa yang terjadi!",
+          "courseA_harvester_loops4_b": "Ada berapa tongkol jagung di sana? Berapa kali kode Anda diulang?"
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "Jika anda terjebak, cobalah memecahkan puzzle dalam 2 bagian, satu bagian sebelum tikungan dan satu bagian setelah tikungan.",
-          "courseA_harvester_loops5_b": "Kode akhir Anda akan memiliki **satu** loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **satu** blok `bergerak ke Selatan` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan **satu** blok `bergerak ke Timur` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_b": "Kode akhir Anda akan memiliki **satu** loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **satu** blok `move South` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan **satu** blok `move East` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "Gunakan jalan ini untuk mengambil semua jagung!"
         },
         "courseA_harvester_loops5_2019": {
           "courseA_harvester_loops5_a": "Jika anda terjebak, cobalah memecahkan puzzle dalam 2 bagian, satu bagian sebelum tikungan dan satu bagian setelah tikungan.",
-          "courseA_harvester_loops5_b": "Kode akhir Anda akan memiliki **satu** loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **satu** blok `bergerak ke Selatan` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan **satu** blok `bergerak ke Timur` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_b": "Kode akhir Anda akan memiliki **satu** loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **satu** blok `move South` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan **satu** blok `move East` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "Gunakan jalan ini untuk mengambil semua jagung!"
         },
         "courseA_harvester_loops5_2020": {
           "courseA_harvester_loops5_a": "Jika anda terjebak, cobalah memecahkan puzzle dalam 2 bagian, satu bagian sebelum tikungan dan satu bagian setelah tikungan.",
-          "courseA_harvester_loops5_b": "Kode akhir Anda akan memiliki **satu** loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **satu** blok `bergerak ke Selatan` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan **satu** blok `bergerak ke Timur` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_b": "Kode akhir Anda akan memiliki **satu** loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **satu** blok `move South` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan **satu** blok `move East` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "Gunakan jalan ini untuk mengambil semua jagung!"
         },
         "courseA_harvester_loops5a": {
-          "courseA_harvester_loops5a_a": "Anda akan membutuhkan satu loop `repeat` satu demi satu.",
-          "courseA_harvester_loops5a_b": "Satu loop akan mengulangi `bergerak ke Selatan` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan loop lainnya akan mengulangi `bergerak ke Timur` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_a": "Anda akan membutuhkan satu loop `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> satu demi satu.",
+          "courseA_harvester_loops5a_b": "Satu loop akan mengulangi `move South` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan loop lainnya akan mengulangi `move East` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "Gunakan jalan ini untuk bergerak satu arah, dan bergerak ke arah lainnya."
         },
         "courseA_harvester_loops5a_2019": {
           "courseA_harvester_loops5a_a": "Anda akan membutuhkan satu `ulangi` loop demi satu.",
-          "courseA_harvester_loops5a_b": "Satu loop akan mengulangi `bergerak ke Selatan` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan loop lainnya akan mengulangi `bergerak ke Timur` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "Satu loop akan mengulangi `move South` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan loop lainnya akan mengulangi `move East` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "Gunakan jalan ini untuk bergerak satu arah, dan bergerak ke arah lainnya."
         },
         "courseA_harvester_loops5a_2020": {
-          "courseA_harvester_loops5a_a": "Anda akan membutuhkan satu loop `repeat` satu demi satu.",
-          "courseA_harvester_loops5a_b": "Satu loop akan mengulangi `bergerak ke Selatan` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan loop lainnya akan mengulangi `bergerak ke Timur` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_a": "Anda akan membutuhkan satu loop `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> satu demi satu.",
+          "courseA_harvester_loops5a_b": "Satu loop akan mengulangi `move South` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, dan loop lainnya akan mengulangi `move East` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "Gunakan jalan ini untuk bergerak satu arah, dan bergerak ke arah lainnya."
         },
         "courseA_harvester_loops5b": {
-          "courseA_harvester_loops5b_a": "Tekan `Jalankan` dan lihat apa yang terjadi!",
+          "courseA_harvester_loops5b_a": "Tekan `Run` dan lihat apa yang terjadi!",
           "courseA_harvester_loops5b_b": "Apakah loop Anda mengulangi beberapa kali dengan benar?",
           "courseA_harvester_loops5b_c": "Bergerak satu arah, lalu yang lain bergerak dengan jalan ini."
         },
         "courseA_harvester_loops5b_2019": {
-          "courseA_harvester_loops5b_a": "Tekan `Jalankan` dan lihat apa yang terjadi!",
+          "courseA_harvester_loops5b_a": "Tekan `Run` dan lihat apa yang terjadi!",
           "courseA_harvester_loops5b_b": "Apakah loop Anda mengulangi beberapa kali dengan benar?",
           "courseA_harvester_loops5b_c": "Bergerak satu arah, lalu yang lain bergerak dengan jalan ini."
         },
         "courseA_harvester_loops5b_2020": {
-          "courseA_harvester_loops5b_a": "Tekan `Jalankan` dan lihat apa yang terjadi!",
+          "courseA_harvester_loops5b_a": "Tekan `Run` dan lihat apa yang terjadi!",
           "courseA_harvester_loops5b_b": "Apakah loop Anda mengulangi beberapa kali dengan benar?",
           "courseA_harvester_loops5b_c": "Bergerak satu arah, lalu yang lain bergerak dengan jalan ini."
         },
@@ -1813,30 +1813,30 @@
           "courseA_harvester_loops6_b": "Ini adalah jalan yang harus Anda lalui untuk mengambil semua jagung."
         },
         "courseA_harvester_loops7": {
-          "courseA_harvester_loops7_a": "Anda akan membutuhkan dua loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> satu sama lain!",
+          "courseA_harvester_loops7_a": "Anda akan membutuhkan dua loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> secara bergantian!",
           "courseA_harvester_loops7_b": "Gunakan dua loop untuk mengikuti jalan ini."
         },
         "courseA_harvester_loops7_2019": {
-          "courseA_harvester_loops7_a": "Anda akan membutuhkan dua loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> satu sama lain!",
+          "courseA_harvester_loops7_a": "Anda akan membutuhkan dua loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> secara bergantian!",
           "courseA_harvester_loops7_b": "Gunakan dua loop untuk mengikuti jalan ini."
         },
         "courseA_harvester_loops7_2020": {
-          "courseA_harvester_loops7_a": "Anda akan membutuhkan dua loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> satu sama lain!",
+          "courseA_harvester_loops7_a": "Anda akan membutuhkan dua loop `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> secara bergantian!",
           "courseA_harvester_loops7_b": "Gunakan dua loop untuk mengikuti jalan ini."
         },
         "courseA_harvester_loops9": {
-          "courseA_harvester_loops9_a": "Pecahkan puzzle ini menjadi tiga bagian berbeda. Satu bagian ke sudut pertama, satu bagian ke sudut kedua, dan satu bagian ke akhir.",
-          "courseA_harvester_loops9_b": "Jangan takut menjalankan kode Anda setelah setiap bagian untuk melihat apa yang terjadi!",
+          "courseA_harvester_loops9_a": "Pecahkan puzzle ini menjadi tiga bagian berbeda. Satu bagian ke sudut pertama, satu bagian ke sudut kedua, dan satu bagian ke ujung.",
+          "courseA_harvester_loops9_b": "Jangan takut menjalankan kode Anda setiap selesai satu bagian untuk melihat apa yang terjadi!",
           "courseA_harvester_loops9_c": "Ikuti jalan ini untuk memilih semua jagung."
         },
         "courseA_harvester_loops9_2019": {
-          "courseA_harvester_loops9_a": "Pecahkan puzzle ini menjadi tiga bagian berbeda. Satu bagian ke sudut pertama, satu bagian ke sudut kedua, dan satu bagian ke akhir.",
-          "courseA_harvester_loops9_b": "Jangan takut menjalankan kode Anda setelah setiap bagian untuk melihat apa yang terjadi!",
+          "courseA_harvester_loops9_a": "Pecahkan puzzle ini menjadi tiga bagian berbeda. Satu bagian ke sudut pertama, satu bagian ke sudut kedua, dan satu bagian ke ujung.",
+          "courseA_harvester_loops9_b": "Jangan takut menjalankan kode Anda setiap selesai satu bagian untuk melihat apa yang terjadi!",
           "courseA_harvester_loops9_c": "Ikuti jalan ini untuk memilih semua jagung."
         },
         "courseA_harvester_loops9_2020": {
-          "courseA_harvester_loops9_a": "Pecahkan puzzle ini menjadi tiga bagian berbeda. Satu bagian ke sudut pertama, satu bagian ke sudut kedua, dan satu bagian ke akhir.",
-          "courseA_harvester_loops9_b": "Jangan takut menjalankan kode Anda setelah setiap bagian untuk melihat apa yang terjadi!",
+          "courseA_harvester_loops9_a": "Pecahkan puzzle ini menjadi tiga bagian berbeda. Satu bagian ke sudut pertama, satu bagian ke sudut kedua, dan satu bagian ke ujung.",
+          "courseA_harvester_loops9_b": "Jangan takut menjalankan kode Anda setiap selesai satu bagian untuk melihat apa yang terjadi!",
           "courseA_harvester_loops9_c": "Ikuti jalan ini untuk memilih semua jagung."
         },
         "courseA_harvester_seq1": {
@@ -1936,15 +1936,15 @@
           "courseA_harvester_seq6_a": "Jika Anda terjebak, coba ucapkan langkah-langkahnya dengan lantang. Ini dapat membantu Anda mengetahui jalan yang benar."
         },
         "courseA_harvester_seq7": {
-          "courseA_harvester_seq7_a": "Cobalah memecahkan puzzle dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.",
+          "courseA_harvester_seq7_a": "Coba pecahkan puzzle dalam 2 bagian, satu bagian sebelum tikungan dan satu bagian setelah tikungan.",
           "courseA_harvester_seq7_b": "Mempunyai masalah? Ini adalah jalan yang harus diambil oleh pemanen."
         },
         "courseA_harvester_seq7_2019": {
-          "courseA_harvester_seq7_a": "Cobalah memecahkan puzzle dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.",
+          "courseA_harvester_seq7_a": "Coba pecahkan puzzle dalam 2 bagian, satu bagian sebelum tikungan dan satu bagian setelah tikungan.",
           "courseA_harvester_seq7_b": "Mempunyai masalah? Ini adalah jalan yang harus diambil oleh pemanen."
         },
         "courseA_harvester_seq7_2020": {
-          "courseA_harvester_seq7_a": "Cobalah memecahkan puzzle dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.",
+          "courseA_harvester_seq7_a": "Coba pecahkan puzzle dalam 2 bagian, satu bagian sebelum tikungan dan satu bagian setelah tikungan.",
           "courseA_harvester_seq7_b": "Mempunyai masalah? Ini adalah jalan yang harus diambil oleh pemanen."
         },
         "courseA_harvester_seq8": {
@@ -1958,17 +1958,17 @@
         },
         "courseA_harvester_seq9": {
           "courseA_harvester_seq9_a": "Jalankan kode beberapa kali untuk melihat apa yang terjadi. Di mana pemanen berhenti?",
-          "courseA_harvester_seq9_b": "Jangan lupa memilih semua jagung! Anda akan membutuhkan **3** blok jagung pilihan.",
+          "courseA_harvester_seq9_b": "Jangan lupa petik semua jagung! Anda akan membutuhkan **3** blok petik jagung.",
           "courseA_harvester_seq9_c": "Anda harus mengambil jalan ini untuk mengambil semua jagung."
         },
         "courseA_harvester_seq9_2019": {
           "courseA_harvester_seq9_a": "Jalankan kode beberapa kali untuk melihat apa yang terjadi. Di mana pemanen berhenti?",
-          "courseA_harvester_seq9_b": "Jangan lupa memilih semua jagung! Anda akan membutuhkan **3** blok jagung pilihan.",
+          "courseA_harvester_seq9_b": "Jangan lupa petik semua jagung! Anda akan membutuhkan **3** blok petik jagung.",
           "courseA_harvester_seq9_c": "Anda harus mengambil jalan ini untuk mengambil semua jagung."
         },
         "courseA_harvester_seq9_2020": {
           "courseA_harvester_seq9_a": "Jalankan kode beberapa kali untuk melihat apa yang terjadi. Di mana pemanen berhenti?",
-          "courseA_harvester_seq9_b": "Jangan lupa memilih semua jagung! Anda akan membutuhkan **3** blok jagung pilihan.",
+          "courseA_harvester_seq9_b": "Jangan lupa petik semua jagung! Anda akan membutuhkan **3** blok petik jagung.",
           "courseA_harvester_seq9_c": "Anda harus mengambil jalan ini untuk mengambil semua jagung."
         },
         "courseA_maze_ramp2_2018": {
@@ -2408,7 +2408,7 @@
           "courseB_artist_loops3_b": "Artis itu ingin pindah ke Selatan untuk menggambar garis ini."
         },
         "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_a": "Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!",
+          "courseB_artist_loops3_a": "Ingatlah untuk menggunakan loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> untuk kode yang lebih baik!",
           "courseB_artist_loops3_b": "Artis itu ingin pindah ke Selatan untuk menggambar garis ini."
         },
         "courseB_artist_loops3_2019": {
@@ -2443,13 +2443,13 @@
           "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
         },
         "courseB_artist_loops5_2018": {
-          "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
+          "courseB_artist_loops5_a": "Pindahkan loop <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `repeat` keluar, lalu letakkan blok lain ke dalamnya. Berapa kali Anda perlu mengulanginya?"
         },
         "courseB_artist_loops5_2019": {
           "courseB_artist_loops5_a": "Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?"
         },
         "courseB_artist_loops5_2020": {
-          "courseB_artist_loops5_a": "Pindahkan keluar loop `repeat`, lalu letakkan blok lain yang Anda inginkan di dalamnya. Bagaimana kali Anda perlu mengulanginya?"
+          "courseB_artist_loops5_a": "Pindahkan loop <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `repeat` keluar, lalu letakkan blok lain ke dalamnya. Berapa kali Anda perlu mengulanginya?"
         },
         "courseB_artist_loops6": {
           "courseB_artist_loops6_b": "Coba tulis gerakan-gerakannya di atas secarik kertas dan cari polanya."
@@ -2458,10 +2458,10 @@
           "courseB_artist_loops6_b": "Coba tulis gerakan-gerakannya di atas secarik kertas dan cari polanya."
         },
         "courseB_artist_loops6_2019": {
-          "courseB_artist_loops6_b": "Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola."
+          "courseB_artist_loops6_b": "Coba tulis gerakan-gerakannya di atas secarik kertas dan cari polanya."
         },
         "courseB_artist_loops6_2020": {
-          "courseB_artist_loops6_b": "Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola."
+          "courseB_artist_loops6_b": "Coba tulis gerakan-gerakannya di atas secarik kertas dan cari polanya."
         },
         "courseB_artist_loops7": {
           "courseB_artist_loops7_a": "Tantangan ini menggunakan loop\\*\\* 4 \\*\\*, satu demi satu!",
@@ -2531,13 +2531,13 @@
         },
         "courseB_artist_loops_challenge1_2019": {
           "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak di lereng!",
-          "courseB_artist_loops_challenge1_b": "Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!",
-          "courseB_artist_loops_challenge1_c": "Anda akan perlu untuk `langkah` atau `jump` lebih beberapa garis yang sama dua kali. "
+          "courseB_artist_loops_challenge1_b": "Ketika Anda menyelesaikan salah satu dadu, `jump` ke berikutnya!",
+          "courseB_artist_loops_challenge1_c": "Anda perlu `move` atau `jump` ke beberapa garis yang sama dua kali. "
         },
         "courseB_artist_loops_challenge1_2020": {
           "courseB_artist_loops_challenge1_a": "Blok seperti ini: <xml>  <block type=\"simple_move_up_right\"/></xml> akan membantu artis bergerak di lereng!",
-          "courseB_artist_loops_challenge1_b": "Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!",
-          "courseB_artist_loops_challenge1_c": "Anda akan perlu untuk `langkah` atau `jump` lebih beberapa garis yang sama dua kali. "
+          "courseB_artist_loops_challenge1_b": "Ketika Anda menyelesaikan salah satu dadu, `jump` ke berikutnya!",
+          "courseB_artist_loops_challenge1_c": "Anda perlu `move` atau `jump` ke beberapa garis yang sama dua kali. "
         },
         "courseB_artist_loops_challenge2": {
           "courseB_artist_loops_challenge2_a": "Kode untuk menarik sebuah X sudah diberikan kepada Anda. Yang perlu Anda lakukan adalah mengulangi X dan melompat ke tempat berikutnya.",
@@ -2567,11 +2567,11 @@
           "courseB_collector_loops10_b": "Cobalah menulis langkah di selembar kertas dan mencari sebuah pola."
         },
         "courseB_collector_loops10_2019": {
-          "courseB_collector_loops10_a": "Jika anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.",
+          "courseB_collector_loops10_a": "Jika Anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari polanya.",
           "courseB_collector_loops10_b": "Cobalah menulis langkah di selembar kertas dan mencari sebuah pola."
         },
         "courseB_collector_loops10_2020": {
-          "courseB_collector_loops10_a": "Jika anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari sebuah pola.",
+          "courseB_collector_loops10_a": "Jika Anda tidak tahu di mana meletakkan loop `repeat`, tuliskan kode langkah demi langkah dan cari polanya.",
           "courseB_collector_loops10_b": "Cobalah menulis langkah di selembar kertas dan mencari sebuah pola."
         },
         "courseB_collector_loops1_2018": {
@@ -2623,7 +2623,7 @@
         "courseB_collector_loops4_2018": {
           "courseB_collector_loops4_a": "Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.",
           "courseB_collector_loops4_b": "Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali loop nya berjalan.",
-          "courseB_collector_loops4_c": "Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan `ulangi` loop!"
+          "courseB_collector_loops4_c": "Laurel harus berjalan dan mengumpulkan harta karun setelah menyelesaikan loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops4_2019": {
           "courseB_collector_loops4_a": "Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.",
@@ -2633,7 +2633,7 @@
         "courseB_collector_loops4_2020": {
           "courseB_collector_loops4_a": "Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.",
           "courseB_collector_loops4_b": "Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali loop nya berjalan.",
-          "courseB_collector_loops4_c": "Laurel perlu berjalan ke bawah dan mengumpulkan harta karun setelah menyelesaikan loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
+          "courseB_collector_loops4_c": "Laurel harus berjalan dan mengumpulkan harta karun setelah menyelesaikan loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>!"
         },
         "courseB_collector_loops5": {
           "courseB_collector_loops5_a": "Gunakan lebih dari satu loop untuk menyelesaikan pekerjaan.",
@@ -2660,19 +2660,19 @@
         "courseB_collector_loops6_2018": {
           "courseB_collector_loops6_a": "Bingung di mana titik awal kesalahannya? Gunakan tombol \"step\" untuk menjalankan program Anda satu blok setiap kalinya.",
           "courseB_collector_loops6_b": "Anda dapat mengubah frekuensi putaran Repeat loop dengan mengklik \"3\" dan memilih sebuah angka berbeda.",
-          "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 `ulangi` lopp untuk memecahkan ini puzzle.",
+          "courseB_collector_loops6_c": "Anda harus menggunakan 3 loop <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `repeat` untuk memecahkan puzzle ini.",
           "courseB_collector_loops6_d": "Jika kamu bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian."
         },
         "courseB_collector_loops6_2019": {
-          "courseB_collector_loops6_a": "Tidak tahu di mana hal-hal yang salah? Gunakan tombol \"step\" untuk menjalankan program anda satu blok setiap kalinya.",
-          "courseB_collector_loops6_b": "Anda dapat mengubah jumlah kali Repeat loop berjalan dengan mengklik pada \"3\" dan memilih sebuah nomor yang berbeda.",
+          "courseB_collector_loops6_a": "Bingung di mana titik awal kesalahannya? Gunakan tombol \"step\" untuk menjalankan program Anda satu blok setiap kalinya.",
+          "courseB_collector_loops6_b": "Anda dapat mengubah frekuensi putaran Repeat loop dengan mengklik \"3\" dan memilih sebuah angka berbeda.",
           "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 `ulangi` lopp untuk memecahkan ini puzzle.",
           "courseB_collector_loops6_d": "Jika kamu bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian."
         },
         "courseB_collector_loops6_2020": {
-          "courseB_collector_loops6_a": "Tidak tahu di mana hal-hal yang salah? Gunakan tombol \"step\" untuk menjalankan program anda satu blok setiap kalinya.",
-          "courseB_collector_loops6_b": "Anda dapat mengubah jumlah kali Repeat loop berjalan dengan mengklik pada \"3\" dan memilih sebuah nomor yang berbeda.",
-          "courseB_collector_loops6_c": "Anda akan ingin menggunakan 3 loop `repeat` untuk memecahkan puzzle ini.",
+          "courseB_collector_loops6_a": "Bingung di mana titik awal kesalahannya? Gunakan tombol \"step\" untuk menjalankan program Anda satu blok setiap kalinya.",
+          "courseB_collector_loops6_b": "Anda dapat mengubah frekuensi putaran Repeat loop dengan mengklik \"3\" dan memilih sebuah angka berbeda.",
+          "courseB_collector_loops6_c": "Anda harus menggunakan 3 loop <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> `repeat` untuk memecahkan puzzle ini.",
           "courseB_collector_loops6_d": "Jika kamu bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian."
         },
         "courseB_collector_loops7": {
@@ -2731,12 +2731,12 @@
         },
         "courseB_collector_loops_challenge1_2019": {
           "courseB_collector_loops_challenge1_b": "Mulai dengan looping perintah berikut:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Pindah ke Timur dua kali di antara setiap jalur.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nAnda bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.",
+          "courseB_collector_loops_challenge1_c": "Bergeraklah ke Timur dua kali di antara setiap jalur.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nAnda bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.",
           "courseB_collector_loops_challenge1_d": "Cobalah ini!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2020": {
           "courseB_collector_loops_challenge1_b": "Mulai dengan looping perintah berikut:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Pindah ke Timur dua kali di antara setiap jalur.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nAnda bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.",
+          "courseB_collector_loops_challenge1_c": "Bergeraklah ke Timur dua kali di antara setiap jalur.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nAnda bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.",
           "courseB_collector_loops_challenge1_d": "Cobalah ini!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge2": {
@@ -2772,12 +2772,12 @@
         "courseB_iceage_loops10": {
           "courseB_iceage_loops10_a": "Hati-hati dengan pecahan es! Scrat akan jatuh ke dalam air!",
           "courseB_iceage_loops10_b": "Coba ucapkan langkah-langkahnya dengan lantang atau tuliskan di selembar kertas. Apakah Anda melihat polanya?",
-          "courseB_iceage_loops10_c": "Ini adalah puzzle yang panjang! Ikuti jalan ini."
+          "courseB_iceage_loops10_c": "Puzzle ini panjang! Ikuti jalan ini."
         },
         "courseB_iceage_loops10_2019": {
           "courseB_iceage_loops10_a": "Hati-hati dengan pecahan es! Scrat akan jatuh ke dalam air!",
           "courseB_iceage_loops10_b": "Coba ucapkan langkah-langkahnya dengan lantang atau tuliskan di selembar kertas. Apakah Anda melihat polanya?",
-          "courseB_iceage_loops10_c": "Ini adalah puzzle yang panjang! Ikuti jalan ini."
+          "courseB_iceage_loops10_c": "Puzzle ini panjang! Ikuti jalan ini."
         },
         "courseB_iceage_loops10_2020": {
           "courseB_iceage_loops10_a": "Hati-hati dengan pecahan es! Scrat akan jatuh ke dalam air!",
@@ -2793,12 +2793,12 @@
           "courseB_iceage_loops1_b": "Anda harus menggunakan blok ini:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops2": {
-          "courseB_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian di depan sudut, dan satu bagian setelah di tikungan.",
+          "courseB_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian sebelum tikungan, dan satu bagian setelah tikungan.",
           "courseB_iceage_loops2_b": "Jika Anda terjebak, coba ucapkan langkah-langkahnya dengan lantang.",
           "courseB_iceage_loops2_c": "Ikuti jalan ini untuk membawa Scrat ke biji akorn."
         },
         "courseB_iceage_loops2_2019": {
-          "courseB_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian di depan sudut, dan satu bagian setelah di tikungan.",
+          "courseB_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian sebelum tikungan, dan satu bagian setelah tikungan.",
           "courseB_iceage_loops2_b": "Jika Anda terjebak, coba ucapkan langkah-langkahnya dengan lantang.",
           "courseB_iceage_loops2_c": "Ikuti jalan ini untuk membawa Scrat ke biji akorn."
         },
@@ -2809,23 +2809,23 @@
         },
         "courseB_iceage_loops3": {
           "courseB_iceage_loops3_a": "Gunakan blok baru ini! <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya."
+          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan loop `repeat` keluar,\n\n<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>\n\nlalu letakkan blok yang Anda inginkan ke dalamnya."
         },
         "courseB_iceage_loops3_2019": {
           "courseB_iceage_loops3_a": "Gunakan blok baru ini!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya."
+          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> keluar, lalu letakkan blok yang Anda inginkan di dalamnya."
         },
         "courseB_iceage_loops3_2020": {
           "courseB_iceage_loops3_a": "Gunakan blok baru ini!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
           "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan keluar sebuah loop `repeat`, lalu letakkan blok yang Anda inginkan di dalamnya."
         },
         "courseB_iceage_loops4": {
-          "courseB_iceage_loops4_a": "Cobalah menulis langkah-langkah yang akan dilakukan Scrat untuk menuju ke biji akorn. Apakah Anda melihat polanya?",
+          "courseB_iceage_loops4_a": "Coba tulis langkah-langkah yang akan diambil Scrat untuk sampai ke biji akorn. Apakah Anda melihat polanya?",
           "courseB_iceage_loops4_b": "Jangan takut untuk menjalankan kode Anda dan lihat yang terjadi!",
           "courseB_iceage_loops4_c": "Ini adalah jalan yang harus diambil oleh Scrat."
         },
         "courseB_iceage_loops4_2019": {
-          "courseB_iceage_loops4_a": "Cobalah menulis langkah-langkah yang akan dilakukan Scrat untuk menuju ke biji akorn. Apakah Anda melihat polanya?",
+          "courseB_iceage_loops4_a": "Coba tulis langkah-langkah yang akan diambil Scrat untuk sampai ke biji akorn. Apakah Anda melihat polanya?",
           "courseB_iceage_loops4_b": "Jangan takut untuk menjalankan kode Anda dan lihat yang terjadi!",
           "courseB_iceage_loops4_c": "Ini adalah jalan yang harus diambil oleh Scrat."
         },
@@ -2850,11 +2850,11 @@
           "courseB_iceage_loops6_c": "Jalan terakhir Anda akan terlihat seperti ini."
         },
         "courseB_iceage_loops7": {
-          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba menuliskan langkah-langkah di selembar kertas terlebih dahulu.",
+          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba tuliskan langkah-langkah di secarik kertas. Apakah Anda melihat polanya?",
           "courseB_iceage_loops7_b": "Ini adalah jalan yang harus diambil Scrat untuk menuju ke biji akorn."
         },
         "courseB_iceage_loops7_2019": {
-          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba menuliskan langkah-langkah di selembar kertas terlebih dahulu.",
+          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba tuliskan langkah-langkah di secarik kertas. Apakah Anda melihat polanya?",
           "courseB_iceage_loops7_b": "Ini adalah jalan yang harus diambil Scrat untuk menuju ke biji akorn."
         },
         "courseB_iceage_loops7_2020": {
@@ -2862,12 +2862,12 @@
           "courseB_iceage_loops7_b": "Ini adalah jalan yang harus diambil Scrat untuk menuju ke biji akorn."
         },
         "courseB_iceage_loops8": {
-          "courseB_iceage_loops8_a": "Apakah gerakan bloknya benar? Apa lagi yang dapat Anda ubah?",
+          "courseB_iceage_loops8_a": "Apakah blok gerakannya benar? Apa lagi yang dapat Anda ubah?",
           "courseB_iceage_loops8_b": "loop pertama harus mengulang **3** kali, loop kedua harus mengulang **5** kali, loop ketiga harus mengulangi **4** kali, dan loop terakhir harus mengulangi **4** kali.",
           "courseB_iceage_loops8_c": "Gunakan  loop untuk membantu Scrat mengikuti jalan ini."
         },
         "courseB_iceage_loops8_2019": {
-          "courseB_iceage_loops8_a": "Apakah gerakan bloknya benar? Apa lagi yang dapat Anda ubah?",
+          "courseB_iceage_loops8_a": "Apakah blok gerakannya benar? Apa lagi yang dapat Anda ubah?",
           "courseB_iceage_loops8_b": "loop pertama harus mengulang **3** kali, loop kedua harus mengulang **5** kali, loop ketiga harus mengulangi **4** kali, dan loop terakhir harus mengulangi **4** kali.",
           "courseB_iceage_loops8_c": "Gunakan  loop untuk membantu Scrat mengikuti jalan ini."
         },
@@ -2877,12 +2877,12 @@
           "courseB_iceage_loops8_c": "Gunakan  loop untuk membantu Scrat mengikuti jalan ini."
         },
         "courseB_iceage_loops9": {
-          "courseB_iceage_loops9_a": "Mempunyai masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut untuk menjalankan puzzle ini Anda ketika Anda membuat kode!",
+          "courseB_iceage_loops9_a": "Ada masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut menjalankan puzzle saat Anda membuat kode!",
           "courseB_iceage_loops9_b": "Kode akhir Anda harus memiliki **4** loop.",
           "courseB_iceage_loops9_c": "Scrat harus mengikuti jalan ini untuk mendapatkan biji akorn."
         },
         "courseB_iceage_loops9_2019": {
-          "courseB_iceage_loops9_a": "Mempunyai masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut untuk menjalankan puzzle ini Anda ketika Anda membuat kode!",
+          "courseB_iceage_loops9_a": "Ada masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut menjalankan puzzle saat Anda membuat kode!",
           "courseB_iceage_loops9_b": "Kode akhir Anda harus memiliki **4** loop.",
           "courseB_iceage_loops9_c": "Scrat harus mengikuti jalan ini untuk mendapatkan biji akorn."
         },
@@ -2905,11 +2905,11 @@
         },
         "courseB_maze_seq1_2018": {
           "courseB_maze_seq1_a": "Hubungkan blok ke blok <xml><block type=\"when_run\"/></xml> untuk membuat Scrat bergerak!",
-          "courseB_maze_seq1_b": "Pindahkan tiga panah keluar <xml><block type=\"maze_moveSouth\"/></xml> dan hubungkan ke blok <xml><block type=\"when_run\"/></xml> untuk membawa Scrat ke biji akorn."
+          "courseB_maze_seq1_b": "Pindahkan tiga panah <xml><block type=\"maze_moveSouth\"/></xml> keluar dan hubungkan ke blok <xml><block type=\"when_run\"/></xml> untuk membawa Scrat ke biji akorn."
         },
         "courseB_maze_seq1_2019": {
           "courseB_maze_seq1_a": "Hubungkan blok ke blok <xml><block type=\"when_run\"/></xml> untuk membuat Scrat bergerak!",
-          "courseB_maze_seq1_b": "Pindahkan tiga panah keluar <xml><block type=\"maze_moveSouth\"/></xml> dan hubungkan ke blok <xml><block type=\"when_run\"/></xml> untuk membawa Scrat ke biji akorn."
+          "courseB_maze_seq1_b": "Pindahkan tiga panah <xml><block type=\"maze_moveSouth\"/></xml> keluar dan hubungkan ke blok <xml><block type=\"when_run\"/></xml> untuk membawa Scrat ke biji akorn."
         },
         "courseB_maze_seq1_2020": {
           "courseB_maze_seq1_a": "Hubungkan blok ke blok <xml><block type=\"when_run\"/></xml> untuk membuat Scrat bergerak!",
@@ -2929,11 +2929,11 @@
           "courseB_maze_seq4_b": "Anda akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan teka-teki ini."
         },
         "courseB_maze_seq4_2018": {
-          "courseB_maze_seq4_a": "Cobalah menambahkan satu instruksi pada satu waktu sampai Anda menuju ke biji akorn.",
+          "courseB_maze_seq4_a": "Coba tambahkan instruksi satu per satu sampai Anda sampai ke biji akorn.",
           "courseB_maze_seq4_b": "Anda akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan teka-teki ini."
         },
         "courseB_maze_seq4_2019": {
-          "courseB_maze_seq4_a": "Cobalah menambahkan satu instruksi pada satu waktu sampai Anda menuju ke biji akorn.",
+          "courseB_maze_seq4_a": "Coba tambahkan instruksi satu per satu sampai Anda sampai ke biji akorn.",
           "courseB_maze_seq4_b": "Anda akan ingin menggunakan blok <xml><block type=\"maze_moveEast\"/></xml> untuk memecahkan teka-teki ini."
         },
         "courseB_maze_seq4_2020": {
@@ -2948,12 +2948,12 @@
         "courseB_maze_seq5_2018": {
           "courseB_maze_seq5_a": "Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.",
           "courseB_maze_seq5_b": "Terdapat 2 cara untuk memecahkan teka-teki ini!",
-          "courseB_maze_seq5_c": "Tidak yakin Bagaimana menuju ke biji akorn? Coba jalan ini."
+          "courseB_maze_seq5_c": "Ragu-ragu bagaimana cara ke biji akorn? Coba jalan ini."
         },
         "courseB_maze_seq5_2019": {
           "courseB_maze_seq5_a": "Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.",
           "courseB_maze_seq5_b": "Terdapat 2 cara untuk memecahkan teka-teki ini!",
-          "courseB_maze_seq5_c": "Tidak yakin Bagaimana menuju ke biji akorn? Coba jalan ini."
+          "courseB_maze_seq5_c": "Ragu-ragu bagaimana cara ke biji akorn? Coba jalan ini."
         },
         "courseB_maze_seq5_2020": {
           "courseB_maze_seq5_a": "Jika Anda terjebak, cobalah menarik keluar jalur di atas kertas.",
@@ -2990,12 +2990,12 @@
           "courseB_maze_seq7_c": "Tidak bisa sampai ke babi? Coba jalan ini!"
         },
         "courseB_maze_seq7_2018": {
-          "courseB_maze_seq7_a": "Tambahkan 1 blok untuk memindahkan Scrat ke biji akorn.",
+          "courseB_maze_seq7_a": "Tambahkan 1 blok untuk menggerakkan Scrat ke biji akorn.",
           "courseB_maze_seq7_b": "Coba jalankan kode yang diberikan kepada Anda dan lihat di mana Anda berakhir.",
           "courseB_maze_seq7_c": "Tidak dapat menuju ke biji akorn? Coba jalan ini!"
         },
         "courseB_maze_seq7_2019": {
-          "courseB_maze_seq7_a": "Tambahkan 1 blok untuk memindahkan Scrat ke biji akorn.",
+          "courseB_maze_seq7_a": "Tambahkan 1 blok untuk menggerakkan Scrat ke biji akorn.",
           "courseB_maze_seq7_b": "Coba jalankan kode yang diberikan kepada Anda dan lihat di mana Anda berakhir.",
           "courseB_maze_seq7_c": "Tidak dapat menuju ke biji akorn? Coba jalan ini!"
         },
@@ -3038,7 +3038,7 @@
         },
         "courseB_maze_seq9_2019": {
           "courseB_maze_seq9_a": "Coba tulis semua langkah di selembar kertas terlebih dahulu.",
-          "courseB_maze_seq9_b": "Bangun program Anda satu blok sekali tempo dan ujilah selagi Anda membangunnya.",
+          "courseB_maze_seq9_b": "Buat sebuah blok untuk program Anda setiap kalinya dan ujilah selagi membuatnya.",
           "courseB_maze_seq9_c": "Ada dua cara untuk memecahkan teka-teki ini.",
           "courseB_maze_seq9_d": "Terjebak? Coba jalan ini!"
         },
@@ -3074,7 +3074,7 @@
         },
         "courseB_maze_seq_challenge2_2019": {
           "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.",
-          "courseB_maze_seq_challenge2_b": "Susun ulang balok dan ambil jalan pola tangga."
+          "courseB_maze_seq_challenge2_b": "Susun ulang blok dan ambil jalan pola tangga."
         },
         "courseB_maze_seq_challenge2_2020": {
           "courseB_maze_seq_challenge2_a": "Anda tidak perlu menambah atau menghapus blok untuk memecahkan teka-teki ini.",
@@ -3152,12 +3152,12 @@
         },
         "courseB_playlab_events6_2019": {
           "courseB_playlab_events6_a": "Anda akan membutuhkan blok kejadian ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_b": "Gunakan tanda panah drop-down di blok event hijau `when ___ arrow pressed` untuk memilih arah yang berbeda.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Sampai ke semua bendera yang lewat!"
         },
         "courseB_playlab_events6_2020": {
           "courseB_playlab_events6_a": "Anda akan membutuhkan blok kejadian ini:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events6_b": "Gunakan tanda panah tarik-turun pada blok kejadian hijau `bila tanda panah ___ ditekan` untuk memilih arah yang berbeda.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_b": "Gunakan tanda panah drop-down di blok event hijau `when ___ arrow pressed` untuk memilih arah yang berbeda.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Sampai ke semua bendera yang lewat!"
         },
         "courseB_playlab_events7": {
@@ -3216,13 +3216,13 @@
           "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Itu juga harus kembali setelah satu atau dua detik!",
           "courseB_playlab_events_challenge2_b": "Gunakan blok kejadian lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nUbah suasana hati hewan!"
+          "courseB_playlab_events_challenge2_d": "Campur saja!\n\nBuat sebagian hewan memberi poin lebih banyak daripada lainnya. Gunakan suara yang berbeda.\nUbah suasana hati hewan!"
         },
         "courseB_playlab_events_challenge2_2020": {
           "courseB_playlab_events_challenge2_a": "Setiap hewan dalam permainan harus lenyap saat diklik. Itu juga harus kembali setelah satu atau dua detik!",
           "courseB_playlab_events_challenge2_b": "Gunakan blok kejadian lain untuk membuat hewan lain menghilang!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
           "courseB_playlab_events_challenge2_c": "Gunakan perintah ekstra untuk memutar suara atau mendapat nilai jika kamu mengeklik hewan!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
-          "courseB_playlab_events_challenge2_d": "Campurkan itu!\n\nBuat beberapa hewan memberi lebih banyak poin daripada yang lain. Gunakan suara yang berbeda.\nUbah suasana hati hewan!"
+          "courseB_playlab_events_challenge2_d": "Campur saja!\n\nBuat sebagian hewan memberi poin lebih banyak daripada lainnya. Gunakan suara yang berbeda.\nUbah suasana hati hewan!"
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "Coba tambahkan blok satu per satu, lalu klik \"Run\" untuk melihat apa yang terjadi.",
@@ -3244,7 +3244,7 @@
           "courseB_starWars_prog2_a": "Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain."
         },
         "courseB_starWars_prog2_2018": {
-          "courseB_starWars_prog2_a": "Belah masalah ini menjadi dua bagian. Bawa satu timbunan logam bekas, lalu cari tahu Bagaimana menuju ke yang lain."
+          "courseB_starWars_prog2_a": "Pecah masalah ini menjadi dua bagian. Bawa satu tumpukan logam rongsokan, lalu cari tahu cara ke tumpukan satunya."
         },
         "courseB_starWars_prog2_2019": {
           "courseB_starWars_prog2_a": "Pisahkan masalah ini menjadi dua bagian. Ambil satu tumpukan logam bekas, lalu cari tahu cara menuju yang lain."
@@ -3262,7 +3262,7 @@
         },
         "courseB_starWars_prog3_2019": {
           "courseB_starWars_prog3_a": "Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.",
-          "courseB_starWars_prog3_b": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana."
+          "courseB_starWars_prog3_b": "Buat satu kelompok code sekali tempo. Jalankan untuk mencari tahu arah tujuannya dari titik awal itu."
         },
         "courseB_starWars_prog3_2020": {
           "courseB_starWars_prog3_a": "Anda perlu memindahkan 3 cara untuk memecahkan teka-teki ini.",
@@ -3277,7 +3277,7 @@
           "courseB_starWars_prog4_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2019": {
-          "courseB_starWars_prog4_a": "Membangun salah satu bagian dari kode pada suatu waktu. Jalankan untuk mencari tahu ke mana harus pergi dari sana.",
+          "courseB_starWars_prog4_a": "Buat satu kelompok code sekali tempo. Jalankan untuk mencari tahu arah tujuannya dari titik awal itu.",
           "courseB_starWars_prog4_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog4_2020": {
@@ -3299,8 +3299,8 @@
         "courseB_starWars_prog5_2019": {
           "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
           "courseB_starWars_prog5_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
-          "courseB_starWars_prog5_c": "Lacak pola ini dengan jarimu. Hitung potongan logam saat kamu bergerak.",
-          "courseB_starWars_prog5_da": "Lihat apa yang terjadi jika kamu menggunakan solusi yang sama dengan puzzle anak tangga:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_c": "Lacak pola ini dengan jari. Hitung potongan logam selagi bergerak.",
+          "courseB_starWars_prog5_da": "Lihat hasilnya jika Anda menggunakan solusi yang sama dengan puzzle anak tangga:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog5_2020": {
           "courseB_starWars_prog5_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
@@ -3317,7 +3317,7 @@
           "courseB_starWars_prog6_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2019": {
-          "courseB_starWars_prog6_a": "Pola ini hanya sebuah langkah tangga dengan dua langkah per arah!",
+          "courseB_starWars_prog6_a": "Pola ini hanya sebuah anak tangga dengan dua langkah per arah!",
           "courseB_starWars_prog6_b": "Coba gunakan blok `repeat` untuk kode yang lebih singkat.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog6_2020": {
@@ -3337,7 +3337,7 @@
         "courseB_starWars_prog7_2019": {
           "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
           "courseB_starWars_prog7_b": "BB-8 akan mengambil besi tua saat ia menggulungnya.",
-          "courseB_starWars_prog7_c": "Cobalah menggambar pola langkah tangga besar di atas teka-teki ini. Apakah itu mencakup semua logam bekas?"
+          "courseB_starWars_prog7_c": "Coba gambar pola anak tangga besar di atas puzzle ini. Apakah polanya menutup semua logam rongsokan?"
         },
         "courseB_starWars_prog7_2020": {
           "courseB_starWars_prog7_a": "Tidakkah pola ini terlihat sedikit sama seperti teka-teki terakhir?",
@@ -3353,7 +3353,7 @@
           "courseB_starWars_prog8_b": "Coba gunakan blok `repeat` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2019": {
-          "courseB_starWars_prog8_a": "Tidak apa-apa untuk kembali ke satu set ruang di mana Anda telah melakukan perjalanan.",
+          "courseB_starWars_prog8_a": "Boleh kembali ke satu set ruang yang sudah Anda lewati.",
           "courseB_starWars_prog8_b": "Coba gunakan blok `repeat` untuk melihat apa yang terjadi ke kode yang kamu masukkan.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
@@ -3368,10 +3368,10 @@
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu.",
           "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan teka-teki ini.",
-          "courseB_starWars_prog9_c": "Bisakah sebuah loop `ulangi` membantu di sini?"
+          "courseB_starWars_prog9_c": "Apakah loop `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> bisa membantu di sini?"
         },
         "courseB_starWars_prog9_2019": {
-          "courseB_starWars_prog9_a": "Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan puzzle itu.",
+          "courseB_starWars_prog9_a": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu.",
           "courseB_starWars_prog9_b": "Terdapat banyak cara untuk memecahkan teka-teki ini.",
           "courseB_starWars_prog9_c": "Bisakah sebuah loop `ulangi` membantu di sini?"
         },
@@ -3575,10 +3575,10 @@
           "courseC_PlayLab_eventsA_b": "Anda akan perlu untuk secara khusus menyeret sebuah blok event `when run` ke ruang kerja untuk menyelesaikan ini puzzle."
         },
         "courseC_PlayLab_eventsA_embed_2019": {
-          "courseC_PlayLab_eventsA_a": "Gunakan tombol panah untuk memindahkan pinguin. Anda tidak perlu menulis kode untuk menyelesaikan tingkat ini."
+          "courseC_PlayLab_eventsA_a": "Gunakan tombol panah untuk memindahkan penguin. Anda tidak perlu menulis kode untuk menyelesaikan level ini."
         },
         "courseC_PlayLab_eventsA_embed_2020": {
-          "courseC_PlayLab_eventsA_a": "Gunakan tombol panah untuk memindahkan pinguin. Anda tidak perlu menulis kode untuk menyelesaikan tingkat ini."
+          "courseC_PlayLab_eventsA_a": "Gunakan tombol panah untuk memindahkan penguin. Anda tidak perlu menulis kode untuk menyelesaikan level ini."
         },
         "courseC_PlayLab_eventsFP": {
           "idea1": "Butuh ide?\\_\n\n**Siapa itu?** Munculkan karakter dengan gambar acak sehingga tak seorang pun tahu siapa yang akan muncul berikutnya.\n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
@@ -3667,11 +3667,11 @@
           "courseC_artist_loops2a_b": "Klik angka di bagian atas loop `repeat` untuk mengubah jumlah pengulangannya."
         },
         "courseC_artist_loops2a_2019": {
-          "courseC_artist_loops2a_a": "Di dalam loop Anda, Anda akan ingin melompat ke tengah, kemudian berbalik, lalu menggambar stiker.",
+          "courseC_artist_loops2a_a": "Di dalam loop, Anda perlu melompat ke tengah, kemudian belok, lalu menggambar stiker.",
           "courseC_artist_loops2a_b": "Klik angka di bagian atas loop `repeat` untuk mengubah jumlah pengulangannya."
         },
         "courseC_artist_loops2a_2020": {
-          "courseC_artist_loops2a_a": "Di dalam loop Anda, Anda akan ingin melompat ke tengah, kemudian berbalik, lalu menggambar stiker.",
+          "courseC_artist_loops2a_a": "Di dalam loop, Anda perlu melompat ke tengah, kemudian belok, lalu menggambar stiker.",
           "courseC_artist_loops2a_b": "Klik angka di bagian atas loop `repeat` untuk mengubah jumlah pengulangannya."
         },
         "courseC_artist_loops3a": {
@@ -3844,26 +3844,26 @@
         },
         "courseC_artist_prog5": {
           "courseC_artist_prog5_a": "Perlambat slider di sepanjang jalan hingga Anda dapat menjalankan code baris demi baris untuk mengetahui titik munculnya masalah.",
-          "courseC_artist_prog5_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_artist_prog5_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
           "courseC_artist_prog5_c": "Anda bisa menggunakan menu drop dwon pada blok `turn` untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog5_d": "Setiap putaran harus 90 derajat ke kanan."
         },
         "courseC_artist_prog5_2018": {
           "courseC_artist_prog5_a": "Perlambat slider di sepanjang jalan hingga Anda dapat menjalankan code baris demi baris untuk mengetahui titik munculnya masalah.",
-          "courseC_artist_prog5_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
-          "courseC_artist_prog5_c": "Anda bisa gunakan menu panah pada blok `ubah` untuk melihat sudut mana yang mereka butuhkan!",
+          "courseC_artist_prog5_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_artist_prog5_c": "Anda bisa menggunakan menu dropdown pada blok untuk mengubah fungsinya!",
           "courseC_artist_prog5_d": "Setiap putaran harus 90 derajat ke kanan."
         },
         "courseC_artist_prog5_2019": {
           "courseC_artist_prog5_a": "Perlambat slider di sepanjang jalan hingga Anda dapat menjalankan code baris demi baris untuk mengetahui titik munculnya masalah.",
-          "courseC_artist_prog5_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
-          "courseC_artist_prog5_c": "Anda bisa gunakan menu panah pada blok `ubah` untuk melihat sudut mana yang mereka butuhkan!",
+          "courseC_artist_prog5_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_artist_prog5_c": "Anda bisa menggunakan menu dropdown pada blok untuk mengubah fungsinya!",
           "courseC_artist_prog5_d": "Setiap putaran harus 90 derajat ke kanan."
         },
         "courseC_artist_prog5_2020": {
           "courseC_artist_prog5_a": "Perlambat slider di sepanjang jalan hingga Anda dapat menjalankan code baris demi baris untuk mengetahui titik munculnya masalah.",
-          "courseC_artist_prog5_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
-          "courseC_artist_prog5_c": "Anda bisa gunakan menu panah pada blok `ubah` untuk melihat sudut mana yang mereka butuhkan!",
+          "courseC_artist_prog5_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_artist_prog5_c": "Anda bisa menggunakan menu dropdown pada blok untuk mengubah fungsinya!",
           "courseC_artist_prog5_d": "Setiap putaran harus 90 derajat ke kanan."
         },
         "courseC_artist_prog6": {
@@ -3891,28 +3891,28 @@
           "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
-          "courseC_artist_prog7_e": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_artist_prog7_e": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_artist_prog7_2018": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
           "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
-          "courseC_artist_prog7_e": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_artist_prog7_e": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_artist_prog7_2019": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
           "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
-          "courseC_artist_prog7_e": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_artist_prog7_e": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_artist_prog7_2020": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
           "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
-          "courseC_artist_prog7_e": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_artist_prog7_e": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "Anda dapat menggambar ini sebagai persegi panjang dengan sebuah garis di tengah atau dua persegi yang berbeda!"
@@ -3972,19 +3972,19 @@
         },
         "courseC_collector_prog2": {
           "courseC_collector_prog2_a": "Anda dapat menggunakan empat blok <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> atau blok <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk lebih mempersingkat program.",
-          "courseC_collector_prog2_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_collector_prog2_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_collector_prog2_2018": {
           "courseC_collector_prog2_a": "Anda dapat menggunakan empat blok <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> atau blok <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk lebih mempersingkat program.",
-          "courseC_collector_prog2_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_collector_prog2_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_collector_prog2_2019": {
           "courseC_collector_prog2_a": "Anda dapat menggunakan empat blok <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> atau blok <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk lebih mempersingkat program.",
-          "courseC_collector_prog2_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_collector_prog2_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_collector_prog2_2020": {
           "courseC_collector_prog2_a": "Anda dapat menggunakan empat blok <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> atau blok <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk lebih mempersingkat program.",
-          "courseC_collector_prog2_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_collector_prog2_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_collector_prog3": {
           "courseC_collector_prog3_a": "Program hanya akan menjalankan blok yang terhubung ke blok <xml><block type=\"when_run\"/></xml>.",
@@ -4008,22 +4008,22 @@
         },
         "courseC_collector_prog4": {
           "courseC_collector_prog4_a": "Jika Anda terjebak, mencoba menulis langkah-langkah pada selembar kertas.",
-          "courseC_collector_prog4_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_collector_prog4_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
           "courseC_collector_prog4_c": "Mencoba opsi ini untuk sebuah jalan."
         },
         "courseC_collector_prog4_2018": {
           "courseC_collector_prog4_a": "Jika Anda terjebak, mencoba menulis langkah-langkah pada selembar kertas.",
-          "courseC_collector_prog4_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_collector_prog4_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
           "courseC_collector_prog4_c": "Mencoba opsi ini untuk sebuah jalan."
         },
         "courseC_collector_prog4_2019": {
           "courseC_collector_prog4_a": "Jika Anda terjebak, mencoba menulis langkah-langkah pada selembar kertas.",
-          "courseC_collector_prog4_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_collector_prog4_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
           "courseC_collector_prog4_c": "Mencoba opsi ini untuk sebuah jalan."
         },
         "courseC_collector_prog4_2020": {
           "courseC_collector_prog4_a": "Jika Anda terjebak, mencoba menulis langkah-langkah pada selembar kertas.",
-          "courseC_collector_prog4_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_collector_prog4_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
           "courseC_collector_prog4_c": "Mencoba opsi ini untuk sebuah jalan."
         },
         "courseC_collector_prog5": {
@@ -4484,17 +4484,17 @@
         },
         "courseC_maze_debugging5_2018": {
           "courseC_maze_debugging5_a": "Sudah ada banyak blok bermanfaat di area kerja. Jangan dihapus semua! \n\nGunakan tombol \"Step\" untuk menyusuri dan menebak titik kesalahan code.",
-          "courseC_maze_debugging5_c": "Anda bisa mengubah arah blok putar dengan mengklik menu panah.",
+          "courseC_maze_debugging5_c": "Anda bisa mengubah arah blok belok dengan mengklik dropdown.",
           "courseC_maze_debugging5_b": "Coba katakan apa yang harus dilakukan Scrat dengan suara keras. Apakah sama seperti kode di workspace? Apa yang salah?"
         },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_a": "Sudah ada banyak blok bermanfaat di area kerja. Jangan dihapus semua! \n\nGunakan tombol \"Step\" untuk menyusuri dan menebak titik kesalahan code.",
-          "courseC_maze_debugging5_c": "Anda bisa mengubah arah blok putar dengan mengklik menu panah.",
+          "courseC_maze_debugging5_c": "Anda bisa mengubah arah blok belok dengan mengklik dropdown.",
           "courseC_maze_debugging5_b": "Coba katakan apa yang harus dilakukan Scrat dengan suara keras. Apakah sama seperti kode di workspace? Apa yang salah?"
         },
         "courseC_maze_debugging5_2020": {
           "courseC_maze_debugging5_a": "Sudah ada banyak blok bermanfaat di area kerja. Jangan dihapus semua! \n\nGunakan tombol \"Step\" untuk menyusuri dan menebak titik kesalahan code.",
-          "courseC_maze_debugging5_c": "Anda bisa mengubah arah blok putar dengan mengklik menu panah.",
+          "courseC_maze_debugging5_c": "Anda bisa mengubah arah blok belok dengan mengklik dropdown.",
           "courseC_maze_debugging5_b": "Coba katakan apa yang harus dilakukan Scrat dengan suara keras. Apakah sama seperti kode di workspace? Apa yang salah?"
         },
         "courseC_maze_debugging6": {
@@ -4646,22 +4646,22 @@
           "courseC_maze_programming4_b": "Untuk mengikuti jalur:\n\n-   gerak maju\n-   belok satu arah\n-   gerak maju\n-   balik ke arah lain\n-   gerak maju"
         },
         "courseC_maze_programming5": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Burung itu perlu membuat satu putaran untuk menyelesaikan puzzle ini. Bisakah anda mencari tahu ke arah mana?",
           "courseC_maze_programming5_c": "Solusinya akan memiliki dua blok 'move forward`, belokan, dan dua blok' move forward` lagi."
         },
         "courseC_maze_programming5_2018": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Burung itu perlu membuat satu putaran untuk menyelesaikan puzzle ini. Bisakah anda mencari tahu ke arah mana?",
           "courseC_maze_programming5_c": "Solusinya akan memiliki dua blok 'move forward`, belokan, dan dua blok' move forward` lagi."
         },
         "courseC_maze_programming5_2019": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Burung itu perlu membuat satu putaran untuk menyelesaikan puzzle ini. Bisakah anda mencari tahu ke arah mana?",
           "courseC_maze_programming5_c": "Solusinya akan memiliki dua blok 'move forward`, belokan, dan dua blok' move forward` lagi."
         },
         "courseC_maze_programming5_2020": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Burung itu perlu membuat satu putaran untuk menyelesaikan puzzle ini. Bisakah anda mencari tahu ke arah mana?",
           "courseC_maze_programming5_c": "Solusinya akan memiliki dua blok 'move forward`, belokan, dan dua blok' move forward` lagi."
         },
@@ -4707,19 +4707,19 @@
         },
         "courseC_maze_programming8": {
           "courseC_maze_programming8_a": "Ingat Anda bisa menggunakan tombol \"Step\" untuk melihat-lihat kode Anda, garis demi garis, jika Anda terjebak.",
-          "courseC_maze_programming8_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming8_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_maze_programming8_2018": {
           "courseC_maze_programming8_a": "Ingat Anda bisa menggunakan tombol \"Step\" untuk melihat-lihat kode Anda, garis demi garis, jika Anda terjebak.",
-          "courseC_maze_programming8_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming8_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_maze_programming8_2019": {
           "courseC_maze_programming8_a": "Ingat Anda bisa menggunakan tombol \"Step\" untuk melihat-lihat kode Anda, garis demi garis, jika Anda terjebak.",
-          "courseC_maze_programming8_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming8_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_maze_programming8_2020": {
           "courseC_maze_programming8_a": "Ingat Anda bisa menggunakan tombol \"Step\" untuk melihat-lihat kode Anda, garis demi garis, jika Anda terjebak.",
-          "courseC_maze_programming8_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming8_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseC_maze_programming_challenge1": {
           "courseC_maze_programming_challenge1_a": "Ada banyak cara untuk sampai ke babi. \nGunakan jari Anda untuk menemukan sebuah jalan dan program jalan tersebut!"
@@ -5620,18 +5620,18 @@
         },
         "courseD_bee_conditionals5_2018": {
           "courseD_bee_conditionals5_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
-          "courseD_bee_conditionals5_a": "Pikirkan setiap sisi jalan persegi panjang sebagai jalan dengan sendirinya. Atur loop bersarang dengan blok `repeat` di bagian luar dan loop `ketika jalan di depan` di bagian dalam. Bagaimana banyak jalur yang perlu dilalui lebah jika lebah perlu berdengung di setiap sisi dengan bunga?",
-          "courseD_bee_conditionals5_c": "Ada 3 sisi persegi panjang dengan bunga, sehingga kode perlu `repeat 3 kali`. Dalam setiap pengulangan, lebah perlu terus berdengung di sepanjang jalan, `ketika jalan di depan`. Untuk terus berjalan, lebah perlu `bergerak maju`. Ketika berada di jalan, lebah perlu memeriksa bunga. `Jika ada bunga`, lebah harus `mendapatkan madu bunga`.",
+          "courseD_bee_conditionals5_a": "Anggaplah setiap sisi dari jalan persegi panjang sebagai jalan itu sendiri. Atur nested loop dengan blok `repeat` di bagian luar dan loop `while path ahead` di bagian dalam. Berapa banyak jalur yang perlu dilalui lebah jika lebah harus melalui setiap sisi yang ada bunganya?",
+          "courseD_bee_conditionals5_c": "Ada 3 sisi persegi panjang dengan bunga, sehingga kode perlu `repeat 3 times`. Dalam setiap pengulangan, lebah perlu terus menyusuri jalan, `while path ahead`. Untuk terus berjalan, lebah perlu `move forward`. Ketika berada di jalan, lebah perlu memeriksa bunga. `if there is a flower`, lebah harus `get nectar`.",
           "courseD_bee_conditionals5_b": "Di dalam blok `ketika jalan di depan`, Anda perlu bergerak maju dan memeriksa bunga. Bagaimana cara Anda memeriksa jika ada bunga? Apa yang Anda lakukan jika ada bunga?",
           "courseD_bee_conditionals5_hintVid2": "Tonton video ini untuk membantu memecahkan puzzle ini."
         },
         "courseD_bee_conditionals5_2019": {
-          "courseD_bee_conditionals5_a": "Jika Anda menggunakan blok `jika di bunga`, Anda dapat menyelesaikannya menggunakan loop bersarang. Tulis program untuk jalur kiri dan bawah, lalu ulangi semuanya dua kali!",
-          "courseD_bee_conditionals5_c": "Untuk melanjutkan jalur, lebah perlu `bergerak maju`. Ketika bergerak, lebah perlu memeriksa bunga. `jika ada bunga`, lebah harus `mendapat madu bunga`."
+          "courseD_bee_conditionals5_a": "Jika Anda menggunakan blok `if at flower`, Anda dapat menyelesaikannya menggunakan nested loop. Tulis program untuk jalur kiri dan bawah, lalu ulangi semuanya dua kali!",
+          "courseD_bee_conditionals5_c": "Untuk terus menyusuri jalur, lebah perlu `move forward`. Ketika bergerak, lebah perlu memeriksa bunga, `if there is a flower`, lebah harus `get nectar`."
         },
         "courseD_bee_conditionals5_2020": {
-          "courseD_bee_conditionals5_a": "Jika Anda menggunakan blok `jika di bunga`, Anda dapat menyelesaikannya menggunakan loop bersarang. Tulis program untuk jalur kiri dan bawah, lalu ulangi semuanya dua kali!",
-          "courseD_bee_conditionals5_c": "Untuk melanjutkan jalur, lebah perlu `bergerak maju`. Ketika bergerak, lebah perlu memeriksa bunga. `jika ada bunga`, lebah harus `mendapat madu bunga`."
+          "courseD_bee_conditionals5_a": "Jika Anda menggunakan blok `if at flower`, Anda dapat menyelesaikannya menggunakan nested loop. Tulis program untuk jalur kiri dan bawah, lalu ulangi semuanya dua kali!",
+          "courseD_bee_conditionals5_c": "Untuk terus menyusuri jalur, lebah perlu `move forward`. Ketika bergerak, lebah perlu memeriksa bunga, `if there is a flower`, lebah harus `get nectar`."
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "Butuh bantuan untuk memulai? Tonton videonya!",
@@ -5853,37 +5853,37 @@
           "courseD_bounce_events11s_a": "Anda perlu melempar bola ketika permainan dimulai, ketika Anda memukul keranjang, dan ketika bola meleset di tangan Anda."
         },
         "courseD_bounce_events12s_2018": {
-          "courseD_bounce_events12s_a": "Anda dapat mempercepat bola basket atau tangan dengan melekatkan blok itu dengan event `ketika menjalankan`.",
+          "courseD_bounce_events12s_a": "Anda dapat mempercepat bola basket atau tangan dengan melekatkan blok itu dengan event `when run`.",
           "courseD_bounce_events12s_b": "Coba buat setiap tembakan bernilai 2 poin dan ubah logo tim menjadi logo kota asal Anda!"
         },
         "courseD_bounce_events12s_2019": {
-          "courseD_bounce_events12s_a": "Anda dapat mempercepat bola basket atau tangan dengan melekatkan blok itu dengan event `ketika menjalankan`.",
+          "courseD_bounce_events12s_a": "Anda dapat mempercepat bola basket atau tangan dengan melekatkan blok itu dengan event `when run`.",
           "courseD_bounce_events12s_b": "Coba buat setiap tembakan bernilai 2 poin dan ubah logo tim menjadi logo kota asal Anda!"
         },
         "courseD_bounce_events12s_2020": {
-          "courseD_bounce_events12s_a": "Anda dapat mempercepat bola basket atau tangan dengan melekatkan blok itu dengan event `ketika menjalankan`.",
+          "courseD_bounce_events12s_a": "Anda dapat mempercepat bola basket atau tangan dengan melekatkan blok itu dengan event `when run`.",
           "courseD_bounce_events12s_b": "Coba buat setiap tembakan bernilai 2 poin dan ubah logo tim menjadi logo kota asal Anda!"
         },
         "courseD_bounce_events1s_2018": {
-          "courseD_bounce_events1s_a": "Anda perlu menambahkan blok `bergerak ke kiri` ke event `ketika panah kiri` untuk membuat permainan ini berfungsi:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
-          "courseD_bounce_events1s_b": "Jangan lupa menekan \"Jalankan\" dan dapatkan keranjang untuk menyelesaikan puzzle ini."
+          "courseD_bounce_events1s_a": "Anda perlu menambahkan blok `move left` ke event `when left arrow` untuk membuat permainan ini berfungsi:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "Jangan lupa tekan \"Run\" dan capai keranjang untuk menyelesaikan puzzle ini."
         },
         "courseD_bounce_events1s_2019": {
-          "courseD_bounce_events1s_a": "Anda perlu menambahkan blok `bergerak ke kiri` ke event `ketika panah kiri` untuk membuat permainan ini berfungsi:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
-          "courseD_bounce_events1s_b": "Jangan lupa menekan \"Jalankan\" dan dapatkan keranjang untuk menyelesaikan puzzle ini."
+          "courseD_bounce_events1s_a": "Anda perlu menambahkan blok `move left` ke event `when left arrow` untuk membuat permainan ini berfungsi:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "Jangan lupa tekan \"Run\" dan capai keranjang untuk menyelesaikan puzzle ini."
         },
         "courseD_bounce_events1s_2020": {
-          "courseD_bounce_events1s_a": "Anda perlu menambahkan blok `bergerak ke kiri` ke event `ketika panah kiri` untuk membuat permainan ini berfungsi:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
-          "courseD_bounce_events1s_b": "Jangan lupa menekan \"Jalankan\" dan dapatkan keranjang untuk menyelesaikan puzzle ini."
+          "courseD_bounce_events1s_a": "Anda perlu menambahkan blok `move left` ke event `when left arrow` untuk membuat permainan ini berfungsi:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "Jangan lupa tekan \"Run\" dan capai keranjang untuk menyelesaikan puzzle ini."
         },
         "courseD_bounce_events2s_2018": {
-          "courseD_bounce_events2s_a": "Anda harus memiliki dua event `pindahkan` yang dikodekan agar berfungsi:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+          "courseD_bounce_events2s_a": "Anda harus memiliki dua event `move` yang dikodekan agar berfungsi:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events2s_2019": {
-          "courseD_bounce_events2s_a": "Anda harus memiliki dua event `pindahkan` yang dikodekan agar berfungsi:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+          "courseD_bounce_events2s_a": "Anda harus memiliki dua event `move` yang dikodekan agar berfungsi:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events2s_2020": {
-          "courseD_bounce_events2s_a": "Anda harus memiliki dua event `pindahkan` yang dikodekan agar berfungsi:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+          "courseD_bounce_events2s_a": "Anda harus memiliki dua event `move` yang dikodekan agar berfungsi:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events5s_2018": {
           "courseD_bounce_events5s_a": "Anda tidak perlu menggerakkan tangan untuk memecahkan puzzle ini.",
@@ -6165,15 +6165,15 @@
           "courseD_farmer_condLoops6_b": "Pastikan memeriksa `if` ada jalan di depan sebelum mengambil langkah berikutnya!"
         },
         "courseD_farmer_condLoops6_2018": {
-          "courseD_farmer_condLoops6_a": "Gunakan loop `ketika jalan di depan` atau blok `jika jalan di depan/lain` untuk memindahkan peternak ke bawah setiap bagian dari spiral.",
+          "courseD_farmer_condLoops6_a": "Gunakan loop `while path ahead` atau blok `if path ahead / else` untuk memindahkan peternak ke bawah setiap bagian spiral.",
           "courseD_farmer_condLoops6_b": "Anda hanya perlu memeriksa jagung selama sebagian besar panen. Pilih satu labu di bagian paling akhir program Anda."
         },
         "courseD_farmer_condLoops6_2019": {
-          "courseD_farmer_condLoops6_a": "Gunakan loop `while path ahead` untuk memindahkan peternak ke bawah setiap bagian dari spiral.",
+          "courseD_farmer_condLoops6_a": "Gunakan loop `while path ahead` atau blok `if path ahead / else` untuk menggerakkan petani ke bawah setiap bagian spiral.",
           "courseD_farmer_condLoops6_b": "Anda hanya perlu memeriksa jagung selama sebagian besar panen. Pilih satu labu di bagian paling akhir program Anda."
         },
         "courseD_farmer_condLoops6_2020": {
-          "courseD_farmer_condLoops6_a": "Gunakan loop `while path ahead` untuk memindahkan peternak ke bawah setiap bagian dari spiral.",
+          "courseD_farmer_condLoops6_a": "Gunakan loop `while path ahead` atau blok `if path ahead / else` untuk menggerakkan petani ke bawah setiap bagian spiral.",
           "courseD_farmer_condLoops6_b": "Anda hanya perlu memeriksa jagung selama sebagian besar panen. Pilih satu labu di bagian paling akhir program Anda."
         },
         "courseD_farmer_condLoops7": {
@@ -6186,11 +6186,11 @@
         },
         "courseD_farmer_condLoops7_2019": {
           "courseD_farmer_condLoops7_a": "Perhatikan bahwa jalur paling mudah untuk mencapai semua tanamannya masih berbentuk spiral.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Coba gunakan `ketika jalan di depan` untuk membuat pemanen memindahkan jumlah langkah yang tepat."
+          "courseD_farmer_condLoops7_b": "Coba gunakan `while path ahead` untuk membuat pemanen memindahkan jumlah langkah yang tepat."
         },
         "courseD_farmer_condLoops7_2020": {
           "courseD_farmer_condLoops7_a": "Perhatikan bahwa jalur paling mudah untuk mencapai semua tanamannya masih berbentuk spiral.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Coba gunakan `ketika jalan di depan` untuk membuat pemanen memindahkan jumlah langkah yang tepat."
+          "courseD_farmer_condLoops7_b": "Coba gunakan `while path ahead` untuk membuat pemanen memindahkan jumlah langkah yang tepat."
         },
         "courseD_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "Tombol \"Step\" bisa sangat membantu dalam tantangan ini.",
@@ -6416,17 +6416,17 @@
         "courseD_iceage_loops10": {
           "courseB_iceage_loops10_a": "Hati-hati dengan pecahan es! Scrat akan jatuh ke dalam air!",
           "courseB_iceage_loops10_b": "Coba ucapkan langkah-langkahnya dengan lantang atau tuliskan di selembar kertas. Apakah Anda melihat polanya?",
-          "courseB_iceage_loops10_c": "Ini adalah puzzle yang panjang! Ikuti jalan ini."
+          "courseB_iceage_loops10_c": "Puzzle ini panjang! Ikuti jalan ini."
         },
         "courseD_iceage_loops10_2019": {
           "courseB_iceage_loops10_a": "Hati-hati dengan pecahan es! Scrat akan jatuh ke dalam air!",
           "courseB_iceage_loops10_b": "Coba ucapkan langkah-langkahnya dengan lantang atau tuliskan di selembar kertas. Apakah Anda melihat polanya?",
-          "courseB_iceage_loops10_c": "Ini adalah puzzle yang panjang! Ikuti jalan ini."
+          "courseB_iceage_loops10_c": "Puzzle ini panjang! Ikuti jalan ini."
         },
         "courseD_iceage_loops10_2020": {
           "courseB_iceage_loops10_a": "Hati-hati dengan pecahan es! Scrat akan jatuh ke dalam air!",
           "courseB_iceage_loops10_b": "Coba ucapkan langkah-langkahnya dengan lantang atau tuliskan di selembar kertas. Apakah Anda melihat polanya?",
-          "courseB_iceage_loops10_c": "Ini adalah puzzle yang panjang! Ikuti jalan ini."
+          "courseB_iceage_loops10_c": "Puzzle ini panjang! Ikuti jalan ini."
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "Hati-hati dengan pecahan es! Scrat akan jatuh menembus es!",
@@ -6437,31 +6437,31 @@
           "courseD_iceage_loops1_b": "Anda harus menggunakan blok ini:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops2": {
-          "courseD_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian di depan sudut, dan satu bagian setelah di tikungan.",
+          "courseD_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian sebelum tikungan, dan satu bagian setelah tikungan.",
           "courseD_iceage_loops2_b": "Jika Anda terjebak, coba ucapkan langkah-langkahnya dengan lantang.",
           "courseD_iceage_loops2_c": "Ikuti jalan ini untuk membawa Scrat ke biji akorn."
         },
         "courseD_iceage_loops2_2019": {
-          "courseD_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian di depan sudut, dan satu bagian setelah di tikungan.",
+          "courseD_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian sebelum tikungan, dan satu bagian setelah tikungan.",
           "courseD_iceage_loops2_b": "Jika Anda terjebak, coba ucapkan langkah-langkahnya dengan lantang.",
           "courseD_iceage_loops2_c": "Ikuti jalan ini untuk membawa Scrat ke biji akorn."
         },
         "courseD_iceage_loops2_2020": {
-          "courseD_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian di depan sudut, dan satu bagian setelah di tikungan.",
+          "courseD_iceage_loops2_a": "Pecahkan puzzle ini menjadi dua bagian, satu bagian sebelum tikungan, dan satu bagian setelah tikungan.",
           "courseD_iceage_loops2_b": "Jika Anda terjebak, coba ucapkan langkah-langkahnya dengan lantang.",
           "courseD_iceage_loops2_c": "Ikuti jalan ini untuk membawa Scrat ke biji akorn."
         },
         "courseD_iceage_loops3": {
           "courseB_iceage_loops3_a": "Gunakan blok baru ini! <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
-          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan keluar loop `repeat`, lalu masukkan blok yang ingin Anda ulangi di dalamnya."
+          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan loop `repeat` keluar, lalu masukkan blok yang ingin Anda ulangi ke dalamnya."
         },
         "courseD_iceage_loops3_2019": {
           "courseB_iceage_loops3_a": "\"Gunakan blok baru ini!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>\"",
-          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan keluar loop `repeat`, lalu masukkan blok yang ingin Anda ulangi di dalamnya."
+          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan loop `repeat` keluar, lalu masukkan blok yang ingin Anda ulangi ke dalamnya."
         },
         "courseD_iceage_loops3_2020": {
           "courseB_iceage_loops3_a": "\"Gunakan blok baru ini!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>\"",
-          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan keluar loop `repeat`, lalu masukkan blok yang ingin Anda ulangi di dalamnya."
+          "courseB_iceage_loops3_b": "Untuk mengulang kode, pindahkan loop `repeat` keluar, lalu masukkan blok yang ingin Anda ulangi ke dalamnya."
         },
         "courseD_iceage_loops4": {
           "courseD_iceage_loops4_a": "Jangan takut untuk menjalankan kode Anda dan lihat yang terjadi!",
@@ -6494,15 +6494,15 @@
           "courseD_iceage_loops6_c": "Jalan terakhir Anda akan terlihat seperti ini."
         },
         "courseD_iceage_loops7": {
-          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba menuliskan langkah-langkah di selembar kertas terlebih dahulu.",
+          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba tuliskan langkah-langkah di secarik kertas. Apakah Anda melihat polanya?",
           "courseB_iceage_loops7_b": "Ini adalah jalan yang harus diambil Scrat untuk menuju ke biji akorn."
         },
         "courseD_iceage_loops7_2019": {
-          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba menuliskan langkah-langkah di selembar kertas terlebih dahulu.",
+          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba tuliskan langkah-langkah di secarik kertas. Apakah Anda melihat polanya?",
           "courseB_iceage_loops7_b": "Ini adalah jalan yang harus diambil Scrat untuk menuju ke biji akorn."
         },
         "courseD_iceage_loops7_2020": {
-          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba menuliskan langkah-langkah di selembar kertas terlebih dahulu.",
+          "courseB_iceage_loops7_a": "Jika Anda terjebak, coba tuliskan langkah-langkah di secarik kertas. Apakah Anda melihat polanya?",
           "courseB_iceage_loops7_b": "Ini adalah jalan yang harus diambil Scrat untuk menuju ke biji akorn."
         },
         "courseD_iceage_loops8": {
@@ -6521,17 +6521,17 @@
           "courseD_iceage_loops8_c": "Gunakan  loop untuk membantu Scrat mengikuti jalan ini."
         },
         "courseD_iceage_loops9": {
-          "courseD_iceage_loops9_a": "Mempunyai masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut untuk menjalankan puzzle ini Anda ketika Anda membuat kode!",
+          "courseD_iceage_loops9_a": "Ada masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut menjalankan puzzle saat Anda membuat kode!",
           "courseD_iceage_loops9_b": "Kode akhir Anda harus memiliki **4** loop.",
           "courseD_iceage_loops9_c": "Scrat harus mengikuti jalan ini untuk mendapatkan biji akorn."
         },
         "courseD_iceage_loops9_2019": {
-          "courseD_iceage_loops9_a": "Mempunyai masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut untuk menjalankan puzzle ini Anda ketika Anda membuat kode!",
+          "courseD_iceage_loops9_a": "Ada masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut menjalankan puzzle saat Anda membuat kode!",
           "courseD_iceage_loops9_b": "Kode akhir Anda harus memiliki **4** loop.",
           "courseD_iceage_loops9_c": "Scrat harus mengikuti jalan ini untuk mendapatkan biji akorn."
         },
         "courseD_iceage_loops9_2020": {
-          "courseD_iceage_loops9_a": "Mempunyai masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut untuk menjalankan puzzle ini Anda ketika Anda membuat kode!",
+          "courseD_iceage_loops9_a": "Ada masalah? Coba pecahkan puzzle ini menjadi potongan-potongan yang lebih kecil. Jangan takut menjalankan puzzle saat Anda membuat kode!",
           "courseD_iceage_loops9_b": "Kode akhir Anda harus memiliki **4** loop.",
           "courseD_iceage_loops9_c": "Scrat harus mengikuti jalan ini untuk mendapatkan biji akorn."
         },
@@ -6544,14 +6544,14 @@
           "courseC_maze_programming4_b": "Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau biji acorn."
         },
         "courseD_maze_intro5a_2019": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
-          "courseC_maze_programming5_b": "Ingatlah bahwa putaran berasal dari perspektif Red.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
+          "courseC_maze_programming5_b": "Ingatlah bahwa belokan itu dari perspektif Red.",
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_intro5a_2020": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
-          "courseC_maze_programming5_b": "Ingatlah bahwa putaran berasal dari perspektif Red.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
+          "courseC_maze_programming5_b": "Ingatlah bahwa belokan itu dari perspektif Red.",
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_nestedLoops3": {
           "courseD_maze_nestedLoops3_a": "Untuk memecahkan puzzle ini, Anda perlu \"nest\" satu loop `repeat` ke dalam loop `repeat` yang lain.",
@@ -6631,19 +6631,19 @@
         },
         "courseD_maze_ramp1": {
           "courseC_maze_programming1_a": "Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp1_2018": {
           "courseC_maze_programming1_a": "Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp1_2019": {
           "courseC_maze_programming1_a": "Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp1_2020": {
           "courseC_maze_programming1_a": "Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_a": "Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.",
@@ -6690,64 +6690,64 @@
           "courseC_maze_programming4_b": "Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau biji acorn."
         },
         "courseD_maze_ramp5": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5_2018": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5_2019": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5_2020": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5a": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5a_2018": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5a_2019": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingatlah bahwa putaran itu berasal dari perspektif Scrat.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5a_2020": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingatlah bahwa putaran itu berasal dari perspektif Scrat.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5b": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5b_2018": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5b_2019": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp5b_2020": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_maze_ramp6": {
           "courseC_maze_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
@@ -6945,7 +6945,7 @@
         },
         "courseD_scrat_ramp1": {
           "courseC_maze_programming1_a": "Jika Scrat tidak mencapai biji ek, pastikan ketiga blok telah saling menutup bersama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_scrat_ramp2": {
           "courseC_maze_programming2_a": "Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.",
@@ -6958,10 +6958,10 @@
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_a": "Anda dapat belok kanan atau kiri dari sudut pandang Scrat. Jika Anda menghadap ke kanan, belok kanan akan membuat Anda menunjuk ke bawah.",
           "courseC_maze_programming4_b": "Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau biji acorn.",
-          "courseC_maze_programming4_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming4_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_scrat_ramp5": {
-          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?",
+          "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Berapa jauh yang Anda butuh untuk bergerak menuju ke pojok?",
           "courseC_maze_programming5_c": "Anda perlu belok kiri di pojok untuk mencapai biji akorn."
         },
@@ -6971,12 +6971,12 @@
         "courseD_scrat_ramp7": {
           "courseD_scrat_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseD_scrat_programming6_b": "Ingat untuk berbelok dulu sebelum bergerak, sejak Scrat menghadap ke arah yang salah.",
-          "courseD_scrat_programming6_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseD_scrat_programming6_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_b": "Jangan lupa gunakan tombol \"Step\" untuk melewati blok demi blok dan mencari kesalahan.",
           "courseD_maze_ramp7_a": "Gunakan blok-blok repeat (ulang) untuk menjalankan satu blok atau sekumpulan kode berkali-kali.",
-          "courseD_maze_ramp7_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseD_maze_ramp7_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseE_artist_concept1": {
           "courseE_artist_concept1_a": "Heksagon memiliki sisi 50 piksel dan belokan 60 derajat ke kanan.",
@@ -7052,18 +7052,18 @@
           "courseD_artist_functions2_a": "Program anda harus:\n\n-   Menggunakan function\n-   Bergerak maju 100 + 75 piksel\n-   Menggunakan function"
         },
         "courseE_artist_functions2_2018": {
-          "courseD_artist_functions2_b": "Fungsi ini seharusnya tidak meliputi seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
-          "courseD_artist_functions2_c": "Pastikan Anda menggunakan blok `menggambar kotak` hijau untuk \"menyebut\" fungsi Anda. Jika tidak, kode dalam fungsi Anda tidak akan berfungsi.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_b": "Function ini seharusnya tidak memuat seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
+          "courseD_artist_functions2_c": "Pastikan Anda menggunakan blok `draw a square` hijau untuk \"memanggil\" function Anda. Jika tidak, kode dalam function tidak akan berfungsi.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Program Anda seharusnya:\n\n-   Menggunakan fungsi Anda\n-   Bergerak maju 100 + 75 piksel\n-   Menggunakan fungsi Anda lagi"
         },
         "courseE_artist_functions2_2019": {
-          "courseD_artist_functions2_b": "Fungsi ini seharusnya tidak meliputi seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
-          "courseD_artist_functions2_c": "Pastikan Anda menggunakan blok `menggambar kotak` hijau untuk \"menyebut\" fungsi Anda. Jika tidak, kode dalam fungsi Anda tidak akan berfungsi.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_b": "Function ini seharusnya tidak memuat seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
+          "courseD_artist_functions2_c": "Pastikan Anda menggunakan blok `draw a square` hijau untuk \"memanggil\" function Anda. Jika tidak, kode dalam function tidak akan berfungsi.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Program Anda seharusnya:\n\n-   Menggunakan fungsi Anda\n-   Bergerak maju 100 + 75 piksel\n-   Menggunakan fungsi Anda lagi"
         },
         "courseE_artist_functions2_2020": {
-          "courseD_artist_functions2_b": "Fungsi ini seharusnya tidak meliputi seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
-          "courseD_artist_functions2_c": "Pastikan Anda menggunakan blok `menggambar kotak` hijau untuk \"menyebut\" fungsi Anda. Jika tidak, kode dalam fungsi Anda tidak akan berfungsi.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_b": "Function ini seharusnya tidak memuat seluruh program Anda, hanya bagian yang menggambar kotak dengan sisi 100 piksel.",
+          "courseD_artist_functions2_c": "Pastikan Anda menggunakan blok `draw a square` hijau untuk \"memanggil\" function Anda. Jika tidak, kode dalam function tidak akan berfungsi.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
           "courseD_artist_functions2_a": "Program Anda seharusnya:\n\n-   Menggunakan fungsi Anda\n-   Bergerak maju 100 + 75 piksel\n-   Menggunakan fungsi Anda lagi"
         },
         "courseE_artist_functions2_copy": {
@@ -7097,17 +7097,17 @@
         "courseE_artist_functions5_2018": {
           "courseD_artist_functions5_a": "Jangan menyerah! Ingat apa yang telah anda pelajari.",
           "courseD_artist_functions5_b": "Fungsi memudahkan untuk memanggil kode yang tersimpan kapan saja, tidak hanya dari dalam satu loop!",
-          "courseD_artist_functions5_c": "Mulai dengan membuat fungsi `gambar bintang` Anda, lalu gunakan fungsi ini untuk menggambar tiga bintang!"
+          "courseD_artist_functions5_c": "Mulai dengan membuat function `draw a star` Anda, lalu gunakan function ini untuk menggambar tiga bintang!"
         },
         "courseE_artist_functions5_2019": {
           "courseD_artist_functions5_a": "Jangan menyerah! Ingat apa yang telah anda pelajari.",
           "courseD_artist_functions5_b": "Fungsi memudahkan untuk memanggil kode yang tersimpan kapan saja, tidak hanya dari dalam satu loop!",
-          "courseD_artist_functions5_c": "Mulai dengan membuat fungsi `gambar bintang` Anda, lalu gunakan fungsi ini untuk menggambar tiga bintang!"
+          "courseD_artist_functions5_c": "Mulai dengan membuat function `draw a star` Anda, lalu gunakan function ini untuk menggambar tiga bintang!"
         },
         "courseE_artist_functions5_2020": {
           "courseD_artist_functions5_a": "Jangan menyerah! Ingat apa yang telah anda pelajari.",
           "courseD_artist_functions5_b": "Fungsi memudahkan untuk memanggil kode yang tersimpan kapan saja, tidak hanya dari dalam satu loop!",
-          "courseD_artist_functions5_c": "Mulai dengan membuat fungsi `gambar bintang` Anda, lalu gunakan fungsi ini untuk menggambar tiga bintang!"
+          "courseD_artist_functions5_c": "Mulai dengan membuat function `draw a star` Anda, lalu gunakan function ini untuk menggambar tiga bintang!"
         },
         "courseE_artist_functions5_copy": {
           "courseD_artist_functions5_a": "Jangan menyerah! Ingat apa yang telah anda pelajari.",
@@ -7125,15 +7125,15 @@
         },
         "courseE_artist_functions7_2018": {
           "courseD_artist_functions7_a": "Coba buat fungsi Anda terlebih dahulu lalu tambahkan jendela satu per satu.",
-          "courseD_artist_functions7_b": "Untuk mendapatkan dari jendela atas ke jendela bawah, cukup putar seniman ke kanan, lompat 150 piksel, lalu putar seniman kembali ke kanan! Sekarang, seniman akan menghadap ke arah yang benar untuk menyelesaikan sisa rumah!"
+          "courseD_artist_functions7_b": "Agar bisa sampai dari jendela atas ke jendela bawah, cukup putar artis ke kanan, lompat 150 piksel, lalu putar artis kembali ke kanan! Sekarang, artis akan menghadap ke arah yang benar untuk menyelesaikan sisa rumah!"
         },
         "courseE_artist_functions7_2019": {
           "courseD_artist_functions7_a": "Coba buat fungsi Anda terlebih dahulu lalu tambahkan jendela satu per satu.",
-          "courseD_artist_functions7_b": "Untuk mendapatkan dari jendela atas ke jendela bawah, cukup putar seniman ke kanan, lompat 150 piksel, lalu putar seniman kembali ke kanan! Sekarang, seniman akan menghadap ke arah yang benar untuk menyelesaikan sisa rumah!"
+          "courseD_artist_functions7_b": "Agar bisa sampai dari jendela atas ke jendela bawah, cukup putar artis ke kanan, lompat 150 piksel, lalu putar artis kembali ke kanan! Sekarang, artis akan menghadap ke arah yang benar untuk menyelesaikan sisa rumah!"
         },
         "courseE_artist_functions7_2020": {
           "courseD_artist_functions7_a": "Coba buat fungsi Anda terlebih dahulu lalu tambahkan jendela satu per satu.",
-          "courseD_artist_functions7_b": "Untuk mendapatkan dari jendela atas ke jendela bawah, cukup putar seniman ke kanan, lompat 150 piksel, lalu putar seniman kembali ke kanan! Sekarang, seniman akan menghadap ke arah yang benar untuk menyelesaikan sisa rumah!"
+          "courseD_artist_functions7_b": "Agar bisa sampai dari jendela atas ke jendela bawah, cukup putar artis ke kanan, lompat 150 piksel, lalu putar artis kembali ke kanan! Sekarang, artis akan menghadap ke arah yang benar untuk menyelesaikan sisa rumah!"
         },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_f": "Anda hanya memerlukan satu blok `move forward`, tetapi Anda memerlukan beberapa blok `jump forward` dan/atau `jump backward`!",
@@ -7148,7 +7148,7 @@
           "courseD_artist_functions8_a": "Mulailah dengan membuat fungsi untuk persegi, lalu coba buat fungsi untuk garis bujur sangkar.\nBagaimana anda menggunakan fungsi `draw a line of squares` untuk membuat gambar ini?",
           "courseD_artist_functions8_d": "Untuk membuat garis persegi empat,\n\n-   ulangi 3 kali\n    -   gambarlah persegi empat dengan panjang sisi **50 piksel**\n    -   lompat ke depan **100 piksel**",
           "courseD_artist_functions8_b": "Anggap setiap baris pada gambar ini sebagai garis dari 3 persegi empat. Berapa banyak garis persegi empatnya dan dari mana Anda mulai menggambar masing-masing garis itu?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
-          "courseD_artist_functions8_c": "Pada akhir setiap rangkaian kotak terhuyung, seniman harus melompat turun dan mundur sebelum menggambar rangkaian kotak terhuyung berikutnya.",
+          "courseD_artist_functions8_c": "Pada akhir setiap rangkaian kotak berkeluk-keluk, artis harus melompat turun dan mundur sebelum menggambar rangkaian kotak berkeluk-keluk berikutnya.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2019": {
@@ -7156,7 +7156,7 @@
           "courseD_artist_functions8_a": "Mulailah dengan membuat fungsi untuk persegi, lalu coba buat fungsi untuk garis bujur sangkar.\nBagaimana anda menggunakan fungsi `draw a line of squares` untuk membuat gambar ini?",
           "courseD_artist_functions8_d": "Untuk membuat garis persegi empat,\n\n-   ulangi 3 kali\n    -   gambarlah persegi empat dengan panjang sisi **50 piksel**\n    -   lompat ke depan **100 piksel**",
           "courseD_artist_functions8_b": "Anggap setiap baris pada gambar ini sebagai garis dari 3 persegi empat. Berapa banyak garis persegi empatnya dan dari mana Anda mulai menggambar masing-masing garis itu?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
-          "courseD_artist_functions8_c": "Pada akhir setiap rangkaian kotak terhuyung, seniman harus melompat turun dan mundur sebelum menggambar rangkaian kotak terhuyung berikutnya.",
+          "courseD_artist_functions8_c": "Pada akhir setiap rangkaian kotak berkeluk-keluk, artis harus melompat turun dan mundur sebelum menggambar rangkaian kotak berkeluk-keluk berikutnya.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2020": {
@@ -7164,38 +7164,38 @@
           "courseD_artist_functions8_a": "Mulailah dengan membuat fungsi untuk persegi, lalu coba buat fungsi untuk garis bujur sangkar.\nBagaimana anda menggunakan fungsi `draw a line of squares` untuk membuat gambar ini?",
           "courseD_artist_functions8_d": "Untuk membuat garis persegi empat,\n\n-   ulangi 3 kali\n    -   gambarlah persegi empat dengan panjang sisi **50 piksel**\n    -   lompat ke depan **100 piksel**",
           "courseD_artist_functions8_b": "Anggap setiap baris pada gambar ini sebagai garis dari 3 persegi empat. Berapa banyak garis persegi empatnya dan dari mana Anda mulai menggambar masing-masing garis itu?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
-          "courseD_artist_functions8_c": "Pada akhir setiap rangkaian kotak terhuyung, seniman harus melompat turun dan mundur sebelum menggambar rangkaian kotak terhuyung berikutnya.",
+          "courseD_artist_functions8_c": "Pada akhir setiap rangkaian kotak berkeluk-keluk, artis harus melompat turun dan mundur sebelum menggambar rangkaian kotak berkeluk-keluk berikutnya.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8b_2018": {
-          "courseD_artist_functions8_f": "Anda hanya perlu satu blok `bergerak maju` jika Anda melakukan hal ini dengan benar!",
+          "courseD_artist_functions8_f": "Anda hanya perlu satu blok `move forward` jika Anda melakukan hal ini dengan benar!",
           "courseD_artist_functions8_a": "Mulai dengan membuat fungsi untuk kotak, lalu coba membuat fungsi untuk garis kotak.",
           "courseD_artist_functions8_d": "Untuk membuat garis kotak,\n\n-   ulangi 3 kali\n    -   gambar kotak\n    -   melompat maju **100 piksel**"
         },
         "courseE_artist_functions8b_2019": {
-          "courseD_artist_functions8_f": "Anda hanya perlu satu blok `bergerak maju` jika Anda melakukan hal ini dengan benar!",
+          "courseD_artist_functions8_f": "Anda hanya perlu satu blok `move forward` jika Anda melakukan hal ini dengan benar!",
           "courseD_artist_functions8_a": "Mulai dengan membuat fungsi untuk kotak, lalu coba membuat fungsi untuk garis kotak.",
           "courseD_artist_functions8_d": "Untuk membuat garis kotak,\n\n-   ulangi 3 kali\n    -   gambar kotak\n    -   melompat maju **100 piksel**"
         },
         "courseE_artist_functions8b_2020": {
-          "courseD_artist_functions8_f": "Anda hanya perlu satu blok `bergerak maju` jika Anda melakukan hal ini dengan benar!",
+          "courseD_artist_functions8_f": "Anda hanya perlu satu blok `move forward` jika Anda melakukan hal ini dengan benar!",
           "courseD_artist_functions8_a": "Mulai dengan membuat fungsi untuk kotak, lalu coba membuat fungsi untuk garis kotak.",
           "courseD_artist_functions8_d": "Untuk membuat garis kotak,\n\n-   ulangi 3 kali\n    -   gambar kotak\n    -   melompat maju **100 piksel**"
         },
         "courseE_artist_functions8c_2018": {
-          "courseD_artist_functions8_f": "Hal ini lebih mudah daripada yang terlihat! Anda seharusnya tidak memerlukan blok `bergerak` atau `melompat` di sini!",
-          "courseD_artist_functions8_a": "Baris kedua dari kotak hanya berputar 180 derajat berbeda dari yang pertama!",
-          "courseD_artist_functions8_c": "Pada akhir setiap baris kotak, seniman hanya perlu berputar 180 derajat sebelum menggambar garis kotak berikutnya. Letakkan semuanya dalam repeat loop untuk mengatur Anda pada latihan berikutnya!"
+          "courseD_artist_functions8_f": "Ini lebih mudah daripada kelihatannya! Anda mestinya tidak memerlukan blok `move` atau `jump` di sini!",
+          "courseD_artist_functions8_a": "Baris kedua kotak hanya berbeda putaran 180 derajat dari yang pertama!",
+          "courseD_artist_functions8_c": "Pada akhir setiap baris kotak, artis hanya perlu berputar 180 derajat sebelum menggambar garis kotak berikutnya. Letakkan semuanya dalam repeat loop guna mempersiapkan diri Anda untuk latihan berikutnya!"
         },
         "courseE_artist_functions8c_2019": {
-          "courseD_artist_functions8_f": "Hal ini lebih mudah daripada yang terlihat! Anda seharusnya tidak memerlukan blok `bergerak` atau `melompat` di sini!",
-          "courseD_artist_functions8_a": "Baris kedua dari kotak hanya berputar 180 derajat berbeda dari yang pertama!",
-          "courseD_artist_functions8_c": "Pada akhir setiap baris kotak, seniman hanya perlu berputar 180 derajat sebelum menggambar garis kotak berikutnya. Letakkan semuanya dalam repeat loop untuk mengatur Anda pada latihan berikutnya!"
+          "courseD_artist_functions8_f": "Ini lebih mudah daripada kelihatannya! Anda mestinya tidak memerlukan blok `move` atau `jump` di sini!",
+          "courseD_artist_functions8_a": "Baris kedua kotak hanya berbeda putaran 180 derajat dari yang pertama!",
+          "courseD_artist_functions8_c": "Pada akhir setiap baris kotak, artis hanya perlu berputar 180 derajat sebelum menggambar garis kotak berikutnya. Letakkan semuanya dalam repeat loop guna mempersiapkan diri Anda untuk latihan berikutnya!"
         },
         "courseE_artist_functions8c_2020": {
-          "courseD_artist_functions8_f": "Hal ini lebih mudah daripada yang terlihat! Anda seharusnya tidak memerlukan blok `bergerak` atau `melompat` di sini!",
-          "courseD_artist_functions8_a": "Baris kedua dari kotak hanya berputar 180 derajat berbeda dari yang pertama!",
-          "courseD_artist_functions8_c": "Pada akhir setiap baris kotak, seniman hanya perlu berputar 180 derajat sebelum menggambar garis kotak berikutnya. Letakkan semuanya dalam repeat loop untuk mengatur Anda pada latihan berikutnya!"
+          "courseD_artist_functions8_f": "Ini lebih mudah daripada kelihatannya! Anda mestinya tidak memerlukan blok `move` atau `jump` di sini!",
+          "courseD_artist_functions8_a": "Baris kedua kotak hanya berbeda putaran 180 derajat dari yang pertama!",
+          "courseD_artist_functions8_c": "Pada akhir setiap baris kotak, artis hanya perlu berputar 180 derajat sebelum menggambar garis kotak berikutnya. Letakkan semuanya dalam repeat loop guna mempersiapkan diri Anda untuk latihan berikutnya!"
         },
         "courseE_artist_functions9": {
           "courseD_artist_functions9_e": "Bisakah Anda menunjukkan keempat tempat yang `line of triangles` dapat digunakan dalam gambar ini?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
@@ -7289,7 +7289,7 @@
         },
         "courseE_bee_concept2_2018": {
           "courseE_bee_concept2_a": "Apakah loop `selagi` akan membantu di sini?",
-          "courseE_bee_concept2_d": "Dengan loop `sementara` ini, Anda dapat memeriksa ruang kosong untuk melihat apakah jumlah madu > 0. Ini melakukan hal yang sama seperti loop `sementara ada madu`.",
+          "courseE_bee_concept2_d": "Dengan loop `while` ini, Anda dapat memeriksa ruang kosong untuk melihat apakah jumlah madu > 0. Fungsi loop ini sama dengan loop `while there is honey`.",
           "courseE_bee_concept2_b": "Anda dapat menggunakan loop `while` untuk bergerak ke ujung setiap jalur, dan mengumpulkan semua madu dari setiap kotak.",
           "courseE_bee_concept2_c": "Jalan manakah lebah seharusnya belok setiap selesai jalur?"
         },
@@ -7299,7 +7299,7 @@
           "courseE_bee_concept3a_c": "Ada tiga kelompok bunga sehingga loop-luar `ulangi` harus mengulang tiga kali."
         },
         "courseE_bee_concept3_2018": {
-          "courseE_bee_concept3a_a": "Coba gunakan loop bersarang `repeat` atau `sementara` untuk memecahkan puzzle ini.",
+          "courseE_bee_concept3a_a": "Coba gunakan nested loop `repeat` atau `while` untuk memecahkan puzzle ini.",
           "courseE_bee_concept3a_b": "Jika Anda tidak dapat menebak lokasi untuk menempatkan loop, coba tulis kode Anda langkah demi langkah dan cari pola."
         },
         "courseE_bee_concept4": {
@@ -7469,29 +7469,29 @@
           "courseE_farmer_functions2ba_b": "Seret semua blok di area kerja sekaligus ke `when run` untuk melihat cara kerja fungsi ini."
         },
         "courseE_farmer_functions2ba_2018": {
-          "courseE_farmer_functions2ba_a": "Gunakan blok `dapatkan semua labu` untuk memastikan Anda mendapatkan semua labu!"
+          "courseE_farmer_functions2ba_a": "Gunakan blok `get all pumpkins` untuk memastikan Anda mendapatkan semua labu!"
         },
         "courseE_farmer_functions2ba_2019": {
-          "courseE_farmer_functions2ba_a": "Gunakan blok `dapatkan semua labu` untuk memastikan Anda mendapatkan semua labu!"
+          "courseE_farmer_functions2ba_a": "Gunakan blok `get all pumpkins` untuk memastikan Anda mendapatkan semua labu!"
         },
         "courseE_farmer_functions2ba_2020": {
-          "courseE_farmer_functions2ba_a": "Gunakan blok `dapatkan semua labu` untuk memastikan Anda mendapatkan semua labu!"
+          "courseE_farmer_functions2ba_a": "Gunakan blok `get all pumpkins` untuk memastikan Anda mendapatkan semua labu!"
         },
         "courseE_farmer_functions3c": {
           "courseE_farmer_functions3c_a": "Urutan apakah yang sering diulang dalam program ini? Bisakah Anda menyeret blok ini ke dalam fungsi?",
           "courseE_farmer_functions3c_b": "Jangan lupa memanggil fungsi di dalam program utama di mana pun Anda menghapus blok."
         },
         "courseE_farmer_functions3c1_2018": {
-          "coursee_farmer_functions3c1_2018_a": "Anda harus menggunakan fungsi `ambil di sepanjang jalan` tiga kali untuk memecahkan puzzle ini.",
-          "coursee_farmer_functions3c1_2018_b": "Kode apa yang perlu Anda tambahkan untuk berkeliling di sekitar sudut?"
+          "coursee_farmer_functions3c1_2018_a": "Anda harus menggunakan function `pick along path` tiga kali untuk memecahkan puzzle ini.",
+          "coursee_farmer_functions3c1_2018_b": "Kode apa yang perlu Anda tambahkan untuk melewati sudut?"
         },
         "courseE_farmer_functions3c1_2019": {
-          "coursee_farmer_functions3c1_2018_a": "Anda harus menggunakan fungsi `ambil di sepanjang jalan` tiga kali untuk memecahkan puzzle ini.",
-          "coursee_farmer_functions3c1_2018_b": "Kode apa yang perlu Anda tambahkan untuk berkeliling di sekitar sudut?"
+          "coursee_farmer_functions3c1_2018_a": "Anda harus menggunakan function `pick along path` tiga kali untuk memecahkan puzzle ini.",
+          "coursee_farmer_functions3c1_2018_b": "Kode apa yang perlu Anda tambahkan untuk melewati sudut?"
         },
         "courseE_farmer_functions3c1_2020": {
-          "coursee_farmer_functions3c1_2018_a": "Anda harus menggunakan fungsi `ambil di sepanjang jalan` tiga kali untuk memecahkan puzzle ini.",
-          "coursee_farmer_functions3c1_2018_b": "Kode apa yang perlu Anda tambahkan untuk berkeliling di sekitar sudut?"
+          "coursee_farmer_functions3c1_2018_a": "Anda harus menggunakan function `pick along path` tiga kali untuk memecahkan puzzle ini.",
+          "coursee_farmer_functions3c1_2018_b": "Kode apa yang perlu Anda tambahkan untuk melewati sudut?"
         },
         "courseE_farmer_functions4b": {
           "courseE_farmer_functions4b_a": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda belum memecahkan puzzle itu.",
@@ -7525,15 +7525,15 @@
           "courseE_farmer_functions7b_c": "Loop `repeat until pumpkin` dapat membantu Anda berjalan lancar melewati labirin."
         },
         "courseE_farmer_functions8a1_2018": {
-          "courseE_farmer_functions8a1_2018a": "Memulai puzzle ini dengan membuat kode fungsi yang sama yang Anda buat dalam puzzle terakhir.",
+          "courseE_farmer_functions8a1_2018a": "Mulai puzzle ini dengan mengkode function yang sama yang Anda buat dalam puzzle terakhir.",
           "courseE_farmer_functions8a1_2018b": "Setelah fungsi bekerja pertama kali, Anda perlu melakukan satu putaran ekstra sebelum dapat menjalankannya lagi."
         },
         "courseE_farmer_functions8a1_2019": {
-          "courseE_farmer_functions8a1_2018a": "Memulai puzzle ini dengan membuat kode fungsi yang sama yang Anda buat dalam puzzle terakhir.",
+          "courseE_farmer_functions8a1_2018a": "Mulai puzzle ini dengan mengkode function yang sama yang Anda buat dalam puzzle terakhir.",
           "courseE_farmer_functions8a1_2018b": "Setelah fungsi bekerja pertama kali, Anda perlu melakukan satu putaran ekstra sebelum dapat menjalankannya lagi."
         },
         "courseE_farmer_functions8a1_2020": {
-          "courseE_farmer_functions8a1_2018a": "Memulai puzzle ini dengan membuat kode fungsi yang sama yang Anda buat dalam puzzle terakhir.",
+          "courseE_farmer_functions8a1_2018a": "Mulai puzzle ini dengan mengkode function yang sama yang Anda buat dalam puzzle terakhir.",
           "courseE_farmer_functions8a1_2018b": "Setelah fungsi bekerja pertama kali, Anda perlu melakukan satu putaran ekstra sebelum dapat menjalankannya lagi."
         },
         "courseE_farmer_functions8b": {
@@ -7544,17 +7544,17 @@
         "courseE_farmer_functions9a1_2018": {
           "courseE_farmer_functions9a1_2018a": "Anda akan menggunakan fungsi yang sama dengan yang Anda buat pada beberapa puzzle terakhir.",
           "courseE_farmer_functions9a1_2018b": "Gunakan langkah-langkah yang sama dari puzzle sebelumnya untuk menyelesaikan bagian pertama puzzle ini.",
-          "courseE_farmer_functions9a1_2018c": "Anda harus `berputar` beberapa kali dan `bergerak maju` untuk menuju ke tanaman selada terakhir sebelum Anda dapat menyebut fungsi Anda lagi."
+          "courseE_farmer_functions9a1_2018c": "Anda harus `turn` beberapa kali dan `move forward` untuk menuju ke tanaman selada terakhir sebelum Anda dapat memanggil function Anda lagi."
         },
         "courseE_farmer_functions9a1_2019": {
           "courseE_farmer_functions9a1_2018a": "Anda akan menggunakan fungsi yang sama dengan yang Anda buat pada beberapa puzzle terakhir.",
           "courseE_farmer_functions9a1_2018b": "Gunakan langkah-langkah yang sama dari puzzle sebelumnya untuk menyelesaikan bagian pertama puzzle ini.",
-          "courseE_farmer_functions9a1_2018c": "Anda harus `berputar` beberapa kali dan `bergerak maju` untuk menuju ke tanaman selada terakhir sebelum Anda dapat menyebut fungsi Anda lagi."
+          "courseE_farmer_functions9a1_2018c": "Anda harus `turn` beberapa kali dan `move forward` untuk menuju ke tanaman selada terakhir sebelum Anda dapat memanggil function Anda lagi."
         },
         "courseE_farmer_functions9a1_2020": {
           "courseE_farmer_functions9a1_2018a": "Anda akan menggunakan fungsi yang sama dengan yang Anda buat pada beberapa puzzle terakhir.",
           "courseE_farmer_functions9a1_2018b": "Gunakan langkah-langkah yang sama dari puzzle sebelumnya untuk menyelesaikan bagian pertama puzzle ini.",
-          "courseE_farmer_functions9a1_2018c": "Anda harus `berputar` beberapa kali dan `bergerak maju` untuk menuju ke tanaman selada terakhir sebelum Anda dapat menyebut fungsi Anda lagi."
+          "courseE_farmer_functions9a1_2018c": "Anda harus `turn` beberapa kali dan `move forward` untuk menuju ke tanaman selada terakhir sebelum Anda dapat memanggil function Anda lagi."
         },
         "courseE_farmer_functions9b": {
           "courseE_farmer_functions9b_a": "Bisakah Anda menggunakan pernyataan `if` dan `if/else` berlapis untuk berjalan menyusuri jalur?",
@@ -7590,40 +7590,40 @@
           "courseE_farmer_ramp11b_a": "Anda dapat menyarangkan loop `while' Anda di dalam loop`repeat\\` untuk membuat kode Anda lebih pendek."
         },
         "courseE_farmer_ramp12_forswap": {
-          "courseE_farmer_ramp12_b": "Anda masih perlu menggunakan loop `repeat` di luar itu semua untuk memberi tahu petani Bagaimana kali perlu berjalan maju dan mendapatkan selada."
+          "courseE_farmer_ramp12_b": "Anda masih perlu menggunakan loop `repeat` di luar itu semua untuk memberi tahu petani berapa kali perlu berjalan maju dan mendapatkan selada."
         },
         "courseE_farmer_ramp12_forswap_2018": {
-          "courseE_farmer_ramp12_b": "Anda masih perlu menggunakan loop `repeat` di luar itu semua untuk memberi tahu petani Bagaimana kali perlu berjalan maju dan mendapatkan selada."
+          "courseE_farmer_ramp12_b": "Anda masih perlu menggunakan loop `repeat` di luar itu semua untuk memberi tahu petani berapa kali perlu berjalan maju dan mendapatkan selada."
         },
         "courseE_farmer_ramp12_forswap_2019": {
-          "courseE_farmer_ramp12_b": "Anda masih perlu menggunakan loop `repeat` di luar itu semua untuk memberi tahu petani Bagaimana kali perlu berjalan maju dan mendapatkan selada."
+          "courseE_farmer_ramp12_b": "Anda masih perlu menggunakan loop `repeat` di luar itu semua untuk memberi tahu petani berapa kali perlu berjalan maju dan mendapatkan selada."
         },
         "courseE_farmer_ramp12_forswap_2020": {
-          "courseE_farmer_ramp12_b": "Anda masih perlu menggunakan loop `repeat` di luar itu semua untuk memberi tahu petani Bagaimana kali perlu berjalan maju dan mendapatkan selada."
+          "courseE_farmer_ramp12_b": "Anda masih perlu menggunakan loop `repeat` di luar itu semua untuk memberi tahu petani berapa kali perlu berjalan maju dan mendapatkan selada."
         },
         "courseE_farmer_ramp12c": {
-          "courseE_farmer_ramp12b_b": "Anda masih harus menggunakan loop `sampai` terlebih dahulu, lalu menggunakan loop `sementara` setelah Anda mendapatkan selada."
+          "courseE_farmer_ramp12b_b": "Anda masih harus menggunakan loop `untill` terlebih dahulu, lalu menggunakan loop `while` setelah sampai di selada."
         },
         "courseE_farmer_ramp12c_2018": {
-          "courseE_farmer_ramp12b_b": "Anda masih harus menggunakan loop `sampai` terlebih dahulu, lalu menggunakan loop `sementara` setelah Anda mendapatkan selada."
+          "courseE_farmer_ramp12b_b": "Anda masih harus menggunakan loop `untill` terlebih dahulu, lalu menggunakan loop `while` setelah sampai di selada."
         },
         "courseE_farmer_ramp12c_2019": {
-          "courseE_farmer_ramp12b_b": "Anda masih harus menggunakan loop `sampai` terlebih dahulu, lalu menggunakan loop `sementara` setelah Anda mendapatkan selada."
+          "courseE_farmer_ramp12b_b": "Anda masih harus menggunakan loop `untill` terlebih dahulu, lalu menggunakan loop `while` setelah sampai di selada."
         },
         "courseE_farmer_ramp12c_2020": {
-          "courseE_farmer_ramp12b_b": "Anda masih harus menggunakan loop `sampai` terlebih dahulu, lalu menggunakan loop `sementara` setelah Anda mendapatkan selada."
+          "courseE_farmer_ramp12b_b": "Anda masih harus menggunakan loop `untill` terlebih dahulu, lalu menggunakan loop `while` setelah sampai di selada."
         },
         "courseE_farmer_ramp12d": {
           "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `sampai` dan `sementara` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
         },
         "courseE_farmer_ramp12d_2018": {
-          "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `sampai` dan `sementara` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
+          "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `untill` dan `while` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
         },
         "courseE_farmer_ramp12d_2019": {
-          "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `sampai` dan `sementara` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
+          "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `untill` dan `while` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
         },
         "courseE_farmer_ramp12d_2020": {
-          "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `sampai` dan `sementara` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
+          "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `untill` dan `while` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
         },
         "courseE_farmer_ramp12e": {
           "courseE_farmer_ramp12e_b": "Solusi untuk puzzle ini akan sangat mirip dengan solusi untuk puzzle terakhir, tetapi berbalik ke arah yang lain."
@@ -7997,15 +7997,15 @@
         },
         "courseF_artist_variables3_2018": {
           "courseF_artist_variables3_a": "Variabel `length` akan digunakan di dua tempat dalam kode: Di sepanjang sisi segitiga, dan sesuai jumlah gerakan maju di antara segitiga.",
-          "courseF_artist_variables3_b": "Blok angka dengan nilai 50 seharusnya hanya berada di satu tempat: setelah blok `atur panjang`."
+          "courseF_artist_variables3_b": "Blok angka dengan nilai 50 seharusnya hanya berada di satu tempat: setelah blok `set length`."
         },
         "courseF_artist_variables3_2019": {
           "courseF_artist_variables3_a": "Variabel `length` akan digunakan di dua tempat dalam kode: Di sepanjang sisi segitiga, dan sesuai jumlah gerakan maju di antara segitiga.",
-          "courseF_artist_variables3_b": "Blok angka dengan nilai 50 seharusnya hanya berada di satu tempat: setelah blok `atur panjang`."
+          "courseF_artist_variables3_b": "Blok angka dengan nilai 50 seharusnya hanya berada di satu tempat: setelah blok `set length`."
         },
         "courseF_artist_variables3_2020": {
           "courseF_artist_variables3_a": "Variabel `length` akan digunakan di dua tempat dalam kode: Di sepanjang sisi segitiga, dan sesuai jumlah gerakan maju di antara segitiga.",
-          "courseF_artist_variables3_b": "Blok angka dengan nilai 50 seharusnya hanya berada di satu tempat: setelah blok `atur panjang`."
+          "courseF_artist_variables3_b": "Blok angka dengan nilai 50 seharusnya hanya berada di satu tempat: setelah blok `set length`."
         },
         "courseF_artist_variables4": {
           "courseF_artist_variables4_a": "Kode Anda tidak akan berbeda jauh dari puzzle terakhir, kecuali bahwa Anda harus memutar artis untuk meloncat ke bawah, lalu putar dia lagi untuk bersiap meloncat ke depan lagi.",
@@ -8017,11 +8017,11 @@
           "courseF_artist_variables4_c": "Ini adalah pola yang artis Anda akan ikuti:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         },
         "courseF_artist_variables4_2019": {
-          "courseF_artist_variables4_a": "Kode Anda tidak akan jauh berbeda dengan yang ada di puzzle terakhir, kecuali Anda perlu mengganti seniman untuk melompat ke bawah, lalu memutar balik untuk bersiap menggambar segitiga berikutnya.",
+          "courseF_artist_variables4_a": "Kode Anda tidak akan jauh berbeda dengan yang ada di puzzle terakhir, kecuali Anda perlu memutar artis untuk melompat ke bawah, lalu memutar balik untuk bersiap menggambar segitiga berikutnya.",
           "courseF_artist_variables4_c": "Ini adalah pola yang artis Anda akan ikuti:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         },
         "courseF_artist_variables4_2020": {
-          "courseF_artist_variables4_a": "Kode Anda tidak akan jauh berbeda dengan yang ada di puzzle terakhir, kecuali Anda perlu mengganti seniman untuk melompat ke bawah, lalu memutar balik untuk bersiap menggambar segitiga berikutnya.",
+          "courseF_artist_variables4_a": "Kode Anda tidak akan jauh berbeda dengan yang ada di puzzle terakhir, kecuali Anda perlu memutar artis untuk melompat ke bawah, lalu memutar balik untuk bersiap menggambar segitiga berikutnya.",
           "courseF_artist_variables4_c": "Ini adalah pola yang artis Anda akan ikuti:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         },
         "courseF_artist_variables5": {
@@ -8552,10 +8552,10 @@
           "courseF_bee_variables_3_2019_1": "Untuk mengurangi satu variabel, Anda dapat menggunakan kode ini di program Anda:\n<xml><block type=\"variables_set\" inline=\"false\">\n                    <title name=\"VAR\">gather</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">gather</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">1</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block></xml>"
         },
         "courseF_bee_variables_4_2019": {
-          "courseF_bee_variables_4_2019_1": "Daripada mengurangi 1 dari 'kumpulan', tambahkan 1 setiap kali sebagai pengganti. Keuntungan apa yang seharusnya dimiliki variabel pertama kali?"
+          "courseF_bee_variables_4_2019_1": "Daripada mengurangkan 1 dari 'gather', justru tambahkan 1 setiap kali. Apa nilai yang seharusnya dimiliki variabel pertama kali?"
         },
         "courseF_bee_variables_4_2020": {
-          "courseF_bee_variables_4_2019_1": "Daripada mengurangi 1 dari 'kumpulan', tambahkan 1 setiap kali sebagai pengganti. Keuntungan apa yang seharusnya dimiliki variabel pertama kali?"
+          "courseF_bee_variables_4_2019_1": "Daripada mengurangkan 1 dari 'gather', justru tambahkan 1 setiap kali. Apa nilai yang seharusnya dimiliki variabel pertama kali?"
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Anda perlu mengganti ucapan “Apa yang harus saya teriakkan?” dalam blok hijau dengan “Gol!”"
@@ -8669,7 +8669,7 @@
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseD_scrat_programming6_b": "Ingat untuk berbelok dulu sebelum bergerak, sejak Scrat menghadap ke arah yang salah.",
-          "courseD_scrat_programming6_c": "Jangan takut melakukan kesalahan! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseD_scrat_programming6_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
         },
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_a": "Untuk menggambar sebuah sisi, gunakan blok `move forward by 100 pixels` , dan mengubah 100 menjadi 200.",
@@ -8680,7 +8680,7 @@
           "courseD_artist_ramp12_c": "Untuk menggambar setiap sisi, Anda harus bergerak maju 100 piksel, lalu belok kanan 120 derajat. Berapa banyak sisi yang Anda butuhkan?"
         },
         "courseE_bee_ramp14": {
-          "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `sampai` dan `sementara` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
+          "courseE_farmer_ramp12d_b": "Anda masih harus meletakkan loop `untill` dan `while` di dalam loop `repeat` untuk menyelesaikan puzzle ini!"
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "Solusi untuk puzzle ini akan sangat mirip dengan solusi untuk puzzle terakhir, tetapi berbalik ke arah yang lain."

@@ -287,6 +287,7 @@
   "dropletBlock_mathRandom_description": "၀ (အပါအဝင်) မှ ၁အထိ(၁မပါ) ကျရာနံပါတ်တစ်ခုကိုပြန်သွားပါ",
   "dropletBlock_mathRandom_signatureOverride": "သချာ.ကျပန်း()",
   "dropletBlock_mathRound_param0": "×",
+  "dropletBlock_mathSqrt_param0": "×",
   "dropletBlock_playSound_description": "MP3အသံဖိုင်ကိုသတ်မှတ်ထား​သောURLမှဖွင့်မည်.",
   "dropletBlock_playSound_param0_description": "အသံဖိုင်သို့သွား​သောURL. ပ​ရောဂျက်အမည်သို့မဟုတ်ပြင်ပURL.",
   "dropletBlock_randomNumber_description": "အနည်းဆုံးမှအများဆုံးအထိနီးကပ်စွာကျရာနံပါတ်ကိုပြန်သွားပါ.",

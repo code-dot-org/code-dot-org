@@ -16,7 +16,7 @@
 #
 
 module Pd::Application
-  class Email < ActiveRecord::Base
+  class Email < ApplicationRecord
     self.table_name = 'pd_application_emails'
 
     belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: 'pd_application_id'

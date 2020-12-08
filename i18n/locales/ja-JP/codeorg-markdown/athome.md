@@ -1,44 +1,51 @@
 ---
-title: コロナウィルス感染拡大の影響で臨時休校の今、コンピュータサイエンスを学ぼう！
+title: Covid19への対応から学校が閉鎖されているときにコンピューター サイエンスを学ぶ
 ---
 
 <a id="top"></a>
 
-# 臨時休校中のコンピュータサイエンス学習
+# 学校が閉鎖されているときにコンピューター サイエンスを学ぶ
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">手元にコンピュータがありませんか？ See smartphone options</a></p>
+<p>私たちは、COVID-19の世界的な大発生により、非常に困難な時期に直面しており、健康、コミュニティ、および経済に関して高まった懸念に対処しています。 安全対策により、全国的に学校が閉鎖されました。 </p>
+<p>私たちは何らかの方法で先生、生徒、家族をできる限りサポートしたいと考えています。 以下は、生徒が自宅でコンピューター サイエンスを学ぶのに役立つ一連のリソースです。 <strong>親や保護者の方 - 生徒のためにCode.orgアカウントを作成することを検討している場合、または生徒が既存のアカウントにアクセスするのを助けたい場合は、 <a href="https://support.code.org/hc/en-us/articles/360040703792">こちらの入門書をお読みください</a>。</strong></p>
+<p></a>学生が遠隔地にいる場合や社会的に離れた教室にいる場合でも、教師がコンピュータサイエンスを教え続けるための <a href="#teacher-support">リソースをさらにいくつかまとめました。 </p>
+<p><a href="#apps">自宅にコンピューターがありませんか？ スマートフォンのオプションをご覧ください</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [ダンスパーティ](https://code.org/dance)：ケイティ・ペリーやショーン・メンデスなどなど豪華なスターの曲とダンスパーティをプログラムしよう
-* [マインクラフト](https://code.org/api/hour/begin/mc)：想像力と問題解決のチカラを使って、新しいワールドの旅をたのしもう
-* [海のAI](https://code.org/oceans)：AI（人工知能）や機械学習が世界のさまざまな問題にどのように使われるのかについて学習しよう！
-* [フラッピーコード](http://studio.code.org/s/flappy/reset)：自分だけのフラッピーゲームのコードをかいてみよう
-* [宇宙のコーディング](https://quorumlanguage.com/hourofcode/astro1.html)：クオラム（目の不自由なかたでも使いこなせるプログラミング言語）をつかって天文学の学習をしてみよう
-* [そのほかのチュートリアル](https://code.org/hourofcode/overview)
+<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
+
+<div class="clearboth"></div></div>
+
+## Hour of Code: 魅力ある入門チュートリアルをお試しください。
+全年齢層を対象とした1時間のチュートリアルをお試しください。 45以上の言語で何百ものアクティビティやチュートリアルをご用意しております。
+* [ダンスパーティー](https://code.org/dance) - ケイティ・ペリー、ショーン・メンデスなどの楽曲を取り上げたダンスパーティーをプログラミングしましょう。
+* [Minecraft](https://code.org/api/hour/begin/mc) - あなたの創造性と問題解決スキルを駆使して、新しい世界を探検してください。
+* [AI for Oceans](https://code.org/oceans) - AIと機械学習を使用して世界的な問題に対処する方法を学びましょう.
+* [フラッピー コード](http://studio.code.org/s/flappy/reset) - 独自のゆるキャラのゲームコードを書きましょう。
+* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - 視覚障害のある学習者がアクセスできるプログラミング言語Quorumを用いて天文学について学びましょう。
+* さらに[多くのチュートリアル](https://code.org/hourofcode/overview)をご用意しています！
 
 <p><a href="#top">トップにもどる</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## ビデオ：3～5 分の簡単な教育ビデオをご覧ください。
 
 {{ athome_videos }}
 
@@ -49,20 +56,20 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+## 自分のペースで学べるコースで基礎を学ぶ
+### **エクスプレスコース**
+ひとりで始める学生には最適なオプションです。 ドラッグ＆ドロップブロックを使ってコンピュータサイエンスの& 基礎を学びます。 独自の絵やゲームを作成します。 <strong>注: 速習コースは現在、英語、ヒンディー語、イタリア語、スペイン語のみとなっています。 その他の言語については、20時間の<a href="https://studio.code.org/s/20-hour">促進コース</a>をお勧めします。 あなたの言語で利用可能なものを確認するには、<a href="https://studio.code.org/courses">コースカタログ</a>.</strong>を参照してください。
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">速習コース</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">先行読者のための速習コース</a>
 
 </div>
 <div style="clear: both"></div>
@@ -76,7 +83,7 @@ A great option for students getting started on their own. You'll learn the funda
 <p><a href="#top">トップにもどる</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## App Labでアプリの設計と構築を学ぶ
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -86,9 +93,9 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-66">
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<p>App Labは、簡単なアプリが作れるプログラミング環境です。 アプリをデザインし、JavaScriptでブロックまたはテキストのいずれかでコーディングし、作成したものを家族や友人と共有することができます。</p>
+<p>13歳以上、すべての最新ブラウザ、英語のみ</p>
+<a href="https://code.org/educate/applab"><button>試してみてください</button></a>
 
 </div>
 
@@ -97,23 +104,23 @@ A great option for students getting started on their own. You'll learn the funda
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## 手元にコンピュータがありませんか？ Try these smartphone apps
+## 自宅にコンピューターがありませんか？ これらのスマートフォンアプリを試してみてください
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>ボックスアイランド</strong></h3</a>アルゴリズム、パターン認識、シーケンス、ループ、条件式などのコーディングの基本を教えながら、学習者をわくわくする冒険に連れて行く魅力的なモバイル コーディング ゲームです。 <i>(全年齢対象)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3</a>5歳から9歳までの子供向けの、受賞歴のあるコード学習プラットフォームです。 コードを学びながらパズルを解いたり、The Foosでゲームを作ったりしましょう。 <strong>注: codeSpark は 3 ヶ月の無料トライアルを提供しています。 Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>実際のJavaScriptの書き方を教える携帯電話での楽しいお手軽レッスンでコーディングを学びましょう。 Googleのプログラムを使ったコード。 <i>(中学生以上向け)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -122,39 +129,49 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [ルビィのぼうけん](https://www.helloruby.com/play)：コンピュータやテクノロジー、プログラミングについて学習する世界一きまぐれな方法です。 コンピュータサイエンスに関して、たとえば問題の分解やパターンをみつけること、アルゴリズムを使って考えること、デバッグやコラボレーションがについて学習することができます。 *(4-10歳向け)*
-* [CSアンプラグド](https://csunplugged.org/en/)：コンピュータサイエンスに関して、カード、ひも、クレヨン、ときには体を動かしてゲームや問題をとくことで学習できる無料の指導教材を用意しています。 *(5-14歳向け)*
+## インターネットへのアクセスが制限されていたり、接続できなかったりしませんか？ これらの非接続型ドアクティビティをチェックしてみてください。
+* [Hello Ruby](https://www.helloruby.com/play) - コンピューター、テクノロジー、プログラミングについて学ぶための世界で最も風変わりな方法。 問題の分解、パターンの発見、アルゴリズム的思考、問題のデバッグ、共同作業など、CSのトピックにまつわるさまざまなアクティビティ。 *(対象年齢: 4～10歳)*
+* [CS Unplugged](https://csunplugged.org/en/) - カード、ひも、クレヨン、動き回るたくさんのキャラを使ったワクワクするようなゲームやパズルでコンピューター サイエンスを学べる無料の教材集。 *(対象年齢: 5～14歳)*
 
 <p><a href="#top">トップにもどる</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## コードブレイク：Code.orgチームとスペシャルゲストから学ぼう!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Code.orgのCEOであるHadi Partovi氏を特別ゲストに迎え、アルゴリズム、人工知能、暗号化などのコンピュータサイエンスの概念を学ぶ興味をそそられる教室を毎週開催しています。</p>
+<p>Code Breakの全エピソードをチェックしていない方も、今からでも遅くありません。 ライブエピソードはもう放送されていませんが、すべてのエピソードとセルフペースのアクティビティは<a href="https://code.org/break">こちら</a>で見ることができます。</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## バーチャル教室やソーシャルディスタンスのある教室での教師へのサポート
+
+<a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> にアクセスして、バーチャル教室、またはソーシャルディスタンスのある教室環境にいる教師のためのリソースや提案をご覧ください。 Course-specific resources can be accessed by clicking the links below.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
 <p><a href="#top">トップにもどる</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

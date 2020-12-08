@@ -38,13 +38,19 @@ hu:
     és építs egy szebb holnapot.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'Amiről #A kódolás órája szól, az a #Számítástechnika
-    a jóért. Tanulj ma, és építs egy szebb holnapot.'
+  social_hoc2020_hoc_is_about_csforgood: 'Amiről az #Hour of Code szól, az a #Számítástechnika
+    egy jobb jövőért. Tanulj ma, és építs egy szebb holnapot.'
   social_hoc2020_global_movement: A Kódolás Órája egy globális kezdeményezés, mely
     több tíz millió diákot elér. Több mint 45 nyelven érhetők el oktatóvideók minden
     korosztálynak.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: Hamarosan itt az Hour of Code 2020!
+  hoc2020_ai_header: Fedezd fel a mesterséges intelligenciát (MI)
+  hoc2020_ai_description: A MI és a gépi tanulás át- meg átszövi az egész világunkat.
+    Csatlakozz hozzánk, és fedezd fel a MI-t egy új videósorozat segítségével, tanulj
+    a "MI az óceánokért" programmal 25+ nyelven, vitasd meg az etikát és a MI-t, és
+    még ennél több is van...
   hoc2019_header: Tanulj informatikát. Változtasd meg a világot!
   hoc2019_header_line1_mobile: Tanulj informatikát.
   hoc2019_header_line2_mobile: Változtasd meg a világot!
@@ -199,7 +205,7 @@ hu:
   codeorg_homepage_hoc2018_curriculum: Haladj tovább a <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org kurzusokkal</a>
   codeorg_homepage_hoc2018_dance_heading: Készítsd el saját <span class="highlight-word">tánc&nbsp;partidat</span>
-  codeorg_homepage_hoc2018_header_line1: Hamarosan itt a Kódolás Órája...
+  codeorg_homepage_hoc2018_header_line1: Hamarosan itt az Hour of Code...
   codeorg_homepage_hoc2018_header_line2_desktop: Te mit fogsz <span class="hoc2018-highlight-word">létrehozni?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Te mit fogsz létrehozni?
   codeorg_homepage_hoc2018_header_line3: Szárnyaljon a képzeleted és légy készen az
@@ -208,7 +214,7 @@ hu:
   codeorg_homepage_hoc2018_musician_before: Kiemelt
   codeorg_homepage_hoc2018_musician_after: és sokan mások!
   codeorg_homepage_hoc2018_video: Nézd meg a videónkat
-  hourofcode_homepage_hoc2018_header_line1: A Kódolás Órája eseményeket bárki bárhol
+  hourofcode_homepage_hoc2018_header_line1: Az Hour of Code  eseményeket bárki bárhol
     megszervezheti. Egyórás gyakorlatok több mint 45 nyelven. Gyakorlat nem szükséges.
   hourofcode_homepage_hoc2018_header_line2: "-től 104 éves korig."
   hoc2018_tutorial_mchoc_description: A Minecraft egy vadonatúj programmal tér vissza
@@ -402,7 +408,7 @@ hu:
   n_have_learned_an_hoc: "<h1>Próbálj ki egy</h1> <h2>Kódolás órája</h2> <h3># progit</h3>"
   anybody_can_learn: Bárki megtanulhatja.
   get_started: Indítás
-  beyond_an_hour: A Kódolás órájá-ban
+  beyond_an_hour: Hour of Code-n kívül
   register_now: Regisztrálj most
   share_on_facebook: Megosztás Facebookon
   share_on_twitter: Megosztás Twitteren
@@ -414,7 +420,7 @@ hu:
     számára. Segíts hogy legalább 100 millióan hozzájussanak.
   front_join_us_description_short: Az informatika egy biztos alapot ad minden tanulónak.
   front_join_us_button: Csatlakozz
-  front_what_is_hoc: Mi az a Kódolás Órája?
+  front_what_is_hoc: Mi az az Hour of Code?
   front_join_us_header: Bárki megtanulhatja az alapokat, és élvezheti csinálni!
   front_join_us_volunteer_header: Önkénteskedni a Kódolás óráján
   front_join_us_tutorials: Próbáld ki ez év új bemutatóit!
@@ -576,12 +582,12 @@ hu:
   meta_tag_twitter_description: A Kódolás Órája egy globális mozgalom, ami különböző
     életkorú tanulók tízmillióit éri el 180+ országban, és több mint 45 nyelven.
   twitter_default_text: 'Én részt veszek az idei #HourOfCode eseményen. És Te? @codeorg'
-  twitter_donor_text: 'Az idei #KódolásÓrája a kreativitásról szól. Én benne vagyok!
+  twitter_donor_text: 'Az idei #Hour of Code a kreativitásról szól. Én benne vagyok!
     És te? (Köszönjük %{random_donor} hogy támogatod a @codeorg-t)'
   twitter_donor_text_2019: 'Az idei #HourOfCode a #CSforGood-ról szól. Én benne vagyok!
     És te? (Köszönjük %{random_donor} hogy támogatod a @codeorg-t)'
   hoc_faq_title: GYIK
-  hoc_faq_what_is_hoc_q: Mi az a Kódolás Órája?
+  hoc_faq_what_is_hoc_q: Mi az az Hour of Code?
   hoc_faq_what_is_hoc_a: A Kódolás Órája egy egy órás bevezetés a számítástudomány
     alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja
     az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>.
@@ -623,7 +629,7 @@ hu:
     &mdash; szakkör formájában, non-profit eseményként vagy a munkahelyen. Vagy csak
     próbáld ki egyedül, amikor %{campaign_date} eljön."
   hoc_faq_how_participate_a_markdown: "[Kezdje el megtervezni] (%{howto}) az útmutató
-    áttekintésével. Szervezhetsz egy Kódolás Órája eseményt az iskoládban vagy a közösségedben
+    áttekintésével. Szervezhetsz egy Hour of Code eseményt az iskoládban vagy a közösségedben
     - például tanórán kívüli klubban, nonprofit szervezeteknél vagy a munkahelyeden.
     Vagy egyszerűen próbáld ki te magad, amikor megérkezik a %{campaign_date}."
   hoc_faq_behind_hoc_q: Ki áll a Kódolás Órája mögött?
@@ -634,7 +640,7 @@ hu:
     támogatására egy <a href='http://code.org/about/partners'>példanélküli együttműködés</a>
     alakult ki olyan résztvevőkkel, mint a Microsoft, az Apple, az Amazon, a Boys
     and Girls Clubs of America és a College Board.
-  hoc_faq_behind_hoc_a_markdown: A Kódolás Órája a Kódolás Órája és a Számítástechnikai
+  hoc_faq_behind_hoc_a_markdown: Az Hour of Code az Hour of Code és a Számítástechnikai
     Oktatási Hét [tanácsadó és felülvizsgálati bizottságok] (%{partner_url}), valamint
     a Kódolás Órája támogatására összeállított partnerek példátlan koalíciója vezeti
     - beleértve a Microsoftot is. Az Apple, az Amazon, az Amerikai Fiú- és Lányklubok
@@ -646,7 +652,7 @@ hu:
     mi gondoskodunk. Lehetőséget biztosítunk minden korosztálynak és tapasztalatszintnek,
     óvodától kezdve. Kezd el megtervezni a saját eseményedet azzal, hogy elolvasod
     az <a href='/how-to'>útmutatónkat</a>.
-  hoc_faq_host_a_markdown: Természetesen a Kódolás Órája tevékenységek önszerveződőek.
+  hoc_faq_host_a_markdown: Természetesen az Hour of Code tevékenységek önszerveződőek.
     Mindössze annyit kell tenned, hogy kipróbálod a jelenlegi oktatóprogramjainkat
     (%{codeorg_url}/learn), kiválasztassz egy oktatóanyagot, és egy tanórát - a többiről
     mi gondoskodunk. Lehetőség van életkoronkénti és tapasztalati szintenkénti válogatásra
@@ -781,12 +787,8 @@ hu:
     egy olyan téma, amelyet a diákjaik tanulni szeretnének, és a tanárok képesek is
     ezt tanítani. <br/><br/> Mindenekfelett, a legfontosabb amit minden résztvevő
     megtanul egy óra alatt az, hogy képesek vagyunk erre.
-  hoc_faq_one_hour_a_markdown: |-
-    A kódolás órájának nem célja, hogy a részvevők informatikai szakértővé váljanak egy óra alatt. Az egy óra csak arra elegendő, hogy megtapasztald, a számítástechnika szórakoztató és kreatív, hogy minden korcsoport és minden diák számára elérhető függetlenül a hátterüktől. A kampány sikere nem abban mérjük, hogy a diákok mennyi számítástechnikai ismeretet sajátítanak el - a siker abban áll, hogy minden nem, etnikai és társadalmi-gazdasági csoport képviselteti magát, hogy az összes számítástechnikai kurzuson nő a jelnetkezők és a résztvevők száma. A résztvevő tanárok és diákok milliói döntöttek úgy, hogy egy óránál többet akarnak - egy egész napot, egy egész egész hetet vagy akár még hosszabb időt is tanulással akarnak tölteni, és sok diák ennek eredményként egy egész tanfolyamra (vagy akár egy főiskolai szakra) iratkozott be.
-
-    A diákok mellett az oktatók is "tanulnak", egy óra alatt megszerzik a kellő önbizalmat, úgy is taníthatnak számítástechnikát, hogy nincs főiskolai diplomájuk számítástechnikából. Tanárok tízezrei folytatják a tanulást, szereznek PhD fokozatot számítástechnikából és/vagy vesznek részt online képzéseken. Ugyanez vonatkozik az iskolák igazgatóira is, akik felismerik, hogy a számítástechnika valami olyasmi, amit a diákjaik szeretnének tanulni és a tanáraik pedig képesek tanítani.
-
-    És ami a legfontosabb, amit minden résztvevő megtanulhat egy óra alatt, hogy ezt mi meg tudjuk csinálni.
+  hoc_faq_one_hour_a_markdown: Az Hour of Code-nak nem célja, hogy a részvevők informatikai
+    szakértővé váljanak egy óra alatt.
   hoc_faq_more_questions_q: További kérdéseid vannak?
   hoc_faq_more_questions_a: Nézz körül a <a href='http://support.code.org'>fórumban</a>,
     hátha megtalálod a kérdéseire a válaszokat.
@@ -797,7 +799,7 @@ hu:
     anyagunk örökké elérhető lesz. Menj a <a href='/promote'>források</a> oldalra
     további anyagokárt, melyek segítenek abban, hogy sikeres legyen az általad szervezett
     Kódolás Órája is.
-  hoc_faq_keep_learning_a_markdown: Bárki bármikor lehet a Kódolás órájának a házigazdája.
+  hoc_faq_keep_learning_a_markdown: Bárki bármikor lehet az Hour of Code házigazdája.
     Az oktatóanyagok egész évben fenn maradnak. Valamennyi oktatóanyag és a tananyag
     folyamatosan hozzáférhető az oldalunkon. Nézd meg a [forrásainkat](%{promote}),
     találsz ott útmutatókat és egyéb forrásokat, amelyek segítségével sikeres Kódolás
@@ -905,7 +907,7 @@ hu:
   title_partners: Partnerek
   title_resources: Segédanyagok
   title_past_posters: Régebbi Kódolás órája poszterek
-  title_signup_thanks: Köszönjük hogy jelentkeztél a Kódolás Órájának megtartására!
+  title_signup_thanks: Köszönjük hogy jelentkeztél az Hour of Code megtartására!
   title_tutorial_guidelines: Közösségi iránymutatások
   title_whole_school: Teljes Iskolás Részvétel
   events_nav_title: Kódolás Órája események
@@ -949,6 +951,7 @@ hu:
   highlights_constant_athletes_short_heading: Haladj előre
   footer_copyright_message: Copyright 2015 Code.org. Minden jog fenntartva.
   footer_trademark_message: Hour of Code™ a Code.org bejegyzett védjegye.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partnerek
   footer_menu_contact: Lépj velünk kapcsolatba
   footer_menu_support: Támogatás
@@ -963,7 +966,7 @@ hu:
   learn_banner_beyond_markdown: Szeretnél még tovább tanulni? [Egy óránál többet](%{url})
   learn_banner_teachers: 'Tanárok: <a id=''teacher_banner_host''>Tarts egy órát</a>
     vagy <a id=''teacher_banner_howto''>olvasd el az útmutatót</a>'
-  learn_banner_teachers_markdown: 'Tanárok: [Tarts egy órát](%{host_url}) és [olvasd
+  learn_banner_teachers_markdown: 'Tanárok: [Tartson egy órát](%{host_url}) és [olvassa
     el az útmutatót](%{howto_url})'
   learn_robotics_banner_heading: Robotika
   learn_robotics_banner_blurb: Vannak robotjaid? Használd őket az alábbi tevékenységekhez
@@ -1563,9 +1566,10 @@ hu:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1581,15 +1585,16 @@ hu:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1598,6 +1603,7 @@ hu:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1607,7 +1613,7 @@ hu:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -5372,20 +5378,22 @@ hu:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5431,12 +5439,12 @@ hu:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5455,16 +5463,18 @@ hu:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5484,6 +5494,13 @@ hu:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: Az óceánokba kerülő műanyagok által okozott
+    probléma tovább súlyosbodik. Szerencsére egy kód segítségével a Plastic Pollution
+    PSA-n keresztül (közszolgálati bejelentés a műanyagszennyezésről) te is hallathatod
+    a hangodat. Miután a JavaScript segítségével kódoltál egy közszolgálati bejelentést
+    a műanyagszennyezésről, készíthetsz egy második vidót is egy téged foglalkoztató
+    témáról! Tanuld meg a ciklusok, a szinuszhullámok és testre szabott hangulatjelek
+    használatát, és készíts egy egyedi projektet.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5514,11 +5531,11 @@ hu:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -6400,7 +6417,7 @@ hu:
   tutorial_pets_language: Magyar
   tutorial_petvet_language: Magyar
   tutorial_superhero_language: Magyar
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: Magyar
   tutorial_vidcodetypeface_language: Magyar
   tutorial_washustorm_language: Magyar
   tutorial_activitypackets_language: Magyar
@@ -6423,10 +6440,11 @@ hu:
   tutorial_codespeakhappy_language: Magyar
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: Magyar
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: Arab, holland, angol, angol (egyesült királysági), francia,
+    spanyol (mexikói)
   tutorial_bsdcause_language: Magyar
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Magyar
   tutorial_tttractor_language: Magyar
   tutorial_codeillusionmickey_language: Magyar
@@ -6444,11 +6462,12 @@ hu:
   tutorial_ttsecond_language: Magyar
   tutorial_bsdtrivia_language: Magyar
   tutorial_csfirstdialogue_language: English, Spanish (Mexico)
-  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
-    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: Arab, kínai (egyszerűsített), angol, héber,
+    japán, spanyol (spanyolországi), spanyol (mexikói)
   tutorial_codestersdistance_language: Magyar
   tutorial_itchspace_language: Magyar
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Magyar
   tutorial_itchfish_language: Magyar
   tutorial_bsdwebsite_language: Magyar
@@ -6456,11 +6475,12 @@ hu:
   tutorial_itchwebcam_language: Magyar
   tutorial_itchball_language: Magyar
   tutorial_ttrace_language: Magyar
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arab, kínai (egyszerűsített), angol, héber, portugál
+    (brazíl)
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Magyar
   tutorial_codeguppytext_language: Magyar
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: Magyar
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Magyar
@@ -6470,8 +6490,8 @@ hu:
   tutorial_ttbunker_language: Magyar
   tutorial_cuttle_language: Magyar
   tutorial_bsdjokes_language: Magyar
-  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rptree_language: Arab, holland, angol, angol (egyesült királysági), francia,
+    spanyol (mexikói)
   tutorial_codestersunity_language: Magyar
   tutorial_codesterssoccer_language: Magyar
   tutorial_breakoutlock_language: Magyar
@@ -6526,9 +6546,9 @@ hu:
   tutorial_kcjplastic_language: Angol, francia
   tutorial_legojourney_language: Magyar
   tutorial_legohopper_language: Magyar
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Arab, bengáli, bosnyák, kínai (egyszerűsített),
+    horvát, cseh, angol, francia, német, hindi, indonéz, olasz, japán, koreai, norvég
+    (nynorski), lengyel, portugál és még sok más!
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Magyar
@@ -7124,6 +7144,7 @@ hu:
   tutorial_rpstress_string_detail_grades: 2. osztálytól
   tutorial_bsdcause_string_detail_grades: 9. osztálytól
   tutorial_vidcodeanimoji_string_detail_grades: 2. osztálytól
+  tutorial_vidcodeanimojies_string_detail_grades: 2. osztálytól
   tutorial_bsdinspire_string_detail_grades: 6. osztálytól
   tutorial_tttractor_string_detail_grades: 6. osztálytól
   tutorial_codeillusionmickey_string_detail_grades: 2-tól 8. osztályig
@@ -7145,6 +7166,7 @@ hu:
   tutorial_codestersdistance_string_detail_grades: 6. osztálytól
   tutorial_itchspace_string_detail_grades: 6. osztálytól
   tutorial_vidcodemagic_string_detail_grades: 2. osztálytól
+  tutorial_vidcodemagices_string_detail_grades: 2. osztálytól
   tutorial_codespeakmeal_string_detail_grades: 6. osztálytól
   tutorial_itchfish_string_detail_grades: 2-tól 8. osztályig
   tutorial_bsdwebsite_string_detail_grades: 6. osztálytól
@@ -7156,6 +7178,7 @@ hu:
   tutorial_educodesecret_string_detail_grades: 6. osztálytól
   tutorial_itchshapes_string_detail_grades: 6. osztálytól
   tutorial_codeguppytext_string_detail_grades: 6-tól 8. osztályig
+  tutorial_vidcodeplastiche_string_detail_grades: 6. osztálytól
   tutorial_educativechatbot_string_detail_grades: 9. osztálytól
   tutorial_educodebasics_string_detail_grades: 6. osztálytól
   tutorial_codehsdesign_string_detail_grades: 6. osztálytól
@@ -7176,7 +7199,7 @@ hu:
   tutorial_codehslitter_string_detail_grades: 6-tól 8. osztályig
   tutorial_bsdocean_string_detail_grades: 6-tól 8. osztályig
   tutorial_itchplatformer_string_detail_grades: 6. osztálytól
-  tutorial_codejika_string_detail_grades: 2-tól 8. osztályig
+  tutorial_codejika_string_detail_grades: 6. osztálytól
   tutorial_gamefrootclicker_string_detail_grades: 6-tól 8. osztályig
   tutorial_rmagicequity_string_detail_grades: 6-tól 8. osztályig
   tutorial_ttfreestyle_string_detail_grades: 6-tól 8. osztályig
@@ -7974,6 +7997,8 @@ hu:
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -7998,6 +8023,8 @@ hu:
   tutorial_itchspace_string_platforms: Minden modern böngésző
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Minden modern böngésző
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8009,6 +8036,7 @@ hu:
   tutorial_educodesecret_string_platforms: Minden modern böngésző
   tutorial_itchshapes_string_platforms: Minden modern böngésző
   tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
   tutorial_educativechatbot_string_platforms: Minden modern böngésző
   tutorial_educodebasics_string_platforms: Minden modern böngésző
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8680,6 +8708,7 @@ hu:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8701,6 +8730,7 @@ hu:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8712,6 +8742,7 @@ hu:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9408,6 +9439,7 @@ hu:
   tutorial_rpstress_string_detail_programming_languages: Blokk programozás
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9430,6 +9462,7 @@ hu:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blokk programozás
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blokk programozás
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9442,6 +9475,7 @@ hu:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blokk programozás
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML

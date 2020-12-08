@@ -132,8 +132,6 @@ ja:
     valid_password: "有効なパスワード ！"
     invalid_password: "パスワードを%d文字以上で入力"
     mismatch_password: "入力した 2 つのパスワードが一致しません"
-    agree_us_website: "米国に拠点を置くウェブサイトを使用することに同意します。"
-    my_data_to_us: "当サイトの利用に関する私の情報は、米国に送信され、米国にて保管または処理される場合があります。"
     agree_us_data_transfer_student: '**私は、本サイト使用によるデータ（個人データを含む）を Code.org がホスティングと処理を行うために**米国へ転送することに同意します。'
     agree_us_data_transfer_teacher: '**私は、本サイト使用（私の学生による使用も含む）によるデータ（個人データを含む）を Code.org がホスティングと処理を行うために**米国へ転送することに同意します。'
     data_collection_us: "私は、米国に本拠を置くCode.org は非営利団体によるウェブサイトで、データ取得に関わる法令はお住まいの国の法令とは異なる場合があることを理解しました。\n"
@@ -286,10 +284,17 @@ ja:
       sections: "セクション"
       help_support: "ヘルプとサポート"
       report_bug: "バグを報告"
+      report_abuse: "不正行為を報告"
       teacher_community: "先生のコミュニティ"
       professional_learning: "プロフェッショナル ラーニング"
       documentation: "ドキュメント"
       tutorials: "チュートリアル"
+      app_lab_documentation: "アプリラボのドキュメント"
+      app_lab_tutorials: "アプリラボのチュートリアル"
+      game_lab_documentation: "ゲームラボのドキュメント"
+      game_lab_tutorials: "ゲームラボのチュートリアル"
+      sprite_lab_documentation: "スプライトラボのドキュメント"
+      sprite_lab_tutorials: "スプライトラボのチュートリアル"
       educate_overview: "教育の概要"
       educate_elementary: "小学校"
       educate_middle: "中学校"
@@ -315,6 +320,7 @@ ja:
       help_us: "手を貸して下さい"
       teach: "教える"
       about: "概要"
+      legal: "プライバシーと法的事項"
       legal_privacy: "プライバシー ポリシー"
       legal_tos: "利用規約"
     user:
@@ -322,6 +328,7 @@ ja:
       district_dashboard: '地区のダッシュ ボード'
       label: 'やあ %{username}'
       stats: 'コード・スタジオ'
+      my_projects: '私のプロジェクト'
       settings: 'アカウント'
       logout: 'サインアウト'
       signin: 'サインイン'
@@ -357,7 +364,7 @@ ja:
       starwarsblocks: 'スター ・ ウォーズ (ブロック)'
       starwarsblocks_hour: 'スター ・ ウォーズ (ブロック)'
       weblab: 'ウェッブ ラボ'
-      view_all: 'すべてのプロジェクトを見る'
+      view_all: 'すべてのプロジェクトを表示...'
     popup:
       progress_for_user: "%{name} の進捗状況"
       progress: 'あなたの進捗状況'
@@ -468,6 +475,7 @@ ja:
     no_primary_course: "コード スタジオ でコースを見る"
     choose_next_course: "Code Studio コースを以下のリストから一つ試す"
     print_certificate: "証書を印刷"
+  certificate_sponsor_message: "%{Sponsor_name} は学習をサポートするために多大な支援をしてくれました。"
   move_students:
     new_section_dne: "申し訳ありませんが、セクション %{new_section_code} は存在しません。別のセクション コードを入力してください。"
     section_code_cant_be_current_section: "現在のセクションを、新しいセクションと同じにすることはできません。"
@@ -612,6 +620,7 @@ ja:
       title: "スター・ウォーズ"
     infinity:
       title: "インフィニティ プレイ ラボ"
+      body: "プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。"
     minecraft:
       title: "マインクラフト"
       body: "プログラムを通して、Minecraftの世界を探検しましょう。"
@@ -622,10 +631,12 @@ ja:
       title: "マインクラフト"
     hero:
       title: "マインクラフト"
-      body: "Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ"
+      body: "Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました。プログラミングを使ってマインクラフトの旅へ"
     sports:
       title: "スポーツ"
       body: "バスケットボールゲームや、様々なスポーツの混合競技をつくろう！"
+    text-compression:
+      title: "テキスト圧縮"
     unplugged:
       title: "アンプラグド・レッスン"
       audience: "4才以上"
@@ -910,6 +921,10 @@ ja:
   courses_category: 'すべてのコース'
   cookie_banner:
     accept: '賛成する'
+  page_not_found_title: "ページが見つかりません"
+  page_not_found_header: '404:ページが見つかりません'
+  page_not_found_description: "お探しのページはこのアドレスには存在しません。ウェブアドレスを確認して再送信してください。または、ホームページに戻ってください。"
+  page_not_found_button: "ホームへ戻る"
   copy: 'コピー'
   parent_email_banner:
     text: "**あなたは親または保護者ですか？**このアカウントにあなたのメールをリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！"

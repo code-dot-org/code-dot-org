@@ -41,6 +41,13 @@ pl:
     dla uczniów w każdym wieku.
   social_hoc2020_coming_dates: Godzina Kodowania będzie miała miejsce w dniach 7-13
     grudnia 2020. Informatyka jest podstawą w kształceniu każdego ucznia.
+  hoc2020_ai_subheader: Zbliża się Godzina Kodowania roku 2020!
+  hoc2020_ai_header: Odkrywaj sztuczną inteligencję
+  hoc2020_ai_description: "Sztuczna inteligencja i uczenie maszynowe oddziałują na
+    cały nasz świat. Dołącz do nas i zgłębiaj zagadnienie sztucznej inteligencji w
+    nowej serii filmów wideo, przechodź szkolenie korzystając z programu \"Sztuczna
+    inteligencja na rzecz oceanów\" tłumaczonego na 25 języków, omawiaj zagadnienia
+    etyczne i sztuczną inteligencję i wiele innych...\n\n"
   hoc2019_header: Ucz się informatyki. Zmieniaj świat!
   hoc2019_header_line1_mobile: Ucz się informatyki.
   hoc2019_header_line2_mobile: Zmieniaj świat!
@@ -977,6 +984,7 @@ pl:
   footer_copyright_message: Copyright 2015 Code.org. Wszelkie prawa zastrzeżone.
   footer_trademark_message: Hour od Code™ (Godzina Kodowania™) jest znakiem towarowym
     Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partnerzy i Doradcy
   footer_menu_contact: Skontaktuj się z nami
   footer_menu_support: Pomoc techniczna
@@ -1588,7 +1596,7 @@ pl:
   tutorial_n2y_name: Bitt Bott odkrywa Ziemię
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_toxicodepython_name: Odkryj Pythona z Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
@@ -1596,9 +1604,10 @@ pl:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1614,15 +1623,16 @@ pl:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1631,6 +1641,7 @@ pl:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Zanieczyszczenie plastikiem PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1640,7 +1651,7 @@ pl:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1696,7 +1707,7 @@ pl:
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Kodowany haft
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
@@ -5682,9 +5693,9 @@ pl:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_toxicodepython_longdescription: Odkryj podstawy Pythona bez słów i wyjaśnień.
+    Nasz cichy nauczyciel przedstawi Ci kilka serii wyzwań, które doprowadzą Cię do
+    odgadnięcia pewnych zasad i uczenia się na własnych błędach.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
     that has taken over the world! Along the way, you'll meet interesting characters
@@ -5710,20 +5721,22 @@ pl:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5769,12 +5782,12 @@ pl:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5793,16 +5806,18 @@ pl:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5822,6 +5837,12 @@ pl:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: Zanieczyszczanie naszych oceanów plastikiem
+    wciąż się pogarsza. Na szczęście możesz sprawić, że Twój głos będzie słyszalny
+    dzięki kodowi przez Plastic Pollution PSA. Po zakodowaniu PSA dotyczącego zanieczyszczenia
+    plastikiem za pomocą JavaScript, możesz zrobić drugi film na dowolny temat, który
+    uważasz za ważny! Naucz się korzystać z pętli, fal sinusoidalnych i niestandardowych
+    emoji, aby stworzyć unikatowy projekt.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5852,11 +5873,11 @@ pl:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -6066,8 +6087,8 @@ pl:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Zakoduj swój projekt na telefonie z
+    Androidem i zszyj go na koszulce, spodniach, torbie sportowej lub butach!
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -6766,7 +6787,7 @@ pl:
   tutorial_pets_language: Polski
   tutorial_petvet_language: Polski
   tutorial_superhero_language: Polski
-  tutorial_vidcodeplastic_language: Angielski, hebrajski
+  tutorial_vidcodeplastic_language: Polski
   tutorial_vidcodetypeface_language: Polski
   tutorial_washustorm_language: Polski
   tutorial_activitypackets_language: Polski
@@ -6779,9 +6800,10 @@ pl:
   tutorial_n2y_language: Polski
   tutorial_microsoftarcade_language: Polski
   tutorial_csfirstunplugged_language: Angielski, hiszpański (Meksyk)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: duński, holenderski, angielski, angielski (UK),
+    estoński, francuski, niemiecki, indonezyjski, włoski, inny, polski, portugalski
+    (Brazylia), portugalski (Portugalia), rumuński, hiszpański (Hiszpania), hiszpański
+    (Meksyk) ), szwedzki, turecki
   tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
     Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodedate_language: Polski
@@ -6793,6 +6815,7 @@ pl:
     (Mexico)
   tutorial_bsdcause_language: Polski
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Polski
   tutorial_tttractor_language: Polski
   tutorial_codeillusionmickey_language: Polski
@@ -6815,6 +6838,7 @@ pl:
   tutorial_codestersdistance_language: Polski
   tutorial_itchspace_language: Polski
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Polski
   tutorial_itchfish_language: Polski
   tutorial_bsdwebsite_language: Polski
@@ -6822,11 +6846,12 @@ pl:
   tutorial_itchwebcam_language: Polski
   tutorial_itchball_language: Polski
   tutorial_ttrace_language: Polski
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Polski
   tutorial_codeguppytext_language: Polski
+  tutorial_vidcodeplastiche_language: Angielski, hebrajski
   tutorial_educativechatbot_language: Polski
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Polski
@@ -6892,9 +6917,12 @@ pl:
   tutorial_kcjplastic_language: Angielski, francuski
   tutorial_legojourney_language: Polski
   tutorial_legohopper_language: Polski
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Arabski, bengalski, bośniacki, chiński uproszczony,
+    chorwacki, czeski, angielski, angielski (Wielka Brytania), francuski, niemiecki,
+    hindi, indonezyjski, włoski, japoński, koreański, norweski (nynorsk), inny, polski,
+    portugalski (Brazylia), portugalski ( Portugalia), rosyjski, serbski (cyrylica),
+    serbski (łaciński), słowacki, hiszpański (Hiszpania, Meksyk), suahili, szwedzki,
+    tamilski, tajski, turecki, urdu (Pakistan), wietnamski
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Polski
@@ -6907,11 +6935,11 @@ pl:
   tutorial_star-wars_string_detail_grades: Klasy 2+
   tutorial_gumadventure_string_detail_grades: Klasy 6-8
   tutorial_mchoc_string_detail_grades: Klasy 2+
-  tutorial_vidnews_string_detail_grades: Klasy 6+
+  tutorial_vidnews_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_kodable-pre_string_detail_grades: Od dzieci, które uczą się czytać, do
     klasy 5
   tutorial_highseas_string_detail_grades: Klasy 2-8
-  tutorial_capython_string_detail_grades: Klasy 6+
+  tutorial_capython_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_frzn_string_detail_grades: Klasy 2+
   tutorial_cocom_string_detail_grades: Klasy 2+
   tutorial_play-lab_string_detail_grades: Klasy 2+
@@ -6921,29 +6949,29 @@ pl:
   tutorial_kanopixel_string_detail_grades: Klasy 2+
   tutorial_foos_string_detail_grades: Od dzieci, które uczą się czytać, do klasy 5
   tutorial_tynkerdd_string_detail_grades: Klasy 2-8
-  tutorial_tynkerana_string_detail_grades: Klasy 6+
+  tutorial_tynkerana_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_vidcard_string_detail_grades: Klasy 2+
   tutorial_spritebox_string_detail_grades: Klasy 2-8
-  tutorial_tynkerch_string_detail_grades: Klasy 6+
+  tutorial_tynkerch_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_lightbot_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
   tutorial_hoc_string_detail_grades: nie wyświetlaj
   tutorial_code_string_detail_grades: Klasy 2+
-  tutorial_tinspire_string_detail_grades: Klasy 6+
+  tutorial_tinspire_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_itchbounceball_string_detail_grades: Klasy 2-8
-  tutorial_vidclim_string_detail_grades: Klasy 6+
-  tutorial_matlab_string_detail_grades: Klasy 6+
+  tutorial_vidclim_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_matlab_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_flap_string_detail_grades: Klasy 2+
-  tutorial_galaxy_string_detail_grades: Klasy 6+
+  tutorial_galaxy_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_inf_string_detail_grades: Klasy 2-8
   tutorial_tynkersol_string_detail_grades: Klasy 2+
-  tutorial_itchg_string_detail_grades: Klasy 6+
+  tutorial_itchg_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_como_string_detail_grades: Klasy 2+
   tutorial_processfound_string_detail_grades: Klasy 9+
-  tutorial_tynkerhomo_string_detail_grades: Klasy 6+
+  tutorial_tynkerhomo_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_art_string_detail_grades: Klasy 2+
   tutorial_tynkerbrick_string_detail_grades: Klasy 2+
-  tutorial_itchbio_string_detail_grades: Klasy 6+
+  tutorial_itchbio_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_itchj_string_detail_grades: Klasy 6-8
   tutorial_tickleo_string_detail_grades: Klasy 2+
   tutorial_hopgeo_string_detail_grades: Klasy 2-8
@@ -6957,68 +6985,68 @@ pl:
   tutorial_cocomgame_string_detail_grades: Klasy 2+
   tutorial_tynkerspin_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     8
-  tutorial_code-avengers_string_detail_grades: Klasy 6+
+  tutorial_code-avengers_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tynkercq_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
-  tutorial_cmgame_string_detail_grades: Klasy 6+
+  tutorial_cmgame_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codesters_string_detail_grades: nie wyświetlaj
-  tutorial_qrm_string_detail_grades: Klasy 6+
-  tutorial_texas-instruments_string_detail_grades: Klasy 6+
-  tutorial_cajava_string_detail_grades: Klasy 6+
+  tutorial_qrm_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_texas-instruments_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_cajava_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codehs_string_detail_grades: Klasy 9+
   tutorial_hopemo_string_detail_grades: Klasy 2-8
   tutorial_tynkercm_string_detail_grades: Klasy 2+
   tutorial_codesterswintergreet_string_detail_grades: Klasy 2+
-  tutorial_codestersc_string_detail_grades: Klasy 6+
+  tutorial_codestersc_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codestersturtle_string_detail_grades: Klasy 2+
-  tutorial_penjee_string_detail_grades: Klasy 6+
+  tutorial_penjee_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_trinket_string_detail_grades: Klasy 2+
-  tutorial_frogger_string_detail_grades: Klasy 6+
+  tutorial_frogger_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tynkereco_string_detail_grades: Klasy 2-8
   tutorial_mitedarc_string_detail_grades: Klasy 6-8
-  tutorial_khan_string_detail_grades: Klasy 6+
-  tutorial_tynkerd_string_detail_grades: Klasy 6+
+  tutorial_khan_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_tynkerd_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_cdmy_string_detail_grades: Klasy 9+
-  tutorial_codestersdance_string_detail_grades: Klasy 6+
-  tutorial_codestersbasketball_string_detail_grades: Klasy 6+
-  tutorial_nclkarel_string_detail_grades: Klasy 6+
+  tutorial_codestersdance_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codestersbasketball_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_nclkarel_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_buildpong_string_detail_grades: Klasy 2+
   tutorial_tynkerdrones_string_detail_grades: Klasy 2+
-  tutorial_carla_string_detail_grades: Klasy 6+
-  tutorial_zulama_string_detail_grades: Klasy 6+
-  tutorial_capost_string_detail_grades: Klasy 6+
+  tutorial_carla_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_zulama_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_capost_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_marco_string_detail_grades: Klasy 2-8
-  tutorial_codestersflappybike_string_detail_grades: Klasy 6+
+  tutorial_codestersflappybike_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_kanopong_string_detail_grades: Klasy 6-8
   tutorial_tynkerright_string_detail_grades: Klasy 2-8
   tutorial_touchdevelop_string_detail_grades: nie wyświetlaj
-  tutorial_tynkercc_string_detail_grades: Klasy 6+
+  tutorial_tynkercc_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_bamboo_string_detail_grades: Klasy 2-5
-  tutorial_robojav_string_detail_grades: Klasy 6+
-  tutorial_roboba_string_detail_grades: Klasy 6+
+  tutorial_robojav_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_roboba_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_knodsnake_string_detail_grades: Klasy 6-8
-  tutorial_soccharater_string_detail_grades: Klasy 6+
-  tutorial_silent_string_detail_grades: Klasy 6+
+  tutorial_soccharater_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_silent_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_robomesh_string_detail_grades: Klasy 2+
   tutorial_amaze_string_detail_grades: Klasy 2+
   tutorial_codestersds_string_detail_grades: Klasy 2+
   tutorial_knodtext_string_detail_grades: Klasy 6-8
-  tutorial_alicegar_string_detail_grades: Klasy 6+
-  tutorial_codesterstransform_string_detail_grades: Klasy 6+
-  tutorial_flexfrog_string_detail_grades: Klasy 6+
+  tutorial_alicegar_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codesterstransform_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_flexfrog_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codemoji_string_detail_grades: nie wyświetlaj
-  tutorial_robobii_string_detail_grades: Klasy 6+
+  tutorial_robobii_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_robobm_string_detail_grades: Klasy 6-8
   tutorial_codingrobots_string_detail_grades: Klasy 2+
-  tutorial_robob_string_detail_grades: Klasy 6+
+  tutorial_robob_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_coders_string_detail_grades: Klasy 9+
   tutorial_tynkerhw_string_detail_grades: Klasy 2-8
   tutorial_tynkermh_string_detail_grades: Klasy 2-8
-  tutorial_caphoto_string_detail_grades: Klasy 6+
+  tutorial_caphoto_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_mozillahw_string_detail_grades: Klasy 6-8
   tutorial_ticklep_string_detail_grades: nie wyświetlaj
   tutorial_bbot_string_detail_grades: Klasy 2+
-  tutorial_scratchg_string_detail_grades: Klasy 6+
+  tutorial_scratchg_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_roboticfriends_string_detail_grades: Wszystkie grupy wiekowe
   tutorial_sjforest_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
@@ -7030,19 +7058,19 @@ pl:
     5
   tutorial_bbcgeo_string_detail_grades: nie wyświetlaj
   tutorial_chspixel_string_detail_grades: Klasy 9+
-  tutorial_hummingbird_string_detail_grades: Klasy 6+
-  tutorial_recoloring_string_detail_grades: Klasy 6+
+  tutorial_hummingbird_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_recoloring_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_bbcchem_string_detail_grades: nie wyświetlaj
   tutorial_floalgo_string_detail_grades: Klasy 2+
   tutorial_flocond_string_detail_grades: Klasy 2+
   tutorial_floloops_string_detail_grades: Klasy 2+
-  tutorial_pgts_string_detail_grades: Klasy 6+
+  tutorial_pgts_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ozo_string_detail_grades: Wszystkie grupy wiekowe
   tutorial_bbcla_string_detail_grades: nie wyświetlaj
   tutorial_bbcsci_string_detail_grades: nie wyświetlaj
   tutorial_tlctour_string_detail_grades: Klasy 2+
   tutorial_codesterstj_string_detail_grades: Klasy 2+
-  tutorial_tlclocked_string_detail_grades: Klasy 6+
+  tutorial_tlclocked_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_baubles_string_detail_grades: Klasy 2-8
   tutorial_bbcart_string_detail_grades: nie wyświetlaj
   tutorial_tlcknight_string_detail_grades: Klasy 2+
@@ -7066,12 +7094,12 @@ pl:
   tutorial_ijournalist_string_detail_grades: Klasy 2-8
   tutorial_bbcmusic_string_detail_grades: nie wyświetlaj
   tutorial_secretcodes_string_detail_grades: Klasy 6-8
-  tutorial_tlchex_string_detail_grades: Klasy 6+
+  tutorial_tlchex_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tickles_string_detail_grades: Klasy 2+
   tutorial_ozogame_string_detail_grades: Wszystkie grupy wiekowe
   tutorial_vidcodeio_string_detail_grades: Klasy 2+
   tutorial_besttech_string_detail_grades: Klasy 9+
-  tutorial_tlcbrain_string_detail_grades: Klasy 6+
+  tutorial_tlcbrain_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_hopquiz_string_detail_grades: Klasy 6-8
   tutorial_unfortunate_string_detail_grades: Klasy 2-5
   tutorial_cha_string_detail_grades: Klasy 6-8
@@ -7082,7 +7110,7 @@ pl:
   tutorial_arduino_string_detail_grades: Klasy 6-8
   tutorial_introrobo_string_detail_grades: Klasy 2-5
   tutorial_tlcinvis_string_detail_grades: Klasy 2+
-  tutorial_tlcjflap_string_detail_grades: Klasy 6+
+  tutorial_tlcjflap_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_procolor_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     8
   tutorial_spiralsfinch_string_detail_grades: Klasy 2+
@@ -7097,40 +7125,40 @@ pl:
     5
   tutorial_tlccc_string_detail_grades: Klasy 2-8
   tutorial_tlcdoodle_string_detail_grades: Klasy 2-8
-  tutorial_tlcpunch_string_detail_grades: Klasy 6+
+  tutorial_tlcpunch_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_finchfract_string_detail_grades: Klasy 9+
-  tutorial_tlcmind_string_detail_grades: Klasy 6+
+  tutorial_tlcmind_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tlctelebot_string_detail_grades: Klasy 2+
-  tutorial_tlcaus_string_detail_grades: Klasy 6+
+  tutorial_tlcaus_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_oralhist_string_detail_grades: Klasy 9+
   tutorial_tlcmicro_string_detail_grades: Klasy 2+
   tutorial_imathematician_string_detail_grades: Klasy 2-8
-  tutorial_tlcmagic_string_detail_grades: Klasy 6+
+  tutorial_tlcmagic_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_scratchmus_string_detail_grades: Klasy 2-8
   tutorial_scratchanim_string_detail_grades: Klasy 2-8
   tutorial_scratchfly_string_detail_grades: Klasy 2-8
   tutorial_tynkerarc_string_detail_grades: Klasy 2+
-  tutorial_grokffpython_string_detail_grades: Klasy 6+
-  tutorial_grokffblock_string_detail_grades: Klasy 6+
-  tutorial_grokeliza_string_detail_grades: Klasy 6+
+  tutorial_grokffpython_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_grokffblock_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_grokeliza_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tynkercan_string_detail_grades: Klasy 2+
-  tutorial_grokflags_string_detail_grades: Klasy 6+
+  tutorial_grokflags_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_robomind_string_detail_grades: Klasy 2-8
   tutorial_scratchanimwork_string_detail_grades: Klasy 2-8
   tutorial_adventureq_string_detail_grades: Klasy 2-5
-  tutorial_khan-es_string_detail_grades: Klasy 6+
-  tutorial_kpt_string_detail_grades: Klasy 6+
-  tutorial_kpl_string_detail_grades: Klasy 6+
-  tutorial_khe_string_detail_grades: Klasy 6+
-  tutorial_kfr_string_detail_grades: Klasy 6+
-  tutorial_app-inventor_string_detail_grades: Klasy 6+
+  tutorial_khan-es_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_kpt_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_kpl_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_khe_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_kfr_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_app-inventor_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_bits_string_detail_grades: Klasy 2-5
-  tutorial_blockly_string_detail_grades: Klasy 6+
+  tutorial_blockly_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tynker_string_detail_grades: nie wyświetlaj
   tutorial_baypt_string_detail_grades: Wszystkie grupy wiekowe
   tutorial_code-combat_string_detail_grades: nie wyświetlaj
   tutorial_mky_string_detail_grades: Klasy 2+
-  tutorial_spellcraft_string_detail_grades: Klasy 6+
+  tutorial_spellcraft_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_pirates_string_detail_grades: Klasy 2-8
   tutorial_csfirst_string_detail_grades: Klasy 2+
   tutorial_loopedy_string_detail_grades: Klasy 2-5
@@ -7142,7 +7170,7 @@ pl:
   tutorial_scratch_string_detail_grades: Klasy 2-5
   tutorial_bayes_string_detail_grades: Wszystkie grupy wiekowe
   tutorial_gumball_string_detail_grades: nie wyświetlaj
-  tutorial_hrm_string_detail_grades: Klasy 6+
+  tutorial_hrm_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ice-age_string_detail_grades: nie wyświetlaj
   tutorial_koapp_string_detail_grades: nie wyświetlaj
   tutorial_lightbot-intl_string_detail_grades: Od dzieci, które uczą się czytać, do
@@ -7159,7 +7187,7 @@ pl:
   tutorial_spherov_string_detail_grades: Klasy 2+
   tutorial_swb_string_detail_grades: nie wyświetlaj
   tutorial_build-a-galaxy_string_detail_grades: nie wyświetlaj
-  tutorial_alicesims_string_detail_grades: Klasy 6+
+  tutorial_alicesims_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tchr_string_detail_grades: nie wyświetlaj
   tutorial_robogame_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
@@ -7184,31 +7212,31 @@ pl:
     5
   tutorial_kodableadv_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
-  tutorial_tynkertj_string_detail_grades: Klasy 6+
-  tutorial_wolframa_string_detail_grades: Klasy 6+
-  tutorial_wolframm_string_detail_grades: Klasy 6+
-  tutorial_wolframspi_string_detail_grades: Klasy 6+
-  tutorial_wolframsph_string_detail_grades: Klasy 6+
-  tutorial_wolframp_string_detail_grades: Klasy 6+
-  tutorial_wolframn_string_detail_grades: Klasy 6+
+  tutorial_tynkertj_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_wolframa_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_wolframm_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_wolframspi_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_wolframsph_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_wolframp_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_wolframn_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_soloweb_string_detail_grades: Klasy 9+
   tutorial_khanweb_string_detail_grades: Klasy 2+
-  tutorial_khandata_string_detail_grades: Klasy 6+
+  tutorial_khandata_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_robomeshiq_string_detail_grades: Klasy 2+
   tutorial_googlelogo_string_detail_grades: Klasy 2+
-  tutorial_playtune_string_detail_grades: Klasy 6+
+  tutorial_playtune_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_computeit_string_detail_grades: Klasy 2+
   tutorial_codesterssj_string_detail_grades: Klasy 2-8
-  tutorial_cmchat_string_detail_grades: Klasy 6+
+  tutorial_cmchat_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tynkerdb_string_detail_grades: Klasy 2-5
-  tutorial_cmbuild_string_detail_grades: Klasy 6+
+  tutorial_cmbuild_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_robotrattle_string_detail_grades: Klasy 2-8
   tutorial_codestersh_string_detail_grades: Klasy 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Klasy 6+
-  tutorial_ccbinary_string_detail_grades: Klasy 6+
-  tutorial_codehsturtle_string_detail_grades: Klasy 6+
-  tutorial_grokhd_string_detail_grades: Klasy 6+
-  tutorial_grokem_string_detail_grades: Klasy 6+
+  tutorial_codehsdigipixel_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_ccbinary_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codehsturtle_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_grokhd_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_grokem_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_kodmaze_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
   tutorial_codestersa_string_detail_grades: Klasy 2-8
@@ -7216,20 +7244,20 @@ pl:
   tutorial_tynkerspace_string_detail_grades: Klasy 2-5
   tutorial_gfbloons_string_detail_grades: Klasy 9+
   tutorial_raspipong_string_detail_grades: Klasy 9+
-  tutorial_codehsvr_string_detail_grades: Klasy 6+
+  tutorial_codehsvr_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codesterstp_string_detail_grades: Klasy 6-8
   tutorial_codestersbb_string_detail_grades: Klasy 6-8
   tutorial_gfcrossyroad_string_detail_grades: Klasy 9+
   tutorial_googleww_string_detail_grades: Klasy 9+
-  tutorial_codehsjsapp_string_detail_grades: Klasy 6+
+  tutorial_codehsjsapp_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_gfmihi_string_detail_grades: Klasy 9+
   tutorial_hopdropphone_string_detail_grades: Klasy 2-8
   tutorial_techfaa_string_detail_grades: Uniwersytet
   tutorial_codehsjsgraph_string_detail_grades: Klasy 9+
-  tutorial_thunkable_string_detail_grades: Klasy 6+
+  tutorial_thunkable_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_hopcrossyroad_string_detail_grades: Klasy 2-8
   tutorial_switchglitch_string_detail_grades: Klasy 2-5
-  tutorial_codecar_string_detail_grades: Klasy 6+
+  tutorial_codecar_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codesterscp_string_detail_grades: Klasy 6-8
   tutorial_grokpetblock_string_detail_grades: Klasy 6-8
   tutorial_techbim_string_detail_grades: Uniwersytet
@@ -7241,8 +7269,8 @@ pl:
   tutorial_myradream_string_detail_grades: Klasy 2-8
   tutorial_thinkfun_string_detail_grades: Klasy 2-8
   tutorial_hopfireworks_string_detail_grades: Klasy 2-8
-  tutorial_grokspace_string_detail_grades: Klasy 6+
-  tutorial_codehspython_string_detail_grades: Klasy 6+
+  tutorial_grokspace_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codehspython_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codehsjava_string_detail_grades: Klasy 9+
   tutorial_techioda_string_detail_grades: Uniwersytet
   tutorial_grokmonster_string_detail_grades: Klasy 2-5
@@ -7250,8 +7278,8 @@ pl:
   tutorial_techga_string_detail_grades: Uniwersytet
   tutorial_techioan_string_detail_grades: Uniwersytet
   tutorial_techiogsr_string_detail_grades: Uniwersytet
-  tutorial_groktunnel_string_detail_grades: Klasy 6+
-  tutorial_stemcod_string_detail_grades: Klasy 6+
+  tutorial_groktunnel_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_stemcod_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_techikb_string_detail_grades: Uniwersytet
   tutorial_kanostreet_string_detail_grades: Klasy 2-5
   tutorial_nyblebot_string_detail_grades: Klasy 2-5
@@ -7259,33 +7287,33 @@ pl:
   tutorial_techapf_string_detail_grades: Uniwersytet
   tutorial_techfpjs_string_detail_grades: Uniwersytet
   tutorial_techlinq_string_detail_grades: Uniwersytet
-  tutorial_gpbcatapult_string_detail_grades: Klasy 6+
-  tutorial_quorumastro_string_detail_grades: Klasy 6+
+  tutorial_gpbcatapult_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_quorumastro_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_alicewonder_string_detail_grades: Klasy 2-5
   tutorial_rginter_string_detail_grades: Klasy 6-8
-  tutorial_cssgrid_string_detail_grades: Klasy 6+
+  tutorial_cssgrid_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_jshero_string_detail_grades: Klasy 9+
   tutorial_codemojipy_string_detail_grades: Klasy 2-5
-  tutorial_nclabdrone_string_detail_grades: Klasy 6+
-  tutorial_gpbcircle_string_detail_grades: Klasy 6+
-  tutorial_gpbpaint_string_detail_grades: Klasy 6+
-  tutorial_cocomarcade_string_detail_grades: Klasy 6+
+  tutorial_nclabdrone_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gpbcircle_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gpbpaint_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_cocomarcade_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_techcpp_string_detail_grades: Uniwersytet
   tutorial_beetik_string_detail_grades: Klasy 6-8
-  tutorial_codedj_string_detail_grades: Klasy 6+
-  tutorial_rgadvan_string_detail_grades: Klasy 6+
+  tutorial_codedj_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_rgadvan_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codehsrn_string_detail_grades: Klasy 9+
-  tutorial_codehswd_string_detail_grades: Klasy 6+
+  tutorial_codehswd_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_turtlerobot_string_detail_grades: Od dzieci, które uczą się czytać, do
     klasy 5
-  tutorial_ozoevo_string_detail_grades: Klasy 6+
-  tutorial_ozoexped_string_detail_grades: Klasy 6+
+  tutorial_ozoevo_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_ozoexped_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ozojourney_string_detail_grades: Klasy 2-8
   tutorial_ozocodes_string_detail_grades: Wszystkie grupy wiekowe
   tutorial_ozoeclipse_string_detail_grades: Klasy 2+
-  tutorial_ozosimulator_string_detail_grades: Klasy 6+
-  tutorial_ozoalgorithm_string_detail_grades: Klasy 6+
-  tutorial_ozotimer_string_detail_grades: Klasy 6+
+  tutorial_ozosimulator_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_ozoalgorithm_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_ozotimer_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ozohabits_string_detail_grades: Wszystkie grupy wiekowe
   tutorial_ozoprogram_string_detail_grades: Klasy 2-8
   tutorial_ozopair_string_detail_grades: Klasy 2+
@@ -7313,9 +7341,9 @@ pl:
   tutorial_lbvariables_string_detail_grades: Klasy 2-8
   tutorial_lbfunctions_string_detail_grades: Klasy 2-8
   tutorial_lblogic_string_detail_grades: Klasy 2+
-  tutorial_lbworld_string_detail_grades: Klasy 6+
+  tutorial_lbworld_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_lbloops_string_detail_grades: Klasy 2-8
-  tutorial_lbtug_string_detail_grades: Klasy 6+
+  tutorial_lbtug_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_lbpotato_string_detail_grades: Klasy 2+
   tutorial_lbguitar_string_detail_grades: Klasy 2+
   tutorial_lbio_string_detail_grades: Klasy 2-8
@@ -7325,14 +7353,14 @@ pl:
   tutorial_wontrip_string_detail_grades: Klasy 2-8
   tutorial_woncollect_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
-  tutorial_wonsecret_string_detail_grades: Klasy 6+
+  tutorial_wonsecret_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_hsscience_string_detail_grades: Klasy 2-8
-  tutorial_popculture_string_detail_grades: Klasy 6+
+  tutorial_popculture_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_legorobust_string_detail_grades: Klasy 2+
   tutorial_legoplants_string_detail_grades: Klasy 2+
-  tutorial_legopark_string_detail_grades: Klasy 6+
-  tutorial_legodetect_string_detail_grades: Klasy 6+
-  tutorial_legolight_string_detail_grades: Klasy 6+
+  tutorial_legopark_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_legodetect_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_legolight_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_alexa_string_detail_grades: Klasy 9+
   tutorial_grokpetmicro_string_detail_grades: Klasy 6-8
   tutorial_pirateplunder_string_detail_grades: Klasy 2-8
@@ -7341,24 +7369,24 @@ pl:
   tutorial_cajump_string_detail_grades: Klasy 2-8
   tutorial_carest_string_detail_grades: Klasy 2-8
   tutorial_accai_string_detail_grades: Klasy 2-8
-  tutorial_vceclipse_string_detail_grades: Klasy 6+
-  tutorial_pmzero_string_detail_grades: Klasy 6+
+  tutorial_vceclipse_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_pmzero_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_hsela_string_detail_grades: Klasy 2-8
   tutorial_ticklear_string_detail_grades: Klasy 2-8
   tutorial_bcrobot_string_detail_grades: Klasy 2-8
-  tutorial_bcsnow_string_detail_grades: Klasy 6+
+  tutorial_bcsnow_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ifly_string_detail_grades: Klasy 2+
   tutorial_idowedo_string_detail_grades: Klasy 2-8
-  tutorial_diggindwarf_string_detail_grades: Klasy 6+
+  tutorial_diggindwarf_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_rmedr_string_detail_grades: Klasy 2-8
   tutorial_spheroit_string_detail_grades: Klasy 2+
   tutorial_gameofcodes_string_detail_grades: Klasy 2+
-  tutorial_blocklygames_string_detail_grades: Klasy 6+
-  tutorial_spherohello_string_detail_grades: Klasy 6+
-  tutorial_spheroarcade_string_detail_grades: Klasy 6+
-  tutorial_bcpy1_string_detail_grades: Klasy 6+
-  tutorial_bcpy2_string_detail_grades: Klasy 6+
-  tutorial_bcjs1_string_detail_grades: Klasy 6+
+  tutorial_blocklygames_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_spherohello_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_spheroarcade_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_bcpy1_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_bcpy2_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_bcjs1_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_bcjs2_string_detail_grades: Klasy 9+
   tutorial_3dbearmars_string_detail_grades: Klasy 2-8
   tutorial_alexaskill_string_detail_grades: Klasy 2-8
@@ -7367,27 +7395,27 @@ pl:
   tutorial_blockscadbirdhouses_string_detail_grades: Klasy 2-5
   tutorial_blockscadclock_string_detail_grades: Klasy 9+
   tutorial_blockscaddinner_string_detail_grades: Klasy 2-5
-  tutorial_blockscadicecream_string_detail_grades: Klasy 6+
+  tutorial_blockscadicecream_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_blockscadpizza_string_detail_grades: Klasy 6-8
   tutorial_blockscadsugar_string_detail_grades: Klasy 6-8
   tutorial_bsgridlight_string_detail_grades: Klasy 2+
-  tutorial_bpartscratch_string_detail_grades: Klasy 6+
-  tutorial_bpartvid_string_detail_grades: Klasy 6+
+  tutorial_bpartscratch_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_bpartvid_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_bpenglishscratch_string_detail_grades: Klasy 2-8
   tutorial_bpenglishvid_string_detail_grades: Klasy 2-8
   tutorial_bphealthscratch_string_detail_grades: Klasy 2+
-  tutorial_bphealthvid_string_detail_grades: Klasy 6+
+  tutorial_bphealthvid_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_bpmathscratch_string_detail_grades: Klasy 2-5
-  tutorial_bpmathvid_string_detail_grades: Klasy 6+
+  tutorial_bpmathvid_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_bpmlkscratch_string_detail_grades: Klasy 2-8
   tutorial_bpmlkvid_string_detail_grades: Klasy 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Klasy 2-5
   tutorial_bpsafetyvid_string_detail_grades: Klasy 6-8
   tutorial_bpsciencescratch_string_detail_grades: Klasy 2-5
   tutorial_bpsciencevid_string_detail_grades: Klasy 6-8
-  tutorial_bptechscratch_string_detail_grades: Klasy 6+
-  tutorial_bptechvid_string_detail_grades: Klasy 6+
-  tutorial_caflags_string_detail_grades: Klasy 6+
+  tutorial_bptechscratch_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_bptechvid_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_caflags_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_matariki_string_detail_grades: Klasy 2-5
   tutorial_carestaurant_string_detail_grades: Klasy 2+
   tutorial_casea_string_detail_grades: Klasy 2-5
@@ -7396,39 +7424,39 @@ pl:
   tutorial_codinggalaxy_string_detail_grades: Od dzieci, które uczą się czytać, do
     klasy 8
   tutorial_boatrace_string_detail_grades: Klasy 2+
-  tutorial_ccplay_string_detail_grades: Klasy 6+
+  tutorial_ccplay_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_grinch_string_detail_grades: Klasy 2-8
   tutorial_codehsart_string_detail_grades: Klasy 9+
   tutorial_codehsbitcoin_string_detail_grades: Klasy 9+
   tutorial_codehsblockchain_string_detail_grades: Klasy 9+
-  tutorial_codehscipher_string_detail_grades: Klasy 6+
+  tutorial_codehscipher_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codehscollision_string_detail_grades: Klasy 9+
-  tutorial_codehsmath_string_detail_grades: Klasy 6+
-  tutorial_codehsmusic_string_detail_grades: Klasy 6+
-  tutorial_codehssports_string_detail_grades: Klasy 6+
+  tutorial_codehsmath_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codehsmusic_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codehssports_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codemojipizza_string_detail_grades: Klasy 2-8
-  tutorial_moonlander_string_detail_grades: Klasy 6+
+  tutorial_moonlander_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_sushicards_string_detail_grades: Klasy 2-8
   tutorial_codesparkcreate_string_detail_grades: Od dzieci, które uczą się czytać,
     do klasy 5
   tutorial_hardvsoft_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
   tutorial_codestersecard_string_detail_grades: Klasy 6-8
-  tutorial_codesterslogo_string_detail_grades: Klasy 6+
-  tutorial_codesterstshirt_string_detail_grades: Klasy 6+
+  tutorial_codesterslogo_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codesterstshirt_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codewards_string_detail_grades: Klasy 2-8
   tutorial_olympics_string_detail_grades: Klasy 2-8
   tutorial_codinismhero_string_detail_grades: Klasy 2+
   tutorial_discovery_string_detail_grades: Klasy 2+
   tutorial_csfirstname_string_detail_grades: Klasy 2+
   tutorial_obstaclecourse_string_detail_grades: Klasy 2+
-  tutorial_edisonmove_string_detail_grades: Klasy 6+
-  tutorial_edisonspider_string_detail_grades: Klasy 6+
+  tutorial_edisonmove_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_edisonspider_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_edisonspotlight_string_detail_grades: Klasy 2-8
-  tutorial_firiapython_string_detail_grades: Klasy 6+
-  tutorial_gamefrootsquid_string_detail_grades: Klasy 6+
-  tutorial_duckpiano_string_detail_grades: Klasy 6+
-  tutorial_gpsound_string_detail_grades: Klasy 6+
+  tutorial_firiapython_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gamefrootsquid_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_duckpiano_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gpsound_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_groklearningpython_string_detail_grades: Klasy 9+
   tutorial_htmltimetravel_string_detail_grades: Klasy 9+
   tutorial_hp_flappy_string_detail_grades: Klasy 9+
@@ -7440,7 +7468,7 @@ pl:
     I
   tutorial_imorse_string_detail_grades: Klasy 2-8
   tutorial_kanohp_string_detail_grades: Klasy 2-8
-  tutorial_khanwebpages_string_detail_grades: Klasy 6+
+  tutorial_khanwebpages_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_kibobowl_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
   tutorial_kibodance_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
@@ -7450,26 +7478,26 @@ pl:
   tutorial_designgames_string_detail_grades: Klasy 2-5
   tutorial_makelevels_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
-  tutorial_wizard_string_detail_grades: Klasy 6+
+  tutorial_wizard_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_mbscratchcards_string_detail_grades: Klasy 2+
   tutorial_mbswiftplaygrounds_string_detail_grades: Klasy 2+
-  tutorial_mbbuttons_string_detail_grades: Klasy 6+
-  tutorial_meteor_string_detail_grades: Klasy 6+
-  tutorial_ballbounce_string_detail_grades: Klasy 6+
-  tutorial_mitcodi_string_detail_grades: Klasy 6+
-  tutorial_mitdoodle_string_detail_grades: Klasy 6+
-  tutorial_talktome_string_detail_grades: Klasy 6+
-  tutorial_mobilecspmap_string_detail_grades: Klasy 6+
+  tutorial_mbbuttons_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_meteor_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_ballbounce_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_mitcodi_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_mitdoodle_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_talktome_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_mobilecspmap_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ozorandom_string_detail_grades: Klasy 2+
   tutorial_ozotroll_string_detail_grades: Klasy 6-8
   tutorial_peblioart_string_detail_grades: Klasy 9+
-  tutorial_astropi_string_detail_grades: Klasy 6+
+  tutorial_astropi_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_rgart_string_detail_grades: Klasy 2-5
   tutorial_rgengineer_string_detail_grades: Klasy 2-5
   tutorial_rgmath_string_detail_grades: Klasy 2-5
   tutorial_rgscience_string_detail_grades: Klasy 2-5
   tutorial_rgtech_string_detail_grades: Klasy 2-5
-  tutorial_robotmagic3d_string_detail_grades: Klasy 6+
+  tutorial_robotmagic3d_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_robotmagicflappy_string_detail_grades: Klasy 9+
   tutorial_scratchadventure_string_detail_grades: Klasy 2+
   tutorial_scratchtalk_string_detail_grades: Klasy 2+
@@ -7477,14 +7505,14 @@ pl:
   tutorial_scratchjrtwinkle_string_detail_grades: Uczniowie, którzy jeszcze nie czytają
   tutorial_spherocomm_string_detail_grades: Klasy 2-8
   tutorial_spherocommunity_string_detail_grades: Klasy 2-5
-  tutorial_spherofunctions_string_detail_grades: Klasy 6+
+  tutorial_spherofunctions_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_spheroinfrared_string_detail_grades: Klasy 6-8
   tutorial_spherolightsensor_string_detail_grades: Klasy 2-8
   tutorial_spheromansion_string_detail_grades: Klasy 2-8
   tutorial_roadblocks_string_detail_grades: Klasy 2-8
-  tutorial_spherotext2_string_detail_grades: Klasy 6+
-  tutorial_spherotext3_string_detail_grades: Klasy 6+
-  tutorial_spherotext4_string_detail_grades: Klasy 6+
+  tutorial_spherotext2_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_spherotext3_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_spherotext4_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_spheroraptor_string_detail_grades: Klasy 2-8
   tutorial_stempiday_string_detail_grades: 'Klasy 9+ '
   tutorial_stemplanetoids_string_detail_grades: Klasy 9+
@@ -7492,110 +7520,113 @@ pl:
   tutorial_algobot_string_detail_grades: Klasy 2-8
   tutorial_thunkableapps_string_detail_grades: Klasy 9+
   tutorial_toxicodedot_string_detail_grades: Klasy 2-8
-  tutorial_gcactions_string_detail_grades: Klasy 6+
-  tutorial_gccomparators_string_detail_grades: Klasy 6+
-  tutorial_gcconditions_string_detail_grades: Klasy 6+
-  tutorial_gccreate_string_detail_grades: Klasy 6+
-  tutorial_gcevents_string_detail_grades: Klasy 6+
-  tutorial_gcloops_string_detail_grades: Klasy 6+
-  tutorial_gcvariables_string_detail_grades: Klasy 6+
+  tutorial_gcactions_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gccomparators_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gcconditions_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gccreate_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gcevents_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gcloops_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_gcvariables_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_beanything_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
   tutorial_change_string_detail_grades: Klasy 2-8
   tutorial_cooking_string_detail_grades: Klasy 2-5
   tutorial_crystal_string_detail_grades: Klasy 2+
-  tutorial_landscape_string_detail_grades: Klasy 6+
+  tutorial_landscape_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_pets_string_detail_grades: Klasy 2-5
   tutorial_petvet_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
-  tutorial_superhero_string_detail_grades: Klasy 6+
-  tutorial_vidcodeplastic_string_detail_grades: Klasy 6+
-  tutorial_vidcodetypeface_string_detail_grades: Klasy 6+
+  tutorial_superhero_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_vidcodeplastic_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_vidcodetypeface_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_washustorm_string_detail_grades: Klasy 2-5
   tutorial_activitypackets_string_detail_grades: Od dzieci, które uczą się czytać,
     do klasy 8
-  tutorial_googlerookie_string_detail_grades: Klasy 6+
+  tutorial_googlerookie_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tommyturtle_string_detail_grades: Od dzieci, które uczą się czytać, do
     klasy 5
   tutorial_mazyad_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
   tutorial_gamemaker_string_detail_grades: Klasy 2+
   tutorial_duckrace_string_detail_grades: Klasy 2+
-  tutorial_allcancodeapps_string_detail_grades: Klasy 6+
+  tutorial_allcancodeapps_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_n2y_string_detail_grades: Uczniowie, którzy uczą się czytać
   tutorial_microsoftarcade_string_detail_grades: Klasy 2+
   tutorial_csfirstunplugged_string_detail_grades: Klasy 2-8
-  tutorial_toxicodepython_string_detail_grades: Klasy 6+
-  tutorial_codecombatozaria_string_detail_grades: Klasy 6+
-  tutorial_vidcodedate_string_detail_grades: Klasy 6+
+  tutorial_toxicodepython_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codecombatozaria_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_vidcodedate_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codemonkeyspace_string_detail_grades: Klasy 2-8
   tutorial_codespeakhappy_string_detail_grades: Klasy 2-8
-  tutorial_grokimage_string_detail_grades: Klasy 6+
+  tutorial_grokimage_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_icomputelearn_string_detail_grades: Od dzieci, które uczą się czytać, do
     klasy 8
   tutorial_rpstress_string_detail_grades: Klasy 2+
   tutorial_bsdcause_string_detail_grades: Klasy 9+
   tutorial_vidcodeanimoji_string_detail_grades: Klasy 2+
-  tutorial_bsdinspire_string_detail_grades: Klasy 6+
-  tutorial_tttractor_string_detail_grades: Klasy 6+
+  tutorial_vidcodeanimojies_string_detail_grades: Klasy 2+
+  tutorial_bsdinspire_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_tttractor_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codeillusionmickey_string_detail_grades: Klasy 2-8
   tutorial_scigirlsquest_string_detail_grades: Klasy 2-8
   tutorial_codespeakbreathe_string_detail_grades: Klasy 2+
-  tutorial_vidcodeface_string_detail_grades: Klasy 6+
-  tutorial_educodemaze_string_detail_grades: Klasy 6+
-  tutorial_educoderace_string_detail_grades: Klasy 6+
+  tutorial_vidcodeface_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_educodemaze_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_educoderace_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codespeakchatbot_string_detail_grades: Klasy 2-8
-  tutorial_gamefrootgames_string_detail_grades: Klasy 6+
+  tutorial_gamefrootgames_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codespeakgrandparent_string_detail_grades: Klasy 2-8
-  tutorial_educodekingdom_string_detail_grades: Klasy 6+
+  tutorial_educodekingdom_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codehsdata_string_detail_grades: Klasy 9+
-  tutorial_educodecake_string_detail_grades: Klasy 6+
-  tutorial_ttsecond_string_detail_grades: Klasy 6+
-  tutorial_bsdtrivia_string_detail_grades: Klasy 6+
+  tutorial_educodecake_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_ttsecond_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_bsdtrivia_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_csfirstdialogue_string_detail_grades: Klasy 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Od dzieci, które uczą się czytać,
     do klasy 5
-  tutorial_codestersdistance_string_detail_grades: Klasy 6+
-  tutorial_itchspace_string_detail_grades: Klasy 6+
+  tutorial_codestersdistance_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_itchspace_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_vidcodemagic_string_detail_grades: Klasy 2+
-  tutorial_codespeakmeal_string_detail_grades: Klasy 6+
+  tutorial_vidcodemagices_string_detail_grades: Klasy 2+
+  tutorial_codespeakmeal_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_itchfish_string_detail_grades: Klasy 2-8
-  tutorial_bsdwebsite_string_detail_grades: Klasy 6+
+  tutorial_bsdwebsite_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codespeaktime_string_detail_grades: Klasy 2-8
-  tutorial_itchwebcam_string_detail_grades: Klasy 6+
+  tutorial_itchwebcam_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_itchball_string_detail_grades: Klasy 2-8
   tutorial_ttrace_string_detail_grades: Klasy 6-8
   tutorial_plethora_string_detail_grades: Klasy 2+
-  tutorial_educodesecret_string_detail_grades: Klasy 6+
-  tutorial_itchshapes_string_detail_grades: Klasy 6+
+  tutorial_educodesecret_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_itchshapes_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codeguppytext_string_detail_grades: Klasy 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_educativechatbot_string_detail_grades: Klasy 9+
-  tutorial_educodebasics_string_detail_grades: Klasy 6+
-  tutorial_codehsdesign_string_detail_grades: Klasy 6+
-  tutorial_htmlacademyphp_string_detail_grades: Klasy 6+
+  tutorial_educodebasics_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codehsdesign_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_htmlacademyphp_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_gamefrootdistance_string_detail_grades: Klasy 2+
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Klasy 6-8
-  tutorial_cuttle_string_detail_grades: Klasy 6+
+  tutorial_cuttle_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_bsdjokes_string_detail_grades: Klasy 6-8
-  tutorial_rptree_string_detail_grades: Klasy 6+
-  tutorial_codestersunity_string_detail_grades: Klasy 6+
-  tutorial_codesterssoccer_string_detail_grades: Klasy 6+
+  tutorial_rptree_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codestersunity_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codesterssoccer_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_breakoutlock_string_detail_grades: Klasy 2-8
-  tutorial_thunkablemask_string_detail_grades: Klasy 6+
+  tutorial_thunkablemask_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_cafarming_string_detail_grades: Klasy 2-8
   tutorial_blocksmithyeti_string_detail_grades: Klasy 9+
-  tutorial_codecapture_string_detail_grades: Klasy 6+
+  tutorial_codecapture_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codehslitter_string_detail_grades: Klasy 6-8
   tutorial_bsdocean_string_detail_grades: Klasy 6-8
-  tutorial_itchplatformer_string_detail_grades: Klasy 6+
-  tutorial_codejika_string_detail_grades: Klasy 2-8
+  tutorial_itchplatformer_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_codejika_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_gamefrootclicker_string_detail_grades: Klasy 6-8
   tutorial_rmagicequity_string_detail_grades: Klasy 6-8
   tutorial_ttfreestyle_string_detail_grades: Klasy 6-8
   tutorial_ozobotcolor2_string_detail_grades: Klasy 2+
   tutorial_ozobotcolor3_string_detail_grades: Klasy 2+
-  tutorial_clcarbon_string_detail_grades: Klasy 6+
+  tutorial_clcarbon_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_kodablebasics_string_detail_grades: Od dzieci, które uczą się czytać, do
     klasy 5
   tutorial_scigirlscc_string_detail_grades: Klasy 2+
@@ -7610,9 +7641,9 @@ pl:
   tutorial_kcjheroines_string_detail_grades: Klasy 2-8
   tutorial_ozobotvalue_string_detail_grades: Klasy 2-5
   tutorial_icodebytes_string_detail_grades: Uczniowie, którzy jeszcze nie czytają
-  tutorial_clfashion2_string_detail_grades: Klasy 6+
-  tutorial_ai4all_string_detail_grades: Klasy 6+
-  tutorial_cldata_string_detail_grades: Klasy 6+
+  tutorial_clfashion2_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_ai4all_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_cldata_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_spheroinputs_string_detail_grades: Klasy 2-8
   tutorial_edisoncount_string_detail_grades: Klasy 2-8
   tutorial_spheroloops_string_detail_grades: Klasy 2-8
@@ -7620,7 +7651,7 @@ pl:
     klasy 5
   tutorial_hellorubycsin60_string_detail_grades: Od dzieci, które uczą się czytać,
     do klasy 5
-  tutorial_clfashion1_string_detail_grades: Klasy 6+
+  tutorial_clfashion1_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_irobottraffic_string_detail_grades: Klasy 2-5
   tutorial_edisonmystery_string_detail_grades: Klasy 6-8
   tutorial_microbitseaturtles_string_detail_grades: Klasy 6-8
@@ -7629,17 +7660,17 @@ pl:
   tutorial_irobotsimulator_string_detail_grades: Klasy 2-8
   tutorial_irobotkind_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     5
-  tutorial_firiavirtual_string_detail_grades: Klasy 6+
+  tutorial_firiavirtual_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_irobotguesscode_string_detail_grades: Klasy 2-8
   tutorial_ozobotnouns_string_detail_grades: Klasy 2-5
-  tutorial_nasa3d_string_detail_grades: Klasy 6+
-  tutorial_blupants_string_detail_grades: Klasy 6+
+  tutorial_nasa3d_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_blupants_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_legodance_string_detail_grades: Klasy 6-8
   tutorial_nearpodcoding_string_detail_grades: Klasy 9+
   tutorial_kcjplastic_string_detail_grades: Klasy 2+
   tutorial_legojourney_string_detail_grades: Klasy 2-8
   tutorial_legohopper_string_detail_grades: Klasy 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Klasy 6+
+  tutorial_catrobatembroidery_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_irobotphone_string_detail_grades: Klasy 2-8
   tutorial_codeguppydraw_string_detail_grades: Klasy 6-8
   tutorial_codejumper_string_detail_grades: Klasy 2-8
@@ -8465,6 +8496,8 @@ pl:
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
+  tutorial_vidcodeanimojies_string_platforms: Wszystkie współczesne przeglądarki,
+    tablet z systemem Android, iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8491,6 +8524,8 @@ pl:
   tutorial_itchspace_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_vidcodemagic_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
+  tutorial_vidcodemagices_string_platforms: Wszystkie współczesne przeglądarki, tablet
+    z systemem Android, iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8505,6 +8540,8 @@ pl:
   tutorial_itchshapes_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_codeguppytext_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
+  tutorial_vidcodeplastiche_string_platforms: Wszystkie współczesne przeglądarki,
+    iPad
   tutorial_educativechatbot_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_educodebasics_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_codehsdesign_string_platforms: Wszystkie nowoczesne przeglądarki, tablet
@@ -9188,6 +9225,7 @@ pl:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -9209,6 +9247,7 @@ pl:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -9220,6 +9259,7 @@ pl:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9901,6 +9941,7 @@ pl:
   tutorial_rpstress_string_detail_programming_languages: Bloki
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9922,6 +9963,7 @@ pl:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Bloki
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Bloki
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9934,6 +9976,7 @@ pl:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Bloki
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -10628,43 +10671,43 @@ pl:
   tutorial_kuborobo_language: Angielski, hiszpański
   tutorial_ai-oceans_language: Polski
   tutorial_scratchimagine_string_detail_grades: Klasy 2+
-  tutorial_codesterspsa_string_detail_grades: Klasy 6+
+  tutorial_codesterspsa_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_googlehero_string_detail_grades: Klasy 2-8
-  tutorial_codestersbball_string_detail_grades: Klasy 6+
+  tutorial_codestersbball_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_scratchcartoon_string_detail_grades: Klasy 2+
   tutorial_codemonkeyjr_string_detail_grades: Uczniowie, którzy jeszcze nie czytają
   tutorial_bananatales_string_detail_grades: Klasy 2-8
   tutorial_scratchtales_string_detail_grades: Klasy 2-8
-  tutorial_msemoji_string_detail_grades: Klasy 6+
-  tutorial_cacolor_string_detail_grades: Klasy 6+
+  tutorial_msemoji_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_cacolor_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_kodablebeach_string_detail_grades: Od dzieci, które uczą się czytać, do
     klasy 5
   tutorial_tynkeren_string_detail_grades: Klasy 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Klasy 6+
+  tutorial_tynkerjavapro_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_grasshopperhack_string_detail_grades: Klasy 9+
   tutorial_pbskids_string_detail_grades: Dzieci, które uczą się czytać, klasa 5
   tutorial_nclabdata_string_detail_grades: Klasy 9+
   tutorial_grasshopperphoto_string_detail_grades: Klasy 9+
-  tutorial_tynkerpyland_string_detail_grades: Klasy 6+
+  tutorial_tynkerpyland_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codeitimages_string_detail_grades: Klasy 2+
   tutorial_hyperpadenemy_string_detail_grades: Klasy 9+
   tutorial_tynkerpro_string_detail_grades: Klasy 2-8
-  tutorial_trashtag_string_detail_grades: Klasy 6+
+  tutorial_trashtag_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_casiege_string_detail_grades: Klasy 2-8
-  tutorial_thunkableyeet_string_detail_grades: Klasy 6+
-  tutorial_vidcodedeal_string_detail_grades: Klasy 6+
+  tutorial_thunkableyeet_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_vidcodedeal_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codehsgeno_string_detail_grades: Klasy 9+
   tutorial_hyperpadpong_string_detail_grades: Klasy 9+
   tutorial_tynkerland_string_detail_grades: Klasy 2-8
-  tutorial_trinketgirl_string_detail_grades: Klasy 6+
+  tutorial_trinketgirl_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_rpimosquito_string_detail_grades: Klasy 6-8
-  tutorial_tynkermars_string_detail_grades: Klasy 6+
-  tutorial_cityx_string_detail_grades: Klasy 6+
-  tutorial_vidcodemap_string_detail_grades: Klasy 6+
+  tutorial_tynkermars_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_cityx_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_vidcodemap_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_robotmagicfarm_string_detail_grades: Klasy 2-8
-  tutorial_codehstriangle_string_detail_grades: Klasy 6+
+  tutorial_codehstriangle_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ttwhitehouse_string_detail_grades: Klasy 2+
-  tutorial_modulo_string_detail_grades: Klasy 6+
+  tutorial_modulo_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codingtown_string_detail_grades: Klasy 2-5
   tutorial_kanoart_string_detail_grades: Klasy 2-5
   tutorial_dragonscript_string_detail_grades: Klasy 9+
@@ -10672,35 +10715,35 @@ pl:
   tutorial_htmlmuffin_string_detail_grades: Klasy 6-8
   tutorial_microsoftpizza_string_detail_grades: Klasy 6-8
   tutorial_stemc_blckhole_string_detail_grades: Klasy 9+
-  tutorial_careconfigure_string_detail_grades: Klasy 6+
+  tutorial_careconfigure_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_rpiscratch_string_detail_grades: Klasy 2-5
   tutorial_ozaria_string_detail_grades: Klasy 2+
-  tutorial_ttovum_string_detail_grades: Klasy 6+
+  tutorial_ttovum_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ttpassage_string_detail_grades: Klasy 2-8
   tutorial_tynkerhtmlen_string_detail_grades: Klasy 2+
   tutorial_ttfrog_string_detail_grades: Klasy 2-8
   tutorial_codemojijava_string_detail_grades: Klasy 6-8
-  tutorial_ccfirewall_string_detail_grades: Klasy 6+
+  tutorial_ccfirewall_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_htmljs_string_detail_grades: Klasy 6-8
   tutorial_ttaqueducts_string_detail_grades: Klasy 6-8
-  tutorial_vtgame_string_detail_grades: Klasy 6+
-  tutorial_baroborav_string_detail_grades: Klasy 6+
+  tutorial_vtgame_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_baroborav_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_baroboobstacle_string_detail_grades: Klasy 2+
-  tutorial_pbstorytelling_string_detail_grades: Klasy 6+
+  tutorial_pbstorytelling_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_kibosnow_string_detail_grades: Dzieci, które uczą się czytać, klasa 5
   tutorial_kibohappy_string_detail_grades: Dzieci, które uczą się czytać, klasa 5
   tutorial_rubylove_string_detail_grades: Dzieci, które uczą się czytać, klasa 8
   tutorial_spherosmiles_string_detail_grades: Klasy 2+
   tutorial_spherobaby_string_detail_grades: Od dzieci, które uczą się czytać, do klasy
     8
-  tutorial_toxarchitect_string_detail_grades: Klasy 6+
+  tutorial_toxarchitect_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_idodge_string_detail_grades: Klasy 2-8
-  tutorial_firiacodebot_string_detail_grades: Klasy 6+
+  tutorial_firiacodebot_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_modlighthouse_string_detail_grades: Uczniowie, którzy uczą się czytać
   tutorial_spherogreen_string_detail_grades: Klasy 2-8
   tutorial_ozopopstar_string_detail_grades: Klasy 2-8
-  tutorial_eddesign_string_detail_grades: Klasy 6+
-  tutorial_edshapeup_string_detail_grades: Klasy 6+
+  tutorial_eddesign_string_detail_grades: Klasy 6+ (od 11 lat)
+  tutorial_edshapeup_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_ozocolor_string_detail_grades: Klasy 2-8
   tutorial_kcjanimals_string_detail_grades: Klasy 2-8
   tutorial_icomputeeggs_string_detail_grades: Klasy 2-8
@@ -10710,21 +10753,21 @@ pl:
   tutorial_peblioportraits_string_detail_grades: Klasy 9+
   tutorial_rootcodebreak_string_detail_grades: Klasy 2-8
   tutorial_microbit14_string_detail_grades: Klasy 2-8
-  tutorial_barobomoon_string_detail_grades: Klasy 6+
+  tutorial_barobomoon_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_eddog_string_detail_grades: Klasy 2-6
   tutorial_microbit15_string_detail_grades: Klasy 2-8
   tutorial_unity_string_detail_grades: Klasy 9+
-  tutorial_blockscadtarget_string_detail_grades: Klasy 6+
+  tutorial_blockscadtarget_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tcadicicles_string_detail_grades: Klasy 6-8
-  tutorial_blockscadscale_string_detail_grades: Klasy 6+
+  tutorial_blockscadscale_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_tcadloops_string_detail_grades: Klasy 6-8
   tutorial_phidgets_string_detail_grades: Klasy 9+
   tutorial_kcjmerry_string_detail_grades: Klasy 2-8
-  tutorial_modvariables_string_detail_grades: Klasy 6+
+  tutorial_modvariables_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_codestersmicro_string_detail_grades: Klasy 6-8
   tutorial_codestersdata_string_detail_grades: Klasy 6-8
   tutorial_ikodexmas_string_detail_grades: Klasy 2-5
-  tutorial_rpisensehat_string_detail_grades: Klasy 6+
+  tutorial_rpisensehat_string_detail_grades: Klasy 6+ (od 11 lat)
   tutorial_modtraits_string_detail_grades: Klasy 2+
   tutorial_mee_string_detail_grades: Klasy 2+
   tutorial_kuborobo_string_detail_grades: Dzieci, które uczą się czytać - Klasy 8

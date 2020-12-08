@@ -1249,9 +1249,9 @@ nl:
       gamelab_whenUpArrow:
         text: wanneer pijl omhoog ingedrukt
       gamelab_whileDownArrow:
-        text: terwijl pijl omlaag ingedrukt
+        text: zolang pijl omlaag ingedrukt
       gamelab_whileKey:
-        text: terwijl {KEY} ingedrukt
+        text: zolang {KEY} ingedrukt
         options:
           KEY:
             '"up"': omhoog
@@ -1264,13 +1264,13 @@ nl:
             '"s"': s
             '"d"': d
       gamelab_whileLeftArrow:
-        text: terwijl linker pijl ingedrukt
+        text: zolang linker pijl ingedrukt
       gamelab_whileRightArrow:
-        text: terwijl pijl naar rechts ingedrukt wordt
+        text: zolang pijl naar rechts ingedrukt is
       gamelab_whileTouching:
-        text: Terwijl {SPRITE1} raakt {SPRITE2}
+        text: zolang {SPRITE1} raakt {SPRITE2}
       gamelab_whileUpArrow:
-        text: terwijl pijl omhoog ingedrukt
+        text: zolang pijl omhoog ingedrukt
       gamelab_xLocationOf:
         text: x coördinaat van {SPRITE}
       gamelab_yLocationOf:
@@ -1412,10 +1412,10 @@ nl:
       Mikelab_groupWhenXTouchesY:
         text: wanneer{COSTUME} {COSTUME2}
       Mikelab_groupWhileClicked:
-        text: tijdens het klikken op {COSTUME}
+        text: zolang geklikt wordt op {COSTUME}
       Mikelab_groupWhileTouchingAny:
         text: |-
-          terwijl{COSTUME} {COSTUME2}
+          zolang {COSTUME} {COSTUME2} raaky
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} is momenteel {BEHAVIOR}"

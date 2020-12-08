@@ -2545,3 +2545,7 @@ lt:
           lesson_groups:
             lg_1:
               display_name: Turinys
+        ml-playground:
+          lessons:
+            intro:
+              name: Įvadas

@@ -43,6 +43,11 @@ es:
     están disponibles en más de 45 idiomas para todas las edades.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: "¡La Hora del Código 2020 está llegando!"
+  hoc2020_ai_header: Explora la Inteligencia Artificial
+  hoc2020_ai_description: IA y el aprendizaje automático están afectando a nuestro
+    mundo entero. Únete para explorar la IA en una nueva serie de videos, entrenar
+    IA para océanos en más de 25 idiomas, discuter sobre ética e IA, y más...
   hoc2019_header: Aprende a programar. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -1007,6 +1012,7 @@ es:
   footer_copyright_message: Copyright %{current_year} Code.org. Todos los derechos
     reservados.
   footer_trademark_message: Hora del código ™ es una marca registrada de Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Socios y asesores
   footer_menu_contact: Contáctenos
   footer_menu_support: Soporte
@@ -1620,17 +1626,18 @@ es:
   tutorial_n2y_name: Bitt Bott explora la Tierra
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
-  tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
+  tutorial_toxicodepython_name: Descubra Python con Silent Teacher
+  tutorial_codecombatozaria_name: 'Ozaria: Comienza tu viaje'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1646,23 +1653,25 @@ es:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
-  tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagic_name: SFX Magia
+  tutorial_vidcodemagices_name: SFX Magia
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
   tutorial_ttrace_name: Race Condition
-  tutorial_plethora_name: 'Plethora: Cause and Effect'
+  tutorial_plethora_name: 'Plethora: Causa y efecto'
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Polución de plásticos PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1672,7 +1681,7 @@ es:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1728,7 +1737,7 @@ es:
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Bordado codificado
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
@@ -5813,15 +5822,16 @@ es:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
-  tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
-    a hero in an epic adventure. You must use the power of coding to defeat a darkness
-    that has taken over the world! Along the way, you'll meet interesting characters
-    and travel to different lands, practicing coding concepts like sequences, loops,
-    debugging, and decomposition. In the end, you'll design a playable game that you
-    can share with your friends!
+  tutorial_toxicodepython_longdescription: Descubra los conceptos básicos de Python
+    sin ninguna palabra ni explicación. Nuestro profesor silencioso te dará una serie
+    de desafíos que te llevarán a adivinar algunas reglas y aprender de tus propios
+    errores.
+  tutorial_codecombatozaria_longdescription: Entra en el mundo de Ozaria, donde te
+    convertirás en héroe en una aventura épica. ¡Debes usar el poder de la programación
+    para derrotar a la oscuridad que se ha apoderado del mundo! En el camino, conocerás
+    a personajes interesantes y practicarás muchos conceptos de programación, como
+    bucles y depuración. Al final, diseñarás un juego completamente funcional que
+    podrás compartir con tus amigos.
   tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
     relevant intersection of math, environmental science, and computer science. In
     this Hour of Code activity, students will be guided through the construction of
@@ -5841,20 +5851,22 @@ es:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
-  tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
-    an emoji to animate through multiple options.
+    from supporters of your favorite cause. #codeisyourvoice'
+  tutorial_vidcodeanimoji_longdescription: Use un bucle (loop) para iterar sobre una
+    matriz (array), haciendo que un emoji se anime a través de múltiples opciones!
+  tutorial_vidcodeanimojies_longdescription: Use un bucle (loop) para iterar sobre
+    una matriz (array), haciendo que un emoji se anime a través de múltiples opciones!
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5900,12 +5912,12 @@ es:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5922,18 +5934,20 @@ es:
     video is a bite-sized tutorial (approximately ten minutes in length) that contains
     its own specific end goals. The final result is a high quality Scratch arcade
     game.
-  tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
-    using a loop.
+  tutorial_vidcodemagic_longdescription: Haga que aparezcan destellos al azar alrededor
+    de la pantalla usando un bucle (loop).
+  tutorial_vidcodemagices_longdescription: Haga que aparezcan destellos al azar alrededor
+    de la pantalla usando un bucle (loop).
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5943,8 +5957,9 @@ es:
   tutorial_ttrace_longdescription: By calling functions and designing classes, players
     program their own race car to be fast, nimble, and powerful; during races, they
     can then hack their competitors' vehicles to scramble their controls.
-  tutorial_plethora_longdescription: 'In this Plethora activity you will solve visual
-    fun challenges and learn the concepts of cause and effect and user interaction. '
+  tutorial_plethora_longdescription: En esta actividad de Plétora resolverás desafíos
+    visuales divertidos y aprenderás los conceptos de causa y efecto y la interacción
+    con el usuario.
   tutorial_educodesecret_longdescription: Explore the worlds of secrets with Agent
     Smith as you dive deeper into learning if statements, strings, for-in loops. Help
     Agent Smith find the culprits and configure the Agency's operating system for
@@ -5953,6 +5968,12 @@ es:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: El problema del plástico que llena nuestros
+    océanos sigue empeorando. Afortunadamente, puedes hacer que tu voz se escuche
+    con código a través del PSA Plastic Pollution. ¡Después de codificar un PSA sobre
+    contaminación plástica usando JavaScript, puedes hacer un segundo video sobre
+    cualquier tema que te interese! Aprende a usar bucles, ondas sinusoidales y emojis
+    personalizados para crear un proyecto único.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5983,11 +6004,11 @@ es:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -6197,8 +6218,8 @@ es:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Codifique su diseño en su teléfono
+    Android y cóstelo en su camiseta, pantalones, bolsa de deporte o zapatos.
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -6883,7 +6904,7 @@ es:
   tutorial_pets_language: Español (España)
   tutorial_petvet_language: Español (España)
   tutorial_superhero_language: Español (España)
-  tutorial_vidcodeplastic_language: Inglés, hebreo
+  tutorial_vidcodeplastic_language: Español (España)
   tutorial_vidcodetypeface_language: Español (España)
   tutorial_washustorm_language: Español (España)
   tutorial_activitypackets_language: Español (España)
@@ -6898,11 +6919,11 @@ es:
   tutorial_n2y_language: Español (España)
   tutorial_microsoftarcade_language: Español (España)
   tutorial_csfirstunplugged_language: Inglés, español (México)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
-  tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
-    Spanish (Spain), Spanish (Mexico)
+  tutorial_toxicodepython_language: Danés, holandés, inglés, inglés (Reino Unido),
+    estonio, francés, alemán, indonesio, italiano, otros, polaco, portugués (Brasil),
+    portugués (Portugal), rumano, español (España), español (México), sueco, turco
+  tutorial_codecombatozaria_language: Inglés, inglés (Reino Unido), Español (España),
+    Español (México), Chino
   tutorial_vidcodedate_language: Español (España)
   tutorial_codemonkeyspace_language: English, English (UK), Hebrew
   tutorial_codespeakhappy_language: Español (España)
@@ -6911,7 +6932,8 @@ es:
   tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
     (Mexico)
   tutorial_bsdcause_language: Español (España)
-  tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimoji_language: Inglés, Español (España), Español (México)
+  tutorial_vidcodeanimojies_language: Inglés, Español (España), Español (México)
   tutorial_bsdinspire_language: Español (España)
   tutorial_tttractor_language: Español (España)
   tutorial_codeillusionmickey_language: Español (España)
@@ -6933,7 +6955,8 @@ es:
     Japanese, Spanish (Spain), Spanish (Mexico)
   tutorial_codestersdistance_language: Español (España)
   tutorial_itchspace_language: Español (España)
-  tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagic_language: Inglés, Español (España), Español (México)
+  tutorial_vidcodemagices_language: Inglés, Español (España), Español (México)
   tutorial_codespeakmeal_language: Español (España)
   tutorial_itchfish_language: Español (España)
   tutorial_bsdwebsite_language: Español (España)
@@ -6941,11 +6964,12 @@ es:
   tutorial_itchwebcam_language: Español (España)
   tutorial_itchball_language: Español (España)
   tutorial_ttrace_language: Español (España)
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Árabe, chino (simplificado), inglés, hebreo, portugués
+    (Brasil), español, francés
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Español (España)
   tutorial_codeguppytext_language: Español (España)
+  tutorial_vidcodeplastiche_language: Inglés, hebreo
   tutorial_educativechatbot_language: Español (España)
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Español (España)
@@ -7011,9 +7035,11 @@ es:
   tutorial_kcjplastic_language: Inglés, francés
   tutorial_legojourney_language: Español (España)
   tutorial_legohopper_language: Español (España)
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Árabe, bengalí, bosnio, chino simplificado,
+    croata, checo, inglés, inglés (Reino Unido), francés, alemán, hindi, indonesio,
+    italiano, japonés, coreano, noruego (Nynorsk), otros, polaco, portugués (Brasil),
+    portugués ( Portugal), ruso, serbio (cirílico), serbio (latín), eslovaco, español
+    (España, México), suajili, sueco, tamil, tailandés, turco, urdu (Pakistán), vietnamita
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Español (España)
@@ -7026,10 +7052,10 @@ es:
   tutorial_star-wars_string_detail_grades: A partir de Grado 2
   tutorial_gumadventure_string_detail_grades: Grados 6-8
   tutorial_mchoc_string_detail_grades: A partir de Grado 2
-  tutorial_vidnews_string_detail_grades: Grados 6+
+  tutorial_vidnews_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_kodable-pre_string_detail_grades: Prelector - Grado 5
   tutorial_highseas_string_detail_grades: Grados 2-8
-  tutorial_capython_string_detail_grades: Grados 6+
+  tutorial_capython_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_frzn_string_detail_grades: A partir de Grado 2
   tutorial_cocom_string_detail_grades: A partir de Grado 2
   tutorial_play-lab_string_detail_grades: A partir de Grado 2
@@ -7039,28 +7065,28 @@ es:
   tutorial_kanopixel_string_detail_grades: A partir de Grado 2
   tutorial_foos_string_detail_grades: Prelector - Grado 5
   tutorial_tynkerdd_string_detail_grades: Grados 2-8
-  tutorial_tynkerana_string_detail_grades: Grados 6+
+  tutorial_tynkerana_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_vidcard_string_detail_grades: A partir de Grado 2
   tutorial_spritebox_string_detail_grades: Grados 2-8
-  tutorial_tynkerch_string_detail_grades: Grados 6+
+  tutorial_tynkerch_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_lightbot_string_detail_grades: Prelector - Grado 5
   tutorial_hoc_string_detail_grades: no mostrar
   tutorial_code_string_detail_grades: A partir de Grado 2
-  tutorial_tinspire_string_detail_grades: Grados 6+
+  tutorial_tinspire_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_itchbounceball_string_detail_grades: Grados 2-8
-  tutorial_vidclim_string_detail_grades: Grados 6+
-  tutorial_matlab_string_detail_grades: Grados 6+
+  tutorial_vidclim_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_matlab_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_flap_string_detail_grades: A partir de Grado 2
-  tutorial_galaxy_string_detail_grades: Grados 6+
+  tutorial_galaxy_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_inf_string_detail_grades: Grados 2-8
   tutorial_tynkersol_string_detail_grades: A partir de Grado 2
-  tutorial_itchg_string_detail_grades: Grados 6+
+  tutorial_itchg_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_como_string_detail_grades: A partir de Grado 2
   tutorial_processfound_string_detail_grades: A partir de Grado 9
-  tutorial_tynkerhomo_string_detail_grades: Grados 6+
+  tutorial_tynkerhomo_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_art_string_detail_grades: A partir de Grado 2
   tutorial_tynkerbrick_string_detail_grades: A partir de Grado 2
-  tutorial_itchbio_string_detail_grades: Grados 6+
+  tutorial_itchbio_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_itchj_string_detail_grades: Grados 6-8
   tutorial_tickleo_string_detail_grades: A partir de Grado 2
   tutorial_hopgeo_string_detail_grades: Grados 2-8
@@ -7071,67 +7097,67 @@ es:
   tutorial_livecode_string_detail_grades: A partir de Grado 9
   tutorial_cocomgame_string_detail_grades: A partir de Grado 2
   tutorial_tynkerspin_string_detail_grades: Prelector - Grado 8
-  tutorial_code-avengers_string_detail_grades: Grados 6+
+  tutorial_code-avengers_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tynkercq_string_detail_grades: Prelector - Grado 5
-  tutorial_cmgame_string_detail_grades: Grados 6+
+  tutorial_cmgame_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codesters_string_detail_grades: no mostrar
-  tutorial_qrm_string_detail_grades: Grados 6+
-  tutorial_texas-instruments_string_detail_grades: Grados 6+
-  tutorial_cajava_string_detail_grades: Grados 6+
+  tutorial_qrm_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_texas-instruments_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_cajava_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codehs_string_detail_grades: A partir de Grado 9
   tutorial_hopemo_string_detail_grades: Grados 2-8
   tutorial_tynkercm_string_detail_grades: A partir de Grado 2
   tutorial_codesterswintergreet_string_detail_grades: A partir de Grado 2
-  tutorial_codestersc_string_detail_grades: Grados 6+
+  tutorial_codestersc_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codestersturtle_string_detail_grades: A partir de Grado 2
-  tutorial_penjee_string_detail_grades: Grados 6+
+  tutorial_penjee_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_trinket_string_detail_grades: A partir de Grado 2
-  tutorial_frogger_string_detail_grades: Grados 6+
+  tutorial_frogger_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tynkereco_string_detail_grades: Grados 2-8
   tutorial_mitedarc_string_detail_grades: Grados 6-8
-  tutorial_khan_string_detail_grades: Grados 6+
-  tutorial_tynkerd_string_detail_grades: Grados 6+
+  tutorial_khan_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_tynkerd_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_cdmy_string_detail_grades: A partir de Grado 9
-  tutorial_codestersdance_string_detail_grades: Grados 6+
-  tutorial_codestersbasketball_string_detail_grades: Grados 6+
-  tutorial_nclkarel_string_detail_grades: Grados 6+
+  tutorial_codestersdance_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codestersbasketball_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_nclkarel_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_buildpong_string_detail_grades: A partir de Grado 2
   tutorial_tynkerdrones_string_detail_grades: A partir de Grado 2
-  tutorial_carla_string_detail_grades: Grados 6+
-  tutorial_zulama_string_detail_grades: Grados 6+
-  tutorial_capost_string_detail_grades: Grados 6+
+  tutorial_carla_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_zulama_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_capost_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_marco_string_detail_grades: Grados 2-8
-  tutorial_codestersflappybike_string_detail_grades: Grados 6+
+  tutorial_codestersflappybike_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_kanopong_string_detail_grades: Grados 6-8
   tutorial_tynkerright_string_detail_grades: Grados 2-8
   tutorial_touchdevelop_string_detail_grades: no mostrar
-  tutorial_tynkercc_string_detail_grades: Grados 6+
+  tutorial_tynkercc_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_bamboo_string_detail_grades: Grados 2-5
-  tutorial_robojav_string_detail_grades: Grados 6+
-  tutorial_roboba_string_detail_grades: Grados 6+
+  tutorial_robojav_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_roboba_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_knodsnake_string_detail_grades: Grados 6-8
-  tutorial_soccharater_string_detail_grades: Grados 6+
-  tutorial_silent_string_detail_grades: Grados 6+
+  tutorial_soccharater_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_silent_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_robomesh_string_detail_grades: A partir de Grado 2
   tutorial_amaze_string_detail_grades: A partir de Grado 2
   tutorial_codestersds_string_detail_grades: A partir de Grado 2
   tutorial_knodtext_string_detail_grades: Grados 6-8
-  tutorial_alicegar_string_detail_grades: Grados 6+
-  tutorial_codesterstransform_string_detail_grades: Grados 6+
-  tutorial_flexfrog_string_detail_grades: Grados 6+
+  tutorial_alicegar_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codesterstransform_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_flexfrog_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codemoji_string_detail_grades: no mostrar
-  tutorial_robobii_string_detail_grades: Grados 6+
+  tutorial_robobii_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_robobm_string_detail_grades: Grados 6-8
   tutorial_codingrobots_string_detail_grades: A partir de Grado 2
-  tutorial_robob_string_detail_grades: Grados 6+
+  tutorial_robob_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_coders_string_detail_grades: A partir de Grado 9
   tutorial_tynkerhw_string_detail_grades: Grados 2-8
   tutorial_tynkermh_string_detail_grades: Grados 2-8
-  tutorial_caphoto_string_detail_grades: Grados 6+
+  tutorial_caphoto_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_mozillahw_string_detail_grades: Grados 6-8
   tutorial_ticklep_string_detail_grades: no mostrar
   tutorial_bbot_string_detail_grades: A partir de Grado 2
-  tutorial_scratchg_string_detail_grades: Grados 6+
+  tutorial_scratchg_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_roboticfriends_string_detail_grades: Todas las edades
   tutorial_sjforest_string_detail_grades: Prelector - Grado 5
   tutorial_sjgreet_string_detail_grades: Prelector - Grado 5
@@ -7139,19 +7165,19 @@ es:
   tutorial_fufafrenz_string_detail_grades: Prelector - Grado 5
   tutorial_bbcgeo_string_detail_grades: no mostrar
   tutorial_chspixel_string_detail_grades: A partir de Grado 9
-  tutorial_hummingbird_string_detail_grades: Grados 6+
-  tutorial_recoloring_string_detail_grades: Grados 6+
+  tutorial_hummingbird_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_recoloring_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_bbcchem_string_detail_grades: no mostrar
   tutorial_floalgo_string_detail_grades: A partir de Grado 2
   tutorial_flocond_string_detail_grades: A partir de Grado 2
   tutorial_floloops_string_detail_grades: A partir de Grado 2
-  tutorial_pgts_string_detail_grades: Grados 6+
+  tutorial_pgts_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ozo_string_detail_grades: Todas las edades
   tutorial_bbcla_string_detail_grades: no mostrar
   tutorial_bbcsci_string_detail_grades: no mostrar
   tutorial_tlctour_string_detail_grades: A partir de Grado 2
   tutorial_codesterstj_string_detail_grades: A partir de Grado 2
-  tutorial_tlclocked_string_detail_grades: Grados 6+
+  tutorial_tlclocked_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_baubles_string_detail_grades: Grados 2-8
   tutorial_bbcart_string_detail_grades: no mostrar
   tutorial_tlcknight_string_detail_grades: A partir de Grado 2
@@ -7173,12 +7199,12 @@ es:
   tutorial_ijournalist_string_detail_grades: Grados 2-8
   tutorial_bbcmusic_string_detail_grades: no mostrar
   tutorial_secretcodes_string_detail_grades: Grados 6-8
-  tutorial_tlchex_string_detail_grades: Grados 6+
+  tutorial_tlchex_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tickles_string_detail_grades: A partir de Grado 2
   tutorial_ozogame_string_detail_grades: Todas las edades
   tutorial_vidcodeio_string_detail_grades: A partir de Grado 2
   tutorial_besttech_string_detail_grades: A partir de Grado 9
-  tutorial_tlcbrain_string_detail_grades: Grados 6+
+  tutorial_tlcbrain_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_hopquiz_string_detail_grades: Grados 6-8
   tutorial_unfortunate_string_detail_grades: Grados 2-5
   tutorial_cha_string_detail_grades: Grados 6-8
@@ -7188,7 +7214,7 @@ es:
   tutorial_arduino_string_detail_grades: Grados 6-8
   tutorial_introrobo_string_detail_grades: Grados 2-5
   tutorial_tlcinvis_string_detail_grades: A partir de Grado 2
-  tutorial_tlcjflap_string_detail_grades: Grados 6+
+  tutorial_tlcjflap_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_procolor_string_detail_grades: Prelector - Grado 8
   tutorial_spiralsfinch_string_detail_grades: A partir de Grado 2
   tutorial_ozoi_string_detail_grades: Todas las edades
@@ -7200,40 +7226,40 @@ es:
   tutorial_mazefinch_string_detail_grades: Prelector - Grado 5
   tutorial_tlccc_string_detail_grades: Grados 2-8
   tutorial_tlcdoodle_string_detail_grades: Grados 2-8
-  tutorial_tlcpunch_string_detail_grades: Grados 6+
+  tutorial_tlcpunch_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_finchfract_string_detail_grades: A partir de Grado 9
-  tutorial_tlcmind_string_detail_grades: Grados 6+
+  tutorial_tlcmind_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tlctelebot_string_detail_grades: A partir de Grado 2
-  tutorial_tlcaus_string_detail_grades: Grados 6+
+  tutorial_tlcaus_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_oralhist_string_detail_grades: A partir de Grado 9
   tutorial_tlcmicro_string_detail_grades: A partir de Grado 2
   tutorial_imathematician_string_detail_grades: Grados 2-8
-  tutorial_tlcmagic_string_detail_grades: Grados 6+
+  tutorial_tlcmagic_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_scratchmus_string_detail_grades: Grados 2-8
   tutorial_scratchanim_string_detail_grades: Grados 2-8
   tutorial_scratchfly_string_detail_grades: Grados 2-8
   tutorial_tynkerarc_string_detail_grades: A partir de Grado 2
-  tutorial_grokffpython_string_detail_grades: Grados 6+
-  tutorial_grokffblock_string_detail_grades: Grados 6+
-  tutorial_grokeliza_string_detail_grades: Grados 6+
+  tutorial_grokffpython_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_grokffblock_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_grokeliza_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tynkercan_string_detail_grades: A partir de Grado 2
-  tutorial_grokflags_string_detail_grades: Grados 6+
+  tutorial_grokflags_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_robomind_string_detail_grades: Grados 2-8
   tutorial_scratchanimwork_string_detail_grades: Grados 2-8
   tutorial_adventureq_string_detail_grades: Grados 2-5
-  tutorial_khan-es_string_detail_grades: Grados 6+
-  tutorial_kpt_string_detail_grades: Grados 6+
-  tutorial_kpl_string_detail_grades: Grados 6+
-  tutorial_khe_string_detail_grades: Grados 6+
-  tutorial_kfr_string_detail_grades: Grados 6+
-  tutorial_app-inventor_string_detail_grades: Grados 6+
+  tutorial_khan-es_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_kpt_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_kpl_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_khe_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_kfr_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_app-inventor_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_bits_string_detail_grades: Grados 2-5
-  tutorial_blockly_string_detail_grades: Grados 6+
+  tutorial_blockly_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tynker_string_detail_grades: no mostrar
   tutorial_baypt_string_detail_grades: Todas las edades
   tutorial_code-combat_string_detail_grades: no mostrar
   tutorial_mky_string_detail_grades: A partir de Grado 2
-  tutorial_spellcraft_string_detail_grades: Grados 6+
+  tutorial_spellcraft_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_pirates_string_detail_grades: Grados 2-8
   tutorial_csfirst_string_detail_grades: A partir de Grado 2
   tutorial_loopedy_string_detail_grades: Grados 2-5
@@ -7245,7 +7271,7 @@ es:
   tutorial_scratch_string_detail_grades: Grados 2-5
   tutorial_bayes_string_detail_grades: Todas las edades
   tutorial_gumball_string_detail_grades: no mostrar
-  tutorial_hrm_string_detail_grades: Grados 6+
+  tutorial_hrm_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ice-age_string_detail_grades: no mostrar
   tutorial_koapp_string_detail_grades: no mostrar
   tutorial_lightbot-intl_string_detail_grades: Prelector - Grado 8
@@ -7261,7 +7287,7 @@ es:
   tutorial_spherov_string_detail_grades: A partir de Grado 2
   tutorial_swb_string_detail_grades: no mostrar
   tutorial_build-a-galaxy_string_detail_grades: no mostrar
-  tutorial_alicesims_string_detail_grades: Grados 6+
+  tutorial_alicesims_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tchr_string_detail_grades: no mostrar
   tutorial_robogame_string_detail_grades: Prelector - Grado 5
   tutorial_tap_string_detail_grades: A partir de Grado 2
@@ -7280,51 +7306,51 @@ es:
   tutorial_solopython_string_detail_grades: A partir de Grado 9
   tutorial_kodableint_string_detail_grades: Prelector - Grado 5
   tutorial_kodableadv_string_detail_grades: Prelector - Grado 5
-  tutorial_tynkertj_string_detail_grades: Grados 6+
-  tutorial_wolframa_string_detail_grades: Grados 6+
-  tutorial_wolframm_string_detail_grades: Grados 6+
-  tutorial_wolframspi_string_detail_grades: Grados 6+
-  tutorial_wolframsph_string_detail_grades: Grados 6+
-  tutorial_wolframp_string_detail_grades: Grados 6+
-  tutorial_wolframn_string_detail_grades: Grados 6+
+  tutorial_tynkertj_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_wolframa_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_wolframm_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_wolframspi_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_wolframsph_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_wolframp_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_wolframn_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_soloweb_string_detail_grades: A partir de Grado 9
   tutorial_khanweb_string_detail_grades: A partir de Grado 2
-  tutorial_khandata_string_detail_grades: Grados 6+
+  tutorial_khandata_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_robomeshiq_string_detail_grades: A partir de Grado 2
   tutorial_googlelogo_string_detail_grades: A partir de Grado 2
-  tutorial_playtune_string_detail_grades: Grados 6+
+  tutorial_playtune_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_computeit_string_detail_grades: A partir de Grado 2
   tutorial_codesterssj_string_detail_grades: Grados 2-8
-  tutorial_cmchat_string_detail_grades: Grados 6+
+  tutorial_cmchat_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tynkerdb_string_detail_grades: Grados 2-5
-  tutorial_cmbuild_string_detail_grades: Grados 6+
+  tutorial_cmbuild_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_robotrattle_string_detail_grades: Grados 2-8
   tutorial_codestersh_string_detail_grades: Grados 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Grados 6+
-  tutorial_ccbinary_string_detail_grades: Grados 6+
-  tutorial_codehsturtle_string_detail_grades: Grados 6+
-  tutorial_grokhd_string_detail_grades: Grados 6+
-  tutorial_grokem_string_detail_grades: Grados 6+
+  tutorial_codehsdigipixel_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_ccbinary_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codehsturtle_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_grokhd_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_grokem_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_kodmaze_string_detail_grades: Prelector - Grado 5
   tutorial_codestersa_string_detail_grades: Grados 2-8
   tutorial_cmdodo_string_detail_grades: Grados 2-5
   tutorial_tynkerspace_string_detail_grades: Grados 2-5
   tutorial_gfbloons_string_detail_grades: A partir de Grado 9
   tutorial_raspipong_string_detail_grades: A partir de Grado 9
-  tutorial_codehsvr_string_detail_grades: Grados 6+
+  tutorial_codehsvr_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codesterstp_string_detail_grades: Grados 6-8
   tutorial_codestersbb_string_detail_grades: Grados 6-8
   tutorial_gfcrossyroad_string_detail_grades: A partir de Grado 9
   tutorial_googleww_string_detail_grades: A partir de Grado 9
-  tutorial_codehsjsapp_string_detail_grades: Grados 6+
+  tutorial_codehsjsapp_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_gfmihi_string_detail_grades: A partir de Grado 9
   tutorial_hopdropphone_string_detail_grades: Grados 2-8
   tutorial_techfaa_string_detail_grades: Universidad
   tutorial_codehsjsgraph_string_detail_grades: A partir de Grado 9
-  tutorial_thunkable_string_detail_grades: Grados 6+
+  tutorial_thunkable_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_hopcrossyroad_string_detail_grades: Grados 2-8
   tutorial_switchglitch_string_detail_grades: Grados 2-5
-  tutorial_codecar_string_detail_grades: Grados 6+
+  tutorial_codecar_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codesterscp_string_detail_grades: Grados 6-8
   tutorial_grokpetblock_string_detail_grades: Grados 6-8
   tutorial_techbim_string_detail_grades: Universidad
@@ -7336,8 +7362,8 @@ es:
   tutorial_myradream_string_detail_grades: Grados 2-8
   tutorial_thinkfun_string_detail_grades: Grados 2-8
   tutorial_hopfireworks_string_detail_grades: Grados 2-8
-  tutorial_grokspace_string_detail_grades: Grados 6+
-  tutorial_codehspython_string_detail_grades: Grados 6+
+  tutorial_grokspace_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codehspython_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codehsjava_string_detail_grades: A partir de Grado 9
   tutorial_techioda_string_detail_grades: Universidad
   tutorial_grokmonster_string_detail_grades: Grados 2-5
@@ -7345,8 +7371,8 @@ es:
   tutorial_techga_string_detail_grades: Universidad
   tutorial_techioan_string_detail_grades: Universidad
   tutorial_techiogsr_string_detail_grades: Universidad
-  tutorial_groktunnel_string_detail_grades: Grados 6+
-  tutorial_stemcod_string_detail_grades: Grados 6+
+  tutorial_groktunnel_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_stemcod_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_techikb_string_detail_grades: Universidad
   tutorial_kanostreet_string_detail_grades: Grados 2-5
   tutorial_nyblebot_string_detail_grades: Grados 2-5
@@ -7354,32 +7380,32 @@ es:
   tutorial_techapf_string_detail_grades: Universidad
   tutorial_techfpjs_string_detail_grades: Universidad
   tutorial_techlinq_string_detail_grades: Universidad
-  tutorial_gpbcatapult_string_detail_grades: Grados 6+
-  tutorial_quorumastro_string_detail_grades: Grados 6+
+  tutorial_gpbcatapult_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_quorumastro_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_alicewonder_string_detail_grades: Grados 2-5
   tutorial_rginter_string_detail_grades: Grados 6-8
-  tutorial_cssgrid_string_detail_grades: Grados 6+
+  tutorial_cssgrid_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_jshero_string_detail_grades: A partir de Grado 9
   tutorial_codemojipy_string_detail_grades: Grados 2-5
-  tutorial_nclabdrone_string_detail_grades: Grados 6+
-  tutorial_gpbcircle_string_detail_grades: Grados 6+
-  tutorial_gpbpaint_string_detail_grades: Grados 6+
-  tutorial_cocomarcade_string_detail_grades: Grados 6+
+  tutorial_nclabdrone_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gpbcircle_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gpbpaint_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_cocomarcade_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_techcpp_string_detail_grades: Universidad
   tutorial_beetik_string_detail_grades: Grados 6-8
-  tutorial_codedj_string_detail_grades: Grados 6+
-  tutorial_rgadvan_string_detail_grades: Grados 6+
+  tutorial_codedj_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_rgadvan_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codehsrn_string_detail_grades: A partir de Grado 9
-  tutorial_codehswd_string_detail_grades: Grados 6+
+  tutorial_codehswd_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_turtlerobot_string_detail_grades: Prelector - Grado 5
-  tutorial_ozoevo_string_detail_grades: Grados 6+
-  tutorial_ozoexped_string_detail_grades: Grados 6+
+  tutorial_ozoevo_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_ozoexped_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ozojourney_string_detail_grades: Grados 2-8
   tutorial_ozocodes_string_detail_grades: Todas las edades
   tutorial_ozoeclipse_string_detail_grades: A partir de Grado 2
-  tutorial_ozosimulator_string_detail_grades: Grados 6+
-  tutorial_ozoalgorithm_string_detail_grades: Grados 6+
-  tutorial_ozotimer_string_detail_grades: Grados 6+
+  tutorial_ozosimulator_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_ozoalgorithm_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_ozotimer_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ozohabits_string_detail_grades: Todas las edades
   tutorial_ozoprogram_string_detail_grades: Grados 2-8
   tutorial_ozopair_string_detail_grades: A partir de Grado 2
@@ -7402,9 +7428,9 @@ es:
   tutorial_lbvariables_string_detail_grades: Grados 2-8
   tutorial_lbfunctions_string_detail_grades: Grados 2-8
   tutorial_lblogic_string_detail_grades: A partir de Grado 2
-  tutorial_lbworld_string_detail_grades: Grados 6+
+  tutorial_lbworld_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_lbloops_string_detail_grades: Grados 2-8
-  tutorial_lbtug_string_detail_grades: Grados 6+
+  tutorial_lbtug_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_lbpotato_string_detail_grades: A partir de Grado 2
   tutorial_lbguitar_string_detail_grades: A partir de Grado 2
   tutorial_lbio_string_detail_grades: Grados 2-8
@@ -7413,14 +7439,14 @@ es:
   tutorial_wonzoo_string_detail_grades: Grados 2-5
   tutorial_wontrip_string_detail_grades: Grados 2-8
   tutorial_woncollect_string_detail_grades: Prelector - Grado 5
-  tutorial_wonsecret_string_detail_grades: Grados 6+
+  tutorial_wonsecret_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_hsscience_string_detail_grades: Grados 2-8
-  tutorial_popculture_string_detail_grades: Grados 6+
+  tutorial_popculture_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_legorobust_string_detail_grades: A partir de Grado 2
   tutorial_legoplants_string_detail_grades: A partir de Grado 2
-  tutorial_legopark_string_detail_grades: Grados 6+
-  tutorial_legodetect_string_detail_grades: Grados 6+
-  tutorial_legolight_string_detail_grades: Grados 6+
+  tutorial_legopark_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_legodetect_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_legolight_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_alexa_string_detail_grades: A partir de Grado 9
   tutorial_grokpetmicro_string_detail_grades: Grados 6-8
   tutorial_pirateplunder_string_detail_grades: Grados 2-8
@@ -7429,24 +7455,24 @@ es:
   tutorial_cajump_string_detail_grades: Grados 2-8
   tutorial_carest_string_detail_grades: Grados 2-8
   tutorial_accai_string_detail_grades: Grados 2-8
-  tutorial_vceclipse_string_detail_grades: Grados 6+
-  tutorial_pmzero_string_detail_grades: Grados 6+
+  tutorial_vceclipse_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_pmzero_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_hsela_string_detail_grades: Grados 2-8
   tutorial_ticklear_string_detail_grades: Grados 2-8
   tutorial_bcrobot_string_detail_grades: Grados 2-8
-  tutorial_bcsnow_string_detail_grades: Grados 6+
+  tutorial_bcsnow_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ifly_string_detail_grades: A partir de Grado 2
   tutorial_idowedo_string_detail_grades: Grados 2-8
-  tutorial_diggindwarf_string_detail_grades: Grados 6+
+  tutorial_diggindwarf_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_rmedr_string_detail_grades: Grados 2-8
   tutorial_spheroit_string_detail_grades: A partir de Grado 2
   tutorial_gameofcodes_string_detail_grades: A partir de Grado 2
-  tutorial_blocklygames_string_detail_grades: Grados 6+
-  tutorial_spherohello_string_detail_grades: Grados 6+
-  tutorial_spheroarcade_string_detail_grades: Grados 6+
-  tutorial_bcpy1_string_detail_grades: Grados 6+
-  tutorial_bcpy2_string_detail_grades: Grados 6+
-  tutorial_bcjs1_string_detail_grades: Grados 6+
+  tutorial_blocklygames_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_spherohello_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_spheroarcade_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_bcpy1_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_bcpy2_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_bcjs1_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_bcjs2_string_detail_grades: A partir de Grado 9
   tutorial_3dbearmars_string_detail_grades: Grados 2-8
   tutorial_alexaskill_string_detail_grades: Grados 2-8
@@ -7455,27 +7481,27 @@ es:
   tutorial_blockscadbirdhouses_string_detail_grades: Grados 2-5
   tutorial_blockscadclock_string_detail_grades: A partir de Grado 9
   tutorial_blockscaddinner_string_detail_grades: Grados 2-5
-  tutorial_blockscadicecream_string_detail_grades: Grados 6+
+  tutorial_blockscadicecream_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_blockscadpizza_string_detail_grades: Grados 6-8
   tutorial_blockscadsugar_string_detail_grades: Grados 6-8
   tutorial_bsgridlight_string_detail_grades: A partir de Grado 2
-  tutorial_bpartscratch_string_detail_grades: Grados 6+
-  tutorial_bpartvid_string_detail_grades: Grados 6+
+  tutorial_bpartscratch_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_bpartvid_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_bpenglishscratch_string_detail_grades: Grados 2-8
   tutorial_bpenglishvid_string_detail_grades: Grados 2-8
   tutorial_bphealthscratch_string_detail_grades: A partir de Grado 2
-  tutorial_bphealthvid_string_detail_grades: Grados 6+
+  tutorial_bphealthvid_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_bpmathscratch_string_detail_grades: Grados 2-5
-  tutorial_bpmathvid_string_detail_grades: Grados 6+
+  tutorial_bpmathvid_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_bpmlkscratch_string_detail_grades: Grados 2-8
   tutorial_bpmlkvid_string_detail_grades: Grados 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grados 2-5
   tutorial_bpsafetyvid_string_detail_grades: Grados 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grados 2-5
   tutorial_bpsciencevid_string_detail_grades: Grados 6-8
-  tutorial_bptechscratch_string_detail_grades: Grados 6+
-  tutorial_bptechvid_string_detail_grades: Grados 6+
-  tutorial_caflags_string_detail_grades: Grados 6+
+  tutorial_bptechscratch_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_bptechvid_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_caflags_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_matariki_string_detail_grades: Grados 2-5
   tutorial_carestaurant_string_detail_grades: A partir de Grado 2
   tutorial_casea_string_detail_grades: Grados 2-5
@@ -7483,37 +7509,37 @@ es:
   tutorial_ccwslimer_string_detail_grades: Grados 2-8
   tutorial_codinggalaxy_string_detail_grades: Prelector - Grado 8
   tutorial_boatrace_string_detail_grades: A partir de Grado 2
-  tutorial_ccplay_string_detail_grades: Grados 6+
+  tutorial_ccplay_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_grinch_string_detail_grades: Grados 2-8
   tutorial_codehsart_string_detail_grades: A partir de Grado 9
   tutorial_codehsbitcoin_string_detail_grades: A partir de Grado 9
   tutorial_codehsblockchain_string_detail_grades: A partir de Grado 9
-  tutorial_codehscipher_string_detail_grades: Grados 6+
+  tutorial_codehscipher_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codehscollision_string_detail_grades: A partir de Grado 9
-  tutorial_codehsmath_string_detail_grades: Grados 6+
-  tutorial_codehsmusic_string_detail_grades: Grados 6+
-  tutorial_codehssports_string_detail_grades: Grados 6+
+  tutorial_codehsmath_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codehsmusic_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codehssports_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codemojipizza_string_detail_grades: Grados 2-8
-  tutorial_moonlander_string_detail_grades: Grados 6+
+  tutorial_moonlander_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_sushicards_string_detail_grades: Grados 2-8
   tutorial_codesparkcreate_string_detail_grades: Prelector - Grado 5
   tutorial_hardvsoft_string_detail_grades: Prelector - Grado 5
   tutorial_codestersecard_string_detail_grades: Grados 6-8
-  tutorial_codesterslogo_string_detail_grades: Grados 6+
-  tutorial_codesterstshirt_string_detail_grades: Grados 6+
+  tutorial_codesterslogo_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codesterstshirt_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codewards_string_detail_grades: Grados 2-8
   tutorial_olympics_string_detail_grades: Grados 2-8
   tutorial_codinismhero_string_detail_grades: A partir de Grado 2
   tutorial_discovery_string_detail_grades: A partir de Grado 2
   tutorial_csfirstname_string_detail_grades: A partir de Grado 2
   tutorial_obstaclecourse_string_detail_grades: A partir de Grado 2
-  tutorial_edisonmove_string_detail_grades: Grados 6+
-  tutorial_edisonspider_string_detail_grades: Grados 6+
+  tutorial_edisonmove_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_edisonspider_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_edisonspotlight_string_detail_grades: Grados 2-8
-  tutorial_firiapython_string_detail_grades: Grados 6+
-  tutorial_gamefrootsquid_string_detail_grades: Grados 6+
-  tutorial_duckpiano_string_detail_grades: Grados 6+
-  tutorial_gpsound_string_detail_grades: Grados 6+
+  tutorial_firiapython_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gamefrootsquid_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_duckpiano_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gpsound_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_groklearningpython_string_detail_grades: A partir de Grado 9
   tutorial_htmltimetravel_string_detail_grades: A partir de Grado 9
   tutorial_hp_flappy_string_detail_grades: A partir de Grado 9
@@ -7523,32 +7549,32 @@ es:
   tutorial_imake_string_detail_grades: Prelector - Grado 1
   tutorial_imorse_string_detail_grades: Grados 2-8
   tutorial_kanohp_string_detail_grades: Grados 2-8
-  tutorial_khanwebpages_string_detail_grades: Grados 6+
+  tutorial_khanwebpages_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_kibobowl_string_detail_grades: Prelector - Grado 5
   tutorial_kibodance_string_detail_grades: Prelector - Grado 5
   tutorial_buildcharacters_string_detail_grades: Prelector - Grado 5
   tutorial_designgames_string_detail_grades: Grados 2-5
   tutorial_makelevels_string_detail_grades: Prelector - Grado 5
-  tutorial_wizard_string_detail_grades: Grados 6+
+  tutorial_wizard_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_mbscratchcards_string_detail_grades: A partir de Grado 2
   tutorial_mbswiftplaygrounds_string_detail_grades: A partir de Grado 2
-  tutorial_mbbuttons_string_detail_grades: Grados 6+
-  tutorial_meteor_string_detail_grades: Grados 6+
-  tutorial_ballbounce_string_detail_grades: Grados 6+
-  tutorial_mitcodi_string_detail_grades: Grados 6+
-  tutorial_mitdoodle_string_detail_grades: Grados 6+
-  tutorial_talktome_string_detail_grades: Grados 6+
-  tutorial_mobilecspmap_string_detail_grades: Grados 6+
+  tutorial_mbbuttons_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_meteor_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_ballbounce_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_mitcodi_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_mitdoodle_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_talktome_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_mobilecspmap_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ozorandom_string_detail_grades: A partir de Grado 2
   tutorial_ozotroll_string_detail_grades: Grados 6-8
   tutorial_peblioart_string_detail_grades: A partir de Grado 9
-  tutorial_astropi_string_detail_grades: Grados 6+
+  tutorial_astropi_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_rgart_string_detail_grades: Grados 2-5
   tutorial_rgengineer_string_detail_grades: Grados 2-5
   tutorial_rgmath_string_detail_grades: Grados 2-5
   tutorial_rgscience_string_detail_grades: Grados 2-5
   tutorial_rgtech_string_detail_grades: Grados 2-5
-  tutorial_robotmagic3d_string_detail_grades: Grados 6+
+  tutorial_robotmagic3d_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_robotmagicflappy_string_detail_grades: A partir de Grado 9
   tutorial_scratchadventure_string_detail_grades: A partir de Grado 2
   tutorial_scratchtalk_string_detail_grades: A partir de Grado 2
@@ -7556,14 +7582,14 @@ es:
   tutorial_scratchjrtwinkle_string_detail_grades: Prelector
   tutorial_spherocomm_string_detail_grades: Grados 2-8
   tutorial_spherocommunity_string_detail_grades: Grados 2-5
-  tutorial_spherofunctions_string_detail_grades: Grados 6+
+  tutorial_spherofunctions_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_spheroinfrared_string_detail_grades: Grados 6-8
   tutorial_spherolightsensor_string_detail_grades: Grados 2-8
   tutorial_spheromansion_string_detail_grades: Grados 2-8
   tutorial_roadblocks_string_detail_grades: Grados 2-8
-  tutorial_spherotext2_string_detail_grades: Grados 6+
-  tutorial_spherotext3_string_detail_grades: Grados 6+
-  tutorial_spherotext4_string_detail_grades: Grados 6+
+  tutorial_spherotext2_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_spherotext3_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_spherotext4_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_spheroraptor_string_detail_grades: Grados 2-8
   tutorial_stempiday_string_detail_grades: Grados 9+
   tutorial_stemplanetoids_string_detail_grades: A partir de Grado 9
@@ -7571,103 +7597,106 @@ es:
   tutorial_algobot_string_detail_grades: Grados 2-8
   tutorial_thunkableapps_string_detail_grades: A partir de Grado 9
   tutorial_toxicodedot_string_detail_grades: Grados 2-8
-  tutorial_gcactions_string_detail_grades: Grados 6+
-  tutorial_gccomparators_string_detail_grades: Grados 6+
-  tutorial_gcconditions_string_detail_grades: Grados 6+
-  tutorial_gccreate_string_detail_grades: Grados 6+
-  tutorial_gcevents_string_detail_grades: Grados 6+
-  tutorial_gcloops_string_detail_grades: Grados 6+
-  tutorial_gcvariables_string_detail_grades: Grados 6+
+  tutorial_gcactions_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gccomparators_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gcconditions_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gccreate_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gcevents_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gcloops_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_gcvariables_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_beanything_string_detail_grades: Prelector - Grado 5
   tutorial_change_string_detail_grades: Grados 2-8
   tutorial_cooking_string_detail_grades: Grados 2-5
   tutorial_crystal_string_detail_grades: A partir de Grado 2
-  tutorial_landscape_string_detail_grades: Grados 6+
+  tutorial_landscape_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_pets_string_detail_grades: Grados 2-5
   tutorial_petvet_string_detail_grades: Prelector - Grado 5
-  tutorial_superhero_string_detail_grades: Grados 6+
-  tutorial_vidcodeplastic_string_detail_grades: Grados 6+
-  tutorial_vidcodetypeface_string_detail_grades: Grados 6+
+  tutorial_superhero_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_vidcodeplastic_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_vidcodetypeface_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_washustorm_string_detail_grades: Grados 2-5
   tutorial_activitypackets_string_detail_grades: Prelector - Grado 8
-  tutorial_googlerookie_string_detail_grades: Grados 6+
+  tutorial_googlerookie_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tommyturtle_string_detail_grades: Prelector - Grado 5
   tutorial_mazyad_string_detail_grades: Prelector - Grado 5
   tutorial_gamemaker_string_detail_grades: A partir de Grado 2
   tutorial_duckrace_string_detail_grades: A partir de Grado 2
-  tutorial_allcancodeapps_string_detail_grades: Grados 6+
+  tutorial_allcancodeapps_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_n2y_string_detail_grades: Prelector+
   tutorial_microsoftarcade_string_detail_grades: A partir de Grado 2
   tutorial_csfirstunplugged_string_detail_grades: Grados 2-8
-  tutorial_toxicodepython_string_detail_grades: Grados 6+
-  tutorial_codecombatozaria_string_detail_grades: Grados 6+
-  tutorial_vidcodedate_string_detail_grades: Grados 6+
+  tutorial_toxicodepython_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codecombatozaria_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_vidcodedate_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codemonkeyspace_string_detail_grades: Grados 2-8
   tutorial_codespeakhappy_string_detail_grades: Grados 2-8
-  tutorial_grokimage_string_detail_grades: Grados 6+
+  tutorial_grokimage_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_icomputelearn_string_detail_grades: Prelector - Grado 8
   tutorial_rpstress_string_detail_grades: A partir de Grado 2
   tutorial_bsdcause_string_detail_grades: A partir de Grado 9
   tutorial_vidcodeanimoji_string_detail_grades: A partir de Grado 2
-  tutorial_bsdinspire_string_detail_grades: Grados 6+
-  tutorial_tttractor_string_detail_grades: Grados 6+
+  tutorial_vidcodeanimojies_string_detail_grades: A partir de Grado 2
+  tutorial_bsdinspire_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_tttractor_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codeillusionmickey_string_detail_grades: Grados 2-8
   tutorial_scigirlsquest_string_detail_grades: Grados 2-8
   tutorial_codespeakbreathe_string_detail_grades: A partir de Grado 2
-  tutorial_vidcodeface_string_detail_grades: Grados 6+
-  tutorial_educodemaze_string_detail_grades: Grados 6+
-  tutorial_educoderace_string_detail_grades: Grados 6+
+  tutorial_vidcodeface_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_educodemaze_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_educoderace_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codespeakchatbot_string_detail_grades: Grados 2-8
-  tutorial_gamefrootgames_string_detail_grades: Grados 6+
+  tutorial_gamefrootgames_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codespeakgrandparent_string_detail_grades: Grados 2-8
-  tutorial_educodekingdom_string_detail_grades: Grados 6+
+  tutorial_educodekingdom_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codehsdata_string_detail_grades: A partir de Grado 9
-  tutorial_educodecake_string_detail_grades: Grados 6+
-  tutorial_ttsecond_string_detail_grades: Grados 6+
-  tutorial_bsdtrivia_string_detail_grades: Grados 6+
+  tutorial_educodecake_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_ttsecond_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_bsdtrivia_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_csfirstdialogue_string_detail_grades: Grados 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Prelector - Grado 5
-  tutorial_codestersdistance_string_detail_grades: Grados 6+
-  tutorial_itchspace_string_detail_grades: Grados 6+
+  tutorial_codestersdistance_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_itchspace_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_vidcodemagic_string_detail_grades: A partir de Grado 2
-  tutorial_codespeakmeal_string_detail_grades: Grados 6+
+  tutorial_vidcodemagices_string_detail_grades: A partir de Grado 2
+  tutorial_codespeakmeal_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_itchfish_string_detail_grades: Grados 2-8
-  tutorial_bsdwebsite_string_detail_grades: Grados 6+
+  tutorial_bsdwebsite_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codespeaktime_string_detail_grades: Grados 2-8
-  tutorial_itchwebcam_string_detail_grades: Grados 6+
+  tutorial_itchwebcam_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_itchball_string_detail_grades: Grados 2-8
   tutorial_ttrace_string_detail_grades: Grados 6-8
   tutorial_plethora_string_detail_grades: A partir de Grado 2
-  tutorial_educodesecret_string_detail_grades: Grados 6+
-  tutorial_itchshapes_string_detail_grades: Grados 6+
+  tutorial_educodesecret_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_itchshapes_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codeguppytext_string_detail_grades: Grados 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_educativechatbot_string_detail_grades: A partir de Grado 9
-  tutorial_educodebasics_string_detail_grades: Grados 6+
-  tutorial_codehsdesign_string_detail_grades: Grados 6+
-  tutorial_htmlacademyphp_string_detail_grades: Grados 6+
+  tutorial_educodebasics_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codehsdesign_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_htmlacademyphp_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_gamefrootdistance_string_detail_grades: A partir de Grado 2
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Grados 6-8
-  tutorial_cuttle_string_detail_grades: Grados 6+
+  tutorial_cuttle_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_bsdjokes_string_detail_grades: Grados 6-8
-  tutorial_rptree_string_detail_grades: Grados 6+
-  tutorial_codestersunity_string_detail_grades: Grados 6+
-  tutorial_codesterssoccer_string_detail_grades: Grados 6+
+  tutorial_rptree_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codestersunity_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codesterssoccer_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_breakoutlock_string_detail_grades: Grados 2-8
-  tutorial_thunkablemask_string_detail_grades: Grados 6+
+  tutorial_thunkablemask_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_cafarming_string_detail_grades: Grados 2-8
   tutorial_blocksmithyeti_string_detail_grades: A partir de Grado 9
-  tutorial_codecapture_string_detail_grades: Grados 6+
+  tutorial_codecapture_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codehslitter_string_detail_grades: Grados 6-8
   tutorial_bsdocean_string_detail_grades: Grados 6-8
-  tutorial_itchplatformer_string_detail_grades: Grados 6+
-  tutorial_codejika_string_detail_grades: Grados 2-8
+  tutorial_itchplatformer_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_codejika_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_gamefrootclicker_string_detail_grades: Grados 6-8
   tutorial_rmagicequity_string_detail_grades: Grados 6-8
   tutorial_ttfreestyle_string_detail_grades: Grados 6-8
   tutorial_ozobotcolor2_string_detail_grades: A partir de Grado 2
   tutorial_ozobotcolor3_string_detail_grades: A partir de Grado 2
-  tutorial_clcarbon_string_detail_grades: Grados 6+
+  tutorial_clcarbon_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_kodablebasics_string_detail_grades: Prelector - Grado 5
   tutorial_scigirlscc_string_detail_grades: A partir de Grado 2
   tutorial_irobotpicture_string_detail_grades: Grados 2-8
@@ -7679,15 +7708,15 @@ es:
   tutorial_kcjheroines_string_detail_grades: Grados 2-8
   tutorial_ozobotvalue_string_detail_grades: Grados 2-5
   tutorial_icodebytes_string_detail_grades: Prelector
-  tutorial_clfashion2_string_detail_grades: Grados 6+
-  tutorial_ai4all_string_detail_grades: Grados 6+
-  tutorial_cldata_string_detail_grades: Grados 6+
+  tutorial_clfashion2_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_ai4all_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_cldata_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_spheroinputs_string_detail_grades: Grados 2-8
   tutorial_edisoncount_string_detail_grades: Grados 2-8
   tutorial_spheroloops_string_detail_grades: Grados 2-8
   tutorial_kiboprogram_string_detail_grades: Prelector - Grado 5
   tutorial_hellorubycsin60_string_detail_grades: Prelector - Grado 5
-  tutorial_clfashion1_string_detail_grades: Grados 6+
+  tutorial_clfashion1_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_irobottraffic_string_detail_grades: Grados 2-5
   tutorial_edisonmystery_string_detail_grades: Grados 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grados 6-8
@@ -7695,17 +7724,17 @@ es:
   tutorial_imagilabs_string_detail_grades: Grados 2-8
   tutorial_irobotsimulator_string_detail_grades: Grados 2-8
   tutorial_irobotkind_string_detail_grades: Prelector - Grado 5
-  tutorial_firiavirtual_string_detail_grades: Grados 6+
+  tutorial_firiavirtual_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_irobotguesscode_string_detail_grades: Grados 2-8
   tutorial_ozobotnouns_string_detail_grades: Grados 2-5
-  tutorial_nasa3d_string_detail_grades: Grados 6+
-  tutorial_blupants_string_detail_grades: Grados 6+
+  tutorial_nasa3d_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_blupants_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_legodance_string_detail_grades: Grados 6-8
   tutorial_nearpodcoding_string_detail_grades: A partir de Grado 9
   tutorial_kcjplastic_string_detail_grades: A partir de Grado 2
   tutorial_legojourney_string_detail_grades: Grados 2-8
   tutorial_legohopper_string_detail_grades: Grados 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Grados 6+
+  tutorial_catrobatembroidery_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_irobotphone_string_detail_grades: Grados 2-8
   tutorial_codeguppydraw_string_detail_grades: Grados 6-8
   tutorial_codejumper_string_detail_grades: Grados 2-8
@@ -8508,6 +8537,8 @@ es:
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
+  tutorial_vidcodeanimojies_string_platforms: Todos los navegadores modernos, tablets
+    Android, iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8534,6 +8565,8 @@ es:
   tutorial_itchspace_string_platforms: Todos los navegadores modernos
   tutorial_vidcodemagic_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
+  tutorial_vidcodemagices_string_platforms: Todos los navegadores modernos, tablets
+    Android, iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Todos los navegadores modernos
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8548,6 +8581,7 @@ es:
   tutorial_itchshapes_string_platforms: Todos los navegadores modernos
   tutorial_codeguppytext_string_platforms: Todos los navegadores modernos, tablets
     Android, iPad
+  tutorial_vidcodeplastiche_string_platforms: Todos los navegadores modernos, iPad
   tutorial_educativechatbot_string_platforms: Todos los navegadores modernos
   tutorial_educodebasics_string_platforms: Todos los navegadores modernos
   tutorial_codehsdesign_string_platforms: Todos los navegadores modernos, tablets
@@ -8624,7 +8658,7 @@ es:
   tutorial_kcjplastic_string_platforms: Todos los navegadores modernos
   tutorial_legojourney_string_platforms: Todos los navegadores modernos
   tutorial_legohopper_string_platforms: Todos los navegadores modernos
-  tutorial_catrobatembroidery_string_platforms: Android phone, Screen reader
+  tutorial_catrobatembroidery_string_platforms: Androide
   tutorial_irobotphone_string_platforms: Todos los navegadores modernos
   tutorial_codeguppydraw_string_platforms: Todos los navegadores modernos
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
@@ -9225,6 +9259,7 @@ es:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -9246,6 +9281,7 @@ es:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -9257,6 +9293,7 @@ es:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9963,6 +10000,7 @@ es:
   tutorial_rpstress_string_detail_programming_languages: Bloques
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9984,6 +10022,7 @@ es:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Bloques
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Bloques
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9996,6 +10035,7 @@ es:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Bloques
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -10695,42 +10735,42 @@ es:
   tutorial_kuborobo_language: Spanish (Spain)
   tutorial_ai-oceans_language: Español (España)
   tutorial_scratchimagine_string_detail_grades: A partir de Grado 2
-  tutorial_codesterspsa_string_detail_grades: Grados 6+
+  tutorial_codesterspsa_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_googlehero_string_detail_grades: Grados 2-8
-  tutorial_codestersbball_string_detail_grades: Grados 6+
+  tutorial_codestersbball_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_scratchcartoon_string_detail_grades: A partir de Grado 2
   tutorial_codemonkeyjr_string_detail_grades: Prelector
   tutorial_bananatales_string_detail_grades: Grados 2-8
   tutorial_scratchtales_string_detail_grades: Grados 2-8
-  tutorial_msemoji_string_detail_grades: Grados 6+
-  tutorial_cacolor_string_detail_grades: Grados 6+
+  tutorial_msemoji_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_cacolor_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_kodablebeach_string_detail_grades: Prelector - Grado 5
   tutorial_tynkeren_string_detail_grades: Grados 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Grados 6+
+  tutorial_tynkerjavapro_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_grasshopperhack_string_detail_grades: A partir de Grado 9
   tutorial_pbskids_string_detail_grades: Prelector - Grado 5
   tutorial_nclabdata_string_detail_grades: A partir de Grado 9
   tutorial_grasshopperphoto_string_detail_grades: A partir de Grado 9
-  tutorial_tynkerpyland_string_detail_grades: Grados 6+
+  tutorial_tynkerpyland_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codeitimages_string_detail_grades: A partir de Grado 2
   tutorial_hyperpadenemy_string_detail_grades: A partir de Grado 9
   tutorial_tynkerpro_string_detail_grades: Grados 2-8
-  tutorial_trashtag_string_detail_grades: Grados 6+
+  tutorial_trashtag_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_casiege_string_detail_grades: Grados 2-8
-  tutorial_thunkableyeet_string_detail_grades: Grados 6+
-  tutorial_vidcodedeal_string_detail_grades: Grados 6+
+  tutorial_thunkableyeet_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_vidcodedeal_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codehsgeno_string_detail_grades: A partir de Grado 9
   tutorial_hyperpadpong_string_detail_grades: A partir de Grado 9
   tutorial_tynkerland_string_detail_grades: Grados 2-8
-  tutorial_trinketgirl_string_detail_grades: Grados 6+
+  tutorial_trinketgirl_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_rpimosquito_string_detail_grades: Grados 6-8
-  tutorial_tynkermars_string_detail_grades: Grados 6+
-  tutorial_cityx_string_detail_grades: Grados 6+
-  tutorial_vidcodemap_string_detail_grades: Grados 6+
+  tutorial_tynkermars_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_cityx_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_vidcodemap_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_robotmagicfarm_string_detail_grades: Grados 2-8
-  tutorial_codehstriangle_string_detail_grades: Grados 6+
+  tutorial_codehstriangle_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ttwhitehouse_string_detail_grades: A partir de Grado 2
-  tutorial_modulo_string_detail_grades: Grados 6+
+  tutorial_modulo_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codingtown_string_detail_grades: Grados 2-5
   tutorial_kanoart_string_detail_grades: Grados 2-5
   tutorial_dragonscript_string_detail_grades: A partir de Grado 9
@@ -10738,34 +10778,34 @@ es:
   tutorial_htmlmuffin_string_detail_grades: Grados 6-8
   tutorial_microsoftpizza_string_detail_grades: Grados 6-8
   tutorial_stemc_blckhole_string_detail_grades: A partir de Grado 9
-  tutorial_careconfigure_string_detail_grades: Grados 6+
+  tutorial_careconfigure_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_rpiscratch_string_detail_grades: Grados 2-5
   tutorial_ozaria_string_detail_grades: A partir de Grado 2
-  tutorial_ttovum_string_detail_grades: Grados 6+
+  tutorial_ttovum_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ttpassage_string_detail_grades: Grados 2-8
   tutorial_tynkerhtmlen_string_detail_grades: A partir de Grado 2
   tutorial_ttfrog_string_detail_grades: Grados 2-8
   tutorial_codemojijava_string_detail_grades: Grados 6-8
-  tutorial_ccfirewall_string_detail_grades: Grados 6+
+  tutorial_ccfirewall_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_htmljs_string_detail_grades: Grados 6-8
   tutorial_ttaqueducts_string_detail_grades: Grados 6-8
-  tutorial_vtgame_string_detail_grades: Grados 6+
-  tutorial_baroborav_string_detail_grades: Grados 6+
+  tutorial_vtgame_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_baroborav_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_baroboobstacle_string_detail_grades: A partir de Grado 2
-  tutorial_pbstorytelling_string_detail_grades: Grados 6+
+  tutorial_pbstorytelling_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_kibosnow_string_detail_grades: Prelector - Grado 5
   tutorial_kibohappy_string_detail_grades: Prelector - Grado 5
   tutorial_rubylove_string_detail_grades: Prelector - Grado 8
   tutorial_spherosmiles_string_detail_grades: A partir de Grado 2
   tutorial_spherobaby_string_detail_grades: Prelector - Grado 8
-  tutorial_toxarchitect_string_detail_grades: Grados 6+
+  tutorial_toxarchitect_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_idodge_string_detail_grades: Grados 2-8
-  tutorial_firiacodebot_string_detail_grades: Grados 6+
+  tutorial_firiacodebot_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_modlighthouse_string_detail_grades: Prelector+
   tutorial_spherogreen_string_detail_grades: Grados 2-8
   tutorial_ozopopstar_string_detail_grades: Grados 2-8
-  tutorial_eddesign_string_detail_grades: Grados 6+
-  tutorial_edshapeup_string_detail_grades: Grados 6+
+  tutorial_eddesign_string_detail_grades: Grados 6+ (11 en adelante)
+  tutorial_edshapeup_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_ozocolor_string_detail_grades: Grados 2-8
   tutorial_kcjanimals_string_detail_grades: Grados 2-8
   tutorial_icomputeeggs_string_detail_grades: Grados 2-8
@@ -10774,21 +10814,21 @@ es:
   tutorial_peblioportraits_string_detail_grades: A partir de Grado 9
   tutorial_rootcodebreak_string_detail_grades: Grados 2-8
   tutorial_microbit14_string_detail_grades: Grados 2-8
-  tutorial_barobomoon_string_detail_grades: Grados 6+
+  tutorial_barobomoon_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_eddog_string_detail_grades: Grados 2-6
   tutorial_microbit15_string_detail_grades: Grados 2-8
   tutorial_unity_string_detail_grades: A partir de Grado 9
-  tutorial_blockscadtarget_string_detail_grades: Grados 6+
+  tutorial_blockscadtarget_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tcadicicles_string_detail_grades: Grados 6-8
-  tutorial_blockscadscale_string_detail_grades: Grados 6+
+  tutorial_blockscadscale_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_tcadloops_string_detail_grades: Grados 6-8
   tutorial_phidgets_string_detail_grades: A partir de Grado 9
   tutorial_kcjmerry_string_detail_grades: Grados 2-8
-  tutorial_modvariables_string_detail_grades: Grados 6+
+  tutorial_modvariables_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_codestersmicro_string_detail_grades: Grados 6-8
   tutorial_codestersdata_string_detail_grades: Grados 6-8
   tutorial_ikodexmas_string_detail_grades: Grados 2-5
-  tutorial_rpisensehat_string_detail_grades: Grados 6+
+  tutorial_rpisensehat_string_detail_grades: Grados 6+ (11 en adelante)
   tutorial_modtraits_string_detail_grades: A partir de Grado 2
   tutorial_mee_string_detail_grades: A partir de Grado 2
   tutorial_kuborobo_string_detail_grades: Prelector - Grado 8

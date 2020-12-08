@@ -466,8 +466,8 @@ nl-NL:
   minecraft_adventurer: Minecraft avonturier
   minecraft_tutorials: Minecraft Code Uur handleidingen
   minecraft_specs: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
-  minecraft_agent_description: Minecraft is terug bij Hour of Code met een gloednieuwe
-    activiteit! Gebruik code om door Minecraft te reizen.
+  minecraft_agent_description: Minecraft is terug bij Uur Code met een gloednieuwe
+    activiteit! Programmeer om door Minecraft te reizen.
   minecraft_agent_button: Start
   minecraft_designer_description: Ga dieren en andere Minecraft wezens programmeren
     in je eigen Minecraft omgeving.
@@ -1705,6 +1705,7 @@ nl-NL:
   signing_in: Aan Het Inloggen
   reset_student_password: Studenten paswoorden aan het resetten
   syncing_students: Studenten aan het synchroniseren
+  hero_name: 'Minecraft: Heldenreis'
   applab_tile_start_tutorial: Start
   applab_tile_teacher_guide: Lerarenhandleiding bekijken
   aquatic_name: 'Minecraft: Aquatische reis'
@@ -1737,11 +1738,15 @@ nl-NL:
     lessen</a>
   hoc2018_mc_page_title: Minecraft Code Uur handleidingen
   hoc2018_mc_details: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
+  hoc2018_mc_aquatic_announcement: Schrijf je klas in om een van de 150 NIEUWE activiteiten
+    voor de Uur Code (3-9 december) uit te proberen. Neem vooral ook een kijkje in
+    onze nieuwe Minecraft activiteit voor 2018, De Reis Onder Water! Schrijf je klas
+    vandaag nog in.
   hoc2018_mc_aquatic_title: 'Minecraft: Aquatische reis'
-  hoc2018_mc_aquatic_description: Minecraft is terug bij Hour of Code met een gloednieuwe
-    activiteit! Gebruik code om door Minecraft te reizen.
-  hoc2018_mc_hero_description: Minecraft is terug bij Hour of Code met een gloednieuwe
-    activiteit! Gebruik code om door Minecraft te reizen.
+  hoc2018_mc_aquatic_description: Minecraft is terug bij Uur Code met een gloednieuwe
+    activiteit! Programmeer om door Minecraft te reizen.
+  hoc2018_mc_hero_description: Minecraft is terug bij Uur Code met een gloednieuwe
+    activiteit! Programmeer om door Minecraft te reizen.
   hoc2018_mc_designer_title: Minecraft Ontwerper
   hoc2018_mc_designer_description: Ga dieren en andere Minecraft wezens programmeren
     in je eigen Minecraft omgeving.
@@ -1751,21 +1756,26 @@ nl-NL:
   hoc2018_mc_start: Start
   hoc2018_mc_no_internet: Heeft u geen Internet?
   hoc2018_mc_download_adventurer: Download de offline versie van Minecraft avonturier.
+  hoc2018_mc_educators_box1_title: Programmeren met Minecraft
   hoc2018_mc_educators_box2_button: Downloaden
+  hoc2018_mc_educators_box4_title: Meer Informatica bronnen
+  hoc2018_mc_educators_box4_desc: Meer Infromatica bronnen
   hoc2018_mc_watch_videos: Bekijk voor je begint deze inspiratie-video's
   hoc2018_mc_video_title_inspire_girl: Inspireer een meisje
   hoc2018_mc_homepage_hoc_coming: De Hour of Code komt eraan...
   hoc2018_mc_homepage_what_create: Wat ga jij creëren?
   hoc2018_mc_homepage_join_us: Doe mee
   hoc2018_mc_homepage_try_it: Probeer het
-  hoc2018_mc_back_journey: Minecraft is terug bij Hour of Code met een gloednieuwe
-    activiteit! Gebruik code om door Minecraft te reizen.
+  hoc2018_mc_back: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
+  hoc2018_mc_back_journey: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
+    Programmeer om door Minecraft te reizen.
   hoc2018_mc_teacher_guide: Lerarenhandleiding bekijken
   hoc2018_mc_minecraft_education: Minecraft Opleiding
   hoc2018_mc_continue_learning: Blijf leren met Minecraft.
   hoc2018_mc_go_to_mc_education: Ga naar de Minecraft Opleiding
   hoc2018_mc_short_description_shorter: Minecraft is terug met een gloednieuwe activiteit
     voor het Codeuur!
+  hoc2018_mc_journey: Reis door Minecraft met programmeercode.
   hoc2018_dance_party_main_heading: Dansfeest
   hoc2018_dance_create_your_own_dance_title: Maak je eigen dansfeest
   hoc2018_dance_party_box_title: Dansfeest
@@ -1788,3 +1798,7 @@ nl-NL:
   hoc2018_dance_measure: Maten
   hoc2018_dance_measure_colon: 'Maten:'
   page_not_found_title: Pagina niet gevonden
+  hoc2018_mc_thank_microsoft: "  We danken Microsoft voor het ondersteunen van onze
+    visie en missie om ervoor te zorgen dat elk kind de kans krijgt om informatica
+    te leren en de vaardigheden om te slagen in de 21e eeuw.  "
+  footer_powered_by_aws: Aangedreven door Amazon webservices

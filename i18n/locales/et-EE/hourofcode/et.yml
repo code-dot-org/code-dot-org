@@ -43,6 +43,11 @@ et:
     vanuses inimestele.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
+  hoc2020_ai_header: Explore Artificial Intelligence
+  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
+    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
+    discuss ethics and AI, and more...
   hoc2019_header: Õpi arvutiteadusi ja muuda maailma.
   hoc2019_header_line1_mobile: Õpi arvutiteadusi.
   hoc2019_header_line2_mobile: Muuda maailma.
@@ -913,6 +918,7 @@ et:
   highlights_constant_athletes_short_heading: Ära anna alla
   footer_copyright_message: Auoriõigused%{current_year} Code.org. Kõik õigused kaitstud.
   footer_trademark_message: Hour of Code™ kaubamärk kuulub organisatsioonile Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partnerid
   footer_menu_contact: Võta meiega ühendust
   footer_menu_support: Abi
@@ -1516,7 +1522,7 @@ et:
   tutorial_n2y_name: Bitt Bott Explores Earth
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_toxicodepython_name: Avastage Python koos Silent Teacheriga
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
@@ -1524,9 +1530,10 @@ et:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1542,15 +1549,16 @@ et:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1559,6 +1567,7 @@ et:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1568,7 +1577,7 @@ et:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -5266,9 +5275,9 @@ et:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_toxicodepython_longdescription: Avastage Pythoni põhitõed ilma sõnade ja
+    selgitusteta. Meie vaikne õpetaja esitab teile mitu väljakutset, mis viivad teid
+    reeglite arvamisele ja oma vigadest õppimisele.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
     that has taken over the world! Along the way, you'll meet interesting characters
@@ -5294,20 +5303,22 @@ et:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5353,12 +5364,12 @@ et:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5377,16 +5388,18 @@ et:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5406,6 +5419,11 @@ et:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
+    continues to worsen. Luckily, you can make your voice heard with code through
+    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
+    you can make a second video about any subject you care about! Learn to use loops,
+    sine waves and customized emojis to make a unique project.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5436,11 +5454,11 @@ et:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -6346,7 +6364,7 @@ et:
   tutorial_pets_language: Inglise keel
   tutorial_petvet_language: Inglise keel
   tutorial_superhero_language: Inglise keel
-  tutorial_vidcodeplastic_language: Inglise, heebrea keeles
+  tutorial_vidcodeplastic_language: Inglise keel
   tutorial_vidcodetypeface_language: Inglise keel
   tutorial_washustorm_language: Inglise keel
   tutorial_activitypackets_language: Inglise keel
@@ -6359,9 +6377,9 @@ et:
   tutorial_n2y_language: Inglise keel
   tutorial_microsoftarcade_language: Inglise keel
   tutorial_csfirstunplugged_language: Inglise, hispaania (Mehhiko) keeles
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: taani, hollandi, inglise, inglise (UK), eesti,
+    prantsuse, saksa, indoneesia, itaalia, muu, poola, portugali (Brasiilia), portugali
+    (Portugal), rumeenia, hispaania (Hispaania), hispaania (Mehhiko), rootsi, türgi
   tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
     Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodedate_language: Inglise keel
@@ -6373,6 +6391,7 @@ et:
     (Mexico)
   tutorial_bsdcause_language: Inglise keel
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Inglise keel
   tutorial_tttractor_language: Inglise keel
   tutorial_codeillusionmickey_language: Inglise keel
@@ -6395,6 +6414,7 @@ et:
   tutorial_codestersdistance_language: Inglise keel
   tutorial_itchspace_language: Inglise keel
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Inglise keel
   tutorial_itchfish_language: Inglise keel
   tutorial_bsdwebsite_language: Inglise keel
@@ -6402,11 +6422,12 @@ et:
   tutorial_itchwebcam_language: Inglise keel
   tutorial_itchball_language: Inglise keel
   tutorial_ttrace_language: Inglise keel
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Inglise keel
   tutorial_codeguppytext_language: Inglise keel
+  tutorial_vidcodeplastiche_language: Inglise, heebrea keeles
   tutorial_educativechatbot_language: Inglise keel
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Inglise keel
@@ -7078,6 +7099,7 @@ et:
   tutorial_rpstress_string_detail_grades: Grades 2+
   tutorial_bsdcause_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_vidcodeanimoji_string_detail_grades: Grades 2+
+  tutorial_vidcodeanimojies_string_detail_grades: Grades 2+
   tutorial_bsdinspire_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_tttractor_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_codeillusionmickey_string_detail_grades: 7–13 eluaastat
@@ -7099,6 +7121,7 @@ et:
   tutorial_codestersdistance_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_itchspace_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_vidcodemagic_string_detail_grades: Grades 2+
+  tutorial_vidcodemagices_string_detail_grades: Grades 2+
   tutorial_codespeakmeal_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_itchfish_string_detail_grades: 7–13 eluaastat
   tutorial_bsdwebsite_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -7110,6 +7133,7 @@ et:
   tutorial_educodesecret_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_itchshapes_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_educativechatbot_string_detail_grades: Lastele vanuses 14+ eluaastat
   tutorial_educodebasics_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_codehsdesign_string_detail_grades: Õpilastele vanuses 11+ eluaastat
@@ -7130,7 +7154,7 @@ et:
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
   tutorial_itchplatformer_string_detail_grades: Õpilastele vanuses 11+ eluaastat
-  tutorial_codejika_string_detail_grades: 7–13 eluaastat
+  tutorial_codejika_string_detail_grades: Õpilastele vanuses 11+ eluaastat
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
@@ -7984,6 +8008,8 @@ et:
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Kõik tänapäevased veebilehitsejad, Android
     tahvelarvuti, iPad
+  tutorial_vidcodeanimojies_string_platforms: Kõik tänapäevased veebilehitsejad, Android
+    tahvelarvuti, iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8010,6 +8036,8 @@ et:
   tutorial_itchspace_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_vidcodemagic_string_platforms: Kõik tänapäevased veebilehitsejad, Android
     tahvelarvuti, iPad
+  tutorial_vidcodemagices_string_platforms: Kõik tänapäevased veebilehitsejad, Android
+    tahvelarvuti, iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8024,6 +8052,7 @@ et:
   tutorial_itchshapes_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_codeguppytext_string_platforms: Kõik tänapäevased veebilehitsejad, Android
     tahvelarvuti, iPad
+  tutorial_vidcodeplastiche_string_platforms: Kõik tänapäevased veebilehitsejad, iPad
   tutorial_educativechatbot_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_educodebasics_string_platforms: Kõik tänapäevased veebilehitsejad
   tutorial_codehsdesign_string_platforms: Kõik tänapäevased veebilehitsejad, Android
@@ -8700,6 +8729,7 @@ et:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8721,6 +8751,7 @@ et:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8732,6 +8763,7 @@ et:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9429,6 +9461,7 @@ et:
   tutorial_rpstress_string_detail_programming_languages: Blocks
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9450,6 +9483,7 @@ et:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blocks
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blocks
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9462,6 +9496,7 @@ et:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blocks
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML

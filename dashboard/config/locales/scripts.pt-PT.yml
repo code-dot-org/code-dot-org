@@ -3421,3 +3421,7 @@ pt:
               name: Curso A
             Course B:
               name: Curso B
+        ml-playground:
+          lessons:
+            intro:
+              name: Introdução

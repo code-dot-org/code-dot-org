@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: Miten isännöin Hour of Coden - Vapaaehtoistyöntekijöille
 ---
 
 {{ signup_button }}

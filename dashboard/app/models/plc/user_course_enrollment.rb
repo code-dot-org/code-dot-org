@@ -18,7 +18,7 @@
 # Maps a user to a course they are enrolled in.
 #
 # Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
-class Plc::UserCourseEnrollment < ActiveRecord::Base
+class Plc::UserCourseEnrollment < ApplicationRecord
   belongs_to :plc_course, class_name: '::Plc::Course'
   belongs_to :user, class_name: 'User'
   has_many :plc_unit_assignments, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy

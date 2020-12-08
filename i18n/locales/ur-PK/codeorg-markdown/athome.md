@@ -1,68 +1,75 @@
 ---
-title: Learning computer science when schools are closed in response to Covid19
+title: جب کووڈ-19 کی وجہ بند ہیں تو اسی دوران کمپیوٹر سائنس سیکھنا
 ---
 
 <a id="top"></a>
 
-# Learning computer science when schools are closed
+# ایسے حال میں کمپیوٹر سائنس سیکھنا جب سکول بند ہیں
 
 <div style="padding-left: 20px; float: right; margin-top: 0">
 {{ athome_vid_intro }}
 </div>
 
-<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
-<p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
-<p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
-<p><a href="#apps">No computer at home? See smartphone options</a></p>
+<p>ہم کووڈ-19 کی عالمی وبا کے دوران ناقابل حد تک مشکل حالات سے دوچار ہیں، جس کے دوران ہم صحت، ہماری کمیونیٹیز، اور اقتصادی حالات کے حوالے سے تشویش رکھتے ہیں. حفاظتی اقدامات کی وجہ سے پورے ملک میں سکول بند پڑے ہیں. </p>
+<p>ہم اساتذہ، طلباء، اور اہل خانوں کی ہر ممکن مدد کرنا چاہتے ہیں. نیچے وسائل ہیں جو طلباء کے ساتھ گھر میں کمپیوٹر سائنس سیکھنے میں مدد کریں گے. <strong>عزیز والدین - اگر اپنے طالبعلم کے لئے Code.org اکاؤنٹ بنانا چاہتے ہیں یا ان کا موجود اکا‌ؤنٹ کھولنا چاہتے ہیں،<a href="https://support.code.org/hc/en-us/articles/360040703792">مھربانی کرکے یہ راہنما پڑھ لیں</a>.</strong></p>
+<p>ہم نے اساتذہ کے لئے بھی کچھ <a href="#teacher-support">وسائل اکھٹے کیئے ہیں تاکہ کمپیوٹر سائنس سکھاتے رہیں</a>ایسے حال میں جب طلباء دور ہیں یا اجتماعی دوری کے کلاسروم میں ہیں. </p>
+<p><a href="#apps">گھر پر کمپیوٹر نہیں؟ سمارٹ فون کے انتخابات دیکھ لیں</a></p>
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
 
-## Hour of Code: Try these engaging, introductory tutorials
-Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
-* [Dance Party](https://code.org/dance)  - Code a dance party featuring music by Katy Perry, Shawn Mendes, and more.
-* [Minecraft](https://code.org/api/hour/begin/mc) - Use your creativity and problem solving skill to journey and explore new worlds.
-* [AI for Oceans](https://code.org/oceans) - Learn how AI and machine learning can be used to address world problems.
-* [Flappy Code](http://studio.code.org/s/flappy/reset) - Write your own flappy game code.
-* [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
-* And many [more tutorials](https://code.org/hourofcode/overview)!
+<p style="border: 0; color: #4d575f">دسمبر 7-11 پر ہمارے چھوٹےلائیو درسوں بنام CodeBytes میں آئیں!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">CodeBytes کے CS تعلیمی ہفتہ کے دوران ہر روز 20 منٹ کے درسوں کے لئے ہمارا ساتھ دیں. CodeBytes لائیو سٹریم روزانہ دو دفعہ چلے گا جو طلباء کے لئے آنلائن #HourOfCode میں شرکت کا بہترین راستہ ہے!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">مزید جانیئے <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
 
-<p><a href="#top">[Back to top]</a></p>
+<div class="clearboth"></div></div>
+
+## Hour of Code: یہ دلچسپ تعارفی درس آزمائیں
+سب عمروں کے لئے مرتب یہ گھنٹہ درس آزمائیں. 45 سے زیادہ زبانوں میں سینکڑوں سرگرمیاں اور درس دستیاب ہیں.
+* [ڈانس پارٹی](https://code.org/dance) -ایک ڈانس پارٹی کا کوڈ لکھیں جسمیں کیٹی پیری، شان مینڈیز، اور دیگر کا میوزک ہو.
+* [مائنکرافٹ](https://code.org/api/hour/begin/mc) -اپنی تخلیقی اور مسائل حل کرنے کے ہنروں کے ذریعے سفر کریں اور نئ دنیائیں آزمائیں.
+* [سمندوں کے لئے مصنوعی ذہانت](https://code.org/oceans)  -سیکھیں کہ عالمی مسائل کے حل میں مصنوعی ذہانت اور مشین لرننگ کیسے استعمال کی جا سکتی ہے.
+* [فلیپی کوڈ](http://studio.code.org/s/flappy/reset) - فلیپی گیم کے لئے اپنے کوڈ لکھیں.
+* [علم فلکیات میں کوڈ لکھنا](https://quorumlanguage.com/hourofcode/astro1.html) - نابینا اور کمزور نظر کے افراد کے لئے پروگرامنگ زبان Quorum کے ذریعے فلکیات کے بارے میں سیکھیں.
+* مزید بہت[سے ٹیوٹوریل](https://code.org/hourofcode/overview)!
+
+<p><a href="#top">[واپس اوپرتک]</a></p>
 
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
-## Videos: Watch these easy 3-5 minute educational videos
+## ویڈیوز: 3-5 منٹ کے یہ آسان تعلیمی ویڈیوز دیکھیں
 
 {{ athome_videos }}
 
 <br>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپرتک]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 <a id="express"></a>
 
-## Learn the fundamentals with our self-paced courses
-### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+## ہمارے خود آزاد کورسوں سے بنیادی مواد سیکھیں
+### **فوری کورسز**
+اپنی مدد آپ آغاز لینے والے طلباء کے ایک بہتریں انتخاب. آپ drag & یعنی ڈراپ بلاکوں کے ساتھ کمپیوٹر سائنس کے بنیاد سیکھیں گے. اپنے ہی خاکے اور گیمز بنائیں. <strong>یاداشت: فوری کورسیں فعلحال صرف انگریزی، ہندی، اطالوی، اور ہسپانوی میں دستیاب ہیں. دیگر زبانوں کے لئے، ہم اپنے 20 گھنٹے کے<a href="https://studio.code.org/s/20-hour">سریع کورس کی سفارش کرتے ہیں</a>. دیکھنے کے لئے کہ آپ کی زبان میں کیا دستیاب ہے، ملاحظہ کریں ہمارا<a href="https://studio.code.org/courses">کورس کیٹالاگ</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">فوری کورس</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">ابتدائی درجے کے قاریوں کے لئے فوری کورسیں</a>
 
 </div>
 <div style="clear: both"></div>
@@ -73,10 +80,10 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div style="clear: both; margin-bottom: 30px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپرتک]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn to design and build apps with App Lab
+## ایپ ڈیزائن اور بنانا سیکھیں App Lab کے ساتھ
 
 <div class="col-33" style="padding-right: 20px;">
 
@@ -86,75 +93,84 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-66">
 
-<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, and share your creation with family and friends.</p>
-<p>Ages 13+, all modern browsers, English only</p>
-<a href="https://code.org/educate/applab"><button>Try it out</button></a>
+<p>App Lab ایک پروگرامنگ ماحول ہے جسمیں آپ سادہ ایپ بنا سکتے ہیں. ایپ ڈیزائن کریں، جاوا سکرپٹ میں متن یا بلاک کے ساتھ کوڈ کریں، اور اپنے تخلیقات فیملی اور دوستوں کیساتھ شریک کریں.</p>
+<p>عمریں 13+، تمام جدید براوزرز، صرف انگریزی</p>
+<a href="https://code.org/educate/applab"><button>اسے آزمائیں</button></a>
 
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپرتک]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 
-## No computer at home? Try these smartphone apps
+## گھر پر کمپیوٹر نہیں؟ سمارٹ فون کے یہ ایپ آزمائیں
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(for all ages)</i>
+<a href="https://boxisland.io/"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%"></a><br><a href="https://boxisland.io/"><h3 style="color:#7665a0"><strong>باکس جزیرہ</strong></h3></a>ایک دلفریب کوڈنگ موبائل گیم جو سیکھنے والے کو ایک دلچسپ مہم پر لے جاتا ہے، اور ساتھ کوڈنگ کے بنیاد، جیسے الگوریدم، ترتیب شناسی، تسلسلات، لوپس یعنی حلقے، اور بیانات شرطیہ، کے بارے میں سیکھتے ہیں. <i>(تمام عمروں کے لئے)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Solve puzzles and create games with The Foos while learning to code. <strong>Note: codeSpark is offering a free 3-month trial. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
+<a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>5-9 سال کے بچوں کے لئے کوڈ سیکھنے کا ایوارڈ یافتہ پلیٹ فارم. کوڈ سیکھتے وقت The Foos کے ساتھ پزل یعنی معمے حل کریں اور گیم بنائیں. <strong>یاداشت: codeSpark 3 مہینے کا فری ٹرائیل دے رہے ہیں. نام رجسٹر کراتے وقت والدین کے ایمیل ایڈرس اور کریڈٹ کارڈ معلومات لازم ہیں.</strong><i>(نئے قاریوں سے لے کر گریڈ 5 تک)</i>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>اپنے فون پر مزیدار فوری درس کے ذریعے کوڈ لکھنا سیکھیں جو حقیقی جاوا سکرپٹ سکھاتیں ہیں. ایک Code with Google Program. <i>(مڈل سکول اور اوپر سطح کے لئے)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپرتک]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Limited or no internet access? Check out these unplugged activities
-* [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
-* [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
+## انٹرنیٹ تک رسائی محدود ہے یا ہے ہی نہیں؟ یہ آف لائن سرگرمیاں دیکھ لیں
+* [Hello Ruby](https://www.helloruby.com/play)کمپیوٹر، ٹکنالوجی اور پروگرامنگ سیکھنے کا عجیب ترین پلیٹ فارم. کمپیوٹر سائنس کے عنوانات کے ایک سلسلے کی سرگرمیاں، جیسے ایک مسلے کو اجزاء الگ الگ کرنا، نقوش یعنی ترتیبات درک کرنا، الگوریدمی فکر، مسائل کے بگ ختم کرنا اور اکھٹے کام کرنا. *(4 سے 10 سال عمروں کے لئے)*
+* [CS Unplugged](https://csunplugged.org/en/) - پڑھائی کے مفت وسائل کا مجموعہ جو دلچسپ گیموں اور معموں جو کارڈ، سٹرنگ، رنگیں، اور بہت ساری بھاگ دوڑ کے ساتھ کمپوٹر سائنس سکھاتیں ہیں. *(5 سے 14 سال کے عمروں کے لئے)*
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپرتک]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Code Break: Code.org کی ٹیم اور خصوصی مہمانوں سے سیکھیں!
+
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>خصوصی مہمان Code.org کے CEO ہادی پارٹووی کے ساتھ ایک ہفتہ وار ارتباطی کلاسروم میں کمپیوٹر سائنس کے افکار جیسے الگوریدم، مصنوعی ذہانت، اور انکرپشن سکھاتے ہیں.</p>
+<p>اگر اپ نے Code Break کے تمام اقساط نہیں دیکھیں، تو اب بھی بہت دیر نہیں ہوئی! براہ راست اقساط مزید نشر نہیں ہوتے، لیکن آپ تمام اقساط اور خود ازاد سرگرمیاں<a href="https://code.org/break">یہاں</a> دیکھ سکتے ہیں.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 
-## Support for teachers mid-course
-We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them.
+## مجازی یا اجتماعی دوری کے کلاسرومز میں اساتذہ کے لئے مدد
+مہربانی کر کے<a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a>پر جائیں جہاں آپ مجازی یا اجتماعی کلاسرومز کے ماحول کے حوالے سے وسائل اور تجاویز دیکھ سکتے ہیں. خصوصی کورسوں کے حوالے سے وسائل تک نیچے لنکس سے پہنچ سکتے ہیں.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>کمپیوٹر سائنس کے اصول</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
-
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>کمپیوٹر سائنس کی دریافتیں</p></a></div>
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
-A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
-
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>کمپیوٹرسائنس کی بنیادیں</p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<p><a href="#top">[Back to top]</a></p>
+<p><a href="#top">[واپس اوپرتک]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

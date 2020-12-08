@@ -519,13 +519,11 @@ export default {
 
       openEditor(e) {
         e.stopPropagation();
-        behaviorEditor.openEditorForFunction(this, this.getTitleValue('VAR'));
+        behaviorEditor.openEditorForFunction(this, this.getTitle_('VAR').id);
       },
 
       getVars() {
-        return Blockly.Variables.getVars.bind(this)(
-          Blockly.BlockValueType.BEHAVIOR
-        );
+        return {};
       },
 
       renameVar(oldName, newName) {
@@ -587,7 +585,7 @@ export default {
 
     generator.gamelab_behavior_get = function() {
       const name = Blockly.JavaScript.variableDB_.getName(
-        this.getTitleValue('VAR'),
+        this.getTitle_('VAR').id,
         Blockly.Procedures.NAME_TYPE
       );
       const extraArgs = [];
@@ -614,9 +612,7 @@ export default {
         },
         overrides: {
           getVars(category) {
-            return {
-              Behavior: [this.getTitleValue('NAME')]
-            };
+            return {};
           },
           callType_: 'gamelab_behavior_get'
         }

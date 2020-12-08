@@ -48,7 +48,7 @@
     "@babel/preset-react": "^7.0.0",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "3.5.30",
+    "@code-dot-org/blockly": "3.5.31",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "1.0.1",

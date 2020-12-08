@@ -18299,3 +18299,9 @@ fil:
               name: Kursong A
             Course B:
               name: Kursong B
+        ml-playground:
+          lessons:
+            intro:
+              name: Panimula
+            visualizing:
+              name: Pagpapakita ng mga Datos

@@ -15,6 +15,9 @@ export function injectExecuteCmd(fn) {
   executeCmd = fn;
 }
 
+// Max text length for the playSpeech block.
+export const MAX_SPEECH_TEXT_LENGTH = 750;
+
 /**
  * Export a set of native code functions that student code can execute via the
  * interpreter.
@@ -137,6 +140,11 @@ export const commands = {
       azureSpeechServiceVoices: voices
     } = appOptions;
     let {text, gender, language} = opts;
+
+    if (!token) {
+      outputWarning(i18n.textToSpeechTokenMissing());
+      return;
+    }
 
     // Fall back to defaults if requested language/gender combination is not available.
     if (!(voices[language] && voices[language][gender])) {

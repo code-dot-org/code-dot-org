@@ -4005,7 +4005,7 @@
           "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "이 도전을 풀기 위해,  `액터 1 위로 이동` 블록을  `위 화살표일 때`이벤트에 부착하고, 그 다음 모든 다른 방향과 동일하게 행동하세요.",

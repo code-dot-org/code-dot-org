@@ -774,7 +774,14 @@
         "scrat_loops_C-F_video_2020": "Video de bucles en la Era de Hielo",
         "CSD U1L01 TFMD_2018": "Resumen de la lección",
         "CSD U1L01 TFMD_2019": "Resumen de la lección",
-        "outbreak_freeplay": "Juego libre"
+        "outbreak_freeplay": "Juego libre",
+        "outbreak1": "Simulación de virus",
+        "outbreak2": "Simulación de virus",
+        "outbreak3": "Simulación de virus",
+        "outbreak4": "Modifica tu simulación",
+        "outbreak6": "Probabilidad aleatoria",
+        "outbreak8": "Comparte un mensaje",
+        "outbreak7": "Inmunidad y Vacunas"
       }
     }
   }
