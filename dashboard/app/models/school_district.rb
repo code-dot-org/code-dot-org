@@ -105,12 +105,13 @@ class SchoolDistrict < ApplicationRecord
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, dry_run = false)
-    ActiveRecord::Base.transaction do
-      new_districts = []
-      updated_districts = 0
-      unchanged_districts = 0
+    districts = nil
+    new_districts = []
+    updated_districts = 0
+    unchanged_districts = 0
 
-      CSV.read(filename, options).each do |row|
+    ActiveRecord::Base.transaction do
+      districts = CSV.read(filename, options).each do |row|
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
         loaded = find_by_id(parsed[:id])
         if loaded.nil?
@@ -134,6 +135,8 @@ class SchoolDistrict < ApplicationRecord
       "#{new_districts.map {|district| district[:name]}.join("\n")}\n"\
       "#{updated_districts} districts updated.\n"\
       "#{unchanged_districts} districts in import with no updates.\n"
+
+    districts
   end
 
   # Download the data in the table to a CSV file.
