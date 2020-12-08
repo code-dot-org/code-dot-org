@@ -117,7 +117,7 @@ class ScriptLevel < ApplicationRecord
 
       # Generate and store the seed_key, a unique identifier for this script level which should be stable across environments.
       # We'll use this in our new, JSON-based seeding process.
-      seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson], lesson_activities: [], activity_sections: [])
+      seed_context = Services::ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson], lesson_activities: [], activity_sections: [])
       seed_key_data = script_level.seeding_key(seed_context, false)
       script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
 
