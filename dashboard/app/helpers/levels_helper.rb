@@ -754,6 +754,13 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
+  # Assign a firebase authentication token based on the firebase shared secret,
+  # plus either the dashboard user id or the rails session id. This is
+  # sufficient for rate limiting, since it uniquely identifies users.
+  #
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
   def firebase_shared_auth_token
     return nil unless CDO.firebase_shared_secret
 
@@ -777,9 +784,9 @@ module LevelsHelper
   # plus either the dashboard user id or the rails session id. This is
   # sufficient for rate limiting, since it uniquely identifies users.
   #
-  # TODO(dave): include the storage_id associated with the user id
-  # (if one exists), so auth can be used to assign appropriate privileges
-  # to channel owners.
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
