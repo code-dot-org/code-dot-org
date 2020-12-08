@@ -310,7 +310,9 @@ class LessonEditor extends Component {
             <ResourcesEditor courseVersionId={this.props.courseVersionId} />
           ) : (
             <h4>
-              Resources cannot be added if a script is not in a course version.
+              A unit must be in a course version, i.e. a unit must belong to a
+              course or have 'Is a Standalone Course' checked, in order to add
+              resources.
             </h4>
           )}
         </CollapsibleEditorSection>
