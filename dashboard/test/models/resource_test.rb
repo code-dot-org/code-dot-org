@@ -59,4 +59,17 @@ class ResourceTest < ActiveSupport::TestCase
       resource.summarize_for_lesson_plan
     )
   end
+
+  test 'seeding_key' do
+    resource = create :resource
+    seed_context = {}
+
+    # seeding_key should not make queries
+    assert_queries(0) do
+      expected = {
+        'resource.key' => resource.key,
+      }
+      assert_equal expected, resource.seeding_key(seed_context)
+    end
+  end
 end
