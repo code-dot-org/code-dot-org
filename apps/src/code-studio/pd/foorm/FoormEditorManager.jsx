@@ -105,7 +105,7 @@ class FoormEditorManager extends React.Component {
       <div>
         <h1>Foorm Editor</h1>
         <p>
-          Interface for creating and making updates to Foorm surveys. Check out
+          Interface for creating and making updates to Foorm forms. Check out
           our{' '}
           <a href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor">
             How To
@@ -113,21 +113,15 @@ class FoormEditorManager extends React.Component {
           to get started.
         </p>
         <div>
-          <DropdownButton
-            id="load_config"
-            title="Load Survey..."
-            className="btn"
-          >
+          <DropdownButton id="load_config" title="Load Form..." className="btn">
             {this.state.formattedConfigurationOptions}
           </DropdownButton>
           <Button onClick={this.initializeEmptyCodeMirror} className="btn">
-            New Survey
+            New Form
           </Button>
         </div>
         {this.state.hasLoadError && (
-          <div style={styles.loadError}>
-            Could not load the selected survey.
-          </div>
+          <div style={styles.loadError}>Could not load the selected form.</div>
         )}
         {this.state.showCodeMirror && (
           <FoormEditor
