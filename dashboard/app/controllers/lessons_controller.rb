@@ -39,6 +39,10 @@ class LessonsController < ApplicationController
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
     end
 
+    if Rails.application.config.levelbuilder_mode
+      Script.merge_and_write_i18n(@lesson.i18n_hash, @lesson.script.name)
+    end
+
     render json: @lesson
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
     render(status: :not_acceptable, plain: e.message)

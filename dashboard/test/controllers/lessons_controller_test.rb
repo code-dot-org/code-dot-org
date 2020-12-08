@@ -6,6 +6,9 @@ class LessonsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    # stub writes so that we dont actually make updates to filesystem
+    File.stubs(:write)
+
     @script = create :script, name: 'unit-1'
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
