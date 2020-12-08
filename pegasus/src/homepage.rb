@@ -105,9 +105,7 @@ class Homepage
   end
 
   def self.get_actions(request)
-    code_break_takeover = promote_code_break(request)
-    code_bytes_takeover = promote_code_bytes(request)
-    hoc2020_ai_takeover = promote_hoc2020_ai(request)
+    hero_type = show_single_hero(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -116,7 +114,7 @@ class Homepage
       download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
       facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
       twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
-    elsif code_break_takeover
+    elsif hero_type == "codebreak2020"
       youtube_id = "27ln76y27IQ"
       download_path = ""
       facebook = "https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/Code.org/posts/2799748100121475"
@@ -129,15 +127,25 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if hoc2020_ai_takeover
-      [
-        {
-          type: "hoc2020_ai_join_us",
-          text: "homepage_action_text_join_us",
-          url: "/ai"
-        }
-      ]
-    elsif code_break_takeover
+    if hero_type == "hoc2020_ai"
+      if hoc_mode == "actual-hoc"
+        [
+          {
+            type: "hoc2020_ai_join_us",
+            text: "homepage_action_text_join_us",
+            url: "/hourofcode/overview"
+          }
+        ]
+      else
+        [
+          {
+            type: "hoc2020_ai_join_us",
+            text: "homepage_action_text_join_us",
+            url: "/ai"
+          }
+        ]
+      end
+    elsif hero_type == "codebreak2020"
       [
         {
           type: "code_break_check"
@@ -146,7 +154,7 @@ class Homepage
           type: "code_break_home"
         }
       ]
-    elsif code_bytes_takeover
+    elsif hero_type == "codebytes2020"
       [
         {
           type: "cta_button_solid_yellow",

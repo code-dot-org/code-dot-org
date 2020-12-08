@@ -74,7 +74,14 @@ const styles = {
 class SpritelabInput extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
-    inputList: PropTypes.array.isRequired,
+    inputList: PropTypes.arrayOf(
+      PropTypes.shape({
+        promptType: PropTypes.string,
+        promptText: PropTypes.string,
+        variableName: PropTypes.string,
+        choices: PropTypes.arrayOf(PropTypes.string)
+      })
+    ).isRequired,
     onPromptAnswer: PropTypes.func.isRequired
   };
 
@@ -93,14 +100,14 @@ class SpritelabInput extends React.Component {
     coreLibrary.onPromptAnswer(variableName, value);
   }
 
-  onTextSubmit() {
+  onTextSubmit = () => {
     this.userInputSubmit(this.state.userInput);
     this.setState({userInput: ''});
-  }
+  };
 
-  onMultipleChoiceSubmit(e) {
+  onMultipleChoiceSubmit = e => {
     this.userInputSubmit(e.target.getAttribute('value'));
-  }
+  };
 
   toggleCollapsed = () =>
     this.setState({
@@ -141,7 +148,7 @@ class SpritelabInput extends React.Component {
             <button
               style={styles.submitButton}
               type="button"
-              onClick={this.onTextSubmit.bind(this)}
+              onClick={this.onTextSubmit}
             >
               <i className="fa fa-check" />
             </button>
@@ -159,7 +166,7 @@ class SpritelabInput extends React.Component {
                   style={styles.choiceSprite}
                   src={spriteMap[choice]}
                   value={choice}
-                  onClick={this.onMultipleChoiceSubmit.bind(this)}
+                  onClick={this.onMultipleChoiceSubmit}
                 />
               ) : (
                 <button
@@ -167,7 +174,7 @@ class SpritelabInput extends React.Component {
                   style={styles.choiceButton}
                   type="button"
                   value={choice}
-                  onClick={this.onMultipleChoiceSubmit.bind(this)}
+                  onClick={this.onMultipleChoiceSubmit}
                 >
                   {choice}
                 </button>

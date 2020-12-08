@@ -3,7 +3,7 @@ title: מדריך להורים
 ---
 
 # How to do an Hour of Code with your child
-התנסות ב"שעת הקוד" היא דרך פשוטה ומהנה להציג לילדכם את מדעי המחשב, אולי לראשונה בחייו. מעבר לעובדה שמדעי המחשב מהווים את הבסיס לכל תחומי הלימוד, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">מחקרים שנערכו לאחרונה מוכיחים</a>: ילדים הלומדים מדעי המחשב מגיעים להישגים טובים יותר בתחומים אחרים, מצטיינים בפתרון בעיות, ובעלי סיכוי גבוה יותר <font color="00adbc"> ב-17% להירשם למוסד להשכלה גבוהה</b></font>.
+התנסות ב"שעת הקוד" היא דרך פשוטה ומהנה להציג לילדכם את מדעי המחשב, אולי לראשונה בחייו. מעבר לעובדה שמדעי המחשב מהווים את הבסיס לכל תחומי הלימוד, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">מחקרים שנערכו לאחרונה מוכיחים</a>: ילדים הלומדים מדעי המחשב מגיעים להישגים טובים יותר בתחומים אחרים, מצטיינים בפתרון בעיות, ובעלי סיכוי גבוה יותר <font color="00adbc"><b>ב-17% להירשם למוסד להשכלה גבוהה</b></font>.
 
 באפשרותכם להצטרף למיליוני תלמידים ברחבי העולם באירוע בינלאומי זה. יחד, נוכל לעודד ילדים ללמוד, לנפץ סטריאוטיפים ולגלות תחום עניין חדש. והכי חשוב: יש לכם כבר כל מה שאתם זקוקים לו כדי להביא את Hour of Code לביתכם!
 
@@ -26,7 +26,7 @@ Hour of Code היא פעילות פשוטה לביצוע - אפילו למתחי
 
 - לילד/ה שאוהב/ת לשחק:<a href="https://code.org/minecraft">מיינקראפט</a> או <a href="https://code.org/dance">מסיבת ריקודים</a>
 - לילד/ה שאוהב/ת את סרטי דיסני: <a href="https://code.org/starwars">מלחמת הכוכבים</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1"> פרוזן</a>, או <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">מואנה</a>
-- לילד/ה שאוהב/ת ללמוד:<a href="https://code.org/oceans">בינה מלאכותית למען האוקיינוסים והימים</a> או <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">יצירת מוזיקה באמצעות סקראץ'</a>
+- לילד/ה שאוהב/ת ללמוד: <a href="https://code.org/oceans">בינה מלאכותית למען האוקיינוסים והימים</a> או <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">צרו מוזיקה באמצעות סקראץ'</a>
 
 <h3>טכנולוגיה פשוטה או בלי טכנולוגיה?</h3>
 אם לרשותכם טכנולוגיה מוגבלת או אין ברשותכם טכנולוגיה כלל, תוכלו לסנן <a href="https://hourofcode.com/us/learn">פעילויות של Hour of Code</a> על ידי בחירה באפשרות "ללא מחשבים או מכשירים" בחלק של <em>טכנולוגיה בכיתה.</p> 

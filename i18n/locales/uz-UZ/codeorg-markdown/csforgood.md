@@ -1,16 +1,16 @@
 ---
-title: "#CSforGood in your class"
+title: "Sinf xonangizda #CSforGood - Informatika ezgulik uchun"
 ---
 
-<h1>#CSforGood in your class</h1>
+<h1>Sinf xonangizda #CSforGood - Informatika ezgulik uchun</h1>
 
 <div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
     <img src="/images/csforgood_1-1.png" style="width:100%">
 </div>
 
 <div class="col-60">
-<p>The events of this year—a global pandemic, economic recession, worldwide protests against racial inequities—have shown us both the great promise and the perils of our technology. We rely on technology to keep us connected (Zoom, anyone?), but we’ve also seen how biased algorithms can divide us on the basis of race or gender. We rely on our technology to keep us informed, but we’ve also seen how easy it is to spread misinformation. We rely on our technology to stay productive, but we’ve left behind those who don’t have access to the internet.</p>
-<p>How CS and technology are used and applied in the real world is a crucial part of learning computer science. We can help students understand some of the challenges that people around the world face and inspire them to think deeply about the role computer science can play in creating a more equitable and sustainable world.</p>
+<p>Bu yilgi voqealar - global pandemiya, iqtisodiy tanazzul, irqiy tengsizlikka qarshi dunyo miqyosidagi noroziliklar - bu bizning texnologiyamizning yuksak imkoniyatini ham, tahlikalarini ham ko'rsatdi. Bizni bog‘lab turish uchun texnologiyaga tayanamiz (Zoomchilara?), Lekin biz qanday qilib xolis algoritmlar bizni irq yoki jinsga qarab ajratishini ko‘rdik. Bizni xabardor qilish uchun texnologiyamizga tayanamiz, ammo biz noto‘g‘ri ma‘lumot tarqatish qanchalik osonligini ham ko‘rdik. Ish samarasini saqlash uchun texnologiyarga tayanamiz, ammo Internetga ega bo‘lmaganlar ortda qolib ketadilar.</p>
+<p>Axborot texnologiyalarning hayotimizda qanday ishlatilishi va qo‘llanilishi informatika asoslarini o‘rganishning asosiy qismidir. Biz o‘quvchilarga butun dunyo bo‘ylab odamlar duch keladigan ba’zi qiyinchiliklarni tushunishga yordam bera olamiz va ularni yanada adolatli va barqaror dunyoni yaratishda informatika asoslarini o‘rni haqida chuqur o‘ylashga ilhomlantiramiz.</p>
 </div>
 
 <div style="clear:both"></div>
@@ -18,77 +18,77 @@ title: "#CSforGood in your class"
 <br>
 
 <div class="col-100" style="text-align:center">
-  <a href="#discuss">Discussion prompts</a> | <a href="#tutorials">#CSforGood tutorials & lesson plans</a> | <a href="#realworld">#CSforGood in the real world</a> | <a href="#reachout">Reach out!</a>
+  <a href="#discuss">Bahsga oid takliflar </a> | <a href="#tutorials">#CSforGood darslari va dars rejalari</a> | <a href="#realworld">#CSforGood haqiqiy hayotimizda</a> | <a href="#reachout">Biz bilan bog‘laning!</a>
 </div>
 
 <a id="discuss"></a>
-<h2>Discussing #CSforGood with your students</h2>
-<p>Here are some themes and questions to spark discussion in your classroom about the role of computer science in creating positive social change. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">Download this discussion guide as a PDF</a>.</p>
+<h2>#CSforGood heshtegini o‘quvchilarimiz bilan muhokama qilish</h2>
+<p>Kompyuteringizda ijobiy ijtimoiy o‘zgarishlarni yaratishda informatika asoslari o‘rni haqida munozarani boshlash uchun ba’zi mavzular va savollar. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">Ushbu munozara qo‘llanmasini PDF shaklida yuklab oling</a>.</p>
 
-<h3><strong>We learn CS to detect problems</strong></h3>
+<h3><strong>Informatika asoslarini muammolarni aniqlash uchun o‘rganamiz</strong></h3>
 
 <div class="educate-callout-box" style="width:300px; height:235px; background-color:#7665a0; color:#ffffff; padding:20px; border-radius:15px; float:right; margin-left:20px">
-  <p><strong>Is your class virtual this year?</strong></p>
-  <p>Try using breakout rooms to pair or group students together.</p>
-  <p>If breakout rooms aren’t available, use a shared document or slide deck (<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">template</a>), designating sections of the document or a single slide for each group of students.</p>
+  <p><strong>Bu yilgi darslaringiz virtual ko‘rinishdami?</strong></p>
+  <p>O‘quvchilarni juftlikda yoki guruhlarda ishlashini ta‘minlash uchun alohida xonalardan foydalaning.</p>
+  <p>Agar alohida xona bo‘sh bo‘lmasa, hujjat yoki slaydlar to‘plami (<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">shablonidan</a>),  foydalaning, har bir guruh o‘quvchiga hujjatning bir bo‘limini yoki slaydning bittasini biriktirgan holda.</p>
 </div>
 
-<p>Building a society we want to live in begins with understanding the problems we need to address. We can use technology to detect and even predict problems.</p>
-<p>Have students read this story about <a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank">how smartphones are being used to detect earthquakes</a> and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
-<p><i>Questions for discussion:</i></p>
+<p>Biz yashamoqchi bo‘lgan jamiyatni qurish biz hal qilishimiz kerak bo‘lgan muammolarni tushunishdan boshlanadi. Muammolarni aniqlash va hatto bashorat qilish uchun texnologiyadan foydalanishimiz mumkin.</p>
+<p>Aqlli telefonlar yer silkinishlarini qanday aniqlashi haqidagi ushbu manzilda joylashgan hikoyani<a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank">o‘quvchilaringiz o‘qisin</a> undan so‘ng juft bo‘lib yoki guruhlarda ishlagan holda quyidagi savollarga javob bering. So‘ngra butun sinf bilan muhokama qiling.</p>
+<p><i>Munozara savollari:</i></p>
 <ul>
-<li>What technology does the article discuss?</li>
-<li>What problem is Google trying to solve? Why is this important?</li>
-<li>What are other ways that computer science or technology can help detect problems?</li>
+<li>Maqolada nima texnologiya haqida gap boradi?</li>
+<li>Google kompaniyasi qaysi muammoni yechishga urunmoqda? Bu nima uchun muhim?</li>
+<li>Axborot texnologiyalari yana qaysi yo‘llar bilan muammolarni aniqlashga yordam berishi mumkin?</li>
 </ul>
 
-<h3><strong>We learn CS to find creative solutions</strong></h3>
-<p>Learning computer science gives us a foundation to find solutions. It is our creativity then that enables us in every industry and aspect of life to design solutions built upon that foundation.</p>
-<p>Have students read this story about <a href="https://www.technologyreview.com/2020/09/22/1008675/ai-planners-minecraft-urban-design-healthier-happier-cities/" target="_blank">how urban planners are using AI in Minecraft to design better cities</a>, and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
-<p><i>Questions for discussion:</i></p>
+<h3><strong>Axborot texnologiyalarini noodatiy yechimlar topish uchun o‘rganamiz</strong></h3>
+<p>Axborot texnologiyalarini o‘rganish bizga yechimlarni topish uchun asos yaratadi. Aynan shuning uchun bizning ijodimiz har qanday sohada va hayotning turli yo‘nalishlarida ushbu asosga asoslangan yechimlarni loyihalashtirishga imkon beradi.</p>
+<p>O‘quvchilar <a href="https://www.technologyreview.com/2020/09/22/1008675/ai-planners-minecraft-urban-design-healthier-happier-cities/" target="_blank">arxitektorlar yaxshiroq shahar dizaynlarini yaratish uchun qanday qilib Minecraft oyinida Suniy Intelektni ishlatayotgani haqidagi maqolani o‘qiting</a>, so‘ngra juft bo‘lib yoki guruhlarda quyidagi savollarga javob bering. So‘ngra butun sinf bilan muhokama qiling.</p>
+<p><i>Munozara savollari:</i></p>
 <ul>
-<li>What technology does the article discuss?</li>
-<li>What challenge or challenges are participants trying to address?</li>
-<li>Think of the technology that you use on a daily basis. What does it help you do? What problems or challenges does it help you solve?</li>
-<li>Can you think of a time you used technology in a way it wasn’t necessarily intended, in order to solve a problem?</li>
+<li>Maqolada nima texnologiya haqida gap boradi?</li>
+<li>Ishtirokchilar nima qiyinchilik yoki qiyinchiliklarni yechishga urinishmoqda?</li>
+<li>Kundalik foydalanadigan texnologiyani o‘ylab ko‘ring. U sizga nima yordam beradi? Qanday muammolar yoki muammolarni hal qilishga yordam beradi?</li>
+<li>Muammoni hal qilish uchun aynan shu vaziyatda ishlatilishiga mo‘ljallanmagan texnologiyadan foydalangan vaqtni o‘ylab ko‘rishingiz mumkinmi?</li>
 </ul>
 
-<h3><strong>We learn CS to connect with each other</strong></h3>
+<h3><strong>Axborot texnologiyalarini bir birimiz bilan bog‘lanish uchun o‘rganamiz</strong></h3>
 
 <iframe src="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/" id="cbsNewsVideo" allowfullscreen allow="fullscreen" frameborder="0" width="325px" height="183px" style="float:right; margin-left:20px" mark="crwd-mark"></iframe>
 
-<p>From video chats and classes to apps that allow us to sing together remotely, people have built technical innovations that have kept us connected with some semblance of community through a global pandemic. And, we will continue to find ways to humanize technology to unite us.</p>
-<p>Have students watch this video (<a href="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/?intcid=CNM-00-10abd1h" target="_blank">link to original video at CBS News</a>) of students from Chino Valley Unified School District singing an a capella version of “Over the Rainbow” via video conference after covid-19 canceled their annual Choral Festival. Then have them work in pairs or groups to answer the questions below.</p>
-<p><i>Questions for discussion:</i></p>
+<p>Video suhbatlar va darslardan tortib, masofadan turib qo'shiq kuylashimizga imkon beradigan dasturlarga qadar odamlar texnik pog'onalarni qurishdi, bu bizni global pandemiya orqali jamiyatning ba'zi ko'rinishlari bilan bog'lab turdi. Va bizni birlashtirish uchun texnologiyani insonparvarlashtirish yo'llarini qidirishda davom etamiz.</p>
+<p>Covid-19 sababli har yili (<a href="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/?intcid=CNM-00-10abd1h" target="_blank">link to original video at CBS News</a>) o'tkaziladigan Xor festivalini bekor qilgandan so'ng, videokonferentsiya orqali Chino Valley Unified maktab okrugi o'quvchilarining videokameralar orqali "Kamalak ustida" filmining kapelli versiyasini kuylayotgani haqidagi ushbu videoni tomosha qilishini so‘rang. Keyin ularni quyidagi savollarga javob berish uchun juftlik yoki guruhda ishlashga yo‘naltiring.</p>
+<p><i>Munozara savollari:</i></p>
 <ul>
-<li>Name as many of the technologies as you can that enabled these students to sing together despite stay-at-home orders due to covid.</li>
-<li>Do you use any of these technologies? How frequently--weekly? daily?</li>
-<li>Have you used technology lately to make art? Record music? Write poetry? Play games with friends? Talk to family members? If you did not have access to these technologies, what would you do?</li>
-<li>Should everyone have access to these technologies? Why or why not?</li>
+<li>Covid pandemiyasi tufayli uyda o‘tirganliklariga qaramay, ushbu o‘quvchilar birgalikda qo‘shiq kuylashlariga imkon bergan texnologiyalarni nomini aytib chiqing.</li>
+<li>O‘zingiz ushbu texnologiyalardan foydalanasizmi? Ulardan qanchalik tez foydalanasiz? Haftada bir? Kunda bir?</li>
+<li>So‘nggi paytlarda badiiy ijod qilish uchun texnologiyadan foydalanganmisiz? Musiqa yozganimi? She’r yozganimi? Do‘stlaringiz bilan o‘yin o‘ynaganimi? Oila a’zolari bilan gaplashganimi? Agar siz ushbu texnologiyalardan foydalanish imkoniga ega bo‘lmasangiz, nima qilgan bo‘lar edingiz?</li>
+<li>Har kim ushbu texnologiyalardan foydalanish imkoniyatiga ega bo‘lishi kerakmi? Nima uchun bu imkoniyatga ega bo‘lishi kerak yoki yoq?</li>
 </ul>
 
-<h3><strong>We learn CS to ensure equity and inclusion</strong></h3>
-<p>The pandemic has exposed the digital divide like never before. Everyone must have the opportunity to learn computer science to have a part in building a future where all of us are included and all our voices heard.</p>
-<p>Have students read this story about a new tool that <a href="https://www.therobotreport.com/princeton-tool-helps-clear-biases-computer-vision/" target="_blank">helps root out potential biases in image sets that are used to train artificial intelligence (AI)</a>, and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
+<h3><strong>Axborot texnologiyalarini tenglikni va birdamlikni ta’minlash uchun o‘rganamiz</strong></h3>
+<p>Pandemiya insonlar orasida raqamli bo‘linishni ilgari kuzatilmagan darajaga olib chiqdi. Kelajakni qurishda ishtirok etish uchun har bir inson axborot texnologiyalarni o‘rganish imkoniyatiga ega bo‘lishi kerak.</p>
+<p>O‘quchilardan havolada keltirilgan yangi vosita haqida o‘qishini so‘rang. <a href="https://www.therobotreport.com/princeton-tool-helps-clear-biases-computer-vision/" target="_blank">Ushbu maqolada, yangi yaratilgan vosita yordamida Suniy Idrokni o‘rgatish uchun ishlatiladigan rasmlar to‘plami to‘g‘risida yig‘ilgan har hil munozarali qarashlarni aniqlash haqida fikr yuritiladi </a>, va so‘ngra juft holda va guruhlarda ishlagan holda quyidagi savollarga javob berishni taklif qiling. So‘ngra butun sinf bilan muhokama qiling.</p>
 <ul>
-<li>What does this tool do and what problem is it trying to solve?</li>
-<li>What do you think ‘open-source’ means? Why would the researchers make their tool open-source?</li>
-<li>What are some of the examples mentioned in the article of biases in image sets? Can you think of any others?</li>
-<li>Why is it important to be able to identify these biases? How does this relate to equity and inclusion?</li>
+<li>Bu yangi vosita nima vazifani bajaradi va u qanday muammoni yechishga harakat qilmoqda?</li>
+<li>Sizningcha, "ochiq manba" nimani anglatadi? Nima uchun tadqiqotchilar o‘zlari yaratgan vositalarini ochiq manbaga aylantiradilar?</li>
+<li>Tasvirlar to‘plami to‘g‘risida yig‘ilgan har hil munozarali qarashlarni maqolada keltirilgan ba‘zi misollarni aniqlang? Yana boshqa misollar haqida eslay olasizmi?</li>
+<li>Ushbu har hil munozarali qarashlarni aniqlash nima uchun muhim? Bu tenglik va birdamlik bilan qanday bog‘liqdir?</li>
 </ul>
 
 <a id="tutorials"></a>
-<h2>#CSforgood tutorials & lesson plans</h2>
-<p>If you're looking for an engaging way to introduce your students to the concept of #CSforGood, there are lots of tutorials and activities to choose from!</p>
+<h2>#CSforgood heshtegi ostidagi darslar va dars rejalari</h2>
+<p>Agar o‘quvchilaringizni #CSforGood heshtegi tushunchasi bilan tanishtirishning qiziqarli usulini qidirayotgan bo‘lsangiz, juda ko‘p darsliklar va mashg‘ulotlar mavjud!</p>
 
-<h3>Featured:</h3>
+<h3>Tanlangan:</h3>
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <a href="https://code.org/oceans" target="_blank"><img src="/images/tutorials/hoc2019/oceans.png" style="width: 100%"></a>
 <br>
-<a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>AI for Oceans</strong></h3></a>
-<p>Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</p>
-<p><i>From Code.org. For grades 3 and up.</i></p>
+<a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>Okeanlarga oid Suniy Idrok</strong></h3></a>
+<p>Axborot texnologiyalari kod yozishdan tashqari butun bir boshqa olam! Axloqiy muammolarni o'rganish va sun’iy intellektdan dunyo muammolarini hal qilishda qanday foydalanish mumkinligini o‘rganish paytida sun’iy intellekt, mashinalarni o‘rganish, o‘qitish ma’lumotlari va xolislik haqida ma’lumot oling.</p>
+<p><i>"Code.org"dan. 3 va undan yuqori sinflar uchun.</i></p>
 
 </div>
 
@@ -96,63 +96,63 @@ title: "#CSforGood in your class"
 
 <a href="https://aka.ms/HourofCode2020" target="_blank"><img src="/images/tutorials/hoc2020/mee_empathy.jpg" style="width: 100%"></a>
 <br>
-<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>A Minecraft Tale of Two Villages</strong></h3></a>
-<p>Use the power of code to bring two villages together. Players will experience empathy and compassion for their neighbors, learn cooperation and inclusion, and embrace the diversity that makes us all uniquely special.</p>
-<p><i>From Minecraft: Education Edition. For grades 2 and up.</i></p>
+<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>A "Minecraft"ning Ikki qishloq rivoyati</strong></h3></a>
+<p>Ikki qishloqni birlashtirish uchun kod kuchidan foydalaning. Ishtirokchilar o‘z qo‘shnilariga nisbatan hamdardlik va rahm-shafqatni his etadilar, hamkorlik va birdamlikni o‘rganadilar va barchamizni o‘ziga xos qilib qo‘yadigan xilma-xillikni qamrab oladilar.</p>
+<p><i>"Minecraft"dan: Ta’lim Talqini. 2 va undan yuqori sinflar uchun.</i></p>
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><img src="/images/tutorials/hoc2020/csfirst_unplugged.png" style="width: 100%"></a>
+<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><img src="Kompyuter yoki internet yo‘qmi" style="width: 100%"></a>
 <br>
-<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS First Unplugged</strong></h3></a>
-<p>No computer or internet? No problem. Try the CS First Unplugged activities to explore how computer science can solve problems like helping people stay connected while apart. "Plugged in" Scratch activities are available too!</p>
-<p><i>From Google. For grades 2 through 8.</i></p>
+<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS Birinchi oflayn dars</strong></h3></a>
+<p>Kompyuter yoki internet yo‘qmi? Muammo emas. Odamlarning aloqada bo‘lishiga yordam berish kabi muammolarni qanday hal qilishi mumkinligini o‘rganish uchun Axborot texnologiyalari asoslarining Birinchi Oflayn darslariga tegishli mashg‘ulotlarnisinab ko‘ring. "Kompyuter bilan" "Scratch" mashg‘ulotlari ham mavjud!</p>
+<p><i>"Google"dan. 2-8 sinflar uchun.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<h3>More #CSforGood activities and lesson plans:</h3>
-<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: Code Quest</a> (SciGirls/Twin Cities PBS): In this online coding adventure, take Subby the submarine through underwater challenges, using code to find various items and collect scientific data on the ocean floor. A self-guided tutorial for beginners in grades 2-8.</p>
-<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">Climate Clock</a> (Vidcode): In this Hour of Code activity, students will be guided through the construction of their own climate clock. They will engage with objects, properties, variables, functions, and loops, and customize text to convey their message for the world and their hopes for the future. A self-guided tutorial for beginners in grades 6 and up.<p>
-<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Code a Happy Place Meditation App</a> (CodeSpeak Labs): It’s been a stressful year for students, but practicing mindfulness can be a challenge. Learn to program a meditation app that transports you to your "happy place." For beginners in grades 2 through 8. Great as a teacher-guided tutorial.</p>
-<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Robot Feelings: The Kind Playground</a> (iRobot): Our robot is learning how to make kind choices when playing with friends. In this game, help Root practice by making four kind decisions in a row. If Root makes a bad choice, it has to start all the way at the beginning again! Let's play together! For beginners in kindergarten through grade 5. Root robot is optional.</p>
-<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Saving Sea Turtles</a> (micro:bit): Create a prototype of a low-power, red LED beach light that can be used for lighting on beach paths which is also safe for sea turtles. For beginners in grades 6-8. Great for learning at home.</p>
+<h3>Yanada ko‘proq #CSforGood heshtegi ostidagi mashg‘ulotlar va dars rejalari:</h3>
+<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: Code Quest</a> (SciGirls/Twin Cities PBS): Ushbu onlayn kodlash sarguzashtida "Subby" nomli suvosti kemasini turli xil narsalarni topish va okean tubida ilmiy ma’lumotlarni to‘plash uchun kod yordamida sayohatga olib boring. 2-8 sinflarda boshlang‘ich o‘quvchilar uchun mustaqil shug‘ullanish uchun qo‘llanma.</p>
+<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">Climate Clock</a> (Vidcode): Ushbu "Kodlash soati" mashg‘ulotida talabalar o‘zlarining iqlim soatlarini qurish bo‘yicha ko‘rsatmalarga ega bo‘lishadi. Ular ob’ektlar, xususiyatlar, o‘zgaruvchilar, funktsiyalar va tsikllar bilan shug‘ullanadilar va o‘zlarining dunyoga xabarlarini va kelajakka bo‘lgan umidlarini yetkazish uchun matnni moslashtiradilar. 6 va undan yuqori sinflarda yangi boshlanuvchilar uchun qo‘llanma.<p>
+<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Code a Happy Place Meditation App</a> (CodeSpeak Labs): Bu yil o‘quvchilar uchun og‘ir kechdi, lekin aqlimizni charxlab turish qiyin bo'lishi mumkin. Sizni "baxtli joyingizga" olib boradigan meditatsiya ilovasini dasturlashni o‘rganing. 2-8 sinfgacha bo‘lgan yangi boshlovchilar uchun o‘qituvchilar nazoratida olib borilsa juda foydali bo‘ladi.</p>
+<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Robot Feelings: The Kind Playground</a> (iRobot): Bizning robotimiz do‘stlar bilan o‘ynashda qanday qilib yaxshi tanlov qilishni o‘rganmoqda. "Root" nomli robotni ushbu o‘yinda, ketma-ket to‘rt turdagi qaror qabul qilishiga yordam bering. Agar "Root" noto‘g‘ri tanlov qilsa, u yana boshidan boshlashi kerak! Kelinglar birga o‘ynaymiz! Bolalar bog‘chasidan 5-sinfgacha bo‘lgan boshlovchilar uchun. "Root" nomli robot mashg‘ulotidan foydalanish ixtiyoriy.</p>
+<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Saving Sea Turtles</a> (micro:bit): Kam harajatli, qizil LED yoritgichi prototipini yarating. Uni sohil yo‘llarini yoritishda ishlatish mumkin, bundan tashqari bu yoritgich dengiz toshbaqalari uchun havfsiz. 6-8 sinflardagi boshlovchilar uchun. Uy sharoitida o‘rganish uchun ham juda qulay.</p>
 <br> 
-<p>See the full list of Hour of Code activities and lesson plans, including many more #CSforGood-themed tutorials, at <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>!</p>
+<p>"Kodlash soati" mashg‘ulotlari va dars jadvallarini to‘liq ro‘yxatini hamda yanada kop #CSforGood heshtegiga oid mavzuli darslarni ushbu havola <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>orqali topishingiz mumkin!</p>
 
 <a id="realworld"></a>
-<h2>Go further: How people are using #CSforgood in the real world</h2>
-<p>Every day, organizations and individuals are finding new ways to use computer science to help solve the world's challenges. Here are some real-world examples to take a look at with your classroom.</p>
+<h2>Keyingi qadamlar: Odamlar #CSforgood heghtegidan qay tarzda foydalanmoqdalar</h2>
+<p>Har kuni tashkilotlar va shaxslar dunyo muammolarini hal qilishda yordam berish uchun informatikadan foydalanishning yangi usullarini topmoqdalar. Sinfingiz bilan birgalikda ko‘rib chiqish uchun ba’zi hayotdan olingan misollar.</p>
 
-<h3>Detecting problems</h3>
+<h3>Muammolarni aniqlash</h3>
 <ul>
-<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">Predicting the spread of COVID-19 with smart thermometers</a></li>
-<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">Scientists Can Now Take Virtual Walks Through Human Cells</a></li>
-<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">The AI that spots Alzheimer's from cookie drawing</a></li>
+<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">Aqlli termometrlar bilan COVID-19 tarqalishini bashorat qilish</a></li>
+<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">Olimlar endi inson hujayralari orqali virtual sayr qilishlari mumkin</a></li>
+<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">Altsgeymer kasalligi alomatini pechenye rasmidan topa oladigan Suniy Intelekt</a></li>
 </ul>
 
-<h3>Finding creative solutions</h3>
+<h3>Noodatiy yechimlarni topish</h3>
 <ul>
-<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">Google's parent company is flying balloons with 'floating cell phone towers' across the ocean to bring internet to Kenya's Rift Valley</a></li>
-<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">The ambitious effort to piece together America’s fragmented health data</a></li>
-<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">The next generation of power plants will be virtual</a></li>
+<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">Google kompaniyasining bosh kompaniyasi Keniyaning Rift vodiysiga internet olib kelish uchun "suzuvchi uyali telefon minoralari" bilan havo sharlarini uchirmoqda.</a></li>
+<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">Amerikaning sog‘liqqa oid bo‘linib ketgan ma‘lumotlarini yig‘ishga urinish</a></li>
+<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">Keyingi avolod elektr stansiyalari virtual bo‘ladi</a></li>
 </ul>
 
-<h3>Connecting to each other</h3>
+<h3>Bir biri bilan bog‘lash</h3>
 <ul>
-<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">Tech From The 1990s Is Helping Musicians Play In Time While Apart</a></li>
-<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">Video Games Connect Chronically Ill Children Isolated at Home, Hospital</a></li>
+<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">1990 yillardagi Texnologiya musiqachilarga yo‘rdam bermoqda</a></li>
+<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">Video o‘yinlar uylarida ajralib qolgan surunkali kasal bolalarni bir birlari bilan bog‘lamoqda</a></li>
 </ul>
 
-<h3>Ensuring equity and inclusion</h3>
+<h3>Tenglik va birdamlikni qo‘llab quvatlash</h3>
 <ul>
-<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">Fake Data Could Help Solve Machine Learning’s Bias Problem—if We Let It</a></li>
-<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">Native American teachers, entrepreneurs seek new ways to close digital divide</a></li>
-<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">Gamers Forge Their Own Paths When It Comes to Accessibility</a></li>
+<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">Soxta ma’lumotlar Suniy Aql atrofida yig‘ilgan muammolarni bartaraf etishga yordam beradi - Agarda biz bunga imkon bersak</a></li>
+<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">Amerikalik o‘qituvchilar, ishbilarmonlar raqamli dunyoda mavjud tafovutni kamaytirish yo‘llarini qidirmoqda</a></li>
+<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">Imkoniyati chegaralanganlar uchun Geymerlar o‘zlarining yo‘llarini yaratmoqdalar</a></li>
 </ul>
 
 <a id="reachout"></a>
-<h2>Reach out to us!</h2>
-<p>We want to hear about how your students are engaging with #CSforGood! Use the hashtag #CSforGood or send your #CSforGood stories to <a href="mailto:csforgood@code.org">csforgood@code.org</a>.
+<h2>Biz bilan bog‘laning!</h2>
+<p>#CSforGood heshtegi ostida o‘quvchilaringiz qanday faoliyat olib borayotganligi haqida eshitmoqchimiz! #CSforGood heshtegini ishlating yoki o‘zingizni #CSforGood heshtegi ostidagi hikoyangizni ushbu <a href="mailto:csforgood@code.org">csforgood@code.org</a> manzilga yuboring.

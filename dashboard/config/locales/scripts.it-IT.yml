@@ -6408,6 +6408,8 @@ it:
               name: Il Processo di Risoluzione dei Problemi
             What is a Computer?:
               name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         andrea-test:
           lesson_groups:
             required:
@@ -6764,6 +6766,8 @@ it:
           lessons:
             Lists:
               name: Liste
+            Post-Project Test:
+              name: Test finale
         csd3-2019:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -6789,6 +6793,8 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
         csd4-2019:
           lesson_groups:
             csd4_1:
@@ -6799,6 +6805,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd5-2019:
           lesson_groups:
             csd5_1:
@@ -6807,6 +6816,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd6-2019:
           lesson_groups:
             csd6_1:
@@ -6818,6 +6830,8 @@ it:
           lessons:
             Functions with Parameters:
               name: Funzioni con parametri
+            Post-Project Test:
+              name: Test finale
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -7012,6 +7026,8 @@ it:
               name: Inviare Messaggi Binari con il Simulatore di Internet
             Binary Numbers:
               name: Numeri Binari
+        csd-tests:
+          title: Test finali CSD
         time4csdemo:
           lesson_groups:
             ramp_up:
@@ -7314,6 +7330,8 @@ it:
               name: Il Processo di Risoluzione dei Problemi
             What is a Computer?:
               name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csd2-pilot:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
             Web."
@@ -7327,6 +7345,8 @@ it:
           lessons:
             Lists:
               name: Liste
+            Post-Project Test:
+              name: Test finale
         csd3-pilot:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -7352,6 +7372,8 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
             Shapes and Parameters:
               name: Forme e Parametri
             Random Numbers:
@@ -7453,6 +7475,8 @@ it:
           lessons:
             What is a Computer?:
               name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csp2-pilot:
           lesson_groups:
             content:
@@ -7781,6 +7805,9 @@ it:
               display_name: 'Capitolo 2: Styling e CSS'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -7800,6 +7827,8 @@ it:
               name: Il Processo di Risoluzione dei Problemi
             What is a Computer?:
               name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -7810,6 +7839,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd5-2020:
           lesson_groups:
             csd5_1:
@@ -7818,6 +7850,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -7829,6 +7864,8 @@ it:
           lessons:
             Functions with Parameters:
               name: Funzioni con parametri
+            Post-Project Test:
+              name: Test finale
         csd3-2020:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -7856,6 +7893,8 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
             Text:
               name: Testo
             Sprites:
@@ -8716,6 +8755,9 @@ it:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
             csd2_2:
               display_name: 'Capitolo 2: Styling e CSS'
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csp5-virtual:
           lessons:
             Multi-screen Apps:
@@ -8848,6 +8890,8 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
           lesson_groups:
             csd3_1:
               display_name: Contenuto
