@@ -310,9 +310,11 @@ class School < ApplicationRecord
             duplicate_schools << parsed
           end
         elsif write_updates
+          puts loaded.name
           loaded.assign_attributes(parsed)
           if loaded.changed?
             loaded.update!(parsed) unless dry_run
+            puts loaded.name
 
             loaded.changed.each do |attribute|
               updated_schools_attribute_frequency.key?(attribute) ?
@@ -327,26 +329,30 @@ class School < ApplicationRecord
       end
     end
 
-    CDO.log.info "School seeding: done processing #{filename}.\n"\
-      "#{new_schools.length} new schools added.\n"\
-      "Schools added:\n"\
-      "#{new_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}\n"\
-      "#{duplicate_schools.length} duplicate schools skipped.\n"\
-      "Duplicate schools skipped:\n"\
-      "#{duplicate_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}\n"\
-      "#{updated_schools} schools updated.\n"\
-      "Among updated school, these attributes were updated:\n"\
-      "#{updated_schools_attribute_frequency.sort_by {|_, v| v}.
+    summary_message = <<~SUMMARY
+      School seeding: done processing #{filename}.
+      #{new_schools.length} new schools added.
+      #{updated_schools} schools updated.
+      #{duplicate_schools.length} duplicate schools skipped.
+      Schools added:
+      #{new_schools.map {|school| school[:name] + ' ' + school[:id]}.join('\n')}
+      Among updated schools, these attributes were updated:
+      #{updated_schools_attribute_frequency.sort_by {|_, v| v}.
         reverse.
-        map {|attribute, frequency| attribute + ': ' + frequency}.join("\n")}\n"\
-      "#{unchanged_schools} schools in import with no updates.\n"
+        map {|attribute, frequency| attribute + ': ' + frequency.to_s}.join("\n")}
+      Duplicate schools skipped:
+      #{duplicate_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}
+    SUMMARY
+
+    CDO.log.info summary_message
   end
 
   def self.dry_seed_s3_object(bucket, filepath, import_options, &block)
     AWS::S3.seed_from_file(bucket, filepath, true) do |filename|
       merge_from_csv(filename, import_options, true, true, &block)
+    ensure
+      CDO.log.info "This is a dry run. No data is written to the database."
     end
-    CDO.log.info "This is a dry run. No data is written to the database."
   end
 
   # Download the data in the table to a CSV file.
