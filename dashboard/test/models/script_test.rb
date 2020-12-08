@@ -233,7 +233,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file_all_properties])
     script = Script.find_by!(name: script_names.first)
 
-    assert_equal 21, script.properties.keys.length
+    assert_equal 22, script.properties.keys.length
     script.properties.values.each {|v| assert v}
 
     # Seed using an empty .script file with the same name. Verify that this sets all properties values back to defaults.
@@ -873,6 +873,20 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script_level, script: script, lesson: lesson)
 
     assert_nil script.summarize(false)[:lessons]
+  end
+
+  test 'summarize includes show_calendar' do
+    script = create(:script, name: 'calendar-script')
+
+    script.show_calendar = true
+    assert script.show_calendar
+    summary = script.summarize
+    assert summary[:showCalendar]
+
+    script.show_calendar = false
+    refute script.show_calendar
+    summary = script.summarize
+    refute summary[:showCalendar]
   end
 
   test 'summarize includes has_verified_resources' do
