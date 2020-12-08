@@ -92,9 +92,9 @@ class SchoolDistrict < ApplicationRecord
     end
   end
 
-  def self.dry_seed_s3_object(bucket, filepath, import_options, &block)
+  def self.dry_seed_s3_object(bucket, filepath, import_options, &parse_row)
     AWS::S3.seed_from_file(bucket, filepath, true) do |filename|
-      merge_from_csv(filename, import_options, true, true, &block)
+      merge_from_csv(filename, import_options, true, is_dry_run: true, &parse_row)
     end
     CDO.log.info "This is a dry run. No data written to the database."
   end
@@ -104,7 +104,7 @@ class SchoolDistrict < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, dry_run = false)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false)
     districts = nil
     new_districts = []
     updated_districts = 0
@@ -115,12 +115,12 @@ class SchoolDistrict < ApplicationRecord
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
         loaded = find_by_id(parsed[:id])
         if loaded.nil?
-          SchoolDistrict.new(parsed).save! unless dry_run
+          SchoolDistrict.new(parsed).save! unless is_dry_run
           new_districts << parsed
         elsif write_updates
           loaded.assign_attributes(parsed)
           if loaded.changed?
-            loaded.update!(parsed) unless dry_run
+            loaded.update!(parsed) unless is_dry_run
             updated_districts += 1
           else
             unchanged_districts += 1
