@@ -40,6 +40,8 @@ class LessonsController < ApplicationController
     end
 
     if Rails.application.config.levelbuilder_mode
+      @lesson.script.reload
+
       # This endpoint will only be hit from the lesson edit page, which is only
       # available to lessons in migrated scripts, which only need to be
       # serialized using the new json format.
