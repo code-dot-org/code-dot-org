@@ -359,9 +359,9 @@ class School < ApplicationRecord
     schools
   end
 
-  def self.dry_seed_s3_object(bucket, filepath, import_options, &block)
+  def self.dry_seed_s3_object(bucket, filepath, import_options, &parse_row)
     AWS::S3.seed_from_file(bucket, filepath, true) do |filename|
-      merge_from_csv(filename, import_options, true, is_dry_run: true, &block)
+      merge_from_csv(filename, import_options, true, is_dry_run: true, &parse_row)
     ensure
       CDO.log.info "This is a dry run. No data is written to the database."
     end

@@ -41,7 +41,7 @@ class SchoolTest < ActiveSupport::TestCase
     School.merge_from_csv(School.get_seed_filename(true))
 
     # Arbitrary change that should result in an update to each row.
-    block = proc do |row|
+    parse_row = proc do |row|
       {
         id: row['id'],
         state_school_id: row['state_school_id'],
@@ -52,7 +52,7 @@ class SchoolTest < ActiveSupport::TestCase
     School.any_instance.expects(:save!).never
     School.any_instance.expects(:update!).never
 
-    School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &block)
+    School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &parse_row)
   end
 
   test 'null state_school_id is valid' do
