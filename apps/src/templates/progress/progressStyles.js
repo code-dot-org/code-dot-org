@@ -41,8 +41,9 @@ export const font = {
   fontFamily: '"Gotham 5r", sans-serif'
 };
 
+export const CELL_PADDING = 4;
 export const cellContent = {
-  padding: '0px 4px'
+  padding: `0px ${CELL_PADDING}px`
 };
 
 export const studentListContent = {
