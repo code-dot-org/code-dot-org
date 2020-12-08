@@ -33,51 +33,78 @@ class DataDisplay extends Component {
   };
 
   render() {
+    const data = this.props.data;
+
     return (
       <div id="data-display">
-        {this.props.data.length > 0 && (
-          <div style={styles.panel}>
-            <div style={styles.largeText}>Imported Data</div>
-            {this.state.showRawData && (
-              <div>
-                <button type="button" onClick={this.toggleRawData}>
-                  hide data
-                </button>
-                <div style={styles.finePrint}>
-                  {JSON.stringify(this.props.data)}
-                </div>
+        <div style={styles.panel}>
+          <div style={styles.largeText}>Imported Data</div>
+          {this.state.showRawData && (
+            <div>
+              <div style={styles.finePrint}>
+                <table style={styles.dataDisplayTable}>
+                  <thead>
+                    <tr>
+                      {data.length > 0 &&
+                        Object.keys(data[0]).map(key => {
+                          return (
+                            <th key={key} style={styles.dataDisplayHeader}>
+                              {key}
+                            </th>
+                          );
+                        })}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.length > 0 &&
+                      data.map((row, index) => {
+                        return (
+                          <tr key={index}>
+                            {data.length > 0 &&
+                              Object.keys(row).map(key => {
+                                return (
+                                  <td key={key} style={styles.dataDisplayCell}>
+                                    {row[key]}
+                                  </td>
+                                );
+                              })}
+                          </tr>
+                        );
+                      })}
+                  </tbody>
+                </table>
               </div>
-            )}
-            {!this.state.showRawData && (
-              <button type="button" onClick={this.toggleRawData}>
-                show data
+            </div>
+          )}
+          {!this.state.showRawData && (
+            <button type="button" onClick={this.toggleRawData}>
+              show data
+            </button>
+          )}
+          <div style={styles.mediumText}>
+            There are {this.props.data.length} rows of data.
+          </div>
+
+          <div style={styles.mediumText}>
+            There are {this.props.emptyCellDetails.length} empty cells.
+          </div>
+          {this.state.showEmptyCellDetails && (
+            <div>
+              <button type="button" onClick={this.toggleEmptyCellDetails}>
+                hide empty cell details
+              </button>
+              {this.props.emptyCellDetails.map((cellDetails, i) => {
+                return <p key={i}>{cellDetails}</p>;
+              })}
+            </div>
+          )}
+          {!this.state.showEmptyCellDetails &&
+            this.props.emptyCellDetails.length > 0 && (
+              <button type="button" onClick={this.toggleEmptyCellDetails}>
+                show empty cell details
               </button>
             )}
-            <div style={styles.mediumText}>
-              There are {this.props.data.length} rows of data.
-            </div>
-
-            <div style={styles.mediumText}>
-              There are {this.props.emptyCellDetails.length} empty cells.
-            </div>
-            {this.state.showEmptyCellDetails && (
-              <div>
-                <button type="button" onClick={this.toggleEmptyCellDetails}>
-                  hide empty cell details
-                </button>
-                {this.props.emptyCellDetails.map((cellDetails, i) => {
-                  return <p key={i}>{cellDetails}</p>;
-                })}
-              </div>
-            )}
-            {!this.state.showEmptyCellDetails &&
-              this.props.emptyCellDetails.length > 0 && (
-                <button type="button" onClick={this.toggleEmptyCellDetails}>
-                  show empty cell details
-                </button>
-              )}
-          </div>
-        )}
+        </div>
       </div>
     );
   }

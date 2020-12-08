@@ -5,9 +5,9 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import rootReducer, {
   setMode,
+  setCurrentPanel,
   setSelectedCSV,
-  setSelectedJSON,
-  setColumnsByDataType
+  setSelectedJSON
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -35,20 +35,21 @@ const processMode = mode => {
   const assetPath = global.__ml_playground_asset_public_path__;
 
   if (mode) {
-    if (mode.id === "load_dataset") {
+    // Load a single dataset immediately.
+    if (mode.datasets && mode.datasets.length === 1) {
       const item = allDatasets.filter(item => {
-        return item.id === mode.setId;
+        return item.id === mode.datasets[0];
       })[0];
       store.dispatch(setSelectedCSV(assetPath + item.path));
       store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
       parseCSV(assetPath + item.path, true, false);
 
       // Also retrieve model metadata and set column data types.
-      parseJSON(assetPath + item.metadataPath, result => {
-        for (const field of result.fields) {
-          store.dispatch(setColumnsByDataType(field.id, field.type));
-        }
-      });
+      parseJSON(assetPath + item.metadataPath);
+
+      store.dispatch(setCurrentPanel("dataDisplay"));
     }
+  } else {
+    store.dispatch(setCurrentPanel("selectDataset"));
   }
 };

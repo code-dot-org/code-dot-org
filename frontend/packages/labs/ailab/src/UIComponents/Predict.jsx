@@ -14,7 +14,6 @@ import { styles } from "../constants";
 
 class Predict extends Component {
   static propTypes = {
-    showPredict: PropTypes.bool,
     labelColumn: PropTypes.string,
     selectedCategoricalFeatures: PropTypes.array,
     selectedContinuousFeatures: PropTypes.array,
@@ -38,68 +37,66 @@ class Predict extends Component {
   render() {
     return (
       <div id="predict">
-        {this.props.showPredict && (
-          <div style={styles.panel}>
-            <div style={styles.largeText}>Test the Model</div>
-            <form>
-              {this.props.selectedContinuousFeatures.map((feature, index) => {
-                return (
-                  <div key={index}>
-                    <label>
-                      {feature}:
-                      <input
-                        type="text"
-                        onChange={event => this.handleChange(event, feature)}
-                      />
-                    </label>
-                  </div>
-                );
-              })}
-            </form>
-            <br />
-            <form>
-              {this.props.selectedCategoricalFeatures.map((feature, index) => {
-                return (
-                  <span key={index}>
-                    <label>
-                      {feature}:
-                      <select
-                        onChange={event => this.handleChange(event, feature)}
-                      >
-                        <option>{""}</option>
-                        {this.props.uniqueOptionsByColumn[feature]
-                          .sort()
-                          .map((option, index) => {
-                            return (
-                              <option key={index} value={option}>
-                                {option}
-                              </option>
-                            );
-                          })}
-                      </select>
-                    </label>
-                  </span>
-                );
-              })}
-            </form>
-            <br />
-            <button type="button" onClick={this.onClickPredict}>
-              Predict!
-            </button>
-            <p />
-            {this.props.predictedLabel && (
-              <div>
-                <div> The Machine Learning model predicts... </div>
-                <div style={styles.subPanel}>
-                  {this.props.labelColumn}: {this.props.predictedLabel}
-                  {this.props.confidence && (
-                    <p>Confidence: {this.props.confidence}</p>
-                  )}
+        <div style={styles.panel}>
+          <div style={styles.largeText}>Test the Model</div>
+          <form>
+            {this.props.selectedContinuousFeatures.map((feature, index) => {
+              return (
+                <div key={index}>
+                  <label>
+                    {feature}:
+                    <input
+                      type="text"
+                      onChange={event => this.handleChange(event, feature)}
+                    />
+                  </label>
                 </div>
+              );
+            })}
+          </form>
+          <br />
+          <form>
+            {this.props.selectedCategoricalFeatures.map((feature, index) => {
+              return (
+                <span key={index}>
+                  <label>
+                    {feature}:
+                    <select
+                      onChange={event => this.handleChange(event, feature)}
+                    >
+                      <option>{""}</option>
+                      {this.props.uniqueOptionsByColumn[feature]
+                        .sort()
+                        .map((option, index) => {
+                          return (
+                            <option key={index} value={option}>
+                              {option}
+                            </option>
+                          );
+                        })}
+                    </select>
+                  </label>
+                </span>
+              );
+            })}
+          </form>
+          <br />
+          <button type="button" onClick={this.onClickPredict}>
+            Predict!
+          </button>
+          <p />
+          {this.props.predictedLabel && (
+            <div>
+              <div> The Machine Learning model predicts... </div>
+              <div style={styles.subPanel}>
+                {this.props.labelColumn}: {this.props.predictedLabel}
+                {this.props.confidence && (
+                  <p>Confidence: {this.props.confidence}</p>
+                )}
               </div>
-            )}
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
     );
   }
@@ -107,7 +104,6 @@ class Predict extends Component {
 
 export default connect(
   state => ({
-    showPredict: state.showPredict,
     testData: state.testData,
     predictedLabel: getConvertedPredictedLabel(state),
     confidence: state.prediction.confidence,

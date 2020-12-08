@@ -1,4 +1,5 @@
 {
+  "defaultLabelColumn": "Name",
   "fields": [
   	{
   		"id": "Name",

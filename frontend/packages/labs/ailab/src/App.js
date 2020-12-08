@@ -10,28 +10,160 @@ import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
+import { connect } from "react-redux";
+import { getPanels, setCurrentPanel, validationMessages } from "./redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquare, faCheckSquare } from "@fortawesome/free-regular-svg-icons";
 
-export default class App extends Component {
+class PanelTabs extends Component {
   static propTypes = {
-    mode: PropTypes.object,
-    saveTrainedModel: PropTypes.func
+    panels: PropTypes.arrayOf(PropTypes.object),
+    currentPanel: PropTypes.string,
+    setCurrentPanel: PropTypes.func
   };
 
+  getTabStyle(panel) {
+    if (panel.enabled) {
+      if (panel.id === this.props.currentPanel) {
+        return { ...styles.tab, ...styles.currentTab };
+      } else {
+        return styles.tab;
+      }
+    } else {
+      return { ...styles.tab, ...styles.disabledTab };
+    }
+  }
+
   render() {
+    const { panels, setCurrentPanel } = this.props;
+
     return (
-      <div style={styles.container}>
-        {(!this.props.mode || this.props.mode.id !== "load_dataset") && (
-          <SelectDataset />
-        )}
-        <DataDisplay />
-        <SelectFeatures />
-        <ColumnInspector />
-        <SelectTrainer />
-        <TrainModel />
-        <Results />
-        <Predict />
-        <SaveModel saveTrainedModel={this.props.saveTrainedModel} />
+      <div style={styles.tabContainer}>
+        {panels.map(panel => {
+          return (
+            <div
+              key={panel.id}
+              style={this.getTabStyle(panel)}
+              onClick={() => setCurrentPanel(panel.id)}
+            >
+              {panel.label}
+            </div>
+          );
+        })}
       </div>
     );
   }
 }
+
+class Panels extends Component {
+  static propTypes = {
+    currentPanel: PropTypes.string,
+    saveTrainedModel: PropTypes.func
+  };
+
+  render() {
+    const { currentPanel, saveTrainedModel } = this.props;
+
+    return (
+      <div style={styles.panelContainer}>
+        {currentPanel === "selectDataset" && <SelectDataset />}
+        {currentPanel === "dataDisplay" && <DataDisplay />}
+        {currentPanel === "selectFeatures" && <SelectFeatures />}
+        {currentPanel === "columnInspector" && <ColumnInspector />}
+        {currentPanel === "selectTrainer" && <SelectTrainer />}
+        {currentPanel === "trainModel" && <TrainModel />}
+        {currentPanel === "results" && <Results />}
+        {currentPanel === "predict" && <Predict />}
+        {currentPanel === "saveModel" && (
+          <SaveModel saveTrainedModel={saveTrainedModel} />
+        )}
+      </div>
+    );
+  }
+}
+
+class ValidationMessages extends Component {
+  static propTypes = {
+    currentPanel: PropTypes.string,
+    validationMessages: PropTypes.object
+  };
+
+  render() {
+    const { currentPanel, validationMessages } = this.props;
+
+    return (
+      <div style={styles.validationMessagesLight}>
+        {Object.keys(validationMessages).filter(
+          messageKey => validationMessages[messageKey].panel === currentPanel
+        ).length === 0 && <div>Carry on.</div>}
+        {Object.keys(validationMessages)
+          .filter(
+            messageKey => validationMessages[messageKey].panel === currentPanel
+          )
+          .map((key, index) => {
+            return validationMessages[key].readyToTrain ? (
+              <p key={index} style={styles.ready}>
+                <FontAwesomeIcon icon={faCheckSquare} />
+                &nbsp;
+                {validationMessages[key].successString}{" "}
+              </p>
+            ) : (
+              <p key={index} style={styles.error}>
+                <FontAwesomeIcon icon={faSquare} />
+                &nbsp;
+                {validationMessages[key].errorString}{" "}
+              </p>
+            );
+          })}
+      </div>
+    );
+  }
+}
+
+class App extends Component {
+  static propTypes = {
+    panels: PropTypes.arrayOf(PropTypes.object),
+    currentPanel: PropTypes.string,
+    setCurrentPanel: PropTypes.func,
+    validationMessages: PropTypes.object
+  };
+
+  render() {
+    const {
+      panels,
+      currentPanel,
+      setCurrentPanel,
+      validationMessages
+    } = this.props;
+
+    return (
+      <div style={styles.app}>
+        <PanelTabs
+          panels={panels}
+          currentPanel={currentPanel}
+          setCurrentPanel={setCurrentPanel}
+        />
+        <div style={styles.bodyContainer}>
+          <Panels currentPanel={currentPanel} />
+          <ValidationMessages
+            currentPanel={currentPanel}
+            validationMessages={validationMessages}
+          />
+        </div>
+      </div>
+    );
+  }
+}
+
+export default connect(
+  state => ({
+    panels: getPanels(state),
+    currentPanel: state.currentPanel,
+    validationMessages: validationMessages(state)
+  }),
+  dispatch => ({
+    setCurrentPanel(panel) {
+      dispatch(setCurrentPanel(panel));
+    }
+  })
+)(App);
