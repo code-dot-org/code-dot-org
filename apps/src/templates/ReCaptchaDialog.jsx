@@ -14,7 +14,7 @@ const styles = {
   }
 };
 
-export default class ReCaptchaValidationDialog extends React.Component {
+export default class ReCaptchaDialog extends React.Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
