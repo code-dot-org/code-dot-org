@@ -66,10 +66,10 @@ describe('AzureTextToSpeech', () => {
   });
 
   describe('createSoundPromise', () => {
-    let onProfanityFoundSpy;
+    let onFailureSpy;
 
     beforeEach(() => {
-      onProfanityFoundSpy = sinon.spy();
+      onFailureSpy = sinon.spy();
     });
 
     describe('with a cached sound', () => {
@@ -91,7 +91,7 @@ describe('AzureTextToSpeech', () => {
             text: `hi ${badWord}`,
             gender: 'female',
             languageCode: 'en-US',
-            onProfanityFound: onProfanityFoundSpy
+            onFailure: onFailureSpy
           });
         });
 
@@ -100,9 +100,9 @@ describe('AzureTextToSpeech', () => {
           assertSoundResponsesEqual(cachedSoundResponse, soundResponse);
         });
 
-        it('calls onProfanityFound', async () => {
+        it('calls onFailure', async () => {
           await soundPromise();
-          expect(onProfanityFoundSpy).to.have.been.calledOnce;
+          expect(onFailureSpy).to.have.been.calledOnce;
         });
       });
 
@@ -123,7 +123,7 @@ describe('AzureTextToSpeech', () => {
             text: 'hi',
             gender: 'female',
             languageCode: 'en-US',
-            onProfanityFound: onProfanityFoundSpy
+            onFailure: onFailureSpy
           });
         });
 
@@ -132,9 +132,9 @@ describe('AzureTextToSpeech', () => {
           assertSoundResponsesEqual(cachedSoundResponse, soundResponse);
         });
 
-        it('does not call onProfanityFound', async () => {
+        it('does not call onFailure', async () => {
           await soundPromise();
-          expect(onProfanityFoundSpy).not.to.have.been.called;
+          expect(onFailureSpy).not.to.have.been.called;
         });
       });
     });
@@ -165,7 +165,7 @@ describe('AzureTextToSpeech', () => {
             text: badWord,
             gender: 'female',
             languageCode: 'en-US',
-            onProfanityFound: onProfanityFoundSpy
+            onFailure: onFailureSpy
           };
           soundPromise = azureTTS.createSoundPromise(options);
           expectedSoundResponse = azureTTS.createSoundResponse_({
@@ -174,9 +174,9 @@ describe('AzureTextToSpeech', () => {
           });
         });
 
-        it('calls onProfanityFound', async () => {
+        it('calls onFailure', async () => {
           await soundPromise();
-          expect(onProfanityFoundSpy).to.have.been.calledOnce;
+          expect(onFailureSpy).to.have.been.calledOnce;
         });
 
         it('caches the response', async () => {
@@ -242,19 +242,20 @@ describe('AzureTextToSpeech', () => {
 
         describe('on failure', () => {
           beforeEach(() => {
-            const statusText = 'Bad Request';
+            const error = {status: 400};
             sinon
               .stub(azureTTS, 'convertTextToSpeech')
-              .returns(new Promise((_, reject) => reject({statusText})));
+              .returns(new Promise((_, reject) => reject(error)));
             options = {
               text: 'hello',
               gender: 'male',
-              languageCode: 'es-MX'
+              languageCode: 'es-MX',
+              onFailure: onFailureSpy
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
               ...options,
-              error: statusText
+              error
             });
           });
 
@@ -267,6 +268,11 @@ describe('AzureTextToSpeech', () => {
                 options.text
               )
             ).to.be.undefined;
+          });
+
+          it('calls onFailure', async () => {
+            await soundPromise();
+            expect(onFailureSpy).to.have.been.calledOnce;
           });
 
           it('resolves with error', async () => {
