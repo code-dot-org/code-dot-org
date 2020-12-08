@@ -129,12 +129,18 @@ class SchoolDistrict < ApplicationRecord
       end
     end
 
-    CDO.log.info "School District seeding: done processing #{filename}.\n"\
+    summary_message = "School District seeding: done processing #{filename}.\n"\
       "#{new_districts.length} new districts added.\n"\
-      "Districts added:\n"\
-      "#{new_districts.map {|district| district[:name]}.join("\n")}\n"\
       "#{updated_districts} districts updated.\n"\
       "#{unchanged_districts} districts in import with no updates.\n"
+
+    unless new_districts.empty?
+      summary_message <<
+        "Districts added:\n"\
+        "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
+    end
+
+    CDO.log.info summary_message
 
     districts
   end
