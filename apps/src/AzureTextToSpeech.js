@@ -55,7 +55,7 @@ export default class AzureTextToSpeech {
 
   /**
    *
-   * @param {function} soundPromise A thunk that returns promise, which resolves to a SoundResponse.
+   * @param {function} soundPromise A thunk that returns a promise, which resolves to a SoundResponse.
    */
   enqueueAndPlay = soundPromise => {
     this.enqueue_(soundPromise);
@@ -73,7 +73,7 @@ export default class AzureTextToSpeech {
    * @param {string} opts.ssml SSML in request body.
    * @param {string} opts.token Authentication token from Azure.
    * @param {function(Array<string>)} opts.onProfanityFound Called if the given text contains profanity.
-   * @returns {function} A thunk that returns promise, which resolves to a SoundResponse. Example usage:
+   * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse. Example usage:
    * const soundPromise = createSoundPromise(options);
    * const soundResponse = await soundPromise();
    */
@@ -226,7 +226,7 @@ export default class AzureTextToSpeech {
 
   /**
    * Add to the end of the queue.
-   * @param {function} promise A thunk that returns promise, which resolves to a SoundResponse.
+   * @param {function} promise A thunk that returns a promise, which resolves to a SoundResponse.
    * @private
    */
   enqueue_ = promise => {
@@ -235,7 +235,7 @@ export default class AzureTextToSpeech {
 
   /**
    * Get the next item in the queue.
-   * @returns {function} A thunk that returns promise, which resolves to a SoundResponse.
+   * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse.
    * @private
    */
   dequeue_ = () => {
