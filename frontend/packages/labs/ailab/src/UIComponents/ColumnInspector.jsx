@@ -7,7 +7,6 @@ import {
   setColumnsByDataType,
   getOptionFrequenciesByColumn,
   getRangesByColumn,
-  getColumnTypeReadOnly,
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 

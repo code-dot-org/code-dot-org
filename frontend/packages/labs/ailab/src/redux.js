@@ -21,8 +21,6 @@ import {
 
 import { ColumnTypes, MLTypes } from "./constants.js";
 
-import { store } from "./index";
-
 // Action types
 const RESET_STATE = "RESET_STATE";
 const SET_MODE = "SET_MODE";
