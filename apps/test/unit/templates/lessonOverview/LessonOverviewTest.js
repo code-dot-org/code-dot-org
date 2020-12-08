@@ -42,6 +42,7 @@ describe('LessonOverview', () => {
         overview: 'Lesson Overview',
         purpose: 'The purpose of the lesson is for people to learn',
         preparation: '- One',
+        assessmentOpportunities: 'Assessment Opportunities Details',
         resources: {
           Teacher: [
             {
@@ -85,7 +86,10 @@ describe('LessonOverview', () => {
     expect(safeMarkdowns.at(1).props().markdown).to.contain(
       'The purpose of the lesson is for people to learn'
     );
-    expect(safeMarkdowns.at(2).props().markdown).to.contain('- One');
+    expect(safeMarkdowns.at(2).props().markdown).to.contain(
+      'Assessment Opportunities Details'
+    );
+    expect(safeMarkdowns.at(3).props().markdown).to.contain('- One');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
     expect(inlineMarkdowns.at(0).props().markdown).to.contain(
