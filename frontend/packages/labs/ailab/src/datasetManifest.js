@@ -32,7 +32,6 @@ export const allDatasets = [
   }
 ];
 
-
 export function getAvailableDatasets(specificDatasets) {
   if (specificDatasets && specificDatasets.length > 1) {
     return allDatasets.filter(dataset => {
@@ -44,5 +43,7 @@ export function getAvailableDatasets(specificDatasets) {
 }
 
 export function getDefaultLabelForDataset(datasetId) {
-  return allDatasets.find(dataset => { return dataset.id === datasetId; });
+  return allDatasets.find(dataset => {
+    return dataset.id === datasetId;
+  });
 }

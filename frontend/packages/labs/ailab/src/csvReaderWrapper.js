@@ -5,7 +5,9 @@ import { ColumnTypes } from "./constants.js";
 
 export const parseCSV = (csvfile, download, setColumnsToOther) => {
   Papa.parse(csvfile, {
-    complete: result => { updateData(result, setColumnsToOther) },
+    complete: result => {
+      updateData(result, setColumnsToOther);
+    },
     header: true,
     download: download,
     skipEmptyLines: true

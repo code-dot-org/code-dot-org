@@ -39,7 +39,9 @@ class SelectTrainer extends Component {
             </select>
             {this.props.selectedTrainer && (
               <div>
-                <div style={styles.mediumText}>{compatibleTrainers[selectedTrainer]["mlType"]}</div>{" "}
+                <div style={styles.mediumText}>
+                  {compatibleTrainers[selectedTrainer]["mlType"]}
+                </div>{" "}
                 {compatibleTrainers[selectedTrainer]["description"]}
               </div>
             )}

@@ -42,22 +42,13 @@ class DataDisplay extends Component {
           {this.state.showRawData && (
             <div>
               <div style={styles.finePrint}>
-                <table style={{ whiteSpace: "nowrap" }}>
+                <table style={styles.dataDisplayTable}>
                   <thead>
                     <tr>
                       {data.length > 0 &&
                         Object.keys(data[0]).map(key => {
                           return (
-                            <th
-                              key={key}
-                              style={{
-                                display: "inline-block",
-                                width: 120,
-                                backgroundColor: "black",
-                                color: "white",
-                                textAlign: "right"
-                              }}
-                            >
+                            <th key={key} style={styles.dataDisplayHeader}>
                               {key}
                             </th>
                           );
@@ -72,14 +63,7 @@ class DataDisplay extends Component {
                             {data.length > 0 &&
                               Object.keys(row).map(key => {
                                 return (
-                                  <td
-                                    key={key}
-                                    style={{
-                                      display: "inline-block",
-                                      width: 120,
-                                      textAlign: "right"
-                                    }}
-                                  >
+                                  <td key={key} style={styles.dataDisplayCell}>
                                     {row[key]}
                                   </td>
                                 );

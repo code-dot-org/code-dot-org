@@ -1,1 +1,1 @@
-export {initAll} from './index';
+export { initAll } from "./index";

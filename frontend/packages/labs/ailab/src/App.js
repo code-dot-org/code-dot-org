@@ -19,7 +19,7 @@ class PanelTabs extends Component {
   static propTypes = {
     panels: PropTypes.arrayOf(PropTypes.object),
     currentPanel: PropTypes.string,
-    setCurrentPanel: PropTypes.func,
+    setCurrentPanel: PropTypes.func
   };
 
   getTabStyle(panel) {
@@ -58,27 +58,25 @@ class PanelTabs extends Component {
 class Panels extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
-    saveTrainedModel: PropTypes.func,
+    saveTrainedModel: PropTypes.func
   };
 
   render() {
     const { currentPanel, saveTrainedModel } = this.props;
 
     return (
-      <div style={{ marginTop: 20 }}>
-        <div style={styles.container}>
-          {currentPanel === "selectDataset" && <SelectDataset />}
-          {currentPanel === "dataDisplay" && <DataDisplay />}
-          {currentPanel === "selectFeatures" && <SelectFeatures />}
-          {currentPanel === "columnInspector" && <ColumnInspector />}
-          {currentPanel === "selectTrainer" && <SelectTrainer />}
-          {currentPanel === "trainModel" && <TrainModel />}
-          {currentPanel === "results" && <Results />}
-          {currentPanel === "predict" && <Predict />}
-          {currentPanel === "saveModel" && (
-            <SaveModel saveTrainedModel={saveTrainedModel} />
-          )}
-        </div>
+      <div style={styles.panelContainer}>
+        {currentPanel === "selectDataset" && <SelectDataset />}
+        {currentPanel === "dataDisplay" && <DataDisplay />}
+        {currentPanel === "selectFeatures" && <SelectFeatures />}
+        {currentPanel === "columnInspector" && <ColumnInspector />}
+        {currentPanel === "selectTrainer" && <SelectTrainer />}
+        {currentPanel === "trainModel" && <TrainModel />}
+        {currentPanel === "results" && <Results />}
+        {currentPanel === "predict" && <Predict />}
+        {currentPanel === "saveModel" && (
+          <SaveModel saveTrainedModel={saveTrainedModel} />
+        )}
       </div>
     );
   }
@@ -87,7 +85,7 @@ class Panels extends Component {
 class ValidationMessages extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
-    validationMessages: PropTypes.object,
+    validationMessages: PropTypes.object
   };
 
   render() {
@@ -127,7 +125,7 @@ class App extends Component {
     panels: PropTypes.arrayOf(PropTypes.object),
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
-    validationMessages: PropTypes.object,
+    validationMessages: PropTypes.object
   };
 
   render() {
@@ -135,7 +133,7 @@ class App extends Component {
       panels,
       currentPanel,
       setCurrentPanel,
-      validationMessages,
+      validationMessages
     } = this.props;
 
     return (
@@ -145,11 +143,13 @@ class App extends Component {
           currentPanel={currentPanel}
           setCurrentPanel={setCurrentPanel}
         />
-        <Panels currentPanel={currentPanel} />
-        <ValidationMessages
-          currentPanel={currentPanel}
-          validationMessages={validationMessages}
-        />
+        <div style={styles.bodyContainer}>
+          <Panels currentPanel={currentPanel} />
+          <ValidationMessages
+            currentPanel={currentPanel}
+            validationMessages={validationMessages}
+          />
+        </div>
       </div>
     );
   }
@@ -159,11 +159,11 @@ export default connect(
   state => ({
     panels: getPanels(state),
     currentPanel: state.currentPanel,
-    validationMessages: validationMessages(state),
+    validationMessages: validationMessages(state)
   }),
   dispatch => ({
     setCurrentPanel(panel) {
       dispatch(setCurrentPanel(panel));
-    },
+    }
   })
 )(App);

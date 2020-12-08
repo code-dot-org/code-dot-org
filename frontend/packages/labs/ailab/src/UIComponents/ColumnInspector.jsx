@@ -6,7 +6,7 @@ import {
   getSelectedColumns,
   setColumnsByDataType,
   getOptionFrequenciesByColumn,
-  getRangesByColumn,
+  getRangesByColumn
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 
@@ -17,7 +17,7 @@ class ColumnInspector extends Component {
     setColumnsByDataType: PropTypes.func.isRequired,
     uniqueOptionsByColumn: PropTypes.object,
     getRangesByColumn: PropTypes.func,
-    rangesByColumn: PropTypes.object,
+    rangesByColumn: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -30,7 +30,7 @@ class ColumnInspector extends Component {
       selectedColumns,
       columnsByDataType,
       uniqueOptionsByColumn,
-      rangesByColumn,
+      rangesByColumn
     } = this.props;
 
     return (
@@ -163,11 +163,11 @@ export default connect(
     selectedColumns: getSelectedColumns(state),
     columnsByDataType: state.columnsByDataType,
     uniqueOptionsByColumn: getOptionFrequenciesByColumn(state),
-    rangesByColumn: getRangesByColumn(state),
+    rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
       dispatch(setColumnsByDataType(column, dataType));
-    },
+    }
   })
 )(ColumnInspector);
