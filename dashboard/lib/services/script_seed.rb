@@ -12,9 +12,13 @@
 
 module Services
   module ScriptSeed
-    # Holds data that we've already retrieved from the database. Used to look up associations of objects without making additional queries.
+    # Holds data that we've already retrieved from the database. Used to look up
+    # associations of objects without making additional queries.
     # Storing this data together in a "data object" makes it easier to pass around.
-    SeedContext = Struct.new(:script, :lesson_groups, :lessons, :lesson_activities, :activity_sections, :script_levels, :levels_script_levels, :levels,  keyword_init: true)
+    SeedContext = Struct.new(
+      :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
+      :script_levels, :levels_script_levels, :levels, :resources,  keyword_init: true
+    )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
     # designed to be used for seeding.
@@ -35,6 +39,7 @@ module Services
 
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
+      resources = script.lessons.map(&:resources).flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -44,7 +49,8 @@ module Services
         activity_sections: sections,
         script_levels: my_script_levels,
         levels_script_levels: script.levels_script_levels,
-        levels: my_levels
+        levels: my_levels,
+        resources: resources
       )
       scope = {seed_context: seed_context}
 
@@ -55,7 +61,8 @@ module Services
         lesson_activities: activities.map {|a| ScriptSeed::LessonActivitySerializer.new(a, scope: scope).as_json},
         activity_sections: sections.map {|s| ScriptSeed::ActivitySectionSerializer.new(s, scope: scope).as_json},
         script_levels: script.script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
-        levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json}
+        levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json},
+        resources: resources.map {|r| ScriptSeed::ResourceSerializer.new(r, scope: scope).as_json}
       }
       JSON.pretty_generate(data)
     end
@@ -399,6 +406,14 @@ module Services
 
     class LevelsScriptLevelSerializer < ActiveModel::Serializer
       attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class ResourceSerializer < ActiveModel::Serializer
+      attributes :name, :url, :key, :properties, :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])

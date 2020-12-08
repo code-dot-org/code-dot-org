@@ -480,5 +480,8 @@
         "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1-section-1"
       }
     }
+  ],
+  "resources": [
+
   ]
 }
