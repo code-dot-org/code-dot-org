@@ -456,50 +456,11 @@ P5Lab.prototype.init = function(config) {
   let initialAnimationList = useConfig
     ? config.initialAnimationList
     : this.startAnimations;
+  initialAnimationList = this.loadMissingAnimationDefaultsIfNecessary(
+    useConfig,
+    initialAnimationList
+  );
 
-  // useConfig does not imply that we have startAnimations because GameLab doesn't have startAnimations.
-  if (useConfig && this.startAnimations) {
-    // We need to make sure we include all of the default animations (in case they have changed since this project was created).
-    let configDictionary = {};
-    initialAnimationList.orderedKeys.forEach(key => {
-      const name = initialAnimationList.propsByKey[key].name;
-      configDictionary[name] = key;
-    });
-    this.startAnimations.orderedKeys.forEach(key => {
-      const name = this.startAnimations.propsByKey[key].name;
-      if (!configDictionary[name]) {
-        initialAnimationList.orderedKeys.push(key);
-        initialAnimationList.propsByKey[key] = this.startAnimations.propsByKey[
-          key
-        ];
-      }
-    });
-  } else if (this.isSpritelab) {
-    // check if initialAnimationList has backgrounds. If it doesn't add it from defaultSprites.json
-    let hasBackgrounds = false;
-    let configDictionary = {};
-    initialAnimationList.orderedKeys.forEach(key => {
-      const name = initialAnimationList.propsByKey[key].name;
-      configDictionary[name] = key;
-    });
-    defaultSprites.orderedKeys.forEach(key => {
-      if (
-        defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
-        configDictionary[defaultSprites.propsByKey[key].name]
-      ) {
-        hasBackgrounds = true;
-      }
-    });
-    if (!hasBackgrounds) {
-      // add the backgrounds from defaultSprites
-      defaultSprites.orderedKeys.forEach(key => {
-        if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
-          initialAnimationList.orderedKeys.push(key);
-          initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
-        }
-      });
-    }
-  }
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,
@@ -542,6 +503,66 @@ P5Lab.prototype.init = function(config) {
     return loader.catch(() => {});
   }
   return loader;
+};
+
+/**
+ * Load any necessary missing animations. For now, this is mainly for
+ * the set background to block, which needs there to be backgrounds in the
+ * animation list at the start in order to look not broken,
+ * @param {Boolean} useConfig
+ * @param {Object} initialAnimationList
+ */
+P5Lab.prototype.loadMissingAnimationDefaultsIfNecessary = function(
+  useConfig,
+  initialAnimationList
+) {
+  if (this.isSpritelab) {
+    let configDictionary = {};
+    initialAnimationList.orderedKeys.forEach(key => {
+      const name = initialAnimationList.propsByKey[key].name;
+      configDictionary[name] = key;
+    });
+    if (useConfig && this.startAnimations) {
+      // We need to make sure we include all of the default animations (in case they have changed since this project was created).
+      this.startAnimations.orderedKeys.forEach(key => {
+        const name = this.startAnimations.propsByKey[key].name;
+        if (!configDictionary[name]) {
+          initialAnimationList.orderedKeys.push(key);
+          initialAnimationList.propsByKey[
+            key
+          ] = this.startAnimations.propsByKey[key];
+        }
+      });
+    }
+    // Check if initialAnimationList has backgrounds. If it doesn't add it from defaultSprites.json
+    // This is primarily to handle pre existing levels that don't have animations in their list yet
+    let hasBackgrounds = false;
+    initialAnimationList.orderedKeys.forEach(key => {
+      if (
+        initialAnimationList.propsByKey[key].categories &&
+        initialAnimationList.propsByKey[key].categories.includes('backgrounds')
+      ) {
+        hasBackgrounds = true;
+      }
+    });
+    defaultSprites.orderedKeys.forEach(key => {
+      if (
+        defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
+        configDictionary[defaultSprites.propsByKey[key].name]
+      ) {
+        hasBackgrounds = true;
+      }
+    });
+    if (!hasBackgrounds) {
+      defaultSprites.orderedKeys.forEach(key => {
+        if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
+          initialAnimationList.orderedKeys.push(key);
+          initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
+        }
+      });
+    }
+  }
+  return initialAnimationList;
 };
 
 /**
