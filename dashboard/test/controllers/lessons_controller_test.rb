@@ -226,6 +226,19 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 1, activity.position
   end
 
+  test 'update saves lesson name i18n in levelbuilder mode' do
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    sign_in @levelbuilder
+    put :update, params: @update_params
+  end
+
+  test 'update does not save lesson name i18n without levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write).raises('must not modify filesystem')
+    sign_in @levelbuilder
+    put :update, params: @update_params
+  end
+
   test 'remove activity via lesson update' do
     sign_in @levelbuilder
 
