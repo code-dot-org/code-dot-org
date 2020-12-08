@@ -15,24 +15,11 @@
       "project_sharing": true,
       "teacher_resources": [
         [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-20/unit5/"
-        ],
-        [
           "teacherForum",
           "https://forum.code.org/c/csd"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-20/unit5/vocab"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-20/unit5/standards/"
         ]
       ],
-      "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,

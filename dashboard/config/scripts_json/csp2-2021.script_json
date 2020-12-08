@@ -13,18 +13,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "project_sharing": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-20/unit2/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-20/unit2/standards/"
-        ]
-      ],
-      "is_migrated": true,
-      "peer_reviews_to_complete": 0
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
