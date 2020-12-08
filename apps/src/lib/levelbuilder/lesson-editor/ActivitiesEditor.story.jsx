@@ -10,14 +10,13 @@ import resourcesEditor, {
 import {Provider} from 'react-redux';
 import {
   sampleActivities,
-  levelKeyList,
   searchOptions
 } from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
 const createStore = () => {
   registerReducers({...reducers, resources: resourcesEditor});
   const store = createStoreWithReducers();
-  store.dispatch(init(sampleActivities, levelKeyList, searchOptions));
+  store.dispatch(init(sampleActivities, searchOptions));
   store.dispatch(initResources([]));
   return store;
 };
