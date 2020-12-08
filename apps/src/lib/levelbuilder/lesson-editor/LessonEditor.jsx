@@ -301,15 +301,19 @@ class LessonEditor extends Component {
           />
         </CollapsibleEditorSection>
 
-        {this.props.courseVersionId && (
-          <CollapsibleEditorSection
-            title="Resources"
-            collapsed={true}
-            fullWidth={true}
-          >
+        <CollapsibleEditorSection
+          title="Resources"
+          collapsed={true}
+          fullWidth={true}
+        >
+          {this.props.courseVersionId ? (
             <ResourcesEditor courseVersionId={this.props.courseVersionId} />
-          </CollapsibleEditorSection>
-        )}
+          ) : (
+            <h4>
+              Resources cannot be added if a script is not in a course version.
+            </h4>
+          )}
+        </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
           title="Objectives"
