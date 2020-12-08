@@ -228,6 +228,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'update saves lesson name i18n in levelbuilder mode' do
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? '.script_json'}.once
     sign_in @levelbuilder
     put :update, params: @update_params
   end
