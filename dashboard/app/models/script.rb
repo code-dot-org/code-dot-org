@@ -1131,14 +1131,18 @@ class Script < ApplicationRecord
 
         # Also save in JSON format for "new seeding". This has not been launched yet, but as part of
         # pre-launch testing, we'll start generating these files in addition to the old .script files.
-        script_json_filepath = "config/scripts_json/#{script_params[:name]}.script_json"
-        File.write(script_json_filepath, Services::ScriptSeed.serialize_seeding_json(script))
+        script.write_script_json
       end
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
       return false
     end
+  end
+
+  def write_script_json
+    script_json_filepath = "config/scripts_json/#{name}.script_json"
+    File.write(script_json_filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
   # @param types [Array<string>]
