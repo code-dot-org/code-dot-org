@@ -77,7 +77,7 @@ class StageLockDialog extends React.Component {
         lockStatus: PropTypes.oneOf(Object.values(LockStatus)).isRequired
       })
     ),
-    selectedSectionId: PropTypes.string.isRequired,
+    selectedSectionId: PropTypes.number,
     saving: PropTypes.bool.isRequired,
     saveDialog: PropTypes.func.isRequired
   };
@@ -151,7 +151,7 @@ class StageLockDialog extends React.Component {
     const responsiveHeight = {
       maxHeight: window.innerHeight * 0.8 - 100
     };
-    const hasSelectedSection = this.props.selectedSectionId !== '';
+    const hasSelectedSection = this.props.selectedSectionId !== null;
     const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
     return (
       <BaseDialog
@@ -331,7 +331,7 @@ export default connect(
     initialLockStatus: state.stageLock.lockStatus,
     isOpen: !!state.stageLock.lockDialogStageId,
     saving: state.stageLock.saving,
-    selectedSectionId: state.teacherSections.selectedSectionId.toString()
+    selectedSectionId: state.teacherSections.selectedSectionId
   }),
   dispatch => ({
     saveDialog(sectionId, lockStatus) {

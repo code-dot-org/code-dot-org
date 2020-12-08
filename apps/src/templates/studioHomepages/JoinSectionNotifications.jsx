@@ -4,27 +4,35 @@ import React from 'react';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
-export default function JoinSectionNotifications({action, result, name, id}) {
+export default function JoinSectionNotifications({
+  action,
+  result,
+  sectionName,
+  sectionCode
+}) {
   if (action === 'join' && result === 'success') {
-    return <JoinSectionSuccessNotification sectionName={name} />;
+    return <JoinSectionSuccessNotification sectionName={sectionName} />;
   } else if (action === 'leave' && result === 'success') {
     return (
-      <LeaveSectionSuccessNotification sectionName={name} sectionId={id} />
+      <LeaveSectionSuccessNotification
+        sectionName={sectionName}
+        sectionCode={sectionCode}
+      />
     );
   } else if (action === 'join' && result === 'section_notfound') {
-    return <JoinSectionNotFoundNotification sectionId={id} />;
+    return <JoinSectionNotFoundNotification sectionCode={sectionCode} />;
   } else if (action === 'join' && result === 'fail') {
-    return <JoinSectionFailNotification sectionId={id} />;
+    return <JoinSectionFailNotification sectionCode={sectionCode} />;
   } else if (action === 'join' && result === 'exists') {
-    return <JoinSectionExistsNotification sectionName={name} />;
+    return <JoinSectionExistsNotification sectionName={sectionName} />;
   }
   return null;
 }
 JoinSectionNotifications.propTypes = {
   action: PropTypes.string,
   result: PropTypes.string,
-  name: PropTypes.string,
-  id: PropTypes.string
+  sectionName: PropTypes.string,
+  sectionCode: PropTypes.string
 };
 
 const JoinSectionSuccessNotification = ({sectionName}) => (
@@ -39,34 +47,34 @@ JoinSectionSuccessNotification.propTypes = {
   sectionName: PropTypes.string.isRequired
 };
 
-const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (
+const LeaveSectionSuccessNotification = ({sectionName, sectionCode}) => (
   <Notification
     type="success"
     notice={i18n.sectionsNotificationSuccess()}
-    details={i18n.sectionsNotificationLeaveSuccess({sectionName, sectionId})}
+    details={i18n.sectionsNotificationLeaveSuccess({sectionName, sectionCode})}
     dismissible={true}
   />
 );
 LeaveSectionSuccessNotification.propTypes =
   JoinSectionSuccessNotification.propTypes;
 
-const JoinSectionNotFoundNotification = ({sectionId}) => (
+const JoinSectionNotFoundNotification = ({sectionCode}) => (
   <Notification
     type="failure"
     notice={i18n.sectionsNotificationFailure()}
-    details={i18n.sectionsNotificationJoinNotFound({sectionId})}
+    details={i18n.sectionsNotificationJoinNotFound({sectionCode})}
     dismissible={true}
   />
 );
 JoinSectionNotFoundNotification.propTypes = {
-  sectionId: PropTypes.string.isRequired
+  sectionCode: PropTypes.string.isRequired
 };
 
-const JoinSectionFailNotification = ({sectionId}) => (
+const JoinSectionFailNotification = ({sectionCode}) => (
   <Notification
     type="failure"
     notice={i18n.sectionsNotificationFailure()}
-    details={i18n.sectionsNotificationJoinFail({sectionId})}
+    details={i18n.sectionsNotificationJoinFail({sectionCode})}
     dismissible={true}
   />
 );
