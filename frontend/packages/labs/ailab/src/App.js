@@ -11,25 +11,20 @@ import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import {
-  setCurrentPanel,
-  getPanelVisible,
-  getPanelEnabled,
-  panelList,
-  validationMessages
-} from "./redux";
+import { getPanels, setCurrentPanel, validationMessages } from "./redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquare, faCheckSquare } from "@fortawesome/free-regular-svg-icons";
 
 class PanelTabs extends Component {
   static propTypes = {
+    panels: PropTypes.arrayOf(PropTypes.object),
     currentPanel: PropTypes.string,
-    setCurrentPanel: PropTypes.func
+    setCurrentPanel: PropTypes.func,
   };
 
   getTabStyle(panel) {
-    if (getPanelEnabled(panel)) {
-      if (panel === this.props.currentPanel) {
+    if (panel.enabled) {
+      if (panel.id === this.props.currentPanel) {
         return { ...styles.tab, ...styles.currentTab };
       } else {
         return styles.tab;
@@ -40,25 +35,21 @@ class PanelTabs extends Component {
   }
 
   render() {
-    const { setCurrentPanel } = this.props;
+    const { panels, setCurrentPanel } = this.props;
 
     return (
       <div style={styles.tabContainer}>
-        {panelList
-          .filter(panel => {
-            return getPanelVisible(panel.id);
-          })
-          .map(panel => {
-            return (
-              <div
-                key={panel.id}
-                style={this.getTabStyle(panel.id)}
-                onClick={() => setCurrentPanel(panel.id)}
-              >
-                {panel.label}
-              </div>
-            );
-          })}
+        {panels.map(panel => {
+          return (
+            <div
+              key={panel.id}
+              style={this.getTabStyle(panel)}
+              onClick={() => setCurrentPanel(panel.id)}
+            >
+              {panel.label}
+            </div>
+          );
+        })}
       </div>
     );
   }
@@ -67,7 +58,7 @@ class PanelTabs extends Component {
 class Panels extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
-    saveTrainedModel: PropTypes.func
+    saveTrainedModel: PropTypes.func,
   };
 
   render() {
@@ -96,7 +87,7 @@ class Panels extends Component {
 class ValidationMessages extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
-    validationMessages: PropTypes.object
+    validationMessages: PropTypes.object,
   };
 
   render() {
@@ -133,17 +124,24 @@ class ValidationMessages extends Component {
 
 class App extends Component {
   static propTypes = {
+    panels: PropTypes.arrayOf(PropTypes.object),
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
-    validationMessages: PropTypes.object
+    validationMessages: PropTypes.object,
   };
 
   render() {
-    const { currentPanel, setCurrentPanel, validationMessages } = this.props;
+    const {
+      panels,
+      currentPanel,
+      setCurrentPanel,
+      validationMessages,
+    } = this.props;
 
     return (
       <div style={styles.app}>
         <PanelTabs
+          panels={panels}
           currentPanel={currentPanel}
           setCurrentPanel={setCurrentPanel}
         />
@@ -159,12 +157,13 @@ class App extends Component {
 
 export default connect(
   state => ({
+    panels: getPanels(state),
     currentPanel: state.currentPanel,
-    validationMessages: validationMessages(state)
+    validationMessages: validationMessages(state),
   }),
   dispatch => ({
     setCurrentPanel(panel) {
       dispatch(setCurrentPanel(panel));
-    }
+    },
   })
 )(App);
