@@ -30,7 +30,7 @@ require 'ruby-progressbar'
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
 # A sequence of Levels
-class Script < ActiveRecord::Base
+class Script < ApplicationRecord
   include ScriptConstants
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -153,6 +153,7 @@ class Script < ActiveRecord::Base
     is_course
     background
     show_calendar
+    is_migrated
   )
 
   def self.twenty_hour_script
@@ -1298,8 +1299,10 @@ class Script < ActiveRecord::Base
       tts: tts?,
       is_course: is_course?,
       background: background,
+      is_migrated: is_migrated?,
       updatedAt: updated_at,
-      scriptPath: script_path(self)
+      scriptPath: script_path(self),
+      showCalendar: show_calendar
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1486,7 +1489,9 @@ class Script < ActiveRecord::Base
       :is_stable,
       :project_sharing,
       :tts,
-      :is_course
+      :is_course,
+      :show_calendar,
+      :is_migrated
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path

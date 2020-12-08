@@ -47,7 +47,8 @@ let lesson = {
   displayName: 'Lesson 1',
   overview: 'Lesson Overview',
   purpose: 'The purpose of the lesson is for people to learn',
-  preparation: '- One'
+  preparation: '- One',
+  assessmentOpportunities: 'Assessment Opportunities'
 };
 
 describe('LessonNavigationDropdown', () => {

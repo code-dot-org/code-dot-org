@@ -2825,3 +2825,7 @@ el:
               name: Μάθημα A
             Course B:
               name: Μάθημα B
+        ml-playground:
+          lessons:
+            intro:
+              name: Εισαγωγή

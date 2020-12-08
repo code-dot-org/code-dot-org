@@ -8756,3 +8756,9 @@ se:
           lessons:
             CS Discoveries:
               name: CS Fuomášumit
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI Mearaide
+            visualizing:
+              name: Visuálisere Dataid

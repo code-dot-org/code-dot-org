@@ -5,27 +5,27 @@ it:
   language: Italiano
   front_title: Partecipa all'evento didattico più popolare del mondo, %{campaign_date}
   coming_soon: Sta arrivando
-  campaign_date_start_short: 7 Dic.
-  campaign_date_start_long: 7 Dicembre
-  campaign_date_short: Dal 7 al 13 Dicembre
-  campaign_date_full: Dal 7 al 13 Dicembre
+  campaign_date_start_short: 7 dic.
+  campaign_date_start_long: 7 dicembre
+  campaign_date_short: 7 -13 dic.
+  campaign_date_full: 7-13 dicembre
   campaign_date_year: '2020'
-  campaign_date_full_year: dal 7 al 13 dicembre 2020
-  latam_campaign_date_start_short: '1 ottobre '
+  campaign_date_full_year: 7- 13 dicembre 2020
+  latam_campaign_date_start_short: 1 ott.
   latam_campaign_date_start_long: '1 ottobre '
-  latam_campaign_date_short: 1 ottobre - 18 dicembre
+  latam_campaign_date_short: 1 ott. - 18 dic.
   latam_campaign_date_full: 1 ottobre - 18 dicembre
   latam_campaign_date_year: '2020'
   latam_campaign_date_full_year: 1 ottobre 2020 - 18 dicembre 2020
   europe_campaign_date_start_short: 10 ottobre
   europe_campaign_date_start_long: 10 ottobre
-  europe_campaign_date_short: 10-25 ottobre
+  europe_campaign_date_short: 10-25 ott.
   europe_campaign_date_full: 10-25 ottobre
   europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: 10-25 ottobre, 2020
-  africa_campaign_date_start_short: '1 ottobre '
+  africa_campaign_date_start_short: 1 ott.
   africa_campaign_date_start_long: '1 ottobre '
-  africa_campaign_date_short: 1-31 ottobre
+  africa_campaign_date_short: 1-31 ott.
   africa_campaign_date_full: 1-31 ottobre
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 ottobre, 2020
@@ -35,14 +35,22 @@ it:
 
     costruisci un domani più luminoso.
   social_hoc2020_cs_important: 'L''informatica è più importante che mai. Costruiamo
-    il futuro che vogliamo. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: "#HourOfCode riguarda #CSforGood. Impara
-    oggi, costruisci un domani più luminoso."
+    il futuro che vogliamo. #CSforGood #informaticaXbenecomune'
+  social_hoc2020_hoc_is_about_csforgood: 'L''Ora del Codice è dedicata all''informatica
+    per il bene comune. Impara oggi, costruisci un domani più luminoso. #OradelCodice
+    #HourOfCode #informaticaXbenecomune #CSforGood'
   social_hoc2020_global_movement: L'Ora del Codice è un movimento globale che coinvolge
     decine di milioni di studenti. I tutorial di un'ora sono disponibili per tutte
     le età e in oltre 45 lingue.
-  social_hoc2020_coming_dates: L'Ora del Codice arriverà dal 7 al 13 dicembre 2020.
+  social_hoc2020_coming_dates: L'Ora del Codice si svolgerà dal 7 al 13 dicembre 2020.
     L'informatica è fondamentale per l'apprendimento di ogni studente.
+  hoc2020_ai_subheader: L'Ora del Codice sta arrivando!
+  hoc2020_ai_header: Esplora l'intelligenza artificiale
+  hoc2020_ai_description: L'intelligenza artificiale e l'apprendimento automatico
+    stanno influenzando il nostro mondo. Unisciti a noi per esplorare l'IA in una
+    nuova serie di video, addestra l'Intelligenza Artificiale per i Mari in oltre
+    25 lingue, partecipa al dibattito sull'etica e l'intelligenza artificiale e altro
+    ancora ...
   hoc2019_header: Impara l'informatica e cambia il mondo.
   hoc2019_header_line1_mobile: Impara l'informatica.
   hoc2019_header_line2_mobile: Cambia il mondo.
@@ -57,7 +65,7 @@ it:
     2019. È fondamentale che ogni studente apprenda l’informatica.
   social_hoc2019_dance: Con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj e altri 34!
-  oceans_landing_title: IA per i Mari
+  oceans_landing_title: L'Intelligenza Artificiale per il mare
   oceans_landing_description: Informazioni sull'apprendimento automatico e sull'uso
     etico dell'intelligenza artificiale.
   cs_for_good_hashtag: "#CSforGood"
@@ -82,7 +90,7 @@ it:
     per aiutarti a insegnare l'Intelligenza Artificiale, l'apprendimento automatico,
     i dati di formazione e i pregiudizi, esplorando le questioni etiche.
   oceans_landing_resource_button: Visualizza le risorse
-  oceans_landing_cs_for_good: Informatica per sempre
+  oceans_landing_cs_for_good: Informatica per il bene comune
   oceans_landing_cs_for_good_desc: Risorse per aiutare gli alunni a comprendere il
     ruolo che l'informatica potrebbe svolgere nella creazione di un mondo più equo.
   oceans_landing_videos: Video sull'intelligenza Artificiale e l'Apprendimento Automatico
@@ -145,7 +153,7 @@ it:
     alla nostra mailing list per ricevere le registrazioni degli episodi e le risorse
     per continuare ad imparare a casa.
   hoc_live_join_us: Unisciti a noi
-  hoc_overview_oceans_tutorial_header: IA per i Mari
+  hoc_overview_oceans_tutorial_header: L'Intelligenza Artificiale per il mare
   hoc_overview_oceans_tutorial_desc: Scopri l'Intelligenza Artificiale (AI), l'apprendimento
     automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni
     etiche e in che modo l'Intelligenza Artificiale può essere utilizzata per affrontare
@@ -166,7 +174,7 @@ it:
   description: Descrizione
   audience: Pubblico
   ai_resource_header: Insegna e impara sull'Intelligenza Artificiale
-  ai_resource_minecraft: IA in Minecraft per sempre
+  ai_resource_minecraft: Intelligenza Artificiale in Minecraft per il bene comune
   ai_resource_minecraft_desc: 'Accedi a risorse gratuite tra cui un programma di lezioni,
     video, piano di studi in informatica e corsi di formazione per insegnanti. (Richiede
     Minecraft: Versione Education)'
@@ -428,7 +436,7 @@ it:
     a farla conoscere a 100 milioni di studenti.
   front_join_us_description_short: L'informatica è fondamentale per ogni studente.
   front_join_us_button: Unisciti a noi
-  front_what_is_hoc: Cosa è l'Ora del Codice?
+  front_what_is_hoc: Cos'è l'Ora del Codice?
   front_join_us_header: Chiunque può imparare i concetti fondamentali dell'informatica,
     e divertirsi facendolo!
   front_join_us_volunteer_header: Volontari per l'Ora del Codice (se sei in Italia,
@@ -491,9 +499,9 @@ it:
     con l'Ora del Codice. Apriremo le iscrizioni per il festeggiamento annuale in
     ottobre.
   signup_header: |-
-    Organizza un'Ora del Codice %{campaign_date}, e registrati qui.
+    Organizza un'Ora del Codice nel periodo %{campaign_date} e registrati qui.
 
-    Se sei in Italia, crea il tuo profilo attraverso il sito italiano di Programma il Futuro, sarà tutto più semplice! www.programmailfuturo.it
+    Se sei in Italia, crea il tuo profilo attraverso il sito italiano di [Programma il Futuro](https://programmailfuturo.it), sarà tutto più semplice!
   signup_name_label: Il tuo nome
   signup_name_error: Il Nome è richiesto.
   signup_email_label: Il tuo indirizzo di posta elettronica
@@ -529,8 +537,8 @@ it:
     per favore indica un differente nome o indirizzo di posta elettronica per ognuno
     di essi. Contiamo solo un evento per ogni differente combinazione di nome e indirizzo
     di posta elettronica.
-  signup_registration_deadline: Le iscrizioni per l'Ora del Codice del 2019 si chiudono
-    il 16 dicembre.
+  signup_registration_deadline: Le iscrizioni per l'Ora del Codice si chiudono il
+    13 dicembre.
   signup_name_placeholder: Il tuo nome
   signup_email_placeholder: Per esempio, nome.cognome@posta.istruzione.it
   signup_organization_name_placeholder: Per esempio, Liceo Dante Alighieri
@@ -594,8 +602,8 @@ it:
   map_warning: La mappa dell'Ora del Codice mostra solo i primi 200.000 eventi registrati.
     Tutti gli eventi registrati con un indirizzo valido possono essere visualizzati
     alla <a href='%{events_url}'>pagina degli eventi.</a>
-  map_warning_markdown: È possibile visualizzare un elenco completo degli eventi sulla
-    [events page.](%{events_url})
+  map_warning_markdown: È possibile visualizzare l'elenco completo sulla [pagina degli
+    eventi](%{events_url}).
   meta_tag_og_title: L'Ora di Codice sta arrivando
   meta_tag_og_description: L'Ora del Codice è un movimento globale che coinvolge decine
     di milioni di studenti in più di 180 nazioni e in più di 45 lingue.
@@ -609,7 +617,7 @@ it:
   twitter_donor_text_2019: 'Quest''anno #HourOfCode parlerà di #CSforGood. Io ci sono.
     E tu? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: FAQ
-  hoc_faq_what_is_hoc_q: Cosa è l'Ora del Codice?
+  hoc_faq_what_is_hoc_q: Cos'è l'Ora del Codice?
   hoc_faq_what_is_hoc_a: L'Ora del Codice è iniziata come una lezione di introduzione
     all'informatica della durata di un'ora, progettata per rimuovere l'alone di mistero
     che spesso avvolge la programmazione dei computer e per mostrare che l'informatica
@@ -619,14 +627,14 @@ it:
     impegno collettivo.<a href='%{tutorials}'> Guarda le esercitazioni disponibili</a>.
     Lo sforzo viene supportato da più di <a href='%{partners}'>400 partner</a> e 200,000
     insegnanti in tutto il mondo.
-  hoc_faq_what_is_hoc_a_markdown: L'Ora del Codice è nata come introduzione di un'ora
-    d'informatica, progettata per demistificare il "codice" e dimostrare che chiunque
-    può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica.
-    Da allora è diventata uno sforzo mondiale per celebrare l'informatica, iniziando
-    con attività di codifica di 1 ora ma espandendosi a tutti i tipi di sforzi della
-    community. Dai uno sguardo ai [tutorials and activities](%{tutorials}). Questa
-    campagna di base è supportata da oltre [400 partners](%{partners}) e da 200,000
-    insegnanti in tutto il mondo.
+  hoc_faq_what_is_hoc_a_markdown: L'Ora del Codice è iniziato come una lezione di
+    introduzione all'informatica della durata di un'ora, progettata per rimuovere
+    l'alone di mistero che spesso avvolge il "codice" e la programmazione dei computer
+    e per allargare la partecipazione nel campo dell'informatica. Da allora è diventata
+    uno sforzo globale per diffondere l'informatica, iniziando con attività di programmazione
+    della durata di 1 ora, ed espandendosi grazie ad un incredibile impegno collettivo.
+    Guarda tutte le [attività disponibili](%{tutorials}). Questa campagna viene supportata
+    da più di [400 partner](%{partners}) e 200,000 educatori in tutto il mondo.
   hoc_faq_last_year: Prova le esercitazioni
   hoc_faq_when_is_hoc_q: Quando è l'Ora del Codice?
   hoc_faq_when_is_hoc_a: L'Ora del Codice si svolge ogni anno durante la <a href='%{csedweek_url}'>Settimana
@@ -636,46 +644,47 @@ it:
     viene svolta ogni anno nel periodo in cui ricade la data di nascita della pioniera
     dell'Informatica <a href='%{grace_hopper}'>Ammiraglio Grace Murray Hopper</a>
     (9 dicembre 1906).
-  hoc_faq_when_is_hoc_a_markdown: L'Ora del Codice si svolge ogni anno durante [Computer
-    Science Education Week](%{csedweek_url}). Il %{campaign_date_year} sarà la settimana
-    dell'educazione informatica %{campaign_date_full}, ma si può ospitare un'Ora del
-    Codice durante tutto l'anno. La settimana dell'educazione informatica si tiene
-    ogni anno in riconoscimento del compleanno del pioniere dell'informatica [Admiral
-    Grace Murray Hopper](%{grace_hopper}) (9, dicembre, 1906).
+  hoc_faq_when_is_hoc_a_markdown: L'Ora del Codice si svolge ogni anno durante la
+    [Settimana di Educazione all'Informatica](%{csedweek_url}). La Settimana di Educazione
+    all'Informatica del %{campaign_date_year} sarà nel periodo %{campaign_date_full},
+    ma puoi organizzare un'Ora del Codice durante tutto l'anno. La Settimana di Educazione
+    all'Informatica viene svolta ogni anno nel periodo in cui ricade la data di nascita
+    della pioniera dell'Informatica [Ammiraglio Grace Murray Hopper](%{grace_hopper})
+    (9 dicembre 1906).
   hoc_faq_why_cs_q: Perché l'informatica?
-  hoc_faq_why_cs_a: <i>Ogni</i> studente dovrebbe avere l'opportunità di imparare
+  hoc_faq_why_cs_a: "<i>Ogni</i> studente dovrebbe avere l'opportunità di imparare
     l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di problemi,
     la logica e la creatività. Iniziando in giovane età, gli studenti avranno le basi
     per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo. Vedi
     ulteriori statistiche <a href='%{stats_url}'>qua</a>. Se sei in Italia visita
-    il sito <a href="https://programmailfuturo.it">Programma il Futuro</a>.
-  hoc_faq_why_cs_a_markdown: "<i>Ogni</i> studente dovrebbe avere l'opportunità di
-    imparare l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di
-    problemi, la logica e la creatività. Iniziando in giovane età, gli studenti avranno
-    le basi per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo.
-    Vedi ulteriori statistiche [here](%{stats_url})."
+    il sito [Programma il Futuro](https://programmailfuturo.it)."
+  hoc_faq_why_cs_a_markdown: _Ogni_ studente dovrebbe avere l'opportunità di imparare
+    l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di problemi,
+    la logica e la creatività. Iniziando in giovane età, gli studenti avranno le basi
+    per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo. Vedi
+    ulteriori statistiche [here](%{stats_url}). Se sei in Italia visita il sito programmailfuturo.it
   hoc_faq_how_participate_q: Come partecipare all'Ora del Codice?
   hoc_faq_how_participate_a: "<a href='/how-to'>Inizia la progettazione qui</a> esaminando
     la nostra guida. Puoi organizzare un evento dell'Ora del Codice nella tua scuola
     o nel tua comunità &mdash; come, ad esempio, in un circolo, o in un'associazione
     senza scopo di lucro oppure al lavoro. In alternativa, puoi provarlo tu stesso
     a partire dal %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) esaminando
+  hoc_faq_how_participate_a_markdown: "[Inizia la progettazione qui](%{howto}) esaminando
     la nostra guida. Puoi organizzare un evento dell'Ora del Codice nella tua scuola
-    o nel tua comunità — come, ad esempio, in un circolo, o in un'associazione senza
-    scopo di lucro oppure al lavoro. In alternativa, puoi provarlo tu stesso quando
-    arriva %{campaign_date}."
+    o nel tua comunità — come, ad esempio, in un circolo o in un'associazione senza
+    scopo di lucro oppure al lavoro. In alternativa, puoi provarlo tu stesso a partire
+    dal %{campaign_date}."
   hoc_faq_behind_hoc_q: Chi c'è dietro l'Ora del Codice?
   hoc_faq_behind_hoc_a: L'Ora di Codice è organizzata con il supporto del <a href='%{partner_url}'>Comitato
     Consultivo della Settimana di Educazione all'Informatica</a> così come di un raggruppamento
     senza precedenti di partner che si sono uniti per supportare l'Ora del Codice
     &mdash; compresi Microsoft, Apple, Amazon, Boys and Girls Clubs of America e la
     College Board.
-  hoc_faq_behind_hoc_a_markdown: L'Ora di Codice è organizzata con il supporto del  [Advisory
-    and Review Committees](%{partner_url}) della Settimana di Educazione all'Informatica,
-    così come di un raggruppamento senza precedenti di partner che si sono uniti per
-    supportare l'Ora del Codice — compresi Microsoft, Apple, Amazon, Boys and Girls
-    Clubs of America e la College Board.
+  hoc_faq_behind_hoc_a_markdown: L'Ora di Codice è organizzata con il supporto del  [Comitato
+    Consultivo della Settimana di Educazione all'Informatica](%{partner_url}) così
+    come di un raggruppamento senza precedenti di partner che si sono uniti per supportare
+    l'Ora del Codice — compresi Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America e la College Board.
   hoc_faq_host_q: Non so nulla di programmazione e di informatica. Posso organizzare
     ugualmente un evento?
   hoc_faq_host_a: Naturalmente. Le attività dell'Ora del Codice sono autogestite.
@@ -685,10 +694,10 @@ it:
     dall'età prescolare. Inizia a pianificare il tuo evento leggendo la <a href='/how-to'>guida
     che spiega come farlo</a>.
   hoc_faq_host_a_markdown: Naturalmente. Le attività dell'Ora del Codice sono autogestite.
-    Tutto ciò che devi fare è  [try our current tutorials](%{codeorg_url}/learn),
+    Tutto ciò che devi fare è  [provare le nostre esercitazioni ](%{codeorg_url}/learn),
     scegliere quello che preferisci e un orario — noi pensiamo a tutto il resto. Abbiamo
     materiali adatti ad ogni età e livello di esperienza, a partire dall'età prescolare.
-    Inizia a pianificare il tuo evento leggendo la nostra [how to guide](%{howto}).
+    Inizia a pianificare il tuo evento leggendo la nostra [guida che spiega come farlo](%{howto}).
   hoc_faq_devices_q: Quali dispositivi dovrei usare per i miei studenti?
   hoc_faq_devices_a: I corsi di Code.org funzionano su tutti i browser e dispositivi.
     È possibile vedere ulteriori informazioni circa i requisiti tecnologici dei corsi
@@ -698,12 +707,14 @@ it:
     href='%{unplugged_url}'> corsi tradizionali</a> se la scuola non ha strumentazione
     informatica! Sul sito di Programma il Futuro si possono trovare <a href="https://programmailfuturo.it/come/lezioni-tradizionali">alcune
     lezioni tradizionali tradotte in italiano</a>.
-  hoc_faq_devices_a_markdown: I tutorial di Code.org funzionano su tutti i browser
-    e dispositivi. È possibile vedere ulteriori informazioni circa i requisiti tecnologici
-    dei corsi di Code.org su [here](%{codeorg_url}/educate/it). I requisiti tecnologici
-    per i tutorial non- Code.org sono disponibili su [%{partner_url}/learn](%{codeorg_url}/learn)
-    nella descrizione degli specifici corsi. Non dimenticate che offriamo anche [unplugged
-    activities](%{unplugged_url}) se la scuola non dispone della strumentazione informatica!
+  hoc_faq_devices_a_markdown: I corsi di Code.org funzionano su tutti i browser e
+    dispositivi. È possibile vedere ulteriori informazioni circa i requisiti tecnologici
+    dei corsi di Code.org [qui](%{codeorg_url}/educate/it). I requisiti tecnologici
+    per i corsi che non sono di Code.org possono essere trovati su [%{partner_url}/learn](%{codeorg_url}/learn)
+    nella descrizione degli specifici corsi. Non dimenticate che offriamo anche [corsi
+    tradizionali](%{unplugged_url}) se la scuola non dispone della strumentazione
+    informatica! Sul sito di Programma il Futuro si possono trovare [alcune lezioni
+    tradizionali tradotte in italiano](https://programmailfuturo.it/come/lezioni-tradizionali).
   hoc_faq_need_computers_q: Ho bisogno di un computer per ogni partecipante?
   hoc_faq_need_computers_a: No. Abbiamo lezioni dell'Ora del Codice che funzionano
     su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer!
@@ -720,28 +731,35 @@ it:
     <a href='%{unplugged_url}'>Offriamo anche lezioni che non richiedono alcun computer.</a>
     (<a href="https://programmailfuturo.it/come/lezioni-tradizionali">alcune lezioni
     tradizionali tradotte in italiano</a>)</ul>
-  hoc_faq_need_computers_a_markdown: |-
-    No. Abbiamo lezioni dell'Ora del Codice che funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer! Puoi prendere parte a questo evento dovunque tu sia con qualsiasi strumento tu abbia a disposizione.
-
-    _Ecco alcune opzioni_
-
-    - **Lavorare in coppia.** [Research shows](%{pair_programming_research}) gli studenti imparino meglio attraverso la [pair programming](%{pair_programming_video}), condividendo un computer e lavorando insieme. Incoraggia i tuoi studenti a lavorare insieme. _**Utilizza un proiettore.** Se hai un proiettore e un computer connesso ad internet, i tuoi studenti potranno partecipare all'Ora del Codice tutti insieme. Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete alle domande. _**Usa le lezioni tradizionali.** Offriamo anche [tutorials that require no computer](%{unplugged_url}).
+  hoc_faq_need_computers_a_markdown: "No. Abbiamo lezioni dell'Ora del Codice che
+    funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano
+    di alcun computer! Puoi prendere parte a questo evento dovunque tu sia con qualsiasi
+    strumento tu abbia a disposizione.\n \n_Ecco alcune opzioni_: \n\n- **Lavorare
+    in coppia.** [Le ricerche dimostrano](%{pair_programming_research}) come gli studenti
+    imparino meglio attraverso la [programmazione in coppia](%{pair_programming_video}),
+    condividendo un computer e lavorando insieme. Incoraggia i tuoi studenti a lavorare
+    insieme. - **Utilizza un proiettore.** Se hai un proiettore e un computer connesso
+    ad Internet, i tuoi studenti potranno partecipare all'Ora del Codice tutti insieme.
+    Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete
+    alle domande. -**Usa le lezioni tradizionali.** Offriamo anche [lezioni che non
+    richiedono alcun computer](%{unplugged_url})."
   hoc_faq_international_q: Io sono in Italia. Come posso partecipare a livello internazionale?
   hoc_faq_international_a: Tutti possono organizzare un evento dell'Ora del Codice,
     in tutto il mondo. L'anno scorso hanno partecipato all'Ora del Codice studenti
     di ogni parte del mondo. Per saperne di più clicca <a href='/promote'>qui</a>.
   hoc_faq_international_a_markdown: Tutti possono organizzare un evento dell'Ora del
     Codice, in tutto il mondo. L'anno scorso hanno partecipato all'Ora del Codice
-    studenti di ogni parte del mondo. Per saperne di più [here](%{promote}).
+    studenti di ogni parte del mondo. Per saperne di più clicca [qui](%{promote}).
   hoc_faq_tutorial_q: Come posso creare un'esercitazione dell'Ora del Codice?
   hoc_faq_tutorial_a: Se sei interessato a creare un'esercitazione, <a href='/tutorial-guidelines'>leggi
     le nostre linee guida e le istruzioni</a>. Ci piacerebbe offrire una grande varietà
     di opzioni coinvolgenti, ma l'obiettivo primario è ottimizzare l'esperienza per
     gli studenti e gli insegnanti che si affacciano per la prima volta all'informatica.
-  hoc_faq_tutorial_a_markdown: Se sei interessato a creare un tutorial, [see our guidelines
-    and instructions](%{tutorial_guidelines}). Ci piacerebbe offrire una grande varietà
-    di opzioni coinvolgenti , ma l'obbiettivo primario è ottimizzare l'esperienza
-    per gli studenti ed i docenti che si affacciano per la prima volta all'informatica.
+  hoc_faq_tutorial_a_markdown: Se sei interessato a creare un tutorial, [leggi le
+    nostre linee guida e le istruzioni](%{tutorial_guidelines}). Ci piacerebbe offrire
+    una grande varietà di opzioni coinvolgenti , ma l'obbiettivo primario è ottimizzare
+    l'esperienza per gli studenti ed i docenti che si affacciano per la prima volta
+    all'informatica.
   hoc_faq_account_q: Gli studenti devono accedere utilizzando un account?
   hoc_faq_account_a: Assolutamente no. Non è richiesta alcuna registrazione o login
     agli studenti che vogliono provare l'Ora del Codice. La maggior parte dei <a href='%{codeorg_url}/learn/beyond'>
@@ -751,10 +769,12 @@ it:
     attraverso il sito di <a href="http://programmailfuturo.it">Programma il Futuro</a>.
   hoc_faq_account_a_markdown: Assolutamente no. Non è richiesta alcuna registrazione
     o accesso agli studenti che vogliono provare l'Ora del Codice. La maggior parte
-    dei [follow-on courses](%{codeorg_url}/learn/beyond)  invece richiede un account
-    per registrare i percorsi e i progressi degli studenti. Inoltre, iscriversi all'Ora
-    del Codice NON crea automaticamente un account sulla piattaforma Code studio.
-    Se desideri creare account per i tuoi studenti, segui queste [instructions](https://youtu.be/_smelV_KISE).
+    dei [corsi successivi](%{codeorg_url}/learn/beyond) invece richiede un account
+    per registrare i progressi degli studenti. Inoltre, iscriversi all'Ora del Codice
+    NON crea automaticamente un account sulla piattaforma Code Studio. Se desideri
+    creare account per i tuoi studenti, segui queste [istruzioni](https://youtu.be/_smelV_KISE)
+    e [qui](https://programmailfuturo.it/chi/iscrizione-per-insegnanti/#CREAZIONE)
+    trovi la spiegazione in italiano.
   hoc_faq_high_school_q: Quale attività dovrei fare con gli studenti delle scuole
     superiori?
   hoc_faq_high_school_a: |-
@@ -762,12 +782,12 @@ it:
     Indipendentemente dall'età, raccomandiamo di provare prima le lezioni per principianti su <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> come, ad esempio, la lezione Angry Birds o quella con Anna ed Elsa. Uno studente di scuola superiore è in grado di terminare ciascuna di essa in non più di 30 minuti; successivamente può provare una lezione avanzata per il linguaggio Javascript tra quelli proposti su Khan Academy o CodeHS.
   hoc_faq_high_school_a_markdown: I nostri corsi con Guerre Stellari e Minecraft sono
     perfetti per le scuole superiori, soprattutto la versione JavaScript di Guerre
-    Stellari, e gli esercizi "liberi" su entrambi i corsi. In alternativa, ti consigliamo
-    di provare uno dei tutorial per principianti su [%{partner_url}/learn](%{codeorg_url}/learn)
-    come, ad esempio, il tutorial con Angry Birds o quello con Anna ed Elsa. Uno studente
-    di scuola superiore è in grado di terminare ciascuna di essa in non più di 30
-    minuti; successivamente può provare una lezione avanzata per il linguaggio Javascript
-    tra quelli proposti su Khan Academy o CodeHS.
+    Stellari, e gli esercizi "liberi" su entrambi i corsi. Indipendentemente dall'età,
+    raccomandiamo di provare prima le lezioni per principianti su [%{partner_url}/learn](%{codeorg_url}/learn)
+    come, ad esempio, l'esercitazione con Angry Birds o quella con Anna ed Elsa. Uno
+    studente di scuola superiore è in grado di terminare ciascuna di essa in non più
+    di 30 minuti; successivamente può provare una lezione avanzata per il linguaggio
+    Javascript tra quelli proposti su Khan Academy o CodeHS.
   hoc_faq_scratch_q: Sto usando Scratch per l'Ora del Codice, ma cosa succede se i
     miei studenti hanno un iPad invece di un computer portatile?
   hoc_faq_scratch_a: Scratch non viene eseguito sui tablet. Se gli studenti sono giovani,
@@ -789,14 +809,14 @@ it:
     tua nazione e puoi trovare il tuo evento lì elencato. Inoltre, date le migliaia
     di persone che si iscrivono all'Ora del Codice, sono in genere necessarie 48 ore
     per aggiornare la mappa. Ritorna a controllare tra un paio di giorni!
-  hoc_faq_map_a_markdown: Ci dispiace che tu non veda il tuo evento sulla mappa dell'Ora
+  hoc_faq_map_a_markdown: Ci dispiace che non si veda il tuo evento sulla mappa dell'Ora
     del Codice. A causa delle decine di migliaia di organizzatori che si iscrivono,
-    la mappa aggrega i dati e visualizza un singolo segnalino per diversi eventi.
-    Se clicchi sul link [events page](%{events_url}) sotto la mappa accedi a un elenco
-    di tutti gli eventi della tua nazione e puoi trovare il tuo evento elencato tra
-    questi. Inoltre, date le migliaia di persone che si iscrivono all'Ora del Codice,
-    sono in genere necessarie 48 ore per aggiornare la mappa. Ritorna a controllare
-    tra un paio di giorni!
+    la mappa aggrega i dati e viene visualizzato un segnalino per diversi eventi.
+    Se clicchi sul collegamento alla [pagina degli eventi](%{events_url}) sotto la
+    mappa, accedi a un elenco di tutti gli eventi della tua nazione e puoi trovare
+    il tuo evento lì elencato. Inoltre, date le migliaia di persone che si iscrivono
+    all'Ora del Codice, sono in genere necessarie 48 ore per aggiornare la mappa.
+    Ritorna a controllare tra un paio di giorni!
   hoc_faq_count_hoc_a: Il contatore dell'Ora del Codice non misura le ore svolte in
     senso strettamente temporale. Non contiamo esattamente le ore di codice fatte
     da ogni studente anche perché ogni studente non ha bisogno di accedere o registrarsi.
@@ -806,7 +826,7 @@ it:
     svolte in senso strettamente temporale. Non contiamo esattamente le ore di codice
     fatte da ogni studente anche perché ogni studente non ha bisogno di accedere o
     registrarsi. Di conseguenza, noi facciamo una stima del tempo che tutti i partecipanti
-    hanno trascorso usando le nostre esercitazioni. Leggi tutti i dettagli [here](%{codeorg_url}/loc).
+    hanno trascorso usando le nostre esercitazioni. Leggi tutti i dettagli [qui](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Quanto posso imparare in un'ora?
   hoc_faq_one_hour_a: L'obiettivo dell'Ora del Codice non è di insegnare a diventare
     un esperto informatico in un'ora. Un'ora è solo quanto basta per rendersi conto
@@ -847,8 +867,8 @@ it:
     di insegnanti decidono di proseguire ulteriormente nello studio dell'informatica,
     frequentando corsi in presenza oppure online, o entrambi. E questo vale anche
     per gli amministratori della scuola, che capiscono quanto l'informatica sia qualcosa
-    che i loro studenti vogliono e gli insegnanti sono in grado di fare. \n\nSoprattutto,
-    ciò che tutti i partecipanti possono imparare in un'ora, è che possiamo farlo."
+    che i loro studenti vogliono e gli insegnanti sono in grado di fare.\n\nSoprattutto,
+    ciò che tutti i partecipanti possono imparare in un'ora, è che POSSONO FARCELA."
   hoc_faq_more_questions_q: Hai ancora domande?
   hoc_faq_more_questions_a: Cerca una risposta nel nostro <a href='http://support.code.org'>
     forum di supporto</a>. Se sei in Italia visita <a href='http://programmailfuturo.it'>
@@ -861,19 +881,20 @@ it:
     un evento ed altre risorse utili per contribuire a rendere il tuo evento dell'Ora
     del Codice un successo.
   hoc_faq_keep_learning_a_markdown: Chiunque può organizzare un'Ora del Codice in
-    qualsiasi momento. I nostri tutorial sono sempre disponibili, per tutto l'anno.
-    Puoi aspettarti che tutti i nostri tutorial e piani di studio siano sempre disponibili
-    sul nostro sito. Vai alla pagina [our resources](%{promote}) per guide a come
-    organizzare un evento ed altre risorse utili per contribuire a rendere il tuo
-    evento dell'Ora del Codice un successo.
+    qualsiasi momento. Le nostre esercitazioni sono sempre disponibili, per tutto
+    il tempo che vorrai. Vai alla pagina [promuovi](%{promote}) per trovare per guide
+    a come organizzare un evento ed altre risorse utili per contribuire a rendere
+    il tuo evento dell'Ora del Codice un successo.
   hoc_faq_certificates_q: Dove posso stampare gli attestati per i miei studenti?
   hoc_faq_certificates_a: |-
     Se sei in Italia puoi stampare gli attestati personalizzati da <a href="http://programmailfuturo.it/come/attestati-personalizzati">questa pagina</a>.<br>
     Vai alla <a href='%{codeorg_url}/certificates'> pagina dei certificati</a> dove è possibile stampare in anticipo i certificati per l'intera classe. È possibile anche stampare certificati <a href='%{codeorg_url}/certificates?course=mc'> speciali</a> per gli studenti che fanno il corso di Minecraft.
-  hoc_faq_certificates_a_markdown: Vai alla [certificates page](%{codeorg_url}/certificates)
-    dove potrai stampare in anticipo i certificati per l'intera classe. È possibile
-    anche stampare [special certificates](%{codeorg_url}/certificates?course=mc) per
-    gli studenti che seguono il corso di Minecraft.
+  hoc_faq_certificates_a_markdown: "Se sei in Italia puoi stampare gli attestati personalizzati
+    da [questa pagina] (http://programmailfuturo.it/come/attestati-personalizzati).
+    \n\nVai alla [pagina degli attestati](%{codeorg_url}/certificates) dove potrai
+    stampare in anticipo gli attestati per l'intera classe. È possibile anche stampare
+    [attestati speciali](%{codeorg_url}/certificates?course=mc) per gli studenti che
+    seguono il corso di Minecraft."
   hoc_faq_logo_q: Ci sono limitazioni per l'uso del logo o del nome "Hour of Code"?
   hoc_faq_logo_a: '"Hour of Code" è un marchio registrato. Non vogliamo impedire il
     suo utilizzo, ma vogliamo essere sicuri che il suo utilizzo rientri all''interno
@@ -1017,6 +1038,7 @@ it:
   highlights_constant_athletes_short_heading: Dai il massimo
   footer_copyright_message: Copyright %{current_year} Code.org. Tutti i diritti riservati.
   footer_trademark_message: Hour of Code™ è un marchio registrato di Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partner e Consulenti
   footer_menu_contact: Contattaci
   footer_menu_support: Supporto
@@ -1028,11 +1050,12 @@ it:
     iniziando con un'Ora del Codice.
   learn_banner_beyond: Vuoi continuare ad imparare? <a id='learn_banner_beyond'>Vai
     oltre l'Ora del Codice</a>
-  learn_banner_beyond_markdown: Vuoi continuare ad imparare? [Go beyond an hour](%{url})
+  learn_banner_beyond_markdown: Vuoi continuare ad imparare? [Vai oltre l'Ora del
+    Codice](%{url})
   learn_banner_teachers: 'Insegnanti: <a id=''teacher_banner_host''>Organizza un''Ora
     del Codice</a> oppure <a id=''teacher_banner_howto''>leggi la guida</a>'
-  learn_banner_teachers_markdown: 'Insegnanti: [Host an hour](%{host_url}) o [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Insegnanti: [Organizza un''Ora del Codice](%{host_url})
+    o [leggi la guida](%{howto_url})'
   learn_robotics_banner_heading: ROBOTICA
   learn_robotics_banner_blurb: Hai dei robot o dei kit di elettronica educativa? Usali
     con le attività qui sotto per fare un'Ora del Codice più concreta per gli studenti
@@ -1636,7 +1659,7 @@ it:
   tutorial_n2y_name: Bitt Bott esplora la Terra
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_toxicodepython_name: Scopri Python con Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
@@ -1644,9 +1667,10 @@ it:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1662,15 +1686,16 @@ it:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1679,6 +1704,7 @@ it:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: PSA inquinamento da plastica
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1688,7 +1714,7 @@ it:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1744,11 +1770,11 @@ it:
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Ricamo codificato
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Un racconto di due villaggi di Minecraft
   tutorial_danceparty_shortdescription: Crea un progetto in "Ballando col codice"
     da condividere con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith
     Urban, Ciara e altri 25!
@@ -4873,8 +4899,8 @@ it:
     forniscono una panoramica dei concetti fondamentali di codifica che gli studenti
     incontreranno nell'app. La lezione di logica insegna agli studenti a usare affermazioni
     condizionali per programmare regole e scelte nei loro giochi.
-  tutorial_lbworld_longdescription: Codice per sempre! Gli studenti progettano un
-    gioco che aiuterà a rendere la vita più facile per le persone nella loro comunità.
+  tutorial_lbworld_longdescription: Programma per il bene comune! Gli studenti progettano
+    un gioco che aiuterà a rendere la vita più facile per le persone nella loro comunità.
     Alla fine, ogni gruppo presenterà i propri prototipi in un "Cambia il mondo Arcade"
     che sarà aperto ai membri della comunità.
   tutorial_lbloops_longdescription: I loop sono l'arma segreta di ogni ninja di gioco.
@@ -5759,9 +5785,9 @@ it:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_toxicodepython_longdescription: Scopri le basi di Python senza parole o
+    spiegazioni. Il nostro insegnante silenzioso ti darà diverse serie di sfide che
+    ti porteranno a indovinare alcune regole e ad imparare dai tuoi errori.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
     that has taken over the world! Along the way, you'll meet interesting characters
@@ -5787,20 +5813,22 @@ it:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5846,12 +5874,12 @@ it:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5870,16 +5898,18 @@ it:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5899,6 +5929,12 @@ it:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: Il problema della plastica che riempie
+    i nostri oceani continua a peggiorare. Fortunatamente, puoi far sentire la tua
+    voce con il codice tramite PSA inquinamento da plastica. Dopo aver codificato
+    un PSA sull'inquinamento da plastica utilizzando JavaScript, puoi realizzare un
+    secondo video su qualsiasi argomento che ti interessa! Impara a usare cicli, onde
+    sinusoidali ed emoji personalizzati per creare un progetto unico.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5929,11 +5965,11 @@ it:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -6143,8 +6179,8 @@ it:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Codifica il tuo disegno sul tuo telefono
+    Android e cucilo su maglietta, pantaloni, borsa da palestra o scarpe!
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -6157,11 +6193,11 @@ it:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Per secoli, Abitanti e Abitori hanno condiviso
+    lo stesso spazio, ma raramente hanno interagito tra loro. Ora puoi utilizzare
+    la potenza del codice per riunire i due villaggi. I giocatori proveranno empatia
+    e compassione per i vicini, impareranno la cooperazione e l'inclusione e accoglieranno
+    la diversità che rende tutti noi unicamente speciali.
   tutorial_dance2019_language: Arabo, Chinese, Ceco, Danese, Olandese, Italiano, Finlandese,
     Francese, Tedesco, Greco, Hindi, Ungherese, Indonesiano, Italiano, Giapponese,
     Coreano, Malese, Polacco, Portoghese, e altri 10!
@@ -6837,7 +6873,7 @@ it:
   tutorial_pets_language: Italiano
   tutorial_petvet_language: Italiano
   tutorial_superhero_language: Italiano
-  tutorial_vidcodeplastic_language: Inglese, ebraico
+  tutorial_vidcodeplastic_language: Italiano
   tutorial_vidcodetypeface_language: Italiano
   tutorial_washustorm_language: Italiano
   tutorial_activitypackets_language: Italiano
@@ -6850,9 +6886,10 @@ it:
   tutorial_n2y_language: Italiano
   tutorial_microsoftarcade_language: Italiano
   tutorial_csfirstunplugged_language: Inglese, spagnolo (Messico)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: danese, olandese, inglese, inglese (Regno Unito),
+    estone, francese, tedesco, indonesiano, italiano, altro, polacco, portoghese (Brasile),
+    portoghese (Portogallo), rumeno, spagnolo (Spagna), spagnolo (Messico ), svedese,
+    turco
   tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
     Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodedate_language: Italiano
@@ -6864,6 +6901,7 @@ it:
     (Mexico)
   tutorial_bsdcause_language: Italiano
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Italiano
   tutorial_tttractor_language: Italiano
   tutorial_codeillusionmickey_language: Italiano
@@ -6886,6 +6924,7 @@ it:
   tutorial_codestersdistance_language: Italiano
   tutorial_itchspace_language: Italiano
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Italiano
   tutorial_itchfish_language: Italiano
   tutorial_bsdwebsite_language: Italiano
@@ -6893,11 +6932,12 @@ it:
   tutorial_itchwebcam_language: Italiano
   tutorial_itchball_language: Italiano
   tutorial_ttrace_language: Italiano
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Italiano
   tutorial_codeguppytext_language: Italiano
+  tutorial_vidcodeplastiche_language: Inglese, ebraico
   tutorial_educativechatbot_language: Italiano
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Italiano
@@ -6963,13 +7003,17 @@ it:
   tutorial_kcjplastic_language: Inglese, francese
   tutorial_legojourney_language: Italiano
   tutorial_legohopper_language: Italiano
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Arabo, bengalese, bosniaco, cinese semplificato,
+    croato, ceco, inglese, inglese (Regno Unito), francese, tedesco, hindi, indonesiano,
+    italiano, giapponese, coreano, norvegese (nynorsk), altro, polacco, portoghese
+    (Brasile), portoghese ( Portogallo), russo, serbo (cirillico), serbo (latino),
+    slovacco, spagnolo (Spagna, Messico), swahili, svedese, tamil, tailandese, turco,
+    urdu (Pakistan), vietnamita
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Italiano
-  tutorial_meeempathy_language: Italiano
+  tutorial_meeempathy_language: Cinese, danese, olandese, inglese, francese, italiano,
+    giapponese, coreano, norvegese, portoghese, spagnolo, svedese, turco
   tutorial_dance2019_string_detail_grades: Da 7 anni in su
   tutorial_danceparty_string_detail_grades: Da 7 anni in su
   tutorial_chibitronics_string_detail_grades: Da pre-scolare a 11 anni
@@ -6978,10 +7022,10 @@ it:
   tutorial_star-wars_string_detail_grades: Da 7 anni in su
   tutorial_gumadventure_string_detail_grades: Da 11 a 13 anni
   tutorial_mchoc_string_detail_grades: Da 7 anni in su
-  tutorial_vidnews_string_detail_grades: Da 11 anni in su
+  tutorial_vidnews_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kodable-pre_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_highseas_string_detail_grades: Da 7 a 13 anni
-  tutorial_capython_string_detail_grades: Da 11 anni in su
+  tutorial_capython_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_frzn_string_detail_grades: Da 7 anni in su
   tutorial_cocom_string_detail_grades: Da 7 anni in su
   tutorial_play-lab_string_detail_grades: Da 7 anni in su
@@ -6991,28 +7035,28 @@ it:
   tutorial_kanopixel_string_detail_grades: Da 7 anni in su
   tutorial_foos_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tynkerdd_string_detail_grades: Da 7 a 13 anni
-  tutorial_tynkerana_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerana_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_vidcard_string_detail_grades: Da 7 anni in su
   tutorial_spritebox_string_detail_grades: Da 7 a 13 anni
-  tutorial_tynkerch_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerch_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_lightbot_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_hoc_string_detail_grades: non-mostrare
   tutorial_code_string_detail_grades: Da 7 anni in su
-  tutorial_tinspire_string_detail_grades: Da 11 anni in su
+  tutorial_tinspire_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_itchbounceball_string_detail_grades: Da 7 a 13 anni
-  tutorial_vidclim_string_detail_grades: Da 11 anni in su
-  tutorial_matlab_string_detail_grades: Da 11 anni in su
+  tutorial_vidclim_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_matlab_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_flap_string_detail_grades: Da 7 anni in su
-  tutorial_galaxy_string_detail_grades: Da 11 anni in su
+  tutorial_galaxy_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_inf_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkersol_string_detail_grades: Da 7 anni in su
-  tutorial_itchg_string_detail_grades: Da 11 anni in su
+  tutorial_itchg_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_como_string_detail_grades: Da 7 anni in su
   tutorial_processfound_string_detail_grades: Dai 14 anni in su
-  tutorial_tynkerhomo_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerhomo_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_art_string_detail_grades: Da 7 anni in su
   tutorial_tynkerbrick_string_detail_grades: Da 7 anni in su
-  tutorial_itchbio_string_detail_grades: Da 11 anni in su
+  tutorial_itchbio_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_itchj_string_detail_grades: Da 11 a 13 anni
   tutorial_tickleo_string_detail_grades: Da 7 anni in su
   tutorial_hopgeo_string_detail_grades: Da 7 a 13 anni
@@ -7023,67 +7067,67 @@ it:
   tutorial_livecode_string_detail_grades: Dai 14 anni in su
   tutorial_cocomgame_string_detail_grades: Da 7 anni in su
   tutorial_tynkerspin_string_detail_grades: Da pre-scolare a 13 anni
-  tutorial_code-avengers_string_detail_grades: Da 11 anni in su
+  tutorial_code-avengers_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynkercq_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_cmgame_string_detail_grades: Da 11 anni in su
+  tutorial_cmgame_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codesters_string_detail_grades: non-mostrare
-  tutorial_qrm_string_detail_grades: Da 11 anni in su
-  tutorial_texas-instruments_string_detail_grades: Da 11 anni in su
-  tutorial_cajava_string_detail_grades: Da 11 anni in su
+  tutorial_qrm_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_texas-instruments_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cajava_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehs_string_detail_grades: Dai 14 anni in su
   tutorial_hopemo_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkercm_string_detail_grades: Da 7 anni in su
   tutorial_codesterswintergreet_string_detail_grades: Da 7 anni in su
-  tutorial_codestersc_string_detail_grades: Da 11 anni in su
+  tutorial_codestersc_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codestersturtle_string_detail_grades: Da 7 anni in su
-  tutorial_penjee_string_detail_grades: Da 11 anni in su
+  tutorial_penjee_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_trinket_string_detail_grades: Da 7 anni in su
-  tutorial_frogger_string_detail_grades: Da 11 anni in su
+  tutorial_frogger_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynkereco_string_detail_grades: Da 7 a 13 anni
   tutorial_mitedarc_string_detail_grades: Da 11 a 13 anni
-  tutorial_khan_string_detail_grades: Da 11 anni in su
-  tutorial_tynkerd_string_detail_grades: Da 11 anni in su
+  tutorial_khan_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_tynkerd_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_cdmy_string_detail_grades: Dai 14 anni in su
-  tutorial_codestersdance_string_detail_grades: Da 11 anni in su
-  tutorial_codestersbasketball_string_detail_grades: Da 11 anni in su
-  tutorial_nclkarel_string_detail_grades: Da 11 anni in su
+  tutorial_codestersdance_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codestersbasketball_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_nclkarel_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_buildpong_string_detail_grades: Da 7 anni in su
   tutorial_tynkerdrones_string_detail_grades: Da 7 anni in su
-  tutorial_carla_string_detail_grades: Da 11 anni in su
-  tutorial_zulama_string_detail_grades: Da 11 anni in su
-  tutorial_capost_string_detail_grades: Da 11 anni in su
+  tutorial_carla_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_zulama_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_capost_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_marco_string_detail_grades: Da 7 a 13 anni
-  tutorial_codestersflappybike_string_detail_grades: Da 11 anni in su
+  tutorial_codestersflappybike_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kanopong_string_detail_grades: Da 11 a 13 anni
   tutorial_tynkerright_string_detail_grades: Da 7 a 13 anni
   tutorial_touchdevelop_string_detail_grades: non-mostrare
-  tutorial_tynkercc_string_detail_grades: Da 11 anni in su
+  tutorial_tynkercc_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bamboo_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_robojav_string_detail_grades: Da 11 anni in su
-  tutorial_roboba_string_detail_grades: Da 11 anni in su
+  tutorial_robojav_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_roboba_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_knodsnake_string_detail_grades: Da 11 a 13 anni
-  tutorial_soccharater_string_detail_grades: Da 11 anni in su
-  tutorial_silent_string_detail_grades: Da 11 anni in su
+  tutorial_soccharater_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_silent_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robomesh_string_detail_grades: Da 7 anni in su
   tutorial_amaze_string_detail_grades: Da 7 anni in su
   tutorial_codestersds_string_detail_grades: Da 7 anni in su
   tutorial_knodtext_string_detail_grades: Da 11 a 13 anni
-  tutorial_alicegar_string_detail_grades: Da 11 anni in su
-  tutorial_codesterstransform_string_detail_grades: Da 11 anni in su
-  tutorial_flexfrog_string_detail_grades: Da 11 anni in su
+  tutorial_alicegar_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codesterstransform_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_flexfrog_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codemoji_string_detail_grades: non-mostrare
-  tutorial_robobii_string_detail_grades: Da 11 anni in su
+  tutorial_robobii_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robobm_string_detail_grades: Da 11 a 13 anni
   tutorial_codingrobots_string_detail_grades: Da 7 anni in su
-  tutorial_robob_string_detail_grades: Da 11 anni in su
+  tutorial_robob_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_coders_string_detail_grades: Dai 14 anni in su
   tutorial_tynkerhw_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkermh_string_detail_grades: Da 7 a 13 anni
-  tutorial_caphoto_string_detail_grades: Da 11 anni in su
+  tutorial_caphoto_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_mozillahw_string_detail_grades: Da 11 a 13 anni
   tutorial_ticklep_string_detail_grades: non-mostrare
   tutorial_bbot_string_detail_grades: Da 7 anni in su
-  tutorial_scratchg_string_detail_grades: Da 11 anni in su
+  tutorial_scratchg_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_roboticfriends_string_detail_grades: Tutte le età
   tutorial_sjforest_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_sjgreet_string_detail_grades: Da pre-scolare a 11 anni
@@ -7091,19 +7135,19 @@ it:
   tutorial_fufafrenz_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_bbcgeo_string_detail_grades: non-mostrare
   tutorial_chspixel_string_detail_grades: Dai 14 anni in su
-  tutorial_hummingbird_string_detail_grades: Da 11 anni in su
-  tutorial_recoloring_string_detail_grades: Da 11 anni in su
+  tutorial_hummingbird_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_recoloring_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bbcchem_string_detail_grades: non-mostrare
   tutorial_floalgo_string_detail_grades: Da 7 anni in su
   tutorial_flocond_string_detail_grades: Da 7 anni in su
   tutorial_floloops_string_detail_grades: Da 7 anni in su
-  tutorial_pgts_string_detail_grades: Da 11 anni in su
+  tutorial_pgts_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozo_string_detail_grades: Tutte le età
   tutorial_bbcla_string_detail_grades: non-mostrare
   tutorial_bbcsci_string_detail_grades: non-mostrare
   tutorial_tlctour_string_detail_grades: Da 7 anni in su
   tutorial_codesterstj_string_detail_grades: Da 7 anni in su
-  tutorial_tlclocked_string_detail_grades: Da 11 anni in su
+  tutorial_tlclocked_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_baubles_string_detail_grades: Da 7 a 13 anni
   tutorial_bbcart_string_detail_grades: non-mostrare
   tutorial_tlcknight_string_detail_grades: Da 7 anni in su
@@ -7125,12 +7169,12 @@ it:
   tutorial_ijournalist_string_detail_grades: Da 7 a 13 anni
   tutorial_bbcmusic_string_detail_grades: non-mostrare
   tutorial_secretcodes_string_detail_grades: Da 11 a 13 anni
-  tutorial_tlchex_string_detail_grades: Da 11 anni in su
+  tutorial_tlchex_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tickles_string_detail_grades: Da 7 anni in su
   tutorial_ozogame_string_detail_grades: Tutte le età
   tutorial_vidcodeio_string_detail_grades: Da 7 anni in su
   tutorial_besttech_string_detail_grades: Dai 14 anni in su
-  tutorial_tlcbrain_string_detail_grades: Da 11 anni in su
+  tutorial_tlcbrain_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_hopquiz_string_detail_grades: Da 11 a 13 anni
   tutorial_unfortunate_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_cha_string_detail_grades: Da 11 a 13 anni
@@ -7140,7 +7184,7 @@ it:
   tutorial_arduino_string_detail_grades: Da 11 a 13 anni
   tutorial_introrobo_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tlcinvis_string_detail_grades: Da 7 anni in su
-  tutorial_tlcjflap_string_detail_grades: Da 11 anni in su
+  tutorial_tlcjflap_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_procolor_string_detail_grades: Da pre-scolare a 13 anni
   tutorial_spiralsfinch_string_detail_grades: Da 7 anni in su
   tutorial_ozoi_string_detail_grades: Tutte le età
@@ -7152,40 +7196,40 @@ it:
   tutorial_mazefinch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tlccc_string_detail_grades: Da 7 a 13 anni
   tutorial_tlcdoodle_string_detail_grades: Da 7 a 13 anni
-  tutorial_tlcpunch_string_detail_grades: Da 11 anni in su
+  tutorial_tlcpunch_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_finchfract_string_detail_grades: Dai 14 anni in su
-  tutorial_tlcmind_string_detail_grades: Da 11 anni in su
+  tutorial_tlcmind_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tlctelebot_string_detail_grades: Da 7 anni in su
-  tutorial_tlcaus_string_detail_grades: Da 11 anni in su
+  tutorial_tlcaus_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_oralhist_string_detail_grades: Dai 14 anni in su
   tutorial_tlcmicro_string_detail_grades: Da 7 anni in su
   tutorial_imathematician_string_detail_grades: Da 7 a 13 anni
-  tutorial_tlcmagic_string_detail_grades: Da 11 anni in su
+  tutorial_tlcmagic_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_scratchmus_string_detail_grades: Da 7 a 13 anni
   tutorial_scratchanim_string_detail_grades: Da 7 a 13 anni
   tutorial_scratchfly_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkerarc_string_detail_grades: Da 7 anni in su
-  tutorial_grokffpython_string_detail_grades: Da 11 anni in su
-  tutorial_grokffblock_string_detail_grades: Da 11 anni in su
-  tutorial_grokeliza_string_detail_grades: Da 11 anni in su
+  tutorial_grokffpython_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_grokffblock_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_grokeliza_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynkercan_string_detail_grades: Da 7 anni in su
-  tutorial_grokflags_string_detail_grades: Da 11 anni in su
+  tutorial_grokflags_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robomind_string_detail_grades: Da 7 a 13 anni
   tutorial_scratchanimwork_string_detail_grades: Da 7 a 13 anni
   tutorial_adventureq_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_khan-es_string_detail_grades: Da 11 anni in su
-  tutorial_kpt_string_detail_grades: Da 11 anni in su
-  tutorial_kpl_string_detail_grades: Da 11 anni in su
-  tutorial_khe_string_detail_grades: Da 11 anni in su
-  tutorial_kfr_string_detail_grades: Da 11 anni in su
-  tutorial_app-inventor_string_detail_grades: Da 11 anni in su
+  tutorial_khan-es_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_kpt_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_kpl_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_khe_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_kfr_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_app-inventor_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bits_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_blockly_string_detail_grades: Da 11 anni in su
+  tutorial_blockly_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynker_string_detail_grades: non-mostrare
   tutorial_baypt_string_detail_grades: Tutte le età
   tutorial_code-combat_string_detail_grades: non-mostrare
   tutorial_mky_string_detail_grades: Da 7 anni in su
-  tutorial_spellcraft_string_detail_grades: Da 11 anni in su
+  tutorial_spellcraft_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_pirates_string_detail_grades: Da 7 a 13 anni
   tutorial_csfirst_string_detail_grades: Da 7 anni in su
   tutorial_loopedy_string_detail_grades: Da pre-scolare a 11 anni
@@ -7197,7 +7241,7 @@ it:
   tutorial_scratch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_bayes_string_detail_grades: Tutte le età
   tutorial_gumball_string_detail_grades: non-mostrare
-  tutorial_hrm_string_detail_grades: Da 11 anni in su
+  tutorial_hrm_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ice-age_string_detail_grades: non-mostrare
   tutorial_koapp_string_detail_grades: non-mostrare
   tutorial_lightbot-intl_string_detail_grades: Da pre-scolare a 13 anni
@@ -7213,7 +7257,7 @@ it:
   tutorial_spherov_string_detail_grades: Da 7 anni in su
   tutorial_swb_string_detail_grades: non-mostrare
   tutorial_build-a-galaxy_string_detail_grades: non-mostrare
-  tutorial_alicesims_string_detail_grades: Da 11 anni in su
+  tutorial_alicesims_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tchr_string_detail_grades: non-mostrare
   tutorial_robogame_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tap_string_detail_grades: Da 7 anni in su
@@ -7232,51 +7276,51 @@ it:
   tutorial_solopython_string_detail_grades: Dai 14 anni in su
   tutorial_kodableint_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_kodableadv_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_tynkertj_string_detail_grades: Da 11 anni in su
-  tutorial_wolframa_string_detail_grades: Da 11 anni in su
-  tutorial_wolframm_string_detail_grades: Da 11 anni in su
-  tutorial_wolframspi_string_detail_grades: Da 11 anni in su
-  tutorial_wolframsph_string_detail_grades: Da 11 anni in su
-  tutorial_wolframp_string_detail_grades: Da 11 anni in su
-  tutorial_wolframn_string_detail_grades: Da 11 anni in su
+  tutorial_tynkertj_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframa_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframm_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframspi_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframsph_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframp_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_wolframn_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_soloweb_string_detail_grades: Dai 14 anni in su
   tutorial_khanweb_string_detail_grades: Da 7 anni in su
-  tutorial_khandata_string_detail_grades: Da 11 anni in su
+  tutorial_khandata_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robomeshiq_string_detail_grades: Da 7 anni in su
   tutorial_googlelogo_string_detail_grades: Da 7 anni in su
-  tutorial_playtune_string_detail_grades: Da 11 anni in su
+  tutorial_playtune_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_computeit_string_detail_grades: Da 7 anni in su
   tutorial_codesterssj_string_detail_grades: Da 7 a 13 anni
-  tutorial_cmchat_string_detail_grades: Da 11 anni in su
+  tutorial_cmchat_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tynkerdb_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_cmbuild_string_detail_grades: Da 11 anni in su
+  tutorial_cmbuild_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robotrattle_string_detail_grades: Da 7 a 13 anni
   tutorial_codestersh_string_detail_grades: Da 7 a 13 anni
-  tutorial_codehsdigipixel_string_detail_grades: Da 11 anni in su
-  tutorial_ccbinary_string_detail_grades: Da 11 anni in su
-  tutorial_codehsturtle_string_detail_grades: Da 11 anni in su
-  tutorial_grokhd_string_detail_grades: Da 11 anni in su
-  tutorial_grokem_string_detail_grades: Da 11 anni in su
+  tutorial_codehsdigipixel_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ccbinary_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehsturtle_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_grokhd_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_grokem_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kodmaze_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_codestersa_string_detail_grades: Da 7 a 13 anni
   tutorial_cmdodo_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tynkerspace_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_gfbloons_string_detail_grades: Dai 14 anni in su
   tutorial_raspipong_string_detail_grades: Dai 14 anni in su
-  tutorial_codehsvr_string_detail_grades: Da 11 anni in su
+  tutorial_codehsvr_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codesterstp_string_detail_grades: Da 11 a 13 anni
   tutorial_codestersbb_string_detail_grades: Da 11 a 13 anni
   tutorial_gfcrossyroad_string_detail_grades: Dai 14 anni in su
   tutorial_googleww_string_detail_grades: Dai 14 anni in su
-  tutorial_codehsjsapp_string_detail_grades: Da 11 anni in su
+  tutorial_codehsjsapp_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_gfmihi_string_detail_grades: Dai 14 anni in su
   tutorial_hopdropphone_string_detail_grades: Da 7 a 13 anni
   tutorial_techfaa_string_detail_grades: Università
   tutorial_codehsjsgraph_string_detail_grades: Dai 14 anni in su
-  tutorial_thunkable_string_detail_grades: Da 11 anni in su
+  tutorial_thunkable_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_hopcrossyroad_string_detail_grades: Da 7 a 13 anni
   tutorial_switchglitch_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_codecar_string_detail_grades: Da 11 anni in su
+  tutorial_codecar_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codesterscp_string_detail_grades: Da 11 a 13 anni
   tutorial_grokpetblock_string_detail_grades: Da 11 a 13 anni
   tutorial_techbim_string_detail_grades: Università
@@ -7288,8 +7332,8 @@ it:
   tutorial_myradream_string_detail_grades: Da 7 a 13 anni
   tutorial_thinkfun_string_detail_grades: Da 7 a 13 anni
   tutorial_hopfireworks_string_detail_grades: Da 7 a 13 anni
-  tutorial_grokspace_string_detail_grades: Da 11 anni in su
-  tutorial_codehspython_string_detail_grades: Da 11 anni in su
+  tutorial_grokspace_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehspython_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehsjava_string_detail_grades: Dai 14 anni in su
   tutorial_techioda_string_detail_grades: Università
   tutorial_grokmonster_string_detail_grades: Da pre-scolare a 11 anni
@@ -7297,8 +7341,8 @@ it:
   tutorial_techga_string_detail_grades: Università
   tutorial_techioan_string_detail_grades: Università
   tutorial_techiogsr_string_detail_grades: Università
-  tutorial_groktunnel_string_detail_grades: Da 11 anni in su
-  tutorial_stemcod_string_detail_grades: Da 11 anni in su
+  tutorial_groktunnel_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_stemcod_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_techikb_string_detail_grades: Università
   tutorial_kanostreet_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_nyblebot_string_detail_grades: Da pre-scolare a 11 anni
@@ -7306,32 +7350,32 @@ it:
   tutorial_techapf_string_detail_grades: Università
   tutorial_techfpjs_string_detail_grades: Università
   tutorial_techlinq_string_detail_grades: Università
-  tutorial_gpbcatapult_string_detail_grades: Da 11 anni in su
-  tutorial_quorumastro_string_detail_grades: Da 11 anni in su
+  tutorial_gpbcatapult_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_quorumastro_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_alicewonder_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rginter_string_detail_grades: Da 11 a 13 anni
-  tutorial_cssgrid_string_detail_grades: Da 11 anni in su
+  tutorial_cssgrid_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_jshero_string_detail_grades: Dai 14 anni in su
   tutorial_codemojipy_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_nclabdrone_string_detail_grades: Da 11 anni in su
-  tutorial_gpbcircle_string_detail_grades: Da 11 anni in su
-  tutorial_gpbpaint_string_detail_grades: Da 11 anni in su
-  tutorial_cocomarcade_string_detail_grades: Da 11 anni in su
+  tutorial_nclabdrone_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gpbcircle_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gpbpaint_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cocomarcade_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_techcpp_string_detail_grades: Università
   tutorial_beetik_string_detail_grades: Da 11 a 13 anni
-  tutorial_codedj_string_detail_grades: Da 11 anni in su
-  tutorial_rgadvan_string_detail_grades: Da 11 anni in su
+  tutorial_codedj_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_rgadvan_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehsrn_string_detail_grades: Dai 14 anni in su
-  tutorial_codehswd_string_detail_grades: Da 11 anni in su
+  tutorial_codehswd_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_turtlerobot_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_ozoevo_string_detail_grades: Da 11 anni in su
-  tutorial_ozoexped_string_detail_grades: Da 11 anni in su
+  tutorial_ozoevo_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ozoexped_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozojourney_string_detail_grades: Da 7 a 13 anni
   tutorial_ozocodes_string_detail_grades: Tutte le età
   tutorial_ozoeclipse_string_detail_grades: Da 7 anni in su
-  tutorial_ozosimulator_string_detail_grades: Da 11 anni in su
-  tutorial_ozoalgorithm_string_detail_grades: Da 11 anni in su
-  tutorial_ozotimer_string_detail_grades: Da 11 anni in su
+  tutorial_ozosimulator_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ozoalgorithm_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ozotimer_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozohabits_string_detail_grades: Tutte le età
   tutorial_ozoprogram_string_detail_grades: Da 7 a 13 anni
   tutorial_ozopair_string_detail_grades: Da 7 anni in su
@@ -7354,9 +7398,9 @@ it:
   tutorial_lbvariables_string_detail_grades: Da 7 a 13 anni
   tutorial_lbfunctions_string_detail_grades: Da 7 a 13 anni
   tutorial_lblogic_string_detail_grades: Da 7 anni in su
-  tutorial_lbworld_string_detail_grades: Da 11 anni in su
+  tutorial_lbworld_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_lbloops_string_detail_grades: Da 7 a 13 anni
-  tutorial_lbtug_string_detail_grades: Da 11 anni in su
+  tutorial_lbtug_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_lbpotato_string_detail_grades: Da 7 anni in su
   tutorial_lbguitar_string_detail_grades: Da 7 anni in su
   tutorial_lbio_string_detail_grades: Da 7 a 13 anni
@@ -7365,14 +7409,14 @@ it:
   tutorial_wonzoo_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_wontrip_string_detail_grades: Da 7 a 13 anni
   tutorial_woncollect_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_wonsecret_string_detail_grades: Da 11 anni in su
+  tutorial_wonsecret_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_hsscience_string_detail_grades: Da 7 a 13 anni
-  tutorial_popculture_string_detail_grades: Da 11 anni in su
+  tutorial_popculture_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_legorobust_string_detail_grades: Da 7 anni in su
   tutorial_legoplants_string_detail_grades: Da 7 anni in su
-  tutorial_legopark_string_detail_grades: Da 11 anni in su
-  tutorial_legodetect_string_detail_grades: Da 11 anni in su
-  tutorial_legolight_string_detail_grades: Da 11 anni in su
+  tutorial_legopark_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_legodetect_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_legolight_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_alexa_string_detail_grades: Dai 14 anni in su
   tutorial_grokpetmicro_string_detail_grades: Da 11 a 13 anni
   tutorial_pirateplunder_string_detail_grades: Da 7 a 13 anni
@@ -7381,24 +7425,24 @@ it:
   tutorial_cajump_string_detail_grades: Da 7 a 13 anni
   tutorial_carest_string_detail_grades: Da 7 a 13 anni
   tutorial_accai_string_detail_grades: Da 7 a 13 anni
-  tutorial_vceclipse_string_detail_grades: Da 11 anni in su
-  tutorial_pmzero_string_detail_grades: Da 11 anni in su
+  tutorial_vceclipse_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_pmzero_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_hsela_string_detail_grades: Da 7 a 13 anni
   tutorial_ticklear_string_detail_grades: Da 7 a 13 anni
   tutorial_bcrobot_string_detail_grades: Da 7 a 13 anni
-  tutorial_bcsnow_string_detail_grades: Da 11 anni in su
+  tutorial_bcsnow_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ifly_string_detail_grades: Da 7 anni in su
   tutorial_idowedo_string_detail_grades: Da 7 a 13 anni
-  tutorial_diggindwarf_string_detail_grades: Da 11 anni in su
+  tutorial_diggindwarf_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_rmedr_string_detail_grades: Da 7 a 13 anni
   tutorial_spheroit_string_detail_grades: Da 7 anni in su
   tutorial_gameofcodes_string_detail_grades: Da 7 anni in su
-  tutorial_blocklygames_string_detail_grades: Da 11 anni in su
-  tutorial_spherohello_string_detail_grades: Da 11 anni in su
-  tutorial_spheroarcade_string_detail_grades: Da 11 anni in su
-  tutorial_bcpy1_string_detail_grades: Da 11 anni in su
-  tutorial_bcpy2_string_detail_grades: Da 11 anni in su
-  tutorial_bcjs1_string_detail_grades: Da 11 anni in su
+  tutorial_blocklygames_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_spherohello_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_spheroarcade_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bcpy1_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bcpy2_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bcjs1_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bcjs2_string_detail_grades: Dai 14 anni in su
   tutorial_3dbearmars_string_detail_grades: Da 7 a 13 anni
   tutorial_alexaskill_string_detail_grades: Da 7 a 13 anni
@@ -7407,27 +7451,27 @@ it:
   tutorial_blockscadbirdhouses_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_blockscadclock_string_detail_grades: Dai 14 anni in su
   tutorial_blockscaddinner_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_blockscadicecream_string_detail_grades: Da 11 anni in su
+  tutorial_blockscadicecream_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_blockscadpizza_string_detail_grades: Da 11 a 13 anni
   tutorial_blockscadsugar_string_detail_grades: Da 11 a 13 anni
   tutorial_bsgridlight_string_detail_grades: Da 7 anni in su
-  tutorial_bpartscratch_string_detail_grades: Da 11 anni in su
-  tutorial_bpartvid_string_detail_grades: Da 11 anni in su
+  tutorial_bpartscratch_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bpartvid_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bpenglishscratch_string_detail_grades: Da 7 a 13 anni
   tutorial_bpenglishvid_string_detail_grades: Da 7 a 13 anni
   tutorial_bphealthscratch_string_detail_grades: Da 7 anni in su
-  tutorial_bphealthvid_string_detail_grades: Da 11 anni in su
+  tutorial_bphealthvid_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bpmathscratch_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_bpmathvid_string_detail_grades: Da 11 anni in su
+  tutorial_bpmathvid_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bpmlkscratch_string_detail_grades: Da 7 a 13 anni
   tutorial_bpmlkvid_string_detail_grades: Da 11 a 13 anni
   tutorial_bpsafetyscratch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_bpsafetyvid_string_detail_grades: Da 11 a 13 anni
   tutorial_bpsciencescratch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_bpsciencevid_string_detail_grades: Da 11 a 13 anni
-  tutorial_bptechscratch_string_detail_grades: Da 11 anni in su
-  tutorial_bptechvid_string_detail_grades: Da 11 anni in su
-  tutorial_caflags_string_detail_grades: Da 11 anni in su
+  tutorial_bptechscratch_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bptechvid_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_caflags_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_matariki_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_carestaurant_string_detail_grades: Da 7 anni in su
   tutorial_casea_string_detail_grades: Da pre-scolare a 11 anni
@@ -7435,37 +7479,37 @@ it:
   tutorial_ccwslimer_string_detail_grades: Da 7 a 13 anni
   tutorial_codinggalaxy_string_detail_grades: Da pre-scolare a 13 anni
   tutorial_boatrace_string_detail_grades: Da 7 anni in su
-  tutorial_ccplay_string_detail_grades: Da 11 anni in su
+  tutorial_ccplay_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_grinch_string_detail_grades: Da 7 a 13 anni
   tutorial_codehsart_string_detail_grades: Dai 14 anni in su
   tutorial_codehsbitcoin_string_detail_grades: Dai 14 anni in su
   tutorial_codehsblockchain_string_detail_grades: Dai 14 anni in su
-  tutorial_codehscipher_string_detail_grades: Da 11 anni in su
+  tutorial_codehscipher_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehscollision_string_detail_grades: Dai 14 anni in su
-  tutorial_codehsmath_string_detail_grades: Da 11 anni in su
-  tutorial_codehsmusic_string_detail_grades: Da 11 anni in su
-  tutorial_codehssports_string_detail_grades: Da 11 anni in su
+  tutorial_codehsmath_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehsmusic_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehssports_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codemojipizza_string_detail_grades: Da 7 a 13 anni
-  tutorial_moonlander_string_detail_grades: Da 11 anni in su
+  tutorial_moonlander_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_sushicards_string_detail_grades: Da 7 a 13 anni
   tutorial_codesparkcreate_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_hardvsoft_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_codestersecard_string_detail_grades: Da 11 a 13 anni
-  tutorial_codesterslogo_string_detail_grades: Da 11 anni in su
-  tutorial_codesterstshirt_string_detail_grades: Da 11 anni in su
+  tutorial_codesterslogo_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codesterstshirt_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codewards_string_detail_grades: Da 7 a 13 anni
   tutorial_olympics_string_detail_grades: Da 7 a 13 anni
   tutorial_codinismhero_string_detail_grades: Da 7 anni in su
   tutorial_discovery_string_detail_grades: Da 7 anni in su
   tutorial_csfirstname_string_detail_grades: Da 7 anni in su
   tutorial_obstaclecourse_string_detail_grades: Da 7 anni in su
-  tutorial_edisonmove_string_detail_grades: Da 11 anni in su
-  tutorial_edisonspider_string_detail_grades: Da 11 anni in su
+  tutorial_edisonmove_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_edisonspider_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_edisonspotlight_string_detail_grades: Da 7 a 13 anni
-  tutorial_firiapython_string_detail_grades: Da 11 anni in su
-  tutorial_gamefrootsquid_string_detail_grades: Da 11 anni in su
-  tutorial_duckpiano_string_detail_grades: Da 11 anni in su
-  tutorial_gpsound_string_detail_grades: Da 11 anni in su
+  tutorial_firiapython_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gamefrootsquid_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_duckpiano_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gpsound_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_groklearningpython_string_detail_grades: Dai 14 anni in su
   tutorial_htmltimetravel_string_detail_grades: Dai 14 anni in su
   tutorial_hp_flappy_string_detail_grades: Dai 14 anni in su
@@ -7475,32 +7519,32 @@ it:
   tutorial_imake_string_detail_grades: Da pre-scolare a 6 anni
   tutorial_imorse_string_detail_grades: Da 7 a 13 anni
   tutorial_kanohp_string_detail_grades: Da 7 a 13 anni
-  tutorial_khanwebpages_string_detail_grades: Da 11 anni in su
+  tutorial_khanwebpages_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kibobowl_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_kibodance_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_buildcharacters_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_designgames_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_makelevels_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_wizard_string_detail_grades: Da 11 anni in su
+  tutorial_wizard_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_mbscratchcards_string_detail_grades: Da 7 anni in su
   tutorial_mbswiftplaygrounds_string_detail_grades: Da 7 anni in su
-  tutorial_mbbuttons_string_detail_grades: Da 11 anni in su
-  tutorial_meteor_string_detail_grades: Da 11 anni in su
-  tutorial_ballbounce_string_detail_grades: Da 11 anni in su
-  tutorial_mitcodi_string_detail_grades: Da 11 anni in su
-  tutorial_mitdoodle_string_detail_grades: Da 11 anni in su
-  tutorial_talktome_string_detail_grades: Da 11 anni in su
-  tutorial_mobilecspmap_string_detail_grades: Da 11 anni in su
+  tutorial_mbbuttons_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_meteor_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ballbounce_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_mitcodi_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_mitdoodle_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_talktome_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_mobilecspmap_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozorandom_string_detail_grades: Da 7 anni in su
   tutorial_ozotroll_string_detail_grades: Da 11 a 13 anni
   tutorial_peblioart_string_detail_grades: Dai 14 anni in su
-  tutorial_astropi_string_detail_grades: Da 11 anni in su
+  tutorial_astropi_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_rgart_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rgengineer_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rgmath_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rgscience_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_rgtech_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_robotmagic3d_string_detail_grades: Da 11 anni in su
+  tutorial_robotmagic3d_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robotmagicflappy_string_detail_grades: Dai 14 anni in su
   tutorial_scratchadventure_string_detail_grades: Da 7 anni in su
   tutorial_scratchtalk_string_detail_grades: Da 7 anni in su
@@ -7508,14 +7552,14 @@ it:
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-scolare
   tutorial_spherocomm_string_detail_grades: Da 7 a 13 anni
   tutorial_spherocommunity_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_spherofunctions_string_detail_grades: Da 11 anni in su
+  tutorial_spherofunctions_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_spheroinfrared_string_detail_grades: Da 11 a 13 anni
   tutorial_spherolightsensor_string_detail_grades: Da 7 a 13 anni
   tutorial_spheromansion_string_detail_grades: Da 7 a 13 anni
   tutorial_roadblocks_string_detail_grades: Da 7 a 13 anni
-  tutorial_spherotext2_string_detail_grades: Da 11 anni in su
-  tutorial_spherotext3_string_detail_grades: Da 11 anni in su
-  tutorial_spherotext4_string_detail_grades: Da 11 anni in su
+  tutorial_spherotext2_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_spherotext3_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_spherotext4_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_spheroraptor_string_detail_grades: Da 7 a 13 anni
   tutorial_stempiday_string_detail_grades: Dai 14 anni in su
   tutorial_stemplanetoids_string_detail_grades: Dai 14 anni in su
@@ -7523,103 +7567,106 @@ it:
   tutorial_algobot_string_detail_grades: Da 7 a 13 anni
   tutorial_thunkableapps_string_detail_grades: Dai 14 anni in su
   tutorial_toxicodedot_string_detail_grades: Da 7 a 13 anni
-  tutorial_gcactions_string_detail_grades: Da 11 anni in su
-  tutorial_gccomparators_string_detail_grades: Da 11 anni in su
-  tutorial_gcconditions_string_detail_grades: Da 11 anni in su
-  tutorial_gccreate_string_detail_grades: Da 11 anni in su
-  tutorial_gcevents_string_detail_grades: Da 11 anni in su
-  tutorial_gcloops_string_detail_grades: Da 11 anni in su
-  tutorial_gcvariables_string_detail_grades: Da 11 anni in su
+  tutorial_gcactions_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gccomparators_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gcconditions_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gccreate_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gcevents_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gcloops_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_gcvariables_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_beanything_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_change_string_detail_grades: Da 7 a 13 anni
   tutorial_cooking_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_crystal_string_detail_grades: Da 7 anni in su
-  tutorial_landscape_string_detail_grades: Da 11 anni in su
+  tutorial_landscape_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_pets_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_petvet_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_superhero_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodeplastic_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodetypeface_string_detail_grades: Da 11 anni in su
+  tutorial_superhero_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodeplastic_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodetypeface_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_washustorm_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_activitypackets_string_detail_grades: Da pre-scolare a 13 anni
-  tutorial_googlerookie_string_detail_grades: Da 11 anni in su
+  tutorial_googlerookie_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tommyturtle_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_mazyad_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_gamemaker_string_detail_grades: Da 7 anni in su
   tutorial_duckrace_string_detail_grades: Da 7 anni in su
-  tutorial_allcancodeapps_string_detail_grades: Da 11 anni in su
+  tutorial_allcancodeapps_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_n2y_string_detail_grades: Pre-scolare
   tutorial_microsoftarcade_string_detail_grades: Da 7 anni in su
   tutorial_csfirstunplugged_string_detail_grades: Da 7 a 13 anni
-  tutorial_toxicodepython_string_detail_grades: Da 11 anni in su
-  tutorial_codecombatozaria_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodedate_string_detail_grades: Da 11 anni in su
+  tutorial_toxicodepython_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codecombatozaria_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodedate_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codemonkeyspace_string_detail_grades: Da 7 a 13 anni
   tutorial_codespeakhappy_string_detail_grades: Da 7 a 13 anni
-  tutorial_grokimage_string_detail_grades: Da 11 anni in su
+  tutorial_grokimage_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_icomputelearn_string_detail_grades: Da pre-scolare a 13 anni
   tutorial_rpstress_string_detail_grades: Da 7 anni in su
   tutorial_bsdcause_string_detail_grades: Dai 14 anni in su
   tutorial_vidcodeanimoji_string_detail_grades: Da 7 anni in su
-  tutorial_bsdinspire_string_detail_grades: Da 11 anni in su
-  tutorial_tttractor_string_detail_grades: Da 11 anni in su
+  tutorial_vidcodeanimojies_string_detail_grades: Da 7 anni in su
+  tutorial_bsdinspire_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_tttractor_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codeillusionmickey_string_detail_grades: Da 7 a 13 anni
   tutorial_scigirlsquest_string_detail_grades: Da 7 a 13 anni
   tutorial_codespeakbreathe_string_detail_grades: Da 7 anni in su
-  tutorial_vidcodeface_string_detail_grades: Da 11 anni in su
-  tutorial_educodemaze_string_detail_grades: Da 11 anni in su
-  tutorial_educoderace_string_detail_grades: Da 11 anni in su
+  tutorial_vidcodeface_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_educodemaze_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_educoderace_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codespeakchatbot_string_detail_grades: Da 7 a 13 anni
-  tutorial_gamefrootgames_string_detail_grades: Da 11 anni in su
+  tutorial_gamefrootgames_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codespeakgrandparent_string_detail_grades: Da 7 a 13 anni
-  tutorial_educodekingdom_string_detail_grades: Da 11 anni in su
+  tutorial_educodekingdom_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehsdata_string_detail_grades: Dai 14 anni in su
-  tutorial_educodecake_string_detail_grades: Da 11 anni in su
-  tutorial_ttsecond_string_detail_grades: Da 11 anni in su
-  tutorial_bsdtrivia_string_detail_grades: Da 11 anni in su
+  tutorial_educodecake_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ttsecond_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_bsdtrivia_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_csfirstdialogue_string_detail_grades: Da 7 a 13 anni
   tutorial_codemonkeybeaver_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_codestersdistance_string_detail_grades: Da 11 anni in su
-  tutorial_itchspace_string_detail_grades: Da 11 anni in su
+  tutorial_codestersdistance_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_itchspace_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_vidcodemagic_string_detail_grades: Da 7 anni in su
-  tutorial_codespeakmeal_string_detail_grades: Da 11 anni in su
+  tutorial_vidcodemagices_string_detail_grades: Da 7 anni in su
+  tutorial_codespeakmeal_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_itchfish_string_detail_grades: Da 7 a 13 anni
-  tutorial_bsdwebsite_string_detail_grades: Da 11 anni in su
+  tutorial_bsdwebsite_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codespeaktime_string_detail_grades: Da 7 a 13 anni
-  tutorial_itchwebcam_string_detail_grades: Da 11 anni in su
+  tutorial_itchwebcam_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_itchball_string_detail_grades: Da 7 a 13 anni
   tutorial_ttrace_string_detail_grades: Da 11 a 13 anni
   tutorial_plethora_string_detail_grades: Da 7 anni in su
-  tutorial_educodesecret_string_detail_grades: Da 11 anni in su
-  tutorial_itchshapes_string_detail_grades: Da 11 anni in su
+  tutorial_educodesecret_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_itchshapes_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codeguppytext_string_detail_grades: Da 11 a 13 anni
+  tutorial_vidcodeplastiche_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_educativechatbot_string_detail_grades: Dai 14 anni in su
-  tutorial_educodebasics_string_detail_grades: Da 11 anni in su
-  tutorial_codehsdesign_string_detail_grades: Da 11 anni in su
-  tutorial_htmlacademyphp_string_detail_grades: Da 11 anni in su
+  tutorial_educodebasics_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codehsdesign_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_htmlacademyphp_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_gamefrootdistance_string_detail_grades: Da 7 anni in su
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Da 11 a 13 anni
-  tutorial_cuttle_string_detail_grades: Da 11 anni in su
+  tutorial_cuttle_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_bsdjokes_string_detail_grades: Da 11 a 13 anni
-  tutorial_rptree_string_detail_grades: Da 11 anni in su
-  tutorial_codestersunity_string_detail_grades: Da 11 anni in su
-  tutorial_codesterssoccer_string_detail_grades: Da 11 anni in su
+  tutorial_rptree_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codestersunity_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codesterssoccer_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_breakoutlock_string_detail_grades: Da 7 a 13 anni
-  tutorial_thunkablemask_string_detail_grades: Da 11 anni in su
+  tutorial_thunkablemask_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_cafarming_string_detail_grades: Da 7 a 13 anni
   tutorial_blocksmithyeti_string_detail_grades: Dai 14 anni in su
-  tutorial_codecapture_string_detail_grades: Da 11 anni in su
+  tutorial_codecapture_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehslitter_string_detail_grades: Da 11 a 13 anni
   tutorial_bsdocean_string_detail_grades: Da 11 a 13 anni
-  tutorial_itchplatformer_string_detail_grades: Da 11 anni in su
-  tutorial_codejika_string_detail_grades: Da 7 a 13 anni
+  tutorial_itchplatformer_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_codejika_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_gamefrootclicker_string_detail_grades: Da 11 a 13 anni
   tutorial_rmagicequity_string_detail_grades: Da 11 a 13 anni
   tutorial_ttfreestyle_string_detail_grades: Da 11 a 13 anni
   tutorial_ozobotcolor2_string_detail_grades: Da 7 anni in su
   tutorial_ozobotcolor3_string_detail_grades: Da 7 anni in su
-  tutorial_clcarbon_string_detail_grades: Da 11 anni in su
+  tutorial_clcarbon_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kodablebasics_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_scigirlscc_string_detail_grades: Da 7 anni in su
   tutorial_irobotpicture_string_detail_grades: Da 7 a 13 anni
@@ -7631,15 +7678,15 @@ it:
   tutorial_kcjheroines_string_detail_grades: Da 7 a 13 anni
   tutorial_ozobotvalue_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_icodebytes_string_detail_grades: Pre-scolare
-  tutorial_clfashion2_string_detail_grades: Da 11 anni in su
-  tutorial_ai4all_string_detail_grades: Da 11 anni in su
-  tutorial_cldata_string_detail_grades: Da 11 anni in su
+  tutorial_clfashion2_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_ai4all_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cldata_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_spheroinputs_string_detail_grades: Da 7 a 13 anni
   tutorial_edisoncount_string_detail_grades: Da 7 a 13 anni
   tutorial_spheroloops_string_detail_grades: Da 7 a 13 anni
   tutorial_kiboprogram_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_hellorubycsin60_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_clfashion1_string_detail_grades: Da 11 anni in su
+  tutorial_clfashion1_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_irobottraffic_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_edisonmystery_string_detail_grades: Da 11 a 13 anni
   tutorial_microbitseaturtles_string_detail_grades: Da 11 a 13 anni
@@ -7647,17 +7694,17 @@ it:
   tutorial_imagilabs_string_detail_grades: Da 7 a 13 anni
   tutorial_irobotsimulator_string_detail_grades: Da 7 a 13 anni
   tutorial_irobotkind_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_firiavirtual_string_detail_grades: Da 11 anni in su
+  tutorial_firiavirtual_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_irobotguesscode_string_detail_grades: Da 7 a 13 anni
   tutorial_ozobotnouns_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_nasa3d_string_detail_grades: Da 11 anni in su
-  tutorial_blupants_string_detail_grades: Da 11 anni in su
+  tutorial_nasa3d_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_blupants_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_legodance_string_detail_grades: Da 11 a 13 anni
   tutorial_nearpodcoding_string_detail_grades: Dai 14 anni in su
   tutorial_kcjplastic_string_detail_grades: Da 7 anni in su
   tutorial_legojourney_string_detail_grades: Da 7 a 13 anni
   tutorial_legohopper_string_detail_grades: Da 7 a 13 anni
-  tutorial_catrobatembroidery_string_detail_grades: Da 11 anni in su
+  tutorial_catrobatembroidery_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_irobotphone_string_detail_grades: Da 7 a 13 anni
   tutorial_codeguppydraw_string_detail_grades: Da 11 a 13 anni
   tutorial_codejumper_string_detail_grades: Da 7 a 13 anni
@@ -8404,6 +8451,7 @@ it:
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Tutti i browser moderni, Android, iOS
+  tutorial_vidcodeanimojies_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8427,6 +8475,7 @@ it:
     schermo
   tutorial_itchspace_string_platforms: Tutti i browser moderni
   tutorial_vidcodemagic_string_platforms: Tutti i browser moderni, Android, iOS
+  tutorial_vidcodemagices_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Tutti i browser moderni
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8438,6 +8487,8 @@ it:
   tutorial_educodesecret_string_platforms: Tutti i browser moderni
   tutorial_itchshapes_string_platforms: Tutti i browser moderni
   tutorial_codeguppytext_string_platforms: Tutti i browser moderni, Android, iOS
+  tutorial_vidcodeplastiche_string_platforms: Tutti i moderni browser, iPad, apparecchi
+    scollegati
   tutorial_educativechatbot_string_platforms: Tutti i browser moderni
   tutorial_educodebasics_string_platforms: Tutti i browser moderni
   tutorial_codehsdesign_string_platforms: Tutti i browser moderni, tablet Android,
@@ -9111,6 +9162,7 @@ it:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -9132,6 +9184,7 @@ it:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -9143,6 +9196,7 @@ it:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9852,6 +9906,7 @@ it:
   tutorial_rpstress_string_detail_programming_languages: Blocchi
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9873,6 +9928,7 @@ it:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blocchi
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blocchi
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9885,6 +9941,7 @@ it:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blocchi
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -10050,7 +10107,7 @@ it:
   tutorial_icomputeeggs_name: Nascondere le uova
   tutorial_rootunplugged_name: Interruzione del codice iRobot
   tutorial_rgtreasure_name: Esercizi RoboGarden - Robo scrigno del tesoro
-  tutorial_peblioportraits_name: 'Ritrattistica computazionale: Arte per sempre '
+  tutorial_peblioportraits_name: 'Ritrattistica computazionale: Arte per il bene comune'
   tutorial_rootcodebreak_name: Interruzione del codice iRobot con Root
   tutorial_microbit14_name: 'micro:bit: codifica verso l''Obiettivo globale 14, La
     vita sott''acqua'
@@ -10076,7 +10133,7 @@ it:
   tutorial_modtraits_name: Tratti del carattere con GoPiGo
   tutorial_mee_name: 'L''Ora del Codice di Minecraft: IA a fin di bene'
   tutorial_kuborobo_name: Percorsi di codifica Robotica KUBO
-  tutorial_ai-oceans_name: IA per i Mari
+  tutorial_ai-oceans_name: L'Intelligenza Artificiale per il mare
   tutorial_scratchimagine_longdescription: Immagina un mondo in cui tutto è possibile,
     quindi dagli vita con Scratch!
   tutorial_codesterspsa_longdescription: Impara le basi della codifica con Python
@@ -10167,8 +10224,9 @@ it:
     di diventare vittima di una truffa.
   tutorial_thunkableyeet_longdescription: Impara a costruire due app che aiuteranno
     la tua città! Yeet!
-  tutorial_vidcodedeal_longdescription: Inizia a programmare per sempre creando animazioni
-    con importanti donne leader e citazioni che esprimono il loro punto di vista.
+  tutorial_vidcodedeal_longdescription: Inizia a programmare per il bene comune creando
+    animazioni con importanti donne leader e citazioni che esprimono il loro punto
+    di vista.
   tutorial_codehsgeno_longdescription: In questa Ora di Codice, gli studenti creeranno
     un programma che risolverà le coppie di alleli in base all'input dell'utente.
     Gli studenti programmeranno con Tracy la tartaruga in Python affinchè ciò accada.
@@ -10584,42 +10642,42 @@ it:
   tutorial_kuborobo_language: Solo in inglese
   tutorial_ai-oceans_language: Italiano
   tutorial_scratchimagine_string_detail_grades: Da 7 anni in su
-  tutorial_codesterspsa_string_detail_grades: Da 11 anni in su
+  tutorial_codesterspsa_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_googlehero_string_detail_grades: Da 7 a 13 anni
-  tutorial_codestersbball_string_detail_grades: Da 11 anni in su
+  tutorial_codestersbball_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_scratchcartoon_string_detail_grades: Da 7 anni in su
   tutorial_codemonkeyjr_string_detail_grades: Pre-scolare
   tutorial_bananatales_string_detail_grades: Da 7 a 13 anni
   tutorial_scratchtales_string_detail_grades: Da 7 a 13 anni
-  tutorial_msemoji_string_detail_grades: Da 11 anni in su
-  tutorial_cacolor_string_detail_grades: Da 11 anni in su
+  tutorial_msemoji_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cacolor_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kodablebeach_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_tynkeren_string_detail_grades: Da 7 a 13 anni
-  tutorial_tynkerjavapro_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerjavapro_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_grasshopperhack_string_detail_grades: Dai 14 anni in su
   tutorial_pbskids_string_detail_grades: Da pre-scolare a 5° primaria
   tutorial_nclabdata_string_detail_grades: Dai 14 anni in su
   tutorial_grasshopperphoto_string_detail_grades: Dai 14 anni in su
-  tutorial_tynkerpyland_string_detail_grades: Da 11 anni in su
+  tutorial_tynkerpyland_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codeitimages_string_detail_grades: Da 7 anni in su
   tutorial_hyperpadenemy_string_detail_grades: Dai 14 anni in su
   tutorial_tynkerpro_string_detail_grades: Da 7 a 13 anni
-  tutorial_trashtag_string_detail_grades: Da 11 anni in su
+  tutorial_trashtag_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_casiege_string_detail_grades: Da 7 a 13 anni
-  tutorial_thunkableyeet_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodedeal_string_detail_grades: Da 11 anni in su
+  tutorial_thunkableyeet_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodedeal_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codehsgeno_string_detail_grades: Dai 14 anni in su
   tutorial_hyperpadpong_string_detail_grades: Dai 14 anni in su
   tutorial_tynkerland_string_detail_grades: Da 7 a 13 anni
-  tutorial_trinketgirl_string_detail_grades: Da 11 anni in su
+  tutorial_trinketgirl_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_rpimosquito_string_detail_grades: Da 11 a 13 anni
-  tutorial_tynkermars_string_detail_grades: Da 11 anni in su
-  tutorial_cityx_string_detail_grades: Da 11 anni in su
-  tutorial_vidcodemap_string_detail_grades: Da 11 anni in su
+  tutorial_tynkermars_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_cityx_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_vidcodemap_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_robotmagicfarm_string_detail_grades: Da 7 a 13 anni
-  tutorial_codehstriangle_string_detail_grades: Da 11 anni in su
+  tutorial_codehstriangle_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ttwhitehouse_string_detail_grades: Da 7 anni in su
-  tutorial_modulo_string_detail_grades: Da 11 anni in su
+  tutorial_modulo_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codingtown_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_kanoart_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_dragonscript_string_detail_grades: Dai 14 anni in su
@@ -10627,34 +10685,34 @@ it:
   tutorial_htmlmuffin_string_detail_grades: Da 11 a 13 anni
   tutorial_microsoftpizza_string_detail_grades: Da 11 a 13 anni
   tutorial_stemc_blckhole_string_detail_grades: Dai 14 anni in su
-  tutorial_careconfigure_string_detail_grades: Da 11 anni in su
+  tutorial_careconfigure_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_rpiscratch_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_ozaria_string_detail_grades: Da 7 anni in su
-  tutorial_ttovum_string_detail_grades: Da 11 anni in su
+  tutorial_ttovum_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ttpassage_string_detail_grades: Da 7 a 13 anni
   tutorial_tynkerhtmlen_string_detail_grades: Da 7 anni in su
   tutorial_ttfrog_string_detail_grades: Da 7 a 13 anni
   tutorial_codemojijava_string_detail_grades: Da 11 a 13 anni
-  tutorial_ccfirewall_string_detail_grades: Da 11 anni in su
+  tutorial_ccfirewall_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_htmljs_string_detail_grades: Da 11 a 13 anni
   tutorial_ttaqueducts_string_detail_grades: Da 11 a 13 anni
-  tutorial_vtgame_string_detail_grades: Da 11 anni in su
-  tutorial_baroborav_string_detail_grades: Da 11 anni in su
+  tutorial_vtgame_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_baroborav_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_baroboobstacle_string_detail_grades: Da 7 anni in su
-  tutorial_pbstorytelling_string_detail_grades: Da 11 anni in su
+  tutorial_pbstorytelling_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_kibosnow_string_detail_grades: Da pre-scolare a 5° primaria
   tutorial_kibohappy_string_detail_grades: Da pre-scolare a 5° primaria
   tutorial_rubylove_string_detail_grades: Da pre-scolare a terza media
   tutorial_spherosmiles_string_detail_grades: Da 7 anni in su
   tutorial_spherobaby_string_detail_grades: Da pre-scolare a 13 anni
-  tutorial_toxarchitect_string_detail_grades: Da 11 anni in su
+  tutorial_toxarchitect_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_idodge_string_detail_grades: Da 7 a 13 anni
-  tutorial_firiacodebot_string_detail_grades: Da 11 anni in su
+  tutorial_firiacodebot_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_modlighthouse_string_detail_grades: Pre-scolare
   tutorial_spherogreen_string_detail_grades: Da 7 a 13 anni
   tutorial_ozopopstar_string_detail_grades: Da 7 a 13 anni
-  tutorial_eddesign_string_detail_grades: Da 11 anni in su
-  tutorial_edshapeup_string_detail_grades: Da 11 anni in su
+  tutorial_eddesign_string_detail_grades: Gradi 6+ (11 e superiori)
+  tutorial_edshapeup_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_ozocolor_string_detail_grades: Da 7 a 13 anni
   tutorial_kcjanimals_string_detail_grades: Da 7 a 13 anni
   tutorial_icomputeeggs_string_detail_grades: Da 7 a 13 anni
@@ -10663,21 +10721,21 @@ it:
   tutorial_peblioportraits_string_detail_grades: Dai 14 anni in su
   tutorial_rootcodebreak_string_detail_grades: Da 7 a 13 anni
   tutorial_microbit14_string_detail_grades: Da 7 a 13 anni
-  tutorial_barobomoon_string_detail_grades: Da 11 anni in su
+  tutorial_barobomoon_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_eddog_string_detail_grades: Da II primaria a prima media
   tutorial_microbit15_string_detail_grades: Da 7 a 13 anni
   tutorial_unity_string_detail_grades: Dai 14 anni in su
-  tutorial_blockscadtarget_string_detail_grades: Da 11 anni in su
+  tutorial_blockscadtarget_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tcadicicles_string_detail_grades: Da 11 a 13 anni
-  tutorial_blockscadscale_string_detail_grades: Da 11 anni in su
+  tutorial_blockscadscale_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_tcadloops_string_detail_grades: Da 11 a 13 anni
   tutorial_phidgets_string_detail_grades: Dai 14 anni in su
   tutorial_kcjmerry_string_detail_grades: Da 7 a 13 anni
-  tutorial_modvariables_string_detail_grades: Da 11 anni in su
+  tutorial_modvariables_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_codestersmicro_string_detail_grades: Da 11 a 13 anni
   tutorial_codestersdata_string_detail_grades: Da 11 a 13 anni
   tutorial_ikodexmas_string_detail_grades: Da pre-scolare a 11 anni
-  tutorial_rpisensehat_string_detail_grades: Da 11 anni in su
+  tutorial_rpisensehat_string_detail_grades: Gradi 6+ (11 e superiori)
   tutorial_modtraits_string_detail_grades: Da 7 anni in su
   tutorial_mee_string_detail_grades: Da 7 anni in su
   tutorial_kuborobo_string_detail_grades: Da pre-scolare a terza media
@@ -11013,8 +11071,8 @@ it:
   tutorial_mee_string_detail_programming_languages: Blocchi
   tutorial_kuborobo_string_detail_programming_languages: Etichetta le tessere che
     gli studenti mettono insieme
-  tutorial_ai-oceans_string_detail_programming_languages: IA e Apprendimento Automatico
-    (Machine Learning)
+  tutorial_ai-oceans_string_detail_programming_languages: Intelligenza Artificiale
+    e Apprendimento Automatico (Machine Learning)
   school_not_found_heading: Non siamo riusciti a trovare la tua scuola. Inserisci
     ulteriori informazioni.
   school_name: Nome della scuola

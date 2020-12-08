@@ -30,11 +30,9 @@ fr:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  hoc2020_header: Apprenez maintenant pour construire un avenir plus brillant
+  hoc2020_header_with_line_break_markdown: "Apprenez maintenant, \n\npour construire
+    un avenir plus brillant."
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -44,6 +42,12 @@ fr:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: L'Heure de Code 2020 sera bientôt disponible!
+  hoc2020_ai_header: Explorez l'intelligence artificielle
+  hoc2020_ai_description: L'IA et l'apprentissage automatique ont un impact sur notre
+    monde. Rejoignez-nous pour explorer l'IA dans une nouvelle série de vidéos, former
+    l'IA pour les océans dans plus de 25 langues, nous parlerons de l'éthique et de
+    l'IA, et de bien d'autres choses encore...
   hoc2019_header: Apprends l'informatique. Change le monde.
   hoc2019_header_line1_mobile: Apprends l'informatique.
   hoc2019_header_line2_mobile: Change le monde.
@@ -555,7 +559,7 @@ fr:
     to express their creativity with computer science. Try your hand at the new tutorials.
     What will you create?
   social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_hoc_here: L'Heure du Code est ici!
   social_hoc2018_join: Une Heure de Code va arriver
   social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
@@ -988,6 +992,7 @@ fr:
   highlights_constant_athletes_short_heading: Dépassez-vous
   footer_copyright_message: Copyright 2015 Code.org. Tous droits réservés.
   footer_trademark_message: Une Heure de Code™ est une marque de Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partenaires
   footer_menu_contact: Contactez-nous
   footer_menu_support: Aide
@@ -1597,7 +1602,7 @@ fr:
   tutorial_n2y_name: Bitt Bott Explores Earth
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_toxicodepython_name: Découvre Python avec Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
@@ -1605,9 +1610,10 @@ fr:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1623,23 +1629,25 @@ fr:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
   tutorial_ttrace_name: Race Condition
-  tutorial_plethora_name: 'Plethora: Cause and Effect'
+  tutorial_plethora_name: 'Pléthora : Cause et effet'
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1649,7 +1657,7 @@ fr:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1671,12 +1679,12 @@ fr:
   tutorial_kodablebasics_name: 'Coding Basics: Unplugged'
   tutorial_scigirlscc_name: 'SciGirls: Code Creators'
   tutorial_irobotpicture_name: 'Seeing the Whole Picture: Coded Messages'
-  tutorial_kcjmyself_name: Let me introduce myself!
+  tutorial_kcjmyself_name: Faisons connaissance!
   tutorial_nearpodalgorithms_name: 'Coding: Algorithms '
   tutorial_kibodrop_name: KIBO Craft and Build Drop Test
   tutorial_ozobotcolor1_name: 'Introduction to Color Codes 01: Line Following'
   tutorial_scigirlspixels_name: 'SciGirls: Passion for Pixels'
-  tutorial_kcjheroines_name: Our Heroines
+  tutorial_kcjheroines_name: Nos héroïnes
   tutorial_ozobotvalue_name: What's My Value?
   tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
   tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
@@ -1702,14 +1710,14 @@ fr:
   tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
   tutorial_legodance_name: Break Dance
   tutorial_nearpodcoding_name: 'Topic Spark: Coding '
-  tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
+  tutorial_kcjplastic_name: 'Défi Plastiques #jeunesse2030'
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Broderie codée
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Un histoire Minecraft à propos de deux villages
   tutorial_danceparty_shortdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !
@@ -5473,9 +5481,9 @@ fr:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_toxicodepython_longdescription: Découvre les bases de Python sans aucun
+    mot ni explication. Notre prof silencieux te donnera plusieurs séries de challenges
+    pour te faire deviner des règles de Python à partir de tes intuitions et tes erreurs.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
     that has taken over the world! Along the way, you'll meet interesting characters
@@ -5501,20 +5509,22 @@ fr:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5560,12 +5570,12 @@ fr:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5584,16 +5594,18 @@ fr:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5603,8 +5615,9 @@ fr:
   tutorial_ttrace_longdescription: By calling functions and designing classes, players
     program their own race car to be fast, nimble, and powerful; during races, they
     can then hack their competitors' vehicles to scramble their controls.
-  tutorial_plethora_longdescription: 'In this Plethora activity you will solve visual
-    fun challenges and learn the concepts of cause and effect and user interaction. '
+  tutorial_plethora_longdescription: L'activité Plethora vous permettra de résoudre
+    des défis visuels amusants et d'apprendre les concepts de cause et effet ainsi
+    que l'interaction avec l'utilisateur.
   tutorial_educodesecret_longdescription: Explore the worlds of secrets with Agent
     Smith as you dive deeper into learning if statements, strings, for-in loops. Help
     Agent Smith find the culprits and configure the Agency's operating system for
@@ -5613,6 +5626,11 @@ fr:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
+    continues to worsen. Luckily, you can make your voice heard with code through
+    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
+    you can make a second video about any subject you care about! Learn to use loops,
+    sine waves and customized emojis to make a unique project.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5643,11 +5661,11 @@ fr:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5718,11 +5736,11 @@ fr:
     to help the robot understand everything around it. Just like sensors, our friends
     can often see, hear, feel or understand things that we cannot. In this activity,
     work together to help decode secret messages and crack the code!
-  tutorial_kcjmyself_longdescription: In this activity, you'll learn how to use Scratch
-    to code an animation all about you! Design a custom character to represent yourself,
-    make it move around, and add different backdrops to show off your hometown. This
-    project is simple enough for kids to complete by themselves or with support from
-    a grown up.
+  tutorial_kcjmyself_longdescription: Dans cette activité, vous allez apprendre à
+    vous servir de Scratch pour coder une animation entièrement sur vous! Créez un·e
+    personnage qui vous ressemble, faites-le/la bouger et ajoutez différents arrière-plans
+    pour montrer votre ville natale. Ce projet est assez facile pour qu’un·e enfant
+    le termine seul·e ou avec l’aide d’un adulte.
   tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
     an algorithm as a set of step-by-step directions. Students learn to create, test,
     and fix an algorithm to complete a specific task. '
@@ -5736,12 +5754,12 @@ fr:
     for the bot to follow.
   tutorial_scigirlspixels_longdescription: 'In this unplugged activity, you will learn
     what a pixel is and how to send a simple black and white image to a friend! '
-  tutorial_kcjheroines_longdescription: In this activity, you'll learn about different
-    Canadian women who have made history. Using Scratch, you'll learn how to code
-    a video game celebrating their lives and accomplishments. Choose a heroine, customize
-    their costume and backdrop, code movements and goals for your game, and keep score.
-    This project is simple enough for kids to complete by themselves or with support
-    from a grown up.
+  tutorial_kcjheroines_longdescription: Cette activité vous permettra d’en savoir
+    plus sur les Canadiennes qui ont marqué l’histoire. Vous apprendrez à coder un
+    jeu vidéo sur Scratch pour leur rendre hommage. Choisissez une héroïne, personnalisez
+    le costume et l’arrière-plan, codez les mouvements et les buts du jeu, et comptez
+    les points. Ce projet est assez facile pour qu’un·e enfant le termine seul·e ou
+    avec l’aide d’un adulte.
   tutorial_ozobotvalue_longdescription: Students will use their Ozobot to randomly
     select a place value, identify the same place value in a three-digit number, and
     write out the number.
@@ -5844,12 +5862,11 @@ fr:
   tutorial_nearpodcoding_longdescription: In this 25-30 minute Nearpod featuring Flocabulary
     topic spark, students are introduced to coding through a hip hop video and Nearpod's
     signature interactive features. This lesson features the Flocabulary video Coding.
-  tutorial_kcjplastic_longdescription: We're challenging you to use data visualization
-    to develop a plastic pollution solution! Discover where plastic waste comes from
-    and why it has become a global problem. Then reflect on your own plastic use,
-    estimate how much waste you could reduce over time, and design an invention or
-    alternative that could help. Kids can complete this project by themselves or with
-    support from a grown up.
+  tutorial_kcjplastic_longdescription: Imaginez une solution à la pollution plastique
+    grâce à la visualisation de données. Découvrez d’où viennent les déchets plastiques
+    et pourquoi ils sont devenus un problème mondial, puis pensez à votre propre consommation
+    et trouvez des solutions pour la réduire. Ce projet est assez facile pour qu’un·e
+    enfant le termine seul·e ou avec l’aide d’un adulte.
   tutorial_legojourney_longdescription: 'Journeys are exciting!  Challenge students
     to remix our Grasshopper Journey project in order to create a new journey and
     find different ways for a SPIKE Prime inspired virtual grasshopper to move using
@@ -5857,8 +5874,8 @@ fr:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Codez votre design sur votre téléphone
+    Android et cousez-le sur votre t-shirt, pantalon, sac de sport ou chaussures!
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -5871,11 +5888,12 @@ fr:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Depuis des siècles, les villageois et les illageois
+    partagent le même espace, mais n’interagissent que très rarement. Nous pouvons
+    maintenant utiliser la puissance du code pour réunir ces deux villages. Les joueurs
+    ressentiront de l’empathie et de la compassion pour leurs voisins, apprendront
+    la coopération et l’inclusion, et découvriront la diversité qui nous rend tous
+    si uniques.
   tutorial_dance2019_language: Arabe, chinois, tchèque, danois, néerlandais, anglais,
     finnois, français, allemand, grec, hindi, hongrois, indonésien, italien, japonais,
     coréen, malais, polonais, portugais et 10 autres !
@@ -6539,7 +6557,7 @@ fr:
   tutorial_pets_language: Français
   tutorial_petvet_language: Français
   tutorial_superhero_language: Français
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: Français
   tutorial_vidcodetypeface_language: Français
   tutorial_washustorm_language: Français
   tutorial_activitypackets_language: Français
@@ -6552,9 +6570,10 @@ fr:
   tutorial_n2y_language: Français
   tutorial_microsoftarcade_language: Français
   tutorial_csfirstunplugged_language: English, Spanish (Mexico)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: Danois, néerlandais, anglais, anglais (Royaume-Uni),
+    estonien, français, allemand, indonésien, italien, autre, polonais, portugais
+    (Brésil), portugais (Portugal), roumain, espagnol (Espagne), espagnol (Mexique),
+    suédois, turc
   tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
     Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodedate_language: Français
@@ -6566,6 +6585,7 @@ fr:
     (Mexico)
   tutorial_bsdcause_language: Français
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Français
   tutorial_tttractor_language: Français
   tutorial_codeillusionmickey_language: Français
@@ -6588,6 +6608,7 @@ fr:
   tutorial_codestersdistance_language: Français
   tutorial_itchspace_language: Français
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Français
   tutorial_itchfish_language: Français
   tutorial_bsdwebsite_language: Français
@@ -6595,11 +6616,12 @@ fr:
   tutorial_itchwebcam_language: Français
   tutorial_itchball_language: Français
   tutorial_ttrace_language: Français
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: arabe, chinois (simplifié), anglais, hébreu, portugais
+    (Brésil), espagnol, français
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Français
   tutorial_codeguppytext_language: Français
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: Français
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Français
@@ -6665,127 +6687,130 @@ fr:
   tutorial_kcjplastic_language: Anglais, Français
   tutorial_legojourney_language: Français
   tutorial_legohopper_language: Français
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Arabe, bengali, bosniaque, chinois simplifié,
+    croate, tchèque, anglais (Royaume-Uni), français, allemand, hindi, indonésien,
+    italien, japonais, coréen, norvégien (nynorsk), autre, polonais, portugais (Brésil),
+    portugais ( Portugal), russe, serbe (cyrillique), serbe (latin), slovaque, espagnol
+    (Espagne, Mexique), swahili, suédois, tamoul, thaï, turc, ourdou (Pakistan), vietnamien
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Français
-  tutorial_meeempathy_language: Français
-  tutorial_dance2019_string_detail_grades: A partir de 7 ans
-  tutorial_danceparty_string_detail_grades: A partir de 7 ans
+  tutorial_meeempathy_language: Chinois, danois, néerlandais, anglais, français, italien,
+    japonais, coréen, norvégien, portugais, espagnol, suédois, turc
+  tutorial_dance2019_string_detail_grades: 2ème année scolaire et plus
+  tutorial_danceparty_string_detail_grades: 2ème année scolaire et plus
   tutorial_chibitronics_string_detail_grades: Grades 2-5
-  tutorial_athlete_string_detail_grades: A partir de 7 ans
-  tutorial_moana_string_detail_grades: A partir de 7 ans
-  tutorial_star-wars_string_detail_grades: A partir de 7 ans
+  tutorial_athlete_string_detail_grades: 2ème année scolaire et plus
+  tutorial_moana_string_detail_grades: 2ème année scolaire et plus
+  tutorial_star-wars_string_detail_grades: 2ème année scolaire et plus
   tutorial_gumadventure_string_detail_grades: Grades 6-8
-  tutorial_mchoc_string_detail_grades: A partir de 7 ans
-  tutorial_vidnews_string_detail_grades: Grades 6+
+  tutorial_mchoc_string_detail_grades: 2ème année scolaire et plus
+  tutorial_vidnews_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_kodable-pre_string_detail_grades: K-5
-  tutorial_highseas_string_detail_grades: Grades 2-8
-  tutorial_capython_string_detail_grades: Grades 6+
-  tutorial_frzn_string_detail_grades: A partir de 7 ans
-  tutorial_cocom_string_detail_grades: A partir de 7 ans
-  tutorial_play-lab_string_detail_grades: A partir de 7 ans
+  tutorial_highseas_string_detail_grades: 2e à 8e année
+  tutorial_capython_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_frzn_string_detail_grades: 2ème année scolaire et plus
+  tutorial_cocom_string_detail_grades: 2ème année scolaire et plus
+  tutorial_play-lab_string_detail_grades: 2ème année scolaire et plus
   tutorial_boxisland_string_detail_grades: All ages
   tutorial_textcomp_string_detail_grades: A partir de 9 ans
   tutorial_encryption_string_detail_grades: A partir de 9 ans
-  tutorial_kanopixel_string_detail_grades: A partir de 7 ans
+  tutorial_kanopixel_string_detail_grades: 2ème année scolaire et plus
   tutorial_foos_string_detail_grades: K-5
-  tutorial_tynkerdd_string_detail_grades: Grades 2-8
-  tutorial_tynkerana_string_detail_grades: Grades 6+
-  tutorial_vidcard_string_detail_grades: A partir de 7 ans
-  tutorial_spritebox_string_detail_grades: Grades 2-8
-  tutorial_tynkerch_string_detail_grades: Grades 6+
+  tutorial_tynkerdd_string_detail_grades: 2e à 8e année
+  tutorial_tynkerana_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_vidcard_string_detail_grades: 2ème année scolaire et plus
+  tutorial_spritebox_string_detail_grades: 2e à 8e année
+  tutorial_tynkerch_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_lightbot_string_detail_grades: K-5
   tutorial_hoc_string_detail_grades: ne pas afficher
-  tutorial_code_string_detail_grades: A partir de 7 ans
-  tutorial_tinspire_string_detail_grades: Grades 6+
-  tutorial_itchbounceball_string_detail_grades: Grades 2-8
-  tutorial_vidclim_string_detail_grades: Grades 6+
-  tutorial_matlab_string_detail_grades: Grades 6+
-  tutorial_flap_string_detail_grades: A partir de 7 ans
-  tutorial_galaxy_string_detail_grades: Grades 6+
-  tutorial_inf_string_detail_grades: Grades 2-8
-  tutorial_tynkersol_string_detail_grades: A partir de 7 ans
-  tutorial_itchg_string_detail_grades: Grades 6+
-  tutorial_como_string_detail_grades: A partir de 7 ans
+  tutorial_code_string_detail_grades: 2ème année scolaire et plus
+  tutorial_tinspire_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_itchbounceball_string_detail_grades: 2e à 8e année
+  tutorial_vidclim_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_matlab_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_flap_string_detail_grades: 2ème année scolaire et plus
+  tutorial_galaxy_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_inf_string_detail_grades: 2e à 8e année
+  tutorial_tynkersol_string_detail_grades: 2ème année scolaire et plus
+  tutorial_itchg_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_como_string_detail_grades: 2ème année scolaire et plus
   tutorial_processfound_string_detail_grades: A partir de 9 ans
-  tutorial_tynkerhomo_string_detail_grades: Grades 6+
-  tutorial_art_string_detail_grades: A partir de 7 ans
-  tutorial_tynkerbrick_string_detail_grades: A partir de 7 ans
-  tutorial_itchbio_string_detail_grades: Grades 6+
+  tutorial_tynkerhomo_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_art_string_detail_grades: 2ème année scolaire et plus
+  tutorial_tynkerbrick_string_detail_grades: 2ème année scolaire et plus
+  tutorial_itchbio_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_itchj_string_detail_grades: Grades 6-8
-  tutorial_tickleo_string_detail_grades: A partir de 7 ans
-  tutorial_hopgeo_string_detail_grades: Grades 2-8
-  tutorial_tynkermult_string_detail_grades: Grades 2-8
+  tutorial_tickleo_string_detail_grades: 2ème année scolaire et plus
+  tutorial_hopgeo_string_detail_grades: 2e à 8e année
+  tutorial_tynkermult_string_detail_grades: 2e à 8e année
   tutorial_monster_string_detail_grades: Pre-reader - Grade 8
   tutorial_tynkerapp_string_detail_grades: ne pas afficher
   tutorial_tynkerpup_string_detail_grades: K-5
   tutorial_livecode_string_detail_grades: A partir de 9 ans
-  tutorial_cocomgame_string_detail_grades: A partir de 7 ans
+  tutorial_cocomgame_string_detail_grades: 2ème année scolaire et plus
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
-  tutorial_code-avengers_string_detail_grades: Grades 6+
+  tutorial_code-avengers_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_tynkercq_string_detail_grades: K-5
-  tutorial_cmgame_string_detail_grades: Grades 6+
+  tutorial_cmgame_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codesters_string_detail_grades: ne pas afficher
-  tutorial_qrm_string_detail_grades: Grades 6+
-  tutorial_texas-instruments_string_detail_grades: Grades 6+
-  tutorial_cajava_string_detail_grades: Grades 6+
+  tutorial_qrm_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_texas-instruments_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_cajava_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codehs_string_detail_grades: A partir de 9 ans
-  tutorial_hopemo_string_detail_grades: Grades 2-8
-  tutorial_tynkercm_string_detail_grades: A partir de 7 ans
-  tutorial_codesterswintergreet_string_detail_grades: A partir de 7 ans
-  tutorial_codestersc_string_detail_grades: Grades 6+
-  tutorial_codestersturtle_string_detail_grades: A partir de 7 ans
-  tutorial_penjee_string_detail_grades: Grades 6+
-  tutorial_trinket_string_detail_grades: A partir de 7 ans
-  tutorial_frogger_string_detail_grades: Grades 6+
-  tutorial_tynkereco_string_detail_grades: Grades 2-8
+  tutorial_hopemo_string_detail_grades: 2e à 8e année
+  tutorial_tynkercm_string_detail_grades: 2ème année scolaire et plus
+  tutorial_codesterswintergreet_string_detail_grades: 2ème année scolaire et plus
+  tutorial_codestersc_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codestersturtle_string_detail_grades: 2ème année scolaire et plus
+  tutorial_penjee_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_trinket_string_detail_grades: 2ème année scolaire et plus
+  tutorial_frogger_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_tynkereco_string_detail_grades: 2e à 8e année
   tutorial_mitedarc_string_detail_grades: Grades 6-8
-  tutorial_khan_string_detail_grades: Grades 6+
-  tutorial_tynkerd_string_detail_grades: Grades 6+
+  tutorial_khan_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_tynkerd_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_cdmy_string_detail_grades: A partir de 9 ans
-  tutorial_codestersdance_string_detail_grades: Grades 6+
-  tutorial_codestersbasketball_string_detail_grades: Grades 6+
-  tutorial_nclkarel_string_detail_grades: Grades 6+
-  tutorial_buildpong_string_detail_grades: A partir de 7 ans
-  tutorial_tynkerdrones_string_detail_grades: A partir de 7 ans
-  tutorial_carla_string_detail_grades: Grades 6+
-  tutorial_zulama_string_detail_grades: Grades 6+
-  tutorial_capost_string_detail_grades: Grades 6+
-  tutorial_marco_string_detail_grades: Grades 2-8
-  tutorial_codestersflappybike_string_detail_grades: Grades 6+
+  tutorial_codestersdance_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codestersbasketball_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_nclkarel_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_buildpong_string_detail_grades: 2ème année scolaire et plus
+  tutorial_tynkerdrones_string_detail_grades: 2ème année scolaire et plus
+  tutorial_carla_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_zulama_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_capost_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_marco_string_detail_grades: 2e à 8e année
+  tutorial_codestersflappybike_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_kanopong_string_detail_grades: Grades 6-8
-  tutorial_tynkerright_string_detail_grades: Grades 2-8
+  tutorial_tynkerright_string_detail_grades: 2e à 8e année
   tutorial_touchdevelop_string_detail_grades: ne pas afficher
-  tutorial_tynkercc_string_detail_grades: Grades 6+
+  tutorial_tynkercc_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_bamboo_string_detail_grades: Grades 2-5
-  tutorial_robojav_string_detail_grades: Grades 6+
-  tutorial_roboba_string_detail_grades: Grades 6+
+  tutorial_robojav_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_roboba_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_knodsnake_string_detail_grades: Grades 6-8
-  tutorial_soccharater_string_detail_grades: Grades 6+
-  tutorial_silent_string_detail_grades: Grades 6+
-  tutorial_robomesh_string_detail_grades: A partir de 7 ans
-  tutorial_amaze_string_detail_grades: A partir de 7 ans
-  tutorial_codestersds_string_detail_grades: A partir de 7 ans
+  tutorial_soccharater_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_silent_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_robomesh_string_detail_grades: 2ème année scolaire et plus
+  tutorial_amaze_string_detail_grades: 2ème année scolaire et plus
+  tutorial_codestersds_string_detail_grades: 2ème année scolaire et plus
   tutorial_knodtext_string_detail_grades: Grades 6-8
-  tutorial_alicegar_string_detail_grades: Grades 6+
-  tutorial_codesterstransform_string_detail_grades: Grades 6+
-  tutorial_flexfrog_string_detail_grades: Grades 6+
+  tutorial_alicegar_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codesterstransform_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_flexfrog_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codemoji_string_detail_grades: ne pas afficher
-  tutorial_robobii_string_detail_grades: Grades 6+
+  tutorial_robobii_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_robobm_string_detail_grades: Grades 6-8
-  tutorial_codingrobots_string_detail_grades: A partir de 7 ans
-  tutorial_robob_string_detail_grades: Grades 6+
+  tutorial_codingrobots_string_detail_grades: 2ème année scolaire et plus
+  tutorial_robob_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_coders_string_detail_grades: A partir de 9 ans
-  tutorial_tynkerhw_string_detail_grades: Grades 2-8
-  tutorial_tynkermh_string_detail_grades: Grades 2-8
-  tutorial_caphoto_string_detail_grades: Grades 6+
+  tutorial_tynkerhw_string_detail_grades: 2e à 8e année
+  tutorial_tynkermh_string_detail_grades: 2e à 8e année
+  tutorial_caphoto_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_mozillahw_string_detail_grades: Grades 6-8
   tutorial_ticklep_string_detail_grades: ne pas afficher
-  tutorial_bbot_string_detail_grades: A partir de 7 ans
-  tutorial_scratchg_string_detail_grades: Grades 6+
+  tutorial_bbot_string_detail_grades: 2ème année scolaire et plus
+  tutorial_scratchg_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_roboticfriends_string_detail_grades: All ages
   tutorial_sjforest_string_detail_grades: K-5
   tutorial_sjgreet_string_detail_grades: K-5
@@ -6793,113 +6818,113 @@ fr:
   tutorial_fufafrenz_string_detail_grades: K-5
   tutorial_bbcgeo_string_detail_grades: ne pas afficher
   tutorial_chspixel_string_detail_grades: A partir de 9 ans
-  tutorial_hummingbird_string_detail_grades: Grades 6+
-  tutorial_recoloring_string_detail_grades: Grades 6+
+  tutorial_hummingbird_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_recoloring_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_bbcchem_string_detail_grades: ne pas afficher
-  tutorial_floalgo_string_detail_grades: A partir de 7 ans
-  tutorial_flocond_string_detail_grades: A partir de 7 ans
-  tutorial_floloops_string_detail_grades: A partir de 7 ans
-  tutorial_pgts_string_detail_grades: Grades 6+
+  tutorial_floalgo_string_detail_grades: 2ème année scolaire et plus
+  tutorial_flocond_string_detail_grades: 2ème année scolaire et plus
+  tutorial_floloops_string_detail_grades: 2ème année scolaire et plus
+  tutorial_pgts_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_ozo_string_detail_grades: All ages
   tutorial_bbcla_string_detail_grades: ne pas afficher
   tutorial_bbcsci_string_detail_grades: ne pas afficher
-  tutorial_tlctour_string_detail_grades: A partir de 7 ans
-  tutorial_codesterstj_string_detail_grades: A partir de 7 ans
-  tutorial_tlclocked_string_detail_grades: Grades 6+
-  tutorial_baubles_string_detail_grades: Grades 2-8
+  tutorial_tlctour_string_detail_grades: 2ème année scolaire et plus
+  tutorial_codesterstj_string_detail_grades: 2ème année scolaire et plus
+  tutorial_tlclocked_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_baubles_string_detail_grades: 2e à 8e année
   tutorial_bbcart_string_detail_grades: ne pas afficher
-  tutorial_tlcknight_string_detail_grades: A partir de 7 ans
+  tutorial_tlcknight_string_detail_grades: 2ème année scolaire et plus
   tutorial_fufafit_string_detail_grades: Grades 2-5
   tutorial_ozodance_string_detail_grades: All ages
   tutorial_codingrobotics_string_detail_grades: K-5
   tutorial_box_string_detail_grades: ne pas afficher
-  tutorial_hopgame_string_detail_grades: Grades 2-8
+  tutorial_hopgame_string_detail_grades: 2e à 8e année
   tutorial_icontrol_string_detail_grades: K-5
-  tutorial_cocomteach_string_detail_grades: A partir de 7 ans
+  tutorial_cocomteach_string_detail_grades: 2ème année scolaire et plus
   tutorial_bbcmathii_string_detail_grades: ne pas afficher
   tutorial_bbcphys_string_detail_grades: ne pas afficher
-  tutorial_bitsbox_string_detail_grades: Grades 2-8
-  tutorial_tlcemo_string_detail_grades: Grades 2-8
+  tutorial_bitsbox_string_detail_grades: 2e à 8e année
+  tutorial_tlcemo_string_detail_grades: 2e à 8e année
   tutorial_crd_string_detail_grades: Grades 6-8
   tutorial_bbcbio_string_detail_grades: ne pas afficher
-  tutorial_ticklebb8_string_detail_grades: A partir de 7 ans
+  tutorial_ticklebb8_string_detail_grades: 2ème année scolaire et plus
   tutorial_grok_string_detail_grades: ne pas afficher
-  tutorial_ijournalist_string_detail_grades: Grades 2-8
+  tutorial_ijournalist_string_detail_grades: 2e à 8e année
   tutorial_bbcmusic_string_detail_grades: ne pas afficher
   tutorial_secretcodes_string_detail_grades: Grades 6-8
-  tutorial_tlchex_string_detail_grades: Grades 6+
-  tutorial_tickles_string_detail_grades: A partir de 7 ans
+  tutorial_tlchex_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_tickles_string_detail_grades: 2ème année scolaire et plus
   tutorial_ozogame_string_detail_grades: All ages
-  tutorial_vidcodeio_string_detail_grades: A partir de 7 ans
+  tutorial_vidcodeio_string_detail_grades: 2ème année scolaire et plus
   tutorial_besttech_string_detail_grades: A partir de 9 ans
-  tutorial_tlcbrain_string_detail_grades: Grades 6+
+  tutorial_tlcbrain_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_hopquiz_string_detail_grades: Grades 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
   tutorial_cha_string_detail_grades: Grades 6-8
   tutorial_elaseq_string_detail_grades: K-5
   tutorial_bbcmathi_string_detail_grades: ne pas afficher
-  tutorial_tlcpixel_string_detail_grades: Grades 2-8
+  tutorial_tlcpixel_string_detail_grades: 2e à 8e année
   tutorial_arduino_string_detail_grades: Grades 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
-  tutorial_tlcinvis_string_detail_grades: A partir de 7 ans
-  tutorial_tlcjflap_string_detail_grades: Grades 6+
+  tutorial_tlcinvis_string_detail_grades: 2ème année scolaire et plus
+  tutorial_tlcjflap_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
-  tutorial_spiralsfinch_string_detail_grades: A partir de 7 ans
+  tutorial_spiralsfinch_string_detail_grades: 2ème année scolaire et plus
   tutorial_ozoi_string_detail_grades: All ages
-  tutorial_ticklel_string_detail_grades: A partir de 7 ans
-  tutorial_spiralsdash_string_detail_grades: Grades 2-8
-  tutorial_ghdebug_string_detail_grades: Grades 2-8
+  tutorial_ticklel_string_detail_grades: 2ème année scolaire et plus
+  tutorial_spiralsdash_string_detail_grades: 2e à 8e année
+  tutorial_ghdebug_string_detail_grades: 2e à 8e année
   tutorial_tlckk_string_detail_grades: Grades 2-5
   tutorial_firstcomp_string_detail_grades: Pre-reader - Grade 1
   tutorial_mazefinch_string_detail_grades: K-5
-  tutorial_tlccc_string_detail_grades: Grades 2-8
-  tutorial_tlcdoodle_string_detail_grades: Grades 2-8
-  tutorial_tlcpunch_string_detail_grades: Grades 6+
+  tutorial_tlccc_string_detail_grades: 2e à 8e année
+  tutorial_tlcdoodle_string_detail_grades: 2e à 8e année
+  tutorial_tlcpunch_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_finchfract_string_detail_grades: A partir de 9 ans
-  tutorial_tlcmind_string_detail_grades: Grades 6+
-  tutorial_tlctelebot_string_detail_grades: A partir de 7 ans
-  tutorial_tlcaus_string_detail_grades: Grades 6+
+  tutorial_tlcmind_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_tlctelebot_string_detail_grades: 2ème année scolaire et plus
+  tutorial_tlcaus_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_oralhist_string_detail_grades: A partir de 9 ans
-  tutorial_tlcmicro_string_detail_grades: A partir de 7 ans
-  tutorial_imathematician_string_detail_grades: Grades 2-8
-  tutorial_tlcmagic_string_detail_grades: Grades 6+
-  tutorial_scratchmus_string_detail_grades: Grades 2-8
-  tutorial_scratchanim_string_detail_grades: Grades 2-8
-  tutorial_scratchfly_string_detail_grades: Grades 2-8
-  tutorial_tynkerarc_string_detail_grades: A partir de 7 ans
-  tutorial_grokffpython_string_detail_grades: Grades 6+
-  tutorial_grokffblock_string_detail_grades: Grades 6+
-  tutorial_grokeliza_string_detail_grades: Grades 6+
-  tutorial_tynkercan_string_detail_grades: A partir de 7 ans
-  tutorial_grokflags_string_detail_grades: Grades 6+
-  tutorial_robomind_string_detail_grades: Grades 2-8
-  tutorial_scratchanimwork_string_detail_grades: Grades 2-8
+  tutorial_tlcmicro_string_detail_grades: 2ème année scolaire et plus
+  tutorial_imathematician_string_detail_grades: 2e à 8e année
+  tutorial_tlcmagic_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_scratchmus_string_detail_grades: 2e à 8e année
+  tutorial_scratchanim_string_detail_grades: 2e à 8e année
+  tutorial_scratchfly_string_detail_grades: 2e à 8e année
+  tutorial_tynkerarc_string_detail_grades: 2ème année scolaire et plus
+  tutorial_grokffpython_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_grokffblock_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_grokeliza_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_tynkercan_string_detail_grades: 2ème année scolaire et plus
+  tutorial_grokflags_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_robomind_string_detail_grades: 2e à 8e année
+  tutorial_scratchanimwork_string_detail_grades: 2e à 8e année
   tutorial_adventureq_string_detail_grades: Grades 2-5
-  tutorial_khan-es_string_detail_grades: Grades 6+
-  tutorial_kpt_string_detail_grades: Grades 6+
-  tutorial_kpl_string_detail_grades: Grades 6+
-  tutorial_khe_string_detail_grades: Grades 6+
-  tutorial_kfr_string_detail_grades: Grades 6+
-  tutorial_app-inventor_string_detail_grades: Grades 6+
+  tutorial_khan-es_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_kpt_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_kpl_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_khe_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_kfr_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_app-inventor_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_bits_string_detail_grades: Grades 2-5
-  tutorial_blockly_string_detail_grades: Grades 6+
+  tutorial_blockly_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_tynker_string_detail_grades: ne pas afficher
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: ne pas afficher
-  tutorial_mky_string_detail_grades: A partir de 7 ans
-  tutorial_spellcraft_string_detail_grades: Grades 6+
-  tutorial_pirates_string_detail_grades: Grades 2-8
-  tutorial_csfirst_string_detail_grades: A partir de 7 ans
+  tutorial_mky_string_detail_grades: 2ème année scolaire et plus
+  tutorial_spellcraft_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_pirates_string_detail_grades: 2e à 8e année
+  tutorial_csfirst_string_detail_grades: 2ème année scolaire et plus
   tutorial_loopedy_string_detail_grades: Grades 2-5
   tutorial_dsw_string_detail_grades: ne pas afficher
   tutorial_dswb_string_detail_grades: ne pas afficher
   tutorial_ssw_string_detail_grades: ne pas afficher
   tutorial_sswb_string_detail_grades: ne pas afficher
-  tutorial_kodable-unplugged_string_detail_grades: Grades 2-8
+  tutorial_kodable-unplugged_string_detail_grades: 2e à 8e année
   tutorial_scratch_string_detail_grades: Grades 2-5
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: ne pas afficher
-  tutorial_hrm_string_detail_grades: Grades 6+
+  tutorial_hrm_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_ice-age_string_detail_grades: ne pas afficher
   tutorial_koapp_string_detail_grades: ne pas afficher
   tutorial_lightbot-intl_string_detail_grades: Pre-reader - Grade 8
@@ -6907,91 +6932,91 @@ fr:
   tutorial_smc_string_detail_grades: ne pas afficher
   tutorial_minecraft-2016_string_detail_grades: ne pas afficher
   tutorial_thinkersmith-es_string_detail_grades: Grades 2-5
-  tutorial_pixie_string_detail_grades: A partir de 7 ans
+  tutorial_pixie_string_detail_grades: 2ème année scolaire et plus
   tutorial_play_string_detail_grades: ne pas afficher
-  tutorial_robomind-nl_string_detail_grades: Grades 2-8
-  tutorial_spheroi_string_detail_grades: A partir de 7 ans
-  tutorial_spherol_string_detail_grades: A partir de 7 ans
-  tutorial_spherov_string_detail_grades: A partir de 7 ans
+  tutorial_robomind-nl_string_detail_grades: 2e à 8e année
+  tutorial_spheroi_string_detail_grades: 2ème année scolaire et plus
+  tutorial_spherol_string_detail_grades: 2ème année scolaire et plus
+  tutorial_spherov_string_detail_grades: 2ème année scolaire et plus
   tutorial_swb_string_detail_grades: ne pas afficher
   tutorial_build-a-galaxy_string_detail_grades: ne pas afficher
-  tutorial_alicesims_string_detail_grades: Grades 6+
+  tutorial_alicesims_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_tchr_string_detail_grades: ne pas afficher
   tutorial_robogame_string_detail_grades: K-5
-  tutorial_tap_string_detail_grades: A partir de 7 ans
+  tutorial_tap_string_detail_grades: 2ème année scolaire et plus
   tutorial_cintl_string_detail_grades: ne pas afficher
-  tutorial_itchstop_string_detail_grades: Grades 2-8
+  tutorial_itchstop_string_detail_grades: 2e à 8e année
   tutorial_tynkerpn_string_detail_grades: K-5
   tutorial_tynkerpd_string_detail_grades: K-5
   tutorial_persistence_string_detail_grades: Grande section
   tutorial_getloopy_string_detail_grades: Grande section
-  tutorial_createface_string_detail_grades: A partir de 7 ans
+  tutorial_createface_string_detail_grades: 2ème année scolaire et plus
   tutorial_happymaps_string_detail_grades: Grande section
   tutorial_moveit_string_detail_grades: Grande section
   tutorial_bigevent_string_detail_grades: Grande section
-  tutorial_gpp_string_detail_grades: A partir de 7 ans
+  tutorial_gpp_string_detail_grades: 2ème année scolaire et plus
   tutorial_foosgame_string_detail_grades: K-5
   tutorial_solopython_string_detail_grades: A partir de 9 ans
   tutorial_kodableint_string_detail_grades: K-5
   tutorial_kodableadv_string_detail_grades: K-5
-  tutorial_tynkertj_string_detail_grades: Grades 6+
-  tutorial_wolframa_string_detail_grades: Grades 6+
-  tutorial_wolframm_string_detail_grades: Grades 6+
-  tutorial_wolframspi_string_detail_grades: Grades 6+
-  tutorial_wolframsph_string_detail_grades: Grades 6+
-  tutorial_wolframp_string_detail_grades: Grades 6+
-  tutorial_wolframn_string_detail_grades: Grades 6+
+  tutorial_tynkertj_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_wolframa_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_wolframm_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_wolframspi_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_wolframsph_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_wolframp_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_wolframn_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_soloweb_string_detail_grades: A partir de 9 ans
-  tutorial_khanweb_string_detail_grades: A partir de 7 ans
-  tutorial_khandata_string_detail_grades: Grades 6+
-  tutorial_robomeshiq_string_detail_grades: A partir de 7 ans
-  tutorial_googlelogo_string_detail_grades: A partir de 7 ans
-  tutorial_playtune_string_detail_grades: Grades 6+
-  tutorial_computeit_string_detail_grades: A partir de 7 ans
-  tutorial_codesterssj_string_detail_grades: Grades 2-8
-  tutorial_cmchat_string_detail_grades: Grades 6+
+  tutorial_khanweb_string_detail_grades: 2ème année scolaire et plus
+  tutorial_khandata_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_robomeshiq_string_detail_grades: 2ème année scolaire et plus
+  tutorial_googlelogo_string_detail_grades: 2ème année scolaire et plus
+  tutorial_playtune_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_computeit_string_detail_grades: 2ème année scolaire et plus
+  tutorial_codesterssj_string_detail_grades: 2e à 8e année
+  tutorial_cmchat_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
-  tutorial_cmbuild_string_detail_grades: Grades 6+
-  tutorial_robotrattle_string_detail_grades: Grades 2-8
-  tutorial_codestersh_string_detail_grades: Grades 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Grades 6+
-  tutorial_ccbinary_string_detail_grades: Grades 6+
-  tutorial_codehsturtle_string_detail_grades: Grades 6+
-  tutorial_grokhd_string_detail_grades: Grades 6+
-  tutorial_grokem_string_detail_grades: Grades 6+
+  tutorial_cmbuild_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_robotrattle_string_detail_grades: 2e à 8e année
+  tutorial_codestersh_string_detail_grades: 2e à 8e année
+  tutorial_codehsdigipixel_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ccbinary_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codehsturtle_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_grokhd_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_grokem_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_kodmaze_string_detail_grades: K-5
-  tutorial_codestersa_string_detail_grades: Grades 2-8
+  tutorial_codestersa_string_detail_grades: 2e à 8e année
   tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: A partir de 9 ans
   tutorial_raspipong_string_detail_grades: A partir de 9 ans
-  tutorial_codehsvr_string_detail_grades: Grades 6+
+  tutorial_codehsvr_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codesterstp_string_detail_grades: Grades 6-8
   tutorial_codestersbb_string_detail_grades: Grades 6-8
   tutorial_gfcrossyroad_string_detail_grades: A partir de 9 ans
   tutorial_googleww_string_detail_grades: A partir de 9 ans
-  tutorial_codehsjsapp_string_detail_grades: Grades 6+
+  tutorial_codehsjsapp_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_gfmihi_string_detail_grades: A partir de 9 ans
-  tutorial_hopdropphone_string_detail_grades: Grades 2-8
+  tutorial_hopdropphone_string_detail_grades: 2e à 8e année
   tutorial_techfaa_string_detail_grades: University
   tutorial_codehsjsgraph_string_detail_grades: A partir de 9 ans
-  tutorial_thunkable_string_detail_grades: Grades 6+
-  tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
+  tutorial_thunkable_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_hopcrossyroad_string_detail_grades: 2e à 8e année
   tutorial_switchglitch_string_detail_grades: Grades 2-5
-  tutorial_codecar_string_detail_grades: Grades 6+
+  tutorial_codecar_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codesterscp_string_detail_grades: Grades 6-8
   tutorial_grokpetblock_string_detail_grades: Grades 6-8
   tutorial_techbim_string_detail_grades: University
   tutorial_techfpp_string_detail_grades: University
-  tutorial_codesterscr_string_detail_grades: Grades 2-8
+  tutorial_codesterscr_string_detail_grades: 2e à 8e année
   tutorial_grokdisease_string_detail_grades: A partir de 9 ans
   tutorial_techec_string_detail_grades: University
   tutorial_rgbegin_string_detail_grades: Grades 2-5
-  tutorial_myradream_string_detail_grades: Grades 2-8
-  tutorial_thinkfun_string_detail_grades: Grades 2-8
-  tutorial_hopfireworks_string_detail_grades: Grades 2-8
-  tutorial_grokspace_string_detail_grades: Grades 6+
-  tutorial_codehspython_string_detail_grades: Grades 6+
+  tutorial_myradream_string_detail_grades: 2e à 8e année
+  tutorial_thinkfun_string_detail_grades: 2e à 8e année
+  tutorial_hopfireworks_string_detail_grades: 2e à 8e année
+  tutorial_grokspace_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codehspython_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codehsjava_string_detail_grades: A partir de 9 ans
   tutorial_techioda_string_detail_grades: University
   tutorial_grokmonster_string_detail_grades: Grades 2-5
@@ -6999,8 +7024,8 @@ fr:
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
   tutorial_techiogsr_string_detail_grades: University
-  tutorial_groktunnel_string_detail_grades: Grades 6+
-  tutorial_stemcod_string_detail_grades: Grades 6+
+  tutorial_groktunnel_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_stemcod_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
   tutorial_nyblebot_string_detail_grades: Grades 2-5
@@ -7008,166 +7033,166 @@ fr:
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
-  tutorial_gpbcatapult_string_detail_grades: Grades 6+
-  tutorial_quorumastro_string_detail_grades: Grades 6+
+  tutorial_gpbcatapult_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_quorumastro_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_alicewonder_string_detail_grades: Grades 2-5
   tutorial_rginter_string_detail_grades: Grades 6-8
-  tutorial_cssgrid_string_detail_grades: Grades 6+
+  tutorial_cssgrid_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_jshero_string_detail_grades: A partir de 9 ans
   tutorial_codemojipy_string_detail_grades: Grades 2-5
-  tutorial_nclabdrone_string_detail_grades: Grades 6+
-  tutorial_gpbcircle_string_detail_grades: Grades 6+
-  tutorial_gpbpaint_string_detail_grades: Grades 6+
-  tutorial_cocomarcade_string_detail_grades: Grades 6+
+  tutorial_nclabdrone_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gpbcircle_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gpbpaint_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_cocomarcade_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Grades 6-8
-  tutorial_codedj_string_detail_grades: Grades 6+
-  tutorial_rgadvan_string_detail_grades: Grades 6+
+  tutorial_codedj_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_rgadvan_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codehsrn_string_detail_grades: A partir de 9 ans
-  tutorial_codehswd_string_detail_grades: Grades 6+
+  tutorial_codehswd_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_turtlerobot_string_detail_grades: K-5
-  tutorial_ozoevo_string_detail_grades: Grades 6+
-  tutorial_ozoexped_string_detail_grades: Grades 6+
-  tutorial_ozojourney_string_detail_grades: Grades 2-8
+  tutorial_ozoevo_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ozoexped_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ozojourney_string_detail_grades: 2e à 8e année
   tutorial_ozocodes_string_detail_grades: All ages
-  tutorial_ozoeclipse_string_detail_grades: A partir de 7 ans
-  tutorial_ozosimulator_string_detail_grades: Grades 6+
-  tutorial_ozoalgorithm_string_detail_grades: Grades 6+
-  tutorial_ozotimer_string_detail_grades: Grades 6+
+  tutorial_ozoeclipse_string_detail_grades: 2ème année scolaire et plus
+  tutorial_ozosimulator_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ozoalgorithm_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ozotimer_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_ozohabits_string_detail_grades: All ages
-  tutorial_ozoprogram_string_detail_grades: Grades 2-8
-  tutorial_ozopair_string_detail_grades: A partir de 7 ans
+  tutorial_ozoprogram_string_detail_grades: 2e à 8e année
+  tutorial_ozopair_string_detail_grades: 2ème année scolaire et plus
   tutorial_codesnoopy_string_detail_grades: K-5
   tutorial_applabintro_string_detail_grades: A partir de 9 ans
   tutorial_cslartist_string_detail_grades: K-5
   tutorial_cslscratchjr_string_detail_grades: K-5
-  tutorial_floevents_string_detail_grades: Grades 2-8
-  tutorial_florobot_string_detail_grades: Grades 2-8
-  tutorial_isavesanta_string_detail_grades: Grades 2-8
-  tutorial_iorder_string_detail_grades: Grades 2-8
-  tutorial_ianimate_string_detail_grades: Grades 2-8
+  tutorial_floevents_string_detail_grades: 2e à 8e année
+  tutorial_florobot_string_detail_grades: 2e à 8e année
+  tutorial_isavesanta_string_detail_grades: 2e à 8e année
+  tutorial_iorder_string_detail_grades: 2e à 8e année
+  tutorial_ianimate_string_detail_grades: 2e à 8e année
   tutorial_iloveada_string_detail_grades: Grades 2-5
   tutorial_kodflash_string_detail_grades: K-5
   tutorial_kodchoose_string_detail_grades: Grades 2-5
   tutorial_kodpizzapre_string_detail_grades: Pre-reader - Grade 1
   tutorial_kodpizza_string_detail_grades: Grades 2-5
-  tutorial_kodwomen_string_detail_grades: Grades 2-8
+  tutorial_kodwomen_string_detail_grades: 2e à 8e année
   tutorial_tfunplug_string_detail_grades: Grades 6-8
-  tutorial_lbvariables_string_detail_grades: Grades 2-8
-  tutorial_lbfunctions_string_detail_grades: Grades 2-8
-  tutorial_lblogic_string_detail_grades: A partir de 7 ans
-  tutorial_lbworld_string_detail_grades: Grades 6+
-  tutorial_lbloops_string_detail_grades: Grades 2-8
-  tutorial_lbtug_string_detail_grades: Grades 6+
-  tutorial_lbpotato_string_detail_grades: A partir de 7 ans
-  tutorial_lbguitar_string_detail_grades: A partir de 7 ans
-  tutorial_lbio_string_detail_grades: Grades 2-8
+  tutorial_lbvariables_string_detail_grades: 2e à 8e année
+  tutorial_lbfunctions_string_detail_grades: 2e à 8e année
+  tutorial_lblogic_string_detail_grades: 2ème année scolaire et plus
+  tutorial_lbworld_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_lbloops_string_detail_grades: 2e à 8e année
+  tutorial_lbtug_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_lbpotato_string_detail_grades: 2ème année scolaire et plus
+  tutorial_lbguitar_string_detail_grades: 2ème année scolaire et plus
+  tutorial_lbio_string_detail_grades: 2e à 8e année
   tutorial_wonpuppy_string_detail_grades: Grades 2-5
-  tutorial_woncue_string_detail_grades: A partir de 7 ans
+  tutorial_woncue_string_detail_grades: 2ème année scolaire et plus
   tutorial_wonzoo_string_detail_grades: Grades 2-5
-  tutorial_wontrip_string_detail_grades: Grades 2-8
+  tutorial_wontrip_string_detail_grades: 2e à 8e année
   tutorial_woncollect_string_detail_grades: K-5
-  tutorial_wonsecret_string_detail_grades: Grades 6+
-  tutorial_hsscience_string_detail_grades: Grades 2-8
-  tutorial_popculture_string_detail_grades: Grades 6+
-  tutorial_legorobust_string_detail_grades: A partir de 7 ans
-  tutorial_legoplants_string_detail_grades: A partir de 7 ans
-  tutorial_legopark_string_detail_grades: Grades 6+
-  tutorial_legodetect_string_detail_grades: Grades 6+
-  tutorial_legolight_string_detail_grades: Grades 6+
+  tutorial_wonsecret_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_hsscience_string_detail_grades: 2e à 8e année
+  tutorial_popculture_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_legorobust_string_detail_grades: 2ème année scolaire et plus
+  tutorial_legoplants_string_detail_grades: 2ème année scolaire et plus
+  tutorial_legopark_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_legodetect_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_legolight_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_alexa_string_detail_grades: A partir de 9 ans
   tutorial_grokpetmicro_string_detail_grades: Grades 6-8
-  tutorial_pirateplunder_string_detail_grades: Grades 2-8
+  tutorial_pirateplunder_string_detail_grades: 2e à 8e année
   tutorial_cadj_string_detail_grades: Grades 6-8
-  tutorial_cacrazy_string_detail_grades: Grades 2-8
-  tutorial_cajump_string_detail_grades: Grades 2-8
-  tutorial_carest_string_detail_grades: Grades 2-8
-  tutorial_accai_string_detail_grades: Grades 2-8
-  tutorial_vceclipse_string_detail_grades: Grades 6+
-  tutorial_pmzero_string_detail_grades: Grades 6+
-  tutorial_hsela_string_detail_grades: Grades 2-8
-  tutorial_ticklear_string_detail_grades: Grades 2-8
-  tutorial_bcrobot_string_detail_grades: Grades 2-8
-  tutorial_bcsnow_string_detail_grades: Grades 6+
-  tutorial_ifly_string_detail_grades: A partir de 7 ans
-  tutorial_idowedo_string_detail_grades: Grades 2-8
-  tutorial_diggindwarf_string_detail_grades: Grades 6+
-  tutorial_rmedr_string_detail_grades: Grades 2-8
-  tutorial_spheroit_string_detail_grades: A partir de 7 ans
-  tutorial_gameofcodes_string_detail_grades: A partir de 7 ans
-  tutorial_blocklygames_string_detail_grades: Grades 6+
-  tutorial_spherohello_string_detail_grades: Grades 6+
-  tutorial_spheroarcade_string_detail_grades: Grades 6+
-  tutorial_bcpy1_string_detail_grades: Grades 6+
-  tutorial_bcpy2_string_detail_grades: Grades 6+
-  tutorial_bcjs1_string_detail_grades: Grades 6+
+  tutorial_cacrazy_string_detail_grades: 2e à 8e année
+  tutorial_cajump_string_detail_grades: 2e à 8e année
+  tutorial_carest_string_detail_grades: 2e à 8e année
+  tutorial_accai_string_detail_grades: 2e à 8e année
+  tutorial_vceclipse_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_pmzero_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_hsela_string_detail_grades: 2e à 8e année
+  tutorial_ticklear_string_detail_grades: 2e à 8e année
+  tutorial_bcrobot_string_detail_grades: 2e à 8e année
+  tutorial_bcsnow_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ifly_string_detail_grades: 2ème année scolaire et plus
+  tutorial_idowedo_string_detail_grades: 2e à 8e année
+  tutorial_diggindwarf_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_rmedr_string_detail_grades: 2e à 8e année
+  tutorial_spheroit_string_detail_grades: 2ème année scolaire et plus
+  tutorial_gameofcodes_string_detail_grades: 2ème année scolaire et plus
+  tutorial_blocklygames_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_spherohello_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_spheroarcade_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bcpy1_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bcpy2_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bcjs1_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_bcjs2_string_detail_grades: A partir de 9 ans
-  tutorial_3dbearmars_string_detail_grades: Grades 2-8
-  tutorial_alexaskill_string_detail_grades: Grades 2-8
-  tutorial_bitsboxyak_string_detail_grades: Grades 2-8
+  tutorial_3dbearmars_string_detail_grades: 2e à 8e année
+  tutorial_alexaskill_string_detail_grades: 2e à 8e année
+  tutorial_bitsboxyak_string_detail_grades: 2e à 8e année
   tutorial_blockscadbargraphs_string_detail_grades: Grades 2-5
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
   tutorial_blockscadclock_string_detail_grades: A partir de 9 ans
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
-  tutorial_blockscadicecream_string_detail_grades: Grades 6+
+  tutorial_blockscadicecream_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
-  tutorial_bsgridlight_string_detail_grades: A partir de 7 ans
-  tutorial_bpartscratch_string_detail_grades: Grades 6+
-  tutorial_bpartvid_string_detail_grades: Grades 6+
-  tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
-  tutorial_bpenglishvid_string_detail_grades: Grades 2-8
-  tutorial_bphealthscratch_string_detail_grades: A partir de 7 ans
-  tutorial_bphealthvid_string_detail_grades: Grades 6+
+  tutorial_bsgridlight_string_detail_grades: 2ème année scolaire et plus
+  tutorial_bpartscratch_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bpartvid_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bpenglishscratch_string_detail_grades: 2e à 8e année
+  tutorial_bpenglishvid_string_detail_grades: 2e à 8e année
+  tutorial_bphealthscratch_string_detail_grades: 2ème année scolaire et plus
+  tutorial_bphealthvid_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
-  tutorial_bpmathvid_string_detail_grades: Grades 6+
-  tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
+  tutorial_bpmathvid_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bpmlkscratch_string_detail_grades: 2e à 8e année
   tutorial_bpmlkvid_string_detail_grades: Grades 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
   tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
   tutorial_bpsciencevid_string_detail_grades: Grades 6-8
-  tutorial_bptechscratch_string_detail_grades: Grades 6+
-  tutorial_bptechvid_string_detail_grades: Grades 6+
-  tutorial_caflags_string_detail_grades: Grades 6+
+  tutorial_bptechscratch_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bptechvid_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_caflags_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_matariki_string_detail_grades: Grades 2-5
-  tutorial_carestaurant_string_detail_grades: A partir de 7 ans
+  tutorial_carestaurant_string_detail_grades: 2ème année scolaire et plus
   tutorial_casea_string_detail_grades: Grades 2-5
-  tutorial_cashield_string_detail_grades: Grades 2-8
-  tutorial_ccwslimer_string_detail_grades: Grades 2-8
+  tutorial_cashield_string_detail_grades: 2e à 8e année
+  tutorial_ccwslimer_string_detail_grades: 2e à 8e année
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
-  tutorial_boatrace_string_detail_grades: A partir de 7 ans
-  tutorial_ccplay_string_detail_grades: Grades 6+
-  tutorial_grinch_string_detail_grades: Grades 2-8
+  tutorial_boatrace_string_detail_grades: 2ème année scolaire et plus
+  tutorial_ccplay_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_grinch_string_detail_grades: 2e à 8e année
   tutorial_codehsart_string_detail_grades: A partir de 9 ans
   tutorial_codehsbitcoin_string_detail_grades: A partir de 9 ans
   tutorial_codehsblockchain_string_detail_grades: A partir de 9 ans
-  tutorial_codehscipher_string_detail_grades: Grades 6+
+  tutorial_codehscipher_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codehscollision_string_detail_grades: A partir de 9 ans
-  tutorial_codehsmath_string_detail_grades: Grades 6+
-  tutorial_codehsmusic_string_detail_grades: Grades 6+
-  tutorial_codehssports_string_detail_grades: Grades 6+
-  tutorial_codemojipizza_string_detail_grades: Grades 2-8
-  tutorial_moonlander_string_detail_grades: Grades 6+
-  tutorial_sushicards_string_detail_grades: Grades 2-8
+  tutorial_codehsmath_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codehsmusic_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codehssports_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codemojipizza_string_detail_grades: 2e à 8e année
+  tutorial_moonlander_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_sushicards_string_detail_grades: 2e à 8e année
   tutorial_codesparkcreate_string_detail_grades: K-5
   tutorial_hardvsoft_string_detail_grades: K-5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 6+
-  tutorial_codesterstshirt_string_detail_grades: Grades 6+
-  tutorial_codewards_string_detail_grades: Grades 2-8
-  tutorial_olympics_string_detail_grades: Grades 2-8
-  tutorial_codinismhero_string_detail_grades: A partir de 7 ans
-  tutorial_discovery_string_detail_grades: A partir de 7 ans
-  tutorial_csfirstname_string_detail_grades: A partir de 7 ans
-  tutorial_obstaclecourse_string_detail_grades: A partir de 7 ans
-  tutorial_edisonmove_string_detail_grades: Grades 6+
-  tutorial_edisonspider_string_detail_grades: Grades 6+
-  tutorial_edisonspotlight_string_detail_grades: Grades 2-8
-  tutorial_firiapython_string_detail_grades: Grades 6+
-  tutorial_gamefrootsquid_string_detail_grades: Grades 6+
-  tutorial_duckpiano_string_detail_grades: Grades 6+
-  tutorial_gpsound_string_detail_grades: Grades 6+
+  tutorial_codesterslogo_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codesterstshirt_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codewards_string_detail_grades: 2e à 8e année
+  tutorial_olympics_string_detail_grades: 2e à 8e année
+  tutorial_codinismhero_string_detail_grades: 2ème année scolaire et plus
+  tutorial_discovery_string_detail_grades: 2ème année scolaire et plus
+  tutorial_csfirstname_string_detail_grades: 2ème année scolaire et plus
+  tutorial_obstaclecourse_string_detail_grades: 2ème année scolaire et plus
+  tutorial_edisonmove_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_edisonspider_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_edisonspotlight_string_detail_grades: 2e à 8e année
+  tutorial_firiapython_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gamefrootsquid_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_duckpiano_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gpsound_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_groklearningpython_string_detail_grades: A partir de 9 ans
   tutorial_htmltimetravel_string_detail_grades: A partir de 9 ans
   tutorial_hp_flappy_string_detail_grades: A partir de 9 ans
@@ -7175,195 +7200,198 @@ fr:
   tutorial_icipher_string_detail_grades: Grades 2-5
   tutorial_iguess_string_detail_grades: K-5
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
-  tutorial_imorse_string_detail_grades: Grades 2-8
-  tutorial_kanohp_string_detail_grades: Grades 2-8
-  tutorial_khanwebpages_string_detail_grades: Grades 6+
+  tutorial_imorse_string_detail_grades: 2e à 8e année
+  tutorial_kanohp_string_detail_grades: 2e à 8e année
+  tutorial_khanwebpages_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_kibobowl_string_detail_grades: K-5
   tutorial_kibodance_string_detail_grades: K-5
   tutorial_buildcharacters_string_detail_grades: K-5
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: K-5
-  tutorial_wizard_string_detail_grades: Grades 6+
-  tutorial_mbscratchcards_string_detail_grades: A partir de 7 ans
-  tutorial_mbswiftplaygrounds_string_detail_grades: A partir de 7 ans
-  tutorial_mbbuttons_string_detail_grades: Grades 6+
-  tutorial_meteor_string_detail_grades: Grades 6+
-  tutorial_ballbounce_string_detail_grades: Grades 6+
-  tutorial_mitcodi_string_detail_grades: Grades 6+
-  tutorial_mitdoodle_string_detail_grades: Grades 6+
-  tutorial_talktome_string_detail_grades: Grades 6+
-  tutorial_mobilecspmap_string_detail_grades: Grades 6+
-  tutorial_ozorandom_string_detail_grades: A partir de 7 ans
+  tutorial_wizard_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_mbscratchcards_string_detail_grades: 2ème année scolaire et plus
+  tutorial_mbswiftplaygrounds_string_detail_grades: 2ème année scolaire et plus
+  tutorial_mbbuttons_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_meteor_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ballbounce_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_mitcodi_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_mitdoodle_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_talktome_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_mobilecspmap_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ozorandom_string_detail_grades: 2ème année scolaire et plus
   tutorial_ozotroll_string_detail_grades: Grades 6-8
   tutorial_peblioart_string_detail_grades: A partir de 9 ans
-  tutorial_astropi_string_detail_grades: Grades 6+
+  tutorial_astropi_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_rgart_string_detail_grades: Grades 2-5
   tutorial_rgengineer_string_detail_grades: Grades 2-5
   tutorial_rgmath_string_detail_grades: Grades 2-5
   tutorial_rgscience_string_detail_grades: Grades 2-5
   tutorial_rgtech_string_detail_grades: Grades 2-5
-  tutorial_robotmagic3d_string_detail_grades: Grades 6+
+  tutorial_robotmagic3d_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_robotmagicflappy_string_detail_grades: A partir de 9 ans
-  tutorial_scratchadventure_string_detail_grades: A partir de 7 ans
-  tutorial_scratchtalk_string_detail_grades: A partir de 7 ans
+  tutorial_scratchadventure_string_detail_grades: 2ème année scolaire et plus
+  tutorial_scratchtalk_string_detail_grades: 2ème année scolaire et plus
   tutorial_scratchjrstory_string_detail_grades: Grades 2-5
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
-  tutorial_spherocomm_string_detail_grades: Grades 2-8
+  tutorial_spherocomm_string_detail_grades: 2e à 8e année
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
-  tutorial_spherofunctions_string_detail_grades: Grades 6+
+  tutorial_spherofunctions_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_spheroinfrared_string_detail_grades: Grades 6-8
-  tutorial_spherolightsensor_string_detail_grades: Grades 2-8
-  tutorial_spheromansion_string_detail_grades: Grades 2-8
-  tutorial_roadblocks_string_detail_grades: Grades 2-8
-  tutorial_spherotext2_string_detail_grades: Grades 6+
-  tutorial_spherotext3_string_detail_grades: Grades 6+
-  tutorial_spherotext4_string_detail_grades: Grades 6+
-  tutorial_spheroraptor_string_detail_grades: Grades 2-8
+  tutorial_spherolightsensor_string_detail_grades: 2e à 8e année
+  tutorial_spheromansion_string_detail_grades: 2e à 8e année
+  tutorial_roadblocks_string_detail_grades: 2e à 8e année
+  tutorial_spherotext2_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_spherotext3_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_spherotext4_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_spheroraptor_string_detail_grades: 2e à 8e année
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
   tutorial_stemplanetoids_string_detail_grades: A partir de 9 ans
   tutorial_stempong_string_detail_grades: A partir de 9 ans
-  tutorial_algobot_string_detail_grades: Grades 2-8
+  tutorial_algobot_string_detail_grades: 2e à 8e année
   tutorial_thunkableapps_string_detail_grades: A partir de 9 ans
-  tutorial_toxicodedot_string_detail_grades: Grades 2-8
-  tutorial_gcactions_string_detail_grades: Grades 6+
-  tutorial_gccomparators_string_detail_grades: Grades 6+
-  tutorial_gcconditions_string_detail_grades: Grades 6+
-  tutorial_gccreate_string_detail_grades: Grades 6+
-  tutorial_gcevents_string_detail_grades: Grades 6+
-  tutorial_gcloops_string_detail_grades: Grades 6+
-  tutorial_gcvariables_string_detail_grades: Grades 6+
+  tutorial_toxicodedot_string_detail_grades: 2e à 8e année
+  tutorial_gcactions_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gccomparators_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gcconditions_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gccreate_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gcevents_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gcloops_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gcvariables_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_beanything_string_detail_grades: K-5
-  tutorial_change_string_detail_grades: Grades 2-8
+  tutorial_change_string_detail_grades: 2e à 8e année
   tutorial_cooking_string_detail_grades: Grades 2-5
-  tutorial_crystal_string_detail_grades: A partir de 7 ans
-  tutorial_landscape_string_detail_grades: Grades 6+
+  tutorial_crystal_string_detail_grades: 2ème année scolaire et plus
+  tutorial_landscape_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: K-5
-  tutorial_superhero_string_detail_grades: Grades 6+
-  tutorial_vidcodeplastic_string_detail_grades: Grades 6+
-  tutorial_vidcodetypeface_string_detail_grades: Grades 6+
+  tutorial_superhero_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_vidcodeplastic_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_vidcodetypeface_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_washustorm_string_detail_grades: Grades 2-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
-  tutorial_googlerookie_string_detail_grades: Grades 6+
+  tutorial_googlerookie_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_tommyturtle_string_detail_grades: K-5
   tutorial_mazyad_string_detail_grades: K-5
-  tutorial_gamemaker_string_detail_grades: A partir de 7 ans
-  tutorial_duckrace_string_detail_grades: A partir de 7 ans
-  tutorial_allcancodeapps_string_detail_grades: Grades 6+
+  tutorial_gamemaker_string_detail_grades: 2ème année scolaire et plus
+  tutorial_duckrace_string_detail_grades: 2ème année scolaire et plus
+  tutorial_allcancodeapps_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_n2y_string_detail_grades: Grande section
-  tutorial_microsoftarcade_string_detail_grades: A partir de 7 ans
-  tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
-  tutorial_toxicodepython_string_detail_grades: Grades 6+
-  tutorial_codecombatozaria_string_detail_grades: Grades 6+
-  tutorial_vidcodedate_string_detail_grades: Grades 6+
-  tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
-  tutorial_codespeakhappy_string_detail_grades: Grades 2-8
-  tutorial_grokimage_string_detail_grades: Grades 6+
+  tutorial_microsoftarcade_string_detail_grades: 2ème année scolaire et plus
+  tutorial_csfirstunplugged_string_detail_grades: 2e à 8e année
+  tutorial_toxicodepython_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codecombatozaria_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_vidcodedate_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codemonkeyspace_string_detail_grades: 2e à 8e année
+  tutorial_codespeakhappy_string_detail_grades: 2e à 8e année
+  tutorial_grokimage_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
-  tutorial_rpstress_string_detail_grades: A partir de 7 ans
+  tutorial_rpstress_string_detail_grades: 2ème année scolaire et plus
   tutorial_bsdcause_string_detail_grades: A partir de 9 ans
-  tutorial_vidcodeanimoji_string_detail_grades: A partir de 7 ans
-  tutorial_bsdinspire_string_detail_grades: Grades 6+
-  tutorial_tttractor_string_detail_grades: Grades 6+
-  tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
-  tutorial_scigirlsquest_string_detail_grades: Grades 2-8
-  tutorial_codespeakbreathe_string_detail_grades: A partir de 7 ans
-  tutorial_vidcodeface_string_detail_grades: Grades 6+
-  tutorial_educodemaze_string_detail_grades: Grades 6+
-  tutorial_educoderace_string_detail_grades: Grades 6+
-  tutorial_codespeakchatbot_string_detail_grades: Grades 2-8
-  tutorial_gamefrootgames_string_detail_grades: Grades 6+
-  tutorial_codespeakgrandparent_string_detail_grades: Grades 2-8
-  tutorial_educodekingdom_string_detail_grades: Grades 6+
+  tutorial_vidcodeanimoji_string_detail_grades: 2ème année scolaire et plus
+  tutorial_vidcodeanimojies_string_detail_grades: 2ème année scolaire et plus
+  tutorial_bsdinspire_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_tttractor_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codeillusionmickey_string_detail_grades: 2e à 8e année
+  tutorial_scigirlsquest_string_detail_grades: 2e à 8e année
+  tutorial_codespeakbreathe_string_detail_grades: 2ème année scolaire et plus
+  tutorial_vidcodeface_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_educodemaze_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_educoderace_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codespeakchatbot_string_detail_grades: 2e à 8e année
+  tutorial_gamefrootgames_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codespeakgrandparent_string_detail_grades: 2e à 8e année
+  tutorial_educodekingdom_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codehsdata_string_detail_grades: A partir de 9 ans
-  tutorial_educodecake_string_detail_grades: Grades 6+
-  tutorial_ttsecond_string_detail_grades: Grades 6+
-  tutorial_bsdtrivia_string_detail_grades: Grades 6+
-  tutorial_csfirstdialogue_string_detail_grades: Grades 2-8
+  tutorial_educodecake_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ttsecond_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bsdtrivia_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_csfirstdialogue_string_detail_grades: 2e à 8e année
   tutorial_codemonkeybeaver_string_detail_grades: K-5
-  tutorial_codestersdistance_string_detail_grades: Grades 6+
-  tutorial_itchspace_string_detail_grades: Grades 6+
-  tutorial_vidcodemagic_string_detail_grades: A partir de 7 ans
-  tutorial_codespeakmeal_string_detail_grades: Grades 6+
-  tutorial_itchfish_string_detail_grades: Grades 2-8
-  tutorial_bsdwebsite_string_detail_grades: Grades 6+
-  tutorial_codespeaktime_string_detail_grades: Grades 2-8
-  tutorial_itchwebcam_string_detail_grades: Grades 6+
-  tutorial_itchball_string_detail_grades: Grades 2-8
+  tutorial_codestersdistance_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_itchspace_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_vidcodemagic_string_detail_grades: 2ème année scolaire et plus
+  tutorial_vidcodemagices_string_detail_grades: 2ème année scolaire et plus
+  tutorial_codespeakmeal_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_itchfish_string_detail_grades: 2e à 8e année
+  tutorial_bsdwebsite_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codespeaktime_string_detail_grades: 2e à 8e année
+  tutorial_itchwebcam_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_itchball_string_detail_grades: 2e à 8e année
   tutorial_ttrace_string_detail_grades: Grades 6-8
-  tutorial_plethora_string_detail_grades: A partir de 7 ans
-  tutorial_educodesecret_string_detail_grades: Grades 6+
-  tutorial_itchshapes_string_detail_grades: Grades 6+
+  tutorial_plethora_string_detail_grades: 2ème année scolaire et plus
+  tutorial_educodesecret_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_itchshapes_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_educativechatbot_string_detail_grades: A partir de 9 ans
-  tutorial_educodebasics_string_detail_grades: Grades 6+
-  tutorial_codehsdesign_string_detail_grades: Grades 6+
-  tutorial_htmlacademyphp_string_detail_grades: Grades 6+
-  tutorial_gamefrootdistance_string_detail_grades: A partir de 7 ans
+  tutorial_educodebasics_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codehsdesign_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_htmlacademyphp_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_gamefrootdistance_string_detail_grades: 2ème année scolaire et plus
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Grades 6-8
-  tutorial_cuttle_string_detail_grades: Grades 6+
+  tutorial_cuttle_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_bsdjokes_string_detail_grades: Grades 6-8
-  tutorial_rptree_string_detail_grades: Grades 6+
-  tutorial_codestersunity_string_detail_grades: Grades 6+
-  tutorial_codesterssoccer_string_detail_grades: Grades 6+
-  tutorial_breakoutlock_string_detail_grades: Grades 2-8
-  tutorial_thunkablemask_string_detail_grades: Grades 6+
-  tutorial_cafarming_string_detail_grades: Grades 2-8
+  tutorial_rptree_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codestersunity_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codesterssoccer_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_breakoutlock_string_detail_grades: 2e à 8e année
+  tutorial_thunkablemask_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_cafarming_string_detail_grades: 2e à 8e année
   tutorial_blocksmithyeti_string_detail_grades: A partir de 9 ans
-  tutorial_codecapture_string_detail_grades: Grades 6+
+  tutorial_codecapture_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
-  tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_itchplatformer_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codejika_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
-  tutorial_ozobotcolor2_string_detail_grades: A partir de 7 ans
-  tutorial_ozobotcolor3_string_detail_grades: A partir de 7 ans
-  tutorial_clcarbon_string_detail_grades: Grades 6+
+  tutorial_ozobotcolor2_string_detail_grades: 2ème année scolaire et plus
+  tutorial_ozobotcolor3_string_detail_grades: 2ème année scolaire et plus
+  tutorial_clcarbon_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_kodablebasics_string_detail_grades: K-5
-  tutorial_scigirlscc_string_detail_grades: A partir de 7 ans
-  tutorial_irobotpicture_string_detail_grades: Grades 2-8
-  tutorial_kcjmyself_string_detail_grades: Grades 2-8
+  tutorial_scigirlscc_string_detail_grades: 2ème année scolaire et plus
+  tutorial_irobotpicture_string_detail_grades: 2e à 8e année
+  tutorial_kcjmyself_string_detail_grades: 2e à 8e année
   tutorial_nearpodalgorithms_string_detail_grades: K-5
   tutorial_kibodrop_string_detail_grades: K-5
-  tutorial_ozobotcolor1_string_detail_grades: A partir de 7 ans
-  tutorial_scigirlspixels_string_detail_grades: A partir de 7 ans
-  tutorial_kcjheroines_string_detail_grades: Grades 2-8
+  tutorial_ozobotcolor1_string_detail_grades: 2ème année scolaire et plus
+  tutorial_scigirlspixels_string_detail_grades: 2ème année scolaire et plus
+  tutorial_kcjheroines_string_detail_grades: 2e à 8e année
   tutorial_ozobotvalue_string_detail_grades: Grades 2-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
-  tutorial_clfashion2_string_detail_grades: Grades 6+
-  tutorial_ai4all_string_detail_grades: Grades 6+
-  tutorial_cldata_string_detail_grades: Grades 6+
-  tutorial_spheroinputs_string_detail_grades: Grades 2-8
-  tutorial_edisoncount_string_detail_grades: Grades 2-8
-  tutorial_spheroloops_string_detail_grades: Grades 2-8
+  tutorial_clfashion2_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ai4all_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_cldata_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_spheroinputs_string_detail_grades: 2e à 8e année
+  tutorial_edisoncount_string_detail_grades: 2e à 8e année
+  tutorial_spheroloops_string_detail_grades: 2e à 8e année
   tutorial_kiboprogram_string_detail_grades: K-5
   tutorial_hellorubycsin60_string_detail_grades: K-5
-  tutorial_clfashion1_string_detail_grades: Grades 6+
+  tutorial_clfashion1_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
   tutorial_edisonmystery_string_detail_grades: Grades 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
-  tutorial_ozobotknow_string_detail_grades: A partir de 7 ans
-  tutorial_imagilabs_string_detail_grades: Grades 2-8
-  tutorial_irobotsimulator_string_detail_grades: Grades 2-8
+  tutorial_ozobotknow_string_detail_grades: 2ème année scolaire et plus
+  tutorial_imagilabs_string_detail_grades: 2e à 8e année
+  tutorial_irobotsimulator_string_detail_grades: 2e à 8e année
   tutorial_irobotkind_string_detail_grades: K-5
-  tutorial_firiavirtual_string_detail_grades: Grades 6+
-  tutorial_irobotguesscode_string_detail_grades: Grades 2-8
+  tutorial_firiavirtual_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_irobotguesscode_string_detail_grades: 2e à 8e année
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
-  tutorial_nasa3d_string_detail_grades: Grades 6+
-  tutorial_blupants_string_detail_grades: Grades 6+
+  tutorial_nasa3d_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_blupants_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_legodance_string_detail_grades: Grades 6-8
   tutorial_nearpodcoding_string_detail_grades: A partir de 9 ans
-  tutorial_kcjplastic_string_detail_grades: A partir de 7 ans
-  tutorial_legojourney_string_detail_grades: Grades 2-8
-  tutorial_legohopper_string_detail_grades: Grades 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Grades 6+
-  tutorial_irobotphone_string_detail_grades: Grades 2-8
+  tutorial_kcjplastic_string_detail_grades: 2ème année scolaire et plus
+  tutorial_legojourney_string_detail_grades: 2e à 8e année
+  tutorial_legohopper_string_detail_grades: 2e à 8e année
+  tutorial_catrobatembroidery_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_irobotphone_string_detail_grades: 2e à 8e année
   tutorial_codeguppydraw_string_detail_grades: Grades 6-8
-  tutorial_codejumper_string_detail_grades: Grades 2-8
-  tutorial_meeempathy_string_detail_grades: A partir de 7 ans
+  tutorial_codejumper_string_detail_grades: 2e à 8e année
+  tutorial_meeempathy_string_detail_grades: 2ème année scolaire et plus
   tutorial_dance2019_string_platforms: Tous les navigateurs modernes, iPad
   tutorial_danceparty_string_platforms: Tous les navigateurs modernes, tablette Android,
     iPad
@@ -8146,6 +8174,8 @@ fr:
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
+  tutorial_vidcodeanimojies_string_platforms: Tous les navigateurs modernes, tablette
+    Android, iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -8172,6 +8202,8 @@ fr:
   tutorial_itchspace_string_platforms: Tous les navigateurs actuels
   tutorial_vidcodemagic_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
+  tutorial_vidcodemagices_string_platforms: Tous les navigateurs modernes, tablette
+    Android, iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Tous les navigateurs actuels
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -8186,6 +8218,8 @@ fr:
   tutorial_itchshapes_string_platforms: Tous les navigateurs actuels
   tutorial_codeguppytext_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
+  tutorial_vidcodeplastiche_string_platforms: Tous les navigateurs modernes, iPad,
+    classes non connectées.
   tutorial_educativechatbot_string_platforms: Tous les navigateurs actuels
   tutorial_educodebasics_string_platforms: Tous les navigateurs actuels
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8862,6 +8896,7 @@ fr:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8883,6 +8918,7 @@ fr:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8894,6 +8930,7 @@ fr:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9440,12 +9477,12 @@ fr:
   tutorial_ccplay_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
   tutorial_grinch_string_detail_programming_languages: Blocs
   tutorial_codehsart_string_detail_programming_languages: Blocs
-  tutorial_codehsbitcoin_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
-  tutorial_codehsblockchain_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
-  tutorial_codehscipher_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_codehsbitcoin_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
+  tutorial_codehsblockchain_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
+  tutorial_codehscipher_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_codehscollision_string_detail_programming_languages: JavaScript
   tutorial_codehsmath_string_detail_programming_languages: Python
   tutorial_codehsmusic_string_detail_programming_languages: Blocs
@@ -9530,11 +9567,11 @@ fr:
   tutorial_stempiday_string_detail_programming_languages: JavaScript
   tutorial_stemplanetoids_string_detail_programming_languages: JavaScript
   tutorial_stempong_string_detail_programming_languages: JavaScript
-  tutorial_algobot_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_algobot_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_thunkableapps_string_detail_programming_languages: Blocs
-  tutorial_toxicodedot_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_toxicodedot_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_gcactions_string_detail_programming_languages: Blocs
   tutorial_gccomparators_string_detail_programming_languages: Blocs
   tutorial_gcconditions_string_detail_programming_languages: Blocs
@@ -9578,6 +9615,7 @@ fr:
   tutorial_rpstress_string_detail_programming_languages: Blocs
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9599,6 +9637,7 @@ fr:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blocs
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blocs
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9606,11 +9645,12 @@ fr:
   tutorial_itchwebcam_string_detail_programming_languages: Blocs
   tutorial_itchball_string_detail_programming_languages: Blocs
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
-  tutorial_plethora_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_plethora_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blocs
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -9643,40 +9683,40 @@ fr:
   tutorial_clcarbon_string_detail_programming_languages: Python
   tutorial_kodablebasics_string_detail_programming_languages: Blocks, JavaScript,
     Language independent (can be taught in multiple languages)
-  tutorial_scigirlscc_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_scigirlscc_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_irobotpicture_string_detail_programming_languages: No specific programming
     languages required; unplugged decoding activity with words/phrases
   tutorial_kcjmyself_string_detail_programming_languages: Blocs
-  tutorial_nearpodalgorithms_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_nearpodalgorithms_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_kibodrop_string_detail_programming_languages: Blocs
   tutorial_ozobotcolor1_string_detail_programming_languages: Ozobot Line Following
     and Color Codes
-  tutorial_scigirlspixels_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_scigirlspixels_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_kcjheroines_string_detail_programming_languages: Blocs
   tutorial_ozobotvalue_string_detail_programming_languages: Ozobot Color Codes
-  tutorial_icodebytes_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_icodebytes_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_clfashion2_string_detail_programming_languages: SQL
-  tutorial_ai4all_string_detail_programming_languages: Language independent (can be
-    taught in multiple languages)
-  tutorial_cldata_string_detail_programming_languages: Language independent (can be
-    taught in multiple languages)
+  tutorial_ai4all_string_detail_programming_languages: Indépendance linguistique (peut
+    être enseigné dans plusieurs langues)
+  tutorial_cldata_string_detail_programming_languages: Indépendance linguistique (peut
+    être enseigné dans plusieurs langues)
   tutorial_spheroinputs_string_detail_programming_languages: Blocs
   tutorial_edisoncount_string_detail_programming_languages: Blocs
   tutorial_spheroloops_string_detail_programming_languages: Blocs
   tutorial_kiboprogram_string_detail_programming_languages: Blocs
-  tutorial_hellorubycsin60_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_hellorubycsin60_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_clfashion1_string_detail_programming_languages: SQL
   tutorial_irobottraffic_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_edisonmystery_string_detail_programming_languages: Blocs
   tutorial_microbitseaturtles_string_detail_programming_languages: Blocks, JavaScript,
     Python
-  tutorial_ozobotknow_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_ozobotknow_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_imagilabs_string_detail_programming_languages: Python
   tutorial_irobotsimulator_string_detail_programming_languages: Blocs
   tutorial_irobotkind_string_detail_programming_languages: Blocs
@@ -9686,10 +9726,9 @@ fr:
   tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
   tutorial_blupants_string_detail_programming_languages: Blocs, Python
   tutorial_legodance_string_detail_programming_languages: Blocs
-  tutorial_nearpodcoding_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
-  tutorial_kcjplastic_string_detail_programming_languages: Blocks, Also has use of
-    a spreadsheet.
+  tutorial_nearpodcoding_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
+  tutorial_kcjplastic_string_detail_programming_languages: blocs
   tutorial_legojourney_string_detail_programming_languages: Blocs
   tutorial_legohopper_string_detail_programming_languages: Blocs
   tutorial_catrobatembroidery_string_detail_programming_languages: Blocs
@@ -10266,103 +10305,103 @@ fr:
     Hongrois, Finlandais, Danois, Suédois, Norvégien, Slovaque, Tchèque, Néerlandais
   tutorial_kuborobo_language: English, Spanish
   tutorial_ai-oceans_language: Français
-  tutorial_scratchimagine_string_detail_grades: A partir de 7 ans
-  tutorial_codesterspsa_string_detail_grades: Grades 6+
-  tutorial_googlehero_string_detail_grades: Grades 2-8
-  tutorial_codestersbball_string_detail_grades: Grades 6+
-  tutorial_scratchcartoon_string_detail_grades: A partir de 7 ans
+  tutorial_scratchimagine_string_detail_grades: 2ème année scolaire et plus
+  tutorial_codesterspsa_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_googlehero_string_detail_grades: 2e à 8e année
+  tutorial_codestersbball_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_scratchcartoon_string_detail_grades: 2ème année scolaire et plus
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
-  tutorial_bananatales_string_detail_grades: Grades 2-8
-  tutorial_scratchtales_string_detail_grades: Grades 2-8
-  tutorial_msemoji_string_detail_grades: Grades 6+
-  tutorial_cacolor_string_detail_grades: Grades 6+
+  tutorial_bananatales_string_detail_grades: 2e à 8e année
+  tutorial_scratchtales_string_detail_grades: 2e à 8e année
+  tutorial_msemoji_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_cacolor_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_kodablebeach_string_detail_grades: K-5
-  tutorial_tynkeren_string_detail_grades: Grades 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Grades 6+
+  tutorial_tynkeren_string_detail_grades: 2e à 8e année
+  tutorial_tynkerjavapro_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_grasshopperhack_string_detail_grades: A partir de 9 ans
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
   tutorial_nclabdata_string_detail_grades: A partir de 9 ans
   tutorial_grasshopperphoto_string_detail_grades: A partir de 9 ans
-  tutorial_tynkerpyland_string_detail_grades: Grades 6+
-  tutorial_codeitimages_string_detail_grades: A partir de 7 ans
+  tutorial_tynkerpyland_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codeitimages_string_detail_grades: 2ème année scolaire et plus
   tutorial_hyperpadenemy_string_detail_grades: A partir de 9 ans
-  tutorial_tynkerpro_string_detail_grades: Grades 2-8
-  tutorial_trashtag_string_detail_grades: Grades 6+
-  tutorial_casiege_string_detail_grades: Grades 2-8
-  tutorial_thunkableyeet_string_detail_grades: Grades 6+
-  tutorial_vidcodedeal_string_detail_grades: Grades 6+
+  tutorial_tynkerpro_string_detail_grades: 2e à 8e année
+  tutorial_trashtag_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_casiege_string_detail_grades: 2e à 8e année
+  tutorial_thunkableyeet_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_vidcodedeal_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codehsgeno_string_detail_grades: A partir de 9 ans
   tutorial_hyperpadpong_string_detail_grades: A partir de 9 ans
-  tutorial_tynkerland_string_detail_grades: Grades 2-8
-  tutorial_trinketgirl_string_detail_grades: Grades 6+
+  tutorial_tynkerland_string_detail_grades: 2e à 8e année
+  tutorial_trinketgirl_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_rpimosquito_string_detail_grades: Grades 6-8
-  tutorial_tynkermars_string_detail_grades: Grades 6+
-  tutorial_cityx_string_detail_grades: Grades 6+
-  tutorial_vidcodemap_string_detail_grades: Grades 6+
-  tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
-  tutorial_codehstriangle_string_detail_grades: Grades 6+
-  tutorial_ttwhitehouse_string_detail_grades: A partir de 7 ans
-  tutorial_modulo_string_detail_grades: Grades 6+
+  tutorial_tynkermars_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_cityx_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_vidcodemap_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_robotmagicfarm_string_detail_grades: 2e à 8e année
+  tutorial_codehstriangle_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ttwhitehouse_string_detail_grades: 2ème année scolaire et plus
+  tutorial_modulo_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: A partir de 9 ans
-  tutorial_uwcloud_string_detail_grades: A partir de 7 ans
+  tutorial_uwcloud_string_detail_grades: 2ème année scolaire et plus
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
   tutorial_stemc_blckhole_string_detail_grades: A partir de 9 ans
-  tutorial_careconfigure_string_detail_grades: Grades 6+
+  tutorial_careconfigure_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
-  tutorial_ozaria_string_detail_grades: A partir de 7 ans
-  tutorial_ttovum_string_detail_grades: Grades 6+
-  tutorial_ttpassage_string_detail_grades: Grades 2-8
-  tutorial_tynkerhtmlen_string_detail_grades: A partir de 7 ans
-  tutorial_ttfrog_string_detail_grades: Grades 2-8
+  tutorial_ozaria_string_detail_grades: 2ème année scolaire et plus
+  tutorial_ttovum_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ttpassage_string_detail_grades: 2e à 8e année
+  tutorial_tynkerhtmlen_string_detail_grades: 2ème année scolaire et plus
+  tutorial_ttfrog_string_detail_grades: 2e à 8e année
   tutorial_codemojijava_string_detail_grades: Grades 6-8
-  tutorial_ccfirewall_string_detail_grades: Grades 6+
+  tutorial_ccfirewall_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_htmljs_string_detail_grades: Grades 6-8
   tutorial_ttaqueducts_string_detail_grades: Grades 6-8
-  tutorial_vtgame_string_detail_grades: Grades 6+
-  tutorial_baroborav_string_detail_grades: Grades 6+
-  tutorial_baroboobstacle_string_detail_grades: A partir de 7 ans
-  tutorial_pbstorytelling_string_detail_grades: Grades 6+
+  tutorial_vtgame_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_baroborav_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_baroboobstacle_string_detail_grades: 2ème année scolaire et plus
+  tutorial_pbstorytelling_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
-  tutorial_spherosmiles_string_detail_grades: A partir de 7 ans
+  tutorial_spherosmiles_string_detail_grades: 2ème année scolaire et plus
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
-  tutorial_toxarchitect_string_detail_grades: Grades 6+
-  tutorial_idodge_string_detail_grades: Grades 2-8
-  tutorial_firiacodebot_string_detail_grades: Grades 6+
+  tutorial_toxarchitect_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_idodge_string_detail_grades: 2e à 8e année
+  tutorial_firiacodebot_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_modlighthouse_string_detail_grades: Grande section
-  tutorial_spherogreen_string_detail_grades: Grades 2-8
-  tutorial_ozopopstar_string_detail_grades: Grades 2-8
-  tutorial_eddesign_string_detail_grades: Grades 6+
-  tutorial_edshapeup_string_detail_grades: Grades 6+
-  tutorial_ozocolor_string_detail_grades: Grades 2-8
-  tutorial_kcjanimals_string_detail_grades: Grades 2-8
-  tutorial_icomputeeggs_string_detail_grades: Grades 2-8
-  tutorial_rootunplugged_string_detail_grades: Grades 2-8
+  tutorial_spherogreen_string_detail_grades: 2e à 8e année
+  tutorial_ozopopstar_string_detail_grades: 2e à 8e année
+  tutorial_eddesign_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_edshapeup_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_ozocolor_string_detail_grades: 2e à 8e année
+  tutorial_kcjanimals_string_detail_grades: 2e à 8e année
+  tutorial_icomputeeggs_string_detail_grades: 2e à 8e année
+  tutorial_rootunplugged_string_detail_grades: 2e à 8e année
   tutorial_rgtreasure_string_detail_grades: K-5
   tutorial_peblioportraits_string_detail_grades: A partir de 9 ans
-  tutorial_rootcodebreak_string_detail_grades: Grades 2-8
-  tutorial_microbit14_string_detail_grades: Grades 2-8
-  tutorial_barobomoon_string_detail_grades: Grades 6+
+  tutorial_rootcodebreak_string_detail_grades: 2e à 8e année
+  tutorial_microbit14_string_detail_grades: 2e à 8e année
+  tutorial_barobomoon_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_eddog_string_detail_grades: Grades 2-6
-  tutorial_microbit15_string_detail_grades: Grades 2-8
+  tutorial_microbit15_string_detail_grades: 2e à 8e année
   tutorial_unity_string_detail_grades: A partir de 9 ans
-  tutorial_blockscadtarget_string_detail_grades: Grades 6+
+  tutorial_blockscadtarget_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_tcadicicles_string_detail_grades: Grades 7-8
-  tutorial_blockscadscale_string_detail_grades: Grades 6+
+  tutorial_blockscadscale_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: A partir de 9 ans
-  tutorial_kcjmerry_string_detail_grades: Grades 2-8
-  tutorial_modvariables_string_detail_grades: Grades 6+
+  tutorial_kcjmerry_string_detail_grades: 2e à 8e année
+  tutorial_modvariables_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
-  tutorial_rpisensehat_string_detail_grades: Grades 6+
-  tutorial_modtraits_string_detail_grades: A partir de 7 ans
-  tutorial_mee_string_detail_grades: A partir de 7 ans
+  tutorial_rpisensehat_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_modtraits_string_detail_grades: 2ème année scolaire et plus
+  tutorial_mee_string_detail_grades: 2ème année scolaire et plus
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_ai-oceans_string_detail_grades: Grades 3+
   tutorial_scratchimagine_string_platforms: Tous les navigateurs modernes, tablette
@@ -10606,8 +10645,8 @@ fr:
   tutorial_msemoji_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
   tutorial_cacolor_string_detail_programming_languages: Computational Thinking focused
     so no language
-  tutorial_kodablebeach_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_kodablebeach_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_tynkeren_string_detail_programming_languages: Blocs
   tutorial_tynkerjavapro_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_grasshopperhack_string_detail_programming_languages: JavaScript
@@ -10639,8 +10678,8 @@ fr:
   tutorial_codingtown_string_detail_programming_languages: JavaScript
   tutorial_kanoart_string_detail_programming_languages: Blocs
   tutorial_dragonscript_string_detail_programming_languages: JavaScript, HTML
-  tutorial_uwcloud_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_uwcloud_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_htmlmuffin_string_detail_programming_languages: HTML and CSS
   tutorial_microsoftpizza_string_detail_programming_languages: Blocs, JavaScript
   tutorial_stemc_blckhole_string_detail_programming_languages: JavaScript
@@ -10670,8 +10709,8 @@ fr:
   tutorial_toxarchitect_string_detail_programming_languages: JavaScript
   tutorial_idodge_string_detail_programming_languages: Simplified version of JavaScript
   tutorial_firiacodebot_string_detail_programming_languages: Python
-  tutorial_modlighthouse_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_modlighthouse_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_spherogreen_string_detail_programming_languages: Blocs, JavaScript
   tutorial_ozopopstar_string_detail_programming_languages: Blocs
   tutorial_eddesign_string_detail_programming_languages: Blocs
@@ -10696,8 +10735,8 @@ fr:
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
     major programming languages. Can easily adapt this project to another language/environment.
   tutorial_kcjmerry_string_detail_programming_languages: Blocs
-  tutorial_modvariables_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_modvariables_string_detail_programming_languages: Indépendance linguistique
+    (peut être enseigné dans plusieurs langues)
   tutorial_codestersmicro_string_detail_programming_languages: Python
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu

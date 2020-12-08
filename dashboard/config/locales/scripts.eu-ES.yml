@@ -2253,3 +2253,7 @@ eu:
               name: Baldintzak
             Functions:
               name: Funtzioak
+        ml-playground:
+          lessons:
+            intro:
+              name: Sarrera

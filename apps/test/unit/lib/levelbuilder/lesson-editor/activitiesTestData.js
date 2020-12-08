@@ -113,13 +113,6 @@ export const sampleActivities = [
   }
 ];
 
-export const levelKeyList = {
-  1: 'Level 1',
-  2: 'Level 2 - 1',
-  3: 'Level 2 - 2',
-  4: 'blockly:Studio:playlab_1'
-};
-
 export const searchOptions = {
   levelOptions: [
     ['All types', ''],

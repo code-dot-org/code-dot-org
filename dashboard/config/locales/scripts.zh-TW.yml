@@ -16393,3 +16393,11 @@ zh-TW:
               name: 課程 B
             CS Discoveries:
               name: 計算機科學探索
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: 在海洋中使用的 AI
+            intro:
+              name: 介紹
+            visualizing:
+              name: 資料視覺化

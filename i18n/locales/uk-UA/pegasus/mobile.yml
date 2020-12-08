@@ -690,7 +690,7 @@
   dashboard_error_none_selected: "Ви не обрали жодного учня для переміщення. Будь ласка, оберіть хоча б одного учня."
   dashboard_error_other_section: "Якщо ви переміщуте учнів між власними групами, оберіть групу з випадного меню. Обирайте \"Інша група\" лише якщо Ви хочете перемістити учнів у групу іншого вчителя."
   dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному на рядок:'
-  dashboard_students_new_google_classroom_section: "Щоб додати учнів, використуйте <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі."
+  dashboard_students_new_google_classroom_section: "Щоб додати учнів, використуйте <a href='http://classroom.google.com' target='_blank'>Google Клас</a>, а тоді клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі."
   dashboard_students_new_section: "Ви створили нову групу! Тепер додавайте учнів, використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>."
   dashboard_students_name: 'Ім’я: '
   dashboard_students_progress: "Прогрес"
@@ -1410,6 +1410,7 @@
   hoc_overview_dance_subtitle: "Закодуйте танцювальну вечірку та покажіть її друзям. Під пісні Кеті Пері, Мадонни, Джея Бальвіна, Сіа, Кіта Урбана, Сіари та ще 25 виконавців!"
   hoc_overview_dance_2019_subtitle: "Закодуйте танцювальну вечірку та покажіть її друзям. Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers, Нікі Мінаж та 34 інших виконавців та груп!"
   hoc_overview_start_tutorial: "Початок"
+  hoc_overview_more_resources: "Щоб отримати додаткові ресурси для навчання з класом дистанційно, див. наш посібник з розміщення [віртуального Hour of Code](https://hourofcode.com/us/how-to/virtual). Що стосується учнів, які мають технологічні обмеження або проблеми з підключенням, ви можете надіслати їм цей пакет для [роботи з Hour of Code без підключення](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc2018_creativity: "творчість"
   hoc2018_creativity_create: "Створити"
   hoc2018_creativity_hoc_coming: "Наближається Година коду…"
@@ -1477,5 +1478,7 @@
   hoc2018_dance_measure_colon: 'Крок:'
   page_not_found_title: "Сторінка не знайдена"
   page_not_found_header: '404: Сторінка не знайдена'
+  hoc2018_mc_thank_microsoft: "Ми дякуємо Microsoft за підтримку нашого бачення та місії щодо забезпечення кожної дитини можливістю вивчати інформатику та навички, необхідні для досягнення успіху в 21 столітті."
   hoc2019_mc_more_coding_resources: "Більше Coding ресурсів"
   hoc2019_dance_previous_versions: "Шукаєте попередню версію Dance Party?\nНатисніть тут, щоб почати [Частина 1](%{dance_2018_link}) та [Частина 2](%{dance_extras_2018_link}) з останнього року."
+  footer_powered_by_aws: "На потужностях Amazon Web Services"

@@ -33,7 +33,7 @@
 # For design details, see:
 # https://docs.google.com/document/d/10mqXBdkFo5nWhjGWJO6D_NMl4Qg74qb7P6Fdvb2P7sc/edit?usp=sharing
 #
-class ParentLevelsChildLevel < ActiveRecord::Base
+class ParentLevelsChildLevel < ApplicationRecord
   belongs_to :parent_level, class_name: 'Level'
   belongs_to :child_level, class_name: 'Level'
   validates_uniqueness_of :child_level, scope: :parent_level

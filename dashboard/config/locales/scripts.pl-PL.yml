@@ -316,7 +316,7 @@ pl:
             'Eval: Defining Functions':
               name: Funkcje złożone
             'Eval: Functions':
-              name: Rozwiązywanie problemów świata przy pomocy wskazówek projektowych
+              name: Rozwiązywanie problemów z wyrazami za pomocą wskazówek projektowych
             'Eval: Strings and Images':
               name: Ciągi znaków i obrazy
             'Eval: Writing Contracts':
@@ -1071,8 +1071,7 @@ pl:
             Pluralsight Test:
               name: Test Pluralsight
             Externals Optionally Displayed as Unplugged:
-              name: Elementy zewnętrzne opcjonalne wyświetlone jako unplugged (bez
-                komputera)
+              name: Elementy zewnętrzne opcjonalne wyświetlone jako bez komputera
             Bubble Choice:
               name: Wybór bańki
             Contained Levels:
@@ -2351,7 +2350,7 @@ pl:
             Velocity:
               name: Prędkość
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
             Using the Game Design Process:
               name: Używanie procesu projektowania gier
         2016_sciencePD_phase1:
@@ -2784,7 +2783,7 @@ pl:
             Explore project ideas:
               name: Badanie pomysłów na projekt
             'Farmer: Functions (New)':
-              name: 'Farmerka: Funkcje (Nowe)'
+              name: 'Rolnik: Funkcje (Nowe)'
             Final Project - Presentation Day:
               name: Projekt końcowy - dzień prezentacji
             'Final Project - Unplugged: Design Process':
@@ -2983,13 +2982,13 @@ pl:
             Build a Game:
               name: Utwórz grę
             Farmer Conditional with Cards:
-              name: Warunek farmerki z kartami
+              name: Rolnik Warunkowe instrukcje z kartami
             Farmer Debug Relay Programming:
-              name: Programowanie sztafetowe debugowania farmerki
+              name: Rolnik Debugowanie w Programowaniu przekaźnika
             Farmer Graph Paper Programming:
-              name: Programowanie farmerki na papierze milimetrowym
+              name: Rolnik Programowanie na papierze milimetrowym
             Farmer Impacts of Computing:
-              name: Oddziaływanie informatyczne farmerki
+              name: Rolnik Oddziaływanie informatyczne
             'Farmer: While Loops':
               name: 'Farmer: Pętle "dopóki" (whilei)'
             'Maze: Conditionals with Loops':
@@ -3172,7 +3171,7 @@ pl:
                 porządkowania i dodawania funkcjonalności do ostatecznej wersji ich
                 gry typu "side scroller".
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
               description_student: Na tej lekcji wprowadza się proces, którego klasa
                 będzie używać do projektowania gier w celu przypomnienia treści części.
                 Klasa przechodzi przez ten proces na różnych poziomach. W ramach tej
@@ -3763,9 +3762,9 @@ pl:
                 zaprojektowany tak, aby był zrealizowany w parach, chociaż może być
                 zrealizowany indywidualnie.
             CS Discoveries Pre-survey:
-              name: Ankieta wstępna dotycząca "Odkryć informatyki"
+              name: Ankieta wstępna dotycząca Odkryć Informatyki
             CS Discoveries Rapid Survey:
-              name: Szybka ankieta dotycząca "Odkryć informatyki"
+              name: Szybka ankieta dotycząca Odkryć Informatyki
         csp-online-test:
           lesson_groups:
             required:
@@ -3845,9 +3844,9 @@ pl:
             Conditionals and Boolean Logic:
               name: Wyrażenia warunkowe i logika boolowska
             While Loops and Introduction to Arrays:
-              name: Pętle while I wprowadzenie do tablic
+              name: Pętle "dopóki" I wprowadzenie do tablic
             Processing Arrays and Functions with Return Values:
-              name: Przetwarzanie tablic oraz funkcje zwracające wartości
+              name: Przetwarzanie tablic oraz funkcji zwracających wartości
             Unit 5 Overview:
               name: Jednostka 5 Przegląd
         csp1-support:
@@ -3899,7 +3898,7 @@ pl:
             Simple Encryption:
               name: Proste szyfrowanie
         csd2-2017:
-          title: Część 2 CSD - Rozwój sieci ('17- '18)
+          title: CSD Jednostka 2 - Rozwój sieci ('17- '18)
           description_short: "  Naucz się budować swoją własną stronę internetową
             w Web Lab."
           description: W dziale 2 nauczysz się, jak tworzyć i udostępniać treści na
@@ -3911,7 +3910,7 @@ pl:
             w Internecie.
           lesson_groups:
             csd2_1:
-              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+              display_name: 'Rozdział 1: Zawartość stron internetowych i HTML'
             csd2_2:
               display_name: 'Rozdział 2: Style i CSS'
             csd_survey:
@@ -4176,7 +4175,7 @@ pl:
                 internetowej "Cztery pory roku", a następnie używają ich do stylizacji
                 ich prywatnych witryn internetowych.
             Project - Personal Portfolio Website:
-              name: Projekt - Własna strona portfolio
+              name: Projekt - Osobista strona portfolio
               description_student: W ciągu ostatnich kilku dni realizacji materiału
                 w tym dziale klasa wykańcza swoje witryny internetowe pracując z rówieśnikami
                 celem uzyskania od nich informacji zwrotnej, weryfikacji kategorii
@@ -4510,27 +4509,27 @@ pl:
               description_student: Użytkownicy testowali aplikację i mają całe mnóstwo
                 informacji zwrotnych od twórcy. Klasa musi je wszystkie uporządkować,
                 określając wspólne tematy i potrzeby oraz rozpocząć weryfikację prototypu
-                tak, aby lepiej zaspokajała potrzeby użytkowników.
+                tak, aby lepiej zaspokajał potrzeby użytkowników.
               description_teacher: Na tej lekcji uczniowie korzystają z informacji
                 zwrotnych od "użytkowników" papierowych prototypów aplikacji z poprzednich
                 zajęć, w celu opracowania udoskonaleń interfejsu użytkownika tego
                 prototypu papierowego. Lekcja rozpoczyna się od rozważenia faktu,
                 że projektanci muszą przełożyć ludzkie potrzeby w zakresie technologii
                 na zmiany interfejsu lub doświadczeń użytkownika. Uczniowie otrzymują
-                zestaw informacji zwrotnych oraz próśb od użytkowników aplikacji z
-                poprzedniej lekcji. W grupach uczniowie dzielą informacje zwrotne
-                na kategorie oraz identyfikują sposoby zaspokojenia  wyrażonych w
-                nich potrzeb poprzez zmiany w interfejsie aplikacji. Potem, w grupach,
-                uczniowie będą wdrażać niektóre z tych zmian, aby spełnić jedną ze
+                następnie zestaw informacji zwrotnych oraz próśb od użytkowników aplikacji
+                z poprzedniej lekcji. W grupach uczniowie dzielą informacje zwrotne
+                na kategorie oraz identyfikują sposoby zaspokojenia wyrażonych w nich
+                potrzeb poprzez zmiany w interfejsie aplikacji. Potem, w grupach,
+                uczniowie implementuj niektóre z tych zmian, aby spełnić jedną ze
                 zidentyfikowanych przez siebie potrzeb.
             Identifying User Needs:
               name: Identyfikowanie potrzeb użytkownika
               description_student: Do tego momentu użytkownicy rozważani przez klasę
-                wszyscy działali zdalnie, a jedyne informacje od użytkowników przechodziły
-                przez tekst lub odgrywanie ról. Teraz klasa będzie zdana na siebie
-                wzajemnie jako potencjalnych użytkownikach i w parach będzie prowadzić
-                ze sobą rozmowy mające na celu ustalenie potrzeb, które można zaspokoić
-                poprzez opracowanie aplikacji.
+                działali zdalnie, a jedyne informacje od użytkowników przychodziły
+                za pośrednictwem tekstu lub odgrywanych ról. Teraz klasa będzie zdana
+                na siebie jako potencjalnych użytkownikach i w parach będzie prowadzić
+                ze sobą rozmowy dla ustalenia potrzeb, które mogą być zaspokojone
+                poprzez rozwijanie aplikacji.
               description_teacher: Do tego momentu uczniowie skupiali się na projektowaniu
                 dla użytkowników, którzy, do pewnego stopnia, są od nich oddaleni.
                 Bez względu na to, czy korzystano z burzy mózgów, profili czy informacji
@@ -4593,7 +4592,7 @@ pl:
               description_student: Użytkownicy testowali aplikację i mają całe mnóstwo
                 informacji zwrotnych od twórcy. Klasa musi je wszystkie uporządkować,
                 określając wspólne tematy i potrzeby oraz rozpocząć weryfikację prototypu
-                tak, aby lepiej zaspokajała potrzeby użytkowników.
+                tak, aby lepiej zaspokajał potrzeby użytkowników.
               description_teacher: Na tej lekcji uczniowie korzystają z informacji
                 zwrotnych od "użytkowników" papierowych prototypów aplikacji z poprzednich
                 zajęć, w celu opracowania udoskonaleń interfejsu użytkownika tego
@@ -4775,7 +4774,7 @@ pl:
             Conditionals & Loops in Farmer:
               name: Pętle warunkowe w interfejsie Harvester
             Impacts of Computing:
-              name: Czynniki oddziaływania informatyki
+              name: Wplywy informatyki
             More Programming with CS4FN:
               name: Więcej programowania z CS4FN
             Build a Play Lab Game:
@@ -5097,7 +5096,7 @@ pl:
               name: Podsumowanie
         csp5-support:
           description_short: Profesjonalny program nauczania dla nauczyciela dotyczący
-            Działu 5 CSP
+            CSP Jednostka 5
           lesson_groups:
             required:
               display_name: Streszczenie
@@ -5115,9 +5114,9 @@ pl:
             Conditionals and Boolean Logic:
               name: Wyrażenia warunkowe i logika boolowska
             While Loops and Introduction to Arrays:
-              name: Pętle while I wprowadzenie do tablic
+              name: Pętle "dopóki" I wprowadzenie do tablic
             Processing Arrays and Functions with Return Values:
-              name: Przetwarzanie tablic oraz funkcje zwracające wartości
+              name: Przetwarzanie tablic oraz funkcji zwracających wartości
             Group Work and Peer Learning:
               name: Praca w grupach i nauka w grupach rówieśniczych
             Balancing Teachers and Tools:
@@ -5127,7 +5126,7 @@ pl:
             Measuring Student Learning:
               name: Pomiar osignięć ucznia
         csppostap-2017:
-          title: CSP Po-AP - Bazy danych i używanie danych w Twoich aplikacjach ('17-'18)
+          title: CSP Pos-AP - Bazy danych i używanie danych w Twoich aplikacjach ('17-'18)
           description_short: Naucz się zbierać i korzystać z danych w aplikacjach
             App Lab.
           lesson_groups:
@@ -5163,7 +5162,7 @@ pl:
             Computing Innovations:
               name: Innowacje informatyczne
             Input Unplugged:
-              name: Wartości wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
         gamelab-demo:
           lessons:
             Simple Sprite Movement:
@@ -5171,16 +5170,16 @@ pl:
         csd6-draft:
           lesson_groups:
             csd6_1:
-              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+              display_name: 'Rozdział 1: Programowanie sprzętowe'
             csd6_2:
-              display_name: 'Rozdział 2: Wejście Sprzętowe'
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           lessons:
             UI and Input:
               name: Interfejs użytkownika i wejście
             Computing Innovations:
               name: Innowacje informatyczne
             Input Uplugged:
-              name: Dane wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
             The Circuit Playground:
               name: Circuit Playground
             Foo:
@@ -5194,7 +5193,7 @@ pl:
             Getters and Setters:
               name: Gettery I settery
             Input Unplugged:
-              name: Wartości wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
             Timed Loop:
               name: Pętla czasowa
             Timed Loops:
@@ -5204,11 +5203,11 @@ pl:
             Physical Input:
               name: Wejście fizyczne
             List and For Loops:
-              name: Listy i pętle for
+              name: Listy i pętle "for"
             'Project: Board Output':
               name: 'Projekt: Wynik na tablicy'
             For Loops with UI and Board:
-              name: Pętle "dlla" z Ul i Boardem
+              name: Pętle "dlla" z Ul i planszą
             Lists and For Loops:
               name: Listy i pętle "for"
             Analog Input:
@@ -5346,10 +5345,10 @@ pl:
               name: Wstęp
         workshop-maker:
           title: Warsztat poświęcony przybornikowi twórcy
-          description_audience: Nauczyciele biorący udział w "Warsztacie poświęconym
-            przybornikowi twórcy" we własnej osobie
-          description_short: Postępy poziomu w zakresie towarzyszenia w "Warsztacie
-            poświęconym przybornikowi twórcy" we własnej osobie
+          description_audience: Nauczyciele osobiście uczestniczący w warsztacie poświęconym
+            przybornikowi twórcy
+          description_short: Postępy odnośnie poziomu towarzyszące warsztatowi poświęconemu
+            przybornikowi twórcy uczesticzącemu osobiście
           description: Te postępy poziomu mają służyć towarzyszeniu  w "Warsztacie
             poświęconym przybornikowi twórcy" we własnej osobie. Nie mają służyć uczeniu
             koncepcji dotyczących narzędzia ani informatyki, ale służyć wsparciem
@@ -5387,9 +5386,9 @@ pl:
             podstawy innowacji Twojego własnego projektu.
           lesson_groups:
             csd6_1:
-              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+              display_name: 'Rozdział 1: Programowanie sprzętowe'
             csd6_2:
-              display_name: 'Rozdział 2: Wejście Sprzętowe'
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
             csd_survey:
               display_name: Ankieta po odbyciu kursu
           lessons:
@@ -5406,7 +5405,7 @@ pl:
                 części tego działu, będą znów oglądać urządzenia, które poznali na
                 tej lekcji, w trakcie tworzenia swoich własnych urządzeń informatycznych.
             Input Unplugged:
-              name: Wartości wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
               description_student: Poznaj dwa różne sposoby, w jakie aplikacja może
                 przyjmować dane wejściowe od użytkownika, ucząc się przy tym o modelu
                 programowania sterowanego zdarzeniem używanym w App Lab.
@@ -5792,7 +5791,7 @@ pl:
                 płytki jako urządzenia wyjściowego, korzystając przy tym z App Lab
                 do pozyskania danych wejściowych użytkownika.
             Input Unplugged_:
-              name: Wartości wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
               description_student: Poznaj dwa różne sposoby, w jakie aplikacja może
                 przyjmować dane wejściowe od użytkownika, ucząc się przy tym o modelu
                 programowania sterowanego zdarzeniem używanym w App Lab.
@@ -6037,7 +6036,7 @@ pl:
             Functions:
               name: Funkcje
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
             Using the Game Design Process:
               name: Używanie procesu projektowania gier
             'Project: Design a Game':
@@ -6434,7 +6433,7 @@ pl:
             Functions:
               name: Funkcje
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
             Using the Game Design Process:
               name: Używanie procesu projektowania gier
             'Project: Design a Game':
@@ -6497,7 +6496,7 @@ pl:
             RGB Colors and Classes:
               name: Kolory RGB i klasy
             Project - Personal Portfolio Website:
-              name: Projekt - Własna strona portfolio
+              name: Projekt - Osobista strona portfolio
             Headers:
               name: Nagłówki
             Intellectual Property and Images:
@@ -6563,7 +6562,7 @@ pl:
             Functions:
               name: Funkcje
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
             Using the Game Design Process:
               name: Używanie procesu projektowania gier
             'Project: Design a Game':
@@ -6634,18 +6633,18 @@ pl:
             Participate in a longitudinal study!:
               name: Weź udział w badaniu podłużnym!
             CSP Post-Course Survey:
-              name: Ankieta po zakończeniu kursu  CSP
+              name: CSP Ankieta po zakończeniu kursu
             CSP post survey 2018 staging:
               name: Podział na etapy ankiety ex post CSP 2018
             CSP post-course survey:
-              name: Ankieta po zakończeniu kursu  CSP
+              name: CSP Ankieta po zakończeniu kursu
         public-key-cryptography:
           title: Widgety kryptografii klucza publicznego
           lessons:
             Public Key Crypto Widgets:
               name: Widgety krypto klucza publicznego
         csd2-old:
-          title: Dział 2 CSD (NIEAKTUALNY)
+          title: CSD Jednostka 2 (NIEAKTUALNA)
           lessons:
             Quality Websites:
               name: Wysokiej jakości strony internetowe
@@ -6704,13 +6703,13 @@ pl:
             Loops with BB-8:
               name: Pętle z BB-8
             D13 no If/While:
-              name: D13 bez "jeśli"/ "dopóki"
+              name: D13 bez "jeśli/w przeciwnym razie"
             Ice Age Play Lab:
               name: Epoka Lodowcowa w Play Lab
             Bounce:
               name: Odbicie
             NewBounce:
-              name: Nowe odbijanie [NewBounce]
+              name: Nowe odbijanie
             F PlayLab Variables:
               name: Zmienne PlayLab F
         coursea-2017:
@@ -6743,7 +6742,7 @@ pl:
                 nasiono. Celem zajęć jest tutaj budowanie umiejętności przenoszenia
                 rzeczywistych sytuacji na scenariusze online i odwrotnie. \r"
             Learn to Drag and Drop:
-              name: Tworzenie sekwencji przy pomocy "przeciągnij i upuść"
+              name: Tworzenie sekwencji przy pomocy przeciągnij i upuść
               description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
                 po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
                 dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym,
@@ -6819,7 +6818,7 @@ pl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorytmy z życia wzięte: sadź nasiona'
             Learn to Drag and Drop:
-              name: Tworzenie sekwencji przy pomocy "przeciągnij i upuść"
+              name: Tworzenie sekwencji przy pomocy przeciągnij i upuść
             Your Digital Footprint:
               name: 'Cyfrowe obywatelstwo: Mój ślad cyfrowy'
             'Programming: My Robotic Friends':
@@ -6852,7 +6851,7 @@ pl:
             swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
           lessons:
             Building a Foundation:
-              name: 'Wytrwałość: budowanie fundamentów'
+              name: 'Wytrwałość: Budowanie podstaw'
             Programming in Maze:
               name: Programowanie w labiryncie
             Debugging in Maze:
@@ -6974,7 +6973,7 @@ pl:
                 że muszą zasypywać dziury i kopać błoto tak długo, aż teren nie stanie
                 się płaski.
             Conditionals with Cards:
-              name: 'Jeśli/ W przeciwnym razie: Instrukcje warunkowe z kartami'
+              name: '"jeśli/w przeciwnym razie": Instrukcje warunkowe z kartami'
               description_student: Czas rozegrać grę, w której zbierasz punkty tylko
                 w określonych warunkach!
               description_teacher: "Ta lekcja pokazuje, w jaki sposób można użyć wyrażeń
@@ -7185,8 +7184,8 @@ pl:
                 kostek". Celem zajęć jest tutaj rozpoczęcie budowania umiejętności
                 przenoszenia rzeczywistych sytuacji na scenariusze online i odwrotnie.
             Conditionals:
-              name: Wyrażenie warunkowe w interfejsie Framer
-              description_student: Musisz powiedzieć komputerowi co zrobić w określonych
+              name: Wyrażenie warunkowe z Rolnikiem
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
                 warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
               description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
                 instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
@@ -7293,7 +7292,7 @@ pl:
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
                 wszystkich czterech etapów procesu.\n\n"
             Internet:
-              name: 'Poza granicami programowania: Internet'
+              name: 'Poza programowaniem: Internet'
               description_student: Czy kiedykolwiek zastanawiałeś się nad tym, jak
                 informacje podróżują po internecie? To nie magia. Na tej lekcji będziesz
                 się uczyć podstaw zasad funkcjonowania internetu.
@@ -7326,7 +7325,7 @@ pl:
             Loops in Artist:
               name: Pętle z Artystą
             Nested Loops in Bee/Zombie:
-              name: Zagnieżdżone pętle w interfejsie Bee/Zombie
+              name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
             Nested Loops:
@@ -7430,7 +7429,7 @@ pl:
                 zmiennych, a następnie uzyskają przestrzeń na tworzenie swoich własnych
                 mini-projektów ze zmiennymi.
             For Loop Fun:
-              name: 'Pętle for: Zabawa z pętlami for'
+              name: 'Pętle "for": Zabawa z pętlami "for"'
               description_student: Będziesz się świetnie bawić ucząc się o pętlach
                 "dla"!
               description_teacher: Wiemy, że pętle służą do wykonywania tych samych
@@ -7585,7 +7584,7 @@ pl:
             Loops in Artist:
               name: Pętle z Artystą
             Nested Loops in Bee/Zombie:
-              name: Zagnieżdżone pętle w interfejsie Bee/Zombie
+              name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
         csdnovice:
@@ -8029,7 +8028,7 @@ pl:
             Conditionals in Minecraft:
               name: Wyrażenia warunkowe w Minecrafcie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             Envelope Variables:
               name: Zmienne w kopertach
             Variables in Artist:
@@ -8063,7 +8062,7 @@ pl:
             Nested Loops Project in Frozen:
               name: Zagnieżdżone pętle w Krainie Lodu
             'How it Works: The Internet':
-              name: 'Poza granicami programowania: Internet'
+              name: 'Poza programowaniem: Internet'
             'Common Sense Education: Digital Citizenship':
               name: 'Cyfrowe obywatelstwo: Ćwiczenie obywatelstwa cyfrowego'
             'Common Sense Education: Screen Out the Mean':
@@ -8079,7 +8078,7 @@ pl:
             'Variables: Envelope Variables':
               name: 'Zmienne: Zmienne w kopertach'
             'For Loops: For Loop Fun':
-              name: 'Pętle for: Zabawa z pętlami for'
+              name: 'Pętle "for": Zabawa z pętlami "for"'
             'Functions: Songwriting with Parameters':
               name: 'Funkcje: Pisanie piosenek z parametrami'
             Building a Foundation:
@@ -8108,7 +8107,7 @@ pl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorytmy z życia wzięte: sadź nasiona'
             Learn to Drag and Drop:
-              name: Tworzenie sekwencji przy pomocy "przeciągnij i upuść"
+              name: Tworzenie sekwencji przy pomocy przeciągnij i upuść
             'Online Safety: Your Digital Footprint':
               name: 'Cyfrowe obywatelstwo: Mój ślad cyfrowy'
             'Programming: My Robotic Friends':
@@ -8303,7 +8302,7 @@ pl:
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
             Intro to Conditionals with Farmer:
-              name: Wprowadzenie do wyrażeń warunkowych przy pomocy interfejsu Farmer
+              name: Wprowadzenie do wyrażeń warunkowych z Rolnikiem
             'Algorithms: Dice Race':
               name: 'Algorytmy: Wyścig kości'
             Course E Introduction:
@@ -8341,11 +8340,11 @@ pl:
             Nested Loops in Bee:
               name: Zagnieżdżone pętle z pszczółką
             Nested Loops in Bee/Zombie:
-              name: Zagnieżdżone pętle w interfejsie Bee/Zombie
+              name: Zagnieżdżone pętle w Pszczółka/Zombie
             Sequence in Maze:
               name: Sekwencje w labiryncie
         new-d:
-          title: Nowy skrypt do Kursu D
+          title: Nowy skrypt dla Kursu D
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'Algorytmy: Programowanie na papierze milimetrowym'
@@ -8372,7 +8371,7 @@ pl:
             Conditionals & Loops in Maze:
               name: Pętle warunkowe w Labiryncie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
             Build a Play Lab Game:
@@ -8391,10 +8390,10 @@ pl:
               name: Pętle w Epoce Lodowcowej
         csp3-a:
           title: CSP Jednostak 3 - Podcele grupy A
-          description_short: Alternatywna wersja Działu 3 CSP na potrzeby eksperymentu
-            grupy A z etykietami podcelu.
-          description: W tym dziale wprowadza się koncepcje założycielskie programowania
-            komputerowego dla studentów w Podcelach Grupy A.
+          description_short: Alternatywna wersja CSP Jednostki 3 na potrzeby eksperymentu
+            grupy A.
+          description: W tej jednostce wprowadza się podstawowe koncepcje programowania
+            komputerowego dla uczniów w Podcelach Grupy A.
           lesson_groups:
             csp3_1:
               display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
@@ -8448,7 +8447,7 @@ pl:
             Conditionals in Minecraft:
               name: Wyrażenia warunkowe w Minecrafcie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             'Variables: Envelope Variables':
               name: 'Zmienne: Zmienne w kopertach'
             Variables in Artist:
@@ -8456,7 +8455,7 @@ pl:
             Variables in Play Lab:
               name: Zmienne w Play Lab
             'For Loops: For Loop Fun':
-              name: 'Pętle for: Zabawa z pętlami for'
+              name: 'Pętle "for": Zabawa z pętlami "for"'
             For Loops in Bee:
               name: Pętle for z Pszczółką
             For Loops in Artist:
@@ -8525,7 +8524,7 @@ pl:
             Loops in Artist:
               name: Pętle z Artystą
             Nested Loops in Bee/Zombie:
-              name: Zagnieżdżone pętle w interfejsie Bee/Zombie
+              name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
             'Algorithms: Dice Race':
@@ -8587,7 +8586,7 @@ pl:
             Loops in Artist:
               name: Pętle z Artystą
             Nested Loops in Bee/Zombie:
-              name: Zagnieżdżone pętle w interfejsie Bee/Zombie
+              name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
             'Algorithms: Tangrams':
@@ -8688,18 +8687,18 @@ pl:
             submittable question at end of lessson:
               name: pytanie, które można zadać na końcu lekcji
             all assessment items as standalone assessment levels:
-              name: wszystkie pozycje oceny jako niezależne poziomy oceny
+              name: wszystkie pozycje sprawdzianu jako niezależne poziomy sprawdzianu
             all assessment items clustered in levelgroup:
-              name: wszystkie pozycje ostatniej oceny jako grupa poziomu
+              name: wszystkie pozycje sprawdzianu połczone w grupę poziomu
             submittable if last assessment item:
-              name: do przedłożenia jeśli ostatnia pozycja oceny
+              name: do przedłożenia jeśli ostatnia pozycja sprawdzianu
             assessment sandwiched between app lab levels:
-              name: ocena umiejscowiona pomiędzy poziomami App Lab
+              name: sprawdzian umiejscowiony pomiędzy poziomami App Lab
             all assessment items clustered in levelgroup as a single "test":
-              name: wszystkie pozycje oceny zgrupowane w grupie poziomu jako pojedynczy
-                "test"
+              name: wszystkie pozycje sprawdzianu zgrupowane w grupie poziomu jako
+                pojedynczy "test"
             dummy:
-              name: atrapa
+              name: sztuczny
             CSP 3 updates staging ground:
               name: przyczyna podzielenia aktualizacji CSP 3 na etapy
         hocali:
@@ -8852,7 +8851,7 @@ pl:
             CSD mid-post survey staging:
               name: Podział na etapy ankiety w trakcie badania CSD
             CSP pre survey Test 2017:
-              name: Test wcześniejszej ankiety CSP 2017
+              name: CSP Test 2017 przed ankietą
             CSD mid-post survey 2017 staging:
               name: Podział na etapy ankiety 2017 w trakcie badania CSD
             CSP pre survey 2017 staging:
@@ -9108,7 +9107,7 @@ pl:
             Loops in Artist:
               name: Pętle z Artystą
             Nested Loops in Bee/Zombie:
-              name: Zagnieżdżone pętle w interfejsie Bee/Zombie
+              name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
             'Algorithms: Tangrams':
@@ -9155,14 +9154,14 @@ pl:
           title: "(NIEAKTUALNY) CSD Jednostka 6 - Obliczenia fizyczne"
           lesson_groups:
             csd6_1:
-              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+              display_name: 'Rozdział 1: Programowanie sprzętowe'
             csd6_2:
-              display_name: 'Rozdział 2: Wejście Sprzętowe'
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           lessons:
             Computing Innovations:
               name: Innowacje informatyczne
             Input Unplugged:
-              name: Wartości wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
             Event Types:
               name: Typy zdarzeń
             Getters and Setters:
@@ -9257,7 +9256,7 @@ pl:
             Functions:
               name: Funkcje
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
             Using the Game Design Process:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
@@ -9579,7 +9578,7 @@ pl:
                 porządkowania i dodawania funkcjonalności do ostatecznej wersji ich
                 gry typu "side scroller".
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
               description_student: Na tej lekcji wprowadza się proces, którego klasa
                 będzie używać do projektowania gier w celu przypomnienia treści części.
                 Klasa przechodzi przez ten proces na różnych poziomach. W ramach tej
@@ -9653,7 +9652,7 @@ pl:
             w Web Lab."
           lesson_groups:
             csd2_1:
-              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+              display_name: 'Rozdział 1: Zawartość stron internetowych i HTML'
             csd2_2:
               display_name: 'Rozdział 2: Style i CSS'
             cspSurvey:
@@ -9884,7 +9883,7 @@ pl:
                 internetowej "Cztery pory roku", a następnie używają ich do stylizacji
                 ich prywatnych witryn internetowych.
             Project - Personal Portfolio Website:
-              name: Projekt - Własna strona portfolio
+              name: Projekt - Osobista strona portfolio
               description_student: W ciągu ostatnich kilku dni realizacji materiału
                 w tym dziale klasa wykańcza swoje witryny internetowe pracując z rówieśnikami
                 celem uzyskania od nich informacji zwrotnej, weryfikacji kategorii
@@ -10048,7 +10047,7 @@ pl:
             Conditionals in Minecraft:
               name: Wyrażenia warunkowe w Minecrafcie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             'Variables: Envelope Variables':
               name: 'Zmienne: Zmienne w kopertach'
             Variables in Artist:
@@ -10056,7 +10055,7 @@ pl:
             Variables in Play Lab:
               name: Zmienne w Play Lab
             'For Loops: For Loop Fun':
-              name: 'Pętle for: Zabawa z pętlami for'
+              name: 'Pętle "for": Zabawa z pętlami "for"'
             For Loops in Bee:
               name: Pętle "for" z Pszczółką
             For Loops in Artist:
@@ -10234,7 +10233,7 @@ pl:
             Conditionals & Loops in Maze:
               name: Pętle warunkowe w Labiryncie
             Conditionals & Loops in Farmer:
-              name: Wyrażenia warunkowe i pętle w interfejsie Maze
+              name: Wyrażenia warunkowe i pętle z Rolnikiem
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
             Build a Play Lab Game:
@@ -10425,9 +10424,9 @@ pl:
           description_short: Naucz się programować przy pomocy urządzeń informatycznych.
           lesson_groups:
             csd6_1:
-              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+              display_name: 'Rozdział 1: Programowanie sprzętowe'
             csd6_2:
-              display_name: 'Rozdział 2: Wejście Sprzętowe'
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -10468,7 +10467,7 @@ pl:
             The Circuit Playground:
               name: Circuit Playground
             Input Unplugged:
-              name: Wartości wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
             Board Events:
               name: Zdarzenia na tablicy
             Getting Properties:
@@ -10555,7 +10554,7 @@ pl:
                 swoje umiejętności tworzenia sekwencji i debugowania w labiryncie. '
             Conditionals:
               name: Wyrażenia warunkowe z interfejsem Farmer
-              description_student: Musisz powiedzieć komputerowi co zrobić w określonych
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
                 warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
               description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
                 instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
@@ -11068,7 +11067,7 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
           lessons:
             CS Discoveries Pre-survey:
-              name: Ankieta wstępna dotycząca "Odkryć informatyki"
+              name: Ankieta wstępna dotycząca Odkryć Informatyki
             Intro to Problem Solving:
               name: Wprowadzenie do rozwiązywania problemów
               description_student: Klasa pracuje w grupach projektując łódki z folii
@@ -11375,27 +11374,27 @@ pl:
               description_student: Użytkownicy testowali aplikację i mają całe mnóstwo
                 informacji zwrotnych od twórcy. Klasa musi je wszystkie uporządkować,
                 określając wspólne tematy i potrzeby oraz rozpocząć weryfikację prototypu
-                tak, aby lepiej zaspokajała potrzeby użytkowników.
+                tak, aby lepiej zaspokajał potrzeby użytkowników.
               description_teacher: Na tej lekcji uczniowie korzystają z informacji
                 zwrotnych od "użytkowników" papierowych prototypów aplikacji z poprzednich
                 zajęć, w celu opracowania udoskonaleń interfejsu użytkownika tego
                 prototypu papierowego. Lekcja rozpoczyna się od rozważenia faktu,
                 że projektanci muszą przełożyć ludzkie potrzeby w zakresie technologii
                 na zmiany interfejsu lub doświadczeń użytkownika. Uczniowie otrzymują
-                zestaw informacji zwrotnych oraz próśb od użytkowników aplikacji z
-                poprzedniej lekcji. W grupach uczniowie dzielą informacje zwrotne
-                na kategorie oraz identyfikują sposoby zaspokojenia  wyrażonych w
-                nich potrzeb poprzez zmiany w interfejsie aplikacji. Potem, w grupach,
-                uczniowie będą wdrażać niektóre z tych zmian, aby spełnić jedną ze
+                następnie zestaw informacji zwrotnych oraz próśb od użytkowników aplikacji
+                z poprzedniej lekcji. W grupach uczniowie dzielą informacje zwrotne
+                na kategorie oraz identyfikują sposoby zaspokojenia wyrażonych w nich
+                potrzeb poprzez zmiany w interfejsie aplikacji. Potem, w grupach,
+                uczniowie implementuj niektóre z tych zmian, aby spełnić jedną ze
                 zidentyfikowanych przez siebie potrzeb.
             Identifying User Needs:
               name: Identyfikowanie potrzeb użytkownika
               description_student: Do tego momentu użytkownicy rozważani przez klasę
-                wszyscy działali zdalnie, a jedyne informacje od użytkowników przechodziły
-                przez tekst lub odgrywanie ról. Teraz klasa będzie zdana na siebie
-                wzajemnie jako potencjalnych użytkownikach i w parach będzie prowadzić
-                ze sobą rozmowy mające na celu ustalenie potrzeb, które można zaspokoić
-                poprzez opracowanie aplikacji.
+                działali zdalnie, a jedyne informacje od użytkowników przychodziły
+                za pośrednictwem tekstu lub odgrywanych ról. Teraz klasa będzie zdana
+                na siebie jako potencjalnych użytkownikach i w parach będzie prowadzić
+                ze sobą rozmowy dla ustalenia potrzeb, które mogą być zaspokojone
+                poprzez rozwijanie aplikacji.
               description_teacher: Do tego momentu uczniowie skupiali się na projektowaniu
                 dla użytkowników, którzy, do pewnego stopnia, są od nich oddaleni.
                 Bez względu na to, czy korzystano z burzy mózgów, profili czy informacji
@@ -12826,16 +12825,16 @@ pl:
             Labyrinth:
               name: Labirynt
         deepdive-debugging:
-          title: Lekcje debudowania dla pedagogów
+          title: Lekcje debudowania dla edukatorów
           lessons:
             Debugging for AB Educators:
-              name: Debubowanie dla pedagogów AB
+              name: Debubowanie dla edukatorów AB
             Debugging for CDEF Educators:
-              name: Debubowanie dla pedagogów CDEF
+              name: Debubowanie dla edukatorów CDEF
         fit-test:
           title: Kurs "FIT praktyka szkoleniowa PLC"
           description_audience: " Prowadzący na szkoleniu"
-          description_short: Kurs szkoleniowy FIT
+          description_short: FIT Kurs szkoleniowy
           description: Do demonstrowania zasady działania kursów PLC
           lesson_groups:
             required:
@@ -13041,13 +13040,13 @@ pl:
             Loops in Artist:
               name: Pętle z Artystą
             Nested Loops in Bee/Zombie:
-              name: Zagnieżdżone pętle w interfejsie Bee/Zombie
+              name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Farmer:
-              name: Wyrażenie warunkowe w interfejsie Framer
+              name: Wyrażenie warunkowe z Rolnikiem
             Functions in Minecraft:
               name: Funkcje w Minecrafcie
               description_student: Czy jesteś w stanie wymyślić, jak używać funkcji,
@@ -13239,10 +13238,9 @@ pl:
                 wbudowywać dane użytkownika jako wydarzenia do utworzenia "potańcówki
                 ufoludków". '
             Loops with the Artist:
-              name: Pętle z artystą
+              name: Rysowanie przy pomocy pętli
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom
-                łatwiej jest tworzyć jeszcze fajniejsze obrazki przy pomocy interfejsu
-                Artist!
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
               description_teacher: Patrz jak twarze uczniów rozpromieniają się na
                 widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
                 liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
@@ -13256,10 +13254,10 @@ pl:
               name: Zachowania w interfejsie Sprite Lab
               description_student: Naucz się programować zachowania Twoich własnych
                 duszków!
-              description_teacher: Teraz uczniowie będą używać interfejsu Sprite Lab
-                do tworzenia swoich zindywidualizowanych zachowań.
+              description_teacher: Teraz uczniowie będą używać Sprite Lab do tworzenia
+                swoich zindywidualizowanych zachowań.
             Virtual Pet:
-              name: Wirtualny zwierzak
+              name: Wirtualny zwierzak z Sprite Lab
               description_student: Na tej lekcji uczniowie będą tworzyć interaktywne
                 "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak,
                 jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab
@@ -13332,7 +13330,7 @@ pl:
             Simulating Experiments:
               name: Symulowanie eksperymentów
               description_student: Uruchom symulacje na komputerze i eksperymentuj
-                zmieniając zmienne.
+                zmieniając wartości zmiennych.
               description_teacher: Dzięki prostej symulacji w Sprite Lab, uczniowie
                 zdobywają doświadczenia w zakresie korzystania z informatyki do zbierania
                 danych, które identyfikują trendy lub wzorce. Po wielokrotnym przeprowadzeniu
@@ -13349,7 +13347,7 @@ pl:
         coursed-2019:
           title: Kurs D (2019)
           description: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń
-            warunkowych i zdarzeń. Poza kodowaniem uczniowie uczą się o obywatelstwie
+            warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie
             cyfrowym.
           description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną
             grafikę, gry, a nawet potańcówkę.
@@ -13572,7 +13570,7 @@ pl:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
             csf_impacts:
-              display_name: Czynniki oddziaływania informatyki
+              display_name: Wplywy informatyki
             csf_nested_loops:
               display_name: Zagnieżdżające się  pętle
             csf_functions:
@@ -13602,7 +13600,7 @@ pl:
               name: Warunkowe z kartami
             Conditionals:
               name: Wyrażenia warunkowe z interfejsem Farmer
-              description_student: Musisz powiedzieć komputerowi co zrobić w określonych
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
                 warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
               description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
                 instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
@@ -13827,10 +13825,9 @@ pl:
                 z uwzględnieniem nieprawidłowych pętli, brakujących bloków, dodatkowych
                 bloków i zepsutych bloków. "
             Programming and Loops with the Artist:
-              name: Pętle z artystą
+              name: Rysowanie przy pomocy pętli
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom
-                łatwiej jest tworzyć jeszcze fajniejsze obrazki przy pomocy interfejsu
-                Artist!
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
               description_teacher: Patrz jak twarze uczniów rozpromieniają się na
                 widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
                 liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
@@ -13862,7 +13859,7 @@ pl:
             Conditionals in Minecraft:
               name: Wyrażenia warunkowe w Minecrafcie
             About Me:
-              name: O mnie z interfejsem Sprite Lab
+              name: O mnie ze Sprite Lab
               description_student: Tworząc interaktywny plakat przy pomocy SpriteLab,
                 uczniowie będą stosować zasady udostępniania informacji o charakterze
                 osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.
@@ -13870,7 +13867,7 @@ pl:
                 uczniowie będą stosować zasady udostępniania informacji o charakterze
                 osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.\r"
             Aquatic Conditionals in Minecraft:
-              name: Wodne wyrażenia warunkowe w grze Minecraft
+              name: Wodne wyrażenia warunkowe w Minecrafcie
             Access Ability:
               name: Projektowanie pod kątem dostępności
               description_student: 'Na tej lekcji uczniowie będą się uczyć o dostępności
@@ -13883,16 +13880,16 @@ pl:
               name: Udostępnianie cyfrowe
             Simon Says:
               name: Simon mówi
-              description_student: Zagraj w grę i pomyśl jakie komendy są potrzebne,
+              description_student: Zagraj w grę i pomyśl, jakie komendy są potrzebne,
                 aby uzyskać właściwy wynik.
               description_teacher: Na tej lekcji uczniowie zagrają w grę służącą do
                 tego, by skłonić ich do myślenia o sposobie wydawania komend, aby
                 uzyskać właściwy wynik. To pomoże im łatwiej przenieść się do Sprite
                 Lab w nadchodzących lekcjach.
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż [Voyage Aquatic]'
-              description_student: Teraz zaczniesz uczyć się o wyrażeniach warunkowych
-                w świecie gry Minecraft.
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
+              description_student: Tutaj nauczysz się o wyrażeniach warunkowych w
+                świecie gry Minecraft.
               description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby
                 Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie
                 będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu,
@@ -14025,13 +14022,13 @@ pl:
             Editing Behaviors:
               name: Zachowania w interfejsie Sprite Lab
             Virtual Pet with Sprite Lab:
-              name: Wirtualny zwierzak
+              name: Wirtualny zwierzak z Sprite Lab
             Build A Project:
               name: Koniec projektu kursu
             Dance Party:
               name: Potańcówka
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż [Voyage Aquatic]'
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
             Concept Practice with Minecraft:
               name: Patrząc w przyszłość
         csd1-2019:
@@ -14056,7 +14053,7 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
           lessons:
             CS Discoveries Pre-survey:
-              name: Ankieta wstępna dotycząca "Odkryć informatyki"
+              name: Ankieta wstępna dotycząca Odkryć Informatyki
             Intro to Problem Solving:
               name: Wprowadzenie do rozwiązywania problemów
               description_student: Klasa pracuje w grupach projektując łódki z folii
@@ -14454,7 +14451,7 @@ pl:
                 uczniowie będą musieli identyfikować wzorce powtórzone w swoich instrukcjach,
                 które można zastąpić pętlą.
             Graphing Data:
-              name: Zaznaczanie danych na wykresie
+              name: Graficzne przedstawienie danych
             Powerful Passwords:
               name: Bardzo skuteczne hasła
               description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje
@@ -14469,8 +14466,7 @@ pl:
             Sticker Art with Loops:
               name: Grafika naklejek przy pomocy pętli
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom
-                łatwiej jest tworzyć jeszcze fajniejsze obrazki przy pomocy interfejsu
-                Artist!
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
               description_teacher: Patrz jak twarze uczniów rozpromieniają się na
                 widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
                 liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
@@ -14489,9 +14485,9 @@ pl:
                 uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać
                 ich wizualizację z użyciem różnego rodzaju wykresów.
         csp-mid-survey:
-          title: Ankieta dla uczniów CSP w trakcie roku
+          title: CSP Ankieta dla uczniów w trakcie roku
           description_audience: Uczniowie CSP
-          description_short: Ankieta dla uczniów CSP w trakcie roku
+          description_short: CSP Ankieta dla uczniów w trakcie roku
           description: Witamy w ankiecie w trakcie roku poświęconej "Zasadom informatyki"
             Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi mają
             charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki
@@ -14503,7 +14499,7 @@ pl:
               display_name: Ankieta
           lessons:
             CSP Mid-year survey:
-              name: Badanie CSP w trakcie roku
+              name: CSP Ankieta w trakcie roku
         gamelab:
           title: Laboratorium Gier (Game Lab)
           description: Samouczki z nauczycielem do opracowania w  Game Lab.  Te samouczki
@@ -14658,7 +14654,7 @@ pl:
             csf_loops:
               display_name: Pętle
             csf_impacts:
-              display_name: Czynniki oddziaływania informatyki
+              display_name: Wplywy informatyki
             csf_events:
               display_name: Zdarzenia
           lessons:
@@ -14865,7 +14861,7 @@ pl:
             w Web Lab."
           lesson_groups:
             csd2_1:
-              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+              display_name: 'Rozdział 1: Zawartość stron internetowych i HTML'
             csd2_2:
               display_name: 'Rozdział 2: Style i CSS'
             cspSurvey:
@@ -15096,7 +15092,7 @@ pl:
                 internetowej "Cztery pory roku", a następnie używają ich do stylizacji
                 ich prywatnych witryn internetowych.
             Project - Personal Portfolio Website:
-              name: Projekt - Własna strona portfolio
+              name: Projekt - Osobista strona portfolio
               description_student: W ciągu ostatnich kilku dni realizacji materiału
                 w tym dziale klasa wykańcza swoje witryny internetowe pracując z rówieśnikami
                 celem uzyskania od nich informacji zwrotnej, weryfikacji kategorii
@@ -15417,7 +15413,7 @@ pl:
                 porządkowania i dodawania funkcjonalności do ostatecznej wersji ich
                 gry typu "side scroller".
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
               description_student: Na tej lekcji wprowadza się proces, którego klasa
                 będzie używać do projektowania gier w celu przypomnienia treści części.
                 Klasa przechodzi przez ten proces na różnych poziomach. W ramach tej
@@ -15581,27 +15577,27 @@ pl:
               description_student: Użytkownicy testowali aplikację i mają całe mnóstwo
                 informacji zwrotnych od twórcy. Klasa musi je wszystkie uporządkować,
                 określając wspólne tematy i potrzeby oraz rozpocząć weryfikację prototypu
-                tak, aby lepiej zaspokajała potrzeby użytkowników.
+                tak, aby lepiej zaspokajał potrzeby użytkowników.
               description_teacher: Na tej lekcji uczniowie korzystają z informacji
                 zwrotnych od "użytkowników" papierowych prototypów aplikacji z poprzednich
                 zajęć, w celu opracowania udoskonaleń interfejsu użytkownika tego
                 prototypu papierowego. Lekcja rozpoczyna się od rozważenia faktu,
                 że projektanci muszą przełożyć ludzkie potrzeby w zakresie technologii
                 na zmiany interfejsu lub doświadczeń użytkownika. Uczniowie otrzymują
-                zestaw informacji zwrotnych oraz próśb od użytkowników aplikacji z
-                poprzedniej lekcji. W grupach uczniowie dzielą informacje zwrotne
-                na kategorie oraz identyfikują sposoby zaspokojenia  wyrażonych w
-                nich potrzeb poprzez zmiany w interfejsie aplikacji. Potem, w grupach,
-                uczniowie będą wdrażać niektóre z tych zmian, aby spełnić jedną ze
+                następnie zestaw informacji zwrotnych oraz próśb od użytkowników aplikacji
+                z poprzedniej lekcji. W grupach uczniowie dzielą informacje zwrotne
+                na kategorie oraz identyfikują sposoby zaspokojenia wyrażonych w nich
+                potrzeb poprzez zmiany w interfejsie aplikacji. Potem, w grupach,
+                uczniowie implementuj niektóre z tych zmian, aby spełnić jedną ze
                 zidentyfikowanych przez siebie potrzeb.
             Identifying User Needs:
               name: Identyfikowanie potrzeb użytkownika
               description_student: Do tego momentu użytkownicy rozważani przez klasę
-                wszyscy działali zdalnie, a jedyne informacje od użytkowników przechodziły
-                przez tekst lub odgrywanie ról. Teraz klasa będzie zdana na siebie
-                wzajemnie jako potencjalnych użytkownikach i w parach będzie prowadzić
-                ze sobą rozmowy mające na celu ustalenie potrzeb, które można zaspokoić
-                poprzez opracowanie aplikacji.
+                działali zdalnie, a jedyne informacje od użytkowników przychodziły
+                za pośrednictwem tekstu lub odgrywanych ról. Teraz klasa będzie zdana
+                na siebie jako potencjalnych użytkownikach i w parach będzie prowadzić
+                ze sobą rozmowy dla ustalenia potrzeb, które mogą być zaspokojone
+                poprzez rozwijanie aplikacji.
               description_teacher: Do tego momentu uczniowie skupiali się na projektowaniu
                 dla użytkowników, którzy, do pewnego stopnia, są od nich oddaleni.
                 Bez względu na to, czy korzystano z burzy mózgów, profili czy informacji
@@ -16111,9 +16107,9 @@ pl:
           description_short: Naucz się programować przy pomocy urządzeń informatycznych.
           lesson_groups:
             csd6_1:
-              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+              display_name: 'Rozdział 1: Programowanie sprzętowe'
             csd6_2:
-              display_name: 'Rozdział 2: Wejście Sprzętowe'
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -16122,7 +16118,7 @@ pl:
             The Circuit Playground:
               name: Circuit Playground
             Input Unplugged:
-              name: Wartości wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
             Board Events:
               name: Zdarzenia na tablicy
             Getting Properties:
@@ -16776,7 +16772,7 @@ pl:
             Loops in Artist:
               name: Pętle z Artystą
             Nested Loops in Bee/Zombie:
-              name: Zagnieżdżone pętle w interfejsie Bee/Zombie
+              name: Zagnieżdżone pętle w Pszczółka/Zombie
             Nested Loops with Frozen:
               name: Zagnieżdżone pętle z interfejsem Frozen
             Learning Sprites with Sprite Lab:
@@ -17463,7 +17459,7 @@ pl:
               display_name: Ankieta
           lessons:
             CSP post-course survey:
-              name: Ankieta po zakończeniu kursu  CSP
+              name: CSP Ankieta po zakończeniu kursu
         csp5-pilot:
           title: 'CSP Jednostka 5 Pilotaż: Listy, pętle i przejścia'
           lesson_groups:
@@ -17670,7 +17666,7 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
           lessons:
             CS Discoveries Pre-survey:
-              name: Ankieta wstępna dotycząca "Odkryć informatyki"
+              name: Ankieta wstępna dotycząca Odkryć Informatyki
             Intro to Problem Solving:
               name: Wprowadzenie do rozwiązywania problemów
               description_student: Klasa pracuje w grupach projektując łódki z folii
@@ -17854,7 +17850,7 @@ pl:
             w Web Lab."
           lesson_groups:
             csd2_1:
-              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+              display_name: 'Rozdział 1: Zawartość stron internetowych i HTML'
             csd2_2:
               display_name: 'Rozdział 2: Style i CSS'
             cspSurvey:
@@ -18085,7 +18081,7 @@ pl:
                 internetowej "Cztery pory roku", a następnie używają ich do stylizacji
                 ich prywatnych witryn internetowych.
             Project - Personal Portfolio Website:
-              name: Projekt - Własna strona portfolio
+              name: Projekt - Osobista strona portfolio
               description_student: W ciągu ostatnich kilku dni realizacji materiału
                 w tym dziale klasa wykańcza swoje witryny internetowe pracując z rówieśnikami
                 celem uzyskania od nich informacji zwrotnej, weryfikacji kategorii
@@ -18438,7 +18434,7 @@ pl:
                 porządkowania i dodawania funkcjonalności do ostatecznej wersji ich
                 gry typu "side scroller".
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
               description_student: Na tej lekcji wprowadza się proces, którego klasa
                 będzie używać do projektowania gier w celu przypomnienia treści części.
                 Klasa przechodzi przez ten proces na różnych poziomach. W ramach tej
@@ -19175,7 +19171,7 @@ pl:
             Programming and Loops with the Artist:
               name: Programowanie i pętle z Artystą
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż [Voyage Aquatic]'
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
             Conditionals:
               name: Zdania z warunkami
             'Events: The Big Event':
@@ -19195,7 +19191,7 @@ pl:
             Conditionals Review:
               name: Przegląd instrukcji warunkowych
             Drawing with Loops:
-              name: Pętle z artystą
+              name: Rysowanie przy pomocy pętli
         time4cs-control-unit-2:
           title: Oryginalny dział 2 Time 4CS
           lesson_groups:
@@ -19314,7 +19310,7 @@ pl:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
             csf_impacts:
-              display_name: Czynniki oddziaływania informatyki
+              display_name: Wplywy informatyki
             ramp_up:
               display_name: Intensyfikacja działań
           lessons:
@@ -19323,7 +19319,7 @@ pl:
             Programming and Loops with the Artist:
               name: Programowanie i pętle z Artystą
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż [Voyage Aquatic]'
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
             Conditionals:
               name: Zdania z warunkami
             'Events: The Big Event':
@@ -19356,7 +19352,7 @@ pl:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
             csf_impacts:
-              display_name: Czynniki oddziaływania informatyki
+              display_name: Wplywy informatyki
             ramp_up:
               display_name: Intensyfikacja działań
           lessons:
@@ -19365,7 +19361,7 @@ pl:
             Programming and Loops with the Artist:
               name: Programowanie i pętle z Artystą
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż [Voyage Aquatic]'
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
             Conditionals:
               name: Zdania z warunkami
             'Events: The Big Event':
@@ -19642,7 +19638,7 @@ pl:
             w Web Lab."
           lesson_groups:
             csd2_1:
-              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+              display_name: 'Rozdział 1: Zawartość stron internetowych i HTML'
             csd2_2:
               display_name: 'Rozdział 2: Style i CSS'
             cspSurvey:
@@ -20100,7 +20096,7 @@ pl:
               display_name: Lekcje alternatywne
           lessons:
             CS Discoveries Pre-survey:
-              name: Ankieta wstępna dotycząca "Odkryć informatyki"
+              name: Ankieta wstępna dotycząca Odkryć Informatyki
             Intro to Problem Solving:
               name: Wprowadzenie do rozwiązywania problemów
               description_student: "**Pytanie dnia: Co może nam pomóc we wspólnej
@@ -20485,7 +20481,7 @@ pl:
             Storage:
               name: Pamięć
         csd4-2020:
-          title: Część 4 CSD - Proces projektowania ('20-'21)
+          title: CSD jednostka 4 - Proces projektowania ('20-'21)
           description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego
             informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej
             rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa
@@ -20585,27 +20581,27 @@ pl:
               description_student: Użytkownicy testowali aplikację i mają całe mnóstwo
                 informacji zwrotnych od twórcy. Klasa musi je wszystkie uporządkować,
                 określając wspólne tematy i potrzeby oraz rozpocząć weryfikację prototypu
-                tak, aby lepiej zaspokajała potrzeby użytkowników.
+                tak, aby lepiej zaspokajał potrzeby użytkowników.
               description_teacher: Na tej lekcji uczniowie korzystają z informacji
                 zwrotnych od "użytkowników" papierowych prototypów aplikacji z poprzednich
                 zajęć, w celu opracowania udoskonaleń interfejsu użytkownika tego
                 prototypu papierowego. Lekcja rozpoczyna się od rozważenia faktu,
                 że projektanci muszą przełożyć ludzkie potrzeby w zakresie technologii
                 na zmiany interfejsu lub doświadczeń użytkownika. Uczniowie otrzymują
-                zestaw informacji zwrotnych oraz próśb od użytkowników aplikacji z
-                poprzedniej lekcji. W grupach uczniowie dzielą informacje zwrotne
-                na kategorie oraz identyfikują sposoby zaspokojenia  wyrażonych w
-                nich potrzeb poprzez zmiany w interfejsie aplikacji. Potem, w grupach,
-                uczniowie będą wdrażać niektóre z tych zmian, aby spełnić jedną ze
+                następnie zestaw informacji zwrotnych oraz próśb od użytkowników aplikacji
+                z poprzedniej lekcji. W grupach uczniowie dzielą informacje zwrotne
+                na kategorie oraz identyfikują sposoby zaspokojenia wyrażonych w nich
+                potrzeb poprzez zmiany w interfejsie aplikacji. Potem, w grupach,
+                uczniowie implementuj niektóre z tych zmian, aby spełnić jedną ze
                 zidentyfikowanych przez siebie potrzeb.
             Identifying User Needs:
               name: Identyfikowanie potrzeb użytkownika
               description_student: Do tego momentu użytkownicy rozważani przez klasę
-                wszyscy działali zdalnie, a jedyne informacje od użytkowników przechodziły
-                przez tekst lub odgrywanie ról. Teraz klasa będzie zdana na siebie
-                wzajemnie jako potencjalnych użytkownikach i w parach będzie prowadzić
-                ze sobą rozmowy mające na celu ustalenie potrzeb, które można zaspokoić
-                poprzez opracowanie aplikacji.
+                działali zdalnie, a jedyne informacje od użytkowników przychodziły
+                za pośrednictwem tekstu lub odgrywanych ról. Teraz klasa będzie zdana
+                na siebie jako potencjalnych użytkownikach i w parach będzie prowadzić
+                ze sobą rozmowy dla ustalenia potrzeb, które mogą być zaspokojone
+                poprzez rozwijanie aplikacji.
               description_teacher: Do tego momentu uczniowie skupiali się na projektowaniu
                 dla użytkowników, którzy, do pewnego stopnia, są od nich oddaleni.
                 Bez względu na to, czy korzystano z burzy mózgów, profili czy informacji
@@ -20779,7 +20775,7 @@ pl:
             CS Discoveries Post Course survey:
               name: Odkrycia informatyki Ankieta po kursie
         csd5-2020:
-          title: Część 5 CSD - Dane a społeczeństwo ('20- '21)
+          title: CSD Jednostka 5 - Dane a społeczeństwo ('20- '21)
           description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów
             oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie.
             W pierwszym rozdziale bada się różne systemy używane do przedstawiania
@@ -21117,9 +21113,9 @@ pl:
           description_short: Naucz się programować przy pomocy urządzeń informatycznych.
           lesson_groups:
             csd6_1:
-              display_name: 'Rozdział 1: Wyjście Sprzętowe'
+              display_name: 'Rozdział 1: Programowanie sprzętowe'
             csd6_2:
-              display_name: 'Rozdział 2: Wejście Sprzętowe'
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
             cspSurvey:
               display_name: Ankieta
           lessons:
@@ -21128,7 +21124,7 @@ pl:
             The Circuit Playground:
               name: Circuit Playground
             Input Unplugged:
-              name: Wartości wejściowe w trybie "unplugged" - bez komputera
+              name: Dane wejściowe dla bez komputera
             Board Events:
               name: Zdarzenia na tablicy
             Getting Properties:
@@ -21553,7 +21549,7 @@ pl:
                 bloków kodu ze swoich pętli rysowania oraz wymiany powtórzonych fragmentów
                 kodu pojedynczą funkcją."
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
               description_student: Na tej lekcji klasa wprowadzana jest w proces,
                 z którego będzie korzystać do projektowania gier przez pozostały czas
                 tej części. Ten proces skupia się wokół przewodnika po projekcie,
@@ -21878,7 +21874,7 @@ pl:
             csf_loops:
               display_name: Pętle
             csf_impacts:
-              display_name: Czynniki oddziaływania informatyki
+              display_name: Wplywy informatyki
             csf_events:
               display_name: Zdarzenia
           lessons:
@@ -22129,8 +22125,7 @@ pl:
             Sticker Art with Loops:
               name: Grafika naklejek przy pomocy pętli
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom
-                łatwiej jest tworzyć jeszcze fajniejsze obrazki przy pomocy interfejsu
-                Artist!
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
               description_teacher: Patrz jak twarze uczniów rozpromieniają się na
                 widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
                 liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
@@ -22209,7 +22204,7 @@ pl:
         coursed-2020:
           title: Kurs D (2020)
           description: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń
-            warunkowych i zdarzeń. Poza kodowaniem uczniowie uczą się o obywatelstwie
+            warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie
             cyfrowym.
           description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną
             grafikę, gry, a nawet potańcówkę.
@@ -22448,7 +22443,7 @@ pl:
             csf_functions:
               display_name: Funkcje
             csf_impacts:
-              display_name: Czynniki oddziaływania informatyki
+              display_name: Wplywy informatyki
             end_of_course_project:
               display_name: Koniec projektu kursu
           lessons:
@@ -22469,10 +22464,9 @@ pl:
                 z uwzględnieniem nieprawidłowych pętli, brakujących bloków, dodatkowych
                 bloków i zepsutych bloków. "
             Programming and Loops with the Artist:
-              name: Pętle z artystą
+              name: Rysowanie przy pomocy pętli
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom
-                łatwiej jest tworzyć jeszcze fajniejsze obrazki przy pomocy interfejsu
-                Artist!
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
               description_teacher: Patrz jak twarze uczniów rozpromieniają się na
                 widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
                 liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
@@ -22481,16 +22475,16 @@ pl:
                 fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub
                 na wywiadówki.
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż [Voyage Aquatic]'
-              description_student: Teraz zaczniesz uczyć się o wyrażeniach warunkowych
-                w świecie gry Minecraft.
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
+              description_student: Tutaj nauczysz się o wyrażeniach warunkowych w
+                świecie gry Minecraft.
               description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby
                 Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie
                 będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu,
                 jak również zerknąć na instrukcje warunkowe!
             Conditionals:
               name: Wyrażenia warunkowe z interfejsem Farmer
-              description_student: Musisz powiedzieć komputerowi co zrobić w określonych
+              description_student: Musisz powiedzieć komputerowi, co zrobić w określonych
                 warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
               description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i
                 instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami,
@@ -22503,7 +22497,7 @@ pl:
                 razie uruchamia się coś innego.
             Simon Says:
               name: Simon mówi
-              description_student: Zagraj w grę i pomyśl jakie komendy są potrzebne,
+              description_student: Zagraj w grę i pomyśl, jakie komendy są potrzebne,
                 aby uzyskać właściwy wynik.
               description_teacher: Na tej lekcji uczniowie zagrają w grę służącą do
                 tego, by skłonić ich do myślenia o sposobie wydawania komend, aby
@@ -22539,7 +22533,7 @@ pl:
 
                 Chęć dzielenia się i łączenia z innymi leży w naturze naszych uczniów. Jak możemy pomóc dzieciom budować mocne, pozytywne i bezpieczne relacje w Internecie? Pomóż uczniom nauczyć się odróżniać to, co ma charakter osobisty od tego, co najlepiej zachować dla siebie.
             About Me:
-              name: O mnie z interfejsem Sprite Lab
+              name: O mnie ze Sprite Lab
               description_student: Tworząc interaktywny plakat przy pomocy SpriteLab,
                 uczniowie będą stosować zasady udostępniania informacji o charakterze
                 osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.
@@ -22706,10 +22700,9 @@ pl:
                 wbudowywać dane użytkownika jako wydarzenia do utworzenia "potańcówki
                 ufoludków". '
             Loops with the Artist:
-              name: Pętle z artystą
+              name: Rysowanie przy pomocy pętli
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom
-                łatwiej jest tworzyć jeszcze fajniejsze obrazki przy pomocy interfejsu
-                Artist!
+                łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
               description_teacher: Patrz jak twarze uczniów rozpromieniają się na
                 widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej
                 liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie
@@ -22770,7 +22763,7 @@ pl:
             Simulating Experiments:
               name: Symulowanie eksperymentów
               description_student: Uruchom symulacje na komputerze i eksperymentuj
-                zmieniając zmienne.
+                zmieniając wartości zmiennych.
               description_teacher: Dzięki prostej symulacji w Sprite Lab, uczniowie
                 zdobywają doświadczenia w zakresie korzystania z informatyki do zbierania
                 danych, które identyfikują trendy lub wzorce. Po wielokrotnym przeprowadzeniu
@@ -22818,10 +22811,10 @@ pl:
               name: Zachowania w interfejsie Sprite Lab
               description_student: Naucz się programować zachowania Twoich własnych
                 duszków!
-              description_teacher: Teraz uczniowie będą używać interfejsu Sprite Lab
-                do tworzenia swoich zindywidualizowanych zachowań.
+              description_teacher: Teraz uczniowie będą używać Sprite Lab do tworzenia
+                swoich zindywidualizowanych zachowań.
             Virtual Pet:
-              name: Wirtualny zwierzak
+              name: Wirtualny zwierzak z Sprite Lab
               description_student: Na tej lekcji uczniowie będą tworzyć interaktywne
                 "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak,
                 jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab
@@ -22964,7 +22957,7 @@ pl:
             While Loops in Farmer:
               name: Pętle "dopóki" w interfejsie Farmer
             'Conditionals in Minecraft: Voyage Aquatic':
-              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż [Voyage Aquatic]'
+              name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
             Until Loops in Maze:
               name: Pętle "dopóki" w labiryncie
             Conditionals & Loops in Harvester:
@@ -22992,7 +22985,7 @@ pl:
             Editing Behaviors:
               name: Edytowanie zachowań
             Virtual Pet with Sprite Lab:
-              name: Wirtualny zwierzak
+              name: Wirtualny zwierzak z Sprite Lab
             Build A Project:
               name: Zbuduj projekt
             Swimming Fish with Sprite Lab:
@@ -23451,7 +23444,7 @@ pl:
             Lab.
           lesson_groups:
             csd2_1:
-              display_name: 'Rozdział 1: Zawartość Stron Internetowych i HTML'
+              display_name: 'Rozdział 1: Zawartość stron internetowych i HTML'
             csd2_2:
               display_name: 'Rozdział 2: Style i CSS'
           lessons:
@@ -23698,7 +23691,7 @@ pl:
             Functions:
               name: Funkcje
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
             Using the Game Design Process:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
@@ -24427,7 +24420,7 @@ pl:
                 bloków kodu ze swoich pętli rysowania oraz wymiany powtórzonych fragmentów
                 kodu pojedynczą funkcją."
             The Game Design Process:
-              name: Proces projektowania gier
+              name: Proces projektowania gry
               description_student: Na tej lekcji klasa wprowadzana jest w proces,
                 z którego będzie korzystać do projektowania gier przez pozostały czas
                 tej części. Ten proces skupia się wokół przewodnika po projekcie,
@@ -24621,17 +24614,101 @@ pl:
           description_audience: Wewnętrzne
           description_short: Poziomy, które są bezpośrednio powiązane z planami lekcji,
             ale nie pojawiają się w innych skryptach.
+        virustest:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Symulacja Wirusa dla Code Bytes
+          lesson_groups:
+            csf_data:
+              display_name: Symulacja Wirusa dla Code Bytes
+          title: Symulowanie epidemii
+          description_short: 'Użyj Sprite Lab, aby utworzyć symulację epidemii wirusa. '
         ml-playground:
           lessons:
+            Variables:
+              name: Przykład, który ukradłem z CSD
+            ML Playground:
+              name: Plac zabaw ML
+            ML Playground 2:
+              name: Plac zabaw ML 2
+            USE Projects:
+              name: Projekty USE
+            MODIFY Projects:
+              name: Projekty MODIFY
+            CREATE Projects:
+              name: Projekty CREATE
             USE Programs:
               name: Programy USE (tylko AppLab)
             MODIFY Programs:
               name: Programy MODIFY (AppLab -> Widget -> AppLab)
+            Does Code.org Like Your Dog?:
+              name: Czy Code.org lubi Twojego psa?
+            dog:
+              name: Czy Code.org lubi Twojego psa?
+            AI for Oceans:
+              name: AI dla oceanów
+            oceans:
+              name: Uczenie maszynowe z AI dla oceanów
+            intro:
+              name: Wstęp
+            society:
+              name: Uczenie maszynowe i społeczny oddźwięk
+            decisions:
+              name: Podejmowanie decyzji z modelami
+            visualizing:
+              name: Wizualizacja danych
+            knn-train:
+              name: Trenuj model z ciągłymi etykietami (KNN)
+            knn-use:
+              name: Utwórz model z ciągłymi etykietami (KNN)
+            knn-app:
+              name: Wykonaj aplikację z ciągłymi etykietami (KNN)
+            svm-train:
+              name: Trenuj model z etykietami kategorialnymi (SVM)
+            svm-use:
+              name: Utwórz model z etykietami kategorialnymi (SVM)
+            svm-app:
+              name: Wykonaj aplikację z etykietami kategorialnymi (SVM)
+            model:
+              name: Karta modelu
+            data:
+              name: Przeglądaj zbiory danych i wybierz jeden dla swojej aplikacji
+            project-app:
+              name: 'Mini-Projekt: Utwórz aplikację ML'
+            miseducation:
+              name: Niewłaściwa edukacja maszyny
+            ethics:
+              name: Etyka
+            ethics-hoc2020:
+              name: AI i etyka Godziny Kodowania 2020
+            hypothesis:
+              name: Tworzenie hipotezy dotyczącej danych
+            goldilocks:
+              name: Zasady Złotowłosej
+            collection:
+              name: Zbieranie własnych danych
+            project:
+              name: Projekt końcowy
+            KNN:
+              name: KNN
+            SVM:
+              name: SVM
+            App:
+              name: Tworzenie aplikacji
+            Ethics:
+              name: Etyka
+            Project:
+              name: Projekt końcowy
+            appendix:
+              name: Appendix
+          title: Jednostk Ml/AI - CSD
           description_short: Jednostka ML/AI
+          description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
+            dla CSD. W przypadku pytań na ten temat, należy zwrócić się do Dana Schneidera.
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
-              name: Symulowanie wirusa
+              name: Symulowanie symulacji
           lesson_groups:
             outbreak:
               display_name: Symulowanie przerwania
@@ -24639,11 +24716,19 @@ pl:
           description_short: Użyj Sprite Lab, aby zaprogramować symulację epidemii
             wirusa.
           description: Użyj Sprite Lab, aby zaprogramować symulację epidemii wirusa.
+          name: epidemia
         apps-for-good:
           lessons:
             Build an App for Good:
               name: Utwórz aplikację na Dobre
           title: Aplikacje na Dobre
         2021drafting:
+          lessons:
+            Sprite Lab:
+              name: Bloki Sprite Lab
+          lesson_groups:
+            Toolbox Levels:
+              display_name: Poziomy przyborników
+          title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne

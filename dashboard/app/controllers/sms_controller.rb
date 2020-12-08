@@ -32,8 +32,12 @@ class SmsController < ApplicationController
   end
 
   def send_sms(body, phone)
-    # set up a client to talk to the Twilio REST API
-    @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth
+    # If the Twilio WebService is unavailable or experiencing latency issues we can no-op this method to avoid
+    # tie-ing up all puma worker threads waiting for the Twilio API to respond by switching a Gatekeeper flag.
+    return head :ok unless Gatekeeper.allows('twilio', default: true)
+
+    http_client = Twilio::HTTP::Client.new(timeout: DCDO.get('webpurify_http_read_timeout', 10))
+    @client = Twilio::REST::Client.new CDO.twilio_sid, CDO.twilio_auth, nil, nil, http_client
     @client.messages.create(
       messaging_service_sid: CDO.twilio_messaging_service,
       to: phone,

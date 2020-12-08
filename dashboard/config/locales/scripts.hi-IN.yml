@@ -22444,3 +22444,11 @@ hi:
               name: कोर्स B
             CS Discoveries:
               name: CS Discoveries
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: समुद्रों के लिए AI
+            intro:
+              name: परिचय
+            visualizing:
+              name: डेटा को दृष्टिगोचर बनाना

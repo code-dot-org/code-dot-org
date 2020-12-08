@@ -3558,3 +3558,7 @@ bg:
           lesson_groups:
             lg_1:
               display_name: Съдържание
+        ml-playground:
+          lessons:
+            intro:
+              name: Въведение

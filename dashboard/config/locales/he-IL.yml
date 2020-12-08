@@ -151,8 +151,6 @@ he:
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
     student_consent: אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org.
-    agree_us_website: אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית.
-    my_data_to_us: יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית.
     additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
     user_type_button: עדכן סוג חשבון
     user_type_label: סוג חשבון
@@ -368,6 +366,7 @@ he:
       frozen: לשבור את הקרח
       gamelab: מעבדת המשחקים
       gamelab_jr: מעבדת המשחקים (בטא)
+      gumball: העולם המופלא של גאמבול
       iceage: עידן הקרח
       infinity: אינסוף
       minecraft_adventurer: הרפתקן מיינקראפט

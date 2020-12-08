@@ -27,8 +27,9 @@ module LessonImportHelper
     course_version_id = lesson.script&.get_course_version&.id
     raise unless course_version_id
 
+    lesson_levels = lesson.script_levels.reject {|l| l.levels[0].type == 'CurriculumReference'}
     if cb_lesson_data.empty?
-      lesson.lesson_activities = update_lockable_lesson(lesson.script_levels, lesson.id)
+      lesson.lesson_activities = update_lockable_lesson(lesson_levels, lesson.id)
       lesson.script_levels = []
     else
       lesson.name = cb_lesson_data['title']
@@ -37,10 +38,11 @@ module LessonImportHelper
       lesson.purpose = cb_lesson_data['cs_content']
       lesson.preparation = cb_lesson_data['prep']
       lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
+      lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
       lesson.objectives = cb_lesson_data['objectives'].map do |o|
         Objective.new(description: o["name"])
       end
-      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson.script_levels, lesson.id)
+      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson.id)
       lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
       lesson.script_levels = []
     end
@@ -72,7 +74,7 @@ module LessonImportHelper
     end
   end
 
-  def self.create_activity_sections(activity_markdown)
+  def self.create_activity_sections(activity_markdown, lesson_activity_id, levels)
     # Find any special syntax, such as tips or remarks, and gather them.
     # TODO tips and remarks both show up in tip_matches. We filter out remarks
     # but we should try to do something a bit smarter here.
@@ -80,8 +82,9 @@ module LessonImportHelper
     tip_link_matches = find_tip_links(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'tiplink', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}
     skippable_matches = find_skippable_syntax(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'skippable', match: m, substring: m[0]}}
+    pullthrough_matches = find_code_studio_pullthrough(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'pullthrough', match: m, substring: m[0]}}
     name_matches = find_activity_section_names(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'name', match: m, substring: m[0]}}
-    matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + name_matches
+    matches = tip_matches + remark_matches + tip_link_matches + skippable_matches + name_matches + pullthrough_matches
     sorted_matches = matches.sort_by {|m| m[:index]}
     return [ActivitySection.new(description: activity_markdown.strip, key: SecureRandom.uuid, position: 1)] if matches.empty?
 
@@ -111,6 +114,18 @@ module LessonImportHelper
         activity_section = create_activity_section_with_tip(match[:match], tip_match_map)
       elsif match[:type] == 'remark'
         activity_section = create_activity_section_with_remark(match[:match], tip_match_map)
+      elsif match[:type] == 'pullthrough'
+        next if levels.empty?
+        pullthrough_match = match[:match]
+        # If the syntax takes the form of [code-studio], [code-studio 1-<length>], or [code-studio 2-<length>],
+        # add the level activity sections here.
+        if pullthrough_match[1].blank? || ([1, 2].include?(pullthrough_match[1]) && levels.length == pullthrough_match[2].to_i)
+          level_sections = create_activity_sections_by_progression(levels, lesson_activity_id, position)
+          sections += level_sections
+          levels.clear
+          position += level_sections.length
+        end
+        next
       else
         activity_section = create_basic_activity_section(match[:substring].strip)
       end
@@ -120,6 +135,8 @@ module LessonImportHelper
       activity_section.name = name
       name = ''
       activity_section.key ||= SecureRandom.uuid
+      activity_section.lesson_activity_id = lesson_activity_id
+      activity_section.save!
       sections = sections.push(activity_section)
     end
 
@@ -150,7 +167,7 @@ module LessonImportHelper
       lesson_activity.position = i
       lesson_activity.save!
       lesson_activity.reload
-      lesson_activity.activity_sections = create_activity_sections(a['content'])
+      lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
       lesson_activity
     end
 
@@ -167,7 +184,12 @@ module LessonImportHelper
     # Regex explanation: looks for
     #   - code studio pullthrough, i.e. "[code-studio]", "[code-studio 17]", "[code-studio 1-5]"
     #   - guide syntax, i.e. "[guide]" and "[/guide]"
-    regex = /\[code-studio[\d \-]*\]|\[\/?guide\]/
+    regex = /\[\/?guide\]/
+    markdown.to_enum(:scan, regex).map {Regexp.last_match}
+  end
+
+  def self.find_code_studio_pullthrough(markdown)
+    regex = /\[code-studio *(\d*)-?(\d*)\]/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
@@ -186,6 +208,11 @@ module LessonImportHelper
     lesson_activity.position = position
     lesson_activity.save!
     lesson_activity.reload
+    lesson_activity.activity_sections = create_activity_sections_by_progression(levels, lesson_activity.id)
+    lesson_activity
+  end
+
+  def self.create_activity_sections_by_progression(levels, lesson_activity_id, position_offset=1)
     activity_sections = []
     current_progression_levels = []
     current_progression = nil
@@ -194,8 +221,8 @@ module LessonImportHelper
         current_progression = level.progression if current_progression.nil?
         current_progression_levels.push(level)
       else
-        section = create_activity_section_with_levels(current_progression_levels, lesson_activity.id, current_progression)
-        section.position = activity_sections.length + 1
+        section = create_activity_section_with_levels(current_progression_levels, lesson_activity_id, current_progression)
+        section.position = activity_sections.length + position_offset
         section.save!
         activity_sections.push(section)
         current_progression_levels = [level]
@@ -203,14 +230,13 @@ module LessonImportHelper
       end
     end
     unless current_progression_levels.empty?
-      section = create_activity_section_with_levels(current_progression_levels, lesson_activity.id, current_progression)
+      section = create_activity_section_with_levels(current_progression_levels, lesson_activity_id, current_progression)
       section.name = current_progression
       section.position = activity_sections.length + 1
       section.save!
       activity_sections.push(section)
     end
-    lesson_activity.activity_sections = activity_sections
-    lesson_activity
+    activity_sections
   end
 
   def self.create_activity_section_with_levels(script_levels, lesson_activity_id, progression_name="")
@@ -221,7 +247,7 @@ module LessonImportHelper
     activity_section.position = 0
     activity_section.lesson_activity_id = lesson_activity_id
     activity_section.save!
-    sl_data = script_levels.each_with_index.map {|l, i| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: i}.to_json)}
+    sl_data = script_levels.map.with_index(1) {|l, pos| JSON.parse({id: l.id, assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: pos}.to_json)}
     activity_section.update_script_levels(sl_data) unless sl_data.blank?
     activity_section
   end
@@ -255,7 +281,7 @@ module LessonImportHelper
     # Looks for tips that look like "!!!tip <tip-0>" followed by text. It will
     # capture the text until it hits either the end of the string or a line that
     # starts with a non-whitespace character.
-    regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=(^\S|^$))/
+    regex = /^!!! *?([\w-]+)(?: "(.*?)")?(?: <(.*?)>)?(?:[\s]+$)+([\d\D]+?)(?=(^\S|\z))/
     markdown.to_enum(:scan, regex).map {Regexp.last_match}
   end
 
@@ -306,7 +332,6 @@ module LessonImportHelper
       return ActivitySection.new(description: tip_link_match[3].strip)
     end
     tip_match = tip[:match]
-    tip_match_map.delete(tip_link_match[2]) if tip_match
     activity_section = ActivitySection.new
 
     # Sometimes theres the the slide icon here as well. Check for that and apply if needed.
@@ -339,7 +364,8 @@ module LessonImportHelper
     return [{index: 0, type: 'markdown', substring: markdown}] if existing_matches.empty?
     matches = []
     unless existing_matches.first[:index] == 0
-      matches.push({index: 0, type: 'markdown', substring: markdown[0...existing_matches[0][:index]]})
+      substring = markdown[0...existing_matches[0][:index]].strip
+      matches.push({index: 0, type: 'markdown', substring: substring}) unless substring.empty?
     end
     (0...existing_matches.length).each do |i|
       matches.push(existing_matches[i])
@@ -349,7 +375,8 @@ module LessonImportHelper
       matches.push({index: start_index, type: 'markdown', substring: substring}) unless substring.empty?
     end
     unless matches.last[:index] + matches.last[:substring].length == markdown.length
-      matches.push({index: 0, type: 'markdown', substring: markdown[existing_matches.last[:index] + existing_matches.last[:substring].length...markdown.length]})
+      substring = markdown[existing_matches.last[:index] + existing_matches.last[:substring].length...markdown.length].strip
+      matches.push({index: 0, type: 'markdown', substring: substring}) unless substring.empty?
     end
     matches
   end

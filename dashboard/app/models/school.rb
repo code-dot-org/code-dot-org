@@ -27,7 +27,7 @@
 #  index_schools_on_zip                 (zip)
 #
 
-class School < ActiveRecord::Base
+class School < ApplicationRecord
   include Seeded
 
   self.primary_key = 'id'

@@ -36,13 +36,18 @@ he:
     צרו מחר מזהיר יותר.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: "#שעת הקוד עוסקת ב#מדעי המחשב למען מטרה טובה.
-    למדו היום, צרו מחר מזהיר יותר."
+  social_hoc2020_hoc_is_about_csforgood: HourOfCode# עוסק ב-CSforGood#. למדו היום,
+    צרו מחר מזהיר יותר.
   social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: שעת הקוד 2020 מגיעה!
+  hoc2020_ai_header: חקרו את הבינה המלאכותית
+  hoc2020_ai_description: בינה מלאכותית (AI) ולמידת מכונה משפיעות על כל עולמנו. הצטרפו
+    אלינו כדי לגלות בינה מלאכותית בסדרות וידאו חדשות, התאמנו בבינה מלאכותית ביותר
+    מ-25 שפות, דונו בסוגיות של אתיקה ובינה מלאכותית ועוד...
   hoc2019_header: למדו מדעי המחשב ושנו את העולם
   hoc2019_header_line1_mobile: למדו מדעי המחשב
   hoc2019_header_line2_mobile: שנה את העולם
@@ -57,72 +62,71 @@ he:
     science is foundational for every student to learn.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: בינה מלאכותית למען האוקיינוסים
+  oceans_landing_title: בינה מלאכותית למען האוקיינוסים והימים
   oceans_landing_description: למדו על למידת מכונה ועל שימוש אתי בבינה מלאכותית.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: זמין בלמעלה מ־25 שפות | כיתות ג' ומעלה
-  oceans_landing_explanation: מדעי המחשב עוסקים בכל כך הרבה דברים מלבד תכנות! למדו
-    על בינה מלאכותית (AI), למידת־מכונה, נתוני אימון והטייה מחקרית, תוך בחינת דילמות
-    מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות עם בעיות עולמיות. תיהנו
-    מהצעד הראשון של Code.org במסע חדש ללימוד בינה מלאכותית. תוך כדי השימוש בבינה מלאכותית
-    במסגרת הפעילות למען האוקיינוסים, אתם מתאמנים למעשה במודלים אמיתיים של למידת מכונה.
-    <a href='#behind-the-scenes'>למדו עוד</a>.
-  oceans_landing_explanation_markdown: מדעי המחשב עוסקים בכל כך הרבה דברים מלבד תכנות!
-    למדו על בינה מלאכותית (AI), למידת־מכונה, נתוני אימון והטייה מחקרית, תוך חקירת
-    דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות עם בעיות עולמיות.
-    תיהנו מהצעד הראשון של Code.org במסע חדש ללימוד בינה מלאכותית. תוך כדי השימוש בבינה
-    מלאכותית במסגרת הפעילות למען האוקיינוסים, אתם מתאמנים למעשה במודלים אמיתיים של
-    למידת מכונה. [למדו עוד](#מאחורי הקלעים).
+  oceans_landing_specs: זמין ביותר מ־25 שפות | כיתות ג' ומעלה
+  oceans_landing_explanation: מדעי המחשב הם כל כך הרבה דברים מלבד תכנות! למדו על בינה
+    מלאכותית (A.I), למידת מכונה, נתוני אימון והטיה, תוך בחינת דילמות מוסריות והאופן
+    שבו אפשר לגייס בינה מלאכותית להתמודדות עם בעיות עולמיות. תיהנו מהצעד הראשון של
+    Code.org במסע חדש ללימוד מעמיק יותר של בינה מלאכותית. כשאתם משתמשים בבינה מלאכותית
+    במסגרת הפעילות למען האוקיינוסים והימים, אתם למעשה מתאמנים במודלים אמיתיים של למידת
+    מכונה. <a href='#behind-the-scenes'>מידע נוסף</a>.
+  oceans_landing_explanation_markdown: מדעי המחשב הם כל כך הרבה דברים מלבד תכנות!
+    למדו על בינה מלאכותית (A.I), למידת מכונה, נתוני אימון והטיה, תוך בחינת דילמות
+    מוסריות והאופן שבו אפשר לגייס בינה מלאכותית להתמודדות עם בעיות עולמיות. תיהנו
+    מהצעד הראשון של Code.org במסע חדש ללימוד בינה מלאכותית. כשאתם משתמשים בבינה מלאכותית
+    במסגרת הפעילות למען האוקיינוסים והימים, אתם למעשה מתאמנים במודלים אמיתיים של למידת
+    מכונה. [מידע נוסף](#behind-the-scenes).
   oceans_landing_teacher_resources: עזרי למידה של המורה
   oceans_landing_teacher_resources_desc: מערכי שיעור ופעילויות שיסייעו לכם ללמד בינה
-    מלאכותית, למידת מכונה, נתוני אימון והטייה מחקרית - תוך בחינת דילמות מוסריות.
+    מלאכותית, למידת מכונה, נתוני אימון והטיה, תוך בחינת דילמות מוסריות.
   oceans_landing_resource_button: הצג עזרי למידה
   oceans_landing_cs_for_good: מדעי המחשב למען מטרה טובה
-  oceans_landing_cs_for_good_desc: עזרי למידה שיעזרו לתלמידים להבין את התפקיד שמדעי
+  oceans_landing_cs_for_good_desc: עזרי למידה שיסייעו לתלמידים להבין את התפקיד שמדעי
     המחשב יכולים למלא ביצירת עולם צודק יותר.
-  oceans_landing_videos: סרטונים על בינה מלאכותית ולמידת־מכונה
-  oceans_behind_the_scenes: 'בינה מלאכותית למען האוקיינוסים: מאחורי הקלעים'
-  oceans_behind_the_scenes_1: שלבים 2־4 משתמשים במודל מאומן־מראש שסופק על־ידי פרויקט
-    <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> . מודל MobileNet הוא <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">רשת
-    עצבית מתקפלת</a> שהודרכה על־ידי <a href="http://www.image-net.org/">ImageNet</a>,
-    מערך נתונים בעל למעלה מ־14 מיליון תמונות הכוללות הסברים בצורת מילים כמו "בלון"
-    או "תות". על־מנת להתאים את המודל לנתוני האימון המתוייגים שמפיק התלמיד בפעילות
-    הזו, אנו משתמשים בטכניקה הנקראת <a href="https://en.wikipedia.org/wiki/Transfer_learning">"העברת
-    למידה"</a>. כל תמונה במערך נתוני האימון מוזנת ל־MobileNet, כפיקסלים, על מנת להשיג
-    רשימה של ההסברים המתאימים לה ביותר. לאחר מכן, אנו מזינים כל תמונה חדשה ל־MobileNet,
-    ומשווים את רשימת ההסברים המתקבלת ממנה לאלה מנתוני ההדרכה. אנו מסווגים את התמונה
-    החדשה על פי אותה תווית (למשל, "דג" או "לא דג") כמו זו של התמונות עם התוצאות הדומות
-    ביותר ממערך ההדרכה.
-  oceans_behind_the_scenes_1_markdown: שלבים 2-4 משתמשים במודל מאומן־מראש שסופק על־ידי
-    פרויקט TensorFlow (https://www.tensorflow.org/) MobileNet (https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+  oceans_landing_videos: סרטונים על בינה מלאכותית ולמידת מכונה
+  oceans_behind_the_scenes: 'AI (בינה מלאכותית) למען האוקיינוסים והימים: מאחורי הקלעים'
+  oceans_behind_the_scenes_1: בשלבים 2–4 משתמשים במודל מאומן־מראש שסיפק פרויקט <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a>. מודל MobileNet הוא <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">רשתות
+    קונבולוציה</a> שאימנו באמצעות <a href="http://www.image-net.org/">ImageNet</a>,
+    מערך נתונים בעל יותר מ־14 מיליון תמונות הכוללות הסברים בצורת מילים כמו "בלון"
+    או "תות". כדי להתאים את המודל לנתוני האימון המתויגים שמפיק התלמיד בפעילות זו,
+    אנו משתמשים בטכניקה הנקראת <a href="https://en.wikipedia.org/wiki/Transfer_learning">"העברת
+    למידה"</a>. כל תמונה במערך נתוני האימון מוזנת ל־MobileNet בצורת פיקסלים, כדי להשיג
+    רשימה של ההסברים המתאימים לה ביותר. לאחר מכן, אנו מזינים זאת ל־MobileNet, בעבור
+    כל תמונה חדשה, ומשווים את רשימת ההסברים המתקבלת ממנה לאלו של נתוני האימון. אנו
+    מסווגים את התמונה החדשה באותה התווית (למשל, "דג" או "לא דג") שיש לתמונות בעלות
+    התוצאות הדומות ביותר במערך האימון.
+  oceans_behind_the_scenes_1_markdown: בשלבים 2–4 משתמשים במודל מאומן־מראש שסיפק פרויקט
+    TensorFlow (https://www.tensorflow.org/) MobileNet (https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     . מודל MobileNet הוא [רשת עצבית מתקפלת](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    שהודרכה על־ידי ImageNet (http://www.image-net.org/), מערך נתונים בעל למעלה מ־14
-    מיליון תמונות הכוללות הסברים בצורת מילים כמו "בלון" או "תות". על־מנת להתאים את
-    המודל לנתוני ההאימון המתוייגים שמפיק התלמיד בפעילות הזו, אנו משתמשים בטכניקה הנקראת
-    [העברת למידה](https://en.wikipedia.org/wiki/Transfer_learning). כל תמונה במערך
-    נתוני האימון מוזנת ל־MobileNet, כפיקסלים, על מנת להשיג רשימה של ההסברים המתאימים
-    לה ביותר. לאחר מכן, אנו מזינים כל תמונה חדשה ל־MobileNet, ומשווים את רשימת ההסברים
-    המתקבלת ממנה לאלה מנתוני ההדרכה. אנו מסווגים את התמונה החדשה על פי אותה תווית
-    (למשל, "דג" או "לא דג") כמו זו של התמונות עם התוצאות הדומות ביותר ממערך ההדרכה.
-  oceans_behind_the_scenes_2: שלבים 6־8 עושים שימוש ב <a href="https://en.wikipedia.org/wiki/Support-vector_machine">מכונת
-    וקטורים תומכים</(</a> (SVM. אנו מביטים בכל מרכיב של הדג (למשל עיניים, פה, או גוף)
-    ומרכיבים את כל המטא-נתונים של המרכיבים (כמו מספר השיניים, או צורת הגוף) לתוך וקטור
-    של מספרים עבור כל דג. אנו משתמשים בווקטורים האלה כדי לאמן את ה־SVM. בהתבסס על
-    נתוני האימון, ה־SVM מפריד את ה"חלל" של כל הדגים האפשריים לשני חלקים המתאימים לסוג
-    שאנו מנסים ללמוד (כמו למשל, "כחול" או "לא כחול").<a href="https://en.wikipedia.org/wiki/Support-vector_machine">
-  oceans_behind_the_scenes_2_markdown: שלבים 6־8 עושים שימוש ב[מכונת וקטורים תומכים](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). אנו מביטים בכל מרכיב של הדג (כמו למשל עיניים, פה, או גוף) ומרכיבים את כל
-    המטא-נתונים של המרכיבים (כמו מספר השיניים, או צורת הגוף) לתוך וקטור של מספרים
-    עבור כל דג. אנו משתמשים בווקטורים האלה כדי לאמן את ה־SVM. בהתבסס על נתוני האימון,
-    ה־SVM מפריד את ה"חלל" של כל הדגים האפשריים לשני חלקים המתאימים לסוג שאנו מנסים
-    ללמוד (כמו, למשל, "כחול" או "לא כחול").
-  social_hoc2019_oceans_title: 'אינטליגנציה מלאכותית למען האוקיינוסים #מדעי המחשב
-    למען מטרה טובה'
+    שאימנו באמצעות ImageNet (http://www.image-net.org/), מערך נתונים בעל יותר מ־14
+    מיליון תמונות הכוללות הסברים בצורת מילים כמו "בלון" או "תות". כדי להתאים את המודל
+    לנתוני האימון המתויגים שמפיק התלמיד בפעילות זו, אנו משתמשים בטכניקה הנקראת [העברת
+    למידה](https://en.wikipedia.org/wiki/Transfer_learning). כל תמונה במערך נתוני
+    האימון מוזנת ל־MobileNet בצורת פיקסלים, כדי להשיג רשימה של ההסברים המתאימים לה
+    ביותר. לאחר מכן, אנו מזינים זאת ל־MobileNet, בעבור כל תמונה חדשה, ומשווים את רשימת
+    ההסברים המתקבלת ממנה לאלו של נתוני האימון. אנו מסווגים את התמונה החדשה באותה התווית
+    (למשל, "דג" או "לא דג") שיש לתמונות בעלות התוצאות הדומות ביותר במערך האימון.
+  oceans_behind_the_scenes_2: בשלבים 6–8 נשתמש ב<a href="https://en.wikipedia.org/wiki/Support-vector_machine">מכונת
+    וקטורים תומכים</a> (SVM). אנו מביטים בכל מרכיב של הדג (למשל עיניים, פה, גוף) ומקבצים
+    את כל המטא־נתונים של המרכיבים (כמו מספר השיניים או צורת הגוף) לתוך וקטור של מספרים
+    בעבור כל דג. אנו משתמשים בווקטורים אלה כדי לאמן את ה־SVM. בהתבסס על נתוני האימון,
+    ה־SVM מחלק את ה"חלל" של כל הדגים האפשריים לשני חלקים המתאימים לסוג שאנו מנסים
+    ללמוד (למשל, "כחולים" או "לא כחולים").
+  oceans_behind_the_scenes_2_markdown: בשלבים 6–8 נשתמש ב[מכונת וקטורים תומכים](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). אנו מביטים בכל מרכיב של הדג (למשל עיניים, פה, גוף) ומקבצים את כל המטא־נתונים
+    של המרכיבים (כמו מספר השיניים או צורת הגוף) לתוך וקטור של מספרים בעבור כל דג.
+    אנו משתמשים בווקטורים אלה כדי לאמן את ה־SVM. בהתבסס על נתוני האימון, ה־SVM מחלק
+    את ה"חלל" של כל הדגים האפשריים לשני חלקים המתאימים לסוג שאנו מנסים ללמוד (למשל,
+    "כחולים" או "לא כחולים").
+  social_hoc2019_oceans_title: 'בינה מלאכותית למען האוקיינוסים והימים #CSforGood'
   social_hoc2019_oceans_desc: למדו על בינה מלאכותית (AI), למידת־מכונה, נתוני אימון
-    והטייה מחקרית, תוך בחינת דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות
+    והטייה, תוך בחינת דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות
     עם בעיות עולמיות. מדעי המחשב עוסקים בכל כך הרבה דברים מלבד תכנות! תיהנו מהצעד
-    הראשון של Code.org במסע חדש  ללימוד בינה מלאכותית באמצעות תוכנית הלימודים שלנו.
+    הראשון של Code.org במסע חדש ללימוד בינה מלאכותית באמצעות תוכנית הלימודים שלנו.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
@@ -130,16 +134,15 @@ he:
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
   hoc_live_join_us: הצטרפו אלינו
-  hoc_overview_oceans_tutorial_header: בינה מלאכותית למען האוקיינוסים
+  hoc_overview_oceans_tutorial_header: בינה מלאכותית למען האוקיינוסים והימים
   hoc_overview_oceans_tutorial_desc: 'למדו על בינה מלאכותית (AI), למידת־מכונה, נתוני
-    אימון והטייה מחקרית, תוך בחינת דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית
-    להתמודדות עם בעיות עולמיות. '
+    אימון והטייה, תוך בחינת דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות
+    עם בעיות עולמיות. '
   ai_video_title_what_is_ai: מה זו בינה מלאכותית?
   ai_video_title_algorithm_bias: מאבק בהטיות באלגוריתמים
   ai_video_title_phone_knows_dog: איך הטלפון שלכם יודע שזה כלב?
   ai_video_title_what_is_ml: מהי למידת מכונה?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
+  ai_video_title_ml_big_small_prickly: 'למידת מכונה: פתרון בעיות גדולות, קטנות ועוקצניות'
   ai_video_title_ethics_of_ai: האתיקה של הבינה המלאכותית
   ai_video_title_ml_human_bias: למידת מכונה והטיה אנושית
   ai_video_title_seeing_ai: 'רואים בינה מלאכותית: הפיכת העולם החזותי לנגיש יותר'
@@ -148,38 +151,38 @@ he:
   description: Description
   audience: Audience
   ai_resource_header: ללמוד וללמד על בינה מלאכותית
-  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft: 'מיינקראפט: בינה מלאכותית לתמיד/לטובה'
   ai_resource_minecraft_desc: 'גישה למשאבים חינמיים הכוללים מערך שיעור, סרטונים, תוכנית
     לימודים של מדעי המחשב והדרכות למורים. (נדרשת גישה ל"מיינקראפט: מהדורת החינוך")'
-  ai_resource_ml_for_kids: למידת מכונה עבור ילדים
+  ai_resource_ml_for_kids: למידת מכונה לילדים
   ai_resource_ml_for_kids_desc: הדריכו מודל למידת מכונה בעזרת טקסט, מספרים או תמונות,
     והשתמשו בו כדי ליצור משחקים ב־Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: למידת מכונה עבור ילדים'
+  ai_resource_ibm_ml_for_kids: 'IBM: למידת מכונה לילדים'
   ai_resouce_ibm_ml_for_kids_desc: פעילויות מעשיות להצגת מודלים פשוטים של למידת מכונה
     בפני תלמידים, דרך משחקים ופרויקטים אינטראקטיביים.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: יחידת לימודים חדשה וחלופית עבור תוכנית הלימודים "חקר מדעי
-    המחשב (ECS)".
+  ai_resource_ecs: 'ECS: בינה מלאכותית (AI)'
+  ai_resource_ecs_desc: יחידת לימודים חדשה וחלופית לתוכנית הלימודים "חקר מדעי המחשב
+    (ECS)".
   ai_resource_elements_ai: אלמנטים של בינה מלאכותית
-  ai_resource_elements_ai_desc: סדרת קורסים מקוונים חינמיים שנוצרו על־ידי Reaktor
-    ואוניברסיטת הלסינקי.
-  ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: פלטפורמת חינוך, המבוססת על בינה מלאכותית, ליצירת משחקים,
-    תכנות רובוטים והדרכות.
+  ai_resource_elements_ai_desc: סדרת קורסים מקוונים חינמיים שיצרו Reaktor ואוניברסיטת
+    הלסינקי.
+  ai_resource_cognimates: Cognimates / קוגנימייטים
+  ai_resource_cognimates_desc: פלטפורמת חינוך המבוססת על בינה מלאכותית, ליצירת משחקים,
+    תכנות רובוטים ואימונים.
   ai_audience_k12: K-12 (נדרשת קריאה)
   ai_audience_hs: תיכון
-  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_header: פעילויות המופעלות באמצעות AI ו-ML
   ai_activity_seeing_ai: רואים בינה מלאכותית
   ai_activity_seeing_ai_desc: אפליקציה חינמית המספרת על העולם סביבנו במגוון של שפות.
   ai_activity_quick_draw: מהר, שלפו!
   ai_activity_quick_draw_desc: האם רשת עצבית יכולה לזהות שרבוטים?
   ai_activity_teachable: מכונה שניתנת ללימוד
-  ai_activity_teachable_desc: הדריכו מחשב לזהות את התמונות, הצלילים והתנוחות שלכם.
-  ai_activity_experiments: AI Experiments with Google
+  ai_activity_teachable_desc: אמנו מחשב לזהות את התמונות, הצלילים והתנוחות שלכם.
+  ai_activity_experiments: ניסויי AI עם גוגל
   ai_activity_experiments_desc: התחילו לחקור למידת מכונה דרך תמונות, ציורים, שפה,
     מוזיקה ועוד.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: עזרו להגן על "זברת הר־הכַּף" באמצעות זיהוי החיות האחרות
+  ai_activity_zooniverse: זוּנִיבֶרְס - זברה הררית של סנאפצ'ט
+  ai_activity_zooniverse_desc: עזרו להגן על "זברת הר־הכֵּף" באמצעות זיהוי החיות האחרות
     שבתמונות.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
@@ -571,11 +574,11 @@ he:
     Computer Science Education Week is held annually in recognition of the birthday
     of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
     (December 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: "\"עת הקוד מתקיימת מדי שנה במהלך [שבוע לימודי מדעי
-    המחשב]%{csedweek_url}. %{campaign_date_year}שבוע לימודי מדעי המחשב ייערך בתאריך
-    %{campaign_date_full}, אולם באפשרותכם לקיים את שעת הקוד כל ימות השנה. שבוע לימודי
-    מדעי המחשב נערך מדי שנה כמעין מחווה בתאריך הולדתה של חלוצת המחשוב [אדמירל גרייס
-    הופר]%{grace_hopper}  (9 בדצמבר 1906)."
+  hoc_faq_when_is_hoc_a_markdown: Hour of Code מתקיים מדי שנה במהלך [שבוע לימוד מדעי
+    המחשב]%{csedweek_url}. שבוע לימוד מדעי המחשב %{campaign_date_year} ייערך בתאריך
+    %{campaign_date_full}, אולם באפשרותכם לקיים Hour of Code כל ימות השנה. שבוע לימוד
+    מדעי המחשב נערך מדי שנה כמעין מחוות הוקרה בתאריך הולדתה של חלוצת המחשוב [אדמירל
+    גרייס מוריי הופר](%{grace_hopper}) (ה-9 בדצמבר, 1906).
   hoc_faq_why_cs_q: De ce tehnologia computerelor?
   hoc_faq_why_cs_a: "<i>כל</i> תלמיד צריך את ההזדמנות ללמוד מדעי המחשב.  זה מסייעת
     לטפח מיומנויות לפתרון בעיות, לוגיקה ויצירתיות. על ידי התחלה מוקדמת, לתלמידים יהיה
@@ -583,7 +586,7 @@ he:
     Code.org</a>."
   hoc_faq_why_cs_a_markdown: לכל תלמיד מגיעה ההזדמנות ללמוד מדעי המחשב. תחום זה תורם
     לפיתוח מיומנויות של פתרון בעיות, לוגיקה ויצירתיות. התחלה בגיל צעיר תסלול לתלמידים
-    את הדרך להצלחה בכל נתיב קריירה של המאה ה-21. ראו נתונים סטטיסטיים [here]%{stats_url}).
+    את הדרך להצלחה בכל נתיב קריירה של המאה ה-21. ראו נתונים סטטיסטיים [here](%{stats_url}).
   hoc_faq_how_participate_q: כיצד ניתן להשתתף ב-לHour of Code?
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing
     our how-to guide. You can organize an Hour of Code event at your school or in
@@ -591,8 +594,8 @@ he:
     Or, just try it yourself when %{campaign_date} arrives."
   hoc_faq_how_participate_a_markdown: "[התחילו לתכנן כאן](%{howto}) על ידי עיון במדריך
     שלנו. ניתן לארגן אירוע של שעת הקוד בבית הספר שלכם או בקהילתכם - למשל במוסד של
-    חינוך בלתי פורמלי, במוסד ללא כוונת רווח או בעבודה. או פשוט התנסו בו בעצמכם%{campaign_date}
-    בבוא המועד."
+    חינוך בלתי פורמלי, במוסד ללא כוונת רווח או בעבודה. או פשוט התנסו בו בעצמכם בבוא
+    המועד %{campaign_date}."
   hoc_faq_behind_hoc_q: מי עומד מאחורי Hour of Code?
   hoc_faq_behind_hoc_a: שעה של הקוד מאורגן על ידי <a href='http://code.org'> Code.org</a>,
     a חברה הציבורית 501C3 ללא כוונת רווח מוקדשת להרחבת השתתפות במדעי המחשב על-ידי
@@ -600,10 +603,10 @@ he:
     שונה שאינם מיוצגים כראוי . <a href='http://code.org/about/partners'> קואליציה
     חסרת תקדים של שותפים</a> באים יחד כדי לתמוך ב-Hour of Code,  בתוחם &mdash; לרבות
     Microsoft, אפל, אמזון, בנים, בנות מועדונים של אמריקה, הנהלת המכללה.
-  hoc_faq_behind_hoc_a_markdown: 'האירוע של "שעת הקוד" מנוהל על ידי [ועדת הייעוץ והביקורת]
-    של שבוע לימודי "שעת הקוד" ומדעי המחשב%{partner_url} ועל ידי התאגדות חסרת תקדים
-    של שותפים שחברו זה לזה במטרה לתמוך ב"שעת הקוד" - ובכללם מייקרוסופט, אפל, אמאזון,
-    ארגון Boys and Girls Clubs of America וארגון College Board.
+  hoc_faq_behind_hoc_a_markdown: 'אירוע Hour of Code מנוהל על ידי [ועדת הייעוץ והביקורת]
+    של שבוע לימודי "Hour of Code" ומדעי המחשב(%{partner_url}) ועל ידי התאגדות חסרת
+    תקדים של שותפים שחברו זה לזה במטרה לתמוך ב-Hour of Code - ובכללם מייקרוסופט, אפל,
+    אמאזון, ארגון Boys and Girls Clubs of America וארגון College Board.
 
 '
   hoc_faq_host_q: אני לא יודע דבר אודות כתיבת קוד. . אני עדיין יכול לארח אירוע?
@@ -612,11 +615,11 @@ he:
     tutorial you want, and pick an hour &mdash; we take care of the rest. We also
     have options for every age and experience-level, from kindergarten and up. Start
     planning your event by reading our <a href='/how-to'>how to guide</a>.
-  hoc_faq_host_a_markdown: כמובן, הפעילויות של "שעת הקוד" בנויות על הרעיון של הדרכה
-    עצמית. כל מה שעליכם לעשות זה [לנסות את השיעורים הנוכחיים שלנו](%{codeorg_url}/ללמוד),
-    לבחור את השיעור שאתם רוצים ללמוד, לבחור שעה -- ואנו נדאג כבר לכל היתר. אנו מציעים
+  hoc_faq_host_a_markdown: כמובן, הפעילויות של Hour of Code מושתתות על הרעיון של הדרכה
+    עצמית. כל מה שעליכם לעשות הוא [לנסות את עזרי הלמידה הנוכחיים שלנו](%{codeorg_url}/learn),
+    לבחור את השיעור שאתם רוצים ללמוד, לבחור שעה - ואנו נדאג כבר לכל היתר. אנו מציעים
     אפשרויות המתאימות לכל גיל ולכל רמה, לילדים מגילאי גן ילדים ומעלה. התחילו לתכנן
-    את האירוע שלכם על ידי קריאת [המדריך]( %{howto})שלנו.
+    את האירוע שלכם על ידי קריאת [המדריך](%{howto}) שלנו.
   hoc_faq_devices_q: What devices should I use for my students?
   hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
     see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
@@ -624,10 +627,11 @@ he:
     in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
     activities</a> if your school can't accommodate the tutorials!
   hoc_faq_devices_a_markdown: השיעורים באתר Code.or פועלים בכל המכשירים ובכל הדפדפנים.
-    ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [here]%/educate/it{codeorg_url}.
-    צרכים טכנולוגיים של השיעורים שלא במסגרת האתר Code.org מופיעים ב%{partner_url}/(%{codeorg_url}למידה](%{codeorg_url}/לימוד)
-    בתיאור הספציפי של השיעור. אל תשכחו גם להציע [פעילויות ללא מחשב]%{unplugged_url}
-    אם בית הספר שלכם אינו יכול לרכוש את הלומדה!
+    ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [here]
+    (%{codeorg_url}/educate/it). צרכים טכנולוגיים של השיעורים שלא במסגרת אתר Code.org
+    מופיעים ב-[%{partner_url}/learn](%{codeorg_url}/learn) בתיאור הספציפי של השיעור.
+    אל תשכחו גם להציע [פעילויות ללא מחשב] (%{unplugged_url}) אם בית הספר שלכם אינו
+    יכול לרכוש את הלומדה!
   hoc_faq_need_computers_q: האם יש צורך מחשבים עבור כל משתתף?
   hoc_faq_need_computers_a: לא.  יש לנו הדרכות של Hour of Code העובדות על מחשבים אישיים,
     טלפונים חכמים, טבליות, וכמה הדורשים אין מחשב בכלל! באפשרותך להצטרף בכל מקום שאתה
@@ -639,13 +643,13 @@ he:
     או לענות על שאלות. <li><b>ללכת מנותק.</b> אנו מציעים הדרכות שאינן הדורשות אין
     מחשב. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    לא. חלק מהשיעורים של "שעת הקוד" מצריכים מחשבים אישיים, סמארטפונים וטאבלטים, ואחרים אינם מצריכים בכלל מחשב! תוכלו להצטרף אלינו בכל מקום, ללא קשר לציוד שיש ברשותכם.
+    לא. חלק מהשיעורים של Hour of Code מצריכים מחשבים אישיים, סמארטפונים וטאבלטים, ואילו אחרים אינם מצריכים בכלל מחשב! תוכלו להצטרף אלינו בכל מקום, ללא קשר לציוד שיש ברשותכם.
 
-    _להלן כמה אפשרויות:_
+    _הנה כמה אפשרויות:_
 
-    -**לעבוד בזוגות.** [מחקרים מראים]%{pair_programming_research} שתלמידים מיטיבים ללמוד בשיטה של [תכנות זוגי]%{pair_programming_video}, תוך שיתוף מחשב ועבודה בצוותא. עודדו את התלמידים שלכם לעבוד בזוגות.
-    -**שימוש במסך מוקרן.** אם יש לכם מקרן ומחשב מחובר לרשת מחשבים, ניתן לשתף את כל חברי הקבוצה ב"שעת הקוד". צפו בקטעי וידאו ביחד ופתרו משחקי פאזל או  ענו על שאלות כל אחד לפי התור.
-    -**שיעורים ללא מחשב.** אנו מציעים [שיעורים שאינם מצריכים מחשב]%{unplugged_url} בכלל.
+    -**לעבוד בזוגות.** [מחקרים מראים](%{pair_programming_research}) שתלמידים מיטיבים ללמוד בשיטה של [תכנות זוגי](%{pair_programming_video}), תוך שיתוף מחשב ועבודה בצוותא. עודדו את התלמידים שלכם לעבוד בזוגות.
+    -**שימוש במסך מוקרן.** אם יש לכם מקרן ומחשב מחובר לרשת מחשבים, ניתן לשתף את כל חברי הקבוצה ב-Hour of Code. צפו בקטעי וידאו ביחד ופתרו משחקי פאזל או ענו על שאלות כל אחד לפי התור.
+    -**שיעורים ללא מחשב.** אנו מציעים [עזרי למידה שאינם מצריכים מחשב](%{unplugged_url}) בכלל.
   hoc_faq_international_q: אני ב<country>. כיצד ניתן להשתתף באירועה בינלאומי?
   hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in
     the world. Last year, students worldwide joined together for the Hour of Code.
@@ -657,16 +661,16 @@ he:
   hoc_faq_tutorial_a: אם אתה מעוניין להיות שותף להכנת חומרי לימוד, <a href='target-tutorial-guidelines'>
     ראה הנחיות והוראות שלנו</a>. נשמח לארח מגוון אפשרויות , אבל המטרה העיקרית היא
     למטב את חוויית עבור תלמידים ומורים שונים במדעי המחשב.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a_markdown: אם ברצונכם ללמד באמצעות הלומדה, [ראו קווים מנחים והנחיות
+    שלנו](%{tutorial_guidelines}). נשמח להציג מגוון רחב של אפשרויות מרתקות, אולם המטרה
+    העיקרית היא למטב את החוויה של תלמידים ומורים העושים את צעדיהם הראשונים בתחום מדעי
+    המחשב.
   hoc_faq_account_q: האם סטודנטים צריכים להיכנס למערכת באמצעות חשבון אישי?
   hoc_faq_account_a: לא. הכניסה לצורך הכרות עם "שעה של קוד" ללא הרשמה . רוב <a href='http://code.org/learn/beyond'>
     הקורסים המשכית</a> מחייבים יצירת חשבון כדי להציל את התקדמות התלמיד.
-  hoc_faq_account_a_markdown: לא. כדי להתנסות ב"שעת הקוד" אין צורך כלל בהרשמה או בהתחברות.
-    מרבית [שיעורי ההמשך](%{codeorg_url}/לימודים/מעבר) מצריכים יצירת חשבון כדי לשמור
-    על התקדמות התלמיד. בנוסף, הרשמה ל"שעת הקוד" אינה יוצרת אוטומטית חשבון Code Studio.
+  hoc_faq_account_a_markdown: לא. כדי להתנסות בשעת הקוד אין צורך כלל בהרשמה או בהתחברות.
+    מרבית [שיעורי ההמשך] (%{codeorg_url}/learn/beyond) מצריכים יצירת חשבון כדי לשמור
+    על התקדמות התלמיד. בנוסף, הרשמה לשעת הקוד אינה יוצרת אוטומטית חשבון Code Studio.
     אם ברצונכם ליצור חשבונות לתלמידים שלכם, אנא עקבו אחר [instructions] האלו (https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: איזו פעילות עלי לעשות עם תלמידי התיכון?
   hoc_faq_high_school_a: בכל הגילאים, אנו ממליצים לנסות, בתור התחלה, את אחד המדריכים
@@ -675,10 +679,10 @@ he:
     ויכול אחר-כך לנסות מדריך מתקדם יותר בשפת JavaScript, כמו באתרים Khan Academy  או  CodeHS.
   hoc_faq_high_school_a_markdown: עזרי הלמידה שלנו "מלחמת הכוכבים" ו"מיינקראפט" אידיאליים
     לתלמידי תיכון, במיוחד גרסת ג'אווה סקריפט של "מלחמת הכוכבים" ושלב המשחק החופשי
-    בשתי פלטפורמות אלו. לחלופין, אנו ממליצים לנסות את אחד מעזרי הלמידה למתחילים ב-
-    [%{partner_url}/learn](%{codeorg_url}/learn) בתור התחלה, כגון "אנגרי בירדס" או
-    "אנה ואלזה". תלמיד תיכון המסיים אחד מאלו בתוך חצי שעה, כפי שמצופה ממנו, יכול לנסות
-    לאחר מכן עזר למידה מתקדם יותר ב-JavaScript, כגון "אקדמיית קהאן" או CodeHS.
+    בשני השיעורים הללו. לחלופין, אנו ממליצים לנסות את אחד מעזרי הלמידה למתחילים ב-[%{partner_url}/learn](%{codeorg_url}/learn)
+    בתור התחלה, כגון "אנגרי בירדס" או "אנה ואלזה". תלמיד תיכון המסיים אחד מאלו בתוך
+    חצי שעה, כפי שמצופה ממנו, יכול לנסות לאחר מכן עזר למידה מתקדם יותר ב-JavaScript,
+    כגון "אקדמיית קהאן" או CodeHS.
   hoc_faq_scratch_q: אני עושה Scratch ל"שעה של קוד", אבל מה אם התלמידים שלי יש iPads
     ולא מחשבים ניידים?
   hoc_faq_scratch_a: Scratch לא עובד על טאבלטים. אם התלמידים שלך הם צעירים, הם יוכלו
@@ -698,20 +702,21 @@ he:
     and can find your event listed there. Additionally, given the thousands of people
     signing up for the Hour of Code, the map and event list usually takes 48 hours
     to update. Check back in a few days!
-  hoc_faq_map_a_markdown: צר לנו שאינכם רואים את האירוע שלכם במפת "שעת הקוד". בשל
-    עשרות אלפי המארגנים שנרשמו, המפה מקבצת את הנתונים ומציגה נקודה אחת לכמה אירועים.
-    לחיצה על הקישור של [דף האירועים]%({%{events_url}) תוביל אתכם לרשימה של כל האירועים
+  hoc_faq_map_a_markdown: לצערנו אינכם יכולים לראות את האירוע שלכם במפת Hour of Code.
+    בשל עשרות אלפי המארגנים שנרשמו, המפה מקבצת את הנתונים ומציגה נקודה אחת לכמה אירועים.
+    לחיצה על הקישור של [דף האירועים](%{events_url}) תוביל אתכם לרשימה של כל האירועים
     לפי מדינה, כך שתוכלו למצוא את האירוע שלכם שם. בנוסף, לנוכח רבבות האנשים הרשומים
-    ל"שעת הקוד", עדכון המפה ורשימת האירועים אורך 48 שעות. חזרו לבדוק בעוד ימים אחדים!
+    ל-Hour of Code, עדכון המפה ורשימת האירועים אורך 48 שעות. חזרו לבדוק בעוד ימים
+    אחדים!
   hoc_faq_count_hoc_a: The Hour of Code tracker isn't an exact measurement of usage.
     We do not count unique student IDs perfectly when tracking participation in the
     Hour of Code, especially because we don't require students to log in or register.
     As a result, we both over-count and under-count participants at the same time.
     Read all the details <a href='%{codeorg_url}/loc'>here</a>.
-  hoc_faq_count_hoc_a_markdown: העוקב של "שעת הקוד" אינו כלי מדויק למדידת השימוש.
-    איננו מונים בקפידה מזהים ייחודיים של תלמידים במהלך המעקב אחר השתתפות בשעת הקוד,
-    בעיקר מכיוון שאיננו דורשים מהתלמידים להתחבר או להירשם. משום כך, הספירות שלנו מגדילות
-    את מספר המשתתפים בפועל ובו-זמנית גורעות ממנו. לפרטים, קראו [here]/loc)%{codeorg_url}.
+  hoc_faq_count_hoc_a_markdown: העוקב של Hour of Code אינו כלי מדויק למדידת השימוש.
+    איננו מונים בקפידה מזהים ייחודיים של תלמידים במהלך המעקב אחר השתתפות ב-Hour of
+    Code, בעיקר מכיוון שאיננו דורשים מהתלמידים להתחבר או להירשם. משום כך, הספירות
+    שלנו מגדילות את מספר המשתתפים בפועל ובו-זמנית גורעות ממנו. לפרטים, קראו [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: כמה אפשר ללמוד בשעה?
   hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
     an expert computer scientist in one hour. One hour is only enough to learn that
@@ -732,9 +737,9 @@ he:
     capable of. <br/><br/> Above all, what all participants can learn in an hour is
     that we can do this.
   hoc_faq_one_hour_a_markdown: |-
-    המטרה של "שעת הקוד" היא לא להפוך את כולם למומחים למדעי המחשב בתוך שעה. שעה אחת מספיקה רק כדי ללמוד שמדעי המחשב הם תחום מהנה ויצירתי הנגיש לכל הגילאים ולכל התלמידים, ללא קשר לרקע שלהם. מידת ההצלחה של קמפיין זה היא לא עד כמה תלמידי מדעי המחשב לומדים. ההצלחה משתקפת בהשתתפות רחבה חוצת מגדרים, מוצא אתני ומעמד סוציו-אקונומי, ובעלייה הנובעת מכך בשיעור הנרשמים והמשתתפים בקורסים של מדעי המחשב בכל רמות הלימוד. מיליוני המורים והתלמידים החליטו לא להסתפק בשעה, אלא ללמוד מדעי המחשב למשך יום או שבוע שלם או יותר מכך, ובזכות זאת, תלמידים רבים החליטו להירשם לקורס מקיף (או אפילו כחוג ראשי במוסד אקדמי).
+    המטרה של Hour of Code היא לא להפוך את כולם למומחים למדעי המחשב בתוך שעה. שעה אחת מספיקה רק כדי ללמוד שמדעי המחשב הם תחום מהנה ויצירתי הנגיש לתלמידים בכל הגילאים, ללא קשר לרקע שלהם. מידת ההצלחה של קמפיין זה היא לא עד כמה תלמידי מדעי המחשב לומדים. מידת ההצלחה משתקפת בהשתתפות רחבה חוצת מגדרים, מוצא אתני ומעמד סוציו-אקונומי, ובעלייה הנובעת מכך בשיעור הנרשמים והמשתתפים בקורסים של מדעי המחשב בכל רמות הלימוד. מיליוני המורים והתלמידים החליטו לא להסתפק בשעה אחת בלבד, אלא ללמוד מדעי המחשב למשך יום או שבוע שלם או יותר מכך, ובזכות זאת, תלמידים רבים החליטו להירשם לקורס מקיף (או אפילו כחוג ראשי במוסד להשכלה גבוהה).
 
-    לצד התלמידים, "לומד" נוסף הוא המורה שחש ביטחון רב יותר בתום שעה שבה התאפשר לו ללמד מדעי המחשב אף מבלי להחזיק בתואר במדעי המחשב. עשרות אלפי מורים החליטו להתפתח בתחום של מדעי המחשב, בין אם על ידי מעבר הכשרה מקצועית, בין על ידי מתן קורסי המשך מקוונים, ובין אם על ידי שילוב של שני אפיקים אלו במקביל. תמורה זו מתרחשת גם בקרב מנהלי בתי ספר, המבינים שמדעי המחשב הם תחום מבוקש על ידי תלמידיהם, שהמורים מסוגלים ללמדו.
+    לצד התלמידים, "לומד" נוסף הוא המורה שחש ביטחון רב יותר בתום שעה שבה התאפשר לו ללמד מדעי המחשב אף מבלי להחזיק בתואר במדעי המחשב. עשרות אלפי מורים החליטו להתפתח בתחום של מדעי המחשב, בין אם על ידי מעבר הכשרה מקצועית, בין על ידי מתן קורסי המשך מקוונים, ובין אם על ידי שילוב של שני אפיקים אלו במקביל. תמורה זו מתרחשת גם בקרב מנהלי בתי ספר, המבינים שמדעי המחשב הם תחום מבוקש על ידי תלמידיהם, ושהמורים מסוגלים ללמדו.
 
     יותר מכל, מה שכל המשתתפים יכולים ללמוד בשעה - זה הרעיון שאנו מסוגלים לכך.
   hoc_faq_more_questions_q: עדיין יש עוד שאלות?
@@ -747,26 +752,26 @@ he:
     on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
     event how-to guides and other resources to help make your Hour of Code event a
     success.
-  hoc_faq_keep_learning_a_markdown: כל אחד יכול לקיים "שעת קוד" בכל עת. עזרי הלמידה
+  hoc_faq_keep_learning_a_markdown: כל אחד יכול לקיים Hour of Code בכל עת. עזרי הלמידה
     עומדים לרשותכם לאורך כל השנה. ניתן ליהנות מנגישות קבועה לכל עזרי הלמידה ותוכנית
-    הלמידה שלנו באתר האינטרנט. יש לגשת אל [האמצעים שלנו](%{promote}) לצורך עיון במדריך
-    האירוע ובמקורות נוספים שיסייעו לכם להפוך את אירוע "שעת הקוד" להצלחה.
+    הלימודים שלנו באתר האינטרנט. אנא גשו אל [עזרי הלמידה שלנו](%{promote}) לצורך עיון
+    במדריך האירוע ובמקורות נוספים שיסייעו לכם להביא להצלחת האירוע של Hour of Code.
   hoc_faq_certificates_q: Where can I print certificates for my students?
   hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
     page</a> where you can print certificates for your entire class ahead of time.
     You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
     certificates</a> for students doing the Minecraft tutorial.
-  hoc_faq_certificates_a_markdown: גשו ל[דף התעודות]%{codeorg_url}/תעודות), שם תוכלו
-    להדפיס מראש תעודות לכל הכיתה. באפשרותם גם להדפיס [תעודות מיוחדות](%{codeorg_url}%{(codeorg_url}/certificates?course=mc)
-    לתלמידים שלומדים דרך פלטפורמת "מיינקראפט".
+  hoc_faq_certificates_a_markdown: גשו ל[דף התעודות](%{codeorg_url}/certificates),
+    שם תוכלו להדפיס מראש תעודות לכל תלמידי הכיתה. באפשרותם גם להדפיס [תעודות מיוחדות](%{codeorg_url}/certificates?course=mc)
+    לתלמידים הלומדים את השיעור של "מיינקראפט".
   hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
     name?
   hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
     but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
     guidelines for usage</a>.
-  hoc_faq_logo_a_markdown: '"שעת הקוד" הוא סימן מסחרי רשום. אין בכוונתנו למנוע את
+  hoc_faq_logo_a_markdown: Hour of Code הוא סימן מסחרי רשום. אין בכוונתנו למנוע את
     השימוש בו, אולם אנו רוצים להבטיח שהשימוש בו נתון להגבלות אחדות. אנא ראו [תנאי
-    שימוש](%{logo_url}).'
+    שימוש](%{logo_url}).
   stats_hoc_2013_image_alt: סטטיסטיקה של  Hour of Code 2013
   stats_growth: A fost proiectul cu cea mai rapida crestere pana la 15 milioane de
     utilizatori.
@@ -891,6 +896,7 @@ he:
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: זכויות יוצרים 2015 Code.org. כל הזכויות שמורות.
   footer_trademark_message: Hour of Code ™ הוא סימן מסחרי של Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: שותפים
   footer_menu_contact: צור קשר
   footer_menu_support: תמיכה
@@ -902,7 +908,7 @@ he:
     of Code.
   learn_banner_beyond: Want to keep learning?  <a id='learn_banner_beyond'>Go beyond
     an hour</a>
-  learn_banner_beyond_markdown: רוצים להמשיך ללמוד? [הארכה מעבר לשעה]%{url}
+  learn_banner_beyond_markdown: רוצים להמשיך ללמוד? [המשיכו מעבר לשעה](%{url})
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_banner_teachers_markdown: 'מורים: [קיימו פעילות של שעה](%{host_url}) או [קראו
@@ -1321,7 +1327,7 @@ he:
   tutorial_cacrazy_name: Code Crazy Creatures
   tutorial_cajump_name: Jumping Jam
   tutorial_carest_name: Robo-restaurant puzzler
-  tutorial_accai_name: Accenture Intelligent Space Exploration
+  tutorial_accai_name: חקר חלל אינטליגנטי של Accenture
   tutorial_vceclipse_name: Code the Eclipse
   tutorial_pmzero_name: Pac-Man ZERO
   tutorial_hsela_name: 'Telling stories: ELA + coding'
@@ -1479,7 +1485,7 @@ he:
   tutorial_pets_name: Pets Game
   tutorial_petvet_name: Barbie Pet Vet
   tutorial_superhero_name: Create a Superhero Mask
-  tutorial_vidcodeplastic_name: Plastic Pollution PSA
+  tutorial_vidcodeplastic_name: הודעת שירות לציבור לגבי זיהום פלסטיק
   tutorial_vidcodetypeface_name: Create your own typeface!
   tutorial_washustorm_name: Stormy Science
   tutorial_activitypackets_name: Wonder Workshop Activity Packets
@@ -1501,9 +1507,10 @@ he:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1519,23 +1526,25 @@ he:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
   tutorial_ttrace_name: Race Condition
-  tutorial_plethora_name: 'Plethora: Cause and Effect'
+  tutorial_plethora_name: פלתורה - גורם ותוצאה
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: הודעת שירות לציבור לגבי זיהום פלסטיק
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1545,7 +1554,7 @@ he:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -2338,7 +2347,8 @@ he:
     a pet that you can feed and play with.
   tutorial_carest_shortdescription: Use the MicroPython programming language to make
     a pet that you can feed and play with.
-  tutorial_accai_shortdescription: לַמְּדוּ רובוט בינה מלאכותית לחקור כוכב לכת חדש!
+  tutorial_accai_shortdescription: לַמדו רובוט בעל בינה מלאכותית כיצד לחקור כוכב לכת
+    חדש!
   tutorial_vceclipse_shortdescription: Code a solar eclipse simulation with JavaScript!
   tutorial_pmzero_shortdescription: Create and program a 3D Pac-Man Maze World
   tutorial_hsela_shortdescription: 'Telling stories: ELA + coding'
@@ -2822,9 +2832,9 @@ he:
     learn. Learn about using modules, functions, loops, and lists, all while creating
     fun images with the help of your turtle buddies. Geometry has never been so much
     fun!
-  tutorial_frzn_longdescription: בוא נשתמש בקוד כדי להצטרף לאנה ואלסה כשהן חוקרות
-    את הקסם והיופי של הקרח. אתה תיצור פתיתי שלג ודפוסים כשאתה מחליק על הקרח ויוצר
-    ארץ פלאות חורפית שתוכל לשתף עם חברים!
+  tutorial_frzn_longdescription: בואו נשתמש בקוד כדי להצטרף לאנה ואלסה כשהן חוקרות
+    את הקסם והיופי של הקרח. אתם תיצרו פתיתי שלג ודפוסים כשאתם מחליק על הקרח ותיצרו
+    ארץ פלאות חורפית שתוכלו לשתף עם חברים!
   tutorial_cocom_longdescription: בחר את הגיבור וקודד את דרכך דרך אורקים מפטרלים,
     בורות לבה וקרני לייזר של מבוך קיתגארד. תעלה בדרגות, תרוויח אבני חן ותאסוף חפצים
     קסומים בכדי לפתח כוחות קידוד חדשים!
@@ -4540,7 +4550,7 @@ he:
   tutorial_carest_longdescription: Join Ross at the Food Avengers restaurant. Use
     your computational thinking skills to help Ross solve problems and serve dinner
     to 8 excited kids.
-  tutorial_accai_longdescription: רובוט נשלח לכוכב לכת לא ידוע כדי לגלות האם האנושות
+  tutorial_accai_longdescription: רובוט נשלח לכוכב לכת לא ידוע כדי לגלות אם האנושות
     יכולה להקים שם מושבה חדשה. הוא חוקר את הכוכב כדי למצוא מחסה, מגלה אוכלוסייה מקומית
     ומתקשר איתה. בתור השחקנים, אתם תתנסו בטכניקות שונות של בינה מלאכותית כדי ללמד
     את הרובוט איך לזהות חיות וצמחים, איך להבין שפה חדשה, איך לנהל דיאלוג עם התושבים
@@ -5175,11 +5185,11 @@ he:
     you'll find every puzzle has a solution to make the pets feel better than ever!
   tutorial_superhero_longdescription: Use HTML and CSS pixel art to create your favorite
     superhero masks. Publish and share your creations!
-  tutorial_vidcodeplastic_longdescription: בעיית זיהום האוקיינוסים בפלסטיק ממשיכה
-    להחמיר. לשמחתנו, באפשרותכם להשמיע את קולכם על ידי תכנות תשדיר שירות בנושא זיהום
-    מפלסטיק. לאחר תכנות תשדיר שירות בנושא זיהום מפלסטיק באמצעות שפת ג'אווה סקריפט,
-    תוכלו להכין סרטון וידאו נוסף בכל נושא קרוב ללבכם! למדו על שימוש בלולאות, גל סינוסואידי,
-    ואימוג'ים מותאמים אישית כדי ליצור פרויקט ייחודי.
+  tutorial_vidcodeplastic_longdescription: בעיית זיהום האוקיינוסים והימים בפלסטיק
+    ממשיכה להחמיר. לשמחתנו, באפשרותכם להשמיע את קולכם על ידי תכנות תשדיר שירות בנושא
+    זיהום מפלסטיק. לאחר תכנות תשדיר שירות בנושא זיהום מפלסטיק באמצעות שפת ג'אווה סקריפט,
+    תוכלו להכין סרטון וידאו נוסף בכל נושא הקרוב ללבכם! למדו על שימוש בלולאות, גלי
+    סינוס, ואימוג'ים מותאמים אישית כדי ליצור פרויקט ייחודי.
   tutorial_vidcodetypeface_longdescription: Create your own typeface using shapes
     and elements of typography. Type has more elements than you may have realized!
     So far we have talked about fonts and how they are different styles of text. Fonts
@@ -5251,20 +5261,22 @@ he:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5310,12 +5322,12 @@ he:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5334,16 +5346,18 @@ he:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5353,8 +5367,8 @@ he:
   tutorial_ttrace_longdescription: By calling functions and designing classes, players
     program their own race car to be fast, nimble, and powerful; during races, they
     can then hack their competitors' vehicles to scramble their controls.
-  tutorial_plethora_longdescription: 'In this Plethora activity you will solve visual
-    fun challenges and learn the concepts of cause and effect and user interaction. '
+  tutorial_plethora_longdescription: בפעילות זו של פלתורה תפתרו אתגרים ויזואליים ומהנים
+    ותלמדו את עקרונות הגורם-תוצאה ופעולות משתמש.
   tutorial_educodesecret_longdescription: Explore the worlds of secrets with Agent
     Smith as you dive deeper into learning if statements, strings, for-in loops. Help
     Agent Smith find the culprits and configure the Agency's operating system for
@@ -5363,6 +5377,11 @@ he:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: בעיית זיהום האוקיינוסים והימים בפלסטיק
+    ממשיכה להחמיר. לשמחתנו, באפשרותכם להשמיע את קולכם על ידי תכנות תשדיר שירות בנושא
+    זיהום מפלסטיק. לאחר תכנות תשדיר שירות בנושא זיהום מפלסטיק באמצעות שפת ג'אווה סקריפט,
+    תוכלו להכין סרטון וידאו נוסף בכל נושא הקרוב ללבכם! למדו על שימוש בלולאות, גלי
+    סינוס, ואימוג'ים מותאמים אישית כדי ליצור פרויקט ייחודי.
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5393,11 +5412,11 @@ he:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5626,18 +5645,17 @@ he:
     of code to bring the two villages together. Players will experience empathy and
     compassion for their neighbors, learn cooperation and inclusion, and embrace the
     diversity that makes us all uniquely special.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
-  tutorial_danceparty_language: English, Arabic, Catalan, Chinese, Czech, Danish,
-    Dutch, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian,
-    Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Vietnamese
+  tutorial_dance2019_language: ערבית, סינית, צ'כית, דנית, הולנדית, אגלית, פינית, צרפתית,
+    גרמנית, יוונית, הינדית, הונגרית, אינדונזית, איטלקית, יפנית, קוריאנית, מלאית, פולנית,
+    פורטוגזית, ועוד 10 שפות!
+  tutorial_danceparty_language: אנגלית, ערבית, קטלאנית, סינית, צ'כית, דנית, הולנדית,
+    פינית, צרפתית, גרמנית, יוונית, הונגרית, איטלקית, יפנית, קוריאנית, נורווגית, פולנית,
+    פורטוגזית, רוסית, ספרדית, שוודית, תאילנדית, טורקית, וייטנאמית
   tutorial_chibitronics_language: עברית
   tutorial_athlete_language: אנגלית, צרפתית, ספרדית, איטלקית, פורטוגזית (ברזיל)
-  tutorial_moana_language: English, Arabic, Chinese (Simplified), Chinese (Traditional)
-    Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish,
-    Turkish, Ukrainian, Vietnamese
+  tutorial_moana_language: אנגלית, ערבית, סינית (מפושטת), סינית (מסורתית) דנית, הולנדית,
+    פינית, צרפתית, גרמנית, אינדונזית, איטלקית, יפנית, קוריאנית, נורווגית, פולנית,
+    פולינזית (סמואנית), פורטוגזית, רוסית, ספרדית, שוודית, טורקית, אוקראינית, וייטנאמית
   tutorial_star-wars_language: אנגלית, ערבית, בולגרית, סינית, קרואטית, דנית, הולנדית,
     פינית, צרפתית, גרמנית, יוונית, איסלנדית, אינדונזית, איטלקית, יפנית, קוראנית, נורווגית,
     פרסית, פולנית, פורטוגזית, רומנית, רוסית, ספרדית, שוודית, טורקית, אוקראינית ועוד
@@ -5648,19 +5666,19 @@ he:
     פרסית, פולנית, פורטוגזית, רומנית, רוסית, ספרדית, שוודית, טורקית, אוקראינית ועוד
     19 שפות נוספות
   tutorial_vidnews_language: English only
-  tutorial_kodable-pre_language: English, Arabic, Azerbaijani, German, Greek, Spanish,
-    Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish,
-    Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese
+  tutorial_kodable-pre_language: אנגלית, ערבית, אזרבייג'נית, גרמנית, יוונית, ספרדית,
+    פרסית, צרפתית, אינדונזית, איסלנדית, איטלקית, קוריאנית, הולנדית, נורווגית, פולנית,
+    פורטוגזית, רומנית, רוסית, סרבית, שוודית, טורקית, אוקראינית, סינית
   tutorial_highseas_language: English only
   tutorial_capython_language: English, Dutch, Spanish
   tutorial_frzn_language: אנגלית, ערבית, בולגרית, סינית, קרואטית, דנית, הולנדית, פינית,
     צרפתית, גרמנית, יוונית, איסלנדית, אינדונזית, איטלקית, יפנית, קוראנית, נורווגית,
     פרסית, פולנית, פורטוגזית, רומנית, רוסית, ספרדית, שוודית, טורקית, אוקראינית ועוד
     19 שפות נוספות
-  tutorial_cocom_language: English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian,
-    Vietnamese and 9 more
+  tutorial_cocom_language: אנגלית, ערבית, בולגרית, סינית, צ'כית, דנית, הולנדית, צרפתית,
+    גרמנית, יוונית, עברית, הונגרית, אינדונזית, איטלקית, יפנית, קוריאנית, נורווגית,
+    פרסית, פולנית, פורטוגזית, רוסית, ספרדית, שוודית, טורקית, אוקראינית, ויאטנמית ועוד
+    9 שפות
   tutorial_play-lab_language: אנגלית, ערבית, בולגרית, סינית, קרואטית, דנית, הולנדית,
     פינית, צרפתית, גרמנית, יוונית, איסלנדית, אינדונזית, איטלקית, יפנית, קוראנית, נורווגית,
     פרסית, פולנית, פורטוגזית, רומנית, רוסית, ספרדית, שוודית, טורקית, אוקראינית ועוד
@@ -5699,19 +5717,17 @@ he:
     צרפתית, גרמנית, יוונית, איסלנדית, אינדונזית, איטלקית, יפנית, קוראנית, נורווגית,
     פרסית, פולנית, פורטוגזית, רומנית, רוסית, ספרדית, שוודית, טורקית, אוקראינית ועוד
     19 שפות נוספות
-  tutorial_galaxy_language: English, Albanian, Arabic, Bosnian, Chinese, Croatian,
-    Czech, Danish, Dutch, French, German, Hebrew, Indonesian, Italian, Japanese, Korean,
-    Persian, Polish, Portuguese, Romanian, Russian, Slovenian, Spanish, Swedish, Turkish,
-    Vietnamese
+  tutorial_galaxy_language: אנגלית, אלבנית, ערבית, בוסנית, סינית, קרואטית, צ'כית,
+    דנית, הולנדית, צרפתית, גרמנית, עברית, אינדונזית, איטלקית, יפנית, קוריאנית, פרסית,
+    פולנית, פורטוגזית, רומנית, רוסית, סלובנית, ספרדית, שוודית, טורקית, וייטנאמית
   tutorial_inf_language: אנגלית, ערבית, בולגרית, סינית, קרואטית, דנית, הולנדית, פינית,
     צרפתית, גרמנית, יוונית, איסלנדית, אינדונזית, איטלקית, יפנית, קוראנית, נורווגית,
     פרסית, פולנית, פורטוגזית, רומנית, רוסית, ספרדית, שוודית, טורקית, אוקראינית ועוד
     19 שפות נוספות
   tutorial_tynkersol_language: English only
   tutorial_itchg_language: English only
-  tutorial_como_language: English, Arabic, Chinese, Czech, French, German, Greek,
-    Hebrew, Japanese, Kazkh, Lithuanian, Polish, Portuguese, Russian, Serbian, Spanish,
-    Turkish, Ukrainian
+  tutorial_como_language: אנגלית, ערבית, סינית, צ'כית, צרפתית, גרמנית, יוונית, עברית,
+    יפנית, כזכית, ליטאית, פולנית, פורטוגזית, רוסית, סרבית, ספרדית, טורקית, אוקראינית
   tutorial_processfound_language: English only
   tutorial_tynkerhomo_language: English only
   tutorial_art_language: אנגלית, ערבית, בולגרית, סינית, קרואטית, דנית, הולנדית, פינית,
@@ -5729,10 +5745,10 @@ he:
   tutorial_tynkerapp_language: English only
   tutorial_tynkerpup_language: English only
   tutorial_livecode_language: English only
-  tutorial_cocomgame_language: English, Arabic, Bulgarian, Chinese, Croatian, Czech,
-    Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian, Vietnamese and 8 more
+  tutorial_cocomgame_language: אנגלית, ערבית, בולגרית, סינית, קרואטית, צ'כית, דנית,
+    הולנדית, פינית, צרפתית, גרמנית, יוונית, עברית, איטלקית, יפנית, קוריאנית, נורווגית,
+    פרסית, פולנית, פורטוגזית, רומנית, רוסית, ספרדית, שוודית, טורקית, אוקראינית, וייטנאמית
+    ועד 8 שפות נוספות
   tutorial_tynkerspin_language: English only
   tutorial_code-avengers_language: אנגלית, ספרדית, הולנדית, רוסית, פורטוגזית
   tutorial_tynkercq_language: English only
@@ -5956,9 +5972,9 @@ he:
   tutorial_moveit_language: English only
   tutorial_bigevent_language: English only
   tutorial_gpp_language: English only
-  tutorial_foosgame_language: English, Arabic, German, Spanish, French, Japanese,
-    Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional
-    Chinese, Simplified Chinese, Greek, Italian, Polish
+  tutorial_foosgame_language: אנגלית, ערבית, גרמנית, ספרדית, צרפתית, יפנית, קוריאנית,
+    הולנדית, פורטוגזית, פורטוגזית ברזילאית, רומנית, טורקית, סינית מסורתית, סינית מפושטת,
+    יוונית, איטלקית, פולנית
   tutorial_solopython_language: English only
   tutorial_kodableint_language: English only
   tutorial_kodableadv_language: English only
@@ -6178,9 +6194,9 @@ he:
   tutorial_cashield_language: עברית
   tutorial_ccwslimer_language: עברית
   tutorial_codinggalaxy_language: Chinese, English
-  tutorial_boatrace_language: Arabic, Chinese (Simplified), Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish,
-    Romanian, Serbian (Cyrillic), Spanish, Ukrainian
+  tutorial_boatrace_language: ערבית, סינית (מפושטת), צ'כית, דנית, הולנדית, צרפתית,
+    גרמנית, יוונית, עברית, הינדית, איטלקית, יפנית, קוריאנית, אחר, פולנית, רומנית,
+    סרבית (קירילית), ספרדית, אוקראינית
   tutorial_ccplay_language: עברית
   tutorial_grinch_language: עברית
   tutorial_codehsart_language: עברית
@@ -6241,8 +6257,8 @@ he:
   tutorial_ozorandom_language: עברית
   tutorial_ozotroll_language: עברית
   tutorial_peblioart_language: עברית
-  tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
-    Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
+  tutorial_astropi_language: ערבית, דנית, הולנדית, אנגלית, פינית, צרפתית, גרמנית,
+    יוונית, הונגרית, איטלקית, נורווגית (נינורסק), אחר, פולנית, ספרדית, שוודית
   tutorial_rgart_language: עברית
   tutorial_rgengineer_language: עברית
   tutorial_rgmath_language: עברית
@@ -6254,28 +6270,28 @@ he:
   tutorial_scratchtalk_language: English, Spanish
   tutorial_scratchjrstory_language: עברית
   tutorial_scratchjrtwinkle_language: עברית
-  tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherocommunity_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherofunctions_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroinfrared_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherolightsensor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheromansion_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_roadblocks_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext2_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext3_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext4_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroraptor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
+  tutorial_spherocomm_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית, איטלקית,
+    יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spherocommunity_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית,
+    איטלקית, יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spherofunctions_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית,
+    איטלקית, יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spheroinfrared_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית, איטלקית,
+    יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spherolightsensor_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית,
+    איטלקית, יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spheromansion_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית, איטלקית,
+    יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_roadblocks_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית, איטלקית,
+    יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spherotext2_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית, איטלקית,
+    יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spherotext3_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית, איטלקית,
+    יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spherotext4_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית, איטלקית,
+    יפנית, קוריאנית, נורווגית, ספרדית, שוודית
+  tutorial_spheroraptor_language: ערבית, סינית, אנגלית, צרפתית, גרמנית, עברית, איטלקית,
+    יפנית, קוריאנית, נורווגית, ספרדית, שוודית
   tutorial_stempiday_language: עברית
   tutorial_stemplanetoids_language: עברית
   tutorial_stempong_language: עברית
@@ -6298,13 +6314,13 @@ he:
   tutorial_pets_language: עברית
   tutorial_petvet_language: עברית
   tutorial_superhero_language: עברית
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: עברית
   tutorial_vidcodetypeface_language: עברית
   tutorial_washustorm_language: עברית
   tutorial_activitypackets_language: עברית
   tutorial_googlerookie_language: עברית
   tutorial_tommyturtle_language: עברית
-  tutorial_mazyad_language: Arabic, English
+  tutorial_mazyad_language: ערבית, אנגלית
   tutorial_gamemaker_language: עברית
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: עברית
@@ -6321,10 +6337,11 @@ he:
   tutorial_codespeakhappy_language: עברית
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: עברית
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: ערבית, הולנדית, אנגלית, אנגלית (בריטניה), צרפתית, ספרדית
+    (מקסיקו)
   tutorial_bsdcause_language: עברית
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: עברית
   tutorial_tttractor_language: עברית
   tutorial_codeillusionmickey_language: עברית
@@ -6342,11 +6359,12 @@ he:
   tutorial_ttsecond_language: עברית
   tutorial_bsdtrivia_language: עברית
   tutorial_csfirstdialogue_language: English, Spanish (Mexico)
-  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
-    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: ערבית, סינית (פשוטה), אנגלית, עברית, יפנית,
+    ספרדית (ספרד), ספרדית (מקסיקו)
   tutorial_codestersdistance_language: עברית
   tutorial_itchspace_language: עברית
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: עברית
   tutorial_itchfish_language: עברית
   tutorial_bsdwebsite_language: עברית
@@ -6354,11 +6372,11 @@ he:
   tutorial_itchwebcam_language: עברית
   tutorial_itchball_language: עברית
   tutorial_ttrace_language: עברית
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: אנגלית, עברית, ערבית, סינית, פורטוגזית, ספרדית, צרפתית
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: עברית
   tutorial_codeguppytext_language: עברית
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: עברית
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: עברית
@@ -6368,8 +6386,8 @@ he:
   tutorial_ttbunker_language: עברית
   tutorial_cuttle_language: עברית
   tutorial_bsdjokes_language: עברית
-  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rptree_language: ערבית, הולנדית, אנגלית, אנגלית (בריטניה), צרפתית, ספרדית
+    (מקסיקו)
   tutorial_codestersunity_language: עברית
   tutorial_codesterssoccer_language: עברית
   tutorial_breakoutlock_language: עברית
@@ -6424,127 +6442,127 @@ he:
   tutorial_kcjplastic_language: אנגלית, צרפתית
   tutorial_legojourney_language: עברית
   tutorial_legohopper_language: עברית
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: ערבית, בנגלית, בוסנית, סינית (מפושטת), קרואטית,
+    צ'כית, אנגלית, צרפתית, גרמנית, הינדית, אינדונזית, איטלקית, יפנית, קוריאנית, נורווגית
+    (נינורסק), פולנית, פורטוגזית ועוד!
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: עברית
   tutorial_meeempathy_language: עברית
-  tutorial_dance2019_string_detail_grades: Grades 2+
-  tutorial_danceparty_string_detail_grades: Grades 2+
+  tutorial_dance2019_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_danceparty_string_detail_grades: כיתות ב 'ומעלה
   tutorial_chibitronics_string_detail_grades: Grades 2-5
-  tutorial_athlete_string_detail_grades: Grades 2+
-  tutorial_moana_string_detail_grades: Grades 2+
-  tutorial_star-wars_string_detail_grades: Grades 2+
+  tutorial_athlete_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_moana_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_star-wars_string_detail_grades: כיתות ב 'ומעלה
   tutorial_gumadventure_string_detail_grades: Grades 6-8
-  tutorial_mchoc_string_detail_grades: Grades 2+
-  tutorial_vidnews_string_detail_grades: Grades 6+
+  tutorial_mchoc_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_vidnews_string_detail_grades: כיתה ב 'ומעלה
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
   tutorial_highseas_string_detail_grades: Grades 2-8
-  tutorial_capython_string_detail_grades: Grades 6+
-  tutorial_frzn_string_detail_grades: Grades 2+
-  tutorial_cocom_string_detail_grades: Grades 2+
-  tutorial_play-lab_string_detail_grades: Grades 2+
+  tutorial_capython_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_frzn_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_cocom_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_play-lab_string_detail_grades: כיתות ב 'ומעלה
   tutorial_boxisland_string_detail_grades: All ages
   tutorial_textcomp_string_detail_grades: כיתות ט ומעלה
   tutorial_encryption_string_detail_grades: כיתות ט ומעלה
-  tutorial_kanopixel_string_detail_grades: Grades 2+
+  tutorial_kanopixel_string_detail_grades: כיתות ב 'ומעלה
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerdd_string_detail_grades: Grades 2-8
-  tutorial_tynkerana_string_detail_grades: Grades 6+
-  tutorial_vidcard_string_detail_grades: Grades 2+
+  tutorial_tynkerana_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_vidcard_string_detail_grades: כיתות ב 'ומעלה
   tutorial_spritebox_string_detail_grades: Grades 2-8
-  tutorial_tynkerch_string_detail_grades: Grades 6+
+  tutorial_tynkerch_string_detail_grades: כיתה ב 'ומעלה
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: אל תציג
-  tutorial_code_string_detail_grades: Grades 2+
-  tutorial_tinspire_string_detail_grades: Grades 6+
+  tutorial_code_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_tinspire_string_detail_grades: כיתה ב 'ומעלה
   tutorial_itchbounceball_string_detail_grades: Grades 2-8
-  tutorial_vidclim_string_detail_grades: Grades 6+
-  tutorial_matlab_string_detail_grades: Grades 6+
-  tutorial_flap_string_detail_grades: Grades 2+
-  tutorial_galaxy_string_detail_grades: Grades 6+
+  tutorial_vidclim_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_matlab_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_flap_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_galaxy_string_detail_grades: כיתה ב 'ומעלה
   tutorial_inf_string_detail_grades: Grades 2-8
-  tutorial_tynkersol_string_detail_grades: Grades 2+
-  tutorial_itchg_string_detail_grades: Grades 6+
-  tutorial_como_string_detail_grades: Grades 2+
+  tutorial_tynkersol_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_itchg_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_como_string_detail_grades: כיתות ב 'ומעלה
   tutorial_processfound_string_detail_grades: כיתות ט ומעלה
-  tutorial_tynkerhomo_string_detail_grades: Grades 6+
-  tutorial_art_string_detail_grades: Grades 2+
-  tutorial_tynkerbrick_string_detail_grades: Grades 2+
-  tutorial_itchbio_string_detail_grades: Grades 6+
+  tutorial_tynkerhomo_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_art_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_tynkerbrick_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_itchbio_string_detail_grades: כיתה ב 'ומעלה
   tutorial_itchj_string_detail_grades: Grades 6-8
-  tutorial_tickleo_string_detail_grades: Grades 2+
+  tutorial_tickleo_string_detail_grades: כיתות ב 'ומעלה
   tutorial_hopgeo_string_detail_grades: Grades 2-8
   tutorial_tynkermult_string_detail_grades: Grades 2-8
   tutorial_monster_string_detail_grades: Pre-reader - Grade 8
   tutorial_tynkerapp_string_detail_grades: אל תציג
   tutorial_tynkerpup_string_detail_grades: Pre-reader - Grade 5
   tutorial_livecode_string_detail_grades: כיתות ט ומעלה
-  tutorial_cocomgame_string_detail_grades: Grades 2+
+  tutorial_cocomgame_string_detail_grades: כיתות ב 'ומעלה
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
-  tutorial_code-avengers_string_detail_grades: Grades 6+
+  tutorial_code-avengers_string_detail_grades: כיתה ב 'ומעלה
   tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cmgame_string_detail_grades: Grades 6+
+  tutorial_cmgame_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codesters_string_detail_grades: אל תציג
-  tutorial_qrm_string_detail_grades: Grades 6+
-  tutorial_texas-instruments_string_detail_grades: Grades 6+
-  tutorial_cajava_string_detail_grades: Grades 6+
+  tutorial_qrm_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_texas-instruments_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_cajava_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codehs_string_detail_grades: כיתות ט ומעלה
   tutorial_hopemo_string_detail_grades: Grades 2-8
-  tutorial_tynkercm_string_detail_grades: Grades 2+
-  tutorial_codesterswintergreet_string_detail_grades: Grades 2+
-  tutorial_codestersc_string_detail_grades: Grades 6+
-  tutorial_codestersturtle_string_detail_grades: Grades 2+
-  tutorial_penjee_string_detail_grades: Grades 6+
-  tutorial_trinket_string_detail_grades: Grades 2+
-  tutorial_frogger_string_detail_grades: Grades 6+
+  tutorial_tynkercm_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_codesterswintergreet_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_codestersc_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codestersturtle_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_penjee_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_trinket_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_frogger_string_detail_grades: כיתה ב 'ומעלה
   tutorial_tynkereco_string_detail_grades: Grades 2-8
   tutorial_mitedarc_string_detail_grades: Grades 6-8
-  tutorial_khan_string_detail_grades: Grades 6+
-  tutorial_tynkerd_string_detail_grades: Grades 6+
+  tutorial_khan_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_tynkerd_string_detail_grades: כיתה ב 'ומעלה
   tutorial_cdmy_string_detail_grades: כיתות ט ומעלה
-  tutorial_codestersdance_string_detail_grades: Grades 6+
-  tutorial_codestersbasketball_string_detail_grades: Grades 6+
-  tutorial_nclkarel_string_detail_grades: Grades 6+
-  tutorial_buildpong_string_detail_grades: Grades 2+
-  tutorial_tynkerdrones_string_detail_grades: Grades 2+
-  tutorial_carla_string_detail_grades: Grades 6+
-  tutorial_zulama_string_detail_grades: Grades 6+
-  tutorial_capost_string_detail_grades: Grades 6+
+  tutorial_codestersdance_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codestersbasketball_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_nclkarel_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_buildpong_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_tynkerdrones_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_carla_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_zulama_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_capost_string_detail_grades: כיתה ב 'ומעלה
   tutorial_marco_string_detail_grades: Grades 2-8
-  tutorial_codestersflappybike_string_detail_grades: Grades 6+
+  tutorial_codestersflappybike_string_detail_grades: כיתה ב 'ומעלה
   tutorial_kanopong_string_detail_grades: Grades 6-8
   tutorial_tynkerright_string_detail_grades: Grades 2-8
   tutorial_touchdevelop_string_detail_grades: אל תציג
-  tutorial_tynkercc_string_detail_grades: Grades 6+
+  tutorial_tynkercc_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bamboo_string_detail_grades: Grades 2-5
-  tutorial_robojav_string_detail_grades: Grades 6+
-  tutorial_roboba_string_detail_grades: Grades 6+
+  tutorial_robojav_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_roboba_string_detail_grades: כיתה ב 'ומעלה
   tutorial_knodsnake_string_detail_grades: Grades 6-8
-  tutorial_soccharater_string_detail_grades: Grades 6+
-  tutorial_silent_string_detail_grades: Grades 6+
-  tutorial_robomesh_string_detail_grades: Grades 2+
-  tutorial_amaze_string_detail_grades: Grades 2+
-  tutorial_codestersds_string_detail_grades: Grades 2+
+  tutorial_soccharater_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_silent_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_robomesh_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_amaze_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_codestersds_string_detail_grades: כיתות ב 'ומעלה
   tutorial_knodtext_string_detail_grades: Grades 6-8
-  tutorial_alicegar_string_detail_grades: Grades 6+
-  tutorial_codesterstransform_string_detail_grades: Grades 6+
-  tutorial_flexfrog_string_detail_grades: Grades 6+
+  tutorial_alicegar_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codesterstransform_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_flexfrog_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codemoji_string_detail_grades: אל תציג
-  tutorial_robobii_string_detail_grades: Grades 6+
+  tutorial_robobii_string_detail_grades: כיתה ב 'ומעלה
   tutorial_robobm_string_detail_grades: Grades 6-8
-  tutorial_codingrobots_string_detail_grades: Grades 2+
-  tutorial_robob_string_detail_grades: Grades 6+
+  tutorial_codingrobots_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_robob_string_detail_grades: כיתה ב 'ומעלה
   tutorial_coders_string_detail_grades: כיתות ט ומעלה
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
   tutorial_tynkermh_string_detail_grades: Grades 2-8
-  tutorial_caphoto_string_detail_grades: Grades 6+
+  tutorial_caphoto_string_detail_grades: כיתה ב 'ומעלה
   tutorial_mozillahw_string_detail_grades: Grades 6-8
   tutorial_ticklep_string_detail_grades: אל תציג
-  tutorial_bbot_string_detail_grades: Grades 2+
-  tutorial_scratchg_string_detail_grades: Grades 6+
+  tutorial_bbot_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_scratchg_string_detail_grades: כיתה ב 'ומעלה
   tutorial_roboticfriends_string_detail_grades: All ages
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjgreet_string_detail_grades: Pre-reader - Grade 5
@@ -6552,46 +6570,46 @@ he:
   tutorial_fufafrenz_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcgeo_string_detail_grades: אל תציג
   tutorial_chspixel_string_detail_grades: כיתות ט ומעלה
-  tutorial_hummingbird_string_detail_grades: Grades 6+
-  tutorial_recoloring_string_detail_grades: Grades 6+
+  tutorial_hummingbird_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_recoloring_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bbcchem_string_detail_grades: אל תציג
-  tutorial_floalgo_string_detail_grades: Grades 2+
-  tutorial_flocond_string_detail_grades: Grades 2+
-  tutorial_floloops_string_detail_grades: Grades 2+
-  tutorial_pgts_string_detail_grades: Grades 6+
+  tutorial_floalgo_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_flocond_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_floloops_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_pgts_string_detail_grades: כיתה ב 'ומעלה
   tutorial_ozo_string_detail_grades: All ages
   tutorial_bbcla_string_detail_grades: אל תציג
   tutorial_bbcsci_string_detail_grades: אל תציג
-  tutorial_tlctour_string_detail_grades: Grades 2+
-  tutorial_codesterstj_string_detail_grades: Grades 2+
-  tutorial_tlclocked_string_detail_grades: Grades 6+
+  tutorial_tlctour_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_codesterstj_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_tlclocked_string_detail_grades: כיתה ב 'ומעלה
   tutorial_baubles_string_detail_grades: Grades 2-8
   tutorial_bbcart_string_detail_grades: אל תציג
-  tutorial_tlcknight_string_detail_grades: Grades 2+
+  tutorial_tlcknight_string_detail_grades: כיתות ב 'ומעלה
   tutorial_fufafit_string_detail_grades: Grades 2-5
   tutorial_ozodance_string_detail_grades: All ages
   tutorial_codingrobotics_string_detail_grades: Pre-reader - Grade 5
   tutorial_box_string_detail_grades: אל תציג
   tutorial_hopgame_string_detail_grades: Grades 2-8
   tutorial_icontrol_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cocomteach_string_detail_grades: Grades 2+
+  tutorial_cocomteach_string_detail_grades: כיתות ב 'ומעלה
   tutorial_bbcmathii_string_detail_grades: אל תציג
   tutorial_bbcphys_string_detail_grades: אל תציג
   tutorial_bitsbox_string_detail_grades: Grades 2-8
   tutorial_tlcemo_string_detail_grades: Grades 2-8
   tutorial_crd_string_detail_grades: Grades 6-8
   tutorial_bbcbio_string_detail_grades: אל תציג
-  tutorial_ticklebb8_string_detail_grades: Grades 2+
+  tutorial_ticklebb8_string_detail_grades: כיתות ב 'ומעלה
   tutorial_grok_string_detail_grades: אל תציג
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: אל תציג
   tutorial_secretcodes_string_detail_grades: Grades 6-8
-  tutorial_tlchex_string_detail_grades: Grades 6+
-  tutorial_tickles_string_detail_grades: Grades 2+
+  tutorial_tlchex_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_tickles_string_detail_grades: כיתות ב 'ומעלה
   tutorial_ozogame_string_detail_grades: All ages
-  tutorial_vidcodeio_string_detail_grades: Grades 2+
+  tutorial_vidcodeio_string_detail_grades: כיתות ב 'ומעלה
   tutorial_besttech_string_detail_grades: כיתות ט ומעלה
-  tutorial_tlcbrain_string_detail_grades: Grades 6+
+  tutorial_tlcbrain_string_detail_grades: כיתה ב 'ומעלה
   tutorial_hopquiz_string_detail_grades: Grades 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
   tutorial_cha_string_detail_grades: Grades 6-8
@@ -6600,12 +6618,12 @@ he:
   tutorial_tlcpixel_string_detail_grades: Grades 2-8
   tutorial_arduino_string_detail_grades: Grades 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
-  tutorial_tlcinvis_string_detail_grades: Grades 2+
-  tutorial_tlcjflap_string_detail_grades: Grades 6+
+  tutorial_tlcinvis_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_tlcjflap_string_detail_grades: כיתה ב 'ומעלה
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
-  tutorial_spiralsfinch_string_detail_grades: Grades 2+
+  tutorial_spiralsfinch_string_detail_grades: כיתות ב 'ומעלה
   tutorial_ozoi_string_detail_grades: All ages
-  tutorial_ticklel_string_detail_grades: Grades 2+
+  tutorial_ticklel_string_detail_grades: כיתות ב 'ומעלה
   tutorial_spiralsdash_string_detail_grades: Grades 2-8
   tutorial_ghdebug_string_detail_grades: Grades 2-8
   tutorial_tlckk_string_detail_grades: Grades 2-5
@@ -6613,42 +6631,42 @@ he:
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
   tutorial_tlccc_string_detail_grades: Grades 2-8
   tutorial_tlcdoodle_string_detail_grades: Grades 2-8
-  tutorial_tlcpunch_string_detail_grades: Grades 6+
+  tutorial_tlcpunch_string_detail_grades: כיתה ב 'ומעלה
   tutorial_finchfract_string_detail_grades: כיתות ט ומעלה
-  tutorial_tlcmind_string_detail_grades: Grades 6+
-  tutorial_tlctelebot_string_detail_grades: Grades 2+
-  tutorial_tlcaus_string_detail_grades: Grades 6+
+  tutorial_tlcmind_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_tlctelebot_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_tlcaus_string_detail_grades: כיתה ב 'ומעלה
   tutorial_oralhist_string_detail_grades: כיתות ט ומעלה
-  tutorial_tlcmicro_string_detail_grades: Grades 2+
+  tutorial_tlcmicro_string_detail_grades: כיתות ב 'ומעלה
   tutorial_imathematician_string_detail_grades: Grades 2-8
-  tutorial_tlcmagic_string_detail_grades: Grades 6+
+  tutorial_tlcmagic_string_detail_grades: כיתה ב 'ומעלה
   tutorial_scratchmus_string_detail_grades: Grades 2-8
   tutorial_scratchanim_string_detail_grades: Grades 2-8
   tutorial_scratchfly_string_detail_grades: Grades 2-8
-  tutorial_tynkerarc_string_detail_grades: Grades 2+
-  tutorial_grokffpython_string_detail_grades: Grades 6+
-  tutorial_grokffblock_string_detail_grades: Grades 6+
-  tutorial_grokeliza_string_detail_grades: Grades 6+
-  tutorial_tynkercan_string_detail_grades: Grades 2+
-  tutorial_grokflags_string_detail_grades: Grades 6+
+  tutorial_tynkerarc_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_grokffpython_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_grokffblock_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_grokeliza_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_tynkercan_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_grokflags_string_detail_grades: כיתה ב 'ומעלה
   tutorial_robomind_string_detail_grades: Grades 2-8
   tutorial_scratchanimwork_string_detail_grades: Grades 2-8
   tutorial_adventureq_string_detail_grades: Grades 2-5
-  tutorial_khan-es_string_detail_grades: Grades 6+
-  tutorial_kpt_string_detail_grades: Grades 6+
-  tutorial_kpl_string_detail_grades: Grades 6+
-  tutorial_khe_string_detail_grades: Grades 6+
-  tutorial_kfr_string_detail_grades: Grades 6+
-  tutorial_app-inventor_string_detail_grades: Grades 6+
+  tutorial_khan-es_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_kpt_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_kpl_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_khe_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_kfr_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_app-inventor_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bits_string_detail_grades: Grades 2-5
-  tutorial_blockly_string_detail_grades: Grades 6+
+  tutorial_blockly_string_detail_grades: כיתה ב 'ומעלה
   tutorial_tynker_string_detail_grades: אל תציג
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: אל תציג
-  tutorial_mky_string_detail_grades: Grades 2+
-  tutorial_spellcraft_string_detail_grades: Grades 6+
+  tutorial_mky_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_spellcraft_string_detail_grades: כיתה ב 'ומעלה
   tutorial_pirates_string_detail_grades: Grades 2-8
-  tutorial_csfirst_string_detail_grades: Grades 2+
+  tutorial_csfirst_string_detail_grades: כיתות ב 'ומעלה
   tutorial_loopedy_string_detail_grades: Grades 2-5
   tutorial_dsw_string_detail_grades: אל תציג
   tutorial_dswb_string_detail_grades: אל תציג
@@ -6658,7 +6676,7 @@ he:
   tutorial_scratch_string_detail_grades: Grades 2-5
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: אל תציג
-  tutorial_hrm_string_detail_grades: Grades 6+
+  tutorial_hrm_string_detail_grades: כיתה ב 'ומעלה
   tutorial_ice-age_string_detail_grades: אל תציג
   tutorial_koapp_string_detail_grades: אל תציג
   tutorial_lightbot-intl_string_detail_grades: Pre-reader - Grade 8
@@ -6666,78 +6684,78 @@ he:
   tutorial_smc_string_detail_grades: אל תציג
   tutorial_minecraft-2016_string_detail_grades: אל תציג
   tutorial_thinkersmith-es_string_detail_grades: Grades 2-5
-  tutorial_pixie_string_detail_grades: Grades 2+
+  tutorial_pixie_string_detail_grades: כיתות ב 'ומעלה
   tutorial_play_string_detail_grades: אל תציג
   tutorial_robomind-nl_string_detail_grades: Grades 2-8
-  tutorial_spheroi_string_detail_grades: Grades 2+
-  tutorial_spherol_string_detail_grades: Grades 2+
-  tutorial_spherov_string_detail_grades: Grades 2+
+  tutorial_spheroi_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_spherol_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_spherov_string_detail_grades: כיתות ב 'ומעלה
   tutorial_swb_string_detail_grades: אל תציג
   tutorial_build-a-galaxy_string_detail_grades: אל תציג
-  tutorial_alicesims_string_detail_grades: Grades 6+
+  tutorial_alicesims_string_detail_grades: כיתה ב 'ומעלה
   tutorial_tchr_string_detail_grades: אל תציג
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tap_string_detail_grades: Grades 2+
+  tutorial_tap_string_detail_grades: כיתות ב 'ומעלה
   tutorial_cintl_string_detail_grades: אל תציג
   tutorial_itchstop_string_detail_grades: Grades 2-8
   tutorial_tynkerpn_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerpd_string_detail_grades: Pre-reader - Grade 5
   tutorial_persistence_string_detail_grades: Pre-reader+
   tutorial_getloopy_string_detail_grades: Pre-reader+
-  tutorial_createface_string_detail_grades: Grades 2+
+  tutorial_createface_string_detail_grades: כיתות ב 'ומעלה
   tutorial_happymaps_string_detail_grades: Pre-reader+
   tutorial_moveit_string_detail_grades: Pre-reader+
   tutorial_bigevent_string_detail_grades: Pre-reader+
-  tutorial_gpp_string_detail_grades: Grades 2+
+  tutorial_gpp_string_detail_grades: כיתות ב 'ומעלה
   tutorial_foosgame_string_detail_grades: Pre-reader - Grade 5
   tutorial_solopython_string_detail_grades: כיתות ט ומעלה
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
   tutorial_kodableadv_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkertj_string_detail_grades: Grades 6+
-  tutorial_wolframa_string_detail_grades: Grades 6+
-  tutorial_wolframm_string_detail_grades: Grades 6+
-  tutorial_wolframspi_string_detail_grades: Grades 6+
-  tutorial_wolframsph_string_detail_grades: Grades 6+
-  tutorial_wolframp_string_detail_grades: Grades 6+
-  tutorial_wolframn_string_detail_grades: Grades 6+
+  tutorial_tynkertj_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_wolframa_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_wolframm_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_wolframspi_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_wolframsph_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_wolframp_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_wolframn_string_detail_grades: כיתה ב 'ומעלה
   tutorial_soloweb_string_detail_grades: כיתות ט ומעלה
-  tutorial_khanweb_string_detail_grades: Grades 2+
-  tutorial_khandata_string_detail_grades: Grades 6+
-  tutorial_robomeshiq_string_detail_grades: Grades 2+
-  tutorial_googlelogo_string_detail_grades: Grades 2+
-  tutorial_playtune_string_detail_grades: Grades 6+
-  tutorial_computeit_string_detail_grades: Grades 2+
+  tutorial_khanweb_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_khandata_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_robomeshiq_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_googlelogo_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_playtune_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_computeit_string_detail_grades: כיתות ב 'ומעלה
   tutorial_codesterssj_string_detail_grades: Grades 2-8
-  tutorial_cmchat_string_detail_grades: Grades 6+
+  tutorial_cmchat_string_detail_grades: כיתה ב 'ומעלה
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
-  tutorial_cmbuild_string_detail_grades: Grades 6+
+  tutorial_cmbuild_string_detail_grades: כיתה ב 'ומעלה
   tutorial_robotrattle_string_detail_grades: Grades 2-8
   tutorial_codestersh_string_detail_grades: Grades 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Grades 6+
-  tutorial_ccbinary_string_detail_grades: Grades 6+
-  tutorial_codehsturtle_string_detail_grades: Grades 6+
-  tutorial_grokhd_string_detail_grades: Grades 6+
-  tutorial_grokem_string_detail_grades: Grades 6+
+  tutorial_codehsdigipixel_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ccbinary_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codehsturtle_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_grokhd_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_grokem_string_detail_grades: כיתה ב 'ומעלה
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
   tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: כיתות ט ומעלה
   tutorial_raspipong_string_detail_grades: כיתות ט ומעלה
-  tutorial_codehsvr_string_detail_grades: Grades 6+
+  tutorial_codehsvr_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codesterstp_string_detail_grades: Grades 6-8
   tutorial_codestersbb_string_detail_grades: Grades 6-8
   tutorial_gfcrossyroad_string_detail_grades: כיתות ט ומעלה
   tutorial_googleww_string_detail_grades: כיתות ט ומעלה
-  tutorial_codehsjsapp_string_detail_grades: Grades 6+
+  tutorial_codehsjsapp_string_detail_grades: כיתה ב 'ומעלה
   tutorial_gfmihi_string_detail_grades: כיתות ט ומעלה
   tutorial_hopdropphone_string_detail_grades: Grades 2-8
   tutorial_techfaa_string_detail_grades: University
   tutorial_codehsjsgraph_string_detail_grades: כיתות ט ומעלה
-  tutorial_thunkable_string_detail_grades: Grades 6+
+  tutorial_thunkable_string_detail_grades: כיתה ב 'ומעלה
   tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
-  tutorial_codecar_string_detail_grades: Grades 6+
+  tutorial_codecar_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codesterscp_string_detail_grades: Grades 6-8
   tutorial_grokpetblock_string_detail_grades: Grades 6-8
   tutorial_techbim_string_detail_grades: University
@@ -6749,8 +6767,8 @@ he:
   tutorial_myradream_string_detail_grades: Grades 2-8
   tutorial_thinkfun_string_detail_grades: Grades 2-8
   tutorial_hopfireworks_string_detail_grades: Grades 2-8
-  tutorial_grokspace_string_detail_grades: Grades 6+
-  tutorial_codehspython_string_detail_grades: Grades 6+
+  tutorial_grokspace_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codehspython_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codehsjava_string_detail_grades: כיתות ט ומעלה
   tutorial_techioda_string_detail_grades: University
   tutorial_grokmonster_string_detail_grades: Grades 2-5
@@ -6758,8 +6776,8 @@ he:
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
   tutorial_techiogsr_string_detail_grades: University
-  tutorial_groktunnel_string_detail_grades: Grades 6+
-  tutorial_stemcod_string_detail_grades: Grades 6+
+  tutorial_groktunnel_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_stemcod_string_detail_grades: כיתה ב 'ומעלה
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
   tutorial_nyblebot_string_detail_grades: Grades 2-5
@@ -6767,35 +6785,35 @@ he:
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
-  tutorial_gpbcatapult_string_detail_grades: Grades 6+
-  tutorial_quorumastro_string_detail_grades: Grades 6+
+  tutorial_gpbcatapult_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_quorumastro_string_detail_grades: כיתה ב 'ומעלה
   tutorial_alicewonder_string_detail_grades: Grades 2-5
   tutorial_rginter_string_detail_grades: Grades 6-8
-  tutorial_cssgrid_string_detail_grades: Grades 6+
+  tutorial_cssgrid_string_detail_grades: כיתה ב 'ומעלה
   tutorial_jshero_string_detail_grades: כיתות ט ומעלה
   tutorial_codemojipy_string_detail_grades: Grades 2-5
-  tutorial_nclabdrone_string_detail_grades: Grades 6+
-  tutorial_gpbcircle_string_detail_grades: Grades 6+
-  tutorial_gpbpaint_string_detail_grades: Grades 6+
-  tutorial_cocomarcade_string_detail_grades: Grades 6+
+  tutorial_nclabdrone_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gpbcircle_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gpbpaint_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_cocomarcade_string_detail_grades: כיתה ב 'ומעלה
   tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Grades 6-8
-  tutorial_codedj_string_detail_grades: Grades 6+
-  tutorial_rgadvan_string_detail_grades: Grades 6+
+  tutorial_codedj_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_rgadvan_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codehsrn_string_detail_grades: כיתות ט ומעלה
-  tutorial_codehswd_string_detail_grades: Grades 6+
+  tutorial_codehswd_string_detail_grades: כיתה ב 'ומעלה
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: Grades 6+
-  tutorial_ozoexped_string_detail_grades: Grades 6+
+  tutorial_ozoevo_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ozoexped_string_detail_grades: כיתה ב 'ומעלה
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
-  tutorial_ozoeclipse_string_detail_grades: Grades 2+
-  tutorial_ozosimulator_string_detail_grades: Grades 6+
-  tutorial_ozoalgorithm_string_detail_grades: Grades 6+
-  tutorial_ozotimer_string_detail_grades: Grades 6+
+  tutorial_ozoeclipse_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_ozosimulator_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ozoalgorithm_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ozotimer_string_detail_grades: כיתה ב 'ומעלה
   tutorial_ozohabits_string_detail_grades: All ages
   tutorial_ozoprogram_string_detail_grades: Grades 2-8
-  tutorial_ozopair_string_detail_grades: Grades 2+
+  tutorial_ozopair_string_detail_grades: כיתות ב 'ומעלה
   tutorial_codesnoopy_string_detail_grades: Pre-reader - Grade 5
   tutorial_applabintro_string_detail_grades: כיתות ט ומעלה
   tutorial_cslartist_string_detail_grades: Pre-reader - Grade 5
@@ -6814,26 +6832,26 @@ he:
   tutorial_tfunplug_string_detail_grades: Grades 6-8
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
-  tutorial_lblogic_string_detail_grades: Grades 2+
-  tutorial_lbworld_string_detail_grades: Grades 6+
+  tutorial_lblogic_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_lbworld_string_detail_grades: כיתה ב 'ומעלה
   tutorial_lbloops_string_detail_grades: Grades 2-8
-  tutorial_lbtug_string_detail_grades: Grades 6+
-  tutorial_lbpotato_string_detail_grades: Grades 2+
-  tutorial_lbguitar_string_detail_grades: Grades 2+
+  tutorial_lbtug_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_lbpotato_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_lbguitar_string_detail_grades: כיתות ב 'ומעלה
   tutorial_lbio_string_detail_grades: Grades 2-8
   tutorial_wonpuppy_string_detail_grades: Grades 2-5
-  tutorial_woncue_string_detail_grades: Grades 2+
+  tutorial_woncue_string_detail_grades: כיתות ב 'ומעלה
   tutorial_wonzoo_string_detail_grades: Grades 2-5
   tutorial_wontrip_string_detail_grades: Grades 2-8
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wonsecret_string_detail_grades: Grades 6+
+  tutorial_wonsecret_string_detail_grades: כיתה ב 'ומעלה
   tutorial_hsscience_string_detail_grades: Grades 2-8
-  tutorial_popculture_string_detail_grades: Grades 6+
-  tutorial_legorobust_string_detail_grades: Grades 2+
-  tutorial_legoplants_string_detail_grades: Grades 2+
-  tutorial_legopark_string_detail_grades: Grades 6+
-  tutorial_legodetect_string_detail_grades: Grades 6+
-  tutorial_legolight_string_detail_grades: Grades 6+
+  tutorial_popculture_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_legorobust_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_legoplants_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_legopark_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_legodetect_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_legolight_string_detail_grades: כיתה ב 'ומעלה
   tutorial_alexa_string_detail_grades: כיתות ט ומעלה
   tutorial_grokpetmicro_string_detail_grades: Grades 6-8
   tutorial_pirateplunder_string_detail_grades: Grades 2-8
@@ -6842,24 +6860,24 @@ he:
   tutorial_cajump_string_detail_grades: Grades 2-8
   tutorial_carest_string_detail_grades: Grades 2-8
   tutorial_accai_string_detail_grades: Grades 2-8
-  tutorial_vceclipse_string_detail_grades: Grades 6+
-  tutorial_pmzero_string_detail_grades: Grades 6+
+  tutorial_vceclipse_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_pmzero_string_detail_grades: כיתה ב 'ומעלה
   tutorial_hsela_string_detail_grades: Grades 2-8
   tutorial_ticklear_string_detail_grades: Grades 2-8
   tutorial_bcrobot_string_detail_grades: Grades 2-8
-  tutorial_bcsnow_string_detail_grades: Grades 6+
-  tutorial_ifly_string_detail_grades: Grades 2+
+  tutorial_bcsnow_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ifly_string_detail_grades: כיתות ב 'ומעלה
   tutorial_idowedo_string_detail_grades: Grades 2-8
-  tutorial_diggindwarf_string_detail_grades: Grades 6+
+  tutorial_diggindwarf_string_detail_grades: כיתה ב 'ומעלה
   tutorial_rmedr_string_detail_grades: Grades 2-8
-  tutorial_spheroit_string_detail_grades: Grades 2+
-  tutorial_gameofcodes_string_detail_grades: Grades 2+
-  tutorial_blocklygames_string_detail_grades: Grades 6+
-  tutorial_spherohello_string_detail_grades: Grades 6+
-  tutorial_spheroarcade_string_detail_grades: Grades 6+
-  tutorial_bcpy1_string_detail_grades: Grades 6+
-  tutorial_bcpy2_string_detail_grades: Grades 6+
-  tutorial_bcjs1_string_detail_grades: Grades 6+
+  tutorial_spheroit_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_gameofcodes_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_blocklygames_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_spherohello_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_spheroarcade_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_bcpy1_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_bcpy2_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_bcjs1_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bcjs2_string_detail_grades: כיתות ט ומעלה
   tutorial_3dbearmars_string_detail_grades: Grades 2-8
   tutorial_alexaskill_string_detail_grades: Grades 2-8
@@ -6868,65 +6886,65 @@ he:
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
   tutorial_blockscadclock_string_detail_grades: כיתות ט ומעלה
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
-  tutorial_blockscadicecream_string_detail_grades: Grades 6+
+  tutorial_blockscadicecream_string_detail_grades: כיתה ב 'ומעלה
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
-  tutorial_bsgridlight_string_detail_grades: Grades 2+
-  tutorial_bpartscratch_string_detail_grades: Grades 6+
-  tutorial_bpartvid_string_detail_grades: Grades 6+
+  tutorial_bsgridlight_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_bpartscratch_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_bpartvid_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
   tutorial_bpenglishvid_string_detail_grades: Grades 2-8
-  tutorial_bphealthscratch_string_detail_grades: Grades 2+
-  tutorial_bphealthvid_string_detail_grades: Grades 6+
+  tutorial_bphealthscratch_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_bphealthvid_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
-  tutorial_bpmathvid_string_detail_grades: Grades 6+
+  tutorial_bpmathvid_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
   tutorial_bpmlkvid_string_detail_grades: Grades 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
   tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
   tutorial_bpsciencevid_string_detail_grades: Grades 6-8
-  tutorial_bptechscratch_string_detail_grades: Grades 6+
-  tutorial_bptechvid_string_detail_grades: Grades 6+
-  tutorial_caflags_string_detail_grades: Grades 6+
+  tutorial_bptechscratch_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_bptechvid_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_caflags_string_detail_grades: כיתה ב 'ומעלה
   tutorial_matariki_string_detail_grades: Grades 2-5
-  tutorial_carestaurant_string_detail_grades: Grades 2+
+  tutorial_carestaurant_string_detail_grades: כיתות ב 'ומעלה
   tutorial_casea_string_detail_grades: Grades 2-5
   tutorial_cashield_string_detail_grades: Grades 2-8
   tutorial_ccwslimer_string_detail_grades: Grades 2-8
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
-  tutorial_boatrace_string_detail_grades: Grades 2+
-  tutorial_ccplay_string_detail_grades: Grades 6+
+  tutorial_boatrace_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_ccplay_string_detail_grades: כיתה ב 'ומעלה
   tutorial_grinch_string_detail_grades: Grades 2-8
   tutorial_codehsart_string_detail_grades: כיתות ט ומעלה
   tutorial_codehsbitcoin_string_detail_grades: כיתות ט ומעלה
   tutorial_codehsblockchain_string_detail_grades: כיתות ט ומעלה
-  tutorial_codehscipher_string_detail_grades: Grades 6+
+  tutorial_codehscipher_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codehscollision_string_detail_grades: כיתות ט ומעלה
-  tutorial_codehsmath_string_detail_grades: Grades 6+
-  tutorial_codehsmusic_string_detail_grades: Grades 6+
-  tutorial_codehssports_string_detail_grades: Grades 6+
+  tutorial_codehsmath_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codehsmusic_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codehssports_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codemojipizza_string_detail_grades: Grades 2-8
-  tutorial_moonlander_string_detail_grades: Grades 6+
+  tutorial_moonlander_string_detail_grades: כיתה ב 'ומעלה
   tutorial_sushicards_string_detail_grades: Grades 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 6+
-  tutorial_codesterstshirt_string_detail_grades: Grades 6+
+  tutorial_codesterslogo_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codesterstshirt_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
-  tutorial_codinismhero_string_detail_grades: Grades 2+
-  tutorial_discovery_string_detail_grades: Grades 2+
-  tutorial_csfirstname_string_detail_grades: Grades 2+
-  tutorial_obstaclecourse_string_detail_grades: Grades 2+
-  tutorial_edisonmove_string_detail_grades: Grades 6+
-  tutorial_edisonspider_string_detail_grades: Grades 6+
+  tutorial_codinismhero_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_discovery_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_csfirstname_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_obstaclecourse_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_edisonmove_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_edisonspider_string_detail_grades: כיתה ב 'ומעלה
   tutorial_edisonspotlight_string_detail_grades: Grades 2-8
-  tutorial_firiapython_string_detail_grades: Grades 6+
-  tutorial_gamefrootsquid_string_detail_grades: Grades 6+
-  tutorial_duckpiano_string_detail_grades: Grades 6+
-  tutorial_gpsound_string_detail_grades: Grades 6+
+  tutorial_firiapython_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gamefrootsquid_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_duckpiano_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gpsound_string_detail_grades: כיתה ב 'ומעלה
   tutorial_groklearningpython_string_detail_grades: כיתות ט ומעלה
   tutorial_htmltimetravel_string_detail_grades: כיתות ט ומעלה
   tutorial_hp_flappy_string_detail_grades: כיתות ט ומעלה
@@ -6936,47 +6954,47 @@ he:
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Grades 2-8
   tutorial_kanohp_string_detail_grades: Grades 2-8
-  tutorial_khanwebpages_string_detail_grades: Grades 6+
+  tutorial_khanwebpages_string_detail_grades: כיתה ב 'ומעלה
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wizard_string_detail_grades: Grades 6+
-  tutorial_mbscratchcards_string_detail_grades: Grades 2+
-  tutorial_mbswiftplaygrounds_string_detail_grades: Grades 2+
-  tutorial_mbbuttons_string_detail_grades: Grades 6+
-  tutorial_meteor_string_detail_grades: Grades 6+
-  tutorial_ballbounce_string_detail_grades: Grades 6+
-  tutorial_mitcodi_string_detail_grades: Grades 6+
-  tutorial_mitdoodle_string_detail_grades: Grades 6+
-  tutorial_talktome_string_detail_grades: Grades 6+
-  tutorial_mobilecspmap_string_detail_grades: Grades 6+
-  tutorial_ozorandom_string_detail_grades: Grades 2+
+  tutorial_wizard_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_mbscratchcards_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_mbswiftplaygrounds_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_mbbuttons_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_meteor_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ballbounce_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_mitcodi_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_mitdoodle_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_talktome_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_mobilecspmap_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ozorandom_string_detail_grades: כיתות ב 'ומעלה
   tutorial_ozotroll_string_detail_grades: Grades 6-8
   tutorial_peblioart_string_detail_grades: כיתות ט ומעלה
-  tutorial_astropi_string_detail_grades: Grades 6+
+  tutorial_astropi_string_detail_grades: כיתה ב 'ומעלה
   tutorial_rgart_string_detail_grades: Grades 2-5
   tutorial_rgengineer_string_detail_grades: Grades 2-5
   tutorial_rgmath_string_detail_grades: Grades 2-5
   tutorial_rgscience_string_detail_grades: Grades 2-5
   tutorial_rgtech_string_detail_grades: Grades 2-5
-  tutorial_robotmagic3d_string_detail_grades: Grades 6+
+  tutorial_robotmagic3d_string_detail_grades: כיתה ב 'ומעלה
   tutorial_robotmagicflappy_string_detail_grades: כיתות ט ומעלה
-  tutorial_scratchadventure_string_detail_grades: Grades 2+
-  tutorial_scratchtalk_string_detail_grades: Grades 2+
+  tutorial_scratchadventure_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_scratchtalk_string_detail_grades: כיתות ב 'ומעלה
   tutorial_scratchjrstory_string_detail_grades: Grades 2-5
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Grades 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
-  tutorial_spherofunctions_string_detail_grades: Grades 6+
+  tutorial_spherofunctions_string_detail_grades: כיתה ב 'ומעלה
   tutorial_spheroinfrared_string_detail_grades: Grades 6-8
   tutorial_spherolightsensor_string_detail_grades: Grades 2-8
   tutorial_spheromansion_string_detail_grades: Grades 2-8
   tutorial_roadblocks_string_detail_grades: Grades 2-8
-  tutorial_spherotext2_string_detail_grades: Grades 6+
-  tutorial_spherotext3_string_detail_grades: Grades 6+
-  tutorial_spherotext4_string_detail_grades: Grades 6+
+  tutorial_spherotext2_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_spherotext3_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_spherotext4_string_detail_grades: כיתה ב 'ומעלה
   tutorial_spheroraptor_string_detail_grades: Grades 2-8
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
   tutorial_stemplanetoids_string_detail_grades: כיתות ט ומעלה
@@ -6984,151 +7002,155 @@ he:
   tutorial_algobot_string_detail_grades: Grades 2-8
   tutorial_thunkableapps_string_detail_grades: כיתות ט ומעלה
   tutorial_toxicodedot_string_detail_grades: Grades 2-8
-  tutorial_gcactions_string_detail_grades: Grades 6+
-  tutorial_gccomparators_string_detail_grades: Grades 6+
-  tutorial_gcconditions_string_detail_grades: Grades 6+
-  tutorial_gccreate_string_detail_grades: Grades 6+
-  tutorial_gcevents_string_detail_grades: Grades 6+
-  tutorial_gcloops_string_detail_grades: Grades 6+
-  tutorial_gcvariables_string_detail_grades: Grades 6+
+  tutorial_gcactions_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gccomparators_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gcconditions_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gccreate_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gcevents_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gcloops_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gcvariables_string_detail_grades: כיתה ב 'ומעלה
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
-  tutorial_crystal_string_detail_grades: Grades 2+
-  tutorial_landscape_string_detail_grades: Grades 6+
+  tutorial_crystal_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_landscape_string_detail_grades: כיתה ב 'ומעלה
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
-  tutorial_superhero_string_detail_grades: Grades 6+
-  tutorial_vidcodeplastic_string_detail_grades: Grades 6+
-  tutorial_vidcodetypeface_string_detail_grades: Grades 6+
+  tutorial_superhero_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_vidcodeplastic_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_vidcodetypeface_string_detail_grades: כיתה ב 'ומעלה
   tutorial_washustorm_string_detail_grades: Grades 2-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
-  tutorial_googlerookie_string_detail_grades: Grades 6+
+  tutorial_googlerookie_string_detail_grades: כיתה ב 'ומעלה
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
   tutorial_mazyad_string_detail_grades: Pre-reader - Grade 5
-  tutorial_gamemaker_string_detail_grades: Grades 2+
-  tutorial_duckrace_string_detail_grades: Grades 2+
-  tutorial_allcancodeapps_string_detail_grades: Grades 6+
+  tutorial_gamemaker_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_duckrace_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_allcancodeapps_string_detail_grades: כיתה ב 'ומעלה
   tutorial_n2y_string_detail_grades: Pre-reader+
-  tutorial_microsoftarcade_string_detail_grades: Grades 2+
+  tutorial_microsoftarcade_string_detail_grades: כיתות ב 'ומעלה
   tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
-  tutorial_toxicodepython_string_detail_grades: Grades 6+
-  tutorial_codecombatozaria_string_detail_grades: Grades 6+
-  tutorial_vidcodedate_string_detail_grades: Grades 6+
+  tutorial_toxicodepython_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codecombatozaria_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_vidcodedate_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
   tutorial_codespeakhappy_string_detail_grades: Grades 2-8
-  tutorial_grokimage_string_detail_grades: Grades 6+
+  tutorial_grokimage_string_detail_grades: כיתה ב 'ומעלה
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
-  tutorial_rpstress_string_detail_grades: Grades 2+
+  tutorial_rpstress_string_detail_grades: כיתות ב 'ומעלה
   tutorial_bsdcause_string_detail_grades: כיתות ט ומעלה
-  tutorial_vidcodeanimoji_string_detail_grades: Grades 2+
-  tutorial_bsdinspire_string_detail_grades: Grades 6+
-  tutorial_tttractor_string_detail_grades: Grades 6+
+  tutorial_vidcodeanimoji_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_vidcodeanimojies_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_bsdinspire_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_tttractor_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
   tutorial_scigirlsquest_string_detail_grades: Grades 2-8
-  tutorial_codespeakbreathe_string_detail_grades: Grades 2+
-  tutorial_vidcodeface_string_detail_grades: Grades 6+
-  tutorial_educodemaze_string_detail_grades: Grades 6+
-  tutorial_educoderace_string_detail_grades: Grades 6+
+  tutorial_codespeakbreathe_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_vidcodeface_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_educodemaze_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_educoderace_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codespeakchatbot_string_detail_grades: Grades 2-8
-  tutorial_gamefrootgames_string_detail_grades: Grades 6+
+  tutorial_gamefrootgames_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codespeakgrandparent_string_detail_grades: Grades 2-8
-  tutorial_educodekingdom_string_detail_grades: Grades 6+
+  tutorial_educodekingdom_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codehsdata_string_detail_grades: כיתות ט ומעלה
-  tutorial_educodecake_string_detail_grades: Grades 6+
-  tutorial_ttsecond_string_detail_grades: Grades 6+
-  tutorial_bsdtrivia_string_detail_grades: Grades 6+
+  tutorial_educodecake_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ttsecond_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_bsdtrivia_string_detail_grades: כיתה ב 'ומעלה
   tutorial_csfirstdialogue_string_detail_grades: Grades 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersdistance_string_detail_grades: Grades 6+
-  tutorial_itchspace_string_detail_grades: Grades 6+
-  tutorial_vidcodemagic_string_detail_grades: Grades 2+
-  tutorial_codespeakmeal_string_detail_grades: Grades 6+
+  tutorial_codestersdistance_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_itchspace_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_vidcodemagic_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_vidcodemagices_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_codespeakmeal_string_detail_grades: כיתה ב 'ומעלה
   tutorial_itchfish_string_detail_grades: Grades 2-8
-  tutorial_bsdwebsite_string_detail_grades: Grades 6+
+  tutorial_bsdwebsite_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codespeaktime_string_detail_grades: Grades 2-8
-  tutorial_itchwebcam_string_detail_grades: Grades 6+
+  tutorial_itchwebcam_string_detail_grades: כיתה ב 'ומעלה
   tutorial_itchball_string_detail_grades: Grades 2-8
   tutorial_ttrace_string_detail_grades: Grades 6-8
-  tutorial_plethora_string_detail_grades: Grades 2+
-  tutorial_educodesecret_string_detail_grades: Grades 6+
-  tutorial_itchshapes_string_detail_grades: Grades 6+
+  tutorial_plethora_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_educodesecret_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_itchshapes_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: כיתה ב 'ומעלה
   tutorial_educativechatbot_string_detail_grades: כיתות ט ומעלה
-  tutorial_educodebasics_string_detail_grades: Grades 6+
-  tutorial_codehsdesign_string_detail_grades: Grades 6+
-  tutorial_htmlacademyphp_string_detail_grades: Grades 6+
-  tutorial_gamefrootdistance_string_detail_grades: Grades 2+
+  tutorial_educodebasics_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codehsdesign_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_htmlacademyphp_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_gamefrootdistance_string_detail_grades: כיתות ב 'ומעלה
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Grades 6-8
-  tutorial_cuttle_string_detail_grades: Grades 6+
+  tutorial_cuttle_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bsdjokes_string_detail_grades: Grades 6-8
-  tutorial_rptree_string_detail_grades: Grades 6+
-  tutorial_codestersunity_string_detail_grades: Grades 6+
-  tutorial_codesterssoccer_string_detail_grades: Grades 6+
+  tutorial_rptree_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codestersunity_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codesterssoccer_string_detail_grades: כיתה ב 'ומעלה
   tutorial_breakoutlock_string_detail_grades: Grades 2-8
-  tutorial_thunkablemask_string_detail_grades: Grades 6+
+  tutorial_thunkablemask_string_detail_grades: כיתה ב 'ומעלה
   tutorial_cafarming_string_detail_grades: Grades 2-8
   tutorial_blocksmithyeti_string_detail_grades: כיתות ט ומעלה
-  tutorial_codecapture_string_detail_grades: Grades 6+
+  tutorial_codecapture_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codehslitter_string_detail_grades: Grades 6-8
   tutorial_bsdocean_string_detail_grades: Grades 6-8
-  tutorial_itchplatformer_string_detail_grades: Grades 6+
-  tutorial_codejika_string_detail_grades: Grades 2-8
+  tutorial_itchplatformer_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codejika_string_detail_grades: כיתה ב 'ומעלה
   tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
   tutorial_rmagicequity_string_detail_grades: Grades 6-8
   tutorial_ttfreestyle_string_detail_grades: Grades 6-8
-  tutorial_ozobotcolor2_string_detail_grades: Grades 2+
-  tutorial_ozobotcolor3_string_detail_grades: Grades 2+
-  tutorial_clcarbon_string_detail_grades: Grades 6+
+  tutorial_ozobotcolor2_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_ozobotcolor3_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_clcarbon_string_detail_grades: כיתה ב 'ומעלה
   tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
-  tutorial_scigirlscc_string_detail_grades: Grades 2+
+  tutorial_scigirlscc_string_detail_grades: כיתות ב 'ומעלה
   tutorial_irobotpicture_string_detail_grades: Grades 2-8
   tutorial_kcjmyself_string_detail_grades: Grades 2-8
   tutorial_nearpodalgorithms_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodrop_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozobotcolor1_string_detail_grades: Grades 2+
-  tutorial_scigirlspixels_string_detail_grades: Grades 2+
+  tutorial_ozobotcolor1_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_scigirlspixels_string_detail_grades: כיתות ב 'ומעלה
   tutorial_kcjheroines_string_detail_grades: Grades 2-8
   tutorial_ozobotvalue_string_detail_grades: Grades 2-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
-  tutorial_clfashion2_string_detail_grades: Grades 6+
-  tutorial_ai4all_string_detail_grades: Grades 6+
-  tutorial_cldata_string_detail_grades: Grades 6+
+  tutorial_clfashion2_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ai4all_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_cldata_string_detail_grades: כיתה ב 'ומעלה
   tutorial_spheroinputs_string_detail_grades: Grades 2-8
   tutorial_edisoncount_string_detail_grades: Grades 2-8
   tutorial_spheroloops_string_detail_grades: Grades 2-8
   tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
-  tutorial_clfashion1_string_detail_grades: Grades 6+
+  tutorial_clfashion1_string_detail_grades: כיתה ב 'ומעלה
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
   tutorial_edisonmystery_string_detail_grades: Grades 6-8
   tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
-  tutorial_ozobotknow_string_detail_grades: Grades 2+
+  tutorial_ozobotknow_string_detail_grades: כיתות ב 'ומעלה
   tutorial_imagilabs_string_detail_grades: Grades 2-8
   tutorial_irobotsimulator_string_detail_grades: Grades 2-8
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
-  tutorial_firiavirtual_string_detail_grades: Grades 6+
+  tutorial_firiavirtual_string_detail_grades: כיתה ב 'ומעלה
   tutorial_irobotguesscode_string_detail_grades: Grades 2-8
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
-  tutorial_nasa3d_string_detail_grades: Grades 6+
-  tutorial_blupants_string_detail_grades: Grades 6+
+  tutorial_nasa3d_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_blupants_string_detail_grades: כיתה ב 'ומעלה
   tutorial_legodance_string_detail_grades: Grades 6-8
   tutorial_nearpodcoding_string_detail_grades: כיתות ט ומעלה
-  tutorial_kcjplastic_string_detail_grades: Grades 2+
+  tutorial_kcjplastic_string_detail_grades: כיתות ב 'ומעלה
   tutorial_legojourney_string_detail_grades: Grades 2-8
   tutorial_legohopper_string_detail_grades: Grades 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Grades 6+
+  tutorial_catrobatembroidery_string_detail_grades: כיתה ב 'ומעלה
   tutorial_irobotphone_string_detail_grades: Grades 2-8
   tutorial_codeguppydraw_string_detail_grades: Grades 6-8
   tutorial_codejumper_string_detail_grades: Grades 2-8
-  tutorial_meeempathy_string_detail_grades: Grades 2+
+  tutorial_meeempathy_string_detail_grades: כיתות ב 'ומעלה
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
-  tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_danceparty_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_chibitronics_string_platforms: All modern browsers, Screen reader
   tutorial_athlete_string_platforms: All modern browsers
-  tutorial_moana_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_moana_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_star-wars_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון וטאבלט),
     iPad, iPhone
   tutorial_gumadventure_string_platforms: All modern browsers
@@ -7156,7 +7178,8 @@ he:
   tutorial_tynkerana_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_vidcard_string_platforms: Chrome
-  tutorial_spritebox_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_spritebox_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_tynkerch_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
   tutorial_lightbot_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון וטאבלט),
@@ -7174,7 +7197,7 @@ he:
   tutorial_tynkersol_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
   tutorial_itchg_string_platforms: Chrome, Firefox, Android Tablet
-  tutorial_como_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_como_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_processfound_string_platforms: Chrome, Firefox, Safari
   tutorial_tynkerhomo_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android tablet, iPad
@@ -7237,7 +7260,7 @@ he:
   tutorial_zulama_string_platforms: Internet Explorer 11, Chrome, Firefox, Safari
   tutorial_capost_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
-  tutorial_marco_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_marco_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_codestersflappybike_string_platforms: All modern browsers
   tutorial_kanopong_string_platforms: All modern browsers
   tutorial_tynkerright_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
@@ -7247,7 +7270,7 @@ he:
     Firefox, Safari
   tutorial_bamboo_string_platforms: Chrome
   tutorial_robojav_string_platforms: All modern browsers
-  tutorial_roboba_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_roboba_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_knodsnake_string_platforms: All modern browsers
   tutorial_soccharater_string_platforms: All modern browsers
   tutorial_silent_string_platforms: All modern browsers
@@ -7260,10 +7283,11 @@ he:
   tutorial_codesterstransform_string_platforms: All modern browsers
   tutorial_flexfrog_string_platforms: All modern browsers
   tutorial_codemoji_string_platforms: אל תציג
-  tutorial_robobii_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_robobm_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codingrobots_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_robob_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_robobii_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
+  tutorial_robobm_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
+  tutorial_codingrobots_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_robob_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_coders_string_platforms: All modern browsers
   tutorial_tynkerhw_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari
@@ -7364,9 +7388,12 @@ he:
   tutorial_scratchanim_string_platforms: All modern browsers
   tutorial_scratchfly_string_platforms: All modern browsers
   tutorial_tynkerarc_string_platforms: All modern browsers
-  tutorial_grokffpython_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_grokffblock_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_grokeliza_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_grokffpython_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_grokffblock_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_grokeliza_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_tynkercan_string_platforms: All modern browsers
   tutorial_grokflags_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Firefox, Safari, Android Chrome (mobile-optimized), iOS (mobile-optimized)
@@ -7468,9 +7495,10 @@ he:
   tutorial_codesterssj_string_platforms: All modern browsers
   tutorial_cmchat_string_platforms: All modern browsers
   tutorial_tynkerdb_string_platforms: All modern browsers, iPad
-  tutorial_cmbuild_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_cmbuild_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_robotrattle_string_platforms: Chrome, Firefox, Android tablet, iPad
-  tutorial_codestersh_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codestersh_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_codehsdigipixel_string_platforms: Chrome, Firefox, Safari
   tutorial_ccbinary_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome
   tutorial_codehsturtle_string_platforms: Chrome, Firefox, Safari
@@ -7478,16 +7506,19 @@ he:
   tutorial_grokem_string_platforms: All modern browsers
   tutorial_kodmaze_string_platforms: All modern browsers, iPad
   tutorial_codestersa_string_platforms: All modern browsers
-  tutorial_cmdodo_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_cmdodo_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_tynkerspace_string_platforms: All modern browsers, iPad, Unplugged
   tutorial_gfbloons_string_platforms: All modern browsers
   tutorial_raspipong_string_platforms: Chrome
   tutorial_codehsvr_string_platforms: Chrome, Firefox, Safari
-  tutorial_codesterstp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codesterstp_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_codestersbb_string_platforms: All modern browsers
   tutorial_gfcrossyroad_string_platforms: All modern browsers
-  tutorial_googleww_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codehsjsapp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_googleww_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_codehsjsapp_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_gfmihi_string_platforms: All modern browsers
   tutorial_hopdropphone_string_platforms: iPad, iPhone
   tutorial_techfaa_string_platforms: All modern browsers, Android tablet, iPad, Windows
@@ -7498,7 +7529,8 @@ he:
   tutorial_switchglitch_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון וטאבלט),
     iPad, iPhone
   tutorial_codecar_string_platforms: Chrome, Firefox
-  tutorial_codesterscp_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codesterscp_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_grokpetblock_string_platforms: All modern browsers
   tutorial_techbim_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
@@ -7639,7 +7671,8 @@ he:
   tutorial_cajump_string_platforms: Chrome, Firefox, Safari
   tutorial_carest_string_platforms: Chrome, Firefox, Safari
   tutorial_accai_string_platforms: All modern browsers
-  tutorial_vceclipse_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vceclipse_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_pmzero_string_platforms: All modern browsers
   tutorial_hsela_string_platforms: iPad, iPhone
   tutorial_ticklear_string_platforms: iPad, iPhone
@@ -7705,7 +7738,7 @@ he:
     Screen reader
   tutorial_bptechvid_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
-  tutorial_caflags_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_caflags_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_matariki_string_platforms: All modern browsers, Android tablet, iPad, Unplugged
   tutorial_carestaurant_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
@@ -7794,8 +7827,8 @@ he:
     Android phone, iPhone
   tutorial_robotmagic3d_string_platforms: Internet Explorer 11, Microsoft Edge, Chrome,
     Android tablet, iPad
-  tutorial_robotmagicflappy_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_robotmagicflappy_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_scratchadventure_string_platforms: Chrome, Safari, Android tablet, iPad
   tutorial_scratchtalk_string_platforms: Chrome, Safari, Android tablet, iPad
   tutorial_scratchjrstory_string_platforms: Android tablet, iPad
@@ -7856,25 +7889,32 @@ he:
   tutorial_tommyturtle_string_platforms: Android tablet, iPad, Android phone, iPhone
   tutorial_mazyad_string_platforms: Unplugged
   tutorial_gamemaker_string_platforms: All modern browsers, iPad
-  tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_duckrace_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_allcancodeapps_string_platforms: All modern browsers
   tutorial_n2y_string_platforms: Unplugged
   tutorial_microsoftarcade_string_platforms: All modern browsers, Screen reader
   tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
   tutorial_toxicodepython_string_platforms: All modern browsers
   tutorial_codecombatozaria_string_platforms: All modern browsers
-  tutorial_vidcodedate_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodedate_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_codemonkeyspace_string_platforms: All modern browsers
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
-  tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_grokimage_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_icomputelearn_string_platforms: All modern browsers
   tutorial_rpstress_string_platforms: Chrome, Firefox
   tutorial_bsdcause_string_platforms: Chrome
-  tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimoji_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_vidcodeanimojies_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
-  tutorial_scigirlsquest_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scigirlsquest_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_codespeakbreathe_string_platforms: Chrome, Firefox
   tutorial_vidcodeface_string_platforms: Chrome, Firefox
   tutorial_educodemaze_string_platforms: All modern browsers
@@ -7884,35 +7924,43 @@ he:
     Windows phone
   tutorial_codespeakgrandparent_string_platforms: Chrome, Firefox
   tutorial_educodekingdom_string_platforms: All modern browsers
-  tutorial_codehsdata_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codehsdata_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_educodecake_string_platforms: All modern browsers
   tutorial_ttsecond_string_platforms: Chrome
   tutorial_bsdtrivia_string_platforms: Chrome
   tutorial_csfirstdialogue_string_platforms: All modern browsers
-  tutorial_codemonkeybeaver_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_codemonkeybeaver_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_codestersdistance_string_platforms: All modern browsers, Screen reader
   tutorial_itchspace_string_platforms: All modern browsers
   tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
     Screen reader
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: All modern browsers
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_itchwebcam_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_itchball_string_platforms: All modern browsers
   tutorial_ttrace_string_platforms: Chrome
-  tutorial_plethora_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_plethora_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_educodesecret_string_platforms: All modern browsers
   tutorial_itchshapes_string_platforms: All modern browsers
-  tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codeguppytext_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_vidcodeplastiche_string_platforms: כל הדפדפנים המודרניים במחשבים שולחניים,
+    מחשבים ניידים, מחשבי Chromebook ושולחנות
   tutorial_educativechatbot_string_platforms: All modern browsers
   tutorial_educodebasics_string_platforms: All modern browsers
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone
   tutorial_htmlacademyphp_string_platforms: All modern browsers, Screen reader
-  tutorial_gamefrootdistance_string_platforms: All modern browsers, Android tablet,
-    iPad
+  tutorial_gamefrootdistance_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט
+    אנדרואיד ואייפד
   tutorial_codesterscovid_string_platforms: All modern browsers, Screen reader
   tutorial_ttbunker_string_platforms: Chrome
   tutorial_cuttle_string_platforms: All modern browsers, Android tablet, iPad, Windows
@@ -7939,7 +7987,8 @@ he:
   tutorial_ttfreestyle_string_platforms: Chrome
   tutorial_ozobotcolor2_string_platforms: All modern browsers
   tutorial_ozobotcolor3_string_platforms: All modern browsers
-  tutorial_clcarbon_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_clcarbon_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_kodablebasics_string_platforms: Unplugged
   tutorial_scigirlscc_string_platforms: Unplugged
   tutorial_irobotpicture_string_platforms: Unplugged
@@ -7955,13 +8004,15 @@ he:
   tutorial_ai4all_string_platforms: All modern browsers
   tutorial_cldata_string_platforms: All modern browsers
   tutorial_spheroinputs_string_platforms: Unplugged
-  tutorial_edisoncount_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_edisoncount_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_spheroloops_string_platforms: Unplugged
   tutorial_kiboprogram_string_platforms: Unplugged
   tutorial_hellorubycsin60_string_platforms: Unplugged
   tutorial_clfashion1_string_platforms: All modern browsers
   tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
-  tutorial_edisonmystery_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_edisonmystery_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_microbitseaturtles_string_platforms: All modern browsers, Android tablet,
     iPad, Windows phone, Android phone, iPhone
   tutorial_ozobotknow_string_platforms: All modern browsers
@@ -7983,7 +8034,8 @@ he:
   tutorial_irobotphone_string_platforms: All modern browsers
   tutorial_codeguppydraw_string_platforms: All modern browsers
   tutorial_codejumper_string_platforms: Unplugged, Sreen reader
-  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_meeempathy_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -8577,6 +8629,7 @@ he:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8598,6 +8651,7 @@ he:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8609,6 +8663,7 @@ he:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9170,12 +9225,9 @@ he:
   tutorial_ccplay_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
   tutorial_grinch_string_detail_programming_languages: Blocks
   tutorial_codehsart_string_detail_programming_languages: Blocks
-  tutorial_codehsbitcoin_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
-  tutorial_codehsblockchain_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
-  tutorial_codehscipher_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_codehsbitcoin_string_detail_programming_languages: לא דורש שפת תכנות
+  tutorial_codehsblockchain_string_detail_programming_languages: לא דורש שפת תכנות
+  tutorial_codehscipher_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_codehscollision_string_detail_programming_languages: JavaScript
   tutorial_codehsmath_string_detail_programming_languages: Python
   tutorial_codehsmusic_string_detail_programming_languages: Blocks
@@ -9260,11 +9312,9 @@ he:
   tutorial_stempiday_string_detail_programming_languages: JavaScript
   tutorial_stemplanetoids_string_detail_programming_languages: JavaScript
   tutorial_stempong_string_detail_programming_languages: JavaScript
-  tutorial_algobot_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_algobot_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_thunkableapps_string_detail_programming_languages: Blocks
-  tutorial_toxicodedot_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_toxicodedot_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_gcactions_string_detail_programming_languages: Blocks
   tutorial_gccomparators_string_detail_programming_languages: Blocks
   tutorial_gcconditions_string_detail_programming_languages: Blocks
@@ -9308,6 +9358,7 @@ he:
   tutorial_rpstress_string_detail_programming_languages: Blocks
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9329,6 +9380,7 @@ he:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Blocks
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Blocks
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9336,11 +9388,11 @@ he:
   tutorial_itchwebcam_string_detail_programming_languages: Blocks
   tutorial_itchball_string_detail_programming_languages: Blocks
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
-  tutorial_plethora_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_plethora_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Blocks
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -9373,40 +9425,32 @@ he:
   tutorial_clcarbon_string_detail_programming_languages: Python
   tutorial_kodablebasics_string_detail_programming_languages: Blocks, JavaScript,
     Language independent (can be taught in multiple languages)
-  tutorial_scigirlscc_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_scigirlscc_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_irobotpicture_string_detail_programming_languages: No specific programming
     languages required; unplugged decoding activity with words/phrases
   tutorial_kcjmyself_string_detail_programming_languages: Blocks
-  tutorial_nearpodalgorithms_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_nearpodalgorithms_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_kibodrop_string_detail_programming_languages: Blocks
   tutorial_ozobotcolor1_string_detail_programming_languages: Ozobot Line Following
     and Color Codes
-  tutorial_scigirlspixels_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_scigirlspixels_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_kcjheroines_string_detail_programming_languages: Blocks
   tutorial_ozobotvalue_string_detail_programming_languages: Ozobot Color Codes
-  tutorial_icodebytes_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_icodebytes_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_clfashion2_string_detail_programming_languages: SQL
-  tutorial_ai4all_string_detail_programming_languages: Language independent (can be
-    taught in multiple languages)
-  tutorial_cldata_string_detail_programming_languages: Language independent (can be
-    taught in multiple languages)
+  tutorial_ai4all_string_detail_programming_languages: לא דורש שפת תכנות
+  tutorial_cldata_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_spheroinputs_string_detail_programming_languages: Blocks
   tutorial_edisoncount_string_detail_programming_languages: Blocks
   tutorial_spheroloops_string_detail_programming_languages: Blocks
   tutorial_kiboprogram_string_detail_programming_languages: Blocks
-  tutorial_hellorubycsin60_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_hellorubycsin60_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_clfashion1_string_detail_programming_languages: SQL
   tutorial_irobottraffic_string_detail_programming_languages: Blocks, iOS/Swift
   tutorial_edisonmystery_string_detail_programming_languages: Blocks
   tutorial_microbitseaturtles_string_detail_programming_languages: Blocks, JavaScript,
     Python
-  tutorial_ozobotknow_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_ozobotknow_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_imagilabs_string_detail_programming_languages: Python
   tutorial_irobotsimulator_string_detail_programming_languages: Blocks
   tutorial_irobotkind_string_detail_programming_languages: Blocks
@@ -9416,8 +9460,7 @@ he:
   tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
   tutorial_blupants_string_detail_programming_languages: בלוקים, פיתון
   tutorial_legodance_string_detail_programming_languages: Blocks
-  tutorial_nearpodcoding_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_nearpodcoding_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_kcjplastic_string_detail_programming_languages: Blocks, Also has use of
     a spreadsheet.
   tutorial_legojourney_string_detail_programming_languages: Blocks
@@ -9526,7 +9569,7 @@ he:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: בינה מלאכותית למען האוקיינוסים
+  tutorial_ai-oceans_name: בינה מלאכותית למען האוקיינוסים והימים
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while
@@ -9822,9 +9865,9 @@ he:
   tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
     app to power through printable puzzles and challenges to crack the code to where
     Root is hiding.
-  tutorial_microbit14_longdescription: 'תכנתו את הדרך לשמירה על האוקיינוסים על ידי
-    שימוש במיקרו:ביט. גלו עוד על היעד Global Goal 14: Life Below Water ולמדו כיצד
-    לתכנת תאורה על החופים המותאמת לצבי ים.'
+  tutorial_microbit14_longdescription: 'תכנתו את הדרך לשמירה על האוקיינוסים והימים
+    על ידי שימוש במיקרו:ביט. גלו עוד על היעד Global Goal 14: Life Below Water ולמדו
+    כיצד לתכנת תאורת חופים המתחשבת בצבי ים.'
   tutorial_barobomoon_longdescription: You're one of the pioneer astronauts at the
     first permanent moon base, and while on an expedition away from base, a malfunction
     incapacitates your lunar rover and radio. But with a little ingenuity you can
@@ -9891,8 +9934,8 @@ he:
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
   tutorial_ai-oceans_longdescription: מדעי המחשב עוסקים בכל כך הרבה דברים מלבד תכנות!
-    למדו על בינה מלאכותית (AI), למידת־מכונה, נתוני אימון והטייה מחקרית, תוך בחינת
-    דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות עם בעיות עולמיות.
+    למדו על בינה מלאכותית (AI), למידת־מכונה, נתוני אימון והטייה, תוך בחינת דילמות
+    מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות עם בעיות עולמיות.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: עברית
   tutorial_googlehero_language: English, Spanish
@@ -9995,81 +10038,81 @@ he:
     Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Slovak,
     Spanish (Spain), Spanish (Mexico), Swedish, Turkish, Ukrainian
   tutorial_kuborobo_language: English, Spanish
-  tutorial_ai-oceans_language: ערבית, צ'כית, סינית, דנית, הולדנית, אנגלית, פינית,
-    צרפתית, גרמנית, הינדית, אינדונזית, איטלקית, יפנית, רוסית, ספרדית, טאגאלוג, טמילית,
-    תאית, טורקיצ, אורדו ועוד 15 שפות!
-  tutorial_scratchimagine_string_detail_grades: Grades 2+
-  tutorial_codesterspsa_string_detail_grades: Grades 6+
+  tutorial_ai-oceans_language: ערבית, צ'כית, סינית, דנית, הולנדית, אנגלית, פינית,
+    צרפתית, גרמנית, הינדית, אינדונזית, איטלקית, יפנית, רוסית, ספרדית, טגלוג, טמילית,
+    תאילנדית, טורקית, אורדו ועוד 15 שפות!
+  tutorial_scratchimagine_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_codesterspsa_string_detail_grades: כיתה ב 'ומעלה
   tutorial_googlehero_string_detail_grades: Grades 2-8
-  tutorial_codestersbball_string_detail_grades: Grades 6+
-  tutorial_scratchcartoon_string_detail_grades: Grades 2+
+  tutorial_codestersbball_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_scratchcartoon_string_detail_grades: כיתות ב 'ומעלה
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
   tutorial_bananatales_string_detail_grades: Grades 2-8
   tutorial_scratchtales_string_detail_grades: Grades 2-8
-  tutorial_msemoji_string_detail_grades: Grades 6+
-  tutorial_cacolor_string_detail_grades: Grades 6+
+  tutorial_msemoji_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_cacolor_string_detail_grades: כיתה ב 'ומעלה
   tutorial_kodablebeach_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkeren_string_detail_grades: Grades 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Grades 6+
+  tutorial_tynkerjavapro_string_detail_grades: כיתה ב 'ומעלה
   tutorial_grasshopperhack_string_detail_grades: כיתות ט ומעלה
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
   tutorial_nclabdata_string_detail_grades: כיתות ט ומעלה
   tutorial_grasshopperphoto_string_detail_grades: כיתות ט ומעלה
-  tutorial_tynkerpyland_string_detail_grades: Grades 6+
-  tutorial_codeitimages_string_detail_grades: Grades 2+
+  tutorial_tynkerpyland_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codeitimages_string_detail_grades: כיתות ב 'ומעלה
   tutorial_hyperpadenemy_string_detail_grades: כיתות ט ומעלה
   tutorial_tynkerpro_string_detail_grades: Grades 2-8
-  tutorial_trashtag_string_detail_grades: Grades 6+
+  tutorial_trashtag_string_detail_grades: כיתה ב 'ומעלה
   tutorial_casiege_string_detail_grades: Grades 2-8
-  tutorial_thunkableyeet_string_detail_grades: Grades 6+
-  tutorial_vidcodedeal_string_detail_grades: Grades 6+
+  tutorial_thunkableyeet_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_vidcodedeal_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codehsgeno_string_detail_grades: כיתות ט ומעלה
   tutorial_hyperpadpong_string_detail_grades: כיתות ט ומעלה
   tutorial_tynkerland_string_detail_grades: Grades 2-8
-  tutorial_trinketgirl_string_detail_grades: Grades 6+
+  tutorial_trinketgirl_string_detail_grades: כיתה ב 'ומעלה
   tutorial_rpimosquito_string_detail_grades: Grades 6-8
-  tutorial_tynkermars_string_detail_grades: Grades 6+
-  tutorial_cityx_string_detail_grades: Grades 6+
-  tutorial_vidcodemap_string_detail_grades: Grades 6+
+  tutorial_tynkermars_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_cityx_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_vidcodemap_string_detail_grades: כיתה ב 'ומעלה
   tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
-  tutorial_codehstriangle_string_detail_grades: Grades 6+
-  tutorial_ttwhitehouse_string_detail_grades: Grades 2+
-  tutorial_modulo_string_detail_grades: Grades 6+
+  tutorial_codehstriangle_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_ttwhitehouse_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_modulo_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: כיתות ט ומעלה
-  tutorial_uwcloud_string_detail_grades: Grades 2+
+  tutorial_uwcloud_string_detail_grades: כיתות ב 'ומעלה
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
   tutorial_stemc_blckhole_string_detail_grades: כיתות ט ומעלה
-  tutorial_careconfigure_string_detail_grades: Grades 6+
+  tutorial_careconfigure_string_detail_grades: כיתה ב 'ומעלה
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
-  tutorial_ozaria_string_detail_grades: Grades 2+
-  tutorial_ttovum_string_detail_grades: Grades 6+
+  tutorial_ozaria_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_ttovum_string_detail_grades: כיתה ב 'ומעלה
   tutorial_ttpassage_string_detail_grades: Grades 2-8
-  tutorial_tynkerhtmlen_string_detail_grades: Grades 2+
+  tutorial_tynkerhtmlen_string_detail_grades: כיתות ב 'ומעלה
   tutorial_ttfrog_string_detail_grades: Grades 2-8
   tutorial_codemojijava_string_detail_grades: Grades 6-8
-  tutorial_ccfirewall_string_detail_grades: Grades 6+
+  tutorial_ccfirewall_string_detail_grades: כיתה ב 'ומעלה
   tutorial_htmljs_string_detail_grades: Grades 6-8
   tutorial_ttaqueducts_string_detail_grades: Grades 6-8
-  tutorial_vtgame_string_detail_grades: Grades 6+
-  tutorial_baroborav_string_detail_grades: Grades 6+
-  tutorial_baroboobstacle_string_detail_grades: Grades 2+
-  tutorial_pbstorytelling_string_detail_grades: Grades 6+
+  tutorial_vtgame_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_baroborav_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_baroboobstacle_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_pbstorytelling_string_detail_grades: כיתה ב 'ומעלה
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
-  tutorial_spherosmiles_string_detail_grades: Grades 2+
+  tutorial_spherosmiles_string_detail_grades: כיתות ב 'ומעלה
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
-  tutorial_toxarchitect_string_detail_grades: Grades 6+
+  tutorial_toxarchitect_string_detail_grades: כיתה ב 'ומעלה
   tutorial_idodge_string_detail_grades: Grades 2-8
-  tutorial_firiacodebot_string_detail_grades: Grades 6+
+  tutorial_firiacodebot_string_detail_grades: כיתה ב 'ומעלה
   tutorial_modlighthouse_string_detail_grades: Pre-reader+
   tutorial_spherogreen_string_detail_grades: Grades 2-8
   tutorial_ozopopstar_string_detail_grades: Grades 2-8
-  tutorial_eddesign_string_detail_grades: Grades 6+
-  tutorial_edshapeup_string_detail_grades: Grades 6+
+  tutorial_eddesign_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_edshapeup_string_detail_grades: כיתה ב 'ומעלה
   tutorial_ozocolor_string_detail_grades: Grades 2-8
   tutorial_kcjanimals_string_detail_grades: Grades 2-8
   tutorial_icomputeeggs_string_detail_grades: Grades 2-8
@@ -10078,34 +10121,40 @@ he:
   tutorial_peblioportraits_string_detail_grades: כיתות ט ומעלה
   tutorial_rootcodebreak_string_detail_grades: Grades 2-8
   tutorial_microbit14_string_detail_grades: Grades 2-8
-  tutorial_barobomoon_string_detail_grades: Grades 6+
+  tutorial_barobomoon_string_detail_grades: כיתה ב 'ומעלה
   tutorial_eddog_string_detail_grades: Grades 2-6
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: כיתות ט ומעלה
-  tutorial_blockscadtarget_string_detail_grades: Grades 6+
+  tutorial_blockscadtarget_string_detail_grades: כיתה ב 'ומעלה
   tutorial_tcadicicles_string_detail_grades: Grades 7-8
-  tutorial_blockscadscale_string_detail_grades: Grades 6+
+  tutorial_blockscadscale_string_detail_grades: כיתה ב 'ומעלה
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: כיתות ט ומעלה
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
-  tutorial_modvariables_string_detail_grades: Grades 6+
+  tutorial_modvariables_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
-  tutorial_rpisensehat_string_detail_grades: Grades 6+
-  tutorial_modtraits_string_detail_grades: Grades 2+
-  tutorial_mee_string_detail_grades: Grades 2+
+  tutorial_rpisensehat_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_modtraits_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_mee_string_detail_grades: כיתות ב 'ומעלה
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
   tutorial_ai-oceans_string_detail_grades: לכיתות ג' ומעלה
-  tutorial_scratchimagine_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codesterspsa_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_googlehero_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_codestersbball_string_platforms: All modern browsers, Android tablet, iPad
-  tutorial_scratchcartoon_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scratchimagine_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_codesterspsa_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_googlehero_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_codestersbball_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_scratchcartoon_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_codemonkeyjr_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון וטאבלט),
     iPad, iPhone
   tutorial_bananatales_string_platforms: All modern browsers
-  tutorial_scratchtales_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_scratchtales_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_msemoji_string_platforms: Chrome, Safari
   tutorial_cacolor_string_platforms: All modern browsers
   tutorial_kodablebeach_string_platforms: All modern browsers, iPad, iPhone
@@ -10117,19 +10166,22 @@ he:
   tutorial_nclabdata_string_platforms: All modern browsers
   tutorial_grasshopperphoto_string_platforms: All modern browsers
   tutorial_tynkerpyland_string_platforms: 'All modern browsers '
-  tutorial_codeitimages_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codeitimages_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_hyperpadenemy_string_platforms: iPad
   tutorial_tynkerpro_string_platforms: All modern browsers, iPad
   tutorial_trashtag_string_platforms: All modern browsers
   tutorial_casiege_string_platforms: All modern browsers
   tutorial_thunkableyeet_string_platforms: All modern browsers
-  tutorial_vidcodedeal_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodedeal_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_codehsgeno_string_platforms: All modern browsers
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
   tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
     Windows phone, Android phone, iPhone, Screen reader
-  tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_rpimosquito_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone
   tutorial_vidcodemap_string_platforms: All modern browsers
@@ -10141,12 +10193,13 @@ he:
   tutorial_codingtown_string_platforms: All modern browsers
   tutorial_kanoart_string_platforms: Microsoft Edge, Chrome, Android tablet, iPad
   tutorial_dragonscript_string_platforms: Chrome
-  tutorial_uwcloud_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_uwcloud_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד ואייפד
   tutorial_htmlmuffin_string_platforms: All modern browsers
   tutorial_microsoftpizza_string_platforms: All modern browsers, Screen reader
   tutorial_stemc_blckhole_string_platforms: All modern browsers, iPad
   tutorial_careconfigure_string_platforms: All modern browsers
-  tutorial_rpiscratch_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_rpiscratch_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_ozaria_string_platforms: All modern browsers
   tutorial_ttovum_string_platforms: Chrome, Firefox
   tutorial_ttpassage_string_platforms: Chrome, Firefox
@@ -10320,8 +10373,7 @@ he:
   tutorial_msemoji_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
   tutorial_cacolor_string_detail_programming_languages: Computational Thinking focused
     so no language
-  tutorial_kodablebeach_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_kodablebeach_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_tynkeren_string_detail_programming_languages: Blocks
   tutorial_tynkerjavapro_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_grasshopperhack_string_detail_programming_languages: JavaScript
@@ -10353,8 +10405,7 @@ he:
   tutorial_codingtown_string_detail_programming_languages: JavaScript
   tutorial_kanoart_string_detail_programming_languages: Blocks
   tutorial_dragonscript_string_detail_programming_languages: JavaScript, HTML
-  tutorial_uwcloud_string_detail_programming_languages: Language independent (can
-    be taught in multiple languages)
+  tutorial_uwcloud_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_htmlmuffin_string_detail_programming_languages: HTML and CSS
   tutorial_microsoftpizza_string_detail_programming_languages: בלוקים, ג'אווה סקריפט
   tutorial_stemc_blckhole_string_detail_programming_languages: JavaScript
@@ -10384,8 +10435,7 @@ he:
   tutorial_toxarchitect_string_detail_programming_languages: JavaScript
   tutorial_idodge_string_detail_programming_languages: Simplified version of JavaScript
   tutorial_firiacodebot_string_detail_programming_languages: Python
-  tutorial_modlighthouse_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_modlighthouse_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_spherogreen_string_detail_programming_languages: בלוקים, ג'אווה סקריפט
   tutorial_ozopopstar_string_detail_programming_languages: Blocks
   tutorial_eddesign_string_detail_programming_languages: Blocks
@@ -10410,8 +10460,7 @@ he:
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
     major programming languages. Can easily adapt this project to another language/environment.
   tutorial_kcjmerry_string_detail_programming_languages: Blocks
-  tutorial_modvariables_string_detail_programming_languages: Language independent
-    (can be taught in multiple languages)
+  tutorial_modvariables_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_codestersmicro_string_detail_programming_languages: Python
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu

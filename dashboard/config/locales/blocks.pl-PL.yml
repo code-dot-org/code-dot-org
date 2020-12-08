@@ -1014,6 +1014,8 @@ pl:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: liczba {SPRITE}
       gamelab_createNewSprite:
@@ -1230,6 +1232,10 @@ pl:
             undefined: żaden
       gamelab_setBackgroundImageAs:
         text: ustaw tło na {IMG}
+      gamelab_setPrompt:
+        text: poproś użytkownika {QUESTION} o zmienne {VAR}
+      gamelab_setPromptWithChoices:
+        text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       gamelab_setProp:
         text: ustaw {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1288,7 +1294,7 @@ pl:
             '"d"': d
       gamelab_whenLeftArrow:
         text: po naciśnięciu strzałki w lewo
-      gamelab_whenQuestionAnswered:
+      gamelab_whenPromptAnswered:
         text: gdy {VAR} uzyskała odpowiedź
       gamelab_whenRightArrow:
         text: po naciśnięciu strzałki w prawo
@@ -1521,6 +1527,8 @@ pl:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: nie moja etykieta
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1780,6 +1788,7 @@ pl:
             '"stoneBricks"': kamienne cegły
             '"mossyStoneBricks"': cegły z omszałego kamienia
             '"crackedStoneBricks"': cegły z popękanego kamienia
+            '"chiseledStoneBricks"': dekoracyjne kamienne cegły
             '"blueCoralBlock"': blok niebieskiego koralu
             '"pinkCoralBlock"': blok różowego koralu
             '"magentaCoralBlock"': blok fioletowego koralu

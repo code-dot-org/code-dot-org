@@ -737,7 +737,7 @@
           "moving east": "bergerak ke timur"
         },
         "behaviors 3": {
-          "zooming east": "menanjak ke timur",
+          "zooming east": "melesat ke timur",
           "driving east": "mengemudi ke timur",
           "wandering": "pengembaraan",
           "spinning left": "berputar ke kiri",
@@ -753,7 +753,7 @@
           "moving east": "bergerak ke timur"
         },
         "behaviors 3_2020": {
-          "zooming east": "menanjak ke timur",
+          "zooming east": "melesat ke timur",
           "driving east": "mengemudi ke timur",
           "wandering": "pengembaraan",
           "spinning left": "berputar ke kiri",
@@ -770,7 +770,7 @@
         },
         "behaviors 3a": {
           "spinning right": "berputar ke kanan",
-          "zooming east": "menanjak ke timur",
+          "zooming east": "melesat ke timur",
           "driving east": "mengemudi ke timur",
           "wandering": "pengembaraan",
           "spinning left": "berputar ke kiri",
@@ -786,7 +786,7 @@
         },
         "behaviors 3a_2020": {
           "spinning right": "berputar ke kanan",
-          "zooming east": "menanjak ke timur",
+          "zooming east": "melesat ke timur",
           "driving east": "mengemudi ke timur",
           "wandering": "pengembaraan",
           "spinning left": "berputar ke kiri",

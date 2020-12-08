@@ -30,19 +30,22 @@ sv:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  hoc2020_header: "  Det du lär dig idag bygger en ljusare framtid.  "
+  hoc2020_header_with_line_break_markdown: "  Det du lär dig idag      bygger en ljusare
+    framtid.  "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    today, build a brighter tomorrow.'
+  social_hoc2020_hoc_is_about_csforgood: "  #HourOfCode handlar om #CSforGood. Det
+    du lär dig idag bygger en ljusare framtid.  "
   social_hoc2020_global_movement: Hour of Code är en global rörelse som når tiotals
     miljoner elever. Entimmes-övningar finns tillgängliga på 45+ språk för alla åldrar.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: Tiden för Hour of Code 2020 närmar sig!
+  hoc2020_ai_header: Utforska artificiell intelligens
+  hoc2020_ai_description: AI och maskininlärning påverkar hela vår värld. Kom och
+    utforska  AI i en ny videoserie tillsammans med oss, öva dig på AI för oceaner
+    i över 25 språk, diskutera etik och AI, m.m...
   hoc2019_header: Lär dig datavetenskap. Förändra världen.
   hoc2019_header_line1_mobile: Lär dig datavetenskap.
   hoc2019_header_line2_mobile: Förändra världen.
@@ -371,7 +374,7 @@ sv:
   how_to_nav_companies: För företag
   how_to_nav_afterschool_educators: För efter-skolan lärare
   how_to_nav_volunteers: För volontärer
-  how_to_nav_virtual: For virtual events
+  how_to_nav_virtual: "  För virtuella event  "
   whats_next_header: Vad kommer härnäst?
   whats_next_description: Vi kommer att skicka material och praktiska tips för ditt
     evenemang. Nya 2016 övningar kommer snart för alla webbläsare, smartphones – eller
@@ -586,63 +589,66 @@ sv:
     helst under året. Computer Science Education Week hålls årligen till minne av
     datavetenskap-pionjären <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>s
     födelsedag (9 december 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: "  Hour of Code äger rum varje år i samband med
+    [Computer Science Education Week](%{csedweek_url}). %{campaign_date_year} kommer
+    den särskilda veckan för datavetenskap och kodning att äga rum %{campaign_date_full}
+    men du kan organisera en Hour of Code när som helst under året. Veckan för datavetenskap
+    och kodning hålls varje år till minne av [Admiral Grace Murray Hopper](%{grace_hopper})
+    (9 december 1906) som var en pionjär inom datavetenskap.  "
   hoc_faq_why_cs_q: Varför datavetenskap?
   hoc_faq_why_cs_a: "<i>Varje</i> elever borde ges möjligheten att lära sig datavetenskap.
     Det stöttar problemlösningsförmåga, logiskt tänkande och kreativitet. Genom att
     starta tidigt kommer elever ges de färdigheter de behöver för en karriär under
     2000-talet. Se mer statistik <a href='%{stats_url}'>här</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: "  _Alla_ elever ska ges möjlighet att lära sig datavetenskap.
+    Det bidrar till att utveckla färdigheter för problemlösning, logiskt tänkande
+    och kreativitet. Genom att starta tidigt får eleverna de grunder som behövs för
+    att lyckas inom olika karriärer på 2000-talet. Se mer statistik [here](%{stats_url}).
+    \ "
   hoc_faq_how_participate_q: Hur deltar jag i Hour of Code?
   hoc_faq_how_participate_a: "<a href='/how-to'> Börja planera här</a> genom att titta
     i vår så-gör-du guide. Du kan arrangera Hour of Code på din skola eller i ditt
     område &mdash; i en skolklubb, ideellt eller på jobbet. Eller bara prova det själv
     när %{campaign_date} kommer."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "  [Start planning here](%{howto}) genom att
+    gå igenom vårt handledningsmaterial. Du kan organisera en Hour of Code aktivitet
+    på din skola eller i ditt område, som en klubb efter skolan, ett projekt för välgörande
+    ändamål eller på arbetet. Eller prova själv den %{campaign_date}.  "
   hoc_faq_behind_hoc_q: Vem står bakom Hour of Code?
   hoc_faq_behind_hoc_a: Hour of Code arrangeras av Hour of Code samt Computer Science
     Education Week <a href='%{partner_url}'>Advisory and Review Committees</a>, med
     en mängd olika partners som slutit samman för att stödja Hour of Code &mdash;
     inklusive Microsoft, Apple, Amazon, Amerikanska scouterna och universitetsstyrelsen
     i USA.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: "  Hour of Code drivs av organisationen bakom Hour
+    of Code tillsammans med veckan för datavetenskap och kodning [Advisory and Review
+    Committees](%{partner_url}) och en oöverträffad samling partner som samarbetar
+    i sitt stöd för Hour of Code – inklusive Microsoft, Apple, Amazon, Boys and Girls
+    Clubs of America och College Board.  "
   hoc_faq_host_q: Jag kan ingenting om kodning. Kan jag ändå hålla i ett event?
   hoc_faq_host_a: Självklart. Kodtimmens aktiviteter är självinstruerande. Allt du
     behöver göra är att <a href='%{codeorg_url}/learn'> prova våra aktuella övningar</a>,
     välja den övningdu vill använda och välja en timme &mdash; vi tar hand om resten.
     Vi har alternativ för alla åldrar och erfarenhets-nivåer, från förskolan och uppåt.
     Börja planera ditt evenemang genom att läsa vår <a href='/how-to'> så-gör-du guide</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: "  Naturligtvis. Aktiviteterna i Hour of Code bygger på
+    självstudier. Allt du behöver göra är att [try our current tutorials](%{codeorg_url}/learn),
+    välja de lektioner du är intresserad av och bestämma en timme – vi tar hand om
+    resten. Vi har alternativ för alla åldrar och kunskapsnivåer, från förskolan och
+    uppåt. Börja planeringen av ditt event genom att läsa vår [how to guide](%{howto}).
+    \ "
   hoc_faq_devices_q: Vilka enheter bör jag använda för mina elever?
   hoc_faq_devices_a: Code.org övningar fungerar på alla enheter och webbläsare. Du
     kan se mer information om de tekniska kraven på Code.orgs övningar <a href='%{codeorg_url}/educate/it'>
     här</a>. Tekniska krav för icke Code.org övningar finns under <a href='%{codeorg_url}/learn'>%{partner_url}/lära
     sig</a> i övningens beskrivning. Glöm inte att vi också erbjuder aktiviteter som
     inte kräver uppkoppling om din skola inte kan tillgodose kraven för övningarna!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: "  Lektionerna från Code.org fungerar på alla enheter
+    och webbläsare. Här [here](%{codeorg_url}/educate/it) hittar du mer information
+    om vilken teknik som behövs för lektionerna. Tekniska behov för Code.org:s lektioner
+    som inte innebär kodning finns på [%{partner_url}/learn](%{codeorg_url}/learn)
+    i beskrivningen av respektive lektion. Glöm inte att vi även har [unplugged activities](%{unplugged_url})
+    om din skola inte har det som behövs för online-lektionerna!  "
   hoc_faq_need_computers_q: Behöver jag en dator till varje deltagare?
   hoc_faq_need_computers_a: Nej. Vi har Kodtimmen övningar som fungerar på datorer,
     smarttelefoner, surfplattor och en del som inte kräver dator alls! Du kan gå med
@@ -674,21 +680,22 @@ sv:
     se våra riktlinjer och instruktioner</a>. Vi skulle vilja vara värdar för en mängd
     olika engagerande alternativ, men det primära målet är att optimera upplevelsen
     för studenter och lärare som datavetenskap är något nytt för.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a_markdown: "  Om du är intresserad av att bli en av våra partner
+    för lektioner, [see our guidelines and instructions](%{tutorial_guidelines}).
+    Vi vill kunna erbjuda ett brett urval, men vårt huvudsakliga mål är att nå ut
+    till elever och lärare som inte har varit i kontakt med datavetenskap förut.  "
   hoc_faq_account_q: Behöver elever logga in med ett konto?
   hoc_faq_account_a: Nej. Ingen registrering eller inloggning krävs för att elever
     ska kunna göra en Hour of Code. De flesta av <a href='%{codeorg_url}/learn/beyond'>fortsättnings-kurserna</a>
     kräver att ett konto skapas för att kunna spara elevens framsteg. Om du skapar
     ett Hour of Code-konto får du INTE automatiskt ett konto till Code Studio. Om
     du vill skapa konton för alla dina elever, följ dessa <a href='https://youtu.be/_smelV_KISE'>instruktioner</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: "  Nej. Det behövs ingen registrering eller inloggning
+    för elever som vill prova på Hour of Code. De flesta [follow-on courses](%{codeorg_url}/learn/beyond)
+    kräver att man skapar ett konto för att kunna spara elevens projekt. När man registrerar
+    sig för Hour of Code skapas inte något Code Studio-konto automatiskt. Om du vill
+    skapa konton till dina elever, följ dessa [instructions](https://youtu.be/_smelV_KISE).
+    \ "
   hoc_faq_high_school_q: Vilka aktiviteter lämpar sig för gymnasieelever?
   hoc_faq_high_school_a: Vår Star Wars-övning och Minecraft-övning lämpar sig väl
     för gymnasiet, särskilt StarWars-övningen i JavaScript och skapande-läget i båda
@@ -697,13 +704,13 @@ sv:
     med Angry Birds eller Anna och Elsa. En mellanstadieelever bör kunna göra färdigt
     en av dem på 30 minuter och kan sedan göra mer avancerade övningar i JavaScript,
     på exempelvis Khan Academy eller CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: "  Våra aktiviteter Star Wars och Minecraft är perfekta
+    för högstadieelever, särskilt JavaScript-versionen av Star Wars och tillgången
+    till gratis spelande i båda aktiviteterna. Alternativt rekommenderar vi att prova
+    en av nybörjarlektionerna på [%{partner_url}/learn](%{codeorg_url}/learn) för
+    att komma igång, som exempelvis Angry Birds eller Anna och Elsa. En högstadieelev
+    bör slutföra en av dessa på 30 minuter och kan därefter prova på en mer avancerad
+    lektion i JavaScript, som Khan Academy eller CodeHS.  "
   hoc_faq_scratch_q: Jag har tänkt använda Scratch under Hour of Code, men vad gör
     jag om mina elever har iPads istället för datorer?
   hoc_faq_scratch_a: Scratch finns inte till läsplattor. Om dina elever är unga, kan
@@ -724,23 +731,23 @@ sv:
     evenemang listat. Utöver detta, eftersom tusentals människor registrerar sig på
     Hour of Code, så tar kartan och evenemangslistan 48 timmar att uppdatera sig.
     Kolla igen om några dagar!
-  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
-    of Code map. Because of the tens of thousands of organizers who sign up, the map
-    aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
-    of all events by state and can find your event listed there. Additionally, given
-    the thousands of people signing up for the Hour of Code, the map and event list
-    usually takes 48 hours to update. Check back in a few days!
+  hoc_faq_map_a_markdown: "  Vi beklagar att du inte hittar ditt event på kartan över
+    Hour of Code. Eftersom tiotusentals arrangörer registrerar event händer det att
+    kartan aggregerar uppgifter och visar en plats för flera event. Om du klickar
+    på länken [events page](%{events_url}) under kartan dirigeras du vidare till en
+    lista av alla event per stat och kan hitta din aktivitet där. Dessutom tar det
+    oftast omkring 48 timmar för listan att uppdateras eftersom det är tusentals personer
+    som registrerar aktiviteter löpande. Sök igen om några dagar!  "
   hoc_faq_count_hoc_a: Hour of Code-räknaren är inte en exakt mätning. Vi räknar inte
     varje unik elevers ID perfekt när vi räknar deltagande i Hour of Code, särskilt
     eftersom vi inte kräver att elever loggar in eller registrerar sig. Som resultat
     så både underskattar och överskattar vi antalet deltagare på samma gång. Läs alla
     detaljer på <a href='%{codeorg_url}/loc'>här</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: "  Hour of Code:s räknare mäter inte exakt användningstid.
+    Eftersom vi inte kräver att eleverna loggar in eller registrerar sig kan vi inte
+    mäta enskilda elevers deltagande med full precision. Det innebär att vi både över-
+    och underskattar deltagares aktiva tid. Läs mer om detta [here](%{codeorg_url}/loc).
+    \ "
   hoc_faq_one_hour_q: Hur mycket kan man lära sig på en timme?
   hoc_faq_one_hour_a: Målet med Hour of Code är inte att lära någon bli en expert
     på datavetenskap på en timme. En timme är endast tillräcklig för att lära sig
@@ -759,12 +766,25 @@ sv:
     också, som inser att datavetenskap är något som elever vill ha och som deras lärare
     är kapabla till. <br/><br/> Framför allt är vad alla deltagare lär sig på en timme,
     är att det går.
-  hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
-
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
-
-    Above all, what all participants can learn in an hour is that we can do this.
+  hoc_faq_one_hour_a_markdown: "  Målet med Hour of Code är inte att göra någon till
+    expert på datavetenskap och kodning på en timme. En timme är tillräckligt för
+    att lära sig att datavetenskap är roligt och kreativt, tillgängligt för alla åldrar
+    och elever, oavsett bakgrund. Den här kampanjens mått på framgång är inte hur
+    mycket datavetenskap eleverna lär sig utan framgången ligger i det breda deltagandet
+    oavsett kön och etnicitet och socioekonomiska grupper och den ökning i registrering
+    för och deltagande i datavetenskapliga kurser som vi ser inom alla årskurser.
+    Miljoner av de lärare och elever som deltar bestämmer sig för att vara med längre
+    än den första timmen. -  en hel dag eller en hel vecka eller ännu längre. Många
+    elever bestämmer sig också för att registrera sig på en kurs (eller till och med
+    ta en universitetsexamen i ämnet) som en direkt följd av detta.      Det är inte
+    bara eleverna utan även läraren som utvecklas och känner att de efter en timme
+    har blivit säkrare i att lära ut datavetenskap, även om de kanske inte har någon
+    tidigare utbildning i ämnet. Tiotusentals lärare bestämmer sig för att lära sig
+    mer om datavetenskap genom att antingen ta en högre utbildning, online-kurs eller
+    båda. Och det gäller även annan skolpersonal. De inser att datavetenskap är något
+    som eleverna vill lära sig och som lärarna har kunskap om.      Det som alla deltagare
+    framför allt kan lära sig på en timme är att detta är något som vi kan klara av.
+    \ "
   hoc_faq_more_questions_q: Fler frågor?
   hoc_faq_more_questions_a: Se om svaret finns i vårt <a href='http://support.code.org'>support
     forum</a>.
@@ -775,28 +795,28 @@ sv:
     och läroplaner finns tillgängliga på vår webbplats för evigt. Gå till <a href='/promote'>
     våra resurser</a> för guider och andra resurser som hjälper dig att göra ditt
     Hour of Code evenemang till en succé.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
+  hoc_faq_keep_learning_a_markdown: "  Vem som helst kan organisera en Hour of Code,
+    när som helst. Lektionerna ligger uppe året runt. Du kan förvänta dig att våra
+    lektioner och vår läroplan är tillgängliga på vår webbplats för all framtid. Gå
+    till [our resources](%{promote}) för handledning om event och andra resurser som
+    stöd för att din Hour of Code ska bli så bra som möjligt.  "
   hoc_faq_certificates_q: Hur skriver jag ut diplom till mina elever?
   hoc_faq_certificates_a: Gå till vår <a href='%{codeorg_url}/certificates'> diplomsida</a>
     där kan du skriva ut diplom för hela klassen i förväg. Du kan också skriva ut
     <a href='%{codeorg_url}/certificates?course=mc'> särskilda diplom</a> för elever
     som gör Minecraft övningen.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: "  Gå till vår [certificates page](%{codeorg_url}/certificates)
+    där du kan skriva ut certifikat till hela din klass på förhand. Du kan också skriva
+    ut [special certificates](%{codeorg_url}/certificates?course=mc) till elever som
+    tar Minecraft-lektionen.  "
   hoc_faq_logo_q: Finns det begränsningar för hur jag kan använda Hour of Code-logotypen
     eller namnet?
   hoc_faq_logo_a: Hour of Code är varumärkesskyddad. Vi vill inte förhindra dess användning,
     men vi vill kontrollera att dess användning passar inom några gränser. Se <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>dessa
     riktlinjer för användning</a>.
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: "  Hour of Code är varumärkesskyddad. Vi vill inte försvåra
+    dess användning men däremot vill vi vara säkra på att den utnyttjas under vissa
+    förutsättningar. Se [these guidelines for usage](%{logo_url}).  "
   stats_hoc_2013_image_alt: Statistik från Hour of Code 2013
   stats_growth: Nådde snabbast 15 miljoner användare.
   stats_i18n: Elever lär sig på över 45 olika språk
@@ -927,6 +947,7 @@ sv:
   highlights_constant_athletes_short_heading: Utmana dig själv
   footer_copyright_message: Copyright 2016 Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ är ett varumärke som tillhör Code.org.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners
   footer_menu_contact: Kontakta oss
   footer_menu_support: Hjälp
@@ -938,11 +959,12 @@ sv:
     of Code.
   learn_banner_beyond: Vill du fortsätta lära dig?  <a id='learn_banner_beyond'> Fortsätt
     efter första timmen</a>
-  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
+  learn_banner_beyond_markdown: "  Vill du lära dig mer? [Go beyond an hour](%{url})
+    \ "
   learn_banner_teachers: 'Lärare: <a id=''teacher_banner_host''>Led en undervisningstimme</a>
     eller <a id=''teacher_banner_howto''>läs vår Så gör du-guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: "  Lärare: [Host an hour](%{host_url}) eller [read
+    the How-To Guide](%{howto_url})  "
   learn_robotics_banner_heading: ROBOTTEKNIK
   learn_robotics_banner_blurb: Har ni robotar? Använd dem i aktiviteterna nedan och
     skapa en konkret Hour of Code för elever i alla åldrar!
@@ -1528,7 +1550,7 @@ sv:
   tutorial_n2y_name: Bitt Bott Explores Earth
   tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
   tutorial_csfirstunplugged_name: CS First Unplugged
-  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_toxicodepython_name: Upptäck Python med Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
   tutorial_vidcodedate_name: Climate Clock
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
@@ -1536,9 +1558,10 @@ sv:
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: 'Code is: Your Voice - Support My Cause'
+  tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
-  tutorial_bsdinspire_name: 'Code is: Your Voice - People who Inspire Me'
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
@@ -1554,15 +1577,16 @@ sv:
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: 'Code is: Your Voice - Trivia Game Maker'
+  tutorial_bsdtrivia_name: Trivia Game Maker
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: 'Code is: Your Voice - My Favorites Website'
+  tutorial_bsdwebsite_name: My Favorites Website
   tutorial_codespeaktime_name: Code a Time Capsule in Scratch
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
@@ -1571,6 +1595,7 @@ sv:
   tutorial_educodesecret_name: Uncover the Agency's Secrets!
   tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
   tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: Build your own chatbot in Python
   tutorial_educodebasics_name: Learn the Basics!
   tutorial_codehsdesign_name: Supporting Artists with Code
@@ -1580,7 +1605,7 @@ sv:
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
-  tutorial_bsdjokes_name: 'Code is: Your Voice - Jokes and Riddles'
+  tutorial_bsdjokes_name: Jokes and Riddles
   tutorial_rptree_name: Tree life simulator
   tutorial_codestersunity_name: 'Codesters: Unity Mural'
   tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
@@ -1636,13 +1661,14 @@ sv:
   tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
   tutorial_legojourney_name: Create a Journey with LEGO Education
   tutorial_legohopper_name: Hopper Race
-  tutorial_catrobatembroidery_name: Coded Embroidery
+  tutorial_catrobatembroidery_name: Kodat broderi
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
-  tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  tutorial_meeempathy_name: En berättelse om två byar i Minecraft
+  tutorial_danceparty_shortdescription: "  Koda ett dansparty att dela med dina vänner.
+    Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara och ytterligare 25
+    artister!  "
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_shortdescription: Välj mellan att göra ett basketspel och att skapa
@@ -2839,11 +2865,12 @@ sv:
   tutorial_allcancodeapps_shortdescription: Use the Allcancode Platform to create
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
-  tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
-  tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+  tutorial_dance2019_longdescription: "  Koda ett dansparty att dela med dina vänner.
+    Med Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers och
+    många fler!  "
+  tutorial_danceparty_longdescription: "  Koda ett dansparty att dela med dina vänner.
+    Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara och ytterligare 25
+    artister!  "
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_longdescription: Välj mellan att göra ett basketspel och att skapa
@@ -5251,11 +5278,12 @@ sv:
     you'll find every puzzle has a solution to make the pets feel better than ever!
   tutorial_superhero_longdescription: Use HTML and CSS pixel art to create your favorite
     superhero masks. Publish and share your creations!
-  tutorial_vidcodeplastic_longdescription: The problem of plastic filling our oceans
-    continues to worsen. Luckily, you can make your voice heard with code through
-    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
-    you can make a second video about any subject you care about! Learn to use loops,
-    sine waves and customized emojis to make a unique project.
+  tutorial_vidcodeplastic_longdescription: "  Problemet med plast i våra hav blir
+    allt värre. Som tur är kan du göra din röst hörd med kodning i projektet Plastic
+    Pollution PSA. Efter att du har kodat ett meddelande till allmänheten via JavaScript
+    kan du skapa ytterligare en video om ett ämne som är viktigt för dig! Lär dig
+    att använda loopar, sinuskurvor och skräddarsydda emojier och skapa ett unikt
+    projekt.  "
   tutorial_vidcodetypeface_longdescription: Create your own typeface using shapes
     and elements of typography. Type has more elements than you may have realized!
     So far we have talked about fonts and how they are different styles of text. Fonts
@@ -5299,9 +5327,9 @@ sv:
     Try the CS First Unplugged activities to explore how computer science can solve
     problems like helping people stay connected while apart. 'Plugged in' Scratch
     activities are available too!
-  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
-    word or explanation. Our silent teacher will give you several series of challenges
-    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_toxicodepython_longdescription: Upptäck grunderna i Python utan några ord
+    eller förklaringar. Vår tysta lärare ger dig flera serier av utmaningar som får
+    dig att gissa några regler och lära dig av dina egna misstag.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
     that has taken over the world! Along the way, you'll meet interesting characters
@@ -5327,20 +5355,22 @@ sv:
     as well as coding skills!
   tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
     can squash!
-  tutorial_bsdcause_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Support
     My Cause focuses on designing and coding a landing page that will collect data
-    from supporters of your favourite cause.
+    from supporters of your favorite cause. #codeisyourvoice'
   tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
     an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
   tutorial_bsdinspire_longdescription: 'This course allows students to use code as
     a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The People
     Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
-    have been an inspiration to you. '
+    have been an inspiration to you. #codeisyourvoice'
   tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
     down on his luck, and his fields have become a mess. But he's just obtained a
     fancy new tractor with a repeating code system using loops that just might save
@@ -5386,12 +5416,12 @@ sv:
     aboard the capital ship, and now you must evade the security drones long enough
     to open access for all. Quickly examine conditional statements to find out whether
     you're safe or not from the dastardly cybervision. If not, it's to the airlock!
-  tutorial_bsdtrivia_longdescription: This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Trivia
     Game Maker focuses on building an interactive trivia game where you also get to
-    come up with the trivia questions.
+    come up with the trivia questions. #codeisyourvoice'
   tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
     Get creative while communicating with code in Scratch with CS First!
   tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
@@ -5410,16 +5440,18 @@ sv:
     game.
   tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
     using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
   tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
     healthy food decisions.
   tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
     shark chasing and eating fish disrupted when a diver is eaten accidentally.
   tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
-    a way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. ''The My Favourites
     Website focuses on creating a webpage of the top 3 things you are interested in
-    or love doing. '
+    or love doing. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
     to record and reflect on your life right now.
   tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
@@ -5439,6 +5471,12 @@ sv:
     also learn how to calculate how much you need to turn for any shape.
   tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
     creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: "  Problemet med plast i våra hav blir
+    allt värre. Som tur är kan du göra din röst hörd med kodning i projektet Plastic
+    Pollution PSA. Efter att du har kodat ett meddelande till allmänheten via JavaScript
+    kan du skapa ytterligare en video om ett ämne som är viktigt för dig! Lär dig
+    att använda loopar, sinuskurvor och skräddarsydda emojier och skapa ett unikt
+    projekt.  "
   tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
     and Machine Learning, as well as programing your own chatbot!
   tutorial_educodebasics_longdescription: Learn some programming fundamentals and
@@ -5469,11 +5507,11 @@ sv:
   tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
     tasks and learn all about computational thinking.
   tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
-    way to share what is important or interesting to them.They can follow the lesson
-    or create unique projects while learning HTML, CSS and JavaScript.They are guided
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
     with video tutorials, live coding and access to the code glossary. The Jokes and
     Riddles focuses on creating a set of interactive cards that contain your favorite
-    jokes and riddles and the answers! '
+    jokes and riddles and the answers! #codeisyourvoice'
   tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
     varying the health of a forest and levels of deforestation impact trees, wildlife
     and the amount of CO2 absorbed. You should already know how Scratch coordinates
@@ -5683,8 +5721,8 @@ sv:
     be used to support areas such as language arts, science and the arts. '
   tutorial_legohopper_longdescription: Design multiple prototypes to find the most
     effective way to move a robot without using wheels.
-  tutorial_catrobatembroidery_longdescription: Code your design on your Android phone
-    and stitch it on your T-shirt, pants, gym bag, or shoes!
+  tutorial_catrobatembroidery_longdescription: Kod din design på din Android-telefon
+    och sy den på din T-shirt, byxor, gymväska eller skor!
   tutorial_irobotphone_longdescription: In this coding challenge, students will work
     together remotely to create a collective program that draws a picture. Modeled
     after the classic game of Telephone, students will receive, remix, and pass along
@@ -5697,11 +5735,11 @@ sv:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: I århundraden delade byborna och fyborna samma
+    utrymme men de interagerade sällan med varandra. Nu kan du använda kodens kraft
+    för att sammanföra de två byarna. Du kommer att få uppleva empati och medkänsla
+    för dina grannar, lära dig samarbete och inkludering, och omfamna den mångfald
+    som gör oss alla unikt speciella.
   tutorial_dance2019_language: Arabiska, kinesiska, tjeckiska, danska, nederländska,
     engelska, finska, franska, tyska, grekiska, hindi, ungerska, indonesiska, italienska,
     japanska, koreanska, malay, polska, portugisiska, och ytterligare 10!
@@ -5709,10 +5747,10 @@ sv:
   tutorial_chibitronics_language: Svenska
   tutorial_athlete_language: Engelska, franska, spanska, italienska, portugisiska
     (brasiliansk)
-  tutorial_moana_language: English, Arabic, Chinese (Simplified), Chinese (Traditional)
+  tutorial_moana_language: "  English, Arabic, Chinese (Simplified), Chinese (Traditional)
     Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean,
     Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish,
-    Turkish, Ukrainian, Vietnamese
+    Turkish, Ukrainian, Vietnamese  "
   tutorial_star-wars_language: Engelska, arabiska, bulgariska, danska, finska, franska,
     grekiska, isländska, indonesiska, italienska, japanska, kinesiska, koreanska,
     kroatiska, nederländska, norska, persiska, polska, portugisiska, rumänska, ryska,
@@ -5723,19 +5761,19 @@ sv:
     kroatiska, nederländska, norska, persiska, polska, portugisiska, rumänska, ryska,
     spanska, svenska, turkiska, tyska, ukrainska och 19 fler
   tutorial_vidnews_language: Endast på engelska
-  tutorial_kodable-pre_language: English, Arabic, Azerbaijani, German, Greek, Spanish,
+  tutorial_kodable-pre_language: "  English, Arabic, Azerbaijani, German, Greek, Spanish,
     Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish,
-    Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese
+    Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese  "
   tutorial_highseas_language: Endast på engelska
   tutorial_capython_language: Endast på engelska
   tutorial_frzn_language: Engelska, arabiska, bulgariska, danska, finska, franska,
     grekiska, isländska, indonesiska, italienska, japanska, kinesiska, koreanska,
     kroatiska, nederländska, norska, persiska, polska, portugisiska, rumänska, ryska,
     spanska, svenska, turkiska, tyska, ukrainska och 19 fler
-  tutorial_cocom_language: English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch,
-    French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian,
-    Vietnamese and 9 more
+  tutorial_cocom_language: "  English, Arabic, Bulgarian, Chinese, Czech, Danish,
+    Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese,
+    Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish,
+    Ukrainian, Vietnamese and 9 more  "
   tutorial_play-lab_language: Engelska, arabiska, bulgariska, danska, finska, franska,
     grekiska, isländska, indonesiska, italienska, japanska, kinesiska, koreanska,
     kroatiska, nederländska, norska, persiska, polska, portugisiska, rumänska, ryska,
@@ -5773,19 +5811,19 @@ sv:
     grekiska, isländska, indonesiska, italienska, japanska, kinesiska, koreanska,
     kroatiska, nederländska, norska, persiska, polska, portugisiska, rumänska, ryska,
     spanska, svenska, turkiska, tyska, ukrainska och 19 fler
-  tutorial_galaxy_language: English, Albanian, Arabic, Bosnian, Chinese, Croatian,
+  tutorial_galaxy_language: "\n  English, Albanian, Arabic, Bosnian, Chinese, Croatian,
     Czech, Danish, Dutch, French, German, Hebrew, Indonesian, Italian, Japanese, Korean,
     Persian, Polish, Portuguese, Romanian, Russian, Slovenian, Spanish, Swedish, Turkish,
-    Vietnamese
+    Vietnamese  "
   tutorial_inf_language: Engelska, arabiska, bulgariska, danska, finska, franska,
     grekiska, isländska, indonesiska, italienska, japanska, kinesiska, koreanska,
     kroatiska, nederländska, norska, persiska, polska, portugisiska, rumänska, ryska,
     spanska, svenska, turkiska, tyska, ukrainska och 19 fler
   tutorial_tynkersol_language: Endast på engelska
   tutorial_itchg_language: Endast på engelska
-  tutorial_como_language: English, Arabic, Chinese, Czech, French, German, Greek,
+  tutorial_como_language: "  English, Arabic, Chinese, Czech, French, German, Greek,
     Hebrew, Japanese, Kazkh, Lithuanian, Polish, Portuguese, Russian, Serbian, Spanish,
-    Turkish, Ukrainian
+    Turkish, Ukrainian  "
   tutorial_processfound_language: Endast på engelska
   tutorial_tynkerhomo_language: Endast på engelska
   tutorial_art_language: Engelska, arabiska, bulgariska, danska, finska, franska,
@@ -5803,10 +5841,10 @@ sv:
   tutorial_tynkerapp_language: Endast på engelska
   tutorial_tynkerpup_language: Endast på engelska
   tutorial_livecode_language: Endast på engelska
-  tutorial_cocomgame_language: English, Arabic, Bulgarian, Chinese, Croatian, Czech,
+  tutorial_cocomgame_language: "  English, Arabic, Bulgarian, Chinese, Croatian, Czech,
     Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean,
     Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish,
-    Ukrainian, Vietnamese and 8 more
+    Ukrainian, Vietnamese and 8 more  "
   tutorial_tynkerspin_language: Endast på engelska
   tutorial_code-avengers_language: English, Spanish, Dutch, Russian, Portuguese
   tutorial_tynkercq_language: Endast på engelska
@@ -6030,9 +6068,9 @@ sv:
   tutorial_moveit_language: Endast på engelska
   tutorial_bigevent_language: Endast på engelska
   tutorial_gpp_language: Endast på engelska
-  tutorial_foosgame_language: English, Arabic, German, Spanish, French, Japanese,
+  tutorial_foosgame_language: "  English, Arabic, German, Spanish, French, Japanese,
     Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional
-    Chinese, Simplified Chinese, Greek, Italian, Polish
+    Chinese, Simplified Chinese, Greek, Italian, Polish  "
   tutorial_solopython_language: Endast på engelska
   tutorial_kodableint_language: Endast på engelska
   tutorial_kodableadv_language: Endast på engelska
@@ -6245,9 +6283,9 @@ sv:
   tutorial_cashield_language: Svenska
   tutorial_ccwslimer_language: Svenska
   tutorial_codinggalaxy_language: Chinese, English
-  tutorial_boatrace_language: Arabic, Chinese (Simplified), Czech, Danish, Dutch,
+  tutorial_boatrace_language: "  Arabic, Chinese (Simplified), Czech, Danish, Dutch,
     French, German, Greek, Hebrew, Hindi, Italian, Japanese, Korean, Other, Polish,
-    Romanian, Serbian (Cyrillic), Spanish, Ukrainian
+    Romanian, Serbian (Cyrillic), Spanish, Ukrainian  "
   tutorial_ccplay_language: Svenska
   tutorial_grinch_language: Svenska
   tutorial_codehsart_language: Svenska
@@ -6307,8 +6345,9 @@ sv:
   tutorial_ozorandom_language: Svenska
   tutorial_ozotroll_language: Svenska
   tutorial_peblioart_language: Svenska
-  tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
+  tutorial_astropi_language: "  Arabic, Danish, Dutch, English, Finnish, French, German,
     Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
+    \ "
   tutorial_rgart_language: Svenska
   tutorial_rgengineer_language: Svenska
   tutorial_rgmath_language: Svenska
@@ -6320,28 +6359,28 @@ sv:
   tutorial_scratchtalk_language: Endast på engelska
   tutorial_scratchjrstory_language: Svenska
   tutorial_scratchjrtwinkle_language: Svenska
-  tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherocommunity_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherofunctions_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroinfrared_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherolightsensor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheromansion_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_roadblocks_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext2_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext3_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext4_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroraptor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
+  tutorial_spherocomm_language: "  Arabic, Chinese, English, French, German, Hebrew,
+    Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spherocommunity_language: "  Arabic, Chinese, English, French, German,
+    Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spherofunctions_language: "  Arabic, Chinese, English, French, German,
+    Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spheroinfrared_language: "  Arabic, Chinese, English, French, German, Hebrew,
+    Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spherolightsensor_language: "  Arabic, Chinese, English, French, German,
+    Hebrew, Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spheromansion_language: "  Arabic, Chinese, English, French, German, Hebrew,
+    Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_roadblocks_language: "  Arabic, Chinese, English, French, German, Hebrew,
+    Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spherotext2_language: "  Arabic, Chinese, English, French, German, Hebrew,
+    Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spherotext3_language: "  Arabic, Chinese, English, French, German, Hebrew,
+    Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spherotext4_language: "  Arabic, Chinese, English, French, German, Hebrew,
+    Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
+  tutorial_spheroraptor_language: "  Arabic, Chinese, English, French, German, Hebrew,
+    Italian, Japanese, Korean, Norwegian, Spanish, Swedish  "
   tutorial_stempiday_language: Svenska
   tutorial_stemplanetoids_language: Svenska
   tutorial_stempong_language: Svenska
@@ -6364,22 +6403,23 @@ sv:
   tutorial_pets_language: Svenska
   tutorial_petvet_language: Svenska
   tutorial_superhero_language: Svenska
-  tutorial_vidcodeplastic_language: English, Hebrew
+  tutorial_vidcodeplastic_language: Svenska
   tutorial_vidcodetypeface_language: Svenska
   tutorial_washustorm_language: Svenska
   tutorial_activitypackets_language: Svenska
   tutorial_googlerookie_language: Svenska
   tutorial_tommyturtle_language: Svenska
-  tutorial_mazyad_language: Arabic, English
+  tutorial_mazyad_language: "  Arabic, English  "
   tutorial_gamemaker_language: Svenska
   tutorial_duckrace_language: Engelska, tyska
   tutorial_allcancodeapps_language: Svenska
   tutorial_n2y_language: Svenska
   tutorial_microsoftarcade_language: Svenska
   tutorial_csfirstunplugged_language: English, Spanish (Mexico)
-  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
-    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
-    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_toxicodepython_language: danska, nederländska, engelska, engelska (Storbritannien),
+    estniska, franska, tyska, indonesiska, italienska, andra, polska, portugisiska
+    (Brasilien), portugisiska (Portugal), rumänska, spanska (Spanien), spanska (Mexiko)
+    ), svenska, turkiska
   tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
     Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodedate_language: Svenska
@@ -6391,6 +6431,7 @@ sv:
     (Mexico)
   tutorial_bsdcause_language: Svenska
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_bsdinspire_language: Svenska
   tutorial_tttractor_language: Svenska
   tutorial_codeillusionmickey_language: Svenska
@@ -6413,6 +6454,7 @@ sv:
   tutorial_codestersdistance_language: Svenska
   tutorial_itchspace_language: Svenska
   tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_codespeakmeal_language: Svenska
   tutorial_itchfish_language: Svenska
   tutorial_bsdwebsite_language: Svenska
@@ -6420,11 +6462,12 @@ sv:
   tutorial_itchwebcam_language: Svenska
   tutorial_itchball_language: Svenska
   tutorial_ttrace_language: Svenska
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, Hebrew, Portuguese
-    (Brazil)
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
   tutorial_educodesecret_language: English, English (UK)
   tutorial_itchshapes_language: Svenska
   tutorial_codeguppytext_language: Svenska
+  tutorial_vidcodeplastiche_language: English, Hebrew
   tutorial_educativechatbot_language: Svenska
   tutorial_educodebasics_language: English, English (UK)
   tutorial_codehsdesign_language: Svenska
@@ -6490,13 +6533,17 @@ sv:
   tutorial_kcjplastic_language: Engelska, franska
   tutorial_legojourney_language: Svenska
   tutorial_legohopper_language: Svenska
-  tutorial_catrobatembroidery_language: Arabic, Bengali, Bosnian, Chinese (Simplified),
-    Croatian, Czech, English, French, German, Hindi, Indonesian, Italian, Japanese,
-    Korean, Norwegian (Nynorsk),Polish, Portuguese, and more!
+  tutorial_catrobatembroidery_language: Arabiska, bengalska, bosniska, förenklad kinesiska,
+    kroatiska, tjeckiska, engelska, engelska (UK), franska, tyska, hindi, indonesiska,
+    italienska, japanska, koreanska, norska (nynorsk), övrigt, polska, portugisiska
+    (Brasilien), portugisiska ( Portugal), ryska, serbiska (kyrilliska), serbiska
+    (latinska), slovakiska, spanska (Spanien, Mexiko), swahili, svenska, tamilska,
+    thailändska, turkiska, urdu (Pakistan), vietnamesiska
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Svenska
-  tutorial_meeempathy_language: Svenska
+  tutorial_meeempathy_language: Kinesiska, danska, holländska, engelska, franska,
+    italienska, japanska, koreanska, norska, portugisiska, spanska, svenska, turkiska
   tutorial_dance2019_string_detail_grades: Årskurs 2 och uppåt
   tutorial_danceparty_string_detail_grades: Årskurs 2 och uppåt
   tutorial_chibitronics_string_detail_grades: Grades 2-5
@@ -6505,10 +6552,10 @@ sv:
   tutorial_star-wars_string_detail_grades: Årskurs 2 och uppåt
   tutorial_gumadventure_string_detail_grades: Årskurs 6-8
   tutorial_mchoc_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_vidnews_string_detail_grades: Årskurs 6+
+  tutorial_vidnews_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
   tutorial_highseas_string_detail_grades: Årskurs 2-8
-  tutorial_capython_string_detail_grades: Årskurs 6+
+  tutorial_capython_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_frzn_string_detail_grades: Årskurs 2 och uppåt
   tutorial_cocom_string_detail_grades: Årskurs 2 och uppåt
   tutorial_play-lab_string_detail_grades: Årskurs 2 och uppåt
@@ -6518,28 +6565,28 @@ sv:
   tutorial_kanopixel_string_detail_grades: Årskurs 2 och uppåt
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerdd_string_detail_grades: Årskurs 2-8
-  tutorial_tynkerana_string_detail_grades: Årskurs 6+
+  tutorial_tynkerana_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_vidcard_string_detail_grades: Årskurs 2 och uppåt
   tutorial_spritebox_string_detail_grades: Årskurs 2-8
-  tutorial_tynkerch_string_detail_grades: Årskurs 6+
+  tutorial_tynkerch_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: do-not-show
   tutorial_code_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_tinspire_string_detail_grades: Årskurs 6+
+  tutorial_tinspire_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_itchbounceball_string_detail_grades: Årskurs 2-8
-  tutorial_vidclim_string_detail_grades: Årskurs 6+
-  tutorial_matlab_string_detail_grades: Årskurs 6+
+  tutorial_vidclim_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_matlab_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_flap_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_galaxy_string_detail_grades: Årskurs 6+
+  tutorial_galaxy_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_inf_string_detail_grades: Årskurs 2-8
   tutorial_tynkersol_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_itchg_string_detail_grades: Årskurs 6+
+  tutorial_itchg_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_como_string_detail_grades: Årskurs 2 och uppåt
   tutorial_processfound_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_tynkerhomo_string_detail_grades: Årskurs 6+
+  tutorial_tynkerhomo_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_art_string_detail_grades: Årskurs 2 och uppåt
   tutorial_tynkerbrick_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_itchbio_string_detail_grades: Årskurs 6+
+  tutorial_itchbio_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_itchj_string_detail_grades: Årskurs 6-8
   tutorial_tickleo_string_detail_grades: Årskurs 2 och uppåt
   tutorial_hopgeo_string_detail_grades: Årskurs 2-8
@@ -6550,67 +6597,67 @@ sv:
   tutorial_livecode_string_detail_grades: Årskurs 9 och uppåt
   tutorial_cocomgame_string_detail_grades: Årskurs 2 och uppåt
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
-  tutorial_code-avengers_string_detail_grades: Årskurs 6+
+  tutorial_code-avengers_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cmgame_string_detail_grades: Årskurs 6+
+  tutorial_cmgame_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codesters_string_detail_grades: do-not-show
-  tutorial_qrm_string_detail_grades: Årskurs 6+
-  tutorial_texas-instruments_string_detail_grades: Årskurs 6+
-  tutorial_cajava_string_detail_grades: Årskurs 6+
+  tutorial_qrm_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_texas-instruments_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_cajava_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codehs_string_detail_grades: Årskurs 9 och uppåt
   tutorial_hopemo_string_detail_grades: Årskurs 2-8
   tutorial_tynkercm_string_detail_grades: Årskurs 2 och uppåt
   tutorial_codesterswintergreet_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_codestersc_string_detail_grades: Årskurs 6+
+  tutorial_codestersc_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codestersturtle_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_penjee_string_detail_grades: Årskurs 6+
+  tutorial_penjee_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_trinket_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_frogger_string_detail_grades: Årskurs 6+
+  tutorial_frogger_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tynkereco_string_detail_grades: Årskurs 2-8
   tutorial_mitedarc_string_detail_grades: Årskurs 6-8
-  tutorial_khan_string_detail_grades: Årskurs 6+
-  tutorial_tynkerd_string_detail_grades: Årskurs 6+
+  tutorial_khan_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_tynkerd_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_cdmy_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_codestersdance_string_detail_grades: Årskurs 6+
-  tutorial_codestersbasketball_string_detail_grades: Årskurs 6+
-  tutorial_nclkarel_string_detail_grades: Årskurs 6+
+  tutorial_codestersdance_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codestersbasketball_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_nclkarel_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_buildpong_string_detail_grades: Årskurs 2 och uppåt
   tutorial_tynkerdrones_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_carla_string_detail_grades: Årskurs 6+
-  tutorial_zulama_string_detail_grades: Årskurs 6+
-  tutorial_capost_string_detail_grades: Årskurs 6+
+  tutorial_carla_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_zulama_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_capost_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_marco_string_detail_grades: Årskurs 2-8
-  tutorial_codestersflappybike_string_detail_grades: Årskurs 6+
+  tutorial_codestersflappybike_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_kanopong_string_detail_grades: Årskurs 6-8
   tutorial_tynkerright_string_detail_grades: Årskurs 2-8
   tutorial_touchdevelop_string_detail_grades: do-not-show
-  tutorial_tynkercc_string_detail_grades: Årskurs 6+
+  tutorial_tynkercc_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bamboo_string_detail_grades: Grades 2-5
-  tutorial_robojav_string_detail_grades: Årskurs 6+
-  tutorial_roboba_string_detail_grades: Årskurs 6+
+  tutorial_robojav_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_roboba_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_knodsnake_string_detail_grades: Årskurs 6-8
-  tutorial_soccharater_string_detail_grades: Årskurs 6+
-  tutorial_silent_string_detail_grades: Årskurs 6+
+  tutorial_soccharater_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_silent_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_robomesh_string_detail_grades: Årskurs 2 och uppåt
   tutorial_amaze_string_detail_grades: Årskurs 2 och uppåt
   tutorial_codestersds_string_detail_grades: Årskurs 2 och uppåt
   tutorial_knodtext_string_detail_grades: Årskurs 6-8
-  tutorial_alicegar_string_detail_grades: Årskurs 6+
-  tutorial_codesterstransform_string_detail_grades: Årskurs 6+
-  tutorial_flexfrog_string_detail_grades: Årskurs 6+
+  tutorial_alicegar_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codesterstransform_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_flexfrog_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codemoji_string_detail_grades: do-not-show
-  tutorial_robobii_string_detail_grades: Årskurs 6+
+  tutorial_robobii_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_robobm_string_detail_grades: Årskurs 6-8
   tutorial_codingrobots_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_robob_string_detail_grades: Årskurs 6+
+  tutorial_robob_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_coders_string_detail_grades: Årskurs 9 och uppåt
   tutorial_tynkerhw_string_detail_grades: Årskurs 2-8
   tutorial_tynkermh_string_detail_grades: Årskurs 2-8
-  tutorial_caphoto_string_detail_grades: Årskurs 6+
+  tutorial_caphoto_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_mozillahw_string_detail_grades: Årskurs 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_scratchg_string_detail_grades: Årskurs 6+
+  tutorial_scratchg_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_roboticfriends_string_detail_grades: Alla åldrar
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjgreet_string_detail_grades: Pre-reader - Grade 5
@@ -6618,19 +6665,19 @@ sv:
   tutorial_fufafrenz_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcgeo_string_detail_grades: do-not-show
   tutorial_chspixel_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_hummingbird_string_detail_grades: Årskurs 6+
-  tutorial_recoloring_string_detail_grades: Årskurs 6+
+  tutorial_hummingbird_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_recoloring_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bbcchem_string_detail_grades: do-not-show
   tutorial_floalgo_string_detail_grades: Årskurs 2 och uppåt
   tutorial_flocond_string_detail_grades: Årskurs 2 och uppåt
   tutorial_floloops_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_pgts_string_detail_grades: Årskurs 6+
+  tutorial_pgts_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ozo_string_detail_grades: Alla åldrar
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
   tutorial_tlctour_string_detail_grades: Årskurs 2 och uppåt
   tutorial_codesterstj_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_tlclocked_string_detail_grades: Årskurs 6+
+  tutorial_tlclocked_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_baubles_string_detail_grades: Årskurs 2-8
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Årskurs 2 och uppåt
@@ -6652,12 +6699,12 @@ sv:
   tutorial_ijournalist_string_detail_grades: Årskurs 2-8
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: Årskurs 6-8
-  tutorial_tlchex_string_detail_grades: Årskurs 6+
+  tutorial_tlchex_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tickles_string_detail_grades: Årskurs 2 och uppåt
   tutorial_ozogame_string_detail_grades: Alla åldrar
   tutorial_vidcodeio_string_detail_grades: Årskurs 2 och uppåt
   tutorial_besttech_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_tlcbrain_string_detail_grades: Årskurs 6+
+  tutorial_tlcbrain_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_hopquiz_string_detail_grades: Årskurs 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
   tutorial_cha_string_detail_grades: Årskurs 6-8
@@ -6667,7 +6714,7 @@ sv:
   tutorial_arduino_string_detail_grades: Årskurs 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
   tutorial_tlcinvis_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_tlcjflap_string_detail_grades: Årskurs 6+
+  tutorial_tlcjflap_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
   tutorial_spiralsfinch_string_detail_grades: Årskurs 2 och uppåt
   tutorial_ozoi_string_detail_grades: Alla åldrar
@@ -6679,40 +6726,40 @@ sv:
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
   tutorial_tlccc_string_detail_grades: Årskurs 2-8
   tutorial_tlcdoodle_string_detail_grades: Årskurs 2-8
-  tutorial_tlcpunch_string_detail_grades: Årskurs 6+
+  tutorial_tlcpunch_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_finchfract_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_tlcmind_string_detail_grades: Årskurs 6+
+  tutorial_tlcmind_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tlctelebot_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_tlcaus_string_detail_grades: Årskurs 6+
+  tutorial_tlcaus_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_oralhist_string_detail_grades: Årskurs 9 och uppåt
   tutorial_tlcmicro_string_detail_grades: Årskurs 2 och uppåt
   tutorial_imathematician_string_detail_grades: Årskurs 2-8
-  tutorial_tlcmagic_string_detail_grades: Årskurs 6+
+  tutorial_tlcmagic_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_scratchmus_string_detail_grades: Årskurs 2-8
   tutorial_scratchanim_string_detail_grades: Årskurs 2-8
   tutorial_scratchfly_string_detail_grades: Årskurs 2-8
   tutorial_tynkerarc_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_grokffpython_string_detail_grades: Årskurs 6+
-  tutorial_grokffblock_string_detail_grades: Årskurs 6+
-  tutorial_grokeliza_string_detail_grades: Årskurs 6+
+  tutorial_grokffpython_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_grokffblock_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_grokeliza_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tynkercan_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_grokflags_string_detail_grades: Årskurs 6+
+  tutorial_grokflags_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_robomind_string_detail_grades: Årskurs 2-8
   tutorial_scratchanimwork_string_detail_grades: Årskurs 2-8
   tutorial_adventureq_string_detail_grades: Grades 2-5
-  tutorial_khan-es_string_detail_grades: Årskurs 6+
-  tutorial_kpt_string_detail_grades: Årskurs 6+
-  tutorial_kpl_string_detail_grades: Årskurs 6+
-  tutorial_khe_string_detail_grades: Årskurs 6+
-  tutorial_kfr_string_detail_grades: Årskurs 6+
-  tutorial_app-inventor_string_detail_grades: Årskurs 6+
+  tutorial_khan-es_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_kpt_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_kpl_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_khe_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_kfr_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_app-inventor_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bits_string_detail_grades: Grades 2-5
-  tutorial_blockly_string_detail_grades: Årskurs 6+
+  tutorial_blockly_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: Alla åldrar
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_spellcraft_string_detail_grades: Årskurs 6+
+  tutorial_spellcraft_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_pirates_string_detail_grades: Årskurs 2-8
   tutorial_csfirst_string_detail_grades: Årskurs 2 och uppåt
   tutorial_loopedy_string_detail_grades: Grades 2-5
@@ -6724,7 +6771,7 @@ sv:
   tutorial_scratch_string_detail_grades: Grades 2-5
   tutorial_bayes_string_detail_grades: Alla åldrar
   tutorial_gumball_string_detail_grades: do-not-show
-  tutorial_hrm_string_detail_grades: Årskurs 6+
+  tutorial_hrm_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ice-age_string_detail_grades: do-not-show
   tutorial_koapp_string_detail_grades: do-not-show
   tutorial_lightbot-intl_string_detail_grades: Pre-reader - Grade 8
@@ -6740,7 +6787,7 @@ sv:
   tutorial_spherov_string_detail_grades: Årskurs 2 och uppåt
   tutorial_swb_string_detail_grades: do-not-show
   tutorial_build-a-galaxy_string_detail_grades: do-not-show
-  tutorial_alicesims_string_detail_grades: Årskurs 6+
+  tutorial_alicesims_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tchr_string_detail_grades: do-not-show
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
   tutorial_tap_string_detail_grades: Årskurs 2 och uppåt
@@ -6759,51 +6806,51 @@ sv:
   tutorial_solopython_string_detail_grades: Årskurs 9 och uppåt
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
   tutorial_kodableadv_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkertj_string_detail_grades: Årskurs 6+
-  tutorial_wolframa_string_detail_grades: Årskurs 6+
-  tutorial_wolframm_string_detail_grades: Årskurs 6+
-  tutorial_wolframspi_string_detail_grades: Årskurs 6+
-  tutorial_wolframsph_string_detail_grades: Årskurs 6+
-  tutorial_wolframp_string_detail_grades: Årskurs 6+
-  tutorial_wolframn_string_detail_grades: Årskurs 6+
+  tutorial_tynkertj_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_wolframa_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_wolframm_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_wolframspi_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_wolframsph_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_wolframp_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_wolframn_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_soloweb_string_detail_grades: Årskurs 9 och uppåt
   tutorial_khanweb_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_khandata_string_detail_grades: Årskurs 6+
+  tutorial_khandata_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_robomeshiq_string_detail_grades: Årskurs 2 och uppåt
   tutorial_googlelogo_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_playtune_string_detail_grades: Årskurs 6+
+  tutorial_playtune_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_computeit_string_detail_grades: Årskurs 2 och uppåt
   tutorial_codesterssj_string_detail_grades: Årskurs 2-8
-  tutorial_cmchat_string_detail_grades: Årskurs 6+
+  tutorial_cmchat_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
-  tutorial_cmbuild_string_detail_grades: Årskurs 6+
+  tutorial_cmbuild_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_robotrattle_string_detail_grades: Årskurs 2-8
   tutorial_codestersh_string_detail_grades: Årskurs 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Årskurs 6+
-  tutorial_ccbinary_string_detail_grades: Årskurs 6+
-  tutorial_codehsturtle_string_detail_grades: Årskurs 6+
-  tutorial_grokhd_string_detail_grades: Årskurs 6+
-  tutorial_grokem_string_detail_grades: Årskurs 6+
+  tutorial_codehsdigipixel_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_ccbinary_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codehsturtle_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_grokhd_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_grokem_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Årskurs 2-8
   tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Årskurs 9 och uppåt
   tutorial_raspipong_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_codehsvr_string_detail_grades: Årskurs 6+
+  tutorial_codehsvr_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codesterstp_string_detail_grades: Årskurs 6-8
   tutorial_codestersbb_string_detail_grades: Årskurs 6-8
   tutorial_gfcrossyroad_string_detail_grades: Årskurs 9 och uppåt
   tutorial_googleww_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_codehsjsapp_string_detail_grades: Årskurs 6+
+  tutorial_codehsjsapp_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_gfmihi_string_detail_grades: Årskurs 9 och uppåt
   tutorial_hopdropphone_string_detail_grades: Årskurs 2-8
   tutorial_techfaa_string_detail_grades: University
   tutorial_codehsjsgraph_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_thunkable_string_detail_grades: Årskurs 6+
+  tutorial_thunkable_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_hopcrossyroad_string_detail_grades: Årskurs 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
-  tutorial_codecar_string_detail_grades: Årskurs 6+
+  tutorial_codecar_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codesterscp_string_detail_grades: Årskurs 6-8
   tutorial_grokpetblock_string_detail_grades: Årskurs 6-8
   tutorial_techbim_string_detail_grades: University
@@ -6815,8 +6862,8 @@ sv:
   tutorial_myradream_string_detail_grades: Årskurs 2-8
   tutorial_thinkfun_string_detail_grades: Årskurs 2-8
   tutorial_hopfireworks_string_detail_grades: Årskurs 2-8
-  tutorial_grokspace_string_detail_grades: Årskurs 6+
-  tutorial_codehspython_string_detail_grades: Årskurs 6+
+  tutorial_grokspace_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codehspython_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codehsjava_string_detail_grades: Årskurs 9 och uppåt
   tutorial_techioda_string_detail_grades: University
   tutorial_grokmonster_string_detail_grades: Grades 2-5
@@ -6824,8 +6871,8 @@ sv:
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
   tutorial_techiogsr_string_detail_grades: University
-  tutorial_groktunnel_string_detail_grades: Årskurs 6+
-  tutorial_stemcod_string_detail_grades: Årskurs 6+
+  tutorial_groktunnel_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_stemcod_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
   tutorial_nyblebot_string_detail_grades: Grades 2-5
@@ -6833,32 +6880,32 @@ sv:
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
-  tutorial_gpbcatapult_string_detail_grades: Årskurs 6+
-  tutorial_quorumastro_string_detail_grades: Årskurs 6+
+  tutorial_gpbcatapult_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_quorumastro_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_alicewonder_string_detail_grades: Grades 2-5
   tutorial_rginter_string_detail_grades: Årskurs 6-8
-  tutorial_cssgrid_string_detail_grades: Årskurs 6+
+  tutorial_cssgrid_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_jshero_string_detail_grades: Årskurs 9 och uppåt
   tutorial_codemojipy_string_detail_grades: Grades 2-5
-  tutorial_nclabdrone_string_detail_grades: Årskurs 6+
-  tutorial_gpbcircle_string_detail_grades: Årskurs 6+
-  tutorial_gpbpaint_string_detail_grades: Årskurs 6+
-  tutorial_cocomarcade_string_detail_grades: Årskurs 6+
+  tutorial_nclabdrone_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gpbcircle_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gpbpaint_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_cocomarcade_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Årskurs 6-8
-  tutorial_codedj_string_detail_grades: Årskurs 6+
-  tutorial_rgadvan_string_detail_grades: Årskurs 6+
+  tutorial_codedj_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_rgadvan_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codehsrn_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_codehswd_string_detail_grades: Årskurs 6+
+  tutorial_codehswd_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: Årskurs 6+
-  tutorial_ozoexped_string_detail_grades: Årskurs 6+
+  tutorial_ozoevo_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_ozoexped_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ozojourney_string_detail_grades: Årskurs 2-8
   tutorial_ozocodes_string_detail_grades: Alla åldrar
   tutorial_ozoeclipse_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_ozosimulator_string_detail_grades: Årskurs 6+
-  tutorial_ozoalgorithm_string_detail_grades: Årskurs 6+
-  tutorial_ozotimer_string_detail_grades: Årskurs 6+
+  tutorial_ozosimulator_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_ozoalgorithm_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_ozotimer_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ozohabits_string_detail_grades: Alla åldrar
   tutorial_ozoprogram_string_detail_grades: Årskurs 2-8
   tutorial_ozopair_string_detail_grades: Årskurs 2 och uppåt
@@ -6881,9 +6928,9 @@ sv:
   tutorial_lbvariables_string_detail_grades: Årskurs 2-8
   tutorial_lbfunctions_string_detail_grades: Årskurs 2-8
   tutorial_lblogic_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_lbworld_string_detail_grades: Årskurs 6+
+  tutorial_lbworld_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_lbloops_string_detail_grades: Årskurs 2-8
-  tutorial_lbtug_string_detail_grades: Årskurs 6+
+  tutorial_lbtug_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_lbpotato_string_detail_grades: Årskurs 2 och uppåt
   tutorial_lbguitar_string_detail_grades: Årskurs 2 och uppåt
   tutorial_lbio_string_detail_grades: Årskurs 2-8
@@ -6892,14 +6939,14 @@ sv:
   tutorial_wonzoo_string_detail_grades: Grades 2-5
   tutorial_wontrip_string_detail_grades: Årskurs 2-8
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wonsecret_string_detail_grades: Årskurs 6+
+  tutorial_wonsecret_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_hsscience_string_detail_grades: Årskurs 2-8
-  tutorial_popculture_string_detail_grades: Årskurs 6+
+  tutorial_popculture_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_legorobust_string_detail_grades: Årskurs 2 och uppåt
   tutorial_legoplants_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_legopark_string_detail_grades: Årskurs 6+
-  tutorial_legodetect_string_detail_grades: Årskurs 6+
-  tutorial_legolight_string_detail_grades: Årskurs 6+
+  tutorial_legopark_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_legodetect_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_legolight_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_alexa_string_detail_grades: Årskurs 9 och uppåt
   tutorial_grokpetmicro_string_detail_grades: Årskurs 6-8
   tutorial_pirateplunder_string_detail_grades: Årskurs 2-8
@@ -6908,24 +6955,24 @@ sv:
   tutorial_cajump_string_detail_grades: Årskurs 2-8
   tutorial_carest_string_detail_grades: Årskurs 2-8
   tutorial_accai_string_detail_grades: Årskurs 2-8
-  tutorial_vceclipse_string_detail_grades: Årskurs 6+
-  tutorial_pmzero_string_detail_grades: Årskurs 6+
+  tutorial_vceclipse_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_pmzero_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_hsela_string_detail_grades: Årskurs 2-8
   tutorial_ticklear_string_detail_grades: Årskurs 2-8
   tutorial_bcrobot_string_detail_grades: Årskurs 2-8
-  tutorial_bcsnow_string_detail_grades: Årskurs 6+
+  tutorial_bcsnow_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ifly_string_detail_grades: Årskurs 2 och uppåt
   tutorial_idowedo_string_detail_grades: Årskurs 2-8
-  tutorial_diggindwarf_string_detail_grades: Årskurs 6+
+  tutorial_diggindwarf_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_rmedr_string_detail_grades: Årskurs 2-8
   tutorial_spheroit_string_detail_grades: Årskurs 2 och uppåt
   tutorial_gameofcodes_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_blocklygames_string_detail_grades: Årskurs 6+
-  tutorial_spherohello_string_detail_grades: Årskurs 6+
-  tutorial_spheroarcade_string_detail_grades: Årskurs 6+
-  tutorial_bcpy1_string_detail_grades: Årskurs 6+
-  tutorial_bcpy2_string_detail_grades: Årskurs 6+
-  tutorial_bcjs1_string_detail_grades: Årskurs 6+
+  tutorial_blocklygames_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_spherohello_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_spheroarcade_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_bcpy1_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_bcpy2_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_bcjs1_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bcjs2_string_detail_grades: Årskurs 9 och uppåt
   tutorial_3dbearmars_string_detail_grades: Årskurs 2-8
   tutorial_alexaskill_string_detail_grades: Årskurs 2-8
@@ -6934,27 +6981,27 @@ sv:
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
   tutorial_blockscadclock_string_detail_grades: Årskurs 9 och uppåt
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
-  tutorial_blockscadicecream_string_detail_grades: Årskurs 6+
+  tutorial_blockscadicecream_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_blockscadpizza_string_detail_grades: Årskurs 6-8
   tutorial_blockscadsugar_string_detail_grades: Årskurs 6-8
   tutorial_bsgridlight_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_bpartscratch_string_detail_grades: Årskurs 6+
-  tutorial_bpartvid_string_detail_grades: Årskurs 6+
+  tutorial_bpartscratch_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_bpartvid_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bpenglishscratch_string_detail_grades: Årskurs 2-8
   tutorial_bpenglishvid_string_detail_grades: Årskurs 2-8
   tutorial_bphealthscratch_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_bphealthvid_string_detail_grades: Årskurs 6+
+  tutorial_bphealthvid_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
-  tutorial_bpmathvid_string_detail_grades: Årskurs 6+
+  tutorial_bpmathvid_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bpmlkscratch_string_detail_grades: Årskurs 2-8
   tutorial_bpmlkvid_string_detail_grades: Årskurs 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
   tutorial_bpsafetyvid_string_detail_grades: Årskurs 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
   tutorial_bpsciencevid_string_detail_grades: Årskurs 6-8
-  tutorial_bptechscratch_string_detail_grades: Årskurs 6+
-  tutorial_bptechvid_string_detail_grades: Årskurs 6+
-  tutorial_caflags_string_detail_grades: Årskurs 6+
+  tutorial_bptechscratch_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_bptechvid_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_caflags_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_matariki_string_detail_grades: Grades 2-5
   tutorial_carestaurant_string_detail_grades: Årskurs 2 och uppåt
   tutorial_casea_string_detail_grades: Grades 2-5
@@ -6962,37 +7009,37 @@ sv:
   tutorial_ccwslimer_string_detail_grades: Årskurs 2-8
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
   tutorial_boatrace_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_ccplay_string_detail_grades: Årskurs 6+
+  tutorial_ccplay_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_grinch_string_detail_grades: Årskurs 2-8
   tutorial_codehsart_string_detail_grades: Årskurs 9 och uppåt
   tutorial_codehsbitcoin_string_detail_grades: Årskurs 9 och uppåt
   tutorial_codehsblockchain_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_codehscipher_string_detail_grades: Årskurs 6+
+  tutorial_codehscipher_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codehscollision_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_codehsmath_string_detail_grades: Årskurs 6+
-  tutorial_codehsmusic_string_detail_grades: Årskurs 6+
-  tutorial_codehssports_string_detail_grades: Årskurs 6+
+  tutorial_codehsmath_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codehsmusic_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codehssports_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codemojipizza_string_detail_grades: Årskurs 2-8
-  tutorial_moonlander_string_detail_grades: Årskurs 6+
+  tutorial_moonlander_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_sushicards_string_detail_grades: Årskurs 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Årskurs 6-8
-  tutorial_codesterslogo_string_detail_grades: Årskurs 6+
-  tutorial_codesterstshirt_string_detail_grades: Årskurs 6+
+  tutorial_codesterslogo_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codesterstshirt_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codewards_string_detail_grades: Årskurs 2-8
   tutorial_olympics_string_detail_grades: Årskurs 2-8
   tutorial_codinismhero_string_detail_grades: Årskurs 2 och uppåt
   tutorial_discovery_string_detail_grades: Årskurs 2 och uppåt
   tutorial_csfirstname_string_detail_grades: Årskurs 2 och uppåt
   tutorial_obstaclecourse_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_edisonmove_string_detail_grades: Årskurs 6+
-  tutorial_edisonspider_string_detail_grades: Årskurs 6+
+  tutorial_edisonmove_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_edisonspider_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_edisonspotlight_string_detail_grades: Årskurs 2-8
-  tutorial_firiapython_string_detail_grades: Årskurs 6+
-  tutorial_gamefrootsquid_string_detail_grades: Årskurs 6+
-  tutorial_duckpiano_string_detail_grades: Årskurs 6+
-  tutorial_gpsound_string_detail_grades: Årskurs 6+
+  tutorial_firiapython_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gamefrootsquid_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_duckpiano_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gpsound_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_groklearningpython_string_detail_grades: Årskurs 9 och uppåt
   tutorial_htmltimetravel_string_detail_grades: Årskurs 9 och uppåt
   tutorial_hp_flappy_string_detail_grades: Årskurs 9 och uppåt
@@ -7002,32 +7049,32 @@ sv:
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Årskurs 2-8
   tutorial_kanohp_string_detail_grades: Årskurs 2-8
-  tutorial_khanwebpages_string_detail_grades: Årskurs 6+
+  tutorial_khanwebpages_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wizard_string_detail_grades: Årskurs 6+
+  tutorial_wizard_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_mbscratchcards_string_detail_grades: Årskurs 2 och uppåt
   tutorial_mbswiftplaygrounds_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_mbbuttons_string_detail_grades: Årskurs 6+
-  tutorial_meteor_string_detail_grades: Årskurs 6+
-  tutorial_ballbounce_string_detail_grades: Årskurs 6+
-  tutorial_mitcodi_string_detail_grades: Årskurs 6+
-  tutorial_mitdoodle_string_detail_grades: Årskurs 6+
-  tutorial_talktome_string_detail_grades: Årskurs 6+
-  tutorial_mobilecspmap_string_detail_grades: Årskurs 6+
+  tutorial_mbbuttons_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_meteor_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_ballbounce_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_mitcodi_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_mitdoodle_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_talktome_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_mobilecspmap_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ozorandom_string_detail_grades: Årskurs 2 och uppåt
   tutorial_ozotroll_string_detail_grades: Årskurs 6-8
   tutorial_peblioart_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_astropi_string_detail_grades: Årskurs 6+
+  tutorial_astropi_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_rgart_string_detail_grades: Grades 2-5
   tutorial_rgengineer_string_detail_grades: Grades 2-5
   tutorial_rgmath_string_detail_grades: Grades 2-5
   tutorial_rgscience_string_detail_grades: Grades 2-5
   tutorial_rgtech_string_detail_grades: Grades 2-5
-  tutorial_robotmagic3d_string_detail_grades: Årskurs 6+
+  tutorial_robotmagic3d_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_robotmagicflappy_string_detail_grades: Årskurs 9 och uppåt
   tutorial_scratchadventure_string_detail_grades: Årskurs 2 och uppåt
   tutorial_scratchtalk_string_detail_grades: Årskurs 2 och uppåt
@@ -7035,14 +7082,14 @@ sv:
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Årskurs 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
-  tutorial_spherofunctions_string_detail_grades: Årskurs 6+
+  tutorial_spherofunctions_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_spheroinfrared_string_detail_grades: Årskurs 6-8
   tutorial_spherolightsensor_string_detail_grades: Årskurs 2-8
   tutorial_spheromansion_string_detail_grades: Årskurs 2-8
   tutorial_roadblocks_string_detail_grades: Årskurs 2-8
-  tutorial_spherotext2_string_detail_grades: Årskurs 6+
-  tutorial_spherotext3_string_detail_grades: Årskurs 6+
-  tutorial_spherotext4_string_detail_grades: Årskurs 6+
+  tutorial_spherotext2_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_spherotext3_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_spherotext4_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_spheroraptor_string_detail_grades: Årskurs 2-8
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
   tutorial_stemplanetoids_string_detail_grades: Årskurs 9 och uppåt
@@ -7050,103 +7097,106 @@ sv:
   tutorial_algobot_string_detail_grades: Årskurs 2-8
   tutorial_thunkableapps_string_detail_grades: Årskurs 9 och uppåt
   tutorial_toxicodedot_string_detail_grades: Årskurs 2-8
-  tutorial_gcactions_string_detail_grades: Årskurs 6+
-  tutorial_gccomparators_string_detail_grades: Årskurs 6+
-  tutorial_gcconditions_string_detail_grades: Årskurs 6+
-  tutorial_gccreate_string_detail_grades: Årskurs 6+
-  tutorial_gcevents_string_detail_grades: Årskurs 6+
-  tutorial_gcloops_string_detail_grades: Årskurs 6+
-  tutorial_gcvariables_string_detail_grades: Årskurs 6+
+  tutorial_gcactions_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gccomparators_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gcconditions_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gccreate_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gcevents_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gcloops_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_gcvariables_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
   tutorial_change_string_detail_grades: Årskurs 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_landscape_string_detail_grades: Årskurs 6+
+  tutorial_landscape_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
-  tutorial_superhero_string_detail_grades: Årskurs 6+
-  tutorial_vidcodeplastic_string_detail_grades: Årskurs 6+
-  tutorial_vidcodetypeface_string_detail_grades: Årskurs 6+
+  tutorial_superhero_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_vidcodeplastic_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_vidcodetypeface_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_washustorm_string_detail_grades: Grades 2-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
-  tutorial_googlerookie_string_detail_grades: Årskurs 6+
+  tutorial_googlerookie_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
   tutorial_mazyad_string_detail_grades: Pre-reader - Grade 5
   tutorial_gamemaker_string_detail_grades: Årskurs 2 och uppåt
   tutorial_duckrace_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_allcancodeapps_string_detail_grades: Årskurs 6+
+  tutorial_allcancodeapps_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_n2y_string_detail_grades: Från icke läskunniga och uppåt
   tutorial_microsoftarcade_string_detail_grades: Årskurs 2 och uppåt
   tutorial_csfirstunplugged_string_detail_grades: Årskurs 2-8
-  tutorial_toxicodepython_string_detail_grades: Årskurs 6+
-  tutorial_codecombatozaria_string_detail_grades: Årskurs 6+
-  tutorial_vidcodedate_string_detail_grades: Årskurs 6+
+  tutorial_toxicodepython_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codecombatozaria_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_vidcodedate_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codemonkeyspace_string_detail_grades: Årskurs 2-8
   tutorial_codespeakhappy_string_detail_grades: Årskurs 2-8
-  tutorial_grokimage_string_detail_grades: Årskurs 6+
+  tutorial_grokimage_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
   tutorial_rpstress_string_detail_grades: Årskurs 2 och uppåt
   tutorial_bsdcause_string_detail_grades: Årskurs 9 och uppåt
   tutorial_vidcodeanimoji_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_bsdinspire_string_detail_grades: Årskurs 6+
-  tutorial_tttractor_string_detail_grades: Årskurs 6+
+  tutorial_vidcodeanimojies_string_detail_grades: Årskurs 2 och uppåt
+  tutorial_bsdinspire_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_tttractor_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codeillusionmickey_string_detail_grades: Årskurs 2-8
   tutorial_scigirlsquest_string_detail_grades: Årskurs 2-8
   tutorial_codespeakbreathe_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_vidcodeface_string_detail_grades: Årskurs 6+
-  tutorial_educodemaze_string_detail_grades: Årskurs 6+
-  tutorial_educoderace_string_detail_grades: Årskurs 6+
+  tutorial_vidcodeface_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_educodemaze_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_educoderace_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codespeakchatbot_string_detail_grades: Årskurs 2-8
-  tutorial_gamefrootgames_string_detail_grades: Årskurs 6+
+  tutorial_gamefrootgames_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codespeakgrandparent_string_detail_grades: Årskurs 2-8
-  tutorial_educodekingdom_string_detail_grades: Årskurs 6+
+  tutorial_educodekingdom_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codehsdata_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_educodecake_string_detail_grades: Årskurs 6+
-  tutorial_ttsecond_string_detail_grades: Årskurs 6+
-  tutorial_bsdtrivia_string_detail_grades: Årskurs 6+
+  tutorial_educodecake_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_ttsecond_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_bsdtrivia_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_csfirstdialogue_string_detail_grades: Årskurs 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersdistance_string_detail_grades: Årskurs 6+
-  tutorial_itchspace_string_detail_grades: Årskurs 6+
+  tutorial_codestersdistance_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_itchspace_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_vidcodemagic_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_codespeakmeal_string_detail_grades: Årskurs 6+
+  tutorial_vidcodemagices_string_detail_grades: Årskurs 2 och uppåt
+  tutorial_codespeakmeal_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_itchfish_string_detail_grades: Årskurs 2-8
-  tutorial_bsdwebsite_string_detail_grades: Årskurs 6+
+  tutorial_bsdwebsite_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codespeaktime_string_detail_grades: Årskurs 2-8
-  tutorial_itchwebcam_string_detail_grades: Årskurs 6+
+  tutorial_itchwebcam_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_itchball_string_detail_grades: Årskurs 2-8
   tutorial_ttrace_string_detail_grades: Årskurs 6-8
   tutorial_plethora_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_educodesecret_string_detail_grades: Årskurs 6+
-  tutorial_itchshapes_string_detail_grades: Årskurs 6+
+  tutorial_educodesecret_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_itchshapes_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codeguppytext_string_detail_grades: Årskurs 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_educativechatbot_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_educodebasics_string_detail_grades: Årskurs 6+
-  tutorial_codehsdesign_string_detail_grades: Årskurs 6+
-  tutorial_htmlacademyphp_string_detail_grades: Årskurs 6+
+  tutorial_educodebasics_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codehsdesign_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_htmlacademyphp_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_gamefrootdistance_string_detail_grades: Årskurs 2 och uppåt
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
   tutorial_ttbunker_string_detail_grades: Årskurs 6-8
-  tutorial_cuttle_string_detail_grades: Årskurs 6+
+  tutorial_cuttle_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bsdjokes_string_detail_grades: Årskurs 6-8
-  tutorial_rptree_string_detail_grades: Årskurs 6+
-  tutorial_codestersunity_string_detail_grades: Årskurs 6+
-  tutorial_codesterssoccer_string_detail_grades: Årskurs 6+
+  tutorial_rptree_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codestersunity_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codesterssoccer_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_breakoutlock_string_detail_grades: Årskurs 2-8
-  tutorial_thunkablemask_string_detail_grades: Årskurs 6+
+  tutorial_thunkablemask_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_cafarming_string_detail_grades: Årskurs 2-8
   tutorial_blocksmithyeti_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_codecapture_string_detail_grades: Årskurs 6+
+  tutorial_codecapture_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codehslitter_string_detail_grades: Årskurs 6-8
   tutorial_bsdocean_string_detail_grades: Årskurs 6-8
-  tutorial_itchplatformer_string_detail_grades: Årskurs 6+
-  tutorial_codejika_string_detail_grades: Årskurs 2-8
+  tutorial_itchplatformer_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codejika_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_gamefrootclicker_string_detail_grades: Årskurs 6-8
   tutorial_rmagicequity_string_detail_grades: Årskurs 6-8
   tutorial_ttfreestyle_string_detail_grades: Årskurs 6-8
   tutorial_ozobotcolor2_string_detail_grades: Årskurs 2 och uppåt
   tutorial_ozobotcolor3_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_clcarbon_string_detail_grades: Årskurs 6+
+  tutorial_clcarbon_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
   tutorial_scigirlscc_string_detail_grades: Årskurs 2 och uppåt
   tutorial_irobotpicture_string_detail_grades: Årskurs 2-8
@@ -7158,15 +7208,15 @@ sv:
   tutorial_kcjheroines_string_detail_grades: Årskurs 2-8
   tutorial_ozobotvalue_string_detail_grades: Grades 2-5
   tutorial_icodebytes_string_detail_grades: Pre-reader
-  tutorial_clfashion2_string_detail_grades: Årskurs 6+
-  tutorial_ai4all_string_detail_grades: Årskurs 6+
-  tutorial_cldata_string_detail_grades: Årskurs 6+
+  tutorial_clfashion2_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_ai4all_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_cldata_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_spheroinputs_string_detail_grades: Årskurs 2-8
   tutorial_edisoncount_string_detail_grades: Årskurs 2-8
   tutorial_spheroloops_string_detail_grades: Årskurs 2-8
   tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
-  tutorial_clfashion1_string_detail_grades: Årskurs 6+
+  tutorial_clfashion1_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
   tutorial_edisonmystery_string_detail_grades: Årskurs 6-8
   tutorial_microbitseaturtles_string_detail_grades: Årskurs 6-8
@@ -7174,17 +7224,17 @@ sv:
   tutorial_imagilabs_string_detail_grades: Årskurs 2-8
   tutorial_irobotsimulator_string_detail_grades: Årskurs 2-8
   tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
-  tutorial_firiavirtual_string_detail_grades: Årskurs 6+
+  tutorial_firiavirtual_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_irobotguesscode_string_detail_grades: Årskurs 2-8
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
-  tutorial_nasa3d_string_detail_grades: Årskurs 6+
-  tutorial_blupants_string_detail_grades: Årskurs 6+
+  tutorial_nasa3d_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_blupants_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_legodance_string_detail_grades: Årskurs 6-8
   tutorial_nearpodcoding_string_detail_grades: Årskurs 9 och uppåt
   tutorial_kcjplastic_string_detail_grades: Årskurs 2 och uppåt
   tutorial_legojourney_string_detail_grades: Årskurs 2-8
   tutorial_legohopper_string_detail_grades: Årskurs 2-8
-  tutorial_catrobatembroidery_string_detail_grades: Årskurs 6+
+  tutorial_catrobatembroidery_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_irobotphone_string_detail_grades: Årskurs 2-8
   tutorial_codeguppydraw_string_detail_grades: Årskurs 6-8
   tutorial_codejumper_string_detail_grades: Årskurs 2-8
@@ -7956,6 +8006,8 @@ sv:
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
+  tutorial_vidcodeanimojies_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad
   tutorial_bsdinspire_string_platforms: Chrome
   tutorial_tttractor_string_platforms: Chrome
   tutorial_codeillusionmickey_string_platforms: Chrome
@@ -7982,6 +8034,8 @@ sv:
   tutorial_itchspace_string_platforms: Alla moderna webbläsare
   tutorial_vidcodemagic_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
+  tutorial_vidcodemagices_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
   tutorial_itchfish_string_platforms: Alla moderna webbläsare
   tutorial_bsdwebsite_string_platforms: Chrome
@@ -7996,6 +8050,8 @@ sv:
   tutorial_itchshapes_string_platforms: Alla moderna webbläsare
   tutorial_codeguppytext_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
+  tutorial_vidcodeplastiche_string_platforms: Alla moderna webbläsare, iPad, inte
+    uppkopplad
   tutorial_educativechatbot_string_platforms: Alla moderna webbläsare
   tutorial_educodebasics_string_platforms: Alla moderna webbläsare
   tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
@@ -8672,6 +8728,7 @@ sv:
   tutorial_rpstress_string_detail_platforms: ''
   tutorial_bsdcause_string_detail_platforms: ''
   tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
   tutorial_bsdinspire_string_detail_platforms: ''
   tutorial_tttractor_string_detail_platforms: ''
   tutorial_codeillusionmickey_string_detail_platforms: ''
@@ -8693,6 +8750,7 @@ sv:
   tutorial_codestersdistance_string_detail_platforms: ''
   tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
   tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
@@ -8704,6 +8762,7 @@ sv:
   tutorial_educodesecret_string_detail_platforms: ''
   tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
   tutorial_educodebasics_string_detail_platforms: ''
   tutorial_codehsdesign_string_detail_platforms: ''
@@ -9386,6 +9445,7 @@ sv:
   tutorial_rpstress_string_detail_programming_languages: Block
   tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
   tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_tttractor_string_detail_programming_languages: JavaScript
   tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
@@ -9407,6 +9467,7 @@ sv:
   tutorial_codestersdistance_string_detail_programming_languages: Python
   tutorial_itchspace_string_detail_programming_languages: Block
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
   tutorial_itchfish_string_detail_programming_languages: Block
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
@@ -9419,6 +9480,7 @@ sv:
   tutorial_educodesecret_string_detail_programming_languages: Python
   tutorial_itchshapes_string_detail_programming_languages: Block
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
   tutorial_educodebasics_string_detail_programming_languages: JavaScript
   tutorial_codehsdesign_string_detail_programming_languages: HTML
@@ -9900,9 +9962,9 @@ sv:
   tutorial_rootcodebreak_longdescription: Use your Root Robot and the Root Coding
     app to power through printable puzzles and challenges to crack the code to where
     Root is hiding.
-  tutorial_microbit14_longdescription: Code your way to preserving the oceans using
-    micro:bit. Find out more about Global Goal 14, Life Below Water and learn to code
-    a sea turtle beach light.
+  tutorial_microbit14_longdescription: "  Använd kodning med micro:bit och bidra till
+    att bevara våra hav. Få kunskap om Mål 14: Hav och marina resurser och lär dig
+    att koda en sköldpadda i form av ett strandljus.  "
   tutorial_barobomoon_longdescription: You're one of the pioneer astronauts at the
     first permanent moon base, and while on an expedition away from base, a malfunction
     incapacitates your lunar rover and radio. But with a little ingenuity you can
@@ -9967,9 +10029,10 @@ sv:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: Computer science is about so much more than
-    coding! Learn about AI, machine learning, training data, and bias, while exploring
-    ethical issues and how AI can be used to address world problems.
+  tutorial_ai-oceans_longdescription: "  Datavetenskap handlar om mycket mer än bara
+    kodning! Lär dig om AI, maskininlärning, data för undervisning och bias samtidigt
+    som du får utforska etiska frågor och hur AI kan användas för att bidra till lösningar
+    på globala problem.  "
   tutorial_scratchimagine_language: Endast på engelska
   tutorial_codesterspsa_language: Svenska
   tutorial_googlehero_language: Endast på engelska
@@ -10075,42 +10138,42 @@ sv:
   tutorial_kuborobo_language: Endast på engelska
   tutorial_ai-oceans_language: Svenska
   tutorial_scratchimagine_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_codesterspsa_string_detail_grades: Årskurs 6+
+  tutorial_codesterspsa_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_googlehero_string_detail_grades: Årskurs 2-8
-  tutorial_codestersbball_string_detail_grades: Årskurs 6+
+  tutorial_codestersbball_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_scratchcartoon_string_detail_grades: Årskurs 2 och uppåt
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
   tutorial_bananatales_string_detail_grades: Årskurs 2-8
   tutorial_scratchtales_string_detail_grades: Årskurs 2-8
-  tutorial_msemoji_string_detail_grades: Årskurs 6+
-  tutorial_cacolor_string_detail_grades: Årskurs 6+
+  tutorial_msemoji_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_cacolor_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_kodablebeach_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkeren_string_detail_grades: Årskurs 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Årskurs 6+
+  tutorial_tynkerjavapro_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_grasshopperhack_string_detail_grades: Årskurs 9 och uppåt
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
   tutorial_nclabdata_string_detail_grades: Årskurs 9 och uppåt
   tutorial_grasshopperphoto_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_tynkerpyland_string_detail_grades: Årskurs 6+
+  tutorial_tynkerpyland_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codeitimages_string_detail_grades: Årskurs 2 och uppåt
   tutorial_hyperpadenemy_string_detail_grades: Årskurs 9 och uppåt
   tutorial_tynkerpro_string_detail_grades: Årskurs 2-8
-  tutorial_trashtag_string_detail_grades: Årskurs 6+
+  tutorial_trashtag_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_casiege_string_detail_grades: Årskurs 2-8
-  tutorial_thunkableyeet_string_detail_grades: Årskurs 6+
-  tutorial_vidcodedeal_string_detail_grades: Årskurs 6+
+  tutorial_thunkableyeet_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_vidcodedeal_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codehsgeno_string_detail_grades: Årskurs 9 och uppåt
   tutorial_hyperpadpong_string_detail_grades: Årskurs 9 och uppåt
   tutorial_tynkerland_string_detail_grades: Årskurs 2-8
-  tutorial_trinketgirl_string_detail_grades: Årskurs 6+
+  tutorial_trinketgirl_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_rpimosquito_string_detail_grades: Årskurs 6-8
-  tutorial_tynkermars_string_detail_grades: Årskurs 6+
-  tutorial_cityx_string_detail_grades: Årskurs 6+
-  tutorial_vidcodemap_string_detail_grades: Årskurs 6+
+  tutorial_tynkermars_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_cityx_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_vidcodemap_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_robotmagicfarm_string_detail_grades: Årskurs 2-8
-  tutorial_codehstriangle_string_detail_grades: Årskurs 6+
+  tutorial_codehstriangle_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ttwhitehouse_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_modulo_string_detail_grades: Årskurs 6+
+  tutorial_modulo_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: Årskurs 9 och uppåt
@@ -10118,34 +10181,34 @@ sv:
   tutorial_htmlmuffin_string_detail_grades: Årskurs 6-8
   tutorial_microsoftpizza_string_detail_grades: Årskurs 6-8
   tutorial_stemc_blckhole_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_careconfigure_string_detail_grades: Årskurs 6+
+  tutorial_careconfigure_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
   tutorial_ozaria_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_ttovum_string_detail_grades: Årskurs 6+
+  tutorial_ttovum_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ttpassage_string_detail_grades: Årskurs 2-8
   tutorial_tynkerhtmlen_string_detail_grades: Årskurs 2 och uppåt
   tutorial_ttfrog_string_detail_grades: Årskurs 2-8
   tutorial_codemojijava_string_detail_grades: Årskurs 6-8
-  tutorial_ccfirewall_string_detail_grades: Årskurs 6+
+  tutorial_ccfirewall_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_htmljs_string_detail_grades: Årskurs 6-8
   tutorial_ttaqueducts_string_detail_grades: Årskurs 6-8
-  tutorial_vtgame_string_detail_grades: Årskurs 6+
-  tutorial_baroborav_string_detail_grades: Årskurs 6+
+  tutorial_vtgame_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_baroborav_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_baroboobstacle_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_pbstorytelling_string_detail_grades: Årskurs 6+
+  tutorial_pbstorytelling_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
   tutorial_spherosmiles_string_detail_grades: Årskurs 2 och uppåt
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
-  tutorial_toxarchitect_string_detail_grades: Årskurs 6+
+  tutorial_toxarchitect_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_idodge_string_detail_grades: Årskurs 2-8
-  tutorial_firiacodebot_string_detail_grades: Årskurs 6+
+  tutorial_firiacodebot_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_modlighthouse_string_detail_grades: Från icke läskunniga och uppåt
   tutorial_spherogreen_string_detail_grades: Årskurs 2-8
   tutorial_ozopopstar_string_detail_grades: Årskurs 2-8
-  tutorial_eddesign_string_detail_grades: Årskurs 6+
-  tutorial_edshapeup_string_detail_grades: Årskurs 6+
+  tutorial_eddesign_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_edshapeup_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_ozocolor_string_detail_grades: Årskurs 2-8
   tutorial_kcjanimals_string_detail_grades: Årskurs 2-8
   tutorial_icomputeeggs_string_detail_grades: Årskurs 2-8
@@ -10154,25 +10217,25 @@ sv:
   tutorial_peblioportraits_string_detail_grades: Årskurs 9 och uppåt
   tutorial_rootcodebreak_string_detail_grades: Årskurs 2-8
   tutorial_microbit14_string_detail_grades: Årskurs 2-8
-  tutorial_barobomoon_string_detail_grades: Årskurs 6+
+  tutorial_barobomoon_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_eddog_string_detail_grades: Grades 2-6
   tutorial_microbit15_string_detail_grades: Årskurs 2-8
   tutorial_unity_string_detail_grades: Årskurs 9 och uppåt
-  tutorial_blockscadtarget_string_detail_grades: Årskurs 6+
+  tutorial_blockscadtarget_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tcadicicles_string_detail_grades: Årskurs 6-8
-  tutorial_blockscadscale_string_detail_grades: Årskurs 6+
+  tutorial_blockscadscale_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_tcadloops_string_detail_grades: Årskurs 6-8
   tutorial_phidgets_string_detail_grades: Årskurs 9 och uppåt
   tutorial_kcjmerry_string_detail_grades: Årskurs 2-8
-  tutorial_modvariables_string_detail_grades: Årskurs 6+
+  tutorial_modvariables_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codestersmicro_string_detail_grades: Årskurs 6-8
   tutorial_codestersdata_string_detail_grades: Årskurs 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
-  tutorial_rpisensehat_string_detail_grades: Årskurs 6+
+  tutorial_rpisensehat_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_modtraits_string_detail_grades: Årskurs 2 och uppåt
   tutorial_mee_string_detail_grades: Årskurs 2 och uppåt
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
-  tutorial_ai-oceans_string_detail_grades: Grades 3+
+  tutorial_ai-oceans_string_detail_grades: "  Årskurs 3+  "
   tutorial_scratchimagine_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_codesterspsa_string_platforms: Alla moderna webbläsare, Android-surfplatta,
@@ -10292,8 +10355,8 @@ sv:
   tutorial_modtraits_string_platforms: Alla moderna webbläsare
   tutorial_mee_string_platforms: Windows, iPad, MacOS
   tutorial_kuborobo_string_platforms: Urkopplad
-  tutorial_ai-oceans_string_platforms: All modern browsers, modern Android tablets,
-    iPads, modern Android phones, iPhones
+  tutorial_ai-oceans_string_platforms: "  Alla moderna webbläsare, moderna Android-surfplattor,
+    iPad, moderna Android-telefoner, iPhone  "
   tutorial_scratchimagine_string_detail_platforms: ''
   tutorial_codesterspsa_string_detail_platforms: ''
   tutorial_googlehero_string_detail_platforms: ''
@@ -10507,7 +10570,8 @@ sv:
   tutorial_mee_string_detail_programming_languages: Block
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
-  tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
+  tutorial_ai-oceans_string_detail_programming_languages: "  AI och maskininlärning
+    \ "
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.

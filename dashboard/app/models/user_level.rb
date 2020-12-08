@@ -25,7 +25,7 @@ require 'cdo/activity_constants'
 
 # Summary information about a User's Activity on a Level in a Script.
 # Includes number of attempts (attempts), best score and whether it was submitted
-class UserLevel < ActiveRecord::Base
+class UserLevel < ApplicationRecord
   AUTOLOCK_PERIOD = 1.day
 
   belongs_to :user

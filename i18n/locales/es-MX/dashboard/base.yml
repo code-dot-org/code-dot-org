@@ -159,8 +159,6 @@ es-MX:
     invalid_password: "La contraseña debe tener al menos 6 caracteres"
     mismatch_password: "Las dos contraseñas ingresadas no coinciden"
     student_consent: "Confirmo que tengo la autorización de mis padres o tutores legales para utilizar los servicios de Code.org."
-    agree_us_website: "Acepto usar un sitio web con sede en Estados Unidos."
-    my_data_to_us: "Acepto que se envíen y almacenen datos de mi utilización de este sitio web en Estados Unidos."
     agree_us_data_transfer_student: '**Acepto que Code.org puede transferir datos (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos.'
     agree_us_data_transfer_teacher: '**Acepto que Code.org puede transferir datos (incluyendo datos personales) de mi uso (y el uso de mis estudiantes) de este sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos.'
     data_collection_us: "Entiendo que Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y que las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de mi país."

@@ -481,38 +481,38 @@
           "": "Klik disini!"
         },
         "behaviors 1": {
-          "behaviors_edit": "Klik di sini untuk melihat Bagaimana kerja perilaku ini."
+          "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
         },
         "behaviors 1_2020": {
-          "behaviors_edit": "Klik di sini untuk melihat Bagaimana kerja perilaku ini."
+          "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
         },
         "behaviors 3a": {
-          "behavior_callout": "Mengapa perilaku ini tidak bekerja pada bintang menengah?",
-          "star2_callout": "Hapus blok kostum ini dan gunakan blok pengganti \"peri ini\".",
+          "behavior_callout": "Mengapa perilaku ini tidak cocok untuk bintang tengah?",
+          "star2_callout": "Hapus blok kostum ini dan gunakan saja blok \"this sprite\".",
           "this_sprite_callout": "Ganti blok kostum di bawah dengan ini."
         },
         "behaviors 3a_2020": {
-          "behavior_callout": "Mengapa perilaku ini tidak bekerja pada bintang menengah?",
-          "star2_callout": "Hapus blok kostum ini dan gunakan blok pengganti \"peri ini\".",
+          "behavior_callout": "Mengapa perilaku ini tidak cocok untuk bintang tengah?",
+          "star2_callout": "Hapus blok kostum ini dan gunakan saja blok \"this sprite\".",
           "this_sprite_callout": "Ganti blok kostum di bawah dengan ini."
         },
         "behaviors 4": {
-          "behaviors_edit": "Klik di sini untuk melihat Bagaimana kerja perilaku ini."
+          "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
         },
         "behaviors 4_2020": {
-          "behaviors_edit": "Klik di sini untuk melihat Bagaimana kerja perilaku ini."
+          "behaviors_edit": "Klik di sini untuk mengetahui cara kerja perilaku ini."
         },
         "behaviors 5": {
-          "behaviors_edit": "Tambahkan kode untuk perilaku."
+          "behaviors_edit": "Tambahkan kode ke perilaku ini."
         },
         "behaviors 5_2020": {
-          "behaviors_edit": "Tambahkan kode untuk perilaku."
+          "behaviors_edit": "Tambahkan kode ke perilaku ini."
         },
         "behaviors free play": {
-          "behaviors_edit": "Tambahkan kode untuk perilaku."
+          "behaviors_edit": "Tambahkan kode ke perilaku ini."
         },
         "behaviors free play_2020": {
-          "behaviors_edit": "Tambahkan kode untuk perilaku."
+          "behaviors_edit": "Tambahkan kode ke perilaku ini."
         },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "Gunakan loop ini untuk mengumpulkan semua nektar (atau madu) dari satu bunga (atau sarang lebah)."
@@ -615,10 +615,10 @@
           "courseA_collector_loops1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan."
         },
         "courseA_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseA_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
@@ -687,7 +687,7 @@
           "grade2_CaringForNewPet_0_1": "Setelah menghubungkan semua blok, tekan \"Run\" untuk memulai program."
         },
         "courseB_Scrat_ramp3a_2019": {
-          "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
+          "courseC_maze_programming2_1": "Ini adalah toolbox. Di sinilah Anda akan menemukan blok tambahan untuk menyelesaikan puzzle."
         },
         "courseB_Scrat_ramp3a_2020": {
           "courseC_maze_programming2_1": "Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan puzzle yang kamu kerjakan."
@@ -699,10 +699,10 @@
           "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
         },
         "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Bagaimana digunakan untuk apa?"
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
         },
         "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Bagaimana digunakan untuk apa?"
+          "courseB_artist_loops3_1": "Hanya ada satu dari blok-blok tersebut di dalam toolbox. Bagaimana cara Anda menggunakannya?"
         },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Angka ini berarti bahwa tidak ada lagi blok yang tersedia di dalam kotak peralatan."
@@ -807,13 +807,13 @@
           "courseC_collector_prog1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan."
         },
         "courseC_collector_prog1_2018": {
-          "courseC_collector_prog1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan cemas, kami akan tunjukkan cara menggunakannya nanti dalam materi lain."
+          "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
         },
         "courseC_collector_prog1_2019": {
-          "courseC_collector_prog1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan cemas, kami akan tunjukkan cara menggunakannya nanti dalam materi lain."
+          "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
         },
         "courseC_collector_prog1_2020": {
-          "courseC_collector_prog1_1": "Apakah anda melihat beberapa blok baru di kotak alat? Jangan cemas, kami akan tunjukkan cara menggunakannya nanti dalam materi lain."
+          "courseC_collector_prog1_1": "Apakah Anda melihat beberapa blok baru di toolbox? Jangan khawatir, kami akan tunjukkan cara menggunakannya dalam pelajaran lain."
         },
         "courseC_collector_prog7": {
           "courseC_collector_prog7_1": "Anda bisa mengambil lebih banyak blok dari dalam toolbox jika anda membutuhkannya!"
@@ -1010,13 +1010,13 @@
           "courseD_collector_ramp8_1": "Gunakan blok ini untuk mengumpulkan satu buah harta karun.  "
         },
         "courseD_farmer_while7_2018": {
-          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan puzzle ini."
+          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
         },
         "courseD_farmer_while7_2019": {
-          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan puzzle ini."
+          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
         },
         "courseD_farmer_while7_2020": {
-          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `ketika jalan di depan` untuk menyelesaikan puzzle ini."
+          "courseD_farmer_while7_2018_PathAhead": "Anda harus menggunakan blok `while path ahead` untuk menyelesaikan puzzle ini."
         },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."
@@ -1064,11 +1064,11 @@
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
-          "stone_block_2": "Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang."
+          "stone_block_2": "Blok warna abu-abu tidak bisa dibuang."
         },
         "courseD_maze_ramp3_2020": {
           "courseC_maze_programming3_2": "Anda dapat membuang blok tambahan dengan cara menariknya ke dalam toolbox.",
-          "stone_block_2": "Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang."
+          "stone_block_2": "Blok warna abu-abu tidak bisa dibuang."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Ini adalah batas jumlah blok Anda. Batas ini menunjukkan jumlah blok yang masih tersisa untuk digunakan."

@@ -193,9 +193,6 @@ da:
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
     student_consent: Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres
       eller værges tilladelse til at benytte tjenesterne fra Code.org.
-    agree_us_website: Jeg accepterer at bruge en hjemmeside baseret i USA.
-    my_data_to_us: Data fra min brug af dette websted kan sendes til og gemmes eller
-      behandles i USA.
     agree_us_data_transfer_student: "**Jeg accepterer, at Code.org kan overføre min
       databrug (inklusive personlige data) fra dette websted til USA** for hosting
       og behandling af sådanne data."

@@ -986,6 +986,8 @@ ko:
         text: 클릭 {SPRITE}
       gamelab_comment:
         text: '코멘트: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: "{SPRITE}의 수"
       gamelab_createNewSprite:
@@ -1202,6 +1204,10 @@ ko:
             undefined: 없음
       gamelab_setBackgroundImageAs:
         text: 배경을 {IMG}으로 설정
+      gamelab_setPrompt:
+        text: 변수 {VAR}를 위한 사용자 {QUESTION} 유도
+      gamelab_setPromptWithChoices:
+        text: 선택항목 {A}{B}{C}으로 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY}을(를) {VAL}(으)로 설정 "
         options:
@@ -1264,8 +1270,6 @@ ko:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 왼쪽 화살표를 눌렀을 때
-      gamelab_whenQuestionAnswered:
-        text: "{VAR}이란 답이 나올 때"
       gamelab_whenRightArrow:
         text: 오른쪽 화살표를 눌렀을 때
       gamelab_whenTouching:
@@ -1752,6 +1756,7 @@ ko:
             '"stoneBricks"': 돌 벽돌
             '"mossyStoneBricks"': 이끼 돌 벽돌
             '"crackedStoneBricks"': 금이 간 돌 벽돌
+            '"chiseledStoneBricks"': 장식용 석조 벽돌
             '"blueCoralBlock"': 푸른 산호 블록
             '"pinkCoralBlock"': 핑크 산호 블록
             '"magentaCoralBlock"': 마젠타 산호 블록

@@ -1476,6 +1476,13 @@
         },
         "coursea_maze_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić swój program."
+        },
+        "outbreak2": {
+          "minitoolbox": "Kliknij tutaj, aby rozwinąć blok.",
+          "pointerlocation": "Przeciągnij tutaj blok tematu."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknij, aby utworzyć nowy kostium"
         }
       }
     }

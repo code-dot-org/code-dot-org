@@ -15,7 +15,7 @@
 #  index_survey_results_on_user_id  (user_id)
 #
 
-class SurveyResult < ActiveRecord::Base
+class SurveyResult < ApplicationRecord
   include SerializedProperties
 
   SYSTEM_DELETED = 'system_deleted'.freeze

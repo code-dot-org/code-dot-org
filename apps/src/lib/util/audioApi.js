@@ -15,6 +15,9 @@ export function injectExecuteCmd(fn) {
   executeCmd = fn;
 }
 
+// Max text length for the playSpeech block.
+export const MAX_SPEECH_TEXT_LENGTH = 750;
+
 /**
  * Export a set of native code functions that student code can execute via the
  * interpreter.
@@ -131,11 +134,7 @@ export const commands = {
       OPTIONAL
     );
 
-    const {
-      azureSpeechServiceToken: token,
-      azureSpeechServiceUrl: url,
-      azureSpeechServiceVoices: voices
-    } = appOptions;
+    const {azureSpeechServiceVoices: voices} = appOptions;
     let {text, gender, language} = opts;
 
     // Fall back to defaults if requested language/gender combination is not available.
@@ -150,15 +149,11 @@ export const commands = {
       outputWarning(i18n.textToSpeechTruncation());
     }
 
-    const voiceName = voices[language][gender];
     const azureTTS = AzureTextToSpeech.getSingleton();
     const promise = azureTTS.createSoundPromise({
       text,
       gender,
       languageCode: voices[language].languageCode,
-      url,
-      ssml: `<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US"><voice name="${voiceName}">${text}</voice></speak>`,
-      token,
       onProfanityFound: profaneWords => {
         outputWarning(
           i18n.textToSpeechProfanity({
