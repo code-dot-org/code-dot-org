@@ -17,7 +17,8 @@ module Services
     # Storing this data together in a "data object" makes it easier to pass around.
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
-      :script_levels, :levels_script_levels, :levels, :resources,  keyword_init: true
+      :script_levels, :levels_script_levels, :levels, :resources,
+      :lessons_resources, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -40,6 +41,7 @@ module Services
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten
+      lessons_resources = script.lessons.map(&:lessons_resources).flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -50,7 +52,8 @@ module Services
         script_levels: my_script_levels,
         levels_script_levels: script.levels_script_levels,
         levels: my_levels,
-        resources: resources
+        resources: resources,
+        lessons_resources: lessons_resources
       )
       scope = {seed_context: seed_context}
 
@@ -62,7 +65,8 @@ module Services
         activity_sections: sections.map {|s| ScriptSeed::ActivitySectionSerializer.new(s, scope: scope).as_json},
         script_levels: script.script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
         levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json},
-        resources: resources.map {|r| ScriptSeed::ResourceSerializer.new(r, scope: scope).as_json}
+        resources: resources.map {|r| ScriptSeed::ResourceSerializer.new(r, scope: scope).as_json},
+        lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json}
       }
       JSON.pretty_generate(data)
     end
@@ -414,6 +418,14 @@ module Services
 
     class ResourceSerializer < ActiveModel::Serializer
       attributes :name, :url, :key, :properties, :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LessonsResourceSerializer < ActiveModel::Serializer
+      attributes :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
