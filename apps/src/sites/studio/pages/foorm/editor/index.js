@@ -4,12 +4,12 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormEditorManager';
+import FoormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/FoormEditorManager';
 import foorm, {
   setFormQuestions,
   setFormData,
   setHasError
-} from '@cdo/apps/code-studio/pd/foorm/foormEditorRedux';
+} from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 
 import 'survey-react/survey.css';
 

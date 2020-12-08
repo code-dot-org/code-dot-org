@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ConfirmationDialog from '../components/confirmation_dialog';
+import ConfirmationDialog from '../../components/confirmation_dialog';
 import {connect} from 'react-redux';
 
 const styles = {

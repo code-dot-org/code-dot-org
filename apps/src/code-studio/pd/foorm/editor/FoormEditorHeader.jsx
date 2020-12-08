@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import {Button} from 'react-bootstrap';
-import Spinner from '../components/spinner';
+import Spinner from '../../components/spinner';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import moment from 'moment';
 import {connect} from 'react-redux';
