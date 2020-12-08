@@ -8,8 +8,10 @@ class ResourceTest < ActiveSupport::TestCase
 
   test "resource can be in multiple lessons" do
     resource = create :resource
-    lesson1 = create :lesson, resources: [resource]
-    lesson2 = create :lesson, resources: [resource]
+    lesson1 = create :lesson
+    lesson1.resources.push(resource)
+    lesson2 = create :lesson
+    lesson2.resources.push(resource)
     assert_equal [lesson1, lesson2], resource.lessons
   end
 
