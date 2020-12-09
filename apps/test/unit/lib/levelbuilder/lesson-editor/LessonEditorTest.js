@@ -44,7 +44,8 @@ describe('LessonEditor', () => {
       initialAnnouncements: [],
       relatedLessons: [],
       initialObjectives: [],
-      initialAssessmentOpportunities: 'Assessment Opportunities'
+      initialAssessmentOpportunities: 'Assessment Opportunities',
+      courseVersionId: 1
     };
   });
 
