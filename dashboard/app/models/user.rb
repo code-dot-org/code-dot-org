@@ -2261,42 +2261,6 @@ class User < ApplicationRecord
     end
   end
 
-  # The number of times a user has attempted to join a section in the last 24 hours
-  # Returns nil if no section join attempts.
-  def num_failed_section_attempts
-    properties['section_attempts']
-  end
-
-  # There are two possible states in which we would want to reset the section attempt values
-  # 1) User has never joined a section and thus the values must be initialized
-  # 2) 24 hours have passed since the user last attempted to join a section
-  def reset_section_attempts?
-    !num_failed_section_attempts || (DateTime.now - DateTime.parse(properties['section_attempts_last_reset'])).to_i > 0
-  end
-
-  def reset_failed_section_attempts
-    properties['section_attempts'] = 0
-    properties['section_attempts_last_reset'] = DateTime.now.to_s
-    save(validate: false)
-  end
-
-  # Users must complete a captcha when joining a section if they have joined 3 or more in the past 24 hours
-  def display_captcha?
-    if reset_section_attempts?
-      reset_failed_section_attempts
-    end
-    num_failed_section_attempts >= 3
-  end
-
-  def increment_section_attempts
-    # Failed section attemps reset after 24 hours
-    if reset_section_attempts?
-      reset_failed_section_attempts
-    end
-    properties.merge!({'section_attempts' => 1}) {|_, old_val, increment_val| old_val + increment_val}
-    save(validate: false)
-  end
-
   private
 
   def hidden_stage_ids(sections)
