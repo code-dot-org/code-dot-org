@@ -42,7 +42,7 @@ module LessonImportHelper
       lesson.objectives = cb_lesson_data['objectives'].map do |o|
         Objective.new(description: o["name"])
       end
-      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson.id)
+      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson)
       lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
       lesson.script_levels = []
     end
@@ -164,24 +164,46 @@ module LessonImportHelper
     sections
   end
 
-  def self.create_lesson_activities(activities_data, levels, lesson_id)
+  # Adds an announcement for virtual lesson modifications
+  def self.convert_virtual_lesson_modification_activity_to_announcement(activity_data, lesson)
+    return false unless activity_data['name'] == 'Lesson Modifications'
+    url_match = /.+[vV]irtual.+\((https:\/\/docs.google.com.+)\).+/.match(activity_data['content'])
+    return false unless url_match
+    announcement = {
+      notice: 'Lesson Modifications',
+      details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.',
+      link: url_match[1],
+      type: 'information',
+      visibility: 'Teacher-only'
+    }
+    lesson.announcements ||= []
+    lesson.announcements.push(announcement)
+    lesson.save!
+    return true
+  end
+
+  def self.create_lesson_activities(activities_data, levels, lesson)
     activities = activities_data.map.with_index(1) do |a, i|
-      lesson_activity = LessonActivity.new
-      lesson_activity.name = a['name']
-      lesson_activity.duration = a['duration'].split[0].to_i
-      lesson_activity.lesson_id = lesson_id
-      lesson_activity.key = SecureRandom.uuid
-      lesson_activity.position = i
-      lesson_activity.save!
-      lesson_activity.reload
-      lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
-      lesson_activity
-    end
+      if a['name'] == 'Lesson Modifications' && convert_virtual_lesson_modification_activity_to_announcement(a, lesson)
+        nil
+      else
+        lesson_activity = LessonActivity.new
+        lesson_activity.name = a['name']
+        lesson_activity.duration = a['duration'].split[0].to_i
+        lesson_activity.lesson_id = lesson.id
+        lesson_activity.key = SecureRandom.uuid
+        lesson_activity.position = i
+        lesson_activity.save!
+        lesson_activity.reload
+        lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
+        lesson_activity
+      end
+    end.compact
 
     # Create a lesson with all the levels in them
     # TODO use the [code-studio] syntax from CB instead
     unless levels.empty?
-      activities.push(create_activity_with_levels(levels, lesson_id, activities.length + 1))
+      activities.push(create_activity_with_levels(levels, lesson.id, activities.length + 1))
     end
     activities.flatten
   end
