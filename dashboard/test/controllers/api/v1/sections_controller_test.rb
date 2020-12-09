@@ -970,11 +970,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(expected_response, json_response)
   end
 
-  # TODO: will this key value comes back as a non nil value? It is nil in RAILS_ENV = test
   test "verify_recaptcha: serves non-nil site key to the client side" do
+    # Use Google's publicly available test keys:
+    # https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do
+    GOOGLE_PROVIDED_TEST_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+    CDO.stubs(:recaptcha_site_key).returns(GOOGLE_PROVIDED_TEST_KEY)
     user = create(:user)
     sign_in user
     get :verify_recaptcha
-    assert_equal(json_response[:key].empty?, false)
+    assert_equal(json_response["key"], GOOGLE_PROVIDED_TEST_KEY)
   end
 end
