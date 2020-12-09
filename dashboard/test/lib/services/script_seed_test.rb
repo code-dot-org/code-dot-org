@@ -357,6 +357,10 @@ module Services
         s2.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
       )
       assert_script_levels_equal script_levels1, script_levels2
+      assert_resources_equal(
+        s1.lessons.map(&:resources).flatten,
+        s2.lessons.map(&:resources).flatten
+      )
     end
 
     def assert_lesson_groups_equal(lesson_groups1, lesson_groups2)
@@ -390,6 +394,12 @@ module Services
         # TODO: should we use a callback or validation to verify that level_keys is always populated correctly?
         assert_equal sl1.properties, sl2.properties.except('level_keys')
         assert_equal sl1.levels, sl2.levels
+      end
+    end
+
+    def assert_resources_equal(resources1, resources2)
+      resources1.zip(resources2).each do |r1, r2|
+        assert_attributes_equal(r1, r2, ['course_version_id'])
       end
     end
 
