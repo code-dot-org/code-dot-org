@@ -27,7 +27,9 @@ describe('AzureTextToSpeech', () => {
         bytes: new ArrayBuffer()
       });
 
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
+      await azureTTS.enqueueAndPlay(() => {
+        return Promise.resolve(response);
+      });
 
       expect(playBytesStub).to.have.been.calledOnce;
       expect(azureTTS.queue_.length).to.equal(0);
@@ -40,7 +42,9 @@ describe('AzureTextToSpeech', () => {
       });
       response.playbackOptions.onEnded = sinon.spy();
 
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
+      await azureTTS.enqueueAndPlay(() => {
+        return Promise.resolve(response);
+      });
 
       expect(playBytesStub).not.to.have.been.called;
       expect(response.playbackOptions.onEnded).not.to.have.been.called;
@@ -52,7 +56,9 @@ describe('AzureTextToSpeech', () => {
       });
       response.playbackOptions.onEnded = sinon.spy();
 
-      await azureTTS.enqueueAndPlay(new Promise(resolve => resolve(response)));
+      await azureTTS.enqueueAndPlay(() => {
+        return Promise.resolve(response);
+      });
 
       expect(playBytesStub).not.to.have.been.called;
       expect(response.playbackOptions.onEnded).to.have.been.calledOnce;
@@ -90,12 +96,12 @@ describe('AzureTextToSpeech', () => {
         });
 
         it('resolves to cached sound response', async () => {
-          const soundResponse = await soundPromise;
+          const soundResponse = await soundPromise();
           assertSoundResponsesEqual(cachedSoundResponse, soundResponse);
         });
 
         it('calls onProfanityFound', async () => {
-          await soundPromise;
+          await soundPromise();
           expect(onProfanityFoundSpy).to.have.been.calledOnce;
         });
       });
@@ -122,12 +128,12 @@ describe('AzureTextToSpeech', () => {
         });
 
         it('resolves to cached sound response', async () => {
-          const soundResponse = await soundPromise;
+          const soundResponse = await soundPromise();
           assertSoundResponsesEqual(cachedSoundResponse, soundResponse);
         });
 
         it('does not call onProfanityFound', async () => {
-          await soundPromise;
+          await soundPromise();
           expect(onProfanityFoundSpy).not.to.have.been.called;
         });
       });
@@ -169,12 +175,12 @@ describe('AzureTextToSpeech', () => {
         });
 
         it('calls onProfanityFound', async () => {
-          await soundPromise;
+          await soundPromise();
           expect(onProfanityFoundSpy).to.have.been.calledOnce;
         });
 
         it('caches the response', async () => {
-          await soundPromise;
+          await soundPromise();
           const actualResponse = azureTTS.getCachedSound_(
             options.languageCode,
             options.gender,
@@ -184,7 +190,7 @@ describe('AzureTextToSpeech', () => {
         });
 
         it('resolves with profaneWords', async () => {
-          const actualResponse = await soundPromise;
+          const actualResponse = await soundPromise();
           assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
         });
       });
@@ -202,16 +208,14 @@ describe('AzureTextToSpeech', () => {
 
         describe('on success', () => {
           beforeEach(() => {
-            const url = 'https://fake.tts.url';
             const bytes = new ArrayBuffer();
-            server.respondWith('POST', url, [200, {}, bytes]);
+            sinon
+              .stub(azureTTS, 'convertTextToSpeech')
+              .returns(new Promise(resolve => resolve(bytes)));
             options = {
               text: 'hello',
               gender: 'male',
-              languageCode: 'es-MX',
-              url,
-              token: 'fake-token',
-              ssml: '<speak>hello</speak>'
+              languageCode: 'es-MX'
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
@@ -221,7 +225,7 @@ describe('AzureTextToSpeech', () => {
           });
 
           it('caches the response', async () => {
-            await soundPromise;
+            await soundPromise();
             const actualResponse = azureTTS.getCachedSound_(
               options.languageCode,
               options.gender,
@@ -231,32 +235,31 @@ describe('AzureTextToSpeech', () => {
           });
 
           it('resolves with sound bytes', async () => {
-            const actualResponse = await soundPromise;
+            const actualResponse = await soundPromise();
             assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
           });
         });
 
         describe('on failure', () => {
           beforeEach(() => {
-            const url = 'https://fake.tts.url';
-            server.respondWith('POST', url, [400, {}, '']);
+            const statusText = 'Bad Request';
+            sinon
+              .stub(azureTTS, 'convertTextToSpeech')
+              .returns(new Promise((_, reject) => reject({statusText})));
             options = {
               text: 'hello',
               gender: 'male',
-              languageCode: 'es-MX',
-              url,
-              token: 'fake-token',
-              ssml: '<speak>hello</speak>'
+              languageCode: 'es-MX'
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
               ...options,
-              error: 'Bad Request'
+              error: statusText
             });
           });
 
           it('does not cache the response', async () => {
-            await soundPromise;
+            await soundPromise();
             expect(
               azureTTS.getCachedSound_(
                 options.languageCode,
@@ -267,7 +270,7 @@ describe('AzureTextToSpeech', () => {
           });
 
           it('resolves with error', async () => {
-            const actualResponse = await soundPromise;
+            const actualResponse = await soundPromise();
             assertSoundResponsesEqual(expectedSoundResponse, actualResponse);
           });
         });
