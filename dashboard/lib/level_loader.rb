@@ -49,7 +49,7 @@ class LevelLoader
       end
 
       # I see that level_concept_difficultys which live inside levels are seeded
-      # here, but I haven't found where they are seeded when they are specified
+      # here, but this wouldn't affect how they are seeded when they are specified
       # in the .script file.
 
       # activerecord-import (with MySQL, anyway) doesn't save associated
