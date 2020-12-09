@@ -164,9 +164,11 @@ module LessonImportHelper
     sections
   end
 
-  # Adds an announcement for virtual lesson modifications
+  # Adds an announcement for virtual lesson modifications to the lesson. Returns true if
+  # an announcement was added, false otherwise.
   def self.convert_virtual_lesson_modification_activity_to_announcement(activity_data, lesson)
     return false unless activity_data['name'] == 'Lesson Modifications'
+    # Virtual lesson modifications are in google docs, so strip out the docs link
     url_match = /.+[vV]irtual.+\((https:\/\/docs.google.com.+)\).+/.match(activity_data['content'])
     return false unless url_match
     announcement = {
