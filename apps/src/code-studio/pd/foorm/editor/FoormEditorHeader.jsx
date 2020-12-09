@@ -1,3 +1,5 @@
+// Metadata and buttons for the Foorm Editor. Shows form name and version,
+// live preview toggle, and validate button/validation status.
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';

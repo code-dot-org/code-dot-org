@@ -1,3 +1,4 @@
+// Preview panel for Foorm editor.
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
