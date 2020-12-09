@@ -36,9 +36,12 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
 
+      script.course_version.destroy!
       script.destroy!
+
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
+      #   4 queries to set up course offering and course version
       #   19 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels and LevelsScriptLevels.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
@@ -54,7 +57,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(54) do
+      assert_queries(58) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -392,7 +395,15 @@ module Services
     def create_script_tree(name_prefix=nil, num_lesson_groups=2, num_lessons_per_group=2, num_script_levels_per_lesson=2)
       name_prefix ||= SecureRandom.uuid
       # TODO: how can this be simplified and/or moved into factories.rb?
-      script = create :script, name: "#{name_prefix}-script", curriculum_path: 'my_curriculum_path'
+      script = create(
+        :script,
+        name: "#{name_prefix}-script",
+        curriculum_path: 'my_curriculum_path',
+        is_course: true,
+        family_name: "#{name_prefix}-family",
+        version_year: "#{name_prefix}-version"
+      )
+      CourseOffering.add_course_offering(script)
 
       num_lesson_groups.times do |i|
         create :lesson_group, script: script, key: "#{name_prefix}-lesson-group-#{i + 1}", description: "description #{i + 1}"
