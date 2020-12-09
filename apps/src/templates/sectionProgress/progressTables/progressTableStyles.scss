@@ -5,7 +5,6 @@ $row-height: 42px;
 $max-height: 680px;
 $student-list-width: 170px;
 $content-view-width: $content-width - $student-list-width;
-$min-column-width: 40px;
 
 .progress-table {
   table {
@@ -49,13 +48,10 @@ $min-column-width: 40px;
     }
     th,
     td {
-      min-width: $min-column-width;
-    }
-    td {
       border-right: 1px solid;
       border-color: $border-gray;
       &:last-child {
-        border-width: 0px;
+        border-right: 0px;
       }
     }
   }
@@ -65,6 +61,5 @@ $min-column-width: 40px;
   MAX_BODY_HEIGHT: $max-height / 1px;
   STUDENT_LIST_WIDTH: $student-list-width / 1px;
   CONTENT_VIEW_WIDTH: $content-view-width / 1px;
-  MIN_COLUMN_WIDTH: $min-column-width / 1px;
   ROW_HEIGHT: $row-height / 1px;
 }
