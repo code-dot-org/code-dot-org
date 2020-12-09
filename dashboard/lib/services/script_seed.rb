@@ -133,6 +133,8 @@ module Services
         activity_sections_data = data['activity_sections']
         script_levels_data = data['script_levels']
         levels_script_levels_data = data['levels_script_levels']
+        resources_data = data['resources']
+        lessons_resources_data = data['lessons_resources']
         seed_context = SeedContext.new
 
         seed_context.script = import_script(script_data)
@@ -152,6 +154,9 @@ module Services
         # as just another set of objects to import allows us to handle it with the same pattern as the other models.
         seed_context.levels = seed_context.script_levels.map(&:levels).flatten
         import_levels_script_levels(levels_script_levels_data, seed_context)
+
+        seed_context.resources = import_resources(resources_data, seed_context)
+        seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
 
         CourseOffering.add_course_offering(seed_context.script)
         seed_context.script
@@ -294,6 +299,41 @@ module Services
       # Delete any existing LevelsScriptLevels that weren't in the imported list, return remaining
       levels_script_levels = Script.find(seed_context.script.id).levels_script_levels
       destroy_outdated_objects(LevelsScriptLevel, levels_script_levels, levels_script_levels_to_import, seed_context)
+    end
+
+    def self.import_resources(resources_data, seed_context)
+      course_version_id = seed_context.script.get_course_version&.id
+      resources_to_import = resources_data.map do |resource_data|
+        resource_attrs = resource_data.except('seeding_key')
+        resource_attrs['course_version_id'] = course_version_id
+        Resource.new(resource_attrs)
+      end
+
+      # Resources are owned by the course version. Therefore, do not delete
+      # resources which no longer appear in the serialized data.
+      Resource.import! resources_to_import, on_duplicate_key_update: get_columns(Resource)
+      resource_keys = resources_to_import.map(&:key)
+      Resource.where(course_version_id: course_version_id, key: resource_keys)
+    end
+
+    def self.import_lessons_resources(lessons_resources_data, seed_context)
+      lessons_resources_to_import = lessons_resources_data.map do |lr_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == lr_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        resource_id = seed_context.resources.select {|r| r.key == lr_data['seeding_key']['resource.key']}.first&.id
+        raise 'No resource found' if resource_id.nil?
+
+        LessonsResource.new(
+          lesson_id: lesson_id,
+          resource_id: resource_id
+        )
+      end
+      LessonsResource.import! lessons_resources_to_import, on_duplicate_key_update: get_columns(LessonsResource)
+
+      # Delete any existing LessonsResources that weren't in the imported list, and return the remaining.
+      lessons_resources = LessonsResource.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+      destroy_outdated_objects(LessonsResource, lessons_resources, lessons_resources_to_import, seed_context)
     end
 
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
