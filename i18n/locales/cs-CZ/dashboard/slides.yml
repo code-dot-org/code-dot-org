@@ -104,13 +104,13 @@ cs:
         text: "Užij si používání nového bloku \"opakovat\"!"
     loop_until:
       1:
-        text: "Čau, jsem Chris. Než jsem se přidal k Miami Heat, studoval jsem na Georgia Tech informatiku. Pojďme spolu zkusit nový blok \"opakovat do\"."
+        text: "Čau, jsem Chris. Než jsem se přidal k Miami Heat, studoval jsem na Georgia Tech informatiku. Pojďme spolu zkusit nový blok \"opakuj dokud nenastane\"."
       2:
         text: "Co kdybychom nevěděli, jak daleko se ptáček musí posunout, aby se dostal k prasátku?"
       3:
-        text: "Pokud vložíme blok \"posuň se vpřed\" do bloku \"opakovat dokud\", ptáček se bude posouvat vpřed až do chvíle, DOKUD nenarazí na prasátko (nebo do zdi)."
+        text: "Pokud vložíme blok \"posuň se vpřed\" do bloku \"opakovat dokud nenastane\", ptáček se bude posouvat vpřed až do chvíle, DOKUD nenarazí na prasátko (nebo do zdi)."
       4:
-        text: 'Toto je důležité: stejně jako před tím, můžeme vložit několik bloků dovnitř bloku "opakovat dokud" a všechny tyto bloky se budou opakovat.'
+        text: 'Toto je důležité: stejně jako před tím, můžeme vložit několik bloků dovnitř bloku "opakuj dokud nenastane" a všechny tyto bloky se budou opakovat.'
     if:
       1:
         text: "Ahoj, já jsem Bil. Pojďme se naučit nový základní pojem: příkazy \"Pokud\". Díky těmto příkazům počítač dělá svá rozhodnutí."
@@ -192,7 +192,7 @@ cs:
       1:
         text: "Blahopřejeme! Tvůj nový program dokáže JAKÉMUKOLIV robotovi říct, jak najít cestu skrz nerozvětvené bludiště nebo skrz tunel libovolné délky, ať už je to zombie, ptáček, vozítko na Marsu nebo dokonce samořídící auto."
       2:
-        text: "Základní pojmy, které jsi použil jsou srdcem každého programu nebo aplikace, kterou kdy spustíš. Naučili jsme se opakovací cykly, příkazy opakovat dokud, příkazy pokud a příkazy pokud-jinak."
+        text: "Základní pojmy, které jsi použil jsou srdcem každého programu nebo aplikace, kterou kdy spustíš. Naučili jsme se opakovací cykly, příkazy opakuj dokud nenastane, příkazy pokud a příkazy pokud-jinak."
       3:
         text: "Jestli se ti tvá první hodina kódu líbila, navštiv stránku code.org pro další výuku programování! Jakmile dokončíš náš kurz 20 hodin, budeš ovládat základy programování a můžeš se začít učit psát aplikace pro mobily, instrukce pro roboty, hry...na co si jen vzpomeneš."
       4:

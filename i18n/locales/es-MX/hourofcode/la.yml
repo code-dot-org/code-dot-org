@@ -43,11 +43,12 @@ la:
     están disponibles en más de 45 idiomas para todas las edades.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: "¡La Hora del Código 2020 está llegando!"
+  hoc2020_ai_header: Explora la Inteligencia Artificial
+  hoc2020_ai_description: IA y el aprendizaje automático están afectando a nuestro
+    mundo entero. Únete para explorar la IA en una nueva serie de videos, entrenar
+    IA para limpiar los océanos en más de 25 idiomas, discutir sobre ética e IA, y
+    más...
   hoc2019_header: Aprende programación. Cambia el mundo.
   hoc2019_header_line1_mobile: Aprende programación.
   hoc2019_header_line2_mobile: Cambia el mundo.
@@ -1729,7 +1730,7 @@ la:
   tutorial_irobotphone_name: Telephone Drawing
   tutorial_codeguppydraw_name: Draw with code
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
-  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
+  tutorial_meeempathy_name: Historia de dos aldeas de Minecraft
   tutorial_danceparty_shortdescription: Programa una Fiesta de baile y compártela
     con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y
     25 artistas más!
@@ -6186,11 +6187,11 @@ la:
     found in a classroom. The theme for this lesson is around messages of kindness
     to others. This lesson has been specifically designed to be accessible for students
     with visual impairments.
-  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
-    the same space but seldom interacted with each other. Now you can use the power
-    of code to bring the two villages together. Players will experience empathy and
-    compassion for their neighbors, learn cooperation and inclusion, and embrace the
-    diversity that makes us all uniquely special.
+  tutorial_meeempathy_longdescription: Durante varios siglos, los aldeanos e illanos
+    compartieron el mismo espacio, pero interactuaban muy poco entre ellos. Ahora
+    puedes usar el poder del código para unir las dos aldeas. Los jugadores sentirán
+    empatía y compasión por sus vecinos, aprenderán sobre cooperación e inclusión,
+    y celebrarán la diversidad que nos hace a todos únicos y especiales.
   tutorial_dance2019_language: Árabe, chino, checo, danés, holandés, inglés, finlandés,
     francés, alemán, griego, hindi, húngaro, indonesio, italiano, japonés, coreano,
     malayo, polaco, portugués, ¡y 10 más!
@@ -6997,7 +6998,8 @@ la:
   tutorial_irobotphone_language: English, English (UK)
   tutorial_codeguppydraw_language: English, English (UK)
   tutorial_codejumper_language: Inglés
-  tutorial_meeempathy_language: Inglés
+  tutorial_meeempathy_language: Chino, danés, holandés, inglés, francés, italiano,
+    japonés, coreano, noruego, portugués, español, sueco, turco
   tutorial_dance2019_string_detail_grades: A partir de Grado 2
   tutorial_danceparty_string_detail_grades: A partir de Grado 2
   tutorial_chibitronics_string_detail_grades: Grados 2-5

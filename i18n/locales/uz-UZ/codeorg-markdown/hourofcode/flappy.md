@@ -1,42 +1,42 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: O‘qituvchi resurslari - Flappy o'yinini yaratish (Make a Flappy Game)
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Flappy o‘yinini yaratish: Dasturlash soati qo‘llanmasi
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## O‘qituvchi resurslari
 
-### Lesson Plans:
+### Dars rejasi:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Flappy o‘yinini yaratish]({{ hoc_flappy_cb_url }})
 
-### Extension Activities:
+### Qo‘shimcha mashg‘ulotlar:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Dasturlash soatidan tashqarida](http://code.org/learn/beyond)
+- [Kompyuter fanlari asoslari: Kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### O'qituvchilar uchun boshqa manbalar:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: o‘qituvchilar uchun qo‘llanma](https://hourofcode.com/how-to)
+- [Muvaffaqiyatli o'qituvchilardan eng yaxshi amaliyotlar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Jonli tadbir: [Dasturlash soati bo‘yicha o‘qituvchi uchun qo‘llanma](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Umumlashma
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Flappy Bird o‘yiningizni yaratish uchun drag-and-drop dasturidan foydalaning va uni boshqacha ko‘rinishga keltiring (Flappy Shark, Flappy Santa, xohlaganingiz). Bitta klik bilan o‘yinni telefoningizga o‘rnating.
 
-**Recommended Age Range:** 4-104
+**Tavsiya etilgan yosh:**4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Talab etilgan texnologiyalar:** Zamonaviy brauzer, smartfon+planshet
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>O‘quv qo‘llanmasini sinab ko‘ring</button></a>
 
 [/col-50]

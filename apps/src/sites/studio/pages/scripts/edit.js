@@ -79,6 +79,8 @@ export default function initPage(scriptEditorData) {
          * complements, but currently (August 2020) they are not, so they are separate fields for now. */
         initialIsCourse={scriptData.is_course}
         hasCourse={scriptEditorData.has_course}
+        initialShowCalendar={scriptData.showCalendar}
+        initialIsMigrated={scriptData.is_migrated}
       />
     </Provider>,
     document.querySelector('.edit_container')

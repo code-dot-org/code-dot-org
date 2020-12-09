@@ -782,6 +782,14 @@ sk:
         codebreak_e05: 'Code Break 5.0: Simulácie a dáta s Billom Gatesom '
         csd_how_teamwork_works: Ako funguje tímová spolupráca
         csd_teamwork_and_disagreement: Práca v tíme - ako riešiť nezhody
+        codebreak_e06: 'Code Break 6.0: O internete (Keegan-Michael Scott & Vint Cerf)'
+        codebreak_e07: 'Code Break 7.0: Podmienky (Sal Khan & Flo Vaughn)'
+        codebreak_e08: 'Code Break 8.0: Premenné (Yara Shahidi & Fuzzy Khosrowshahi) '
+        codebreak_e09: 'Code Break 9.0: Udalosti (Macklemore & Scott Forstall)'
+        codebreak_e10: 'Code Break 10.0: Umelá inteligencia (Kat Graham & Kate Park)'
+        codebreak_e11: 'Code Break 11.0: Abstrakcia (Susan Wojcicki & China Anne McClain)'
+        codebreak_e12: 'Code Break 12.0: Hardware (Aloe Blacc, Bret Taylor & Paula
+          Mejia)'
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

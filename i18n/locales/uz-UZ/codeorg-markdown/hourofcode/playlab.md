@@ -1,42 +1,42 @@
 ---
-title: Teacher Resources - Play Lab
+title: O‘qituvchi resurslari - Play Lab
 ---
 
-# Play Lab: An Hour of Code Tutorial
+# Play Lab: Dasturlash soati qo‘llanmasi
 
 {{ hoc_playlab_video }}
 
 [col-50]
 
-## Teacher Resources
+## O‘qituvchi resurslari
 
-### Lesson Plans:
+### Dars rejasi:
 
 - [Play Lab]({{ hoc_playlab_cb_url }})
 
-### Extension Activities:
+### Qo‘shimcha mashg‘ulotlar:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Hour of Code - Dasturlash soatidan tashqarida](http://code.org/learn/beyond)
+- [Kompyuter fanlari asoslari: Kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### O‘qituvchilar uchun boshqa manbalar:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: o‘qituvchilar uchun yo‘riqnoma](https://hourofcode.com/how-to)
+- [Muvaffaqiyatli o‘qituvchilardan eng yaxshi amaliyotlar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Jonli tadbir: [Dasturlash soati bo‘yicha o‘qituvchi uchun qo‘llanma](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Umumlashma
 
-Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+Play Lab yordamida hikoya yoki o‘yin yarating! Hayvonlar, qaroqchilar, zombi, ninzyalar va boshqa ko‘plab qahramonlarni harakatga keltiring, tovushlar chiqartiring, ball to‘plang va hattoki olovli to‘plar oting!
 
-**Recommended Age Range:** 4-104
+**Tavsiya etilgan yosh:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Talab etilgan texnologiyalar:** Zamonaviy brauzerlar, smartfon+planshet
 
-<a href="http://studio.code.org/s/playlab/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/playlab/reset"><button>O‘quv qo‘llanmasini sinab ko‘ring</button></a>
 
 [/col-50]
