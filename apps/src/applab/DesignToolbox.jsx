@@ -15,6 +15,19 @@ export default class DesignToolbox extends React.Component {
     themeValue: PropTypes.string.isRequired
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      mlExperimentEnabled: false
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      mlExperimentEnabled: experiments.isEnabled(experiments.APPLAB_ML)
+    });
+  }
+
   render() {
     const toolboxStyle = {
       display: this.props.isToolboxVisible ? 'block' : 'none',
@@ -117,7 +130,7 @@ export default class DesignToolbox extends React.Component {
           elementType={'PHOTO_SELECT'}
           handleDragStart={this.props.handleDragStart}
         />
-        {experiments.isEnabled(experiments.APPLAB_ML) && (
+        {this.state.mlExperimentEnabled && (
           <DesignToolboxElement
             imageUrl={IMAGE_BASE_URL + 'ml_predict.png'}
             desc={'ML Predict'}
