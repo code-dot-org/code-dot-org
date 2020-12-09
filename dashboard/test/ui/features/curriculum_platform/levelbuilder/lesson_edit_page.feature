@@ -4,7 +4,7 @@
 Feature: Using the Lesson Edit Page
   Scenario: Save changes using the lesson edit page
     Given I create a levelbuilder named "Levi"
-    And I create a temp script and lesson
+    And I create a temp migrated script and lesson
     And I view the temp lesson edit page
 
     # Match the text 'Editing Lesson "Temp Lesson"'
@@ -31,7 +31,7 @@ Feature: Using the Lesson Edit Page
 
   Scenario: Add a level using the lesson edit page
     Given I create a levelbuilder named "Levi"
-    And I create a temp script and lesson
+    And I create a temp migrated script and lesson
     And I view the temp lesson edit page
     And I wait until element ".uitest-activity-card" is visible
     And element ".uitest-open-add-level-button" is visible
@@ -72,7 +72,7 @@ Feature: Using the Lesson Edit Page
   @no_firefox
   Scenario: Update script level properties
     Given I create a levelbuilder named "Levi"
-    And I create a temp script and lesson
+    And I create a temp migrated script and lesson
     And I view the temp lesson edit page
     And I wait until element ".uitest-activity-card" is visible
     And element ".uitest-level-token-name" is visible
