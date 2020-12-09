@@ -102,7 +102,7 @@
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
       cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
-      cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
+      cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
