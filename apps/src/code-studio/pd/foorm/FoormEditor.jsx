@@ -8,9 +8,9 @@ import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import FoormSaveBar from './FoormSaveBar';
-import FoormEditorPreview from './FoormEditorPreview';
-import FoormEditorHeader from './FoormEditorHeader';
+import FoormSaveBar from './editor/FoormSaveBar';
+import FoormEditorPreview from './editor/FoormEditorPreview';
+import FoormEditorHeader from './editor/FoormEditorHeader';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
