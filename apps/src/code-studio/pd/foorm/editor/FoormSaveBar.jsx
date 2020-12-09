@@ -91,7 +91,7 @@ class FoormSaveBar extends Component {
   };
 
   handleSaveCancel = () => {
-    this.setState({showSaveConfirmation: false});
+    this.setState({showSaveConfirmation: false, isSaving: false});
   };
 
   save = () => {

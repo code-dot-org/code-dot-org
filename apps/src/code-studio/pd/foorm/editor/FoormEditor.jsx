@@ -84,10 +84,7 @@ class FoormEditor extends React.Component {
       is_friday_institute: false,
       workshop_agenda: 'module1',
       libraryError: false,
-      libraryErrorMessage: null,
-      lastSaved: null,
-      saveError: null,
-      isSaving: false
+      libraryErrorMessage: null
     };
   }
 
@@ -165,7 +162,6 @@ class FoormEditor extends React.Component {
 
   previewFoorm = () => {
     if (this.state.livePreviewStatus === PREVIEW_ON) {
-      // fill in form with any library items
       this.fillFormWithLibraryItems();
     }
   };
@@ -328,11 +324,8 @@ class FoormEditor extends React.Component {
   }
 }
 
-export default connect(
-  state => ({
-    formQuestions: state.foorm.formQuestions || {},
-    isFormPublished: state.foorm.isFormPublished,
-    formHasError: state.foorm.hasError
-  }),
-  dispatch => ({})
-)(FoormEditor);
+export default connect(state => ({
+  formQuestions: state.foorm.formQuestions || {},
+  isFormPublished: state.foorm.isFormPublished,
+  formHasError: state.foorm.hasError
+}))(FoormEditor);
