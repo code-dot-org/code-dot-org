@@ -52,6 +52,7 @@ Dashboard::Application.routes.draw do
   post 'maker/override', to: 'maker#override'
   get 'maker/google_oauth_login_code', to: 'maker#login_code'
   get 'maker/display_google_oauth_code', to: 'maker#display_code'
+  get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
