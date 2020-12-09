@@ -157,10 +157,7 @@ class FoormEditorHeader extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    formQuestions: state.foorm.formQuestions || {},
-    isFormPublished: state.foorm.isFormPublished
-  }),
-  dispatch => ({})
-)(FoormEditorHeader);
+export default connect(state => ({
+  formQuestions: state.foorm.formQuestions || {},
+  isFormPublished: state.foorm.isFormPublished
+}))(FoormEditorHeader);

@@ -136,9 +136,6 @@ class FoormEditorManager extends React.Component {
   }
 }
 
-export default connect(
-  state => ({
-    formQuestions: state.foorm.formQuestions || {}
-  }),
-  dispatch => ({})
-)(FoormEditorManager);
+export default connect(state => ({
+  formQuestions: state.foorm.formQuestions || {}
+}))(FoormEditorManager);

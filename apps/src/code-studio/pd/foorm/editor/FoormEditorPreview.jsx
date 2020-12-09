@@ -62,9 +62,6 @@ class FoormEditorPreview extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    formHasError: state.foorm.hasError
-  }),
-  dispatch => ({})
-)(FoormEditorPreview);
+export default connect(state => ({
+  formHasError: state.foorm.hasError
+}))(FoormEditorPreview);
