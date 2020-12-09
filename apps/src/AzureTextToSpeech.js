@@ -103,7 +103,7 @@ export default class AzureTextToSpeech {
    * const soundResponse = await soundPromise();
    */
   createSoundPromise = opts => () => {
-    const {text, gender, languageCode, onFailure} = opts;
+    const {text, gender, languageCode, authenticityToken, onFailure} = opts;
     const cachedSound = this.getCachedSound_(languageCode, gender, text);
     const wrappedSetCachedSound = soundResponse => {
       this.setCachedSound_(languageCode, gender, text, soundResponse);
@@ -128,7 +128,11 @@ export default class AzureTextToSpeech {
     // Otherwise, check the text for profanity and request the TTS sound.
     return new Promise(async resolve => {
       try {
-        const profaneWords = await findProfanity(text, languageCode);
+        const profaneWords = await findProfanity(
+          text,
+          languageCode,
+          authenticityToken
+        );
         if (profaneWords && profaneWords.length > 0) {
           const soundResponse = wrappedCreateSoundResponse({profaneWords});
           onFailure(soundResponse.profanityMessage());
@@ -140,7 +144,8 @@ export default class AzureTextToSpeech {
         const bytes = await this.convertTextToSpeech(
           text,
           gender,
-          languageCode
+          languageCode,
+          authenticityToken
         );
         const soundResponse = wrappedCreateSoundResponse({bytes});
         wrappedSetCachedSound(soundResponse);
@@ -158,16 +163,23 @@ export default class AzureTextToSpeech {
    * @param {string} text
    * @param {string} gender
    * @param {string} locale
+   * @param {string} authenticityToken Rails authenticity token. Optional.
    * @returns {Promise<ArrayBuffer>} A promise that resolves to an ArrayBuffer.
    */
-  convertTextToSpeech = (text, gender, locale) => {
-    return $.ajax({
+  convertTextToSpeech = (text, gender, locale, authenticityToken = null) => {
+    let request = {
       url: '/dashboardapi/v1/text_to_speech/azure',
       method: 'POST',
       dataType: 'binary',
       responseType: 'arraybuffer',
       data: {text, gender, locale}
-    });
+    };
+
+    if (authenticityToken) {
+      request.headers = {'X-CSRF-Token': authenticityToken};
+    }
+
+    return $.ajax(request);
   };
 
   /**
