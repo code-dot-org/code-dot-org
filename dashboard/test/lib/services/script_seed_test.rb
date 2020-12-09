@@ -36,6 +36,7 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
 
+      script.course_version.resources.destroy_all
       script.course_version.destroy!
       script.destroy!
 
@@ -202,6 +203,7 @@ module Services
       expected_counts['ActivitySection'] -= 2
       expected_counts['ScriptLevel'] -= 4
       expected_counts['LevelsScriptLevel'] -= 4
+      expected_counts['LessonsResource'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -231,6 +233,7 @@ module Services
       expected_counts['ActivitySection'] -= 1
       expected_counts['ScriptLevel'] -= 2
       expected_counts['LevelsScriptLevel'] -= 2
+      expected_counts['LessonsResource'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -332,7 +335,10 @@ module Services
     end
 
     def get_counts
-      [Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel, LevelsScriptLevel].map {|c| [c.name, c.count]}.to_h
+      [
+        Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
+        LevelsScriptLevel, Resource, LessonsResource
+      ].map {|c| [c.name, c.count]}.to_h
     end
 
     def assert_script_trees_equal(s1, s2, script_levels1=nil, script_levels2=nil)
