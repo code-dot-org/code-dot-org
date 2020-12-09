@@ -168,7 +168,7 @@ export function summarizeProgressInStage(levelsWithStatus) {
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This filters to the parts our views care about.
  */
-export const processedLevel = level => {
+export const processedLevel = (level, isSublevel) => {
   return {
     url: level.url,
     name: level.name,
@@ -178,6 +178,12 @@ export const processedLevel = level => {
     icon: level.icon,
     isUnplugged: level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    bubbleTitle:
+      level.kind === LevelKind.unplugged
+        ? undefined
+        : isSublevel
+        ? level.letter
+        : level.title.toString(),
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus,
     sublevels: level.sublevels
