@@ -306,7 +306,15 @@ class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          <ResourcesEditor courseVersionId={this.props.courseVersionId} />
+          {this.props.courseVersionId ? (
+            <ResourcesEditor courseVersionId={this.props.courseVersionId} />
+          ) : (
+            <h4>
+              A unit must be in a course version, i.e. a unit must belong to a
+              course or have 'Is a Standalone Course' checked, in order to add
+              resources.
+            </h4>
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
