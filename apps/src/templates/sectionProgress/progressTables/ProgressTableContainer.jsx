@@ -5,6 +5,7 @@ import ProgressTableSummaryView from './ProgressTableSummaryView';
 import ProgressTableDetailView from './ProgressTableDetailView';
 import ProgressTableStudentList from './ProgressTableStudentList';
 import {scriptDataPropType} from '../sectionProgressConstants';
+import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import styleConstants from '@cdo/apps/styleConstants';
 import i18n from '@cdo/locale';
 
@@ -45,6 +46,8 @@ function synchronized(StudentList, ContentView, studentHeaders) {
   class Synchronized extends React.Component {
     static propTypes = {
       scriptData: scriptDataPropType.isRequired,
+      section: sectionDataPropType.isRequired,
+
       // From redux
       studentTimestamps: PropTypes.object,
       localeCode: PropTypes.string
@@ -55,6 +58,20 @@ function synchronized(StudentList, ContentView, studentHeaders) {
       this.onScroll = this.onScroll.bind(this);
       this.studentList = null;
       this.contentView = null;
+    }
+
+    componentDidMount() {
+      const maxRows = Math.ceil(
+        parseInt(progressTableStyles.MAX_BODY_HEIGHT) /
+          parseInt(progressTableStyles.ROW_HEIGHT)
+      );
+      const initialRows = Math.min(this.props.section.students.length, maxRows);
+      this.studentList.bodyComponent.setState({
+        amountOfRowsToRender: initialRows
+      });
+      this.contentView.bodyComponent.setState({
+        amountOfRowsToRender: initialRows
+      });
     }
 
     onScroll(e) {

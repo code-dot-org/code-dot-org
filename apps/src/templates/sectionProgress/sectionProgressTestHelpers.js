@@ -1,7 +1,8 @@
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress, {
-  addDataByScript
+  addDataByScript,
+  setLessonOfInterest
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection, {
   setValidScripts
@@ -34,6 +35,7 @@ export function createStore() {
   store.dispatch(setSection(section));
   store.dispatch(setValidScripts([scriptData], [scriptData.id], [], section));
   store.dispatch(addDataByScript(buildSectionProgress(section.students)));
+  store.dispatch(setLessonOfInterest(0));
   return store;
 }
 

@@ -14,11 +14,16 @@ import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 import progressTableStyles from './progressTableStyles.scss';
 
+const MIN_COLUMN_WIDTH = 40;
+
+const styles = {
+  headerContainer: {
+    height: '100%'
+  }
+};
 export default class ProgressTableSummaryView extends React.Component {
   static widthForScript(scriptData) {
-    return (
-      scriptData.stages.length * parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
-    );
+    return scriptData.stages.length * MIN_COLUMN_WIDTH;
   }
 
   static propTypes = {
@@ -36,8 +41,22 @@ export default class ProgressTableSummaryView extends React.Component {
     super(props);
     this.lessonNumberFormatter = this.lessonNumberFormatter.bind(this);
     this.progressCellFormatter = this.progressCellFormatter.bind(this);
-    this.header = null;
-    this.body = null;
+  }
+
+  header = null;
+  body = null;
+  bodyComponent = null;
+  lessonRefs = {};
+
+  componentDidMount() {
+    this.scrollToSelectedLesson();
+  }
+
+  scrollToSelectedLesson() {
+    const lesson = this.lessonRefs[this.props.lessonOfInterest];
+    const scrollPosition = lesson.parentNode.offsetLeft;
+    this.header.scrollLeft = scrollPosition;
+    this.body.scrollLeft = scrollPosition;
   }
 
   needsGutter() {
@@ -51,14 +70,19 @@ export default class ProgressTableSummaryView extends React.Component {
   lessonNumberFormatter(_, {columnIndex}) {
     const stageData = this.props.scriptData.stages[columnIndex];
     return (
-      <ProgressTableLessonNumber
-        name={stageData.name}
-        number={stageData.relative_position}
-        lockable={stageData.lockable}
-        highlighted={stageData.position === this.props.lessonOfInterest}
-        onClick={() => this.props.onClickLesson(stageData.position)}
-        isAssessment={stageIsAllAssessment(stageData.levels)}
-      />
+      <div
+        style={styles.headerContainer}
+        ref={r => (this.lessonRefs[stageData.position] = r)}
+      >
+        <ProgressTableLessonNumber
+          name={stageData.name}
+          number={stageData.relative_position}
+          lockable={stageData.lockable}
+          highlighted={stageData.position === this.props.lessonOfInterest}
+          onClick={() => this.props.onClickLesson(stageData.position)}
+          isAssessment={stageIsAllAssessment(stageData.levels)}
+        />
+      </div>
     );
   }
 
@@ -80,20 +104,23 @@ export default class ProgressTableSummaryView extends React.Component {
   }
 
   render() {
-    const columnWidth =
+    const width = Math.max(
+      MIN_COLUMN_WIDTH,
       progressTableStyles.CONTENT_VIEW_WIDTH /
-      this.props.scriptData.stages.length;
+        this.props.scriptData.stages.length
+    );
+    const widthProps = {style: {minWidth: width, maxWidth: width}};
 
     const columns = [];
     const headers = [];
     this.props.scriptData.stages.forEach(_ => {
       columns.push({
-        props: {style: {width: columnWidth}},
+        props: widthProps,
         cell: {formatters: [this.progressCellFormatter]}
       });
       headers.push({
         header: {
-          props: {style: {width: columnWidth}},
+          props: widthProps,
           formatters: [this.lessonNumberFormatter]
         }
       });
@@ -106,7 +133,6 @@ export default class ProgressTableSummaryView extends React.Component {
 
     return (
       <Table.Provider
-        className="summary-view"
         renderers={{
           body: {
             wrapper: Virtualized.BodyWrapper,
@@ -129,7 +155,10 @@ export default class ProgressTableSummaryView extends React.Component {
             overflow: 'auto',
             maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
           }}
-          ref={r => (this.body = r && r.getRef())}
+          ref={r => {
+            this.body = r && r.getRef();
+            this.bodyComponent = r;
+          }}
           tableHeader={this.header}
         />
       </Table.Provider>

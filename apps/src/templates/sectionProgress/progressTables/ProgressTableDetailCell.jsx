@@ -158,7 +158,7 @@ export default class ProgressTableDetailCell extends React.Component {
 /**
  * The width of the unplugged bubble depends on the localization of the text,
  * but our table needs to know its rendered width for determining column width,
- * so we calculate the width here by adding the element to the dom, getting its
+ * so we calculate the width here by adding the element to the DOM, getting its
  * width, then removing it.
  *
  * Note: it would make more sense to put this code in the same file with the

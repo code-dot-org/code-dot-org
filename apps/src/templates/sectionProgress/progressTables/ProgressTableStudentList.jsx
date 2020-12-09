@@ -18,7 +18,6 @@ export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
-    lessonOfInterest: PropTypes.number.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     studentTimestamps: PropTypes.object,
     localeCode: PropTypes.string,
@@ -28,9 +27,11 @@ export default class ProgressTableStudentList extends React.Component {
   constructor(props) {
     super(props);
     this.studentNameFormatter = this.studentNameFormatter.bind(this);
-    this.header = null;
-    this.body = null;
   }
+
+  header = null;
+  body = null;
+  bodyComponent = null;
 
   studentNameFormatter(value, {rowData}) {
     // Account for scrollbar in content view
@@ -90,7 +91,10 @@ export default class ProgressTableStudentList extends React.Component {
             overflow: 'hidden',
             maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
           }}
-          ref={tableBody => (this.body = tableBody && tableBody.getRef())}
+          ref={r => {
+            this.body = r && r.getRef();
+            this.bodyComponent = r;
+          }}
           tableHeader={this.header}
         />
       </Table.Provider>
