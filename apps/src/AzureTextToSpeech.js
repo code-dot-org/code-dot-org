@@ -94,9 +94,7 @@ export default class AzureTextToSpeech {
    * @param {string} opts.text
    * @param {string} opts.gender
    * @param {string} opts.languageCode
-   * @param {string} opts.url URL to request sound from.
-   * @param {string} opts.ssml SSML in request body.
-   * @param {string} opts.token Authentication token from Azure.
+   * @param {string} opts.authenticityToken Rails authenticity token. Optional.
    * @param {function(string)} opts.onFailure Called with an error message if the sound will not be played.
    * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse. Example usage:
    * const soundPromise = createSoundPromise(options);
