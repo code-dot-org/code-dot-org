@@ -57,7 +57,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(58) do
+      assert_queries(61) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -392,7 +392,13 @@ module Services
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
     end
 
-    def create_script_tree(name_prefix=nil, num_lesson_groups=2, num_lessons_per_group=2, num_script_levels_per_lesson=2)
+    def create_script_tree(
+      name_prefix=nil,
+      num_lesson_groups=2,
+      num_lessons_per_group=2,
+      num_script_levels_per_lesson=2,
+      num_resources_per_lesson=2
+    )
       name_prefix ||= SecureRandom.uuid
       # TODO: how can this be simplified and/or moved into factories.rb?
       script = create(
@@ -435,6 +441,11 @@ module Services
           level = create :level, name: "#{name_prefix}_blockly_#{i}", level_num: "1_2_#{i}", game: game
           create :script_level, activity_section: section, activity_section_position: i, lesson: lesson, script: script, levels: [level], challenge: i.even?
           i += 1
+        end
+
+        (1..num_resources_per_lesson).each do |r|
+          resource = create :resource, key: "#{lesson.name}-resource-#{r}", course_version: script.course_version
+          LessonsResource.find_or_create_by!(resource: resource, lesson: lesson)
         end
       end
 
