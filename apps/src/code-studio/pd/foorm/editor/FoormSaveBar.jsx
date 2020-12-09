@@ -37,6 +37,10 @@ const styles = {
     fontSize: 14,
     color: color.red,
     padding: 15
+  },
+  warning: {
+    color: color.red,
+    fontWeight: 'bold'
   }
 };
 

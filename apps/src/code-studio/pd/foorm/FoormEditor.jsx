@@ -6,7 +6,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Tabs, Tab} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
 import _ from 'lodash';
 import FoormSaveBar from './editor/FoormSaveBar';
 import FoormEditorPreview from './editor/FoormEditorPreview';
@@ -34,10 +33,6 @@ const styles = {
   preview: {
     width: '48%',
     marginRight: 12
-  },
-  warning: {
-    color: color.red,
-    fontWeight: 'bold'
   }
 };
 
