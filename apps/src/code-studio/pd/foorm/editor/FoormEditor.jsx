@@ -172,88 +172,82 @@ class FoormEditor extends React.Component {
 
   renderVariables() {
     return (
-      <div style={styles.options} className="foorm-options">
-        {!this.props.formHasError && !this.state.libraryError && (
-          <div>
-            <form>
-              <label>
-                workshop_course <br />
-                <input
-                  type="text"
-                  value={this.state.workshop_course}
-                  onChange={e =>
-                    this.setState({workshop_course: e.target.value})
-                  }
-                />
-              </label>
-              <label>
-                workshop_subject <br />
-                <input
-                  type="text"
-                  value={this.state.workshop_subject}
-                  onChange={e =>
-                    this.setState({workshop_subject: e.target.value})
-                  }
-                />
-              </label>
-              <label>
-                num_facilitators
-                <br />
-                <input
-                  type="number"
-                  value={this.state.num_facilitators}
-                  onChange={this.updateFacilitators}
-                />
-              </label>
-              <label>
-                regional_partner_name <br />
-                <input
-                  type="text"
-                  value={this.state.regional_partner_name}
-                  onChange={e =>
-                    this.setState({regional_partner_name: e.target.value})
-                  }
-                />
-              </label>
-              <label>
-                is_virtual <br />
-                <input
-                  type="boolean"
-                  value={this.state.is_virtual}
-                  onChange={e => this.setState({is_virtual: e.target.value})}
-                />
-              </label>
-              <label>
-                is_friday_institute <br />
-                <input
-                  type="boolean"
-                  value={this.state.is_friday_institute}
-                  onChange={e =>
-                    this.setState({is_friday_institute: e.target.value})
-                  }
-                />
-              </label>
-              <label>
-                day <br />
-                <input
-                  type="number"
-                  value={this.state.day}
-                  onChange={e => this.setState({day: e.target.value})}
-                />
-              </label>
-              <label>
-                workshop_agenda <br />
-                <input
-                  type="text"
-                  value={this.state.workshop_agenda}
-                  onChange={e =>
-                    this.setState({workshop_agenda: e.target.value})
-                  }
-                />
-              </label>
-            </form>
-          </div>
-        )}
+      <div style={styles.options}>
+        <div>
+          <form>
+            <label>
+              workshop_course <br />
+              <input
+                type="text"
+                value={this.state.workshop_course}
+                onChange={e => this.setState({workshop_course: e.target.value})}
+              />
+            </label>
+            <label>
+              workshop_subject <br />
+              <input
+                type="text"
+                value={this.state.workshop_subject}
+                onChange={e =>
+                  this.setState({workshop_subject: e.target.value})
+                }
+              />
+            </label>
+            <label>
+              num_facilitators
+              <br />
+              <input
+                type="number"
+                value={this.state.num_facilitators}
+                onChange={this.updateFacilitators}
+              />
+            </label>
+            <label>
+              regional_partner_name <br />
+              <input
+                type="text"
+                value={this.state.regional_partner_name}
+                onChange={e =>
+                  this.setState({regional_partner_name: e.target.value})
+                }
+              />
+            </label>
+            <label>
+              is_virtual <br />
+              <input
+                type="boolean"
+                value={this.state.is_virtual}
+                onChange={e => this.setState({is_virtual: e.target.value})}
+              />
+            </label>
+            <label>
+              is_friday_institute <br />
+              <input
+                type="boolean"
+                value={this.state.is_friday_institute}
+                onChange={e =>
+                  this.setState({is_friday_institute: e.target.value})
+                }
+              />
+            </label>
+            <label>
+              day <br />
+              <input
+                type="number"
+                value={this.state.day}
+                onChange={e => this.setState({day: e.target.value})}
+              />
+            </label>
+            <label>
+              workshop_agenda <br />
+              <input
+                type="text"
+                value={this.state.workshop_agenda}
+                onChange={e => this.setState({workshop_agenda: e.target.value})}
+              />
+            </label>
+          </form>
+        </div>
       </div>
     );
   }

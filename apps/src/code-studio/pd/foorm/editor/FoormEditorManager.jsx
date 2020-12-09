@@ -107,7 +107,11 @@ class FoormEditorManager extends React.Component {
         <p>
           Interface for creating and making updates to Foorm forms. Check out
           our{' '}
-          <a href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor">
+          <a
+            href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             How To
           </a>{' '}
           to get started.

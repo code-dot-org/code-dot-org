@@ -1,3 +1,5 @@
+// Save bar that stays at bottom of the screen of the Foorm Editor.
+// Shows last saved time, any errors, and requires confirmation for published surveys.
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
@@ -42,7 +44,11 @@ const publishedSaveWarning = (
   <div>
     <span style={styles.warning}>Warning: </span>You are editing a published
     survey. Please only make safe edits as described in the{' '}
-    <a href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor">
+    <a
+      href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       How To
     </a>
     .
@@ -74,13 +80,6 @@ class FoormSaveBar extends Component {
   }
 
   handleSave = () => {
-    if (this.props.formHasError) {
-      this.setState({
-        saveError:
-          'There is a parsing error. See the errors noted on the left side of the editor.'
-      });
-      return;
-    }
     this.setState({isSaving: true, saveError: null});
     // do warning if in published mode
     if (this.props.isFormPublished) {
@@ -126,14 +125,21 @@ class FoormSaveBar extends Component {
     return (
       <div>
         <div style={styles.saveButtonBackground} className="saveBar">
-          {this.state.lastSaved && !this.state.error && (
-            <div style={styles.lastSaved} className="lastSavedMessage">
-              {`Last saved at: ${new Date(
-                this.state.lastSaved
-              ).toLocaleString()}`}
+          {this.state.lastSaved &&
+            !this.state.saveError &&
+            !this.props.formHasError && (
+              <div style={styles.lastSaved} className="lastSavedMessage">
+                {`Last saved at: ${new Date(
+                  this.state.lastSaved
+                ).toLocaleString()}`}
+              </div>
+            )}
+          {this.props.formHasError && (
+            <div style={styles.error}>
+              {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.state.saveError && (
+          {this.state.saveError && !this.props.formHasError && (
             <div style={styles.error}>{`Error Saving: ${
               this.state.saveError
             }`}</div>
@@ -148,7 +154,7 @@ class FoormSaveBar extends Component {
             type="button"
             style={styles.saveButton}
             onClick={this.handleSave}
-            disabled={this.state.isSaving}
+            disabled={this.state.isSaving || this.props.formHasError}
           >
             Save
           </button>
@@ -166,11 +172,8 @@ class FoormSaveBar extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    formQuestions: state.foorm.formQuestions || {},
-    isFormPublished: state.foorm.isFormPublished,
-    formHasError: state.foorm.hasError
-  }),
-  dispatch => ({})
-)(FoormSaveBar);
+export default connect(state => ({
+  formQuestions: state.foorm.formQuestions || {},
+  isFormPublished: state.foorm.isFormPublished,
+  formHasError: state.foorm.hasError
+}))(FoormSaveBar);
