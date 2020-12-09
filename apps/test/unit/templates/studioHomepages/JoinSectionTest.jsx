@@ -197,7 +197,6 @@ describe('JoinSection', () => {
     server.respond();
   });
 
-  // TODO: should we actually mimic the server response or is this enough?
   it('makes get request to server for captcha info in componentDidMount', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     const instance = wrapper.instance();

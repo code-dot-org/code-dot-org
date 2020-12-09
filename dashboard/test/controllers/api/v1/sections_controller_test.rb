@@ -957,27 +957,27 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "verify_recaptcha: returns 403 'Forbidden' when not signed in" do
-    get :verify_recaptcha
+  test "require_captcha: returns 403 'Forbidden' when not signed in" do
+    get :require_captcha
     assert_response :forbidden
   end
 
-  test "verify_recaptcha: returns object with boolean and recaptcha site key" do
+  test "require_captcha: returns object with boolean and recaptcha site key" do
     user = create(:user)
     sign_in user
-    get :verify_recaptcha
+    get :require_captcha
     expected_response = {shouldDisplayCaptcha: false, key: Recaptcha.configuration.site_key}.as_json
     assert_equal(expected_response, json_response)
   end
 
-  test "verify_recaptcha: serves non-nil site key to the client side" do
+  test "require_captcha: serves non-nil site key to the client side" do
     # Use Google's publicly available test keys:
     # https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do
     GOOGLE_PROVIDED_TEST_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
     CDO.stubs(:recaptcha_site_key).returns(GOOGLE_PROVIDED_TEST_KEY)
     user = create(:user)
     sign_in user
-    get :verify_recaptcha
+    get :require_captcha
     assert_equal(json_response["key"], GOOGLE_PROVIDED_TEST_KEY)
   end
 end

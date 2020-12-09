@@ -80,7 +80,7 @@ export default class JoinSection extends React.Component {
 
   fetchCaptchaInfo = () => {
     $.get({
-      url: '/api/v1/sections/verify_recaptcha',
+      url: '/api/v1/sections/require_captcha',
       dataType: 'json'
     }).done(data => {
       const {shouldDisplayCaptcha, key} = data;
