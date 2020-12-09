@@ -86,6 +86,7 @@ describe('SpriteLab', () => {
         instance.preview();
         expect(muteSpy).to.not.have.been.called;
       });
+
       it('includes any missing start animations', () => {
         instance.startAnimations = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
@@ -106,12 +107,13 @@ describe('SpriteLab', () => {
             }
           }
         };
-        const resultingAnimations = instance.loadMissingAnimationDefaultsIfNecessary(
+        const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
           true,
           initialAnimationList
         );
         expect(resultingAnimations.orderedKeys.length).to.equal(2);
       });
+
       it('includes backgrounds if there are none', () => {
         instance.startAnimations = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
@@ -132,12 +134,13 @@ describe('SpriteLab', () => {
             }
           }
         };
-        const resultingAnimations = instance.loadMissingAnimationDefaultsIfNecessary(
+        const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
           true,
           initialAnimationList
         );
         expect(resultingAnimations.orderedKeys.length).to.be.above(1);
       });
+
       it('does not modify the list if there are no missing startAnimations and there is an animation in the backgrounds category', () => {
         instance.startAnimations = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
@@ -158,12 +161,13 @@ describe('SpriteLab', () => {
             }
           }
         };
-        const resultingAnimations = instance.loadMissingAnimationDefaultsIfNecessary(
+        const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
           true,
           initialAnimationList
         );
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
       });
+
       it('does not modify the list if there are no missing startAnimations and there is an animation that matches a background', () => {
         instance.startAnimations = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
@@ -182,7 +186,7 @@ describe('SpriteLab', () => {
             }
           }
         };
-        const resultingAnimations = instance.loadMissingAnimationDefaultsIfNecessary(
+        const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
           true,
           initialAnimationList
         );
