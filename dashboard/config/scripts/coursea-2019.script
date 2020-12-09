@@ -21,8 +21,6 @@ level 'GoingPlacesSafely-unplugged'
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop'
 skin 'jigsaw'
-# Im not seeing how this level_concept_difficulty is getting applied,
-# but I do see that it does end up in the database.
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:1', progression: 'Practice'
 skin 'jigsaw'
