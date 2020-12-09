@@ -1,3 +1,5 @@
+/* global appOptions */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FishView from './FishView';
@@ -6,6 +8,7 @@ import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import fishMsg from './locale';
+import {mergeProgress} from '@cdo/apps/code-studio/progressRedux';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -96,6 +99,10 @@ Fish.prototype.init = function(config) {
 
 // Called by the fish app when it wants to go to the next level.
 Fish.prototype.onContinue = function() {
+  const store = getStore();
+  store.dispatch(
+    mergeProgress({[appOptions.serverLevelId]: TestResults.ALL_PASS})
+  );
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
