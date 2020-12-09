@@ -59,6 +59,8 @@ class Level < ApplicationRecord
   after_save :update_key_list
   after_destroy :delete_custom_level_file
 
+  # This is a bit sneaky. Attributes on the level_concept_difficulty can
+  # be set as part of the call to leve.update().
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
   include StiFactory
@@ -98,6 +100,8 @@ class Level < ApplicationRecord
     raw_levels.map do |raw_level|
       raw_level.symbolize_keys!
 
+      # Concepts are in use, but not in CSF/CSD/CSP 2020. I think this means we
+      # can skip handling them for January launch.
       # Concepts are comma-separated, indexed by name
       raw_level[:concept_ids] = (concepts = raw_level.delete(:concepts)) && concepts.split(',').map(&:strip).map do |concept_name|
         (Concept.by_name(concept_name) || raise("missing concept '#{concept_name}'"))
@@ -107,11 +111,15 @@ class Level < ApplicationRecord
 
       key = raw_level.delete(:name)
 
+      # level_num looks unused. I don't see it in .script files, or script_dsl.rb.
+      # I haven't confirmed, but I think we can ignore it for now.
       if raw_level[:level_num] && !key.starts_with?('blockly')
+        puts "found level_num: #{JSON.pretty_generate(raw_level)}"
         # a levels.js level in a old style script -- give it the same key that we use for levels.js levels in new style scripts
         key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
       end
 
+      # This is only used for script copy. as you noticed, we do not copy 'blockly' levels.
       level =
         if new_suffix && !key.starts_with?('blockly')
           Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
@@ -129,6 +137,10 @@ class Level < ApplicationRecord
           raw_level[:video_key] = nil
         end
 
+        # If level_concept_difficulty is specified in the .script file, it will
+        # be part of raw_level here, and it looks like the nested attributes
+        # stuff will cause the level.level_concept_difficulty to get updated.
+        # Any other fields still in raw_level will get set on the level here.
         level.update(raw_level)
       elsif raw_level[:video_key]
         level.update(video_key: raw_level[:video_key])
@@ -174,6 +186,8 @@ class Level < ApplicationRecord
     ([game.intro_video, specified_autoplay_video] + concepts.map(&:related_video)).compact.uniq
   end
 
+  # Video key looks like it is needed on the server here. I think that would
+  # make it impractical to move video_key into the levels.js files.
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
     @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?

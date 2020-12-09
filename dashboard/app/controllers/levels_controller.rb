@@ -409,6 +409,12 @@ class LevelsController < ApplicationController
       :description,
       {poems: []},
       {concept_ids: []},
+
+      # level_concept_difficulty_attributes is related to
+      # accepts_nested_attributes_for. anything included in this param would get
+      # set directly onto the level.level_concept_difficulty association. This
+      # is part of how the levelbuilder script update path writes level concept
+      # difficulties, but this wouldn't affect script seed.
       {level_concept_difficulty_attributes: [:id] + LevelConceptDifficulty::CONCEPTS},
       {soft_buttons: []},
       {contained_level_names: []},

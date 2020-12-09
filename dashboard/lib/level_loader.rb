@@ -48,6 +48,10 @@ class LevelLoader
         changed_levels.reject!(&:encrypted?)
       end
 
+      # I see that level_concept_difficultys which live inside levels are seeded
+      # here, but I haven't found where they are seeded when they are specified
+      # in the .script file.
+
       # activerecord-import (with MySQL, anyway) doesn't save associated
       # models, so we've got to do this manually.
       changed_lcds = changed_levels.map(&:level_concept_difficulty).compact

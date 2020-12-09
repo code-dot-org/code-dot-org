@@ -360,6 +360,9 @@ const serializeLesson = (lesson, levelKeyList) => {
   return s.join('\n');
 };
 
+// It looks like the new script editor already preserves the fields we are
+// worried about: video_key, concepts, level_concept_difficulty, skin.
+
 /**
  * Generate the ScriptDSL format.
  * NOTE: The Script Edit GUI no long includes the editing of levels
