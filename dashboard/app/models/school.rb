@@ -287,7 +287,7 @@ class School < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [])
     schools = nil
     new_schools = []
     updated_schools = 0
@@ -320,7 +320,12 @@ class School < ApplicationRecord
                 updated_schools_attribute_frequency[attribute] += 1 :
                 updated_schools_attribute_frequency[attribute] = 1
             end
-            updated_schools += 1
+
+            # Not counting schools as "updated" if the only change
+            # is adding a new column. Otherwise, all found rows will be updated.
+            loaded.changed.sort == new_attributes.sort ?
+              unchanged_schools += 1 :
+              updated_schools += 1
           else
             unchanged_schools += 1
           end
@@ -332,13 +337,8 @@ class School < ApplicationRecord
       "School seeding: done processing #{filename}.\n"\
       "#{new_schools.length} new schools added.\n"\
       "#{updated_schools} schools updated.\n"\
+      "#{unchanged_schools} schools unchanged (school considered changed if only update was adding new columns included in this import).\n"\
       "#{duplicate_schools.length} duplicate schools skipped.\n"
-
-    unless new_schools.empty?
-      summary_message <<
-        "Schools added:\n"\
-        "#{new_schools.map {|school| school[:name] + ' ' + school[:id].to_s}.join("\n")}\n"
-    end
 
     unless updated_schools_attribute_frequency.empty?
       summary_message <<
@@ -348,7 +348,15 @@ class School < ApplicationRecord
           map {|attribute, frequency| attribute + ': ' + frequency.to_s}.join("\n")}\n"
     end
 
-    unless duplicate_schools.empty?
+    # More verbose logging in dry run
+    if !new_schools.empty? && is_dry_run
+      summary_message <<
+        "Schools added:\n"\
+        "#{new_schools.map {|school| school[:name] + ' ' + school[:id].to_s}.join("\n")}\n"
+    end
+
+    # More verbose logging in dry run
+    if !duplicate_schools.empty? && is_dry_run
       summary_message <<
         "Duplicate schools skipped:\n"\
         "#{duplicate_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}"
@@ -359,9 +367,16 @@ class School < ApplicationRecord
     schools
   end
 
-  def self.dry_seed_s3_object(bucket, filepath, import_options, &parse_row)
+  def self.dry_seed_s3_object(bucket, filepath, import_options, new_attributes: [], &parse_row)
     AWS::S3.seed_from_file(bucket, filepath, true) do |filename|
-      merge_from_csv(filename, import_options, true, is_dry_run: true, &parse_row)
+      merge_from_csv(
+        filename,
+        import_options,
+        true,
+        is_dry_run: true,
+        new_attributes: new_attributes,
+        &parse_row
+      )
     ensure
       CDO.log.info "This is a dry run. No data is written to the database."
     end

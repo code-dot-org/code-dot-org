@@ -2,13 +2,14 @@
 #
 # Table name: school_districts
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)      not null
-#  city       :string(255)      not null
-#  state      :string(255)      not null
-#  zip        :string(255)      not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                          :integer          not null, primary key
+#  name                        :string(255)      not null
+#  city                        :string(255)      not null
+#  state                       :string(255)      not null
+#  zip                         :string(255)      not null
+#  last_known_school_year_open :string(9)
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
 #
 # Indexes
 #
@@ -76,6 +77,11 @@ class SchoolDistrict < ApplicationRecord
         end
       end
 
+      # Note this iteration was never run with write_updates set to true,
+      # meaning that school districts that had updates in this iteration
+      # (but were not new) were not completed.
+      # That said, (presumably) most relevant updates were
+      # completed in the subsequent upload for 2018-2019.
       CDO.log.info "Seeding 2017-2018 school district data"
       import_options_1718 = {col_sep: ",", headers: true, quote_char: "\x00"}
       AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_lea_029_1718_w_0a_03302018.csv") do |filename|
@@ -89,12 +95,36 @@ class SchoolDistrict < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2018-2019 school district data"
+      import_options_1819 = {col_sep: ",", headers: true, quote_char: "\x00"}
+      # Used table generator here to get columns of interest:
+      # https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
+      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ELSI_csv_export_637423414304008909966.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_1819) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2018-19'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2018-19'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2018-19'].tr('"=', ''),
+            last_known_school_year_open:  '2018-2019'
+          }
+        end
+      end
     end
   end
 
-  def self.dry_seed_s3_object(bucket, filepath, import_options, &parse_row)
+  def self.dry_seed_s3_object(bucket, filepath, import_options, new_attributes: [], &parse_row)
     AWS::S3.seed_from_file(bucket, filepath, true) do |filename|
-      merge_from_csv(filename, import_options, true, is_dry_run: true, &parse_row)
+      merge_from_csv(
+        filename,
+        import_options,
+        true,
+        is_dry_run: true,
+        new_attributes: new_attributes,
+        &parse_row
+      )
     end
     CDO.log.info "This is a dry run. No data written to the database."
   end
@@ -104,7 +134,7 @@ class SchoolDistrict < ApplicationRecord
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param write_updates [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT school districts.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, write_updates = true, is_dry_run: false, new_attributes: [])
     districts = nil
     new_districts = []
     updated_districts = 0
@@ -121,7 +151,10 @@ class SchoolDistrict < ApplicationRecord
           loaded.assign_attributes(parsed)
           if loaded.changed?
             loaded.update!(parsed) unless is_dry_run
-            updated_districts += 1
+
+            loaded.changed.sort == new_attributes.sort ?
+              unchanged_districts += 1 :
+              updated_districts += 1
           else
             unchanged_districts += 1
           end
@@ -132,9 +165,9 @@ class SchoolDistrict < ApplicationRecord
     summary_message = "School District seeding: done processing #{filename}.\n"\
       "#{new_districts.length} new districts added.\n"\
       "#{updated_districts} districts updated.\n"\
-      "#{unchanged_districts} districts in import with no updates.\n"
+      "#{unchanged_districts} districts unchanged (district considered changed if only update was adding new columns included in this import).\n"
 
-    unless new_districts.empty?
+    if !new_districts.empty? && is_dry_run
       summary_message <<
         "Districts added:\n"\
         "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
