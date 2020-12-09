@@ -16,7 +16,11 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
-import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {
+  getSerializedActivities,
+  mapActivityDataForEditor,
+  initActivities
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
@@ -60,7 +64,10 @@ class LessonEditor extends Component {
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
-    courseVersionId: PropTypes.number
+    courseVersionId: PropTypes.number,
+
+    // from redux
+    initActivities: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -116,7 +123,10 @@ class LessonEditor extends Component {
         if (shouldCloseAfterSave) {
           navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
         } else {
-          this.setState({lastSaved: data.updated_at, isSaving: false});
+          const activities = mapActivityDataForEditor(data.activities);
+
+          this.props.initActivities(activities);
+          this.setState({lastSaved: data.updatedAt, isSaving: false});
         }
       })
       .fail(error => {
@@ -345,7 +355,12 @@ class LessonEditor extends Component {
 
 export const UnconnectedLessonEditor = LessonEditor;
 
-export default connect(state => ({
-  activities: state.activities,
-  resources: state.resources
-}))(LessonEditor);
+export default connect(
+  state => ({
+    activities: state.activities,
+    resources: state.resources
+  }),
+  {
+    initActivities
+  }
+)(LessonEditor);
