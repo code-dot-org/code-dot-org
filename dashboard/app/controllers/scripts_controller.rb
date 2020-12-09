@@ -100,6 +100,7 @@ class ScriptsController < ApplicationController
   end
 
   def edit
+    raise "The new script editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
       script: @script ? @script.summarize_for_script_edit : {},
