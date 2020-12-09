@@ -168,7 +168,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Get the recaptcha site key for frontend and whether current user requires captcha verification
   def verify_recaptcha
     return head :forbidden unless current_user
-    site_key = Recaptcha.configuration.site_key
+    site_key = CDO.recaptcha_site_key
     should_display_captcha = current_user.display_captcha?
     render json: {shouldDisplayCaptcha: should_display_captcha, key: site_key}
   end
