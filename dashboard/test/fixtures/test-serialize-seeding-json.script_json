@@ -5,10 +5,12 @@
     "hidden": false,
     "login_required": false,
     "properties": {
-      "curriculum_path": "my_curriculum_path"
+      "curriculum_path": "my_curriculum_path",
+      "is_course": true,
+      "version_year": "test-serialize-seeding-json-version"
     },
     "new_name": null,
-    "family_name": null,
+    "family_name": "test-serialize-seeding-json-family",
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }
