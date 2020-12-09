@@ -1301,7 +1301,8 @@ class Script < ApplicationRecord
       background: background,
       is_migrated: is_migrated?,
       updatedAt: updated_at,
-      scriptPath: script_path(self)
+      scriptPath: script_path(self),
+      showCalendar: show_calendar
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1489,6 +1490,7 @@ class Script < ApplicationRecord
       :project_sharing,
       :tts,
       :is_course,
+      :show_calendar,
       :is_migrated
     ]
     not_defaulted_keys = [

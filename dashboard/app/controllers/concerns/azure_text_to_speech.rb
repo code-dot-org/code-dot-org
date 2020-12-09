@@ -18,13 +18,38 @@ module AzureTextToSpeech
       token_http_request.use_ssl = true
       token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
       # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
-      token_http_request.read_timeout = timeout
+      token_http_request.read_timeout = default_timeout
       token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
 
       token_http_request.request(token_request)&.body
     end
   rescue => e
     Honeybadger.notify(e, error_message: 'Request for authentication token from Azure Speech Service failed')
+    nil
+  end
+
+  def self.get_speech(text, gender, locale)
+    return nil unless allowed?
+    token = get_token
+    return nil if token.nil_or_empty?
+
+    uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/v1")
+    http_request = Net::HTTP.new(uri.host, uri.port)
+    http_request.use_ssl = true
+    http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    http_request.read_timeout = speech_timeout
+    headers = {
+      'Authorization': 'Bearer ' + token,
+      'Content-Type': 'application/ssml+xml',
+      'X-Microsoft-OutputFormat': 'audio-16khz-32kbitrate-mono-mp3'
+    }
+    request = Net::HTTP::Post.new(uri.request_uri, headers)
+    request.body = ssml(text, gender, locale)
+    return nil if request.body.nil_or_empty?
+
+    http_request.request(request)&.body
+  rescue => e
+    Honeybadger.notify(e, error_message: 'Request for speech from Azure Speech Service failed')
     nil
   end
 
@@ -39,7 +64,7 @@ module AzureTextToSpeech
       voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
       voice_http_request.use_ssl = true
       voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      voice_http_request.read_timeout = timeout
+      voice_http_request.read_timeout = default_timeout
       voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
 
       response = voice_http_request.request(voice_request)&.body
@@ -76,7 +101,23 @@ module AzureTextToSpeech
     CDO.azure_speech_service_region
   end
 
-  def self.timeout
-    DCDO.get('azure_speech_service_timeout', 5)
+  def self.default_timeout
+    DCDO.get('azure_speech_service_default_timeout', 5)
+  end
+
+  def self.speech_timeout
+    DCDO.get('azure_speech_service_tts_timeout', 10)
+  end
+
+  def self.get_voice_by(locale, gender)
+    voice = get_voices&.values&.find {|v| v["languageCode"] == locale}
+    return nil unless voice.present?
+    voice[gender]
+  end
+
+  def self.ssml(text, gender, locale)
+    voice_name = get_voice_by(locale, gender)
+    return nil unless voice_name.present?
+    "<speak version='1.0' xmlns='https://www.w3.org/2001/10/synthesis' xml:lang='en-US'><voice name='#{voice_name}'>#{text}</voice></speak>"
   end
 end

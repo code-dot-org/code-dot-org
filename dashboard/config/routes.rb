@@ -740,6 +740,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
+  post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
+
   get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
   get 'foorm/preview', to: 'foorm_preview#index'
 

@@ -95,6 +95,7 @@ class ScriptEditor extends React.Component {
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool,
+    initialShowCalendar: PropTypes.bool,
     initialIsMigrated: PropTypes.bool,
 
     // from redux
@@ -118,6 +119,7 @@ class ScriptEditor extends React.Component {
       lastSaved: null,
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
+      showCalendar: this.props.initialShowCalendar,
       description: this.props.i18nData.description,
       announcements: this.props.initialAnnouncements,
       hidden: this.props.initialHidden,
@@ -218,6 +220,7 @@ class ScriptEditor extends React.Component {
       name: this.props.name,
       family_name: this.state.familyName,
       is_course: this.state.isCourse,
+      show_calendar: this.state.showCalendar,
       description: this.state.description,
       announcements: JSON.stringify(this.state.announcements),
       visible_to_teachers: !this.state.hidden,
@@ -403,6 +406,25 @@ class ScriptEditor extends React.Component {
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this script.</p>
+            </HelpTip>
+          </label>
+          <label>
+            Show Calendar
+            <input
+              type="checkbox"
+              checked={this.state.showCalendar}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({showCalendar: !this.state.showCalendar})
+              }
+            />
+            <HelpTip>
+              <p>
+                Check to enable the calendar view on the Unit Overview Page. The
+                calendar displays each lesson and generally how long it will
+                take as well how many weeks the unit is expected to take in
+                general. (Actual calendar UI coming soon!)
+              </p>
             </HelpTip>
           </label>
           <label>
