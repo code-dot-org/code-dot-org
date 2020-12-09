@@ -1157,7 +1157,7 @@ en:
       error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
-      confirm_login: 'Select "Confirm" to login in with your Google account.'
+      confirm_login: 'Select "Confirm" to log in with your Google account.'
   parent_email_banner:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
