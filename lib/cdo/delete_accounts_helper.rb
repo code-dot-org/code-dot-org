@@ -47,15 +47,15 @@ class DeleteAccountsHelper
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
     # Clear S3 contents for user's channels
+    @log.puts "Deleting S3 contents for #{channel_count} channels"
     buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
     buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
       bucket.hard_delete_channel_content encrypted_channel_id
     end
 
     # Clear Firebase contents for user's channels
-    encrypted_channel_ids.each do |encrypted_channel_id|
-      FirebaseHelper.delete_channel encrypted_channel_id
-    end
+    @log.puts "Deleting Firebase contents for #{channel_count} channels"
+    FirebaseHelper.delete_channels encrypted_channel_ids
 
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
@@ -77,10 +77,6 @@ class DeleteAccountsHelper
       updated_rows = OverflowActivity.where(user_id: user_id).update_all(level_source_id: nil)
       @log.puts "Cleaned #{updated_rows} OverflowActivity" if updated_rows > 0
     end
-
-    @log.puts "Cleaning GalleryActivity"
-    updated_rows = GalleryActivity.where(user_id: user_id).update_all(level_source_id: nil)
-    @log.puts "Cleaned #{updated_rows} GalleryActivity" if updated_rows > 0
 
     @log.puts "Cleaning AssessmentActivity"
     updated_rows = AssessmentActivity.where(user_id: user_id).update_all(level_source_id: nil)
@@ -111,6 +107,7 @@ class DeleteAccountsHelper
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
+    Pd::RegionalPartnerMiniContact.where(user_id: user_id).update_all(form_data: '{}')
 
     # SQL query to anonymize Pd::TeacherApplication (2017-18 application) because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
@@ -167,6 +164,10 @@ class DeleteAccountsHelper
   end
 
   def remove_poste_data(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_poste_data' because there is a live account with this email"
+      return
+    end
     contact_ids = @pegasus_db[:contacts].where(email: email).map(:id)
     delivery_ids = @pegasus_db[:poste_deliveries].where(contact_id: contact_ids).map(:id)
     @pegasus_db[:poste_opens].where(delivery_id: delivery_ids).delete
@@ -204,6 +205,17 @@ class DeleteAccountsHelper
     remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(email: email)
   end
 
+  # Marks emails for deletion from Pardot via contact rollups process.
+  # Will eventually replace current steps in account deletion process
+  # that directly delete prospects via Pardot API.
+  def set_pardot_deletion_via_contact_rollups(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'set_pardot_deletion_via_contact_rollups' because there is a live account with this email"
+      return
+    end
+    ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
+  end
+
   # Removes the StudioPerson record associated with the user IF it is not
   # associated with any other users.
   # @param [User] user The user whose studio person we will delete if it's not shared
@@ -218,11 +230,18 @@ class DeleteAccountsHelper
   # Removes CensusSubmission records associated with this email address.
   # @param [String] email An email address
   def remove_census_submissions(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_census_submissions' because there is a live account with this email"
+      return
+    end
     @log.puts "Removing CensusSubmission"
     census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
     csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
+    ciis = Census::CensusInaccuracyInvestigation.where(census_submission_id: census_submissions.pluck(:id))
+    deleted_cii_count = ciis.delete_all
     deleted_csfm_count = csfms.delete_all
     deleted_submissions_count = census_submissions.delete_all
+    @log.puts "Removed #{deleted_cii_count} CensusInaccuracyInvestigation" if deleted_cii_count > 0
     @log.puts "Removed #{deleted_csfm_count} CensusSubmissionFormMap" if deleted_csfm_count > 0
     @log.puts "Removed #{deleted_submissions_count} CensusSubmission" if deleted_submissions_count > 0
   end
@@ -230,6 +249,10 @@ class DeleteAccountsHelper
   # Removes EmailPreference records associated with this email address.
   # @param [String] email An email address
   def remove_email_preferences(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_email_preferences' because there is a live account with this email"
+      return
+    end
     @log.puts "Removing EmailPreference"
     record_count = EmailPreference.where(email: email).delete_all
     @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
@@ -312,7 +335,8 @@ class DeleteAccountsHelper
 
     # Cache user email here before destroying user; migrated users have their
     # emails stored in primary_contact_info, which will be destroyed.
-    user_email = user.email
+    # If the user account was already soft-deleted, then fallback to the :email attribute.
+    user_email = (user.email&.blank?) ? user.read_attribute(:email) : user.email
 
     user.destroy
 
@@ -328,6 +352,7 @@ class DeleteAccountsHelper
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
     remove_from_pardot_by_user_id(user.id)
+    set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
     purge_unshared_studio_person(user)
     anonymize_user(user)
 
@@ -353,6 +378,7 @@ class DeleteAccountsHelper
 
     remove_poste_data(email)
     remove_from_pardot_by_email(email)
+    set_pardot_deletion_via_contact_rollups(email)
     clean_pegasus_forms_for_email(email)
   end
 

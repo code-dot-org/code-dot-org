@@ -22,7 +22,7 @@ Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malal
 
 {{ promote_new_posters }}
 
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* Czy szukasz naszych plakatów z ubiegłych lat? [Znajdziesz je tutaj]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
@@ -38,19 +38,29 @@ Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malal
 
 ## Użyj logo Godziny Kodowania, aby ją promować
 
-[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![obraz]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Pobierz logo w wysokiej rozdzielczości](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Godzina Kodowania" jest znakiem towarowym. Nie chcemy ograniczać używania tej nazwy, ale chcemy mieć pewność, że spełnionych jest kilka warunków:**
+**"Hour of Code" ["Godzina Kodowania"] I "Hora del Código" są znakami towarowymi. Nie chcemy zabraniać używania tych nazw, ale chcemy mieć pewność, że odbywa się to zgodnie z kilkoma ograniczeniami:**
 
-1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do Godziny Kodowania jako inicjatywy społecznej. **Przykład dobrego użycia**: "Weź udział w Godzinie Kodowania™ na ACMECorp.com." **Przykład złego użycia**: "Wypróbuj Godzinę Kodowania od ACME Corp."
-2. Używaj znaku "TM" jako indeksu górnego po frazie "Godzina Kodowania" w najbardziej znaczących miejscach, zarówno na Twojej stronie internetowej, jak i w opisach aplikacji.
-3. Na swojej stronie internetowej (np. w stopce) umieść informację a w niej linki do stron CSEdWeek i [Code.org]({{ codeorg_link }}), która brzmi, jak poniżej:
+1. Wszelkie odniesienia do "Hour of Code" [ "Godziny Kodowania"] lub "Hora del Código" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do "Godziny kodowania" jako inicjatywy społecznej.
+
+<ul style="margin-top: 0px">
+  <li>
+    Dobry przykład użycia: "Weź udział w "Godzinie kodowania™" na TWOJA-FIRMA.com."
+  </li>
+  <li>
+    <strong>Przykład niewłaściwego użycia</strong>: "Wypróbuj "Godzinę kodowania" TWOJEJ-FIRMY."
+  </li>
+</ul>
+
+1. Stosuj górny indeks "TM" w najbardziej widocznych miejscach, gdzie używasz zwrotu "Godzina kodowania" i górny indeks "Ⓡ" w najbardziej widocznych miejscach, gdzie używasz zwrotu "Hora del Código", zarówno na swojej stronie jak i w opisach aplikacji.
+2. Na swojej stronie internetowej (np. w stopce) umieść informację a w niej linki do stron CSEdWeek i [Code.org]({{ codeorg_link }}), która brzmi, jak poniżej:
     
-    *"Godzina Kodowania™" jest krajową inicjatywą Computer Science Education Week [csedweek.org] i Code.org [code.org], której celem jest udział milionów uczniów w godzinie informatyki i programowaniu komputerów."*
+    *“The 'Hour of Code™'/'Hora del Código®' ["Godzina Kodowania™" jest krajową inicjatywą Computer Science Education Week [csedweek.org] i Code.org [code.org], której celem jest udział milionów uczniów w godzinie informatyki i programowania komputerowego."*
 
-4. Zakaz używania frazy "Godzina Kodowania" w nazwach aplikacji.
+3. Zakaz używania zwrotu "Hour of Code" ["Godzina Kodowania"] lub "Hora del Código" w nazwach aplikacji.
 
 <a id="stickers"></a>
 
@@ -74,7 +84,7 @@ Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malal
 
 **Temat:** Dołącz do nas i do ponad 100 milionów uczniów na Godzinę Kodowania <br />
 
-Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. Ale tylko 35% wszystkich szkół średnich uczy informatyki. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszeliście o Godzinie Kodowania wcześniej, to zapewne wiecie, że zapisała się już w historii. Ponad 100 milionów uczniów wzięło już udział w Godzinie Kodowania.
+Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. But only 47% of all high schools teach computer science. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszeliście o Godzinie Kodowania wcześniej, to zapewne wiecie, że zapisała się już w historii. Ponad 100 milionów uczniów wzięło już udział w Godzinie Kodowania.
 
 Dzięki Godzinie Kodowania, zajęcia z informatyki pojawiły się na stronach Google, MSN, Yahoo! i Disney. Ponad 100 partnerów wspólnie wsparło tę inicjatywę. Każdy sklep Apple na świecie gościł już Godzinę Kodowania i przywódcy, jak Obama i kanadyjski premier Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
 
@@ -100,7 +110,7 @@ Pomiędzy {{ campaign_date/short }}, dziesięć procent uczniów z całego świa
 
 Uczniowie utworzą swoje własne aplikacje lub gry, które mogą zaprezentować swoim rodzicom. Wydrukujemy także certyfikaty Godziny Kodowania, które będą mogli zabrać do domu. I to jest fajne! Wraz z interaktywnymi i praktycznymi zajęciami, uczniowie w przystępny sposób nabędą umiejętności komputacyjnego myślenia.
 
-Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. Ale tylko 35% wszystkich szkół średnich uczy informatyki. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszałaś/eś wcześniej o Godzinie Kodowania, wiesz zapewne, że stała się już historią - ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nawet przywódcy, tacy jak prezydent Obama i premier Kanady Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
+Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. But only 47% of all high schools teach computer science. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszałaś/eś wcześniej o Godzinie Kodowania, wiesz zapewne, że stała się już historią - ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nawet przywódcy, tacy jak prezydent Obama i premier Kanady Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
 
 Możesz przeczytać więcej o tej inicjatywie na http://hourofcode.com. Lub daj nam znać, jeśli chcesz zarezerwować czas na rozmowę o tym, w jaki sposób [nazwa szkoły] może wziąć udział. <br />
 
@@ -116,7 +126,7 @@ Drodzy Rodzice,
 
 Żyjemy w świecie pełnym technologii. I wiemy, że niezależnie od tego, który zawód wybiorą nasi uczniowie, ich szansa na sukces będzie coraz bardziej zależeć od rozumienia, jak działają technologie.
 
-Ale tylko mała część z nas uczy się **jak** działają technologie. Tylko 45% szkół średnich uczy informatyki.
+But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
 
 Dlatego cała nasza szkoła dołącza do największego wydarzenia edukacyjnego w historii: Godziny Kodowania, w czasie Tygodnia Edukacji Informatycznej ({{ campaign_date/full }}). Ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nasza Godzina Kodowania potwierdza, że [NAZWA SZKOŁY] jest gotowa, by uczyć fundamentalnych umiejętności XXI-wieku. Aby móc kontynuować zajęcia z programowania dla waszych uczniów chcemy, aby wydarzenie naszej Godziny Kodowania było jeszcze większe. Zachęcam was do wolontariatu, kontaktu z lokalnymi mediami, dzielenia się nowinkami w mediach społecznościowych oraz do rozważenia organizacji dodatkowych Godzin Kodowania w waszej społeczności.
 
@@ -134,7 +144,7 @@ Odwiedź http://hourofcode.com/{{ country }} po szczegółowe informacje i pomag
 
 **Temat:** Lokalna szkoła włącza się w misję wprowadzania uczniów do informatyki
 
-Komputery są wszędzie, zmieniają każdą branżę na Ziemi, ale tylko 45% wszystkich szkół średnich uczy informatyki. Dziewczęta i mniejszości społeczne są zdecydowanie niedostatecznie reprezentowane na studiach informatycznych i w branży zaawansowanych technologii. Dobrą wiadomością jest, że zamierzamy to zmienić.
+Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Młode kobiety i uczniowie wywodzący się z grup marginalizowanych ze względów rasowych i etnicznych są zdecydowanie niedostatecznie reprezentowani na zajęciach z informatyki oraz w branży zaawansowanych technologii. Dobrą wiadomością jest, że zamierzamy to zmienić.
 
 Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
 

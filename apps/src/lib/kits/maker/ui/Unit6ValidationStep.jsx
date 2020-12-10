@@ -125,6 +125,7 @@ export default class Unit6ValidationStep extends Component {
               {/* Remove button after choice is made */}
               {stepStatus === Status.UNKNOWN && (
                 <Button
+                  __useDeprecatedTag
                   style={styles.submit}
                   color={Button.ButtonColor.orange}
                   text={

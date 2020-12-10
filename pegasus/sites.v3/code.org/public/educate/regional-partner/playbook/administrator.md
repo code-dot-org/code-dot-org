@@ -12,10 +12,9 @@ noindex: true
 - [Implementation Plan](#plan)
 - [Securing a Venue](#venue)
 - [Supplies](#supplies)
-- [Catering](#catering)
 
 ________________
-<a id="plan"></a>
+<a id="process"></a>
 <br/>
 
 ## Process Document
@@ -97,15 +96,6 @@ Computer Science is Changing Everything - [Video](https://www.youtube.com/watch?
 What is Computer Science - [Video](https://www.youtube.com/watch?v=-xFJM3QQ3TE)
 
 Resources on CS Discoveries & CS Principles - [Doc](https://docs.google.com/document/d/1n6ftQ2jCCqZHFik59wgSsTDGONRObtSTHl3GJE1G2Yo/edit)
-
-________________
-<a id="catering"></a>
-<br/>
-## Catering
-
-For this workshop we recommend providing a light breakfast such as a pastry selection with juice/coffee service, or a snack/appetizer and soft drinks depending on the time of day.
-
-
 
 
 [**Back to the top**](#top)

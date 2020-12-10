@@ -4,7 +4,7 @@
     <arg name="this sprite" type="Sprite"/>
     <description>move a sprite across the screen, reversing direction if it touches the edges</description>
   </mutation>
-  <title name="NAME">patrolling</title>
+  <title name="NAME" id="patrolling">patrolling</title>
   <statement name="STACK">
     <block type="gamelab_moveForward">
       <value name="SPRITE">

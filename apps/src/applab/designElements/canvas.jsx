@@ -73,19 +73,13 @@ class CanvasEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "click", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
-      '  setActiveCanvas("' +
-      id +
-      '");\n' +
-      '  circle(event.offsetX, event.offsetY, 10);\n' +
-      '});\n';
-    return code;
+    const commands = [
+      `console.log("${id} clicked at x: " + event.offsetX + " y: " + event.offsetY);`,
+      `setActiveCanvas("${id}");`,
+      `circle(event.offsetX, event.offsetY, 10);`
+    ];
+    const callback = `function(event) {\n\t${commands.join('\n\t')}\n}`;
+    return `onEvent("${id}", "click", ${callback});`;
   }
 
   insertClick = () => this.props.onInsertEvent(this.getClickEventCode());

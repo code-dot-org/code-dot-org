@@ -12,14 +12,17 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {h3Style} from '../../lib/ui/Headings';
 import {
-  ViewType,
-  loadScript,
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  scriptDataPropType,
   setCurrentView
 } from './sectionProgressRedux';
+import {loadScript} from './sectionProgressLoader';
+import {
+  ViewType,
+  scriptDataPropType,
+  tooltipIdForStudent
+} from './sectionProgressConstants';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
@@ -28,8 +31,8 @@ import {
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import firehoseClient from '../../lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
+import moment from 'moment';
 
 const styles = {
   heading: {
@@ -56,6 +59,10 @@ const styles = {
   },
   hide: {
     display: 'none'
+  },
+  studentTooltip: {
+    display: 'flex',
+    textAlign: 'center'
   }
 };
 
@@ -74,30 +81,21 @@ class SectionProgress extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
-    loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    showStandardsIntroDialog: PropTypes.bool
+    showStandardsIntroDialog: PropTypes.bool,
+    studentTimestamps: PropTypes.object,
+    localeCode: PropTypes.string
   };
 
   componentDidMount() {
-    this.props.loadScript(this.props.scriptId);
-  }
-
-  componentDidUpdate() {
-    // Check if we are on a non-CSF script and
-    // currentView is Standards. If so re-set currentView to Summary since
-    // Standards doesn't apply.
-    const isCSF = this.props.scriptData && this.props.scriptData.csf;
-    if (this.props.currentView === ViewType.STANDARDS && !isCSF) {
-      this.props.setCurrentView(ViewType.SUMMARY);
-    }
+    loadScript(this.props.scriptId, this.props.section.id);
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    this.props.loadScript(scriptId);
+    loadScript(scriptId, this.props.section.id);
 
     firehoseClient.putRecord(
       {
@@ -132,8 +130,10 @@ class SectionProgress extends Component {
     );
   };
 
+  // ReactTooltip must be rendered outside of the grid, otherwise the css
+  // position property of the grid elements will mess up the tooltip position.
   renderTooltips() {
-    return this.props.scriptData.stages.map(stage => (
+    const lessonTooltips = this.props.scriptData.stages.map(stage => (
       <ReactTooltip
         id={tooltipIdForLessonNumber(stage.position)}
         key={tooltipIdForLessonNumber(stage.position)}
@@ -147,7 +147,35 @@ class SectionProgress extends Component {
         {stage.name}
       </ReactTooltip>
     ));
+
+    const studentTimestamps = this.props.studentTimestamps || {};
+    const studentTooltips = Object.keys(studentTimestamps).map(studentId => (
+      <ReactTooltip
+        id={tooltipIdForStudent(studentId)}
+        key={tooltipIdForStudent(studentId)}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        <span style={styles.studentTooltip}>
+          {i18n.lastProgress()}
+          <br />
+          {this.tooltipTextForStudent(studentId)}
+        </span>
+      </ReactTooltip>
+    ));
+
+    return lessonTooltips.concat(studentTooltips);
   }
+
+  tooltipTextForStudent = studentId => {
+    const {localeCode} = this.props;
+    if (localeCode) {
+      moment.locale(localeCode);
+    }
+    const timestamp = this.props.studentTimestamps[studentId];
+    return timestamp ? moment(timestamp).calendar() : i18n.none();
+  };
 
   navigateToScript = () => {
     firehoseClient.putRecord(
@@ -173,10 +201,10 @@ class SectionProgress extends Component {
       isLoadingProgress,
       showStandardsIntroDialog
     } = this.props;
-
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
-    const csfCourseSelected = levelDataInitialized && scriptData.csf;
+    const scriptWithStandardsSelected =
+      levelDataInitialized && scriptData.hasStandards;
     const summaryStyle =
       currentView === ViewType.SUMMARY ? styles.show : styles.hide;
     const detailStyle =
@@ -199,7 +227,9 @@ class SectionProgress extends Component {
           {levelDataInitialized && (
             <div style={styles.toggle}>
               <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
-              <SectionProgressToggle showStandardsToggle={csfCourseSelected} />
+              <SectionProgressToggle
+                showStandardsToggle={scriptWithStandardsSelected}
+              />
             </div>
           )}
           {currentView === ViewType.DETAIL && lessons.length !== 0 && (
@@ -207,7 +237,8 @@ class SectionProgress extends Component {
           )}
         </div>
 
-        <ProgressViewHeader />
+        {levelDataInitialized && <ProgressViewHeader />}
+
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (
             <FontAwesome
@@ -227,7 +258,7 @@ class SectionProgress extends Component {
             </div>
           )}
           {levelDataInitialized && this.renderTooltips()}
-          {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
+          {levelDataInitialized && (
             <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView
                 showStandardsIntroDialog={
@@ -253,12 +284,14 @@ export default connect(
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
+    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo,
+    studentTimestamps:
+      state.sectionProgress.studentTimestampsByScript[
+        state.scriptSelection.scriptId
+      ],
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
-    loadScript(scriptId) {
-      dispatch(loadScript(scriptId));
-    },
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
     },

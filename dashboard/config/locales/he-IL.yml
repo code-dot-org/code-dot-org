@@ -58,6 +58,8 @@ he:
   join_section:
     code:
       placeholder: קוד קבוצה (ABCDEF)
+      instructions_short: הזן את קוד הקבוצה שלך באורך 6 תווים
+      submit: הצטרף
   add_hint_form:
     placeholder: הכניסו בבקשה את הרמז שלכם כאן
     submit: הוסף רמז
@@ -148,11 +150,7 @@ he:
     valid_password: סיסמה תקינה!
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
-    under_13_consent: אני תחת גיל 13, אני מאשר שהורי או האפוטרופוסים החוקיים שלי מאשרים
-      לי להשתמש בשירותי Code.org.
     student_consent: אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org.
-    agree_us_website: אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית.
-    my_data_to_us: יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית.
     additional_information: יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך.
     user_type_button: עדכן סוג חשבון
     user_type_label: סוג חשבון
@@ -236,6 +234,7 @@ he:
       %{name}
   parent_mailer:
     student_associated_subject: פרטי החיבור עבור Code.org
+    parent_email_added_subject: ברוך הבא לCode.org!
   teacher_mailer:
     new_teacher_subject: ברוך הבא לCode.org!
     delete_teacher_subject: 'הודעת Code.org: החשבון שלך נמחק'
@@ -338,6 +337,8 @@ he:
       help_us: עזור לנו
       teach: למד
       about: אודות
+      legal_privacy: הצהרת פרטיות
+      legal_tos: תנאים
     user:
       classroom: דף הבית של המורה
       district_dashboard: לוח ניהול מחוזי
@@ -365,9 +366,11 @@ he:
       frozen: לשבור את הקרח
       gamelab: מעבדת המשחקים
       gamelab_jr: מעבדת המשחקים (בטא)
+      gumball: העולם המופלא של גאמבול
       iceage: עידן הקרח
       infinity: אינסוף
       minecraft_adventurer: הרפתקן מיינקראפט
+      minecraft_aquatic: מיינקראפט ימי
       minecraft_designer: מיינקראפט
       minecraft_hero: גיבור מיינקרפט
       playlab: מעבדת הצעצועים
@@ -467,6 +470,9 @@ he:
     update: עדכן חשבון
     account_successfully_updated: חשבון עודכן בהצלחה.
     update_email: עדכון
+    parent_guardian_email_label: דוא"ל של הורה/אפוטרופוס
+    none: כלום
+    encrypted: מוצפן
   user_level:
     completed: הושלם
     tried: נוסה
@@ -509,6 +515,8 @@ he:
     no_primary_course: נסה קורס קוד סטודיו
     choose_next_course: נסה קורס מסטודיו קוד ע"י בחירת אחד מטה
     print_certificate: הדפס תעודה
+  certificate_sponsor_message: "%{sponsor_name} נתנו את המתנה הנדיבה כדי לתת חסות
+    ללמידה שלך."
   move_students:
     new_section_dne: מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר
       קוד קבוצה אחרת.
@@ -576,6 +584,7 @@ he:
     download: הורד סרטון
     show_notes: הצג הערות
     show_video: הצג סרטון
+    label: סרטון
   compatibility:
     upgrade:
       unsupported_message: הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}',
@@ -698,24 +707,6 @@ he:
         יחיד לכיתתך.
       audience: גילאי 14+
       cta: למד כיצד
-  gallery:
-    students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
-    students_made_these_with_code: תלמידים יצרו את אלה בעזרת קוד!
-    picture_count: בימים<b>%{days}</b> האחרונים, תלמידים ציירו  <b>%{count}</b> תמונות
-      בעזרת כתיבת תוכנות במחשב שלהם. לחץ על כל תמונה כדי לראות את ההתקדמות של כל אחד.
-    activity_count: בימים<b>%{days}</b> האחרונים, תלמידים יצרו <b>%{count}</b> אפליקציות
-      ותמונות בעזרת כתיבת תוכנות מחשב משלהם. לחץ על כל תמונה וצילום מסך כדי לראות
-      את ההתקדמות של כל אחד.
-    want_to_make_your_own: רוצה להכין אחד משלך?
-    how_to_save: בשלב האחרון של מדריכים אלו, לחץ "סיים" ו "שמור" כדי לשמור את העבודה
-      שלך בגלריה.
-    more: עוד &rarr;
-    caption_by_name_age: מאת %{name}, גיל %{age}
-    caption_time_ago: "%{time_ago} לפני"
-    header: גלריה
-    header_playlab: סיפורים ומשחקים
-    header_artist: אמן
-    report_abuse: דווח על התעללות
   landing:
     report_bug: דווח על באג
     support: קבל עזרה
@@ -723,6 +714,8 @@ he:
     help_support: עזרה ותמיכה
     documentation: מסמכים
     tutorials: מדריכים
+  free_response:
+    placeholder: הכנס את התשובה שלך כאן
   multi:
     wrong_title: תשובה לא נכונה
     wrong_body: התשובה שענית אינה נכונה. נא נסה שנית!
@@ -932,54 +925,6 @@ he:
       description: אני מבקש שמדריך יבדוק את הטופס
     instructor_feedback: התייחסות המדריך
     outdated: משוב זה נוסף לגרסה הקודמת שנשלחה
-  flex_category:
-    required: סקירה
-    ramp_up: העלה רמה
-    main_course: קורס ראשי
-    extra_course_content: תוכן נוסף של הקורס
-    csf_e_1: המשך אל קורס ה (רשות)
-    csf_e_2: תכני קורס ה
-    csf_f_1: המשך אל קורס ו (רשות)
-    csf_f_2: תכני קורס ו
-    csf_jigsaw: פאזל
-    csf_loops: חזרות
-    csf_events: אירועים
-    csf_online_safety: בטיחות ברשת
-    csf_binary: בינארי
-    csf_conditionals: תנאים
-    csf_functions: פונקציות
-    csf_variables: משתנים
-    csf_for_loops: בשביל לולאות
-    csf_internet: אינטרנט
-    csf_warmup: חימום
-    csd1_1: 'פרק 1: הדרך לפתרון תהליך'
-    csd1_2: 'פרק 2: מחשבים ופתרון בעיות'
-    csd2_1: 'פרק 1: תוכן אינטרנט ו-HTML'
-    csd2_2: 'פרק 2: עיצוב ו-CSS'
-    csd3_1: 'פרק 1: תמונות ואנימציות'
-    csd3_2: 'פרק 2: יצירת משחקים'
-    csd4_1: 'פרק 1: עיצוב מכוון משתמש'
-    csd4_2: 'פרק 2: תכנון אפליקציה'
-    csd5_1: 'פרק 1: ייצוג מידע'
-    csd5_2: 'פרק 2: פתרון בעיות נתונים'
-    csd6_1: 'פרק 1: תכנות עם חומרה'
-    csd6_2: 'פרק 2: יצור אב טיפוס פיזי'
-    csd_survey: סקר שלאחר הקורס
-    csp1_1: 'פרק 1: ייצוג ושליחת מידע'
-    csp1_2: 'פרק 2: המצאת האינטרנט'
-    csp2_1: 'פרק 1: קידוד וכיווץ מידע מורכב'
-    csp3_1: 'פרק 1: שפות תכנות ואלגוריתמים'
-    cspSurvey: סקר
-    cspAssessment: הערכה לפרק
-    csp_postap_2: 'פרק 2: אפליקציות ומסדי נתונים'
-    csp3_1_2018: 'יחידה 3: מבוא לתכנות'
-    csp_variables: משתנים
-    csp_conditionals: תנאים
-    csp_functions: פונקציות
-    csp_project: פּרוֹיֶקט
-    csp_lists: רשימות
-    csp_loops: חזרות
-    k5_next_steps: השלבים הבאים
   external_links:
     disclaimer: כתב ויתור
     leaving_domain: אתה עוזב כעת את התחום הזה לעבר אתר אשר אינו מנוהל על-ידי Code.org.
@@ -1062,6 +1007,8 @@ he:
       school_name: שם בית הספר
       school_city: יישוב בית הספר
       school_country: ארץ בית הספר
+      colombian_school_city: יישוב בית הספר
+      colombian_school_name: שם בית הספר
       ages: איזה גיל(אים) אתה מלמד השנה?
       subjects: איזה נושא(אים) אתה מלמד השנה?
       resources: באיזה מהמשאבים הבאים ללימוד מדעי המחשב אתה משתמש?
@@ -1123,10 +1070,4 @@ he:
   cookie_banner:
     more_information: הצג את מדיניות הפרטיות של Code.org.
     accept: מסכים
-  gdpr_dialog:
-    heading: האם אתה מאשר להשתמש באתר המבוסס בשטח ארצות הברית?
-    message: יתכן ונתוני השימוש שלך באתר ישלחו, ישמרו או יעובדו בארצות הברית.
-    link_intro: לפרטים נוספים ראה את
-    privacy_policy: מדיניות פרטיות
-    logout: התנתק
-    true: כן
+  copy: העתק

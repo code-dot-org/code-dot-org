@@ -262,7 +262,8 @@ class InstructionsCSF extends React.Component {
         this.instructions
       ).getElementsByTagName('img');
       for (let i = 0, image; (image = images[i]); i++) {
-        image.onload = image.onload || this.scrollInstructionsToBottom;
+        image.onload =
+          image.onload || this.scrollInstructionsToBottom.bind(this);
       }
     }
 

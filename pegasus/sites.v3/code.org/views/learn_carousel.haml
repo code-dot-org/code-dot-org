@@ -14,7 +14,7 @@
   %h2{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
 
   -unless subheading.nil_or_empty?
-    %p=subheading
+    %p!=subheading
 
   .learnpage{:style=>'position:relative'}
 
@@ -39,7 +39,7 @@
                     %h2= tutorial[:name]
                 %h3= tutorial[:orgname]
                 -unless international_layout
-                  %p.slide-longdescription= tutorial[:longdescription]
+                  %p.slide-longdescription!= tutorial[:longdescription]
                   %p.slide-shortdescription= tutorial[:shortdescription]
                   .slide-tags= tags
                   .slide-participants-count<

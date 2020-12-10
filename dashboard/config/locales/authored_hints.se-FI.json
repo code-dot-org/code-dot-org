@@ -1,0 +1,85 @@
+{
+  "se-FI": {
+    "data": {
+      "authored_hints": {
+        "CourseD_Dance_2020_01": {
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Vállje eará lávlaga maid čuojahat.\n-   Sirdde du dánsára ođđa sadjái.\n-   Bija eanet go ovtta dánsára."
+        },
+        "CourseD_Dance_2020_02": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Dánsár ferte ovdanbuktit lihkastaga.\n-   Fertet deaddilit njuollaboalu.\n\n_Dát dássi nohkká maŋŋil 4 távtta._",
+          "challenges": "**Válljenvejolaš hástalusat**\n\nGeavat eanet go ovtta <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-blohka."
+        },
+        "CourseD_Dance_2020_03": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Goappašat dánsára ferteba ovdanbuktit lihkastaga.\n-   Fertet deaddit njuollaboaluid.\n\n_Dát dássi nohkká 6 távtta maŋŋil._",
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Bija dánsára responderet gurut ja olgeš guvlui njuollaboaluiguin."
+        },
+        "CourseD_Dance_2020_05": {
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Rievdat duogábeali juohke háve go dánsárat rievdadit lihkastagaid. "
+        },
+        "CourseD_Dance_2020_06": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Ráhkat njunušdánsára ja duogábeal-dánsáriid musihka njeallji vuosttaš távtta siskkobealde.\n\n_Dát dássi nohkká 7 távtta maŋŋil._",
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Ráhkat máŋga joavkku mas leat duogábeal-dánsárat."
+        },
+        "CourseD_Dance_2020_07": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Rievdat unnimus ovtta dánsára sturrodaga.\n\n_Dát dássi nohkká 6 távtta maŋŋil._",
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Eksperimentere lonuhemiin eará iešvuođaid dego govdodaga dahje jorrama."
+        },
+        "CourseD_Dance_2020_08": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Rievdadit ivnni unnimusat ovtta dánsáris.\n\n_Dát dássi nohkká 6 távtta maŋŋil._",
+          "tint_hint": "Fuomášit go ahte du dánsáris ii šaddan juste dakkár ivdni maid ledjet válljen? Dát lea dan dihte go **ivnnit** seaguhit dan ivnni maid don válljet dánsára ivnniin."
+        },
+        "CourseD_Dance_2020_09": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Deaddel \"Válbmet\" boalu!",
+          "repeat_every_ideas": "**Dárbbašat go ideaid?**\n\n-   Rievdat vaikko galle geardde dánsára sturrodaga nu ahte stuorrugoahtá.\n-   Rievdat vaikko galle geardde dánsára jorrama nu ahte jorragoahtá.\n\n_Don sáhtát maiddái atnit negatiiva nummáriid ráhkadan dihte vuosteeffekta!_",
+          "next_previous": "**Válljenvejolaš hástalusat**\n\n-   Don sáhtát maid geavahit dán ođđa dáhpáhus-blohka go bláđet dánsenlihkastagaid listtu čađa bidjan dihte lihkastagaid  `(Sahtedohko)`, `(Boahtte)`, or `(Ovddit)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1": {
+          "alternate": "Molsašuvvan-blohkka lea kategoriijas \"Dánsárat\"."
+        },
+        "Dance_2019_01": {
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Vállje eará lávlaga maid čuojahat.\n-   Sirdde du dánsára ođđa sadjái.\n-   Bija eanet go ovtta dánsára."
+        },
+        "Dance_2019_02": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Dánsár ferte ovdanbuktit lihkastaga.\n-   Fertet deaddilit njuollaboalu.\n\n_Dát dássi nohkká maŋŋil 4 távtta._",
+          "challenges": "**Válljenvejolaš hástalusat**\n\nGeavat eanet go ovtta <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-blohka."
+        },
+        "Dance_2019_03": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Goappašat dánsára ferteba ovdanbuktit lihkastaga.\n-   Fertet deaddit njuollaboaluid.\n\n_Dát dássi nohkká 6 távtta maŋŋil._",
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Bija dánsára responderet gurut ja olgeš guvlui njuollaboaluiguin."
+        },
+        "Dance_2019_05": {
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Rievdat duogábeali juohke háve go dánsárat rievdadit lihkastagaid. "
+        },
+        "Dance_2019_06": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Ráhkat njunušdánsára ja duogábeal-dánsáriid musihka njeallji vuosttaš távtta siskkobealde.\n\n_Dát dássi nohkká 7 távtta maŋŋil._",
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Ráhkat máŋga joavkku mas leat duogábeal-dánsárat."
+        },
+        "Dance_2019_07": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Rievdat unnimus ovtta dánsára sturrodaga.\n\n_Dát dássi nohkká 6 távtta maŋŋil._",
+          "challenges": "**Válljenvejolaš hástalusat**\n\n-   Eksperimentere lonuhemiin eará iešvuođaid dego govdodaga dahje jorrama."
+        },
+        "Dance_2019_08": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Rievdadit ivnni unnimusat ovtta dánsáris.\n\n_Dát dássi nohkká 6 távtta maŋŋil._",
+          "tint_hint": "Fuomášit go ahte du dánsáris ii šaddan juste dakkár ivdni maid ledjet válljen? Dát lea dan dihte go **ivnnit** seaguhit dan ivnni maid don válljet dánsára ivnniin."
+        },
+        "Dance_2019_09": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Deaddel \"Válbmet\" boalu!",
+          "repeat_every_ideas": "**Dárbbašat go ideaid?**\n\n-   Rievdat vaikko galle geardde dánsára sturrodaga nu ahte stuorrugoahtá.\n-   Rievdat vaikko galle geardde dánsára jorrama nu ahte jorragoahtá.\n\n_Don sáhtát maiddái atnit negatiiva nummáriid ráhkadan dihte vuosteeffekta!_",
+          "next_previous": "**Válljenvejolaš hástalusat**\n\n-   Don sáhtát maid geavahit dán ođđa dáhpáhus-blohka go bláđet dánsenlihkastagaid listtu čađa bidjan dihte lihkastagaid  `(Sahtedohko)`, `(Boahtte)`, or `(Ovddit)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "Dance_Party_05": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Du dánsár ferte čađahit unnimusat 4 iešguđetlágan dánsenlihkastaga ovdal go dát dássi lea válbmanan.\n\n_Dát dássi válbmana go leat leamaš 12 távtta._"
+        },
+        "Dance_Party_11b": {
+          "validation": "**Movt dán dási meaddel beasan?**\n\n-   Geavat blohka `go gurut njuolla deaddiluvvo` oažžut Robota dánset ovtta lihkastaga, go deaddilat gurut njuola.\n\n_Dát dássi válbmana go leat leamaš 7 távtta._"
+        },
+        "Dance_Party_extras_alternate_2019": {
+          "alternate": "Molsašuvvan-blohkka lea kategoriijas \"Dánsárat\"."
+        },
+        "New Minecraft Hero Project": {
+          "MC_HOC_2017_13_Cole_a": "Geahččal Ageantta bidjat hukset moadde šaldi nu ahte juogo Alex dahje Steve sáhttiba vázzit ravddaid birra kárttas."
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ nl:
            maten tussen {MOVE1} en {MOVE2}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -22,26 +22,26 @@ nl:
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           MOVE1:
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
           MOVE2:
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -62,7 +62,7 @@ nl:
         text: "{GROUP} doe {MOVE} {DIR} voor altijd"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -79,20 +79,17 @@ nl:
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
@@ -100,20 +97,17 @@ nl:
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
@@ -128,7 +122,7 @@ nl:
         text: wissel {GROUP} {PROPERTY} met {VAL}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -152,7 +146,7 @@ nl:
         text: "{GROUP} doe {MOVE} {DIR} een keer"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -168,7 +162,7 @@ nl:
           MOVE:
             '"rand"': "(Willekeurig)"
             MOVES.XBend: Buigen
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.XClapSide: Klappen
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
@@ -177,7 +171,7 @@ nl:
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Hoofd + Heupen
             MOVES.XHop: Hop
             MOVES.XHighKick: Schop
@@ -190,16 +184,13 @@ nl:
             MOVES.XArmsUp: Rek
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} doe {MOVE} {DIR} een keer"
         options:
           MOVE:
             '"rand"': "(Willekeurig)"
             MOVES.XBend: Buigen
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.XClapSide: Klappen
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
@@ -208,7 +199,7 @@ nl:
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Hoofd + Heupen
             MOVES.XHop: Hop
             MOVES.XHighKick: Schop
@@ -221,9 +212,6 @@ nl:
             MOVES.XArmsUp: Rek
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'herhaal om om de {N} maten na {START} '
       Dancelab_everySeconds:
@@ -275,13 +263,13 @@ nl:
         options:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -313,7 +301,7 @@ nl:
         text: spring {GROUP} naar {LOCATION}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -341,7 +329,7 @@ nl:
         text: "{GROUP} indelen als een {FORMAT}"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -357,10 +345,15 @@ nl:
           FORMAT:
             '"border"': grens
             '"inner"': binnenkant vierkant
+            '"diamond"': diamant
             '"circle"': cirkel
             '"grid"': raster
+            '"top"': bovenste rij
             '"row"': rij
+            '"bottom"': onderste rij
+            '"left"': linkerkolom
             '"column"': kolom
+            '"right"': rechterkolom
             '"x"': kriskras
             '"plus"': Plus
             '"random"': willekeurig
@@ -499,19 +492,19 @@ nl:
             '"fireworks"': Vuurwerk
             '"swirl"': Hypno
             '"kaleidoscope"': Caleidoscoop
-            '"lasers"': Laser-dansvloer
+            '"lasers"': Laser dansvloer
             '"splatter"': Verfspetters
             '"rainbow"': Regenboog
             '"snowflakes"': Sneeuw
-            '"text"': Titel van het lied
+            '"text"': Namen van liedjes
             '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
             '"spiral"': Spiraal
             '"disco"': Vierkanten
             '"stars"': Sterren
           PALETTE:
-            '"rave"': Zwart-wit
-            '"cool"': Blauw
+            '"rave"': Zwart en wit
+            '"cool"': Cool
             '"electronic"': Elektronisch
             '"iceCream"': Ijsco
             '"default"': Licht
@@ -520,7 +513,9 @@ nl:
             '"vintage"': Vintage
             '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
-        text: stel {PALETTE} {EFFECT} in als achtergrondeffect
+        text: |-
+          "achtergrondeffect
+          {PALETTE} {EFFECT} instellen"
         options:
           EFFECT:
             '"none"': Geen
@@ -535,13 +530,13 @@ nl:
             '"growing_stars"': Groeiende sterren
             '"swirl"': Hypno
             '"kaleidoscope"': Caleidoscoop
-            '"lasers"': Laser-dansvloer
+            '"lasers"': Laser dansvloer
             '"splatter"': Verfspetters
             '"rainbow"': Regenboog
             '"ripples_random"': Willekeurige rimpelingen
             '"ripples"': Rimpelingen
             '"snowflakes"': Sneeuw
-            '"text"': Titel van het lied
+            '"text"': Namen van liedjes
             '"squiggles"': Kronkels
             '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
@@ -550,8 +545,8 @@ nl:
             '"stars"': Sterren
             '"music_wave"': Golven
           PALETTE:
-            '"rave"': Zwart-wit
-            '"cool"': Blauw
+            '"rave"': Zwart en wit
+            '"cool"': Cool
             '"electronic"': Elektronisch
             '"iceCream"': Ijsco
             '"default"': Licht
@@ -572,7 +567,7 @@ nl:
         text: stel {GROUP} danssnelheid op {SPEED}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -602,10 +597,10 @@ nl:
             '"music_notes"': Muzieknoten
             '"pineapples"': Ananassen
             '"pizzas"': Pizza's
-            '"smiling_poop"': Poep
+            '"smiling_poop"': Poop
             '"rain"': Regen
             '"floating_rainbows"': Regenboog
-            '"smile_face"': Smiley
+            '"smile_face"': Smiles
             '"spotlight"': Spotlight
             '"color_lights"': Podiumverlichting
             '"raining_tacos"': Taco‘s
@@ -624,10 +619,10 @@ nl:
             '"paint_drip"': Verfdruppelen
             '"pineapples"': Ananassen
             '"pizzas"': Pizza's
-            '"smiling_poop"': Poep
+            '"smiling_poop"': Poop
             '"rain"': Regen
             '"floating_rainbows"': Regenboog
-            '"smile_face"': Smiley
+            '"smile_face"': Smiles
             '"spotlight"': Spotlight
             '"color_lights"': Podiumverlichting
             '"exploding_stars"': Sterrenvorming
@@ -646,7 +641,7 @@ nl:
         text: stel {GROUP} {PROPERTY} in op {VAL}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -682,7 +677,7 @@ nl:
         text: maak {GROUP} {PROPERTY} willekeurig
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -709,7 +704,7 @@ nl:
         text: stel {THIS} tint op {VAL}
         options:
           THIS:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -726,7 +721,7 @@ nl:
         text: stel {THIS} tint op {VAL}
         options:
           THIS:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -751,7 +746,7 @@ nl:
         text: stel {THIS} zichtbaarheid in op {VISIBILITY}
         options:
           THIS:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -786,7 +781,7 @@ nl:
         text: "{GROUP} begin {PROPERTY} volgen {RANGE}"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -831,7 +826,7 @@ nl:
         text: "{GROUP} stopt met {PROPERTY} volgen {RANGE}"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -964,6 +959,11 @@ nl:
         text: sprite {SPRITE} begint {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': seconden
+            '"frames"': frames
       gamelab_changePropBy:
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
@@ -1008,8 +1008,48 @@ nl:
         options:
           CHOICE:
             '"this"': Dit
+            '"other"': anders
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': seconden
+            '"frames"': frames
       gamelab_hideTitleScreen:
         text: titelscherm verbergen
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} raakt randen aan"
       gamelab_jumpTo:
@@ -1054,6 +1094,14 @@ nl:
             '"z"': z
       gamelab_locationAt:
         text: 'locatie x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} pixels {DIRECTION} van {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': Naar het noorden
+            '"East"': Oost
+            '"South"': Zuid
+            '"West"': West
       gamelab_locationMouse:
         text: muis-locatie
       gamelab_locationOf:
@@ -1082,6 +1130,8 @@ nl:
             '"West"': West
       gamelab_moveToward:
         text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
+      gamelab_objectSpritePointer:
+        text: geklikt {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1106,6 +1156,8 @@ nl:
         text: sprite {SPRITE} stopt {BEHAVIOR}
       gamelab_removeTint:
         text: kleur verwijderen van {THIS}
+      gamelab_repeatForever:
+        text: blijven herhalen
       gamelab_setAnimation:
         text: verandering {THIS} kostuum naar {ANIMATION}
       gamelab_setBackground:
@@ -1126,6 +1178,8 @@ nl:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': onder water
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: Geen
+      gamelab_setBackgroundImageAs:
+        text: set achtergrond naar {IMG}
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} tot {VAL}
         options:
@@ -1159,6 +1213,10 @@ nl:
           CONDITION:
             '"when"': wanneer
             '"while"': terwijl
+      gamelab_subjectSpritePointer:
+        text: geklikt {SPRITE}
+      gamelab_tumbling:
+        text: tuimelen
       gamelab_turn:
         text: draai {SPRITE} {DIRECTION} {N} graden
         options:
@@ -1189,9 +1247,9 @@ nl:
       gamelab_whenUpArrow:
         text: wanneer pijl omhoog ingedrukt
       gamelab_whileDownArrow:
-        text: terwijl pijl omlaag ingedrukt
+        text: zolang pijl omlaag ingedrukt
       gamelab_whileKey:
-        text: terwijl {KEY} ingedrukt
+        text: zolang {KEY} ingedrukt
         options:
           KEY:
             '"up"': omhoog
@@ -1204,13 +1262,13 @@ nl:
             '"s"': s
             '"d"': d
       gamelab_whileLeftArrow:
-        text: terwijl linker pijl ingedrukt
+        text: zolang linker pijl ingedrukt
       gamelab_whileRightArrow:
-        text: terwijl pijl naar rechts ingedrukt wordt
+        text: zolang pijl naar rechts ingedrukt is
       gamelab_whileTouching:
-        text: Terwijl {SPRITE1} raakt {SPRITE2}
+        text: zolang {SPRITE1} raakt {SPRITE2}
       gamelab_whileUpArrow:
-        text: terwijl pijl omhoog ingedrukt
+        text: zolang pijl omhoog ingedrukt
       gamelab_xLocationOf:
         text: x coördinaat van {SPRITE}
       gamelab_yLocationOf:
@@ -1262,13 +1320,13 @@ nl:
         text: wijzig {SELECT} {COSTUME} in {COSTUME2}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupChangePropBy:
         text: verandering {PROPERTY} van {SELECT} {COSTUME} door {VAL}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
           PROPERTY:
             '"scale"': grootte
@@ -1293,7 +1351,7 @@ nl:
         text: "{SELECT} {COSTUME} verwijderen"
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupDisplace:
         text: alle {COSTUME} blok {COSTUME2}
@@ -1315,25 +1373,25 @@ nl:
         text: stop {SELECT} {COSTUME} gedragingen
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} stops {BEHAVIOR}"
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupRemoveTint:
         text: verwijder kleur van {SELECT} {COSTUME}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupSetProp:
         text: set {PROPERTY} van {SELECT} {COSTUME} tot {VAL}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
           PROPERTY:
             '"scale"': grootte
@@ -1345,17 +1403,17 @@ nl:
         text: kleur van {SELECT} {COSTUME} naar {COLOR}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupWhenClickedOn:
         text: wanneer {COSTUME} klikte
       Mikelab_groupWhenXTouchesY:
         text: wanneer{COSTUME} {COSTUME2}
       Mikelab_groupWhileClicked:
-        text: tijdens het klikken op {COSTUME}
+        text: zolang geklikt wordt op {COSTUME}
       Mikelab_groupWhileTouchingAny:
         text: |-
-          terwijl{COSTUME} {COSTUME2}
+          zolang {COSTUME} {COSTUME2} raaky
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} is momenteel {BEHAVIOR}"
@@ -1372,13 +1430,13 @@ nl:
         options:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -1540,6 +1598,14 @@ nl:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE} {DISTANCE} pixels {DIRECTION}"
+        options:
+          DIRECTION:
+            '"North"': Naar het noorden
+            '"East"': Oost
+            '"South"': Zuid
+            '"West"': West
       aalab_prompt:
         text: stel vraag {MESSAGE}
       aalab_scene:
@@ -1551,12 +1617,10 @@ nl:
             '3': '3'
       aalab_setupStory:
         text: setup-verhaal
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': toon
-            '"hide"': verberg
+            '"random"': willekeurig
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
@@ -1651,7 +1715,6 @@ nl:
             '"stoneBricks"': bakstenen
             '"mossyStoneBricks"': mossige blokstenen
             '"crackedStoneBricks"': gebarsten blokstenen
-            '"decorativeStoneBricks"': decoratieve blokstenen
             '"blueCoralBlock"': blauw koraalblok
             '"pinkCoralBlock"': roze koraalblok
             '"magentaCoralBlock"': magenta koraalblok

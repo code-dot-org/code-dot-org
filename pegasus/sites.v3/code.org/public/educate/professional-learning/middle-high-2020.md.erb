@@ -272,11 +272,11 @@ Check out our <a href="https://code.org/educate/professional-learning/values">pr
 
 ## Ready to apply?
 
-<%=
+<%
 link = "/educate/professional-learning/program-information"
 link += "?nominated=true" if params[:nominated]
-"<a class='linktag' id='pl-get-started-link' href='#{link}'><button>Get started!</button></a>"
 %>
+<a class='linktag' id='pl-get-started-link' href='<%= link %>'><button>Get started!</button></a>
 
 <!--
 

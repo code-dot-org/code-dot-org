@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-17T21:25:17.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "video_key": "csp_applab_conditionals_2B",
+    "long_instructions": "### Points to pay attention to:\r\n\r\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\r\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\r\n\r\n",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17218,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": "This video needs to be cut in 3 pieces.  Work requested Nov. 15. 2016.\r\n\r\nOnce new video is in place, remove Student instructions to stop at 1:37"
+}]]></config>
+</StandaloneVideo>

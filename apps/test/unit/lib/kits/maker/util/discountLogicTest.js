@@ -34,11 +34,13 @@ describe('discountLogic.js', () => {
   });
 
   describe('inDiscountRedemptionWindow', () => {
-    // By default, use normal time
-    let clock = sinon.useFakeTimers(new Date());
+    let clock;
 
     afterEach(function() {
-      clock.restore();
+      if (clock) {
+        clock.restore();
+        clock = undefined;
+      }
     });
 
     it('yes if teaching CSD6 during spring 2020', () => {

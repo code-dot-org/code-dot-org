@@ -22,7 +22,7 @@
 #  index_level_concept_difficulties_on_level_id  (level_id)
 #
 
-class LevelConceptDifficulty < ActiveRecord::Base
+class LevelConceptDifficulty < ApplicationRecord
   include ConceptDifficulties
   belongs_to :level
   validates :level, presence: true

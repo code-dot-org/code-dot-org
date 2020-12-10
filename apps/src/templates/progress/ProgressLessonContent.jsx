@@ -5,6 +5,7 @@ import ProgressBubbleSet from './ProgressBubbleSet';
 import {levelType} from './progressTypes';
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 
 const styles = {
   summary: {
@@ -12,6 +13,9 @@ const styles = {
     marginBottom: 30,
     fontSize: 14,
     fontFamily: '"Gotham 4r", sans-serif'
+  },
+  noLevelsWarning: {
+    fontSize: 13
   }
 };
 
@@ -28,7 +32,13 @@ export default class ProgressLessonContent extends React.Component {
     const progressions = progressionsFromLevels(levels);
 
     let bubbles;
-    if (progressions.length === 1 && !progressions[0].name) {
+    if (progressions.length === 0) {
+      bubbles = (
+        <span style={styles.noLevelsWarning}>
+          {i18n.lessonContainsNoLevels()}
+        </span>
+      );
+    } else if (progressions.length === 1 && !progressions[0].name) {
       bubbles = (
         <ProgressBubbleSet
           levels={progressions[0].levels}
@@ -40,7 +50,7 @@ export default class ProgressLessonContent extends React.Component {
       bubbles = progressions.map((progression, index) => (
         <ProgressLevelSet
           key={index}
-          name={progression.name}
+          name={progression.displayName}
           levels={progression.levels}
           disabled={disabled}
           selectedSectionId={selectedSectionId}

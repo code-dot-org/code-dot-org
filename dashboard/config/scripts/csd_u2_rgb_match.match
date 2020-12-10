@@ -2,15 +2,20 @@ name 'CSD U2 RGB match'
 title 'RGB Colors'
 description 'In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you\'ll learn how to use colors that don\'t have names in CSS by mixing different levels of red, green, and blue.'
 question '<p style=\'width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;\'>thistle</p> '
-answer 'rgb(216,191,216) <br />red:216, green:191, blue:216'
+answer 'rgb(216,191,216)   
+red:216, green:191, blue:216'
 question '<p style=\'width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;\'>thistle</p> '
-answer 'rgb(216,191,216) <br />red:216, green:191, blue:216'
+answer 'rgb(216,191,216)   
+red:216, green:191, blue:216'
 question '<p style=\'width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;\'>thistle</p> '
-answer 'rgb(216,191,216) <br />red:216, green:191, blue:216'
+answer 'rgb(216,191,216)   
+red:216, green:191, blue:216'
 question '<p style=\'width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;\'>thistle</p> '
-answer 'rgb(216,191,216) <br />red:216, green:191, blue:216'
+answer 'rgb(216,191,216)   
+red:216, green:191, blue:216'
 question '<p style=\'width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;\'>thistle</p> '
-answer 'rgb(216,191,216) <br />red:216, green:191, blue:216'
+answer 'rgb(216,191,216)   
+red:216, green:191, blue:216'
 
 markdown <<MARKDOWN
 Click "Run" to start the widget on the left, and use the sliders to adjust the levels of red, green, and blue light.

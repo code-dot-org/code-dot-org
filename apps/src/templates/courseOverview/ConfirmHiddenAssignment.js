@@ -50,11 +50,13 @@ export default class ConfirmHiddenAssignment extends Component {
         </div>
         <div style={{textAlign: 'right'}}>
           <Button
+            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={onClose}
             color={Button.ButtonColor.gray}
           />
           <Button
+            __useDeprecatedTag
             id="confirm-assign"
             text={i18n.unhideUnitAndAssign()}
             style={{marginLeft: 5}}

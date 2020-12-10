@@ -7,81 +7,61 @@ social:
   og:image:width: '1200'
   og:image:height: '630'
 ---
-:ruby
-  @header["social"]["twitter:url"] = 'https://' + request.host + '/hourofcode/overview'
-  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
-  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
-  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
-  @header["social"]["og:title"] = hoc_s(:hour_of_code)
-  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
-  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
 
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
 %script{type: "text/javascript", src: "/js/hoc-overview.js"}
 
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+
 %h1= I18n.t(:hoc_overview_title)
 
-= I18n.t(:hoc_overview_subtitle)
+!= I18n.t(:hoc_overview_subtitle_markdown, markdown: :inline)
 
-- if request.language == 'en'
-  %br/
-  %br/
-  = view :professional_learning_apply_banner, use_sign_up_text: true
-  %br/
-  .tile-container-responsive{style: "margin-top: 20px;"}
-    .col-50
-      .tutorial-tile
-        %a{href: "/dance"}
-          %img.tutorial-tile-img{src: "/images/dance_party_2019.gif"}
-        .tutorial-info
-          %span
-            %h3.tutorial-info-h= I18n.t(:hoc_overview_dance_title)
-            .smalltext= I18n.t(:hoc_overview_dance_2019_subtitle)
-          %span
-            %a{href: "/dance"}
-              %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
-            .tutorial-info-guide
-              %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
-                = I18n.t(:hoc_overview_view_teacher_guide)
+%br/
+%br/
+= view :codebytes_skinnybanner
+%br/
 
-    .col-50
-      .tutorial-tile
-        %a{href: "/oceans"}
-          %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/oceans-overview.png"}
-        .tutorial-info
-          %span
-            %h3.tutorial-info-h=hoc_s(:hoc_overview_oceans_tutorial_header)
-            .smalltext=hoc_s(:hoc_overview_oceans_tutorial_desc)
-          %span
-            %a{href: "/oceans"}
-              %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
-            .tutorial-info-guide
-              %a{href: "https://curriculum.code.org/hoc/plugged/9/"}
-                = I18n.t(:hoc_overview_view_teacher_guide)
+%p
+  != I18n.t(:hoc_overview_more_resources, markdown: :inline)
 
-- else
-  .full-resource-block{style: "margin-top: 20px; margin-bottom: 20px;"}
-    %a{href: "/dance"}
-      %img.full-resource-image{src: "/images/dance_party_2019.gif"}
-    .tutorial-info{style: "padding: 30px;"}
-      %span
-        %h2.resource-title= I18n.t(:hoc_overview_dance_title)
-        = I18n.t(:hoc_overview_dance_2019_subtitle)
-      %span
-        %a{href: "/dance"}
-          %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
-        .tutorial-info-guide
-          %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
-            = I18n.t(:hoc_overview_view_teacher_guide)
+.tile-container-responsive{style: "margin-top: 20px;"}
+  .col-50
+    .tutorial-tile
+      %a{href: "/dance"}
+        %img.tutorial-tile-img{src: "/images/dance_party_2019.gif"}
+      .tutorial-info
+        %span
+          %h3.tutorial-info-h= I18n.t(:hoc_overview_dance_title)
+          .smalltext= I18n.t(:hoc_overview_dance_2019_subtitle)
+        %span
+          %a{href: "/dance"}
+            %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+          .tutorial-info-guide
+            %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/8/")}
+              = I18n.t(:hoc_overview_view_teacher_guide)
+
+  .col-50
+    .tutorial-tile
+      %a{href: "/ai"}
+        %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/ai_2020_overview.png"}
+      .tutorial-info
+        %span
+          %h3.tutorial-info-h=hoc_s(:hoc2020_ai_header)
+          .smalltext=hoc_s(:hoc_overview_oceans_tutorial_desc)
+        %span
+          %a{href: "/ai"}
+            %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
 
 .tile-container-responsive
   = view :top_hoc_tutorials
 .clear
 
 .full-resource-block
-  %img.full-resource-image{src: "/images/csforgood-logo.png"}
+  %img.full-resource-image{src: "/images/hoc2020-banner.png"}
   .activities-info
     %span
       %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)

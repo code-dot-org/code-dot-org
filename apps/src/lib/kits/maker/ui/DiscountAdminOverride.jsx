@@ -142,6 +142,7 @@ export default class DiscountAdminOverride extends Component {
               style={styles.teacherInput}
             />
             <Button
+              __useDeprecatedTag
               color={Button.ButtonColor.orange}
               text={this.state.submitting ? i18n.submitting() : i18n.submit()}
               onClick={this.handleSubmitId}
@@ -264,6 +265,7 @@ export default class DiscountAdminOverride extends Component {
                   </label>
                 </div>
                 <Button
+                  __useDeprecatedTag
                   color={Button.ButtonColor.orange}
                   text={
                     this.state.submitting ? i18n.submitting() : i18n.submit()

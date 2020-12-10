@@ -1,0 +1,17 @@
+name 'CSPU5_U3L14 - MC variable reassignment_2018_2019_virtual'
+wrong 'a:3 &nbsp; b:7 &nbsp; c:10'
+wrong 'a:10 &nbsp; b:10 &nbsp; c:10’
+wrong 'a:10 &nbsp; b:10 &nbsp; c:20'
+wrong 'a:10 &nbsp; b:17 &nbsp; c:17'
+right 'a:10 &nbsp; b:17 &nbsp; c:27'
+wrong 'Code does not execute due to error'
+
+markdown <<MARKDOWN
+## Can you figure out the values of a, b, and c?
+
+Using what you know about variables and re-assignment you should be able to trace this code and keep track of the values of a, b, and c as they change.  You should also have a sense of any possible errors that could occur.
+
+Trace the code, and choose the option that correctly shows what will be displayed.
+
+![](https://images.code.org/790139ed1352edeece970949fbdca904-image-1445976661671.png)
+MARKDOWN

@@ -172,15 +172,8 @@ ku:
     valid_password: تێپەڕووشە دروستە!
     invalid_password: تێپەڕووشە پێویستە لانی کەم 6 پیت بێت
     mismatch_password: ئەم دوو تێپەڕووشەی كە داخڵت كردوون یەك نین
-    under_13_consent: ئەگەر من لە 13 ساڵ بچووكترم، ئەوا دووپاتی دەكەمەوە كە مۆڵەتم
-      لە باوانم یان لە بەخێوكەری یاساییم وەرگرتووە تا خزمەتگوزارییەكانی (Code.org)
-      بەكاربهێنم.
     student_consent: دووپاتی دەكەمەوە كە مۆڵەتم لە باوانم یان لە بەخێوكەری یاساییم
       وەرگرتووە تا خزمەتگوزارییەكانی (Code.org) بەكاربهێنم.
-    agree_us_website: من ڕازیم ماڵپەڕێك بەكاربهێنم كە دامەرزراوە لە ویلایەتە یەكگرتووەكانی
-      ئەمریكا.
-    my_data_to_us: زانیاری بەكارهێنانم لەم ماڵپەڕە لەوانەیە بنێررێ، هەڵبگیرێ یان شیبكرێتەوە
-      لە ویلایەتە یەكگرتووەكانی ئەمریكا.
     student_terms_markdown: پۆستە ئەلیكترۆنیەكان بە شێوازێك هەڵناگیرێ كە ڕێگەمان پێبدات
       پەیوەندی بكەین بە قوتابیەكانەوە. قوتابیەكان هەرگیز نامەی پۆستی ئەلیكترۆنی لەلایەن
       (Code.org) پێناگات تەنها لە حاڵەتی گێڕانەوەی تێپەڕووشەی بیرچوو. سەیری [سیاسەتی
@@ -268,6 +261,7 @@ ku:
       %{name}
   parent_mailer:
     student_associated_subject: زانیاری چوونەژوورەوە بۆ (Code.org)
+    parent_email_added_subject: بەخێربێیت بۆ Code.org!
   teacher_mailer:
     new_teacher_subject: بەخێربێیت بۆ Code.org!
     delete_teacher_subject: 'ئاگاداری لە Code.org: هەژمارەكەت سڕاوەتەوە'
@@ -292,12 +286,14 @@ ku:
       username_not_found: ناوی بەكارهێنەر %{username} نەدۆزرایەوە
       username_in_use: "%{username} بۆ كەسێكی تر بەكارهاتووە، تكایە دانەیێكی تر هەڵبژێرە"
   crud:
+    edit: دەستکاری
     submit: بنێرە
     confirm: ئایا تۆ دڵنیایت؟
   nav:
     header:
       course_catalog: پێرستی کۆرس
       educate_hoc: كاژێری كۆدنووسی
+      legal_tos: بڕگەکان
     user:
       classroom: پەڕەی سەرەکی مامۆستا
       settings: هەژمارەکەم
@@ -311,6 +307,7 @@ ku:
     popup:
       close: داخستن
       puzzle_map: قۆناغەکان
+      prizes_link: زانیاری زیاتر
   teacher:
     title:
       one: 'مامۆستاکەت:'
@@ -320,7 +317,10 @@ ku:
       remove: ئایا تۆ دڵنیایت لە لابردنی ئەم مامۆستایە؟
     panel:
       student: قوتابی
+  user:
+    parent_guardian_email_label: پۆستی ئەلیكترۆنی باوان/بەخێوکەر
   home:
+    student_reg_link: قوتابی
     online: سەرهێڵ
     trynow: زیاتر فێرببە
   gender:
@@ -332,6 +332,7 @@ ku:
   footer:
     support: یارمەتی و کۆمەڵگا
     support_url: http://support.code.org
+    tos_short: بڕگەکان
     tos: بڕگەکان
   reference_area:
     title: یارمەتیت پێویستە؟
@@ -365,22 +366,12 @@ ku:
       report_abuse_form:
         abuse_type:
           other: هی تر
-  flex_category:
-    csf_jigsaw: مەتەڵە وێنە
-    csf_loops: گرێکان
-    csf_conditionals: مەرجیەکان
-    csf_functions: فرمانەکان
-    csf_variables: گۆڕاوەکان
-    csp_variables: گۆڕاوەکان
-    csp_conditionals: مەرجیەکان
-    csp_functions: فرمانەکان
-    csp_lists: لیستەکان
-    csp_loops: گرێکان
   pd:
     form_labels:
       email: پۆستی ئەلیكترۆنی
       school_name: ناوی قوتابخانە
       school_country: وڵاتی قوتابخانە
+      colombian_school_name: ناوی قوتابخانە
     form_entries:
       gender:
         male: نێر

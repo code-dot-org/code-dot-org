@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
+import BackToFrontConfetti from './BackToFrontConfetti';
 import i18n from '@cdo/locale';
 import color from '../util/color';
 import PropTypes from 'prop-types';
@@ -37,6 +38,9 @@ const styles = {
   submit: {
     background: color.orange,
     color: color.white
+  },
+  confetti: {
+    top: 100
   }
 };
 
@@ -47,7 +51,8 @@ const blankCertificates = {
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
   aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png'),
-  mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png')
+  mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png'),
+  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png')
 };
 
 class Certificate extends Component {
@@ -67,7 +72,8 @@ class Certificate extends Component {
     children: PropTypes.node
   };
 
-  isMinecraft = () => /mc|minecraft|hero|aquatic|mee/.test(this.props.tutorial);
+  isMinecraft = () =>
+    /mc|minecraft|hero|aquatic|mee|mee_empathy/.test(this.props.tutorial);
   isAIOceans = () => /oceans/.test(this.props.tutorial);
 
   personalizeCertificate(session) {
@@ -145,6 +151,10 @@ class Certificate extends Component {
           />
         )}
         <div id="uitest-certificate" style={certificateStyle}>
+          <BackToFrontConfetti
+            active={this.state.personalized}
+            style={styles.confetti}
+          />
           <a href={certificateLink}>
             <img src={imgSrc} />
           </a>

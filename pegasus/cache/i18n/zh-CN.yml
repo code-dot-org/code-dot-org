@@ -16,13 +16,22 @@ zh-CN:
     white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
+  csedweek_banner_teachers_text: 你是计算机科学课的老师吗？看看其他的计算机科学教育周的资料吧
   n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
+  try_hoc_num_served: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有 %{num} 次参与</h3>"
+  try_hoc_num_served_markdown: |-
+    # 尝试\
+    \
+    ##《编程一小时》\
+    \
+    ###%{num}参与 #Try an
   anybody_can_learn: 任何人都可以学习。
   learn_now: 现在开始学习
   petition_message: 任何学校的任何学生都应有机会学习计算机科学
   petition_sign_message: '如果同意，签名并像其他 #人一样加入邮件列表。'
-  petition_sign_message_support: '如果支持我们，签名并像其他 #人一样加入邮件列表。'
+  petition_sign_message_num: 如果同意，签名并像其他 %{num} 人一样加入邮件列表。
   petition_join_others: '加入另外 # 人'
+  petition_join_others_num: 与 %{num} 人一样加入
   name: 姓名
   email: 电子邮件
   zipcode: 邮政编码或国家
@@ -47,6 +56,7 @@ zh-CN:
   hoc2014_support: 支持它 &#x25BE;
   hoc2014_whatishoc: 什么是编程一小时？
   csedweek_map_header: "#CSEdWeek/ 编程一小时是一个世界性的活动"
+  csedweek_map_header_num: 全世界已有 %{num} 次计算机科学教育周 / 《编程一小时》活动
   csedweek_map_signup: 登记参加活动
   csedweek_map_search_placeholder: 搜索编程一小时的活动
   csedweek_map_search_search: 搜索
@@ -158,9 +168,18 @@ zh-CN:
     以外 </a> '
   get_a_certificate_message_after: 请通过单击以下载或打印证书。现在，请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过
     <a href='/learn/beyond'>《一小时以外编程》</a>查看更多的选择。
+  get_a_certificate_message_after_markdown: 点击以打印或下载认证书。现在继续学校我们[其他课程](http://studio.code.org)，或获得更多在[学多于一小时]选项(/learn/beyond)。
   thanks_for_submitting: 感谢提交！
   if_you_enjoyed: 如果你喜欢这个课程，让你的朋友也试一试！我们想要全世界都来学习。
   personalize_certificate: 个性化你的证书
+  print_batch_certificates: 批量打印证书
+  print_certificates: 打印证书
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
+  print_ice_art_from_frozen: 打印来自冰雪奇缘的冰雪艺术家
+  want_a_blank_certificate_template: 需要空白证书模板来填写学生的名字？
+  landscape_recommended_certificates: 打印证书时，推荐选择 **风景**。
+  print_one_here_certificates: 打印一份。
+  enter_certificate_names: 输入最多 30 个名字，**每行一个**。会生成可打印的个性化 %{script_name} 证书。
   share_achievement: 分享你的成绩
   beyond_hour_message: 请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过 <a href='/learn/beyond'>一小时以外的编程</a>查看更多的选择。
   leaderboards_for_hoc: 编程一小时的排行榜。
@@ -326,6 +345,7 @@ zh-CN:
   homepage_action_text_signpetition: 在请愿书上签名
   homepage_action_text_wincelebritychat: 赢得与名人聊天的机会
   homepage_signpetition_dropdown: 我同意 &#x25BE;
+  homepage_signpetition_dropdown_text: 我同意
   homepage_diversity_pledge: 承诺多样性
   homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
   homepage_banner_link_prizes: '加入史上最大的学习盛会 '
@@ -456,7 +476,7 @@ zh-CN:
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'> 下载 </a>
     帮助各种年龄学生的快速入门指南和演示文稿。"
   minecraft_join_online_training: 准备好了举行自己的《我的世界》编程一小时活动，但不知道如何开始吗？查看我们的<a href='%{minecraft_webinar_url}',
-    target='_blank'>按需提供的网络研讨会</a>。你能学到最佳实践，获得直接能用的引导员材料，以及由《我的世界》团队提供的的新英雄旅行的演练。在计算机科学周（12月4-10）日之前准备好你在编程一小时要提供给年轻人的材料。
+    target='_blank'>按需提供的网络研讨会</a>。你能学到最佳实践，获得直接能用的主持人材料，以及由《我的世界》团队提供的的新英雄旅行的演练。在计算机科学周（12月4-10）日之前准备好你在编程一小时要提供给年轻人的材料。
   minecraft_continue_learning: 大众计算机科学：微软商店上的编程一小时以外课程
   minecraft_continue_learning_description: 不要求计算机科学的经验！确保所有青年都能学习通过计算机科学教育获得的宝贵技能。加入我们在微软商店，参加免费的三个系列之一的学习。这1小时的工作室学习将让您体验在一个有趣的和无压力的环境下编程,
     熟悉的关键计算机科学概念, 并为您在您社区或课堂上领导学习编程一小时打好基础。你能行！<a href='%{minecraft_continue_learning_url}',
@@ -712,7 +732,7 @@ zh-CN:
   dashboard_sections_print_secrets: 然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。
   dashboard_sections_switch_section: 切换学习小组
   dashboard_sections_close: 关闭
-  dashboard_sections_move_students_desc: 选择学生转到新的章节。转移的学生不会清除他们的进展。
+  dashboard_sections_move_students_desc: 选择学生转到新的小组。转移的学生不会清除他们的进展。
   dashboard_sections_one_per_teacher: 对每一位老师来说，学生仅能在一个学习小组中。你的学生想加入一个新的学习小组，他就要离开原来的小组。
   dashboard_sections_move_to_section: 移动到此节︰
   dashboard_sections_enter_code: 输入此节代码︰
@@ -720,7 +740,7 @@ zh-CN:
   dashboard_sections_other_section: 其他老师
   dashboard_sections_both_sections: 你想要学生两个部分都参加吗？
   dashboard_sections_yes_both: 是的，我想要复制学生到本小组和新小组中
-  dashboard_sections_no_move: 不，我想移动学生到新章节中。
+  dashboard_sections_no_move: 不，我想移动学生到新小组中。
   dashboard_sections_move_students: 转移学生
   dashboard_sections_assign_hoc_script_desc: 参与编程一小时？
   dashboard_sections_assign_hoc_script_msg: 请注意，在12月3日至11日期间，由于无法预测的网站访问量，我们不能保存课程进度。但课程中其它部分还可以使用。你也许仍需要给学生分派课程、颁发证书。（大多数教师会事先<a
@@ -972,10 +992,19 @@ zh-CN:
   coursed-2019_name: 课程 D (2019)
   coursee-2019_name: 课程 E (2019)
   coursef-2019_name: 课程 F （2019）
-  express-2018_name: 快速课程
+  coursea-2020_name: 课程 A (2019)
+  courseb-2020_name: 课程 B (2019)
+  coursec-2020_name: 课程 C (2019)
+  coursed-2020_name: 课程 D (2019)
+  coursee-2020_name: 课程 E (2019)
+  coursef-2020_name: 课程 F （2019）
+  express-2018_name: 速学课程 （2018）
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
   pre-express-2019_name: 学前儿童的速学课程（2019）
+  express-2020_name: 速学课程 (2019)
+  csd2_name: 单元 2：网页开发
+  csd3_name: 单元 3：动画和游戏
   accelerated_name: 加速课程
   express_name: 快速课程
   pre-express_name: 学前儿童的速学课程
@@ -1481,11 +1510,15 @@ zh-CN:
   header_teacher_community: 教师社区
   header_help_support: '帮助和支持 '
   header_report_bug: 报告错误
+  header_legal_privacy: 隐私政策
+  header_legal_tos: 使用条款
   header_tutorials: 教程
   app_lab_documentation: 应用程序实验室文档
   app_lab_tutorials: 应用程序实验室说明
   game_lab_documentation: 游戏实验室文档
   game_lab_tutorials: 游戏实验室说明
+  sprite_lab_documentation: 精灵图实验室文档
+  sprite_lab_tutorials: 精灵图实验室教程
   header_documentation: 使用文档
   user_header_label: 你好%{username}
   user_header_team: 团队
@@ -1499,7 +1532,7 @@ zh-CN:
   user_header_gamelab: 游戏实验室
   user_header_playlab: 游戏实验室
   user_header_dance: 舞蹈派对
-  user_header_spritelab: 精灵实验室
+  user_header_spritelab: 精灵图实验室
   user_header_minecraft: 我的世界
   user_header_flappy: Flappy Bird
   user_header_view_all: 查看所有项目……
@@ -1548,14 +1581,16 @@ zh-CN:
   hoc_overview_dance_title: 舞蹈派对
   hoc_overview_dance_subtitle: 写出你自己的舞会代码，分享给你的朋友们。精选 Katy Perry、Madonna、J. Balvin、Sia、Keith
     Urban、Ciara 等 25 个！
-  hoc_overview_dance_2019_subtitle: 编写舞会与您的朋友分享。当中更有 Katy Perry、Shawn Mendes、Panic!
-    At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj，以及 34 名其他明星的豪华阵容！
+  hoc_overview_dance_2019_subtitle: 编写舞蹈派对，并与朋友分享。精选了 Katy Perry、Shawn Mendes、Panic!
+    At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj，以及其他 34 名明星的豪华阵容！
   hoc_overview_title: 来自 Code.org 的编程一小时活动
-  hoc_overview_subtitle: <a href="https://hourofcode.com">编程一小时</a>是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动，或者尝试超过两百个，支持45种语言的编程一小时教程。
+  hoc_overview_subtitle: <a href="https://hourofcode.com">编程一小时</a>是一个全球性的活动，在全球 180
+    多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试有 500 多个、支持45种语言的编程一小时教程。
   hoc_overview_partner_activities_title: 更多合作伙伴的活动
-  hoc_overview_partner_activities_body: "“编程一小时”由 code. org 和合作伙伴联合开发，网站提供 100 多项计算机科学活动，适合所有年龄与经验水平。"
+  hoc_overview_partner_activities_body: 编程一小时由 code. org 和合作伙伴联合开发，网站提供 500 多项计算机科学活动，适合所有年龄与经验水平。
   hoc_overview_partner_activities_link: 查看活动
   hoc_overview_start_tutorial: 开始
+  hoc_overview_more_resources: 有关如何参与远程教室的更多资源，请参见[虚拟 [编程一小时》](https://hourofcode.com/us/how-to/virtual）举办指南。对于那些缺乏技术条件或网络连接的学生，请共享这个[线下《编程一小时》活动]包（https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf）。
   hoc_overview_view_teacher_guide: 查看教师指南
   hoc2018_creativity: 创造力
   hoc2018_creativity_create: 创建
@@ -1574,6 +1609,7 @@ zh-CN:
   hoc2018_mc_aquatic_announcement: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！请尝试2018年全新《我的世界》活动，《我的世界》水上航行！现在就注册班级。
   hoc2018_mc_aquatic_title: "《我的世界》：水上航行"
   hoc2018_mc_aquatic_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
+  hoc2019_mc_aquatic_description: 用代码来游览并构建水下世界。
   hoc2018_mc_hero_title: "《我的世界：英雄之旅》"
   hoc2018_mc_hero_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
   hoc2018_mc_designer_title: "《我的世界》造物主"
@@ -1587,7 +1623,7 @@ zh-CN:
   hoc2018_mc_educators_box1_title: 在《我的世界》编程
   hoc2018_mc_educators_box1_desc: "《我的世界：教育版》在《我的世界》中提供了标准的教案，培训和代码。"
   hoc2018_mc_educators_box1_button: 开始
-  hoc2018_mc_educators_box2_title: 下载引导员指南
+  hoc2018_mc_educators_box2_title: 下载主持人指南
   hoc2018_mc_educators_box2_desc: 工具包可以帮助你主持编程一小时活动，并将学生吸引到计算机科学中来。
   hoc2018_mc_educators_box2_button: 下载
   hoc2018_mc_educators_box3_title: 参加免费的学生工场
@@ -1688,3 +1724,15 @@ zh-CN:
   page_not_found_button: 返回主页
   hoc2018_mc_with_microsoft: '与以下机构合作: '
   hoc2018_mc_thank_microsoft: 我们感谢微软支持我们的理想和使命，以确保每个儿童有机会学习计算机科学和在21世纪取得成功的技能。
+  hoc2019_mc_mee_title: "《我的世界》人工智能让世界更美好"
+  hoc2019_mc_mee_description1: 新的《我的世界》编程一小时教程已经可用，可在《我的世界》教育版（Windows，Mac，和 iPad）上找到。和学生一起学习编程基础，探索人工智能！
+  hoc2019_mc_mee_description2: 访问免费资源，包括：课程计划、视频、计算机科学教案，以及教师培训。
+  hoc2019_mc_more_coding_resources: 更多编程资源
+  hoc2019_dance_previous_versions: |-
+    虚招以前版本的舞蹈派对？
+    电机这里打开去年的[第一部分](%{dance_2018_link})和[第二部分](%{dance_extras_2018_link})。
+  homepage_slot_text_title_at_home: '在家学习
+
+'
+  page_not_available_button: 返回主页
+  footer_powered_by_aws: 由亚马逊网络服务

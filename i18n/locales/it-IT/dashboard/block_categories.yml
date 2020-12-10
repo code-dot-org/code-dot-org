@@ -17,9 +17,10 @@ it:
       Game/Score: Gioco/Punteggio
       Games/Score: Gioco/Punteggio
       Groups: Gruppi
+      Input: Input
       Locations: Posizioni
       Logic: Logica
-      Loops: Ripetizioni
+      Loops: Cicli
       Math: Matematica
       Numbers: Numeri
       Properties: Proprietà

@@ -77,7 +77,7 @@ const DIRECTION_VALUES = [
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
 
-  var generator = blockly.Generator.get('JavaScript');
+  var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
   var gensym = function(name) {

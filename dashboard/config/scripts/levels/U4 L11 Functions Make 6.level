@@ -75,10 +75,10 @@
     "mini_rubric": "false",
     "long_instructions": "# Do This\r\n\r\n**Step 8 - Submit**\r\n* Check the rubric below\r\n* Submit your finished project\r\n\r\n![](https://images.code.org/95ae4cbc62c053aab40860ad1fa807fc-image-1567716641130.png)",
     "project_template_level_name": "U4 L11 Functions Make Template",
-    "map_reference": "/docs/concepts/app-lab/patterns/when-to-make-a-function/",
+    "map_reference": "/docs/concepts/patterns/when-to-make-a-function/",
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/update-screen-pattern/"
+      "/docs/concepts/patterns/update-screen-pattern/"
     ],
     "preload_asset_list": null,
     "encrypted_examples": [

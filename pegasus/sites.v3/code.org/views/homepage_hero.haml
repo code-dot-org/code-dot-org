@@ -30,23 +30,78 @@
       = hoc_s(:hoc2019_header_line2_mobile)
     .hero-sub-message
       = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  - elsif show_single_hero == "hoc2020"
+    .hero-message
+      = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
+    .hero-sub-message
+      = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  - elsif show_single_hero == "hoc2020_ai"
+    .hero-messages-ai
+      .col-10.desktop-feature
+        &nbsp;
+      .left.col-40
+        .hero-super-message
+          - if hoc_mode == "actual-hoc"
+            = hoc_s(:social_hoc2018_hoc_here)
+          - else
+            = hoc_s(:hoc2020_ai_subheader)
+        .hero-message
+          = hoc_s(:hoc2020_ai_header)
+        .hero-description
+          = hoc_s(:hoc2020_ai_description)
+        - actions.each do |entry|
+          - if entry[:type] == "hoc2020_ai_join_us"
+            .action.join_us_ai
+              %a.linktag#hero-hoc{href: entry[:url]}
+                %button.herohocbutton.herohocbutton-solid-white= I18n.t(entry[:text])
+      .right.col-50{style: "text-align: center;"}
+        .hero-bot
+          - if hoc_mode == "actual-hoc"
+            %img{src: "/images/homepage/hoc2020_ai_bot.png"}
+          - else
+            %a{href: "/ai"}
+              %img{src: "/images/homepage/hoc2020_ai_bot.png"}
+  - elsif show_single_hero == "codebytes2020"
+    .hero-message-codebytes
+      Join us during this year's
+      %a{href: resolve_url('hourofcode/overview')} Hour of Code
+      for our live CodeBytes interactive mini-lessons! If your classroom has gone virtual, CodeBytes is a
+      fun and easy way to learn!
   .action_buttons
     - actions.each do |entry|
-      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white"].include? entry[:type]
+      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow"].include? entry[:type]
         .action
           %a.linktag#hero-hoc{href: entry[:url]}
             - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
             - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
+            - extra_class = "herohocbutton-solid-yellow" if entry[:type] == "cta_button_solid-yellow"
             %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
       - elsif entry[:type] == "video"
         .action
           %button.clicktag.herohocbutton#hero-video{onclick: "return showVideo_mainvideo();"}
             %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
             %span#playtext= I18n.t(entry[:text])
+      - elsif entry[:type] == "code_break_learn_more"
+        %div
+          %a{href: "/break"}
+            %img{src: "images/homepage/learn_more_drawn_button.png", style: "width: 250px; "}
+      - elsif entry[:type] == "code_break_check"
+        %div
+          %a{href: "/break"}
+            %img{src: "images/homepage/codebreak_check_button.png", style: "width: 250px; "}
+      - elsif entry[:type] == "code_break_home"
+        %div
+          %a{href: "/athome"}
+            %img{src: "images/homepage/codebreak_home_button.png", style: "width: 250px; margin-top: 10px"}
+      - elsif entry[:type] == "code_break_video"
+        %div
+          %a{onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
+            %img{src: "images/homepage/watch_video_drawn_button.png", style: "width: 250px; margin-top: 10px"}
 
   .clear{style: "clear: both"}
 
-#hero{style: "position: relative; overflow: hidden"}
+- extra_style = show_single_hero == "codebreak2020" ? "margin-bottom: 1px" : ""
+#hero{style: "position: relative", style: extra_style}
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -55,9 +110,12 @@
         Two headers with inverse media queries conditionally load the correctly-sized image.
       - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
       - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
-      .widehero#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});"}
+      -# Temp: for ai2020, heroes will show/hide resposively, so use widehero_do_not_hide
+      .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
     - else
-      .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}"}
+      -# Temp: for ai2020, heroes will show/hide resposively, so use widehero_do_not_hide
+      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
+
 
   #fullwidth
     - if request.site == 'code.org'
@@ -107,6 +165,56 @@
       - else
         .blank{style: "height: 54px"}
           &nbsp;
+
+  - elsif show_single_hero == "codebreak2020"
+    :css
+      @media screen and (max-width: 400px) {
+        #special-guest-stars {
+          padding-top: 60px !important;
+        }
+      }
+
+    .top_center
+      %div{style: "text-align: center;"}
+
+    .lefter.col-10.desktop-feature
+      &nbsp;
+
+    .right.col-50.mobile-center{style: "margin-top: 14px; padding-left: 5px; padding-right: 5px; text-align: center"}
+      %div
+        %img{src: "images/homepage/codebreak_logo_hand.png", style: "width: 400px; max-width: 100%"}
+      %h3{style: "font-weight: 800; color:#191919; font-size: 16px;"}Take a Code Break! Your weekly dose of inspiration, community, and computer science. And check out our other home learning resources!
+
+      %h3{style: "font-weight: 800;color:#191919; width: 100%; font-family: 'Gotham 5r', sans-serif"} Every Wednesday at 10am PST / 1pm EST
+      .desktop-feature
+        #actions{style: "padding-left: 0px"}
+          = main_actions
+      .mobile-feature
+        #actions
+          = main_actions
+      .clear{style: "clear: both"}
+
+    .left.col-40{style: "padding-left: 5px; padding-right: 5px"}
+      %div{style: "text-align: center;"}
+        %div{style: "display: inline-block; border-radius: 10px; padding: 20px; margin-bottom: 40px; background-image: url(/images/fit-500/homepage/codebreak_blank_note.png); background-size: cover; background-position: 50% 0%; transform: rotate(5deg)"}
+          %div
+            %img#special-guest-stars{src: "images/homepage/codebreak_specialguests.png", style: "width: 300px; padding-bottom: 10px; padding-top: 30px; max-width: 100%"}
+          .headshots{style: "text-align: center"}
+            .guest-1{style: "display: inline-block"}
+              %img{src: "/images/fill-200/homepage/codebreak_aloe_blacc.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
+              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px;"} Aloe Blacc
+            &nbsp;
+            &nbsp;
+            .guest-2{style: "display: inline-block"}
+              %img{src: "/images/fill-200/homepage/codebreak_bret_taylor.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
+              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px;"} Bret Taylor
+
+        %div{style: "clear:both;"}
+  - elsif show_single_hero == "codebytes2020"
+    %div
+      %img.codebytes-img{src: "/images/homepage/codebytes2020_foreground.png"}
+    #actions
+      = main_actions
 
   - elsif show_single_hero
     #actions
@@ -231,6 +339,8 @@
     var numWideHeroes = $(".widehero").length;
 
     if (numWideHeroes > 1) {
-      timerId = setInterval(cycleImage, #{hero_display_time});
+      // Temporary for ai2020: don't cycle, even though we have multiple
+      // hero backgrounds, because we're using them responsively.
+      //timerId = setInterval(cycleImage, #{hero_display_time});
     }
   });

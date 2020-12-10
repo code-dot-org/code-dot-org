@@ -1,0 +1,34 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-03-17T21:09:56.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "long_instructions": "# Try it out!\r\n\r\nNow that you've seen some different ways to style, it's time to try it out yourself.  Here's a web page you've seen before, but it needs some style!\r\n\r\n# Do This\r\n\r\n* Give the webpage a background color.\r\n* Make all the images go to the right of the page.\r\n* Make all of the text a different color.\r\n* Add any other styles you want.",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \" \"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>  \\r\\n    <!-- title and page introduction -->\\r\\n    <h1>Cool Animals<\\/h1>\\r\\n    <p>Here's my list of cool animals that you will probably never see.  They are mostly water type animals because those are the coolest.<\\/p>\\r\\n    <!-- list of animals and pictures -->\\r\\n    <ol>\\r\\n\\r\\n       <!-- baiji -->\\r\\n      <li>\\r\\n        <h3>Baiji<\\/h3>\\r\\n        <p>The baiji is a type of dolphin that lives in a river in China.  Maybe it's extinct, maybe not, but right now scientists can't find any.<\\/p>\\r\\n        <img src=\\\"baiji.jpg\\\" alt=\\\"Baiji\\\" >\\r\\n        <p>from Alessio Marrucci on commons.wikimedia.org - CC BY-SA 3.0<\\/p>\\r\\n      <\\/li>\\r\\n\\r\\n      <!-- Steller's Sea Cow -->\\r\\n      <li>\\r\\n        <h3>Steller's Sea Cow<\\/h3>\\r\\n        <p>Its skin is an inch thick, and instead of teeth, it has white bristles.  Imagine eating with your mustache.<\\/p>\\r\\n        <img src=\\\"sea-cow.jpg\\\" alt=\\\"Steller's Sea Cow\\\" >\\r\\n        <p>Emoke Denes on commons.wikimedia.org - CC BY-SA 2.5 <\\/p><\\/li>\\r\\n\\r\\n      <!-- Golden Toad -->\\r\\n      <li>\\r\\n        <h3>Golden Toad<\\/h3>\\r\\n        <p>A toad made of gold.  Enough said.<\\/p>\\r\\n        <img src=\\\"golden-toad.jpg\\\" alt=\\\"Golden Toad\\\" >\\r\\n        <p><\\/p>Charles H. Smith on commons.wikimedia.org - Public Domain\\r\\n      <\\/li>\\r\\n    <\\/ol>\\r\\n\\t<\\/body>\\r\\n<\\/html> \"\r\n    },\r\n    {\r\n      \"name\": \"baiji.jpg\",\r\n      \"url\": \"https://images.code.org/26cc8220bdae9bc17c582ad3800f1438-image-1494017117690.png\"\r\n    },\r\n    {\r\n      \"name\": \"golden-toad.jpg\",\r\n      \"url\": \"https://images.code.org/84c704e101e83f970277fc7e93c7a782-image-1494017117691.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"sea-cow.jpg\",\r\n      \"url\": \"https://images.code.org/eb52163e026982aa80d7f8fbce6eb4e4-image-1494017117688.jpg\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false",
+    "hide_share_and_remix": "true",
+    "encrypted_examples": "f73+f4waDTed2sieY7KQkv1gSsl8QV9NWziDRy5m4aMOCmxnbktN4xCjKDaQ\nC+5YboESB8PFEExu1VMCnn43Jw==\n",
+    "submittable": "false",
+    "parent_level_id": 20049,
+    "name_suffix": "_virtual",
+    "reference_links": [
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/"
+    ],
+    "map_reference": "/docs/concepts/css/layout-properties/",
+    "encrypted": "false",
+    "mini_rubric": "true",
+    "rubric_key_concept": "Create rules that affect entire groups of elements; apply formatting in a web page using CSS.",
+    "rubric_performance_level_1": "The background, images, and text have all been styled as described in the instructions.  There are no syntax errors or extra code (that does not function) in the stylesheet.",
+    "rubric_performance_level_2": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
+    "rubric_performance_level_3": "Rule-sets have been created in the style-sheet to style the background, images, and text, but there are major errors that prevent the code from working properly.",
+    "rubric_performance_level_4": "There are no rule-sets in the stylesheet, or the rule-sets do not have the necessary selectors to style the background or images in the pages."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:35:41 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 23:34:38 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 02:41:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 18:28:56 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 18:32:03 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 18:38:34 +0000\",\"changed\":[\"encrypted_examples\",\"mini_rubric\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 18:41:41 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 18:43:51 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 18:45:21 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-02 19:43:54 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-01 03:09:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-07 18:18:35 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-10-17 22:52:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]"
+}]]></config>
+</Weblab>

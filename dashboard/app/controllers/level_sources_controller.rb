@@ -46,11 +46,6 @@ class LevelSourcesController < ApplicationController
 
   def update
     if @level_source.update(level_source_params)
-      if level_source_params[:hidden]
-        # Delete all gallery activities.
-        GalleryActivity.where(level_source_id: @level_source.id).each(&:destroy)
-      end
-
       redirect_to @level_source, notice: I18n.t('crud.updated', model: LevelSource.model_name.human)
     else
       redirect_to @level_source, notice: "Error: #{level_source.errors.messages}"

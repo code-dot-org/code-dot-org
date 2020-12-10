@@ -2,6 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTeacherFeedback as TeacherFeedback} from '@cdo/apps/templates/instructions/TeacherFeedback';
+import i18n from '@cdo/locale';
+import sinon from 'sinon';
+import moment from 'moment/moment';
 
 const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   user: 5,
@@ -111,6 +114,62 @@ describe('TeacherFeedback', () => {
   });
 
   describe('viewed as Teacher', () => {
+    it('displays correct message with checkmark if student has viewed their feedback', () => {
+      const props = {
+        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
+        latestFeedback: [
+          {feedback_provider_id: 5, student_seen_feedback: new Date()}
+        ]
+      };
+      const seenByStudentSpy = sinon.spy(i18n, 'seenByStudent');
+      const wrapper = shallow(<TeacherFeedback {...props} />);
+      expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
+      expect(wrapper.contains('today')).to.equal(true);
+      expect(seenByStudentSpy).to.have.been.calledOnce;
+      i18n.seenByStudent.restore();
+    });
+
+    it('displays nicely formatted date if student viewed teacher feedback', () => {
+      const today = new Date();
+      const props = {
+        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
+        latestFeedback: [
+          {feedback_provider_id: 5, student_seen_feedback: today}
+        ]
+      };
+      const lastSeenTodaySpy = sinon.spy(i18n, 'today');
+      const wrapper = shallow(<TeacherFeedback {...props} />);
+      expect(lastSeenTodaySpy).to.have.been.calledOnce;
+      const lastSeenYesterdaySpy = sinon.spy(i18n, 'yesterday');
+      let yesterday = new Date(today);
+      yesterday.setDate(yesterday.getDate() - 1);
+      wrapper.setState({latestFeedback: [{student_seen_feedback: yesterday}]});
+      expect(lastSeenYesterdaySpy).to.have.been.calledOnce;
+      let twoDaysAgo = new Date(yesterday);
+      twoDaysAgo.setDate(twoDaysAgo.getDate() - 1);
+      wrapper.setState({
+        latestFeedback: [{student_seen_feedback: twoDaysAgo}]
+      });
+      const formattedDate = moment(twoDaysAgo).format('l');
+      expect(wrapper.contains(formattedDate)).to.be.true;
+      i18n.today.restore();
+      i18n.yesterday.restore();
+    });
+
+    it('displays correct message if student has not viewed their feedback', () => {
+      const props = {
+        ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
+        latestFeedback: [{feedback_provider_id: 5}]
+      };
+      const lastUpdatedCurrentTeacherSpy = sinon.spy(
+        i18n,
+        'lastUpdatedCurrentTeacher'
+      );
+      shallow(<TeacherFeedback {...props} />);
+      expect(lastUpdatedCurrentTeacherSpy).to.have.been.calledOnce;
+      i18n.lastUpdatedCurrentTeacher.restore();
+    });
+
     it('shows the correct components if teacher is giving feedback, on a level with a rubric, with no previous feedback', () => {
       const wrapper = shallow(
         <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
@@ -283,6 +342,17 @@ describe('TeacherFeedback', () => {
   });
 
   describe('viewed as a Student', () => {
+    it('with feedback displays lastUpdated message', () => {
+      const props = {
+        ...STUDENT_FEEDBACK_RUBRIC_PROPS,
+        latestFeedback: [{student_seen_feedback: new Date(), comment: 'Great!'}]
+      };
+      const lastUpdatedSpy = sinon.spy(i18n, 'lastUpdated');
+      shallow(<TeacherFeedback {...props} />);
+      expect(lastUpdatedSpy).to.have.been.calledOnce;
+      i18n.lastUpdated.restore();
+    });
+
     it('shows the correct components if student is on a level with a rubric, where no feedback has been given by the teacher', () => {
       const wrapper = shallow(
         <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />

@@ -26,9 +26,11 @@ describe('Sprite Commands', () => {
     makeSprite({name: sprite2Name, animation: 'b'});
     makeSprite({name: sprite3Name, animation: 'a'});
 
-    expect(commands.countByAnimation('a')).to.equal(2);
-    expect(commands.countByAnimation('b')).to.equal(1);
-    expect(commands.countByAnimation('c')).to.equal(0);
+    expect(commands.countByAnimation({costume: 'a'})).to.equal(2);
+    expect(commands.countByAnimation({costume: 'b'})).to.equal(1);
+    expect(commands.countByAnimation({costume: 'c'})).to.equal(0);
+
+    expect(commands.countByAnimation({name: sprite1Name})).to.equal(1);
   });
 
   it('destroy single sprite', () => {

@@ -4,6 +4,7 @@ import * as utils from '../../../utils';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {Table, Button, Modal} from 'react-bootstrap';
+import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 import {
   DATE_FORMAT,
@@ -63,17 +64,51 @@ class EnrolledWorkshopsTable extends React.Component {
     utils.windowOpen(`/pd/generate_workshop_certificate/${enrollment_code}`);
   };
 
+  moreThanTenDaysUntilWorkshop = workshop_starting_date => {
+    return moment(workshop_starting_date).diff(moment.now(), 'days') > 10;
+  };
+
+  renderPreWorkshopSurveyButton = workshop => {
+    const preWorkshopSurveyButton = (
+      <Button
+        onClick={() => utils.windowOpen(workshop.pre_workshop_survey_url)}
+        style={styles.button}
+        disabled={this.moreThanTenDaysUntilWorkshop(
+          workshop.workshop_starting_date
+        )}
+      >
+        Complete pre-workshop survey
+      </Button>
+    );
+
+    const surveyWaitMessage = `
+      Workshop surveys can only be started 10 days prior to your workshop date.
+    `;
+
+    if (preWorkshopSurveyButton.props.disabled) {
+      return (
+        <div>
+          <span data-tip={surveyWaitMessage} data-for="pre-survey-date-limit">
+            {preWorkshopSurveyButton}
+          </span>
+          <ReactTooltip
+            id="pre-survey-date-limit"
+            effect="solid"
+            delayShow={500}
+          />
+        </div>
+      );
+    } else {
+      return preWorkshopSurveyButton;
+    }
+  };
+
   renderWorkshopActionButtons(workshop) {
     return (
       <div>
-        {workshop.state === 'Not Started' && (
-          <Button
-            onClick={() => this.showCancelModal(workshop.enrollment_code)}
-            style={styles.button}
-          >
-            Cancel enrollment
-          </Button>
-        )}
+        {workshop.state === 'Not Started' &&
+          workshop.pre_workshop_survey_url &&
+          this.renderPreWorkshopSurveyButton(workshop)}
         {workshop.state === 'Ended' && (
           <Button
             onClick={() => this.openCertificate(workshop)}
@@ -85,15 +120,22 @@ class EnrolledWorkshopsTable extends React.Component {
         )}
         <Button
           onClick={() =>
-            window.open(
-              `/pd/workshop_enrollment/${workshop.enrollment_code}`,
-              '_blank'
+            utils.windowOpen(
+              `/pd/workshop_enrollment/${workshop.enrollment_code}`
             )
           }
           style={styles.button}
         >
           Workshop details
         </Button>
+        {workshop.state === 'Not Started' && (
+          <Button
+            onClick={() => this.showCancelModal(workshop.enrollment_code)}
+            style={styles.button}
+          >
+            Cancel enrollment
+          </Button>
+        )}
       </div>
     );
   }

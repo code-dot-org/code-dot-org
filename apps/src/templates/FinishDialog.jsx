@@ -7,7 +7,7 @@ import GeneratedCode from './feedback/GeneratedCode';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
 import Confetti from 'react-dom-confetti';
-import StageProgress from '@cdo/apps/code-studio/components/progress/StageProgress';
+import LessonProgress from '@cdo/apps/code-studio/components/progress/LessonProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -518,7 +518,7 @@ export class UnconnectedFinishDialog extends Component {
                   }}
                 >
                   <div style={styles.mastery}>
-                    <StageProgress stageTrophyEnabled />
+                    <LessonProgress lessonTrophyEnabled />
                   </div>
                   {this.props.feedbackImage && (
                     <div style={styles.share}>

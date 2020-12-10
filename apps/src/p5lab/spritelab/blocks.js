@@ -8,28 +8,52 @@ import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../animationListModule';
 import {changeInterfaceMode} from '../actions';
-import {Goal, show} from '../AnimationPicker/animationPickerModule';
+import {
+  Goal,
+  show,
+  showBackground
+} from '../AnimationPicker/animationPickerModule';
 import i18n from '@cdo/locale';
-
-function sprites() {
+import spritelabMsg from '@cdo/spritelab/locale';
+function animations(areBackgrounds) {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
     return [['sprites missing', 'null']];
   }
-  return animationList.orderedKeys.map(key => {
-    const animation = animationList.propsByKey[key];
-    if (animation.sourceUrl) {
-      return [animation.sourceUrl, `"${animation.name}"`];
-    } else {
-      const url = animationSourceUrl(
-        key,
-        animation,
-        getStore().getState().pageConstants.channelId
-      );
-      return [url, `"${animation.name}"`];
-    }
-  });
+  let results = animationList.orderedKeys
+    .filter(key => {
+      const animation = animationList.propsByKey[key];
+      const isBackground = (animation.categories || []).includes('backgrounds');
+      return areBackgrounds ? isBackground : !isBackground;
+    })
+    .map(key => {
+      const animation = animationList.propsByKey[key];
+      if (animation.sourceUrl) {
+        return [animation.sourceUrl, `"${animation.name}"`];
+      } else {
+        const url = animationSourceUrl(
+          key,
+          animation,
+          getStore().getState().pageConstants.channelId
+        );
+        return [url, `"${animation.name}"`];
+      }
+    });
+  // In case either all backgrounds or all costumes are missing and we request them, this allows the "create
+  // new sprite" and "set background as" blocks to continue working without crashing.
+  // When they are used without sprites being set, the image dropdown for those blocks will be empty except
+  // for the "More" button. The user will have to add sprites/backgrounds to this dropdown one by one using the "More" button.
+  if (results.length === 0) {
+    return [['sprites missing', 'null']];
+  }
+  return results;
+}
+function sprites() {
+  return animations(false);
+}
+function backgroundList() {
+  return animations(true);
 }
 
 // This color palette is limited to colors which have different hues, therefore
@@ -163,7 +187,7 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: 'Draw',
+            text: i18n.draw(),
             action: () => {
               getStore().dispatch(
                 changeInterfaceMode(
@@ -174,9 +198,9 @@ const customInputTypes = {
             }
           },
           {
-            text: 'More',
+            text: i18n.more(),
             action: () => {
-              getStore().dispatch(show(Goal.NEW_ANIMATION));
+              getStore().dispatch(show(Goal.NEW_ANIMATION, true));
             }
           }
         ];
@@ -192,14 +216,80 @@ const customInputTypes = {
       return block.getTitleValue(arg.name);
     }
   },
-  spritePointer: {
+  backgroundPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      let buttons;
+      if (
+        getStore().getState().pageConstants &&
+        getStore().getState().pageConstants.showAnimationMode
+      ) {
+        buttons = [
+          {
+            text: i18n.more(),
+            action: () => {
+              getStore().dispatch(showBackground(Goal.NEW_ANIMATION));
+            }
+          }
+        ];
+      }
       currentInputRow
         .appendTitle(inputConfig.label)
-        .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
+        .appendTitle(
+          new Blockly.FieldImageDropdown(backgroundList, 40, 40, buttons),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
-      return `'${block.getTitleValue(arg.name)}'`;
+      return block.getTitleValue(arg.name);
+    }
+  },
+  spritePointer: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      if (Object.keys(spritelabMsg).length === 0) {
+        // spritelab i18n is not available on Levelbuilder
+        block.shortString = ' ';
+        block.longString = ' ';
+      } else {
+        switch (block.type) {
+          case 'gamelab_clickedSpritePointer':
+            block.shortString = spritelabMsg.clicked();
+            block.longString = spritelabMsg.clickedSprite();
+            break;
+          case 'gamelab_subjectSpritePointer':
+            block.shortString = spritelabMsg.subject();
+            block.longString = spritelabMsg.subjectSprite();
+            break;
+          case 'gamelab_objectSpritePointer':
+            block.shortString = spritelabMsg.object();
+            block.longString = spritelabMsg.objectSprite();
+            break;
+          default:
+            // unsupported block for spritePointer, leave the block text blank
+            block.shortString = '';
+            block.longString = '';
+        }
+      }
+      block.thumbnailSize = 32;
+      currentInputRow
+        .appendTitle(block.longString)
+        .appendTitle(
+          new Blockly.FieldImage('', 1, block.thumbnailSize),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      switch (block.type) {
+        case 'gamelab_clickedSpritePointer':
+          return '{id: extraArgs.clickedSprite}';
+        case 'gamelab_subjectSpritePointer':
+          return '{id: extraArgs.subjectSprite}';
+        case 'gamelab_objectSpritePointer':
+          return '{id: extraArgs.objectSprite}';
+        default:
+          // unsupported block for spritePointer, returning undefined here
+          // will match the behavior of an empty socket.
+          return undefined;
+      }
     }
   },
   spritePicker: {
@@ -266,6 +356,24 @@ const customInputTypes = {
     generateCode(block, arg) {
       return `'${block.getTitleValue(arg.name)}'`;
     }
+  },
+  // Custom input for a variable input that generates the name of the variable
+  // rather than the value of the variable.
+  variableNamePicker: {
+    addInputRow(blockly, block, inputConfig) {
+      return block.appendValueInput(inputConfig.name);
+    },
+
+    generateCode(block, arg) {
+      const input = block.getInput(arg.name);
+      if (input) {
+        const targetBlock = input.connection.targetBlock();
+        if (targetBlock && targetBlock.type === 'variables_get') {
+          return `'${Blockly.JavaScript.blockToCode(targetBlock)[0]}'`;
+        }
+      }
+      return '';
+    }
   }
 };
 
@@ -274,13 +382,13 @@ export default {
   customInputTypes,
   install(blockly, blockInstallOptions) {
     // Legacy style block definitions :(
-    const generator = blockly.Generator.get('JavaScript');
+    const generator = blockly.getGenerator();
 
     const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {
-        FUNCTION_HEADER: 'Behavior',
-        FUNCTION_NAME_LABEL: 'Name your behavior:',
-        FUNCTION_DESCRIPTION_LABEL: 'What is your behavior supposed to do?'
+        FUNCTION_HEADER: i18n.behaviorEditorHeader(),
+        FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
+        FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription()
       },
       'behavior_definition',
       {
@@ -385,6 +493,7 @@ export default {
         // blocks, disallow editing the behavior, because renaming the behavior
         // can break things.
         if (
+          appOptions && // appOptions is not available on level edit page
           appOptions.level.toolbox &&
           !appOptions.readonlyWorkspace &&
           !Blockly.hasCategories
@@ -410,13 +519,11 @@ export default {
 
       openEditor(e) {
         e.stopPropagation();
-        behaviorEditor.openEditorForFunction(this, this.getTitleValue('VAR'));
+        behaviorEditor.openEditorForFunction(this, this.getTitle_('VAR').id);
       },
 
       getVars() {
-        return Blockly.Variables.getVars.bind(this)(
-          Blockly.BlockValueType.BEHAVIOR
-        );
+        return {};
       },
 
       renameVar(oldName, newName) {
@@ -478,7 +585,7 @@ export default {
 
     generator.gamelab_behavior_get = function() {
       const name = Blockly.JavaScript.variableDB_.getName(
-        this.getTitleValue('VAR'),
+        this.getTitle_('VAR').id,
         Blockly.Procedures.NAME_TYPE
       );
       const extraArgs = [];
@@ -500,14 +607,12 @@ export default {
       {
         initPostScript(block) {
           block.setHSV(136, 0.84, 0.8);
-          block.parameterNames_ = ['this sprite'];
+          block.parameterNames_ = [i18n.thisSprite()];
           block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
         },
         overrides: {
           getVars(category) {
-            return {
-              Behavior: [this.getTitleValue('NAME')]
-            };
+            return {};
           },
           callType_: 'gamelab_behavior_get'
         }
@@ -521,7 +626,14 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    if (blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE) {
+
+    // NOTE: On the page where behaviors are created (the functions/#/edit page)
+    // blockInstallOptions is undefined.
+    if (
+      !blockInstallOptions ||
+      !blockInstallOptions.level ||
+      blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
+    ) {
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
           if (behaviorEditor && !behaviorEditor.isOpen()) {

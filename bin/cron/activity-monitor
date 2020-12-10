@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 #
 # This script monitors level completion rates and issues Slack complaints if a significant
 # number of browsers has attempted a level without anybody finishing it successfully.
@@ -12,7 +14,6 @@
 #
 # including dashboard environment doesn't work if not in the dashboard dir
 require_relative '../../deployment'
-require 'cdo/only_one'
 require 'cdo/chat_client'
 require 'cdo/user_agent_parser'
 require 'retryable'
@@ -193,4 +194,4 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+main

@@ -1,11 +1,14 @@
-%legend.control-legend{data: {toggle: "collapse", target: "#callout_editor"}}
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_callouts.js')}
+
+%h1.control-legend{data: {toggle: "collapse", target: "#callout_editor"}}
   Callouts
 
 %p
   Need help? Have questions? Learn how to create callouts
   =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Creating-a-Callout', target:'_blank'
 
-#callout_editor.field.in.collapse
+#callout_editor.in.collapse
   .json_editor
     .json_template
       .callout_space

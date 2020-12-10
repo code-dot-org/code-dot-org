@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
-import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
+import {classroomShape, loadErrorShape} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
@@ -10,7 +11,17 @@ import {
   importOrUpdateRoster,
   isRosterDialogOpen
 } from './teacherSectionsRedux';
+import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 
+const ctaButtonStyle = {
+  background: color.orange,
+  color: color.white,
+  border: '1px solid #b07202',
+  borderRadius: 3,
+  boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
+  fontSize: 14,
+  padding: '8px 20px'
+};
 const styles = {
   title: {
     position: 'absolute',
@@ -41,14 +52,8 @@ const styles = {
     left: 20
   },
   buttonPrimary: {
-    float: 'right',
-    background: color.orange,
-    color: color.white,
-    border: '1px solid #b07202',
-    borderRadius: 3,
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
-    fontSize: 14,
-    padding: '8px 20px'
+    ...ctaButtonStyle,
+    float: 'right'
   },
   buttonSecondary: {
     float: 'left',
@@ -121,21 +126,20 @@ NoClassroomsFound.propTypes = {
 
 const ROSTERED_SECTIONS_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/115001319312';
+
 const LoadError = ({rosterProvider, loginType}) => {
   switch (rosterProvider) {
     case OAuthSectionTypes.google_classroom:
       return (
         <div>
+          <p>{locale.authorizeGoogleClassroomsText()}</p>
+          <ReauthorizeGoogleClassroom />
           <p>
-            {locale.authorizeGoogleClassroomsText()}{' '}
             <a
-              href={`/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {locale.authorizeGoogleClassrooms()}
-            </a>
-          </p>
-          <p>
-            <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
               {locale.errorLoadingRosteredSectionsSupport()}
             </a>
           </p>
@@ -145,7 +149,11 @@ const LoadError = ({rosterProvider, loginType}) => {
       return (
         <p>
           {locale.errorLoadingRosteredSections({type: loginType})}{' '}
-          <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {locale.errorLoadingRosteredSectionsSupport()}
           </a>
         </p>
@@ -156,6 +164,19 @@ LoadError.propTypes = {
   rosterProvider: PropTypes.string,
   loginType: PropTypes.string
 };
+
+const REAUTHORIZE_URL =
+  '/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly';
+function ReauthorizeGoogleClassroom() {
+  return (
+    <form method="POST" action={REAUTHORIZE_URL}>
+      <RailsAuthenticityToken />
+      <button type="submit" style={ctaButtonStyle}>
+        {locale.authorizeGoogleClassrooms()}
+      </button>
+    </form>
+  );
+}
 
 class RosterDialog extends React.Component {
   static propTypes = {

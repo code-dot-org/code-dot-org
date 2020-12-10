@@ -68,12 +68,12 @@ export default class GoogleChart {
    *        are column names.
    * @param {string[]} columnList - Ordered list of column names to use as source
    *        data for the chart.  Column names must match keys in rawData.
-   * @param {Object} options - Plain options object that gets passed through to
+   * @param {Object} options - Optional plain options object that gets passed through to
    *        the Charts API.
    * @returns {Promise} that resolves when the chart has been rendered to the
    *          target container.
    */
-  async drawChart(rawData, columnList, options) {
+  async drawChart(rawData, columnList, options = {}) {
     await this.loadDependencies();
 
     this.verifyData_({data: rawData, columns: columnList});

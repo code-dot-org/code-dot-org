@@ -6,16 +6,6 @@ ne:
         options:
           UNIT:
             '"seconds"': seconds
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -26,16 +16,6 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
-      Dancelab_doMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -63,6 +43,10 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"diamond"': diamond
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -89,46 +73,10 @@ ne:
             "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': diamond
       Dancelab_randomColor:
         text: कुनै एक  रङ
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -183,6 +131,10 @@ ne:
             '"right"': दाँया
             '"space"': space
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -196,6 +148,19 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -217,6 +182,8 @@ ne:
         text: कुनै एक  रङ
       gamelab_randomColor:
         text: कुनै एक  रङ
+      gamelab_repeatForever:
+        text: repeat forever
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -322,7 +289,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
+            '"a"': क
             '"s"': द
+            '"d"': 'घ '
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -331,7 +300,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
+            '"a"': क
             '"s"': द
+            '"d"': 'घ '
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -345,23 +316,6 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_showHideSprite:
-        options:
-          OPTION:
-            '"show"': देखाउ
-            '"hide"': लुकेको
       binary_move:
         options:
           DIR:

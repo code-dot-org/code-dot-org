@@ -20,16 +20,10 @@ km:
             sprites: ទាំងអស់
           MOVE:
             MOVES.Rest: គ្មាន
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
             MOVES.Rest: គ្មាន
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -48,16 +42,10 @@ km:
             sprites: ទាំងអស់
           MOVE:
             MOVES.Rest: គ្មាន
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
             MOVES.Rest: គ្មាន
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -98,6 +86,7 @@ km:
           GROUP:
             sprites: ទាំងអស់
           FORMAT:
+            '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -127,26 +116,6 @@ km:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
@@ -262,6 +231,10 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': y
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -279,6 +252,20 @@ km:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"x"': x
+            '"y"': y
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -301,6 +288,8 @@ km:
         text: ពណ៌​ព្រាវ
       gamelab_randomColor:
         text: ពណ៌​ព្រាវ
+      gamelab_repeatForever:
+        text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -478,23 +467,10 @@ km:
         text: បត់​ឆ្វេង
       RyanLab_turnRight:
         text: បត់​ស្ដាំ
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': បង្ហាញ
-            '"hide"': លាក់
+            '"random"': ព្រាវ
       binary_move:
         options:
           DIR:

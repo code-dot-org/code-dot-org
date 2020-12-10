@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-17T21:09:50.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_weblab_intro_2",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Intro to Web Lab - Part 2",
+    "parent_level_id": 19999,
+    "name_suffix": "_virtual",
+    "long_instructions": "## Questions to consider\r\n* Why are HTML tags useful?\r\n* What does the paragraph tag do?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nAs student discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen.  Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).  \r\n\r\nAlthough certain structural roles may be associated with appearance (headings are larger), HTML does not specify anything in particular about the appearance.  This allows users with different needs, such as the visually impaired, to interact with the structured content in a way that makes the most sense for them.  Later in the unit, students will learn about styles and CSS, which allows them to specify exact size, color, and spacing to their HTML elements.\r\n\r\nThe paragraph tag separates text into paragraphs.  You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs.  For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-14 21:40:09 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

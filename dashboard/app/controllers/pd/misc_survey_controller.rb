@@ -30,7 +30,9 @@ module Pd
         formId: @form_id
       }
 
-      return redirect(key_params) if response_exists?(key_params)
+      unless form_data[:allow_multiple_submissions]
+        return redirect(key_params) if response_exists?(key_params)
+      end
 
       @form_params = key_params.merge(
         submitRedirect: url_for(action: 'submit', params: {key: key_params})

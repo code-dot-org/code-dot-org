@@ -21,12 +21,12 @@ const styles = {
 };
 
 export const studentExportableDataPropType = PropTypes.shape({
-  name: PropTypes.string.isRequired,
+  studentName: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number,
   numMultipleChoice: PropTypes.number,
   numMatchCorrect: PropTypes.number,
   numMatch: PropTypes.number,
-  submissionTimeStamp: PropTypes.string.isRequired
+  submissionTimestamp: PropTypes.instanceOf(Date).isRequired
 });
 
 const CSV_SUBMISSION_STATUS_HEADERS = [
@@ -56,6 +56,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
             headers={CSV_SUBMISSION_STATUS_HEADERS}
           >
             <Button
+              __useDeprecatedTag
               text={i18n.downloadCSV()}
               onClick={() => {}}
               color={Button.ButtonColor.gray}

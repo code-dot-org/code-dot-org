@@ -10,8 +10,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   hiddenSectionIds,
   beginEditingNewSection,
-  beginEditingSection,
-  beginImportRosterFlow
+  beginEditingSection
 } from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -19,6 +18,10 @@ import styleConstants from '@cdo/apps/styleConstants';
 import AddSectionDialog from './AddSectionDialog';
 import EditSectionDialog from './EditSectionDialog';
 import SetUpSections from '../studioHomepages/SetUpSections';
+import {recordOpenEditSectionDetails} from './sectionHelpers';
+import experiments from '@cdo/apps/util/experiments';
+import {recordImpression} from './impressionHelpers';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const styles = {
   button: {
@@ -35,32 +38,48 @@ const styles = {
     fontSize: 14,
     paddingBottom: 5,
     color: color.charcoal
+  },
+  spinner: {
+    marginTop: '10px'
   }
 };
 
 class OwnedSections extends React.Component {
   static propTypes = {
-    queryStringOpen: PropTypes.string,
-    locale: PropTypes.string,
-
     // redux provided
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
-    beginEditingSection: PropTypes.func.isRequired,
-    beginImportRosterFlow: PropTypes.func.isRequired
+    beginEditingSection: PropTypes.func.isRequired
   };
 
   state = {
     viewHidden: false
   };
 
-  componentDidMount() {
-    const {queryStringOpen, beginImportRosterFlow} = this.props;
+  constructor(props) {
+    super(props);
+    this.onEditSection = this.onEditSection.bind(this);
+    if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
+      recordImpression('owned_sections_table_with_dashboard_header_buttons');
+    } else {
+      recordImpression('owned_sections_table_without_dashboard_header_buttons');
+    }
+  }
 
-    if (queryStringOpen === 'rosterDialog') {
-      beginImportRosterFlow();
+  onEditSection(id) {
+    this.props.beginEditingSection(id);
+    if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
+      recordOpenEditSectionDetails(
+        id,
+        'owned_sections_table_with_dashboard_header_buttons'
+      );
+    } else {
+      recordOpenEditSectionDetails(
+        id,
+        'owned_sections_table_without_dashboard_header_buttons'
+      );
     }
   }
 
@@ -74,17 +93,11 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {
-      sectionIds,
-      hiddenSectionIds,
-      asyncLoadComplete,
-      beginEditingSection,
-      locale
-    } = this.props;
+    const {sectionIds, hiddenSectionIds, asyncLoadComplete} = this.props;
     const {viewHidden} = this.state;
 
     if (!asyncLoadComplete) {
-      return null;
+      return <Spinner size="large" style={styles.spinner} />;
     }
 
     const hasSections = sectionIds.length > 0;
@@ -98,12 +111,13 @@ class OwnedSections extends React.Component {
             {visibleSectionIds.length > 0 && (
               <OwnedSectionsTable
                 sectionIds={visibleSectionIds}
-                onEdit={beginEditingSection}
+                onEdit={this.onEditSection}
               />
             )}
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
+                  __useDeprecatedTag
                   className="ui-test-show-hide"
                   onClick={this.toggleViewHidden}
                   icon={viewHidden ? 'caret-up' : 'caret-down'}
@@ -123,15 +137,15 @@ class OwnedSections extends React.Component {
                 </div>
                 <OwnedSectionsTable
                   sectionIds={hiddenSectionIds}
-                  onEdit={beginEditingSection}
+                  onEdit={this.onEditSection}
                 />
               </div>
             )}
           </div>
         )}
         <RosterDialog />
-        <AddSectionDialog locale={locale} />
-        <EditSectionDialog locale={locale} />
+        <AddSectionDialog />
+        <EditSectionDialog />
       </div>
     );
   }
@@ -146,7 +160,6 @@ export default connect(
   }),
   {
     beginEditingNewSection,
-    beginEditingSection,
-    beginImportRosterFlow
+    beginEditingSection
   }
 )(OwnedSections);

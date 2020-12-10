@@ -1,0 +1,14 @@
+name 'CodeBreak E04 Practice'
+editor_experiment ''
+display_name 'Practice'
+description 'Work through the puzzles of your choice to practice your digital information skills. When you are ready for the challenge click "Continue."'
+
+sublevels
+level 'CodeBreak E04 - Practice 1'
+level 'CodeBreak E04 - Practice 2'
+level 'CodeBreak E04 Practice 3'
+level 'CodeBreak E04 Practice 4'
+
+markdown <<MARKDOWN
+
+MARKDOWN

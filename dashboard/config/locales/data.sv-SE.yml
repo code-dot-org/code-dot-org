@@ -650,8 +650,16 @@ sv:
         iceage_events: Ice Age Kodtimmen - händelser
         iceage_repeat: Ice Age timme av kod - upprepa påståeenden
         CSF_loops_AB: loopar
+        hoc_dance_warmup: Dansparty – uppvärmnin
+        hoc_dance_congrats: Dansparty – fortsätt partyt!
+        writing_first_program: Skriv ditt första datorprogram!
         csd_pair_programming: Par-programmering
         csd_applab_parameters: Funktioner med parametrar
+        hoc_dance_congrats_2019: Dansparty 2019 – fortsätt partyt!
+        hoc_dance_warmup_2019: Dansparty 2019 – uppvärmning
+        hoc_dance_events_2019: Dansparty 2019 – aktiviteter
+        hoc_dance_measures_2019: Dansparty 2019 – takter
+        hoc_dance_properties_2019: Dansparty 2019 – egenskaper
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket

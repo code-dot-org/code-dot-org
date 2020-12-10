@@ -1,4 +1,10 @@
 {
+  "clicked": "cliqué",
+  "clickedSprite": "lutin cliqué",
+  "subject": "sujet",
+  "subjectSprite": "lutin sujet",
+  "object": "objet",
+  "objectSprite": "lutin objet",
   "errorLoadingAnimation": "Il semble que nous ayons des difficultés à charger votre animation \"{animationName}\". Assurez-vous d'avoir une bonne connexion Internet et essayez de recharger la page. Si ce problème persiste, il est possible que cette animation soit interrompue. Dans ce cas, vous devrez peut-être continuer en supprimant l'animation.",
   "reinfFeedbackMsg": "Vous avez fini! Cliquez sur \"Continuer\" pour passer au niveau suivant.",
   "shareGame": "Partage ton jeu :",
@@ -22,5 +28,10 @@
   "spritelabFeedbackMoveUpNotDown": "Ton lutin doit monter (nord) au lieu de descendre (sud).",
   "spritelabFeedbackRobotFasterThanRover": "Le robot a atteint le côté droit de l'écran avant l'engin.",
   "spritelabFeedbackDifferentStarRotation": "Les lutins avec les 2 costumes d'étoiles doivent tourner autant l'un que l'autre.",
-  "spritelabFeedbackAstronautMoveToCorner": "Le lutin astronaute doit bouger vers l'un des quatres coins."
+  "spritelabFeedbackAstronautMoveToCorner": "Le lutin astronaute doit bouger vers l'un des quatres coins.",
+  "outbreakChangeHealthy": "Essayez de changer le nombre de sprites de monstres.",
+  "outbreakChangeSize": "Essayez de définir tous vos sprites à une taille différente.",
+  "outbreakCostumeTab": "Cliquez sur l'onglet \"Costumes\" au-dessus de la zone de jeu pour ajouter un nouveau costume de sprite à votre projet.",
+  "outbreakReplaySuccess": "Assurez-vous de rejouer la simulation plusieurs fois avant de continuer !",
+  "outbreakSuccess": "Vous avez terminé le niveau. Lorsque vous êtes prêt pour le prochain défi, appuyez sur Continuer."
 }

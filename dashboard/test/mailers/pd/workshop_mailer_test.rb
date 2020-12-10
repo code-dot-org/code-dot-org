@@ -67,12 +67,44 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'emails are not sent for virtual workshops' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_VIRTUAL_1, num_sessions: 1
+  test 'exit survey emails are skipped for academic year workshops' do
+    workshop = create :csp_academic_year_workshop, :ended
+    enrollment = create :pd_enrollment, workshop: workshop
+    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns('a url')
+
+    assert_emails 0 do
+      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
+    end
+  end
+
+  test 'reminders are not sent for workshops with suppress_email attribute' do
+    workshop = create :csp_summer_workshop, suppress_email: true
+    facilitator = workshop.facilitators.first
     enrollment = create :pd_enrollment, workshop: workshop
 
     assert_no_emails do
+      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+      Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
+      Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
+    end
+  end
+
+  test 'specific emails that should be sent for workshops with suppress_email attribute' do
+    workshop = create :csp_summer_workshop, suppress_email: true
+    enrollment = create :pd_enrollment, workshop: workshop
+
+    assert_emails 6 do
+      Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
+      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
+
+      # Still send cancellation receipt and exit survey to teachers
+      Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
+      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
+
+      # Organizers want to stay informed of who has enrolled, even if
+      # email is suppressed
       Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
+      Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
     end
   end
 
@@ -92,16 +124,21 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'exit survey email links are complete urls' do
+    # Note these commented out test cases should be re-enabled
+    # once we stop suppressing post-workshop emails for Academic Year Workshops.
     test_cases = [
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON},
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
       {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2},
+      # {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
+      # {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
     ]
 
     test_cases.each do |test_case|
-      workshop = create :workshop, :ended, course: test_case[:course], subject: test_case[:subject]
+      workshop = create :workshop,
+        :ended,
+        course: test_case[:course],
+        subject: test_case[:subject]
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.exit_survey(enrollment)
 
@@ -163,7 +200,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     test_cases.each do |test_case|
-      workshop = create :workshop, course: test_case[:course], subject: test_case[:subject]
+      workshop = if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(test_case[:subject])
+                   create :academic_year_workshop, course: test_case[:course], subject: test_case[:subject]
+                 else
+                   create :workshop, course: test_case[:course], subject: test_case[:subject]
+                 end
+
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
 
@@ -184,7 +226,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     test_cases.each do |test_case|
-      workshop = create :workshop, course: test_case[:course], subject: test_case[:subject]
+      workshop = if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(test_case[:subject])
+                   create :academic_year_workshop, course: test_case[:course], subject: test_case[:subject]
+                 else
+                   create :workshop, course: test_case[:course], subject: test_case[:subject]
+                 end
+
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: test_case[:days_before])
 

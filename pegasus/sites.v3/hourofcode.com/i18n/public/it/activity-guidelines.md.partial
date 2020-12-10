@@ -9,270 +9,289 @@ layout: wide
   }
 </style>
 
-{{ signup_button }}
+# Linee guida per la creazione e l'invio di esercitazioni e lezioni per l'Ora del Codice™ e per la settimana dell'educazione informatica
 
-# Lesson guidelines for the Hour of Code™ and Computer Science Education Week
+Code.org ospita una serie di attività, lezioni e video dell'Ora del Codice™ sui siti Web Code.org, Hour of Code e CSEdWeek. L'elenco corrente è su [hourofcode.com/learn]({{ urls/learn }}).
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Vuoi inviare il tuo tutorial autoguidato, lezione condotta dall'insegnante o attività di robotica/maker che spieghi un principio di informatica? Unisciti a questo movimento globale e aiuta i partecipanti di tutto il mondo ad avviare un'Ora di Codice o ad andare oltre con attività di più lezioni, di un giorno o di una settimana.
 
-Want to submit your own self-guided game, teacher-led lesson, or activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day long, or week long activities.
+**Dopo aver letto le linee guida, puoi inviare la tua attività tramite il nostro [Pagina di invio delle attività dell'Ora del Codice™](https://forms.gle/L1hjArNnGSMJPzyE8). Puoi inviare un'attività in qualsiasi momento, ma la scadenza per l'inclusione in un dato anno solare è il 1° ottobre. (Ad esempio, qualsiasi attività ricevuta dopo il 1° ottobre, {{ campaign_date/year }} non sarà elencato entro {{ campaign_date/year }}dell'Ora del Codice.) Il termine per presentare una prima revisione qualitativa [(informazioni in basso)](#earlyreview) è il 16 Agosto.** Se hai domande sull'invio della tua attività, contattaci all'indirizzo support@code.org.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+Alcuni suggerimenti:
 
-A few tips:
+1. **Invia più di un'attività**: Se hai creato attività per diversi livelli, età diverse o altre categorie, elenchiamo le tue attività separatamente in modo che ogni insegnante possa trovare l'attività adatta per per la sua classe. Invia ogni esercitazione o attività individualmente. Dato il numero di invii che abbiamo visto negli ultimi anni, avremo tempo per esaminare **fino a 5 attività** per partner. Dopodiché, faremo il possibile per esaminarne il maggior numero possibile prima dell'inizio dell'Ora del Codice.
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review up to 5 activities per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+2. **Oltre le lezioni per principianti**: in aggiunta alle lezioni per insegnanti e studenti che stanno imparando informatica per la prima volta, elenchiamo esperienze di apprendimento per classi esperte di informatica che vogliono andare un po' oltre! Aiutaci inviando lezioni per classi che hanno già appreso le basi.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics. These learners could be any age from 9 to 99.
-
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science in Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area (particularly with the upgraded ISTE standards for students including “innovative designer” and “computational thinker”). Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Aree tematiche**: Hai una grande idea su una lezione che integri l'informatica alla matematica? Storia? Arti del linguaggio? Scienza? Arte? O un'altra disciplina? Abbiamo ricevuto numerose richieste da insegnanti che desiderano collegare l'Ora del Codice alla loro area disciplinare. Gli insegnanti possono filtrare in base al tipo di classe (grado scolastico o area tematica), quindi abbiamo bisogno del tuo aiuto per colmare le lacune e offrire attività in classe o piani di lezione che colleghino l'informatica a tutte le principali aree tematiche per diversi gradi scolastico. Continuiamo inoltre ad avere una categoria "Informatica" per gli insegnanti che sono alla ricerca di attività informatiche generiche.
 
 <a id="top"></a>
 
-## Index:
+## Indice:
 
-- [What to Submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Cosa inviare](#whatsubmit)
+- [Linee guida generali per la creazione di un'attività dell'Ora del Codice](#guidelines)
+- [Come inviare](#submit)
+- [In che modo saranno valutate le attività](#inclusion)
+- [Linee guida per la presentazione di una prima revisione qualitativa NOVITÀ](#earlyreview)
+- [Suggerimenti per la progettazione della tua attività](#design)
+- [Linee guida sui Marchi Registrati](#tm)
+- [Pixel di Tracciamento](#pixel)
+- [Come promuovere le tue attività, la Settimana dell'Insegnamento dell'Informatica e l'Ora del Codice](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to Submit
+## Cosa inviare
 
-**Self-guided puzzle or game ([example](https://code.org/mc))**
+**Esercizio o gioco autoguidato ([esempio](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Queste attività sono progettate per consentire agli studenti di auto-dirigersi attraverso un'esercitazione. Non richiedono molte istruzioni o lavoro di preparazione da parte dell'insegnante.
 
-**Teacher Facilitated lesson ([example](https://csedweek.org/csteacher/computerhistory.pdf), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Lezione spiegata dall'insegnante ([esempio](https://studio.code.org/s/course1/stage/2/puzzle/1), [modello](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Ora che decine di migliaia di insegnanti hanno provato l'Ora del Codice, molte classi sono pronte per attività più creative che insegnano le basi dell'informatica. Per aiutare gli insegnanti più avanzati a trovare ispirazione, raccogliamo e curiamo lezioni e piani di attività "guidati da insegnanti" per i veterani dell'Ora del Codice.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Un tipo di attività che presenteremo per insegnanti esperti sono i progetti di creazione "sandbox aperto". Attività che incoraggiano gli studenti a creare la propria app, gioco, sito Web o altro progetto. Se spiegate in modo appropriato, le attività più aperte possono mostrare meglio la natura creativa dell'informatica.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Alcuni insegnanti potrebbero anche preferire ospitare attività dell'Ora del Codice che seguono un formato di lezione tradizionale piuttosto che un'esperienza di gioco/esercizio guidato.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Puoi iniziare con questo [modello](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) per il tuo piano della lezione.
 
-**Activities for teachers in other subjects/fields**
+**Attività per insegnanti in altre materie/campi**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Offriamo anche piani di lezione progettati per diverse aree tematiche. Ad esempio, un piano di lezione di un'ora per insegnare la programmazione in una classe di geometria. O per un esercizio con giochi di parole nell'ora d'inglese. O un'attività creativa di creazione di quiz per il corso di storia. Questo può aiutarci a reclutare insegnanti in altre aree tematiche per guidare un'attività dell'Ora del Codice, unica nel loro campo, dimostrando al contempo come l'informatica può influenzare e migliorare molte aree tematiche diverse.
 
-Examples:
+Alcuni esempi:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Immagini Speculari (un'attività pensata per gli insegnanti di educazione artistica)
+- Arduino, un'attività pensata per gli insegnanti di fisica
+- Storia della tecnologia, un'attività pensata per gli insegnanti di storia
+- Consulta [questo elenco](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) per ulteriori idee dagli educatori (o aggiungi la tua all'elenco per ispirare gli altri)
 
-**For students with special needs**
+**Per gli studenti con bisogni educativi speciali**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Se crei un'attività o un tutorial progettato per studenti con bisogni speciali, indicalo nella descrizione. In particolare, ci sono pochissime opzioni per i non vedenti. Se la tua attività è progettata per questa necessità, faccelo sapere.
 
-[**Back to the top**](#top)
+[**Torna all'inizio**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Linee guida generali per la creazione di un'attività per l'Ora del Codice
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+L'obiettivo di un'Ora del Codice è quello di rendere accessibile ai principianti un primo assaggio di informatica o di programmazione. Il tono dovrebbe essere questo:
 
-- Anybody can learn computer science - regardless of age, gender, or race. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- Chiunque può imparare l'informatica, indipendentemente da età, sesso, razza o capacità/disabilità. 
+- L'informatica è connessa a un'ampia gamma di campi di interesse. Tutti dovrebbero impararla!
+- Incoraggia gli studenti a creare qualcosa di unico che possa essere condiviso con genitori/amici o online. 
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Le attività dovrebbero insegnare concetti di informatica tipo i cicli, le istruzioni condizionali, la crittografia o il funzionamento di Internet. Un'attività può anche insegnare come l'informatica si collega a occupazioni, eventi o storia del mondo reale. Ad esempio, insegnare la progettazione dell'esperienza utente per creare app significative per un pubblico o una causa. Sconsigliamo attività che si concentrano sulla sintassi della programmazione piuttosto che sui concetti. Ad esempio, elencheremo, ma non evidenzieremo, le attività che insegnano l'HTML. Allo stesso modo, scoraggiamo lezioni di programmazione a blocchi centrate sull'impostazione/modifica delle opzioni di configurazione piuttosto che sull'imparare a modellare un algoritmo o un processo.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Requisiti tecnici:*A causa dell'ampia varietà di configurazioni tecnologiche della scuola e della classe, le attività migliori sono quelle basate sul Web o compatibili con gli smartphone, o tradizionali che insegnano concetti di informatica senza l'uso di un computer (see <http://csunplugged.com/>). Le attività che richiedono l'installazione di un'app, un'app desktop o l'esperienza della console di gioco sono accettabili ma non ideali. Non elencheremo le attività che richiedono l'iscrizione o il pagamento. (Le attività di robotica possono richiedere l'acquisto di robotica.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Tipologia Gestita dallo studente (Auto-Guidata):*: l'Ora del Codice originale è stata costruita basandosi principalmente su corsi o lezioni auto-guidate, spiegate eventualmente dall'insegnante. Ci sono molte opzioni esistenti, ma se vuoi crearne una nuova, queste attività dovrebbero essere progettate in modo che possano essere divertenti per uno studente che lavora da solo o in una classe il cui insegnante ha una preparazione o formazione minima in informatica. Dovrebbero fornire delle indicazioni precise agli studenti piuttosto che essere una sfida lunga un'ora. Idealmente, le istruzioni e le esercitazioni dovrebbero essere integrate direttamente nella piattaforma di programmazione, per evitare il continuo cambio di scheda o finestra del browser dall'esercitazione alla piattaforma di programmazione.
 
-[**Back to the top**](#top)
+Per avere un'idea dell'ampia varietà di tipi di esercitazioni e piani di lezione che puoi creare, visita la [pagina Attività dell'Ora del Codice](https://hourofcode.com/us/learn).
+
+[**Torna all'inizio**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Come inviare
 
-Visit the [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki) and complete the questions to submit your activity.
+Visita la [Pagina di Presentazione Attività "Ora del Codice™"](https://forms.gle/L1hjArNnGSMJPzyE8) e segui le istruzioni per inviare la tua attività.
 
-What you’ll need:
+Cosa ti serve:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* Activity descriptions 
-    * Longer description for desktop-view with max character count: 400
-    * Shorter description for mobile-view with max character count: 75
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
+* Nome ed email del contatto principale che rappresenta l'attività inviata
+* Nome attività (non è possibile includere "Ora del Codice" nel nome)
+* URL di collegamento all'attività
+* Descrizione breve (massimo 400 caratteri) 
+    * Si prega di specificare nella descrizione dell'attività se è pensata per essere gestita dallo studente o se è necessaria la guida di un insegnante. Inoltre, alcune scuole sono interessate a sapere se le attività proposte per l'Ora del Codice rispecchiano gli standard "Competenze comuni" o "Scienza di nuova generazione". Se l'attività aderisce a standard specifici, prendi in considerazione l'inclusione di queste informazioni.
+* Livello/i consigliato/i per gli utenti finali. Puoi fare riferimento a \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) per concetti di informatica adeguati al grado scolastico. I livelli scolastici di esempio includono: 
+    * Scuola dell'infanzia - Classe 1 (età 4-6)
+    * Classi 2-5 (età 7-10)
+    * Prima e seconda media (età 7-10)
+    * Dalla terza media (più di 14 anni)
+* Un elenco delle aree tematiche coperte dalla tua attività (oltre all'informatica). Ad esempio, se un insegnante di matematica può utilizzare la tua attività per insegnare angoli o parabole, elencala come matematica. Se hai un'attività con giochi di parole che insegna verbi/nomi/ecc. scegli le arti del linguaggio.
+* Un elenco di linguaggi di programmazione insegnati dalla tua attività. Ad esempio C/C++, Java, JavaScript, ecc. o indipendente dalla lingua (per programmi di lezione che possono essere insegnati in più lingue)
+* Un elenco di lingue supportate. Nota: Il rilevamento della lingua è compito di chi fornisce il corso, noi ci limiteremo a reindirizzare tutti gli utenti al singolo URL fornito.
+* Quale livello di esperienza dovrebbe avere un educatore per utilizzare la tua attività? (es. Principiante o Intermedio). E quale livello di esperienza dovrebbero avere gli studenti? Se desideri preparare un'attività per l'Ora del Codice™ di livello Intermedio o Avanzato, specifica le conoscenze preliminari necessarie nella descrizione della tua attività.
+* La durata della tua attività 
+    * Solo 1 ora
+    * 1 ora con corso di continuazione
+    * 2-6 ore (possono essere più lezioni)
+* Un elenco di adattamenti, se previsti dalla tua attività. Questi includono compatibilità con il lettore di schermo, capacità di sintesi vocale, uso di colori ad alto contrasto o qualsiasi altro adattamento realizzato per studenti diversamente abili.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Altre cose di cui avrai bisogno per inviare i piani di lezione
 
-* Il tuo nome
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* School where you teach, city, and state (optional)
-* Grade(s) and subjects(s) you teach (optional)
-* Your picture (optional)
-* What software the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Link al tuo piano della lezione. Può essere una pagina web, un collegamento a una casella personale, Google Drive o un servizio simile. 
+* Di quale software e/o hardware il docente avrà bisogno per svolgere il tuo piano di lezione (Scratch? Robots? Nessuno?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Altre cose di cui avrai bisogno quando invii attività online
 
-* Name and logo of your organization
-* whether it is COPPA compliant or not
-* a URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. Place a starting pixel-image on the start page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 9, 12:01 am through Dec. 15, 11:59 pm) 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* Nome e logo della tua organizzazione
+* che sia conforme alla Legge sulla protezione della privacy online dei bambini o meno
+* un collegamento URL alle note dell'insegnante (opzionale)
+* Un elenco di piattaforme testate/compatibili: 
+    * Basato sul Web: quali piattaforme hai testato? 
+        * Sistema Operativo - Mac, Windows e altre versioni
+        * Browser: IE11, Edge, Firefox, Chrome, Safari
+        * iOS Safari su dispositivo mobile (ottimizzato per i dispositivi mobili)
+        * Android Chrome (ottimizzato per i dispositivi mobili)
+    * Non basato sul Web: specifica la piattaforma per il codice nativo (Mac, Win, iOS, Android, xBox, altro)
+    * Non necessita di PC
+* Screenshot o immagine di marketing dell'attività dell'Ora del Codice. Invia almeno un'immagine con dimensioni 4: 3. Dovrebbe essere di almeno 520 pixel per 390 pixel. Questa immagine non deve contenere testo (a parte il tuo logo), in modo da renderla più accessibile a chi non parla inglese. Se non viene fornita un'immagine appropriata, potremmo acquisire il nostro screenshot del tuo tutorial OPPURE potremmo scegliere di non elencarlo. Tutte le immagini devono essere inviate come collegamento URL a un file .jpg, .jpeg o .png.
+* Per monitorare più accuratamente la partecipazione, i partner di tutorial di terze parti devono includere immagini di tracciamento di 1 pixel nella prima pagina dei loro tutorial dell'Ora del Codice. Consulta la sezione [ Pixel di monitoraggio ](#pixel) di seguito per ulteriori dettagli.
+* Al termine della tua attività, gli utenti devono essere indirizzati a [ code.org/api/hour/finish ](https://code.org/api/hour/finish) dove potranno: 
+    * Condividi sui social media che hanno completato l'Ora del Codice
+    * Ricevere un certificato che attesta che hanno completato l'Ora del Codice
+    * Vedere le classifiche sui paesi/città che hanno avuto il maggior numero di partecipazioni alle attività dell'Ora del Codice
+    * Per gli utenti che trascorrono un'ora sulla tua attività e non la completano, includi un pulsante sulla tua attività che dica "Ho finito la mia Ora del Codice" e che rimandi anche a [code.org/api/hour/finish](https://code.org/api/hour/finish).
+* (Facoltativo) Potremmo dare seguito a un sondaggio/modulo online che richiede un rapporto delle seguenti metriche di attività: 
+    * Per le attività online (in particolare le app per smartphone/tablet): 
+        * Numero di utenti
+        * Quanti hanno completato l'attività
+        * Tempo medio speso per svolgere il compito
+        * Numero totale righe di codice scritte da tutti gli utenti
+        * Quanti hanno proseguito svolgendo ulteriori attività (misurato come il numero di utenti che dopo aver terminato l'attività hanno iniziato altre attività sul tuo sito)
+    * Per attività non online 
+        * Numero di scaricamenti della versione cartacea dell'attività (se applicabile)
 
-#### Additional things you’ll need when submitting Robotics
+#### Altre cose di cui avrai bisogno quando invii Robotica
 
-* If you submit a robotics activity, we need to know the cost per student for robotics
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Se invii un'attività di robotica, dobbiamo conoscere il costo per studente per la robotica
+* Per valutare le attività di robotica da includere nel sito Web, è necessario che invii i kit di esempio ai revisori.
 
-[**Back to the top**](#top)
+[**Torna all'inizio**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## In che modo saranno valutate le attività
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Un comitato diversificato di docenti di informatica classificherà i corsi proposti sulla base di misure sia qualitative che quantitative. Verranno elencate tutte le attività che soddisfano i criteri di base. Gli insegnanti potranno filtrarle e ordinarle per trovare le migliori attività per la loro classe.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+La rubrica per la valutazione delle attività e dei programmi delle lezioni cercherà i seguenti criteri su tutte le attività e le classificherà di conseguenza:
 
-- High production quality
-- Promote learning by all demographic groups (esp. under-represented groups)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+- Alta qualità di produzione
+- Promuovono l'apprendimento di tutti i gruppi demografici (specialmente degli studenti sottorappresentati in informatica, come giovani donne, studenti appartenenti a gruppi razziali ed etnici emarginati e studenti con disabilità)
+- Educativo (insegna bene i concetti di informatica)
+- Divertente e coinvolgente
+- Incoraggia gli studenti a creare qualcosa di unico da condividere (Per studenti più giovani: con genitori e compagni di classe. Per studenti più anziani: su Internet)
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+Se il comitato di revisione valuta l'attività a zero in termini di qualità della produzione (a causa di errori o istruzioni che ne rendono molto difficile l'uso), nel promuovere l'apprendimento in gruppi sottorappresentati (a causa di materiale razzista/sessista), nel valore educativo (non insegna Concetti informatici), o divertente/coinvolgente (poiché è difficile/scoraggiante da elaborare per gli studenti), l'attività non verrà elencata.
 
-In addition, in order to be listed, all activities must:
+Inoltre, per essere elencate, tutte le attività devono:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase) For self-directed activities for new teachers and students the review committee will be looking for whether:
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+- Essere appropriato per un'aula di una scuola pubblica (niente armi, nessun contenuto esplicito/maturo, nessun contenuto religioso, ecc.)
+- Non richiedono l'iscrizione 
+- Non richiedono alcun pagamento (eccezione per le attività di robotica che possono richiedere l'acquisto di robot/kit) Per le attività autogestite per nuovi insegnanti e studenti, il comitato di revisione cercherà di vedere se:
+- Gli insegnanti possono utilizzare il tutorial o l'attività senza alcuna formazione in informatica
+- Gli insegnanti possono riuscire nell'attività senza alcuna formazione in informatica
+- Gli studenti possono districarsi durante il tutorial senza la guida dei genitori o dell'insegnante
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Insegnanti e studenti potranno cercare e filtrare il nostro elenco di attività in base a filtri come voto, livello di esperienza, materia, hardware, ecc. Per impostazione predefinita, mostreremo prima i piani delle lezioni e le attività che:
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+- Ricevono i voti più alti dal comitato di revisione
+- Sono attività autogestite di un'ora progettate per principianti (studenti e insegnanti)
+- Attraggono una vasta gamma di utenti (attraverso piattaforme, lingue ed età)
+- Non richiedono alcuna installazione
+- Sono nuove quest'anno
 
-[**Back to the top**](#top)
+[**Torna all'inizio**](#top)
+
+<a id="earlyreview"></a>
+
+## Linee guida per la presentazione di una revisione qualitativa anticipata (NOVITÀ)
+
+Qualsiasi attività inviata tra il 30 aprile e il 16 agosto riceverà una revisione qualitativa da almeno tre membri del [comitato di revisione delle attività dell'Ora del Codice](/review-comm Committee).
+
+I revisori si concentreranno sulla fornitura di quanto segue:
+
+* Feedback positivo: Cosa funziona bene?
+* Feedback critico: Cosa si potrebbe migliorare?
+* Anomalie o errori: sono presenti anomalie, errori di sintassi o errori grammaticali? In caso affermativo, in quale parte dell'attività?
+* Questa attività incoraggia gli studenti a creare qualcosa di unico?
+
+Nota: queste sono le linee guida generali per fornire un commento. La revisione anticipata della tua attività può includere commenti su tutte queste categorie oppure può includere commenti solo in una o due. Tra l'altro non esiste **nessuna garanzia che individueremo tutte le anomalie o problemi in un'attività**.
+
+**La revisione iniziale non è un'opportunità per raccogliere commenti su un'attività incompiuta. Qualsiasi attività che un revisore considera del tutto incompleta da valutare non verrà rivista.**
+
+Tutte le attività inviate per una revisione anticipata riceveranno un riscontro entro il 1 settembre. Forniremo anche un collegamento a un modulo che puoi utilizzare per spiegare modifiche specifiche apportate a un'attività in risposta ai commenti.
+
+Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, indipendentemente dal fatto che riceva una revisione anticipata o meno. Durante il periodo di revisione standard (settembre-ottobre), i revisori si concentreranno sulla valutazione delle attività secondo i criteri descritti nella sezione "Come verranno valutate le attività" sopra. A meno che non si notino modifiche specifiche a un'attività, i revisori possono e probabilmente faranno affidamento sui commenti delle revisioni anticipate per valutare le attività.
+
+[**Torna all'inizio**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Suggerimenti per la progettazione di tutorial autoguidati di un'ora
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Puoi includere il [logo dell'Ora del Codice](https://hourofcode.com/us/promote/resources#logo) nel tuo tutorial, ma questo non è obbligatorio. Se si utilizza il logo dell'Ora del Codice vedi le linee guida sul marchio qui in basso. <u>In nessun caso è possibile utilizzare il logo e il nome Code.org.</u> Entrambi sono marchi registrati e non possono essere combinati con un marchio di terze parti senza espressa autorizzazione scritta.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Assicurati che uno studente medio possa finire comodamente in un'ora** Considera l'idea di aggiungere un'attività a tempo indeterminato alla fine per gli studenti che procedono più rapidamente durante la lezione. Ricorda che la maggior parte dei bambini saranno completamente a digiuno di informatica e programmazione.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Includi le note dell'insegnante.** La maggior parte delle attività dovrebbe essere diretta dagli studenti, ma se un'attività è facilitata o gestita da un insegnante, includi istruzioni chiare e semplici per l'insegnante sotto forma di note dell'insegnante in un URL separato inviato con la tua attività. Non sono solo gli studenti ad essere principianti, lo sono anche alcuni insegnanti. Includi le informazioni utili come:
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+- Su quali piattaforme e browser funziona meglio il tutorial?
+- Funziona sugli smartphone? Sui Tablet?
+- Si consiglia la programmazione in coppia? 
+- Considerazioni per l'uso in una classe? Per esempio, se ci sono video, consiglia agli insegnanti di mostrare i video su uno schermo proiettato affinché l'intera classe possa vederli insieme
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!")
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Incoraggia gli studenti a condividere quanto fatto sui social media (se appropriato) quando hanno finito.** Ad esempio "ho fatto un'Ora di Codice con ________ E tu? #HourOfCode" oppure "Ho fatto #HourOfCode prendendo parte alla #CSEdWeek. E tu? @Scratch." Utilizza l'hashtag **#HourOfCode** (con lettere H, O e C maiuscole)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Crea la tua attività in Italiano o altre lingue oltre l'Inglese.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Spiega o collega l'attività a un contesto sociale significativo.** La programmazione di computer può diventare un superpotere se gli studenti si rendono conto di quanto può cambiare il mondo il meglio!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Assicurati che il tuo tutorial possa essere utilizzato in un paradigma di [Programmazione in coppia.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)** Ciò è particolarmente utile per l'Ora del Codice perché molte classi non dispongono di hardware 1: 1 per tutti gli studenti.
 
-[**Back to the top**](#top)
+[**Torna all'inizio**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Linee guida sui Marchi Registrati
 
-Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
+Molti dei nostri partner hanno utilizzato il nostro marchio "Hour of Code" sui loro siti web. Non vogliamo impedire questo uso, ma vogliamo verificare che esso rispetti alcuni vincoli:
 
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-3. Include language on the page (or in the the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that says the following: a. “The '[Hour of Code](http://hourofcode.com)™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.”
+1. Qualsiasi riferimento a "Hour of Code" ("Ora del codice") deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune. Un esempio di uso corretto: "Partecipa all'Ora del Codice sul sito di ACMECorp.com". Un esempio di uso scorretto: "Prova l'Ora del Codice di ACME Corp".
+2. Utilizza un apice "TM" dove menzioni "Ora del Codice" o "Hour of Code", sia sul tuo sito web sia nelle descrizioni delle app.
+3. Includi una nota nella pagina (o nel piè di pagina), che contenga i collegamenti ai siti web CSEdWeek e Code.org e indichi quanto segue: “L'[Ora del Codice](http://hourofcode.com)™' è un'iniziativa a livello nazionale della [Settimana dell'educazione informatica](http://csedweek.org) e di [Code.org](http://code.org) per presentare a milioni di studenti un'ora di informatica e di programmazione dei computer ".
 4. Non è concesso alcun uso di "Ora del Codice" o "Hour of Code" nei nomi delle app.
 
-[**Back to the top**](#top)
+[**Torna all'inizio**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Pixel di Tracciamento
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Per monitorare in modo più accurato la partecipazione, chiediamo a ogni partner del tutorial di includere un'immagine di monitoraggio di 1 pixel nella prima pagina dei tutorial dell'Ora del Codice. L'immagine pixel deve essere solo sulla pagina iniziale. Non includerla in nessuna pagina provvisoria del tuo tutorial.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora del Codice. Porterà a conteggi di partecipazione più accurati per il tuo tutorial.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Se il tuo corso viene approvato e incluso nell'elenco finale dei corsi, Code.org ti fornirà uno specifico pixel di tracciamento che potrai integrare nel tuo corso. Vedi l'esempio in basso.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+NOTA: questo non è importante per le app installabili (app iOS/Android o app installate sul desktop)
 
-Example tracking pixels for AppInventor:
+Pixel di monitoraggio di esempio per Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
+IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Torna all'inizio**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Come promuovere le tue attività, la Settimana dell'Insegnamento dell'Informatica e l'Ora del Codice
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach 100 million total participants.
+Promuovi la tua attività nella tua rete! Indirizzali alla tua pagina dell'Ora del Codice. I tuoi utenti saranno molto più propensi ad iniziare l'attività ricevendo da te una messaggio di posta elettronica riguardante i tuoi corsi. Utilizza la campagna internazionale dell'Ora del Codice per la Settimana dell'Educazione Informatica come un pretesto per incoraggiare gli utenti a invitare altri a partecipare, aiutaci a raggiungere più studenti.
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our resource kit for further information (coming soon).
+- Presenta l'Ora del Codice e la settimana dell'insegnamento dell'informatica sul tuo sito web. Esempio: <http://www.tynker.com/hour-of-code>
+- Promuovi l'Ora del Codice utilizzando i sociali network, i media tradizionali, le mailing list, ecc, usando l'hashtag #HourOfCode (con le lettere H, O e C maiuscole)
+- Organizza un evento o chiedi ai tuoi dipendenti di organizzare un evento nelle scuole o nelle associazioni della tua città.
+- Vedi il nostro [kit di risorse](https://hourofcode.com/us/promote) per ulteriori informazioni.
 
-[**Back to the top**](#top)
+[**Torna all'inizio**](#top)
 
 {{ signup_button }}

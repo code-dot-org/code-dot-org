@@ -1,0 +1,32 @@
+name 'Episode 2 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+On the next level, you will choose to Create an Interactive Card (Sprite Lab) or Build an App (App Lab) using either the Beginner or Intermediate toolboxes. We can't wait to see what you make!
+
+## Ideas
+
+Not sure where to start? Here are some sample projects to help get the ideas flowing. 
+
+### Sprite Lab Sample Projects
+
+**Beginner:** [A Gift for You!](https://studio.code.org/projects/spritelab/XCyOgX2NKtObjcJEFnhgMJeeahzqyLwS9DGrFrAE_k8/view)
+
+**Intermediate:** [Thank You Card](https://studio.code.org/projects/spritelab/DFcg2XQaIloEKvImk8tAr49NcMeN1iQ9Yr94KnIYwj0/view)
+
+![](https://images.code.org/443e5c3c12152154f3d29f05bfe85d9c-image-1585346335208.gif) ![](https://images.code.org/116fe1d839eb232c638b5af4de07a623-image-1585531340825.gif)
+
+### App Lab Sample Projects
+
+**Beginner:** [Bird Quiz](https://studio.code.org/projects/applab/6WebEn6RssbiNnU8e70Xnr2M2t7erBNtLuexmgBTwzU/view) 
+
+**Intermediate:** [Space Math](https://studio.code.org/projects/applab/OrfiGdrp0Pa9s_rtzFeXCgYZtfz6GNAOh4rxhaaAfQA/view)
+
+![](https://images.code.org/2061a04708fe4970d2717d7dc04ab3a3-image-1585336901179.gif) ![](https://images.code.org/00ee4b4d96a030dabb170d5e4ff79a1c-image-1585343519695.gif)
+MARKDOWN

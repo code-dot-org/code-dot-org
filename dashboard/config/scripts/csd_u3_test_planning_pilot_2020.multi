@@ -1,0 +1,9 @@
+name 'CSD U3 Test planning_pilot_2020'
+title 'Question 4'
+question 'Which of the following is NOT best to decide before beginning to write code for a program?'
+
+wrong 'The general purpose and design of the program.'
+wrong 'What kinds of variables and functions you will need to make it work.'
+wrong 'How the user will interact with the program.'
+right 'How many lines of code you want to write.'
+wrong 'What types of media, such as pictures or sounds, you will need.'

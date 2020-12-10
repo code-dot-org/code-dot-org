@@ -1,7 +1,7 @@
 professional_learning_course 'CS Principles Support'
-login_required 'true'
+login_required true
 
-stage 'Challenge Overview'
+lesson 'Challenge Overview', display_name: 'Challenge Overview'
 level 'CSPPD3-u3 challenge overview'
 level 'CSPPD3-u3 what is a challenge'
 level 'CSPPD3-u3 completing the challenge'
@@ -9,15 +9,16 @@ level 'CSPPD3-u3 list of challenges'
 level 'CSPPD3-u2 expectations'
 level 'CSPPD3-u3 pick a challenge'
 
-stage 'Complete the Challenge' 
-level  'CSPPD3-u3 complete the challenge overview'
+lesson 'Complete the Challenge', display_name: 'Complete the Challenge'
+level 'CSPPD3-u3 complete the challenge overview'
 level 'CSPPD3-u3 do the challenge'
 level 'CSPPD3-u2 create your extension'
 level 'CSPPD3-u2 reflect on challenge'
 
-stage 'Share out and Submit' 
-level  'CSPPD3-u3 share out overview'
+lesson 'Share out and Submit', display_name: 'Share out and Submit'
+level 'CSPPD3-u3 share out overview'
 level 'CSPPD3-u3 post to forum'
 level 'CSPPD3-u3 submit forum link'
 level 'CSPPD3-u2 final progress check'
 level 'CSPPD3-u3 post survey'
+

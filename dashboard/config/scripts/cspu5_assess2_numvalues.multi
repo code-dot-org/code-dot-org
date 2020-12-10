@@ -1,32 +1,39 @@
 name 'cspu5_assess2_numValues'
-encrypted '6E4gxeR4Y7d9OlI6O3lrYn36uBs+AjzcWL+eLHnlQVYVqh8PYaMuvh0QF6Z+
-WcrhcBomhDRQf2JyZNIRdnxF7CYVXVxjOXBK+N6kgDVzTyMcIE0pk5/owKHI
-fDw9FtgHPh2TsI5HZL5JZ6lvItzuBcNeM+NDXlsmOaVUoVhmIc3os6kXJSyO
-PK3If8jkBTctZjDO95tMz7F91OrZv3JUxBLwKulg6R5onogyBosM0/Sijj7F
-jfmwtHPIOW5uZcpXjKizHckGFUlqDYu7JigoGyXEWN4HK7EGr938TVC4hQdE
-/NTLQ/NnD+/Gv3OOZDSZ2Ji6gBmGb5g3tKY/R+PoZ5cCWc4MvuD7FJWY3oli
-GmT8jlnrkXUtsmLvks4TK4k3HVCQITZBRhuIFSOBxuopf5jrCYDVAmFEJMws
-w5jcqfbyvtd8IqNojK9qZENGcAFoFOQgM0x+FzE2jADYFw89LAlxRIh2fM0o
-kLsQHdu7Z7BPSgu6tOICDzrplP3fTOfxz/Rk+hhIsqdZ6mI/WReDmGYrJC7Z
-Ypm73f1fq4ZWgBQz7YbIKQBagaNtDyZfJal8omHHtObsY34auBv6aYcaz2iE
-i3s1TODGkq7tyuobNhROhL12fZ2PH1DFs9EoCdkRQzp5IOKnDN0Le8B2VDlg
-pUllrx4sQgLVomoaAdYXztXu6f0RfApBNjGVwC48iqEsIC5XjTCfWpUY4a83
-dMcx4jxScqw4cS6w0c9F9HCGAW9NVmt+NQhGy3bidw0LWBZSb27J/ktOab1+
-etCpzfX9b/cFMW+1tL5cdJ2dGavd1YTxdw8oc5qCrmz0VJfbnOiGotM0xPnl
-EsHSDkHKszM9g9i9k5nGNjZgmh4UHTxmEu81TDOyicWtjzhXnr9XV4wITFXu
-JGjVdAVxn4JB3PFgwq5i28G5D3ZH2uZfX8rVO2KC+HmuxyMNhE2hcnm+09x6
-Zo9UukQMvjxR43Ky/jhf5fRfueVKTuUljItZxlbTmMNsQUs7vT3iNBGohBj6
-hz8zN/4tM08NktaAtTMBB3KuzUY62nI35Ae3vHvi+SC0LFx4d6zPq7wClBbe
-u3GqQhpYKXCzaBBLregV+Qk1yGw2YhDXuqN+EYaxvAxPHIIM+Isbtv53d0YN
-xySBe+Chx3D1/o5OIYtiVxgbs2RvzW5xfu+SLb6oMwKo+3jrMpAKn0uUk72Y
-fMffeNYN2UEYHQgQG0uPdPDSU+MQvv09/MUlUVU1ga2gTL1BRp0K21E1fDcq
-hlMj8o8YYRJfhifp7e7NlxZk4xmN43A5KThsZGWH9G+52LP7AqN55Ck23jP/
-J8kwXcqQsbP1SvjjwuvH1VlLTvlZ6fScDuuMMEqHMS6h80SRyQS/x2kOSIxA
-0/fOB6gwyzd//2QJlz4riDGbTYE9YBhchiPx6zarJCR/U9WF9WSwFc5npeO/
-sJnC88Viq8poys+UNTQxopgGf8zpJ9UQerSt4nboboTQ71kh0U6ynAOYhrVG
-nxjR0UKvghs5ajQR/ltYiutH8HhEIT/jGb0BwTkxl93qGIn96/gk8RsY3C/A
-F+uupCjF1pVMFu7P0JTNb43pDHPRVpbSi2maNE1IIHO3TiNwI2UW5S/pamz2
-ak3Z1yIM+yEYJLa/A/zj2RHuLDqBNZG2zwAyRSOUMKZo/yEcAl3T4Ev+x1nJ
-y0D0ANW0rylN9MY6OfqxVcCv31UrcTHK1Vx6DdxF/DuJgE8OwQOxOCXjRo2X
-tOfE4ebc3sB3So3Zn7eiGOQehrablKY=
-'
+editor_experiment ''
+wrong 'The code will display the middle of all three values'
+wrong 'The code will display the smallest of the three values'
+right 'The code will display the largest of the three values'
+wrong 'The code will always display the value stored in variable `a`'
+wrong 'The code will not display anything due to an error'
+
+markdown <<MARKDOWN
+![](https://images.code.org/dcb91471aad876e5ed307b66648c2f1e-image-1475996573144.png)
+
+Consider the code segment below given in pseudo code (see reference above).  Assuming that variables a, b and c *already have numeric values assigned to them*, what is the expected output of this code segment?
+
+
+    val <- a
+    IF(b >= a AND b >= c){
+    	val <- b;
+    }
+    ELSE 
+    {
+      IF (c >= a AND c >= b)
+        {	
+        val <- c;
+        }
+    }
+    DISPLAY (val);
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8, 9** - compound conditionals and else-if
+
+Going through this code line by line:
+
+* Set `val` to `a` -- assume it's the largest
+* If `b` is bigger than both `a` and `c` -- then b is the largest
+* Else if `c` is bigger than both `a` and `b` -- then c is the largest
+
+Display `val` which should be the largest of the 3.
+MARKDOWN

@@ -24,7 +24,9 @@ class Announcements
   end
 
   def self.load_announcements
-    unless @@load_error || @@loaded
+    # Reloads JSON file with announcement data on each page load
+    # in non-production environments
+    unless (@@load_error || @@loaded) && Rails.env.production?
       unless File.file?(@@json_path)
         @@load_error = true
         return

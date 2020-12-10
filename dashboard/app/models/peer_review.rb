@@ -8,7 +8,7 @@
 #  from_instructor :boolean          default(FALSE), not null
 #  script_id       :integer          not null
 #  level_id        :integer          not null
-#  level_source_id :integer          unsigned, not null
+#  level_source_id :bigint           unsigned, not null
 #  data            :text(65535)
 #  status          :integer
 #  created_at      :datetime         not null
@@ -26,7 +26,7 @@
 
 require 'cdo/shared_constants'
 
-class PeerReview < ActiveRecord::Base
+class PeerReview < ApplicationRecord
   include SharedConstants
   include LevelsHelper
   include Rails.application.routes.url_helpers
@@ -39,7 +39,7 @@ class PeerReview < ActiveRecord::Base
 
   validates :status, inclusion: {in: %w{accepted rejected}}, if: -> {from_instructor}
 
-  after_update :mark_user_level, if: -> {status_changed? || data_changed?}
+  after_update :mark_user_level, if: -> {saved_change_to_status? || saved_change_to_data?}
 
   SYSTEM_DELETED_DATA = ''.freeze
 
@@ -54,7 +54,7 @@ class PeerReview < ActiveRecord::Base
     append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
   end
 
-  after_save :send_review_completed_mail, if: -> {status_changed? && (accepted? || rejected?)}
+  after_save :send_review_completed_mail, if: -> {saved_change_to_status? && (accepted? || rejected?)}
   def send_review_completed_mail
     PeerReviewMailer.review_completed_receipt(self).deliver_now
   end

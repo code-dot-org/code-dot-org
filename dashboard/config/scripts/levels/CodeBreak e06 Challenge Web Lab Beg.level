@@ -1,0 +1,30 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-04-27T14:19:43.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "**Do This:** Build a simple website using the following tags:\r\n\r\n`<h1> Header </h1>`\r\n* Titles, or heading sections\r\n\r\n`<p> Paragraph text </p>`\r\n* Any regular text on your website\r\n\r\n`<img src=\"URL GOES HERE\">`\r\n* Images\r\n\r\n`<a href=\"LINK GOES HERE\">`\r\n* Links to other pages in your website. May looks something like this: \r\n\t* `<a href=\"cats.html\">`\r\n    * `<a href=\"index.html\">`\r\n\r\nNeed help? Rewatch the videos on Level 2. ",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "parent_level_id": 23233,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Beginner Challenge",
+    "bubble_choice_description": "Basic HTML page with no CSS. Focus on using tags correctly.",
+    "thumbnail_url": "https://images.code.org/9aff3eef0de1be28a9f3ef48917fa323-image-1587997340936.png"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:42:09 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-07-14 17:05:33 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-27 01:44:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-02-27 01:46:06 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-02-27 01:51:20 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-07-12 20:47:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:53:22 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-05-23 00:23:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-10-03 22:44:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-24 15:59:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-24 17:11:50 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-24 18:27:43 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-27 14:27:04 +0000\",\"changed\":[\"long_instructions\",\"start_sources\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-27 14:27:36 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-27 14:27:54 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

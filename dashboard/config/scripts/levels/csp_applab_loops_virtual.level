@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-17T16:56:11.000Z",
+  "level_num": "custom",
+  "user_id": 684,
+  "properties": {
+    "video_key": "csp_applab_loops",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16954,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-12 14:58:47 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-03 15:32:15 +0000\",\"changed\":[],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"},{\"changed_at\":\"2017-11-03 15:32:50 +0000\",\"changed\":[\"instructions\"],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

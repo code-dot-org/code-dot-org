@@ -1,84 +1,140 @@
 ---
-title: How-to Anleitung
+title: Hour of Code - So funktioniert es
 ---
 
 {{ signup_button }}
 
-# One hour of code - Wie Sie es in Ihrer Klasse unterrichten
+# So planen Sie Ihre Hour of Code 
 
-### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! Wenn Sie zusätzliche Kräfte zur Unterstützung benötigen, dann können Sie einen [ örtlichen Freiwilligen ]({{ urls/volunteer_local }}) finden, der Ihnen hilft, One Hour of Code in Ihrer Klasse auszuführen.
+### Schließen Sie sich der Bewegung an und führen Sie Ihre SchülerInnen mit diesen Schritten an die Informatik heran.
 
-### Werfen Sie einen Blick auf unseren [Teilnahme Leitfaden]({{ localized_files/participation_guide }}), falls Sie noch Fragen haben.
+Rechnergestütztes Denken fördert Problemlösungsfähigkeiten, Logik und Kreativität. Gleichzeitig verändert die Technologie jede Branche auf diesem Planeten. Die SchülerInnen von heute müssen lernen, wie man Technologie schafft und nicht nur, wie man sie verwendet. Wenn sie früh anfangen, haben sie damit eine Basis für ihren Erfolg in jedem Berufsbild des 21. Jahrhunderts.
+
+Eine Hour of Code auszuprobieren ist eine einfache und unterhaltsame Möglichkeit, SchülerInnen vielleicht zum allerersten Mal an die Informatik heranzuführen. Diese Methode eignet sich darüber hinaus ideal sowohl für den Unterricht als auch für Aktivitäten nach der Schule. Sollten Sie noch Fragen haben, lesen Sie bitte unseren[Leitfaden für die Teilnahme]({{ localized_files/participation_guide }}). 
+
+- [Sehen Sie sich das Anleitungs-Video zur Hour of Code an](#how-to-video)
+- [Erkunden Sie die Aktivitäten und Tutorien](#explore-activities)
+- [Erstellen Sie Ihren Plan für den Tag](#create-your-plan)
+- [Machen Sie Werbung für Ihre Hour of Code ](#promote-your-hour)
+- [So haben Sie einen guten Start bei der Hour of Code](#how-to-start)
+- [Steigen Sie in das Schreiben von Code ein](#code)
+- [Feiern Sie den Erfolg Ihrer SchülerInnen](#celebrate)
+- [Weitere Hour of Code-Ressourcen für Unterrichtende](#other-resources)
+
+### Sie können eine Hour of Code auch virtuell moderieren! Schauen Sie sich zum Einstieg unsere [Tipps für das Moderieren einer virtuellen Hour of Code Veranstaltung](https://hourofcode.com/us/how-to/virtual) an.
 
 * * *
 
-## 1. Schauen Sie sich dieses Tutorialvideo an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Wählen Sie ein Tutorial für Ihre Stunde aus
+## 1. Sehen Sie sich das Anleitungs-Video zur Hour of Code an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-Wir bieten eine Vielzahl von unterhaltsamen, [von Schüler für Schüler Tutorials]({{ urls/learn }}) für alle Alters- und Erfahrungsgruppen an. Studenten führen die Aktivitäten selbständig durch, obwohl viele Aktivitäten die Unterrichtsplanung für Lehrer beinhalten (Sie sehen den Link, wenn Sie auf die Aktivität klicken), das Leiten von Diskussionen oder das Ausweiten von Aktivitäten. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+* * *
 
-## 3. Machen Sie Ihre "Hour of Code" bekannt
+<a id="explore-activities"></a>
 
-Machen Sie [mit diesen Unterlagen]({{ urls/promote_resources }}) Werbung für Ihre "Hour of Code" und ermutigen Sie andere ihre eigenen Veranstaltungen durchzuführen.
+## 2) Erkunden Sie die Aktivitäten und Tutorien
 
-## 4. Planen Sie ihren Bedarf an technischer Ausstattung - Computer sind nicht immer erforderlich
+Wir bieten eine Vielzahl von unterhaltsamen, [für SchülerInnen konzipierte Tutorials]({{ urls/learn }}) für jede Alters- und Erfahrungsgruppe an. SchülerInnen arbeiten gerne mit selbstgesteuerten Tutorials. Viele Aktivitäten verfügen aber darüber hinaus auch Unterrichtspläne für Lehrer zur Anleitung von Diskussionen oder die Erweiterung der Aktivität. 
 
-Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Aber sie brauchen nicht für jedes Kind einen Computer, und man kann eine "Hour of Code" auch komplett ohne Computer durchführen.
+Sehen Sie sich die Aktivitäten an und entscheiden Sie bereits im Vorfeld, ob Sie ein einziges Tutorial für alle SchülerInnen auswählen wollen oder jedes Kind ein eigenes Tutorial wählen lassen. 
 
-Testen Sie Tutorials auf den Schüler-Computern oder Geräten. Stellen Sie sicher, dass sie im Browser mit Ton und Video ordnungsgemäß funktionieren. **Haben Sie eine niedrige Bandbreite?** Zeigen Sie Videos vor der Klasse, so dass nicht jeder Schüler seine eigenen Videos herunterlädt. Oder probieren Sie die offline-Tutorials.
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle welche mitzubringen, wenn das ausgewählte Tutorial am Besten mit Sound funktioniert.
+* * *
 
-**Nicht genügend Geräte?** Versuchen Sie es mit [*Pair programming*](https://www.youtube.com/watch?v=vgkahOzFH2Q). Wenn Schüler in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf den Lehrer angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
+<a id="create-your-plan"></a>
 
-<img src="/images/fit-350/group_ipad.jpg" />
+## 3. Erstellen Sie Ihren Plan für den Tag
 
-## 5. Beginnen Sie Ihre "Hour of Code" mit einem inspirierenden Vortrag oder einem Video
+### Denken Sie über die technologische Anforderungen Ihres Projekts nach - die Verwendung von Computern ist optional! 
 
-**Laden Sie einen [lokalen Freiwilligen]({{ urls/volunteer_local }}) ein, um Ihre Schüler zu inspirieren, indem Sie über die Bandbreite der Möglichkeiten in der Informatik sprechen.** Es gibt Tausende von Freiwilligen auf der ganzen Welt, die bereit sind, Ihnen bei Ihrer Hour of Code entweder durch einen Besuch im Klassenzimmer oder einen Videochat mit Ihren Schülern zu helfen!
+- Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Es ist zum einen nicht erforderlich, dass jedes Kind einen eigenen Computer vor sich hat - und eine Hour of Code kann man sogar ganz ohne Computer veranstalten! Für [Aktivitäten ohne Computer ](/learn) filtern Sie einfach im Bereich „Technologie der Klasse“ Optionen „ohne Computer oder Geräte“ heraus. 
+- Testen Sie Tutorials auf den Computern oder Geräten der SchülerInnen. Prüfen Sie, Ton und Video im Browser ordnungsgemäß funktionieren. Schwaches Internet? Planen Sie mit ein, Videos von Ihrem Computer aus für die ganze Klasse zu zeigen. So müssen die SchülerInnen nicht aller das gleiche Video selbst herunterladen. Oder schauen Sie sich die Tutorials zu Aktivitäten ohne Computer an. 
+- Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle welche mitzubringen, wenn das ausgewählte Tutorial am Besten mit Sound funktioniert.
+- Nicht genug Geräte? Dafür bietet sich das Konzept der [Paarprogrammierung](https://www.youtube.com/watch?v=vgkahOzFH2Q) an. Wenn Schüler in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf den Lehrer angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
 
-**Zeigen Sie ein inspirierendes Video:**
+<img src="/images/fit-600/group_ipad.jpg" />
+
+### Wählen Sie einen Tag und eine Uhrzeit 
+
+Menschen auf der ganzen Welt feiern in der Woche des Informatikunterrichts (9. bis 13. Dezember), wenn die neuesten Tutorials und Aktivitäten herauskommen, eine eigene Hour of Code. Aber jeder Tag ist ein guter Tag, um eine Hour of Code zu veranstalten! 
+
+* * *
+
+<a id="promote-your-hour"></a>
+
+## 4. Werben Sie für Ihre Hour of Code
+
+Wenn die Planung für Ihr Ereignis steht, sollten Sie mit der Werbung dafür beginnen! 
+
+### Informieren Sie die Schule und Ihre Community 
+
+Machen Sie bei anderen Lehrern, die dieses tolle Ereignis vielleicht auch veranstalten möchten, Werbung für die Hour of Code. Es ist auch eine großartige Möglichkeit, die Schulpflegschaft anzusprechen oder die Eltern über Newsletter darüber zu informieren, dass ihre Kinder möglicherweise demnächst nach Hause kommen und dort weitere Aktivitäten oder Tutorials ausprobieren möchten! 
+
+### Informieren Sie Freiwillige, indem Sie Ihre Veranstaltung registrieren 
+
+Wenn Sie [ Ihre Hour of Code-Veranstaltung registrieren ](/), erhalten Sie hilfreiche E-Mails mit aktuellen Informationen und Tipps für das Moderieren einer erfolgreichen Hour of Code. So wissen dann auch lokale Freiwillige Bescheid darüber, dass Ihre Schule daran teilnehmen wird. Freiwillige sind extrem hilfreich für eine solche Veranstaltung und können in Ihrer Stunde über Informatik referieren oder den SchülerInnen bei den Hour of Code-Aktivitäten helfen. 
+
+### Begeistern Sie Ihre Klasse 
+
+Präsentieren Sie vor der Veranstaltung [ motivierende Videos ](/promote/resources), die vielfältige Menschen und kreative Anwendungsbereiche der Informatik zeigen. Oder bestellen inspirierende Poster für Ihre Klasse! Wenn SchülerInnen Menschen sehen, mit denen sie sich identifizieren können, lassen sie sich leichter für das Mitmachen bei einem Fach begeistern. 
+
+{{ promote_new_posters }}
+
+Erfahren Sie mehr über Poster, Videos, Sticker und andere Methoden, um in Ihrer Community Werbung für [ Ihre Veranstaltung ](/promote/resources#posters) zu machen. 
+
+* * *
+
+<a id="how-to-start"></a>
+
+## 5. So haben Sie einen guten Start bei der Hour of Code
+
+Wenn die Zeit für Ihre Veranstaltung zur Hour of Code Festes gekommen ist, nutzen Sie diese Methoden und Tipps für einen guten Start. 
+
+Laden Sie einen [lokalen Freiwilligen]({{ urls/volunteer_local }}) ein, der Ihre SchülerInnen mit einem Vortrag über vielfältigen Möglichkeiten der Informatik begeistert. Es gibt tausende Freiwillige weltweit, die Sie und Ihre Hour of Code gerne mit einem Unterrichtsbesuch oder einem Video-Chat mit Ihren SchülerInnen unterstützen möchten! 
+
+Zeigen Sie ein inspirierendes Video:
 
 - Das originale Code.org Einführungsvideo mit Bill Gates, Mark Zuckerberg und dem NBA Star Chris Bosh. (Es stehen mehrere Versionen zur Verfügung: [1 Minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 Minuten](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9 Minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Hier finden Sie weitere motivierende [Ressourcen ]({{ urls/inspire }}) und [ Videos ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP). 
 
-**Es ist in Ordnung, wenn sowohl Sie als auch Ihre Schüler ganz neu in der Informatik sind. Hier sind einige Ideen, um Ihre Hour of Code Aktivität vorzustellen:**
+Es ist kein Problem, wenn Sie und Ihre SchülerInnen bisher überhaupt nichts mit Informatik zu tun hatten. Hier einige Ideen, wie Sie ihnen Ihre Hour of Code Aktivität vorstellen könnten:
 
-- Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die Jungen und Mädchen interessieren (Sprechen Sie über Apps und Technologien, die eingesetzt werden, um Leben zu retten, Menschen zu helfen, Menschen zu verbinden etc.).
+- Erklären Sie anhand von für Jungen und Mädchen interessanten Beispielen, wie Technologien unser Leben beeinflussen (z. B. Leben retten, Menschen helfen, Menschen miteinander verbinden, usw.). 
 - Zählen Sie gemeinsam Dinge auf, die im Alltag Computerprogramme nutzen.
-- [Hier]({{ urls/girls }}) finden Sie Tipps, wie Sie Mädchen für Informatik begeistern können.
+- Sehen Sie sich [hier]({{{ urls/girls }}}) Tipps an,wie man junge Frauen für die Informatik interessieren kann.
 
-## 6. Programmieren!
+* * *
 
-**Bringen sie ihre Student zu ihrer Aktivität**
+<a id="code"></a>
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+## 6. Beginnen Sie, Code zu schreiben
 
-**When your students come across difficulties it's okay to respond:**
+Erklären Sie den SchülerInnen, wie sie ihre Aktivität finden 
 
-- "Ich weiß es nicht. Lass uns das Problem gemeinsam lösen."
+- Schreiben Sie den Link für das Tutorial auf ein Whiteboard. Sie finden den Link in den [Informationen für Ihr ausgewähltes Tutorium]({{{{ urls/learn }}) unter der Anzahl der Teilnehmer.
+
+Wenn Ihre Studenten auf Schwierigkeiten stoßen, können Sie sagen:Wenn Ihre SchülerInnen auf Schwierigkeiten stoßen, können Sie sagen: 
+
+- Ich weiß es nicht. Wir sollten gemeinsam darüber nachdenken."
 - "Die Technik funktioniert nicht immer so, wie wir es wollen."
-- "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
+- "Programmieren lernen ist wie das Lernen einer Fremdsprache - wir beherrschen das niemals gleich fließend.""
 
-**Was mache ich, wenn ein Schüler früher fertig wird?**
+Was mache ich, wenn ein Schüler/eine Schülerin früher fertig ist? 
 
 - Die Schüler können alle Tutorials sehen und [eine weitere Hour of Code Aktivität versuchen]({{ urls/learn }}}).
-- Oder Sie bitten die Schülerinnen und Schüler, die früher fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.
+- Oder Sie bitten die Schülerinnen und Schüler, die früh fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.
+
+* * *
+
+<a id="celebrate"></a>
+
+## 7. Feiern Sie den Erfolg Ihrer SchülerInnen
 
 [col-33]
 
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
-
-## 7. Feiern
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
@@ -87,24 +143,17 @@ Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle
 - [Bestellen Sie individuelle T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für Ihre Schule.
 - Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
-[col-33]
+* * *
 
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+<a id="other-resources"></a>
 
 ## Weitere Hour of Code-Ressourcen für Unterrichtende:
 
-- Besuche das [Hour of Code Forum für Unterrichtende](http://forum.code.org/c/plc/hour-of-code) um Rat, Vorschläge und Unterstützung von anderen Unterrichtenden zu erhalten.
+- Besuchen das [Hour of Code Forum für Unterrichtende](http://forum.code.org/c/plc/hour-of-code) um Rat, Vorschläge und Unterstützung von anderen Unterrichtenden zu erhalten.
 - Sehen Sie sich die FAW zu [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an.
 
-## Was kommt nach der Hour of Code?
+### Was kommt nach der Hour of Code?
 
-Die Hour of Code ist nur der erste Schritt einer Reise um mehr darüber zu lernen, wie Technologie funktioniert und wie Software Anwendungen geschrieben werden. Um weiter zu reisen:
-
-- Ermutigen Sie Ihre Schülerinnen und Schüler weiter [online zu lernen](%= resolve_url('https://code. org/learn/beyond') %).
-- Nehmen Sie an einem [eintägigen Workshop](%= resolve_url('https://code.org/professional-development-workshops') %) teil, um Anleitung eines erfahrenen Informatikberaters zu erhalten. (Nur für Lehrer/Veranstalter aus den USA!)
+Die Informatik muss nicht mit der Hour of Code enden! Unser Lehrplan ist webbasiert und steht Ihnen für immer zur freien Verfügung. [Erfahren Sie, wie](/beyond) Sie Informatik in Ihrer Schule einführen und Ihren SchülerInnen an das Fach heranführen können.
 
 {{ signup_button }}

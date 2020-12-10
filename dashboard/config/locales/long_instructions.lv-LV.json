@@ -1,0 +1,48 @@
+{
+  "lv-LV": {
+    "data": {
+      "long_instructions": {
+        "2-3 Artist 1 new": "Sveiks! Esmu mākslinieks. Tu vari uzrakstīt kodu, kas liks man uzzīmēt gandrīz jebko. Izmanto dažus blokus, lai pārzīmētu pelēkās līnijas attēlā. (Katra līnija ir 100 pikseļus gara)",
+        "2-3 Artist 2 new": "Šai mājai ir pa pusei pabeigta siena. Katrai pusei ir 100, bet puspabeigtai sienai - tikai 50. Pabeidziet sienu.",
+        "2-3 Artist 3.4": "Lekšanas bloks pārvieto mākslinieku bez zīmēšanas. Zīmē pārtraukto līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus gara.",
+        "2-3 Artist 3new": "Sarkanā cepure ir 100 pikseļus augsta. Pabeidz zīmēt melno cepuri, kura ir par 70 pikseļiem zemāka.\n(Katras cepures platums ir 50 pikseļi.)",
+        "2-3 Artist 4": "Palīdzi man pabeigt māju šim kaķim.",
+        "2-3 Artist 6": "Šai mājai ir nepieciešams jumts! Uzzīmē trijstūri.\nPadoms: visas 3 malas ir vienāda garuma.",
+        "2-3 Artist 8": "Laiks uzbūvēt kūti!\nVeido telpas katram dzīvniekam, sadalot kūti 2 vienāda izmēra kvadrātos.\nPadoms: četrstūris ir 200 pikseļus plats un 100 pikseļus augsts.\nIr daudz dažādu veidu, kā atrisināt šo uzdevumu.",
+        "2-3 Artist 9 NEW": "Pabeidz gaisa pūķi",
+        "2-3 Artist Debugging 5": "Kods kājai un pēdai ir kļūdains. \n\nVai vari to izlabot?",
+        "2-3 Artist Free Play": "Brīvā spēle! Zīmē visu, ko vēlies.",
+        "2-3 Artist Loops New 12": "Uzzīmē rombu, kura malas ir 100 pikseļus garas. ",
+        "2-3 Artist Loops New 13": "Iesākumā dosim Tev kodu (pelēkā krāsā), lai uzzīmētu vienu rombu!",
+        "2-3 Artist Nested Loops 10": "Atkārto šo kodu 12 reizes, lai pabeigtu rakstu.",
+        "2-3 Artist Nested Loops 11": "Atkārto šo kodu 4 reizes, lai pabeigtu rakstu, pagriezies par 90 grādiem pēc katra riņķa.",
+        "2-3 Artist Nested Loops 12": "Atkārto šo kodu 12 reizes, lai pabeigtu cilpas.",
+        "2-3 Artist Nested Loops 2": "Tagad atkārto trīsstūri 6 reizes. Pēc katra trīsstūra nepieciešams pagriezties par 60 grādiem, pirms zīmēt nākamo.",
+        "2-3 Artist Nested Loops 7": "Lai uzzīmētu sauli, atkārto šo trīsstūri 10 reizes. \n\nTev nepieciešams pārvietoties un pagriezties pēc katra trīsstūra. \n\nTu vari izdomāt cik daudz pagriezties, ja riņķī esošos grādus dali ar trīsstūru skaitu, ko nepieciešams uzzīmēt.",
+        "2-3 Artist Nested Loops 8": "Tagad attēlā uzzīmēsim zāli.\n\nKatrs zāles stiebrs ir 50 pikseļu attālumā viens no otra.",
+        "2-3 Artist Nested Loops 9": "Pabeigsim šo zīmējumu, pievienojot mūsu ziedu.\n\nAtkārto rombu 12 reizes, lai uzzīmētu ziedu.",
+        "2-3 Maze 1": "Vai vari man palīdzēt notvert nerātno cūku? Saliec vairākus \"pārvietot uz priekšu\" blokus zem \"kad izpilda\" bloka un spied \"Palaist\". ",
+        "2-3 Maze Loops 18": "Aizved mani pie saulespuķes, lietojot pēc iespējas mazāk blokus!\nPamēģini lietot vienu \"Atkārtot\" bloku iekšā citā, lai samazinātu kopējo bloku skaitu.",
+        "4-5 Artist 5": "Ar ko aizstāt \"???\", lai zombijs pabeigtu zīmējumu, izmantojot doto ciklu?",
+        "4-5 Nested Loops 5": "Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.",
+        "4-5 Nested Loops 9": "Uzzīmē zobus krokodila mutē!",
+        "Overworld Move to Sheep": "Pievieno otru \"pārvieto uz priekšu\" komandu, lai sasniegtu aitu.",
+        "Overworld Move to Sheep_2019": "Pievieno otru \"pārvieto uz priekšu\" komandu, lai sasniegtu aitu.",
+        "Overworld Move to Sheep_2020": "Pievieno otru \"pārvieto uz priekšu\" komandu, lai sasniegtu aitu.",
+        "course2_maze_programming_challenge1": "_\"Cūka slēpjas! Vai vari palīdzēt man atrast apkārtceļu?\"_",
+        "course4_artist_fwp_challenge1": "Pamēģini palaist šo programmu, un veic izmaiņas, lai redzētu, kas notiek. Vai tu vari izdomāt, kā tā strādā? (Vai arī izdzēs to un aizvieto to ar kaut ko pavisam citādāku)",
+        "courseA_maze_seq13_2019": "Notver to cūku, kā vien māki!",
+        "courseA_maze_seq13_2020": "Notver to cūku, kā vien māki!",
+        "courseA_maze_seq6_2018": "Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!",
+        "courseA_maze_seq6_2019": "Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!",
+        "courseA_maze_seq6_2020": "Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!",
+        "courseA_maze_seq8_2018": "Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!",
+        "courseA_maze_seq8_2019": "Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!",
+        "courseA_maze_seq8_2020": "Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!",
+        "courseB_maze_seq12_2019": "Tagad notver to cūku, kā vien māki!",
+        "courseB_maze_seq12_2020": "Tagad notver to cūku, kā vien māki!",
+        "courseB_maze_seq3": "_\"Izlabo kodu, lai palīdzētu man tikt līdz cūkai!\"_"
+      }
+    }
+  }
+}

@@ -44,11 +44,13 @@ export default class RedirectDialog extends React.Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.stayHere()}
             onClick={handleClose}
             color={Button.ButtonColor.gray}
           />
           <Button
+            __useDeprecatedTag
             text={redirectButtonText}
             onClick={this.redirect}
             color={Button.ButtonColor.orange}

@@ -1,0 +1,19 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-02-18T17:28:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Responding to User Input",
+    "teacher_markdown": "#### Just the Facts\r\n\r\nThere's a lot to consume here and many of the details about how events work in App Lab are not totally necessary to understand for our needs in this unit. If students are struggling with how programming works in App Lab, focus on these essentials:\r\n\r\n* There is no `draw` loop that runs forever\r\n* The `onEvent()` block specifies:\r\n\t* an element ID\r\n    * an event (such as \"click\" or \"mouseover\")\r\n    * code that should be run when the event occurs (this code is technically an anonymous callback function, represented by the green block)\r\n* Code inside `onEvent()` blocks runs any time the specified event occurs\r\n\r\n#### Compared to Game Lab\r\n\r\nIn Game Lab, we might use the following code to check if a sprite named \"button\" was clicked and do something about it:\r\n\r\n    function draw() {\r\n    \tif (mousePressedOver(button)) {\r\n       \t\t// Do something\r\n       \t}\r\n    }\r\n\r\n\r\nIn App Lab, given a button with the ID \"button\", we could write the following code to achieve the same goal:\r\n\r\n\r\n    onEvent(\"button\", \"click\", function () {\r\n    \t// Do something\r\n    });\r\n\r\nIn the App Lab example, the function is just another argument passed to the onEvent function, it just so happens that the argument must be a function itself. We could also define the function separately and write this same program as follows:\r\n\r\n    function doSomething() {\r\n    \t// Do something\r\n    }\r\n    \r\n    onEvent(\"button\", \"click\", doSomething);\r\n\r\n\r\nIn the second example, notice that when we pass the function `doSomething` to the `onEvent` function we _don't_ include the parenthesis at the end. This is because we're actually passing the whole function as an object.",
+    "reference": "/docs/concepts/app-lab/responding-to-user-input/index.html",
+    "parent_level_id": 16349,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-11 21:37:00 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-20 00:16:52 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</Map>

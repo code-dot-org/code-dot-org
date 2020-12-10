@@ -19,7 +19,7 @@
 }
 
 .dance-try-button {
-  font-size: 18px;
+  font-size: 15px;
   height: 40px;
   background-color: white;
   border-color: white;
@@ -98,7 +98,6 @@ a:hover {
 
 .sponsor-logo-with-text {
   display: flex;
-  justify-content: center;
   font-size: 24px;
   margin-top: 10px;
   clear: both;
@@ -278,6 +277,11 @@ a:hover {
 }
 
 .new-announcement .highlight-word {
+  color: rgb(89, 202, 211);
+}
+
+.highlight-strong strong  {
+  font-family: 'Gotham 5r', sans-serif;
   color: rgb(89, 202, 211);
 }
 

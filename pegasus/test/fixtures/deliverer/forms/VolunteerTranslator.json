@@ -1,0 +1,12 @@
+{
+  "data": {
+    "email_s": "name.fake@fabricated.edu",
+    "contact_s": "Weekly",
+    "language_ss": ["Quenya", "Other"],
+    "last_name_s": "Fake",
+    "first_name_s": "Name",
+    "language_other_ss": ["Latin"],
+    "translation_type_s": "YouTube"
+  },
+  "processed_data": {}
+}

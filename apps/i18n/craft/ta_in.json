@@ -47,6 +47,7 @@
   "entityTypeCow": "மாடு",
   "entityTypePlayer": "ஆட்டகாரன்",
   "entityTypeSheep": "ஆடு",
+  "entityTypeZombie": "சோம்பி",
   "eventTypeWhenAttacked": "தாக்கிய போது",
   "eventTypeWhenDay": "பகல் போது",
   "eventTypeWhenNight": "இரவு போது",

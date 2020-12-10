@@ -1,0 +1,28 @@
+{
+  "data": {
+    "name_s": "Fake Name",
+    "email_s": "name.fake@fabricated.edu",
+    "company_s": "Initech",
+    "facebook_s": null,
+    "linkedin_s": "http://linkedin.com/in/some-fake-url",
+    "location_s": "Seattle, WA 98109, USA",
+    "experience_s": "software_professional",
+    "age_18_plus_b": "1",
+    "description_s": "Well, I generally come in at least fifteen minutes late, ah, I use the side door - that way Lumbergh can't see me, heh heh - and, uh, after that I just sorta space out for about an hour. I just stare at my desk; but it looks like I'm working. I do that for probably another hour after lunch, too. I'd say in a given week I probably only do about fifteen minutes of real, actual, work.",
+    "unsubscribed_s": null,
+    "allow_contact_b": "1",
+    "time_commitment_s": "monthly",
+    "volunteer_after_hoc_b": "1",
+    "location_flexibility_ss": ["onsite"],
+    "email_preference_opt_in_s": "no"
+  },
+  "processed_data": {
+    "location_p": "12.3456789,-98.7654321",
+    "location_city_s": "Someplace",
+    "location_state_s": "Washington",
+    "location_country_s": "United States",
+    "location_state_code_s": "WA",
+    "location_postal_code_s": "98109",
+    "location_country_code_s": "US"
+  }
+}

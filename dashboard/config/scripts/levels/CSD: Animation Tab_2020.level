@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-18T17:57:18.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_gamelab_animation_tab",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: The Animation Tab",
+    "parent_level_id": 18484,
+    "name_suffix": "_2020",
+    "long_instructions": "## Questions to Consider\r\n* What are the steps to adding an image to a sprite?\r\n* What are the different ways to get an image?\r\n",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nMake sure students understand that they will need to both create the image (or animation) in the Animation Tab and then add the animation to the sprite using the `setAnimation` block.  Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\r\n\r\nStudents can use an animation already in the animation tab library, upload one from their computer, or create their own using the provided drawing tools.  Additionally, students can use the drawing tools to modify the images they have chosen from the library or uploaded.\r\n\r\n### Misconception Alert!\r\n\r\nMany students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen.  In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen.  Remind students that a single sprite may have different animations throughout the course of the program, just as other properties can change, and that two or more sprites might share the same animation."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-15 17:15:43 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 17:16:18 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -1,0 +1,53 @@
+{
+  "es-MX": {
+    "data": {
+      "placeholder_texts": {
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "¡Gracias!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "¡Ganaste!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "¡Hola mundo!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "azul"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "rojo"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "¡Ganaste!",
+          "498cd895eb5a102c5aeb977e2b928dee": "¡Gracias!"
+        },
+        "Virtual Pet 1_2019": {
+          "22661453237feb87f1b00dd17bc39666": "¡Mmm! ¡Energía aumentada!",
+          "4ac000226dd5bc7fc14ecde063245731": "¡Qué asco! ¡Reinicio de energía!"
+        },
+        "Virtual Pet 1_2020": {
+          "22661453237feb87f1b00dd17bc39666": "¡Mmm! ¡Energía aumentada!",
+          "4ac000226dd5bc7fc14ecde063245731": "¡Qué asco! ¡Reinicio de energía!"
+        },
+        "Find the Wizard": {
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "¡Cuenta hasta 3 y desapareceré! ¡Adivina un número entre 1 y 400 para encontrarme!"
+        }
+      }
+    }
+  }
+}

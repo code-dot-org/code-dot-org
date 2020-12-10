@@ -20,6 +20,8 @@ ta-IN:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> CS நீங்கள் ஒரு கணனி ஆசிரியர? மற்ற CSEdWeek ஆதாரங்களை
     பார்க்கவும்</a>'
+  csedweek_banner_teachers_text: CS நீங்கள் ஒரு கணனி ஆசிரியர? மற்ற CSEdWeek ஆதாரங்களை
+    பார்க்கவும்
   n_have_learned_an_hoc: "<h1>முயற்சிக்கவும்</h1><h2>ஒரு மணி நேரக் குறியீடு </h2><h3>#
     பகிரப்பட்டது</h3>"
   anybody_can_learn: எவரும் கற்றுக்கொள்ளலாம்.
@@ -28,8 +30,6 @@ ta-IN:
     இருக்க வேண்டும்
   petition_sign_message: நீங்கள் ஒப்புக்கொண்டால்,உங்கள் பெயரை பதியுங்கள்,மற்றவர்களுடன்
     சேருங்கள்.
-  petition_sign_message_support: 'நீங்கள் எங்களுக்கு ஆதரவளித்தால், உங்கள் பெயரில்
-    கையொப்பமிட்டு # மற்றவர்களுடன் எங்கள் அஞ்சல் பட்டியலில் சேரவும்.'
   petition_join_others: 'மற்றவர்களுடன் # சேரவும்'
   name: பெயர்
   email: மின்னஞ்சல்
@@ -138,8 +138,10 @@ ta-IN:
   girl: பெண்
   boy: ஆண்
   contact_form_topic_press: பத்திரிக்கை/ஊடகம் (பேட்டி அல்லது ஒப்பந்தம் பேசும் போது)
+  studiobar_dance_title: நடன விருந்து
   studiobar_frozen_title: நிரல்வரி நேரம்
   homepage_action_text_try_it: இதை முயற்சிக்கவும்
+  homepage_signpetition_dropdown_text: நான் ஒப்புக்கொள்கிறேன்
   homepage_slot_text_title_hoc: நிரல்வரி நேரம்
   homepage_slot_text_link_hoc: நிரல்தொடர் மணியை முயல்க
   contact_form_topic_other: வேறு
@@ -192,14 +194,22 @@ ta-IN:
   header_about: பற்றி
   header_help_support: 'உதவி மற்றும் ஆதரவு '
   header_report_bug: ஒரு பிரச்னையை தெரிவிக்கவும்
+  header_legal_privacy: தனியுரிமை கொள்கை
+  header_legal_tos: சேவையின் விதிமுறைகள்
   user_header_label: வணக்கம் %{username}
   user_header_settings: எனது கணக்கு
   user_header_logout: வெளியேறு
   user_header_signin: உள்நுழை
   user_header_create: 'உருவாக்குக '
+  user_header_dance: நடன விருந்து
   applab_tile_start_tutorial: தொடங்குக
+  hoc_overview_dance_title: நடன விருந்து
   hoc_overview_start_tutorial: தொடங்குக
   hoc2018_creativity_create: உருவாக்கு
   hoc2018_mc_start: தொடங்குக
   hoc2018_mc_homepage_try_it: இதை முயற்சிக்கவும்
+  hoc2018_dance_party_main_heading: நடன விருந்து
+  hoc2018_dance_party_box_title: நடன விருந்து
   hoc2018_dance_party_button: தொடங்குக
+  hoc2018_dance_video2: நடன விருந்து - நிகழ்வுகள்
+  hoc2018_dance_video3: நடன விருந்து - பண்புகள்

@@ -12,7 +12,7 @@ title: Návod Hodiny kódu pro území
 
 ## Získejte, aby se každá škola zúčastnila, každý student se učil!
 
-### 1. Recruit local schools
+### 1. Rekrutovat místní školy
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

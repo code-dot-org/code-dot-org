@@ -55,14 +55,17 @@ module SafeBrowsing
     # Record to Firehose the response time of request rounded to thousandths of a second,
     # url, and human-readable response message
     FirehoseClient.instance.put_record(
-      study: "safe-browsing-request",
-      study_group: "v1",
-      event: "api-response",
-      data_json: {
-        response_time: response_time.round(3),
-        request_url: url_to_check,
-        response_value: response_message
-      }.to_json
+      :analysis,
+      {
+        study: "safe-browsing-request",
+        study_group: "v1",
+        event: "api-response",
+        data_json: {
+          response_time: response_time.round(3),
+          request_url: url_to_check,
+          response_value: response_message
+        }.to_json
+      }
     )
 
     site_approved

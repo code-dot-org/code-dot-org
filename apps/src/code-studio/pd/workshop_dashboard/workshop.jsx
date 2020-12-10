@@ -91,6 +91,7 @@ export class Workshop extends React.Component {
             'funding_type',
             'course',
             'subject',
+            'fee',
             'notes',
             'sessions',
             'state',
@@ -100,7 +101,9 @@ export class Workshop extends React.Component {
             'regional_partner_id',
             'scholarship_workshop?',
             'potential_organizers',
-            'created_at'
+            'created_at',
+            'virtual',
+            'suppress_email'
           ])
         });
       })

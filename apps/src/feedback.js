@@ -19,6 +19,10 @@ import {
 import {createHiddenPrintWindow} from './utils';
 import testImageAccess from './code-studio/url_test';
 import {TestResults, KeyCodes} from './constants';
+import QRCode from 'qrcode.react';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
+import clientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -51,6 +55,9 @@ var GeneratedCode = require('./templates/feedback/GeneratedCode');
 
 import ChallengeDialog from './templates/ChallengeDialog';
 
+const FIREHOSE_STUDY = 'feedback_dialog';
+let dialog_type = 'default';
+
 /**
  * @typedef {Object} FeedbackOptions
  * @property {LiveMilestoneResponse} response
@@ -58,7 +65,6 @@ import ChallengeDialog from './templates/ChallengeDialog';
  * @property {string} message
  * @property {Level} level
  * @property {boolean} showingSharing
- * @property {string} saveToGalleryUrl
  * @property {Object<string, string>} appStrings
  * @property {string} feedbackImage
  * @property {boolean} defaultToContinue
@@ -263,6 +269,15 @@ FeedbackUtils.prototype.displayFeedback = function(
   const showPuzzleRatingButtons =
     options.response && options.response.puzzle_ratings_enabled;
 
+  if (showingSharing) {
+    dialog_type = 'share';
+    if (idealBlocks !== Infinity) {
+      dialog_type += '_validate';
+    }
+  } else if (idealBlocks !== Infinity) {
+    dialog_type = 'validate';
+  }
+
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
@@ -323,6 +338,11 @@ FeedbackUtils.prototype.displayFeedback = function(
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function() {
+      logDialogActions(
+        'replay_level',
+        options,
+        idealBlocks === Infinity ? null : isPerfect
+      );
       feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
       feedbackDialog.hideButDontContinue = false;
@@ -407,6 +427,11 @@ FeedbackUtils.prototype.displayFeedback = function(
     }
 
     dom.addClickTouchEvent(continueButton, function() {
+      logDialogActions(
+        'continue',
+        options,
+        idealBlocks === Infinity ? null : isPerfect
+      );
       feedbackDialog.hide();
 
       if (options.response && options.response.puzzle_ratings_enabled) {
@@ -502,19 +527,6 @@ FeedbackUtils.prototype.displayFeedback = function(
     });
   }
 
-  const saveToLegacyGalleryButton = feedback.querySelector(
-    '#save-to-legacy-gallery-button'
-  );
-  if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
-    dom.addClickTouchEvent(saveToLegacyGalleryButton, () => {
-      $.post(options.saveToLegacyGalleryUrl, () =>
-        $('#save-to-legacy-gallery-button')
-          .prop('disabled', true)
-          .text('Saved!')
-      );
-    });
-  }
-
   var printButton = feedback.querySelector('#print-button');
   if (printButton) {
     dom.addClickTouchEvent(printButton, function() {
@@ -546,6 +558,22 @@ FeedbackUtils.prototype.displayFeedback = function(
     feedbackBlocks.render();
   }
 };
+
+function logDialogActions(event, options, isPerfect) {
+  if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
+    firehoseClient.putRecord({
+      study: FIREHOSE_STUDY,
+      study_group: dialog_type,
+      event: event,
+      data_json: JSON.stringify({
+        level_type: options.level ? options.level.skin : null,
+        level_id: options.response ? options.response.level_id : null,
+        level_path: options.response ? options.response.level_path : null,
+        isPerfectBlockCount: isPerfect
+      })
+    });
+  }
+}
 
 FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
   const store = getStore();
@@ -623,7 +651,9 @@ FeedbackUtils.prototype.getNumBlocksUsed = function() {
  */
 FeedbackUtils.prototype.getNumCountableBlocks = function() {
   var i;
-  if (this.studioApp_.editCode) {
+  if (getStore().getState().pageConstants.isBramble) {
+    return 0;
+  } else if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = this.getGeneratedCodeString_().split('\n');
@@ -633,8 +663,9 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
       }
     }
     return codeLines;
+  } else {
+    return this.getCountableBlocks_().length;
   }
-  return this.getCountableBlocks_().length;
 };
 
 /**
@@ -652,6 +683,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
       tryAgainText = msg.reviewCode();
     } else if (options.feedbackType === TestResults.FREE_PLAY) {
       tryAgainText = msg.keepPlaying();
+    } else if (options.feedbackType === TestResults.FREE_PLAY_UNCHANGED_FAIL) {
+      tryAgainText = msg.keepWorking();
     } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
       tryAgainText = msg.tryAgain();
     } else {
@@ -720,6 +753,12 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   } else {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
+      case TestResults.FREE_PLAY_UNCHANGED_FAIL:
+        logDialogActions('level_unchanged_failure', options, null);
+        message = options.useDialog
+          ? msg.freePlayUnchangedFail()
+          : msg.freePlayUnchangedFailInline();
+        break;
       case TestResults.RUNTIME_ERROR_FAIL:
         message = msg.runtimeErrorMsg({
           lineNumber: options.executionError.lineNumber
@@ -1002,13 +1041,18 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     );
   }
 
-  //  SMS-to-phone feature
+  //  QR Code & SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone && options.sendToPhone) {
-    dom.addClickTouchEvent(sharingPhone, function() {
-      var sendToPhone = sharingDiv.querySelector('#send-to-phone');
-      if ($(sendToPhone).is(':hidden')) {
-        $(sendToPhone).show();
+  dom.addClickTouchEvent(sharingPhone, function() {
+    var sendToPhone = sharingDiv.querySelector('#send-to-phone');
+    if ($(sendToPhone).is(':hidden')) {
+      $(sendToPhone).show();
+
+      var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
+      var annotatedShareLink = options.shareLink + '?qr=true';
+      ReactDOM.render(<QRCode value={annotatedShareLink} size={90} />, qrCode);
+
+      if (sharingPhone && options.isUS) {
         var phone = $(sharingDiv.querySelector('#phone'));
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
@@ -1046,12 +1090,12 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
               trackEvent('SendToPhone', 'error');
             });
         });
-      } else {
-        // not hidden, hide
-        $(sendToPhone).hide();
       }
-    });
-  }
+    } else {
+      // not hidden, hide
+      $(sendToPhone).hide();
+    }
+  });
 
   var downloadReplayVideoContainer = sharingDiv.querySelector(
     '#download-replay-video-container'
@@ -1092,13 +1136,9 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   challenge = false
 ) {
   const numLinesWritten = this.getNumBlocksUsed();
-  const shouldShowTotalLines =
-    options.response &&
-    options.response.total_lines &&
-    options.response.total_lines !== numLinesWritten;
-  const totalNumLinesWritten = shouldShowTotalLines
-    ? options.response.total_lines
-    : 0;
+  // Use the response from the server if we have one. Otherwise use the client's data.
+  const totalLines =
+    (options.response && options.response.total_lines) || clientState.lines();
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
@@ -1108,7 +1148,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   return (
     <CodeWritten
       numLinesWritten={numLinesWritten}
-      totalNumLinesWritten={totalNumLinesWritten}
+      totalNumLinesWritten={totalLines}
       useChallengeStyles={challenge}
     >
       <GeneratedCode
@@ -1147,7 +1187,9 @@ FeedbackUtils.prototype.shouldPromptForHint = function(feedbackType) {
  * Retrieve a string containing the user's generated Javascript code.
  */
 FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
-  if (this.studioApp_.editCode) {
+  if (getStore().getState().pageConstants.isBramble) {
+    return '';
+  } else if (this.studioApp_.editCode) {
     return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
   } else {
     return codegen.workspaceCode(Blockly);
@@ -1625,7 +1667,10 @@ FeedbackUtils.prototype.getMissingBlocks_ = function(blocks, maxBlocksToFlag) {
  * @return {boolean}
  */
 FeedbackUtils.prototype.hasExtraTopBlocks = function() {
-  if (this.studioApp_.editCode) {
+  if (
+    this.studioApp_.editCode ||
+    getStore().getState().pageConstants.isBramble
+  ) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -1668,6 +1713,9 @@ FeedbackUtils.prototype.getTestResults = function(
   options
 ) {
   options = options || {};
+  if (getStore().getState().pageConstants.isBramble) {
+    return TestResults.FREE_PLAY;
+  }
   if (this.studioApp_.editCode) {
     if (levelComplete) {
       return TestResults.ALL_PASS;

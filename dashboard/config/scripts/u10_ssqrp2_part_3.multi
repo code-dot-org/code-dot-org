@@ -5,7 +5,7 @@ editor_experiment ''
 
 
 
-description 'Which of the following may be an unintended effect of the use of <em>Snappy</em>?'
+description 'Which of the following may be an unintended effect of the use of _Snappy_?'
 wrong 'Users may identify other Snappy users in their own town. '
 right 'Large towns might look "happier" than small towns.'
 wrong 'Users can rater other "Happiness Moments" with emojis. '

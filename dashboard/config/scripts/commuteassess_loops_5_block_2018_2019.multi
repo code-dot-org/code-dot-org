@@ -1,10 +1,20 @@
 name 'CommuteAssess - loops 5 - block_2018_2019'
 question 'What will be displayed when this code is run?'
-wrong '<pre>5<br>4<br>3<br>2<br>1<br>0</pre>'
-wrong '<pre>5<br>3<br>1</pre>'
-right '<pre>3<br>1<br>-1</pre>'
-wrong '<pre>3<br>1</pre>'
-wrong '<pre>3</pre>'
+wrong '`5`  
+`4`  
+`3`  
+`2`  
+`1`  
+`0`'
+wrong '`5`  
+`3`  
+`1`'
+right '`3`  
+`1`  
+`-1`'
+wrong '`3`  
+`1`'
+wrong '`3`'
 wrong 'it will be different each time you run it'
 
 markdown <<MARKDOWN

@@ -22,7 +22,6 @@ class Ability
       # PLC Stuff
       Plc::Course,
       Plc::LearningModule,
-      Plc::Task,
       Plc::UserCourseEnrollment,
       Plc::CourseUnit,
       # PD models
@@ -46,8 +45,14 @@ class Ability
       Pd::Application::Teacher1819Application,
       Pd::Application::Teacher1920Application,
       Pd::Application::Teacher2021Application,
+      Pd::Application::Teacher2122Application,
       Pd::InternationalOptIn,
-      :maker_discount
+      :maker_discount,
+      :edit_manifest,
+      :update_manifest,
+      :foorm_editor,
+      :pd_foorm,
+      Foorm::Form
     ]
     cannot :index, Level
 
@@ -65,9 +70,6 @@ class Ability
       can :manage, user
 
       can :create, Activity, user_id: user.id
-      can :save_to_gallery, UserLevel, user_id: user.id
-      can :create, GalleryActivity, user_id: user.id
-      can :destroy, GalleryActivity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
@@ -106,6 +108,7 @@ class Ability
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
+        can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
       end
 
       if user.facilitator?
@@ -143,13 +146,12 @@ class Ability
         if user.regional_partners.any?
           # regional partners by default have read, quick_view, and update
           # permissions
-          can [:read, :quick_view, :cohort_view, :update, :search], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+          can [:read, :quick_view, :cohort_view, :update, :search, :destroy], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
 
           # G3 regional partners should have full management permission
           group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
           unless group_3_partner_ids.empty?
             can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
-            cannot :delete, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
           end
           can [:send_principal_approval, :principal_approval_not_required], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
         end
@@ -193,12 +195,15 @@ class Ability
         user.persisted? || !script.login_required?
       end
     end
-    can :read, ScriptLevel do |script_level|
+    can :read, ScriptLevel do |script_level, params|
       script = script_level.script
       if script.pilot?
         script.has_pilot_access?(user)
       else
-        user.persisted? || !script.login_required?
+        # login is required if this script always requires it or if request
+        # params were passed to authorize! and includes login_required=true
+        login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
+        user.persisted? || !login_required
       end
     end
 
@@ -226,10 +231,13 @@ class Ability
         Library,
         Game,
         Level,
-        Course,
+        Lesson,
+        UnitGroup,
         Script,
         ScriptLevel,
         Video,
+        :foorm_editor,
+        Foorm::Form
       ]
 
       # Only custom levels are editable.
@@ -240,6 +248,10 @@ class Ability
       # Ability for LevelStarterAssetsController. Since the controller does not have
       # a corresponding model, use lower/snake-case symbol instead of class name.
       can [:upload, :destroy], :level_starter_asset
+
+      can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
+
+      can :validate_form, :pd_foorm
     end
 
     if user.persisted?
@@ -268,11 +280,13 @@ class Ability
         Activity,
         Game,
         Level,
-        Course,
+        UnitGroup,
         Script,
         ScriptLevel,
         UserLevel,
-        UserScript
+        UserScript,
+        :pd_foorm,
+        Foorm::Form
       ]
     end
   end

@@ -2,36 +2,76 @@
 uz:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+          MOVE1:
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+          MOVE2:
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
       Dancelab_changeMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+          MOVE:
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
       Dancelab_changeMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
       Dancelab_doMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+          MOVE:
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
       Dancelab_doMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Kick: Yulduz raqsi
       Dancelab_jumpTo:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
           LOCATION:
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": tasodifiy
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
           FORMAT:
             '"random"': tasodifiy
       Dancelab_makeAnonymousDanceSprite:
@@ -44,47 +84,58 @@ uz:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
+          COSTUME:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
           LAYOUT:
             '"random"': tasodifiy
       Dancelab_randomColor:
         text: tasodifiy rang
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"DOG"': itlar
       Dancelab_whenKey:
+        options:
+          KEY:
+            '"space"': koinot
+      gamelab_isKeyPressed:
         options:
           KEY:
             '"space"': koinot
@@ -113,6 +164,12 @@ uz:
         options:
           KEY:
             '"space"': koinot
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Kick: Yulduz raqsi
       Mikelab_randomColor:
         text: tasodifiy rang
       Mikelab_setBG:
@@ -120,17 +177,17 @@ uz:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
       aalab_goToScene:
+        text: " {SCENE} sahnasiga o‘tish"
+      aalab_starwars_playSound:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
+          OPTION:
+            '"random"': tasodifiy
+            '"R2-D2 random"': R2-D2 tasodifiy
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_whenKey:
         options:
           KEY:

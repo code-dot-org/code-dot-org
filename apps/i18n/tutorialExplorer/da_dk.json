@@ -1,6 +1,7 @@
 {
   "startButton": "Start",
   "filterOrgNames": "Lavet af",
+  "filterOrgNamesAll": "Alle",
   "filterSortBy": "Sorter efter",
   "filterSortByDisplayWeight": "Anbefalet",
   "filterSortByPopularityRank": "Mest populær",

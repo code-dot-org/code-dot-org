@@ -6,16 +6,6 @@ kk:
         options:
           UNIT:
             '"seconds"': секунд
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -26,16 +16,6 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
-      Dancelab_doMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -68,6 +48,7 @@ kk:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': алмас
             '"random"': кездейсоқ
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -87,47 +68,11 @@ kk:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"diamond"': алмас
             '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -182,6 +127,10 @@ kk:
             '"right"': оңға
             '"space"': кеңестік
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -195,6 +144,19 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -216,6 +178,8 @@ kk:
         text: кездейсоқ түс
       gamelab_randomColor:
         text: кездейсоқ түс
+      gamelab_repeatForever:
+        text: әрқашан қайтала
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -343,23 +307,10 @@ kk:
         text: солға бұрылу
       RyanLab_turnRight:
         text: оңға бұрылу
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': көрсет
-            '"hide"': жасырылған бейнесі
+            '"random"': кездейсоқ
       binary_move:
         options:
           DIR:

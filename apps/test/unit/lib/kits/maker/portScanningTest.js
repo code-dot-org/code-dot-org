@@ -3,6 +3,7 @@ import {expect} from '../../../../util/deprecatedChai';
 import {
   CIRCUIT_PLAYGROUND_PORTS,
   CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
+  MICROBIT_PORTS,
   REDBOARD_PORTS,
   FLORA_PORTS,
   OSX_DEFAULT_PORTS,
@@ -61,6 +62,14 @@ describe('maker/portScanning.js', function() {
         expect(port.productId).to.equal('8018');
       });
     });
+
+    it(`allows the micro:bit`, () => {
+      ChromeSerialPort.stub.setDeviceList(MICROBIT_PORTS);
+      return findPortWithViableDevice().then(port => {
+        expect(port.comName).to.equal('COM3');
+        expect(port.productId).to.equal('0204');
+      });
+    });
   });
 
   describe(`getPreferredPort(portList)`, () => {
@@ -70,6 +79,7 @@ describe('maker/portScanning.js', function() {
         const ports = _.shuffle([
           circuitPlaygroundPort,
           ...CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
+          ...MICROBIT_PORTS,
           ...FLORA_PORTS,
           ...REDBOARD_PORTS,
           ...OSX_DEFAULT_PORTS,
@@ -83,12 +93,26 @@ describe('maker/portScanning.js', function() {
       CIRCUIT_PLAYGROUND_EXPRESS_PORTS.forEach(expressPort => {
         const ports = _.shuffle([
           expressPort,
+          ...MICROBIT_PORTS,
           ...FLORA_PORTS,
           ...REDBOARD_PORTS,
           ...OSX_DEFAULT_PORTS,
           ...OTHER_BAD_SERIALPORTS
         ]);
         expect(getPreferredPort(ports)).to.equal(expressPort);
+      });
+    });
+
+    it('picks a micro:bit over unknown Adafruit product or other ports', () => {
+      MICROBIT_PORTS.forEach(mbPort => {
+        const ports = _.shuffle([
+          mbPort,
+          ...FLORA_PORTS,
+          ...REDBOARD_PORTS,
+          ...OSX_DEFAULT_PORTS,
+          ...OTHER_BAD_SERIALPORTS
+        ]);
+        expect(getPreferredPort(ports)).to.equal(mbPort);
       });
     });
 

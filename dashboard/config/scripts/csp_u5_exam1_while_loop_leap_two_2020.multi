@@ -1,11 +1,28 @@
 name 'csp-u5-exam1-while-loop-leap-two_2020'
-encrypted 'Rrv5B8kqa7lILPDmauZmbCTNQDmXfVcHGQhpj702zxoADhvmxzULcwK0bTIp
-nl+rQEnb9J+ws6l4Ir99gQyzBg8IiE6ByiFPStk93hVUUEWsoltCZA+s+/nf
-Ub/E7TKou1xsy29AOFLFkL/Mj97z9jc9qmk7+vFaV4cZPwlJUXhJeKv02c+d
-uYhfOzTxlRNUVTN2cI1DWXpJ6gcD5q2ahgq3/G///UCxm9kM9ikxnNaqBpJp
-b6NvAbQ648tLlEPh8B12bwnfMYskFxOcOue/eYgf3Hwa2CrK6CYICwlFyqBZ
-iIiPkSLne0c2T2Zv0sD7NOBhFvZq27bhzTLc3evoZIXD1mZvFrat8/Ec11s0
-7NRPwmOoD/RIj0xpT/yOO+COGtXmN02tCAZ24hszuq5LauOm7TXKJGKKursT
-XTvNBGu9xjJ7UhiHOnKH9gadKK2TYyAK0XLuaAfO5sJWnEp+Iqn8oIFfyJ29
-G8ok3P/PUr0fCc9uCroRuLEUsab8vLzX
-'
+editor_experiment ''
+wrong '0  
+2  
+4  
+6'
+wrong '0  
+2  
+4'
+wrong '2  
+4  
+6'
+right 'The program will result in an infinite loop'
+
+
+
+markdown <<MARKDOWN
+What will be displayed in the console when the following program runs?
+
+```
+var count = 0
+while (count != 5){
+  console.log(count);
+  count = count + 2;
+}
+```
+
+MARKDOWN

@@ -4,6 +4,31 @@ import PropTypes from 'prop-types';
 import {Button} from 'react-bootstrap';
 import WorkshopPanel from './WorkshopPanel';
 import ConfirmationDialog from '../components/confirmation_dialog';
+import color from '@cdo/apps/util/color';
+
+const warningStyle = {
+  color: color.red,
+  fontWeight: 'bold'
+};
+
+const earlyCloseWarning = (
+  <div>
+    <span style={warningStyle}>Warning: </span>There are still sessions
+    remaining for this workshop. Once you end a workshop, attendance is locked.
+    <br />
+    <br />
+    Are you sure you want to end this workshop now?
+  </div>
+);
+
+const normalCloseWarning = (
+  <div>
+    Ending this workshop will close the attendance.
+    <br />
+    <br />
+    Are you sure you want to end this workshop now?
+  </div>
+);
 
 export default class EndWorkshopPanel extends React.Component {
   static propTypes = {
@@ -61,27 +86,15 @@ export default class EndWorkshopPanel extends React.Component {
     return (
       <WorkshopPanel header="End Workshop:">
         <div>
-          <p>
-            After the last day of your workshop, you must end the workshop. This
-            will generate a report to Code.org as well as email teachers a
-            survey regarding the workshop.
-          </p>
-          <Button onClick={this.handleEndWorkshopClick}>
-            End Workshop and Send Survey
-          </Button>
+          <p>After the last day of your workshop, you must end the workshop.</p>
+          <Button onClick={this.handleEndWorkshopClick}>End Workshop</Button>
           <ConfirmationDialog
             show={this.state.showEndWorkshopConfirmation}
             onOk={this.handleEndWorkshopConfirmed}
-            okText={isReadyToClose ? 'OK' : 'Yes, end this workshop'}
+            okText={'Yes, end this workshop'}
             onCancel={this.handleEndWorkshopCancel}
-            headerText="End Workshop and Send Survey"
-            bodyText={
-              isReadyToClose
-                ? 'Are you sure? Once ended, the workshop cannot be restarted.'
-                : 'There are still sessions remaining in this workshop. ' +
-                  'Once a workshop is ended, attendees can no longer mark themselves as attended for the remaining sessions. ' +
-                  'Are you sure you want to end this workshop?'
-            }
+            headerText="End workshop"
+            bodyText={isReadyToClose ? normalCloseWarning : earlyCloseWarning}
             width={isReadyToClose ? 500 : 800}
           />
         </div>

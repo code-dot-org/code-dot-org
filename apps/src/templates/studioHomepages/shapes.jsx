@@ -50,7 +50,8 @@ const shapes = {
     buttonText: PropTypes.string.isRequired,
     buttonId2: PropTypes.string,
     buttonUrl2: PropTypes.string,
-    buttonText2: PropTypes.string
+    buttonText2: PropTypes.string,
+    backgroundColor: PropTypes.string
   })
 };
 

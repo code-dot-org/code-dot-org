@@ -33,6 +33,7 @@ export default class StudentProgressDetailCell extends Component {
             pairingIconEnabled={true}
             stageExtrasEnabled={this.props.stageExtrasEnabled}
             hideAssessmentIcon={true}
+            showSublevels={true}
           />
         </div>
       </div>

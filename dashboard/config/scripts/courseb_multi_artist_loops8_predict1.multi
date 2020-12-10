@@ -1,5 +1,5 @@
 name 'courseB_multi_artist_loops8_predict1'
-question 'Run through the code below in your mind.  What will happen when you click "Run"?'
+question 'Run through the code below in your mind. What will happen when you click "Run"?'
 wrong 'The artist will draw a square with 4 sides.', feedback: 'Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.'
 wrong 'The artist will draw a single line.', feedback: 'Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.'
 right 'The artist will draw a ladder with 6 steps.', feedback: 'Correct!'

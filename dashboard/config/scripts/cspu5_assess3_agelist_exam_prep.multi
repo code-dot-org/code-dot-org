@@ -1,7 +1,7 @@
 name 'cspu5_assess3_ageList_exam_prep'
 wrong 'Remove all items from the list and start over'
 right 'INSERT the value 13 at the index of 2'
-wrong 'REMOVE  the value at the index of 2, then INSERT 13 in the index 2'
+wrong 'REMOVE the value at the index of 2, then INSERT 13 in the index 2'
 wrong 'ages[2] = ages[2] + 1'
 
 markdown <<MARKDOWN

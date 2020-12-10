@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T17:04:22.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "long_instructions": "# Predict\r\n\r\nThis program has one small difference that will make it run a little differently. Again though, remember:\r\n\r\n* All your code outside the draw loop is run first, one time\r\n* All your code inside the draw loop is run over and over forever\r\n\r\nWhat will this program do? Write your prediction below.\r\n\r\n*Note: The small difference we are referring to is not the `frameRate()` call. This just slows down the execution of the program so that you can see what is going on.*",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16040,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-18 18:48:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-18 18:50:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

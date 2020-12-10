@@ -12,11 +12,16 @@ class ScriptsControllerTest < ActionController::TestCase
     @pilot_script = create :script, pilot_experiment: 'my-experiment'
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
+    @no_progress_or_assignment_student = create :student
 
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019'
     @partner_script = create :script, editor_experiment: 'platformization-partners'
+
+    @student_coursez_2017 = create :student
+    @section_coursez_2017 = create :section, script: @coursez_2017
+    @section_coursez_2017.add_student(@student_coursez_2017)
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -175,15 +180,46 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
-  test "show: redirect to latest stable version in family for student" do
-    sign_in create(:student)
+  test "show: do not redirect when showing latest stable version in family for student" do
+    sign_in @no_progress_or_assignment_student
+    get :show, params: {id: @coursez_2018.name}
+    assert_response :success
+  end
+
+  test "show: redirect from older version to latest stable version in family for student" do
+    sign_in @no_progress_or_assignment_student
     get :show, params: {id: @coursez_2017.name}
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
 
+  test "show: redirect from older version to latest stable version in family for logged out user" do
+    get :show, params: {id: @coursez_2017.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to latest stable version in family for student" do
+    sign_in @no_progress_or_assignment_student
+    get :show, params: {id: @coursez_2019.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to latest stable version in family for logged out user" do
+    get :show, params: {id: @coursez_2019.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to assigned version for student" do
+    sign_in @student_coursez_2017
+    get :show, params: {id: @coursez_2019.name}
+    assert_redirected_to "/s/#{@coursez_2017.name}?redirect_warning=true"
+  end
+
+  # There are tests on can_view_version? in script_test.rb which verify that it returns true if a student is assigned
+  # or has made progress in a different version from the latest stable version. This test verifies that ultimately
+  # the student is not redirected if true is returned.
   test "show: do not redirect student to latest stable version in family if they can view the script version" do
     Script.any_instance.stubs(:can_view_version?).returns(true)
-    sign_in create(:student)
+    sign_in @no_progress_or_assignment_student
     get :show, params: {id: @coursez_2017.name}
     assert_response :ok
   end
@@ -194,11 +230,43 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
-  test "should not get edit if not levelbuilder mode" do
+  test "should not get edit on production" do
+    CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
     get :edit, params: {id: 'course1'}
+    assert_response :forbidden
+  end
 
+  test "should get edit on levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
+    assert_response :ok
+  end
+
+  test "should not be able to edit on levelbuilder in locale besides en-US" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    with_default_locale(:de) do
+      get :edit, params: {id: 'course1'}
+    end
+    assert_redirected_to "/"
+  end
+
+  test "should get edit on test" do
+    CDO.stubs(:rack_env).returns(:test)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
+    assert_response :ok
+  end
+
+  test "should not get edit on staging" do
+    CDO.stubs(:rack_env).returns(:staging)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
     assert_response :forbidden
   end
 
@@ -265,7 +333,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "platformization partner can update their scripts" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{@partner_script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(@partner_script.name)
 
     sign_in @platformization_partner
     patch :update, params: {
@@ -273,7 +341,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: @partner_script.name},
       script_text: '',
     }
-    assert_response :redirect
+    assert_response :success
   end
 
   # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in
@@ -289,26 +357,24 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/flappy"
   end
 
-  test "edit forbidden if not on levelbuilder" do
-    sign_in @levelbuilder
-    get :edit, params: {id: 'course1'}
-    assert_response :forbidden
-  end
-
   test 'create' do
     expected_contents = ''
+    script_name = 'test-script-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with('config/scripts/test-script-create.script', expected_contents).once
+    File.stubs(:write).with("config/scripts/#{script_name}.script", expected_contents).once
+    File.stubs(:write).with do |filename, contents|
+      filename == "config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
+    end
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
     post :create, params: {
-      script: {name: 'test-script-create'},
+      script: {name: script_name},
     }
-    assert_redirected_to edit_script_path id: 'test-script-create'
+    assert_redirected_to edit_script_path id: script_name
 
-    script = Script.find_by_name('test-script-create')
-    assert_equal 'test-script-create', script.name
+    script = Script.find_by_name(script_name)
+    assert_equal script_name, script.name
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -329,12 +395,88 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
+  test "cannot update on production" do
+    CDO.stubs(:rack_env).returns(:production)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :forbidden
+    script.reload
+    assert script.hidden
+  end
+
+  test "can update on levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+    end
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :success
+    script.reload
+    refute script.hidden
+    assert_equal false, JSON.parse(@response.body)['hidden']
+  end
+
+  test "can update on test without modifying filesystem" do
+    CDO.stubs(:rack_env).returns(:test)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :success
+    script.reload
+    refute script.hidden
+  end
+
+  test "cannot update on staging" do
+    CDO.stubs(:rack_env).returns(:staging)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :forbidden
+    script.reload
+    assert script.hidden
+  end
+
   test 'updates teacher resources' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     post :update, params: {
       id: script.id,
@@ -351,7 +493,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     post :update, params: {
       id: script.id,
@@ -360,6 +502,9 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: 'pilot-experiment',
       visible_to_teachers: true,
     }
+
+    assert_response :success
+
     assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
     # pilot scripts are always marked hidden
     assert Script.find_by_name(script.name).hidden
@@ -370,7 +515,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     post :update, params: {
       id: script.id,
@@ -379,6 +524,8 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: '',
       visible_to_teachers: true,
     }
+
+    assert_response :success
 
     assert_nil Script.find_by_name(script.name).pilot_experiment
     # blank pilot_experiment does not cause script to be hidden
@@ -390,7 +537,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    stub_file_writes(script.name)
 
     assert_nil script.project_sharing
     assert_nil script.curriculum_umbrella
@@ -412,6 +559,143 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'CSF', script.curriculum_umbrella
     assert_equal 'my-fam', script.family_name
     assert_equal '2017', script.version_year
+  end
+
+  test 'set_and_unset_teacher_resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    stub_file_writes(script.name)
+
+    # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
+    # which can cause incorrect behavior if it is removed during the Script.add_script while being added via the
+    # update_teacher_resources during the same call to Script.update_text
+    2.times do
+      post :update, params: {
+        id: script.id,
+        script: {name: script.name},
+        script_text: '',
+        resourceTypes: ['curriculum', 'something_else'],
+        resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
+      }
+      assert_response :success
+      script.reload
+
+      assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], script.teacher_resources
+    end
+
+    # Unset the properties.
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      resourceTypes: [''],
+      resourceLinks: ['']
+    }
+    assert_response :success
+    script.reload
+
+    assert_nil script.teacher_resources
+  end
+
+  test 'set and unset all general_params' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    stub_file_writes(script.name)
+
+    # Set most of the properties.
+    # omitted: professional_learning_course, announcements because
+    # using fake values doesn't seem to work for them.
+    general_params = {
+      hideable_lessons: 'on',
+      project_widget_visible: 'on',
+      student_detail_progress_view: 'on',
+      lesson_extras_available: 'on',
+      has_verified_resources: 'on',
+      has_lesson_plan: 'on',
+      is_stable: 'on',
+      tts: 'on',
+      project_sharing: 'on',
+      is_course: 'on',
+      peer_reviews_to_complete: 1,
+      curriculum_path: 'fake_curriculum_path',
+      family_name: 'coursea',
+      version_year: '2020',
+      pilot_experiment: 'fake-pilot-experiment',
+      editor_experiment: 'fake-editor-experiment',
+      curriculum_umbrella: 'CSF',
+      supported_locales: ['fake-locale'],
+      project_widget_types: ['gamelab', 'weblab'],
+      background: 'fake-background',
+    }
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+    }.merge(general_params)
+    assert_response :success
+    script.reload
+
+    general_params.each do |k, v|
+      if v == 'on'
+        assert_equal !!v, !!script.send(k), "Property didn't update: #{k}"
+      else
+        assert_equal v, script.send(k), "Property didn't update: #{k}"
+      end
+    end
+
+    # Unset the properties.
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      curriculum_path: '',
+      version_year: '',
+      pilot_experiment: '',
+      editor_experiment: '',
+      curriculum_umbrella: '',
+      supported_locales: [],
+      project_widget_types: [],
+      background: ''
+    }
+    assert_response :success
+    script.reload
+
+    # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0
+    expected = {"peer_reviews_to_complete" => 0}
+    assert_equal expected, script.properties
+  end
+
+  test 'add lesson to script' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    level = create :level
+    script = create :script
+    stub_file_writes(script.name)
+
+    assert_empty script.lessons
+
+    script_text = <<~SCRIPT_TEXT
+      lesson 'stage 1', display_name: 'stage 1'
+      level '#{level.name}'
+    SCRIPT_TEXT
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: script_text,
+    }
+    script.reload
+
+    assert_response :success
+    assert_equal level, script.lessons.first.script_levels.first.level
+    assert_equal 'stage 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
+    assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
   no_access_msg = "You don&#39;t have access to this unit."
@@ -491,23 +775,25 @@ class ScriptsControllerTest < ActionController::TestCase
     assert script.has_lesson_plan?
   end
 
-  test 'should redirect to latest stable version in script family' do
-    dogs1 = create :script, name: 'dogs1', family_name: 'coursea', version_year: '1901'
+  test 'should redirect to latest stable version in script family for student without progress or assignment' do
+    sign_in create(:student)
+
+    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901'
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'coursea'}
+      get :show, params: {id: 'ui-test-versioned-script'}
     end
 
     dogs1.update!(is_stable: true)
-    get :show, params: {id: 'coursea'}
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'coursea', version_year: '1902', is_stable: true
-    get :show, params: {id: 'coursea'}
+    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', is_stable: true
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'coursea', version_year: '1899', is_stable: true
-    get :show, params: {id: 'coursea'}
+    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', is_stable: true
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
   end
 
@@ -531,7 +817,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    (1..2).map {|n| create(:level, name: "Level #{n}")}
+    (1..8).map {|n| create(:level, name: "Level #{n}")}
     script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
     Script.setup([script_file])
 
@@ -540,6 +826,77 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_select "script[data-levelbuildereditscript]"
     assert_select "script[data-levelbuildereditscript]" do |elements|
       assert elements.first['data-levelbuildereditscript'].match?(/"beta":false/)
+    end
+  end
+
+  test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
+    sign_in @levelbuilder
+
+    get :show, params: {id: 'course1'}
+    assert_response :success
+    refute response.body.include? 'visible after'
+  end
+
+  test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    sign_in @levelbuilder
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'visible after'
+    Timecop.return
+  end
+
+  test "levelbuilder sees visible after warning if stage has visible_after property that is in the future" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in @levelbuilder
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    assert response.body.include? 'The lesson lesson 1 will be visible after'
+    Timecop.return
+  end
+
+  test "student does not see visible after warning if stage has visible_after property" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in create(:student)
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'visible after'
+    Timecop.return
+  end
+
+  test "teacher does not see visible after warning if stage has visible_after property" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in create(:teacher)
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'visible after'
+    Timecop.return
+  end
+
+  def stub_file_writes(script_name)
+    filenames_to_stub = ["config/scripts/#{script_name}.script", "config/scripts_json/#{script_name}.script_json"]
+    File.stubs(:write).with do |filename, _|
+      filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
     end
   end
 end

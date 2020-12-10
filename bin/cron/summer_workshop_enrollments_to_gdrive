@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/google/sheet'
+
+#
+# Uses a Google Cloud service account to write enrollment data for this year into
+# a spreadsheet in Google Drive (with permissions locked down to our organization)
+# in order to send packages to teachers attending 5-day workshops.
+#
+
+EARLIEST_WORKSHOP_END_DATE = Date.new(2020, 6, 1)
+LATEST_WORKSHOP_START_DATE = Date.new(2020, 8, 31)
+
+def get_rows
+  # Seed results array with a header row
+  results = [
+    %w(
+      regional_partner
+      workshop_start_date
+      workshop_course
+      first_name
+      last_name
+      teacher_email
+      workshop_id
+    )
+  ]
+
+  workshop_ids_this_year = Pd::Workshop.
+    where(subject: Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP).
+    scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
+    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).
+    pluck(:id)
+
+  enrollments_this_year = Pd::Enrollment.
+    includes(:workshop).
+    where(pd_workshop_id: workshop_ids_this_year)
+
+  enrollments_this_year.find_each do |enrollment|
+    results << [
+      enrollment.workshop.regional_partner&.name,
+      enrollment.workshop.workshop_starting_date.to_date,
+      enrollment.workshop.course,
+      enrollment.first_name,
+      enrollment.last_name,
+      enrollment.email,
+      enrollment.workshop.id
+    ]
+  end
+
+  results
+end
+
+def main
+  sheet = Google::Sheet.new CDO.enrollments_summer_2020_gsheet_key
+  sheet.export(tab_name: 'enrollments', rows: get_rows)
+  sheet.notify_of_external_sharing
+end
+
+main

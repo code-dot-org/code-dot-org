@@ -1,6 +1,7 @@
-login_required 'true'
+login_required true
 
-stage 'Unit 1 Overview'
+lesson 'Unit 1 Overview', display_name: 'Unit 1 Overview'
 level 'plc csp1 introduction to unit'
 level 'plc csp1 chapter overviews'
 level 'plc csp1 philosophy and commentary'
+

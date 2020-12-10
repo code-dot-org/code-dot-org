@@ -1,32 +1,29 @@
 name 'AP_practice_Qs_rqb_20_CSP_4_1_1'
+editor_experiment ''
 type 'multi2'
 right 'Look over all the cards to find the smallest one, and move it to the leftmost position.'
 wrong 'Compare the first two cards. If the one on the left is greater, switch them.'
-right 'Compare the values  of each pair of cards. For example, compare cards 0 and 1, compare cards 2 and 3, and so on for all pairs. Swap positions when the first card is greater than the second of the pair.
-'
-wrong 'Find the middle card and switch it with the card in the rightmost position.
-'
+right 'Compare the values of each pair of cards. For example, compare cards 0 and 1, compare cards 2 and 3, and so on for all pairs. Swap positions when the first card is greater than the second of the pair.'
+wrong 'Find the middle card and switch it with the card in the rightmost position.'
 markdown <<MARKDOWN
 FOUR INDEPENDENT ALGORITHMS listed below can be executed on a row of NUMBER cards (Not FACE cards) on a table. There are an EVEN number of cards, and they are in no special order. Which of the Algorithms involves BOTH Selection and Iteration?
+
 For this question select TWO correct answers
 
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1A**
-<hr>
- (A) **This**  option is correct. The algorithm utilizes both iteration (look over all the cards) as well as selection (move to leftmost position).
 
+---
+(A) **This**  option is correct. The algorithm utilizes both iteration (look over all the cards) as well as selection (move to leftmost position).
 
-<hr>
- (B) This option is incorrect. This algorithm only uses selection (if one is greater, switch)
+---
+(B) This option is incorrect. This algorithm only uses selection (if one is greater, switch)
 
+---
+(C) This option is correct This algorithm utilizes both iteration (compare the values of each pair of cards) and selection (swap positions)
 
-<hr>
- (C) This option is correct This algorithm utilizes both iteration (compare the values of each pair of cards) and selection (swap positions)
-
-
-<hr>
- (D) This option is incorrect. This algorithm only utilizes selection (find the middle and move)
-
-
+---
+(D) This option is incorrect. This algorithm only utilizes selection (find the middle and move)
 MARKDOWN

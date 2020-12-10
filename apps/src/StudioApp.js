@@ -8,7 +8,6 @@ import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
-import cookies from 'js-cookie';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -16,7 +15,7 @@ import * as aceMode from './acemode/mode-javascript_codeorg';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import * as assets from './code-studio/assets';
 import * as blockUtils from './block_utils';
-import * as codegen from './lib/tools/jsinterpreter/codegen';
+var codegen = require('./lib/tools/jsinterpreter/codegen');
 import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
@@ -37,22 +36,32 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from './util/color';
+import firehoseClient from './lib/util/firehose';
 import getAchievements from './achievements';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import userAgentParser from './code-studio/initApp/userAgentParser';
-import {KeyCodes, TestResults, TOOLBOX_EDIT_MODE} from './constants';
+import {
+  KeyCodes,
+  TestResults,
+  TOOLBOX_EDIT_MODE,
+  NOTIFICATION_ALERT_TYPE
+} from './constants';
 import {assets as assetsApi} from './clientApi';
-import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
+import {
+  configCircuitPlayground,
+  configMicrobit
+} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {resetAniGif} from '@cdo/apps/utils';
-import {setIsRunning, setStepSpeed} from './redux/runState';
+import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
+import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
 import {mergeProgress} from './code-studio/progressRedux';
@@ -70,14 +79,18 @@ import {
   setFeedback
 } from './redux/instructions';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
-
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 var copyrightStrings;
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-var MIN_WIDTH = 900;
+var MIN_WIDTH = 1200;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
@@ -169,6 +182,19 @@ class StudioApp extends EventEmitter {
     this.initTime = undefined;
 
     /**
+     * The time the last milestone was recorded. Used for recording the time a
+     * student has spent on a level.
+     * @type {?number}
+     */
+    this.milestoneStartTime = undefined;
+
+    /**
+     * Whether we've reported a milestone yet for this run/reset cycle
+     * @type {boolean}
+     */
+    this.hasReported = false;
+
+    /**
      * If true, we don't show blockspace. Used when viewing shared levels
      */
     this.hideSource = false;
@@ -182,7 +208,7 @@ class StudioApp extends EventEmitter {
     this.onContinue = undefined;
     this.onResetPressed = undefined;
     this.backToPreviousLevel = undefined;
-    this.sendToPhone = undefined;
+    this.isUS = undefined;
     this.enableShowBlockCount = true;
 
     this.disableSocialShare = false;
@@ -194,6 +220,21 @@ class StudioApp extends EventEmitter {
      * Levelbuilder-defined helper libraries.
      */
     this.libraries = {};
+
+    /*
+     * Stores the alert that appears if the user edits code while its running. It will be unmounted and set to undefined on reset.
+     */
+    this.editDuringRunAlert = undefined;
+
+    /*
+     * Stores whether we should display the alert above. Will be set to false and stored in localStorage if the user has already dismissed this alert.
+     */
+    this.showEditDuringRunAlert = true;
+
+    /*
+     * Stores the code at run. It's undefined if the code is not running.
+     */
+    this.executingCode = undefined;
   }
 }
 /**
@@ -204,8 +245,7 @@ StudioApp.prototype.configure = function(options) {
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.scratch = options.level && options.level.scratch;
-  this.usingBlockly_ = !this.editCode && !this.scratch;
+  this.usingBlockly_ = !this.editCode;
 
   if (options.isEditorless) {
     this.editCode = false;
@@ -254,7 +294,8 @@ function showWarnings(config) {
 }
 
 /**
- * Common startup tasks for all apps. Happens after configure.
+ * Common startup tasks for all blockly and droplet apps. Happens
+ * after configure.
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.init = function(config) {
@@ -280,22 +321,24 @@ StudioApp.prototype.init = function(config) {
 
   this.configureDom(config);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <div>
-        <InstructionsDialogWrapper
-          showInstructionsDialog={autoClose => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-        />
-        <FinishDialog
-          onContinue={() => this.onContinue()}
-          getShareUrl={() => this.lastShareUrl}
-        />
-      </div>
-    </Provider>,
-    document.body.appendChild(document.createElement('div'))
-  );
+  if (!config.level.iframeEmbedAppAndCode) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <div>
+          <InstructionsDialogWrapper
+            showInstructionsDialog={autoClose => {
+              this.showInstructionsDialog_(config.level, autoClose);
+            }}
+          />
+          <FinishDialog
+            onContinue={() => this.onContinue()}
+            getShareUrl={() => this.lastShareUrl}
+          />
+        </div>
+      </Provider>,
+      document.body.appendChild(document.createElement('div'))
+    );
+  }
 
   if (config.usesAssets && config.channel) {
     assetPrefix.init(config);
@@ -323,6 +366,18 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  if (config.level.iframeEmbedAppAndCode) {
+    StudioApp.prototype.handleIframeEmbedAppAndCode_({
+      containerId: config.containerId,
+      embed: config.embed,
+      level: config.level,
+      noHowItWorks: config.noHowItWorks,
+      isLegacyShare: config.isLegacyShare,
+      legacyShareStyle: config.legacyShareStyle,
+      wireframeShare: config.wireframeShare
+    });
+  }
+
   if (config.share) {
     this.handleSharing_({
       makeUrl: config.makeUrl,
@@ -332,13 +387,15 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
-  this.authoredHintsController_.init(
-    config.level.authoredHints,
-    hintsUsedIds,
-    config.scriptId,
-    config.serverLevelId
-  );
+  if (!config.level.iframeEmbedAppAndCode) {
+    const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
+    this.authoredHintsController_.init(
+      config.level.authoredHints,
+      hintsUsedIds,
+      config.scriptId,
+      config.serverLevelId
+    );
+  }
   if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
     this.authoredHintsController_.submitHints(
       config.authoredHintViewRequestsUrl
@@ -351,6 +408,7 @@ StudioApp.prototype.init = function(config) {
 
   // Record time at initialization.
   this.initTime = new Date().getTime();
+  this.initTimeSpent();
 
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
@@ -522,7 +580,49 @@ StudioApp.prototype.init = function(config) {
     );
   }
 
+  if (!config.readonlyWorkspace) {
+    this.addChangeHandler(this.editDuringRunAlertHandler.bind(this));
+  }
+
   this.emit('afterInit');
+};
+
+/*
+ * If the code has changed (other than whitespace at the beginning or end) and the code is running,
+ * tell redux the code has changed, disable block highlighting, and conditionally display an alert.
+ * Note: We trim the whitespace because droplet sometimes adds an extra newline when switching from block to code mode.
+ */
+StudioApp.prototype.editDuringRunAlertHandler = function() {
+  const hasEditedDuringRun =
+    this.isRunning() && this.getCode().trim() !== this.executingCode.trim();
+  if (!hasEditedDuringRun || this.editDuringRunAlert !== undefined) {
+    return;
+  }
+
+  getStore().dispatch(setIsEditWhileRun(true));
+  this.clearHighlighting();
+
+  // Check if the user has already dismissed this alert. Don't check localStorage again
+  // if showEditDuringRunAlert has already been set to false.
+  if (this.showEditDuringRunAlert) {
+    this.showEditDuringRunAlert =
+      utils.tryGetLocalStorage('hideEditDuringRunAlert', null) === null;
+  }
+
+  // Display the alert if the user hasn't previously dismissed it.
+  if (this.showEditDuringRunAlert) {
+    const onClose = () => {
+      utils.trySetLocalStorage('hideEditDuringRunAlert', true);
+      this.editDuringRunAlert = undefined;
+      this.showEditDuringRunAlert = false;
+    };
+    this.editDuringRunAlert = this.displayWorkspaceAlert(
+      'warning',
+      React.createElement('div', {}, msg.editDuringRunMessage()),
+      true /* bottom */,
+      onClose
+    );
+  }
 };
 
 StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function() {
@@ -587,6 +687,14 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
 
     dialog.show();
   };
+};
+
+StudioApp.prototype.initTimeSpent = function() {
+  this.milestoneStartTime = new Date().getTime();
+  this.debouncedSilentlyReport = _.debounce(
+    this.silentlyReport.bind(this),
+    1000
+  );
 };
 
 StudioApp.prototype.initVersionHistoryUI = function(config) {
@@ -714,12 +822,6 @@ StudioApp.prototype.handleClearPuzzle = function(config) {
     this.editor.setValue(resetValue);
 
     annotationList.clearRuntimeAnnotations();
-  } else if (this.scratch) {
-    const workspace = Blockly.getMainWorkspace();
-    workspace.clear();
-
-    const dom = Blockly.Xml.textToDom(config.level.startBlocks);
-    Blockly.Xml.domToWorkspace(dom, workspace);
   }
   if (config.afterClearPuzzle) {
     promise = config.afterClearPuzzle(config);
@@ -806,7 +908,7 @@ export function makeFooterMenuItems() {
     },
     {
       text: msg.copyright(),
-      link: '#',
+      link: 'javascript:void(0)',
       copyright: true
     },
     {
@@ -826,14 +928,9 @@ export function makeFooterMenuItems() {
     footerMenuItems.shift();
   }
 
-  var userAlreadyReportedAbuse =
-    cookies.get('reported_abuse') &&
-    _.includes(
-      JSON.parse(cookies.get('reported_abuse')),
-      project.getCurrentId()
-    );
-
-  if (userAlreadyReportedAbuse) {
+  const channelId = project.getCurrentId();
+  const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
+  if (alreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
       return menuItem.key === 'report-abuse';
     });
@@ -859,7 +956,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     },
     className: 'dark',
     menuItems: makeFooterMenuItems(),
-    phoneFooter: true
+    phoneFooter: true,
+    channel: project.getCurrentId()
   };
 
   ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
@@ -930,6 +1028,16 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   getStore().dispatch(setIsRunning(!showRun));
 
+  if (showRun) {
+    if (this.editDuringRunAlert !== undefined) {
+      ReactDOM.unmountComponentAtNode(this.editDuringRunAlert);
+      this.editDuringRunAlert = undefined;
+    }
+    getStore().dispatch(setIsEditWhileRun(false));
+  } else {
+    this.executingCode = this.getCode().trim();
+  }
+
   if (this.hasContainedLevels) {
     lockContainedLevelAnswers();
   }
@@ -942,9 +1050,26 @@ StudioApp.prototype.toggleRunReset = function(button) {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   }
+  if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
+    // craft has a darker color scheme than other blockly labs. It needs to
+    // toggle between different colors on run/reset or else, on run, the workspace
+    // would get lighter than the default.
+    if (showRun && this.config.app === 'craft') {
+      $('#codeWorkspace > .blocklySvg').css('background-color', '#A1A1A1');
+    } else if (showRun) {
+      $('#codeWorkspace > .blocklySvg').css('background-color', white);
+    } else if (this.config.app === 'craft') {
+      $('#codeWorkspace > .blocklySvg').css('background-color', '#7D7D7D');
+    } else {
+      $('#codeWorkspace > .blocklySvg').css(
+        'background-color',
+        workspace_running_background
+      );
+    }
+  }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
-  $('.arrow').prop('disabled', showRun);
+  getStore().dispatch(setArrowButtonDisabled(showRun));
 };
 
 StudioApp.prototype.isRunning = function() {
@@ -973,9 +1098,13 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {boolean} options.noOverlap if true, will not start playing if the sound is already playing
  * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (options && options.noOverlap && Sounds.getSingleton().isPlaying(name)) {
+    return;
+  }
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
@@ -1457,19 +1586,6 @@ StudioApp.prototype.resizeVisualization = function(width) {
   );
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
-
-    // If the small print and language selector are on the same line,
-    // the small print should float right.  Otherwise, it should float left.
-    var languageSelector = smallFooter.querySelector('form');
-    var smallPrint = smallFooter.querySelector('small');
-    if (
-      languageSelector &&
-      smallPrint.offsetTop === languageSelector.offsetTop
-    ) {
-      smallPrint.style.float = 'right';
-    } else {
-      smallPrint.style.float = 'left';
-    }
   }
 
   // Fire resize so blockly and droplet handle this type of resize properly:
@@ -1493,19 +1609,18 @@ StudioApp.prototype.resizeToolboxHeader = function() {
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
-  } else if (this.scratch) {
-    toolboxWidth = Blockly.getMainWorkspace().getMetrics().toolboxWidth;
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
 
 /**
- * Highlight the block (or clear highlighting).
+ * Highlight the block (or clear highlighting) unless the user has edited their
+ * code during this run.
  * @param {?string} id ID of block that triggered this action.
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 StudioApp.prototype.highlight = function(id, spotlight) {
-  if (this.isUsingBlockly()) {
+  if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -1542,11 +1657,22 @@ StudioApp.prototype.displayFeedback = function(options) {
 
   // Write updated progress to Redux.
   const store = getStore();
-  store.dispatch(
-    mergeProgress({[this.config.serverLevelId]: options.feedbackType})
-  );
+  if (this.config) {
+    // Some apps (Weblab, Oceans) don't have a config. Skip this step
+    // for those.
+    store.dispatch(
+      mergeProgress({[this.config.serverLevelId]: options.feedbackType})
+    );
+  }
 
   if (experiments.isEnabled('bubbleDialog')) {
+    // Track whether this experiment is in use. If not, delete this and similar
+    // sections of code. If it is, create a non-experiment flag.
+    trackEvent(
+      'experiment',
+      'Feedback bubbleDialog',
+      `AppType ${this.config.app}. Level ${this.config.serverLevelId}`
+    );
     const {response, preventDialog, feedbackType, feedbackImage} = options;
 
     const newFinishDialogApps = {
@@ -1588,7 +1714,7 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
-  options.sendToPhone = this.sendToPhone;
+  options.isUS = this.isUS;
   options.channelId = project.getCurrentId();
 
   try {
@@ -1597,12 +1723,11 @@ StudioApp.prototype.displayFeedback = function(options) {
       project.getShareUrl();
   } catch (e) {}
 
-  if (
-    this.shouldDisplayFeedbackDialog_(
-      options.preventDialog,
-      options.feedbackType
-    )
-  ) {
+  options.useDialog = this.shouldDisplayFeedbackDialog_(
+    options.preventDialog,
+    options.feedbackType
+  );
+  if (options.useDialog) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(
       options,
@@ -1628,7 +1753,7 @@ StudioApp.prototype.displayFeedback = function(options) {
 
   // If this level is enabled with a hint prompt threshold, check it and some
   // other state values to see if we should show the hint prompt
-  if (this.config.level.hintPromptAttemptsThreshold) {
+  if (this.config && this.config.level.hintPromptAttemptsThreshold) {
     this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
 
@@ -1709,13 +1834,21 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
  * @param {MilestoneReport} options
  */
 StudioApp.prototype.report = function(options) {
+  // We don't need to report again on reset.
+  this.hasReported = true;
+  const currentTime = new Date().getTime();
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
-    time: new Date().getTime() - this.initTime,
+    time: currentTime - this.initTime,
+    timeSinceLastMilestone: currentTime - this.milestoneStartTime,
     attempt: this.attempts,
     lines: this.feedback_.getNumBlocksUsed()
   });
+
+  // After we log the reported time we should update the start time of the milestone
+  // otherwise if we don't leave the page we are compounding the total time
+  this.milestoneStartTime = currentTime;
 
   this.lastTestResult = options.testResult;
 
@@ -1764,10 +1897,38 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function() {
 };
 
 /**
- * Click the reset button.  Reset the application.
+ * Report milestones but don't trigger the success callback when
+ * the server responds.
+ */
+StudioApp.prototype.silentlyReport = function(level = this.config.level.id) {
+  var options = {
+    app: getStore().getState().pageConstants.appType,
+    level: level,
+    skipSuccessCallback: true
+  };
+
+  // Some DB-backed levels (such as craft) only save the user's code when the user
+  // successfully finishes the level. Opening the level in a new tab will make the level
+  // appear freshly started. Therefore, we mark only channel-backed levels "started" here.
+  if (getStore().getState().pageConstants.channelId) {
+    options.testResult = TestResults.LEVEL_STARTED;
+  }
+  this.report(options);
+  this.hasReported = false;
+};
+
+/**
+ * Click the reset button. Reset the application.
  */
 StudioApp.prototype.resetButtonClick = function() {
+  // First, abort any reports in progress - the server call will
+  // still complete, but we'll skip the success callback.
   this.onResetPressed();
+  // Then, check if any reports happened this cycle. If not, trigger a report.
+  if (!this.hasReported) {
+    this.debouncedSilentlyReport();
+  }
+  this.hasReported = false;
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
@@ -1821,7 +1982,9 @@ StudioApp.prototype.setIdealBlockNumber_ = function() {
 StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   var deviceWidth;
   var desiredWidth;
-  var minWidth;
+  var width;
+  var scale;
+
   if (this.share && dom.isMobile()) {
     var mobileNoPaddingShareWidth =
       config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
@@ -1830,23 +1993,30 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     if (this.noPadding && deviceWidth < MAX_PHONE_WIDTH) {
       desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = mobileNoPaddingShareWidth;
+    var minWidth = mobileNoPaddingShareWidth;
+    width = Math.max(minWidth, desiredWidth);
+    scale = deviceWidth / width;
   } else {
-    // assume we are in landscape mode, so width is the longer of the two
-    deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-    minWidth = MIN_WIDTH;
-  }
-  var width = Math.max(minWidth, desiredWidth);
-  var scale = deviceWidth / width;
+    // We want the longer edge, the width in landscape, to get MIN_WIDTH.
+    let screenWidth = Math.max(screen.width, screen.height);
 
+    width = MIN_WIDTH;
+    scale = screenWidth / width;
+  }
+
+  // Setting `minimum-scale=scale` means that we are unable to shrink the
+  // entire playspace area down to fit on a portrait iPhone, even though
+  // it's technically not visible because of the RotateContainer on top.
+  // But setting `maximum-scale=scale` was preventing an Android from starting
+  // in the desired zoom level in landscape, so we removed that but left
+  // `minimum-scale=scale`.
   var content = [
     'width=' + width,
     'minimal-ui',
     'initial-scale=' + scale,
-    'maximum-scale=' + scale,
     'minimum-scale=' + scale,
     'target-densityDpi=device-dpi',
-    'user-scalable=no'
+    'viewport-fit=cover'
   ];
   viewport.setAttribute('content', content.join(', '));
 };
@@ -1887,7 +2057,7 @@ StudioApp.prototype.setConfigValues_ = function(config) {
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
-  this.sendToPhone = config.sendToPhone;
+  this.isUS = config.isUS;
   this.noPadding = config.noPadding;
 
   // contract editor requires more vertical space. set height to 1250 unless
@@ -2048,7 +2218,7 @@ StudioApp.prototype.configureDom = function(config) {
       document.body.className += ' embedded_iframe';
     }
 
-    if (config.pinWorkspaceToBottom) {
+    if (config.pinWorkspaceToBottom && !config.level.iframeEmbedAppAndCode) {
       var bodyElement = document.body;
       bodyElement.style.overflow = 'hidden';
       bodyElement.className = bodyElement.className + ' pin_bottom';
@@ -2159,6 +2329,13 @@ StudioApp.prototype.handleHideSource_ = function(options) {
   }
 };
 
+StudioApp.prototype.handleIframeEmbedAppAndCode_ = function() {
+  document.body.style.backgroundColor = 'transparent';
+  document.body.className += 'iframe_embed_app_and_code';
+  var vizColumn = document.getElementById('visualizationColumn');
+  $(vizColumn).addClass('chromelessShare');
+};
+
 /**
  * Adds any library blocks in the project to the toolbox.
  * @param {object} config The object containing all metadata about the project
@@ -2171,10 +2348,13 @@ StudioApp.prototype.loadLibraryBlocks = function(config) {
     return;
   }
 
-  config.level.libraryCode = '';
+  config.level.projectLibraries = [];
   config.level.libraries.forEach(library => {
     config.dropletConfig.additionalPredefValues.push(library.name);
-    config.level.libraryCode += createLibraryClosure(library);
+    config.level.projectLibraries.push({
+      name: library.name,
+      code: createLibraryClosure(library)
+    });
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
     //   id: 'libraryName',
@@ -2230,10 +2410,13 @@ StudioApp.prototype.handleEditCode_ = function(config) {
   }
 
   // Remove maker API blocks from palette, unless maker APIs are enabled.
-  if (!project.useMakerAPIs()) {
+  if (!project.getMakerAPIs()) {
     // Remove maker blocks from the palette
     if (config.level.codeFunctions) {
-      makerDropletBlocks.forEach(block => {
+      configCircuitPlayground.blocks.forEach(block => {
+        delete config.level.codeFunctions[block.func];
+      });
+      configMicrobit.blocks.forEach(block => {
         delete config.level.codeFunctions[block.func];
       });
     }
@@ -2547,14 +2730,55 @@ StudioApp.prototype.enableBreakpoints = function() {
   this.editor.on(
     'guttermousedown',
     function(e) {
-      var bps = this.editor.getBreakpoints();
-      if (bps[e.line]) {
+      const bps = this.editor.getBreakpoints();
+      const activeBreakpoint = bps[e.line];
+      if (activeBreakpoint) {
         this.editor.clearBreakpoint(e.line);
       } else {
         this.editor.setBreakpoint(e.line);
       }
+
+      // Log breakpoints usage to firehose. This is part of the work to add
+      // inline teacher comments; we want to get a sense of how much
+      // breakpoints are used and in what scenarios, so we can reason about the
+      // feasibility of repurposing line number clicks for this feature.
+      const currentUser = getStore().getState().currentUser;
+      const userType = currentUser && currentUser.userType;
+      firehoseClient.putRecord(
+        {
+          study: 'droplet-breakpoints',
+          study_group: userType,
+          event: 'guttermousedown',
+          data_json: JSON.stringify({
+            levelId: this.config.serverLevelId,
+            lineNumber: e.line,
+            activeBreakpoint,
+            projectLevelId: this.config.serverProjectLevelId,
+            scriptId: this.config.scriptId,
+            scriptLevelId: this.config.serverScriptLevelId,
+            scriptName: this.config.scriptName,
+            studentUserId: queryParams('user_id'),
+            url: window.location.toString()
+          })
+        },
+        {includeUserId: true}
+      );
     }.bind(this)
   );
+};
+
+/**
+ * Checks whether the code has been changed from the original level code as
+ * specified in levelbuilder. If the level has disabled this functionality,
+ * by turning `validationEnabled` off, this will always return true.
+ */
+StudioApp.prototype.validateCodeChanged = function() {
+  const level = this.config.level;
+  if (!level.validationEnabled) {
+    return true;
+  }
+
+  return project.isCurrentCodeDifferent(level.startBlocks);
 };
 
 /**
@@ -3001,25 +3225,32 @@ function rectFromElementBoundingBox(element) {
  * @param {string} type - Alert type (error, warning, or notification)
  * @param {React.Component} alertContents
  */
-StudioApp.prototype.displayWorkspaceAlert = function(type, alertContents) {
-  var container = this.displayAlert(
-    '#codeWorkspace',
-    {type: type},
+StudioApp.prototype.displayWorkspaceAlert = function(
+  type,
+  alertContents,
+  bottom = false,
+  onClose = () => {}
+) {
+  var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
+  var container = $('<div/>');
+  parent.append(container);
+  const workspaceAlert = React.createElement(
+    WorkspaceAlert,
+    {
+      type: type,
+      onClose: () => {
+        onClose();
+        ReactDOM.unmountComponentAtNode(container[0]);
+      },
+      isBlockly: this.usingBlockly_,
+      isCraft: this.config && this.config.app === 'craft',
+      displayBottom: bottom
+    },
     alertContents
   );
+  ReactDOM.render(workspaceAlert, container[0]);
 
-  var toolbarWidth;
-  if (this.usingBlockly_) {
-    toolbarWidth = $('.blocklyToolboxDiv').width();
-  } else {
-    toolbarWidth =
-      $('.droplet-palette-element').width() + $('.droplet-gutter').width();
-  }
-
-  $(container).css({
-    left: toolbarWidth,
-    top: $('#headers').height()
-  });
+  return container[0];
 };
 
 /**
@@ -3028,56 +3259,11 @@ StudioApp.prototype.displayWorkspaceAlert = function(type, alertContents) {
  * @param {React.Component} alertContents
  */
 StudioApp.prototype.displayPlayspaceAlert = function(type, alertContents) {
-  StudioApp.prototype.displayAlert(
-    '#visualization',
-    {
-      type: type,
-      sideMargin: 20
-    },
-    alertContents
-  );
-};
-
-/**
- * Displays a small notification box inside the playspace that goes away after 5 seconds
- * @param {React.Component} notificationContents
- */
-StudioApp.prototype.displayPlayspaceNotification = function(
-  notificationContents
-) {
-  StudioApp.prototype.displayAlert(
-    '#visualization',
-    {
-      type: 'notification',
-      closeDelayMillis: 5000,
-      childPadding: '8px 14px'
-    },
-    notificationContents
-  );
-};
-
-/**
- * Displays a small alert box inside DOM element at parentSelector. Parent is
- * assumed to have at most a single alert (we'll either create a new one or
- * replace the existing one).
- * @param {object} props
- * @param {string} object.type - Alert type (error or warning)
- * @param {number} [object.sideMaring] - Optional param specifying margin on
- *   either side of element
- * @param {React.Component} alertContents
- * @param {?string} position
- */
-StudioApp.prototype.displayAlert = function(
-  selector,
-  props,
-  alertContents,
-  position = 'absolute'
-) {
-  var parent = $(selector);
+  var parent = $('#visualization');
   var container = parent.children('.react-alert');
   if (container.length === 0) {
     container = $("<div class='react-alert ignore-transform'/>").css({
-      position: position,
+      position: 'absolute',
       left: 0,
       right: 0,
       top: 0,
@@ -3088,23 +3274,22 @@ StudioApp.prototype.displayAlert = function(
   }
   var renderElement = container[0];
 
-  var handleAlertClose = function() {
-    ReactDOM.unmountComponentAtNode(renderElement);
+  let alertProps = {
+    onClose: () => {
+      ReactDOM.unmountComponentAtNode(renderElement);
+    },
+    type: type
   };
-  ReactDOM.render(
-    <Alert
-      onClose={handleAlertClose}
-      type={props.type}
-      sideMargin={props.sideMargin}
-      closeDelayMillis={props.closeDelayMillis}
-      childPadding={props.childPadding}
-    >
-      {alertContents}
-    </Alert>,
-    renderElement
-  );
 
-  return renderElement;
+  if (type === NOTIFICATION_ALERT_TYPE) {
+    alertProps.closeDelayMillis = 5000;
+    alertProps.childPadding = '8px 14px';
+  } else {
+    alertProps.sideMargin = 20;
+  }
+
+  const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
+  ReactDOM.render(playspaceAlert, renderElement);
 };
 
 /**
@@ -3228,7 +3413,7 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 StudioApp.prototype.isNotStartedLevel = function(config) {
   const progress = getStore().getState().progress;
 
-  if (config.hasContainedLevels) {
+  if (config.hasContainedLevels || config.level.isProjectLevel) {
     return false;
   } else if (
     ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(
@@ -3264,6 +3449,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),
+      isBramble: config.app && config.app === 'weblab',
       hideSource: !!config.hideSource,
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,

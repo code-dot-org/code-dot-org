@@ -1,0 +1,77 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:25.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U5 ColorSleuth Template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "long_instructions": "# Updating the score\r\n\r\nTo get the score working, we're going to follow the same pattern we used when switching players.  We'll add variables, a function, calls to the function, and for now just use `console.log` statements to verify we've got things working.\r\n\r\n## Do this:\r\n\r\n1. Add two variables to the top of the code: `var p1Score=0;` and `var p2Score=0;`\r\n2. Add a new function definition `updateScoreBy` with an if-statement and console.log to verify.  Something like this:\r\n\r\n\t\tfunction updateScoreBy(amt){\r\n        \tif(currentPlayer == 1){\r\n            \tp1Score = p1Score + amt;\r\n            } else {\r\n            \tp2Score = p2Score + amt;\r\n            }\r\n            console.log(\"P1 score: \" + p1Score);\r\n            console.log(\"P2 score: \" + p2Score);\r\n        }\r\n\r\n3. Add calls to `updateScoreBy( )` to the appropriate placed inside the if statement in the `checkCorrect` function.\r\n  * Use a positive number to increase the score or a negative number to decrease. The number of points is up to you! \r\n  * You can leave your console.log statements in there for now as well.  Just add calls to `updateScoreBy` along with them.\r\n\r\n**TEST IT OUT**\r\n\r\nWhen you run the program now you should be able to verify in the console that the player's scores are updating.  Study the console output to make sure and verify that:\r\n\r\n* updateScoreBy is being called from checkCorrect with each click\r\n\t* if you have console.log statements in `updateScoreBy` then you should at least see that it's being called with each click\r\n* The correct player's score is being updated\r\n* The scores are being updated by the correct amount\r\n\r\n<details><summary>Sample output</summary>\r\n\r\n![](https://images.code.org/eb33f7d6d634e4f98e613bc13b231601-image-1481219318239.png)\r\n\r\n</details>",
+    "log_conditions": [
+      {
+        "entries": [
+          "updateScoreBy:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "At least one call to a function called updateScoreBy(amt) needs to occur while the program is running.  Did you define this function? With the program running did you perform an action that would trigger the call to the function? Check that you spelled and capitalized it exactly as shown."
+      }
+    ],
+    "teacher_markdown": "\r\nCurrent working version of the code for this point:\r\n\r\n    var p1Score=0;\r\n    var p2Score=0;\r\n    var currentPlayer = 1;\r\n    var randButtonId;\r\n\r\n    setBoard();\r\n\r\n    function setBoard() {\r\n      var R = randomNumber(0,235);\r\n      var G = randomNumber(0,235);\r\n      var B = randomNumber(0,235);\r\n      var color = rgb(R, G, B);\r\n      setProperty(\"button1\", \"background-color\", color);\r\n      setProperty(\"button2\", \"background-color\", color);\r\n      setProperty(\"button3\", \"background-color\", color);\r\n      setProperty(\"button4\", \"background-color\", color);\r\n\r\n      R = R+20; \r\n      G = G+20;\r\n      B = B+20;\r\n      var diffColor = rgb(R, G, B);\r\n      randButtonId = \"button\"+randomNumber(1,4);\r\n      setProperty(randButtonId, \"background-color\", diffColor);\r\n      console.log(\"correct button is: \"+randButtonId);\r\n    }\r\n\r\n    function checkCorrect(buttonId) {\r\n      console.log(\"checking: \"+buttonId);\r\n      if( buttonId == randButtonId ) {\r\n          console.log(\"You got it right!\");\r\n          updateScoreBy(1);\r\n      } else {\r\n          console.log(\"WRONG\");\r\n          updateScoreBy(-3);\r\n      }\r\n      setBoard();\r\n      switchPlayer();\r\n    }\r\n\r\n    function updateScoreBy(amt){\r\n      if(currentPlayer==1){\r\n        p1Score += amt;\r\n      }\r\n      else{\r\n        p2Score += amt;\r\n      }\r\n      console.log(\"P1 Score: \"+p1Score);\r\n      console.log(\"P2 Score: \"+p2Score);\r\n    }\r\n\r\n    function switchPlayer(){\r\n      if(currentPlayer==1){\r\n        currentPlayer=2;\r\n        showElement(\"player2_highlight\");\r\n        hideElement(\"player1_highlight\");\r\n      } else {\r\n        currentPlayer=1;\r\n        showElement(\"player1_highlight\");\r\n        hideElement(\"player2_highlight\");\r\n      }\r\n      console.log(\"current player: \"+currentPlayer);\r\n    }\r\n\r\n    onEvent(\"button1\", \"click\", function() {\r\n      checkCorrect(\"button1\");\r\n    });\r\n    onEvent(\"button2\", \"click\", function() {\r\n      checkCorrect(\"button2\");\r\n    });\r\n    onEvent(\"button3\", \"click\", function() {\r\n      checkCorrect(\"button3\");\r\n    });\r\n    onEvent(\"button4\", \"click\", function() {\r\n      checkCorrect(\"button4\");\r\n    });\r\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 17263,
+    "name_suffix": "_virtual",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 04:15:30 +0000\",\"changed\":[\"log_conditions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-20 16:56:14 +0000\",\"changed\":[\"long_instructions\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-21 15:48:59 +0000\",\"changed\":[\"long_instructions\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 21:42:36 +0000\",\"changed\":[\"long_instructions\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-22 22:03:51 +0000\",\"changed\":[\"long_instructions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -164,11 +164,13 @@ class TeacherPanel extends React.Component {
               <div style={styles.exampleSolutions}>
                 {sectionData.level_examples.map((example, index) => (
                   <Button
+                    __useDeprecatedTag
                     key={index}
                     text={i18n.exampleSolution({number: index + 1})}
                     color="blue"
                     href={example}
                     target="_blank"
+                    rel="noopener noreferrer"
                   />
                 ))}
               </div>
@@ -188,6 +190,7 @@ class TeacherPanel extends React.Component {
                 <a
                   href={teacherDashboardUrl(selectedSection.id)}
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={styles.teacherDashboardLink}
                   onClick={() => this.logToFirehose('select_teacher_dashboard')}
                 >

@@ -1,7 +1,7 @@
 {
   "absolute": "absoluto",
   "agentGenericFailureMessage": "Continue codificando! Lembre-se de usar o Agent para ajudar.",
-  "agentTooFewBlocksFailureMessage": "Tente adicionar apenas a um bloco por vez para levar o Agent até o local certo.",
+  "agentTooFewBlocksFailureMessage": "Tente adicionar apenas um bloco por vez para levar o Agent até o local certo.",
   "at": "em",
   "agentDiamondPathCongrats": "Parabéns, você encontrou o caminho de diamante! Você coletou {count, plural, one {1 diamond} other {# diamonds}} até agora!",
   "blockActionAdd": "adicionar",
@@ -64,7 +64,7 @@
   "blockPlaceXPlace": "colocar",
   "blockPlantCrop": "plantar",
   "blockShear": "tosar",
-  "blockTill": "arar",
+  "blockTill": "até",
   "blockTillSoil": "arar terra",
   "blockTurn": "virar",
   "blockTurnLeft": "vire à esquerda",

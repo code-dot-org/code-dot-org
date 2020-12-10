@@ -1,0 +1,11 @@
+name 'csp5 virtual bubblechoice'
+editor_experiment ''
+display_name 'Keep going!'
+description 'Revisit the apps you created, or start something new!'
+
+sublevels
+level 'csp5 virtual choice cyoa'
+level 'csp5 virtual choice chaser'
+level 'csp5 virtual choice madlibs'
+level 'csp5 virtual choice colorsleuth'
+level 'csp5 virtual choice free'

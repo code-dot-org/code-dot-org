@@ -21,6 +21,8 @@ vi-VN:
     none; font-weight: 400"><a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Bạn là giáo viên Tin Học? Xem thêm thư viện tuần giáo
     dục Tin Học.</a>'
+  csedweek_banner_teachers_text: Bạn là giáo viên Tin Học? Xem thêm thư viện tuần
+    giáo dục Tin Học.
   n_have_learned_an_hoc: "<h1>Hãy thử một</h1><h2>Hour of Code</h2><h3># phục vụ</h3>"
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
@@ -28,8 +30,6 @@ vi-VN:
     khoa học máy tính
   petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người
     khác.'
-  petition_sign_message_support: 'Nếu bạn hỗ trợ chúng tôi, hãy ký tên.  Tham gia
-    cùng # những người khác.'
   petition_join_others: 'Tham gia cùng # những người khác'
   name: Tên
   email: Thư điện tử
@@ -68,7 +68,7 @@ vi-VN:
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Đăng ký
   cded_try_it: Hãy thử nó
-  try_now: Thử ngay bây giờ
+  try_now: Thử ngay
   california_heading: Yêu cầu trường học của bạn giảng dạy khoa học máy tính
   california_text: Bất kỳ giáo viên có thể cung cấp các <a href='http://studio.code.org/'>khóa
     học miễn phí</a>.  Bất kỳ trường tiểu học có thể <a href='http://code.org/educate/k5'>dạy
@@ -354,6 +354,7 @@ vi-VN:
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
   homepage_signpetition_dropdown: Tôi đồng ý &#x25BE;
+  homepage_signpetition_dropdown_text: Tôi đồng ý
   homepage_banner_text_prizes: The Hour of Code sắp diễn ra một lần nữa từ ngày
     7 đến ngày 13 tháng mười hai
   homepage_banner_link_prizes: 'Tham gia sự kiện học lập trình lớn nhất trong lịch
@@ -481,6 +482,7 @@ vi-VN:
   minecraft_og_agent: Minecaft là nền tảng của Giờ lập trình, và bạn chính là anh
     hùng! Hãy viết các câu lệnh để lập trình hành trình trong thế giới Minecraft.
   sports_watch_video: Xem video
+  video_title_cs_is_everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
   video_title_inspire_girl: Truyền cảm hứng cho một cô gái
   video_5min: 5 phút
   help_translate: Giúp chúng tôi dịch.
@@ -840,6 +842,7 @@ vi-VN:
   classicmaze_name: Mê cung cổ điển
   iceage_name: Kỉ băng hà
   minecraft_name: Minecraft
+  text-compression_name: Nén văn bản
   applab_name: Phòng thí nghiệm ứng dụng
   gamelab_name: Kho Trò chơi
   applab_gradelevel: Lứa tuổi 13 +
@@ -856,7 +859,7 @@ vi-VN:
   touchdevelop_gradelevel: Trung học phổ thông
   blockly_gradelevel: Mọi lứa tuổi
   boxisland_gradelevel: Tiểu học
-  course1_gradelevel: Lứa tuổi 4 + (trước khi biết đọc)
+  course1_gradelevel: 4-6 tuổi
   course2_gradelevel: Lứa tuổi 6 + (yêu cầu biết đọc)
   course3_gradelevel: Lứa tuổi 8 + (sau khi khóa học 2)
   course4_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
@@ -986,6 +989,8 @@ vi-VN:
   header_about: Thông tin
   header_teacher_community: Cộng đồng giáo viên
   header_report_bug: Báo lỗi
+  header_legal_privacy: Chính sách riêng tư
+  header_legal_tos: Các điều khoản của Code.org
   header_tutorials: Hướng dẫn
   header_documentation: Tài liệu
   user_header_label: Chào %{username}
@@ -1023,6 +1028,11 @@ vi-VN:
     triển bởi Code.org và các đối tác.
   hoc_overview_partner_activities_link: Xem hoạt động
   hoc_overview_start_tutorial: Bắt đầu
+  hoc_overview_more_resources: Để xem thêm các tài liệu về cách tương tác với lớp
+    học từ xa, hãy xem hướng dẫn tổ chức [Hour of Code trực tuyến](https://hourofcode.com/us/how-to/virtual).
+    Đối với các em học sinh không có hoặc bị giới hạn về thiết bị công nghệ hoặc kết
+    nối, hãy chia sẻ gói [các hoạt động Hour of Code ngoại tuyến](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
+    này.
   hoc_overview_view_teacher_guide: Xem hướng dẫn cho giáo viên
   hoc2018_creativity_create: Tạo
   hoc2018_creativity_what_will_you_create: Bạn sẽ tạo những gì?
@@ -1134,3 +1144,8 @@ vi-VN:
   hoc2018_dance_amazon_scholarship_programs_button: Đăng ký ngay
   hoc2018_dance_measure: Nhịp
   hoc2018_dance_measure_colon: 'Nhịp:'
+  hoc2018_mc_with_microsoft: Hợp tác cùng
+  hoc2018_mc_thank_microsoft: Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng
+    tôi để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ
+    năng cần thiết để thành công trong thế kỷ 21.
+  footer_powered_by_aws: Được tài trợ bởi Amazon Web Services

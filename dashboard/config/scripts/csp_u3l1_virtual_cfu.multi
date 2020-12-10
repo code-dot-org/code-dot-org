@@ -1,0 +1,16 @@
+name 'CSP U3L1 Virtual CFU'
+editor_experiment ''
+title 'Multiple Choice: Turn Left with Turtle'
+description ''
+right '![](https://images.code.org/f00f8bb1212c8f856a9807db6983b968-image-1584559319348.png)'
+wrong '![](https://images.code.org/5fb3d834b3dacb0680192c80bf90eda1-image-1584559332420.png)'
+wrong '![](https://images.code.org/c5ce01e764a5a2a433574cd6fd242101-image-1584559340804.png)'
+wrong '![](https://images.code.org/fa4516b8e3c7d261b9c3df5af84a0ed9-image-1584559349624.png)'
+markdown <<MARKDOWN
+![](https://images.code.org/0857912f882dbba19d11c92fe6852f8f-image-1584559201324.png)
+
+Where will the turtle be pointing after this program is run?
+
+**Hint:** The turtle is pointing "up" at the start. 
+
+MARKDOWN

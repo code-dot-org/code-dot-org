@@ -19,6 +19,7 @@
   "ifPathAhead": "jika laluan ke hadapan",
   "ifTooltip": "Jika ada laluan ke arah yang ditentukan, lakukan beberapa tindakan.",
   "ifelseTooltip": "Jika terdapat lorong dalam arah yang ditentukan, maka lakukan tindakan blok pertama. Sebaliknya, lakukan tindakan untuk blok kedua.",
+  "moveBackward": "bergerak ke belakang dengan",
   "moveForward": "bergerak ke hadapan",
   "moveForwardTooltip": "Bergerak ke hadapan satu ruang.",
   "nextLevel": "Tahniah! Anda telah melengkapkan puzzle ini.",

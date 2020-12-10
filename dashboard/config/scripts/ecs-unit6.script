@@ -1,18 +1,18 @@
 professional_learning_course 'ECS Support'
 login_required true
 
-stage 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started'
 level 'ECSPD3-u6 about'
 level 'PDECS tour'
 level 'ECSPD3-u6 plan'
 level 'ECSPD course goals'
 
-stage 'Unit 6 Overview'
+lesson 'Unit 6 Overview', display_name: 'Unit 6 Overview'
 level 'ECSPD3-u6 intro to u6'
 level 'ECSPD3-u6 why study robotics'
 level 'ECSPD3-u6 connections'
 
-stage 'Unit 6 lessons'
+lesson 'Unit 6 lessons', display_name: 'Unit 6 lessons'
 level 'ECSPD3-u6 day 1'
 level 'ECSPD3-u6 day 2-3'
 level 'ECSPD3-u6 day 4'
@@ -26,12 +26,12 @@ level 'ECSPD3-u6 day 16-18'
 level 'ECSPD3-u6 day 19-23'
 level 'ECSPD3-u6 day 24-33'
 
-stage 'Alternative Ideas for Unit 6'
+lesson 'Alternative Ideas for Unit 6', display_name: 'Alternative Ideas for Unit 6'
 level 'ECSPD3-u6 lesson ideas'
 level 'ECSPD3-u6 links to online simulations'
 level 'ECSPD3-u6 ideas for culminating projects'
 
-stage 'Unit 6 Challenge'
+lesson 'Unit 6 Challenge', display_name: 'Unit 6 Challenge'
 level 'ECSPD3-u6 challenge details'
 level 'ECSPD3-u6 list of challenges'
 level 'ECS Unit 6 Challenge Selection', named: true
@@ -41,5 +41,6 @@ level 'CSPPD3-u2 reflect on challenge'
 level 'CSPPD3-u2 expectations'
 level 'ECS Unit 6 Challenge Submission', named: true
 
-stage 'Close & Next Steps'
+lesson 'Close & Next Steps', display_name: 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'
+

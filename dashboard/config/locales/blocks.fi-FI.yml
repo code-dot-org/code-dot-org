@@ -3,9 +3,7 @@ fi:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: |-
-          {GROUP} vuorottelee joka {N} tahti
-          tanssiliikkeiden {MOVE1} ja {MOVE2} välillä
+        text: "{GROUP} vaihtele jokaisen {N} mittayksikön \nvälillä {MOVE1} ja {MOVE2}"
         options:
           GROUP:
             sprites: kaikki
@@ -22,7 +20,7 @@ fi:
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           MOVE1:
-            MOVES.Roll: Body Roll
+            MOVES.Roll: Korin kallistus
             MOVES.ClapHigh: Taputa korkealle
             MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
@@ -34,7 +32,7 @@ fi:
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
           MOVE2:
-            MOVES.Roll: Body Roll
+            MOVES.Roll: Korin kallistus
             MOVES.ClapHigh: Taputa korkealle
             MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
@@ -79,7 +77,7 @@ fi:
             '"next"': "(Seuraava)"
             '"prev"': "(Edellinen)"
             '"rand"': "(Satunnainen)"
-            MOVES.Roll: Body Roll
+            MOVES.Roll: Korin kallistus
             MOVES.ClapHigh: Taputa korkealle
             MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
@@ -90,9 +88,6 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee liikettä {MOVE} {DIR} ikuisesti"
         options:
@@ -100,7 +95,7 @@ fi:
             '"next"': "(Seuraava)"
             '"prev"': "(Edellinen)"
             '"rand"': "(Satunnainen)"
-            MOVES.Roll: Body Roll
+            MOVES.Roll: Korin kallistus
             MOVES.ClapHigh: Taputa korkealle
             MOVES.Dab: Dab
             MOVES.DoubleJam: Panoksen tuplaus
@@ -111,9 +106,6 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} määrä {VAL}
         options:
@@ -168,7 +160,7 @@ fi:
           MOVE:
             '"rand"': "(Satunnainen)"
             MOVES.XBend: Taivuta
-            MOVES.Roll: Body Roll
+            MOVES.Roll: Korin kallistus
             MOVES.XClapSide: Taputa
             MOVES.ClapHigh: Taputa korkealle
             MOVES.Dab: Dab
@@ -190,16 +182,13 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} tee liike {MOVE} {DIR} kerran"
         options:
           MOVE:
             '"rand"': "(Satunnainen)"
             MOVES.XBend: Taivuta
-            MOVES.Roll: Body Roll
+            MOVES.Roll: Korin kallistus
             MOVES.XClapSide: Taputa
             MOVES.ClapHigh: Taputa korkealle
             MOVES.Dab: Dab
@@ -221,9 +210,6 @@ fi:
             MOVES.XArmsUp: Venytys
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'toista joka {N} mittayksikköä jälkeen {START} '
       Dancelab_everySeconds:
@@ -281,7 +267,7 @@ fi:
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
             MOVES.Fresh: Fressaa
-            MOVES.Roll: Body Roll
+            MOVES.Roll: Korin kallistus
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
@@ -304,8 +290,8 @@ fi:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
             "{x: 200, y: 200}": keskellä
-            "{x: 100, y: 100}": vasen yläkulma
-            "{x: 300, y: 100}": oikea yläkulma
+            "{x: 100, y: 100}": ylävasen
+            "{x: 300, y: 100}": yläoikea
             "{x: 100, y: 300}": alavasen
             "{x: 300, y: 300}": alaoikea
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
@@ -332,8 +318,8 @@ fi:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
             "{x: 200, y: 200}": keskellä
-            "{x: 100, y: 100}": vasen yläkulma
-            "{x: 300, y: 100}": oikea yläkulma
+            "{x: 100, y: 100}": ylävasen
+            "{x: 300, y: 100}": yläoikea
             "{x: 100, y: 300}": alavasen
             "{x: 300, y: 300}": alaoikea
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": satunnainen
@@ -357,10 +343,15 @@ fi:
           FORMAT:
             '"border"': raja
             '"inner"': neliön sisällä
+            '"diamond"': timantti
             '"circle"': ympyrä
             '"grid"': ruudukko
+            '"top"': ylärivi
             '"row"': rivi
+            '"bottom"': alarivi
+            '"left"': vasen sarake
             '"column"': sarake
+            '"right"': oikea sarake
             '"x"': ristiinrastiin
             '"plus"': risti
             '"random"': satunnainen
@@ -386,8 +377,8 @@ fi:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
             "{x: 200, y: 200}": keskellä
-            "{x: 100, y: 100}": vasen yläkulma
-            "{x: 300, y: 100}": oikea yläkulma
+            "{x: 100, y: 100}": ylävasen
+            "{x: 300, y: 100}": yläoikea
             "{x: 100, y: 300}": alavasen
             "{x: 300, y: 300}": alaoikea
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
@@ -415,8 +406,8 @@ fi:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
             "{x: 200, y: 200}": keskellä
-            "{x: 100, y: 100}": vasen yläkulma
-            "{x: 300, y: 100}": oikea yläkulma
+            "{x: 100, y: 100}": ylävasen
+            "{x: 300, y: 100}": yläoikea
             "{x: 100, y: 300}": alavasen
             "{x: 300, y: 300}": alaoikea
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": satunnainen
@@ -497,9 +488,9 @@ fi:
             '"diamonds"': Timantit
             '"disco_ball"': Diskopallo
             '"fireworks"': Ilotulitus
-            '"swirl"': Hypnoa
+            '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskooppi
-            '"lasers"': Laser tanssilattia
+            '"lasers"': Laser-tanssilattia
             '"splatter"': Maaliroiskeet
             '"rainbow"': Sateenkaari
             '"snowflakes"': Lumi
@@ -510,17 +501,19 @@ fi:
             '"disco"': Neliöt
             '"stars"': Äänet
           PALETTE:
-            '"rave"': Musta ja valkoinen
-            '"cool"': Siistiä
+            '"rave"': Mustavalkoinen
+            '"cool"': Kylmä
             '"electronic"': Sähköinen
             '"iceCream"': Jäätelö
             '"default"': Vaalea
             '"neon"': Neon
             '"tropical"': Trooppinen
-            '"vintage"': Vanha
+            '"vintage"': Vanhanaikainen
             '"warm"': Sydämellinen
       Dancelab_setBackgroundEffectWithPalette:
-        text: aseta taustaefekti {PALETTE} {EFFECT}
+        text: |-
+          "määritä taustatehoste
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': Ei mitään
@@ -533,18 +526,16 @@ fi:
             '"fireworks"': Ilotulitus
             '"flowers"': Kukat
             '"growing_stars"': Kasvavat tähdet
-            '"swirl"': Hypnoa
+            '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskooppi
-            '"lasers"': Laser tanssilattia
+            '"lasers"': Laser-tanssilattia
             '"splatter"': Maaliroiskeet
             '"rainbow"': Sateenkaari
             '"ripples_random"': Satunnainen aaltoilu
             '"ripples"': Aaltoilu
             '"snowflakes"': Lumi
             '"text"': Kappaleen nimet
-            '"squiggles"': |-
-              Kiemurat
-              \
+            '"squiggles"': Kiemurat
             '"galaxy"': Avaruus
             '"sparkles"': Kimallus
             '"spiral"': Kierre
@@ -552,14 +543,14 @@ fi:
             '"stars"': Äänet
             '"music_wave"': Aallot
           PALETTE:
-            '"rave"': Musta ja valkoinen
-            '"cool"': Siistiä
+            '"rave"': Mustavalkoinen
+            '"cool"': Kylmä
             '"electronic"': Sähköinen
             '"iceCream"': Jäätelö
             '"default"': Vaalea
             '"neon"': Neon
             '"tropical"': Trooppinen
-            '"vintage"': Vanha
+            '"vintage"': Vanhanaikainen
             '"warm"': Sydämellinen
       Dancelab_setDanceSpeed:
         text: muuta {SPRITE} tanssin nopeutta {SPEED}
@@ -601,13 +592,13 @@ fi:
             '"bubbles"': Kuplat
             '"confetti"': Konfetti
             '"hearts_red"': Sydämet
-            '"music_notes"': Musiikin nuotit
+            '"music_notes"': Musiikkinuotit
             '"pineapples"': Ananakset
             '"pizzas"': Pizzat
-            '"smiling_poop"': Kkkaa
+            '"smiling_poop"': Kakka
             '"rain"': Sade
             '"floating_rainbows"': Sateenkaari
-            '"smile_face"': Hymyilee
+            '"smile_face"': Hymyjä
             '"spotlight"': Kohdevalaisin
             '"color_lights"': Näyttämön kohdevalaisimet
             '"raining_tacos"': Tacot
@@ -622,14 +613,14 @@ fi:
             '"confetti"': Konfetti
             '"emojis"': Hymiöt
             '"hearts_red"': Sydämet
-            '"music_notes"': Musiikin nuotit
+            '"music_notes"': Musiikkinuotit
             '"paint_drip"': Maalin tippuminen
             '"pineapples"': Ananakset
             '"pizzas"': Pizzat
-            '"smiling_poop"': Kkkaa
+            '"smiling_poop"': Kakka
             '"rain"': Sade
             '"floating_rainbows"': Sateenkaari
-            '"smile_face"': Hymyilee
+            '"smile_face"': Hymyjä
             '"spotlight"': Kohdevalaisin
             '"color_lights"': Näyttämön kohdevalaisimet
             '"exploding_stars"': Tähtisäteet
@@ -869,9 +860,7 @@ fi:
             '"quads"': Kulmat
             '"flowers"': Kukat
             '"popsicles"': Mehutikut
-            '"squiggles"': |-
-              Kiemurat
-              \
+            '"squiggles"': Kiemurat
             '"growing_stars"': Kasvavat tähdet
             '"emojis"': Hymiöt
             '"hearts_colorful"': Sydämet
@@ -914,7 +903,7 @@ fi:
             '"left"': vasemmalle
             '"down"': alas
             '"right"': oikealle
-            '"space"': tilaa
+            '"space"': tyhjä väli
             '"enter"': syötä
             '"a"': a
             '"b"': b
@@ -966,6 +955,10 @@ fi:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
       gamelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} määrä {VAL}
         options:
@@ -1011,8 +1004,45 @@ fi:
         options:
           CHOICE:
             '"this"': tätä
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
       gamelab_hideTitleScreen:
         text: piilota otsikkonäyttö
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} koskettaa reunoja"
       gamelab_jumpTo:
@@ -1056,6 +1086,13 @@ fi:
             '"z"': z
       gamelab_locationAt:
         text: 'sijainti x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Pohjoinen
+            '"East"': Itä
+            '"South"': Etelä
+            '"West"': Länsi
       gamelab_locationMouse:
         text: hiiren sijainti
       gamelab_locationOf:
@@ -1072,6 +1109,8 @@ fi:
             '"left"': vasemmalle
       gamelab_mouseLocation:
         text: hiiren sijainti
+      gamelab_moveBackward:
+        text: siirry {SPRITE} {DISTANCE} kuvapistettä taaksepäin
       gamelab_moveForward:
         text: siirry {SPRITE} {DISTANCE} kuvapistettä eteenpäin
       gamelab_moveInDirection:
@@ -1084,6 +1123,8 @@ fi:
             '"West"': Länsi
       gamelab_moveToward:
         text: siirry {SPRITE} kuvapistettä {DISTANCE} kohti {TARGET}
+      gamelab_objectSpritePointer:
+        text: napsautti {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1108,6 +1149,8 @@ fi:
         text: sprite {SPRITE} lopettaa {BEHAVIOR}
       gamelab_removeTint:
         text: poista väri {THIS}
+      gamelab_repeatForever:
+        text: toista jatkuvasti
       gamelab_setAnimation:
         text: muutos {THIS} puku {ANIMATION}
       gamelab_setBackground:
@@ -1128,6 +1171,8 @@ fi:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vedenalainen
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talvi
             undefined: Ei yhtään
+      gamelab_setBackgroundImageAs:
+        text: aseta tausta {IMG}
       gamelab_setProp:
         text: aseta {SPRITE} {PROPERTY} arvoksi {VAL}
         options:
@@ -1148,25 +1193,29 @@ fi:
         text: vaihtaa väriä {THIS} {COLOR}
       gamelab_setupSim:
         text: |-
-          Määritä simulointi
-          {SPRITE1N}{SPRITE1COSTUME}Nopeus{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Nopeus{SPRITE2SPEED}
-          Kerääminen
+          määritä simulointi käyttäen
+          {SPRITE1N}{SPRITE1COSTUME}nopeudella{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}nopeudella{SPRITE2SPEED}
+          keräten
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: näytä otsikon näyttö {BREAK} otsikko {TITLE} teksti {SUBTITLE}
+        text: näytä otsikkosivu {BREAK} otsikko {TITLE} teksti {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} napsautettu"
         options:
           CONDITION:
             '"when"': kun
             '"while"': niin kauan kuin
+      gamelab_subjectSpritePointer:
+        text: napsautti {SPRITE}
       gamelab_turn:
         text: käännä {SPRITE} {DIRECTION} {N} astetta
         options:
           DIRECTION:
             '"right"': oikealle
             '"left"': vasemmalle
+      gamelab_updateTitleWithColor:
+        text: näytä otsikkosivu {BREAK} otsikko {TITLE} väri {COLOR}
       gamelab_whenDownArrow:
         text: kun nuolta painetaan
       gamelab_whenKey:
@@ -1246,8 +1295,8 @@ fi:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
             "{x: 200, y: 200}": keskellä
-            "{x: 100, y: 100}": vasen yläkulma
-            "{x: 300, y: 100}": oikea yläkulma
+            "{x: 100, y: 100}": ylävasen
+            "{x: 300, y: 100}": yläoikea
             "{x: 100, y: 300}": alavasen
             "{x: 300, y: 300}": alaoikea
       Mikelab_getNext:
@@ -1287,8 +1336,8 @@ fi:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
             "{x: 200, y: 200}": keskellä
-            "{x: 100, y: 100}": vasen yläkulma
-            "{x: 300, y: 100}": oikea yläkulma
+            "{x: 100, y: 100}": ylävasen
+            "{x: 300, y: 100}": yläoikea
             "{x: 100, y: 300}": alavasen
             "{x: 300, y: 300}": alaoikea
       Mikelab_groupDestroy:
@@ -1380,7 +1429,7 @@ fi:
             MOVES.Drop: Pudota
             MOVES.Floss: Flossaa
             MOVES.Fresh: Fressaa
-            MOVES.Roll: Body Roll
+            MOVES.Roll: Korin kallistus
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
@@ -1448,8 +1497,8 @@ fi:
             "{x: 100, y: 200}": vasemmalle
             "{x: 300, y: 200}": oikealle
             "{x: 200, y: 200}": keskellä
-            "{x: 100, y: 100}": vasen yläkulma
-            "{x: 300, y: 100}": oikea yläkulma
+            "{x: 100, y: 100}": ylävasen
+            "{x: 300, y: 100}": yläoikea
             "{x: 100, y: 300}": alavasen
             "{x: 300, y: 300}": alaoikea
       Mikelab_whenClickedOn:
@@ -1519,7 +1568,7 @@ fi:
       Vector_setColor:
         text: aseta väri {COLOR}
       Vector_setSize:
-        text: asettaa leveys {WIDTH} korkeus {HEIGHT}
+        text: aseta leveys {WIDTH} korkeus {HEIGHT}
       Vector_teleportTo:
         text: aseta asema {POSITION}
       Vector_vectorNorth:
@@ -1542,6 +1591,14 @@ fi:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: siirry {SPRITE} {DISTANCE} kuvapistettä {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Pohjoinen
+            '"East"': Itä
+            '"South"': Etelä
+            '"West"': Länsi
       aalab_prompt:
         text: kysyä kysymys {MESSAGE}
       aalab_scene:
@@ -1553,12 +1610,10 @@ fi:
             '3': '3'
       aalab_setupStory:
         text: setup tarina
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': näytä
-            '"hide"': piilota
+            '"random"': satunnainen
       binary_drawBin:
         text: piirtää binääri {BIN}
       binary_drawBinScreen:
@@ -1653,7 +1708,6 @@ fi:
             '"stoneBricks"': kivitiilet
             '"mossyStoneBricks"': sammaleiset kivitiilet
             '"crackedStoneBricks"': haljenneet kivitiilet
-            '"decorativeStoneBricks"': koristeelliset kivitiilet
             '"blueCoralBlock"': sininen koralli-blokki
             '"pinkCoralBlock"': vaaleanpunainen koralli-blokki
             '"magentaCoralBlock"': magenta koralli-blokki

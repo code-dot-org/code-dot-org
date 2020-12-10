@@ -34,7 +34,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   test 'can construct with no arguments - all defaults' do
     edap = ExpiredDeletedAccountPurger.new
     assert_equal false, edap.dry_run?
-    assert_equal Time.parse('2018-07-31 4:18pm PDT'), edap.deleted_after
+    assert_equal 60.days.ago, edap.deleted_after
     assert_equal 28.days.ago, edap.deleted_before
     assert_equal 200, edap.max_teachers_to_purge
     assert_equal 4000, edap.max_accounts_to_purge
