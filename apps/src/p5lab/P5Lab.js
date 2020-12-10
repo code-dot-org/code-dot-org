@@ -546,7 +546,7 @@ P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
       configDictionary[defaultSprites.propsByKey[key].name]
     );
   });
-  const hasBackgrounds = categoryCheck > 0 || nameCheck > 0;
+  const hasBackgrounds = categoryCheck.length > 0 || nameCheck.length > 0;
   if (!hasBackgrounds) {
     defaultSprites.orderedKeys.forEach(key => {
       if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
