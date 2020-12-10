@@ -22,7 +22,7 @@ export default class LedScreen {
     this.board.mb.scrollInteger(value);
   }
 
-  on(x, y, brightness) {
+  on(x, y, brightness = 255) {
     this.board.mb.displayPlot(x, y, brightness);
     this.screen[x][y] = 1;
   }
@@ -32,7 +32,7 @@ export default class LedScreen {
     this.screen[x][y] = 0;
   }
 
-  toggle(x, y, brightness) {
+  toggle(x, y, brightness = 255) {
     this.screen[x][y] > 0 ? this.off(x, y) : this.on(x, y, brightness);
   }
 
