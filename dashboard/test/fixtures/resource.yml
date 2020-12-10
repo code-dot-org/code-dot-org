@@ -17,4 +17,10 @@ resource_104:
   id: 104
   key: resource_104
   name: class site
-  url: testsebsite.fake
+  url: testwebsite.fake
+resource_105:
+  id: 105
+  key: resource_105
+  name: class resource
+  url: testresource.fake
+  course_version: course_version_2019

@@ -341,7 +341,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: @partner_script.name},
       script_text: '',
     }
-    assert_response :redirect
+    assert_response :success
   end
 
   # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in
@@ -429,9 +429,10 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       visible_to_teachers: true
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
     refute script.hidden
+    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
   test "can update on test without modifying filesystem" do
@@ -447,7 +448,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       visible_to_teachers: true
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
     refute script.hidden
   end
@@ -501,6 +502,9 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: 'pilot-experiment',
       visible_to_teachers: true,
     }
+
+    assert_response :success
+
     assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
     # pilot scripts are always marked hidden
     assert Script.find_by_name(script.name).hidden
@@ -520,6 +524,8 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: '',
       visible_to_teachers: true,
     }
+
+    assert_response :success
 
     assert_nil Script.find_by_name(script.name).pilot_experiment
     # blank pilot_experiment does not cause script to be hidden
@@ -573,7 +579,7 @@ class ScriptsControllerTest < ActionController::TestCase
         resourceTypes: ['curriculum', 'something_else'],
         resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
       }
-      assert_response :redirect
+      assert_response :success
       script.reload
 
       assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], script.teacher_resources
@@ -587,7 +593,7 @@ class ScriptsControllerTest < ActionController::TestCase
       resourceTypes: [''],
       resourceLinks: ['']
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
 
     assert_nil script.teacher_resources
@@ -623,6 +629,7 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: 'CSF',
       supported_locales: ['fake-locale'],
       project_widget_types: ['gamelab', 'weblab'],
+      background: 'fake-background',
     }
 
     post :update, params: {
@@ -630,7 +637,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
     }.merge(general_params)
-    assert_response :redirect
+    assert_response :success
     script.reload
 
     general_params.each do |k, v|
@@ -653,8 +660,9 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: '',
       supported_locales: [],
       project_widget_types: [],
+      background: ''
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
 
     # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0
@@ -684,8 +692,10 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     script.reload
 
-    assert_response :redirect
+    assert_response :success
     assert_equal level, script.lessons.first.script_levels.first.level
+    assert_equal 'stage 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
+    assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
   no_access_msg = "You don&#39;t have access to this unit."

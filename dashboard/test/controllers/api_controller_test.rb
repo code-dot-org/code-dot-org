@@ -621,7 +621,7 @@ class ApiControllerTest < ActionController::TestCase
     result = {"status" => "perfect", "result" => 100}
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal nil, body['disableSocialShare']
+    assert_nil body['disableSocialShare']
     assert_equal result, body['progress'][level.id.to_s]
     assert_equal 'level source', body['lastAttempt']['source']
 

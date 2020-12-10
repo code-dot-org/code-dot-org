@@ -292,12 +292,12 @@ export default class CensusTeacherBanner extends Component {
           </p>
         </div>
         <div style={styles.share}>
-          <a href={facebookShareUrl} target="_blank">
+          <a href={facebookShareUrl} target="_blank" rel="noopener noreferrer">
             <button type="button" style={styles.shareButton}>
               <i className="fa fa-facebook" /> Share on Facebook
             </button>
           </a>
-          <a href={twitterShareUrl} target="_blank">
+          <a href={twitterShareUrl} target="_blank" rel="noopener noreferrer">
             <button type="button" style={styles.shareButton}>
               <i className="fa fa-twitter" /> Share on Twitter
             </button>
@@ -422,6 +422,7 @@ export default class CensusTeacherBanner extends Component {
             onClick={this.props.onPostpone}
             href={pegasus(link)}
             target="_blank"
+            rel="noopener noreferrer"
             style={styles.button}
             size="large"
             text="Take the survey"

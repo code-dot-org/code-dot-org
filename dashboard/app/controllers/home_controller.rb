@@ -4,6 +4,7 @@ require_dependency 'queries/script_activity'
 
 class HomeController < ApplicationController
   include UsersHelper
+  include SurveyResultsHelper
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -32,12 +33,12 @@ class HomeController < ApplicationController
     if current_user
       render 'index', layout: false, formats: [:html]
     else
-      render text: ''
+      render plain: ''
     end
   end
 
   def health_check
-    render text: 'healthy!'
+    render plain: 'healthy!'
   end
 
   # Signed in student, with an assigned course/script: redirect to course overview page
@@ -147,6 +148,7 @@ class HomeController < ApplicationController
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
       @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
       @homepage_data[:showCensusBanner] = show_census_banner
+      @homepage_data[:showNpsSurvey] = show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2020
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
 

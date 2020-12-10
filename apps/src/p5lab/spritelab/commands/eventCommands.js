@@ -31,7 +31,7 @@ export const commands = {
     }
   },
 
-  whenQuestionAnswered(variableName, callback) {
-    coreLibrary.registerQuestionAnswerCallback(variableName, callback);
+  whenPromptAnswered(variableName, callback) {
+    coreLibrary.registerPromptAnswerCallback(variableName, callback);
   }
 };

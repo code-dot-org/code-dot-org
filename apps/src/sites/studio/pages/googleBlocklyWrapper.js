@@ -3,12 +3,14 @@ import styleConstants from '@cdo/apps/styleConstants';
 import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
 import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
 import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
+import {CdoFieldImageDropdown} from '@cdo/apps/blocklyAddons/cdoFieldImageDropdown';
 import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
 import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
 import CdoScrollbar from '@cdo/apps/blocklyAddons/cdoScrollbar';
 import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
 import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
 import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
+import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -21,6 +23,15 @@ import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 const BlocklyWrapper = function(blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
+
+  /**
+   * Google Blockly sets Block ids to randomly generated 20-character strings.
+   * CDO Blockly set Block ids using a global counter. There are several places in our code and
+   * tests that assume Block ids will be numbers, so we want to re-implement the global counter
+   * and pass the id in the Block constructor, rather than leaving it to Google Blockly.
+   */
+  this.uidCounter_ = 0;
+
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
       get: function() {
@@ -118,6 +129,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.BlockDragger = CdoBlockDragger;
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
+  blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.blockly_.Input = CdoInput;
   blocklyWrapper.geras.PathObject = CdoPathObject;
   blocklyWrapper.blockly_.Scrollbar = CdoScrollbar;
@@ -246,20 +258,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.blockly_.inject(container, options);
   };
 
-  // Aliasing Google's blockToDom() so that we can override it, but still be able
-  // to call Google's blockToDom() in the override function.
-  blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
-  blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
-    const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
-    if (!block.canDisconnectFromParent_) {
-      blockXml.setAttribute('can_disconnect_from_parent', false);
-    }
-    if (ignoreChildBlocks) {
-      Blockly.Xml.deleteNext(blockXml);
-    }
-    return blockXml;
-  };
-
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
   blocklyWrapper.fireUiEvent = function(element, eventName, opt_properties) {
     if (eventName === 'resize') {
@@ -267,37 +265,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   };
 
-  // Aliasing Google's domToBlock() so that we can override it, but still be able
-  // to call Google's domToBlock() in the override function.
-  blocklyWrapper.Xml.originalDomToBlock = blocklyWrapper.Xml.domToBlock;
-  blocklyWrapper.Xml.domToBlock = function(xmlBlock, workspace) {
-    const block = blocklyWrapper.Xml.originalDomToBlock(xmlBlock, workspace);
-    const can_disconnect_from_parent = xmlBlock.getAttribute(
-      'can_disconnect_from_parent'
-    );
-    if (can_disconnect_from_parent) {
-      block.canDisconnectFromParent_ = can_disconnect_from_parent === 'true';
-    }
-    return block;
-  };
-
-  blocklyWrapper.Xml.fieldToDom_ = function(field) {
-    if (field.isSerializable()) {
-      // Titles were renamed to fields in 2013, but CDO Blockly and
-      // all existing student code uses titles, so to keep everything
-      // consistent, we should continue using titles here.
-      var container = Blockly.utils.xml.createElement('title');
-      container.setAttribute('name', field.name || '');
-      return field.toXml(container);
-    }
-    return null;
-  };
-
-  blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
-    // Switch argument order
-    return blocklyWrapper.Xml.domToWorkspace(xml, blockSpace);
-  };
-  blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
+  initializeBlocklyXml(blocklyWrapper);
 
   return blocklyWrapper;
 }

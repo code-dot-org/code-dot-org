@@ -212,7 +212,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   test 'regional_partner_summer_workshop_open' do
     regional_partner = nil
     Timecop.freeze Time.zone.local(2018, 9, 27, 21, 25) do
-      regional_partner = create :regional_partner_alabama, :with_apps_priority_deadline_date
+      regional_partner = create :regional_partner_with_summer_workshops, :with_apps_priority_deadline_date
 
       assert_equal "Contact Name", regional_partner.contact_name
       assert_equal "contact@code.org", regional_partner.contact_email

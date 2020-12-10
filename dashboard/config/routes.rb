@@ -263,7 +263,7 @@ Dashboard::Application.routes.draw do
 
   resources :level_starter_assets, only: [:show], param: 'level_name', constraints: {level_name: /[^\/]+/} do
     member do
-      get '/:filename', to: 'level_starter_assets#file'
+      get '/:filename', to: 'level_starter_assets#file', format: true
       post '', to: 'level_starter_assets#upload'
       delete '/:filename', to: 'level_starter_assets#destroy'
     end
@@ -314,8 +314,8 @@ Dashboard::Application.routes.draw do
 
   resources :lessons, only: [:show, :edit, :update]
 
-  resources :resources, only: [:create]
-  get '/resourcesearch/:q/:limit', to: 'resources#search', defaults: {format: 'json'}
+  resources :resources, only: [:create, :update]
+  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 
@@ -501,9 +501,10 @@ Dashboard::Application.routes.draw do
       end
 
       post 'foorm/form_with_library_items', action: :fill_in_library_items, controller: 'foorm'
-      get 'foorm/form_questions', action: :get_form_questions, controller: 'foorm'
+      get 'foorm/form_data', action: :get_form_data, controller: 'foorm'
       get 'foorm/submissions_csv', action: :get_submissions_as_csv, controller: 'foorm'
       get 'foorm/form_names', action: :get_form_names_and_versions, controller: 'foorm'
+      post 'foorm/validate_form', action: :validate_form, controller: 'foorm'
     end
   end
 
@@ -690,6 +691,8 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+      post 'ml_models/save', to: 'ml_models#save'
+
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
           get 'get_feedback_from_teacher'
@@ -737,6 +740,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
+  post '/dashboardapi/v1/text_to_speech/azure', to: 'api/v1/text_to_speech#azure', defaults: {format: 'json'}
+
   get 'foorm/preview/:name', to: 'foorm_preview#name', constraints: {name: /.*/}
   get 'foorm/preview', to: 'foorm_preview#index'
 
@@ -752,5 +757,16 @@ Dashboard::Application.routes.draw do
 
   get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
 
+  get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
+
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
+
+  namespace :foorm do
+    resources :forms, only: [:create] do
+      member do
+        put :update_questions
+        put :publish
+      end
+    end
+  end
 end

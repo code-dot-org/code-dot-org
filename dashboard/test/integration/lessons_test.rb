@@ -147,7 +147,6 @@ class LessonsTest < ActionDispatch::IntegrationTest
     # Make sure the update api accepts the data in the same format as
     # the data in the edit response.
     patch lesson_path(id: @lesson.id, as: :json, params: lesson_data)
-    assert_response :redirect
     @lesson.reload
     assert_equal 'new lesson name', @lesson.name
     assert_equal 'lesson overview', @lesson.overview

@@ -236,6 +236,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
                     : '')
                 }
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 landing page
               </a>{' '}
@@ -270,6 +271,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
                       : '')
                   }
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Click here to check the fees and discounts for your program
                 </a>

@@ -1,14 +1,14 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2018-10-31T19:51:38.000Z",
-  "level_num": "custom",
-  "user_id": 684,
   "properties": {
     "name_suffix": "_2019",
     "parent_level_id": 10789,
     "encrypted": "false"
   },
+  "game_id": 31,
+  "level_num": "custom",
+  "created_at": "2018-10-31T19:51:38.000Z",
+  "user_id": 684,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2017-07-19 16:03:58 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2019-03-20 13:48:02 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {

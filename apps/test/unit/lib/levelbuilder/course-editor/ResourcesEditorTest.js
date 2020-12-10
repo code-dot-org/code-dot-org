@@ -1,57 +1,49 @@
-import {assert} from '../../../../util/deprecatedChai';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
-
-const defaultProps = {
-  inputStyle: {},
-  resources: []
-};
+import sinon from 'sinon';
 
 describe('ResourcesEditor', () => {
-  it('adds empty resources if passed none', () => {
-    const wrapper = shallow(<ResourcesEditor {...defaultProps} />);
-    assert.deepEqual(wrapper.state('resources'), [
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''}
-    ]);
-  });
+  let defaultProps, updateTeacherResources;
 
-  it('adds empty resources if passed fewer than max', () => {
-    const wrapper = shallow(
-      <ResourcesEditor
-        {...defaultProps}
-        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
-      />
-    );
-    assert.deepEqual(wrapper.state('resources'), [
-      {type: ResourceType.curriculum, link: '/foo'},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''},
-      {type: '', link: ''}
-    ]);
+  beforeEach(() => {
+    updateTeacherResources = sinon.spy();
+    defaultProps = {
+      inputStyle: {},
+      resources: [
+        {link: '', type: ''},
+        {link: '', type: ''},
+        {link: '', type: ''},
+        {link: '', type: ''},
+        {link: '', type: ''},
+        {link: '', type: ''},
+        {link: '', type: ''},
+        {link: '', type: ''},
+        {link: '', type: ''},
+        {link: '', type: ''}
+      ],
+      updateTeacherResources
+    };
   });
 
   it('renders one more Resource than it has defined', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
+        resources={[
+          {type: ResourceType.curriculum, link: '/foo'},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''}
+        ]}
       />
     );
     assert.strictEqual(wrapper.find('Resource').length, 2);
@@ -61,7 +53,18 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
+        resources={[
+          {type: ResourceType.curriculum, link: '/foo'},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''}
+        ]}
       />
     );
     const fakeEvent = {
@@ -70,14 +73,36 @@ describe('ResourcesEditor', () => {
       }
     };
     wrapper.instance().handleChangeType(fakeEvent, 1);
-    assert.strictEqual(wrapper.find('Resource').length, 3);
+    expect(updateTeacherResources).to.have.been.calledWith([
+      {link: '/foo', type: 'curriculum'},
+      {link: '/link/to/vocab', type: 'vocabulary'},
+      {link: '', type: ''},
+      {link: '', type: ''},
+      {link: '', type: ''},
+      {link: '', type: ''},
+      {link: '', type: ''},
+      {link: '', type: ''},
+      {link: '', type: ''},
+      {link: '', type: ''}
+    ]);
   });
 
   it('shows an error if you duplicate resource types', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[{type: ResourceType.curriculum, link: '/foo'}]}
+        resources={[
+          {type: ResourceType.curriculum, link: '/foo'},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''},
+          {link: '', type: ''}
+        ]}
       />
     );
     const fakeEvent = {

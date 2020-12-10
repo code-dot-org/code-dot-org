@@ -68,49 +68,31 @@ const styles = {
 
 class ActivityCard extends Component {
   static propTypes = {
-    activity: activityShape,
-    activitiesCount: PropTypes.number,
+    activity: activityShape.isRequired,
+    generateActivitySectionKey: PropTypes.func.isRequired,
+    activitiesCount: PropTypes.number.isRequired,
     setActivitySectionRef: PropTypes.func.isRequired,
     updateTargetActivitySection: PropTypes.func.isRequired,
+    clearTargetActivitySection: PropTypes.func.isRequired,
     targetActivityPos: PropTypes.number,
     targetActivitySectionPos: PropTypes.number,
     activitySectionMetrics: PropTypes.array.isRequired,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
+    handleCollapse: PropTypes.func.isRequired,
+    collapsed: PropTypes.bool.isRequired,
 
     //redux
-    addActivitySection: PropTypes.func,
-    removeActivity: PropTypes.func,
-    moveActivity: PropTypes.func,
-    updateActivityField: PropTypes.func
+    addActivitySection: PropTypes.func.isRequired,
+    removeActivity: PropTypes.func.isRequired,
+    moveActivity: PropTypes.func.isRequired,
+    updateActivityField: PropTypes.func.isRequired
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      collapsed: false
-    };
-  }
 
   handleAddActivitySection = () => {
     this.props.addActivitySection(
       this.props.activity.position,
-      this.generateActivitySectionKey()
+      this.props.generateActivitySectionKey()
     );
-  };
-
-  generateActivitySectionKey = () => {
-    let activitySectionNumber = this.props.activity.activitySections.length + 1;
-    while (
-      this.props.activity.activitySections.some(
-        activitySection =>
-          activitySection.key === `activitySection-${activitySectionNumber}`
-      )
-    ) {
-      activitySectionNumber++;
-    }
-
-    return `activitySection-${activitySectionNumber}`;
   };
 
   handleMoveActivity = direction => {
@@ -139,7 +121,9 @@ class ActivityCard extends Component {
     this.props.updateActivityField(
       this.props.activity.position,
       'duration',
-      event.target.value
+      Number.isNaN(parseInt(event.target.value))
+        ? ''
+        : parseInt(event.target.value)
     );
   };
 
@@ -148,6 +132,7 @@ class ActivityCard extends Component {
       activity,
       setActivitySectionRef,
       updateTargetActivitySection,
+      clearTargetActivitySection,
       updateActivitySectionMetrics
     } = this.props;
 
@@ -156,17 +141,13 @@ class ActivityCard extends Component {
         <div
           style={{
             ...styles.activityHeader,
-            ...(this.state.collapsed && {marginBottom: 10})
+            ...(this.props.collapsed && {marginBottom: 10})
           }}
         >
           <div style={styles.inputsAndIcon}>
             <FontAwesome
-              icon={this.state.collapsed ? 'expand' : 'compress'}
-              onClick={() => {
-                this.setState({
-                  collapsed: !this.state.collapsed
-                });
-              }}
+              icon={this.props.collapsed ? 'expand' : 'compress'}
+              onClick={this.props.handleCollapse}
             />
             <label style={styles.labelAndInput}>
               <span style={styles.label}>{`Activity:`}</span>
@@ -189,12 +170,12 @@ class ActivityCard extends Component {
             </label>
           </div>
           <OrderControls
-            name={activity.key || '(none)'}
+            name={activity.displayName || 'Unnamed Activity'}
             move={this.handleMoveActivity}
             remove={this.handleRemoveActivity}
           />
         </div>
-        <div style={styles.activityBody} hidden={this.state.collapsed}>
+        <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
             <ActivitySectionCard
               key={section.key}
@@ -207,6 +188,7 @@ class ActivityCard extends Component {
               }}
               activitySectionMetrics={this.props.activitySectionMetrics}
               updateTargetActivitySection={updateTargetActivitySection}
+              clearTargetActivitySection={clearTargetActivitySection}
               targetActivityPos={this.props.targetActivityPos}
               targetActivitySectionPos={this.props.targetActivitySectionPos}
               updateActivitySectionMetrics={updateActivitySectionMetrics}

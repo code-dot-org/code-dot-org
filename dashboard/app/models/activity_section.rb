@@ -4,7 +4,7 @@
 #
 #  id                 :integer          not null, primary key
 #  lesson_activity_id :integer          not null
-#  seeding_key        :string(255)      not null
+#  key                :string(255)      not null
 #  position           :integer          not null
 #  properties         :text(65535)
 #  created_at         :datetime         not null
@@ -12,8 +12,8 @@
 #
 # Indexes
 #
+#  index_activity_sections_on_key                 (key) UNIQUE
 #  index_activity_sections_on_lesson_activity_id  (lesson_activity_id)
-#  index_activity_sections_on_seeding_key         (seeding_key) UNIQUE
 #
 
 # An ActivitySection represents a part of an activity in a lesson plan.
@@ -59,9 +59,9 @@ class ActivitySection < ApplicationRecord
     summary
   end
 
-  def summarize_for_edit
+  def summarize_for_lesson_edit
     summary = summarize
-    summary[:scriptLevels] = script_levels.map(&:summarize_for_edit)
+    summary[:scriptLevels] = script_levels.map(&:summarize_for_lesson_edit)
     summary
   end
 
@@ -74,9 +74,11 @@ class ActivitySection < ApplicationRecord
       sl.update!(
         # position and chapter will be updated based on activity_section_position later
         activity_section_position: sl_data['activitySectionPosition'] || 0,
-        assessment: !!sl_data['assessment'],
+        # Script levels containing anonymous levels must be assessments.
+        assessment: !!sl_data['assessment'] || sl.anonymous?,
         bonus: !!sl_data['bonus'],
         challenge: !!sl_data['challenge'],
+        progression: name.present? && name
       )
       # TODO(dave): check and update script level variants
       sl.update_levels(sl_data['levels'] || [])
@@ -87,11 +89,11 @@ class ActivitySection < ApplicationRecord
   private
 
   def fetch_script_level(sl_data)
-    if sl_data['id']
-      script_level = script_levels.find(sl_data['id'])
-      return script_level if script_level
-      raise ActiveRecord::RecordNotFound.new("ScriptLevel id #{sl_data['id']} not found in ActivitySection id #{id}")
-    end
+    # Do not try to find the script level id if it was moved here from another
+    # activity section. Create a new one here, and let the old script level be
+    # destroyed when we update the other activity section.
+    script_level = sl_data['id'] && script_levels.where(id: sl_data['id']).first
+    return script_level if script_level
 
     script_levels.create(
       position: 0,

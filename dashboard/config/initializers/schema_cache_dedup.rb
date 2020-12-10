@@ -134,7 +134,7 @@ module SchemaCacheDedup
   module MySQLTypeDedup
     include Deduplicable
 
-    def initialize(type_metadata, extra: nil, strict: false)
+    def initialize(type_metadata, extra: nil)
       super
     end
 

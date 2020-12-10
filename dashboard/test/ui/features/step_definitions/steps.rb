@@ -1045,11 +1045,56 @@ Given(/^I view the temp lesson edit page$/) do
   }
 end
 
+Given (/^I remove the temp script from the cache$/) do
+  browser_request(
+    url: '/api/test/invalidate_script',
+    method: 'POST',
+    body: {script_name: @temp_script_name}
+  )
+end
+
 Given(/^I delete the temp script and lesson$/) do
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',
     body: {script_name: @temp_script_name}
+  )
+end
+
+Given(/^I create a temp multi level$/) do
+  @temp_level_name = "temp-level-#{Time.now.to_i}-#{rand(1_000_000)}"
+  steps "And I am on \"http://studio.code.org/levels/new?type=Multi\""
+  steps 'And I enter temp level multi dsl text'
+  steps 'And I click "input[type=\'submit\']" to load a new page'
+  @temp_level_id = @browser.current_url.split('/')[-2]
+  puts "created temp level with id #{@temp_level_id}"
+end
+
+Given(/^I enter temp level multi dsl text$/) do
+  dsl = <<~DSL
+    name '#{@temp_level_name}'
+    title 'title'
+    description 'description here'
+    question 'Question'
+    wrong 'incorrect answer'
+    right 'correct answer'
+  DSL
+  steps 'And I clear the text from element "#level_dsl_text"'
+  steps "And I press keys #{dsl.dump} for element \"#level_dsl_text\""
+end
+
+Given(/^I check I am on the temp level (show|edit) page$/) do |page|
+  suffix = (page == 'edit') ? '/edit' : ''
+  url = "http://studio.code.org/levels/#{@temp_level_id}#{suffix}"
+  url = replace_hostname(url)
+  expect(@browser.current_url.split('?').first).to eq(url)
+end
+
+Given(/^I delete the temp level$/) do
+  browser_request(
+    url: '/api/test/destroy_level',
+    method: 'POST',
+    body: {id: @temp_level_id}
   )
 end
 
@@ -1438,6 +1483,11 @@ When /^I press keys "([^"]*)"$/ do |keys|
   @browser.action.send_keys(*convert_keys(keys)).perform
 end
 
+When /^I clear the text from element "([^"]*)"$/ do |selector|
+  element = @browser.find_element(:css, selector)
+  element.clear
+end
+
 # Press backspace repeatedly to clear an element.  Handy for React.
 # Known issue: IE does not register the key presses in this step.
 # Add @no_ie tag to your scenario to skip IE when using this step.
@@ -1602,6 +1652,13 @@ Then /^I open the stage lock dialog$/ do
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').children().first().click()")
   wait_short_until {jquery_is_element_visible('.modal-body')}
+end
+
+Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
+  wait_for_jquery
+  wait_short_until {@browser.execute_script("return $('.uitest-sendlesson').length") > lesson_num}
+  @browser.execute_script("$('.uitest-sendlesson').eq(#{lesson_num - 1}).children().first().click()")
+  wait_short_until {jquery_is_element_visible('.modal')}
 end
 
 Then /^I unlock the stage for students$/ do

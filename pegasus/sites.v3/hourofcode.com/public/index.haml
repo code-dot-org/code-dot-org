@@ -110,7 +110,7 @@ social:
             = hoc_s(:hoc_live_sign_up_title)
           %br/
           %div.banner-message
-            = hoc_s(:hoc_live_sign_up_message)
+            = hoc_s(:hoc_live_sign_up_message, markdown: true, locals: {episodes_url: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v'})
           %br/
           %a#signuplivebutton.ctabuttonatag{href: 'http://go.pardot.com/l/153401/2020-09-30/nwvb6j'}
             %button.ctabutton-white
@@ -142,7 +142,7 @@ social:
         .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
       -else
         %a{href: resolve_url('/map')}
-          %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
+          %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
         .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals: {events_url: resolve_url('/events')})
 
   -# Signup and Highlights

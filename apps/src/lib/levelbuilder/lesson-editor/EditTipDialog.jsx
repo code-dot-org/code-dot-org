@@ -34,7 +34,7 @@ const styles = {
 export default class EditTipDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    tip: tipShape,
+    tip: tipShape.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     handleDelete: PropTypes.func.isRequired
   };
@@ -83,7 +83,7 @@ export default class EditTipDialog extends Component {
         style={styles.dialog}
       >
         <div style={styles.dialogContent}>
-          <h2>Add Tip</h2>
+          <h2>Add Callout</h2>
           <select
             onChange={this.handleTipTypeChange}
             value={this.state.tip.type}
@@ -109,7 +109,7 @@ export default class EditTipDialog extends Component {
         </div>
         <DialogFooter>
           <ConfirmDeleteButton
-            title={'Delete Tip?'}
+            title={'Delete Callout?'}
             body={`Are you sure you want to remove the ${
               tipTypes[this.state.tip.type].displayName
             } with key "${this.state.tip.key}" from the Activity?`}
@@ -118,7 +118,7 @@ export default class EditTipDialog extends Component {
             onConfirmDelete={this.handleDelete}
           />
           <Button
-            text={i18n.closeAndSave()}
+            text={i18n.saveAndClose()}
             onClick={this.handleCloseAndSave}
             color={Button.ButtonColor.orange}
           />

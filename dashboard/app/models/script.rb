@@ -30,7 +30,7 @@ require 'ruby-progressbar'
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
 # A sequence of Levels
-class Script < ActiveRecord::Base
+class Script < ApplicationRecord
   include ScriptConstants
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -151,6 +151,9 @@ class Script < ActiveRecord::Base
     curriculum_umbrella
     tts
     is_course
+    background
+    show_calendar
+    is_migrated
   )
 
   def self.twenty_hour_script
@@ -477,6 +480,10 @@ class Script < ActiveRecord::Base
       # Populate cache on miss.
       script_family_cache[family_name] = Script.get_family_without_cache(family_name)
     end
+  end
+
+  def self.remove_from_cache(script_name)
+    script_cache.delete(script_name) if script_cache
   end
 
   def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
@@ -1273,7 +1280,6 @@ class Script < ActiveRecord::Base
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
       curriculum_path: curriculum_path,
-      script_announcements: announcements, #TODO: (dmcavoy) Remove after Sept 25 2020
       announcements: announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
@@ -1291,7 +1297,12 @@ class Script < ActiveRecord::Base
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
-      is_course: is_course?
+      is_course: is_course?,
+      background: background,
+      is_migrated: is_migrated?,
+      updatedAt: updated_at,
+      scriptPath: script_path(self),
+      showCalendar: show_calendar
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1334,6 +1345,14 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?
+    }
+  end
+
+  def summarize_for_lesson_show
+    {
+      displayName: localized_title,
+      link: link,
+      lessons: lessons.map(&:summarize_for_lesson_dropdown)
     }
   end
 
@@ -1462,6 +1481,7 @@ class Script < ActiveRecord::Base
       :pilot_experiment,
       :editor_experiment,
       :curriculum_umbrella,
+      :background,
     ]
     boolean_keys = [
       :has_verified_resources,
@@ -1469,7 +1489,9 @@ class Script < ActiveRecord::Base
       :is_stable,
       :project_sharing,
       :tts,
-      :is_course
+      :is_course,
+      :show_calendar,
+      :is_migrated
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path

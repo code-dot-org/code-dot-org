@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 export const levelShape = PropTypes.shape({
   // id of level
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   //name of level
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   //url for editing level
-  url: PropTypes.string,
+  url: PropTypes.string.isRequired,
 
   //information used to preview levels in activity preview
   icon: PropTypes.string,
@@ -27,10 +27,11 @@ export const scriptLevelShape = PropTypes.shape({
   // The position of this level within the lesson in the UI.
   position: PropTypes.number.isRequired,
 
-  // level id or active variant, or -1 if no level is selected.
-  activeId: PropTypes.number,
+  // if only one level the id for that level
+  // if multiple variants the level id for the active variant
+  activeId: PropTypes.number.isRequired,
   // all variants of this level
-  levels: PropTypes.arrayOf(levelShape),
+  levels: PropTypes.arrayOf(levelShape).isRequired,
 
   // whether this LevelToken is expanded in the UI.
   expand: PropTypes.bool,
@@ -45,34 +46,40 @@ export const scriptLevelShape = PropTypes.shape({
 });
 
 export const tipShape = PropTypes.shape({
-  key: PropTypes.string,
-  type: PropTypes.string,
-  markdown: PropTypes.string
+  key: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  markdown: PropTypes.string.isRequired
 });
 
 export const activitySectionShape = PropTypes.shape({
-  key: PropTypes.string,
-  position: PropTypes.number,
-  displayName: PropTypes.string,
+  key: PropTypes.string.isRequired,
+  position: PropTypes.number.isRequired,
+  displayName: PropTypes.string.isRequired,
   remarks: PropTypes.bool,
   slide: PropTypes.bool,
-  scriptLevels: PropTypes.arrayOf(scriptLevelShape),
+  scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
-  tips: PropTypes.arrayOf(tipShape)
+  tips: PropTypes.arrayOf(tipShape).isRequired
 });
 
 export const activityShape = PropTypes.shape({
-  key: PropTypes.string,
+  key: PropTypes.string.isRequired,
   displayName: PropTypes.string,
-  position: PropTypes.number,
-  duration: PropTypes.number,
+  position: PropTypes.number.isRequired,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
+    .isRequired,
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
 export const resourceShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  audience: PropTypes.string,
+  assessment: PropTypes.bool,
+  includeInPdf: PropTypes.bool,
+  downloadUrl: PropTypes.string
 });
 
 export const levelShapeForScript = PropTypes.shape({
@@ -93,24 +100,24 @@ export const levelShapeForScript = PropTypes.shape({
 
 export const lessonShape = PropTypes.shape({
   id: PropTypes.number,
-  key: PropTypes.string,
+  key: PropTypes.string.isRequired,
   name: PropTypes.string,
-  position: PropTypes.number,
+  position: PropTypes.number.isRequired,
   lockable: PropTypes.bool,
   unplugged: PropTypes.bool,
   assessment: PropTypes.bool,
   relativePosition: PropTypes.number,
-  levels: PropTypes.arrayOf(levelShapeForScript) // TODO: Update to use scriptLevelShape
+  levels: PropTypes.arrayOf(levelShapeForScript).isRequired // TODO: Update to use scriptLevelShape
 });
 
 export const lessonGroupShape = PropTypes.shape({
-  key: PropTypes.string,
+  key: PropTypes.string.isRequired,
   displayName: PropTypes.string,
-  position: PropTypes.number,
-  userFacing: PropTypes.bool,
+  position: PropTypes.number.isRequired,
+  userFacing: PropTypes.bool.isRequired,
   bigQuestions: PropTypes.string,
   description: PropTypes.string,
-  lessons: PropTypes.arrayOf(lessonShape)
+  lessons: PropTypes.arrayOf(lessonShape).isRequired
 });
 
 export const relatedLessonShape = PropTypes.shape({

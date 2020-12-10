@@ -1,7 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../../util/deprecatedChai';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
+import {expect, assert} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon';
 
 const sampleAnnouncement = {
   notice: 'This course has recently been updated!',
@@ -11,17 +12,22 @@ const sampleAnnouncement = {
   visibility: 'Teacher-only'
 };
 
-const defaultProps = {
-  defaultAnnouncements: [],
-  inputStyle: {}
-};
-
 describe('AnnouncementsEditor', () => {
+  let defaultProps, updateAnnouncements;
+  beforeEach(() => {
+    updateAnnouncements = sinon.spy();
+    defaultProps = {
+      announcements: [],
+      inputStyle: {},
+      updateAnnouncements
+    };
+  });
+
   it('renders an Announce when we have an announcement', () => {
     const wrapper = shallow(
       <AnnouncementsEditor
         {...defaultProps}
-        defaultAnnouncements={[sampleAnnouncement]}
+        announcements={[sampleAnnouncement]}
       />
     );
     assert.equal(wrapper.find('Announcement').length, 1);
@@ -31,7 +37,7 @@ describe('AnnouncementsEditor', () => {
     const wrapper = shallow(
       <AnnouncementsEditor
         {...defaultProps}
-        defaultAnnouncements={[sampleAnnouncement]}
+        announcements={[sampleAnnouncement]}
       />
     );
     assert.equal(wrapper.find('Announcements').length, 2);
@@ -45,39 +51,29 @@ describe('AnnouncementsEditor', () => {
   it('adds an empty Announce when we click add', () => {
     const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     wrapper.find('button').simulate('click');
-    assert.equal(wrapper.find('Announcement').length, 1);
-    assert.equal(wrapper.find('Announcement').props().announcement.notice, '');
-    assert.equal(wrapper.find('Announcement').props().announcement.details, '');
-    assert.equal(wrapper.find('Announcement').props().announcement.link, '');
-    assert.equal(
-      wrapper.find('Announcement').props().announcement.type,
-      'information'
-    );
-    assert.equal(
-      wrapper.find('Announcement').props().announcement.visibility,
-      'Teacher-only'
-    );
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: '',
+        link: '',
+        notice: '',
+        type: 'information',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('removes announcements when we click remove', () => {
-    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
-
-    wrapper.find('button').simulate('click');
-    // had trouble getting two state updates working, so instead just call .add
-    // instead of a second click
-    wrapper.instance().add();
+    const wrapper = shallow(
+      <AnnouncementsEditor
+        {...defaultProps}
+        announcements={[sampleAnnouncement]}
+      />
+    );
     const announce = wrapper.find('Announcement');
-    assert.equal(announce.length, 2);
+    assert.equal(announce.length, 1);
     assert.equal(
       announce
         .first()
-        .dive()
-        .find('button').length,
-      1
-    );
-    assert.equal(
-      announce
-        .last()
         .dive()
         .find('button').length,
       1
@@ -88,70 +84,130 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('button')
       .simulate('click');
-    assert.equal(wrapper.find('Announcement').length, 1);
+    expect(updateAnnouncements).to.have.been.calledWith([]);
   });
 
   it('updates notice', () => {
-    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(
+      <AnnouncementsEditor
+        {...defaultProps}
+        announcements={[sampleAnnouncement]}
+      />
+    );
 
-    wrapper.find('button').simulate('click');
     wrapper
       .find('Announcement')
       .dive()
       .find('input')
       .at(0)
       .simulate('change', {target: {value: 'notice'}});
-    assert.equal(wrapper.state('announcements')[0].notice, 'notice');
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'See what changed and how it may affect your classroom.',
+        link: 'https://support.code.org/hc/en-us/articles/115001931251',
+        notice: 'notice',
+        type: 'information',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('updates details', () => {
-    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(
+      <AnnouncementsEditor
+        {...defaultProps}
+        announcements={[sampleAnnouncement]}
+      />
+    );
 
-    wrapper.find('button').simulate('click');
     wrapper
       .find('Announcement')
       .dive()
       .find('input')
       .at(1)
       .simulate('change', {target: {value: 'details'}});
-    assert.equal(wrapper.state('announcements')[0].details, 'details');
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'details',
+        link: 'https://support.code.org/hc/en-us/articles/115001931251',
+        notice: 'notice',
+        type: 'information',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('updates link', () => {
-    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(
+      <AnnouncementsEditor
+        {...defaultProps}
+        announcements={[sampleAnnouncement]}
+      />
+    );
 
-    wrapper.find('button').simulate('click');
     wrapper
       .find('Announcement')
       .dive()
       .find('input')
       .at(2)
       .simulate('change', {target: {value: 'link'}});
-    assert.equal(wrapper.state('announcements')[0].link, 'link');
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'details',
+        link: 'link',
+        notice: 'notice',
+        type: 'information',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('updates type', () => {
-    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(
+      <AnnouncementsEditor
+        {...defaultProps}
+        announcements={[sampleAnnouncement]}
+      />
+    );
 
-    wrapper.find('button').simulate('click');
     wrapper
       .find('Announcement')
       .dive()
       .find('.uitest-announcement-type')
       .simulate('change', {target: {value: 'bullhorn'}});
-    assert.equal(wrapper.state('announcements')[0].type, 'bullhorn');
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'details',
+        link: 'link',
+        notice: 'notice',
+        type: 'bullhorn',
+        visibility: 'Teacher-only'
+      }
+    ]);
   });
 
   it('updates visibility', () => {
-    const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
+    const wrapper = shallow(
+      <AnnouncementsEditor
+        {...defaultProps}
+        announcements={[sampleAnnouncement]}
+      />
+    );
 
-    wrapper.find('button').simulate('click');
     wrapper
       .find('Announcement')
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
-    assert.equal(wrapper.state('announcements')[0].visibility, 'Student-only');
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: 'details',
+        link: 'link',
+        notice: 'notice',
+        type: 'bullhorn',
+        visibility: 'Student-only'
+      }
+    ]);
   });
 
   it('updates visibility when no visibility in existing announcement', () => {
@@ -165,24 +221,32 @@ describe('AnnouncementsEditor', () => {
     const wrapper = shallow(
       <AnnouncementsEditor
         {...defaultProps}
-        defaultAnnouncements={[oldSampleAnnouncement]}
+        announcements={[oldSampleAnnouncement]}
       />
     );
 
-    assert.equal(wrapper.state('announcements')[0].visibility, undefined);
     wrapper
       .find('Announcement')
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
-    assert.equal(wrapper.state('announcements')[0].visibility, 'Student-only');
+    expect(updateAnnouncements).to.have.been.calledWith([
+      {
+        details: "So I don't have a visibility",
+        link: 'https://support.code.org/hc/en-us/articles/115001931251',
+        notice:
+          'This announcement was made before students could see announcements',
+        type: 'information',
+        visibility: 'Student-only'
+      }
+    ]);
   });
 
   it('includes a hidden input with value for server', () => {
     const wrapper = shallow(
       <AnnouncementsEditor
         {...defaultProps}
-        defaultAnnouncements={[sampleAnnouncement]}
+        announcements={[sampleAnnouncement]}
       />
     );
     assert.equal(

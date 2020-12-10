@@ -15,6 +15,5 @@ describe('ProgressionDetails', () => {
   it('renders default props', () => {
     const wrapper = shallow(<ProgressionDetails {...defaultProps} />);
     expect(wrapper.find('ProgressLevelSet').length).to.equal(1);
-    expect(wrapper.find('SafeMarkdown').length).to.equal(1);
   });
 });

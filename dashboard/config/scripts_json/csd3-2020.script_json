@@ -5,7 +5,7 @@
     "hidden": false,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "student_detail_progress_view": "on",
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/csd-20/unit3/{LESSON}",
@@ -34,8 +34,9 @@
           "https://curriculum.code.org/csd-20/unit3/code/"
         ]
       ],
-      "hideable_lessons": true,
-      "is_stable": true
+      "hideable_lessons": "on",
+      "is_stable": true,
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,

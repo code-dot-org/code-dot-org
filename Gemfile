@@ -10,7 +10,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7.2'
+gem 'rails', '5.2.4.4'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -96,7 +96,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.17.20'
+  gem 'eyes_selenium', '3.17.19'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
@@ -153,7 +153,7 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 1.15.0'
+gem 'cancancan', '~> 2.2.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 1.6.0'
 
@@ -196,8 +196,7 @@ gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/e
 
 gem 'redcarpet', '~> 3.3.4'
 
-# Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
-gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
+gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
@@ -298,7 +297,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys'
+gem 'composite_primary_keys', '~> 11.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy

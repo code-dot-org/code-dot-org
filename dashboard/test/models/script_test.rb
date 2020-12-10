@@ -233,7 +233,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_names, _ = Script.setup([script_file_all_properties])
     script = Script.find_by!(name: script_names.first)
 
-    assert_equal 21, script.properties.keys.length
+    assert_equal 22, script.properties.keys.length
     script.properties.values.each {|v| assert v}
 
     # Seed using an empty .script file with the same name. Verify that this sets all properties values back to defaults.
@@ -789,6 +789,24 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  test 'can summarize script for lesson plan' do
+    script = create :script, name: 'my-script'
+    lesson_group = create :lesson_group, script: script
+    create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      relative_position: 1,
+      absolute_position: 1
+    )
+
+    summary = script.summarize_for_lesson_show
+    assert_equal '/s/my-script', summary[:link]
+    assert_equal 'lesson-1', summary[:lessons][0][:key]
+  end
+
   class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
     setup do
       @student = create :student
@@ -855,6 +873,20 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script_level, script: script, lesson: lesson)
 
     assert_nil script.summarize(false)[:lessons]
+  end
+
+  test 'summarize includes show_calendar' do
+    script = create(:script, name: 'calendar-script')
+
+    script.show_calendar = true
+    assert script.show_calendar
+    summary = script.summarize
+    assert summary[:showCalendar]
+
+    script.show_calendar = false
+    refute script.show_calendar
+    summary = script.summarize
+    refute summary[:showCalendar]
   end
 
   test 'summarize includes has_verified_resources' do

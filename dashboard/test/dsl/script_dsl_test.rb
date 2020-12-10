@@ -35,7 +35,9 @@ class ScriptDslTest < ActiveSupport::TestCase
     project_sharing: nil,
     curriculum_umbrella: nil,
     tts: false,
-    is_course: false
+    is_course: false,
+    background: nil,
+    is_migrated: false
   }
 
   test 'test Script DSL' do
@@ -774,7 +776,7 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'serialize new_name, family_name, version_year, is_stable, tts, and is_course' do
+  test 'serialize new_name, family_name, version_year, is_stable, tts, is_course, and is_migrated' do
     script = create :script,
       {
         new_name: 'new name',
@@ -782,7 +784,8 @@ level 'Level 3'
         version_year: '2001',
         is_stable: true,
         tts: true,
-        is_course: true
+        is_course: true,
+        is_migrated: true
       }
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
@@ -793,6 +796,7 @@ level 'Level 3'
       is_stable true
       tts true
       is_course true
+      is_migrated true
 
     SCRIPT
     assert_equal expected, script_text

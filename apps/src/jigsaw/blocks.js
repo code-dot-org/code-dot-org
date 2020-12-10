@@ -185,7 +185,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   // Go through all added blocks, and add empty generators for those that
   // weren't already given generators
-  var generator = blockly.Generator.get('JavaScript');
+  var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
   Object.keys(blockly.Blocks).forEach(function(block) {
     if (existingBlocks.indexOf(block) === -1 && !generator[block]) {

@@ -34,7 +34,7 @@ describe('ActivitySection', () => {
       <ActivitySection section={sampleActivities[0].activitySections[2]} />
     );
     expect(wrapper.find('ProgressionDetails').length).to.equal(1);
-    expect(wrapper.find('SafeMarkdown').length).to.equal(0);
+    expect(wrapper.find('SafeMarkdown').length).to.equal(1);
   });
 
   it('Shows correct number of lesson tips', () => {

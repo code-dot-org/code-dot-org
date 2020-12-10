@@ -6,8 +6,8 @@
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
-      "student_detail_progress_view": true,
-      "project_widget_visible": true,
+      "student_detail_progress_view": "on",
+      "project_widget_visible": "on",
       "project_widget_types": [
         "gamelab",
         "weblab"
@@ -36,7 +36,6 @@
       ],
       "has_verified_resources": true,
       "has_lesson_plan": true,
-      "version_year": "2019",
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
       "is_stable": true,
@@ -52,8 +51,8 @@
         }
       ],
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
+      "lesson_extras_available": "on",
+      "hideable_lessons": "on",
       "announcements": [
         {
           "notice": "Check out the new CS Discoveries resources for 2019-2020!",
@@ -62,10 +61,11 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "peer_reviews_to_complete": 0
     },
     "new_name": null,
-    "family_name": "csd3",
+    "family_name": null,
     "seeding_key": {
       "script.name": "csd3-2019"
     }

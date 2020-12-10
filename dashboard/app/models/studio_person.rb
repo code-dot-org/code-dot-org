@@ -10,7 +10,7 @@
 
 require 'cdo/firehose'
 
-class StudioPerson < ActiveRecord::Base
+class StudioPerson < ApplicationRecord
   has_many :users
 
   # Returns the emails associated with the StudioPerson as an array.

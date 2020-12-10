@@ -52,6 +52,7 @@ export default class RelatedLessons extends Component {
             href={lesson.editUrl}
             style={styles.relatedLessonLink}
             target="_blank"
+            rel="noopener noreferrer"
           >
             {this.getRelatedLessonText(lesson)}
           </a>

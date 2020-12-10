@@ -21,7 +21,7 @@
 # to complete. Additionally, some modules will be part of multiple courses. So courses are not
 # part of modules, and modules are not part of courses.
 # Learning Modules correspond to Stages in our regular curriculum hierarchy.
-class Plc::LearningModule < ActiveRecord::Base
+class Plc::LearningModule < ApplicationRecord
   MODULE_TYPES = [
     REQUIRED_MODULE = 'required'.freeze,
     CONTENT_MODULE = 'content'.freeze,

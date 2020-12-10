@@ -32,7 +32,7 @@
       = tag 'meta', property: 'og:title', content: title
       = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
       = tag 'meta', property: 'og:description', content: t('share.description')
-  %body
+  %body{class: @body_classes}
     - if session[:assumed_identity]
       - if Rails.env.production?
         #assumed_identity_tag= 'Assumed identity'

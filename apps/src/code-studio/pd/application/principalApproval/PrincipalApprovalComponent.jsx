@@ -201,6 +201,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
                 : '')
             }
             target="_blank"
+            rel="noopener noreferrer"
           >
             Click here to check the fees and discounts for your program
           </a>
@@ -235,6 +236,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
               <a
                 href="https://code.org/csp/ap-score-sharing-agreement"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 AP Score Sharing Agreement
               </a>
@@ -291,11 +293,16 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           <a
             href="https://code.org/educate/professional-learning/middle-high"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Code.org's Professional Learning Program
           </a>{' '}
           in order to teach the{' '}
-          <a href={`https://code.org/educate/${courseSuffix}`} target="_blank">
+          <a
+            href={`https://code.org/educate/${courseSuffix}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {this.props.teacherApplication.course} curriculum
           </a>{' '}
           during the {YEAR} school year. We know that administrative support is

@@ -523,7 +523,8 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   # This should represent the behavior on production.
-  test "should not modify level if not in levelbuilder mode" do
+  test "should not modify level in production" do
+    CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
     post :create, params: {name: "NewCustomLevel", program: @program}

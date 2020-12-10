@@ -3,88 +3,164 @@ title: מדריך להורים
 ---
 
 # How to do an Hour of Code with your child
-Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+התנסות ב"שעת הקוד" היא דרך פשוטה ומהנה להציג לילדכם את מדעי המחשב, אולי לראשונה בחייו. מעבר לעובדה שמדעי המחשב מהווים את הבסיס לכל תחומי הלימוד, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">מחקרים שנערכו לאחרונה מוכיחים</a>: ילדים הלומדים מדעי המחשב מגיעים להישגים טובים יותר בתחומים אחרים, מצטיינים בפתרון בעיות, ובעלי סיכוי גבוה יותר <font color="00adbc"><b>ב-17% להירשם למוסד להשכלה גבוהה</b></font>.
 
-You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
+באפשרותכם להצטרף למיליוני תלמידים ברחבי העולם באירוע בינלאומי זה. יחד, נוכל לעודד ילדים ללמוד, לנפץ סטריאוטיפים ולגלות תחום עניין חדש. והכי חשוב: יש לכם כבר כל מה שאתם זקוקים לו כדי להביא את Hour of Code לביתכם!
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
-<h3>What do I need to get started?</h3>
-The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
+<h3>למה אני זקוק כדי להתחיל?</h3>
+Hour of Code היא פעילות פשוטה לביצוע - אפילו למתחילים. אינכם זקוקים לניסיון במדעי המחשב או בהוראה כדי לקיים פעילות מהנה, מעשירה ומבדרת עבור ילדכם.
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+באפשרותכם להתנסות ב-Hour of Code באמצעות מחשב, טאבלט, סמארטפון או ללא שום מכשיר! התחילו כך:
 
 ***
 
-## 1) Explore activities and tutorials.
+## 1) בדקו את הפעילויות ועזרי הלמידה
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-There are countless <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> available to you if you’re working on a computer with internet access. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
+אם אתם עובדים על מחשב עם גישה לאינטרנט, עומדות לרשותכם אינספור <a href="https://hourofcode.com/us/learn">פעילויות</a> של Hour of Code.  אנו ממליצים לכם לבדוק מראש חלק מהאפשרויות כך שתוכלו לכוון את ילדכם לתרגילים מהנים.
 
-All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
+כל הפעילויות שלנו משלבות תהליכי פתרון בעיות וחשיבה ביקורתית עם הנאה ויצירתיות, אולם הנה כמה דוגמאות לפעילויות החביבות במיוחד על התלמידים:
 
-- For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
-- For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
+- לילד/ה שאוהב/ת לשחק:<a href="https://code.org/minecraft">מיינקראפט</a> או <a href="https://code.org/dance">מסיבת ריקודים</a>
+- לילד/ה שאוהב/ת את סרטי דיסני: <a href="https://code.org/starwars">מלחמת הכוכבים</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1"> פרוזן</a>, או <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">מואנה</a>
+- לילד/ה שאוהב/ת ללמוד: <a href="https://code.org/oceans">בינה מלאכותית למען האוקיינוסים והימים</a> או <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">צרו מוזיקה באמצעות סקראץ'</a>
 
-<h3>Low-tech or no-tech?</h3>
-If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.
+<h3>טכנולוגיה פשוטה או בלי טכנולוגיה?</h3>
+אם לרשותכם טכנולוגיה מוגבלת או אין ברשותכם טכנולוגיה כלל, תוכלו לסנן <a href="https://hourofcode.com/us/learn">פעילויות של Hour of Code</a> על ידי בחירה באפשרות "ללא מחשבים או מכשירים" בחלק של <em>טכנולוגיה בכיתה.</p> 
 
-[<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" /></a>
+</p>
 
-You can also check out these <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">short videos</a> for more ideas on how to facilitate an unplugged activity at home!
+<p spaces-before="0">
+  תוכלו גם לבדוק <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">את הסרטונים הקצרים האלו</a> כדי לשאוב רעיונות כיצד לקיים פעילויות ללא מכשירים בבית!
+</p>
 
-## 2) Prepare ahead of time
-Now that you have some tutorials in mind, it may be helpful to try these activities on your device before introducing them to your child.
+<h2 spaces-before="0">
+  2) התכוננו מראש
+</h2>
 
-[<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  כעת, כשהתוודעתם לכמה עזרי למידה, כדאי לנסות פעילויות אלו במכשיר שלך בטרם הצגתן לילדכם.
+</p>
 
-<h3>More than one child at home?</h3>
-Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" /></a>
+</p>
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. They’ll also see that computer science is social and collaborative.
+<p spaces-before="0">
+  
 
-<h3>Get the kids excited! </h3>
-This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+<h3>יש לכם יותר מילד אחד בבית?</h3>
+שקלו לספק לכל אחד מהילדים שלכם אוזניות אם הם עובדים במכשירים נפרדים. כך הם יוכלו לשחק בפעילויות עם קול, מבלי להפריע זה לזה.
+</p>
 
-- Show them an <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">inspirational video</a> that features one of their favorite role models
-- Inspire them with a video on one of the <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">many careers</a> that computer science skills can lead to
-- <a href="https://store.code.org/">Order some swag</a>! You can choose from t-shirts, stickers, or even temporary tattoos. Share it with them right away to get them excited, or save it for the end of your Hour of Code as a special prize.
+<p spaces-before="0">
+  אם אתם משתמשים במכשיר אחד בלבד, או פשוט רוצים להפוך את פעילות Hour of Code לאינטראקטיבית יותר, נסו <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">תכנות בזוגות</a>. תכנות בזוגות מעודד את הילדים והילדות לעבוד יחדיו. כשהם משלבים כוחות, הם מסייעים זה לזה לפתור בעיות. They’ll also see that computer science is social and collaborative.
+</p>
+
+<p spaces-before="0">
+  
+
+<h3>הלהיבו את הילדים! </h3>
+זוהי הזדמנות מצוינת להוסיף לילד פעילות מסוג חדש.  הנה הצעות כיצד להרחיב את הפעילות המהנה מעבר לעזר הלמידה:
+</p>
+
+<ul>
+  <li>
+    הראו להם <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">סרטון מעורר השראה</a> הכולל את אחד מהמודלים לחיקוי האהובים עליהם.
+  </li>
+  <li>
+    עוררו בהם השראה באמצעות סרטון על אחת<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">מהקריירות הרבות</a> שאליהן ניתן להגיע באמצעות מיומנויות של מדעי המחשב.
+  </li>
+  <li>
+    <a href="https://store.code.org/">הזמינו מוצרים ממותגים</a>! תוכלו לבחור בין חולצות טי-שירט, מדבקות ואפילו קעקועים זמניים. הראו להם מלכתחילה את הסרטון כדי להלהיב אותם, או שמרו אותו לסיום פעילות Hour of Code בתור פרס מיוחד.
+  </li>
+</ul>
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3) Tips for introducing your child to CS
+<h2 spaces-before="0">
+  3) עצות להצגת מדעי המחשב בפני ילדכם
+</h2>
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+<p spaces-before="0">
+  זה בסדר אם גם אתם וגם ילדכם חדשים בתחום של מדעי המחשב. הנה רעיונות כיצד להציג את פעילות Hour of Code שלכם ולהביא הן את ילדכם ואת אתכם לחשוב על מדעי המחשב:
+</p>
 
-- Explain ways that technology impacts our lives, with specific examples that may interest your child. For example, you could talk about medicine or connecting people virtually. Also, check out <a href="https://code.org/csforgood">Code.org/CSforGood</a> for suggested discussion questions.
-- Together, list everyday things that use code in order to work properly.
+<ul>
+  <li>
+    הסבירו על דרכים שבהן הטכנולוגיה משפיעה על חיינו, על ידי דוגמאות ספציפיות שעשויות לעניין את ילדכם. לדוגמא, תוכלו לדבר על רפואה או על יצירת קשר וירטואלי עם אנשים. כמו כן, מוצעות לכם בדף <a href="https://code.org/csforgood">בדף: Code.org/CSforGood</a> סוגיות לדיון.
+  </li>
+  <li>
+    יחד, מנו דברים יומיומיים המתבססים על תכנות כדי לפעול כראוי.
+  </li>
+</ul>
 
-[<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" /></a>
+</p>
 
-<h3>Have girls at home?</h3>
-<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+<p spaces-before="0">
+  
 
-<h3>Problem-solve together</h3>
-Lastly, when your child comes across difficulties it's okay to respond:
-- "אני לא יודע/ת. בואו נפתור את זה ביחד."
-- "טכנולוגיה לא תמיד עובד כפי שאנחנו רוצים."
-- "ללמוד לתכנת זה כמו ללמוד שפה חדשה; לא תדברו שוטף מיד."
+<h3>יש לכם בנות בבית?</h3>
+<a href="https://code.org/girls">הנה המלצותינו</a> כיצד לעורר בהן עניין למדעי המחשב. <strong x-id="1">טיפ מקצועי</strong>:  בתור התחלה, פשוט אמרו לילדה שהיא תהיה מעולה בזה!
+</p>
 
-Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+<p spaces-before="0">
+  
+
+<h3>פתרון בעיות ביחד</h3>
+ודבר אחרון, כשילדכם נתקל בקשיים, זה בסדר גמור להגיב כך:
+</p>
+
+<ul>
+  <li>
+    "אני לא יודע/ת. בואו נפתור את זה ביחד."
+  </li>
+  <li>
+    "טכנולוגיה לא תמיד עובד כפי שאנחנו רוצים."
+  </li>
+  <li>
+    "ללמוד לתכנת זה כמו ללמוד שפה חדשה; לא תדברו שוטף מיד."
+  </li>
+</ul>
+
+<p spaces-before="0">
+  מדעי המחשב מבוססים על לימוד האופן שבו ניתן לנפות מצבים שלא הסתדרו כפי שציפינו מהם. יחד, אתם וילדכם תוכלו לחשוב על דרכים יצירתיות לפתור בעיה!
+</p>
 
 
-## 4) Don’t forget to celebrate!
+<h2 spaces-before="0">
+  4) אל תשכחו לחגוג!
+</h2>
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+<p spaces-before="0">
+  Hour of Code הוא אירוע בינלאומי ולמשפחה שלכם מגיע לחגוג. הנה כמה דרכים להפיכת Hour of Code שלכם למיוחדת להפליא:
+</p>
 
-- Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
-- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. השתמשו ב#HourOfCode וב@codeorg כדי שאנחנו נוכל לציין את ההצלחה שלכם/ן גם כן!
+<ul>
+  <li>
+    הדפיסו <a href="https://staging.code.org/certificates">תעודות של Hour of Code</a> שאותן תעניקו לילדכם בסיום פעילותו.
+  </li>
+  <li>
+    <a href="https://staging.hourofcode.com/us/promote/resources#stickers">הדפיסו מדבקות</a> בבית או <a href="https://store.code.org/">רכשו אותן באופן מקוון</a>, בתור הפתעה נוספת.
+  </li>
+  <li>
+    שתפו ברשתות החברתיות תמונות וסרטונים של פעילות Hour of Code המתקיימת בביתכם. השתמשו ב#HourOfCode וב@codeorg כדי שאנחנו נוכל לציין את ההצלחה שלכם/ן גם כן!
+  </li>
+</ul>
 
-[<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" /></a>
+</p>
 
 <h2>איך ממשיכים אחרי "שעה של קוד"?</h2>
 
-מדעי המחשב לא חייבים להסתיים עם 'שעה של קוד'! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+<p spaces-before="0">
+  מדעי המחשב לא חייבים להסתיים עם 'שעה של קוד'! אף על פי ש-90% מההורים רוצים שילדיהם ילמדו מדעי המחשב, מרבית בתי הספר עדיין לא מלמדים מקצוע זה. כדי לעזור בעניין זה, תוכנית הלימודים שלנו היא מבוססת-רשת ומוצעת בחינם, לתמיד. <a href="https://code.org/yourschool">למדו כיצד</a> להביא את מדעי המחשב לבית הספר של ילדכם היום.
+</p>
