@@ -79,15 +79,13 @@ class LessonActivity < ApplicationRecord
   private
 
   # Finds the ActivitySection by id, or creates a new one if id is not specified.
-  # Do not try to find the activity section if it was moved here from another
-  # activity. Create a new one,, and let the old activity section be
-  # destroyed when we update the other activity.
   # @param section [Hash] - Hash representing an ActivitySection.
   # @returns [ActivitySection]
   def fetch_activity_section(section)
     if section['id']
-      activity_section = activity_sections.find_by(id: section['id'])
+      activity_section = activity_sections.find(section['id'])
       return activity_section if activity_section
+      raise ActiveRecord::RecordNotFound.new("ActivitySection id #{section['id']} not found in LessonActivity id #{id}")
     end
 
     activity_sections.create(

@@ -118,7 +118,7 @@ describe('LessonEditor', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {updatedAt: '2020-11-06T21:33:32.000Z', activities: []};
+    let returnData = {updated_at: '2020-11-06T21:33:32.000Z'};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,
@@ -187,7 +187,7 @@ describe('LessonEditor', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {updatedAt: '2020-11-06T21:33:32.000Z', activities: []};
+    let returnData = {updated_at: '2020-11-06T21:33:32.000Z'};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,
