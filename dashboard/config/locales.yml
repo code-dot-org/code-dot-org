@@ -191,6 +191,11 @@
   english: "Indonesian"
   native: "Bahasa Indonesia"
 
+"in": "in-TL"
+"in-TL":
+  english: "Crowdin In-Context"
+  native: "Crowdin In-Context"
+
 "is": "is-IS"
 "is-IS":
   english: "Icelandic"
