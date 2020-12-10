@@ -71,7 +71,7 @@ export default function(app, levels, options) {
   studioApp().configure(options);
 
   const skinsModule = options.skinsModule || defaultSkinModule;
-  options.skin = skinsModule.load(studioApp().assetUrl, options.level.skinId);
+  options.skin = skinsModule.load(studioApp().assetUrl, options.skinId);
 
   if (studioApp().isUsingBlockly()) {
     var blockInstallOptions = {
