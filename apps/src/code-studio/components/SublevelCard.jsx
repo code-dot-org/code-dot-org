@@ -7,7 +7,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import queryString from 'query-string';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import {levelTypeWithoutStatus} from '@cdo/apps/templates/progress/progressTypes';
 
 const THUMBNAIL_IMAGE_SIZE = 200;
 const MARGIN = 10;
@@ -85,7 +85,8 @@ const styles = {
 export default class SublevelCard extends React.Component {
   static propTypes = {
     isLessonExtra: PropTypes.bool,
-    sublevel: levelType,
+    // sublevels generally use "perfect" instead of status
+    sublevel: levelTypeWithoutStatus,
     sectionId: PropTypes.number,
     userId: PropTypes.number
   };
