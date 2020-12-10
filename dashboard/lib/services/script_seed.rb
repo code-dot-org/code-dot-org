@@ -332,11 +332,16 @@ module Services
           resource_id: resource_id
         )
       end
-      LessonsResource.import! lessons_resources_to_import, on_duplicate_key_update: get_columns(LessonsResource)
 
-      # Delete any existing LessonsResources that weren't in the imported list, and return the remaining.
-      lessons_resources = LessonsResource.joins(:lesson).where('stages.script_id' => seed_context.script.id)
-      destroy_outdated_objects(LessonsResource, lessons_resources, lessons_resources_to_import, seed_context)
+      # destroy_outdated_objects won't work on LessonsResource objects because
+      # they do not have an id field. Work around this by inefficiently deleting
+      # all LessonsResources using 1 query per lesson, and then re-importing all
+      # LessonsResources in a single query. It may be possible to eliminate
+      # these extra queries by adding an id column to the LessonsResource model.
+      seed_context.lessons.each {|l| l.resources = []}
+
+      LessonsResource.import! lessons_resources_to_import, on_duplicate_key_update: get_columns(LessonsResource)
+      LessonsResource.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
