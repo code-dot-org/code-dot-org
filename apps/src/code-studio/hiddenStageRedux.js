@@ -139,7 +139,6 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
  */
 export function toggleHiddenStage(scriptName, sectionId, stageId, hidden) {
   return dispatch => {
-    // update local state
     dispatch(updateHiddenStage(sectionId, stageId, hidden));
     postToggleHidden(scriptName, sectionId, stageId, hidden);
   };
@@ -159,7 +158,7 @@ export function toggleHiddenScript(scriptName, sectionId, scriptId, hidden) {
  * Post to the server to toggle the hidden state of a stage or script. stageId
  * should be null if we're hiding the script rather than a particular stage
  * @param {string} scriptName
- * @param {string} sectionId
+ * @param {number} sectionId
  * @param {string} stageId
  * @param {boolean} hidden
  */
