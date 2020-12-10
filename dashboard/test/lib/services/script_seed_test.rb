@@ -51,6 +51,7 @@ module Services
       #   12 queries - ScriptLevel validations related to having an activity_section.
       #     These would be good candidates to eliminate in future optimization.
       #   8 queries, one for each LevelsScriptLevel.
+      #   4 queries, one to remove LessonsResources from each Lesson.
       #   9 queries, 1 to populate the Game.by_name cache, and 8 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
@@ -58,7 +59,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(59) do
+      assert_queries(62) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -310,6 +311,30 @@ module Services
       assert_equal expected_counts, get_counts
       # We need to preserve the script level ids of the remaining script levels, since teacher feedbacks reference them.
       assert_equal original_script_level_ids.slice(1, original_script_level_ids.length), script.script_levels.map(&:id)
+    end
+
+    # Resources are owned by the course version. We need to make sure all the
+    # resources we need for this script are created, but we should never remove
+    # a resource because it might be in use by another script in this course
+    # version.
+    test 'seed deletes lessons_resources but not resources' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.resources.count
+        lesson.resources.delete(lesson.resources.first)
+        assert_equal 1, lesson.resources.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script.reload
+
+      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      expected_counts = original_counts.clone
+      expected_counts['LessonsResource'] -= 1
+      assert_equal expected_counts, get_counts
     end
 
     def frozen_script_levels_with_levels(script)
