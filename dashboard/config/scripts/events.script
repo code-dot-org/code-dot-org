@@ -17,7 +17,6 @@ level 'blockly:Studio:full_sandbox'
 level 'blockly:Studio:full_sandbox_infinity'
 
 lesson 'Calc', display_name: 'Calc'
-skin 'calc'
 level 'blockly:Calc:example1'
 
 lesson 'Eval', display_name: 'Eval'

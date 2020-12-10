@@ -1955,6 +1955,7 @@ levels.ec_sandbox = extend(levels.sandbox, {
 /* ******* Hour of Code 2015 ********/
 
 levels.js_hoc2015_move_right = {
+  skinId: 'hoc2015x',
   instructionsImportant: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -2094,6 +2095,7 @@ levels.js_hoc2015_move_right = {
 };
 
 levels.js_hoc2015_move_right_down = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2211,6 +2213,7 @@ levels.js_hoc2015_move_right_down = {
 };
 
 levels.js_hoc2015_move_backtrack = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2264,6 +2267,7 @@ levels.js_hoc2015_move_backtrack = {
 };
 
 levels.js_hoc2015_move_diagonal = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2410,6 +2414,7 @@ levels.js_hoc2015_move_diagonal = {
 };
 
 levels.js_hoc2015_move_around = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2537,6 +2542,7 @@ levels.js_hoc2015_move_around = {
 };
 
 levels.js_hoc2015_move_finale = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2684,6 +2690,7 @@ levels.js_hoc2015_move_finale = {
 /* ** level 7 ** */
 
 levels.js_hoc2015_event_two_items = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -2785,6 +2792,7 @@ levels.js_hoc2015_event_two_items = {
 };
 
 levels.js_hoc2015_event_four_items = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -2852,6 +2860,7 @@ levels.js_hoc2015_event_four_items = {
 };
 
 levels.js_hoc2015_score = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   avatarList: ['R2-D2'],
   autocompletePaletteApisOnly: true,
@@ -2980,6 +2989,7 @@ levels.js_hoc2015_score = {
 };
 
 levels.js_hoc2015_win_lose = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3105,6 +3115,7 @@ levels.js_hoc2015_win_lose = {
 };
 
 levels.js_hoc2015_add_characters = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3211,6 +3222,7 @@ levels.js_hoc2015_add_characters = {
 };
 
 levels.js_hoc2015_chain_characters = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3336,6 +3348,7 @@ levels.js_hoc2015_chain_characters = {
 };
 
 levels.js_hoc2015_multiply_characters = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3442,6 +3455,7 @@ levels.js_hoc2015_multiply_characters = {
 };
 
 levels.js_hoc2015_change_setting = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3627,6 +3641,7 @@ var js_hoc2015_event_free_markdown = [
 ].join('\r\n');
 
 levels.js_hoc2015_event_free = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   freePlay: true,
