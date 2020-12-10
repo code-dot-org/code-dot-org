@@ -240,6 +240,7 @@ class ScriptEditor extends React.Component {
             this.props.levelKeyList
           )
         : this.state.lessonLevelData,
+      old_script_text: this.props.initialLessonLevelData,
       has_verified_resources: this.state.hasVerifiedResources,
       has_lesson_plan: this.state.hasLessonPlan,
       curriculum_path: this.state.curriculumPath,
@@ -843,14 +844,6 @@ class ScriptEditor extends React.Component {
             </div>
           )}
         </CollapsibleEditorSection>
-
-        {this.props.beta && (
-          <input
-            type="hidden"
-            name="old_script_text"
-            value={this.props.initialLessonLevelData}
-          />
-        )}
         <SaveBar
           handleSave={this.handleSave}
           error={this.state.error}
