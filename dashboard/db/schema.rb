@@ -1291,7 +1291,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_073557) do
     t.string "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "course_version_id"
+    t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
@@ -1838,17 +1838,6 @@ ActiveRecord::Schema.define(version: 2020_12_09_073557) do
     t.index ["key", "locale"], name: "index_videos_on_key_and_locale", unique: true
   end
 
-  add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
-  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
-  add_foreign_key "census_inaccuracy_investigations", "users"
-  add_foreign_key "census_overrides", "schools"
-  add_foreign_key "census_submission_form_maps", "census_submissions"
-  add_foreign_key "census_summaries", "schools"
-  add_foreign_key "circuit_playground_discount_applications", "schools"
-  add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "ib_school_codes", "schools"
-  add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "other_curriculum_offerings", "schools"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
