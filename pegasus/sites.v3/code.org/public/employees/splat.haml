@@ -42,7 +42,7 @@ max_age: 60
 
 #intro_top.ee_markdown
   -if company['intro_top_copy_t']
-    =TextRender.safe_markdown company['intro_top_copy_t']
+    = @actionview.render(inline: company['intro_top_copy_t'], type: :md)
   -else
     =view :company_profile_intro_top
 
@@ -75,7 +75,7 @@ max_age: 60
 
 #intro_bottom.ee_markdown
   -if company['intro_bottom_copy_t']
-    =TextRender.safe_markdown company['intro_bottom_copy_t']
+    = @actionview.render(inline: company['intro_bottom_copy_t'], type: :md)
   -else
     =view :company_profile_additional_actions
 

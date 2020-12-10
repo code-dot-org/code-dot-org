@@ -1,4 +1,5 @@
 name 'csp_unit5_finalassessment_overview_2018'
+editor_experiment ''
 css 'unplugged'
 title 'title'
 description 'description here'
@@ -50,7 +51,7 @@ To be clear: While this test *looks* like questions that might appear on the act
 
 Note that since the first question is a survey question it guarantees that every student will have one of the 21 questions correct, and therefore artificially elevate scores by a small amount.  For example, the test itself has 20 questions so if a student got 10 of those 20 correct (50%), it will be reported as 11/21 (52%).
 
-If you would like to know more about this assessment and the studies it has been used in please email pd@code.org and we'd be happy to share.
+If you would like to know more about this assessment and the studies it has been used in please email [pd@code.org](mailto:pd@code.org) and we'd be happy to share.
 
 Thanks,
 

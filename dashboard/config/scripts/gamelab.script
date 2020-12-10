@@ -1,6 +1,6 @@
 login_required true
 
-stage 'Start and End Screens'
+lesson 'Start and End Screens', display_name: 'Start and End Screens'
 level 'Gamelab StartScreen Intro'
 level 'Gamelab StartScreen base code'
 level 'Gamelab StartScreen State'
@@ -11,5 +11,6 @@ level 'Gamelab StartScreen End Game'
 level 'Gamelab StartScreen Restart Game'
 level 'Gamelab StartScreen Hide Sprites'
 
-stage 'Start and End Screens2'
+lesson 'Start and End Screens2', display_name: 'Start and End Screens2'
 level 'Gamelab StartScreen Intro'
+

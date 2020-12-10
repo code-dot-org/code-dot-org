@@ -1,0 +1,9 @@
+name 'CSD games movement2 challenge choice'
+editor_experiment ''
+display_name 'Collision Challenges'
+description 'Try out these new blocks and challenges with collisions.'
+
+sublevels
+level 'CSD U3 complex sprite movement practice parabola'
+level 'CSD U3 complex sprite movement practice deceleration'
+level 'CSD U3 L17 Freeplay_2020'

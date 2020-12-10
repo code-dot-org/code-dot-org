@@ -693,14 +693,14 @@ describe('sectionAssessmentsRedux', () => {
                       type: 'multi',
                       question_index: 0,
                       question: 'question1',
-                      answer_texts: [{text: 'agree'}, {text: 'disagree'}],
+                      answer_texts: ['agree', 'disagree'],
                       results: [{answer_index: 0}]
                     },
                     {
                       type: 'multi',
                       question_index: 1,
                       question: 'question2',
-                      answer_texts: [{text: 'agree'}, {text: 'disagree'}],
+                      answer_texts: ['agree', 'disagree'],
                       results: [{answer_index: 1}]
                     }
                   ]
@@ -716,20 +716,26 @@ describe('sectionAssessmentsRedux', () => {
             questionNumber: 1,
             question: 'question1',
             answers: [
-              {multipleChoiceOption: 'A', percentAnswered: 100},
-              {multipleChoiceOption: 'B', percentAnswered: 0}
+              {multipleChoiceOption: 'A', percentAnswered: 100, text: 'agree'},
+              {multipleChoiceOption: 'B', percentAnswered: 0, text: 'disagree'}
             ],
-            notAnswered: 0
+            notAnswered: 0,
+            totalAnswered: 1
           },
           {
             id: 1,
             questionNumber: 2,
             question: 'question2',
             answers: [
-              {multipleChoiceOption: 'A', percentAnswered: 0},
-              {multipleChoiceOption: 'B', percentAnswered: 100}
+              {multipleChoiceOption: 'A', percentAnswered: 0, text: 'agree'},
+              {
+                multipleChoiceOption: 'B',
+                percentAnswered: 100,
+                text: 'disagree'
+              }
             ],
-            notAnswered: 0
+            notAnswered: 0,
+            totalAnswered: 1
           }
         ]);
       });

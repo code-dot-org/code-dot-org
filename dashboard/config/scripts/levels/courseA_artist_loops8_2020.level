@@ -1,0 +1,103 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:42:59.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "We need a ladder up to the boat.",
+    "x": "260",
+    "y": "350",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try running the code to see what has been written for you.\",\"hint_id\":\"courseA_artist_loops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f4db8ede044bcaab8ce25a95e8d8727f/courseA_artist_loops8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"How would you loop the code that has been given to you?\",\"hint_id\":\"courseA_artist_loops8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aeae35a4e89dc54a693dbb25f80e32a1/courseA_artist_loops8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"What does the code do?  \\nWhat is it supposed to do?  \\nWhat does that tell you?\",\"hint_id\":\"courseA_artist_loops8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/83b2baa79b9aded04cf469e9f30b547e/courseA_artist_loops8.mp3\"}]",
+    "long_instructions": "## We need a ladder up to the boat.\r\n\r\n![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)",
+    "ideal": "5",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_artist_loops8_1\",\r\n  \"callout_text\": \"Did you know that you can draw back over a line whenever you need to?\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/6ecad8c21685d8e1a3bfeb85070edfeb-image-1477111898106.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "tts_long_instructions_override": "We need a ladder up to the boat.",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 15669,
+    "name_suffix": "_2020",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 16:37:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 19:33:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-16 15:57:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-12 21:32:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="simple_move_right" deletable="false">
+              <next>
+                <block type="simple_move_left" deletable="false" id="callMe">
+                  <next>
+                    <block type="simple_jump_up" deletable="false"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_right" limit="1"/>
+        <block type="simple_move_left"/>
+        <block type="simple_jump_up"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">4</title>
+              <statement name="DO">
+                <block type="simple_move_right">
+                  <next>
+                    <block type="simple_move_left">
+                      <next>
+                        <block type="simple_jump_up"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

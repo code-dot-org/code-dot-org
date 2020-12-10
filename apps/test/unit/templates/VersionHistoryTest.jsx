@@ -190,11 +190,9 @@ describe('VersionHistory', () => {
       assert(
         wrapper.containsMatchingElement(
           <div>
-            <p>
-              Are you sure you want to clear all progress for this level&#63;
-            </p>
+            <p>Are you sure you want to clear all progress for this level?</p>
             <button type="button" id="confirm-button">
-              Start Over
+              Start over
             </button>
             <button type="button" id="again-button">
               Cancel
@@ -215,11 +213,9 @@ describe('VersionHistory', () => {
       expect(
         wrapper.containsMatchingElement(
           <div>
-            <p>
-              Are you sure you want to clear all progress for this level&#63;
-            </p>
+            <p>Are you sure you want to clear all progress for this level?</p>
             <button type="button" id="confirm-button">
-              Start Over
+              Start over
             </button>
             <button type="button" id="again-button">
               Cancel

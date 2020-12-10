@@ -1,4 +1,5 @@
 name 'Unit 5 Lesson 14 Introduction'
+editor_experiment ''
 title 'Arrays - Photo Album'
 css 'unplugged'
 
@@ -26,7 +27,7 @@ When designing programs, you will often discover new pieces of functionality you
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-### Notes about this lesson
+## Notes about this lesson
 
 There are two major things happening in this lesson
 
@@ -46,5 +47,4 @@ It is quite possible that some of your students will not have succeeded in creat
 * [My Favorite Things Exemplar](https://levelbuilder-studio.code.org/projects/applab/crEIVQmJhiqUgJOEPmy8Eg/view)
 
 [/key]
-
 MARKDOWN

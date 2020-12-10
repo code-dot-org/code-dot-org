@@ -113,6 +113,7 @@ export default class DiscountCodeSchoolChoice extends Component {
         />
         {this.state.schoolId !== '-1' && (
           <Button
+            __useDeprecatedTag
             color={Button.ButtonColor.orange}
             text={confirming ? i18n.confirming() : i18n.confirmSchool()}
             onClick={this.handleClickConfirmSchool}

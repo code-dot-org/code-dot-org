@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import {STATES} from '../geographyConstants';
 import {styles} from './census2017/censusFormStyles';
-import GoogleSchoolLocationSearchField from './GoogleSchoolLocationSearchField';
+import MapboxLocationSearchField from './MapboxLocationSearchField';
 
 const schoolTypes = [
   '',
@@ -16,7 +16,7 @@ const schoolTypes = [
 const singleLineLayoutStyles = {
   display: 'table-cell',
   width: 210,
-  verticalAlign: 'top',
+  verticalAlign: 'middle',
   minHeight: 42,
   fontSize: 13,
   fontFamily: '"Gotham 4r", sans-serif',
@@ -68,9 +68,10 @@ export default class SchoolNotFound extends Component {
     singleLineLayout: PropTypes.bool,
     showRequiredIndicators: PropTypes.bool,
     schoolNameLabel: PropTypes.string,
-    // Note: Google location search requires the following line to be present in the haml where this component is used:
-    // %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry"}
-    useGoogleLocationSearch: PropTypes.bool
+    // Note: useLocationSearch enables the MapboxLocationSearchField component. See documentation for how to enable.
+    useLocationSearch: PropTypes.bool,
+    // Note: mapboxAccessToken must be defined if useLocationSearch is true.
+    mapboxAccessToken: PropTypes.string
   };
 
   static defaultProps = {
@@ -113,7 +114,7 @@ export default class SchoolNotFound extends Component {
       return false;
     }
 
-    if (this.props.useGoogleLocationSearch && this.locationSearchRef) {
+    if (this.props.useLocationSearch && this.locationSearchRef) {
       return this.isFieldValid(this.locationSearchRef.value());
     } else {
       return (
@@ -224,7 +225,7 @@ export default class SchoolNotFound extends Component {
         </div>
         <div>
           {this.props.schoolCity !== OMIT_FIELD &&
-            !this.props.useGoogleLocationSearch && (
+            !this.props.useLocationSearch && (
               <div style={fieldStyle}>
                 <label style={labelStyle}>
                   {this.renderLabel(i18n.schoolCity())}
@@ -240,7 +241,7 @@ export default class SchoolNotFound extends Component {
               </div>
             )}
           {this.props.schoolState !== OMIT_FIELD &&
-            !this.props.useGoogleLocationSearch && (
+            !this.props.useLocationSearch && (
               <div style={fieldStyle}>
                 <label style={labelStyle}>
                   {this.renderLabel(i18n.schoolState())}
@@ -261,30 +262,29 @@ export default class SchoolNotFound extends Component {
               </div>
             )}
         </div>
-        {this.props.schoolZip !== OMIT_FIELD &&
-          !this.props.useGoogleLocationSearch && (
-            <div style={fieldStyle}>
-              <label style={labelStyle}>
-                {this.renderLabel(i18n.schoolZip())}
-                <input
-                  id="school_zipcode"
-                  type="text"
-                  name={this.props.fieldNames.schoolZip}
-                  value={this.props.schoolZip}
-                  onChange={this.handleChange.bind(this, 'schoolZip')}
-                  style={inputStyle}
-                />
-              </label>
-            </div>
-          )}
-        {this.props.useGoogleLocationSearch && (
+        {this.props.schoolZip !== OMIT_FIELD && !this.props.useLocationSearch && (
+          <div style={fieldStyle}>
+            <label style={labelStyle}>
+              {this.renderLabel(i18n.schoolZip())}
+              <input
+                id="school_zipcode"
+                type="text"
+                name={this.props.fieldNames.schoolZip}
+                value={this.props.schoolZip}
+                onChange={this.handleChange.bind(this, 'schoolZip')}
+                style={inputStyle}
+              />
+            </label>
+          </div>
+        )}
+        {this.props.useLocationSearch && (
           <div style={fieldStyle}>
             <label style={labelStyle}>
               {this.renderLabel(i18n.schoolCityTown(), false)}
-              <GoogleSchoolLocationSearchField
+              <MapboxLocationSearchField
                 ref={el => (this.locationSearchRef = el)}
                 name={this.props.fieldNames.googleLocation}
-                isControlledInput={this.props.controlSchoolLocation}
+                mapboxAccessToken={this.props.mapboxAccessToken}
                 value={this.props.schoolLocation}
                 onChange={this.handleChange.bind(this, 'schoolLocation')}
                 style={inputStyle}

@@ -1,8 +1,20 @@
 name 'Commute Assess - func 1 - block'
-wrong '<pre>hi<br>and<br>bye</pre>'
-right '<pre>hi<br>and<br>and<br>bye<br>and</pre>'
-wrong '<pre>hi<br>and<br>bye<br>and</pre>'
-wrong '<pre>hi<br>bye<br>and</pre>'
+editor_experiment ''
+wrong '`hi`  
+`and`  
+`bye`'
+right '`hi`  
+`and`  
+`and`  
+`bye`  
+`and`'
+wrong '`hi`  
+`and`  
+`bye`  
+`and`'
+wrong '`hi`  
+`bye`  
+`and`'
 wrong 'Nothing will be printed'
 
 markdown <<MARKDOWN

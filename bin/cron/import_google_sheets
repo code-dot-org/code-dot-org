@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require 'cdo/only_one'
 
 def main
   Dir.chdir(pegasus_dir) do
@@ -9,8 +11,4 @@ def main
   end
 end
 
-if only_one_running?(__FILE__)
-  main
-else
-  puts "Importing Google sheets was unsuccessful. This might be because there is already another import_google_sheet process that is stuck. Check for an import_google_sheets.pid file, delete it and try again."
-end
+main

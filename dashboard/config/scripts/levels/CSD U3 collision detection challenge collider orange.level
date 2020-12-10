@@ -1,0 +1,102 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2020-04-28T22:58:34.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "draw": null,
+      "drawSprites": null,
+      "playSound": {
+        "paletteParams": [
+          "url"
+        ],
+        "params": [
+          "\"sound://default.mp3\""
+        ]
+      },
+      "comment_GameLab": null,
+      "var sprite = createSprite": null,
+      "isTouching": null,
+      "velocityX": null,
+      "velocityY": null,
+      "visible": null,
+      "comment_Sprites": null,
+      "ifBlock": null,
+      "comment_Control": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "console.log": null,
+      "comment_Variables": null,
+      "stopSound": null,
+      "createGroup": null,
+      "setVelocityEach": null,
+      "setAnimationEach": null,
+      "add": null,
+      "randomNumber_min_max": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Collider at an Angle\r\n\r\nAngle the collider to fit the cucumber\r\n\r\n## .setCollider() with multiple parameters\r\n\r\n`.setCollider()` can take more parameters than just the shape. It also takes parameters to specify the x, y offset, width and height, and angle. Check out the documentation for an example.\r\n\r\n# Do This\r\n\r\n* Use `.setCollider()` with 6 parameters to give the cucumber a collider that fits it well",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "palette_category_at_start": "gamelab",
+    "all_animations_single_frame": "true",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "start_in_animation_tab": "false",
+    "encrypted_examples": "avaVwLh2Yvp61yUTj+v27oRw3aVMIfzzs68UJvu+NYvbUED/H6Ica4JTyIFl\nY6rW\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 23248,
+    "name_suffix": "_2020",
+    "reference_links": [
+      "/docs/concepts/javascript/if-statements/"
+    ],
+    "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "start_blocks": "var cucumber = createSprite(200, 200);\r\ncucumber.scale = 2;\r\ncucumber.setAnimation(\"cucumber_1\");\r\n// Use .setCollider() with 5 parameters\r\ncucumber.debug = true;\r\ndrawSprites();",
+    "libraries_enabled": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"8c9bd614-9178-4a87-b0ee-3bb5d107c396\",\r\n    \"ad1a050b-5d48-46bd-88e4-523229176507\",\r\n    \"6321e922-2773-428f-ad44-ec4dbd10bb52\",\r\n    \"2e489ed9-7c41-48e5-8a41-3a011133ec4a\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"8c9bd614-9178-4a87-b0ee-3bb5d107c396\": {\r\n      \"name\": \"meadow\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/PBJke0OcZeBcSCZ4Jf1odHo4h3du1gOK/category_backgrounds/meadow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"PBJke0OcZeBcSCZ4Jf1odHo4h3du1gOK\"\r\n    },\r\n    \"ad1a050b-5d48-46bd-88e4-523229176507\": {\r\n      \"name\": \"ghost\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/tCw6E6_fbRCkfa0k_Elc0Pp5kcH67lVu/category_characters/ghost_standing.png\",\r\n      \"frameSize\": {\r\n        \"x\": 72,\r\n        \"y\": 158\r\n      },\r\n      \"frameCount\": 7,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"tCw6E6_fbRCkfa0k_Elc0Pp5kcH67lVu\"\r\n    },\r\n    \"6321e922-2773-428f-ad44-ec4dbd10bb52\": {\r\n      \"name\": \"axe_silver_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/xW00wMcweCS5ArrycbszjJBOsZuILvID/category_tools/axe_silver.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"xW00wMcweCS5ArrycbszjJBOsZuILvID\"\r\n    },\r\n    \"2e489ed9-7c41-48e5-8a41-3a011133ec4a\": {\r\n      \"name\": \"cucumber_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/17kaPQYYjrHMFPEFJXJNvqIFTjBF7pHXn0pVJkYRcTs/2e489ed9-7c41-48e5-8a41-3a011133ec4a.png?version=j63w5FhLNthL5QPvpNfgNMSgj1vpARd7\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 140\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"j63w5FhLNthL5QPvpNfgNMSgj1vpARd7\"\r\n    }\r\n  }\r\n}",
+    "display_name": "Collider at an Angle",
+    "bubble_choice_description": "Angle the collider to fit the cucumber",
+    "thumbnail_url": "https://images.code.org/283412004f90a9ad39ef2d7fa37b8796-image-1588112632048.png",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 17:25:18 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:25:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:26:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-05-26 17:27:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-01-29 20:19:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-23 00:08:09 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 17:10:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 18:58:33 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 19:03:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 19:07:53 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:09:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:10:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:13:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:14:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:16:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:22:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:24:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:26:14 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:29:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:30:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-02 19:34:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-28 22:23:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"start_animations\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-28 22:24:14 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-04-28 22:58:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

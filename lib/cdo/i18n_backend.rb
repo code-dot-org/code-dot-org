@@ -2,6 +2,7 @@ require 'i18n'
 require 'active_support/core_ext/numeric/bytes'
 require 'cdo/key_value'
 require 'cdo/honeybadger'
+require 'cdo/i18n_string_url_tracker'
 
 module Cdo
   module I18n
@@ -24,7 +25,8 @@ module Cdo
         # any of the individual scope or key values, to prevent a situation in
         # which periods in a key name can be mistakenly interpreted as separators
         if options.key?(:scope) && !options.key?(:separator)
-          options[:separator] = get_valid_separator(key + options[:scope].join(''))
+          combined_key = [key] + options.fetch(:scope, [])
+          options[:separator] = get_valid_separator(combined_key.join(""))
         end
 
         options
@@ -62,7 +64,8 @@ module Cdo
       # source strings that include HTML
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
         translation = super(locale, key, options.except(:markdown))
-        if options.fetch(:markdown, false)
+        markdown = options.fetch(:markdown, false)
+        if markdown == true
           # The safe_links_only just makes sure that the URL is a "safe" web
           # one which starts with: "#", "/", "http://", "https://", "ftp://",
           # "mailto:" However, it isn't good enough because it ignores URLS
@@ -76,6 +79,9 @@ module Cdo
           # redacting all URLs in strings given to outside translators.
           @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe.new(safe_links_only: false))
           @renderer.render(translation)
+        elsif markdown == :inline
+          @inline_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
+          @inline_renderer.render(translation)
         else
           translation
         end
@@ -113,45 +119,56 @@ module Cdo
         end
       end
 
-      # TODO: FND-974
-      # We currently have some strings that are _intentionally_ rendering
-      # without using all their interpolation patterns. (see
-      # _javascript_strings.haml for one example)
-      #
-      # Once all those intentional violations have been removed, we can
-      # uncomment this method override to add logging
-      #def translate(locale, key, options = ::I18n::EMPTY_HASH)
-      #  result = super(locale, key, options)
-      #  # Log unused interpolation arguments to honeybadger; these are likely
-      #  # the result of translations mistakenly including interpolation syntax
-      #  # that was removed in the source string and we want to be notified so
-      #  # we can update the translation.
-      #  if result.is_a?(String) && ::I18n::INTERPOLATION_PATTERN.match?(result)
-      #    Honeybadger.notify(
-      #      error_class: 'Interpolation Pattern present in translation',
-      #      error_message: "String #{result.inspect} has unused interpolation patterns after translation",
-      #      context: {
-      #        key: key,
-      #        locale: locale,
-      #        options: options,
-      #        result: result,
-      #      }
-      #    )
-      #  end
-      #  result
-      #end
+      def translate(locale, key, options = ::I18n::EMPTY_HASH)
+        result = super(locale, key, options)
+        # Log unused interpolation arguments to honeybadger; these are likely
+        # the result of translations mistakenly including interpolation syntax
+        # that was removed in the source string and we want to be notified so
+        # we can update the translation.
+        if result.is_a?(String) && Regexp.union(::I18n.config.interpolation_patterns).match?(result)
+          Honeybadger.notify(
+            error_class: 'Interpolation Pattern present in translation',
+            error_message: "String #{result.inspect} has unused interpolation patterns after translation",
+            context: {
+              key: key,
+              locale: locale,
+              options: options,
+              result: result,
+            }
+          )
+        end
+        result
+      end
+    end
+
+    # Plugin for logging usage information about i18n strings.
+    module I18nStringUrlTrackerPlugin
+      def translate(locale, key, options = ::I18n::EMPTY_HASH)
+        result = super
+        url = Thread.current[:current_request_url]
+        scope = options[:scope]
+        # Note that the separator here might not cover some edge cases. If we find that the separator used here is not
+        # sufficient, then refactor the SmartTranslate module so we can use `get_valid_separator` here.
+        separator = options[:separator] || ::I18n.default_separator
+        # We don't pass in a locale because we want the union of all string keys across all locales.
+        normalized_key = ::I18n.normalize_keys(nil, key, scope, separator).join(separator)
+        I18nStringUrlTracker.instance.log(normalized_key, url, 'ruby') if normalized_key && url
+        result
+      end
     end
 
     class SimpleBackend < ::I18n::Backend::Simple
       include SmartTranslate
       include MarkdownTranslate
       include SafeInterpolation
+      include I18nStringUrlTrackerPlugin
     end
 
     # I18n backend instance used by the web application.
     class KeyValueCacheBackend < ::I18n::Backend::KeyValue
       include ::I18n::Backend::CacheFile
       include SmartTranslate
+      include I18nStringUrlTrackerPlugin
 
       CACHE_DIR = pegasus_dir('cache', 'i18n/cache')
 

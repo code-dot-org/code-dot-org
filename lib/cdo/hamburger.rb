@@ -169,6 +169,13 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
+    legal_entries = [
+      {title: "legal_privacy", url: CDO.code_org_url("/privacy")},
+      {title: "legal_tos", url: CDO.code_org_url("/tos")},
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end.freeze
+
     # Get visibility CSS.
     visibility_options = {level: options[:level], language: options[:language], user_type: options[:user_type]}
     visibility = Hamburger.get_visibility(visibility_options)
@@ -236,6 +243,14 @@ class Hamburger
         class: visibility[:show_pegasus_options]
       }
     end
+
+    entries << {
+      type: "expander",
+      title: I18n.t("#{loc_prefix}legal"),
+      id: "legal_entries",
+      subentries: legal_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      class: visibility[:show_pegasus_options]
+    }
 
     {entries: entries, visibility: visibility[:hamburger_class]}
   end

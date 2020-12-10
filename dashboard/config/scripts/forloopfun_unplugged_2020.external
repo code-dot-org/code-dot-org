@@ -1,0 +1,10 @@
+name 'ForLoopFun-Unplugged_2020'
+video_key 'C4_unplugged_forloops'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# For Loop Fun
+
+We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
+MARKDOWN

@@ -1,8 +1,8 @@
 name 'csp-u2-exam1-cutting-paths_2020'
 height 'auto'
 
-question 'This diagram shows a number of computing devices connected to the Internet  with each line representing a direct connection.
-<br> <br>
+question 'This diagram shows a number of computing devices connected to the Internet with each line representing a direct connection.  
+&nbsp;   
 What is the MINIMUM number of paths that would need to be broken to prevent Computing Device A from connecting with Computing Device E?'
 wrong '1'
 wrong '2'

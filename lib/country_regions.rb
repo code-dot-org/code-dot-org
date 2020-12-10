@@ -45,11 +45,11 @@ LATAM_ES_COUNTRY_CODE_TO_NAME = {
   vg: 'Virgin Islands, British',
   vi: 'Virgin Islands, U.S.'
 }.freeze
-LATAM_ES_COUNTRY_CODES = LATAM_ES_COUNTRY_CODE_TO_NAME.keys.map(&:to_s).freeze
+LATAM_ES_COUNTRY_CODES = LATAM_ES_COUNTRY_CODE_TO_NAME.keys.map(&:to_s).map(&:upcase).freeze
 LATAM_ES_COUNTRY_NAMES = LATAM_ES_COUNTRY_CODE_TO_NAME.values.freeze
 
 LATAM_PT_COUNTRY_CODE_TO_NAME = {
   br: 'Brazil'
 }.freeze
-LATAM_PT_COUNTRY_CODES = LATAM_PT_COUNTRY_CODE_TO_NAME.keys.map(&:to_s).freeze
+LATAM_PT_COUNTRY_CODES = LATAM_PT_COUNTRY_CODE_TO_NAME.keys.map(&:to_s).map(&:upcase).freeze
 LATAM_PT_COUNTRY_NAMES = LATAM_PT_COUNTRY_CODE_TO_NAME.values.freeze

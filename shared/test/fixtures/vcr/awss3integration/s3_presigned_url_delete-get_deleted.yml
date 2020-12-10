@@ -1,7 +1,7 @@
 ---
 http_interactions:
 - request:
-    method: get
+    method: head
     uri: https://cdo-temp.s3.amazonaws.com/test-delete-key
     body:
       encoding: UTF-8
@@ -11,22 +11,20 @@ http_interactions:
       - '0'
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 403
+      message: Forbidden
     headers:
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Sat, 29 Sep 2018 00:35:21 GMT
+      - Fri, 17 Apr 2020 18:44:37 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>test-delete-key</Key><RequestId>0EF6E9B152CDD81D</RequestId><HostId>NHNu28W8mdR/9JmaSuCSVyx+XcAeF4OrHggjVWlC0UFGCi/2iochmnAmxqj9KVypvTUZUBHDNN0=</HostId></Error>
+      string: ''
     http_version: 
-  recorded_at: Sat, 29 Sep 2018 00:35:21 GMT
+  recorded_at: Fri, 17 Apr 2020 18:44:38 GMT
 recorded_with: VCR 3.0.3

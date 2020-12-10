@@ -39,6 +39,20 @@ class ScaryChangeDetector
       "the code that adds it to scripts."
   end
 
+  def detect_changed_feature_files
+    changes = @all.grep(/^dashboard\/test\/ui\/features\//)
+    return if changes.empty?
+
+    puts red <<-EOS
+
+        Looks like you added or edited UI tests:
+
+        #{changes.join("\n")}
+
+        Please amend your commit message to include the tag [test all browsers] if you haven't already.
+    EOS
+  end
+
   def detect_new_table_or_new_column
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || !@changed_lines.include?("create_table"))
@@ -114,6 +128,7 @@ class ScaryChangeDetector
     detect_missing_yarn_lock
     detect_special_files
     detect_dropbox_conflicts
+    detect_changed_feature_files
   end
 end
 

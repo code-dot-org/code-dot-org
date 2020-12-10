@@ -44,7 +44,8 @@
 }
 
 .banner {
-  background-image: url(/images/fit-2880/advocacy-banner.jpg);
+  /*background-image: url(/images/fit-2880/advocacy-banner.jpg);*/
+  background-image: url(/images/advocacy-banner.jpg);
   height: 400px;
   background-size: cover;
   background-position: 50% 40%;

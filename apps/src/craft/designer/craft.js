@@ -21,11 +21,16 @@ import CraftVisualizationColumn from './CraftVisualizationColumn';
 import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
-
 import {TestResults} from '../../constants';
 import trackEvent from '../../util/trackEvent';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {ARROW_KEY_NAMES} from '../utils';
+import {
+  showArrowButtons,
+  hideArrowButtons,
+  dismissSwipeOverlay
+} from '@cdo/apps/templates/arrowDisplayRedux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -343,9 +348,7 @@ Craft.init = function(config) {
         }
 
         dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
-        $('#soft-buttons')
-          .removeClass('soft-buttons-none')
-          .addClass('soft-buttons-' + 4);
+        $('#soft-buttons').addClass('soft-buttons-' + 4);
         Craft.hideSoftButtons();
 
         const phaserGame = document.getElementById('phaser-game');
@@ -389,6 +392,15 @@ Craft.init = function(config) {
         });
         mc.on('pressup', () =>
           Craft.gameController.codeOrgAPI.clickUp(() => {})
+        );
+
+        // Prevent Phaser from scrolling up on iPhones when it receives a resize event.
+        Craft.gameController.game.device.whenReady(
+          () => {
+            Craft.gameController.game.scale.compatibility.scrollTo = false;
+          },
+          this,
+          false
         );
       },
       twitter: {
@@ -452,6 +464,10 @@ const directionToFacing = {
 };
 
 Craft.onArrowButtonDown = function(e, btn) {
+  let store = getStore();
+  if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+    store.dispatch(dismissSwipeOverlay('buttonPress'));
+  }
   Craft.gameController.codeOrgAPI.arrowDown(directionToFacing[btn]);
   e.preventDefault(); // Stop normal events so we see mouseup later.
 };
@@ -649,12 +665,12 @@ Craft.niceToHaveAssetsForLevel = function(levelNumber) {
 };
 
 Craft.hideSoftButtons = function() {
-  $('#soft-buttons').hide();
+  getStore().dispatch(hideArrowButtons());
   studioApp().resizePinnedBelowVisualizationArea();
 };
 
 Craft.showSoftButtons = function() {
-  $('#soft-buttons').show();
+  getStore().dispatch(showArrowButtons());
   studioApp().resizePinnedBelowVisualizationArea();
 };
 
@@ -692,6 +708,16 @@ Craft.levelInitialized = function() {
 Craft.runButtonClick = function() {
   if (!Craft.phaserLoaded()) {
     return;
+  }
+
+  let store = getStore();
+  if (!store.getState().arrowDisplay.swipeOverlayHasBeenDismissed) {
+    window.addEventListener('keydown', function hideOverlay(e) {
+      if (ARROW_KEY_NAMES.includes(e.key)) {
+        store.dispatch(dismissSwipeOverlay('keyPress'));
+        window.removeEventListener('keydown', hideOverlay);
+      }
+    });
   }
 
   if (Craft.level.usePlayer) {

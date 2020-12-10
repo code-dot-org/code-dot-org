@@ -1,5 +1,5 @@
 ---
-title: Hướng dẫn Sử dụng
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,7 +8,13 @@ nav: how_to_nav
 
 # Làm thế nào để dạy một Giờ lập trình sau các buổi học ở trường và trong các câu lạc bộ
 
-### Cùng tham gia và giới thiệu với nhóm học sinh về giờ học khoa học máy tính đầu tiên của họ theo những bước sau. Hour of Code (Giờ Lập Trình) rất dễ dàng để thực hiện - ngay cả với những người mới! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -22,7 +28,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Cần giáo trình cho Giờ Lập Trình sau giờ học?**Hãy xem [bản mẫu](/files/AfterschoolEducatorLessonPlanOutline.docx) này!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Quảng bá Giờ Lập Trình của bạn
 
@@ -30,13 +36,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn không bắt buộc
 
-Trải nghiệm Giờ Lập Trình tốt nhất cần có máy tính được kết nối Internet. Nhưng bạn không cần cung cấp máy tính cho tất cả học sinh, và bạn thậm chí có thể thực hiện Giờ lập trình mà chẳng cần bất cứ chiếc máy tính nào.
+Trải nghiệm Giờ Lập Trình tốt nhất cần có máy tính được kết nối Internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Hãy kiểm tra sự hoạt động của các bài hướng dẫn trên máy tính hoặc thiết bị của các học sinh để chắc chắn rằng các âm thanh cũng như video có thể hoạt động trên các trình duyệt. **Nếu có kết nối internet chậm** hãy chiếu video lên máy chiếu để mọi người có thể xem cùng lúc, như vậy từng học sinh không phải tự tải xuống video của mình. Hoặc bạn cũng có thể thử các hướng dẫn trải nghiệm Giờ lập trình không cần máy tính/offline.
+Hãy kiểm tra sự hoạt động của các bài hướng dẫn trên máy tính hoặc thiết bị của các học sinh để chắc chắn rằng các âm thanh cũng như video có thể hoạt động trên các trình duyệt. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Trang bị tai nghe cho các học sinh hoặc yêu cầu các em mang tới lớp để đảm bảo các em có thể nghe các bài hướng dẫn với âm thanh tốt nhất.
 
-**Không có đủ thiết bị?** Sử dụng phương thức [ lập trình theo cặp](https://www.youtube.com/watch?v=vgkahOzFH2Q). Khi học sinh học theo nhóm, các em sẽ trợ giúp nhau và sẽ ít phải tìm kiếm sự giúp đỡ của giáo viên. Các em cũng sẽ thấy được tính xã hội và hợp tác trong khoa học máy tính.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Khi học sinh học theo nhóm, các em sẽ trợ giúp nhau và sẽ ít phải tìm kiếm sự giúp đỡ của giáo viên. Các em cũng sẽ thấy được tính xã hội và hợp tác trong khoa học máy tính.
 
 ## 5. Bắt đầu buổi Giờ Lập Trình của bạn với một video truyền cảm hứng
 
@@ -55,7 +61,7 @@ Khởi động Giờ Lập Trình của bạn bằng cách truyền cảm hứng
 - Lên danh sách những thứ sử dụng mã hóa trong đời sống hằng ngày.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**Bạn cần được hướng dẫn thêm?** Tải [chương trình bài học chuẩn](/files/AfterschoolEducatorLessonPlanOutline.docx) này.
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Lập trình!
 

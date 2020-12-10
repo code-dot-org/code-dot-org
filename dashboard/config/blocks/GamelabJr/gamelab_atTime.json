@@ -1,0 +1,35 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "atTime",
+    "blockText": "at {N} {UNIT}",
+    "callbackParams": [
+      "extraArgs"
+    ],
+    "args": [
+      {
+        "name": "N",
+        "type": "Number"
+      },
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "seconds",
+            "\"seconds\""
+          ],
+          [
+            "frames",
+            "\"frames\""
+          ]
+        ]
+      }
+    ],
+    "eventBlock": true
+  }
+}

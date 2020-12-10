@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This script instructs Twilio to delete data related to SMS messages we send
 # through their service. Doing so both protects our users (reducing PII data)
@@ -6,7 +8,6 @@
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'honeybadger'
-require 'cdo/only_one'
 require 'date'
 require 'twilio-ruby'
 
@@ -48,4 +49,4 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+main

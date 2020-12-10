@@ -1,0 +1,18 @@
+name 'CommuteAssess - Cond 2 - block_2018_2019_virtual'
+question 'What will be displayed after running this code?'
+wrong '`All done.`'
+wrong '`Inside the if.`'
+right '`Inside the if.`  
+`All done.`'
+wrong '`Inside the else.`  
+`All done.`'
+wrong '`Inside the if.`  
+`Inside the else.`  
+`All done.`'
+
+markdown <<MARKDOWN
+![](https://images.code.org/25998f71dad01951719e0a6c95bf4ea1-image-1482507408209.png)
+
+<!-- BLOCK: ![](https://images.code.org/2e5016fb21ed29c8aaca77e208ffc594-image-1482383117531.png)
+-->
+MARKDOWN

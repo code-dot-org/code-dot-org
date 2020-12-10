@@ -1,5 +1,5 @@
 name 'CSDU6 LED predict multi'
-question "Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?"
+question "Here's a new block called `led.toggle()`. In this program `led.toggle()` is called every time you click the red button. What do you think will happen when you click the repeatedly?"
 wrong 'Turn on and stay on'
 right 'Alternate between on and off each click'
 wrong 'Never turn on'

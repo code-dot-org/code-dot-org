@@ -1,9 +1,34 @@
 name 'csp-u5-exam1-normal-for-loop_2020'
-encrypted '0g6sj92eYQV1tFvvKPerL/1EQOvb1LJYBl1L44RFKSKumjdOvzfGjMm9qGh6
-K2Tm7+OMGQG46Go237or4lSbxe1XGLu6KbSQ3Q+KTMy0nvH9lF6c5Jbnq8XC
-O8Ibht9SwyEV9RpOryIaXAm8UtmpNgfukKfVE9vnONZLW4b5NyPl01DTjUYC
-vXTYyGBhKDbYgRhhe9Q1pNG6uf/Bcs0QbvH+VwE+Sqv7gjywcFd05lSyxHwi
-hwroP8QINNXec9Ldt5kH1/IQquY65Qjmg6rGre0S0bwHcYCxVYbK7pR4oXm3
-4FuOQNsMbVHOioBIZED5HRKgQRH0IuUjnlPAF7GTgwL+AFCF9AB/yLAPvAg/
-ERRgrSgJlyIkHG8q6cr7Gk4fbgsxb9tMuo1hX6t2A1Wz8w==
+editor_experiment ''
+right '
+0  
+1  
+2  
+3
 '
+wrong '0  
+1  
+2  
+3  
+4'
+wrong '1  
+2  
+3'
+wrong '1  
+2  
+3  
+4'
+
+
+
+
+markdown <<MARKDOWN
+What will the following program display in the console?
+
+```
+for(var i = 0; i < 4; i++){
+  console.log(i);
+}
+```
+
+MARKDOWN

@@ -150,6 +150,12 @@ class ProgressLesson extends React.Component {
       viewAs === ViewType.Teacher
         ? lesson.description_teacher
         : lesson.description_student;
+
+    // There's no url for a lesson so use the url of the first level of the lesson
+    // as the url for the lesson.
+    // TODO: Make the back-end return a lesson url as part of the lesson metadata so we
+    // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
+    const lessonUrl = levels[0] && levels[0].url;
     return (
       <div
         style={{
@@ -206,7 +212,7 @@ class ProgressLesson extends React.Component {
           )}
         </div>
         {showTeacherInfo && viewAs === ViewType.Teacher && (
-          <ProgressLessonTeacherInfo lesson={lesson} />
+          <ProgressLessonTeacherInfo lesson={lesson} lessonUrl={lessonUrl} />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>

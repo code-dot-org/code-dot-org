@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/courseb-2018/stage/1/puzzle/1": {
+    "title": "Move It, Move It"
+  },
   "https://studio.code.org/s/courseb-2018/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, snap the blocks together and press \"▶ Run\"!",
     "long_instructions": "To get Scrat to the acorn, snap the [blockly block][0] block to the bottom of the [blockly block][1] block, then press \"▶ Run\"!",
@@ -44,6 +47,12 @@
     "authored_hints": {
       "1": "Your code should look like this:\n\n[blockly block][0]"
     }
+  },
+  "https://studio.code.org/s/courseb-2018/stage/3/puzzle/1": {
+    "title": "Your Digital Footprint"
+  },
+  "https://studio.code.org/s/courseb-2018/stage/4/puzzle/1": {
+    "title": "My Robotic Friends"
   },
   "https://studio.code.org/s/courseb-2018/stage/5/puzzle/2": {
     "short_instructions": "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level.",
@@ -129,6 +138,9 @@
       "courseB_maze_seq_challenge2_b": "Rearrange the blocks and take the staircase pattern path."
     }
   },
+  "https://studio.code.org/s/courseb-2018/stage/6/puzzle/1": {
+    "title": "It's Great to Create and Play Fair"
+  },
   "https://studio.code.org/s/courseb-2018/stage/7/puzzle/2": {
     "short_instructions": "\"Go get the scrap metal, BB-8!\"",
     "long_instructions": "[Rey][0]_\"Go get the scrap metal, BB-8!\"_\n\nWatch out for walls and crates. Scrap metal looks like this: [picture of scrap metal][1]",
@@ -211,6 +223,9 @@
   "https://studio.code.org/s/courseb-2018/stage/7/puzzle/12": {
     "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "long_instructions": "[][0] _\"Keep going!\"_"
+  },
+  "https://studio.code.org/s/courseb-2018/stage/8/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title"
   },
   "https://studio.code.org/s/courseb-2018/stage/9/puzzle/1": {
     "short_instructions": "Help Scrat across the ice to get to the acorn!",
@@ -480,9 +495,14 @@
       "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
       "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
     },
-    "function_names": {
-      "potential solution": "potential solution"
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
     }
+  },
+  "https://studio.code.org/s/courseb-2018/stage/12/puzzle/1": {
+    "title": "The Big Event"
   },
   "https://studio.code.org/s/courseb-2018/stage/13/puzzle/1": {
     "short_instructions": "Need a better playlab/events combo"

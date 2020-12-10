@@ -1,0 +1,46 @@
+name 'cspu5_assess3_mysterySwap_2018_2019_virtual'
+wrong 'a'
+right 'b'
+wrong 'c'
+wrong 'd'
+wrong 'e'
+
+markdown <<MARKDOWN
+The JavaScript code below creates an array of numbers and makes a call to the mystery function.  The code for the mystery function is also shown and it makes use of the swap function which you should assume works as described in the previous question.  
+
+    var data = [3, 8, 1];
+    mystery(data);
+
+    function mystery(data){
+       if(data[1] < data[0]){
+          swap(data, 0, 1);
+       }
+       if(data[2] < data[1]){
+          swap(data, 1, 2);
+       }
+       if(data[1] < data[0]){
+          swap(data, 0, 1);
+       }
+    }
+
+![](https://images.code.org/3807ea98b9696aec23fccf47965c7f02-image-1477192478225.png)
+
+![](https://images.code.org/f268a526ce0c6a6ece8c38b75078254c-image-1477192513049.png)
+
+Choose the option that shows the state of the array (along with its corresponding explanation) after the code is executed.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Going through the code line by line while keeping track of the numbers in the array _data_ :
+
+* data = [3, 8, 1]
+* The function mystery is called with the data passed in as a parameter
+* If the data at index 1 is less than the data at index 0, swap these numbers. But 8 is NOT less than 3, so nothing happens
+* data = [3, 8, 1]
+* If the data at index 2 is less than the data at index 1, which 1 is less than 8, swap these numbers.
+* data = [3, 1, 8]
+* If the data at index 1 is less than the data at index 0, which 1 is less than 3, swap these numbers.
+* data = [1, 3, 8]
+
+At the very end, you can see that the function _mystery_ sorts three elements into ascending order.
+MARKDOWN

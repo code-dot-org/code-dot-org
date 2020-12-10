@@ -15,11 +15,12 @@ theme: responsive
   %div{:style=>"float: left; margin: 0 40px 0 0;"}<
     %img{:src=>small_certificate_image_url}
   %div{:style=>"float: left; width: 360px; margin-top: 20px;"}<
-    = I18n.t(:enter_certificate_names, script_name: script_name, markdown: true)
+    != I18n.t(:enter_certificate_names, script_name: script_name, markdown: true)
   %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
+    = I18n.t :want_a_blank_certificate_template
     -# We need a space after want_a_blank_certificate_template as these sentences are translated separately
     -# but appear on the same line.
-    ="#{I18n.t :want_a_blank_certificate_template} "
+    != " "
     %a{href: "/images/#{certificate_template_for(script)}", target: '_blank'}=I18n.t :print_one_here_certificates
 %br
 %form{:method=>"post", :action=>'/printcertificates'}
@@ -29,10 +30,10 @@ theme: responsive
     -if request.params['names']
       - request.params['names'].each do |name|
         =CGI::unescape(name)
-        ="&#x000A;"
+        !="&#x000A;"
   %br
   %br
-  =I18n.t(:landscape_recommended_certificates, markdown: true)
+  != I18n.t(:landscape_recommended_certificates, markdown: true)
   %button{:type=>"submit"}=I18n.t :print_certificates
 
 #print_option.col-50

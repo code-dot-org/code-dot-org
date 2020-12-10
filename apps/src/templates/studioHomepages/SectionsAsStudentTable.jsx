@@ -212,6 +212,7 @@ class SectionsAsStudentTable extends React.Component {
                 <td style={{...styles.col, ...styles.leaveCol}}>
                   {!/^(C|G)-/.test(section.code) && (
                     <Button
+                      __useDeprecatedTag
                       style={{marginLeft: 5}}
                       text={i18n.leaveSection()}
                       onClick={this.onLeave.bind(

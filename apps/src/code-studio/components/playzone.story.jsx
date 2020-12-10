@@ -1,6 +1,6 @@
 import React from 'react';
 import PlayZone from './playzone';
-import CreateSomething from './stageExtras/CreateSomething';
+import CreateSomething from './lessonExtras/CreateSomething';
 import {withInfo} from '@storybook/addon-info';
 
 export default storybook => {

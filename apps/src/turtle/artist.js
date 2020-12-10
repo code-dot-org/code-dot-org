@@ -56,7 +56,6 @@ import dom from '../dom';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
-import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const CANVAS_HEIGHT = 400;
@@ -311,9 +310,6 @@ Artist.prototype.init = function(config) {
     showDecoration: () => this.skin.id === 'elsa'
   });
 
-  this.limitedAutoRun =
-    experiments.isEnabled('limited-auto-artist') ||
-    this.level.autoRun === ArtistAutorunOptions.limited_auto_run;
   this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
 
   this.executionInfo = {...DEFAULT_EXECUTION_INFO};
@@ -338,6 +334,7 @@ Artist.prototype.init = function(config) {
     appSpecificConstants.smallStaticAvatar = config.skin.blankAvatar;
     appSpecificConstants.failureAvatar = config.skin.blankAvatar;
   }
+  appSpecificConstants.validationEnabled = !!config.level.validationEnabled;
   this.studioApp_.setPageConstants(config, appSpecificConstants);
 
   var iconPath =
@@ -354,14 +351,8 @@ Artist.prototype.init = function(config) {
 
   if (this.autoRun) {
     this.studioApp_.addChangeHandler(() => {
-      if (this.limitedAutoRun) {
-        if (this.studioApp_.isRunning() && !this.executing) {
-          this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
-        }
-      } else {
-        if (!this.executing) {
-          this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
-        }
+      if (!this.executing) {
+        this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
       }
     });
   }
@@ -749,19 +740,13 @@ Artist.prototype.runButtonClick = function() {
     Blockly.mainBlockSpace.traceOn(true);
   }
   this.studioApp_.attempts++;
-  if (this.limitedAutoRun) {
-    Blockly.mainBlockSpace.blockSpaceEditor.lockMovement();
-  }
   this.execute(this.executionInfo);
 };
 
 Artist.prototype.resetButtonClick = function() {
   this.shouldAnimate_ = !this.instant_ && !this.autoRun;
-  if (this.limitedAutoRun) {
-    Blockly.mainBlockSpace.blockSpaceEditor.unlockMovement();
-  }
 
-  if (this.autoRun && !this.limitedAutoRun) {
+  if (this.autoRun) {
     this.execute({...this.executionInfo, ticks: MAX_TICKS_FOR_PREVIEW});
   } else {
     this.reset();
@@ -899,10 +884,6 @@ Artist.prototype.execute = function(executionInfo) {
     this.studioApp_.playAudio('start', {loop: true});
     // animate the transcript.
     this.pid = window.setTimeout(_.bind(this.animate, this), 100);
-    if (this.studioApp_.isUsingBlockly()) {
-      // Disable toolbox while running
-      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-    }
   } else {
     while (this.animate()) {}
   }
@@ -1340,8 +1321,7 @@ Artist.prototype.displayFeedback_ = function() {
   // many projects. Instead store them as /c/ links, which are much more
   // space-efficient since they store only one copy of identical projects made
   // by different users.
-  const saveToProjectGallery =
-    !level.impressive && PUBLISHABLE_SKINS.includes(this.skin.id);
+  const saveToProjectGallery = PUBLISHABLE_SKINS.includes(this.skin.id);
   const isSignedIn =
     getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
@@ -1356,10 +1336,7 @@ Artist.prototype.displayFeedback_ = function() {
       !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
     alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToLegacyGalleryUrl:
-      level.freePlay && this.response && this.response.save_to_gallery_url,
-    // save to the project gallery instead of the legacy gallery
+    // save to the project gallery
     saveToProjectGallery: saveToProjectGallery,
     disableSaveToGallery: !isSignedIn,
     appStrings: {
@@ -1504,11 +1481,6 @@ Artist.prototype.checkAnswer = function() {
     this.report();
   }
 
-  if (this.studioApp_.isUsingBlockly()) {
-    // reenable toolbox
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-  }
-
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
@@ -1539,8 +1511,7 @@ Artist.prototype.report = function(enableOnComplete = true) {
     level: this.level.id,
     result: this.levelComplete,
     testResult: this.testResults,
-    program: encodeURIComponent(this.getUserCode()),
-    save_to_gallery: !!this.level.impressive
+    program: encodeURIComponent(this.getUserCode())
   };
 
   if (enableOnComplete) {

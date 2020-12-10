@@ -34,14 +34,17 @@ def title_profanity_privacy_violation(name, locale)
   rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => error
     # If WebPurify or Geocoder are unavailable, default to viewable, but log error
     FirehoseClient.instance.put_record(
-      study: 'share_filtering',
-      study_group: 'v0',
-      event: 'share_filtering_error',
-      data_string: "#{error.class.name}: #{error}",
-      data_json: {
-        name: name,
-        locale: locale
-      }.to_json
+      :analysis,
+      {
+        study: 'share_filtering',
+        study_group: 'v0',
+        event: 'share_filtering_error',
+        data_string: "#{error.class.name}: #{error}",
+        data_json: {
+          name: name,
+          locale: locale
+        }.to_json
+      }
     )
     return false
   end

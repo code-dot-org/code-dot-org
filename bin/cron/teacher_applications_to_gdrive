@@ -1,57 +1,67 @@
 #!/usr/bin/env ruby
-require_relative '../../lib/cdo/only_one'
-exit unless only_one_running?(__FILE__)
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
-require 'cdo/google_drive'
+require 'cdo/google/sheet'
+require 'honeybadger/ruby'
 
-# Squash an unhelpful warning that's causing a Honeybadger error
-# see https://github.com/nahi/httpclient/issues/252#issuecomment-302427338
-class WebAgent
-  class Cookie < HTTP::Cookie
-    def domain
-      original_domain
-    end
-  end
-end
-
-#
-# Uses a Google Cloud service account to write teacher application data for this year into
+# Returns a set of teacher application data to be written to
 # a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
 # by our programs team.
-#
+def get_rows
+  applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
+                     meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
+                     free_reduced_lunch_percent urm_percent accepted_at accepted race community_type)]
+  Pd::Application::Teacher2122Application.find_each do |app|
+    stats = app.get_latest_school_stats(app.school_id)
+    pay_fee = app.sanitize_form_data_hash[:principal_pay_fee] || app.sanitize_form_data_hash[:pay_fee]
+    frl_percent = stats&.frl_eligible_percent
+    # principal data is stored as a string with % at the end. Convert to float
+    if app.sanitize_form_data_hash[:principal_free_lunch_percent]
+      frl_percent = app.sanitize_form_data_hash[:principal_free_lunch_percent].to_f
+    end
+    urm_percent = stats&.urm_percent
+    if app.sanitize_form_data_hash[:principal_underrepresented_minority_percent]
+      urm_percent = app.sanitize_form_data_hash[:principal_underrepresented_minority_percent].to_f
+    end
+    accepted_statuses = %w(accepted_no_cost_registration accepted_notified_by_partner registration_sent paid accepted_not_notified)
+    accepted = accepted_statuses.include?(app.status) ? 1 : 0
 
-applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at)]
+    applications << [
+      app.course,
+      app.regional_partner.try(:name),
+      app.status,
+      app.scholarship_status,
+      app.school_type,
+      pay_fee,
+      app.email,
+      app.created_at,
+      app.meets_criteria,
+      app.meets_scholarship_criteria,
+      app.friendly_registered_workshop,
+      stats&.rural_school?,
+      frl_percent,
+      urm_percent,
+      app.accepted_at,
+      accepted,
+      app.sanitize_form_data_hash[:race],
+      stats&.community_type
+    ]
+  end
 
-Pd::Application::Teacher2021Application.find_each do |app|
-  applications << [
-    app.course,
-    app.regional_partner.try(:name),
-    app.status,
-    app.scholarship_status,
-    app.school_type,
-    app.sanitize_form_data_hash[:principal_pay_fee],
-    app.email,
-    app.created_at
-  ]
+  applications
 end
 
-drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
-drive.update_sheet applications, CDO.applications_2020_2021_gsheet_key, 'all_apps (auto)'
+def main
+  # This list is saved in DCDO as an array. To append a new value to this list:
+  # DCDO.set(key_name, DCDO.get(key_name, []) << new_value)
+  allowed_list = DCDO.get('external_emails_with_application_data_access', [])
 
-last_updated = DateTime.now.in_time_zone ActiveSupport::TimeZone.new "Pacific Time (US & Canada)"
-metadata = [
-  ['AUTOMATION METADATA'],
-  [''],
-  ['The tabs "all_apps (auto)" and "meta (auto)" are auto-generated;'],
-  ['Any edits you make to them (besides formatting) may be lost.'],
-  [''],
-  ['Last updated:', last_updated.strftime('%Y-%m-%d %l:%M%P GMT%:::z')],
-  ['Written by:', CDO.gdrive_export_secret.client_email],
-  ['Teacher applications:', applications.length - 1],
-  [''],
-  ['Parts of this Google Sheet are auto-populated from our live application by an automated process.'],
-  ["The sheet is shared with a \"service account\" that updates it on the application's behalf."],
-  ["(Technical Details: https://github.com/code-dot-org/code-dot-org/pull/32597)"],
-]
-drive.update_sheet metadata, CDO.applications_2020_2021_gsheet_key, 'meta (auto)'
+  # Uses a Google Cloud service account to access Google Drive
+  sheet = Google::Sheet.new CDO.applications_2021_2022_gsheet_key
+  sheet.export(tab_name: 'all_apps_21_22', rows: get_rows)
+  sheet.notify_of_external_sharing(allowed_list)
+end
+
+main

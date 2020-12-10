@@ -4,7 +4,7 @@ require_dependency 'queries/script_activity'
 
 class HomeController < ApplicationController
   include UsersHelper
-  before_action :authenticate_user!, only: :gallery_activities
+  include SurveyResultsHelper
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -33,15 +33,13 @@ class HomeController < ApplicationController
     if current_user
       render 'index', layout: false, formats: [:html]
     else
-      render text: ''
+      render plain: ''
     end
   end
 
   def health_check
-    render text: 'healthy!'
+    render plain: 'healthy!'
   end
-
-  GALLERY_PER_PAGE = 5
 
   # Signed in student, with an assigned course/script: redirect to course overview page
   # Note: the student will be redirected to the course or script in which they
@@ -66,14 +64,6 @@ class HomeController < ApplicationController
     authenticate_user!
     init_homepage
     render 'home/index'
-  end
-
-  def gallery_activities
-    if current_user
-      @gallery_activities =
-        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-    end
-    render partial: 'home/gallery_content'
   end
 
   def certificate_link_test
@@ -103,13 +93,16 @@ class HomeController < ApplicationController
   def init_homepage
     raise 'init_homepage can only be called when there is a current_user' unless current_user
 
+    view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
+
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
-    @homepage_data[:stageExtrasScriptIds] = Script.stage_extras_script_ids
+    @homepage_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
     @homepage_data[:providers] = current_user.providers
+    @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
 
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
@@ -135,7 +128,7 @@ class HomeController < ApplicationController
     if script && script_level
       @homepage_data[:topCourse] = {
         assignableName: data_t_suffix('script.name', script[:name], 'title'),
-        lessonName: script_level.stage.localized_title,
+        lessonName: script_level.lesson.localized_title,
         linkToOverview: script_path(script),
         linkToLesson: script_next_path(script, 'next')
       }
@@ -155,6 +148,7 @@ class HomeController < ApplicationController
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
       @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
       @homepage_data[:showCensusBanner] = show_census_banner
+      @homepage_data[:showNpsSurvey] = show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2020
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
 
@@ -169,22 +163,6 @@ class HomeController < ApplicationController
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email
       elsif donor_banner_name
-        teachers_school = Queries::SchoolInfo.last_complete(current_user)&.school
-
-        donor_teacher_banner_options = {}
-        donor_teacher_banner_options[:teacherFirstName] = current_user.short_name
-        donor_teacher_banner_options[:teacherSecondName] = current_user.second_name
-        donor_teacher_banner_options[:teacherEmail] = current_user.email
-        donor_teacher_banner_options[:ncesSchoolId] = teachers_school.id
-        donor_teacher_banner_options[:schoolAddress1] = teachers_school.address_line1
-        donor_teacher_banner_options[:schoolAddress2] = teachers_school.address_line2
-        donor_teacher_banner_options[:schoolAddress3] = teachers_school.address_line3
-        donor_teacher_banner_options[:schoolCity] = teachers_school.city
-        donor_teacher_banner_options[:schoolState] = teachers_school.state
-        donor_teacher_banner_options[:schoolZip] = teachers_school.zip
-
-        @homepage_data[:donorTeacherBannerOptions] = donor_teacher_banner_options
-
         @homepage_data[:teacherId] = current_user.id
       end
     else

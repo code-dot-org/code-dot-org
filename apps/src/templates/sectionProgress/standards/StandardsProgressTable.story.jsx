@@ -1,12 +1,20 @@
 import React from 'react';
-import StandardsProgressTable from './StandardsProgressTable';
-import {fakeStandards, lessonCompletedByStandard} from './standardsTestHelpers';
+import {UnconnectedStandardsProgressTable as StandardsProgressTable} from './StandardsProgressTable';
+import {standardsData, lessonCompletedByStandard} from './standardsTestHelpers';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 
 export default storybook => {
-  const store = createStore(combineReducers({sectionStandardsProgress}));
+  const store = createStore(
+    combineReducers({
+      sectionProgress,
+      sectionStandardsProgress,
+      scriptSelection
+    })
+  );
 
   return storybook
     .storiesOf('Standards/StandardsProgressTable', module)
@@ -17,8 +25,8 @@ export default storybook => {
         story: () => (
           <Provider store={store}>
             <StandardsProgressTable
-              standards={fakeStandards}
-              lessonsCompletedByStandard={lessonCompletedByStandard}
+              standards={standardsData}
+              lessonsByStandard={lessonCompletedByStandard}
             />
           </Provider>
         )

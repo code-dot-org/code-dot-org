@@ -24,7 +24,14 @@ initHamburger();
 
 $(window).load(function() {
   if (document.getElementsByClassName('insert_video_player').length > 0) {
-    loadVideos(window.location.search.indexOf('force_youtube_fallback') !== -1);
+    const urlParams = window.location.search;
+    let forcePlayer = false;
+    if (urlParams.indexOf('force_youtube_fallback') !== -1) {
+      forcePlayer = 'fallback';
+    } else if (urlParams.indexOf('force_youtube_player') !== -1) {
+      forcePlayer = 'youtube';
+    }
+    loadVideos(forcePlayer);
   }
 
   // This code works for both the congrats_share and the more general

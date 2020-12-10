@@ -38,6 +38,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     if current_user.teacher?
       teachers_school = Queries::SchoolInfo.last_complete(current_user)&.school
       render json: {
+        user_type: 'teacher',
         teacher_first_name: current_user.short_name,
         teacher_second_name: current_user.second_name,
         teacher_email: current_user.email,
@@ -47,16 +48,19 @@ class Api::V1::UsersController < Api::V1::JsonApiController
         school_address_3: teachers_school&.address_line3,
         school_city: teachers_school&.city,
         school_state: teachers_school&.state,
-        school_zip: teachers_school&.zip
+        school_zip: teachers_school&.zip,
+        afe_high_needs: teachers_school&.afe_high_needs?
       }
     else
-      head :no_content
+      render json: {
+        user_type: 'student'
+      }
     end
   end
 
   # GET /api/v1/users/<user_id>/school_donor_name
   def get_school_donor_name
-    render json: @user.school_donor_name
+    render json: @user.school_donor_name.nil? ? 'null' : @user.school_donor_name.inspect
   end
 
   # POST /api/v1/users/<user_id>/using_text_mode
@@ -121,6 +125,14 @@ class Api::V1::UsersController < Api::V1::JsonApiController
       participate: params[:participate].to_s == "true",
       source: params[:source]
     }
+    @user.save
+
+    head :ok
+  end
+
+  # POST /api/v1/users/<user_id>/dismiss_parent_email_banner
+  def dismiss_parent_email_banner
+    @user.parent_email_banner_dismissed = "true"
     @user.save
 
     head :ok

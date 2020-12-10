@@ -10,16 +10,19 @@ module InternationalOptInPeople
     "Rodrigo Fabrega",
     "Weena Naowaprateep",
     "Beth Zigmont & Hana Zimmerman Karl",
-    "My facilitator is not listed"
+    "María Cristina Charters",
+    I18n.t('pd.international_opt_in.facilitator_not_listed'),
+    I18n.t('pd.international_opt_in.facilitator_not_applicable')
   ].freeze
 
   INTERNATIONAL_OPT_IN_PARTNERS = [
     "Aksorn",
+    "Computadores para Educar",
     "Cuantrix",
     "Fundacion Kodea",
     "Malaysia Digital Economy Corporation",
     "Mineduc",
     "Wix.com",
-    "My organizer is not listed"
+    I18n.t('pd.international_opt_in.organizer_not_listed')
   ].freeze
 end

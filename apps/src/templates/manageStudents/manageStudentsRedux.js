@@ -1,10 +1,22 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {getCurrentSection} from '@cdo/apps/util/userSectionClient';
 import {
   sectionCode,
   sectionName
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import $ from 'jquery';
+
+export const ParentLetterButtonMetricsCategory = {
+  ABOVE_TABLE: 'above-table',
+  BELOW_TABLE: 'below-table'
+};
+
+export const PrintLoginCardsButtonMetricsCategory = {
+  MANAGE_STUDENTS: 'manage-students',
+  LOGIN_INFO: 'section-login-info'
+};
 
 // Response from server after adding a new student to the section.
 export const AddStatus = {
@@ -25,7 +37,8 @@ export const RowType = {
 // Response from server after moving student(s) to a new section
 export const TransferStatus = {
   SUCCESS: 'success',
-  FAIL: 'fail'
+  FAIL: 'fail',
+  PENDING: 'pending'
 };
 
 // Type of student transfer - whether students are being moved (and subsequently removed from current section) or copied to new section
@@ -143,6 +156,7 @@ const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
 const CANCEL_STUDENT_TRANSFER = 'manageStudents/CANCEL_STUDENT_TRANSFER';
 const TRANSFER_STUDENTS_SUCCESS = 'manageStudents/TRANSFER_STUDENTS_SUCCESS';
 const TRANSFER_STUDENTS_FAILURE = 'manageStudents/TRANSFER_STUDENTS_FAILURE';
+const TRANSFER_STUDENTS_PENDING = 'manageStudents/TRANSFER_STUDENTS_PENDING';
 const START_LOADING_STUDENTS = 'manageStudents/START_LOADING_STUDENTS';
 const FINISH_LOADING_STUDENTS = 'manageStudents/FINISH_LOADING_STUDENTS';
 
@@ -216,6 +230,9 @@ export const transferStudentsFailure = error => ({
   type: TRANSFER_STUDENTS_FAILURE,
   error
 });
+export const transferStudentsPending = () => ({
+  type: TRANSFER_STUDENTS_PENDING
+});
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => ({
   type: ADD_STUDENT_SUCCESS,
   numStudents,
@@ -258,6 +275,7 @@ export const saveStudent = studentId => {
           console.error(error);
         }
         dispatch(saveStudentSuccess(studentId));
+        getCurrentSection(sectionId, section => dispatch(setSection(section)));
       }
     );
   };
@@ -323,6 +341,7 @@ export const addStudents = studentIds => {
             convertStudentServerData(data, state.loginType, sectionId)
           )
         );
+        getCurrentSection(sectionId, section => dispatch(setSection(section)));
       }
     });
   };
@@ -355,6 +374,7 @@ export const addMultipleAddRows = studentNames => {
 
 export const transferStudents = onComplete => {
   return (dispatch, getState) => {
+    dispatch(transferStudentsPending());
     const state = getState();
     // Get section code for current section from teacherSectionsRedux
     const currentSectionCode = sectionCode(state, state.sectionData.section.id);
@@ -403,6 +423,9 @@ export const transferStudents = onComplete => {
             )
           );
           onComplete();
+          getCurrentSection(currentSectionCode, section =>
+            dispatch(setSection(section))
+          );
         }
       }
     );
@@ -713,6 +736,15 @@ export default function manageStudents(state = initialState, action) {
         ...state.transferStatus,
         status: TransferStatus.FAIL,
         error: action.error
+      }
+    };
+  }
+  if (action.type === TRANSFER_STUDENTS_PENDING) {
+    return {
+      ...state,
+      transferStatus: {
+        ...state.transferStatus,
+        status: TransferStatus.PENDING
       }
     };
   }

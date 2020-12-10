@@ -95,6 +95,18 @@ export default class EligibilityChecklist extends React.Component {
     });
   };
 
+  schoolHighNeedsStatusMessage = schoolHighNeedsEligible => {
+    return schoolHighNeedsEligible === true ? (
+      <SafeMarkdown markdown={schoolIsEligibleMd} />
+    ) : (
+      <SafeMarkdown markdown={schoolIsNotEligibleMd(this.state.schoolId)} />
+    );
+  };
+
+  schoolHighNeedsStatus = schoolHighNeedsEligible => {
+    return schoolHighNeedsEligible === true ? Status.SUCCEEDED : Status.FAILED;
+  };
+
   handleUnit6Submitted = ({eligible, unit6Intention}) => {
     this.setState({
       statusRedemptionWindow: inDiscountRedemptionWindow(unit6Intention)
@@ -150,14 +162,17 @@ export default class EligibilityChecklist extends React.Component {
           schoolConfirmed={this.props.hasConfirmedSchool}
           onSchoolConfirmed={this.handleSchoolConfirmed}
         />
-        {this.state.schoolEligible === false && !this.props.adminSetStatus && (
-          <SafeMarkdown markdown={schoolIsNotEligibleMd(this.state.schoolId)} />
-        )}
-        {this.state.schoolEligible === true && !this.props.adminSetStatus && (
+        {this.state.schoolEligible !== null && !this.props.adminSetStatus && (
           <div>
-            <SafeMarkdown markdown={schoolIsEligibleMd} />
+            {this.schoolHighNeedsStatusMessage(this.state.schoolEligible)}
             <h2>{i18n.eligibilityRequirements()}</h2>
             <p>{i18n.eligibilityExplanation()}</p>
+            <ValidationStep
+              stepName={schoolIsEligibleHeader}
+              stepStatus={this.schoolHighNeedsStatus(this.state.schoolEligible)}
+            >
+              {schoolIsNotEligibleDescription}
+            </ValidationStep>
             <ValidationStep
               stepName={i18n.eligibilityReqPD()}
               stepStatus={this.props.statusPD}
@@ -172,6 +187,7 @@ export default class EligibilityChecklist extends React.Component {
             </ValidationStep>
             <Unit6ValidationStep
               showRadioButtons={
+                this.state.schoolEligible === true &&
                 this.props.statusStudentCount === Status.SUCCEEDED &&
                 this.props.statusPD === Status.SUCCEEDED &&
                 !this.props.adminSetStatus
@@ -202,6 +218,7 @@ export default class EligibilityChecklist extends React.Component {
               </strong>
             </div>
             <Button
+              __useDeprecatedTag
               color={Button.ButtonColor.orange}
               text={i18n.getCode()}
               onClick={this.confirmEligibility}
@@ -226,7 +243,7 @@ teachers at schools with 50% or greater free and reduced-price meals. To learn m
 the full eligibility requirements, read the overview [here](//code.org/circuitplayground).
 `;
 
-const schoolRequirementHeading = `School requirement`;
+const schoolRequirementHeading = `School Requirement`;
 const schoolRequirementDescriptionMd = `
 Please verify which school you teach at, so we can check if your school is eligible for a
 Code.org-provided subsidy.
@@ -240,9 +257,12 @@ Adafruit has made available a 10% off educator discount that this kit is eligibl
 Just use the code \`ADAEDU\` at checkout.
 `;
 
+const schoolIsEligibleHeader = `Your school is eligible for the Code.org provided subsidy.`;
+const schoolIsNotEligibleDescription = `See "School Requirement" section above for more detail.`;
+
 const schoolIsNotEligibleMd = ncesId => `
-Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
-your school has fewer than 50% of students that are eligible for free/reduced-price lunches
+**Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
+your school has fewer than 50% of students that are eligible for free/reduced-price lunches**
 ([source](https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=${ncesId})).
 However, you are still eligible for a discount! Adafruit has made available a 10% off educator
 discount that this kit is eligible for. Just use the code \`ADAEDU\` at checkout.

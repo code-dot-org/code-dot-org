@@ -1,7 +1,10 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import CrossTabChart from '@cdo/apps/storage/dataBrowser/dataVisualizer/CrossTabChart';
+import CrossTabChart, {
+  createPivotTable,
+  getColorForValue
+} from '@cdo/apps/storage/dataBrowser/dataVisualizer/CrossTabChart';
 
 const DEFAULT_PROPS = {
   records: [],
@@ -11,52 +14,35 @@ const DEFAULT_PROPS = {
 };
 
 describe('CrossTabChart', () => {
-  let wrapper;
-  beforeEach(() => {
-    wrapper = mount(<CrossTabChart {...DEFAULT_PROPS} />);
+  it('renders', () => {
+    mount(<CrossTabChart {...DEFAULT_PROPS} />);
   });
 
   describe('getColorForValue', () => {
     it('maps the min value to white', () => {
-      expect(wrapper.instance().getColorForValue(19, 19, 100)).to.equal(
-        'hsl(217, 89%, 100%)'
-      );
+      expect(getColorForValue(19, 19, 100)).to.equal('hsl(217, 89%, 100%)');
 
-      expect(wrapper.instance().getColorForValue(4, 4, 25)).to.equal(
-        'hsl(217, 89%, 100%)'
-      );
+      expect(getColorForValue(4, 4, 25)).to.equal('hsl(217, 89%, 100%)');
 
-      expect(wrapper.instance().getColorForValue(0, 0, 3)).to.equal(
-        'hsl(217, 89%, 100%)'
-      );
+      expect(getColorForValue(0, 0, 3)).to.equal('hsl(217, 89%, 100%)');
     });
 
     it('maps intermediate values proportionately', () => {
-      expect(wrapper.instance().getColorForValue(50, 0, 100)).to.equal(
-        'hsl(217, 89%, 78%)'
-      );
+      expect(getColorForValue(50, 0, 100)).to.equal('hsl(217, 89%, 78%)');
 
-      expect(wrapper.instance().getColorForValue(2, 0, 3)).to.equal(
+      expect(getColorForValue(2, 0, 3)).to.equal(
         'hsl(217, 89%, 70.66666666666667%)'
       );
 
-      expect(wrapper.instance().getColorForValue(20, 10, 50)).to.equal(
-        'hsl(217, 89%, 89%)'
-      );
+      expect(getColorForValue(20, 10, 50)).to.equal('hsl(217, 89%, 89%)');
     });
 
     it('maps the max value to hsl(217, 89%, 56%)', () => {
-      expect(wrapper.instance().getColorForValue(100, 19, 100)).to.equal(
-        'hsl(217, 89%, 56%)'
-      );
+      expect(getColorForValue(100, 19, 100)).to.equal('hsl(217, 89%, 56%)');
 
-      expect(wrapper.instance().getColorForValue(25, 4, 25)).to.equal(
-        'hsl(217, 89%, 56%)'
-      );
+      expect(getColorForValue(25, 4, 25)).to.equal('hsl(217, 89%, 56%)');
 
-      expect(wrapper.instance().getColorForValue(3, 0, 3)).to.equal(
-        'hsl(217, 89%, 56%)'
-      );
+      expect(getColorForValue(3, 0, 3)).to.equal('hsl(217, 89%, 56%)');
     });
   });
 
@@ -75,9 +61,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 1, 2, 3]
       };
-      expect(
-        wrapper.instance().createPivotTable(records, 'abc', 'value')
-      ).to.deep.equal(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+        expectedPivotData
+      );
     });
 
     it('sorts string columns alphabetically, but with the row column first', () => {
@@ -96,9 +82,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 'a', 'z']
       };
-      expect(
-        wrapper.instance().createPivotTable(records, 'abc', 'value')
-      ).to.deep.equal(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+        expectedPivotData
+      );
     });
 
     it('sorts numeric columns numerically, with the row column first', () => {
@@ -117,9 +103,8 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 18, 134]
       };
-      wrapper.setProps({numericColumns: ['value']});
       expect(
-        wrapper.instance().createPivotTable(records, 'abc', 'value')
+        createPivotTable(records, ['value'], 'abc', 'value')
       ).to.deep.equal(expectedPivotData);
     });
 
@@ -140,9 +125,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 'x', 'y']
       };
-      expect(
-        wrapper.instance().createPivotTable(records, 'abc', 'value')
-      ).to.deep.equal(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+        expectedPivotData
+      );
     });
   });
 });

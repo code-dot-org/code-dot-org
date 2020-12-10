@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 #
 # purge_expired_deleted_accounts
@@ -18,7 +20,6 @@
 require 'active_support/core_ext/numeric/time'
 require 'date'
 require 'optparse'
-require_relative '../../lib/cdo/only_one'
 
 options = {}
 OptionParser.new do |opts|
@@ -41,9 +42,6 @@ OptionParser.new do |opts|
     exit
   end
 end.parse!
-
-# Make sure we're the only copy of this script running.
-exit(1) unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 require_relative '../../dashboard/lib/expired_deleted_account_purger'

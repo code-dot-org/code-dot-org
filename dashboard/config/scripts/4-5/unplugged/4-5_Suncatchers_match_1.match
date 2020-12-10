@@ -1,17 +1,18 @@
 name '4-5 Suncatchers Match 1'
+editor_experiment ''
 title 'Matching'
 banner '/script_assets/4-5_images/unplugged/suncatchers_1.png'
 description 'Match each program to the word it makes, using the provided group of skills.'
 height '100'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a1.png'
-answer '<h4>STACK</h4>'
+answer '**STACK**'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a2.png'
-answer '<h4>STAMP</h4>'
+answer '**STAMP**'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a3.png'
-answer '<h4>STAR</h4>'
+answer '**STAR**'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a4.png'
-answer '<h4>RAMP</h4>'
+answer '**RAMP**'

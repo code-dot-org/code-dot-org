@@ -1,13 +1,23 @@
 name 'csp-u1-exam1-bits-bytes-and-representation_2020'
 height 'auto'
 
-question '
-Which of the following best describes how computing devices represent information?'
+question 'Which of the following best describes how computing devices represent information?'
 wrong ‘A computer will either represent information as bits or bytes but not both’
 wrong ‘A computer represents data as a byte which is either a 0 or a 1’
 right ‘A computer represents data as bits which is either a 0 or a 1’
 wrong ‘A computer represents information as bits which contain 8 bytes.’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** The definition of a bit: a contraction of "Binary Digit";  the single unit of information in a computer, typically represented as a 0 or 1.
 
+This came up in [Lesson 4 - Binary Numbers](https://curriculum.code.org/csp-20/unit1/4/)
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+DAT-1.A.2: Computing devices represent data digitally, meaning that the lowest-level components of any value are bits.
+
+DAT-1.A.3: Bit is shorthand for binary digit and is either 0 or 1. 
+
+DAT-1.A.4: A byte is 8 bits. 
+:::
 MARKDOWN

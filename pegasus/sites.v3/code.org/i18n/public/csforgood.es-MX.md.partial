@@ -1,0 +1,178 @@
+---
+title: Ciencias de la Computación para el bien
+video_player: true
+theme: responsive
+social:
+  og:title: "#CSforGood in your class"
+  og:description: 'Resources and activities for talking to your students about #CSforGood'
+  og:image: http://code.org/images/csforgood.png
+  og:image:width: 850
+  og:image:height: 502
+  og:video: ''
+  og:video:width: ''
+  og:video:height: ''
+  og:video:type: ''
+---
+
+<center>
+<h1>
+  Hablar de las Ciencias de la Computación para el bien en tu aula
+</h1>
+</center>
+
+<center>
+<img src="/images/fit-850/marketing/talkingtoclass.jpg">
+</center>
+
+<br>La computación es un tema fundamental en el mundo de hoy que beneficiará a los estudiantes de cualquier carrera. No solo les da espacio para flexibilizar su creatividad, sino que también los equipa con las herramientas para abordar algunos de los problemas más apremiantes del mundo.
+
+Cómo se usa y aplica la computación en el mundo real es una parte crucial del aprendizaje de la computación. Es por eso que nos estamos centrando en #CienciasDeLaComputaciónParaElBien como el tema de la Hora del Código de este año. Podemos ayudar a los estudiantes a comprender algunos de los desafíos que enfrentan las personas en todo el mundo e inspirarlos a pensar más profundamente sobre el papel que puede desempeñar la computación en la creación de un mundo más equitativo y sostenible.
+
+<center>
+<img src="/images/fit-500/marketing/sdg-new-image-csforgood.jpg">
+</center>
+
+Al usar los <a href="https://www.un.org/sustainabledevelopment/">Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas</a> como una guía, nuestro objetivo es transmitir a los estudiantes cómo la computación puede tener un impacto positivo en nuestro mundo, desde la tecnología de automóviles autónomos que puede hacer que nuestras carreteras sean más seguras, hasta las técnicas de ciencia de datos que pueden identificar enfermedades tempranamente y mantenernos más saludables. <br><br>
+
+<center>
+<a href="https://www.code.org/oceans"><img src="/images/fit-700/marketing/ai-oceans-csforgood.png"></a>
+</center>
+
+<br>Al considerar Ciencias de la Computación para el bien, nos sentimos inspirados para pensar sobre el potencial de la Inteligencia Artificial, y nos complace presentar la nueva actividad de la Hora del Código de Code.org: <a href="https://www.code.org/oceans">IA para Océanos</a>. En esta actividad, los estudiantes aprenderán sobre IA, aprendizaje automático, datos de capacitación y sesgo, todo mientras exploran cuestiones éticas y cómo la inteligencia artificial se puede utilizar para abordar problemas mundiales. También es solo un ejemplo de cómo Ciencias de la Computación es mucho más que codificación. ¡Disfruta de este primer paso en un nuevo viaje para enseñar más sobre IA!<br>
+
+<a id="prompts"></a>
+
+# Ejemplos de sugerencias para debate de #CienciasDeLaComputaciónParaElBien
+Estas son algunos temas y preguntas para iniciar un debate en tu clase sobre el papel de la tecnología en la creación de un cambio social positivo. Para un debate más profundo, complementa estas indicaciones con <a href="#articles">historias de Ciencias de la Computación para el bien en el mundo real</a>.
+
+## **La tecnología puede ser parte de la solución.**
+Si bien los grandes desafíos sistémicos como la pobreza y la sustentabilidad ambiental a menudo requieren cambios de actitud, cooperación a gran escala y, en algunos casos, sacrificios personales o colectivos, la tecnología puede ayudar a impulsar los esfuerzos, detectar problemas y aliviar las barreras.
+
+### *Preguntas o indicaciones para el debate*:
+- Piensa en algunos desafíos que enfrentan las personas en tu escuela, vecindario, ciudad o en cualquier otro lugar del mundo. ¿Cuáles son algunas soluciones que las personas han ideado para resolver esos problemas?
+- ¿Cómo se puede combinar la computación con otros esfuerzos para abordar diferentes partes del problema?
+- ¿Hay algún problema que creas que la tecnología no puede ayudar a resolver? ¿Por qué o por qué no?
+
+## **La ciencia de la computación está ayudando a abordar grandes y pequeños desafíos en todo el mundo.**
+Ya sea construyendo tecnología asequible para ayudar a los agricultores en el África subsahariana, programando glóbulos blancos para combatir el cáncer o revolucionando la industria de los alimentos envasados ​​con inteligencia artificial, las personas están utilizando la Ciencia de la Computación en formas creativas para resolver problemas y brindar oportunidades para otros.
+
+### *Preguntas o indicaciones para el debate*:
+- ¿Puedes pensar en algún problema propio que pueda resolverse o ser asistido con la ciencia de la computación?
+- ¿Cuál es un ejemplo reciente que has visto donde se utilizó la tecnología para ayudar a resolver un problema apremiante en algún lugar del mundo?
+- ¿Crees que hay formas de utilizar la ciencia de la computación para abordar grandes problemas, como la atención médica, el acceso al agua potable o la pobreza?
+
+Nota para profesores: usa los artículos anteriores O encuentra algunos propios y entrégaselos a los estudiantes para que los lean de antemano. Luego, úselos para estructurar tu debate.
+
+## **Un gran poder implica una gran responsabilidad.**
+La ciencia de la computación puede ser una fuente de cambio positivo... o puede crear nuevos desafíos. Al reconocer que la Ciencia de la Computación CS, al igual que cualquier herramienta, requiere consideración y responsabilidad ética, podemos empoderar a los estudiantes para que piensen críticamente y trabajen en pos de resolver problemas de manera integral.
+
+### *Preguntas o indicaciones para el debate*:
+- ¿Debería haber reglas o pautas establecidas sobre cómo usar la ciencia de la computación para resolver grandes problemas?
+- Si es así, ¿por qué o por qué no?
+- ¿Puedes aportar ideas?
+
+## **Los estudiantes de hoy serán las personas que solucionen problemas, innovadores y tomadores de decisiones del mañana.**
+Cuanto más accesible sea la educación de la ciencia de la computación, más estudiantes podrán participar, y más inclusiva, diversa e impactante será la tecnología y las soluciones del mañana.
+
+### *Preguntas o indicaciones para el debate*:
+- ¿Por qué es importante que todos tengan acceso para aprender ciencia de la computación?
+- ¿Qué crees que podría pasar con las soluciones y los programas si solo un mismo tipo de persona estudiara computación?
+- ¿Puedes pensar en lo que podrías decirle a alguien para alentarlo a aprender ciencia de la computación?
+
+---
+
+<a id="activities"></a>
+
+# Actividades de la Hora del Código inspiradas en Ciencias de la Computación para el bien
+Si estás buscando una forma atractiva de presentarles a tus estudiantes el concepto de Ciencias de la Computación para el bien, ¡hay innumerables tutoriales y actividades para elegir!
+
+## Actividades para principiantes
+Para los estudiantes que son nuevos en la ciencia de la computación, estas actividades los ayudarán a desarrollar una comprensión básica de los conceptos de Ciencias de la Computación.
+
+| Actividad                                                                                                                                           | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Grados                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [Limpieza de playa con Kodable (Kodable)](https://www.kodable.com/hour-of-code#beach-cleanup)                                                       | Aprende a programar utilizando comandos básicos y limpia la playa para proteger la vida del océano.                                                                                                                                                                                                                                                                                                                                                                                               | A partir de Grado 2                                                    |
+| [Imagina un mundo (Scratch)](https://scratch.mit.edu/projects/editor/?tutorial=imagine)                                                             | Imagina un mundo donde todo es posible, ¡y luego dale vida con Scratch!                                                                                                                                                                                                                                                                                                                                                                                                                           | A partir de Grado 2                                                    |
+| [Minecraft de la Hora del Código: IA para el bien (Microsoft: Edición de Educación)](https://education.minecraft.net/hour-of-code)                  | Programa al Agente de Minecraft para recopilar datos sobre incendios forestales. Luego, escribe el código para ayudar a prevenir la propagación del fuego, salvar la aldea y devolver la vida al bosque. Aprende los conceptos básicos de codificación y explora un ejemplo real de inteligencia artificial. Requiere la descarga del cliente.                                                                                                                                                    | A partir de Grado 2                                                    |
+| [IA para Océanos](https://www.code.org/oceans)                                                                                                      | Los estudiantes aprenderán sobre inteligencia artificial, aprendizaje automático, datos de capacitación y sesgo, todo mientras exploran cuestiones éticas y cómo la inteligencia artificial se puede utilizar para abordar problemas mundiales.                                                                                                                                                                                                                                                   | A partir de Grado 3                                                    |
+| [Programa a tu héroe (Google)](https://csfirst.withgoogle.com/c/cs-first/en/code-your-hero/code-your-hero/introduction-from-hero-to-superhero.html) | Convierte a un héroe cotidiano de tu vida o comunidad en un superhéroe al programarlo para volar sobre edificios, girar, trabajar con un compañero y ganar puntos tocando objetos en un juego. En Programa a tu héroe, muestra los poderes especiales de tu héroe y tu propia creatividad con Ciencias de la Computación primero y Scratch.                                                                                                                                                       | Grados 2-8                                                             |
+| [Consumo y producción responsables (Tynker)](https://www.tynker.com/hour-of-code/responsible-consumption-and-production)                            | Como parte del proyecto Objetivos de Desarrollo Sustentable de la ONU, este mensaje de codificación muestra proyectos que exploran problemas relacionados con el reciclaje y la reutilización. Los principiantes pueden jugar con proyectos de trabajo y los programadores avanzados pueden crear sus propios proyectos desde cero.                                                                                                                                                               | Grados 2-8                                                             |
+| [Asedio de seguridad (Vengadores de código)](https://www.codeavengers.com/impacts-of-computing/300#1.1.1)                                           | Únete a Niko y Sakura en su viaje de realidad virtual al Castillo Tubrosos. Expondrás los pobres sistemas de seguridad utilizados en el castillo y aprenderás a evitar ser víctima de una estafa.                                                                                                                                                                                                                                                                                                 | Grados 2-8                                                             |
+| [Codificadores: codifica tu propio PSA (codificadores)](https://www.codesters.com/curriculum/hour-of-code-2019/Create+a+PSA/1/)                     | Aprende los conceptos básicos de la codificación en Python mientras creas tu propio anuncio de servicio público. Elige un tema que consideres importante y diseña tu propio PSA animado o interactivo para compartir información crítica sobre cómo tener un impacto positivo en el mundo.                                                                                                                                                                                                        | A partir del Grado 6                                                   |
+| [PSA de Contaminación Plástica (Vidcode)](https://www.vidcode.com/project/end-plastic-pollution)                                                    | El problema del plástico que llena nuestros océanos sigue empeorando. Afortunadamente, puedes hacer que tu voz se escuche con código a través del PSA de Contaminación Plástica. Después de codificar un PSA de contaminación plástica usando JavaScript, ¡puedes hacer un segundo video sobre cualquier tema que te interese! Aprende a usar bucles, ondas sinusoidales y emojis personalizados para crear un proyecto único.                                                                    | A partir del Grado 6                                                   |
+| [Vidcode: Supéralo (Vidcode)](https://www.vidcode.com/project/dealwithit)                                                                           | Comienza a programar positivamente creando animaciones con mujeres líderes notables y citas que expresen su punto de vista.                                                                                                                                                                                                                                                                                                                                                                       | A partir del Grado 6                                                   |
+| [Guerreros ecológicos #Trashtag](https://make.gamefroot.com/#/learn/eco-warriors)                                                                   | Codifica tu propio juego y crea conciencia para proteger nuestro medio ambiente.                                                                                                                                                                                                                                                                                                                                                                                                                  | A partir del Grado 6                                                   |
+| [Vidcode: Crea un mapa de tu comunidad](https://www.vidcode.com/project/community-map)                                                              | ¡Programa tu propio mapa de la comunidad para recopilar y analizar datos sobre su participación!                                                                                                                                                                                                                                                                                                                                                                                                  | A partir del Grado 6                                                   |
+| [Vidcode: La ciencia del clima y la programación (Vidcode)](https://www.vidcode.com/project/hourofcode-science)                                     | Los estudiantes investigan un hecho sobre el clima de la Tierra, y se comprometen con el trabajo de científicos y artistas en respuesta al cambio climático. Luego, los estudiantes toman su investigación y planean un video para compartir sus datos. Los videos pueden tratar sobre la comprensión del cambio climático y sus efectos, la respuesta pública al cambio climático, cómo el cambio climático impacta la vida cotidiana y qué acciones puedes tomar para hacer un aporte positivo. | A partir del Grado 6                                                   |
+| [Patrulla de mosquitos (Raspberry Pi)](https://projects.raspberrypi.org/en/projects/cd-sebento-scratch-1)                                           | Crea un juego en el que un loro atrape mosquitos para proteger a las personas de la malaria.                                                                                                                                                                                                                                                                                                                                                                                                      | Grados 6-8                                                             |
+| [Ciudadanía digital: Seguridad en línea (Vidcode) (BrainPOP)](https://go.brainpop.com/vidcode/onlinesafety)                                         | Creative Coding, desarrollado con Scratch y Vidcode, combina proyectos basados ​​en bloques y texto con cientos de temas interdisciplinares. Los proyectos están estructurados para que los profesores de cualquier materia, independientemente de su experiencia previa, puedan presentar fácilmente la codificación. El enfoque basado en proyectos posiciona la codificación como un medio de autoexpresión para los estudiantes y les brinda una forma creativa de mostrar lo que saben.      | Grados 6-8                                                             |
+| [Ciudadanía digital: Seguridad en línea (Scratch) (BrainPOP)](https://go.brainpop.com/scratch/onlinesafety)                                         | Creative Coding, desarrollado con Scratch y Vidcode, combina proyectos basados ​​en bloques y texto con cientos de temas interdisciplinares. Los proyectos están estructurados para que los profesores de cualquier materia, independientemente de su experiencia previa, puedan presentar fácilmente la codificación. El enfoque basado en proyectos posiciona la codificación como un medio de autoexpresión para los estudiantes y les brinda una forma creativa de mostrar lo que saben.      | Grados 6-8                                                           | |
+| [Acueductos (Terminal Dos, Ilimitado)](https://terminaltwo.com/hourofcode/aqueducts)                                                                | ¡En este desafíos, eres el héroe que trae agua a tu pueblo! Ábrete camino a través de los niveles en esta experiencia isométrica autoguiada. Los niveles comenzarán de manera simple, exponiendo a los jugadores a los fundamentos básicos de codificación. A medida que vayas jugando, aprenderás técnicas de codificación más complejas. Luego, diseña y construye tus propios niveles y desafíos para compartir.                                                                               | Grados 6-8                                                             |
+
+
+
+<br>
+
+
+## Actividades confortables
+Estas actividades son mejores para los estudiantes que ya han desarrollado una comprensión básica de los conceptos sobre la ciencia de la computación. ¡Las actividades confortables son excelentes para los estudiantes que buscan profundizar sus conocimientos!
+
+| Actividad                                                                                                                                       | Descripción                                                                                                                                                                                                                                                                                                                                 | Grados               |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| [Energía Asequible y Limpia (Tynker) *(HTML)*](https://www.tynker.com/hour-of-code/affordable-and-clean-energy-html)                            | Como parte del proyecto Objetivos de Desarrollo Sustentable de las Naciones Unidas, este proyecto de codificación te permite crear tu propia página web para explorar la energía renovable, la eficiencia energética y el acceso a la energía. ¡Diseña tu propia página que muestre problemas de sustentabilidad!                           | A partir de Grado 2  |
+| [Energía asequible y limpia (Tynker)](https://www.tynker.com/hour-of-code/affordable-and-clean-energy)                                          | Como parte del proyecto Objetivos de Desarrollo Sustentable de la ONU, este mensaje de codificación muestra proyectos que exploran la energía renovable, la eficiencia energética y el acceso a la energía. Los lectores pueden jugar con proyectos de trabajo y los programadores avanzados pueden crear sus propios proyectos originales. | Grados 2-8           |
+| [La vida en la Tierra (Tynker)](https://www.tynker.com/hour-of-code/life-on-land)                                                               | Como parte del proyecto Objetivos de Desarrollo Sustentables de la ONU, este mensaje de codificación muestra proyectos que exploran la importancia de los bosques para el ecosistema del mundo. Los lectores pueden jugar con proyectos de trabajo y los programadores avanzados pueden crear sus propios proyectos originales.             | Grados 2-8           |
+| [Cambia el mundo (Tynker)](https://www.tynker.com/hour-of-code/change-the-world)                                                                | ¡Crea un proyecto que muestre cómo cambiarías el mundo! Si te apasiona el reciclaje o tienes una idea para lograr la paz mundial, ¡comparte tu visión con el código!                                                                                                                                                                        | Grados 2-8           |
+| [Consumo y producción responsable (JavaScript) (Tynker)](https://www.tynker.com/hour-of-code/responsible-consumption-and-production-javascript) | Como parte del proyecto Objetivos de Desarrollo Sustentable de la ONU, este mensaje de codificación muestra un breve proyecto que explora el reciclaje y la reutilización. Los lectores pueden crear su propio juego expandiendo el proyecto.                                                                                               | A partir del Grado 6 |
+| [La vida en la Tierra (Python) (Tynker)](https://www.tynker.com/hour-of-code/life-on-land-python)                                               | Como parte del proyecto Objetivos de Desarrollo Sustentable de la ONU, este proyecto de Python te permitirá crear tu propio juego de plantación de árboles.                                                                                                                                                                                 | A partir del Grado 6 |
+
+<br>
+
+
+## Actividades robóticas
+Construidos en torno a varios conjuntos de robótica o computación física, estos tutoriales son excelentes para una experiencia práctica en ciencia de la computación.
+
+| Actividad                                                                                                                                | Descripción                                                                                                                                                                                                                                                                                                                                                                                              | Grados              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| [KIBO Snowplow: Trabajos importantes en la comunidad](https://kinderlabrobotics.com/hour-of-code-the-kibo-snowplow/)                     | ¡La ciudad está cubierta de nieve, y necesitamos diseñar un quitanieves KIBO para ayudar a limpiar! Los estudiantes participarán en el proceso de diseño de ingeniería mientras diseñan, prueban y mejoran los robots quitanieves que pueden ayudar a limpiar la nieve de algodón. Los estudiantes también aprenderán más sobre varios de los trabajos importantes que hacen que una comunidad funcione. | Prelector - Grado 5 |
+| [micro: bit: programación hacia el Objetivo Global 14, La vida bajo el agua](https://microbit.org/do-your-bit/goal-14-life-below-water/) | Codifica para preservar los océanos usando micro: bit. Obtén más información sobre el Objetivo Global 14, Vida bajo el agua y aprende a codificar una luz de playa para una tortuga marina.                                                                                                                                                                                                              | Grados 2-8          |
+| [micro: bit: programación para el Objetivo Global 14, La vida en la Tierra](https://microbit.org/do-your-bit/goal-15-life-on-land/)      | Codifica para proteger la vida silvestre local utilizando micro: bit. Obtén más información sobre el Objetivo Global 15, Vida en la Tierra, y aprende a codificar un contador de especies de vida silvestre.                                                                                                                                                                                             | Grados 2-8          |
+| [Sphero se vuelve verde](https://edu.sphero.com/cwists/preview/38663-sphero-goes-greenx)                                                 | Una vez que hayas aprendido los conceptos básicos de la ciencia de la computación, lleva tu comprensión un paso más allá. En esta actividad, aprende a usar una variable de número de conteo para realizar un seguimiento del reciclaje de todas tus aulas.                                                                                                                                              | Grados 2-8          |
+
+<a id="articles"></a>
+
+# Usar Ciencia de la Computación para el bien en el mundo real
+Todos los días, las organizaciones y las personas están encontrando nuevas formas de usar la ciencia de la computación para ayudar a resolver los desafíos del mundo. Estos son algunos ejemplos del mundo real para echar un vistazo con tu clase.
+
+Intenta usar los <a href="#prompts">Ejemplo de mensajes de debate</a> con tu clase para investigar cómo estas soluciones están utilizando la Ciencia de la Computación para el bien, y si hay margen para mejorar.
+
+## Medio ambiente
+- [¿Podría una red de sensores dar a los socorristas más tiempo para controlar los incendios forestales?](https://www.fastcompany.com/90424260/could-a-network-of-sensors-give-first-responders-more-time-to-control-wildfires)
+- [El desperdicio de alimentos es un problema grave. La Inteligencia Artificial está tratando de resolverlo](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)
+
+## Salud y bienestar físico
+- [La tecnología de IA puede identificar trastornos genéticos a partir del rostro de una persona](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)
+- [Cómo una empresa emergente de IA diseñó un candidato a medicamento en solo 46 días](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)
+- [Los científicos desarrollan pantalones cortos robóticos que facilitan caminar y correr](https://www.theverge.com/2019/8/19/20811832/exosuit-shorts-running-walking-darpa-harvard-university)
+- [El primer ensayo humano con CRISPR en los EE. UU. tiene como objetivo curar la ceguera hereditaria](https://singularityhub.com/2019/07/28/first-human-crispr-trial-in-the-us-aims-to-cure-inherited-blindness/)
+- [La herramienta de IA del MIT puede predecir el cáncer de mama hasta 5 años antes, y funciona igual de bien para pacientes caucásicos y afroamericanos](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)
+
+## Seguridad Pública
+- [El Pentágono tiene un láser que puede identificar a las personas a distancia, por los latidos de su corazón](https://www.technologyreview.com/s/613891/the-pentagon-has-a-laser-that-can-identify-people-from-a-distanceby-their-heartbeat/)
+- [El ejército acelera el avance en los coches sin conductor](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?). (Más de la mitad de las bajas en el campo de batalla ocurren cuando los soldados entregan suministros en zonas de combate.).
+- [La herramienta más novedosa para ayudar a la policía a desarrollar empatía con el público: auriculares de realidad virtual](https://www.washingtonpost.com/technology/2019/09/20/latest-tool-help-police-develop-empathy-public-virtual-reality-headsets/)
+- [San Francisco dice que usará IA para reducir el sesgo al acusar a personas de delitos](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)
+- [Las primeras escuelas públicas en los EE. UU. comenzarán a utilizar el reconocimiento facial la próxima semana](https://www.buzzfeednews.com/article/daveyalba/lockport-schools-facial-recognition-pilot-aegis)
+- [La IA se está utilizando para rescatar a los niños del tráfico sexual](https://qz.com/1636498/thorn-uses-amazon-powered-ai-to-save-minors-from-sex-trafficking/)
+
+## Fabricación/Infraestructura/Robótica
+- [Los botes robot del MIT pueden autoensamblarse para construir puentes, escenarios o incluso mercados](https://techcrunch.com/2019/06/05/mits-robot-boats-can-self-assemble-to-build-bridges-stages-or-even-markets/)
+- [La tecnología futurista que altera los bienes raíces y la construcción](https://singularityhub.com/2019/05/31/the-futuristic-tech-disrupting-real-estate-and-construction/)
+- [Los robots de inspección están escalando las paredes para monitorear las condiciones de seguridad en lugares peligrosos](https://techcrunch.com/2019/05/02/inspection-robots-are-climbing-the-walls-to-monitor-safety-conditions-in-hazardous-locations/?)
+- [Los robots de Boston Dynamics se están preparando para salir del laboratorio. ¿Estará preparado el mundo para ellos?](https://www.theverge.com/2019/7/17/20697540/boston-dynamics-robots-commercial-real-world-business-spot-on-sale)
+
+## Investigación
+- [La IA está ayudando a los estudiosos a restaurar textos griegos antiguos en tabletas de piedra](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)
+- [Cómo la tecnología de punta está potenciando la arqueología antigua](https://onezero.medium.com/how-cutting-edge-tech-is-empowering-ancient-archaeology-891a37cc16cd)
+
+

@@ -2,13 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import DesignToolboxElement from './DesignToolboxElement';
 import applabMsg from '@cdo/applab/locale';
+import ThemeDropdown from './designElements/ThemeDropdown';
 
 const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
 export default class DesignToolbox extends React.Component {
   static propTypes = {
     handleDragStart: PropTypes.func.isRequired,
-    isToolboxVisible: PropTypes.bool.isRequired
+    isToolboxVisible: PropTypes.bool.isRequired,
+    handleScreenChange: PropTypes.func.isRequired,
+    themeValue: PropTypes.string.isRequired
   };
 
   render() {
@@ -27,6 +30,13 @@ export default class DesignToolbox extends React.Component {
 
     return (
       <div id="design-toolbox" style={toolboxStyle}>
+        {/* key on theme dropdown forces re-render if we get a new themeValue */}
+        <ThemeDropdown
+          initialValue={this.props.themeValue}
+          handleChange={this.props.handleScreenChange.bind(this, 'theme')}
+          description={'Theme'}
+          key={this.props.themeValue}
+        />
         <p>{applabMsg.designToolboxDescription()}</p>
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'button.png'}
@@ -98,6 +108,12 @@ export default class DesignToolbox extends React.Component {
           imageUrl={IMAGE_BASE_URL + 'slider.png'}
           desc={'Slider'}
           elementType={'SLIDER'}
+          handleDragStart={this.props.handleDragStart}
+        />
+        <DesignToolboxElement
+          imageUrl={IMAGE_BASE_URL + 'camera.png'}
+          desc={'Photo Select'}
+          elementType={'PHOTO_SELECT'}
           handleDragStart={this.props.handleDragStart}
         />
       </div>

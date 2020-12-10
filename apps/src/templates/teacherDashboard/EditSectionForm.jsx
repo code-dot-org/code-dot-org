@@ -13,6 +13,7 @@ import {
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
+  reloadAfterEditingSection,
   stageExtrasAvailable
 } from './teacherSectionsRedux';
 import {
@@ -20,6 +21,7 @@ import {
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const style = {
   root: {
@@ -34,7 +36,7 @@ const style = {
   sectionNameInput: {
     // Full-width, large happy text, lots of space.
     display: 'block',
-    width: '100%',
+    width: '98%',
     boxSizing: 'border-box',
     fontSize: 'large',
     padding: '0.5em'
@@ -53,7 +55,6 @@ const style = {
 class EditSectionForm extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    locale: PropTypes.string,
     //Whether the user is adding a brand new section or editing an existing one.
     isNewSection: PropTypes.bool,
 
@@ -63,7 +64,6 @@ class EditSectionForm extends Component {
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
-    sections: PropTypes.objectOf(sectionShape).isRequired,
     section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,
@@ -72,7 +72,8 @@ class EditSectionForm extends Component {
     stageExtrasAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
-    updateHiddenScript: PropTypes.func.isRequired
+    updateHiddenScript: PropTypes.func.isRequired,
+    localeEnglishName: PropTypes.string
   };
 
   state = {
@@ -113,6 +114,13 @@ class EditSectionForm extends Component {
     });
   };
 
+  isOauthType(loginType) {
+    return [
+      SectionLoginType.google_classroom,
+      SectionLoginType.clever
+    ].includes(loginType);
+  }
+
   render() {
     const {
       section,
@@ -125,9 +133,43 @@ class EditSectionForm extends Component {
       handleClose,
       stageExtrasAvailable,
       assignedScriptName,
-      locale,
+      localeEnglishName,
       isNewSection
     } = this.props;
+
+    /**
+    OAuth and personal email login types can not be changed.
+    Picture login type can be changed to word login type.
+    Word login type can be changed to picture login type.
+    **/
+    const changeableLoginTypes = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ];
+
+    let sectionLoginTypeTransforms = {};
+    sectionLoginTypeTransforms[SectionLoginType.email] = [
+      SectionLoginType.email
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.picture] = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.word] = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.clever] = [
+      SectionLoginType.clever
+    ];
+    sectionLoginTypeTransforms[SectionLoginType.google_classroom] = [
+      SectionLoginType.google_classroom
+    ];
+
+    const validLoginTypes = sectionLoginTypeTransforms[section.loginType];
+
+    const showLoginTypeField =
+      !isNewSection && changeableLoginTypes.includes(section.loginType);
 
     if (!section) {
       return null;
@@ -147,13 +189,21 @@ class EditSectionForm extends Component {
             validGrades={validGrades}
             disabled={isSaveInProgress}
           />
+          {showLoginTypeField && (
+            <LoginTypeField
+              value={section.loginType}
+              onChange={loginType => editSectionProperties({loginType})}
+              validLoginTypes={validLoginTypes}
+              disabled={isSaveInProgress}
+            />
+          )}
           <AssignmentField
             section={section}
             onChange={ids => editSectionProperties(ids)}
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
-            locale={locale}
+            localeEnglishName={localeEnglishName}
             isNewSection={isNewSection}
           />
           {stageExtrasAvailable(section.scriptId) && (
@@ -171,6 +221,7 @@ class EditSectionForm extends Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             onClick={handleClose}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
@@ -178,6 +229,7 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
           />
           <Button
+            __useDeprecatedTag
             className="uitest-saveButton"
             onClick={this.onSaveClick}
             text={i18n.save()}
@@ -198,30 +250,6 @@ class EditSectionForm extends Component {
     );
   }
 }
-
-export const UnconnectedEditSectionForm = EditSectionForm;
-
-export default connect(
-  state => ({
-    initialCourseId: state.teacherSections.initialCourseId,
-    initialScriptId: state.teacherSections.initialScriptId,
-    validGrades: state.teacherSections.validGrades,
-    validAssignments: state.teacherSections.validAssignments,
-    assignmentFamilies: state.teacherSections.assignmentFamilies,
-    sections: state.teacherSections.sections,
-    section: state.teacherSections.sectionBeingEdited,
-    isSaveInProgress: state.teacherSections.saveInProgress,
-    stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-    hiddenStageState: state.hiddenStage,
-    assignedScriptName: assignedScriptName(state)
-  }),
-  {
-    editSectionProperties,
-    updateHiddenScript,
-    handleSave: finishEditingSection,
-    handleClose: cancelEditingSection
-  }
-)(EditSectionForm);
 
 const FieldProps = {
   value: PropTypes.any,
@@ -272,13 +300,51 @@ GradeField.propTypes = {
   validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
+const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
+  const friendlyNameByLoginType = {
+    [SectionLoginType.picture]: i18n.loginTypePicture(),
+    [SectionLoginType.word]: i18n.loginTypeWord(),
+    [SectionLoginType.email]: i18n.loginTypePersonal(),
+    [SectionLoginType.google_classroom]: i18n.loginTypeGoogleClassroom(),
+    [SectionLoginType.clever]: i18n.loginTypeClever()
+  };
+  const descriptionByLoginType = {
+    [SectionLoginType.picture]: i18n.editSectionLoginTypePicDesc(),
+    [SectionLoginType.word]: i18n.editSectionLoginTypeWordDesc(),
+    [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc(),
+    [SectionLoginType.google_classroom]: i18n.editSectionLoginTypeGoogleDesc(),
+    [SectionLoginType.clever]: i18n.editSectionLoginTypeCleverDesc()
+  };
+  return (
+    <div>
+      <FieldName>{i18n.loginType()}</FieldName>
+      <Dropdown
+        value={value}
+        onChange={event => onChange(event.target.value)}
+        disabled={disabled}
+      >
+        {validLoginTypes.map((loginType, index) => (
+          <option key={index} value={loginType}>
+            {friendlyNameByLoginType[loginType]}
+          </option>
+        ))}
+      </Dropdown>
+      <span style={{marginLeft: 5}}>{descriptionByLoginType[value]}</span>
+    </div>
+  );
+};
+LoginTypeField.propTypes = {
+  ...FieldProps,
+  validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
 const AssignmentField = ({
   section,
   onChange,
   validAssignments,
   assignmentFamilies,
   disabled,
-  locale,
+  localeEnglishName,
   isNewSection
 }) => (
   <div>
@@ -292,7 +358,7 @@ const AssignmentField = ({
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      locale={locale}
+      localeEnglishName={localeEnglishName}
       isNewSection={isNewSection}
     />
   </div>
@@ -303,7 +369,7 @@ AssignmentField.propTypes = {
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
-  locale: PropTypes.string,
+  localeEnglishName: PropTypes.string,
   isNewSection: PropTypes.bool
 };
 
@@ -315,6 +381,7 @@ const LessonExtrasField = ({value, onChange, disabled}) => (
       <a
         href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
         target="_blank"
+        rel="noopener noreferrer"
       >
         {i18n.explainLessonExtrasLearnMore()}
       </a>
@@ -336,6 +403,7 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
       <a
         href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
         target="_blank"
+        rel="noopener noreferrer"
       >
         {i18n.explainPairProgrammingLearnMore()}
       </a>
@@ -382,3 +450,39 @@ const YesNoDropdown = ({value, onChange, disabled}) => (
   </Dropdown>
 );
 YesNoDropdown.propTypes = FieldProps;
+
+let defaultPropsFromState = state => ({
+  initialCourseId: state.teacherSections.initialCourseId,
+  initialScriptId: state.teacherSections.initialScriptId,
+  validGrades: state.teacherSections.validGrades,
+  validAssignments: state.teacherSections.validAssignments,
+  assignmentFamilies: state.teacherSections.assignmentFamilies,
+  section: state.teacherSections.sectionBeingEdited,
+  isSaveInProgress: state.teacherSections.saveInProgress,
+  stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+  hiddenStageState: state.hiddenStage,
+  assignedScriptName: assignedScriptName(state),
+  localeEnglishName: state.locales.localeEnglishName
+});
+
+export const UnconnectedEditSectionForm = EditSectionForm;
+
+export const ReloadAfterEditSectionForm = connect(
+  defaultPropsFromState,
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: reloadAfterEditingSection,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm);
+
+export default connect(
+  defaultPropsFromState,
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: finishEditingSection,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm);

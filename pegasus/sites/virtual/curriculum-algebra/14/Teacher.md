@@ -30,9 +30,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Materials, Resources, and Prep
 
-### For the Teacher
-- [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1hWgXUeeBMh_ah8GUTBshhy_5GAbiIwNj87M-8MkVJH4/)
-
 ## Getting Started
 
 

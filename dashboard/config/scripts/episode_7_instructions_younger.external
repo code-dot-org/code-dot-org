@@ -1,0 +1,27 @@
+name 'Episode 7 Instructions - younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### If/Else with Bee
+In the following levels, practice working with conditionals using activities from [Computer Science Fundamentals Course D, Lesson 11](https://curriculum.code.org/csf-19/coursed/11/).  
+
+![](https://images.code.org/36cbd81d913198e1c1d2728c88867f52-image-1588599874048.gif)
+
+### Unplugged Robot Activity - "Will It Crash?"
+Try this activity from [Computer Science Principles Unit 5, Lesson 7](https://curriculum.code.org/csp-19/unit5/7/) which consists of small programs that uses if-statements and robot commands. Trace the code and plot the movements of the robot for the 3 scenarios shown to the right of the code. If the robot is directed to move onto a black square, it “crashes” and the program ends.  If the robot doesn’t crash, then draw a triangle showing its ending location and direction. 
+
+* [Workd Example - If Statement and Robot](https://docs.google.com/document/d/1KGF-HxAP65bvQbzugKORXnzfplptWvw2eqCMntm8qS0/edit?usp=sharing) - Start here to learn how to read robot commands
+* [Activity Guide - Will it Crash?](https://docs.google.com/document/d/1wuC7wypejOSs9A8VfyECNNWuAJbSbzN4EHSrHi-sxxc/edit?usp=sharing)
+
+![](https://images.code.org/b47086b6d09485d90494715a14059d60-image-1588600312435.png)
+
+---
+*Over 13 year old? Find your practice level [here](https://studio.code.org/s/code-break/stage/7/puzzle/2).*
+
+MARKDOWN

@@ -23,7 +23,6 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 |------------------------|---------------------------|-----------------------------------|--------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
 | pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `*.js`                 |                    |                      |                    |                         |                    |                    |                    |
 | circle CI (via github) |                           |                                   |                    | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
-| hound CI (via github)  | :white_check_mark:        | :white_check_mark:                | :white_check_mark: |                                |                    |                      |                    |                         |                    |                    |                    |
 | staging build          | :white_check_mark:        |                                   | :white_check_mark: |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
 | test build             |                           |                                   |                    |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
@@ -84,7 +83,7 @@ See [the apps readme](./apps/README.md) for more details.
 
 If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
 
-1. `bundle exec rake seed:secret_pictures seed:secret_words` to seed the missing data, or
+1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words` to seed the missing data, or
 
 2. `RAILS_ENV=test bundle exec rake db:reset db:test:prepare` to recreate your local dashboard test db and reseed the data.
 
@@ -95,6 +94,7 @@ or
 
 To run a specific unit test, you can run
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
+The test name is `test_` concatenated with the name of the test listed in the test file.
 
 You can get a local coverage report with
 `COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`

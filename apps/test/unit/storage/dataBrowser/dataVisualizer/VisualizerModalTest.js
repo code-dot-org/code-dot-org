@@ -3,12 +3,21 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {UnconnectedVisualizerModal as VisualizerModal} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
+import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
+import {
+  UnconnectedVisualizerModal as VisualizerModal,
+  OperatorType
+} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
+import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
 
 const DEFAULT_PROPS = {
-  tableColumns: [],
+  tableColumns: ['column1', 'column2'],
   tableName: 'testTable',
-  tableRecords: []
+  tableRecords: [
+    '{"column1":"a","column2":123}',
+    '{"column1":"b","column2":456}',
+    '{"column1":"3","column2":0}'
+  ]
 };
 
 describe('VisualizerModal', () => {
@@ -29,7 +38,7 @@ describe('VisualizerModal', () => {
     it('clears selected columns when chart type changes', () => {
       let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
       wrapper.instance().setState({
-        chartType: 'Scatter Plot',
+        chartType: ChartType.SCATTER_PLOT,
         selectedColumn1: 'column1',
         selectedColumn2: 'column2'
       });
@@ -52,6 +61,24 @@ describe('VisualizerModal', () => {
         .find({displayName: 'Filter'})
         .simulate('change', {target: {value: 'newColumn'}});
       expect(wrapper.instance().state.filterValue).to.equal('');
+    });
+
+    it('shows numeric filters only for numeric columns', () => {
+      let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
+      wrapper.instance().setState({
+        filterColumn: '',
+        filterValue: ''
+      });
+      //non-numeric column should display only 4 dropdowns
+      wrapper
+        .find({displayName: 'Filter'})
+        .simulate('change', {target: {value: 'column1'}});
+      expect(wrapper.find(DropDownField)).to.have.lengthOf(4);
+      //switch to numeric column, expect another dropdown
+      wrapper
+        .find({displayName: 'Filter'})
+        .simulate('change', {target: {value: 'column2'}});
+      expect(wrapper.find(DropDownField)).to.have.lengthOf(5);
     });
   });
 
@@ -196,6 +223,211 @@ describe('VisualizerModal', () => {
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
       ).to.deep.equal(['"xyz"', '"def"', '"123"', 'undefined', '123', 'true']);
+    });
+  });
+
+  describe('filterRecords', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
+    });
+    it('works with numbers', () => {
+      let records = [
+        {id: 1, filterCol: 123, chartCol: 2},
+        {id: 2, filterCol: 456, chartCol: 3},
+        {id: 3, filterCol: 123, chartCol: 5},
+        {id: 4, filterCol: '456', chartCol: 7},
+        {id: 5, filterCol: 0, chartCol: 5}
+      ];
+      expect(
+        wrapper.instance().filterRecords(records, 'filterCol', '123')
+      ).to.deep.equal([records[0], records[2]]);
+
+      expect(
+        wrapper.instance().filterRecords(records, 'filterCol', '456')
+      ).to.deep.equal([records[1]]);
+
+      expect(
+        wrapper.instance().filterRecords(records, 'filterCol', '0')
+      ).to.deep.equal([records[4]]);
+    });
+    it('operators work with numbers', () => {
+      let records = [
+        {id: 1, filterCol: 123, chartCol: 2},
+        {id: 2, filterCol: 456, chartCol: 3},
+        {id: 3, filterCol: 123, chartCol: 5},
+        {id: 4, filterCol: 0, chartCol: 5}
+      ];
+      expect(
+        wrapper
+          .instance()
+          .filterRecords(records, 'filterCol', '123', OperatorType.GREATER_THAN)
+      ).to.deep.equal([records[1]]);
+
+      expect(
+        wrapper
+          .instance()
+          .filterRecords(records, 'filterCol', '456', OperatorType.LESS_THAN)
+      ).to.deep.equal([records[0], records[2], records[3]]);
+
+      expect(
+        wrapper
+          .instance()
+          .filterRecords(
+            records,
+            'filterCol',
+            '456',
+            OperatorType.LESS_THAN_OR_EQUAL
+          )
+      ).to.deep.equal([records[0], records[1], records[2], records[3]]);
+
+      expect(
+        wrapper
+          .instance()
+          .filterRecords(
+            records,
+            'filterCol',
+            '123',
+            OperatorType.GREATER_THAN_OR_EQUAL
+          )
+      ).to.deep.equal([records[0], records[1], records[2]]);
+    });
+    it('works with booleans', () => {
+      let records = [
+        {id: 1, filterCol: true, chartCol: 2},
+        {id: 2, filterCol: false, chartCol: 3},
+        {id: 3, filterCol: true, chartCol: 5},
+        {id: 4, filterCol: 'false', chartCol: 7}
+      ];
+      expect(
+        wrapper.instance().filterRecords(records, 'filterCol', 'true')
+      ).to.deep.equal([records[0], records[2]]);
+
+      expect(
+        wrapper.instance().filterRecords(records, 'filterCol', 'false')
+      ).to.deep.equal([records[1]]);
+    });
+
+    it('works with null', () => {
+      let records = [
+        {id: 1, filterCol: null, chartCol: 2},
+        {id: 2, filterCol: false, chartCol: 3},
+        {id: 3, filterCol: 0, chartCol: 5},
+        {id: 4, filterCol: null, chartCol: 7}
+      ];
+
+      expect(
+        wrapper.instance().filterRecords(records, 'filterCol', 'null')
+      ).to.deep.equal([records[0], records[3]]);
+    });
+
+    it('works with undefined', () => {
+      let records = [
+        {id: 1, chartCol: 2},
+        {id: 2, filterCol: undefined, chartCol: 3},
+        {id: 3, filterCol: 0, chartCol: 5},
+        {id: 4, filterCol: null, chartCol: 7}
+      ];
+
+      expect(
+        wrapper.instance().filterRecords(records, 'filterCol', 'undefined')
+      ).to.deep.equal([records[0], records[1]]);
+    });
+
+    describe('filtering with strings', () => {
+      it('works by exact match only', () => {
+        let records = [
+          {id: 1, filterCol: 'part', chartCol: 3},
+          {id: 2, filterCol: 'par', chartCol: 3},
+          {id: 3, filterCol: 'part', chartCol: 5},
+          {id: 4, filterCol: 'partial', chartCol: 7}
+        ];
+
+        expect(
+          wrapper.instance().filterRecords(records, 'filterCol', '"part"')
+        ).to.deep.equal([records[0], records[2]]);
+      });
+
+      it('works with empty string', () => {
+        let records = [
+          {id: 1, filterCol: '', chartCol: 3},
+          {id: 2, filterCol: 'a', chartCol: 3},
+          {id: 3, filterCol: 'b', chartCol: 5},
+          {id: 4, filterCol: '', chartCol: 7}
+        ];
+
+        expect(
+          wrapper.instance().filterRecords(records, 'filterCol', '""')
+        ).to.deep.equal([records[0], records[3]]);
+      });
+
+      it('works with strings that contain quotes', () => {
+        let records = [
+          {id: 1, filterCol: '"hello", he said', chartCol: 3},
+          {id: 2, filterCol: "'single quoted string'", chartCol: 3},
+          {id: 3, filterCol: "it's a contraction", chartCol: 5},
+          {id: 4, filterCol: '"hello", he said', chartCol: 'a'},
+          {id: 5, filterCol: "'single quoted string'", chartCol: 'b'},
+          {id: 6, filterCol: "it's a contraction", chartCol: 'c'}
+        ];
+
+        expect(
+          wrapper
+            .instance()
+            .filterRecords(records, 'filterCol', `'"hello", he said'`)
+        ).to.deep.equal([records[0], records[3]]);
+        expect(
+          wrapper
+            .instance()
+            .filterRecords(records, 'filterCol', `"'single quoted string'"`)
+        ).to.deep.equal([records[1], records[4]]);
+        expect(
+          wrapper
+            .instance()
+            .filterRecords(records, 'filterCol', `"it's a contraction"`)
+        ).to.deep.equal([records[2], records[5]]);
+      });
+    });
+  });
+
+  describe('chartOptionsToString', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
+      wrapper.instance().setState({
+        selectedColumn1: 'column1',
+        selectedColumn2: 'column2',
+        bucketSize: '2'
+      });
+    });
+    it('works for bar charts', () => {
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)
+      ).to.equal('Values: column1');
+    });
+    it('works for histograms', () => {
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.HISTOGRAM)
+      ).to.equal('Values: column1, Bucket Size: 2');
+    });
+    it('works for scatter plots', () => {
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.SCATTER_PLOT)
+      ).to.equal('X Values: column1, Y Values: column2');
+    });
+    it('works for cross tab charts', () => {
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.CROSS_TAB)
+      ).to.equal('X Values: column1, Y Values: column2');
+    });
+    it('works for filtering', () => {
+      wrapper.instance().setState({
+        filterColumn: 'column3',
+        filterValue: 'value'
+      });
+      expect(
+        wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)
+      ).to.equal('Values: column1, Filtered column3 to value');
     });
   });
 });

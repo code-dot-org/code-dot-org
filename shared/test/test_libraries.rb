@@ -7,6 +7,7 @@ class LibrariesTest < FilesApiTestBase
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'libraries', @channel_id)
     @api.ensure_aws_credentials
+    ShareFiltering.stubs(:find_failure).returns(nil)
   end
 
   def teardown
@@ -111,6 +112,18 @@ class LibrariesTest < FilesApiTestBase
     assert_equal 404, last_response.status
 
     delete_all_library_versions(filename)
+  end
+
+  def test_400_with_profanity
+    ShareFiltering.stubs(:find_failure).returns(ShareFailure.new('profanity', 'fart'))
+    filename = 'library.json'
+    file_data = '{"library":"fart"}'
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    delete_all_library_versions(filename)
+
+    # Upload a file
+    @api.put_object(filename, file_data, file_headers)
+    assert_equal 400, last_response.status
   end
 
   private

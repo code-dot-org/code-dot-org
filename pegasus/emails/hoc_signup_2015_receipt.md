@@ -1,7 +1,6 @@
 ---
 from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
 subject: "Thanks for signing up to host an Hour of Code!"
-litmus_tracking_id: "5g5lyi1a"
 ---
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
@@ -35,8 +34,8 @@ Founder, Code.org
 
 <hr/>
 <small>
-You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? [Unsubscribe](<%= unsubscribe_link %>).
+You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 </small>
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)
 

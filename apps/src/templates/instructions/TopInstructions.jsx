@@ -30,6 +30,7 @@ import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
+import {hasInstructions} from './utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -302,9 +303,11 @@ class TopInstructions extends Component {
       nextProps.height < nextProps.maxHeight &&
       !(
         nextProps.hidden ||
-        (!nextProps.shortInstructions &&
-          !nextProps.longInstructions &&
-          !nextProps.hasContainedLevels)
+        !hasInstructions(
+          nextProps.shortInstructions,
+          nextProps.longInstructions,
+          nextProps.hasContainedLevels
+        )
       )
     ) {
       this.props.setInstructionsRenderedHeight(
@@ -326,19 +329,23 @@ class TopInstructions extends Component {
   };
 
   /**
-   * Given a prospective delta, determines how much we can actually change the
-   * height (accounting for min/max) and changes height by that much.
-   * @param {number} delta
-   * @returns {number} How much we actually changed
+   * Returns the top Y coordinate of the instructions that are being resized
+   * via a call to handleHeightResize from HeightResizer.
    */
-  handleHeightResize = delta => {
-    const currentHeight = this.props.height;
+  getItemTop = () => {
+    return this.refs.topInstructions.getBoundingClientRect().top;
+  };
 
-    let newHeight = Math.max(MIN_HEIGHT, currentHeight + delta);
+  /**
+   * Given a desired height, determines how much we can actually change the
+   * height (account for min/max) and changes the height to that.
+   * @param {number} desired height
+   */
+  handleHeightResize = desiredHeight => {
+    let newHeight = Math.max(MIN_HEIGHT, desiredHeight);
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
-    return newHeight - currentHeight;
   };
 
   /**
@@ -348,12 +355,19 @@ class TopInstructions extends Component {
    */
 
   adjustMaxNeededHeight = () => {
+    const {
+      hidden,
+      shortInstructions,
+      longInstructions,
+      hasContainedLevels,
+      maxHeight,
+      setInstructionsMaxHeightNeeded
+    } = this.props;
+
     // if not showing the instructions area the max needed height should be 0
     if (
-      this.props.hidden ||
-      (!this.props.shortInstructions &&
-        !this.props.longInstructions &&
-        !this.props.hasContainedLevels)
+      hidden ||
+      !hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
     ) {
       return 0;
     }
@@ -378,8 +392,8 @@ class TopInstructions extends Component {
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
 
-    if (this.props.maxHeight !== maxNeededHeight) {
-      this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (maxHeight !== maxNeededHeight) {
+      setInstructionsMaxHeightNeeded(maxNeededHeight);
     }
     return maxNeededHeight;
   };
@@ -568,24 +582,22 @@ class TopInstructions extends Component {
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
-      this.state.tabSelected === TabType.COMMENTS &&
-      this.state.teacherViewingStudentWork;
+      this.state.tabSelected === TabType.TEACHER_ONLY ||
+      (this.state.tabSelected === TabType.COMMENTS &&
+        this.state.teacherViewingStudentWork);
 
     if (
       hidden ||
-      (!shortInstructions && !longInstructions && !hasContainedLevels)
+      !hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
     ) {
       return <div />;
     }
 
-    /* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/
     const showContainedLevelAnswer =
-      this.props.hasContainedLevels &&
-      isCSF &&
-      $('#containedLevelAnswer0').length > 0;
+      this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
     return (
-      <div style={mainStyle} className="editor-column">
+      <div style={mainStyle} className="editor-column" ref="topInstructions">
         <PaneHeader
           hasFocus={false}
           teacherOnly={teacherOnly}
@@ -648,9 +660,7 @@ class TopInstructions extends Component {
                     isRtl={this.props.isRtl}
                   />
                 )}
-              {/* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/}
-              {isCSF &&
-                this.props.viewAs === ViewType.Teacher &&
+              {this.props.viewAs === ViewType.Teacher &&
                 (this.props.teacherMarkdown || showContainedLevelAnswer) && (
                   <InstructionsTab
                     className="uitest-teacherOnlyTab"
@@ -696,16 +706,6 @@ class TopInstructions extends Component {
                     ref="instructions"
                     hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                   />
-                  {/* TODO: When we move CSD and CSP to the Teacher Only tab remove this*/}
-                  {!isCSF && this.props.viewAs === ViewType.Teacher && (
-                    <div>
-                      <ContainedLevelAnswer
-                        ref="teacherOnlyTab"
-                        hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
-                      />
-                      {this.props.teacherMarkdown && <TeacherOnlyMarkdown />}
-                    </div>
-                  )}
                 </div>
               )}
               {!this.props.hasContainedLevels &&
@@ -731,7 +731,6 @@ class TopInstructions extends Component {
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
                     />
-                    {this.props.teacherMarkdown && <TeacherOnlyMarkdown />}
                   </div>
                 )}
             </div>
@@ -758,9 +757,7 @@ class TopInstructions extends Component {
                 token={this.state.token}
               />
             )}
-            {/* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/}
-            {isCSF &&
-              this.props.viewAs === ViewType.Teacher &&
+            {this.props.viewAs === ViewType.Teacher &&
               (this.props.hasContainedLevels || this.props.teacherMarkdown) && (
                 <div>
                   {this.props.hasContainedLevels && (
@@ -777,6 +774,7 @@ class TopInstructions extends Component {
           </div>
           {!this.props.isEmbedView && (
             <HeightResizer
+              resizeItemTop={this.getItemTop}
               position={this.props.height}
               onResize={this.handleHeightResize}
             />

@@ -1,10 +1,12 @@
 name 'U4L10 CFU Functions Psuedocode'
 title 'AP Pseudocode: Functions'
 description ''
-right 'School Day'
-wrong 'Day Off'
-wrong 'Day Off <br> School Day'
-wrong 'School Day <br> Day Off'
+right 'School day'
+wrong 'Day off'
+wrong 'Day off   
+ School day'
+wrong 'School day   
+ Day off'
 
 markdown <<MARKDOWN
 ## AP Pseudocode

@@ -9,10 +9,12 @@
   / content levels.
   %script{src: webpack_asset_path('js/blockly.js')}
   %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
-  / TODO [FND-972] Only the associated level type's blocks.
-  %script{src: webpack_asset_path("js/#{js_locale}/turtle_locale.js")}
+  - associated_blocks_json = {}
+  - if level.try(:associated_blocks) && level.associated_blocks
+    %script{src: webpack_asset_path("js/#{js_locale}/#{level.associated_blocks}_locale.js")}
+    - associated_blocks_json = level.associated_blocks.to_json
 
-  %script{src: webpack_asset_path('js/levels/_content.js')}
+  %script{src: webpack_asset_path('js/levels/_content.js'), data: {associatedblocks: associated_blocks_json}}
 
 - unless data['title'].blank? || hide_header
   %h1!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'
@@ -27,6 +29,6 @@
       %p.content.content3!= render_multi_or_match_content(level.localized_property('content3'))
   / Markdown will be rendered clientside by _content.js
   - if data['markdown'].present?
-    - level_markdown = level.try(:localized_replaced_markdown, current_user) || level.localized_property('markdown')
+    - level_markdown = level.try(:localized_replaced_markdown, current_user) || level.try(:localized_property, 'markdown')
     .markdown-container{data: {markdown: level_markdown}}
   = postcontent

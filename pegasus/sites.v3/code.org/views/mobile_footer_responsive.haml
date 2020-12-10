@@ -46,8 +46,13 @@
 
     #copyright
       !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."
+      !=I18n.t(:footer_powered_by_aws)
       %br
-      Powered by Amazon Web Services
+      !=I18n.t(:footer_built_on_github)
+
+    %div.powered-by-aws
+      %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
+        %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}
 
 -else
   %footer#pagefooter#non-en

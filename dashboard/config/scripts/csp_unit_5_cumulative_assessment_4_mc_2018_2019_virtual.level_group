@@ -1,0 +1,23 @@
+name 'CSP Unit 5 Cumulative Assessment 4 MC_2018_2019_virtual'
+title 'CS Principles Unit 5 Assessment 4'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_2018_2019_virtual'
+level 'cspu5_assess4_arrayContains_2018_2019_virtual'
+level 'cspu5_assess4_mysteryMethod_2018_2019_virtual'
+level 'cspu5_assess4_mysteryReturn_2018_2019_virtual'
+level 'cspu5_assess4_playGame_2018_2019_virtual'
+
+page
+level 'cspu5_assess4_robot_2018_2019_virtual'
+level 'cspu5_assess4_mysteryResult_2018_2019_virtual'
+level 'cspu5_assess4_listOutput_2018_2019_virtual'
+level 'cspu5_assess4_shortAnswerShopping_virtual'
+
+page
+level 'cspu5_assess4_listContains_2018_2019_virtual'
+level 'cspu5_assess4_scoreToGrade_virtual'
+level 'cspu5_assess4_dataReturns_2018_2019_virtual'
+level 'cspu5_assess4_challenge_virtual'

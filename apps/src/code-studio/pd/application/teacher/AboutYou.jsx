@@ -79,11 +79,11 @@ export default class AboutYou extends LabeledFormComponent {
         <Modal.Body>
           At this time, we are only able to provide this program to teachers in
           the United States. Please visit our website for additional Code.org{' '}
-          <a href={PD_RESOURCES_URL} target="_blank">
+          <a href={PD_RESOURCES_URL} target="_blank" rel="noopener noreferrer">
             professional development resources
           </a>{' '}
           and opportunities to connect with other{' '}
-          <a href={CS_TEACHERS_URL} target="_blank">
+          <a href={CS_TEACHERS_URL} target="_blank" rel="noopener noreferrer">
             computer science teachers
           </a>
           .
@@ -118,53 +118,30 @@ export default class AboutYou extends LabeledFormComponent {
       <FormGroup>
         {nominated && (
           <p>
-            Congratulations on your nomination for a scholarship to the Code.org
-            Professional Learning Program! We will let your local partner know
-            that you’ve been nominated as they consider your application for the
-            regional scholarship or discounts they have available.
+            Congratulations on being nominated for a scholarship to cover the
+            costs of the Code.org Professional Learning Program! We will let
+            your local partner know that you’ve been nominated as they consider
+            your application for the regional scholarship or discounts they have
+            available.
           </p>
         )}
 
         <p>
-          Thanks for your interest in the Professional Learning Program! This
-          application should take 10 - 15 minutes to complete. Fields marked
-          with a <span style={{color: 'red'}}>*</span> are required.
+          Thanks for your interest in the Code.org Professional Learning
+          Program! This application should take 10 - 15 minutes to complete.
+          Fields marked with a <span style={{color: 'red'}}>*</span> are
+          required.
         </p>
-
-        {!nominated && (
-          <div>
-            <h3> When will I hear back?</h3>
-            <p>
-              In most regions, applications are accepted on a rolling basis. And
-              in most cases, our local partner will get back to you within 2
-              weeks to let you know your application status.
-            </p>
-          </div>
-        )}
-
-        {nominated && (
-          <div>
-            <h3>When will I hear back about the scholarships and discounts?</h3>
-            <p>
-              In most regions, applications are accepted on a rolling basis. And
-              in most cases, our local partner will get back to you within 2
-              weeks to let you know your application status. Even if you don’t
-              get selected for the scholarship, you will still be able to attend
-              if you are an eligible teacher and your school can pay a
-              discounted price (thanks to generous donors).
-            </p>
-          </div>
-        )}
 
         <h3>Need more information? </h3>
         <p>
           If you need more information about the program before you apply,
           please visit the{' '}
-          <a href={CSD_URL} target="_blank">
+          <a href={CSD_URL} target="_blank" rel="noopener noreferrer">
             CS Discoveries
           </a>{' '}
           and{' '}
-          <a href={CSP_URL} target="_blank">
+          <a href={CSP_URL} target="_blank" rel="noopener noreferrer">
             CS Principles
           </a>{' '}
           landing pages. For additional questions regarding the program or

@@ -1,0 +1,15 @@
+name 'csf_safety_in_my_online_neighborhood'
+editor_experiment ''
+video_key 'csf_my_online_neighborhood_2020'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# My Online Neighborhood
+
+## How do you go places safely online?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

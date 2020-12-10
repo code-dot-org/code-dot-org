@@ -107,7 +107,7 @@ Primary: &primary
   slave_compressed_protocol: 1
 
 # System variables used by read-replica RDS instance.
-Replica:
+Reporting:
   # Merge all primary variables into replica.
   <<: *primary
 
@@ -187,3 +187,10 @@ AuroraReportingReplica:
   max_execution_time: null
   # Use 8 parallel worker threads for replication.
   slave_parallel_workers: 8
+  # Relax transaction isolation for improved concurrency under load:
+  # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.html#AuroraMySQL.Reference.IsolationLevels.relaxed
+  # The `aurora_read_replica_read_committed` parameter is only present in Aurora engine 2.07 or greater,
+  # and due to this constraint it is not available in the `aurora-mysql5.7` Parameter Group.
+  # As a workaround, apply to all client sessions using `init_connect`.
+  init_connect: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED";'
+  tx_isolation: READ-COMMITTED

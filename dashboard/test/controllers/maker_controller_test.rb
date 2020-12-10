@@ -10,12 +10,14 @@ class MakerControllerTest < ActionController::TestCase
     @school = create :school
     @school_maker_high_needs = create :school, :is_maker_high_needs_school
 
-    @csd_2017 = ensure_course Script::CSD_2017
-    @csd_2018 = ensure_course Script::CSD_2018
-    @csd_2019 = ensure_course Script::CSD_2019
-    @csd6_2017 = ensure_script Script::CSD6_NAME
-    @csd6_2018 = ensure_script Script::CSD6_2018_NAME
-    @csd6_2019 = ensure_script Script::CSD6_2019_NAME
+    @csd_2017 = ensure_course 'csd-2017', '2017'
+    @csd_2018 = ensure_course 'csd-2018', '2018'
+    @csd_2019 = ensure_course 'csd-2019', '2019'
+    @csd_2020_unstable = ensure_course 'csd-2020-unstable', '2020'
+    @csd6_2017 = ensure_script Script::CSD6_NAME, '2017'
+    @csd6_2018 = ensure_script Script::CSD6_2018_NAME, '2018'
+    @csd6_2019 = ensure_script Script::CSD6_2019_NAME, '2019'
+    @csd6_2020_unstable = ensure_script 'csd6-2020-unstable', '2020', false
   end
 
   test_redirect_to_sign_in_for :home
@@ -48,7 +50,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "assignment should take precedence over progress in a script" do
     create :user_script, user: @student, script: @csd6_2019
-    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
 
     assert_equal @csd6_2017, MakerController.maker_script(@student)
   end
@@ -95,14 +97,14 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2019 if CSD-2019 is assigned" do
-    create :follower, section: create(:section, course: @csd_2019), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2019), student_user: @student
     assert_includes @student.section_courses, @csd_2019
 
     assert_equal @csd6_2019, MakerController.maker_script(@student)
   end
 
   test "shows CSD6-2018 if CSD-2018 is assigned" do
-    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
     refute_includes @student.section_courses, @csd_2017
     assert_includes @student.section_courses, @csd_2018
 
@@ -110,7 +112,7 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2017 if CSD-2017 is assigned" do
-    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
     assert_includes @student.section_courses, @csd_2017
     refute_includes @student.section_courses, @csd_2018
 
@@ -118,8 +120,8 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2018 if both CSD-2017 and CSD-2018 are assigned" do
-    create :follower, section: create(:section, course: @csd_2017), student_user: @student
-    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
     @student.reload
     assert_includes @student.section_courses, @csd_2017
     assert_includes @student.section_courses, @csd_2018
@@ -129,7 +131,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "shows CSD6-2018 if both CSD6-2017 and CSD-2018 are assigned" do
     create :follower, section: create(:section, script: @csd6_2017), student_user: @student
-    create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2018), student_user: @student
     @student.reload
     assert_includes @student.scripts, @csd6_2017
     refute_includes @student.section_courses, @csd_2017
@@ -140,7 +142,7 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2018 if both CSD-2017 and CSD6-2018 are assigned" do
-    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+    create :follower, section: create(:section, unit_group: @csd_2017), student_user: @student
     create :follower, section: create(:section, script: @csd6_2018), student_user: @student
     assert_includes @student.section_scripts, @csd6_2018
     refute_includes @student.scripts, @csd6_2017
@@ -473,15 +475,17 @@ class MakerControllerTest < ActionController::TestCase
 
   private
 
-  def ensure_script(script_name)
+  def ensure_script(script_name, version_year, is_stable=true)
     Script.find_by_name(script_name) ||
-      create(:script, name: script_name).tap do |script|
-        create :script_level, script: script
+      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_stable: is_stable).tap do |script|
+        lesson_group = create :lesson_group, script: script
+        lesson = create :lesson, script: script, lesson_group: lesson_group
+        create :script_level, script: script, lesson: lesson
       end
   end
 
-  def ensure_course(course_name)
-    Course.find_by_name(course_name) ||
-      create(:course, name: course_name)
+  def ensure_course(course_name, version_year)
+    UnitGroup.find_by_name(course_name) ||
+      create(:unit_group, name: course_name, version_year: version_year, family_name: UnitGroup::CSD)
   end
 end

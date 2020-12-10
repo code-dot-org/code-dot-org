@@ -4,6 +4,7 @@ require 'cdo/redcarpet/inline'
 class RedcarpetInlineRendererTest < Minitest::Test
   def setup
     @renderer = Redcarpet::Markdown.new(Redcarpet::Render::Inline)
+    @filter_html_renderer = Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
   end
 
   def test_base
@@ -36,12 +37,19 @@ class RedcarpetInlineRendererTest < Minitest::Test
   end
 
   def test_raw_html
-    assert_equal "some basic inline",
-      @renderer.render("<strong>some</strong> <em>basic</em> <a href=\"markdown\">inline</a>")
+    advanced_html = "<table><thead><th>Some advanced html</th><th><strong>not</strong> usually supported by markdown</th></thead></table>\n"
+    basic_html = "<strong>some</strong> <em>basic</em> <a href=\"markdown\">inline</a>"
+    mixed_html = "**mixed** <i>html</i> _and_ <strong>markdown</strong>"
 
-    assert_equal "<strong>mixed</strong> html <em>and</em> markdown",
+    # The renderer will refuse to render HTML with initialied with 'filter_html' option
+    assert_equal "some basic inline", @filter_html_renderer.render(basic_html)
+    assert_equal "<strong>mixed</strong> html <em>and</em> markdown", @filter_html_renderer.render(mixed_html)
+    assert_equal "Some advanced htmlnot usually supported by markdown", @filter_html_renderer.render(advanced_html)
+
+    # The renderer will allow html otherwise
+    assert_equal basic_html, @renderer.render(basic_html)
+    assert_equal "<strong>mixed</strong> <i>html</i> <em>and</em> <strong>markdown</strong>",
       @renderer.render("**mixed** <i>html</i> _and_ <strong>markdown</strong>")
-
-    assert_equal "", @renderer.render("<table><thead><th>Some advanced html</th><th><strong>not</strong> usually supported by markdown</th></thead></table>\n")
+    assert_equal advanced_html, @renderer.render(advanced_html)
   end
 end

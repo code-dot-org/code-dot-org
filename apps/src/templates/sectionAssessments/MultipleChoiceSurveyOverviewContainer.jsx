@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import MultipleChoiceSurveyOverviewTable, {
-  multipleChoiceSurveyDataPropType
-} from './MultipleChoiceSurveyOverviewTable';
+import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
+import {multipleChoiceDataPropType} from './assessmentDataShapes';
 import {
   getMultipleChoiceSurveyResults,
   countSubmissionsForCurrentAssessment
@@ -13,12 +12,9 @@ import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
 class MultipleChoiceSurveyOverviewContainer extends Component {
   static propTypes = {
-    multipleChoiceSurveyData: PropTypes.arrayOf(
-      multipleChoiceSurveyDataPropType
-    ),
+    multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceDataPropType),
     totalStudentCount: PropTypes.number,
-    totalStudentSubmissions: PropTypes.number,
-    openDialog: PropTypes.func.isRequired
+    totalStudentSubmissions: PropTypes.number
   };
 
   render() {
@@ -38,7 +34,6 @@ class MultipleChoiceSurveyOverviewContainer extends Component {
         {multipleChoiceSurveyData.length > 0 && (
           <MultipleChoiceSurveyOverviewTable
             multipleChoiceSurveyData={multipleChoiceSurveyData}
-            openDialog={this.props.openDialog}
           />
         )}
       </div>

@@ -1,0 +1,10 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#link-settings"}}
+  Link Settings
+
+#link-settings.in.collapse
+  .field
+    = f.label :url
+    = f.text_field :url, {style: 'width: 100%'}
+  .field
+    = f.label :link_title
+    = f.text_field :link_title, {style: 'width: 100%'}

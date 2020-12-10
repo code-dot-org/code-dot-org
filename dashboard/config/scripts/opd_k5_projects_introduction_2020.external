@@ -1,0 +1,24 @@
+name 'OPD-K5 projects introduction_2020'
+title 'Projects Introduction'
+description 'description here'
+markdown <<MARKDOWN
+# End of course projects: Where are they introduced?
+
+## <a href="https://curriculum.code.org/csf-20/coursea/" target="blank">Course A</a>
+- Lesson 12: On the Move with Events
+
+## <a href="https://curriculum.code.org/csf-20/courseb/" target="blank">Course B</a>
+- Lesson 12: A Royal Battle with Events
+
+## <a href="https://curriculum.code.org/csf-20/coursec/" target="blank">Course C</a>
+- Lesson 18: End of Course Project
+
+## <a href="https://curriculum.code.org/csf-20/coursed/" target="blank">Course D</a>
+- Lesson 19: End of Course Project
+
+## <a href="https://curriculum.code.org/csf-20/coursee/" target="blank">Course E</a>
+- Lesson 19: End of Course Project
+
+## <a href="https://curriculum.code.org/csf-20/coursef/" target="blank">Course F</a>
+- Lesson 19: End of Course Project
+MARKDOWN

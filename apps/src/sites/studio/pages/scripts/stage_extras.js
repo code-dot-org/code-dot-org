@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StageExtras from '@cdo/apps/code-studio/components/stageExtras/StageExtras';
+import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 
@@ -13,16 +13,16 @@ const store = getStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <StageExtras
-      stageNumber={config.stageNumber}
-      nextStageNumber={config.nextStageNumber}
+    <LessonExtras
+      lessonNumber={config.stageNumber}
+      nextLessonNumber={config.nextStageNumber}
       nextLevelPath={config.nextLevelPath}
       bonusLevels={config.bonusLevels}
       showProjectWidget={showProjectWidget}
       projectTypes={projectTypes}
       sectionId={viewer.section_id}
       userId={viewer.user_id}
-      showStageExtrasWarning={viewer.show_stage_extras_warning}
+      showLessonExtrasWarning={viewer.show_stage_extras_warning}
     />
   </Provider>,
   document.querySelector('#stage-extras')

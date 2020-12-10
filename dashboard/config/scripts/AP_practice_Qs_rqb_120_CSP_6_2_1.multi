@@ -1,10 +1,7 @@
 name 'AP_practice_Qs_rqb_120_CSP_6_2_1'
-wrong 'The IP Addressing System of the Internet
-'
-wrong 'Addressing system adopted by the US Postal System
-'
-right 'An iteration performed in an Algorithm
-'
+wrong 'The IP Addressing System of the Internet'
+wrong 'Addressing system adopted by the US Postal System'
+right 'An iteration performed in an Algorithm'
 wrong 'The Domain Name System of the Internet'
 markdown <<MARKDOWN
 A hierarchy is a classification of items in different levels relative to each other. Which ONE of the following examples does NOT function in a hierarchical classification or arrangement?

@@ -4,26 +4,26 @@ en:
     script:
       name:
         Report Script:
-          stages:
+          lessons:
             Report Stage 1:
               name: report-stage-1
             Report Stage 2:
               name: report-stage-2
         Milestone Script:
-          stages:
+          lessons:
             Milestone Stage 1:
               name: milestone-stage-1
             Milestone Stage 2:
               name: milestone-stage-2
         laurel:
           title: custom-script-laurel
-          stages:
+          lessons:
             Laurel Stage 1:
               name: laurel-stage-1
             Laurel Stage 2:
               name: laurel-stage-2
         text-response-script:
-          stages:
+          lessons:
             First Stage:
               name: First Stage
             Second Stage:

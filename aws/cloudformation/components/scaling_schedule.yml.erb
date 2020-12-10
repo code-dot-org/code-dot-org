@@ -1,0 +1,24 @@
+  ClassroomScaleUp:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: !Ref Frontends
+      MinSize: 4
+      Recurrence: <%= Cdo::Cron.weekdays_at '4am' %>
+  ClassroomScaleDown:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: !Ref Frontends
+      MinSize: 3
+      Recurrence: <%= Cdo::Cron.weekdays_at '1pm' %>
+  WeekendScaleDown:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: !Ref Frontends
+      MinSize: 2
+      Recurrence: <%= Cdo::Cron.weekly_at '8pm Friday' %>
+  WeekendScaleUp:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: !Ref Frontends
+      MinSize: 3
+      Recurrence: <%= Cdo::Cron.weekly_at '4am Monday', time_zone: 'London' %>

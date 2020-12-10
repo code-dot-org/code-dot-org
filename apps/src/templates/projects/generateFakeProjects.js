@@ -113,3 +113,20 @@ export const stubFakeUnfeaturedProjectData = [
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00'
   }
 ];
+
+export const stubFakeProjectLibraryData = [
+  {
+    name: 'Project w/ a Library',
+    type: 'applab',
+    channel: 'abc123',
+    publishedAt: '2015-12-31T23:59:59.999-08:00',
+    libraryName: 'My Cool Library'
+  },
+  {
+    name: 'Another Project Library',
+    type: 'applab',
+    channel: 'def456',
+    publishedAt: '2016-10-31T23:59:59.999-08:00',
+    libraryName: 'My Other Library'
+  }
+];

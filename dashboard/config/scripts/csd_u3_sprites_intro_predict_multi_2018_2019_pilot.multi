@@ -1,12 +1,12 @@
 name 'CSD U3 Sprites intro predict multi_2018_2019_pilot'
-question 'When run, where will the sprite <code>mySprite</code> be located?'
+editor_experiment ''
+question 'When run, where will the sprite `mySprite` be located?'
 
 layout 'wrap'
-wrong '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
-right '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
-wrong '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'
-wrong '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'
 
+right '![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)'
+wrong '![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)'
+wrong '![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)'
+wrong '![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)'
 markdown <<MARKDOWN
-
 MARKDOWN

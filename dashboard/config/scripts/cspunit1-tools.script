@@ -1,5 +1,6 @@
 professional_learning_course 'CS Principles Support'
-login_required 'true'
+login_required true
 
-stage 'netsim'
+lesson 'netsim', display_name: 'netsim'
 level 'plc csp1 intro to tools'
+

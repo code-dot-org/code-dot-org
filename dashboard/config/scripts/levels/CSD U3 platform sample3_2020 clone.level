@@ -1,0 +1,62 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2020-05-14T16:50:16.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "start_blocks": "var score = 0;\r\nvar lives = 3;\r\n\r\nvar platform1 = createSprite(randomNumber(50, 350), 350);\r\nplatform1.setAnimation(\"platform\");\r\nplatform1.velocityY = 0.5;\r\nvar platform2 = createSprite(randomNumber(50, 350), 200);\r\nplatform2.setAnimation(\"platform\");\r\nplatform2.velocityY = 0.5;\r\nvar platform3 = createSprite(randomNumber(50, 350), 50);\r\nplatform3.setAnimation(\"platform\");\r\nplatform3.velocityY = 0.5;\r\n\r\n\r\nvar carrot1 = createSprite(randomNumber(150,250), randomNumber(-10, -310));\r\ncarrot1.setAnimation(\"carrot\");\r\ncarrot1.velocityY = 2;\r\ncarrot1.velocityX = randomNumber(-1,1);\r\ncarrot1.rotationSpeed = randomNumber(10,20);\r\nvar carrot2 = createSprite(randomNumber(150,250), randomNumber(-10, -310));\r\ncarrot2.setAnimation(\"carrot\");\r\ncarrot2.velocityY = 2;\r\ncarrot2.velocityX = randomNumber(-1,1);\r\ncarrot2.rotationSpeed = randomNumber(10,20);\r\nvar carrot3 = createSprite(randomNumber(150,250), randomNumber(-10, -310));\r\ncarrot3.setAnimation(\"carrot\");\r\ncarrot3.velocityY = 2;\r\ncarrot3.velocityX = randomNumber(-1,1);\r\ncarrot3.rotationSpeed = randomNumber(-20,-10);\r\nvar carrot4 = createSprite(randomNumber(150,250), randomNumber(-10, -310));\r\ncarrot4.setAnimation(\"carrot\");\r\ncarrot4.velocityY = 2;\r\ncarrot4.velocityX = randomNumber(-1,1);\r\ncarrot4.rotationSpeed = randomNumber(-20,-10);\r\n\r\n\r\nvar bunny = createSprite(platform2.x,100);\r\nbunny.setAnimation(\"bunnyRight\");\r\nbunny.velocityY = 0.5;\r\n\r\n\r\nfunction draw() {\r\n  if (score < 25) {\r\n    background1();\r\n  } else if (score < 50) {\r\n    background2();\r\n  } else {\r\n    background3();\r\n  }\r\n  resetPlatforms();\r\n  resetCarrots();\r\n  carrotInteractions();\r\n  bunnyScore();\r\n  bunnyFall();\r\n  displayScore();\r\n  displayLives();\r\n  gravity();\r\n  bunnyMoves();\r\n  drawSprites();\r\n}\r\n\r\nfunction bunnyScore() {\r\n  if (bunny.isTouching(carrot1)) {\r\n    score = score + 1;\r\n    carrot1.x = randomNumber(150,250);\r\n    carrot1.y = randomNumber(-10, -110);\r\n    carrot1.velocityY = 1;\r\n    carrot1.velocityX = randomNumber(-2,2);\r\n  }\r\n  if (bunny.isTouching(carrot2)) {\r\n    score = score + 1;\r\n    carrot2.x = randomNumber(150,250);\r\n    carrot2.y = randomNumber(-10, -110);\r\n    carrot2.velocityY = 1;\r\n    carrot2.velocityX = randomNumber(-2,2);\r\n  }\r\n  if (bunny.isTouching(carrot3)) {\r\n    score = score + 1;\r\n    carrot3.x = randomNumber(150,250);\r\n    carrot3.y = randomNumber(-10, -110);\r\n    carrot3.velocityY = 1;\r\n    carrot3.velocityX = randomNumber(-2,2);\r\n  }\r\n}\r\n\r\nfunction bunnyFall() {\r\n  if (bunny.y > 500) {\r\n    if (lives <= 1) {\r\n      lives = 0;\r\n      textSize(30);\r\n      text(\"GAME OVER\", 100, 200, 200, 30);\r\n    } else {\r\n      lives = lives - 1;\r\n      bunny.x = 200;\r\n      bunny.y = -100;\r\n      bunny.velocityY = 1;\r\n    }\r\n  }\r\n}\r\nfunction bunnyMoves() {\r\n  \r\n  bunny.collide(platform1);\r\n  bunny.collide(platform2);\r\n  bunny.collide(platform3);\r\n  \r\n\r\n  if (keyWentDown(\"space\")) {\r\n    bunny.velocityY = -7;\r\n  }\r\n  if (keyDown(\"up\") ){\r\n    bunny.velocityY = -7;\r\n  }\r\n\r\n  if (keyDown(\"left\")) {\r\n    bunny.setAnimation(\"bunnyLeft\");\r\n    bunny.x = bunny.x - 5;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    bunny.setAnimation(\"bunnyRight\");\r\n    bunny.x = bunny.x + 5;\r\n  }\r\n}\r\n\r\nfunction resetPlatforms() {\r\n  if (platform1.y > 425) {\r\n    platform1.y = -25;\r\n    platform1.x = randomNumber(50,350);\r\n  }\r\n  if (platform2.y > 425) {\r\n    platform2.y = -25;\r\n    platform2.x = randomNumber(50,350);\r\n  }\r\n  if (platform3.y > 425) {\r\n    platform3.y = -25;\r\n    platform3.x = randomNumber(50,350);\r\n  }\r\n}\r\n\r\nfunction resetCarrots() {\r\n  if (carrot1.y > 410) {\r\n    carrot1.x = randomNumber(100,100);\r\n    carrot1.y = randomNumber(-10, -110);\r\n    carrot1.velocityY = 1;\r\n    carrot1.velocityX = randomNumber(-2,2);\r\n  }\r\n  if (carrot2.y > 410) {\r\n    carrot2.x = randomNumber(100,100);\r\n    carrot2.y = randomNumber(-10, -110);\r\n    carrot2.velocityY = 1;\r\n    carrot2.velocityX = randomNumber(-2,2);\r\n  }\r\n  if (carrot3.y > 410) {\r\n    carrot3.x = randomNumber(100,100);\r\n    carrot3.y = randomNumber(-10, -110);\r\n    carrot3.velocityY = 1;\r\n    carrot3.velocityX = randomNumber(-2,2);\r\n  }\r\n}\r\n\r\nfunction carrotInteractions() {\r\n  if (carrot1.isTouching(platform1)) {\r\n    carrot1.velocityX = randomNumber(-1,1);\r\n    carrot1.velocityY = carrot1.velocityY * 0.7;\r\n    carrot1.rotationSpeed = carrot1.rotationSpeed * -1;\r\n  }\r\n  if (carrot1.isTouching(platform2)) {\r\n    carrot1.velocityX = randomNumber(-1,1);\r\n    carrot1.velocityY = carrot1.velocityY * 0.7;\r\n    carrot1.rotationSpeed = carrot1.rotationSpeed * -1;\r\n  }\r\n  if (carrot1.isTouching(platform3)) {\r\n    carrot1.velocityX = randomNumber(-1,1);\r\n    carrot1.velocityY = carrot1.velocityY * 0.7;\r\n    carrot1.rotationSpeed = carrot1.rotationSpeed * -1;\r\n  }\r\n  if (carrot2.isTouching(platform1)) {\r\n    carrot1.velocityX = randomNumber(-1,1);\r\n    carrot2.velocityY = carrot2.velocityY * 0.7;\r\n    carrot2.rotationSpeed = carrot2.rotationSpeed * -1;\r\n  }\r\n  if (carrot2.isTouching(platform2)) {\r\n    carrot2.velocityX = randomNumber(-1,1);\r\n    carrot2.velocityY = carrot2.velocityY * 0.7;\r\n    carrot2.rotationSpeed = carrot2.rotationSpeed * -1;\r\n  }\r\n  if (carrot2.isTouching(platform3)) {\r\n    carrot2.velocityX = randomNumber(-1,1);\r\n    carrot2.velocityY = carrot2.velocityY * 0.7;\r\n    carrot2.rotationSpeed = carrot2.rotationSpeed * -1;\r\n  }\r\n  if (carrot3.isTouching(platform1)) {\r\n    carrot3.velocityX = randomNumber(-1,1);\r\n    carrot3.velocityY = carrot3.velocityY * 0.7;\r\n    carrot3.rotationSpeed = carrot3.rotationSpeed * -1;\r\n  }\r\n  if (carrot3.isTouching(platform2)) {\r\n    carrot3.velocityX = randomNumber(-1,1);\r\n    carrot3.velocityY = carrot3.velocityY * 0.7;\r\n    carrot3.rotationSpeed = carrot3.rotationSpeed * -1;\r\n  }\r\n  if (carrot3.isTouching(platform3)) {\r\n    carrot3.velocityX = randomNumber(-1,1);\r\n    carrot3.velocityY = carrot3.velocityY * 0.7;\r\n    carrot3.rotationSpeed = carrot3.rotationSpeed * -1;\r\n  }\r\n  carrot1.bounceOff(platform1);\r\n  carrot1.bounceOff(platform2);\r\n  carrot1.bounceOff(platform3);\r\n  carrot2.bounceOff(platform1);\r\n  carrot2.bounceOff(platform2);\r\n  carrot2.bounceOff(platform3);\r\n  carrot3.bounceOff(platform1);\r\n  carrot3.bounceOff(platform2);\r\n  carrot3.bounceOff(platform3);\r\n}\r\n\r\nfunction gravity() {\r\n  carrot1.velocityY = carrot1.velocityY + 0.2;\r\n  carrot2.velocityY = carrot2.velocityY + 0.2;\r\n  carrot3.velocityY = carrot3.velocityY + 0.2;\r\n  bunny.velocityY = bunny.velocityY + 0.1;\r\n}\r\n\r\nfunction background1() {\r\n  background(\"skyblue\");\r\n  fill(\"white\");\r\n  noStroke();\r\n  ellipse(95, 105, 90, 100);\r\n  ellipse(105, 125, 90, 100);\r\n  ellipse(75, 120, 100, 70);\r\n  ellipse(125, 115, 100, 70);\r\n  fill(\"yellow\");\r\n  ellipse(340, 50, 60, 60);\r\n  fill(\"black\");\r\n  \r\n}\r\n\r\nfunction background2() {\r\n  background(\"darkBlue\");\r\n  noStroke();\r\n  fill(\"yellow\");\r\n  ellipse(340, 50, 60, 60);\r\n  fill(\"darkBlue\");\r\n  ellipse(320, 30, 60, 60);\r\n  stroke(\"yellow\");\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 2, 2);\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 2, 2);\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 2, 2);\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 2, 2);\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 2, 2);\r\n\r\n  noStroke();\r\n  fill(\"white\");\r\n}\r\n\r\nfunction background3() {\r\n  background(\"black\");\r\n  fill(0,0,255, randomNumber(100,250));\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 20, 20);\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 20, 20);\r\n  fill(200,0,255, randomNumber(100,250));\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 20, 20);\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 20, 20);\r\n  ellipse(randomNumber(0, 400), randomNumber(0, 400), 20, 20);\r\n\r\n  \r\n  fill(0,255,0, randomNumber(100,250));\r\n  \r\n}\r\n\r\nfunction displayScore() {\r\n  textSize(20);\r\n  text(\"Score:\", 10, 10, 50, 20);\r\n  text(score, 80, 10, 30, 20);\r\n}\r\n\r\nfunction displayLives() {\r\n  textSize(20);\r\n  text(\"Lives:\", 320, 10, 50, 20);\r\n  text(lives, 380, 10, 30, 20);\r\n}\r\n",
+    "long_instructions": "# Bunny Jumper\r\n\r\nHere's another example of a jumper.  In this one, the items get faster when they fall, and bounce off the platforms.\r\n\r\nChoose one or more of the following changes and add them to your game.\r\n* Make your player's animation change direction when the player changes direction.\r\n* Add another background and make it appear when the score gets even higher.\r\n* Make your items interact with the platforms in some way.\r\n\r\n",
+    "start_animations": "{\r\n  \"orderedKeys\": [\"bunnyLeft\", \"bunnyRight\", \"carrot\", \"platform\"],\r\n  \"propsByKey\": {\r\n    \"bunnyLeft\": {\r\n      \"name\": \"bunnyLeft\",\r\n      \"sourceUrl\": \"https://images.code.org/33064fe9b3899c9b0dfd0616a32706ee-image-1475478186181.png\",\r\n      \"frameSize\": {\"x\":40, \"y\": 67},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"bunnyRight\": {\r\n      \"name\": \"bunnyRight\",\r\n      \"sourceUrl\": \"https://images.code.org/c56605216886c0c318b2470438b03666-image-1475478186182.png\",\r\n      \"frameSize\": {\"x\":40, \"y\": 67},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"carrot\": {\r\n      \"name\": \"carrot\",\r\n      \"sourceUrl\": \"https://images.code.org/160430b9b29cc80ab667174045a91c15-image-1475478186183.png\",\r\n      \"frameSize\": {\"x\":20, \"y\": 18},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    },\r\n    \"platform\": {\r\n      \"name\": \"platform\",\r\n      \"sourceUrl\": \"https://images.code.org/4282bf2423f3815b66731ede0c6386f9-image-1475478186183.png\",\r\n      \"frameSize\": {\"x\":100, \"y\": 25},\r\n      \"frameCount\": 1,\r\n      \"frameDelay\": 2,\r\n      \"looping\": false\r\n    }\r\n  }\r\n}",
+    "all_animations_single_frame": "false",
+    "instructions_important": "false",
+    "start_in_animation_tab": "false",
+    "show_debug_watch": "true",
+    "display_name": "Bunny Jumper",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 20916,
+    "name_suffix": "_2020",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "libraries_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 17:25:50 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-14 16:50:35 +0000\",\"changed\":[\"embed\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Gamelab>

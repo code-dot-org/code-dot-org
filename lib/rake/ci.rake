@@ -99,7 +99,20 @@ end
 
 desc 'Update the server as part of continuous integration.'
 task :ci do
-  ChatClient.wrap('CI build', backtrace: true) {Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke}
+  # In the test environment, we want to build everything with tests. In most
+  # other environments, we want to do a full build including server
+  # redeployment, but in some environments (like the i18n server) we just want
+  # to run the build with no other actions.
+  desired_task =
+    if ENV['CI_ONLY_BUILD']
+      'ci:build'
+    elsif rack_env?(:test)
+      'ci:test'
+    else
+      'ci:all'
+    end
+
+  ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
 end
 
 # Returns true if upgrade succeeded, false if failed.

@@ -7,4 +7,10 @@ class ParentMailer < ActionMailer::Base
 
     mail to: parent_email, subject: I18n.t('parent_mailer.student_associated_subject')
   end
+
+  def parent_email_added_to_student_account(parent_email, student)
+    @student = student
+
+    mail to: parent_email, subject: I18n.t('parent_mailer.parent_email_added_subject')
+  end
 end

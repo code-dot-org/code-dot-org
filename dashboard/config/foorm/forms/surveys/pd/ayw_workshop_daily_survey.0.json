@@ -1,0 +1,24 @@
+{
+ "published": true,
+ "pages": [
+  {
+   "name": "preamable_page",
+   "elements": [
+    {
+     "type": "html",
+     "name": "variables_for_testing",
+     "visible": false,
+     "titleLocation": "hidden",
+     "html": "<h2 style=\"background-color: #ffff00\"> Variable Test</h2>\n<ul>\n<li><span style=\"background-color: #ffff00;\">workshop_course: {workshop_course}</span></li>\n<li><span style=\"background-color: #ffff00;\">workshop_subject: {workshop_subject}</span></li>\n<li><span style=\"background-color: #ffff00;\">regional_partner_name: {regional_partner_name}</span></li>\n<li><span style=\"background-color: #ffff00;\">is_virtual: {is_virtual}</span></li>\n<li><span style=\"background-color: #ffff00;\">is_friday_institute: {is_friday_institute}</span></li>\n</ul>"
+   },
+    {
+        "type":"library_item",
+        "library_name":"surveys/pd/workshop_elements",
+        "library_version": 0,
+        "name":"feel_prepared"
+      }
+
+    ]
+  }
+ ]
+}

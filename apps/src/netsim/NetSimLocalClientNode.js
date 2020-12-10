@@ -324,19 +324,24 @@ NetSimLocalClientNode.prototype.disconnectRemote = function(onComplete) {
   this.cleanUpBeforeDestroyingWire_();
 
   // destroy wire on API
-  wire.destroy(
-    function(err) {
-      // We're not going to stop if an error occurred here; the error might
-      // just be that the wire was already cleaned up by another node.
-      // As long as we make a good-faith disconnect effort, the cleanup system
-      // will correct any mistakes and we won't lock up our client trying to
-      // re-disconnect.
-      if (err) {
-        logger.info('Error while disconnecting: ' + err.message);
-      }
-      onComplete(null);
-    }.bind(this)
-  );
+  if (wire) {
+    wire.destroy(
+      function(err) {
+        // We're not going to stop if an error occurred here; the error might
+        // just be that the wire was already cleaned up by another node.
+        // As long as we make a good-faith disconnect effort, the cleanup system
+        // will correct any mistakes and we won't lock up our client trying to
+        // re-disconnect.
+        if (err) {
+          logger.info('Error while disconnecting: ' + err.message);
+        }
+        onComplete(null);
+      }.bind(this)
+    );
+  } else {
+    // Wire may have been cleaned up by another node. Invoke onComplete anyways.
+    onComplete(null);
+  }
 };
 
 /**

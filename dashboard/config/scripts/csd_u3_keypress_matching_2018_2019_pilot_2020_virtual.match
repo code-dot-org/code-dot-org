@@ -1,0 +1,10 @@
+name 'CSD U3 Keypress Matching_2018_2019_pilot_2020_virtual'
+title 'Matching: Responding to Keypresses'
+description 'Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.'
+question 'Is true only once when the key is pressed.'
+answer 'keyWentDown()'
+question 'Is true only once when the key is released.'
+answer 'keyWentUp()'
+question 'Is true the whole time the key is pressed or held down.'
+answer 'keyDown()'
+

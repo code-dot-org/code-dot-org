@@ -23,16 +23,6 @@ module Redcarpet
           args.first
         end
       end
-
-      # Disallow HTML entirely
-      %w(
-        block_html
-        raw_html
-      ).each do |method|
-        define_method method do |*_args|
-          ""
-        end
-      end
     end
   end
 end

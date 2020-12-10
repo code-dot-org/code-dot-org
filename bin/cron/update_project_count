@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-#
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 # This script analyzes the number of standalone projects we have in our database and
 # saves that value.
 #
@@ -8,7 +10,6 @@
 
 require 'sequel'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require 'cdo/only_one'
 require 'cdo/properties'
 require src_dir 'database'
 require_relative '../../deployment.rb'
@@ -20,9 +21,9 @@ MAX_EXECUTION_TIME = 1_200_000
 MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 
 # Connection to read from Pegasus reporting database.
-PEGASUS_REPORTING_DB_READER = sequel_connect(
-  CDO.pegasus_reporting_db_reader,
-  CDO.pegasus_reporting_db_reader,
+PEGASUS_DB_READER = sequel_connect(
+  CDO.pegasus_db_reader,
+  CDO.pegasus_db_reader,
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 
@@ -33,7 +34,7 @@ NUMBER_PROJECTS_SIGNIFICANT_DECREASE = 10_000
 
 def main
   # Get the current amount of projects.
-  project_count = PEGASUS_REPORTING_DB_READER[:storage_apps].where(standalone: true).count
+  project_count = PEGASUS_DB_READER[:storage_apps].where(standalone: true).count
 
   existing_project_count = Properties.get(:metrics)['project_count'] || 0
   if (existing_project_count - project_count) >= NUMBER_PROJECTS_SIGNIFICANT_DECREASE

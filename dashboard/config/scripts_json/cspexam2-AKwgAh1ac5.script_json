@@ -1,0 +1,110 @@
+{
+  "script": {
+    "name": "cspexam2-AKwgAh1ac5",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "cspexam2-AKwgAh1ac5"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "cspexam2-AKwgAh1ac5"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CS Principles Culminating Assessment Part 2",
+      "name": "CS Principles Culminating Assessment Part 2",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Culminating Assessment Part 2",
+        "lesson_group.key": "",
+        "script.name": "cspexam2-AKwgAh1ac5"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP_Final_instructions"
+        ],
+        "lesson.key": "CS Principles Culminating Assessment Part 2",
+        "lesson_group.key": "",
+        "script.name": "cspexam2-AKwgAh1ac5"
+      },
+      "level_keys": [
+        "CSP_Final_instructions"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Part 2 - CSP Culminating Assessment"
+        ],
+        "lesson.key": "CS Principles Culminating Assessment Part 2",
+        "lesson_group.key": "",
+        "script.name": "cspexam2-AKwgAh1ac5"
+      },
+      "level_keys": [
+        "Part 2 - CSP Culminating Assessment"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP_Final_instructions",
+        "script_level.level_keys": [
+          "CSP_Final_instructions"
+        ],
+        "lesson.key": "CS Principles Culminating Assessment Part 2",
+        "lesson_group.key": "",
+        "script.name": "cspexam2-AKwgAh1ac5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Part 2 - CSP Culminating Assessment",
+        "script_level.level_keys": [
+          "Part 2 - CSP Culminating Assessment"
+        ],
+        "lesson.key": "CS Principles Culminating Assessment Part 2",
+        "lesson_group.key": "",
+        "script.name": "cspexam2-AKwgAh1ac5"
+      }
+    }
+  ]
+}

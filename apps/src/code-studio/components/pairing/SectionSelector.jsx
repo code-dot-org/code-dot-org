@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {studentsShape} from './types';
 import i18n from '@cdo/locale';
+import {sortSectionsList} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux.js';
 
 /**
  * Section selector component, for students in multiple sections.
@@ -24,6 +25,7 @@ export default class SectionSelector extends React.Component {
       return null;
     }
 
+    const sections = sortSectionsList(this.props.sections);
     return (
       <select
         name="sectionId"
@@ -33,7 +35,7 @@ export default class SectionSelector extends React.Component {
         <option key="blank" value="">
           {i18n.chooseSection()}
         </option>
-        {this.props.sections.map(section => (
+        {sections.map(section => (
           <option key={section.id} value={section.id}>
             {section.name}
           </option>
