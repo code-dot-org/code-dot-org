@@ -3,6 +3,8 @@ require 'test_helper'
 class SchoolTest < ActiveSupport::TestCase
   include ActiveSupport::Testing::Stream
 
+  self.use_transactional_test_case = true
+
   # merge_from_csv dry run tests require a clean schools table.
   setup_all do
     School.delete_all
