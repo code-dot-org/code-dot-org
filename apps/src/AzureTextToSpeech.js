@@ -285,7 +285,7 @@ export default class AzureTextToSpeech {
    * @param {Object} opts
    * @param {ArrayBuffer} opts.bytes Bytes representing the sound to be played.
    * @param {Array<string>} opts.profaneWords Profanity present in requested TTS text.
-   * @param {string} opts.error Any error during the TTS request.
+   * @param {Error} opts.error Any error during the TTS request.
    * @returns {SoundResponse}
    * @private
    */
