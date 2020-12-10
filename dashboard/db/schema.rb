@@ -1291,7 +1291,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_073557) do
     t.string "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "course_version_id"
+    t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
