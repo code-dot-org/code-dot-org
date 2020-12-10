@@ -33,9 +33,10 @@ export default function(app, levels, options) {
   // Levelbuilder-built levels specify a levelId of "custom" while providing a
   // full level definition, ignoring the base "custom" level provided in the
   // corresponding levels.js file. Legacy levels just override the skin and/or
-  // the video_key of the levels defind in levels.js. Fortunately, there aren't
+  // the video_key of the levels defined in levels.js. Fortunately, there aren't
   // any levels (as of this comment) that are defined half in levels.js and
   // half on the server.
+
   if (options.level && options.level.levelId) {
     var level = levels[options.level.levelId];
     options.level = options.level || {};

@@ -5,6 +5,7 @@ var blockUtils = require('../block_utils');
  */
 module.exports = {
   example1: {
+    skinId: 'calc',
     solutionBlocks: blockUtils.calcBlockXml('functional_times', [
       blockUtils.calcBlockXml('functional_plus', [1, 2]),
       blockUtils.calcBlockXml('functional_plus', [3, 4])

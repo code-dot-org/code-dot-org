@@ -32,6 +32,7 @@ module.exports = {
   // Formerly Page 2
 
   '2_1': {
+    skinId: 'birds',
     toolbox: toolbox(2, 1),
     ideal: 4,
     requiredBlocks: [[reqBlocks.MOVE_FORWARD]],
@@ -72,6 +73,7 @@ module.exports = {
     startBlocks: startBlocks(2, 1)
   },
   '2_2': {
+    skinId: 'birds',
     instructionsImportant: true,
     toolbox: toolbox(2, 2),
     ideal: 3,
@@ -90,6 +92,7 @@ module.exports = {
     startBlocks: startBlocks(2, 2)
   },
   '2_2_5': {
+    skinId: 'birds',
     toolbox: toolbox(2, 3),
     ideal: 5,
     requiredBlocks: [[reqBlocks.MOVE_FORWARD], [reqBlocks.TURN_RIGHT]],
@@ -107,6 +110,7 @@ module.exports = {
     startBlocks: startBlocks(2, 3)
   },
   '2_3': {
+    skinId: 'birds',
     toolbox: toolbox(2, 3),
     ideal: 6,
     requiredBlocks: [
@@ -128,6 +132,7 @@ module.exports = {
     startBlocks: startBlocks(2, 3)
   },
   '2_4': {
+    skinId: 'birds',
     toolbox: toolbox(2, 4),
     ideal: 9,
     requiredBlocks: [
@@ -148,6 +153,7 @@ module.exports = {
     ]
   },
   '2_5': {
+    skinId: 'birds',
     toolbox: toolbox(2, 5),
     ideal: 3,
     requiredBlocks: [[reqBlocks.MOVE_FORWARD], [reqBlocks.FOR_LOOP]],
@@ -164,6 +170,7 @@ module.exports = {
     ]
   },
   '2_6': {
+    skinId: 'birds',
     toolbox: toolbox(2, 6),
     ideal: 4,
     requiredBlocks: [
@@ -184,6 +191,7 @@ module.exports = {
     ]
   },
   '2_7': {
+    skinId: 'birds',
     toolbox: toolbox(2, 7),
     ideal: 6,
     requiredBlocks: [
@@ -204,6 +212,7 @@ module.exports = {
     ]
   },
   '2_8': {
+    skinId: 'birds',
     toolbox: toolbox(2, 8),
     ideal: 5,
     requiredBlocks: [
@@ -227,6 +236,7 @@ module.exports = {
     tooFewBlocksMsg: mazeMsg.repeatCarefullyError()
   },
   '2_9': {
+    skinId: 'birds',
     toolbox: toolbox(2, 9),
     ideal: 3,
     requiredBlocks: [[reqBlocks.MOVE_FORWARD], [reqBlocks.WHILE_LOOP]],
@@ -243,6 +253,7 @@ module.exports = {
     ]
   },
   '2_10': {
+    skinId: 'birds',
     toolbox: toolbox(2, 10),
     ideal: 5,
     requiredBlocks: [
@@ -263,6 +274,7 @@ module.exports = {
     ]
   },
   '2_11': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 11),
     ideal: 6,
     scale: {
@@ -287,6 +299,7 @@ module.exports = {
     ]
   },
   '2_12': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 12),
     ideal: 6,
     scale: {
@@ -311,6 +324,7 @@ module.exports = {
     ]
   },
   '2_13': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 13),
     ideal: 5,
     requiredBlocks: [[reqBlocks.TURN_LEFT]],
@@ -328,6 +342,7 @@ module.exports = {
     startBlocks: startBlocks(2, 13)
   },
   '2_14': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 14),
     ideal: 5,
     scale: {
@@ -353,6 +368,7 @@ module.exports = {
     levelIncompleteError: mazeMsg.ifInRepeatError()
   },
   '2_15': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 15),
     ideal: 5,
     scale: {
@@ -377,6 +393,7 @@ module.exports = {
     ]
   },
   '2_16': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 16),
     ideal: 5,
     scale: {
@@ -401,6 +418,7 @@ module.exports = {
     ]
   },
   '2_17': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 17),
     ideal: 5,
     scale: {
@@ -425,6 +443,7 @@ module.exports = {
     ]
   },
   '2_18': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 18),
     ideal: 5,
     scale: {
@@ -449,6 +468,7 @@ module.exports = {
     ]
   },
   '2_19': {
+    skinId: 'pvz',
     toolbox: toolbox(2, 19),
     ideal: 7,
     scale: {
@@ -475,6 +495,7 @@ module.exports = {
 
   // Copied levels with editCode enabled
   '3_1': {
+    skinId: 'birds',
     toolbox: toolbox(3, 1),
     ideal: 3,
     editCode: true,
@@ -497,6 +518,7 @@ module.exports = {
     ]
   },
   '3_2': {
+    skinId: 'birds',
     toolbox: toolbox(3, 2),
     ideal: 4,
     editCode: true,
@@ -519,6 +541,7 @@ module.exports = {
     ]
   },
   '3_3': {
+    skinId: 'birds',
     toolbox: toolbox(3, 3),
     ideal: 6,
     editCode: true,
@@ -545,6 +568,7 @@ module.exports = {
     ]
   },
   '3_4': {
+    skinId: 'birds',
     toolbox: toolbox(3, 4),
     ideal: 8,
     editCode: true,

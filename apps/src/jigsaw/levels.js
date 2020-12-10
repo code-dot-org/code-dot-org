@@ -114,7 +114,9 @@ module.exports = {
         return Jigsaw.block1Clicked;
       }
     },
-    startBlocks: undeletableJigsawBlock('jigsaw_1A', 20, 20)
+    startBlocks: undeletableJigsawBlock('jigsaw_1A', 20, 20),
+
+    skinId: 'jigsaw'
   },
   '2': {
     instructionsIcon: 'smiley',
@@ -149,7 +151,8 @@ module.exports = {
         return dx + dy < 80;
       }
     },
-    startBlocks: undeletableJigsawBlock('jigsaw_2A', 20, 20)
+    startBlocks: undeletableJigsawBlock('jigsaw_2A', 20, 20),
+    skinId: 'jigsaw'
   },
   '3': {
     instructionsIcon: 'snail',
@@ -175,7 +178,8 @@ module.exports = {
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_3A', 400, 100) +
-      undeletableJigsawBlock('jigsaw_3B', 100, 220)
+      undeletableJigsawBlock('jigsaw_3B', 100, 220),
+    skinId: 'jigsaw'
   },
 
   '4': {
@@ -202,7 +206,8 @@ module.exports = {
     },
     startBlocks:
       undeletableJigsawBlock('jigsaw_4A', 100, 140) +
-      undeletableJigsawBlock('jigsaw_4B', 400, 200)
+      undeletableJigsawBlock('jigsaw_4B', 400, 200),
+    skinId: 'jigsaw'
   },
 
   '5': {
@@ -231,7 +236,8 @@ module.exports = {
     startBlocks:
       undeletableJigsawBlock('jigsaw_5A', 100, 20) +
       undeletableJigsawBlock('jigsaw_5B', 100, 140) +
-      undeletableJigsawBlock('jigsaw_5C', 100, 280)
+      undeletableJigsawBlock('jigsaw_5C', 100, 280),
+    skinId: 'jigsaw'
   },
 
   '6': {
@@ -260,7 +266,8 @@ module.exports = {
     startBlocks:
       undeletableJigsawBlock('jigsaw_6B', 100, 20) +
       undeletableJigsawBlock('jigsaw_6A', 100, 140) +
-      undeletableJigsawBlock('jigsaw_6C', 100, 280)
+      undeletableJigsawBlock('jigsaw_6C', 100, 280),
+    skinId: 'jigsaw'
   },
 
   '7': {
@@ -289,7 +296,8 @@ module.exports = {
     startBlocks:
       undeletableJigsawBlock('jigsaw_7B', 100, 20) +
       undeletableJigsawBlock('jigsaw_7A', 100, 140) +
-      undeletableJigsawBlock('jigsaw_7C', 100, 280)
+      undeletableJigsawBlock('jigsaw_7C', 100, 280),
+    skinId: 'jigsaw'
   },
 
   '8': {
@@ -318,7 +326,8 @@ module.exports = {
     startBlocks:
       undeletableJigsawBlock('jigsaw_8C', 100, 20) +
       undeletableJigsawBlock('jigsaw_8B', 100, 140) +
-      undeletableJigsawBlock('jigsaw_8A', 100, 280)
+      undeletableJigsawBlock('jigsaw_8A', 100, 280),
+    skinId: 'jigsaw'
   },
 
   '9': {
@@ -354,7 +363,8 @@ module.exports = {
         0,
         undeletableJigsawBlock('jigsaw_9A', 0, 0)
       )
-    )
+    ),
+    skinId: 'jigsaw'
   },
 
   '10': {
@@ -390,7 +400,8 @@ module.exports = {
         0,
         undeletableJigsawBlock('jigsaw_10B', 0, 0)
       )
-    )
+    ),
+    skinId: 'jigsaw'
   },
 
   '11': {
@@ -425,7 +436,8 @@ module.exports = {
       0,
       undeletableJigsawBlock('jigsaw_blue')
     ),
-    toolbox: createToolbox(jigsawBlock('jigsaw_green'))
+    toolbox: createToolbox(jigsawBlock('jigsaw_green')),
+    skinId: 'jigsaw'
   },
 
   '12': {
@@ -459,7 +471,8 @@ module.exports = {
       jigsawBlock('jigsaw_green') +
         jigsawBlock('jigsaw_purple') +
         jigsawBlock('jigsaw_blue')
-    )
+    ),
+    skinId: 'jigsaw'
   },
 
   // assessment
@@ -491,6 +504,7 @@ module.exports = {
       100,
       20,
       jigsawBlock('jigsaw_13B', 0, 0, jigsawBlock('jigsaw_13A', 0, 0))
-    )
+    ),
+    skinId: 'jigsaw'
   }
 };

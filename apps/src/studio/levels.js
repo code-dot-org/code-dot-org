@@ -196,6 +196,7 @@ levels.custom = {
 // Can you make this dog say "hello world"
 levels.dog_hello = {
   ideal: 2,
+  skinId: 'studio',
   instructionsImportant: true,
   requiredBlocks: [
     saySpriteRequiredBlock({
@@ -260,6 +261,7 @@ levels.gumball_hello1 = extend(levels.playlab_1, {
 // Can you make the dog say something and then have the cat say something afterwards?
 levels.dog_and_cat_hello = {
   ideal: 3,
+  skinId: 'studio',
   requiredBlocks: [
     // make sure each sprite says something
     saySpriteRequiredBlock({
@@ -346,6 +348,7 @@ levels.gumball_hello2 = extend(levels.playlab_2, {
 // Can you write a program to make this dog move to the cat?
 levels.dog_move_cat = {
   ideal: 2,
+  skinId: 'studio',
   requiredBlocks: [
     [{test: 'moveDistance', type: 'studio_moveDistance', titles: {DIR: '2'}}]
   ],
@@ -393,6 +396,7 @@ levels.c3_story_3 = extend(levels.dog_move_cat, {});
 
 levels.playlab_3 = {
   ideal: 2,
+  skinId: 'studio',
   requiredBlocks: [
     [
       {
@@ -441,6 +445,7 @@ levels.gumball_move_to_flag = extend(levels.playlab_3, {
 // say "hello" when the dog reaches him?
 levels.dog_move_cat_hello = {
   ideal: 4,
+  skinId: 'studio',
   requiredBlocks: [
     [
       {
@@ -518,6 +523,7 @@ levels.c3_story_4 = extend(levels.dog_move_cat_hello, {});
 
 levels.playlab_4 = {
   ideal: 4,
+  skinId: 'studio',
   scale: {
     snapRadius: 2
   },
@@ -582,6 +588,7 @@ levels.gumball_move_to_actor = extend(levels.playlab_4, {
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello = {
   instructionsImportant: true,
+  skinId: 'studio',
   ideal: 3,
   requiredBlocks: [
     saySpriteRequiredBlock({
@@ -659,6 +666,7 @@ levels.iceage_click_hello = extend(levels.playlab_5, {
 
 levels.octopus_happy = {
   ideal: 2,
+  skinId: 'studio',
   requiredBlocks: [
     [{test: 'setSpriteEmotion', type: 'studio_setSpriteEmotion'}]
   ],
@@ -700,6 +708,7 @@ levels.c3_story_5 = extend(levels.octopus_happy, {});
 // story on their phones.
 levels.c3_story_6 = {
   ideal: Infinity,
+  skinId: 'studio',
   requiredBlocks: [],
   scale: {
     snapRadius: 2
@@ -745,6 +754,7 @@ levels.c3_story_6 = {
 // left /right keys to hit all of the targets?
 levels.move_penguin = {
   ideal: 8,
+  skinId: 'studio',
   requiredBlocks: [[{test: 'move', type: 'studio_move'}]],
   scale: {
     snapRadius: 2
@@ -818,6 +828,7 @@ levels.gumball_move_events = extend(levels.playlab_6, {
 // attach blocks to move this dinosaur up and down repeatedly?
 levels.dino_up_and_down = {
   ideal: 11,
+  skinId: 'studio',
   requiredBlocks: [
     [
       {
@@ -876,6 +887,7 @@ levels.c3_game_3 = extend(levels.dino_up_and_down, {});
 
 levels.playlab_7 = {
   ideal: 3,
+  skinId: 'studio',
   background: 'rainbow',
   firstSpriteIndex: 10, // wizard
   scale: {
@@ -970,6 +982,7 @@ levels.gumball_repeat = extend(levels.playlab_7, {
 // the dinosaur, and then move him with the arrows to make that happen?
 levels.penguin_ouch = {
   ideal: 14,
+  skinId: 'studio',
   requiredBlocks: [
     saySpriteRequiredBlock({
       sprite: '0',
@@ -1042,6 +1055,7 @@ levels.c3_game_4 = extend(levels.penguin_ouch, {});
 // and then move him with the arrows until you score?
 levels.penguin_touch_octopus = {
   ideal: 16,
+  skinId: 'studio',
   requiredBlocks: [[{test: 'changeScore', type: 'studio_changeScore'}]],
   scale: {
     snapRadius: 2
@@ -1114,6 +1128,7 @@ levels.c3_game_5 = extend(levels.penguin_touch_octopus, {});
 
 levels.playlab_8 = {
   background: 'rainbow',
+  skinId: 'studio',
   ideal: 16,
   requiredBlocks: [
     [{test: 'changeScore', type: 'studio_changeScore'}],
@@ -1187,6 +1202,7 @@ levels.gumball_sound_and_points = extend(levels.playlab_8, {
 // then move him with the arrows until you score?
 levels.change_background_and_speed = {
   ideal: 19,
+  skinId: 'studio',
   requiredBlocks: [
     [
       {
@@ -1286,6 +1302,7 @@ levels.c3_game_6 = extend(levels.change_background_and_speed, {});
 
 levels.playlab_9 = {
   background: 'black',
+  skinId: 'studio',
   requiredBlocks: [
     [
       {
@@ -1573,6 +1590,7 @@ levels.iceage_throw_hearts = extend(levels.gumball_join_food_fight, {
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
 levels.sandbox = {
   ideal: Infinity,
+  skinId: 'studio',
   requiredBlocks: [],
   scale: {
     snapRadius: 2
@@ -1639,6 +1657,7 @@ levels.gumball_free_play = extend(levels.playlab_10, {
 // Create your own story! Move around the cat and dog, and make them say things.
 levels.k1_6 = {
   ideal: Infinity,
+  skinId: 'studio',
   requiredBlocks: [],
   scale: {
     snapRadius: 2
@@ -1694,6 +1713,7 @@ levels.k1_block_test = extend(levels['99'], {
 // you can get here via http://learn.code.org/2014/11, which is semi-hidden
 levels.full_sandbox = {
   scrollbars: true,
+  skinId: 'studio',
   requiredBlocks: [],
   scale: {
     snapRadius: 2
@@ -1861,7 +1881,9 @@ levels.full_sandbox = {
   startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-levels.full_sandbox_infinity = extend(levels.full_sandbox, {});
+levels.full_sandbox_infinity = extend(levels.full_sandbox, {
+  skinId: 'infinity'
+});
 
 levels.ec_sandbox = extend(levels.sandbox, {
   editCode: true,
@@ -1933,6 +1955,7 @@ levels.ec_sandbox = extend(levels.sandbox, {
 /* ******* Hour of Code 2015 ********/
 
 levels.js_hoc2015_move_right = {
+  skinId: 'hoc2015x',
   instructionsImportant: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -2072,6 +2095,7 @@ levels.js_hoc2015_move_right = {
 };
 
 levels.js_hoc2015_move_right_down = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2189,6 +2213,7 @@ levels.js_hoc2015_move_right_down = {
 };
 
 levels.js_hoc2015_move_backtrack = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2242,6 +2267,7 @@ levels.js_hoc2015_move_backtrack = {
 };
 
 levels.js_hoc2015_move_diagonal = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2388,6 +2414,7 @@ levels.js_hoc2015_move_diagonal = {
 };
 
 levels.js_hoc2015_move_around = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2515,6 +2542,7 @@ levels.js_hoc2015_move_around = {
 };
 
 levels.js_hoc2015_move_finale = {
+  skinId: 'hoc2015x',
   editCode: true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2662,6 +2690,7 @@ levels.js_hoc2015_move_finale = {
 /* ** level 7 ** */
 
 levels.js_hoc2015_event_two_items = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -2763,6 +2792,7 @@ levels.js_hoc2015_event_two_items = {
 };
 
 levels.js_hoc2015_event_four_items = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -2830,6 +2860,7 @@ levels.js_hoc2015_event_four_items = {
 };
 
 levels.js_hoc2015_score = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   avatarList: ['R2-D2'],
   autocompletePaletteApisOnly: true,
@@ -2958,6 +2989,7 @@ levels.js_hoc2015_score = {
 };
 
 levels.js_hoc2015_win_lose = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3083,6 +3115,7 @@ levels.js_hoc2015_win_lose = {
 };
 
 levels.js_hoc2015_add_characters = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3189,6 +3222,7 @@ levels.js_hoc2015_add_characters = {
 };
 
 levels.js_hoc2015_chain_characters = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3314,6 +3348,7 @@ levels.js_hoc2015_chain_characters = {
 };
 
 levels.js_hoc2015_multiply_characters = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3420,6 +3455,7 @@ levels.js_hoc2015_multiply_characters = {
 };
 
 levels.js_hoc2015_change_setting = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   autocompletePaletteApisOnly: true,
@@ -3605,6 +3641,7 @@ var js_hoc2015_event_free_markdown = [
 ].join('\r\n');
 
 levels.js_hoc2015_event_free = {
+  skinId: 'hoc2015',
   lockZeroParamFunctions: true,
   editCode: true,
   freePlay: true,
@@ -3734,6 +3771,7 @@ levels.js_hoc2015_event_free = {
 };
 
 levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right, {
+  skinId: 'hoc2015x',
   instructionsImportant: true,
   editCode: false,
   enableShowCode: true,
@@ -3762,6 +3800,7 @@ levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right, {
 });
 
 levels.hoc2015_blockly_2 = extend(levels.js_hoc2015_move_right_down, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3770,6 +3809,7 @@ levels.hoc2015_blockly_2 = extend(levels.js_hoc2015_move_right_down, {
 });
 
 levels.hoc2015_blockly_3 = extend(levels.js_hoc2015_move_backtrack, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3778,6 +3818,7 @@ levels.hoc2015_blockly_3 = extend(levels.js_hoc2015_move_backtrack, {
 });
 
 levels.hoc2015_blockly_4 = extend(levels.js_hoc2015_move_diagonal, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   callouts: null,
@@ -3787,6 +3828,7 @@ levels.hoc2015_blockly_4 = extend(levels.js_hoc2015_move_diagonal, {
 });
 
 levels.hoc2015_blockly_5 = extend(levels.js_hoc2015_move_around, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3800,6 +3842,7 @@ levels.hoc2015_blockly_5 = extend(levels.js_hoc2015_move_around, {
 });
 
 levels.hoc2015_blockly_6 = extend(levels.js_hoc2015_move_finale, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveSouth,
@@ -3813,6 +3856,7 @@ levels.hoc2015_blockly_6 = extend(levels.js_hoc2015_move_finale, {
 });
 
 levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
+  skinId: 'hoc2015',
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'
@@ -3861,9 +3905,12 @@ levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
 
 // exactly clone this level so we can insert it into scripts without a
 // preceding video.
-levels.hoc2015_blockly_7_no_video = extend(levels.hoc2015_blockly_7);
+levels.hoc2015_blockly_7_no_video = extend(levels.hoc2015_blockly_7, {
+  skinId: 'hoc2015'
+});
 
 levels.hoc2015_blockly_8 = extend(levels.js_hoc2015_event_four_items, {
+  skinId: 'hoc2015',
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'
@@ -3877,6 +3924,7 @@ levels.hoc2015_blockly_8 = extend(levels.js_hoc2015_event_four_items, {
 });
 
 levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
+  skinId: 'hoc2015',
   editCode: false,
   msgStringOverrides: {
     whenTouchGoal: 'whenGetCharacterRebelPilot'
@@ -3925,6 +3973,7 @@ levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
 });
 
 levels.hoc2015_blockly_10 = extend(levels.js_hoc2015_win_lose, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks: '',
   toolbox: tb(
@@ -3941,6 +3990,7 @@ levels.hoc2015_blockly_10 = extend(levels.js_hoc2015_win_lose, {
 });
 
 levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -3995,6 +4045,7 @@ levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
 });
 
 levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -4058,6 +4109,7 @@ levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
 });
 
 levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -4098,6 +4150,7 @@ levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
 });
 
 levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -4153,6 +4206,7 @@ levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
 });
 
 levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
+  skinId: 'hoc2015',
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'

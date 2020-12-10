@@ -13,13 +13,10 @@ level 'bounce_11'
 level 'bounce_12'
 
 lesson 'Studio', display_name: 'Studio'
-skin 'studio'
 level 'blockly:Studio:full_sandbox'
-skin 'infinity'
 level 'blockly:Studio:full_sandbox_infinity'
 
 lesson 'Calc', display_name: 'Calc'
-skin 'calc'
 level 'blockly:Calc:example1'
 
 lesson 'Eval', display_name: 'Eval'
