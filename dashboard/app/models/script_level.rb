@@ -631,7 +631,6 @@ class ScriptLevel < ApplicationRecord
     # going to be used for seeding yet.
     my_activity_section = seed_context.activity_sections.select {|s| s.id == activity_section_id}.first
 
-    # HACK: use script_level prefix so that it gets filtered out later.
     my_key['activity_section.key'] = my_activity_section.key if my_activity_section
 
     my_key.stringify_keys
