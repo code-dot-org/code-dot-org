@@ -1,1147 +1,1165 @@
-#Files in the config/locales directory are used for internationalization
-#and are automatically loaded by Rails. If you want to use locales other
-#than English, add the necessary files in this directory.
-#To use the locales, use `I18n.t`:
-#I18n.t 'hello'
-#In views, this is aliased to just `t`:
-#<%= t('hello') %>
-#To use a different locale, set it with `I18n.locale`:
-#I18n.locale = :es
-#This would use the information in config/locales/es.yml.
-#To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
 en:
   errors:
     messages:
-      not_saved: 'crwdns27834:0crwdne27834:0'
-      too_young: 'crwdns58492:0crwdne58492:0'
-      teacher_must_accept_terms: 'crwdns58493:0crwdne58493:0'
-      pair_programmer: 'crwdns58494:0crwdne58494:0'
+      not_saved: 'Please correct the following errors:'
+      too_young: 'This content has age restrictions in place and is not available for younger students.'
+      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
     errors:
       models:
         user:
           attributes:
             reset_password_token:
-              invalid: "crwdns2066340:0crwdne2066340:0"
+              invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
       messages:
-        blank: "crwdns7489:0crwdne7489:0"
-        blank_plural: "crwdns85150:0crwdne85150:0"
-        invalid: "crwdns137464:0crwdne137464:0"
-        invalid_plural: "crwdns85151:0crwdne85151:0"
+        blank: "is required"
+        blank_plural: "are required"
+        invalid: "is invalid"
+        invalid_plural: "are invalid"
     attributes:
       user:
-        name: 'crwdns8792:0crwdne8792:0'
-        name_example: 'crwdns78668:0crwdne78668:0'
-        email: 'crwdns2549:0crwdne2549:0'
-        parent_email: 'crwdns85739:0crwdne85739:0'
-        personal_email: "crwdns85152:0%{url}crwdne85152:0"
-        personal_email_markdown: "crwdns2067358:0%{url}crwdne2067358:0"
-        username: 'crwdns2550:0crwdne2550:0'
-        password: 'crwdns2551:0crwdne2551:0'
-        password_confirmation: 'crwdns2552:0crwdne2552:0'
-        current_password: 'crwdns2553:0crwdne2553:0'
-        locale: 'crwdns2554:0crwdne2554:0'
-        age: 'crwdns7490:0crwdne7490:0'
-        gender: 'crwdns2555:0crwdne2555:0'
-        edit_header: 'crwdns2927:0crwdne2927:0'
-        finish_sign_up_header: 'crwdns195259:0crwdne195259:0'
-        finish_sign_up_subheader: 'crwdns195261:0%{email}crwdne195261:0'
-        finish_sign_up_subheader_markdown: 'crwdns2067360:0%{email}crwdne2067360:0'
-        finish_sign_up_subheader_provider: 'crwdns241470:0%{provider}crwdnd241470:0%{email}crwdne241470:0'
-        finish_sign_up_subheader_provider_markdown: 'crwdns2067362:0%{provider}crwdnd2067362:0%{email}crwdne2067362:0'
-        reset_password_token: "crwdns2066342:0crwdne2066342:0"
+        name: 'Display Name'
+        name_example: 'Display Name (e.g. Cool Coder or Jane S.)'
+        email: 'Email'
+        parent_email: 'Parent/guardian email'
+        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        personal_email_markdown: "Personal email address [(click here if you don't have an email address)](%{url})"
+        username: 'Username'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        current_password: 'Current password'
+        locale: 'Language'
+        age: 'Age'
+        gender: 'Gender'
+        edit_header: 'Edit Account Details'
+        finish_sign_up_header: 'Finish creating your account'
+        finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Fill out the following information to finish creating a Code.org account for **%{email}**.'
+        finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Fill out the following information to finish creating a Code.org account with **%{provider}** for **%{email}**.'
+        reset_password_token: "The reset password link you have followed"
         error:
-          future: crwdns4882:0crwdne4882:0
-  beta: "crwdns2059776:0crwdne2059776:0"
-  hello: "crwdns2556:0crwdne2556:0"
-  welcome_back: "crwdns3633:0%{name}crwdne3633:0"
-  your_professional_learning_plan: "crwdns56511:0crwdne56511:0"
-  see_your_learning_plan: "crwdns56512:0crwdne56512:0"
-  submit: crwdns35673:0crwdne35673:0
-  unsubmit: crwdns56122:0crwdne56122:0
-  previous_page: crwdns56442:0crwdne56442:0
-  next_page: crwdns56247:0crwdne56247:0
-  next_resource: crwdns56990:0crwdne56990:0
-  done_with_module: crwdns56991:0crwdne56991:0
-  cancel: "crwdns56443:0crwdne56443:0"
-  okay: "crwdns56444:0crwdne56444:0"
-  or: "crwdns304586:0crwdne304586:0"
-  heading_x_of_y: "crwdns56275:0%{heading}crwdnd56275:0%{x}crwdnd56275:0%{y}crwdne56275:0"
+          future: can't be in the future
+
+  beta: "beta"
+  hello: "Hello world"
+  welcome_back: "Welcome back, %{name}"
+  your_professional_learning_plan: "Your Professional Learning Plan"
+  see_your_learning_plan: "See your learning plan"
+  submit: Submit
+  unsubmit: Unsubmit
+  previous_page: Previous page
+  next_page: Next page
+  next_resource: Next resource
+  done_with_module: Done with this Learning Module
+  cancel: "Cancel"
+  okay: "Okay"
+  or: "or"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   join_section:
     code:
-      title: 'crwdns2059848:0crwdne2059848:0'
-      placeholder: "crwdns2059850:0crwdne2059850:0"
-      instructions: "crwdns2059852:0crwdne2059852:0"
-      instructions_short: "crwdns2059854:0crwdne2059854:0"
-      submit: 'crwdns2059856:0crwdne2059856:0'
+      title: 'Join a section on Code.org'
+      placeholder: "Section Code (ABCDEF)"
+      instructions: "Please enter the 6 letter code your teacher shared with you (example: \"ABCDEF\") to join their section."
+      instructions_short: "Enter your 6 letter section code"
+      submit: 'Join'
   add_hint_form:
-    placeholder: 'crwdns4360:0crwdne4360:0'
-    submit: 'crwdns4361:0crwdne4361:0'
-  appname: "crwdns2560:0crwdne2560:0"
-  stage: "crwdns2561:0crwdne2561:0"
-  stage_number: "crwdns18132:0%{number}crwdne18132:0"
-  puzzle: "crwdns2562:0crwdne2562:0"
-  trophies: "crwdns2563:0crwdne2563:0"
-  courses: 'crwdns2928:0crwdne2928:0'
+    placeholder: 'Please enter your hint here'
+    submit: 'Add hint'
+  appname: "Code.org"
+  stage: "Stage"
+  stage_number: "Lesson %{number}"
+  puzzle: "Puzzle"
+  trophies: "Trophies"
+  courses: 'Courses'
   courses_page:
-    title_student: "crwdns89093:0crwdne89093:0"
-    title_teacher: "crwdns89094:0crwdne89094:0"
-  unplugged_activity: 'crwdns55885:0crwdne55885:0'
-  of: "crwdns2564:0crwdne2564:0"
-  more: "crwdns2565:0crwdne2565:0"
-  less: "crwdns2566:0crwdne2566:0"
-  try_hoc: "crwdns2929:0crwdne2929:0"
-  try_k8intro: "crwdns4519:0crwdne4519:0"
-  k8intro: "crwdns4631:0crwdne4631:0"
-  already_started: "crwdns2930:0crwdne2930:0"
-  demos: "crwdns3591:0crwdne3591:0"
-  continue: 'crwdns3075:0crwdne3075:0'
-  prize: 'crwdns3177:0crwdne3177:0'
-  more_info: 'crwdns3896:0crwdne3896:0'
+    title_student: "Learn Computer Science"
+    title_teacher: "Teach Computer Science"
+  unplugged_activity: 'Unplugged Activity'
+  of: "of"
+  more: "MORE"
+  less: "LESS"
+  try_hoc: "Try the Hour of Code, click here >> "
+  try_k8intro: "Try our K-8 Intro to Computer Science Course (15-25 hours)"
+  k8intro: "K-8 Intro to Computer Science Course (15-25 hours)"
+  already_started: "Already started? Resume here >> "
+  demos: "Admin: All Demos"
+  continue: 'Continue'
+  prize: 'prize'
+  more_info: 'More info'
   auth:
-    continue_with: 'crwdns304588:0%{provider}crwdne304588:0'
-    sign_in_with: 'crwdns2932:0%{provider}crwdne2932:0'
-    signed_in: 'crwdns2567:0crwdne2567:0'
-    signed_out_markdown: 'crwdns2059890:0[Code.org]crwdnd2059890:0%{url}crwdne2059890:0'
-    sign_out_of_markdown: 'crwdns2059892:0%{provider}crwdnd2059892:0%{url}crwdnd2059892:0%{provider}crwdne2059892:0'
-    already_signedup: 'crwdns2933:0crwdne2933:0'
-    notyet_signedup: "crwdns2934:0crwdne2934:0"
-    google_oauth2: 'crwdns7336:0crwdne7336:0'
-    twitter: 'crwdns2569:0crwdne2569:0'
-    facebook: 'crwdns2570:0crwdne2570:0'
-    windowslive: 'crwdns7337:0crwdne7337:0'
-    microsoft_v2_auth: 'crwdns271594:0crwdne271594:0'
-    clever: 'crwdns91931:0crwdne91931:0'
-    powerschool: 'crwdns136290:0crwdne136290:0'
-    forgot_password: 'crwdns2936:0crwdne2936:0'
-    migration_success: 'crwdns170146:0crwdne170146:0'
-    demigration_success: 'crwdns170147:0crwdne170147:0'
-    need_confirmation: "crwdns2937:0crwdne2937:0"
-    need_unlock: "crwdns2938:0crwdne2938:0"
-    not_linked: "crwdns79271:0%{provider}crwdne79271:0"
-    use_clever: "crwdns91932:0%{provider}crwdne91932:0"
-    invalid_provider: "crwdns2461826:0%{provider}crwdne2461826:0"
-    migration_required: "crwdns2461828:0crwdne2461828:0"
-    unable_to_connect_provider: "crwdns136832:0%{provider}crwdne136832:0"
-    disconnect_successful: "crwdns2461830:0crwdne2461830:0"
-    already_in_use: "crwdns195263:0%{provider}crwdne195263:0"
-    already_linked: "crwdns195265:0%{provider}crwdne195265:0"
+    continue_with: 'Continue with %{provider}'
+    sign_in_with: 'Sign in with %{provider}'
+    signed_in: 'Signed in!'
+    signed_out_markdown: '### You have signed out of [Code.org](%{url}).'
+    sign_out_of_markdown: '#### You used %{provider} to sign in. [Click here](%{url}) to sign out of %{provider}.'
+    already_signedup: 'Already signed up?'
+    notyet_signedup: "Haven't joined yet?"
+    google_oauth2: 'Google'
+    twitter: 'Twitter'
+    facebook: 'Facebook'
+    windowslive: 'Microsoft'
+    microsoft_v2_auth: 'Microsoft'
+    clever: 'Clever'
+    powerschool: 'Powerschool'
+    forgot_password: 'Forgot your password?'
+    migration_success: 'Success! You have updated to our new account experience.'
+    demigration_success: 'The new account experience is now disabled on your account.'
+    need_confirmation: "Didn't receive confirmation instructions?"
+    need_unlock: "Didn't receive unlock instructions?"
+    not_linked: "Sorry, your Code.org account is not linked to %{provider}. You'll have to sign in by typing your password below."
+    use_clever: "Sorry, your Code.org account is not linked to %{provider}. Please sign in through your Clever Portal instead."
+    invalid_provider: "Sorry, %{provider} accounts cannot be linked to Code.org accounts."
+    migration_required: "Sorry, we cannot connect or disconnect accounts that are still using the old account experience. Please update to the new account experience."
+    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
+    disconnect_successful: "Success! We have disconnected the external account from your Code.org account."
+    already_in_use: "Your %{provider} account is already connected to another Code.org account."
+    already_linked: "Your %{provider} account is already linked to your Code.org account."
     existing_account:
-      account_exists: "crwdns2289486:0%{email}crwdne2289486:0"
-      sign_in: "crwdns2289488:0%{provider}crwdne2289488:0"
-      sign_up: "crwdns2289490:0%{provider}crwdne2289490:0"
+      account_exists: "Good news! You already have a Code.org account that uses %{email}"
+      sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
+      sign_up: "Not your email? Want to create a new account with a different email? You will also be able to link your %{provider} profile from your Account Settings page if you choose to create a new account."
   signup_form:
-    email_signup: 'crwdns304590:0crwdne304590:0'
-    student_count: 'crwdns37544:0%{count}crwdne37544:0'
-    teacher_count: 'crwdns37545:0%{count}crwdne37545:0'
-    overview: 'crwdns58495:0crwdne58495:0'
-    overview_markdown: 'crwdns2067364:0crwdne2067364:0'
-    hoc_already_signed_up_heading: 'crwdns68841:0crwdne68841:0'
-    hoc_already_signed_up_content: 'crwdns68842:0%{learn_url}crwdnd68842:0%{educate_url}crwdne68842:0'
-    hoc_already_signed_up_content_post_hoc: 'crwdns71749:0%{studio_url}crwdne71749:0'
-    hoc_already_signed_up_content_post_hoc_markdown: 'crwdns2067366:0%{studio_url}crwdne2067366:0'
-    teacher_educator_guide: 'crwdns4058:0crwdne4058:0'
-    title: "crwdns58496:0crwdne58496:0"
-    school_name: 'crwdns2940:0crwdne2940:0'
-    school_address: 'crwdns3037:0crwdne3037:0'
-    address_placeholder: 'crwdns2942:0crwdne2942:0'
-    gender: 'crwdns2943:0crwdne2943:0'
-    birthday: 'crwdns2944:0crwdne2944:0'
-    age: 'crwdns7491:0crwdne7491:0'
-    user_type: 'crwdns21448:0crwdne21448:0'
-    submit: 'crwdns2945:0crwdne2945:0'
-    go_to_account: 'crwdns271596:0crwdne271596:0'
-    teacher: 'crwdns2946:0crwdne2946:0'
-    valid_username: "crwdns3710:0crwdne3710:0"
-    invalid_username: "crwdns3711:0crwdne3711:0"
-    taken_username: "crwdns3712:0crwdne3712:0"
-    valid_password: "crwdns3713:0crwdne3713:0"
-    invalid_password: "crwdns3714:0crwdne3714:0"
-    mismatch_password: "crwdns3715:0crwdne3715:0"
-    student_consent: "crwdns195267:0crwdne195267:0"
-    agree_us_data_transfer_student: 'crwdns2471718:0crwdne2471718:0'
-    agree_us_data_transfer_teacher: 'crwdns2471720:0crwdne2471720:0'
-    data_collection_us: "crwdns2471722:0crwdne2471722:0"
-    visit_privacy: 'crwdns2471724:0%{privacy_url}crwdne2471724:0'
-    student_terms_markdown: "crwdns2059894:0crwdne2059894:0"
-    additional_information: "crwdns7492:0crwdne7492:0"
-    user_type_button: "crwdns134925:0crwdne134925:0"
-    user_type_label: "crwdns56993:0crwdne56993:0"
-    user_type_teacher: "crwdns56994:0crwdne56994:0"
-    user_type_student: "crwdns56995:0crwdne56995:0"
-    field_is_required: "crwdns58499:0crwdne58499:0"
-    accept_terms: "crwdns58500:0crwdne58500:0"
-    error: "crwdns92055:0crwdne92055:0"
-    email_preference_question: "crwdns134610:0crwdne134610:0"
-    email_preference_privacy: "crwdns135193:0crwdne135193:0"
-    email_preference_yes: "crwdns134611:0crwdne134611:0"
-    email_preference_no: "crwdns134612:0crwdne134612:0"
-    email_preference_required: "crwdns134926:0crwdne134926:0"
-    parent_account_checkbox: "crwdns2370940:0crwdne2370940:0"
-    parent_account_email_progress_permission: "crwdns2370942:0%{privacy_policy_url}crwdne2370942:0"
-    parent_account_email_label: "crwdns2370944:0crwdne2370944:0"
+    email_signup: 'Sign up with your email address'
+    student_count: '%{count} students have already signed up.'
+    teacher_count: '%{count} teachers have already signed up.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
+    overview_markdown: 'Sign up for an account to track your progress or your child’s progress or manage your classroom. [You can browse the various stages and puzzles](/) without an account, but you will need to sign up to save your progress and projects.'
+    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. [You can also continue to browse the various stages and puzzles](%{studio_url}) without creating an account.'
+    teacher_educator_guide: 'See educator guide'
+    title: "Sign up for Code.org"
+    school_name: 'School Name (optional)'
+    school_address: 'School Address (optional)'
+    address_placeholder: 'address, city, state, zip'
+    gender: 'Gender (optional)'
+    birthday: 'Birthday (optional)'
+    age: 'Age'
+    user_type: 'Are you a student or teacher?'
+    submit: 'Sign up'
+    go_to_account: 'Go to my account'
+    teacher: 'Are you a teacher?'
+    valid_username: "Available!"
+    invalid_username: "Username must be at least 5 characters"
+    taken_username: "Username is already taken"
+    valid_password: "Valid password!"
+    invalid_password: "Password must be at least 6 characters"
+    mismatch_password: "The two passwords you entered do not match"
+    student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_data_transfer_student: '**I agree that Code.org may transfer data (including personal data) from my use of this site to the United States** for the purpose of hosting and processing such data.'
+    agree_us_data_transfer_teacher: '**I agree that Code.org may transfer data (including personal data) from my use (and my students’ use) of this site to the United States** for the purpose of hosting and processing such data.'
+    data_collection_us: "I understand that Code.org is a US-based not-for-profit website and that the laws governing data collection in the U.S. may differ from the laws in my country."
+    visit_privacy: 'Visit Code.org’s [Privacy Policy](%{privacy_url}) to learn more.'
+    student_terms_markdown: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](http://code.org/privacy) for more information."
+    additional_information: "We need some additional information to continue signing you up."
+    user_type_button: "Update Account Type"
+    user_type_label: "Account Type"
+    user_type_teacher: "Teacher"
+    user_type_student: "Student"
+    field_is_required: "is required"
+    accept_terms: "You must agree to create an account."
+    error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Yes"
+    email_preference_no: "No"
+    email_preference_required: "You must specify an email preference."
+    parent_account_checkbox: "I am a parent/guardian signing up on behalf of my child"
+    parent_account_email_progress_permission: "Can we email you with occasional updates on your child’s progress and projects, and updates about their course and computer science? [(See our privacy policy)](%{privacy_policy_url})"
+    parent_account_email_label: "Parent/Guardian Email"
   school_info:
-    title: 'crwdns78669:0crwdne78669:0'
-    school_country: 'crwdns78670:0crwdne78670:0'
-    select_school_type: 'crwdns78671:0crwdne78671:0'
-    charter: 'crwdns78672:0crwdne78672:0'
-    private: 'crwdns78673:0crwdne78673:0'
-    public: 'crwdns78674:0crwdne78674:0'
-    homeschool: 'crwdns78675:0crwdne78675:0'
-    after_school: 'crwdns78676:0crwdne78676:0'
-    other: 'crwdns78677:0crwdne78677:0'
-    state: 'crwdns78678:0crwdne78678:0'
-    district: 'crwdns78679:0crwdne78679:0'
-    other_district_not_listed: 'crwdns78680:0crwdne78680:0'
-    district_name: 'crwdns78681:0crwdne78681:0'
-    school: 'crwdns78682:0crwdne78682:0'
-    other_school_not_listed: 'crwdns78683:0crwdne78683:0'
-    school_name: 'crwdns78684:0crwdne78684:0'
-    school_zip: 'crwdns78685:0crwdne78685:0'
-    school_address: 'crwdns78686:0crwdne78686:0'
-    school_organization_name: 'crwdns78890:0crwdne78890:0'
-    school_organization_zip: 'crwdns78891:0crwdne78891:0'
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Other'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
-    title: 'crwdns4520:0crwdne4520:0'
-    login: 'crwdns58501:0crwdne58501:0'
-    login_username: 'crwdns78687:0crwdne78687:0'
-    password: 'crwdns2949:0crwdne2949:0'
-    remember: 'crwdns2950:0crwdne2950:0'
-    submit: 'crwdns2951:0crwdne2951:0'
+    title: 'Have an account already? Sign in'
+    login: 'Email'
+    login_username: 'Email or Username'
+    password: 'Password'
+    remember: 'Remember me'
+    submit: 'Sign in'
   signin:
-    try_heading: 'crwdns4888:0crwdne4888:0'
-    try_hoc: 'crwdns4521:0crwdne4521:0'
-    try_20hours: 'crwdns4522:0crwdne4522:0'
+    try_heading: 'Want to try coding without signing in?'
+    try_hoc: 'Try one Hour of Code first'
+    try_20hours: 'Try our 20 hour Intro to Computer Science'
   signinsection:
-    welcome: 'crwdns6585:0%{section_name}crwdne6585:0'
-    name: 'crwdns6586:0crwdne6586:0'
-    picture: 'crwdns6587:0crwdne6587:0'
-    words: 'crwdns6588:0crwdne6588:0'
-    login: 'crwdns6589:0crwdne6589:0'
-    invalid_login: 'crwdns57400:0crwdne57400:0'
-    pair_programming: 'crwdns57401:0crwdne57401:0'
-    student_privacy_markdown: "crwdns2059896:0[here]crwdnd2059896:0%{student_privacy_blog}crwdne2059896:0"
+    welcome: 'Welcome to %{section_name}'
+    name: 'Choose your name'
+    picture: 'Now find your secret picture'
+    words: 'Now enter your secret words'
+    login: 'Sign in'
+    invalid_login: 'Invalid login, please try again'
+    pair_programming: 'I have a partner at my computer'
+    student_privacy_markdown: "Learn more about why you're not seeing your full name [here](%{student_privacy_blog})."
   password:
     reset_form:
-      title: 'crwdns2952:0crwdne2952:0'
-      instructions: "crwdns58502:0crwdne58502:0"
-      email: 'crwdns2953:0crwdne2953:0'
-      submit: 'crwdns58503:0crwdne58503:0'
+      title: 'Forgot your password?'
+      instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
+      email: 'Email address'
+      submit: 'Submit'
     reset_errors:
-      captcha_required: 'crwdns112029:0crwdne112029:0'
-      invalid_email: 'crwdns83791:0crwdne83791:0'
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
-      title: 'crwdns2955:0crwdne2955:0'
-      new_password: 'crwdns2956:0crwdne2956:0'
-      confirm_password: 'crwdns2957:0crwdne2957:0'
-      submit: 'crwdns2958:0crwdne2958:0'
+      title: 'Change your password'
+      new_password: 'New password'
+      confirm_password: 'Confirm new password'
+      submit: 'Change my password'
   welcome_email:
-    subject: 'crwdns2572:0crwdne2572:0'
+    subject: 'Join my class (on Code.org)'
     body: |
-      crwdns2573:0%{link}crwdnd2573:0%{name}crwdne2573:0
+      Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
+
+      %{link}
+
+      The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
+
+      %{name}
   parent_mailer:
-    student_associated_subject: 'crwdns85740:0crwdne85740:0'
-    parent_email_added_subject: 'crwdns2370294:0crwdne2370294:0'
+    student_associated_subject: 'Login information for Code.org'
+    parent_email_added_subject: 'Welcome to Code.org!'
   teacher_mailer:
-    new_teacher_subject: 'crwdns88676:0crwdne88676:0'
-    delete_teacher_subject: 'crwdns137025:0crwdne137025:0'
+    new_teacher_subject: 'Welcome to Code.org!'
+    delete_teacher_subject: 'Code.org notification: Your account has been deleted'
   section:
     your_section:
-      one: 'crwdns79272:0crwdne79272:0'
-      other: 'crwdns79273:0crwdne79273:0'
-    code_with_teacher: 'crwdns79274:0%{section_code}crwdnd79274:0%{teacher_name}crwdne79274:0'
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
     confirm:
-      remove: 'crwdns79275:0crwdne79275:0'
-    default_name: 'crwdns241474:0crwdne241474:0'
-    remove: 'crwdns79276:0crwdne79276:0'
+      remove: 'Are you sure you want to leave this section?'
+    default_name: 'Untitled Section'
+    remove: '(remove section)'
     type:
-      picture: 'crwdns88677:0crwdne88677:0'
-      word: 'crwdns88678:0crwdne88678:0'
-      email: 'crwdns88679:0crwdne88679:0'
-      google_classroom: 'crwdns88680:0crwdne88680:0'
-      clever: 'crwdns88681:0crwdne88681:0'
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Email'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
-    invite_sent: 'crwdns2574:0crwdne2574:0'
-    added_teacher: 'crwdns2575:0%{name}crwdne2575:0'
-    registered: "crwdns4077:0%{section_name}crwdne4077:0"
+    invite_sent: 'Invite sent'
+    added_teacher: '%{name} added as your teacher'
+    registered:  "You've registered for %{section_name}."
     error:
-      signed_in: 'crwdns2577:0crwdne2577:0'
-      username_not_found: 'crwdns2578:0%{username}crwdne2578:0'
-      username_in_use: 'crwdns2579:0%{username}crwdne2579:0'
-      no_teacher: "crwdns2580:0%{teacher_email_or_code}crwdne2580:0"
-      section_not_found: "crwdns5587:0%{section_code}crwdne5587:0"
-      blank_code: "crwdns5588:0crwdne5588:0"
-      cant_join_own_section: "crwdns5589:0crwdne5589:0"
-      provider_managed_section: "crwdns88682:0%{provider}crwdne88682:0"
+      signed_in: 'Please signout before proceeding'
+      username_not_found: 'Username %{username} not found'
+      username_in_use: '%{username} is already taken, please pick another'
+      no_teacher: "Could not find anyone signed in with '%{teacher_email_or_code}'. Please ask them to sign up here and then try adding them again"
+      section_not_found: "Could not find a section with code '%{section_code}'."
+      blank_code: "Please enter a section code"
+      cant_join_own_section: "Sorry, you can't join your own section."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: "crwdns4337:0%{student_name}crwdne4337:0"
+        subject: "Code.org notification: %{student_name} is no longer associated as your student."
   reports:
     error:
-      access_denied: "crwdns2582:0crwdne2582:0"
+      access_denied: "You don't have access to this person's stats"
   crud:
-    new_model: 'crwdns2583:0%{model}crwdne2583:0'
-    show: 'crwdns2584:0crwdne2584:0'
-    edit: 'crwdns2585:0crwdne2585:0'
-    edit_model: 'crwdns2586:0%{model}crwdne2586:0'
-    update: 'crwdns2587:0crwdne2587:0'
-    submit: 'crwdns85153:0crwdne85153:0'
-    destroy: 'crwdns2588:0crwdne2588:0'
-    back: 'crwdns2589:0crwdne2589:0'
-    confirm: 'crwdns2590:0crwdne2590:0'
-    created: 'crwdns2591:0%{model}crwdne2591:0'
-    updated: 'crwdns2592:0%{model}crwdne2592:0'
-    destroyed: 'crwdns4333:0%{model}crwdne4333:0'
-    access_denied: 'crwdns4334:0%{model}crwdne4334:0'
+    new_model: 'New %{model}'
+    show: 'Show'
+    edit: 'Edit'
+    edit_model: 'Edit %{model}'
+    update: 'Update'
+    submit: 'Submit'
+    destroy: 'Destroy'
+    back: 'Back'
+    confirm: 'Are you sure?'
+    created: '%{model} was successfully created.'
+    updated: '%{model} was successfully updated.'
+    destroyed: '%{model} was successfully deleted.'
+    access_denied: 'You do not have access to this %{model}.'
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "crwdns88683:0crwdne88683:0"
-        personal_login_created_email: 'crwdns85741:0crwdne85741:0'
-        personal_login_created_username: 'crwdns85742:0%{username}crwdne85742:0'
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
-      finished_hoc: "crwdns2959:0crwdne2959:0"
-      sign_in_to_save: 'crwdns2960:0crwdne2960:0'
-      my_dashboard: "crwdns89095:0crwdne89095:0"
-      course_catalog: "crwdns89096:0crwdne89096:0"
-      project_gallery: "crwdns84020:0crwdne84020:0"
-      sections: "crwdns84021:0crwdne84021:0"
-      help_support: "crwdns84218:0crwdne84218:0"
-      report_bug: "crwdns84219:0crwdne84219:0"
-      report_abuse: "crwdns2434462:0crwdne2434462:0"
-      teacher_community: "crwdns84220:0crwdne84220:0"
-      professional_learning: "crwdns84022:0crwdne84022:0"
-      documentation: "crwdns84221:0crwdne84221:0"
-      tutorials: "crwdns84222:0crwdne84222:0"
-      app_lab_documentation: "crwdns774802:0crwdne774802:0"
-      app_lab_tutorials: "crwdns774804:0crwdne774804:0"
-      game_lab_documentation: "crwdns774806:0crwdne774806:0"
-      game_lab_tutorials: "crwdns774808:0crwdne774808:0"
-      sprite_lab_documentation: "crwdns2060022:0crwdne2060022:0"
-      sprite_lab_tutorials: "crwdns2060024:0crwdne2060024:0"
-      web_lab_documentation: "crwdns2471302:0crwdne2471302:0"
-      educate_overview: "crwdns84023:0crwdne84023:0"
-      educate_elementary: "crwdns84024:0crwdne84024:0"
-      educate_middle: "crwdns84025:0crwdne84025:0"
-      educate_high: "crwdns84026:0crwdne84026:0"
-      educate_hoc: "crwdns84027:0crwdne84027:0"
-      educate_partner: "crwdns84028:0crwdne84028:0"
-      educate_beyond: "crwdns84029:0crwdne84029:0"
-      educate_inspire: "crwdns84030:0crwdne84030:0"
-      educate_community: "crwdns84031:0crwdne84031:0"
-      educate_tools: "crwdns84032:0crwdne84032:0"
-      about_us: "crwdns84033:0crwdne84033:0"
-      about_leadership: "crwdns84034:0crwdne84034:0"
-      about_donors: "crwdns84035:0crwdne84035:0"
-      about_partners: "crwdns84036:0crwdne84036:0"
-      about_team: "crwdns84037:0crwdne84037:0"
-      about_news: "crwdns84038:0crwdne84038:0"
-      about_evaluation: "crwdns84039:0crwdne84039:0"
-      about_jobs: "crwdns84040:0crwdne84040:0"
-      about_contact: "crwdns84041:0crwdne84041:0"
-      about_faqs: "crwdns84042:0crwdne84042:0"
-      learn: "crwdns84043:0crwdne84043:0"
-      stats: "crwdns84044:0crwdne84044:0"
-      help_us: "crwdns84045:0crwdne84045:0"
-      teach: "crwdns84046:0crwdne84046:0"
-      about: "crwdns84047:0crwdne84047:0"
-      legal: "crwdns2434464:0crwdne2434464:0"
-      legal_privacy: "crwdns2434466:0crwdne2434466:0"
-      legal_tos: "crwdns2434468:0crwdne2434468:0"
+      finished_hoc: "I finished!"
+      sign_in_to_save: 'Sign in to save progress'
+      my_dashboard: "My Dashboard"
+      course_catalog: "Course Catalog"
+      project_gallery: "Projects"
+      sections: "Sections"
+      help_support: "Help and support"
+      report_bug: "Report a problem"
+      report_abuse: "Report abuse"
+      teacher_community: "Teacher community"
+      professional_learning: "Professional Learning"
+      documentation: "Documentation"
+      tutorials: "Tutorials"
+      app_lab_documentation: "App Lab Documentation"
+      app_lab_tutorials: "App Lab Tutorials"
+      game_lab_documentation: "Game Lab Documentation"
+      game_lab_tutorials: "Game Lab Tutorials"
+      sprite_lab_documentation: "Sprite Lab Documentation"
+      sprite_lab_tutorials: "Sprite Lab Tutorials"
+      web_lab_documentation: "Web Lab Documentation"
+      educate_overview: "Educator Overview"
+      educate_elementary: "Elementary School"
+      educate_middle: "Middle School"
+      educate_high: "High School"
+      educate_hoc: "Hour of Code"
+      educate_partner: "Partner with Us"
+      educate_beyond: "Beyond Code.org"
+      educate_inspire: "Inspire a Student"
+      educate_community: "Online Community"
+      educate_tools: "Tools and Videos"
+      about_us: "About Us"
+      about_leadership: "Leadership"
+      about_donors: "Donors"
+      about_partners: "Partners"
+      about_team: "Full Team"
+      about_news: "Newsroom"
+      about_evaluation: "Evaluation"
+      about_jobs: "Jobs"
+      about_contact: "Contact Us"
+      about_faqs: "FAQs"
+      learn: "Learn"
+      stats: "Stats"
+      help_us: "Help Us"
+      teach: "Teach"
+      about: "About"
+      legal: "Privacy & Legal"
+      legal_privacy: "Privacy Policy"
+      legal_tos: "Terms of Service"
+
     user:
-      classroom: 'crwdns22205:0crwdne22205:0'
-      district_dashboard: 'crwdns35951:0crwdne35951:0'
-      label: 'crwdns2593:0%{username}crwdne2593:0'
-      stats: 'crwdns3077:0crwdne3077:0'
-      my_projects: 'crwdns774706:0crwdne774706:0'
-      settings: 'crwdns2963:0crwdne2963:0'
-      logout: 'crwdns2965:0crwdne2965:0'
-      signin: 'crwdns2597:0crwdne2597:0'
-      signup: 'crwdns58504:0crwdne58504:0'
-      already_registered: 'crwdns8813:0crwdne8813:0'
-      pair_programming: 'crwdns57402:0crwdne57402:0'
-      team: 'crwdns57403:0crwdne57403:0'
-      driver: 'crwdns57404:0crwdne57404:0'
-      navigator: 'crwdns57405:0crwdne57405:0'
-      create: 'crwdns245566:0crwdne245566:0'
-      algebra_game: 'crwdns404124:0crwdne404124:0'
-      applab: 'crwdns245568:0crwdne245568:0'
-      artist: 'crwdns245570:0crwdne245570:0'
-      artist_k1: 'crwdns404126:0crwdne404126:0'
-      basketball: 'crwdns404128:0crwdne404128:0'
-      bounce: 'crwdns404130:0crwdne404130:0'
-      calc: 'crwdns404132:0crwdne404132:0'
-      dance: 'crwdns271600:0crwdne271600:0'
-      eval: 'crwdns404134:0crwdne404134:0'
-      flappy: 'crwdns245578:0crwdne245578:0'
-      frozen: 'crwdns404136:0crwdne404136:0'
-      gamelab: 'crwdns245572:0crwdne245572:0'
-      gamelab_jr: 'crwdns404138:0crwdne404138:0'
-      gumball: 'crwdns404140:0crwdne404140:0'
-      iceage: 'crwdns404142:0crwdne404142:0'
-      infinity: 'crwdns404144:0crwdne404144:0'
-      makerlab: 'crwdns404146:0crwdne404146:0'
-      minecraft_adventurer: 'crwdns404148:0crwdne404148:0'
-      minecraft_aquatic: 'crwdns404150:0crwdne404150:0'
-      minecraft_codebuilder: 'crwdns404152:0crwdne404152:0'
-      minecraft_designer: 'crwdns404154:0crwdne404154:0'
-      minecraft_hero: 'crwdns404156:0crwdne404156:0'
-      playlab: 'crwdns245574:0crwdne245574:0'
-      playlab_k1: 'crwdns404158:0crwdne404158:0'
-      scratch: 'crwdns404160:0crwdne404160:0'
-      sports: 'crwdns404162:0crwdne404162:0'
-      spritelab: 'crwdns271598:0crwdne271598:0'
-      starwars: 'crwdns404164:0crwdne404164:0'
-      starwarsblocks: 'crwdns404166:0crwdne404166:0'
-      starwarsblocks_hour: 'crwdns404168:0crwdne404168:0'
-      weblab: 'crwdns404170:0crwdne404170:0'
-      view_all: 'crwdns245580:0crwdne245580:0'
+      classroom: 'Teacher Home Page'
+      district_dashboard: 'District Dashboard'
+      label: 'Hi %{username}'
+      stats: 'Code Studio'
+      my_projects: 'My projects'
+      settings: 'Account settings'
+      logout: 'Sign out'
+      signin: 'Sign in'
+      signup: 'Create an account'
+      already_registered: 'Already registered?'
+      pair_programming: 'Pair programming'
+      team: 'Team'
+      driver: 'Logged in'
+      navigator: 'Partner'
+      create: 'Create'
+      algebra_game: 'Algebra'
+      applab: 'App Lab'
+      artist: 'Artist'
+      artist_k1: 'Artist (Pre-reader)'
+      basketball: 'Basketball'
+      bounce: 'Bounce'
+      calc: 'Calc'
+      dance: 'Dance Party'
+      eval: 'Eval'
+      flappy: 'Flappy'
+      frozen: 'Frozen'
+      gamelab: 'Game Lab'
+      gamelab_jr: 'Game Lab (beta)'
+      gumball: 'The Amazing World of Gumball'
+      iceage: 'Ice Age'
+      infinity: 'Infinity'
+      makerlab: 'Maker Toolkit'
+      minecraft_adventurer: 'Minecraft Adventurer'
+      minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Code Connection'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft Hero'
+      playlab: 'Play Lab'
+      playlab_k1: 'Play Lab (Pre-reader)'
+      scratch: 'Scratch'
+      sports: 'Sports'
+      spritelab: 'Sprite Lab'
+      starwars: 'Star Wars'
+      starwarsblocks: 'Star Wars (Blocks)'
+      starwarsblocks_hour: 'Star Wars (Blocks)'
+      weblab: 'Web Lab'
+      view_all: 'View all projects...'
+
     popup:
-      progress_for_user: "crwdns38277:0%{name}crwdne38277:0"
-      progress: 'crwdns2599:0crwdne2599:0'
-      lines: 'crwdns2966:0%{lines}crwdne2966:0'
-      close: 'crwdns2600:0crwdne2600:0'
-      mastery: 'crwdns2967:0crwdne2967:0'
-      puzzle_map: 'crwdns2968:0crwdne2968:0'
-      prizes: 'crwdns2969:0%{total_trophies}crwdne2969:0'
-      prize_earned: 'crwdns3736:0%{total_trophies}crwdne3736:0'
-      prize_us_only: 'crwdns4072:0crwdne4072:0'
-      prizes_link: 'crwdns2970:0crwdne2970:0'
+      progress_for_user: "%{name}'s progress"
+      progress: 'Your progress'
+      lines: 'Total lines of code: %{lines}'
+      close: 'CLOSE'
+      mastery: 'Concepts'
+      puzzle_map: 'Stages'
+      prizes: 'Collect all %{total_trophies} trophies and win prizes!'
+      prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
+      prize_us_only: '(U.S. students only)'
+      prizes_link: 'more info'
   teacher:
-    answer: crwdns50991:0crwdne50991:0
-    for_teachers_only: crwdns50992:0crwdne50992:0
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
-      one: 'crwdns4363:0crwdne4363:0'
-      other: 'crwdns2604:0crwdne2604:0'
-    remove: 'crwdns4339:0crwdne4339:0'
+      one: 'Your teacher:'
+      other: 'Your teachers:'
+    remove: '(remove teacher)'
     confirm:
-      remove: 'crwdns4364:0crwdne4364:0'
+      remove: 'Are you sure you want to remove this teacher?'
     students:
-      dashboard: 'crwdns7340:0crwdne7340:0'
-    user_not_found: 'crwdns55874:0crwdne55874:0'
-    student_teacher_disassociated: 'crwdns55875:0%{section_code}crwdnd55875:0%{teacher_name}crwdne55875:0'
+      dashboard: 'Go to Teacher Dashboard'
+    user_not_found: 'The teacher could not be found.'
+    student_teacher_disassociated: 'You have left section %{section_code} with %{teacher_name}.'
     panel:
-      answer_viewer: 'crwdns58505:0crwdne58505:0'
-      student: 'crwdns38279:0crwdne38279:0'
-      viewing_solution: 'crwdns39079:0crwdne39079:0'
-      try_it_yourself: 'crwdns38280:0crwdne38280:0'
-      section: 'crwdns39080:0crwdne39080:0'
-      example: 'crwdns45368:0crwdne45368:0'
-      example_with_number: 'crwdns45369:0%{solution_number}crwdne45369:0'
-      submitted_on: 'crwdns49667:0crwdne49667:0'
-      last_updated: 'crwdns331052:0crwdne331052:0'
-      unsubmit: 'crwdns49668:0crwdne49668:0'
-      worked_with: 'crwdns57406:0crwdne57406:0'
-      update_lock_settings: 'crwdns58506:0crwdne58506:0'
-      clear_response: 'crwdns68016:0crwdne68016:0'
-    student_code_view_diabled: 'crwdns2475114:0crwdne2475114:0'
+      answer_viewer: 'Teacher Panel'
+      student: 'Student'
+      viewing_solution: 'Viewing Solution'
+      try_it_yourself: 'Try it yourself'
+      section: 'Section'
+      example: 'Example Solution'
+      example_with_number: 'Example Solution %{solution_number}'
+      submitted_on: 'Submitted on:'
+      last_updated: 'Last updated:'
+      unsubmit: 'Unsubmit'
+      worked_with: 'Worked With'
+      update_lock_settings: 'Update lock settings here.'
+      clear_response: 'Clear response'
+    student_code_view_diabled: 'Student code cannot be viewed for this activity.'
   user:
-    email_confirm_needed: 'crwdns4342:0crwdne4342:0'
-    email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'
-    email_confirm_wrong_email: 'crwdns33867:0crwdne33867:0'
-    email_resend_confirm: 'crwdns4343:0crwdne4343:0'
-    new_email_hint: 'crwdns136327:0crwdne136327:0'
-    new_password_hint: "crwdns2610:0crwdne2610:0"
-    current_password_hint: 'crwdns2611:0crwdne2611:0'
-    delete: 'crwdns27773:0crwdne27773:0'
-    delete_text: "crwdns27774:0crwdne27774:0"
-    delete_text_teacher_managed_note: "crwdns136946:0crwdne136946:0"
-    delete_text_teacher_note: "crwdns27775:0crwdne27775:0"
-    delete_confirm: 'crwdns27776:0crwdne27776:0'
-    deleted_user: 'crwdns71750:0crwdne71750:0'
-    no_password_because_oauth: 'crwdns72035:0crwdne72035:0'
-    no_password_because_sponsored: 'crwdns72036:0crwdne72036:0'
-    create_personal_login: 'crwdns85154:0crwdne85154:0'
-    create_personal_login_under_13_info: 'crwdns85743:0crwdne85743:0'
-    create_personal_login_under_13_username: "crwdns85744:0crwdne85744:0"
-    create_personal_login_under_13_parent_email: 'crwdns85745:0crwdne85745:0'
-    create_personal_login_info: 'crwdns85155:0crwdne85155:0'
-    create_personal_login_link_account: 'crwdns149867:0crwdne149867:0'
-    create_personal_login_terms: "crwdns85156:0%{terms_of_service_url}crwdne85156:0"
-    create_personal_login_terms_markdown: "crwdns2067368:0%{terms_of_service_url}crwdne2067368:0"
-    create_personal_login_email_note: "crwdns85157:0%{privacy_policy_url}crwdne85157:0"
-    create_personal_login_email_note_markdown: 'crwdns2067370:0%{privacy_policy_url}crwdne2067370:0'
-    enter_new_login_info: 'crwdns91044:0crwdne91044:0'
-    confirm_secret_words: 'crwdns91045:0crwdne91045:0'
-    parent_email_label: "crwdns137026:0crwdne137026:0"
-    parent_email_hint: "crwdns137027:0crwdne137027:0"
-    enter_parent_email: "crwdns91046:0crwdne91046:0"
-    update: "crwdns133751:0crwdne133751:0"
-    account_successfully_updated: "crwdns136833:0crwdne136833:0"
-    auth_option_saved: "crwdns2290685:0%{provider}crwdnd2290685:0%{email}crwdne2290685:0"
-    auth_option_saved_no_email: "crwdns2290687:0%{provider}crwdne2290687:0"
-    update_email: "crwdns2060026:0crwdne2060026:0"
-    for_parents_and_guardians: "crwdns2370946:0crwdne2370946:0"
-    link_a_parent_email: "crwdns2370948:0crwdne2370948:0"
-    parent_guardian_email_label: "crwdns2370950:0crwdne2370950:0"
-    remove_parent_email_label: "crwdns2465938:0crwdne2465938:0"
-    none: "crwdns2370952:0crwdne2370952:0"
-    only_one_parent_email_supported_warning: "crwdns2370954:0crwdne2370954:0"
-    encrypted: "crwdns2370296:0crwdne2370296:0"
+    email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_wrong_email: '(Wrong email address?)'
+    email_resend_confirm: 'Resend confirmation instructions'
+    new_email_hint: '(make sure you can receive emails to this email address)'
+    new_password_hint: "(leave blank if you don't want to change it)"
+    current_password_hint: '(we need your current password to confirm your changes)'
+    delete: 'Delete Account'
+    delete_text: "Deleting your account will erase all information and progress connected to this account."
+    delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
+    delete_confirm: 'Are you sure you want to delete your account?'
+    deleted_user: 'deleted user'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
+    create_personal_login: 'Create a personal password login'
+    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
+    create_personal_login_under_13_username: "Username (don't use your real name!)"
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_link_account: 'You can also instead choose to connect to a personal account under the “Manage Linked Accounts” section.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_terms_markdown: "By creating a personal login, I agree to be bound by the Code.org [terms of service](%{terms_of_service_url}). I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
+    create_personal_login_email_note_markdown: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](%{privacy_policy_url}) for more information.'
+    enter_new_login_info: 'Enter your new login information'
+    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    parent_email_label: "Parent/guardian email (optional)"
+    parent_email_hint: "(this can be used for password recovery)"
+    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
+    account_successfully_updated: "Account successfully updated."
+    auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
+    auth_option_saved_no_email: "You have successfully linked your %{provider} account."
+    update_email: "Update"
+    for_parents_and_guardians: "For Parents and Guardians"
+    link_a_parent_email: "Link a parent/guardian email address to this account to stay updated on your child’s progress and projects. You will also be able to use this email address for password recovery."
+    parent_guardian_email_label: "Parent/guardian email"
+    remove_parent_email_label: "Remove"
+    none: "None"
+    only_one_parent_email_supported_warning: "Note: we are only able to support one parent/guardian email address per student account at this time."
+    encrypted: "encrypted"
   user_level:
-    completed: 'crwdns3079:0crwdne3079:0'
-    tried: 'crwdns3080:0crwdne3080:0'
+    completed: 'Completed'
+    tried: 'Tried'
   home:
-    title: "crwdns8814:0crwdne8814:0"
-    all_courses: "crwdns19023:0crwdne19023:0"
-    lesson_plans: "crwdns19024:0crwdne19024:0"
-    signin_message: "crwdns4633:0%{link}crwdne4633:0"
-    student_reg_link: 'crwdns4523:0crwdne4523:0'
-    teacher_reg_link: 'crwdns4524:0crwdne4524:0'
-    signin_directions: 'crwdns4891:0crwdne4891:0'
-    teacher_dashboard: crwdns3083:0crwdne3083:0
-    teacher_student_count_one: crwdns4073:0%{count}crwdne4073:0
-    teacher_student_count: crwdns3134:0%{count}crwdne3134:0
-    teacher_averages: crwdns3135:0%{trophy_average}crwdnd3135:0%{trophy_max}crwdne3135:0
-    teacher_print_certificates: 'crwdns4525:0crwdne4525:0'
-    teacher_read_blog: crwdns4526:0crwdne4526:0
-    classroom: crwdns3085:0crwdne3085:0
-    student_progress: crwdns3794:0crwdne3794:0
-    student_stats: crwdns3087:0%{trophy_count}crwdnd3087:0%{trophy_max}crwdne3087:0
-    student_left_off: 'crwdns3088:0crwdne3088:0'
-    student_finished: crwdns4325:0%{online_link}crwdnd4325:0%{local_school_link}crwdne4325:0
-    local_school: crwdns3180:0crwdne3180:0
-    online: crwdns3181:0crwdne3181:0
-    see_details: crwdns3795:0crwdne3795:0
-    view_course: crwdns43450:0crwdne43450:0
-    prize_info: 'crwdns4893:0crwdne4893:0'
-    tryfirst: 'crwdns4636:0crwdne4636:0'
-    trynow: 'crwdns4637:0crwdne4637:0'
-    add_hint_help: 'crwdns4894:0crwdne4894:0'
-    20hour_overview: 'crwdns4895:0crwdne4895:0'
-    test_videos_help: 'crwdns5337:0crwdne5337:0'
-    try_beta_courses: 'crwdns6263:0crwdne6263:0'
-    use_as_teacher: 'crwdns7341:0crwdne7341:0'
-    heading_elementary_markdown: "crwdns2059898:0crwdne2059898:0"
-    your_gallery: crwdns23431:0crwdne23431:0
-    no_primary_course: "crwdns36301:0crwdne36301:0"
-    choose_next_course: "crwdns43451:0crwdne43451:0"
-    print_certificate: "crwdns41905:0crwdne41905:0"
-  certificate_sponsor_message: "crwdns2351483:0%{sponsor_name}crwdne2351483:0"
+    title: "Code Studio"
+    all_courses: "Overview of Courses 1, 2, and 3"
+    lesson_plans: "Lesson plans"
+    signin_message: "Already registered? %{link}"
+    student_reg_link: 'Student Sign Up'
+    teacher_reg_link: 'Teacher Sign Up'
+    signin_directions: 'Use an account to track progress.<br/> Teachers, track your entire class.'
+    teacher_dashboard: See progress dashboard
+    teacher_student_count_one: You have %{count} student.
+    teacher_student_count: You have %{count} students.
+    teacher_averages: On average your students have earned %{trophy_average} out of %{trophy_max} "Concept Mastery" trophies.
+    teacher_print_certificates: 'Print certificates for students who finish this course'
+    teacher_read_blog: Read about news and updates to our materials at our Educator Blog
+    classroom: Your classroom
+    student_progress: Your learning progress
+    student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
+    student_left_off: 'Where you left off:'
+    student_finished: You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}.
+    local_school: local school
+    online: online
+    see_details: See details
+    view_course: View Course
+    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
+    tryfirst: 'Or, you can try it first, and sign up later:'
+    trynow: 'Try now'
+    add_hint_help: 'Please help us to add smart hints to Code.org tutorials'
+    20hour_overview: 'This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.'
+    test_videos_help: 'Test our new video player at your school'
+    try_beta_courses: 'New! Try our beta courses for K-5 students'
+    use_as_teacher: 'Use this site as a teacher'
+    heading_elementary_markdown: "## 20 hour courses for\n\n# Computer Science Fundamentals (all ages)"
+    your_gallery: Gallery
+    no_primary_course: "Try a Code Studio course"
+    choose_next_course: "Try a Code Studio course by choosing one below"
+    print_certificate: "Print Certificate"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   move_students:
-    new_section_dne: "crwdns56519:0%{new_section_code}crwdne56519:0"
-    section_code_cant_be_current_section: "crwdns56521:0crwdne56521:0"
-    current_section_dne: "crwdns56522:0%{current_section_code}crwdne56522:0"
-    student_ids_not_entered: "crwdns56525:0crwdne56525:0"
-    student_not_found: "crwdns56526:0crwdne56526:0"
-    all_students_must_be_in_current_section: "crwdns56527:0crwdne56527:0"
-    already_enrolled_in_new_section: "crwdns56528:0crwdne56528:0"
-    third_party_login: "crwdns134927:0crwdne134927:0"
+    new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
+    section_code_cant_be_current_section: "The current section cannot be the same as the new section."
+    current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
+    student_ids_not_entered: "Please provide student_ids."
+    student_not_found: "One or more students could not be found."
+    all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
+    already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
-    title: "crwdns45291:0crwdne45291:0"
-    description: "crwdns45292:0crwdne45292:0"
-    try_hour_of_code: 'crwdns55876:0crwdne55876:0'
+    title: "Learn on Code Studio"
+    description: "Anyone can learn computer science. Make games, apps and art with code."
+    try_hour_of_code: 'Try an Hour of Code!'
   gender:
-    male: 'crwdns2618:0crwdne2618:0'
-    female: 'crwdns2619:0crwdne2619:0'
-    non_binary: 'crwdns135194:0crwdne135194:0'
-    not_listed: 'crwdns135195:0crwdne135195:0'
-    none: 'crwdns2971:0crwdne2971:0'
+    male: 'Male'
+    female: 'Female'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
+    none: 'Prefer not to answer'
   user_type:
-    student: 'crwdns21449:0crwdne21449:0'
-    teacher: 'crwdns21450:0crwdne21450:0'
+    student: 'Student'
+    teacher: 'Teacher'
   footer:
-    thank_you: 'crwdns45293:0crwdne45293:0'
-    help_from_html: 'crwdns6548:0crwdne6548:0'
-    help_from_html_old: 'crwdns45345:0crwdne45345:0'
-    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
-    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
-    code_from_html: 'crwdns56267:0crwdne56267:0'
-    powered_by_aws: 'crwdns24789:0crwdne24789:0'
-    built_on_github: 'crwdns2474796:0crwdne2474796:0'
-    google_copyright: 'crwdns2474798:0crwdne2474798:0'
-    trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
-    copyright: 'crwdns45295:0crwdne45295:0'
-    more: 'crwdns45296:0crwdne45296:0'
-    feedback: 'crwdns2622:0crwdne2622:0'
-    translate: 'crwdns2623:0crwdne2623:0'
-    support: 'crwdns5295:0crwdne5295:0'
-    support_url: 'crwdns19025:0crwdne19025:0'
-    tos_short: 'crwdns45347:0crwdne45347:0'
-    tos: 'crwdns5338:0crwdne5338:0'
-    privacy: 'crwdns3901:0crwdne3901:0'
-    secure: 'crwdns5339:0crwdne5339:0'
-    report_abuse: 'crwdns49669:0crwdne49669:0'
-    built_on_code_studio: 'crwdns55144:0crwdne55144:0'
-    make_my_own_app: 'crwdns55145:0crwdne55145:0'
-    how_it_works: 'crwdns55146:0crwdne55146:0'
-    try_hour_of_code: 'crwdns55879:0crwdne55879:0'
+    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    help_from_html: 'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.'
+    help_from_html_old: 'Engineers from Amazon, Google, and Microsoft helped create these materials.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
+    built_on_github: 'Built on GitHub from Microsoft'
+    google_copyright: '&copy; Google Inc. used with permission. Google Classroom is a trademark of Google Inc.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    copyright: 'Copyright'
+    more: 'More'
+    feedback: 'Provide feedback'
+    translate: 'Volunteer to translate our content'
+    support: 'Support'
+    support_url: 'http://support.code.org'
+    tos_short: 'Terms'
+    tos: 'Terms of Service'
+    privacy: 'Privacy Policy'
+    secure: 'Secure Version'
+    report_abuse: 'Report Abuse'
+    built_on_code_studio: 'Built on Code Studio'
+    make_my_own_app: 'Make my own app'
+    how_it_works: 'How it Works (View Code)'
+    try_hour_of_code: 'Try an Hour of Code!'
   reference_area:
-    title: 'crwdns2625:0crwdne2625:0'
-    subtitle: 'crwdns3090:0crwdne3090:0'
-    teacher: 'crwdns4315:0crwdne4315:0'
-    teacher_no_solution: 'crwdns90879:0crwdne90879:0'
-    auth_error: 'crwdns4316:0crwdne4316:0'
-    submit: 'crwdns4896:0crwdne4896:0'
-    direction: 'crwdns20745:0crwdne20745:0'
+    title: 'Need help?'
+    subtitle: 'See these videos and hints'
+    teacher: 'See a solution'
+    teacher_no_solution: 'Stop seeing solution'
+    auth_error: 'You are not authorized to see the solution.'
+    submit: 'Update Artist Location'
+    direction: 'Start Direction (in degrees)'
   video:
-    tab: 'crwdns2972:0crwdne2972:0'
-    notes: 'crwdns2973:0crwdne2973:0'
-    notes_coming_soon: 'crwdns7342:0crwdne7342:0'
-    autoplay_option: 'crwdns3091:0crwdne3091:0'
-    download: 'crwdns4163:0crwdne4163:0'
-    show_notes: 'crwdns91102:0crwdne91102:0'
-    show_video: 'crwdns91103:0crwdne91103:0'
-    label: 'crwdns2356838:0crwdne2356838:0'
+    tab: 'Video.'
+    notes: 'No video? Show notes.'
+    notes_coming_soon: 'Notes for this video coming soon.'
+    autoplay_option: 'Autoplay videos'
+    download: 'Download Video'
+    show_notes: 'Show Notes'
+    show_video: 'Show Video'
+    label: 'Video'
   compatibility:
     upgrade:
-      unsupported_message: "crwdns56929:0%{supported_browsers_url}crwdne56929:0"
-      link: "crwdns56932:0crwdne56932:0"
-      applab_unsupported_tablet: "crwdns78689:0crwdne78689:0"
-      gamelab_unsupported_tablet: "crwdns78690:0crwdne78690:0"
-      oceans_unsupported_browser: "crwdns2289845:0crwdne2289845:0"
-      weblab_unsupported_browser: "crwdns78691:0crwdne78691:0"
-      weblab_unsupported_locale_storage: "crwdns78692:0crwdne78692:0"
-  slow_loading: 'crwdns3859:0crwdne3859:0'
-  try_reloading: 'crwdns3860:0crwdne3860:0'
-  next_stage: 'crwdns4078:0crwdne4078:0'
-  download_pdf: 'crwdns4045:0crwdne4045:0'
-  lesson_plan: 'crwdns23290:0crwdne23290:0'
-  view_lesson_plan: 'crwdns6590:0crwdne6590:0'
-  pdf_download: 'crwdns6591:0crwdne6591:0'
-  download_coming_soon: 'crwdns23291:0crwdne23291:0'
-  video_coming_soon: 'crwdns23292:0crwdne23292:0'
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to [one of our supported browsers](%{supported_browsers_url}). You can try viewing the page, but expect functionality to be broken."
+      link: "Learn more"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      oceans_unsupported_browser: "This browser is not supported for this tutorial. Please try visiting this page using Edge, Chrome, Firefox, or another modern browser."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
+  slow_loading: 'This is taking longer than usual...'
+  try_reloading: 'Try reloading the page'
+  next_stage: 'Finished! Continue to next stage'
+  download_pdf: 'Open Lesson Plan'
+  lesson_plan: 'Lesson Plan'
+  view_lesson_plan: 'View Lesson Plan'
+  pdf_download: 'Download PDF'
+  download_coming_soon: 'Downloadable activity coming soon.'
+  video_coming_soon: 'Video Coming Soon!'
   share_code:
-    title: "crwdns5296:0crwdne5296:0"
-    bounce_og_title: "crwdns4898:0crwdne4898:0"
-    flappy_og_title: "crwdns4638:0crwdne4638:0"
-    studio_og_title: "crwdns18148:0crwdne18148:0"
-    check_out_what_i_made: "crwdns23499:0crwdne23499:0"
-    og_description: "crwdns4639:0crwdne4639:0"
-    phone_number_not_allowed: "crwdns20077:0crwdne20077:0"
-    address_not_allowed: "crwdns20078:0crwdne20078:0"
-    email_not_allowed: "crwdns20079:0crwdne20079:0"
-    profanity_not_allowed: "crwdns20080:0crwdne20080:0"
+    title: "Click 'Run' to see my program in action"
+    bounce_og_title: "Check out my Bounce Game"
+    flappy_og_title: "Check out my Flappy Game"
+    studio_og_title: "Check out my Play Lab App"
+    check_out_what_i_made: "Check out what I made"
+    og_description: "I wrote the code myself with Code.org"
+    phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
+    address_not_allowed: "It looks like there is an address in it. Try changing the text."
+    email_not_allowed: "It looks like there is an email in it. Try changing the text."
+    profanity_not_allowed: "It looks like there is profanity in it. Try changing the text."
   builder:
-    created: "crwdns4640:0crwdne4640:0"
-    destroyed: "crwdns4641:0crwdne4641:0"
-    manage: "crwdns4899:0crwdne4899:0"
-    view: "crwdns4643:0crwdne4643:0"
-    back: "crwdns4644:0crwdne4644:0"
-    success: "crwdns5341:0crwdne5341:0"
+    created: "You created a new script."
+    destroyed: "You destroyed a script."
+    manage: "Build Levels"
+    view: "View"
+    back: "Back to scripts"
+    success: "You successfully edited the blocks."
     level:
-      create: "crwdns4645:0crwdne4645:0"
-      current: "crwdns4646:0crwdne4646:0"
-      unused: "crwdns4647:0crwdne4647:0"
+      create: "Create new level"
+      current: "Current Levels"
+      unused: "Unused Levels"
   upsell:
     applab:
-      title: 'crwdns56124:0crwdne56124:0'
-      body: "crwdns56125:0crwdne56125:0"
-      body_short: "crwdns56172:0crwdne56172:0"
-      audience: 'crwdns56126:0crwdne56126:0'
-      cta: 'crwdns56127:0crwdne56127:0'
+      title: 'App Lab'
+      body: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
+      body_short: "Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
+      audience: 'Ages 13+'
+      cta: 'Learn how'
     dance:
-      title: 'crwdns331054:0crwdne331054:0'
+      title: 'Dance Party'
     dance-2019:
-      title: 'crwdns2071286:0crwdne2071286:0'
+      title: 'Dance Party'
     hoc:
-      title: 'crwdns55279:0crwdne55279:0'
-      body: 'crwdns4901:0crwdne4901:0'
+      title: 'Classic Maze'
+      body: 'Try the basics of computer science. Millions have given it a shot.'
     flappy:
-      title: 'crwdns4902:0crwdne4902:0'
-      body: 'crwdns4903:0crwdne4903:0'
+      title: 'Flappy Code'
+      body: 'Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!'
     20-hour:
-      title: 'crwdns41906:0crwdne41906:0'
-      body: 'crwdns41907:0crwdne41907:0'
-      body_short: 'crwdns41908:0crwdne41908:0'
+      title: 'Accelerated Course'
+      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
+      body_short: 'Learn basic computer science in an accelerated version of courses 2-4.'
     hoc2014:
-      try_new_tutorial: 'crwdns23500:0crwdne23500:0'
-      try_frozen: 'crwdns23501:0crwdne23501:0'
+      try_new_tutorial: 'Try our new Hour of Code tutorial in beta'
+      try_frozen: 'Artist with Anna and Elsa, from Frozen'
     gallery:
-      title: "crwdns23626:0crwdne23626:0"
-      body: "crwdns23627:0crwdne23627:0"
+      title: "Gallery"
+      body: "View a gallery of app and artist images created by our users"
     gamelab:
-      title: "crwdns84672:0crwdne84672:0"
-      body: "crwdns84673:0crwdne84673:0"
-      audience: "crwdns84674:0crwdne84674:0"
-      cta: "crwdns84675:0crwdne84675:0"
+      title: "Game Lab"
+      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Ages 13+"
+      cta: "Learn how"
     hoc-encryption:
-      title: "crwdns110201:0crwdne110201:0"
-      body: "crwdns110202:0crwdne110202:0"
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
-      title: "crwdns88685:0crwdne88685:0"
-      body: "crwdns88686:0crwdne88686:0"
-      audience: "crwdns88687:0crwdne88687:0"
-      cta: "crwdns88688:0crwdne88688:0"
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
+      audience: "Ages 13+"
+      cta: "Learn how"
     frozen:
-      title: "crwdns24790:0crwdne24790:0"
+      title: "Frozen"
     starwars:
-      title: "crwdns50994:0crwdne50994:0"
+      title: "Star Wars"
     infinity:
-      title: "crwdns35937:0crwdne35937:0"
-      body: "crwdns35938:0crwdne35938:0"
+      title: "Infinity Play Lab"
+      body: "Use Play Lab to create a story or game starring Disney Infinity characters."
     minecraft:
-      title: "crwdns51940:0crwdne51940:0"
-      body: "crwdns51941:0crwdne51941:0"
+      title: "Minecraft"
+      body: "Explore a Minecraft world through code."
     minecraft2016:
-      title: "crwdns68845:0crwdne68845:0"
-      body: "crwdns68846:0crwdne68846:0"
+      title: "Minecraft"
+      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
     aquatic:
-      title: "crwdns304592:0crwdne304592:0"
+      title: "Minecraft"
     hero:
-      title: "crwdns110203:0crwdne110203:0"
-      body: "crwdns110204:0crwdne110204:0"
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
-      title: "crwdns90880:0crwdne90880:0"
-      body: "crwdns90881:0crwdne90881:0"
+      title: "Sports"
+      body: "Make a basketball game or mix and match across sports."
     text-compression:
-      title: "crwdns90882:0crwdne90882:0"
-      body: "crwdns90883:0crwdne90883:0"
+      title: "Text Compression"
+      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
-      title: "crwdns56445:0crwdne56445:0"
-      audience: "crwdns56446:0crwdne56446:0"
-      body: "crwdns56447:0crwdne56447:0"
-      body_short: "crwdns56448:0crwdne56448:0"
+      title: "Unplugged Lessons"
+      audience: "Ages 4+"
+      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
+      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
     unplugged_conditionals:
-      title: "crwdns84049:0crwdne84049:0"
-      body: "crwdns84050:0crwdne84050:0"
+      title: "Conditionals"
+      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
-      title: "crwdns84676:0crwdne84676:0"
-      body: "crwdns84677:0crwdne84677:0"
-      audience: "crwdns84678:0crwdne84678:0"
-      cta: "crwdns84679:0crwdne84679:0"
+      title: "Widgets"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      audience: "Ages 14+"
+      cta: "Learn how"
   landing:
-    prerelease_tutorial: "crwdns2059900:0crwdne2059900:0"
-    report_bug: "crwdns6267:0crwdne6267:0"
-    support: "crwdns6268:0crwdne6268:0"
-    support_url: "crwdns19026:0crwdne19026:0"
-    help_resources: "crwdns56128:0crwdne56128:0"
-    help_support: "crwdns76800:0crwdne76800:0"
-    documentation: "crwdns76801:0crwdne76801:0"
-    tutorials: "crwdns76802:0crwdne76802:0"
+    prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
+    report_bug: "Report Bug"
+    support: "Get Help"
+    support_url: "//support.code.org"
+    help_resources: "Help and Resources"
+    help_support: "Help and support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   free_response:
-    placeholder: "crwdns2291097:0crwdne2291097:0"
+    placeholder: "Enter your answer here"
   multi:
-    wrong_title: "crwdns5096:0crwdne5096:0"
-    wrong_body: "crwdns5097:0crwdne5097:0"
-    correct_title: "crwdns5342:0crwdne5342:0"
-    correct_body: "crwdns5343:0crwdne5343:0"
-    toofew_title: "crwdns38737:0crwdne38737:0"
-    toofew_body: "crwdns38738:0crwdne38738:0"
+    wrong_title: "Incorrect answer"
+    wrong_body: "The answer you've entered is not correct.  Please try again!"
+    correct_title: "Correct"
+    correct_body: "That is the correct answer."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
-    wrong_title: "crwdns56129:0crwdne56129:0"
-    wrong_body: "crwdns56130:0crwdne56130:0"
-    correct_title: "crwdns56131:0crwdne56131:0"
-    correct_body: "crwdns56132:0crwdne56132:0"
-    toofew_title: "crwdns56133:0crwdne56133:0"
-    toofew_body: "crwdns56134:0crwdne56134:0"
+    wrong_title: "Thank you"
+    wrong_body: "Thank you for submitting an answer."
+    correct_title: "Thank you"
+    correct_body: "Thank you for submitting an answer."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
-    wrong_title: "crwdns56221:0crwdne56221:0"
-    wrong_body: "crwdns56222:0crwdne56222:0"
-    correct_title: "crwdns56173:0crwdne56173:0"
-    correct_body: "crwdns56174:0crwdne56174:0"
-    hide_survey_last_answer: "crwdns57912:0crwdne57912:0"
-    survey_submission_thankyou: "crwdns110497:0crwdne110497:0"
+    wrong_title: "Thank you"
+    wrong_body: "Thank you for submitting answers."
+    correct_title: "Thank you"
+    correct_body: "Thank you for submitting answers."
+    hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
-    wrong_title: "crwdns56223:0crwdne56223:0"
-    wrong_body: "crwdns56224:0crwdne56224:0"
-    correct_title: "crwdns56225:0crwdne56225:0"
-    correct_body: "crwdns56226:0crwdne56226:0"
-    unsubmit-title: "crwdns56449:0crwdne56449:0"
-    unsubmit-body: "crwdns56450:0crwdne56450:0"
-    submit-incomplete-title: "crwdns56451:0crwdne56451:0"
-    submit-incomplete-body: "crwdns56452:0crwdne56452:0"
-    submit-complete-title: "crwdns56453:0crwdne56453:0"
-    submit-complete-body: "crwdns56454:0crwdne56454:0"
+    wrong_title: "Thank you"
+    wrong_body: "Thank you for submitting answers."
+    correct_title: "Thank you"
+    correct_body: "Thank you for submitting answers."
+    unsubmit-title: "Unsubmit your assessment"
+    unsubmit-body: "Unsubmitting your assessment will reset the submitted time and date.  Are you sure?"
+    submit-incomplete-title: "Submit your assessment"
+    submit-incomplete-body: "You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?"
+    submit-complete-title: "Submit your assessment"
+    submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
   match:
-    wrong_title: "crwdns5098:0crwdne5098:0"
-    wrong_body: "crwdns5099:0crwdne5099:0"
-    correct_title: "crwdns5344:0crwdne5344:0"
-    correct_body: "crwdns5345:0crwdne5345:0"
+    wrong_title: "Incorrect solution"
+    wrong_body: "The solution you've entered is not correct.  Please try again!"
+    correct_title: "Correct"
+    correct_body: "That is the correct answer."
   contract_match:
-    wrong_title: "crwdns36222:0crwdne36222:0"
-    badname: "crwdns36223:0crwdne36223:0"
-    badname_case: "crwdns36271:0crwdne36271:0"
-    badrange: "crwdns36224:0crwdne36224:0"
-    baddomainsize: "crwdns36225:0crwdne36225:0"
-    baddomainname: "crwdns36226:0crwdne36226:0"
-    baddomaintype: "crwdns36302:0crwdne36302:0"
+    wrong_title: "Incorrect answer"
+    badname: "Your contract has the wrong name."
+    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
+    badrange: "Your contract has the wrong range."
+    baddomainsize: "Your contract doesn't have the right number of items in the domain."
+    baddomainname: "One or more of your domain items has the wrong name."
+    baddomaintype: "One or more of your domain items has the wrong type, or they are in the wrong order."
   text_match:
-    placeholder: "crwdns22206:0crwdne22206:0"
-    open_response_title: "crwdns37547:0crwdne37547:0"
-    open_response_body: "crwdns37548:0crwdne37548:0"
-    correct_title: "crwdns56248:0crwdne56248:0"
-    correct_body: "crwdns56249:0crwdne56249:0"
+    placeholder: "Enter your answer here"
+    open_response_title: "Thanks"
+    open_response_body: "Thanks for your response!"
+    correct_title: "Correct"
+    correct_body: "That is the correct answer."
   lesson_extras:
-    bonus_level: "crwdns2375482:0crwdne2375482:0"
+    bonus_level: "Bonus Level"
   dialog:
-    ok: "crwdns5100:0crwdne5100:0"
-    startover_title: "crwdns45297:0crwdne45297:0"
-    startover_body: "crwdns45298:0crwdne45298:0"
-    startover_ok: "crwdns45299:0crwdne45299:0"
-    startover_cancel: "crwdns45300:0crwdne45300:0"
+    ok: "OK"
+    startover_title: "Are you sure you want to start over?"
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: "Start Over"
+    startover_cancel: "Cancel"
   time:
-    hour: 'crwdns6550:0crwdne6550:0'
-    day: 'crwdns6551:0crwdne6551:0'
-    week: 'crwdns6552:0crwdne6552:0'
+    hour: '1 hour'
+    day: 'day'
+    week: 'week'
   age_interstitial:
-    age: crwdns7663:0crwdne7663:0
-    header: crwdns7664:0crwdne7664:0
-    warning: "crwdns2059902:0crwdne2059902:0"
-    disclaimer: "crwdns2059904:0crwdne2059904:0"
-    sign_out_markdown: 'crwdns2059906:0%{url}crwdne2059906:0'
+    age: Your age
+    header: Account Information Update
+    warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
+    disclaimer: "As always, code.org will never rent, sell or share this information with any third parties."
+    sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
-    title: "crwdns58508:0crwdne58508:0"
-    intro_desc: "crwdns58509:0crwdne58509:0"
-    intro_desc_markdown: "crwdns2067372:0crwdne2067372:0"
-    intro_instructions: "crwdns58510:0crwdne58510:0"
-    tos: "crwdns58511:0crwdne58511:0"
-    privacy: "crwdns58512:0crwdne58512:0"
-    privacy_notice: "crwdns58513:0crwdne58513:0"
-    accept_label: 'crwdns58514:0%{tos_url}crwdnd58514:0%{privacy_url}crwdne58514:0'
-    accept_label_markdown: crwdns2067374:0%{tos_url}crwdnd2067374:0%{privacy_url}crwdne2067374:0
-    accept_tos: crwdns2290689:0%{tos_url}crwdnd2290689:0%{privacy_url}crwdne2290689:0
-    accept: "crwdns58515:0crwdne58515:0"
-    print: "crwdns58516:0crwdne58516:0"
-    reminder_desc: 'crwdns58518:0%{tos_url}crwdnd58518:0%{privacy_url}crwdne58518:0'
-    reminder_desc_markdown: crwdns2067376:0%{tos_url}crwdnd2067376:0%{privacy_url}crwdne2067376:0
-    review_terms: "crwdns58519:0crwdne58519:0"
+    title: "Updated Terms of Service and Privacy Policy"
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_desc_markdown: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will *no longer store email addresses for student accounts on Code Studio.* This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    tos: "Terms of Service"
+    privacy: "Privacy Policy"
+    privacy_notice: "Privacy Notice"
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
+    accept_label_markdown: I agree to the [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
+    accept_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
+    accept: "Accept"
+    print: "Print"
+    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
+    reminder_desc_markdown: We have updated our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}). Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.
+    review_terms: "Review updated terms"
   donor_interstitial:
-    title: "crwdns2465772:0crwdne2465772:0"
-    subtitle: "crwdns2465774:0[donors]crwdnd2465774:0%{donors_url}crwdne2465774:0"
-    local_supporters: "crwdns2465776:0crwdne2465776:0"
-    global_supporters: "crwdns2465778:0crwdne2465778:0"
-    support_codeorg_1: "crwdns2465780:0crwdne2465780:0"
-    support_codeorg_2: "crwdns2465782:0%{donate_url}crwdne2465782:0"
-    get_started: "crwdns2465784:0crwdne2465784:0"
+    title: "Your free CS courses are made possible by..."
+    subtitle: "We’d like to thank the generous donors whose support has made Code.org’s success possible. We are committed to keeping Code.org free for schools and students, globally, thanks to the continued generosity of our [donors](%{donors_url})!"
+    local_supporters: "Local Supporters"
+    global_supporters: "Global Supporters"
+    support_codeorg_1: "Every dollar given to Code.org brings opportunity to more students."
+    support_codeorg_2: "[Donate now](%{donate_url}) to support Code.org."
+    get_started: "Get started on Code.org"
   school_info_interstitial:
-    title: "crwdns83793:0crwdne83793:0"
-    message: "crwdns83794:0crwdne83794:0"
-    message_with_suggestion: "crwdns83795:0crwdne83795:0"
-    save: "crwdns83796:0crwdne83796:0"
+    title: "We want to bring Computer Science to every student - help us track our progress!"
+    message: "Please enter your school information below."
+    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
+    save: "Save"
   race_interstitial:
-    title: "crwdns68017:0crwdne68017:0"
-    message: "crwdns68018:0crwdne68018:0"
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
+    message: "Please tell us your race (check all that apply)"
     races:
-      white: "crwdns137473:0crwdne137473:0"
-      black: "crwdns137474:0crwdne137474:0"
-      hispanic: "crwdns137475:0crwdne137475:0"
-      asian: "crwdns137476:0crwdne137476:0"
-      hawaiian: "crwdns137477:0crwdne137477:0"
-      american_indian: "crwdns137478:0crwdne137478:0"
-      other: "crwdns137479:0crwdne137479:0"
-      opt_out: "crwdns137480:0crwdne137480:0"
-    submit: "crwdns68027:0crwdne68027:0"
-    decline: "crwdns68028:0crwdne68028:0"
-  zendesk_too_young_message: 'crwdns8502:0crwdne8502:0'
-  zendesk_too_young_message_markdown: 'crwdns2067378:0[support.code.org]crwdne2067378:0'
+      white: "White"
+      black: "Black or African American"
+      hispanic: "Hispanic or Latino"
+      asian: "Asian"
+      hawaiian: "Native Hawaiian or other Pacific Islander"
+      american_indian: "American Indian/Alaska Native"
+      other: "Other"
+      opt_out: "Prefer not to say"
+    submit: "Submit"
+    decline: "Close"
+  zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+  zendesk_too_young_message_markdown: 'Sorry, younger users may not sign in to our support site. You may browse [support.code.org](http://support.code.org) without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_started: crwdns35032:0crwdne35032:0
-    in_progress: crwdns35033:0crwdne35033:0
-    completed_too_many_blocks: crwdns22208:0crwdne22208:0
-    completed_perfect: crwdns22209:0crwdne22209:0
-    furthest_level_attempted: crwdns22210:0crwdne22210:0
-    assessment: crwdns35034:0crwdne35034:0
-    submitted: crwdns56189:0crwdne56189:0
+    not_started: not started
+    in_progress: in progress
+    completed_too_many_blocks: completed, too many blocks
+    completed_perfect: completed, perfect
+    furthest_level_attempted: furthest level attempted
+    assessment: assessment
+    submitted: submitted
   studio:
-    courses_working_on: "crwdns25902:0crwdne25902:0"
-    completed_courses: "crwdns25903:0crwdne25903:0"
-    all_courses: "crwdns25904:0crwdne25904:0"
+    courses_working_on: "Courses you're working on"
+    completed_courses: "Completed courses"
+    all_courses: "All courses"
   project:
-    projects: "crwdns35035:0crwdne35035:0"
-    create: "crwdns35036:0crwdne35036:0"
-    create_a_project: 'crwdns35674:0crwdne35674:0'
-    new: "crwdns35037:0crwdne35037:0"
-    exit: "crwdns35041:0crwdne35041:0"
-    project_gallery: "crwdns84051:0crwdne84051:0"
-    publish: "crwdns83797:0crwdne83797:0"
-    unpublish: "crwdns83798:0crwdne83798:0"
-    share_title: crwdns35044:0crwdne35044:0
-    share_copy_link: "crwdns35045:0crwdne35045:0"
-    share_embed_description: "crwdns56529:0crwdne56529:0"
-    share_u13_warning: "crwdns57408:0crwdne57408:0"
-    embed: "crwdns56530:0crwdne56530:0"
-    advanced_share: "crwdns56531:0crwdne56531:0"
-    no_projects: "crwdns84223:0crwdne84223:0"
-    name: "crwdns35048:0crwdne35048:0"
-    updated: "crwdns35049:0crwdne35049:0"
-    project_type: "crwdns35050:0crwdne35050:0"
-    help_text: "crwdns35051:0crwdne35051:0"
-    need_help: "crwdns35052:0crwdne35052:0"
-    thumbnail_help: "crwdns84052:0crwdne84052:0"
-    saved: "crwdns35056:0crwdne35056:0"
-    not_saved: "crwdns35057:0crwdne35057:0"
-    view_all: 'crwdns35061:0crwdne35061:0'
-    edit_project: 'crwdns48358:0crwdne48358:0'
-    sharing_disabled: "crwdns91507:0crwdne91507:0"
+    projects: "Projects"
+    create: "Create Project"
+    create_a_project: 'Create a new project:'
+    new: "Create New"
+    exit: "Return to Course"
+    project_gallery: "Projects"
+    publish: "Publish"
+    unpublish: "Unpublish"
+    share_title: Share your project
+    share_copy_link: "Copy the link:"
+    share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
+    share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
+    embed: "Embed"
+    advanced_share: "Show advanced options"
+    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
+    name: "Name"
+    updated: "Updated"
+    project_type: "Project Type"
+    help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
+    need_help: "Try these courses to help you get started with your new project"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
+    saved: "Saved"
+    not_saved: "Not saved"
+    view_all: 'View My Projects'
+    edit_project: 'Edit Project'
+    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
-      tos: "crwdns48359:0crwdne48359:0"
-      policy_violation: "crwdns57409:0crwdne57409:0"
-      contact_us: "crwdns48360:0crwdne48360:0"
-      go_to_code_studio: 'crwdns48361:0crwdne48361:0'
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: 'Go to Code Studio'
       report_abuse_form:
-        intro: 'crwdns49670:0crwdne49670:0'
+        intro: 'If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.'
         validation:
-          email: 'crwdns49671:0crwdne49671:0'
-          age: 'crwdns49672:0crwdne49672:0'
-          abuse_type: 'crwdns49673:0crwdne49673:0'
-          abuse_detail: 'crwdns49674:0crwdne49674:0'
-        abusive_url: 'crwdns49675:0crwdne49675:0'
+          email: 'Please provide an email address'
+          age: 'Please specify an age'
+          abuse_type: 'Please answer how this content violates the Terms of Service'
+          abuse_detail: 'Please provide details regarding the content you are reporting'
+        abusive_url: 'URL of the content being reported'
         abuse_type:
-          question: 'crwdns49676:0%{link_start}crwdnd49676:0%{link_end}crwdne49676:0'
-          harassment: 'crwdns49677:0crwdne49677:0'
-          offensive: 'crwdns49678:0crwdne49678:0'
-          infringement: 'crwdns49679:0crwdne49679:0'
-          other: 'crwdns49680:0crwdne49680:0'
-        detail: 'crwdns49681:0crwdne49681:0'
-        acknowledge: 'crwdns49682:0%{link_start_privacy}crwdnd49682:0%{link_end}crwdnd49682:0%{link_start_tos}crwdnd49682:0%{link_end}crwdne49682:0'
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: 'Threats, cyberbullying, harassment'
+          offensive: 'Offensive content'
+          infringement: 'Copyright Infringement'
+          other: 'Other'
+        detail: 'Please provide as much detail as possible regarding the content you are reporting.'
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}.'
   peer_review:
     accepted:
-      name: 'crwdns56532:0crwdne56532:0'
-      description_markdown: 'crwdns2059908:0crwdne2059908:0'
+      name: 'Accepted'
+      description_markdown: '**Yes**, this submission **meets** the requirements'
     rejected:
-      name: 'crwdns56534:0crwdne56534:0'
-      description_markdown: 'crwdns2059910:0crwdne2059910:0'
+      name: 'Rejected'
+      description_markdown: '**No**, this submission **does not meet** the requirements'
     escalated:
-      name: 'crwdns56536:0crwdne56536:0'
-      description: 'crwdns56537:0crwdne56537:0'
-    instructor_feedback: 'crwdns56731:0crwdne56731:0'
-    peer_feedback: 'crwdns56732:0crwdne56732:0'
-    outdated: 'crwdns56733:0crwdne56733:0'
-    review_in_progress: 'crwdns57410:0crwdne57410:0'
-    link_to_submitted_review: 'crwdns57411:0crwdne57411:0'
-    reviews_unavailable: 'crwdns57412:0crwdne57412:0'
-    review_count: 'crwdns57413:0%{review_count}crwdne57413:0'
-    must_be_enrolled: 'crwdns57414:0crwdne57414:0'
-    no_reviews_at_this_moment_notice: 'crwdns57415:0crwdne57415:0'
-    review_submitted: 'crwdns57416:0crwdne57416:0'
-    review_new_submission: 'crwdns57417:0crwdne57417:0'
-    peer_review: 'crwdns2372994:0crwdne2372994:0'
+      name: 'Escalated'
+      description: 'I would like an instructor to review this submission'
+    instructor_feedback: 'Instructor Feedback'
+    peer_feedback: 'Peer Feedback'
+    outdated: 'This feedback was added for a previously submitted version'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
+    review_count: 'You must complete %{review_count} reviews for this unit'
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
+    peer_review: 'Peer Review'
   external_links:
-    disclaimer: crwdns57418:0crwdne57418:0
-    leaving_domain: crwdns57419:0crwdne57419:0
-    disclaimer_text: crwdns57420:0%{support_url}crwdne57420:0
+    disclaimer: Disclaimer
+    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
+    disclaimer_text: This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: 'crwdns56942:0crwdne56942:0'
-    capsule_title: 'crwdns56943:0crwdne56943:0'
-    capsule_desc: 'crwdns56944:0%{app_name}crwdnd56944:0%{url}crwdne56944:0'
-    instructions_headline: 'crwdns56945:0crwdne56945:0'
-    instructions: 'crwdns56946:0[here]crwdnd56946:0%{url}crwdne56946:0'
-    minecraft_name: 'crwdns56947:0crwdne56947:0'
-    starwars_blocks_name: 'crwdns56948:0crwdne56948:0'
-    starwars_javascript_name: 'crwdns56949:0crwdne56949:0'
-    download_message: 'crwdns56950:0%{app_name}crwdne56950:0'
-    download_in_Albanian: 'crwdns69458:0crwdne69458:0'
-    download_in_Arabic: 'crwdns69459:0crwdne69459:0'
-    download_in_Azerbaijani: 'crwdns69460:0crwdne69460:0'
-    download_in_Basque: 'crwdns69461:0crwdne69461:0'
-    download_in_Bosnian: 'crwdns69462:0crwdne69462:0'
-    download_in_Bulgarian: 'crwdns69463:0crwdne69463:0'
-    download_in_Catalan: 'crwdns69464:0crwdne69464:0'
-    download_in_Chinese-Taiwan: 'crwdns69465:0crwdne69465:0'
-    download_in_Chinese: 'crwdns69466:0crwdne69466:0'
-    download_in_Croatian: 'crwdns69467:0crwdne69467:0'
-    download_in_Czech: 'crwdns69468:0crwdne69468:0'
-    download_in_Danish: 'crwdns69469:0crwdne69469:0'
-    download_in_Dutch: 'crwdns69470:0crwdne69470:0'
-    download_in_English: 'crwdns69471:0crwdne69471:0'
-    download_in_Finnish: 'crwdns69472:0crwdne69472:0'
-    download_in_French: 'crwdns69473:0crwdne69473:0'
-    download_in_German: 'crwdns69474:0crwdne69474:0'
-    download_in_Greek: 'crwdns69475:0crwdne69475:0'
-    download_in_Hebrew: 'crwdns69476:0crwdne69476:0'
-    download_in_Hungarian: 'crwdns69477:0crwdne69477:0'
-    download_in_Icelandic: 'crwdns69478:0crwdne69478:0'
-    download_in_Indonesian: 'crwdns69479:0crwdne69479:0'
-    download_in_Irish: 'crwdns69480:0crwdne69480:0'
-    download_in_Italian: 'crwdns69481:0crwdne69481:0'
-    download_in_Japanese: 'crwdns69482:0crwdne69482:0'
-    download_in_Korean: 'crwdns69483:0crwdne69483:0'
-    download_in_Latvian: 'crwdns69484:0crwdne69484:0'
-    download_in_Lithuanian: 'crwdns69485:0crwdne69485:0'
-    download_in_Norwegian: 'crwdns69486:0crwdne69486:0'
-    download_in_Norwegian-Nynorsk: 'crwdns69487:0crwdne69487:0'
-    download_in_Polish: 'crwdns69488:0crwdne69488:0'
-    download_in_Portuguese-Brazil: 'crwdns69489:0crwdne69489:0'
-    download_in_Portuguese: 'crwdns69490:0crwdne69490:0'
-    download_in_Romanian: 'crwdns69491:0crwdne69491:0'
-    download_in_Russian: 'crwdns69492:0crwdne69492:0'
-    download_in_Serbian: 'crwdns69493:0crwdne69493:0'
-    download_in_Slovenian: 'crwdns69494:0crwdne69494:0'
-    download_in_Spanish: 'crwdns69495:0crwdne69495:0'
-    download_in_Swedish: 'crwdns69496:0crwdne69496:0'
-    download_in_Turkish: 'crwdns69497:0crwdne69497:0'
-    download_in_Ukrainian: 'crwdns69498:0crwdne69498:0'
-    download_in_Vietnamese: 'crwdns69499:0crwdne69499:0'
-    windows: 'crwdns67952:0crwdne67952:0'
-    mac: 'crwdns56954:0crwdne56954:0'
+    title: 'Hour of Code downloads'
+    capsule_title: 'Do you have Internet?'
+    capsule_desc: 'Use the online, web-based [%{app_name}](%{url}).'
+    instructions_headline: 'No Internet?'
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time [here](%{url}).'
+    minecraft_name: 'Minecraft Hour Of Code'
+    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
+    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    download_message: 'Download %{app_name} for offline use (136MB)'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
+    windows: 'Windows (64-bit)'
+    mac: 'Mac OS X'
   plc:
     preview_assignments:
-      content_focus_header: 'crwdns56996:0crwdne56996:0'
-      practice_focus_header: 'crwdns56997:0crwdne56997:0'
-      content_focus_strong: 'crwdns56998:0crwdne56998:0'
-      practice_focus_strong: 'crwdns56999:0crwdne56999:0'
-      choose_different_focus_area: 'crwdns57000:0crwdne57000:0'
-      other_focus_areas_available: 'crwdns57001:0crwdne57001:0'
-      confirm_focus_areas: 'crwdns57002:0crwdne57002:0'
-  locked_stage: 'crwdns58520:0crwdne58520:0'
-  hidden_stage: "crwdns60152:0crwdne60152:0"
-  hidden_script: "crwdns91104:0crwdne91104:0"
-  no_course_access_student: "crwdns2356840:0crwdne2356840:0"
-  no_course_access_teacher: "crwdns2356842:0crwdne2356842:0"
-  no_script_access_student: "crwdns401134:0crwdne401134:0"
-  no_script_access_teacher: "crwdns401136:0crwdne401136:0"
-  return_unit_overview: 'crwdns91105:0crwdne91105:0'
-  return_course_overview: 'crwdns60153:0crwdne60153:0'
-  view_all_units: 'crwdns84693:0crwdne84693:0'
-  view_teacher_guide: 'crwdns304594:0crwdne304594:0'
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
+  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
+  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
+  no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
+  no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
+  no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
+  return_unit_overview: 'Go to unit overview'
+  return_course_overview: 'Go to course overview'
+  view_all_units: 'View all units'
+  view_teacher_guide: 'View teacher guide'
   pd:
     survey:
-      number_teachers: 'crwdns68607:0crwdne68607:0'
-      response_count: 'crwdns68608:0crwdne68608:0'
-      facilitator_effectiveness: 'crwdns68609:0crwdne68609:0'
-      teacher_engagement: 'crwdns68610:0crwdne68610:0'
-      overall_success: 'crwdns68611:0crwdne68611:0'
-      how_much_learned_s: 'crwdns68612:0crwdne68612:0'
-      how_motivating_s: 'crwdns68613:0crwdne68613:0'
-      how_clearly_presented_s: 'crwdns68614:0crwdne68614:0'
-      how_interesting_s: 'crwdns68615:0crwdne68615:0'
-      how_often_given_feedback_s: 'crwdns68616:0crwdne68616:0'
-      how_comfortable_asking_questions_s: 'crwdns68617:0crwdne68617:0'
-      how_often_taught_new_things_s: "crwdns68618:0crwdne68618:0"
-      how_much_participated_s: 'crwdns68619:0crwdne68619:0'
-      how_often_talk_about_ideas_outside_s: 'crwdns68620:0crwdne68620:0'
-      how_often_lost_track_of_time_s: 'crwdns68621:0crwdne68621:0'
-      how_excited_before_s: 'crwdns68622:0crwdne68622:0'
-      overall_how_interested_s: 'crwdns68623:0crwdne68623:0'
-      more_prepared_than_before_s: 'crwdns68624:0crwdne68624:0'
-      know_where_to_go_for_help_s: 'crwdns68625:0crwdne68625:0'
-      suitable_for_my_experience_s: 'crwdns68626:0crwdne68626:0'
-      would_recommend_s: 'crwdns68627:0crwdne68627:0'
-      part_of_community_s: 'crwdns68628:0crwdne68628:0'
-      things_facilitator_did_well_s: 'crwdns68629:0crwdne68629:0'
-      things_facilitator_could_improve_s: 'crwdns68630:0crwdne68630:0'
-      things_you_liked_s: 'crwdns68631:0crwdne68631:0'
-      things_you_would_change_s: 'crwdns68632:0crwdne68632:0'
-      anything_else_s: 'crwdns68633:0crwdne68633:0'
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
     form_labels:
-      first_name: 'crwdns136835:0crwdne136835:0'
-      first_name_preferred: 'crwdns136836:0crwdne136836:0'
-      last_name: 'crwdns136837:0crwdne136837:0'
-      email: 'crwdns136838:0crwdne136838:0'
-      email_alternate: 'crwdns136839:0crwdne136839:0'
-      gender: 'crwdns136840:0crwdne136840:0'
-      school_name: 'crwdns136841:0crwdne136841:0'
-      school_city: 'crwdns136842:0crwdne136842:0'
-      school_country: 'crwdns136843:0crwdne136843:0'
-      colombian_school_city: 'crwdns2462256:0crwdne2462256:0'
-      colombian_school_department: 'crwdns2462258:0crwdne2462258:0'
-      colombian_school_municipality: 'crwdns2462260:0crwdne2462260:0'
-      colombian_school_name: 'crwdns2462262:0crwdne2462262:0'
-      ages: 'crwdns136844:0crwdne136844:0'
-      subjects: 'crwdns136845:0crwdne136845:0'
-      resources: 'crwdns136846:0crwdne136846:0'
-      robotics: 'crwdns136847:0crwdne136847:0'
-      workshop_organizer: 'crwdns136848:0crwdne136848:0'
-      workshop_facilitator: 'crwdns136849:0crwdne136849:0'
-      workshop_course: 'crwdns136850:0crwdne136850:0'
-      email_opt_in: 'crwdns136851:0crwdne136851:0'
-      legal_opt_in: 'crwdns136852:0crwdne136852:0'
+      first_name: 'First Name'
+      first_name_preferred: 'Preferred First Name'
+      last_name: 'Last Name'
+      email: 'Email'
+      email_alternate: 'Alternate Email'
+      gender: 'Gender Identity'
+      school_name: 'School Name'
+      school_city: 'School City'
+      school_country: 'School Country'
+      colombian_school_city: 'School City'
+      colombian_school_department: 'School Department'
+      colombian_school_municipality: 'School Municipality'
+      colombian_school_name: 'School Name'
+      ages: 'Which age(s) do you teach this year?'
+      subjects: 'Which subject(s) do you teach this year?'
+      resources: 'Which of the following CS education resources do you use?'
+      robotics: 'Which of the following robotics resources do you use?'
+      workshop_organizer: 'Workshop Organizer'
+      workshop_facilitator: 'Workshop Facilitator'
+      workshop_course: 'Workshop Course'
+      email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
     form_entries:
       gender:
-        male: 'crwdns136853:0crwdne136853:0'
-        female: 'crwdns136854:0crwdne136854:0'
-        non_binary: 'crwdns136855:0crwdne136855:0'
-        not_listed: 'crwdns136856:0crwdne136856:0'
-        none: 'crwdns136857:0crwdne136857:0'
+        male: 'Male'
+        female: 'Female'
+        non_binary: 'Non-binary'
+        not_listed: 'Preferred term not listed'
+        none: 'Prefer not to answer'
       school_country:
-        canada: 'crwdns136858:0crwdne136858:0'
-        chile: 'crwdns136859:0crwdne136859:0'
-        colombia: 'crwdns2462264:0crwdne2462264:0'
-        israel: 'crwdns136860:0crwdne136860:0'
-        malaysia: 'crwdns136861:0crwdne136861:0'
-        mexico: 'crwdns136862:0crwdne136862:0'
-        thailand: 'crwdns136863:0crwdne136863:0'
+        canada: 'Canada'
+        chile: 'Chile'
+        colombia: 'Colombia'
+        israel: 'Israel'
+        malaysia: 'Malaysia'
+        mexico: 'Mexico'
+        thailand: 'Thailand'
       ages:
-        ages_under_6: 'crwdns136864:0crwdne136864:0'
-        ages_7_8: 'crwdns136865:0crwdne136865:0'
-        ages_9_10: 'crwdns136866:0crwdne136866:0'
-        ages_11_12: 'crwdns136867:0crwdne136867:0'
-        ages_13_14: 'crwdns136868:0crwdne136868:0'
-        ages_15_16: 'crwdns136869:0crwdne136869:0'
-        ages_17_18: 'crwdns136870:0crwdne136870:0'
-        ages_19_over: 'crwdns136871:0crwdne136871:0'
+        ages_under_6: '< 6 years old'
+        ages_7_8: '7-8 years old'
+        ages_9_10: '9-10 years old'
+        ages_11_12: '11-12 years old'
+        ages_13_14: '13-14 years old'
+        ages_15_16: '15-16 years old'
+        ages_17_18: '17-18 years old'
+        ages_19_over: '19+ years old'
       subjects:
-        cs: 'crwdns136872:0crwdne136872:0'
-        ict: 'crwdns136873:0crwdne136873:0'
-        math: 'crwdns136874:0crwdne136874:0'
-        science: 'crwdns136875:0crwdne136875:0'
-        history: 'crwdns136876:0crwdne136876:0'
-        la: 'crwdns136877:0crwdne136877:0'
-        efl: 'crwdns136878:0crwdne136878:0'
-        music: 'crwdns136879:0crwdne136879:0'
-        art: 'crwdns136880:0crwdne136880:0'
-        other: "crwdns136881:0crwdne136881:0"
+        cs: 'Computer Science'
+        ict: 'ICT'
+        math: 'Math'
+        science: 'Science'
+        history: 'History / Social Studies'
+        la: 'Language Arts'
+        efl: 'English as a Foreign Language'
+        music: 'Music'
+        art: 'Art'
+        other: "Other:"
       resources:
-        bootstrap: 'crwdns136882:0crwdne136882:0'
-        codecademy: 'crwdns136883:0crwdne136883:0'
-        csfirst: 'crwdns136884:0crwdne136884:0'
-        khan: 'crwdns136885:0crwdne136885:0'
-        kodable: 'crwdns136886:0crwdne136886:0'
-        lightbot: 'crwdns136887:0crwdne136887:0'
-        scratch: 'crwdns136888:0crwdne136888:0'
-        tynker: 'crwdns136889:0crwdne136889:0'
-        other: "crwdns136890:0crwdne136890:0"
+        bootstrap: 'Bootstrap'
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
+        khan: 'Khan Academy'
+        kodable: 'Kodable'
+        lightbot: 'Lightbot'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "Other:"
       robotics:
-        grok: 'crwdns136891:0crwdne136891:0'
-        kodable: 'crwdns136892:0crwdne136892:0'
-        lego: 'crwdns136893:0crwdne136893:0'
-        microbit: 'crwdns136894:0crwdne136894:0'
-        ozobot: 'crwdns136895:0crwdne136895:0'
-        sphero: 'crwdns136896:0crwdne136896:0'
-        raspberry: 'crwdns136897:0crwdne136897:0'
-        wonder: 'crwdns136898:0crwdne136898:0'
-        other: "crwdns136899:0crwdne136899:0"
+        grok: 'Grok Learning'
+        kodable: 'Kodable'
+        lego: 'LEGO Education'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        wonder: 'Wonder Workshop'
+        other: "Other:"
       workshop_course:
-        csf_af: 'crwdns136900:0crwdne136900:0'
-        csf_express: 'crwdns136901:0crwdne136901:0'
-        csd: 'crwdns136947:0crwdne136947:0'
-        csp: 'crwdns136948:0crwdne136948:0'
-        not_applicable: "crwdns2461832:0crwdne2461832:0"
+        csf_af: 'CS Fundamentals (Courses A-F)'
+        csf_express: 'CS Fundamentals (Pre-Express or Express)'
+        csd: 'CS Discoveries'
+        csp: 'CS Principles'
+        not_applicable: "Not applicable"
       email_opt_in:
-        opt_in_yes: 'crwdns136902:0crwdne136902:0'
-        opt_in_no: 'crwdns136903:0crwdne136903:0'
+        opt_in_yes: 'Yes'
+        opt_in_no: 'No'
     international_opt_in:
-      title: 'crwdns136904:0crwdne136904:0'
-      intro: "crwdns136905:0crwdne136905:0"
-      instructions: "crwdns136906:0crwdne136906:0"
-      thanks_markdown: "crwdns2059912:0%{support_email_url}crwdnd2059912:0%{teacher_forum_url}crwdne2059912:0"
-      facilitator_not_listed: "crwdns2461834:0crwdne2461834:0"
-      facilitator_not_applicable: "crwdns2461836:0crwdne2461836:0"
-      organizer_not_listed: "crwdns2461838:0crwdne2461838:0"
+      title: 'Workshop Attendance'
+      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
+      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
+      thanks_markdown: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at [support@code.org](%{support_email_url}) or by posting on the [teacher forum](%{teacher_forum_url})!"
+      facilitator_not_listed: "My facilitator is not listed"
+      facilitator_not_applicable: "Not applicable"
+      organizer_not_listed: "My organizer is not listed"
     logged_out:
-      heading: 'crwdns136908:0crwdne136908:0'
-      body: 'crwdns136909:0%{url}crwdne136909:0'
+      heading: 'Thanks for your interest in the Professional Learning Program!'
+      body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
     not_teacher:
-      body_markdown: 'crwdns2059914:0%{user_settings}crwdne2059914:0'
-      more_markdown: 'crwdns2059916:0%{pl_overview}crwdne2059916:0'
+      body_markdown: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or [go to your user settings](%{user_settings}) to upgrade your account from student to teacher.'
+      more_markdown: 'If you’d like more information about the program before you start your application, please check out the [Professional Learning Program overview](%{pl_overview}).'
     no_teacher_email:
-      body_markdown: 'crwdns2059918:0%{user_registration}crwdne2059918:0'
-  courses_category: 'crwdns85158:0crwdne85158:0'
+      body_markdown: 'Your account doesn’t have an email address. Please [visit your account settings](%{user_registration}) to add your email address before completing this form.'
+  courses_category: 'Full Courses'
   cookie_banner:
-    message: 'crwdns134618:0crwdne134618:0'
-    more_information: "crwdns134619:0crwdne134619:0"
-    accept: 'crwdns134620:0crwdne134620:0'
-  page_not_found_title: "crwdns2067158:0crwdne2067158:0"
-  page_not_found_header: 'crwdns2067160:0crwdne2067160:0'
-  page_not_found_description: "crwdns2067162:0crwdne2067162:0"
-  page_not_found_button: "crwdns2067164:0crwdne2067164:0"
-  copy: 'crwdns2363138:0crwdne2363138:0'
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'I agree'
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"
+  copy: 'Copy'
   maker:
     google_oauth:
-      login_with_google: 'crwdns2363140:0crwdne2363140:0'
-      enter_code: 'crwdns2363142:0crwdne2363142:0'
-      copy_code: 'crwdns2363144:0crwdne2363144:0'
-      error_token_expired: 'crwdns2364136:0crwdne2364136:0'
-      error_wrong_provider: 'crwdns2364138:0crwdne2364138:0'
-      error_invalid_user: 'crwdns2364140:0crwdne2364140:0'
-      error_no_code: 'crwdns2364142:0crwdne2364142:0'
+      login_with_google: 'Login to the Maker App with Google'
+      enter_code: 'Please enter the code provided when you logged in via Google on your default browser.'
+      copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
+      error_token_expired: 'Token has expired. Please log in again for a new token.'
+      error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_invalid_user: 'Invalid user id. Please try logging in again.'
+      error_no_code: 'Please enter your login code.'
   parent_email_banner:
-    text: "crwdns2370956:0crwdne2370956:0"
-    link_your_email: "crwdns2370958:0crwdne2370958:0"
-    not_now: "crwdns2370960:0crwdne2370960:0"
+    text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
+    link_your_email: "Link your email"
+    not_now: "Not now"
   behaviors:
-    this_sprite: "crwdns2465554:0crwdne2465554:0"
-  unit_prefix: "crwdns2465940:0%{n}crwdne2465940:0"
+    this_sprite: "this sprite"
+  unit_prefix: "Unit %{n}"
