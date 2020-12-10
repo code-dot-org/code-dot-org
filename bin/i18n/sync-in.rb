@@ -223,6 +223,7 @@ def localize_level_content
     end
   end
 
+  FileUtils.mkdir_p(File.join(I18N_SOURCE_DIR, "dashboard"))
   File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.yml"), 'w') do |file|
     # Format strings for consumption by the rails i18n engine
     formatted_data = {
@@ -234,6 +235,7 @@ def localize_level_content
     }
     file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
   end
+  FileUtils.mkdir_p(File.join(I18N_SOURCE_DIR, "dashboard"))
   File.open(File.join(I18N_SOURCE_DIR, "dashboard/progressions.yml"), 'w') do |file|
     # Format strings for consumption by the rails i18n engine
     formatted_data = {
