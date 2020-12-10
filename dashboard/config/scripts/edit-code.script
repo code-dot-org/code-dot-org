@@ -29,7 +29,6 @@ concepts 'sequence'
 level 'blockly:ArtistEC:ec_1_10'
 
 lesson 'Play Lab', display_name: 'Play Lab'
-skin 'studio'
 concepts 'sequence'
 level 'blockly:StudioEC:ec_sandbox'
 
