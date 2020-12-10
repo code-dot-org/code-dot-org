@@ -3756,6 +3756,7 @@ levels.js_hoc2015_event_free = {
 };
 
 levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right, {
+  skinId: 'hoc2015x',
   instructionsImportant: true,
   editCode: false,
   enableShowCode: true,
@@ -3784,6 +3785,7 @@ levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right, {
 });
 
 levels.hoc2015_blockly_2 = extend(levels.js_hoc2015_move_right_down, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3792,6 +3794,7 @@ levels.hoc2015_blockly_2 = extend(levels.js_hoc2015_move_right_down, {
 });
 
 levels.hoc2015_blockly_3 = extend(levels.js_hoc2015_move_backtrack, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3800,6 +3803,7 @@ levels.hoc2015_blockly_3 = extend(levels.js_hoc2015_move_backtrack, {
 });
 
 levels.hoc2015_blockly_4 = extend(levels.js_hoc2015_move_diagonal, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   callouts: null,
@@ -3809,6 +3813,7 @@ levels.hoc2015_blockly_4 = extend(levels.js_hoc2015_move_diagonal, {
 });
 
 levels.hoc2015_blockly_5 = extend(levels.js_hoc2015_move_around, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
@@ -3822,6 +3827,7 @@ levels.hoc2015_blockly_5 = extend(levels.js_hoc2015_move_around, {
 });
 
 levels.hoc2015_blockly_6 = extend(levels.js_hoc2015_move_finale, {
+  skinId: 'hoc2015x',
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveSouth,
@@ -3835,6 +3841,7 @@ levels.hoc2015_blockly_6 = extend(levels.js_hoc2015_move_finale, {
 });
 
 levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
+  skinId: 'hoc2015',
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'
@@ -3883,9 +3890,12 @@ levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
 
 // exactly clone this level so we can insert it into scripts without a
 // preceding video.
-levels.hoc2015_blockly_7_no_video = extend(levels.hoc2015_blockly_7);
+levels.hoc2015_blockly_7_no_video = extend(levels.hoc2015_blockly_7, {
+  skinId: 'hoc2015'
+});
 
 levels.hoc2015_blockly_8 = extend(levels.js_hoc2015_event_four_items, {
+  skinId: 'hoc2015',
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'
@@ -3899,6 +3909,7 @@ levels.hoc2015_blockly_8 = extend(levels.js_hoc2015_event_four_items, {
 });
 
 levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
+  skinId: 'hoc2015',
   editCode: false,
   msgStringOverrides: {
     whenTouchGoal: 'whenGetCharacterRebelPilot'
@@ -3947,6 +3958,7 @@ levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
 });
 
 levels.hoc2015_blockly_10 = extend(levels.js_hoc2015_win_lose, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks: '',
   toolbox: tb(
@@ -3963,6 +3975,7 @@ levels.hoc2015_blockly_10 = extend(levels.js_hoc2015_win_lose, {
 });
 
 levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -4017,6 +4030,7 @@ levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
 });
 
 levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -4080,6 +4094,7 @@ levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
 });
 
 levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -4120,6 +4135,7 @@ levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
 });
 
 levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
+  skinId: 'hoc2015',
   editCode: false,
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"> \
@@ -4175,6 +4191,7 @@ levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
 });
 
 levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
+  skinId: 'hoc2015',
   editCode: false,
   msgStringOverrides: {
     moveSprite: 'goSprite'
