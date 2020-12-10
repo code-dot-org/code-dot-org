@@ -2,7 +2,6 @@ hideable_lessons true
 lesson_extras_available true
 
 lesson 'Jigsaw', display_name: 'Jigsaw'
-skin 'jigsaw'
 level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3'
 
