@@ -312,6 +312,28 @@ module Services
       assert_equal original_script_level_ids.slice(1, original_script_level_ids.length), script.script_levels.map(&:id)
     end
 
+    test 'seed deletes lessons_resources but not resources' do
+      skip 'get_script_and_json_with_change_and_rollback not compatible with has_and_belongs_to_many'
+
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.resources.count
+        lesson.resources.delete(lesson.resources.first)
+        assert_equal 1, lesson.resources.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script.reload
+
+      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      expected_counts = original_counts.clone
+      expected_counts['LessonsResource'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     def frozen_script_levels_with_levels(script)
       script_levels = script.script_levels.to_a
       script_levels.map(&:levels).map(&:length)
