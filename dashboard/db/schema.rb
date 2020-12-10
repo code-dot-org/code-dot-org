@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_190534) do
+ActiveRecord::Schema.define(version: 2020_12_09_073557) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -557,7 +557,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_190534) do
   create_table "lessons_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.integer "resource_id", null: false
-    t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id"
+    t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id", unique: true
     t.index ["resource_id", "lesson_id"], name: "index_lessons_resources_on_resource_id_and_lesson_id"
   end
 
@@ -1838,17 +1838,6 @@ ActiveRecord::Schema.define(version: 2020_12_07_190534) do
     t.index ["key", "locale"], name: "index_videos_on_key_and_locale", unique: true
   end
 
-  add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
-  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
-  add_foreign_key "census_inaccuracy_investigations", "users"
-  add_foreign_key "census_overrides", "schools"
-  add_foreign_key "census_submission_form_maps", "census_submissions"
-  add_foreign_key "census_summaries", "schools"
-  add_foreign_key "circuit_playground_discount_applications", "schools"
-  add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "ib_school_codes", "schools"
-  add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "other_curriculum_offerings", "schools"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"

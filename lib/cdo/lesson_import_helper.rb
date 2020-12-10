@@ -42,7 +42,7 @@ module LessonImportHelper
       lesson.objectives = cb_lesson_data['objectives'].map do |o|
         Objective.new(description: o["name"])
       end
-      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson.id)
+      lesson.lesson_activities = create_lesson_activities(cb_lesson_data['activities'], lesson_levels, lesson)
       lesson.resources = create_lesson_resources(cb_lesson_data['resources'], course_version_id)
       lesson.script_levels = []
     end
@@ -105,8 +105,14 @@ module LessonImportHelper
     position = 1
     sorted_matches.each do |match|
       activity_section = nil
-      if match[:type] == 'skippable' || match[:type] == 'tip'
+      if match[:type] == 'skippable'
         next
+      elsif match[:type] == 'tip'
+        activity_section = ActivitySection.new
+        key = match[:match][3]&.strip || "#{match[:match][1]}-0"
+        activity_section.tips = [create_tip(key, match[:match][1] || "tip", match[:match][4])]
+        activity_section.key ||= SecureRandom.uuid
+        match[:activity_section_key] = activity_section.key
       elsif match[:type] == 'name'
         name = match[:match][1]
         next
@@ -141,40 +147,65 @@ module LessonImportHelper
     end
 
     # If there are any tips that didn't have a match, put them at the end
-    # TODO ideally, we'd put them in the spot they were written.
-    puts "Adding unpaired tips at the end" if tip_match_map.any? {|_, a| a.count > 0}
-    tip_match_map.each do |key, tip_list|
+    tip_match_map.each do |_, tip_list|
       tip_list.each do |tip|
-        match = tip[:match]
-        activity_section = ActivitySection.new
-        activity_section.position = sections.length + 1
-        activity_section.key ||= SecureRandom.uuid
-        activity_section.tips = [create_tip(key, match[1] || "tip", match[4] || "no markdown found")]
-        sections.push(activity_section)
+        if tip[:paired]
+          sections.reject! {|s| s.key == tip[:activity_section_key]}
+        end
       end
+    end
+
+    final_position = 1
+    sections.each do |section|
+      section.position = final_position
+      final_position += 1
     end
 
     sections
   end
 
-  def self.create_lesson_activities(activities_data, levels, lesson_id)
+  # Adds an announcement for virtual lesson modifications to the lesson. Returns true if
+  # an announcement was added, false otherwise.
+  def self.convert_virtual_lesson_modification_activity_to_announcement(activity_data, lesson)
+    return false unless activity_data['name'] == 'Lesson Modifications'
+    # Virtual lesson modifications are in google docs, so strip out the docs link
+    url_match = /.+[vV]irtual.+\((https:\/\/docs.google.com.+)\).+/.match(activity_data['content'])
+    return false unless url_match
+    announcement = {
+      notice: 'Lesson Modifications',
+      details: 'Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.',
+      link: url_match[1],
+      type: 'information',
+      visibility: 'Teacher-only'
+    }
+    lesson.announcements ||= []
+    lesson.announcements.push(announcement)
+    lesson.save!
+    return true
+  end
+
+  def self.create_lesson_activities(activities_data, levels, lesson)
     activities = activities_data.map.with_index(1) do |a, i|
-      lesson_activity = LessonActivity.new
-      lesson_activity.name = a['name']
-      lesson_activity.duration = a['duration'].split[0].to_i
-      lesson_activity.lesson_id = lesson_id
-      lesson_activity.key = SecureRandom.uuid
-      lesson_activity.position = i
-      lesson_activity.save!
-      lesson_activity.reload
-      lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
-      lesson_activity
-    end
+      if a['name'] == 'Lesson Modifications' && convert_virtual_lesson_modification_activity_to_announcement(a, lesson)
+        nil
+      else
+        lesson_activity = LessonActivity.new
+        lesson_activity.name = a['name']
+        lesson_activity.duration = a['duration'].split[0].to_i
+        lesson_activity.lesson_id = lesson.id
+        lesson_activity.key = SecureRandom.uuid
+        lesson_activity.position = i
+        lesson_activity.save!
+        lesson_activity.reload
+        lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)
+        lesson_activity
+      end
+    end.compact
 
     # Create a lesson with all the levels in them
     # TODO use the [code-studio] syntax from CB instead
     unless levels.empty?
-      activities.push(create_activity_with_levels(levels, lesson_id, activities.length + 1))
+      activities.push(create_activity_with_levels(levels, lesson.id, activities.length + 1))
     end
     activities.flatten
   end
@@ -271,6 +302,12 @@ module LessonImportHelper
       activity_section.description = unindent_markdown(description).strip
     else
       activity_section = create_activity_section_with_tip(tip_link_matches[0], tip_match_map)
+      # Sometimes the activity section created won't contain everything it needs to.
+      # Check if the tip link match equals the remark markdown. If not, we should add
+      # the rest of the content.
+      if tip_link_matches[0][0].length < match[1].strip.length
+        activity_section.description += unindent_markdown(match[1].delete_prefix(tip_link_matches[0][0]))
+      end
     end
     activity_section.remarks = true
     activity_section
@@ -327,10 +364,11 @@ module LessonImportHelper
     if tip_link_match[1] == 'slide'
       return create_slide_activity_section(tip_link_match[3], tip_match_map)
     end
-    tip = tip_match_map[tip_link_match[2]]&.shift
+    tip = tip_match_map[tip_link_match[2]]&.detect {|t| !t[:paired]}
     unless tip
       return ActivitySection.new(description: tip_link_match[3].strip)
     end
+    tip[:paired] = true
     tip_match = tip[:match]
     activity_section = ActivitySection.new
 
