@@ -3,6 +3,7 @@ require 'cdo/aws/s3'
 
 class Api::V1::MlModelsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  before_action :authenticate_user!
 
   # POST api/v1/ml_models/save
   # Save a trained ML model to S3 and a reference to it in the database.
@@ -15,6 +16,10 @@ class Api::V1::MlModelsController < ApplicationController
     )
     upload_to_s3(model_id, params["ml_model"].to_json)
     render json: "hooray!"
+  end
+
+  def user_ml_model_names
+    UserMlModel.where(user_id: current_user.id).pluck(:model_id, :name)
   end
 
   private
