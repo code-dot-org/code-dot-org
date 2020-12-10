@@ -141,6 +141,24 @@ export default class AnimationPreview extends React.Component {
       marginLeft: xOffset,
       marginTop: yOffset
     };
+    const backgroundImageStyle = {
+      borderRadius: 10,
+      height: '100%'
+    };
+
+    if (
+      this.props.animationProps &&
+      this.props.animationProps.categories &&
+      this.props.animationProps.categories.includes('backgrounds')
+    ) {
+      return (
+        <img
+          onLoad={this.props.onPreviewLoad}
+          src={this.props.sourceUrl || EMPTY_IMAGE}
+          style={backgroundImageStyle}
+        />
+      );
+    }
 
     return (
       <div
