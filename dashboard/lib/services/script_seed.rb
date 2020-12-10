@@ -138,6 +138,10 @@ module Services
         seed_context = SeedContext.new
 
         seed_context.script = import_script(script_data)
+
+        # course version must be set before resources are imported.
+        CourseOffering.add_course_offering(seed_context.script)
+
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)
         seed_context.lesson_activities = import_lesson_activities(lesson_activities_data, seed_context)
@@ -158,7 +162,6 @@ module Services
         seed_context.resources = import_resources(resources_data, seed_context)
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
 
-        CourseOffering.add_course_offering(seed_context.script)
         seed_context.script
       end
     end
