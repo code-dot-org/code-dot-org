@@ -17,12 +17,14 @@ const styles = {
 
 class FoormEditorPreview extends Component {
   static propTypes = {
-    formHasError: PropTypes.bool,
     libraryError: PropTypes.bool,
     libraryErrorMessage: PropTypes.string,
     formPreviewQuestions: PropTypes.object,
     formKey: PropTypes.number,
-    surveyData: PropTypes.object
+    surveyData: PropTypes.object,
+
+    // Populated by Redux
+    formHasError: PropTypes.bool
   };
 
   render() {
