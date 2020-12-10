@@ -16090,8 +16090,8 @@ en:
                 In this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.
             Random Numbers:
               name: Random Numbers
-              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
-              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They them learn how to update variables during a program.  Combining all of these skills students draw randomized images."
+              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
+              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program.  Combining all of these skills students draw randomized images."
             Sprites and Animations:
               name: Sprites and Animations
               description_student: "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\r\n\r\nIn order to create more interesting and detailed images, the class is introduced to the sprite object. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information.  The class then learns how to assign each sprite an image, which will greatly increase the complexity of what can be drawn on the screen. "
@@ -16212,6 +16212,7 @@ en:
               description_teacher: "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games.  After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio."
             Sprites:
               name: Sprites
+          name: csd3-2020
         moneppo-1:
           lesson_groups: {}
           lessons: {}
@@ -18013,8 +18014,8 @@ en:
                 In this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.
             Random Numbers:
               name: Random Numbers
-              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
-              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They them learn how to update variables during a program.  Combining all of these skills students draw randomized images."
+              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
+              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program.  Combining all of these skills students draw randomized images."
             Sprites:
               name: Sprites
               description_student: ''
@@ -18620,8 +18621,8 @@ en:
             Random Numbers:
               key: Random Numbers
               name: Random Numbers
-              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
-              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They them learn how to update variables during a program.  Combining all of these skills students draw randomized images."
+              description_student: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nThe class is introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program and use those skills to draw randomized images."
+              description_teacher: "**Question of the Day: How can we make our programs behave differently each time they are run?** \r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs.  They then learn how to update variables during a program.  Combining all of these skills students draw randomized images."
             Sprites:
               key: Sprites
               name: Sprites
