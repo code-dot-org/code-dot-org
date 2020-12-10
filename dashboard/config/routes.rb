@@ -692,6 +692,7 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
       post 'ml_models/save', to: 'ml_models#save'
+      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
