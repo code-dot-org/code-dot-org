@@ -1,7 +1,7 @@
 /* global p5 */
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
-import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
+import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 
