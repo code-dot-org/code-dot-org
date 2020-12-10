@@ -1,9 +1,9 @@
 /* global p5 */
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {commands as actionCommands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
-import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
+import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 
 describe('Sprite Commands', () => {
   let p5Wrapper, makeSprite, animation;

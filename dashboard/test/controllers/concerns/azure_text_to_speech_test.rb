@@ -49,6 +49,36 @@ class AzureTextToSpeechTest < ActionController::TestCase
     assert_nil AzureTextToSpeech.get_token
   end
 
+  test 'get_speech: returns text as speech on success' do
+    expected_speech = 'string-of-bytes'
+    AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
+    AzureTextToSpeech.stubs(:ssml).returns('<speak>hi</speak>')
+    stub_request(:post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1").
+      with(headers: {'Authorization' => "Bearer #{@mock_token}"}).
+      to_return(status: 200, body: expected_speech)
+    Honeybadger.expects(:notify).never
+
+    assert_equal expected_speech, AzureTextToSpeech.get_speech('hi', 'female', 'en-US')
+  end
+
+  test 'get_speech: returns nil if token is nil' do
+    AzureTextToSpeech.stubs(:get_token).returns(nil)
+    Honeybadger.expects(:notify).never
+
+    assert_nil AzureTextToSpeech.get_speech('hi', 'female', 'en-US')
+    assert_requested :post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1", times: 0
+  end
+
+  test 'get_speech: returns nil on error' do
+    AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
+    AzureTextToSpeech.stubs(:ssml).returns('<speak>hi</speak>')
+    stub_request(:post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1").
+      to_raise(ArgumentError)
+    Honeybadger.expects(:notify).once
+
+    assert_nil AzureTextToSpeech.get_speech('hi', 'female', 'en-US')
+  end
+
   test 'get_voices: caches and returns voices array on success' do
     AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
     Honeybadger.expects(:notify).never
@@ -88,5 +118,17 @@ class AzureTextToSpeechTest < ActionController::TestCase
       to_raise(ArgumentError)
 
     assert_nil AzureTextToSpeech.get_voices
+  end
+
+  test 'get_voice_by: returns voice name if exists for given locale + gender' do
+    AzureTextToSpeech.stubs(:get_voices).returns(
+      {
+        'Deutsch' => {'female' => 'de-DE-HeddaRUS', 'languageCode' => 'de-DE', 'male' => 'de-DE-Stefan'}
+      }
+    )
+
+    assert_equal 'de-DE-HeddaRUS', AzureTextToSpeech.get_voice_by('de-DE', 'female')
+    assert_equal 'de-DE-Stefan', AzureTextToSpeech.get_voice_by('de-DE', 'male')
+    assert_nil AzureTextToSpeech.get_voice_by('en-US', 'male')
   end
 end
