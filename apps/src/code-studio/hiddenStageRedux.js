@@ -58,7 +58,9 @@ export default function reducer(state = new HiddenState(), action) {
     const {hiddenStagesPerSection, hideableStagesAllowed} = action;
 
     // Iterate through each section
-    const sectionIds = Object.keys(hiddenStagesPerSection);
+    const sectionIds = Object.keys(hiddenStagesPerSection).map(
+      sectionIdString => parseInt(sectionIdString)
+    );
     let nextState = state;
     sectionIds.forEach(sectionId => {
       // And iterate through each hidden stage within that section
