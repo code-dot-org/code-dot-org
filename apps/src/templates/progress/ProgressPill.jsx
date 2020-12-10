@@ -63,7 +63,7 @@ class ProgressPill extends React.Component {
     text: PropTypes.string,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     progressStyle: PropTypes.bool
   };
 
