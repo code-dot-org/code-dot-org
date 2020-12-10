@@ -1392,6 +1392,22 @@ And(/^I join the section$/) do
   end
 end
 
+And(/^I attempt to join the section$/) do
+  steps %Q{
+    Given I am on "#{@section_url}"
+  }
+end
+
+And(/^I fill in the sign up form with invalid values for "([^"]*)"$/) do |name|
+  steps %Q{
+    And I type "#{name}" into "#user_name"
+    And I type "#{name + '@testemail.com'}" into "#user_email"
+    And I type "#{name}" into "#user_password"
+    And I type "#{name}" into "#user_password_confirmation"
+    And I click selector ".btn.btn-primary" once I see it
+  }
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
