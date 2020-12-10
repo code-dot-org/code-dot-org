@@ -226,14 +226,25 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 1, activity.position
   end
 
-  test 'update saves lesson name i18n in levelbuilder mode' do
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename.end_with? '.script_json'}.once
+  test 'update writes lesson name to i18n and script_json in levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
+    end.once
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('.script_json') && data.include?(@update_params[:name])
+    end.once
+
     sign_in @levelbuilder
     put :update, params: @update_params
   end
 
-  test 'update does not save lesson name i18n without levelbuilder mode' do
+  test 'update does not write lesson name without levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     File.stubs(:write).raises('must not modify filesystem')
     sign_in @levelbuilder
