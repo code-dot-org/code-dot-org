@@ -190,6 +190,7 @@ var FILL_HOLES = {
 module.exports = {
   // Formerly page 1
   '1_1': {
+    skinId: 'farmer',
     instructionsImportant: true,
     toolbox: toolbox(1, 1),
     startBlocks: startBlocks(1, 1),
@@ -222,6 +223,7 @@ module.exports = {
   },
 
   '1_2': {
+    skinId: 'farmer',
     toolbox: toolbox(1, 2),
     startBlocks: startBlocks(1, 2),
     ideal: 4,
@@ -250,6 +252,7 @@ module.exports = {
   },
 
   '1_3': {
+    skinId: 'farmer',
     toolbox: toolbox(1, 3),
     startBlocks: startBlocks(1, 3),
     ideal: 4,
@@ -278,6 +281,7 @@ module.exports = {
   },
 
   '1_4': {
+    skinId: 'farmer',
     toolbox: toolbox(1, 4),
     ideal: 5,
     requiredBlocks: [[MOVE_FORWARD], [DIG], [TURN_LEFT], [REPEAT]],
@@ -305,6 +309,7 @@ module.exports = {
   },
 
   '1_5': {
+    skinId: 'farmer',
     toolbox: toolbox(1, 5),
     startBlocks: startBlocks(1, 5),
     ideal: 5,
@@ -336,6 +341,7 @@ module.exports = {
   },
 
   '1_6': {
+    skinId: 'farmer',
     toolbox: toolbox(1, 6),
     ideal: 4,
     requiredBlocks: [
@@ -370,6 +376,7 @@ module.exports = {
   },
 
   '1_7': {
+    skinId: 'farmer',
     toolbox: toolbox(1, 7),
     startBlocks: startBlocks(1, 7),
     ideal: 5,
@@ -406,6 +413,7 @@ module.exports = {
   },
 
   '1_8': {
+    skinId: 'farmer',
     toolbox: toolbox(1, 8),
     ideal: 4,
     requiredBlocks: [[MOVE_FORWARD], [FILL], [WHILE_OPT_PATH_AHEAD, REPEAT]],
@@ -436,6 +444,7 @@ module.exports = {
   },
 
   '1_9': {
+    skinId: 'farmer',
     toolbox: toolbox(1, 9),
     ideal: 8,
     requiredBlocks: [
@@ -471,6 +480,7 @@ module.exports = {
   },
 
   '1_10': {
+    skinId: 'farmer_night',
     toolbox: toolbox(1, 10),
     startBlocks: startBlocks(1, 10),
     ideal: 5,
@@ -507,6 +517,7 @@ module.exports = {
   },
 
   '1_11': {
+    skinId: 'farmer_night',
     toolbox: toolbox(1, 11),
     startBlocks: startBlocks(1, 11),
     ideal: 7,
@@ -547,6 +558,7 @@ module.exports = {
   // Formerly page 2
 
   '2_1': {
+    skinId: 'farmer_night',
     instructionsImportant: true,
     toolbox: toolbox(2, 1),
     startBlocks: startBlocks(2, 1),
@@ -580,6 +592,7 @@ module.exports = {
   },
 
   '2_2': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 2),
     startBlocks: startBlocks(2, 2),
     ideal: 6,
@@ -609,6 +622,7 @@ module.exports = {
   },
 
   '2_3': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 3),
     startBlocks: startBlocks(2, 3),
     ideal: 8,
@@ -641,6 +655,7 @@ module.exports = {
   },
 
   '2_4': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 4),
     startBlocks: startBlocks(2, 4),
     ideal: 13,
@@ -680,6 +695,7 @@ module.exports = {
   },
 
   '2_5': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 5),
     startBlocks: startBlocks(2, 5),
     ideal: 8,
@@ -712,6 +728,7 @@ module.exports = {
   },
 
   '2_6': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 6),
     startBlocks: startBlocks(2, 6),
     ideal: 11,
@@ -749,6 +766,7 @@ module.exports = {
   },
 
   '2_7': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 7),
     startBlocks: startBlocks(2, 7),
     ideal: 11,
@@ -778,6 +796,7 @@ module.exports = {
   },
 
   '2_8': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 8),
     startBlocks: startBlocks(2, 8),
     ideal: 13,
@@ -810,6 +829,7 @@ module.exports = {
   },
 
   '2_9': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 9),
     startBlocks: startBlocks(2, 9),
     ideal: 14,
@@ -846,6 +866,7 @@ module.exports = {
   },
 
   '2_10': {
+    skinId: 'farmer_night',
     toolbox: toolbox(2, 10),
     startBlocks: startBlocks(2, 10),
     ideal: 27,
@@ -887,6 +908,7 @@ module.exports = {
 
   debug_seq_1: {
     instructionsImportant: true,
+    skinId: 'farmer',
     toolbox: toolbox(3, 1),
     startBlocks: startBlocks(3, 1),
     ideal: 8,
@@ -915,6 +937,7 @@ module.exports = {
   },
 
   debug_seq_2: {
+    skinId: 'farmer',
     toolbox: toolbox(3, 2),
     startBlocks: startBlocks(3, 2),
     ideal: 7,
@@ -943,6 +966,7 @@ module.exports = {
   },
 
   debug_repeat: {
+    skinId: 'farmer',
     toolbox: toolbox(3, 3),
     startBlocks: startBlocks(3, 3),
     ideal: 12,
@@ -980,6 +1004,7 @@ module.exports = {
   },
 
   debug_while: {
+    skinId: 'farmer',
     toolbox: toolbox(3, 4),
     startBlocks: startBlocks(3, 4),
     ideal: 5,
@@ -1016,6 +1041,7 @@ module.exports = {
   },
 
   debug_if: {
+    skinId: 'farmer',
     toolbox: toolbox(3, 5),
     startBlocks: startBlocks(3, 5),
     ideal: 8,
@@ -1054,6 +1080,7 @@ module.exports = {
   },
 
   debug_if_else: {
+    skinId: 'farmer',
     toolbox: toolbox(3, 6),
     startBlocks: startBlocks(3, 6),
     ideal: 10,
@@ -1093,6 +1120,7 @@ module.exports = {
   },
 
   debug_function_1: {
+    skinId: 'farmer',
     toolbox: toolbox(3, 7),
     startBlocks: startBlocks(3, 7),
     ideal: 8,
@@ -1124,6 +1152,7 @@ module.exports = {
   },
 
   debug_function_2: {
+    skinId: 'farmer',
     toolbox: toolbox(3, 8),
     startBlocks: startBlocks(3, 8),
     ideal: 17,
@@ -1163,6 +1192,7 @@ module.exports = {
   },
 
   debug_function_3: {
+    skinId: 'farmer',
     toolbox: toolbox(3, 9),
     startBlocks: startBlocks(3, 9),
     ideal: 12,
@@ -1201,6 +1231,7 @@ module.exports = {
   },
 
   bee_1: {
+    skinId: 'bee',
     toolbox: blockUtils.createToolbox(
       '\
       <block type="maze_moveForward"></block>\

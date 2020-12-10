@@ -9,6 +9,5 @@ skin 'farmer'
 level 'blockly:MazeStep:karel_1_9_step'
 skin 'farmer_night'
 level 'blockly:MazeStep:karel_2_9_step'
-skin 'bee'
 level 'blockly:MazeStep:karel_bee_1'
 
