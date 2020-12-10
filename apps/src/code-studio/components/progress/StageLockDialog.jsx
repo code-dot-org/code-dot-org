@@ -151,7 +151,7 @@ class StageLockDialog extends React.Component {
     const responsiveHeight = {
       maxHeight: window.innerHeight * 0.8 - 100
     };
-    const hasSelectedSection = this.props.selectedSectionId !== null;
+    const hasSelectedSection = !!this.props.selectedSectionId;
     const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
     return (
       <BaseDialog
