@@ -177,13 +177,13 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
-  test 'update lesson returns summary of updated lesson' do
+  test 'update lesson return updated lesson' do
     sign_in @levelbuilder
 
     put :update, params: @update_params
 
-    assert_equal 'new overview', JSON.parse(@response.body)['overview']
-    assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
+    assert_equal 'new overview', JSON.parse(@response.body)['properties']['overview']
+    assert_equal 'new student overview', JSON.parse(@response.body)['properties']['student_overview']
   end
 
   test 'cannot update lesson with legacy script levels' do
