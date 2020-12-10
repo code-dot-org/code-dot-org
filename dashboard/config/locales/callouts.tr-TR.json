@@ -1487,6 +1487,97 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Bu sayıyı değiştirebilirsiniz.",
           "courseE_artist_ramp8_2": "Kodun tekrar edilmesini istediğiniz sayıyı girmek için buraya tıklayın."
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "Kodun nasıl çalıştığı hakkında kendiniz veya öğretmeniniz için bu bloğu kullanın."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "Kodun nasıl çalıştığı hakkında kendiniz veya öğretmeniniz için bu bloğu kullanın."
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "Kodun nasıl çalıştığı hakkında kendiniz veya öğretmeniniz için bu bloğu kullanın."
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Bu blok, bu proje için çok önemlidir. Bunu kullandığınızdan emin olun!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Bu blok, bu proje için çok önemlidir. Bunu kullandığınızdan emin olun!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Bunu programınızın ortasına ekleyin."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Bunu programınızın ortasına ekleyin."
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "Bu bulmacayı çözmek için 'ileri doğru yol süresinde bloğunu kullanmanız gerekecek."
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "Bu bulmacayı çözmek için 'ileri doğru yol süresinde bloğunu kullanmanız gerekecek."
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "Bu bulmacayı çözmek için 'ileri doğru yol süresinde bloğunu kullanmanız gerekecek."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "Virtual Pet 2_2019": {
+          "": "Buraya tıklayın!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "Buraya tıklayın!"
+        },
+        "courseE_aboutme_2": {
+          "": "Buraya tıklayın!"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "Buraya tıklayın!"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "behaviors 3a": {
+          "behavior_callout": "Ortadaki yıldız için bu davranış neden işe yaramıyor?",
+          "star2_callout": "Bu kostüm bloğunu çıkarın ve bunun yerine \"bu hareketli nesne\" bloğunu kullanın.",
+          "this_sprite_callout": "Bununla aşağıdaki kostüm bloğunu değiştirin."
+        },
+        "behaviors 3a_2020": {
+          "behavior_callout": "Ortadaki yıldız için bu davranış neden işe yaramıyor?",
+          "star2_callout": "Bu kostüm bloğunu çıkarın ve bunun yerine \"bu hareketli nesne\" bloğunu kullanın.",
+          "this_sprite_callout": "Bununla aşağıdaki kostüm bloğunu değiştirin."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "behaviors 5": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
+        },
+        "behaviors 5_2020": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
+        },
+        "behaviors free play": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
+        },
+        "behaviors free play_2020": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
         }
       }
     }

@@ -1,12 +1,11 @@
 ---
 title: Ciencias de la Computación para el bien
-nav: csforgood_nav
 video_player: true
 theme: responsive
 social:
-  og:title: Computer Science for Good in Your Classroom
+  og:title: "#CSforGood in your class"
   og:description: 'Resources and activities for talking to your students about #CSforGood'
-  og:image: http://code.org/images/marketing/talkingtoclass.jpg
+  og:image: http://code.org/images/csforgood.png
   og:image:width: 850
   og:image:height: 502
   og:video: ''

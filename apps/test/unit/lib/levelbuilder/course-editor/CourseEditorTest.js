@@ -1,6 +1,6 @@
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {
   stubRedux,
@@ -10,27 +10,28 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Provider} from 'react-redux';
+import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 const defaultProps = {
   name: 'csp',
   title: 'Computer Science Principles 2017',
   familyName: 'CSP',
   versionYear: '2017',
-  visible: false,
+  initialVisible: false,
   isStable: false,
   descriptionShort: 'Desc here',
-  descriptionStudent:
+  initialDescriptionStudent:
     '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
-  descriptionTeacher:
+  initialDescriptionTeacher:
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   scriptsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
   scriptNames: ['CSP Unit 1', 'CSP Unit 2'],
-  teacherResources: [],
+  initialTeacherResources: [],
   hasVerifiedResources: false,
   hasNumberedUnits: false,
   courseFamilies: ['CSP', 'CSD', 'CSF'],
   versionYearOptions: ['2017', '2018', '2019'],
-  announcements: []
+  initialAnnouncements: []
 };
 
 describe('CourseEditor', () => {
@@ -51,6 +52,47 @@ describe('CourseEditor', () => {
       </Provider>
     );
   };
+
+  describe('Teacher Resources', () => {
+    it('adds empty resources if passed none', () => {
+      const wrapper = shallow(<CourseEditor {...defaultProps} />);
+      assert.deepEqual(wrapper.state('teacherResources'), [
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''}
+      ]);
+    });
+
+    it('adds empty resources if passed fewer than max', () => {
+      const wrapper = shallow(
+        <CourseEditor
+          {...defaultProps}
+          initialTeacherResources={[
+            {type: ResourceType.curriculum, link: '/foo'}
+          ]}
+        />
+      );
+      assert.deepEqual(wrapper.state('teacherResources'), [
+        {type: ResourceType.curriculum, link: '/foo'},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''},
+        {type: '', link: ''}
+      ]);
+    });
+  });
 
   it('renders full course editor page', () => {
     const wrapper = createWrapper({});
@@ -91,7 +133,7 @@ describe('CourseEditor', () => {
     });
 
     it('is checked when visible is true', () => {
-      const wrapper = createWrapper({visible: true});
+      const wrapper = createWrapper({initialVisible: true});
       const checkbox = wrapper.find('input[name="visible"]');
       expect(checkbox.prop('checked')).to.be.true;
     });

@@ -1146,6 +1146,8 @@ sv:
         text: Sprite {SPRITE} Stannar {BEHAVIOR}
       gamelab_removeTint:
         text: ta bort färg från {THIS}
+      gamelab_repeatForever:
+        text: upprepa för evigt
       gamelab_setAnimation:
         text: Ändra {THIS} kostym till {ANIMATION}
       gamelab_setBackground:
@@ -1166,6 +1168,8 @@ sv:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': under vatten
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
             undefined: Ingen
+      gamelab_setBackgroundImageAs:
+        text: ställa in bakgrunden till {IMG}
       gamelab_setProp:
         text: ligger {SPRITE} {PROPERTY} Att {VAL}
         options:
@@ -1699,7 +1703,6 @@ sv:
             '"stoneBricks"': stenblock
             '"mossyStoneBricks"': mossiga stenblock
             '"crackedStoneBricks"': stenblock med sprickor
-            '"decorativeStoneBricks"': dekorativa stenblock
             '"blueCoralBlock"': blå korallblock
             '"pinkCoralBlock"': rosa korallblock
             '"magentaCoralBlock"': lila korallblock

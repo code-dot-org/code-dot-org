@@ -1149,6 +1149,8 @@ fi:
         text: sprite {SPRITE} lopettaa {BEHAVIOR}
       gamelab_removeTint:
         text: poista väri {THIS}
+      gamelab_repeatForever:
+        text: toista jatkuvasti
       gamelab_setAnimation:
         text: muutos {THIS} puku {ANIMATION}
       gamelab_setBackground:
@@ -1169,6 +1171,8 @@ fi:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vedenalainen
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talvi
             undefined: Ei yhtään
+      gamelab_setBackgroundImageAs:
+        text: aseta tausta {IMG}
       gamelab_setProp:
         text: aseta {SPRITE} {PROPERTY} arvoksi {VAL}
         options:
@@ -1704,7 +1708,6 @@ fi:
             '"stoneBricks"': kivitiilet
             '"mossyStoneBricks"': sammaleiset kivitiilet
             '"crackedStoneBricks"': haljenneet kivitiilet
-            '"decorativeStoneBricks"': koristeelliset kivitiilet
             '"blueCoralBlock"': sininen koralli-blokki
             '"pinkCoralBlock"': vaaleanpunainen koralli-blokki
             '"magentaCoralBlock"': magenta koralli-blokki

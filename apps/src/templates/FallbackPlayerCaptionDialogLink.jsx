@@ -77,6 +77,7 @@ class FallbackPlayerCaptionDialog extends Component {
             style={styles.dialogLink}
             href={pegasus('/educate/it')}
             target="_blank"
+            rel="noopener noreferrer"
           >
             {i18n.fallbackVideoClosedCaptioningDialogBodyLink()}
           </a>

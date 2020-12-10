@@ -4240,7 +4240,7 @@ zh-TW:
         csp5-support:
           title: 單元 5 線上專業學習課程
           description_short: 教師專業學習課程 - CSP 單元 5
-          description: 即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。 
+          description: "即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。 "
           lesson_groups:
             required:
               display_name: 概覽
@@ -15205,3 +15205,11 @@ zh-TW:
               name: 課程 B
             CS Discoveries:
               name: 計算機科學探索
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: 在海洋中使用的 AI
+            intro:
+              name: 介紹
+            visualizing:
+              name: 資料視覺化

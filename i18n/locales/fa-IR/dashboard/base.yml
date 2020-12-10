@@ -658,6 +658,4 @@ fa:
         opt_in_no: 'نه'
   cookie_banner:
     accept: 'موافقم'
-  gdpr_dialog:
-    yes: 'بله'
   copy: 'رونوشت‌'

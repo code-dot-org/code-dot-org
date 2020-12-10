@@ -12,7 +12,7 @@
 #  index_regional_partner_program_managers_on_regional_partner_id  (regional_partner_id)
 #
 
-class RegionalPartnerProgramManager < ActiveRecord::Base
+class RegionalPartnerProgramManager < ApplicationRecord
   belongs_to :program_manager, class_name: 'User'
   belongs_to :regional_partner
 

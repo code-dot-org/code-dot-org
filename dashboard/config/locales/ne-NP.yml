@@ -844,6 +844,4 @@ ne:
         opt_in_no: होइन
   cookie_banner:
     accept: I agree
-  gdpr_dialog:
-    true: हो
   copy: प्रतिलिपि गर्नुहोस्

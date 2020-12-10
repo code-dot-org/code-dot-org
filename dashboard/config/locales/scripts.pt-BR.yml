@@ -22813,3 +22813,11 @@ pt:
               name: Curso B
             CS Discoveries:
               name: Descobertas da Ciência da Computação
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: IA para oceanos
+            intro:
+              name: Introdução
+            visualizing:
+              name: Visualizando dados

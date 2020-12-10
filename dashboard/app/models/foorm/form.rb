@@ -8,20 +8,23 @@
 #  questions  :text(65535)      not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  published  :boolean          default(TRUE), not null
 #
 # Indexes
 #
 #  index_foorm_forms_on_name_and_version  (name,version) UNIQUE
 #
 
-class Foorm::Form < ActiveRecord::Base
+class Foorm::Form < ApplicationRecord
   include Seeded
   include Pd::Foorm::Constants
 
   class InvalidFoormConfigurationError < StandardError; end
 
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
-  validate :validate_questions
+  validate :validate_questions, :validate_published
+
+  after_save :write_form_to_file
 
   # We have a uniqueness constraint on form name and version for this table.
   # This key format is used elsewhere in Foorm to uniquely identify a form.
@@ -30,7 +33,7 @@ class Foorm::Form < ActiveRecord::Base
   end
 
   def self.setup
-    forms = Dir.glob('config/foorm/forms/**/*.json').sort.map.with_index(1) do |path, id|
+    Dir.glob('config/foorm/forms/**/*.json').each do |path|
       # Given: "config/foorm/forms/surveys/pd/pre_workshop_survey.0.json"
       # we get full_name: "surveys/pd/pre_workshop_survey"
       #      and version: 0
@@ -42,18 +45,38 @@ class Foorm::Form < ActiveRecord::Base
 
       # Let's load the JSON text.
       questions = File.read(path)
+      # if published is not provided, default to true
+      published = questions['published'].nil? ? true : questions['published']
 
-      {
-        id: id,
-        name: full_name,
-        version: version,
-        questions: questions
-      }
+      form = Foorm::Form.find_or_initialize_by(name: full_name, version: version)
+      form.questions = questions
+      form.published = published
+      form.save! if form.changed?
     end
+  end
 
-    transaction do
-      Foorm::Form.delete_all
-      Foorm::Form.import! forms
+  def validate_questions
+    errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
+    errors_arr.each {|error| errors[:questions] << error}
+  end
+
+  def validate_published
+    parsed_questions = JSON.parse(questions)
+    unless parsed_questions['published'].nil?
+      if published != parsed_questions['published']
+        errors[:questions] << 'Mismatch between published state in questions and published state in model'
+      end
+    end
+  end
+
+  def write_form_to_file
+    if write_to_file? && saved_changes?
+      file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
+      file_directory = File.dirname(file_path)
+      unless Dir.exist?(file_directory)
+        FileUtils.mkdir_p(file_directory)
+      end
+      File.write(file_path, questions)
     end
   end
 
@@ -98,31 +121,36 @@ class Foorm::Form < ActiveRecord::Base
     return questions
   end
 
-  def validate_questions
+  def self.validate_questions(questions)
     # fill_in_library_items will throw an exception if any library items are invalid.
     # If the questions are not valid JSON, JSON.parse will throw an exception.
+    errors = []
     begin
-      filled_questions = Foorm::Form.fill_in_library_items(JSON.parse(questions))
+      filled_questions = Foorm::Form.fill_in_library_items(questions)
     rescue StandardError => e
-      errors.add(:questions, e.message)
-      return
+      errors.append(e.message)
+      return errors
     end
     filled_questions.deep_symbolize_keys!
     element_names = Set.new
-    filled_questions[:pages].each do |page|
-      page[:elements].each do |element_data|
+    filled_questions[:pages]&.each do |page|
+      page[:elements]&.each do |element_data|
         # validate_element will throw an exception if the element is invalid
         Foorm::Form.validate_element(element_data, element_names)
       rescue StandardError => e
-        errors.add(:questions, e.message)
+        errors.append(e.message)
       end
     end
+    errors
   end
 
   # Checks that the element name is not in element_names and the choices/rows/columns are unique and all have
   # value/text parameters. If any of the above are not true, will raise an InvalidFoormConfigurationError.
   def self.validate_element(element_data, element_names)
     return unless PANEL_TYPES.include?(element_data[:type]) || QUESTION_TYPES.include?(element_data[:type])
+    unless element_data[:name]
+      raise InvalidFoormConfigurationError, "No name provided for element with title ''#{element_data[:title]}''"
+    end
     if element_names.include?(element_data[:name])
       raise InvalidFoormConfigurationError, "Duplicate element name #{element_data[:name]}."
     end
@@ -158,6 +186,11 @@ class Foorm::Form < ActiveRecord::Base
           raise InvalidFoormConfigurationError, "Duplicate choice value #{choice[:value]} in question #{question_name}."
         end
         choice_values.add(choice[:value])
+      elsif choice.class == Hash
+        unless choice.key?(:value)
+          error_msg = "Foorm configuration contains question '#{question_name}' without a  value for a choice. Choice text is '#{choice[:text]}'."
+          raise InvalidFoormConfigurationError, error_msg
+        end
       elsif choice.class == String
         error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
         raise InvalidFoormConfigurationError,  error_msg
@@ -310,5 +343,9 @@ class Foorm::Form < ActiveRecord::Base
         [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
       end
     ]
+  end
+
+  def write_to_file?
+    Rails.application.config.levelbuilder_mode
   end
 end

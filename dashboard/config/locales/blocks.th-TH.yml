@@ -1155,6 +1155,8 @@ th:
         text: "[SPRITE]สไปรท์[0] หยุด {BEHAVIOR}"
       gamelab_removeTint:
         text: ลบสีจาก {THIS}
+      gamelab_repeatForever:
+        text: ทำซ้ำตลอดไป
       gamelab_setAnimation:
         text: เปลี่ยน {THIS} เครื่องแต่งกาย {ANIMATION}
       gamelab_setBackground:
@@ -1175,6 +1177,8 @@ th:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ใต้น้ำ
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ฤดูหนาว
             undefined: ไม่เลย
+      gamelab_setBackgroundImageAs:
+        text: ตั้งค่าพื้นหลังเป็น {IMG}
       gamelab_setProp:
         text: ตั้ง ค่า {SPRITE} {PROPERTY} ถึง {VAL}
         options:
@@ -1709,7 +1713,6 @@ th:
             '"stoneBricks"': อิฐศิลา
             '"mossyStoneBricks"': อิฐศิลามอสซี่
             '"crackedStoneBricks"': อิฐศิลาร้าว
-            '"decorativeStoneBricks"': อิฐศิลาประดับ
             '"blueCoralBlock"': บล็อกปะการังสีฟ้า
             '"pinkCoralBlock"': บล็อกปะการังสีชมพู
             '"magentaCoralBlock"': บล็อคปะการังสีมาเจ็นต้า

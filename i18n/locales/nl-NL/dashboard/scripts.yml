@@ -684,7 +684,7 @@ nl:
             Evaluation Blocks:
               name: evaluatie blokken
             Free Play:
-              name: Gratis spelen
+              name: Vrije Speelruimte
             Luigi's Pizza:
               name: Luigi's Pizza
             Rocket-Height:
@@ -2056,8 +2056,12 @@ nl:
             new stage:
               name: nieuw niveau
         hero:
-          description: Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik code om door Minecraft te reizen.
+          title: 'Minecraft: Heldenreis'
+          description_short: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
+          description: Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen.
           lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Heldenreis Uur Code'
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
         csp-explore-2017:
@@ -4040,3 +4044,10 @@ nl:
             lesson group:
               display_name: weergavenaam
           description_audience: Intern
+        ml-playground:
+          lessons:
+            intro:
+              name: Introductie
+        2021drafting:
+          description_audience: Intern
+          description_short: Intern

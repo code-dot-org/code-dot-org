@@ -15,7 +15,7 @@
 #  index_survey_results_on_user_id  (user_id)
 #
 
-class SurveyResult < ActiveRecord::Base
+class SurveyResult < ApplicationRecord
   include SerializedProperties
 
   SYSTEM_DELETED = 'system_deleted'.freeze
@@ -59,7 +59,8 @@ class SurveyResult < ActiveRecord::Base
     DIVERSITY_2019 = 'Diversity2019'.freeze,
     NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
     NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze,
-    NET_PROMOTER_SCORE_2019 = 'NetPromoterScore2019'.freeze
+    NET_PROMOTER_SCORE_2019 = 'NetPromoterScore2019'.freeze,
+    NET_PROMOTER_SCORE_2020 = 'NetPromoterScore2020'.freeze
   ].freeze
   validates :kind, inclusion: {in: KINDS}, allow_nil: false
 end

@@ -1116,6 +1116,8 @@ ga:
         text: nuair a stopann {SPRITE} {BEHAVIOR}
       gamelab_removeTint:
         text: bain an dath de {THIS}
+      gamelab_repeatForever:
+        text: go deo na ndeor
       gamelab_setAnimation:
         text: athraigh culaith {THIS} go {ANIMATION}
       gamelab_setBackground:
@@ -1136,6 +1138,8 @@ ga:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': faoi uisce
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': geimhreadh
             undefined: gan chúlra
+      gamelab_setBackgroundImageAs:
+        text: 'socraigh an cúlra: {IMG}'
       gamelab_setProp:
         text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
         options:
@@ -1585,7 +1589,6 @@ ga:
             '"stoneBricks"': brící cloiche
             '"mossyStoneBricks"': brící cloiche caonaigh
             '"crackedStoneBricks"': brící cloiche gágacha
-            '"decorativeStoneBricks"': brící cloiche maisiúla
             '"blueCoralBlock"': bloc coiréil ghoirm
             '"pinkCoralBlock"': bloc coiréil bhándeirg
             '"magentaCoralBlock"': bloc coiréil mhaigeanta

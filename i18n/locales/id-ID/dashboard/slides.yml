@@ -26,7 +26,7 @@ id:
         text: "Tujuan dari program pertama anda adalah membuat Angry Birds melalui labirin kemudian menangkap babi hijau."
       7:
         image: 'notes/hoc1_7.jpg'
-        text: "Pada sisi kiri merupakan labirin dimana program anda akan dijalankan. Instruksi dari setiap teka-teki ada dibawah labirin."
+        text: "Pada sisi kiri merupakan labirin dimana program anda akan dijalankan. Instruksi dari setiap puzzle ada dibawah labirin."
       8:
         image: 'notes/hoc1_8.jpg'
         text: "Pada kotak perkakas ditengah memiliki semua perintah untuk Angry Bird. Anda akan menggunakannya untuk membangun kode anda."
@@ -35,7 +35,7 @@ id:
         text: "Pada bagian kanan adalah area kerja dimana anda akan menarik blok dari kotak perkakas untuk membuat program. Untuk menghapus blok, tarik kedalam tempat sampah yang berada disudut."
       10:
         image: 'notes/hoc1_10.jpg'
-        text: "Setiap blok berisi satu instruksi. Jika ada menarik \"move forward\" blok kedalam area kerja anda dan menekan \"Run Program\", maka burung akan berpindah satu petak dalam labirin."
+        text: "Setiap blok berisi satu instruksi. Jika ada menarik \"move forward\" blok kedalam area kerja anda dan menekan \"Jalankan Program\", maka burung akan berpindah satu petak dalam labirin."
       11:
         image: 'notes/hoc1_11.jpg'
         text: "Untuk melakukan lebih dari satu aksi, kamu bisa menarik banyak blok ke ruang kerjamu dan melampirkan mereka. Burung itu akan melakukan perintah itu dari atas ke bawah."
@@ -49,16 +49,16 @@ id:
       1:
         text: "Halo, Nama saya JR! Setiap tim balap mobil perlu programmer untuk dapat memenangkan balapan. Mereka menganalisis data dari mobil untuk dapat membuatnya meluncur lebih cepat."
       2:
-        text: "Dalam teka-teki ini, Anda akan menjadi seorang artis yang menarik garis ke mana pun mereka berjalan."
+        text: "Dalam puzzle ini, Anda akan menjadi seorang artis yang menarik garis ke mana pun mereka berjalan."
       3:
         text: "Blok ini mengatakan \"Gerak maju sepanjang 100 piksel.\" Pixel adalah titik-titik yang sangat kecil pada layar Anda."
       4:
-        text: "Blok ini mengatakan \"belok kanan oleh 90 derajat.\" Ini akan membuat artis Anda belok dengan sudut yang sama sebagai blok \"belok\" di teka-teki labirin yang sebelumnya."
+        text: "Blok ini mengatakan \"belok kanan oleh 90 derajat.\" Ini akan membuat artis Anda belok dengan sudut yang sama sebagai blok \"belok\" di puzzle labirin yang sebelumnya."
       5:
         text: "Klik pada panah di salah satu blok ini untuk mengubah arah artis bergerak maju atau belok. Cobalah mengenali cara kerja blok-blok ini."
     farmer_intro:
       1:
-        text: "Halo, Saya Paola! Dalam teka-teki ini, Anda menjadi seorang petani yang harus membuat ladangmu benar-benar datar sebelum memulai menanam tanaman."
+        text: "Halo, Saya Paola! Dalam puzzle ini, Anda menjadi seorang petani yang harus membuat ladangmu benar-benar datar sebelum memulai menanam tanaman."
       2:
         text: "Anda harus membantu menghapus semua tumpukan tanah dan mengisi semua lubang."
       3:
@@ -89,20 +89,20 @@ id:
         text: "Jika Anda ingin burung mengepakkan sayap ketika Anda klik maus, Anda dapat melakukannya dengan melampirkan blok \"kepakkan sayap\" ke \"event handler\" tertentu, dan karena itu dalam permainan Anda setiap kali Anda mengklik maus, burung akan mengepakkan sayapnya."
       8:
         image: 'notes/flappy08.jpg'
-        text: "Dalam setiap teka-teki kegiatan ini kami akan memperkenalkan jenis baru dari peristiwa sebagai blok hijau pada ruang kerja (workspace), dan Anda dapat memutuskan blok mana yang harus ditempelkan sesuai \"event\"nya."
+        text: "Dalam setiap puzzle kegiatan ini kami akan memperkenalkan jenis baru dari peristiwa sebagai blok hijau pada ruang kerja (workspace), dan Anda dapat memutuskan blok mana yang harus ditempelkan sesuai \"event\"nya."
       9:
         image: 'notes/flappy09.jpg'
         text: "Ketika Anda melihat menu seperti ini, itu berarti Anda dapat mengubah pengaturan - seperti bunyi apa yang bermain ketika flappy menyentuh permukaan."
       10:
         image: 'notes/flappy10.jpg'
-        text: "Dalam teka-teki akhir Anda akan dapat membuat permainan Anda sendiri dan berbagi dengan teman-teman Anda. Selamat bersenang-senang!"
+        text: "Dalam puzzle akhir Anda akan dapat membuat permainan Anda sendiri dan berbagi dengan teman-teman Anda. Selamat bersenang-senang!"
     loop_times:
       1:
         image: 'notes/hoc2_1.jpg'
         text: "Hai, Saya Mark! Ayo kita belajar mengenai perulangan (loop). Dengan menggunakan perulangan anda dapat mengatakan pada komputer untuk mengulangi sekumpulan aksi berulang ulang kali, ribuan kali atau bahkan milayaran kali."
       2:
         image: 'notes/hoc2_2.jpg'
-        text: "Dalam teka-teki ini, kita menginginkan untuk membuat burung berpindah 5 petak menuju babi."
+        text: "Dalam puzzle ini, kita menginginkan untuk membuat burung berpindah 5 petak menuju babi."
       3:
         image: 'notes/hoc2_3.jpg'
         text: "Kita dapat menggunakan blok \"repeat\" untuk membantu kita."
@@ -222,7 +222,7 @@ id:
     hoc_wrapup:
       1:
         image: 'notes/hoc6_1.jpg'
-        text: "Horee! Dengan teka-teki terakhir yang anda pecahkan, anda telah menuliskan kode yang dapat mengerakan robot untuk mencari jalan keluar dari labirin tidak bercabang atau terowongan dengan berbagai panjang, apakah itu sebuah zombie, burung, mars rover, atau bahkan pengemudi otomatis mobil."
+        text: "Horee! Dengan puzzle terakhir yang anda pecahkan, anda telah menuliskan kode yang dapat mengerakan robot untuk mencari jalan keluar dari labirin tidak bercabang atau terowongan dengan berbagai panjang, apakah itu sebuah zombie, burung, mars rover, atau bahkan pengemudi otomatis mobil."
       2:
         image: 'notes/hoc6_2.jpg'
         text: "Konsep dasar yang anda gunakan merupakan jatung dari setiap pemrograman atau app yang anda pernah gunakan. Kita mempelajari menangani perulangan (loops), ulangi (repeat), pernyataan ulangi sampai (repeat until), pernyataan jika (if) dan pernyataan jika tidak (if else)."
@@ -251,16 +251,16 @@ id:
       7:
         text: "Ruang putih di sebelah kanan disebut ruang kerja, dan ini adalah di mana kita akan membangun program kita. Untuk bergerak di sekitar permukaan es, Anda akan menggunakan blok \"Move Forward\" / \"Bergerak maju\"."
       8:
-        text: "Di sini, blok \"move fordware\"/\"Bergerak maju\" mengatakan, \"move forward by 100 pixels.\"/\"bergerak maju dengan 100 piksel.\" Ketika kita menekan \"Run\", apa yang terjadi? Elsa bergerak maju dengan jumlah tertentu di layar, yang sebenarnya 100 pixel ! Piksel pada dasarnya adalah kotak yang sangat kecil di layar komputer Anda."
+        text: "Di sini, blok \"move fordware\"/\"Bergerak maju\" mengatakan, \"move forward by 100 pixels.\"/\"bergerak maju dengan 100 piksel.\" Ketika kita menekan \"Jalankan\", apa yang terjadi? Elsa bergerak maju dengan jumlah tertentu di layar, yang sebenarnya 100 pixel ! Piksel pada dasarnya adalah kotak yang sangat kecil di layar komputer Anda."
       9:
-        text: "Blok lain yang kita miliki dalam teka-teki ini mengatakan  \"turn right by 90 degrees.\"/\"belok kanan oleh 90 derajat.\" Dan ketika kita menggunakan blok  \"Turn Right\"/\"Belok kanan\" ini, yang membuat Elsa berbelok dalam jumlah tertentu. Anda dapat bermain-main dengan seberapa jauh Anda inginkan Elsa untuk berbelok. Sudut diukur dari jalan depan Elsa. Jadi, ini adalah berbalik 90 derajat. Dan ini adalah berbalik 120 derajat."
+        text: "Blok lain yang kita miliki dalam puzzle ini mengatakan  \"turn right by 90 degrees.\"/\"belok kanan oleh 90 derajat.\" Dan ketika kita menggunakan blok  \"Turn Right\"/\"Belok kanan\" ini, yang membuat Elsa berbelok dalam jumlah tertentu. Anda dapat bermain-main dengan seberapa jauh Anda inginkan Elsa untuk berbelok. Sudut diukur dari jalan depan Elsa. Jadi, ini adalah berbalik 90 derajat. Dan ini adalah berbalik 120 derajat."
       10:
         text: "Ingat, Anda dapat mengubah jumlah piksel dan derajat dengan mengklik tanda panah di samping mereka."
     frozen_loops:
       1:
         text: "Hi, I 'm Paola! Komputer benar-benar baik untuk mengulangi tindakan. Anda dapat menghitung sampai 10, 20, atau 100. Tapi komputer dapat dihitung miliar atau triliun. Itu tidak akan bosan dan hanya terjadi beberapa detik. Apakah itu menghitung, atau menggambar, atau segala hal--komputer dapat mengulangi ratusan hal atau bahkan Milyaran kali."
       2:
-        text: "Dalam pemrograman, kami menyebutnya loop. Loop adalah bagaimana Anda mengulangi kode Anda secara berulang kali. Untuk teka-teki berikutnya, tujuan Anda adalah untuk membantu Anna membuat persegi dengan blok \"Repeat\"/\"Ulangi\"."
+        text: "Dalam pemrograman, kami menyebutnya loop. Loop adalah bagaimana Anda mengulangi kode Anda secara berulang kali. Untuk puzzle berikutnya, tujuan Anda adalah untuk membantu Anna membuat persegi dengan blok \"Repeat\"/\"Ulangi\"."
       3:
         text: "Setiap blok kode yang Anda masukkan ke dalam blok \"Repeat\"/\"Ulangi\" akan diulang dalam urutan, sebanyak yang Anda inginkan."
       4:
@@ -281,7 +281,7 @@ id:
       6:
         text: "Sekarang Anda memiliki blok baru yang dapat Anda gunakan beberapa kali untuk membuat beberapa kotak."
       7:
-        text: "Banyak bentuk sederhana dapat digunakan untuk menciptakan pola-pola yang lebih kompleks. Di depan teka-teki, kode Anda baru saja menulis untuk membuat lingkaran yang tersedia untuk Anda sebagai fungsi baru yang dapat membuat lingkaran dengan ukuran yang berbeda. Anda dapat menggunakannya untuk membantu Elsa da;a, menciptakan pola yang rumit dan indah di salju ?"
+        text: "Banyak bentuk sederhana dapat digunakan untuk menciptakan pola-pola yang lebih kompleks. Di depan puzzle, kode Anda baru saja menulis untuk membuat loop yang tersedia untuk Anda sebagai fungsi baru yang dapat membuat loop dengan ukuran yang berbeda. Anda dapat menggunakannya untuk membantu Elsa da;a, menciptakan pola yang rumit dan indah di salju ?"
     playlab_intro:
       1:
         text: "Kita akan membuat game menggunakan Play Lab. permainan yang bagus memiliki cerita, dan setiap cerita memiliki aktor. Kita akan belajar cara membuat aktor seperti penyihir, alinens, dan hewan berbicara, bergerak dan berinteraksi dengan satu sama lain. Pada akhir tutorial ini, Anda dapat membangun sebuah game dari awal dan berbagi dengan teman-teman Anda."
@@ -292,7 +292,7 @@ id:
       4:
         text: "Untuk memulai, Anda harus hubungkan blok anda ke blok \"when run\" / \"ketika menjalankan\" yang bewarna oranye. Anda dapat menghubungkan beberapa blok bersama-sama dengan menyeret mereka sampai Anda melihat garis kuning, dan kemudian mereka akan merampas bersama-sama."
       5:
-        text: "Dalam teka-teki pertama ini, aktor kami adalah seekor pinguin dan kami akan membuatnya mengatakan \"Hello!\" dengan menyeret blok katakan keluar, menghubungkannya saat menjalankan blok, dan mengetikkan \"Hello.\" Kami juga dapat membuat penguin bergerak dengan menggunakan  blok move right/bergerak ke kanan dan blok move left /bergerak ke kiri. Setelah anda menempatkan blok anda, tekan tombol Jalankan untuk melihat apa yang teleh anda programkan."
+        text: "Dalam puzzle pertama ini, aktor kami adalah seekor pinguin dan kami akan membuatnya mengatakan \"Hello!\" dengan menyeret blok katakan keluar, menghubungkannya saat menjalankan blok, dan mengetikkan \"Hello.\" Kami juga dapat membuat penguin bergerak dengan menggunakan  blok move right/bergerak ke kanan dan blok move left /bergerak ke kiri. Setelah anda menempatkan blok anda, tekan tombol Jalankan untuk melihat apa yang teleh anda programkan."
       6:
         text: "Mulai dan pada akhir, Anda akan dapat membuat game sendiri dengan segala macam pemain yang dapat berinteraksi, berubah bahagia atau sedih, mencetak poin, atau melempar bola api, atau bahkan lenyap satu sama lain. Semuanya terserah pada Anda dan permainan yang ingin Anda buat."
     playlab_events:
@@ -310,7 +310,7 @@ id:
       2:
         text: "Jika kita ingin aktor untuk melakukan sesuatu yang berulang-ulang, tanpa pemain harus melakukan sesuatu, kami akan menempatkan blok tersebut di dalam blok \"repeat forever\"/\"Ulangi selamanya\"."
       3:
-        text: "Dalam teka-teki berikutnya, tujuan kami adalah untuk membantu wizard berpatroli di batas-batas kerajaan, kiri dan kanan secara terus menerus. Belajar bagaimana ulangi perintah kerja, akan menghemat satu ton waktu nanti ketika Anda membangun permainan Anda sendiri."
+        text: "Dalam puzzle berikutnya, tujuan kami adalah untuk membantu wizard berpatroli di batas-batas kerajaan, kiri dan kanan secara terus menerus. Belajar bagaimana ulangi perintah kerja, akan menghemat satu ton waktu nanti ketika Anda membangun permainan Anda sendiri."
     C1_artist_intro:
       1:
         text: "Ini adalah balok balok gambarmu. Gunakan satu yang benar untuk memindahkan artis kemana dia harus pergi untuk mengisi garis-garis abu-abu."
@@ -318,11 +318,11 @@ id:
         text: "Ini adalah balok-balok lompatan. Ketika kamu menggunakannya, artismu pindah tapi tidak menggambar, maka gunakanlah ini untuk melompat ke garis abu-abu berikutnya."
     C1_bee_level_intro:
       1:
-        text: "Kerenkan? Pada teka-teki selanjutnya, target kamu adalah membantu lebah menemukan bunga dan mendapatkan nektar dari bunga tersebut dan terbang ke sarang lebah untuk membuat madu. Anda akan memakai balok \"dapatkan nektar\" dan balok \"buat madu\" untuk latihan ini."
+        text: "Kerenkan? Pada puzzle selanjutnya, target kamu adalah membantu lebah menemukan bunga dan mendapatkan nektar dari bunga tersebut dan terbang ke sarang lebah untuk membuat madu. Anda akan memakai balok \"dapatkan nektar\" dan balok \"buat madu\" untuk latihan ini."
       2:
         text: "Setiap bunga memiliki jumlah nektar yang berbeda: 1, 2, 3, atau lebih. Kita mengetahui berapa banyak nektar di bunga-bunga merah, dengan jumlah kecil di sudut. Jadi pastikan untuk mendapatkan semua madu dari bunga sebelum anda bergerak maju. Juga, setiap sarang lebah hanya dapat menampung begitu banyak madu: 1, 2, 3, atau lebih. Jadi pastikan untuk membuat madu sebanyak yang dapat ditampung oleh sarang lebah."
       3:
-        text: "Jika anda dapat memperoleh semua nektar dan membuat semua madu, anda telah berhasil dan pergi ke tingkat berikutnya. Jika tidak, anda perlu mencoba teka-teki ini lagi. Bermain-main untuk sementara waktu dan lihat apa rasanya menjadi \"lebah\" programmer!"
+        text: "Jika anda dapat memperoleh semua nektar dan membuat semua madu, anda telah berhasil dan pergi ke tingkat berikutnya. Jika tidak, anda perlu mencoba puzzle ini lagi. Bermain-main untuk sementara waktu dan lihat apa rasanya menjadi \"lebah\" programmer!"
     C1_bee_loops:
       1:
         text: "Sebuah loop adalah pengulangan aktivitas. Jadi akan menjadi sarang untuk memeriksa, saya melihat sebuah frame dan kemudian saya meletakkannya kembali, jadi saya ulangi bahwa aktivitas yang sama beberapa kali. Ini perulangan sekitar, melakukan kegiatan yang sama beberapa kali."
@@ -338,9 +338,9 @@ id:
       4:
         text: "Banyak hal terjadi yang mana kami semua meresponnya. Kami merasa lapar dan kami menuju ke kulkas. Kami mendengar tukang pos datang dan dia meletakkan surat kami di kotak surat dan kemudian kami membuka surat kami. Itu seperti kejadian menekan tombol atau menggeser joystick. Mereka adalah sesuatu yang terjadi yang memicu kita untuk melakukan sesuatu."
       5:
-        text: "Dalam video game, ada sebuah acara yang disebut \"Pembaruan\" dan itu terjadi 30 atau 60 kali per detik. Untuk videogame programmer itu hampir lebih penting sebagai event dari tombol atau joystick."
+        text: "Dalam video game, ada sebuah event yang disebut \"Pembaruan\" dan itu terjadi 30 atau 60 kali per detik. Untuk videogame programmer itu hampir lebih penting sebagai event dari tombol atau joystick."
       6:
-        text: "Acara utama yang kami tonton adalah acara \"Update\" yang diputar tiap detik. Dan kemudian kami mencontreng joystick di tiap detiknya. Jadi kami berkata, \"Oh, sudahkah ada yang menekan tombol gambar ini? Ya atau tidak?\" Tanpa kejadian apapun, pemain tersebut tidak dapat bergerak, anda tidak dapat melompat, anda tidak akan dapat mengendalikan apa yang sedang terjadi. Videogame tidak akan dapat menghidupkan apapun."
+        text: "Acara utama yang kami tonton adalah event \"Update\" yang diputar tiap detik. Dan kemudian kami mencontreng joystick di tiap detiknya. Jadi kami berkata, \"Oh, sudahkah ada yang menekan tombol gambar ini? Ya atau tidak?\" Tanpa kejadian apapun, pemain tersebut tidak dapat bergerak, anda tidak dapat melompat, anda tidak akan dapat mengendalikan apa yang sedang terjadi. Videogame tidak akan dapat menghidupkan apapun."
     C1_building_foundation:
       1:
         text: "Di patung pasir anda harus tahu bahwa kegagalan adalah bagian dari program. Tetapi jika anda bertahan, itu hanya akan mendapatkan apa-apa tapi baik dan lebih menarik untuk anda. Ketekunan adalah nama permainan. Tetap dengan itu, anda akan menyukainya."
@@ -356,20 +356,20 @@ id:
       1:
         text: "Hi, nama saya adalah Miral Kotb dan aku pencipta Iluminate. Dalam pekerjaan saya, ada sesuatu yang kita gunakan di kedua tarian dan dalam pemrograman lightsuits. Dan itu adalah loop! Loop mengulang suatu tindakan berulang-ulang."
       2:
-        text: "Ketika Anda mengulangi sesuatu beberapa kali, seperti tindakan saya untuk menjaga agar hula hoop tidak berputar, Saya melakukan satu lingkaran dari tindakan itu. Ini adalah sebuah loop. Ini adalah sebuah loop. Dan ini adalah sebuah loop."
+        text: "Ketika Anda mengulangi sesuatu beberapa kali, seperti tindakan saya untuk menjaga agar hula hoop tidak berputar, Saya melakukan satu loop dari tindakan itu. Ini adalah sebuah loop. Ini adalah sebuah loop. Dan ini adalah sebuah loop."
       3:
         text: "Hari ini kita akan mengadakan suatu pesta menari. Kami akan mengobrol dengan tarian loop baru. Iterasi itu. Kita akan belajar tentang loop menggunakan sebuah tarian. Anda akan belajar beberapa langkah mudah dan ulangi berulang-ulang untuk lengkapi tariannya."
       4:
         text: "Langkah-langkah inilah yang perlu untuk anda pelajari. Tepuk tanganmu. Letakkan tangan Anda di belakang kepala Anda. Letakkan tangan Anda di pinggang Anda. Angkat tangan kiri ke atas. Angkat tangan kanan ke atas. Cukup sederhana kan? Anda akan mengetahui bahwa Anda dapat meringkaskan aturan tolakan arah dengan beberapa langkah menari dalam Loops."
       5:
-        text: "Kami benar-benar menggunakan loop dalam menari. Para penari mengenakan komputer, semua dalam jaringan yang sama. Aku mungkin loop lampu melalui yang sama penari lagi dan lagi. Dalam lingkaran saya mungkin telah iterasi dimana aku akan mengatakan anda ingin pergi loop melalui enam penari lagi dan lagi dan kemudian dalam loop anda ingin meningkatkan kecepatan cahaya. Dan itu semua dibuat melalui loop. Loop yang penting dalam ilmu komputer karena mereka membuat kami bekerja lebih pendek dan lebih mudah."
+        text: "Kami benar-benar menggunakan loop dalam menari. Para penari mengenakan komputer, semua dalam jaringan yang sama. Aku mungkin loop lampu melalui yang sama penari lagi dan lagi. Dalam loop saya mungkin telah iterasi dimana aku akan mengatakan anda ingin pergi loop melalui enam penari lagi dan lagi dan kemudian dalam loop anda ingin meningkatkan kecepatan cahaya. Dan itu semua dibuat melalui loop. Loop yang penting dalam ilmu komputer karena mereka membuat kami bekerja lebih pendek dan lebih mudah."
     C1_happy_maps_unplugged:
       1:
         text: "Pelajaran ini disebut Bahagia Maps. Hari ini kita akan membantu kita sedikit berbulu teman Flurb dapatkan untuk buah hatinya."
       2:
         text: "Jadikan Flurb anda pergi ke buah anda. Untuk melakukan ini, anda perlu mencari tahu ke arah mana Flurb harus pergi dan mengarahkannya dengan panah-panah. Supaya Flurb bisa sampai ke apel, ke arah mana Flurb harus pergi? Deretkan Flurb untuk membuatnya naik."
       3:
-        text: "Untuk mendapatkan itu ada lingkaran arah itu telah pergi."
+        text: "Untuk mendapatkan itu ada loop arah itu telah pergi."
       4:
         text: "Buat algoritma dengan menempelkan panah di samping peta yang anda mencoba untuk memecahkan. Yang kedua itu sama tapi itu akan turun."
       5:
@@ -385,16 +385,16 @@ id:
         text: "Mari kita perbaiki hal ini dengan menambahkan blok barat dan memukul run untuk melihat apakah anda sudah benar. Yay, anda mendapatkannya!"
     C1_maze_intro_sequencing:
       1:
-        text: "Untuk teka-teki ini, anda perlu untuk mendapatkan burung ke babi. Melihat teka-teki dan melihat apa arah itu perlu untuk mengambil."
+        text: "Untuk puzzle ini, anda perlu untuk mendapatkan burung ke babi. Melihat puzzle dan melihat apa arah itu perlu untuk mengambil."
       2:
-        text: "Anda perlu untuk menyeret blok dari toolbox ke ruang kerja. Pastikan itu di bawah \"ketika menjalankan\" blok dan ketika anda berpikir anda punya solusi yang tepat, maka anda dapat mengklik \"Run\" dan menonton burung pergi ke babi."
+        text: "Anda perlu untuk menyeret blok dari toolbox ke ruang kerja. Pastikan itu di bawah \"ketika menjalankan\" blok dan ketika anda berpikir anda punya solusi yang tepat, maka anda dapat mengklik \"Jalankan\" dan menonton burung pergi ke babi."
     C1_maze_loops:
       1:
         text: "Salah satu hal yang paling bagus pada komputer adalah mengulang banyak perintah. Sebagai seorang manusia, anda akan benar-benar bosan jika anda harus melakukan hal yang sama banyak dan sering kali berturut-turut. Tapi komputer bisa melakukan hal yang sama jutaan bahkan milyaran kali dan tidak bosan dan dapat melaksanakannya dengan sangat baik."
       2:
         text: "Misalnya, jika saya ingin berharap semua orang di Facebook selamat ulang tahun dengan mengirimkan email kepada mereka, mungkin saya lebih dari abad untuk benar-benar menulis semua email-email ke semua orang. Tetapi dengan hanya beberapa baris kode, saya bisa memiliki sistem kirim email ke semua orang di Facebook ucapan selamat ulang tahun."
       3:
-        text: "Untuk mendapatkan burung ke babi di level ini... daripada menyeret tiga Utara blok ke tempat kerja, anda akan menggunakan tombol \"ulangi\" blok. Seret \"ulangi\" blok ke workspace dan masukkan nomor 3. Kemudian tarik \"bergerak ke Utara\" blok \"ulangi\" blok dan tekan \"Run\" untuk melihat apakah anda sudah benar. Selamat, anda berhasil!"
+        text: "Untuk mendapatkan burung ke babi di level ini... daripada menyeret tiga Utara blok ke tempat kerja, anda akan menggunakan tombol \"ulangi\" blok. Seret \"ulangi\" blok ke workspace dan masukkan nomor 3. Kemudian tarik \"bergerak ke Utara\" blok \"ulangi\" blok dan tekan \"Jalankan\" untuk melihat apakah anda sudah benar. Selamat, anda berhasil!"
     C1_moveitmoveit_unplugged:
       1:
         text: "Pelajaran ini disebut memindahkannya, memindahkannya. Bersama-sama kita akan menulis sebuah program untuk mendapatkan teman-teman kita dari awal dengan kompas naik ke wajah tersenyum gol."
@@ -448,7 +448,7 @@ id:
         text: "Saya membuat anjing tersebut datang dan berkata \"Hai\" tapi kemudian kucing itu merasa ketakutan sehingga kucing tersebut lari. \"Ahh\" Jika ada lebih banyak waktu, ini akan menjadi akhir yang membahagiakan. Tamat!"
     C1_spelling_bee_intro:
       1:
-        text: "Ini merupakan tingkat ejaan lebah. Gunakan potongan-potongan teka-teki untuk memindahkan lebah. Saat bergerak, potongan puzzle itu akan mengumpulkan huruf-huruf untuk mengeja kata-kata."
+        text: "Ini merupakan tingkat ejaan lebah. Gunakan potongan-potongan puzzle untuk memindahkan lebah. Saat bergerak, potongan puzzle itu akan mengumpulkan huruf-huruf untuk mengeja kata-kata."
       2:
         text: "Lihat jika anda bisa mengeja kata-kata mereka memberi anda dalam kotak di bawah panggung. Tapi bee-hati! Bergerak ke arah yang salah akan menambah huruf yang tidak anda inginkan."
     C1_zuck_repeat_loop:
@@ -466,11 +466,11 @@ id:
       1:
         text: "Anda bahkan tidak layak untuk ikut balapan jika tidak memiliki kru yang mahir dalam ilmu komputer saking banyaknya data yang dikumpulkan oleh mobil dan keharusan memiliki kru yang bisa menulis program untuk memprediksi langkah selanjutnya terkait cara memperbaiki kinerja."
       2:
-        text: "Dalam teka-teki ini, anda akan menjadi seorang seniman yang menggunakan pensil untuk menggambar bentuk yang berbeda. Kemanapun seniman anda pergi, pencil akan menarik garis di belakang Anda."
+        text: "Dalam puzzle ini, anda akan menjadi seorang seniman yang menggunakan pensil untuk menggambar bentuk yang berbeda. Kemanapun seniman anda pergi, pencil akan menarik garis di belakang Anda."
       3:
         text: "Untuk bergerak sekitar kanvas, anda akan menggunakan blok maju. Di sini blok bergerak maju memerintahkan bergerak maju 100 piksel. Saat kita memukul lari, apa yang terjadi? Para artis bergerak maju dalam jumlah tertentu dan jumlahnya 100 piksel. Pixel pada dasarnya merupakan kotak yang sangat kecil di layar komputer anda."
       4:
-        text: "Blok yang lain yang kita punya dalam teka-teki ini memerintahkan belok kanan 90 derajat. Dan saat kita seret itu keluar membuat seniman kita membalikkan jumlah tertentu. Jadi anda bisa bermain-main dengan seberapa jauh anda ingin seniman itu berputar. Ini adalah putaran 90 derajat."
+        text: "Blok yang lain yang kita punya dalam puzzle ini memerintahkan belok kanan 90 derajat. Dan saat kita seret itu keluar membuat seniman kita membalikkan jumlah tertentu. Jadi anda bisa bermain-main dengan seberapa jauh anda ingin seniman itu berputar. Ini adalah putaran 90 derajat."
       5:
         text: "Dan ini adalah belokan 120 derajat. Ingat, Anda dapat mengubah nilai-nilai ini dengan mengklik tanda panah di samping angka untuk piksel dan derajat. Nikmati menggambar dengan artis Anda!"
     C2_bee_conditionals:
@@ -555,9 +555,9 @@ id:
       2:
         text: "Blockly terdiri dari tiga bagian utama. Di sisi kiri adalah labirin burung, tempat berjalannya program Anda. Instruksi untuk setiap level ditulis di bawah labirin. Area tengah ini adalah toolbox dan setiap blok ini adalah perintah yang dapat dimengerti oleh burung. Ruang putih di sisi kanan disebut ruang kerja yang menjadi tempat kita membuat program."
       3:
-        text: "Jika saya menarik blok move ke ruang kerja dan menekan \"Run\", apa yang terjadi? Burung bergerak maju satu kotak di kisi-kisi. Dan bagaimana kalau saya ingin burungnya melakukan sesuatu setelah bergerak maju satu kotak? Saya bisa menambahkan blok lain ke program."
+        text: "Jika saya menarik blok move ke ruang kerja dan menekan \"Jalankan\", apa yang terjadi? Burung bergerak maju satu kotak di kisi-kisi. Dan bagaimana kalau saya ingin burungnya melakukan sesuatu setelah bergerak maju satu kotak? Saya bisa menambahkan blok lain ke program."
       4:
-        text: "Saya akan memilih blok \"turn right\", dan menariknya ke bawah blok move hingga muncul panah kuning. Lalu saya akan melepasnya dan kedua blok akan saling menempel. Ketika saya menekan \"Run\" lagi, burung akan melakukan perintah yang ditumpuk dari atas ke bawah di ruang kerja kita."
+        text: "Saya akan memilih blok \"turn right\", dan menariknya ke bawah blok move hingga muncul panah kuning. Lalu saya akan melepasnya dan kedua blok akan saling menempel. Ketika saya menekan \"Jalankan\" lagi, burung akan melakukan perintah yang ditumpuk dari atas ke bawah di ruang kerja kita."
       5:
         text: "Jika Anda ingin menghapus blok, cukup hapus dari tumpukan dan tarik ke keranjang sampah. Setelah menekan \"run\", Anda selalu dapat menekan tombol atur ulang untuk mengembalikan burung ke titik awal. Ayo tangkap babi-babi itu!"
     C2_paper_airplanes:
@@ -603,11 +603,11 @@ id:
       1:
         text: "Anda bahkan tidak layak untuk ikut balapan jika tidak memiliki kru yang mahir dalam ilmu komputer saking banyaknya data yang dikumpulkan oleh mobil dan keharusan memiliki kru yang bisa menulis program untuk memprediksi langkah selanjutnya terkait cara memperbaiki kinerja."
       2:
-        text: "Dalam teka-teki ini, anda akan menjadi seorang seniman yang menggunakan pensil untuk menggambar bentuk yang berbeda. Kemanapun seniman anda pergi, pencil akan menarik garis di belakang Anda."
+        text: "Dalam puzzle ini, anda akan menjadi seorang seniman yang menggunakan pensil untuk menggambar bentuk yang berbeda. Kemanapun seniman anda pergi, pencil akan menarik garis di belakang Anda."
       3:
         text: "Untuk bergerak sekitar kanvas, anda akan menggunakan blok maju. Di sini blok bergerak maju memerintahkan bergerak maju 100 piksel. Saat kita memukul lari, apa yang terjadi? Para artis bergerak maju dalam jumlah tertentu dan jumlahnya 100 piksel. Pixel pada dasarnya merupakan kotak yang sangat kecil di layar komputer anda."
       4:
-        text: "Blok yang lain yang kita punya dalam teka-teki ini memerintahkan belok kanan 90 derajat. Dan saat kita seret itu keluar membuat seniman kita membalikkan jumlah tertentu. Jadi anda bisa bermain-main dengan seberapa jauh anda ingin seniman itu berputar. Ini adalah putaran 90 derajat."
+        text: "Blok yang lain yang kita punya dalam puzzle ini memerintahkan belok kanan 90 derajat. Dan saat kita seret itu keluar membuat seniman kita membalikkan jumlah tertentu. Jadi anda bisa bermain-main dengan seberapa jauh anda ingin seniman itu berputar. Ini adalah putaran 90 derajat."
       5:
         text: "Dan ini adalah belokan 120 derajat. Ingat, Anda dapat mengubah nilai-nilai ini dengan mengklik tanda panah di samping angka untuk piksel dan derajat. Nikmati menggambar dengan artis Anda!"
     C3_artist_nested_loops:
@@ -883,7 +883,7 @@ id:
       5:
         text: "Layar terdiri dari tiga bagian utama. Di sisi kiri adalah gamespace, tempat berjalannya program Anda. Instruksi untuk setiap level ditulis di bawah ini. Area tengah ini adalah toolbox dan setiap blok ini adalah sepotong code. Ruang putih di sisi kanan disebut ruang kerja, dan inilah yang menjadi tempat kita membuat program."
       6:
-        text: "Untuk memulai, Anda harus menghubungkan blok Anda ke blok \"when run\" oranye. Anda dapat menghubungkan beberapa blok sekaligus dengan menarik mereka keluar sampai terlihat garis luar warna kuning, dan blok-blok tersebut akan terpasang sendiri. Dalam puzzle pertama ini, Hiro adalah Aktor 1 dan Baymax adalah Aktor 2. Kita harus menggerakkan Hiro untuk sampai ke Baymax dengan menarik blok \"move right\" keluar dan menghubungkannya ke blok \"when run\". Setelah blok Anda terpasang, tekan tombol \"Run\" untuk melihat hasil pemrograman Anda."
+        text: "Untuk memulai, Anda harus menghubungkan blok Anda ke blok \"when run\" oranye. Anda dapat menghubungkan beberapa blok sekaligus dengan menarik mereka keluar sampai terlihat garis luar warna kuning, dan blok-blok tersebut akan terpasang sendiri. Dalam puzzle pertama ini, Hiro adalah Aktor 1 dan Baymax adalah Aktor 2. Kita harus menggerakkan Hiro untuk sampai ke Baymax dengan menarik blok \"move right\" keluar dan menghubungkannya ke blok \"when run\". Setelah blok Anda terpasang, tekan tombol \"Jalankan\" untuk melihat hasil pemrograman Anda."
       7:
         text: "Mulai dan pada akhirnya Anda akan dapat membuat permainan sendiri dengan semua aktor menakjubkan yang dapat berinteraksi, mencetak poin, melempar mikrobot, ceri, panci, percikan, dan es.. dan lenyap satu sama lain. Semuanya terserah Anda!"
     infinity_playlab_repeat_forever:
@@ -1193,7 +1193,7 @@ id:
       1:
         text: "Selamat! Anda baru saja mempelajari balok pembangunan dasar menurut ilmu komputer."
       2:
-        text: "Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri. Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Anda bisa membangun apa saja yang kamu inginkan. Anda harus memilih."
+        text: "Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri. Tidak ada lagi instruksi dan puzzle yang harus dipecahkan. Anda bisa membangun apa saja yang kamu inginkan. Anda harus memilih."
       3:
         text: "[siswa berkata] Ini sungguhan. Cukur. Aku membuat huruf L dari obor. Aku membuat huruf A dari papan pohon birch. Berhasil, berhasil. Kami membangun rumah dari wol!"
       4:
@@ -1202,7 +1202,7 @@ id:
       1:
         text: "Selamat! Anda baru saja mempelajari balok pembangunan dasar menurut ilmu komputer."
       2:
-        text: "Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri. Tidak ada lagi instruksi dan teka-teki yang harus dipecahkan. Anda bisa membangun apa saja yang kamu inginkan. Anda harus memilih."
+        text: "Sekarang kamu dapat menggunakan balok ini untuk membangun kreasimu sendiri. Tidak ada lagi instruksi dan puzzle yang harus dipecahkan. Anda bisa membangun apa saja yang kamu inginkan. Anda harus memilih."
       3:
         text: "[siswa berkata] Ini sungguhan. Cukur. Aku membuat huruf L dari obor. Aku membuat huruf A dari papan pohon birch. Berhasil, berhasil. Kami membangun rumah dari wol!"
       4:
@@ -1291,11 +1291,11 @@ id:
       6:
         text: "Jika Anda lupa harus melakukan apa, instruksi untuk setiap level berada di sisi atas."
       7:
-        text: "Untuk memulai, kita akan memprogram ayam. Mari kita tarik perintah \"move forward\" ke ruang kerja. Ketika saya menekan \"Run\", ayam maju selangkah. Untuk maju lagi, saya akan menarik blok \"move forward\" yang lain di bawah blok \"move forward\" yang pertama hingga muncul garis luar. Lalu saya melepasnya sehingga kedua blok terpasang jadi satu. Jika saya menekan \"Run\" lagi, ayam berjalan dua langkah."
+        text: "Untuk memulai, kita akan memprogram ayam. Mari kita tarik perintah \"move forward\" ke ruang kerja. Ketika saya menekan \"Jalankan\", ayam maju selangkah. Untuk maju lagi, saya akan menarik blok \"move forward\" yang lain di bawah blok \"move forward\" yang pertama hingga muncul garis luar. Lalu saya melepasnya sehingga kedua blok terpasang jadi satu. Jika saya menekan \"Jalankan\" lagi, ayam berjalan dua langkah."
       8:
         text: "Jika Anda ingin menghapus sebuah blok, cukup geser blok dari tumpukan dan tarik kembali ke toolbox."
       9:
-        text: "Setelah menekan \"Run\", Anda selalu bisa menekan tombol \"Reset\" untuk mengatur ulang permainan dan memulai lagi dari nol. Sekarang giliran Anda untuk membuat versi Minecraft sendiri. Bersenang-senanglah!"
+        text: "Setelah menekan \"Jalankan\", Anda selalu bisa menekan tombol \"Reset\" untuk mengatur ulang permainan dan memulai lagi dari nol. Sekarang giliran Anda untuk membuat versi Minecraft sendiri. Bersenang-senanglah!"
     mc_2016_loops:
       1:
         text: "Hai, saya Lisa. Saya seorang developer perangkat lunak di Minecraft dan mengerjakan beberapa binatang serta musuh dalam permainan. Salah satu binatang yang saya kerjakan adalah ocelot. Saya mengerjakan bagian ocelot yang memungkinkan Anda bisa memberi makan ocelot dengan ikan untuk menjinakkannya menjadi kucing Anda."
@@ -1380,7 +1380,7 @@ id:
       7:
         text: "Dari sini, Anda dapat mengunggah gambar dari komputer atau Anda dapat memerika perpustakaan ikon yang besar di galeri ikon."
       8:
-        text: "Kembali di mode code, Anda dapat menggunakan blok \"setProperty\" untuk mengubah warna ikon Anda. Setelah memilih gambar yang harus digunakan oleh ikon Anda, klik \"Run\" untuk melihat tampilannya."
+        text: "Kembali di mode code, Anda dapat menggunakan blok \"setProperty\" untuk mengubah warna ikon Anda. Setelah memilih gambar yang harus digunakan oleh ikon Anda, klik \"Jalankan\" untuk melihat tampilannya."
       9:
         text: "Selesai sudah! Sekarang Anda dapat mulai menambahkan gambar dan suara ke aplikasi Anda dengan lebih seru dan dinamis lagi."
     applab_intro_designmode:
@@ -1733,7 +1733,7 @@ id:
       9:
         text: "Jika Anda ingin mencoba lagi, klik tombol atur ulang untuk kembali ke tempat semula."
       10:
-        text: "Jika Anda harus menghapus perintah, cukup tarik kembali blok dari ruang kerja ke toolbox. Ingat, klik \"Run\" untuk melihat tampilan code dalam tindakan."
+        text: "Jika Anda harus menghapus perintah, cukup tarik kembali blok dari ruang kerja ke toolbox. Ingat, klik \"Jalankan\" untuk melihat tampilan code dalam tindakan."
       11:
         text: "Oke, cukup main-mainnya, teman-teman petualang. Ayo mulai coding untuk menemukan harta karun di bawah air."
     MC_2018_loops:
@@ -1746,7 +1746,7 @@ id:
       4:
         text: "Blok \"loop\" berisi instruksi yang diulang-ulang sampai tujuan tercapai. Setelah program Anda memulai loop \"Repeat until goal\", loop akan terus mengulang instruksi sampai tiba di tujuan."
       5:
-        text: "Cobalah sendiri! Letakkan perintah yang ingin Anda ulangi ke dalam blok \"Repeat until goal\" block, klik \"Run\", dan tonton saja!"
+        text: "Cobalah sendiri! Letakkan perintah yang ingin Anda ulangi ke dalam blok \"Repeat until goal\" block, klik \"Jalankan\", dan tonton saja!"
       6:
         text: "Wah, sedikit aneh. Siapa yang tahu cumi-cumi bisa mencode? Bahkan saya tak terpikir mereka punya jari-jari. Jadi, kini kita tahu tentang loop. Ayo gunakan cumi-cumi untuk mengantongi harta karun buat kita."
     mc_2018_conditionals:
@@ -1823,7 +1823,7 @@ id:
         text: "Ada instruksi untuk setiap puzzle di atas ruang kerja."
       7:
         image: 'notes/writing_first_program_7.png'
-        text: "Jika Anda kebanyakan menarik blok keluar dari toolbox, cukup tarik kembali blok yang berlebih ke dalam toolbox.  Tekan Run untuk mencoba program, dan Reset untuk mencobanya lagi."
+        text: "Jika Anda kebanyakan menarik blok keluar dari toolbox, cukup tarik kembali blok yang berlebih ke dalam toolbox.  Tekan Jalankan untuk mencoba program, dan Reset untuk mencobanya lagi."
     repeat_block:
       1:
         image: 'notes/repeat_block.png'

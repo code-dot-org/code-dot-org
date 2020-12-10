@@ -43,6 +43,11 @@ bn:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
+  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
+  hoc2020_ai_header: Explore Artificial Intelligence
+  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
+    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
+    discuss ethics and AI, and more...
   hoc2019_header: কম্পিউটার বিজ্ঞান শিখুন, বিশ্বের পরিবর্তন করুন.
   hoc2019_header_line1_mobile: কম্পিউটার বিজ্ঞান শিখুন
   hoc2019_header_line2_mobile: বিশ্বের পরিবর্তন করুন
@@ -132,7 +137,7 @@ bn:
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
-    learning at home.
+    learning at home. See past episodes [here](%{episodes_url}).
   hoc_live_join_us: আমাদের সাথে যোগ দিন
   hoc_overview_oceans_tutorial_header: AI for Oceans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
@@ -232,13 +237,6 @@ bn:
   front_watch_regular_video: ভিডিওটি দেখতে পারেন
   front_volunteers: কারিগরী কাজের জন্য স্বেচ্ছাসেবক নেয়া হচ্ছে
   front_start_learning: শিখতে শুরু করে দিন
-  gdpr_dialog_heading: Do you agree to using a web site based in the United States?
-  gdpr_dialog_message: Data from your use of this site may be sent to and stored or
-    processed in the United States.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: privacy policy
-  gdpr_dialog_logout: Logout
-  gdpr_dialog_yes: 'Yes'
   header_menu_resources: Resources
   header_menu_faq: FAQ
   header_menu_how_to: কীভাবে
@@ -946,6 +944,9 @@ bn:
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ and Hora del Código® are trademarks of Code.org.
+    Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com,
+    Inc. or its affiliates in the United States and/or other countries.
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners and Advisors
   footer_menu_contact: Contact us
   footer_menu_support: Support
@@ -1546,6 +1547,124 @@ bn:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
+  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_csfirstunplugged_name: CS First Unplugged
+  tutorial_toxicodepython_name: Discover Python with Silent Teacher
+  tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
+  tutorial_vidcodedate_name: Climate Clock
+  tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
+  tutorial_codespeakhappy_name: Code a Happy Place Meditation App
+  tutorial_grokimage_name: Image Magic with Python
+  tutorial_icomputelearn_name: Learn Coding with iCompute
+  tutorial_rpstress_name: Stress ball
+  tutorial_bsdcause_name: Support My Cause
+  tutorial_vidcodeanimoji_name: Animoji
+  tutorial_vidcodeanimojies_name: Animoji
+  tutorial_bsdinspire_name: People who Inspire Me
+  tutorial_tttractor_name: Tractor Traversal
+  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
+    Mickey'
+  tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
+  tutorial_codespeakbreathe_name: Code a Meditation Breathing App
+  tutorial_vidcodeface_name: Facetracking
+  tutorial_educodemaze_name: Design Your Own Maze!
+  tutorial_educoderace_name: Code your own racing game!
+  tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
+  tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
+  tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
+  tutorial_educodekingdom_name: Defend the Kingdom!
+  tutorial_codehsdata_name: Coding with Data Visualizations
+  tutorial_educodecake_name: Bake a Cake With HTML!
+  tutorial_ttsecond_name: Second Team
+  tutorial_bsdtrivia_name: Trivia Game Maker
+  tutorial_csfirstdialogue_name: Dialogue
+  tutorial_codemonkeybeaver_name: Beaver Achiever
+  tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
+  tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
+  tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
+  tutorial_codespeakmeal_name: Code a Healthy Meal App
+  tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
+  tutorial_bsdwebsite_name: My Favorites Website
+  tutorial_codespeaktime_name: Code a Time Capsule in Scratch
+  tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
+  tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
+  tutorial_ttrace_name: Race Condition
+  tutorial_plethora_name: 'Plethora: Cause and Effect'
+  tutorial_educodesecret_name: Uncover the Agency's Secrets!
+  tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
+  tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_vidcodeplastiche_name: Plastic Pollution PSA
+  tutorial_educativechatbot_name: Build your own chatbot in Python
+  tutorial_educodebasics_name: Learn the Basics!
+  tutorial_codehsdesign_name: Supporting Artists with Code
+  tutorial_htmlacademyphp_name: 'Intro to PHP: Create an Online Store from Scratch'
+  tutorial_gamefrootdistance_name: 'COVID-19 Simulator: Learn about social distancing
+    through computer science.'
+  tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
+  tutorial_ttbunker_name: The Bunker
+  tutorial_cuttle_name: Computational Thinking and Programming Challenge
+  tutorial_bsdjokes_name: Jokes and Riddles
+  tutorial_rptree_name: Tree life simulator
+  tutorial_codestersunity_name: 'Codesters: Unity Mural'
+  tutorial_codesterssoccer_name: 'Codesters: Soccer Shot'
+  tutorial_breakoutlock_name: 'Haspy and Lockit: Code Buddies'
+  tutorial_thunkablemask_name: Beaver in a Mask
+  tutorial_cafarming_name: Old MacDonald hacked a farm. AI, AI drone!
+  tutorial_blocksmithyeti_name: Don't Yeet the Yeti
+  tutorial_codecapture_name: Learn Programming With JavaScript​ In A Jiffy​
+  tutorial_codehslitter_name: Coding for a Litter-Free Community
+  tutorial_bsdocean_name: Life Below Water
+  tutorial_itchplatformer_name: 'iTCHcode: Scratch 3.0 Platformer Tutorial'
+  tutorial_codejika_name: 'CodeJIKA: 5 Minute Website'
+  tutorial_gamefrootclicker_name: Learn Variables. Code your own Clicker Game.
+  tutorial_rmagicequity_name: Equity vs. Equality
+  tutorial_ttfreestyle_name: Functional Freestyle
+  tutorial_ozobotcolor2_name: 'Introduction to Color Codes 02:  Drawing Color Codes'
+  tutorial_ozobotcolor3_name: 'Introduction to Color Codes 03: Directionality'
+  tutorial_clcarbon_name: Build Your Own Carbon Calculator
+  tutorial_kodablebasics_name: 'Coding Basics: Unplugged'
+  tutorial_scigirlscc_name: 'SciGirls: Code Creators'
+  tutorial_irobotpicture_name: 'Seeing the Whole Picture: Coded Messages'
+  tutorial_kcjmyself_name: Let me introduce myself!
+  tutorial_nearpodalgorithms_name: 'Coding: Algorithms '
+  tutorial_kibodrop_name: KIBO Craft and Build Drop Test
+  tutorial_ozobotcolor1_name: 'Introduction to Color Codes 01: Line Following'
+  tutorial_scigirlspixels_name: 'SciGirls: Passion for Pixels'
+  tutorial_kcjheroines_name: Our Heroines
+  tutorial_ozobotvalue_name: What's My Value?
+  tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
+  tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
+  tutorial_ai4all_name: AI & Drawing
+  tutorial_cldata_name: Welcome to Data Superpower
+  tutorial_spheroinputs_name: Inputs and Outputs Unplugged
+  tutorial_edisoncount_name: Teach Edison to count to 9
+  tutorial_spheroloops_name: Loops Unplugged
+  tutorial_kiboprogram_name: Let's Program Each Other
+  tutorial_hellorubycsin60_name: Computer Science in 60 seconds
+  tutorial_clfashion1_name: Fashionistas of Data Science - Class 1
+  tutorial_irobottraffic_name: 'Traffic Bot: Code Your Own Traffic Signal'
+  tutorial_edisonmystery_name: Edison and the mystery line
+  tutorial_microbitseaturtles_name: Saving Sea Turtles
+  tutorial_ozobotknow_name: 'Introduction to Ozobot: Get to Know Evo'
+  tutorial_imagilabs_name: 'Imagine it. Code it. Wear it. '
+  tutorial_irobotsimulator_name: Simulator Code Break
+  tutorial_irobotkind_name: 'Robot Feelings: The Kind Playground'
+  tutorial_firiavirtual_name: 'CodeSpace: Virtual Robotics with Python'
+  tutorial_irobotguesscode_name: Guess the Code
+  tutorial_ozobotnouns_name: Picking Out Irregular Plural Nouns
+  tutorial_nasa3d_name: 'Universe in 3D:  modeling and printing cosmic objects'
+  tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
+  tutorial_legodance_name: Break Dance
+  tutorial_nearpodcoding_name: 'Topic Spark: Coding '
+  tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
+  tutorial_legojourney_name: Create a Journey with LEGO Education
+  tutorial_legohopper_name: Hopper Race
+  tutorial_catrobatembroidery_name: কোডেড এমব্রয়ডারি
+  tutorial_irobotphone_name: Telephone Drawing
+  tutorial_codeguppydraw_name: Draw with code
+  tutorial_codejumper_name: 'Networks: Messages of Kindness'
+  tutorial_meeempathy_name: A Minecraft Tale of Two Villages
   tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
     Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
@@ -5177,6 +5296,424 @@ bn:
     Each of the six activities includes simple directions that are supported with
     symbols from the n2y® SymbolStix PRIME® collection. The symbols help non-readers
     and beginning readers understand and follow the directions.
+  tutorial_microsoftarcade_longdescription: Play fun arcade games, design your own
+    sprites, and learn the basics of coding your own game with MakeCode Arcade.
+  tutorial_csfirstunplugged_longdescription: No computer or internet? No problem.
+    Try the CS First Unplugged activities to explore how computer science can solve
+    problems like helping people stay connected while apart. 'Plugged in' Scratch
+    activities are available too!
+  tutorial_toxicodepython_longdescription: Discover the basics of Python without any
+    word or explanation. Our silent teacher will give you several series of challenges
+    that will lead you to guess some rules and learn from your own mistakes.
+  tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
+    a hero in an epic adventure. You must use the power of coding to defeat a darkness
+    that has taken over the world! Along the way, you'll meet interesting characters
+    and travel to different lands, practicing coding concepts like sequences, loops,
+    debugging, and decomposition. In the end, you'll design a playable game that you
+    can share with your friends!
+  tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
+    relevant intersection of math, environmental science, and computer science. In
+    this Hour of Code activity, students will be guided through the construction of
+    their own climate clock. They will engage with objects, properties, variables,
+    functions, and loops, and customize their message to convey their message for
+    the world and their hopes for the future. '
+  tutorial_codemonkeyspace_longdescription: 'Write real code to help the monkey astronaut
+    catch bananas in space! '
+  tutorial_codespeakhappy_longdescription: Learn to program a meditation app that
+    transports you to your 'happy place.'
+  tutorial_grokimage_longdescription: Use the programming language Python to make
+    speedy changes to images. Make fun image editing programs and make your own image
+    filter!
+  tutorial_icomputelearn_longdescription: When you learn to code with iCompute you
+    program your own fantastic interactive stories, games, and animations. Following
+    our creative, fun, activities means that you will develop computational thinking
+    as well as coding skills!
+  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
+    can squash!
+  tutorial_bsdcause_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Support
+    My Cause focuses on designing and coding a landing page that will collect data
+    from supporters of your favorite cause. #codeisyourvoice'
+  tutorial_vidcodeanimoji_longdescription: Use a loop to iterate over an array, causing
+    an emoji to animate through multiple options.
+  tutorial_vidcodeanimojies_longdescription: Use a loop to iterate over an array,
+    causing an emoji to animate through multiple options.
+  tutorial_bsdinspire_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them.They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The People
+    Who Inspire Me focuses on creating a webpage to showcase the top 3 people who
+    have been an inspiration to you. #codeisyourvoice'
+  tutorial_tttractor_longdescription: Help bring the fields back to life. Farmer Hayao's
+    down on his luck, and his fields have become a mess. But he's just obtained a
+    fancy new tractor with a repeating code system using loops that just might save
+    everything. Help learn how the tractor works to water all the crops in his fields.
+  tutorial_codeillusionmickey_longdescription: Embark on a magical coding adventure
+    with Mickey! Learn how to draw, color, and move shapes as you master the introduction
+    to Media Art using JavaScript.
+  tutorial_scigirlsquest_longdescription: 'In this online coding adventure, youth
+    take Subby the submarine through underwater challenges, using code to find various
+    items and collect scientific data on the ocean floor. '
+  tutorial_codespeakbreathe_longdescription: Learn to program meditation app that
+    will guide users through a mindful breathing exercise.
+  tutorial_vidcodeface_longdescription: Use a facetracking library to code your own
+    custom face filter, like the ones you use on social media.
+  tutorial_educodemaze_longdescription: Design a maze, complete with monsters and
+    locked passages. Use variables, loops, and strings to help your hero navigate
+    the world you've created.
+  tutorial_educoderace_longdescription: Learn computer science as you unleash the
+    racer in you! Invent and customize your very own car, all while gaining a deeper
+    understanding of objects and how video games are made.
+  tutorial_codespeakchatbot_longdescription: Learn how to code a chatbot, a computer
+    program you can have a conversation with, while learning about the famous women
+    pioneers of computer science.
+  tutorial_gamefrootgames_longdescription: Learn to code a real game like Super Mario
+    Bros. Students that are ready to go beyond Scratch and Tynker will be introduced
+    to real games industry practice, creative coding concepts, how to publish their
+    own unique game and start working towards a career in the games industry. The
+    tutorial is all about level design, choosing a character, animating and coding
+    your character to move around.
+  tutorial_codespeakgrandparent_longdescription: Learn to code a digital card to spread
+    joy to someone special in your life.
+  tutorial_educodekingdom_longdescription: The Kingdom is under attack! Plan powerful
+    defenses to help repel the invaders. Master the power of arrays in order to create
+    your very own wave of monsters in your own tower defense game!
+  tutorial_codehsdata_longdescription: Learn about the power of using data visualizations
+    to display data in meaningful and easy to understand ways. Use our graph generator
+    to create visually appealing graphs and learn how coding is used to create beautiful
+    data.
+  tutorial_educodecake_longdescription: Learn HTML as you bake a cake with chef Roland.
+    Shape and style your custom creation with your newfound knowledge of tags and
+    classes.
+  tutorial_ttsecond_longdescription: Can you deliver the Open Protocol? You've snuck
+    aboard the capital ship, and now you must evade the security drones long enough
+    to open access for all. Quickly examine conditional statements to find out whether
+    you're safe or not from the dastardly cybervision. If not, it's to the airlock!
+  tutorial_bsdtrivia_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Trivia
+    Game Maker focuses on building an interactive trivia game where you also get to
+    come up with the trivia questions. #codeisyourvoice'
+  tutorial_csfirstdialogue_longdescription: Program a conversation between two sprites.
+    Get creative while communicating with code in Scratch with CS First!
+  tutorial_codemonkeybeaver_longdescription: Help a Beaver achieve its goals! Dive
+    into this beaver's natural habitat with a fun-packed coding activity that will
+    jump-start your coding education. Beavers can swim, collect wood, and build dams.
+    This little beaver needs your help. Use the simple blocks of code to complete
+    the dam in the lake so the water remains calm, build a house, and make smoothies!
+  tutorial_codestersdistance_longdescription: Learn the basics of coding in Python,
+    then create a program that calculates the distance between two sprites to make
+    sure they are social distancing or need to wear a mask.
+  tutorial_itchspace_longdescription: This tutorial takes you through the creation
+    of a classic Space Invaders game using the Scratch MIT programming language. Subscribe
+    to the RokCoder YouTube channel for more Scratch-based videos and tutorials! Each
+    video is a bite-sized tutorial (approximately ten minutes in length) that contains
+    its own specific end goals. The final result is a high quality Scratch arcade
+    game.
+  tutorial_vidcodemagic_longdescription: Make flashes appear randomly around the screen
+    using a loop.
+  tutorial_vidcodemagices_longdescription: Make flashes appear randomly around the
+    screen using a loop.
+  tutorial_codespeakmeal_longdescription: Learn to code an app that helps users make
+    healthy food decisions.
+  tutorial_itchfish_longdescription: Scratch 3.0 tutorial for making a game with a
+    shark chasing and eating fish disrupted when a diver is eaten accidentally.
+  tutorial_bsdwebsite_longdescription: 'This course allows students to use code as
+    a way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. ''The My Favourites
+    Website focuses on creating a webpage of the top 3 things you are interested in
+    or love doing. #codeisyourvoice'
+  tutorial_codespeaktime_longdescription: Learn how to code a digital time capsule
+    to record and reflect on your life right now.
+  tutorial_itchwebcam_longdescription: Learn about augmented reality and make your
+    own augmented reality virtual space.
+  tutorial_itchball_longdescription: Get a ball to bounce around the screen. Learn
+    about loops and conditionals within loops
+  tutorial_ttrace_longdescription: By calling functions and designing classes, players
+    program their own race car to be fast, nimble, and powerful; during races, they
+    can then hack their competitors' vehicles to scramble their controls.
+  tutorial_plethora_longdescription: 'In this Plethora activity you will solve visual
+    fun challenges and learn the concepts of cause and effect and user interaction. '
+  tutorial_educodesecret_longdescription: Explore the worlds of secrets with Agent
+    Smith as you dive deeper into learning if statements, strings, for-in loops. Help
+    Agent Smith find the culprits and configure the Agency's operating system for
+    their new users with Python.
+  tutorial_itchshapes_longdescription: Learn how to draw shapes in Scratch. You will
+    also learn how to calculate how much you need to turn for any shape.
+  tutorial_codeguppytext_longdescription: Learn the basics of text based coding by
+    creating your first program in an online coding editor
+  tutorial_vidcodeplastiche_longdescription: The problem of plastic filling our oceans
+    continues to worsen. Luckily, you can make your voice heard with code through
+    the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript,
+    you can make a second video about any subject you care about! Learn to use loops,
+    sine waves and customized emojis to make a unique project.
+  tutorial_educativechatbot_longdescription: Learn about the realm of Artificial intelligence
+    and Machine Learning, as well as programing your own chatbot!
+  tutorial_educodebasics_longdescription: Learn some programming fundamentals and
+    create your own game in the process!
+  tutorial_codehsdesign_longdescription: 'Coders will learn how programming can support
+    artists and build their own Online Shop mockup, using HTML. '
+  tutorial_htmlacademyphp_longdescription: Meet Dumpo the Little Elephant, a senior
+    programmer at a web design studio, who is developing an online store. Together
+    you will learn the basics of PHP in an engaging way. You will work with web scripts
+    and learn the variables, add PHP-scripts into the layout and interact with databases
+    while creating a true-to-life web project.
+  tutorial_gamefrootdistance_longdescription: 'In COVID-19: Stop the Spread, you can
+    modify the ''Staying home'' factor and code a simple news clicker. The activity
+    illustrates how social distancing has a direct impact on how fast a virus like
+    COVID-19 can spread. Students and teachers will gain a small insight into virus
+    science, the effects a virus can have on society, and at the same time level up
+    their digital fluency skills.'
+  tutorial_codesterscovid_longdescription: Learn the basics of coding in Python while
+    creating your own PSA about how we can stop the spread of COVID-19. Design your
+    own animated interactive PSA to share critical information about the importance
+    of social distancing, wearing a mask, quarantining, and other measures.
+  tutorial_ttbunker_longdescription: You found The Bunker, and all its secrets will
+    be yours, once you crack its encryption. An army approaches, and you must hold
+    the perimeter using the power of programming. Code individual towers, setting
+    range, damage, and more special powers by adding new lines of code and changing
+    values. Survive long enough to learn how classes and instances can make you even
+    more powerful.
+  tutorial_cuttle_longdescription: Challenge yourself with these fun and interactive
+    tasks and learn all about computational thinking.
+  tutorial_bsdjokes_longdescription: 'This course allows students to use code as a
+    way to share what is important or interesting to them. They can follow the lesson
+    or create unique projects while learning HTML, CSS and JavaScript. They are guided
+    with video tutorials, live coding and access to the code glossary. The Jokes and
+    Riddles focuses on creating a set of interactive cards that contain your favorite
+    jokes and riddles and the answers! #codeisyourvoice'
+  tutorial_rptree_longdescription: Use Scratch to create a simulation that shows how
+    varying the health of a forest and levels of deforestation impact trees, wildlife
+    and the amount of CO2 absorbed. You should already know how Scratch coordinates
+    and variables work.
+  tutorial_codestersunity_longdescription: Learn the basics of coding in Python including
+    lists, loops, and sprites. Then create a mural using a loop to access each sprite
+    stored in a list.
+  tutorial_codesterssoccer_longdescription: Learn the basics of coding in Python,
+    then create a program that shoots a soccer ball into the goal. To aim your shot
+    you'll first need to estimate the slope of the line. Good luck!
+  tutorial_breakoutlock_longdescription: 'Haspy the Robot needs your help! She needs
+    your knowledge of loops, algorithms, and coding to help her fix Lockit''s code
+    and reboot her system. '
+  tutorial_thunkablemask_longdescription: Learn how to build a mobile app that gives
+    you points for knowing how to wear your mask correctly!
+  tutorial_cafarming_longdescription: Computer science can help feed a hungry world.
+    Farmers are using technology to grow food in smarter and more sustainable ways.
+    Agribots and drones can monitor, water, and spray crops, and even tackle those
+    pesky weeds! Learn about how AI, Computer Vision, and the Internet of Things are
+    used on the farm.
+  tutorial_blocksmithyeti_longdescription: Oh no! Someone trapped the Yeti! Only YOU
+    and your programmable smart cannon can save the Yeti and feed their friends. Students
+    will use JavaScript to save the Yeti with this fun interactive self-paced lesson.
+  tutorial_codecapture_longdescription: 'Take your first steps into the world of programming
+    with JavaScript, using just pen-and-paper and your mobile phone! '
+  tutorial_codehslitter_longdescription: 'Learn how you can use programming to help
+    solve one of the world''s biggest problems: litter and waste! In this Choose-Your-Own-Adventure
+    Hour of Code, you have the choice between the basics of Python or the basics of
+    Web Design. Whichever you choose, you will explore how you can use computer science
+    to decrease the amount of litter in your community.'
+  tutorial_bsdocean_longdescription: Life below Water sheds light on a pressing issue
+    that we face nowadays - our environment. This project focuses on guiding you to
+    code your very own webpage on protecting our waters.
+  tutorial_itchplatformer_longdescription: An easy to follow tutorial for how to create
+    a simple platformer game using Scratch.
+  tutorial_codejika_longdescription: A great introduction to coding using HTML and
+    CSS. Code a few lines, see immediate output without getting caught up in the Hows
+    and Whys by creating a nice landing page with a two-color gradient background,
+    name and website launch date.
+  tutorial_gamefrootclicker_longdescription: Learners code their own Clicker Game
+    and in the process learn about variables, different data types, conditional logic,
+    comparative operators, and gain some valuable insights into how professional game
+    developers design and make real games. By the end of the tutorial you will have
+    coded different variable types, published a game, and engaged with computer science
+    in an indigenous context.
+  tutorial_rmagicequity_longdescription: 'Explore concepts related to reducing inequality
+    with code: limited resources, equality, equity and liberation. Use variables and
+    functions in a self guided block environment. Finish by animating the 3D actors.'
+  tutorial_ttfreestyle_longdescription: You're the choreographer and director of a
+    new music video! Type real code to place and control dancers, scenery, and more.
+    Just make sure to capitalize and punctuate correctly, otherwise the whole thing
+    will just be static.
+  tutorial_ozobotcolor2_longdescription: Students will learn the basic functionality
+    of Ozobot. Students will learn how to draw Color Codes Ozobot can read.
+  tutorial_ozobotcolor3_longdescription: Students will learn how to program the bot
+    to travel left, right, and straight with Color Codes.
+  tutorial_clcarbon_longdescription: A python lesson plan that will teach students
+    how to make a carbon footprint calculator that calculates footprint based on a
+    short quiz about daily life, then gives comparison metrics (ie this is the same
+    amount of carbon as xxxx), and suggests ways to be more eco-friendly.
+  tutorial_kodablebasics_longdescription: No computer? No problem! Learn basic programming
+    skills and practice using core coding commands without the use of a device.
+  tutorial_scigirlscc_longdescription: Help your students learn to write pseudocode!
+    Computer programmers often start projects by using everyday language to write
+    out what they want to happen in their code–this is called pseudocode.Youth will
+    work in groups to write pseudocode for a simple movement or dance move.
+  tutorial_irobotpicture_longdescription: Robots have lots of sensors that work together
+    to help the robot understand everything around it. Just like sensors, our friends
+    can often see, hear, feel or understand things that we cannot. In this activity,
+    work together to help decode secret messages and crack the code!
+  tutorial_kcjmyself_longdescription: In this activity, you'll learn how to use Scratch
+    to code an animation all about you! Design a custom character to represent yourself,
+    make it move around, and add different backdrops to show off your hometown. This
+    project is simple enough for kids to complete by themselves or with support from
+    a grown up.
+  tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
+    an algorithm as a set of step-by-step directions. Students learn to create, test,
+    and fix an algorithm to complete a specific task. '
+  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
+    the students will become engineers, learning the steps of the Engineering Design
+    Process. They will create models out of craft and recycled materials, then they
+    will test the sturdiness of their models by dropping them from ankle height. This
+    is an unplugged activity; KIBO robots are optional.
+  tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
+    of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
+    for the bot to follow.
+  tutorial_scigirlspixels_longdescription: 'In this unplugged activity, you will learn
+    what a pixel is and how to send a simple black and white image to a friend! '
+  tutorial_kcjheroines_longdescription: In this activity, you'll learn about different
+    Canadian women who have made history. Using Scratch, you'll learn how to code
+    a video game celebrating their lives and accomplishments. Choose a heroine, customize
+    their costume and backdrop, code movements and goals for your game, and keep score.
+    This project is simple enough for kids to complete by themselves or with support
+    from a grown up.
+  tutorial_ozobotvalue_longdescription: Students will use their Ozobot to randomly
+    select a place value, identify the same place value in a three-digit number, and
+    write out the number.
+  tutorial_icodebytes_longdescription: Learn computer science without tech! Fun unplugged
+    computing activities for children aged 5-7 to do in class or at home with their
+    families. The activities help develop computational thinking skills in a really
+    fun way. Divided into the fundamental principles of computer science, and involve
+    creating algorithms, thinking logically, spotting patterns and finding or making
+    rules.
+  tutorial_clfashion2_longdescription: Are you a fashion conscious data scientist
+    with an interest in code? Join in the Fashionista of Data Science classes to learn
+    how coding & fashion go hand-in-hand! We will use SQL code along with data science
+    to investigate marketing, line styles, and store operations.
+  tutorial_ai4all_longdescription: 'This Byte of AI is meant to be a quick and fun
+    teacher-facilitated way to begin to become familiar with some core ideas of modern
+    AI including: how data becomes output in an AI model, how human biases enter datasets,
+    and how AI can be used in diverse fields including art and creativity. Students
+    learn these things by exploring drawing in Google Quick, Draw!'
+  tutorial_cldata_longdescription: 'Discover data science, one of the most valuable
+    skills, and see the world! Does data science sound dry and scary, like math? Fear
+    not. This introductory class will show you that you are already experts of data
+    and data science is full of fun and interesting insights related to topics such
+    as soccer, music, art, and your favorite books. Materials ready for in person
+    or remote learning settings. '
+  tutorial_spheroinputs_longdescription: 'This activity will get you thinking about
+    the common computer science coding concept of inputs and outputs and how this
+    idea relates to using computer science for good. '
+  tutorial_edisoncount_longdescription: 'Introduce the key computational concepts
+    of inputs and outputs using Edison robots and the block-based programming language
+    EdBlocks in this student led activity. Utilize the Edison robot''s drive function
+    through a set of progressive programming tasks. Creating programs for the robot
+    to ''trace'' requires the application of sequential thinking and an understanding
+    of the input-process-output cycle. '
+  tutorial_spheroloops_longdescription: 'This activity will get you thinking about
+    the common computer science coding concept of loops and how this concept relates
+    to using computer science for good. '
+  tutorial_kiboprogram_longdescription: In this lesson, children will learn about
+    sequencing in programming and about the symbols that make up a programming language
+    like KIBO's. Students will create their own programming symbols and act out programs
+    with their own movement. Finally, they can translate these movement programs into
+    programs for KIBO.
+  tutorial_hellorubycsin60_longdescription: 'Have you ever wondered what travels inside
+    the wires of your computer? Or why computer parts look like a tiny city? Or what
+    really is an algorithm? These 30 self-paced one minute videos are aimed for 5-9
+    year olds, followed by an activity the kids can complete at home. Topics include
+    code, hardware, networks, AI and other interesting ideas. '
+  tutorial_clfashion1_longdescription: Are you a fashion conscious data scientist
+    with an interest in code? Join in the Fashionista of Data Science classes to learn
+    how coding & fashion go hand-in-hand! We will use SQL code along with data science
+    to investigate marketing, line styles, and store operations.
+  tutorial_irobottraffic_longdescription: Traffic signals are a staple of safety in
+    our everyday lives. Code your own traffic light with the Root robot and learn
+    about the inventor!
+  tutorial_edisonmystery_longdescription: Kick-start student's exploration of using
+    Edison's line tracker using Edison robots and the Scratch-based programming language
+    EdScratch in this student led activity. Students first become familiar with the
+    Edison robot's line tracking sensor technology and experiment with the red LED
+    on different colored surfaces. They will then move on to mastering a mystery line
+    using the concept of algorithms.
+  tutorial_microbitseaturtles_longdescription: Create a prototype of a low-power,
+    red LED beach light that can be used for lighting on beach paths which is also
+    safe for sea turtles.
+  tutorial_ozobotknow_longdescription: In this lesson, students will be introduced
+    to the hardware and robotics components of Ozobot Evo.
+  tutorial_imagilabs_longdescription: 'Program a blinking heart, a rocketship taking
+    off, your name, or anything your imagination comes up with! To start off, we''ll
+    teach you how to program a heart in your favourite color and then make it blink
+    to the rhythm of your favorite song. Join our community of imagiCoders to share
+    and exchange designs. Upload your creations on your imagiCharm so you can proudly
+    wear your code wherever you go! '
+  tutorial_irobotsimulator_longdescription: Learn how to create and download coding
+    projects with this activity packet! Solve all puzzles with the Root simbot in
+    the virtual arena to reveal the secret message at the end!
+  tutorial_irobotkind_longdescription: Our robot is still learning how to make kind
+    choices when playing with friends. In this game, help Root practice by making
+    four kind decisions in a row. If Root makes a bad choice, it has to start all
+    the way at the beginning again! Let's play together!
+  tutorial_firiavirtual_longdescription: Learn Python programming with a powerful
+    3D robotics simulator. You'll complete challenging missions in a virtual environment
+    with realistic physics. Missions teach you the code to control motors, LEDs, and
+    other peripherals on CodeBot. And Sandbox mode lets you get creative with unlimited
+    Python coding possibilities. It's easy to get started with CodeSpace Simulation!
+  tutorial_irobotguesscode_longdescription: Put a new spin on Pictionary through code!
+    Students can use code to make predictions about what pictures, songs, or words
+    the Root SimBot will create. Code your own Pictionary creation, too!
+  tutorial_ozobotnouns_longdescription: In this lesson, students will identify the
+    correct way to spell and use irregular plural nouns and use Color Codes to program
+    their Ozobot to move to the correct irregular plural nouns by either turning left
+    or right and use the noun in a sentence.
+  tutorial_nasa3d_longdescription: Learn about exploding stars, 3D models and codeblocks!  This
+    spacey activity takes you through the basics of 3D modeling in astronomy using
+    the free browser-based Tinkercad. Students can progress from creating simple 3D
+    shapes to working with actual NASA data on exploded stars, testing in augmented
+    reality, and using loops and time-based changes with codeblocks.
+  tutorial_blupants_longdescription: Train a real autonomous robot to pick up blocks
+    and deploy them to the goal by navigating through an obstacle course. Start with
+    drag-and-drop interface, and advance to Python as you get more experienced.
+  tutorial_legodance_longdescription: Synchronize motor movements of a break dancer
+    to keep in rhythm with light and beats.
+  tutorial_nearpodcoding_longdescription: In this 25-30 minute Nearpod featuring Flocabulary
+    topic spark, students are introduced to coding through a hip hop video and Nearpod's
+    signature interactive features. This lesson features the Flocabulary video Coding.
+  tutorial_kcjplastic_longdescription: We're challenging you to use data visualization
+    to develop a plastic pollution solution! Discover where plastic waste comes from
+    and why it has become a global problem. Then reflect on your own plastic use,
+    estimate how much waste you could reduce over time, and design an invention or
+    alternative that could help. Kids can complete this project by themselves or with
+    support from a grown up.
+  tutorial_legojourney_longdescription: 'Journeys are exciting!  Challenge students
+    to remix our Grasshopper Journey project in order to create a new journey and
+    find different ways for a SPIKE Prime inspired virtual grasshopper to move using
+    Scratch 3.0! In addition to CS skills, this teacher facilitated activity can also
+    be used to support areas such as language arts, science and the arts. '
+  tutorial_legohopper_longdescription: Design multiple prototypes to find the most
+    effective way to move a robot without using wheels.
+  tutorial_catrobatembroidery_longdescription: আপনার অ্যান্ড্রয়েড ফোনে আপনার নকশাটি
+    কোড করুন এবং এটি আপনার টি-শার্ট, প্যান্ট, জিম ব্যাগ, বা জুতাগুলিতে সেলাই করুন!
+  tutorial_irobotphone_longdescription: In this coding challenge, students will work
+    together remotely to create a collective program that draws a picture. Modeled
+    after the classic game of Telephone, students will receive, remix, and pass along
+    code down the telephone chain. Will your team fulfill the Picture Goal by the
+    time you reach the end?
+  tutorial_codeguppydraw_longdescription: Quick introduction to text-based coding
+    using fun and engaging type-in JavaScript programs
+  tutorial_codejumper_longdescription: In this lesson from the Code Jumper curriculum,
+    learners explore networks in a hands-on unplugged experience using typical materials
+    found in a classroom. The theme for this lesson is around messages of kindness
+    to others. This lesson has been specifically designed to be accessible for students
+    with visual impairments.
+  tutorial_meeempathy_longdescription: For centuries, the Villagers and Illagers shared
+    the same space but seldom interacted with each other. Now you can use the power
+    of code to bring the two villages together. Players will experience empathy and
+    compassion for their neighbors, learn cooperation and inclusion, and embrace the
+    diversity that makes us all uniquely special.
   tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
     French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
     Malay, Polish, Portuguese, and 10 more!
@@ -5860,6 +6397,134 @@ bn:
   tutorial_duckrace_language: English, German
   tutorial_allcancodeapps_language: ইংরেজী
   tutorial_n2y_language: ইংরেজী
+  tutorial_microsoftarcade_language: ইংরেজী
+  tutorial_csfirstunplugged_language: English, Spanish (Mexico)
+  tutorial_toxicodepython_language: Danish, Dutch, English, English (UK), Estonian,
+    French, German, Indonesian, Italian, Other, Polish, Portuguese (Brazil), Portuguese
+    (Portugal), Romanian, Spanish (Spain), Spanish (Mexico), Swedish, Turkish
+  tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
+    Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodedate_language: ইংরেজী
+  tutorial_codemonkeyspace_language: English, English (UK), Hebrew
+  tutorial_codespeakhappy_language: ইংরেজী
+  tutorial_grokimage_language: English, English (UK)
+  tutorial_icomputelearn_language: ইংরেজী
+  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
+    (Mexico)
+  tutorial_bsdcause_language: ইংরেজী
+  tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_bsdinspire_language: ইংরেজী
+  tutorial_tttractor_language: ইংরেজী
+  tutorial_codeillusionmickey_language: ইংরেজী
+  tutorial_scigirlsquest_language: ইংরেজী
+  tutorial_codespeakbreathe_language: ইংরেজী
+  tutorial_vidcodeface_language: ইংরেজী
+  tutorial_educodemaze_language: English, English (UK)
+  tutorial_educoderace_language: English, English (UK)
+  tutorial_codespeakchatbot_language: ইংরেজী
+  tutorial_gamefrootgames_language: ইংরেজী
+  tutorial_codespeakgrandparent_language: ইংরেজী
+  tutorial_educodekingdom_language: English, English (UK)
+  tutorial_codehsdata_language: ইংরেজী
+  tutorial_educodecake_language: English, English (UK)
+  tutorial_ttsecond_language: ইংরেজী
+  tutorial_bsdtrivia_language: ইংরেজী
+  tutorial_csfirstdialogue_language: English, Spanish (Mexico)
+  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
+    Japanese, Spanish (Spain), Spanish (Mexico)
+  tutorial_codestersdistance_language: ইংরেজী
+  tutorial_itchspace_language: ইংরেজী
+  tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
+  tutorial_codespeakmeal_language: ইংরেজী
+  tutorial_itchfish_language: ইংরেজী
+  tutorial_bsdwebsite_language: ইংরেজী
+  tutorial_codespeaktime_language: ইংরেজী
+  tutorial_itchwebcam_language: ইংরেজী
+  tutorial_itchball_language: ইংরেজী
+  tutorial_ttrace_language: ইংরেজী
+  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
+    Portuguese (Brazil), Spanish
+  tutorial_educodesecret_language: English, English (UK)
+  tutorial_itchshapes_language: ইংরেজী
+  tutorial_codeguppytext_language: ইংরেজী
+  tutorial_vidcodeplastiche_language: English, Hebrew
+  tutorial_educativechatbot_language: ইংরেজী
+  tutorial_educodebasics_language: English, English (UK)
+  tutorial_codehsdesign_language: ইংরেজী
+  tutorial_htmlacademyphp_language: ইংরেজী
+  tutorial_gamefrootdistance_language: ইংরেজী
+  tutorial_codesterscovid_language: ইংরেজী
+  tutorial_ttbunker_language: ইংরেজী
+  tutorial_cuttle_language: ইংরেজী
+  tutorial_bsdjokes_language: ইংরেজী
+  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
+    (Mexico)
+  tutorial_codestersunity_language: ইংরেজী
+  tutorial_codesterssoccer_language: ইংরেজী
+  tutorial_breakoutlock_language: ইংরেজী
+  tutorial_thunkablemask_language: ইংরেজী
+  tutorial_cafarming_language: ইংরেজী
+  tutorial_blocksmithyeti_language: ইংরেজী
+  tutorial_codecapture_language: English, English (UK)
+  tutorial_codehslitter_language: English, English (UK)
+  tutorial_bsdocean_language: ইংরেজী
+  tutorial_itchplatformer_language: ইংরেজী
+  tutorial_codejika_language: English, English (UK)
+  tutorial_gamefrootclicker_language: ইংরেজী
+  tutorial_rmagicequity_language: English, English (UK)
+  tutorial_ttfreestyle_language: ইংরেজী
+  tutorial_ozobotcolor2_language: ইংরেজী
+  tutorial_ozobotcolor3_language: ইংরেজী
+  tutorial_clcarbon_language: English, English (UK)
+  tutorial_kodablebasics_language: ইংরেজী
+  tutorial_scigirlscc_language: English, Spanish (Mexico)
+  tutorial_irobotpicture_language: ইংরেজী
+  tutorial_kcjmyself_language: English, French
+  tutorial_nearpodalgorithms_language: ইংরেজী
+  tutorial_kibodrop_language: English, English (UK)
+  tutorial_ozobotcolor1_language: ইংরেজী
+  tutorial_scigirlspixels_language: English, Spanish (Mexico)
+  tutorial_kcjheroines_language: English, French
+  tutorial_ozobotvalue_language: ইংরেজী
+  tutorial_icodebytes_language: ইংরেজী
+  tutorial_clfashion2_language: English, English (UK)
+  tutorial_ai4all_language: ইংরেজী
+  tutorial_cldata_language: English, English (UK)
+  tutorial_spheroinputs_language: ইংরেজী
+  tutorial_edisoncount_language: ইংরেজী
+  tutorial_spheroloops_language: ইংরেজী
+  tutorial_kiboprogram_language: English, English (UK)
+  tutorial_hellorubycsin60_language: English, English (UK)
+  tutorial_clfashion1_language: English, English (UK)
+  tutorial_irobottraffic_language: ইংরেজী
+  tutorial_edisonmystery_language: ইংরেজী
+  tutorial_microbitseaturtles_language: English, English (UK)
+  tutorial_ozobotknow_language: ইংরেজী
+  tutorial_imagilabs_language: English, English (UK)
+  tutorial_irobotsimulator_language: ইংরেজী
+  tutorial_irobotkind_language: English, English (UK)
+  tutorial_firiavirtual_language: English, English (UK)
+  tutorial_irobotguesscode_language: ইংরেজী
+  tutorial_ozobotnouns_language: ইংরেজী
+  tutorial_nasa3d_language: ইংরেজী
+  tutorial_blupants_language: ইংরেজী
+  tutorial_legodance_language: ইংরেজী
+  tutorial_nearpodcoding_language: ইংরেজী
+  tutorial_kcjplastic_language: English, French
+  tutorial_legojourney_language: ইংরেজী
+  tutorial_legohopper_language: ইংরেজী
+  tutorial_catrobatembroidery_language: আরবি, বাংলা, বসনিয়ান, চাইনিজ সরলীকৃত, ক্রোয়েশিয়ান,
+    চেক, এনগ্লিশ, ইংরেজি (ইউকে), ফরাসি, জার্মান, হিন্দি, ইন্দোনেশিয়ান, ইতালিয়ান,
+    জাপানি, কোরিয়ান, নরওয়েজিয়ান (নাইনর্স্ক), অন্যান্য, পোলিশ, পর্তুগিজ (ব্রাজিল),
+    পর্তুগিজ ( পর্তুগাল), রাশিয়ান, সার্বিয়ান (সিরিলিক), সার্বীয় (লাতিন), স্লোভাক,
+    স্পেনীয় (স্পেন, মেক্সিকো), সোয়াহিলি, সুইডিশ, তামিল, থাই, তুর্কি, উর্দু (পাকিস্তান),
+    ভিয়েতনামী
+  tutorial_irobotphone_language: English, English (UK)
+  tutorial_codeguppydraw_language: English, English (UK)
+  tutorial_codejumper_language: ইংরেজী
+  tutorial_meeempathy_language: ইংরেজী
   tutorial_dance2019_string_detail_grades: Grades 2+
   tutorial_danceparty_string_detail_grades: Grades 2+
   tutorial_chibitronics_string_detail_grades: Grades 2-5
@@ -5868,10 +6533,10 @@ bn:
   tutorial_star-wars_string_detail_grades: Grades 2+
   tutorial_gumadventure_string_detail_grades: Grades 6-8
   tutorial_mchoc_string_detail_grades: Grades 2+
-  tutorial_vidnews_string_detail_grades: Grades 6+
+  tutorial_vidnews_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
   tutorial_highseas_string_detail_grades: Grades 2-8
-  tutorial_capython_string_detail_grades: Grades 6+
+  tutorial_capython_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_frzn_string_detail_grades: Grades 2+
   tutorial_cocom_string_detail_grades: Grades 2+
   tutorial_play-lab_string_detail_grades: Grades 2+
@@ -5881,28 +6546,28 @@ bn:
   tutorial_kanopixel_string_detail_grades: Grades 2+
   tutorial_foos_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkerdd_string_detail_grades: Grades 2-8
-  tutorial_tynkerana_string_detail_grades: Grades 6+
+  tutorial_tynkerana_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_vidcard_string_detail_grades: Grades 2+
   tutorial_spritebox_string_detail_grades: Grades 2-8
-  tutorial_tynkerch_string_detail_grades: Grades 6+
+  tutorial_tynkerch_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_lightbot_string_detail_grades: Pre-reader - Grade 5
   tutorial_hoc_string_detail_grades: do-not-show
   tutorial_code_string_detail_grades: Grades 2+
-  tutorial_tinspire_string_detail_grades: Grades 6+
+  tutorial_tinspire_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_itchbounceball_string_detail_grades: Grades 2-8
-  tutorial_vidclim_string_detail_grades: Grades 6+
-  tutorial_matlab_string_detail_grades: Grades 6+
+  tutorial_vidclim_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_matlab_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_flap_string_detail_grades: Grades 2+
-  tutorial_galaxy_string_detail_grades: Grades 6+
+  tutorial_galaxy_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_inf_string_detail_grades: Grades 2-8
   tutorial_tynkersol_string_detail_grades: Grades 2+
-  tutorial_itchg_string_detail_grades: Grades 6+
+  tutorial_itchg_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_como_string_detail_grades: Grades 2+
   tutorial_processfound_string_detail_grades: Grades 9+
-  tutorial_tynkerhomo_string_detail_grades: Grades 6+
+  tutorial_tynkerhomo_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_art_string_detail_grades: Grades 2+
   tutorial_tynkerbrick_string_detail_grades: Grades 2+
-  tutorial_itchbio_string_detail_grades: Grades 6+
+  tutorial_itchbio_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_itchj_string_detail_grades: Grades 6-8
   tutorial_tickleo_string_detail_grades: Grades 2+
   tutorial_hopgeo_string_detail_grades: Grades 2-8
@@ -5913,67 +6578,67 @@ bn:
   tutorial_livecode_string_detail_grades: Grades 9+
   tutorial_cocomgame_string_detail_grades: Grades 2+
   tutorial_tynkerspin_string_detail_grades: Pre-reader - Grade 8
-  tutorial_code-avengers_string_detail_grades: Grades 6+
+  tutorial_code-avengers_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tynkercq_string_detail_grades: Pre-reader - Grade 5
-  tutorial_cmgame_string_detail_grades: Grades 6+
+  tutorial_cmgame_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codesters_string_detail_grades: do-not-show
-  tutorial_qrm_string_detail_grades: Grades 6+
-  tutorial_texas-instruments_string_detail_grades: Grades 6+
-  tutorial_cajava_string_detail_grades: Grades 6+
+  tutorial_qrm_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_texas-instruments_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_cajava_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codehs_string_detail_grades: Grades 9+
   tutorial_hopemo_string_detail_grades: Grades 2-8
   tutorial_tynkercm_string_detail_grades: Grades 2+
   tutorial_codesterswintergreet_string_detail_grades: Grades 2+
-  tutorial_codestersc_string_detail_grades: Grades 6+
+  tutorial_codestersc_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codestersturtle_string_detail_grades: Grades 2+
-  tutorial_penjee_string_detail_grades: Grades 6+
+  tutorial_penjee_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_trinket_string_detail_grades: Grades 2+
-  tutorial_frogger_string_detail_grades: Grades 6+
+  tutorial_frogger_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tynkereco_string_detail_grades: Grades 2-8
   tutorial_mitedarc_string_detail_grades: Grades 6-8
-  tutorial_khan_string_detail_grades: Grades 6+
-  tutorial_tynkerd_string_detail_grades: Grades 6+
+  tutorial_khan_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_tynkerd_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_cdmy_string_detail_grades: Grades 9+
-  tutorial_codestersdance_string_detail_grades: Grades 6+
-  tutorial_codestersbasketball_string_detail_grades: Grades 6+
-  tutorial_nclkarel_string_detail_grades: Grades 6+
+  tutorial_codestersdance_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codestersbasketball_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_nclkarel_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_buildpong_string_detail_grades: Grades 2+
   tutorial_tynkerdrones_string_detail_grades: Grades 2+
-  tutorial_carla_string_detail_grades: Grades 6+
-  tutorial_zulama_string_detail_grades: Grades 6+
-  tutorial_capost_string_detail_grades: Grades 6+
+  tutorial_carla_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_zulama_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_capost_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_marco_string_detail_grades: Grades 2-8
-  tutorial_codestersflappybike_string_detail_grades: Grades 6+
+  tutorial_codestersflappybike_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_kanopong_string_detail_grades: Grades 6-8
   tutorial_tynkerright_string_detail_grades: Grades 2-8
   tutorial_touchdevelop_string_detail_grades: do-not-show
-  tutorial_tynkercc_string_detail_grades: Grades 6+
+  tutorial_tynkercc_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_bamboo_string_detail_grades: Grades 2-5
-  tutorial_robojav_string_detail_grades: Grades 6+
-  tutorial_roboba_string_detail_grades: Grades 6+
+  tutorial_robojav_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_roboba_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_knodsnake_string_detail_grades: Grades 6-8
-  tutorial_soccharater_string_detail_grades: Grades 6+
-  tutorial_silent_string_detail_grades: Grades 6+
+  tutorial_soccharater_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_silent_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_robomesh_string_detail_grades: Grades 2+
   tutorial_amaze_string_detail_grades: Grades 2+
   tutorial_codestersds_string_detail_grades: Grades 2+
   tutorial_knodtext_string_detail_grades: Grades 6-8
-  tutorial_alicegar_string_detail_grades: Grades 6+
-  tutorial_codesterstransform_string_detail_grades: Grades 6+
-  tutorial_flexfrog_string_detail_grades: Grades 6+
+  tutorial_alicegar_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codesterstransform_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_flexfrog_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codemoji_string_detail_grades: do-not-show
-  tutorial_robobii_string_detail_grades: Grades 6+
+  tutorial_robobii_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_robobm_string_detail_grades: Grades 6-8
   tutorial_codingrobots_string_detail_grades: Grades 2+
-  tutorial_robob_string_detail_grades: Grades 6+
+  tutorial_robob_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_coders_string_detail_grades: Grades 9+
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
   tutorial_tynkermh_string_detail_grades: Grades 2-8
-  tutorial_caphoto_string_detail_grades: Grades 6+
+  tutorial_caphoto_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_mozillahw_string_detail_grades: Grades 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Grades 2+
-  tutorial_scratchg_string_detail_grades: Grades 6+
+  tutorial_scratchg_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_roboticfriends_string_detail_grades: All ages
   tutorial_sjforest_string_detail_grades: Pre-reader - Grade 5
   tutorial_sjgreet_string_detail_grades: Pre-reader - Grade 5
@@ -5981,19 +6646,19 @@ bn:
   tutorial_fufafrenz_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcgeo_string_detail_grades: do-not-show
   tutorial_chspixel_string_detail_grades: Grades 9+
-  tutorial_hummingbird_string_detail_grades: Grades 6+
-  tutorial_recoloring_string_detail_grades: Grades 6+
+  tutorial_hummingbird_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_recoloring_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_bbcchem_string_detail_grades: do-not-show
   tutorial_floalgo_string_detail_grades: Grades 2+
   tutorial_flocond_string_detail_grades: Grades 2+
   tutorial_floloops_string_detail_grades: Grades 2+
-  tutorial_pgts_string_detail_grades: Grades 6+
+  tutorial_pgts_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ozo_string_detail_grades: All ages
   tutorial_bbcla_string_detail_grades: do-not-show
   tutorial_bbcsci_string_detail_grades: do-not-show
   tutorial_tlctour_string_detail_grades: Grades 2+
   tutorial_codesterstj_string_detail_grades: Grades 2+
-  tutorial_tlclocked_string_detail_grades: Grades 6+
+  tutorial_tlclocked_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_baubles_string_detail_grades: Grades 2-8
   tutorial_bbcart_string_detail_grades: do-not-show
   tutorial_tlcknight_string_detail_grades: Grades 2+
@@ -6015,12 +6680,12 @@ bn:
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: do-not-show
   tutorial_secretcodes_string_detail_grades: Grades 6-8
-  tutorial_tlchex_string_detail_grades: Grades 6+
+  tutorial_tlchex_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tickles_string_detail_grades: Grades 2+
   tutorial_ozogame_string_detail_grades: All ages
   tutorial_vidcodeio_string_detail_grades: Grades 2+
   tutorial_besttech_string_detail_grades: Grades 9+
-  tutorial_tlcbrain_string_detail_grades: Grades 6+
+  tutorial_tlcbrain_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_hopquiz_string_detail_grades: Grades 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
   tutorial_cha_string_detail_grades: Grades 6-8
@@ -6030,7 +6695,7 @@ bn:
   tutorial_arduino_string_detail_grades: Grades 6-8
   tutorial_introrobo_string_detail_grades: Grades 2-5
   tutorial_tlcinvis_string_detail_grades: Grades 2+
-  tutorial_tlcjflap_string_detail_grades: Grades 6+
+  tutorial_tlcjflap_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_procolor_string_detail_grades: Pre-reader - Grade 8
   tutorial_spiralsfinch_string_detail_grades: Grades 2+
   tutorial_ozoi_string_detail_grades: All ages
@@ -6042,40 +6707,40 @@ bn:
   tutorial_mazefinch_string_detail_grades: Pre-reader - Grade 5
   tutorial_tlccc_string_detail_grades: Grades 2-8
   tutorial_tlcdoodle_string_detail_grades: Grades 2-8
-  tutorial_tlcpunch_string_detail_grades: Grades 6+
+  tutorial_tlcpunch_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_finchfract_string_detail_grades: Grades 9+
-  tutorial_tlcmind_string_detail_grades: Grades 6+
+  tutorial_tlcmind_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tlctelebot_string_detail_grades: Grades 2+
-  tutorial_tlcaus_string_detail_grades: Grades 6+
+  tutorial_tlcaus_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_oralhist_string_detail_grades: Grades 9+
   tutorial_tlcmicro_string_detail_grades: Grades 2+
   tutorial_imathematician_string_detail_grades: Grades 2-8
-  tutorial_tlcmagic_string_detail_grades: Grades 6+
+  tutorial_tlcmagic_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_scratchmus_string_detail_grades: Grades 2-8
   tutorial_scratchanim_string_detail_grades: Grades 2-8
   tutorial_scratchfly_string_detail_grades: Grades 2-8
   tutorial_tynkerarc_string_detail_grades: Grades 2+
-  tutorial_grokffpython_string_detail_grades: Grades 6+
-  tutorial_grokffblock_string_detail_grades: Grades 6+
-  tutorial_grokeliza_string_detail_grades: Grades 6+
+  tutorial_grokffpython_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_grokffblock_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_grokeliza_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tynkercan_string_detail_grades: Grades 2+
-  tutorial_grokflags_string_detail_grades: Grades 6+
+  tutorial_grokflags_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_robomind_string_detail_grades: Grades 2-8
   tutorial_scratchanimwork_string_detail_grades: Grades 2-8
   tutorial_adventureq_string_detail_grades: Grades 2-5
-  tutorial_khan-es_string_detail_grades: Grades 6+
-  tutorial_kpt_string_detail_grades: Grades 6+
-  tutorial_kpl_string_detail_grades: Grades 6+
-  tutorial_khe_string_detail_grades: Grades 6+
-  tutorial_kfr_string_detail_grades: Grades 6+
-  tutorial_app-inventor_string_detail_grades: Grades 6+
+  tutorial_khan-es_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_kpt_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_kpl_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_khe_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_kfr_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_app-inventor_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_bits_string_detail_grades: Grades 2-5
-  tutorial_blockly_string_detail_grades: Grades 6+
+  tutorial_blockly_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tynker_string_detail_grades: do-not-show
   tutorial_baypt_string_detail_grades: All ages
   tutorial_code-combat_string_detail_grades: do-not-show
   tutorial_mky_string_detail_grades: Grades 2+
-  tutorial_spellcraft_string_detail_grades: Grades 6+
+  tutorial_spellcraft_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_pirates_string_detail_grades: Grades 2-8
   tutorial_csfirst_string_detail_grades: Grades 2+
   tutorial_loopedy_string_detail_grades: Grades 2-5
@@ -6087,7 +6752,7 @@ bn:
   tutorial_scratch_string_detail_grades: Grades 2-5
   tutorial_bayes_string_detail_grades: All ages
   tutorial_gumball_string_detail_grades: do-not-show
-  tutorial_hrm_string_detail_grades: Grades 6+
+  tutorial_hrm_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ice-age_string_detail_grades: do-not-show
   tutorial_koapp_string_detail_grades: do-not-show
   tutorial_lightbot-intl_string_detail_grades: Pre-reader - Grade 8
@@ -6103,7 +6768,7 @@ bn:
   tutorial_spherov_string_detail_grades: Grades 2+
   tutorial_swb_string_detail_grades: do-not-show
   tutorial_build-a-galaxy_string_detail_grades: do-not-show
-  tutorial_alicesims_string_detail_grades: Grades 6+
+  tutorial_alicesims_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tchr_string_detail_grades: do-not-show
   tutorial_robogame_string_detail_grades: Pre-reader - Grade 5
   tutorial_tap_string_detail_grades: Grades 2+
@@ -6122,51 +6787,51 @@ bn:
   tutorial_solopython_string_detail_grades: Grades 9+
   tutorial_kodableint_string_detail_grades: Pre-reader - Grade 5
   tutorial_kodableadv_string_detail_grades: Pre-reader - Grade 5
-  tutorial_tynkertj_string_detail_grades: Grades 6+
-  tutorial_wolframa_string_detail_grades: Grades 6+
-  tutorial_wolframm_string_detail_grades: Grades 6+
-  tutorial_wolframspi_string_detail_grades: Grades 6+
-  tutorial_wolframsph_string_detail_grades: Grades 6+
-  tutorial_wolframp_string_detail_grades: Grades 6+
-  tutorial_wolframn_string_detail_grades: Grades 6+
+  tutorial_tynkertj_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_wolframa_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_wolframm_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_wolframspi_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_wolframsph_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_wolframp_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_wolframn_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_soloweb_string_detail_grades: Grades 9+
   tutorial_khanweb_string_detail_grades: Grades 2+
-  tutorial_khandata_string_detail_grades: Grades 6+
+  tutorial_khandata_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_robomeshiq_string_detail_grades: Grades 2+
   tutorial_googlelogo_string_detail_grades: Grades 2+
-  tutorial_playtune_string_detail_grades: Grades 6+
+  tutorial_playtune_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_computeit_string_detail_grades: Grades 2+
   tutorial_codesterssj_string_detail_grades: Grades 2-8
-  tutorial_cmchat_string_detail_grades: Grades 6+
+  tutorial_cmchat_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tynkerdb_string_detail_grades: Grades 2-5
-  tutorial_cmbuild_string_detail_grades: Grades 6+
+  tutorial_cmbuild_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_robotrattle_string_detail_grades: Grades 2-8
   tutorial_codestersh_string_detail_grades: Grades 2-8
-  tutorial_codehsdigipixel_string_detail_grades: Grades 6+
-  tutorial_ccbinary_string_detail_grades: Grades 6+
-  tutorial_codehsturtle_string_detail_grades: Grades 6+
-  tutorial_grokhd_string_detail_grades: Grades 6+
-  tutorial_grokem_string_detail_grades: Grades 6+
+  tutorial_codehsdigipixel_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_ccbinary_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codehsturtle_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_grokhd_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_grokem_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 2-5
+  tutorial_cmdodo_string_detail_grades: Grades 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+
-  tutorial_codehsvr_string_detail_grades: Grades 6+
+  tutorial_codehsvr_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codesterstp_string_detail_grades: Grades 6-8
   tutorial_codestersbb_string_detail_grades: Grades 6-8
   tutorial_gfcrossyroad_string_detail_grades: Grades 9+
   tutorial_googleww_string_detail_grades: Grades 9+
-  tutorial_codehsjsapp_string_detail_grades: Grades 6+
+  tutorial_codehsjsapp_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_gfmihi_string_detail_grades: Grades 9+
   tutorial_hopdropphone_string_detail_grades: Grades 2-8
   tutorial_techfaa_string_detail_grades: University
   tutorial_codehsjsgraph_string_detail_grades: Grades 9+
-  tutorial_thunkable_string_detail_grades: Grades 6+
+  tutorial_thunkable_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
-  tutorial_codecar_string_detail_grades: Grades 6+
+  tutorial_codecar_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codesterscp_string_detail_grades: Grades 6-8
   tutorial_grokpetblock_string_detail_grades: Grades 6-8
   tutorial_techbim_string_detail_grades: University
@@ -6178,8 +6843,8 @@ bn:
   tutorial_myradream_string_detail_grades: Grades 2-8
   tutorial_thinkfun_string_detail_grades: Grades 2-8
   tutorial_hopfireworks_string_detail_grades: Grades 2-8
-  tutorial_grokspace_string_detail_grades: Grades 6+
-  tutorial_codehspython_string_detail_grades: Grades 6+
+  tutorial_grokspace_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codehspython_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codehsjava_string_detail_grades: Grades 9+
   tutorial_techioda_string_detail_grades: University
   tutorial_grokmonster_string_detail_grades: Grades 2-5
@@ -6187,8 +6852,8 @@ bn:
   tutorial_techga_string_detail_grades: University
   tutorial_techioan_string_detail_grades: University
   tutorial_techiogsr_string_detail_grades: University
-  tutorial_groktunnel_string_detail_grades: Grades 6+
-  tutorial_stemcod_string_detail_grades: Grades 6+
+  tutorial_groktunnel_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_stemcod_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_techikb_string_detail_grades: University
   tutorial_kanostreet_string_detail_grades: Grades 2-5
   tutorial_nyblebot_string_detail_grades: Grades 2-5
@@ -6196,32 +6861,32 @@ bn:
   tutorial_techapf_string_detail_grades: University
   tutorial_techfpjs_string_detail_grades: University
   tutorial_techlinq_string_detail_grades: University
-  tutorial_gpbcatapult_string_detail_grades: Grades 6+
-  tutorial_quorumastro_string_detail_grades: Grades 6+
+  tutorial_gpbcatapult_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_quorumastro_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_alicewonder_string_detail_grades: Grades 2-5
   tutorial_rginter_string_detail_grades: Grades 6-8
-  tutorial_cssgrid_string_detail_grades: Grades 6+
+  tutorial_cssgrid_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_jshero_string_detail_grades: Grades 9+
   tutorial_codemojipy_string_detail_grades: Grades 2-5
-  tutorial_nclabdrone_string_detail_grades: Grades 6+
-  tutorial_gpbcircle_string_detail_grades: Grades 6+
-  tutorial_gpbpaint_string_detail_grades: Grades 6+
-  tutorial_cocomarcade_string_detail_grades: Grades 6+
+  tutorial_nclabdrone_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gpbcircle_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gpbpaint_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_cocomarcade_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_techcpp_string_detail_grades: University
   tutorial_beetik_string_detail_grades: Grades 6-8
-  tutorial_codedj_string_detail_grades: Grades 6+
-  tutorial_rgadvan_string_detail_grades: Grades 6+
+  tutorial_codedj_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_rgadvan_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codehsrn_string_detail_grades: Grades 9+
-  tutorial_codehswd_string_detail_grades: Grades 6+
+  tutorial_codehswd_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_turtlerobot_string_detail_grades: Pre-reader - Grade 5
-  tutorial_ozoevo_string_detail_grades: Grades 6+
-  tutorial_ozoexped_string_detail_grades: Grades 6+
+  tutorial_ozoevo_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_ozoexped_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ozojourney_string_detail_grades: Grades 2-8
   tutorial_ozocodes_string_detail_grades: All ages
   tutorial_ozoeclipse_string_detail_grades: Grades 2+
-  tutorial_ozosimulator_string_detail_grades: Grades 6+
-  tutorial_ozoalgorithm_string_detail_grades: Grades 6+
-  tutorial_ozotimer_string_detail_grades: Grades 6+
+  tutorial_ozosimulator_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_ozoalgorithm_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_ozotimer_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ozohabits_string_detail_grades: All ages
   tutorial_ozoprogram_string_detail_grades: Grades 2-8
   tutorial_ozopair_string_detail_grades: Grades 2+
@@ -6244,9 +6909,9 @@ bn:
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
   tutorial_lblogic_string_detail_grades: Grades 2+
-  tutorial_lbworld_string_detail_grades: Grades 6+
+  tutorial_lbworld_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_lbloops_string_detail_grades: Grades 2-8
-  tutorial_lbtug_string_detail_grades: Grades 6+
+  tutorial_lbtug_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_lbpotato_string_detail_grades: Grades 2+
   tutorial_lbguitar_string_detail_grades: Grades 2+
   tutorial_lbio_string_detail_grades: Grades 2-8
@@ -6255,14 +6920,14 @@ bn:
   tutorial_wonzoo_string_detail_grades: Grades 2-5
   tutorial_wontrip_string_detail_grades: Grades 2-8
   tutorial_woncollect_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wonsecret_string_detail_grades: Grades 6+
+  tutorial_wonsecret_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_hsscience_string_detail_grades: Grades 2-8
-  tutorial_popculture_string_detail_grades: Grades 6+
+  tutorial_popculture_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_legorobust_string_detail_grades: Grades 2+
   tutorial_legoplants_string_detail_grades: Grades 2+
-  tutorial_legopark_string_detail_grades: Grades 6+
-  tutorial_legodetect_string_detail_grades: Grades 6+
-  tutorial_legolight_string_detail_grades: Grades 6+
+  tutorial_legopark_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_legodetect_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_legolight_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_alexa_string_detail_grades: Grades 9+
   tutorial_grokpetmicro_string_detail_grades: Grades 6-8
   tutorial_pirateplunder_string_detail_grades: Grades 2-8
@@ -6271,24 +6936,24 @@ bn:
   tutorial_cajump_string_detail_grades: Grades 2-8
   tutorial_carest_string_detail_grades: Grades 2-8
   tutorial_accai_string_detail_grades: Grades 2-8
-  tutorial_vceclipse_string_detail_grades: Grades 6+
-  tutorial_pmzero_string_detail_grades: Grades 6+
+  tutorial_vceclipse_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_pmzero_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_hsela_string_detail_grades: Grades 2-8
   tutorial_ticklear_string_detail_grades: Grades 2-8
   tutorial_bcrobot_string_detail_grades: Grades 2-8
-  tutorial_bcsnow_string_detail_grades: Grades 6+
+  tutorial_bcsnow_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ifly_string_detail_grades: Grades 2+
   tutorial_idowedo_string_detail_grades: Grades 2-8
-  tutorial_diggindwarf_string_detail_grades: Grades 6+
+  tutorial_diggindwarf_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_rmedr_string_detail_grades: Grades 2-8
   tutorial_spheroit_string_detail_grades: Grades 2+
   tutorial_gameofcodes_string_detail_grades: Grades 2+
-  tutorial_blocklygames_string_detail_grades: Grades 6+
-  tutorial_spherohello_string_detail_grades: Grades 6+
-  tutorial_spheroarcade_string_detail_grades: Grades 6+
-  tutorial_bcpy1_string_detail_grades: Grades 6+
-  tutorial_bcpy2_string_detail_grades: Grades 6+
-  tutorial_bcjs1_string_detail_grades: Grades 6+
+  tutorial_blocklygames_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_spherohello_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_spheroarcade_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_bcpy1_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_bcpy2_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_bcjs1_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_bcjs2_string_detail_grades: Grades 9+
   tutorial_3dbearmars_string_detail_grades: Grades 2-8
   tutorial_alexaskill_string_detail_grades: Grades 2-8
@@ -6297,27 +6962,27 @@ bn:
   tutorial_blockscadbirdhouses_string_detail_grades: Grades 2-5
   tutorial_blockscadclock_string_detail_grades: Grades 9+
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
-  tutorial_blockscadicecream_string_detail_grades: Grades 6+
+  tutorial_blockscadicecream_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_blockscadpizza_string_detail_grades: Grades 6-8
   tutorial_blockscadsugar_string_detail_grades: Grades 6-8
   tutorial_bsgridlight_string_detail_grades: Grades 2+
-  tutorial_bpartscratch_string_detail_grades: Grades 6+
-  tutorial_bpartvid_string_detail_grades: Grades 6+
+  tutorial_bpartscratch_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_bpartvid_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_bpenglishscratch_string_detail_grades: Grades 2-8
   tutorial_bpenglishvid_string_detail_grades: Grades 2-8
   tutorial_bphealthscratch_string_detail_grades: Grades 2+
-  tutorial_bphealthvid_string_detail_grades: Grades 6+
+  tutorial_bphealthvid_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
-  tutorial_bpmathvid_string_detail_grades: Grades 6+
+  tutorial_bpmathvid_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
   tutorial_bpmlkvid_string_detail_grades: Grades 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
   tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
   tutorial_bpsciencevid_string_detail_grades: Grades 6-8
-  tutorial_bptechscratch_string_detail_grades: Grades 6+
-  tutorial_bptechvid_string_detail_grades: Grades 6+
-  tutorial_caflags_string_detail_grades: Grades 6+
+  tutorial_bptechscratch_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_bptechvid_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_caflags_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_matariki_string_detail_grades: Grades 2-5
   tutorial_carestaurant_string_detail_grades: Grades 2+
   tutorial_casea_string_detail_grades: Grades 2-5
@@ -6325,37 +6990,37 @@ bn:
   tutorial_ccwslimer_string_detail_grades: Grades 2-8
   tutorial_codinggalaxy_string_detail_grades: Pre-reader - Grade 8
   tutorial_boatrace_string_detail_grades: Grades 2+
-  tutorial_ccplay_string_detail_grades: Grades 6+
+  tutorial_ccplay_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_grinch_string_detail_grades: Grades 2-8
   tutorial_codehsart_string_detail_grades: Grades 9+
   tutorial_codehsbitcoin_string_detail_grades: Grades 9+
   tutorial_codehsblockchain_string_detail_grades: Grades 9+
-  tutorial_codehscipher_string_detail_grades: Grades 6+
+  tutorial_codehscipher_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codehscollision_string_detail_grades: Grades 9+
-  tutorial_codehsmath_string_detail_grades: Grades 6+
-  tutorial_codehsmusic_string_detail_grades: Grades 6+
-  tutorial_codehssports_string_detail_grades: Grades 6+
+  tutorial_codehsmath_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codehsmusic_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codehssports_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codemojipizza_string_detail_grades: Grades 2-8
-  tutorial_moonlander_string_detail_grades: Grades 6+
+  tutorial_moonlander_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_sushicards_string_detail_grades: Grades 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersecard_string_detail_grades: Grades 6-8
-  tutorial_codesterslogo_string_detail_grades: Grades 6+
-  tutorial_codesterstshirt_string_detail_grades: Grades 6+
+  tutorial_codesterslogo_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codesterstshirt_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codewards_string_detail_grades: Grades 2-8
   tutorial_olympics_string_detail_grades: Grades 2-8
   tutorial_codinismhero_string_detail_grades: Grades 2+
   tutorial_discovery_string_detail_grades: Grades 2+
   tutorial_csfirstname_string_detail_grades: Grades 2+
   tutorial_obstaclecourse_string_detail_grades: Grades 2+
-  tutorial_edisonmove_string_detail_grades: Grades 6+
-  tutorial_edisonspider_string_detail_grades: Grades 6+
+  tutorial_edisonmove_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_edisonspider_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_edisonspotlight_string_detail_grades: Grades 2-8
-  tutorial_firiapython_string_detail_grades: Grades 6+
-  tutorial_gamefrootsquid_string_detail_grades: Grades 6+
-  tutorial_duckpiano_string_detail_grades: Grades 6+
-  tutorial_gpsound_string_detail_grades: Grades 6+
+  tutorial_firiapython_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gamefrootsquid_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_duckpiano_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gpsound_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_groklearningpython_string_detail_grades: Grades 9+
   tutorial_htmltimetravel_string_detail_grades: Grades 9+
   tutorial_hp_flappy_string_detail_grades: Grades 9+
@@ -6365,32 +7030,32 @@ bn:
   tutorial_imake_string_detail_grades: Pre-reader - Grade 1
   tutorial_imorse_string_detail_grades: Grades 2-8
   tutorial_kanohp_string_detail_grades: Grades 2-8
-  tutorial_khanwebpages_string_detail_grades: Grades 6+
+  tutorial_khanwebpages_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_kibobowl_string_detail_grades: Pre-reader - Grade 5
   tutorial_kibodance_string_detail_grades: Pre-reader - Grade 5
   tutorial_buildcharacters_string_detail_grades: Pre-reader - Grade 5
   tutorial_designgames_string_detail_grades: Grades 2-5
   tutorial_makelevels_string_detail_grades: Pre-reader - Grade 5
-  tutorial_wizard_string_detail_grades: Grades 6+
+  tutorial_wizard_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_mbscratchcards_string_detail_grades: Grades 2+
   tutorial_mbswiftplaygrounds_string_detail_grades: Grades 2+
-  tutorial_mbbuttons_string_detail_grades: Grades 6+
-  tutorial_meteor_string_detail_grades: Grades 6+
-  tutorial_ballbounce_string_detail_grades: Grades 6+
-  tutorial_mitcodi_string_detail_grades: Grades 6+
-  tutorial_mitdoodle_string_detail_grades: Grades 6+
-  tutorial_talktome_string_detail_grades: Grades 6+
-  tutorial_mobilecspmap_string_detail_grades: Grades 6+
+  tutorial_mbbuttons_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_meteor_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_ballbounce_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_mitcodi_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_mitdoodle_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_talktome_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_mobilecspmap_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ozorandom_string_detail_grades: Grades 2+
   tutorial_ozotroll_string_detail_grades: Grades 6-8
   tutorial_peblioart_string_detail_grades: Grades 9+
-  tutorial_astropi_string_detail_grades: Grades 6+
+  tutorial_astropi_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_rgart_string_detail_grades: Grades 2-5
   tutorial_rgengineer_string_detail_grades: Grades 2-5
   tutorial_rgmath_string_detail_grades: Grades 2-5
   tutorial_rgscience_string_detail_grades: Grades 2-5
   tutorial_rgtech_string_detail_grades: Grades 2-5
-  tutorial_robotmagic3d_string_detail_grades: Grades 6+
+  tutorial_robotmagic3d_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_robotmagicflappy_string_detail_grades: Grades 9+
   tutorial_scratchadventure_string_detail_grades: Grades 2+
   tutorial_scratchtalk_string_detail_grades: Grades 2+
@@ -6398,14 +7063,14 @@ bn:
   tutorial_scratchjrtwinkle_string_detail_grades: Pre-reader
   tutorial_spherocomm_string_detail_grades: Grades 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
-  tutorial_spherofunctions_string_detail_grades: Grades 6+
+  tutorial_spherofunctions_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_spheroinfrared_string_detail_grades: Grades 6-8
   tutorial_spherolightsensor_string_detail_grades: Grades 2-8
   tutorial_spheromansion_string_detail_grades: Grades 2-8
   tutorial_roadblocks_string_detail_grades: Grades 2-8
-  tutorial_spherotext2_string_detail_grades: Grades 6+
-  tutorial_spherotext3_string_detail_grades: Grades 6+
-  tutorial_spherotext4_string_detail_grades: Grades 6+
+  tutorial_spherotext2_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_spherotext3_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_spherotext4_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_spheroraptor_string_detail_grades: Grades 2-8
   tutorial_stempiday_string_detail_grades: 'Grades 9+ '
   tutorial_stemplanetoids_string_detail_grades: Grades 9+
@@ -6413,32 +7078,148 @@ bn:
   tutorial_algobot_string_detail_grades: Grades 2-8
   tutorial_thunkableapps_string_detail_grades: Grades 9+
   tutorial_toxicodedot_string_detail_grades: Grades 2-8
-  tutorial_gcactions_string_detail_grades: Grades 6+
-  tutorial_gccomparators_string_detail_grades: Grades 6+
-  tutorial_gcconditions_string_detail_grades: Grades 6+
-  tutorial_gccreate_string_detail_grades: Grades 6+
-  tutorial_gcevents_string_detail_grades: Grades 6+
-  tutorial_gcloops_string_detail_grades: Grades 6+
-  tutorial_gcvariables_string_detail_grades: Grades 6+
+  tutorial_gcactions_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gccomparators_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gcconditions_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gccreate_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gcevents_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gcloops_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gcvariables_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_beanything_string_detail_grades: Pre-reader - Grade 5
   tutorial_change_string_detail_grades: Grades 2-8
   tutorial_cooking_string_detail_grades: Grades 2-5
   tutorial_crystal_string_detail_grades: Grades 2+
-  tutorial_landscape_string_detail_grades: Grades 6+
+  tutorial_landscape_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_pets_string_detail_grades: Grades 2-5
   tutorial_petvet_string_detail_grades: Pre-reader - Grade 5
-  tutorial_superhero_string_detail_grades: Grades 6+
-  tutorial_vidcodeplastic_string_detail_grades: Grades 6+
-  tutorial_vidcodetypeface_string_detail_grades: Grades 6+
+  tutorial_superhero_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_vidcodeplastic_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_vidcodetypeface_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_washustorm_string_detail_grades: Grades 2-5
   tutorial_activitypackets_string_detail_grades: Pre-reader - Grade 8
-  tutorial_googlerookie_string_detail_grades: Grades 6+
+  tutorial_googlerookie_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tommyturtle_string_detail_grades: Pre-reader - Grade 5
   tutorial_mazyad_string_detail_grades: Pre-reader - Grade 5
   tutorial_gamemaker_string_detail_grades: Grades 2+
   tutorial_duckrace_string_detail_grades: Grades 2+
-  tutorial_allcancodeapps_string_detail_grades: Grades 6+
+  tutorial_allcancodeapps_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_n2y_string_detail_grades: Pre-reader+
+  tutorial_microsoftarcade_string_detail_grades: Grades 2+
+  tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
+  tutorial_toxicodepython_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codecombatozaria_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_vidcodedate_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
+  tutorial_codespeakhappy_string_detail_grades: Grades 2-8
+  tutorial_grokimage_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_icomputelearn_string_detail_grades: Pre-reader - Grade 8
+  tutorial_rpstress_string_detail_grades: Grades 2+
+  tutorial_bsdcause_string_detail_grades: Grades 9+
+  tutorial_vidcodeanimoji_string_detail_grades: Grades 2+
+  tutorial_vidcodeanimojies_string_detail_grades: Grades 2+
+  tutorial_bsdinspire_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_tttractor_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codeillusionmickey_string_detail_grades: Grades 2-8
+  tutorial_scigirlsquest_string_detail_grades: Grades 2-8
+  tutorial_codespeakbreathe_string_detail_grades: Grades 2+
+  tutorial_vidcodeface_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_educodemaze_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_educoderace_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codespeakchatbot_string_detail_grades: Grades 2-8
+  tutorial_gamefrootgames_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codespeakgrandparent_string_detail_grades: Grades 2-8
+  tutorial_educodekingdom_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codehsdata_string_detail_grades: Grades 9+
+  tutorial_educodecake_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_ttsecond_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_bsdtrivia_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_csfirstdialogue_string_detail_grades: Grades 2-8
+  tutorial_codemonkeybeaver_string_detail_grades: Pre-reader - Grade 5
+  tutorial_codestersdistance_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_itchspace_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_vidcodemagic_string_detail_grades: Grades 2+
+  tutorial_vidcodemagices_string_detail_grades: Grades 2+
+  tutorial_codespeakmeal_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_itchfish_string_detail_grades: Grades 2-8
+  tutorial_bsdwebsite_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codespeaktime_string_detail_grades: Grades 2-8
+  tutorial_itchwebcam_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_itchball_string_detail_grades: Grades 2-8
+  tutorial_ttrace_string_detail_grades: Grades 6-8
+  tutorial_plethora_string_detail_grades: Grades 2+
+  tutorial_educodesecret_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_itchshapes_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_vidcodeplastiche_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_educativechatbot_string_detail_grades: Grades 9+
+  tutorial_educodebasics_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codehsdesign_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_htmlacademyphp_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gamefrootdistance_string_detail_grades: Grades 2+
+  tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
+  tutorial_ttbunker_string_detail_grades: Grades 6-8
+  tutorial_cuttle_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_bsdjokes_string_detail_grades: Grades 6-8
+  tutorial_rptree_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codestersunity_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codesterssoccer_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_breakoutlock_string_detail_grades: Grades 2-8
+  tutorial_thunkablemask_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_cafarming_string_detail_grades: Grades 2-8
+  tutorial_blocksmithyeti_string_detail_grades: Grades 9+
+  tutorial_codecapture_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codehslitter_string_detail_grades: Grades 6-8
+  tutorial_bsdocean_string_detail_grades: Grades 6-8
+  tutorial_itchplatformer_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_codejika_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
+  tutorial_rmagicequity_string_detail_grades: Grades 6-8
+  tutorial_ttfreestyle_string_detail_grades: Grades 6-8
+  tutorial_ozobotcolor2_string_detail_grades: Grades 2+
+  tutorial_ozobotcolor3_string_detail_grades: Grades 2+
+  tutorial_clcarbon_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_kodablebasics_string_detail_grades: Pre-reader - Grade 5
+  tutorial_scigirlscc_string_detail_grades: Grades 2+
+  tutorial_irobotpicture_string_detail_grades: Grades 2-8
+  tutorial_kcjmyself_string_detail_grades: Grades 2-8
+  tutorial_nearpodalgorithms_string_detail_grades: Pre-reader - Grade 5
+  tutorial_kibodrop_string_detail_grades: Pre-reader - Grade 5
+  tutorial_ozobotcolor1_string_detail_grades: Grades 2+
+  tutorial_scigirlspixels_string_detail_grades: Grades 2+
+  tutorial_kcjheroines_string_detail_grades: Grades 2-8
+  tutorial_ozobotvalue_string_detail_grades: Grades 2-5
+  tutorial_icodebytes_string_detail_grades: Pre-reader
+  tutorial_clfashion2_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_ai4all_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_cldata_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_spheroinputs_string_detail_grades: Grades 2-8
+  tutorial_edisoncount_string_detail_grades: Grades 2-8
+  tutorial_spheroloops_string_detail_grades: Grades 2-8
+  tutorial_kiboprogram_string_detail_grades: Pre-reader - Grade 5
+  tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
+  tutorial_clfashion1_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_irobottraffic_string_detail_grades: Grades 2-5
+  tutorial_edisonmystery_string_detail_grades: Grades 6-8
+  tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
+  tutorial_ozobotknow_string_detail_grades: Grades 2+
+  tutorial_imagilabs_string_detail_grades: Grades 2-8
+  tutorial_irobotsimulator_string_detail_grades: Grades 2-8
+  tutorial_irobotkind_string_detail_grades: Pre-reader - Grade 5
+  tutorial_firiavirtual_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_irobotguesscode_string_detail_grades: Grades 2-8
+  tutorial_ozobotnouns_string_detail_grades: Grades 2-5
+  tutorial_nasa3d_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_blupants_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_legodance_string_detail_grades: Grades 6-8
+  tutorial_nearpodcoding_string_detail_grades: Grades 9+
+  tutorial_kcjplastic_string_detail_grades: Grades 2+
+  tutorial_legojourney_string_detail_grades: Grades 2-8
+  tutorial_legohopper_string_detail_grades: Grades 2-8
+  tutorial_catrobatembroidery_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_irobotphone_string_detail_grades: Grades 2-8
+  tutorial_codeguppydraw_string_detail_grades: Grades 6-8
+  tutorial_codejumper_string_detail_grades: Grades 2-8
+  tutorial_meeempathy_string_detail_grades: Grades 2+
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: All modern browsers, Android tablet, iPad
@@ -7176,6 +7957,136 @@ bn:
   tutorial_duckrace_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_allcancodeapps_string_platforms: All modern browsers
   tutorial_n2y_string_platforms: Unplugged
+  tutorial_microsoftarcade_string_platforms: All modern browsers, Screen reader
+  tutorial_csfirstunplugged_string_platforms: All modern browsers, Unplugged
+  tutorial_toxicodepython_string_platforms: All modern browsers
+  tutorial_codecombatozaria_string_platforms: All modern browsers
+  tutorial_vidcodedate_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codemonkeyspace_string_platforms: All modern browsers
+  tutorial_codespeakhappy_string_platforms: Chrome, Firefox
+  tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_icomputelearn_string_platforms: All modern browsers
+  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_bsdcause_string_platforms: Chrome
+  tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_bsdinspire_string_platforms: Chrome
+  tutorial_tttractor_string_platforms: Chrome
+  tutorial_codeillusionmickey_string_platforms: Chrome
+  tutorial_scigirlsquest_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_codespeakbreathe_string_platforms: Chrome, Firefox
+  tutorial_vidcodeface_string_platforms: Chrome, Firefox
+  tutorial_educodemaze_string_platforms: All modern browsers
+  tutorial_educoderace_string_platforms: All modern browsers
+  tutorial_codespeakchatbot_string_platforms: Chrome, Firefox
+  tutorial_gamefrootgames_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone
+  tutorial_codespeakgrandparent_string_platforms: Chrome, Firefox
+  tutorial_educodekingdom_string_platforms: All modern browsers
+  tutorial_codehsdata_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_educodecake_string_platforms: All modern browsers
+  tutorial_ttsecond_string_platforms: Chrome
+  tutorial_bsdtrivia_string_platforms: Chrome
+  tutorial_csfirstdialogue_string_platforms: All modern browsers
+  tutorial_codemonkeybeaver_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_codestersdistance_string_platforms: All modern browsers, Screen reader
+  tutorial_itchspace_string_platforms: All modern browsers
+  tutorial_vidcodemagic_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_vidcodemagices_string_platforms: All modern browsers, Android tablet, iPad,
+    Screen reader
+  tutorial_codespeakmeal_string_platforms: Chrome, Firefox
+  tutorial_itchfish_string_platforms: All modern browsers
+  tutorial_bsdwebsite_string_platforms: Chrome
+  tutorial_codespeaktime_string_platforms: Chrome, Firefox
+  tutorial_itchwebcam_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_itchball_string_platforms: All modern browsers
+  tutorial_ttrace_string_platforms: Chrome
+  tutorial_plethora_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_educodesecret_string_platforms: All modern browsers
+  tutorial_itchshapes_string_platforms: All modern browsers
+  tutorial_codeguppytext_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_vidcodeplastiche_string_platforms: All modern browsers, iPad
+  tutorial_educativechatbot_string_platforms: All modern browsers
+  tutorial_educodebasics_string_platforms: All modern browsers
+  tutorial_codehsdesign_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_htmlacademyphp_string_platforms: All modern browsers, Screen reader
+  tutorial_gamefrootdistance_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_codesterscovid_string_platforms: All modern browsers, Screen reader
+  tutorial_ttbunker_string_platforms: Chrome
+  tutorial_cuttle_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
+  tutorial_bsdjokes_string_platforms: Chrome
+  tutorial_rptree_string_platforms: Chrome, Firefox
+  tutorial_codestersunity_string_platforms: All modern browsers, Screen reader
+  tutorial_codesterssoccer_string_platforms: All modern browsers, Screen reader
+  tutorial_breakoutlock_string_platforms: All modern browsers, Android tablet, iPad,
+    Android phone, iPhone
+  tutorial_thunkablemask_string_platforms: All modern browsers
+  tutorial_cafarming_string_platforms: Chrome, Firefox
+  tutorial_blocksmithyeti_string_platforms: All modern browsers
+  tutorial_codecapture_string_platforms: All modern browsers, Android phone, iPhone
+  tutorial_codehslitter_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_bsdocean_string_platforms: Chrome
+  tutorial_itchplatformer_string_platforms: All modern browsers
+  tutorial_codejika_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
+  tutorial_gamefrootclicker_string_platforms: All modern browsers, iPad
+  tutorial_rmagicequity_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone, Game console app
+  tutorial_ttfreestyle_string_platforms: Chrome
+  tutorial_ozobotcolor2_string_platforms: All modern browsers
+  tutorial_ozobotcolor3_string_platforms: All modern browsers
+  tutorial_clcarbon_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_kodablebasics_string_platforms: Unplugged
+  tutorial_scigirlscc_string_platforms: Unplugged
+  tutorial_irobotpicture_string_platforms: Unplugged
+  tutorial_kcjmyself_string_platforms: All modern browsers
+  tutorial_nearpodalgorithms_string_platforms: All modern browsers, Screen reader
+  tutorial_kibodrop_string_platforms: Unplugged
+  tutorial_ozobotcolor1_string_platforms: All modern browsers
+  tutorial_scigirlspixels_string_platforms: Unplugged
+  tutorial_kcjheroines_string_platforms: All modern browsers
+  tutorial_ozobotvalue_string_platforms: All modern browsers
+  tutorial_icodebytes_string_platforms: Unplugged
+  tutorial_clfashion2_string_platforms: All modern browsers
+  tutorial_ai4all_string_platforms: All modern browsers
+  tutorial_cldata_string_platforms: All modern browsers
+  tutorial_spheroinputs_string_platforms: Unplugged
+  tutorial_edisoncount_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_spheroloops_string_platforms: Unplugged
+  tutorial_kiboprogram_string_platforms: Unplugged
+  tutorial_hellorubycsin60_string_platforms: Unplugged
+  tutorial_clfashion1_string_platforms: All modern browsers
+  tutorial_irobottraffic_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_edisonmystery_string_platforms: All modern browsers, Android tablet, iPad
+  tutorial_microbitseaturtles_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_ozobotknow_string_platforms: All modern browsers
+  tutorial_imagilabs_string_platforms: Android phone, iPhone, Unplugged
+  tutorial_irobotsimulator_string_platforms: All modern browsers, Android tablet,
+    iPad, Windows phone, Android phone, iPhone
+  tutorial_irobotkind_string_platforms: All modern browsers
+  tutorial_firiavirtual_string_platforms: Microsoft Edge, Chrome
+  tutorial_irobotguesscode_string_platforms: Chrome, Android tablet, Android phone
+  tutorial_ozobotnouns_string_platforms: All modern browsers
+  tutorial_nasa3d_string_platforms: All modern browsers
+  tutorial_blupants_string_platforms: All modern browsers
+  tutorial_legodance_string_platforms: All modern browsers
+  tutorial_nearpodcoding_string_platforms: All modern browsers, Screen reader
+  tutorial_kcjplastic_string_platforms: All modern browsers
+  tutorial_legojourney_string_platforms: All modern browsers
+  tutorial_legohopper_string_platforms: All modern browsers
+  tutorial_catrobatembroidery_string_platforms: অ্যান্ড্রয়েড
+  tutorial_irobotphone_string_platforms: All modern browsers
+  tutorial_codeguppydraw_string_platforms: All modern browsers
+  tutorial_codejumper_string_platforms: Unplugged, Sreen reader
+  tutorial_meeempathy_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip and Circuit
@@ -7757,26 +8668,145 @@ bn:
   tutorial_duckrace_string_detail_platforms: ''
   tutorial_allcancodeapps_string_detail_platforms: ''
   tutorial_n2y_string_detail_platforms: ''
-  tutorial_dance2019_string_detail_programming_languages: Blocks
-  tutorial_danceparty_string_detail_programming_languages: Blocks
-  tutorial_chibitronics_string_detail_programming_languages: Blocks
-  tutorial_athlete_string_detail_programming_languages: Blocks
-  tutorial_moana_string_detail_programming_languages: Blocks
+  tutorial_microsoftarcade_string_detail_platforms: ''
+  tutorial_csfirstunplugged_string_detail_platforms: ''
+  tutorial_toxicodepython_string_detail_platforms: ''
+  tutorial_codecombatozaria_string_detail_platforms: ''
+  tutorial_vidcodedate_string_detail_platforms: ''
+  tutorial_codemonkeyspace_string_detail_platforms: ''
+  tutorial_codespeakhappy_string_detail_platforms: ''
+  tutorial_grokimage_string_detail_platforms: ''
+  tutorial_icomputelearn_string_detail_platforms: ''
+  tutorial_rpstress_string_detail_platforms: ''
+  tutorial_bsdcause_string_detail_platforms: ''
+  tutorial_vidcodeanimoji_string_detail_platforms: ''
+  tutorial_vidcodeanimojies_string_detail_platforms: ''
+  tutorial_bsdinspire_string_detail_platforms: ''
+  tutorial_tttractor_string_detail_platforms: ''
+  tutorial_codeillusionmickey_string_detail_platforms: ''
+  tutorial_scigirlsquest_string_detail_platforms: ''
+  tutorial_codespeakbreathe_string_detail_platforms: ''
+  tutorial_vidcodeface_string_detail_platforms: ''
+  tutorial_educodemaze_string_detail_platforms: ''
+  tutorial_educoderace_string_detail_platforms: ''
+  tutorial_codespeakchatbot_string_detail_platforms: ''
+  tutorial_gamefrootgames_string_detail_platforms: ''
+  tutorial_codespeakgrandparent_string_detail_platforms: ''
+  tutorial_educodekingdom_string_detail_platforms: ''
+  tutorial_codehsdata_string_detail_platforms: ''
+  tutorial_educodecake_string_detail_platforms: ''
+  tutorial_ttsecond_string_detail_platforms: ''
+  tutorial_bsdtrivia_string_detail_platforms: ''
+  tutorial_csfirstdialogue_string_detail_platforms: ''
+  tutorial_codemonkeybeaver_string_detail_platforms: ''
+  tutorial_codestersdistance_string_detail_platforms: ''
+  tutorial_itchspace_string_detail_platforms: ''
+  tutorial_vidcodemagic_string_detail_platforms: ''
+  tutorial_vidcodemagices_string_detail_platforms: ''
+  tutorial_codespeakmeal_string_detail_platforms: ''
+  tutorial_itchfish_string_detail_platforms: ''
+  tutorial_bsdwebsite_string_detail_platforms: ''
+  tutorial_codespeaktime_string_detail_platforms: ''
+  tutorial_itchwebcam_string_detail_platforms: ''
+  tutorial_itchball_string_detail_platforms: ''
+  tutorial_ttrace_string_detail_platforms: ''
+  tutorial_plethora_string_detail_platforms: ''
+  tutorial_educodesecret_string_detail_platforms: ''
+  tutorial_itchshapes_string_detail_platforms: ''
+  tutorial_codeguppytext_string_detail_platforms: ''
+  tutorial_vidcodeplastiche_string_detail_platforms: ''
+  tutorial_educativechatbot_string_detail_platforms: ''
+  tutorial_educodebasics_string_detail_platforms: ''
+  tutorial_codehsdesign_string_detail_platforms: ''
+  tutorial_htmlacademyphp_string_detail_platforms: ''
+  tutorial_gamefrootdistance_string_detail_platforms: ''
+  tutorial_codesterscovid_string_detail_platforms: ''
+  tutorial_ttbunker_string_detail_platforms: ''
+  tutorial_cuttle_string_detail_platforms: ''
+  tutorial_bsdjokes_string_detail_platforms: ''
+  tutorial_rptree_string_detail_platforms: ''
+  tutorial_codestersunity_string_detail_platforms: ''
+  tutorial_codesterssoccer_string_detail_platforms: ''
+  tutorial_breakoutlock_string_detail_platforms: ''
+  tutorial_thunkablemask_string_detail_platforms: ''
+  tutorial_cafarming_string_detail_platforms: ''
+  tutorial_blocksmithyeti_string_detail_platforms: ''
+  tutorial_codecapture_string_detail_platforms: ''
+  tutorial_codehslitter_string_detail_platforms: ''
+  tutorial_bsdocean_string_detail_platforms: ''
+  tutorial_itchplatformer_string_detail_platforms: ''
+  tutorial_codejika_string_detail_platforms: ''
+  tutorial_gamefrootclicker_string_detail_platforms: ''
+  tutorial_rmagicequity_string_detail_platforms: ''
+  tutorial_ttfreestyle_string_detail_platforms: ''
+  tutorial_ozobotcolor2_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_ozobotcolor3_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_clcarbon_string_detail_platforms: ''
+  tutorial_kodablebasics_string_detail_platforms: ''
+  tutorial_scigirlscc_string_detail_platforms: ''
+  tutorial_irobotpicture_string_detail_platforms: ''
+  tutorial_kcjmyself_string_detail_platforms: ''
+  tutorial_nearpodalgorithms_string_detail_platforms: ''
+  tutorial_kibodrop_string_detail_platforms: KIBO Robot Kit (optional)
+  tutorial_ozobotcolor1_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_scigirlspixels_string_detail_platforms: ''
+  tutorial_kcjheroines_string_detail_platforms: ''
+  tutorial_ozobotvalue_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_icodebytes_string_detail_platforms: ''
+  tutorial_clfashion2_string_detail_platforms: ''
+  tutorial_ai4all_string_detail_platforms: ''
+  tutorial_cldata_string_detail_platforms: ''
+  tutorial_spheroinputs_string_detail_platforms: ''
+  tutorial_edisoncount_string_detail_platforms: ''
+  tutorial_spheroloops_string_detail_platforms: ''
+  tutorial_kiboprogram_string_detail_platforms: KIBO Robot Kit (optional)
+  tutorial_hellorubycsin60_string_detail_platforms: ''
+  tutorial_clfashion1_string_detail_platforms: ''
+  tutorial_irobottraffic_string_detail_platforms: Root robot
+  tutorial_edisonmystery_string_detail_platforms: ''
+  tutorial_microbitseaturtles_string_detail_platforms: ''
+  tutorial_ozobotknow_string_detail_platforms: Ozobot Evo (optional)
+  tutorial_imagilabs_string_detail_platforms: imagiCharm
+  tutorial_irobotsimulator_string_detail_platforms: ''
+  tutorial_irobotkind_string_detail_platforms: Root robot (optional)
+  tutorial_firiavirtual_string_detail_platforms: ''
+  tutorial_irobotguesscode_string_detail_platforms: Root robot
+  tutorial_ozobotnouns_string_detail_platforms: 'Ozobot Evo  '
+  tutorial_nasa3d_string_detail_platforms: ''
+  tutorial_blupants_string_detail_platforms: Lego Ev3, Alphabot2, DIY Raspberry Pi
+    robot or DIY Beaglebone Blue robot
+  tutorial_legodance_string_detail_platforms: LEGO Education SPIKE Prime
+  tutorial_nearpodcoding_string_detail_platforms: ''
+  tutorial_kcjplastic_string_detail_platforms: ''
+  tutorial_legojourney_string_detail_platforms: ''
+  tutorial_legohopper_string_detail_platforms: LEGO Education SPIKE Prime robot
+  tutorial_catrobatembroidery_string_detail_platforms: Embroidery machine for stitching
+    and USB or network port, plus support of the DST format (standard embroidery file
+    format).
+  tutorial_irobotphone_string_detail_platforms: Root robot (optional)
+  tutorial_codeguppydraw_string_detail_platforms: ''
+  tutorial_codejumper_string_detail_platforms: ''
+  tutorial_meeempathy_string_detail_platforms: ''
+  tutorial_dance2019_string_detail_programming_languages: ব্লক
+  tutorial_danceparty_string_detail_programming_languages: ব্লক
+  tutorial_chibitronics_string_detail_programming_languages: ব্লক
+  tutorial_athlete_string_detail_programming_languages: ব্লক
+  tutorial_moana_string_detail_programming_languages: ব্লক
   tutorial_star-wars_string_detail_programming_languages: Blocks, JavaScript
   tutorial_gumadventure_string_detail_programming_languages: Blocks, Scratch
-  tutorial_mchoc_string_detail_programming_languages: Blocks
+  tutorial_mchoc_string_detail_programming_languages: ব্লক
   tutorial_vidnews_string_detail_programming_languages: JavaScript
-  tutorial_kodable-pre_string_detail_programming_languages: Blocks
+  tutorial_kodable-pre_string_detail_programming_languages: ব্লক
   tutorial_highseas_string_detail_programming_languages: Blocks, Scratch
   tutorial_capython_string_detail_programming_languages: Python
-  tutorial_frzn_string_detail_programming_languages: Blocks
+  tutorial_frzn_string_detail_programming_languages: ব্লক
   tutorial_cocom_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
-  tutorial_play-lab_string_detail_programming_languages: Blocks
-  tutorial_boxisland_string_detail_programming_languages: Blocks
+  tutorial_play-lab_string_detail_programming_languages: ব্লক
+  tutorial_boxisland_string_detail_programming_languages: ব্লক
   tutorial_textcomp_string_detail_programming_languages: Language independent
   tutorial_encryption_string_detail_programming_languages: Language independent
   tutorial_kanopixel_string_detail_programming_languages: JavaScript, Coffeescript
-  tutorial_foos_string_detail_programming_languages: Blocks
+  tutorial_foos_string_detail_programming_languages: ব্লক
   tutorial_tynkerdd_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_tynkerana_string_detail_programming_languages: Blocks, Tynker, JavaScript,
@@ -7784,33 +8814,33 @@ bn:
   tutorial_vidcard_string_detail_programming_languages: JavaScript
   tutorial_spritebox_string_detail_programming_languages: Blocks, Java, iOS/Swift
   tutorial_tynkerch_string_detail_programming_languages: JavaScript
-  tutorial_lightbot_string_detail_programming_languages: Blocks
+  tutorial_lightbot_string_detail_programming_languages: ব্লক
   tutorial_hoc_string_detail_programming_languages: do-not-show
-  tutorial_code_string_detail_programming_languages: Blocks
+  tutorial_code_string_detail_programming_languages: ব্লক
   tutorial_tinspire_string_detail_programming_languages: TI Basic
   tutorial_itchbounceball_string_detail_programming_languages: Blocks, Scratch
   tutorial_vidclim_string_detail_programming_languages: JavaScript
   tutorial_matlab_string_detail_programming_languages: MATLAB
-  tutorial_flap_string_detail_programming_languages: Blocks
-  tutorial_galaxy_string_detail_programming_languages: Blocks
-  tutorial_inf_string_detail_programming_languages: Blocks
+  tutorial_flap_string_detail_programming_languages: ব্লক
+  tutorial_galaxy_string_detail_programming_languages: ব্লক
+  tutorial_inf_string_detail_programming_languages: ব্লক
   tutorial_tynkersol_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_itchg_string_detail_programming_languages: Blocks
+  tutorial_itchg_string_detail_programming_languages: ব্লক
   tutorial_como_string_detail_programming_languages: CoffeeScript
   tutorial_processfound_string_detail_programming_languages: Java
   tutorial_tynkerhomo_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_art_string_detail_programming_languages: Blocks
+  tutorial_art_string_detail_programming_languages: ব্লক
   tutorial_tynkerbrick_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_itchbio_string_detail_programming_languages: Blocks
-  tutorial_itchj_string_detail_programming_languages: Blocks
-  tutorial_tickleo_string_detail_programming_languages: Blocks
+  tutorial_itchbio_string_detail_programming_languages: ব্লক
+  tutorial_itchj_string_detail_programming_languages: ব্লক
+  tutorial_tickleo_string_detail_programming_languages: ব্লক
   tutorial_hopgeo_string_detail_programming_languages: Hopscotch
   tutorial_tynkermult_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_monster_string_detail_programming_languages: Blocks
+  tutorial_monster_string_detail_programming_languages: ব্লক
   tutorial_tynkerapp_string_detail_programming_languages: do-not-show
   tutorial_tynkerpup_string_detail_programming_languages: Blocks, Tynker
   tutorial_livecode_string_detail_programming_languages: Language independent
@@ -7834,10 +8864,10 @@ bn:
   tutorial_codestersturtle_string_detail_programming_languages: Python
   tutorial_penjee_string_detail_programming_languages: Python
   tutorial_trinket_string_detail_programming_languages: Blocks, Kano Code
-  tutorial_frogger_string_detail_programming_languages: Blocks
+  tutorial_frogger_string_detail_programming_languages: ব্লক
   tutorial_tynkereco_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_mitedarc_string_detail_programming_languages: Blocks
+  tutorial_mitedarc_string_detail_programming_languages: ব্লক
   tutorial_khan_string_detail_programming_languages: JavaScript
   tutorial_tynkerd_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
@@ -7846,14 +8876,14 @@ bn:
   tutorial_codestersbasketball_string_detail_programming_languages: Python
   tutorial_nclkarel_string_detail_programming_languages: Karel (simplified Python)
   tutorial_buildpong_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_tynkerdrones_string_detail_programming_languages: Blocks
+  tutorial_tynkerdrones_string_detail_programming_languages: ব্লক
   tutorial_carla_string_detail_programming_languages: Coffeescript
   tutorial_zulama_string_detail_programming_languages: JavaScript
   tutorial_capost_string_detail_programming_languages: HTML, CSS
-  tutorial_marco_string_detail_programming_languages: Blocks
+  tutorial_marco_string_detail_programming_languages: ব্লক
   tutorial_codestersflappybike_string_detail_programming_languages: Python
   tutorial_kanopong_string_detail_programming_languages: JavaScript
-  tutorial_tynkerright_string_detail_programming_languages: Blocks
+  tutorial_tynkerright_string_detail_programming_languages: ব্লক
   tutorial_touchdevelop_string_detail_programming_languages: do-not-show
   tutorial_tynkercc_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
@@ -7865,9 +8895,9 @@ bn:
   tutorial_silent_string_detail_programming_languages: JavaScript
   tutorial_robomesh_string_detail_programming_languages: Blocks, Python
   tutorial_amaze_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_codestersds_string_detail_programming_languages: Blocks
+  tutorial_codestersds_string_detail_programming_languages: ব্লক
   tutorial_knodtext_string_detail_programming_languages: Python
-  tutorial_alicegar_string_detail_programming_languages: Blocks
+  tutorial_alicegar_string_detail_programming_languages: ব্লক
   tutorial_codesterstransform_string_detail_programming_languages: Python
   tutorial_flexfrog_string_detail_programming_languages: CSS
   tutorial_codemoji_string_detail_programming_languages: do-not-show
@@ -7886,20 +8916,20 @@ bn:
   tutorial_bbot_string_detail_programming_languages: Visual programming language
   tutorial_scratchg_string_detail_programming_languages: Language independent
   tutorial_roboticfriends_string_detail_programming_languages: Language independent
-  tutorial_sjforest_string_detail_programming_languages: Blocks
-  tutorial_sjgreet_string_detail_programming_languages: Blocks
-  tutorial_sjsunset_string_detail_programming_languages: Blocks
+  tutorial_sjforest_string_detail_programming_languages: ব্লক
+  tutorial_sjgreet_string_detail_programming_languages: ব্লক
+  tutorial_sjsunset_string_detail_programming_languages: ব্লক
   tutorial_fufafrenz_string_detail_programming_languages: Language independent
   tutorial_bbcgeo_string_detail_programming_languages: do-not-show
   tutorial_chspixel_string_detail_programming_languages: JavaScript
-  tutorial_hummingbird_string_detail_programming_languages: Blocks
+  tutorial_hummingbird_string_detail_programming_languages: ব্লক
   tutorial_recoloring_string_detail_programming_languages: Coffee Script (Pencil Code)
   tutorial_bbcchem_string_detail_programming_languages: do-not-show
   tutorial_floalgo_string_detail_programming_languages: Language independent
   tutorial_flocond_string_detail_programming_languages: Blocks, Language independent
   tutorial_floloops_string_detail_programming_languages: Blocks, Language independent
   tutorial_pgts_string_detail_programming_languages: Language independent
-  tutorial_ozo_string_detail_programming_languages: Blocks
+  tutorial_ozo_string_detail_programming_languages: ব্লক
   tutorial_bbcla_string_detail_programming_languages: do-not-show
   tutorial_bbcsci_string_detail_programming_languages: do-not-show
   tutorial_tlctour_string_detail_programming_languages: Language independent
@@ -7909,7 +8939,7 @@ bn:
   tutorial_bbcart_string_detail_programming_languages: do-not-show
   tutorial_tlcknight_string_detail_programming_languages: Language independent
   tutorial_fufafit_string_detail_programming_languages: Language independent
-  tutorial_ozodance_string_detail_programming_languages: Blocks
+  tutorial_ozodance_string_detail_programming_languages: ব্লক
   tutorial_codingrobotics_string_detail_programming_languages: Language independent
   tutorial_box_string_detail_programming_languages: do-not-show
   tutorial_hopgame_string_detail_programming_languages: Hopscotch
@@ -7922,19 +8952,19 @@ bn:
   tutorial_tlcemo_string_detail_programming_languages: Language independent
   tutorial_crd_string_detail_programming_languages: Language independent
   tutorial_bbcbio_string_detail_programming_languages: do-not-show
-  tutorial_ticklebb8_string_detail_programming_languages: Blocks
+  tutorial_ticklebb8_string_detail_programming_languages: ব্লক
   tutorial_grok_string_detail_programming_languages: do-not-show
   tutorial_ijournalist_string_detail_programming_languages: HTML, CSS
   tutorial_bbcmusic_string_detail_programming_languages: do-not-show
-  tutorial_secretcodes_string_detail_programming_languages: Blocks
+  tutorial_secretcodes_string_detail_programming_languages: ব্লক
   tutorial_tlchex_string_detail_programming_languages: Language independent
-  tutorial_tickles_string_detail_programming_languages: Blocks
-  tutorial_ozogame_string_detail_programming_languages: Blocks
+  tutorial_tickles_string_detail_programming_languages: ব্লক
+  tutorial_ozogame_string_detail_programming_languages: ব্লক
   tutorial_vidcodeio_string_detail_programming_languages: Language independent
   tutorial_besttech_string_detail_programming_languages: Blocks, C/C++
   tutorial_tlcbrain_string_detail_programming_languages: Language independent
   tutorial_hopquiz_string_detail_programming_languages: Hopscotch
-  tutorial_unfortunate_string_detail_programming_languages: Blocks
+  tutorial_unfortunate_string_detail_programming_languages: ব্লক
   tutorial_cha_string_detail_programming_languages: Language independent
   tutorial_elaseq_string_detail_programming_languages: Language independent
   tutorial_bbcmathi_string_detail_programming_languages: do-not-show
@@ -7944,14 +8974,14 @@ bn:
   tutorial_tlcinvis_string_detail_programming_languages: Language independent
   tutorial_tlcjflap_string_detail_programming_languages: Language independent
   tutorial_procolor_string_detail_programming_languages: Language independent
-  tutorial_spiralsfinch_string_detail_programming_languages: Blocks
+  tutorial_spiralsfinch_string_detail_programming_languages: ব্লক
   tutorial_ozoi_string_detail_programming_languages: Language independent
-  tutorial_ticklel_string_detail_programming_languages: Blocks
-  tutorial_spiralsdash_string_detail_programming_languages: Blocks
-  tutorial_ghdebug_string_detail_programming_languages: Blocks
+  tutorial_ticklel_string_detail_programming_languages: ব্লক
+  tutorial_spiralsdash_string_detail_programming_languages: ব্লক
+  tutorial_ghdebug_string_detail_programming_languages: ব্লক
   tutorial_tlckk_string_detail_programming_languages: Language independent
   tutorial_firstcomp_string_detail_programming_languages: Language independent
-  tutorial_mazefinch_string_detail_programming_languages: Blocks
+  tutorial_mazefinch_string_detail_programming_languages: ব্লক
   tutorial_tlccc_string_detail_programming_languages: Language independent
   tutorial_tlcdoodle_string_detail_programming_languages: Language independent
   tutorial_tlcpunch_string_detail_programming_languages: Language independent
@@ -7969,60 +8999,60 @@ bn:
   tutorial_tynkerarc_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_grokffpython_string_detail_programming_languages: Python
-  tutorial_grokffblock_string_detail_programming_languages: Blocks
+  tutorial_grokffblock_string_detail_programming_languages: ব্লক
   tutorial_grokeliza_string_detail_programming_languages: Python
   tutorial_tynkercan_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_grokflags_string_detail_programming_languages: Python
-  tutorial_robomind_string_detail_programming_languages: Blocks
+  tutorial_robomind_string_detail_programming_languages: ব্লক
   tutorial_scratchanimwork_string_detail_programming_languages: Blocks, Scratch
-  tutorial_adventureq_string_detail_programming_languages: Blocks
+  tutorial_adventureq_string_detail_programming_languages: ব্লক
   tutorial_khan-es_string_detail_programming_languages: JavaScript
   tutorial_kpt_string_detail_programming_languages: JavaScript
   tutorial_kpl_string_detail_programming_languages: JavaScript
   tutorial_khe_string_detail_programming_languages: JavaScript
   tutorial_kfr_string_detail_programming_languages: JavaScript
-  tutorial_app-inventor_string_detail_programming_languages: Blocks
+  tutorial_app-inventor_string_detail_programming_languages: ব্লক
   tutorial_bits_string_detail_programming_languages: Blocks, Language independent
-  tutorial_blockly_string_detail_programming_languages: Blocks
+  tutorial_blockly_string_detail_programming_languages: ব্লক
   tutorial_tynker_string_detail_programming_languages: do-not-show
-  tutorial_baypt_string_detail_programming_languages: Blocks
+  tutorial_baypt_string_detail_programming_languages: ব্লক
   tutorial_code-combat_string_detail_programming_languages: do-not-show
   tutorial_mky_string_detail_programming_languages: CoffeeScript
   tutorial_spellcraft_string_detail_programming_languages: Blocks, JavaScript
   tutorial_pirates_string_detail_programming_languages: Blocks, Pirate code
   tutorial_csfirst_string_detail_programming_languages: Scratch
-  tutorial_loopedy_string_detail_programming_languages: Blocks
+  tutorial_loopedy_string_detail_programming_languages: ব্লক
   tutorial_dsw_string_detail_programming_languages: do-not-show
   tutorial_dswb_string_detail_programming_languages: do-not-show
   tutorial_ssw_string_detail_programming_languages: do-not-show
   tutorial_sswb_string_detail_programming_languages: do-not-show
   tutorial_kodable-unplugged_string_detail_programming_languages: Language independent
   tutorial_scratch_string_detail_programming_languages: Language independent
-  tutorial_bayes_string_detail_programming_languages: Blocks
+  tutorial_bayes_string_detail_programming_languages: ব্লক
   tutorial_gumball_string_detail_programming_languages: do-not-show
   tutorial_hrm_string_detail_programming_languages: Assembly
   tutorial_ice-age_string_detail_programming_languages: do-not-show
   tutorial_koapp_string_detail_programming_languages: do-not-show
-  tutorial_lightbot-intl_string_detail_programming_languages: Blocks
+  tutorial_lightbot-intl_string_detail_programming_languages: ব্লক
   tutorial_rmc_string_detail_programming_languages: do-not-show
   tutorial_smc_string_detail_programming_languages: do-not-show
   tutorial_minecraft-2016_string_detail_programming_languages: do-not-show
   tutorial_thinkersmith-es_string_detail_programming_languages: JavaScript
-  tutorial_pixie_string_detail_programming_languages: Blocks
+  tutorial_pixie_string_detail_programming_languages: ব্লক
   tutorial_play_string_detail_programming_languages: do-not-show
-  tutorial_robomind-nl_string_detail_programming_languages: Blocks
+  tutorial_robomind-nl_string_detail_programming_languages: ব্লক
   tutorial_spheroi_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherol_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherov_string_detail_programming_languages: Blocks, JavaScript
   tutorial_swb_string_detail_programming_languages: do-not-show
   tutorial_build-a-galaxy_string_detail_programming_languages: do-not-show
-  tutorial_alicesims_string_detail_programming_languages: Blocks
+  tutorial_alicesims_string_detail_programming_languages: ব্লক
   tutorial_tchr_string_detail_programming_languages: do-not-show
-  tutorial_robogame_string_detail_programming_languages: Blocks
+  tutorial_robogame_string_detail_programming_languages: ব্লক
   tutorial_tap_string_detail_programming_languages: Blocks, Tynker, JavaScript, Python
   tutorial_cintl_string_detail_programming_languages: do-not-show
-  tutorial_itchstop_string_detail_programming_languages: Blocks
+  tutorial_itchstop_string_detail_programming_languages: ব্লক
   tutorial_tynkerpn_string_detail_programming_languages: Blocks, Tynker
   tutorial_tynkerpd_string_detail_programming_languages: Blocks, Tynker
   tutorial_persistence_string_detail_programming_languages: Language independent
@@ -8032,7 +9062,7 @@ bn:
   tutorial_moveit_string_detail_programming_languages: Language independent
   tutorial_bigevent_string_detail_programming_languages: Language independent
   tutorial_gpp_string_detail_programming_languages: Language independent
-  tutorial_foosgame_string_detail_programming_languages: Blocks
+  tutorial_foosgame_string_detail_programming_languages: ব্লক
   tutorial_solopython_string_detail_programming_languages: Python
   tutorial_kodableint_string_detail_programming_languages: Language independent, Symbols
   tutorial_kodableadv_string_detail_programming_languages: Language independent, Javascript
@@ -8048,57 +9078,57 @@ bn:
   tutorial_khandata_string_detail_programming_languages: SQL
   tutorial_robomeshiq_string_detail_programming_languages: Blocks, Python
   tutorial_googlelogo_string_detail_programming_languages: Blocks, Scratch
-  tutorial_playtune_string_detail_programming_languages: Blocks
+  tutorial_playtune_string_detail_programming_languages: ব্লক
   tutorial_computeit_string_detail_programming_languages: Language independent
   tutorial_codesterssj_string_detail_programming_languages: Blocks, Python
   tutorial_cmchat_string_detail_programming_languages: Python
   tutorial_tynkerdb_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
   tutorial_cmbuild_string_detail_programming_languages: CoffeeScript
-  tutorial_robotrattle_string_detail_programming_languages: Blocks
+  tutorial_robotrattle_string_detail_programming_languages: ব্লক
   tutorial_codestersh_string_detail_programming_languages: Blocks, Python
   tutorial_codehsdigipixel_string_detail_programming_languages: Language independent
-  tutorial_ccbinary_string_detail_programming_languages: Blocks
+  tutorial_ccbinary_string_detail_programming_languages: ব্লক
   tutorial_codehsturtle_string_detail_programming_languages: Python
-  tutorial_grokhd_string_detail_programming_languages: Blocks
+  tutorial_grokhd_string_detail_programming_languages: ব্লক
   tutorial_grokem_string_detail_programming_languages: Python
   tutorial_kodmaze_string_detail_programming_languages: Language independent
   tutorial_codestersa_string_detail_programming_languages: Python
   tutorial_cmdodo_string_detail_programming_languages: CoffeeScript
   tutorial_tynkerspace_string_detail_programming_languages: Blocks, Tynker, JavaScript,
     Python
-  tutorial_gfbloons_string_detail_programming_languages: Blocks
+  tutorial_gfbloons_string_detail_programming_languages: ব্লক
   tutorial_raspipong_string_detail_programming_languages: Python
   tutorial_codehsvr_string_detail_programming_languages: JavaScript
   tutorial_codesterstp_string_detail_programming_languages: Blocks, Python
   tutorial_codestersbb_string_detail_programming_languages: Blocks, Python
-  tutorial_gfcrossyroad_string_detail_programming_languages: Blocks
-  tutorial_googleww_string_detail_programming_languages: Blocks
+  tutorial_gfcrossyroad_string_detail_programming_languages: ব্লক
+  tutorial_googleww_string_detail_programming_languages: ব্লক
   tutorial_codehsjsapp_string_detail_programming_languages: JavaScript
-  tutorial_gfmihi_string_detail_programming_languages: Blocks
+  tutorial_gfmihi_string_detail_programming_languages: ব্লক
   tutorial_hopdropphone_string_detail_programming_languages: Hopscotch
   tutorial_techfaa_string_detail_programming_languages: JavaScript, Language independent
   tutorial_codehsjsgraph_string_detail_programming_languages: JavaScript
-  tutorial_thunkable_string_detail_programming_languages: Blocks
+  tutorial_thunkable_string_detail_programming_languages: ব্লক
   tutorial_hopcrossyroad_string_detail_programming_languages: Hopscotch
   tutorial_switchglitch_string_detail_programming_languages: Language independent
   tutorial_codecar_string_detail_programming_languages: C/C++
   tutorial_codesterscp_string_detail_programming_languages: Blocks, Python
-  tutorial_grokpetblock_string_detail_programming_languages: Blocks
+  tutorial_grokpetblock_string_detail_programming_languages: ব্লক
   tutorial_techbim_string_detail_programming_languages: Language independent
   tutorial_techfpp_string_detail_programming_languages: Python
   tutorial_codesterscr_string_detail_programming_languages: Python
   tutorial_grokdisease_string_detail_programming_languages: Python
   tutorial_techec_string_detail_programming_languages: JavaScript
-  tutorial_rgbegin_string_detail_programming_languages: Blocks
-  tutorial_myradream_string_detail_programming_languages: Blocks
+  tutorial_rgbegin_string_detail_programming_languages: ব্লক
+  tutorial_myradream_string_detail_programming_languages: ব্লক
   tutorial_thinkfun_string_detail_programming_languages: Language independent
   tutorial_hopfireworks_string_detail_programming_languages: Hopscotch
-  tutorial_grokspace_string_detail_programming_languages: Blocks
+  tutorial_grokspace_string_detail_programming_languages: ব্লক
   tutorial_codehspython_string_detail_programming_languages: Python
   tutorial_codehsjava_string_detail_programming_languages: Java
   tutorial_techioda_string_detail_programming_languages: Language independent
-  tutorial_grokmonster_string_detail_programming_languages: Blocks
+  tutorial_grokmonster_string_detail_programming_languages: ব্লক
   tutorial_techmjs_string_detail_programming_languages: JavaScript
   tutorial_techga_string_detail_programming_languages: Language independent
   tutorial_techioan_string_detail_programming_languages: Java
@@ -8107,44 +9137,44 @@ bn:
   tutorial_stemcod_string_detail_programming_languages: JavaScript
   tutorial_techikb_string_detail_programming_languages: Kotlin
   tutorial_kanostreet_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_nyblebot_string_detail_programming_languages: Blocks
+  tutorial_nyblebot_string_detail_programming_languages: ব্লক
   tutorial_codemojijs_string_detail_programming_languages: JavaScript
   tutorial_techapf_string_detail_programming_languages: Python
   tutorial_techfpjs_string_detail_programming_languages: JavaScript
   tutorial_techlinq_string_detail_programming_languages: C#
-  tutorial_gpbcatapult_string_detail_programming_languages: Blocks
+  tutorial_gpbcatapult_string_detail_programming_languages: ব্লক
   tutorial_quorumastro_string_detail_programming_languages: Quorum
   tutorial_alicewonder_string_detail_programming_languages: JavaScript
-  tutorial_rginter_string_detail_programming_languages: Blocks
+  tutorial_rginter_string_detail_programming_languages: ব্লক
   tutorial_cssgrid_string_detail_programming_languages: CSS
   tutorial_jshero_string_detail_programming_languages: JavaScript
   tutorial_codemojipy_string_detail_programming_languages: iOS/Swift, Python
   tutorial_nclabdrone_string_detail_programming_languages: Python
-  tutorial_gpbcircle_string_detail_programming_languages: Blocks
-  tutorial_gpbpaint_string_detail_programming_languages: Blocks
+  tutorial_gpbcircle_string_detail_programming_languages: ব্লক
+  tutorial_gpbpaint_string_detail_programming_languages: ব্লক
   tutorial_cocomarcade_string_detail_programming_languages: JavaScript, Python
   tutorial_techcpp_string_detail_programming_languages: C/C++
-  tutorial_beetik_string_detail_programming_languages: Blocks
+  tutorial_beetik_string_detail_programming_languages: ব্লক
   tutorial_codedj_string_detail_programming_languages: JavaScript
   tutorial_rgadvan_string_detail_programming_languages: Blocks, JavaScript, Python
   tutorial_codehsrn_string_detail_programming_languages: JavaScript
   tutorial_codehswd_string_detail_programming_languages: HTML
   tutorial_turtlerobot_string_detail_programming_languages: Language independent
-  tutorial_ozoevo_string_detail_programming_languages: Blocks
+  tutorial_ozoevo_string_detail_programming_languages: ব্লক
   tutorial_ozoexped_string_detail_programming_languages: OzoCodes
-  tutorial_ozojourney_string_detail_programming_languages: Blocks
+  tutorial_ozojourney_string_detail_programming_languages: ব্লক
   tutorial_ozocodes_string_detail_programming_languages: OzoCodes
   tutorial_ozoeclipse_string_detail_programming_languages: Blocks, OzoCodes
   tutorial_ozosimulator_string_detail_programming_languages: Language independent
-  tutorial_ozoalgorithm_string_detail_programming_languages: Blocks
-  tutorial_ozotimer_string_detail_programming_languages: Blocks
+  tutorial_ozoalgorithm_string_detail_programming_languages: ব্লক
+  tutorial_ozotimer_string_detail_programming_languages: ব্লক
   tutorial_ozohabits_string_detail_programming_languages: OzoCodes
-  tutorial_ozoprogram_string_detail_programming_languages: Blocks
-  tutorial_ozopair_string_detail_programming_languages: Blocks
-  tutorial_codesnoopy_string_detail_programming_languages: Blocks
+  tutorial_ozoprogram_string_detail_programming_languages: ব্লক
+  tutorial_ozopair_string_detail_programming_languages: ব্লক
+  tutorial_codesnoopy_string_detail_programming_languages: ব্লক
   tutorial_applabintro_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_cslartist_string_detail_programming_languages: Blocks
-  tutorial_cslscratchjr_string_detail_programming_languages: Blocks
+  tutorial_cslartist_string_detail_programming_languages: ব্লক
+  tutorial_cslscratchjr_string_detail_programming_languages: ব্লক
   tutorial_floevents_string_detail_programming_languages: Language independent
   tutorial_florobot_string_detail_programming_languages: Language independent
   tutorial_isavesanta_string_detail_programming_languages: Blocks, Scratch
@@ -8157,49 +9187,49 @@ bn:
   tutorial_kodpizza_string_detail_programming_languages: Language independent
   tutorial_kodwomen_string_detail_programming_languages: Language independent
   tutorial_tfunplug_string_detail_programming_languages: Language independent
-  tutorial_lbvariables_string_detail_programming_languages: Blocks
-  tutorial_lbfunctions_string_detail_programming_languages: Blocks
-  tutorial_lblogic_string_detail_programming_languages: Blocks
-  tutorial_lbworld_string_detail_programming_languages: Blocks
-  tutorial_lbloops_string_detail_programming_languages: Blocks
-  tutorial_lbtug_string_detail_programming_languages: Blocks
-  tutorial_lbpotato_string_detail_programming_languages: Blocks
-  tutorial_lbguitar_string_detail_programming_languages: Blocks
-  tutorial_lbio_string_detail_programming_languages: Blocks
-  tutorial_wonpuppy_string_detail_programming_languages: Blocks
+  tutorial_lbvariables_string_detail_programming_languages: ব্লক
+  tutorial_lbfunctions_string_detail_programming_languages: ব্লক
+  tutorial_lblogic_string_detail_programming_languages: ব্লক
+  tutorial_lbworld_string_detail_programming_languages: ব্লক
+  tutorial_lbloops_string_detail_programming_languages: ব্লক
+  tutorial_lbtug_string_detail_programming_languages: ব্লক
+  tutorial_lbpotato_string_detail_programming_languages: ব্লক
+  tutorial_lbguitar_string_detail_programming_languages: ব্লক
+  tutorial_lbio_string_detail_programming_languages: ব্লক
+  tutorial_wonpuppy_string_detail_programming_languages: ব্লক
   tutorial_woncue_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_wonzoo_string_detail_programming_languages: Blocks
-  tutorial_wontrip_string_detail_programming_languages: Blocks
-  tutorial_woncollect_string_detail_programming_languages: Blocks
+  tutorial_wonzoo_string_detail_programming_languages: ব্লক
+  tutorial_wontrip_string_detail_programming_languages: ব্লক
+  tutorial_woncollect_string_detail_programming_languages: ব্লক
   tutorial_wonsecret_string_detail_programming_languages: Blocks, JavaScript
   tutorial_hsscience_string_detail_programming_languages: Hopscotch
   tutorial_popculture_string_detail_programming_languages: Language independent
-  tutorial_legorobust_string_detail_programming_languages: Blocks
-  tutorial_legoplants_string_detail_programming_languages: Blocks
-  tutorial_legopark_string_detail_programming_languages: Blocks
-  tutorial_legodetect_string_detail_programming_languages: Blocks
-  tutorial_legolight_string_detail_programming_languages: Blocks
+  tutorial_legorobust_string_detail_programming_languages: ব্লক
+  tutorial_legoplants_string_detail_programming_languages: ব্লক
+  tutorial_legopark_string_detail_programming_languages: ব্লক
+  tutorial_legodetect_string_detail_programming_languages: ব্লক
+  tutorial_legolight_string_detail_programming_languages: ব্লক
   tutorial_alexa_string_detail_programming_languages: JavaScript
   tutorial_grokpetmicro_string_detail_programming_languages: Python, MicroPython
-  tutorial_pirateplunder_string_detail_programming_languages: Blocks
+  tutorial_pirateplunder_string_detail_programming_languages: ব্লক
   tutorial_cadj_string_detail_programming_languages: Language independent
-  tutorial_cacrazy_string_detail_programming_languages: Blocks
+  tutorial_cacrazy_string_detail_programming_languages: ব্লক
   tutorial_cajump_string_detail_programming_languages: Language independent
-  tutorial_carest_string_detail_programming_languages: Blocks
+  tutorial_carest_string_detail_programming_languages: ব্লক
   tutorial_accai_string_detail_programming_languages: Language independent
   tutorial_vceclipse_string_detail_programming_languages: JavaScript
-  tutorial_pmzero_string_detail_programming_languages: Blocks
+  tutorial_pmzero_string_detail_programming_languages: ব্লক
   tutorial_hsela_string_detail_programming_languages: Hopscotch
-  tutorial_ticklear_string_detail_programming_languages: Blocks
-  tutorial_bcrobot_string_detail_programming_languages: Blocks
-  tutorial_bcsnow_string_detail_programming_languages: Blocks
+  tutorial_ticklear_string_detail_programming_languages: ব্লক
+  tutorial_bcrobot_string_detail_programming_languages: ব্লক
+  tutorial_bcsnow_string_detail_programming_languages: ব্লক
   tutorial_ifly_string_detail_programming_languages: Tynker
   tutorial_idowedo_string_detail_programming_languages: Scratch
   tutorial_diggindwarf_string_detail_programming_languages: JavaScript
-  tutorial_rmedr_string_detail_programming_languages: Blocks
+  tutorial_rmedr_string_detail_programming_languages: ব্লক
   tutorial_spheroit_string_detail_programming_languages: Blocks, JavaScript
   tutorial_gameofcodes_string_detail_programming_languages: Blocks, Ready, Unity
-  tutorial_blocklygames_string_detail_programming_languages: Blocks
+  tutorial_blocklygames_string_detail_programming_languages: ব্লক
   tutorial_spherohello_string_detail_programming_languages: JavaScript
   tutorial_spheroarcade_string_detail_programming_languages: iOS/Swift
   tutorial_bcpy1_string_detail_programming_languages: Python
@@ -8208,16 +9238,16 @@ bn:
   tutorial_bcjs2_string_detail_programming_languages: JavaScript
   tutorial_3dbearmars_string_detail_programming_languages: Language independent (can
     be taught in multiple languages), Uses 3D modeling in augmented reality
-  tutorial_alexaskill_string_detail_programming_languages: Blocks
+  tutorial_alexaskill_string_detail_programming_languages: ব্লক
   tutorial_bitsboxyak_string_detail_programming_languages: JavaScript
-  tutorial_blockscadbargraphs_string_detail_programming_languages: Blocks
-  tutorial_blockscadbirdhouses_string_detail_programming_languages: Blocks
-  tutorial_blockscadclock_string_detail_programming_languages: Blocks
-  tutorial_blockscaddinner_string_detail_programming_languages: Blocks
-  tutorial_blockscadicecream_string_detail_programming_languages: Blocks
-  tutorial_blockscadpizza_string_detail_programming_languages: Blocks
-  tutorial_blockscadsugar_string_detail_programming_languages: Blocks
-  tutorial_bsgridlight_string_detail_programming_languages: Blocks
+  tutorial_blockscadbargraphs_string_detail_programming_languages: ব্লক
+  tutorial_blockscadbirdhouses_string_detail_programming_languages: ব্লক
+  tutorial_blockscadclock_string_detail_programming_languages: ব্লক
+  tutorial_blockscaddinner_string_detail_programming_languages: ব্লক
+  tutorial_blockscadicecream_string_detail_programming_languages: ব্লক
+  tutorial_blockscadpizza_string_detail_programming_languages: ব্লক
+  tutorial_blockscadsugar_string_detail_programming_languages: ব্লক
+  tutorial_bsgridlight_string_detail_programming_languages: ব্লক
   tutorial_bpartscratch_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bpartvid_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bpenglishscratch_string_detail_programming_languages: Blocks, JavaScript
@@ -8234,17 +9264,17 @@ bn:
   tutorial_bpsciencevid_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bptechscratch_string_detail_programming_languages: Blocks, JavaScript
   tutorial_bptechvid_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_caflags_string_detail_programming_languages: Blocks
-  tutorial_matariki_string_detail_programming_languages: Blocks
-  tutorial_carestaurant_string_detail_programming_languages: Blocks
-  tutorial_casea_string_detail_programming_languages: Blocks
-  tutorial_cashield_string_detail_programming_languages: Blocks
-  tutorial_ccwslimer_string_detail_programming_languages: Blocks
-  tutorial_codinggalaxy_string_detail_programming_languages: Blocks
-  tutorial_boatrace_string_detail_programming_languages: Blocks
+  tutorial_caflags_string_detail_programming_languages: ব্লক
+  tutorial_matariki_string_detail_programming_languages: ব্লক
+  tutorial_carestaurant_string_detail_programming_languages: ব্লক
+  tutorial_casea_string_detail_programming_languages: ব্লক
+  tutorial_cashield_string_detail_programming_languages: ব্লক
+  tutorial_ccwslimer_string_detail_programming_languages: ব্লক
+  tutorial_codinggalaxy_string_detail_programming_languages: ব্লক
+  tutorial_boatrace_string_detail_programming_languages: ব্লক
   tutorial_ccplay_string_detail_programming_languages: JavaScript, Python
-  tutorial_grinch_string_detail_programming_languages: Blocks
-  tutorial_codehsart_string_detail_programming_languages: Blocks
+  tutorial_grinch_string_detail_programming_languages: ব্লক
+  tutorial_codehsart_string_detail_programming_languages: ব্লক
   tutorial_codehsbitcoin_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_codehsblockchain_string_detail_programming_languages: Language independent
@@ -8253,12 +9283,12 @@ bn:
     (can be taught in multiple languages)
   tutorial_codehscollision_string_detail_programming_languages: JavaScript
   tutorial_codehsmath_string_detail_programming_languages: Python
-  tutorial_codehsmusic_string_detail_programming_languages: Blocks
-  tutorial_codehssports_string_detail_programming_languages: Blocks
+  tutorial_codehsmusic_string_detail_programming_languages: ব্লক
+  tutorial_codehssports_string_detail_programming_languages: ব্লক
   tutorial_codemojipizza_string_detail_programming_languages: JavaScript
   tutorial_moonlander_string_detail_programming_languages: CoffeeScript
-  tutorial_sushicards_string_detail_programming_languages: Blocks
-  tutorial_codesparkcreate_string_detail_programming_languages: Blocks
+  tutorial_sushicards_string_detail_programming_languages: ব্লক
+  tutorial_codesparkcreate_string_detail_programming_languages: ব্লক
   tutorial_hardvsoft_string_detail_programming_languages: ''
   tutorial_codestersecard_string_detail_programming_languages: Blocks, Python
   tutorial_codesterslogo_string_detail_programming_languages: Python
@@ -8268,15 +9298,15 @@ bn:
   tutorial_codinismhero_string_detail_programming_languages: Python
   tutorial_discovery_string_detail_programming_languages: Blocks, Scratch
   tutorial_csfirstname_string_detail_programming_languages: Blocks, Scratch
-  tutorial_obstaclecourse_string_detail_programming_languages: Blocks
+  tutorial_obstaclecourse_string_detail_programming_languages: ব্লক
   tutorial_edisonmove_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
-  tutorial_edisonspider_string_detail_programming_languages: Blocks
-  tutorial_edisonspotlight_string_detail_programming_languages: Blocks
+  tutorial_edisonspider_string_detail_programming_languages: ব্লক
+  tutorial_edisonspotlight_string_detail_programming_languages: ব্লক
   tutorial_firiapython_string_detail_programming_languages: Python
-  tutorial_gamefrootsquid_string_detail_programming_languages: Blocks
-  tutorial_duckpiano_string_detail_programming_languages: Blocks
-  tutorial_gpsound_string_detail_programming_languages: Blocks
+  tutorial_gamefrootsquid_string_detail_programming_languages: ব্লক
+  tutorial_duckpiano_string_detail_programming_languages: ব্লক
+  tutorial_gpsound_string_detail_programming_languages: ব্লক
   tutorial_groklearningpython_string_detail_programming_languages: Python
   tutorial_htmltimetravel_string_detail_programming_languages: HTML and CSS
   tutorial_hp_flappy_string_detail_programming_languages: Blocks, hyperPad Visual
@@ -8285,11 +9315,11 @@ bn:
   tutorial_icipher_string_detail_programming_languages: ''
   tutorial_iguess_string_detail_programming_languages: ''
   tutorial_imake_string_detail_programming_languages: Unplugged
-  tutorial_imorse_string_detail_programming_languages: Blocks
+  tutorial_imorse_string_detail_programming_languages: ব্লক
   tutorial_kanohp_string_detail_programming_languages: Blocks, JavaScript
   tutorial_khanwebpages_string_detail_programming_languages: HTML/CSS
-  tutorial_kibobowl_string_detail_programming_languages: Blocks
-  tutorial_kibodance_string_detail_programming_languages: Blocks
+  tutorial_kibobowl_string_detail_programming_languages: ব্লক
+  tutorial_kibodance_string_detail_programming_languages: ব্লক
   tutorial_buildcharacters_string_detail_programming_languages: JavaScript, Language
     independent (can be taught in multiple languages)
   tutorial_designgames_string_detail_programming_languages: JavaScript, Language independent
@@ -8297,56 +9327,56 @@ bn:
   tutorial_makelevels_string_detail_programming_languages: JavaScript, Language independent
     (can be taught in multiple languages)
   tutorial_wizard_string_detail_programming_languages: JavaScript
-  tutorial_mbscratchcards_string_detail_programming_languages: Blocks
+  tutorial_mbscratchcards_string_detail_programming_languages: ব্লক
   tutorial_mbswiftplaygrounds_string_detail_programming_languages: iOS/Swift
-  tutorial_mbbuttons_string_detail_programming_languages: Blocks
-  tutorial_meteor_string_detail_programming_languages: Blocks
-  tutorial_ballbounce_string_detail_programming_languages: Blocks
-  tutorial_mitcodi_string_detail_programming_languages: Blocks
-  tutorial_mitdoodle_string_detail_programming_languages: Blocks
-  tutorial_talktome_string_detail_programming_languages: Blocks
+  tutorial_mbbuttons_string_detail_programming_languages: ব্লক
+  tutorial_meteor_string_detail_programming_languages: ব্লক
+  tutorial_ballbounce_string_detail_programming_languages: ব্লক
+  tutorial_mitcodi_string_detail_programming_languages: ব্লক
+  tutorial_mitdoodle_string_detail_programming_languages: ব্লক
+  tutorial_talktome_string_detail_programming_languages: ব্লক
   tutorial_mobilecspmap_string_detail_programming_languages: Blocks, App Inventor
-  tutorial_ozorandom_string_detail_programming_languages: Blocks
-  tutorial_ozotroll_string_detail_programming_languages: Blocks
+  tutorial_ozorandom_string_detail_programming_languages: ব্লক
+  tutorial_ozotroll_string_detail_programming_languages: ব্লক
   tutorial_peblioart_string_detail_programming_languages: JavaScript
   tutorial_astropi_string_detail_programming_languages: Python
-  tutorial_rgart_string_detail_programming_languages: Blocks
-  tutorial_rgengineer_string_detail_programming_languages: Blocks
-  tutorial_rgmath_string_detail_programming_languages: Blocks
-  tutorial_rgscience_string_detail_programming_languages: Blocks
-  tutorial_rgtech_string_detail_programming_languages: Blocks
+  tutorial_rgart_string_detail_programming_languages: ব্লক
+  tutorial_rgengineer_string_detail_programming_languages: ব্লক
+  tutorial_rgmath_string_detail_programming_languages: ব্লক
+  tutorial_rgscience_string_detail_programming_languages: ব্লক
+  tutorial_rgtech_string_detail_programming_languages: ব্লক
   tutorial_robotmagic3d_string_detail_programming_languages: Blocks, JavaScript
   tutorial_robotmagicflappy_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_scratchadventure_string_detail_programming_languages: Blocks
-  tutorial_scratchtalk_string_detail_programming_languages: Blocks
+  tutorial_scratchadventure_string_detail_programming_languages: ব্লক
+  tutorial_scratchtalk_string_detail_programming_languages: ব্লক
   tutorial_scratchjrstory_string_detail_programming_languages: 'ScratchJr. '
   tutorial_scratchjrtwinkle_string_detail_programming_languages: ScratchJr.
   tutorial_spherocomm_string_detail_programming_languages: Blocks, JavaScript
   tutorial_spherocommunity_string_detail_programming_languages: Blocks, Draw
   tutorial_spherofunctions_string_detail_programming_languages: JavaScript
-  tutorial_spheroinfrared_string_detail_programming_languages: Blocks
-  tutorial_spherolightsensor_string_detail_programming_languages: Blocks
-  tutorial_spheromansion_string_detail_programming_languages: Blocks
-  tutorial_roadblocks_string_detail_programming_languages: Blocks
+  tutorial_spheroinfrared_string_detail_programming_languages: ব্লক
+  tutorial_spherolightsensor_string_detail_programming_languages: ব্লক
+  tutorial_spheromansion_string_detail_programming_languages: ব্লক
+  tutorial_roadblocks_string_detail_programming_languages: ব্লক
   tutorial_spherotext2_string_detail_programming_languages: JavaScript
   tutorial_spherotext3_string_detail_programming_languages: JavaScript
   tutorial_spherotext4_string_detail_programming_languages: JavaScript
-  tutorial_spheroraptor_string_detail_programming_languages: Blocks
+  tutorial_spheroraptor_string_detail_programming_languages: ব্লক
   tutorial_stempiday_string_detail_programming_languages: JavaScript
   tutorial_stemplanetoids_string_detail_programming_languages: JavaScript
   tutorial_stempong_string_detail_programming_languages: JavaScript
   tutorial_algobot_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
-  tutorial_thunkableapps_string_detail_programming_languages: Blocks
+  tutorial_thunkableapps_string_detail_programming_languages: ব্লক
   tutorial_toxicodedot_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
-  tutorial_gcactions_string_detail_programming_languages: Blocks
-  tutorial_gccomparators_string_detail_programming_languages: Blocks
-  tutorial_gcconditions_string_detail_programming_languages: Blocks
-  tutorial_gccreate_string_detail_programming_languages: Blocks
-  tutorial_gcevents_string_detail_programming_languages: Blocks
-  tutorial_gcloops_string_detail_programming_languages: Blocks
-  tutorial_gcvariables_string_detail_programming_languages: Blocks
+  tutorial_gcactions_string_detail_programming_languages: ব্লক
+  tutorial_gccomparators_string_detail_programming_languages: ব্লক
+  tutorial_gcconditions_string_detail_programming_languages: ব্লক
+  tutorial_gccreate_string_detail_programming_languages: ব্লক
+  tutorial_gcevents_string_detail_programming_languages: ব্লক
+  tutorial_gcloops_string_detail_programming_languages: ব্লক
+  tutorial_gcvariables_string_detail_programming_languages: ব্লক
   tutorial_beanything_string_detail_programming_languages: Blocks, Tynker
   tutorial_change_string_detail_programming_languages: Blocks, Tynker
   tutorial_cooking_string_detail_programming_languages: Blocks, Tynker
@@ -8358,16 +9388,152 @@ bn:
   tutorial_superhero_string_detail_programming_languages: HTML, CSS
   tutorial_vidcodeplastic_string_detail_programming_languages: JavaScript
   tutorial_vidcodetypeface_string_detail_programming_languages: JavaScript
-  tutorial_washustorm_string_detail_programming_languages: Blocks
+  tutorial_washustorm_string_detail_programming_languages: ব্লক
   tutorial_activitypackets_string_detail_programming_languages: Blocks, Wonder, Xylo,
     Blockly
-  tutorial_googlerookie_string_detail_programming_languages: Blocks
+  tutorial_googlerookie_string_detail_programming_languages: ব্লক
   tutorial_tommyturtle_string_detail_programming_languages: Language independent
-  tutorial_mazyad_string_detail_programming_languages: Blocks
+  tutorial_mazyad_string_detail_programming_languages: ব্লক
   tutorial_gamemaker_string_detail_programming_languages: JavaScript
-  tutorial_duckrace_string_detail_programming_languages: Blocks
-  tutorial_allcancodeapps_string_detail_programming_languages: Blocks
+  tutorial_duckrace_string_detail_programming_languages: ব্লক
+  tutorial_allcancodeapps_string_detail_programming_languages: ব্লক
   tutorial_n2y_string_detail_programming_languages: ''
+  tutorial_microsoftarcade_string_detail_programming_languages: ব্লক
+  tutorial_csfirstunplugged_string_detail_programming_languages: Blocks, Unplugged,
+    Scratch
+  tutorial_toxicodepython_string_detail_programming_languages: Python
+  tutorial_codecombatozaria_string_detail_programming_languages: JavaScript, Python
+  tutorial_vidcodedate_string_detail_programming_languages: JavaScript
+  tutorial_codemonkeyspace_string_detail_programming_languages: CoffeeScript
+  tutorial_codespeakhappy_string_detail_programming_languages: ব্লক
+  tutorial_grokimage_string_detail_programming_languages: Python
+  tutorial_icomputelearn_string_detail_programming_languages: Blocks, JavaScript,
+    Scratch
+  tutorial_rpstress_string_detail_programming_languages: ব্লক
+  tutorial_bsdcause_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_vidcodeanimoji_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeanimojies_string_detail_programming_languages: JavaScript
+  tutorial_bsdinspire_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_tttractor_string_detail_programming_languages: JavaScript
+  tutorial_codeillusionmickey_string_detail_programming_languages: JavaScript
+  tutorial_scigirlsquest_string_detail_programming_languages: ব্লক
+  tutorial_codespeakbreathe_string_detail_programming_languages: ব্লক
+  tutorial_vidcodeface_string_detail_programming_languages: JavaScript
+  tutorial_educodemaze_string_detail_programming_languages: JavaScript
+  tutorial_educoderace_string_detail_programming_languages: JavaScript
+  tutorial_codespeakchatbot_string_detail_programming_languages: ব্লক
+  tutorial_gamefrootgames_string_detail_programming_languages: ব্লক
+  tutorial_codespeakgrandparent_string_detail_programming_languages: ব্লক
+  tutorial_educodekingdom_string_detail_programming_languages: JavaScript
+  tutorial_codehsdata_string_detail_programming_languages: JavaScript
+  tutorial_educodecake_string_detail_programming_languages: HTML + CSS
+  tutorial_ttsecond_string_detail_programming_languages: JavaScript
+  tutorial_bsdtrivia_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_csfirstdialogue_string_detail_programming_languages: Blocks, Scratch
+  tutorial_codemonkeybeaver_string_detail_programming_languages: ব্লক
+  tutorial_codestersdistance_string_detail_programming_languages: Python
+  tutorial_itchspace_string_detail_programming_languages: ব্লক
+  tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
+  tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
+  tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
+  tutorial_itchfish_string_detail_programming_languages: ব্লক
+  tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_codespeaktime_string_detail_programming_languages: ব্লক
+  tutorial_itchwebcam_string_detail_programming_languages: ব্লক
+  tutorial_itchball_string_detail_programming_languages: ব্লক
+  tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
+  tutorial_plethora_string_detail_programming_languages: Language independent (can
+    be taught in multiple languages)
+  tutorial_educodesecret_string_detail_programming_languages: Python
+  tutorial_itchshapes_string_detail_programming_languages: ব্লক
+  tutorial_codeguppytext_string_detail_programming_languages: JavaScript
+  tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
+  tutorial_educativechatbot_string_detail_programming_languages: Python
+  tutorial_educodebasics_string_detail_programming_languages: JavaScript
+  tutorial_codehsdesign_string_detail_programming_languages: HTML
+  tutorial_htmlacademyphp_string_detail_programming_languages: PHP
+  tutorial_gamefrootdistance_string_detail_programming_languages: ব্লক
+  tutorial_codesterscovid_string_detail_programming_languages: Python
+  tutorial_ttbunker_string_detail_programming_languages: JavaScript
+  tutorial_cuttle_string_detail_programming_languages: Blocks, Language independent
+    (can be taught in multiple languages)
+  tutorial_bsdjokes_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_rptree_string_detail_programming_languages: ব্লক
+  tutorial_codestersunity_string_detail_programming_languages: Python
+  tutorial_codesterssoccer_string_detail_programming_languages: Python
+  tutorial_breakoutlock_string_detail_programming_languages: Blocks, Language independent
+    (can be taught in multiple languages)
+  tutorial_thunkablemask_string_detail_programming_languages: ব্লক
+  tutorial_cafarming_string_detail_programming_languages: Theory course on impacts
+    of computing.
+  tutorial_blocksmithyeti_string_detail_programming_languages: JavaScript
+  tutorial_codecapture_string_detail_programming_languages: JavaScript
+  tutorial_codehslitter_string_detail_programming_languages: Python, HTML
+  tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_itchplatformer_string_detail_programming_languages: ব্লক
+  tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_gamefrootclicker_string_detail_programming_languages: ব্লক
+  tutorial_rmagicequity_string_detail_programming_languages: Blocks, JavaScript
+  tutorial_ttfreestyle_string_detail_programming_languages: JavaScript
+  tutorial_ozobotcolor2_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_ozobotcolor3_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_clcarbon_string_detail_programming_languages: Python
+  tutorial_kodablebasics_string_detail_programming_languages: Blocks, JavaScript,
+    Language independent (can be taught in multiple languages)
+  tutorial_scigirlscc_string_detail_programming_languages: Language independent (can
+    be taught in multiple languages)
+  tutorial_irobotpicture_string_detail_programming_languages: No specific programming
+    languages required; unplugged decoding activity with words/phrases
+  tutorial_kcjmyself_string_detail_programming_languages: ব্লক
+  tutorial_nearpodalgorithms_string_detail_programming_languages: Language independent
+    (can be taught in multiple languages)
+  tutorial_kibodrop_string_detail_programming_languages: ব্লক
+  tutorial_ozobotcolor1_string_detail_programming_languages: Ozobot Line Following
+    and Color Codes
+  tutorial_scigirlspixels_string_detail_programming_languages: Language independent
+    (can be taught in multiple languages)
+  tutorial_kcjheroines_string_detail_programming_languages: ব্লক
+  tutorial_ozobotvalue_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_icodebytes_string_detail_programming_languages: Language independent (can
+    be taught in multiple languages)
+  tutorial_clfashion2_string_detail_programming_languages: SQL
+  tutorial_ai4all_string_detail_programming_languages: Language independent (can be
+    taught in multiple languages)
+  tutorial_cldata_string_detail_programming_languages: Language independent (can be
+    taught in multiple languages)
+  tutorial_spheroinputs_string_detail_programming_languages: ব্লক
+  tutorial_edisoncount_string_detail_programming_languages: ব্লক
+  tutorial_spheroloops_string_detail_programming_languages: ব্লক
+  tutorial_kiboprogram_string_detail_programming_languages: ব্লক
+  tutorial_hellorubycsin60_string_detail_programming_languages: Language independent
+    (can be taught in multiple languages)
+  tutorial_clfashion1_string_detail_programming_languages: SQL
+  tutorial_irobottraffic_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_edisonmystery_string_detail_programming_languages: ব্লক
+  tutorial_microbitseaturtles_string_detail_programming_languages: Blocks, JavaScript,
+    Python
+  tutorial_ozobotknow_string_detail_programming_languages: Language independent (can
+    be taught in multiple languages)
+  tutorial_imagilabs_string_detail_programming_languages: Python
+  tutorial_irobotsimulator_string_detail_programming_languages: ব্লক
+  tutorial_irobotkind_string_detail_programming_languages: ব্লক
+  tutorial_firiavirtual_string_detail_programming_languages: Python
+  tutorial_irobotguesscode_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_ozobotnouns_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_nasa3d_string_detail_programming_languages: Tinkercad Codeblocks
+  tutorial_blupants_string_detail_programming_languages: Blocks, Python
+  tutorial_legodance_string_detail_programming_languages: ব্লক
+  tutorial_nearpodcoding_string_detail_programming_languages: Language independent
+    (can be taught in multiple languages)
+  tutorial_kcjplastic_string_detail_programming_languages: Blocks, Also has use of
+    a spreadsheet.
+  tutorial_legojourney_string_detail_programming_languages: ব্লক
+  tutorial_legohopper_string_detail_programming_languages: ব্লক
+  tutorial_catrobatembroidery_string_detail_programming_languages: ব্লক
+  tutorial_irobotphone_string_detail_programming_languages: Blocks, iOS/Swift
+  tutorial_codeguppydraw_string_detail_programming_languages: JavaScript
+  tutorial_codejumper_string_detail_programming_languages: Unplugged
+  tutorial_meeempathy_string_detail_programming_languages: Blocks, Python
   tutorial_scratchimagine_name: Imagine a World
   tutorial_codesterspsa_name: 'Codesters: Code Your Own PSA'
   tutorial_googlehero_name: Code Your Hero
@@ -8938,42 +10104,42 @@ bn:
   tutorial_kuborobo_language: English, Spanish
   tutorial_ai-oceans_language: ইংরেজী
   tutorial_scratchimagine_string_detail_grades: Grades 2+
-  tutorial_codesterspsa_string_detail_grades: Grades 6+
+  tutorial_codesterspsa_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_googlehero_string_detail_grades: Grades 2-8
-  tutorial_codestersbball_string_detail_grades: Grades 6+
+  tutorial_codestersbball_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_scratchcartoon_string_detail_grades: Grades 2+
   tutorial_codemonkeyjr_string_detail_grades: Pre-reader
   tutorial_bananatales_string_detail_grades: Grades 2-8
   tutorial_scratchtales_string_detail_grades: Grades 2-8
-  tutorial_msemoji_string_detail_grades: Grades 6+
-  tutorial_cacolor_string_detail_grades: Grades 6+
+  tutorial_msemoji_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_cacolor_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_kodablebeach_string_detail_grades: Pre-reader - Grade 5
   tutorial_tynkeren_string_detail_grades: Grades 2-8
-  tutorial_tynkerjavapro_string_detail_grades: Grades 6+
+  tutorial_tynkerjavapro_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_grasshopperhack_string_detail_grades: Grades 9+
   tutorial_pbskids_string_detail_grades: Pre-reader-Grade 5
   tutorial_nclabdata_string_detail_grades: Grades 9+
   tutorial_grasshopperphoto_string_detail_grades: Grades 9+
-  tutorial_tynkerpyland_string_detail_grades: Grades 6+
+  tutorial_tynkerpyland_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codeitimages_string_detail_grades: Grades 2+
   tutorial_hyperpadenemy_string_detail_grades: Grades 9+
   tutorial_tynkerpro_string_detail_grades: Grades 2-8
-  tutorial_trashtag_string_detail_grades: Grades 6+
+  tutorial_trashtag_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_casiege_string_detail_grades: Grades 2-8
-  tutorial_thunkableyeet_string_detail_grades: Grades 6+
-  tutorial_vidcodedeal_string_detail_grades: Grades 6+
+  tutorial_thunkableyeet_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_vidcodedeal_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codehsgeno_string_detail_grades: Grades 9+
   tutorial_hyperpadpong_string_detail_grades: Grades 9+
   tutorial_tynkerland_string_detail_grades: Grades 2-8
-  tutorial_trinketgirl_string_detail_grades: Grades 6+
+  tutorial_trinketgirl_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_rpimosquito_string_detail_grades: Grades 6-8
-  tutorial_tynkermars_string_detail_grades: Grades 6+
-  tutorial_cityx_string_detail_grades: Grades 6+
-  tutorial_vidcodemap_string_detail_grades: Grades 6+
+  tutorial_tynkermars_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_cityx_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_vidcodemap_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_robotmagicfarm_string_detail_grades: Grades 2-8
-  tutorial_codehstriangle_string_detail_grades: Grades 6+
+  tutorial_codehstriangle_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ttwhitehouse_string_detail_grades: Grades 2+
-  tutorial_modulo_string_detail_grades: Grades 6+
+  tutorial_modulo_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codingtown_string_detail_grades: Grades 2-5
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: Grades 9+
@@ -8981,34 +10147,34 @@ bn:
   tutorial_htmlmuffin_string_detail_grades: Grades 6-8
   tutorial_microsoftpizza_string_detail_grades: Grades 6-8
   tutorial_stemc_blckhole_string_detail_grades: Grades 9+
-  tutorial_careconfigure_string_detail_grades: Grades 6+
+  tutorial_careconfigure_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
   tutorial_ozaria_string_detail_grades: Grades 2+
-  tutorial_ttovum_string_detail_grades: Grades 6+
+  tutorial_ttovum_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ttpassage_string_detail_grades: Grades 2-8
   tutorial_tynkerhtmlen_string_detail_grades: Grades 2+
   tutorial_ttfrog_string_detail_grades: Grades 2-8
   tutorial_codemojijava_string_detail_grades: Grades 6-8
-  tutorial_ccfirewall_string_detail_grades: Grades 6+
+  tutorial_ccfirewall_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_htmljs_string_detail_grades: Grades 6-8
   tutorial_ttaqueducts_string_detail_grades: Grades 6-8
-  tutorial_vtgame_string_detail_grades: Grades 6+
-  tutorial_baroborav_string_detail_grades: Grades 6+
+  tutorial_vtgame_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_baroborav_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_baroboobstacle_string_detail_grades: Grades 2+
-  tutorial_pbstorytelling_string_detail_grades: Grades 6+
+  tutorial_pbstorytelling_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_kibosnow_string_detail_grades: Pre-reader-Grade 5
   tutorial_kibohappy_string_detail_grades: Pre-reader-Grade 5
   tutorial_rubylove_string_detail_grades: Pre-reader-Grade 8
   tutorial_spherosmiles_string_detail_grades: Grades 2+
   tutorial_spherobaby_string_detail_grades: Pre-reader - Grade 8
-  tutorial_toxarchitect_string_detail_grades: Grades 6+
+  tutorial_toxarchitect_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_idodge_string_detail_grades: Grades 2-8
-  tutorial_firiacodebot_string_detail_grades: Grades 6+
+  tutorial_firiacodebot_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_modlighthouse_string_detail_grades: Pre-reader+
   tutorial_spherogreen_string_detail_grades: Grades 2-8
   tutorial_ozopopstar_string_detail_grades: Grades 2-8
-  tutorial_eddesign_string_detail_grades: Grades 6+
-  tutorial_edshapeup_string_detail_grades: Grades 6+
+  tutorial_eddesign_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
+  tutorial_edshapeup_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_ozocolor_string_detail_grades: Grades 2-8
   tutorial_kcjanimals_string_detail_grades: Grades 2-8
   tutorial_icomputeeggs_string_detail_grades: Grades 2-8
@@ -9017,21 +10183,21 @@ bn:
   tutorial_peblioportraits_string_detail_grades: Grades 9+
   tutorial_rootcodebreak_string_detail_grades: Grades 2-8
   tutorial_microbit14_string_detail_grades: Grades 2-8
-  tutorial_barobomoon_string_detail_grades: Grades 6+
+  tutorial_barobomoon_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_eddog_string_detail_grades: Grades 2-6
   tutorial_microbit15_string_detail_grades: Grades 2-8
   tutorial_unity_string_detail_grades: Grades 9+
-  tutorial_blockscadtarget_string_detail_grades: Grades 6+
+  tutorial_blockscadtarget_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tcadicicles_string_detail_grades: Grades 7-8
-  tutorial_blockscadscale_string_detail_grades: Grades 6+
+  tutorial_blockscadscale_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Grades 9+
   tutorial_kcjmerry_string_detail_grades: Grades 2-8
-  tutorial_modvariables_string_detail_grades: Grades 6+
+  tutorial_modvariables_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_codestersmicro_string_detail_grades: Grades 6-8
   tutorial_codestersdata_string_detail_grades: Grades 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
-  tutorial_rpisensehat_string_detail_grades: Grades 6+
+  tutorial_rpisensehat_string_detail_grades: গ্রেড 6+ (11 এবং তার বেশি)
   tutorial_modtraits_string_detail_grades: Grades 2+
   tutorial_mee_string_detail_grades: Grades 2+
   tutorial_kuborobo_string_detail_grades: Pre-reader - Grades 8
@@ -9248,33 +10414,33 @@ bn:
   tutorial_mee_string_detail_platforms: ''
   tutorial_kuborobo_string_detail_platforms: KUBO robot
   tutorial_ai-oceans_string_detail_platforms: ''
-  tutorial_scratchimagine_string_detail_programming_languages: Blocks
+  tutorial_scratchimagine_string_detail_programming_languages: ব্লক
   tutorial_codesterspsa_string_detail_programming_languages: Python
   tutorial_googlehero_string_detail_programming_languages: Blocks, Scratch
   tutorial_codestersbball_string_detail_programming_languages: Python
-  tutorial_scratchcartoon_string_detail_programming_languages: Blocks
-  tutorial_codemonkeyjr_string_detail_programming_languages: Blocks
+  tutorial_scratchcartoon_string_detail_programming_languages: ব্লক
+  tutorial_codemonkeyjr_string_detail_programming_languages: ব্লক
   tutorial_bananatales_string_detail_programming_languages: Python
-  tutorial_scratchtales_string_detail_programming_languages: Blocks
+  tutorial_scratchtales_string_detail_programming_languages: ব্লক
   tutorial_msemoji_string_detail_programming_languages: JavaScript, Python
   tutorial_cacolor_string_detail_programming_languages: Computational Thinking focused
     so no language
   tutorial_kodablebeach_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
-  tutorial_tynkeren_string_detail_programming_languages: Blocks
+  tutorial_tynkeren_string_detail_programming_languages: ব্লক
   tutorial_tynkerjavapro_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_grasshopperhack_string_detail_programming_languages: JavaScript
-  tutorial_pbskids_string_detail_programming_languages: Blocks
+  tutorial_pbskids_string_detail_programming_languages: ব্লক
   tutorial_nclabdata_string_detail_programming_languages: Structured Query Language
     (SQL), specifically PostgreSQL
   tutorial_grasshopperphoto_string_detail_programming_languages: JavaScript
   tutorial_tynkerpyland_string_detail_programming_languages: Python
-  tutorial_codeitimages_string_detail_programming_languages: Blocks
+  tutorial_codeitimages_string_detail_programming_languages: ব্লক
   tutorial_hyperpadenemy_string_detail_programming_languages: hyperPad Visual Programming
   tutorial_tynkerpro_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_trashtag_string_detail_programming_languages: Blocks
+  tutorial_trashtag_string_detail_programming_languages: ব্লক
   tutorial_casiege_string_detail_programming_languages: Security theory based
-  tutorial_thunkableyeet_string_detail_programming_languages: Blocks
+  tutorial_thunkableyeet_string_detail_programming_languages: ব্লক
   tutorial_vidcodedeal_string_detail_programming_languages: JavaScript
   tutorial_codehsgeno_string_detail_programming_languages: Python
   tutorial_hyperpadpong_string_detail_programming_languages: hyperPad Visual Programming
@@ -9290,7 +10456,7 @@ bn:
   tutorial_ttwhitehouse_string_detail_programming_languages: SCSS, CSS
   tutorial_modulo_string_detail_programming_languages: Lua
   tutorial_codingtown_string_detail_programming_languages: JavaScript
-  tutorial_kanoart_string_detail_programming_languages: Blocks
+  tutorial_kanoart_string_detail_programming_languages: ব্লক
   tutorial_dragonscript_string_detail_programming_languages: JavaScript, HTML
   tutorial_uwcloud_string_detail_programming_languages: Language independent (can
     be taught in multiple languages)
@@ -9305,7 +10471,7 @@ bn:
   tutorial_tynkerhtmlen_string_detail_programming_languages: HTML, CSS
   tutorial_ttfrog_string_detail_programming_languages: Blocks, JavaScript
   tutorial_codemojijava_string_detail_programming_languages: Java
-  tutorial_ccfirewall_string_detail_programming_languages: Blocks
+  tutorial_ccfirewall_string_detail_programming_languages: ব্লক
   tutorial_htmljs_string_detail_programming_languages: JavaScript
   tutorial_ttaqueducts_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_vtgame_string_detail_programming_languages: ইংরেজী
@@ -9326,37 +10492,37 @@ bn:
   tutorial_modlighthouse_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_spherogreen_string_detail_programming_languages: Blocks, JavaScript
-  tutorial_ozopopstar_string_detail_programming_languages: Blocks
-  tutorial_eddesign_string_detail_programming_languages: Blocks
+  tutorial_ozopopstar_string_detail_programming_languages: ব্লক
+  tutorial_eddesign_string_detail_programming_languages: ব্লক
   tutorial_edshapeup_string_detail_programming_languages: Python, EdPy, a text-based
     programming language based on Python.
-  tutorial_ozocolor_string_detail_programming_languages: Blocks
-  tutorial_kcjanimals_string_detail_programming_languages: Blocks
-  tutorial_icomputeeggs_string_detail_programming_languages: Blocks
-  tutorial_rootunplugged_string_detail_programming_languages: Blocks
-  tutorial_rgtreasure_string_detail_programming_languages: Blocks
+  tutorial_ozocolor_string_detail_programming_languages: ব্লক
+  tutorial_kcjanimals_string_detail_programming_languages: ব্লক
+  tutorial_icomputeeggs_string_detail_programming_languages: ব্লক
+  tutorial_rootunplugged_string_detail_programming_languages: ব্লক
+  tutorial_rgtreasure_string_detail_programming_languages: ব্লক
   tutorial_peblioportraits_string_detail_programming_languages: JavaScript
-  tutorial_rootcodebreak_string_detail_programming_languages: Blocks
-  tutorial_microbit14_string_detail_programming_languages: Blocks
+  tutorial_rootcodebreak_string_detail_programming_languages: ব্লক
+  tutorial_microbit14_string_detail_programming_languages: ব্লক
   tutorial_barobomoon_string_detail_programming_languages: Blocks, C/C++
-  tutorial_eddog_string_detail_programming_languages: Blocks
-  tutorial_microbit15_string_detail_programming_languages: Blocks
+  tutorial_eddog_string_detail_programming_languages: ব্লক
+  tutorial_microbit15_string_detail_programming_languages: ব্লক
   tutorial_unity_string_detail_programming_languages: C#
-  tutorial_blockscadtarget_string_detail_programming_languages: Blocks
-  tutorial_tcadicicles_string_detail_programming_languages: Blocks
-  tutorial_blockscadscale_string_detail_programming_languages: Blocks
-  tutorial_tcadloops_string_detail_programming_languages: Blocks
+  tutorial_blockscadtarget_string_detail_programming_languages: ব্লক
+  tutorial_tcadicicles_string_detail_programming_languages: ব্লক
+  tutorial_blockscadscale_string_detail_programming_languages: ব্লক
+  tutorial_tcadloops_string_detail_programming_languages: ব্লক
   tutorial_phidgets_string_detail_programming_languages: Java, Phidgets support ALL
     major programming languages. Can easily adapt this project to another language/environment.
-  tutorial_kcjmerry_string_detail_programming_languages: Blocks
+  tutorial_kcjmerry_string_detail_programming_languages: ব্লক
   tutorial_modvariables_string_detail_programming_languages: Language independent
     (can be taught in multiple languages)
   tutorial_codestersmicro_string_detail_programming_languages: Python
   tutorial_codestersdata_string_detail_programming_languages: Python
   tutorial_ikodexmas_string_detail_programming_languages: Microsoft Kodu
   tutorial_rpisensehat_string_detail_programming_languages: Python
-  tutorial_modtraits_string_detail_programming_languages: Blocks
-  tutorial_mee_string_detail_programming_languages: Blocks
+  tutorial_modtraits_string_detail_programming_languages: ব্লক
+  tutorial_mee_string_detail_programming_languages: ব্লক
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
   tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning

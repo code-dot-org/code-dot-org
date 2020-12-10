@@ -5327,3 +5327,7 @@ mn-MN:
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nХичээлийн төлөвлөгөө рүү очих\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Үргэлжлүүлэх</a>\n"
+      outbreak_story:
+        content1: тайлбар энд байна
+      outbreak_story2:
+        content1: тайлбар энд байна

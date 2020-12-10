@@ -170,10 +170,15 @@ nl:
     valid_password: Geldig wachtwoord!
     invalid_password: Wachtwoord moet ten minste 6 tekens lang zijn
     mismatch_password: De twee wachtwoorden komen niet overeen
-    agree_us_website: Ik ga akkoord met het gebruik van een website die in de Verenigde
-      Staten gevestigd is.
-    my_data_to_us: Gegevens over mijn gebruik van deze site mogen worden verzonden
-      naar en opgeslagen of verwerkt worden in de Verenigde Staten.
+    agree_us_data_transfer_teacher: "**Ik ga ermee akkoord dat Code.org data overbrengt
+      (waaronder persoonlijke gegevens) van mijn gebruik (en het gebruik door mijn
+      studenten) van deze website naar de Verenigde Staten** met als doel het hosten
+      en verwerken van dergelijke data."
+    data_collection_us: Ik begrijp dat Code.org een in de VS gevestigde non-profit
+      website is en dat de wetten waaronder het verzamelen van data in de VS valt
+      kunnen afwijken van de wetten in mijn land.
+    visit_privacy: Ga naar het [Privacybeleid](%{privacy_url}) van Code.org voor meer
+      informatie.
     additional_information: We hebben aanvullende informatie nodig om door te kunnen
       gaan met uw registratie.
     user_type_button: Accounttype bijwerken
@@ -704,8 +709,8 @@ nl:
       title: Minecraft
     hero:
       title: Minecraft
-      body: Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik
-        code om door Minecraft te reizen.
+      body: Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer
+        om door Minecraft te reizen.
     text-compression:
       title: Tekstcompressie
     unplugged:
@@ -978,13 +983,6 @@ nl:
   courses_category: Volledige Cursussen
   cookie_banner:
     accept: Ik ga akkoord
-  gdpr_dialog:
-    heading: Gaat u akkoord met het gebruik van een website die in de Verenigde Staten
-      gevestigd is?
-    message: Gegevens over uw gebruik van deze site kunnen worden verzonden naar en
-      opgeslagen of verwerkt worden in de Verenigde Staten.
-    logout: Uitloggen
-    true: Ja
   page_not_found_title: Pagina niet gevonden
   copy: Kopieër
   parent_email_banner:

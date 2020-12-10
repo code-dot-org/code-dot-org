@@ -13,6 +13,9 @@ describe('ActivityCard', () => {
     updateActivityField,
     setActivitySectionRef,
     updateTargetActivitySection,
+    clearTargetActivitySection,
+    handleCollapse,
+    generateActivitySectionKey,
     updateActivitySectionMetrics;
   beforeEach(() => {
     addActivitySection = sinon.spy();
@@ -21,7 +24,10 @@ describe('ActivityCard', () => {
     updateActivityField = sinon.spy();
     setActivitySectionRef = sinon.spy();
     updateTargetActivitySection = sinon.spy();
+    clearTargetActivitySection = sinon.spy();
     updateActivitySectionMetrics = sinon.spy();
+    handleCollapse = sinon.spy();
+    generateActivitySectionKey = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -31,9 +37,13 @@ describe('ActivityCard', () => {
       updateActivityField,
       setActivitySectionRef,
       updateTargetActivitySection,
+      clearTargetActivitySection,
       updateActivitySectionMetrics,
+      generateActivitySectionKey,
       targetActivitySectionPos: 1,
-      activitySectionMetrics: []
+      activitySectionMetrics: [],
+      handleCollapse,
+      collapsed: false
     };
   });
 
@@ -54,6 +64,7 @@ describe('ActivityCard', () => {
     expect(button.text()).to.include('Activity Section');
     button.simulate('mouseDown');
     expect(addActivitySection).to.have.been.calledOnce;
+    expect(generateActivitySectionKey).to.have.been.calledOnce;
   });
 
   it('edit activity title', () => {
@@ -73,6 +84,6 @@ describe('ActivityCard', () => {
 
     const titleInput = wrapper.find('input').at(1);
     titleInput.simulate('change', {target: {value: '1000'}});
-    expect(updateActivityField).to.have.been.calledWith(1, 'duration', '1000');
+    expect(updateActivityField).to.have.been.calledWith(1, 'duration', 1000);
   });
 });

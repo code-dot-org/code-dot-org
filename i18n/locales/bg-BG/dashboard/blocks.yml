@@ -725,6 +725,8 @@ bg:
         text: случаен цвят
       gamelab_randomColor:
         text: случаен цвят
+      gamelab_repeatForever:
+        text: повтаряй завинаги
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -1017,7 +1019,6 @@ bg:
             '"stoneBricks"': каменни тухли
             '"mossyStoneBricks"': мъхести каменни тухли
             '"crackedStoneBricks"': начупени каменни тухли
-            '"decorativeStoneBricks"': декоративни каменни тухли
             '"blueCoralBlock"': блок от син корал
             '"pinkCoralBlock"': блок от розов корал
             '"magentaCoralBlock"': блок от пурпурен корал

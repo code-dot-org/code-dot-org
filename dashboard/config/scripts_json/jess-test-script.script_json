@@ -2161,7 +2161,7 @@
       "position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Curriculum Investigation Overview"
       },
       "named_level": null,
       "bonus": null,
@@ -2182,7 +2182,7 @@
       "position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 1 - Innovations in Computing (~10 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2203,7 +2203,7 @@
       "position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2224,7 +2224,7 @@
       "position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2245,7 +2245,7 @@
       "position": 7,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2266,7 +2266,7 @@
       "position": 8,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2287,7 +2287,7 @@
       "position": 9,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2308,7 +2308,7 @@
       "position": 10,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2329,7 +2329,7 @@
       "position": 11,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2350,7 +2350,28 @@
       "position": 12,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module  U6L2 Reflection"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module  U6L2 Reflection"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6: Lesson 3 - The Circuit Playground (~20 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2367,11 +2388,11 @@
       ]
     },
     {
-      "chapter": 106,
-      "position": 13,
+      "chapter": 107,
+      "position": 14,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2388,11 +2409,11 @@
       ]
     },
     {
-      "chapter": 107,
-      "position": 14,
+      "chapter": 108,
+      "position": 15,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2409,11 +2430,11 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 15,
+      "chapter": 109,
+      "position": 16,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2430,11 +2451,32 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 16,
+      "chapter": 110,
+      "position": 17,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~55 mins)"
+        "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 8 U6L4 Reflection"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module 8 U6L4 Reflection"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 18,
+      "assessment": null,
+      "properties": {
+        "progression": "Reflection: Problem Solving Process for Programming (~5 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2451,29 +2493,50 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 17,
+      "chapter": 112,
+      "position": 19,
       "assessment": null,
       "properties": {
-        "progression": "Equity Journey (~10 mins)"
+        "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD Module 7 - Equity Journey"
+          "VPL - CSD Module 7 - Alternative Unit"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL - CSD Module 7 - Equity Journey"
+        "VPL - CSD Module 7 - Alternative Unit"
       ]
     },
     {
-      "chapter": 111,
-      "position": 18,
+      "chapter": 113,
+      "position": 20,
+      "assessment": null,
+      "properties": {
+        "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 8 - Alternative Unit"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module 8 - Alternative Unit"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 21,
       "assessment": null,
       "properties": {
         "progression": "Module 7 Asynchronous Wrap Up (~10 mins)"
@@ -2493,7 +2556,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 115,
       "position": 1,
       "assessment": null,
       "properties": {
@@ -2514,11 +2577,11 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 116,
       "position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation Overview"
       },
       "named_level": null,
       "bonus": null,
@@ -2535,11 +2598,11 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 117,
       "position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2556,11 +2619,11 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 118,
       "position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2577,11 +2640,11 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 119,
       "position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2598,11 +2661,11 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 120,
       "position": 6,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2619,53 +2682,242 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 121,
       "position": 7,
       "assessment": null,
       "properties": {
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 8 - U6L9"
+          "VPL - CSD - M8 - U6L6 - Level 5"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL - CSD - Module 8 - U6L9"
+        "VPL - CSD - M8 - U6L6 - Level 5"
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 122,
       "position": 8,
       "assessment": null,
       "properties": {
-        "progression": "Conclusions and Connections (~10 mins)"
+        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 8 - Conclusions and Connections"
+          "VPL - CSD - M8 - U6L6 - Level 6"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL - CSD - Module 8 - Conclusions and Connections"
+        "VPL - CSD - M8 - U6L6 - Level 6"
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 123,
       "position": 9,
       "assessment": null,
       "properties": {
-        "progression": "Conclusions and Connections (~10 mins)"
+        "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 8  U6L6 Reflection"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module 8  U6L6 Reflection"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6: Lesson 7 - Analog Input (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L7"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L7"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6: Lesson 7 - Analog Input (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 1"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - M8 - U6L7 - Level 1"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6: Lesson 7 - Analog Input (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - M8 - U6L7 - Level 2"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 13,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6: Lesson 7 - Analog Input (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD M8 - U6L7 - Level 3"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD M8 - U6L7 - Level 3"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 14,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6: Lesson 7 - Analog Input (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 4"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - M8 - U6L7 - Level 4"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 15,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6: Lesson 7 - Analog Input (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 5"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - M8 - U6L7 - Level 5"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 16,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 6: Lesson 7 - Analog Input (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module  U6L7 Reflection"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module  U6L7 Reflection"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 17,
+      "assessment": null,
+      "properties": {
+        "progression": "Conclusions and Connections (~20 - 25 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - Conclusions and Connections2"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 18,
+      "assessment": null,
+      "properties": {
+        "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "named_level": null,
       "bonus": null,
@@ -2682,29 +2934,50 @@
       ]
     },
     {
-      "chapter": 121,
-      "position": 10,
+      "chapter": 133,
+      "position": 19,
       "assessment": null,
       "properties": {
-        "progression": "Conclusions and Connections (~10 mins)"
+        "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD U6 Chapter 2 Project"
+          "VPL - CSD M8 Conclusions and Connections Reflection"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL - CSD U6 Chapter 2 Project"
+        "VPL - CSD M8 Conclusions and Connections Reflection"
       ]
     },
     {
-      "chapter": 122,
-      "position": 11,
+      "chapter": 134,
+      "position": 20,
+      "assessment": null,
+      "properties": {
+        "progression": "Equity Journey (~5 mins)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 7 - Equity Journey"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      },
+      "level_keys": [
+        "VPL - CSD Module 7 - Equity Journey"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 21,
       "assessment": null,
       "properties": {
         "progression": "Module 8 Asynchronous Wrap Up (~10 mins)"
@@ -3871,6 +4144,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "VPL - CSD Module  U6L2 Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module  U6L2 Reflection"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL - CSD - Module 7 - CI - U6L3",
         "script_level.level_keys": [
           "VPL - CSD - Module 7 - CI - U6L3"
@@ -3915,6 +4199,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "VPL - CSD Module 8 U6L4 Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 8 U6L4 Reflection"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL - CSD Module 7 PSP Reflection",
         "script_level.level_keys": [
           "VPL - CSD Module 7 PSP Reflection"
@@ -3926,9 +4221,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD Module 7 - Equity Journey",
+        "level.key": "VPL - CSD Module 7 - Alternative Unit",
         "script_level.level_keys": [
-          "VPL - CSD Module 7 - Equity Journey"
+          "VPL - CSD Module 7 - Alternative Unit"
+        ],
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 8 - Alternative Unit",
+        "script_level.level_keys": [
+          "VPL - CSD Module 8 - Alternative Unit"
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
@@ -4014,9 +4320,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 8 - U6L9",
+        "level.key": "VPL - CSD - M8 - U6L6 - Level 5",
         "script_level.level_keys": [
-          "VPL - CSD - Module 8 - U6L9"
+          "VPL - CSD - M8 - U6L6 - Level 5"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
@@ -4025,9 +4331,108 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 8 - Conclusions and Connections",
+        "level.key": "VPL - CSD - M8 - U6L6 - Level 6",
         "script_level.level_keys": [
-          "VPL - CSD - Module 8 - Conclusions and Connections"
+          "VPL - CSD - M8 - U6L6 - Level 6"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 8  U6L6 Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module 8  U6L6 Reflection"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L7",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L7"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - M8 - U6L7 - Level 1",
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 1"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - M8 - U6L7 - Level 2",
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 2"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD M8 - U6L7 - Level 3",
+        "script_level.level_keys": [
+          "VPL - CSD M8 - U6L7 - Level 3"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - M8 - U6L7 - Level 4",
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 4"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - M8 - U6L7 - Level 5",
+        "script_level.level_keys": [
+          "VPL - CSD - M8 - U6L7 - Level 5"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module  U6L7 Reflection",
+        "script_level.level_keys": [
+          "VPL - CSD Module  U6L7 Reflection"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - Conclusions and Connections2",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections2"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
@@ -4047,9 +4452,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD U6 Chapter 2 Project",
+        "level.key": "VPL - CSD M8 Conclusions and Connections Reflection",
         "script_level.level_keys": [
-          "VPL - CSD U6 Chapter 2 Project"
+          "VPL - CSD M8 Conclusions and Connections Reflection"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 7 - Equity Journey",
+        "script_level.level_keys": [
+          "VPL - CSD Module 7 - Equity Journey"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",

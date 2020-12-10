@@ -188,6 +188,8 @@ hy:
         text: կամայական գույն
       gamelab_randomColor:
         text: կամայական գույն
+      gamelab_repeatForever:
+        text: կրկնել հավերժ
       gamelab_setBackgroundImage:
         options:
           IMG:

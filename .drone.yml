@@ -34,6 +34,7 @@ steps:
   - name: mysql
     path: /var/lib/mysql
   environment:
+    # Each Drone secret below must be explicitly written to locals.yml in /docker/unit_tests.sh
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
@@ -126,6 +127,7 @@ steps:
   - name: mysql
     path: /var/lib/mysql
   environment:
+    # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
     CLOUDFRONT_KEY_PAIR_ID:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
@@ -136,6 +138,8 @@ steps:
       from_secret: FIREBASE_NAME
     FIREBASE_SECRET:
       from_secret: FIREBASE_SECRET
+    FIREBASE_SHARED_SECRET:
+      from_secret: FIREBASE_SHARED_SECRET
     SAUCE_USERNAME:
       from_secret: SAUCE_USERNAME
     SAUCE_ACCESS_KEY:
@@ -183,6 +187,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 9a6c116088e71ecaa8d68ed2bb5108763bb6dd1f45aa8568fb13df8616dd9495
+hmac: 1eb7f310b1ec6c67a0f6fa5b24ad6daab49a401ac9ed2bd908d3da4436003adc
 
 ...

@@ -2033,3 +2033,7 @@ sq-AL:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: përshkrimi këtu
+      outbreak_story2:
+        content1: përshkrimi këtu

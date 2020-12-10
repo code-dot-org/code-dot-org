@@ -124,11 +124,17 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "2-3 Artist Functions 4": {
@@ -553,6 +559,29 @@
           },
           "triangle": {
             "name": "üçgen"
+          },
+          "draw a door": {
+            "name": "bir kapı çiz"
+          },
+          "draw grass": {
+            "name": "çimen çiz"
+          },
+          "draw windows": {
+            "name": "pencereler çiz"
+          },
+          "rectangle": {
+            "name": "dikdörtgen",
+            "description": "lol"
+          },
+          "sun": {
+            "name": "güneş"
+          },
+          "window": {
+            "name": "pencere"
+          },
+          "square": {
+            "name": "kare",
+            "description": "lol"
           }
         },
         "Geometric Sun_2018": {
@@ -564,6 +593,29 @@
           },
           "triangle": {
             "name": "üçgen"
+          },
+          "draw a door": {
+            "name": "bir kapı çiz"
+          },
+          "draw grass": {
+            "name": "çimen çiz"
+          },
+          "draw windows": {
+            "name": "pencereler çiz"
+          },
+          "rectangle": {
+            "name": "dikdörtgen",
+            "description": "lol"
+          },
+          "sun": {
+            "name": "güneş"
+          },
+          "window": {
+            "name": "pencere"
+          },
+          "square": {
+            "name": "kare",
+            "description": "lol"
           }
         },
         "Guess The Number": {
@@ -578,29 +630,39 @@
           "n-sided shape": {
             "parameters": {
               "length": "uzunluk"
-            }
+            },
+            "name": "n-kenarlı şekil",
+            "description": "Şekil, halihazırda kaç kenarın olduğuna bağlı olarak değişir. Uzunluk ve kenar olmak üzere iki parametre alır. Uzunluk "
           },
           "draw a loop": {
             "parameters": {
               "length": "uzunluk"
-            }
+            },
+            "name": "bir döngü çiz"
           },
           "draw spiral circle": {
             "parameters": {
               "size": "boyut"
-            }
+            },
+            "name": "sarmal çember çiz"
           }
         },
         "InspirationalArtwork_2018": {
           "draw a loop": {
             "parameters": {
               "length": "uzunluk"
-            }
+            },
+            "name": "bir döngü çiz"
           },
           "draw spiral circle": {
             "parameters": {
               "size": "boyut"
-            }
+            },
+            "name": "sarmal çember çiz"
+          },
+          "n-sided shape": {
+            "name": "n-kenarlı şekil",
+            "description": "Şekil, halihazırda kaç kenarın olduğuna bağlı olarak değişir. Uzunluk ve kenar olmak üzere iki parametre alır. Uzunluk "
           }
         },
         "NEW Course 4 Artist Functions 11": {
@@ -925,6 +987,9 @@
           },
           "draw eye": {
             "name": "göz çiz"
+          },
+          "25 pixel square": {
+            "name": "25 piksel kare"
           }
         },
         "Robot Doodle_2018": {
@@ -933,6 +998,9 @@
           },
           "draw eye": {
             "name": "göz çiz"
+          },
+          "25 pixel square": {
+            "name": "25 piksel kare"
           }
         },
         "Standalone_Artist_7": {
@@ -1028,7 +1096,8 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "ateş çiz"
           },
           "draw fire": {
             "name": "ateş çiz"
@@ -1038,7 +1107,8 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "ateş çiz"
           },
           "draw fire": {
             "name": "ateş çiz"
@@ -1048,7 +1118,8 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "ateş çiz"
           },
           "draw fire": {
             "name": "ateş çiz"
@@ -1058,7 +1129,8 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "ateş çiz"
           },
           "draw fire": {
             "name": "ateş çiz"
@@ -1501,6 +1573,9 @@
         "courseE_Dogger_2": {
           "stop_everything": {
             "name": "herşeyi_durdur"
+          },
+          "lose": {
+            "name": "kaybet"
           }
         },
         "courseE_artist_concept1": {
@@ -1522,6 +1597,9 @@
           },
           "draw a line of squares": {
             "name": "bir satır kareler çiz"
+          },
+          "draw a plane of squares": {
+            "name": "bir kareler düzlemi çiz"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -1530,6 +1608,9 @@
           },
           "draw a line of squares": {
             "name": "bir satır kareler çiz"
+          },
+          "draw a plane of squares": {
+            "name": "bir kareler düzlemi çiz"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1589,26 +1670,41 @@
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -1710,6 +1806,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1721,6 +1820,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1732,6 +1834,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -1800,6 +1905,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -1811,6 +1919,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -1822,6 +1933,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions9": {
@@ -1880,6 +1994,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -1894,6 +2011,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -1908,6 +2028,9 @@
           },
           "draw square": {
             "name": "kare çiz"
+          },
+          "staggered squares": {
+            "name": "aşamalı kareler"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -1953,26 +2076,41 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "bir kare çiz"
+          },
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -1981,6 +2119,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "draw line of polygons": {
+            "name": "çokgen çizgileri çiz"
           }
         },
         "courseE_artist_functions_predict2_2018": {
@@ -1989,6 +2130,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "draw line of polygons": {
+            "name": "çokgen çizgileri çiz"
           }
         },
         "courseE_artist_functions_predict2_2019": {
@@ -1997,6 +2141,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "draw line of polygons": {
+            "name": "çokgen çizgileri çiz"
           }
         },
         "courseE_artist_functions_predict2_2020": {
@@ -2005,6 +2152,9 @@
           },
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "draw line of polygons": {
+            "name": "çokgen çizgileri çiz"
           }
         },
         "courseE_bee_concept4": {
@@ -2109,6 +2259,9 @@
           },
           "pumpkin square": {
             "name": "bal kabağı karesi"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions10a1_2019": {
@@ -2120,6 +2273,9 @@
           },
           "pumpkin square": {
             "name": "bal kabağı karesi"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions10a1_2020": {
@@ -2131,6 +2287,9 @@
           },
           "pumpkin square": {
             "name": "bal kabağı karesi"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions10b": {
@@ -2161,6 +2320,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions11_predict_2019": {
@@ -2175,6 +2337,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions11_predict_2020": {
@@ -2189,6 +2354,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions13_2018": {
@@ -2200,6 +2368,9 @@
           },
           "lettuce stairs": {
             "name": "marul merdiveni"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions13_2019": {
@@ -2211,6 +2382,9 @@
           },
           "lettuce stairs": {
             "name": "marul merdiveni"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions13_2020": {
@@ -2222,6 +2396,9 @@
           },
           "lettuce stairs": {
             "name": "marul merdiveni"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions1a_2018": {
@@ -2294,6 +2471,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions3c1_2019": {
@@ -2302,6 +2482,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions3c1_2020": {
@@ -2310,6 +2493,9 @@
           },
           "get all pumpkins": {
             "name": "tüm bal kabaklarını al"
+          },
+          "pick along path": {
+            "name": "yolu seçin"
           }
         },
         "courseE_farmer_functions3c_2018": {
@@ -2747,16 +2933,25 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "topla"
+          },
+          "move and increment": {
+            "name": "hareket et ve arttır"
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "topla"
+          },
+          "move and increment": {
+            "name": "hareket et ve arttır"
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "topla"
+          },
+          "move and increment": {
+            "name": "hareket et ve arttır"
           }
         },
         "grade5_artist_binary11": {
@@ -2860,6 +3055,136 @@
           },
           "build long bridge": {
             "name": "uzun köprü kur"
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "güçlendirici"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "güçlendirici"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "güçlendirici"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "güçlendirici"
+          }
+        },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+            "name": "sırayı topla"
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "merdivenleri topla"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "merdivenleri topla"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "merdivenleri topla"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "fonksiyonum"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "kulak köklerini çizin"
           }
         }
       }

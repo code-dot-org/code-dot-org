@@ -60,6 +60,10 @@ body.pin_bottom {
   left: 0;
 }
 
+body.oceans-blue {
+  background-color: $oceans_deep_blue;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
@@ -444,7 +448,7 @@ img.video_thumbnail {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 165px;
+$footer_height: 270px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -480,6 +484,10 @@ html, body {
   }
   a:hover {
     text-decoration: underline;
+  }
+  .powered-by-aws {
+    width: 100%;
+    margin-top: 12px;
   }
   select {
     width: auto;
@@ -756,6 +764,11 @@ $small-footer-standard-width: 400px;
 #locale {
   font-family: sans-serif;
   height: 24px;
+}
+
+.oceans-blue .small-footer-base {
+  background-color: initial;
+  border-top: initial;
 }
 
 .header_separator {
@@ -1192,6 +1205,18 @@ input.header_input {
   border-style: solid;
   border-width: 2px;
   padding: 5px;
+}
+
+.oceans-blue {
+  #codeApp {
+    .loading {
+      background: image-url("spinner-big-oceans-blue.gif") no-repeat center center;
+    }
+
+    .slow_load {
+      color: $white;
+    }
+  }
 }
 
 #codeApp {
@@ -1948,6 +1973,20 @@ a.download-video {
 
     #gdpr-section {
       flex-wrap: wrap;
+      .checkbox {
+        label {
+          align-items: baseline;
+          input[type=checkbox] {
+            align-self: auto;
+          }
+        }
+      }
+      #gdpr-label {
+        margin: 0 10px;
+        span {
+          padding: 0;
+        }
+      }
     }
   }
 }
@@ -3606,3 +3645,5 @@ html[dir=rtl] {
     padding: 0 34px;
   }
 }
+
+@import "NpsSurveyBlock";

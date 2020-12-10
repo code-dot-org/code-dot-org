@@ -400,7 +400,8 @@ The animation has been skipped.
     animation_metadata.each do |name, metadata|
       categories = metadata['categories']
       categories.each do |category|
-        category_map[category] = (category_map[category] + [name]).uniq.sort
+        normalized_category = category.tr(' ', '_')
+        category_map[normalized_category] = (category_map[normalized_category] + [name]).uniq.sort
       end
       category_progress_bar.increment unless category_progress_bar.nil?
     end

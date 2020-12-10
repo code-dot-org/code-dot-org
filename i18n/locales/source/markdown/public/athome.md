@@ -16,12 +16,20 @@ title: Learning computer science when schools are closed in response to Covid19
 
 <br>
 
-## Code Break: Learn from the Code.org team and special guests!
-<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
 
-<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
+
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
+
+<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
+
+<div class="clearboth"></div></div>
 
 ## Hour of Code: Try these engaging, introductory tutorials
 Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
@@ -121,6 +129,14 @@ A great option for students getting started on their own. You'll learn the funda
 
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+## Code Break: Learn from the Code.org team and special guests!
+<div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
+<p>Special guests join Code.org CEO Hadi Partovi in a weekly interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
+<p>If you haven’t checked out all the Code Break episodes, it’s not too late! Live episodes are no longer airing, but you can view all the episodes and self-paced activities <a href="https://code.org/break">here</a>.</p>
+
+<div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
+
 <a id="teacher-support"></a>
 ## Support for teachers in virtual or socially-distanced classrooms
 Please visit <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> to view resources and suggestions for teachers in virtual or socially-distanced classroom environments. Course-specific resources can be accessed by clicking the links below.

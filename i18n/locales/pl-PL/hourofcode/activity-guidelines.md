@@ -145,7 +145,7 @@ Czego będziesz potrzebować:
     * udostępniać w mediach społecznościowych informację, że zaliczyli "Godzinę kodowania"
     * odebrać świadectwo zaliczenia "Godziny kodowania"
     * przeglądać tablice z danymi, w których krajach/ miastach wskaźniki udziału w zajęciach "Godziny kodowania" są najwyższe
-    * Jeśli chodzi o użytkowników, którzy spędzą godzinę na Twoich zajęciach i nie zaliczą jej, prosimy uwzględnić przycisk dotyczący Twoich zajęć, opisany jako: "Kończę z <<Godziną kodowania>>" z linkiem, prowadzącym z powrotem na stronę: [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Jeśli chodzi o użytkowników, którzy spędzą godzinę na Twoich zajęciach i nie zaliczą jej, prosimy uwzględnić przycisk dotyczący Twoich zajęć, opisany jako: "Kończę z Godziną kodowania" z linkiem, prowadzącym z powrotem na stronę: [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
 * (Opcjonalnie) Możemy kontynuować prowadząc link do ankiety/ formularza online proszą o zgłoszenie następujących danych metrycznych dotyczących zajęć: 
     * Jeśli chodzi o zajęcia online (w szczególności aplikacje na smartfona/tableta): 
         * Liczba użytkowników
@@ -202,7 +202,7 @@ czy nauczyciele i uczniowie będą w stanie przeszukać i przefiltrować nasza l
 
 ## Wytyczne do przedkładania wczesnej weryfikacji jakościowej (NEW)
 
-Każde zajęcia przedłożone pomiędzy 30 kwietnia a 16 sierpnia przejdzie weryfikację przynajmniej trzech członków [komisji weryfikacyjnej zajęć <<Godzina kodowania>>](/review-committee).
+Każde zajęcia przedłożone pomiędzy 30 kwietnia a 16 sierpnia przejdzie weryfikację przynajmniej trzech członków [komisji weryfikacyjnej zajęć Godzina kodowania](/review-committee).
 
 Opiniujący będą się skupiać na podaniu następujących informacji:
 
@@ -225,7 +225,7 @@ Każde zajęcia przedłożone przez 1 października będą przedmiotem standardo
 
 ## Wskazówki dotyczące projektowania jednogodzinnych samouczków prowadzonych samodzielnie
 
-Możesz uwzględnić [logo <<Godziny kodowania>>](https://hourofcode.com/us/promote/resources#logo) w swoim samouczku, ale nie jest to wymagane. Jeśli korzystasz z logo "Godziny kodowania", zapoznaj się z poniższymi wytycznymi dotyczącymi znaków towarowych. <u>W żadnych okolicznościach nie można korzystać z logo Code.org ani nazwy.</u> Obie rzeczy są oznaczone znakiem towarowym i nie można ich mieszać z nazwami marek zewnętrznych bez wyraźnego zezwolenia w formie pisemnej.
+Możesz uwzględnić [logo Godziny kodowania](https://hourofcode.com/us/promote/resources#logo) w swoim samouczku, ale nie jest to wymagane. Jeśli korzystasz z logo "Godziny kodowania", zapoznaj się z poniższymi wytycznymi dotyczącymi znaków towarowych. <u>W żadnych okolicznościach nie można korzystać z logo Code.org ani nazwy.</u> Obie rzeczy są oznaczone znakiem towarowym i nie można ich mieszać z nazwami marek zewnętrznych bez wyraźnego zezwolenia w formie pisemnej.
 
 **Upewnij się, czy przeciętny uczeń jest w stanie komfortowo ukończyć zajęcia w ciągu godziny.** Rozważ możliwość dodania na koniec zadania otwartego dla uczniów, którzy zaliczą lekcję nieco szybciej. Pamiętaj, że w gronie dzieci większość stanowić będą osoby początkujące w dziedzinie informatyki i kodowania.
 
@@ -254,7 +254,7 @@ Możesz uwzględnić [logo <<Godziny kodowania>>](https://hourofcode.com/us/prom
 
 Wielu partnerów w zakresie naszych samouczków posłużyło się naszym znakiem towarowym "Godzina kodowania" na swoich stronach internetowych. Nie chcemy zabraniać używania w tym trybie, ale chcemy mieć pewność, że odbywa się to zgodnie z następującymi zasadami:
 
-1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do "Godziny kodowania" jako inicjatywy społecznej. Dobry przykład użycia: "Weź udział w <<Godzinie kodowania™>> na ACMECorp.com". Zły przykład użycia: "Weź udział w <<Godzinie kodowania>> ACME Corp".
+1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do "Godziny kodowania" jako inicjatywy społecznej. Dobry przykład użycia: "Weź udział w Godzinie kodowania™ na ACMECorp.com". Zły przykład użycia: "Weź udział w Godzinie kodowania ACME Corp".
 2. Stosuj górny indeks "TM" w najbardziej widocznych miejscach, gdzie używasz frazy "Godzina kodowania", zarówno na swojej stronie jak i w opisach aplikacji.
 3. Zamieść na stronie (lub w jej stopce) następujący tekst, zawierając również linki do stron "Godzina kodowania", Tygodnia Edukacji Informatycznej i Code.org: ["Godzina kodowania](http://hourofcode.com)™ jest ogólnokrajową inicjatywą [](http://csedweek.org)Tygodnia Edukacji Informatycznej </a> and [ Code.org](http://code.org), której celem jest przybliżenie milionom uczniów jednej godziny informatyki i programowania.
 4. Zakaz używania frazy "Godzina Kodowania" w nazwach aplikacji.

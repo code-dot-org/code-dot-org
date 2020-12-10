@@ -45,9 +45,9 @@
         "2-3 Artist Loops New 2": "Tu je enaka sestavljanka, kot tista, ki smo jo pravkar rešili, a tokrat lahko uporabimo samo en blok \"Premakni se naprej\" in en blok \"Obrni se\".\n\nAli lahko za reševanje te sestavljanke uporabiš \"Ponovi\"?",
         "2-3 Artist Loops New 9": "Nariši preprosti V, da končaš puščico, pri čemer sta obe stranici dolgi 50 pikslov. ",
         "2-3 Artist Nested Loops 1": "Do sedaj si risal like z uporabo zank. Zdaj bomo postavili zanke znotraj druge zanke!\n\nOkoli celotnega niza kode postavi blok \"Ponovi\", da narišeš vzorec.",
-        "2-3 Artist Nested Loops 10": "12 krat postavi to kodo v zanko, da boš dokončal/a vzorec.",
+        "2-3 Artist Nested Loops 10": "12-krat postavi to kodo v zanko, da boš dokončal/a vzorec.",
         "2-3 Artist Nested Loops 11": "To kodo postavi v zanko 4-krat, da dokončaš vzorec, po vsakem krogu naredi obrat za 90 stopinj.",
-        "2-3 Artist Nested Loops 12": "Za to kodo uporabi zanko 12 krat, da dokončaš kodre.",
+        "2-3 Artist Nested Loops 12": "Za to kodo uporabi zanko 12-krat, da dokončaš kodre.",
         "2-3 Artist Nested Loops 2": "Trikotnik postavi v zanko 6 krat. Za vsakim trikotnikom moraš narediti obrat za 60 stopinj, preden narišeš naslednjega.",
         "2-3 Artist Nested Loops 3": "Da bi narisal/a ta vzorec, moraš postaviti trikotnik v zanko 12 krat. Število stopinj v krogu (360) deli s številom oblik (12), ki jih rišeš. Tako boš ugotovil/a, kakšen obrat moraš narediti po vsaki obliki.",
         "2-3 Artist Nested Loops 4": "Ta diamant postavi v zanko 12 krat in nariši \nrožo. Namig: 12 diamantov je prav takih kot 12 trikotnikov, ki si jih naredil/a - za koliko se moraš obrniti po vsaki obliki?",
@@ -55,8 +55,8 @@
         "2-3 Artist Nested Loops 6": "Ta dinozaver ima 8 bodic na svojem repu.\n\nVsaka bodica je dolga 30 pikslov.\n\nTrikotnik postavi v zanko 8-krat, a ne pozabi za vsakim skočiti naprej.",
         "2-3 Artist Nested Loops 7": "Trikotnik postavi v zanko 10 krat in nariši sonce. Za vsakim trikotnikom se moraš premakniti in obrniti.\nZa koliko se moraš obrniti, lahko ugotoviš tako, da deliš število stopinj v krogu\ns številom oblik, ki ga sestavljajo.",
         "2-3 Artist Nested Loops 8": "Sedaj naši sliki dodaj nekaj trave. \n\nRazdalja med šopi trave je 50 pik.",
-        "2-3 Artist Nested Loops 9": "Sliko bomo dokočali tako, da bomo dodali rožo. \nDiamant postavi v zanko 12 krat in nariši rožo.",
-        "2-3 Artist Nested Loops Free Play": "Poigraj se in nariši nekaj kul\nz ugnezdenimi zankami.",
+        "2-3 Artist Nested Loops 9": "Sliko bomo dokočali tako, da bomo dodali rožo. \n\nDiamant postavi v zanko 12-krat in nariši rožo.",
+        "2-3 Artist Nested Loops Free Play": "Poigraj se in nariši nekaj kul\nz vgnezdenimi zankami.",
         "2-3 Bee Conditionals 11": "Dobi nektar z rož, ki ga imajo.",
         "2-3 Bee Conditionals 13": "Dobi ves nektar in potem naredi med.",
         "2-3 Bee Conditionals 14": "Dobi nektar iz vseh rož, ki ga imajo. Uporabi čim manj blokov. Ne pozabi narediti medu pri satovju.",
@@ -277,7 +277,8 @@
         "frozen square iterative": "Smo ze na pol poti, da naredimo kvadrat. Povežimo skupaj štiri črte in ustvarimo kvadrat.",
         "frozen square loop": "Živijo, jaz sem Ana Arendelska! Ustvarimo kvadratek z blokom \"Ponovi\" in tako porabimo manj blokov. Kolikokrat (???) mora blok \"Ponovi\" ponoviti bloke znotraj, da naredi kvadrat?",
         "frozen square loop 3x": "Ustvarimo tri kvadrate, tako da se obrnemo po vsake kvadratu. Prepričaj se, da ste vklopili obrat za 120 stopinj pred vsakim novim kvadratom.",
-        "frozen square snowflake": "Ali znaš ustvariti snežinko s pomočjo bloka \"Ponovi\", tako da 10-krat narišeš kvadrat in z blokom \"Obrni\" vrtiš za 36 stopinj med vsakim kvadratom v snežinki?"
+        "frozen square snowflake": "Ali znaš ustvariti snežinko s pomočjo bloka \"Ponovi\", tako da 10-krat narišeš kvadrat in z blokom \"Obrni\" vrtiš za 36 stopinj med vsakim kvadratom v snežinki?",
+        "Standalone_Artist_8": "Tukaj je funkcija z imenom \"Nariši obliko\", ki smo jo sprogramirali za risanje šestkotnikov. Zaženi kodo, poglej, kaj počne, nato pa eksperimentiraj s funkcijo in opazuj, kaj se zgodi. Ali lahko dosežeš, da bo funkcija izrisala vzorce s kvadrati, trikotniki ali osemkotniki?"
       }
     }
   }

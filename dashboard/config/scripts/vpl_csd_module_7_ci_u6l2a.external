@@ -5,9 +5,8 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 #Unit 6 - Lesson 2:  Designing Screens with Code 
-**Estimated time: 20 minutes**
 
-Let's put our "student hat" on and work through the same levels we just explored, but this time keeping our students in mind.
+Let's put our "student hat" on and explore the same levels we just previewed, but this time keeping our students in mind.
 
 
 ## Investigation Goal

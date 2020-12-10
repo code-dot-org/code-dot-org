@@ -30,7 +30,7 @@ Umaasa kami na ito'y magbibigay ng kislap sa interes sa mga estudyante upang pat
 
 #### Bakit ito mahalaga?
 
-Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas sa U.S. ng mga trabaho—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. But 55 percent of schools in the U.S. don't teach computer science. Oras na para tayo ay huwag magpahuli sa ika-21 na siglo. Alam natin na kahit ano pa man ang gawin ng mga estudyante kapag malaki na sila, kahit sila ay mapunta sa medisina, negosyo, pulitika, o sa sining, sa kaalaman nila kung paano nabubuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br /> <br />
+Ang teknolohiya ay binabago ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas sa U.S. ng mga trabaho—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. But 53 percent of schools in the U.S. don't teach computer science. Oras na para tayo ay huwag magpahuli sa ika-21 na siglo. Alam natin na kahit ano pa man ang gawin ng mga estudyante kapag malaki na sila, kahit sila ay mapunta sa medisina, negosyo, pulitika, o sa sining, sa kaalaman nila kung paano nabubuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br /> <br />
 
 #### A quote you can use in materials
 

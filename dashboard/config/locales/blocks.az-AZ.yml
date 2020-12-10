@@ -270,6 +270,8 @@ az:
         text: ixtiyari rəng
       gamelab_randomColor:
         text: ixtiyari rəng
+      gamelab_repeatForever:
+        text: təkrar et sonsuz
       gamelab_setBackgroundImage:
         options:
           IMG:

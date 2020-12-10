@@ -52,11 +52,43 @@
           "48d6215903dff56238e52e8891380c8f": "niebieski"
         },
         "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "czerwony"
+          "bda9643ac6601722a28f238714274da4": "czerwony",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "Jest całkiem  ",
+          "c30c9d9f51c03a6d42d66cea54206abd": " dzisiaj, nie?",
+          "b92274a5b4513e80f4bd6a8136581578": "To najdziwniejszy odcień ",
+          "f54929e86cc7510907895070d8b05979": "  Ja kiedykolwiek widziałem!"
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
           "498cd895eb5a102c5aeb977e2b928dee": "Dziękujemy!"
+        },
+        "Find the Wizard": {
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "Policz do trzech i zniknę. Sprobuj odgadnąć numer pomiędzy 1 a 400 żeby mnie odnaleźć."
+        },
+        "Choose Your Own Adventure": {
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "Naprawdę powinienem znaleźć właściciela tej różdżki!",
+          "c332bf82ea63d21d1d1b701a07ab9afd": "Dzięki za Twoją pomoc, ale musze już iść",
+          "ba57bb6df12b81e80f79eef5b1ca8fc7": "Hej, znalazłem jakąś różdżke!",
+          "c7323ea29d98d5cad8e0828f3f52ef0c": "O nie! To jest różdżka czarownicy! ",
+          "2cef5d66c57efe3994c85f4e1f312849": "Ah-ha! Znalazłem dwie różdżki! Za twoją pomoc, dam ci drugą!\t",
+          "24a124016e7eec7a8fef5bc228541533": "Nie martw się, na pewno ją znajdę"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "88789b154a4ffbbd84108b0c80f8c464": "Ile masz lat, Brian?",
+          "662722f1029078dad7a3683c64d8b922": "Wow! Jestem",
+          "ae096fbf24d913754b01a1601672bf62": "też!"
+        },
+        "courseF_playlab_variables4b": {
+          "2e1749915d40abd8f43fc2b9dd13649c": "To jest przyjemność, ",
+          "ecb2903fb054395baf72ea1da127be32": "Jesteś bardzo wysoki jak na  ",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " lat, "
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "d065635d5fffcb3739555ae93006081c": "Miło cię poznać, "
+        },
+        "courseF_playlab_variables8c": {
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Gratulacje, ",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", Myślałem o kolorze "
         }
       }
     }

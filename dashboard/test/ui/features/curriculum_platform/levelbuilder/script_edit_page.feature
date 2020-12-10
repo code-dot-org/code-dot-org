@@ -1,4 +1,9 @@
 @no_mobile
+
+# We need "press keys" to type into the React form's fields, but that doesn't work on IE.
+@no_ie
+
+@no_safari
 Feature: Using the Script Edit Page
 
 Scenario: View the script edit page
@@ -29,20 +34,14 @@ Scenario: Save changes to a script
   When I view the temp script legacy edit page
   And element "#script_text" contains text "lesson 'temp-lesson', display_name: 'Temp Lesson'"
   And element "#script_text" contains text "level 'Applab test'"
-  And I scroll the ".btn-primary" element into view
-  And I type "lesson 'temp-lesson', display_name: 'Temp Lesson'\nlevel 'Standalone_Artist_1'\nlevel 'Standalone_Artist_2'\n" into "#script_text"
+  And I scroll the "#script_text" element into view
+  And I press keys "lesson 'temp-lesson', display_name: 'Temp Lesson'\nlevel 'Standalone_Artist_1'\nlevel 'Standalone_Artist_2'\n" for element "#script_text"
+  And I remove the temp script from the cache
   And I click selector ".btn-primary" to load a new page
   And I wait until element "#script-title" is visible
 
   Then element ".uitest-bubble" contains text "1"
-
-  # this check is disabled because the script cache is enabled on the test machine,
-  # which means that during a DTT the rails server may return a cached copy of the
-  # script on the script overview page which only has bubble "1" but not bubble "2".
-  # TODO(dave): re-enable once we have a way to update/invalidate the cache on
-  # script save.
-
-  # And element ".uitest-bubble" contains text "2"
+  And element ".uitest-bubble" contains text "2"
 
   And I delete the temp script and lesson
 

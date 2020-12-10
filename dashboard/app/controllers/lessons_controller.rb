@@ -18,19 +18,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1
   def show
-    @lesson_data = {
-      unit: {
-        displayName: @lesson.script.localized_title,
-        link: @lesson.script.link,
-        lessons: @lesson.script.lessons.map {|lesson| {displayName: lesson.localized_name, link: lesson_path(id: lesson.id)}}
-      },
-      displayName: @lesson.name,
-      overview: @lesson.overview || '',
-      announcements: @lesson.announcements,
-      purpose: @lesson.purpose || '',
-      preparation: @lesson.preparation || '',
-      activities: @lesson.lesson_activities.map(&:summarize_for_lesson_show)
-    }
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
 
   # GET /lessons/1/edit
@@ -51,9 +39,9 @@ class LessonsController < ApplicationController
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
     end
 
-    redirect_to lesson_path(id: @lesson.id)
+    render json: @lesson.summarize_for_lesson_edit
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, text: e.message)
+    render(status: :not_acceptable, plain: e.message)
   end
 
   private
@@ -72,6 +60,7 @@ class LessonsController < ApplicationController
       :name,
       :overview,
       :student_overview,
+      :assessment_opportunities,
       :assessment,
       :unplugged,
       :creative_commons_license,

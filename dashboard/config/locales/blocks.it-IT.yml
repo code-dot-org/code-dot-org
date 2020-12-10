@@ -969,9 +969,13 @@ it:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: a {N} {UNIT}
         options:
           UNIT:
             '"seconds"': secondi
+            '"frames"': frame
+      gamelab_bounceOff:
+        text: "{SPRITE} rimbalza su {TARGET}"
       gamelab_changePropBy:
         text: modifica la {PROPERTY} di {SPRITE} di {VAL}
         options:
@@ -993,6 +997,10 @@ it:
         text: "{SPRITE} cliccato"
       gamelab_comment:
         text: 'commento: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: numero di {SPRITE}
       gamelab_createNewSprite:
         text: "crea un nuovo personaggio\n chiamato {NAME} \n con il costume {COSTUME}
           \n alla posizione {LOCATION}"
@@ -1002,6 +1010,8 @@ it:
         text: trascinabile
       gamelab_edgesDisplace:
         text: i bordi impediscono a {SPRITE} di muoversi
+      gamelab_getAllSprites:
+        text: tutti gli sprite
       gamelab_getProp:
         text: "{PROPERTY} {SPRITE}"
         options:
@@ -1019,12 +1029,21 @@ it:
             '"this"': questo
             '"other"': altro
       gamelab_getTime:
+        text: tempo in {UNIT}
         options:
           UNIT:
             '"seconds"': secondi
+            '"frames"': frame
       gamelab_hideTitleScreen:
         text: nascondi schermata introduttiva
+      gamelab_ifVarEquals:
+        text: |-
+          se {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: Il costume di {SPRITE} è {COSTUME}
       gamelab_isKeyPressed:
+        text: "{KEY} è premuto"
         options:
           KEY:
             '"up"': in alto
@@ -1060,6 +1079,8 @@ it:
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} sta toccando i bordi"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} sta toccando {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} salta {LOCATION}"
       gamelab_keyPressed:
@@ -1103,6 +1124,7 @@ it:
       gamelab_locationAt:
         text: 'posizione x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} pixel {DIRECTION} di {LOCATION}"
         options:
           DIRECTION:
             '"North"': Nord
@@ -1117,6 +1139,8 @@ it:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
+      gamelab_makeNumSprites:
+        text: crea {NUM} nuovi sprite {ANIMATION_NAME}
       gamelab_mirrorSprite:
         text: Orienta {SPRITE} verso {DIRECTION}
         options:
@@ -1125,6 +1149,8 @@ it:
             '"left"': a sinistra
       gamelab_mouseLocation:
         text: posizione del mouse
+      gamelab_moveBackward:
+        text: sposta {SPRITE} {DISTANCE} pixel all'indietro
       gamelab_moveForward:
         text: sposta {SPRITE} di {DISTANCE} pixel in avanti
       gamelab_moveInDirection:
@@ -1139,6 +1165,8 @@ it:
         text: sposta {SPRITE} distanza {DISTANCE} verso {TARGET}
       gamelab_objectSpritePointer:
         text: "{SPRITE} cliccato"
+      gamelab_patrollingUpDown:
+        text: pattugliando su e giù
       gamelab_playSound:
         text: riproduci il suono {SOUND}
       gamelab_pointInDirection:
@@ -1163,6 +1191,8 @@ it:
         text: il personaggio {SPRITE} interrompe {BEHAVIOR}
       gamelab_removeTint:
         text: togli il colore da {THIS}
+      gamelab_repeatForever:
+        text: ripeti per sempre
       gamelab_setAnimation:
         text: "{THIS} usa il costume {ANIMATION}"
       gamelab_setBackground:
@@ -1183,6 +1213,12 @@ it:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sottomarino
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
             undefined: nessuno
+      gamelab_setBackgroundImageAs:
+        text: imposta lo sfondo {IMG}
+      gamelab_setPrompt:
+        text: "{QUESTION} rapida dell'utente per la variabile {VAR}"
+      gamelab_setPromptWithChoices:
+        text: "{QUESTION} rapida dell'utente per la variabile {VAR} con scelte {A}{B}{C}"
       gamelab_setProp:
         text: imposta la {PROPERTY} di {SPRITE} a {VAL}
         options:
@@ -1218,12 +1254,16 @@ it:
             '"while"': mentre
       gamelab_subjectSpritePointer:
         text: "{SPRITE} cliccato"
+      gamelab_tumbling:
+        text: ruzzolando
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} gradi"
         options:
           DIRECTION:
             '"right"': a destra
             '"left"': a sinistra
+      gamelab_updateTitleWithColor:
+        text: mostra schermata del titolo {BREAK} titolo {TITLE} colore {COLOR}
       gamelab_whenDownArrow:
         text: quando viene premuta la freccia in giù
       gamelab_whenKey:
@@ -1270,12 +1310,27 @@ it:
         text: mentre {SPRITE1} sta toccando {SPRITE2}
       gamelab_whileUpArrow:
         text: mentre è premuta la freccia in su
+      gamelab_withPercentChance:
+        text: |-
+          se {NUM}% possibilità
+          {STATEMENT}
       gamelab_xLocationOf:
         text: coordinata x di {SPRITE}
       gamelab_yLocationOf:
         text: coordinata y di {SPRITE}
       Mikelab_addBehaviorSimple:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'aggiungi dati addestramento: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": oggetto
+            "{x: 200, y: 100}": pesce
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": pesce
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": non pesce
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mia-etichetta
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": non la mia-etichetta
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1299,6 +1354,8 @@ it:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
       Mikelab_getAnim:
         text: "{SPRITE} [COSTUME][1]"
+      Mikelab_getNext:
+        text: ottieni prossimo oggetto
       Mikelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1410,6 +1467,12 @@ it:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} sta eseguendo {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: rimuovi {TRASH}
+        options:
+          TRASH:
+            object: oggetto
+            fish: pesce
       Mikelab_ifDanceIs:
         text: |-
           se {SPRITE} sta eseguendo la mossa {DANCE}
@@ -1428,6 +1491,28 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
+      Mikelab_ifLabel:
+        text: |-
+          se {DANCE}
+          fa {DO1} altrimenti {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pesce
+            MOVES.Clown: mia-etichetta
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          se riconosce oggetto come {DANCE}
+          fa {DO1} altrimenti {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pesce
+            MOVES.Clown: mia-etichetta
+      Mikelab_ifRecognizeLabelOnly:
+        text: se riconosce oggetto come {DANCE} fa {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: pesce
+            MOVES.Clown: non la mia-etichetta
       Mikelab_isAnim:
         text: "{SPRITE} {COSTUME}"
       Mikelab_locationAt:
@@ -1440,6 +1525,10 @@ it:
         text: il personaggio {SPRITE} interrompe {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: ripeti per sempre
+      Mikelab_sendBad:
+        text: sposta oggetto a sinistra
+      Mikelab_sendGood:
+        text: sposta oggetto a destra
       Mikelab_setBG:
         options:
           BG:
@@ -1498,6 +1587,12 @@ it:
             '"d"': D
       Mikelab_whenMouseClicked:
         text: quando si clicca con il mouse
+      Mikelab_whenYesNoClicked:
+        text: quando {KEY} è cliccato
+        options:
+          KEY:
+            '"yes"': sì
+            '"no"': 'no'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1546,7 +1641,11 @@ it:
         text: personaggio aalab {SPRITE} inizia {BEHAVIOR} per {SECONDS} secondi
       aalab_addBehaviorUntilBoolean:
         text: il personaggio {SPRITE} inizia {BEHAVIOR} fino a che {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: nuovo sprite denominato{SPRITE_NAME} con costume{ANIMATION_NAME} alla
+          posizione {LOCATION}
       aalab_goToScene:
+        text: vai alla scena {SCENE}
         options:
           SCENE:
             '1': '1'
@@ -1563,15 +1662,25 @@ it:
       aalab_prompt:
         text: chiedi domanda {MESSAGE}
       aalab_scene:
+        text: scena {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_setupStory:
+        text: configura storia
       aalab_starwars_playSound:
+        text: riproduci suono{OPTION}
         options:
           OPTION:
             '"random"': a caso
+            '"R2-D2 random"': R2-D2 casuale
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: disegna in binario {BIN}
       binary_drawBinScreen:
@@ -1666,7 +1775,7 @@ it:
             '"stoneBricks"': mattoni di pietra
             '"mossyStoneBricks"': mattoni di pietra muschiosi
             '"crackedStoneBricks"': mattoni di pietra lesionati
-            '"decorativeStoneBricks"': mattoni di pietra cesellati
+            '"chiseledStoneBricks"': mattoni di pietra decorativi
             '"blueCoralBlock"': blocco di corallo blu
             '"pinkCoralBlock"': blocco di corallo rosa
             '"magentaCoralBlock"': blocco di corallo magenta

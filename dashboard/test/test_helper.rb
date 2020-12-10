@@ -303,9 +303,7 @@ class ActiveSupport::TestCase
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
       'no-cache',
-      'no-store',
-      'must-revalidate',
-      'max-age=0'
+      'no-store'
     ]
     assert_cache_control_match expected_directives, cache_control_header
   end
@@ -462,6 +460,7 @@ class ActionController::TestCase
 
     test name do
       # params can be a hash, or a proc that returns a hash at runtime
+      refute_nil params, "params in controller tests cannot be nil"
       params = instance_exec(&params) if params.is_a? Proc
 
       if user

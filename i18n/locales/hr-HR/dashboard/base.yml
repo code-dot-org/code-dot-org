@@ -101,6 +101,10 @@ hr:
     valid_password: "Ispravna lozinka!"
     invalid_password: "Lozinka mora biti duga najmanje 6 znakova"
     mismatch_password: "Dvije lozinke koje ste unijeli ne podudaraju se"
+    agree_us_data_transfer_student: '**Pristajem na to da Code.org može prenositi podatke (uključujući osobne podatke) prikupljene mojim korištenjem ove stranice u Sjedinjene Države** u svrhu hostinga i obrade takvih podataka.'
+    agree_us_data_transfer_teacher: '**Pristajem na to da Code.org može prenositi podatke (uključujući osobne podatke) prikupljene mojim korištenjem (i korištenjem mojih učenika) ove stranice u Sjedinjene Države** u svrhu hostinga i obrade takvih podataka.'
+    data_collection_us: "Razumijem da je Code.org neprofitna internetska stranica sa sjedištem u SAD-u i da se zakoni koji uređuju prikupljanje podataka u SAD-u mogu razlikovati od zakona u mojoj zemlji."
+    visit_privacy: 'Posjetite Code.orgova [Pravila privatnosti](%{privacy_url}) da biste saznali više.'
     additional_information: "Trebamo dodatne informacije kako bi nastavili vašu prijavu."
     user_type_label: "Vrsta računa"
     user_type_teacher: "Učitelj"
@@ -548,6 +552,4 @@ hr:
         opt_in_no: 'Ne'
   cookie_banner:
     accept: 'Slažem se'
-  gdpr_dialog:
-    yes: 'Da'
   copy: 'Kopiraj'

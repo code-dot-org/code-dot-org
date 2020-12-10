@@ -154,8 +154,10 @@ pt:
     invalid_password: "A palavra-passe tem de ter, pelo menos, 6 caracteres"
     mismatch_password: "As duas palavras-passe que digitaste não correspondem"
     student_consent: "Eu confirmo que tenho autorização dos meus pais ou do encarregado de educação para usar os serviços da Code.org."
-    agree_us_website: "Eu concordo em usar um sítio web situado nos Estados Unidos."
-    my_data_to_us: "Os dados gerados do meu uso deste site poderão ser enviados e armazenados ou processados nos Estados Unidos."
+    agree_us_data_transfer_student: '**Eu aceito que a Code.org pode transferir dados (incluindo dados pessoais) da utilização que faço deste site para os Estados Unidos** com o objetivo de hospedar e processar tais dados.'
+    agree_us_data_transfer_teacher: '**Eu aceito que a Code.org pode transferir dados (incluindo dados pessoais) da utilização que faço deste site (incluindo o meu uso como estudante) para os Estados Unidos** com o objetivo de hospedar e processar tais dados.'
+    data_collection_us: "Compreendo que o Code.org é um site sem fins lucrativos com sede nos EUA e que as leis que regulam a recolha de dados nos EUA podem diferir da legislação no meu país."
+    visit_privacy: 'Consulta a [Política de Privacidade](%{privacy_url}) do Code.org para saberes mais.'
     student_terms_markdown: "Os endereços de email não são armazenados num formulário que nos permita contactar os estudantes. Os estudantes nunca receberão emails da Code.org, exceto para a recuperação da palavra-passe. Vê a nossa [política de privacidade] (http://code.org/privacy) para mais informações."
     additional_information: "Precisamos de mais informações para continuarmos o processo de criação da conta."
     user_type_button: "Atualizar o tipo de conta"
@@ -846,8 +848,5 @@ pt:
         opt_in_no: 'Não'
   cookie_banner:
     accept: 'Concordar'
-  gdpr_dialog:
-    message: 'Os dados gerados do meu uso deste site poderão ser enviados e armazenados ou processados nos Estados Unidos.'
-    yes: 'Sim'
   page_not_found_description: "A página que estavas a procurar não existe neste endereço. Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página inicial."
   copy: 'Copiar'

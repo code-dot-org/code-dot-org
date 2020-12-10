@@ -16,6 +16,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
 
 const styles = {
   checkbox: {
@@ -63,7 +64,7 @@ styles.targetLessonGroupCard = {
 
 class LessonGroupCard extends Component {
   static propTypes = {
-    lessonGroup: lessonGroupShape,
+    lessonGroup: lessonGroupShape.isRequired,
     lessonGroupsCount: PropTypes.number.isRequired,
     lessonGroupMetrics: PropTypes.object,
     setTargetLessonGroup: PropTypes.func,
@@ -86,6 +87,7 @@ class LessonGroupCard extends Component {
   metrics = {};
 
   state = {
+    lessonPosToRemove: null,
     currentPositions: [],
     draggedLessonPos: null,
     dragHeight: null,
@@ -208,7 +210,11 @@ class LessonGroupCard extends Component {
   };
 
   handleRemoveLesson = lessonPosition => {
-    this.props.removeLesson(this.props.lessonGroup.position, lessonPosition);
+    this.setState({lessonPosToRemove: lessonPosition});
+  };
+
+  handleCloseRemoveLesson = () => {
+    this.setState({lessonPosToRemove: null});
   };
 
   generateLessonKey = () => {
@@ -343,6 +349,19 @@ class LessonGroupCard extends Component {
             Lesson
           </button>
         </div>
+        {/* This dialog lives outside LessonToken because moving it inside can
+           interfere with drag and drop or fail to show the modal backdrop. */}
+        <RemoveLessonDialog
+          lessonGroupPosition={this.props.lessonGroup.position}
+          lessonName={
+            this.state.lessonPosToRemove
+              ? this.props.lessonGroup.lessons[this.state.lessonPosToRemove - 1]
+                  .name
+              : null
+          }
+          lessonPosToRemove={this.state.lessonPosToRemove}
+          handleClose={this.handleCloseRemoveLesson}
+        />
       </div>
     );
   }

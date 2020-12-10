@@ -154,8 +154,10 @@ zh-TW:
     invalid_password: 密碼必須要 6 個字元以上
     mismatch_password: 你輸入的兩次密碼不一致
     student_consent: '我確定我的監護人已允許我使用 Code.org 提供的服務。 '
-    agree_us_website: 我同意使用位於美國境內的網站。
-    my_data_to_us: 我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。
+    agree_us_data_transfer_student: "**我同意Code.org可能將我使用本網站的相關資料（包括個人資料）傳輸到美國**，用於託管和處理此等資料。"
+    agree_us_data_transfer_teacher: "**我同意Code.org可能將我使用（以及我的學生使用）本網站的相關資料（包括個人資料）傳輸到美國**，用於託管和處理此等資料。"
+    data_collection_us: 我理解Code.org是一家總部位於美國的非營利性網站，美國有關資料收集的法律可能與我所在國家的法律不同。
+    visit_privacy: 訪問Code.org的[隱私政策]（%{privacy_url}）瞭解更多資訊。
     student_terms_markdown: 電子信箱的儲存形式並不允許我們聯繫學生。除了密碼恢復請求的通知信，學生不會收到來自 Code.org 的信件。詳情請參閱我們的[隱私政策](http://code.org/privacy)。
     additional_information: 我們還需要一些其他資訊來完成你的註冊。
     user_type_button: 更新帳戶類型
@@ -1103,13 +1105,6 @@ zh-TW:
     message: 透過繼續瀏覽這個網站或點擊「我同意」按鈕，表示您同意在您的裝置上儲存 cookie。
     more_information: 檢視 Code.org 的隱私政策。
     accept: 我同意
-  gdpr_dialog:
-    heading: 您是否同意使用位於美國境內的網站？
-    message: 您在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。
-    link_intro: 若要進一步瞭解，請參閱
-    privacy_policy: 隱私權政策
-    logout: 登出
-    true: 是
   page_not_found_title: 找不到頁面
   page_not_found_header: " 404：找不到頁面"
   page_not_found_description: 你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。

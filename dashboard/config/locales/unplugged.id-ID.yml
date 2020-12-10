@@ -215,7 +215,7 @@ id:
           kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan
           struktur tambahan yang dibangun langsung di dalam.
       SongwritingWithParameters:
-        title: Parameter penulis lagu
+        title: Menulis Lagu Dengan Parameter
         desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah
           fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang
           dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran
@@ -371,7 +371,7 @@ id:
           kita sehari-hari. Sebagai bagian dari itu, siswa akan mengidentifikasi dan
           menuliskan algoritma untuk game balapan dadu.
       courseE_unplugged_songwritingParameters:
-        title: Penulisan lagu dengan Parameter
+        title: Penulisan Lagu dengan Parameter
         desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang
           melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh
           fungsi).
@@ -406,7 +406,7 @@ id:
           kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan
           struktur tambahan yang dibangun langsung di dalam.
       courseF_unplugged_songwritingParameters:
-        title: Parameter penulis lagu
+        title: Menulis Lagu Dengan Parameter
         desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah
           fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang
           dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran

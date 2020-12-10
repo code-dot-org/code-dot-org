@@ -24,13 +24,13 @@ Kod Saatı proqramlaşdırma haqqında mifləri dağıdaraq, hər kəsin onun ə
 
 #### Why is your school doing an Hour of Code?
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Hamımız şagirdlərin günümüzün texnologiya ilə dolu dünyasnda necə baş çıxartmağı öyrənməyinin vacib olduğunu bildiyimiz halda, bir çox müəllimlər informatikanın tədrisində təcrübəli deyillər və haradan başlayacaqlarını bilmirlər. This event is a chance for all of us to see what computer science is about.
 
 We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
 
 #### Niyə bu vacibdir?
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 55 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 53 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
 
 #### A quote you can use in materials
 

@@ -1162,6 +1162,8 @@ sk:
         text: postava {SPRITE} zastav {BEHAVIOR}
       gamelab_removeTint:
         text: odstráň farbu z {THIS}
+      gamelab_repeatForever:
+        text: opakuj donekonečna
       gamelab_setAnimation:
         text: zmeň kostým {THIS} na {ANIMATION}
       gamelab_setBackground:
@@ -1182,6 +1184,8 @@ sk:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodou
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: žiadne
+      gamelab_setBackgroundImageAs:
+        text: nastav pozadie na {IMG}
       gamelab_setProp:
         text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1719,7 +1723,6 @@ sk:
             '"stoneBricks"': kamenné tehly
             '"mossyStoneBricks"': machové kamenné tehly
             '"crackedStoneBricks"': prasknuté kamenné tehly
-            '"decorativeStoneBricks"': dekoratívne kamenné tehly
             '"blueCoralBlock"': modrý koralový blok
             '"pinkCoralBlock"': ružový koralový blok
             '"magentaCoralBlock"': fialový koralový blok

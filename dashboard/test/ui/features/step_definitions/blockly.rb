@@ -1,14 +1,16 @@
 Given(/^block "([^"]*)" is at a ((?:blockly )?)location "([^"]*)"$/) do |block, is_blockly, identifier|
+  id_selector = get_id_selector
   @locations ||= {}
   block_id = get_block_id(block)
-  @block = @browser.find_element(:css, "g[block-id='#{block_id}']")
+  @block = @browser.find_element(:css, "g[#{id_selector}='#{block_id}']")
   x = is_blockly ? get_block_workspace_left(block_id) : get_block_absolute_left(block_id)
   y = is_blockly ? get_block_workspace_top(block_id) : get_block_absolute_top(block_id)
   @locations[identifier] = BlocklyHelpers::Point.new(x, y)
 end
 
 When(/^I click block "([^"]*)"$/) do |block|
-  @browser.execute_script("$(\"[block-id='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
+  id_selector = get_id_selector
+  @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
 # Note: this is an offset relative to the current position of the block
@@ -17,7 +19,8 @@ When /^I drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |block_id, dx, d
 end
 
 When /^I begin to drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |from, dx, dy|
-  @browser.execute_script("$(\"[block-id='#{get_block_id(from)}']\").simulate( 'drag', {skipDrop: true, handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
+  id_selector = get_id_selector
+  @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(from)}']\").simulate( 'drag', {skipDrop: true, handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
 end
 
 When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
@@ -36,10 +39,11 @@ When /^I drag block "([^"]*)" to block "([^"]*)" plus offset (\d+), (\d+)$/ do |
 end
 
 When /^I drag block "([^"]*)" above block "([^"]*)"$/ do |from, to|
+  id_selector = get_id_selector
   from_id = get_block_id(from)
   to_id = get_block_id(to)
-  height = @browser.execute_script("return $(\"[block-id='#{from_id}']\")[0].getBoundingClientRect().height;") - 10
-  destination_has_parent = @browser.execute_script("return $(\"[block-id='#{to_id}']\").parent().attr('block-id') !== undefined;")
+  height = @browser.execute_script("return $(\"[#{id_selector}='#{from_id}']\")[0].getBoundingClientRect().height;") - 10
+  destination_has_parent = @browser.execute_script("return $(\"[#{id_selector}='#{to_id}']\").parent().attr('#{id_selector}') !== undefined;")
   code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height)
   @browser.execute_script code
 end
@@ -51,8 +55,8 @@ end
 
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
   point = get_block_coordinates(get_block_id(block))
-  expect(point.x).to be_within(2).of(x.to_i)
-  expect(point.y).to be_within(2).of(y.to_i)
+  expect(point.x).to be_within(3).of(x.to_i)
+  expect(point.y).to be_within(3).of(y.to_i)
 end
 
 Then /^block "([^"]*)" is((?:n't| not)?) at ((?:blockly )?)location "([^"]*)"$/ do |block, negation, is_blockly, location_identifier|
@@ -79,6 +83,7 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
+  id_selector = get_id_selector
   block_id = get_block_id(block)
 
   # Check block existence, blockly-way
@@ -86,10 +91,10 @@ Then /^block "([^"]*)" is visible in the workspace$/ do |block|
 
   # Check block position is within visible blockspace
   # Get block dimensions
-  block_left = @browser.execute_script("return $(\"[block-id='#{block_id}']\")[0].getBoundingClientRect().left")
-  block_right = @browser.execute_script("return $(\"[block-id='#{block_id}']\")[0].getBoundingClientRect().right")
-  block_top = @browser.execute_script("return $(\"[block-id='#{block_id}']\")[0].getBoundingClientRect().top")
-  block_bottom = @browser.execute_script("return $(\"[block-id='#{block_id}']\")[0].getBoundingClientRect().bottom")
+  block_left = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().left")
+  block_right = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().right")
+  block_top = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().top")
+  block_bottom = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().bottom")
 
   # Get blockspace dimensions
   # blockspaceRect includes the toolbox on the left, but not the headers on the top.
@@ -108,18 +113,20 @@ Then /^block "([^"]*)" is visible in the workspace$/ do |block|
 end
 
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
-  @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
+  id_selector = get_id_selector
+  @child_item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(child)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   # check for block id without relying on selenium element equality.
-  actual_parent_id = @actual_parent_item.attribute('block-id')
+  actual_parent_id = @actual_parent_item.attribute(id_selector)
   expect(actual_parent_id).to eq(get_block_id(parent))
 end
 
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
-  @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
+  id_selector = get_id_selector
+  @child_item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(child)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   # check for block id without relying on selenium element equality.
-  actual_parent_id = @actual_parent_item.attribute('block-id')
+  actual_parent_id = @actual_parent_item.attribute(id_selector)
   expect(actual_parent_id).not_to eq(get_block_id(parent))
 end
 
@@ -163,12 +170,13 @@ And /^I've initialized the workspace with a studio say block saying "([^"]*)"$/ 
 end
 
 Then(/^block "([^"]*)" is in front of block "([^"]*)"$/) do |block_front, block_back|
+  id_selector = get_id_selector
   block_front_id = get_block_id(block_front)
   block_back_id = get_block_id(block_back)
-  blocks_have_same_parent = @browser.execute_script("return $(\"[block-id='#{block_front_id}']\").parent()[0] === $(\"[block-id='#{block_back_id}']\").parent()[0]")
+  blocks_have_same_parent = @browser.execute_script("return $(\"[#{id_selector}='#{block_front_id}']\").parent()[0] === $(\"[#{id_selector}='#{block_back_id}']\").parent()[0]")
   raise('Cannot evaluate blocks with different parents') unless blocks_have_same_parent
-  block_front_index = @browser.execute_script("return $(\"[block-id='#{block_front_id}']\").index()")
-  block_back_index = @browser.execute_script("return $(\"[block-id='#{block_back_id}']\").index()")
+  block_front_index = @browser.execute_script("return $(\"[#{id_selector}='#{block_front_id}']\").index()")
+  block_back_index = @browser.execute_script("return $(\"[#{id_selector}='#{block_back_id}']\").index()")
   expect(block_front_index).to be > block_back_index
 end
 
@@ -189,27 +197,31 @@ Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
 end
 
 Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
-  item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
+  id_selector = get_id_selector
+  item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
   expect(classes.include?(class_name)).to eq(true)
 end
 
 When /^I wait until block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
+  id_selector = get_id_selector
   wait_until do
-    item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
+    item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(block_id)}']")
     classes = item.attribute("class")
     classes.include?(class_name)
   end
 end
 
 Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, class_name|
-  item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
+  id_selector = get_id_selector
+  item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
   expect(classes.include?(class_name)).to eq(false)
 end
 
 Then /^block "([^"]*)" contains text "(.*?)"$/ do |block_id, text|
-  block = @browser.find_element(:css, "[block-id='#{get_block_id(block_id)}']")
+  id_selector = get_id_selector
+  block = @browser.find_element(:css, "[#{id_selector}='#{get_block_id(block_id)}']")
   # Replace non-breaking spaces with normal spaces
   given_text = block.attribute('textContent').tr("\u00A0", ' ')
   expect(given_text).to include(text)

@@ -2609,9 +2609,9 @@ ja-JP:
         - text: スクラットは前に進んで、曲がって、海に落ちてしまう。
           feedback: 不正解、 'くりかえし' の中に'前に すすむ'が入っているので、スクラットは前に3回進みます。
         - text: わかりません
-          feedback: "'くりかえし'の中に '前に すすむ'があるので、スクラットは3回前に進みます。曲がって、さらに前に3回進んでドングリをゲットします。"
+          feedback: "‘くりかえし'の中に '前に すすむ'があるので、スクラットは3回前に進みます。曲がって、さらに前に3回進んでドングリをゲットします。"
         questions:
-        - text: "”実行（じっこう）”ボタンを押したら、どうなりますか？"
+        - text: このコードは新しいブロックを使っています。”実行 (じっこう) ”ボタンを押したら、どうなりますか？
       courseD_project_exemplars_2020_2021:
         content1: Test Markdown Textbook Page
       courseE_multi_bee_functions_predict1:
@@ -3518,3 +3518,7 @@ ja-JP:
         markdown: "# Behaving in the Computer Lab\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nレッスンプランへ行く\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">続行</a>"
+      outbreak_story:
+        content1: 説明
+      outbreak_story2:
+        content1: 説明

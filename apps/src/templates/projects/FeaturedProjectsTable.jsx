@@ -75,7 +75,12 @@ const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
-    <a style={tableLayoutStyles.link} href={projectUrl} target="_blank">
+    <a
+      style={tableLayoutStyles.link}
+      href={projectUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <ImageWithStatus
         src={thumbnailUrl}
         width={THUMBNAIL_SIZE}
@@ -88,7 +93,12 @@ const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
 const nameFormatter = (projectName, {rowData}) => {
   const url = `/projects/${rowData.type}/${rowData.channel}/`;
   return (
-    <a style={tableLayoutStyles.link} href={url} target="_blank">
+    <a
+      style={tableLayoutStyles.link}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {projectName}
     </a>
   );

@@ -26,7 +26,7 @@ var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
-  var generator = blockly.Generator.get('JavaScript');
+  var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
   var gensym = function(name) {

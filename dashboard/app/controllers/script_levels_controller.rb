@@ -154,6 +154,8 @@ class ScriptLevelsController < ApplicationController
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
 
+    @body_classes = @script_level.script.background
+
     present_level
   end
 
@@ -371,7 +373,7 @@ class ScriptLevelsController < ApplicationController
     return if params[:user_id].blank?
 
     if current_user.nil?
-      render text: 'Teacher view is not available for this puzzle', layout: true
+      render html: I18n.t('teacher.student_code_view_diabled'), layout: true
       return
     end
 

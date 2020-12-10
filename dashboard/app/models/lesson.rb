@@ -24,7 +24,7 @@ require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
-class Lesson < ActiveRecord::Base
+class Lesson < ApplicationRecord
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -53,6 +53,7 @@ class Lesson < ActiveRecord::Base
     preparation
     announcements
     visible_after
+    assessment_opportunities
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
@@ -206,7 +207,7 @@ class Lesson < ActiveRecord::Base
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
-  def summarize(include_bonus_levels = false)
+  def summarize(include_bonus_levels = false, for_edit: false)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
@@ -223,7 +224,7 @@ class Lesson < ActiveRecord::Base
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
-        levels: cached_levels.map {|l| l.summarize(false)},
+        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: display_as_unplugged # TODO: Update to use unplugged property
@@ -267,9 +268,10 @@ class Lesson < ActiveRecord::Base
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
   def summarize_for_script_edit
-    summary = summarize.dup
+    summary = summarize(for_edit: true).dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
+    summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
   end
 
@@ -285,9 +287,11 @@ class Lesson < ActiveRecord::Base
   # the client.
   def summarize_for_lesson_edit
     {
+      id: id,
       name: name,
       overview: overview,
       studentOverview: student_overview,
+      assessmentOpportunities: assessment_opportunities,
       assessment: assessment,
       unplugged: unplugged,
       lockable: lockable,
@@ -295,9 +299,40 @@ class Lesson < ActiveRecord::Base
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,
-      activities: lesson_activities.map(&:summarize_for_edit),
-      resources: resources,
-      objectives: objectives.map(&:summarize_for_edit)
+      activities: lesson_activities.map(&:summarize_for_lesson_edit),
+      resources: resources.map(&:summarize_for_lesson_edit),
+      objectives: objectives.map(&:summarize_for_edit),
+      courseVersionId: lesson_group.script.course_version&.id,
+      updatedAt: updated_at
+    }
+  end
+
+  def summarize_for_lesson_show(user)
+    {
+      unit: script.summarize_for_lesson_show,
+      position: relative_position,
+      lockable: lockable,
+      key: key,
+      displayName: localized_name,
+      overview: overview || '',
+      announcements: announcements,
+      purpose: purpose || '',
+      preparation: preparation || '',
+      activities: lesson_activities.map(&:summarize_for_lesson_show),
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      objectives: objectives.map(&:summarize_for_lesson_show),
+      is_teacher: user&.teacher?,
+      assessmentOpportunities: assessment_opportunities
+    }
+  end
+
+  def summarize_for_lesson_dropdown
+    {
+      key: key,
+      displayName: localized_name,
+      link: lesson_path(id: id),
+      position: relative_position,
+      lockable: lockable
     }
   end
 
@@ -528,6 +563,16 @@ class Lesson < ActiveRecord::Base
     end
   end
 
+  def resources_for_lesson_plan(verified_teacher)
+    grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    if verified_teacher && grouped_resources.key?('Verified Teacher')
+      grouped_resources['Teacher'] ||= []
+      grouped_resources['Teacher'] += grouped_resources['Verified Teacher']
+    end
+    grouped_resources.delete('Verified Teacher')
+    grouped_resources
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
@@ -542,7 +587,7 @@ class Lesson < ActiveRecord::Base
 
     lesson_activities.create(
       position: activity['position'],
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
   end
 end

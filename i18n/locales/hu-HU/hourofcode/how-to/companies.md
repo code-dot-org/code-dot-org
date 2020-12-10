@@ -91,7 +91,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 #### Devices:
 
-A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számítógépek kellenek. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számítógépek kellenek. De nincs szükség minden gyereknek számítógépre, sőt a Kódolás Óráját akár számítógép nélkül is lehet csinálni! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
 
 - **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
 - **Don't have enough devices?** Use pair programming. Ha a tanulók összefognak, akkor tudják segíteni egymást és kevésbé támaszkodnak a tanárra. Megláthatják azt, hogy az informatika közösségépítő hatású, és együttműködésre sarkall.

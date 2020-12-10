@@ -111,7 +111,7 @@ de:
         course3:
           title: Kurs 3
           description: Kurs 3 wendet sich an Schüler, die Kurs 2 absolviert haben. Der Stoff des vorangegangenen Kurses wird mit Blick auf flexible Lösungen und komplexere Probleme vertieft. Am Ende des Kurses entwickeln die Schüler interaktive Geschichten und Spiele, an denen sie andere teilhaben lassen können. Empfohlen für Klasse 4-5.
-          description_short: Kurs 3 schließt sich an Kurs 2 an.
+          description_short: Tauchen Sie noch tiefer in die Welt des Programmierens ein, indem Sie Spiele und interaktive Geschichten erstellen. Kurs 3 schließt sich an Kurs 2 an.
           description_audience: 'Alter: 8-18'
           lessons:
             Artist:
@@ -182,14 +182,14 @@ de:
         frozen:
           title: Programmiere mit Anna und Elsa
           description: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten. Du erschaffst Schneeflocken und Muster, läufst Schlittschuh und erstellst ein Winterwunderland, das du dann mit deinen Freunden teilen kannst.
-          description_short: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten.
+          description_short: Lasst uns Code verwenden, um Anna und Elsa bei der Erforschung der Magie und Schönheit von Eis zu begleiten.
           lessons:
             Artist:
               name: Künstler
         course4:
           title: Kurs 4
           description: Kurs 4 richtet sich an Schüler, die Kurs 2 und 3 absolviert haben. Schüler vertiefen die in vorherigen Kursen eingeführten Programmierkenntnisse, um flexible Lösungen für komplexere Probleme zu finden. Am Ende des Kurses erstellen Schüler interaktive Geschichten und Spiele, die sie mit anderen teilen können. Empfohlen für die Klassen 4-8.
-          description_short: Hier werden komplexere Programme mit Konzepten wie z.B. `für`-Schleifen und Funktionen mit Parametern verwendet. Dies ist eine Fortsetzung von Kurs 3.
+          description_short: Baue komplexere Programme indem du Konzepte wie Schleifen und Funktionen mit Parametern verwendest. Dies ist eine Fortsetzung von Kurs 3.
           description_audience: 'Alter: 10-18'
           lessons:
             Artist:
@@ -9910,7 +9910,7 @@ de:
         aquatic:
           title: 'Minecraft: Voyage Aquatic'
           description_audience: '[empty string]'
-          description_short: Nutzen Sie Ihre Kreativität und Ihre Problemlösungsfähigkeiten, um mit den Möglichkeiten von Codes Unterwasserwelten zu erforschen!
+          description_short: Nutze deine Kreativität und deine Problemlösungsfähigkeiten, um mit Code Unterwasserwelten zu bauen und zu erforschen!
           description: Minecraft ist zurück - mit einer brandneuen Aktivität! Setzen Sie Ihre Kreativität und Problemlösungsfähigkeiten ein, um Unterwasserwelten mit Code zu erforschen und zu bauen.
           lessons:
             Aquatic:
@@ -17260,6 +17260,17 @@ de:
           description_audience: '[empty string]'
           description: '[empty string]'
         ml-playground:
+          lessons:
+            AI for Oceans:
+              name: KI für Meere
+            intro:
+              name: Einführung
+            visualizing:
+              name: Datensätze anzeigen
           description_audience: '[empty string]'
         outbreak:
           description_audience: '[empty string]'
+        apps-for-good:
+          description_audience: '[empty string]'
+          description_short: '[empty string]'
+          description: '[empty string]'

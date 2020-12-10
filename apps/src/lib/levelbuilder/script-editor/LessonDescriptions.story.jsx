@@ -56,6 +56,7 @@ export default storybook => {
         <LessonDescriptions
           scriptName="csd2"
           currentDescriptions={currentDescriptions}
+          updateLessonDescriptions={() => console.log('update descriptions')}
         />
       )
     },
@@ -66,6 +67,7 @@ export default storybook => {
           <LessonDescriptions
             scriptName="csd2"
             currentDescriptions={currentDescriptions}
+            updateLessonDescriptions={() => console.log('update descriptions')}
           />
         </ModifyState>
       )
@@ -77,6 +79,7 @@ export default storybook => {
           <LessonDescriptions
             scriptName="csd2"
             currentDescriptions={currentDescriptions}
+            updateLessonDescriptions={() => console.log('update descriptions')}
           />
         </ModifyState>
       )
@@ -95,6 +98,7 @@ export default storybook => {
           <LessonDescriptions
             scriptName="csd2"
             currentDescriptions={currentDescriptions}
+            updateLessonDescriptions={() => console.log('update descriptions')}
           />
         </ModifyState>
       )

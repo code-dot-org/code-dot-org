@@ -156,8 +156,10 @@ es:
     invalid_password: "La Contraseña debe tener al menos 6 caracteres"
     mismatch_password: "Las dos contraseñas  introducidas no coinciden"
     student_consent: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
-    agree_us_website: "Estoy de acuerdo con el uso de un sitio web con sede en los Estados Unidos."
-    my_data_to_us: "Los datos de mi uso de este sitio pueden ser enviados y almacenados o procesados en los Estados Unidos."
+    agree_us_data_transfer_student: '**Acepto que Code.org puede transferir datos (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos.'
+    agree_us_data_transfer_teacher: '**Acepto que Code.org puede transferir datos (incluyendo datos personales) de mi uso (y el uso de mis estudiantes) de este sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos.'
+    data_collection_us: "Entiendo que Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y que las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de mi país."
+    visit_privacy: 'Consulte la [política de privacidad](%{privacy_url}) de Code.org para obtener más información.'
     student_terms_markdown: "Las direcciones de correo electrónico no se almacenan de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten recuperar la contraseña. Consulta nuestra [política de privacidad](http://code.org/privacy) para obtener más información."
     additional_information: "Necesitamos alguna información adicional para continuar con tu registro."
     user_type_button: "Actualizar el tipo de cuenta"
@@ -540,7 +542,7 @@ es:
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados.<br />La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados.<br />El asombroso mundo de Gumball es marca comercial y &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados. Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados. La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados. Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados. El asombroso mundo de Gumball es marca comercial y &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Powered by Amazon Web Services'
+    powered_by_aws: 'Impulsado por Amazon Web Services'
     trademark: '© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de Hora de Code ® son marcas registradas de Code.org.'
     copyright: 'Derechos de autor'
     more: 'Más'
@@ -1060,13 +1062,6 @@ es:
     message: 'Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas que se guarden las cookies en tu computadora o dispositivo.'
     more_information: "Mira la política de privacidad de Code.org."
     accept: 'De acuerdo'
-  gdpr_dialog:
-    heading: '¿Aceptas utilizar un sitio web alojado en los Estados Unidos?'
-    message: 'Los datos de su uso de este sitio pueden ser enviados y almacenados o procesados en los Estados Unidos.'
-    link_intro: 'Para más información, mira nuestra'
-    privacy_policy: 'política de privacidad'
-    logout: 'Cerrar sesión'
-    yes: 'Sí'
   page_not_found_title: "No se encontró la página"
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."

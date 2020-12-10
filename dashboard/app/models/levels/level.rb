@@ -25,7 +25,7 @@
 
 require 'cdo/shared_constants'
 
-class Level < ActiveRecord::Base
+class Level < ApplicationRecord
   include SharedConstants
 
   belongs_to :game
@@ -312,14 +312,8 @@ class Level < ActiveRecord::Base
     hash
   end
 
-  def self.write_custom_levels
-    level_paths = Dir.glob(Rails.root.join('config/scripts/**/*.level'))
-    written_level_paths = Level.custom_levels.map(&:write_custom_level_file)
-    (level_paths - written_level_paths).each {|path| File.delete path}
-  end
-
   def should_write_custom_level_file?
-    changed = changed? || (level_concept_difficulty && level_concept_difficulty.changed?)
+    changed = saved_changes? || (level_concept_difficulty && level_concept_difficulty.saved_changes?)
     changed && write_to_file? && published
   end
 
@@ -401,6 +395,7 @@ class Level < ActiveRecord::Base
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Ailab', # no ideal solution
     'Applab', # freeplay
     'Bounce', # no ideal solution
     'ContractMatch', # dsl defined, covered in dsl
@@ -628,10 +623,11 @@ class Level < ActiveRecord::Base
       owner: user&.name,
       url: "/levels/#{id}/edit",
       icon: icon,
+      key: key,
       kind: unplugged? ? LEVEL_KIND.unplugged : LEVEL_KIND.puzzle,
       title: try(:title),
-      unplugged: display_as_unplugged?,
-      is_concept_level: concept_level?,
+      isUnplugged: display_as_unplugged?,
+      isConceptLevel: concept_level?,
       sublevels: try(:sublevels),
       skin: try(:skin),
       videoKey: video_key,

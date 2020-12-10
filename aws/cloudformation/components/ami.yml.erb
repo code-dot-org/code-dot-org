@@ -122,7 +122,7 @@ frontend_device_name ||= '/dev/sda1'
         MinSuccessfulInstancesPercent: 80
     UpdatePolicy:
       AutoScalingRollingUpdate:
-        MaxBatchSize: 20
+        MaxBatchSize: !Ref AutoscaleRollingBatchSize
         MinInstancesInService: !GetAtt [ASGCount, DesiredCapacity]
         MinSuccessfulInstancesPercent: 80
         PauseTime: <%=frontend_timeout%>
@@ -152,7 +152,7 @@ frontend_device_name ||= '/dev/sda1'
       BlockDeviceMappings:
         - DeviceName: <%=frontend_device_name%>
           Ebs:
-            VolumeSize: <%=frontend_volume_size%>
+            VolumeSize: <%=frontend_volume_size * 2%> # Double volume size to leave room for logs written to disk
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |

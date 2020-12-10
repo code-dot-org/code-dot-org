@@ -23,7 +23,7 @@ describe('The DebugConsole component', () => {
     getStore().dispatch(actions.initialize(sinon.spy()));
     root = mount(
       <Provider store={getStore()}>
-        <DebugConsole />
+        <DebugConsole debugConsoleDisabled={false} />
       </Provider>
     );
   });

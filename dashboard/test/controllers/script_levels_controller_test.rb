@@ -1009,6 +1009,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal last_attempt_data, assigns(:last_attempt)
   end
 
+  test 'renders error message when attempting to view a student\'s work while not signed in' do
+    # Note that this also applies when trying to view a student's work for a
+    # cached page, as we tend to do for high-traffic levels.
+
+    get :show, params: {
+      script_id: @script,
+      stage_position: @script_level.lesson,
+      id: @script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_response :success
+    assert_includes response.body, 'Student code cannot be viewed for this activity.'
+  end
+
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
     sign_in @teacher
 

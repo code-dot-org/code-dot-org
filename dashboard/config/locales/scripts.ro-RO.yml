@@ -6757,6 +6757,13 @@ ro:
           description_audience: "[șir gol]"
           description: "[șir gol]"
         ml-playground:
+          lessons:
+            intro:
+              name: Introducere
           description_audience: "[șir gol]"
         outbreak:
           description_audience: "[șir gol]"
+        apps-for-good:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"

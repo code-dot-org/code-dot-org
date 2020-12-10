@@ -6475,22 +6475,36 @@ es-MX:
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
+            en cada flor y hacer miel en cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
+          correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
+            néctar en cada flor y hacer miel en cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
+            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
+            en cada flor y hacer miel en cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
@@ -7247,6 +7261,25 @@ es-MX:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_project_exemplars_2019:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |+
+          # Ejemplos de proyectos
+
+          Estás a punto de comenzar tu proyecto final. Antes de comenzar, dedica algún tiempo a observar los proyectos de ejemplo.
+
+          ## Laboratorio de sprites
+
+          | Baile de monstruos (Laboratorio de sprites) | Juego de cupcakes (Laboratorio de sprites) |
+          |---|---|
+          | [![Baile de monstruos (Laboratorio de sprites)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Baile de monstruos (Laboratorio de sprites)")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Juego de cupcakes (Laboratorio de sprites)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Juego de cupcakes (Laboratorio de sprites)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | ¡Intenta agregar texto o una puntuación a este juego! | ¡Intenta agregar texto o una puntuación a este juego!|
+
+          ## Artista
+
+          | Patrón (Artista) | Función Flores (Artista) |
+          |---|---|
+          | [![Patrón (Artista)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Patrón (Artista)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Función Flores (Artista)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Función Flores (Artista)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | ¡Seamos creativos con los bucles anidados! | ¡Seamos creativos con las funciones! |
+
       courseE_project_exemplars_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
       courseExpress_EOC_2020:
@@ -7762,12 +7795,40 @@ es-MX:
         teacher_markdown: "* [Barcos de Aluminio - Ejemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)
           - Guía de la actividad ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)
           | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
       csf_be_a_super_digital_citizen:
         content1: descripción aquí
+        markdown: |-
+          # Súper Ciudadano Digital
+
+          ## ¿Cómo podemos ser observadores al ver ciberbulling?
       csf_password_power-up:
         content1: descripción aquí
+        markdown: |-
+          #  Prepara tu Contraseña
+
+          ## Tips para Contraseñas para Recordar
+
+          * Empieza con una **frase** de memoria.
+          * Solo tus **padres** deben de saber tus contraseñas.
+          * Nunca uses una información **privada** en tu contraseña
+          * Crea una contraseña con al menos **8** caracteres.
+          * Usa letras, números, y **símbolos** en tu contraseña.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: descripción aquí
+        markdown: |-
+          # Detén el Maltrato
+
+          ## ¿Qué deberías hacer si alguien es malo contigo en línea?
+
+          * **P**ara y vete.
+          * **A**hora dile a un adulto confiable.
+          * **R**ecuerda sitios seguros primero.
+          * **A**l hacer una pausa, piensa.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
@@ -7853,9 +7914,9 @@ es-MX:
           ## ¿Qué información es buena para obtener en tu huellas digitales?
       csf_safety_in_my_online_neighborhood:
         markdown: |-
-          # Mi Barrio en Línea
+          # Mi Colonia en Línea
 
-          ## ¿Cómo navegas en la Red sin riesgo?
+          ## ¿Cómo vas a lugares en línea de manera segura?
       csd-post-survey-2018-markdown-with-link-to-survey:
         markdown: |+
           # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
@@ -7878,3 +7939,106 @@ es-MX:
 
 
 
+      CSD U1 Test:
+        title: Ordenadores y resolución de problemas post-proyecto prueba.
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Resumen\n\nLa clase trabaja en grupos para diseñar barcos de
+          papel aluminio que puedan cargar tantas monedas como sea posible. Al final
+          de la clase, los grupos reflexionan sobre sus experiencias con la actividad
+          y establecen conexiones con los tipos de resoluciones de problemas que llevarán
+          adelante durante el resto del curso. \n\n\n## Recursos\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: "* [Barcos de Aluminio - Ejemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)
+          - Guía de la actividad ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
+      csd-pre-survey-levelgroup_2019:
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
+      outbreak_story:
+        content1: descripción aquí
+        markdown: |
+          # Brote: codifica tu propia simulación
+
+          ## ¡Bienvenido a Pueblo de monstruos!
+          Pueblo de monstruos solía ser un lugar feliz y saludable. A los monstruos de Pueblo de monstruos les encantaba pasear para visitar a sus amigos.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## Un virus llega a la ciudad
+          Un día, uno de los monstruos empezó a sentirse mal. ¡El monstruo se había contagiado de un **virus**! Un virus es un microbio diminuto que puede enfermarlo. Los otros monstruos no estaban demasiado preocupados. Continuaron visitando a sus amigos.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## El virus se propaga
+          Poco después, dos monstruos más se enfermaron. ¡Era el mismo virus! Parece que contrajeron el virus de su amigo.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## ¡Brote!
+          El virus se propagó lentamente a otros monstruos que estaban cerca. Los monstruos sanos comenzaron a preocuparse de que todos se enfermarían. Los monstruos enfermos comenzaron a preocuparse de que pudieran contagiar el virus a todos los demás.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Cómo detener la propagación
+          Afortunadamente, después de estudiar el virus, los vecinos de Pueblo de monstruos hicieron un descubrimiento importante. Se dieron cuenta de que era menos probable que transmitieran el virus si usaban máscaras sobre la boca. Con máscaras faciales puestas, los monstruos enfermos tenían menos probabilidades de transmitir el virus a los monstruos sanos.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## ¿Qué pasará después?
+
+          Hoy, vas a escribir código para crear y ejecutar tu propia **simulación** del brote de virus en Pueblo de monstruos. Una simulación es un modelo informático de un proceso o sistema. Aprende a codificar y hacer predicciones sobre lo que sucederá con los vecinos de Pueblo de monstruos.
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *¿Qué tan rápido se propagará el virus?*
+
+          * *¿Se enfermarán todos?*
+
+          * *¿Cómo ayudarán las mascarillas faciales?*
+
+
+          Cuando haya terminado, comparte tu simulación con otros. Comparte tu mensaje sobre lo que crees que podemos hacer para ayudar a que otros se mantengan sanos cuando llega un virus.
+      outbreak_story2:
+        content1: descripción aquí
+        markdown: |
+          # Brote: Pensando como un científico
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Las simulaciones son una excelente manera de aprender cosas que pueden ser difíciles de observar en el mundo real. Ayudan a los científicos a resolver problemas y probar nuevas ideas de forma segura y eficiente. Tu simulación es una forma de mostrar cómo podría verse un brote de virus en Pueblo de monstruos.
+
+          ## ¡Reiniciar y reproducir!
+          Incluso cuando escribes el código tú mismo, es imposible saber exactamente qué sucederá cuando presiones Ejecutar. Los monstruos deambulan aleatoriamente, por lo que no sabes si el virus se propagará rápido o lento. Siempre que cambies tu código, asegúrate de ejecutar tu simulación más de una vez. ¡Las cosas no sucederán de la misma manera dos veces!
+
+          ## Cómo recolectar datos
+          Intente escribir tus observaciones mientras ejecutas tu simulación. Puedes contar la cantidad de monstruos que se enferman o usar un temporizador para ver qué tan rápido suceden las cosas. Por ejemplo, ¿cuánto tiempo suelen tardar todos los monstruos en enfermarse si ninguno tiene máscaras?
+
+          ## Cómo hacer predicciones
+          Si comprendes tu modelo, puedes usarlo para hacer predicciones. Incluso puedes cambiar la forma en que se ejecuta tu simulación y adivinar qué sucederá de manera diferente. Por ejemplo:
+          * ¿Qué pasaría si hubiera el doble de monstruos?
+          * ¿Qué pasaría si los monstruos se movieran a la mitad de la velocidad?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## ¿Pueblo de monstruos como el mundo real?
+          Hay un límite en el grado de realismo que puede alcanzar cualquier modelo.
+          * ¿Qué tiene en común la simulación de un brote con los brotes de virus del mundo real?
+          * ¿Cuáles son las diferencias?
+          Cuando termine esta actividad, ¡discute estas preguntas con los docentes o con tu familia!
+
+          ## ¿Qué más podemos modelar?
+          Ya has creado un modelo funcional del brote en Pueblo de monstruos. ¿Cuáles son las cosas que tu simulación no puede hacer o mostrar que te gustaría que pudiera hacer? Presiona continuar para continuar y aprender a modelar aún más:
+          * Incrementar el número de monstruos en la simulación.
+          * Ayudar a los monstruos a recuperarse del virus
+          * ¡Probabilidad, inmunidad, vacunas y más!
+
+          También puedes compartir tu modelo de simulación con otras personas o compartir un mensaje sobre lo que crees que podemos hacer para ayudar a mantener a otros sanos cuando llega un virus.

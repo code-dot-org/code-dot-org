@@ -1154,6 +1154,8 @@ ro:
         text: obiectul {SPRITE} opreşte {BEHAVIOR}
       gamelab_removeTint:
         text: elimină culoarea din {THIS}
+      gamelab_repeatForever:
+        text: repetă pentru totdeauna
       gamelab_setAnimation:
         text: schimbă costumul {THIS} cu {ANIMATION}
       gamelab_setBackground:
@@ -1174,6 +1176,8 @@ ro:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': subacvatic
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': iarna
             undefined: nici unul
+      gamelab_setBackgroundImageAs:
+        text: setează fundalul cu {IMG}
       gamelab_setProp:
         text: setează {SPRITE} {PROPERTY} la {VAL}
         options:
@@ -1699,7 +1703,6 @@ ro:
             '"stoneBricks"': cărămizi de piatră
             '"mossyStoneBricks"': cărămizi de piatră cu muşchi
             '"crackedStoneBricks"': cărămizi de piatra crăpate
-            '"decorativeStoneBricks"': cărămizi decorative
             '"blueCoralBlock"': bloc de coral albastru
             '"pinkCoralBlock"': bloc de coral roz
             '"magentaCoralBlock"': bloc de coral maro

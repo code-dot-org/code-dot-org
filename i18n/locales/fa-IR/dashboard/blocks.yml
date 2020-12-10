@@ -223,6 +223,8 @@ fa:
         text: رنگ تصادفی
       gamelab_randomColor:
         text: رنگ تصادفی
+      gamelab_repeatForever:
+        text: تکرار بی‌پایان
       gamelab_setBackgroundImage:
         options:
           IMG:

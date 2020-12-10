@@ -62,9 +62,7 @@ export default class BlockSvgUnused {
         fill: '#c6cacd',
         rx: 15,
         ry: 15,
-        'clip-path': `url(#frameClip${this.block_.id
-          .replace(/\)/g, '\\)')
-          .replace(/\(/g, '\\(')})`
+        'clip-path': `url(#frameClip${this.block_.id})`
       },
       this.frameGroup_
     );

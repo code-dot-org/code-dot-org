@@ -157,10 +157,6 @@ sq:
     mismatch_password: Dy fjalëkalimet që vendosët nuk përputhen
     student_consent: Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për
       të përdorur shërbimet e Code.org.
-    agree_us_website: Unë pajtohem me përdorimin e një faqe interneti të themeluar
-      në Shtetet e Bashkuara.
-    my_data_to_us: Të dhënat nga përdorimi im i kësaj faqeje mund të dërgohen dhe
-      të ruhen ose përpunohen në Shtetet e Bashkuara.
     additional_information: Kemi nevojë për disa informacione shtesë për të vazhduar
       me rregjistrimin tuaj.
     user_type_button: Përditëso llojin e llogarisë
@@ -901,8 +897,4 @@ sq:
         opt_in_no: Jo
   cookie_banner:
     accept: Pranoj
-  gdpr_dialog:
-    message: Të dhënat nga përdorimi im i kësaj faqeje mund të dërgohen dhe të ruhen
-      ose përpunohen në Shtetet e Bashkuara.
-    true: Po
   copy: Kopjo

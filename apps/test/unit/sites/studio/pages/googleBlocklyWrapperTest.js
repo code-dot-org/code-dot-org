@@ -1,11 +1,13 @@
-/* global Blockly GoogleBlockly */
+/* global Blockly */
+import GoogleBlockly from 'blockly/core';
+import initializeGoogleBlocklyWrapper from '@cdo/apps/sites/studio/pages/googleBlocklyWrapper';
 import {expect} from '../../../../util/reconfiguredChai';
 import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
 
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
   beforeEach(() => {
-    Blockly = GoogleBlockly; // eslint-disable-line no-global-assign
+    Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
   });
   afterEach(() => {
     // reset Blockly for other tests

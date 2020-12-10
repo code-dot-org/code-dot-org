@@ -120,7 +120,10 @@ is:
     need_unlock: "Fékkstu ekki leiðbeiningar um opnun?"
     not_linked: "Því miður er Code.org aðgangur þinn ekki tengur við %{provider}. Þú þarft því að skrá þig inn með því að rita lykilorð hér fyrir neðan."
     use_clever: "Því miður er Code.org aðgangurinn þinn ekki tengdur %{provider}. Skráðu þig inn í gegnum Clever gáttina í staðinn."
+    invalid_provider: "Því miður er ekki hægt að tengja aðgang hjá %{provider} við aðgang hjá Code.org."
+    migration_required: "Því miður getum við ekki tengt eða aftengt aðganga sem eru af gömlu gerðinni. Vinsamlegast uppfærðu aðganginn í nýju gerðina."
     unable_to_connect_provider: "Tókst ekki að tengja Code.org aðgang þinn við aðgang þinn hjá %{provider}. Vinsamlegast reyndu aftur."
+    disconnect_successful: "Þetta tókst! Við höfum aftengt utanaðkomandi aðganginn frá Code.org aðganginum þínum."
     already_in_use: "Aðgangur þinn hjá %{provider} er nú þegar tengdur við annan Code.org aðgang."
     already_linked: "Aðgangur þinn hjá %{provider} er nú þegar tengdur við Code.org aðgang þinn."
     existing_account:
@@ -156,8 +159,10 @@ is:
     invalid_password: "Lykilorð verður að vera að minnsta kosti 6 stafir"
     mismatch_password: "Lykilorðin tvö sem þú slóst inn eru ekki eins"
     student_consent: "Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustur Code.org."
-    agree_us_website: "Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum."
-    my_data_to_us: "Gögn sem verða til með notkun minni á þessum vef kunna að verða send til og geymd eða greind í Bandaríkjunum."
+    agree_us_data_transfer_student: '**Ég samþykki að Code.org flytji gögn (þar með talið persónuupplýsingar) sem til koma vegna notkunar þinnar á vefsvæðinu til Bandaríkjanna** til hýsingar og vinnslu upplýsinganna.'
+    agree_us_data_transfer_teacher: '**Ég samþykki að Code.org flytji gögn (þ. á m. persónulegar upplýsingar) sem til verða vegna notkunar minnar (og nemenda minna) á þessu vefsvæði til Bandaríkjanna**  til hýsingar og úrvinnslu gagnanna.'
+    data_collection_us: "Ég skil að Code.org er bandarískt sjálfseignarvefsvæði og að bandarísk lög um söfnun gagna gætu verið önnur en lög í mínu landi."
+    visit_privacy: 'Lestu [Persónuverndarstefnu](%{privacy_url}) Code.org til að fá nánari upplýsingar.'
     student_terms_markdown: "Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í [persónuverndarstefnu](http://code.org/privacy) okkar."
     additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
     user_type_button: "Uppfæra tegund aðgangs"
@@ -319,6 +324,7 @@ is:
       game_lab_tutorials: "Kennsluefni Leikjasmiðju"
       sprite_lab_documentation: "Upplýsingar um Kvikasmiðju"
       sprite_lab_tutorials: "Kennsluefni Kvikasmiðju"
+      web_lab_documentation: "Upplýsingar um Vefsmiðju"
       educate_overview: "Samantekt"
       educate_elementary: "Grunnskóli"
       educate_middle: "Miðskóli"
@@ -470,6 +476,7 @@ is:
     for_parents_and_guardians: "Fyrir foreldra og forráðamenn"
     link_a_parent_email: "Tengja netfang foreldris/forráðamanns við þennan aðgang til að fá upplýsingar um framvindu og verkefni barnsins"
     parent_guardian_email_label: "Netfang foreldris/forráðamanns"
+    remove_parent_email_label: "Fjarlægja"
     none: "Ekkert"
     only_one_parent_email_supported_warning: "Athugið: við getum aðeins tengt eitt netfang foreldris/forráðamanns við aðgang nemanda."
     encrypted: "dulkóðað"
@@ -543,6 +550,7 @@ is:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Öll réttindi áskilin. Star Wars&#8482;  &copy; %{current_year} Disney og Lucasfilm. Öll réttindi áskilin. Frozen&#8482; &copy; %{current_year} Disney. Öll réttindi áskilin. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Öll réttindi áskilin. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Öll réttindi áskilin. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Öll réttindi áskilin. The Amazing World of Gumball er vörumerki og &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org notar p5.play, sem er undir <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1 leyfinu</a>.'
     powered_by_aws: 'Knúið af Amazon Web Services'
+    google_copyright: '&copy; Google Inc. notað með leyfi. Google Classroom er vörumerki Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour of Code&reg; eru vörumerki Code.org.'
     copyright: 'Höfundarréttur'
     more: 'Meira'
@@ -751,6 +759,8 @@ is:
     open_response_body: "Þökkum viðbrögð þín!"
     correct_title: "Rétt"
     correct_body: "Þetta svar er rétt."
+  lesson_extras:
+    bonus_level: "Bónusborð"
   dialog:
     ok: "Í lagi"
     startover_title: "Ertu viss um að þú viljir byrja aftur?"
@@ -783,6 +793,14 @@ is:
     reminder_desc: 'Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a> og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a> okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.'
     reminder_desc_markdown: Við höfum uppfært [þjónustuskilmála](%{tos_url}) og [persónuverndarstefnu](%{privacy_url}) okkar. Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til að kenna JavaScript kunna að verða óaðgengileg nemendum þínum þangað hinir uppfærðu skilmálar eru samþykktir.
     review_terms: "Skoða uppfærða skilmála"
+  donor_interstitial:
+    title: "Þessi ókeypis námskeið í tölvunarfræði eru studd af..."
+    subtitle: "Við viljum þakka þeim örlátu stuðningsaðilum sem með stuðningi sínum hafa gert góðan árangur Code.org mögulegan. Við erum ákveðin í að Code.org verði áfram ókeypis fyrir skóla og nemendur um allan heim, þökk sé áframhaldandi örlæti [stuðningsaðila okkar](%{donors_url})!"
+    local_supporters: "Staðbundir stuðningsaðilar"
+    global_supporters: "Stuðningsaðilar á heimsvísu"
+    support_codeorg_1: "Hver dollar sem gefinn er Code.org veitir fleiri nemendum tækifæri."
+    support_codeorg_2: "[Gefðu núna](%{donate_url}) til að styðja Code.org."
+    get_started: "Byrjaðu á Code.org"
   school_info_interstitial:
     title: "Við viljum koma tölvunarfræði á framfæri við hvern nemanda - hjálpaðu okkur að fylgjast með árangri okkar!"
     message: "Vinsamlegast skráðu upplýsingar um skóla hér fyrir neðan."
@@ -962,6 +980,8 @@ is:
       school_city: 'Bær skóla'
       school_country: 'Land skóla'
       colombian_school_city: 'Bær skóla'
+      colombian_school_department: 'Deild skóla'
+      colombian_school_municipality: 'Umdæmi skóla'
       colombian_school_name: 'Nafn skóla'
       ages: 'Hvaða aldurshóp(um) kennir þú þetta árið?'
       subjects: 'Hvaða fag/fög kennir þú þetta árið?'
@@ -982,6 +1002,7 @@ is:
       school_country:
         canada: 'Kanada'
         chile: 'Síle'
+        colombia: 'Colombia'
         israel: 'Ísrael'
         malaysia: 'Malasía'
         mexico: 'Mexíkó'
@@ -1031,6 +1052,7 @@ is:
         csf_express: 'Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)'
         csd: 'Uppgötvanir tölvunarfræði'
         csp: 'Grunnhugtök tölvunarfræði'
+        not_applicable: "Á ekki við"
       email_opt_in:
         opt_in_yes: 'Já'
         opt_in_no: 'Nei'
@@ -1039,6 +1061,9 @@ is:
       intro: "Takk fyrir að gefa þér tíma til að fá þjálfun í námsefni Code.org. Markmið okkar er að veita börnum í skólum um allan heim tækifæri til að nema tölvunarfræði og það væri ekki hægt án þín."
       instructions: "Vinsamlegast fylltu út formið hér fyrir neðan til að láta vita að 1) þú hafir sótt þjálfunarsmiðju sem haldin var af einum af alþjóðlegum samstarfsaðilum Code.org og 2) þú samþykkir að deila upplýsingum þínum með alþjóðlegum samstarfsaðila okkar í þínu landi svo þeir geti hjálpað til að styðja þig í vegferð þinni sem tölvunarfræðikennari."
       thanks_markdown: "Takk fyrir þessar upplýsingar! Við hlökkum til að styðja þig í að kynnast námsefni og verkfærum Code.org. Vinsamlegast haltu áfram að deila spurningum þínum og endurgjöf með okkur með því að skrifa til okkar á [support@code.org](%{support_email_url}) eða með innlögnum á [spjallvef kennara](%{teacher_forum_url})!"
+      facilitator_not_listed: "Leiðbeinandi minn er ekki á lista"
+      facilitator_not_applicable: "Á ekki við"
+      organizer_not_listed: "Skipuleggjandi atburðar míns er ekki á lista"
     logged_out:
       heading: 'Takk fyrir áhuga inn á Fagkennsluverkefninu (Professional Learning Program)!'
       body: 'Áður en þú getur byrjað þarftu að skrá þig inn á Code.org aðganginn þinn. Ef þú vilt fá meiri upplýsingar áður en þú sækir um getur fundið þær á <a href="%{url}">Professional Learning Program overview</a>.'
@@ -1052,13 +1077,6 @@ is:
     message: 'Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki" samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.'
     more_information: "Sjá persónuverndarstefnu Code.org."
     accept: 'Sammála'
-  gdpr_dialog:
-    heading: 'Samþykkir þú að nota vef sem er staðsettur í Bandaríkjunum?'
-    message: 'Gögn um notkun þína á þessum vef kunna að verða send til og geymd eða greind í Bandaríkjunum.'
-    link_intro: 'Nánari upplýsingar hér: '
-    privacy_policy: 'persónuverndarstefna'
-    logout: 'Útskráning'
-    yes: 'Já'
   page_not_found_title: "Síða finnst ekki"
   page_not_found_header: '404: Síða finnst ekki'
   page_not_found_description: "Síðan sem þú ert að leita að finnst ekki á þessu veffangi. Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar."
@@ -1077,3 +1095,6 @@ is:
     text: "**Ert þú foreldri eða forráðamaður?** Tengdu netfangið þitt við þennan aðgang til að fá upplýsingar um framvindu og verkefni barnsins þíns!"
     link_your_email: "Tengja netfang"
     not_now: "Ekki núna"
+  behaviors:
+    this_sprite: "þessi vera"
+  unit_prefix: "Eining %{n}"

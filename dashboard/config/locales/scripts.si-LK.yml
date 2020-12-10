@@ -2483,3 +2483,7 @@ si:
           lesson_groups:
             lg_1:
               display_name: අන්තර්ගතය
+        ml-playground:
+          lessons:
+            intro:
+              name: හැදින්වීම

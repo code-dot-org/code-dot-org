@@ -14,7 +14,7 @@
 
 # Join table.
 # Don't add anything to this model, beyond what's needed for serialization and seeding; used for convenience for ActiveRecord Import.
-class LevelsScriptLevel < ActiveRecord::Base
+class LevelsScriptLevel < ApplicationRecord
   belongs_to :script_level
   belongs_to :level
 

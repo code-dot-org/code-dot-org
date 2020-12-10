@@ -663,6 +663,8 @@ pl-PL:
           ## Źródła
 
           * [Przeznaczenie stron internetowych - Poradnik](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Cel Witryn Internetowych - Przykład](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L2 Overview:
         content1: opis tutaj
         markdown: "#Podsumowanie\n\nTa lekcja wprowadza strony internetowe jako środek
@@ -3807,6 +3809,7 @@ pl-PL:
           Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
       csf_be_a_super_digital_citizen:
         content1: opis tutaj
       csf_password_power-up:
@@ -4458,3 +4461,114 @@ pl-PL:
 
       courseF_project_exemplars_2019_2020:
         content1: Strona testowa podręcznika o obniżkach
+      GoingPlacesSafely-unplugged:
+        markdown: |-
+          # Bezpieczne udawanie się do różnych miejsc
+
+          Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Chroń bezpieczeństwo chodząc po Internecie.
+
+          <p align=center>
+      HappyLoops-Unplugged:
+        markdown: |
+          # Wesołe pętle [Happy Loops]
+
+          Na tej lekcji będziesz się uczyć o pętlach!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
+        markdown: |
+          # Wesołe pętle [Happy Loops]
+
+          Na tej lekcji będziesz się uczyć o pętlach!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |-
+          # "Wesołe mapy" [Happy Maps]
+
+          Utwórz algorytm, aby przeprowadzić postać przez labirynt.
+      HappyMaps-Unplugged_2020:
+        markdown: |-
+          # "Wesołe mapy" [Happy Maps]
+
+          Utwórz algorytm, aby przeprowadzić postać przez labirynt.
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# Właściwa aplikacja \n\n* Obecnie każdy korzysta z komputera,
+          w szczególności ze smartfonów. \n* Aplikacje na smartfona pomagają ludziom
+          robić takie rzeczy, jak rozmawiać z przyjaciółmi, słuchać muzyki, robić
+          zakupy lub chodzić po Internecie.\n* Dla programistów, ważne jest zrozumienie
+          potrzeb innych osób i projektowanie aplikacji mając je na uwadze!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# Właściwa aplikacja \n\n* Obecnie każdy korzysta z komputera,
+          w szczególności ze smartfonów. \n* Aplikacje na smartfona pomagają ludziom
+          robić takie rzeczy, jak rozmawiać z przyjaciółmi, słuchać muzyki, robić
+          zakupy lub chodzić po Internecie.\n* Dla programistów, ważne jest zrozumienie
+          potrzeb innych osób i projektowanie aplikacji mając je na uwadze!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)1555611687284.png)"
+      Unit 1 Lesson 1 Overview:
+        markdown: "#Podsumowanie\nKlasa pracuje w grupach, projektując łódki z folii
+          aluminiowej, które pomieszczą jak najwięcej groszówek. Na koniec lekcji
+          grupy zastanowią się, jakie doświadczenia wyniosły z ćwiczenia i powiążą
+          je z problemami, które będą rozwiązywać w dalszej części kursu.  \n\n##
+          Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
+      csd-pre-survey-levelgroup_2019:
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
+      outbreak_story:
+        content1: opis tutaj
+        markdown: |-
+          # Epidemia: zakoduj własną symulację
+
+          ## Witamy w Monster Town!
+          Monster Town było zazwyczaj szczęśliwym i zdrowym miejscem. Potwory z Monster Town uwielbiały wędrować po okolicy, aby odwiedzić swoich przyjaciół.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## Wirus przybywa do miasta
+          Pewnego dnia jeden z potworów poczuł mdłości. Potwór złapał **wirusa**! Wirus to malutki zarazek, który może wywołać chorobę. Inne potwory nie były zbyt zmartwione. Ciągle odwiedzali swoich przyjaciół.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## Wirus się rozprzestrzenia
+          Niedługo potem zachorowały dwa kolejne potwory. To był ten sam wirus! Wygląda na to, że dostali wirusa od swojego przyjaciela.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## Epidema!
+          Wirus powoli rozprzestrzeniał się na inne potwory, które były w pobliżu. Zdrowe potwory zaczęły się martwić, że wszyscy zachorują. Chore potwory zaczęły się martwić, że przekażą wirusa wszystkim innym.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Zatrzymanie rozprzestrzeniania się
+          Na szczęście po zbadaniu wirusa sąsiedzi Monster Town dokonali ważnego odkrycia. Zdali sobie sprawę, że byli mniej skłonni do rozprzestrzeniania wirusa, jeśli nosili maski na ustach. Mając założone maski na twarz, chore potwory rzadziej przenosiły wirusa na zdrowe potwory.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Co się później stanie?
+
+          Dzisiaj masz zamiar napisać kod, aby utworzyć i uruchomić własną **symulację** epidemii wirusa w Monster Town. Symulacja to komputerowy model procesu lub systemu. Naucz się kodować i przewidywać, co stanie się z sąsiadami Monster Town.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * * Jak szybko wirus będzie się rozprzestrzeniał? *
+
+          * * Czy wszyscy zachorują? *
+
+          * * W czym pomogą maski na twarz? *
+
+
+          Kiedy skończysz, udostępnij swoją symulację innym. Podziel się wiadomością o tym, co według Ciebie możemy zrobić, aby pomóc innym zachować zdrowie, gdy wirus pojawi się w mieście.
+      outbreak_story2:
+        content1: opis tutaj
+      CSD U1 Test:
+        title: "\nTest: Komputery i rozwiązywanie problemów "

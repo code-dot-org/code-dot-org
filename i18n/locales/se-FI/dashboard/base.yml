@@ -151,8 +151,6 @@ se:
     invalid_password: "Čoavddasánis fertejit leat unnimusat 6 čállinmearkka"
     mismatch_password: "Dát guokte čoavddasáni maid čállet eaba leat ovttaláganat"
     student_consent: "Mun duođaštan ahte mun lean ožžon lobi váhnemis dahje oapmehasas geavahit Code.org bálvalusaid."
-    agree_us_website: "Mun dohkkehan geavahit interneahtta siiddu mii lea USA vuđđosaš."
-    my_data_to_us: "Dáta maid geavahan dán neahttasiiddus sáhttá sáddejuvvot ja vurkejuvvot dahje meannuduvvot USA:s."
     student_terms_markdown: "Epoastačujuhusat eai vurkejuvvo nu ahte mii sáhttit váldit oktavuođa ohppiiguin. Oahppit eai oaččo goassege epoastaid Code.org:s earet go čoavddasáni máhcaheamis. Geahča min [persovdnasuodjalus njuolggadusat](http://code.org/privacy) main gávnnat eanet dieđuid."
     additional_information: "Mii dárbbahit lassi dieđuid ovdal go sáhttit joatkit ráhkadit dutnje konto."
     user_type_button: "Ođasmahte KontoMálle"
@@ -964,12 +962,6 @@ se:
   cookie_banner:
     message: 'Jus joatkát geavahit min neahttasiiddu dahje deaddilat "Mun dohkkehan," don dohkkehat ahte diehtočoahkut vurkejuvvojit du dihtorii dahje reidui.'
     more_information: "Geahča Code.org Persovdnasuodjaleami."
-  gdpr_dialog:
-    heading: 'Dohkkehat go geavahit neahttasiidu mas lea vuođđu Ámerihkás?'
-    message: 'Data du geavaheamis dán siiddus sáhttá sáddejuvvot ja vurkejuvvot dahje gieđahallot Ámerihkás.'
-    link_intro: 'Detáljaid dihte, geahča min'
-    privacy_policy: 'persovdnasuodjaleapmi'
-    logout: 'Logge olggos'
   maker:
     google_oauth:
       login_with_google: 'Logge sisa Maker App:i Google:in'

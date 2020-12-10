@@ -1101,6 +1101,8 @@ nn:
         text: figur {SPRITE} stopper {BEHAVIOR}
       gamelab_removeTint:
         text: fjern farge fra {THIS}
+      gamelab_repeatForever:
+        text: gjenta for alltid
       gamelab_setBackground:
         text: vel bakgrunnsfarge {COLOR}
       gamelab_setBackgroundImage:
@@ -1518,7 +1520,6 @@ nn:
             '"stoneBricks"': stein
             '"mossyStoneBricks"': stein med mose
             '"crackedStoneBricks"': stein med sprekkar
-            '"decorativeStoneBricks"': pyntestein
             '"blueCoralBlock"': blå korallblokk
             '"pinkCoralBlock"': rosa korallblokk
             '"magentaCoralBlock"': magenta korallblokk

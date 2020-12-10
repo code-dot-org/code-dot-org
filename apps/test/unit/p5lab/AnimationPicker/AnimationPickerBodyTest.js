@@ -6,6 +6,7 @@ import {
   WarningLabel,
   UnconnectedAnimationPickerBody as AnimationPickerBody
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
+import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 
@@ -23,7 +24,11 @@ describe('AnimationPickerBody', function() {
     hideAnimationNames: false,
     navigable: true,
     hideBackgrounds: false,
-    canDraw: true
+    canDraw: true,
+    defaultQuery: {
+      categoryQuery: '',
+      searchQuery: ''
+    }
   };
 
   describe('upload warning', function() {
@@ -83,6 +88,39 @@ describe('AnimationPickerBody', function() {
       expect(wrapper.state('currentPage')).to.equal(0);
       wrapper.instance().handleScroll(mockEvent);
       expect(wrapper.state('currentPage')).to.equal(0);
+    });
+  });
+  describe('handleBackgrounds', () => {
+    it('does not show backgrounds if hideBackgrounds', function() {
+      const body = shallow(
+        <AnimationPickerBody {...defaultProps} hideBackgrounds={true} />
+      );
+      const items = body.find(AnimationPickerListItem);
+      expect(items.length).to.equal(4);
+    });
+
+    it('does shows backgrounds if not hideBackgrounds', function() {
+      const body = shallow(<AnimationPickerBody {...defaultProps} />);
+      const items = body.find(AnimationPickerListItem);
+      expect(items.length).to.equal(5);
+    });
+
+    it('only shows backgrounds if defaultQuery has categoryQuery backgrounds', function() {
+      const body = shallow(
+        <AnimationPickerBody
+          {...defaultProps}
+          canDraw={false}
+          navigable={false}
+        />
+      );
+      body.setProps({
+        defaultQuery: {
+          categoryQuery: 'backgrounds',
+          searchQuery: ''
+        }
+      });
+      const items = body.find(AnimationPickerListItem);
+      expect(items.length).to.equal(1);
     });
   });
 });

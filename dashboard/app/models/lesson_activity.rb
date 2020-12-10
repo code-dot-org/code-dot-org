@@ -2,18 +2,18 @@
 #
 # Table name: lesson_activities
 #
-#  id          :integer          not null, primary key
-#  lesson_id   :integer          not null
-#  seeding_key :string(255)      not null
-#  position    :integer          not null
-#  properties  :text(65535)
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id         :integer          not null, primary key
+#  lesson_id  :integer          not null
+#  key        :string(255)      not null
+#  position   :integer          not null
+#  properties :text(65535)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 # Indexes
 #
-#  index_lesson_activities_on_lesson_id    (lesson_id)
-#  index_lesson_activities_on_seeding_key  (seeding_key) UNIQUE
+#  index_lesson_activities_on_key        (key) UNIQUE
+#  index_lesson_activities_on_lesson_id  (lesson_id)
 #
 
 # A LessonActivity represents a classroom activity within a Lesson
@@ -25,7 +25,7 @@ class LessonActivity < ApplicationRecord
   include SerializedProperties
 
   belongs_to :lesson
-  has_many :activity_sections, dependent: :destroy
+  has_many :activity_sections, -> {order(:position)}, dependent: :destroy
 
   serialized_attrs %w(
     name
@@ -47,9 +47,9 @@ class LessonActivity < ApplicationRecord
     summary
   end
 
-  def summarize_for_edit
+  def summarize_for_lesson_edit
     summary = summarize
-    summary[:activitySections] = activity_sections.map(&:summarize_for_edit)
+    summary[:activitySections] = activity_sections.map(&:summarize_for_lesson_edit)
     summary
   end
 
@@ -79,18 +79,20 @@ class LessonActivity < ApplicationRecord
   private
 
   # Finds the ActivitySection by id, or creates a new one if id is not specified.
+  # Do not try to find the activity section if it was moved here from another
+  # activity. Create a new one,, and let the old activity section be
+  # destroyed when we update the other activity.
   # @param section [Hash] - Hash representing an ActivitySection.
   # @returns [ActivitySection]
   def fetch_activity_section(section)
     if section['id']
-      activity_section = activity_sections.find(section['id'])
+      activity_section = activity_sections.find_by(id: section['id'])
       return activity_section if activity_section
-      raise ActiveRecord::RecordNotFound.new("ActivitySection id #{section['id']} not found in LessonActivity id #{id}")
     end
 
     activity_sections.create(
       position: section['position'],
-      seeding_key: SecureRandom.uuid
+      key: SecureRandom.uuid
     )
   end
 end

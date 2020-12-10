@@ -2153,3 +2153,7 @@ hr:
               name: Uvjeti
             Functions:
               name: Funkcije
+        ml-playground:
+          lessons:
+            intro:
+              name: Uvod

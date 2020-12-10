@@ -183,6 +183,10 @@ az:
           lessons:
             Infinity:
               name: Sonsuzluq
+        K5PD:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
         20-hour:
           title: İnformatikaya sürətləndirilmiş giriş kursu
           description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın
@@ -202,7 +206,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
             Introduction to Computer Science:
@@ -289,16 +293,32 @@ az:
           lessons:
             Puzzles:
               name: Tapmacalar
+        algebraPD:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
         CSPLessonSamples:
           lessons:
             Lesson 14:
               name: Dərs 14
             Lesson 15:
               name: Dərs 15
+        algebraPD3:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
+        algebraPD-NexTech:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
+        algebraPD-iZone:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
         sciencePD2:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         cspunit2:
           lessons:
             The Internet:
@@ -323,6 +343,10 @@ az:
               name: Minecraft
             Studio:
               name: Studiya
+        algebraPD2b:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
         cspfacilitator:
           lessons:
             App Lab:
@@ -337,18 +361,22 @@ az:
               What Is a Computer?
             Wrap-up:
               name: Yekun
+        algebraPD2:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
         sciencePD2b:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         science-PD2:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         sciencePD2b-iZone:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         ECSPD2-iZone:
           lessons:
             0: |-
@@ -382,7 +410,7 @@ az:
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         Special Fun:
           description_audience: 10+ yaş (Kurs 3-dən sonra)
         SpecialSeries:
@@ -407,7 +435,11 @@ az:
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
+        algebraPD1:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
         csp1-2017:
           lessons:
             The Internet:
@@ -415,13 +447,17 @@ az:
         CSDU3-Draft:
           lessons:
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
         CSF_Secret_Sample:
           description_audience: 8+ yaş (Kurs 2-dən sonra)
         ECSPD1:
           lessons:
             Wrap Up:
               name: Yekun
+        algebraFacilitator:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
         cspunit1-support:
           lesson_groups:
             required:
@@ -503,7 +539,7 @@ az:
         csd3-2017:
           lessons:
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
             Variables:
               name: dəyişənlər
             Conditionals:
@@ -521,13 +557,17 @@ az:
             Events:
               name: Hadisələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
             Functions with Parameters:
               name: Parametrli funksiyalar
             Loops:
               name: dövrlər
             Variables:
               name: dəyişənlər
+        algebrapdnext:
+          lessons:
+            Teacher Dashboard:
+              name: Müəllimin idarəetmə paneli
         csp-online-test:
           lesson_groups:
             required:
@@ -601,11 +641,11 @@ az:
         2016_sciencePD-phase2b:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         2016_sciencePD_phase2b:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         csp3-support:
           lesson_groups:
             required:
@@ -625,11 +665,11 @@ az:
         sciencepd4:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         science-pd-ol-pt-5:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         csf2harvey:
           lesson_groups:
             content:
@@ -640,7 +680,7 @@ az:
         sciencepd5:
           lessons:
             Wrap-Up:
-              name: Sarımaq
+              name: Yekun
         csp5-support:
           lesson_groups:
             required:
@@ -690,11 +730,11 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
         csd3-old:
           lessons:
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
         csd2-draft:
           lessons:
             Lists:
@@ -706,7 +746,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
             'null':
               name: boş
         coursef-ramp:
@@ -859,7 +899,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
         csd3-2018:
           lessons:
             Variables:
@@ -867,7 +907,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
         csd2-2018:
           lessons:
             Lists:
@@ -1056,10 +1096,22 @@ az:
           lessons:
             Artist:
               name: Rəssam
+        dance:
+          lessons:
+            Dance Party:
+              name: Rəqs şənliyi
         frozen-2018-test-b:
           lessons:
             Artist:
               name: Rəssam
+        dance--draft:
+          lessons:
+            Dance Party:
+              name: Rəqs şənliyi
+        dance-draft:
+          lessons:
+            Dance Party:
+              name: Rəqs şənliyi
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -1067,7 +1119,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -1079,6 +1131,10 @@ az:
               name: Rəssam
             Internet:
               name: İnternet
+        dance-low:
+          lessons:
+            Dance Party:
+              name: Rəqs şənliyi
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -1096,10 +1152,12 @@ az:
               name: Estafet proqramlaşdırması
             'Unplugged: Binary':
               name: İkilik təsvirlər
+            Dance Party:
+              name: Rəqs şənliyi
         coursee-2019:
           lesson_groups:
             csf_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
           lessons:
             Internet:
               name: İnternet
@@ -1110,7 +1168,7 @@ az:
             csf_conditionals:
               display_name: Şərti ifadələr
             csf_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
             csf_variables:
               display_name: dəyişənlər
           lessons:
@@ -1118,6 +1176,8 @@ az:
               name: Estafet proqramlaşdırması
             Internet:
               name: İnternet
+            Dance Party:
+              name: Rəqs şənliyi
         andrea-test:
           lesson_groups:
             required:
@@ -1169,7 +1229,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
         csd6-2019:
           lessons:
             Functions with Parameters:
@@ -1181,7 +1241,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
             required:
               display_name: Yekun
           lessons:
@@ -1202,7 +1262,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1210,7 +1270,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1218,7 +1278,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
@@ -1232,7 +1292,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1240,7 +1300,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1248,7 +1308,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1256,7 +1316,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -1298,7 +1358,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
         csp3-pilot:
           lesson_groups:
             content:
@@ -1387,6 +1447,10 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+        dance-2019:
+          lessons:
+            Dance Party:
+              name: Rəqs şənliyi
         k5-onlinepd-2019:
           lessons:
             Loops:
@@ -1396,7 +1460,7 @@ az:
             Events:
               name: Hadisələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
             Variables:
               name: dəyişənlər
         csp4-preview:
@@ -1406,7 +1470,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         time4cs-original-unit-1:
           lessons:
             Conditionals:
@@ -1416,7 +1480,7 @@ az:
             csf_conditionals:
               display_name: Şərti ifadələr
             csf_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1450,7 +1514,7 @@ az:
             csp_conditionals:
               display_name: Şərti ifadələr
             csp_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -1468,7 +1532,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
             Text:
               name: mətn
         coursea-2020:
@@ -1511,10 +1575,12 @@ az:
               name: Estafet proqramlaşdırması
             'Unplugged: Binary':
               name: İkilik təsvirlər
+            Dance Party:
+              name: Rəqs şənliyi
         coursee-2020:
           lesson_groups:
             csf_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
         coursef-2020:
           lesson_groups:
             csf_variables:
@@ -1529,15 +1595,22 @@ az:
             csf_conditionals:
               display_name: Şərti ifadələr
             csf_functions:
-              display_name: funksiyalar
+              display_name: Funksiyalar
             csf_variables:
               display_name: dəyişənlər
+          lessons:
+            Dance Party:
+              name: Rəqs şənliyi
         pre-express-2020:
           lesson_groups:
             csf_loops:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+        csp-march-virtual:
+          lessons:
+            Wrap up:
+              name: Yekun
         csp5-virtual:
           lessons:
             Variables:
@@ -1548,7 +1621,7 @@ az:
               display_name: Məzmun
           lessons:
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
         code-break:
           lessons:
             Algorithms:
@@ -1564,7 +1637,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
             Variables:
               name: dəyişənlər
         csd3-virtual:
@@ -1576,7 +1649,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: funksiyalar
+              name: Funksiyalar
           lesson_groups:
             csd3_1:
               display_name: Məzmun
@@ -1612,3 +1685,7 @@ az:
           lesson_groups:
             lg_1:
               display_name: Məzmun
+        ml-playground:
+          lessons:
+            intro:
+              name: Giriş

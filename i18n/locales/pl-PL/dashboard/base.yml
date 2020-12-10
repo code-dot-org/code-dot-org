@@ -159,8 +159,10 @@ pl:
     invalid_password: "Hasło musi zawierać przynajmniej 6 znaków"
     mismatch_password: "Dwa hasła, które podałeś, nie są zgodne"
     student_consent: "Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie Code.org."
-    agree_us_website: "Zgadzam się na korzystanie ze strony, której siedziba znajduje się w Stanach Zjednoczonych."
-    my_data_to_us: "Dane gromadzone podczas korzystania przeze mnie z tej witryny mogą być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych."
+    agree_us_data_transfer_student: '**Zgadzam się, że Code.org może przekazywać dane (w tym dane osobowe) wynikające z mojego korzystania z tej witryny do Stanów Zjednoczonych** w celu hostowania i przetwarzania takich danych.'
+    agree_us_data_transfer_teacher: '**Zgadzam się, że Code.org może przekazywać dane (w tym dane osobowe) wynikające z mojego korzystania (i korzystania moich uczniów) z tej witryny do Stanów Zjednoczonych** w celu hostowania i przetwarzania takich danych.'
+    data_collection_us: "Rozumiem, że Code.org jest witryną non-profit z siedzibą w Stanach Zjednoczonych i że przepisy dotyczące gromadzenia danych w Stanach Zjednoczonych mogą różnić się od przepisów obowiązujących w moim kraju.\n"
+    visit_privacy: "Odwiedź [Politykę prywatności](%{privacy_url}) Code.org, aby dowiedzieć się więcej.\n"
     student_terms_markdown: "Adresy e-mail nie są przechowywane w postaci, która pozwalałaby nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili od Code.org, z wyjątkiem odzyskiwania hasła. Więcej informacji znajduje się w naszej [Polityce prywatności](http://code.org/privacy)."
     additional_information: "Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować."
     user_type_button: "Zaktualizuj typ konta"
@@ -552,6 +554,8 @@ pl:
     art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. The Amazing World of Gumball jest znakiem towarowym &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org używa p5.play, który ma licencję <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Zasilany przez Amazon Web Services'
+    built_on_github: 'Oparty na GitHub firmy Microsoft'
+    google_copyright: '&Kopiuj; Google Inc. wykorzystane za zgodą. Google Classroom to znak towarowy firmy Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour of Code&reg; są znakami handlowymi Code.org.'
     copyright: 'Prawa autorskie'
     more: 'Więcej'
@@ -1075,13 +1079,6 @@ pl:
     message: 'Kontynuując przeglądanie naszej strony lub klikając "Zgadzam się", zgadzasz się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.'
     more_information: "Zapoznaj się z polityką prywatności Code.org."
     accept: 'Zgadzam się'
-  gdpr_dialog:
-    heading: 'Czy zgadzasz się na korzystanie ze strony, której siedziba znajduje się w Stanach Zjednoczonych?'
-    message: 'Dane gromadzone podczas korzystania przez Ciebie z tej witryny mogą być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.'
-    link_intro: 'Aby uzyskać szczegółowe informacje zobacz naszą'
-    privacy_policy: 'politykę prywatności'
-    logout: 'Wyloguj się'
-    yes: 'Tak'
   page_not_found_title: "Strona nie została znaleziona"
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_description: "Strona, której szukasz, nie istnieje pod tym adresem. Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną."

@@ -451,11 +451,30 @@ P5Lab.prototype.init = function(config) {
   // Push project-sourced animation metadata into store. Always use the
   // animations specified by the level definition for embed and contained
   // levels.
-  const initialAnimationList =
-    config.initialAnimationList && !config.embed && !config.hasContainedLevels
-      ? config.initialAnimationList
-      : this.startAnimations;
+  const useConfig =
+    config.initialAnimationList && !config.embed && !config.hasContainedLevels;
+  let initialAnimationList = useConfig
+    ? config.initialAnimationList
+    : this.startAnimations;
 
+  // useConfig does not imply that we have startAnimations because GameLab doesn't have startAnimations.
+  if (useConfig && this.startAnimations) {
+    // We need to make sure we include all of the default animations (in case they have changed since this project was created).
+    let configDictionary = {};
+    initialAnimationList.orderedKeys.forEach(key => {
+      const name = initialAnimationList.propsByKey[key].name;
+      configDictionary[name] = key;
+    });
+    this.startAnimations.orderedKeys.forEach(key => {
+      const name = this.startAnimations.propsByKey[key].name;
+      if (!configDictionary[name]) {
+        initialAnimationList.orderedKeys.push(key);
+        initialAnimationList.propsByKey[key] = this.startAnimations.propsByKey[
+          key
+        ];
+      }
+    });
+  }
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,

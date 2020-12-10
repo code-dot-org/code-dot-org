@@ -2582,3 +2582,16 @@ pt-PT:
           \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nIr para plano da lição\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>"
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          # Visão Geral
+
+          A aula funciona em grupos de modo a conceberem barcos em folha de alumínio que irão suportar o n.º máximo de cêntimos possível. No final da lição, os grupos refletem as suas experiências sobre a atividade e estabelecem ligações aos tipos de solução do problema que realizarão para o resto do curso.
+
+          ## Recursos
+
+          * [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Guia da Atividade (copiar como [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Documento do Google](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      outbreak_story:
+        content1: descrição
+      outbreak_story2:
+        content1: descrição

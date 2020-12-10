@@ -43,7 +43,7 @@ Look online to find reporter contact information. If you can't find it, call the
 
 #### Why is your school doing an Hour of Code?
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Hamımız şagirdlərin günümüzün texnologiya ilə dolu dünyasnda necə baş çıxartmağı öyrənməyinin vacib olduğunu bildiyimiz halda, bir çox müəllimlər informatikanın tədrisində təcrübəli deyillər və haradan başlayacaqlarını bilmirlər. This event is a chance for all of us to see what computer science is about.
 
 We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
 
@@ -65,7 +65,7 @@ That’s why every one of the [X number] students at [SCHOOL NAME] are joining i
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+Qeyri-kommersiya təşkilatı olan "Code.org" və 100-dən çox digər qurum tərəfindən təşkil edilən Kod Saatı bu gün şagirdlərin 21-ci əsrdə uğur qazanmaq üçün zəruri olan bacarıqları öyrənməyə hazır olduqlarına inanan qlobal bir hərəkatdır. Please join us.
 
 Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 

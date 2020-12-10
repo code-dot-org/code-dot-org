@@ -5769,3 +5769,15 @@ ru-RU:
         content1: 'Тестирование страницы учебника по Markdown
 
 '
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          Класс разбивается на группы, чтобы проектировать лодки из алюминиевой фольги, которые должны выдержать как можно больше копеек. В конце урока группы размышляют над своим опытом в этой деятельности и устанавливают связи с типами решения проблем, с которыми он будут сталкиваться до конца курса.
+
+
+          ## Ресурсы
+
+          * [Алюминиевые лодки](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      outbreak_story:
+        content1: описание здесь
+      outbreak_story2:
+        content1: описание здесь

@@ -25,15 +25,15 @@ const styles = {
 
 class AddLevelFilters extends Component {
   static propTypes = {
-    handleSearch: PropTypes.func,
-    handleChangeLevelName: PropTypes.func,
-    handleChangeLevelType: PropTypes.func,
-    handleChangeScript: PropTypes.func,
-    handleChangeOwner: PropTypes.func,
-    ownerId: PropTypes.string,
-    scriptId: PropTypes.string,
-    levelType: PropTypes.string,
-    levelName: PropTypes.string,
+    handleSearch: PropTypes.func.isRequired,
+    handleChangeLevelName: PropTypes.func.isRequired,
+    handleChangeLevelType: PropTypes.func.isRequired,
+    handleChangeScript: PropTypes.func.isRequired,
+    handleChangeOwner: PropTypes.func.isRequired,
+    ownerId: PropTypes.string.isRequired,
+    scriptId: PropTypes.string.isRequired,
+    levelType: PropTypes.string.isRequired,
+    levelName: PropTypes.string.isRequired,
 
     // from redux
     searchOptions: PropTypes.object.isRequired
@@ -56,6 +56,7 @@ class AddLevelFilters extends Component {
         <label style={styles.label}>
           By Name:
           <input
+            className="uitest-add-level-name-input"
             style={styles.input}
             onChange={this.props.handleChangeLevelName}
             value={this.props.levelName}

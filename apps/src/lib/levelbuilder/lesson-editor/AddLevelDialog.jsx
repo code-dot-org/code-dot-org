@@ -14,9 +14,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    width: 1100,
+    width: 970,
     fontFamily: '"Gotham 4r", sans-serif, sans-serif',
-    marginLeft: -600
+    marginLeft: -500
   },
   dialogContent: {
     display: 'flex',
@@ -51,9 +51,9 @@ export default class AddLevelDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    addLevel: PropTypes.func,
-    activityPosition: PropTypes.number,
-    activitySection: activitySectionShape
+    addLevel: PropTypes.func.isRequired,
+    activityPosition: PropTypes.number.isRequired,
+    activitySection: activitySectionShape.isRequired
   };
 
   state = {

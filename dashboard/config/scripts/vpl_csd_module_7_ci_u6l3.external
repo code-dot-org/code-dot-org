@@ -5,7 +5,7 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 #Unit 6 - Lesson 3:  The Circuit Playground
-**Estimated time: 10 minutes**
+**Estimated time: 20 minutes**
 
 
 
@@ -17,15 +17,12 @@ markdown <<MARKDOWN
 ## Investigation Tasks
 
 * Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit6/3/" target="_blank">Lesson 3: The Circuit Playground</a>
+	* Notice the "Warm Up" refers to the Circuit Playground board inspection
+    * Notice the "Activity" refers to connecting to the board and highlights the difference between hardware and software
+    * Watch the video: <a href="https://studio.code.org/s/csd6-2020/stage/3/puzzle/2" target="_blank">How Computers Work: Hardware and Software </a>
 
-**Note**: If you are teaching on-line, consider substituting Unit 6 with Code.org's self-paced Turtle Drawing unit or the self-paced Event Programming in App Lab unit.  The synchronous workshop will provide more information and support for teaching with the Circuit Playground in a virtual setting and the suggested  alternative units.  The purpose of reviewing Lesson 3 here is to help you plan for teaching Unit 6 in the future.
+**Optional**:  Explore <a href="https://studio.code.org/s/csd6-2020/stage/3/puzzle/3" target="_blank"> Levels 3 through 7 </a> where students test their board and begin to program the Circuit Playground.  These levels require a Circuit Playground.
 
-
-
-
-
-
-
-
+<img src="https://images.code.org/f8dc5434a848c18c862d4fe0d77b62ab-image-1604422679971.png" style="display: block; margin-left: auto; margin-right: auto; height:30%; width:30%">
 
 MARKDOWN
