@@ -13,7 +13,7 @@ describe('LessonProgress', () => {
       }
     ],
     stageId: 1,
-    onLessonExtras: false
+    isLessonExtras: false
   };
 
   it('uses progress bubbles', () => {

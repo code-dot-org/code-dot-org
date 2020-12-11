@@ -164,7 +164,7 @@ const initialScriptOverviewProgress = {
 
 // The initial progress passed to the puzzle page
 const initialPuzzlePageProgress = {
-  currentLevelId: '341',
+  currentLevelId: 341,
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
   lessonGroups: [],
@@ -198,7 +198,7 @@ describe('progressReduxTest', () => {
       const action = initProgress(initialPuzzlePageProgress);
       const nextState = reducer(undefined, action);
 
-      assert.equal(nextState.currentLevelId, '341');
+      assert.equal(nextState.currentLevelId, 341);
       assert.equal(nextState.professionalLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
       assert.deepEqual(
@@ -803,7 +803,7 @@ describe('progressReduxTest', () => {
     it('sets isCurrentLevel to true for current level only', () => {
       const initializedState = {
         ...reducer(undefined, initProgress(initialScriptOverviewProgress)),
-        currentLevelId: stageData[0].levels[1].activeId.toString()
+        currentLevelId: stageData[0].levels[1].activeId
       };
 
       const stageId = stageData[0].id;
