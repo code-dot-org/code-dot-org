@@ -88,11 +88,19 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  after_save :set_is_migrated_only_for_new_courses
+
   include SerializedProperties
 
   after_save :generate_plc_objects
 
   SCRIPT_DIRECTORY = 'config/scripts'.freeze
+
+  def set_is_migrated_only_for_new_courses
+    if !!is_migrated && !hidden
+      errors.add(:is_migrated, "Can't be set on a course that is visible")
+    end
+  end
 
   def self.script_directory
     SCRIPT_DIRECTORY
