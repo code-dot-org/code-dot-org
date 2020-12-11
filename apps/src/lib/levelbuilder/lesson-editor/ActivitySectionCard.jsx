@@ -71,6 +71,9 @@ const styles = {
   },
   title: {
     marginRight: 5
+  },
+  titleInput: {
+    width: 275
   }
 };
 
@@ -408,6 +411,7 @@ class ActivitySectionCard extends Component {
           <label>
             <span style={styles.title}>Title:</span>
             <input
+              style={styles.titleInput}
               value={this.props.activitySection.displayName}
               onChange={this.handleChangeDisplayName}
             />
