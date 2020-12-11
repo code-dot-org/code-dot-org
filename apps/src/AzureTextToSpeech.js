@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import i18n from '@cdo/locale';
 import {hashString, findProfanity} from '@cdo/apps/utils';
 import Sounds from '@cdo/apps/Sounds';
 
@@ -7,7 +8,7 @@ import Sounds from '@cdo/apps/Sounds';
  * @param {ArrayBuffer} bytes Sound bytes from Azure Speech Service. For clarity, this should be null if the response contains profaneWords.
  * @param {Object} playbackOptions Configuration options for a playing sound.
  * @param {Array<string>} profaneWords Any profanity in the response. Used to determine whether the response should be cached and played.
- * @param {string} error Any error that occurs while requesting the sound or checking for profanity.
+ * @param {Error} error Any error that occurs while requesting the sound or checking for profanity.
  */
 export class SoundResponse {
   constructor(bytes, playbackOptions, profaneWords = [], error = null) {
@@ -19,6 +20,30 @@ export class SoundResponse {
 
   success = () => {
     return this.bytes && this.profaneWords.length === 0 && !this.error;
+  };
+
+  profanityMessage = () => {
+    if (!this.profaneWords || this.profaneWords.length === 0) {
+      return null;
+    }
+
+    return i18n.textToSpeechProfanity({
+      profanityCount: this.profaneWords.length,
+      profaneWords: this.profaneWords.join(', ')
+    });
+  };
+
+  errorMessage = () => {
+    if (!this.error) {
+      return null;
+    }
+
+    switch (this.error.status) {
+      case 429:
+        return i18n.azureTtsTooManyRequests();
+      default:
+        return i18n.azureTtsDefaultError();
+    }
   };
 }
 
@@ -55,8 +80,7 @@ export default class AzureTextToSpeech {
 
   /**
    *
-   * @param {Promise<SoundResponse>} soundPromise A promise that returns a SoundResponse when resolved.
-   * playback configuration options.
+   * @param {function} soundPromise A thunk that returns a promise, which resolves to a SoundResponse.
    */
   enqueueAndPlay = soundPromise => {
     this.enqueue_(soundPromise);
@@ -64,7 +88,7 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Returns a promise representing a TTS sound that can be enqueued and played. Utilizes a sound cache --
+   * A thunk that returns a promise representing a TTS sound that can be enqueued and played. Utilizes a sound cache --
    * will check for a cache hit to avoid duplicate network requests, and caches network responses for re-use.
    * @param {Object} opts
    * @param {string} opts.text
@@ -73,11 +97,13 @@ export default class AzureTextToSpeech {
    * @param {string} opts.url URL to request sound from.
    * @param {string} opts.ssml SSML in request body.
    * @param {string} opts.token Authentication token from Azure.
-   * @param {function(Array<string>)} opts.onProfanityFound Called if the given text contains profanity.
-   * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
+   * @param {function(string)} opts.onFailure Called with an error message if the sound will not be played.
+   * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse. Example usage:
+   * const soundPromise = createSoundPromise(options);
+   * const soundResponse = await soundPromise();
    */
-  createSoundPromise = opts => {
-    const {text, gender, languageCode, onProfanityFound} = opts;
+  createSoundPromise = opts => () => {
+    const {text, gender, languageCode, onFailure} = opts;
     const cachedSound = this.getCachedSound_(languageCode, gender, text);
     const wrappedSetCachedSound = soundResponse => {
       this.setCachedSound_(languageCode, gender, text, soundResponse);
@@ -90,8 +116,9 @@ export default class AzureTextToSpeech {
 
       return new Promise(resolve => {
         if (profaneWords && profaneWords.length > 0) {
-          onProfanityFound(profaneWords);
-          resolve(wrappedCreateSoundResponse({profaneWords}));
+          const soundResponse = wrappedCreateSoundResponse({profaneWords});
+          onFailure(soundResponse.profanityMessage());
+          resolve(soundResponse);
         } else {
           resolve(wrappedCreateSoundResponse({bytes}));
         }
@@ -103,8 +130,8 @@ export default class AzureTextToSpeech {
       try {
         const profaneWords = await findProfanity(text, languageCode);
         if (profaneWords && profaneWords.length > 0) {
-          onProfanityFound(profaneWords);
           const soundResponse = wrappedCreateSoundResponse({profaneWords});
+          onFailure(soundResponse.profanityMessage());
           wrappedSetCachedSound(soundResponse);
           resolve(soundResponse);
           return;
@@ -119,7 +146,9 @@ export default class AzureTextToSpeech {
         wrappedSetCachedSound(soundResponse);
         resolve(soundResponse);
       } catch (error) {
-        resolve(wrappedCreateSoundResponse({error: error.statusText}));
+        const soundResponse = wrappedCreateSoundResponse({error});
+        onFailure(soundResponse.errorMessage());
+        resolve(soundResponse);
       }
     });
   };
@@ -157,7 +186,7 @@ export default class AzureTextToSpeech {
     }
 
     this.playing = true;
-    let response = await nextSoundPromise;
+    let response = await nextSoundPromise();
     if (response.success()) {
       play(response.bytes.slice(0), response.playbackOptions);
     } else {
@@ -224,8 +253,8 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Add a promise to the end of the queue.
-   * @param {Promise<SoundResponse>} promise A promise that returns a SoundResponse when resolved.
+   * Add to the end of the queue.
+   * @param {function} promise A thunk that returns a promise, which resolves to a SoundResponse.
    * @private
    */
   enqueue_ = promise => {
@@ -233,8 +262,8 @@ export default class AzureTextToSpeech {
   };
 
   /**
-   * Get the next promise in the queue.
-   * @returns {Promise<SoundResponse>} A promise that returns a SoundResponse when resolved.
+   * Get the next item in the queue.
+   * @returns {function} A thunk that returns a promise, which resolves to a SoundResponse.
    * @private
    */
   dequeue_ = () => {

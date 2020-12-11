@@ -64,7 +64,7 @@ class ProgressLevelSet extends React.Component {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   render() {
