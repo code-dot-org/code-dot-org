@@ -180,6 +180,8 @@ standardConfig.blocks = [
   {func: 'mathRandom', block: 'Math.random()', category: 'Math'},
   {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math'},
   {func: 'mathSqrt', block: 'Math.sqrt(__)', category: 'Math'},
+  {func: 'mathIncrement', block: '__++', category: 'Math'},
+  {func: 'mathDecrement', block: '__--', category: 'Math'},
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables'},
