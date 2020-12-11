@@ -104,7 +104,7 @@ describe('SpriteLab', () => {
         expect(resultingAnimations.orderedKeys.length).to.be.above(1);
       });
 
-      it('does not modify the list if there are no missing startAnimations and there is an animation in the backgrounds category', () => {
+      it('does not modify the list if there is an animation in the backgrounds category', () => {
         instance.isSpritelab = true;
         const initialAnimationList = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
@@ -121,7 +121,7 @@ describe('SpriteLab', () => {
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
       });
 
-      it('does not modify the list if there are no missing startAnimations and there is an animation that matches a background', () => {
+      it('does not modify the list if there is an animation that matches a background', () => {
         instance.isSpritelab = true;
         const initialAnimationList = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
