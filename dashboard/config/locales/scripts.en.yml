@@ -18275,7 +18275,7 @@ en:
             oceans:
               name: Machine Learning with AI for Oceans
             intro:
-              name: Introduction
+              name: Introduction to Machine Learning
             society:
               name: Machine Learning & Societal Impact
             decisions:
@@ -18303,7 +18303,7 @@ en:
             miseducation:
               name: Mis-education of the Machine
             ethics:
-              name: Ethics
+              name: Using ML Ethically
             ethics-hoc2020:
               name: AI & Ethics Hour of Code 2020
             hypothesis:
@@ -18315,11 +18315,11 @@ en:
             project:
               name: Final project
             KNN:
-              name: KNN
+              name: Feature Selection with Continuous Labels
             SVM:
-              name: SVM
+              name: Data Investigations with Categorical Labels
             App:
-              name: Making an app
+              name: Using Models in the Real-World
             Ethics:
               name: Ethics
             Project:
@@ -18331,6 +18331,7 @@ en:
           description_audience: ''
           description_short: ML/AI Unit
           description: Brainstorm / Playground area for ML/AI Unit Development for CSD. For future questions about this, ask Dan Schneider.
+          name: ml-playground
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
