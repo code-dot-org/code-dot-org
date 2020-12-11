@@ -1141,7 +1141,7 @@ class Script < ApplicationRecord
   end
 
   def write_script_json
-    script_json_filepath = "config/scripts_json/#{name}.script_json"
+    script_json_filepath = "#{Rails.root}/config/scripts_json/#{name}.script_json"
     File.write(script_json_filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
