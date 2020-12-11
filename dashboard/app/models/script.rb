@@ -88,7 +88,7 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  after_save :set_is_migrated_only_for_new_courses
+  validate :set_is_migrated_only_for_new_courses
 
   include SerializedProperties
 
