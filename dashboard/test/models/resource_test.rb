@@ -27,9 +27,10 @@ class ResourceTest < ActiveSupport::TestCase
   end
 
   test "can generate different keys for resources with the same name" do
-    resource1 = create :resource, key: nil, name: 'duplicate name'
+    course_version = create :course_version
+    resource1 = create :resource, key: nil, name: 'duplicate name', course_version: course_version
     assert_equal 'duplicate_name', resource1.key
-    resource2 = create :resource, key: nil, name: 'duplicate name'
+    resource2 = create :resource, key: nil, name: 'duplicate name', course_version: course_version
     assert_equal 'duplicate_name_1', resource2.key
   end
 

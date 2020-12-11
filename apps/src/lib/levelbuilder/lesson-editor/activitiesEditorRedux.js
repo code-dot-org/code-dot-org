@@ -8,7 +8,6 @@ import {
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const INIT = 'activitiesEditor/INIT';
-const INIT_ACTIVITIES = 'activitiesEditor/INIT_ACTIVITIES';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
 const REMOVE_ACTIVITY = 'activitiesEditor/REMOVE_ACTIVITY';
@@ -39,20 +38,10 @@ export const init = (activities, searchOptions) => ({
   searchOptions
 });
 
-export const initActivities = activities => ({
-  type: INIT_ACTIVITIES,
-  activities
-});
-
-export const addActivity = (
-  activityPosition,
-  activityKey,
-  activitySectionKey
-) => ({
+export const addActivity = (activityPosition, activityKey) => ({
   type: ADD_ACTIVITY,
   activityPosition,
-  activityKey,
-  activitySectionKey
+  activityKey
 });
 
 export const updateActivityField = (
@@ -255,20 +244,13 @@ function activities(state = [], action) {
 
   switch (action.type) {
     case INIT:
-    case INIT_ACTIVITIES:
       validateActivities(action.activities, action.type);
       return action.activities;
     case ADD_ACTIVITY: {
       newState.push({
         ...emptyActivity,
         key: action.activityKey,
-        position: action.activityPosition,
-        activitySections: [
-          {
-            ...emptyActivitySection,
-            key: action.activitySectionKey
-          }
-        ]
+        position: action.activityPosition
       });
       updateActivityPositions(newState);
       break;
@@ -325,6 +307,7 @@ function activities(state = [], action) {
     }
     case MOVE_ACTIVITY_SECTION: {
       const activityIndex = action.activityPosition - 1;
+
       const activitySections = newState[activityIndex].activitySections;
 
       const activitySectionIndex = action.activitySectionPosition - 1;
@@ -332,6 +315,7 @@ function activities(state = [], action) {
         action.direction === 'up'
           ? activitySectionIndex - 1
           : activitySectionIndex + 1;
+
       if (
         activitySectionSwapIndex >= 0 &&
         activitySectionSwapIndex <= activitySections.length - 1
@@ -593,7 +577,7 @@ export default {
 };
 
 export const emptyActivitySection = {
-  key: 'activitySection-1',
+  key: 'activity-section-1',
   displayName: '',
   levels: [],
   tips: [],

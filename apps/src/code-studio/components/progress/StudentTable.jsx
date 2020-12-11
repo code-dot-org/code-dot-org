@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import {studentType} from '@cdo/apps/templates/progress/progressTypes';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
@@ -52,14 +53,9 @@ const styles = {
   }
 };
 
-export const studentShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired
-});
-
 class StudentTable extends React.Component {
   static propTypes = {
-    students: PropTypes.arrayOf(studentShape).isRequired,
+    students: PropTypes.arrayOf(studentType).isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired,
     levels: PropTypes.array,

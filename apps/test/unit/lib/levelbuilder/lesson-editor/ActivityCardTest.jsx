@@ -15,7 +15,6 @@ describe('ActivityCard', () => {
     updateTargetActivitySection,
     clearTargetActivitySection,
     handleCollapse,
-    generateActivitySectionKey,
     updateActivitySectionMetrics;
   beforeEach(() => {
     addActivitySection = sinon.spy();
@@ -27,7 +26,6 @@ describe('ActivityCard', () => {
     clearTargetActivitySection = sinon.spy();
     updateActivitySectionMetrics = sinon.spy();
     handleCollapse = sinon.spy();
-    generateActivitySectionKey = sinon.spy();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -39,7 +37,6 @@ describe('ActivityCard', () => {
       updateTargetActivitySection,
       clearTargetActivitySection,
       updateActivitySectionMetrics,
-      generateActivitySectionKey,
       targetActivitySectionPos: 1,
       activitySectionMetrics: [],
       handleCollapse,
@@ -64,7 +61,6 @@ describe('ActivityCard', () => {
     expect(button.text()).to.include('Activity Section');
     button.simulate('mouseDown');
     expect(addActivitySection).to.have.been.calledOnce;
-    expect(generateActivitySectionKey).to.have.been.calledOnce;
   });
 
   it('edit activity title', () => {
