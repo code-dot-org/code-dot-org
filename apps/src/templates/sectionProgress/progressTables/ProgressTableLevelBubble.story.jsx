@@ -18,7 +18,7 @@ const assessmentStatuses = [
 ];
 
 const wrapperStyle = {
-  width: 50,
+  width: 200,
   height: 50,
   backgroundColor: color.background_gray,
   display: 'flex',
@@ -42,7 +42,21 @@ export default storybook => {
   storybook
     .storiesOf('SectionProgress/ProgressTableLevelBubble', module)
     .addStoryTable(
-      []
+      [
+        {
+          name: `disabled bubble`,
+          story: () =>
+            wrapped(
+              <ProgressTableLevelBubble
+                levelStatus={LevelStatus.not_tried}
+                levelKind={LevelKind.level}
+                disabled={true}
+                title={'3'}
+                url={'/foo/bar'}
+              />
+            )
+        }
+      ]
         .concat(
           statuses.map(status => ({
             name: `regular bubble status: ${status}`,
@@ -51,7 +65,7 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  disabled={status === LevelStatus.locked}
+                  disabled={false}
                   title={'3'}
                   url={'/foo/bar'}
                 />
@@ -121,6 +135,22 @@ export default storybook => {
               )
           }))
         )
+        .concat(
+          statuses.map(status => ({
+            name: `unplugged bubble status: ${status}`,
+            story: () =>
+              wrapped(
+                <ProgressTableLevelBubble
+                  levelStatus={status}
+                  levelKind={LevelKind.level}
+                  disabled={status === LevelStatus.locked}
+                  title={'3'}
+                  url={'/foo/bar'}
+                  unplugged={true}
+                />
+              )
+          }))
+        )
         .concat([
           {
             name: 'small bubbles',
@@ -152,97 +182,6 @@ export default storybook => {
                 />
               ])
           }
-          //   {
-          //     name: 'bubble with no url',
-          //     story: () => (
-          //       <ProgressTableLevelBubble
-          //         level={{
-          //           id: 1,
-          //           levelNumber: 3,
-          //           icon: 'fa-document',
-          //           kind: LevelKind.level
-          //         }}
-          //         studentLevelProgress={perfectProgress}
-          //         disabled={false}
-          //       />
-          //     )
-          //   },
-          //   {
-          //     name: 'disabled bubble',
-          //     description: 'Should not be clickable or show progress',
-          //     story: () => (
-          //       <ProgressTableLevelBubble
-          //         level={{
-          //           id: 1,
-          //           levelNumber: 3,
-          //           icon: 'fa-document',
-          //           kind: LevelKind.level,
-          //           url: '/foo/bar'
-          //         }}
-          //         studentLevelProgress={perfectProgress}
-          //         disabled={true}
-          //       />
-          //     )
-          //   },
-          //   {
-          //     name: 'hidden tooltips bubble',
-          //     description: 'should not have tooltips',
-          //     story: () => (
-          //       <ProgressTableLevelBubble
-          //         level={{
-          //           id: 1,
-          //           levelNumber: 3,
-          //           kind: LevelKind.level,
-          //           url: '/foo/bar',
-          //           icon: 'fa-document'
-          //         }}
-          //         studentLevelProgress={perfectProgress}
-          //         hideToolTips={true}
-          //         disabled={false}
-          //       />
-          //     )
-          //   },
-          //   {
-          //     name: 'pairing icon bubble - perfect',
-          //     description: 'should show the paring icon, completed perfectly',
-          //     story: () => (
-          //       <ProgressTableLevelBubble
-          //         level={{
-          //           id: 1,
-          //           levelNumber: 3,
-          //           kind: LevelKind.level,
-          //           url: '/foo/bar',
-          //           icon: 'fa-document'
-          //         }}
-          //         studentLevelProgress={{...perfectProgress, paired: true}}
-          //         hideToolTips={true}
-          //         disabled={false}
-          //         pairingIconEnabled={true}
-          //       />
-          //     )
-          //   },
-          //   {
-          //     name: 'pairing icon bubble - attempted',
-          //     description: 'should show the paring icon, attempted',
-          //     story: () => (
-          //       <ProgressTableLevelBubble
-          //         level={{
-          //           id: 1,
-          //           levelNumber: 3,
-          //           kind: LevelKind.level,
-          //           url: '/foo/bar',
-          //           icon: 'fa-document'
-          //         }}
-          //         studentLevelProgress={{
-          //           ...levelProgressWithStatus(LevelStatus.attempted),
-          //           paired: true
-          //         }}
-          //         hideToolTips={true}
-          //         disabled={false}
-          //         pairingIconEnabled={true}
-          //       />
-          //     )
-          //   }
         ])
     );
 };
