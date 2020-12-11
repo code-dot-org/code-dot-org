@@ -99,6 +99,22 @@ export const commands = {
     worldCommands.setPrompt(promptText, variableName, callback);
   },
 
+  setPromptWithChoices(
+    promptText,
+    variableName,
+    choice1,
+    choice2,
+    choice3,
+    callback
+  ) {
+    worldCommands.setPromptWithChoices(
+      promptText,
+      variableName,
+      [choice1, choice2, choice3],
+      callback
+    );
+  },
+
   setTint(spriteArg, color) {
     actionCommands.setProp(spriteArg, 'tint', color);
   },

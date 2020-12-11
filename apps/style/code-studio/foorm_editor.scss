@@ -18,3 +18,14 @@
 .container {
   width: 95% !important;
 }
+
+div[role=dialog] {
+  div.modal-content {
+    margin: 0 !important;
+    @import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+    div {
+      height: auto;
+    }
+  }
+}
