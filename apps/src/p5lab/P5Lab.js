@@ -457,7 +457,6 @@ P5Lab.prototype.init = function(config) {
     ? config.initialAnimationList
     : this.startAnimations;
   initialAnimationList = this.loadAnyMissingDefaultAnimations(
-    useConfig,
     initialAnimationList
   );
 
@@ -509,11 +508,9 @@ P5Lab.prototype.init = function(config) {
  * Load any necessary missing animations. For now, this is mainly for
  * the "set background to" block, which needs to have backgrounds in the
  * animation list at the start in order to look not broken.
- * @param {Boolean} useConfig
  * @param {Object} initialAnimationList
  */
 P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
-  useConfig,
   initialAnimationList
 ) {
   if (!this.isSpritelab) {
@@ -524,16 +521,6 @@ P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
     const name = initialAnimationList.propsByKey[key].name;
     configDictionary[name] = key;
   });
-  if (useConfig && this.startAnimations) {
-    // We need to make sure we include all of the default animations (in case they have changed since this project was created).
-    this.startAnimations.orderedKeys.forEach(key => {
-      const animation = this.startAnimations.propsByKey[key];
-      if (!configDictionary[animation.name]) {
-        initialAnimationList.orderedKeys.push(key);
-        initialAnimationList.propsByKey[key] = animation;
-      }
-    });
-  }
   // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
   // This is primarily to handle pre existing levels that don't have animations in their list yet
   const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
