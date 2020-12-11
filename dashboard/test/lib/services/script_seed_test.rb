@@ -175,6 +175,33 @@ module Services
       assert_equal 'foo', script.script_levels.first.challenge
     end
 
+    test 'seed updates lesson resources' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.resources.first.update!(name: 'Updated Resource Name')
+        lesson.resources.create(
+          name: 'New Resource Name',
+          key: "#{lesson.name}-resource-3",
+          url: "fake.url",
+          course_version: script.course_version
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script.reload
+
+      assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+      lesson = script.lessons.first
+      assert_equal(
+        ['Updated Resource Name', 'fake name', 'New Resource Name'],
+        lesson.resources.map(&:name)
+      )
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree
       original_counts = get_counts
