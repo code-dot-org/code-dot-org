@@ -80,8 +80,7 @@ class LessonsController < ApplicationController
       :preparation,
       :announcements,
       :resources,
-      :objectives,
-      :original_lesson_data
+      :objectives
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
