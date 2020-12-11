@@ -186,6 +186,42 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
   end
 
+  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: lesson.id,
+        lesson: {name: lesson.name},
+        originalLessonData: {"name": "Not the name"}
+      }
+    end
+
+    assert_includes error.message, "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
+  end
+
+  test 'can update if database matches starting content for current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    post :update, params: {
+      id: lesson.id,
+      lesson: {name: lesson.name},
+      originalLessonData: JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    }
+
+    assert_response :success
+  end
+
   test 'cannot update lesson with legacy script levels' do
     # legacy script level, not owned by an activity section
     create :script_level, lesson: @lesson, script: @lesson.script
