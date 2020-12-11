@@ -501,7 +501,7 @@ class ScriptsControllerTest < ActionController::TestCase
       :script_level,
       script: script,
       lesson: lesson,
-      levels: [create(:maze, name: 'ScriptActivity test level 1')]
+      levels: [create(:maze)]
     )
     stub_file_writes(script.name)
 
