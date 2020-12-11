@@ -39,7 +39,7 @@ class LessonsController < ApplicationController
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
     end
 
-    render json: @lesson
+    render json: @lesson.summarize_for_lesson_edit
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
     render(status: :not_acceptable, plain: e.message)
   end
