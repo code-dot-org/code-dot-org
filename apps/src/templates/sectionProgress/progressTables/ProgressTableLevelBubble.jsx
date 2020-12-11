@@ -135,7 +135,7 @@ class ProgressTableLevelBubble extends React.PureComponent {
     ) : bonus ? (
       <FontAwesome icon="flag-checkered" />
     ) : (
-      <span>{(title && title) || ''}</span>
+      (title && title) || ''
     );
   }
 
@@ -160,13 +160,18 @@ class ProgressTableLevelBubble extends React.PureComponent {
   }
 
   render() {
+    const bubble = this.props.smallBubble
+      ? this.renderSmallBubble()
+      : this.props.unplugged
+      ? this.renderUnplugged()
+      : this.renderBigBubble();
+
+    if (this.props.disabled) {
+      return bubble;
+    }
     return (
       <a href={this.props.url} style={progressStyles.link}>
-        {this.props.smallBubble
-          ? this.renderSmallBubble()
-          : this.props.unplugged
-          ? this.renderUnplugged()
-          : this.renderBigBubble()}
+        {bubble}
       </a>
     );
   }
