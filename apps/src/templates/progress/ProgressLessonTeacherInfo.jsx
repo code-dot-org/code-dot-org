@@ -55,7 +55,9 @@ class ProgressLessonTeacherInfo extends React.Component {
 
   onClickHiddenToggle(value) {
     const {scriptName, section, lesson, toggleHiddenStage} = this.props;
-    const sectionId = (section && section.id.toString()) || '';
+    // sectionId will always have a valid value here because the button that
+    // calls this method is only shown when we have a valid sectionId
+    const sectionId = section.id;
     toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
     firehoseClient.putRecord(
       {
@@ -88,7 +90,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       lessonUrl
     } = this.props;
 
-    const sectionId = (section && section.id.toString()) || '';
+    const sectionId = (section && section.id) || null;
     const showHiddenForSectionToggle =
       section && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden =

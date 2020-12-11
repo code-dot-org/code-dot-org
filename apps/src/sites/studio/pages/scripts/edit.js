@@ -34,8 +34,6 @@ export default function initPage(scriptEditorData) {
     <Provider store={store}>
       <ScriptEditor
         id={scriptData.id}
-        beta={scriptEditorData.beta}
-        betaWarning={scriptEditorData.betaWarning}
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
         initialHidden={valueOr(scriptData.hidden, true)}
@@ -80,7 +78,7 @@ export default function initPage(scriptEditorData) {
         initialIsCourse={scriptData.is_course}
         hasCourse={scriptEditorData.has_course}
         initialShowCalendar={scriptData.showCalendar}
-        initialIsMigrated={scriptData.is_migrated}
+        isMigrated={scriptData.is_migrated}
       />
     </Provider>,
     document.querySelector('.edit_container')

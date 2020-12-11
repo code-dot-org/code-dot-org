@@ -364,13 +364,13 @@ module Services
 
     def assert_lesson_activities_equal(activities1, activities2)
       activities1.zip(activities2).each do |a1, a2|
-        assert_attributes_equal(a1, a2, ['key', 'lesson_id', 'position', 'properties'])
+        assert_attributes_equal(a1, a2, ['lesson_id'])
       end
     end
 
     def assert_activity_sections_equal(sections1, sections2)
       sections1.zip(sections2).each do |s1, s2|
-        assert_attributes_equal(s1, s2, ['key', 'lesson_activity_id', 'position', 'properties'])
+        assert_attributes_equal(s1, s2, ['lesson_activity_id'])
       end
     end
 

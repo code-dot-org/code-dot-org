@@ -180,13 +180,13 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
-  test 'update lesson return updated lesson' do
+  test 'update lesson returns summary of updated lesson' do
     sign_in @levelbuilder
 
     put :update, params: @update_params
 
-    assert_equal 'new overview', JSON.parse(@response.body)['properties']['overview']
-    assert_equal 'new student overview', JSON.parse(@response.body)['properties']['student_overview']
+    assert_equal 'new overview', JSON.parse(@response.body)['overview']
+    assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
   end
 
   test 'cannot update lesson with legacy script levels' do
@@ -395,9 +395,11 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson removing and adding resources' do
-    resource_to_keep = create :resource
-    resource_to_add = create :resource
-    resource_to_remove = create :resource
+    course_version = create :course_version
+    resource_to_keep = create :resource, course_version: course_version
+    resource_to_add = create :resource, course_version: course_version
+    resource_to_remove = create :resource, course_version: course_version
+    @lesson.script.course_version = course_version
 
     @lesson.resources << resource_to_keep
     @lesson.resources << resource_to_remove
