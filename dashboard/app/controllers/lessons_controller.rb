@@ -33,9 +33,7 @@ class LessonsController < ApplicationController
   def update
     if params[:originalLessonData]
       current_lesson_data = JSON.generate(@lesson.summarize_for_lesson_edit.except(:updatedAt))
-      puts current_lesson_data
       old_lesson_data = params[:originalLessonData]
-      puts old_lesson_data
       if old_lesson_data != current_lesson_data
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
         raise msg
