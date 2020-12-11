@@ -2,6 +2,8 @@ import {fullyLockedStageMapping} from '@cdo/apps/code-studio/stageLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {TestResults} from '@cdo/apps/constants';
+import {activityCssClass} from '@cdo/apps/code-studio/activityUtils';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -188,4 +190,62 @@ export const processedLevel = (level, isSublevel) => {
     bonus: level.bonus,
     sublevels: level.sublevels
   };
+};
+
+const getLevelResult = serverProgress => {
+  if (serverProgress.status === LevelStatus.locked) {
+    return TestResults.LOCKED_RESULT;
+  }
+  if (serverProgress.readonly_answers) {
+    return TestResults.READONLY_SUBMISSION_RESULT;
+  }
+  if (serverProgress.submitted) {
+    return TestResults.SUBMITTED_RESULT;
+  }
+
+  return serverProgress.result || TestResults.NO_TESTS_RUN;
+};
+
+/**
+ * Parse a level progress object that we get from the server using either
+ * /api/user_progress or /dashboardapi/section_level_progress into our
+ * canonical studentLevelProgressType shape.
+ * @param {object} serverObject A progress object from the server
+ * @returns {studentLevelProgressType} Our canonical progress shape
+ */
+export const levelProgressFromServer = serverObject => {
+  return {
+    status: serverObject.status || LevelStatus.not_tried,
+    result: getLevelResult(serverObject),
+    paired: serverObject.paired || false,
+    timeSpent: serverObject.time_spent || 0,
+    pages:
+      serverObject.pages_completed && serverObject.pages_completed.length > 1
+        ? serverObject.pages_completed.map(
+            pageResult =>
+              (pageResult && levelProgressFromResult(pageResult)) ||
+              levelProgressWithStatus(LevelStatus.not_tried)
+          )
+        : null
+  };
+};
+
+/**
+ * Create a studentLevelProgressType object with the provided status string
+ * @param {string} status
+ * @returns {studentLevelProgressType}
+ */
+export const levelProgressWithStatus = status => {
+  return levelProgressFromServer({status: status});
+};
+
+/**
+ * Create a studentLevelProgressType object from the provided result value.
+ * This is used to merge progress data from session storage which only includes
+ * a result value into our data model that uses studentLevelProgressType objects.
+ * @param {number} result
+ * @returns {studentLevelProgressType}
+ */
+export const levelProgressFromResult = result => {
+  return levelProgressWithStatus(activityCssClass(result));
 };

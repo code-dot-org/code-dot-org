@@ -15,6 +15,38 @@ export const levelType = PropTypes.shape({
 });
 
 /**
+ * @typedef {Object} StudentLevelProgress
+ *
+ * @property {string} status
+ * A string enum representing student progress status on a level.
+ * See src/util/sharedConstants.LevelStatus.
+ * @property {number} result
+ * A numerical enum of the TestResult a student received for a level.
+ * See src/constants.TestResult.
+ * See src/code-studio/activityUtils.activityCssClass for a mapping to status.
+ * @property {bool} paired
+ * A boolean indicating if a student was paired on a level.
+ * @property {number} timeSpent
+ * An optional value indicating the time a student spent on a level.
+ * @property {array} pages
+ * Array of StudentLevelProgress objects representing progress on individual
+ * pages of a multi-page assessment
+ */
+const studentLevelProgressShape = {
+  status: PropTypes.string.isRequired,
+  result: PropTypes.number.isRequired,
+  paired: PropTypes.bool.isRequired,
+  timeSpent: PropTypes.number
+};
+// Avoid recursive definition
+studentLevelProgressShape.pages = PropTypes.arrayOf(
+  PropTypes.shape(studentLevelProgressShape)
+);
+export const studentLevelProgressType = PropTypes.shape(
+  studentLevelProgressShape
+);
+
+/**
  * @typedef {Object} Lesson
  *
  * @property {string} name
