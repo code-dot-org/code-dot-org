@@ -1320,6 +1320,7 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
+    summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary
   end
 
