@@ -129,7 +129,6 @@ class ScriptsController < ApplicationController
         msg = "Could not update the script because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again."
         raise msg
       end
-      puts "old_script_text == current_script_text"
     end
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
