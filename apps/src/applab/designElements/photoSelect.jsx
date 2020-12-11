@@ -58,12 +58,12 @@ class PhotoChooserProperties extends React.Component {
         />
         <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(element.style.color || '#000000')}
+          initialValue={element.style.color || '#000000'}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <PropertyRow
