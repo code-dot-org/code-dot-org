@@ -471,6 +471,50 @@ class ScriptsControllerTest < ActionController::TestCase
     assert script.hidden
   end
 
+  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    stub_file_writes(script.name)
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: script.id,
+        script: {name: script.name},
+        script_text: '',
+        old_script_text: 'different'
+      }
+    end
+
+    assert_includes error.message, 'Could not update the script because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
+  end
+
+  test 'can update if database matches starting content for current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+    stub_file_writes(script.name)
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      old_script_text: ScriptDSL.serialize_lesson_groups(script)
+    }
+
+    assert_response :success
+  end
+
   test 'updates teacher resources' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
