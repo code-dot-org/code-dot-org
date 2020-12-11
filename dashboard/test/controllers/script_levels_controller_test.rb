@@ -1180,7 +1180,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     lesson_group = create(:lesson_group, script: script)
     script.update(professional_learning_course: true)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    level = Artist.first
+    level = create(:level, :with_ideal_level_source)
     script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
 
     get :show, params: {
@@ -1193,17 +1193,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'student cannot view solution' do
-    sl = ScriptLevel.joins(:script, :levels).find_by(
-      scripts: {name: 'allthethings'},
-      levels: Level.key_to_params('K-1 Artist1 1')
-    )
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create(:level, :with_ideal_level_source)
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
 
     sign_in @student
 
     get :show, params: {
-      script_id: sl.script,
-      stage_position: sl.lesson,
-      id: sl,
+      script_id: script,
+      stage_position: lesson,
+      id: script_level,
       solution: true
     }
     assert_response :forbidden
