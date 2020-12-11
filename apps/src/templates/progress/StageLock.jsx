@@ -34,7 +34,7 @@ class StageLock extends React.Component {
     lesson: lessonType.isRequired,
 
     // redux provided
-    sectionId: PropTypes.string.isRequired,
+    sectionId: PropTypes.number,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     saving: PropTypes.bool.isRequired,
     openLockDialog: PropTypes.func.isRequired,
@@ -74,7 +74,7 @@ class StageLock extends React.Component {
 export const UnconnectedStageLock = StageLock;
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId.toString(),
+    sectionId: state.teacherSections.selectedSectionId,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     saving: state.stageLock.saving
   }),

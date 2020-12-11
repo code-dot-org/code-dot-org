@@ -6,8 +6,6 @@
   %p= t('join_section.code.instructions')
   = form_tag(student_user_new_path) do
     = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
-    - if current_user && current_user.display_captcha?
-      = recaptcha_tags
     %br/
     = submit_tag t('join_section.code.submit'), class: 'btn btn-primary'
 - else
