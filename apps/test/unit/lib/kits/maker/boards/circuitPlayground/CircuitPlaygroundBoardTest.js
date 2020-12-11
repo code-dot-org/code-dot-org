@@ -15,6 +15,12 @@ import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
 import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
+import {
+  ADAFRUIT_VID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PID,
+  CIRCUIT_PLAYGROUND_PID
+} from '@cdo/apps/lib/kits/maker/portScanning';
+import {BOARD_TYPE} from '../../util/boardUtils';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -379,6 +385,23 @@ describe('CircuitPlaygroundBoard', () => {
     it('does not initialize components', () => {
       return board.connectToFirmware().then(() => {
         expect(board.prewiredComponents_).to.be.null;
+      });
+    });
+
+    it('does not set the boardType for classic boards', () => {
+      board.port_ = {vendorId: ADAFRUIT_VID, productId: CIRCUIT_PLAYGROUND_PID};
+      return board.connectToFirmware().then(() => {
+        expect(board.boardType_).to.equal(BOARD_TYPE.OTHER);
+      });
+    });
+
+    it('sets the boardType for express boards', () => {
+      board.port_ = {
+        vendorId: ADAFRUIT_VID,
+        productId: CIRCUIT_PLAYGROUND_EXPRESS_PID
+      };
+      return board.connectToFirmware().then(() => {
+        expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
       });
     });
   });
