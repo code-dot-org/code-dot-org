@@ -336,26 +336,6 @@ bg:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           COSTUME:
             '"ALIEN"': Извънземни
             '"BEAR"': Мечки
@@ -745,6 +725,8 @@ bg:
         text: случаен цвят
       gamelab_randomColor:
         text: случаен цвят
+      gamelab_repeatForever:
+        text: повтаряй завинаги
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -972,18 +954,6 @@ bg:
         text: завий надясно
       Vector_vectorNorth:
         text: север
-      aalab_goToScene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
       aalab_starwars_playSound:
         options:
           OPTION:
@@ -1049,7 +1019,6 @@ bg:
             '"stoneBricks"': каменни тухли
             '"mossyStoneBricks"': мъхести каменни тухли
             '"crackedStoneBricks"': начупени каменни тухли
-            '"decorativeStoneBricks"': декоративни каменни тухли
             '"blueCoralBlock"': блок от син корал
             '"pinkCoralBlock"': блок от розов корал
             '"magentaCoralBlock"': блок от пурпурен корал

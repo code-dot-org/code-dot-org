@@ -44,13 +44,11 @@ Scenario: Async progress write followed by a stale read
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I wait for the page to fully load
   And I verify progress in the header of the current page is "not_tried" for level 20
-  Then mark the current level as completed on the client
-  And I wait for 3 seconds
   And I reload the page
-  And I verify progress in the header of the current page is "perfect" for level 20
+  And I verify progress in the header of the current page is "not_tried" for level 20
   And I wait for 3 seconds
   And I navigate to the course page for "hourofcode"
-  And I verify progress for stage 1 level 20 is "perfect"
+  And I verify progress for stage 1 level 20 is "not_tried"
 
 Scenario: Progress on the server that is not on the client
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"

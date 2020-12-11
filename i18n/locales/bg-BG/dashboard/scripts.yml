@@ -4,11 +4,12 @@ bg:
     script:
       category:
         csf_category_name: CS основи
-        csp_category_name: "\"15-\" 16 CS принципи"
+        csp_category_name: '"15-" 16 CS принципи'
         cspexams_category_name: CS принципи практически тест
         csp17_category_name: '"15-" 16 CS принципи'
         hoc_category_name: Hour of Code
         math_category_name: Математика
+        other_category_name: Друго
       name:
         course1:
           description: Курс 1 е предназначен за децата, които се учат да четат, но искат и да създават компютърни програми. Курсът ще им помогне да се научат да си сътрудничат с други ученици, ще подпомогне развитието на умения за решаване на проблеми и взимане на решения при решаване на трудни ситуации. До края на този курс, учениците ще могат да създават собствени персонализирани игри или истории, които могат да споделят. Препоръчва се за K-1/I клас/.
@@ -3458,3 +3459,7 @@ bg:
           lesson_groups:
             lg_1:
               display_name: Съдържание
+        ml-playground:
+          lessons:
+            intro:
+              name: Въведение

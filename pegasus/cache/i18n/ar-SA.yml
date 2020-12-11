@@ -535,8 +535,8 @@ ar-SA:
   minecraft_agent_description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
     رحلة عبر Minecraft مع البرمجة.
   minecraft_agent_button: إبدأ
-  minecraft_designer_description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار
-    الخاص بك من ماينكرافت.
+  minecraft_designer_description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في إصدارك
+    الخاص من ماينكرافت.
   minecraft_designer_button: إبدأ
   minecraft_adventurer_description: استخدم البرمجة لأخذ ألكس أو ستيف في مغامرة.
   minecraft_adventurer_button: إبدأ
@@ -709,7 +709,8 @@ ar-SA:
   volunteer_engineer_submission_field_email_placeholder: البريد الإلكتروني
   volunteer_engineer_submission_field_email_preference: هل يمكننا إرسال بريد إلكتروني
     إليك حول تحديثات دوراتنا أو الفرص المحلية أو أخبار علوم الكمبيوتر الأخرى؟
-  volunteer_engineer_submission_field_email_preference_privacy: "(اقرأ سياسة الخصوصية)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(اقرأ سياسة الخصوصية
+    لدينا)"
   volunteer_engineer_submission_field_email_preference_yes: نعم
   volunteer_engineer_submission_field_email_preference_no: لا
   volunteer_engineer_submission_final_paragraph: سيقع إدراجكم بالخريطة لتمكين المعلمين
@@ -880,7 +881,9 @@ ar-SA:
     جداً
   dashboard_progress_completed_perfect: مكتمل, ممتاز
   dashboard_progress_furthest_level_attempted: المستوى الأبعد الذي تمت محاولته
-  dashboard_progress_submitted: تم التقديم
+  dashboard_progress_submitted: 'تم التقديم
+
+'
   dashboard_progress_view: 'عرض التقدم في:'
   dashboard_progress_student_in_script: معلومات التقدم لــِ %{student_name} في %{script_name}
   dashboard_progress_pair_programming: البرمجة الثنائية
@@ -1253,7 +1256,7 @@ ar-SA:
   gamelab_name: أداة Game Lab
   basketball_name: اصنع لعبة كرة السلة
   sports_name: صمم لعبتك الرياضية الخاصة
-  applab_gradelevel: للأعمار 13 +
+  applab_gradelevel: الأعمار فوق 13 عامًا
   applab_shortdescription_congrats: معمل التطبيقات عبارة عن بيئة برمجة يمكنك فيها
     عمل تطبيقات بسيطة وتصميم تطبيق وبرمجته بالبلوكات أو جافاسكريبت لكي يعمل ثم شارك
     تطبيقك في ثوان
@@ -1935,15 +1938,15 @@ ar-SA:
   compatibility_unsupported_browser: متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى
     <a href='%{supported_browsers_url}', target='_blank'> أحد متصفحاتنا المدعومة.</a>
     يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
-  compatibility_unsupported_browser_markdown: متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك
-    إلى <a href='%{supported_browsers_url}', target='_blank'> أحد متصفحاتنا المدعومة.</a>
-    يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
+  compatibility_unsupported_browser_markdown: متصفح غير مدعوم. يُرجى ترقية متصفحك
+    إلى %{supported_browsers_url}[أحد متصفحاتنا المدعومة]. ويمكنك تجربة عرض الصفحة،
+    ولكن توقع أن يتعطَّل أداؤها الوظيفي.
   starwars_shortcode: نجمة
   flappy_shortcode: رفرف
   header_home: الصفحة الرئيسية
   header_my_dashboard: لوحة التحكم
   header_courses: الدروس
-  header_course_catalog: فهرس الدورة
+  header_course_catalog: فهرس الدورة التدريبية
   header_project_gallery: المشاريع
   header_sections: الأقسام
   header_professional_learning: Professional learning
@@ -1953,25 +1956,25 @@ ar-SA:
   header_educate_high: المرحلة الثانوية
   header_educate_hoc: ساعة البرمجة
   header_educate_partner: كن شريكا لنا
-  header_educate_beyond: بعد Code.org
+  header_educate_beyond: ما بعد Code.org
   header_educate_inspire: ألهم طالب
-  header_educate_community: مجتمع الإنترنت
-  header_educate_tools: الأدوات والفيديوهات
+  header_educate_community: المجتمع الإلكتروني
+  header_educate_tools: الأدوات ومقاطع الفيديو
   header_about_us: نبذة عنا
   header_about_leadership: القيادة
   header_about_donors: المتبرعون
   header_about_partners: الشركاء
   header_about_team: الفريق الكامل
-  header_about_news: مركز الأنباء
-  header_about_evaluation: التقييم
+  header_about_news: مركز الأخبار
+  header_about_evaluation: التقويم
   header_about_jobs: وظائف
-  header_about_contact: إتصل بنا
+  header_about_contact: اتصل بنا
   header_about_faqs: الأسئلة الشائعة
   header_learn: تعلّم
   header_teach: التعليم
   header_stats: الإحصائيات
   header_help_us: ساعدنا
-  header_about: حول
+  header_about: نبذة
   header_teacher_community: مجتمع المدرسين
   header_help_support: 'المساعدة والدعم '
   header_report_bug: أبلغ عن وجود خلل
@@ -1979,7 +1982,7 @@ ar-SA:
   header_legal: الخصوصية والقانونية
   header_legal_privacy: سياسة الخصوصية
   header_legal_tos: شروط الخدمة
-  header_tutorials: الدروس
+  header_tutorials: البرامج التعليمية
   app_lab_documentation: توثيق معمل التطبيقات
   app_lab_tutorials: معمل تطبيقات البرامج التعليمية
   game_lab_documentation: تويثق معمل الألعاب
@@ -2060,10 +2063,11 @@ ar-SA:
   applab_tile_start_tutorial: إبدأ
   applab_tile_teacher_guide: عرض دليل المعلم
   aquatic_name: 'المائي: الرحلة المائية'
-  account_sign_up_email_opt_in: هل يمكننا إرسال بريد إلكتروني إليك حول تحديثات دوراتنا
-    أو الفرص المحلية أو أخبار علوم الكمبيوتر الأخرى؟ (تقريباً مرة في الشهر)
-  account_sign_up_child_accept_terms: أؤكد على أنني حصلت على أذن من والدي أو الوصي
-    لاستعمال خدمات Code.org.
+  account_sign_up_email_opt_in: هل يمكننا أن نرسِل رسالة عبر البريد الإلكتروني إليك
+    حول تحديثات دوراتنا التدريبية أو الفرص الداخلية أو غيرها من أخبار علوم الكمبيوتر؟
+    (مرة واحدة شهريًا تقريبًا)
+  account_sign_up_child_accept_terms: أؤكد على أنني حصلت على أذن من والدي أو وليّ
+    أمري لاستخدام خدمات Code.org.
   hoc_overview_dance_title: حفلة الرقص
   hoc_overview_dance_subtitle: ضع التعليمات البرمجية لحفلة الرقص لمشاركتها مع أصدقائك.
     كاتي بيري، مادونا، جي بالفين، سيا، كيث أربان، سيارا، و25 مطرب ومطربة أخرين!
@@ -2083,6 +2087,10 @@ ar-SA:
     موقع Code.org وشركاؤه.
   hoc_overview_partner_activities_link: عرض الأنشطة
   hoc_overview_start_tutorial: إبدأ
+  hoc_overview_more_resources: لمزيد من الموارد حول كيفية التعامل مع الفصل المدرسي
+    عن بعد، راجع دليلنا لاستضافة [ساعة برمجة افتراضية](https://hourofcode.com/us/how-to/virtual).
+    بالنسبة للطلاب الذين لديهم تقنية أو اتصال محدود أو ليس لديهم اتصال، شارك هذه الحزمة
+    من [أنشطة ساعة البرمجة غير المتصلة](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)
   hoc_overview_view_teacher_guide: عرض دليل المعلم
   hoc2018_creativity: الابتكار
   hoc2018_creativity_create: أنشئ
@@ -2114,8 +2122,8 @@ ar-SA:
   hoc2018_mc_hero_description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
     رحلة عبر Minecraft مع البرمجة.
   hoc2018_mc_designer_title: مصمم Minecraft
-  hoc2018_mc_designer_description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار
-    الخاص بك من ماينكرافت.
+  hoc2018_mc_designer_description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في إصدارك
+    الخاص من ماينكرافت.
   hoc2018_mc_adventurer_title: مغامر في Minecraft
   hoc2018_mc_adventurer_description: استخدم البرمجة لأخذ ألكس أو ستيف في مغامرة.
   hoc2018_mc_start: إبدأ
@@ -2274,3 +2282,4 @@ ar-SA:
   homepage_slot_text_link_do_hoc: 'اعمل ساعة من البرمجة '
   homepage_slot_text_link_express_course: جرّب دورة سريعة
   page_not_available_button: ارجع إلى صفحتنا الرئيسية
+  footer_powered_by_aws: تعمل على خدمات أمازون للويب

@@ -7,6 +7,7 @@ import RosterDialog from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import EditSectionDialog from '@cdo/apps/templates/teacherDashboard/EditSectionDialog';
 import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const defaultProps = {
   sectionIds: [11, 12, 13],
@@ -30,6 +31,12 @@ describe('OwnedSections', () => {
         <EditSectionDialog />
       </div>
     );
+  });
+
+  it('renders spinner when sections have not yet loaded', () => {
+    const props = {...defaultProps, asyncLoadComplete: false};
+    const wrapper = shallow(<OwnedSections {...props} />);
+    expect(wrapper).to.containMatchingElement(<Spinner />);
   });
 
   it('renders a OwnedSectionsTable with no extra button if no archived sections', () => {

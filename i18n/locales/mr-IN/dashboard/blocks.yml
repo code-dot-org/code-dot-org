@@ -83,9 +83,6 @@ mr:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} नेहेमी {MOVE} {DIR} करतात"
         options:
@@ -104,9 +101,6 @@ mr:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: change {SPRITE} {PROPERTY} by {VAL}
         options:
@@ -179,9 +173,6 @@ mr:
             MOVES.XArmsUp: पसरा
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} एकदा {MOVE} {DIR} करतात"
         options:
@@ -210,9 +201,6 @@ mr:
             MOVES.XArmsUp: पसरा
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:

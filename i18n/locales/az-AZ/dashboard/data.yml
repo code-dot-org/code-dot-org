@@ -47,7 +47,7 @@ az:
         loop_until: '"Təkrar et, ta ki" bloku'
         loop_while: '"Hələ ki" bloku'
         loop_for: Sayğac bloku
-        function: funksiyalar
+        function: Funksiyalar
         parameters: Parametrli funksiyalar
     level:
       instructions:

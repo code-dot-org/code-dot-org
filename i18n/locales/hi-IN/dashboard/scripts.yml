@@ -10,7 +10,7 @@ hi:
         csf_2018_category_name: CS के मूल सिद्धांत (2018)
         csf_international_category_name: CS के मूल सिद्धांत अंतर्राष्ट्रीय
         csf2_draft_category_name: 'विकास अधीन: कोर्स A - F'
-        csp_category_name: "'15-'16 CS के सिद्धांत"
+        csp_category_name: '''15-''16 CS के सिद्धांत'
         csp_2018_category_name: CS के सिद्धांत ('18-'19)
         csp_2019_category_name: CS के सिद्धांत ('19-'20)
         cspexams_category_name: CS के सिद्धांत अभ्यास टेस्ट
@@ -19,6 +19,7 @@ hi:
         hoc_category_name: आवर ऑफ़ कोड
         math_category_name: गणित
         research_studies_category_name: शोध अध्ययन
+        other_category_name: अन्य
       name:
         course1:
           title: कोर्स 1
@@ -14353,10 +14354,20 @@ hi:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: मॉड्यूल 1
+              name: 'मॉड्यूल 1'
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: कोर्स A
             Course B:
               name: कोर्स B
+            CS Discoveries:
+              name: CS Discoveries
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: समुद्रों के लिए AI
+            intro:
+              name: परिचय
+            visualizing:
+              name: डेटा को दृष्टिगोचर बनाना

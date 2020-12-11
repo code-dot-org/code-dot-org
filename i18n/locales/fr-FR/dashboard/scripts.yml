@@ -10,7 +10,7 @@ fr:
         csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'En cours d’élaboration : Cours A - F'
-        csp_category_name: "CS Principles"
+        csp_category_name: CS Principles
         csp_2018_category_name: CS Principles (2018-2019)
         csp_2019_category_name: CS Principles (2019-2020)
         cspexams_category_name: Test d'entraînement aux CS Principles
@@ -19,6 +19,7 @@ fr:
         hoc_category_name: Heure de Code
         math_category_name: Math
         research_studies_category_name: Études de Recherche
+        other_category_name: Autre
       name:
         course1:
           title: Cours 1
@@ -8951,7 +8952,7 @@ fr:
               name: Artiste
         dance:
           title: Soirée Dansante (2018)
-          description_short: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres !
+          description_short: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres artistes !
           description: Codez votre propre Soirée Dansante à partager avec vos amis !
           lessons:
             new stage:
@@ -9570,7 +9571,7 @@ fr:
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
             Learning Sprites with Sprite Lab:
-              name: Learning Sprite Lab
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
               name: Soirée Dansante des Extraterrestres
             Pet Giraffe with Sprite Lab:
@@ -14200,7 +14201,7 @@ fr:
             For Loops with Artist:
               name: Les Boucles For avec l'Artiste
             Swimming Fish in Sprite Lab:
-              name: Learning Sprite Lab
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party:
               name: Soirée Dansante des Extraterrestres
             Behaviors in Sprite Lab:
@@ -14834,10 +14835,20 @@ fr:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1'
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: Cours A
             Course B:
               name: Cours B
+            CS Discoveries:
+              name: Découvertes de l'Informatique
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: IA pour les Océans
+            intro:
+              name: Introduction
+            visualizing:
+              name: Visualiser les Données

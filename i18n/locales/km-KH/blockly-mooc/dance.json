@@ -10,13 +10,5 @@
   "danceFeedbackNeedDifferentDance": "អ្នកត្រូវតែផ្លាស់ប្តូរក្បាច់រាំអោយមានលក្ខណៈផ្សេងៗគ្នា",
   "danceFeedbackNeedEveryTwoMeasures": "ត្រូវប្រាកដថាអ្នកប្រើប្រាស់ 'every 2 measures' block",
   "danceFeedbackNeedMakeANewDancer": "ប្រើ 'make a new' block ដើម្បីបង្កើតអ្នករាំម្នាក់ទៀត",
-  "danceFeedbackKeyEvent": "ត្រូវប្រាកដថាអ្នកភ្ជាប់កូដខ្លះទៅនឹង 'when key' block និងធ្វើការចុច key នៅពេលដែលអ្នករាំរបស់អ្នកកំពុងតែរាំ",
-  "danceFeedbackDidntPress": "",
-  "danceFeedbackPressedKey": "",
-  "danceFeedbackNeedTwoDancers": "",
-  "danceFeedbackOnlyOneDancerMoved": "",
-  "danceFeedbackNeedLead": "",
-  "danceFeedbackNeedBackup": "",
-  "danceFeedbackSetSize": "",
-  "measure": ""
+  "danceFeedbackKeyEvent": "ត្រូវប្រាកដថាអ្នកភ្ជាប់កូដខ្លះទៅនឹង 'when key' block និងធ្វើការចុច key នៅពេលដែលអ្នករាំរបស់អ្នកកំពុងតែរាំ"
 }

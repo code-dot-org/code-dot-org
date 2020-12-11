@@ -64,7 +64,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     }
     level = create(:applab, starter_assets: level_starter_assets)
 
-    get :file, params: {level_name: level.name, filename: 'ty.png'}
+    get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
 
     assert_equal 'hello, world!', response.body
     assert_equal 'image/png', response.headers['Content-Type']

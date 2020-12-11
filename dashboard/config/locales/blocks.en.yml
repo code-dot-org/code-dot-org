@@ -1022,6 +1022,8 @@ en:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'comment: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: number of {SPRITE}
       gamelab_createNewSprite:
@@ -1058,6 +1060,12 @@ en:
             '"frames"': frames
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_ifVarEquals:
+        text: |-
+          if {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} costume is {COSTUME}"
       gamelab_isKeyPressed:
         text: "{KEY} is pressed"
         options:
@@ -1139,6 +1147,14 @@ en:
             '"z"': z
       gamelab_locationAt:
         text: 'location x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} pixels {DIRECTION} of {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
       gamelab_locationMouse:
         text: mouse location
       gamelab_locationOf:
@@ -1199,6 +1215,8 @@ en:
         text: sprite {SPRITE} stops {BEHAVIOR}
       gamelab_removeTint:
         text: remove color from {THIS}
+      gamelab_repeatForever:
+        text: repeat forever
       gamelab_setAnimation:
         text: change {THIS} costume to {ANIMATION}
       gamelab_setBackground:
@@ -1237,6 +1255,12 @@ en:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: none
+      gamelab_setBackgroundImageAs:
+        text: set background to {IMG}
+      gamelab_setPrompt:
+        text: prompt user {QUESTION} for variable {VAR}
+      gamelab_setPromptWithChoices:
+        text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} to {VAL}
         options:
@@ -1299,6 +1323,8 @@ en:
             '"d"': d
       gamelab_whenLeftArrow:
         text: when left arrow pressed
+      gamelab_whenPromptAnswered:
+        text: when {VAR} is answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
       gamelab_whenTouching:
@@ -1328,6 +1354,10 @@ en:
         text: while {SPRITE1} is touching {SPRITE2}
       gamelab_whileUpArrow:
         text: while up arrow pressed
+      gamelab_withPercentChance:
+        text: |-
+          if {NUM}% chance
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x coordinate of {SPRITE}
       gamelab_yLocationOf:
@@ -1545,6 +1575,8 @@ en:
             MOVES.Clown: not my-label
       Mikelab_isAnim:
         text: "{SPRITE}'s costume is {COSTUME}"
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1862,7 +1894,7 @@ en:
             '"stoneBricks"': stone bricks
             '"mossyStoneBricks"': mossy stone bricks
             '"crackedStoneBricks"': cracked stone bricks
-            '"decorativeStoneBricks"': decorative stone bricks
+            '"chiseledStoneBricks"': decorative stone bricks
             '"blueCoralBlock"': blue coral block
             '"pinkCoralBlock"': pink coral block
             '"magentaCoralBlock"': magenta coral block

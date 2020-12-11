@@ -8,6 +8,7 @@ hu:
         csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
         hoc_category_name: A kódolás órája
         math_category_name: Matematika
+        other_category_name: Egyéb
       name:
         course1:
           title: 1. tanfolyam
@@ -956,6 +957,10 @@ hu:
               display_name: Tartalom
             practice:
               display_name: Tanítási gyakorlatok
+        allthehiddenthings:
+          lessons:
+            Game Lab:
+              name: Játék Labor
         MikeTest:
           lessons:
             Artist Functions:
@@ -984,6 +989,8 @@ hu:
               name: 'Kirakós játék: Tanuld meg a vonszolást'
             Loops:
               name: hurkok
+            Loops Unplugged:
+              name: Ciklus leválasztva
             Programming:
               name: Programozás
             'Real-life Algorithms: Plant a Seed':
@@ -1004,6 +1011,8 @@ hu:
               name: 'Kirakós játék: Tanuld meg a vonszolást'
             Loops:
               name: hurkok
+            Loops Unplugged:
+              name: Ciklus leválasztva
             Programming:
               name: Programozás
         grade5:
@@ -1273,6 +1282,8 @@ hu:
           lessons:
             Digital Citizenship:
               name: Digitális állampolgárság
+            Private and Personal Information:
+              name: Magán és személyes információk
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1393,6 +1404,8 @@ hu:
               name: Bevezető
             Sprites:
               name: Sprite-ok
+            Input:
+              name: Bemenet
         coursed-ramp:
           lessons:
             Introduction:
@@ -1636,6 +1649,8 @@ hu:
               name: Betüző méh
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: egyéb
             Thanks:
               name: Köszönjük
         csp3-research-mxghyt:
@@ -1666,6 +1681,8 @@ hu:
               name: Egymásba ágyazott ciklusok
             Conditionals:
               name: Feltételek
+            Private and Personal Information:
+              name: Magán és személyes információk
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1707,6 +1724,8 @@ hu:
               name: Alapozás
             Conditionals:
               name: Feltételek
+            Private and Personal Information:
+              name: Magán és személyes információk
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1767,6 +1786,8 @@ hu:
               name: Bevezető
             Conditionals:
               name: Feltételek
+            Private and Personal Information:
+              name: Magán és személyes információk
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1884,6 +1905,8 @@ hu:
               name: Programozás Rey és BB-8 segítségével
             Move It, Move It:
               name: Mozgás, mozgás
+            Copyright and Creativity:
+              name: Remek dolog tisztességesen alkotni és játszani 
         coursed-2018:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -1933,8 +1956,12 @@ hu:
               name: A robot barátaim
             Building a Foundation:
               name: Alapozás
+            'Loops: My Loopy Robotic Friends':
+              name: Ciklusos robot barátim
             Introduction:
               name: Bevezető
+            Private and Personal Information:
+              name: Magán és személyes információk
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
             Internet:
@@ -1945,12 +1972,16 @@ hu:
               name: Feltételek kártyákkal
             Minecraft Hour of Code:
               name: Minecraft Kódolás Órája
+            Copyright and Creativity:
+              name: Digitális megosztás
         coursef-2018:
           lessons:
             'Programming: My Robotic Friends':
               name: A robot barátaim
             Building a Foundation:
               name: Alapozás
+            'Loops: My Loopy Robotic Friends':
+              name: Ciklusos robot barátim
             Introduction:
               name: Bevezető
             Ice Age Play Lab:
@@ -2168,6 +2199,8 @@ hu:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Copyright and Creativity:
+              name: Remek dolog tisztességesen alkotni és játszani 
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
         fit-test:
@@ -2248,6 +2281,8 @@ hu:
               name: Az internet
             Crowdsourcing:
               name: Csoportos megoldás
+            Digital Sharing:
+              name: Digitális megosztás
         dance-low:
           lessons:
             Dance Party:
@@ -2269,6 +2304,7 @@ hu:
               name: Grafikus programozás
             Relay Programming:
               name: Váltó programozás
+              description_teacher: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról, majd gyorsan átalakul a verseny az idővel játékká, a diákok csapatokra osztódnak és együtt dolgoznak, hogy programot írjanak egy-egy utasításra.
             Conditionals with Cards:
               name: Feltételek kártyákkal
             Digital Citizenship:
@@ -2296,12 +2332,18 @@ hu:
               name: Egymásba ágyazott ciklusok
             Conditionals with Cards:
               name: Feltételek kártyákkal
+            Private and Personal Information:
+              name: Magán és személyes információk
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
             Internet:
               name: Internet
             Crowdsourcing:
               name: Csoportos megoldás
+            Digital Sharing:
+              name: Digitális megosztás
+            Simon Says:
+              name: Simon mondja
             Songwriting:
               name: Dalszerzés paraméterekkel
         express-2019:
@@ -2393,10 +2435,16 @@ hu:
               name: A nagy esemény
             Binary Bracelets:
               name: Bináris karkötők
+            Powerful Passwords:
+              name: Erős jelszavak
+            Picturing Data:
+              name: Az adatok leképezése
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+        gamelab:
+          title: Játék Labor
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -2431,6 +2479,8 @@ hu:
               name: Programozás Rey és BB-8 segítségével
             'Loops: Getting Loopy':
               name: Ciklikusság
+            The Right App:
+              name: A megfelelő alkalmazás
         pre-express-2019:
           lesson_groups:
             csf_loops:
@@ -2872,6 +2922,12 @@ hu:
           lessons:
             Conditionals:
               name: Feltételek
+            Simon Says:
+              name: Simon mondja
+            Private and Personal Information:
+              name: Magán és személyes információk
+            Access Ability:
+              name: Hozzáférési képesség
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -2902,6 +2958,12 @@ hu:
           lessons:
             Conditionals:
               name: Feltételek
+            Simon Says:
+              name: Simon mondja
+            Private and Personal Information:
+              name: Magán és személyes információk
+            Access Ability:
+              name: Hozzáférési képesség
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2917,6 +2979,12 @@ hu:
           lessons:
             Conditionals:
               name: Feltételek
+            Simon Says:
+              name: Simon mondja
+            Private and Personal Information:
+              name: Magán és személyes információk
+            Access Ability:
+              name: Hozzáférési képesség
         csp7-pilot:
           lesson_groups:
             required:
@@ -3029,6 +3097,8 @@ hu:
               name: Mozgás, mozgás
             'Loops: Getting Loopy':
               name: Ciklikusság
+            The Right App:
+              name: A megfelelő alkalmazás
         coursec-2020:
           lesson_groups:
             csf_digcit:
@@ -3040,6 +3110,8 @@ hu:
             csf_events:
               display_name: Események
           lessons:
+            Powerful Passwords:
+              name: Erős jelszavak
             Binary Bracelets:
               name: Bináris karkötők
             Loops with Rey and BB-8:
@@ -3048,6 +3120,8 @@ hu:
               description_teacher: A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.
             'Events: The Big Event':
               name: A nagy esemény
+            Picturing Data:
+              name: Az adatok leképezése
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -3065,6 +3139,7 @@ hu:
               name: Grafikus programozás
             Relay Programming:
               name: Váltó programozás
+              description_teacher: Ez a tevékenység egy rövid leckével kezdődik a hibakeresésről és a kitartásról, majd gyorsan átalakul a verseny az idővel játékká, a diákok csapatokra osztódnak és együtt dolgoznak, hogy programot írjanak egy-egy utasításra.
             Conditionals with Cards:
               name: Feltételek kártyákkal
             'Unplugged: Binary':
@@ -3086,8 +3161,14 @@ hu:
             csf_functions:
               display_name: funkciók
           lessons:
+            Simon Says:
+              name: Simon mondja
+            Private and Personal Information:
+              name: Magán és személyes információk
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
+            Digital Sharing:
+              name: Digitális megosztás
         coursef-2020:
           lesson_groups:
             csf_digcit:
@@ -3107,6 +3188,8 @@ hu:
               name: Az internet
             Crowdsourcing:
               name: Csoportos megoldás
+            Digital Sharing:
+              name: Digitális megosztás
         express-2020:
           lesson_groups:
             csf_loops:
@@ -3160,6 +3243,10 @@ hu:
               name: Paraméteres függvények készítése
             Unit 3 Chapter 1 Assessment:
               name: 3. lecke 1. fejezet végi értékelés
+        jess-test-script:
+          lessons:
+            Tools:
+              name: Eszközök
         csd2-virtual:
           lessons:
             CSS Classes:
@@ -3269,3 +3356,7 @@ hu:
           lesson_groups:
             lg_1:
               display_name: Tartalom
+        ml-playground:
+          lessons:
+            intro:
+              name: Bevezető

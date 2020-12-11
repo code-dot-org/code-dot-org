@@ -19,7 +19,7 @@
 #  index_pd_regional_partner_cohorts_on_summer_workshop_id   (summer_workshop_id)
 #
 
-class Pd::RegionalPartnerCohort < ActiveRecord::Base
+class Pd::RegionalPartnerCohort < ApplicationRecord
   ALLOWED_COURSES = [
     Pd::Workshop::COURSE_CSP,
     Pd::Workshop::COURSE_CSD,

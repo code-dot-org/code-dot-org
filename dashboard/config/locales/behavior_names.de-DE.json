@@ -1078,6 +1078,74 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "swimming left and right": "links und rechts schwimmend"
+        },
+        "outbreak1": {
+          "wandering": "wandernd"
+        },
+        "outbreak2": {
+          "wandering": "wandernd"
+        },
+        "outbreak3": {
+          "wandering": "wandernd"
+        },
+        "outbreak4": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "swimming left and right": "links und rechts schwimmend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend"
+        },
+        "outbreak5": {
+          "wandering": "wandernd"
+        },
+        "outbreak6": {
+          "wandering": "wandernd"
+        },
+        "outbreak7": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend"
+        },
+        "outbreak8": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend"
+        },
+        "outbreak_freeplay": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend"
         }
       }
     }

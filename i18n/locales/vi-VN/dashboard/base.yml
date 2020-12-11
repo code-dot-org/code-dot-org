@@ -141,8 +141,6 @@ vi:
     invalid_password: "Mật khẩu phải có ít nhất 6 ký tự"
     mismatch_password: "Hai mật khẩu bạn nhập không khớp"
     student_consent: "Tôi xác nhận rằng tôi có bố mẹ hoặc người giám hộ hợp pháp cho phép sử dụng dịch vụ Code.org."
-    agree_us_website: "Tôi đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ."
-    my_data_to_us: "Dữ liệu từ việc tôi sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ."
     additional_information: "Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng ký cho bạn."
     user_type_button: "Cập nhật tài khoản"
     user_type_label: "Loại tài khoản"
@@ -889,10 +887,6 @@ vi:
         opt_in_no: 'Không'
   cookie_banner:
     accept: 'Tôi đồng ý'
-  gdpr_dialog:
-    heading: 'Bạn có đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ không?'
-    message: 'Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ.'
-    yes: 'Đồng ý'
   copy: 'Sao chép'
   parent_email_banner:
     text: "**Bạn có phải là phụ huynh hay người giám hộ không?** Hãy liên kết thư điện tử của bạn với tài khoản này để cập nhật thông tin về tiến triển và các bài tập của trẻ!"

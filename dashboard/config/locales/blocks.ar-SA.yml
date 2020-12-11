@@ -91,9 +91,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} للأبد"
         options:
@@ -113,9 +110,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
         options:
@@ -193,9 +187,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} تجري {MOVE} {DIR} مرة واحدة"
         options:
@@ -225,9 +216,6 @@ ar:
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
             MOVES.Rest: لا شيء
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_eval:
         text: تقييم{CODE}
       Dancelab_everyMeasuresRange:
@@ -907,7 +895,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': y
+            '"y"': ص
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -953,7 +941,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': y
+            '"y"': ص
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1067,7 +1055,7 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': y
+            '"y"': ص
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} هو لمس الحواف"
@@ -1109,10 +1097,17 @@ ar:
             '"v"': v
             '"w"': w
             '"x"': x
-            '"y"': y
+            '"y"': ص
             '"z"': z
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
       gamelab_locationMouse:
         text: موقع الماوس
       gamelab_locationOf:
@@ -1167,6 +1162,8 @@ ar:
         text: العفريت {SPRITE} توقف {BEHAVIOR}
       gamelab_removeTint:
         text: إزالة اللون من {THIS}
+      gamelab_repeatForever:
+        text: التكرار للأبد
       gamelab_setAnimation:
         text: تغيير {THIS} زي ل {ANIMATION}
       gamelab_setBackground:
@@ -1190,6 +1187,8 @@ ar:
               الماء
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': الشتاء
             undefined: لا شيء
+      gamelab_setBackgroundImageAs:
+        text: تعيين الخلفية إلى {IMG}
       gamelab_setProp:
         text: تعيين {SPRITE} {PROPERTY} ل {VAL}
         options:
@@ -1532,7 +1531,7 @@ ar:
             '"w"': W
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': د
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1543,7 +1542,7 @@ ar:
             '"w"': W
             '"a"': A
             '"s"': S
-            '"d"': D
+            '"d"': د
       Mikelab_whenMouseClicked:
         text: عند النقر على الماوس
       Mikelab_whenYesNoClicked:
@@ -1726,7 +1725,6 @@ ar:
             '"stoneBricks"': أحجار الطوب
             '"mossyStoneBricks"': أحجار الطوب المطحلبة
             '"crackedStoneBricks"': أحجار الطوب المتصدعة
-            '"decorativeStoneBricks"': أحجار الطوب التزيينية
             '"blueCoralBlock"': كتلة المرجان الأزرق
             '"pinkCoralBlock"': كتلة المرجان الوردي
             '"magentaCoralBlock"': كتلة المرجان الأرجواني

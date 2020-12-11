@@ -24,7 +24,7 @@ zh-TW:
   learn_now: 現在就開始學習
   petition_message: 每個在學校的學生都應該有機會學習計算機科學
   petition_sign_message: '如果您同意，請簽署您的名字。目前已有 # 人簽署。'
-  petition_sign_message_num: 若你同意，請簽署你的名字，以加入我們的郵寄名單。目前已有 %{num} 人簽署。
+  petition_sign_message_num: 若你同意，請簽署你的名字，已加入我們的郵寄名單。目前已有 %{num} 人簽署。
   petition_join_others: '目前已有 # 人簽署。'
   petition_join_others_num: 加入這個已有 %{num} 人參與的活動
   name: 名稱
@@ -168,11 +168,11 @@ zh-TW:
   thanks_for_submitting: 感謝您的提交！
   if_you_enjoyed: 如果你喜歡這樣的學習方式，不妨邀請你的朋友一起體驗！我們希望全世界都能學習。
   personalize_certificate: 在證書上留下你的姓名（可以用中文喲）
-  print_batch_certificates: 列印一批證書
+  print_batch_certificates: 列印證書
   print_certificates: 列印所有證書
   certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮品，以贊助你學習課程。"
   print_ice_art_from_frozen: 列印冰雪奇緣教程的冰雕藝術
-  want_a_blank_certificate_template: 你是否想要空白的證書範本，用於寫下你的學生姓名？
+  want_a_blank_certificate_template: 你是否需要空白的證書範本，以寫下你的學生姓名？
   landscape_recommended_certificates: 列印證書時，建議你選擇**水平**列印。
   print_one_here_certificates: 在此處列印一份。
   enter_certificate_names: 輸入最多 30 個姓名，**每行一個**。系統會產生可列印的頁面，並印上個人化的%{script_name}。
@@ -997,6 +997,7 @@ zh-TW:
   express-2019_name: 速學課程（2019）
   pre-express-2019_name: 學前兒童的速學課程（2019）
   express-2020_name: 速學課程（2019）
+  pre-express-2020_name: 學前兒童的速學課程（2020）
   csd2_name: 單元 2：Web 開發
   csd3_name: 單元 3：動畫與遊戲
   accelerated_name: 速成課程
@@ -1534,6 +1535,8 @@ zh-TW:
   header_teacher_community: 教師社群
   header_help_support: 幫助與支援
   header_report_bug: 回報問題
+  header_report_abuse: 檢舉濫用
+  header_legal: 法律與隱私權
   header_legal_privacy: 隱私政策
   header_legal_tos: 服務條款
   header_tutorials: 所有教程
@@ -1618,6 +1621,8 @@ zh-TW:
   hoc_overview_partner_activities_body: 一小時玩程式的網站匯集了由 Code.org 及其合作夥伴所設計的超過 500 多項計算機科學活動，適用於所有年齡和不同經驗水平的人。
   hoc_overview_partner_activities_link: 查看活動
   hoc_overview_start_tutorial: 開始
+  hoc_overview_more_resources: 有關如何參與遠端教室的更多資源，請參見[虛擬一小時玩程式（Hour of Code）](https://hourofcode.com/us/how-to/virtual）舉辦指南（。對於那些缺乏技術條件或網路連接的學生，[請共用這個[不插電一小時玩程式（Hour
+    of Code）](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf）活動]包。
   hoc_overview_view_teacher_guide: 檢視教學指引
   hoc2018_creativity: 創造力
   hoc2018_creativity_create: 建立
@@ -1764,4 +1769,14 @@ zh-TW:
   hoc2019_dance_previous_versions: |-
     你在找之前的舞蹈派對嗎？
     這裡有 2018 年版的[第 1 部分](%{dance_2018_link})和[第 2 部分](%{dance_extras_2018_link})。
+  homepage_slot_text_title_at_home: '在家學習
+
+'
+  homepage_slot_text_blurb_at_home: 這些資源讓它可以輕鬆達成
+  homepage_slot_text_link_code_break: 來場程式休憩時刻
+  homepage_slot_text_link_do_hoc: 試試「一小時玩程式」！
+  homepage_slot_text_link_express_course: 嘗試速學課程吧！
+  page_not_available_title: 沒有可用的頁面
+  page_not_available_description: 我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎mail 給我們[support@code.org](%{support_email_link})，告知您的需求
   page_not_available_button: 返回主頁
+  footer_powered_by_aws: Powered by Amazon Web Services

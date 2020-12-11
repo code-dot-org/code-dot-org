@@ -5,6 +5,7 @@ da:
       category:
         hoc_category_name: Hour of Code
         math_category_name: Matematik
+        other_category_name: Andre
       name:
         course1:
           title: Kursus 1
@@ -849,6 +850,8 @@ da:
               name: Funktioner
             Variables:
               name: Variabler
+            Sprites:
+              name: figure
             Conditionals:
               name: Betingelser
         grade2:
@@ -913,6 +916,9 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
+        minecraft:
+          description_short: Programmer dyr og andre Minecraft-væsner i din egen udgave af Minecraft.
+          description: Programmer dyr og andre Minecraft-væsner i din egen udgave af Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1041,12 +1047,18 @@ da:
               name: Lister
             For Loops:
               name: For Loops
+            Map:
+              name: Kort
             Functions with Parameters:
               name: Funktioner med parametre
         workshop-gamelab:
           lessons:
             Introduction:
               name: Introduktion
+            Sprites:
+              name: figure
+            Input:
+              name: input
         coursed-ramp:
           lessons:
             Introduction:
@@ -1073,6 +1085,8 @@ da:
           lessons:
             Variables:
               name: Variabler
+            Sprites:
+              name: figure
             Conditionals:
               name: Betingelser
             Functions:
@@ -1089,6 +1103,8 @@ da:
           lessons:
             Variables:
               name: Variabler
+            Sprites:
+              name: figure
             Conditionals:
               name: Betingelser
             Functions:
@@ -1334,6 +1350,8 @@ da:
           lessons:
             Variables:
               name: Variabler
+            Sprites:
+              name: figure
             Conditionals:
               name: Betingelser
             Functions:
@@ -1343,6 +1361,8 @@ da:
           lessons:
             Variables:
               name: Variabler
+            Sprites:
+              name: figure
             Conditionals:
               name: Betingelser
             Functions:
@@ -1621,6 +1641,8 @@ da:
               display_name: For Loops
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: figure
             csf_digcit:
               display_name: Digital statsborgerskab
           lessons:
@@ -1671,6 +1693,8 @@ da:
               name: Dance Party
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: figure
             csf_digcit:
               display_name: Digital statsborgerskab
             csf_nested_loops:
@@ -1704,6 +1728,8 @@ da:
               display_name: Variabler
             csf_for_loops:
               display_name: For Loops
+            csf_sprites:
+              display_name: figure
           lessons:
             Relay Programming:
               name: Stafet-programmering
@@ -1808,6 +1834,8 @@ da:
           lessons:
             Variables:
               name: Variabler
+            Sprites:
+              name: figure
             Conditionals:
               name: Betingelser
             Functions:
@@ -1851,6 +1879,9 @@ da:
             required:
               display_name: Oversigt
         time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: figure
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -1949,6 +1980,8 @@ da:
           lessons:
             Variables:
               name: Variabler
+            Sprites:
+              name: figure
             Conditionals:
               name: Betingelser
             Functions:
@@ -2075,6 +2108,8 @@ da:
               display_name: Betingelser
             csf_events:
               display_name: Hændelser
+            csf_sprites:
+              display_name: figure
             csf_digcit:
               display_name: Digital statsborgerskab
           lessons:
@@ -2088,6 +2123,8 @@ da:
               display_name: Betingelser
             csf_events:
               display_name: Hændelser
+            csf_sprites:
+              display_name: figure
             csf_digcit:
               display_name: Digital statsborgerskab
           lessons:
@@ -2126,6 +2163,8 @@ da:
               name: Funktioner
             Text:
               name: Tekst
+            Sprites:
+              name: figure
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -2198,6 +2237,8 @@ da:
               name: Dance Party
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: figure
             csf_digcit:
               display_name: Digital statsborgerskab
             csf_nested_loops:
@@ -2215,6 +2256,8 @@ da:
               display_name: Variabler
             csf_for_loops:
               display_name: For Loops
+            csf_sprites:
+              display_name: figure
           lessons:
             Envelope Variables:
               name: Omslut variabler
@@ -2236,6 +2279,8 @@ da:
               display_name: Variabler
             csf_for_loops:
               display_name: For Loops
+            csf_sprites:
+              display_name: figure
           lessons:
             Dance Party:
               name: Dance Party
@@ -2253,6 +2298,10 @@ da:
           lessons:
             Creating Functions:
               name: Oprettelse af funktioner
+        jess-test-script:
+          lessons:
+            Tools:
+              name: Værktøjer
         csp5-virtual:
           lessons:
             While Loops:
@@ -2294,9 +2343,15 @@ da:
           lessons:
             Variables:
               name: Variabler
+            Sprites:
+              name: figure
             Text:
               name: Tekst
             Conditionals:
               name: Betingelser
             Functions:
               name: Funktioner
+        ml-playground:
+          lessons:
+            intro:
+              name: Introduktion

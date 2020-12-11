@@ -9,6 +9,7 @@ bg:
         csp17_category_name: '"15-" 16 CS принципи'
         hoc_category_name: Hour of Code
         math_category_name: Математика
+        other_category_name: Друго
       name:
         course1:
           description: Курс 1 е предназначен за децата, които се учат да четат, но
@@ -3557,3 +3558,7 @@ bg:
           lesson_groups:
             lg_1:
               display_name: Съдържание
+        ml-playground:
+          lessons:
+            intro:
+              name: Въведение

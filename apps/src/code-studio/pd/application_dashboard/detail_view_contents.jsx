@@ -584,6 +584,7 @@ export class DetailViewContents extends React.Component {
         }
         onChange={this.handleScholarshipStatusChange}
         disabled={!this.state.editing}
+        isWorkshopAdmin={this.props.isWorkshopAdmin}
       />
     );
   };
@@ -621,14 +622,6 @@ export class DetailViewContents extends React.Component {
             >
               Delete Application
             </MenuItem>
-            <ConfirmationDialog
-              show={this.state.showDeleteApplicationConfirmation}
-              onOk={this.handleDeleteApplicationConfirmed}
-              onCancel={this.handleDeleteApplicationCancel}
-              headerText="Delete Application"
-              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
-              okText="Delete"
-            />
             {this.props.applicationData.registered_fit_weekend && (
               <MenuItem
                 style={styles.delete}
@@ -651,7 +644,18 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     } else {
-      return <Button onClick={this.handleEditClick}>Edit</Button>;
+      return [
+        <Button id="edit" key="edit" onClick={this.handleEditClick}>
+          Edit
+        </Button>,
+        <Button
+          id="delete"
+          key="delete"
+          onClick={this.handleDeleteApplicationClick}
+        >
+          Delete
+        </Button>
+      ];
     }
   };
 
@@ -702,6 +706,14 @@ export class DetailViewContents extends React.Component {
         {selectControl}
         <InputGroup.Button style={styles.editButton}>
           {this.renderEditButtons()}
+          <ConfirmationDialog
+            show={this.state.showDeleteApplicationConfirmation}
+            onOk={this.handleDeleteApplicationConfirmed}
+            onCancel={this.handleDeleteApplicationCancel}
+            headerText="Delete Application"
+            bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+            okText="Delete"
+          />
         </InputGroup.Button>
       </InputGroup>
     );
@@ -729,7 +741,7 @@ export class DetailViewContents extends React.Component {
   renderHeader = () => {
     const rubricURL =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? 'https://drive.google.com/file/d/1070Jf9VKtuJLOQJTCaO7fxUWyLOEHBdK/view'
+        ? 'https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view'
         : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
 
     return (
@@ -752,7 +764,7 @@ export class DetailViewContents extends React.Component {
           {this.renderPointsSection()}
 
           <h4>
-            <a target="_blank" href={rubricURL}>
+            <a target="_blank" rel="noopener noreferrer" href={rubricURL}>
               View Rubric
             </a>
           </h4>
@@ -1177,7 +1189,11 @@ export class DetailViewContents extends React.Component {
           <h4>{this.props.applicationData.principal_approval_state}</h4>
           <p>
             Link to principal approval form:{' '}
-            <a href={principalApprovalUrl} target="_blank">
+            <a
+              href={principalApprovalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {principalApprovalUrl}
             </a>
           </p>

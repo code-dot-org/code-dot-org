@@ -1656,6 +1656,56 @@ pt-BR:
           Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
 
 
+        teacher_markdown: |2-
+           Aqui há alguns poucos sites para iniciar os estudos dos alunos. Esses sites são, geralmente, apropriados para escolas, mas como o conteúdo com eles mudam frequentemente, então **nós recomendamos fortemente que voce verifique cada site por conteúdo inapropriado antes de compartilhá-los com os alunos**.
+
+          [key]
+
+          ##  Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Visão geral
+
+          Esse site é focado em notícias sobre a Disney, mas você pode ser surpreendido pelo grande papel que a Ciência da Computação desenvolve em todas as suas diferentes formas de entretenimento. Porque isso não é um site focado em ciência da computação, você terá de utilizar a função de busca para localizar artigos relevantes.
+
+          ### Campos relevantes
+
+          * Filme/TV
+          * Animação
+          * Robótica/Animatronics
+          * Jogos
+
+          ## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Visão Geral
+
+          Videos mostrando uma variedade de pessoas trabalhando em diversas áreas da indústria de jogos, falando sobre o que eles fazem.
+
+          ### Campos Relevantes
+
+          * Jogos
+          * Animação
+          * Arte
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Visão geral
+
+          "Music Think Tank" é um blog direcionado à pessoas trabalhando na indústria musical. Não é apenas um site de ciência da computação, mas buscando por "ciência da computação" ou "programação" revelará alguns artigos interessantes.
+
+          ### Campos Relevantes
+
+          * Música
+
+          ## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Overview
+
+          Enquanto esse podcast não provém muita informação na forma de programação profissional (como pessoa que trabalha profissionalmente), é um ótimo recurso para ver as mais variadas formas nas quais amadores estão fazendo entretenimento com código.
+
+          ### Campos Relevantes
+
+          * Todos
+          [/key]
       CSD U3 Functions Prediction define first:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -3670,6 +3720,17 @@ pt-BR:
           Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
 
           Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
+        teacher_markdown: |-
+          Nessa atividade, os alunos serão apresentados a uma pequena quantidade de aplicativos relativamente restritas.
+
+          * Quiz me
+          * Decision Maker
+          * List Manager
+          * Crowdsourcing
+
+          Para alunos mais jovens ou inexperientes você pode limita-los a somente esses tipos de aplicativos. Nós escolhemos especificamente esses exemplos  porque são relativamente fáceis para prototipar no App Lab.
+
+          Se você permitir que os alunos se disperssem desses, esteja atento que alguns tipos de aplicativos são mais difíceis de criar no App Lab e pode requerer mais criatividade ao desenvolver um protótipo. Por exemplo, App Lab não tem a funcionalidade de mapeamento, logo, se os alunos quisessem uma aplicação de mapeamento, eles precisariam encontrar ou criar uma imagem estática de um mapa para usar no aplicativo.
       Example App Types_2018_2019:
         markdown: |
           # Exemplos de tipos de aplicativos
@@ -3687,6 +3748,17 @@ pt-BR:
           Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
 
           Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
+        teacher_markdown: |-
+          Nessa atividade, os alunos serão apresentados a uma pequena quantidade de aplicativos relativamente restritas.
+
+          * Quiz me
+          * Decision Maker
+          * List Manager
+          * Crowdsourcing
+
+          Para alunos mais jovens ou inexperientes você pode limita-los a somente esses tipos de aplicativos. Nós escolhemos especificamente esses exemplos  porque são relativamente fáceis para prototipar no App Lab.
+
+          Se você permitir que os alunos se disperssem desses, esteja atento que alguns tipos de aplicativos são mais difíceis de criar no App Lab e pode requerer mais criatividade ao desenvolver um protótipo. Por exemplo, App Lab não tem a funcionalidade de mapeamento, logo, se os alunos quisessem uma aplicação de mapeamento, eles precisariam encontrar ou criar uma imagem estática de um mapa para usar no aplicativo.
       ForLoopFun-Unplugged:
         markdown: |
           # Divirta-se com Laços For
@@ -6033,20 +6105,12 @@ pt-BR:
             irá fazer o programa falhar? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: O programa não falhará. Scrat vai chegar à bolota.
-          feedback: Incorreto. Scrat irá para o caminho errado após sua última volta.
-        - text: Scrat irá para o caminho errado depois da sua última volta.
-          correct: true
-          feedback: Correto!
-        - text: Scrat dá poucos passos e acaba com a bolota.
-          feedback: Incorreta. Dar apenas alguns passos acontece depois que Scrat
-            vira na direção errada.
+        - {}
+        - correct: true
+        - correct: true
         - text: Eu não sei.
-          feedback: 'O primeiro erro é que o Scrat segue o caminho errado após a sua
-            volta final. '
         questions:
-        - text: 'Olhe atentamente para o código abaixo. Qual é o primeiro bug que
-            irá fazer o programa falhar? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: O pássaro vai acabar um passo antes do porco.
@@ -7220,6 +7284,21 @@ pt-BR:
             quando você clicar em "Executar"?
       courseD_project_exemplars_2020_2021:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          | Velocidade Aleatória no Quique (Basquete) | Multiplicando Stormtroopers (Guerra nas Estrelas) |
+          |---|---|
+          | [![Velocidade Aleatória no Quique (Basquete)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Velocidade Aleatória no Quique (Basquete)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplicando Stormtroopers (Guerra nas Estrelas)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplicando Stormtroopers (Guerra nas Estrelas)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | A bola muda de velocidade quando quica! | Evite os stormtroopers ou eles vão multiplicar! |
+
+
+          | Panic! at the Disco (Festa dançante) | Cena na praia (Artista) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Padrão (Artista)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Flores de floco de neve (Congelados)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Flores de floco de neve (Congelados)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Seus dançarinos de apoio continuam trocando seus movimentos! | Tente adicionar mais cor e plano de fundo a esta cena! |
       courseE_multi_bee_functions_predict1:
         answers:
         - text: O mesmo programa também irá funcionar para esse desafio.
@@ -7405,8 +7484,40 @@ pt-BR:
 
       courseE_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          ## Laboratório de Sprite
+
+          | Dança do Monstro (Laboratório de Sprite) | Jogo do Bolinho (Laboratório de Sprite) |
+          |---|---|
+          | [![Dança do Monstro (Laboratório de Sprite)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Dança do Monstro (Laboratório de Sprite")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Jogo do Bolinho (Laboratório de Sprite)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Jogo do Bolinho (Laboratório de Sprite")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Tente adicionar texto ou uma pontuação a este jogo! | Tente adicionar texto ou uma pontuação a este jogo! |
+
+          ## Artista
+
+          | Padrão (Artista) | Flores de flocos de neve (Congelado) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Padrão (Artista)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Flores de flocos de neve (Congelado)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Vamos ser criativos com loops misturados! | Vamos ser criativos com funções! |
       courseExpress_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projeto
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          | Panic! at the Disco (Festa Dançante) | Cena na Praia (Artista) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Padrão (Artista)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Flores de flocos de neve (Congelado)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Ligue a sua Discoteca enquanto seus dançarinos de apoio a mudam! | Tente adicionar mais cor e plano de fundo a esta cena! |
+
+          | Flores de flocos de neve (Congelado) | Airplane Game (Sprite Lab) |
+          |---|---|
+          | [![Flores de flocos de neve (Congelado)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Jogo do Avião (Laboratório de Sprite)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Jogo do Avião (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Vamos ser criativos com funções! | Tente adicionar texto ou uma pontuação a este jogo! |
       courseF_bee_variables_8a_2018:
         answers:
         - text: A abelha não coletará nenhum néctar porque a variável não é chamada
@@ -8154,6 +8265,24 @@ pt-BR:
 
       courseF_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          ## Laboratório de Sprite
+
+          | Jogo do Bolinho (Laboratório de Sprite) |  Jogo do Avião (Laboratório de Sprite) |
+          |---|---|
+          | [![Jogo do Bolinho (Laboratório de Sprite)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Jogo do Bolinho (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![Jogo do Avião (Laboratório de Sprite)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png "Jogo do Avião (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Tente adicionar texto ou uma pontuação a este jogo! | Tente adicionar texto ou uma pontuação a este jogo! |
+
+          ## Artista
+
+          | Flores (Artista) | Espiral (Artista) |
+          |---|---|
+          | [![Flores (Artista)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png "Flores (Artista)")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Espiral (Artista)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png "Espiral (Artista)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)  |
+          | Vamos ser criativos com variáveis! | Vamos ser criativos com Loops usando For! |
       coursee_prediction_artistfunction2:
         answers:
         - text: O artista resolverá o quebra-cabeça corretamente.
@@ -8234,6 +8363,7 @@ pt-BR:
           restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        title: Questionário prévio para Estudantes do Descobertas de CC
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: |2-
 
@@ -8364,10 +8494,37 @@ pt-BR:
           Pesquisa rápida do CS Discoveries!
       csf_be_a_super_digital_citizen:
         content1: descrição aqui
+        markdown: |-
+          # Cidadão Super Digital
+
+          ## Como podemos ser defensores quando vemos cyberbullying?
       csf_password_power-up:
         content1: descrição aqui
+        markdown: |-
+          # Reforce sua senha
+
+          ## Dicas para Memorizar sua Senha
+
+          * Comece com uma **frase** memorável.
+          * Somente seus **pais** devem saber sua senha.
+          * Nunca use nenhuma informação de identidade **privada** na sua senha.
+          * Crie senhas com pelo menos **oito** caracteres.
+          * Use letras, números e **símbolos** na sua senha.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: descrição aqui
+        markdown: |-
+          # PARE a Maldade
+
+          ## O que você deve fazer se alguém é mau com você online?
+
+          * **P**rocure se afastar.
+          * **A**cione um adulto de confiança.
+          * **R**eavalie os sites primeiro.
+          * **E**spere e pense online
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel irá coletar 4 peças do tesouro usando este código.
@@ -8445,3 +8602,77 @@ pt-BR:
           \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nIr para o plano de aulas\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # O Poder das Palavras
+
+          ## O que você deve fazer quando alguém usa linguagem perversa ou violenta na internet?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Informação Privada e Pessoal
+
+          ## Qual informação sobre você é OK para compartilhar online?
+      courseD_EOC_2020:
+        description: Você alcançou a última lição do Curso D! Escolha um projeto para
+          criar.
+      courseE_EOC_2020:
+        description: Você alcançou o final do Curso E! Escolha um projeto para criar.
+      courseExpress_EOC_2020:
+        description: Você alcançou a última lição do Curso Expresso! Escolha um projeto
+          para criar.
+      courseF_EOC_2020:
+        description: Você alcançou o final do Curso F! Escolha um projeto para criar.
+      csf_digital_trails:
+        markdown: |-
+          #Siga a Trilha Digital
+
+          ## Qual informação é OK de ter em suas pegadas digitais?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          #Minha Vizinhança Online
+
+          ##Como você vai a lugares online seguros?
+      CSD Interactive Animations and Games Post-Project Test:
+        title: Teste Pós-Projeto de Animações e Jogos Interativos
+      CSD Physical Computing Post-Project Test:
+        title: Teste Pós-Projeto de Computação Física
+      CSD User Centered Design Post-Project Test:
+        title: 'Design Centrado no Usuário: Teste Pós-Projeto'
+      CSD Web Development Post-Project Test:
+        title: Teste Pós-Projeto de Desenvolvimento Web
+      csd-post-survey-2017-levelgroup:
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
+      csd-post-survey-2017-levelgroup_2018:
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
+          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
+          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
+          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
+          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
+          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      csd-post-survey-intro-2019:
+        markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
+      csd-post-survey-levelgroup_2019:
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
+      CSD U1 Test:
+        title: Teste Pós-Projeto para Computadores e Resolução de Problemas
+      CSD U5 test:
+        title: Teste pós-projeto de dados e sociedade
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Visão Geral\n\nA turma se divide em grupos para projetar barcos
+          de folha de alumínio que suportarão tantos centavos quanto for possível.
+          \ No final da aula, os grupos refletirão sobre sua experiência com a atividade
+          e farão conexões com os tipos de solução de problemas que usarão para o
+          restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Questionário prévio para Estudantes do Descobertas de CC
+      csd-pre-survey-levelgroup_2019:
+        title: Questionário prévio para Estudantes do Descobertas de CC
+      outbreak_story:
+        content1: descrição aqui
+      outbreak_story2:
+        content1: descrição aqui

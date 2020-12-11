@@ -853,6 +853,7 @@ uk-UA:
     їхні відповіді на питання з відкритими формулюваннями, обираючи призначений курс
     з випадного меню вгорі.
   dashboard_sections_new_section: Нова група
+  dashboard_sections_new_google_section: Імпорт розділу з Google Classroom
   dashboard_sections_jumbotron_instruction: Створюйте нові групи і додавайте до них
     учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження
     прогресу та керування обліковими записами.
@@ -909,7 +910,7 @@ uk-UA:
   dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному
     на рядок:'
   dashboard_students_new_google_classroom_section: Щоб додати учнів, використуйте
-    <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після
+    <a href='http://classroom.google.com' target='_blank'>Google Клас</a>, а тоді
     клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі.
   dashboard_students_new_section: Ви створили нову групу! Тепер додавайте учнів, використовуючи
     кнопки <b>Додати учня</b> та <b>Додати учнів</b>.
@@ -1170,6 +1171,24 @@ uk-UA:
   coursed-2017_name: Курс D (2017)
   coursee-2017_name: Курс E (2017)
   coursef-2017_name: Курс F (2017)
+  coursea-2018_name: Курс А (2018)
+  courseb-2018_name: Курс В (2018)
+  coursec-2018_name: Курс С (2018)
+  coursed-2018_name: Курс D (2018)
+  coursee-2018_name: Курс Е (2018)
+  coursef-2018_name: Курс F (2018)
+  coursea-2019_name: Курс А (2019)
+  courseb-2019_name: Курс В (2019)
+  coursec-2019_name: Курс С (2019)
+  coursed-2019_name: Курс D (2019)
+  coursee-2019_name: Курс Е (2019)
+  coursef-2019_name: Курс F (2019)
+  coursea-2020_name: Курс А (2020)
+  courseb-2020_name: Курс В (2020)
+  coursec-2020_name: Курс С (2020)
+  coursed-2020_name: Курс D (2020)
+  coursee-2020_name: Курс Е (2020)
+  coursef-2020_name: Курс F (2020)
   express-2018_name: Експрес курс (2018)
   csd2_name: 'Блок 2: Веб-розробка'
   csd3_name: 'Блок 3: Анімація та ігри'
@@ -1879,6 +1898,7 @@ uk-UA:
     працюватимуть.
   flappy_shortcode: махати
   header_home: Головна
+  header_my_dashboard: Моя майстерня
   header_courses: курси
   header_course_catalog: Каталог курсів
   header_project_gallery: Проекти
@@ -1942,6 +1962,10 @@ uk-UA:
     Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Нікі Мінаж та 34 інших виконавців та груп!
   hoc_overview_start_tutorial: Початок
+  hoc_overview_more_resources: Щоб отримати додаткові ресурси для навчання з класом
+    дистанційно, див. наш посібник з розміщення [віртуального Hour of Code](https://hourofcode.com/us/how-to/virtual).
+    Що стосується учнів, які мають технологічні обмеження або проблеми з підключенням,
+    ви можете надіслати їм цей пакет для [роботи з Hour of Code без підключення](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc2018_creativity: творчість
   hoc2018_creativity_create: Створити
   hoc2018_creativity_hoc_coming: Наближається Година коду…
@@ -2022,7 +2046,11 @@ uk-UA:
   hoc2018_dance_measure_colon: 'Крок:'
   page_not_found_title: Сторінка не знайдена
   page_not_found_header: '404: Сторінка не знайдена'
+  hoc2018_mc_thank_microsoft: Ми дякуємо Microsoft за підтримку нашого бачення та
+    місії щодо забезпечення кожної дитини можливістю вивчати інформатику та навички,
+    необхідні для досягнення успіху в 21 столітті.
   hoc2019_mc_more_coding_resources: Більше Coding ресурсів
   hoc2019_dance_previous_versions: |-
     Шукаєте попередню версію Dance Party?
     Натисніть тут, щоб почати [Частина 1](%{dance_2018_link}) та [Частина 2](%{dance_extras_2018_link}) з останнього року.
+  footer_powered_by_aws: На потужностях Amazon Web Services

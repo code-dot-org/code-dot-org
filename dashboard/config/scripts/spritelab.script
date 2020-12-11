@@ -1,4 +1,4 @@
-script_announcements [{"notice"=>"This Progression is No Longer Supported", "details"=>"The standalone Sprite Lab progression is no longer supported by Code.org. We recommend you click \"Learn More\" to try the Express course.", "link"=>"https://studio.code.org/s/express", "type"=>"failure", "visibility"=>"Teacher and student"}]
+announcements [{"notice"=>"This Progression is No Longer Supported", "details"=>"The standalone Sprite Lab progression is no longer supported by Code.org. We recommend you click \"Learn More\" to try the Express course.", "link"=>"https://studio.code.org/s/express", "type"=>"failure", "visibility"=>"Teacher and student"}]
 
 lesson 'Fish Tank - Creating Sprites', display_name: 'Fish Tank - Creating Sprites'
 level 'Fish Tank 1-validated'

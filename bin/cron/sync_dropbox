@@ -44,7 +44,7 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
   FOLDERS.each do |key, value|
     # 'unison' will sync the two folders. It will return true on success and false on failure.
     # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
-    command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
+    command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod -log -logfile /home/ubuntu/unison.log"
     stdout, stderr, _ = Open3.capture3(command)
     next if stdout == "" && stderr == ""
     error_message = <<~ERROR_MSG
@@ -64,5 +64,5 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
   end
 end
 
-# Reports to Slack if current minute is a multiple of 5
-logger.report! 5
+# Reports to Slack if current minute is a multiple of 1
+logger.report! 1

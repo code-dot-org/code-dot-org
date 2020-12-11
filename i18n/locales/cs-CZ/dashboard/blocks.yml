@@ -88,9 +88,6 @@ cs:
             MOVES.Kick: Kopou
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} dělá {MOVE} {DIR} navždy"
         options:
@@ -110,9 +107,6 @@ cs:
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Thriller: Thriller
             MOVES.Rest: Žádný
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: změnit {SPRITE} {PROPERTY} o {VAL}
         options:
@@ -189,9 +183,6 @@ cs:
             MOVES.XArmsUp: Napnutí
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} dělá {MOVE} {DIR} jednou"
         options:
@@ -220,9 +211,6 @@ cs:
             MOVES.XArmsUp: Napnutí
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'opakovat každých {N} taktů po {START} '
       Dancelab_everySeconds:
@@ -973,9 +961,13 @@ cs:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: v {N} {UNIT}
         options:
           UNIT:
             '"seconds"': sekund
+            '"frames"': Rámce
+      gamelab_bounceOff:
+        text: "{SPRITE} odrazí se {TARGET}"
       gamelab_changePropBy:
         text: změnit {SPRITE} {PROPERTY} o {VAL}
         options:
@@ -997,6 +989,8 @@ cs:
         text: klik na {SPRITE}
       gamelab_comment:
         text: 'komentář: {COMMENT}'
+      gamelab_countByAnimation:
+        text: počet {SPRITE}
       gamelab_createNewSprite:
         text: "vytvoř novou postavu \n nazvanou {NAME} \n s kostýmem {COSTUME} \n na {LOCATION}"
       gamelab_destroy:
@@ -1005,6 +999,8 @@ cs:
         text: přetažení
       gamelab_edgesDisplace:
         text: hrany bloku {SPRITE} z přesunutí
+      gamelab_getAllSprites:
+        text: všechny postavy
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1020,13 +1016,17 @@ cs:
         options:
           CHOICE:
             '"this"': tento
+            '"other"': ostatní
       gamelab_getTime:
+        text: čas v {UNIT}
         options:
           UNIT:
             '"seconds"': sekund
+            '"frames"': Rámce
       gamelab_hideTitleScreen:
         text: skrýt titulní obrazovku
       gamelab_isKeyPressed:
+        text: "{KEY} je stisknuta  "
         options:
           KEY:
             '"up"': nahoru
@@ -1062,6 +1062,8 @@ cs:
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} se dotýká hran"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE}se dotýká {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} skoč na {LOCATION}"
       gamelab_keyPressed:
@@ -1104,6 +1106,14 @@ cs:
             '"z"': z
       gamelab_locationAt:
         text: 'umístění x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} bodů {DIRECTION} od {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': sever
+            '"East"': východ
+            '"South"': jih
+            '"West"': západ
       gamelab_locationMouse:
         text: umístění myši
       gamelab_locationOf:
@@ -1112,6 +1122,8 @@ cs:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
+      gamelab_makeNumSprites:
+        text: vytvoř {NUM} nových {ANIMATION_NAME} postav
       gamelab_mirrorSprite:
         text: "{SPRITE} tvář {DIRECTION}"
         options:
@@ -1136,6 +1148,8 @@ cs:
         text: pohni {SPRITE} o {DISTANCE} pixelů směrem k {TARGET}
       gamelab_objectSpritePointer:
         text: klik na {SPRITE}
+      gamelab_patrollingUpDown:
+        text: hlídkovat nahoru a dolů
       gamelab_playSound:
         text: přehraj zvuk {SOUND}
       gamelab_pointInDirection:
@@ -1160,6 +1174,8 @@ cs:
         text: postava {SPRITE} zastav {BEHAVIOR}
       gamelab_removeTint:
         text: odstraň barvu z {THIS}
+      gamelab_repeatForever:
+        text: opakuj do nekonečna
       gamelab_setAnimation:
         text: změň kostým {THIS} na {ANIMATION}
       gamelab_setBackground:
@@ -1180,6 +1196,8 @@ cs:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodou
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: žádný
+      gamelab_setBackgroundImageAs:
+        text: nastav pozadí na {IMG}
       gamelab_setProp:
         text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1215,6 +1233,8 @@ cs:
             '"while"': dokud
       gamelab_subjectSpritePointer:
         text: klik na {SPRITE}
+      gamelab_tumbling:
+        text: cvičení
       gamelab_turn:
         text: otoč {SPRITE} {DIRECTION} {N} stupňů
         options:
@@ -1722,7 +1742,6 @@ cs:
             '"stoneBricks"': kamenné cihly
             '"mossyStoneBricks"': kamenné cihly obrostlé mechem
             '"crackedStoneBricks"': popraskané kamenné cihly
-            '"decorativeStoneBricks"': dekorativní kamenné cihly
             '"blueCoralBlock"': modrý korálový blok
             '"pinkCoralBlock"': růžový korálový blok
             '"magentaCoralBlock"': červenorudý korálový blok

@@ -6,6 +6,7 @@ th:
         csf_category_name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
         hoc_category_name: ช่วงเวลาของ Code
         math_category_name: คำนวณ
+        other_category_name: อาชีพอื่น ๆ
       name:
         course1:
           title: คอร์ส 1
@@ -3031,3 +3032,7 @@ th:
               name: คอร์ส A
             Course B:
               name: คอร์ส B
+        ml-playground:
+          lessons:
+            intro:
+              name: บทเกริ่นนำ

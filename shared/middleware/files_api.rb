@@ -891,13 +891,23 @@ class FilesApi < Sinatra::Base
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
         rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-        if %i(adult racy).include? rating
+
+        case rating
+        when :adult, :racy
           # Incrementing abuse score by 15 to differentiate from manually reported projects
           new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
           FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
           response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
           not_found
+          return
+        when :unknown
+          # Content moderation was unable to scan the image, usually because we've exceeded
+          # the moderation service's request limit.  Return the default image for now and
+          # cache for 1-2 minutes to spread out future requests to the moderation service.
+          cache_for rand(60..120).seconds
+          send_file apps_dir('/static/projects/project_default.png'), type: 'image/png'
+          return
         end
       end
     end

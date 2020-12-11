@@ -9,6 +9,7 @@ hy:
         csp17_category_name: "'16-'17 CS Principles"
         hoc_category_name: Կոդի ժամ
         math_category_name: Մաթեմատիկա
+        other_category_name: Այլ
       name:
         course1:
           title: Course 1
@@ -2462,3 +2463,7 @@ hy:
               name: Կուրս A
             Course B:
               name: Կուրս B
+        ml-playground:
+          lessons:
+            intro:
+              name: ներածություն

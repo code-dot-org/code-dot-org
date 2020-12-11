@@ -7,9 +7,6 @@ require_relative '../../dashboard/config/environment'
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
 JOTFORM_SURVEY_RESPONSE_CLASSES = [
-  Pd::WorkshopDailySurvey,
-  Pd::WorkshopFacilitatorDailySurvey,
-  Pd::PostCourseSurvey,
   Pd::MiscSurvey
 ].freeze
 

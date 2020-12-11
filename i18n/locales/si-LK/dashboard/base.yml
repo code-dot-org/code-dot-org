@@ -697,6 +697,4 @@ si:
         opt_in_no: 'නැහැ'
   cookie_banner:
     accept: 'මම එකඟයි'
-  gdpr_dialog:
-    yes: 'ඔව්'
   copy: 'පිටපත් කරන්න'

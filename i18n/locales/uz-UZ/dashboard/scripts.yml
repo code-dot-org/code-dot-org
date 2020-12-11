@@ -5,6 +5,7 @@ uz:
       category:
         hoc_category_name: Dasturlash soati
         math_category_name: Matematik
+        other_category_name: Boshqa
       name:
         course1:
           lessons:
@@ -186,6 +187,8 @@ uz:
               name: Funksiyalar
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
         k5concepts:
@@ -218,6 +221,12 @@ uz:
               name: Ro‘yxatlar
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
+        workshop-gamelab:
+          lessons:
+            Sprites:
+              name: Spraytlar
+            Input:
+              name: Kiritish
         coursee-ramp:
           lessons:
             Conditionals:
@@ -234,6 +243,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -250,6 +261,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -260,6 +273,24 @@ uz:
           lessons:
             Bounce:
               name: Sakrash
+        coursea-2017:
+          title: Kurs A
+          assignment_family_title: Kurs A
+        courseb-2017:
+          title: Kurs B
+          assignment_family_title: Kurs B
+        coursec-2017:
+          title: Kurs C
+          assignment_family_title: Kurs C
+        coursed-2017:
+          title: Kurs D
+          assignment_family_title: Kurs D
+        coursee-2017:
+          title: Kurs E
+          assignment_family_title: Kurs E
+        coursef-2017:
+          title: Kurs F
+          assignment_family_title: Kurs F
         pre-express-2017:
           lessons:
             Spelling Bee:
@@ -292,6 +323,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -300,6 +333,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -308,6 +343,8 @@ uz:
           lessons:
             Lists:
               name: Ro‘yxatlar
+        coursea-2018:
+          assignment_family_title: Kurs A
         express-2018:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -318,7 +355,10 @@ uz:
               name: Estafetali dasturlash
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
+        courseb-2018:
+          assignment_family_title: Kurs B
         coursed-2018:
+          assignment_family_title: Kurs D
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Katakchali varaqda dasturlash
@@ -326,16 +366,21 @@ uz:
               name: Katakchali varaqda dasturlash
             Relay Programming:
               name: Estafetali dasturlash
+        coursec-2018:
+          assignment_family_title: Kurs C
         csd6-2018:
           lessons:
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
         coursee-2018:
+          assignment_family_title: Kurs E
           lessons:
             Internet:
               name: Internet
             Minecraft Hour of Code:
               name: Maynkraft Dasturlash soati
+        coursef-2018:
+          assignment_family_title: Kurs F
         csp1-2018:
           lessons:
             The Internet:
@@ -356,6 +401,8 @@ uz:
           lesson_groups:
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             The Artist:
               name: Rassom
@@ -374,6 +421,8 @@ uz:
               name: Estafetali dasturlash
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Spraytlar
             csf_functions:
               display_name: Funksiyalar
         express-2019:
@@ -386,6 +435,8 @@ uz:
               display_name: Funksiyalar
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             Relay Programming:
               name: Estafetali dasturlash
@@ -420,6 +471,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -440,6 +493,10 @@ uz:
           lessons:
             The Internet:
               name: Internet
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Spraytlar
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -520,6 +577,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Conditionals:
               name: Shart buyruqlari
             Functions:
@@ -564,6 +623,8 @@ uz:
               display_name: Sikllar
             csf_conditionals:
               display_name: Shart buyruqlari
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             Conditionals:
               name: Shart buyruqlari
@@ -573,6 +634,8 @@ uz:
               display_name: Sikllar
             csf_conditionals:
               display_name: Shart buyruqlari
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             Conditionals:
               name: Shart buyruqlari
@@ -606,6 +669,8 @@ uz:
               name: Funksiyalar
             Text:
               name: Matn
+            Sprites:
+              name: Spraytlar
         coursea-2020:
           lesson_groups:
             csf_loops:
@@ -631,12 +696,16 @@ uz:
               name: Estafetali dasturlash
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Spraytlar
             csf_functions:
               display_name: Funksiyalar
         coursef-2020:
           lesson_groups:
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_sprites:
+              display_name: Spraytlar
           lessons:
             Internet:
               name: Internet
@@ -650,6 +719,8 @@ uz:
               display_name: Funksiyalar
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_sprites:
+              display_name: Spraytlar
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -683,6 +754,8 @@ uz:
           lessons:
             Variables:
               name: O‘zgaruvchilar
+            Sprites:
+              name: Spraytlar
             Sprite Properties:
               name: Sprait hususiyatlari
             Text:
@@ -691,3 +764,9 @@ uz:
               name: Shart buyruqlari
             Functions:
               name: Funksiyalar
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Kurs A
+            Course B:
+              name: Kurs B

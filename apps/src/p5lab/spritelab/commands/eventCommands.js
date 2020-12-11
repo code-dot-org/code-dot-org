@@ -21,9 +21,17 @@ export const commands = {
     }
   },
 
+  repeatForever(callback) {
+    coreLibrary.addEvent('repeatForever', {}, callback);
+  },
+
   spriteClicked(condition, spriteArg, callback) {
     if (condition === 'when' || condition === 'while') {
       coreLibrary.addEvent(condition + 'click', {sprite: spriteArg}, callback);
     }
+  },
+
+  whenPromptAnswered(variableName, callback) {
+    coreLibrary.registerPromptAnswerCallback(variableName, callback);
   }
 };

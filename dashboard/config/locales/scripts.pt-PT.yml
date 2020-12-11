@@ -8,6 +8,7 @@ pt:
         hoc_category_name: Hora de Código
         math_category_name: Matemática
         research_studies_category_name: Trabalhos de Investigação
+        other_category_name: Outro
       name:
         course1:
           title: Curso 1
@@ -3420,3 +3421,7 @@ pt:
               name: Curso A
             Course B:
               name: Curso B
+        ml-playground:
+          lessons:
+            intro:
+              name: Introdução

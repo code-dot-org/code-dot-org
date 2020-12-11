@@ -92,7 +92,7 @@ export default {
   customInputTypes,
   install(blockly, blockInstallOptions) {
     // Legacy style block definitions :(
-    const generator = blockly.Generator.get('JavaScript');
+    const generator = blockly.getGenerator();
 
     const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {

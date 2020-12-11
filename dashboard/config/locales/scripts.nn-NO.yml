@@ -15,6 +15,7 @@ nn:
         full_course_category_name: Alle kurs
         hoc_category_name: Kodetimen
         math_category_name: Matematikk
+        other_category_name: Anna
       name:
         course1:
           title: Kurs 1
@@ -1277,6 +1278,8 @@ nn:
               name: 'Puslespel: Lær å dra og sleppe'
             Loops:
               name: Løkker
+            Loops Unplugged:
+              name: Løkker utan datamaskin
             'Real-life Algorithms: Plant a Seed':
               name: 'Verkelege algoritmar: Plante eit frø'
         grade4:
@@ -1293,6 +1296,8 @@ nn:
               name: 'Puslespel: Lær å dra og sleppe'
             Loops:
               name: Løkker
+            Loops Unplugged:
+              name: Løkker utan datamaskin
             Unspotted Bugs:
               name: Feil som ikkje er funne
         grade5:
@@ -1630,6 +1635,8 @@ nn:
               name: Digitalt statsborgerskap
             Build a Play Lab Game:
               name: Bygg eit spel i Spellab
+            Private and Personal Information:
+              name: Privat og personleg informasjon
             Internet:
               name: Internett
             Crowdsourcing:
@@ -2099,6 +2106,8 @@ nn:
               name: Løkker i løkke
             Conditionals:
               name: Betingelser
+            Private and Personal Information:
+              name: Privat og personleg informasjon
             Build a Play Lab Game:
               name: Bygg eit spel i Spellab
             Internet:
@@ -2159,6 +2168,8 @@ nn:
               name: Løkker i løkker i Bie/Zombie
             Conditionals:
               name: Betingelser
+            Private and Personal Information:
+              name: Privat og personleg informasjon
             Build a Play Lab Game:
               name: Bygg eit spel i Spellab
             Internet:
@@ -2260,6 +2271,8 @@ nn:
               name: Introduksjon
             Conditionals:
               name: Betingelser
+            Private and Personal Information:
+              name: Privat og personleg informasjon
             Build a Play Lab Game:
               name: Bygg eit spel i Spellab
             Internet:
@@ -2416,6 +2429,8 @@ nn:
               name: Hendingar i Spellab
             Move It, Move It:
               name: Flytt den, flytt den
+            Copyright and Creativity:
+              name: Det er supert å lage og spele rettferdig
         coursed-2018:
           assignment_family_title: Kurs D
           lessons:
@@ -2477,8 +2492,12 @@ nn:
               name: Mine robotvener
             Building a Foundation:
               name: Bygge eit fundament
+            'Loops: My Loopy Robotic Friends':
+              name: Mine løkkete robotvener
             Introduction:
               name: Introduksjon
+            Private and Personal Information:
+              name: Privat og personleg informasjon
             'Functions: Songwriting':
               name: Låtskriving
             Build a Play Lab Game:
@@ -2491,6 +2510,8 @@ nn:
               name: Vilkår med kort
             Minecraft Hour of Code:
               name: Kodetimen med Minecraft
+            Copyright and Creativity:
+              name: Digital deling
         coursef-2018:
           assignment_family_title: Kurs F
           description_short: Lær alle konspta i grunnleggande informatikk og skap
@@ -2505,6 +2526,8 @@ nn:
               name: Mine robotvener
             Building a Foundation:
               name: Bygge eit fundament
+            'Loops: My Loopy Robotic Friends':
+              name: Mine løkkete robotvener
             Introduction:
               name: Introduksjon
             Ice Age Play Lab:
@@ -2760,6 +2783,8 @@ nn:
               name: Flytt den, flytt den
             Your Digital Footprint:
               name: Dine digitale fotspor
+            Copyright and Creativity:
+              name: Det er supert å lage og spele rettferdig
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og det store prosjektet
         fit-test:
@@ -2844,6 +2869,8 @@ nn:
               name: Internett
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Digital deling
         dance-low:
           lessons:
             Dance Party:
@@ -2896,6 +2923,8 @@ nn:
               name: Løkker i løkke
             Conditionals with Cards:
               name: Vilkår med kort
+            Private and Personal Information:
+              name: Privat og personleg informasjon
             'Functions: Songwriting':
               name: Låtskriving
             Internet:
@@ -2904,6 +2933,10 @@ nn:
               name: Crowdsourcing
             Conditionals in Minecraft:
               name: Betingelser i Minecraft
+            Digital Sharing:
+              name: Digital deling
+            Simon Says:
+              name: Simon seier
             Songwriting:
               name: Låtskriving
         express-2019:
@@ -2984,6 +3017,8 @@ nn:
               name: Hendingar i Spellab
             Binary Bracelets:
               name: Binær armbånd
+            Powerful Passwords:
+              name: Sterke passord
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -3028,6 +3063,8 @@ nn:
               name: Hendingar i Spellab
             'Loops: Getting Loopy':
               name: Me blir sløyfete
+            The Right App:
+              name: Den rette appen
         pre-express-2019:
           lesson_groups:
             csf_sequencing:
@@ -3565,6 +3602,10 @@ nn:
           lessons:
             Conditionals:
               name: Betingelser
+            Simon Says:
+              name: Simon seier
+            Private and Personal Information:
+              name: Privat og personleg informasjon
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -3609,6 +3650,10 @@ nn:
           lessons:
             Conditionals:
               name: Betingelser
+            Simon Says:
+              name: Simon seier
+            Private and Personal Information:
+              name: Privat og personleg informasjon
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -3626,6 +3671,10 @@ nn:
           lessons:
             Conditionals:
               name: Betingelser
+            Simon Says:
+              name: Simon seier
+            Private and Personal Information:
+              name: Privat og personleg informasjon
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -3762,6 +3811,8 @@ nn:
               name: Flytt den, flytt den
             'Loops: Getting Loopy':
               name: Me blir sløyfete
+            The Right App:
+              name: Den rette appen
             Events in Play Lab:
               name: Hendingar i Spellab
         coursec-2020:
@@ -3777,6 +3828,8 @@ nn:
             csf_events:
               display_name: Hendingar
           lessons:
+            Powerful Passwords:
+              name: Sterke passord
             Binary Bracelets:
               name: Binær armbånd
             'Events: The Big Event':
@@ -3823,8 +3876,14 @@ nn:
             csf_functions:
               display_name: Funksjonar
           lessons:
+            Simon Says:
+              name: Simon seier
+            Private and Personal Information:
+              name: Privat og personleg informasjon
             'Functions: Songwriting':
               name: Låtskriving
+            Digital Sharing:
+              name: Digital deling
         coursef-2020:
           description_short: Lær alle konspta i grunnleggande informatikk og skap
             din eigen kunst, historie eller spel.
@@ -3846,6 +3905,8 @@ nn:
               name: Internett
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Digital deling
         express-2020:
           lesson_groups:
             csf_warmup:
@@ -4018,3 +4079,9 @@ nn:
               name: Kurs A
             Course B:
               name: Kurs B
+            CS Discoveries:
+              name: Oppdagingar i informatikk
+        ml-playground:
+          lessons:
+            intro:
+              name: Introduksjon

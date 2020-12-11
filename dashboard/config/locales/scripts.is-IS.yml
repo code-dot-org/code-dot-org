@@ -19,6 +19,7 @@ is:
         hoc_category_name: Klukkustund kóðunar
         math_category_name: Reikningur
         research_studies_category_name: Rannsóknanám
+        other_category_name: Annað
       name:
         course1:
           title: Námskeið 1
@@ -3160,6 +3161,8 @@ is:
               name: Kynning
             Sprites:
               name: Kvikar
+            Input:
+              name: Inntak
             'Project: Interactive Card':
               name: 'Verkefni: Gagnvirkt kort'
         csd5-draft:
@@ -3755,6 +3758,8 @@ is:
               name: Stafsetning
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: annað
             Thanks:
               name: Þakkir
         csp-pre-survey-test-2017:
@@ -7570,3 +7575,11 @@ is:
               name: Námskeið A
             Course B:
               name: Námskeið B
+            CS Discoveries:
+              name: Uppgötvanir tölvunarfræði
+        ml-playground:
+          lessons:
+            intro:
+              name: Kynning
+            visualizing:
+              name: Sjóngerving gagna

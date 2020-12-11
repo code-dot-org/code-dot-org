@@ -1,28 +1,51 @@
 ---
-title: Så-gör-du guide
+title: Hour of Code How-to Guide
 ---
 
 {{ signup_button }}
 
 # Hur du planerar din Hour of Code
 
-### Häng på och introducera en grupp elever till deras första programmeringstimme med dessa steg. Hour of Code är enkelt att delta i - även för nybörjare! Om du skulle önska extra hjälp, så kan du hitta [lokala volontärer]({{ urls/volunteer_local }}) som kan hjälpa dig att göra Hour of Code i ditt klassrum.
+### Join the movement and introduce your students to computer science with these steps.
 
-### Se vår [deltagarguide om du fortfarande har frågor]({{ localized_files/participation_guide }}).
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Se vår [deltagarguide om du fortfarande har frågor]({{ localized_files/participation_guide }}).
+
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
+- [Marknadsför din Hour of Code](#promote-your-hour)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [Andra Hour of Code-resurser för lärare](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Se den här video-guiden <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+* * *
+
+<a id="explore-activities"></a>
+
+## 2. Explore activities and tutorials
 
 Vi har samlat en mängd roliga [elev-guidade övningar]({{ urls/learn }}) för alla åldrar och kunskapsnivåer. Det är populärt att låta eleverna testa själv-ledda övningar, men det finns ofta även lektionsplaner för lärare som kan ge stöd till diskussion eller förlänga aktiviteten. 
 
 Utforska aktiviteterna och bestäm i förväg om du vill välja en handledning för alla dina elever, eller låta varje individ välja sin egen. 
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Create your plan for the day
 
 ### Se över dina teknikbehov - datorer är inte ett krav!
 
@@ -31,11 +54,15 @@ Utforska aktiviteterna och bestäm i förväg om du vill välja en handledning f
 - Fixa hörlurar till din klass, eller be eleverna att ta med sig egna, om de övningar du väljer fungerar bäst med ljud.
 - Har du inte tillräckligt många enheter? Använd [par-programmering](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever sitter i par, hjälper de varandra och behöver mindre stöttning av läraren. De ser också att programmering är socialt och bygger på samarbete.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Välj datum och tid
 
 Barn och vuxna världen över deltar i Hour of Code under datavetenskapens utbildningsvecka (9-13 december) då alla de senaste instruktionerna och aktiviteterna har släppts. Men det går också bra att göra en Hour of Code närsomhelst under året! 
+
+* * *
+
+<a id="promote-your-hour"></a>
 
 ## 4. Promote your Hour of Code
 
@@ -57,7 +84,11 @@ Inför Hour of Code kan du ladda upp genom att dela [inspirerande videos](/promo
 
 Lär dig mer om affischer, videos, klistermärken och andra sätt att [marknadsföra ditt event](/promote/resources#posters) till dina intressegrupper. 
 
-## 5. Start your Hour of Code Strong
+* * *
+
+<a id="how-to-start"></a>
+
+## 5. How to start your Hour of Code strong
 
 Inled din Hour of Code starkt med några av dessa tips. 
 
@@ -72,9 +103,13 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - Förklara hur teknik påverkar våra liv, med exempel som alla elever i klassrummet kommer att bry sig om och inte endast ett fåtal (berätta om appar och teknik som används för att rädda liv, hjälpa människor, och föra personer närmare, o.s.v.).
 - Gör en lista med vardagsprylar som använder kod tillsammans med dina elever.
-- Se tips för att få tjejer intresserade av datavetenskap [här](http://code.org/girls)
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
-## 6. Get Coding!
+* * *
+
+<a id="code"></a>
+
+## 6. Get coding!
 
 Visa eleverna hur de kommer in till övningen
 
@@ -91,11 +126,15 @@ Vad gör jag om en elev blir färdig tidigt?
 - Elever kan se alla övningar och [prova en annan Hour of Code-övning]({{ urls/learn }}).
 - Eller, be elever som blir snabbt färdiga att hjälpa klasskamrater som behöver hjälp.
 
-## 7. Celebrate your Students' Success
+* * *
+
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
@@ -106,12 +145,14 @@ Vad gör jag om en elev blir färdig tidigt?
 
 * * *
 
+<a id="other-resources"></a>
+
 ## Andra Hour of Code resurser för lärare:
 
 - Besök [Hour of Code-forumet](http://forum.code.org/c/plc/hour-of-code) för att få råd, insikt och stöd från andra arrangörer.
 - Läs igenom [ vanliga frågor och svar](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## Vad kan jag göra efter Hour of Code?
+### Vad kan jag göra efter Hour of Code?
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 

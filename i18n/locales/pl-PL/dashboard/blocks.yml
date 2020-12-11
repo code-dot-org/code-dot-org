@@ -1014,6 +1014,8 @@ pl:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: liczba {SPRITE}
       gamelab_createNewSprite:
@@ -1050,6 +1052,12 @@ pl:
             '"frames"': ramki
       gamelab_hideTitleScreen:
         text: ukryj ekran tytułowy
+      gamelab_ifVarEquals:
+        text: |-
+          jeśli {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: kostium {SPRITE} jest {COSTUME}
       gamelab_isKeyPressed:
         text: czy {KEY} został naciśnięty
         options:
@@ -1131,6 +1139,14 @@ pl:
             '"z"': z
       gamelab_locationAt:
         text: 'location x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} pikseli {DIRECTION} od {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': Północ
+            '"East"': Wschód
+            '"South"': Południe
+            '"West"': Zachód
       gamelab_locationMouse:
         text: pozycja myszy
       gamelab_locationOf:
@@ -1191,6 +1207,8 @@ pl:
         text: duszek {SPRITE} zatrzymuje {BEHAVIOR}
       gamelab_removeTint:
         text: usuń kolor z {THIS}
+      gamelab_repeatForever:
+        text: powtarzaj w nieskończoność
       gamelab_setAnimation:
         text: zmień {THIS} kostium na {ANIMATION}
       gamelab_setBackground:
@@ -1211,6 +1229,12 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: żaden
+      gamelab_setBackgroundImageAs:
+        text: ustaw tło na {IMG}
+      gamelab_setPrompt:
+        text: poproś użytkownika {QUESTION} o zmienne {VAR}
+      gamelab_setPromptWithChoices:
+        text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       gamelab_setProp:
         text: ustaw {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1268,6 +1292,8 @@ pl:
             '"d"': d
       gamelab_whenLeftArrow:
         text: po naciśnięciu strzałki w lewo
+      gamelab_whenPromptAnswered:
+        text: gdy {VAR} uzyskała odpowiedź
       gamelab_whenRightArrow:
         text: po naciśnięciu strzałki w prawo
       gamelab_whenTouching:
@@ -1297,6 +1323,10 @@ pl:
         text: dopóki {SPRITE1} dotyka {SPRITE2}
       gamelab_whileUpArrow:
         text: po naciśnięciu strzałki w górę
+      gamelab_withPercentChance:
+        text: |-
+          jeśli {NUM}% szansa
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:
@@ -1495,6 +1525,8 @@ pl:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: nie moja etykieta
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1753,7 +1785,7 @@ pl:
             '"stoneBricks"': kamienne cegły
             '"mossyStoneBricks"': cegły z omszałego kamienia
             '"crackedStoneBricks"': cegły z popękanego kamienia
-            '"decorativeStoneBricks"': dekoracyjne cegły kamienne
+            '"chiseledStoneBricks"': dekoracyjne kamienne cegły
             '"blueCoralBlock"': blok niebieskiego koralu
             '"pinkCoralBlock"': blok różowego koralu
             '"magentaCoralBlock"': blok fioletowego koralu

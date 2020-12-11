@@ -90,9 +90,6 @@ nl:
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
@@ -111,9 +108,6 @@ nl:
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
@@ -190,9 +184,6 @@ nl:
             MOVES.XArmsUp: Rek
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} doe {MOVE} {DIR} een keer"
         options:
@@ -221,9 +212,6 @@ nl:
             MOVES.XArmsUp: Rek
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'herhaal om om de {N} maten na {START} '
       Dancelab_everySeconds:
@@ -975,6 +963,7 @@ nl:
         options:
           UNIT:
             '"seconds"': seconden
+            '"frames"': frames
       gamelab_changePropBy:
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
@@ -1019,10 +1008,12 @@ nl:
         options:
           CHOICE:
             '"this"': Dit
+            '"other"': anders
       gamelab_getTime:
         options:
           UNIT:
             '"seconds"': seconden
+            '"frames"': frames
       gamelab_hideTitleScreen:
         text: titelscherm verbergen
       gamelab_isKeyPressed:
@@ -1103,6 +1094,14 @@ nl:
             '"z"': z
       gamelab_locationAt:
         text: 'locatie x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} pixels {DIRECTION} van {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': Naar het noorden
+            '"East"': Oost
+            '"South"': Zuid
+            '"West"': West
       gamelab_locationMouse:
         text: muis-locatie
       gamelab_locationOf:
@@ -1157,6 +1156,8 @@ nl:
         text: sprite {SPRITE} stopt {BEHAVIOR}
       gamelab_removeTint:
         text: kleur verwijderen van {THIS}
+      gamelab_repeatForever:
+        text: blijven herhalen
       gamelab_setAnimation:
         text: verandering {THIS} kostuum naar {ANIMATION}
       gamelab_setBackground:
@@ -1177,6 +1178,8 @@ nl:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': onder water
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: Geen
+      gamelab_setBackgroundImageAs:
+        text: set achtergrond naar {IMG}
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} tot {VAL}
         options:
@@ -1212,6 +1215,8 @@ nl:
             '"while"': terwijl
       gamelab_subjectSpritePointer:
         text: geklikt {SPRITE}
+      gamelab_tumbling:
+        text: tuimelen
       gamelab_turn:
         text: draai {SPRITE} {DIRECTION} {N} graden
         options:
@@ -1242,9 +1247,9 @@ nl:
       gamelab_whenUpArrow:
         text: wanneer pijl omhoog ingedrukt
       gamelab_whileDownArrow:
-        text: terwijl pijl omlaag ingedrukt
+        text: zolang pijl omlaag ingedrukt
       gamelab_whileKey:
-        text: terwijl {KEY} ingedrukt
+        text: zolang {KEY} ingedrukt
         options:
           KEY:
             '"up"': omhoog
@@ -1257,13 +1262,13 @@ nl:
             '"s"': s
             '"d"': d
       gamelab_whileLeftArrow:
-        text: terwijl linker pijl ingedrukt
+        text: zolang linker pijl ingedrukt
       gamelab_whileRightArrow:
-        text: terwijl pijl naar rechts ingedrukt wordt
+        text: zolang pijl naar rechts ingedrukt is
       gamelab_whileTouching:
-        text: Terwijl {SPRITE1} raakt {SPRITE2}
+        text: zolang {SPRITE1} raakt {SPRITE2}
       gamelab_whileUpArrow:
-        text: terwijl pijl omhoog ingedrukt
+        text: zolang pijl omhoog ingedrukt
       gamelab_xLocationOf:
         text: x coördinaat van {SPRITE}
       gamelab_yLocationOf:
@@ -1405,10 +1410,10 @@ nl:
       Mikelab_groupWhenXTouchesY:
         text: wanneer{COSTUME} {COSTUME2}
       Mikelab_groupWhileClicked:
-        text: tijdens het klikken op {COSTUME}
+        text: zolang geklikt wordt op {COSTUME}
       Mikelab_groupWhileTouchingAny:
         text: |-
-          terwijl{COSTUME} {COSTUME2}
+          zolang {COSTUME} {COSTUME2} raaky
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} is momenteel {BEHAVIOR}"
@@ -1710,7 +1715,6 @@ nl:
             '"stoneBricks"': bakstenen
             '"mossyStoneBricks"': mossige blokstenen
             '"crackedStoneBricks"': gebarsten blokstenen
-            '"decorativeStoneBricks"': decoratieve blokstenen
             '"blueCoralBlock"': blauw koraalblok
             '"pinkCoralBlock"': roze koraalblok
             '"magentaCoralBlock"': magenta koraalblok

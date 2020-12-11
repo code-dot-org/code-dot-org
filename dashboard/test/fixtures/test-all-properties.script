@@ -21,4 +21,4 @@ professional_learning_course 'Exploring Computer Science PD Course'
 supported_locales ["de-DE"]
 project_widget_types ["gamelab", "weblab"]
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursea/standards/"]]
-script_announcements [{"notice"=>"This Online PD Resource is no longer available", "details"=>"Click \"Learn More\" to find out about the new Online PD Resources.", "link"=>"https://studio.code.org/s/k5-onlinepd-2019", "type"=>"failure", "visibility"=>"Teacher and student"}]
+announcements [{"notice"=>"This Online PD Resource is no longer available", "details"=>"Click \"Learn More\" to find out about the new Online PD Resources.", "link"=>"https://studio.code.org/s/k5-onlinepd-2019", "type"=>"failure", "visibility"=>"Teacher and student"}]

@@ -3,8 +3,8 @@
 # Table name: pd_misc_surveys
 #
 #  id            :integer          not null, primary key
-#  form_id       :integer          not null
-#  submission_id :integer          not null
+#  form_id       :bigint           not null
+#  submission_id :bigint           not null
 #  answers       :text(65535)
 #  user_id       :integer
 #  created_at    :datetime         not null
@@ -18,7 +18,7 @@
 #
 
 module Pd
-  class MiscSurvey < ActiveRecord::Base
+  class MiscSurvey < ApplicationRecord
     include JotFormBackedForm
 
     belongs_to :user

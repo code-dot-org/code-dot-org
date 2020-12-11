@@ -1,118 +1,159 @@
 ---
-title: Etkinlik Rehberi
+title: Hour of Code Nasıl Yapılır? Rehberi
 ---
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Hour of Code nasıl planlanır?
 
-### Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Bu harekete katılın ve öğrencilerinizi bilgisayar bilimiyle şu adımlarla tanıştırın.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Bilişimsel düşünme, problem çözme becerilerini, mantığı ve yaratıcılığı geliştirmeye yardımcı olur. Teknoloji de gezegendeki her sanayiyi dönüştürüyor. Bugün öğrenciler teknolojiyi kullanmakla kalmayıp onu nasıl üretebileceğini de öğrenmeliler. Erken başlayan öğrenciler, 21. yüzyılın kariyer yolunda başarılı olmak için temel atmış olacaklar.
+
+Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tanıştırmanın basit ve eğlenceli bir yolu olup hem sınıf içi hem de okul sonrası ortamlar için mükemmel bir uyum sağlar [Hâlâ sorularınız varsa katılımcı rehberimize]({{ localized_files/participation_guide }}) göz atabilirsiniz.
+
+- [Hour of Code Nasıl Yapılır? videosunu izleyin](#how-to-video)
+- [Aktiviteleri ve öğretici materyalleri keşfedin](#explore-activities)
+- [Günlük planınızı yapın](#create-your-plan)
+- [Hour of Code etkinliğinizi tanıtın](#promote-your-hour)
+- [Hour of Code etkinliğine güçlü başlamanın yolları](#how-to-start)
+- [Kodlamaya başlayın](#code)
+- [Öğrencilerinizin başarısını kutlayın](#celebrate)
+- [Eğitimciler için diğer Kod-Saati kaynakları](#other-resources)
+
+### Hour of Code'a uzaktan da ev sahipliği yapılabilir! Başlamak için [ sanal bir Hour of Code etkinliği düzenlemeye yönelik ipuçlarımıza](https://hourofcode.com/us/how-to/virtual) göz atın.
 
 * * *
 
-## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Hour of Code Nasıl Yapılır? videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+* * *
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+<a id="explore-activities"></a>
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+## 2. Aktiviteleri ve eğitimleri keşfedin
 
-## 3. Create your Plan for the Day
+Tüm yaş grupları ve deneyim düzeyleri için eğlenceli, [öğrenci rehberli eğitim materyalleri]({{ urls/learn }}) sunuyoruz. Öğrencilerin kendi kendine yönlendirmeli öğreticileri denemesi yaygındır ancak birçok aktivitede öğretmenlerin tartışmayı yönlendirmesi veya aktiviteyi uzatması için ders planları vardır.
 
-### Think about your technology needs - computers are optional!
+Aktiviteleri keşfedin ve şuna önceden karar verin: Tüm öğrencileriniz için tek bir öğretici materyal mi seçmek istiyorsunuz yoksa her çocuğun kendi dersini seçmesine izin mi vereceksiniz.
 
-- En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Günlük planınızı yapın
+
+### Teknolojik ihtiyaçlarınızı düşünün (bilgisayar kullanmak isteğinize bağlı)
+
+- En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! [Bağımsız aktiviteler](/learn) için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
+- Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. Bağlantı hızınız düşük mü? Videoları sınıfın ön tarafından izletin, böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen içerikleri deneyin.
 - Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kulaklıklar edinin ya da öğrencilere kendilerininkini getirmelerini söyleyin.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
+- Yeterli cihazınız yok mu? O halde [çiftli programlamayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
-### Pick a day and time
+### Tarih ve saat seçin
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Dünyanın her yerinden insanlar, Hour of Code kutlamalarına en yeni öğreticiler ve aktivitelerin yayımlandığı Bilgisayar Bilimi Eğitim Haftası (9-13 Aralık) sırasında katılıyor. Ancak yılın herhangi bir günü Hour of Code yapabilirsiniz!
 
-## 4. Promote your Hour of Code
+* * *
 
-Now that you've planned your event, it's time to start promoting it!
+<a id="promote-your-hour"></a>
 
-### Tell your School and Community
+## 4. Hour of Code etkinliğinizi tanıtın
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+Etkinliğinizi planladığınıza göre, onu tanıtmaya başlama zamanı!
 
-### Let Volunteers Know by Registering Your Event
+### Okulunuza ve Topluluğunuza anlatın
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Eğlenceye katılmak isteyebilecek diğer öğretmenlere Hour of Code'u tanıtın! Bu aynı zamanda, okulunuzun aile-öğretmen birliğine ulaşmak veya ebeveyn haber bültenlerini paylaşmak, çocuklarının eve gelip daha fazla aktivite ve eğitim denemek isteyebileceğini bildirmek için harika bir fırsattır!
 
-### Get your Students Excited
+### Etkinliğini Kaydederek Gönüllülere Haber Verin
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+[Hour of Code etkinliğinizi kaydettirdiğinizde](/), başarılı bir Hour of Code düzenlemek için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki gönüllülere, okulunuzun katıldığını da bu şekilde bildirirsiniz. Harika bir kaynak olan gönüllüler sınıfınıza gelerek bilgisayar bilimi hakkında konuşabilir veya öğrencilerinize Hour of Code aktivitelerinde yardımcı olabilirler.
+
+### Öğrencilerinizi Heyecanlandırın
+
+Farklı insanları ve bilgisayar biliminin kullanılabileceği yaratıcı yolları vurgulayan [ilham verici videoları](/promote/resources) paylaşarak etkinliğe öncülük edin. Veya sınıfınız için ilham verici posterler sipariş edin! Öğrenciler, kendilerine benzeyen insanların teşvikini gördüklerinde o konuya katılmak için daha heyecanlı olurlar.
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Posterler, videolar, çıkartmalar ve topluluğunuza [etkinliğinizi tanıtmanın](/promote/resources#posters) diğer yolları hakkında daha fazla bilgi edinin.
 
-## 5. Start your Hour of Code Strong
+* * *
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+<a id="how-to-start"></a>
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+## 5. Hour of Code etkinliğine güçlü başlamanın yolları
+
+Hour of Code kutlama vakti geldiğinde, bu araç ve ipuçlarını kullanarak etkinliğinize güçlü bir şekilde başlayın.
+
+Öğrencilerinize bilgisayar bilimindeki tüm olasılıklar hakkında ilham verebilecek [yerel bir gönüllü]({{ urls/volunteer_local }}) davet edin. Dünyanın her yerinden, sınıf ziyareti veya öğrencilerinizle görüntülü sohbet yoluyla Hour of Code etkinliğinize yardımcı olmaya hazır binlerce gönüllü var!
 
 İlham verici bir video gösterin:
 
 - Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'lu Code.org orijinal tanıtım videosu. ([1 dakikalık](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakikalık](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakikalık](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları mevcuttur)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Daha fazla ilham verici [kaynaklar]({{ urls/inspire }}) ve [videolar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) bulun.
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Hem siz hem de öğrencileriniz bilgisayar biliminde yeniyseniz sorun değil. İşte size Hour of Code aktivitelerini tanıtmak için birkaç fikir:
 
 - Teknolojinin hayatlarımıza olan etkilerini, hem kızların hem de erkeklerin ilgisini çekecek örneklerle açıklayın (Hayat kurtarmak, insanlara yardımcı olmak, insanlara ulaşmak, vb şeyler hakkında konuşun).
 - Sınıfça günlük hayatta kodlama kullanarak yaptığımız şeyleri listeleyin.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Genç kadınların bilgisayar bilimiyle ilgilenmesini sağlamaya yönelik ipuçlarını [buradan]({{ urls/girls }}) inceleyin.
 
-## 6. Get Coding!
+* * *
 
-Direct students to the activity
+<a id="code"></a>
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+## 6. Kodlamaya başlayın!
 
-When your students come across difficulties it's okay to respond:
+Öğrencileri aktiviteye yönlendirin
+
+- Öğretici materyalin bağlantısını tahtaya yazın. Bu bağlantıyı [seçtiğiniz öğretici materyal hakkındaki bilgilerde]({{ urls/learn }}) katılımcı listesi altında bulabilirsiniz.
+
+Öğrencileriniz etkinlik sırasında zorlanırsa ona şu şekilde yanıt verebilirsiniz:
 
 - "Bilmiyorum. Buna birlikte bakalım."
 - "Teknoloji her zaman istediğimiz gibi çalışmaz."
 - "Programlama öğrenmek yeni bir dil öğrenmek gibidir; hemen akıcı olmayacaktır."
 
-What if a student finishes early?
+Bazı öğrenciler erken bitirirse ne yapmalı?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- Öğrenciler tüm öğretici materyalleri görebilirler ve [başka bir Hour of Code aktivitesi deneyebilirler]({{ urls/learn }}).
 - Ya da, erken bitiren öğrencilerden aktiviteyi yapmakta zorlanan diğer arkadaşlarına yardımcı olmalarını rica edin.
 
-## 7. Celebrate your Students' Success
+* * *
+
+<a id="celebrate"></a>
+
+## 7. Öğrencilerinizin başarısını kutlayın
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Okulunuz için [özel sipariş t-shirtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+- Öğrencileriniz için [Sertifika basın]({{ urls/certificates }}).
+- Öğrencileriniz için ["I did an Hour of Code!"]({{ urls/promote_stickers }}) çıkartmalarından bastırın.
+- Okulunuz için [özel tişörtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) sipariş edin.
 - Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 
 * * *
 
-## Eğitimciler için diğer Kod-Saati kaynakları:
+<a id="other-resources"></a>
+
+## Eğitimciler için diğer Hour of Code kaynakları:
 
 - Eğitmenlerden tavsiye, kavrama yardımı ve destek almak için [Hour of Code Öğretmen Forumu](http://forum.code.org/c/plc/hour-of-code)'nu ziyaret edin.
 - [ Kodlama Saati SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). gözden geçirin.
 
-## Kod Saati etkinliğinden sonra ne yapmalı?
+### Hour of Code etkinliğinden sonra ne yapmalı?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Bilgisayar biliminin Hour of Code ile bitmesi gerekmez! Müfredatımız web tabanlıdır ve kullanımı süresiz olarak ücretsizdir. Bilgisayar bilimlerini okulunuza ve öğrencilerinize nasıl getireceğinizi [öğrenin](/beyond).
 
 {{ signup_button }}

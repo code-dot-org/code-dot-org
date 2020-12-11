@@ -1782,6 +1782,13 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Observe que os blocos agora têm uma nova maneira de inserir números. Estes blocos `matemática` podem ser retirados e movidos!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "O código que você colocou aqui será repetido quantas vezes você diga a ele, então, continuar a executar o resto do programa."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Você pode mudar esse número.",
+          "courseE_artist_ramp8_2": "Clique aqui para digitar o número de vezes que o código será repetido."
         }
       }
     }

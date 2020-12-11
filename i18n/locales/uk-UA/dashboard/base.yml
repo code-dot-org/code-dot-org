@@ -141,8 +141,6 @@ uk:
     invalid_password: "Пароль має складатися хоча б із %d символів"
     mismatch_password: "Введені вами паролі не збігаються"
     student_consent: "Я підтверджую що у мене є згода моїх батьків і законних опікунів на дозвіл використання Code.org."
-    agree_us_website: "Я згоден використовувати веб-сайт, що знаходиться на території США."
-    my_data_to_us: "Дані про моє використання цього веб-сайту можуть направлятися в США, а також зберігатися або оброблятися на території США."
     additional_information: "Нам потрібна додаткова інформація, щоб продовжити реєстрацію."
     user_type_button: "Оновлення типу облікового запису"
     user_type_label: "Тип облікового запису"
@@ -284,6 +282,7 @@ uk:
     header:
       finished_hoc: "Я вже завершив мою Годину коду"
       sign_in_to_save: 'Увійдіть для збереження досягнень'
+      my_dashboard: "Моя майстерня"
       course_catalog: "Каталог курсів"
       project_gallery: "Проекти"
       sections: "Секції"
@@ -432,6 +431,7 @@ uk:
     for_parents_and_guardians: "Для батьків й опікунів"
     link_a_parent_email: "Прив’яжіть до цього облікового запису електронну пошту батьків/опікуна, щоб бути в курсі успіхів і проектів дитини. Ви також зможете скористуватися цією електронною поштою для відновлення пароля."
     parent_guardian_email_label: "Електронна пошта батьків/опікуна"
+    remove_parent_email_label: "Видалити"
     none: "Немає"
     only_one_parent_email_supported_warning: "Примітка. Наразі ми можемо зареєструвати лише одну електронну пошту батьків/опікуна на один обліковий запис учня."
   user_level:
@@ -942,11 +942,19 @@ uk:
         math: 'Математика'
         science: 'Природничі науки'
         la: 'Мови'
+        music: 'Музика'
+        art: 'Мистецтво'
+        other: "Інше:"
       resources:
+        bootstrap: 'Bootstrap'
+        codecademy: 'CodeCademy'
+        khan: 'Khan Academy'
         kodable: 'Kodable'
         lightbot: 'Світлячок'
+        other: "Інше:"
       robotics:
         kodable: 'Kodable'
+        other: "Інше:"
       workshop_course:
         csp: '''16-''17 принципи інформатики'
       email_opt_in:
@@ -954,9 +962,6 @@ uk:
         opt_in_no: 'Ні'
   cookie_banner:
     accept: 'Погоджуюся'
-  gdpr_dialog:
-    message: 'Дані про моє використання цього веб-сайту можуть направлятися в США, а також зберігатися або оброблятися на території США.'
-    yes: 'Так'
   page_not_found_title: "Сторінка не знайдена"
   page_not_found_header: '404: Сторінка не знайдена'
   copy: 'Скопіювати'

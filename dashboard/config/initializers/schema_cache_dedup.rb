@@ -121,6 +121,9 @@ module SchemaCacheDedup
     private
 
     def deduplicated
+      # MySQL supports an extension for optionally specifying the display width of integer data types in parentheses.
+      # Filter display width attributes from schema-cache, they are deprecated/removed in MySQL 8.0.17.
+      @sql_type.gsub!(/\(\d+\)/, '') if @type == :integer
       @sql_type = -sql_type
       super
     end
@@ -131,7 +134,7 @@ module SchemaCacheDedup
   module MySQLTypeDedup
     include Deduplicable
 
-    def initialize(type_metadata, extra: nil, strict: false)
+    def initialize(type_metadata, extra: nil)
       super
     end
 

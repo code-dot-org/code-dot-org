@@ -1,118 +1,159 @@
 ---
-title: How-to 가이드
+title: 아워오브코드 하우 투 가이드
 ---
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# 아워오브코드 계획 방법
 
-### 이 운동에 참여하신 다음에는, 첫번째 컴퓨터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### 이 운동에 참여하고 다음의 단계로 컴퓨터 과학을 학생들에게 소개해 보세요.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+컴퓨팅 사고는 문제해결 능력과 논리력, 창의력을 키워주는데 도움이 됩니다. 기술은 지구상의 모든 산업을 변모시키고 있습니다. 오늘날 학생은 단순히 사용법만이 아닌 기술을 창조하는 방법을 배워야 합니다. 일찍 시작함으로써, 그들은 21세기 직업경로에서 성공을 위한 기반을 갖게 될 것입니다.
+
+아워오브코드를 해보는 것은 학생들에게 컴퓨터 과학을 아마도 맨 처음 소개하는 간단하고 재미있는 방법이며 또한 수업 중에 또한 방과후 환경 모두에서 완벽하게 잘 맞습니다. 질문이 있으시면[참가 안내를 읽어 보십시오]({{ localized_files/participation_guide }}).
+
+- [아워오브코드의 하우 투 비디오 시청](#how-to-video)
+- [활동과 튜토리얼 탐구](#explore-activities)
+- [당일 계획 수립](#create-your-plan)
+- [아워오브코드 홍보](#promote-your-hour)
+- [아워오브코드를 강력하게 시작하는 방법](#how-to-start)
+- [코딩 하기](#code)
+- [학생들의 성공을 축하하기](#celebrate)
+- [교육자들을 위한 추가적인 Hour of Code 리소스들](#other-resources)
+
+### 아워오브코드는 멀리에 있어도 개최할 수 있습니다! 시작하기 위해 가상 아워오브코드 이벤트 개최를 위한 [팀을 확인하세요](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. 아워오브코드의 하우 투 비디오 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+* * *
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+<a id="explore-activities"></a>
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+## 2. 활동과 튜토리얼 탐구.
 
-## 3. Create your Plan for the Day
+전 연령 그룹과 경험 수준을 위한 다양하고 재미 있는[학생 자기주도 튜토리얼]({{ urls/learn }}) 을 제공합니다. 비록 많은 활동에 교사가 토론을 지도하거나 또는 활동을 확장하는 강의 플랜이 포함되어 있지만 학생이 스스로 자기 주도로 튜토리얼을 시도하는 것이 인기 있습니다. 
 
-### Think about your technology needs - computers are optional!
+모든 학생을 위해 한 개의 튜토리얼을 선택하거나 또는 각자에게 선택하도록 맡기길 원하면 미리 활동을 검토하여 결정하십시오.
 
-- Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- 튜토리얼들이 되는지 확실히 확인하시고 학생들 컴퓨터와 디바이스들에서도 제대로 소리나는 브라우저나 비디오에서 되는지 확인하세요 Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. 당일 계획 수립
+
+### 기술적 필요에 대해 생각하세요 - 컴퓨터는 선택사양입니다!
+
+- Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 학생마다 한 대의 컴퓨터가 있을 필요는 없으며 심지어 컴퓨터가 없이도 아워오브코드를 할 수 있습니다. [언플러그드 활동을 위해](/learn), 간단히 클래스룸 테크놀로지 섹션을 필터링하여 "컴퓨터 또는 기기 없음" 옵션을 나타내세요.
+- 튜토리얼들이 되는지 확실히 확인하시고 학생들 컴퓨터와 디바이스들에서도 제대로 소리나는 브라우저나 비디오에서 되는지 확인하세요 대역폭이 낮습니까? 동영상을 교실 앞에서 보여주어 학생들이 따로 동영상을 다운로드하지 않게 하십시오. 또는 오프라인 튜토리얼을 시도해 보세요.
 - 소리와 관련된 튜토리얼을 수월하게 하기 위해서 학생들에게 헤드폰을 제공하거나, 그들이 가지고 있는 헤드폰을 가져오도록 요청하셔도 좋습니다.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
+- 장치가 충분하지 않습니까? [페어 프로그래밍](https://www.youtube.com/watch?v=vgkahOzFH2Q) 사용. 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
-### Pick a day and time
+### 날짜와 시간 선택
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+최신 튜토리얼과 활동이 공개되면 전 세계 사람들이 CS 교육 주간(12월 9-13일)에 아워오브코드를 축하하기 위해 모일 것입니다. 하지만 연중 아무 때나 아워오브코드를 할 수 있습니다!
 
-## 4. Promote your Hour of Code
+* * *
 
-Now that you've planned your event, it's time to start promoting it!
+<a id="promote-your-hour"></a>
 
-### Tell your School and Community
+## 4. 아워오브코드 홍보
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+이제까지 이벤트를 계획했으며 지금은 홍보를 시작할 시간입니다!
 
-### Let Volunteers Know by Registering Your Event
+### 학교와 커뮤니티에 말합니다.
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+함께 합류하여 즐거움을 누리고 싶어하는 다른 교사들에게 아워오브코드를 홍보하세요! 또한 학교의 PTSA에 접촉하거나 또는 학부모 뉴스레터에서 공유하고, 그들에게 아동이 집에서 더 많은 활동과 튜토리얼을 하고 싶어한다는 걸 알려줄 좋은 기회입니다!
 
-### Get your Students Excited
+### 이벤트를 등록하여 자원봉사자에게 알립니다.
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+[아워오브코드 이벤트에 가입 시](/), 뉴스와 아워오브코드를 성공적으로 주최하기 위한 팁을 이메일과 함께 수신할 것입니다. 또한 학교가 참여할 것임을 지역 자원봉사자에게 알릴 수 있는 방법입니다. 자원봉사자는 훌륭한 자원이며 학급에 와서 컴퓨터 과학에 대해 강연을 하거나 또는 간단히 학생의 아워오브코드 활동을 도울 수 있습니다.
+
+### 학생들이 재미있어 하게 만드세요.
+
+다양한 사람들에 의해 또한 창의적인 방식으로 컴퓨터 과학이 사용될 수 있음을 강조하는 [영감을 주는 비디오](/promote/resources)를 공유함으로써 이벤트를 시작합니다 . 또는 학급을 위해 영감을 주는 포스터를 주문하세요! 학생들은 그들과 같아 보이는 사람이 그들을 격려해 줄 때 더 흥미롭게 과목에 관심을 갖게 됩니다. 
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+포스터와 비디오, 스티커, 또한[이벤트를](/promote/resources#posters) 커뮤니티에 홍보하는 기타 방법에 대해 더 자세히 알아보세요.
 
-## 5. Start your Hour of Code Strong
+* * *
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+<a id="how-to-start"></a>
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+## 5. 아워오브코드를 강력하게 시작하는 방법
+
+아워오브코드 행사가 도달하면, 이 도구와 팁으로 이벤트를 강하게 시작하세요.
+
+[지역 자원봉사자]({{ urls/volunteer_local }})를 초대하여 컴퓨터 과학이 갖는 가능성의 폭에 관하여 얘기함으로써 학생들에게 동기를 부여하세요. 교실을 방문하거나 학생들과 비디오 채팅을 함으로써 귀하의 아워오브코드에 도움을 줄 수 천의 자원봉사자들이 세계 곳곳에서 기다리고 있습니다!
 
 영감을 주는 동영상을 보여주세요:
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- 오리지널 Code.org가 Bill Gates, Mark Zuckerberg 그리고 NBA 스타 Chris Bosh가 출연하는 동영상을 공개합니다. ([1분](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5분](https://www.youtube.com/watch?v=nKIu9yen5nc) 그리고 [9분](https://www.youtube.com/watch?v=dU1xS07N-FA) 버전을 이용하실 수 있습니다)
+- 영감을 주는 [리소스]({{ urls/inspire }})와 [동영상](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)을 더 찾아보십시오.
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+여러분과 여러분의 학생들이 컴퓨터 과학에 완전한 초보자라도 괜찮습니다. 여기 아워오브코드 활동을 소개해 줄 몇가지 아이디어가 있습니다.
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
+- 남학생과 여학생 모두 관심을 가질 예를 들어 기술이 우리의 삶에 미치는 영향에 대해 설명합니다 (생명을 구하고, 사람을 구하며, 사람을 연결하는 것에 관해 이야기 합니다).
 - 수업에서, 일상생활 속에서 코드를 사용하는 것들을 나열하세요.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- 젊은 여성에게 컴퓨터 과학에 관심을 가지게 하는 팀은 [여기]({{ urls/girls }})에서 보세요.
 
-## 6. Get Coding!
+* * *
 
-Direct students to the activity
+<a id="code"></a>
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+## 6. 코딩 하기!
 
-When your students come across difficulties it's okay to respond:
+학생들에게 활동을 안내하세요.
+
+- 화이트보드에 튜토리얼 링크를 적으세요. 참가자 수 아래[i선택하신 튜토리얼에 대한 정보에 관한]({{ urls/learn }})링크를 찾으세요.
+
+학생이 어려움을 느낄 때, 다음과 같이 대답해도 괜찮습니다: 
 
 - "나도 잘 모른단다. 우리 함께 생각해 보자."
 - "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."
 - "프로그램을 배우는 것은 새로운 언어를 배우는 것과 같아; 곧바로 능숙할 수는 없는 것이란다."
 
-What if a student finishes early?
+한 학생이 먼저 끝내면 어떻게 할까요?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- 학생은 모든 튜토리얼과 [를(을) 보고 또 다른 아워오브코드 활동을 해볼 수 있습니다]({{ urls/learn }}).
 - 또는, 일찍 완료한 학생들에게 어려워서 잘 해결하지 못하고 있는 다른 학생들을 도와달라고 이야기 해보세요.
 
-## 7. Celebrate your Students' Success
+* * *
+
+<a id="celebrate"></a>
+
+## 7. 학생들의 성공을 축하하기
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- [학생들을 위한 인증서를]({{ urls/certificates }}) 프린트합니다.
+- [학생들을 위해 "아워오브코드를 해냈다!"]({{ urls/promote_stickers }}) 스티커를 인쇄합니다.
 - [행사 T-셔츠 주문](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) 하기.
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
 
 * * *
+
+<a id="other-resources"></a>
 
 ## 교육자를 위한 다른 Hour of Code 리소스들
 
 - 다른 교육자들로부터 조언, 통찰력, 지원을 얻을 수 있는 [Hour of Code 교사 포럼](http://forum.code.org/c/plc/hour-of-code)을 방문하세요.
 - [Hour of Code의 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해보세요.
 
-## Hour of Code 이후에는 어떤 것들이 있나요?
+### Hour of Code 이후에는 어떤 것들이 있나요?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+컴퓨터 과학은 아워오브코드가 끝났다고 해서 같이 끝나서는 안됩니다! 우리의 커리큘럼은 웹 기반이며 영원히 무료로 사용할 수 있습니다. CS를 학교와 학생들에게 가져다 주는 [방법을 배우세요](/beyond) .
 
 {{ signup_button }}

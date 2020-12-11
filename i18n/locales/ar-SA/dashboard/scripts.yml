@@ -11,7 +11,7 @@ ar:
         csf_2019_category_name: أساسيات علوم الكمبيوتر (2019)
         csf_international_category_name: أساسيات علوم الكمبيوتر دوليًا
         csf2_draft_category_name: 'قيد التطوير: الدورتان "أ" - "و"'
-        csp_category_name: "مبادئ علوم الكمبيوتر '15-'16 "
+        csp_category_name: مبادئ علوم الكمبيوتر '15-'16 
         csp_2018_category_name: مبادئ علوم الكمبيوتر (2018-2019)
         csp_2019_category_name: مبادئ علوم الكمبيوتر (2019 - 2020)
         cspexams_category_name: اختبار التدرب على دورة مبادئ علوم الكمبيوتر
@@ -20,6 +20,7 @@ ar:
         hoc_category_name: ساعة البرمجة
         math_category_name: العمليات الحسابية
         research_studies_category_name: دراسات بحثية
+        other_category_name: الأخرى
       name:
         course1:
           title: الدرس الأول
@@ -3574,7 +3575,7 @@ ar:
               name: استطلاع رأي بعد انتهاء دورة استكشافات علوم الكمبيوتر (CSD)
         minecraft:
           title: ساعة من البرمجة مع ماينكرافت نسخة المصمم
-          description_short: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت.
+          description_short: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في إصدارك الخاص من ماينكرافت.
           description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت.
           lessons:
             Minecraft Hour of Code Designer:
@@ -7314,7 +7315,7 @@ ar:
             Sequencing with Scrat:
               name: التسلسل مع سكرات
             Move It, Move It:
-              name: حركها , حركها
+              name: حركها , حركهاحرّكها، حرّكها
             Copyright and Creativity:
               name: أنه لشعور عظيم أن تقوم بالإنشاء واللعب بإنصاف
         coursed-2018:
@@ -8778,7 +8779,7 @@ ar:
             Spelling Bee:
               name: مسابقة التهجئة
             Move It, Move It:
-              name: حركها , حركها
+              name: حركها , حركهاحرّكها، حرّكها
             Sequencing with Scrat:
               name: التسلسل مع سكرات
             Your Digital Footprint:
@@ -9803,7 +9804,7 @@ ar:
               display_name: الأحداث
           lessons:
             Move It, Move It:
-              name: حركها , حركها
+              name: حركها , حركهاحرّكها، حرّكها
               description_student: برمج زملائك في الصف للانتقال بعناية من مكان إلى آخر.
               description_teacher: سيعمل هذا الدرس على إعداد الطلاب ذهنيًا لتمارين البرمجة التي ستقابلهم على مدار هذه الدورة. في فرق صغيرة، سيستخدم الطلاب النشاط البدني لبرمجة زملائهم في الصف للانتقال بعناية من مكان إلى آخر حتى يتم تحقيق الهدف.
             Sequencing with Scrat:
@@ -9882,7 +9883,7 @@ ar:
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'المثابرة والإحباط: ستيفي والمشروع الكبير'
             Move It, Move It:
-              name: حركها , حركها
+              name: حركها , حركهاحرّكها، حرّكها
             Sequencing with Scrat:
               name: التسلسل مع سكرات
             Your Digital Footprint:
@@ -13716,7 +13717,7 @@ ar:
               description_student: 'تعرف على بصمتك الرقمية وكيفية الحفاظ على سلامتك عند زيارة مواقع الويب.'
               description_teacher: بالتعاون مع منظمة [r common-sense-media]، يساعد هذا الدرس الطلاب على التعرف على أوجه التشابه بين البقاء آمنًا في العالم الحقيقي وعند زيارة مواقع الويب. سيتعلم الطلاب أيضًا أن المعلومات التي يضعونها على الإنترنت تترك بصمة رقمية أو "أثرًا". يمكن أن يكون هذا الأثر كبيرًا أو صغيرًا، أو مفيدًا أو مؤذيًا، اعتمادًا على كيفية إدارته.
             Move It, Move It:
-              name: حركها , حركها
+              name: حركها , حركهاحرّكها، حرّكها
               description_student: برمج زملائك في الصف للانتقال بعناية من مكان إلى آخر.
               description_teacher: سيعمل هذا الدرس على إعداد الطلاب ذهنيًا لتمارين البرمجة التي ستقابلهم على مدار هذه الدورة. في فرق صغيرة، سيستخدم الطلاب النشاط البدني لبرمجة زملائهم في الصف للانتقال بعناية من مكان إلى آخر حتى يتم تحقيق الهدف.
             Sequencing in Maze:
@@ -15075,10 +15076,20 @@ ar:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: الوحدة 1
+              name: 'الوحدة 1'
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: الدورة A
             Course B:
               name: الدورة B
+            CS Discoveries:
+              name: اكتشافات علوم الكمبيوتر
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: الذكاء الاصطناعي للمحيطات
+            intro:
+              name: مقدمة
+            visualizing:
+              name: تمثيل البيانات في رسوم مرئية

@@ -899,6 +899,9 @@
     "behavior_names": {
       "wandering 2": "wandering 2",
       "wandering 1": "wandering 1"
+    },
+    "placeholder_texts": {
+      "a2e534e7e893bd7ddb5d2047ed29dc8e": "elephant has collected "
     }
   },
   "https://studio.code.org/s/coursef-2020/stage/12/puzzle/1": {
@@ -1480,6 +1483,10 @@
       "moving west": "moving west",
       "growing": "growing",
       "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "22661453237feb87f1b00dd17bc39666": "Yum! Energy increased!",
+      "4ac000226dd5bc7fc14ecde063245731": "Yuck! Energy reset!"
     }
   },
   "https://studio.code.org/s/coursef-2020/stage/18/puzzle/2": {

@@ -12,6 +12,7 @@
         full_course_category_name: Alle kurs
         hoc_category_name: Kodetimen
         math_category_name: Matematikk
+        other_category_name: Andre
       name:
         course1:
           title: Kurs 1
@@ -3233,3 +3234,7 @@
               name: Kurs A
             Course B:
               name: Kurs B
+        ml-playground:
+          lessons:
+            intro:
+              name: Introduksjon

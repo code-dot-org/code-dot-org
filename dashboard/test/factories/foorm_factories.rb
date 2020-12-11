@@ -4,13 +4,71 @@ FactoryGirl.define do
   factory :foorm_form, class: 'Foorm::Form' do
     sequence(:name) {|n| "FormName#{n}"}
     version 0
-    questions '{}'
+    questions '{
+       "pages":[
+          {
+            "name":"page_1",
+            "elements":[
+              {
+                "type": "comment",
+                "name": "describe_favorite",
+                "title": "Please describe your favorite ice cream."
+              }
+            ]
+          }
+        ]
+    }'
+
+    trait :with_multi_select_question do
+      questions '{
+        "pages":[
+          {
+            "name":"page_1",
+            "elements":[
+              {
+                "type":"checkbox",
+                "name":"not_members_spice_girls",
+                "title":"Which of the following are NOT names of members of the Spice Girls?",
+                "choices":[
+                  {
+                    "value":"sporty",
+                    "text":"Sporty"
+                  },
+                  {
+                    "value":"radical",
+                    "text":"Radical"
+                  },
+                  {
+                    "value":"spicy",
+                    "text":"Spicy"
+                  },
+                  {
+                    "value":"posh",
+                    "text":"Posh"
+                  },
+                  {
+                    "value":"ginger",
+                    "text":"Ginger"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }'
+    end
   end
 
   factory :basic_foorm_submission, class: 'Foorm::Submission' do
     form_name "surveys/pd/sample"
     foorm_submission_metadata
     answers '{}'
+
+    trait :with_multi_select_answer do
+      answers '{
+        "not_members_spice_girls": ["radical", "spicy"]
+      }'
+    end
   end
 
   factory :pd_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
@@ -36,6 +94,7 @@ FactoryGirl.define do
   factory :daily_workshop_day_5_foorm_submission, class: 'Foorm::Submission' do
     form_name "surveys/pd/summer_workshop_post_survey_test"
     foorm_submission_metadata
+    answers '{}'
 
     trait :answers_low do
       answers '{
@@ -90,6 +149,48 @@ FactoryGirl.define do
        "permission_promotional": "yes_with_name"
       }'
     end
+
+    trait :answers_high_with_survey_config_variables do
+      answers_high
+
+      after(:build) do |submission|
+        survey_config_answers = '{
+          "workshop_course":"CS Principles",
+          "workshop_subject":"5-day Summer",
+          "regional_partner_name":"",
+          "is_virtual":"true",
+          "num_facilitators":"0",
+          "day":"0",
+          "is_friday_institute":"false"
+        }'
+
+        parsed_answers = JSON.parse(submission.answers)
+        parsed_answers.merge! JSON.parse(survey_config_answers)
+        submission.answers = parsed_answers.to_json
+      end
+    end
+  end
+
+  factory :pd_pre_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+    day 0
+
+    association :foorm_submission, factory: :pre_workshop_foorm_submission
+  end
+
+  # this factory uses the real summer workshop pre survey.
+  factory :pre_workshop_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/summer_workshop_pre_survey"
+    foorm_submission_metadata
+
+    answers '{"workshop_course":"CS Discoveries","workshop_subject":"5-day Summer","regional_partner_name":"Partner1",
+              "is_virtual":"true","num_facilitators":"1","day":"0","is_friday_institute":"false","workshop_agenda":"",
+              "required_course_status":"required","course_length_weeks":"11_15","section_time_minutes":"50_less",
+              "grade_levels_csd":["11","9"],"total_pd_time":"16_35","cs_community":{"someone_to_turn_to":"6",
+              "know_teacher_leaders":"6"},"lead_learner":"4","recruit_responsibility":"2",
+              "highest_level_cs_education":"college_courses","assigned_or_chose_to_teach":"assigned",
+              "gender_identity":"female","racial_ethnic_identity":["white"]}'
   end
 
   factory :day_0_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
@@ -215,6 +316,7 @@ FactoryGirl.define do
   end
 
   factory :csf_intro_post_facilitator_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    facilitator_id 1
     association :pd_workshop, factory: :csf_101_workshop
     association :user, factory: :teacher
 
@@ -948,5 +1050,89 @@ FactoryGirl.define do
     created_at '2020-03-25 21:58:28'
     updated_at '2020-03-26 21:58:28'
     questions '{}'
+  end
+
+  factory :foorm_form_duplicate_question_survey, class: 'Foorm::Form' do
+    name 'surveys/teachers/duplicate_question_test'
+    version 0
+    created_at '2020-03-25 21:58:28'
+    updated_at '2020-03-26 21:58:28'
+    questions '{
+      "title": "Sample Survey",
+      "pages": [
+      {
+        "name": "page1",
+        "elements": [
+          {
+            "type": "comment",
+            "name": "question1",
+            "title": "sample!"
+          },
+          {
+            "type": "comment",
+            "name": "question1",
+            "title": "another sample!"
+          }
+        ]
+      }
+    ]
+  }'
+  end
+
+  factory :foorm_form_duplicate_choice_survey, class: 'Foorm::Form' do
+    name 'surveys/teachers/duplicate_choice_test'
+    version 0
+    created_at '2020-03-25 21:58:28'
+    updated_at '2020-03-26 21:58:28'
+    questions '{
+      "title": "Sample Survey",
+      "pages": [
+      {
+        "name": "page1",
+        "elements": [
+          {
+            "type": "checkbox",
+            "name": "question1",
+            "title": "sample!",
+           "choices": [
+             {
+               "value": "choice1",
+               "text": "Choice 1."
+             },
+             {
+               "value": "choice1",
+               "text": "Choice 1 again."
+             }
+           ]
+          },
+          {
+            "type": "matrix",
+            "name": "question2",
+            "title": "another sample!",
+             "columns": [
+               {
+                 "value": "1",
+                 "text": "Strongly Disagree"
+               },
+               {
+                 "value": "1",
+                 "text": "Disagree"
+               }
+             ],
+             "rows": [
+               {
+                 "value": "demonstrated_knowledge",
+                 "text": "Demonstrated knowledge of the curriculum."
+               },
+               {
+                 "value": "demonstrated_knowledge",
+                 "text": "Built and sustained an equitable learning environment in our workshop."
+               }
+             ]
+          }
+        ]
+      }
+    ]
+  }'
   end
 end

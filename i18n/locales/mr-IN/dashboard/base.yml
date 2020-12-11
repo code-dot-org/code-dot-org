@@ -80,6 +80,8 @@ mr:
     privacy: "गोपनीयता धोरण"
     accept_tos: "Code.org साठी साइन अप करून तुम्ही आमच्या [सेवेच्या अटी]( %{tos_url}) आणि [गोपनीयता\nधोरण](%{privacy_url}) साठी संमती देता."
     print: "प्रिंट"
+  race_interstitial:
+    decline: "Band"
   project:
     projects: "प्रकल्प"
     project_gallery: "प्रकल्प"
@@ -89,8 +91,6 @@ mr:
       email_opt_in:
         opt_in_yes: 'होय'
         opt_in_no: 'नाही'
-  gdpr_dialog:
-    yes: 'होय'
   parent_email_banner:
     text: "**तुम्ही आई-वडील किंवा पालक आहात का?** तुमचे ईमेल या खात्याशी जोडा म्हणजे तुम्हाला मुलाची प्रगती आणि प्रकल्प याबद्दलचे अपडेट्स मिळत राहतील!"
     link_your_email: "तुमचे ईमेल जोडा"

@@ -7,6 +7,7 @@ import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+import applabI18n from '@cdo/applab/locale';
 import {
   isWindows,
   isChrome,
@@ -15,11 +16,12 @@ import {
   isLinux
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
-import {BOARD_TYPE} from '../boards/circuitPlayground/CircuitPlaygroundBoard';
 import experiments from '@cdo/apps/util/experiments';
 import _ from 'lodash';
 import yaml from 'js-yaml';
 import Button from '@cdo/apps/templates/Button';
+import {BOARD_TYPE} from '../util/boardUtils';
+import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -93,18 +95,21 @@ export default class SetupChecklist extends Component {
         )
       )
 
-      // Can we talk to the firmware?
-      .then(() =>
-        this.detectStep(STATUS_BOARD_CONNECT, () =>
-          setupChecker.detectCorrectFirmware()
-        )
-      )
-
       // What type of board is this?
       .then(() => {
         this.setState({boardTypeDetected: setupChecker.detectBoardType()});
+        if (experiments.isEnabled('microbit')) {
+          console.log('Board detected: ' + setupChecker.detectBoardType());
+        }
         Promise.resolve();
       })
+
+      // Can we talk to the firmware?
+      .then(() =>
+        this.detectStep(STATUS_BOARD_CONNECT, () =>
+          setupChecker.detectCorrectFirmware(this.state.boardTypeDetected)
+        )
+      )
 
       // Can we initialize components successfully?
       .then(() =>
@@ -198,7 +203,7 @@ export default class SetupChecklist extends Component {
       // Maker Toolkit Standalone App
       return (
         <ValidationStep
-          stepName="Code.org Browser"
+          stepName={applabI18n.makerSetupBrowserTitle()}
           stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
         />
       );
@@ -206,23 +211,21 @@ export default class SetupChecklist extends Component {
       // Chromebooks - Chrome App
       return (
         <ValidationStep
-          stepName={'Chrome App installed' + (isChromeOS() ? '' : ' (Legacy)')}
+          stepName={
+            applabI18n.makerSetupAppInstalled() +
+            (isChromeOS() ? '' : applabI18n.legacy())
+          }
           stepStatus={this.state[STATUS_APP_INSTALLED]}
         >
-          Please install the{' '}
-          <a
-            href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg"
-            target="_blank"
-          >
-            Code.org Serial Connector Chrome App
-          </a>
-          .
+          <SafeMarkdown
+            markdown={applabI18n.makerSetupInstallSerialConnector({
+              webstoreURL: CHROME_APP_WEBSTORE_URL
+            })}
+          />
           <br />
-          Once it is installed, come back to this page and click the "re-detect"
-          button, above.
+          {applabI18n.makerSetupRedetect()}
           <br />
-          If a prompt asking for permission for Code Studio to connect to the
-          Chrome App pops up, click Accept.
+          {applabI18n.makerSetupAcceptPrompt()}
           {this.contactSupport()}
         </ValidationStep>
       );
@@ -230,12 +233,10 @@ export default class SetupChecklist extends Component {
       // Unsupported Browser
       return (
         <ValidationStep
-          stepName="Using a supported browser"
+          stepName={applabI18n.makerSetupBrowserSupported()}
           stepStatus={Status.FAILED}
         >
-          Your current browser is not supported at this time. Please install the
-          latest version of{' '}
-          <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
+          <SafeMarkdown markdown={applabI18n.makerSetupUnsupportedBrowser()} />
         </ValidationStep>
       );
     }
@@ -243,6 +244,32 @@ export default class SetupChecklist extends Component {
 
   contactSupport() {
     return <SafeMarkdown markdown={i18n.contactGeneralSupport()} />;
+  }
+
+  installFirmwareSketch() {
+    let firmataFromBoardType;
+    switch (this.state.boardTypeDetected) {
+      case BOARD_TYPE.EXPRESS:
+        firmataFromBoardType =
+          'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd';
+        break;
+      case BOARD_TYPE.MICROBIT:
+        firmataFromBoardType =
+          'https://github.com/microbit-foundation/microbit-firmata#installing-firmata-on-your-bbc-microbit';
+        break;
+      default:
+        firmataFromBoardType =
+          'https://learn.adafruit.com/circuit-playground-firmata/overview';
+    }
+    return (
+      <div>
+        <SafeMarkdown
+          markdown={applabI18n.makerSetupInstallFirmata({
+            firmataURL: firmataFromBoardType
+          })}
+        />
+      </div>
+    );
   }
 
   render() {
@@ -254,12 +281,12 @@ export default class SetupChecklist extends Component {
     return (
       <div>
         <h2>
-          Setup Check
+          {applabI18n.makerSetupCheck()}
           <input
             style={{marginLeft: 9, marginTop: -4}}
             className="btn"
             type="button"
-            value="re-detect"
+            value={applabI18n.redetect()}
             onClick={this.redetect.bind(this)}
             disabled={this.state.isDetecting}
           />
@@ -273,22 +300,15 @@ export default class SetupChecklist extends Component {
             {this.state.caughtError && this.state.caughtError.reason && (
               <pre>{this.state.caughtError.reason}</pre>
             )}
-            We couldn't detect a Circuit Playground board. Make sure your board
-            is plugged in, and click{' '}
+            {applabI18n.makerSetupPlugInBoardCheck()}
             <a href="#" onClick={this.redetect.bind(this)}>
-              re-detect
+              {applabI18n.redetect()}
             </a>
             .
             {isWindows() && (
-              <p>
-                If your board is plugged in, you may be missing the{' '}
-                <strong>Adafruit Windows Drivers</strong>. Follow the
-                instructions{' '}
-                <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">
-                  on this page
-                </a>{' '}
-                to install the drivers and try again.
-              </p>
+              <SafeMarkdown
+                markdown={applabI18n.makerSetupAdafruitWindowsDrivers()}
+              />
             )}
             {this.contactSupport()}
           </ValidationStep>
@@ -296,63 +316,32 @@ export default class SetupChecklist extends Component {
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
             stepName={i18n.validationStepBoardConnectable()}
           >
-            We found a board but it didn't respond properly when we tried to
-            connect to it.
+            {applabI18n.makerSetupBoardBadResponse()}
             {linuxPermissionError && (
               <div>
-                <p>
-                  We didn't have permission to open the serialport. Please make
-                  sure you are a member of the 'dialout' group.
-                </p>
-                <p>From your terminal, check which groups you belong to:</p>
+                <p>{applabI18n.makerSetupLinuxSerialport()}</p>
+                <p>{applabI18n.makerSetupLinuxGroupsCheck()}</p>
                 <pre>groups $&#123;USER&#125;</pre>
-                <p>
-                  If you don't belong to 'dialout', you'll want to add yourself
-                  to that group:
-                </p>
+                <p>{applabI18n.makerSetupLinuxAddDialout()}</p>
                 <pre>sudo gpasswd --add $&#123;USER&#125; dialout</pre>
-                <p>
-                  You may need to restart your computer for changes to take
-                  effect.
-                </p>
+                <p> {applabI18n.makerSetupLinuxRestart()} </p>
               </div>
             )}
-            {!linuxPermissionError && (
-              <div>
-                You should make sure it has the right firmware sketch installed.
-                You can{' '}
-                <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">
-                  install the Circuit Playground Firmata sketch with these
-                  instructions
-                </a>
-                .
-              </div>
-            )}
+            {!linuxPermissionError && this.installFirmwareSketch()}
             {this.contactSupport()}
           </ValidationStep>
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
             stepName={i18n.validationStepBoardComponentsUsable()}
           >
-            Oh no! Something unexpected went wrong while verifying the board
-            components.
+            {applabI18n.makerSetupVerifyComponents()}
             <br />
-            You should make sure your board has the right firmware sketch
-            installed. You can{' '}
-            <a
-              href={
-                this.state.boardTypeDetected === BOARD_TYPE.CLASSIC
-                  ? 'https://learn.adafruit.com/circuit-playground-firmata/overview'
-                  : 'https://learn.adafruit.com/adafruit-circuit-playground-express/code-org-csd'
-              }
-            >
-              install the Circuit Playground Firmata sketch with these
-              instructions
-            </a>
-            .{this.contactSupport()}
+            {this.installFirmwareSketch()}
+            {this.contactSupport()}
           </ValidationStep>
           {experiments.isEnabled('flash-classic') &&
-            this.state.boardTypeDetected !== BOARD_TYPE.OTHER && (
+            (this.state.boardTypeDetected === BOARD_TYPE.CLASSIC ||
+              this.state.boardTypeDetected === BOARD_TYPE.EXPRESS) && (
               <ValidationStep
                 stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
                 stepName={i18n.validationStepBoardFirmware()}

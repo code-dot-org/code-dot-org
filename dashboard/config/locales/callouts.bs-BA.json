@@ -382,6 +382,10 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Koristi padajući meni za zamjenu \"???\" sa brojem"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Ovaj broj možete promijeniti.",
+          "courseE_artist_ramp8_2": "Kliknite ovdje za upis broja ponavljanja vašeg koda."
         }
       }
     }

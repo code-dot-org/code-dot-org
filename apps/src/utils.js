@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
+import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
@@ -813,4 +814,28 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
 
 export function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Detects profanity in a string.
+ * @param {string} text
+ * @param {string} locale Optional.
+ * @returns {Array<string>|null} Array of profane words.
+ */
+export const findProfanity = (text, locale) => {
+  return $.ajax({
+    url: '/profanity/find',
+    method: 'POST',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify({text, locale})
+  });
+};
+
+/**
+ * Convert a string to an MD5 hash.
+ * @param {string} str
+ * @returns {string} A string representing an MD5 hash.
+ */
+export function hashString(str) {
+  return MD5(str).toString();
 }

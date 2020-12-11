@@ -479,29 +479,32 @@ state-facts: true
       %div.policy-item
         - if state_info[:state_plan_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has created a state plan for K-12 computer science.
+            <i class="far fa-check-square"></i>
+            %b State Plan - 
+            = state_info[:state_plan_t]
         - elsif state_info[:state_plan_s] == 'No'
           %div
             %i.fa.fa-square-o
+            %b State Plan -
             = state_info[:state_name_s]
             %b has not
             yet created a state plan for K-12 computer science. A plan that articulates the goals for computer science, strategies for accomplishing the goals, and timelines for carrying out the strategies is important for making computer science a fundamental part of a state’s education system.
         - elsif state_info[:state_plan_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:policy_0_t]
+            %b State Plan - 
+            = state_info[:state_plan_t]
 
       %div.policy-item
         - if state_info[:cs_standards_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has established K-12 computer science standards.
+            %i.far.fa-check-square
+            %b K-12 Standards - 
+            = state_info[:standards_t]
         - elsif state_info[:cs_standards_s] == 'No'
           %div
             %i.fa.fa-square-o
+            %b K-12 Standards - 
             = state_info[:state_name_s]
             %b does not yet
             have rigorous computer science standards publicly available across K-12. Computer science has often been confused with broader technology education in schools. The state could strengthen its computer science programs by publicly adopting discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. These standards can be guided by the concepts, practices, and recommendations in the K-12 Computer Science Framework, found at
@@ -510,106 +513,114 @@ state-facts: true
         - elsif state_info[:cs_standards_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:policy_1_t]
+            %b K-12 Standards - 
+            = state_info[:standards_t]
 
       %div.policy-item
         - if state_info[:pd_funding_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has allocated funding for rigorous computer science professional development and course support.
+            %i.far.fa-check-square
+            %b Funding - 
+            = state_info[:funding_t]
         - elsif state_info[:pd_funding_s] == 'No'
           %div
             %i.fa.fa-square-o
+            %b Funding - 
             = state_info[:state_name_s]
             %b does not yet
             provide dedicated funding for rigorous computer science professional development and course support. Although funds may be available via broader programs, the state can strengthen its computer science programs by creating specific opportunities to bring computer science to school districts, such as matching fund programs.
         - elsif state_info[:pd_funding_s] == 'Other'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:policy_2_t]
+            %b Funding - 
+            = state_info[:funding_t]
 
       %div.policy-item
         - if state_info[:cs_teacher_cert_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has clear certification pathways for computer science teachers.
+            <i class="far fa-check-square"></i>
+            %b Certification - 
+            = state_info[:certification_t]
         - elsif state_info[:cs_teacher_cert_s] == 'No'
           %div
             %i.fa.fa-square-o
+            %b Certification - 
             = state_info[:state_name_s]
             %b does not yet
             have clear certification pathways for computer science teachers. The expansion of K-12 computer science education is hampered by the lack of qualified computer science teachers. We can grow their ranks by creating clear, navigable, and rewarding professional paths for computer science teachers.
         - elsif state_info[:cs_teacher_cert_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:policy_3_t]
+            %b Certification - 
+            = state_info[:certification_t]
 
       %div.policy-item
         - if state_info[:pre_service_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has established programs at institutions of higher education to offer computer science to preservice teachers.
+            %i.far.fa-check-square
+            %b Pre-Service Programs - 
+            = state_info[:preservice_t]
         - elsif state_info[:pre_service_s] == 'No'
           %div
             %i.fa.fa-square-o
+            %b Pre-Service Programs - 
             = state_info[:state_name_s]
             %b has not yet
             established programs at institutions of higher education to offer computer science to preservice teachers. The computer science teacher shortage can be addressed by exposing more preservice teachers to computer science during their required coursework or by creating specific pathways for computer science teachers.
         - elsif state_info[:pre_service_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:policy_4_t]
+            %b Pre-Service Programs - 
+            = state_info[:preservice_t]
 
       %div.policy-item
         - if state_info[:state_position_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            has a dedicated computer science position in the state education agency.
+            %i.far.fa-check-square
+            %b Dedicated State Position - 
+            = state_info[:state_cs_t]
         - elsif state_info[:state_position_s] == 'No'
           %div
             %i.fa.fa-square-o
+            %b Dedicated State Position - 
             = state_info[:state_name_s]
             %b does not yet
             have dedicated computer science positions in state or local education agencies. Creating a statewide computer science leadership position within the state education agency can help expand state-level implementation of computer science education initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
         - elsif state_info[:state_position_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:policy_5_t]
+            %b Dedicated State Position - 
+            = state_info[:state_cs_t]
 
       %div.policy-item
         - if state_info[:require_hs_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            requires that all secondary schools offer computer science.
+            %i.far.fa-check-square
+            %b Require High Schools to Offer - 
+            = state_info[:hs_t]
         - elsif state_info[:require_hs_s] == 'No'
           %div
             %i.fa.fa-square-o
+            %b Require High Schools to Offer - 
             = state_info[:state_name_s]
             %b does not yet
             require that all secondary schools offer computer science. The state can support the expansion of computer science courses by adopting policies that require schools to offer a computer science course based on rigorous standards, with appropriate implementation timelines and allowing for remote and/or in-person courses.
         - elsif state_info[:require_hs_s] == 'Other'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:policy_6_t]
+            %b Require High Schools to Offer - 
+            = state_info[:hs_t]
 
       %div.policy-item
         - if state_info[:cs_counts_t] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            allows computer science to count for a core graduation requirement. Find out how
-            = state_info[:state_name_s]
-            allows computer science to count towards graduation at
-            = succeed "." do
-              %a{href: "http://bit.ly/9policies"} http://bit.ly/9policies
+            %i.far.fa-check-square
+            %b Count Towards Graduation - 
+            = state_info[:count_t]
         - elsif state_info[:cs_counts_t] == 'No'
           %div
             %i.fa.fa-square-o
+            %b Count Towards Graduation - 
             = state_info[:state_name_s]
             %b does not yet
             allow computer science to count for a core graduation requirement. States that count computer science as a core graduation requirement see 50% more enrollment in their AP Computer Science courses and increased participation by students from marginalized racial and ethnic groups underrepresented in computer science. Find out how other states allow computer science to count towards graduation at
@@ -618,29 +629,27 @@ state-facts: true
         - elsif state_info[:cs_counts_t] == 'Other'
           %div
             %i.fa.fa-check-square-o
-            = state_info[:policy_7_t]
-            Find out how
-            = state_info[:state_name_s]
-            allows computer science to count towards graduation at
-            = succeed "." do
-              %a{href: "http://bit.ly/9policies"} http://bit.ly/9policies
+            %b Count Towards Graduation - 
+            = state_info[:count_t]
 
       .policy-item
         - if state_info[:higher_ed_entrance_s] == 'Yes'
           %div
-            %i.fa.fa-check-square-o
-            = state_info[:state_name_s]
-            allows computer science to count as a core admission requirement at institutions of higher education.
+            %i.far.fa-check-square
+            %b IHE Admission - 
+            = state_info[:higher_ed_t]
         - elsif state_info[:higher_ed_entrance_s] == 'No'
           %div
             %i.fa.fa-square-o
+            %b IHE Admission - 
             = state_info[:state_name_s]
             %b does not yet
             allow computer science to count as a core admission requirement at institutions of higher education. Admission policies that do not include rigorous computer science courses as meeting a core entrance requirement, such as in mathematics or science, discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
         - elsif state_info[:higher_ed_entrance_s] == 'Other'
           %div
             %i.fa.fa-square-o
-            = state_info[:policy_8_t]
+            %b IHE Admission - 
+            = state_info[:higher_ed_t]
 
   %div
     %h3 Follow us!

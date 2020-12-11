@@ -7,11 +7,13 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
 import msg from '@cdo/locale';
+import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 describe('project.js', () => {
   let sourceHandler;
 
   const setData = project.__TestInterface.setCurrentData;
+  const setSources = project.__TestInterface.setCurrentSources;
 
   beforeEach(() => {
     sourceHandler = createStubSourceHandler();
@@ -646,7 +648,7 @@ describe('project.js', () => {
     });
   });
 
-  describe('toggleMakerEnabled()', () => {
+  describe('setMakerEnabled()', () => {
     beforeEach(() => {
       sinon
         .stub(project, 'saveSourceAndHtml_')
@@ -659,30 +661,31 @@ describe('project.js', () => {
       project.saveSourceAndHtml_.restore();
     });
 
-    it('performs a save with maker enabled if it was disabled', () => {
+    it('performs a save with maker set to circuitPlayground enabled if it was disabled', () => {
       sourceHandler.getMakerAPIsEnabled.returns(false);
       project.init(sourceHandler);
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(CP_API).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
-          .to.be.true;
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled
+        ).to.equal(CP_API);
       });
     });
 
     it('performs a save with maker disabled if it was enabled', () => {
       sourceHandler.getMakerAPIsEnabled.returns(true);
       project.init(sourceHandler);
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(null).then(() => {
         expect(project.saveSourceAndHtml_).to.have.been.called;
         expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
-          .to.be.false;
+          .to.be.null;
       });
     });
 
     it('always results in a page reload', () => {
       project.init(sourceHandler);
       expect(utils.reload).not.to.have.been.called;
-      return project.toggleMakerEnabled().then(() => {
+      return project.setMakerEnabled(null).then(() => {
         expect(utils.reload).to.have.been.called;
       });
     });
@@ -971,6 +974,48 @@ describe('project.js', () => {
         expect(e).to.contain('foo');
         done();
       });
+    });
+  });
+
+  describe('project.isCurrentCodeDifferent', () => {
+    afterEach(() => {
+      setSources({});
+    });
+
+    it('compares unset sources as if they were an empty string', () => {
+      setSources({});
+      expect(project.isCurrentCodeDifferent('')).to.be.false;
+    });
+
+    it('compares null inputs as if they were an empty string', () => {
+      setSources({source: ''});
+      expect(project.isCurrentCodeDifferent(null)).to.be.false;
+    });
+
+    it('compares unset input sources as if they were an empty string', () => {
+      setSources({source: ''});
+      expect(project.isCurrentCodeDifferent()).to.be.false;
+    });
+
+    it('ignores differences in line endings', () => {
+      setSources({source: 'foo\r\n\r\nbar'});
+      expect(project.isCurrentCodeDifferent('foo\n\nbar')).to.be.false;
+    });
+
+    it('ignores differences in xml closing tags', () => {
+      setSources({source: '<xml><test/></xml>'});
+      expect(project.isCurrentCodeDifferent('<xml><test></test></xml>')).to.be
+        .false;
+    });
+
+    it('notices differences in xml', () => {
+      setSources({source: '<xml><test/></xml>'});
+      expect(project.isCurrentCodeDifferent('<xml><test2/></xml>')).to.be.true;
+    });
+
+    it('notices differences in text', () => {
+      setSources({source: 'test'});
+      expect(project.isCurrentCodeDifferent('test2')).to.be.true;
     });
   });
 });

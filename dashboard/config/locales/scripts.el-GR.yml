@@ -7,11 +7,16 @@ el:
         csf_international_category_name: Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών
         csf2_draft_category_name: 'Υπό ανάπτυξη: Μαθήματα A - F'
         csp_category_name: Αρχές της Επιστήμης των Υπολογιστών ' 15-'16
+        csp_2018_category_name: Αρχές επιστήμης υπολογιστών ('18-'19)
+        csp_2019_category_name: Αρχές επιστήμης υπολογιστών ('19-'20)
+        csp_2020_category_name: Αρχές επιστήμης υπολογιστών ('20-'21)
         cspexams_category_name: Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών
         csp17_category_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
         full_course_category_name: Πλήρη μαθήματα
         hoc_category_name: Ώρα του Κώδικα
         math_category_name: Μαθηματικά
+        twenty_hour_category_name: 20ωρο
+        other_category_name: Άλλα
       name:
         course1:
           title: Μάθημα 1
@@ -478,6 +483,10 @@ el:
           lessons:
             Text Compression:
               name: Συμπίεση κειμένου
+        rbo-reference:
+          lessons:
+            reference:
+              name: αναφορά
         cspunit3:
           description_short: Προγραμματισμός
           lessons:
@@ -889,6 +898,8 @@ el:
               name: 'Μέλισσα: Συνθήκες'
         gradeKinder:
           lessons:
+            Debugging:
+              name: Εντοπισμός σφαλμάτων
             Events:
               name: Συμβάντα
             'Jigsaw: Learn to drag and drop':
@@ -907,6 +918,8 @@ el:
               name: Σύνθεση τραγουδιού
         grade1:
           lessons:
+            Debugging:
+              name: Εντοπισμός σφαλμάτων
             Events:
               name: Συμβάντα
             'Jigsaw: Learn to drag and drop':
@@ -1277,22 +1290,32 @@ el:
             Bounce:
               name: Αναπήδηση
         coursea-2017:
+          title: Μάθημα A
+          assignment_family_title: Μάθημα A
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         courseb-2017:
+          title: Μάθημα B
+          assignment_family_title: Μάθημα B
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
         coursec-2017:
+          title: Μάθημα C
+          assignment_family_title: Μάθημα C
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
         coursed-2017:
+          title: Μάθημα D
+          assignment_family_title: Μάθημα D
           lessons:
             Nested Loops:
               name: Φωλιασμένες Επαναλήψεις
         coursee-2017:
+          title: Μάθημα E
+          assignment_family_title: Μάθημα E
           lessons:
             Ice Age Play Lab:
               name: Play Lab Εποχής των Παγετώνων
@@ -1307,6 +1330,8 @@ el:
             Nested Loops:
               name: Φωλιασμένες Επαναλήψεις
         coursef-2017:
+          title: Μάθημα F
+          assignment_family_title: Μάθημα F
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -1552,6 +1577,7 @@ el:
             Lists:
               name: Λίστες
         coursea-2018:
+          assignment_family_title: Μάθημα A
           lessons:
             'Debugging: Unspotted Bugs':
               name: Μη εντοπισμένα bugs
@@ -1600,6 +1626,7 @@ el:
             Graph Paper Programming:
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
         courseb-2018:
+          assignment_family_title: Μάθημα B
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -1608,6 +1635,7 @@ el:
             Move It, Move It:
               name: Μετακίνησέ το, Μετακίνησέ το
         coursed-2018:
+          assignment_family_title: Μάθημα D
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
@@ -1630,6 +1658,7 @@ el:
             Relay Programming:
               name: Προγραμματισμός Ρελέ
         coursec-2018:
+          assignment_family_title: Μάθημα C
           lessons:
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
@@ -1647,6 +1676,7 @@ el:
             Functions with Parameters:
               name: Συναρτήσεις με παραμέτρους
         coursee-2018:
+          assignment_family_title: Μάθημα E
           lessons:
             'Programming: My Robotic Friends':
               name: Οι Ρομποτικοί φίλοι μου
@@ -1665,6 +1695,7 @@ el:
             Minecraft Hour of Code:
               name: Η Ώρα του Κώδικα με το Minecraft
         coursef-2018:
+          assignment_family_title: Μάθημα F
           lessons:
             'Programming: My Robotic Friends':
               name: Οι Ρομποτικοί φίλοι μου
@@ -2132,6 +2163,9 @@ el:
               display_name: Έργο
             required:
               display_name: Επισκόπηση
+          lessons:
+            Surveys:
+              name: Έρευνες
         csp1-2019:
           lesson_groups:
             cspSurvey:
@@ -2349,6 +2383,9 @@ el:
           lesson_groups:
             required:
               display_name: Επισκόπηση
+          lessons:
+            Debugging:
+              name: Εντοπισμός σφαλμάτων
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2708,11 +2745,19 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Εντοπισμός σφαλμάτων
         csp3-virtual:
           description_short: Προγραμματισμός
           lessons:
             Creating Functions:
               name: Δημιουργούμε Συναρτήσεις
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Εντοπισμός σφαλμάτων
         csp5-virtual:
           lessons:
             While Loops:
@@ -2774,3 +2819,13 @@ el:
               name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Μάθημα A
+            Course B:
+              name: Μάθημα B
+        ml-playground:
+          lessons:
+            intro:
+              name: Εισαγωγή

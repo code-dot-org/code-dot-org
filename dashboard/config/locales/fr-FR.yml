@@ -197,9 +197,18 @@ fr:
     mismatch_password: Les deux mots de passe ne sont pas identiques.
     student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
       tuteur légal d’utiliser les services de Code.org.
-    agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
-    my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées
-      et enregistrées ou traitées aux États-Unis.
+    agree_us_data_transfer_student: "**J'accepte que Code.org puisse transférer des
+      données (y compris des données personnelles) de mon utilisation de ce site vers
+      les États-Unis** afin d'héberger et de traiter lesdites données."
+    agree_us_data_transfer_teacher: "**J'accepte que Code.org puisse transférer des
+      données (y compris des données personnelles) de mon utilisation (et de celle
+      de mes étudiants) de ce site vers les États-Unis** afin d'héberger et de traiter
+      lesdites données."
+    data_collection_us: Je comprends que Code.org est un site Web à but non lucratif
+      hébergé aux États-Unis et que les lois régissant la collecte de données aux
+      États-Unis peuvent différer des lois de mon pays.
+    visit_privacy: Consultez [la politique de confidentialité](%{privacy_url}) de
+      Code.org pour en savoir plus.
     student_terms_markdown: Les adresses e-mail ne sont pas stockées dans un format
       qui nous permette de contacter les étudiants. Les étudiants ne recevront jamais
       d’e-mail de Code.org sauf lors de la procédure de récupération de mot de passe.
@@ -221,13 +230,12 @@ fr:
     email_preference_yes: Oui
     email_preference_no: Non
     email_preference_required: Vous devez spécifier une adresse e-mail préférée.
-    parent_account_checkbox: Je suis un parent/tuteur qui s'inscrit au nom de mon
-      enfant
-    parent_account_email_progress_permission: Pouvons-nous vous envoyer des e-mails
-      pour vous informer, occasionnellement, sur la progression de votre enfant, sur
-      ses projets, sur son cours ou sur l'informatique? [(Consultez notre politique
-      de confidentialité)](%{privacy_policy_url})
-    parent_account_email_label: E-mail du parent/tuteur
+    parent_account_checkbox: Je suis un parent/tuteur inscrit au nom de mon enfant
+    parent_account_email_progress_permission: Pouvons-nous vous envoyer, par courriel,
+      des mises à jour occasionnelles, sur les progrès et les projets de votre enfant,
+      ainsi que des mises à jour sur ses cours et l’informatique ? [(Voir notre politique
+      de confidentialité)] %{privacy_policy_url}
+    parent_account_email_label: 'Adresse électronique du parent/tuteur '
   school_info:
     title: Informations de l’école (facultatif)
     school_country: Pays de l’École
@@ -566,14 +574,15 @@ fr:
       électronique %{email}.
     auth_option_saved_no_email: Vous avez réussi à lier votre %{provider} compte.
     update_email: Mise à jour
-    for_parents_and_guardians: Pour les Parents et Tuteurs
-    link_a_parent_email: Associez une adresse e-mail parent/tuteur à ce compte pour
-      rester informé sur les progrès et les projets de votre enfant
+    for_parents_and_guardians: Pour les parents et tuteurs
+    link_a_parent_email: Associez l'adresse électronique d'un parent/tuteur à ce compte
+      afin de rester informé des progrès et des projets de votre enfant. Vous pourrez
+      également utiliser cette l'adresse électronique pour récupérer le mot de passe.
     parent_guardian_email_label: E-mail du parent/tuteur
     none: Aucun
-    only_one_parent_email_supported_warning: 'Remarque : nous ne pouvons prendre en
-      charge qu''une seule adresse e-mail parent/tuteur par compte étudiant pour le
-      moment.'
+    only_one_parent_email_supported_warning: 'Remarque : notre système ne supporte
+      qu''une seule adresse électronique de parent/tuteur par compte étudiant, pour
+      le moment.'
     encrypted: chiffré
   user_level:
     completed: Terminé
@@ -1384,14 +1393,6 @@ fr:
       vous acceptez le stockage de cookies sur votre ordinateur ou appareil mobile.
     more_information: Consulter la Politique de Confidentialité de Code.org.
     accept: J'accepte
-  gdpr_dialog:
-    heading: Acceptez-vous d’utiliser un site internet situé aux États-Unis ?
-    message: Des informations sur votre utilisation de ce site peuvent être envoyées
-      et enregistrées ou traitées aux États-Unis.
-    link_intro: Pour plus de détails consultez notre
-    privacy_policy: politique de confidentialité
-    logout: Déconnexion
-    true: Oui
   page_not_found_title: Page Introuvable
   page_not_found_header: '404 : Page Introuvable'
   page_not_found_description: La page recherchée n’existe pas à cette adresse. Vérifiez
@@ -1412,7 +1413,8 @@ fr:
       error_invalid_user: Identifiant invalide. Veuillez vous reconnecter.
       error_no_code: Veuillez entrer votre code de connexion.
   parent_email_banner:
-    text: "**Êtes-vous un parent ou un tuteur?** Relier votre e-mail à ce compte pour
-      rester informé sur la progression et les projets de votre enfant!"
-    link_your_email: Associez votre e-mail
-    not_now: Plus tard
+    text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique
+      à ce compte afin de rester informé des progrès et des projets de votre enfant
+      !** "
+    link_your_email: Associez votre adresse électronique
+    not_now: Pas maintenant

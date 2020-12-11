@@ -127,6 +127,7 @@ sk:
       Musíte sa prihlásiť zadaním hesla nižšie.
     use_clever: Ľutujeme, váš účet Code.org nie je prepojený s účtom %{provider}.
       Musíte sa prihlásiť cez váš Clever Portal.
+    invalid_provider: Váš %{provider} účet je už prelinkovný s vašim účtom Code.org.
     unable_to_connect_provider: Nedokázali sme prepojiť váš účet na Code.org s Vaším
       %{provider} účtom. Skúste prosím znova.
     already_in_use: Váš účet %{provider} je už prepojený s iným Code.org účtom.
@@ -185,10 +186,18 @@ sk:
     mismatch_password: Zadané dve heslá sa nezhodujú
     student_consent: Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať
       stránkua služby Code.org.
-    agree_us_website: Súhlasím s používaním stránky prevádzkovanej z územia Spojených
-      štátov amerických (USA).
-    my_data_to_us: Údaje z používania tejto stránky môžu byť zaslané a uložené alebo
-      spracované v Spojených štátoch amerických (USA).
+    agree_us_data_transfer_student: "**Súhlasím, že Code.org môže prenášať údaje (vrátane
+      osobných údajov) v rámci môjho používania tejto stránky do Spojených štátov**
+      za účelom umiestňovania a spracovania týchto údajov."
+    agree_us_data_transfer_teacher: "** Súhlasím, že Code.org môže prenášať údaje
+      (vrátane osobných údajov) v rámci môjho používania (a používania zo strany mojich
+      študentov) tejto stránky do Spojených štátov** za účelom umiestňovania a spracovania
+      týchto údajov."
+    data_collection_us: Rozumiem, že Code.org je americká nezisková webová stránka
+      a že zákony upravujúce zhromažďovanie údajov v USA sa môžu líšiť od zákonov
+      v mojej krajine.
+    visit_privacy: Ďalšie informácie nájdete v [zásadách ochrany osobných údajov](%{privacy_url})
+      Code.org.
     student_terms_markdown: Emailové adresy neukladáme vo formáte, ktorý by nám umožňoval
       kontaktovať študentov. Študenti od nás nikdy nedostanú emaily s výnimkou obnovenia
       hesla. Prečítajte si naše [podmienky ochrany súkromia](http://code.org/privacy)
@@ -545,6 +554,7 @@ sk:
       zástupcu, aby ste boli informovaní o pokroku a projektoch vášho dieťaťa. Túto
       e-mailovú adresu budete môcť použiť aj na obnovenie hesla.
     parent_guardian_email_label: Email rodiča/zákonného zástupcu
+    remove_parent_email_label: Odstrániť
     none: Žiadne
     only_one_parent_email_supported_warning: 'Poznámka: V súčasnosti sme schopní na
       jednom študentskom účte podporiť len jednu e-mailovú adresu rodiča/zákonného
@@ -968,6 +978,10 @@ sk:
       aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné
       vašim študentom.
     review_terms: Prezrieť aktualizované podmienky
+  donor_interstitial:
+    local_supporters: Miestni podporovatelia
+    global_supporters: Svetoví podporovatelia
+    get_started: Začnite s Code.org
   school_info_interstitial:
     title: Chceme priniesť informatiku ku každému študentovi - pomôžte nám sledovať
       náš pokrok!
@@ -1188,6 +1202,8 @@ sk:
       school_city: Mesto
       school_country: Krajina
       colombian_school_city: Mesto
+      colombian_school_department: Oddelenie na škole
+      colombian_school_municipality: Okres školy
       colombian_school_name: Názov školy
       ages: Ktoré ročníky vyučujute tento rok?
       subjects: Ktoré predmety vyučujute tento rok?
@@ -1218,6 +1234,7 @@ sk:
       school_country:
         canada: Kanada
         chile: Čile
+        colombia: Kolumbia
         israel: Izrael
         malaysia: Malajzia
         mexico: Mexiko
@@ -1266,6 +1283,7 @@ sk:
         csf_express: Základy informatiky (zrýchlený kurz)
         csd: Objavujeme informatiku
         csp: Princípy Informatiky
+        not_applicable: Neuplatňuje sa
       email_opt_in:
         opt_in_yes: Áno
         opt_in_no: Nie
@@ -1283,6 +1301,7 @@ sk:
         pri spoznávaní Code.org a jeho nástrojov. Dajte nám prosím vedieť vaše nápady,
         otázky a postrehy emailom na support@code.org %{support_email_url}, alebo
         príspevkom na fóre pre učiteľov %{teacher_forum_url}!
+      facilitator_not_applicable: Neuplatňuje sa
     logged_out:
       heading: Ďakujeme vám za prejavený záujem o Vzdelávací program pre profesionálov!
       body: Ak chcete začať, musíte sa najprv prihlásiť do vášho účtu na Code.org.
@@ -1305,15 +1324,6 @@ sk:
       uložením cookies na Vašom počítači alebo zariadení.
     more_information: Prečítajte si Zásady ochrany súkromia pre Code.org.
     accept: Súhlasím
-  gdpr_dialog:
-    heading: Súhlasíte s používanim webovej stránky umiestnenej v Spojených štátoch
-      amerických (USA)?
-    message: Údaje z vášho používania tejto stránky môžu byť zaslané a uložené alebo
-      spracované v Spojených štátoch amerických (USA).
-    link_intro: Pre ďalšie informácie si pozrite naše
-    privacy_policy: Zásady ochrany osobných údajov
-    logout: Odhlásiť sa
-    true: Áno
   page_not_found_title: Stránka nebola nájdená
   page_not_found_header: '404: Stránka nebola nájdená'
   page_not_found_description: Stránka, ktorú hľadáte na tejto adrese neexistuje. Skontrolujte
@@ -1327,8 +1337,12 @@ sk:
         na vašom domovskom prehliadači.
       copy_code: Na prihlásenie do Code.org prosím skopírujte a prilepte tento kód
         do aplikácie Maker.
+      error_no_code: Prosím zadajte svoj prihlasovací kód
   parent_email_banner:
     text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s
       týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
     link_your_email: Prepojte svoj e-mail
     not_now: Teraz nie
+  behaviors:
+    this_sprite: tento objekt
+  unit_prefix: Jednotka %{n}

@@ -6,4 +6,4 @@ title: Bütün Okul Katılımı
 
 # Bütün okulunuzu dahil edin
 
-Bütün okulları Kodlama Saati'ne dahil etmek için gerekli tüm bilgiler yakında burada olacak.
+Bütün okulları Hour of Code'a dahil etmek için gerekli tüm bilgiler yakında burada olacak.

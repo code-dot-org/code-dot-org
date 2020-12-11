@@ -9,7 +9,7 @@ vi:
         csf_2018_category_name: KHMT Cơ bản (2018)
         csf_2019_category_name: KHMT Cơ bản (2019)
         csf_international_category_name: KHMT Cơ bản Quốc tế
-        csp_category_name: "Các Quy tắc KHMT '15-'16"
+        csp_category_name: Các Quy tắc KHMT '15-'16
         csp_2018_category_name: Các Quy tắc KHMT ('18-'19)
         csp_2019_category_name: Các Quy tắc KHMT ('19-'20)
         cspexams_category_name: Kiểm tra các Quy tắc KHMT
@@ -17,6 +17,7 @@ vi:
         hoc_category_name: Giờ của mã
         math_category_name: thuật toán
         research_studies_category_name: Các nghiên cứu
+        other_category_name: Khác
       name:
         course1:
           title: Khóa học 1
@@ -6833,3 +6834,11 @@ vi:
           lesson_groups:
             lg_1:
               display_name: Nội dung
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Trí Tuệ Nhân Tạo cho Đại Dương
+            intro:
+              name: Giới thiệu
+            visualizing:
+              name: Làm dự liệu hiển thị được

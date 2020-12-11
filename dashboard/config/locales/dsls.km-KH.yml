@@ -654,7 +654,8 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: អាន​កូដ​ហើយ​ប៉ាន់ស្មាន​ថា​តើ​កម្មវិធី​នេះ​នឹង​មានរូបរាង​ដូច​ម្តេច​នៅ​ពេល​ដំណើរការ​។
+        title: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -662,7 +663,8 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: អាន​កូដ​ហើយ​ប៉ាន់ស្មាន​ថា​តើ​កម្មវិធី​នេះ​នឹង​មានរូបរាង​ដូច​ម្តេច​នៅ​ពេល​ដំណើរការ​។
+        title: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -670,7 +672,8 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: អាន​កូដ​ហើយ​ប៉ាន់ស្មាន​ថា​តើ​កម្មវិធី​នេះ​នឹង​មានរូបរាង​ដូច​ម្តេច​នៅ​ពេល​ដំណើរការ​។
+        title: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1752,3 +1755,153 @@ km-KH:
         - {}
         questions:
         - {}
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          #បណ្តាញអ្នកប្រើប្រាស់អុីនធើណេតដូចខ្ញុំដែរ
+
+          ## តើធ្វើយ៉ាងម៉េចដើម្បីអោយយើងផ្លាស់ពីកន្លែងមួយទៅមួយទៀតនៅលើអ៊ីនធឺណិតប្រកបដោយសុវត្ថិភាព?
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          #ទិដ្ឋភាពទូទៅ
+
+          នៅក្នុងថ្នាក់នេះ សិស្សត្រូវការធ្វើការជាក្រុមដើម្បីរចនាទូកបន្ទះអាលុយមីញ៉ូមដែលអាចជួយទ្រទ្រង់កាក់ជាច្រើនតាមដែលអាចធ្វើទៅបាន។ នៅចុងបញ្ចប់នៃមេរៀន ក្រុមទាំងអស់ត្រូវឆ្លុះបញ្ចាំងពីបទពិសោធន៍របស់ពួកគេជាមួយនឹងសកម្មភាពទាំងនោះ ព្រមទាំងផ្សារភ្ជាប់ទៅនឹងរបៀបនៃការដោះស្រាយបញ្ហាដែលពួកគេនឹងធ្វើសម្រាប់វគ្គសិក្សានេះទាំងស្រុង។
+        teacher_markdown: |-
+          [key]
+
+          * [ទូកអាលុយមុីញ៉ូម - គំរូ](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
+      Unit 1 Lesson 2 Overview:
+        markdown: |-
+          # ទិដ្ឋភាពទូទៅ
+
+          នៅក្នុងមេរៀននេះអ្នកនឹងរៀនអំពីដំណើរការដោះស្រាយបញ្ហា ដែលនឹងជួយអ្នករៀបចំ  រចនាសម្ព័ន្ធ
+          វិធីសាស្រ្តរបស់អ្នក ចំពោះបញ្ហាជាច្រើន។
+
+
+          ## ធនធាន
+
+          * [ដំណើរការដោះស្រាយបញ្ហា - ការណែនាំអំពីសកម្មភាព](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: "* [ដំណើរការដោះស្រាយបញ្ហា](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - Activity Guide ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))\n\n"
+      CSD U1 Lesson 5 Overview:
+        markdown: |-
+          # ទិដ្ឋភាពទូទៅ
+
+          នៅក្នុងមេរៀននេះ អ្នកនឹងរៀនអំពីប្រភេទផ្សេងៗនៃឧបករណ៍បញ្ចូលនិងបញ្ចេញព័ត៌មានដែលប្រើដោយកុំព្យូទ័រនិង ប្រភេទព័ត៌មានដែលពួកគេបញ្ជូននិងទទួល។
+
+          ## ពន្យល់ពាក្យ
+
+          * ** ការបញ្ចូល ** - ឧបករណ៍ ឬសមាសភាគណាមួយដែលអនុញ្ញាតឱ្យផ្តល់ព័ត៌មានទៅកុំព្យូទ័រ
+          * ** លទ្ធផល ** - ឧបករណ៍ឬ​ ឬសមាសភាគណាមួយដែលទទួលព័ត៌មានពីកុំព្យូទ័រ
+
+          ## ធនធាន
+
+          * [ការបញ្ចូលនិងលទ្ធផល - ការណែនាំសកម្មភាព] (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: បញ្ចេញបញ្ចូល
+      Unit 1 Lesson 3 Overview:
+        markdown: |-
+          # ទិដ្ឋភាពទូទៅ
+
+          ក្នុងមេរៀននេះ អ្នកនឹងអនុវត្តដំណើរការដោះស្រាយបញ្ហា​​ ទៅនឹងបញ្ហាផ្សេងៗទៀត ដើម្បីស្វែងយល់ពីដំណាក់កាលនីមួយៗដែលជួយអ្នកក្នុងការអភិវឌ្ឍនិង កែលម្អដំណោះស្រាយចំពោះបញ្ហា។
+        teacher_markdown: "[គន្លឹះនៃការដោះស្រាយបញ្ហា](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Activity Guide ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))\n"
+      Unit 1 Lesson 4 Overview:
+        markdown: |2-
+
+          # ទិដ្ឋភាពទូទៅ
+
+          នៅក្នុងមេរៀននេះ​ អ្នកនឹងចាប់ផ្តើមគិតអំពីរបៀបដែលកុំព្យូទ័រជួយដោះស្រាយបញ្ហាមួយចំនួននិង រៀនពីលក្ខណៈសំខាន់ៗរបស់កុំព្យូទ័រនីមួយៗ។
+
+          #ធនធាន
+
+          * [តើកុំព្យូទ័រគឺជាអ្វី? - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: "[តើកុំព្យូរទ័រគឺជាអ្វី? - Exemplar](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - Activity Guide ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
+      CSD U2 L1 Overview:
+        markdown: |-
+          # ទិដ្ឋភាពទូទៅ
+
+          មេរៀននេះនិយាយអំពីគោលបំណងដែលគេហទំព័រអាចបម្រើទាំងអ្នកប្រើប្រាស់និងអ្នកបង្កើត។ The class explores a handful of the most-used websites in the United States and discusses how each of those sites is useful for users and how it might also serve its creators.
+          ## Vocabulary
+
+          * **Website** - A location connected to the Internet that maintains one or more pages on the World Wide Web.
+
+
+          ## Resources
+
+          * [The Purpose of Websites - Activity Guide](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: "# ទិដ្ឋភាពទូទៅ"
+      CSD U3 Lesson Overview 1:
+        markdown: |
+          #ទិដ្ឋភាពទូទៅ
+
+          សិស្សនៅក្នុងថ្នាក់រៀនមួយត្រូវបានដាក់ស្នើកិច្ចការស្ទង់មតិដើម្បីអោយពួកគេពិចារណាទៅលើ"បញ្ហា" នៃភាពធុញទ្រាន់និង ការបញ្ចេញមតិផ្ទាល់ខ្លួនរបស់ពួកគេ ហើយធ្វើការឆ្លុះបញ្ចាំងបញ្ហាទាំងនោះទៅលើជីវិតរស់ប្រចាំថ្ងៃរបស់ពួកគេ។ ត្រង់ចំណុចនេះពួកគេនឹងត្រូវស្វែងយល់ពី វិទ្យាសាស្ត្រកុំព្យូទ័រ ជាលក្ខណៈទូទៅ និង ការសរសេរកូដកម្មវិធីក្នុងលក្ខណៈជាទម្រង់លេងជាក់លាក់ណាមួយ ឬក៏ ដើរតួជាយានមួយដែលបង្ហាញពីយោបល់ផ្ទាល់ខ្លួនរបស់ពួកគេ។
+
+
+          ## ធនធាន
+
+          * [CS ក្នុងការកំសាន្ត - ការណែនាំអំពីសកម្មភាព](https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: |+
+          *[វិទ្យាសាស្ត្រកុំព្យូទ័រ(CS) នៅក្នុងលក្ខណៈកម្សាន្ត]
+          (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
+
+      CSD U3 Entertainment:
+        teacher_markdown: |+
+          នេះគឺជា គេហទំព័រ ខ្លះ អាចអោយសិស្សយកទៅសិក្សាជាបឋមបាន។  គេហទំព័រទាំងនេះ គឺជាគេហទំព័រជាទូទៅដែលសមស្របសម្រាប់សាលារៀនប៉ុន្តែមាតិកាខ្លះផ្លាស់ប្តូរជាញឹកញាប់ដូច្នេះ ** យើងសូមណែនាំឱ្យអ្នកត្រួតពិនិត្យគេហទំព័រនីមួយៗសម្រាប់មាតិកាមិនសមរម្យមុនពេលចែកចាយជាមួយសិស្ស ** ។
+
+          ## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ###ទិដ្ឋភាពទូទៅ
+
+          គេហទំព័រនេះផ្តោតលើព័ត៌មានអំពីប្រព័ន្ធឌីជីថលរបស់ Disney ប៉ុន្តែអ្នកប្រហែលជាមានការភ្ញាក់ផ្អើលចំពោះតួនាទីដ៏ធំដែល ស៊ីអេស (វិទ្យាសាស្ត្រកុំព្យូទ័រ) ដើរតួគ្រប់ទម្រង់នៃការកម្សាន្តខុសៗគ្នារបស់ពួកគេ។ ដោយសារតែនេះមិនមែនជាគេហទំព័រផ្តោតលើ វិទ្យាសាស្ត្រកុំព្យូទ័រ តែអ្នកនៅតែត្រូវប្រើមុខងារស្វែងរកដើម្បីស្វែងយល់ពីអត្ថបទពាក់ព័ន្ធនានា។
+
+          ### វាលពាក់ព័ន្ធ
+
+          * ភាពយន្ត / ទូរទស្សន៍
+          * ចលនា
+          * រ៉ូបូត / អេកតាថិនថល
+          * ល្បែង
+
+          ## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### ទិដ្ឋភាពទូទៅ
+
+          បណ្តុំវីដេអូបង្ហាញពីមនុស្សជាច្រើនដែលធ្វើការនៅក្នុងវិស័យផ្សេងៗគ្នានៃឧស្សាហកម្មហ្គេមនិងមានការបរិយាយអំពីអ្វីដែលពួកគេកំពុងតែធ្វើ។
+
+          ### វាលពាក់ព័ន្ធ
+
+          * ល្បែង
+          * ចលនា
+          * សិល្បៈ
+
+          ### Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          # ទិដ្ឋភាពទូទៅ
+
+          Music Think Tank គឺជាប្លុកដែលផ្តោតលើមនុស្សដែលធ្វើការនៅក្នុងវិស័យតន្រ្តី។ វាមិនមែនជាគេហទំព័រជាក់លាក់របស់ស៊ីអេសអេសទេប៉ុន្តែការស្វែងរក“ វិទ្យាសាស្ត្រកុំព្យូទ័រ” ឬ“ ការសរសេរកម្មវិធី” នឹងបង្ហាញអោយឃើញនូវអត្ថបទដែលគួរឱ្យចាប់អារម្មណ៍មួយចំនួន។
+
+          ### វាលពាក់ព័ន្ធ
+
+          * តន្ត្រី
+
+          ##Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+
+          ### ទិដ្ឋភាពទូទៅ
+
+          ខណៈពេលដែល ផតឃែស្ថ នេះមិនមានលក្ខណៈពិសេសសំដៅអោយចំច្រើននៅក្នុងវិធីនៃការសរសេរកម្មវិធីលក្ខណៈអាជីព (ដូចជាអ្នកធ្វើការសរសេរកូដអាជីព) ឡើយ តែវាគឺជាលំនាំមេរៀនដ៏ល្អមួយដើម្បីមើលវិធីសរសេរផ្សេងៗដែលអ្នកលេងធម្មតាអាចលេងកម្សាន្តជាមួយលេខកូដដូចពេលលេងហ្គេមដែរ។
+
+          ### វាលពាក់ព័ន្ធ
+
+          *ទាំងអស់
+
+      gradek1_activity_beNice:
+        markdown: "\n# អាកប្បកិរិយាក្នុងបន្ទប់​កុំព្យូទ័រ\n  \n<br/><br/>    \n    \n<a
+          href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nចូលទៅផែនការមេរៀន\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">បន្ត</a>"

@@ -1,6 +1,16 @@
 -# This variable will get any data we need to pass along to scripts/show.js
 - script_data = @script.summarize(true, current_user)
-- additional_script_data = {course_name: @script.unit_group&.name, course_id: @script.unit_group&.id, show_redirect_warning: @show_redirect_warning, redirect_script_url: @redirect_script_url, section: @section, user_type: current_user&.user_type, user_id: current_user&.id, is_verified_teacher: current_user&.authorized_teacher?, locale: Script.locale_english_name_map[request.locale], sections: @sections_with_assigned_info}
+- additional_script_data = {course_name: @script.unit_group&.name,
+                            course_id: @script.unit_group&.id,
+                            show_redirect_warning: @show_redirect_warning,
+                            redirect_script_url: @redirect_script_url,
+                            section: @section,
+                            user_type: current_user&.user_type,
+                            user_id: current_user&.id,
+                            user_providers: current_user&.providers,
+                            is_verified_teacher: current_user&.authorized_teacher?,
+                            locale: Script.locale_english_name_map[request.locale],
+                            sections: @sections_with_assigned_info}
 - scriptOverviewData = {scriptData: script_data.merge(additional_script_data)}
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
@@ -66,6 +76,11 @@
         %ul
           - @script.unit_groups.each do |course|
             %li= link_to course_path(course)
+      -# use a heuristic to infer whether lesson plans are present for all lessons
+      - if @script.lessons.first&.lesson_activities.present?
+        Lessons:
+        - @script.lessons.map do |lesson|
+          %li= link_to lesson.localized_title, lesson_path(id: lesson.id)
       - levels = Script.get_from_cache(@script.name).lessons.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
       .row
         .span1

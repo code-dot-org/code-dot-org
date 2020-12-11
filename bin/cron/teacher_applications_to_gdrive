@@ -12,8 +12,8 @@ require 'honeybadger/ruby'
 def get_rows
   applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
                      meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
-                     free_reduced_lunch_percent urm_percent accepted_at)]
-  Pd::Application::Teacher2021Application.find_each do |app|
+                     free_reduced_lunch_percent urm_percent accepted_at accepted race community_type)]
+  Pd::Application::Teacher2122Application.find_each do |app|
     stats = app.get_latest_school_stats(app.school_id)
     pay_fee = app.sanitize_form_data_hash[:principal_pay_fee] || app.sanitize_form_data_hash[:pay_fee]
     frl_percent = stats&.frl_eligible_percent
@@ -25,6 +25,8 @@ def get_rows
     if app.sanitize_form_data_hash[:principal_underrepresented_minority_percent]
       urm_percent = app.sanitize_form_data_hash[:principal_underrepresented_minority_percent].to_f
     end
+    accepted_statuses = %w(accepted_no_cost_registration accepted_notified_by_partner registration_sent paid accepted_not_notified)
+    accepted = accepted_statuses.include?(app.status) ? 1 : 0
 
     applications << [
       app.course,
@@ -41,7 +43,10 @@ def get_rows
       stats&.rural_school?,
       frl_percent,
       urm_percent,
-      app.accepted_at
+      app.accepted_at,
+      accepted,
+      app.sanitize_form_data_hash[:race],
+      stats&.community_type
     ]
   end
 
@@ -54,8 +59,8 @@ def main
   allowed_list = DCDO.get('external_emails_with_application_data_access', [])
 
   # Uses a Google Cloud service account to access Google Drive
-  sheet = Google::Sheet.new CDO.applications_2020_2021_gsheet_key
-  sheet.export(tab_name: 'all_apps', rows: get_rows)
+  sheet = Google::Sheet.new CDO.applications_2021_2022_gsheet_key
+  sheet.export(tab_name: 'all_apps_21_22', rows: get_rows)
   sheet.notify_of_external_sharing(allowed_list)
 end
 

@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad 或 iPhone",
   "filterPlatformNoInternet": "無網路或速度慢",
   "filterPlatformNoComputers": "沒有電腦等設備",
+  "filterPlatformScreenReader": "螢幕閱讀器",
   "filterTopics": "所有主題",
   "filterTopicsScience": "科學",
   "filterTopicsMath": "數學",

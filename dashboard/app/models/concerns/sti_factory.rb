@@ -4,7 +4,10 @@ module StiFactory
   extend ActiveSupport::Concern
   included do
     class << self
-      alias_method_chain :new, :factory unless method_defined?(:new_without_factory)
+      unless method_defined?(:new_without_factory)
+        alias_method :new_without_factory, :new
+        alias_method :new, :new_with_factory
+      end
     end
 
     def with_type(type)

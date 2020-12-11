@@ -10,8 +10,8 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7.2'
-gem 'rails-controller-testing'
+gem 'rails', '5.2.4.4'
+gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
@@ -20,7 +20,7 @@ gem 'sprockets-rails'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
-gem 'responders', '~> 2.0'
+gem 'responders', '~> 3.0'
 
 # Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
 # breaks some firebase URIs. See
@@ -28,9 +28,8 @@ gem 'responders', '~> 2.0'
 gem 'sinatra', '2.0.2', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
-# Ref: https://github.com/bdurand/seamless_database_pool/issues/38
-# Ref: https://github.com/bdurand/seamless_database_pool/pull/39
-gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
+
+gem 'seamless_database_pool', '>= 1.0.20'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
@@ -44,7 +43,6 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'aws-google' # use Google Accounts for AWS access
 gem 'google-api-client', '~> 0.23'
 
 # CSRF protection for Sinatra.
@@ -56,9 +54,8 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate'
-  gem 'pry'
-  gem 'ruby-progressbar', require: false
+  gem 'annotate', '~> 3.1.1'
+  gem 'aws-google' # use Google Accounts for AWS access
   gem 'web-console'
 end
 
@@ -99,14 +96,14 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium'
+  gem 'eyes_selenium', '3.17.19'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '3.141.0'
   gem 'spring'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 3.0'
@@ -138,9 +135,11 @@ gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
 
-# Use SCSS for stylesheets.
-# Ref: https://github.com/rails/sass-rails/pull/386
-gem 'sass-rails', github: 'wjordan/sass-rails', ref: 'frozen-array-fix'
+gem 'sass-rails', '~> 6.0.0'
+# Temporarily use our own fork of sassc-rails (a dependency of sass-rails),
+# while we try to get some bugs fixed upstream.
+# See https://github.com/sass/sassc-rails/pull/153 for context.
+gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
 
 # Use Uglifier as compressor for JavaScript assets.
 gem 'uglifier', '>= 1.3.0'
@@ -153,12 +152,9 @@ gem 'phantomjs', '~> 1.9.7.1'
 # For emoji in utility output.
 gem 'gemoji'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
 # Authentication and permissions.
-gem 'cancancan', '~> 1.15.0'
-gem 'devise', '~> 4.4.0'
+gem 'cancancan', '~> 2.2.0'
+gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -200,8 +196,7 @@ gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/e
 
 gem 'redcarpet', '~> 3.3.4'
 
-# Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
-gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
+gem 'geocoder'
 
 gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
@@ -216,26 +211,32 @@ gem 'naturally' # for sorting string naturally
 
 gem 'retryable' # retry code blocks when they throw exceptions
 
-# Used by a build script.
+# Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
-gem 'therubyracer', '~> 0.12.2', platforms: :ruby
+# JavaScript runtime used by ExecJS.
+gem 'mini_racer'
 
 gem 'jwt' # single signon for zendesk
 
-gem 'codemirror-rails' # edit code in textarea
-
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
-# We also serve a copy of one of these font files from the public directory
-gem 'font-awesome-rails', '~> 4.6.3' # NOTE: apps/src/applab/Exporter.js depends on the font file names from this version!
+# NOTE: apps/src/applab/Exporter.js depends on the specific names of the font
+# files included here. If you're upgrading to a different version, make sure to
+# check that the filenames have not changed, and copy the latest files from the
+# gem into our project. These font files are currently served from:
+# - /dashboard/public/fonts/
+# - /pegasus/sites.v3/code.org/public/fonts/
+# - /pegasus/sites.v3/hourofcode/public/fonts/
+gem 'font-awesome-rails', '~> 4.7.0.5'
+
 gem 'sequel'
 gem 'user_agent_parser'
 
-gem 'paranoia'
+gem 'paranoia', '~> 2.4.2'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
+gem 'active_model_serializers', '~> 0.10.10'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -296,7 +297,7 @@ gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys'
+gem 'composite_primary_keys', '~> 11.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -356,3 +357,7 @@ gem 'require_all', require: false
 gem 'dotiw'
 
 gem 'datapackage'
+
+gem 'ruby-progressbar'
+
+gem 'pry'

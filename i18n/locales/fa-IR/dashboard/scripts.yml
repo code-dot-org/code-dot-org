@@ -5,6 +5,7 @@ fa:
       category:
         hoc_category_name: ساعت کد نویسی
         math_category_name: ریاضی
+        other_category_name: دیگر
       name:
         course1:
           title: دوره 1
@@ -2302,3 +2303,7 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
+        ml-playground:
+          lessons:
+            intro:
+              name: مقدمه

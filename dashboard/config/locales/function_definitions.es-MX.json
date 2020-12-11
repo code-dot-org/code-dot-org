@@ -763,13 +763,15 @@
           "n-sided shape": {
             "name": "forma de n lados",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           },
           "draw a loop": {
             "name": "dibujar un bucle",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           },
           "draw spiral circle": {
@@ -783,7 +785,8 @@
           "draw a loop": {
             "name": "dibujar un bucle",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           },
           "n-sided shape": {
@@ -998,13 +1001,15 @@
           "draw a polygon": {
             "name": "dibujar un polígono",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           },
           "do something": {
             "name": "hacer algo",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -1013,7 +1018,8 @@
             "name": "dibujar un polígono",
             "description": "dibuja un polígono con los parámetros de lados y longitud",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -1022,7 +1028,8 @@
             "name": "dibujar un polígono",
             "description": "dibuja un polígono con los parámetros de lados y longitud",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -1030,7 +1037,8 @@
           "draw a polygon": {
             "name": "dibujar un polígono",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -1038,7 +1046,8 @@
           "draw a spiral edge": {
             "name": "dibujar un borde en espiral",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -1062,7 +1071,8 @@
             "name": "dibujar un molinete",
             "parameters": {
               "length": "longitud",
-              "repeat": "repetir"
+              "repeat": "repetir",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -1074,7 +1084,8 @@
           "draw a shape": {
             "name": "dibujar una forma",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -1086,7 +1097,8 @@
           "draw a square": {
             "name": "Dibuje un cuadrado",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -1182,7 +1194,8 @@
           "draw a polygon": {
             "name": "dibujar un polígono",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -1224,7 +1237,8 @@
             "name": "dibujar un molinete",
             "parameters": {
               "length": "longitud",
-              "repeat": "repetir"
+              "repeat": "repetir",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -1236,7 +1250,8 @@
           "draw a shape": {
             "name": "dibujar una forma",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -1274,7 +1289,8 @@
             "parameters": {
               "actor": "actor",
               "speed": "velocidad"
-            }
+            },
+            "description": "una función de patrulla que tiene un actor y un parámetro de velocidad"
           }
         },
         "Robot Doodle": {
@@ -1435,7 +1451,10 @@
             }
           },
           "draw a polygon": {
-            "name": "dibujar un polígono"
+            "name": "dibujar un polígono",
+            "parameters": {
+              "sides": "lados"
+            }
           },
           "draw a square 20": {
             "name": "dibujar un cuadrado 20",
@@ -3348,7 +3367,8 @@
             "name": "dibujar un polígono",
             "description": "dibuja un polígono con los parámetros de lados y longitud",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -3356,7 +3376,8 @@
           "draw a polygon": {
             "name": "dibujar un polígono",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -3364,7 +3385,8 @@
           "draw a spiral edge": {
             "name": "dibujar un borde en espiral",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           }
         },
@@ -3373,7 +3395,8 @@
             "name": "dibujar un borde en espiral",
             "parameters": {
               "length": "longitud",
-              "min": "mín."
+              "min": "mín.",
+              "sides": "lados"
             }
           }
         },
@@ -3382,7 +3405,8 @@
             "name": "dibujar un borde en espiral",
             "parameters": {
               "length": "longitud",
-              "min": "mín."
+              "min": "mín.",
+              "sides": "lados"
             }
           }
         },
@@ -3406,7 +3430,8 @@
             "name": "dibujar un molinete",
             "parameters": {
               "length": "longitud",
-              "repeat": "repetir"
+              "repeat": "repetir",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -3418,7 +3443,8 @@
           "draw a shape": {
             "name": "dibujar una forma",
             "parameters": {
-              "length": "longitud"
+              "length": "longitud",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -3437,7 +3463,8 @@
             "name": "dibujar un borde en espiral",
             "parameters": {
               "length": "longitud",
-              "min": "mín."
+              "min": "mín.",
+              "sides": "lados"
             }
           }
         },
@@ -3449,7 +3476,10 @@
             }
           },
           "draw a polygon": {
-            "name": "dibujar un polígono"
+            "name": "dibujar un polígono",
+            "parameters": {
+              "sides": "lados"
+            }
           },
           "draw a square 20": {
             "name": "dibujar un cuadrado 20",

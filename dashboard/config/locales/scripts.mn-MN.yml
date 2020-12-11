@@ -19,6 +19,7 @@ mn:
         hoc_category_name: Кодын цаг
         math_category_name: Математик
         research_studies_category_name: Судалгааны сэдэв
+        other_category_name: Бусад
       name:
         course1:
           title: Хичээл 1
@@ -21670,3 +21671,13 @@ mn:
               name: Хичээл А
             Course B:
               name: Хичээл В
+            CS Discoveries:
+              name: КШУ-ны нээлтүүд
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Далайд зориулсан ХОУ
+            intro:
+              name: Танилцуулга
+            visualizing:
+              name: Өгөгдөл төсөөлж байна

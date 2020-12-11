@@ -220,7 +220,7 @@
         },
         "4-5 Artist 8": {
           "draw circle": {
-            "name": "gambar lingkaran"
+            "name": "gambar loop"
           },
           "draw goal": {
             "name": "gambar tujuan"
@@ -1524,7 +1524,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "panjang",
-              "min": "menit"
+              "min": "min"
             }
           }
         },
@@ -1532,7 +1532,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "panjang",
-              "min": "menit"
+              "min": "min"
             }
           }
         },
@@ -1579,7 +1579,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "panjang",
-              "min": "menit"
+              "min": "min"
             }
           }
         },

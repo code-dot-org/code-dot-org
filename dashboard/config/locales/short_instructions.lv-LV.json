@@ -198,7 +198,8 @@
         "flappy_6": "Pārbaudi, vai vari saņemt punktus, ja Flappy vēzē spārnus ātrāk vai lēnāk.",
         "flappy_7": "Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie \"kad palaists\" bloka.",
         "flappy_8": "Tu vari mainīt izskatu jebkad, ne tikai iesākoties spēlei. Izmēģini uzstādījumu RANDOM fons, kad kaut kas notiek, piemēram, kad izvairās no šķēršļa.",
-        "flappy_9": "Lai pamainītu lietas, tā vietā, lai beigtu spēli, kad atduries pret šķērsli, iestati punktu skaitu atpakaļ uz 0."
+        "flappy_9": "Lai pamainītu lietas, tā vietā, lai beigtu spēli, kad atduries pret šķērsli, iestati punktu skaitu atpakaļ uz 0.",
+        "scrat 19": "Vēl viens uzdevums ar \"ja-tad\" bloku. Vai vari to atrisināt pareizi no pirmā mēģinājuma?"
       }
     }
   }

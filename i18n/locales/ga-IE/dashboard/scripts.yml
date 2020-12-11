@@ -7,7 +7,7 @@ ga:
         csf_category_name: Buntús na Ríomheolaíochta
         csf_international_category_name: 'Buntús na Ríomheolaíochta: Idirnáisiúnta'
         csf2_draft_category_name: 'Á bhforbairt: Cúrsaí A-F'
-        csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
+        csp_category_name: '''15-''16 Foras Feasa ar an Ríomheolaíocht'
         csp_2018_category_name: Foras Feasa ar an Ríomheolaíocht ('18-'19)
         csp_2019_category_name: Foras Feasa ar an Ríomheolaíocht ('19-'20)
         cspexams_category_name: 'Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht'
@@ -15,6 +15,7 @@ ga:
         full_course_category_name: Cúrsaí Iomlána
         hoc_category_name: An Uair Chódála
         math_category_name: Matamaitic
+        other_category_name: Eile
       name:
         course1:
           title: Cúrsa 1
@@ -3744,3 +3745,11 @@ ga:
               name: Cúrsa A
             Course B:
               name: Cúrsa B
+            CS Discoveries:
+              name: Fionnachtana sa Ríomheolaíocht
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI ar son an Aigéin
+            intro:
+              name: Réamhrá

@@ -108,3 +108,9 @@ use_my_apps: true
 # And this each time you need to start mailcatcher in the background again:
 #   `mailcatcher --ip=0.0.0.0`
 #use_mailcatcher: true
+
+
+# Credentials for Twilio, used to share projects to a phone number via SMS.
+#twilio_sid:
+#twilio_auth:
+#twilio_messaging_service:

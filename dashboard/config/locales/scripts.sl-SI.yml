@@ -5,6 +5,7 @@ sl:
       category:
         hoc_category_name: Ura kode
         math_category_name: Matematika
+        other_category_name: Drugi
       name:
         course1:
           title: Tečaj 1
@@ -2022,3 +2023,7 @@ sl:
           lesson_groups:
             lg_1:
               display_name: Vsebina
+        ml-playground:
+          lessons:
+            intro:
+              name: Uvod

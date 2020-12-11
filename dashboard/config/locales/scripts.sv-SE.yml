@@ -5,6 +5,7 @@ sv:
       category:
         hoc_category_name: Timmen med Kod
         math_category_name: Matte
+        other_category_name: Annat
       name:
         course1:
           title: Kurs 1
@@ -3044,3 +3045,7 @@ sv:
               name: Kurs A
             Course B:
               name: Kurs B
+        ml-playground:
+          lessons:
+            intro:
+              name: Introduktion

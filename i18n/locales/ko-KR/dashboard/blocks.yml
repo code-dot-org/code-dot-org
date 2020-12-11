@@ -88,9 +88,6 @@ ko:
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 영원히 실행"
         options:
@@ -109,9 +106,6 @@ ko:
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
@@ -188,9 +182,6 @@ ko:
             MOVES.XArmsUp: 늘리기
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
@@ -219,9 +210,6 @@ ko:
             MOVES.XArmsUp: 늘리기
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: "{START} 후{N} 마디마다반복 "
       Dancelab_everySeconds:
@@ -970,9 +958,13 @@ ko:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: "{N} {UNIT} 에서"
         options:
           UNIT:
             '"seconds"': "~초 기다리기"
+            '"frames"': 프레임
+      gamelab_bounceOff:
+        text: "{SPRITE}가 {TARGET}에서 벗어나 튕겨집니다"
       gamelab_changePropBy:
         text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
@@ -994,6 +986,10 @@ ko:
         text: 클릭 {SPRITE}
       gamelab_comment:
         text: '코멘트: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: "{SPRITE}의 수"
       gamelab_createNewSprite:
         text: "새 스프라이트를 만드세요 \n 호출 {NAME} \n 의상 {COSTUME} \n 에 {LOCATION}"
       gamelab_destroy:
@@ -1002,6 +998,8 @@ ko:
         text: 드래그 가능
       gamelab_edgesDisplace:
         text: 모서리 이동에서 블록 {SPRITE}
+      gamelab_getAllSprites:
+        text: 모든 스프라이트
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1017,13 +1015,23 @@ ko:
         options:
           CHOICE:
             '"this"': 이
+            '"other"': 기타
       gamelab_getTime:
+        text: "{UNIT} 내 시간"
         options:
           UNIT:
             '"seconds"': "~초 기다리기"
+            '"frames"': 프레임
       gamelab_hideTitleScreen:
         text: 제목 화면 숨기기
+      gamelab_ifVarEquals:
+        text: |-
+          만약 {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} 복장은 {COSTUME} 입니다"
       gamelab_isKeyPressed:
+        text: "{KEY}이 눌러졌습니다"
         options:
           KEY:
             '"up"': 위로
@@ -1059,6 +1067,8 @@ ko:
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} 은 접하는 가장자리입니다."
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} 가 {TARGET}을 터치합니다"
       gamelab_jumpTo:
         text: "{SPRITE}이(가) {LOCATION}(으)로 점프"
       gamelab_keyPressed:
@@ -1101,6 +1111,14 @@ ko:
             '"z"': z
       gamelab_locationAt:
         text: '위치 x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        text: "{LOCATION}의 {DISTANCE} 픽셀 {DIRECTION}  "
+        options:
+          DIRECTION:
+            '"North"': 북쪽
+            '"East"': 동쪽
+            '"South"': 남쪽
+            '"West"': 서쪽
       gamelab_locationMouse:
         text: 마우스 위치
       gamelab_locationOf:
@@ -1109,6 +1127,8 @@ ko:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
+      gamelab_makeNumSprites:
+        text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
       gamelab_mirrorSprite:
         text: "{SPRITE} 얼굴 {DIRECTION}"
         options:
@@ -1117,6 +1137,8 @@ ko:
             '"left"': 왼쪽으로
       gamelab_mouseLocation:
         text: 마우스 위치
+      gamelab_moveBackward:
+        text: "{SPRITE}을 {DISTANCE} 픽셀 뒤로 이동"
       gamelab_moveForward:
         text: 이동 {SPRITE} {DISTANCE} 픽셀 앞으로
       gamelab_moveInDirection:
@@ -1131,6 +1153,8 @@ ko:
         text: 이동 {SPRITE} 픽셀 {DISTANCE} 향해 {TARGET}
       gamelab_objectSpritePointer:
         text: 클릭 {SPRITE}
+      gamelab_patrollingUpDown:
+        text: 위 아래로 순찰
       gamelab_playSound:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
@@ -1155,6 +1179,8 @@ ko:
         text: 스프라이트 {SPRITE} 중지 {BEHAVIOR}
       gamelab_removeTint:
         text: "{THIS}에서 색상 제거"
+      gamelab_repeatForever:
+        text: 무한반복
       gamelab_setAnimation:
         text: 변경 {THIS} 의상을 {ANIMATION}
       gamelab_setBackground:
@@ -1175,6 +1201,12 @@ ko:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 물속
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 겨울
             undefined: 없음
+      gamelab_setBackgroundImageAs:
+        text: 배경을 {IMG}으로 설정
+      gamelab_setPrompt:
+        text: 변수 {VAR}를 위한 사용자 {QUESTION} 유도
+      gamelab_setPromptWithChoices:
+        text: 선택항목 {A}{B}{C}으로 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY}을(를) {VAL}(으)로 설정 "
         options:
@@ -1210,12 +1242,16 @@ ko:
             '"while"': '반복(~인 동안):'
       gamelab_subjectSpritePointer:
         text: 클릭 {SPRITE}
+      gamelab_tumbling:
+        text: 텀블링
       gamelab_turn:
         text: 설정 {SPRITE} {DIRECTION} {N} 도
         options:
           DIRECTION:
             '"right"': 오른쪽으로
             '"left"': 왼쪽으로
+      gamelab_updateTitleWithColor:
+        text: 타이틀 화면 {BREAK} 타이틀 {TITLE} 색상 {COLOR} 표시
       gamelab_whenDownArrow:
         text: 아래쪽 화살표를 눌렀을 때
       gamelab_whenKey:
@@ -1262,6 +1298,10 @@ ko:
         text: 동안 {SPRITE1} 만지고 있다 {SPRITE2}
       gamelab_whileUpArrow:
         text: 위쪽 화살표를 누른 상태에서
+      gamelab_withPercentChance:
+        text: |-
+          만약 {NUM}% 기회
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x 좌표 {SPRITE}
       gamelab_yLocationOf:
@@ -1611,9 +1651,16 @@ ko:
       aalab_setupStory:
         text: 설정 스토리
       aalab_starwars_playSound:
+        text: 플레이{OPTION}사운드
         options:
           OPTION:
             '"random"': random(랜덤)
+            '"R2-D2 random"': R2-D2 랜덤
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:
@@ -1708,7 +1755,7 @@ ko:
             '"stoneBricks"': 돌 벽돌
             '"mossyStoneBricks"': 이끼 돌 벽돌
             '"crackedStoneBricks"': 금이 간 돌 벽돌
-            '"decorativeStoneBricks"': 장식용 돌 벽돌
+            '"chiseledStoneBricks"': 장식용 석조 벽돌
             '"blueCoralBlock"': 푸른 산호 블록
             '"pinkCoralBlock"': 핑크 산호 블록
             '"magentaCoralBlock"': 마젠타 산호 블록

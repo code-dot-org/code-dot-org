@@ -5,6 +5,7 @@ lv:
       category:
         hoc_category_name: Programmēšanas stunda
         math_category_name: Matemātika
+        other_category_name: Citi
       name:
         course1:
           title: Kurss 1
@@ -2070,3 +2071,7 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+        ml-playground:
+          lessons:
+            intro:
+              name: Ievads

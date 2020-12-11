@@ -893,8 +893,6 @@ fil:
   courses_category: 'Buong mga Kurso'
   cookie_banner:
     accept: 'Ako ay sumasang-ayon'
-  gdpr_dialog:
-    yes: 'Oo'
   copy: 'Kopyahin'
   parent_email_banner:
     text: "**Ikaw ba ay magulang o tagapag-alaga?** I-link ang email mo sa account na ito para manatiling updated sa progreso at mga proyekto ng anak mo!"

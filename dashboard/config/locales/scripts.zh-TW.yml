@@ -8,6 +8,7 @@ zh-TW:
         csd_2019_category_name: 計算機科學探索（'19-'20）
         csf_category_name: CS 基本原理
         csf_2018_category_name: 計算機科學基礎（2018）
+        csf_2019_category_name: 電腦科學基礎 2019)
         csf_international_category_name: 計算機科學基礎國際版
         csf2_draft_category_name: 開發中：課程 A - F
         csp_category_name: "'15-' 16 計算機科學原理"
@@ -19,6 +20,7 @@ zh-TW:
         hoc_category_name: 一小時玩程式
         math_category_name: 運算
         research_studies_category_name: 研究
+        other_category_name: 其它
       name:
         course1:
           title: 課程 1
@@ -1186,6 +1188,8 @@ zh-TW:
               name: 歡迎！
             Wrap-up:
               name: 總結
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: 單元 1：第 1-2 日 - 什麼是電腦？
         equityPD:
           lessons:
             Equity PD:
@@ -1305,6 +1309,8 @@ zh-TW:
               name: 歡迎！
             Wrap-up:
               name: 總結
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: 單元 1：第 1-2 日 - 什麼是電腦？
         ECSPD2-NexTech:
           description: 階段 2 暑假的線上混合式學習
           description_short: 階段 2 暑假的線上混合式學習
@@ -1329,6 +1335,8 @@ zh-TW:
               name: 歡迎！
             Wrap-up:
               name: 總結
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: 單元 1：第 1-2 日 - 什麼是電腦？
         CSPPD2:
           title: 計算機科學原理專業發展：Blended Summer Study
           description: 為期五天的 8 小時的線上專業訓練幫助教師在新的學期準備課程。
@@ -2909,6 +2917,8 @@ zh-TW:
               name: 歡迎！
             Wrap-up:
               name: 總結
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: 單元 1：第 1-2 日 - 什麼是電腦？
         ecs-unit2:
           title: ECS 單元 2
           description: 單元 2：問題解決
@@ -4305,7 +4315,7 @@ zh-TW:
         csp5-support:
           title: 單元 5 線上專業學習課程
           description_short: 教師專業學習課程 - CSP 單元 5
-          description: 即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。
+          description: '即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。 '
           lesson_groups:
             required:
               display_name: 概覽
@@ -13938,6 +13948,10 @@ zh-TW:
               display_name: 第 2 章：樣式和 CSS
             cspSurvey:
               display_name: 問卷
+            csd2_1v2:
+              display_name: '第1章: 建立網頁'
+            csd2_2v2:
+              display_name: '第2章: 多網頁網站'
           lessons:
             Exploring Web Pages:
               name: 瀏覽網頁
@@ -14017,6 +14031,10 @@ zh-TW:
               name: 知識產權
             Images:
               name: 圖像
+              description_student: "**每日問題: 我們如何將圖片加到我們的網站，並同時遵守授權規定?**\r\n\r\n本課程一開始將探討使用圖片的論理議題，特別是其智慧財產權。接著學習如何使用
+                &lt;img&gt; 標籤以及如何正確地引用圖片的來源。"
+              description_teacher: "**每日問題: 我們如何將圖片加到我們的網站，並同時遵守授權規定?**\r\n\r\n本課程一開始將探討使用圖片的論理議題，特別是其智慧財產權。接著學習如何使用
+                &lt;img&gt; 標籤以及如何正確地引用圖片的來源。"
             'Websites for Expression ':
               name: 建立網站，表達內容
               description_student: 'This lesson introduces websites as a means of
@@ -14072,8 +14090,24 @@ zh-TW:
               name: 專案後測驗
             CS Discoveries Post Course survey:
               name: 電腦科學探索課後問卷調查
+            'Mini-Project: HTML Web Page':
+              name: '迷你專案: HTML網頁'
+              description_student: "**每日問題: 我如何運用 HTML 來顯示個人資料?**\r\n\r\n在這堂課中，同學將以他們自選的主題來建立一個個人網頁。課程一開始將會複習
+                HTML 標籤，接著設計網頁並決定哪些標籤需要被實作，最後將網頁建立在 Web Lab 中。"
+            'Mini-Project: Your Personal Style':
+              name: '迷你專案: 你的個人風格'
+            'Your Web Page - Define ':
+              name: 你的網頁 -  定義
+            Your Web Page - Prepare:
+              name: 你的網頁 - 準備
+            Project - Personal Web Page:
+              name: 專案 - 個人網頁
+            Websites for a Purpose:
+              name: 有目的的網站
             Linking Pages:
               name: 鏈接頁面
+            Using Images:
+              name: 使用圖片
         csd1-2020:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
@@ -14085,6 +14119,8 @@ zh-TW:
               display_name: 第 1 章：解決問題的流程
             csd1_2:
               display_name: 第 2 章：計算機與問題解決能力
+            csd1_3:
+              display_name: 替代課程
           lessons:
             CS Discoveries Pre-survey:
               name: 電腦科學探索課前問卷調查
@@ -14253,6 +14289,14 @@ zh-TW:
               name: 課堂 3：探索問題解決 - 遊戲主題
             'Lesson 3: Exploring Problem Solving - Animals Theme':
               name: 課堂 3：探索問題解決 - 動物主題
+            'Games Theme (Lesson 3: Exploring Problem Solving)':
+              name: 遊戲主題（課程3：探索解決問題）
+            'Exploring Problem Solving (Lesson 3: Exploring Problem Solving)':
+              name: 探索解決問題（課程3：探索解決問題）
+            'Games Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 遊戲主題（替代課程3：探索解決問題）
+            'Exploring Problem Solving (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 探索解決問題（替代課程3：探索解決問題）
             Storage:
               name: 儲存
         csd4-2020:
@@ -15779,6 +15823,8 @@ zh-TW:
           lessons:
             new stage:
               name: 新舞台
+            Tools:
+              name: 工具
             Debugging:
               name: 除錯
             Module 1:
@@ -16345,3 +16391,13 @@ zh-TW:
               name: 課程 A
             Course B:
               name: 課程 B
+            CS Discoveries:
+              name: 計算機科學探索
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: 在海洋中使用的 AI
+            intro:
+              name: 介紹
+            visualizing:
+              name: 資料視覺化

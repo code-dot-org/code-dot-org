@@ -16,13 +16,20 @@ const ButtonColor = {
   blue: 'blue',
   white: 'white',
   red: 'red',
-  green: 'green'
+  green: 'green',
+  purple: 'purple'
 };
 
 const ButtonSize = {
   default: 'default',
   large: 'large',
   narrow: 'narrow'
+};
+
+const ButtonHeight = {
+  default: 34,
+  large: 40,
+  narrow: 40
 };
 
 const styles = {
@@ -121,6 +128,23 @@ const styles = {
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
+    [ButtonColor.purple]: {
+      color: color.white,
+      backgroundColor: color.purple,
+      fontWeight: 'bold',
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.purple,
+        borderColor: color.purple,
+        backgroundColor: color.lightest_purple
+      },
+      ':disabled': {
+        color: color.lighter_purple,
+        backgroundColor: color.lightest_purple,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
+      }
+    },
     [ButtonColor.green]: {
       color: color.white,
       backgroundColor: color.level_perfect,
@@ -140,19 +164,19 @@ const styles = {
   },
   sizes: {
     [ButtonSize.default]: {
-      height: 34,
+      height: ButtonHeight.default,
       paddingLeft: 24,
       paddingRight: 24,
       lineHeight: '34px'
     },
     [ButtonSize.large]: {
-      height: 40,
+      height: ButtonHeight.large,
       paddingLeft: 30,
       paddingRight: 30,
       lineHeight: '40px'
     },
     [ButtonSize.narrow]: {
-      height: 40,
+      height: ButtonHeight.narrow,
       paddingLeft: 10,
       paddingRight: 10,
       lineHeight: '40px'
@@ -260,5 +284,6 @@ class Button extends React.Component {
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
+Button.ButtonHeight = ButtonHeight;
 
 export default Radium(Button);

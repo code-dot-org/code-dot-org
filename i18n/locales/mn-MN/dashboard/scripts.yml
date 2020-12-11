@@ -10,7 +10,7 @@ mn:
         csf_2018_category_name: КШУ-ны үндсүүд (2018)
         csf_international_category_name: КШУ-ны үндсүүд олон улсын
         csf2_draft_category_name: 'Хөгжүүлж буй: А-F хичээлүүд'
-        csp_category_name: "'15-'16 КШУ-ны зарчмууд"
+        csp_category_name: '''15-''16 КШУ-ны зарчмууд'
         csp_2018_category_name: КШУ-ны зарчмууд ('18-'19)
         csp_2019_category_name: КШУ-ны зарчмууд ('19-'20)
         cspexams_category_name: КШУ-ны зарчмуудын дадлага шалгалт
@@ -19,6 +19,7 @@ mn:
         hoc_category_name: Кодын цаг
         math_category_name: Математик
         research_studies_category_name: Судалгааны сэдэв
+        other_category_name: Бусад
       name:
         course1:
           title: Хичээл 1
@@ -14390,10 +14391,20 @@ mn:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Модуль 1
+              name: 'Модуль 1'
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: Хичээл А
             Course B:
               name: Хичээл В
+            CS Discoveries:
+              name: КШУ-ны нээлтүүд
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Далайд зориулсан ХОУ
+            intro:
+              name: Танилцуулга
+            visualizing:
+              name: Өгөгдөл төсөөлж байна

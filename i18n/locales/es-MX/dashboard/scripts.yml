@@ -11,7 +11,7 @@ es-MX:
         csf_2019_category_name: Fundamentos de Ciencias de la Computación (2019)
         csf_international_category_name: Fundamentos de Ciencias de la Computación (internacional)
         csf2_draft_category_name: 'En desarrollo: cursos A-F'
-        csp_category_name: "Principios de Ciencias de la Computación '15-'16"
+        csp_category_name: Principios de Ciencias de la Computación '15-'16
         csp_2018_category_name: Principios de Ciencias de la Computación ('18-'19)
         csp_2019_category_name: Principios de Ciencias de la Computación ('19-'20)
         cspexams_category_name: Prueba de práctica de Principios de Ciencias de la Computación
@@ -20,6 +20,7 @@ es-MX:
         hoc_category_name: Hora del código
         math_category_name: Matemáticas
         research_studies_category_name: Estudios de investigación
+        other_category_name: Otro
       name:
         course1:
           title: Curso 1
@@ -14688,6 +14689,8 @@ es-MX:
           lessons:
             new stage:
               name: nueva etapa
+            Tools:
+              name: Herramientas
             Debugging:
               name: Depuración
             Module 1:
@@ -15091,10 +15094,33 @@ es-MX:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Módulo 1
+              name: 'Módulo 1'
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: Curso A
             Course B:
               name: Curso B
+            CS Discoveries:
+              name: Descubrimientos de Ciencias de la Computación
+        virustest:
+          title: Cómo simular un brote
+          description_short: 'Utiliza el Laboratorio de sprites para crear una simulación de un brote de virus.'
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Inteligencia Artificial para océanos
+            intro:
+              name: Introducción
+            visualizing:
+              name: Visualización de datos
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Cómo codificar una simulación
+          lesson_groups:
+            outbreak:
+              display_name: Simulación de brotes
+          title: Brote
+          description_short: 'Utiliza el Laboratorio de sprites para programar una simulación de un brote de virus.'
+          description: 'Utiliza el Laboratorio de sprites para programar una simulación de un brote de virus.'

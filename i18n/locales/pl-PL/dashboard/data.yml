@@ -354,7 +354,7 @@ pl:
         C4_unplugged_parameters: Pisanie piosenek z parametrami
         C4_unplugged_binary: Binarny
         CSF_a_b_artist_loops: Pętle z Artystą
-        CSF_artist_angles: Kąty w Artyście
+        CSF_artist_angles: Kąty w interfejsie Artist
         CSF_collector_k1_blocks: 'Podstawy Informatyki: Kolektor'
         CSF_collector_repeat_loops: Kolektor pętli powtórz
         CSF_collector_text_blocks: 'Podstawy Informatyki: Kolektor'
@@ -510,7 +510,7 @@ pl:
         hoc_dance_events: Potańcówka - Zdarzenia
         hoc_dance_properties: Potańcówka - Właściwości
         hoc_dance_congrats: Potańcówka - Rozpoczynamy!
-        c_and_c_great_to_create: Tworzenie i uczciwa gra są świetne.
+        c_and_c_great_to_create: Wspaniale jest tworzyć i grać uczciwie
         c_and_c_digital_sharing: Udostępnianie cyfrowe
         teaching_csf_how_it_works: 'Nauczanie podstaw informatyki: Na czym polega kurs'
         elem_pd_2: Informatyka dla szkół podstawowych - wideo PD 2/2

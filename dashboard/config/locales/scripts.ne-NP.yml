@@ -9,6 +9,7 @@ ne:
         csp17_category_name: "'16-'17 CS Principles"
         hoc_category_name: Hour of Code
         math_category_name: Math
+        other_category_name: अन्य
       name:
         course1:
           title: Course 1
@@ -2294,3 +2295,7 @@ ne:
           lesson_groups:
             lg_1:
               display_name: Content
+        ml-playground:
+          lessons:
+            intro:
+              name: Introduction

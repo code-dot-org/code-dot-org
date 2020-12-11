@@ -30,7 +30,7 @@ Esperamos que despierte interés en nuestros estudiantes por seguir aprendiendo.
 
 #### ¿Por qué es importante?
 
-La tecnología transforma todas las industrias del planeta. En 2015, 7 millones de empleos en los Estados Unidos estuvieron relacionados con ocupaciones, como el arte y el diseño, que valoran las destrezas de programación. Pero el 55 por ciento de las escuelas en los Estados Unidos no enseñan ciencias de la computación. Es tiempo de avanzar al siglo 21. Sabemos que, más allá de lo que hagan cuando sean grandes (medicina, negocios, política o artes), al saber cómo se desarrolla la tecnología los estudiantes ganan en confianza y obtienen una ventaja competitiva. <br /> <br />
+La tecnología transforma todas las industrias del planeta. En 2015, 7 millones de empleos en los Estados Unidos estuvieron relacionados con ocupaciones, como el arte y el diseño, que valoran las destrezas de programación. But 53 percent of schools in the U.S. don't teach computer science. Es tiempo de avanzar al siglo 21. Sabemos que, más allá de lo que hagan cuando sean grandes (medicina, negocios, política o artes), al saber cómo se desarrolla la tecnología los estudiantes ganan en confianza y obtienen una ventaja competitiva. <br /> <br />
 
 #### Una cita que puedes usar en tus materiales
 
@@ -38,7 +38,7 @@ La tecnología transforma todas las industrias del planeta. En 2015, 7 millones 
 
 #### Acerca de Code.org
 
-Code.org es un una organizacion 501c3 pública sin fines de lucro dedicada a expandir la participación en ciencias de la computación, principalmente de las mujeres y los estudiantes de color. Su visión es que todos los estudiantes, de todas las escuelas, tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código, que hasta la fecha ha introducido a más de 100 millones de estudiantes a las ciencias de la computación, y se ha asociado con 70 distritos de escuelas públicas en todo el país para ampliar los programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de corporaciones, fundaciones y personas generosas, como Microsoft, Facebook, Fundación de Infosys USA, Amazon, entre otras. Para obtener más información, visita [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Su visión es que todos los estudiantes, de todas las escuelas, tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código, que hasta la fecha ha introducido a más de 100 millones de estudiantes a las ciencias de la computación, y se ha asociado con 70 distritos de escuelas públicas en todo el país para ampliar los programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de corporaciones, fundaciones y personas generosas, como Microsoft, Facebook, Fundación de Infosys USA, Amazon, entre otras. Para obtener más información, visita [code.org]({{ codeorg_link }}).
 
 ## Comparte esto en redes sociales y por correo electrónico
 

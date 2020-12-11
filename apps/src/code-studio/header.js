@@ -12,6 +12,8 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
+import {useDbProgress} from './progressRedux';
+import clientState from './clientState';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -63,6 +65,7 @@ const PUZZLE_PAGE_NONE = -1;
  */
 header.build = function(
   scriptData,
+  lessonGroupData,
   lessonData,
   progressData,
   currentLevelId,
@@ -72,7 +75,13 @@ header.build = function(
   scriptNameData,
   hasAppOptions
 ) {
+  const store = getStore();
+  if (progressData) {
+    store.dispatch(useDbProgress());
+    clientState.clearProgress();
+  }
   scriptData = scriptData || {};
+  lessonGroupData = lessonGroupData || {};
   lessonData = lessonData || {};
   progressData = progressData || {};
 
@@ -83,6 +92,7 @@ header.build = function(
   // Set up the store immediately.
   progress.generateStageProgress(
     scriptData,
+    lessonGroupData,
     lessonData,
     progressData,
     currentLevelId,
@@ -96,7 +106,7 @@ header.build = function(
   // the opportunity to wait until the app is loaded before rendering.
   $(document).ready(function() {
     ReactDOM.render(
-      <Provider store={getStore()}>
+      <Provider store={store}>
         <HeaderMiddle
           scriptNameData={scriptNameData}
           lessonData={lessonData}

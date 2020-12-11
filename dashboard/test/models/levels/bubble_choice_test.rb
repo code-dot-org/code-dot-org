@@ -246,6 +246,7 @@ DSL
     end.once
 
     bubble_choice_copy = bubble_choice.clone_with_suffix('_copy')
+    assert_equal 'bubble choice_copy', bubble_choice_copy.name
 
     expected_names = %w(sublevel_1_copy sublevel_2_copy sublevel_3_copy)
     assert_equal expected_names, bubble_choice_copy.sublevels.map(&:name)

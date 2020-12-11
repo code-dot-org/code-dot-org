@@ -24,7 +24,8 @@
         },
         "2-3 Artist 6": {
           "2-3_Artist_6_b": "Protože už jsem otočen doprava, je pri vytvoření trojúhelníku jednodušší začít tím že půjdu dopředu a potom se otočím doleva.",
-          "2-3_Artist_6_c": "Každá strana trojúhelníku je stejně dlouhá jako každá strana čtverce... 100 pixelů!"
+          "2-3_Artist_6_c": "Každá strana trojúhelníku je stejně dlouhá jako každá strana čtverce... 100 pixelů!",
+          "2-3_Artist_6_a": "Pro nakreslení menších úhlů je potřeba otočit o trošku _více_, než při malování čtverce. "
         },
         "2-3 Artist 7": {
           "2-3_Artist_7_a": "Nejsnazší způsob jak dokončit tuto hádanku je nakreslit první čtverec a zakončit umělcem směřujícím dolů a až poté začít s druhým čtvercem."
@@ -36,7 +37,8 @@
           "2-3_Artist_9_a": "Tvar diamantu je jen pootočený čtverec"
         },
         "2-3 Artist Debugging 10": {
-          "2-3_Artist_Debugging_10_b": "**Pokus a omyl je zde dobrá cesta!**\n\nZkus měnit vždy jedno číslo.\n\nKteré číslo co dělá?\n\nPokud se ztratíš, prostě klikni \"Začít znovu\" a celý kód se vrátí do původního stavu."
+          "2-3_Artist_Debugging_10_b": "**Pokus a omyl je zde dobrá cesta!**\n\nZkus měnit vždy jedno číslo.\n\nKteré číslo co dělá?\n\nPokud se ztratíš, prostě klikni \"Začít znovu\" a celý kód se vrátí do původního stavu.",
+          "2-3_Artist_Debugging_10_a": "Pamatuj, chceš udělat ovládací tlačítka 10 pixelů _širší_ ...tak nezapomeň **přidat** 10 k číslu, které se mění."
         },
         "2-3 Artist Debugging 2": {
           "2-3_Artist_Debugging_2_a": "Tip: Každý vous je dlouhý 75 pixelů."
@@ -72,7 +74,8 @@
           "2-3_Artist_Functions_4_a": "Umělec se potřebuje otočit o 120 stupňů mezi každým čtvercem, aby dokončil obrazec."
         },
         "2-3 Artist Loops New 11": {
-          "2-3_Artist_Loops_New_11_b": "Tvé nové otočení by mělo jít na **konec** kódu uvnitř cyklu."
+          "2-3_Artist_Loops_New_11_b": "Tvé nové otočení by mělo jít na **konec** kódu uvnitř cyklu.",
+          "2-3_Artist_Loops_New_11_a": "Vzpomeň si na kód z minulé úlohy:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">8</title>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">turnRight</title>\n                <title name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">50</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant_dropdown\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n                        <next>\n                          <block type=\"draw_move_by_constant\">\n                            <title name=\"DIR\">moveForward</title>\n                            <title name=\"VALUE\">50</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "2-3 Artist Loops New 12": {
           "2-3_Artist Loops_New_12_a": "Než začne diamant, umělec se potřebuje otočit doleva o 60 stupňů, aby byl správně nasměrován.",
@@ -80,7 +83,8 @@
           "2-3_Artist Loops_New_12_c": "Umělec se bude muset k vytvoření širokého rohu otočit vpravo jen o 60 stupňů."
         },
         "2-3 Artist Loops New 13": {
-          "2-3_Artist_Loops_New_13_a": "Na konci každého diamantu stojí již umělec správný směrem, aby mohl začít kreslit další.\n\nProto nepotřebujeme přidávat další blok `otoč vlevo`, než znovu začne."
+          "2-3_Artist_Loops_New_13_a": "Na konci každého diamantu stojí již umělec správný směrem, aby mohl začít kreslit další.\n\nProto nepotřebujeme přidávat další blok `otoč vlevo`, než znovu začne.",
+          "2-3_Artist_Loops_New_13_b": "Pro vytvoření každého diamantu potřebuje malíř: \n\n-   posuň se vpřed\n-   otoč se vpravo o 120 stupňů\n-   posuň se vpřed\n-   otoč se vpravo o 60 stupňů\n\nA pak to celé musí zopakovat!"
         },
         "2-3 Artist Loops New 9": {
           "2-3_Artist_Loops_New_9_a": "Umělec se potřebuje otočit o 45 stupňů doprava, než začne kreslit.",
@@ -107,7 +111,8 @@
         },
         "2-3 Bee Conditionals 14": {
           "2-3_Bee_Conditionals_14_a": "Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet s červenou květinou úplně stejně jako s fialovou květinou!",
-          "2-3_Bee_Conditionals_14_b": "Pokud by červená květina byla fialová, našel bys jak použít blok `opakuj` abys zmenšil kód?"
+          "2-3_Bee_Conditionals_14_b": "Pokud by červená květina byla fialová, našel bys jak použít blok `opakuj` abys zmenšil kód?",
+          "2-3_Bee_Conditionals_14_c": "Zkus to rozložit na dva samostatné úkoly:\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  Získat nektar 3 krát\n    -   Posun se vpřed 5 krát\n    -   Zkontroluj, jestli je tam nektar: pokud ano, získej ho\n    -   Otoč se doleva\n\n2.  Vyrob med\n    -   Posuň se vpřed 2 krát\n    -   Vyrob dva medy"
         },
         "2-3 Bee Conditionals 15": {
           "2-3_Bee_Conditionals_15_a": "Pamatuj: Fialová květina může mít 0 nebo 1 nektaru and mohou se změnit pokaždé, když spustíš program."
@@ -212,10 +217,12 @@
           "4-5_Artist_7_a": "Který úhel je nejmenší? V jakém úhlu stojí Malíř? "
         },
         "4-5 Artist 8": {
-          "4-5_Artist_8_a": "Dlouhé strany mají vždy 240 pixelů. To znamená, že dvě krátké strany musí být celkem:\n\n\\*\\* 800 - 240 - 240 = 320 \\*\\*\n\nCo znamená \\*\\* 320/2 \\*\\*? "
+          "4-5_Artist_8_a": "Dlouhé strany mají vždy 240 pixelů. To znamená, že dvě krátké strany musí být celkem:\n\n\\*\\* 800 - 240 - 240 = 320 \\*\\*\n\nCo znamená \\*\\* 320/2 \\*\\*? ",
+          "4-5_Artist_8_b": "Tento obrázek lze nakreslit dvěma způsoby!\n\n-   Nakresli dva obdélníky s jednou společnou stranou, které jsou \\*\\* 120 \\*\\* dlouhé a \\*\\* 160 \\*\\* široké.\n\n-   Nejprve nakresli jeden obdélník, který je \\*\\* 240 \\*\\* dlouhý a \\*\\* 160 \\*\\* široký. Potom přidej prostřední čáru."
         },
         "4-5 Artist 9": {
-          "4-5_Artist_9_b": "Budete muset nakreslit tři stejně velké trojúhelníky. Nezapomeňte, že do každé nové pozice musíte skočit."
+          "4-5_Artist_9_b": "Budete muset nakreslit tři stejně velké trojúhelníky. Nezapomeňte, že do každé nové pozice musíte skočit.",
+          "4-5_Artist_9_a": "Jestliže je trojúhelník rovnostranný, pak jsou všechny jeho strany a všechny úhly shodné."
         },
         "4-5 Artist Assessment 1": {
           "4-5_Artist_Assessment_1_a": "K dokončení této hádanky stačí pouze nakreslit vnější trojúhelník."
@@ -849,15 +856,18 @@
           "courseC_collector_prog_challenge1_a": "Můžeš použít příkaz `sbírat` vícekrát, abys sesbíral další poklad."
         },
         "course2_harvester_loops_challenge1": {
-          "courseC_harvester_loops_challenge1_a": "Ani nepřemýšlej, že bys to zkoušel bez cyklů!"
+          "courseC_harvester_loops_challenge1_a": "Ani nepřemýšlej, že bys to zkoušel bez cyklů!",
+          "courseC_harvester_loops_challenge1_b": "Můžeš opakovat sekvenci `posuň se vpřed` a `vyber kukuřici` kolikrát je potřeba a potom zatočit pomocí `otoč se vpravo` na každém rohu.",
+          "courseC_harvester_loops_challenge1_c": "Pro sesbírání prvních čtyř kukuřicí bude nejlepší použít `opakuj X krát` bloček ve druhé bločku `opakuj X krát`. Podobně můžeš vyřešit i zbytek hádanky.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
         },
         "course2_maze_loops_challenge1": {
           "courseC_maze_loops_challenge1_a": "Přemýšlejte nad touto cestou jako o třech různých úsecích. Každý z nich má vzor, který můžete opakovat.",
-          "courseC_maze_loops_challenge1_b": "Mezi bloky `opakuj` budete potřebovat bloky `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor."
+          "courseC_maze_loops_challenge1_b": "Mezi bloky `opakuj` budete potřebovat bloky `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor.",
+          "courseC_maze_loops_challenge1_c": "Když už jsi se dostal takhle daleko, stačí ti pouze `otoč se vlevo` a několik bločků `posuň se vpřed`. Nevzdávej to!\n\n![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)"
         },
         "course2_maze_programming_challenge2": {
-          "courseC_maze_programming_challenge2_a": "_Když mě pošleš pozpátku, dávej dobrý pozor, že správně zahnu!_",
-          "courseC_maze_programming_challenge2_b": "Nejkratší řešení použije pouze 5 bloků, ale využije blok \"opakuj\"!"
+          "courseC_maze_programming_challenge2_a": "_Couvání může být náročné na orientaci, dej si pozor při zatáčení!_",
+          "courseC_maze_programming_challenge2_b": "Při použití bločku opakuj si vystačíš s pouze 5 bločky!"
         },
         "course3_bee_functions_challenge1": {
           "courseE_bee_functions_challenge1_a": "Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.\n\nPřidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!"
@@ -2703,7 +2713,7 @@
           "courseD_collector_debugging9_a": "Je několik cest, jak tuto úlohu vyřešit... ale všechny zahrnují otočky!"
         },
         "courseD_farmer_condLoops5_2019": {
-          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
+          "courseD_farmer_condLoops5_a": "Máme novou smyčku: `opakuj, dokud nenastane - tam jsou dýně`. Chápeš, jak ji použít v této úloze?"
         },
         "courseD_farmer_condLoops6_2018": {
           "courseD_farmer_condLoops6_a": "Využij cyklus `pokud je cesta vpřed` nebo blok `když je cesta vpřed / jinak`, abys posunul(a) farmářku dále přes spirálu.",
@@ -3083,10 +3093,10 @@
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2018": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2019": {
-          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
         },
         "courseE_farmer_ramp12d_2020": {
           "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
@@ -3210,6 +3220,84 @@
         },
         "coursea_maze_ramp1_2020": {
           "courseC_maze_programming1_b": "Neboj se dělat chyby! Něco zkus, a když to nebude fungovat, vyzkoušej něco jiného."
+        },
+        "course2_artist_prog_challenge2": {
+          "courseC_artist_prog_challenge2_a": "Můžeš vložit do `opakuj` bločku aby se opakovaně vykonávaly. Zkus si to ;-)\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+        },
+        "2-3 Artist Debugging 8": {
+          "2-3_Artist_Debugging_8_a": "Kolikrát se můj tvar opakuje?\n\nKolikrát se _má_ opakovat?\n\nKde to můžeš v programu změnit?"
+        },
+        "course2_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_a": "Dokážeš najít cestu, kterou se dostaneš na všechny květiny a medové plástve bez naražení do stromu? Což takhle zkusit spirálu?\n\n**Tento úkol je možné vyřešit bez použití otoč se vlevo.**"
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge1_b": "Podobně jako při použití bločku `Pokud na květině` se kód uvnitř bločku vykonává pouze, když je včelka na květině lze využít bloček `dokud nektar > 0` k vykonávání bločků uvnitř pouze dokud květina obsahuje nektar. Vyzkoušej toto:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Tento úkol lze vyřešit dvěma způsoby!",
+          "courseD_scrat_programming6_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseD_artist_ramp12_b": "Pomocí rozbalovací nabídky na blocích `otočit` zjistíš, jaký úhel potřebuješ!"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud` a `dokud tam` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "Řešení této úlohy bude hodně podobné předchozímu řešení, jen se farmářka musí otáčet opačným směrem."
+        },
+        "4-5 Artist 5": {
+          "4-5_Artist_5_a": "Metoda pokus-omyl je skvělá, ale problém můžeš vyřešit také rozdělením úhlu 90 stupňů na třetiny.\n\n\\*\\* 90/3 = \\\\ \\_ \\\\ \\_ \\\\ \\_ \\\\ \\_ \\\\ \\_ \\*\\*"
+        },
+        "4-5 Maze 4": {
+          "4-5_Maze_4_a": "Pokud se ti nedaří zjistit, kam umístit opakování, zkus krokovat a najít nějaký vzor."
+        },
+        "course3_maze_debugging_challenge1": {
+          "courseC_maze_debugging_challenge1_b": "Scratova cesta má tvar obdélníku! Vždy se musí otočit stejným směrem!",
+          "courseC_maze_debugging_challenge1_c": "Pokud se někde zasekneš, buď můžeš vždy začít od začátku nebo můžeš odstranit všechny bloky a pokusit se o to sám!"
+        },
+        "course3_maze_debugging_challenge2": {
+          "courseC_maze_debugging_challenge2_a": "Jedním z řešení je přidat mezi otočení více kroků dopředu.",
+          "courseC_maze_debugging_challenge2_b": "Pokud se někde zasekneš, buď můžeš vždy začít od začátku nebo můžeš odstranit všechny bloky a pokusit se o to sám!",
+          "courseC_maze_debugging_challenge2_c": "Existují dvě různé cesty, kterými se můžeš řídit s využitím bloku `posuň se vpřed` a čtyři bloky `otoč se`. Pokud najdeš způsob, jak použít blok `opakovat`, může jich být ještě více!"
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_a": "Pokud zavoláš funkci ještě jednou, můžeš v posledním rohu vytvořit stejný vzhled. Můžeš také `skočit na...` jinou pozici nebo měnit celý výsledek podle svých představ!"
+        },
+        "course3_farmer_condLoops_challenge1": {
+          "courseD_farmer_condLoops_challenge1_a": "Tlačítko `KROK` může být v této výzvě velmi užitečné."
+        },
+        "course3_farmer_condLoops_challenge2": {
+          "courseD_farmer_condLoops_challenge2_a": "Množství každé zeleniny se v každém prostoru liší. Proto použij smyčky `dokud`."
+        },
+        "4-5 Nested Loops 12": {
+          "4-5_Nested_Loops_12_a": "**360 ÷ 36 ＝ ？**"
+        },
+        "4-5 Nested Loops 6": {
+          "4-5_Nested_Loops_6_a": "Po každém průchodu cyklem se nezapomeň otočit.\n\nBudeš to opakovat pro 6 trojúhelníků otočením o 360 stupňů.\n\n\\*\\* 360 ÷ 6 = ? \\*\\*"
+        },
+        "4-5 Nested Loops 7": {
+          "4-5_Nested_Loops_7_a": "Tento nákres bude vytvořením cyklem s 10 opakováním a celkovým otočením o 360 stupňů.\n\n\\*\\* 360 ÷ 10 = ? \\*\\*"
+        },
+        "4-5 Nested Loops 8": {
+          "4-5_Nested_Loops_8_a": "Budeš opakovat tento nákres 6 krát s celkovým otočením o 360 stupňů.\n\n**360 ÷ 6 ＝?**"
+        },
+        "course2_artist_nestedLoops_challenge1": {
+          "courseD_artist_nestedLoops_challenge1_a": "Při tvorbě čtyř osmiúhelníků začni vytvořením vnořené smyčky. Otoč o 45 stupňů, abys tvořil osmiúhelník. Po každém osmiúhelníku skoč a otoč se o 90 stupňů.",
+          "courseD_artist_nestedLoops_challenge1_b": "Sestav kód pro nakreslení trojúhelníku uvnitř vnořené smyčky. Při tvorbě trojúhelníku použij otočení o 120 stupňů.",
+          "courseD_artist_nestedLoops_challenge1_c": "Sestav vnořenou smyčku:\n\n-   Opakuj 8 krát\n    -   nakresli osmiúhelník\n    -   nakresli trojúhelník\n    -   skoč dopředu o 50 pixelů\n    -   otoč se doprava o 90 stupňů"
+        },
+        "4-5 While Loops 8": {
+          "4-5_While_Loops_8_a": "Každý předmět potřebuje vlastní smyčku `dokud`."
+        },
+        "4-5 Bee Nested Loops Rows": {
+          "4-5_Bee_Nested_Loops_Rows_a": "Chceš-li úkol dokončit, pokus se se to řešit jako dlouhý obdélník, kde se včela musí pohybovat dopředu a poté několikrát otočí doleva."
+        },
+        "4-5 Bee Debugging 1": {
+          "4-5_Bee_Debugging_1_a": "Pokud máš potíže se zjištěnmí, co není v pořádku, zkus spustit program, aby bylo vidět, kde se něco pokazí."
+        },
+        "course3_collector_debugging_challenge2": {
+          "courseD_collector_debugging_challenge2_a": "Začni tím, že se soustředíš na sbírání DVOU drahokamů z každé z prvních dvou hromádek.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n\nVyužij následující bloky.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         }
       }
     }

@@ -71,7 +71,7 @@ id:
         title: Gelang biner
         desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
       DigitalFootprint:
-        title: Digital Footprint Kamu
+        title: Digital Footprint Anda
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
       ComputationalThinking:
         title: Berpikir secara komputasi
@@ -107,7 +107,7 @@ id:
         title: Untuk Loop Fun
         desc: Kita tahu bahwa loop memungkinkan kita untuk melakukan sesuatu berulang kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan struktur tambahan yang dibangun langsung di dalam.
       SongwritingWithParameters:
-        title: Parameter penulis lagu
+        title: Menulis Lagu Dengan Parameter
         desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
       BinaryImages:
         title: gambar Biner
@@ -166,7 +166,7 @@ id:
         title: Acara besar
         desc: Para siswa diperkenalkan kepada konsep pemrograman "peristiwa", yang merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung pada tombol yang ditekan.
       courseB_unplugged_digitalFootprint:
-        title: Digital Footprint Kamu
+        title: Digital Footprint Anda
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
       courseC_unplugged_buildingAFoundation:
         title: Membangun dasar
@@ -196,7 +196,7 @@ id:
         title: 'Algoritme Dunia Nyata: Lomba Dadu'
         desc: Pelajaran ini memanggil cara kita menggunakan algoritma dalam kehidupan kita sehari-hari. Sebagai bagian dari itu, siswa akan mengidentifikasi dan menuliskan algoritma untuk game balapan dadu.
       courseE_unplugged_songwritingParameters:
-        title: Penulisan lagu dengan Parameter
+        title: Penulisan Lagu dengan Parameter
         desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh fungsi).
       courseE_unplugged_internet:
         title: Internet
@@ -217,7 +217,7 @@ id:
         title: Untuk Loop Fun
         desc: Kita tahu bahwa loop memungkinkan kita untuk melakukan sesuatu berulang kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan struktur tambahan yang dibangun langsung di dalam.
       courseF_unplugged_songwritingParameters:
-        title: Parameter penulis lagu
+        title: Menulis Lagu Dengan Parameter
         desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
       swipeRightPassThrough:
         title: Sesi Skenario Perekrutan
@@ -258,7 +258,7 @@ id:
         title: Kondisi
         desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
       DigitalFootprint_2018:
-        title: Digital Footprint Kamu
+        title: Digital Footprint Anda
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
       BinaryImages_2018:
         title: gambar Biner
@@ -362,7 +362,7 @@ id:
       MoveItMoveIt_2019:
         title: Gerakkan itu, Gerakkan itu
       DigitalFootprint_2019:
-        title: Digital Footprint Kamu
+        title: Digital Footprint Anda
         desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang memiliki konsekuensi.
       courseB_unplugged_CnC_2019:
         title: Berkreasi dan Bermain Jujur itu Hebat

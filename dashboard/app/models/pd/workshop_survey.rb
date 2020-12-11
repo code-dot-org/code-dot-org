@@ -14,7 +14,7 @@
 #  index_pd_workshop_surveys_on_pd_enrollment_id  (pd_enrollment_id) UNIQUE
 #
 
-class Pd::WorkshopSurvey < ActiveRecord::Base
+class Pd::WorkshopSurvey < ApplicationRecord
   include Pd::FacilitatorSpecificForm
 
   STRONGLY_DISAGREE_TO_STRONGLY_AGREE = [

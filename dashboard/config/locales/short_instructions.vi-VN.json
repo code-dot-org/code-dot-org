@@ -446,7 +446,9 @@
         "frozen square iterative": "Dường như chúng ta đang nửa chừng làm một hình vuông. Hãy đặt 4 đường vào nhau để tạo 1 hình vuông.",
         "frozen square loop": "Xin chào, tôi là Anna ở xứ Arendelle! Hãy làm một hình vuông với khối \"Lặp lại\", để dùng ít khối hơn. Bao nhiêu lần (???) khối \"Lặp lại\" lặp các khối bên trong để làm một hình vuông?",
         "frozen square loop 3x": "Hãy tạo ra 3 hình vuông, chuyển sau mỗi hình. Hãy chắc chắn xoay 120 độ trước mỗi hình vuông mới. ",
-        "frozen square snowflake": "Bạn có thể tạo một bông tuyết sử dụng khối \"Lặp lại\" để làm một hình vuông 10 lần, và khối \"Xoay\" để xoay 36 độ giữa mỗi hình?"
+        "frozen square snowflake": "Bạn có thể tạo một bông tuyết sử dụng khối \"Lặp lại\" để làm một hình vuông 10 lần, và khối \"Xoay\" để xoay 36 độ giữa mỗi hình?",
+        "courseC_video_angles": "Hãy giúp Scrat đến chỗ hạt Sồi nhé!",
+        "scrat 19": "Một sự luyện tập nữa với khối \"nếu-không thì\", bạn có thể làm đúng ngay lần đầu cố gắng?"
       }
     }
   }

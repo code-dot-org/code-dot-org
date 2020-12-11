@@ -6,19 +6,27 @@ it:
         csd_category_name: Alla scoperta dell'informatica ('17-'18)
         csd_2018_category_name: Alla scoperta dell'informatica ('18-'19)
         csd_2019_category_name: Alla scoperta dell'informatica ('19-'20)
+        csd_2020_category_name: Alla Scoperta dell'Informatica ('20-'21)
+        csd_pilot_category_name: Pilot di Alla Scoperta dell'Informatica
         csf_category_name: Corsi base
         csf_2018_category_name: Fondamenti di Informatica (2018)
+        csf_2019_category_name: Fondamenti di Informatica ('19-'20)
+        csf_2020_category_name: Fondamenti di Informatica ('20-'21)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
         csp_category_name: Princìpi dell'Informatica (versione 2015-16)
         csp_2018_category_name: Principi di informatica ('18-'19)
         csp_2019_category_name: Principi di informatica ('19-'20)
+        csp_2020_category_name: Principi di Informatica ('20-'21)
         cspexams_category_name: Prova pratica di principi d'informatica
         csp17_category_name: Principi di informatica ('17-'18)
         full_course_category_name: Corsi Avanzati
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
         research_studies_category_name: Studi di Ricerca
+        twenty_hour_category_name: 20-Ore
+        tts_category_name: Sintesi Vocale
+        other_category_name: Altro
       name:
         course1:
           title: Corso 1
@@ -498,6 +506,8 @@ it:
           lessons:
             Applab:
               name: Sviluppo App
+            Hoc2015 Blockly:
+              name: Hoc2015 Blockly
             Play Lab:
               name: Laboratorio
             The Artist:
@@ -576,6 +586,8 @@ it:
               name: Codifica Numeri nel Mondo Reale
             Encoding and Sending Text:
               name: Codifica ed Invio Testo
+            Lossy Compression and File Formats:
+              name: Compressione Dati in Perdita e Formati del File
             Number Systems:
               name: Sistema di numerazione
             Personal Innovations:
@@ -602,14 +614,24 @@ it:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         algPDmiami:
           lessons:
             Booleans:
               name: Valori Booleani
+            Design Recipe Practice:
+              name: Pratica di Progettazione della Scaletta
             Evaluation Blocks:
               name: Blocchi di Valutazione
+            Luigi's Pizza:
+              name: Pizza di Luigi
+            Rocket-Height:
+              name: Altitudine
             Sam the Bat:
               name: Sam il Pipistrello
             Strings and Images:
@@ -631,8 +653,20 @@ it:
               name: Compressione del testo
         CSPPD:
           lessons:
+            Exploring CSP Instructional Materials:
+              name: Esplorare i Materiali Educativi CSP
+            Growth Mindset:
+              name: Mentalità di Crescita
+            Impact of Computer Science:
+              name: Impatto dell'Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            What is CSP?:
+              name: Cos'è il CSP?
         CSPLessonSamples:
           lessons:
             Lesson 14:
@@ -641,31 +675,116 @@ it:
               name: Lezione 15
         ECSPD:
           lessons:
+            Growth Mindset:
+              name: Mentalità di Crescita
+            Impact of Computer Science:
+              name: Impatto dell'Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
+            Teaching Strategies:
+              name: Insegnare le Strategie
             What is ECS?:
               name: Cos'è l'ECS?
         sciencePD:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         rbo-reference:
           lessons:
             reference:
               name: riferimento
+        Test Wednesday:
+          lessons:
+            PDK5 Intro:
+              name: Intro PDK5
         cspunit3:
           description_short: Programmazione
           lessons:
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Beyond Buttons Toward Apps:
+              name: Oltre i Pulsanti Verso le App
+            Canvas and Arrays in Apps:
+              name: Tele e Insiemi nelle App
+            Compound Conditional Logic:
+              name: Logica Condizionale del Composto
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
             Creating Functions:
               name: Creazione di funzioni
+            Creating functions with Parameters:
+              name: Creare le Funzioni con i Parametri
+            Digital Assistant Project:
+              name: Progetto dell'Assistente Digitale
+            Event-Driven Programming and Debugging:
+              name: Programmazione Guidata dagli Eventi e Debugging
+            Events Unplugged:
+              name: Eventi Tradizionali
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
+            Image Scroller with Key Events:
+              name: Scorrimento Immagine con Eventi Chiave
+            Introducing Design Mode:
+              name: Introducendo la Modalità di Progettazione
             Introduction to Arrays:
               name: Introduzione agli array
             Introduction to Conditional Logic:
               name: Introduzione alla logica condizionale
+            Introduction to Digital Assistants:
+              name: Introduzione agli Assistenti Digitali
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Loops and Simulations:
+              name: Cicli e Simulazioni
+            Multi-screen Apps:
+              name: App Multischermo
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
+            'Practice PT: Create':
+              name: 'Pratica PT: Crea'
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Understanding Program Flow and Logic:
+              name: Comprendere Flusso e Logica del Programma
+            User Input and Strings:
+              name: Input Utente e Stringhe
+            Using Simple Commands:
+              name: Usare Comandi Semplici
+            Using Variables in Apps:
+              name: Usare le Variabili nelle App
             While Loops:
               name: Cicli "mentre"
+            Creating Functions with Parameters:
+              name: Creare le Funzioni con i Parametri
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -686,14 +805,30 @@ it:
               name: La Ricetta della Progettazione
         ECSPD-NexTech:
           lessons:
+            Growth Mindset:
+              name: Mentalità di Crescita
+            Impact of Computer Science:
+              name: Impatto dell'Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
+            Teaching Strategies:
+              name: Insegnare le Strategie
             What is ECS?:
               name: Cos'è l'ECS?
         ECSPD-iZone:
           lessons:
+            Growth Mindset:
+              name: Mentalità di Crescita
+            Impact of Computer Science:
+              name: Impatto dell'Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
+            Teaching Strategies:
+              name: Insegnare le Strategie
             What is ECS?:
               name: Cos'è l'ECS?
         algebraPD-NexTech:
@@ -704,8 +839,12 @@ it:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         algebraPD-iZone:
           lessons:
             Course Overview:
@@ -714,43 +853,141 @@ it:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         sciencePD-NexTech:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         sciencePD-iZone:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         sciencePD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Creating Breeds in Starlogo Nova:
+              name: Creare Varietà in Starlogo Nova
+            Epidemic Model Extensions:
+              name: Estensioni del Modello Epidemico
+            Revisiting Agent Movement:
+              name: Rivisita il Movimento dell'Agente
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
         sciencePD3:
           lessons:
+            Decode and Share:
+              name: Decodifica e Condividi
+            Mystery Model:
+              name: Modello Misterioso
             Welcome Back!:
               name: Bentornato!
         cspunit2:
           description_short: Programmazione
           lessons:
+            Algorithms Detour - How Routers Learn:
+              name: Come i Router Imparano
+            Cracking the Code:
+              name: Crackare il Codice
+            DNS in the Real World:
+              name: DNS nel Mondo Reale
+            Encryption Algorithms:
+              name: Chiavi e Password
+            HTTP and Abstraction:
+              name: HTTP e Astrazione su Internet
+            Invent an Addressing Protocol:
+              name: Inventare un Protocollo di Indirizzamento
+            One Way Functions - Ice Cream Vans:
+              name: Funzioni Una Tantum - Il Problema dell'Hotspot WiFi
+            Packets and Making a Reliable Internet:
+              name: Pacchetti e Creare un Internet Affidabile
+            Practice PT - Cybersecurity Innovations:
+              name: Pratica PT - Innovazioni della Sicurezza Informatica
+            Practice PT - The Internet and Society:
+              name: Pratica PT - Internet e la Società
+            Public Key Crypto:
+              name: Crittografia della Chiave Pubblica
+            Routers and Redundancy:
+              name: Router e Ridondanza
+            Tell Me a Secret - Encrypting Text:
+              name: La Necessità della Codifica
             The Internet:
               name: Internet
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            The Need for DNS:
+              name: La Necessità del DNS
         algebraPD2a:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Big Game - Animation:
+              name: Grande Gioco - Animazione
+            Big Game - Booleans:
+              name: Grande Gioco - Booleani
+            Big Game - Collision Detection:
+              name: Grande Gioco - Rilevamento delle Collisioni
+            Big Game - Player Movement:
+              name: Grande Gioco - Movimento del Giocatore
+            Big Game - Variables:
+              name: Grande Gioco - Variabili
             Booleans:
               name: Valori Booleani
             Defining Variables:
@@ -759,6 +996,10 @@ it:
               name: Blocchi di Valutazione
             Free Play:
               name: Tempo di giocare
+            Luigi's Pizza:
+              name: Pizza di Luigi
+            Rocket-Height:
+              name: Altitudine
             Sam the Bat:
               name: Sam il Pipistrello
             Strings and Images:
@@ -772,6 +1013,10 @@ it:
           description_short: Tutte le tipologie di livello per il test dell'interfaccia
             utente
           lessons:
+            Anonymous student survey:
+              name: Sondaggio anonimo dello studente
+            Anonymous student survey 2:
+              name: Sondaggio anonimo dello studente 2
             AppLab:
               name: Sviluppo App
             Artist:
@@ -802,6 +1047,8 @@ it:
               name: Conversione di pixel
             PlayLab:
               name: Laboratorio
+            Public Key Cryptography:
+              name: Crittografia della Chiave Pubblica
             Studio:
               name: Studio
             Text Compression:
@@ -810,6 +1057,8 @@ it:
               name: Sviluppo Web
             Sprite Lab:
               name: Laboratorio dei Personaggi
+            AI Lab:
+              name: Laboratorio di Intelligenza Artificiale
         algebraPD2b:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -831,6 +1080,8 @@ it:
               name: Blocchi di Valutazione
             Next Steps:
               name: Passi successivi
+            Rocket-Height:
+              name: Altitudine
             Strings and Images:
               name: Stringhe e Immagini
             Teacher Dashboard:
@@ -911,6 +1162,8 @@ it:
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
@@ -920,6 +1173,8 @@ it:
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
@@ -935,6 +1190,8 @@ it:
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
@@ -973,6 +1230,12 @@ it:
           lessons:
             Getting Started:
               name: Per cominciare
+            Practice PT:
+              name: Pratica PT
+            Welcome to the Course!:
+              name: Benvenuto al Corso!
+            Wrap Up and Next Steps:
+              name: Riscaldamento e Prossimi Passaggi
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -993,30 +1256,124 @@ it:
               name: Composizione di canzoni
             The Big Event:
               name: Il grande evento
+        algebraPD3a:
+          lessons:
+            Updates - The Big Game and Projects:
+              name: Aggiornamenti - Il Grande Gioco ed i Progetti
+            Updates - The Design Recipe:
+              name: Aggiornamenti - Progettazione della Scaletta
         sciencePD3_pre1:
           lessons:
+            Prep With Your Modules:
+              name: Preparazione Con i Tuoi Moduli
             Welcome Back!:
               name: Bentornato!
+        frequency_analysis:
+          lessons:
+            Frequency Analysis:
+              name: Analisi di Frequenza
         ECSPD3-Unit2:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 2:
+              name: Introduzione all'Unità 2
+            Lesson Overviews:
+              name: Panoramiche della Lezione
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 2 Challenge:
+              name: Sfida Unità 2
         ECSPD3-Unit3:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 3:
+              name: Introduzione all'Unità 3
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 3 Challenge:
+              name: Sfida dell'Unità 3
+            Unit 3 Day-by-Day:
+              name: Unità 3 Giorno dopo Giorno
         ECSPD3-Unit4:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 4:
+              name: Introduzione all'Unità 4
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 4 Challenge:
+              name: Sfida dell'Unità 4
+            Unit 4 Day-by-Day:
+              name: Unità 4 Giorno per Giorno
         ECSPD3-Unit5:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Introduction to the Unit 5 Challenge:
+              name: Introduzione alla Sfida dell'Unità 5
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 5 Overview:
+              name: Panoramica Unità 5
+            Unit 5 lessons:
+              name: Lezioni dell'unità 5
         ECSPD3-Unit6:
           lessons:
+            Alternative Ideas for Unit 6:
+              name: Idee Alternative per l'Unità 6
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 6 Challenge:
+              name: Sfida dell'Unità 6
+            Unit 6 Overview:
+              name: Panoramica dell'Unità 6
+            Unit 6 lessons:
+              name: Lezioni dell'Unità 6
+        cspunit4draft:
+          lessons:
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Cleaning Data:
+              name: Cancellare i Dati
+            Compiling Data:
+              name: Compilare i Dati
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
+            Data, Security, and Privacy:
+              name: Dati, Sicurezza e Privacy
+            Designing Data Collection:
+              name: Progettare la Raccolta dei Dati
+            Designing for Your User:
+              name: Progettare per il Tuo Utente
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            How is Data Collected?:
+              name: Come sono Raccolti i Dati?
+            Import, Export, and Visualize Data:
+              name: Importa, Esporta e Visualizza i Dati
+            Interpreting Data Visualizations:
+              name: Interpretare le Visualizzazioni dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1029,8 +1386,12 @@ it:
               name: Per cominciare
         CSPPD3-Unit2:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
         Special Fun:
           description_short: Qualcosa di speciale per coloro che ne conoscono l'esistenza.
             Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
@@ -1056,13 +1417,29 @@ it:
               name: Laboratorio con L'Era Glaciale
         CSPPD3-Unit3:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
         cspunit3temp:
           description_short: Programmazione
           lessons:
+            Canvas and Arrays in Apps:
+              name: Tele e Insiemi nelle App
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
+            Image Scroller with Key Events:
+              name: Scorrimento Immagine con Eventi Chiave
             Introduction to Arrays:
               name: Introduzione agli array
+            Loops and Simulations:
+              name: Cicli e Simulazioni
+            'Practice PT: Create':
+              name: 'Pratica PT: Crea'
+            Processing Arrays:
+              name: Elaborare gli Insiemi
             While Loops:
               name: Cicli "mentre"
         gumball:
@@ -1109,6 +1486,12 @@ it:
           lessons:
             Oceans:
               name: L'Intelligenza Artificiale per il mare
+        CSPPD3-Unit3-pt2:
+          lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
+            Share out and Submit:
+              name: Condividi e Invia
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1119,14 +1502,47 @@ it:
           description_short: Programmazione
         cspunit4:
           description_short: Programmazione
+          lessons:
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
         CSPPD3-Unit4:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
+        cspunit6draft:
+          lessons:
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
         CSPPD3-Unit5:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 5 Overview:
+              name: Panoramica Unità 5
+        cspunit6:
+          lessons:
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
         AlgebraA:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
@@ -1186,8 +1602,12 @@ it:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         algebraPD3c:
           lessons:
             Getting Started:
@@ -1205,8 +1625,14 @@ it:
               name: Numeri Binari
             Number Systems:
               name: Sistema di numerazione
+            Packets and Making a Reliable Internet:
+              name: Pacchetti e Creare un Internet Affidabile
             Personal Innovations:
               name: Innovazione personale
+            Practice PT - The Internet and Society:
+              name: Pratica PT - Internet e la Società
+            Routers and Redundancy:
+              name: Router e Ridondanza
             Sending Binary Messages:
               name: Inviare Messaggi Binari
             Sending Binary Messages with the Internet Simulator:
@@ -1215,6 +1641,10 @@ it:
               name: Inviare Numeri
             The Internet:
               name: Internet
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            The Need for DNS:
+              name: La Necessità del DNS
             Post-Course Survey:
               name: Sondaggio Post-corso
         csp2-2017:
@@ -1229,10 +1659,26 @@ it:
           lessons:
             Bytes and File Sizes:
               name: Byte e Dimensioni File
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
             Encoding B&W Images:
               name: Codifica Immagini B&N
             Encoding Color Images:
               name: Codifica Immagini Colori
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Lossy Compression and File Formats:
+              name: Compressione Dati in Perdita e Formati del File
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
             Text Compression:
               name: Compressione del testo
             Post-Course Survey:
@@ -1247,8 +1693,22 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
+            Creating Functions with Parameters:
+              name: Creare le Funzioni con i Parametri
             Post-Course Survey:
               name: Sondaggio Post-corso
         csp4-2017:
@@ -1261,6 +1721,10 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Cracking the Code:
+              name: Crackare il Codice
+            Practice PT - Cybersecurity Innovations:
+              name: Pratica PT - Innovazioni della Sicurezza Informatica
             Simple Encryption:
               name: Crittografia semplice
             Post-Course Survey:
@@ -1276,10 +1740,46 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Beyond Buttons Toward Apps:
+              name: Oltre i Pulsanti Verso le App
+            Canvas and Arrays in Apps:
+              name: Tele e Insiemi nelle App
+            Compound Conditional Logic:
+              name: Logica Condizionale del Composto
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
+            Digital Assistant Project:
+              name: Progetto dell'Assistente Digitale
+            Event-Driven Programming and Debugging:
+              name: Programmazione Guidata dagli Eventi e Debugging
+            Events Unplugged:
+              name: Eventi Tradizionali
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
+            Image Scroller with Key Events:
+              name: Scorrimento Immagine con Eventi Chiave
+            Introducing Design Mode:
+              name: Introducendo la Modalità di Progettazione
             Introduction to Arrays:
               name: Introduzione agli array
             Introduction to Conditional Logic:
               name: Introduzione alla logica condizionale
+            Introduction to Digital Assistants:
+              name: Introduzione agli Assistenti Digitali
+            Loops and Simulations:
+              name: Cicli e Simulazioni
+            Multi-screen Apps:
+              name: App Multischermo
+            'Practice PT: Create':
+              name: 'Pratica PT: Crea'
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Understanding Program Flow and Logic:
+              name: Comprendere Flusso e Logica del Programma
+            User Input and Strings:
+              name: Input Utente e Stringhe
+            Using Variables in Apps:
+              name: Usare le Variabili nelle App
             While Loops:
               name: Cicli "mentre"
             Post-Course Survey:
@@ -1297,10 +1797,31 @@ it:
               name: Velocità
         2016_sciencePD_phase1:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         TEMP CSD Unit 3:
           description_short: Programmazione
           lessons:
@@ -1316,12 +1837,35 @@ it:
               name: Introduzione a PD
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         sciencePD1:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         cspunit1-support:
           lesson_groups:
             required:
@@ -1381,6 +1925,8 @@ it:
               name: Correzione errori (debugging)
             Events:
               name: Eventi
+            Events Unplugged:
+              name: Eventi Tradizionali
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             Loops:
@@ -1409,6 +1955,8 @@ it:
               name: Correzione errori (debugging)
             Events:
               name: Eventi
+            Events Unplugged:
+              name: Eventi Tradizionali
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             Loops:
@@ -1463,24 +2011,78 @@ it:
               name: Conclusione
         ecs-unit2:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 2:
+              name: Introduzione all'Unità 2
+            Lesson Overviews:
+              name: Panoramiche della Lezione
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 2 Challenge:
+              name: Sfida Unità 2
         ecs-unit3:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 3:
+              name: Introduzione all'Unità 3
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 3 Challenge:
+              name: Sfida dell'Unità 3
+            Unit 3 Day-by-Day:
+              name: Unità 3 Giorno dopo Giorno
         ecs-unit4:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 4:
+              name: Introduzione all'Unità 4
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 4 Challenge:
+              name: Sfida dell'Unità 4
+            Unit 4 Day-by-Day:
+              name: Unità 4 Giorno per Giorno
         ecs-unit5:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Introduction to the Unit 5 Challenge:
+              name: Introduzione alla Sfida dell'Unità 5
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 5 Overview:
+              name: Panoramica Unità 5
+            Unit 5 lessons:
+              name: Lezioni dell'unità 5
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
         ecs-unit6:
           lessons:
+            Alternative Ideas for Unit 6:
+              name: Idee Alternative per l'Unità 6
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 6 Challenge:
+              name: Sfida dell'Unità 6
+            Unit 6 Overview:
+              name: Panoramica dell'Unità 6
+            Unit 6 lessons:
+              name: Lezioni dell'Unità 6
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
         grade3:
           lessons:
             'Artist: Nested Loops':
@@ -1581,6 +2183,10 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
         csp-online-test:
           lesson_groups:
             required:
@@ -1589,6 +2195,9 @@ it:
               display_name: Contenuto
             practice:
               display_name: Pratiche d'insegnante
+          lessons:
+            Unit 5 Overview:
+              name: Panoramica Unità 5
         csp1-support:
           lesson_groups:
             required:
@@ -1604,6 +2213,10 @@ it:
           lessons:
             Bounce:
               name: Ping-Pong
+        sample-csp5:
+          lessons:
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1893,18 +2506,24 @@ it:
           lessons:
             Welcome!:
               name: Benvenuto!
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Wrap-Up:
               name: Conclusione
         2016_sciencePD_phase2b:
           lessons:
             Welcome!:
               name: Benvenuto!
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Wrap-Up:
               name: Conclusione
         sciencepd3-2016:
           lessons:
             Welcome Back!:
               name: Bentornato!
+            Prep With Your Modules:
+              name: Preparazione Con i Tuoi Moduli
         csp3-support:
           lesson_groups:
             required:
@@ -1964,6 +2583,9 @@ it:
               display_name: Contenuto
             practice:
               display_name: Pratiche d'insegnante
+          lessons:
+            Unit 5 Overview:
+              name: Panoramica Unità 5
         csppostap-2017:
           lesson_groups:
             content:
@@ -1971,6 +2593,8 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
             Post-Course Survey:
               name: Sondaggio Post-corso
         csd6-draft:
@@ -1986,6 +2610,8 @@ it:
               name: Cicli con contatore
             Map:
               name: Mappa
+            Arrays:
+              name: Insiemi
             Functions with Parameters:
               name: Funzioni con parametri
         workshop-gamelab:
@@ -1994,6 +2620,8 @@ it:
               name: Introduzione
             Sprites:
               name: Personaggi
+            Input:
+              name: Input
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -2033,6 +2661,8 @@ it:
               name: Liste
             For Loops:
               name: Cicli con contatore
+            Arrays:
+              name: Insiemi
             Functions with Parameters:
               name: Funzioni con parametri
             Functions with Parameters_:
@@ -2071,10 +2701,22 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+        csd1-old:
+          lessons:
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
         csd2-draft:
           lessons:
             Lists:
               name: Liste
+        csd1-draft:
+          lessons:
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
         csd3-chapters:
           lessons:
             Drawing in Game Lab:
@@ -3128,8 +3770,20 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -3472,12 +4126,26 @@ it:
             cspAssessment:
               display_name: Valutazione del Capitolo
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
         pwc:
           lessons:
             Personal Innovations:
               name: Innovazione personale
+            What is a Computer?:
+              name: Cos'è un Computer?
             Simple Encryption:
               name: Crittografia semplice
             Creating Webpages:
@@ -4563,6 +5231,16 @@ it:
               name: Inviare Numeri
             The Internet:
               name: Internet
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            Routers and Redundancy:
+              name: Router e Ridondanza
+            Packets and Making a Reliable Internet:
+              name: Pacchetti e Creare un Internet Affidabile
+            The Need for DNS:
+              name: La Necessità del DNS
+            Practice PT - The Internet and Society:
+              name: Pratica PT - Internet e la Società
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -4578,6 +5256,10 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -4609,6 +5291,22 @@ it:
               name: Codifica Immagini B&N
             Encoding Color Images:
               name: Codifica Immagini Colori
+            Lossy Compression and File Formats:
+              name: Compressione Dati in Perdita e Formati del File
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
         csp3-2018:
           description_short: Programmazione
           lesson_groups:
@@ -4619,8 +5317,22 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
+            Creating Functions with Parameters:
+              name: Creare le Funzioni con i Parametri
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csp-explore-2018:
@@ -4649,6 +5361,10 @@ it:
           lessons:
             Simple Encryption:
               name: Crittografia semplice
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csp5-2018:
@@ -4660,10 +5376,24 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Multi-screen Apps:
+              name: App Multischermo
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
+            User Input and Strings:
+              name: Input Utente e Stringhe
             While Loops:
               name: Cicli "mentre"
+            Loops and Simulations:
+              name: Cicli e Simulazioni
             Introduction to Arrays:
               name: Introduzione agli array
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
+            'Practice PT: Create':
+              name: 'Pratica PT: Crea'
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csppostap-2018:
@@ -4674,6 +5404,23 @@ it:
               display_name: 'Capitolo 2: Apps e Database'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
         spritelab:
           lessons:
             Alien Dance Party - Input:
@@ -5509,6 +6256,8 @@ it:
               name: Istruzioni Condizionali con Minecraft
             Digital Sharing:
               name: Condivisione digitale
+            Simon Says:
+              name: Simone Dice
             'Conditionals in Minecraft: Voyage Aquatic':
               name: Istruzioni condizionali in Minecraft - Viaggio acquatico
             Songwriting:
@@ -5655,6 +6404,12 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         andrea-test:
           lesson_groups:
             required:
@@ -5738,6 +6493,8 @@ it:
               name: I miei amici robotici (per i più piccoli)
             'Loops: My Loopy Robotic Friends':
               name: I miei ciclici amici robotici (per i più piccoli)
+            Powerful Passwords:
+              name: Password Potenti
             Sticker Art with Loops:
               name: Cicli con l'artista
         csp-mid-survey:
@@ -5912,6 +6669,8 @@ it:
                 un gioco nel Laboratorio!
             'Loops: Getting Loopy':
               name: Diventare ripetitivi
+            The Right App:
+              name: L'App Giusta
             Loops in Harvester:
               name: Cicli con la contadina
             Programming in Maze:
@@ -6007,6 +6766,8 @@ it:
           lessons:
             Lists:
               name: Liste
+            Post-Project Test:
+              name: Test finale
         csd3-2019:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -6032,6 +6793,8 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
         csd4-2019:
           lesson_groups:
             csd4_1:
@@ -6042,6 +6805,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd5-2019:
           lesson_groups:
             csd5_1:
@@ -6050,6 +6816,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd6-2019:
           lesson_groups:
             csd6_1:
@@ -6061,6 +6830,8 @@ it:
           lessons:
             Functions with Parameters:
               name: Funzioni con parametri
+            Post-Project Test:
+              name: Test finale
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -6107,6 +6878,16 @@ it:
               name: Inviare Numeri
             The Internet:
               name: Internet
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            Routers and Redundancy:
+              name: Router e Ridondanza
+            Packets and Making a Reliable Internet:
+              name: Pacchetti e Creare un Internet Affidabile
+            The Need for DNS:
+              name: La Necessità del DNS
+            Practice PT - The Internet and Society:
+              name: Pratica PT - Internet e la Società
         csp2-2019:
           lesson_groups:
             csp2_1_2018:
@@ -6134,8 +6915,20 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csp4-2019:
@@ -6147,6 +6940,10 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
             Simple Encryption:
               name: Crittografia semplice
             Mid-Year Survey:
@@ -6160,10 +6957,22 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Multi-screen Apps:
+              name: App Multischermo
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
+            User Input and Strings:
+              name: Input Utente e Stringhe
             While Loops:
               name: Cicli "mentre"
+            Loops and Simulations:
+              name: Cicli e Simulazioni
             Introduction to Arrays:
               name: Introduzione agli array
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csp-explore-2019:
@@ -6189,6 +6998,19 @@ it:
               display_name: 'Capitolo 2: Apps e Database'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
         csp1-pilot:
           lesson_groups:
             cspSurvey:
@@ -6204,6 +7026,8 @@ it:
               name: Inviare Messaggi Binari con il Simulatore di Internet
             Binary Numbers:
               name: Numeri Binari
+        csd-tests:
+          title: Test finali CSD
         time4csdemo:
           lesson_groups:
             ramp_up:
@@ -6477,6 +7301,10 @@ it:
               display_name: Panoramica
             content:
               display_name: Contenuto
+        csd-test-saving-state:
+          lessons:
+            What is a Computer?:
+              name: Cos'è un Computer?
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -6498,6 +7326,12 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csd2-pilot:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
             Web."
@@ -6511,6 +7345,8 @@ it:
           lessons:
             Lists:
               name: Liste
+            Post-Project Test:
+              name: Test finale
         csd3-pilot:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -6536,6 +7372,12 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
+            Shapes and Parameters:
+              name: Forme e Parametri
+            Random Numbers:
+              name: Numeri Casuali
         csp3-pilot:
           lesson_groups:
             content:
@@ -6630,12 +7472,22 @@ it:
           lesson_groups:
             csd1_2:
               display_name: 'Capitolo 2: Computers e Problem Solvig'
+          lessons:
+            What is a Computer?:
+              name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csp2-pilot:
           lesson_groups:
             content:
               display_name: Contenuto
             required:
               display_name: Panoramica
+          lessons:
+            Routers and Redundancy:
+              name: Router e Ridondanza
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
         peru-2019:
           lessons:
             Introduction:
@@ -6781,10 +7633,14 @@ it:
               name: Istruzioni condizionali
             'Events: The Big Event':
               name: Il grande evento
+            Simon Says:
+              name: Simone Dice
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            Access Ability:
+              name: Abilità di Accesso
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -6866,10 +7722,14 @@ it:
               name: Istruzioni condizionali
             'Events: The Big Event':
               name: Il grande evento
+            Simon Says:
+              name: Simone Dice
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            Access Ability:
+              name: Abilità di Accesso
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -6893,10 +7753,14 @@ it:
               name: Istruzioni condizionali
             'Events: The Big Event':
               name: Il grande evento
+            Simon Says:
+              name: Simone Dice
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            Access Ability:
+              name: Abilità di Accesso
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -6941,6 +7805,9 @@ it:
               display_name: 'Capitolo 2: Styling e CSS'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -6956,6 +7823,12 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -6966,6 +7839,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd5-2020:
           lesson_groups:
             csd5_1:
@@ -6974,6 +7850,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -6985,6 +7864,8 @@ it:
           lessons:
             Functions with Parameters:
               name: Funzioni con parametri
+            Post-Project Test:
+              name: Test finale
         csd3-2020:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -6998,8 +7879,12 @@ it:
           lessons:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
+            Shapes and Parameters:
+              name: Forme e Parametri
             Variables:
               name: Variabili
+            Random Numbers:
+              name: Numeri Casuali
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -7008,6 +7893,8 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
             Text:
               name: Testo
             Sprites:
@@ -7143,6 +8030,8 @@ it:
                 e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
                 Alla fine di questa lezione, gli studenti avranno l'opportunità di
                 creare le proprie immagini utilizzando i cicli.
+            The Right App:
+              name: L'App Giusta
             'Events: The Big Event':
               name: Il grande evento (per i più piccoli)
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere
@@ -7182,6 +8071,8 @@ it:
           lessons:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
+            Powerful Passwords:
+              name: Password Potenti
             'Programming: My Robotic Friends':
               name: I miei amici robotici (per i più piccoli)
             Programming in Maze:
@@ -7425,6 +8316,8 @@ it:
                 offrono flessibilità nella programmazione eseguendo intere sezioni
                 di codice solo se una certa condizione è vera, altrimenti viene eseguito
                 un insieme di istruzioni alternativo.
+            Simon Says:
+              name: Simone Dice
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
@@ -7821,6 +8714,11 @@ it:
           lesson_groups:
             csp_unit2_2020:
               display_name: Princìpi dell'Informatica - Unità 2
+          lessons:
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            Routers and Redundancy:
+              name: Router e Ridondanza
         csp3-2020:
           lessons:
             Debugging:
@@ -7831,10 +8729,24 @@ it:
             csp3_1_2018:
               display_name: 'Unit 3: Introduzione alla Programmazione'
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
         jess-test-script:
           lessons:
+            Tools:
+              name: Strumenti
             Debugging:
               name: Correzione errori (debugging)
         csd2-virtual:
@@ -7843,12 +8755,27 @@ it:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
             csd2_2:
               display_name: 'Capitolo 2: Styling e CSS'
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csp5-virtual:
           lessons:
+            Multi-screen Apps:
+              name: App Multischermo
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
+            User Input and Strings:
+              name: Input Utente e Stringhe
             While Loops:
               name: Cicli "mentre"
+            Loops and Simulations:
+              name: Cicli e Simulazioni
             Introduction to Arrays:
               name: Introduzione agli array
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
             Intro to App Lab:
               name: Introduzione a Sviluppo App
             Variables:
@@ -7881,8 +8808,14 @@ it:
           lessons:
             While Loops:
               name: Cicli "mentre"
+            Loops and Simulations:
+              name: Cicli e Simulazioni
             Introduction to Arrays:
               name: Introduzione agli array
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
         k5-onlinepd-2020:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare
@@ -7939,8 +8872,12 @@ it:
           lessons:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
+            Shapes and Parameters:
+              name: Forme e Parametri
             Variables:
               name: Variabili
+            Random Numbers:
+              name: Numeri Casuali
             Sprites:
               name: Personaggi
             Text:
@@ -7953,6 +8890,8 @@ it:
               name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
           lesson_groups:
             csd3_1:
               display_name: Contenuto
@@ -7994,3 +8933,11 @@ it:
               name: Corso A
             Course B:
               name: Corso B
+            CS Discoveries:
+              name: Alla scoperta dell'informatica
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: L'Intelligenza Artificiale per il mare
+            intro:
+              name: Introduzione

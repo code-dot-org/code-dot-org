@@ -114,6 +114,7 @@
 
 
     script_data = script.summarize_header
+    lesson_group_data = script.lesson_groups.map(&:summarize)
     stage_data = (@stage || script_level.lesson).summarize
     # If caching, we don't know the sign in state, and should be nil
     signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
@@ -146,6 +147,7 @@
     //<![CDATA[
     dashboard.header.build(
       #{script_data.to_json},
+      #{lesson_group_data.to_json},
       #{stage_data.to_json},
       #{user_progress},
       "#{uid}",

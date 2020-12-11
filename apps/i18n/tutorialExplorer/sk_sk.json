@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Slabý, alebo žiadny internet",
   "filterPlatformNoComputers": "Bez počítačov či iných zariadení",
+  "filterPlatformScreenReader": "Čítačka obrazovky",
   "filterTopics": "Témy",
   "filterTopicsScience": "Veda",
   "filterTopicsMath": "Matematické",

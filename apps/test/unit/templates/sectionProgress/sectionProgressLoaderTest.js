@@ -41,6 +41,41 @@ const serverProgressResponse = {
   }
 };
 
+const firstServerProgressResponse = {
+  pagination: {
+    page: 1,
+    per: 2,
+    total_pages: 2
+  },
+  student_timestamps: {
+    100: null,
+    101: timeInSeconds
+  },
+  students: {
+    100: {},
+    101: {
+      2000: {status: 'locked'},
+      2001: {status: 'perfect', result: 30, paired: true, time_spent: 12345}
+    }
+  }
+};
+
+const secondServerProgressResponse = {
+  pagination: {
+    page: 2,
+    per: 2,
+    total_pages: 2
+  },
+  student_timestamps: {
+    102: timeInSeconds + 1
+  },
+  students: {
+    102: {
+      2000: {status: 'perfect', result: 100, time_spent: 6789}
+    }
+  }
+};
+
 const fullExpectedResult = {
   levelsByLessonByScript: {
     123: {
@@ -108,6 +143,7 @@ const fullExpectedResult = {
 
 describe('sectionProgressLoader.loadScript', () => {
   let fetchStub, reduxStub, startLoadingProgressStub;
+  let startRefreshingProgressStub;
 
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch');
@@ -116,47 +152,68 @@ describe('sectionProgressLoader.loadScript', () => {
       sectionProgress,
       'startLoadingProgress'
     );
+    startRefreshingProgressStub = sinon.stub(
+      sectionProgress,
+      'startRefreshingProgress'
+    );
   });
 
   afterEach(() => {
     redux.getStore.restore();
     fetchStub.restore();
     sectionProgress.startLoadingProgress.restore();
+    sectionProgress.startRefreshingProgress.restore();
   });
 
-  it('returns early if the given section script has already been loaded', () => {
+  it('returns early if it is already refreshing', () => {
     reduxStub.returns({
       getState: () => {
         return {
           sectionProgress: {
+            isRefreshingProgress: true,
             studentLevelProgressByScript: [true],
             scriptDataByScript: [true],
             currentView: 0
           },
-          sectionData: {
-            section: 0
-          }
+          sectionData: {}
         };
       }
     });
     expect(loadScript(0)).to.be.undefined;
     expect(startLoadingProgressStub).to.have.not.been.called;
+    expect(startRefreshingProgressStub).to.have.not.been.called;
   });
 
   describe('when loading data', () => {
     let addDataByScriptStub, finishLoadingProgressStub;
+    let finishRefreshingProgressStub;
     beforeEach(() => {
       sinon.stub(Promise, 'all').returns({then: sinon.stub().callsArg(0)});
       finishLoadingProgressStub = sinon.stub(
         sectionProgress,
         'finishLoadingProgress'
       );
+      finishRefreshingProgressStub = sinon.stub(
+        sectionProgress,
+        'finishRefreshingProgress'
+      );
+    });
+
+    afterEach(() => {
+      sectionProgress.finishLoadingProgress.restore();
+      sectionProgress.finishRefreshingProgress.restore();
+      addDataByScriptStub.restore();
+      Promise.all.restore();
+    });
+
+    it('refreshes the data if data already exists', () => {
+      addDataByScriptStub = sinon.stub(sectionProgress, 'addDataByScript');
       reduxStub.returns({
         getState: () => {
           return {
             sectionProgress: {
-              studentLevelProgressByScript: [],
-              scriptDataByScript: [],
+              studentLevelProgressByScript: [true],
+              scriptDataByScript: [true],
               currentView: 0
             },
             sectionData: {
@@ -168,16 +225,6 @@ describe('sectionProgressLoader.loadScript', () => {
         },
         dispatch: () => {}
       });
-    });
-
-    afterEach(() => {
-      sectionProgress.finishLoadingProgress.restore();
-      addDataByScriptStub.restore();
-      Promise.all.restore();
-    });
-
-    it('starts and finishes loading progress', () => {
-      addDataByScriptStub = sinon.stub(sectionProgress, 'addDataByScript');
       fetchStub.returns({
         then: sinon.stub().returns({
           then: sinon.stub().callsArgWith(0, {})
@@ -185,53 +232,32 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       loadScript(0, 0);
-      expect(startLoadingProgressStub).to.have.been.calledOnce;
+      expect(startLoadingProgressStub).to.have.not.been.called;
+      expect(startRefreshingProgressStub).to.have.been.calledOnce;
       expect(addDataByScriptStub).to.have.been.calledOnce;
       expect(finishLoadingProgressStub).to.have.been.calledOnce;
+      expect(finishRefreshingProgressStub).to.have.been.calledOnce;
     });
 
-    it('processes levels before updating the redux store', () => {
-      sinon.stub(progressHelpers, 'processedLevel').returns('success');
-      addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
-      const serverResponse = {
-        lessons: [{levels: ['fail']}]
-      };
-      const expectedResult = {
-        levelsByLessonByScript: {0: {}},
-        scriptDataByScript: {
-          0: {
-            csf: undefined,
-            family_name: undefined,
-            hasStandards: undefined,
-            id: undefined,
-            path: undefined,
-            stages: [{levels: ['success']}],
-            title: undefined,
-            version_year: undefined
-          }
+    it('handles multiple pages of data', () => {
+      reduxStub.returns({
+        getState: () => {
+          return {
+            sectionProgress: {
+              studentLevelProgressByScript: [],
+              scriptDataByScript: [],
+              currentView: 0
+            },
+            sectionData: {
+              section: {
+                students: new Array(60)
+              }
+            }
+          };
         },
-        studentLevelPairingByScript: {0: {}},
-        studentLevelProgressByScript: {0: {}},
-        studentLevelTimeSpentByScript: {0: {}},
-        studentTimestampsByScript: {0: {}}
-      };
-
-      fetchStub.onCall(0).returns({
-        then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, serverResponse)
-        })
+        dispatch: () => {}
       });
-      fetchStub.onCall(1).returns({
-        then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, {})
-        })
-      });
-      loadScript(0, 0);
-      expect(addDataByScriptStub).to.have.been.calledWith(expectedResult);
-      progressHelpers.processedLevel.restore();
-    });
 
-    it('transforms the data provided by the server', () => {
       sinon.stub(progressHelpers, 'processedLevel');
       sinon.stub(progress, 'levelsByLesson').returns({});
       addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
@@ -242,13 +268,117 @@ describe('sectionProgressLoader.loadScript', () => {
       });
       fetchStub.onCall(1).returns({
         then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, serverProgressResponse)
+          then: sinon.stub().callsArgWith(0, firstServerProgressResponse)
+        })
+      });
+      fetchStub.onCall(2).returns({
+        then: sinon.stub().returns({
+          then: sinon.stub().callsArgWith(0, secondServerProgressResponse)
         })
       });
       loadScript(123, 0);
       expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
       progressHelpers.processedLevel.restore();
       progress.levelsByLesson.restore();
+    });
+
+    describe('the first time', () => {
+      beforeEach(() => {
+        reduxStub.returns({
+          getState: () => {
+            return {
+              sectionProgress: {
+                studentLevelProgressByScript: [],
+                scriptDataByScript: [],
+                currentView: 0
+              },
+              sectionData: {
+                section: {
+                  students: ['student']
+                }
+              }
+            };
+          },
+          dispatch: () => {}
+        });
+      });
+
+      it('starts and finishes loading progress', () => {
+        addDataByScriptStub = sinon.stub(sectionProgress, 'addDataByScript');
+        fetchStub.returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, {})
+          })
+        });
+
+        loadScript(0, 0);
+        expect(startLoadingProgressStub).to.have.been.calledOnce;
+        expect(startRefreshingProgressStub).to.have.not.been.called;
+        expect(addDataByScriptStub).to.have.been.calledOnce;
+        expect(finishLoadingProgressStub).to.have.been.calledOnce;
+        expect(finishRefreshingProgressStub).to.have.been.calledOnce;
+      });
+
+      it('processes levels before updating the redux store', () => {
+        sinon.stub(progressHelpers, 'processedLevel').returns('success');
+        addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+        const serverResponse = {
+          lessons: [{levels: ['fail']}]
+        };
+        const expectedResult = {
+          levelsByLessonByScript: {0: {}},
+          scriptDataByScript: {
+            0: {
+              csf: undefined,
+              family_name: undefined,
+              hasStandards: undefined,
+              id: undefined,
+              path: undefined,
+              stages: [{levels: ['success']}],
+              title: undefined,
+              version_year: undefined
+            }
+          },
+          studentLevelPairingByScript: {0: {}},
+          studentLevelProgressByScript: {0: {}},
+          studentLevelTimeSpentByScript: {0: {}},
+          studentTimestampsByScript: {0: {}}
+        };
+
+        fetchStub.onCall(0).returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, serverResponse)
+          })
+        });
+        fetchStub.onCall(1).returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, {})
+          })
+        });
+        loadScript(0, 0);
+        expect(addDataByScriptStub).to.have.been.calledWith(expectedResult);
+        progressHelpers.processedLevel.restore();
+      });
+
+      it('transforms the data provided by the server', () => {
+        sinon.stub(progressHelpers, 'processedLevel');
+        sinon.stub(progress, 'levelsByLesson').returns({});
+        addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+        fetchStub.onCall(0).returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, serverScriptResponse)
+          })
+        });
+        fetchStub.onCall(1).returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, serverProgressResponse)
+          })
+        });
+        loadScript(123, 0);
+        expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
+        progressHelpers.processedLevel.restore();
+        progress.levelsByLesson.restore();
+      });
     });
   });
 });

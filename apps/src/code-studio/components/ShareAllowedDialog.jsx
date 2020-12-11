@@ -280,23 +280,16 @@ class ShareAllowedDialog extends React.Component {
     const facebookShareUrl =
       'https://www.facebook.com/sharer/sharer.php?u=' +
       encodeURIComponent(this.props.shareUrl);
-    const twitterShareUrlDefault =
-      'https://twitter.com/intent/tweet?url=' +
-      encodeURIComponent(this.props.shareUrl) +
-      '&amp;text=Check%20out%20what%20I%20made%20@codeorg' +
-      '&amp;hashtags=HourOfCode&amp;related=codeorg';
-    // Check out the dance I made featuring @artist on @codeorg! URL #HourOfCode
-    const twitterShareUrlDance =
-      'https://twitter.com/intent/tweet?url=' +
-      '&amp;text=Check%20out%20the%20dance%20I%20made%20featuring%20@' +
-      artistTwitterHandle +
-      '%20on%20@codeorg!%20' +
-      encodeURIComponent(this.props.shareUrl) +
-      '&amp;hashtags=HourOfCode&amp;related=codeorg';
 
-    const twitterShareUrl = artistTwitterHandle
-      ? twitterShareUrlDance
-      : twitterShareUrlDefault;
+    const tweetText = artistTwitterHandle
+      ? `Check out the dance I made featuring @${artistTwitterHandle} on @codeorg!`
+      : 'Check out what I made on @codeorg!';
+    const twitterShareUrl =
+      'https://twitter.com/intent/tweet?text=' +
+      encodeURIComponent(tweetText) +
+      '&url=' +
+      encodeURIComponent(this.props.shareUrl) +
+      '&hashtags=HourOfCode&related=codeorg';
 
     const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;
@@ -442,6 +435,7 @@ class ShareAllowedDialog extends React.Component {
                         <a
                           href={facebookShareUrl}
                           target="_blank"
+                          rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             this.props.onClickPopup.bind(this),
                             'facebook'
@@ -454,6 +448,7 @@ class ShareAllowedDialog extends React.Component {
                         <a
                           href={twitterShareUrl}
                           target="_blank"
+                          rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             this.props.onClickPopup.bind(this),
                             'twitter'

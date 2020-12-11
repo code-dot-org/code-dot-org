@@ -59,7 +59,7 @@ de:
             '"saturation"': Sättigung
             '"brightness"': Helligkeit
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} tut {MOVE} {DIR} für immer"
+        text: "{GROUP} tun {MOVE} {DIR} für immer"
         options:
           GROUP:
             sprites: Alle
@@ -151,7 +151,7 @@ de:
             '"x"': horizontale Position
             '"y"': vertikale Position
       Dancelab_doMoveEachLR:
-        text: "{GROUP} tut {MOVE} {DIR} einmal"
+        text: "{GROUP} tun {MOVE} {DIR} einmal"
         options:
           GROUP:
             sprites: Alle
@@ -977,9 +977,11 @@ de:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: um {N} {UNIT}
         options:
           UNIT:
             '"seconds"': Sekunden
+            '"frames"': Frames
       gamelab_bounceOff:
         text: "{SPRITE} prallt von {TARGET} ab"
       gamelab_changePropBy:
@@ -1003,6 +1005,10 @@ de:
         text: "{SPRITE} geklicked"
       gamelab_comment:
         text: 'Kommentar: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: Anzahl von {SPRITE}
       gamelab_createNewSprite:
         text: "erstelle neuen Sprite\n genannt {NAME} \n mit Kostüm {COSTUME} \n in {LOCATION}"
       gamelab_destroy:
@@ -1011,6 +1017,8 @@ de:
         text: verschiebbar sein
       gamelab_edgesDisplace:
         text: der Rand hindert {SPRITE} an der Bewegung
+      gamelab_getAllSprites:
+        text: alle Sprites
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1028,12 +1036,21 @@ de:
             '"this"': dies
             '"other"': andere
       gamelab_getTime:
+        text: Zeit in {UNIT}
         options:
           UNIT:
             '"seconds"': Sekunden
+            '"frames"': Frames
       gamelab_hideTitleScreen:
         text: verstecke Titelbildschirm
+      gamelab_ifVarEquals:
+        text: |-
+          wenn {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} Kostüm ist {COSTUME}"
       gamelab_isKeyPressed:
+        text: "{KEY} ist gedrückt"
         options:
           KEY:
             '"up"': hoch
@@ -1113,6 +1130,14 @@ de:
             '"z"': z
       gamelab_locationAt:
         text: 'Position x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} Pixel {DIRECTION} von {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Ost
+            '"South"': Süd
+            '"West"': West
       gamelab_locationMouse:
         text: Mausposition
       gamelab_locationOf:
@@ -1121,6 +1146,8 @@ de:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
+      gamelab_makeNumSprites:
+        text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
       gamelab_mirrorSprite:
         text: "{SPRITE} zeigt nach {DIRECTION}"
         options:
@@ -1171,6 +1198,8 @@ de:
         text: Sprite {SPRITE} stoppt {BEHAVIOR}
       gamelab_removeTint:
         text: entferne Farbe von {THIS}
+      gamelab_repeatForever:
+        text: ewig wiederholen
       gamelab_setAnimation:
         text: ändere {THIS} Kostüm in {ANIMATION}
       gamelab_setBackground:
@@ -1197,6 +1226,12 @@ de:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Unterwasser
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Winter
             undefined: leer
+      gamelab_setBackgroundImageAs:
+        text: setze Hintergund auf {IMG}
+      gamelab_setPrompt:
+        text: Frage Benutzer {QUESTION} für Variable {VAR}
+      gamelab_setPromptWithChoices:
+        text: Frage Benutzer {QUESTION} für Variable {VAR} mit Auswahl {A}{B}{C}
       gamelab_setProp:
         text: setze {SPRITE} {PROPERTY} auf {VAL}
         options:
@@ -1288,6 +1323,10 @@ de:
         text: solange {SPRITE1} berührt {SPRITE2}
       gamelab_whileUpArrow:
         text: Solange Pfeil nach oben gedrückt
+      gamelab_withPercentChance:
+        text: |-
+          wenn {NUM}% Chance
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x Koordinate von {SPRITE}
       gamelab_yLocationOf:
@@ -1389,6 +1428,7 @@ de:
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
       Mikelab_groupRemoveAllBehaviors:
+        text: stoppe {SELECT} {COSTUME} Verhaltensweisen
         options:
           SELECT:
             '"all"': Alle
@@ -1460,16 +1500,25 @@ de:
             MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
       Mikelab_ifLabel:
+        text: |-
+          wenn {DANCE}
+          mache {DO1} sonst {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Fisch
             MOVES.Clown: mein-label
       Mikelab_ifRecognizeLabel:
+        text: |-
+          wenn Objekt erkannt als {DANCE}
+          mache {DO1} sonst {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Fisch
             MOVES.Clown: mein-label
       Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          wenn Objekt erkannt als {DANCE}
+          mache {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: Fisch
@@ -1512,6 +1561,7 @@ de:
             '"right"': rechts
             '"left"': links
       Mikelab_sprite:
+        text: neues {COSTUME} Sprite bei {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": oben
@@ -1573,6 +1623,12 @@ de:
         text: nach links drehen
       RyanLab_turnRight:
         text: nach rechts drehen
+      SpriteLab2Beta_spriteSay:
+        text: Sprite {SPRITE} sagt {TEXT} für {SECONDS} Sekunden
+      Vector_createSpriteWith:
+        text: |-
+          erzeuge Sprite
+          mache {STATEMENT}
       Vector_log:
         text: protokolliere Nachricht {MESSAGE}
       Vector_positionCenter:
@@ -1594,6 +1650,8 @@ de:
         options:
           PROPERTY:
             "'shapeColor'": Farbe
+      aalab_addBehaviorForDuration:
+        text: aalab Sprite {SPRITE} beginnt {BEHAVIOR} für {SECONDS} Sekunden
       aalab_addBehaviorUntilBoolean:
         text: "{SPRITE} beginnt {BEHAVIOR} bis {CONDITION}"
       aalab_createNewSpriteAnonReturn2:
@@ -1729,7 +1787,7 @@ de:
             '"stoneBricks"': Ziegelsteine
             '"mossyStoneBricks"': moosbewachsene Steinziegel
             '"crackedStoneBricks"': zerbrochene Ziegelsteine
-            '"decorativeStoneBricks"': dekorative Ziegelsteine
+            '"chiseledStoneBricks"': dekorative Steinziegel
             '"blueCoralBlock"': blaue Koralle-Baustein
             '"pinkCoralBlock"': rosa Korallen-Baustein
             '"magentaCoralBlock"': magenta Koralle-Baustein

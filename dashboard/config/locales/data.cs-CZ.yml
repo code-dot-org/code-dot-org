@@ -25,7 +25,7 @@ cs:
         Artist5: Umělec 5
         Unplug11: Shrnutí
         MazeEC: Bludiště
-        Bounce: Odraz
+        Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Skládačka
         MazeStep: Krokový režim bludiště
@@ -50,7 +50,7 @@ cs:
         if: Blok "když"
         if_else: If-else blok
         loop_times: Blok "opakuj"
-        loop_until: Blok "opakuj dokud"
+        loop_until: Blok "opakuj dokud nenastane"
         loop_while: Blok "pokud"
         loop_for: Blok "počítadlo"
         function: Funkce
@@ -73,8 +73,8 @@ cs:
         maze_2_8: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat. Vyřeš
           tuto úlohu použitím šedého bloku "opakuj", který opakuje třikrát. Zkus do
           něj vložit další 3 bloky: "posuň se vpřed", "posuň se vpřed", "otoč se".'
-        maze_2_9: Dobře, zkus nový blok "opakuj dokud" - akce se bude opakovat, dokud
-          nechytím to otravné prasátko.
+        maze_2_9: Dobře, zkus nový blok "opakuj dokud nenastane" - akce se bude opakovat,
+          dokud nechytím to otravné prasátko.
         maze_2_10: Dobře, ještě jednou pro procvičení - dokážeš vyřešit tento úkol
           za použití pouze 4 bloků?
         maze_2_11: Drahý živý. Já zombie. Já hladový. Muset...se dostat...k té slunečnici...
@@ -488,7 +488,7 @@ cs:
         farmer_intro: Úvod Farmářka
         flappy_intro: Úvod do Flappy
         loop_times: Blok Opakovat n-krát
-        loop_until: Blok "opakuj dokud"
+        loop_until: Blok "opakuj dokud nenastane"
         if: Blok Pokud
         if_else: Blok Pokud/jinak
         if_else_scrat: Blok Pokud/jinak

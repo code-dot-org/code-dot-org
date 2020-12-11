@@ -5,6 +5,7 @@ lt:
       category:
         hoc_category_name: "„Programavimo valanda“"
         math_category_name: Matematika
+        other_category_name: Kita
       name:
         course1:
           title: Kursas 1
@@ -2544,3 +2545,7 @@ lt:
           lesson_groups:
             lg_1:
               display_name: Turinys
+        ml-playground:
+          lessons:
+            intro:
+              name: Įvadas

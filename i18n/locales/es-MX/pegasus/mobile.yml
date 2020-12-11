@@ -1550,6 +1550,7 @@
   hoc_overview_partner_activities_body: "El sitio web de la Hora del Código cuenta con más de 500 actividades sobre ciencias de la computación para todas las edades y niveles de experiencia, desarrolladas por Code.org y nuestros socios."
   hoc_overview_partner_activities_link: "Ver actividades"
   hoc_overview_start_tutorial: "Comenzar"
+  hoc_overview_more_resources: "Quieres más información recursos para animar a tus estudiantes en tus clases remotas? consulta a nuestra guía de [Hora de Código virtual](https://hourofcode.com/us/how-to/virtual). Para estudiantes sin computadoras, o con poca conectividad, comparte este paquete que contiene [actividades desconectadas de la Hora de Codigo]{https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc_overview_view_teacher_guide: "Ver la guía para docentes"
   hoc2018_creativity: "creatividad"
   hoc2018_creativity_create: "Crear"
@@ -1687,3 +1688,4 @@
   homepage_slot_text_title_at_home: "Aprende desde casa"
   homepage_slot_text_blurb_at_home: "Aprender es fácil con estos recursos"
   page_not_available_button: "Volver a la página de inicio"
+  footer_powered_by_aws: "Impulsado por Amazon Web Services"

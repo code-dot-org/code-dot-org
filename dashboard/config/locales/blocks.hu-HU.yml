@@ -50,7 +50,7 @@ hu:
             '"measures"': ütem
             '"seconds"': másodperc
       Dancelab_changeColorBy:
-        text: 'módosítás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
+        text: 'változtatás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
         options:
           METHOD:
             '"hue"': színárnyalat
@@ -88,9 +88,6 @@ hu:
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} csináld {MOVE} {DIR} örökké"
         options:
@@ -109,9 +106,6 @@ hu:
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
@@ -188,9 +182,6 @@ hu:
             MOVES.XArmsUp: Nyújt
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} csináld {MOVE} {DIR} egyszer"
         options:
@@ -219,9 +210,6 @@ hu:
             MOVES.XArmsUp: Nyújt
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'ismételd meg {N} ütemenként {START} után '
       Dancelab_everySeconds:
@@ -972,9 +960,12 @@ hu:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: "{N} {UNIT} nél"
         options:
           UNIT:
             '"seconds"': másodperc
+      gamelab_bounceOff:
+        text: "{SPRITE} lepattan itt: {TARGET}"
       gamelab_changePropBy:
         text: 'módosítás: {SPRITE} {PROPERTY} ennyivel: {VAL}'
         options:
@@ -996,6 +987,10 @@ hu:
         text: kattintott {SPRITE}
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: "{SPRITE} -száma"
       gamelab_createNewSprite:
         text: "készíts új sprite-ot\n neve {NAME} \n viselete {COSTUME} \n helye {LOCATION}"
       gamelab_destroy:
@@ -1004,6 +999,8 @@ hu:
         text: vonszolható
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
+      gamelab_getAllSprites:
+        text: minden sprite
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1019,6 +1016,7 @@ hu:
         options:
           CHOICE:
             '"this"': ez
+            '"other"': egyéb
       gamelab_getTime:
         options:
           UNIT:
@@ -1103,6 +1101,13 @@ hu:
             '"z"': z
       gamelab_locationAt:
         text: 'hely x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Észak
+            '"East"': Kelet
+            '"South"': Dél
+            '"West"': Nyugat
       gamelab_locationMouse:
         text: egér helye
       gamelab_locationOf:
@@ -1157,6 +1162,8 @@ hu:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
       gamelab_removeTint:
         text: "{THIS} színének eltávolítása"
+      gamelab_repeatForever:
+        text: ismételd végtelenszer
       gamelab_setAnimation:
         text: 'cseréld {THIS} jelmezét erre: {ANIMATION}'
       gamelab_setBackground:
@@ -1177,6 +1184,8 @@ hu:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vízalatti
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': téli
             undefined: Semennyit
+      gamelab_setBackgroundImageAs:
+        text: háttér beállítása {IMG}
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} tulajdonságának beállítása: {VAL}"
         options:
@@ -1710,7 +1719,6 @@ hu:
             '"stoneBricks"': kőtéglák
             '"mossyStoneBricks"': mohás kőtéglák
             '"crackedStoneBricks"': törött kőtéglák
-            '"decorativeStoneBricks"': dekorációs kőtéglák
             '"blueCoralBlock"': kék korall blokk
             '"pinkCoralBlock"': rózsaszín koráll blokk
             '"magentaCoralBlock"': bíbor korall blokk

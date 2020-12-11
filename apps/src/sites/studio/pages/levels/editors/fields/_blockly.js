@@ -9,8 +9,26 @@ const data = getScriptData('pageOptions');
 if (window.Blockly && !data.uses_droplet) {
   window.Blockly.assetUrl = path => `/assets/${path}`;
   Blockly.Css.inject(document);
-  const appBlocks = require('@cdo/apps/' + data.app + '/blocks');
-  const skinsModule = require('@cdo/apps/' + data.app + '/skins');
+  let blocksLocation = data.app;
+  if (data.app === 'spritelab') {
+    blocksLocation = 'p5lab/spritelab';
+  }
+  const appBlocks = require('@cdo/apps/' + blocksLocation + '/blocks');
+  let skinsLocation = '';
+  const customSkins = [
+    'applab',
+    'bounce',
+    'flappy',
+    'jigsaw',
+    'maze',
+    'netsim',
+    'studio',
+    'turtle'
+  ];
+  if (customSkins.includes(data.app)) {
+    skinsLocation = data.app + '/';
+  }
+  const skinsModule = require('@cdo/apps/' + skinsLocation + 'skins');
   const options = {
     skin: skinsModule.load(function() {}, data.skin_id),
     isK1: data.isK1
@@ -67,6 +85,10 @@ Object.keys(fieldConfig).forEach(key => {
   }
   const mode =
     config.codemirrorMode || (data.uses_droplet ? 'javascript' : 'xml');
+  const element = document.getElementById(config.codemirror);
+  if (!element) {
+    return;
+  }
   config.editor = initializeCodeMirror(config.codemirror, mode);
   if (config.blockPreview && !data.uses_droplet) {
     initializeBlockPreview(

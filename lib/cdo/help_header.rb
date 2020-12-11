@@ -50,6 +50,14 @@ class HelpHeader
       }
     end
 
+    if options[:level] && options[:level].game == Game.weblab
+      entries << {
+        title: I18n.t("#{loc_prefix}web_lab_documentation"),
+        url: "https://studio.code.org/docs/weblab/ol/",
+        id: "weblab-docs"
+      }
+    end
+
     entries << {
       title: I18n.t("#{loc_prefix}help_support"),
       url: "https://support.code.org",
@@ -66,6 +74,11 @@ class HelpHeader
         url: report_url,
         id: "report-bug"
       }
+      entries << {
+        title: I18n.t("#{loc_prefix}report_abuse"),
+        url: "/report_abuse",
+        id: "report-abuse"
+      }
     else
       entries << {
         title: I18n.t("#{loc_prefix}report_bug"),
@@ -73,12 +86,6 @@ class HelpHeader
         id: "report-bug"
       }
     end
-
-    entries << {
-      title: I18n.t("#{loc_prefix}report_abuse"),
-      url: "/report_abuse",
-      id: "report-abuse"
-    }
 
     if options[:user_type] == "teacher"
       entries << {

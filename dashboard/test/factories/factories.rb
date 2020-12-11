@@ -72,7 +72,7 @@ FactoryGirl.define do
 
   factory :user do
     birthday Time.zone.today - 21.years
-    email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
+    email {("#{user_type}_#{SecureRandom.uuid}@code.org")}
     password "00secret"
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
@@ -354,6 +354,11 @@ FactoryGirl.define do
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
+    trait :microsoft_v2_sso_provider do
+      sso_provider_with_token
+      provider 'microsoft_v2_auth'
+    end
+
     trait :powerschool_sso_provider do
       untrusted_email_sso_provider
       provider 'powerschool'
@@ -386,7 +391,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: "abcd#{user.id}",
+          authentication_id: SecureRandom.uuid,
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
@@ -403,7 +408,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh',
+          authentication_id: SecureRandom.uuid,
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
@@ -447,7 +452,7 @@ FactoryGirl.define do
     association :user
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     credential_type AuthenticationOption::EMAIL
-    authentication_id {User.hash_email email}
+    authentication_id SecureRandom.uuid
 
     factory :google_authentication_option do
       credential_type AuthenticationOption::GOOGLE
@@ -791,10 +796,31 @@ FactoryGirl.define do
     end
   end
 
+  factory :resource do
+    url 'fake.url'
+    name 'fake name'
+  end
+
+  factory :objective do
+    description 'fake description'
+  end
+
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
     script_level
+  end
+
+  factory :lesson_activity do
+    sequence(:key) {|n| "lesson-activity-#{n}"}
+    sequence(:position)
+    lesson
+  end
+
+  factory :activity_section do
+    sequence(:key) {|n| "activity-section-#{n}"}
+    sequence(:position)
+    lesson_activity
   end
 
   factory :activity do
@@ -1181,10 +1207,8 @@ FactoryGirl.define do
     contact_name "Contact Name"
     contact_email "contact@code.org"
     group 1
-    apps_open_date_csp_teacher {(Date.current - 1.day).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current + 4.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
     csd_cost 10
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."

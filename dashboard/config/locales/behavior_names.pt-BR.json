@@ -1074,6 +1074,78 @@
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
           "swimming left and right": "nadando para a esquerda e para a direita"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "perambulando 2",
+          "wandering 1": "perambulando 1"
+        },
+        "outbreak1": {
+          "wandering": "vagando"
+        },
+        "outbreak2": {
+          "wandering": "vagando"
+        },
+        "outbreak3": {
+          "wandering": "vagando"
+        },
+        "outbreak4": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando"
+        },
+        "outbreak5": {
+          "wandering": "vagando"
+        },
+        "outbreak6": {
+          "wandering": "vagando"
+        },
+        "outbreak7": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando"
+        },
+        "outbreak8": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando"
+        },
+        "outbreak_freeplay": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando"
         }
       }
     }

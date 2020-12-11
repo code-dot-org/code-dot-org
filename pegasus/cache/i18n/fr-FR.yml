@@ -2297,7 +2297,7 @@ fr-FR:
     Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres !
   hoc_overview_dance_2019_subtitle: Code une Soirée Dansante à partager avec tes amis.
     Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
-    Nicki Minaj, et 34 autres !
+    Nicki Minaj, et 34 autres artistes !
   hoc_overview_title: Activités Hour of Code de Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code</a> est un
     mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de
@@ -2309,6 +2309,13 @@ fr-FR:
     développées par Code.org et ses partenaires.
   hoc_overview_partner_activities_link: Afficher les Activités
   hoc_overview_start_tutorial: Commencer
+  hoc_overview_more_resources: 'Pour obtenir plus de ressources sur la manière de
+    communiquer avec votre classe à distance, consultez notre guide pour l''organisation
+    d''une [virtual Hour of Code] (https://hourofcode.com/us/how-to/virtual). Nous
+    invitons les étudiants qui n''ont pas de matériel ou qui n''ont pas accès à Internet
+    à partager ce paquet d''[unplugged Hour of Code activities] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+
+'
   hoc_overview_view_teacher_guide: Voir le guide de l'enseignant
   hoc2018_creativity: créativité
   hoc2018_creativity_create: Créer
@@ -2452,8 +2459,8 @@ fr-FR:
     Future Engineer* est un programme destiné à sensibiliser les enfants défavorisés
     aux opportunités du numérique et les aider à bâtir une carrière dans les métiers
     de l’informatique. Ce programme sera destiné aux enfants défavorisés du primaire
-    au supérieur avec une attention toute particulière pour les jeunes filles. [Learn
-    more](%{amazon_future_engineer_link})
+    au supérieur avec une attention toute particulière pour les jeunes filles. [En
+    savoir plus](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Pour en savoir
     plus sur Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: À propos d'Amazon Future Engineer
@@ -2518,4 +2525,6 @@ fr-FR:
   hoc2019_dance_previous_versions: Vous cherchez une version antérieure de Soirée
     Dansante ?  Cliquez ici pour commencer [Partie 1](%{dance_2018_link}) et [Partie
     2](%{dance_extras_2018_link}) qui datent de l'année dernière.
+  homepage_slot_text_title_at_home: Apprendre à la maison
   page_not_available_button: Retourner à la page d’accueil
+  footer_powered_by_aws: Fourni par Amazon Web Services

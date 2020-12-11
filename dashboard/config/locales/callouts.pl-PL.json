@@ -641,13 +641,13 @@
           "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowy\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
         },
         "courseB_Scrat_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseB_Scrat_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseB_Scrat_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseB_Scrat_ramp3a_2019": {
           "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
@@ -803,16 +803,16 @@
           "courseC_maze_debugging5_1": "Te bloki są zablokowane i nie mogą być usunięte!"
         },
         "courseC_maze_programming1": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseC_maze_programming1_2018": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseC_maze_programming1_2019": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseC_maze_programming1_2020": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
@@ -964,16 +964,16 @@
           "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
         },
         "courseD_maze_ramp1": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseD_maze_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseD_maze_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseD_maze_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
@@ -1049,7 +1049,7 @@
           "courseD_playLab_condFP_1": "uporządkowaliśmy bloki w kategorie, aby udostępnić Ci więcej kodu do grania! Kliknij tutaj, aby zobaczyć, dokąd wszystko poszło."
         },
         "courseD_scrat_ramp1": {
-          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków wciśnij \"Uruchom\", aby uruchomić program."
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
         },
         "courseD_scrat_ramp2": {
           "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
@@ -1372,6 +1372,117 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Zauważ, że bloki korzystają teraz z nowego sposobu wpisywania liczb. Te bloki \"matematyczne\" może wyciągać i przemieszczać!"
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "Użyj tego bloku, aby pozostawić sobie lub swojemu nauczycielowi zrobienie notatek z tego, jak działa Twój kod."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "Użyj tego bloku, aby pozostawić sobie lub swojemu nauczycielowi zrobienie notatek z tego, jak działa Twój kod."
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "Użyj tego bloku, aby pozostawić sobie lub swojemu nauczycielowi zrobienie notatek z tego, jak działa Twój kod."
+        },
+        "Virtual Pet 2_2019": {
+          "": "Kliknij tutaj!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "Kliknij tutaj!"
+        },
+        "behaviors 3a": {
+          "behavior_callout": "Dlaczego to zachowanie nie sprawdza się w przypadku środkowej gwiazdy?",
+          "star2_callout": "Usuń blok kostiumu i użyj zamiast tego bloku \"ten duszek\".",
+          "this_sprite_callout": "Zastąp poniższy blok kostiumu tym."
+        },
+        "behaviors 3a_2020": {
+          "behavior_callout": "Dlaczego to zachowanie nie sprawdza się w przypadku środkowej gwiazdy?",
+          "star2_callout": "Usuń blok kostiumu i użyj zamiast tego bloku \"ten duszek\".",
+          "this_sprite_callout": "Zastąp poniższy blok kostiumu tym."
+        },
+        "behaviors 5": {
+          "behaviors_edit": "Dodaj kod do tego zachowania."
+        },
+        "behaviors 5_2020": {
+          "behaviors_edit": "Dodaj kod do tego zachowania."
+        },
+        "behaviors free play": {
+          "behaviors_edit": "Dodaj kod do tego zachowania."
+        },
+        "behaviors free play_2020": {
+          "behaviors_edit": "Dodaj kod do tego zachowania."
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Ten blok jest bardzo ważny dla tego projektu. Dopilnuj, abyś go użył!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Ten blok jest bardzo ważny dla tego projektu. Dopilnuj, abyś go użył!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Dodaj to do środka Twojego programu."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Dodaj to do środka Twojego programu."
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Jakikolwiek kod tu wrzucisz, zostanie on powtórzony tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu."
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "W celu rozwiązania tej łamigłówki będziesz musiał użyć bloku \"dopóki jest ścieżka z przodu\"."
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "W celu rozwiązania tej łamigłówki będziesz musiał użyć bloku \"dopóki jest ścieżka z przodu\"."
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "W celu rozwiązania tej łamigłówki będziesz musiał użyć bloku \"dopóki jest ścieżka z przodu\"."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Możesz zmienić ten numer.",
+          "courseE_artist_ramp8_2": "Kliknij tutaj, aby wpisać liczby powtórzeń kodu."
+        },
+        "courseE_aboutme_2": {
+          "": "Kliknij tutaj!"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "Kliknij tutaj!"
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "Tutaj można znaleźć swoje zmienne!"
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "Tutaj można znaleźć swoje zmienne!"
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "Tutaj można znaleźć swoje zmienne!"
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić swój program."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić swój program."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić swój program."
+        },
+        "outbreak2": {
+          "minitoolbox": "Kliknij tutaj, aby rozwinąć blok.",
+          "pointerlocation": "Przeciągnij tutaj blok tematu."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknij, aby utworzyć nowy kostium"
         }
       }
     }

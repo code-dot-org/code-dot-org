@@ -19,6 +19,7 @@ fr:
         hoc_category_name: Heure de Code
         math_category_name: Math
         research_studies_category_name: Études de Recherche
+        other_category_name: Autre
       name:
         course1:
           title: Cours 1
@@ -13101,7 +13102,7 @@ fr:
         dance:
           title: Soirée Dansante (2018)
           description_short: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-            Ciara, et 25 autres !
+            Ciara, et 25 autres artistes !
           description: Codez votre propre Soirée Dansante à partager avec vos amis
             !
           lessons:
@@ -14237,7 +14238,7 @@ fr:
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
             Learning Sprites with Sprite Lab:
-              name: Learning Sprite Lab
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
               name: Soirée Dansante des Extraterrestres
             Pet Giraffe with Sprite Lab:
@@ -22676,7 +22677,7 @@ fr:
             For Loops with Artist:
               name: Les Boucles For avec l'Artiste
             Swimming Fish in Sprite Lab:
-              name: Learning Sprite Lab
+              name: Des Poissons qui Nagent, avec le Labo des Lutins
             Alien Dance Party:
               name: Soirée Dansante des Extraterrestres
             Behaviors in Sprite Lab:
@@ -23689,3 +23690,13 @@ fr:
               name: Cours A
             Course B:
               name: Cours B
+            CS Discoveries:
+              name: Découvertes de l'Informatique
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: IA pour les Océans
+            intro:
+              name: Introduction
+            visualizing:
+              name: Visualiser les Données

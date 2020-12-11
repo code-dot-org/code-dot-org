@@ -15,6 +15,7 @@ ga:
         full_course_category_name: Cúrsaí Iomlána
         hoc_category_name: An Uair Chódála
         math_category_name: Matamaitic
+        other_category_name: Eile
       name:
         course1:
           title: Cúrsa 1
@@ -3864,3 +3865,11 @@ ga:
               name: Cúrsa A
             Course B:
               name: Cúrsa B
+            CS Discoveries:
+              name: Fionnachtana sa Ríomheolaíocht
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI ar son an Aigéin
+            intro:
+              name: Réamhrá

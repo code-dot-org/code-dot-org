@@ -3,6 +3,7 @@ title: IT Requirements
 nav: educate_nav
 theme: responsive
 ---
+
 # IT requirements for Code.org tutorials
 
 ## Hardware
@@ -17,32 +18,33 @@ theme: responsive
 
 Code.org takes a tiered approach to the level of support we provide for different browsers and platforms to ensure we are building a stellar experience for most of our users, and an acceptable experience for the rest. We support the following combinations of operating systems and browsers:
 
-| **Browser** | **Operating System** |
-|---------------|---------------|
-| Chrome 33.x and higher | Windows 7 and higher <br><br> macOS 10.6 and higher <br><br> Android 4.1.2 and higher <br><br> ChromeOS (Chromebooks) |
-| Safari 7.0.x and higher | macOS 10.6 and higher <br><br> iOS 7.x and higher|
-| Internet Explorer 11 and higher | Windows 7 and higher <br><br> macOS 10.6 and higher|
-| Microsoft Edge | Windows 10 and higher |
-| Firefox 25.x and higher | Windows 7 and higher |
+| **Browser**                     | **Operating System**                                                                                                  |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Chrome 33.x and higher          | Windows 7 and higher <br><br> macOS 10.6 and higher <br><br> Android 4.1.2 and higher <br><br> ChromeOS (Chromebooks) |
+| Safari 7.0.x and higher         | macOS 10.6 and higher <br><br> iOS 7.x and higher                                                                     |
+| Internet Explorer 11 and higher | Windows 7 and higher <br><br> macOS 10.6 and higher                                                                   |
+| Microsoft Edge                  | Windows 10 and higher                                                                                                 |
+| Firefox 25.x and higher         | Windows 7 and higher                                                                                                  |
 
 ## Sites to Unblock
 
 For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
 
-
-| Priority | URL                                                                                                                                                    |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Required**   | `https://code.org`<br/>`https://*.code.org`                                                                                                            |
-| **Optional**    | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com`                                                                                    |
-| **To use YouTube hosted videos** <br/>(Enhanced Privacy Mode - available late July 2018)| `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |
-| **To use YouTube hosted videos** <br/>(Deprecated late July 2018)| `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                |
-| **To use Code.org hosted videos**                                                  | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico`<br/>`https://www.youtube-nocookie.com/favicon.ico` |
-| **To use Internet Simulator**   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
-| **To use Web Lab** | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
+| Priority                                                                                 | URL                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Required**                                                                             | `https://code.org`<br/>`https://*.code.org`                                                                                                            |
+| **Optional**                                                                             | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com`                                                                                    |
+| **To use YouTube hosted videos** <br/>(Enhanced Privacy Mode - available late July 2018) | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |
+| **To use YouTube hosted videos** <br/>(Deprecated late July 2018)                        | `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                |
+| **To use Code.org hosted videos**                                                        | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico`<br/>`https://www.youtube-nocookie.com/favicon.ico` |
+| **To use Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
+| **To use Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
+| **To use Google Classroom Share Button**                                                 | `https://apis.google.com`                                                                                                                              |
 
 ## Mobile and Tablet Support Details
 
 All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
@@ -78,7 +80,7 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube.  If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels.  See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list.  You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Still having trouble?
 

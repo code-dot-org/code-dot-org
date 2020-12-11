@@ -1293,7 +1293,7 @@ da-DK:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -2099,3 +2099,10 @@ da-DK:
         - {}
         questions:
         - {}
+      courseD_EOC_2020:
+        description: Du er kommet til den sidste lektion i Kursus D!. Vælg et projekt
+          at starte med.
+      outbreak_story:
+        content1: Beskrivelse her
+      outbreak_story2:
+        content1: Beskrivelse her

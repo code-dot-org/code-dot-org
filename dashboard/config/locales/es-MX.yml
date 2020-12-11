@@ -201,9 +201,17 @@ es-MX:
     mismatch_password: Las dos contraseñas ingresadas no coinciden
     student_consent: Confirmo que tengo la autorización de mis padres o tutores legales
       para utilizar los servicios de Code.org.
-    agree_us_website: Acepto usar un sitio web con sede en Estados Unidos.
-    my_data_to_us: Acepto que se envíen y almacenen datos de mi utilización de este
-      sitio web en Estados Unidos.
+    agree_us_data_transfer_student: "**Acepto que Code.org puede transferir datos
+      (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos**
+      con el fin de alojar y procesar dichos datos."
+    agree_us_data_transfer_teacher: "**Acepto que Code.org puede transferir datos
+      (incluyendo datos personales) de mi uso (y el uso de mis estudiantes) de este
+      sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos."
+    data_collection_us: Entiendo que Code.org es un sitio web sin fines de lucro con
+      sede en los Estados Unidos y que las leyes que rigen la recopilación de datos
+      en los Estados Unidos pueden diferir de las leyes de mi país.
+    visit_privacy: Consulte la [política de privacidad](%{privacy_url}) de Code.org
+      para obtener más información.
     student_terms_markdown: Las direcciones de correo electrónico no se almacenan
       de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes
       nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten
@@ -569,6 +577,7 @@ es-MX:
     link_a_parent_email: Conecta tu correo electrónico como padre o tutor a esta cuenta
       para mantenerte al tanto del progreso y proyectos de tu hijo
     parent_guardian_email_label: Correo electrónico del padre o tutor
+    remove_parent_email_label: Quitar
     none: Ninguna
     only_one_parent_email_supported_warning: 'Nota: en este momento sólo podemos incluir
       el correo electrónico de un padre o tutor por cada cuenta de estudiante. '
@@ -1013,6 +1022,16 @@ es-MX:
       podrían no estar disponibles para tus estudiantes si no aceptas explícitamente
       los términos actualizados.
     review_terms: Revisa los términos actualizados
+  donor_interstitial:
+    title: Tus cursos gratis de Ciencia de Computación son posible por...
+    subtitle: Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito
+      de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los
+      estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!
+    local_supporters: Simpatizantes Locales
+    global_supporters: Simpatizantes Globales
+    support_codeorg_1: Cada dólar dado a Code.org trae oportunidad a más estudiantes.
+    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
+    get_started: Empieza en Code.org
   school_info_interstitial:
     title: Queremos que cada estudiante pueda acceder a las Ciencias de la Computación.
       ¡Ayúdanos a seguir nuestro progreso!
@@ -1361,14 +1380,6 @@ es-MX:
       que se guarden las cookies en tu computadora o dispositivo.
     more_information: Mira la política de privacidad de Code.org.
     accept: Acepto
-  gdpr_dialog:
-    heading: "¿Aceptas utilizar un sitio web alojado en los Estados Unidos?"
-    message: Es posible que los datos de su utilización de este sitio web se envíen
-      y almacenen en Estados Unidos.
-    link_intro: Para más información, mira nuestra
-    privacy_policy: política de privacidad
-    logout: Cerrar sesión
-    true: Sí
   page_not_found_title: No se encontró la página
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba

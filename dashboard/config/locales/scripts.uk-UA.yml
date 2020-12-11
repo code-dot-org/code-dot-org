@@ -10,6 +10,9 @@ uk:
         csp17_category_name: "'16-'17 принципи інформатики"
         hoc_category_name: Година коду
         math_category_name: Математика
+        twenty_hour_category_name: 20-годин
+        tts_category_name: Озвучення тексту
+        other_category_name: Інше
       name:
         course1:
           title: Курс 1
@@ -472,6 +475,8 @@ uk:
               name: Особисті інновації
         algebraPD:
           lessons:
+            Course Overview:
+              name: Огляд курсу
             Evaluation Blocks:
               name: Оцінкові блоки
             Introduction to PD:
@@ -490,10 +495,14 @@ uk:
           lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+            Teaching Strategies:
+              name: Навчальні стратегії
         ECSPD:
           lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+            Teaching Strategies:
+              name: Навчальні стратегії
         sciencePD:
           lessons:
             Introduction to PD:
@@ -503,10 +512,14 @@ uk:
           lessons:
             Creating Functions:
               name: Створення функцій
+            Processing Arrays:
+              name: Обробка масивів
             While Loops:
               name: Цикли "поки"
         algebraPD3:
           lessons:
+            Course Overview:
+              name: Огляд курсу
             Evaluation Blocks:
               name: Оцінкові блоки
             Next Steps:
@@ -521,12 +534,18 @@ uk:
           lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+            Teaching Strategies:
+              name: Навчальні стратегії
         ECSPD-iZone:
           lessons:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
+            Teaching Strategies:
+              name: Навчальні стратегії
         algebraPD-NexTech:
           lessons:
+            Course Overview:
+              name: Огляд курсу
             Evaluation Blocks:
               name: Оцінкові блоки
             Introduction to PD:
@@ -535,6 +554,8 @@ uk:
               name: Панель вчителя
         algebraPD-iZone:
           lessons:
+            Course Overview:
+              name: Огляд курсу
             Evaluation Blocks:
               name: Оцінкові блоки
             Introduction to PD:
@@ -557,6 +578,10 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        sciencePD3:
+          lessons:
+            Welcome Back!:
+              name: З Поверненням!
         cspunit2:
           description_short: Програмування
           lessons:
@@ -591,6 +616,8 @@ uk:
               name: Бджілка
             Bounce:
               name: Арканоід
+            Farmer:
+              name: Фермер
             Flappy:
               name: Пурх
             Jigsaw:
@@ -617,6 +644,8 @@ uk:
               name: Успішні методики викладання інформатики
             Booleans:
               name: Логічні вирази
+            Course Overview:
+              name: Огляд курсу
             Defining Functions:
               name: Визначення функцій
             Defining Variables:
@@ -650,8 +679,14 @@ uk:
           lessons:
             Best Practices for Teaching Computer Science:
               name: Успішні методики викладання інформатики
+            Getting Started:
+              name: Починаємо
+            Looking Ahead:
+              name: Дивлячись вперед
             Next Steps:
               name: Наступні Кроки
+            Planning:
+              name: Планування
         ECSPD2:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
@@ -694,6 +729,8 @@ uk:
               name: Підведення підсумків
         Equity-OnlinePD:
           lessons:
+            Getting Started:
+              name: Починаємо
             Next Steps:
               name: Наступні Кроки
         sciencePD2b-iZone:
@@ -732,6 +769,10 @@ uk:
               name: Ласкаво просимо!
             Wrap-up:
               name: Підведення підсумків
+        CSPPD2:
+          lessons:
+            Getting Started:
+              name: Починаємо
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -752,12 +793,50 @@ uk:
               name: Написання пісень
             The Big Event:
               name: Велика подія
+        sciencePD3_pre1:
+          lessons:
+            Welcome Back!:
+              name: З Поверненням!
+        ECSPD3-Unit2:
+          lessons:
+            Getting Started:
+              name: Починаємо
+            Teaching Strategies:
+              name: Навчальні стратегії
+        ECSPD3-Unit3:
+          lessons:
+            Getting Started:
+              name: Починаємо
+            Teaching Strategies:
+              name: Навчальні стратегії
+        ECSPD3-Unit4:
+          lessons:
+            Getting Started:
+              name: Починаємо
+            Teaching Strategies:
+              name: Навчальні стратегії
+        ECSPD3-Unit5:
+          lessons:
+            Getting Started:
+              name: Починаємо
+        ECSPD3-Unit6:
+          lessons:
+            Getting Started:
+              name: Починаємо
         ScienceP3OLPT2:
           lessons:
             Welcome!:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        algebraPD3b:
+          lessons:
+            Getting Started:
+              name: Починаємо
+        CSPPD3-Unit2:
+          lessons:
+            Getting Started:
+              name: Починаємо
         Special Fun:
           description_audience: Вік 10-18
         SpecialSeries:
@@ -770,9 +849,15 @@ uk:
           lessons:
             Ice Age Play Lab:
               name: Ігрова студія Льодовикового періоду
+        CSPPD3-Unit3:
+          lessons:
+            Getting Started:
+              name: Починаємо
         cspunit3temp:
           description_short: Програмування
           lessons:
+            Processing Arrays:
+              name: Обробка масивів
             While Loops:
               name: Цикли "поки"
         gumball:
@@ -818,6 +903,22 @@ uk:
           description_short: Програмування
         cspunit4:
           description_short: Програмування
+        CSPPD3-Unit4:
+          lessons:
+            Getting Started:
+              name: Починаємо
+        cspunit6draft:
+          lessons:
+            Importing and Exporting Data:
+              name: Імпортування та експортування даних
+        CSPPD3-Unit5:
+          lessons:
+            Getting Started:
+              name: Починаємо
+        cspunit6:
+          lessons:
+            Importing and Exporting Data:
+              name: Імпортування та експортування даних
         AlgebraA:
           description: Вивчайте функціональне програмування через алгебру
           description_short: Вивчайте функціональне програмування через алгебру
@@ -864,12 +965,18 @@ uk:
         algebraPD1:
           title: Інформатика в алгебрі - Частина 1
           lessons:
+            Course Overview:
+              name: Огляд курсу
             Evaluation Blocks:
               name: Оцінкові блоки
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
             Teacher Dashboard:
               name: Панель вчителя
+        algebraPD3c:
+          lessons:
+            Getting Started:
+              name: Починаємо
         csp1-2017:
           lesson_groups:
             cspSurvey:
@@ -934,6 +1041,8 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Processing Arrays:
+              name: Обробка масивів
             While Loops:
               name: Цикли "поки"
             Post-Course Survey:
@@ -941,8 +1050,12 @@ uk:
         CSDU3-Draft:
           description_short: Програмування
           lessons:
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
+            Defender:
+              name: Захисник
             Velocity:
               name: Швидкість
         2016_sciencePD_phase1:
@@ -985,8 +1098,18 @@ uk:
           lessons:
             Game Lab:
               name: Ігрова лабораторія
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Режим проектування
         CSDU2-Draft:
           lessons:
+            Intellectual Property:
+              name: Інтелектуальна власність
+            Holding:
+              name: Володіння
+            Classes:
+              name: Класи
             Peer Review:
               name: Рецензування
         MikeTest:
@@ -1071,8 +1194,36 @@ uk:
               name: Ласкаво просимо!
             Wrap-up:
               name: Підведення підсумків
+        ecs-unit2:
+          lessons:
+            Getting Started:
+              name: Починаємо
+            Teaching Strategies:
+              name: Навчальні стратегії
+        ecs-unit3:
+          lessons:
+            Getting Started:
+              name: Починаємо
+            Teaching Strategies:
+              name: Навчальні стратегії
+        ecs-unit4:
+          lessons:
+            Getting Started:
+              name: Починаємо
+            Teaching Strategies:
+              name: Навчальні стратегії
+        ecs-unit5:
+          lessons:
+            Getting Started:
+              name: Починаємо
+        ecs-unit6:
+          lessons:
+            Getting Started:
+              name: Починаємо
         grade3:
           lessons:
+            " Bee: Conditionals":
+              name: " Бджілка: Умови"
             'Artist: Nested Loops':
               name: Художник - вкладені цикли
             Bee Debugging:
@@ -1090,6 +1241,12 @@ uk:
             practice:
               display_name: Методики викладання
         csd3-2017:
+          description: " У блоці 3 ви будете спиратися на свій досвід кодування під
+            час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій
+            починається з простих форм і будує до більш складних ігор на основі спрайтів,
+            використовуючи ті ж концепції програмування та процес проектування, який
+            комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте
+            персоналізовану інтерактивну програму."
           description_short: Програмування
           lesson_groups:
             csd3_1:
@@ -1103,10 +1260,14 @@ uk:
           lessons:
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
             Variables:
               name: змінні
+            Sprites:
+              name: Спрайти
             Conditionals:
               name: Умови
         grade2:
@@ -1150,6 +1311,16 @@ uk:
             Welcome!:
               name: Ласкаво просимо!
         csd1-2017:
+          description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення
+            проблем."
+          description: " \r\nБлок 1 є дуже інтерактивним і спільним вступом в галузь
+            інформатики, як це оформлено в рамках більш широкого прагнення до вирішення
+            проблем. Ви будете практикувати використання процесу вирішення проблем
+            для вирішення ряду головоломок, проблем і сценаріїв реального світу. Далі
+            ви дізнаєтеся, як комп'ютери вводити, виводити, зберігати та обробляти
+            інформацію, щоб допомогти людям вирішити проблеми.  Пристрій завершується
+            проектом, в якому ви розробляєте програму, яка допомагає вирішити проблему
+            за вашим вибором.\r\n"
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -1157,6 +1328,11 @@ uk:
               display_name: 'Глава 1: Процес вирішення проблем'
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+          lessons:
+            Processing:
+              name: В обробці
+            Storage:
+              name: Сховище
         csp-online-test:
           lesson_groups:
             required:
@@ -1165,6 +1341,11 @@ uk:
               display_name: Зміст
             practice:
               display_name: Методики викладання
+          lessons:
+            Variables and Strings:
+              name: Змінні та Рядки
+            Conditionals and Boolean Logic:
+              name: Умови і Булева логіка
         csp1-support:
           lesson_groups:
             required:
@@ -1185,6 +1366,13 @@ uk:
             Simple Encryption:
               name: Просте шифрування
         csd2-2017:
+          description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
+          description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його
+            на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися
+            зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки
+            за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування,
+            такі як налагодження та коментування.  До кінця пристрою у вас буде особистий
+            веб-сайт, який можна опублікувати в Інтернеті."
           lesson_groups:
             csd2_1:
               display_name: 'Глава 1: Веб-контент та HTML'
@@ -1193,8 +1381,14 @@ uk:
             csd_survey:
               display_name: Опитування після закінчення курсу
           lessons:
+            Classes:
+              name: Класи
             Peer Review:
               name: Рецензування
+            Intellectual Property:
+              name: Інтелектуальна власність
+            Headers:
+              name: Хедери
             Lists:
               name: Списки
         csp2-support:
@@ -1206,6 +1400,8 @@ uk:
             practice:
               display_name: Методики викладання
         csd4-2017:
+          description_short: "  Дізнайтеся, як розробити програму, яка відповідає
+            потребам користувачів."
           lesson_groups:
             csd4_1:
               display_name: |-
@@ -1327,6 +1523,10 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        sciencepd3-2016:
+          lessons:
+            Welcome Back!:
+              name: З Поверненням!
         csp3-support:
           lesson_groups:
             required:
@@ -1376,6 +1576,11 @@ uk:
               display_name: Зміст
             practice:
               display_name: Методики викладання
+          lessons:
+            Variables and Strings:
+              name: Змінні та Рядки
+            Conditionals and Boolean Logic:
+              name: Умови і Булева логіка
         csppostap-2017:
           lesson_groups:
             content:
@@ -1383,6 +1588,8 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Importing and Exporting Data:
+              name: Імпортування та експортування даних
             Post-Course Survey:
               name: Опитування після закінчення курсу
         csd6-draft:
@@ -1394,20 +1601,37 @@ uk:
           lessons:
             Lists:
               name: Списки
+            Lights:
+              name: Світлові індикатори
             For Loops:
               name: Цикли For
+            Accelerometer:
+              name: Акселерометр
             Functions with Parameters:
               name: Функції з параметрами
         workshop-gamelab:
           lessons:
             Introduction:
               name: Вступ
+            Sprites:
+              name: Спрайти
+            Input:
+              name: Ввід
         csd5-draft:
           lesson_groups:
             csd5_1:
               display_name: 'Глава 1: Представлення інформації'
             csd5_2:
               display_name: 'Глава 2: Вирішення проблем із даними'
+          lessons:
+            8-bit Numbers:
+              name: 8-бітні Числа
+            Encryption:
+              name: Шифрування
+        applab-1hour:
+          lessons:
+            Extra:
+              name: Додатково
         coursed-ramp:
           lessons:
             Introduction:
@@ -1431,20 +1655,30 @@ uk:
           lessons:
             Lists:
               name: Списки
+            Lights:
+              name: Світлові індикатори
             For Loops:
               name: Цикли For
+            Accelerometer:
+              name: Акселерометр
             Functions with Parameters:
               name: Функції з параметрами
+            Accelerometer_:
+              name: Акселерометр
             Functions with Parameters_:
               name: Функції з параметрами
         csd3-draft:
           lessons:
             Variables:
               name: змінні
+            Sprites:
+              name: Спрайти
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
         csd5-2017:
@@ -1455,24 +1689,47 @@ uk:
               display_name: 'Глава 2: Вирішення проблем із даними'
             csd_survey:
               display_name: Опитування після закінчення курсу
+          lessons:
+            8-bit Numbers:
+              name: 8-бітні Числа
+            Encryption:
+              name: Шифрування
         csd3-old:
           lessons:
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
         csd2-draft:
           lessons:
+            Intellectual Property:
+              name: Інтелектуальна власність
+            Images:
+              name: Зображення
+            Headers:
+              name: Хедери
             Lists:
               name: Списки
+        csd1-draft:
+          lessons:
+            Processing:
+              name: В обробці
+            Storage:
+              name: Сховище
         csd3-chapters:
           lessons:
             Variables:
               name: змінні
+            Sprites:
+              name: Спрайти
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
             'null':
@@ -1489,8 +1746,12 @@ uk:
               display_name: Опитування
         csd2-old:
           lessons:
+            Classes:
+              name: Класи
             Peer Review:
               name: Рецензування
+            Intellectual Property:
+              name: Інтелектуальна власність
         artist-and-bb8:
           lessons:
             Ice Age Play Lab:
@@ -1561,6 +1822,16 @@ uk:
           lessons:
             Building a Foundation:
               name: Закладання основ
+        csdnovice:
+          lessons:
+            Tuesday:
+              name: Вівторок
+            Wednesday:
+              name: Середа
+            Thursday:
+              name: Четвер
+            Welcome:
+              name: Ласкаво просимо
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -1575,6 +1846,18 @@ uk:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            Welcome:
+              name: Ласкаво просимо
+            Tuesday:
+              name: Вівторок
+            Wednesday:
+              name: Середа
+            Thursday:
+              name: Четвер
+        novice-view:
+          description_short: Немає
+          description: Немає
         csp1-dlp:
           lesson_groups:
             required:
@@ -1674,6 +1957,8 @@ uk:
               name: Грамотна Бджілка
         subgoal-labels-opt-in:
           lessons:
+            deprecated:
+              name: застаріла
             Thanks:
               name: Дякуємо
         csp3-research-mxghyt:
@@ -1688,6 +1973,8 @@ uk:
           lessons:
             Creating Functions:
               name: Створення функцій
+            foo:
+              name: щось
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -1697,6 +1984,7 @@ uk:
             csd4_2:
               display_name: 'Глава 2: Прототипування додатків'
         e-f-ramp:
+          title: Курс E & F Рампа
           lesson_groups:
             csf_e_1:
               display_name: Просунутися до Курсу Е (опціонально)
@@ -1709,6 +1997,8 @@ uk:
               name: Закладання основ
             Nested Loops:
               name: Вкладені цикли
+            Course E Introduction:
+              name: Курсу E - Вступ
             Conditionals:
               name: Умови
             Internet:
@@ -1759,6 +2049,8 @@ uk:
           lessons:
             Building a Foundation:
               name: Закладання основ
+            Course E Introduction:
+              name: Курсу E - Вступ
             Conditionals:
               name: Умови
             Internet:
@@ -1774,6 +2066,8 @@ uk:
           lessons:
             Building a Foundation:
               name: Закладання основ
+            Course E Introduction:
+              name: Курсу E - Вступ
             Ice Age Play Lab:
               name: Ігрова студія Льодовикового періоду
             Envelope Variables:
@@ -1788,6 +2082,9 @@ uk:
               display_name: 'Глава 1: Представлення інформації'
             csd5_2:
               display_name: 'Глава 2: Вирішення проблем із даними'
+          lessons:
+            8-bit Numbers:
+              name: 8-бітні Числа
         csd4-old:
           lesson_groups:
             csd4_1:
@@ -1834,6 +2131,7 @@ uk:
             Post-Course Survey:
               name: Опитування після закінчення курсу
         course-e-2018:
+          title: Курс Е 2018 (Застарілий!)
           lesson_groups:
             csf_e_1:
               display_name: Просунутися до Курсу Е (опціонально)
@@ -1855,6 +2153,7 @@ uk:
             Crowdsourcing:
               name: Краудсорсинг
         course-f-2018:
+          title: Курс F 2018 (Застарілий)
           lesson_groups:
             csf_f_1:
               display_name: Просунутися до Курсу F (опціонально)
@@ -1882,10 +2181,19 @@ uk:
           lessons:
             Lists:
               name: Списки
+            Lights:
+              name: Світлові індикатори
             For Loops:
               name: Цикли For
         csd3-1819draft:
-          description_short: Програмування
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво
+            та ігри в Game Lab."
+          description: " У блоці 3 ви будете спиратися на свій досвід кодування під
+            час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій
+            починається з простих форм і будує до більш складних ігор на основі спрайтів,
+            використовуючи ті ж концепції програмування та процес проектування, який
+            комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте
+            персоналізовану інтерактивну програму."
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Зображення та анімації'
@@ -1896,14 +2204,25 @@ uk:
           lessons:
             Variables:
               name: змінні
+            Sprites:
+              name: Спрайти
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
         csd3-2018:
-          description_short: Програмування
+          description: " У блоці 3 ви будете спиратися на свій досвід кодування під
+            час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій
+            починається з простих форм і будує до більш складних ігор на основі спрайтів,
+            використовуючи ті ж концепції програмування та процес проектування, який
+            комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте
+            персоналізовану інтерактивну програму."
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво
+            та ігри в Game Lab."
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Зображення та анімації'
@@ -1914,13 +2233,24 @@ uk:
           lessons:
             Variables:
               name: змінні
+            Sprites:
+              name: Спрайти
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
         csd2-2018:
+          description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його
+            на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися
+            зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки
+            за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування,
+            такі як налагодження та коментування.  До кінця пристрою у вас буде особистий
+            веб-сайт, який можна опублікувати в Інтернеті."
+          description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
           lesson_groups:
             csd2_1:
               display_name: 'Глава 1: Веб-контент та HTML'
@@ -1932,6 +2262,7 @@ uk:
             Lists:
               name: Списки
         coursea-2018:
+          title: Курс А (2018)
           assignment_family_title: Курс А
           description_audience: 'Вік: 4-7'
           lessons:
@@ -1983,6 +2314,7 @@ uk:
             Graph Paper Programming:
               name: Програмування по клітинках
         courseb-2018:
+          title: Курс В (2018)
           assignment_family_title: Курс Б
           description_audience: 'Вік: 5-8'
           lessons:
@@ -1993,6 +2325,7 @@ uk:
             Move It, Move It:
               name: Рухайся, рухайся
         coursed-2018:
+          title: Курс D (2018)
           assignment_family_title: Курс Г
           description_audience: 'Вік: 7-11'
           lessons:
@@ -2017,6 +2350,7 @@ uk:
             Relay Programming:
               name: Естафетне програмування
         coursec-2018:
+          title: Курс С (2018)
           assignment_family_title: Курс В
           description_audience: 'Вік: 6-10'
           lessons:
@@ -2037,9 +2371,12 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Accelerometer:
+              name: Акселерометр
             Functions with Parameters:
               name: Функції з параметрами
         coursee-2018:
+          title: Курс Е (2018)
           assignment_family_title: Курс Ґ
           description_audience: 'Вік: 8-12'
           lesson_groups:
@@ -2067,6 +2404,7 @@ uk:
             Minecraft Hour of Code:
               name: Година коду від Майнкрафт
         coursef-2018:
+          title: Курс F (2018)
           assignment_family_title: Курс Д
           description_audience: 'Вік: 9-13'
           lesson_groups:
@@ -2107,6 +2445,16 @@ uk:
             The Internet:
               name: Інтернет
         csd1-2018:
+          description: " \r\nБлок 1 є дуже інтерактивним і спільним вступом в галузь
+            інформатики, як це оформлено в рамках більш широкого прагнення до вирішення
+            проблем. Ви будете практикувати використання процесу вирішення проблем
+            для вирішення ряду головоломок, проблем і сценаріїв реального світу. Далі
+            ви дізнаєтеся, як комп'ютери вводити, виводити, зберігати та обробляти
+            інформацію, щоб допомогти людям вирішити проблеми.  Пристрій завершується
+            проектом, в якому ви розробляєте програму, яка допомагає вирішити проблему
+            за вашим вибором.\r\n"
+          description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення
+            проблем."
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -2114,7 +2462,14 @@ uk:
               display_name: 'Глава 1: Процес вирішення проблем'
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+          lessons:
+            Processing:
+              name: В обробці
+            Storage:
+              name: Сховище
         csd4-2018:
+          description_short: "  Дізнайтеся, як розробити програму, яка відповідає
+            потребам користувачів."
           lesson_groups:
             csd4_1:
               display_name: |-
@@ -2184,6 +2539,8 @@ uk:
           lessons:
             While Loops:
               name: Цикли "поки"
+            Processing Arrays:
+              name: Обробка масивів
         csppostap-2018:
           lesson_groups:
             csp_postap_1:
@@ -2192,6 +2549,9 @@ uk:
               display_name: 'Глава 2: Додатки та бази даних'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Importing and Exporting Data:
+              name: Імпортування та експортування даних
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -2280,24 +2640,84 @@ uk:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            Welcome:
+              name: Ласкаво просимо
+            Tuesday:
+              name: Вівторок
+            Wednesday:
+              name: Середа
+            Thursday:
+              name: Четвер
+            Friday:
+              name: П'ятниця
+            Monday:
+              name: Понеділок
+            Day 1:
+              name: День 1
+            Day 2:
+              name: День 2
+            Day 4:
+              name: День 4
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            Tuesday:
+              name: Вівторок
+            Wednesday:
+              name: Середа
+            Thursday:
+              name: Четвер
+            Day 1:
+              name: День 1
+            Day 2:
+              name: День 2
+            Day 4:
+              name: День 4
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            Tuesday:
+              name: Вівторок
+            Wednesday:
+              name: Середа
+            Thursday:
+              name: Четвер
+            Monday:
+              name: Понеділок
+            Day 1:
+              name: День 1
+            Day 2:
+              name: День 2
+            Day 4:
+              name: День 4
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            Tuesday:
+              name: Вівторок
+            Wednesday:
+              name: Середа
+            Thursday:
+              name: Четвер
+            Day 1:
+              name: День 1
+            Day 2:
+              name: День 2
+            Day 4:
+              name: День 4
         pre-express-2018:
           description_audience: 'Вік: 4-8'
           lessons:
@@ -2315,6 +2735,10 @@ uk:
               name: Твій цифровий слід
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
+        2018hoc-ab:
+          lessons:
+            Labyrinth:
+              name: Лабіринт
         fit-test:
           lesson_groups:
             required:
@@ -2342,6 +2766,9 @@ uk:
               name: Художник
         aquatic:
           title: 'Minecraft: Водна подорож'
+          lessons:
+            Aquatic:
+              name: Водні
         dance--draft:
           lessons:
             Dance Party:
@@ -2363,6 +2790,7 @@ uk:
         dance-extras:
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursef-2019:
+          title: Курс F (2019)
           description_audience: 'Вік: 9-13'
           lesson_groups:
             ramp_up:
@@ -2373,6 +2801,8 @@ uk:
               display_name: Цикли For
             csf_internet:
               display_name: Інтернет
+            csf_sprites:
+              display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
           lessons:
@@ -2395,6 +2825,7 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         coursed-2019:
+          title: Курс D (2019)
           description_audience: 'Вік: 7-11'
           lesson_groups:
             csf_sequencing:
@@ -2427,10 +2858,13 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         coursee-2019:
+          title: Курс Е (2019)
           description_audience: 'Вік: 8-12'
           lesson_groups:
             ramp_up:
               display_name: Просунутися
+            csf_sprites:
+              display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
             csf_nested_loops:
@@ -2469,6 +2903,8 @@ uk:
               display_name: змінні
             csf_for_loops:
               display_name: Цикли For
+            csf_sprites:
+              display_name: Спрайти
           lessons:
             Relay Programming:
               name: Естафетне програмування
@@ -2491,6 +2927,8 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         csd1-2019:
+          description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення
+            проблем."
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -2498,6 +2936,9 @@ uk:
               display_name: 'Глава 1: Процес вирішення проблем'
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+          lessons:
+            Processing:
+              name: В обробці
         andrea-test:
           lesson_groups:
             required:
@@ -2517,10 +2958,15 @@ uk:
               name: andrea-s3
             'null':
               name: нічого
+            Part 1:
+              name: Частина 1
+            Part 2:
+              name: Частина  2
         dance-extras-gallery:
           title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursec-2019:
+          title: Курс С (2019)
           description_audience: 'Вік: 6-10'
           lesson_groups:
             csf_digcit:
@@ -2547,6 +2993,7 @@ uk:
         gamelab:
           title: Ігрова лабораторія
         coursea-2019:
+          title: Курс А (2019)
           description_audience: 'Вік: 4-7'
           lesson_groups:
             csf_digcit:
@@ -2563,6 +3010,7 @@ uk:
             Going Places Safely:
               name: Безпечне добирання
         courseb-2019:
+          title: Курс В (2019)
           description_audience: 'Вік: 5-8'
           lesson_groups:
             csf_digcit:
@@ -2603,6 +3051,13 @@ uk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
         csd2-2019:
+          description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його
+            на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися
+            зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки
+            за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування,
+            такі як налагодження та коментування.  До кінця пристрою у вас буде особистий
+            веб-сайт, який можна опублікувати в Інтернеті."
+          description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
           lesson_groups:
             csd2_1:
               display_name: 'Глава 1: Веб-контент та HTML'
@@ -2614,7 +3069,14 @@ uk:
             Lists:
               name: Списки
         csd3-2019:
-          description_short: Програмування
+          description: " У блоці 3 ви будете спиратися на свій досвід кодування під
+            час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій
+            починається з простих форм і будує до більш складних ігор на основі спрайтів,
+            використовуючи ті ж концепції програмування та процес проектування, який
+            комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте
+            персоналізовану інтерактивну програму."
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво
+            та ігри в Game Lab."
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Зображення та анімації'
@@ -2625,13 +3087,19 @@ uk:
           lessons:
             Variables:
               name: змінні
+            Sprites:
+              name: Спрайти
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
         csd4-2019:
+          description_short: "  Дізнайтеся, як розробити програму, яка відповідає
+            потребам користувачів."
           lesson_groups:
             csd4_1:
               display_name: |-
@@ -2660,6 +3128,8 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Accelerometer:
+              name: Акселерометр
             Functions with Parameters:
               name: Функції з параметрами
         csp4-pilot:
@@ -2734,6 +3204,8 @@ uk:
           lessons:
             While Loops:
               name: Цикли "поки"
+            Processing Arrays:
+              name: Обробка масивів
         csp-explore-2019:
           lesson_groups:
             csp_ap_2:
@@ -2754,6 +3226,9 @@ uk:
               display_name: 'Глава 2: Додатки та бази даних'
             cspSurvey:
               display_name: Опитування
+          lessons:
+            Importing and Exporting Data:
+              name: Імпортування та експортування даних
         csp1-pilot:
           lesson_groups:
             cspSurvey:
@@ -2761,12 +3236,25 @@ uk:
             required:
               display_name: Огляд
           lessons:
+            Color Images:
+              name: Робота з кольорами зображень
+            Lossless Compression:
+              name: Стискання без втрат
+            AB Patterns:
+              name: AB візерунки
+            Intellectual Property:
+              name: Інтелектуальна власність
             Binary Numbers:
               name: Двійкові Числа
+        csd-videos:
+          title: CSD Відео
         time4csdemo:
+          description_audience: 4 клас
           lesson_groups:
             ramp_up:
               display_name: Просунутися
+            csf_sprites:
+              display_name: Спрайти
             time4cs_c1:
               display_name: Еверглейдс і його екосистеми
             time4cs_c2:
@@ -2784,6 +3272,8 @@ uk:
               name: Листівки та умови
             Building a Foundation:
               name: Закладання основ
+            Debate:
+              name: Дебати
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2905,13 +3395,29 @@ uk:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            Day 1:
+              name: День 1
+            Day 2:
+              name: День 2
+            Day 4:
+              name: День 4
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            Day 1:
+              name: День 1
+            Day 2:
+              name: День 2
+            Day 4:
+              name: День 4
         csd1-pilot:
+          description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення
+            проблем."
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -2919,7 +3425,17 @@ uk:
               display_name: 'Глава 1: Процес вирішення проблем'
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+          lessons:
+            Processing:
+              name: В обробці
         csd2-pilot:
+          description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його
+            на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися
+            зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки
+            за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування,
+            такі як налагодження та коментування.  До кінця пристрою у вас буде особистий
+            веб-сайт, який можна опублікувати в Інтернеті."
+          description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
           lesson_groups:
             csd2_1:
               display_name: 'Глава 1: Веб-контент та HTML'
@@ -2930,10 +3446,21 @@ uk:
           lessons:
             Lists:
               name: Списки
+            Intellectual Property:
+              name: Інтелектуальна власність
+            Images:
+              name: Зображення
             CSS Classes:
               name: Класи CSS
         csd3-pilot:
-          description_short: Програмування
+          description: " У блоці 3 ви будете спиратися на свій досвід кодування під
+            час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій
+            починається з простих форм і будує до більш складних ігор на основі спрайтів,
+            використовуючи ті ж концепції програмування та процес проектування, який
+            комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте
+            персоналізовану інтерактивну програму."
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво
+            та ігри в Game Lab."
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Зображення та анімації'
@@ -2944,10 +3471,14 @@ uk:
           lessons:
             Variables:
               name: змінні
+            Sprites:
+              name: Спрайти
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
         csp3-pilot:
@@ -2985,6 +3516,11 @@ uk:
               display_name: Огляд
             content:
               display_name: Зміст
+          lessons:
+            Step 1:
+              name: Крок 1
+            Step 2:
+              name: Крок 2
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
@@ -3031,12 +3567,20 @@ uk:
           lesson_groups:
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+          lessons:
+            Processing:
+              name: В обробці
         csp2-pilot:
           lesson_groups:
             content:
               display_name: Зміст
             required:
               display_name: Огляд
+          lessons:
+            IP Addresses:
+              name: IP- адреси
+            Packets:
+              name: Пакет
         peru-2019:
           lessons:
             Introduction:
@@ -3059,13 +3603,23 @@ uk:
             онлайнового курсу основ інформатики від Code.org, який можна проходити
             у довільному темпі.
           lesson_groups:
+            k5_getting_started:
+              display_name: Починаємо
             k5_next_steps:
               display_name: Наступні Кроки
           lessons:
+            Getting Started:
+              name: Починаємо
+            Looking Ahead:
+              name: Дивлячись вперед
             Best Practices for Teaching Computer Science:
               name: Успішні методики викладання інформатики
+            Planning:
+              name: Планування
             Next Steps:
               name: Наступні Кроки
+            extra:
+              name: екстра
             Sequencing:
               name: Послідовність дій
             Loops:
@@ -3076,6 +3630,8 @@ uk:
               name: Події
             Functions:
               name: функції
+            Next steps:
+              name: Наступні кроки
             Variables:
               name: змінні
             For Loops:
@@ -3096,6 +3652,8 @@ uk:
           lessons:
             Conditionals:
               name: Умови
+            About Me:
+              name: Про мене
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -3133,6 +3691,8 @@ uk:
               display_name: Умови
             csf_events:
               display_name: Події
+            csf_sprites:
+              display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
             ramp_up:
@@ -3140,6 +3700,8 @@ uk:
           lessons:
             Conditionals:
               name: Умови
+            About Me:
+              name: Про мене
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -3150,6 +3712,8 @@ uk:
               display_name: Умови
             csf_events:
               display_name: Події
+            csf_sprites:
+              display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
             ramp_up:
@@ -3157,6 +3721,8 @@ uk:
           lessons:
             Conditionals:
               name: Умови
+            About Me:
+              name: Про мене
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -3192,6 +3758,12 @@ uk:
             csp_libraries:
               display_name: Бібліотеки
         csd2-2020:
+          description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його
+            на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися
+            зі світом, ви дізнаєтеся, як структурувати та стиліувати свої сторінки
+            за допомогою HTML та CSS. Ви також будете практикувати цінні навички програмування,
+            такі як налагодження, використання ресурсів і командна робота.  "
+          description_short: "  Навчіться створювати свій власний вебсайт у Веб-лабораторії."
           lesson_groups:
             csd2_1:
               display_name: 'Глава 1: Веб-контент та HTML'
@@ -3200,9 +3772,15 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Intellectual Property:
+              name: Інтелектуальна власність
+            Images:
+              name: Зображення
             CSS Classes:
               name: Класи CSS
         csd1-2020:
+          description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення
+            проблем."
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -3210,7 +3788,14 @@ uk:
               display_name: 'Глава 1: Процес вирішення проблем'
             csd1_2:
               display_name: 'Глава 2: Комп''ютери та вирішення проблем'
+          lessons:
+            Processing:
+              name: В обробці
+            Storage:
+              name: Сховище
         csd4-2020:
+          description_short: "  Дізнайтеся, як розробити програму, яка відповідає
+            потребам користувачів."
           lesson_groups:
             csd4_1:
               display_name: |-
@@ -3239,10 +3824,19 @@ uk:
             cspSurvey:
               display_name: Опитування
           lessons:
+            Accelerometer:
+              name: Акселерометр
             Functions with Parameters:
               name: Функції з параметрами
         csd3-2020:
-          description_short: Програмування
+          description: " У блоці 3 ви будете спиратися на свій досвід кодування під
+            час програми анімації, інтерактивного мистецтва та ігор у Game Lab. Пристрій
+            починається з простих форм і будує до більш складних ігор на основі спрайтів,
+            використовуючи ті ж концепції програмування та процес проектування, який
+            комп'ютерні вчені використовують щодня. У фінальному проекті ви розробитьте
+            персоналізовану інтерактивну програму."
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво
+            та ігри в Game Lab."
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Зображення та анімації'
@@ -3257,11 +3851,16 @@ uk:
               name: Умови
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
             Text:
               name: Текст
+            Sprites:
+              name: Спрайти
         coursea-2020:
+          title: Курс А (2020)
           description_audience: 'Вік: 4-7'
           lesson_groups:
             csf_digcit:
@@ -3278,6 +3877,7 @@ uk:
             'Programming: Happy Maps':
               name: Щасливі карти
         courseb-2020:
+          title: Курс В (2020)
           description_audience: 'Вік: 5-8'
           lesson_groups:
             csf_digcit:
@@ -3296,6 +3896,7 @@ uk:
             'Loops: Getting Loopy':
               name: Економія на повторах
         coursec-2020:
+          title: Курс С (2020)
           description_audience: 'Вік: 6-10'
           lesson_groups:
             csf_digcit:
@@ -3314,6 +3915,7 @@ uk:
             'Events: The Big Event':
               name: Велика подія
         coursed-2020:
+          title: Курс D (2020)
           description_audience: 'Вік: 7-11'
           lesson_groups:
             csf_sequencing:
@@ -3346,10 +3948,13 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         coursee-2020:
+          title: Курс Е (2020)
           description_audience: 'Вік: 8-12'
           lesson_groups:
             ramp_up:
               display_name: Просунутися
+            csf_sprites:
+              display_name: Спрайти
             csf_digcit:
               display_name: Цифрове громадянство
             csf_nested_loops:
@@ -3360,6 +3965,7 @@ uk:
             'Functions: Songwriting':
               name: Написання пісень
         coursef-2020:
+          title: Курс F (2020)
           description_audience: 'Вік: 9-13'
           lesson_groups:
             ramp_up:
@@ -3370,6 +3976,8 @@ uk:
               display_name: змінні
             csf_for_loops:
               display_name: Цикли For
+            csf_sprites:
+              display_name: Спрайти
           lessons:
             Envelope Variables:
               name: Конвертні змінні
@@ -3396,6 +4004,8 @@ uk:
               display_name: змінні
             csf_for_loops:
               display_name: Цикли For
+            csf_sprites:
+              display_name: Спрайти
           lessons:
             Dance Party:
               name: Танцювальна вечірка
@@ -3422,6 +4032,26 @@ uk:
           lessons:
             Binary Numbers:
               name: Двійкові Числа
+            Color Images:
+              name: Робота з кольорами зображень
+            Lossless Compression:
+              name: Стискання без втрат
+            Intellectual Property:
+              name: Інтелектуальна власність
+        csp2-2020:
+          lessons:
+            Packets:
+              name: Пакет
+        csp-march-virtual:
+          lessons:
+            Changes:
+              name: Зміни
+            Reflections:
+              name: Роздуми
+            Part 1:
+              name: Частина 1
+            Part 2:
+              name: Частина  2
         csp3-virtual:
           description_short: Програмування
           lesson_groups:
@@ -3430,6 +4060,12 @@ uk:
           lessons:
             Creating Functions:
               name: Створення функцій
+        jess-test-script:
+          lessons:
+            Course Resources:
+              name: Ресурси курсу
+            Module 3:
+              name: Модуль 3.
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3437,12 +4073,18 @@ uk:
             csd2_2:
               display_name: 'Глава: Стилізація та CSS'
           lessons:
+            Intellectual Property:
+              name: Інтелектуальна власність
+            Images:
+              name: Зображення
             CSS Classes:
               name: Класи CSS
         csp5-virtual:
           lessons:
             While Loops:
               name: Цикли "поки"
+            Processing Arrays:
+              name: Обробка масивів
             Variables:
               name: змінні
         virtual-holding-place:
@@ -3454,6 +4096,8 @@ uk:
           lessons:
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
         code-break:
@@ -3471,6 +4115,8 @@ uk:
           lessons:
             While Loops:
               name: Цикли "поки"
+            Processing Arrays:
+              name: Обробка масивів
         k5-onlinepd-2020:
           title: Викладання основ інформатики
           description_short: Дізнайтеся, як викладати інформатику за допомогою безкоштовного
@@ -3491,7 +4137,11 @@ uk:
               name: змінні
             For Loops:
               name: Цикли For
+            Next steps:
+              name: Наступні кроки
           lesson_groups:
+            k5_getting_started_1:
+              display_name: Починаємо
             k5_next_steps_1:
               display_name: Наступні Кроки
         dani-june-2020-test:
@@ -3501,16 +4151,21 @@ uk:
             csp5_1:
               display_name: 'Глава 1: Програмування, кероване подіями'
         csd3-virtual:
-          description_short: Програмування
+          description_short: " Навчіться програмувати анімацію, інтерактивне мистецтво
+            та ігри в Game Lab."
           lessons:
             Variables:
               name: змінні
+            Sprites:
+              name: Спрайти
             Text:
               name: Текст
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
+            Collisions:
+              name: Зіткнення
             Functions:
               name: функції
           lesson_groups:
@@ -3536,9 +4191,27 @@ uk:
           lesson_groups:
             lg_1:
               display_name: Зміст
+        kaitie-test-script:
+          lessons:
+            Module 3:
+              name: Модуль 3.
+        vpl-csd-2020:
+          lessons:
+            Module 3:
+              name: Модуль 3.
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: Курс А
             Course B:
               name: Курс Б
+            Course E/F:
+              name: Курс E/F
+          description_audience: Внутрішній
+        ml-playground:
+          lessons:
+            intro:
+              name: Вступ
+        2021drafting:
+          description_audience: Внутрішній
+          description_short: Внутрішній

@@ -46,9 +46,11 @@ class XhrProxyController < ApplicationController
     api.themoviedb.org
     api.thingspeak.com
     api.uclassify.com
+    api.waqi.info
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com
+    thecatapi.com
     code.org
     compete.hsctf.com
     covidtracking.com
@@ -71,6 +73,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maps.googleapis.com
     opentdb.com
+    pixabay.com
     pokeapi.co
     qrng.anu.edu.au
     quandl.com

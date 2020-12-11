@@ -12,6 +12,7 @@ fil:
         full_course_category_name: Buong mga Kurso
         hoc_category_name: Hour of Code
         math_category_name: Math
+        other_category_name: Iba
       name:
         course1:
           title: Kurso 1
@@ -18298,3 +18299,9 @@ fil:
               name: Kursong A
             Course B:
               name: Kursong B
+        ml-playground:
+          lessons:
+            intro:
+              name: Panimula
+            visualizing:
+              name: Pagpapakita ng mga Datos

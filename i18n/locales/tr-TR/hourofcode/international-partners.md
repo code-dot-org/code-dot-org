@@ -1,16 +1,16 @@
 ---
-title: Contact International Partners
+title: Uluslararası Ortaklarımız ile İletişime Geçin
 ---
 
 {{ signup_button }}
 
-# Contact International Partners
+# Uluslararası Ortaklarımız ile İletişime Geçin
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
+Code.org, Hour of Code'u gerçek anlamda uluslararası bir hareket haline getirmek için dünya çapında birçok kuruluşla birlikte çalışır. 2017'de tüm Hour of Code etkinliklerinin %60'ının ABD dışında gerçekleştiğini biliyor muydunuz?
 
-You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+Siz de ülkenizden daha fazla insanı dahil etmek için öncü olabilirsiniz! Aşağıdaki ülkelerden birindeyseniz listelenen iş ortağına ulaşın ve yerel Hour of Code etkinliğinizle bağlantı kurun.
 
-*Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
+*Listede ülkeniz yok mu?* [Hour of Code Uluslararası İş Ortağı olmak için başvurun](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
 
 {{ international_partners_table }}
 

@@ -1367,7 +1367,7 @@ vi-VN:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -2187,3 +2187,7 @@ vi-VN:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: mô tả ở đây
+      outbreak_story2:
+        content1: mô tả ở đây

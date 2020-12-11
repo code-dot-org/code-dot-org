@@ -191,10 +191,17 @@ es:
     mismatch_password: Las dos contraseñas  introducidas no coinciden
     student_consent: Confirmo que tengo la autorización de mis padres o guardianes
       legales para utilizar los servicios de Code.org.
-    agree_us_website: Estoy de acuerdo con el uso de un sitio web con sede en los
-      Estados Unidos.
-    my_data_to_us: Los datos de mi uso de este sitio pueden ser enviados y almacenados
-      o procesados en los Estados Unidos.
+    agree_us_data_transfer_student: "**Acepto que Code.org puede transferir datos
+      (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos**
+      con el fin de alojar y procesar dichos datos."
+    agree_us_data_transfer_teacher: "**Acepto que Code.org puede transferir datos
+      (incluyendo datos personales) de mi uso (y el uso de mis estudiantes) de este
+      sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos."
+    data_collection_us: Entiendo que Code.org es un sitio web sin fines de lucro con
+      sede en los Estados Unidos y que las leyes que rigen la recopilación de datos
+      en los Estados Unidos pueden diferir de las leyes de mi país.
+    visit_privacy: Consulte la [política de privacidad](%{privacy_url}) de Code.org
+      para obtener más información.
     student_terms_markdown: Las direcciones de correo electrónico no se almacenan
       de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes
       nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten
@@ -562,6 +569,7 @@ es:
       zástupcu, aby ste boli informovaní o pokroku a projektoch vášho dieťaťa. Túto
       e-mailovú adresu budete môcť použiť aj na obnovenie hesla.
     parent_guardian_email_label: Correo electrónico del padre o tutor
+    remove_parent_email_label: Quitar
     none: Ninguna
     only_one_parent_email_supported_warning: 'Poznámka: V súčasnosti sme schopní na
       jednom študentskom účte podporiť len jednu e-mailovú adresu rodiča/zákonného
@@ -679,7 +687,7 @@ es:
       Network.
     code_from_html: Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: Impulsado por Amazon Web Services
     trademark: "© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de
       Hora de Code ® son marcas registradas de Code.org."
     copyright: Derechos de autor
@@ -1005,6 +1013,16 @@ es:
       podrían no estar disponibles para tus estudiantes si no aceptas explícitamente
       los términos actualizados.
     review_terms: Revisa los términos actualizados
+  donor_interstitial:
+    title: Tus cursos gratis de Ciencia de Computación son posible por...
+    subtitle: Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito
+      de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los
+      estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!
+    local_supporters: Simpatizantes Locales
+    global_supporters: Simpatizantes Globales
+    support_codeorg_1: Cada dólar dado a Code.org trae oportunidad a más estudiantes.
+    support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
+    get_started: Empieza en Code.org
   school_info_interstitial:
     title: Queremos que cada estudiante pueda acceder a las Ciencias de la Computación.
       ¡Ayúdanos a seguir nuestro progreso!
@@ -1227,6 +1245,7 @@ es:
       school_city: Ciudad de la escuela
       school_country: País en el que está la escuela
       colombian_school_city: Ciudad de la escuela
+      colombian_school_department: Departamento de Escuela
       colombian_school_name: Nombre de la escuela
       ages: "¿A qué grupos de edades enseñas este año?"
       subjects: "¿Qué materias enseñas este año?"
@@ -1308,6 +1327,7 @@ es:
         csf_express: Fundamentos de Ciencias de la Computación (Pre-Express o Express)
         csd: Descubrimientos de Ciencias de la Computación
         csp: Principios de Ciencias de la Computación
+        not_applicable: No aplicable
       email_opt_in:
         opt_in_yes: Sí
         opt_in_no: 'No'
@@ -1325,6 +1345,7 @@ es:
         mientras conoces el plan de estudios y las herramientas de Code.org. Si quieres
         compartir tus dudas y sugerencias con nosotros, ¡puedes escribirnos a [support@code.org](%{support_email_url})
         o publicar en el [foro de docentes](%{teacher_forum_url})!"
+      facilitator_not_applicable: No aplicable
     logged_out:
       heading: "¡Gracias por tu interés en el Programa de Aprendizaje Profesional!"
       body: Para empezar, necesitas iniciar sesión en tu cuenta de Code.org. Si quieres
@@ -1347,14 +1368,6 @@ es:
       que se guarden las cookies en tu computadora o dispositivo.
     more_information: Mira la política de privacidad de Code.org.
     accept: De acuerdo
-  gdpr_dialog:
-    heading: "¿Aceptas utilizar un sitio web alojado en los Estados Unidos?"
-    message: Los datos de su uso de este sitio pueden ser enviados y almacenados o
-      procesados en los Estados Unidos.
-    link_intro: Para más información, mira nuestra
-    privacy_policy: política de privacidad
-    logout: Cerrar sesión
-    true: Sí
   page_not_found_title: No se encontró la página
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
@@ -1379,3 +1392,5 @@ es:
       týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
     link_your_email: Prepojte svoj e-mail
     not_now: Teraz nie
+  behaviors:
+    this_sprite: Este sprite

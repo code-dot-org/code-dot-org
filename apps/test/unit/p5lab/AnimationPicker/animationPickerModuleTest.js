@@ -9,7 +9,9 @@ describe('animationPickerModule', function() {
       goal: null,
       uploadInProgress: false,
       uploadFilename: null,
-      uploadError: null
+      uploadError: null,
+      isSpriteLab: false,
+      isBackground: false
     };
 
     it('has expected default state', function() {
@@ -26,27 +28,50 @@ describe('animationPickerModule', function() {
 
       it('sets state to visible if state was not visible', function() {
         var state = {};
-        var newState = reducer(state, show(Goal.NEW_ANIMATION));
+        var newState = reducer(state, show(Goal.NEW_ANIMATION, false));
         expect(newState).not.to.equal(state);
         expect(newState.visible).to.be.true;
       });
 
       it('sets goal to provided goal', function() {
         var state = {};
-        var newState = reducer(state, show(Goal.NEW_ANIMATION));
+        var newState = reducer(state, show(Goal.NEW_ANIMATION, false));
         expect(newState).not.to.equal(state);
         expect(newState.goal).to.equal(Goal.NEW_ANIMATION);
 
         state = {};
-        newState = reducer(state, show(Goal.NEW_FRAME));
+        newState = reducer(state, show(Goal.NEW_FRAME, false));
         expect(newState).not.to.equal(state);
         expect(newState.goal).to.equal(Goal.NEW_FRAME);
       });
 
       it('returns original state if already visible', function() {
         var state = {visible: true};
-        var newState = reducer(state, show(Goal.NEW_ANIMATION));
+        var newState = reducer(state, show(Goal.NEW_ANIMATION, false));
         expect(newState).to.equal(state);
+      });
+
+      it('sets state to isSpriteLab if isSpriteLab was false', function() {
+        var state = {};
+        var newState = reducer(state, show(Goal.NEW_ANIMATION, true));
+        expect(newState).not.to.equal(state);
+        expect(newState.isSpriteLab).to.be.true;
+      });
+
+      it('sets state to not isBackground', function() {
+        var state = {};
+        var newState = reducer(state, show(Goal.NEW_ANIMATION, true));
+        expect(newState.isBackground).to.be.false;
+      });
+    });
+
+    describe('action: showBackground', function() {
+      var showBackground = animationPickerModule.showBackground;
+
+      it('sets state to isBackground', function() {
+        var state = {};
+        var newState = reducer(state, showBackground(Goal.NEW_ANIMATION));
+        expect(newState.isBackground).to.be.true;
       });
     });
 

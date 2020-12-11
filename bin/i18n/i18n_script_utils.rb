@@ -94,8 +94,12 @@ class I18nScriptUtils
   def self.upload_malformed_restorations(locale)
     return if @malformed_restorations.blank?
     if CDO.gdrive_export_secret
-      @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json))
-      @google_drive.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
+      begin
+        @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json))
+        @google_drive.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
+      rescue
+        puts "Failed to upload malformed restorations for #{locale}"
+      end
     end
     @malformed_restorations = nil
   end
@@ -128,33 +132,61 @@ class I18nScriptUtils
     URI.join("https://studio.code.org", path)
   end
 
+  # Used by get_level_from_url, for the script_level-specific case.
+  def self.get_script_level(route_params, url)
+    script = Script.get_from_cache(route_params[:script_id])
+    unless script.present?
+      STDERR.puts "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
+      return nil
+    end
+
+    case route_params[:action]
+    when "show"
+      script_level = ScriptLevelsController.get_script_level(script, route_params)
+      script_level.level
+    when "stage_extras"
+      # Copied from ScriptLevelsController.stage_extras
+      uri = URI.parse(url)
+      uri_params = CGI.parse(uri.query)
+      if uri_params.key?('id')
+        script_level = Script.cache_find_script_level(uri_params['id'].first)
+        script_level.level
+      elsif uri_params.key?('level_name')
+        Level.find_by_name(uri_params['level_name'].first)
+      end
+    else
+      STDERR.puts "unknown route action #{route_params[:action].inspect} for url #{url.inspect}"
+      nil
+    end
+  end
+
+  # Given a code.org url, if it's a valid level url (including things like
+  # projects), return the level identified by this url.
+  #
+  # Note that this may not cover 100% of the possible different kinds of level
+  # urls; we expect to expand this function over time as new cases are
+  # discovered.
   def self.get_level_from_url(url)
     # memoize to reduce repeated database interactions
     @levels_by_url ||= Hash.new do |hash, new_url|
-      url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
-      matches = new_url.match(url_regex)
+      route_params = Rails.application.routes.recognize_path(new_url)
 
-      hash[new_url] =
-        if matches.nil?
-          project_url_regex = %r{https://studio.code.org/p/(?<project_name>[A-Za-z0-9\s\-_]+)}
-          project_matches = new_url.match(project_url_regex)
-          if project_matches.nil?
-            STDERR.puts "could not find level for url: #{new_url}"
-            nil
-          else
-            Level.find_by_name(ProjectsController::STANDALONE_PROJECTS[project_matches[:project_name]]['name'])
-          end
-        elsif matches[:level_info].starts_with?("extras")
-          level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
-          level_name = matches[:level_info].match(level_info_regex)[:level_name]
-          Level.find_by_name(CGI.unescape(level_name))
+      level =
+        case route_params[:controller]
+        when "projects"
+          Level.find_by_name(ProjectsController::STANDALONE_PROJECTS.dig(route_params[:key], :name))
+        when "script_levels"
+          get_script_level(route_params, new_url)
         else
-          script = Script.find_by_name(matches[:script_name])
-          stage = script.lessons.find_by_relative_position(matches[:stage_pos])
-          level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
-          level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
-          stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
+          STDERR.puts "unknown route #{route_params[:controller].inspect} for url #{new_url.inspect}"
         end
+
+      unless level.present?
+        STDERR.puts "could not find level for url #{new_url.inspect}"
+        next
+      end
+
+      hash[new_url] = level
     end
 
     @levels_by_url[url]

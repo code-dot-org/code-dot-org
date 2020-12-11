@@ -21,8 +21,8 @@ pl-PL:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje
     CSEdWeek</a>'
-  csedweek_banner_teachers_text: Jesteś nauczycielem informatyki? Zobacz inne propozycje
-    CSEdWeek
+  csedweek_banner_teachers_text: Czy jesteś nauczycielem informatyki? Zobacz inne
+    propozycje CSEdWeek
   n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
   try_hoc_num_served: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>%{num} zrobione</h3>"
   try_hoc_num_served_markdown: |-
@@ -234,23 +234,23 @@ pl-PL:
     Kodowania</a>.
   get_a_certificate_message_after_markdown: Kliknij w świadectwo, aby je pobrać lub
     wydrukować. Teraz nie przerywaj realizacji naszych [innych kursów] (http://studio.code.org)
-    lub zobacz więcej opcji aby [Uczyć się poza Godziną Kodowania) (/uczyć/poza).
+    lub zobacz więcej opcji aby [Uczyć się poza Godziną Kodowania) (/learn/beyond).
   thanks_for_submitting: Dziękujemy za przesłanie!
   if_you_enjoyed: Jeśli spodobała Ci się nauka, to zaproś znajomych, aby też spróbowali!  Chcemy,
     aby cały świat się uczył.
   personalize_certificate: Spersonalizuj swój certyfikat
-  print_batch_certificates: Drukuj zapas świadectw.
+  print_batch_certificates: Wydrukuj partię certyfikatów.
   print_certificates: Drukuj certyfikaty
   certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci
     sponsorowania Twojej nauki."
   print_ice_art_from_frozen: Drukuj lodowe dzieło sztuki z samouczków Frozen.
-  want_a_blank_certificate_template: Czy chcesz pusty szablon świadectwa, aby wpisać
+  want_a_blank_certificate_template: Czy chcesz czysty szablon świadectwa, aby wpisać
     do niego imiona i nazwiska swoich uczniów?
   landscape_recommended_certificates: Zaleca się wybór **orientacji poziomej**, gdy
     drukujesz świadectwa.
-  print_one_here_certificates: Wypisz jeden tutaj.
-  enter_certificate_names: Wpisz nie więcej niż 30 imion i nazwisk, **jedno na wiersz**.
-    Zostanie wygenerowana nadająca się do druku strona ze spersonalizowanymi świadectwami
+  print_one_here_certificates: Drukuj jedną tutaj.
+  enter_certificate_names: Wpisz nie więcej niż 30 imion i nazwisk, **jedno w wierszu**.
+    Zostanie wygenerowana strona do wydrukowania ze spersonalizowanymi certyfikatami
     %{script_name}.
   share_achievement: Podziel się swoim osiągnięciem
   beyond_hour_message: Kontynuuj z naszymi <a href='http://studio.code.org'> innymi
@@ -314,7 +314,7 @@ pl-PL:
   just_did_hoc_donor: 'Właśnie ukończyłem #HourOfCode - sprawdź to! (Dzięki %{donor_twitter}
     za wspieranie @codeorg)'
   just_did_course_donor: Właśnie ukończyłem  %{course} - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg%
+    za wsparcie @codeorg%
   twitter_teach_cs: 9 na 10 osób zgadza się, że szkoły powinny uczyć informatyki.
     http://youtu.be/nKIu9yen5nc. Odwiedź https://code.org/.
   twitter_cs_foundational: Informatyka jest podstawą w nauce każdego ucznia. https://youtu.be/QvyTEx1wyOY.
@@ -342,11 +342,11 @@ pl-PL:
   stats_michael: '"<b>Nigdy</b> nie widziałem moich uczniów tak podekscytowanych nauką."
     - Frank Martinez, nauczyciel'
   stats_nina_markdown: '"Każdego dnia uzyskiwaliśmy takie same rezultaty - 100% zaangażowania."-Nina
-    Nichols Peery, nauczyciel'
+    Nichols Peery, nauczycielka'
   stats_student_markdown: '"Wiedziałam, że to była **jedyna taka szansa w życiu**."-
     Mariana Alzate, uczennica 5 klasy'
-  stats_michael_markdown: '"**Nigdy, przenigdy** nie widziałem swoich uczniów tak
-    przejętych nauką." - Frank Martinez, nauczyciel'
+  stats_michael_markdown: '"**Nigdy, przenigdy** nie widziałem moich uczniów tak przejętych
+    nauką." - Frank Martinez, nauczyciel'
   studiobar_title: Wykorzystaj <a href='http://studio.code.org'> Studio Kodowania</a>
   studiobar_title_nolink: Poznaj Kursy Code.org
   studiobar_elementary_title: Kursy podstawowe
@@ -368,7 +368,7 @@ pl-PL:
   homepage_stats_students: amerykańskich studentów ma konta na Code.org
   homepage_stats_female: naszych studentów to kobiety
   homepage_stats_teachers: nauczyciele korzystają z Code.org
-  homepage_stats_hourofcodde: uczniów z całego świata wypróbowało "Godzinę kodowania"
+  homepage_stats_hourofcodde: uczniów z całego świata wypróbowało Godzinę kodowania
   homepage_stats_policy: stanów zmieniło regulamin, aby wspierać informatykę
   homepage_stats_title: Zmieniamy świat.
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
@@ -387,8 +387,8 @@ pl-PL:
   homepage_hero_text_satya: "&ldquo;Informatyka może odblokować najlepsze możliwości
     na świecie.&rdquo; Satya, CEO firmy Microsoft"
   homepage_hero_text_satya_new: |-
-    &ldquo;Informatyka pozwala
-    uczniom tworzyć świat jutra.&rdquo;
+    &ldquo;Informatyka daje siłę
+    uczniom, by tworzyli świat jutra.&rdquo;
     Satya, CEO firmy Microsoft
   homepage_hero_text_bosh: "&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę
     swojego życia&rdquo; Chris Bosh"
@@ -576,15 +576,15 @@ pl-PL:
   minecraft_subtitle: Godzina Kodowania z Minecraft
   minecraft_store_camps: Darmowe Obozy Godziny Kodowania z Minecraftem w Microsoft
     Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Zarejestruj się</a>na
-    darmowe warsztaty Godziny Kodowania z Minecraftem w sklepach Microsoft w Australii,
-    Kanadzie, Puerto Rico lub USA. Przekonaj się, że kodowanie jest dla każdego i
-    łączy w sobie kreatywność, rozwiązywanie problemów i tonę zabawy."
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Zarejestruj
+    się</a> na darmowe warsztaty Godziny Kodowania z Minecraftem w sklepach Microsoft
+    w Australii, Kanadzie, Puerto Rico lub USA. Przekonaj się, że kodowanie jest dla
+    każdego i łączy w sobie kreatywność, rozwiązywanie problemów i masę zabawy."
   minecraft_host_event: Zorganizuj wydarzenie Godziny Kodowania z Minecraft
   minecraft_teach_resources: Zasoby i plan lekcji dla nauczyciela.
   minecraft_leader_guide: Pobierz zasoby, które pomogą Ci zaplanować i poprowadzić
     wydarzenie.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Pobierz</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Pobierz</a>
     teraz szybki przewodnik moderatora oraz prezentacje PowerPoint dla młodszych i
     starszych uczniów."
   minecraft_join_online_training: Gotowy na poprowadzenie swojej własnej Godziny Kodowania
@@ -620,7 +620,7 @@ pl-PL:
   sports_video_title: Zmuś się. Każdy może się uczyć.
   sports_select_theme: Wybierz temat swoich samouczków
   sports_basketball_title: Utwórz grę w koszykówkę
-  sports_all_sports_title: Zakoduj własne zawody
+  sports_all_sports_title: Mieszaj i łącz różne dyscypliny sportowe
   sports_featured_athletes: Zobacz znakomitych sportowców
   sports_athletes_title: Znakomici sportowcy
   sports_athlete_Draymond: Draymond Green, złoty medalista olimpijski i mistrz NBA,
@@ -701,19 +701,21 @@ pl-PL:
   volunteer_engineer_submission_intro_guide_markdown: Dowiedz się tutaj więcej o naszym  [programie
     dla wolontariuszy](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Podaj następujące informacje, jeśli
-    jesteś studentem informatyki lub profesjonalnym programistą. Pola oznaczone <span
-    class="form-required-field"> *</span> są wymagane.
+    jesteś studentem informatyki lub profesjonalnym programistą. Aby zarejestrować
+    się jako wolontariusz, musisz mieć co najmniej 18 lat. Pamiętaj, że wszystkie
+    pola, które wypełnisz w tej sekcji, będą dostępne dla każdego, kto przegląda <a
+    href="/volunteer/local"> mapę wolontariuszy</a>. Pola oznaczone <span class="form-required-field">*</span>
+    są wymagane.
   volunteer_engineer_submission_intro_signup_markdown: Podaj następujące informacje,
     jeśli jesteś studentem informatyki lub profesjonalnym programistą. Musisz mieć
     ukończone 18 lat i zgłosić się jako wolontariusz. Należy mieć na uwadze, że wszystkie
     pola, które wypełnisz w tej części będą dostępne publicznie dla każdego, kto będzie
-    oglądał [mapę wolontariuszy](/wolontariusz/miejscowy). Pola oznaczone _ * _ są
-    wymagane.
+    oglądał [mapę wolontariuszy](/wolontariusz/miejscowy). Pola oznaczone _*_ są wymagane.
   volunteer_engineer_submission_intro_links: Czy jesteś nauczycielem poszukującym
     wolontariusza? Odszukaj wolontariusza w okolicy na naszej <a href="%{volunteer_local}">
     mapie wolontariuszy</a>.
   volunteer_engineer_submission_intro_links_markdown: Czy jesteś nauczycielem poszukującym
-    wolontariuszy? Odszukaj wolontariusza w okolicy na naszej  ]mapie wolontariuszy](%{volunteer_local}).
+    wolontariuszy? Odszukaj wolontariusza w okolicy na naszej  [mapie wolontariuszy](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Uaktualnij informacje o sobie
   volunteer_engineer_submission_header_shared: Informacje udostępniane nauczycielom
     na mapie wolontariuszy
@@ -723,8 +725,10 @@ pl-PL:
   volunteer_engineer_submission_field_company_placeholder: Firma (lub Uniwersytet)
   volunteer_engineer_submission_field_experience_level: Poziom zaawansowania
   volunteer_engineer_submission_field_location: Miejsce
-  volunteer_engineer_submission_field_location_desc: Jeśli podasz swój dokładny adres,
-    nie udostępnimy go, posłuży do pokazania na mapie Twojego miejsca.
+  volunteer_engineer_submission_field_location_desc: Twoja lokalizacja zostanie wykorzystana,
+    aby umożliwić nauczycielom wyszukiwanie wolontariuszy w pobliżu i zostanie wyświetlona
+    jako pinezka na mapie. Wprowadź tylko swoje miasto lub kod pocztowy, aby chronić
+    swoją prywatność.
   volunteer_engineer_submission_field_location_placeholder: Kod pocztowy, miasto i
     województwo/kraj
   volunteer_engineer_submission_field_location_flexibility: Służę pomocą w czasie
@@ -898,12 +902,12 @@ pl-PL:
   dashboard_assessments_none: Większość nauczycieli mierzy postępy swoich uczniów
     korzystając z zakładki "Zobacz Postępy". Jeśli jesteś zainteresowany dodatkowym
     sprawdzianem uczniów, polecane pytania możesz znaleźć w planach lekcji. Odbywa
-    się to poza Code Studio.
-  dashboard_assessments_none_part2: Jeśli uczysz w gimnazjum lub w szkole średniej,
-    mamy pytania na sprawdzian, które są dostępne jako część Code Studio i mogą pomóc
-    Twoim uczniom przygotować się do testu AP. Aby skorzystać z tych sprawdzianów,
-    najpierw przypisz kurs swojej klasie, następnie wybierz kurs z rozwijanego menu
-    powyżej i będziesz tam widział odpowiedzi uczniów.
+    się to poza Code.org.
+  dashboard_assessments_none_part2: Jeśli uczysz w ostatnich klasach szkoły podstawowej
+    lub w szkole średniej, mamy pytania na sprawdzian, które są dostępne jako część
+    Code.org i mogą pomóc Twoim uczniom przygotować się do testu AP. Aby skorzystać
+    z tych sprawdzianów, najpierw przypisz kurs swojej klasie, następnie wybierz kurs
+    z rozwijanego menu powyżej i będziesz tam widział odpowiedzi uczniów.
   dashboard_assessments_summaries: Podsumowanie ocen
   dashboard_assessments_answers: Wszystkie odpowiedzi ze sprawdzianów
   dashboard_surveys_answers: Ankiety
@@ -1069,7 +1073,7 @@ pl-PL:
   dashboard_unplugged: Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj
     tych lekcji bez komputera</a> w klasie.
   dashboard_unplugged_markdown: Jeżeli nie macie dostępu do komputerów, [wypróbujcie
-    tych lekcji bez komputerów (%{unplugged_url}) w klasie.
+    te lekcje bez komputerów](%{unplugged_url}) w klasie.
   dashboard_tools: 'Narzędzia: '
   dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
@@ -1089,7 +1093,7 @@ pl-PL:
   dashboard_curriculum_csp: 'Podstawy informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
   dashboard_curriculum_csd: 'Odkrycia Informatyczne: '
-  dashboard_curriculum_apcsa: 'Informatyka AP w programie Java:'
+  dashboard_curriculum_apcsa: 'Informatyka AP w Java:'
   dashboard_grade_k: K
   dashboard_grade_other: Inni/inne
   dashboard_login_word: Słowo
@@ -1180,7 +1184,8 @@ pl-PL:
   carousel_heading_international: Samouczki partnerów w Twoim języku
   carousel_heading_domestic: Samouczki partnerów dostępne w języku angielskim
   carousel_heading_beginners: Samouczki partnerów dla uczniów z K-8
-  carousel_heading_beyond_beginners: Samouczki dla początkujących
+  carousel_heading_beyond_beginners: 'Dla początkujących: rozpocznij od kodowania
+    za pomoc bloków'
   carousel_heading_javascript: Samouczki partnerów do nauki JavaScript
   carousel_heading_beyond_javascript: Poznaj JavaScript
   carousel_heading_unplugged: Nie masz komputera lub dostępu do Internet? Poznaj informatykę
@@ -1191,7 +1196,7 @@ pl-PL:
   carousel_heading_languages: Samouczki partnerów dla innych języków programowania
   carousel_heading_beyond_languages: Poznaj inne języki programowania
   carousel_heading_apps_games: Utwórz własną aplikację lub grę
-  carousel_heading_university: Uniwersyteckie kursy online
+  carousel_heading_university: Kursy i szkoły online
   carousel_heading_online_university: Uniwersyteckie kursy dostępne online
   carousel_heading_webpages: Naucz się tworzyć strony internetowe
   carousel_heading_robots: Naucz się programować roboty i inne urządzenia
@@ -1199,20 +1204,20 @@ pl-PL:
   carousel_heading_desktop: Naucz się kodować na komputerze
   carousel_heading_mobtabelem: Dla telefonów i tabletów
   carousel_heading_prereader: Dla dzieci, które nie umieją jeszcze czytać
-  carousel_heading_beyondblocks: Wykrocz poza bloki - naucz się języka programowania
+  carousel_heading_beyondblocks: Wyjdź poza bloki - naucz się języka programowania
   carousel_heading_nointernet: Słaby internet? Zainstaluj te aplikacje na swoim komputerze
   educator_notes: Notatki nauczyciela
   teach_led_lesson_plans: Plany lekcji do poprowadzenia przez nauczyciela
-  learn_footer_all_tutorials: Zobacz <a href="https://code.org/educate/allhourofcode">
-    pełną listę samouczków Godziny Kodowania</a>. Aby zobaczyć nasze kryteria i wytyczne
-    dotyczące zgłoszeń samouczków dla Godziny Kodowania, <a href="https://hourofcode.com/tutorial-guidelines">
-    kliknij tutaj.</a>
+  learn_footer_all_tutorials: Zobacz <a href="https://code.org/learn">pełną listę
+    samouczków Godziny Kodowania</a>. Aby zobaczyć nasze kryteria i wytyczne dotyczące
+    zgłoszeń samouczków dla Godziny Kodowania, <a href="https://hourofcode.com/activity-guidelines">kliknij
+    tutaj.</a>
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
   beyond_submission: Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania?
     Zobacz kryteria i formularz zgłoszenia.
-  third_party_submission: Chcesz zgłosić przewodnik do zamieszczenia tutaj> <a href="%{submission_url}">Zobacz
-    kryteria i formularz zgłoszeń.</a>
+  third_party_submission: Czy chcesz zgłosić samouczek do zamieszczenia tutaj? <a
+    href="%{submission_url}">Zobacz kryteria i formularz zgłoszeń.</a>
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
@@ -1294,13 +1299,34 @@ pl-PL:
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  coursea-2018_name: Kurs A (2018)
+  courseb-2018_name: Kurs B (2018)
+  coursec-2018_name: Kurs C (2018)
+  coursed-2018_name: Kurs D (2018)
+  coursee-2018_name: Kurs E (2018)
+  coursef-2018_name: Kurs F (2018)
+  coursea-2019_name: Kurs A (2019)
+  courseb-2019_name: Kurs B (2019)
+  coursec-2019_name: Kurs C (2019)
+  coursed-2019_name: Kurs D (2019)
+  coursee-2019_name: Kurs E (2019)
+  coursef-2019_name: Kurs F (2019)
+  coursea-2020_name: Kurs A (2020)
+  courseb-2020_name: Kurs B (2020)
+  coursec-2020_name: Kurs C (2020)
+  coursed-2020_name: Kurs D (2020)
+  coursee-2020_name: Kurs E (2020)
+  coursef-2020_name: Kurs F (2020)
   express-2018_name: Szybki Kurs (2018)
   pre-express-2018_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2018)
+  express-2019_name: Kurs ekspresowy (2019)
   pre-express-2019_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2019)
+  express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
-  csd2_name: 'Rodział 2: Web Development'
-  csd3_name: 'Dział 3: Animacje i gry'
+  csd2_name: 'Jednostka 2: Tworzenie stron'
+  csd3_name: 'Jednostka 3: Animacje i gry'
   accelerated_name: Przyspieszony kurs
+  express_name: Kurs ekspresowy
   pre-express_name: Ekspresowy kurs dla dzieci, które nie umieją czytać
   20-hour_name: Przyspieszony kurs
   algebra_name: Pełny kurs Informatyka w algebrze
@@ -1372,9 +1398,9 @@ pl-PL:
   codesters_gradelevel: W wieku 12-14
   texasinstruments_gradelevel: W wieku 13-16
   teacherled_gradelevel: W wieku 5+
-  course1_gradelevel: Wiek 4-6
+  course1_gradelevel: W wieku 4-6
   course2_gradelevel: W wieku 6-18
-  course3_gradelevel: Wiek 8-18
+  course3_gradelevel: W wieku 8-18
   course4_gradelevel: W wieku 10-18
   coursea_gradelevel: W wieku 4-7
   courseb_gradelevel: W wieku 5-8
@@ -1554,7 +1580,7 @@ pl-PL:
     dzieła, opowiadania i gry.
   coursed_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie przejdź
     dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
-  coursee_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie
+  coursee_shortdescription_congrats: Szybko omów pojęcia w kursach C i D, a następnie
     przejdź dalej do funkcji.
   coursef_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki
     i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -1566,7 +1592,7 @@ pl-PL:
     artystyczne dzieła, opowiadania i gry.
   coursed-2017_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie
     przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
-  coursee-2017_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie
+  coursee-2017_shortdescription_congrats: Szybko omów pojęcia w kursach C i D, a następnie
     przejdź dalej do funkcji.
   coursef-2017_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki
     i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -1578,7 +1604,7 @@ pl-PL:
     artystyczne dzieła, opowiadania i gry.
   coursed-2018_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie
     przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
-  coursee-2018_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie
+  coursee-2018_shortdescription_congrats: Szybko omów pojęcia w kursach C i D, a następnie
     przejdź dalej do funkcji.
   coursef-2018_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki
     i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -1590,7 +1616,7 @@ pl-PL:
     artystyczne dzieła, opowiadania i gry.
   coursed-2019_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie
     przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
-  coursee-2019_shortdescription_congrats: Szybko omów pojęcia w kursch C i D, a następnie
+  coursee-2019_shortdescription_congrats: Szybko omów pojęcia w kursach C i D, a następnie
     przejdź dalej do funkcji.
   coursef-2019_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki
     i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -2160,12 +2186,12 @@ pl-PL:
   header_legal_privacy: Polityka prywatności
   header_legal_tos: Regulamin
   header_tutorials: Samouczki
-  app_lab_documentation: Dokumentacja "App Lab"
-  app_lab_tutorials: Samouczki "App Lab"
-  game_lab_documentation: Dokumentacja "Game Lab"
-  game_lab_tutorials: Samouczki "Game Lab"
-  sprite_lab_documentation: Dokumentacja "Sprite Lab"
-  sprite_lab_tutorials: Samouczki "Sprite Lab"
+  app_lab_documentation: Dokumentacja App Lab
+  app_lab_tutorials: Samouczki App Lab
+  game_lab_documentation: Dokumentacja Game Lab
+  game_lab_tutorials: Samouczki Game Lab
+  sprite_lab_documentation: Dokumentacja Sprite Lab
+  sprite_lab_tutorials: Samouczki Sprite Lab
   header_documentation: Dokumentacja
   user_header_label: Witaj %{username}
   user_header_team: Zespół
@@ -2202,16 +2228,16 @@ pl-PL:
     sekret %{secret}, na poniższych kartach logowania.
   reset_student_password: Resetowanie haseł uczniów
   reset_student_password_instructions: Możesz zresetować sekret <word/picture> dla
-    dowolnego z twoich uczniów udając się do karty &ldquor;Zarządzaj uczniami&rdquo;
-    dla sekcji, klikając przycisk &ldquor;Pokaż sekret&rdquo; pod kolumną &ldquor;Hasło&rdquo;,
-    a następnie klikając przycisk &ldquor;Resetuj sekret&rdquo;.
+    dowolnego z Twoich uczniów udając się do karty "Zarządzaj uczniami" dla sekcji,
+    klikając przycisk "Pokaż sekret" pod kolumną "Hasło", a następnie klikając przycisk
+    "Resetuj sekret".
   login_cards: Karty Logowania
   print_login_cards: Wydrukuj karty logowania
   joining_section: Dołączanie do Twojej sekcji (tylko raz)
-  joining_section_overview: Jeśli uczeń jeszcze nie dołączył do twojej sekcji, poproś
-    go/ją o wykonanie następujących kroków. Zauważ, że muszą to zrobić tylko raz.
-    Dołączając do twojej sekcji uczniowie będą mogli zobaczyć przypisany im kurs,
-    a ty będziesz mogła śledzić ich postępy w wykonywaniu zadań, kiedy są zalogowani.
+  joining_section_overview: Jeśli uczeń jeszcze nie dołączył do Twojej sekcji, poproś
+    go, aby wykonał następujące kroki. Zauważ, że musi to zrobić tylko raz. Dołączając
+    do Twojej sekcji uczniowie będą mogli zobaczyć przypisany im kurs, a Ty będziesz
+    mógł śledzić ich postępy w wykonywaniu zadań, kiedy są zalogowani.
   joining_section_instruct_website: 'Niech utworzą konto Code.org, jeśli tego jeszcze
     nie zrobili. Mogą to zrobić na https://studio.code.org/users/sign_up. Zauważ,
     że mogą zarejestrować się albo przy pomocy adresu e-mail i hasła, albo poprzez
@@ -2222,19 +2248,19 @@ pl-PL:
   joining_section_instruct_button: Gdy nacisną przycisk &ldquor; Dalej&rdquo;, powinni
     być dodani do Twojej sekcji.
   signing_in_single_instruct: Twoi uczniowie mogą zalogować się do swoich kont Code.org
-    udając się na https://code.org/ i klikając na przycisk &ldquor;Zaloguj&rdquo;
-    w prawym górnym rogu.
-  reset_student_password_email: Jeśli twój uczeń utworzył konto Code.org używając
+    udając się na https://code.org/ i klikając na przycisk "Zaloguj" w prawym górnym
+    rogu.
+  reset_student_password_email: Jeśli Twój uczeń utworzył konto Code.org używając
     swojego adresu e-mail i hasła (zamiast logowania się poprzez swoje konto Google,
-    Facebook, Microsoft lub konto Clever), możesz zresetować jego/jej hasło udając
-    się do karty &ldquor;Zarządzaj uczniami&rdquo; dla sekcji i klikając przycisk
-    &ldquor;Resetuj hasło&rdquo; pod kolumną &ldquor;Hasło&rdquo;.
+    Facebook, Microsoft lub konto Clever), możesz zresetować jego hasło wybierając
+    kartę "Zarządzaj uczniami" dla sekcji i klikając przycisk "Resetuj hasło" pod
+    kolumną "Hasło'.
   syncing_students: Synchronizowanie Twoich studentów
-  syncing_students_instructions: Jeśli lista uczniów w twojej sekcji Code.org kiedykolwiek
-    się zdezaktualizuje w stosunku do Google Classroom, kliknij na przycisk &ldquor;Zsynchronizuj
-    uczniów z Google Classroom&rdquo; na karcie &ldquor;Zarządzaj studentami&rdquor;.
-  google_sign_in_instruct: 'Z tamtego miejsca powinni wybrać opcję &ldquor;Zaloguj
-    się używając konta Google&rdquo;:'
+  syncing_students_instructions: Jeśli lista uczniów w Twojej sekcji Code.org kiedykolwiek
+    się zdezaktualizuje w stosunku do Google Classroom, kliknij na przycisk "Zsynchronizuj
+    uczniów z Google Classroom" na karcie "Zarządzaj studentami";.
+  google_sign_in_instruct: 'Z tamtego miejsca powinni wybrać opcję "Zaloguj się używając
+    konta Google":'
   hero_name: 'Minecraft: Podróż Bohatera'
   applab-intro_name: Wprowadzenie do App Lab
   applab_tile_title: Wprowadzenie do App Lab (od 13 lat)
@@ -2262,16 +2288,23 @@ pl-PL:
     w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny
     Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45
     językach.
-  hoc_overview_subtitle_markdown: (https://hourofcode.com"> Godzina Kodowania (Hour
-    of Code) to globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad
-    180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny Kodowania
-    lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45 językach.
+  hoc_overview_subtitle_markdown: "[Godzina Kodowania](https://hourofcode.com) to
+    globalna inicjatywa docierająca do dziesiątek milionów uczniów w ponad 180 krajach.
+    Każdy, może gdziekolwiek zorganizować wydarzenie Godziny Kodowania lub wypróbować
+    ponad 500 godzinnych samouczków dostępnych w ponad 45 językach."
   hoc_overview_partner_activities_title: Więcej aktywności od naszych partnerów
   hoc_overview_partner_activities_body: Strona Godziny Kodowania zawiera ponad 500
     aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla
     osób w każdym wieku i na każdym poziomie.
   hoc_overview_partner_activities_link: Zobacz aktywności
   hoc_overview_start_tutorial: Rozpocznij
+  hoc_overview_more_resources: 'Aby uzyskać więcej zasobów na temat angażowania się
+    w zdalną klasę, zapoznaj się z naszym przewodnikiem dotyczącym prowadzenia [wirtualnej
+    Godziny Kodowania] (https://hourofcode.com/us/how-to/virtual). Dla uczniów z ograniczoną
+    technologią lub łącznością lub bez niej, udostępnij ten pakiet [zajęć Godziny
+    Kodowania bez komputera] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+
+'
   hoc_overview_view_teacher_guide: Zobacz przewodnik nauczyciela
   hoc2018_creativity: kreatywność
   hoc2018_creativity_create: Utwórz
@@ -2401,10 +2434,12 @@ pl-PL:
     aby kontynuowały rozwój kariery w dziedzinie informatyki. <a href='%{amazon_future_engineer_link}'
     target='_blank'> Dowiedz się więcej </a>
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
-    Future Engineer* to kompleksowy program "od dzieciństwa do kariery", który inspiruje,
+    Future Engineer* to kompleksowy program od dzieciństwa do kariery, który inspiruje,
     kształci i szkoli dzieci i młodzież z rodzin o niskich dochodach i pokrzywdzonych
-    w inny sposób, aby kontynuowały zdobywanie zawodu w dziedzinie informatyki. {Więcej
+    w inny sposób, aby kontynuowały zdobywanie zawodu w dziedzinie informatyki. [Więcej
     informacji](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Jeśli jesteś uczniem
+    lub nauczycielem we Francji, wypróbuj [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Dowiedz się więcej
     o programie Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: O programie Amazon Future Engineer
@@ -2466,12 +2501,22 @@ pl-PL:
   hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij
     tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link})
     z ostatniego roku."
-  homepage_slot_text_title_at_home: Ucz się
+  homepage_slot_text_title_at_home: Ucz się w domu
   homepage_slot_text_blurb_at_home: Dzięki tym materiałom to jest proste
-  homepage_slot_text_link_code_break: Weź Code Brake
+  homepage_slot_text_link_code_break: Przejdź do Code Brake
   homepage_slot_text_link_do_hoc: Wykonaj Godzinę Kodowania
   homepage_slot_text_link_express_course: Wypróbuj kurs ekspresowy
   page_not_available_title: Strona niedostępna
   page_not_available_description: Przepraszamy, ta strona nie jest już dostępna pod
-    tym adresem. Jeśli nadal potrzebujesz dostępu, wyślij e-mail <a href='mailto:support@code.org'>support@code.org</a>.
+    tym adresem. Jeśli nadal potrzebujesz dostępu, wyślij e-mail [support@code.org](%{support_email_link}).
   page_not_available_button: Powrót do strony domowej
+  hoc2020_mc_available_code_org: Dostępne na Code.org
+  hoc2020_mc_available_mee: 'Dostępne w Minecrafcie: Education Edition'
+  hoc2020_mc_mee_title: Opowieść Minecrafta o dwóch wioskach
+  hoc2020_mc_mee_description: 'Nowy samouczek Godziny Kodowania dla Minecrafta jest
+    teraz dostępny w Minecraft: Education Edition dla Windows, Mac, Chromebooka i
+    iPada. Naucz się podstaw kodowania i poznaj różnorodność i integrację ze swoimi
+    uczniami! Uzyskaj dostęp do bezpłatnych zasobów, w tym planu lekcji, filmów, programu
+    nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
+  footer_powered_by_aws: Zasilany przez Amazon Web Services
+  footer_built_on_github: Oparty na GitHub firmy Microsoft

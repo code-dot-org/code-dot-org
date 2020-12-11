@@ -5,9 +5,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Button} from 'react-bootstrap';
 import Foorm from './Foorm';
 import FontAwesome from '../../../templates/FontAwesome';
+import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import {Button, Tabs, Tab} from 'react-bootstrap';
+import moment from 'moment';
+import Spinner from '../components/spinner';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -15,8 +18,52 @@ const styles = {
   errorMessage: {
     fontWeight: 'bold',
     padding: '1em'
+  },
+  foormEditor: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    width: '100%',
+    marginBottom: 10
+  },
+  editor: {
+    minWidth: 560,
+    width: '48%',
+    marginRight: 12,
+    marginTop: 57
+  },
+  options: {
+    minWidth: 215
+  },
+  preview: {
+    width: '48%',
+    marginRight: 12
+  },
+  editorHeader: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  previewBox: {
+    border: '1px solid #eee'
+  },
+  validationInfo: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+  validateButton: {
+    marginLeft: 0
+  },
+  livePreview: {
+    marginTop: 15
+  },
+  spinner: {
+    marginTop: 5
   }
 };
+
+const PREVIEW_ON = 'preview-on';
+const PREVIEW_OFF = 'preview-off';
+const TIME_FORMAT = 'h:mm a';
 
 class FoormEditor extends React.Component {
   static propTypes = {
@@ -25,13 +72,15 @@ class FoormEditor extends React.Component {
     formVersion: PropTypes.number,
     // populated by redux
     formQuestions: PropTypes.object,
-    formHasError: PropTypes.bool
+    formHasError: PropTypes.bool,
+    isFormPublished: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
+      livePreviewStatus: PREVIEW_ON,
       formKey: 0,
       formPreviewQuestions: null,
       num_facilitators: 2,
@@ -53,12 +102,29 @@ class FoormEditor extends React.Component {
       ],
       day: 1,
       is_friday_institute: false,
-      workshop_agenda: 'module1'
+      workshop_agenda: 'module1',
+      libraryError: false,
+      libraryErrorMessage: null,
+      lastValidated: null,
+      validationError: null,
+      validationStarted: false
     };
   }
 
   componentDidMount() {
     this.props.populateCodeMirror();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // call preview form if we got new form questions or we have switched
+    // on live preview.
+    if (
+      prevProps.formQuestions !== this.props.formQuestions ||
+      (prevState.livePreviewStatus === PREVIEW_OFF &&
+        this.state.livePreviewStatus === PREVIEW_ON)
+    ) {
+      this.previewFoorm();
+    }
   }
 
   updateFacilitators = e => {
@@ -87,49 +153,73 @@ class FoormEditor extends React.Component {
   };
 
   previewFoorm = () => {
-    // fill in form with any library items
+    if (this.state.livePreviewStatus === PREVIEW_ON) {
+      // fill in form with any library items
+      $.ajax({
+        url: '/api/v1/pd/foorm/form_with_library_items',
+        type: 'post',
+        contentType: 'application/json',
+        processData: false,
+        data: JSON.stringify({
+          form_questions: this.props.formQuestions
+        })
+      })
+        .done(result => {
+          this.setState({
+            formKey: this.state.formKey + 1,
+            formPreviewQuestions: result,
+            libraryError: false,
+            libraryErrorMessage: null
+          });
+        })
+        .fail(result => {
+          this.setState({
+            libraryError: true,
+            libraryErrorMessage: result.responseJSON.error
+          });
+        });
+    }
+  };
+
+  livePreviewToggled = toggleValue => {
+    this.setState({livePreviewStatus: toggleValue});
+  };
+
+  validateQuestions = () => {
+    this.setState({validationStarted: true});
     $.ajax({
-      url: '/api/v1/pd/foorm/form_with_library_items',
+      url: '/api/v1/pd/foorm/validate_form',
       type: 'post',
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
         form_questions: this.props.formQuestions
       })
-    }).done(result => {
-      this.setState({
-        formKey: this.state.formKey + 1,
-        formPreviewQuestions: result
+    })
+      .done(result => {
+        this.setState({
+          lastValidated: moment().format(TIME_FORMAT),
+          validationError: null,
+          validationStarted: false
+        });
+      })
+      .fail(result => {
+        this.setState({
+          lastValidated: moment().format(TIME_FORMAT),
+          validationError:
+            (result.responseJSON && result.responseJSON.error) ||
+            'Unknown error.',
+          validationStarted: false
+        });
       });
-    });
   };
 
-  render() {
+  renderVariables() {
     return (
-      <div>
-        {this.props.formName && (
-          <h3>{`${this.props.formName}, version ${this.props.formVersion}`}</h3>
-        )}
-        {/* textarea is filled by populateCodeMirror()*/}
-        <textarea
-          ref="content"
-          // 3rd parameter specifies number of spaces to insert
-          // into the output JSON string for readability purposes.
-          // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
-          value={JSON.stringify(this.props.formQuestions, null, 2)}
-          // Change handler is required for this element, but changes will be handled by the code mirror.
-          onChange={() => {}}
-        />
-        {this.props.formHasError ? (
-          <div style={styles.errorMessage}>
-            <FontAwesome icon="exclamation-triangle" /> There is a parsing error
-            in the survey configuration. Errors are noted on the left side of
-            the editor.
-          </div>
-        ) : (
+      <div style={styles.options} className="foorm-options">
+        {!this.props.formHasError && !this.state.libraryError && (
           <div>
             <form>
-              <h3>Survey Variables</h3>
               <label>
                 workshop_course <br />
                 <input
@@ -151,7 +241,7 @@ class FoormEditor extends React.Component {
                 />
               </label>
               <label>
-                num_facilitators (will auto-generate facilitator names)
+                num_facilitators
                 <br />
                 <input
                   type="number"
@@ -207,9 +297,35 @@ class FoormEditor extends React.Component {
                 />
               </label>
             </form>
-            <Button onClick={this.previewFoorm}>Preview</Button>
-            {this.state.formPreviewQuestions && (
-              // key allows us to force re-render when preview is clicked
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  renderPreview() {
+    return (
+      <div className="foorm-preview">
+        <div style={styles.previewBox}>
+          {this.props.formHasError && (
+            <div style={styles.errorMessage}>
+              <FontAwesome icon="exclamation-triangle" /> There is a parsing
+              error in the survey configuration. Errors are noted on the left
+              side of the editor.
+            </div>
+          )}
+          {this.state.libraryError && (
+            <div style={styles.errorMessage}>
+              <FontAwesome icon="exclamation-triangle" />
+              {`There is an error in the use of at least one library question. The error is: ${
+                this.state.libraryErrorMessage
+              }`}
+            </div>
+          )}
+          {this.state.formPreviewQuestions &&
+            !this.props.formHasError &&
+            !this.state.libraryError && (
+              // key allows us to force re-render when preview is called
               <Foorm
                 formQuestions={this.state.formPreviewQuestions}
                 formName={'preview'}
@@ -229,8 +345,93 @@ class FoormEditor extends React.Component {
                 }}
               />
             )}
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div>
+        {this.props.formName && (
+          <div style={styles.editorHeader}>
+            <h2>
+              {`${this.props.formName}, version ${this.props.formVersion}`}
+              <br />
+              {`Form State: ${
+                this.props.isFormPublished ? 'Published' : 'Draft'
+              }`}
+            </h2>
           </div>
         )}
+        <div style={styles.livePreview}>
+          <ToggleGroup
+            onChange={this.livePreviewToggled}
+            selected={this.state.livePreviewStatus}
+          >
+            <button type="button" value={PREVIEW_ON}>
+              Live Preview On
+            </button>
+            <button type="button" value={PREVIEW_OFF}>
+              Live Preview Off
+            </button>
+          </ToggleGroup>
+        </div>
+        <div style={styles.foormEditor}>
+          {/* textarea is filled by populateCodeMirror()*/}
+          <div style={styles.editor} className="foorm-editor">
+            <textarea
+              ref="content"
+              // 3rd parameter specifies number of spaces to insert
+              // into the output JSON string for readability purposes.
+              // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+              value={JSON.stringify(this.props.formQuestions, null, 2)}
+              // Change handler is required for this element, but changes will be handled by the code mirror.
+              onChange={() => {}}
+            />
+          </div>
+
+          <Tabs
+            style={styles.preview}
+            defaultActiveKey="preview"
+            id="preview-tabs"
+          >
+            <Tab eventKey={'preview'} title={'Preview'} id="preview">
+              {this.renderPreview()}
+            </Tab>
+            <Tab eventKey="variables" title="Survey Variables" id="variables">
+              {this.renderVariables()}
+            </Tab>
+            <Tab eventKey="validation" title="Validation" id="validation">
+              <Button
+                style={styles.validateButton}
+                onClick={this.validateQuestions}
+              >
+                Validate
+              </Button>
+              <br />
+              {this.state.validationStarted ? (
+                <Spinner style={styles.spinner} />
+              ) : (
+                this.state.lastValidated && (
+                  <div style={styles.validationInfo}>
+                    {this.state.validationError && (
+                      <FontAwesome icon="exclamation-triangle" />
+                    )}
+                    {` Form was last validated at ${
+                      this.state.lastValidated
+                    }. Validation status: ${
+                      this.state.validationError ? 'Invalid.' : 'Valid.'
+                    }`}
+                    <br />
+                    {this.state.validationError &&
+                      `Validation error: ${this.state.validationError}`}
+                  </div>
+                )
+              )}
+            </Tab>
+          </Tabs>
+        </div>
       </div>
     );
   }
@@ -239,6 +440,7 @@ class FoormEditor extends React.Component {
 export default connect(
   state => ({
     formQuestions: state.foorm.formQuestions || {},
+    isFormPublished: state.foorm.isFormPublished,
     formHasError: state.foorm.hasError
   }),
   dispatch => ({})

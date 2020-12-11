@@ -17,6 +17,7 @@ vi:
         hoc_category_name: Giờ của mã
         math_category_name: thuật toán
         research_studies_category_name: Các nghiên cứu
+        other_category_name: Khác
       name:
         course1:
           title: Khóa học 1
@@ -7384,3 +7385,11 @@ vi:
           lesson_groups:
             lg_1:
               display_name: Nội dung
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Trí Tuệ Nhân Tạo cho Đại Dương
+            intro:
+              name: Giới thiệu
+            visualizing:
+              name: Làm dự liệu hiển thị được

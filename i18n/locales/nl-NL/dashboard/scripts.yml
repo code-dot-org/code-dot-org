@@ -4,12 +4,13 @@ nl:
     script:
       category:
         csf_category_name: Basis
-        csp_category_name: "CW Principes"
+        csp_category_name: CW Principes
         cspexams_category_name: CW Principes Praktische Test
         csp17_category_name: CW Principes
         full_course_category_name: Volledige Cursussen
         hoc_category_name: Uur Code
         math_category_name: wiskundige
+        other_category_name: Anders
       name:
         course1:
           title: Cursus 1
@@ -313,6 +314,8 @@ nl:
               name: Cursussen voor klas 1-7
             Next Steps:
               name: Volgende stappen
+            Reflection:
+              name: Reflectie
             Teacher Dashboard:
               name: Dashboard Leerkrachten
             Unplugged lessons:
@@ -469,6 +472,8 @@ nl:
               name: Binaire berichten verzenden
             Sending Bits in the Real World:
               name: Bits verzenden in de Echte Wereld
+            Text Compression:
+              name: Tekstcompressie
         algebraPD:
           lessons:
             Course Overview:
@@ -499,6 +504,11 @@ nl:
               name: Jouw spel - Booleans
             Your Game - Collision Detection:
               name: Jouw spel - Botsingsdetectie
+        text-compression:
+          title: Tekstcompressie
+          lessons:
+            Text Compression:
+              name: Tekstcompressie
         CSPPD:
           lessons:
             Introduction to PD:
@@ -674,7 +684,7 @@ nl:
             Evaluation Blocks:
               name: evaluatie blokken
             Free Play:
-              name: Gratis spelen
+              name: Vrije Speelruimte
             Luigi's Pizza:
               name: Luigi's Pizza
             Rocket-Height:
@@ -698,10 +708,14 @@ nl:
               name: Bee
             Bounce:
               name: Stuiter
+            CSinA:
+              name: CSinA
             Farmer:
               name: Boer
             Flappy:
               name: Flappy
+            Gamelab:
+              name: Gamelab
             Jigsaw:
               name: Legpuzzel
             Match:
@@ -712,18 +726,28 @@ nl:
               name: Minecraft
             Multi:
               name: meerdere
+            Multi2:
+              name: Multi2
+            Netsim:
+              name: Netsim
             Odometer:
               name: Kilometerteller
             Pixelation:
               name: Pixelachtig
+            PlayLab:
+              name: SpeelLab
             Star wars:
               name: Star Wars
             Studio:
               name: Studio
+            Text Compression:
+              name: Tekstcompressie
             Web Lab:
               name: Web Lab
             Standalone video:
               name: Alleenstaande video
+            ML Fish:
+              name: ML Vis
         algebraPD2b:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -762,6 +786,8 @@ nl:
               name: Basisbegrippen Computer Wetenschappen
             Next Steps:
               name: Volgende stappen
+            Planning:
+              name: Plannen
         ECSPD2:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
@@ -864,6 +890,8 @@ nl:
               name: De grote gebeurtenis
         sciencePD3_pre1:
           lessons:
+            The TLO:
+              name: De TLO
             Welcome Back!:
               name: Welkom Terug!
         ScienceP3OLPT2:
@@ -872,6 +900,10 @@ nl:
               name: Welkom!
             Wrap-Up:
               name: Terugblik
+        duino:
+          lessons:
+            JunkBot:
+              name: JunkBot
         Special Fun:
           description_audience: Leeftijden 10 + (na cursus 3)
         SpecialSeries:
@@ -922,6 +954,10 @@ nl:
           lessons:
             Hour of Code 2015:
               name: Uur van Code 2015
+        oceans:
+          lessons:
+            Oceans:
+              name: Oceanen
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1019,6 +1055,8 @@ nl:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
               name: Verzend Kleuren Afbeeldingen
+            Text Compression:
+              name: Tekstcompressie
         csp3-2017:
           description: "Deze module introduceert de basisconcepten van programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab als programmeeromgeving om apps te bouwen, maar de concepten die in deze lessen worden geleerd, zijn van toepassing op alle programmeertalen en tools.\\r\n\\r\nDeze module is voor het laatst bijgewerkt op 30 oktober 2017. Lees meer over curriculumupdates op forum.code.org/c/csp/updates."
           description_short: Programmeren
@@ -1067,6 +1105,8 @@ nl:
               name: Botsingdetectie
             Functions:
               name: Functies
+            Defender:
+              name: Beschermer
             Velocity:
               name: Snelheid
         2016_sciencePD_phase1:
@@ -1083,6 +1123,10 @@ nl:
           description_short: Programmeren
         CSF_Secret_Sample:
           description_audience: Leeftijden 8 + (na cursus 2)
+        ECSPD1:
+          lessons:
+            Wrap Up:
+              name: Afronden
         algebraFacilitator:
           lessons:
             Evaluation Blocks:
@@ -1124,10 +1168,20 @@ nl:
           lessons:
             Game Lab:
               name: Game Lab
+        cspunit1-tools:
+          lessons:
+            netsim:
+              name: netsim
         CSDU4-Draft:
           lessons:
             Design Mode:
               name: Ontwerpmodus
+        CSDU2-Draft:
+          lessons:
+            Holding:
+              name: Vasthouden
+            Classes:
+              name: Lessen
         MikeTest:
           lessons:
             Artist Functions:
@@ -1260,6 +1314,8 @@ nl:
               name: 'Project: Ontwerp een Spel'
             Variables:
               name: Variabelen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Voorwaardelijke instructies
         grade2:
@@ -1306,6 +1362,9 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Storage:
+              name: Opslag
         csp-online-test:
           lesson_groups:
             required:
@@ -1330,8 +1389,14 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            Classes:
+              name: Lessen
+            Headers:
+              name: Headers
             Lists:
               name: Lijsten
+            Headings:
+              name: Headings
         csp2-support:
           lesson_groups:
             required:
@@ -1451,6 +1516,8 @@ nl:
           lessons:
             Welcome Back!:
               name: Welkom Terug!
+            The TLO:
+              name: De TLO
         csp3-support:
           lesson_groups:
             required:
@@ -1510,6 +1577,10 @@ nl:
               display_name: Content
             cspSurvey:
               display_name: Vragenlijst
+        unit6-csd-draft:
+          lessons:
+            UI and Input:
+              name: Gebruikersinterface en invoer
         csd6-draft:
           lesson_groups:
             csd6_1:
@@ -1517,20 +1588,36 @@ nl:
             csd6_2:
               display_name: 'Hoofdstuk 2: Hardware Input'
           lessons:
+            UI and Input:
+              name: Gebruikersinterface en invoer
+            Foo:
+              name: Foo
             Lists:
               name: Lijsten
+            Lights:
+              name: Lichten
             For Loops:
               name: For-lussen
+            Getters:
+              name: Getters
             Functions with Parameters:
               name: Functies met Parameters
         workshop-gamelab:
           lessons:
             Introduction:
               name: Introductie
+            Sprites:
+              name: Sprites
+            Input:
+              name: Invoer
         csd5-draft:
           lessons:
             new stage:
               name: nieuw niveau
+        applab-1hour:
+          lessons:
+            Extra:
+              name: Extra
         applab-2hour:
           lessons:
             new stage:
@@ -1556,6 +1643,8 @@ nl:
           lessons:
             Lists:
               name: Lijsten
+            Lights:
+              name: Lichten
             For Loops:
               name: For-lussen
             Functions with Parameters:
@@ -1566,8 +1655,12 @@ nl:
           lessons:
             Variables:
               name: Variabelen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Voorwaardelijke instructies
+            Taking Input:
+              name: Invoer opnemen
             Velocity:
               name: Snelheid
             Collision Detection:
@@ -1588,12 +1681,22 @@ nl:
               name: 'Project: Ontwerp een Spel'
         csd2-draft:
           lessons:
+            Images:
+              name: Afbeeldingen
+            Headers:
+              name: Headers
             Lists:
               name: Lijsten
+        csd1-draft:
+          lessons:
+            Storage:
+              name: Opslag
         csd3-chapters:
           lessons:
             Variables:
               name: Variabelen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Voorwaardelijke instructies
             Velocity:
@@ -1606,6 +1709,8 @@ nl:
               name: 'Project: Ontwerp een Spel'
             'null':
               name: 'niets'
+            temp:
+              name: temp
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1618,31 +1723,44 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+        csd2-old:
+          lessons:
+            Classes:
+              name: Lessen
         artist-and-bb8:
           lessons:
+            B8 BB8:
+              name: B8 BB8
+            F5 Minecraft:
+              name: F5 Minecraft
             Ice Age Play Lab:
               name: Ijs tijd Speel Lab
             Bounce:
               name: Stuiter
         coursea-2017:
+          description_audience: 'Leeftijden: 4-7'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
         courseb-2017:
+          description_audience: 'Leeftijden: 5-8'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
         coursec-2017:
+          description_audience: 'Leeftijden: 6-10'
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
         coursed-2017:
+          description_audience: 'Leeftijden: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               description_teacher: Door elkaar te programmeren om tekeningen te maken, zullen de leerlingen beginnen te begrijpen wat programmeren nu eigenlijk is. De klas begint met elkaar instructies geven om vakjes op ruitjespapier in te kleuren, om zo de bestaande tekening na te maken. Als er tijd is, kan de les worden afgesloten met tekeningen die de leerlingen zelf maken.
             Nested Loops:
               name: Genestelde lussen
         coursee-2017:
+          description_audience: 'Leeftijden: 8-12'
           lesson_groups:
             extra_course_content:
               display_name: Extra cursusinhoud
@@ -1666,17 +1784,39 @@ nl:
             Nested Loops:
               name: Genestelde lussen
         coursef-2017:
+          description_audience: 'Leeftijden: 9-13'
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmen: Tangrams'
             Building a Foundation:
               name: Een Basis Bouwen
+        csdnovice:
+          lessons:
+            Tuesday:
+              name: Dinsdag
+            Thursday:
+              name: Donderdag
+            Welcome:
+              name: Welkom
+            Congrats:
+              name: Gefeliciteerd
+            Wrap Up:
+              name: Afronden
         cspnovice:
           lesson_groups:
             required:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Welcome:
+              name: Welkom
+            Tuesday:
+              name: Dinsdag
+            Thursday:
+              name: Donderdag
+            Wrap Up:
+              name: Afronden
         csp1-dlp:
           lesson_groups:
             required:
@@ -1743,7 +1883,12 @@ nl:
               display_name: Overzicht
             content:
               display_name: Content
+        allthettsthings:
+          lessons:
+            TTS:
+              name: Spraakuitvoer
         express-2017:
+          description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             content:
               display_name: Content
@@ -1769,6 +1914,7 @@ nl:
             Nested Loops:
               name: Genestelde lussen
         pre-express-2017:
+          description_audience: 'Leeftijden: 4-8'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
@@ -1776,12 +1922,18 @@ nl:
               name: Spellingswedstrijd
         subgoal-labels-opt-in:
           lessons:
+            deprecated:
+              name: verouderd
+            other:
+              name: anders
             Thanks:
               name: Bedankt
         csp-pre-survey-test-2017:
           lessons:
             new stage:
               name: nieuw niveau
+            test satge:
+              name: testfase
         csp3-research-mxghyt:
           description_short: Programmeren
           lesson_groups:
@@ -1800,6 +1952,8 @@ nl:
               name: Functies en Top-Down Designs
             APIs and Function Parameters:
               name: API's en Functieparameters
+            foo:
+              name: foo
         e-f-ramp:
           lesson_groups:
             extra_course_content:
@@ -1877,6 +2031,10 @@ nl:
               name: For Lus fun
             Songwriting with Parameters:
               name: Liedjes schrijven met Parameters
+        subgoals-assessment-staging:
+          lessons:
+            dummy:
+              name: dummy
         hocali:
           lessons:
             new stage:
@@ -1898,8 +2056,12 @@ nl:
             new stage:
               name: nieuw niveau
         hero:
-          description: Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik code om door Minecraft te reizen.
+          title: 'Minecraft: Heldenreis'
+          description_short: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
+          description: Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen.
           lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Heldenreis Uur Code'
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
         csp-explore-2017:
@@ -1965,6 +2127,8 @@ nl:
           lessons:
             Lists:
               name: Lijsten
+            Lights:
+              name: Lichten
             For Loops:
               name: For-lussen
         csd3-1819draft:
@@ -1975,6 +2139,8 @@ nl:
           lessons:
             Variables:
               name: Variabelen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Voorwaardelijke instructies
             Velocity:
@@ -1995,6 +2161,8 @@ nl:
           lessons:
             Variables:
               name: Variabelen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Voorwaardelijke instructies
             Velocity:
@@ -2008,14 +2176,19 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            Headings:
+              name: Headings
             Lists:
               name: Lijsten
         coursea-2018:
+          description_audience: 'Leeftijden: 4-7'
           lessons:
             'Debugging: Unspotted Bugs':
               name: Onbekende bugs
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie en het Grote Project
+            'Real-life Algorithms: Plant a Seed':
+              name: Een zaadje poten
             'Programming: Happy Maps':
               name: Vrolijke Routes
             Going Places Safely:
@@ -2023,6 +2196,7 @@ nl:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
         express-2018:
+          description_audience: 'Leeftijden: 9-18'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programmeren op Ruitjespapier
@@ -2059,6 +2233,7 @@ nl:
             Graph Paper Programming:
               name: Programmeren op Ruitjespapier
         courseb-2018:
+          description_audience: 'Leeftijden: 5-8'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
@@ -2067,6 +2242,7 @@ nl:
             Move It, Move It:
               name: verplaats het, verplaats het
         coursed-2018:
+          description_audience: 'Leeftijden: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programmeren op Ruitjespapier
@@ -2086,7 +2262,12 @@ nl:
               name: Programmeren op Ruitjespapier
             Relay Programming:
               name: Estafette Programmeren
+        petgame:
+          lessons:
+            pet game:
+              name: huisdierspel
         coursec-2018:
+          description_audience: 'Leeftijden: 6-10'
           lessons:
             Building a Foundation:
               name: Een Basis Bouwen
@@ -2110,6 +2291,7 @@ nl:
             Functions with Parameters:
               name: Functies met Parameters
         coursee-2018:
+          description_audience: 'Leeftijden: 8-12'
           lesson_groups:
             extra_course_content:
               display_name: Extra cursusinhoud
@@ -2134,6 +2316,7 @@ nl:
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
         coursef-2018:
+          description_audience: 'Leeftijden: 9-13'
           lessons:
             'Programming: My Robotic Friends':
               name: My Robotic Friends
@@ -2176,6 +2359,9 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Storage:
+              name: Opslag
         csd4-2018:
           lesson_groups:
             cspSurvey:
@@ -2186,6 +2372,8 @@ nl:
               display_name: Vragenlijst
         csp2-2018:
           lessons:
+            Text Compression:
+              name: Tekstcompressie
             Encoding B&W Images:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
@@ -2322,25 +2510,94 @@ nl:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Welcome:
+              name: Welkom
+            Tuesday:
+              name: Dinsdag
+            Thursday:
+              name: Donderdag
+            Wrap Up:
+              name: Afronden
+            Friday:
+              name: Vrijdag
+            Monday:
+              name: Maandag
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Tuesday:
+              name: Dinsdag
+            Thursday:
+              name: Donderdag
+            Wrap Up:
+              name: Afronden
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Tuesday:
+              name: Dinsdag
+            Thursday:
+              name: Donderdag
+            Wrap Up:
+              name: Afronden
+            Monday:
+              name: Maandag
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Tuesday:
+              name: Dinsdag
+            Thursday:
+              name: Donderdag
+            Wrap Up:
+              name: Afronden
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
         pre-express-2018:
+          description_audience: 'Leeftijden: 4-8'
           lessons:
             'Debugging: Unspotted Bugs':
               name: Onbekende bugs
@@ -2405,16 +2662,23 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         dance-extras:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         coursef-2019:
+          description_audience: 'Leeftijden: 9-13'
           lesson_groups:
+            ramp_up:
+              display_name: Inleiding
             csf_variables:
               display_name: Variabelen
             csf_for_loops:
               display_name: For-lussen
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitaal Burgerschap
           lessons:
@@ -2437,6 +2701,7 @@ nl:
             Dance Party:
               name: Dansfeest
         coursed-2019:
+          description_audience: 'Leeftijden: 7-11'
           lesson_groups:
             csf_events:
               display_name: Gebeurtenissen
@@ -2466,7 +2731,12 @@ nl:
             Dance Party:
               name: Dansfeest
         coursee-2019:
+          description_audience: 'Leeftijden: 8-12'
           lesson_groups:
+            ramp_up:
+              display_name: Inleiding
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitaal Burgerschap
             csf_nested_loops:
@@ -2492,7 +2762,10 @@ nl:
             Songwriting:
               name: Songwriting
         express-2019:
+          description_audience: 'Leeftijden: 9-18'
           lesson_groups:
+            csf_warmup:
+              display_name: Opwarming
             csf_loops:
               display_name: Lussen
             csf_conditionals:
@@ -2503,6 +2776,8 @@ nl:
               display_name: Variabelen
             csf_for_loops:
               display_name: For-lussen
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Relay Programming:
               name: Estafette Programmeren
@@ -2537,12 +2812,23 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            module1:
+              name: module1
+            module2:
+              name: module2
             'null':
               name: 'niets'
+            Part 1:
+              name: Deel 1
+            Part 2:
+              name: Deel 2
+            part 3:
+              name: deel 3
         dance-extras-gallery:
           title: Blijf dansen
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         coursec-2019:
+          description_audience: 'Leeftijden: 6-10'
           lesson_groups:
             csf_digcit:
               display_name: Digitaal Burgerschap
@@ -2566,6 +2852,7 @@ nl:
         gamelab:
           title: Game Lab
         coursea-2019:
+          description_audience: 'Leeftijden: 4-7'
           lesson_groups:
             csf_digcit:
               display_name: Digitaal Burgerschap
@@ -2579,6 +2866,7 @@ nl:
             Going Places Safely:
               name: Veilig Reizen
         courseb-2019:
+          description_audience: 'Leeftijden: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Digitaal Burgerschap
@@ -2594,6 +2882,7 @@ nl:
             'Loops: Getting Loopy':
               name: Rondjes lopen
         pre-express-2019:
+          description_audience: 'Leeftijden: 4-8'
           lesson_groups:
             csf_loops:
               display_name: Lussen
@@ -2619,6 +2908,8 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            Headings:
+              name: Headings
             Lists:
               name: Lijsten
         csd3-2019:
@@ -2629,6 +2920,8 @@ nl:
           lessons:
             Variables:
               name: Variabelen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Voorwaardelijke instructies
             Velocity:
@@ -2664,6 +2957,8 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
             required:
               display_name: Overzicht
           lessons:
@@ -2693,6 +2988,8 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            Text Compression:
+              name: Tekstcompressie
             Encoding B&W Images:
               name: Verzend Z/W Afbeeldingen
             Encoding Color Images:
@@ -2765,6 +3062,12 @@ nl:
             new stage:
               name: nieuw niveau
         time4csdemo:
+          description_audience: Leerjaar 4
+          lesson_groups:
+            ramp_up:
+              display_name: Inleiding
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -2774,6 +3077,8 @@ nl:
               name: Een Basis Bouwen
             Build a Star Wars Game:
               name: Bouw een Star Wars Spel!
+            Debate:
+              name: Debatteren
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2782,6 +3087,8 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2790,6 +3097,8 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         csp3-pilot-staging:
           lessons:
             The Need for Programming Languages:
@@ -2802,12 +3111,21 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Lijsten
             csp_loops:
               display_name: Lussen
+            csp_project:
+              display_name: Project
+            csp_libraries:
+              display_name: Bibliotheken
+          lessons:
+            Mini PT:
+              name: Mini-PT
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2816,10 +3134,17 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         csp7-pilot-staging:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotheken
           lessons:
             new stage:
               name: nieuw niveau
+            Libraries:
+              name: Bibliotheken
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2828,6 +3153,8 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2836,6 +3163,8 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2844,6 +3173,8 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -2862,23 +3193,49 @@ nl:
               display_name: Lijsten
             csp_loops:
               display_name: Lussen
+            csp_project:
+              display_name: Project
             required:
               display_name: Overzicht
           lessons:
             new stage:
               name: nieuw niveau
+            Mini PT:
+              name: Mini-PT
         fit2019-novice:
           lesson_groups:
             required:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
+            Wrap Up:
+              name: Afronden
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Day 1:
+              name: Dag 1
+            Day 2:
+              name: Dag 2
+            Day 3:
+              name: Dag 3
+            Day 4:
+              name: Dag 4
+            Wrap Up:
+              name: Afronden
         csd1-pilot:
           lesson_groups:
             cspSurvey:
@@ -2888,8 +3245,12 @@ nl:
             cspSurvey:
               display_name: Vragenlijst
           lessons:
+            Headings:
+              name: Headings
             Lists:
               name: Lijsten
+            Images:
+              name: Afbeeldingen
         csd3-pilot:
           description_short: "Programmeren"
           lesson_groups:
@@ -2898,6 +3259,8 @@ nl:
           lessons:
             Variables:
               name: Variabelen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Voorwaardelijke instructies
             Velocity:
@@ -2908,6 +3271,8 @@ nl:
               name: Functies
         maddie-test:
           lessons:
+            stage 1:
+              name: fase 1
             new stage:
               name: nieuw niveau
         csp3-pilot:
@@ -2945,6 +3310,13 @@ nl:
               display_name: Overzicht
             content:
               display_name: Content
+          lessons:
+            Module 1:
+              name: Module 1
+            Step 1:
+              name: Stap 1
+            Step 2:
+              name: Stap 2
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
@@ -2999,6 +3371,10 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            IP Addresses:
+              name: IP-adressen
+            Packets:
+              name: Paketten
             The Need for Addressing:
               name: De Nood aan Adressering
         peru-2019:
@@ -3027,8 +3403,12 @@ nl:
           lessons:
             Computer Science Fundamentals:
               name: Basisbegrippen Computer Wetenschappen
+            Planning:
+              name: Plannen
             Next Steps:
               name: Volgende stappen
+            extra:
+              name: extra
             Loops:
               name: Lussen
             Conditionals:
@@ -3037,6 +3417,8 @@ nl:
               name: Gebeurtenissen
             Functions:
               name: Functies
+            Next steps:
+              name: Volgende stappen
             Variables:
               name: Variabelen
             For Loops:
@@ -3055,6 +3437,8 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
           lessons:
             new stage:
               name: nieuw niveau
@@ -3062,6 +3446,8 @@ nl:
           lessons:
             Conditionals:
               name: Voorwaardelijke instructies
+            About Me:
+              name: Over mij
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -3085,11 +3471,17 @@ nl:
               display_name: Voorwaardelijke instructies
             csf_events:
               display_name: Gebeurtenissen
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitaal Burgerschap
+            ramp_up:
+              display_name: Inleiding
           lessons:
             Conditionals:
               name: Voorwaardelijke instructies
+            About Me:
+              name: Over mij
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -3098,13 +3490,21 @@ nl:
               display_name: Voorwaardelijke instructies
             csf_events:
               display_name: Gebeurtenissen
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitaal Burgerschap
+            ramp_up:
+              display_name: Inleiding
           lessons:
             Conditionals:
               name: Voorwaardelijke instructies
+            About Me:
+              name: Over mij
         csp7-pilot:
           lesson_groups:
+            csp_libraries:
+              display_name: Bibliotheken
             required:
               display_name: Overzicht
         csp8-pilot:
@@ -3119,12 +3519,20 @@ nl:
               display_name: Voorwaardelijke instructies
             csp_functions:
               display_name: Functies
+            csp_project:
+              display_name: Project
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Lijsten
             csp_loops:
               display_name: Lussen
+            csp_project:
+              display_name: Project
+        csp7-2020:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotheken
         csp9-pilot:
           lessons:
             new stage:
@@ -3133,10 +3541,21 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Headings:
+              name: Headings
+            Images:
+              name: Afbeeldingen
+            Using Images:
+              name: Afbeeldingen gebruiken
         csd1-2020:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            0:
+            Storage:
+              name: Opslag
         csd4-2020:
           lesson_groups:
             cspSurvey:
@@ -3174,7 +3593,10 @@ nl:
               name: Functies
             Text:
               name: Tekst
+            Sprites:
+              name: Sprites
         coursea-2020:
+          description_audience: 'Leeftijden: 4-7'
           lesson_groups:
             csf_digcit:
               display_name: Digitaal Burgerschap
@@ -3188,6 +3610,7 @@ nl:
             'Programming: Happy Maps':
               name: Vrolijke Routes
         courseb-2020:
+          description_audience: 'Leeftijden: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Digitaal Burgerschap
@@ -3203,6 +3626,7 @@ nl:
             'Loops: Getting Loopy':
               name: Rondjes lopen
         coursec-2020:
+          description_audience: 'Leeftijden: 6-10'
           lesson_groups:
             csf_digcit:
               display_name: Digitaal Burgerschap
@@ -3218,6 +3642,7 @@ nl:
             'Events: The Big Event':
               name: De grote gebeurtenis
         coursed-2020:
+          description_audience: 'Leeftijden: 7-11'
           lesson_groups:
             csf_events:
               display_name: Gebeurtenissen
@@ -3247,7 +3672,12 @@ nl:
             Dance Party:
               name: Dansfeest
         coursee-2020:
+          description_audience: 'Leeftijden: 8-12'
           lesson_groups:
+            ramp_up:
+              display_name: Inleiding
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitaal Burgerschap
             csf_nested_loops:
@@ -3259,13 +3689,18 @@ nl:
               name: Songwriting
               description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
         coursef-2020:
+          description_audience: 'Leeftijden: 9-13'
           lesson_groups:
+            ramp_up:
+              display_name: Inleiding
             csf_digcit:
               display_name: Digitaal Burgerschap
             csf_variables:
               display_name: Variabelen
             csf_for_loops:
               display_name: For-lussen
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Envelope Variables:
               name: Envelop variabelen
@@ -3276,7 +3711,10 @@ nl:
             Crowdsourcing:
               name: Crowdsourcing
         express-2020:
+          description_audience: 'Leeftijden: 9-18'
           lesson_groups:
+            csf_warmup:
+              display_name: Opwarming
             csf_loops:
               display_name: Lussen
             csf_conditionals:
@@ -3287,10 +3725,13 @@ nl:
               display_name: Variabelen
             csf_for_loops:
               display_name: For-lussen
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Dance Party:
               name: Dansfeest
         pre-express-2020:
+          description_audience: 'Leeftijden: 4-8'
           lesson_groups:
             csf_loops:
               display_name: Lussen
@@ -3314,6 +3755,8 @@ nl:
               name: nieuw niveau
             The Need for Addressing:
               name: De Nood aan Adressering
+            Packets:
+              name: Paketten
         csp3-2020:
           lessons:
             new stage:
@@ -3340,8 +3783,20 @@ nl:
               name: nieuw niveau
         csp-march-virtual:
           lessons:
+            Kick-off:
+              name: Aftrap
+            Changes:
+              name: Aanpassingen
+            Wrap up:
+              name: Afronden
             new stage:
               name: nieuw niveau
+            Pre-work:
+              name: Voorwerk
+            Part 1:
+              name: Deel 1
+            Part 2:
+              name: Deel 2
         csp3-virtual:
           description_short: Programmeren
           lessons:
@@ -3361,6 +3816,28 @@ nl:
               name: nieuw niveau
             Debugging:
               name: Foutopsporing
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 8:
+              name: Module 8
+            Module 7:
+              name: Module 7
+        csd2-virtual:
+          lessons:
+            Headings:
+              name: Headings
+            Images:
+              name: Afbeeldingen
         csp5-virtual:
           description: Deze module - die je in je eigen tempo kan volgen - introduceert fundamentele concepten van programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te maken. Deze cursus gebruikt JavaScript als programmeertaal en App Lab als programmeeromgeving om apps te bouwen, maar de concepten die in deze lessen worden geleerd, zijn van toepassing op alle programmeertalen en tools.
           lessons:
@@ -3376,6 +3853,8 @@ nl:
               name: Arrays Verwerken
             Variables:
               name: Variabelen
+            Keep Going:
+              name: Blijven gaan
         virtual-holding-place:
           lesson_groups:
             content:
@@ -3424,18 +3903,38 @@ nl:
               name: Variabelen
             For Loops:
               name: For-lussen
+            Next steps:
+              name: Volgende stappen
           lesson_groups:
             k5_next_steps_1:
               display_name: Volgende stappen
-        dani-june-2020-test:
+        dani-test-2020:
+          lessons:
+            new lesson:
+              name: nieuwe les
           lesson_groups:
+            lesson group:
+              display_name: weergavenaam
+        dani-june-2020-test:
+          lessons:
+            new lesson:
+              name: nieuwe les
+            lesson 2:
+              name: les 2
+          lesson_groups:
+            lesson group:
+              display_name: weergavenaam
             cspSurvey:
               display_name: Vragenlijst
+            cs_lg:
+              display_name: LG GOOD
         csd3-virtual:
           description_short: "Programmeren"
           lessons:
             Variables:
               name: Variabelen
+            Sprites:
+              name: Sprites
             Text:
               name: Tekst
             Conditionals:
@@ -3481,3 +3980,74 @@ nl:
           lesson_groups:
             lg_1:
               display_name: Content
+        kaitie-test-script:
+          lessons:
+            new lesson:
+              name: nieuwe les
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 7:
+              name: Module 7
+            Module 8:
+              name: Module 8
+          lesson_groups:
+            lesson group:
+              display_name: weergavenaam
+        vpl-csd-2020:
+          lessons:
+            Module 1:
+              name: Module 1
+            Module 2:
+              name: Module 2
+            Module 3:
+              name: Module 3
+            Module 4:
+              name: Module 4
+            Module 5:
+              name: Module 5
+            Module 6:
+              name: Module 6
+            Module 7:
+              name: Module 7
+            Module 8:
+              name: Module 8
+        vpl-csp-2020:
+          lessons:
+            Module 1:
+              name: 'Module 1'
+            Module 2:
+              name: 'Module 2'
+            Module 3:
+              name: 'Module 3'
+            Module 4:
+              name: 'Module 4'
+            Module 5:
+              name: 'Module 5'
+            Module 6:
+              name: 'Module 6'
+            Module 7:
+              name: Module 7
+            Module 8:
+              name: Module 8
+        curriculum-sandbox-levels:
+          lesson_groups:
+            lesson group:
+              display_name: weergavenaam
+          description_audience: Intern
+        ml-playground:
+          lessons:
+            intro:
+              name: Introductie
+        2021drafting:
+          description_audience: Intern
+          description_short: Intern

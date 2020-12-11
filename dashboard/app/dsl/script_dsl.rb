@@ -19,7 +19,7 @@ class ScriptDSL < BaseDSL
     @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
-    @script_announcements = nil
+    @announcements = nil
     @new_name = nil
     @family_name = nil
     @version_year = nil
@@ -31,6 +31,7 @@ class ScriptDSL < BaseDSL
     @curriculum_umbrella = nil
     @tts = false
     @is_course = false
+    @background = nil
   end
 
   integer :id
@@ -51,7 +52,7 @@ class ScriptDSL < BaseDSL
   boolean :is_course
 
   string :wrapup_video
-  string :script_announcements
+  string :announcements
   string :new_name
   string :family_name
   string :version_year
@@ -59,6 +60,7 @@ class ScriptDSL < BaseDSL
   string :pilot_experiment
   string :editor_experiment
   string :curriculum_umbrella
+  string :background
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -91,8 +93,8 @@ class ScriptDSL < BaseDSL
     @lesson_groups.last[:description] = description
   end
 
-  def lesson_group_question(question)
-    @lesson_groups.last[:big_questions] << question
+  def lesson_group_big_questions(questions)
+    @lesson_groups.last[:big_questions] = questions
   end
 
   def lesson(key, properties = {})
@@ -149,7 +151,7 @@ class ScriptDSL < BaseDSL
       curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
-      script_announcements: @script_announcements,
+      announcements: @announcements,
       new_name: @new_name,
       family_name: @family_name,
       version_year: @version_year,
@@ -161,7 +163,8 @@ class ScriptDSL < BaseDSL
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
       lesson_groups: @lesson_groups,
-      is_course: @is_course
+      is_course: @is_course,
+      background: @background
     }
   end
 
@@ -336,7 +339,7 @@ class ScriptDSL < BaseDSL
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
-    s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "announcements #{script.announcements}" if script.announcements
     s << "new_name '#{script.new_name}'" if script.new_name
     s << "family_name '#{script.family_name}'" if script.family_name
     s << "version_year '#{script.version_year}'" if script.version_year
@@ -348,6 +351,7 @@ class ScriptDSL < BaseDSL
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
     s << 'is_course true' if script.is_course
+    s << "background '#{script.background}'" if script.background
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
@@ -362,10 +366,7 @@ class ScriptDSL < BaseDSL
         t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
         s << "lesson_group_description '#{escape(lesson_group.description)}'" if lesson_group.description
-        lesson_group.big_questions&.each do |big_question|
-          s << "lesson_group_question '#{escape(big_question)}'"
-        end
-
+        s << "lesson_group_big_questions '#{escape(lesson_group.big_questions)}'" if lesson_group.big_questions
       end
       lesson_group.lessons.each do |lesson|
         s << serialize_lesson(lesson)

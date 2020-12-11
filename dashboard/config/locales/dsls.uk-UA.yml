@@ -1565,7 +1565,7 @@ uk-UA:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - text: Не знаю.
         questions:
         - {}
@@ -2427,3 +2427,17 @@ uk-UA:
         - text: Не знаю.
         questions:
         - {}
+      csf_digital_trails:
+        markdown: |-
+          # Йдіть Цифровим шляхом
+
+          ## Яку інформацію можна мати у своєму цифровому сліді?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |
+          # Моє Інтернет сусідство
+
+          ## Як безпечно відвідувати місця в Інтернеті?
+      outbreak_story:
+        content1: опис тут
+      outbreak_story2:
+        content1: опис тут

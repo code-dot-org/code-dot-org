@@ -11,7 +11,7 @@ ro:
         csf_2019_category_name: Fundamentele Informaticii (2019)
         csf_international_category_name: Fundamentele internaționale ale Informaticii
         csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
-        csp_category_name: "Principii de CS 15-16"
+        csp_category_name: Principii de CS 15-16
         csp_2018_category_name: Pricipii Informatice ('18-'19)
         csp_2019_category_name: Pricipii Informatice ('19-'20)
         cspexams_category_name: Principiile practicilor test CS
@@ -19,6 +19,7 @@ ro:
         full_course_category_name: Toate cursurile
         hoc_category_name: Oră de Programare
         math_category_name: Matematică
+        other_category_name: Alte
       name:
         course1:
           title: Curs 1
@@ -6627,4 +6628,20 @@ ro:
               name: Curs A
             Course B:
               name: Curs B
+            CS Discoveries:
+              name: Descoperiri informatice
+          description: '[șir gol]'
+        virustest:
+          description_audience: '[șir gol]'
+          description: '[șir gol]'
+        ml-playground:
+          lessons:
+            intro:
+              name: Introducere
+          description_audience: '[șir gol]'
+        outbreak:
+          description_audience: '[șir gol]'
+        apps-for-good:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
           description: '[șir gol]'

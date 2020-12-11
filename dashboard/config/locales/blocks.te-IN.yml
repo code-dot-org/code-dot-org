@@ -83,9 +83,6 @@ te:
             MOVES.Kick: స్టార్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} చేయండి {MOVE} {DIR} ఎప్పటికీ"
         options:
@@ -104,9 +101,6 @@ te:
             MOVES.Kick: స్టార్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
         options:
@@ -178,9 +172,6 @@ te:
             MOVES.XArmsUp: స్ట్రెచ్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} చేయండి {MOVE} {DIR} ఒకసారి"
         options:
@@ -209,9 +200,6 @@ te:
             MOVES.XArmsUp: స్ట్రెచ్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:

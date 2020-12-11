@@ -170,8 +170,10 @@ en:
     invalid_password: "Password must be at least 6 characters"
     mismatch_password: "The two passwords you entered do not match"
     student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    agree_us_data_transfer_student: '**I agree that Code.org may transfer data (including personal data) from my use of this site to the United States** for the purpose of hosting and processing such data.'
+    agree_us_data_transfer_teacher: '**I agree that Code.org may transfer data (including personal data) from my use (and my students’ use) of this site to the United States** for the purpose of hosting and processing such data.'
+    data_collection_us: "I understand that Code.org is a US-based not-for-profit website and that the laws governing data collection in the U.S. may differ from the laws in my country."
+    visit_privacy: 'Visit Code.org’s [Privacy Policy](%{privacy_url}) to learn more.'
     student_terms_markdown: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](http://code.org/privacy) for more information."
     additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
@@ -335,6 +337,7 @@ en:
       game_lab_tutorials: "Game Lab Tutorials"
       sprite_lab_documentation: "Sprite Lab Documentation"
       sprite_lab_tutorials: "Sprite Lab Tutorials"
+      web_lab_documentation: "Web Lab Documentation"
       educate_overview: "Educator Overview"
       educate_elementary: "Elementary School"
       educate_middle: "Middle School"
@@ -451,6 +454,7 @@ en:
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
       clear_response: 'Clear response'
+    student_code_view_diabled: 'Student code cannot be viewed for this activity.'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -563,7 +567,9 @@ en:
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Powered by Amazon Web Services'
+    powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
+    built_on_github: 'Built on GitHub from Microsoft'
+    google_copyright: '&copy; Google Inc. used with permission. Google Classroom is a trademark of Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: 'Copyright'
     more: 'More'
@@ -1136,13 +1142,6 @@ en:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'I agree'
-  gdpr_dialog:
-    heading: 'Do you agree to using a web site based in the United States?'
-    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-    link_intro: 'For details see our'
-    privacy_policy: 'privacy policy'
-    logout: 'Logout'
-    yes: 'Yes'
   page_not_found_title: "Page Not Found"
   page_not_found_header: '404: Page Not Found'
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."

@@ -2409,7 +2409,7 @@
           "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2018": {
-          "1": "Kóðinn þinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
           "1": "Kóðinn þinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2427,7 +2427,7 @@
           "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2018": {
-          "1": "Kóðinn þinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
           "1": "Kóðinn þinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2436,7 +2436,7 @@
           "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2018": {
-          "1": "Kóðinn þinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
           "1": "Kóðinn þinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -8703,6 +8703,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "Þú þarft aðeins að bæta við tveimur kubbum til að koma þessari þraut í rétt horf. ",
           "iceage_warn_ice_age_b": "Bættu báðum nýju kubbunum neðan við `þegar keyrt` atburðinn til að láta þá gerast strax í upphafi forritsins."
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Það eru tvær leiðir til að leysa þessa þraut!",
+          "courseD_scrat_programming6_b": "Mundu að snúa Skrat áður þú hreyfir hann vegna þess að hann snýr í ranga átt.",
+          "courseD_scrat_programming6_c": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "Teiknaðu hlið með því að nota `færa áfram 100 díla` kubbinn og breyta 100 í 200.",
+          "courseE_artist_ramp8_b": "Teiknaðu 4 hliðar með því að setja `færa áfram um 100 díla` kubb innan í `endurtaka` lykkju og gæta þess að lykkjan teikni 4 sinnum.\n\nEkki gleyma að snúa á eftir!",
+          "courseE_artist_ramp8_c": "Lykkjan þín ætti að innihalda tvo kubba: `færa áfram` og `snúa til hægri um 90 gráður`.",
+          "courseD_artist_ramp12_a": "Hvernig líkist þetta ferningi? Hvernig er þetta ólíkt?",
+          "courseD_artist_ramp12_b": "Þú getur notað fellilistann á `snúa` kubbunum til að sjá hvaða horn þú þarft að nota!",
+          "courseD_artist_ramp12_c": "Til að teikna eina hlið þarft þú að fara áfram um 100 díla og snúa svo til hægri um 120 gráður. Hve margar eiga hliðarnar að vera?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Þú munt samt þurfa að setja `þar til` og `meðan` lykkjurnar inn í `endurtaka` lykkju til að leysa þessa þraut!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "Lausnin fyrir þessa þraut er mjög lík lausninni fyrir síðustu þraut, nema hvað snúningurinn er í hina áttina."
         }
       }
     }

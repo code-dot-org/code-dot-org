@@ -1,5 +1,4 @@
 /** @file Board controller for BBC micro:bit */
-/* global SerialPort */ // Maybe provided by the Code.org Browser
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   createMicroBitComponents,
@@ -11,6 +10,8 @@ import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
+import {serialPortType} from '../../util/browserChecks';
+import {isNodeSerialAvailable} from '../../portScanning';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -19,14 +20,20 @@ import CapacitiveTouchSensor from './CapacitiveTouchSensor';
  * @implements MakerBoard
  */
 export default class MicroBitBoard extends EventEmitter {
-  constructor() {
+  constructor(port) {
     super();
+
+    this.port = port;
 
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
+    this.nodeSerialAvailable = isNodeSerialAvailable();
+
+    let portType = serialPortType(true);
+
     /** @private {MicrobitFirmataClient} serial port controller */
-    this.boardClient_ = new MBFirmataWrapper(SerialPort);
+    this.boardClient_ = new MBFirmataWrapper(portType);
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
@@ -40,8 +47,56 @@ export default class MicroBitBoard extends EventEmitter {
    */
   connect() {
     return Promise.resolve()
-      .then(() => this.boardClient_.connectBoard())
+      .then(() => this.checkExpectedFirmware())
       .then(() => this.initializeComponents());
+  }
+
+  /**
+   * Create a serial port controller and open the serial port immediately.
+   * @return {SerialPort}
+   */
+  openSerialPort() {
+    const portName = this.port ? this.port.comName : undefined;
+    const SerialPortType = serialPortType(false);
+
+    /** @const {number} serial port transfer rate */
+    const SERIAL_BAUD = 57600;
+
+    let serialPort;
+    if (this.nodeSerialAvailable) {
+      serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
+      return Promise.resolve(serialPort);
+    } else {
+      // Chrome-serialport uses callback to relay when serialport initialization is complete.
+      // Wrapping construction function to call promise resolution as callback.
+      let constructorFunction = callback => {
+        serialPort = new SerialPortType(
+          portName,
+          {
+            baudRate: SERIAL_BAUD
+          },
+          true,
+          callback
+        );
+      };
+      return new Promise(resolve => constructorFunction(resolve)).then(() =>
+        Promise.resolve(serialPort)
+      );
+    }
+  }
+
+  /**
+   * Connect to the micro:bit firmata client. After connecting, check the firmata
+   * version and firmware version response on the boardClient. If not connected
+   * or a different firmware version discovered, reject. Otherwise, resolve.
+   * Exposed as a separate step here for the sake of the setup page; generally
+   * recommended to just call connect(), above.
+   * @returns {Promise<void>}
+   */
+  checkExpectedFirmware() {
+    return Promise.resolve()
+      .then(() => this.openSerialPort())
+      .then(serialPort => this.boardClient_.connectBoard(serialPort));
   }
 
   /**
@@ -58,8 +113,6 @@ export default class MicroBitBoard extends EventEmitter {
       };
     });
   }
-
-  initializeEventForwarding() {}
 
   /**
    * Enable existing board components

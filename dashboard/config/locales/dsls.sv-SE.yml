@@ -1362,7 +1362,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -2168,3 +2168,7 @@ sv-SE:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: Beskrivning här
+      outbreak_story2:
+        content1: Beskrivning här

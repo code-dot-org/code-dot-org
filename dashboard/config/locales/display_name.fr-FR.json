@@ -612,9 +612,9 @@
         "CSDU6 buzzer 2d arrays_2019": "Tableaux 2D",
         "CSDU6 buzzer.stop_2018": "Arrêter la musique",
         "CSDU6 buzzer.stop_2019": "Arrêter la musique",
-        "Course E: Artist Project": "Cours E Projet Artistique",
-        "Course E: Artist Project_2018": "Cours E Projet Artistique",
-        "Course E: Artist Project_2019": "Cours E Projet Artistique",
+        "Course E: Artist Project": "Cours E Projet Artiste",
+        "Course E: Artist Project_2018": "Cours E Projet Artiste",
+        "Course E: Artist Project_2019": "Cours E Projet Artiste",
         "Course F: Artist Project - Revise_2018": "Réviser le Projet d'Artiste\n",
         "Course F: Artist Project_2018": "Cours E Projet Artistique",
         "Course F: Artist Project_2019": "Cours E Projet Artistique",
@@ -724,7 +724,10 @@
         "csd-pre-survey-levelgroup_2019": "Aperçu de la leçon",
         "scrat_loops_C-F_video": "Vidéo des boucles dans l’Âge de Glace",
         "scrat_loops_C-F_video_2019": "Vidéo des boucles dans l’Âge de Glace",
-        "scrat_loops_C-F_video_2020": "Vidéo des boucles dans l’Âge de Glace"
+        "scrat_loops_C-F_video_2020": "Vidéo des boucles dans l’Âge de Glace",
+        "CSD U1L01 TFMD_2018": "Aperçu de la leçon",
+        "CSD U1L01 TFMD_2019": "Aperçu de la leçon",
+        "outbreak_freeplay": "Activité libre"
       }
     }
   }

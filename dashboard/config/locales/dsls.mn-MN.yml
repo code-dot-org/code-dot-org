@@ -3558,22 +3558,12 @@ mn-MN:
             эхний алдаа юу вэ? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Программ амжилтгүй болохгүй болно. Скрат нь боргоцойнд хүрэх болно.
-          feedback: Буруу байна. Скрат эцсийн эргэлтийнхээ дараа буруу замаар явж
-            байна.
-        - text: Скрат эцсийн эргэлтийнхээ дараа буруу замаар явж байна.
-          correct: true
-          feedback: Зөв!
-        - text: Scrat нь хэтэрхий цөөн хэдэн алхамыг гүйцэтгэдэг бөгөөд боргоцойнд
-            арай хүрч чадахгүй.
-          feedback: Буруу байна. Скрат буруу замаар эргэснийхээ дараа хэтэрхий цөөн
-            алхам хийж байна.
+        - {}
+        - correct: true
+        - correct: true
         - text: Би мэдэхгүй.
-          feedback: 'Эхний алдаа бол Скрат эцсийн эргэлтийнхээ дараа буруу замаар
-            явж байгаа явдал юм. '
         questions:
-        - text: 'Доорх кодыг сайтар ажиглаарай. Энэ програмыг бүтэлгүйтүүлдэг хамгийн
-            эхний алдаа юу вэ? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Гахайнаас нэг алхам дутуу зайнд шувуу дуусна.
@@ -5337,3 +5327,7 @@ mn-MN:
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nХичээлийн төлөвлөгөө рүү очих\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Үргэлжлүүлэх</a>\n"
+      outbreak_story:
+        content1: тайлбар энд байна
+      outbreak_story2:
+        content1: тайлбар энд байна

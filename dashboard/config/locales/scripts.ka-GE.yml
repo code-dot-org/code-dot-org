@@ -12,6 +12,7 @@ ka:
         full_course_category_name: ყველა კურსი
         hoc_category_name: კოდის ერთი საათი
         math_category_name: მათემატიკა
+        other_category_name: სხვა
       name:
         course1:
           title: კურსი 1
@@ -8205,3 +8206,9 @@ ka:
               name: კურსი A
             Course B:
               name: კურსი B
+        ml-playground:
+          lessons:
+            intro:
+              name: შესავალი
+            visualizing:
+              name: მონაცემთა ვიზუალიზაცია

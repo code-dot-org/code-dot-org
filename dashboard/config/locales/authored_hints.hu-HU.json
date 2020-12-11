@@ -37,7 +37,7 @@
           "2-3_Artist_9_a": "Ez a gyémánt valóban csak egy csúcsára állított négyzet"
         },
         "2-3 Artist Debugging 10": {
-          "2-3_Artist_Debugging_10_b": "\\*\\* Próba és hiba teljesen elfogadott itt! \\*\\*\nkezdd úgy, hogy egyszerre csak egy számot változtass\nMelyik szám mit csinál?\\\nHa túl belebonyolódsz, csak kattints az \"Újrakezdés\", és a kódod újraindul."
+          "2-3_Artist_Debugging_10_b": "\\*\\* A próbálkozás és hiba teljesen elfogadott itt! \\*\\*\n\nKezdd úgy, hogy egyszerre csak egy számot változtass meg.\n\nMelyik szám mit csinál?   \n\nHa túlságosan belebonyolódsz, csak kattints az \"Újrakezdés\"-re, és visszakapod a kezdeti állapotot."
         },
         "2-3 Artist Debugging 2": {
           "2-3_Artist_Debugging_2_a": "Tipp: Minden egyes darukar 75 képpont hosszú."
@@ -90,11 +90,11 @@
           "2-3_Artist_Loops_New_9_b": "Ez a V csak a fele a négyszögnek. Mi legyen a kód, ami egy fél négyzetet megrajzol?"
         },
         "2-3 Artist Nested Loops 1": {
-          "2-3_Artist_Nested_Loops_1_a": "Emlékezz, minden szürke blokknak be kell kerülnie a ciklusodba."
+          "2-3_Artist_Nested_Loops_1_a": "Emlékezz rá, hogy a szürke blokkoknak be kell kerülnie a ciklusba."
         },
         "2-3 Artist Nested Loops 3": {
           "2-3_Artist_Nested_Loops_3_a": "Nem vágod a szögeket?\n**360/12 = 30**",
-          "2-3_Artist_Nested_Loops_3_b": "Emlékezz, minden szürke kódnak és elfordulás blokknak be kell kerülnie a ciklusodba."
+          "2-3_Artist_Nested_Loops_3_b": "Emlékezz rá, hogy minden szürke kódnak és fordulás blokknak be kell kerülnie a ciklusodba."
         },
         "2-3 Artist Nested Loops 4": {
           "2-3_Artist_Nested_Loops_3_a": "Nem vágod a szögeket?\n**360/12 = 30**"
@@ -109,11 +109,11 @@
           "2-3_Artist_Nested_Loops_9_a": "Nem vágod a megfelelő szöveg?\n**360 / 12 = 30**"
         },
         "2-3 Bee Conditionals 14": {
-          "2-3_Bee_Conditionals_14_a": "Nem vágod hogy mi kellet tenni a blokkokkal? Próbáld ugyanúgy kezelni a piros virágot, mint a lilát!",
-          "2-3_Bee_Conditionals_14_b": "Ha a piros virág lila lenne, kitalálnád hogyan kell a kódba egy extra \"ismétlés\" ciklust tenni a levágáshoz?"
+          "2-3_Bee_Conditionals_14_a": "Hiába agyalsz rajta, hogy mit kezd a blokkokkal? Próbáld ugyanúgy kezelni a piros virágot, mint a lilát!",
+          "2-3_Bee_Conditionals_14_b": "Ha a piros virág lila lenne, kitalálnád hogyan kell a kódba egy extra \"ismétlés\" ciklust tenni, hogy hozzájuss a nektárhoz?"
         },
         "2-3 Bee Conditionals 15": {
-          "2-3_Bee_Conditionals_15_a": "Emlékezz: a lila virágok csak 0 vagy 1 nektár tartalmaznak és meg tudnak változni minden alkalommal, amikor futtatod a programot."
+          "2-3_Bee_Conditionals_15_a": "Emlékezz rá: a lila virágokban 0 vagy 1 nektár lehet, ráadásul minden futtatáskor változik, hogy épp mennyi van benne. "
         },
         "2-3 Bee Conditionals 3": {
           "2-3_Bee_Conditionals_3_a": "A kód akkor lesz a legrövidebb, ha ciklusokat használsz minden alkalommal, amikor előre mozogsz, másik ciklust amikor nektár gyűjtesz, és egy másikat amikor a mézet csinálod."
@@ -605,7 +605,7 @@
           "courseD_bee_debugging_challenge1_c": "Miután a méh elért az oszlop aljára, ismételje ezeket a parancsokat: \n\n-   Ismételd 2 alkalommal:\n    -   Menj előre\n    -   Készíts 3 mézet \n-   Menj hátra"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Végül gyűjtd össze a maradék gyémántokat is a sorban. Add hozzá ezeket a blokkokat a programodhoz.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Itt a teljes megoldása ennek rejtvénynek.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1590,8 +1590,8 @@
           "courseD_bee_debugging_challenge1_a": "Ennek a programnak miért csak az első fele működik? Gondolkodj el rajta, miért kell a méhnek hátrafelé mozognia. Mennyi nektárt gyűjt a méh, amikor a virághoz ér?"
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Kezdjük csak **két** gyémánt összegyűjtésével, az első **két** halomból, egymás után.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nHasználd ezeket a blokkokat.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Kezdjük csak **két** gyémánt összegyűjtésével, az első **két** halomból, egymás után.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nHasználd ezeket a blokkokat.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Végül gyűjtd össze a maradék gyémántokat is a sorban. Add hozzá ezeket a blokkokat a programodhoz.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Itt a teljes megoldása ennek rejtvénynek.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1742,6 +1742,13 @@
         },
         "courseE_bee_functions7": {
           "courseE_bee_functions7_b": "Ne feledd, hogy a kódod a zöld blokkon belül építheted.\n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
+        },
+        "2-3 Artist Debugging 8": {
+          "2-3_Artist_Debugging_8_a": "Hányszor ismétlődött meg az alakzatom?\nHányszor _kellett volna_ megismétlődnie az alakzatnak?\nHol tudod ezt módosítani a programban?"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_b": "Figyelj oda, hogy először fordulj a megfelelő irányba.",
+          "courseD_scrat_programming6_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
         }
       }
     }

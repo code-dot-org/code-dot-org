@@ -1,0 +1,32 @@
+name 'ml-model card-unplugged'
+title 'Act out model with categorical labels (SVM)'
+description ''
+
+markdown <<MARKDOWN
+# Model Card
+
+## Lesson Sequence Notes
+- Part of 4-lesson sequence
+- Previously:
+	- Students are mostly fluent with the tool in terms of selecting columns & creating models
+    - Up until now, students have not had any handles to help improve accuracy (such as % of training data, where data comes from, etc)
+    - Up until now, students have not thought about how data increases or decreases accuracy (ie: more data = better results)
+- Focus in these 3 lessons: **Data Sources & Improving Accuracy**. 
+	- Students see how choices around training data impacts accuracy (ie: how much training data, randomness of data, etc)
+    - Students see how qualities from within the data itself can increase or decrease accuracy (larger datasets = more accurate)
+    - Students begin creating model cards for their data
+
+## Curriculum Lesson Notes
+- Unplugged introduction to Model Card
+- Given a dataset, brainstorm some appropriate or inappropriate uses for the dataset
+
+## AI-Lab Notes
+- None
+
+## Dataset / Model Notes:
+- Real-World Datasets that lend themselves to model cards
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

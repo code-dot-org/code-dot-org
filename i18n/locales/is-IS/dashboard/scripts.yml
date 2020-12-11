@@ -10,7 +10,7 @@ is:
         csf_2018_category_name: Grunnatriði tölvunarfræði (2018)
         csf_international_category_name: Grunnatriði TF - alþjóðlegt
         csf2_draft_category_name: 'Í þróun: Námskeið A-F'
-        csp_category_name: "'15-'16 TF Grundvöllur"
+        csp_category_name: '''15-''16 TF Grundvöllur'
         csp_2018_category_name: Grunnhugtök tölvunarfræði ('18-'19)
         csp_2019_category_name: Grunnhugtök tölvunarfræði ('19-'20)
         cspexams_category_name: Æfingapróf fyrir Undirstöðuatriði TF
@@ -19,6 +19,7 @@ is:
         hoc_category_name: Klukkustund kóðunar
         math_category_name: Reikningur
         research_studies_category_name: Rannsóknanám
+        other_category_name: Annað
       name:
         course1:
           title: Námskeið 1
@@ -2985,6 +2986,8 @@ is:
               name: Kynning
             Sprites:
               name: Kvikar
+            Input:
+              name: Inntak
             'Project: Interactive Card':
               name: 'Verkefni: Gagnvirkt kort'
         csd5-draft:
@@ -3482,6 +3485,8 @@ is:
               name: Stafsetning
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: annað
             Thanks:
               name: Þakkir
         csp-pre-survey-test-2017:
@@ -6407,3 +6412,11 @@ is:
               name: Námskeið A
             Course B:
               name: Námskeið B
+            CS Discoveries:
+              name: Uppgötvanir tölvunarfræði
+        ml-playground:
+          lessons:
+            intro:
+              name: Kynning
+            visualizing:
+              name: Sjóngerving gagna

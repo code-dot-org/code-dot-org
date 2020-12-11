@@ -48,6 +48,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "false",
+    "validation_enabled": "true",
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
@@ -57,7 +58,7 @@
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"balloon\",\r\n        \"tack\",\r\n        \"popped\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"balloon\": {\r\n            \"name\": \"balloon\",\r\n            \"sourceUrl\": \"https://images.code.org/2892e65635d7a43d0664bb8ff58eb698-image-1471200175665.png\",\r\n            \"frameSize\": {\r\n                \"x\": 200,\r\n                \"y\": 270\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"tack\": {\r\n            \"name\": \"tack\",\r\n            \"sourceUrl\": \"https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png\",\r\n            \"frameSize\": {\r\n                \"x\": 50,\r\n                \"y\": 66\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"popped\": {\r\n            \"name\": \"popped\",\r\n            \"sourceUrl\": \"https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png\",\r\n            \"frameSize\": {\r\n                \"x\": 173,\r\n                \"y\": 135\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "start_blocks": "var balloon = createSprite(200,200);\r\nballoon.setAnimation(\"balloon\");\r\nballoon.debug = false;\r\n\r\nvar tack = createSprite(350, 50);\r\ntack.setAnimation(\"tack\");\r\n\r\nfunction draw() {\r\n  background(\"gray\");\r\n  \r\n  // check if tack is touching balloon\r\n  if (balloon.isTouching(tack)) {\r\n    // replace balloon image\r\n    balloon.setAnimation(\"popped\");\r\n  }\r\n  // make tack move with arrow keys\r\n  if (keyDown(\"up\")) {\r\n    tack.y = tack.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    tack.y = tack.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    tack.x = tack.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    tack.x = tack.x + 1;\r\n  }\r\n  \r\n  drawSprites();\r\n}\r\n",
     "palette_category_at_start": "sprites",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "encrypted_examples": "d866C+YDShrmUkRni4E3jE9Awyrzru6xcKdEqTNZCKyH1v4it+Q58upfOVkS\nyl49\n",
     "instructions_important": "false",
     "show_debug_watch": "true",
@@ -69,7 +70,8 @@
       "/docs/concepts/javascript/booleans-and-comparison-operators/",
       "/docs/concepts/javascript/if-statements/",
       "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/game-lab/the-draw-loop/"
+      "/docs/concepts/game-lab/the-draw-loop/",
+      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/collision-detection/",
     "mini_rubric": "false",
@@ -82,7 +84,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 17:12:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 04:14:32 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-28 18:13:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-05 17:12:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 04:14:32 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-28 18:13:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-10-07 18:54:48 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

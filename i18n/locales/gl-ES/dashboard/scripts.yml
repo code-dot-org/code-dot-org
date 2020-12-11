@@ -5,6 +5,7 @@ gl:
       category:
         hoc_category_name: Hora de Código
         math_category_name: Matemáticas
+        other_category_name: Outros
       name:
         course1:
           title: Curso 1
@@ -2164,3 +2165,7 @@ gl:
               name: Condicionais
             Functions:
               name: Funcións
+        ml-playground:
+          lessons:
+            intro:
+              name: Introdución

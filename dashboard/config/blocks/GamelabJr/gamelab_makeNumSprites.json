@@ -2,7 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "makeNumSprites",
-    "inline": false,
+    "inline": true,
     "blockText": "make {NUM} new {ANIMATION_NAME} sprites",
     "color": [
       355,
@@ -12,8 +12,7 @@
     "args": [
       {
         "name": "NUM",
-        "type": "Number",
-        "field": true
+        "type": "Number"
       },
       {
         "name": "ANIMATION_NAME",

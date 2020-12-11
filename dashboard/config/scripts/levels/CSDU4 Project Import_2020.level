@@ -28,6 +28,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
+    "validation_enabled": "false",
     "teacher_markdown": "#### Breaking for the Day\r\n\r\nDepending on how much time you have in class, this can be a great point to break for the day. This and the next level can be quite time consuming, so if you are running short on time, consider jumping to the Screen Pair activity described in the Extension Activities for this lesson.\r\n\r\n#### Team Time\r\n\r\nThough students are working on their individual copies of their team app at this point, encourage teams to be active and vocal through this portion of the lesson. Any issues that students encounter when importing their teammates' screens can only be resolved through teamwork, and will likely be a problem for all members of the team.",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",

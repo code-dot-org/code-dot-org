@@ -1,4 +1,17 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+import styleConstants from '@cdo/apps/styleConstants';
+import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
+import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
+import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
+import {CdoFieldImageDropdown} from '@cdo/apps/blocklyAddons/cdoFieldImageDropdown';
+import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
+import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
+import CdoScrollbar from '@cdo/apps/blocklyAddons/cdoScrollbar';
+import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
+import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
+import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
+import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
+
 /**
  * Wrapper class for https://github.com/google/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -10,6 +23,15 @@ import {BlocklyVersion} from '@cdo/apps/constants';
 const BlocklyWrapper = function(blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
+
+  /**
+   * Google Blockly sets Block ids to randomly generated 20-character strings.
+   * CDO Blockly set Block ids using a global counter. There are several places in our code and
+   * tests that assume Block ids will be numbers, so we want to re-implement the global counter
+   * and pass the id in the Block constructor, rather than leaving it to Google Blockly.
+   */
+  this.uidCounter_ = 0;
+
   this.wrapReadOnlyProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
       get: function() {
@@ -37,6 +59,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
   blocklyWrapper.wrapReadOnlyProperty('bindEvent_');
+  blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
@@ -44,10 +67,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockValueType');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
+  blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
+  blocklyWrapper.wrapReadOnlyProperty('Events');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
@@ -63,7 +88,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldVariable');
-  blocklyWrapper.wrapReadOnlyProperty('fireUiEvent');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -71,12 +95,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('functionEditor');
   blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
+  blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
+  blocklyWrapper.wrapReadOnlyProperty('geras');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
-  blocklyWrapper.wrapReadOnlyProperty('inject');
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
@@ -87,12 +112,29 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
   blocklyWrapper.wrapReadOnlyProperty('RTL');
+  blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
+  blocklyWrapper.wrapReadOnlyProperty('selected');
+  blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
+  blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('Trashcan');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
+  blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
+  blocklyWrapper.wrapReadOnlyProperty('Xml');
+
+  blocklyWrapper.blockly_.BlockDragger = CdoBlockDragger;
+  blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
+  blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
+  blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.blockly_.Input = CdoInput;
+  blocklyWrapper.geras.PathObject = CdoPathObject;
+  blocklyWrapper.blockly_.Scrollbar = CdoScrollbar;
+  blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
+  blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
@@ -120,10 +162,20 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('JavaScript');
   blocklyWrapper.wrapSettableProperty('readOnly');
   blocklyWrapper.wrapSettableProperty('showUnusedBlocks');
-  blocklyWrapper.wrapSettableProperty('SNAP_RADIUS');
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
-  blocklyWrapper.wrapSettableProperty('Xml');
+
+  // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
+  // See https://github.com/google/blockly/issues/2217
+  Object.defineProperty(blocklyWrapper, 'SNAP_RADIUS', {
+    get: function() {
+      return this.blockly_.SNAP_RADIUS;
+    },
+    set: function(snapRadius) {
+      this.blockly_.SNAP_RADIUS = snapRadius;
+      this.blockly_.CONNECTING_SNAP_RADIUS = snapRadius;
+    }
+  });
 
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
@@ -138,27 +190,32 @@ function initializeBlocklyWrapper(blocklyInstance) {
       RUN_BUTTON_CLICKED: 'runButtonClicked'
     },
     onMainBlockSpaceCreated: () => {}, // TODO
-    createReadOnlyBlockSpace: () => {} // TODO
-  };
-
-  // CDO Blockly titles are equivalent to Google Blockly fields.
-  blocklyWrapper.Block.prototype.getTitles = function() {
-    let fields = [];
-    this.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        fields.push(field);
+    createReadOnlyBlockSpace: (container, xml, options) => {
+      const workspace = new Blockly.WorkspaceSvg({
+        readOnly: true,
+        theme: CdoTheme,
+        plugins: {}
       });
-    });
-    return fields;
-  };
-  blocklyWrapper.Block.prototype.getTitleValue =
-    blocklyWrapper.Block.prototype.getFieldValue;
-  blocklyWrapper.Block.prototype.isUserVisible = () => false; // TODO
-  // Google Blockly only allows you to set the hue, not saturation or value.
-  // TODO: determine if this will work for us, or if there's a workaround to
-  // allow us to keep our colors the same
-  blocklyWrapper.Block.prototype.setHSV = function(h, s, v) {
-    return this.setColour(h);
+      const svg = Blockly.utils.dom.createSvgElement(
+        'svg',
+        {
+          xmlns: 'http://www.w3.org/2000/svg',
+          'xmlns:html': 'http://www.w3.org/1999/xhtml',
+          'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+          version: '1.1',
+          class: 'geras-renderer modern-theme readOnlyBlockSpace'
+        },
+        null
+      );
+      container.appendChild(svg);
+      svg.appendChild(workspace.createDom());
+      Blockly.Xml.domToBlockSpace(workspace, xml);
+      // Shrink SVG to size of the block
+      const bbox = svg.getBBox();
+      svg.setAttribute('height', bbox.height + bbox.y);
+      svg.setAttribute('width', bbox.width + bbox.x);
+      return workspace;
+    }
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
@@ -182,41 +239,33 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return code.join('\n');
   };
 
-  blocklyWrapper.Input.prototype.appendTitle = function(a, b) {
-    return this.appendField(a, b);
+  blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
+    const options = {
+      ...opt_options,
+      theme: CdoTheme,
+      trashcan: true,
+      move: {
+        wheel: true,
+        drag: true,
+        scrollbars: true
+      }
+    };
+    // Shrink container to make room for the workspace header
+    container.style.height = `calc(100% - ${
+      styleConstants['workspace-headers-height']
+    }px)`;
+    blocklyWrapper.editBlocks = opt_options.editBlocks;
+    return blocklyWrapper.blockly_.inject(container, options);
   };
 
-  blocklyWrapper.Workspace.prototype.getToolboxWidth = function() {
-    return blocklyWrapper.mainBlockSpace.getMetrics().toolboxWidth;
-  };
-  blocklyWrapper.Workspace.prototype.addUnusedBlocksHelpListener = () => {}; // TODO
-  blocklyWrapper.Workspace.prototype.getAllUsedBlocks =
-    blocklyWrapper.Workspace.prototype.getAllBlocks; // TODO
-  blocklyWrapper.Workspace.prototype.isReadOnly = () => false; // TODO
-  blocklyWrapper.Workspace.prototype.setEnableToolbox = () => {}; // TODO
-  blocklyWrapper.Workspace.prototype.blockSpaceEditor = {
-    blockLimits: {
-      blockLimitExceeded: () => false, // TODO
-      getLimit: () => {} // TODO
+  // Used by StudioApp to tell Blockly to resize for Mobile Safari.
+  blocklyWrapper.fireUiEvent = function(element, eventName, opt_properties) {
+    if (eventName === 'resize') {
+      blocklyWrapper.svgResize(blocklyWrapper.getMainWorkspace());
     }
   };
 
-  // Aliasing Google's blockToDom() so that we can override it, but still be able
-  // to call Google's blockToDom() in the override function.
-  blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
-  blocklyWrapper.Xml.blockToDom = function(block, ignoreChildBlocks) {
-    const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
-    if (ignoreChildBlocks) {
-      Blockly.Xml.deleteNext(blockXml);
-    }
-    return blockXml;
-  };
-
-  blocklyWrapper.Xml = {
-    ...blocklyWrapper.Xml,
-    domToBlockSpace: blocklyWrapper.Xml.domToWorkspace,
-    blockSpaceToDom: blocklyWrapper.Xml.workspaceToDom
-  };
+  initializeBlocklyXml(blocklyWrapper);
 
   return blocklyWrapper;
 }

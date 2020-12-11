@@ -22,6 +22,12 @@ he-IL:
   csedweek_banner_teachers_text: 'האם אתה מורה למדעי המחשב? ראה עוד משאבים של '
   n_have_learned_an_hoc: "<h1>נסו</h1><h2>שעת קוד</h2><h3># מוגשת</h3>"
   try_hoc_num_served: "<h1>נסו</h1><h2>שעה של קוד</h2><h3>%{num} הוגשו"
+  try_hoc_num_served_markdown: |-
+    # נסו
+
+    ## שעה של קוד
+
+    ### %{num} הוגשו #Try an
   anybody_can_learn: כל אחד יכול ללמוד.
   learn_now: למד עכשיו
   petition_message: כל תלמיד בכל בית-ספר זכאי להזדמנות ללמוד מדעי המחשב
@@ -60,6 +66,7 @@ he-IL:
   hoc2014_support: תמוך בו &#x25BE;
   hoc2014_whatishoc: מהו Hour of Code?
   csedweek_map_header: "# CSEdWeek / אירועי שעת קוד ברחבי העולם"
+  csedweek_map_header_num: "%{num} אירועי CSEdWeek / שעה של קוד מסביב לעולם"
   csedweek_map_signup: העלה את התכנות שלך
   csedweek_map_search_placeholder: חפש אירועי שעת קוד
   csedweek_map_search_search: חפש
@@ -128,10 +135,17 @@ he-IL:
   third_party_tynker_btn_curriculum: נסו את תוכנית הלימודים של Tynker עבור גילאי ראשית
     קריאה
   third_party_tynker_btn_site: בקר ב - Tynker
+  third_party_scratchjr_btn_curriculum: הורידו את תוכנית הלימוד של סקראץ' ג'וניור
   third_party_scratchjr_btn_site: בקרו בסקראץ' ג'וניור
+  third_party_scratch_desc: באמצעות סקראץ', ניתן לתכנת סיפורים אינטראקטיביים, משחקים,
+    ואנימציות ולשתף את היצירות שלך עם הקהילה המקוונת. סקראץ' עוזר לצעירות וצעירים
+    ללמוד כיצד לחשוב באופן יצירתי ושיטתי ולעבוד באופן שיתופי - כישורים חיוניים לחיים
+    במאה ה-21.
+  third_party_scratch_btn_curriculum: הורידו את תוכנית הלימוד של סקראץ'
   third_party_scratch_btn_forum: פורום המורים של סקראץ'
   third_party_scratch_btn_site: בקרו בסקראץ'
   third_party_lightbot_btn_site: בקרו את לייטבוט
+  third_party_khan_btn_learn: למדו מדעי המחשב עם אקדמיית קהאן
   third_party_khan_btn_forum: פורום מדעי המחשב האקדמיה של קהאן
   third_party_codehs_btn_try: מבוא למדעי המחשב מידע נוסף עבור בתי ספר
   third_party_codecademy_btn_curriculum: הורד את תוכנית הלימודים של Codecademy
@@ -146,7 +160,14 @@ he-IL:
   third_party_cost_free_2: נסיון חינם, $2 לסטודנט
   third_party_cost_free_10: נסיון חינם, $9.99 לחודש
   third_party_desc_5_4to8: בערך חמישה שיעורים, המיועדים לכיתות ד-ח.
+  third_party_desc_10to12_kto3: בערך 10-12 שיעורים, המיועדים לתלמידי גן עד כיתה ג'
+  third_party_desc_11_kto5: בערך 11 שיעורים, המיועדים לתלמידי גן עד כיתה ה'
+  third_party_desc_10to12_kto5: בערך 10-12 שיעורים, המיועדים לתלמידי גן עד כיתה ה'
+  third_party_desc_40_4to8: מעל ל-40 שיעורים, המיועדים לכיתות ד' עד ח'
+  third_party_desc_dozens_kto8: עשרות שיעורים לתלמידי הגן וכיתות א' עד ח'
+  third_party_desc_10to15_3to12: בין 10 & 15 שיעורים, המיועדים לכיתות ג' עד י"ב
   third_party_desc_20_2to8: כ- 20 שיעורים, המיועדות לכיתות ב' עד ח'
+  third_party_desc_20_4to12: מעל ל-20 שיעורים, המיועדים לכיתות ד' עד י"ב
   enter_valid_age: בבקשה, בחר את גילך
   enter_valid_email: אנא הכנס כתובת דוא״ל תקינה
   get_a_certificate_message: אנחנו נשלח לך תעודה ומידע על איך <a href='/learn/beyond'>ללמוד
@@ -157,9 +178,17 @@ he-IL:
   thanks_for_submitting: תודה על השליחה!
   if_you_enjoyed: אם נהנית מהלמידה, בקש מחבריך לנסות גם! אנחנו רוצים שכל העולם ילמד.
   personalize_certificate: התאם אישית את האישור שלך
+  certificate_sponsor_message: "%{sponsor_name} נתנו את המתנה הנדיבה כדי לתת חסות
+    ללמידה שלך."
+  print_ice_art_from_frozen: הדפיסו אומנות קרח מהמדריך של "לשבור את הקרח"
+  print_one_here_certificates: הדפיסו אחד כאן.
+  enter_certificate_names: הכניסו מעל ל-30 שמות, **אחד בכל שורה**. עמוד להדפסה עם
+    תעודות %{script_name} מותאמות אישית יווצר.
   share_achievement: שתף בהישגיך
   beyond_hour_message: המשך עם <a href='http://studio.code.org'> קורסים אחרים</a>
     שלנו, או ראה אפשרויות נוספות כדי <a href='/learn/beyond'> ללמוד מעבר שעה אחת</a>.
+  beyond_hour_message_markdown: המשיכו עם ה[קורסים האחרים](http://studio.code.org)
+    שלנו, או שתראו עוד אפשרויות ל[למידה מעבר לשעה](/learn/beyond).
   leaderboards_for_hoc: טבלת המובילים בשעת קוד.
   support_url: http://support.code.org/
   country: מדינה
@@ -212,6 +241,13 @@ he-IL:
   just_did_coursed: בדיוק עכשיו סיימתי את קורס ד' - בואו תראו! codeorg@
   just_did_coursee: סיימתי עכשיו את מסלול E - נסו אותו! @codeorg
   just_did_coursef: סיימתי עכשיו את מסלול F - נסו אותו! @codeorg
+  just_did_accelerated: סיימתי עכשיו את הקורס המואץ - נסו אותו! @codeorg
+  just_did_hoc_donor: 'הרגע עשיתי #HourOfCode - נסו את זה! (תודה %{donor_twitter}
+    על התמיכה ב@codeorg)'
+  just_did_course_donor: הרגע סיימתי %{course} - נסו את זה! תודה %{donor_twitter}
+    על התמיכה ב@codeorg
+  twitter_teach_cs: תשעה מתוך עשרה אנשים מסכימים, על בתי ספר ללמד מדעי המחשב. http://youtu.be/nKIu9yen5nc.
+    בקרו https://code.org/.
   learn_hoc: למד שעת קוד
   beyond_hoc: מעבר לשעה אחת
   what_gender: מהו המין שלך?
@@ -342,6 +378,7 @@ he-IL:
   homepage_slot_text_link_stats: ראה סטטיסטיקה
   homepage_slot_text_link_buy: השתתף
   homepage_slot_text_link_donate: תרום
+  homepage_slot_text_link_shop: חולצות, כובעים, & עוד
   homepage_slot_text_link_administrators: הביאו את מדעי המחשב לבית הספר שלכם
   homepage_gallery_header: מעל %{project_count} מיליון פרויקטי Code.org נוצרו
   homepage_header_donors: code.org מודה לתומכיו
@@ -389,8 +426,18 @@ he-IL:
   class_submission_level_college: המכללה
   class_submission_level_vocational: מקצועית
   class_submission_languages_other: שפות אחרות
+  videos_more: עוד <a href='%{inspiring_videos_playlist}'>סרטונים מעוררי השראה</a>
+    עם מודלים לחיקוי וסלבס.
+  videos_more_markdown: עוד [סרטונים מעוררי השראה](%{inspiring_videos_playlist}) עם
+    מודלים לחיקוי וסלבס.
+  careers_page_more: עוד <a href='%{careers_url}' target='_blank'>סרטונים מעוררי השראה</a>
+    עם מודלים לחיקוי וסלבס.
+  careers_page_more_markdown: עוד [סרטונים מעוררי השראה](%{careers_url}) עם מודלים
+    לחיקוי וסלבס.
   playlab_choose_theme: בחר ערכת נושא למעבדת הצעצועים שלך
   playlab_classic_title: קלאסי
+  playlab_gumball_title: העולם המופלא של גאמבול
+  playlab_iceage_title: עידן הקרח - בקרוב
   playlab_iceage_title_live: עידן הקרח
   starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
   starwars_javascript_title: JavaScript
@@ -398,6 +445,8 @@ he-IL:
   starwars_javascript_specs: אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה
   starwars_blocks_title: בלוקים
   starwars_blocks_description: השתמש בבלוקים ב"גרור ושחרר".
+  starwars_blocks_specs: שפות רבות | דפדפנים מודרנים, סמארטפונים, טאבלטים | לגילאי
+    6-106
   starwars_platform_text: דפדפנים מודרנים, סמארטפונים, טאבלטים
   mc_name: 'שעת הקוד: גרסת מיינקראפט'
   mc_longdescription: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם של
@@ -406,6 +455,7 @@ he-IL:
     של מיינקראפט.
   mc_gradelevel: לגילאי 6 ומעלה
   mc_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
+  mc_specs: שפות רבות | דפדפנים מודרניים וטאבלטים | לגילאי 6-106
   minecraft_agent: המסע של הגיבור במיינקראפט
   minecraft_designer: מעצב מיינקראפט
   minecraft_adventurer: הרפתקן מיינקראפט
@@ -1320,6 +1370,10 @@ he-IL:
   hoc2018_mc_no_internet: אין אינטרנט?
   hoc2018_mc_educators: למורים
   hoc2018_mc_educators_box2_button: הורד
+  hoc2018_mc_videos_more: עוד <a href='%{inspiring_videos_playlist}'>סרטונים מעוררי
+    השראה</a> עם מודלים לחיקוי וסלבס.
+  hoc2018_mc_careers_more: עוד <a href='%{careers_url}' target='_blank'>סרטונים מעוררי
+    השראה</a> עם מודלים לחיקוי וסלבס.
   hoc2018_mc_video_1min: דקה אחת
   hoc2018_mc_video_2min: 2 דק'
   hoc2018_mc_video_3min: שלוש דקות
@@ -1374,3 +1428,8 @@ he-IL:
   hoc2018_dance_video3: מסיבת ריקודים - תכונות
   hoc2018_dance_video4: מסיבת ריקודים - סיום
   hoc2018_mc_with_microsoft: 'בשיתוף עם: '
+  hoc2018_mc_thank_microsoft: אנו מודים למיקרוסופט על תמיכתה בחזון ובמשימה שלנו –
+    להבטיח שלכל ילד תהיה ההזדמנות ללמוד מדעי המחשב ולרכוש את הכישורים הנדרשים כדי
+    להצליח במאה ה־21.
+  ! '': " "
+  footer_powered_by_aws: ממונע ע"י Amazon Web Services

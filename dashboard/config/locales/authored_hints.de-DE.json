@@ -104,7 +104,7 @@
           "2-3_Artist_Nested_Loops_3_a": "Brauchst du Hilfe mit den Winkeln?\\\n**360/12 = 30**"
         },
         "2-3 Artist Nested Loops 5": {
-          "2-3_Artist_Nested_Loops_5_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?"
+          "2-3_Artist_Nested_Loops_5_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?"
         },
         "2-3 Artist Nested Loops 7": {
           "2-3_Artist_Nested_Loops_7_a": "Wie weit solltest du dich in jedem Schleifendurchlauf drehen?\n\nWas ist 360/10?"
@@ -1190,10 +1190,10 @@
         },
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blume und jede Wabe erreicht, ohne auf Bäume zu treffen? Der beste Weg ist eine Spirale.\n\n**Du kannst das lösen, ohne jemals nach links zu gehen.**",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Der Originalcode würde gut funktionieren - wenn es nur einen Schatz in jedem Stapel gäbe!",
@@ -1252,8 +1252,8 @@
           "courseF_bee_functions_challenge2_b": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -2865,7 +2865,7 @@
         },
         "courseB_maze_seq1": {
           "courseB_maze_seq1_a": "Verbinde die Blöcke mit dem Block <xml><block type=\"when_run\"/></xml>, damit sich der Vogel bewegt!",
-          "courseB_maze_seq1_b": "Ziehe drei dieser Pfeile <xml><block type=\"maze_moveSouth\"/></xml> aus und verbinde sie mit dem Block <xml><block type=\"when_run\"/></xml>, um deinen Vogel zum Schwein zu bringen."
+          "courseB_maze_seq1_b": "Ziehe drei dieser  <xml><block type=\"maze_moveSouth\"/></xml> Pfeile raus und verbinde sie mit dem  <xml><block type=\"when_run\"/></xml> Block, um deinen Vogel zum Schwein zu bringen."
         },
         "courseB_maze_seq10": {
           "courseB_maze_seq10_a": "Versuche zunächst, die Schritte auf einem Blatt Papier aufzuschreiben.",
@@ -2889,70 +2889,70 @@
         },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_a": "In diesem Programm fehlt ein Block. Kannst herausfinden, welcher?",
-          "courseB_maze_seq2_b": "Versuche, den Code, der dir gegeben wurde, auszuführen, damit du sehen kannst, was der Vogel als nächstes tun soll."
+          "courseB_maze_seq2_b": "Versuche den Code auszuführen, den du bekommen hast, um zu sehen, was der Vogel als nächstes tun soll."
         },
         "courseB_maze_seq3": {
           "courseB_maze_seq3_a": "Einer der Blöcke bewegt den Vogel in die falsche Richtung. Kannst du herausfinden, welcher und ihn durch den richtigen Block ersetzen?",
-          "courseB_maze_seq3_b": "Versuche, mit Hilfe der Schaltfläche „Step“ herauszufinden, wo das Programm nicht richtig läuft. Liegt es am ersten Schritt? Stimmt etwas mit dem zweiten Schritt nicht?",
+          "courseB_maze_seq3_b": "Versuche, mit Hilfe der Schaltfläche „Schritt“ herauszufinden, wo das Programm nicht richtig läuft. Liegt es am ersten Schritt? Stimmt etwas mit dem zweiten Schritt nicht?",
           "courseB_maze_seq3_c": "Der Block <xml><block type=\"maze_moveWest\"/></xml> scheint den Vogel nicht in die richtige Richtung zu bewegen."
         },
         "courseB_maze_seq4": {
           "courseB_maze_seq4_a": "Versuche, eine Anweisung nach der anderen hinzuzufügen, bis du zum Schwein kommst.",
-          "courseB_maze_seq4_b": "Du willst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
+          "courseB_maze_seq4_b": "Du musst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
         },
         "courseB_maze_seq4_2018": {
           "courseB_maze_seq4_a": "Versuche eine Anweisung nach der anderen hinzuzufügen, bis du an die Eichel kommst.",
-          "courseB_maze_seq4_b": "Du willst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
+          "courseB_maze_seq4_b": "Du musst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
         },
         "courseB_maze_seq4_2019": {
           "courseB_maze_seq4_a": "Versuche eine Anweisung nach der anderen hinzuzufügen, bis du an die Eichel kommst.",
-          "courseB_maze_seq4_b": "Du willst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
+          "courseB_maze_seq4_b": "Du musst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
         },
         "courseB_maze_seq4_2020": {
           "courseB_maze_seq4_a": "Versuche eine Anweisung nach der anderen hinzuzufügen, bis du an die Eichel kommst.",
-          "courseB_maze_seq4_b": "Du willst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
+          "courseB_maze_seq4_b": "Du musst den Block <xml><block type=\"maze_moveEast\"/></xml> verwenden, um dieses Rätsel zu lösen."
         },
         "courseB_maze_seq5": {
-          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
+          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
           "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Du weißt nicht genau, wie man zum Schwein kommt? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2018": {
-          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
-          "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
+          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
+          "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten um diese Aufgabe zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2019": {
-          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
+          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
           "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq5_2020": {
-          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier zu zeichnen.",
+          "courseB_maze_seq5_a": "Wenn du nicht weiterkommst, versuche, den Weg auf Papier auf zu zeichnen.",
           "courseB_maze_seq5_b": "Es gibt 2 Möglichkeiten, um dieses Rätsel zu lösen!",
           "courseB_maze_seq5_c": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg."
         },
         "courseB_maze_seq6": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
-          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
+          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen.",
           "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Du bist nicht sicher, wie man zum Schwein kommt? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2018": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
-          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
-          "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
+          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen.",
+          "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2019": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
-          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
+          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen.",
           "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
         "courseB_maze_seq6_2020": {
           "courseB_maze_seq6_a": "Dein endgültiger Code sollte drei Bewegungsblöcke enthalten.",
-          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen, einem Teil mit Seitwärtsbewegung und einem Auf- und Abwärtsbewegung",
+          "courseB_maze_seq6_b": "Wenn du nicht weiterkommst, versuche, das Rätsel in zwei Teilen zu lösen: Einen Teil mit Seitwärtsbewegungen, den anderen mit Auf- und Abwärtsbewegungen.",
           "courseB_maze_seq5_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq5_d": "Bist du Dir nicht sicher, wie du an die Eichel kommst? Versuche diesen Weg!"
         },
@@ -2998,25 +2998,25 @@
         },
         "courseB_maze_seq9": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
-          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
+          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
           "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2018": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
-          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
-          "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
+          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
+          "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2019": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
-          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
+          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
           "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
         "courseB_maze_seq9_2020": {
           "courseB_maze_seq9_a": "Versuche zunächst, alle Schritte auf einem Blatt Papier aufzuschreiben.",
-          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während des Aufbaus.",
+          "courseB_maze_seq9_b": "Baue dein Programm Block für Block auf und teste es während du es aufbaust.",
           "courseB_maze_seq9_c": "Es gibt zwei Möglichkeiten, wie du dieses Rätsel lösen kannst.",
           "courseB_maze_seq9_d": "Du kommst nicht weiter? Probiere diesen Weg!"
         },
@@ -3379,172 +3379,172 @@
           "courseE_playLab_scaffold4_a": "Verwende `Punkt erzielen`, um einen Punkt hinzuzufügen, und `Punkt abziehen`, um einen Punkt abzuziehen."
         },
         "courseC_PlayLab_events1": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2018": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2019": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events1_2020": {
-          "courseC_PlayLab_events1_a": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events2": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Bausteine mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Verwende das Dropdown-Menü auf dem zweiten `Figur __ sagt` Baustein, um zu ändern, welcher Figur sprechen soll."
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2018": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Bausteine mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Verwende das Dropdown-Menü auf dem zweiten `Figur __ sagt` Baustein, um zu ändern, welcher Figur sprechen soll."
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2019": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Bausteine mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Verwende das Dropdown-Menü auf dem zweiten `Figur __ sagt` Baustein, um zu ändern, welcher Figur sprechen soll."
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events2_2020": {
-          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Bausteine mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Verwende das Dropdown-Menü auf dem zweiten `Figur __ sagt` Baustein, um zu ändern, welcher Figur sprechen soll."
+          "courseC_PlayLab_events2_a": "Verbinde zwei dieser Blöcke mit dem `wenn Ausführen` Block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Verwende das Drop-down-Menü in dem zweiten Block `Figur __ sagt`, um zu ändern, welche Figur spricht!"
         },
         "courseC_PlayLab_events3": {
-          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur um etwa 25 Pixel nach rechts zu verschieben, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events3_b": "Gibt es einen Baustein in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
+          "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2018": {
-          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur um etwa 25 Pixel nach rechts zu verschieben, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events3_b": "Gibt es einen Baustein in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
+          "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2019": {
-          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur um etwa 25 Pixel nach rechts zu verschieben, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events3_b": "Gibt es einen Baustein in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
+          "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events3_2020": {
-          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur um etwa 25 Pixel nach rechts zu verschieben, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events3_b": "Gibt es einen Baustein in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
-          "courseC_PlayLab_events3_c": "Verbinde diesen Baustein mit dem `wenn Ausführen`-Baustein:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_a": "Du brauchst Jorge nur etwa 25 Pixel nach rechts bewegen, um diese Aufgabe zu lösen.",
+          "courseC_PlayLab_events3_b": "Gibt es einen Block in der Werkzeugkiste, der aussieht, als könnte er eine Figur bewegen?",
+          "courseC_PlayLab_events3_c": "Verbinde diesen Block mit dem `wenn Ausführen` Block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4": {
-          "courseC_PlayLab_events4_b": "Wenn die Schaltfläche \"Ausführen\" angeklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um Olive die Katze zu erreichen.",
-          "courseC_PlayLab_events4_a": "Um diese Aufgabe zu lösen, musst du einen `Figur __ sagt` Baustein an das Ereignis `wenn die Figur berührt` anhängen."
+          "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
+          "courseC_PlayLab_events4_a": "Du musst einen Block `Figur __ sagt__` an das Ereignis `wenn die Figur __berührt__` anhängen, um die Aufgabe zu lösen!"
         },
         "courseC_PlayLab_events4_2018": {
-          "courseC_PlayLab_events4_b": "Wenn die Schaltfläche \"Ausführen\" angeklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um Olive die Katze zu erreichen.",
-          "courseC_PlayLab_events4_a": "Um diese Aufgabe zu lösen, musst du einen `Figur __ sagt` Baustein an das Ereignis `wenn die Figur berührt` anhängen."
+          "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
+          "courseC_PlayLab_events4_a": "Du musst einen Block `Figur __ sagt__` an das Ereignis `wenn die Figur __berührt__` anhängen, um die Aufgabe zu lösen!"
         },
         "courseC_PlayLab_events4_2019": {
-          "courseC_PlayLab_events4_b": "Wenn die Schaltfläche \"Ausführen\" angeklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um Olive die Katze zu erreichen.",
-          "courseC_PlayLab_events4_a": "Um diese Aufgabe zu lösen, musst du einen `Figur __ sagt` Baustein an das Ereignis `wenn die Figur berührt` anhängen."
+          "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
+          "courseC_PlayLab_events4_a": "Du musst einen Block `Figur __ sagt__` an das Ereignis `wenn die Figur __berührt__` anhängen, um die Aufgabe zu lösen!"
         },
         "courseC_PlayLab_events4_2020": {
-          "courseC_PlayLab_events4_b": "Wenn die Schaltfläche \"Ausführen\" angeklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um Olive die Katze zu erreichen.",
-          "courseC_PlayLab_events4_a": "Um diese Aufgabe zu lösen, musst du einen `Figur __ sagt` Baustein an das Ereignis `wenn die Figur berührt` anhängen."
+          "courseC_PlayLab_events4_b": "Wenn \"Ausführen\" geklickt wird, muss sich Jorge um **100** Pixel nach rechts bewegen, um die Katze Olive zu erreichen.",
+          "courseC_PlayLab_events4_a": "Du musst einen Block `Figur __ sagt__` an das Ereignis `wenn die Figur __berührt__` anhängen, um die Aufgabe zu lösen!"
         },
         "courseC_PlayLab_events5": {
-          "courseC_PlayLab_events5_a": "Du musst auf das Dropdown-Menü im \"Figur sagt\"-Baustein klicken, um den Text \"Was gibt's Neues?\" zu finden",
+          "courseC_PlayLab_events5_a": "Du musst auf das Drop-down-Menü im Block 'Figur sagt' klicken, um den Text \"Was gibt's Neues?\" zu finden",
           "courseC_PlayLab_events5_b": "Klicke auf Octavia, wenn du dein Programm ausführst, um zu überprüfen, ob es funktioniert!"
         },
         "courseC_PlayLab_events5_2018": {
-          "courseC_PlayLab_events5_a": "Du musst auf das Dropdown-Menü im \"Figur sagt\"-Baustein klicken, um den Text \"Was gibt's Neues?\" zu finden",
+          "courseC_PlayLab_events5_a": "Du musst auf das Drop-down-Menü im Block 'Figur sagt' klicken, um den Text \"Was gibt's Neues?\" zu finden",
           "courseC_PlayLab_events5_b": "Klicke auf Octavia, wenn du dein Programm ausführst, um zu überprüfen, ob es funktioniert!"
         },
         "courseC_PlayLab_events5_2019": {
-          "courseC_PlayLab_events5_a": "Du musst auf das Dropdown-Menü im \"Figur sagt\"-Baustein klicken, um den Text \"Was gibt's Neues?\" zu finden",
+          "courseC_PlayLab_events5_a": "Du musst auf das Drop-down-Menü im Block 'Figur sagt' klicken, um den Text \"Was gibt's Neues?\" zu finden",
           "courseC_PlayLab_events5_b": "Klicke auf Octavia, wenn du dein Programm ausführst, um zu überprüfen, ob es funktioniert!"
         },
         "courseC_PlayLab_events5_2020": {
-          "courseC_PlayLab_events5_a": "Du musst auf das Dropdown-Menü im \"Figur sagt\"-Baustein klicken, um den Text \"Was gibt's Neues?\" zu finden",
+          "courseC_PlayLab_events5_a": "Du musst auf das Drop-down-Menü im Block 'Figur sagt' klicken, um den Text \"Was gibt's Neues?\" zu finden",
           "courseC_PlayLab_events5_b": "Klicke auf Octavia, wenn du dein Programm ausführst, um zu überprüfen, ob es funktioniert!"
         },
         "courseC_PlayLab_events6": {
-          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil`-Baustein sollte sich eine Aktion befinden.",
-          "courseC_PlayLab_events6_b": "Verwende das Dropdown-Menü im Baustein `Figur 1 bewegen`, um die Bewegungsrichtung von Waddles zu ändern.",
+          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil` Block sollte sich eine Aktion befinden.",
+          "courseC_PlayLab_events6_b": "Verwende das Drop-down-Menü im Block `bewege Figur 1`, um die Bewegungsrichtung von Waddles zu ändern!",
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events6_2018": {
-          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil`-Baustein sollte sich eine Aktion befinden.",
-          "courseC_PlayLab_events6_b": "Verwende das Dropdown-Menü im Baustein `Figur 1 bewegen`, um die Bewegungsrichtung von Waddles zu ändern.",
+          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil` Block sollte sich eine Aktion befinden.",
+          "courseC_PlayLab_events6_b": "Verwende das Drop-down-Menü im Block `bewege Figur 1`, um die Bewegungsrichtung von Waddles zu ändern!",
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events6_2019": {
-          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil`-Baustein sollte sich eine Aktion befinden.",
-          "courseC_PlayLab_events6_b": "Verwende das Dropdown-Menü im Baustein `Figur 1 bewegen`, um die Bewegungsrichtung von Waddles zu ändern.",
+          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil` Block sollte sich eine Aktion befinden.",
+          "courseC_PlayLab_events6_b": "Verwende das Drop-down-Menü im Block `bewege Figur 1`, um die Bewegungsrichtung von Waddles zu ändern!",
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events6_2020": {
-          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil`-Baustein sollte sich eine Aktion befinden.",
-          "courseC_PlayLab_events6_b": "Verwende das Dropdown-Menü im Baustein `Figur 1 bewegen`, um die Bewegungsrichtung von Waddles zu ändern.",
+          "courseC_PlayLab_events6_a": "Unter jedem grünen `wenn-Pfeil` Block sollte sich eine Aktion befinden.",
+          "courseC_PlayLab_events6_b": "Verwende das Drop-down-Menü im Block `bewege Figur 1`, um die Bewegungsrichtung von Waddles zu ändern!",
           "courseC_PlayLab_events6_c": "Wenn du fertig bist, solltest du in der Lage sein, Waddles mit den Pfeiltasten auf deinem Computer zu bewegen!"
         },
         "courseC_PlayLab_events7": {
-          "courseC_PlayLab_events7_a": "Verwende den Baustein `Figur 2 um 400 Pixel nach oben bewegen‘ und den Baustein`Figur 2 um 400 Pixel nach unten bewegen‘ in der Schleife `endlos wiederholen`, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events7_b": "Die `endlos wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein, sie läuft von selbst ab."
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2018": {
-          "courseC_PlayLab_events7_a": "Verwende den Baustein `Figur 2 um 400 Pixel nach oben bewegen‘ und den Baustein`Figur 2 um 400 Pixel nach unten bewegen‘ in der Schleife `endlos wiederholen`, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events7_b": "Die `endlos wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein, sie läuft von selbst ab."
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2019": {
-          "courseC_PlayLab_events7_a": "Verwende den Baustein `Figur 2 um 400 Pixel nach oben bewegen‘ und den Baustein`Figur 2 um 400 Pixel nach unten bewegen‘ in der Schleife `endlos wiederholen`, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events7_b": "Die `endlos wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein, sie läuft von selbst ab."
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events7_2020": {
-          "courseC_PlayLab_events7_a": "Verwende den Baustein `Figur 2 um 400 Pixel nach oben bewegen‘ und den Baustein`Figur 2 um 400 Pixel nach unten bewegen‘ in der Schleife `endlos wiederholen`, um diese Aufgabe zu lösen.",
-          "courseC_PlayLab_events7_b": "Die `endlos wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein, sie läuft von selbst ab."
+          "courseC_PlayLab_events7_a": "Verwende die beiden Blöcke `bewege Figur 2 um 400 Pixel nach oben‘ und`bewege Figur 2 um 400 Pixel nach unten‘ in der Schleife `ewig wiederholen`, um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_events7_b": "Die `ewig wiederholen`-Schleife muss nicht mit anderen Ereignisblöcken verbunden sein; sie läuft von selbst ab."
         },
         "courseC_PlayLab_events8": {
-          "courseC_PlayLab_events8_a": "Du musst Bausteine mit dem `wenn Figur berührt`-Baustein verbinden, damit das richtig funktioniert.",
-          "courseC_PlayLab_events8_b": "Die Bausteine `Figur sagt` und `Ton abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
+          "courseC_PlayLab_events8_a": "Du musst Blöcke mit dem `wenn Figur berührt` Block verbinden, damit das richtig funktioniert!",
+          "courseC_PlayLab_events8_b": "Die Blöcke `Figur sagt` und `Geräusch abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
         },
         "courseC_PlayLab_events8_2018": {
-          "courseC_PlayLab_events8_a": "Du musst Bausteine mit dem `wenn Figur berührt`-Baustein verbinden, damit das richtig funktioniert.",
-          "courseC_PlayLab_events8_b": "Die Bausteine `Figur sagt` und `Ton abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
+          "courseC_PlayLab_events8_a": "Du musst Blöcke mit dem `wenn Figur berührt` Block verbinden, damit das richtig funktioniert!",
+          "courseC_PlayLab_events8_b": "Die Blöcke `Figur sagt` und `Geräusch abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
         },
         "courseC_PlayLab_events8_2019": {
-          "courseC_PlayLab_events8_a": "Du musst Bausteine mit dem `wenn Figur berührt`-Baustein verbinden, damit das richtig funktioniert.",
-          "courseC_PlayLab_events8_b": "Die Bausteine `Figur sagt` und `Ton abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
+          "courseC_PlayLab_events8_a": "Du musst Blöcke mit dem `wenn Figur berührt` Block verbinden, damit das richtig funktioniert!",
+          "courseC_PlayLab_events8_b": "Die Blöcke `Figur sagt` und `Geräusch abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
         },
         "courseC_PlayLab_events8_2020": {
-          "courseC_PlayLab_events8_a": "Du musst Bausteine mit dem `wenn Figur berührt`-Baustein verbinden, damit das richtig funktioniert.",
-          "courseC_PlayLab_events8_b": "Die Bausteine `Figur sagt` und `Ton abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
+          "courseC_PlayLab_events8_a": "Du musst Blöcke mit dem `wenn Figur berührt` Block verbinden, damit das richtig funktioniert!",
+          "courseC_PlayLab_events8_b": "Die Blöcke `Figur sagt` und `Geräusch abspielen` in der Werkzeugkiste sollten dir dabei helfen!"
         },
         "courseC_PlayLab_events9": {
-          "courseC_PlayLab_events9_a": "Der `Punkt machen`-Baustein wird dir bei der Lösung dieser Aufgabe helfen.",
-          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer `wenn die Figur berührt`-Baustein Figur **1** und Figur **3** enthält.",
+          "courseC_PlayLab_events9_a": "Der `Punkt` Block wird dir bei der Lösung dieser Aufgabe helfen.",
+          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer Block `wenn die Figur berührt` die Figur **1** und Figur **3** enthält.",
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_events9_2018": {
-          "courseC_PlayLab_events9_a": "Der `Punkt machen`-Baustein wird dir bei der Lösung dieser Aufgabe helfen.",
-          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer `wenn die Figur berührt`-Baustein Figur **1** und Figur **3** enthält.",
+          "courseC_PlayLab_events9_a": "Der `Punkt` Block wird dir bei der Lösung dieser Aufgabe helfen.",
+          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer Block `wenn die Figur berührt` die Figur **1** und Figur **3** enthält.",
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_events9_2019": {
-          "courseC_PlayLab_events9_a": "Der `Punkt machen`-Baustein wird dir bei der Lösung dieser Aufgabe helfen.",
-          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer `wenn die Figur berührt`-Baustein Figur **1** und Figur **3** enthält.",
+          "courseC_PlayLab_events9_a": "Der `Punkt` Block wird dir bei der Lösung dieser Aufgabe helfen.",
+          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer Block `wenn die Figur berührt` die Figur **1** und Figur **3** enthält.",
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_events9_2020": {
-          "courseC_PlayLab_events9_a": "Der `Punkt machen`-Baustein wird dir bei der Lösung dieser Aufgabe helfen.",
-          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer `wenn die Figur berührt`-Baustein Figur **1** und Figur **3** enthält.",
+          "courseC_PlayLab_events9_a": "Der `Punkt` Block wird dir bei der Lösung dieser Aufgabe helfen.",
+          "courseC_PlayLab_events9_b": "Achte darauf, dass dein neuer Block `wenn die Figur berührt` die Figur **1** und Figur **3** enthält.",
           "courseC_PlayLab_events9_c": "Du kannst mehr als ein `wenn Figur berührt` Ereignis in deinem Arbeitsbereich haben, so dass du das erste nicht löschen musst!"
         },
         "courseC_PlayLab_eventsA": {
-          "courseC_PlayLab_eventsA_a": "Verwende den Baustein \"Hintergrund bestimmen\" und den Baustein \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um dieses Aufgabe zu lösen.",
-          "courseC_PlayLab_eventsA_b": "Um diese Aufgabe zu lösen, musst du einen `wenn ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen."
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2018": {
-          "courseC_PlayLab_eventsA_a": "Verwende den Baustein \"Hintergrund bestimmen\" und den Baustein \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um dieses Aufgabe zu lösen.",
-          "courseC_PlayLab_eventsA_b": "Um diese Aufgabe zu lösen, musst du einen `wenn ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen."
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2019": {
-          "courseC_PlayLab_eventsA_a": "Verwende den Baustein \"Hintergrund bestimmen\" und den Baustein \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um dieses Aufgabe zu lösen.",
-          "courseC_PlayLab_eventsA_b": "Um diese Aufgabe zu lösen, musst du einen `wenn ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen."
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_2020": {
-          "courseC_PlayLab_eventsA_a": "Verwende den Baustein \"Hintergrund bestimmen\" und den Baustein \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um dieses Aufgabe zu lösen.",
-          "courseC_PlayLab_eventsA_b": "Um diese Aufgabe zu lösen, musst du einen `wenn ausgeführt wird` Ereignisbaustein in den Arbeitsbereich ziehen."
+          "courseC_PlayLab_eventsA_a": "Verwende die Blöcke \"Hintergrund setzen\" und \"Figur auf \\_\\_\\_\\_ Geschwindigkeit setzen\", um diese Aufgabe zu lösen!",
+          "courseC_PlayLab_eventsA_b": "Du musst extra einen 'wenn Ausführen'  Ereignisblock in den Arbeitsbereich ziehen, um diese Aufgabe zu lösen!"
         },
         "courseC_PlayLab_eventsA_embed_2019": {
           "courseC_PlayLab_eventsA_a": "Benutze die Pfeilschlüssel um den Pinguin zu bewegen. Du musst keinen Code schreiben, um die Ebene abzuschließen."
@@ -3555,41 +3555,41 @@
         "courseC_PlayLab_eventsFP": {
           "idea1": "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
           "idea2": "_Brauchst du eine Idee?_ \n\n**Auf ein Abenteuer gehen** - Ändere den Hintergrund, dann lass die Figuren darüber sprechen, wo sie sich gerade befinden.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (benutze die `wenn Pfeil nach oben`- und \\`wenn Pfeil nach unten‘-Bausteine) und spiele dann zufällige Töne ab, wenn sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2018": {
           "idea1": "_Brauchst du eine Idee?_ \n\n**Wer ist da?** Lass die Figuren in zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes auftaucht. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
           "idea2": "_Brauchst du eine Idee?_ \n\n**Auf ein Abenteuer gehen** - Ändere den Hintergrund, dann lass die Figuren darüber sprechen, wo sie sich gerade befinden.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (benutze die `wenn Pfeil nach oben`- und \\`wenn Pfeil nach unten‘-Bausteine) und spiele dann zufällige Töne ab, wenn sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2019": {
           "idea1": "Brauchst du eine Idee?\n\n**Wer ist da?** Lasse Charaktere mit zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes erscheint.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "_Brauchst du eine Idee?_\n\n**Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (benutze die `wenn Pfeil nach oben`- und \\`wenn Pfeil nach unten‘-Bausteine) und spiele dann zufällige Töne ab, wenn sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_eventsFP_2020": {
           "idea1": "Brauchst du eine Idee?\n\n**Wer ist da?** Lasse Charaktere mit zufälligen Bildern erscheinen, so dass niemand weiß, wer als nächstes erscheint.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "_Brauchst du eine Idee?_\n\n**Ein Abenteuer erleben** - Ändere den Hintergrund, dann lasse die Charaktere darüber reden, wo sie sich gerade befinden.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
-          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (benutze die `wenn Pfeil nach oben`- und \\`wenn Pfeil nach unten‘-Bausteine) und spiele dann zufällige Töne ab, wenn sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
+          "idea3": "_Brauchst du eine Idee?_ \n\n**Flippern** - Bewege eine Figur mit den Pfeiltasten (nimm die `wenn Pfeil nach oben` und \\`wenn Pfeil nach unten‘ Blöcke) und spiele zufällige Töne ab, sobald sie mit anderen Figuren auf dem Bildschirm zusammenstößt."
         },
         "courseC_PlayLab_events_challenge1": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Baustein verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Versuche, `Figur 1 in die`mitte links Position zu setzen\\`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es dann noch einmal versuchen kann!",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2018": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Baustein verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Versuche, `Figur 1 in die`mitte links Position zu setzen\\`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es dann noch einmal versuchen kann!",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2019": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Baustein verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Versuche, `Figur 1 in die`mitte links Position zu setzen\\`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es dann noch einmal versuchen kann!",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_PlayLab_events_challenge1_2020": {
-          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Baustein verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Versuche, `Figur 1 in die`mitte links Position zu setzen\\`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es dann noch einmal versuchen kann!",
+          "courseC_PlayLab_events_challenge_a": "Du kannst diesen Block verwenden, um Figuren an verschiedene Orte im Spielbereich zu bewegen.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Nimm `Setze Figur 1 in die Mitte links Position`, wenn er eine der anderen Figuren berührt. Dadurch wird das Spiel zurückgesetzt, so dass der Spieler es weiterhin versuchen kann!",
           "courseC_PlayLab_events_challenge_c": "Vielleicht möchtest du auch versuchen, die Geschwindigkeit der verschiedenen Figuren zu ändern, um das Spiel einfacher oder schwieriger zu machen!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_artist_loop1": {
@@ -3602,11 +3602,13 @@
         },
         "courseC_artist_loop1_2019": {
           "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
-          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!"
+          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!",
+          "": "[empty string]"
         },
         "courseC_artist_loop1_2020": {
           "courseC_artist_loop1_a": "Du brauchst keine Änderungen an der Schleife vorzunehmen, setze einfach einen Block darüber!",
-          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!"
+          "courseC_artist_loop1_b": "Dies ist der Block, den du benötigst, um ein Muster zu bestimmen: \n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml> \n\nWähle irgendein Muster, das dir gefällt!",
+          "": "[empty string]"
         },
         "courseC_artist_loops1a": {
           "courseC_artist_loops1a_a": "Das ist der erste Block, den du dafür brauchst:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
@@ -4151,16 +4153,16 @@
           "courseC_flappy_events5_a": "Du musst den `Erziele einen Punkt` Block verwenden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events6": {
-          "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."
+          "courseC_flappy_events6_a": "Versuche, den `____ flattern` Block mit dem `beim Klicken` Ereignis zu verbinden."
         },
         "courseC_flappy_events6_2018": {
-          "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."
+          "courseC_flappy_events6_a": "Versuche, den `____ flattern` Block mit dem `beim Klicken` Ereignis zu verbinden."
         },
         "courseC_flappy_events6_2019": {
-          "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."
+          "courseC_flappy_events6_a": "Versuche, den `____ flattern` Block mit dem `beim Klicken` Ereignis zu verbinden."
         },
         "courseC_flappy_events6_2020": {
-          "courseC_flappy_events6_a": "Versuche, den `_mal mit den Flügeln schlagen`-Baustein mit dem `beim Klicken`-Ereignis zu verbinden."
+          "courseC_flappy_events6_a": "Versuche, den `____ flattern` Block mit dem `beim Klicken` Ereignis zu verbinden."
         },
         "courseC_flappy_events7": {
           "courseC_flappy_events7_a": "Du kannst den Hintergrund mit Hilfe des `Szene einstellen`-Bausteins ändern. "
@@ -4175,28 +4177,28 @@
           "courseC_flappy_events7_a": "Du kannst den Hintergrund mit Hilfe des `Szene einstellen`-Bausteins ändern. "
         },
         "courseC_flappy_events8": {
-          "courseC_flappy_events8_a": "Versuche, unter dem Ereignis „ ein Hindernis passieren\" einen zweiten \"Szene bestimmen\"-Baustein anzuschließen, um dieses Level zu bestehen."
+          "courseC_flappy_events8_a": "Versuche, einen zweiten 'Hintergrund einstellen\" Block mit einem „wenn Hindernis überwunden\" Ereignis zu verbinden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events8_2018": {
-          "courseC_flappy_events8_a": "Versuche, unter dem Ereignis „ ein Hindernis passieren\" einen zweiten \"Szene bestimmen\"-Baustein anzuschließen, um dieses Level zu bestehen."
+          "courseC_flappy_events8_a": "Versuche, einen zweiten 'Hintergrund einstellen\" Block mit einem „wenn Hindernis überwunden\" Ereignis zu verbinden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events8_2019": {
-          "courseC_flappy_events8_a": "Versuche, unter dem Ereignis „ ein Hindernis passieren\" einen zweiten \"Szene bestimmen\"-Baustein anzuschließen, um dieses Level zu bestehen."
+          "courseC_flappy_events8_a": "Versuche, einen zweiten 'Hintergrund einstellen\" Block mit einem „wenn Hindernis überwunden\" Ereignis zu verbinden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events8_2020": {
-          "courseC_flappy_events8_a": "Versuche, unter dem Ereignis „ ein Hindernis passieren\" einen zweiten \"Szene bestimmen\"-Baustein anzuschließen, um dieses Level zu bestehen."
+          "courseC_flappy_events8_a": "Versuche, einen zweiten 'Hintergrund einstellen\" Block mit einem „wenn Hindernis überwunden\" Ereignis zu verbinden, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events9": {
-          "courseC_flappy_events9_a": "Verbinde den Baustein `setze Punktzahl auf 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu bestehen."
+          "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events9_2018": {
-          "courseC_flappy_events9_a": "Verbinde den Baustein `setze Punktzahl auf 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu bestehen."
+          "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events9_2019": {
-          "courseC_flappy_events9_a": "Verbinde den Baustein `setze Punktzahl auf 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu bestehen."
+          "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_flappy_events9_2020": {
-          "courseC_flappy_events9_a": "Verbinde den Baustein `setze Punktzahl auf 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu bestehen."
+          "courseC_flappy_events9_a": "Verbinde den Block `Punktestand setzen 0` mit dem Ereignis `wenn ein Hindernis getroffen wird`, um dieses Level zu bestehen!"
         },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_a": "Sobald du bei einem Kürbis angelangt bist, benutze <xml><block type=\"harvester_pumpkin\"/></xml>, um ihn zu ernten.",
@@ -4618,7 +4620,7 @@
           "courseC_maze_programming4_b": "Um dem Weg zu folgen:\n\n-   vorwärts bewegen\n-   in eine Richtung drehen\n-   vorwärts bewegen\n-   in die andere Richtung drehen\n-   vorwärts bewegen"
         },
         "courseC_maze_programming5": {
-          "courseC_maze_programming5_a": "Versuche, die Schaltfläche \"Step\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes tun musst?",
+          "courseC_maze_programming5_a": "Versuche, die \"Schritt\" Schaltfläche zu verwenden, um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes tun musst?",
           "courseC_maze_programming5_b": "Der Vogel muss sich einmal drehen, um die Aufgabe zu lösen. Findest du heraus in welche Richtung?",
           "courseC_maze_programming5_c": "In der Lösung werden zwei 'vorwärts bewegen' Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein."
         },
@@ -5083,176 +5085,176 @@
           "courseD_artist_binary_challenge2_a": "Im Originalprogramm sind nur wenige Zeilen falsch."
         },
         "courseD_artist_nestedLoops1": {
-          "courseD_artist_nestedLoops1_a": "Am einfachsten ist das Zeichnen \\`vorwärts bewegen‘ und Drehungen nach rechts.",
-          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Bausteinen darin zeichnen. Welche Bausteine benötigst du dafür?",
+          "courseD_artist_nestedLoops1_a": "Der einfachste Weg, dies zu zeichnen ist, sich vorwärts zu bewegen und nach rechts zu drehen.",
+          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Blöcken darin zeichnen. Welche Blöcke brauchst du?",
           "courseD_artist_nestedLoops1_c": "Schreibe die Schritte auf ein Blatt Papier und versuche Muster zu finden, die mit Schleifen vereinfacht werden können."
         },
         "courseD_artist_nestedLoops1_2018": {
-          "courseD_artist_nestedLoops1_a": "Am einfachsten ist das Zeichnen \\`vorwärts bewegen‘ und Drehungen nach rechts.",
-          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Bausteinen darin zeichnen. Welche Bausteine benötigst du dafür?",
+          "courseD_artist_nestedLoops1_a": "Der einfachste Weg, dies zu zeichnen ist, sich vorwärts zu bewegen und nach rechts zu drehen.",
+          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Blöcken darin zeichnen. Welche Blöcke brauchst du?",
           "courseD_artist_nestedLoops1_c": "Schreibe die Schritte auf ein Blatt Papier und versuche Muster zu finden, die mit Schleifen vereinfacht werden können."
         },
         "courseD_artist_nestedLoops1_2019": {
-          "courseD_artist_nestedLoops1_a": "Am einfachsten ist das Zeichnen \\`vorwärts bewegen‘ und Drehungen nach rechts.",
-          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Bausteinen darin zeichnen. Welche Bausteine benötigst du dafür?",
+          "courseD_artist_nestedLoops1_a": "Der einfachste Weg, dies zu zeichnen ist, sich vorwärts zu bewegen und nach rechts zu drehen.",
+          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Blöcken darin zeichnen. Welche Blöcke brauchst du?",
           "courseD_artist_nestedLoops1_c": "Schreibe die Schritte auf ein Blatt Papier und versuche Muster zu finden, die mit Schleifen vereinfacht werden können."
         },
         "courseD_artist_nestedLoops1_2020": {
-          "courseD_artist_nestedLoops1_a": "Am einfachsten ist das Zeichnen \\`vorwärts bewegen‘ und Drehungen nach rechts.",
-          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Bausteinen darin zeichnen. Welche Bausteine benötigst du dafür?",
+          "courseD_artist_nestedLoops1_a": "Der einfachste Weg, dies zu zeichnen ist, sich vorwärts zu bewegen und nach rechts zu drehen.",
+          "courseD_artist_nestedLoops1_b": "Du kannst dieses Dreieck mit einer `Wiederholen`-Schleife\\` mit zwei Blöcken darin zeichnen. Welche Blöcke brauchst du?",
           "courseD_artist_nestedLoops1_c": "Schreibe die Schritte auf ein Blatt Papier und versuche Muster zu finden, die mit Schleifen vereinfacht werden können."
         },
         "courseD_artist_nestedLoops1a": {
-          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck erstellt hast, drehe den Künstler um 60 Grad aus und beginne mit dem nächsten Dreieck. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler in die gleiche Richtung schauen, in der er begonnen hat. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
-          "courseD_artist_nestedLoops1a_c": "Wenn du Farben verwenden möchtest, wähle den `Farbe bestimmen`-Baustein in deinem Code. Die Farben müssen nicht die gleichen wie in der Vorlage sein."
+          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck fertig hast, drehe um 60 Grad und fang das nächste Dreieck an! \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler danach in die gleiche Richtung schauen, wie am Anfang. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
+          "courseD_artist_nestedLoops1a_c": "Wenn du Farben magst, verwende den Block `setze Farbe` in deinem Code. Dabei musst du dich nicht an die Farben in der Vorlage halten. "
         },
         "courseD_artist_nestedLoops1a_2018": {
           "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen (Tipp: benutze deinen Code aus dem letzten Rätsel, um zu beginnen). Nachdem du jedes Dreieck fertig gezeichnet hast, drehst du dich um 60 Grad und fängst das nächste Dreieck an.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler in die gleiche Richtung schauen, in der er begonnen hat. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
-          "courseD_artist_nestedLoops1a_c": "Wenn du Farben verwenden möchtest, wähle den `Farbe bestimmen`-Baustein in deinem Code. Die Farben müssen nicht die gleichen wie in der Vorlage sein."
+          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler danach in die gleiche Richtung schauen, wie am Anfang. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
+          "courseD_artist_nestedLoops1a_c": "Wenn du Farben magst, verwende den Block `setze Farbe` in deinem Code. Dabei musst du dich nicht an die Farben in der Vorlage halten. "
         },
         "courseD_artist_nestedLoops1a_2019": {
-          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck erstellt hast, drehe den Künstler um 60 Grad aus und beginne mit dem nächsten Dreieck. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler in die gleiche Richtung schauen, in der er begonnen hat. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
-          "courseD_artist_nestedLoops1a_c": "Wenn du Farben verwenden möchtest, wähle den `Farbe bestimmen`-Baustein in deinem Code. Die Farben müssen nicht die gleichen wie in der Vorlage sein."
+          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck fertig hast, drehe um 60 Grad und fang das nächste Dreieck an! \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler danach in die gleiche Richtung schauen, wie am Anfang. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
+          "courseD_artist_nestedLoops1a_c": "Wenn du Farben magst, verwende den Block `setze Farbe` in deinem Code. Dabei musst du dich nicht an die Farben in der Vorlage halten. "
         },
         "courseD_artist_nestedLoops1a_2020": {
-          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck erstellt hast, drehe den Künstler um 60 Grad aus und beginne mit dem nächsten Dreieck. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
-          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler in die gleiche Richtung schauen, in der er begonnen hat. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
-          "courseD_artist_nestedLoops1a_c": "Wenn du Farben verwenden möchtest, wähle den `Farbe bestimmen`-Baustein in deinem Code. Die Farben müssen nicht die gleichen wie in der Vorlage sein."
+          "courseD_artist_nestedLoops1a_a": "Du musst insgesamt 6 Dreiecke zeichnen. Wenn du ein Dreieck fertig hast, drehe um 60 Grad und fang das nächste Dreieck an! \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Wenn du dein Dreieck mit einer Schleife erstellst, sollte der Künstler danach in die gleiche Richtung schauen, wie am Anfang. Das macht die 60-Grad-Drehungen sehr viel einfacher.",
+          "courseD_artist_nestedLoops1a_c": "Wenn du Farben magst, verwende den Block `setze Farbe` in deinem Code. Dabei musst du dich nicht an die Farben in der Vorlage halten. "
         },
         "courseD_artist_nestedLoops2": {
-          "courseD_artist_nestedLoops2_a": "Schachtele deine Schleifen, indem du deinen Dreieckscode mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
+          "courseD_artist_nestedLoops2_a": "Schachtel deine Schleifen, indem du deinen Code für ein Dreieck mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops2_2018": {
-          "courseD_artist_nestedLoops2_a": "Schachtele deine Schleifen, indem du deinen Dreieckscode mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
+          "courseD_artist_nestedLoops2_a": "Schachtel deine Schleifen, indem du deinen Code für ein Dreieck mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops2_2019": {
-          "courseD_artist_nestedLoops2_a": "Schachtele deine Schleifen, indem du deinen Dreieckscode mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
+          "courseD_artist_nestedLoops2_a": "Schachtel deine Schleifen, indem du deinen Code für ein Dreieck mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops2_2020": {
-          "courseD_artist_nestedLoops2_a": "Schachtele deine Schleifen, indem du deinen Dreieckscode mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
+          "courseD_artist_nestedLoops2_a": "Schachtel deine Schleifen, indem du deinen Code für ein Dreieck mit einer weiteren \\`wiederholen‘-Schleife umgibst.",
           "courseD_artist_nestedLoops2_b": "Denke daran, den \\`drehen‘-Baustein in die Schleife einzufügen, damit sich der Künstler nach jedem Dreieck dreht."
         },
         "courseD_artist_nestedLoops3": {
-          "courseD_artist_nestedLoops3_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
+          "courseD_artist_nestedLoops3_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
           "courseD_artist_nestedLoops3_b": "Vergiss nicht, eine geschachtelte Schleife zu verwenden, um diese Aufgabe schnell zu lösen.",
-          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, indem du dabei 40 Pixel dazwischen springst."
+          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, aber springe dazwischen jedesmal 40 Pixel."
         },
         "courseD_artist_nestedLoops3_2018": {
-          "courseD_artist_nestedLoops3_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
+          "courseD_artist_nestedLoops3_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
           "courseD_artist_nestedLoops3_b": "Vergiss nicht, eine geschachtelte Schleife zu verwenden, um diese Aufgabe schnell zu lösen.",
-          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, indem du dabei 40 Pixel dazwischen springst."
+          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, aber springe dazwischen jedesmal 40 Pixel."
         },
         "courseD_artist_nestedLoops3_2019": {
-          "courseD_artist_nestedLoops3_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
+          "courseD_artist_nestedLoops3_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
           "courseD_artist_nestedLoops3_b": "Vergiss nicht, eine geschachtelte Schleife zu verwenden, um diese Aufgabe schnell zu lösen.",
-          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, indem du dabei 40 Pixel dazwischen springst."
+          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, aber springe dazwischen jedesmal 40 Pixel."
         },
         "courseD_artist_nestedLoops3_2020": {
-          "courseD_artist_nestedLoops3_a": "Versuche, mit Hilfe des Bausteins `vorwärts springen` von der Spitze eines Feldes zu der Stelle zu gelangen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
+          "courseD_artist_nestedLoops3_a": "Versuche, mit dem `vorwärts springen` Block von der oberen Ecke eines Quadrates zu der Stelle zu springen, wo du das nächste beginnst. \n\nWenn deine Quadrate 20 Pixel hoch und 20 Pixel voneinander entfernt sind, wie weit musst du dann springen?",
           "courseD_artist_nestedLoops3_b": "Vergiss nicht, eine geschachtelte Schleife zu verwenden, um diese Aufgabe schnell zu lösen.",
-          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, indem du dabei 40 Pixel dazwischen springst."
+          "courseD_artist_nestedLoops3_c": "Beginne mit einer 'wiederholen\\`-Schleife\", um ein Quadrat zu zeichnen. Wiederhole dieses Quadrat dann 8 Mal, aber springe dazwischen jedesmal 40 Pixel."
         },
         "courseD_artist_nestedLoops4": {
           "courseD_artist_nestedLoops4_d": "Um diese Aufgabe richtig zu lösen, musst du dich **vor** der Drehung vorwärts bewegen, sonst sind deine Kreise ein winziges Stückchen versetzt!",
-          "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen: \n\n-   360 Mal wiederholen \n    -   um 1 Pixel vorwärts bewegen \n    -   um 1 Grad nach links drehen",
-          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel zu springen.",
+          "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen:\n\n-   360 Mal wiederholen\n    -   um 1 Pixel vorwärts bewegen\n    -   um 1 Grad nach links drehen",
+          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel vorwärts zu springen.",
           "courseD_artist_nestedLoops4_c": "Verwende eine geschachtelte Schleife, um deine Kreise 4 Mal zu zeichnen."
         },
         "courseD_artist_nestedLoops4_2018": {
           "courseD_artist_nestedLoops4_d": "Um diese Aufgabe richtig zu lösen, musst du dich **vor** der Drehung vorwärts bewegen, sonst sind deine Kreise ein winziges Stückchen versetzt!",
-          "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen: \n\n-   360 Mal wiederholen \n    -   um 1 Pixel vorwärts bewegen \n    -   um 1 Grad nach links drehen",
-          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel zu springen.",
+          "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen:\n\n-   360 Mal wiederholen\n    -   um 1 Pixel vorwärts bewegen\n    -   um 1 Grad nach links drehen",
+          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel vorwärts zu springen.",
           "courseD_artist_nestedLoops4_c": "Verwende eine geschachtelte Schleife, um deine Kreise 4 Mal zu zeichnen."
         },
         "courseD_artist_nestedLoops4_2019": {
           "courseD_artist_nestedLoops4_d": "Um diese Aufgabe richtig zu lösen, musst du dich **vor** der Drehung vorwärts bewegen, sonst sind deine Kreise ein winziges Stückchen versetzt!",
-          "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen: \n\n-   360 Mal wiederholen \n    -   um 1 Pixel vorwärts bewegen \n    -   um 1 Grad nach links drehen",
-          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel zu springen.",
+          "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen:\n\n-   360 Mal wiederholen\n    -   um 1 Pixel vorwärts bewegen\n    -   um 1 Grad nach links drehen",
+          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel vorwärts zu springen.",
           "courseD_artist_nestedLoops4_c": "Verwende eine geschachtelte Schleife, um deine Kreise 4 Mal zu zeichnen."
         },
         "courseD_artist_nestedLoops4_2020": {
           "courseD_artist_nestedLoops4_d": "Um diese Aufgabe richtig zu lösen, musst du dich **vor** der Drehung vorwärts bewegen, sonst sind deine Kreise ein winziges Stückchen versetzt!",
-          "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen: \n\n-   360 Mal wiederholen \n    -   um 1 Pixel vorwärts bewegen \n    -   um 1 Grad nach links drehen",
-          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel zu springen.",
+          "courseD_artist_nestedLoops4_a": "Einen Kreis zeichnen:\n\n-   360 Mal wiederholen\n    -   um 1 Pixel vorwärts bewegen\n    -   um 1 Grad nach links drehen",
+          "courseD_artist_nestedLoops4_b": "Vergiss nicht, zwischen den Kreisen 50 Pixel vorwärts zu springen.",
           "courseD_artist_nestedLoops4_c": "Verwende eine geschachtelte Schleife, um deine Kreise 4 Mal zu zeichnen."
         },
         "courseD_artist_nestedLoops5": {
-          "courseD_artist_nestedLoops5_a": "So ist des ganz einfach: \n\n-   4 Mal wiederholen \n    -   einen Kreis zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 90 Grad nach rechts drehen",
+          "courseD_artist_nestedLoops5_a": "So geht es einfach: \n\n-   Wiederhole 4 Mal\n    -   Zeichne einen Kreis\n    -   Springe 50 Pixel vorwärts\n    -   Drehe 90 Grad nach rechts",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops5_2018": {
-          "courseD_artist_nestedLoops5_a": "So ist des ganz einfach: \n\n-   4 Mal wiederholen \n    -   einen Kreis zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 90 Grad nach rechts drehen",
+          "courseD_artist_nestedLoops5_a": "So geht es einfach: \n\n-   Wiederhole 4 Mal\n    -   Zeichne einen Kreis\n    -   Springe 50 Pixel vorwärts\n    -   Drehe 90 Grad nach rechts",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops5_2019": {
-          "courseD_artist_nestedLoops5_a": "So ist des ganz einfach: \n\n-   4 Mal wiederholen \n    -   einen Kreis zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 90 Grad nach rechts drehen",
+          "courseD_artist_nestedLoops5_a": "So geht es einfach: \n\n-   Wiederhole 4 Mal\n    -   Zeichne einen Kreis\n    -   Springe 50 Pixel vorwärts\n    -   Drehe 90 Grad nach rechts",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops5_2020": {
-          "courseD_artist_nestedLoops5_a": "So ist des ganz einfach: \n\n-   4 Mal wiederholen \n    -   einen Kreis zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 90 Grad nach rechts drehen",
+          "courseD_artist_nestedLoops5_a": "So geht es einfach: \n\n-   Wiederhole 4 Mal\n    -   Zeichne einen Kreis\n    -   Springe 50 Pixel vorwärts\n    -   Drehe 90 Grad nach rechts",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops7": {
           "courseD_artist_nestedLoops7_a": "Hier musst du geschachtelte Schleifen verwenden. Verwende zunächst eine Schleife, um ein Quadrat zu zeichnen. Was wird die äußere Schleife bewirken, wenn die innere Schleife ein Quadrat zeichnet?",
-          "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist. \n\n-   6 Mal wiederholen \n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen \n    -   um **60 Grad** drehen"
+          "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist.\n\n-   6 Mal wiederholen\n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen\n    -   um **60 Grad** drehen"
         },
         "courseD_artist_nestedLoops7_2018": {
           "courseD_artist_nestedLoops7_a": "Hier musst du geschachtelte Schleifen verwenden. Verwende zunächst eine Schleife, um ein Quadrat zu zeichnen. Was wird die äußere Schleife bewirken, wenn die innere Schleife ein Quadrat zeichnet?",
-          "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist. \n\n-   6 Mal wiederholen \n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen \n    -   um **60 Grad** drehen"
+          "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist.\n\n-   6 Mal wiederholen\n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen\n    -   um **60 Grad** drehen"
         },
         "courseD_artist_nestedLoops7_2019": {
           "courseD_artist_nestedLoops7_a": "Hier musst du geschachtelte Schleifen verwenden. Verwende zunächst eine Schleife, um ein Quadrat zu zeichnen. Was wird die äußere Schleife bewirken, wenn die innere Schleife ein Quadrat zeichnet?",
-          "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist. \n\n-   6 Mal wiederholen \n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen \n    -   um **60 Grad** drehen"
+          "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist.\n\n-   6 Mal wiederholen\n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen\n    -   um **60 Grad** drehen"
         },
         "courseD_artist_nestedLoops7_2020": {
           "courseD_artist_nestedLoops7_a": "Hier musst du geschachtelte Schleifen verwenden. Verwende zunächst eine Schleife, um ein Quadrat zu zeichnen. Was wird die äußere Schleife bewirken, wenn die innere Schleife ein Quadrat zeichnet?",
-          "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist. \n\n-   6 Mal wiederholen \n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen \n    -   um **60 Grad** drehen"
+          "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist.\n\n-   6 Mal wiederholen\n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen\n    -   um **60 Grad** drehen"
         },
         "courseD_artist_nestedLoops8": {
           "courseD_artist_nestedLoops8_a": "Um 8 Sechsecke in deiner Zeichnung zu haben, musst du zwischen jedem von ihnen eine Drehung um **45 Grad** einprogrammieren. Warum ist das so? Weil 360 Grad (eine volle Umdrehung) geteilt durch 8 (die Anzahl der Sechsecke) 45 Grad ergibt.",
-          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommen, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
-          "courseD_artist_nestedLoops8_c": "Verwende eine geschachtelte Schleife: \n\n-   8 Mal wiederholen \n    -   ein Sechseck zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 45 Grad nach rechts drehen"
+          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommst, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
+          "courseD_artist_nestedLoops8_c": "Verwende eine geschachtelte Schleife:\n\n-   8 Mal wiederholen\n    -   ein Sechseck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoops8_2018": {
           "courseD_artist_nestedLoops8_a": "Um 8 Sechsecke in deiner Zeichnung zu haben, musst du zwischen jedem von ihnen eine Drehung um **45 Grad** einprogrammieren. Warum ist das so? Weil 360 Grad (eine volle Umdrehung) geteilt durch 8 (die Anzahl der Sechsecke) 45 Grad ergibt.",
-          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommen, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
-          "courseD_artist_nestedLoops8_c": "Verwende eine geschachtelte Schleife: \n\n-   8 Mal wiederholen \n    -   ein Sechseck zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 45 Grad nach rechts drehen"
+          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommst, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
+          "courseD_artist_nestedLoops8_c": "Verwende eine geschachtelte Schleife:\n\n-   8 Mal wiederholen\n    -   ein Sechseck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoops8_2019": {
           "courseD_artist_nestedLoops8_a": "Um 8 Sechsecke in deiner Zeichnung zu haben, musst du zwischen jedem von ihnen eine Drehung um **45 Grad** einprogrammieren. Warum ist das so? Weil 360 Grad (eine volle Umdrehung) geteilt durch 8 (die Anzahl der Sechsecke) 45 Grad ergibt.",
-          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommen, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
-          "courseD_artist_nestedLoops8_c": "Verwende eine geschachtelte Schleife: \n\n-   8 Mal wiederholen \n    -   ein Sechseck zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 45 Grad nach rechts drehen"
+          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommst, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
+          "courseD_artist_nestedLoops8_c": "Verwende eine geschachtelte Schleife:\n\n-   8 Mal wiederholen\n    -   ein Sechseck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoops8_2020": {
           "courseD_artist_nestedLoops8_a": "Um 8 Sechsecke in deiner Zeichnung zu haben, musst du zwischen jedem von ihnen eine Drehung um **45 Grad** einprogrammieren. Warum ist das so? Weil 360 Grad (eine volle Umdrehung) geteilt durch 8 (die Anzahl der Sechsecke) 45 Grad ergibt.",
-          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommen, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
-          "courseD_artist_nestedLoops8_c": "Verwende eine geschachtelte Schleife: \n\n-   8 Mal wiederholen \n    -   ein Sechseck zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 45 Grad nach rechts drehen"
+          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommst, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
+          "courseD_artist_nestedLoops8_c": "Verwende eine geschachtelte Schleife:\n\n-   8 Mal wiederholen\n    -   ein Sechseck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoops9": {
-          "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife, dieses Mal programmiere es jedoch mit Quadraten.",
-          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu, verwende diesmal aber Dreiecke.",
-          "courseD_artist_nestedLoops9_c": "Verwende zwei geschachtelte Schleifen: \n\n-   8 Mal wiederholen \n    -   ein Sechseck zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 45 Grad nach rechts drehen\n    -   8 Mal wiederholen \n    -   ein Dreieck zeichnen \n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
+          "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife. Programmiere es dieses Mal jedoch mit Quadraten.",
+          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu. Verwende diesmal aber Dreiecke.",
+          "courseD_artist_nestedLoops9_c": "Verwende zwei geschachtelte Schleifen: \n\n-   8 Mal wiederholen\n    -   ein Sechseck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen\n-   8 Mal wiederholen\n    -   ein Dreieck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoops9_2018": {
-          "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife, dieses Mal programmiere es jedoch mit Quadraten.",
-          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu, verwende diesmal aber Dreiecke.",
-          "courseD_artist_nestedLoops9_c": "Verwende zwei geschachtelte Schleifen: \n\n-   8 Mal wiederholen \n    -   ein Sechseck zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 45 Grad nach rechts drehen\n    -   8 Mal wiederholen \n    -   ein Dreieck zeichnen \n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
+          "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife. Programmiere es dieses Mal jedoch mit Quadraten.",
+          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu. Verwende diesmal aber Dreiecke.",
+          "courseD_artist_nestedLoops9_c": "Verwende zwei geschachtelte Schleifen: \n\n-   8 Mal wiederholen\n    -   ein Sechseck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen\n-   8 Mal wiederholen\n    -   ein Dreieck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoops9_2019": {
-          "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife, dieses Mal programmiere es jedoch mit Quadraten.",
-          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu, verwende diesmal aber Dreiecke.",
-          "courseD_artist_nestedLoops9_c": "Verwende zwei geschachtelte Schleifen: \n\n-   8 Mal wiederholen \n    -   ein Sechseck zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 45 Grad nach rechts drehen\n    -   8 Mal wiederholen \n    -   ein Dreieck zeichnen \n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
+          "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife. Programmiere es dieses Mal jedoch mit Quadraten.",
+          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu. Verwende diesmal aber Dreiecke.",
+          "courseD_artist_nestedLoops9_c": "Verwende zwei geschachtelte Schleifen: \n\n-   8 Mal wiederholen\n    -   ein Sechseck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen\n-   8 Mal wiederholen\n    -   ein Dreieck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoops9_2020": {
-          "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife, dieses Mal programmiere es jedoch mit Quadraten.",
-          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu, verwende diesmal aber Dreiecke.",
-          "courseD_artist_nestedLoops9_c": "Verwende zwei geschachtelte Schleifen: \n\n-   8 Mal wiederholen \n    -   ein Sechseck zeichnen \n    -   um 50 Pixel vorwärts springen \n    -   um 45 Grad nach rechts drehen\n    -   8 Mal wiederholen \n    -   ein Dreieck zeichnen \n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
+          "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife. Programmiere es dieses Mal jedoch mit Quadraten.",
+          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu. Verwende diesmal aber Dreiecke.",
+          "courseD_artist_nestedLoops9_c": "Verwende zwei geschachtelte Schleifen: \n\n-   8 Mal wiederholen\n    -   ein Sechseck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen\n-   8 Mal wiederholen\n    -   ein Dreieck zeichnen\n    -   um 50 Pixel vorwärts springen\n    -   um 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoopsFP": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nDieses Bild wurde mit einer einzigen geschachtelten Schleife gezeichnet, die ein Sechseck (mit 50 px langen Seiten) 15 Mal mit einer 48-Grad-Drehung wiederholt.",
@@ -5278,25 +5280,25 @@
           "courseD_artist_nestedLoops_challenge1_a": "Beginne, indem du zunächst die Farbe in Blau veränderst und erstelle dann ein Achteck mit 50 Pixel langen Seiten und 45-Grad-Linksdrehungen.",
           "courseD_artist_nestedLoops_challenge1_b": "Füge den Code hinzu, um die Farbe in Grün zu ändern, und bilde ein Dreieck mit 50 Pixel langen Seiten und 120-Grad-Linksdrehungen.",
           "courseD_artist_nestedLoops_challenge1_c": "Wenn du beide Formen gezeichnet hast, musst du 50 Pixel vorwärts springen, bevor du dich um 90 Grad nach rechts drehst.",
-          "courseD_artist_nestedLoops_challenge1_d": "Füge deinen gesamten Code in eine \\`4 mal wiederholen‘-Schleife ein, um ihn fertigzustellen."
+          "courseD_artist_nestedLoops_challenge1_d": "Füge deinen gesamten Code in eine \\`wiederhole 4 mal‘-Schleife ein, um ihn fertigzustellen."
         },
         "courseD_artist_nestedLoops_challenge1_2018": {
           "courseD_artist_nestedLoops_challenge1_a": "Beginne, indem du zunächst die Farbe in Blau veränderst und erstelle dann ein Achteck mit 50 Pixel langen Seiten und 45-Grad-Linksdrehungen.",
           "courseD_artist_nestedLoops_challenge1_b": "Füge den Code hinzu, um die Farbe in Grün zu ändern, und bilde ein Dreieck mit 50 Pixel langen Seiten und 120-Grad-Linksdrehungen.",
           "courseD_artist_nestedLoops_challenge1_c": "Wenn du beide Formen gezeichnet hast, musst du 50 Pixel vorwärts springen, bevor du dich um 90 Grad nach rechts drehst.",
-          "courseD_artist_nestedLoops_challenge1_d": "Füge deinen gesamten Code in eine \\`4 mal wiederholen‘-Schleife ein, um ihn fertigzustellen."
+          "courseD_artist_nestedLoops_challenge1_d": "Füge deinen gesamten Code in eine \\`wiederhole 4 mal‘-Schleife ein, um ihn fertigzustellen."
         },
         "courseD_artist_nestedLoops_challenge1_2019": {
           "courseD_artist_nestedLoops_challenge1_a": "Beginne, indem du zunächst die Farbe in Blau veränderst und erstelle dann ein Achteck mit 50 Pixel langen Seiten und 45-Grad-Linksdrehungen.",
           "courseD_artist_nestedLoops_challenge1_b": "Füge den Code hinzu, um die Farbe in Grün zu ändern, und bilde ein Dreieck mit 50 Pixel langen Seiten und 120-Grad-Linksdrehungen.",
           "courseD_artist_nestedLoops_challenge1_c": "Wenn du beide Formen gezeichnet hast, musst du 50 Pixel vorwärts springen, bevor du dich um 90 Grad nach rechts drehst.",
-          "courseD_artist_nestedLoops_challenge1_d": "Füge deinen gesamten Code in eine \\`4 mal wiederholen‘-Schleife ein, um ihn fertigzustellen."
+          "courseD_artist_nestedLoops_challenge1_d": "Füge deinen gesamten Code in eine \\`wiederhole 4 mal‘-Schleife ein, um ihn fertigzustellen."
         },
         "courseD_artist_nestedLoops_challenge1_2020": {
           "courseD_artist_nestedLoops_challenge1_a": "Beginne, indem du zunächst die Farbe in Blau veränderst und erstelle dann ein Achteck mit 50 Pixel langen Seiten und 45-Grad-Linksdrehungen.",
           "courseD_artist_nestedLoops_challenge1_b": "Füge den Code hinzu, um die Farbe in Grün zu ändern, und bilde ein Dreieck mit 50 Pixel langen Seiten und 120-Grad-Linksdrehungen.",
           "courseD_artist_nestedLoops_challenge1_c": "Wenn du beide Formen gezeichnet hast, musst du 50 Pixel vorwärts springen, bevor du dich um 90 Grad nach rechts drehst.",
-          "courseD_artist_nestedLoops_challenge1_d": "Füge deinen gesamten Code in eine \\`4 mal wiederholen‘-Schleife ein, um ihn fertigzustellen."
+          "courseD_artist_nestedLoops_challenge1_d": "Füge deinen gesamten Code in eine \\`wiederhole 4 mal‘-Schleife ein, um ihn fertigzustellen."
         },
         "courseD_artist_nestedLoops_challenge2": {
           "courseD_artist_nestedLoops_challenge2_a": "Um ein gleichseitiges Achteck zu zeichnen, muss sich der Künstler 8 Mal um 45 Grad drehen.",
@@ -5443,14 +5445,14 @@
           "courseD_artist_project4_a": "Linien mit 2 Sechsecken und 4 Dreiecken:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
         },
         "courseD_artist_ramp11": {
-          "courseD_artist_ramp11a": "Um eine Seite zu zeichnen, verwende den Baustein `um 100 Pixel vorwärts bewegen` und ändere die 100 in eine 200.",
-          "courseD_artist_ramp11b": "Um 4 Seiten zu zeichnen, füge einen `um 200 Pixel vorwärts bewegen`-Block in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss nicht, dich danach zu drehen!",
-          "courseD_artist_ramp11_c": "Denke daran, den `drehen`-Baustein in die Schleife einzufügen!"
+          "courseD_artist_ramp11a": "Um eine Seite zu zeichnen, verwende den Block `vorwärts bewegen um 100 Pixel` und ändere die 100 in eine 200!",
+          "courseD_artist_ramp11b": "Um 4 Seiten zu zeichnen, füge einen `vorwärts bewegen um 200 Pixel`-Block in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife sich 4 Mal wiederholt! \n\nVergiss das Drehen danach nicht!",
+          "courseD_artist_ramp11_c": "Denke daran, den `drehen`-Block in die Schleife einzufügen!"
         },
         "courseD_artist_ramp12": {
           "courseD_artist_ramp12_a": "Du kannst entweder zuerst das Quadrat und dann das Dreieck zeichnen, oder umgekehrt!",
           "courseD_artist_ramp12_b": "Versuche, die Aufgabe in 2 Teile zu zerlegen und zwei Schleifen zu verwenden.",
-          "courseD_artist_ramp12_c": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!"
+          "courseD_artist_ramp12_c": "Du kannst das Dropdown-Menü auf den `Drehen`-Blöcken benutzen, um zu sehen, welchen Winkel du brauchst!"
         },
         "courseD_autorun_binary2_2019": {
           "courseD_artist_binary2_a": "Klicke einfach auf `Ausführen`, um den Ablauf dieses Programms zu sehen!"
@@ -5482,60 +5484,60 @@
           "courseD_artist_binary8_c": "Hab keine Angst, einen Fehler zu machen! Versuche, weitere Bausteine hinzuzufügen und den Code auszuführen, auch wenn du die Aufgabe noch nicht gelöst hast."
         },
         "courseD_bee_conditionals1_predict1": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals1_predict1_2018": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals1_predict1_2019": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals1_predict1_2020": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals1_predict1_copy": {
-          "courseD_bee_conditionals1_a": "Du musst mit einem \\`wenn‘-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
+          "courseD_bee_conditionals1_a": "Du musst mit einem `wenn`-Baustein prüfen, ob sich unter der Wolke eine Blüte befindet, bevor du versuchst, Nektar zu holen."
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_b": "Du kannst eine 'wiederholen`-Schleife` oder einen `während ein Weg vor dir liegt` verwenden, um dich durch dieses Labyrinth zu bewegen.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder.",
+          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine `wenn`-Anweisung.wenn",
+          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals2_2018": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_b": "Du kannst eine 'wiederholen`-Schleife` oder einen `während ein Weg vor dir liegt` verwenden, um dich durch dieses Labyrinth zu bewegen.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder.",
+          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals2_2019": {
           "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder."
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder."
         },
         "courseD_bee_conditionals2_2020": {
           "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder."
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder."
         },
         "courseD_bee_conditionals2_copy": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
-          "courseD_bee_conditionals2_b": "Du kannst eine 'wiederholen`-Schleife` oder einen `während ein Weg vor dir liegt` verwenden, um dich durch dieses Labyrinth zu bewegen.",
-          "courseD_bee_conditionals2_c": "Du musst nicht nach Honigwaben suchen, unter den Wolken befinden sich nur Blüten oder leere Felder.",
+          "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
+          "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals3": {
           "courseD_bee_conditionals3_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals3_a": "Achte darauf, dass du mit einer \"if\"-Anweisung jedes Feld daraufhin überprüfst, ob es entweder eine Blüte oder nichts enthält.",
-          "courseD_bee_conditionals3_b": "Du kannst eine 'wiederholen`- oder eine`während‘-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
+          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
           "courseD_bee_conditionals3_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseD_bee_conditionals3_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals3_2018": {
           "courseD_bee_conditionals3_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals3_a": "Achte darauf, dass du mit einer \"if\"-Anweisung jedes Feld daraufhin überprüfst, ob es entweder eine Blüte oder nichts enthält.",
-          "courseD_bee_conditionals3_b": "Du kannst eine 'wiederholen`- oder eine`während‘-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
+          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
           "courseD_bee_conditionals3_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseD_bee_conditionals3_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5550,14 +5552,14 @@
         "courseD_bee_conditionals3_copy": {
           "courseD_bee_conditionals3_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals3_a": "Achte darauf, dass du mit einer \"if\"-Anweisung jedes Feld daraufhin überprüfst, ob es entweder eine Blüte oder nichts enthält.",
-          "courseD_bee_conditionals3_b": "Du kannst eine 'wiederholen`- oder eine`während‘-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
+          "courseD_bee_conditionals3_b": "Du kannst eine `wiederhole`- oder eine `solange`-Schleife verwenden, damit die Biene in Bewegung bleibt. Verwende die Schleife, die dir am besten gefällt!",
           "courseD_bee_conditionals3_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseD_bee_conditionals3_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg übersehen kannst.",
-          "courseD_bee_conditionals4_b": "Verwende eine `if`-Anweisung innerhalb deiner Schleife, um jedes Platz auf Nektar zu überprüfen.",
+          "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg sehen kannst.",
+          "courseD_bee_conditionals4_b": "Verwende eine `wenn`-Anweisung innerhalb deiner Schleife, um jedes Feld auf Nektar zu überprüfen.",
           "courseD_bee_conditionals4_c": "Mit dem <xml><block type=\"maze_untilBlocked\"/></xml> Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
           "courseD_bee_conditionals4_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5585,9 +5587,9 @@
         },
         "courseD_bee_conditionals5": {
           "courseD_bee_conditionals5_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederholen`-Baustein an der Außenseite und einer \\`während-der-Weg-geradeaus-geht‘-Schleife an der Innenseite. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
-          "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code 3-mal `wiederholt‘ werden muss. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen,`solange noch ein Weg vor ihr liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene`vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene Blüten Ausschau halten.`Wenn es eine Blüte gibt‘, muss die Biene `Nektar holen`.",
-          "courseD_bee_conditionals5_b": "Im Baustein `während ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
+          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederhole`-Baustein außen und einer \\`Solange ein Weg vor dir liegt‘-Schleife innen. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
+          "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code `wiederhole 3 mal` benötigt. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen, `solange ein Weg vor dir liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene `vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene nach Blüten Ausschau halten. `wenn an der Blume`, muss die Biene mit `hole Nektar`,Nektar holen.",
+          "courseD_bee_conditionals5_b": "Im Baustein `solange ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
           "courseD_bee_conditionals5_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals5_2018": {
@@ -5607,9 +5609,9 @@
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederholen`-Baustein an der Außenseite und einer \\`während-der-Weg-geradeaus-geht‘-Schleife an der Innenseite. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
-          "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code 3-mal `wiederholt‘ werden muss. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen,`solange noch ein Weg vor ihr liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene`vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene Blüten Ausschau halten.`Wenn es eine Blüte gibt‘, muss die Biene `Nektar holen`.",
-          "courseD_bee_conditionals5_b": "Im Baustein `während ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
+          "courseD_bee_conditionals5_a": "Betrachte jede Seite des rechteckigen Pfades als einen eigenen Pfad. Baue eine geschachtelte Schleife auf, mit einem `wiederhole`-Baustein außen und einer \\`Solange ein Weg vor dir liegt‘-Schleife innen. Wie viele Wege muss die Biene entlangfliegen, wenn sie jede Seite mit einer Blüte anfliegen muss?",
+          "courseD_bee_conditionals5_c": "3 Seiten des Rechtecks haben Blüten, so dass der Code `wiederhole 3 mal` benötigt. Bei jeder Wiederholung muss die Biene den Weg weiterverfolgen, `solange ein Weg vor dir liegt`. Um den Weg weiter zu verfolgen, muss sich die Biene `vorwärts bewegen`. Während sie sich auf dem Weg befindet, muss die Biene nach Blüten Ausschau halten. `wenn an der Blume`, muss die Biene mit `hole Nektar`,Nektar holen.",
+          "courseD_bee_conditionals5_b": "Im Baustein `solange ein Weg vor dir liegt`, musst du dich vorwärts bewegen und nach einer Blüte suchen. Wie prüfst du, ob eine Blüte vorhanden ist? Was tust du, wenn eine Blüte vorhanden ist?",
           "courseD_bee_conditionals5_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals6": {
@@ -5638,42 +5640,42 @@
         },
         "courseD_bee_conditionals7": {
           "courseD_bee_conditionals7_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen.",
+          "courseD_bee_conditionals7_a": "**Denke daran:** Diese Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals7_b": "Wenn sich unter der Wolke keine Blüte befindet, muss es dort eine Wabe geben, so dass du den Fall eines leeren Felds nicht zu berücksichtigen brauchst.",
           "courseD_bee_conditionals7_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals7_2018": {
           "courseD_bee_conditionals7_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen.",
+          "courseD_bee_conditionals7_a": "**Denke daran:** Diese Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals7_b": "Wenn sich unter der Wolke keine Blüte befindet, muss es dort eine Wabe geben, so dass du den Fall eines leeren Felds nicht zu berücksichtigen brauchst.",
           "courseD_bee_conditionals7_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals7_2019": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen.",
+          "courseD_bee_conditionals7_a": "**Denke daran:** Diese Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals7_b": "Wenn sich unter der Wolke keine Blüte befindet, muss es dort eine Wabe geben, so dass du den Fall eines leeren Felds nicht zu berücksichtigen brauchst."
         },
         "courseD_bee_conditionals7_2020": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen.",
+          "courseD_bee_conditionals7_a": "**Denke daran:** Diese Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals7_b": "Wenn sich unter der Wolke keine Blüte befindet, muss es dort eine Wabe geben, so dass du den Fall eines leeren Felds nicht zu berücksichtigen brauchst."
         },
         "courseD_bee_conditionals7_predict2": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen."
+          "courseD_bee_conditionals7_a": "**Denke daran:** Diese Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen."
         },
         "courseD_bee_conditionals7_predict2_2018": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen."
+          "courseD_bee_conditionals7_a": "**Denke daran:** Diese Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen."
         },
         "courseD_bee_conditionals7_predict2_2019": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen."
+          "courseD_bee_conditionals7_a": "**Denke daran:** Diese Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen."
         },
         "courseD_bee_conditionals7_predict2_2020": {
-          "courseD_bee_conditionals7_a": "**Denke daran:** Dieses Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/sonst`), um die Aufgabe zu lösen."
+          "courseD_bee_conditionals7_a": "**Denke daran:** Diese Aufgabe ändert sich jedes Mal, wenn sie ausgeführt wird.\n\nDu brauchst einen bedingten Baustein (`wenn/ansonsten`), um die Aufgabe zu lösen."
         },
         "courseD_bee_conditionals8": {
           "courseD_bee_conditionals8_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals8_a": "**Denke daran:** Dieses Rätsel ändert sich jedes Mal, wenn es gelaufen ist.\nDu brauchst einen bedingten Block (`if` oder `if/else`), um die Aufgabe zu lösen.",
-          "courseD_bee_conditionals8_b": "Dieses Rätsel ist knifflig, weil man leere Felder, Nektar, _und_ Honig nicht mit nur einer einzigen Bedingung prüfen kann.\n\nSuche Nektar und Honig nur am Ende deines Weges.",
+          "courseD_bee_conditionals8_b": "Dieses Rätsel ist knifflig, weil man leere Felder, Nektar, _und_ Honig nicht mit nur einer einzigen Bedingung prüfen kann.\n\nSuche nur am Ende deines Weges nach Nektar und Honig.",
           "courseD_bee_conditionals8_c": "Wie kannst du sicherstellen, dass du jeden Weg bis zum Ende gehst, egal wie lang er ist?",
-          "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht erst besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
+          "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht als erstes besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
           "courseD_bee_conditionals8_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals8_2018": {
@@ -5681,7 +5683,7 @@
           "courseD_bee_conditionals8_a": "**Denke daran:** Dieses Rätsel ändert sich jedes Mal, wenn es gelaufen ist.\nDu brauchst einen bedingten Block (`if` oder `if/else`), um die Aufgabe zu lösen.",
           "courseD_bee_conditionals8_b": "Dieses Rätsel ist knifflig, weil man leere Felder, Nektar, _und_ Honig nicht mit nur einer einzigen Bedingung prüfen kann.\n\nSuche Nektar und Honig nur am Ende deines Weges.",
           "courseD_bee_conditionals8_c": "Wie kannst du sicherstellen, dass du jeden Weg bis zum Ende gehst, egal wie lang er ist?",
-          "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht erst besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
+          "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht als erstes besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
           "courseD_bee_conditionals8_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
         "courseD_bee_conditionals8_2019": {
@@ -5694,31 +5696,31 @@
         },
         "courseD_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blüte und jede Wabe erreicht, ohne Bäume zu treffen? Der beste Weg ist eine Spirale.",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge1_2018": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blüte und jede Wabe erreicht, ohne Bäume zu treffen? Der beste Weg ist eine Spirale.",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge1_2019": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blüte und jede Wabe erreicht, ohne Bäume zu treffen? Der beste Weg ist eine Spirale.",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge1_2020": {
           "courseD_bee_conditionals_challenge1_a": "Kannst du einen Weg finden, der jede Blüte und jede Wabe erreicht, ohne Bäume zu treffen? Der beste Weg ist eine Spirale.",
-          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine \\`wenn/sonst'-Bedingung in jedem Feld wiederholen kannst."
+          "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blüte` läuft der Code in einem `solange wie Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Warum funktioniert die erste Hälfte dieses Programms? Denk darüber nach, warum die Biene sich rückwärts bewegen muss. Wie viel Nektar sammelt die Biene jedes Mal, wenn sie sich über eine Blüte bewegt?",
@@ -5892,8 +5894,8 @@
         },
         "courseD_collector_debugging1": {
           "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging1_b": "Erkennst du irgendwelche Muster, die durch eine `Wiederholen`-Schleife einfacher gezeichnet werden könnten?",
-          "courseD_collector_debugging1_c": "Denke daran, den \\`sammeln‘-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
+          "courseD_collector_debugging1_b": "Erkennst du irgendwelche Muster, die durch eine `wiederhole`-Schleife einfacher gezeichnet werden könnten?",
+          "courseD_collector_debugging1_c": "Denke daran, den `sammle`-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
         },
         "courseD_collector_debugging10_predict1": {
           "courseD_collector_debugging9_a": "Es gibt verschiedene Lösungen für diese Aufgabe... aber alle beinhalten Drehungen!",
@@ -5901,19 +5903,19 @@
         },
         "courseD_collector_debugging1a_2018": {
           "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging1_c": "Denke daran, den \\`sammeln‘-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
+          "courseD_collector_debugging1_c": "Denke daran, den `sammle`-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
         },
         "courseD_collector_debugging1a_2019": {
           "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging1_c": "Denke daran, den \\`sammeln‘-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
+          "courseD_collector_debugging1_c": "Denke daran, den `sammle`-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
         },
         "courseD_collector_debugging1a_2020": {
           "courseD_collector_debugging1_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging1_c": "Denke daran, den \\`sammeln‘-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
+          "courseD_collector_debugging1_c": "Denke daran, den `sammle`-Baustein zu verwenden, um Schätze aufzusammeln, wenn du sie erreicht hast."
         },
         "courseD_collector_debugging2": {
           "courseD_collector_debugging2_a": "Verwende die Schaltfläche \"Schritt\", um den ersten Schritt zu überprüfen. \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert dein Programm nicht mehr?",
-          "courseD_collector_debugging2_b": "Erkennst du irgendwelche Muster, die durch eine `Wiederholen`-Schleife einfacher gezeichnet werden könnten?",
+          "courseD_collector_debugging2_b": "Erkennst du irgendwelche Muster, die durch eine `wiederhole`-Schleife einfacher gezeichnet werden könnten?",
           "courseD_collector_debugging2_c": "Versuche, auf einer Seite dieses Musters einen Schatz zu sammeln. Kannst du dies wiederholen, um auf den beiden anderen Seiten Schätze zu sammeln?"
         },
         "courseD_collector_debugging2a_2018": {
@@ -5944,7 +5946,7 @@
         "courseD_collector_debugging4": {
           "courseD_collector_debugging4_a": "Versuche, den Debugging-Prozess ein paar Mal hintereinander zu verwenden. \n\nWas verursacht das erste Problem? \n\nWenn das Problem behoben ist, was funktioniert dann nicht richtig?",
           "courseD_collector_debugging4_b": "Wenn du Schwierigkeiten beim Erstellen des Treppenstufenmusters hast, versuche, es mit dem Finger nachzuzeichnen und die Befehle laut auszusprechen. \n\nVergiss dabei nicht, die Richtung der Drehungen anzugeben!",
-          "courseD_collector_debugging4_c": "In dieser Schleife fehlt ein Baustein. Kannst herausfinden, welcher?"
+          "courseD_collector_debugging4_c": "In dieser Schleife fehlt nur ein Baustein. Kannst du herausfinden, welcher?"
         },
         "courseD_collector_debugging4a_2018": {
           "courseD_collector_debugging4_a": "Versuche, den Debugging-Prozess ein paar Mal hintereinander zu verwenden. \n\nWas verursacht das erste Problem? \n\nWenn das Problem behoben ist, was funktioniert dann nicht richtig?",
@@ -5976,7 +5978,7 @@
         },
         "courseD_collector_debugging6": {
           "courseD_collector_debugging6_a": "Versuche, den Code mit der Schaltfläche \"Schritt\" zu prüfen. Ist beim ersten Schritt alles richtig? \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert der Code nicht mehr?",
-          "courseD_collector_debugging6_b": "Es sieht so aus, als wären alle richtigen Schritte vorhanden, du brauchst nur noch einige mehr. Wie kannst die Aktion `sammeln` mehrfach wiederholen?"
+          "courseD_collector_debugging6_b": "Es sieht so aus, als wären alle richtigen Schritte vorhanden. Du brauchst nur noch einige mehr. Wie kannst du die Aktion `sammle` mehrfach wiederholen?"
         },
         "courseD_collector_debugging6a_2018": {
           "courseD_collector_debugging6_a": "Versuche, den Code mit der Schaltfläche \"Schritt\" zu prüfen. Ist beim ersten Schritt alles richtig? \n\n-   Funktioniert der zweite Schritt?\n\n-   Wo funktioniert der Code nicht mehr?",
@@ -5999,8 +6001,8 @@
           "courseD_collector_debugging9_b": "Überlege, wie du die Aufgabe lösen würdest, und versuche dann schrittweise, den Code an das, was du dir vorstellst, anzupassen."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -6029,16 +6031,16 @@
           "courseD_bee_nested_loops_challenge2_d": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_collector_nested_loops_challenge2a": {
-          "courseD_collector_nested_loops_challenge2a_a": "Vergiss nicht, dass du einen einzelnen Befehl oder ein längeres Muster `wiederholen` kannst. Du kannst sogar einen Block \"wiederholen\"!",
-          "courseD_collector_nested_loops_challenge2a_b": "Kannst du herausfinden, wie du alle vier Edelsteine erhalten können, ohne mehr Bausteine zu verwenden als für zwei Edelsteine?"
+          "courseD_collector_nested_loops_challenge2a_a": "Vergiss nicht, dass du einen einzelnen Befehl oder ein längeres Muster `wiederholen` kannst. Du kannst sogar einen Block `wiederholen`!",
+          "courseD_collector_nested_loops_challenge2a_b": "Kannst Du herausfinden,  wie du alle vier Edelsteine kriegst, ohne mehr Blöcke zu verwenden als für zwei Edelsteine?"
         },
         "courseD_collector_ramp10": {
-          "courseD_artist_ramp10_a": "Anstatt vier `vorwärts bewegen‘ Bausteine für jede Seite zu verwenden, versuche einen 'vorwärts bewegen'-Baustein innerhalb einer`wiederholen\\`-Schleife zu platzieren, so wie hier:\n\n<xml><block type=\"controls_repeat\">\n                                            <title name=\"TIMES\">4</title>\n                                            <statement name=\"DO\">\n                                              <block type=\"maze_moveForward\"/>\n                                            </statement>\n                                          </block></xml>",
+          "courseD_artist_ramp10_a": "Anstatt vier `vorwärts bewegen‘ Blöcke für jede Seite zu verwenden, versuche einen 'vorwärts bewegen' Block innerhalb einer`wiederholen\\`-Schleife zu platzieren, so wie hier:\n\n<xml><block type=\"controls_repeat\">\n                                            <title name=\"TIMES\">4</title>\n                                            <statement name=\"DO\">\n                                              <block type=\"maze_moveForward\"/>\n                                            </statement>\n                                          </block></xml>",
           "courseD_artist_ramp10_b": "Vergiss nicht, ein Stück des Schatzes einzusammeln, und drehe dich dann, um mit einer neuen Seite des Quadrats zu beginnen!",
-          "courseD_artist_ramp10_c": "Wenn du deinen Code vereinfachen möchtest, kannst du eine `wiederholen`-Schleife in eine andere einfügen! Dies wird als eine **geschachtelte Schleife** bezeichnet."
+          "courseD_artist_ramp10_c": "Wenn du deinen Code vereinfachen möchtest, kannst du eine Schleife in eine andere einfügen! Dies wird  **geschachtelte Schleife** genannt."
         },
         "courseD_collector_ramp8": {
-          "courseD_collector_ramp8_a": "Wenn du ein Feld mit einem Schatz erreichst, verwende \"einsammeln\", um ihn aufzuheben. Für diese Aufgabe musst du mehrfach Schätze einsammeln!",
+          "courseD_collector_ramp8_a": "Wenn du zu einem Platz mit einem Schatz kommst, benutze \"Sammeln\", um ihn aufzuheben. Für dieses Rätsel musst du mehr als einmal einen Schatz sammeln!",
           "courseD_collector_ramp8_b": "Wenn du deinen Code weiter vereinfachen möchtest, kannst du tatsächlich eine `wiederhole` Schleife in eine andere einfügen! Dies wird eine **geschachtelte Schleife** genannt."
         },
         "courseD_collector_ramp9": {
@@ -6619,7 +6621,7 @@
         },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem`wenn ausgeführt\\`-Block.",
-          "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind. Klicke dann erneut auf \"\"Ausführen\"\"."
+          "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind und am `wenn ausgeführt`-Block hängen."
         },
         "courseD_maze_ramp2_2018": {
           "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem`wenn ausgeführt\\`-Block.",
@@ -6662,7 +6664,7 @@
           "courseC_maze_programming4_b": "Um dem Weg zu folgen, bewege Dich vorwärts und drehe dich in eine Richtung. Gehe anschließend weiter und drehen dich dann in die andere Richtung. Zuletzt bewege dich noch ein weiteres Mal vorwärts, um die Eichel zu erreichen."
         },
         "courseD_maze_ramp5": {
-          "courseC_maze_programming5_a": "Versuche, die Schaltfläche \"Step\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes tun musst?",
+          "courseC_maze_programming5_a": "Versuche, die \"Schritt\" Schaltfläche zu verwenden, um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes tun musst?",
           "courseC_maze_programming5_b": "Denke daran, dass Drehungen aus der Sicht des Vogels erfolgen.",
           "courseC_maze_programming5_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
@@ -6723,8 +6725,8 @@
         },
         "courseD_maze_ramp6": {
           "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
-          "courseC_maze_programming6_b": "Der Vogel fängt an, mit dem Gesicht gegen eine Wand zu fliegen, also denke daran, dich umzudrehen, bevor du Dich bewegst.",
-          "courseC_maze_programming6_c": "Denke daran, dass du ein Stück des Codes auf einmal schreiben kannst, dann lass es laufen, um herauszufinden, wohin du von dort aus gehen musst."
+          "courseC_maze_programming6_b": "Zu Beginn schaut der Vogel auf eine Wand, also denke daran, ihn zu drehen, bevor er sich bewegt!",
+          "courseC_maze_programming6_c": "Denke daran, du kannst jeweils einen Teil des Codes schreiben und ihn dann laufen lassen! So kannst du herausfinden, wie du von dort weitermachen musst. "
         },
         "courseD_maze_ramp7": {
           "courseD_maze_ramp7_b": "Vergiss nicht, die \"Schritt\" Taste zu benutzen, um Block für Block nach Fehlern zu suchen!",
@@ -6856,26 +6858,26 @@
           "courseD_maze_until8_c": "Denke daran, den Block \"Wiederholen bis\" zu verwenden, um zur Sonnenblume zu gelangen!"
         },
         "courseD_playLab_cond1": {
-          "courseD_playLab_cond1_a": "Um diese Aufgabe zu lösen, füge den Baustein \"Figur 1 nach oben bewegen\" an das Ereignis \"Pfeil nach oben\" an und programmiere dann dasselbe für jede andere Richtung.",
-          "courseD_playLab_cond1_b": "Verwende die Dropdown-Menüs auf den Bausteinen `wenn Pfeil` und `Figur bewegen`, um die Richtung zu ändern, in die sie sich bewegen.",
+          "courseD_playLab_cond1_a": "Um diese Aufgabe zu lösen, füge den Baustein \"bewege Figur 1 nach oben\" an das Ereignis \"wenn Pfeil nach oben\" an und programmiere dann dasselbe für jede andere Richtung.",
+          "courseD_playLab_cond1_b": "Verwende die Dropdown-Menüs auf den Bausteinen `wenn Pfeil` und `bewege Figur`, um die Richtung zu ändern, in die sie sich bewegen.",
           "courseD_playLab_cond1_c": "Denke daran, Pegleg zu beiden Fahnen zu bringen, wenn du auf “Ausführen“ klickst!"
         },
         "courseD_playLab_cond1_2018": {
-          "courseD_playLab_cond1_a": "Um diese Aufgabe zu lösen, füge den Baustein \"Figur 1 nach oben bewegen\" an das Ereignis \"Pfeil nach oben\" an und programmiere dann dasselbe für jede andere Richtung.",
-          "courseD_playLab_cond1_b": "Verwende die Dropdown-Menüs auf den Bausteinen `wenn Pfeil` und `Figur bewegen`, um die Richtung zu ändern, in die sie sich bewegen.",
+          "courseD_playLab_cond1_a": "Um diese Aufgabe zu lösen, füge den Baustein \"bewege Figur 1 nach oben\" an das Ereignis \"wenn Pfeil nach oben\" an und programmiere dann dasselbe für jede andere Richtung.",
+          "courseD_playLab_cond1_b": "Verwende die Dropdown-Menüs auf den Bausteinen `wenn Pfeil` und `bewege Figur`, um die Richtung zu ändern, in die sie sich bewegen.",
           "courseD_playLab_cond1_c": "Denke daran, Pegleg zu beiden Fahnen zu bringen, wenn du auf “Ausführen“ klickst!"
         },
         "courseD_playLab_cond2": {
-          "courseD_playLab_cond2_a": "Verwende bei der Lösung den `Punkt erzielen`-Baustein unter dem Ereignis `wenn Figur 1 Figur 2 berührt`."
+          "courseD_playLab_cond2_a": "Verwende den `Punkt`-Baustein unter dem Ereignis `wenn Figur 1 berührt Figur 2` zum Lösen dieser Aufgabe!"
         },
         "courseD_playLab_cond2_2018": {
-          "courseD_playLab_cond2_a": "Verwende bei der Lösung den `Punkt erzielen`-Baustein unter dem Ereignis `wenn Figur 1 Figur 2 berührt`."
+          "courseD_playLab_cond2_a": "Verwende den `Punkt`-Baustein unter dem Ereignis `wenn Figur 1 berührt Figur 2` zum Lösen dieser Aufgabe!"
         },
         "courseD_playLab_cond3": {
-          "courseD_playLab_cond3_a": "Du musst zwei Bausteine zu deiner \\`endlos wiederholen-Schleife hinzufügen. Einer wird eine zufällige Emotion für den Drachen (Figur 2) auswählen und der andere wird 1 Sekunde warten, bevor er die Schleife erneut ausführt."
+          "courseD_playLab_cond3_a": "Füge zwei Blöcke zu deiner  `ewig wiederholen`-Schleife hinzu! Einer wird eine zufällige Stimmung für den Drachen (Figur 2) auswählen und der andere wird 1 Sekunde warten, bevor er die Schleife erneut ausführt."
         },
         "courseD_playLab_cond3_2018": {
-          "courseD_playLab_cond3_a": "Du musst zwei Bausteine zu deiner \\`endlos wiederholen-Schleife hinzufügen. Einer wird eine zufällige Emotion für den Drachen (Figur 2) auswählen und der andere wird 1 Sekunde warten, bevor er die Schleife erneut ausführt."
+          "courseD_playLab_cond3_a": "Füge zwei Blöcke zu deiner  `ewig wiederholen`-Schleife hinzu! Einer wird eine zufällige Stimmung für den Drachen (Figur 2) auswählen und der andere wird 1 Sekunde warten, bevor er die Schleife erneut ausführt."
         },
         "courseD_playLab_cond3a": {
           "courseD_playLab_cond3_c": "-   `Wenn` der Drache fröhlich ist \n    -   `Punkt erzielen` \n    -   `Punkt erzielen` \n\n-   `Sonst` `Punkt erzielen`"
@@ -6884,21 +6886,21 @@
           "courseD_playLab_cond3_c": "-   `Wenn` der Drache fröhlich ist \n    -   `Punkt erzielen` \n    -   `Punkt erzielen` \n\n-   `Sonst` `Punkt erzielen`"
         },
         "courseD_playLab_cond4": {
-          "courseD_playLab_cond4_a": "Du benötigst das Ereignis `wenn ausgeführt wird`, damit der Ninja den Piraten jagt.",
-          "courseD_playLab_cond4_b": "Es gibt einen speziellen Baustein `jeden maskierten Ninja Figuren jagen lassen`, mit dem der Ninja auf der Spur des Piraten bleibt!",
-          "courseD_playLab_cond4_c": "Füge den Baustein `Spiel als verloren beenden` unter dem Ereignis `wenn Figur 1 Figur 3 berührt` ein."
+          "courseD_playLab_cond4_a": "Du benötigst das Ereignis `wenn Ausführen`, damit der Ninja den Piraten jagt.",
+          "courseD_playLab_cond4_b": "Es gibt einen speziellen Baustein `lasse alle maskierten Ninja die Figur jagen`, mit dem der Ninja auf der Spur des Piraten bleibt!",
+          "courseD_playLab_cond4_c": "Füge den Baustein `das Spiel verlieren` unter dem Ereignis `wenn Figur 1 berührt Figur 3` ein."
         },
         "courseD_playLab_cond4_2018": {
-          "courseD_playLab_cond4_a": "Du benötigst das Ereignis `wenn ausgeführt wird`, damit der Ninja den Piraten jagt.",
-          "courseD_playLab_cond4_b": "Es gibt einen speziellen Baustein `jeden maskierten Ninja Figuren jagen lassen`, mit dem der Ninja auf der Spur des Piraten bleibt!",
-          "courseD_playLab_cond4_c": "Füge den Baustein `Spiel als verloren beenden` unter dem Ereignis `wenn Figur 1 Figur 3 berührt` ein."
+          "courseD_playLab_cond4_a": "Du benötigst das Ereignis `wenn Ausführen`, damit der Ninja den Piraten jagt.",
+          "courseD_playLab_cond4_b": "Es gibt einen speziellen Baustein `lasse alle maskierten Ninja die Figur jagen`, mit dem der Ninja auf der Spur des Piraten bleibt!",
+          "courseD_playLab_cond4_c": "Füge den Baustein `das Spiel verlieren` unter dem Ereignis `wenn Figur 1 berührt Figur 3` ein."
         },
         "courseD_playLab_cond5": {
-          "courseD_playLab_cond5_a": "Verwende einen `wenn`-Befehl, der vergleicht, ob die `Punktzahl´`>\\` 5 ist, um diese Aufgabe zu lösen.",
+          "courseD_playLab_cond5_a": "Verwende eine `wenn`-Anweisung, die vergleicht, ob die `Punktzahl´`>\\` 5 ist, um diese Aufgabe zu lösen.",
           "courseD_playLab_cond5_b": "Du kannst mehr als eine `endlos wiederholen`-Schleife im Arbeitsbereich haben."
         },
         "courseD_playLab_cond5_2018": {
-          "courseD_playLab_cond5_a": "Verwende einen `wenn`-Befehl, der vergleicht, ob die `Punktzahl´`>\\` 5 ist, um diese Aufgabe zu lösen.",
+          "courseD_playLab_cond5_a": "Verwende eine `wenn`-Anweisung, die vergleicht, ob die `Punktzahl´`>\\` 5 ist, um diese Aufgabe zu lösen.",
           "courseD_playLab_cond5_b": "Du kannst mehr als eine `endlos wiederholen`-Schleife im Arbeitsbereich haben."
         },
         "courseD_playLab_cond6": {
@@ -7226,12 +7228,12 @@
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMit diesem `springen zu`-Baustein kannst du den Zombie-Künstler zu jedem beliebigen Pixel auf dem Gittermuster bewegen, wann immer du willst. Der Baustein bewirkt, dass er sich eine Anzahl von Pixeln nach rechts und eine Anzahl von Pixeln nach unten bewegt. Die Koordinaten werden immer von der linken oberen Ecke aus gezählt, was bedeutet, dass es keine Rolle spielt, wo sich der Zombie-Künstler _vor_ dem Ausführen des Befehls befindet! \n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "courseE_artist_ramp8": {
-          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Baustein `um 100 Pixel vorwärts bewegen` und ändere die 100 in eine 200.",
+          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Block `vorwärts bewegen um 100 Pixel` und ändere die 100 in eine 200!",
           "courseE_artist_ramp8_b": "Um 4 Seiten zu zeichnen, füge einen `um 100 Pixel vorwärts bewegen`-Baustein in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss das anschließende Drehen nicht!",
           "courseE_artist_ramp8_c": "Deine Schleife sollte zwei Bausteine enthalten: `vorwärts bewegen` und `um 90 Grad nach rechts drehen`."
         },
         "courseE_artist_ramp8_2": {
-          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Baustein `um 100 Pixel vorwärts bewegen` und ändere die 100 in eine 200.",
+          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Block `vorwärts bewegen um 100 Pixel` und ändere die 100 in eine 200!",
           "courseE_artist_ramp8_b": "Um 4 Seiten zu zeichnen, füge einen `um 100 Pixel vorwärts bewegen`-Baustein in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss das anschließende Drehen nicht!",
           "courseE_artist_ramp8_c": "Deine Schleife sollte zwei Bausteine enthalten: `vorwärts bewegen` und `um 90 Grad nach rechts drehen`."
         },
@@ -8640,6 +8642,28 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "Du solltest nur zwei Blöcke hinzufügen müssen, um dieses Puzzle zu vervollständigen. ",
           "iceage_warn_ice_age_b": "Füge die beiden neuen Bausteine unter dem Ereignis `wenn ausgeführt wird` hinzu, damit sie unmittelbar nach dem Programmstart ausgeführt werden."
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseD_scrat_programming6_b": "Denke daran, dich zuerst zu drehen, bevor du dich bewegst, da Scrat in die falsche Richtung zeigt.",
+          "courseD_scrat_programming6_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "Um eine Seite zu zeichnen, verwende den Block `vorwärts bewegen um 100 Pixel` und ändere die 100 in eine 200!",
+          "courseE_artist_ramp8_b": "Um 4 Seiten zu zeichnen, füge einen `um 100 Pixel vorwärts bewegen`-Baustein in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss das anschließende Drehen nicht!",
+          "courseE_artist_ramp8_c": "Deine Schleife sollte zwei Bausteine enthalten: `vorwärts bewegen` und `um 90 Grad nach rechts drehen`.",
+          "courseD_artist_ramp12_a": "Auf welche Weise ähnelt das Dreieck einem Quadrat? Was ist hier anders?",
+          "courseD_artist_ramp12_b": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseD_artist_ramp12_c": "Um alle Seiten zu zeichnen, brauchst du eine Vorwärtsbewegung um 100 Pixel und dann eine 120 Grad Drehung nach rechts. Wie viele Seiten musst du zeichnen?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Um dieses Rätsel zu lösen, musst du noch deine 'bis'-Schleife und deine 'während'-Schleife in eine 'wiederholen'-Schleife stecken!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "Die Lösung zu diesem Rätsel wird sehr nach der Lösung zum letzten Rätsel aussehen, aber drehend in der andere Richtung."
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "NEW_Course_4_Artist_Functions_9_a": "Führe den Code aus bevor du Blöcke hinzufügst. Warum sieht das Bild falsch aus?"
         }
       }
     }

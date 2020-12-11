@@ -320,9 +320,9 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
-      azure_speech_service_token: azure_speech_service[:azureSpeechServiceToken],
-      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion],
-      azure_speech_service_languages: azure_speech_service[:azureSpeechServiceLanguages]
+      azure_speech_service_token: azure_speech_service[:token],
+      azure_speech_service_url: azure_speech_service[:url],
+      azure_speech_service_voices: azure_speech_service[:voices]
     )
 
     if params[:key] == 'artist'

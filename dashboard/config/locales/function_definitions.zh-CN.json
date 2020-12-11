@@ -292,7 +292,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -300,7 +303,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -308,7 +314,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -316,7 +325,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -324,7 +336,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -332,7 +347,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -340,7 +358,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -348,7 +369,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -356,7 +380,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -364,7 +391,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -375,20 +405,26 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个边长 20像素 的正方形"
           }
         },
         "Course 4 Artist Functions challenge": {
           "draw a line of squares": {
-            "name": "画一条正方形线"
+            "name": "画一条正方形线",
+            "description": "画6个正方形紧邻着彼此"
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个边长 20像素 的正方形"
           }
         },
         "Course 4 Bee Params 1": {
@@ -403,56 +439,81 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "获取三个花蜜"
+            "name": "获取三个花蜜",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "获取三个花蜜"
+            "name": "获取三个花蜜",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "获取5个花蜜"
+            "name": "获取5个花蜜",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "获取5个花蜜"
+            "name": "获取5个花蜜",
+            "parameters": {
+              "direction": "方向",
+              "nectar units": "花蜜数量"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "获取很多花蜜"
+            "name": "获取很多花蜜",
+            "parameters": {
+              "direction": "方向",
+              "nectars": "花蜜"
+            },
+            "description": "在任何方向收集所给予数量的花粉"
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "获取花蜜酿蜂蜜",
             "parameters": {
-              "honey": "蜂蜜"
-            }
+              "honey": "蜂蜜",
+              "direction": "方向",
+              "nectars": "花蜜"
+            },
+            "description": "向某个方向移动以收集花粉或制作花蜜。"
           }
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "跳跃"
+            "name": "跳跃",
+            "description": "使一个主角跳100像素"
           }
         },
         "Course 4 Play Lab Params 10": {
           "level_up": {
-            "name": "升级"
+            "name": "升级",
+            "description": "升“关卡”一级，重置分数到零，加快敌军速度，并选择随机背景。"
           },
           "score_points": {
             "name": "积分",
             "parameters": {
               "points": "分数"
-            }
+            },
+            "description": "将给予分数添加到player_score（玩家得分）变量"
           }
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "跳跃"
+            "name": "跳跃",
+            "description": "使一个主角跳“高度”像素"
           }
         },
         "Course 4 Play Lab Params 3": {
@@ -461,12 +522,14 @@
             "parameters": {
               "height": "高度",
               "actor": "角色"
-            }
+            },
+            "description": "使所给予的演员跳所给予的高"
           }
         },
         "Course 4 Play Lab Params 4": {
           "patrol": {
-            "name": "巡逻"
+            "name": "巡逻",
+            "description": "使一个精灵图移动上下"
           },
           "do something": {
             "name": "做点什么"
@@ -477,7 +540,8 @@
             "name": "巡逻",
             "parameters": {
               "actor": "角色"
-            }
+            },
+            "description": "使一个精灵图移动上下"
           }
         },
         "Course 4 Play Lab Params 6": {
@@ -485,7 +549,8 @@
             "name": "巡逻",
             "parameters": {
               "actor": "角色"
-            }
+            },
+            "description": "使精灵图向上下按规定速度移动"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -494,7 +559,8 @@
             "parameters": {
               "actor": "角色",
               "speed": "速度"
-            }
+            },
+            "description": "使精灵图向上下按规定速度移动"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -503,7 +569,8 @@
             "parameters": {
               "actor": "角色",
               "speed": "速度"
-            }
+            },
+            "description": "使精灵图向上下按规定速度移动"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -511,7 +578,8 @@
             "name": "积分",
             "parameters": {
               "points": "分数"
-            }
+            },
+            "description": "将给予分数添加到player_score（玩家得分）变量"
           }
         },
         "Course 4 Play Lab Vars 1": {
@@ -538,14 +606,16 @@
             "name": "向下/向后移动"
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           }
         },
         "Course 4 SCF 1a": {
           "get nectar": {
             "name": "采花蜜",
             "parameters": {
-              "counter": "counter"
+              "counter": "counter",
+              "dir": "DIR（方向）"
             }
           }
         },
@@ -556,10 +626,14 @@
         },
         "Course 4 SCF 2": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "draw octagons": {
-            "name": "画多个八边形"
+            "name": "画多个八边形",
+            "parameters": {
+              "numOctagons": "numOctagons（八边形数量）"
+            }
           },
           "draw an octagon": {
             "name": "画一个八边形"
@@ -570,7 +644,8 @@
         },
         "Course 4 SCF 3": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "do something": {
             "name": "做点什么"
@@ -597,13 +672,15 @@
         },
         "FoodFight": {
           "level_up": {
-            "name": "升级"
+            "name": "升级",
+            "description": "升“关卡”一级，重置分数到零，加快敌军速度，并选择随机背景。"
           },
           "score_points": {
             "name": "积分",
             "parameters": {
               "points": "分数"
-            }
+            },
+            "description": "将给予分数添加到player_score（玩家得分）变量"
           }
         },
         "Function intro Ryan": {
@@ -632,7 +709,8 @@
             "name": "画窗户"
           },
           "rectangle": {
-            "name": "矩形"
+            "name": "矩形",
+            "description": "大笑"
           },
           "sun": {
             "name": "太阳"
@@ -650,7 +728,8 @@
             "name": "三角形"
           },
           "square": {
-            "name": "正方形"
+            "name": "正方形",
+            "description": "大笑"
           }
         },
         "Geometric Sun_2018": {
@@ -664,7 +743,8 @@
             "name": "画窗户"
           },
           "rectangle": {
-            "name": "矩形"
+            "name": "矩形",
+            "description": "大笑"
           },
           "sun": {
             "name": "太阳"
@@ -682,12 +762,16 @@
             "name": "三角形"
           },
           "square": {
-            "name": "正方形"
+            "name": "正方形",
+            "description": "大笑"
           }
         },
         "Guess The Number": {
           "check guess": {
-            "name": "检查猜测"
+            "name": "检查猜测",
+            "parameters": {
+              "theGuess": "猜想"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -834,10 +918,12 @@
         },
         "NEW Course 4 Artist Functions 11": {
           "draw a line of  squares": {
-            "name": "画一条正方形的线"
+            "name": "画一条正方形的线",
+            "description": "画6个正方形紧邻着彼此"
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个边长 20 的正方形"
           },
           "draw a line of squares": {
             "name": "画一条正方形线"
@@ -845,7 +931,8 @@
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "draw a line of squares": {
             "name": "画一条正方形线"
@@ -864,13 +951,16 @@
             "name": "空函数"
           },
           "draw a line of squares": {
-            "name": "画一条正方形线"
+            "name": "画一条正方形线",
+            "description": "画一排正方形 "
           },
           "draw a square 40": {
-            "name": "画一个 40 的正方形"
+            "name": "画一个 40 的正方形",
+            "description": "画一个边长40的正方形"
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -880,7 +970,8 @@
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "画一个正方形"
+            "name": "画一个正方形",
+            "description": "画一个100像素的正方形"
           }
         },
         "NEW Course 4 Artist Functions 7": {
@@ -890,7 +981,8 @@
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "name": "画一个三角形"
+            "name": "画一个三角形",
+            "description": "画一个100像素的三角形"
           }
         },
         "NEW Course 4 Artist Functions 9": {
@@ -917,7 +1009,8 @@
             "name": "画一个六边形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素大小的带有边长参数的六边形"
           }
         },
         "NEW Course 4 Artist Params 11": {
@@ -942,7 +1035,8 @@
             "parameters": {
               "length": "长度",
               "sides": "边"
-            }
+            },
+            "description": "画一个带有边数和边长的多边形"
           }
         },
         "NEW Course 4 Artist Params 12a": {
@@ -951,7 +1045,8 @@
             "parameters": {
               "length": "长度",
               "sides": "边"
-            }
+            },
+            "description": "画一个带有边数和边长的多边形"
           }
         },
         "NEW Course 4 Artist Params 13": {
@@ -1034,7 +1129,8 @@
         },
         "NEW Course 4 Artist Params 3": {
           "draw a triangle": {
-            "name": "画一个三角形"
+            "name": "画一个三角形",
+            "description": "画一个50像素大小的三角形"
           }
         },
         "NEW Course 4 Artist Params 4": {
@@ -1050,7 +1146,8 @@
             "name": "画一个五边形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素大小的五边形"
           }
         },
         "NEW Course 4 Artist Params 6": {
@@ -1064,19 +1161,22 @@
             "name": "画一个六边形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素的五边形"
           },
           "draw a square": {
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素周长的正方形"
           },
           "draw a sqaure": {
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个100像素大小的正方形"
           }
         },
         "NEW Course 4 Artist Params 7": {
@@ -1084,7 +1184,8 @@
             "name": "画一个三角形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个带边长参数的三角形"
           }
         },
         "NEW Course 4 Artist Params 8": {
@@ -1129,7 +1230,8 @@
             "parameters": {
               "actor": "角色",
               "speed": "速度"
-            }
+            },
+            "description": "使精灵图向上下按规定速度移动"
           }
         },
         "New Artist Project": {
@@ -1325,7 +1427,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1333,7 +1438,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1366,7 +1474,8 @@
             }
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "do something": {
             "name": "做点什么"
@@ -1497,7 +1606,10 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1505,7 +1617,10 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1513,7 +1628,10 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1521,12 +1639,18 @@
             "name": "绘制比特"
           },
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1534,7 +1658,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1542,7 +1669,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1550,7 +1680,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1558,7 +1691,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1566,7 +1702,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1574,7 +1713,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1582,7 +1724,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1590,7 +1735,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1598,7 +1746,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1606,7 +1757,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1614,7 +1768,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1622,7 +1779,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1630,7 +1790,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1638,7 +1801,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1646,7 +1812,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1654,7 +1823,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1662,7 +1834,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1670,7 +1845,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1678,7 +1856,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1686,7 +1867,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1694,7 +1878,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1702,7 +1889,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1710,7 +1900,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1718,7 +1911,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1726,7 +1922,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1734,7 +1933,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1742,7 +1944,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1750,7 +1955,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1758,7 +1966,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1766,7 +1977,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1774,7 +1988,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1782,7 +1999,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1790,7 +2010,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1798,7 +2021,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1806,7 +2032,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1814,7 +2043,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1822,7 +2054,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1830,7 +2065,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1838,7 +2076,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -1846,7 +2087,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "画"
+            "name": "画",
+            "parameters": {
+              "binary": "二进制"
+            }
           },
           "draw bit": {
             "name": "绘制比特"
@@ -3051,7 +3295,8 @@
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个带边长参数的三角形"
           },
           "checker": {
             "name": "检查",
@@ -3081,7 +3326,8 @@
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个带边长参数的正方形"
           }
         },
         "courseF_artist_fwp3": {
@@ -3117,7 +3363,8 @@
             "parameters": {
               "length": "长度",
               "sides": "边"
-            }
+            },
+            "description": "画一个带有边数和边长的多边形"
           }
         },
         "courseF_artist_fwp5": {
@@ -3230,7 +3477,8 @@
             }
           },
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "do something": {
             "name": "做点什么"
@@ -3238,7 +3486,8 @@
         },
         "courseF_artist_fwp_challenge2": {
           "draw a square 20": {
-            "name": "画一个边长 20 的正方形"
+            "name": "画一个边长 20 的正方形",
+            "description": "画一个面积 20 的正方形"
           },
           "do something": {
             "name": "做点什么"

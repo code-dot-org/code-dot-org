@@ -129,6 +129,8 @@ ga:
       tú d'fhocal faire a chur isteach thíos.
     use_clever: Ár leithscéal, ach níl do chuntas Code.org nasctha le %{provider}.
       Ní mór duit logáil isteach trí do thairseach Clever.
+    invalid_provider: Gabh ár leithscéal, ní fhéadtar cuntais %{provider} a cheangail
+      le cuntais Code.org.
     unable_to_connect_provider: Níorbh fhéidir linn do chuntas Code.org a cheangal
       le do chuntas %{provider}. Bain triail eile as.
     already_in_use: Tá do chuntas %{provider} ceangailte le cuntas eile Code.org cheana.
@@ -191,10 +193,14 @@ ga:
     mismatch_password: Ní ionann an dá fhocal faire a chuir tú isteach
     student_consent: Dearbhaím gur thug tuismitheoir nó caomhnóir dlíthiúil cead dom
       seirbhísí Code.org a úsáid.
-    agree_us_website: Tuigim go bhfuilim ag baint úsáide as suíomh Gréasáin atá lonnaithe
-      sna Stáit Aontaithe.
-    my_data_to_us: D'fhéadfaí sonraí a bhaineann le mo ghníomhaíocht ar an suíomh
-      seo a sheoladh chuig nó a phróiseáil i Stáit Aontaithe Mheiriceá.
+    agree_us_data_transfer_student: "**Aontaím go bhféadfaidh Code.org sonraí (lena
+      n-áirítear sonraí pearsanta) a aistriú chuig na Stáit Aontaithe** de bharr gur
+      úsáid mé an suíomh seo chun críche amhail sonraí a óstáil agus a phróiseáil."
+    data_collection_us: Is suíomh gréasáin neamhbhrabúis é Code.org atá bunaithe sna
+      SAM, agus d'fhéadfadh na dlíthe lena rialaítear bailiú sonraí sna SAM a bheith
+      difriúil ó na dlíthe i do thír féin.
+    visit_privacy: Tabhair cuairt ar [Pholasaí Príobháideachais](%{privacy_url}) chun
+      tuilleadh a fhoghlaim.
     student_terms_markdown: Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh
       dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org
       seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](http://code.org/privacy)
@@ -976,7 +982,7 @@ ga:
     accept_label_markdown: Glacaim leis na [Téarmaí Seirbhíse](%{tos_url}) agus leis
       [an bPolasaí Príobháideachais](%{privacy_url}).
     accept_tos: Trí chlárú le Code.org, glacann tú leis na [Téarmaí Seirbhíse](%{tos_url})
-      agus leis an [bPolasaí Príobháideachais](%{privacy_url}).
+      agus leis an [Pholasaí Príobháideachais](%{privacy_url}).
     accept: Glacaim Leo
     print: Priontáil
     reminder_desc: Rinneamar leasú ar <a href="%{tos_url}" target="_blank">na Téarmaí
@@ -1338,14 +1344,6 @@ ga:
       glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.
     more_information: Polasaí Príobháideachais Code.org.
     accept: Glacaim leis
-  gdpr_dialog:
-    heading: An bhfuil tú sásta suíomh Gréasáin bunaithe sna Stáit Aonraithe a úsáid?
-    message: D'fhéadfaí sonraí a bhaineann le do ghníomhaíocht ar an suíomh seo a
-      sheoladh chuig nó a phróiseáil i Stáit Aontaithe Mheiriceá.
-    link_intro: Chun tuilleadh eolais a fháil, féach ár
-    privacy_policy: bpolasaí príobháideachais
-    logout: Logáil amach
-    true: Tá
   page_not_found_title: Níor aimsíodh an leathanach
   page_not_found_header: '404: Níor aimsíodh an leathanach'
   page_not_found_description: Níl aon leathanach ag an seoladh seo. Deimhnigh go bhfuil

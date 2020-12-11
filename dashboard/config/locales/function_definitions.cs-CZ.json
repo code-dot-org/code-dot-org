@@ -13,6 +13,9 @@
           },
           "draw eyebrow": {
             "name": "nakreslit obočí"
+          },
+          "draw pupil": {
+            "name": "draw pupil"
           }
         },
         "2-3 Artist 3.4": {
@@ -28,7 +31,8 @@
             "parameters": {
               "width": "šířka",
               "height": "výška"
-            }
+            },
+            "name": "draw_rect"
           }
         },
         "2-3 Artist Debugging 10": {
@@ -41,6 +45,21 @@
           },
           "draw a circle": {
             "name": "nakresli kružnici"
+          },
+          "jump to controller top left": {
+            "name": "skoč na ovladač vrchní levý"
+          },
+          "jump to middle": {
+            "name": "skoč doprostřed"
+          },
+          "draw a button": {
+            "name": "namaluj tlačítko"
+          },
+          "draw cord": {
+            "name": "namaluj šňůru"
+          },
+          "draw R pad": {
+            "name": "namaluj R ovladač"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -51,7 +70,11 @@
             "name": "nakresli pravou nohu"
           },
           "draw body and arms": {
-            "name": "nakresli tělo a ruce"
+            "name": "nakresli tělo a ruce",
+            "parameters": {
+              "armlength": "armlength",
+              "bodylength": "bodylength"
+            }
           },
           "draw a head": {
             "name": "nakreslit hlavu"
@@ -72,6 +95,9 @@
           },
           "draw left leg": {
             "name": "nakresli levou nohu"
+          },
+          "draw sitting stick figure": {
+            "name": "draw sitting stick figure"
           }
         },
         "2-3 Artist Debugging 7": {
@@ -202,6 +228,9 @@
         "4-5 Artist 8": {
           "draw circle": {
             "name": "nakresli kruh"
+          },
+          "draw goal": {
+            "name": "nakresli branku"
           }
         },
         "4-5 Bee Conditionals 7": {
@@ -623,17 +652,17 @@
         },
         "MC_HOC_2017_07_Cole": {
           "clear path": {
-            "name": "vymaž cestu"
+            "name": "vyčisti cestu"
           }
         },
         "MC_HOC_2017_07_Cole_2019": {
           "clear path": {
-            "name": "vymaž cestu"
+            "name": "vyčisti cestu"
           }
         },
         "MC_HOC_2017_07_Cole_2020": {
           "clear path": {
-            "name": "vymaž cestu"
+            "name": "vyčisti cestu"
           }
         },
         "MC_HOC_2017_FP20x20": {
@@ -1025,11 +1054,17 @@
         "course3_bee_functions_challenge1": {
           "do something": {
             "name": "proveď něco"
+          },
+          "get 3 nectar or honey": {
+            "name": "získej buď 3 nektary nebo med"
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
             "name": "proveď něco"
+          },
+          "move and collect": {
+            "name": "posuň se a posbírej"
           }
         },
         "course3_bee_functions_challenge3": {
@@ -1038,6 +1073,9 @@
           },
           "rowOfNectar": {
             "name": "řada nektaru"
+          },
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
           }
         },
         "course3_bee_functions_challenge4": {
@@ -1046,6 +1084,12 @@
           },
           "rowOfNectar": {
             "name": "řada nektaru"
+          },
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          },
+          "move and check": {
+            "name": "posuň se a zkontroluj"
           }
         },
         "course4_artist_binary_challenge1": {
@@ -1813,11 +1857,17 @@
         "courseE_bee_functions_challenge1": {
           "do something": {
             "name": "proveď něco"
+          },
+          "get 3 nectar or honey": {
+            "name": "získej buď 3 nektary nebo med"
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
             "name": "proveď něco"
+          },
+          "move and collect": {
+            "name": "posuň se a posbírej"
           }
         },
         "courseE_farmer_concept1": {
@@ -2094,11 +2144,20 @@
           },
           "rowOfNectar": {
             "name": "řada nektaru"
+          },
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
           }
         },
         "courseF_bee_functions_challenge2": {
           "rowOfNectar": {
             "name": "řada nektaru"
+          },
+          "move and check": {
+            "name": "posuň se a zkontroluj"
+          },
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
           }
         },
         "courseF_bee_fwp2": {
@@ -2316,6 +2375,140 @@
         "grade5_artist_binary9": {
           "draw": {
             "name": "kresli"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "Vzorové řešení"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "Vzorové řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "win game": {
+            "name": "vítězství"
+          },
+          "lose game": {
+            "name": "prohra"
+          },
+          "keep playing": {
+            "name": "hraj dál"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "win game": {
+            "name": "vítězství"
+          },
+          "lose game": {
+            "name": "prohra"
+          },
+          "keep playing": {
+            "name": "hraj dál"
+          }
+        },
+        "courseF_bee_conditionals2": {
+          "move and check": {
+            "name": "posuň se a zkontroluj"
+          },
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          }
+        },
+        "courseF_bee_functions4": {
+          "move and check": {
+            "name": "posuň se a zkontroluj"
+          },
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          }
+        },
+        "courseF_bee_functions5a": {
+          "move and check": {
+            "name": "posuň se a zkontroluj"
+          },
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "postav krátký most"
+          },
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "postav krátký most"
+          },
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "postav krátký most"
+          },
+          "build long bridge": {
+            "name": "postav dlouhý most"
           }
         }
       }

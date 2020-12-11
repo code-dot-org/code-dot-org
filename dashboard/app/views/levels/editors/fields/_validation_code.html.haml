@@ -1,3 +1,6 @@
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_validation_code.js')}
+
 %h1.control-legend{data: {toggle: "collapse", target: "#validation"}}
   Validation
 
@@ -16,3 +19,23 @@
 
   = render partial: 'levels/editors/fields/applab_validations', locals: {f: f} if @level.is_a?(Applab)
   = render partial: 'levels/editors/fields/studio_validations', locals: {f: f} if @level.is_a?(Studio) || @level.is_a?(Bounce) || @level.is_a?(Flappy)
+
+  - if @level.respond_to? :free_play
+    .field
+      = render partial: 'levels/editors/fields/checkboxes',
+        locals: {f: f, field_name: :free_play, description: "Free Play"}
+      %p
+        Free Play levels are not checked for correctness (any solution is
+        accepted), can be shared, and can be saved to the public and private
+        gallery
+  - if @level.respond_to? :validation_enabled
+    .field
+      = render partial: 'levels/editors/fields/checkboxes',
+        locals: {f: f, field_name: :validation_enabled,
+        description: "Code must change for the level to be show as 'complete"}
+      %p
+        If this setting is checked, students must change code on the level,
+        run that code, and hit 'Finish' before the level can be marked as
+        complete. If this box is unchecked, hitting 'Finish' will mark the
+        level as complete.
+

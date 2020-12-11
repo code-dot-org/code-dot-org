@@ -437,11 +437,13 @@
         },
         "behaviors 3a": {
           "behavior_callout": "Perché questo comportamento non funziona per la stella centrale?",
-          "star2_callout": "Rimuovi questo blocco costume e usa al suo posto il blocco \"questo personaggio\"."
+          "star2_callout": "Rimuovi questo blocco costume e usa al suo posto il blocco \"questo personaggio\".",
+          "this_sprite_callout": "Sostituisci il blocco del costume sotto con questo."
         },
         "behaviors 3a_2020": {
           "behavior_callout": "Perché questo comportamento non funziona per la stella centrale?",
-          "star2_callout": "Rimuovi questo blocco costume e usa al suo posto il blocco \"questo personaggio\"."
+          "star2_callout": "Rimuovi questo blocco costume e usa al suo posto il blocco \"questo personaggio\".",
+          "this_sprite_callout": "Sostituisci il blocco del costume sotto con questo."
         },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "Usa questo ciclo per raccogliere tutto il nettare da un fiore o fare tutto il miele in un favo."
@@ -956,10 +958,12 @@
           "stone_block_2": "Non puoi buttare via i blocchi grigi: sono pietrificati!"
         },
         "courseD_maze_ramp3_2019": {
-          "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi."
+          "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
+          "stone_block_2": "I blocchi grici non si possono gettare."
         },
         "courseD_maze_ramp3_2020": {
-          "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi."
+          "courseC_maze_programming3_2": "Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.",
+          "stone_block_2": "I blocchi grici non si possono gettare."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Questo numero indica la massima quantità di blocchi di questo tipo che puoi usare."
@@ -1303,6 +1307,139 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Guarda: c'è una nuova modalità per introdurre numeri nei blocchi. Questi blocchi \"matematici\" possono essere presi e spostati da un blocco all'altro!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Puoi cambiare questo numero.",
+          "courseE_artist_ramp8_2": "Clicca qui per inserire il numero di volte da ripetere il tuo codice."
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "Usa questo blocco per lasciare a te e al tuo insegnante note su come funziona il tuo codice."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "Usa questo blocco per lasciare a te e al tuo insegnante note su come funziona il tuo codice."
+        },
+        "behaviors 1": {
+          "behaviors_edit": "Clicca qui per vedere come funziona questo comportamento."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "Clicca qui per vedere come funziona questo comportamento."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "Clicca qui per vedere come funziona questo comportamento."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "Clicca qui per vedere come funziona questo comportamento."
+        },
+        "behaviors 5": {
+          "behaviors_edit": "Aggiungi codice a questo comportamento."
+        },
+        "behaviors 5_2020": {
+          "behaviors_edit": "Aggiungi codice a questo comportamento."
+        },
+        "behaviors free play": {
+          "behaviors_edit": "Aggiungi codice a questo comportamento."
+        },
+        "behaviors free play_2020": {
+          "behaviors_edit": "Aggiungi codice a questo comportamento."
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Questo blocco è molto importante per questo progetto. Assicurati di usarlo!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Questo blocco è molto importante per questo progetto. Assicurati di usarlo!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Aggiungilo nel mezzo del tuo programma."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Aggiungilo nel mezzo del tuo programma."
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+        },
+        "courseC_maze_programming5": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_ramp5": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseD_scrat_ramp5": {
+          "": "Questi blocchi non hanno numeri. Puoi usarne quanti ne vuoi!"
+        },
+        "courseF_artist_variables6": {
+          "courseF_artist_variables6_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
+        },
+        "courseF_artist_variables6_2018": {
+          "courseF_artist_variables6_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
+        },
+        "courseF_artist_variables6_2019": {
+          "courseF_artist_variables6_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
+        },
+        "courseF_artist_variables6_2020": {
+          "courseF_artist_variables6_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
+        },
+        "courseF_artist_variables6a": {
+          "courseF_artist_variables6a_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
+        },
+        "courseF_artist_variables6a_2018": {
+          "courseF_artist_variables6a_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
+        },
+        "courseF_artist_variables6a_2019": {
+          "courseF_artist_variables6a_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
+        },
+        "courseF_artist_variables6a_2020": {
+          "courseF_artist_variables6a_1": "Le variabili possono essere utili quando devi cambiare molte copie dello stesso numero."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
         }
       }
     }

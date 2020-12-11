@@ -34,11 +34,29 @@ social:
 
 <br>
 
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
+
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
+
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
+
+<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
+
+<div class="clearboth"></div></div>
+
+<br>
+<br>
+
 We also highly recommend you watch the recorded webinar for a walkthrough of the resources, especially if you teach CS Principles or CS Discoveries:
 
 <div class="col-60">
 {{ alt_classrooms_vid }}
-<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available only for CS Principles, and will be released for CS Discoveries in early September. To access the full video, <a href=
+<i>Note: this recording is from a webinar specific to a CS Principles teacher. Lesson-specific adaptations are currently available for CS Principles and CS Discoveries. To access the full video, <a href=
 https://code.zoom.us/rec/play/vpN8JLivrjk3GoeTuQSDA_5_W9Toev6shyVPr6dfmByzAHMLN1v3N-MWYuG8VL58QfLYAPsIFFbnn54k?autoplay=true" target="_blank">click here</a>.</i>
 </div>
 
@@ -98,6 +116,11 @@ Click each question to expand and see the answers. Don’t see your question ans
 	<li><a href="https://code.org/curriculum/unplugged" target="_blank">Unplugged lessons in our CS Fundamentals courses</a></li>
 </ol>
 <p>Please note that some of these lessons require students to work together and may need to be modified further to work in a virtual or hybrid classroom setting. If you have suggestions for how to modify these unplugged lessons, or you want to see how other teachers have recommended modifying these lessons, please check out the Code.org forum (<a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning/33134" target="_blank">CSF</a>; <a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning-csd/33135" target="_blank">CSD</a>; <a href="https://forum.code.org/t/modifying-unplugged-lessons-for-remote-learning-csp/33136" target="_blank">CSP</a>)</p>
+<p>NEW for CS Principles classrooms: You can now download zip files of all CSP videos. These compressed files may make it easier to distribute these videos to students learning at home.</p>
+<ol>
+	<li><a href="https://www.dropbox.com/s/jkr8z90o7kujxh0/CSP-20_21-Videos-Part1.zip?dl=0" target="_blank">CS Principles 20/21 Videos - Part 1</a></li>
+	<li><a href="https://www.dropbox.com/s/c9l78pwenwjscka/CSP-20_21-Videos-Part2.zip?dl=0" target="_blank">CS Principles 20/21 Videos - Part 2</a></li>
+</ol>
 <p>You can also check out these unplugged resources from 3rd parties:</p>
 <ul>
 	<li><a href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. (for ages 4-10)</li>

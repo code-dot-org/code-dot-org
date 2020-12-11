@@ -977,9 +977,11 @@ zh-TW:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: 在 {N} {UNIT}
         options:
           UNIT:
             '"seconds"': 秒
+            '"frames"': 頁框
       gamelab_bounceOff:
         text: "{SPRITE} 跳離 {TARGET}"
       gamelab_changePropBy:
@@ -1003,6 +1005,8 @@ zh-TW:
         text: 點擊 {SPRITE}
       gamelab_comment:
         text: 註解：{COMMENT}
+      gamelab_countByAnimation:
+        text: "{SPRITE} 個"
       gamelab_createNewSprite:
         text: |-
           角色 創建一個新的 {COSTUME}
@@ -1013,6 +1017,8 @@ zh-TW:
         text: 可拖曳
       gamelab_edgesDisplace:
         text: 角色 {SPRITE} 碰到邊緣就停止
+      gamelab_getAllSprites:
+        text: 所有小怪
       gamelab_getProp:
         text: 角色 {SPRITE} 的 {PROPERTY}
         options:
@@ -1030,12 +1036,15 @@ zh-TW:
             '"this"': 這個
             '"other"': 其它
       gamelab_getTime:
+        text: 在 {UNIT} 時間內
         options:
           UNIT:
             '"seconds"': 秒
+            '"frames"': 頁框
       gamelab_hideTitleScreen:
         text: 標題畫面隱藏
       gamelab_isKeyPressed:
+        text: 按下 {KEY}  鍵
         options:
           KEY:
             '"up"': 向上
@@ -1115,6 +1124,14 @@ zh-TW:
             '"z"': z
       gamelab_locationAt:
         text: '座標 x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: 在 {LOCATION} 往{DIRECTION} 方向的 {DISTANCE} 像素
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 東
+            '"South"': 南
+            '"West"': 西
       gamelab_locationMouse:
         text: 鼠標位置
       gamelab_locationOf:
@@ -1123,6 +1140,8 @@ zh-TW:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
+      gamelab_makeNumSprites:
+        text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       gamelab_mirrorSprite:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:
@@ -1147,6 +1166,8 @@ zh-TW:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
+      gamelab_patrollingUpDown:
+        text: 到處巡邏
       gamelab_playSound:
         text: 播放音效 {SOUND}
       gamelab_pointInDirection:
@@ -1171,6 +1192,8 @@ zh-TW:
         text: 角色 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 角色 {THIS} 顏色移除
+      gamelab_repeatForever:
+        text: 重複無限次
       gamelab_setAnimation:
         text: 角色 {THIS} 造型設為 {ANIMATION}
       gamelab_setBackground:
@@ -1209,6 +1232,8 @@ zh-TW:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水中
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 無
+      gamelab_setBackgroundImageAs:
+        text: 背景設為 {IMG}
       gamelab_setProp:
         text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
@@ -1805,7 +1830,6 @@ zh-TW:
             '"stoneBricks"': 石磚
             '"mossyStoneBricks"': 青苔石磚
             '"crackedStoneBricks"': 裂紋石磚
-            '"decorativeStoneBricks"': 裝飾石磚
             '"blueCoralBlock"': 藍色珊瑚方塊
             '"pinkCoralBlock"': 粉紅色珊瑚方塊
             '"magentaCoralBlock"': 洋紅色珊瑚方塊

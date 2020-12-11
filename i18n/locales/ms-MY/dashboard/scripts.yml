@@ -5,6 +5,7 @@ ms:
       category:
         hoc_category_name: Hour of Code
         math_category_name: Matematik
+        other_category_name: Lain-lain
       name:
         course1:
           title: Kursus 1

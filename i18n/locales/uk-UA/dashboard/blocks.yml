@@ -88,9 +88,6 @@ uk:
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} виконувати рух {MOVE} {DIR} завжди"
         options:
@@ -109,9 +106,6 @@ uk:
             MOVES.Kick: Зірка
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -188,9 +182,6 @@ uk:
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} виконує рух {MOVE} {DIR} один раз"
         options:
@@ -219,9 +210,6 @@ uk:
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'повторювати кожні {N} такти після {START} '
       Dancelab_everySeconds:
@@ -1105,6 +1093,13 @@ uk:
             '"z"': z
       gamelab_locationAt:
         text: 'місце розташування x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
       gamelab_locationMouse:
         text: розташування миші
       gamelab_locationOf:
@@ -1159,6 +1154,8 @@ uk:
         text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
       gamelab_removeTint:
         text: зняти колір з {THIS}
+      gamelab_repeatForever:
+        text: повторювати завжди
       gamelab_setAnimation:
         text: Змінити {THIS} костюм, щоб {ANIMATION}
       gamelab_setBackground:
@@ -1179,6 +1176,8 @@ uk:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: немає
+      gamelab_setBackgroundImageAs:
+        text: встановити фон {IMG}
       gamelab_setProp:
         text: Встановити {SPRITE} {PROPERTY} до {VAL}
         options:
@@ -1712,7 +1711,6 @@ uk:
             '"stoneBricks"': кам'яні цеглини
             '"mossyStoneBricks"': кам'яні цеглини з мохом
             '"crackedStoneBricks"': тріснуті кам'яні цеглини
-            '"decorativeStoneBricks"': декоративні кам'яні цеглини
             '"blueCoralBlock"': блок синього коралу
             '"pinkCoralBlock"': блок рожевого коралу
             '"magentaCoralBlock"': блок фіолетового коралу

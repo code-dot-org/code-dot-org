@@ -7,20 +7,27 @@ en:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csd_2019_category_name: CS Discoveries ('19-'20)
+        csd_2020_category_name: CS Discoveries ('20-'21)
+        csd_pilot_category_name: CS Discoveries Pilot
         csf_category_name: CS Fundamentals
-        csf_2018_category_name: CS Fundamentals (2018)
-        csf_2019_category_name: CS Fundamentals (2019)
+        csf_2018_category_name: CS Fundamentals ('18-'19)
+        csf_2019_category_name: CS Fundamentals ('19-'20)
+        csf_2020_category_name: CS Fundamentals ('20-'21)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'Under Development: Courses A - F'
-        csp_category_name: "'15-'16 CS Principles"
+        csp_category_name: CS Principles ('15-'16)
         csp_2018_category_name: CS Principles ('18-'19)
         csp_2019_category_name: CS Principles ('19-'20)
+        csp_2020_category_name: CS Principles ('20-'21)
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Full Courses
         hoc_category_name: Hour of Code
         math_category_name: Math
         research_studies_category_name: Research Studies
+        twenty_hour_category_name: 20-Hour
+        tts_category_name: Text-to-Speech
+        other_category_name: Other
       name:
         course1:
           title: Course 1
@@ -1215,6 +1222,8 @@ en:
               name: Contained Levels
             ML Fish:
               name: ML Fish
+            AI Lab:
+              name: AI Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -4818,7 +4827,7 @@ en:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
           description_short: Teacher Professional Learning Course for CSP Unit 5
-          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
+          description: "####  **This course is associated with a version of the course that is no longer supported.  Please visit our Courses Overview page (https://studio.code.org/courses) to see our most current curricula.**\r\n\r\nThis is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5."
           lesson_groups:
             required:
               display_name: Overview
@@ -15489,6 +15498,7 @@ en:
               name: Variables Make Demo
             'Lesson 11: Assessment Day':
               name: 'Lesson 11: Assessment Day'
+          name: csp7-2020
         csd2-projects-temp:
           title: CSD Web Projects - TEMP
           description_audience: ''
@@ -15779,12 +15789,12 @@ en:
               description_teacher: "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\n\r\nIn this lesson, students work in groups to design paper towers that can stand as high as possible. Groups have two rounds to work on their towers, with the goal of trying to go higher than they did in Round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\r\n\r\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](../1/)**"
             Exploring Problem Solving - Games Theme (Alternate Lesson 3):
               name: Exploring Problem Solving - Games Theme (Alternate Lesson 3)
-              description_student: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson the class applies the problem solving process to three different problems: a tangram puzzle, choosing a pet according to criteria, and planning a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems."
-              description_teacher: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve tangrams, choose a pet for several people, and plan a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day."
-            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
-              name: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
               description_student: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson the class applies the problem solving process to three different problems: a maze, a logic puzzle, and planning field day activity. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems."
               description_teacher: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a maze, organizing a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day."
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              name: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
+              description_student: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson the class applies the problem solving process to three different problems: a tangram puzzle, choosing a pet according to criteria, and planning a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems."
+              description_teacher: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve tangrams, choose a pet for several people, and plan a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day."
             Storage:
               name: Storage
         csd4-2020:
@@ -18188,26 +18198,27 @@ en:
         vpl-csp-2020:
           lessons:
             Module 1:
-              name: Module 1
+              name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming'
             Module 2:
-              name: Module 2
+              name: 'Module 2: Variables in Unit 4 and the role of collaboration'
             Module 3:
-              name: Module 3
+              name: 'Module 3: Unit 5, using lists in apps, and recognizing CS skills in the classroom'
             Module 4:
-              name: Module 4
+              name: 'Module 4: Unit 5 and using datasets in apps'
             Module 5:
-              name: Module 5
+              name: 'Module 5: Unit 7 and understanding functions with parameters and return'
             Module 6:
-              name: Module 6
+              name: 'Module 6: Introduction to the Create Performance Task'
             Module 7:
-              name: Module 7
+              name: 'Module 7: Tools and structure in Unit 9 - Data'
             Module 8:
-              name: Module 8
+              name: 'Module 8: Building community and preparing students for the AP Exam'
           lesson_groups: {}
           title: CS Principles Virtual Professional Learning
           description_audience: ''
           description_short: ''
           description: ''
+          name: vpl-csp-2020
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -18216,6 +18227,8 @@ en:
               name: Course B
             Course E/F:
               name: Course E/F
+            CS Discoveries:
+              name: CS Discoveries
           lesson_groups:
             lesson group:
               display_name: display name
@@ -18223,3 +18236,128 @@ en:
           description_audience: Internal
           description_short: 'Levels that are linked directly in lesson plans but do not appear in other scripts. '
           description: ''
+        virustest:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Virus Simulation for Code Bytes
+          lesson_groups:
+            csf_data:
+              display_name: Virus Simulation for Code Bytes
+          title: Simulating an Outbreak
+          description_audience: ''
+          description_short: 'Use Sprite Lab to create a simulation out of a virus outbreak. '
+          description: ''
+        ml-playground:
+          lessons:
+            Variables:
+              name: Example I Stole From CSD
+            ML Playground:
+              name: ML Playground
+            ML Playground 2:
+              name: ML Playground 2
+            USE Projects:
+              name: USE Projects
+            MODIFY Projects:
+              name: MODIFY Projects
+            CREATE Projects:
+              name: CREATE Projects
+            USE Programs:
+              name: USE Programs (AppLab Only)
+            MODIFY Programs:
+              name: MODIFY Programs (AppLab -> Widget -> AppLab)
+            Does Code.org Like Your Dog?:
+              name: Does Code.org Like Your Dog?
+            dog:
+              name: Does Code.org Like Your Dog?
+            AI for Oceans:
+              name: AI for Oceans
+            oceans:
+              name: Machine Learning with AI for Oceans
+            intro:
+              name: Introduction
+            society:
+              name: Machine Learning & Societal Impact
+            decisions:
+              name: Decision Making with Models
+            visualizing:
+              name: Visualizing Data
+            knn-train:
+              name: Train a model with continuous labels (KNN)
+            knn-use:
+              name: Act out model with continuous labels (KNN)
+            knn-app:
+              name: Make an app with continuous labels (KNN)
+            svm-train:
+              name: Train a model with categorical labels (SVM)
+            svm-use:
+              name: Act out model with categorical labels (SVM)
+            svm-app:
+              name: Make an app with categorical labels (SVM)
+            model:
+              name: Model Card
+            data:
+              name: Explore datasets & choose one for your app
+            project-app:
+              name: 'Mini-Project: Make an ML App'
+            miseducation:
+              name: Mis-education of the Machine
+            ethics:
+              name: Ethics
+            ethics-hoc2020:
+              name: AI & Ethics Hour of Code 2020
+            hypothesis:
+              name: Creating a Data Hypothesis
+            goldilocks:
+              name: Goldilocks Principles
+            collection:
+              name: Collecting Your Own Data
+            project:
+              name: Final project
+            KNN:
+              name: KNN
+            SVM:
+              name: SVM
+            App:
+              name: Making an app
+            Ethics:
+              name: Ethics
+            Project:
+              name: Final project
+            appendix:
+              name: Appendix
+          lesson_groups: {}
+          title: ML/AI Unit - CSD
+          description_audience: ''
+          description_short: ML/AI Unit
+          description: Brainstorm / Playground area for ML/AI Unit Development for CSD. For future questions about this, ask Dan Schneider.
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Coding a Simulation
+          lesson_groups:
+            outbreak:
+              display_name: Outbreak Simulation
+          title: Outbreak Simulator
+          description_audience: ''
+          description_short: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          description: 'Use Sprite Lab to program a simulation out of a virus outbreak. '
+          name: outbreak
+        apps-for-good:
+          lessons:
+            Build an App for Good:
+              name: Build an App for Good
+          lesson_groups: {}
+          title: Apps for Good
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2021drafting:
+          lessons:
+            Sprite Lab:
+              name: Sprite Lab Blocks
+          lesson_groups:
+            Toolbox Levels:
+              display_name: Toolbox Levels
+          title: Planning script for CI and CSF 2021
+          description_audience: Internal
+          description_short: Internal

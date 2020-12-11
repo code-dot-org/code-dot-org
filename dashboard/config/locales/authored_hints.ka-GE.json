@@ -1507,7 +1507,7 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2018": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1525,7 +1525,7 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2018": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1534,7 +1534,7 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2018": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -6498,6 +6498,24 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "ამ თავსატეხის დასასრულებლად თქვენ მხოლოდ ორი ბლოკის დამატება დაგჭირდებათ. ",
           "iceage_warn_ice_age_b": "დაამატეთ ორივე ახალი ბლოკი `გაშვებისას` მოვლენის შიგნით, რათა ისინი პროგრამის გაშვებისთანავე შესრულდნენ."
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!",
+          "courseD_scrat_programming6_c": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "გვერდის დასახატად, გამოიყენეთ `გადაადგილდი წინ 100 პიქსელით` ბლოკი, შემდეგ შეცვალეთ ის 100-დან 200-მდე.",
+          "courseE_artist_ramp8_b": "4 გვერდის დასახატად ჩასვით `100 პიქსელით წინ გადაადგილების` ბლოკი გამეორების ბლოკში და დარწმუნდით, რომ ციკლი მომართულია 4-ჯერ დასახატად.\n\nამის შემდეგ კი, არ დაგავიწყდეთ მობრუნება!",
+          "courseE_artist_ramp8_c": "თქვენი ციკლი უნდა შეიცავდეს ორ ბლოკს: `წინ გადაადგილება` და `90 გრადუსით მარჯვნივ მობრუნება`.",
+          "courseD_artist_ramp12_a": "რა საერთო აქვს ამას კვადრატთან? რით განსხვავდება?",
+          "courseD_artist_ramp12_b": "სცადეთ `მობრუნების` ბლოკებზე ჩამოსაშლელი სიების გამოყენება, რათა გაიგოთ თუ რომელი კუთხე გჭირდებათ!",
+          "courseD_artist_ramp12_c": "თითოეული გვერდის დასახატად უნდა გადაადგილდეთ წინ 100 პიქსელით, შემდეგ მობრუნდით მარჯვნივ 120 გრადუსით. რამდენი გვერდი დაგჭირდებათ?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "ამ თავსატეხის ამოსახსნელად მაინც დაგჭირდებათ `მოვლენამდე` და `სანამ`ციკლების `გამეორების` ციკლში ჩასმა!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "ამ თავსატეხის ამონახსნი ბოლო თავსატეხის ამონახსნის მსგავსი იქნება, თუმცა მიმართულებას შეიცვლის."
         }
       }
     }

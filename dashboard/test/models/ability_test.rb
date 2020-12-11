@@ -32,6 +32,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:read, @login_required_script)
 
     assert ability.can?(:read, @public_script_level)
+    refute ability.can?(:read, @public_script_level, {login_required: "true"})
     refute ability.can?(:read, @login_required_script_level)
   end
 
@@ -55,6 +56,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_script)
 
     assert ability.can?(:read, @public_script_level)
+    assert ability.can?(:read, @public_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
   end
 
@@ -78,6 +80,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, @login_required_script)
 
     assert ability.can?(:read, @public_script_level)
+    assert ability.can?(:read, @public_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
   end
 

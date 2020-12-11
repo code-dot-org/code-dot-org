@@ -507,64 +507,62 @@ ar-SA:
           أخرى للمساعدة في تحسين مشاريعك\n1. **العرض**\n   * اعرِض منتجك النهائي!\n"
       Begin planning your project_2018_2019:
         content1: الوصف هنا
-        markdown: |+
-          #أمثلة_مشاريع
+        markdown: |
+          # عينة من المشاريع
 
-          أنت على وشك البدء بمشروعك النهائي.قبل البدء, اقضي وقت بالاطلاع على أمثلة المشاريع المطروحة.
+          أنت على وشك بدء مشروعك النهائي. وقبل البدء، اقضِ بعض الوقت في الاطلاع على عينة من المشاريع المطروحة.
 
-          | Hungry Squirrel | Alien Story |
+           | Hungry Squirrel | Alien Story |
           |---|---|
-          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
-          | Try adding sounds to this game! | Try adding another scene to this story! |
-
+           | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+           | حاوِل إضافة أصوات إلى هذه اللعبة! | حاوِل أن تضيف مشهدًا آخر لهذه القصة! |
       Begin planning your project_2018_2019_2020:
         content1: الوصف هنا
-        markdown: |+
-          #أمثلة_مشاريع
+        markdown: |
+          # عينة من المشاريع
 
-          أنت على وشك البدء بمشروعك النهائي.قبل البدء, اقضي وقت بالاطلاع على أمثلة المشاريع المطروحة.
+          أنت على وشك بدء مشروعك النهائي. وقبل البدء، اقضِ بعض الوقت في الاطلاع على عينة من المشاريع المطروحة.
 
-          | Hungry Squirrel | Alien Story |
+           | Hungry Squirrel | Alien Story |
           |---|---|
-          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
-          | Try adding sounds to this game! | Try adding another scene to this story! |
-
+           | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+           | حاوِل إضافة أصوات إلى هذه اللعبة! | حاوِل أن تضيف مشهدًا آخر لهذه القصة! |
       BigEvent-Unplugged:
-        markdown: |
-          #الحدث الأكبر
+        markdown: |-
+          # الحدث الكبير
 
-          في علوم الحاسوب، الأحداث هي الاجراءات التي يراقبها جهاز الحاسوب باستمرار، في هذا الدرس سوف تتفاعل بشكل مختلف استناداً إلى أي زر يتم الضغط عليه.
+          الأحداث، في علوم الكمبيوتر، هي الإجراءات التي يراقبها جهاز الكمبيوتر. وفي هذا الدرس، ستتفاعل تفاعلاً مختلفًا وفقًا للزر الذي يُضغَط عليه.
       BigEvent-Unplugged_2020:
-        markdown: |
-          #الحدث الأكبر
+        markdown: |-
+          # الحدث الكبير
 
-          في علوم الحاسوب، الأحداث هي الاجراءات التي يراقبها جهاز الحاسوب باستمرار، في هذا الدرس سوف تتفاعل بشكل مختلف استناداً إلى أي زر يتم الضغط عليه.
+          الأحداث، في علوم الكمبيوتر، هي الإجراءات التي يراقبها جهاز الكمبيوتر. وفي هذا الدرس، ستتفاعل تفاعلاً مختلفًا وفقًا للزر الذي يُضغَط عليه.
       BinaryBracelets-Unplugged:
-        markdown: |
-          # الإسورة_ الثنائية
+        markdown: |-
+          # الأساور الثنائية
 
-          اصنع اسورة تمثل اسمك بالطريقة التي يفهمها الحاسب
+          اصنع اسورة تمثِّل اسمك بالطريقة التي يفهمها جهاز الكمبيوتر!
 
-          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+            ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged_2020:
-        markdown: |
-          # الإسورة_ الثنائية
+        markdown: |-
+          # الأساور الثنائية
 
-          اصنع اسورة تمثل اسمك بالطريقة التي يفهمها الحاسب
+          اصنع اسورة تمثِّل اسمك بالطريقة التي يفهمها جهاز الكمبيوتر!
 
-          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+            ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryImages-Unplugged:
-        markdown: |
+        markdown: |-
           #الصور الثنائية
 
 
-          تواصل مع كيفية إعادة إنشاء صورة باستخدام قيمتين بسيطتين فقط.
+          وضّح كيفية إعادة إنشاء صورة باستخدام قيمتين بسيطتين فقط.
       BinaryImages-Unplugged_2020:
-        markdown: |
+        markdown: |-
           #الصور الثنائية
 
 
-          تواصل مع كيفية إعادة إنشاء صورة باستخدام قيمتين بسيطتين فقط.
+          وضّح كيفية إعادة إنشاء صورة باستخدام قيمتين بسيطتين فقط.
       CSD Header Size MC:
         answers:
         - {}
@@ -1008,15 +1006,15 @@ ar-SA:
         questions:
         - {}
       ConditionalsWithCards-Unplugged:
-        markdown: |
-          #الشرطية مع بطاقات
+        markdown: |-
+          # الجمل الشرطية باستخدام أوراق اللعب
 
-          إلعب لعبة بطاقات وقم بإنشاء قواعد مثل "إذا رسمت بطاقة حمراء ، أحصل على نقطة" و "إذا رسمت بطاقة سوداء ، فستحصل على نقطة."
+          العب لعبة أوراق اللعب، وأنشئ قواعد مثل "إذا سحبت بطاقة حمراء، فسأحصل على نقطة"، و"إذا سحبت بطاقة سوداء، فستحصل على نقطة."
       ConditionalsWithCards-Unplugged_2020:
-        markdown: |
-          #الشرطية مع بطاقات
+        markdown: |-
+          # الجمل الشرطية باستخدام أوراق اللعب
 
-          إلعب لعبة بطاقات وقم بإنشاء قواعد مثل "إذا رسمت بطاقة حمراء ، أحصل على نقطة" و "إذا رسمت بطاقة سوداء ، فستحصل على نقطة."
+          العب لعبة أوراق اللعب، وأنشئ قواعد مثل "إذا سحبت بطاقة حمراء، فسأحصل على نقطة"، و"إذا سحبت بطاقة سوداء، فستحصل على نقطة."
       Crowdsourcing-Unplugged:
         markdown: |-
           # التعهيد الجماعي
@@ -1134,35 +1132,35 @@ ar-SA:
 
           </div>
       DesigningForAccessibilityMarkdownLevel_2019:
-        markdown: |
-          #التصميم لسهولة الوصول
+        markdown: |-
+          # التصميم لسهولة الوصول
 
-          *في عالم عِلم الحاسوب، **سهولة الوصول** تدور حول ابتكار تكنولوجيا للأشخاص ذوي الاحتياجات الخاصة.
-          *الاحتياجات الخاصة تشمل المادية، السمعية، البصرية، وغيرها الكثير.
-          *الاحتياجات الخاصة متنوعة وتؤثر في الأشخاص بطرق مختلفة ،بما في ذلك كيفية استخدامهم للتكنولوجيا مثل **تطبيقات الهواتف الذكية**.
-          *تصميم التطبيقات التي تسهّل للأشخاص ذوي الاحتياجات الخاصة الوصول إليها تجعل هذه التطبيقات أفضل للجميع أيضاً!
+           *في عالم علوم الكمبيوتر، يدور مفهوم **سهولة الوصول** حول ابتكار تكنولوجيا للأشخاص ذوي الاحتياجات الخاصة.
+           *ومن بين الاحتياجات الخاصة الاحتياجات المادية والسمعية والبصرية وغير ذلك.
+           * تتنوَّع الاحتياجات الخاصة، وتؤثر في الأشخاص بطرق مختلفة، بما في ذلك كيفية استخدامهم للتكنولوجيا مثل **تطبيقات الهواتف الذكية**.
+           *ويؤدي تصميم التطبيقات التي يسهل للأشخاص ذوي الاحتياجات الخاصة الوصول إلى جعْل تلك التطبيقات أفضل للجميع على حد سواء!
 
-          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019_2020:
-        markdown: |
-          #التصميم لسهولة الوصول
+        markdown: |-
+          # التصميم لسهولة الوصول
 
-          *في عالم عِلم الحاسوب، **سهولة الوصول** تدور حول ابتكار تكنولوجيا للأشخاص ذوي الاحتياجات الخاصة.
-          *الاحتياجات الخاصة تشمل المادية، السمعية، البصرية، وغيرها الكثير.
-          *الاحتياجات الخاصة متنوعة وتؤثر في الأشخاص بطرق مختلفة ،بما في ذلك كيفية استخدامهم للتكنولوجيا مثل **تطبيقات الهواتف الذكية**.
-          *تصميم التطبيقات التي تسهّل للأشخاص ذوي الاحتياجات الخاصة الوصول إليها تجعل هذه التطبيقات أفضل للجميع أيضاً!
+           *في عالم علوم الكمبيوتر، يدور مفهوم **سهولة الوصول** حول ابتكار تكنولوجيا للأشخاص ذوي الاحتياجات الخاصة.
+           *ومن بين الاحتياجات الخاصة الاحتياجات المادية والسمعية والبصرية وغير ذلك.
+           * تتنوَّع الاحتياجات الخاصة، وتؤثر في الأشخاص بطرق مختلفة، بما في ذلك كيفية استخدامهم للتكنولوجيا مثل **تطبيقات الهواتف الذكية**.
+           *ويؤدي تصميم التطبيقات التي يسهل للأشخاص ذوي الاحتياجات الخاصة الوصول إلى جعْل تلك التطبيقات أفضل للجميع على حد سواء!
 
-          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DigitalCitizenship-Unplugged:
         markdown: |
           # المواطنة الرقمية
 
           بعض المعلومات ليست آمنة لمشاركتها عبر الإنترنت. سيساعدك هذا الدرس على معرفة الفرق بين المعلومات الآمنة والمعلومات الخاصة.
       DigitalFootprint-Unplugged:
-        markdown: |
-          #البصمة الرقمية الخاصة بك
+        markdown: |-
+          # بصمتك الرقمية
 
-          وضع معلومات عن نفسك عبر الإنترنت يخلق بصمة رقمية.
+          إن توفير معلومات عن نفسك عبر الإنترنت يُنشئ بصمة رقمية.
       DigitalSharing-Unplugged:
         markdown: |
           # المشاركة الرقمية
@@ -1194,51 +1192,54 @@ ar-SA:
 
           نعلم أن الحلقات البرمجية تسمَح لنا بفعل أمور مرارًا وتكرارًا، ولكننا سنتعلَّم الآن كيفية استخدام الحلقات البرمجية ذات البينة الإضافية المضمنة فيها.
       GettingLoopy-Unplugged:
-        markdown: |
-          #حصول التكرار
+        markdown: |-
+          # يلا نكرر حركاتنا
 
-          يقدم هذا الدرس مفهوم برمجة التكرار من خلال نشاط الرقص.
+          يقدِّم هذا الدرس مفهوم برمجة الحلقات البرمجية من خلال نشاط الرقص.
       GettingLoopy-Unplugged_2020:
-        markdown: |
-          #حصول التكرار
+        markdown: |-
+          # يلا نكرر حركاتنا
 
-          يقدم هذا الدرس مفهوم برمجة التكرار من خلال نشاط الرقص.
+          يقدِّم هذا الدرس مفهوم برمجة الحلقات البرمجية من خلال نشاط الرقص.
       GoingPlacesSafely-unplugged:
-        markdown: |
-          #التصفح بأمان
-          الانترنت عالم قوي،لكن أحياناً يكون خطيراً. لتبقى آمناً عند تصفح الإنترنت
+        markdown: |-
+          # زيارة الأماكن بأمان
+
+          الإنترنت مكانٌ يتمتَّع بالقوة، لكنه ينطوي على مخاطر في بعض الأحيان. لذا؛ احرص على أمنِك عند تصفح الإنترنت!
+
+          <p align=center>
       GraphPaperProgramming-Unplugged:
-        markdown: |
-          #برمجة ورقة رسم بياني
+        markdown: |-
+          #برمجة ورق الرسم البياني
 
           اكتب خوارزميات يمكن لزملائك في الصف استخدامها لرسم صور.
       GraphPaperProgramming-Unplugged_2020:
-        markdown: |
-          #برمجة ورقة رسم بياني
+        markdown: |-
+          #برمجة ورق الرسم البياني
 
           اكتب خوارزميات يمكن لزملائك في الصف استخدامها لرسم صور.
       HappyLoops-Unplugged:
-        markdown: |
-          #التكرار الممتع
+        markdown: |-
+          # الحلقات البرمجية السعيدة
 
-          في هذا الدرس، ستتعلم عن التكرار
+          في هذا الدرس، ستتعلم عن الحلقات البرمجية!
 
-          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+            ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyLoops-Unplugged_2020:
-        markdown: |
-          #التكرار الممتع
+        markdown: |-
+          # الحلقات البرمجية السعيدة
 
-          في هذا الدرس، ستتعلم عن التكرار
+          في هذا الدرس، ستتعلم عن الحلقات البرمجية!
 
-          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+            ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyMaps-Unplugged:
         markdown: |
-          #الخرائط الممتعة
+          # الخرائط السعيدة
 
           انشاء خوارزمية لتحريك الشخصية من خلال المتاهة.
       HappyMaps-Unplugged_2020:
         markdown: |
-          #الخرائط الممتعة
+          # الخرائط السعيدة
 
           انشاء خوارزمية لتحريك الشخصية من خلال المتاهة.
       Internet Simulator Setup:
@@ -1453,37 +1454,37 @@ ar-SA:
         - text: أي كلمة هي التي نُطِقَتْ؟
         title: إختيارات متعددة
       MoveItMoveIt-Unplugged:
-        markdown: |
+        markdown: |-
           #حرّكها، حرّكها
 
-          استخدم الخريطة و أعطي أوامر للوصول إلى الهدف.
+          استخدِم الخريطة وأعطِ أوامر للوصول إلى الهدف.
       MoveItMoveIt-Unplugged_2020:
-        markdown: |
+        markdown: |-
           #حرّكها، حرّكها
 
-          استخدم الخريطة و أعطي أوامر للوصول إلى الهدف.
+          استخدِم الخريطة وأعطِ أوامر للوصول إلى الهدف.
       Multi-Screen Apps:
         content1: الوصف هنا
       MyLoopyRoboticFriends-Unplugged:
-        markdown: |
-          #أصدقائي_الربوتات_المتكررين
+        markdown: |-
+          #أصدقائي الروبوتات محبو التكرارات
 
-          اجعل برنامجك اقصر باستخدام التكرار!
+          اجعل برامجك أقصر باستخدام الحلقات البرمجية!
       MyLoopyRoboticFriends-Unplugged_2020:
-        markdown: |
-          #أصدقائي_الربوتات_المتكررين
+        markdown: |-
+          #أصدقائي الروبوتات محبو التكرارات
 
-          اجعل برنامجك اقصر باستخدام التكرار!
+          اجعل برامجك أقصر باستخدام الحلقات البرمجية!
       MyRoboticFriends-Unplugged:
-        markdown: |
-          #صديقي_الروبوت
+        markdown: |-
+          # أصدقائي الروبوتات
 
-          تعلم البرمجة عن طريق كتابة كود برمجي لأصدقائك!
+          تعلَّم البرمجة عن طريق كتابة الكود البرمجي لأصدقائك!
       MyRoboticFriends-Unplugged_2020:
-        markdown: |
-          #صديقي_الروبوت
+        markdown: |-
+          # أصدقائي الروبوتات
 
-          تعلم البرمجة عن طريق كتابة كود برمجي لأصدقائك!
+          تعلَّم البرمجة عن طريق كتابة الكود البرمجي لأصدقائك!
       New Challenge Introduction:
         content1: الوصف هنا
       OPD-K5 Reviewing Reflections:
@@ -1547,31 +1548,31 @@ ar-SA:
       OPD-K5-projects-1:
         content1: الوصف هنا
       PicturingData-Unplugged:
-        markdown: |
-          #تصور_البيانات
+        markdown: |-
+          # تصوُّر البيانات
 
           استخدم معمل الألعاب لتجمع البيانات و تتنبأ عنها.
 
-          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+            ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
       PicturingData-Unplugged_2020:
-        markdown: |
-          #تصور_البيانات
+        markdown: |-
+          # تصوُّر البيانات
 
           استخدم معمل الألعاب لتجمع البيانات و تتنبأ عنها.
 
-          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+            ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
       PowerOfWords-Unplugged:
         markdown: |-
           #قوة الكلمات
 
           ستتعلَّم اليوم ما تفعله عندما يؤذيك شخصٌ وضيع على الإنترنت.
       PowerfulPasswords-Unplugged:
-        markdown: |
-          #كلمة_سر_قوية
+        markdown: |-
+          # كلمات مرور قويَّة
 
-          تعلم لماذا نستخدم كلمة المرور, تعلم فوائد استخدام كلمة المرور, واستكشف الاستراتيجيات لإنشاءكلمة مرور قوية وآمنة
+          استكشِف سبب استخدام الناس لكلمة المرور، وتعلَّم فوائد استخدامها، واستكشف استراتيجيات إنشاء كلمات مرور قوية وآمنة والحفاظ عليها.
 
-          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         content1: الوصف هنا
         markdown: |-
@@ -1592,12 +1593,12 @@ ar-SA:
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
       RelayProgramming-Unplugged:
         markdown: |
-          #تناوب البرمجة
+          # البرمجة بالتناوب
 
            التقسيم إلى فرق و العمل معًا لكتابة برامج التي ترسم صور.
       RelayProgramming-Unplugged_2020:
         markdown: |
-          #تناوب البرمجة
+          # البرمجة بالتناوب
 
            التقسيم إلى فرق و العمل معًا لكتابة برامج التي ترسم صور.
       ScreenOutTheMean-Unplugged:
@@ -1616,34 +1617,34 @@ ar-SA:
 
           العب لعبة وفكر في الأوامر المطلوب اتخاذها للحصول على النتيجة الصحيحة.
       Songwriting-Unplugged:
-        markdown: |
-          #تأليف الأغاني
+        markdown: |-
+          # كتابة الأغاني
 
-          استخدم مفهوم الجوقة في أغنية لتتعلّم تعريف واستدعاء الدوال.
+           استخدم مفهوم اللازمة الغنائية في أغنية لتتعلّم تعريف الدوال واستدعائها.
       Songwriting-Unplugged_2020:
-        markdown: |
-          #تأليف الأغاني
+        markdown: |-
+          # كتابة الأغاني
 
-          استخدم مفهوم الجوقة في أغنية لتتعلّم تعريف واستدعاء الدوال.
+           استخدم مفهوم اللازمة الغنائية في أغنية لتتعلّم تعريف الدوال واستدعائها.
       'Technique: Frequency Analysis':
         content1: الوصف هنا
       Terminology Recap:
         content1: الوصف هنا
       TheRightAppMarkdownLevel_2019:
-        markdown: |
-          #التطبيق الصحيح
+        markdown: |-
+          # التطبيق الصحيح
 
-          *في وقتنا الحالي، الجميع يستخدم الحاسب الآلي، خصوصاً الهواتف الذكية.
-          *تساعد تطبيقات الهواتف الذكية الأشخاص على فعل أشياء مثل التحدث إلى الأصدقاء ،الاستماع إلى الموسيقى ، التسوق أو تصفح الانترنت فقط.
-          * من المهم للمبرمجين فهم احتياجات الآخرين وتصميم التطبيقات مع أخذها في الاعتبار
+          * يستخدم الجميع أجهزة الكمبيوتر في وقتنا الحالي، والهواتف الذكية على وجه الخصوص.
+          * تساعِد تطبيقات الهواتف الذكية الأشخاص على القيام بأمور مثل التحدث إلى الأصدقاء والاستماع إلى الموسيقى والتسوق وتصفح الإنترنت.
+          * من المهم أن يدرك المبرمجون احتياجات الآخرين وتصميم التطبيقات مع وضع احتياجات هؤلاء الأشخاص في الحسبان!
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       TheRightAppMarkdownLevel_2019_2020:
-        markdown: |
-          #التطبيق الصحيح
+        markdown: |-
+          # التطبيق الصحيح
 
-          *في وقتنا الحالي، الجميع يستخدم الحاسب الآلي، خصوصاً الهواتف الذكية.
-          *تساعد تطبيقات الهواتف الذكية الأشخاص على فعل أشياء مثل التحدث إلى الأصدقاء ،الاستماع إلى الموسيقى ، التسوق أو تصفح الانترنت فقط.
-          * من المهم للمبرمجين فهم احتياجات الآخرين وتصميم التطبيقات مع أخذها في الاعتبار
+          * يستخدم الجميع أجهزة الكمبيوتر في وقتنا الحالي، والهواتف الذكية على وجه الخصوص.
+          * تساعِد تطبيقات الهواتف الذكية الأشخاص على القيام بأمور مثل التحدث إلى الأصدقاء والاستماع إلى الموسيقى والتسوق وتصفح الإنترنت.
+          * من المهم أن يدرك المبرمجون احتياجات الآخرين وتصميم التطبيقات مع وضع احتياجات هؤلاء الأشخاص في الحسبان!
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       behaviors 1 predict:
         answers:
@@ -1866,19 +1867,12 @@ ar-SA:
             يخفق؟ '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
-          feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
-        - text: السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
-          correct: true
-          feedback: صحيح!
-        - text: السنجاب سيستخدم خطوات قليلة وسيتوقف قبل الوصول إلى الجوزة.
-          feedback: غير صحيح. الخطوات الناقصة ستحدث بعد أن يتجه السنجاب للاتجاه الخاطئ.
+        - {}
+        - correct: true
+        - correct: true
         - text: لا أعرف.
-          feedback: 'الخطأ الاول هو أن السنجاب سوف يذهب للاتجاه الخاطئ بعد الالتفاف
-            الاخير. '
         questions:
-        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
-            يخفق؟ '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: سيكون الطائر بمسافة خطوة واحدة قبل الوصول إلى الخنزير.
@@ -2051,11 +2045,17 @@ ar-SA:
         answers:
         - text: A
           feedback: غير صحيح
-        - text: B
+        - text: 'ب
+
+'
           feedback: غير صحيح
-        - text: C
+        - text: 'ج
+
+'
           feedback: غير صحيح
-        - text: D
+        - text: 'د
+
+'
           correct: true
           feedback: صحيح!
         markdown: |+
@@ -2080,11 +2080,17 @@ ar-SA:
         answers:
         - text: A
           feedback: غير صحيح
-        - text: B
+        - text: 'ب
+
+'
           feedback: غير صحيح
-        - text: C
+        - text: 'ج
+
+'
           feedback: غير صحيح
-        - text: D
+        - text: 'د
+
+'
           correct: true
           feedback: صحيح!
         markdown: |+
@@ -2109,11 +2115,17 @@ ar-SA:
         answers:
         - text: A
           feedback: غير صحيح
-        - text: B
+        - text: 'ب
+
+'
           feedback: غير صحيح
-        - text: C
+        - text: 'ج
+
+'
           feedback: غير صحيح
-        - text: D
+        - text: 'د
+
+'
           correct: true
           feedback: صحيح!
         markdown: |+
@@ -2138,11 +2150,17 @@ ar-SA:
         answers:
         - text: A
           feedback: غير صحيح
-        - text: B
+        - text: 'ب
+
+'
           feedback: غير صحيح
-        - text: C
+        - text: 'ج
+
+'
           feedback: غير صحيح
-        - text: D
+        - text: 'د
+
+'
           correct: true
           feedback: صحيح!
         markdown: |+
@@ -2168,12 +2186,16 @@ ar-SA:
         - text: A
           correct: true
           feedback: صحيح!
-        - text: B
+        - text: 'ب
+
+'
           feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
             الأربعة تكررها 4 مرات في دائرة
 
 '
-        - text: C
+        - text: 'ج
+
+'
           feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
             الأربعة تكررها 4 مرات في دائرة
 
@@ -2196,12 +2218,16 @@ ar-SA:
         - text: A
           correct: true
           feedback: صحيح!
-        - text: B
+        - text: 'ب
+
+'
           feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
             الأربعة تكررها 4 مرات في دائرة
 
 '
-        - text: C
+        - text: 'ج
+
+'
           feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
             الأربعة تكررها 4 مرات في دائرة
 
@@ -2224,12 +2250,16 @@ ar-SA:
         - text: A
           correct: true
           feedback: صحيح!
-        - text: B
+        - text: 'ب
+
+'
           feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
             الأربعة تكررها 4 مرات في دائرة
 
 '
-        - text: C
+        - text: 'ج
+
+'
           feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
             الأربعة تكررها 4 مرات في دائرة
 
@@ -2252,12 +2282,16 @@ ar-SA:
         - text: A
           correct: true
           feedback: صحيح!
-        - text: B
+        - text: 'ب
+
+'
           feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
             الأربعة تكررها 4 مرات في دائرة
 
 '
-        - text: C
+        - text: 'ج
+
+'
           feedback: 'غير صحيح. الحلقة الداخلية تصنع شكل هندسي خماسي، والحلقات الخارجية
             الأربعة تكررها 4 مرات في دائرة
 
@@ -3160,25 +3194,24 @@ ar-SA:
         - text: ما الذي يحدث عندما يتم الضغط على "تشغيل"؟
       courseE_project_exemplars_2019:
         content1: اختبار صفحة كتاب مدرسي مصغرة
-        markdown: |+
+        markdown: |
           #أمثلة مشروع
 
           انت على وشك البدء بمشروعك النهائي. قبل البدأ، ألقِ نظرة على مشاريع كسبيل مثال.
 
           ## مختبر المخلوقات الفضائية
 
-          | رقص العفريت (مختبر المخلوقات الفضائية) | لعبة الكعك (مختبر المخلوقات الفضائية) |
+           | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
           |---|---|
-          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
-          | حاول أضف نص أو سجل نقطة في اللعبة! | حاول أضف نص أو سجل نقطة في اللعبة! |
+           | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+           | حاوِل إضافة نص أو درجة إلى هذه اللعبة! | حاوِل إضافة نص أو درجة إلى هذه اللعبة! |
 
-          ## الفنان
+           ## الرسام
 
-          | نمط (الفنان) | دالة الزهور (الفنان) |
+           | نمط (الرسام) | دالة الزهور (الرسام) |
           |---|---|
-          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
-          | دعنا نبدع مع حلقات متداخلة! | لنكن مبدعين مع الوظائف! |
-
+           | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | هيا بنا نصبح مبدعين باستخدام الحلقات البرمجية المتداخلة! | هيا بنا نصبح مبدعين باستخدام الدوال! |
       courseE_project_exemplars_2019_2020:
         content1: اختبار صفحة كتاب مدرسي مصغرة
       courseExpress_project_exemplars_2019_2020:
@@ -3198,6 +3231,7 @@ ar-SA:
         questions:
         - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
             في النهاية؟
+        title: 'متغيرات النحلة المتعددة '
       courseF_bee_variables_8a_2018_2019:
         answers:
         - text: لن تجمع النحلة أي رحيق لأن المتغيِّر لا يُسمَّى "اجمع".
@@ -3213,6 +3247,7 @@ ar-SA:
         questions:
         - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
             في النهاية؟
+        title: 'متغيرات النحلة المتعددة '
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - text: لن تجمع النحلة أي رحيق لأن المتغيِّر لا يُسمَّى "اجمع".
@@ -3228,6 +3263,7 @@ ar-SA:
         questions:
         - text: انظر إلى الكود البرمجي أدناه. كم عدد وحدات الرحيق التي ستجمعها النحلة
             في النهاية؟
+        title: 'متغيرات النحلة المتعددة '
       courseF_external_variableConstant:
         markdown: '<h2>More on Variables</h2><img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"
           style="padding-left: 30px; width:300px; float:right;"/><h3>You''ve just
@@ -3953,3 +3989,65 @@ ar-SA:
         markdown: '# التصرف في مختبر الحاسوب  <br/><br/>        <a href="https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing"
           target="_new"><button>انتقل إلى خطة الدراسة</button> </a><br/><br/><a class="btn
           btn-large btn-primary next-stage submitButton">Continue</a>'
+      csf_digital_trails:
+        markdown: |-
+          # اتبع الأثر الرقمي
+
+          ## ما هي المعلومات التي لا بأس أن تكون في أثرك الرقمي؟
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # حيي في النت
+
+          ## كيف تذهب في النت إلى أماكن بأمان؟
+      courseD_external_binary1:
+        markdown: |-
+          <h1>ارسم باستخدام النظام الثنائي</h1>
+
+          <h3>النظام الثنائي إحدى وسائل تمثيل المعلومات باستخدام خيارين فقط. وهما في هذه الحالة نمط <b>عدم التشغيل</b>و<b>نمط التشغيل</b><br/>
+          وسنستخدِم هنا الرقم<b>0</b>ككود برمجي لنمط "عدم التشغيل"، والرقم<b>1</b>ككود برمجي لنمط "التشغيل".
+          <br/>
+          <table>
+          <tr><td><img src="https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png" width="75px"/></td><td><img src="https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png" width="90px"/></td></tr>
+          <tr padding="0px"><td align="center"><b>0</b></td><td align="center"><b>1</b></td></tr></table><img src="https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png" float="left"/><h3>قدَّمنا لك في هذه المرحلة شبكة من وحدات "البكسل" يمكنك التدريب عليها وعمل التصميمات عن طريق تشغيل بعض المربعات!</h3>
+
+          ![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)
+      courseD_external_binary1_2018:
+        markdown: |-
+          <h1>ارسم باستخدام النظام الثنائي</h1>
+
+          <h3>النظام الثنائي إحدى وسائل تمثيل المعلومات باستخدام خيارين فقط. وهما في هذه الحالة نمط <b>عدم التشغيل</b>و<b>نمط التشغيل</b><br/>
+          وسنستخدِم هنا الرقم<b>0</b>ككود برمجي لنمط "عدم التشغيل"، والرقم<b>1</b>ككود برمجي لنمط "التشغيل".
+          <br/>
+          <table>
+          <tr><td><img src="https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png" width="75px"/></td><td><img src="https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png" width="90px"/></td></tr>
+          <tr padding="0px"><td align="center"><b>0</b></td><td align="center"><b>1</b></td></tr></table><img src="https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png" float="left"/><h3>قدَّمنا لك في هذه المرحلة شبكة من وحدات "البكسل" يمكنك التدريب عليها وعمل التصميمات عن طريق تشغيل بعض المربعات!</h3>
+
+          ![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)
+      courseD_external_binary1_2018_2019:
+        markdown: |-
+          <h1>ارسم باستخدام النظام الثنائي</h1>
+
+          <h3>النظام الثنائي إحدى وسائل تمثيل المعلومات باستخدام خيارين فقط. وهما في هذه الحالة نمط <b>عدم التشغيل</b>و<b>نمط التشغيل</b><br/>
+          وسنستخدِم هنا الرقم<b>0</b>ككود برمجي لنمط "عدم التشغيل"، والرقم<b>1</b>ككود برمجي لنمط "التشغيل".
+          <br/>
+          <table>
+          <tr><td><img src="https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png" width="75px"/></td><td><img src="https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png" width="90px"/></td></tr>
+          <tr padding="0px"><td align="center"><b>0</b></td><td align="center"><b>1</b></td></tr></table><img src="https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png" float="left"/><h3>قدَّمنا لك في هذه المرحلة شبكة من وحدات "البكسل" يمكنك التدريب عليها وعمل التصميمات عن طريق تشغيل بعض المربعات!</h3>
+
+          ![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)
+      courseD_external_binary1_2018_2019_2020:
+        markdown: |-
+          <h1>ارسم باستخدام النظام الثنائي</h1>
+
+          <h3>النظام الثنائي إحدى وسائل تمثيل المعلومات باستخدام خيارين فقط. وهما في هذه الحالة نمط <b>عدم التشغيل</b>و<b>نمط التشغيل</b><br/>
+          وسنستخدِم هنا الرقم<b>0</b>ككود برمجي لنمط "عدم التشغيل"، والرقم<b>1</b>ككود برمجي لنمط "التشغيل".
+          <br/>
+          <table>
+          <tr><td><img src="https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png" width="75px"/></td><td><img src="https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png" width="90px"/></td></tr>
+          <tr padding="0px"><td align="center"><b>0</b></td><td align="center"><b>1</b></td></tr></table><img src="https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png" float="left"/><h3>قدَّمنا لك في هذه المرحلة شبكة من وحدات "البكسل" يمكنك التدريب عليها وعمل التصميمات عن طريق تشغيل بعض المربعات!</h3>
+
+          ![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)
+      outbreak_story:
+        content1: الوصف هنا
+      outbreak_story2:
+        content1: الوصف هنا

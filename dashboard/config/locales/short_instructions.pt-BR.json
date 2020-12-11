@@ -3075,7 +3075,23 @@
         "ramp_artist_loops9": "Resolva este enigma desenhando um quadrado.",
         "ramp_artist_loops9_2018": "Resolva este enigma desenhando um quadrado.",
         "ramp_artist_loops9_2019": "Resolva este enigma desenhando um quadrado.",
-        "ramp_artist_loops9_2020": "Resolva este enigma desenhando um quadrado."
+        "ramp_artist_loops9_2020": "Resolva este enigma desenhando um quadrado.",
+        "courseA_playLab_events3_2019": "Ajude Jorge, o cachorro, a se mover conectando o bloco [blockly block] com o bloco [blockly block] que ja se já está na área de trabalho.Use as setas do teclado ou pressione os botões de seta para levar Jorge até a bandeira e passar de nível!",
+        "courseA_playLab_events4_2019": "Agora, adicione outro bloco de eventos para fazer Jorge se mover para a direita, quando o botão de seta para a direita for clicado. Use as setas do teclado ou pressione os botões de seta para mover Jorge para as duas bandeiras e terminar o nível!",
+        "courseA_playLab_events5_2019": "Adicione eventos para que Jorge se mova para cima e para baixo quando os botões `para cima` e`para baixo` são pressionados. Faça Jorge pegar as bandeiras para terminar o nível!",
+        "courseA_playLab_events5_2020": "Adicione eventos para que Jorge se mova para cima e para baixo quando os botões `para cima` e`para baixo` são pressionados. Faça Jorge pegar as bandeiras para terminar o nível!",
+        "courseA_playLab_events6_2019": "Torne isso mais interessante alterando o fundo e reproduzindo um som aleatório quando Jorge for clicado. Quando seu código estiver pronto, clique no Jorge para testá-lo!",
+        "courseA_playLab_events6_2020": "Torne isso mais interessante alterando o fundo e reproduzindo um som aleatório quando Jorge for clicado. Quando seu código estiver pronto, clique no Jorge para testá-lo!",
+        "courseC_video_angles": "Ajude Scrat a chegar até a noz!",
+        "courseD_video_nestedLoopsArtist": "Use o que você aprendeu para desenhar este triângulo.",
+        "courseE_bee_ramp14": "Avance até chegar à alface e, em seguida, colha tudo usando um laço `while`.",
+        "courseE_farmer_predict1": "Enquanto houver alface, colha alface!",
+        "courseE_farmer_predict2": "Avance até chegar à alface e, em seguida, colha tudo usando um laço `while`.",
+        "scrat 16": "Bolota! Bolota! Bolota! Use um bloco \"se\" para me levar lá com o menor número de blocos.",
+        "scrat 17": "Ok, vamos fazer novamente para praticar - este não é muito diferente, mas tome cuidado com a parede!",
+        "scrat 18": "Os blocos \"se-senão\" verificam uma condição e, em seguida, fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.",
+        "scrat 19": "Vamos praticar o uso do bloco \"se-senão\" mais uma vez. Você consegue\nacertar na primeira tentativa?",
+        "scrat 20": "Você consegue adicionar apenas 3 blocos para me ajudar a percorrer um labirinto mais complexo? Se você acertar, eu posso andar por qualquer caminho cheio de curvas, não importa o comprimento. Rápido! O gelo está derretendo!"
       }
     }
   }

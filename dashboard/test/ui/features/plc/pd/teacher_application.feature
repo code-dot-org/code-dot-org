@@ -6,7 +6,7 @@ Feature: Teacher Application
 Scenario: Basic teacher application submission
   Given I create a teacher named "Severus"
     And I am on "http://studio.code.org/pd/application/teacher"
-    And I wait until element "h1" contains text "2020-21 Professional Learning Program Teacher Application"
+    And I wait until element "h1" contains text "Professional Learning Program Teacher Application"
     And I open my eyes to test "Teacher Application"
 
   # Section 1
@@ -23,7 +23,7 @@ Scenario: Basic teacher application submission
 
   # Section 2
   Then I wait until element "h3" contains text "Section 2: Teaching Background"
-
+  And I wait until element "#school input" is visible
   And I press keys "nonexistent" for element "#school input"
 
   # School: select other and enter manual data
@@ -71,7 +71,6 @@ Scenario: Basic teacher application submission
   Then I wait until element "input[name='committed']" is visible
   And I press "input[name='committed']:first" using jQuery
   And I click selector "input[name='payFee']" if I see it
-  And I press the first "input[name='willingToTravel']" element
   And I press the first "input[name='interestedInOnlineProgram']" element
   Then I see no difference for "Section 4: Summer Workshop"
   And I press the first "button#next" element
@@ -92,7 +91,7 @@ Scenario: Basic teacher application submission
   # Principal approval
   Then I sign out
   Then I navigate to the principal approval page for "Severus"
-  Then I wait until element "h1" contains text "2020-2021 Code.org Principal Approval Form"
+  Then I wait until element "h1" contains text "Code.org Principal Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
 
   And I press keys "nonexistent" for element "#nces_school"

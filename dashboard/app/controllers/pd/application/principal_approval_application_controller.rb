@@ -41,6 +41,8 @@ module Pd::Application
         teacher_application
       ).school_stats.transform_values {|v| v.to_i.to_s}
 
+      @year = APPLICATION_CURRENT_YEAR
+
       @script_data = {
         props: {
           options: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options.camelize_keys,

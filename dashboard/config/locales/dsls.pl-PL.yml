@@ -51,8 +51,8 @@ pl-PL:
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
+        - text: "**P**"
+        - text: "**Q**"
         title: Dopasowanie
       2-3 Conditionals Multi 1:
         answers:
@@ -459,12 +459,104 @@ pl-PL:
         title: 'Labirynt: Test wielokrotnego wyboru'
       Begin planning your project:
         content1: opis tutaj
+        markdown: "# Proces projektowania\nProjektowanie oprogramowania oznacza rozwiązywanie
+          mnóstwa małych problemów przez cały czas. Głównym problemem w projektowaniu
+          oprogramowania jest, przede wszystkim to, co tworzymy.\n\nTen proces przydaje
+          się do rzeczy różnego rodzaju, ale będziemy się koncentrować na używaniu
+          go do projektowania aplikacji. \n\n<!-- Przetłumacz terminy: \"Definiuj\",
+          \"Przygotuj\", \"Wypróbuj\", \"Zastanów się\" oraz zmień wielkość czcionki
+          i umiejscowienie, w zależności od potrzeb -->\n<div style=\"position: relative;
+          text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Definiuj</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Przygotuj</div>\n
+          \ <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Wypróbuj</div>\n  <div style=\"position: absolute;
+          top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Zastanów
+          się</div>\n</div>\n\n* **Zdefiniuj**\n  * Jaki rodzaj aplikacji chciałbyś
+          stworzyć?\n  * Jakie są Twoje ograniczenia?\n  * Jak wygląda sukces?\n*
+          **Przygotuj**\n  * Przeprowadź burzę mózgów / badaj potencjalne elementy\n
+          \ * Porównaj zalety i wady\n* Opracuj plan\n* **Wypróbuj**\n  * Przekuj
+          swój plan na działanie\n* **Zastanów się**\n  * Jak wypada porównanie Twoich
+          wyników do celów, które obrałeś definiując aplikację? \n  * Jakie wnioski
+          możesz z tego wyciągną i zrobić coś lepiej następnym razem?\n  * Jakie odkryłeś
+          nowe problemy?\n\n# Jak to wygląda\nW czasie najbliższych kilku tygodni,
+          będziesz miał okazje eksperymentować z niektórymi dotychczasowymi grami
+          i zaprojektować własną grę w oparciu o to, czego się nauczyliśmy. Po stworzeniu
+          swojej gry będziesz miał okazję przedstawić ją innym i uzyskać informację
+          zwrotną. Te kroki/ działania mają znaczenie krytyczne w branży oprogramowania,
+          a zdobycie praktyki w zakresie elementów procesu projektowania pomoże Ci
+          stworzyć lepsze produkty w sposób bardziej wydajny.   \n\nOto, co niosą
+          nam najbliższe tygodnie w miarę powiększania naszej wiedzy na temat procesu
+          projektowania:\n\n1. **Zdefiniuj i przygotuj**\n   * Graj w dotychczasowe
+          gry, aby zdobyć pomysły i zrozumieć ograniczenia\n   * Przeprowadź burzę
+          mózgów i zaplanuj swoją nową lub zmodyfikowaną aplikację\n1. **Wypróbuj**\n
+          \  * Realizuj swój plan budowy aplikacji\n1. **Zastanów się i edytuj**\n
+          \  * Zamień aplikacje z inną grupą, aby pomóc ulepszyć Twoje projekty\n1.
+          **Przedstaw**\n   * Pochwal się swoim wyrobem gotowym!\n"
       Begin planning your project_2018:
         content1: opis tutaj
+        markdown: "# Proces projektowania\nProjektowanie oprogramowania oznacza rozwiązywanie
+          mnóstwa małych problemów przez cały czas. Głównym problemem w projektowaniu
+          oprogramowania jest, przede wszystkim to, co tworzymy.\n\nTen proces przydaje
+          się do rzeczy różnego rodzaju, ale będziemy się koncentrować na używaniu
+          go do projektowania aplikacji. \n\n<!-- Przetłumacz terminy: \"Definiuj\",
+          \"Przygotuj\", \"Wypróbuj\", \"Zastanów się\" oraz zmień wielkość czcionki
+          i umiejscowienie, w zależności od potrzeb -->\n<div style=\"position: relative;
+          text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Definiuj</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Przygotuj</div>\n
+          \ <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Wypróbuj</div>\n  <div style=\"position: absolute;
+          top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Zastanów
+          się</div>\n</div>\n\n* **Zdefiniuj**\n  * Jaki rodzaj aplikacji chciałbyś
+          stworzyć?\n  * Jakie są Twoje ograniczenia?\n  * Jak wygląda sukces?\n*
+          **Przygotuj**\n  * Przeprowadź burzę mózgów / badaj potencjalne elementy\n
+          \ * Porównaj zalety i wady\n* Opracuj plan\n* **Wypróbuj**\n  * Przekuj
+          swój plan na działanie\n* **Zastanów się**\n  * Jak wypada porównanie Twoich
+          wyników do celów, które obrałeś definiując aplikację? \n  * Jakie wnioski
+          możesz z tego wyciągną i zrobić coś lepiej następnym razem?\n  * Jakie odkryłeś
+          nowe problemy?\n\n# Jak to wygląda\nW czasie najbliższych kilku tygodni,
+          będziesz miał okazje eksperymentować z niektórymi dotychczasowymi grami
+          i zaprojektować własną grę w oparciu o to, czego się nauczyliśmy. Po stworzeniu
+          swojej gry będziesz miał okazję przedstawić ją innym i uzyskać informację
+          zwrotną. Te kroki/ działania mają znaczenie krytyczne w branży oprogramowania,
+          a zdobycie praktyki w zakresie elementów procesu projektowania pomoże Ci
+          stworzyć lepsze produkty w sposób bardziej wydajny.   \n\nOto, co niosą
+          nam najbliższe tygodnie w miarę powiększania naszej wiedzy na temat procesu
+          projektowania:\n\n1. **Zdefiniuj i przygotuj**\n   * Graj w dotychczasowe
+          gry, aby zdobyć pomysły i zrozumieć ograniczenia\n   * Przeprowadź burzę
+          mózgów i zaplanuj swoją nową lub zmodyfikowaną aplikację\n1. **Wypróbuj**\n
+          \  * Realizuj swój plan budowy aplikacji\n1. **Zastanów się i edytuj**\n
+          \  * Zamień aplikacje z inną grupą, aby pomóc ulepszyć Twoje projekty\n1.
+          **Przedstaw**\n   * Pochwal się swoim wyrobem gotowym!\n"
       Begin planning your project_2018_2019:
         content1: opis tutaj
+        markdown: |+
+          # Przykłady projektów
+
+          Za chwilę zaczniesz realizować swój projekt finałowy. Zanim zaczniesz, poświęć trochę czasu na obejrzenie przykładowych projektów.
+
+          | "Głodna wiewiórka" [Hungry Squirrel] | "Opowieść ufoludka" [Alien Story] |
+          |---|---|
+          | [![ "Głodna wiewiórka" [Hungry Squirrel] (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Głodna wiewiórka" [Hungry Squirrel] (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![ [Alien Story] (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG " [Alien Story] (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Spróbuj dodać dźwięki do tej gry! | Spróbuj dodać inną scenę do tej historii! |
+
       Begin planning your project_2018_2019_2020:
         content1: opis tutaj
+        markdown: |+
+          # Przykłady projektów
+
+          Za chwilę zaczniesz realizować swój projekt finałowy. Zanim zaczniesz, poświęć trochę czasu na obejrzenie przykładowych projektów.
+
+          | "Głodna wiewiórka" [Hungry Squirrel] | "Opowieść ufoludka" [Alien Story] |
+          |---|---|
+          | [![ "Głodna wiewiórka" [Hungry Squirrel] (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Głodna wiewiórka" [Hungry Squirrel] (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![ [Alien Story] (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG " [Alien Story] (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Spróbuj dodać dźwięki do tej gry! | Spróbuj dodać inną scenę do tej historii! |
+
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -571,6 +663,8 @@ pl-PL:
           ## Źródła
 
           * [Przeznaczenie stron internetowych - Poradnik](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Cel Witryn Internetowych - Przykład](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L2 Overview:
         content1: opis tutaj
         markdown: "#Podsumowanie\n\nTa lekcja wprowadza strony internetowe jako środek
@@ -1491,6 +1585,25 @@ pl-PL:
         content1: opis tutaj
       New Challenge Introduction:
         content1: opis tutaj
+        markdown: "### Nowe wyzwanie: Złam losowy szyfr podstawieniowy ... przy pomocy
+          nowego widgetu \n\nA co, jeśli zamiast przesunięcia całego alfabetu, przypisaliśmy
+          każdej literze alfabetu przypadkową inną literę alfabetu? Nosi to nazwę
+          **szyfru losowego podstawienia.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nZamiast
+          tajnej wiadomości zakodowanej przy pomocy prostego przesunięcia alfabetu,
+          skonfrontujesz się z wiadomościami zakodowanymi przy pomocy **losowego podstawienia.\n\nJest
+          to dużo trudniejsze do złamania i wymaga dużo bardziej skomplikowanego narzędzia,
+          zatem ...\n\nGdy klikniesz \"Kontynuuj\", zobaczysz **nową, bardziej zaawansowaną
+          wersję narzędzia do szyfrowania **, która pokazuje Ci więcej różnych rzeczy.\n\nPewną
+          tajemnicą pozostaje jednak zasada jego działania\n\n### Twoje zadanie:\n\n
+          * Wymyśl, co dzieje się w tej nowej wersji narzędzia \n * Jakie informacje
+          są Ci przedstawiane?\n * Wymyśl, co umożliwia Ci to narzędzie\n * Jak zwykle:
+          nie da się tego zniszczyć. Zatem klikaj, szperaj .\n * Jeśli wymyślisz,
+          jak to działa, możesz być w stanie złamać wiadomość zakodowaną przy pomocy
+          losowego podstawienia.\n \n### Wskazówka\n\n* Czy wiedziałeś, że **E** jest
+          najpopularniejszą literą stosowaną w języku angielskim?\n\n### Zbierzcie
+          się ponownie i omówcie\n Po jakimś czasie zabawy należy zebrać pewne grono
+          osób - partnera, małą grupę, całą klasę, aby omówić swoje ustalenia i zweryfikować
+          czy wiesz, o co chodzi oraz czy znasz różne sposoby wykorzystania narzędzia.\n\n\n"
       OPD-K5 Reviewing Reflections:
         content1: opis tutaj
       OPD-K5 Stage3aGo:
@@ -1613,10 +1726,60 @@ pl-PL:
           Żeby spróbować kliknij Kontynuuj!\n"
       Prepare for your presentation:
         content1: opis tutaj
+        markdown: |-
+          # Prezentacja projektu
+
+          Czas na zaprezentowanie Waszych projektów! Twój nauczyciel poda Ci więcej szczegółów na temat tego,, jak będziesz prezentować swoją pracę kolegom z klasy.
       'Technique: Frequency Analysis':
         content1: opis tutaj
+        markdown: "# Łamanie szyfrów podstawieniowych\n\nNajlepszą techniką łamania
+          losowego kodu podstawieniowego jest znana jako **analiza częstotliwości**
+          \n\nSparafrazowane z serwisu: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          **Analiza częstotliwości** jest techniką, której podstawę stanowi to, jak
+          *często* pewne litery pojawiają się w języku angielskim w porównaniu do
+          innych.\n* Na przykład w danym fragmencie tekstu w języku angielskim *E*,
+          *T*, *A* i *O* są najpopularniejsze, natomiast *Z*, *Q* i *X* występują
+          rzadko. Podobnie, *TH*, *ER*, *ON* i *AN* stanowią najpopularniejsze pary
+          liter, które występują obok siebie.\n* W rzeczywistości rozkład liter jest
+          w przybliżeniu taki sam dla prawie *wszystkich* próbek tekstu w języku angielskim.
+          \n\n\nWersja widgetu na poprzedniej stronie ma pomóc w **łamaniu szyfru
+          podstawieniowego rzy pomocy analizy częstotliwości**.\n\nPoprzez analizę
+          częstotliwości występowania liter w zaszyfrowanej wiadomości w porównaniu
+          do częstotliwości liter w typowym fragmencie prozy w języku angielskim,
+          możesz rozpocząć zawężanie zakresu części odwzorowania liter. \n\nNarzędzi
+          pokazuje jak wypada porównanie częstotliwości występowania liter w zaszyfrowanym
+          tekście (w kolorze pomarańczowym) do częstotliwości ich występowania w typowym
+          tekście w języku angielskim (w kolorze niebieskim).\n\n### Wskazówka: Gdzie
+          rozpocząć?\n\n1. Znajdź krótkie wyrazy i \"złam\" je jako pierwsze. Jak
+          wiele znasz słów jednoliterowych? (\"a\").  Bardzo popularnym słowem trzyliterowym
+          jest wyraz \"the\".\n2. Gdy już skończysz masz zastąpienia niektórych najpopularniejszych
+          liter. Powinieneś mieć możliwość posłużenia się intuicją, aby przyjrzeć
+          się innym słowom dzięki tym częściowym podstawieniom oraz dobrze odgadywać.\n3.
+          Po znalezieniu, nawet z trudem, zaledwie kilku liter, reszta poukłada się
+          już szybko.\n4. Porównanie częstotliwości występowania liter daje dobry
+          ogląd jak sensownie zgadywać.\n\n### Wypróbuj tego:\nPoniższa animacja pokazuje
+          kogoś, kto zaczyna. Ich próba przebiegała następująco\n\n* Najpierw pogrupuj
+          znaki według częstotliwości. \n* Identyfikuj grupy znaków, które mogą odwzorowywać
+          słowo `the`.  \nTo jest dobry start!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Czy losowe podstawianie się sprawdza?\n* Po zdobyciu pewnej praktyki, jak
+          długo zabiera Ci złamanie losowego szyfru podstawieniowego?\n* Czy to się
+          sprawdza czy nie?\n\n\n"
       Terminology Recap:
         content1: opis tutaj
+        markdown: "# Zrób przerwę i powtórz\nWiadomości zaszyfrowane przy pomocy **Szyfru
+          Cezara** łamie się bardzo łatwo, zwłaszcza przy pomocy narzędzia komputacyjnego.
+          Teraz, gdy już zdobyłeś pewną praktykę w zakresie łamania szyfrów podstawieniowych
+          (nie było to zbyt trudne, prawda?) wypróbujmy czegoś trudniejszego.\n \n**Powtórz
+          terminologię:**\n\n* **Szyfrowanie** - proces kodowania wiadomości umożliwiający
+          zachowanie ich tajnego charakteru tak, aby tylko \"uprawnione\" strony mogły
+          je odczytać. \n* **Odszyfrowywanie** - proces stanowiący przeciwieństwo
+          cyfrowania, w ramach którego przyjmuje się tajną wiadomość i odtwarza oryginalny
+          tekst oryginalny. \n**Szyfr** - termin ogólny dla techniki (lub algorytmu),
+          w ramach której przeprowadza się zaszyfrowanie. \n* **Szyfr Cezara** - technika
+          \ szyfrowania polegająca na zamianie alfabetu na pewną liczbę znaków.\n*
+          **Łamanie szyfru** - Podczas próby odkodowania tajnej wiadomości  *bez*
+          znajomości wszystkich szczegółów szyfru, próbuje się **złamać* szyfr. \n\n\nKliknij
+          \"Kontynuuj\", aby zobaczyć **Kolejne wyzwanie**...\n\n \n"
       Unit 1 Lesson 2 Overview:
         markdown: |
           # Podsumowanie
@@ -1656,7 +1819,8 @@ pl-PL:
 '
           feedback: Nieprawidłowe
         questions:
-        - {}
+        - text: Kliknij przycisk "edytuj", aby przekonać się, jak działa "zachowanie
+            tajemnicze". Badaj kod wewnątrz, a następnie dokonaj takiej prognozy.
       behaviors 1 predict_2020:
         answers:
         - text: Duszek się zakręci.
@@ -1671,7 +1835,8 @@ pl-PL:
 '
           feedback: Nieprawidłowe
         questions:
-        - {}
+        - text: Kliknij przycisk "edytuj", aby przekonać się, jak działa "zachowanie
+            tajemnicze". Badaj kod wewnątrz, a następnie dokonaj takiej prognozy.
       behaviors 4 predict:
         answers:
         - text: W lewo, a potem w dół
@@ -1684,7 +1849,8 @@ pl-PL:
         - text: W dół, a potem w lewo
           feedback: Nieprawidłowe
         questions:
-        - {}
+        - text: Dokonaj prognozy! Którą ścieżka będzie podążać satelita w kierunku
+            galaktyki?
       behaviors 4 predict_2020:
         answers:
         - text: W lewo, a potem w dół
@@ -1697,7 +1863,8 @@ pl-PL:
         - text: W dół, a potem w lewo
           feedback: Nieprawidłowe
         questions:
-        - {}
+        - text: Dokonaj prognozy! Którą ścieżka będzie podążać satelita w kierunku
+            galaktyki?
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: Artysta narysuje trójkąt o trzech równych bokach.
@@ -1717,7 +1884,8 @@ pl-PL:
           feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - text: 'Artysta narysuje pojedynczą linię. '
           feedback: Niepoprawnie. Artysta rysuje kwadrat.
-        - correct: true
+        - text: Artysta narysuje kwadrat.
+          correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
           feedback: Artysta rysuje kwadrat.
@@ -1729,7 +1897,8 @@ pl-PL:
           feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - text: 'Artysta narysuje pojedynczą linię. '
           feedback: Niepoprawnie. Artysta rysuje kwadrat.
-        - correct: true
+        - text: Artysta narysuje kwadrat.
+          correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
           feedback: Artysta rysuje kwadrat.
@@ -1741,7 +1910,8 @@ pl-PL:
           feedback: Niepoprawnie. Artysta rysuje kwadrat.
         - text: 'Artysta narysuje pojedynczą linię. '
           feedback: Niepoprawnie. Artysta rysuje kwadrat.
-        - correct: true
+        - text: Artysta narysuje kwadrat.
+          correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
           feedback: Artysta rysuje kwadrat.
@@ -1861,20 +2031,12 @@ pl-PL:
             program przestanie działać?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program nie zawiedzie. Scrat dotrze do żołędzia.
-          feedback: Niepoprawnie. Scrat idzie złą drogą po pokonaniu ostatniego zakrętu.
-        - text: Scrat pójdzie złą drogą po pokonaniu ostatniego zakrętu.
-          correct: true
-          feedback: Poprawnie!
-        - text: Scrat wykonuje o kilka kroków za mało i nie zdobywa żołędzia
-          feedback: Niepoprawnie. Wykonanie o jednego kroku za mało, ma miejsce po
-            tym, gdy Scrat skręca w niewłaściwą stronę.
+        - {}
+        - correct: true
+        - correct: true
         - text: Nie wiem.
-          feedback: 'Pierwszym błędem jest, że Scrat idzie w złą stronę po pokonaniu
-            ostatniego skrętu. '
         questions:
-        - text: Spójrz uważnie na kod poniżej. Który błąd sprawi jako pierwszy, że
-            program przestanie działać?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Ptak znajdzie się o krok od świnki.
@@ -2069,6 +2231,21 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na kod poniżej. Jaki wykona rysunek, gdy klikniesz
             "Uruchom"?
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -2083,6 +2260,21 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na kod poniżej. Jaki wykona rysunek, gdy klikniesz
             "Uruchom"?
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -2097,6 +2289,21 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na kod poniżej. Jaki wykona rysunek, gdy klikniesz
             "Uruchom"?
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -2111,6 +2318,21 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na kod poniżej. Jaki wykona rysunek, gdy klikniesz
             "Uruchom"?
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -2128,6 +2350,13 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
             "Uruchom"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -2145,6 +2374,13 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
             "Uruchom"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -2162,6 +2398,13 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
             "Uruchom"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -2179,6 +2422,13 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na kod poniżej. Jaki rysunek wykona program, gdy klikniesz
             "Uruchom"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
@@ -2333,26 +2583,46 @@ pl-PL:
             plaster miodu lub *jeden* kwiatek.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Pszczółka zbierze nektar z każdego kwiatka i zrobi miód na każdym
+            plastrze miodu.
+          correct: true
           feedback: Poprawnie!
         - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
             plastrze miodu.
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
         - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
             z plastra miodu.
+          feedback: Niepoprawnie. Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce
+            zebrać nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
         - text: Nie wiem.
+          feedback: Blok "jeśli na kwiatku" pozwala pszczółce zebrać nektar z każdego
+            kwiatka i  robić miód na każdym plastrze miodu.
         questions:
-        - {}
+        - text: 'Przyjrzyj się uważnie poniższemu kodowi. Jak myślisz, co się stanie,
+            gdy klikniesz "Uruchom"? Pamiętaj: za każdą chmurką będzie tylko *jeden*
+            plaster miodu lub *jeden* kwiatek.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: Pszczółka zbierze nektar z każdego kwiatka i zrobi miód na każdym
+            plastrze miodu.
+          correct: true
           feedback: Poprawnie!
         - text: Pszczółka podejmie próbę zebrania nektaru z każdego kwiatka i na każdym
             plastrze miodu.
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce zebrać
+            nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
         - text: Pszczółka podejmie próbę zebrania miodu zarówno z kwiatków, jak i
             z plastra miodu.
+          feedback: Niepoprawnie. Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce
+            zebrać nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
         - text: Nie wiem.
+          feedback: Blok "jeśli na kwiatku" pozwala pszczółce zebrać nektar z każdego
+            kwiatka i  robić miód na każdym plastrze miodu.
         questions:
-        - {}
+        - text: 'Przyjrzyj się uważnie poniższemu kodowi. Jak myślisz, co się stanie,
+            gdy klikniesz "Uruchom"? Pamiętaj: za każdą chmurką będzie tylko *jeden*
+            plaster miodu lub *jeden* kwiatek.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Pszczółka poleci do przodu i zbiera nektar tylko jeden raz.
@@ -2538,33 +2808,61 @@ pl-PL:
             dyń.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+        markdown: Kiełki w tej łamigłówce będą kiełkami kukurydzy lub sałaty.
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: Żniwiarka zbierze cały plon.
-        - {}
-        - correct: true
+          feedback: Niepoprawnie. Nie ma tutaj kodu na zbieranie dyni.
+        - text: Żniwiarka nie zbierze żadnych plonów na obranej przez siebie ścieżce.
+          feedback: Niepoprawnie. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie
+            wzoru kaskadowego i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi.
+            Nie będzie zbierać dyń.
+        - text: Żniwiarka zbierze cały plon, z wyjątkiem dyń.
+          correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
+          feedback: Dzięki kodowi żniwiarka będzie powtarzała wykonywanie wzoru kaskadowego
+            i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi. Nie będzie zbierać
+            dyń.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+        markdown: Kiełki w tej łamigłówce będą kiełkami kukurydzy lub sałaty.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: Żniwiarka zbierze cały plon.
-        - {}
-        - correct: true
+          feedback: Niepoprawnie. Nie ma tutaj kodu na zbieranie dyni.
+        - text: Żniwiarka nie zbierze żadnych plonów na obranej przez siebie ścieżce.
+          feedback: Niepoprawnie. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie
+            wzoru kaskadowego i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi.
+            Nie będzie zbierać dyń.
+        - text: Żniwiarka zbierze cały plon, z wyjątkiem dyń.
+          correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
+          feedback: Dzięki kodowi żniwiarka będzie powtarzała wykonywanie wzoru kaskadowego
+            i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi. Nie będzie zbierać
+            dyń.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+        markdown: Kiełki w tej łamigłówce będą kiełkami kukurydzy lub sałaty.
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - text: Żniwiarka zbierze cały plon.
-        - {}
-        - correct: true
+          feedback: Niepoprawnie. Nie ma tutaj kodu na zbieranie dyni.
+        - text: Żniwiarka nie zbierze żadnych plonów na obranej przez siebie ścieżce.
+          feedback: Niepoprawnie. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie
+            wzoru kaskadowego i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi.
+            Nie będzie zbierać dyń.
+        - text: Żniwiarka zbierze cały plon, z wyjątkiem dyń.
+          correct: true
           feedback: Poprawnie!
         - text: Nie wiem.
+          feedback: Dzięki kodowi żniwiarka będzie powtarzała wykonywanie wzoru kaskadowego
+            i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi. Nie będzie zbierać
+            dyń.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+        markdown: Kiełki w tej łamigłówce będą kiełkami kukurydzy lub sałaty.
       courseD_multi_farmer_ramp13:
         answers:
         - text: Farmer przejdzie do końca ścieżki i zbierze dynię.
@@ -2733,32 +3031,56 @@ pl-PL:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - correct: true
+        - text: Zombie przejdzie odpowiednią ścieżką i kończy na tym, że chodzi bez
+            końca tam i z powrotem.
+          correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
+          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
+            tym, że chodzi bez końca tam i z powrotem.
         - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
+          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
+            tym, że chodzi bez końca tam i z powrotem.
         - text: Nie wiem.
+          feedback: W ramach tego kodu Zombie przejdzie odpowiednią ścieżką i kończy
+            na tym, że chodzi bez końca tam i z powrotem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Zombie przejdzie odpowiednią ścieżką i kończy na tym, że chodzi bez
+            końca tam i z powrotem.
+          correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
+          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
+            tym, że chodzi bez końca tam i z powrotem.
         - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
+          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
+            tym, że chodzi bez końca tam i z powrotem.
         - text: Nie wiem.
+          feedback: W ramach tego kodu Zombie przejdzie odpowiednią ścieżką i kończy
+            na tym, że chodzi bez końca tam i z powrotem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: Zombie przejdzie odpowiednią ścieżką i kończy na tym, że chodzi bez
+            końca tam i z powrotem.
+          correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
+          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
+            tym, że chodzi bez końca tam i z powrotem.
         - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
+          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
+            tym, że chodzi bez końca tam i z powrotem.
         - text: Nie wiem.
+          feedback: W ramach tego kodu Zombie przejdzie odpowiednią ścieżką i kończy
+            na tym, że chodzi bez końca tam i z powrotem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until2_predict1:
@@ -2854,6 +3176,7 @@ pl-PL:
             naciśniesz "Uruchom"?
       courseE_EOC_2020:
         description: 'Dotarłeś do końca Kursu E! Wybierz projekt do utworzenia. '
+        display_name: Koniec projektu kursu
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Ten sam program będzie się działał także jako rozwiązanie tej łamigłówki.
@@ -2893,31 +3216,49 @@ pl-PL:
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         - text: Żniwiarka zbierze wszystkie dynie.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         - text: Żniwiarka zbierze sałatę.
           correct: true
           feedback: Poprawnie!
         - text: Żniwiarka zbierze kukurydzę.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         questions:
         - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać żniwiarka?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         - text: Żniwiarka zbierze wszystkie dynie.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         - text: Żniwiarka zbierze sałatę.
           correct: true
           feedback: Poprawnie!
         - text: Żniwiarka zbierze kukurydzę.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         questions:
         - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać żniwiarka?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         - text: Żniwiarka zbierze wszystkie dynie.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         - text: Żniwiarka zbierze sałatę.
           correct: true
           feedback: Poprawnie!
         - text: Żniwiarka zbierze kukurydzę.
+          feedback: Niepoprawnie. Żniwiarka idzie do przodu aż do końca ścieżki, a
+            następnie obraca się i wraca z powrotem aż zerwie sałatę.
         questions:
         - text: Spójrz na funkcje zdefiniowane poniżej. Co będzie zbierać żniwiarka?
       courseE_prediction_artistFunction1:
@@ -3007,36 +3348,61 @@ pl-PL:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
       courseF_EOC_2020:
         description: 'Dotarłeś do końca Kursu F! Wybierz projekt do utworzenia. '
+        display_name: Koniec projektu kursu
       courseF_bee_variables_8a_2018:
         answers:
-        - {}
+        - text: Pszczółka w ogóle nie zbierze żadnego nektaru, ponieważ zmienna nie
+            nazywa się "zbierz".
+          feedback: Niepoprawnie. Nazwa Twojej zmiennej nie ma wpływu na jej wartość.
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
           feedback: Poprawnie!
         - text: Pszczółka zbierze cały nektar.
+          feedback: Niepoprawnie. Zmienna wraca do wartości 0 przed ostatnimi dwoma
+            wywołaniami funkcji.
         - text: Nie wiem.
+          feedback: Zmienna wraca do wartości 0 przed ostatnimi dwoma wywołaniami
+            funkcji, gdzie za każdym razem dodawana jest wartość 1. Pszczółka może
+            wówczas zebrać 2 jednostki nektaru.
         questions:
-        - {}
+        - text: Spójrz na kod poniżej. Ile jednostek nektaru zbierze na końcu pszczółka?
+        title: Zmienne pszczółki w wydaniu multi
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - {}
+        - text: Pszczółka w ogóle nie zbierze żadnego nektaru, ponieważ zmienna nie
+            nazywa się "zbierz".
+          feedback: Niepoprawnie. Nazwa Twojej zmiennej nie ma wpływu na jej wartość.
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
           feedback: Poprawnie!
         - text: Pszczółka zbierze cały nektar.
+          feedback: Niepoprawnie. Zmienna wraca do wartości 0 przed ostatnimi dwoma
+            wywołaniami funkcji.
         - text: Nie wiem.
+          feedback: Zmienna wraca do wartości 0 przed ostatnimi dwoma wywołaniami
+            funkcji, gdzie za każdym razem dodawana jest wartość 1. Pszczółka może
+            wówczas zebrać 2 jednostki nektaru.
         questions:
-        - {}
+        - text: Spójrz na kod poniżej. Ile jednostek nektaru zbierze na końcu pszczółka?
+        title: Zmienne pszczółki w wydaniu multi
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
-        - {}
+        - text: Pszczółka w ogóle nie zbierze żadnego nektaru, ponieważ zmienna nie
+            nazywa się "zbierz".
+          feedback: Niepoprawnie. Nazwa Twojej zmiennej nie ma wpływu na jej wartość.
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
           feedback: Poprawnie!
         - text: Pszczółka zbierze cały nektar.
+          feedback: Niepoprawnie. Zmienna wraca do wartości 0 przed ostatnimi dwoma
+            wywołaniami funkcji.
         - text: Nie wiem.
+          feedback: Zmienna wraca do wartości 0 przed ostatnimi dwoma wywołaniami
+            funkcji, gdzie za każdym razem dodawana jest wartość 1. Pszczółka może
+            wówczas zebrać 2 jednostki nektaru.
         questions:
-        - {}
+        - text: Spójrz na kod poniżej. Ile jednostek nektaru zbierze na końcu pszczółka?
+        title: Zmienne pszczółki w wydaniu multi
       courseF_external_variableConstant:
         markdown: "<h2>Więcej informacji o zmiennych</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Właśnie poznałeś
@@ -3063,6 +3429,8 @@ pl-PL:
             dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
+        markdown: Użyliśmy licznika z naszej pętli "dla", aby zmieniać szerokość pędzla
+          na tym rysunku.
       courseF_multi_artist_for10_predict1_2018:
         answers:
         - text: 'Artysta narysuje linię prostą, której grubość zwiększa się od jednej
@@ -3081,6 +3449,8 @@ pl-PL:
             dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
+        markdown: Użyliśmy licznika z naszej pętli "dla", aby zmieniać szerokość pędzla
+          na tym rysunku.
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
         - text: 'Artysta narysuje linię prostą, której grubość zwiększa się od jednej
@@ -3099,6 +3469,8 @@ pl-PL:
             dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
+        markdown: Użyliśmy licznika z naszej pętli "dla", aby zmieniać szerokość pędzla
+          na tym rysunku.
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - text: 'Artysta narysuje linię prostą, której grubość zwiększa się od jednej
@@ -3117,6 +3489,8 @@ pl-PL:
             dłuższą linię, która jest również grubsza.
         questions:
         - text: Co się stanie, gdy naciśniesz "Uruchom"?
+        markdown: Użyliśmy licznika z naszej pętli "dla", aby zmieniać szerokość pędzla
+          na tym rysunku.
       courseF_multi_artist_fwp2_predict1:
         answers:
         - text: Artysta skorzysta z tej samej funkcji, aby narysować dwa pudełka o
@@ -3269,6 +3643,7 @@ pl-PL:
             ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
+        markdown: Ach! Użycie pętli "dla" czyni łamigłówkę czymś dużo prostszym.
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
@@ -3281,9 +3656,12 @@ pl-PL:
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
           feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
             ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
-        - {}
+        - text: 'Nie wiem. '
+          feedback: Pętla "dla" pozwoli pszczółce zebrać odpowiednią ilość nektaru,
+            ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
+        markdown: Ach! Użycie pętli "dla" czyni łamigłówkę czymś dużo prostszym.
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
@@ -3296,9 +3674,12 @@ pl-PL:
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
           feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
             ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
-        - {}
+        - text: 'Nie wiem. '
+          feedback: Pętla "dla" pozwoli pszczółce zebrać odpowiednią ilość nektaru,
+            ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
+        markdown: Ach! Użycie pętli "dla" czyni łamigłówkę czymś dużo prostszym.
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'Pszczółka poleci do przodu i zbierze cały nektar z każdego kwiatka. '
@@ -3311,9 +3692,12 @@ pl-PL:
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
           feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
             ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
-        - {}
+        - text: 'Nie wiem. '
+          feedback: Pętla "dla" pozwoli pszczółce zebrać odpowiednią ilość nektaru,
+            ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
+        markdown: Ach! Użycie pętli "dla" czyni łamigłówkę czymś dużo prostszym.
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: Pszczółka nie zbierze żadnego nektaru ani miodu.
@@ -3425,6 +3809,7 @@ pl-PL:
           Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
       csf_be_a_super_digital_citizen:
         content1: opis tutaj
       csf_password_power-up:
@@ -3465,7 +3850,8 @@ pl-PL:
           feedback: Laurel próbuje zebrać skarb tam, gdzie go nie ma i powoduje powstanie
             błędu.
         questions:
-        - {}
+        - text: Spójrz uważnie na ten kod. Jak sądzisz, co się stanie, gdy program
+            działa?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: Przy pomocy tego kodu Laurel zbierze 4 elementy skarbu.
@@ -3482,7 +3868,8 @@ pl-PL:
           feedback: Laurel próbuje zebrać skarb tam, gdzie go nie ma i powoduje powstanie
             błędu.
         questions:
-        - {}
+        - text: Spójrz uważnie na ten kod. Jak sądzisz, co się stanie, gdy program
+            działa?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: Przy pomocy tego kodu Laurel zbierze 4 elementy skarbu.
@@ -3499,9 +3886,689 @@ pl-PL:
           feedback: Laurel próbuje zebrać skarb tam, gdzie go nie ma i powoduje powstanie
             błędu.
         questions:
-        - {}
+        - text: Spójrz uważnie na ten kod. Jak sądzisz, co się stanie, gdy program
+            działa?
       gradek1_activity_beNice:
         markdown: "# Zachowanie w laboratorium komputerowym\n\n<br/><br/>    \n    \n<a
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\n\nPrzejdź do planu lekcji\n\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+      courseD_EOC_2020:
+        display_name: Koniec projektu kursu
+      courseExpress_EOC_2020:
+        display_name: Koniec projektu kursu
+      BigEvent-Unplugged:
+        markdown: |-
+          # Ważne zdarzenie
+
+          W informatyce zdarzenia są działaniami, które monitoruje komputer. Na tej lekcji będziesz reagować różnie w zależności od tego, który przycisk zostanie naciśnięty.
+      BigEvent-Unplugged_2020:
+        markdown: |-
+          # Ważne zdarzenie
+
+          W informatyce zdarzenia są działaniami, które monitoruje komputer. Na tej lekcji będziesz reagować różnie w zależności od tego, który przycisk zostanie naciśnięty.
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # Bransoletki binarne
+
+          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałą dla komputera!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |
+          # Bransoletki binarne
+
+          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałą dla komputera!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryImages-Unplugged:
+        markdown: "# Obrazki binarne\n\nPrzekaż, jak odtworzyć obrazek używając dwóch
+          prostych wartości. \n"
+      BinaryImages-Unplugged_2020:
+        markdown: "# Obrazki binarne\n\nPrzekaż, jak odtworzyć obrazek używając dwóch
+          prostych wartości. \n"
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Wyrażenia warunkowe z kartami
+
+          Zagraj w karty i twórz zasady takie jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam punkt" i "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Wyrażenia warunkowe z kartami
+
+          Zagraj w karty i twórz zasady takie jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam punkt" i "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."
+      Crowdsourcing-Unplugged:
+        markdown: |-
+          # crowdsourcing
+
+          Przekonaj się, jak crowdsourcing (działania w grupie), popularna w informatyce technika rozwiązywania problemów, może Ci pomóc w ukończeniu zadania razem całą klasą, bardziej efektywnie, niż jeśli robiłbyś to sam.
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          # Designing for Accessibility
+
+          * W świecie informatyki **dostępność** wiąże się z tworzeniem technologii dla ludzi z niepełnosprawnościami.
+          * Niepełnosprawności mogą mieć charakter fizyczny, słuchowy, wizualny i wiele innych.
+          * Niepełnosprawności są zróżnicowane i wpływają na ludzi w różny sposób, w tym na sposób użycia technologii takich jak **aplikacje na smartfona**.
+          * Projektowanie aplikacji dostępnych dla osób z niepełnosprawnościami sprawiają, że są one lepsze również dla wszystkich innych!
+
+          [](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |
+          # Designing for Accessibility
+
+          * W świecie informatyki **dostępność** wiąże się z tworzeniem technologii dla ludzi z niepełnosprawnościami.
+          * Niepełnosprawności mogą mieć charakter fizyczny, słuchowy, wizualny i wiele innych.
+          * Niepełnosprawności są zróżnicowane i wpływają na ludzi w różny sposób, w tym na sposób użycia technologii takich jak **aplikacje na smartfona**.
+          * Projektowanie aplikacji dostępnych dla osób z niepełnosprawnościami sprawiają, że są one lepsze również dla wszystkich innych!
+
+          [](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalCitizenship-Unplugged:
+        markdown: "# Obywatelstwo cyfrowe \n\nNiektórych informacji nie można bezpiecznie
+          udostępniać w internecie. Ta lekcja pomoże Ci w rozpoznaniu różnicy pomiędzy
+          informacjami bezpiecznymi a informacjami prywatnymi."
+      DigitalSharing-Unplugged:
+        markdown: |
+          # Udostępnianie w trybie cyfrowym
+
+          Na tej lekcji będziecie rozpatrywać wyzwania i korzyści związane z przestrzeganiem praw własności i praw autorskich, w szczególności w środowiskach cyfrowych.
+      DigitalSharing-Unplugged_2020:
+        markdown: |
+          # Udostępnianie w trybie cyfrowym
+
+          Na tej lekcji będziecie rozpatrywać wyzwania i korzyści związane z przestrzeganiem praw własności i praw autorskich, w szczególności w środowiskach cyfrowych.
+      EnvelopeVariables-Unplugged:
+        markdown: |-
+          # Zmienne w kopertach
+
+          Zmienne dają wiele swobody w informatyce.  Ta lekcja służy wyjaśnieniu, czym są zmienne i jak możemy posługiwać się nimi na wiele różnych sposobów.
+      EnvelopeVariables-Unplugged_2020:
+        markdown: |-
+          # Zmienne w kopertach
+
+          Zmienne dają wiele swobody w informatyce.  Ta lekcja służy wyjaśnieniu, czym są zmienne i jak możemy posługiwać się nimi na wiele różnych sposobów.
+      ForLoopFun-Unplugged:
+        markdown: |-
+          # Zabawa z pętlami "dla"
+
+          Wiemy, że pętle służą do wykonywania tych samych rzeczy w kółko, ale teraz mamy zamiar dowiedzieć się, jak stosować pętle z wbudowanymi w nie dodatkowymi strukturami
+      ForLoopFun-Unplugged_2020:
+        markdown: |-
+          # Zabawa z pętlami "dla"
+
+          Wiemy, że pętle służą do wykonywania tych samych rzeczy w kółko, ale teraz mamy zamiar dowiedzieć się, jak stosować pętle z wbudowanymi w nie dodatkowymi strukturami
+      GraphPaperProgramming-Unplugged:
+        markdown: |-
+          # Programowanie w formie wykresów na papierze
+
+          Napisz algorytmy, których Twoi koledzy z pracy mogą użyć, aby rysować obrazki.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |-
+          # Programowanie w formie wykresów na papierze
+
+          Napisz algorytmy, których Twoi koledzy z pracy mogą użyć, aby rysować obrazki.
+      Internet-Unplugged:
+        markdown: |-
+          # Internet
+
+          Buduj swój własny Internet w klasie używając jedynie kartek papieru.
+      Internet-Unplugged_2020:
+        markdown: |-
+          # Internet
+
+          Buduj swój własny Internet w klasie używając jedynie kartek papieru.
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # Moi zapętleni robotyczni przyjaciele
+
+          Skracaj swoje programy przy pomocy pętli!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # Moi zapętleni robotyczni przyjaciele
+
+          Skracaj swoje programy przy pomocy pętli!
+      MyRoboticFriends-Unplugged:
+        markdown: "# Moi robotyczni przyjaciele \n\nUcz się programowania pisząc kod
+          dla swoich przyjaciół!"
+      MyRoboticFriends-Unplugged_2020:
+        markdown: "# Moi robotyczni przyjaciele \n\nUcz się programowania pisząc kod
+          dla swoich przyjaciół!"
+      PicturingData-Unplugged:
+        markdown: |
+          # Obrazowanie danych
+
+          Użyj projektu "Play Lab", aby zebrać dane i aby dokonać prognoz.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |
+          # Obrazowanie danych
+
+          Użyj projektu "Play Lab", aby zebrać dane i aby dokonać prognoz.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerOfWords-Unplugged:
+        markdown: |-
+          # Siła słów
+
+          Dziś dowiesz się, co robić, jeśli ktoś jest złośliwy online.
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Potężne hasła
+
+          Odkrywaj przyczyny używania przez ludzi haseł, poznawaj korzyści stosowania haseł i odkrywaj strategie tworzenia i stosowania mocnych, bezpiecznych haseł.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+      Prepare for your presentation_2018:
+        markdown: |-
+          # Prezentacja projektu
+
+          Czas na zaprezentowanie Waszych projektów! Twój nauczyciel poda Ci więcej szczegółów na temat tego,, jak będziesz prezentować swoją pracę kolegom z klasy.
+      PrivatePersonalInformation-Unplugged:
+        markdown: |
+          # Informacje o charakterze prywatnym i osobowym
+
+          Ta lekcja, opracowana przez Common Sense Education, jest poświęcona różnicy między informacją, która jest bezpieczna do udostępniania online a informacją, które taką nie jest.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      RelayProgramming-Unplugged:
+        markdown: "# Programowanie sztafetowe\n\nPodzielcie się na zespoły i pracujcie
+          ze sobą nad pisaniem programów, które rysują obrazki. \n"
+      RelayProgramming-Unplugged_2020:
+        markdown: "# Programowanie sztafetowe\n\nPodzielcie się na zespoły i pracujcie
+          ze sobą nad pisaniem programów, które rysują obrazki. \n"
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Wyłoń średnią
+
+          Dziś dowiesz się, co robić, jeśli ktoś jest złośliwy online.
+      SimonSays-Unplugged:
+        markdown: '# Simon mówi: "Zagraj w grę i pomyśl jakie komendy są potrzebne,
+          aby uzyskać właściwy wynik".'
+      SimonSays-Unplugged_2020:
+        markdown: '# Simon mówi: "Zagraj w grę i pomyśl jakie komendy są potrzebne,
+          aby uzyskać właściwy wynik".'
+      Songwriting-Unplugged:
+        markdown: |-
+          # Pisanie piosenki
+
+          Użyj pojęcia refrenu w piosence, aby nauczyć się, jak definiować i wywoływać funkcje
+      Songwriting-Unplugged_2020:
+        markdown: |-
+          # Pisanie piosenki
+
+          Użyj pojęcia refrenu w piosence, aby nauczyć się, jak definiować i wywoływać funkcje
+      courseD_external_binary1:
+        markdown: "<h1>Narysuj przy pomocy zapisu binarnego</h1>\n \n<h3>Zapis binarny,
+          jest sposobem przedstawienia informacji przy pomocy tylko dwóch opcji. W
+          tym przypadku <b>wyłączenia</b> i <b>włączenia</b>.\n<br/>\nTutaj zamierzamy
+          użyć liczby <b>0</b> jako kodu dla \"wyłączenia\" i liczby jeden <b>1</b>
+          jako kodu dla \"włączenia\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Na tym etapie przedstawiliśmy Ci siatkę \"pikseli\",
+          przez którą możesz przechodzić i sprawiać, by wzory obracały się na określonych
+          kwadratach!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>Narysuj przy pomocy zapisu binarnego</h1>\n \n<h3>Zapis binarny,
+          jest sposobem przedstawienia informacji przy pomocy tylko dwóch opcji. W
+          tym przypadku <b>wyłączenia</b> i <b>włączenia</b>.\n<br/>\nTutaj zamierzamy
+          użyć liczby <b>0</b> jako kodu dla \"wyłączenia\" i liczby jeden <b>1</b>
+          jako kodu dla \"włączenia\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Na tym etapie przedstawiliśmy Ci siatkę \"pikseli\",
+          przez którą możesz przechodzić i sprawiać, by wzory obracały się na określonych
+          kwadratach!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>Narysuj przy pomocy zapisu binarnego</h1>\n \n<h3>Zapis binarny,
+          jest sposobem przedstawienia informacji przy pomocy tylko dwóch opcji. W
+          tym przypadku <b>wyłączenia</b> i <b>włączenia</b>.\n<br/>\nTutaj zamierzamy
+          użyć liczby <b>0</b> jako kodu dla \"wyłączenia\" i liczby jeden <b>1</b>
+          jako kodu dla \"włączenia\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Na tym etapie przedstawiliśmy Ci siatkę \"pikseli\",
+          przez którą możesz przechodzić i sprawiać, by wzory obracały się na określonych
+          kwadratach!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019_2020:
+        markdown: "<h1>Narysuj przy pomocy zapisu binarnego</h1>\n \n<h3>Zapis binarny,
+          jest sposobem przedstawienia informacji przy pomocy tylko dwóch opcji. W
+          tym przypadku <b>wyłączenia</b> i <b>włączenia</b>.\n<br/>\nTutaj zamierzamy
+          użyć liczby <b>0</b> jako kodu dla \"wyłączenia\" i liczby jeden <b>1</b>
+          jako kodu dla \"włączenia\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Na tym etapie przedstawiliśmy Ci siatkę \"pikseli\",
+          przez którą możesz przechodzić i sprawiać, by wzory obracały się na określonych
+          kwadratach!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_project_exemplars_2020_2021:
+        content1: Strona testowa podręcznika o obniżkach
+      courseE_project_exemplars_2019:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |+
+          # Przykładowe projekty
+
+          Zaraz zaczniesz realizację swojego końcowego projektu. Zanim zaczniesz, poświęć trochę czasu na przyjrzenie się przykładowym projektom.
+
+          ## Sprite Lab
+
+          | "Taniec potworów" [Monster Dance] (Sprite Lab) | "Gra w babeczki" [Cupcake Game] (Sprite Lab) |
+          |---|---|
+          | [!["Taniec potworów" [Monster Dance] (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png ""Taniec potworów" [Monster Dance] Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [!["Gra w babeczki" [Cupcake Game]  (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Gra w babeczki" [Cupcake Game]  (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Spróbuj dodać tekst lub punktację do tej gry | Spróbuj dodać tekst lub punktację do tej gry! |
+
+          ## Artist
+
+          | "Wzorzec" [Pattern] (Artist) | "Kwiaty funkcyjne" [Function Flowers] (Arist) |
+          |---|---|
+          | [!["Wzorzec" [Pattern] (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Wzorzec" [Pattern] (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [!["Kwiaty funkcyjne" [Function Flowers] (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Kwiaty funkcyjne" [Function Flowers] (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Dajmy się ponieść kreatywności przy pomocy zmiennych! | Dajmy się ponieść kreatywności przy pomocy pętli "dla"! |
+
+      courseE_project_exemplars_2019_2020:
+        content1: Strona testowa podręcznika o obniżkach
+      courseExpress_project_exemplars_2019_2020:
+        content1: Strona testowa podręcznika o obniżkach
+      courseF_external_variableConstant_2018:
+        markdown: "<h2>Więcej informacji o zmiennych</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Właśnie poznałeś
+          jeden z ważnych sposobów korzystania ze zmiennej...jako stałej!  \nGdy używasz
+          zmiennej jako stałej, ustawiasz wartość raz, a następnie używasz tej *samej*
+          wartości wiele razy w swoim programie bez wprowadzania do niej zmian po
+          kliknięciu \"Uruchom\". </h3>\n<br/><hr/>\n<h3>W dalszej cześci napiszesz
+          kod ze zmiennymi, które *zmieniają* wartość wewnątrz programu.</h3>\n\n"
+      courseF_external_variableConstant_2018_2019:
+        markdown: "<h2>Więcej informacji o zmiennych</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Właśnie poznałeś
+          jeden z ważnych sposobów korzystania ze zmiennej...jako stałej!  \nGdy używasz
+          zmiennej jako stałej, ustawiasz wartość raz, a następnie używasz tej *samej*
+          wartości wiele razy w swoim programie bez wprowadzania do niej zmian po
+          kliknięciu \"Uruchom\". </h3>\n<br/><hr/>\n<h3>W dalszej cześci napiszesz
+          kod ze zmiennymi, które *zmieniają* wartość wewnątrz programu.</h3>\n\n"
+      courseF_external_variableConstant_2018_2019_2020:
+        markdown: "<h2>Więcej informacji o zmiennych</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Właśnie poznałeś
+          jeden z ważnych sposobów korzystania ze zmiennej...jako stałej!  \nGdy używasz
+          zmiennej jako stałej, ustawiasz wartość raz, a następnie używasz tej *samej*
+          wartości wiele razy w swoim programie bez wprowadzania do niej zmian po
+          kliknięciu \"Uruchom\". </h3>\n<br/><hr/>\n<h3>W dalszej cześci napiszesz
+          kod ze zmiennymi, które *zmieniają* wartość wewnątrz programu.</h3>\n\n"
+      courseF_markdown_algorithms_end:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"algorytmów\"!**  \n\n\n\n### **Algorytm
+          jest po prostu listą kroków, przy pomocy których należy ukończyć zadanie**.
+          Fajnym aspektem algorytmów jest to, że to Ty musisz zdecydować, co się wydarzy
+          - krok po kroku.   \n\n### Gdy piszesz algorytm dla maszyny, nazywa się
+          to **programem**.  \n\n---\n\n## **Słownictwo, które należy znać**\n\n*
+          ### **Algorytm** - Lista kroków/ działań, które należy wykonać, aby wykonać
+          zadanie\n\n* ### **Program** - Algorytm, który został zakodowany w coś,
+          co może zostać uruchomione przez urządzenie"
+      courseF_markdown_algorithms_intro:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |
+          # **Na tej lekcji...**
+
+          ### Czy kiedykolwiek chciałeś komuś powiedzieć dokładnie to, co należy zrobić? Czy oni Cię zawsze słuchają?
+
+          ### Dzisiaj będziesz mówić maszynie, co robić, krok po kroku, a ona będzie słuchać!
+
+          ---
+
+          ## **Bloki, które należy znać**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_conditionals_end:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"wyrażeń warunkowych\"!**\n\n### Wyrażenia
+          warunkowe są niezwykle przydatne w informatyce. Wyobraź sobie logowanie
+          się na swojej ulubionej stronie internetowej i wpisywanie swojego hasła.
+          Strona internetowa musi używać wyrażeń warunkowych do sprawdzania warunku
+          *jeśli* czyli czy hasło, które wpisałeś odpowiada hasłu, które jest zapisane
+          dla Twojej nazwy użytkownika. \n\n### `Jeśli` odpowiada, zaloguj się! \n\n###
+          `W przeciwnym razie`, daj użytkownikowi błąd.  \n\n---\n\n## **Słownictwo,
+          które należy znać**\n\n* ### **Warunek** - Coś, co program sprawdza, zanim
+          zezwoli na działanie\n\n* ### **Wyrażenia warunkowe** - Stwierdzenia, które
+          można uruchamiać tylko w określonych warunkach\n\n"
+      courseF_markdown_conditionals_intro:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Na tej lekcji...**\n\n### **Warunki** oznaczają te rzeczy,
+          które mogą być prawdziwe lub fałszywe. \n\n### Będziesz się uczyć, jak używać
+          warunków w programie, aby sprawiać, aby te rzeczy działy się \"dopóki\",
+          \"aż do\" lub \"jeśli\" coś jest prawdziwe!\n---\n\n## **Bloki, które należy
+          znać**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
+      courseF_markdown_debugging_end:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |-
+          # **Właśnie nauczyłeś się "debugować"!**
+
+          ### **Wirus przedstawia coś, co idzie nie tak, jak powinno.** Jest to błąd w programie. Gdy wychwycisz i naprawisz te błędy, **debugujesz** problem.
+
+          ### Musisz się ćwiczyć w **wytrwałości**, co stanowi inne słowo na określenie niepoddawania się, po to, by znaleźć i naprawiać wirusy.
+
+          ---
+
+          ## **Słownictwo, które należy znać**
+
+          * ### **Wirus** - Część programu, która nie działa tak, jak powinna
+
+          * ### **Debugowanie** - Wynajdywanie i naprawianie problemów w algorytmie lub programie
+
+          * ### **Wytrwałość** - Niepoddawanie się
+      courseF_markdown_debugging_intro:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Na tej lekcji...**\n\n### O czym myślisz, gdy myślisz o wirusach?\n\n###
+          Większości ludzi, którzy myślą o wirusach, kojarzą się one z niewielkimi,
+          pełzającymi organizmami. W informatyce wirusy nie są  ożywione, niemniej,
+          mogą powodować trudności. \n\n### **Bloki, które należy znać**\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
+      courseF_markdown_forloops_end:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"pętli dla\"!**\n\n### **Pętle \"dla\"
+          są pętlami, które ustawiają wartości start, stop i krok.**\n\n### Ten nowy
+          rodzaj pętli \"powtórz\" daje Ci więcej kontroli nad tym kiedy pętla \"dla\"
+          zaczyna działać, kiedy kończy i jaka pętla powinna się zwiększać z każdym
+          \ jej uruchomieniem .\n\n### Więcej kontroli oznacza, że możesz rozwiązywać
+          łamigłówki dużo szybciej! \n\n---\n\n## **Słownictwo, które należy znać**\n\n###
+          **Pętle dla** - Pętle \"dla\" są pętlami o określonym wcześniej początku,
+          końcu i przyroście (interwał kroku)"
+      courseF_markdown_forloops_end_2019:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"pętli dla\"!**\n\n### **Pętle \"dla\"
+          są pętlami, które ustawiają wartości start, stop i krok.**\n\n### Ten nowy
+          rodzaj pętli \"powtórz\" daje Ci więcej kontroli nad tym kiedy pętla \"dla\"
+          zaczyna działać, kiedy kończy i jaka pętla powinna się zwiększać z każdym
+          \ jej uruchomieniem .\n\n### Więcej kontroli oznacza, że możesz rozwiązywać
+          łamigłówki dużo szybciej! \n\n---\n\n## **Słownictwo, które należy znać**\n\n###
+          **Pętle dla** - Pętle \"dla\" są pętlami o określonym wcześniej początku,
+          końcu i przyroście (interwał kroku)"
+      courseF_markdown_forloops_end_2019_2020:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"pętli dla\"!**\n\n### **Pętle \"dla\"
+          są pętlami, które ustawiają wartości start, stop i krok.**\n\n### Ten nowy
+          rodzaj pętli \"powtórz\" daje Ci więcej kontroli nad tym kiedy pętla \"dla\"
+          zaczyna działać, kiedy kończy i jaka pętla powinna się zwiększać z każdym
+          \ jej uruchomieniem .\n\n### Więcej kontroli oznacza, że możesz rozwiązywać
+          łamigłówki dużo szybciej! \n\n---\n\n## **Słownictwo, które należy znać**\n\n###
+          **Pętle dla** - Pętle \"dla\" są pętlami o określonym wcześniej początku,
+          końcu i przyroście (interwał kroku)"
+      courseF_markdown_forloops_intro:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |+
+          # **Na tej lekcji...**
+
+          ### Dzisiaj będziemy się uczyć o nowym rodzaju pętli "powtarzaj". Tutaj jest podgląd bloku, którego będziemy używać:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Na* szczęście ta nowa pętla będzie sprawiać, że rozwiązywanie łamigłówek będzie naprawdę łatwe!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
+      courseF_markdown_forloops_intro_2019:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |+
+          # **Na tej lekcji...**
+
+          ### Dzisiaj będziemy się uczyć o nowym rodzaju pętli "powtarzaj". Tutaj jest podgląd bloku, którego będziemy używać:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Na* szczęście ta nowa pętla będzie sprawiać, że rozwiązywanie łamigłówek będzie naprawdę łatwe!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
+      courseF_markdown_forloops_intro_2019_2020:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |+
+          # **Na tej lekcji...**
+
+          ### Dzisiaj będziemy się uczyć o nowym rodzaju pętli "powtarzaj". Tutaj jest podgląd bloku, którego będziemy używać:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### *Na* szczęście ta nowa pętla będzie sprawiać, że rozwiązywanie łamigłówek będzie naprawdę łatwe!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
+      courseF_markdown_loops_end:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"pętli\"!**  \n\n### **Pętla jest czynnością
+          wykonywania czegoś bez końca.** \"Powtarzać/ Powtórz\" stanowi inne słowo
+          na wykonywanie czegoś ponownie.\n\n### Pętle bardzo przydają się do powtarzania
+          wzorców. Może to być przydatne do pisania programu najpierw bez pętli, wówczas
+          spróbuj znaleźć wzorzec. \n\n### Gdy jakąś zobaczysz, dołącz ją do wzorca
+          tworząc blok \"powtórz'!\n\n---\n\n## **Słownictwo, które należy znać**\n\n*
+          ### **Pętla** - Czynność wykonywana bez końca\n\n* ### **Powtórz** - Zrób
+          coś ponownie"
+      courseF_markdown_loops_intro:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "#Na tej lekcje...\n\n### Wyobraź sobie, że chcesz, aby Twoja postać
+          przeszła do przodu **5** razy. To było by dość proste - po prostu przeciągnij
+          **5** bloków \"przejdź do przodu\". Wyobraź sobie teraz, że chciałbyś, aby
+          Twoja postać przeszła do przodu **5 000** razy! \n\n### Ile czasu zajęłoby
+          Ci przeciągnięcie **5 000** bloków? \n\n### Wish there was an easy way to
+          do this? There is!\n\n---\n\n## Bloki, które należy znaćs to Know\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)\n"
+      courseF_markdown_nestedloops_end:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"pętli zagnieżdżonych\"!**\n\n### **Pętla
+          zagnieżdżona jest pętlą w pętli.** Pomyśl o tym, jako o pętli zewnętrznej,
+          z drugą pętlą, która zagnieździła się wygodnie i komfortowo  w pętli zewnętrznej.
+          \n\n### Pętle zagnieżdżone świetnie nadają się do powtarzania wzorców wzorców.
+          W przypadku poprawnego użycia mogą mieć dużą moc!---\n\n## **Słownictwo,
+          które należy znać**\n\n### __Pętle zagnieżdżone__ - Pętla w pętli\n\n"
+      courseF_markdown_nestedloops_intro:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Na tej lekcji...**\n\n### Czy kiedykolwiek zastanawiałeś się,
+          co się stanie, jeśli wstawisz pętlę *do środka innej pętli*? \n\n### Może
+          to sprawić, że się zapętlisz!\n\n### Jeśli normalna pętla nadaje się do
+          powtarzania wzorców, jak sądzisz, do czego nadawałaby się pętla wewnątrz
+          innej pętli? Dowiedzmy się!\n\n---\n\n## **Bloki, które należy znać**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
+      courseF_markdown_variables_end:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"zmiennych\"!**\n\n### Aby móc korzystać
+          ze zmiennej musi ona mieć nazwę i wartość. Nazwa nie ulega zmianie, ale
+          wartość może.  W ten sposób możesz użyć nazwy zmiennej jako celu wykorzystania
+          zmiennej jako symbolu zastępczego wszędzie tam, gdzie chcesz w swoim programie!
+          \n\n---\n\n## **Słownictwo, które należy znać**\n\n### **Zmienna** - Symbol
+          zastępczy dla informacji, która może ulegać zmianie"
+      courseF_markdown_variables_end_2019:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"zmiennych\"!**\n\n### Aby móc korzystać
+          ze zmiennej musi ona mieć nazwę i wartość. Nazwa nie ulega zmianie, ale
+          wartość może.  W ten sposób możesz użyć nazwy zmiennej jako celu wykorzystania
+          zmiennej jako symbolu zastępczego wszędzie tam, gdzie chcesz w swoim programie!
+          \n\n---\n\n## **Słownictwo, które należy znać**\n\n### **Zmienna** - Symbol
+          zastępczy dla informacji, która może ulegać zmianie"
+      courseF_markdown_variables_end_2019_2020:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: "# **Właśnie nauczyłeś się \"zmiennych\"!**\n\n### Aby móc korzystać
+          ze zmiennej musi ona mieć nazwę i wartość. Nazwa nie ulega zmianie, ale
+          wartość może.  W ten sposób możesz użyć nazwy zmiennej jako celu wykorzystania
+          zmiennej jako symbolu zastępczego wszędzie tam, gdzie chcesz w swoim programie!
+          \n\n---\n\n## **Słownictwo, które należy znać**\n\n### **Zmienna** - Symbol
+          zastępczy dla informacji, która może ulegać zmianie"
+      courseF_markdown_variables_intro:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |+
+          # **Na tej lekcji...**
+
+          ### *Zmienne* są symbolami zastępczymi za informacje, które mogą ulegać zmianie. Posiadanie symboli zastępczych umożliwia napisanie programu, nawet, kiedy nie będziesz znać wszystkich wartości do czasu późniejszego!
+
+
+          ---
+
+          ## **Bloki, które należy znać**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+      courseF_markdown_variables_intro_2019:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |+
+          # **Na tej lekcji...**
+
+          ### *Zmienne* są symbolami zastępczymi za informacje, które mogą ulegać zmianie. Posiadanie symboli zastępczych umożliwia napisanie programu, nawet, kiedy nie będziesz znać wszystkich wartości do czasu późniejszego!
+
+
+          ---
+
+          ## **Bloki, które należy znać**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+      courseF_markdown_variables_intro_2019_2020:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |+
+          # **Na tej lekcji...**
+
+          ### *Zmienne* są symbolami zastępczymi za informacje, które mogą ulegać zmianie. Posiadanie symboli zastępczych umożliwia napisanie programu, nawet, kiedy nie będziesz znać wszystkich wartości do czasu późniejszego!
+
+
+          ---
+
+          ## **Bloki, które należy znać**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+      courseF_project_exemplars_2019:
+        content1: Strona testowa podręcznika o obniżkach
+        markdown: |+
+          # Przykładowe projekty
+
+          Zaraz zaczniesz realizację swojego końcowego projektu. Zanim zaczniesz, poświęć trochę czasu na przyjrzenie się przykładowym projektom.
+
+          ## Sprite Lab
+
+          | "Gra w babeczki" [Cupcake Game] (Sprite Lab) | "Gra w helikoptery" [Helicopter Game] (Sprite Lab) |
+          |---|---|
+          | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Spróbuj dodać tekst lub punktację do tej gry! | Spróbuj dodać tekst lub punktację do tej gry! |
+
+          ## Artist
+
+          | "Kwiaty" [Flowers] (Artist) | "Spirala" [Spiral] (Arist) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Dajmy się ponieść kreatywności przy pomocy zmiennych! | Dajmy się ponieść kreatywności przy pomocy pętli "dla"! |
+
+      courseF_project_exemplars_2019_2020:
+        content1: Strona testowa podręcznika o obniżkach
+      GoingPlacesSafely-unplugged:
+        markdown: |-
+          # Bezpieczne udawanie się do różnych miejsc
+
+          Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Chroń bezpieczeństwo chodząc po Internecie.
+
+          <p align=center>
+      HappyLoops-Unplugged:
+        markdown: |
+          # Wesołe pętle [Happy Loops]
+
+          Na tej lekcji będziesz się uczyć o pętlach!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
+        markdown: |
+          # Wesołe pętle [Happy Loops]
+
+          Na tej lekcji będziesz się uczyć o pętlach!
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |-
+          # "Wesołe mapy" [Happy Maps]
+
+          Utwórz algorytm, aby przeprowadzić postać przez labirynt.
+      HappyMaps-Unplugged_2020:
+        markdown: |-
+          # "Wesołe mapy" [Happy Maps]
+
+          Utwórz algorytm, aby przeprowadzić postać przez labirynt.
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# Właściwa aplikacja \n\n* Obecnie każdy korzysta z komputera,
+          w szczególności ze smartfonów. \n* Aplikacje na smartfona pomagają ludziom
+          robić takie rzeczy, jak rozmawiać z przyjaciółmi, słuchać muzyki, robić
+          zakupy lub chodzić po Internecie.\n* Dla programistów, ważne jest zrozumienie
+          potrzeb innych osób i projektowanie aplikacji mając je na uwadze!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# Właściwa aplikacja \n\n* Obecnie każdy korzysta z komputera,
+          w szczególności ze smartfonów. \n* Aplikacje na smartfona pomagają ludziom
+          robić takie rzeczy, jak rozmawiać z przyjaciółmi, słuchać muzyki, robić
+          zakupy lub chodzić po Internecie.\n* Dla programistów, ważne jest zrozumienie
+          potrzeb innych osób i projektowanie aplikacji mając je na uwadze!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)1555611687284.png)"
+      Unit 1 Lesson 1 Overview:
+        markdown: "#Podsumowanie\nKlasa pracuje w grupach, projektując łódki z folii
+          aluminiowej, które pomieszczą jak najwięcej groszówek. Na koniec lekcji
+          grupy zastanowią się, jakie doświadczenia wyniosły z ćwiczenia i powiążą
+          je z problemami, które będą rozwiązywać w dalszej części kursu.  \n\n##
+          Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
+      csd-pre-survey-levelgroup_2019:
+        title: 'Przedkursowa ankieta uczniowska CS Discoveries '
+      outbreak_story:
+        content1: opis tutaj
+        markdown: |-
+          # Epidemia: zakoduj własną symulację
+
+          ## Witamy w Monster Town!
+          Monster Town było zazwyczaj szczęśliwym i zdrowym miejscem. Potwory z Monster Town uwielbiały wędrować po okolicy, aby odwiedzić swoich przyjaciół.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## Wirus przybywa do miasta
+          Pewnego dnia jeden z potworów poczuł mdłości. Potwór złapał **wirusa**! Wirus to malutki zarazek, który może wywołać chorobę. Inne potwory nie były zbyt zmartwione. Ciągle odwiedzali swoich przyjaciół.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## Wirus się rozprzestrzenia
+          Niedługo potem zachorowały dwa kolejne potwory. To był ten sam wirus! Wygląda na to, że dostali wirusa od swojego przyjaciela.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## Epidema!
+          Wirus powoli rozprzestrzeniał się na inne potwory, które były w pobliżu. Zdrowe potwory zaczęły się martwić, że wszyscy zachorują. Chore potwory zaczęły się martwić, że przekażą wirusa wszystkim innym.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Zatrzymanie rozprzestrzeniania się
+          Na szczęście po zbadaniu wirusa sąsiedzi Monster Town dokonali ważnego odkrycia. Zdali sobie sprawę, że byli mniej skłonni do rozprzestrzeniania wirusa, jeśli nosili maski na ustach. Mając założone maski na twarz, chore potwory rzadziej przenosiły wirusa na zdrowe potwory.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Co się później stanie?
+
+          Dzisiaj masz zamiar napisać kod, aby utworzyć i uruchomić własną **symulację** epidemii wirusa w Monster Town. Symulacja to komputerowy model procesu lub systemu. Naucz się kodować i przewidywać, co stanie się z sąsiadami Monster Town.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * * Jak szybko wirus będzie się rozprzestrzeniał? *
+
+          * * Czy wszyscy zachorują? *
+
+          * * W czym pomogą maski na twarz? *
+
+
+          Kiedy skończysz, udostępnij swoją symulację innym. Podziel się wiadomością o tym, co według Ciebie możemy zrobić, aby pomóc innym zachować zdrowie, gdy wirus pojawi się w mieście.
+      outbreak_story2:
+        content1: opis tutaj
+      CSD U1 Test:
+        title: "\nTest: Komputery i rozwiązywanie problemów "

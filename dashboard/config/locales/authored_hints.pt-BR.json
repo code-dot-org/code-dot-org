@@ -8734,6 +8734,25 @@
         "iceage_warn_ice_age": {
           "iceage_warn_ice_age_a": "Você só deve ter que adicionar dois blocos para obter este desafio onde precisa ser. ",
           "iceage_warn_ice_age_b": "Adicione ambos os novos blocos abaixo do evento `quando executar` para que eles ocorram imediatamente após o início do programa."
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Existem duas maneiras de resolver este quebra-cabeças!",
+          "courseD_scrat_programming6_b": "Lembre-se de virar antes de se mover, já que Scrat está virado para o lado errado.",
+          "courseD_scrat_programming6_c": "Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_a": "Para desenhar um lado, use o bloco `avançar por 100 pixels` e mude o 100 para o 200.",
+          "courseE_artist_ramp8_b": "Para desenhar 4 lados, coloque o bloco 'avançar por 100 pixels' dentro de um laço de repetição e certifique-se de que o laço esteja definido para desenhar 4 vezes.\n\nNão esqueça de virar depois!",
+          "courseE_artist_ramp8_c": "Seu laço deve ter dois blocos dentro dele: \\`avançar' e 'virar à direita em 90 graus'.",
+          "courseD_artist_ramp12_a": "Como isso é semelhante a um quadrado? Como é diferente?",
+          "courseD_artist_ramp12_b": "Você pode usar o menu suspenso nos blocos de `virar` para ver quais ângulos você precisa!",
+          "courseD_artist_ramp12_c": "Para desenhar cada lado, você precisará avançar 100 pixels e, em seguida, virar à direita 120 graus. Quantos lados você precisa?"
+        },
+        "courseE_bee_ramp14": {
+          "courseE_farmer_ramp12d_b": "Você ainda precisará colocar seus laços `até` e `enquanto` dentro de um laço `repetir` para resolver este desafio!"
+        },
+        "courseE_farmer_predict2": {
+          "courseE_farmer_ramp12e_b": "A solução deste quebra-cabeças vai ser muito parecida com a do anterior, mas virando em outra direção."
         }
       }
     }

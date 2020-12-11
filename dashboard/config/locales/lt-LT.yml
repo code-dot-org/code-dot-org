@@ -114,6 +114,17 @@ lt:
     valid_password: Galiojantis slaptažodis!
     invalid_password: Slaptažodį turi sudaryti mažiausiai 6 simboliai
     mismatch_password: Slaptažodžiai nesutampa
+    agree_us_data_transfer_student: "**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant
+      asmeninius duomenis), naudojantis šiuo tinklapiu Jungtinėse Valstijose** tokių
+      duomenų prieglobai ir apdorojimui."
+    agree_us_data_transfer_teacher: "**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant
+      asmeninius duomenis), man (ir kaip studentui) naudojantis šiuo tinklapiu Jungtinėse
+      Valstijose** tokių duomenų prieglobai ir apdorojimui."
+    data_collection_us: Suprantu, kad „Code.org“ yra JAV esantis ne pelno siekiantis
+      tinklapis ir įstatymai, kuriais tvarkomas duomenų rinkimas JAV, gali skirtis
+      nuo jūsų šalies įstatymų.
+    visit_privacy: Apsilankykite „Code.org“ [Privatumo politika](%{privacy_url}),
+      kad sužinotumėte išsamiau.
     additional_information: Mums reikia papildomos informacijos, kad galėtum prisiregistruoti.
     user_type_label: Paskyros tipas
     user_type_teacher: Mokytojas
@@ -732,6 +743,4 @@ lt:
         opt_in_no: Ne
   cookie_banner:
     accept: Sutinku
-  gdpr_dialog:
-    true: Taip
   copy: Kopijuoti

@@ -710,6 +710,9 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Használd a legördülő menüt hogy helyettesítsd a \"???\" egy számmal"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Minden kódot, amit ide teszel, annyiszor hajt végre a program, amekkora számot beállítasz hozzá. Ezután folytatódik a program futása."
         }
       }
     }

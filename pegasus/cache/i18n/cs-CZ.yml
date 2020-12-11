@@ -1970,6 +1970,11 @@ cs-CZ:
     Code.org a partnery.
   hoc_overview_partner_activities_link: Zobrazit aktivity
   hoc_overview_start_tutorial: Spustit
+  hoc_overview_more_resources: Chcete-li další prostředky, pomocí kterých se můžete
+    zapojit do naší dálkové učebny, podívejte se na našeho průvodce pořádáním [virtuální
+    „Hodiny programování“](https://hourofcode.com/us/how-to/virtual). Studentům, kteří
+    mají jen omezenou nebo vůbec žádnou techniku nebo připojení, sdílejte tento balíček
+    [aktivit „Hodiny programování“](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Zobrazit příručku učitele
   hoc2018_creativity: kreativita
   hoc2018_creativity_create: Vytvořit
@@ -2025,7 +2030,7 @@ cs-CZ:
     Procestuj Minecraft s kódem.
   hoc2018_mc_teacher_guide: Zobrazit příručku učitele
   hoc2018_mc_minecraft_education: Minecraft vzdělávání
-  hoc2018_mc_continue_learning: Pokračuj s Minecraft učením.
+  hoc2018_mc_continue_learning: Pokračuj s učením Minecraftu.
   hoc2018_mc_go_to_mc_education: Přejít na Minecraft vzdělávání
   hoc2018_dance_party_main_heading: Taneční večírek
   hoc2018_dance_party_subheading: Pomoz přeložit Taneční Párty
@@ -2063,9 +2068,13 @@ cs-CZ:
   page_not_found_title: Stránka nebyla nalezena
   page_not_found_header: 404 - Stránka nebyla nalezena
   page_not_found_button: Zpět domů
+  hoc2018_mc_thank_microsoft: Děkujeme společnosti Microsoft, že podporuje naši vizi
+    a misi zajištění toho, aby všechny děti měly příležitost učit se počítačové vědy
+    a dovednosti potřebné k dosahování úspěchu ve 21. století.
   hoc2019_dance_previous_versions: "Hledáte předchozí verzi Tanečního večírku?  \nKlikněte
     zde, abyste začali [Část 1](%{dance_2018_link}) a [Část 2](%{dance_extras_2018_link})
     z minulého roku."
   homepage_slot_text_title_at_home: Učte se doma
   homepage_slot_text_blurb_at_home: S těmito podklady to bude hračka
   page_not_available_button: Zpět domů
+  footer_powered_by_aws: Poháněn Amazon Web Services

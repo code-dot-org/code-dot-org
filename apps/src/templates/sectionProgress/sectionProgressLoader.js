@@ -3,7 +3,9 @@ import {
   startLoadingProgress,
   setCurrentView,
   finishLoadingProgress,
-  addDataByScript
+  addDataByScript,
+  startRefreshingProgress,
+  finishRefreshingProgress
 } from './sectionProgressRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {
@@ -23,7 +25,6 @@ export function loadScript(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().sectionData.section;
 
-  // Don't load data if it's already stored in redux.
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
   if (
@@ -31,7 +32,13 @@ export function loadScript(scriptId, sectionId) {
     state.scriptDataByScript[scriptId] &&
     state.currentView !== ViewType.STANDARDS
   ) {
-    return;
+    if (state.isRefreshingProgress) {
+      return;
+    }
+    // Continue displaying the UI while updating the data
+    getStore().dispatch(startRefreshingProgress());
+  } else {
+    getStore().dispatch(startLoadingProgress());
   }
 
   let sectionProgress = {
@@ -43,7 +50,6 @@ export function loadScript(scriptId, sectionId) {
   };
 
   // Get the script data
-  getStore().dispatch(startLoadingProgress());
   const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
     credentials: 'include'
   })
@@ -127,6 +133,7 @@ export function loadScript(scriptId, sectionId) {
     );
     getStore().dispatch(addDataByScript(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
+    getStore().dispatch(finishRefreshingProgress());
   });
 }
 

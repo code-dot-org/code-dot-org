@@ -68,6 +68,7 @@ describe('entry tests', () => {
 
   /** @const {string[]} */
   var ALL_APPS = [
+    'ailab',
     'applab',
     'bounce',
     'calc',
@@ -178,6 +179,12 @@ describe('entry tests', () => {
           cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/fish'
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-playground/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/ailab'
         },
 
         // We have to do some weird stuff to get our fallback video player working.
@@ -340,7 +347,10 @@ describe('entry tests', () => {
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'
           ],
-          ['build/package/css/foorm.css', 'style/code-studio/foorm.scss']
+          [
+            'build/package/css/foorm_editor.css',
+            'style/code-studio/foorm_editor.scss'
+          ]
         ].concat(
           appsToBuild.map(function(app) {
             return [
@@ -575,6 +585,8 @@ describe('entry tests', () => {
     'levels/editors/_craft':
       './src/sites/studio/pages/levels/editors/_craft.js',
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/fields/_animation':
+      './src/sites/studio/pages/levels/editors/fields/_animation.js',
     'levels/editors/fields/_blockly':
       './src/sites/studio/pages/levels/editors/fields/_blockly.js',
     'levels/editors/fields/_callouts':
@@ -587,6 +599,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
     'levels/editors/fields/_special_level_types':
       './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
+    'levels/editors/fields/_validation_code':
+      './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
     'levels/editors/fields/_video':
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
@@ -605,8 +619,6 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
-    'code.org/public/administrators':
-      './src/sites/code.org/pages/public/administrators.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
@@ -654,6 +666,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
     'code.org/views/at_home_banner':
       './src/sites/code.org/pages/views/at_home_banner.js',
+    'code.org/views/virtual_hoc_banner':
+      './src/sites/code.org/pages/views/virtual_hoc_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',

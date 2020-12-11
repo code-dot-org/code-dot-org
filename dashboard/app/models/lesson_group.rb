@@ -124,29 +124,81 @@ class LessonGroup < ApplicationRecord
     I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.display_name", default: 'Content')
   end
 
-  # This method is not currently used outside of summarize_for_edit but will be used
-  # soon as we move the position of lessons to be based on their lesson group instead
-  # of the script (dmcavoy - May 2020)
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
-    summary = {
+  def localized_description
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.description", default: description)
+  end
+
+  def localized_big_questions
+    I18n.t("data.script.name.#{script.name}.lesson_groups.#{key}.big_questions", default: big_questions)
+  end
+
+  def summarize
+    {
       id: id,
       key: key,
       display_name: localized_display_name,
+      description: localized_description,
+      big_questions: localized_big_questions,
       user_facing: user_facing,
       position: position
     }
+  end
 
-    # Filter out lessons that have a visible_after date in the future
-    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-
+  def summarize_for_script_edit
+    summary = summarize
+    summary[:description] = description
+    summary[:big_questions] = big_questions
+    summary[:lessons] = lessons.map(&:summarize_for_script_edit)
     summary
   end
 
-  def summarize_for_edit
-    include_lessons = false
-    summary = summarize(include_lessons)
-    summary[:lessons] = lessons.map(&:summarize_for_edit)
-    summary
+  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
+  # the seeding_keys of those objects should be included as well.
+  # Ideally should correspond to a unique index for this model's table.
+  # See comments on ScriptSeed.seed_from_json for more context.
+  #
+  # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
+  # @return [Hash<String, String] all information needed to uniquely identify this object across environments.
+  def seeding_key(seed_context)
+    my_key = {'lesson_group.key': key}
+
+    raise "No Script found for #{self.class}: #{my_key}" unless seed_context.script
+    script_seeding_key = seed_context.script.seeding_key(seed_context)
+
+    my_key.merge!(script_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+    my_key.stringify_keys
+  end
+
+  # This method takes chapter data exported from curriculum builder and updates
+  # corresponding fields of this LessonGroup to match it. Only fields on this
+  # LessonGroup will be updated. Lessons themselves are not updated here.
+  # The expected input format is as follows:
+  # {
+  #   "title": "CB Chapter Title",
+  #   "number": 1,
+  #   "questions": "Big Questions markdown",
+  #   "description": "Description markdown"
+  # }
+  #
+  # @param [Hash] cb_chapter_data - Chapter data to import.
+  # @return [Boolean] - Whether any changes to this lesson group were saved.
+  def update_from_curriculum_builder(cb_chapter_data)
+    # In the future, only levelbuilder should be added to this list.
+    raise unless [:development, :adhoc].include? rack_env
+
+    cb_questions = cb_chapter_data['questions']
+    if cb_questions.present? && big_questions.blank?
+      self.big_questions = cb_questions
+    end
+
+    cb_description = cb_chapter_data['description']
+    if cb_description.present? && description.blank?
+      self.description = cb_description
+    end
+
+    changed = changed?
+    save! if changed?
+    changed
   end
 end

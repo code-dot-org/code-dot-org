@@ -8,13 +8,8 @@ import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
 import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
+import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
 
-const OAUTH_PROVIDERS = {
-  GOOGLE: 'google_oauth2',
-  MICROSOFT: 'microsoft_v2_auth',
-  CLEVER: 'clever',
-  FACEBOOK: 'facebook'
-};
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -43,14 +38,14 @@ class ManageLinkedAccounts extends React.Component {
 
   cannotDisconnectGoogle = authOption => {
     return (
-      authOption.credentialType === OAUTH_PROVIDERS.GOOGLE &&
+      authOption.credentialType === OAuthProviders.google &&
       this.props.isGoogleClassroomStudent
     );
   };
 
   cannotDisconnectClever = authOption => {
     return (
-      authOption.credentialType === OAUTH_PROVIDERS.CLEVER &&
+      authOption.credentialType === OAuthProviders.clever &&
       this.props.isCleverStudent
     );
   };
@@ -90,13 +85,13 @@ class ManageLinkedAccounts extends React.Component {
 
   getDisplayName = provider => {
     switch (provider) {
-      case OAUTH_PROVIDERS.GOOGLE:
+      case OAuthProviders.google:
         return i18n.manageLinkedAccounts_google_oauth2();
-      case OAUTH_PROVIDERS.MICROSOFT:
+      case OAuthProviders.microsoft:
         return i18n.manageLinkedAccounts_microsoft();
-      case OAUTH_PROVIDERS.CLEVER:
+      case OAuthProviders.clever:
         return i18n.manageLinkedAccounts_clever();
-      case OAUTH_PROVIDERS.FACEBOOK:
+      case OAuthProviders.facebook:
         return i18n.manageLinkedAccounts_facebook();
     }
   };
@@ -122,7 +117,7 @@ class ManageLinkedAccounts extends React.Component {
     const optionsByProvider = _.groupBy(allOptions, 'credentialType');
 
     let formattedOptions = [];
-    Object.values(OAUTH_PROVIDERS).forEach(provider => {
+    Object.values(OAuthProviders).forEach(provider => {
       const providerOptions = optionsByProvider[provider] || [
         this.emptyAuthOption(provider)
       ];

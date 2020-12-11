@@ -4,10 +4,10 @@ editor_experiment ''
 
 
 
-wrong '![](https://images.code.org/ee9cda3b7b0a4b992e6d085ca15191b4-image-1552686189426.42.47 PM.png)'
-wrong '![](https://images.code.org/365cfe7314133bb8f99a4075df41a2a0-image-1552685852116.36.58 PM.png)'
-right '![](https://images.code.org/a9a6fab0bde8929dc19b22b2a6613685-image-1574868753247.30.49 AM.png)'
-wrong '![](https://images.code.org/4736267db8711822944b7ccc6c9000f3-image-1552686069909.40.42 PM.png)'
+wrong '![](https://images.code.org/f55c7fd58d43e01cc5fc42a6768692ca-image-1599153877135.png)'
+wrong '![](https://images.code.org/6452795e8f284a62541d154a9c2274fd-image-1599153890602.png)'
+right '![](https://images.code.org/f6e473e3e008d4a71dfc869aa9e85045-image-1599153902795.png)'
+wrong '![](https://images.code.org/c5368a3e09d6be80cf04cbf9133ed291-image-1599153912758.png)'
 
 markdown <<MARKDOWN
 A movie theater charges different ticket prices based on a customer's age. The prices are shown in the table below.
@@ -19,4 +19,8 @@ A movie theater charges different ticket prices based on a customer's age. The p
 |65 and older|$6|
 
 The customer's age is stored in the variable `age` and the price is stored in the variable `price`. Which piece of code will correctly decide the price for each ticket.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
 MARKDOWN

@@ -9,6 +9,7 @@
 #  question        :text(65535)      not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  published       :boolean          default(TRUE), not null
 #
 # Indexes
 #
@@ -18,8 +19,10 @@
 class Foorm::LibraryQuestion < ApplicationRecord
   include Seeded
 
+  validate :validate_library_question
+
   def self.setup
-    library_questions = Dir.glob('config/foorm/library/**/*.json').sort.map do |path|
+    Dir.glob('config/foorm/library/**/*.json').each do |path|
       # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
       # we get full_name: "surveys/pd/pre_workshop_survey"
       #      and version: 0
@@ -30,23 +33,33 @@ class Foorm::LibraryQuestion < ApplicationRecord
       full_name = File.dirname(unique_path) + "/" + filename
 
       # Let's load the JSON text.
-      source_questions = JSON.parse(File.read(path))
+      begin
+        source_questions = JSON.parse(File.read(path))
+        # if published is not provided, default to true
+        published = source_questions['published'].nil? ? true : source_questions['published']
 
-      source_questions["pages"].map do |page|
-        page["elements"].map do |element|
-          {
-            library_name: full_name,
-            library_version: version,
-            question_name: element["name"],
-            question: element.to_json
-          }
+        source_questions["pages"].map do |page|
+          page["elements"].map do |element|
+            question_name = element["name"]
+            library_question = Foorm::LibraryQuestion.find_or_initialize_by(
+              library_name: full_name,
+              library_version: version,
+              question_name: question_name
+            )
+            library_question.question = element.to_json
+            library_question.published = published
+            library_question.save! if library_question.changed?
+          end
         end
+      rescue
+        raise format('failed to parse %s', full_name)
       end
-    end.flatten
-
-    transaction do
-      reset_db
-      Foorm::LibraryQuestion.import! library_questions
     end
+  end
+
+  def validate_library_question
+    Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
+  rescue StandardError => e
+    errors.add(:question, e.message)
   end
 end

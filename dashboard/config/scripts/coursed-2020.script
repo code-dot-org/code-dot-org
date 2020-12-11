@@ -1,16 +1,15 @@
-is_course true
 hidden false
 hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursed/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursed/{LESSON}'
-script_announcements [{"notice"=>"Our 2020 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course D!", "link"=>"https://curriculum.code.org/csf-20/coursed", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursed'
 version_year '2020'
 is_stable true
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming'

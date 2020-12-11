@@ -53,12 +53,12 @@ hu-HU:
         - {}
         - {}
         - {}
-        content2: Használja a kulcsot a kódok és a hozzá tartozó betűk párosításához
+        content2: Használd a betűket és a kódokat a párosításhoz!
         questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
+        - text: "***N***"
+        - text: "***O***"
+        - text: "***P***"
+        - text: "***Q***"
         title: Megfelelő
       2-3 Conditionals Multi 1:
         answers:
@@ -1135,7 +1135,7 @@ hu-HU:
         - correct: true
         questions:
         - text: Melyik állatnak van olyan digitális lábnyoma, ami a <strong>legnagyobb
-            veszélyben </strong> hagyja őt?
+            veszélybe</strong> sodorja őt?
         title: Feleletválasztós
       K-1 Getting Loopy Multi 1:
         answers:
@@ -1448,7 +1448,7 @@ hu-HU:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -2303,3 +2303,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Az Online Szomszédságom
+
+          ## Hogyan juss el biztonságosan valahová online?
+      CSD U1 Test:
+        title: Számítógépek és problémamegoldás projektzáró teszt
+      outbreak_story:
+        content1: a leírás itt található
+      outbreak_story2:
+        content1: a leírás itt található

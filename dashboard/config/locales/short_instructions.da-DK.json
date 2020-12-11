@@ -513,7 +513,12 @@
         "frozen square iterative": "Det ser ud som om vi er halvvejs fra at have lavet en firkant (kvadrat). Lad os sætte 4 linjer sammen til en hel firkant (kvadrat).",
         "frozen square loop": "Hej, er jeg Anna af Arendelle! Lad os lave et kvadrat med \"Gentagelse\" blokken, som bruger færre blokke. Hvor mange gange skal \"Gentagelse\" blokken, gentage blokkene indeni for at lave en firkant?",
         "frozen square loop 3x": "Lad os lave tre kvadrater, og dreje efter hvert kvadrat. Sørg for at at dreje 120 grader før hvert nyt kvadrat.",
-        "frozen square snowflake": "Kan du lave et snefnug, ved at bruge \"Gentagelse\" blokken og lave en firkant 10 gange. Og ved at bruge \"Dreje\" blokken for at dreje 36 grader mellem hvert kvadrat?"
+        "frozen square snowflake": "Kan du lave et snefnug, ved at bruge \"Gentagelse\" blokken og lave en firkant 10 gange. Og ved at bruge \"Dreje\" blokken for at dreje 36 grader mellem hvert kvadrat?",
+        "scrat 16": "Agern! Agern! Agern! Brug en \"Hvis\" blok til at få mig derhen, med færrest mulige blokke.",
+        "scrat 17": "OK, lad os prøve igen for øvelsens skyld - dette er ikke meget anderledes, men pas på væggen!",
+        "scrat 18": "\"Hvis-ellers\" blokke kontrollerer en betingelse, og udfører derefter én ting eller en anden. Prøv at bruge denne nye blok for at få mig hen til agerne.",
+        "scrat 19": "En mere øvelse med \"Hvis-Ellers\" blokken, kan du løse den i første forsøg?",
+        "scrat 20": "Kan du nøjes med at tilføje 3 blokke til at hjælpe mig med at løse en mere kompleks labyrint? Hvis du gør det rigtigt, kan jeg gå en vilkårlig kurvet vej, uanset længde. Skynd dig! Isen smelter!"
       }
     }
   }

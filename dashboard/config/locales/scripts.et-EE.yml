@@ -5,6 +5,7 @@ et:
       category:
         hoc_category_name: KoodiTund
         math_category_name: Matemaatika
+        other_category_name: Muu
       name:
         course1:
           title: Kursus 1
@@ -2959,3 +2960,7 @@ et:
           lesson_groups:
             lg_1:
               display_name: Sisu
+        ml-playground:
+          lessons:
+            intro:
+              name: Sissejuhatus

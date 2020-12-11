@@ -5,6 +5,7 @@ bn:
       category:
         hoc_category_name: এক ঘন্টার কোড
         math_category_name: গণিত
+        other_category_name: অন্যান্য
       name:
         course1:
           title: কোর্স ১
@@ -1624,3 +1625,7 @@ bn:
               name: কোর্স A
             Course B:
               name: কোর্স B
+        ml-playground:
+          lessons:
+            intro:
+              name: ভূমিকা

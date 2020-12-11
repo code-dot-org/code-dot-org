@@ -40,7 +40,7 @@ require 'state_abbr'
 # Make sure to use a derived class for a specific application type and year.
 # This on its own will fail validation.
 module Pd::Application
-  class ApplicationBase < ActiveRecord::Base
+  class ApplicationBase < ApplicationRecord
     include ApplicationConstants
     include Pd::Form
     include SerializedProperties

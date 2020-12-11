@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import handleLaunchImmersiveReader from '@cdo/apps/util/immersive_reader';
 import {renderButtons} from '@microsoft/immersive-reader-sdk';
 import cookies from 'js-cookie';
-import experiments from '@cdo/apps/util/experiments';
 
 class ImmersiveReaderButton extends Component {
   static propTypes = {
@@ -12,8 +11,14 @@ class ImmersiveReaderButton extends Component {
   };
 
   componentDidMount() {
-    // Applies inline styling to the .immersive-reader-button elements
-    renderButtons();
+    if (this.shouldRender() && !this.renderButtonsCalled) {
+      // Applies inline styling to the .immersive-reader-button elements
+      renderButtons({
+        elements: [this.container]
+      });
+      // Make sure renderButtons() is only called once.
+      this.renderButtonsCalled = true;
+    }
   }
 
   render() {
@@ -21,11 +26,13 @@ class ImmersiveReaderButton extends Component {
     // Get the current language from the language cookie.
     const locale = cookies.get('language_') || 'en-US';
 
-    // Hide the button if the experiment is not enabled.
-    const enabled = experiments.isEnabled(experiments.IMMERSIVE_READER);
+    if (!this.shouldRender()) {
+      return null;
+    }
+
     return (
       <div
-        style={enabled ? {} : {display: 'none'}}
+        ref={el => (this.container = el)}
         className={'immersive-reader-button'}
         data-button-style={'icon'}
         data-locale={locale}
@@ -34,6 +41,12 @@ class ImmersiveReaderButton extends Component {
         }}
       />
     );
+  }
+
+  // Determines if this button should be rendered.
+  shouldRender() {
+    // If there is no text, then skip rendering it.
+    return !!this.props.text;
   }
 }
 

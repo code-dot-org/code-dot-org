@@ -22,6 +22,7 @@ es:
         hoc_category_name: Hora del Código
         math_category_name: Matemáticas
         research_studies_category_name: Estudios de investigación
+        other_category_name: Otros
       name:
         course1:
           title: Curso 1
@@ -22815,6 +22816,8 @@ es:
           lessons:
             new stage:
               name: nueva etapa
+            Tools:
+              name: Herramientas
             Debugging:
               name: Depuración
             Module 1:
@@ -23541,3 +23544,13 @@ es:
               name: Curso A
             Course B:
               name: Curso B
+            CS Discoveries:
+              name: Descubrimientos de Ciencias de la Computación
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Inteligencia Artificial para océanos
+            intro:
+              name: Introducción
+            visualizing:
+              name: Visualización de datos

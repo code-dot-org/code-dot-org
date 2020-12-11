@@ -6,7 +6,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -20,7 +20,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -34,7 +34,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -49,7 +49,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -62,7 +62,7 @@
         "CourseF_Project_SpriteLab_2019": {
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -83,7 +83,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "spinning left": "rýchlo sa otočiť vľavo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
@@ -98,7 +98,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
         "Dance Party 2_2020": {
@@ -112,7 +112,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
         "Dance Party 3_2019": {
@@ -126,7 +126,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
         "Dance Party 3_2020": {
@@ -140,7 +140,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
         "Dance Party 4_2019": {
@@ -154,7 +154,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
         "Dance Party 4_2020": {
@@ -168,7 +168,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
         "Dance Party 5_2019": {
@@ -182,7 +182,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
         "Dance Party 5_2020": {
@@ -196,7 +196,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
         "Dance Party 6": {
@@ -210,7 +210,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Dance Party 6_2019": {
           "jittering": "chvieť sa",
@@ -223,7 +223,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Dance Party 6_2020": {
           "jittering": "chvieť sa",
@@ -236,7 +236,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Dance Party 7_2019": {
           "jittering": "chvieť sa",
@@ -249,7 +249,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Dance Party 7_2020": {
           "jittering": "chvieť sa",
@@ -262,7 +262,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Dance Party Freeplay": {
           "jittering": "chvieť sa",
@@ -275,7 +275,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 2-validated_2019": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -288,7 +288,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 2-validated_2020": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -301,7 +301,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 3-validated_2019": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -314,7 +314,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 3-validated_2020": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -327,7 +327,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 4-validated_2019": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -340,7 +340,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 4-validated_2020": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -353,7 +353,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 5-validated_2019": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -366,7 +366,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 5-validated_2020": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -379,7 +379,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 6-validated_2019": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -392,7 +392,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Fish Tank 6-validated_2020": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -405,7 +405,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "OPD-K5-spritelab-2": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -418,7 +418,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "OPD-K5-spritelab-3": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -431,7 +431,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "OPD-K5-spritelab-4": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -444,7 +444,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "OPD-K5-spritelab-6": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -457,7 +457,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "OPD-K5-spritelab-7": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -470,11 +470,11 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Virtual Pet 1_2019": {
           "wandering": "túlať sa",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
           "shrinking": "zmenšovať sa",
@@ -484,11 +484,12 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "growing": "rásť",
-          "patrolling": "hliadkovať"
+          "patrolling": "hliadkovať",
+          "mystery": "záhada"
         },
         "Virtual Pet 1_2020": {
           "wandering": "túlať sa",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
           "shrinking": "zmenšovať sa",
@@ -498,7 +499,8 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "growing": "rásť",
-          "patrolling": "hliadkovať"
+          "patrolling": "hliadkovať",
+          "mystery": "záhada"
         },
         "Virtual Pet 2": {
           "shrinking": "zmenšovať sa",
@@ -510,7 +512,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "spinning left": "rýchlo sa otočiť vľavo",
           "swimming left and right": "plávať vľavo a vpravo"
         },
@@ -518,7 +520,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -532,7 +534,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -547,12 +549,12 @@
           "wandering2": "potulovať sa2",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "moving east2": "posúvať sa na východ2",
           "shrinking": "zmenšovať sa",
           "spinning left2": "rýchlo sa otočiť vľavo2",
           "growing": "rásť",
-          "spinning right2": "rýchlo sa otočiť vľavo2",
+          "spinning right2": "točenie vpravo2",
           "moving south": "posúvať sa na juh",
           "swimming left and right": "plávať vľavo a vpravo",
           "swimming left and right2": "plávať vľavo a vpravo2",
@@ -563,19 +565,22 @@
           "patrolling": "hliadkovať",
           "jittering2": "chvenie2",
           "moving west2": "posúvať sa na západ2",
-          "patrolling2": "hliadkovať2"
+          "patrolling2": "hliadkovať2",
+          "shrinking2": "zmenšovanie2",
+          "growing2": "zväčšovanie2",
+          "moving south2": "posúvať sa na juh2"
         },
         "Virtual Pet 3_2020": {
           "wandering": "túlať sa",
           "wandering2": "potulovať sa2",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "moving east2": "posúvať sa na východ2",
           "shrinking": "zmenšovať sa",
           "spinning left2": "rýchlo sa otočiť vľavo2",
           "growing": "rásť",
-          "spinning right2": "rýchlo sa otočiť vľavo2",
+          "spinning right2": "točenie vpravo2",
           "moving south": "posúvať sa na juh",
           "swimming left and right": "plávať vľavo a vpravo",
           "swimming left and right2": "plávať vľavo a vpravo2",
@@ -586,7 +591,10 @@
           "patrolling": "hliadkovať",
           "jittering2": "chvenie2",
           "moving west2": "posúvať sa na západ2",
-          "patrolling2": "hliadkovať2"
+          "patrolling2": "hliadkovať2",
+          "shrinking2": "zmenšovanie2",
+          "growing2": "zväčšovanie2",
+          "moving south2": "posúvať sa na juh2"
         },
         "Virtual Pet 4": {
           "shrinking": "zmenšovať sa",
@@ -598,13 +606,13 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Virtual Pet 4_2019": {
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -618,7 +626,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -638,7 +646,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Virtual Pet 6": {
           "shrinking": "zmenšovať sa",
@@ -650,7 +658,7 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "Virtual Pet Freeplay": {
           "shrinking": "zmenšovať sa",
@@ -662,12 +670,12 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "rýchlo sa otočiť vpravo"
+          "spinning right": "točenie vpravo"
         },
         "behaviors 1": {
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -676,12 +684,14 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "mystery behavior": "záhadné správanie",
+          "running east": "posunúť na východ"
         },
         "behaviors 1_2020": {
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -690,12 +700,14 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "mystery behavior": "záhadné správanie",
+          "running east": "posunúť na východ"
         },
         "behaviors 2": {
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -704,12 +716,14 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "flying": "letieť",
+          "running east": "posunúť na východ"
         },
         "behaviors 2_2020": {
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -718,12 +732,14 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "flying": "letieť",
+          "running east": "posunúť na východ"
         },
         "behaviors 3": {
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -732,12 +748,14 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "zooming east": "rútiť sa na východ",
+          "driving east": "jazdiť na východ"
         },
         "behaviors 3_2020": {
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -746,10 +764,12 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "zooming east": "rútiť sa na východ",
+          "driving east": "jazdiť na východ"
         },
         "behaviors 3a": {
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
           "shrinking": "zmenšovať sa",
@@ -760,10 +780,12 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "zooming east": "rútiť sa na východ",
+          "driving east": "jazdiť na východ"
         },
         "behaviors 3a_2020": {
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
           "shrinking": "zmenšovať sa",
@@ -774,12 +796,14 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "zooming east": "rútiť sa na východ",
+          "driving east": "jazdiť na východ"
         },
         "behaviors 4": {
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -788,12 +812,14 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "move south and west": "Posuň sa na juh a na západ",
+          "running east": "posunúť na východ"
         },
         "behaviors 4_2020": {
           "wandering": "túlať sa",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -802,11 +828,13 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "move south and west": "Posuň sa na juh a na západ",
+          "running east": "posunúť na východ"
         },
         "behaviors 6": {
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving east": "posúvať sa na východ",
@@ -816,11 +844,13 @@
           "moving north": "posúvať sa na sever",
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
-          "patrolling": "hliadkovať"
+          "patrolling": "hliadkovať",
+          "rolling": "kotúľajúc sa",
+          "running east": "posunúť na východ"
         },
         "behaviors 6_2020": {
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving east": "posúvať sa na východ",
@@ -830,12 +860,14 @@
           "moving north": "posúvať sa na sever",
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
-          "patrolling": "hliadkovať"
+          "patrolling": "hliadkovať",
+          "rolling": "kotúľajúc sa",
+          "running east": "posunúť na východ"
         },
         "behaviors 7": {
           "moving north": "posúvať sa na sever",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "wandering": "túlať sa",
@@ -844,12 +876,14 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "rolling": "kotúľajúc sa",
+          "running east": "posunúť na východ"
         },
         "behaviors 7_2020": {
           "moving north": "posúvať sa na sever",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "wandering": "túlať sa",
@@ -858,7 +892,9 @@
           "jittering": "chvieť sa",
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
-          "moving east": "posúvať sa na východ"
+          "moving east": "posúvať sa na východ",
+          "rolling": "kotúľajúc sa",
+          "running east": "posunúť na východ"
         },
         "courseE_Dogger_2": {
           "drive left": "jazdi vľavo",
@@ -866,7 +902,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -880,7 +916,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -894,7 +930,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -908,7 +944,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -922,7 +958,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -936,7 +972,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -950,7 +986,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -964,7 +1000,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -978,7 +1014,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -992,7 +1028,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -1006,7 +1042,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -1026,7 +1062,7 @@
           "wandering": "túlať sa",
           "moving east": "posúvať sa na východ",
           "spinning left": "rýchlo sa otočiť vľavo",
-          "spinning right": "rýchlo sa otočiť vpravo",
+          "spinning right": "točenie vpravo",
           "shrinking": "zmenšovať sa",
           "growing": "rásť",
           "moving south": "posúvať sa na juh",
@@ -1036,6 +1072,80 @@
           "moving west": "posúvať sa na západ",
           "patrolling": "hliadkovať",
           "swimming left and right": "plávať vľavo a vpravo"
+        },
+        "behaviors free play": {
+          "spinning and growing": "točenie a zväčšovanie"
+        },
+        "behaviors free play_2020": {
+          "spinning and growing": "točenie a zväčšovanie"
+        },
+        "outbreak1": {
+          "wandering": "túlať sa"
+        },
+        "outbreak2": {
+          "wandering": "túlať sa"
+        },
+        "outbreak3": {
+          "wandering": "túlať sa"
+        },
+        "outbreak4": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať"
+        },
+        "outbreak5": {
+          "wandering": "túlať sa"
+        },
+        "outbreak6": {
+          "wandering": "túlať sa"
+        },
+        "outbreak7": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať"
+        },
+        "outbreak8": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať"
+        },
+        "outbreak_freeplay": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať"
         }
       }
     }

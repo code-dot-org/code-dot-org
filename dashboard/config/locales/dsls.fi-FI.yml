@@ -1293,7 +1293,7 @@ fi-FI:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -2099,3 +2099,7 @@ fi-FI:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: Kuvaus tähän
+      outbreak_story2:
+        content1: Kuvaus tähän
