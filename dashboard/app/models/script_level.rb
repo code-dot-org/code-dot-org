@@ -605,7 +605,8 @@ class ScriptLevel < ApplicationRecord
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
