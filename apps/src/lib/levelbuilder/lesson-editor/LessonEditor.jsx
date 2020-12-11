@@ -77,7 +77,8 @@ class LessonEditor extends Component {
       purpose: this.props.initialLessonData.purpose || '',
       preparation: this.props.initialLessonData.preparation || '',
       announcements: this.props.initialLessonData.announcements || [],
-      objectives: this.props.initialObjectives
+      objectives: this.props.initialObjectives,
+      originalLessonData: this.props.initialLessonData
     };
   }
 
@@ -87,7 +88,7 @@ class LessonEditor extends Component {
     this.setState({isSaving: true, lastSaved: null, error: null});
 
     $.ajax({
-      url: `/lessons/${this.props.initialLessonData.id}`,
+      url: `/lessons/${this.state.originalLessonData.id}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
@@ -105,13 +106,14 @@ class LessonEditor extends Component {
         objectives: JSON.stringify(this.state.objectives),
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
-        announcements: JSON.stringify(this.state.announcements)
+        announcements: JSON.stringify(this.state.announcements),
+        originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
     })
       .done(data => {
         if (shouldCloseAfterSave) {
           navigateToHref(
-            `/lessons/${this.props.initialLessonData.id}${
+            `/lessons/${this.state.originalLessonData.id}${
               window.location.search
             }`
           );
@@ -119,7 +121,11 @@ class LessonEditor extends Component {
           const activities = mapActivityDataForEditor(data.activities);
 
           this.props.initActivities(activities);
-          this.setState({lastSaved: data.updatedAt, isSaving: false});
+          this.setState({
+            lastSaved: data.updatedAt,
+            isSaving: false,
+            originalLessonData: data
+          });
         }
       })
       .fail(error => {
@@ -309,9 +315,9 @@ class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          {this.props.initialLessonData.courseVersionId ? (
+          {this.state.originalLessonData.courseVersionId ? (
             <ResourcesEditor
-              courseVersionId={this.props.initialLessonData.courseVersionId}
+              courseVersionId={this.state.originalLessonData.courseVersionId}
             />
           ) : (
             <h4>
