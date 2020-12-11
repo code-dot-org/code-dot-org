@@ -52,10 +52,7 @@ export default function initPage(scriptEditorData) {
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
         initialTeacherResources={teacherResources}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
-        initialLessonLevelData={
-          lessonLevelData ||
-          "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n"
-        }
+        initialLessonLevelData={lessonLevelData}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialHasLessonPlan={scriptData.has_lesson_plan}
         initialCurriculumPath={scriptData.curriculum_path || ''}
