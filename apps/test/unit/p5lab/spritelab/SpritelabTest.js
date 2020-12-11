@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai';
 import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
 import Sounds from '@cdo/apps/Sounds';
 import {
@@ -12,7 +12,7 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setIsRunning} from '@cdo/apps/redux/runState';
 import reducers from '@cdo/apps/p5lab/reducers';
-import {setExternalGlobals} from '../../util/testUtils';
+import {setExternalGlobals} from '../../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 
