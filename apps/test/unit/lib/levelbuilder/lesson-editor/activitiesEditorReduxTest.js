@@ -262,16 +262,9 @@ describe('activitiesEditorRedux reducer tests', () => {
     });
 
     it('add activity', () => {
-      const nextState = reducer(
-        initialState,
-        addActivity(3, 'activity-key', 'section-key-1')
-      ).activities;
+      const nextState = reducer(initialState, addActivity(3, 'key')).activities;
       assert.equal(nextState[nextState.length - 1].displayName, '');
-      assert.equal(nextState[nextState.length - 1].key, 'activity-key');
-      assert.equal(
-        nextState[nextState.length - 1].activitySections[0].key,
-        'section-key-1'
-      );
+      assert.equal(nextState[nextState.length - 1].key, 'key');
     });
 
     it('update activity field', () => {

@@ -9,7 +9,7 @@ import foorm, {
   setFormQuestions,
   setFormData,
   setHasError
-} from '@cdo/apps/code-studio/pd/foorm/foormEditorRedux';
+} from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 
 import 'survey-react/survey.css';
 

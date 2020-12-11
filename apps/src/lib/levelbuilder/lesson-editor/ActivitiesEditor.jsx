@@ -48,8 +48,7 @@ class ActivitiesEditor extends Component {
   handleAddActivity = () => {
     this.props.addActivity(
       this.props.activities.length,
-      this.generateActivityKey(),
-      this.generateActivitySectionKey()
+      this.generateActivityKey()
     );
   };
 
@@ -64,25 +63,6 @@ class ActivitiesEditor extends Component {
     }
 
     return `activity-${activityNumber}`;
-  };
-
-  generateActivitySectionKey = () => {
-    let activitySectionNumber = 1;
-
-    let activitySectionKeys = [];
-    this.props.activities.forEach(activity => {
-      activity.activitySections.forEach(section => {
-        activitySectionKeys.push(section.key);
-      });
-    });
-
-    while (
-      activitySectionKeys.includes(`activitySection-${activitySectionNumber}`)
-    ) {
-      activitySectionNumber++;
-    }
-
-    return `activitySection-${activitySectionNumber}`;
   };
 
   // To be populated with the react ref of each ActivitySectionCard element.
@@ -142,7 +122,6 @@ class ActivitiesEditor extends Component {
           <ActivityCardAndPreview
             key={activity.key}
             activity={activity}
-            generateActivitySectionKey={this.generateActivitySectionKey}
             activitiesCount={activities.length}
             setActivitySectionRef={this.setActivitySectionRef}
             updateTargetActivitySection={this.updateTargetActivitySection}
