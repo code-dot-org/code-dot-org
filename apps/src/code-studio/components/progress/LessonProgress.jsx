@@ -203,11 +203,7 @@ class LessonProgress extends Component {
             {lessonTrophyEnabled && <div style={styles.spacer} />}
             {levels.map((level, index) => {
               let isCurrent = level.isCurrentLevel;
-              if (
-                isCurrent &&
-                level.kind === LevelKind.assessment &&
-                level.pageNumber
-              ) {
+              if (isCurrent && level.kind === LevelKind.assessment) {
                 isCurrent = currentPageNumber === level.pageNumber;
               }
               return (
