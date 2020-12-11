@@ -99,7 +99,7 @@ const createStore = ({preload = false, allowHidden = true} = {}) => {
     });
     store.dispatch(setSections([sections[11]]));
     store.dispatch(setSectionLockStatus(sections));
-    store.dispatch(selectSection('11'));
+    store.dispatch(selectSection(11));
   }
   return store;
 };
