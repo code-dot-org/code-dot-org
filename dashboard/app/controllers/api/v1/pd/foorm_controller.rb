@@ -12,11 +12,9 @@ class Api::V1::Pd::FoormController < ApplicationController
     end
   end
 
-  # GET api/v1/pd/foorm/form_data
+  # GET api/v1/pd/foorm/form/:id
   def get_form_data
-    form_name = params[:name]
-    form_version = params[:version]
-    form_data = Foorm::Form.where(name: form_name, version: form_version).first
+    form_data = Foorm::Form.find(params[:id])
     if form_data
       data_to_return = {
         questions: JSON.parse(form_data.questions),
@@ -33,7 +31,8 @@ class Api::V1::Pd::FoormController < ApplicationController
     forms = Foorm::Form.all.map do |form|
       {
         name: form.name,
-        version: form.version
+        version: form.version,
+        id: form.id
       }
     end
     render json: forms
