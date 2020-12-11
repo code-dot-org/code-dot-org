@@ -35,7 +35,7 @@ class HeaderMiddle extends React.Component {
     lessonData: PropTypes.object,
     lessonExtrasUrl: PropTypes.string,
     scriptData: PropTypes.object,
-    currentLevelId: PropTypes.string,
+    currentLevelId: PropTypes.number,
     linesOfCodeText: PropTypes.string,
     isRtl: PropTypes.bool
   };

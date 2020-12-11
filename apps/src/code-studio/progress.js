@@ -78,6 +78,8 @@ progress.showDisabledBubblesAlert = function() {
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {boolean} isLessonExtras Boolean indicating we are not on a script
+ *   level and therefore are on lesson extras
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -87,7 +89,8 @@ progress.generateStageProgress = function(
   currentLevelId,
   saveAnswersBeforeNavigation,
   signedIn,
-  stageExtrasEnabled
+  stageExtrasEnabled,
+  isLessonExtras
 ) {
   const store = getStore();
 
@@ -107,7 +110,8 @@ progress.generateStageProgress = function(
     },
     currentLevelId,
     false,
-    saveAnswersBeforeNavigation
+    saveAnswersBeforeNavigation,
+    isLessonExtras
   );
 
   store.dispatch(
@@ -261,13 +265,16 @@ function queryUserProgress(store, scriptData, currentLevelId) {
  * @param {boolean} isFullProgress - True if this contains progress for the entire
  *   script vs. a single stage.
  * @param {boolean} [saveAnswersBeforeNavigation]
+ * @param {boolean} [isLessonExtras] Optional boolean indicating we are not on
+ *   a script level and therefore are on lesson extras
  */
 function initializeStoreWithProgress(
   store,
   scriptData,
   currentLevelId,
   isFullProgress,
-  saveAnswersBeforeNavigation = false
+  saveAnswersBeforeNavigation = false,
+  isLessonExtras = false
 ) {
   store.dispatch(
     initProgress({
@@ -283,7 +290,8 @@ function initializeStoreWithProgress(
       scriptDescription: scriptData.description,
       betaTitle: scriptData.beta_title,
       courseId: scriptData.course_id,
-      isFullProgress: isFullProgress
+      isFullProgress: isFullProgress,
+      isLessonExtras: isLessonExtras
     })
   );
 

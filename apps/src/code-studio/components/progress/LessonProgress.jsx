@@ -78,7 +78,7 @@ class LessonProgress extends Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,
     lessonExtrasUrl: PropTypes.string,
-    onLessonExtras: PropTypes.bool,
+    isLessonExtras: PropTypes.bool,
     lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func
@@ -160,7 +160,7 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {lessonExtrasUrl, onLessonExtras, lessonTrophyEnabled} = this.props;
+    const {lessonExtrasUrl, isLessonExtras, lessonTrophyEnabled} = this.props;
     let levels = this.props.levels;
 
     // Only puzzle levels (non-concept levels) should count towards mastery.
@@ -213,10 +213,10 @@ class LessonProgress extends Component {
               </div>
             ))}
             {lessonExtrasUrl && !lessonTrophyEnabled && (
-              <div ref={onLessonExtras ? 'currentLevel' : null}>
+              <div ref={isLessonExtras ? 'currentLevel' : null}>
                 <LessonExtrasProgressBubble
                   lessonExtrasUrl={lessonExtrasUrl}
-                  perfect={onLessonExtras}
+                  perfect={isLessonExtras}
                 />
               </div>
             )}
@@ -241,5 +241,5 @@ export default connect(state => ({
     state.progress,
     state.progress.currentStageId
   ),
-  onLessonExtras: state.progress.currentLevelId === 'stage_extras'
+  isLessonExtras: state.progress.isLessonExtras
 }))(LessonProgress);
