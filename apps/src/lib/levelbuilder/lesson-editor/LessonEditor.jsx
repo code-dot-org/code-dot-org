@@ -5,7 +5,6 @@ import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesE
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import RelatedLessons from './RelatedLessons';
@@ -44,23 +43,13 @@ const styles = {
 
 class LessonEditor extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
-    initialDisplayName: PropTypes.string.isRequired,
-    initialOverview: PropTypes.string,
-    initialStudentOverview: PropTypes.string,
-    initialAssessmentOpportunities: PropTypes.string,
-    initialUnplugged: PropTypes.bool,
-    initialLockable: PropTypes.bool,
-    initialAssessment: PropTypes.bool,
-    initialCreativeCommonsLicense: PropTypes.string,
-    initialPurpose: PropTypes.string,
-    initialPreparation: PropTypes.string,
-    initialAnnouncements: PropTypes.arrayOf(announcementShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
+    initialLessonData: PropTypes.object,
+
+    // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
-    courseVersionId: PropTypes.number
+    resources: PropTypes.arrayOf(resourceShape).isRequired
   };
 
   constructor(props) {
@@ -70,17 +59,19 @@ class LessonEditor extends Component {
       isSaving: false,
       error: null,
       lastSaved: null,
-      displayName: this.props.initialDisplayName,
-      overview: this.props.initialOverview,
-      studentOverview: this.props.initialStudentOverview,
-      assessmentOpportunities: this.props.initialAssessmentOpportunities,
-      unplugged: this.props.initialUnplugged,
-      lockable: this.props.initialLockable,
-      creativeCommonsLicense: this.props.initialCreativeCommonsLicense,
-      assessment: this.props.initialAssessment,
-      purpose: this.props.initialPurpose,
-      preparation: this.props.initialPreparation,
-      announcements: this.props.initialAnnouncements,
+      displayName: this.props.initialLessonData.name,
+      overview: this.props.initialLessonData.overview || '',
+      studentOverview: this.props.initialLessonData.studentOverview || '',
+      assessmentOpportunities:
+        this.props.initialLessonData.assessmentOpportunities || '',
+      unplugged: this.props.initialLessonData.unplugged,
+      lockable: this.props.initialLessonData.lockable,
+      creativeCommonsLicense: this.props.initialLessonData
+        .creativeCommonsLicense,
+      assessment: this.props.initialLessonData.assessment,
+      purpose: this.props.initialLessonData.purpose || '',
+      preparation: this.props.initialLessonData.preparation || '',
+      announcements: this.props.initialLessonData.announcements || [],
       objectives: this.props.initialObjectives
     };
   }
@@ -91,7 +82,7 @@ class LessonEditor extends Component {
     this.setState({isSaving: true, lastSaved: null, error: null});
 
     $.ajax({
-      url: `/lessons/${this.props.id}`,
+      url: `/lessons/${this.props.initialLessonData.id}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
@@ -114,7 +105,11 @@ class LessonEditor extends Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
+          navigateToHref(
+            `/lessons/${this.props.initialLessonData.id}${
+              window.location.search
+            }`
+          );
         } else {
           this.setState({lastSaved: data.updated_at, isSaving: false});
         }
@@ -306,8 +301,10 @@ class LessonEditor extends Component {
           collapsed={true}
           fullWidth={true}
         >
-          {this.props.courseVersionId ? (
-            <ResourcesEditor courseVersionId={this.props.courseVersionId} />
+          {this.props.initialLessonData.courseVersionId ? (
+            <ResourcesEditor
+              courseVersionId={this.props.initialLessonData.courseVersionId}
+            />
           ) : (
             <h4>
               A unit must be in a course version, i.e. a unit must belong to a
