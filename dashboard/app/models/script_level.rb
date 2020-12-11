@@ -115,12 +115,6 @@ class ScriptLevel < ApplicationRecord
         sl.levels = levels
       end
 
-      # Generate and store the seed_key, a unique identifier for this script level which should be stable across environments.
-      # We'll use this in our new, JSON-based seeding process.
-      seed_context = Services::ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson], lesson_activities: [], activity_sections: [])
-      seed_key_data = script_level.seeding_key(seed_context, false)
-      script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
-
       script_level.assign_attributes(script_level_attributes)
       # We must assign properties separately since otherwise, a missing property won't correctly overwrite the current value
       script_level.properties = properties
@@ -605,7 +599,8 @@ class ScriptLevel < ApplicationRecord
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
@@ -631,7 +626,6 @@ class ScriptLevel < ApplicationRecord
     # going to be used for seeding yet.
     my_activity_section = seed_context.activity_sections.select {|s| s.id == activity_section_id}.first
 
-    # HACK: use script_level prefix so that it gets filtered out later.
     my_key['activity_section.key'] = my_activity_section.key if my_activity_section
 
     my_key.stringify_keys
