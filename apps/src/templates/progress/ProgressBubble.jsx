@@ -90,11 +90,7 @@ class ProgressBubble extends React.Component {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
-    //TODO: (ErinB) probably change to use just number during post launch clean-up.
-    selectedSectionId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number

@@ -12,7 +12,7 @@ export default storybook =>
           <JoinSectionNotifications
             action="join"
             result="success"
-            name="Ada Lovelace Homeroom"
+            sectionName="Ada Lovelace Homeroom"
           />
         )
       },
@@ -22,8 +22,8 @@ export default storybook =>
           <JoinSectionNotifications
             action="leave"
             result="success"
-            name="Ada Lovelace Homeroom"
-            id="BCDFGH"
+            sectionName="Ada Lovelace Homeroom"
+            sectionCode="BCDFGH"
           />
         )
       },
@@ -33,14 +33,18 @@ export default storybook =>
           <JoinSectionNotifications
             action="join"
             result="section_notfound"
-            id="BCDFGH"
+            sectionCode="BCDFGH"
           />
         )
       },
       {
         name: 'Join failed',
         story: () => (
-          <JoinSectionNotifications action="join" result="fail" id="BCDFGH" />
+          <JoinSectionNotifications
+            action="join"
+            result="fail"
+            sectionCode="BCDFGH"
+          />
         )
       },
       {
@@ -49,7 +53,7 @@ export default storybook =>
           <JoinSectionNotifications
             action="join"
             result="exists"
-            name="Ada Lovelace Homeroom"
+            sectionName="Ada Lovelace Homeroom"
           />
         )
       },
@@ -59,7 +63,7 @@ export default storybook =>
           <JoinSectionNotifications
             action={null}
             result={null}
-            id="Ada Lovelace Homeroom"
+            sectionName="Ada Lovelace Homeroom"
           />
         )
       }
