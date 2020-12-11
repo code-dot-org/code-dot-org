@@ -797,38 +797,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test 'uses gui editor when script levels have variants without experiments' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    (1..2).map {|n| create(:level, name: "Level #{n}")}
-    script_file = File.join(self.class.fixture_path, "test-fixture-variants.script")
-    Script.setup([script_file])
-
-    get :edit, params: {id: 'test-fixture-variants', beta: true}
-    assert_response :success
-    assert_select "script[data-levelbuildereditscript]"
-    assert_select "script[data-levelbuildereditscript]" do |elements|
-      assert elements.first['data-levelbuildereditscript'].match?(/"beta":true/)
-    end
-  end
-
-  test 'uses dsl editor when script levels have variants with experiments' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    (1..8).map {|n| create(:level, name: "Level #{n}")}
-    script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
-    Script.setup([script_file])
-
-    get :edit, params: {id: 'test-fixture-experiments'}
-    assert_response :success
-    assert_select "script[data-levelbuildereditscript]"
-    assert_select "script[data-levelbuildereditscript]" do |elements|
-      assert elements.first['data-levelbuildereditscript'].match?(/"beta":false/)
-    end
-  end
-
   test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
     sign_in @levelbuilder
 

@@ -44,6 +44,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     * `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     * `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
+1. increase `max_allowed_packet` to enable loading fixtures
+    * add `max_allowed_packet = 268435456` to `/usr/local/etc/my.cnf` (Mac) or `/etc/mysql/mysql.conf.d/mysqld.cnf` (Linux)
+
 1. `bundle exec rake build`
     * This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
