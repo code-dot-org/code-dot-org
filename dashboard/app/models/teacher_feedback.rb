@@ -20,6 +20,7 @@
 # Indexes
 #
 #  index_feedback_on_student_and_level_and_teacher_id  (student_id,level_id,teacher_id)
+#  index_teacher_feedbacks_on_teacher_id               (teacher_id)
 #
 
 class TeacherFeedback < ApplicationRecord

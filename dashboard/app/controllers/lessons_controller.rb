@@ -50,7 +50,7 @@ class LessonsController < ApplicationController
       Script.merge_and_write_i18n(@lesson.i18n_hash, @lesson.script.name)
     end
 
-    render json: @lesson
+    render json: @lesson.summarize_for_lesson_edit
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
     render(status: :not_acceptable, plain: e.message)
   end
