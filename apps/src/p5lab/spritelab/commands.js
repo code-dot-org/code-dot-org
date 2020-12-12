@@ -2,6 +2,7 @@ import {commands as actionCommands} from './commands/actionCommands';
 import {commands as behaviorCommands} from './commands/behaviorCommands';
 import {commands as eventCommands} from './commands/eventCommands';
 import {commands as locationCommands} from './commands/locationCommands';
+import {commands as mathCommands} from './commands/mathCommands';
 import {commands as spriteCommands} from './commands/spriteCommands';
 import {commands as worldCommands} from './commands/worldCommands';
 import {commands as validationCommands} from './commands/validationCommands';
@@ -188,6 +189,11 @@ export const commands = {
 
   randomLocation() {
     return locationCommands.randomLocation();
+  },
+
+  // Math commands
+  beginCollectingData(costumeName, label) {
+    mathCommands.beginCollectingData.apply(this, [costumeName, label]);
   },
 
   // Sprite commands
