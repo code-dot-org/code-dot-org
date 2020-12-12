@@ -82,7 +82,7 @@ module Services
     test 'seed updates lesson groups' do
       script = create_script_tree
 
-      script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.lesson_groups.first.update!(big_questions: 'updated big questions')
         create :lesson_group, script: script, description: 'my description'
       end
@@ -90,14 +90,14 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+      assert_script_trees_equal script_with_changes, script
       assert_equal 'updated big questions', script.lesson_groups.first.big_questions
     end
 
     test 'seed updates lessons' do
       script = create_script_tree
 
-      script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.lessons.first.update!(visible_after: 'updated visible after')
         create :lesson, lesson_group: script.lesson_groups.last, script: script, overview: 'my overview', relative_position: 5, absolute_position: 5
       end
@@ -105,14 +105,14 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+      assert_script_trees_equal script_with_changes, script
       assert_equal 'updated visible after', script.lessons.first.visible_after
     end
 
     test 'seed updates lesson activities' do
       script = create_script_tree
 
-      script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.lesson_activities.first.update!(name: 'Updated Activity Name')
         lesson.lesson_activities.create(
@@ -125,7 +125,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+      assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
       assert_equal(
         ['Updated Activity Name', 'New Activity Name'],
@@ -136,7 +136,7 @@ module Services
     test 'seed updates activity sections' do
       script = create_script_tree
 
-      script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         activity = script.lessons.first.lesson_activities.first
         activity.activity_sections.first.update!(name: 'Updated Section Name')
         activity.activity_sections.create(
@@ -149,7 +149,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+      assert_script_trees_equal script_with_changes, script
       activity = script.lessons.first.lesson_activities.first
       assert_equal(
         ['Updated Section Name', 'New Section Name'],
@@ -161,7 +161,7 @@ module Services
       script = create_script_tree
       new_level = create :level
 
-      script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
         updated_script_level.update!(challenge: 'foo')
         updated_script_level.levels += [new_level]
@@ -171,7 +171,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+      assert_script_trees_equal script_with_changes, script
       assert_equal 'foo', script.script_levels.first.challenge
     end
 
@@ -180,7 +180,7 @@ module Services
       CourseOffering.add_course_offering(script)
       assert script.course_version
 
-      script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.resources.first.update!(name: 'Updated Resource Name')
         lesson.resources.create(
@@ -194,7 +194,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_changes, script, script_levels_with_changes
+      assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
       assert_equal(
         ['Updated Resource Name', 'fake name', 'New Resource Name'],
@@ -206,7 +206,7 @@ module Services
       script = create_script_tree
       original_counts = get_counts
 
-      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
         script.lesson_groups.first.destroy!
         script.reload
         # TODO: should these be handled automatically by callbacks?
@@ -218,7 +218,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      assert_script_trees_equal script_with_deletion, script
       assert_equal [1], script.lesson_groups.map(&:position)
       assert_equal [1, 2], script.lessons.map(&:absolute_position)
       assert_equal [1, 2], script.lessons.map(&:relative_position)
@@ -239,7 +239,7 @@ module Services
       script = create_script_tree
       original_counts = get_counts
 
-      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
         script.lessons.first.destroy!
         script.reload
         # TODO: should these be handled automatically by a callback? It is for absolute_position somehow.
@@ -250,7 +250,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      assert_script_trees_equal script_with_deletion, script
       assert_equal (1..3).to_a, script.lessons.map(&:absolute_position)
       assert_equal (1..3).to_a, script.lessons.map(&:relative_position)
       assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
@@ -269,7 +269,7 @@ module Services
       script = create_script_tree
       original_counts = get_counts
 
-      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
         script.lessons.first.lesson_activities.first.destroy!
         script.fix_script_level_positions
       end
@@ -277,7 +277,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      assert_script_trees_equal script_with_deletion, script
       assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
       assert_equal (1..4).to_a, script.lessons.map(&:relative_position)
       assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
@@ -294,7 +294,7 @@ module Services
       script = create_script_tree
       original_counts = get_counts
 
-      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
         script.lessons.first.lesson_activities.first.activity_sections.first.destroy!
         script.fix_script_level_positions
       end
@@ -302,7 +302,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      assert_script_trees_equal script_with_deletion, script
       assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
       assert_equal (1..4).to_a, script.lessons.map(&:relative_position)
       assert_equal (1..6).to_a, script.script_levels.map(&:chapter)
@@ -319,7 +319,7 @@ module Services
       original_counts = get_counts
       original_script_level_ids = script.script_levels.map(&:id)
 
-      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
         script.script_levels.first.destroy!
         script.reload
         # TODO: should these be handled automatically by a callback?
@@ -329,7 +329,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      assert_script_trees_equal script_with_deletion, script
       assert_equal (1..7).to_a, script.script_levels.map(&:chapter)
       # Deleting the ScriptLevel should also delete its LevelsScriptLevel.
       expected_counts = original_counts.clone
@@ -348,7 +348,7 @@ module Services
       script = create_script_tree
       original_counts = get_counts
 
-      script_with_deletion, json, script_levels_with_deletion = get_script_and_json_with_change_and_rollback(script) do
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         assert_equal 2, lesson.resources.count
         lesson.resources.delete(lesson.resources.first)
@@ -358,32 +358,24 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
+      assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
       expected_counts['LessonsResource'] -= 1
       assert_equal expected_counts, get_counts
     end
 
-    def frozen_script_levels_with_levels(script)
-      script_levels = script.script_levels.to_a
-      script_levels.map(&:levels).map(&:length)
-      script_levels.each(&:freeze)
-      script_levels
-    end
-
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
-      script_with_change = json = script_levels_with_change = nil
+      script_with_change = json = nil
       Script.transaction do
         # TODO: should this be handled automatically by a callback? It is for absolute_position somehow.
         yield
         script_with_change = Script.with_seed_models.find(script.id)
         script_with_change.freeze
         json = ScriptSeed.serialize_seeding_json(script_with_change)
-        script_levels_with_change = frozen_script_levels_with_levels(script_with_change)
 
         raise ActiveRecord::Rollback
       end
-      [script_with_change, json, script_levels_with_change]
+      [script_with_change, json]
     end
 
     def get_counts
@@ -393,13 +385,10 @@ module Services
       ].map {|c| [c.name, c.count]}.to_h
     end
 
-    def assert_script_trees_equal(s1, s2, script_levels1=nil, script_levels2=nil)
+    def assert_script_trees_equal(s1, s2)
       # Make sure the scripts and their associations are already in memory,
       # because fetching data from the DB could lead to false positive matches.
       assert_queries(0) do
-        script_levels1 ||= s1.script_levels.to_a
-        script_levels2 ||= s2.script_levels.to_a
-
         assert_attributes_equal s1, s2
         assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
         assert_lessons_equal s1.lessons, s2.lessons
@@ -411,7 +400,10 @@ module Services
           s1.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten,
           s2.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
         )
-        assert_script_levels_equal script_levels1, script_levels2
+        assert_script_levels_equal(
+          s1.script_levels.to_a,
+          s2.script_levels.to_a
+        )
         assert_resources_equal(
           s1.lessons.map(&:resources).flatten,
           s2.lessons.map(&:resources).flatten
