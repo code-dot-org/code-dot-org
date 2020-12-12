@@ -520,9 +520,20 @@ class ScriptLevel < ApplicationRecord
         status: SharedConstants::LEVEL_STATUS.perfect,
         passed: true
       }.merge!(lesson_extra_user_level.attributes)
+    elsif bonus_level_ids.count == 0
+      {
+        # Some lessons have a lesson extras option without any bonus levels. In
+        # these cases, they just display previous lesson challenges. These should
+        # be displayed as "perfect." Example level: /s/express-2020/stage/28/extras
+        id: -1,
+        bonus: true,
+        user_id: student.id,
+        passed: true,
+        status: SharedConstants::LEVEL_STATUS.perfect
+      }
     else
       {
-        id: bonus_level_ids.first.id,
+        id: bonus_level_ids.first,
         bonus: true,
         user_id: student.id,
         passed: false,
