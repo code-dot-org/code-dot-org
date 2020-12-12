@@ -13,7 +13,7 @@
 module ScriptSeed
   # Holds data that we've already retrieved from the database. Used to look up associations of objects without making additional queries.
   # Storing this data together in a "data object" makes it easier to pass around.
-  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :script_levels, :levels_script_levels, :levels,  keyword_init: true)
+  SeedContext = Struct.new(:script, :lesson_groups, :lessons, :lesson_activities, :activity_sections, :script_levels, :levels_script_levels, :levels,  keyword_init: true)
 
   # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
   # designed to be used for seeding.
@@ -32,10 +32,15 @@ module ScriptSeed
     my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
     my_levels = my_script_levels.map(&:levels).flatten
 
+    activities = script.lessons.map(&:lesson_activities).flatten
+    sections = activities.map(&:activity_sections).flatten
+
     seed_context = SeedContext.new(
       script: script,
       lesson_groups: script.lesson_groups,
       lessons: script.lessons,
+      lesson_activities: activities,
+      activity_sections: sections,
       script_levels: my_script_levels,
       levels_script_levels: script.levels_script_levels,
       levels: my_levels
@@ -46,6 +51,8 @@ module ScriptSeed
       script: ScriptSerializer.new(script, scope: scope).as_json,
       lesson_groups: script.lesson_groups.map {|lg| ScriptSeed::LessonGroupSerializer.new(lg, scope: scope).as_json},
       lessons: script.lessons.map {|l| ScriptSeed::LessonSerializer.new(l, scope: scope).as_json},
+      lesson_activities: activities.map {|a| ScriptSeed::LessonActivitySerializer.new(a, scope: scope).as_json},
+      activity_sections: sections.map {|s| ScriptSeed::ActivitySectionSerializer.new(s, scope: scope).as_json},
       script_levels: script.script_levels.map {|sl| ScriptSeed::ScriptLevelSerializer.new(sl, scope: scope).as_json},
       levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json}
     }
@@ -110,6 +117,8 @@ module ScriptSeed
       script_data = data['script']
       lesson_groups_data = data['lesson_groups']
       lessons_data = data['lessons']
+      lesson_activities_data = data['lesson_activities']
+      activity_sections_data = data['activity_sections']
       script_levels_data = data['script_levels']
       levels_script_levels_data = data['levels_script_levels']
       seed_context = SeedContext.new
@@ -117,6 +126,8 @@ module ScriptSeed
       seed_context.script = import_script(script_data)
       seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
       seed_context.lessons = import_lessons(lessons_data, seed_context)
+      seed_context.lesson_activities = import_lesson_activities(lesson_activities_data, seed_context)
+      seed_context.activity_sections = import_activity_sections(activity_sections_data, seed_context)
 
       # Because ScriptLevel's seeding_key depends on the keys of its associated Levels, we can
       # improve performance by loading all of it here into the SeedContext.
@@ -175,15 +186,55 @@ module ScriptSeed
     Lesson.where(script: seed_context.script)
   end
 
+  def self.import_lesson_activities(activities_data, seed_context)
+    activities_to_import = activities_data.map do |activity_data|
+      lesson_id = seed_context.lessons.select {|l| l.key == activity_data['seeding_key']['lesson.key']}.first&.id
+      raise 'No lesson found' if lesson_id.nil?
+
+      activity_attrs = activity_data.except('seeding_key')
+      activity_attrs['lesson_id'] = lesson_id
+      LessonActivity.new(activity_attrs)
+    end
+
+    # Destroy any existing activities that weren't in the imported list
+    # Destroy before import, otherwise position gets messed up.
+    existing_activities = LessonActivity.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    destroy_outdated_objects(LessonActivity, existing_activities, activities_to_import, seed_context)
+    LessonActivity.import! activities_to_import, on_duplicate_key_update: get_columns(LessonActivity)
+    LessonActivity.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+  end
+
+  def self.import_activity_sections(sections_data, seed_context)
+    sections_to_import = sections_data.map do |section_data|
+      lesson_activity_id = seed_context.lesson_activities.select {|la| la.key == section_data['seeding_key']['lesson_activity.key']}.first&.id
+      raise "No lesson activity found with key #{section_data['seeding_key']['lesson_activity.key']}" if lesson_activity_id.nil?
+
+      section_attrs = section_data.except('seeding_key')
+      section_attrs['lesson_activity_id'] = lesson_activity_id
+      ActivitySection.new(section_attrs)
+    end
+
+    # Destroy any existing activities that weren't in the imported list
+    # Destroy before import, otherwise position gets messed up.
+    existing_sections = ActivitySection.joins(lesson_activity: :lesson).where('stages.script_id' => seed_context.script.id)
+    destroy_outdated_objects(ActivitySection, existing_sections, sections_to_import, seed_context)
+    ActivitySection.import! sections_to_import, on_duplicate_key_update: get_columns(ActivitySection)
+    ActivitySection.joins(lesson_activity: :lesson).where('stages.script_id' => seed_context.script.id)
+  end
+
   def self.import_script_levels(script_levels_data, seed_context)
     lessons_by_seeding_key = seed_context.lessons.index_by {|l| l.seeding_key(seed_context)}
     script_levels_by_seeding_key = seed_context.script_levels.index_by {|sl| sl.seeding_key(seed_context)}
 
     script_levels_to_import = script_levels_data.map do |sl_data|
-      # Everything that doesn't start with the 'script_level' prefix in the seeding_key hash is used
-      # to identify the Lesson that the ScriptLevel should belong to.
-      stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| !k.start_with?('script_level.')}]
+      # Extract the parts of the ScriptLevel's seeding_key which are used to
+      # identify the Lesson by its seeding_key.
+      lesson_seed_keys = %w(lesson.key lesson_group.key script.name)
+      stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| lesson_seed_keys.include?(k)}]
       raise 'No stage found' if stage.nil?
+
+      section_key = sl_data['seeding_key']['activity_section.key']
+      section_id = section_key && seed_context.activity_sections.find {|section| section.key == section_key}.id
 
       # Unlike the other models, we must explicitly check for an existing ScriptLevel to update, since its
       # logical unique key is not a unique index on the table, so we can't just rely on on_duplicate_key_update: :all.
@@ -191,6 +242,7 @@ module ScriptSeed
       script_level_to_import = script_levels_by_seeding_key[sl_data['seeding_key']] || ScriptLevel.new
       script_level_attrs = sl_data.except('seeding_key')
       script_level_attrs['script_id'] = seed_context.script.id
+      script_level_attrs['activity_section_id'] = section_id if section_id
       script_level_attrs['stage_id'] = stage.id
       script_level_to_import.assign_attributes(script_level_attrs)
       script_level_to_import
@@ -290,10 +342,37 @@ module ScriptSeed
     end
   end
 
+  class LessonActivitySerializer < ActiveModel::Serializer
+    attributes(
+      :key,
+      :position,
+      :properties,
+      :seeding_key
+    )
+
+    def seeding_key
+      object.seeding_key(@scope[:seed_context])
+    end
+  end
+
+  class ActivitySectionSerializer < ActiveModel::Serializer
+    attributes(
+      :key,
+      :position,
+      :properties,
+      :seeding_key
+    )
+
+    def seeding_key
+      object.seeding_key(@scope[:seed_context])
+    end
+  end
+
   class ScriptLevelSerializer < ActiveModel::Serializer
     attributes(
       :chapter,
       :position,
+      :activity_section_position,
       :assessment,
       :properties,
       :named_level,

@@ -13,8 +13,6 @@ import reducers, {
   removeTip,
   addLevel,
   removeLevel,
-  setActiveVariant,
-  setLevelField,
   setScriptLevelField,
   reorderLevel,
   moveLevelToActivitySection,
@@ -27,7 +25,6 @@ import _ from 'lodash';
 import {expect, assert} from '../../../../util/reconfiguredChai';
 
 const getInitialState = () => ({
-  levelKeyList: {},
   activities: _.cloneDeep(sampleActivities)
 });
 
@@ -225,48 +222,6 @@ describe('activitiesEditorRedux reducer tests', () => {
       );
     });
 
-    it('set active variant', () => {
-      const nextState = reducer(initialState, setActiveVariant(1, 3, 1, 2))
-        .activities;
-      assert.equal(
-        nextState[0].activitySections[2].scriptLevels[0].activeId,
-        2
-      );
-    });
-
-    it('set level field', () => {
-      let nextState = reducer(
-        initialState,
-        setLevelField(1, 3, 1, {videoKey: '_a_'})
-      );
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
-          .videoKey,
-        '_a_'
-      );
-      nextState = reducer(nextState, setLevelField(1, 3, 1, {skin: '_b_'}));
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
-          .skin,
-        '_b_'
-      );
-      nextState = reducer(
-        nextState,
-        setLevelField(1, 3, 1, {conceptDifficulty: '_c_'})
-      );
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
-          .conceptDifficulty,
-        '_c_'
-      );
-      nextState = reducer(nextState, setLevelField(1, 3, 1, {concepts: '_d_'}));
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].levels[0]
-          .concepts,
-        '_d_'
-      );
-    });
-
     it('set script level field', () => {
       let nextState = reducer(
         initialState,
@@ -307,9 +262,16 @@ describe('activitiesEditorRedux reducer tests', () => {
     });
 
     it('add activity', () => {
-      const nextState = reducer(initialState, addActivity(3, 'key')).activities;
+      const nextState = reducer(
+        initialState,
+        addActivity(3, 'activity-key', 'section-key-1')
+      ).activities;
       assert.equal(nextState[nextState.length - 1].displayName, '');
-      assert.equal(nextState[nextState.length - 1].key, 'key');
+      assert.equal(nextState[nextState.length - 1].key, 'activity-key');
+      assert.equal(
+        nextState[nextState.length - 1].activitySections[0].key,
+        'section-key-1'
+      );
     });
 
     it('update activity field', () => {

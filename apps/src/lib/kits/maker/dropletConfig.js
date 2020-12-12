@@ -410,7 +410,6 @@ const circuitPlaygroundBlocks = [
   }
 ];
 
-const ledScreenPrefix = 'ledScreen[0][0].';
 /* micro:bit specific blocks */
 const microBitBlocks = [
   {
@@ -443,22 +442,22 @@ const microBitBlocks = [
   },
   {func: 'ledScreen', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
   {
-    func: 'on',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen.on',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.on'
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
   },
   {
-    func: 'off',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen.off',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.off'
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
   },
   {
-    func: 'toggle',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen.toggle',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.toggle'
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
   },
   {
     func: 'ledScreen.clear',
