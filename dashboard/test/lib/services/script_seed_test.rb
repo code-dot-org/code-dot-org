@@ -31,14 +31,14 @@ module Services
     test 'seed new script' do
       script = create_script_tree
       script.freeze
-      # Eager load the levels for each script level, so they can be used in assertions even after deletion
-      script_levels = frozen_script_levels_with_levels(script)
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
 
-      script.course_version.resources.destroy_all
-      script.course_version.destroy!
-      script.destroy!
+      # remove the script from the database, leaving the frozen script object intact.
+      script_to_destroy = Script.find(script.id)
+      script_to_destroy.course_version.resources.destroy_all
+      script_to_destroy.course_version.destroy!
+      script_to_destroy.destroy!
 
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
@@ -64,8 +64,8 @@ module Services
       end
 
       assert_equal counts_before, get_counts
-      script_after_seed = Script.find_by!(name: script.name)
-      assert_script_trees_equal(script, script_after_seed, script_levels)
+      script_after_seed = Script.with_seed_models.find_by!(name: script.name)
+      assert_script_trees_equal(script, script_after_seed)
     end
 
     test 'seed with no changes is no-op' do
@@ -74,7 +74,7 @@ module Services
       ScriptSeed.seed_from_json(ScriptSeed.serialize_seeding_json(script))
 
       assert_equal counts_before, get_counts
-      script_after_seed = Script.find_by!(name: script.name)
+      script_after_seed = Script.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
       assert_equal script.script_levels.map(&:id), script_after_seed.script_levels.map(&:id)
     end
@@ -88,7 +88,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script, script_levels_with_changes
       assert_equal 'updated big questions', script.lesson_groups.first.big_questions
@@ -99,11 +99,11 @@ module Services
 
       script_with_changes, json, script_levels_with_changes = get_script_and_json_with_change_and_rollback(script) do
         script.lessons.first.update!(visible_after: 'updated visible after')
-        create :lesson, lesson_group: script.lesson_groups.first, script: script, overview: 'my overview'
+        create :lesson, lesson_group: script.lesson_groups.last, script: script, overview: 'my overview', relative_position: 5, absolute_position: 5
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script, script_levels_with_changes
       assert_equal 'updated visible after', script.lessons.first.visible_after
@@ -123,7 +123,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script, script_levels_with_changes
       lesson = script.lessons.first
@@ -147,7 +147,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script, script_levels_with_changes
       activity = script.lessons.first.lesson_activities.first
@@ -165,11 +165,11 @@ module Services
         updated_script_level = script.script_levels.first
         updated_script_level.update!(challenge: 'foo')
         updated_script_level.levels += [new_level]
-        create :script_level, lesson: script.lessons.first, script: script, levels: [new_level]
+        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level]
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script, script_levels_with_changes
       assert_equal 'foo', script.script_levels.first.challenge
@@ -192,7 +192,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script, script_levels_with_changes
       lesson = script.lessons.first
@@ -216,7 +216,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
       assert_equal [1], script.lesson_groups.map(&:position)
@@ -248,7 +248,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
       assert_equal (1..3).to_a, script.lessons.map(&:absolute_position)
@@ -275,7 +275,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
       assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
@@ -300,7 +300,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
       assert_equal (1..4).to_a, script.lessons.map(&:absolute_position)
@@ -327,7 +327,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
       assert_equal (1..7).to_a, script.script_levels.map(&:chapter)
@@ -356,7 +356,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script.reload
+      script = Script.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script, script_levels_with_deletion
       expected_counts = original_counts.clone
@@ -376,7 +376,7 @@ module Services
       Script.transaction do
         # TODO: should this be handled automatically by a callback? It is for absolute_position somehow.
         yield
-        script_with_change = Script.includes(:lesson_groups, :lessons, :script_levels, :levels_script_levels).find(script.id)
+        script_with_change = Script.with_seed_models.find(script.id)
         script_with_change.freeze
         json = ScriptSeed.serialize_seeding_json(script_with_change)
         script_levels_with_change = frozen_script_levels_with_levels(script_with_change)
@@ -394,25 +394,29 @@ module Services
     end
 
     def assert_script_trees_equal(s1, s2, script_levels1=nil, script_levels2=nil)
-      script_levels1 ||= s1.script_levels
-      script_levels2 ||= s2.script_levels
+      # Make sure the scripts and their associations are already in memory,
+      # because fetching data from the DB could lead to false positive matches.
+      assert_queries(0) do
+        script_levels1 ||= s1.script_levels.to_a
+        script_levels2 ||= s2.script_levels.to_a
 
-      assert_attributes_equal s1, s2
-      assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
-      assert_lessons_equal s1.lessons, s2.lessons
-      assert_lesson_activities_equal(
-        s1.lessons.map(&:lesson_activities).flatten,
-        s2.lessons.map(&:lesson_activities).flatten
-      )
-      assert_activity_sections_equal(
-        s1.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten,
-        s2.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
-      )
-      assert_script_levels_equal script_levels1, script_levels2
-      assert_resources_equal(
-        s1.lessons.map(&:resources).flatten,
-        s2.lessons.map(&:resources).flatten
-      )
+        assert_attributes_equal s1, s2
+        assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
+        assert_lessons_equal s1.lessons, s2.lessons
+        assert_lesson_activities_equal(
+          s1.lessons.map(&:lesson_activities).flatten,
+          s2.lessons.map(&:lesson_activities).flatten
+        )
+        assert_activity_sections_equal(
+          s1.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten,
+          s2.lessons.map(&:lesson_activities).flatten.map(&:activity_sections).flatten
+        )
+        assert_script_levels_equal script_levels1, script_levels2
+        assert_resources_equal(
+          s1.lessons.map(&:resources).flatten,
+          s2.lessons.map(&:resources).flatten
+        )
+      end
     end
 
     def assert_lesson_groups_equal(lesson_groups1, lesson_groups2)
@@ -517,7 +521,7 @@ module Services
         end
       end
 
-      script
+      Script.with_seed_models.find(script.id)
     end
   end
 end
