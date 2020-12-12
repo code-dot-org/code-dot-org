@@ -270,6 +270,23 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal LessonGroup::Counters.new(1, 2, 3, 4), counters
   end
 
+  test 'i18n_hash has correct value' do
+    script = create :script, name: 'dummy-script'
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, key: 'dummy-key', name: 'Dummy Name'
+
+    expected_i18n = {
+      'dummy-script' => {
+        'lessons' => {
+          'dummy-key' => {
+            'name' => 'Dummy Name'
+          }
+        }
+      }
+    }
+    assert_equal expected_i18n, lesson.i18n_hash
+  end
+
   test 'seeding_key' do
     lesson_group = create :lesson_group
     script = lesson_group.script
