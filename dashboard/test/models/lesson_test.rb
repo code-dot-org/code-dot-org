@@ -274,7 +274,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson_group = create :lesson_group
     script = lesson_group.script
     lesson = create :lesson, lesson_group: lesson_group, script: script
-    seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: script.lesson_groups.to_a)
+    seed_context = Services::ScriptSeed::SeedContext.new(script: script, lesson_groups: script.lesson_groups.to_a)
     lesson.reload # clear out any already loaded association data, for verification of query counts
 
     # seeding_key should not make queries
