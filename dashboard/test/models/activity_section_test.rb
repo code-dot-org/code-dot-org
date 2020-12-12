@@ -38,4 +38,28 @@ class ActivitySectionTest < ActiveSupport::TestCase
     end
     assert_includes error.message, 'activity_section_position is required'
   end
+
+  test 'seeding_key' do
+    lesson_group = create :lesson_group
+    script = lesson_group.script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    seed_context = ScriptSeed::SeedContext.new(
+      script: script,
+      lesson_groups: script.lesson_groups.to_a,
+      lessons: script.lessons.to_a,
+      lesson_activities: [lesson_activity]
+    )
+    activity_section.reload # clear out any already loaded association data, for verification of query counts
+
+    # seeding_key should not make queries
+    assert_queries(0) do
+      expected = {
+        'activity_section.key' => activity_section.key,
+        'lesson_activity.key' => lesson_activity.key
+      }
+      assert_equal expected, activity_section.seeding_key(seed_context)
+    end
+  end
 end
