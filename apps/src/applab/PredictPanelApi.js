@@ -78,6 +78,7 @@ PredictPanelApi.renderPanel = function(targetElement, data) {
       targetElement.appendChild(label);
 
       const select = document.createElement('select');
+      select.id = selectedFeature;
 
       elementLibrary.setAllPropertiesToCurrentTheme(
         select,
@@ -102,6 +103,7 @@ PredictPanelApi.renderPanel = function(targetElement, data) {
 
       const input = document.createElement('input');
       input.setAttribute('name', selectedFeature);
+      input.id = selectedFeature;
       targetElement.appendChild(input);
     }
   }
@@ -119,6 +121,11 @@ PredictPanelApi.setOnPredictCallback = function(callback) {
 };
 
 PredictPanelApi.onPredictClick = function() {
+  const age = document.querySelector('#predict_panel1 #Age').value;
+  const sex = document.querySelector('#predict_panel1 #Sex').value;
+
+  console.log(age, sex);
+
   this.predictCallback();
 };
 
