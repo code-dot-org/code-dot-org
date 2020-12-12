@@ -2,48 +2,18 @@
  * @file Core implementation of Applab commands related to the PredictPanel design element.
  *
  */
+
 /* global Promise */
+
 import elementLibrary from './designElements/library';
 
-/**
- * API for working with a PredictPanel in Applab.
- *
- * @constructor
- * @param {Document} [docContext] - default is 'document'
- * @param [appStorage] - default is AppStorage
- */
-export default function PredictPanelApi(docContext, appStorage) {
-  this.document_ = docContext || document;
-  this.appStorage_ = appStorage || Applab.storage;
+const PredictPanelApi = {};
 
-  /**
-   * List of all warnings generated while performing operations through this
-   * API instance.
-   * @type {Error[]}
-   */
-  this.warnings = [];
-}
+PredictPanelApi.predictCallback = null;
 
-/**
- * Record a runtime warning.
- * @param {string} warningMessage
- */
-PredictPanelApi.prototype.warn = function(warningMessage) {
-  this.warnings.push(new Error(warningMessage));
-};
-
-/**
- * Add warnings from an array to the PredictPanelApi instance's warnings array.
- * @param {Error[]} newWarnings
- * @private
- */
-PredictPanelApi.prototype.mergeWarnings_ = function(newWarnings) {
-  Array.prototype.push.apply(this.warnings, newWarnings);
-};
-
-PredictPanelApi.prototype.init = function(predictPanelId, data) {
+PredictPanelApi.init = function(predictPanelId, data) {
   try {
-    var targetElement = this.document_.getElementById(predictPanelId);
+    var targetElement = document.getElementById(predictPanelId);
     if (!targetElement || 'div' !== targetElement.tagName.toLowerCase()) {
       throw new Error(
         'Unable to render PredictPanel into element "' + targetElement + '".'
@@ -71,7 +41,7 @@ PredictPanelApi.prototype.init = function(predictPanelId, data) {
   }
 };
 
-PredictPanelApi.prototype.renderPanel = function(targetElement, data) {
+PredictPanelApi.renderPanel = function(targetElement, data) {
   data = {
     selectedTrainer: 'knnClassify',
     trainedModel: {},
@@ -139,5 +109,17 @@ PredictPanelApi.prototype.renderPanel = function(targetElement, data) {
   const predictButton = document.createElement('button');
   predictButton.textContent = 'Predict';
 
+  predictButton.addEventListener('click', this.onPredictClick.bind(this));
+
   targetElement.appendChild(predictButton);
 };
+
+PredictPanelApi.setOnPredictCallback = function(callback) {
+  this.predictCallback = callback;
+};
+
+PredictPanelApi.onPredictClick = function() {
+  this.predictCallback();
+};
+
+export default PredictPanelApi;

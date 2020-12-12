@@ -2255,13 +2255,9 @@ applabCommands.drawChartFromRecords = function(opts) {
 };
 
 applabCommands.initPredictPanel = function(opts) {
-  var predictPanelApi = new PredictPanelApi();
-
   var onSuccess = function() {
     stopLoadingSpinnerFor(opts.predictPanelId);
-    predictPanelApi.warnings.forEach(function(warning) {
-      outputWarning(warning.message);
-    });
+
     if (typeof opts.callback === 'function') {
       opts.callback.call(null);
     }
@@ -2273,7 +2269,11 @@ applabCommands.initPredictPanel = function(opts) {
   };
 
   startLoadingSpinnerFor(opts.predictPanelId);
-  predictPanelApi.init(opts.predictPanelId, opts.data).then(onSuccess, onError);
+  PredictPanelApi.init(opts.predictPanelId, opts.data).then(onSuccess, onError);
+};
+
+applabCommands.onPredict = function(opts) {
+  PredictPanelApi.setOnPredictCallback(opts.callback);
 };
 
 /**
