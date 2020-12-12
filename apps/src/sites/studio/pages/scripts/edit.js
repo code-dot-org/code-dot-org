@@ -34,8 +34,6 @@ export default function initPage(scriptEditorData) {
     <Provider store={store}>
       <ScriptEditor
         id={scriptData.id}
-        beta={scriptEditorData.beta}
-        betaWarning={scriptEditorData.betaWarning}
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
         initialHidden={valueOr(scriptData.hidden, true)}
@@ -54,10 +52,7 @@ export default function initPage(scriptEditorData) {
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
         initialTeacherResources={teacherResources}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
-        initialLessonLevelData={
-          lessonLevelData ||
-          "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n"
-        }
+        initialLessonLevelData={lessonLevelData}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialHasLessonPlan={scriptData.has_lesson_plan}
         initialCurriculumPath={scriptData.curriculum_path || ''}
@@ -79,6 +74,8 @@ export default function initPage(scriptEditorData) {
          * complements, but currently (August 2020) they are not, so they are separate fields for now. */
         initialIsCourse={scriptData.is_course}
         hasCourse={scriptEditorData.has_course}
+        initialShowCalendar={scriptData.showCalendar}
+        isMigrated={scriptData.is_migrated}
       />
     </Provider>,
     document.querySelector('.edit_container')

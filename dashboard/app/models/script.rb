@@ -153,6 +153,7 @@ class Script < ApplicationRecord
     is_course
     background
     show_calendar
+    is_migrated
   )
 
   def self.twenty_hour_script
@@ -1298,8 +1299,10 @@ class Script < ApplicationRecord
       tts: tts?,
       is_course: is_course?,
       background: background,
+      is_migrated: is_migrated?,
       updatedAt: updated_at,
-      scriptPath: script_path(self)
+      scriptPath: script_path(self),
+      showCalendar: show_calendar
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1318,6 +1321,7 @@ class Script < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
+    summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary
   end
 
@@ -1486,7 +1490,9 @@ class Script < ApplicationRecord
       :is_stable,
       :project_sharing,
       :tts,
-      :is_course
+      :is_course,
+      :show_calendar,
+      :is_migrated
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the script edit UI through its own code path
@@ -1702,7 +1708,8 @@ class Script < ApplicationRecord
     levels + sublevels
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
