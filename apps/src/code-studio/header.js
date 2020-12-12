@@ -75,8 +75,8 @@ header.build = function(
   signedIn,
   stageExtrasEnabled,
   scriptNameData,
-  hasAppOptions,
-  isLessonExtras
+  isLessonExtras,
+  hasAppOptions
 ) {
   const store = getStore();
   if (progressData) {
