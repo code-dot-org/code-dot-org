@@ -6,6 +6,7 @@ import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
 import BorderProperties from './BorderProperties';
 import themeValues from '../themeValues';
 import * as elementUtils from './elementUtils';
@@ -32,10 +33,10 @@ class PredictPanelProperties extends React.Component {
           isIdRow
         />
         <PropertyRow
-          desc={'model id'}
-          initialValue={elementUtils.getId(element)}
-          handleChange={this.props.handleChange.bind(this, 'model id')}
-          isMLRow
+          desc={'model ID'}
+          initialValue={'abc123'}
+          handleChange={this.props.handleChange.bind(this, 'modelId')}
+          /*isMLRow*/
         />
         <PropertyRow
           desc={'width (px)'}
@@ -112,8 +113,41 @@ class PredictPanelEvents extends React.Component {
     handleChange: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired
   };
+
+  getInitPredictCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
+      'initPredictPanel("' +
+      id +
+      '", function() {\n\tconsole.log("Predict panel ${id} loaded.");\n});';
+
+    return code;
+  }
+
+  getOnPredictCode() {
+    const id = elementUtils.getId(this.props.element);
+    const code =
+      'onPredict("' +
+      id +
+      '", function() {\n\tconsole.log("Predict for ${id} occurred.");\n});';
+
+    return code;
+  }
+
+  insertInitPredict = () => {
+    this.props.onInsertEvent(this.getInitPredictCode());
+  };
+
+  insertOnPredict = () => {
+    this.props.onInsertEvent(this.getOnPredictCode());
+  };
+
   render() {
     const element = this.props.element;
+    const initPredictName = 'initPredictPanel';
+    const initPredictDesc = 'Initialize.';
+    const onPredictName = 'onPrediction';
+    const onPredictDesc = 'Handle a prediction.';
 
     return (
       <div id="eventRowContainer">
@@ -124,6 +158,16 @@ class PredictPanelEvents extends React.Component {
           isIdRow={true}
         />
         <EventHeaderRow />
+        <EventRow
+          name={initPredictName}
+          desc={initPredictDesc}
+          handleInsert={this.insertInitPredict}
+        />
+        <EventRow
+          name={onPredictName}
+          desc={onPredictDesc}
+          handleInsert={this.insertOnPredict}
+        />
       </div>
     );
   }
@@ -136,6 +180,7 @@ export default {
 
   create: function() {
     const element = document.createElement('div');
+
     const predictButton = document.createElement('button');
     predictButton.textContent = 'Predict';
     element.appendChild(predictButton);
@@ -155,9 +200,9 @@ export default {
 
     element.style.width = '75px';
     element.style.height = '50px';
-    element.style.display = 'flex';
-    element.style.alignItems = 'center';
-    element.style.justifyContent = 'center';
+    //element.style.display = 'flex';
+    //element.style.alignItems = 'center';
+    //element.style.justifyContent = 'center';
     return element;
   },
   onDeserialize: function(element, updateProperty) {

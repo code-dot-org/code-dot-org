@@ -603,6 +603,8 @@ designMode.readProperty = function(element, name) {
       return element.getAttribute('placeholder');
     case 'readonly':
       return element.getAttribute('contenteditable') !== 'true';
+    case 'modelId':
+      return element.getAtribute('modelId');
     default:
       // The property was not found in the list of properties which apply to all elements.
       // Check to see if the element-specific handler knows how to read the property,

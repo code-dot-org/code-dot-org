@@ -20,7 +20,6 @@ const CHANGE_INTERFACE_MODE = 'applab/CHANGE_INTERFACE_MODE';
 const ADD_REDIRECT_NOTICE = 'applab/ADD_REDIRECT_NOTICE';
 const DISMISS_REDIRECT_NOTICE = 'applab/DISMISS_REDIRECT_NOTICE';
 const SET_LEVEL_DATA = 'applab/SET_LEVEL_DATA';
-const SET_ML_MODEL_ID = 'applab/SET_ML_MODEL_ID';
 
 /**
  * Change the interface mode between Design Mode and Code Mode
@@ -72,23 +71,11 @@ function setLevelData(data) {
   };
 }
 
-/**
- * Store the id for the currently selected machine learning model.
- * @returns {{type: string}}
- */
-function setMLModelId(modelId) {
-  return {
-    type: SET_ML_MODEL_ID,
-    modelId
-  };
-}
-
 export const actions = {
   changeInterfaceMode,
   addRedirectNotice,
   dismissRedirectNotice,
-  setLevelData,
-  setMLModelId
+  setLevelData
 };
 
 // Reducers
@@ -142,20 +129,6 @@ function level(state, action) {
   }
 }
 
-function mlModelDetails(state, action) {
-  state = state || {};
-
-  switch (action.type) {
-    case SET_ML_MODEL_ID:
-      return {
-        ...state,
-        modelId: action.modelId
-      };
-    default:
-      return state;
-  }
-}
-
 export const reducers = {
   ...jsDebuggerReducers,
   maker,
@@ -163,6 +136,5 @@ export const reducers = {
   interfaceMode,
   redirectDisplay,
   screens,
-  level,
-  mlModelDetails
+  level
 };

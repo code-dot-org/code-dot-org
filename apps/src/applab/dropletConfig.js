@@ -680,6 +680,23 @@ export var blocks = [
   },
 
   {
+    func: 'initPredictPanel',
+    parent: api,
+    category: 'ML',
+    paletteParams: ['table', 'record', 'callback'],
+    params: ['"mytable"', '{id:1}', 'function(success) {\n  \n}'],
+    allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'onPredict',
+    parent: api,
+    category: 'ML',
+    paletteParams: ['callback'],
+    params: ['"mytable"', '{id:1}', 'function(success) {\n  \n}'],
+    allowFunctionDrop: {2: true, 3: true}
+  },
+
+  {
     func: 'moveForward',
     parent: api,
     category: 'Turtle',

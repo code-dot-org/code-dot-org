@@ -534,3 +534,17 @@ export function drawChartFromRecords(
     callback: callback
   });
 }
+
+export function initPredictPanel(predictPanelId, callback) {
+  return Applab.executeCmd(null, 'initPredictPanel', {
+    predictPanelId: predictPanelId,
+    callback: callback
+  });
+}
+
+export function onPredict(predictPanelId, callback) {
+  return Applab.executeCmd(null, 'onPredict', {
+    predictPanelId: predictPanelId,
+    callback: callback
+  });
+}

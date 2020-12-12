@@ -1,4 +1,5 @@
 import ChartApi from './ChartApi';
+import PredictPanelApi from './PredictPanelApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
@@ -2251,6 +2252,28 @@ applabCommands.drawChartFromRecords = function(opts) {
       opts.options
     )
     .then(onSuccess, onError);
+};
+
+applabCommands.initPredictPanel = function(opts) {
+  var predictPanelApi = new PredictPanelApi();
+
+  var onSuccess = function() {
+    stopLoadingSpinnerFor(opts.predictPanelId);
+    predictPanelApi.warnings.forEach(function(warning) {
+      outputWarning(warning.message);
+    });
+    if (typeof opts.callback === 'function') {
+      opts.callback.call(null);
+    }
+  };
+
+  var onError = function(error) {
+    stopLoadingSpinnerFor(opts.predictPanelId);
+    outputError(error.message);
+  };
+
+  startLoadingSpinnerFor(opts.predictPanelId);
+  predictPanelApi.init(opts.predictPanelId, opts.data).then(onSuccess, onError);
 };
 
 /**
