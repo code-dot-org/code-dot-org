@@ -13,7 +13,7 @@ uz:
         Artist2: Rassom 2
         Unplug5: Funksiyalar
         Farmer: Fermer
-        Unplug6: Shart buyruqlari
+        Unplug6: Shartli bayonotlar
         Artist3: Rassom 3
         Unplug7: Musiqa yozish
         Farmer2: Fermer 2
@@ -30,11 +30,15 @@ uz:
         Jigsaw: Topishmoq
         MazeStep: Labirint qadam holati
         Wordsearch: So'z izlash
-        Webapp: Ilova labaratoriyasi
+        Webapp: Ilovalar laboratoriyasi
         ArtistEC: Rassom
         TextMatch: So'z Mos
-        Applab: Ilova labaratoriyasi
+        StudioEC: Play Lab - O‘yin laboratoriyasi
+        Applab: Ilovalar laboratoriyasi
         NetSim: Internet simulyator
+        Custom: Rassom
+        CustomStudio: Play Lab - O‘yin laboratoriyasi
+        Gamelab: O‘yin laboratoriyasi
     trophy:
       name:
         Bronze: Bronza
@@ -105,6 +109,16 @@ uz:
           doim har xil rang ko''rsatish uchun "Tasodifiy rang" tanlovini belgilang.
           Maslahat: "Burilish" blokidagi raqam ustiga bosib, qanchalik ko''p burilishingiz
           kerakligini aniqlashingiz mumkin.'
+        turtle_1_9: Aylana chizish uchun savol belgilarini qaysi raqam bilan almashtirishni
+          aniqlay olasizmi?
+        maze_karel_1_1: Salom, men fermerman. Fermer xo‘jaligimdagi dalani tekislash
+          uchun yordamingizga muhtojman va shundan so‘ng dala ekin ekishga tayyor
+          bo‘ladi!"  Loy yig‘ilgan uyumga o‘ting va uni olib tashlash uchun `remove`
+          bo‘lagidan foydalaning.
+        maze_karel_1_2: Keyin meni teshikka olib boring va `fill` bo‘lagidan foydalanib,
+          IKKITA belkurak bilan teshikni to‘ldiring.
+        maze_karel_1_3: Meni loy uyumiga oboring va necha marta belkurakda loyni olib
+          tashlashim kerakligini menga ayting, iloji boricha kamroq bloklardan foydalanib.
         turtle_ec_1_2: 'Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o''zing
           yoqtirgan rangni tanla.'
     video:
@@ -120,19 +134,29 @@ uz:
         Unplug3: Katakchali varaqda dasturlash
         Unplug4: Algoritmlar
         Unplug5: Funksiyalar
-        Unplug6: Shart buyruqlari
+        Unplug6: Shartli bayonotlar
+        Unplug7: Qo'shiq yozish
         Unplug8: Abstraksiya
         Unplug9: Estafetali dasturlash
+        Unplug10: Internet
         Unplug11: Yakun
+        C1_happy_maps_unplugged: Xursand Xaritalar
+        C1_building_foundation: Poydevor qurish
         C2_graph_paper: Katakchali varaqda dasturlash
-        C2_conditionals_with_cards: Shart buyruqlari
+        C2_conditionals_with_cards: Shartli bayonotlar
         C2_relay_programming: Estafetali dasturlash
         C3_bounce: Sakrash
         C3_computational_thinking: Dasturiy fikrlash
+        C3_internet: Internet
+        C3_crowdsourcing: Kraudsorsing
         C4_loops_zombie: Sikllar
         C4_function_parameters: Funksiyalar (parameterlari bilan)
-        C4_conditionals: Shart buyruqlari
+        C4_conditionals: Shartli bayonotlar
         csp_applab_functions_parameters: Funksiyalar (parameterlari bilan)
         csp_applab_loops: Sikllar
+        csp_cs_is_changing_everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
         CSF_loops_AB: Sikllar
+        c_and_c_great_to_create: Yaratish va Adolatli bo‘lish yaxshi.
+        c_and_c_digital_sharing: Raqamli Ulashish
         csd_applab_parameters: Funksiyalar (parameterlari bilan)
+        csf_private_and_personal_information: Maxfiy va Shaxsiy ma'lumotlar
