@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:11:47.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "Evaluate if the following function is a good candidate to be placed in a library. Why or why not?\r\n\r\n![](https://images.code.org/4bc40bd7f5dd2218c5819e7e0fe5ca05-image-1559055528331.PNG)",
+    "title": "Updating Variables",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18145,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Check Your Understanding",
+    "encrypted_solution": "RE/5jQZ8Q8Ubu4bcLaIPs4+CbaMbh16S1YhSG7Ihj1sMV0/7gkELX7qgUSWc\n0Vq/XevJg5HWoiydbHurwyLI+wRcNI39QDVTF9b5XbZrynuG617T1PwD9zs0\nzaf6OILdMg3N4pFm32HodKL9PFe4VxbLKS1YO3UncRS9Xi7Fk6dFU9TAR2lu\nGOmP5Gt/Ngluh0KIKkTMk6t5A3cGKWzIbBfKcn8/UfnTxPsA0HiVrbwEGzGq\nCztNM13usWYyuPPTMQz6odfDeV6R80KctmOnyN1PdGFFca9LFs4ibcA+THY=\n",
+    "optional": "false",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-19 20:12:35 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-19 20:14:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-05-28 14:56:56 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-05-28 14:57:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-05-28 14:58:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>
