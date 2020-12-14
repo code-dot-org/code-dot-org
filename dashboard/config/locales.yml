@@ -195,6 +195,7 @@
 "in-TL":
   english: "Crowdin In-Context"
   native: "Crowdin In-Context"
+  debug: true
 
 "is": "is-IS"
 "is-IS":
