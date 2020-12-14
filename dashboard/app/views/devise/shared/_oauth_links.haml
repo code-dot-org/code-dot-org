@@ -27,8 +27,8 @@
 :javascript
 
   $('.oauth_sign_in').click(dashboard.clientState.reset);
-  // If the makerBridge is available, we are in the Maker App, which has it's
+  // If the makerBridge is available, we are in the Maker App, which has its
   // own Google login button. Hiding this google-oauth button to avoid confusion.
   if (!!window.MakerBridge) {
-    document.querySelector('.with-google_oauth2').style.display = 'none';
+    $('.with-google_oauth2').hide();
   }
