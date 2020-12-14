@@ -8,7 +8,7 @@ class Api::V1::MlModelsController < ApplicationController
   # Save a trained ML model to S3
   def save
     model_id = generate_id
-    upload_to_s3(model_id, params["trainedModel"].to_json)
+    upload_to_s3(model_id, params["ml_model"].to_json)
     render json: "hooray!"
   end
 

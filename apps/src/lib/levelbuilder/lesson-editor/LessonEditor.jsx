@@ -16,7 +16,11 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
-import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {
+  getSerializedActivities,
+  mapActivityDataForEditor,
+  initActivities
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
@@ -48,6 +52,7 @@ class LessonEditor extends Component {
     initialDisplayName: PropTypes.string.isRequired,
     initialOverview: PropTypes.string,
     initialStudentOverview: PropTypes.string,
+    initialAssessmentOpportunities: PropTypes.string,
     initialUnplugged: PropTypes.bool,
     initialLockable: PropTypes.bool,
     initialAssessment: PropTypes.bool,
@@ -59,7 +64,10 @@ class LessonEditor extends Component {
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
-    courseVersionId: PropTypes.number
+    courseVersionId: PropTypes.number,
+
+    // from redux
+    initActivities: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -72,6 +80,7 @@ class LessonEditor extends Component {
       displayName: this.props.initialDisplayName,
       overview: this.props.initialOverview,
       studentOverview: this.props.initialStudentOverview,
+      assessmentOpportunities: this.props.initialAssessmentOpportunities,
       unplugged: this.props.initialUnplugged,
       lockable: this.props.initialLockable,
       creativeCommonsLicense: this.props.initialCreativeCommonsLicense,
@@ -101,6 +110,7 @@ class LessonEditor extends Component {
         unplugged: this.state.unplugged,
         overview: this.state.overview,
         studentOverview: this.state.studentOverview,
+        assessmentOpportunities: this.state.assessmentOpportunities,
         purpose: this.state.purpose,
         preparation: this.state.preparation,
         objectives: JSON.stringify(this.state.objectives),
@@ -110,11 +120,13 @@ class LessonEditor extends Component {
       })
     })
       .done(data => {
-        console.log(data);
         if (shouldCloseAfterSave) {
           navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
         } else {
-          this.setState({lastSaved: data.updated_at, isSaving: false});
+          const activities = mapActivityDataForEditor(data.activities);
+
+          this.props.initActivities(activities);
+          this.setState({lastSaved: data.updatedAt, isSaving: false});
         }
       })
       .fail(error => {
@@ -135,6 +147,7 @@ class LessonEditor extends Component {
       displayName,
       overview,
       studentOverview,
+      assessmentOpportunities,
       unplugged,
       lockable,
       creativeCommonsLicense,
@@ -284,11 +297,34 @@ class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
+          title="Assessment Opportunities"
+          collapsed={true}
+          fullWidth={true}
+        >
+          <TextareaWithMarkdownPreview
+            markdown={assessmentOpportunities}
+            label={'Assessment Opportunities'}
+            inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({assessmentOpportunities: e.target.value})
+            }
+          />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection
           title="Resources"
           collapsed={true}
           fullWidth={true}
         >
-          <ResourcesEditor courseVersionId={this.props.courseVersionId} />
+          {this.props.courseVersionId ? (
+            <ResourcesEditor courseVersionId={this.props.courseVersionId} />
+          ) : (
+            <h4>
+              A unit must be in a course version, i.e. a unit must belong to a
+              course or have 'Is a Standalone Course' checked, in order to add
+              resources.
+            </h4>
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
@@ -319,7 +355,12 @@ class LessonEditor extends Component {
 
 export const UnconnectedLessonEditor = LessonEditor;
 
-export default connect(state => ({
-  activities: state.activities,
-  resources: state.resources
-}))(LessonEditor);
+export default connect(
+  state => ({
+    activities: state.activities,
+    resources: state.resources
+  }),
+  {
+    initActivities
+  }
+)(LessonEditor);

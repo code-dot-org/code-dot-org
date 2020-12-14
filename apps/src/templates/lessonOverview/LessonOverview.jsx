@@ -126,12 +126,24 @@ class LessonOverview extends Component {
 
         <div style={styles.frontPage}>
           <div style={styles.left}>
-            <h2>{i18n.overview()}</h2>
-            <SafeMarkdown markdown={lesson.overview} />
-
-            <h2>{i18n.purpose()}</h2>
-            <SafeMarkdown markdown={lesson.purpose} />
-
+            {lesson.overview && (
+              <div>
+                <h2>{i18n.overview()}</h2>
+                <SafeMarkdown markdown={lesson.overview} />
+              </div>
+            )}
+            {lesson.purpose && (
+              <div>
+                <h2>{i18n.purpose()}</h2>
+                <SafeMarkdown markdown={lesson.purpose} />
+              </div>
+            )}
+            {lesson.assessmentOpportunities && (
+              <div>
+                <h2>{i18n.assessmentOpportunities()}</h2>
+                <SafeMarkdown markdown={lesson.assessmentOpportunities} />
+              </div>
+            )}
             <h2>{i18n.agenda()}</h2>
             <LessonAgenda activities={this.props.activities} />
           </div>
@@ -149,8 +161,12 @@ class LessonOverview extends Component {
                 </ul>
               </div>
             )}
-            <h2>{i18n.preparation()}</h2>
-            <SafeMarkdown markdown={lesson.preparation} />
+            {lesson.preparation && (
+              <div>
+                <h2>{i18n.preparation()}</h2>
+                <SafeMarkdown markdown={lesson.preparation} />
+              </div>
+            )}
             {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
                 <h2>{i18n.links()}</h2>

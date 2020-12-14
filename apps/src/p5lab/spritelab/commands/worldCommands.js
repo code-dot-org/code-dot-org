@@ -1,7 +1,7 @@
 import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../textConsoleModule';
-import {addPrompt} from '../spritelabInputModule';
+import {addTextPrompt, addMultipleChoicePrompt} from '../spritelabInputModule';
 
 export const commands = {
   comment(text) {
@@ -49,7 +49,14 @@ export const commands = {
 
   setPrompt(promptText, variableName, setterCallback) {
     coreLibrary.registerPrompt(promptText, variableName, setterCallback);
-    getStore().dispatch(addPrompt(promptText, variableName));
+    getStore().dispatch(addTextPrompt(promptText, variableName));
+  },
+
+  setPromptWithChoices(promptText, variableName, choices, setterCallback) {
+    coreLibrary.registerPrompt(promptText, variableName, setterCallback);
+    getStore().dispatch(
+      addMultipleChoicePrompt(promptText, variableName, choices)
+    );
   },
 
   showTitleScreen(title, subtitle) {
