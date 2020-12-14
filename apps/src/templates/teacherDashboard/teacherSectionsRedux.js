@@ -690,7 +690,7 @@ export default function teacherSections(state = initialState, action) {
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
     if (Object.keys(action.sections).length === 1) {
-      selectedSectionId = action.sections[0].id.toString();
+      selectedSectionId = action.sections[0].id;
     }
 
     sections.forEach(section => {
@@ -727,10 +727,7 @@ export default function teacherSections(state = initialState, action) {
 
   if (action.type === SELECT_SECTION) {
     let sectionId = action.sectionId;
-    if (
-      sectionId !== NO_SECTION &&
-      !state.sectionIds.includes(parseInt(sectionId, 10))
-    ) {
+    if (sectionId !== NO_SECTION && !state.sectionIds.includes(sectionId)) {
       sectionId = NO_SECTION;
     }
     return {

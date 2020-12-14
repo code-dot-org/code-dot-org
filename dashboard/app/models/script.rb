@@ -24,7 +24,6 @@
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
-require 'services/script_seed'
 require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
@@ -1132,14 +1131,18 @@ class Script < ApplicationRecord
 
         # Also save in JSON format for "new seeding". This has not been launched yet, but as part of
         # pre-launch testing, we'll start generating these files in addition to the old .script files.
-        script_json_filepath = "config/scripts_json/#{script_params[:name]}.script_json"
-        File.write(script_json_filepath, ScriptSeed.serialize_seeding_json(script))
+        script.write_script_json
       end
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
       return false
     end
+  end
+
+  def write_script_json
+    script_json_filepath = "config/scripts_json/#{name}.script_json"
+    File.write(script_json_filepath, Services::ScriptSeed.serialize_seeding_json(self))
   end
 
   # @param types [Array<string>]
@@ -1723,11 +1726,11 @@ class Script < ApplicationRecord
 
   # Wrapper for convenience
   def serialize_seeding_json
-    ScriptSeed.serialize_seeding_json(self)
+    Services::ScriptSeed.serialize_seeding_json(self)
   end
 
   # Wrapper for convenience
   def self.seed_from_json_file(file_or_path)
-    ScriptSeed.seed_from_json_file(file_or_path)
+    Services::ScriptSeed.seed_from_json_file(file_or_path)
   end
 end

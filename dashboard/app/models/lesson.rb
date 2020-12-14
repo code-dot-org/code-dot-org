@@ -362,6 +362,21 @@ class Lesson < ApplicationRecord
     }
   end
 
+  # Returns a hash representing i18n strings in scripts.en.yml which may need
+  # to be updated after this object was updated. Currently, this only updates
+  # the lesson name.
+  def i18n_hash
+    {
+      script.name => {
+        'lessons' => {
+          key => {
+            'name' => name
+          }
+        }
+      }
+    }
+  end
+
   # For a given set of students, determine when the given lesson is locked for
   # each student.
   # The design of a lockable lesson is that there is (optionally) some number of
