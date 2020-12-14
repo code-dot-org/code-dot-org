@@ -446,6 +446,23 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed deletes objectives' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script.lessons.first.objectives.first.destroy!
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['Objective'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Script.transaction do
