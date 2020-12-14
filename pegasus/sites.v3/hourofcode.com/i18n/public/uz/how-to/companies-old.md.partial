@@ -33,7 +33,7 @@ Xodimlarni rag‘batlantirish va xodimlaringizni sinf xonalari bilan bog‘lash 
 - [Hour of Code]({{ urls/promote }}) tadbiringizni targ‘ib qiling va boshqalarni mezbon bo‘lishga undang.
 - Kompaniyangiz dasturiy ta'minot muhandislarini bir soatlik kod soatini boshqarishda yordam berish va o‘quvchilarni kompyuter fanlarini o‘rganishga ilhomlantirish uchun mahalliy sinfga tashrif buyurishga chorlang. Ular sinf bilan bog‘lanish uchun [ro‘yxatdan o‘tishi]({{ urls/volunteer_engineer }}) mumkin.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Ushbu video-qo'llanmani tomosha qiling <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
 ## 3. Mahg‘ulotni tanlang
 Biz har xil yoshdagi ishtirokchilar uchun turli xil [qiziqarli, bir soatlik mashg‘ulotlarni ]({{ urls/learn }}) o‘tkazamiz.  [Ularni sinab ko‘ring!]({{ urls/learn }})
@@ -56,7 +56,7 @@ The best Hour of Code experience includes Internet-connected computers. Kod soat
 ## 5.  Dasturlash soatingizni ilhomlantiruvchi video bilan boshlang
 Ishtirokchilarni ilhomlantirish va kompyuter fanlari hayotimizning har bir qismiga qanday ta'sir qilishini muhokama qilish orqali "Kod soati"ni boshlang. Sizni kompyuter fanlari bilan shug‘ullanishga undagan narsa va kompaniyangizdagi roli haqida ko‘proq ma'lumot bering.
 
-**Show an inspirational video:**
+**Ilhomlantiruvchi videoni ko‘rsating:**
 
 - Bill Geyts, Mark Sukerberg va NBA yulduzi Kris Bosh ishtirok etgan Code.org-ning asl videofilmlari bor ( [1 daqiqalik](https://www.youtube.com/watch?v=qYZF6oIZtfc) , [5 daqiqalik](https://www.youtube.com/watch?v=nKIu9yen5nc) va [9 daqiqalik](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyalari).
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
@@ -72,9 +72,9 @@ Ishtirokchilarni ilhomlantirish va kompyuter fanlari hayotimizning har bir qismi
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Kod yozing!
-**Direct participants to the activity**
+**Ishtirokchilarni mashg'ulotlarga yo'naltiring**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
+- Mashg'ulot havolasini doskada yozing. [ Tanlangan faoliyatingiz to'g'risidagi ma'lumot ]({{ urls/learn }}) da ishtirokchilar soni ostida ko'rsatilgan havolani toping.
 - Yoshi kichik o‘quvchilar uchun mashg‘ulotlar sahifasini oldindan yuklang yoki xatcho‘p sifatida saqlang.
 
 **Ishtirokchilar qiyinchiliklarga duch kelganda, quyidagi javob berish maqsadga muvofiq:**
@@ -90,7 +90,7 @@ Ishtirokchilarni ilhomlantirish va kompyuter fanlari hayotimizning har bir qismi
 ## 7) Nishonlang
 
 - Ishtirokchilar va talabalar uchun \[Sertifikatlarni chop etish\] ({{ urls/certificates }}).
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
+- ["Dasturlash soatini o'tdim!"]({{ promote/resources_stickers }}) stikerlarini chop eting.
 - \[Xodimlaringiz uchun maxsus futbolkalarga buyurtma bering\] (http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
