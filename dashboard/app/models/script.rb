@@ -82,7 +82,8 @@ class Script < ApplicationRecord
         {
           lessons: [
             {lesson_activities: :activity_sections},
-            :resources
+            :resources,
+            :objectives
           ]
         },
         :script_levels,
