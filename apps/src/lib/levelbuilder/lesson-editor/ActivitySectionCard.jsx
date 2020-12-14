@@ -294,11 +294,17 @@ class ActivitySectionCard extends Component {
   };
 
   handleMoveActivitySection = direction => {
-    if (
-      (this.props.activitySection.position !== 1 && direction === 'up') ||
-      (this.props.activitySection.position !==
+    const firstActivitySectionInLesson =
+      this.props.activitySection.position === 1 &&
+      this.props.activityPosition === 1;
+    const lastActivitySectionInLesson =
+      this.props.activitySection.position ===
         this.props.activitySectionsCount &&
-        direction === 'down')
+      this.props.activityPosition === this.props.activitiesCount;
+
+    if (
+      (!firstActivitySectionInLesson && direction === 'up') ||
+      (!lastActivitySectionInLesson && direction === 'down')
     ) {
       this.props.moveActivitySection(
         this.props.activityPosition,

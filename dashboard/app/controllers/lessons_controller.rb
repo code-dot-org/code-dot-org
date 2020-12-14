@@ -39,7 +39,18 @@ class LessonsController < ApplicationController
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
     end
 
-    render json: @lesson
+    if Rails.application.config.levelbuilder_mode
+      @lesson.script.reload
+
+      # This endpoint will only be hit from the lesson edit page, which is only
+      # available to lessons in migrated scripts, which only need to be
+      # serialized using the new json format.
+      @lesson.script.write_script_json
+
+      Script.merge_and_write_i18n(@lesson.i18n_hash, @lesson.script.name)
+    end
+
+    render json: @lesson.summarize_for_lesson_edit
   rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
     render(status: :not_acceptable, plain: e.message)
   end

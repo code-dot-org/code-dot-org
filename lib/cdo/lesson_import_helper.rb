@@ -158,6 +158,7 @@ module LessonImportHelper
     final_position = 1
     sections.each do |section|
       section.position = final_position
+      section.save!
       final_position += 1
     end
 
@@ -185,7 +186,8 @@ module LessonImportHelper
   end
 
   def self.create_lesson_activities(activities_data, levels, lesson)
-    activities = activities_data.map.with_index(1) do |a, i|
+    position = 1
+    activities = activities_data.map do |a|
       if a['name'] == 'Lesson Modifications' && convert_virtual_lesson_modification_activity_to_announcement(a, lesson)
         nil
       else
@@ -194,7 +196,8 @@ module LessonImportHelper
         lesson_activity.duration = a['duration'].split[0].to_i
         lesson_activity.lesson_id = lesson.id
         lesson_activity.key = SecureRandom.uuid
-        lesson_activity.position = i
+        lesson_activity.position = position
+        position += 1
         lesson_activity.save!
         lesson_activity.reload
         lesson_activity.activity_sections = create_activity_sections(a['content'], lesson_activity.id, levels)

@@ -1,0 +1,19 @@
+name 'csp-9-exam1-dog-scatter-1_2021'
+editor_experiment ''
+right 'Dog breeds with a higher maximum weight tend to have shorter maximum lifespans'
+wrong 'Dog breeds with a higher maximum weight tend to have longer maximum lifespans'
+wrong 'All dog breeds tend to have the same average lifespan'
+wrong 'Older dogs weigh more than younger dogs'
+
+
+markdown <<MARKDOWN
+The next two questions refer to the following chart.
+
+The chart below has a single point for every breed of dog. Each point indicates the maximum weight of that breed and the maximum number of years that breed of dog lives to.
+
+Which of the following conclusions is BEST supported by the scatter plot?
+
+![](https://images.code.org/484d16cbff8fbc481e71113a83ec0eb2-image-1583551350105.05.37 PM.png)
+
+
+MARKDOWN

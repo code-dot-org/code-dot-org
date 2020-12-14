@@ -54,7 +54,7 @@ function showCourseOverview() {
       store.dispatch(setVerified());
     }
 
-    const sectionId = clientState.queryParams('section_id');
+    const sectionId = parseInt(clientState.queryParams('section_id'));
     if (sectionId) {
       store.dispatch(selectSection(sectionId));
     }

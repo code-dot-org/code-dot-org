@@ -1,0 +1,24 @@
+name 'U1 L02 CYU MC_2021'
+editor_experiment ''
+wrong '1'
+right 'The score is: 4’
+wrong '4'
+wrong 'The score is: score'
+
+markdown <<MARKDOWN
+## Multiple Choice: What's the value?
+
+
+What will the value of `score` be at the end of the program?
+
+**Note:** `<-` is used to represent a left facing arrow
+
+	var score
+	score <- 3
+	score <- score + 1
+	score <- "The score is: " + score
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+We recommend that you use this level to assess your classroom's overall understanding of concepts taught today. Answering correctly requires understanding strings and numbers, expressions, and variable assignment. If many of your students answer incorrectly this is a good sign you may need to review core concepts as part of tomorrow's lesson.
+MARKDOWN
