@@ -2520,3 +2520,11 @@ pl-PL:
     nauczania informatyki, lekcji dotyczcych równości oraz szkoleń dla nauczycieli.'
   footer_powered_by_aws: Zasilany przez Amazon Web Services
   footer_built_on_github: Oparty na GitHub firmy Microsoft
+  codebytes_skinny_banner_title: Dołącz do nas 7-11 grudnia do naszych mini-lekcjach
+    na żywo z CodeBytes!
+  codebytes_skinny_banner_description: 'Dołącz do nas każdego dnia Tygodnia Edukacji
+    Informatycznej z CodeBytes, na 20-minutowe interaktywne lekcje informatyki. Transmisja
+    na żywo dwa razy dziennie, CodeBytes to dla uczniów świetny sposób na udział w
+    wirtualnej #HourOfCode!'
+  codebytes_skinny_banner_english_only: Tylko w języku angielskim
+  codebytes_skinny_banner_learn: Dowiedz się więcej tutaj [code.org/codebytes](%{code_bytes_url}).
