@@ -92,7 +92,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
-        this.boardType_ = detectBoardTypeFromPort();
+        this.boardType_ = detectBoardTypeFromPort(this.port_);
         if (this.boardType_ === BOARD_TYPE.EXPRESS) {
           this.fiveBoard_.isExpressBoard = true;
         }
