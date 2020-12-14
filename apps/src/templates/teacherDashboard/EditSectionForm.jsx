@@ -101,7 +101,7 @@ class EditSectionForm extends Component {
     const {section, updateHiddenScript} = this.props;
 
     // Avoid incorrectly showing the hidden unit warning twice.
-    updateHiddenScript(section.id.toString(), section.scriptId, false);
+    updateHiddenScript(section.id, section.scriptId, false);
 
     this.setState({showHiddenUnitWarning: false});
     this.handleSave();

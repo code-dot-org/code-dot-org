@@ -115,9 +115,16 @@ class ScriptLevel < ApplicationRecord
         sl.levels = levels
       end
 
-      # Generate and store the seed_key, a unique identifier for this script level which should be stable across environments.
-      # We'll use this in our new, JSON-based seeding process.
-      seed_context = ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson])
+      # Generate and store the seed_key, a unique identifier for this script
+      # level which should be stable across environments. We'll use this in our
+      # new, JSON-based seeding process.
+      #
+      # Setting this seed_key also serves the purpose of preventing levels from
+      # being added to the same script twice via the seed process. If we decide
+      # to move away from seed_key, or if we start computing its value in a
+      # different way, we should consider adding a different check to ensure
+      # that levels within scripts are unique when seeding from .script files.
+      seed_context = Services::ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson], lesson_activities: [], activity_sections: [])
       seed_key_data = script_level.seeding_key(seed_context, false)
       script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
 
@@ -605,7 +612,8 @@ class ScriptLevel < ApplicationRecord
     anonymous? && user.try(:teacher?) && !viewed_user.nil? && user != viewed_user
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
@@ -623,8 +631,16 @@ class ScriptLevel < ApplicationRecord
     my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
     raise "No Lesson found for #{self.class}: #{my_key}, Lesson ID: #{stage_id}" unless my_lesson
     lesson_seeding_key = my_lesson.seeding_key(seed_context)
-
     my_key.merge!(lesson_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+
+    # Activity Section must be optional for now, so that we can still compute
+    # the seed key for legacy scripts. Currently, this is necessary because we
+    # output .script_json files for all legacy scripts, even though those aren't
+    # going to be used for seeding yet.
+    my_activity_section = seed_context.activity_sections.select {|s| s.id == activity_section_id}.first
+
+    my_key['activity_section.key'] = my_activity_section.key if my_activity_section
+
     my_key.stringify_keys
   end
 
