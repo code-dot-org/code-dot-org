@@ -20,8 +20,7 @@ module LessonImportHelper
   # @param [Lesson] lesson - Code Studio Lesson object to update.
   # @param [Hash] cb_lesson_data - Lesson and activity data to import.
   def self.update_lesson(lesson, cb_lesson_data = {})
-    # In the future, only levelbuilder should be added to this list.
-    raise unless [:development, :adhoc].include? rack_env
+    raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
     # course version id should always be present for CSF/CSD/CSP 2020 courses.
     course_version_id = lesson.script&.get_course_version&.id
