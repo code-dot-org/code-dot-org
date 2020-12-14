@@ -432,6 +432,8 @@ cs:
           lessons:
             Creating Functions:
               name: Vytvářející funkce
+            Introducing Design Mode:
+              name: Představení dizajnového módu
             While Loops:
               name: While (pokud) cykly
         algebraPD3:
@@ -844,6 +846,8 @@ cs:
               name: Jednoduché šifrování
         csp5-2017:
           lessons:
+            Introducing Design Mode:
+              name: Představení dizajnového módu
             While Loops:
               name: While (pokud) cykly
         CSDU3-Draft:
@@ -885,6 +889,10 @@ cs:
           lessons:
             Introduction to Text Compression:
               name: Úvod do komprese textu
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Dizajnový mód
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -2858,6 +2866,10 @@ cs:
               display_name: Podmínky
             csp_functions:
               display_name: Funkce
+        csp3-pilot-staging:
+          lessons:
+            'Project: Share Your App':
+              name: 'Projekt: Sdílej svou appku'
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2979,6 +2991,8 @@ cs:
             required:
               display_name: Přehled
           lessons:
+            'Project: Share Your App':
+              name: 'Projekt: Sdílej svou appku'
             Debugging:
               name: Ladění
         csl-vn:
