@@ -962,7 +962,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "require_captcha: returns object with boolean and recaptcha site key" do
+  # TODO: (dbeckmen) Update once captcha logic in user model is inserted
+  test "require_captcha: returns object with recaptcha site key" do
     user = create(:user)
     sign_in user
     get :require_captcha
