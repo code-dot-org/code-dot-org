@@ -12,7 +12,7 @@ const SET_HIDDEN_STAGES = 'hiddenStage/SET_HIDDEN_STAGES';
 const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
 const UPDATE_HIDDEN_SCRIPT = 'hiddenStage/UPDATE_HIDDEN_SCRIPT';
 
-export const STUDENT_SECTION_ID = -2;
+export const STUDENT_SECTION_ID = 'STUDENT';
 
 const HiddenState = Immutable.Record({
   hiddenStagesInitialized: false,
@@ -58,9 +58,7 @@ export default function reducer(state = new HiddenState(), action) {
     const {hiddenStagesPerSection, hideableStagesAllowed} = action;
 
     // Iterate through each section
-    const sectionIds = Object.keys(hiddenStagesPerSection).map(
-      sectionIdString => parseInt(sectionIdString)
-    );
+    const sectionIds = Object.keys(hiddenStagesPerSection);
     let nextState = state;
     sectionIds.forEach(sectionId => {
       // And iterate through each hidden stage within that section
@@ -93,7 +91,7 @@ export default function reducer(state = new HiddenState(), action) {
   if (action.type === UPDATE_HIDDEN_SCRIPT) {
     const {sectionId, scriptId, hidden} = action;
     const nextState = state.setIn(
-      ['scriptsBySection', sectionId, scriptId.toString()],
+      ['scriptsBySection', sectionId.toString(), scriptId.toString()],
       hidden
     );
     validateSectionIds(nextState);
@@ -141,6 +139,7 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
  */
 export function toggleHiddenStage(scriptName, sectionId, stageId, hidden) {
   return dispatch => {
+    // update local state
     dispatch(updateHiddenStage(sectionId, stageId, hidden));
     postToggleHidden(scriptName, sectionId, stageId, hidden);
   };
@@ -160,7 +159,7 @@ export function toggleHiddenScript(scriptName, sectionId, scriptId, hidden) {
  * Post to the server to toggle the hidden state of a stage or script. stageId
  * should be null if we're hiding the script rather than a particular stage
  * @param {string} scriptName
- * @param {number} sectionId
+ * @param {string} sectionId
  * @param {string} stageId
  * @param {boolean} hidden
  */
@@ -245,9 +244,8 @@ export function initializeHiddenScripts(data) {
       data = {[STUDENT_SECTION_ID]: data};
     }
 
-    Object.keys(data).forEach(sectionIdString => {
-      const sectionId = parseInt(sectionIdString);
-      const hiddenScriptIds = data[sectionIdString];
+    Object.keys(data).forEach(sectionId => {
+      const hiddenScriptIds = data[sectionId];
       hiddenScriptIds.forEach(scriptId => {
         dispatch(updateHiddenScript(sectionId, scriptId, true));
       });
@@ -286,5 +284,5 @@ function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
     sectionId = STUDENT_SECTION_ID;
   }
   const bySection = state.get(bySectionKey);
-  return !!bySection.getIn([sectionId, itemId.toString()]);
+  return !!bySection.getIn([sectionId.toString(), itemId.toString()]);
 }
