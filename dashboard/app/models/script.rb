@@ -68,9 +68,15 @@ class Script < ApplicationRecord
     )
   end
 
+  # The set of models which may be touched by ScriptSeed
   scope :with_seed_models, -> do
     includes(
       [
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        },
         :course_version,
         :lesson_groups,
         {
