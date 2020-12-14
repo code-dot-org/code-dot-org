@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai';
 import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
 import Sounds from '@cdo/apps/Sounds';
 import {
@@ -12,7 +12,7 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setIsRunning} from '@cdo/apps/redux/runState';
 import reducers from '@cdo/apps/p5lab/reducers';
-import {setExternalGlobals} from '../../util/testUtils';
+import {setExternalGlobals} from '../../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 
@@ -85,6 +85,56 @@ describe('SpriteLab', () => {
         getStore().dispatch(setIsRunning(true));
         instance.preview();
         expect(muteSpy).to.not.have.been.called;
+      });
+
+      it('includes backgrounds if there are none', () => {
+        instance.isSpritelab = true;
+        const initialAnimationList = {
+          orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
+          propsByKey: {
+            '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
+              name: 'bear',
+              categories: ['animals']
+            }
+          }
+        };
+        const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
+          initialAnimationList
+        );
+        expect(resultingAnimations.orderedKeys.length).to.be.above(1);
+      });
+
+      it('does not modify the list if there is an animation in the backgrounds category', () => {
+        instance.isSpritelab = true;
+        const initialAnimationList = {
+          orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
+          propsByKey: {
+            '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
+              name: 'bear',
+              categories: ['backgrounds']
+            }
+          }
+        };
+        const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
+          initialAnimationList
+        );
+        expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
+      });
+
+      it('does not modify the list if there is an animation that matches a background', () => {
+        instance.isSpritelab = true;
+        const initialAnimationList = {
+          orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
+          propsByKey: {
+            '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
+              name: 'cave'
+            }
+          }
+        };
+        const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
+          initialAnimationList
+        );
+        expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
       });
     });
   });
