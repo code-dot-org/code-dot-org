@@ -361,9 +361,9 @@ class ScriptsControllerTest < ActionController::TestCase
     expected_contents = ''
     script_name = 'test-script-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with("config/scripts/#{script_name}.script", expected_contents).once
+    File.stubs(:write).with("#{Rails.root}/config/scripts/#{script_name}.script", expected_contents).once
     File.stubs(:write).with do |filename, contents|
-      filename == "config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
+      filename == "#{Rails.root}/config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
     end
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
@@ -419,9 +419,9 @@ class ScriptsControllerTest < ActionController::TestCase
 
     script = create :script, hidden: true
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
     end
     post :update, params: {
       id: script.id,
@@ -862,7 +862,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   def stub_file_writes(script_name)
-    filenames_to_stub = ["config/scripts/#{script_name}.script", "config/scripts_json/#{script_name}.script_json"]
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]
     File.stubs(:write).with do |filename, _|
       filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
     end
