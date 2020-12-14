@@ -58,7 +58,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     },
     viewAs: viewAs,
     teacherSections: {
-      selectedSectionId: '11'
+      selectedSectionId: 11
     },
     hiddenStage: Immutable.fromJS({
       stagesBySection: {

@@ -32,7 +32,8 @@ const styles = {
   error: {
     fontSize: 14,
     color: color.red,
-    padding: 15
+    padding: 15,
+    maxWidth: 800
   }
 };
 
