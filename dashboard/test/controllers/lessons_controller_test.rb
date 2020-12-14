@@ -6,6 +6,9 @@ class LessonsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    # stub writes so that we dont actually make updates to filesystem
+    File.stubs(:write)
+
     @script = create :script, name: 'unit-1'
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
@@ -223,6 +226,31 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 1, activity.position
   end
 
+  test 'update writes lesson name to i18n and script_json in levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
+    end.once
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('.script_json') && data.include?(@update_params[:name])
+    end.once
+
+    sign_in @levelbuilder
+    put :update, params: @update_params
+  end
+
+  test 'update does not write lesson name without levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write).raises('must not modify filesystem')
+    sign_in @levelbuilder
+    put :update, params: @update_params
+  end
+
   test 'remove activity via lesson update' do
     sign_in @levelbuilder
 
@@ -367,9 +395,11 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson removing and adding resources' do
-    resource_to_keep = create :resource
-    resource_to_add = create :resource
-    resource_to_remove = create :resource
+    course_version = create :course_version
+    resource_to_keep = create :resource, course_version: course_version
+    resource_to_add = create :resource, course_version: course_version
+    resource_to_remove = create :resource, course_version: course_version
+    @lesson.script.course_version = course_version
 
     @lesson.resources << resource_to_keep
     @lesson.resources << resource_to_remove

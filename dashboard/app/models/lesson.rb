@@ -362,6 +362,21 @@ class Lesson < ApplicationRecord
     }
   end
 
+  # Returns a hash representing i18n strings in scripts.en.yml which may need
+  # to be updated after this object was updated. Currently, this only updates
+  # the lesson name.
+  def i18n_hash
+    {
+      script.name => {
+        'lessons' => {
+          key => {
+            'name' => name
+          }
+        }
+      }
+    }
+  end
+
   # For a given set of students, determine when the given lesson is locked for
   # each student.
   # The design of a lockable lesson is that there is (optionally) some number of
@@ -467,7 +482,8 @@ class Lesson < ApplicationRecord
     end
   end
 
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
