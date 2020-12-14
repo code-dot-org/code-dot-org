@@ -269,16 +269,16 @@ class ContactRollupsPardotMemory < ApplicationRecord
                pluck(:email)
 
     deleted_emails = []
-    unless is_dry_run
+    if is_dry_run
+      CDO.log.info "[Dry run] #{emails.length} total prospects to be deleted from Pardot."
+    else
       emails.each do |email|
         deleted_emails << email if PardotV2.delete_prospects_by_email(email)
       end
+
+      # clean-up step to delete rows once they've been deleted from Pardot
+      ContactRollupsPardotMemory.where(email: deleted_emails).delete_all if deleted_emails.present?
     end
-
-    # clean-up step to delete rows once they've been deleted from Pardot
-    ContactRollupsPardotMemory.where(email: deleted_emails).delete_all if deleted_emails.present? && !is_dry_run
-
-    CDO.log.info "[Dry run] #{emails.length} total prospects to be deleted from Pardot." if is_dry_run
 
     {
       prospects_deleted: deleted_emails.length,
