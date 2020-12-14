@@ -463,6 +463,29 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed updates objectives' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.objectives.first.update!(description: 'Updated Description')
+        lesson.objectives.create(
+          key: "#{lesson.name}-objective-3",
+          description: 'New Description'
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal(
+        ['Updated Description', 'fake description', 'New Description'],
+        lesson.objectives.map(&:description)
+      )
+    end
+
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Script.transaction do
