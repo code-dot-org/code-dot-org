@@ -1,17 +1,27 @@
 # Configure ProxySQL integration.
 
 # https://github.com/sysown/proxysql#ubuntu--debian
-apt_repository "proxysql" do
-  uri "http://repo.proxysql.com/ProxySQL/proxysql-2.0.x/#{node['lsb']['codename']}/"
-  distribution nil
-  components ['./']
-  key "https://repo.proxysql.com/ProxySQL/repo_pub_key"
-end
+# apt_repository "proxysql" do
+#   uri "http://repo.proxysql.com/ProxySQL/proxysql-2.0.x/#{node['lsb']['codename']}/"
+#   distribution nil
+#   components ['./']
+#   key "https://repo.proxysql.com/ProxySQL/repo_pub_key"
+# end
+#
+# apt_package 'proxysql' do
+#   version '2.0.7'
+#   action :upgrade
+# end
 
-apt_package 'proxysql' do
-  version '2.0.7'
-  action :upgrade
+# Use patched ProxySQL with fix for Aurora 2.09 bug.
+# See: https://github.com/sysown/proxysql/issues/3082
+proxysql_filename = 'proxysql_2.0.15-ubuntu18_amd64.deb'
+proxysql_file = "#{Chef::Config[:file_cache_path]}/#{proxysql_filename}"
+remote_file proxysql_file do
+  source "https://github.com/wjordan/proxysql/releases/download/v2.0.15-aurora_2.09_fix/#{proxysql_filename}"
+  checksum "29fe79e54bce0f532084bfd8e5a13a55f1f8530f92be8a0e7db847aefcb1762f"
 end
+dpkg_package('proxysql') {source proxysql_file}
 
 writer = URI.parse(node['cdo-secrets']['db_writer'] || 'mysql2://root@localhost/')
 writer.hostname = '127.0.0.1' if writer.hostname == 'localhost'
