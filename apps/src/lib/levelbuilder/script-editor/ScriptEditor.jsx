@@ -131,7 +131,9 @@ class ScriptEditor extends React.Component {
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
-      lessonLevelData: this.props.initialLessonLevelData,
+      lessonLevelData:
+        this.props.initialLessonLevelData ||
+        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n",
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       hasLessonPlan: this.props.initialHasLessonPlan,
       curriculumPath: this.props.initialCurriculumPath,
@@ -148,7 +150,8 @@ class ScriptEditor extends React.Component {
       descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
       teacherResources: resources,
-      hasImportedLessonDescriptions: false
+      hasImportedLessonDescriptions: false,
+      oldScriptText: this.props.initialLessonLevelData
     };
   }
 
@@ -238,6 +241,7 @@ class ScriptEditor extends React.Component {
             this.props.levelKeyList
           )
         : this.state.lessonLevelData,
+      old_script_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       has_lesson_plan: this.state.hasLessonPlan,
       curriculum_path: this.state.curriculumPath,
@@ -275,7 +279,11 @@ class ScriptEditor extends React.Component {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
           this.props.init(lessonGroups, this.props.levelKeyList);
-          this.setState({lastSaved: data.updatedAt, isSaving: false});
+          this.setState({
+            lastSaved: data.updatedAt,
+            isSaving: false,
+            oldScriptText: data.lessonLevelData
+          });
         }
       })
       .fail(error => {
@@ -834,7 +842,6 @@ class ScriptEditor extends React.Component {
             </div>
           )}
         </CollapsibleEditorSection>
-
         <SaveBar
           handleSave={this.handleSave}
           error={this.state.error}
