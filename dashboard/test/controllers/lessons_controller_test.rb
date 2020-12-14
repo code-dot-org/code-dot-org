@@ -6,6 +6,9 @@ class LessonsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    # stub writes so that we dont actually make updates to filesystem
+    File.stubs(:write)
+
     @script = create :script, name: 'unit-1'
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
@@ -177,13 +180,13 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
-  test 'update lesson return updated lesson' do
+  test 'update lesson returns summary of updated lesson' do
     sign_in @levelbuilder
 
     put :update, params: @update_params
 
-    assert_equal 'new overview', JSON.parse(@response.body)['properties']['overview']
-    assert_equal 'new student overview', JSON.parse(@response.body)['properties']['student_overview']
+    assert_equal 'new overview', JSON.parse(@response.body)['overview']
+    assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
   end
 
   test 'cannot update lesson with legacy script levels' do
@@ -221,6 +224,31 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.first
     assert_equal 'activity name', activity.name
     assert_equal 1, activity.position
+  end
+
+  test 'update writes lesson name to i18n and script_json in levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
+    end.once
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('.script_json') && data.include?(@update_params[:name])
+    end.once
+
+    sign_in @levelbuilder
+    put :update, params: @update_params
+  end
+
+  test 'update does not write lesson name without levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write).raises('must not modify filesystem')
+    sign_in @levelbuilder
+    put :update, params: @update_params
   end
 
   test 'remove activity via lesson update' do

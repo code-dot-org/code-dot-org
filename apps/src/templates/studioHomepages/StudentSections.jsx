@@ -41,14 +41,13 @@ export default class StudentSections extends Component {
     const enrolledInASection = sections.length > 0;
     const heading = isTeacher ? i18n.sectionsJoined() : i18n.sectionsTitle();
     const description = isTeacher ? '' : i18n.enrollmentDescription();
-
     return (
       <ContentContainer heading={heading} description={description}>
         <JoinSectionNotifications
           action={action}
           result={result}
-          name={sectionName}
-          code={sectionCode}
+          sectionName={sectionName}
+          sectionCode={sectionCode}
         />
         {enrolledInASection && (
           <SectionsAsStudentTable

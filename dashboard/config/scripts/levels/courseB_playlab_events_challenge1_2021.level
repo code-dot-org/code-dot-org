@@ -1,0 +1,285 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-12-04T22:19:22.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n   // return ((Studio.sprite[0].isCollidingWith(1))&&(Studio.sprite[0].value === \"hidden\"));\r\n    //Studio.sprite[1].value == \"hidden\";\r\n}",
+    "failure_condition": "function () {\r\n\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"emotion\":0,\"sprite\":15},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":9},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":1},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":7},{\"tileType\":16,\"size\":0.5,\"emotion\":0,\"sprite\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.5,\"sprite\":10},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":5}]]",
+    "embed": "false",
+    "short_instructions": "Make the animals move down when you press ▼. ",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "true",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "timeout_failure_tick": "0",
+    "first_sprite_index": "0",
+    "protaganist_sprite_index": "1",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make the other animals move down when you press `▼`. \\n\\n<xml>\\n  <block type=\\\"studio_whenArrow\\\" movable=\\\"false\\\">\\n    <title name=\\\"VALUE\\\">down</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8439519cebf147c4d56a2bc7aa2a30c7/courseB_playlab_events_challenge1_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Change the speed of the animals by using this block:\\n\\n<xml>\\n  <block type=\\\"studio_setSpriteSpeed\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n    <title name=\\\"VALUE\\\">Studio.SpriteSpeed.NORMAL</title>\\n  </block></xml>\\n\",\"hint_id\":\"courseB_playlab_events_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c369289f0f2e86bdc50a5b5710e253c/courseB_playlab_events_challenge1_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"What will the everyone say when the race is over? Make them talk with this event:\\n\\n<xml>\\n  <block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">2</title>\\n    <next>\\n      <block type=\\\"studio_saySpriteChoices\\\">\\n        <title name=\\\"SPRITE\\\">2</title>\\n        <title name=\\\"VALUE\\\">Woo hoo!</title>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/931b5c60f476ac2d104f8630e4080498/courseB_playlab_events_challenge1_2018.mp3\"}]",
+    "project_template_level_name": "courseB_playlab_challenge1_Template_2021",
+    "long_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \r\n\r\nWho will run the fastest?",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "tts_short_instructions_override": "Make the animals move down when you press the down arrow. ",
+    "tts_long_instructions_override": "It's time for the Great Animal Race! Make the animals move down when you press the down arrow. Who will run the fastest?",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/3daf5f264b226ae2a967edda928f4baf=levelbuilder/46998.png",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false",
+    "parent_level_id": 21135,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "teacher_markdown": "This lesson extra is a “free play”. These levels have some characteristics you may want to explore before starting. \r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.\r\n",
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-24 19:40:30 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-24 19:40:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-31 19:29:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"instructions\",\"markdown_instructions\",\"tts_instructions_override\",\"tts_markdown_instructions_override\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-07-22 23:17:15 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-22 23:24:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-22 23:28:11 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-22 23:29:54 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-22 23:30:14 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"soccer"</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">2</title>
+              <title name="DIR">4</title>
+              <next>
+                <block type="studio_move">
+                  <title name="SPRITE">3</title>
+                  <title name="DIR">4</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">6</title>
+          <next>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">6</title>
+              <title name="VALUE">Great job!</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">4</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"soccer"</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+        </block>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+        </block>
+        <block type="studio_changeScore"/>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Woo hoo!</title>
+        </block>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_vanish">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">Great job!</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"soccer"</title>
+              <next>
+                <block type="studio_setSpriteSpeed">
+                  <title name="SPRITE">1</title>
+                  <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+                  <next>
+                    <block type="studio_setSpriteSpeed">
+                      <title name="SPRITE">0</title>
+                      <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+                      <next>
+                        <block type="studio_setSpriteSpeed">
+                          <title name="SPRITE">3</title>
+                          <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
+                          <next>
+                            <block type="studio_setSpriteSpeed">
+                              <title name="SPRITE">5</title>
+                              <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">2</title>
+              <title name="DIR">4</title>
+              <next>
+                <block type="studio_move">
+                  <title name="SPRITE">3</title>
+                  <title name="DIR">4</title>
+                  <next>
+                    <block type="studio_move">
+                      <title name="SPRITE">1</title>
+                      <title name="DIR">4</title>
+                      <next>
+                        <block type="studio_move">
+                          <title name="SPRITE">0</title>
+                          <title name="DIR">4</title>
+                          <next>
+                            <block type="studio_move">
+                              <title name="SPRITE">4</title>
+                              <title name="DIR">4</title>
+                              <next>
+                                <block type="studio_move">
+                                  <title name="SPRITE">5</title>
+                                  <title name="DIR">4</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">6</title>
+          <next>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">6</title>
+              <title name="VALUE">Great job!</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">2</title>
+                  <title name="VALUE">1</title>
+                  <next>
+                    <block type="studio_setSpriteEmotion">
+                      <title name="SPRITE">0</title>
+                      <title name="VALUE">1</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">7</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">3</title>
+              <title name="VALUE">3</title>
+              <next>
+                <block type="studio_saySpriteChoices">
+                  <title name="SPRITE">7</title>
+                  <title name="VALUE">Nice try!</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          <next>
+            <block type="studio_setSpriteEmotion">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">1</title>
+              <next>
+                <block type="studio_saySpriteChoices">
+                  <title name="SPRITE">1</title>
+                  <title name="VALUE">Woo hoo!</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Studio>
