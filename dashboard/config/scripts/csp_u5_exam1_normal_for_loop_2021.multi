@@ -1,0 +1,34 @@
+name 'csp-u5-exam1-normal-for-loop_2021'
+editor_experiment ''
+right '
+0  
+1  
+2  
+3
+'
+wrong '0  
+1  
+2  
+3  
+4'
+wrong '1  
+2  
+3'
+wrong '1  
+2  
+3  
+4'
+
+
+
+
+markdown <<MARKDOWN
+What will the following program display in the console?
+
+```
+for(var i = 0; i < 4; i++){
+  console.log(i);
+}
+```
+
+MARKDOWN

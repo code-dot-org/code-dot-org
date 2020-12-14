@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:49:30.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_weblab_intro_1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Intro to Web Lab - Part 1",
+    "parent_level_id": 19997,
+    "name_suffix": "_2021",
+    "long_instructions": "## Question to consider:\r\n* What are the different parts of Web Lab, and what are they used for?",
+    "encrypted": "false",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code.  For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\r\n\r\nAlthough it's not part of the video, the instructions pane will also often include drop down questions and answers that students can use when they are completing an activity, and in some levels the tabs at the top of the instructions pane will take students to a \"Help and Tips\" area that includes reference information relevant to the activities."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-14 21:17:44 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 23:55:29 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

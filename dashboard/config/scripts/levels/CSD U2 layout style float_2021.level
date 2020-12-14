@@ -1,0 +1,36 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-12-04T21:49:39.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n\r\n::: details [**How does the code work?**]\r\nHere is the code that is making the image float on the left hand side of the page:\r\n\r\n```\r\nimg {\r\n  float: left;\r\n}\r\n```\r\n\r\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\r\n* `float: left;` is the rule that makes the image float to the left.\r\n:::\r\n\r\n::: details [**What does the `float` property do?**]\r\n\r\nThe `float` property makes an element \"float\", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_class_float.asp\" target=\"_new\">W3Schools - CSS float Property</a>\r\n\r\n\r\n:::\r\n</div>\r\n\r\n# Float\r\n\r\n* Look at the `float` property inside your `img` rule-set\r\n* Discuss with your partner what you think the property does.\r\n* Change the value from `left` to `right`.",
+    "instructions_important": "false",
+    "project_template_level_name": "CSDU2 - layout style template_2021",
+    "encrypted_examples": "muIkqQ2SDYzcWvKurSfcVEZfUvtL6TXhpQuAwdM9DzHMHXjUr1MNnXY5HbH1\nrl0fPY3v8jHwD/3L9bc5Yok6TQ==\n",
+    "hide_share_and_remix": "false",
+    "parent_level_id": 20046,
+    "name_suffix": "_2021",
+    "submittable": "false",
+    "reference_links": [
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "map_reference": "/docs/concepts/css/layout-properties/",
+    "encrypted": "false",
+    "validation_enabled": "true",
+    "mini_rubric": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:43:37 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-07-12 20:54:12 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:51:05 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-01-30 21:44:32 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-23 00:25:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-10-10 22:34:27 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-10-17 22:46:11 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-05-29 18:19:59 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-05-29 18:23:39 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab>
