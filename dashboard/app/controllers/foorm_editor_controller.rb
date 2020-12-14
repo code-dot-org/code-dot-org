@@ -6,7 +6,7 @@ class FoormEditorController < ApplicationController
 
   # GET '/foorm/editor/'
   def index
-    formatted_names_and_versions = Foorm::Form.all.map {|form| {name: form.name, version: form.version}}
+    formatted_names_and_versions = Foorm::Form.all.map {|form| {name: form.name, version: form.version, id: form.id}}
 
     @script_data = {
       props: {

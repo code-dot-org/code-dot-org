@@ -154,14 +154,7 @@ export const commands = {
       text,
       gender,
       languageCode: voices[language].languageCode,
-      onProfanityFound: profaneWords => {
-        outputWarning(
-          i18n.textToSpeechProfanity({
-            profanityCount: profaneWords.length,
-            profaneWords: profaneWords.join(', ')
-          })
-        );
-      }
+      onFailure: message => outputWarning(message + '\n')
     });
     azureTTS.enqueueAndPlay(promise);
   }
