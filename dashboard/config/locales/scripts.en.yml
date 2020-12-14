@@ -20615,3 +20615,41 @@ en:
             csf_events:
               display_name: Events
           name: pre-express-2021
+        csf-2021-pilot:
+          lessons:
+            Introduction to Course F:
+              name: Introduction to Course F
+            Learning Sprites with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+            Virus Simulation for Code Bytes:
+              name: Coding a Simulation
+            Course F Introduction:
+              name: Introduction to Course F
+            lesson-1:
+              name: Envelope Variables
+            lesson-2:
+              name: Storing and Retrieving Text
+            lesson-3:
+              name: Create a Chat-Bot
+            lesson-4:
+              name: Counting with Variables
+            lesson-5:
+              name: Groups of Sprites
+            lesson-6:
+              name: Create a Collector Game
+          lesson_groups:
+            ramp_up:
+              display_name: Introduction
+            outbreak:
+              display_name: Outbreak Simulation
+            introduction:
+              display_name: Introduction to Sprite Lab
+              description: Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!
+            lessonGroup-3:
+              display_name: Variables
+              description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
+          name: csf-2021-pilot
+          title: CS Fundamentals 2021 Pilot
+          description_audience: Upper Elementary
+          description_short: Learn about events, variables, and conditionals, and create your own animations, games, and simulations.
+          description: "Learn to use events by programming in Sprite Lab. Investigate different design techniques and discuss societal impacts of computing. \n\n**Pilot 2021**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June, 2021 only."
