@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:14.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection:",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "How is a Creative Commons license different from a regular copyright? ",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18981,
+    "name_suffix": "_2021",
+    "encrypted_solution": "OQGrLgZiIcdDm3ubj+WOLNSKyrmVTE+pP1OpkjNmINJJFTHEn7EkJAFxgte5\nnlgyTF114UkBeDkALGn4IqAA7O3y/ii3oJtku0YcS3bslI9XBm8ExNuOR1bv\nuk2lFtbSqR/RUmn7Oe8ky5Rkg4o8/3uuqJBsVYSN20J0Y+12pfYXau4JYCLn\nmDhY9+lGCE0jzczQZTRrAOaCX7G/bcYNlKywhAvgNKW0rbWxcOz2F2aw7cdM\nhjRQFQaDJZblUiHonfjlyl1rhzm/N4ANlTYQgCn04e/k3ytUUkG5hyPYyn0Q\nf1h29J7U2RAkDND++F52trAoduC2Oil+KC0kanrnU/cmZnotsGmbd6DtTqXJ\nXYMJLVjeYyiVywNR7bsiB4gTEqjDSStfU9VKd4PBFk8S8itqnTWq2iSKkdsA\nQGzXGIiLaocPC6wVKyi4LpBPgTy5GrITPAqZZnOpSAeAugCwBw==\n",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 14:28:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-26 14:30:12 +0000\",\"changed\":[\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:09:57 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:19:13 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:42:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-15 18:26:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

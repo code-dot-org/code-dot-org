@@ -1,0 +1,131 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-12-04T22:18:31.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "short_instructions": "This is a Play Lab level. Move blocks to the workspace and see what happens!",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "first_sprite_index": "0",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "background": "city",
+    "parent_level_id": 21042,
+    "name_suffix": "_2021",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false",
+    "encrypted": "false",
+    "long_instructions": "This is a Play Lab level. Move blocks to the workspace and see what happens!",
+    "mini_rubric": "false",
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:00:28 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 17:58:49 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 17:59:33 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"background\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 18:32:51 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"background\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-09 16:06:27 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-08-16 18:44:59 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]"
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setSpriteSize">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSize.VERY_SMALL</title>
+              <next>
+                <block type="studio_setSprite">
+                  <title name="VALUE">"hidden"</title>
+                  <title name="SPRITE">0</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"city"</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"visible"</title>
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"hidden"</title>
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

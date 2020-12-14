@@ -2681,7 +2681,7 @@ class ScriptTest < ActiveSupport::TestCase
     # seeding_key should not make queries
     assert_queries(0) do
       expected = {'script.name' => script.name}
-      assert_equal expected, script.seeding_key(ScriptSeed::SeedContext.new)
+      assert_equal expected, script.seeding_key(Services::ScriptSeed::SeedContext.new)
     end
   end
 
