@@ -966,7 +966,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     user = create(:user)
     sign_in user
     get :require_captcha
-    expected_response = {shouldDisplayCaptcha: false, key: Recaptcha.configuration.site_key}.as_json
+    expected_response = {key: Recaptcha.configuration.site_key}.as_json
     assert_equal(expected_response, json_response)
   end
 
