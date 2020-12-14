@@ -24,23 +24,25 @@ apt_package %w(
   fonts-noto
 )
 
-# Used by lesson plan generator.
-pdftk_file = 'pdftk-java_3.0.2-2_all.deb'
-pdftk_local_file = "#{Chef::Config[:file_cache_path]}/#{pdftk_file}"
-remote_file pdftk_local_file do
-  source "https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/#{pdftk_file}"
-  checksum "92af8960406698d2e1c4f1f0c10b397e9391729c9c63070d2c3ed472850f16a9"
-end
-# Dependencies of pdftk-java.
-apt_package %w(
-  default-jre-headless
-  libbcprov-java
-  libcommons-lang3-java
-)
-dpkg_package("pdftk-java") {source pdftk_local_file}
+if node.chef_environment == 'staging' && node.name == 'staging'
+  # Used by lesson plan generator.
+  pdftk_file = 'pdftk-java_3.0.2-2_all.deb'
+  pdftk_local_file = "#{Chef::Config[:file_cache_path]}/#{pdftk_file}"
+  remote_file pdftk_local_file do
+    source "https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/#{pdftk_file}"
+    checksum "92af8960406698d2e1c4f1f0c10b397e9391729c9c63070d2c3ed472850f16a9"
+  end
+  # Dependencies of pdftk-java.
+  apt_package %w(
+    default-jre-headless
+    libbcprov-java
+    libcommons-lang3-java
+  )
+  dpkg_package("pdftk-java") {source pdftk_local_file}
 
-# Used by lesson plan generator.
-apt_package 'enscript'
+  # Used by lesson plan generator.
+  apt_package 'enscript'
+end
 
 # Provides a Dashboard database fixture for Pegasus tests.
 apt_package 'libsqlite3-dev'
