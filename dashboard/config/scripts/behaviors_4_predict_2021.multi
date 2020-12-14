@@ -1,0 +1,6 @@
+name 'behaviors 4 predict_2021'
+question 'Make a prediction. Which way will the satellite move towards the galaxy?'
+wrong 'Left then down', feedback: 'Incorrect.'
+right 'Diagonally', feedback: 'Correct!'
+wrong 'Zig zag', feedback: 'Incorrect. '
+wrong 'Down, then left', feedback: 'Incorrect'

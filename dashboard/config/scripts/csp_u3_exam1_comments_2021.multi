@@ -1,0 +1,17 @@
+name 'csp-u3-exam1-comments_2021'
+height 'auto'
+
+question ‘Which of the following is NOT a reason to include comments in programs’
+
+right ‘Comments help the computer decide whether certain components of a program are important.’
+wrong ’Comments help programmers debug issues in their own code’
+wrong ‘Comments help document how code was written for other programmers to use’
+wrong ‘Comments enable programmers to track their work throughout the development process’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN
