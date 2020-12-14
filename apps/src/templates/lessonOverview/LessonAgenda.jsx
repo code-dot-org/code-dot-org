@@ -22,9 +22,16 @@ export default class LessonAgenda extends Component {
         {filteredActivitiesList.map(activity => (
           <ul key={activity.key} style={{listStyleType: 'none'}}>
             <li>
-              <a href={`#activity-${activity.key}`}>{`${
-                activity.displayName
-              } (${activity.duration} ${i18n.minutes()})`}</a>
+              {activity.duration > 0 && (
+                <a href={`#activity-${activity.key}`}>{`${
+                  activity.displayName
+                } (${activity.duration} ${i18n.minutes()})`}</a>
+              )}
+              {activity.duration === 0 && (
+                <a href={`#activity-${activity.key}`}>{`${
+                  activity.displayName
+                }`}</a>
+              )}
             </li>
             {activity.activitySections.map(section => (
               <li style={{marginLeft: 15}} key={section.key}>

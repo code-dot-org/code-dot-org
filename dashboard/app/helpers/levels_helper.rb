@@ -1,6 +1,5 @@
 require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
-require 'cdo/honeybadger'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
@@ -15,6 +14,7 @@ module LevelsHelper
   include ApplicationHelper
   include UsersHelper
   include NotesHelper
+  include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -312,7 +312,7 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
-    use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
+    use_google_blockly = view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
@@ -467,69 +467,9 @@ module LevelsHelper
     fb_options
   end
 
-  def get_azure_speech_service_token(region, api_key, timeout)
-    token_uri = URI.parse("https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
-    token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
-    token_http_request.use_ssl = true
-    token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-    # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
-    token_http_request.read_timeout = timeout
-    token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
-
-    token_http_request.request(token_request)&.body
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for authentication token from Azure Speech Service failed')
-    nil
-  end
-
-  def get_azure_speech_service_voices(region, token, timeout)
-    Rails.cache.fetch("azure_speech_service/voices") do
-      voice_uri = URI.parse("https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
-      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
-      voice_http_request.use_ssl = true
-      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      voice_http_request.read_timeout = timeout
-      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, {'Authorization': 'Bearer ' + token})
-
-      response = voice_http_request.request(voice_request)&.body
-      response.length >= 2 ? JSON.parse(response) : []
-    end
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for list of voices from Azure Speech Service failed')
-    nil
-  end
-
   def azure_speech_service_options
-    return {} unless Gatekeeper.allows('azure_speech_service', default: true) &&
-      @level.game.use_azure_speech_service? &&
-      CDO.azure_speech_service_region.present? &&
-      CDO.azure_speech_service_key.present?
-
-    # First, get the token and region
-    options = {}
-    timeout = DCDO.get('azure_speech_service_timeout', 5)
-    region = CDO.azure_speech_service_region
-    options[:token] = get_azure_speech_service_token(region, CDO.azure_speech_service_key, timeout)
-    return {} unless options[:token].present?
-    options[:url] = "https://#{region}.tts.speech.microsoft.com/cognitiveservices/v1"
-
-    # Then, get the list of voices
-    voices = get_azure_speech_service_voices(region, options[:token], timeout)
-    return {} unless (voices&.length || 0) > 0
-    voice_dictionary = {}
-    voices.each do |voice|
-      native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
-      next if native_locale_name.empty?
-      native_name_s = native_locale_name[0][:native_name_s]
-      voice_dictionary[native_name_s] ||= {}
-      voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
-      voice_dictionary[native_name_s]["languageCode"] ||= voice["Locale"]
-    end
-
-    # Only keep voices that contain 2+ genders and a languageCode
-    options[:voices] = voice_dictionary.reject {|_, opt| opt.length < 3}
-
-    options
+    return {} unless @level.game.use_azure_speech_service?
+    {voices: AzureTextToSpeech.get_voices || {}}
   end
 
   # Options hash for Blockly

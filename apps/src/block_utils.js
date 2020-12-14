@@ -1199,7 +1199,10 @@ exports.createJsWrapperBlockCreator = function(
         }
       }
 
-      if (this.type === 'gamelab_setPrompt') {
+      if (
+        this.type === 'gamelab_setPrompt' ||
+        this.type === 'gamelab_setPromptWithChoices'
+      ) {
         const input = this.getInput('VAR');
         if (input) {
           const targetBlock = input.connection.targetBlock();
