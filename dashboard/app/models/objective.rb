@@ -35,6 +35,16 @@ class Objective < ApplicationRecord
     {id: id, description: display_description}
   end
 
+  def seeding_key(seed_context)
+    my_lesson = seed_context.lessons.select {|l| l.id == lesson_id}.first
+    raise "No Lesson found for #{self.class}: #{my_key}, Lesson ID: #{lesson_id}" unless my_lesson
+
+    {
+      'lesson.key': my_lesson.key,
+      'objective.key': key,
+    }.stringify_keys
+  end
+
   private
 
   def display_description
