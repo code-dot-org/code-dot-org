@@ -2,6 +2,7 @@ require 'aws-sdk-s3'
 require 'cdo/aws/s3'
 
 class Api::V1::MlModelsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
 
   # POST api/v1/ml_models/save
@@ -14,11 +15,14 @@ class Api::V1::MlModelsController < ApplicationController
       name: params["ml_model"]["name"]
     )
     upload_to_s3(model_id, params["ml_model"].to_json)
+
     render json: "hooray!"
   end
 
   def user_ml_model_names
-    UserMlModel.where(user_id: current_user.id).pluck(:model_id, :name)
+    user_ml_model_data = UserMlModel.where(user_id: current_user.id).map {|user_ml_model| {"id": user_ml_model.model_id, "name": user_ml_model.name}}
+
+    render json: user_ml_model_data.to_json
   end
 
   private
