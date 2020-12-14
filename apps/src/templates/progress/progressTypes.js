@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
 
+export const studentType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
 export const levelType = PropTypes.shape({
   status: PropTypes.string.isRequired,
   url: PropTypes.string,
