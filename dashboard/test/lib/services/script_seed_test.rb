@@ -490,6 +490,10 @@ module Services
           s1.lessons.map(&:resources).flatten,
           s2.lessons.map(&:resources).flatten
         )
+        assert_objectives_equal(
+          s1.lessons.map(&:objectives).flatten,
+          s2.lessons.map(&:objectives).flatten
+        )
       end
     end
 
@@ -530,6 +534,12 @@ module Services
     def assert_resources_equal(resources1, resources2)
       resources1.zip(resources2).each do |r1, r2|
         assert_attributes_equal(r1, r2, ['course_version_id'])
+      end
+    end
+
+    def assert_objectives_equal(objectives1, objectives2)
+      objectives1.zip(objectives2).each do |o1, o2|
+        assert_attributes_equal(o1, o2, ['lesson_id'])
       end
     end
 
