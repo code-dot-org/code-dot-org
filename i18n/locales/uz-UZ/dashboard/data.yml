@@ -81,20 +81,122 @@ uz:
         turtle_1_2: 'Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o''zing yoqtirgan rangni tanla.'
         turtle_1_3: 3 ta blok ishlatib, to'rtburchak yasang.
         turtle_1_4: 'Har bir tomoni har xil rangda bo''lgan uchburchak chizing. Har doim har xil rang ko''rsatish uchun "Tasodifiy rang" tanlovini belgilang. Maslahat: "Burilish" blokidagi raqam ustiga bosib, qanchalik ko''p burilishingiz kerakligini aniqlashingiz mumkin.'
+        turtle_1_5: Endi, mashq qilish uchun konvertni chizish uchun uchburchakni, so'ngra kvadratni torting.
+        turtle_1_6: 'Ushbu uchburchak va kvadratni qanday chizish kerakligini aniqlay olasizmi? Maslahat: Avval uchburchakni yasang, keyin kvadrat chizishdan oldin qanchaga burish kerakligini aniqlang.'
+        turtle_1_7: Xo'sh, keling, biroz qiyinlashtiraylik - bu yashil ko'zoynaklarni chizishingiz mumkinmi, ko'ring. Kvadratchalar har ikki tomonda 100 pikseldan va bir-biridan 50 piksel masofada. Yashil rangda chizishni unutmang!
+        turtle_1_8: Xo'sh, ushbu kodni ishlatsangiz nima bo'lishini tushunishga harakat qiling (yoki sinab ko'rish uchun "Ishga tushirish" tugmachasini bosing). Keyin, rasmni yakunlash uchun uni bir necha marta takrorlang. Ranglar har safar har xil bo'ladi.
         turtle_1_9: Aylana chizish uchun savol belgilarini qaysi raqam bilan almashtirishni aniqlay olasizmi?
+        turtle_1_10: 'Siz buni amalladingiz! Endi xohlagan narsangizni chizing. Ba''zi qiziqarli g''oyalar: tayoqcha, qorparchasi yoki spiral. Shuningdek, yangi "kenglikni o''rnatish" blokini sinab ko''ring. Zavqlaning!'
+        turtle_4_1: 'Uchta blok bilan uchburchakni (qirralari 100 pikselli) chizishingiz mumkinmi? Maslahat: "takrorlash" blokidan foydalaning.'
+        turtle_4_2: Ushbu uchburchaklarni chizish uchun dasturning o'rtasiga "90 daraja o'ngga burilish" blokini qo'shing.
+        turtle_4_3: Yaxshi, mana siz bitta uchburchak chizish uchun yozgan kodingiz. Chiroyli gul yasash uchun "takrorlash" va "burilish" bloklarini qo'sha olasizmi?
+        turtle_4_4: 'Mana, avvalgi jumboqdagi xuddi o''sha kod, lekin har bir uchburchak chizilganidan keyin atigi 36 darajaga burilgan. Buni necha marta takrorlash kerak? (Maslahat: 360 daraja burilgandan so''ng chizma to''liq aylana bo''ladi)'
+        turtle_4_5: 'Mana avvalgi jumboqdagi xuddi o''sha kod, lekin burilishlarni 36 marta takrorlang. Burilishlar necha daraja bo''lishi kerak? (Maslahat: 360 daraja burilgandan so''ng chizma to''liq aylana bo''ladi)'
+        turtle_4_6: Faqat 3 ta blokdan foydalanib, qirralari 20 pikselli kvadrat chizishingiz mumkinmi?
+        turtle_4_7: 'Bu yerda oxirgi jumboqdagi kvadrat chizish uchun kod. Narvon singari 10 ta qo''shni kvadratni chizish uchun uni takrorlay olasizmi? Maslahat: sizga yana 2 ta blok kerak bo''ladi.'
+        turtle_4_8: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun yana 2 ta blok qo'sha olasizmi?
+        turtle_4_9: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun necha daraja burish kerak? (Ehtimol, siz bir necha marta taxmin qilishingiz kerak)
+        turtle_4_10: Mana avvalgi jumboqning yechimi. Rasmni yakunlash uchun necha marta takrorlash kerak?
+        turtle_4_11: Turli naqshlar yasash uchun "burilish" va "takrorlash" bloklaridagi raqamlarni o'zgartirishga harakat qiling. Yoki xohlagan narsani chizish uchun kodning qolgan qismini o'zgartirib ko'ring.
         maze_karel_1_1: Salom, men fermerman. Fermer xo‘jaligimdagi dalani tekislash uchun yordamingizga muhtojman va shundan so‘ng dala ekin ekishga tayyor bo‘ladi!"  Loy yig‘ilgan uyumga o‘ting va uni olib tashlash uchun `remove` bo‘lagidan foydalaning.
         maze_karel_1_2: Keyin meni teshikka olib boring va `fill` bo‘lagidan foydalanib, IKKITA belkurak bilan teshikni to‘ldiring.
         maze_karel_1_3: Meni loy uyumiga oboring va necha marta belkurakda loyni olib tashlashim kerakligini menga ayting, iloji boricha kamroq bloklardan foydalanib.
+        maze_karel_1_4: 'Menga to''rtta loy uyumini olib tashlashga yordam bera olasizmi? Maslahat: agar iloji bo''lsa, takroriy blokdan foydalaning.'
+        maze_karel_1_5: 'Bu teshiklarning barchasini 5 ta belkurak loy bilan to''ldirishga yordam bering. Maslahat: "while" blokining ichiga "takrorlash" blokini qo''yishingiz mumkin.'
+        maze_karel_1_6: Iloji boricha kamroq bloklardan foydalanib, barcha uyumlarni tozalang. "While" blokidagi ochiladigan menyuda yangi variantlar menga plitka yoki teshik ustida turganligimni bildiradi.
+        maze_karel_1_7: Vau, chindan ham chuqur teshik topdim! Bunga qancha belkurak loy kerakligini bilmayman. Siz uni yerga teng bo'lguncha to'ldiradigan dastur yozishingiz mumkinmi?
+        maze_karel_1_8: Iloji boricha kamroq bloklardan foydalanib, maydonning oxiridagi teshikni to'ldirishga yordam bering.
+        maze_karel_1_9: 'Meni bu loy uyumlarini olib tashlashga majbur qiling. Iloji boricha kamroq bloklardan foydalanishga harakat qiling. Maslahat: "while" blokidan foydalanishga harakat qiling.'
+        maze_karel_1_10: Men kech qoldim, qorong'i tushdi va plitkalar qanchalik katta ekanligini aniqlay olmayman. Endi men blokda ishlatadigan barcha variantlarga ega emasman. Meni maydon bo'ylab olib boring va agar plitka bo'lsa, uni olib tashlang.
+        maze_karel_1_11: 'Tashqarida hali ham qorong''i. Meni maydon bo''ylab harakatlantiring. Agar uyum bo''lsa, uni olib tashlang va agar teshik bo''lsa, uni to''ldiring. Maslahat: "agar" blokidagi variantlarning ochiladigan menyusidan foydalaning.'
+        turtle_2_1: 'Salom. Men zombi rassomman. Men rasm chizishni yaxshi ko''raman! Menga maxsus rangdagi kvadrat chizishga yordam bering. Muhim eslatma: sizda bir xil bloklar mavjud, ammo ular endi toifalarda joylashtirilgan.'
+        turtle_2_2: Yangi bloklarni aniqlashga imkon beradigan funksiyalardan foydalanishga xush kelibsiz! Kichik 50x50 yashil kvadrat chizish uchun "Vazifalar" toifasida joylashgan yangi "kvadrat chizish" blokini sinab ko'ring.
+        turtle_2_3: '"Takrorlash" blokidan foydalaning ("Loops" toifasida) har biri 120 daraja bo''lgan 100 o''lchamdagi 3 ta kvadrat chizing. Buni 3 xil, tasodifiy rangda qiling.'
+        turtle_2_4: 'Endi biz hayoliy bo''lamiz. Kodni 36 ta kvadrat, 100 piksel kenglikda va har biri 10 daraja burchakda chizish uchun o''zgartiring. Maslahat: meni tezroq yurishim uchun slayderdan foydalanishingiz mumkin.'
+        turtle_2_5: Tomonlari 50, 60, 70, 80 va 90 pikselli kvadratchalar chizish. Siz "kvadrat chizish" funksiyasidan besh marta foydalanishingiz kerak bo'ladi.
+        turtle_2_6: 'Xo''sh, ushbu dasturda o''tgan safargidek kvadratchalar chizish uchun hisoblagich ishlatiladi. Kvadrat hisoblagich bilan bir xil o''lchamda bo''lishini xohlaysiz, buning uchun "hisoblagich" blokidan foydalaning. Maslahat: O''zgaruvchilar toifasida.'
+        turtle_2_7: Bu yerda spiralni chizish uchun dastur mavjud, ammo bloklar ishlamasligi uchun o'chirib qo'yilgan. Xuddi shu spiralni chizish uchun "for" (Loops toifasida) va "counter" blokini (o'zgaruvchilar toifasida) ishlatib yangi dastur tuzing.
+        turtle_2_7_5: Yangi "qor odamni chizish" funksiyasi mavjud (funksiyalar toifasida). Balandligi 250 va 100 bo'lgan ikkita qor odamini chizing.
+        turtle_2_8: Bu biroz qiyinroq. "Qor odamni chizish" funksiyasidan va yangi "oldinga sakrash" blokidan foydalaning (Amallar toifasida). Bir-biridan 100 piksel masofada turli xil ranglarda 3 qor odamni chizing.
+        turtle_2_9: Balandligi 110, 100, 90, 80 va 70 gacha bo'lgan qor odamlar oilasini chizish uchun "for" siklidan foydalaning. Qor odamlari bir-biridan 60 piksel masofada joylashgan bo'lishi kerak.
+        turtle_2_10: Turli spirallar bilan tajriba o'tkazishga harakat qilish uchun kod namunalari. Agar siz burilish miqdorini o'zgartirsangiz nima bo'ladi? Yoki siklda tasodifiy rangni o'rnatasizmi? O'zingizga yoqqan narsani chizib oling.
+        maze_karel_2_1: 'Menga barcha uyumlarni olib tashlashga va yerdagi barcha teshiklarni to''ldirishga yordam beradigan bloklardan foydalanishga harakat qiling. Juda ko''p bloklardan foydalanish o''rniga sikldan foydalanishga harakat qiling. Maslahat: boshqa siklning ichiga sikl qo''yishingiz mumkin.'
+        maze_karel_2_2: Biz "to'ldirish 5" deb nomlangan o'z blokimizni aniqladik, u endi funksiyalar toifasiga kiradi. Menga ushbu teshikni to'ldirishga yordam berish uchun undan foydalaning.
+        maze_karel_2_3: Menga barcha teshiklarni to'ldirish uchun yangi "to'ldirish 5" funksional blokidan foydalaning. Vazifalar toifasidan "to'ldirish 5" blokini olishingiz kerak bo'ladi.
+        maze_karel_2_4: 7 belkurak loyni olib tashlaydigan yangi funksiyani aniqlang. Keyin undan barcha uyumlarni olib tashlashga yordam beradigan dastur yozish uchun foydalaning.
+        maze_karel_2_5: Uyumdan 6 ta belkurak loyni olib tashlaydigan yangi funksiya yarating va undan barcha uyumlarni tekislashimga yordam berish uchun foydalaning.
+        maze_karel_2_6: Menga uyumni tekislash va teshikni to'ldirishda yordam berish uchun ikkita yangi funksiya - "to'ldirish 8" va "olib tashlash 8"dan foydalaning.
+        maze_karel_2_7: Mening dalamda sigir bor! Menga sigirdan qochishga va uyumni olib tashlashga yordam beradigan yangi funksiyani yozing. Barcha bloklaringizni yangi funksiya ichiga qo'ying.
+        maze_karel_2_8: Ushbu yangi funksiya - "sigirdan saqlaning va 1ni olib tashlang"dan foydalaning, u menga barcha uyumlarni olib tashlashga yordam beradi.
+        maze_karel_2_9: Xo'sh, bu yerda vertikal ustundagi 4 xil uyumni tozalaydigan funksiya. Ushbu funksiyani sikl ichiga qo'yishga harakat qiling, shunda siz bir nechta yangi bloklardan foydalanib, barcha loy uyumlarini olib tashlaysiz.
+        maze_karel_2_10: Menga maydon bo'ylab harakatlantiring va barcha uyumlarni olib tashlashga va barcha teshiklarni to'ldirishga yordam berish uchun ushbu ikkita funksiyadan foydalaning.
+        turtle_3_1: Ushbu jumboq sizga "kvadrat chizish" va "aylana chizish" funksiyalari qanday aniqlanganligini ko'rsatadi. Funksiyani aniqlash uning bloklarini ishlatmaydi. Haqiqatan ham kvadrat chizish uchun "kvadrat chizish" blokini tortib olishingiz kerak.
+        turtle_3_2: Misol uchun "kvadrat chizish" funksiyasidan foydalanib, "uchburchak chizish" funksiyasini yarating va undan foydalaning.
+        turtle_3_3: 'Mushuklar atrofida uchburchak to''siqlar va sigir atrofidagi to''rtburchak devorlarni chizish kerak. Maslahat: dasturni sinab boring.'
+        turtle_3_4: Arslon atrofida uy chizish uchun "kvadrat chizish" va "uchburchak chizish" (va boshqa ba'zi bloklar) dan qanday foydalanishni aniqlay olasizmi, qarang.
+        turtle_3_5: 'Endi yangi "uy chizish" funksiyasini yarating va undan ikkita mushukni joylashtirish uchun foydalaning. Maslahat: "biror narsa qilish" blokidan foydalanib yangi funksiya yarating va blokga nom berish uchun o''zingizning matningizni kiriting.'
+        turtle_3_6: 'Misol uchun "kvadrat chizish" dan foydalanib, "uchburchak chizish"ga "uzunlik" nomli yozuvni qo''shing. Keyin, har xil o''lchamdagi uchburchaklarni chizing. (Maslahat: funksiyaga kirish (input) kiritish uchun yulduzchani bosing)'
+        turtle_3_7: '"Uy chizish" uchun "uzunlik" nomli yozuvni qo''shing va fil uchun katta uy quring (qirralari 150 piksel uzunlikda)'
+        turtle_3_8: '"Uy chizish"ni o''zgartiring, men yangi uyni chizgandan so''ng pastki o''ng burchakda turadigan qilib. Uchta uyni chizish uchun ushbu o''zgartirilgan funksiyadan foydalaning.'
+        turtle_3_9: '"Uyni chizish" funksiyasini yordamsiz qayta tiklay olasizmi? Sinab ko''ring va keyin bir qator uylarni chizib oling.'
+        turtle_3_10: Siz ko'p narsalarni bilib oldingiz! Endi undan kerakli narsani chizish uchun foydalaning. Yulduz yoki spiral yoki chiroyli qorparcha chizishga harakat qiling.
+        maze_karel_debug_seq_1: Nosozliklarni tuzatishga xush kelibsiz! Mening kodim to'g'ri ishlamayapti. Siz dalamni tekislab, ekishga tayyor bo'lishim uchun muammoni aniqlab, uni tuzatib bera olasizmi?
+        maze_karel_debug_seq_2: Ushbu dasturda nima xato? Qanday qilib uni tuzatishingiz kerak, shunda men bu uyumni olib tashlashim mumkin bo'ladimi?
+        maze_karel_debug_repeat: Ushbu dasturni men uchun de-bug qilingki, mening maydonim chiroyli va tekis bo'lsin.
+        maze_karel_debug_while: Teshikni to'ldirishimga yordam berish uchun ushbu dasturni qanday o'zgartirish kerak?
+        maze_karel_debug_if: Yordam bering! Mening maydonim butunlay tekis bo'lishi uchun dasturni tuzating.
+        turtle_5_1: Ushbu dasturni ishlatib ko‘ring. Nima bo‘lishini ko‘rish uchun o‘zgarishlarni amalga osamaralig. Uning qanday ishlashini aniqlay olasizmi? Yoki uni o‘chirib tashlashingiz va butunlay boshqacha narsalar bilan almashtirishingiz mumkin)
+        turtle_5_2: Ushbu dasturni ishlatib ko‘ring. Nima bo‘lishini ko‘rish uchun o‘zgarishlarni amalga osamaralig. Uning qanday ishlashini aniqlay olasizmi? Yoki uni o‘chirib tashlashingiz va butunlay boshqacha narsalar bilan almashtirishingiz mumkin)
+        turtle_5_3: Ushbu dasturni ishlatib ko‘ring. Nima bo‘lishini ko‘rish uchun o‘zgarishlarni amalga osamaralig. Uning qanday ishlashini aniqlay olasizmi? Yoki uni o‘chirib tashlashingiz va butunlay boshqacha narsalar bilan almashtirishingiz mumkin)
+        turtle_5_4: Ushbu dasturni ishlatib ko‘ring. Nima bo‘lishini ko‘rish uchun o‘zgarishlarni amalga osamaralig. Uning qanday ishlashini aniqlay olasizmi? Yoki uni o‘chirib tashlashingiz va butunlay boshqacha narsalar bilan almashtirishingiz mumkin)
+        turtle_5_5: Ushbu dasturni ishlatib ko‘ring. Nima bo‘lishini ko‘rish uchun o‘zgarishlarni amalga osamaralig. Uning qanday ishlashini aniqlay olasizmi? Yoki uni o‘chirib tashlashingiz va butunlay boshqacha narsalar bilan almashtirishingiz mumkin)
+        turtle_5_6: Ushbu dasturni ishlatib ko‘ring. Nima bo‘lishini ko‘rish uchun o‘zgarishlarni amalga osamaralig. Uning qanday ishlashini aniqlay olasizmi? Yoki uni o‘chirib tashlashingiz va butunlay boshqacha narsalar bilan almashtirishingiz mumkin)
+        studio_c2_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
+        studio_c2_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin biron bir narsani aytishiga majbur qila olasizmi?
+        studio_c3_story_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
+        studio_c3_story_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin biron bir narsani aytishiga majbur qila olasizmi?
+        studio_c3_story_5: Sakkizoyoqni xursand qilish uchun blok qo'sha olasizmi?
+        studio_gumball_click_hello: Antonga "Tayyorlik, diqqat, start!" deb poyga boshlanganligini e'lon qilishda yordam bera olasizmi? Dasturingizni sinab ko'rish uchun, Ishga tushirish tugmachasini bosgandan so'ng Antonni bosishni unutmang!
+        studio_gumball_move_events: Darvin bayroq yig'ish musobaqasida! Voqealarning har biriga "ko'chirish" blokini biriktirib, uning atrofida yugurishiga yordam bering. Tugatgandan so'ng, Ishga tushirish tugmachasini bosing va barcha bayroqlarni yig'ishga harakat qiling.
+        studio_gumball_sound_and_points: Biz Antonni (aktyor 2) chap va o'ngga harakatlanishini ta'minlaydigan kodning aksariyat qismini, shuningdek Banan Jo (aktyor 1) ni ekran atrofida harakatlantirish kodini taqdim etdik. Siz kodni yakunlab, "aktyor teginganda" hodisasiga bloklar qo'sha olasizmi, bunda Banan Jo va Anton to'qnashganda ikkasi ham ovoz chiqarib, ball olishi kerak? O'yinni o'ynash uchun Run tugmasini bosing.
+        studio_gumball_warn_food_fight: Darvin shunchaki ovqat kurashidan qutulib qoldi! Orqa fonni "belgilar"ga o'zgartiring va Darvinning tezligini tezlashtiring, so'ngra Run tugmachasini bosib, ogohlantirish uchun Penni-ga olib boring.
+        studio_gumball_join_food_fight: Oziq-ovqat kurashiga qo'shiling! Banan Jo (aktyor 1) Antonga (aktyor 2) ovqat tashlashi uchun "aktyor buyumini o'ngga tashlash" buyrug'idan foydalaning! Anton urishganda uning kayfiyatini g'azablangan qilib qo'ying.
+        studio_gumball_free_play: O'zingizning o'yiningizni yoki hikoyangizni yarating. Tugatgandan so'ng, Do'stlaringizga telefonda, planshetda yoki kompyuterda o'yiningizni sinab ko'rishga ruxsat berish uchun Finish tugmasini bosing!
+        studio_k1_1: Siz bu itni "salom dunyo" deb ayttira olasizmi?
+        studio_k1_2: Siz itni biron bir narsani aytishiga, keyin mushukdan keyin biron bir narsani aytishiga majbur qila olasizmi?
+        studio_k1_4: Itni mushuk tomon harakatlantiring, u yerga etib borgach, mushuk "salom" deb aytsin.
+        studio_k1_5: Sakkizoyoqni xursand qilish uchun blok qo'sha olasizmi?
+        studio_k1_6: O'zingizning hikoyangizni yarating! Mushuk va it bilan o'ynang va ularga har xil gaplarni ayttiring.
+        maze_wordsearch_k_1: SHARQ so'zini yozish uchun meni harakatlantiring
+        maze_wordsearch_k_2: JANUB so'zini yozish uchun meni harakatlantiring
+        maze_wordsearch_k_3: G'ARB so'zini yozish uchun meni harakatlantiring
+        maze_wordsearch_k_4: SHIMOL so'zini yozish uchun meni harakatlantiring
+        maze_wordsearch_k_6: JUMP so'zini yozish uchun meni Sharqqa, keyin Janubga ko'chiring
+        maze_wordsearch_k_9: CODE so'zini yozish uchun meni bir tomonga, keyin boshqasiga harakatlantiring
+        maze_wordsearch_k_13: DEBUG so'zini yozish uchun meni bir tomonga, keyin boshqasiga harakatlantiring
+        maze_wordsearch_k_15: ABOVE so'zini yozish uchun meni bir tomonga, keyin boshqasiga harakatlantiring
+        maze_wordsearch_k_16: BELOW so'zini yozish uchun meni bir tomonga, keyin boshqasiga harakatlantiring
+        maze_wordsearch_k_20: Bu sinov! STORY so'zini yozish uchun meni bir tomonga, keyin boshqasiga harakatlantiring
+        applab_ec_simple: Asboblar qutisidagi bloklardan foydalanib, o'z ilovangizni yarating.
         turtle_ec_1_2: 'Endi, kvadrat chizamiz. ESLATMA: "rang tanlash" blokidan o''zing yoqtirgan rangni tanla.'
+        turtle_ec_1_10: 'Siz buni amalladingiz! Endi xohlagan narsangizni chizing. Ba''zi qiziqarli g''oyalar: tayoqcha, qorparchasi yoki spiral. Shuningdek, yangi "penWidth" blokini sinab ko''ring. Zavqlaning!'
     video:
       name:
+        maze_intro: Labirint. Kirish
+        artist_intro: Rassom. Kirish
+        farmer_intro: Fermer. Kirish
+        flappy_intro: Flappy. Kirish
         loop_times: Marta takrorlash blok
         loop_until: '-gacha takrorlash blok'
         if: Agar blogi
+        if_else: If/else bloki
+        if_else_scrat: If/else bloki
         function: Funksiyalar
         loop_while: Toki blogi
         loop_for: Sanovchi blok
         parameters: Funksiyalar (parameterlari bilan)
+        hoc_wrapup: Dasturlash soatini yakunlash
+        Unplug1: CS nima?
         Unplug2: Dasturiy fikrlash
         Unplug3: Katakchali varaqda dasturlash
         Unplug4: Algoritmlar
@@ -106,29 +208,121 @@ uz:
         Unplug10: Internet
         Unplug11: Yakun
         C1_happy_maps_unplugged: Xursand Xaritalar
+        C1_moveitmoveit_unplugged: Move It, Move It (Harakatlan)
         C1_bigevent_unplugged: Katta hodisa
         C1_getting_loopy: Sikllashtirish
+        C1_pair_programming: Juftlikda dasturlash
+        C1_maze_intro_sequencing: Labirint ketma-ketliklari. Kirish
+        C1_maze_debugging: 'Labirint: Debugging'
+        C1_bee_level_intro: Asalari darajalari. Kirish
+        C1_artist_intro: Rassom. Kirish
+        C1_spelling_bee_intro: Talaffuz qiluvchi asalari. Kirish
+        C1_zuck_repeat_loop: Labirint. Sikllar
+        C1_bee_loops: Asalari. Sikllar
+        C1_maze_loops: Labirint. Sikllar
+        C1_playlab_storytelling: Play Lab - hikoya yarating
+        C1_planting_seed: Urug‘ ekish
         C1_building_foundation: Poydevor qurish
         C1_going_places_safely: Joylarga xavfsiz borish
+        C2_maze_intro: Labirint. Kirish
+        C2_artist_intro: Rassom. Kirish
+        C2_zuck_repeat_loop: Labirint. Sikllar
+        C2_artist_loops: Rassom. Sikllar
+        C2_artist_debugging: Rassom. Debugging
+        C2_bee_loops: Asalari. Sikllar
+        C2_bee_debugging: Asalari. Debugging
+        C2_bee_conditionals: Asalari. Shartli bayonotlar
+        C2_playlab_createstory: Play Lab - hikoya yarating
         C2_graph_paper: Katakchali varaqda dasturlash
         C2_conditionals_with_cards: Shartli bayonotlar
         C2_binary_bracelets: Ikkilik bilakuzuklar
         C2_relay_programming: Estafetali dasturlash
+        C2_paper_airplanes: Qog‘oz Samolyotlar
         C2_digital_footprint: Raqamli izlaringiz
         C2_digital_footprint_v2: Raqamli izlaringiz
+        C3_maze_level_4: Labirint. Sikllar
+        C3_artist_intro: Rassom. Kirish
+        C3_artist_functions: Rassom. Funksiyalar
+        C3_bee_functions: Asalari. Funksiyalar
+        C3_bee_conditionals: Asalari. Shartli bayonotlar
+        C3_maze_conditionals: Labirint. Shartli bayonotlar
+        C3_artist_nested_loops: Ichma-ich sikllar
+        C3_farmer_while: While sikllari
+        C3_bee_nested_loops: Ichma-ich sikllar
+        C3_bee_debugging: Asalari. Debugging
         C3_bounce: Sakrash
+        C3_playlab_create_game: Play Lab - hikoya yarating
         C3_computational_thinking: Dasturiy fikrlash
+        C3_dice_race: Dice Race - Shashqoltoshli poyga
         C3_internet: Internet
         C3_crowdsourcing: Kraudsorsing
         C3_functional_suncatchers: Funksional "quyosh ovchilari"
+        C3_songwriting_with_parameters: Parametrlar bilan qo'shiq yozish
+        C4_intro: Kirish
         C4_loops_zombie: Sikllar
+        C4_bee_conditional: Asalari. Shartli bayonotlar
+        C4_variables_artist: O'zgaruvchilar - Rassom
+        C4_variables_playlab: O‘zgaruvchilar - Play Lab 
+        C4_for_loops: For sikllari
+        C4_for_loops_bee: For sikllari
+        C4_for_loops_no_bee: For sikllari
+        C4_math_artist: Rassomni matematika bilan dasturlash
+        C4_function_edit: Funksiyalarni tahrirlash
+        C4_function_create: Funksiyalar yaratish
         C4_function_parameters: Funksiyalar (parameterlari bilan)
         C4_conditionals: Shartli bayonotlar
+        C4_unplugged_algorithms: Tangramlar bilan Algoritmlar
+        C4_unplugged_madlibs: '"Mad Glibs" o''yini'
+        C4_unplugged_variables: Konvertlardagi o'zgaruvchilar
+        C4_unplugged_forloops: For sikllari
+        C4_unplugged_parameters: Parametrlar bilan qo'shiq yozish
+        C4_unplugged_binary: Binarli
+        CSF_a_b_artist_loops: Rassom bilan sikllar
+        CSF_artist_angles: Rassom bilan burchaklar
+        CSF_collector_k1_blocks: 'CS asoslari: Kollektor'
+        CSF_collector_repeat_loops: Kollektor. Takroriy sikllar
+        CSF_collector_text_blocks: 'CS asoslari: Kollektor'
+        CSF_create_functions: Funksiyalar yaratish
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
+        CSF_EF_cs_matters: Kompyuter fanlari ahamiyatli
+        CSF_maze_intro_k1_blocks: Code Studio. Kirish
+        CSF_maze_intro_text_blocks: Code Studio. Kirish
+        CSF_Power_of_Words: So'zning kuchi
+        CSF_Super_Digital_Citizen: Super Raqamli Fuqarolik
+        CSF_stevie_big_project: Stivi va Katta loyiha
+        CSF_unspotted_bugs: Belgilanmagan baglar
+        CSF_zuck_loops_short: '"Repeat" sikllari'
+        frozen_intro: Dasturlash soati. Kirish
+        frozen_loops: Sikllar bilan tanishish
+        frozen_functions: Funksiyalar bilan tanishish
+        playlab_intro: Play Lab bilan tanishish
+        playlab_events: Play Lab Hodisalar
+        playlab_repeat_forever: Play Lab abadiy takrorlash
+        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
+        infinity_playlab_intro: Play Lab - Kirish
+        infinity_playlab_events: Play Lab - Hodisalar
+        infinity_playlab_repeat_forever: Play Lab - Abadiy takrorlash
+        csd_concept_how_computers_work: Kompyuterlar qanday ishlashi haqida tushuncha
+        csd_concept_computer: 'Kompyuterlar qanday ishlaydi: Kompyuterni kompyuter qiladigan nima?'
+        csd_concept_binary_data: 'Kompyuterlar qanday ishlaydi: Binarlik va ma''lumotlar'
+        csd_concept_circuits_logic: 'Kompyuterlar qanday ishlaydi: Sxemalar va mantiq'
+        csd_concept_memory_cpu_input_output: 'Kompyuterlar qanday ishlaydi: Xotira, CPU, kirish va chiqish qurilmalari'
+        csd_concept_hardware_software: 'Kompyuterlar qanday ishlaydi: Hardware & Software'
+        csd_concept_search: Qidiruv qanday ishlaydi
+        csd_external_amazon_data: Hayotimizni o'zgartirish uchun Amazon tavsiyalari tizimlarida qanday qilib katta ma'lumotlar ishlatiladi
+        csd_external_netflix_data: Netflix teleko'rsatuv va kino tavsiyalarini qanday tayyorlaydi?
+        csd_external_waze_data: Nima uchun juda ko'p foydalanuvchilar Waze bilan ovora?
+        csd_gamelab_animation_tab: Animatsiya yorlig'i
+        csd_gamelab_velocity: Tezlik
+        csp_applab_functions: Funksiyalar bilan tanishish
         csp_applab_functions_parameters: Funksiyalar (parameterlari bilan)
         csp_applab_loops: Sikllar
         csp_cs_is_changing_everything: Kompyuter fanlari hamma narsani o‘zgartirmoqda
         CSF_loops_AB: Sikllar
         c_and_c_great_to_create: Yaratish va Adolatli bo‘lish yaxshi.
         c_and_c_digital_sharing: Raqamli Ulashish
+        csd_pair_programming: Juftlikda dasturlash
         csd_applab_parameters: Funksiyalar (parameterlari bilan)
+        csd_debugging: Debugging
         csf_private_and_personal_information: Maxfiy va Shaxsiy ma'lumotlar

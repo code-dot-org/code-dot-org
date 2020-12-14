@@ -9,8 +9,22 @@ uz:
         csd_2020_category_name: Kompyuter fanlari kashfiyotlari ('20-'21)
         csd_pilot_category_name: Kompyuter fanlari kashfiyotlari (Pilot versiya)
         csf_category_name: CS asoslari
+        csf_2018_category_name: CS Fundamentals  - Kompyuter fanlari asoslari (18-19)
+        csf_2019_category_name: CS Fundamentals  - Kompyuter fanlari asoslari (19-20)
+        csf_2020_category_name: CS Fundamentals  - Kompyuter fanlari asoslari (20-21)
+        csf_international_category_name: Xalqaro Kompyuter fanlari asoslari
+        csp_category_name: Kompyuter fanlari tamoyillari ('15-'16)
+        csp_2018_category_name: Kompyuter fanlari tamoyillari ('18-'19)
+        csp_2019_category_name: Kompyuter fanlari tamoyillari ('19-'20)
+        csp_2020_category_name: Kompyuter fanlari tamoyillari ('20-'21)
+        cspexams_category_name: Kompyuter fanlari tamoyillari Amaliy test
+        csp17_category_name: Kompyuter fanlari tamoyillari ('17-'18)
+        full_course_category_name: To'liq kurslar
         hoc_category_name: Dasturlash soati
         math_category_name: Matematik
+        research_studies_category_name: Tadqiqotli ta'lim
+        twenty_hour_category_name: 20 Soat
+        tts_category_name: O'qish uchun matn
         other_category_name: Boshqa
       name:
         course1:
@@ -20,6 +34,10 @@ uz:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Getting Loopy:
+              name: Sikllashtirish
+            Going Places Safely:
+              name: Joylarga xavfsiz borish
             Happy Maps:
               name: Xursand Xaritalar
             'Maze: Debugging':
@@ -32,21 +50,33 @@ uz:
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
             Spelling Bee:
               name: Bilimdon Ari
+            The Big Event:
+              name: Katta hodisa
         course2:
           title: Kurs 2
           description_short: O‘qishni biladiganlar uchun kompyuter fanlariga kirish
           description_audience: Yosh 6+ (o‘qish talab etiladi)
           lessons:
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
             Conditionals:
               name: Shartli bayonotlar
             Flappy:
               name: Flappy
+            Getting Loopy:
+              name: Sikllashtirish
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
             'Maze: Sequence':
               name: 'Labirint: Ketma-ketlik'
+            'Real-life Algorithms: Paper Planes':
+              name: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
             Relay programming:
               name: Estafetali dasturlash
+            The Big Event:
+              name: Katta hodisa
+            Your Digital Footprint:
+              name: Raqamli izlaringiz
         course3:
           title: Kurs 3
           description_short: O'yinlar va interaktiv hikoyalar dasturlashga yanada
@@ -61,8 +91,12 @@ uz:
               name: Dasturiy fikrlash
             Crowdsourcing:
               name: Kraudsorsing
+            Dice Race:
+              name: Dice Race - Shashqoltoshli poyga
             Digital Citizenship:
               name: Raqamli Fuqarolik
+            Functional Suncatchers:
+              name: Funksional "quyosh ovchilari"
             Internet:
               name: Internet
             Songwriting:
@@ -103,6 +137,10 @@ uz:
               name: 'Labirint: Ketma-ketlik'
         usability:
           lessons:
+            Binary:
+              name: Binarli
+            For Loops:
+              name: For sikllari
             Variables:
               name: O‘zgaruvchilar
         algebra:
@@ -210,6 +248,12 @@ uz:
           lessons:
             Text Compression:
               name: Matnni Zichlash
+        cspunit3:
+          lessons:
+            Creating Functions:
+              name: Funksiyalar yaratish
+            While Loops:
+              name: While sikllari
         algebraPD3:
           lessons:
             The Design Recipe:
@@ -296,8 +340,12 @@ uz:
               name: Yakun
         asUnplugged:
           lessons:
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
             Building a Foundation:
               name: Poydevor qurish
+            Getting Loopy:
+              name: Sikllashtirish
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
             Happy Maps:
@@ -308,10 +356,16 @@ uz:
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
             Songwriting:
               name: Qo'shiq yozish
+            The Big Event:
+              name: Katta hodisa
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
               name: Xulosa
+        cspunit3temp:
+          lessons:
+            While Loops:
+              name: While sikllari
         starwars:
           description: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada
             o'z Star Wars o‘yiningizni yarating.
@@ -326,6 +380,7 @@ uz:
           title: Maynkraft Dasturlash soati
           description: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
             bloklaridan foydalaning.
+          description_short: Minecraft dunyosini kod orqali o'rganing.
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -338,24 +393,44 @@ uz:
           lessons:
             Text Compression:
               name: Matnni Zichlash
+        csp3-2017:
+          lessons:
+            Creating Functions:
+              name: Funksiyalar yaratish
         csp4-2017:
           lessons:
             Simple Encryption:
               name: Oddiy Shifrlash
+        csp5-2017:
+          lessons:
+            While Loops:
+              name: While sikllari
         CSDU3-Draft:
           lessons:
             Functions:
               name: Funksiyalar
+            Velocity:
+              name: Tezlik
         CSF_Secret_Sample:
           description_audience: 'Yosh: 8-18'
         allthehiddenthings:
           lessons:
             Game Lab:
               name: O‘yin laboratoriyasi
+        CSDU2-Draft:
+          lessons:
+            Peer Review:
+              name: Talabalarning o'zaro taqrizi
+        MikeTest:
+          lessons:
+            Artist Functions:
+              name: Rassom. Funksiyalar
         artistExemplar:
           description_audience: 'Yosh: 8-18'
         gradeKinder:
           lessons:
+            Debugging:
+              name: Debugging
             Events:
               name: Hodisalar
             Loops:
@@ -372,12 +447,16 @@ uz:
               name: Qo'shiq yozish
         grade1:
           lessons:
+            Debugging:
+              name: Debugging
             Events:
               name: Hodisalar
             Loops:
               name: Sikllar
             Loops Unplugged:
               name: Sikllar Kompyutersiz
+            Unspotted Bugs:
+              name: Belgilanmagan baglar
         grade5:
           lessons:
             Digital Citizenship:
@@ -394,10 +473,14 @@ uz:
               name: Yakun
         grade3:
           lessons:
+            Bee Debugging:
+              name: Asalari. Debugging
             Bounce:
               name: Sakrash
         csd3-2017:
           lessons:
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
             Variables:
@@ -410,20 +493,34 @@ uz:
           lessons:
             Flappy:
               name: Flappy
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
+            'Real-life Algorithms: Paper Planes':
+              name: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+            The Big Event:
+              name: Katta hodisa
         k5concepts:
           lessons:
+            Binary:
+              name: Binarli
             Conditionals:
               name: Shartli bayonotlar
             Events:
               name: Hodisalar
+            For Loops:
+              name: For sikllari
             Functions:
               name: Funksiyalar
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
             Loops:
               name: Sikllar
+            Nested Loops:
+              name: Ichma-ich sikllar
             Variables:
               name: O‘zgaruvchilar
+            While Loops:
+              name: While sikllari
         algebrapdnext:
           lessons:
             The Design Recipe:
@@ -438,6 +535,10 @@ uz:
               name: Oddiy Shifrlash
         csd2-2017:
           lessons:
+            Peer Review:
+              name: Talabalarning o'zaro taqrizi
+            Images in HTML:
+              name: HTMLda rasmlar
             Lists:
               name: Ro‘yxatlar
         minecraft:
@@ -453,14 +554,28 @@ uz:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
+            Loops in Artist:
+              name: Rassom bilan sikllar
+            Going Places Safely:
+              name: Joylarga xavfsiz borish
         courseb-draft:
           lessons:
+            Loops in Artist:
+              name: Rassom bilan sikllar
             'Real-life Algorithms: Plant a Seed':
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
+            Your Digital Footprint:
+              name: Raqamli izlaringiz
         coursec-draft:
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari,
             hikoya va o‘yinlaringizni yarating.
           lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
+            Your Digital Footprint:
+              name: Raqamli izlaringiz
             Building a Foundation:
               name: Poydevor qurish
         coursed-draft:
@@ -469,6 +584,10 @@ uz:
           lessons:
             Digital Citizenship:
               name: Raqamli Fuqarolik
+            Nested Loops:
+              name: Ichma-ich sikllar
+            Introduction:
+              name: Kirish
         coursee-draft:
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari,
             hikoya va o‘yinlaringizni yarating.
@@ -481,6 +600,8 @@ uz:
               name: Internet
             Crowdsourcing:
               name: Kraudsorsing
+            Introduction:
+              name: Kirish
             Conditionals:
               name: Shartli bayonotlar
         coursef-draft:
@@ -493,6 +614,10 @@ uz:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            Songwriting with Parameters:
+              name: Parametrlar bilan qo'shiq yozish
+            Introduction:
+              name: Kirish
         sports:
           lessons:
             Sports:
@@ -513,6 +638,10 @@ uz:
           lessons:
             Wrap-Up:
               name: Xulosa
+        csf2harvey:
+          lessons:
+            Binary:
+              name: Binarli
         sciencepd5:
           lessons:
             Wrap-Up:
@@ -521,18 +650,28 @@ uz:
           lessons:
             Lists:
               name: Ro‘yxatlar
+            For Loops:
+              name: For sikllari
             Map:
               name: Xarita
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
         workshop-gamelab:
           lessons:
+            Introduction:
+              name: Kirish
             Sprites:
               name: Spraytlar
             Input:
               name: Kiritish
+        coursed-ramp:
+          lessons:
+            Introduction:
+              name: Kirish
         coursee-ramp:
           lessons:
+            Introduction:
+              name: Kirish
             Conditionals:
               name: Shartli bayonotlar
             'Real Life Algorithms: Dice Race':
@@ -541,6 +680,8 @@ uz:
           lessons:
             Lists:
               name: Ro‘yxatlar
+            For Loops:
+              name: For sikllari
             Functions with Parameters:
               name: Funksiyalar (parameterlari bilan)
             Functions with Parameters_:
@@ -553,14 +694,20 @@ uz:
               name: Spraytlar
             Conditionals:
               name: Shartli bayonotlar
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
         csd3-old:
           lessons:
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
         csd2-draft:
           lessons:
+            Images in HTML:
+              name: HTMLda rasmlar
             Lists:
               name: Ro‘yxatlar
         csd3-chapters:
@@ -571,10 +718,22 @@ uz:
               name: Spraytlar
             Conditionals:
               name: Shartli bayonotlar
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
             'null':
               name: nol
+        coursef-ramp:
+          lessons:
+            Introduction:
+              name: Kirish
+        csd2-old:
+          lessons:
+            Images in HTML:
+              name: HTMLda rasmlar
+            Peer Review:
+              name: Talabalarning o'zaro taqrizi
         artist-and-bb8:
           lessons:
             Bounce:
@@ -587,6 +746,8 @@ uz:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
+            Loops in Artist:
+              name: Rassom bilan sikllar
         courseb-2017:
           title: Kurs B
           assignment_family_title: Kurs B
@@ -597,12 +758,19 @@ uz:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
+            Loops in Artist:
+              name: Rassom bilan sikllar
         coursec-2017:
           title: Kurs C
           assignment_family_title: Kurs C
           description_audience: 'Yosh: 6-10'
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari,
             hikoya va o‘yinlaringizni yarating.
+          lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+            Loops in Artist:
+              name: Rassom bilan sikllar
         coursed-2017:
           title: Kurs D
           assignment_family_title: Kurs D
@@ -610,6 +778,9 @@ uz:
           description_short: C kursidan tushunchalarni tezkor o‘rganib oling, so‘ngra
             algoritmlar, ichma-ich sikllar, shartli bayonotlar va boshqalar bilan
             o‘rganishni davom eting.
+          lessons:
+            Nested Loops:
+              name: Ichma-ich sikllar
         coursee-2017:
           title: Kurs E
           assignment_family_title: Kurs E
@@ -621,8 +792,14 @@ uz:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            Songwriting with Parameters:
+              name: Parametrlar bilan qo'shiq yozish
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
+            Nested Loops:
+              name: Ichma-ich sikllar
         coursef-2017:
           title: Kurs F
           assignment_family_title: Kurs F
@@ -632,10 +809,16 @@ uz:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
         express-2017:
           description_short: 'Kompyuter fanlariga kirish: boshlang''ich o''quv dasturlarining
             eng saralarini birlashtiradi.'
           lessons:
+            Introduction:
+              name: Kirish
+            Loops in Artist:
+              name: Rassom bilan sikllar
             Internet:
               name: Internet
             Digital Citizenship:
@@ -644,8 +827,12 @@ uz:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            Songwriting with Parameters:
+              name: Parametrlar bilan qo'shiq yozish
             Building a Foundation:
               name: Poydevor qurish
+            Nested Loops:
+              name: Ichma-ich sikllar
         pre-express-2017:
           title: Maktabgacha yoshdagilar uchun tezkor kurs
           description_short: 'Kichik yoshdagi o''quvchilar uchun informatika faniga
@@ -654,6 +841,8 @@ uz:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
+            Loops in Artist:
+              name: Rassom bilan sikllar
             Spelling Bee:
               name: Bilimdon Ari
         subgoal-labels-opt-in:
@@ -662,10 +851,18 @@ uz:
               name: boshqa
             Thanks:
               name: Rahmat
+        csp3-research-mxghyt:
+          lessons:
+            Creating Functions:
+              name: Funksiyalar yaratish
         e-f-ramp:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
+            Nested Loops:
+              name: Ichma-ich sikllar
             Conditionals:
               name: Shartli bayonotlar
             Private and Personal Information:
@@ -676,18 +873,36 @@ uz:
               name: Kraudsorsing
         new-d:
           lessons:
+            Introduction:
+              name: Kirish
+            Nested Loops:
+              name: Ichma-ich sikllar
             Digital Citizenship:
               name: Raqamli Fuqarolik
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
         new-express:
           lessons:
+            Introduction:
+              name: Kirish
+            Loops in Artist:
+              name: Rassom bilan sikllar
             Building a Foundation:
               name: Poydevor qurish
+            Nested Loops:
+              name: Ichma-ich sikllar
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: Rassom bilan sikllar
         new-e:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
             Conditionals:
               name: Shartli bayonotlar
             Private and Personal Information:
@@ -700,10 +915,18 @@ uz:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
             Envelope Variables:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            Songwriting with Parameters:
+              name: Parametrlar bilan qo'shiq yozish
+        csp3-staging:
+          lessons:
+            Creating Functions:
+              name: Funksiyalar yaratish
         pwc:
           lessons:
             Simple Encryption:
@@ -718,6 +941,12 @@ uz:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
+            Nested Loops:
+              name: Ichma-ich sikllar
+            Introduction:
+              name: Kirish
             Conditionals:
               name: Shartli bayonotlar
             Private and Personal Information:
@@ -730,14 +959,22 @@ uz:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
+            Introduction:
+              name: Kirish
             Envelope Variables:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            Songwriting with Parameters:
+              name: Parametrlar bilan qo'shiq yozish
         csd6-old:
           lessons:
             Lists:
               name: Ro‘yxatlar
+            For Loops:
+              name: For sikllari
         csd3-1819draft:
           lessons:
             Variables:
@@ -746,6 +983,8 @@ uz:
               name: Spraytlar
             Conditionals:
               name: Shartli bayonotlar
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
         csd3-2018:
@@ -756,6 +995,8 @@ uz:
               name: Spraytlar
             Conditionals:
               name: Shartli bayonotlar
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
         csd2-2018:
@@ -767,20 +1008,38 @@ uz:
           description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
           description_audience: 'Yosh: 4-7'
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: Belgilanmagan baglar
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stivi va Katta loyiha
             'Programming: Happy Maps':
               name: Xursand Xaritalar
+            Going Places Safely:
+              name: Joylarga xavfsiz borish
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stivi va Katta loyiha
         express-2018:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Katakchali varaqda dasturlash
+            Introduction:
+              name: Kirish
             Building a Foundation:
               name: Poydevor qurish
+            Nested Loops:
+              name: Ichma-ich sikllar
+            'Events: The Big Event':
+              name: Katta hodisa
+            'Loops: Getting Loopy':
+              name: Sikllashtirish
             'Functions: Songwriting':
               name: Qo'shiq yozish
             Envelope Variables:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
             'Unplugged: Binary':
               name: Ikkilik Rasmlar
             Internet:
@@ -797,6 +1056,10 @@ uz:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
+            Your Digital Footprint:
+              name: Raqamli izlaringiz
+            Move It, Move It:
+              name: Move It, Move It (Harakatlan)
             Copyright and Creativity:
               name: Yaratish va Adolatli bo‘lish yaxshi.
         coursed-2018:
@@ -805,6 +1068,8 @@ uz:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Katakchali varaqda dasturlash
+            Introduction:
+              name: Kirish
             Building a Foundation:
               name: Poydevor qurish
             Digital Citizenship:
@@ -823,6 +1088,12 @@ uz:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            'Loops: Getting Loopy':
+              name: Sikllashtirish
+            'Events: The Big Event':
+              name: Katta hodisa
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
         csd6-2018:
           lessons:
             Functions with Parameters:
@@ -835,6 +1106,8 @@ uz:
               name: Poydevor qurish
             'Loops: My Loopy Robotic Friends':
               name: Mening sikllashtirilgan Robot Do‘stlarim
+            Introduction:
+              name: Kirish
             Private and Personal Information:
               name: Maxfiy va Shaxsiy ma'lumotlar
             'Functions: Songwriting':
@@ -857,10 +1130,14 @@ uz:
               name: Poydevor qurish
             'Loops: My Loopy Robotic Friends':
               name: Mening sikllashtirilgan Robot Do‘stlarim
+            Introduction:
+              name: Kirish
             Envelope Variables:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            Songwriting with Parameters:
+              name: Parametrlar bilan qo'shiq yozish
         csp1-2018:
           lessons:
             The Internet:
@@ -869,18 +1146,36 @@ uz:
           lessons:
             Text Compression:
               name: Matnni Zichlash
+        csp3-2018:
+          lessons:
+            Creating Functions:
+              name: Funksiyalar yaratish
         csp4-2018:
           lessons:
             Simple Encryption:
               name: Oddiy Shifrlash
+        csp5-2018:
+          lessons:
+            While Loops:
+              name: While sikllari
         pre-express-2018:
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: Belgilanmagan baglar
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stivi va Katta loyiha
             'Real-life Algorithms: Plant a Seed':
               name: 'Hayotiy algoritmlar: Urug‘ ekish'
             Spelling Bee:
               name: Bilimdon Ari
+            Move It, Move It:
+              name: Move It, Move It (Harakatlan)
+            Your Digital Footprint:
+              name: Raqamli izlaringiz
             Copyright and Creativity:
               name: Yaratish va Adolatli bo‘lish yaxshi.
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stivi va Katta loyiha
         frozen-2018:
           lessons:
             Artist:
@@ -918,6 +1213,8 @@ uz:
           lesson_groups:
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -927,6 +1224,8 @@ uz:
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
             Envelope Variables:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
@@ -955,6 +1254,8 @@ uz:
               display_name: Sikllar
             csf_conditionals:
               display_name: Shartli bayonotlar
+            csf_binary:
+              display_name: Binarli
             csf_digcit:
               display_name: Raqamli Fuqarolik
           lessons:
@@ -977,11 +1278,17 @@ uz:
               display_name: Spraytlar
             csf_digcit:
               display_name: Raqamli Fuqarolik
+            csf_nested_loops:
+              display_name: Ichma-ich sikllar
             csf_functions:
               display_name: Funksiyalar
           lessons:
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
+            Nested Loops:
+              name: Ichma-ich sikllar
             Private and Personal Information:
               name: Maxfiy va Shaxsiy ma'lumotlar
             'Functions: Songwriting':
@@ -1006,6 +1313,8 @@ uz:
               display_name: Funksiyalar
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
             csf_sprites:
               display_name: Spraytlar
           lessons:
@@ -1015,6 +1324,8 @@ uz:
               name: Konvertli o'zgaruvchilar
             For Loop Fun:
               name: Zavqli For sikli
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1034,11 +1345,21 @@ uz:
           lesson_groups:
             csf_digcit:
               display_name: Raqamli Fuqarolik
+            csf_binary:
+              display_name: Binarli
             csf_loops:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
           lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+            Loops in Artist:
+              name: Rassom bilan sikllar
+            'Events: The Big Event':
+              name: Katta hodisa
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
             Powerful Passwords:
               name: Baquvvat parollar
             Picturing Data:
@@ -1058,6 +1379,10 @@ uz:
           lessons:
             'Programming: Happy Maps':
               name: Xursand Xaritalar
+            Going Places Safely:
+              name: Joylarga xavfsiz borish
+            Loops in Artist:
+              name: Rassom bilan sikllar
         courseb-2019:
           description_audience: 'Yosh: 5-8'
           lesson_groups:
@@ -1068,6 +1393,12 @@ uz:
             csf_events:
               display_name: Hodisalar
           lessons:
+            Move It, Move It:
+              name: Move It, Move It (Harakatlan)
+            Your Digital Footprint:
+              name: Raqamli izlaringiz
+            'Loops: Getting Loopy':
+              name: Sikllashtirish
             The Right App:
               name: To'g'ri ilova
         pre-express-2019:
@@ -1077,6 +1408,10 @@ uz:
             csf_events:
               display_name: Hodisalar
           lessons:
+            Move It, Move It:
+              name: Move It, Move It (Harakatlan)
+            Your Digital Footprint:
+              name: Raqamli izlaringiz
             Spelling Bee:
               name: Bilimdon Ari
         removed19:
@@ -1095,6 +1430,8 @@ uz:
               name: Spraytlar
             Conditionals:
               name: Shartli bayonotlar
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
         csd6-2019:
@@ -1117,10 +1454,18 @@ uz:
           lessons:
             Text Compression:
               name: Matnni Zichlash
+        csp3-2019:
+          lessons:
+            Creating Functions:
+              name: Funksiyalar yaratish
         csp4-2019:
           lessons:
             Simple Encryption:
               name: Oddiy Shifrlash
+        csp5-2019:
+          lessons:
+            While Loops:
+              name: While sikllari
         time4csdemo:
           lesson_groups:
             csf_sprites:
@@ -1130,6 +1475,8 @@ uz:
               name: Kraudsorsing
             Building a Foundation:
               name: Poydevor qurish
+            Loops in Artist:
+              name: Rassom bilan sikllar
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1214,16 +1561,30 @@ uz:
               name: Spraytlar
             Conditionals:
               name: Shartli bayonotlar
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
             Sprite Properties:
               name: Sprait hususiyatlari
+        csp3-pilot:
+          lessons:
+            Debugging:
+              name: Debugging
         csl-vn:
           lesson_groups:
             csf_loops:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+        peru-2019:
+          lessons:
+            Introduction:
+              name: Kirish
+            Loops in Artist:
+              name: Rassom bilan sikllar
+            Nested Loops:
+              name: Ichma-ich sikllar
         k5-onlinepd-2019:
           lessons:
             Computer Science Fundamentals:
@@ -1238,6 +1599,8 @@ uz:
               name: Funksiyalar
             Variables:
               name: O‘zgaruvchilar
+            For Loops:
+              name: For sikllari
         dance-extras-2019:
           description: Kengaytirilgan loyiha g‘oyalari bilan Dasturlash soatidan keyin
             davom eting.
@@ -1265,6 +1628,8 @@ uz:
               display_name: Raqamli Fuqarolik
             csf_conditionals:
               display_name: Shartli bayonotlar
+            csf_nested_loops:
+              display_name: Ichma-ich sikllar
             csf_functions:
               display_name: Funksiyalar
           lessons:
@@ -1338,6 +1703,8 @@ uz:
               name: Sprait hususiyatlari
             Conditionals:
               name: Shartli bayonotlar
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
             Text:
@@ -1355,6 +1722,8 @@ uz:
             csf_events:
               display_name: Hodisalar
           lessons:
+            Going Places Safely:
+              name: Joylarga xavfsiz borish
             'Programming: Happy Maps':
               name: Xursand Xaritalar
         courseb-2020:
@@ -1367,6 +1736,12 @@ uz:
             csf_events:
               display_name: Hodisalar
           lessons:
+            Your Digital Footprint:
+              name: Raqamli izlaringiz
+            Move It, Move It:
+              name: Move It, Move It (Harakatlan)
+            'Loops: Getting Loopy':
+              name: Sikllashtirish
             The Right App:
               name: To'g'ri ilova
         coursec-2020:
@@ -1376,6 +1751,8 @@ uz:
           lesson_groups:
             csf_digcit:
               display_name: Raqamli Fuqarolik
+            csf_binary:
+              display_name: Binarli
             csf_loops:
               display_name: Sikllar
             csf_events:
@@ -1383,6 +1760,10 @@ uz:
           lessons:
             Powerful Passwords:
               name: Baquvvat parollar
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
+            'Events: The Big Event':
+              name: Katta hodisa
             Picturing Data:
               name: Ma'lumotlarni tasvirlash
         coursed-2020:
@@ -1394,6 +1775,8 @@ uz:
               display_name: Sikllar
             csf_conditionals:
               display_name: Shartli bayonotlar
+            csf_binary:
+              display_name: Binarli
             csf_digcit:
               display_name: Raqamli Fuqarolik
           lessons:
@@ -1416,6 +1799,8 @@ uz:
               display_name: Spraytlar
             csf_digcit:
               display_name: Raqamli Fuqarolik
+            csf_nested_loops:
+              display_name: Ichma-ich sikllar
             csf_functions:
               display_name: Funksiyalar
           lessons:
@@ -1443,6 +1828,8 @@ uz:
               display_name: Raqamli Fuqarolik
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
             csf_sprites:
               display_name: Spraytlar
           lessons:
@@ -1473,8 +1860,13 @@ uz:
               display_name: Funksiyalar
             csf_variables:
               display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
             csf_sprites:
               display_name: Spraytlar
+          lessons:
+            Loops in Artist:
+              name: Rassom bilan sikllar
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -1484,16 +1876,32 @@ uz:
           lessons:
             Spelling Bee:
               name: Bilimdon Ari
+            Loops in Artist:
+              name: Rassom bilan sikllar
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Debugging
+        csp3-virtual:
+          lessons:
+            Creating Functions:
+              name: Funksiyalar yaratish
         jess-test-script:
           lessons:
             Tools:
               name: Asboblar
+            Debugging:
+              name: Debugging
         csp5-virtual:
           lessons:
+            While Loops:
+              name: While sikllari
             Variables:
               name: O‘zgaruvchilar
         virtual-holding-place:
           lessons:
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
         code-break:
@@ -1502,6 +1910,10 @@ uz:
               name: Algoritmlar
             Events:
               name: Hodisalar
+        csp5-virtual-part2:
+          lessons:
+            While Loops:
+              name: While sikllari
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -1514,6 +1926,8 @@ uz:
               name: Funksiyalar
             Variables:
               name: O‘zgaruvchilar
+            For Loops:
+              name: For sikllari
         csd3-virtual:
           lessons:
             Variables:
@@ -1526,6 +1940,8 @@ uz:
               name: Matn
             Conditionals:
               name: Shartli bayonotlar
+            Velocity:
+              name: Tezlik
             Functions:
               name: Funksiyalar
         ui-test-script-in-course-2017:
@@ -1552,3 +1968,11 @@ uz:
               name: Kurs B
             CS Discoveries:
               name: Kompyuter fanlari kashfiyotlari
+        ml-playground:
+          lessons:
+            ML Playground:
+              name: ML maydonchasi
+            ML Playground 2:
+              name: ML maydonchasi 2
+            intro:
+              name: Kirish

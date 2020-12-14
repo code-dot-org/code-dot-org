@@ -107,6 +107,7 @@ uz:
         title: Zavqli For sikli
         desc: Biz bilamizki,sikllar bizga narsalarni qayta-qayta bajarishga imkon beradi, ammo endi biz qo'shimcha tuzilishga ega sikllardan qanday foydalanishni o'rganamiz.
       SongwritingWithParameters:
+        title: Parametrlar bilan qo'shiq yozish
         desc: 'Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar (ba''zida protsedura deb ham yuritiladi) - bu kichik dastur bo''lib, undan kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars talabalarga intuitiv ravishda nima uchun ekanligini va kod qismlarini funksiyalarga birlashtirish qanchalik foydali amaliyot bo''lishi mumkinligiтш ga yordam tushunishga beradi.'
       BinaryImages:
         title: Ikkilik Rasmlar
@@ -194,6 +195,7 @@ uz:
         title: 'Hayotiy Algoritmlar: Zar bilan poyga'
         desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini taklif qiladi. Buning bir qismi sifatida talabalar zarlar poygasi o'yinining algoritmini aniqlaydilar va yozadilar.
       courseE_unplugged_songwritingParameters:
+        title: Parametrlar bilan qo'shiq yozish
         desc: Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish uchun qo'shiqdagi xor tushunchasidan foydalanadilar.
       courseE_unplugged_internet:
         title: Internet
@@ -214,6 +216,7 @@ uz:
         title: Zavqli For sikli
         desc: Biz bilamizki,sikllar bizga narsalarni qayta-qayta bajarishga imkon beradi, ammo endi biz qo'shimcha tuzilishga ega sikllardan qanday foydalanishni o'rganamiz.
       courseF_unplugged_songwritingParameters:
+        title: Parametrlar bilan qo'shiq yozish
         desc: 'Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar (ba''zida protsedura deb ham yuritiladi) - bu kichik dastur bo''lib, undan kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars talabalarga intuitiv ravishda nima uchun ekanligini va kod qismlarini funksiyalarga birlashtirish qanchalik foydali amaliyot bo''lishi mumkinligiтш ga yordam tushunishga beradi.'
       swipeRightPassThrough:
         title: Ishga qabul qilish senariylari sessiyasi
@@ -267,6 +270,8 @@ uz:
       BinaryBracelets_2018:
         title: Ikkilik bilakuzuklar
         desc: Talabalar bilakuzuklarni o'z ismining birinchi harfining ikkilik tasviri sifatida yaratadilar. Talabalar ma'lumotlarning bir nechta usulda namoyish etilishi va saqlanishi mumkinligini tushunib oladilar.
+      MoveItMoveIt_2018:
+        title: Move It, Move It (Harakatlan)
       courseB_unplugged_CnC_2018:
         title: Yaratish va Adolatli bo‘lish yaxshi.
         desc: Mualliflik huquqi va ijodkorlik bo'yicha guruh tomonidan kompyuter fanlari asoslariga berilgan holda, bu dars talabalarga ulashishning yaratuvchan jarayonini va ilhomlanishni tushunishga yordam berish uchun yaratilgan.   Shu bilan birga, ijodiy ifodani targ‘ib qilish va ijodiy ish bilan adolatli bo‘lish kerak.
@@ -351,6 +356,8 @@ uz:
       courseA_unplugged_loops_2019:
         title: Sikllar Kompyutersiz
         desc: Ushbu darsda siz sikllar haqida bilib olasiz!
+      MoveItMoveIt_2019:
+        title: Move It, Move It (Harakatlan)
       DigitalFootprint_2019:
         title: Raqamli izlaringiz
         desc: O'qituvchilar o'quvchilarga o'zlari haqida ma'lumotni Internetda joylashtirish raqamli iz yoki "trail" yaratishi, bu esa oqibatlarga olib kelishi haqidagi g'oyani tushuntirishadi.

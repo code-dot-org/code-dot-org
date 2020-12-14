@@ -14,6 +14,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini ham ko‘ring.</a>'
   csedweek_banner_teachers_text: "Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini ham ko‘ring."
   n_have_learned_an_hoc: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>o‘tganlar: #</h3>"
+  try_hoc_num_served: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>%{num} o‘tganlar: #</h3>"
   try_hoc_num_served_markdown: |-
     # Try an
 
@@ -28,6 +29,7 @@
   learn_now: "Hoziroq o‘rganing"
   petition_message: "Har bir maktabning har bir o‘quvchisida informatikani o‘rganish imkoniyati bo‘lishi kerak"
   petition_sign_message: 'Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga # qo‘shiling.'
+  petition_sign_message_num: "Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga %{num} qo‘shiling."
   petition_join_others: 'Boshqalarga # qo‘shiling'
   name: "Ismi"
   email: "E-mail"
@@ -391,7 +393,9 @@
   volunteer_engineer_submission_field_description_desc: "Informatika bo‘yicha tajribangiz va yaqiningizdagi o‘qituvchilarga qanday yordam bermoqchiligingiz haqida yozing."
   volunteer_engineer_submission_field_description_placeholder: "Tajriba va/yoki qatnashishni ta'riflash"
   volunteer_engineer_submission_header_private: "Ma'lumot saqlanib, hech qachon tarqatilmaydi"
+  volunteer_engineer_submission_field_email: "Elektron pochta manzili"
   volunteer_engineer_submission_field_email_desc: "Elektron pochtangiz hech qachon tarqatilmaydi, ammo sizga o‘qituvchilardan takliflarni jo‘natamiz."
+  volunteer_engineer_submission_field_email_placeholder: "Elektron pochta manzili"
   volunteer_engineer_submission_field_email_preference_privacy: "(Maxfiylik siyosatimizga qarang)"
   volunteer_engineer_submission_field_email_preference_yes: 'Ha'
   volunteer_engineer_submission_field_email_preference_no: 'yo‘q'
@@ -440,6 +444,9 @@
   dashboard_landing_new_k5courses: "Yangilik! Boshlang‘ich sinfdagilar uchun mashg‘ulotlarimizni sinab ko‘ring."
   dashboard_landing_useful_links: "Boshqa foydali havolalar"
   dashboard_landing_office_hours: "Shaxsan savol bering! Oylik video offis soatlarimizga tashrif buyuring."
+  dashboard_landing_print_certificates: "Ushbu kursni tugatgan talabalar uchun sertifikatlarni chop eting"
+  dashboard_landing_educator_blog: "Yangiliklar va bizning materiallarimizdagi yangilanishlar haqida Pedagog blogida o'qing"
+  dashboard_landing_video_player: "Maktabingizda yangi video pleyerimizni sinab ko'ring"
   dashboard_landing_progress_title: "Sinfning asosiy yutuqlari"
   dashboard_landing_progress_biggest: "Bu sizning eng katta bo‘limingiz uchun yutuqlaringiz."
   dashboard_landing_view_progress: "%{biggest_section} uchun o‘sishni ko‘rish"
@@ -461,7 +468,14 @@
   dashboard_navigation_lesson_plans_resources: "Dars rejasi va materiallari"
   dashboard_navigation_section: 'Bo‘lim: %{section_name}'
   dashboard_navigation_student: 'O‘quvchi: %{student_name}'
+  dashboard_progress_not_started: "boshlanmagan"
+  dashboard_progress_in_progress: "Jarayonda"
+  dashboard_progress_completed_too_many_blocks: "bajarildi, juda ko'p bloklar"
+  dashboard_progress_completed_perfect: "yakunlandi, mukammal"
+  dashboard_progress_furthest_level_attempted: "eng yuqori darajaga harakat qilindi"
+  dashboard_progress_submitted: "qabul qilingan"
   dashboard_sections_new_section: "Yangi bo‘lim"
+  dashboard_sections_table_pairing_allowed: "Juftlikda dasturlash"
   dashboard_sections_table_students: "Oʻquvchilar"
   dashboard_sections_name: 'Bo‘lim nomi'
   dashboard_sections_close: "Yopish"
@@ -494,6 +508,8 @@
   learn_more: "Hoziroq sinang"
   learn_sign_up_button: "Ro‘yxatdan o‘tish"
   learn_hoc_prizes: "Har bir o‘qituvchi uchun atalgan sovg‘alar haqida <a href=\"https://hourofcode.com/prizes\">xabardor bo‘ling</a>."
+  hoc2014_try_new_tutorial: "Beta-versiyadagi yangi \"Daturlash soati\" o'quv qo'llanmamizni sinab ko'ring"
+  hoc2014_try_frozen: "Muzlagan Anna va Elza bilan Rassom"
   previous: "Avvalgi"
   next: "Keyingi"
   codeorg_name: "Klassik labirint"
@@ -545,6 +561,7 @@
   text-compression_name: Matnni Zichlash
   applab_name: "Ilovalar laboratoriyasi"
   gamelab_name: "O‘yin laboratoriyasi"
+  applab_gradelevel: "13+ yosh"
   codeorg_gradelevel: "Yosh: 4-104"
   codeintl_gradelevel: "Yosh: 4-104"
   khan_gradelevel: "O'rta maktab +"
@@ -731,6 +748,7 @@
   robomind_beyond_platformtext: "Zamonaviy brauzerlar, Mobile web"
   processing_beyond_platformtext: "Zamonaviy brauzerlar"
   khan_beyond_shortdescription: "JavaScript bilan rasm chizishni o'rganing"
+  compatibility_unsupported_browser_markdown: "Brauzeringiz qo'llab-quvvatlanmaydi. Iltimos, brauzeringizni [qo'llab-quvvatlanadigan brauzerlarimizdan biriga](%{supported_browsers_url}) yangilang. Siz sahifani ko'rishga urinib ko'rishingiz mumkin, ammo funksionallik buzilishi mumkin."
   flappy_shortcode: "qanot qoqmoq"
   header_my_dashboard: "Mening boshqaruv panelim"
   header_courses: "Kurslar"
@@ -738,7 +756,16 @@
   header_project_gallery: "Loyihalar"
   header_sections: "Boʻlimlar"
   header_professional_learning: "Kasbiy ta'lim"
+  header_educate_overview: "Pedagog muxtasari"
+  header_educate_elementary: "Boshlang'ich maktab"
+  header_educate_middle: "O‘rta maktab"
+  header_educate_high: "Yuqori sinflar"
   header_educate_hoc: "Dasturlash soati"
+  header_educate_partner: "Bizning hamkorimiz bo'ling"
+  header_educate_beyond: "Code.org-dan tashqarida"
+  header_educate_inspire: "Talabani ilhomlantiring"
+  header_educate_community: "Onlayn hamjamiyat"
+  header_educate_tools: "Vositalar va videolar"
   header_about_us: "Biz haqimizda"
   header_about_leadership: "Yetakchilik"
   header_about_donors: "Donorlar"
@@ -758,6 +785,8 @@
   header_report_bug: "Muammo haqida xabar berish"
   header_legal_privacy: "Maxfiylik siyosati"
   header_legal_tos: "Xizmat shartlari"
+  header_tutorials: "Qo‘llanmalar"
+  header_documentation: "Hujjatlar"
   user_header_label: "Salom %{username}"
   user_header_team: "Jamoa"
   user_header_settings: "Akkaunt sozlamalari"
@@ -778,6 +807,7 @@
   applab_tile_start_tutorial: "Boshlash"
   applab_tile_teacher_guide: "O‘qituvchilar qo‘llanmasi bilan tanishing"
   aquatic_name: 'Minecraft: Suvga sayohat'
+  account_sign_up_email_opt_in: "Sizga elektron pochta orqali bizning kurslarimiz, mahalliy imkoniyatlarimiz yoki boshqa kompyuter fanlari yangiliklari to‘g‘risida xabar yuborishimiz mumkinmi? (taxminan bir oyda bir marta)"
   account_sign_up_child_accept_terms: "Code.org xizmatlaridan foydalanish uchun ota-onam yoki qonuniy vakilimning ruxsati borligini tasdiqlayman."
   hoc_overview_dance_subtitle: "Do‘stlaringiz bilan ulashish uchun Raqslar bazmini dasturlang. Keti Perri, Madonna, J. Balvin, Sia, Kit Urban, Siyara va yana 25 dan ziyod yulduzlar ishtiroki bilan!"
   hoc_overview_title: "Code.org saytidan Dasturlash soati mashg‘ulotlari"

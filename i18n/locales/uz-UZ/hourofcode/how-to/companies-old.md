@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Bir soatlik kodni qanday o‘tkazish kerak - Kompaniyalar
 ---
 
 {{ signup_button }}
