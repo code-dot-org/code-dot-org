@@ -1,0 +1,16 @@
+name 'csp-u2-exam1-tcp_2021'
+height 'auto'
+
+question 'Which of the following Internet protocols is MOST important in reassembling packets and requesting missing packets to form complete messages?'
+right 'Transmission Control Protocol (TCP)'
+wrong 'Internet Protocol (IP)'
+wrong 'User Datagram Protocol (UDP)'
+wrong 'HyperText Transfer Protocol (HTTP)'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN
