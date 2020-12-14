@@ -108,7 +108,7 @@ export default class ProgressTableDetailCell extends React.Component {
                 smallBubble={true}
                 bonus={sublevel.bonus}
                 concept={sublevel.isConceptLevel}
-                title={sublevel.bubbleTitle}
+                title={sublevel.bubbleText}
                 url={this.buildBubbleUrl(sublevel)}
               />
             </div>
@@ -136,7 +136,7 @@ export default class ProgressTableDetailCell extends React.Component {
             bonus={level.bonus}
             paired={paired}
             concept={level.isConceptLevel}
-            title={level.bubbleTitle}
+            title={level.bubbleText}
             url={url}
           />
         </div>

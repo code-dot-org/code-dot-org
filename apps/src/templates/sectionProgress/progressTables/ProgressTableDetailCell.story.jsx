@@ -33,7 +33,7 @@ pairedProgress[levels[0].id].paired = true;
 
 const sublevels = fakeLevels(5);
 sublevels.forEach((sub, index) => {
-  sub.bubbleTitle = String.fromCharCode('a'.charCodeAt(0) + index);
+  sub.bubbleText = String.fromCharCode('a'.charCodeAt(0) + index);
 });
 const levelWithSublevels = fakeLevels(1)[0];
 levelWithSublevels.sublevels = sublevels;
