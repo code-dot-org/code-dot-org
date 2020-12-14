@@ -2,6 +2,7 @@
 # teacher-dashboard in pegasus and the api) to manipulate Followers,
 # which means joining and leaving Sections (see Follower and Section
 # models).
+
 class FollowersController < ApplicationController
   before_action :load_section
 
@@ -31,6 +32,7 @@ class FollowersController < ApplicationController
         return
       end
     end
+
     render 'student_user_new', formats: [:html]
   end
 
@@ -62,10 +64,6 @@ class FollowersController < ApplicationController
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
     unless @section && @section.user&.teacher?
-      # Adjust user properties to track failed section join attempts
-      if current_user
-        current_user.increment_section_attempts
-      end
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end
