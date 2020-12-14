@@ -1,0 +1,85 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:19:13.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,4,4,4,4],[0,4,4,4,4,4,4,4],[0,4,2,1,1,1,1,4],[0,4,4,4,4,3,1,4],[0,4,4,4,4,4,4,4],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "short_instructions": "Solve this level and get the bird to the pig!",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "ideal": "5",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "never_autoplay_video": "true",
+    "examples_required": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're stuck, try drawing the image on paper to see how the bird should move.\",\"hint_id\":\"courseA_maze_seq8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/814fa87d5c0a5ddc9d7813d4da543db5/courseA_maze_seq8.mp3\"}]",
+    "long_instructions": "Solve this level and get the bird to the pig!",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "tts_long_instructions_override": "Solve this level and get the bird to the pig!",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 21064,
+    "name_suffix": "_2021",
+    "top_level_procedure_autopopulate": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 22:39:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 19:22:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-23 21:17:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 15:08:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 15:36:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-04-05 02:05:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 02:05:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-05 02:30:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveNorth"/>
+        <block type="maze_moveSouth"/>
+        <block type="maze_moveEast"/>
+        <block type="maze_moveWest"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveEast">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>
