@@ -2,8 +2,6 @@ require 'aws-sdk-s3'
 require 'cdo/aws/s3'
 
 class Api::V1::MlModelsController < ApplicationController
-  skip_before_action :verify_authenticity_token
-
   S3_BUCKET = 'cdo-v3-trained-ml-models'
 
   # POST api/v1/ml_models/save
