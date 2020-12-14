@@ -1,0 +1,14 @@
+name 'HappyMaps-Unplugged_2021'
+video_key 'C1_happy_maps_unplugged'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Happy Maps
+
+Create an algorithm to move a character through a maze.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
