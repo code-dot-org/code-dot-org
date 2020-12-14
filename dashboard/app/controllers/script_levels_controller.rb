@@ -160,7 +160,6 @@ class ScriptLevelsController < ApplicationController
   end
 
   def self.get_script_level(script, params)
-    puts "inside get_script_level " + script.to_s + params.to_s
     if params[:chapter]
       script.get_script_level_by_chapter(params[:chapter])
     elsif params[:stage_position]
