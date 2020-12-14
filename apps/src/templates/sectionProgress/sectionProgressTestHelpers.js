@@ -160,7 +160,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -174,7 +174,7 @@ const scriptData = {
           icon: 'fa-file-text',
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: true,
           bonus: null
         },
@@ -188,7 +188,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -202,7 +202,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -216,7 +216,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -230,7 +230,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         }
@@ -270,7 +270,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -284,7 +284,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         }
@@ -324,7 +324,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -338,7 +338,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -352,7 +352,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -366,7 +366,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -380,7 +380,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: true,
           bonus: null
         },
@@ -394,7 +394,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -408,7 +408,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -422,7 +422,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -436,7 +436,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -446,7 +446,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/9/sublevel/1',
               name: 'CSD U3 drawing practice 1',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2911,
@@ -454,7 +454,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/9/sublevel/2',
               name: 'CSD U3 drawing practice 2',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2912,
@@ -462,7 +462,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/9/sublevel/3',
               name: 'CSD U3 drawing practice 3',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         },
@@ -476,7 +476,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null
         },
@@ -490,7 +490,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 11,
-          bubbleTitle: '11',
+          bubbleText: '11',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -500,7 +500,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/1',
               name: 'CSD U3 drawing challenge 2',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2907,
@@ -508,7 +508,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/2',
               name: 'CSD U3 drawing challenge 3',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2909,
@@ -516,7 +516,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/3',
               name: 'CSD U3 drawing challenge no fill_pilot',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 3047,
@@ -524,7 +524,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/4',
               name: 'CSD U3 picture_pilot',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             },
             {
               id: 2704,
@@ -532,7 +532,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/5',
               name: 'CSD U3 challenge face_pilot',
               icon: null,
-              bubbleTitle: 'e'
+              bubbleText: 'e'
             },
             {
               id: 2709,
@@ -540,7 +540,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/6',
               name: 'CSD U3 challenge new shape_pilot',
               icon: null,
-              bubbleTitle: 'f'
+              bubbleText: 'f'
             },
             {
               id: 2018,
@@ -548,7 +548,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/3/puzzle/11/sublevel/7',
               name: 'CSD U3 L3 Freeplay_pilot',
               icon: null,
-              bubbleTitle: 'g'
+              bubbleText: 'g'
             }
           ]
         }
@@ -588,7 +588,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -602,7 +602,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -616,7 +616,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -630,7 +630,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -644,7 +644,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -658,7 +658,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -672,7 +672,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -682,7 +682,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/7/sublevel/1',
               name: 'CSD U3 shapes behind_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 3208,
@@ -690,7 +690,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/7/sublevel/2',
               name: 'CSD U3 shapes missing_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 3210,
@@ -698,7 +698,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/7/sublevel/3',
               name: 'CSD U3 shapes scene_pilot',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         },
@@ -712,7 +712,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -726,7 +726,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -736,7 +736,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/1',
               name: 'CSD U3 shapes polygon_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 3211,
@@ -744,7 +744,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/2',
               name: 'CSD U3 shapes_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 3207,
@@ -752,7 +752,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/3',
               name: 'CSD U3 shapes line_pilot',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 3205,
@@ -760,7 +760,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/4',
               name: 'CSD U3 shapes arc_pilot',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             },
             {
               id: 3042,
@@ -768,7 +768,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/4/puzzle/9/sublevel/5',
               name: 'CSD U3 parameters shape scene_2020',
               icon: null,
-              bubbleTitle: 'e'
+              bubbleText: 'e'
             }
           ]
         }
@@ -808,7 +808,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -822,7 +822,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -836,7 +836,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -850,7 +850,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -864,7 +864,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -878,7 +878,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -892,7 +892,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -902,7 +902,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7/sublevel/1',
               name: 'CSD U3 Variables change circle size_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2448,
@@ -910,7 +910,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7/sublevel/2',
               name: 'CSD U3 Variables names_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2469,
@@ -918,7 +918,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7/sublevel/3',
               name: 'CSD U3 Variables unused_pilot',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 2444,
@@ -926,7 +926,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/7/sublevel/4',
               name: 'CSD U3 Variables forbidden names_pilot',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             }
           ]
         },
@@ -940,7 +940,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -954,7 +954,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -964,7 +964,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9/sublevel/1',
               name: 'CSD U3 Variables Draw Challenge_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2382,
@@ -972,7 +972,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9/sublevel/2',
               name: 'CSD U3 Variables Challenge_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2429,
@@ -980,7 +980,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9/sublevel/3',
               name: 'CSD U3 Variables String Challenge_pilot',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 2028,
@@ -988,7 +988,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/5/puzzle/9/sublevel/4',
               name: 'CSD U3 L5 Freeplay_pilot',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             }
           ]
         }
@@ -1028,7 +1028,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -1042,7 +1042,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -1056,7 +1056,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -1070,7 +1070,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -1084,7 +1084,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -1098,7 +1098,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -1108,7 +1108,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/6/sublevel/1',
               name: 'CSD U3 Random planets_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2192,
@@ -1116,7 +1116,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/6/sublevel/2',
               name: 'CSD U3 Random shape position_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         },
@@ -1130,7 +1130,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -1144,7 +1144,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -1154,7 +1154,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/1',
               name: 'CSD U3 Random rgb_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2151,
@@ -1162,7 +1162,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/2',
               name: 'CSD U3 Random add_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2167,
@@ -1170,7 +1170,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/3',
               name: 'CSD U3 Random multiply_pilot',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 2166,
@@ -1178,7 +1178,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/4',
               name: 'CSD U3 Random line_pilot',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             },
             {
               id: 2152,
@@ -1186,7 +1186,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/5',
               name: 'CSD U3 Random arc_pilot',
               icon: null,
-              bubbleTitle: 'e'
+              bubbleText: 'e'
             },
             {
               id: 2165,
@@ -1194,7 +1194,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/6/puzzle/8/sublevel/6',
               name: 'CSD U3 Random free play_pilot',
               icon: null,
-              bubbleTitle: 'f'
+              bubbleText: 'f'
             }
           ]
         }
@@ -1234,7 +1234,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -1248,7 +1248,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -1262,7 +1262,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -1276,7 +1276,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -1290,7 +1290,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -1304,7 +1304,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -1318,7 +1318,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: true,
           bonus: null
         },
@@ -1332,7 +1332,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -1346,7 +1346,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         },
@@ -1360,7 +1360,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -1370,7 +1370,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/1',
               name: 'CSD U3 Sprites missing_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2290,
@@ -1378,7 +1378,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/2',
               name: 'CSD U3 Sprites names_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2289,
@@ -1386,7 +1386,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/3',
               name: 'CSD U3 Sprites name sprite_pilot',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 2292,
@@ -1394,7 +1394,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/4',
               name: 'CSD U3 Sprites order_pilot',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             },
             {
               id: 2266,
@@ -1402,7 +1402,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/5',
               name: 'CSD U3 Sprites fish_pilot',
               icon: null,
-              bubbleTitle: 'e'
+              bubbleText: 'e'
             },
             {
               id: 2332,
@@ -1410,7 +1410,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/10/sublevel/6',
               name: 'CSD U3 Sprites sprite draw_pilot',
               icon: null,
-              bubbleTitle: 'f'
+              bubbleText: 'f'
             }
           ]
         },
@@ -1424,7 +1424,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 11,
-          bubbleTitle: '11',
+          bubbleText: '11',
           isConceptLevel: false,
           bonus: null
         },
@@ -1438,7 +1438,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 12,
-          bubbleTitle: '12',
+          bubbleText: '12',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -1448,7 +1448,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/12/sublevel/1',
               name: 'CSD U3 Sprites anitab 2_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2264,
@@ -1456,7 +1456,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/12/sublevel/2',
               name: 'CSD U3 Sprites draw animation_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2258,
@@ -1464,7 +1464,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/7/puzzle/12/sublevel/3',
               name: 'CSD U3 Sprites combine_pilot',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         }
@@ -1502,7 +1502,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -1516,7 +1516,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -1530,7 +1530,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -1544,7 +1544,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -1558,7 +1558,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -1568,7 +1568,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/5/sublevel/1',
               name: 'CSD Games bubble choice properties scale',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 714,
@@ -1576,7 +1576,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/5/sublevel/2',
               name: 'CSD Games bubble choice properties rotation',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         },
@@ -1590,7 +1590,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -1604,7 +1604,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -1614,7 +1614,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/7/sublevel/1',
               name: 'CSD U3 properties tint_pilot',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 3185,
@@ -1622,7 +1622,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/8/puzzle/7/sublevel/2',
               name: 'CSD U3 properties depth_pilot',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         }
@@ -1662,7 +1662,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -1676,7 +1676,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -1690,7 +1690,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -1704,7 +1704,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -1718,7 +1718,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -1728,7 +1728,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/5/sublevel/1',
               name: 'CSD U3 Sprites text debug_2018_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 4396,
@@ -1736,7 +1736,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/5/sublevel/2',
               name: 'CSD games text debug quotes',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         },
@@ -1750,7 +1750,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -1764,7 +1764,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -1774,7 +1774,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7/sublevel/1',
               name: 'CSD web text stroke',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 4425,
@@ -1782,7 +1782,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7/sublevel/2',
               name: 'CSD web challenge stroke',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 4426,
@@ -1790,7 +1790,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7/sublevel/3',
               name: 'CSD web challenge wrap text',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 4397,
@@ -1798,7 +1798,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/9/puzzle/7/sublevel/4',
               name: 'CSD games text freeplay',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             }
           ]
         }
@@ -1838,7 +1838,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -1852,7 +1852,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -1866,7 +1866,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -1880,7 +1880,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -1894,7 +1894,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -1908,7 +1908,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         }
@@ -1948,7 +1948,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -1962,7 +1962,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: true,
           bonus: null
         },
@@ -1976,7 +1976,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -1990,7 +1990,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -2004,7 +2004,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -2018,7 +2018,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -2032,7 +2032,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -2046,7 +2046,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -2056,7 +2056,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8/sublevel/1',
               name: 'CSD U3 Draw Loop Plugged wiggle sprite rotation_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 4382,
@@ -2064,7 +2064,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8/sublevel/2',
               name: 'CSD games draw debug blurry',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 4381,
@@ -2072,7 +2072,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8/sublevel/3',
               name: 'CSD games draw debug afterimage',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 4383,
@@ -2080,7 +2080,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/8/sublevel/4',
               name: 'CSD games draw debug not moving',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             }
           ]
         },
@@ -2094,7 +2094,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         },
@@ -2108,7 +2108,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -2118,7 +2118,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/10/sublevel/1',
               name: 'CSD U3 Draw Loop Plugged update your scene_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2038,
@@ -2126,7 +2126,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/11/puzzle/10/sublevel/2',
               name: 'CSD U3 L7 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         }
@@ -2166,7 +2166,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -2180,7 +2180,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -2194,7 +2194,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -2208,7 +2208,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -2222,7 +2222,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -2236,7 +2236,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -2250,7 +2250,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -2264,7 +2264,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -2274,7 +2274,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/8/sublevel/1',
               name: 'CSD U3 Watcher Predict_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2479,
@@ -2282,7 +2282,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/8/sublevel/2',
               name: 'CSD U3 Watcher Debug_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2081,
@@ -2290,7 +2290,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/8/sublevel/3',
               name: 'CSD U3 Movement Gears_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         },
@@ -2304,7 +2304,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         },
@@ -2318,7 +2318,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -2328,7 +2328,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/10/sublevel/1',
               name: 'CSD U3 Movement Fish challenge_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2065,
@@ -2336,7 +2336,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/10/sublevel/2',
               name: 'CSD U3 Movement Fish challenge2_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2044,
@@ -2344,7 +2344,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/12/puzzle/10/sublevel/3',
               name: 'CSD U3 L9 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         }
@@ -2384,7 +2384,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -2398,7 +2398,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -2412,7 +2412,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -2426,7 +2426,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -2440,7 +2440,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -2454,7 +2454,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -2468,7 +2468,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -2482,7 +2482,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         }
@@ -2522,7 +2522,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -2536,7 +2536,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -2550,7 +2550,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -2564,7 +2564,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -2578,7 +2578,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -2592,7 +2592,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -2606,7 +2606,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: true,
           bonus: null
         },
@@ -2620,7 +2620,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -2634,7 +2634,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -2644,7 +2644,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/9/sublevel/1',
               name: 'CSD U3 Boolean Modify_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 4379,
@@ -2652,7 +2652,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/9/sublevel/2',
               name: 'CSD games conditionals bowl',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 4380,
@@ -2660,7 +2660,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/9/sublevel/3',
               name: 'CSD games conditionals practice spaceship',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         },
@@ -2674,7 +2674,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null
         },
@@ -2688,7 +2688,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 11,
-          bubbleTitle: '11',
+          bubbleText: '11',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -2698,7 +2698,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/11/sublevel/1',
               name: 'CSD U3 - conditionals - first conditional 2_2018_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 1970,
@@ -2706,7 +2706,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/14/puzzle/11/sublevel/2',
               name: 'CSD U3 L11 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         }
@@ -2746,7 +2746,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -2760,7 +2760,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -2774,7 +2774,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -2788,7 +2788,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -2802,7 +2802,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -2816,7 +2816,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -2826,7 +2826,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/6/sublevel/1',
               name: 'CSD U3 Input Fish_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 4386,
@@ -2834,7 +2834,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/6/sublevel/2',
               name: 'CSD games input debug1',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 4387,
@@ -2842,7 +2842,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/6/sublevel/3',
               name: 'CSD games input debug2',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         },
@@ -2856,7 +2856,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -2870,7 +2870,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -2880,7 +2880,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/8/sublevel/1',
               name: 'CSD U3 - complex - key up and down_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 1690,
@@ -2888,7 +2888,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/8/sublevel/2',
               name: 'CSD U3 Direction Animations_2018_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 1976,
@@ -2896,7 +2896,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/15/puzzle/8/sublevel/3',
               name: 'CSD U3 L12 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         }
@@ -2936,7 +2936,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -2950,7 +2950,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -2964,7 +2964,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -2978,7 +2978,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -2992,7 +2992,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -3006,7 +3006,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -3020,7 +3020,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -3034,7 +3034,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -3044,7 +3044,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/8/sublevel/1',
               name: 'CSD games mouse mousey',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 4391,
@@ -3052,7 +3052,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/8/sublevel/2',
               name: 'CSD games practice move with mouse',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         },
@@ -3066,7 +3066,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         },
@@ -3080,7 +3080,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -3090,7 +3090,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/1',
               name: 'CSD games mouse scale',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2050,
@@ -3098,7 +3098,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/2',
               name: 'CSD U3 Mouse Input Bee 1_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2056,
@@ -3106,7 +3106,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/3',
               name: 'CSD U3 Mouse Input Bee 2_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 1441,
@@ -3114,7 +3114,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/4',
               name: 'CSD U3 - complex - mouse move_2020',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             },
             {
               id: 1982,
@@ -3122,7 +3122,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/16/puzzle/10/sublevel/5',
               name: 'CSD U3 L13 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'e'
+              bubbleText: 'e'
             }
           ]
         }
@@ -3162,7 +3162,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -3176,7 +3176,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -3190,7 +3190,7 @@ const scriptData = {
           icon: 'fa-file-text',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -3204,7 +3204,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -3218,7 +3218,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -3232,7 +3232,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -3246,7 +3246,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -3260,7 +3260,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -3274,7 +3274,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         }
@@ -3314,7 +3314,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -3328,7 +3328,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -3342,7 +3342,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -3356,7 +3356,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -3370,7 +3370,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -3384,7 +3384,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -3398,7 +3398,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -3412,7 +3412,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -3426,7 +3426,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -3436,7 +3436,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/9/sublevel/1',
               name: 'CSD U3 abstraction velocityY control_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 4399,
@@ -3444,7 +3444,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/9/sublevel/2',
               name: 'CSD games velocity bee',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         },
@@ -3458,7 +3458,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null
         },
@@ -3472,7 +3472,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 11,
-          bubbleTitle: '11',
+          bubbleText: '11',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -3482,7 +3482,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/11/sublevel/1',
               name: 'CSD games velocity 4 directions',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 1988,
@@ -3490,7 +3490,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/18/puzzle/11/sublevel/2',
               name: 'CSD U3 L15 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         }
@@ -3530,7 +3530,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -3544,7 +3544,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -3558,7 +3558,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -3572,7 +3572,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -3586,7 +3586,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -3600,7 +3600,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -3614,7 +3614,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -3624,7 +3624,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/7/sublevel/1',
               name: 'CSD U3 collision detection practice debugistouching',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2713,
@@ -3632,7 +3632,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/7/sublevel/2',
               name: 'CSD U3 collision detection challenge collider circle',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         },
@@ -3646,7 +3646,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -3660,7 +3660,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -3670,7 +3670,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/9/sublevel/1',
               name: 'CSD U3 collision detection challenge collider angle',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2718,
@@ -3678,7 +3678,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/9/sublevel/2',
               name: 'CSD U3 collision detection practice debugpoints',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 1994,
@@ -3686,7 +3686,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/19/puzzle/9/sublevel/3',
               name: 'CSD U3 L16 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         }
@@ -3726,7 +3726,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -3740,7 +3740,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -3754,7 +3754,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -3768,7 +3768,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -3782,7 +3782,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -3796,7 +3796,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -3810,7 +3810,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -3824,7 +3824,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -3838,7 +3838,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         }
@@ -3878,7 +3878,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -3892,7 +3892,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -3906,7 +3906,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -3920,7 +3920,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -3934,7 +3934,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -3948,7 +3948,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -3958,7 +3958,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/6/sublevel/1',
               name: 'CSD U3 abstraction accelerateY up_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 22354,
@@ -3966,7 +3966,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/6/sublevel/2',
               name: 'CSD U3 practice deceleration',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         },
@@ -3980,7 +3980,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -3994,7 +3994,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -4004,7 +4004,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/8/sublevel/1',
               name: 'CSD U3 complex sprite movement practice parabola',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2890,
@@ -4012,7 +4012,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/8/sublevel/2',
               name: 'CSD U3 complex sprite movement practice deceleration',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2000,
@@ -4020,7 +4020,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/21/puzzle/8/sublevel/3',
               name: 'CSD U3 L17 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             }
           ]
         }
@@ -4060,7 +4060,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -4074,7 +4074,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -4088,7 +4088,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -4102,7 +4102,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -4116,7 +4116,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -4130,7 +4130,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -4144,7 +4144,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -4154,7 +4154,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7/sublevel/1',
               name: 'CSD U3 collisions types_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 22295,
@@ -4162,7 +4162,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7/sublevel/2',
               name: 'CSD U3 collisions types2_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 22297,
@@ -4170,7 +4170,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7/sublevel/3',
               name: 'CSD U3 collisions types3_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 22299,
@@ -4178,7 +4178,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/7/sublevel/4',
               name: 'CSD U3 collisions types4_2020',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             }
           ]
         },
@@ -4192,7 +4192,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -4206,7 +4206,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -4216,7 +4216,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9/sublevel/1',
               name: 'CSD U3 collisions debug_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2861,
@@ -4224,7 +4224,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9/sublevel/2',
               name: 'CSD U3 collisions setCollider_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 2727,
@@ -4232,7 +4232,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9/sublevel/3',
               name: 'CSD U3 collisions bounciness_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 2006,
@@ -4240,7 +4240,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/22/puzzle/9/sublevel/4',
               name: 'CSD U3 L18 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             }
           ]
         }
@@ -4280,7 +4280,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -4294,7 +4294,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -4308,7 +4308,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -4322,7 +4322,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -4336,7 +4336,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -4350,7 +4350,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -4364,7 +4364,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -4378,7 +4378,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -4392,7 +4392,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         }
@@ -4432,7 +4432,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -4446,7 +4446,7 @@ const scriptData = {
           icon: 'fa-video-camera',
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: true,
           bonus: null
         },
@@ -4460,7 +4460,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -4474,7 +4474,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -4488,7 +4488,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -4502,7 +4502,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -4512,7 +4512,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6/sublevel/1',
               name: 'CSD U3 Functions Call Draw Loop_2020',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 1844,
@@ -4520,7 +4520,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6/sublevel/2',
               name: 'CSD U3 Functions Reset Sprite_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 1838,
@@ -4528,7 +4528,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6/sublevel/3',
               name: 'CSD U3 Functions Randomize Sprite_2020',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 1818,
@@ -4536,7 +4536,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/6/sublevel/4',
               name: 'CSD U3 Functions Create Function_2020',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             }
           ]
         },
@@ -4550,7 +4550,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -4564,7 +4564,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -4578,7 +4578,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         },
@@ -4592,7 +4592,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null
         },
@@ -4606,7 +4606,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 11,
-          bubbleTitle: '11',
+          bubbleText: '11',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -4616,7 +4616,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/11/sublevel/1',
               name: 'CSD U3 Functions challenge drawscene',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 2012,
@@ -4624,7 +4624,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/24/puzzle/11/sublevel/2',
               name: 'CSD U3 L19 Freeplay_2020',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             }
           ]
         }
@@ -4664,7 +4664,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -4678,7 +4678,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -4692,7 +4692,7 @@ const scriptData = {
           icon: 'fa-file-text',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -4706,7 +4706,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -4720,7 +4720,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -4734,7 +4734,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -4748,7 +4748,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -4762,7 +4762,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -4776,7 +4776,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         },
@@ -4790,7 +4790,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null
         },
@@ -4804,7 +4804,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 11,
-          bubbleTitle: '11',
+          bubbleText: '11',
           isConceptLevel: false,
           bonus: null
         },
@@ -4818,7 +4818,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 12,
-          bubbleTitle: '12',
+          bubbleText: '12',
           isConceptLevel: false,
           bonus: null
         },
@@ -4832,7 +4832,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 13,
-          bubbleTitle: '13',
+          bubbleText: '13',
           isConceptLevel: false,
           bonus: null
         },
@@ -4846,7 +4846,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 14,
-          bubbleTitle: '14',
+          bubbleText: '14',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -4856,7 +4856,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14/sublevel/1',
               name: 'CSD U3 AnimationsMulti defender background',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 1570,
@@ -4864,7 +4864,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14/sublevel/2',
               name: 'CSD U3 AnimationsMulti defender randomizespeed',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 1520,
@@ -4872,7 +4872,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14/sublevel/3',
               name: 'CSD U3 AnimationsMulti defender changevisuals',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 1533,
@@ -4880,7 +4880,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/25/puzzle/14/sublevel/4',
               name: 'CSD U3 AnimationsMulti defender endgame',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             }
           ]
         }
@@ -4920,7 +4920,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -4934,7 +4934,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -4948,7 +4948,7 @@ const scriptData = {
           icon: 'fa-file-text',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: true,
           bonus: null
         },
@@ -4962,7 +4962,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -4976,7 +4976,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -4990,7 +4990,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -5004,7 +5004,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -5018,7 +5018,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -5032,7 +5032,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         },
@@ -5046,7 +5046,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null
         },
@@ -5060,7 +5060,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 11,
-          bubbleTitle: '11',
+          bubbleText: '11',
           isConceptLevel: false,
           bonus: null
         },
@@ -5074,7 +5074,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 12,
-          bubbleTitle: '12',
+          bubbleText: '12',
           isConceptLevel: false,
           bonus: null
         },
@@ -5088,7 +5088,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 13,
-          bubbleTitle: '13',
+          bubbleText: '13',
           isConceptLevel: false,
           bonus: null
         },
@@ -5102,7 +5102,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 14,
-          bubbleTitle: '14',
+          bubbleText: '14',
           isConceptLevel: false,
           bonus: null
         },
@@ -5116,7 +5116,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 15,
-          bubbleTitle: '15',
+          bubbleText: '15',
           isConceptLevel: false,
           bonus: null
         },
@@ -5130,7 +5130,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 16,
-          bubbleTitle: '16',
+          bubbleText: '16',
           isConceptLevel: false,
           bonus: null
         },
@@ -5144,7 +5144,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 17,
-          bubbleTitle: '17',
+          bubbleText: '17',
           isConceptLevel: false,
           bonus: null
         },
@@ -5158,7 +5158,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 18,
-          bubbleTitle: '18',
+          bubbleText: '18',
           isConceptLevel: false,
           bonus: null
         },
@@ -5172,7 +5172,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 19,
-          bubbleTitle: '19',
+          bubbleText: '19',
           isConceptLevel: false,
           bonus: null
         },
@@ -5186,7 +5186,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 20,
-          bubbleTitle: '20',
+          bubbleText: '20',
           isConceptLevel: false,
           bonus: null
         },
@@ -5200,7 +5200,7 @@ const scriptData = {
           icon: 'fa fa-sitemap',
           isUnplugged: false,
           levelNumber: 21,
-          bubbleTitle: '21',
+          bubbleText: '21',
           isConceptLevel: false,
           bonus: null,
           sublevels: [
@@ -5210,7 +5210,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/1',
               name: 'CSD U3 platform challenge animationfacing',
               icon: null,
-              bubbleTitle: 'a'
+              bubbleText: 'a'
             },
             {
               id: 3067,
@@ -5218,7 +5218,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/2',
               name: 'CSD U3 platform challenge lives',
               icon: null,
-              bubbleTitle: 'b'
+              bubbleText: 'b'
             },
             {
               id: 3064,
@@ -5226,7 +5226,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/3',
               name: 'CSD U3 platform challenge differentitem',
               icon: null,
-              bubbleTitle: 'c'
+              bubbleText: 'c'
             },
             {
               id: 3068,
@@ -5234,7 +5234,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/4',
               name: 'CSD U3 platform challenge sidewalls',
               icon: null,
-              bubbleTitle: 'd'
+              bubbleText: 'd'
             },
             {
               id: 3062,
@@ -5242,7 +5242,7 @@ const scriptData = {
                 'http://localhost-studio.code.org:3000/s/csd3-2020/stage/26/puzzle/21/sublevel/5',
               name: 'CSD U3 platform challenge animations',
               icon: null,
-              bubbleTitle: 'e'
+              bubbleText: 'e'
             }
           ]
         }
@@ -5282,7 +5282,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -5296,7 +5296,7 @@ const scriptData = {
           icon: 'fa-file-text',
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: true,
           bonus: null
         },
@@ -5310,7 +5310,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -5324,7 +5324,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -5338,7 +5338,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         },
@@ -5352,7 +5352,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 6,
-          bubbleTitle: '6',
+          bubbleText: '6',
           isConceptLevel: false,
           bonus: null
         },
@@ -5366,7 +5366,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 7,
-          bubbleTitle: '7',
+          bubbleText: '7',
           isConceptLevel: false,
           bonus: null
         },
@@ -5380,7 +5380,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 8,
-          bubbleTitle: '8',
+          bubbleText: '8',
           isConceptLevel: false,
           bonus: null
         },
@@ -5394,7 +5394,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 9,
-          bubbleTitle: '9',
+          bubbleText: '9',
           isConceptLevel: false,
           bonus: null
         },
@@ -5408,7 +5408,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 10,
-          bubbleTitle: '10',
+          bubbleText: '10',
           isConceptLevel: false,
           bonus: null
         },
@@ -5422,7 +5422,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 11,
-          bubbleTitle: '11',
+          bubbleText: '11',
           isConceptLevel: false,
           bonus: null
         },
@@ -5436,7 +5436,7 @@ const scriptData = {
           icon: null,
           isUnplugged: false,
           levelNumber: 12,
-          bubbleTitle: '12',
+          bubbleText: '12',
           isConceptLevel: false,
           bonus: null
         },
@@ -5450,7 +5450,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 13,
-          bubbleTitle: '13',
+          bubbleText: '13',
           isConceptLevel: false,
           bonus: null
         }
@@ -5488,7 +5488,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: false,
           bonus: null
         }
@@ -5521,7 +5521,7 @@ const scriptData = {
           icon: 'fa-file-text',
           isUnplugged: false,
           levelNumber: 1,
-          bubbleTitle: '1',
+          bubbleText: '1',
           isConceptLevel: true,
           bonus: null
         },
@@ -5533,7 +5533,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 2,
-          bubbleTitle: '2',
+          bubbleText: '2',
           isConceptLevel: false,
           bonus: null
         },
@@ -5545,7 +5545,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 3,
-          bubbleTitle: '3',
+          bubbleText: '3',
           isConceptLevel: false,
           bonus: null
         },
@@ -5557,7 +5557,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 4,
-          bubbleTitle: '4',
+          bubbleText: '4',
           isConceptLevel: false,
           bonus: null
         },
@@ -5569,7 +5569,7 @@ const scriptData = {
           icon: 'fa fa-list-ul',
           isUnplugged: false,
           levelNumber: 5,
-          bubbleTitle: '5',
+          bubbleText: '5',
           isConceptLevel: false,
           bonus: null
         }
