@@ -169,8 +169,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def require_captcha
     return head :forbidden unless current_user
     site_key = CDO.recaptcha_site_key
-    should_display_captcha = current_user.display_captcha?
-    render json: {shouldDisplayCaptcha: should_display_captcha, key: site_key}
+    # TODO: debug and insert server side logic in user model for tracking section join attempts
+    # TODO: debug and insert server side logic in user model for tracking section join attempts
+    render json: {key: site_key}
   end
 
   private

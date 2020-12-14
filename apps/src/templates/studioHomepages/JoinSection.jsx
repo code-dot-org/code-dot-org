@@ -83,8 +83,8 @@ export default class JoinSection extends React.Component {
       url: '/api/v1/sections/require_captcha',
       dataType: 'json'
     }).done(data => {
-      const {shouldDisplayCaptcha, key} = data;
-      this.setState({shouldDisplayCaptcha, key});
+      const {key} = data;
+      this.setState({key});
     });
   };
 
