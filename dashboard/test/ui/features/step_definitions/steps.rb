@@ -1398,12 +1398,16 @@ And(/^I attempt to join the section$/) do
   }
 end
 
-And(/^I fill in the sign up form with invalid values for "([^"]*)"$/) do |name|
+And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |invalid, name|
+  password = invalid ? 'Short' : 'ExtraLong'
+  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+  age = "10"
   steps %Q{
     And I type "#{name}" into "#user_name"
-    And I type "#{name + '@testemail.com'}" into "#user_email"
-    And I type "#{name}" into "#user_password"
-    And I type "#{name}" into "#user_password_confirmation"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "#{age}" option in dropdown "user_age"
     And I click selector ".btn.btn-primary" once I see it
   }
 end
