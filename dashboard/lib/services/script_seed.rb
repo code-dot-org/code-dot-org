@@ -138,6 +138,7 @@ module Services
         levels_script_levels_data = data['levels_script_levels']
         resources_data = data['resources']
         lessons_resources_data = data['lessons_resources']
+        objectives_data = data['objectives']
         seed_context = SeedContext.new
 
         # The order of the following import steps is important. If B belongs_to
@@ -174,6 +175,7 @@ module Services
 
         seed_context.resources = import_resources(resources_data, seed_context)
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
+        seed_context.objectives = import_objectives(objectives_data, seed_context)
 
         seed_context.script
       end
@@ -376,6 +378,22 @@ module Services
 
       LessonsResource.import! lessons_resources_to_import, on_duplicate_key_update: get_columns(LessonsResource)
       LessonsResource.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    end
+
+    def self.import_objectives(objectives_data, seed_context)
+      objectives_to_import = objectives_data.map do |objective_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == objective_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        objective_attrs = objective_data.except('seeding_key')
+        objective_attrs['lesson_id'] = lesson_id
+        Objective.new(objective_attrs)
+      end
+
+      # Delete any existing Objectives that weren't in the imported list, and return those remaining.
+      existing_objectives = Objective.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+      Objective.import! objectives_to_import, on_duplicate_key_update: get_columns(Objective)
+      destroy_outdated_objects(Objective, existing_objectives, objectives_to_import, seed_context)
     end
 
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
