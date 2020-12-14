@@ -13,16 +13,20 @@ const styles = {
     width: progressStyles.BUBBLE_CONTAINER_WIDTH
   },
   main: {
-    ...progressStyles.flex,
     ...progressStyles.font,
     boxSizing: 'content-box',
+    letterSpacing: -0.11,
+    position: 'relative',
+    margin: '3px 0px'
+  },
+  large: {
+    ...progressStyles.flex,
+    fontSize: 16
+  },
+  largeCircle: {
     width: progressStyles.DOT_SIZE,
     height: progressStyles.DOT_SIZE,
-    borderRadius: progressStyles.DOT_SIZE,
-    fontSize: 16,
-    letterSpacing: -0.11,
-    margin: '3px 0px',
-    position: 'relative'
+    borderRadius: progressStyles.DOT_SIZE
   },
   largeDiamond: {
     width: progressStyles.DIAMOND_DOT_SIZE,
@@ -31,7 +35,7 @@ const styles = {
     transform: 'rotate(45deg)',
     margin: '6px 0px'
   },
-  small: {
+  smallCircle: {
     ...progressStyles.inlineBlock,
     width: progressStyles.LETTER_BUBBLE_SIZE,
     height: progressStyles.LETTER_BUBBLE_SIZE,
@@ -56,17 +60,11 @@ const styles = {
     backgroundColor: color.lighter_gray,
     color: color.white
   },
-  unpluggedContainer: {
+  unplugged: {
     ...progressStyles.flex,
     borderRadius: 20,
     padding: '6px 10px',
-    margin: '3px 0px',
-    position: 'relative'
-  },
-  unpluggedText: {
-    ...progressStyles.font,
-    fontSize: 12,
-    letterSpacing: -0.12
+    fontSize: 12
   }
 };
 
@@ -99,19 +97,26 @@ class ProgressTableLevelBubble extends React.PureComponent {
     };
   }
 
-  bigStyle() {
+  largeStyle() {
     const {disabled, bonus, concept} = this.props;
     return {
       ...this.mainStyle(),
-      ...(concept && styles.largeDiamond),
+      ...styles.large,
+      ...((concept && styles.largeDiamond) || styles.largeCircle),
       ...(disabled && bonus && styles.bonusDisabled)
     };
   }
 
   renderUnplugged() {
     return (
-      <div style={{...styles.unpluggedContainer, ...this.levelStyle()}}>
-        <div style={styles.unpluggedText}>{i18n.unpluggedActivity()}</div>
+      <div
+        style={{
+          ...styles.main,
+          ...styles.unplugged,
+          ...this.levelStyle()
+        }}
+      >
+        {i18n.unpluggedActivity()}
       </div>
     );
   }
@@ -120,7 +125,7 @@ class ProgressTableLevelBubble extends React.PureComponent {
     const {title} = this.props;
     return (
       <div>
-        <div style={{...this.mainStyle(), ...styles.small}}>{title}</div>
+        <div style={{...this.mainStyle(), ...styles.smallCircle}}>{title}</div>
       </div>
     );
   }
@@ -139,11 +144,11 @@ class ProgressTableLevelBubble extends React.PureComponent {
     );
   }
 
-  renderBigBubble() {
+  renderLargeBubble() {
     const {bonus, paired, concept} = this.props;
     return (
       <div style={styles.container}>
-        <div style={this.bigStyle()}>
+        <div style={this.largeStyle()}>
           <div
             style={{
               ...progressStyles.flex,
@@ -160,13 +165,18 @@ class ProgressTableLevelBubble extends React.PureComponent {
   }
 
   render() {
+    const bubble = this.props.smallBubble
+      ? this.renderSmallBubble()
+      : this.props.unplugged
+      ? this.renderUnplugged()
+      : this.renderLargeBubble();
+
+    if (this.props.disabled) {
+      return bubble;
+    }
     return (
       <a href={this.props.url} style={progressStyles.link}>
-        {this.props.smallBubble
-          ? this.renderSmallBubble()
-          : this.props.unplugged
-          ? this.renderUnplugged()
-          : this.renderBigBubble()}
+        {bubble}
       </a>
     );
   }
