@@ -640,6 +640,8 @@ sk:
               name: Tvorba funkcií
             Digital Assistant Project:
               name: Projekt Digitálny asistent
+            Introducing Design Mode:
+              name: Predstavenie dizajnového módu
             Introduction to Arrays:
               name: Úvod do zoskupení
             Introduction to Digital Assistants:
@@ -1216,6 +1218,8 @@ sk:
           lessons:
             Digital Assistant Project:
               name: Projekt Digitálny asistent
+            Introducing Design Mode:
+              name: Predstavenie dizajnového módu
             Introduction to Arrays:
               name: Úvod do zoskupení
             Introduction to Digital Assistants:
@@ -1317,6 +1321,8 @@ sk:
               name: Game Lab
         CSDU4-Draft:
           lessons:
+            Design Mode:
+              name: Dizajnový mód
             Analysis of Design:
               name: Analýza dizajnu
             Re-designing a Space:
@@ -5754,6 +5760,17 @@ sk:
                 prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
                 práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
                 občana.
+            Simulating Experiments:
+              name: Simulácia experimentov
+              description_student: Spusti simulácie na počítači a experimentuj zmenou
+                premenných.
+              description_teacher: 'Spustením jednoduchej simulácie v Sprite Lab si
+                študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje,
+                ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie
+                budú mať študenti možnosť predpovedať, ako môže zmena premennej v
+                simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.
+
+'
         dance-low:
           title: Tanečná Párty (slabé pripojenie)
           description_short: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
@@ -7245,6 +7262,10 @@ sk:
               display_name: Funkcie
             csp_project:
               display_name: Projekt
+        csp3-pilot-staging:
+          lessons:
+            'Project: Share Your App':
+              name: 'Projekt: Zdieľaj svoju appku'
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -7756,6 +7777,8 @@ sk:
             required:
               display_name: Prehľad
           lessons:
+            'Project: Share Your App':
+              name: 'Projekt: Zdieľaj svoju appku'
             Debugging:
               name: Hľadanie a odstraňovanie chýb
         csl-vn:
@@ -9227,6 +9250,17 @@ sk:
                 naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal
                 aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných
                 hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
+            Simulating Experiments:
+              name: Simulácia experimentov
+              description_student: Spusti simulácie na počítači a experimentuj zmenou
+                premenných.
+              description_teacher: 'Spustením jednoduchej simulácie v Sprite Lab si
+                študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje,
+                ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie
+                budú mať študenti možnosť predpovedať, ako môže zmena premennej v
+                simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.
+
+'
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
