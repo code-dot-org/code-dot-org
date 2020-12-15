@@ -25,7 +25,7 @@ module Foorm
     # POST foorm/form
     def create
       form_name = params[:name]
-      form_version = params[:version]
+      form_version = params[:version] || 0
 
       if Foorm::Form.where(name: form_name, version: form_version).any?
         return render(status: :conflict, plain: "Form with name #{form_name} and version #{form_version} already exists.")
@@ -65,7 +65,7 @@ module Foorm
 
     def save_form(form)
       if form.save
-        return render plain: "success"
+        return render json: {id: form.id}
       else
         return render status: :bad_request, json: form.errors
       end

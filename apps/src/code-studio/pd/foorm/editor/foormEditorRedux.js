@@ -25,7 +25,10 @@ export const setHasError = hasError => ({
 const initialState = {
   formQuestions: '',
   isFormPublished: null,
-  hasError: false
+  hasError: false,
+  formName: null,
+  formVersion: null,
+  formId: null
 };
 
 export default function foormEditorRedux(state = initialState, action) {
@@ -45,7 +48,10 @@ export default function foormEditorRedux(state = initialState, action) {
     return {
       ...state,
       formQuestions: action.formData['questions'],
-      isFormPublished: action.formData['published']
+      isFormPublished: action.formData['published'],
+      formName: action.formData['name'],
+      formVersion: action.formData['version'],
+      formId: action.formData['id']
     };
   }
 
