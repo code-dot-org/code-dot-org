@@ -491,8 +491,8 @@ it:
     un'attività</a> o leggi la nostra <a href='%{howto_guide_url}'>Guida pratica </a>
     per pianificare un evento per la tua classe.
   signup_registration_not_required_markdown: Non è necessario registrarsi per partecipare!
-    Le attività dell'Ora del Codice sono disponibili tutto l'anno. [Try an activity](%{hoc_activities_url})
-    o leggi la nostra [How-to guide](%{howto_guide_url}) per pianificare un evento
+    Le attività dell'Ora del Codice sono disponibili tutto l'anno. [Prova un'attività](%{hoc_activities_url})
+    o leggi la nostra [Guida pratica](%{howto_guide_url}) per pianificare un evento
     per la tua classe.
   signup_registration_closed: E ogni anno a dicembre, la tua classe può unirsi a milioni
     di studenti in tutto il mondo per celebrare la Computer Science Education Week
@@ -501,7 +501,7 @@ it:
   signup_header: |-
     Organizza un'Ora del Codice nel periodo %{campaign_date} e registrati qui.
 
-    Se sei in Italia, crea il tuo profilo attraverso il sito italiano di [Programma il Futuro](https://programmailfuturo.it), sarà tutto più semplice!
+    Se sei in Italia, crea il tuo profilo attraverso il sito italiano di Programma il Futuro, sarà tutto più semplice! www.programmailfuturo.it
   signup_name_label: Il tuo nome
   signup_name_error: Il Nome è richiesto.
   signup_email_label: Il tuo indirizzo di posta elettronica

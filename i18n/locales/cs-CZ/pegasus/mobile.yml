@@ -808,7 +808,7 @@
   learn_inspirational_videos: "Inspiruj studenty ukazováním<a href=\"https://code.org/educate/inspire\">těchto videí</a>"
   hoc2014_try_new_tutorials: "Vyzkoušejte naše nové návody pro Hodinu Kódu"
   hoc2014_try_new_tutorial: "Vyzkoušej náš nový výukový kurz Hour of Code v beta verzi"
-  hoc2014_try_scrat: "Angry Birds, PvZ a Scratch"
+  hoc2014_try_scrat: "Angry Birds, PvZ a Scrat"
   hoc2014_try_frozen: "Umělec s Annou a Elsa, od zmrazené"
   carousel_heading_codeorg: "Tutoriály od Code.org"
   carousel_heading_codeorg_any_device: "Cvičení na Code.org (pro všechna zařízení)"
@@ -1505,3 +1505,4 @@
   homepage_slot_text_blurb_at_home: "S těmito podklady to bude hračka"
   page_not_available_button: "Zpět domů"
   footer_powered_by_aws: "Poháněn Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Pouze anglicky"
