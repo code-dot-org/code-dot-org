@@ -3,7 +3,7 @@ uk:
     block_categories:
       Actions: Дії
       Advanced: Розширені
-      Behaviors: Поведінки
+      Behaviors: Поведінка
       Brushes: Кисті
       Color: Колір
       Comment: Коментар
@@ -12,7 +12,7 @@ uk:
       Dancers: Виконавці
       Default: Типова
       Events: Події
-      Functions: функції
+      Functions: Функції
       'Functions ': 'Функції '
       Game/Score: Гра / рахунок
       Games/Score: Ігри / рахунок
@@ -26,6 +26,6 @@ uk:
       Properties: Властивості
       Sprites: Спрайти
       Text: Текст
-      Variables: змінні
+      Variables: Змінні
       'Variables ': 'Змінні '
       World: Світ

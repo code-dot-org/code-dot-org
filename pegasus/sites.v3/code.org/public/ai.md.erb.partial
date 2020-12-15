@@ -102,73 +102,6 @@ In partnership with
 We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century.
 </div>
 
-<a id="ethics-panel"></a>
-<div class="col-100" style="width:100%; background-color:#ebe8f1; color:#696969; padding: 10px 40px 0px 40px; border-radius:15px;">
-  <h2 style="margin-bottom: 10px">Exploring the Ethics of AI</h2>
-  <h3 style="margin-top: 0; margin-bottom: 20px">Join some of our favorite AI experts for a panel discussion on Tuesday, December 8!</h3>
-  <p>We'll discuss some of the cool ways that AI is used, and touch on important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">AI & Ethics lesson plan</a> for a great introduction to the ethics of artificial intelligence!</p>
-  <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! <a href="https://www.addevent.com/event/by5617541" target="_blank">Add it to your calendar</a>, and then tune in on Zoom or stream on <a href="https://youtu.be/3oqxjPXbynE" target="_blank">YouTube</a>.</p>
-  <%== show_tune_in_link ?
-    '<a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09" target="_blank"><button>Tune in</button></a>' : ''
-  %>
-  <h3 style="margin-bottom:10px">Featuring:</h3>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
-    <img src="/images/avatars/amanda-askell.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
-    <p style="text-align:center">
-    <i>Panelist:</i>
-    <br>
-    <strong>Dr. Amanda Askell</strong>
-    <br>
-    Research Scientist in Policy, OpenAI
-    </p>
-  </div>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
-    <img src="/images/avatars/deb-raji-2.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
-    <p style="text-align:center">
-    <i>Panelist:</i>
-    <br>
-    <strong>Inioluwa Deborah Raji</strong>
-    <br>
-    AI Research Scientist & Mozilla Fellow
-    </p>
-  </div>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
-    <img src="/images/avatars/mehran-sahami.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
-    <p style="text-align:center">
-    <i>Panelist:</i>
-    <br>
-    <strong>Mehran Sahami</strong>
-    <br>
-    Professor and Associate Chair for Education in Computer Science, Stanford University
-    </p>
-  </div>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
-    <img src="/images/avatars/natasha-crampton.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
-    <p style="text-align:center">
-    <i>Panelist:</i>
-    <br>
-    <strong>Natasha Crampton</strong>
-    <br>
-    Chief Responsible AI Officer, Microsoft
-    </p>
-  </div>
-  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
-    <img src="/images/avatars/pat-panel.png" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
-    <p style="text-align:center">
-    <i>Moderator:</i>
-    <br>
-    <strong>Pat Yongpradit</strong>
-    <br>
-    Chief Academic Officer, Code.org
-    </p>
-  </div>
-  <div style="clear: both; margin-bottom: 20px"></div>
-
-</div>
-
-<div style="clear: both; margin-bottom: 20px"></div>
-<br>
-<br>
 
 <a id="ai-videos"></a>
 
@@ -220,6 +153,15 @@ We thank Microsoft for supporting our vision and mission to ensure every child h
 </div>
 
 <div style="clear: both"></div>
+
+<div class="col-100" style="width:100%; border: 1px solid #696969; color:#696969; padding: 30px 30px 20px 30px; border-radius:15px;">
+
+{{ ai_videos_panel }}
+
+</div>
+
+<br>
+
 <h3>Videos about AI from other organizations:</h3>
 <ul>
   <li><a href="https://youtu.be/DybczED-GKE" target="_blank">Seeing AI: Making the visual world more accessible</a> (3:27)</li>
