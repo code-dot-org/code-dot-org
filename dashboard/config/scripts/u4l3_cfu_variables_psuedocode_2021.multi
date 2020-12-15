@@ -1,0 +1,25 @@
+name 'U4L3 CFU Variables Psuedocode_2021'
+editor_experiment ''
+title 'AP Pseudocode: Variables'
+description ''
+wrong '2'
+wrong '5'
+right '6'
+wrong '8'
+
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how variable assignment questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below. 
+
+*Note: Some programming languages provide an abstraction through which the size of representable numbers is limited only by the size of the computer's memory. This is the case for the language defined in the exam reference sheet. Remember overflow from Unit 1? You don't need to worry about that when using this pseudocode!*
+
+![](https://images.code.org/d6fedddeaaac92b18aee34566fd11208-image-1568057349469.28.53 PM.png)
+
+## Practice Question
+
+What will be displayed after this code segment is run?
+
+![](https://images.code.org/7a23b0d66914dccc07c0818a5b459599-image-1568057423164.30.17 PM.png)
+MARKDOWN
