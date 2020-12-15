@@ -460,7 +460,7 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
+      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
@@ -754,13 +754,39 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
+  # Assign a firebase authentication token based on the firebase shared secret,
+  # plus either the dashboard user id or the rails session id. This is
+  # sufficient for rate limiting, since it uniquely identifies users.
+  #
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
+  def firebase_shared_auth_token
+    return nil unless CDO.firebase_shared_secret
+
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    payload = {
+      uid: user_or_session_id,
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
+    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
+
+    # TODO(dave): cache token generator across requests
+    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_shared_secret)
+    generator.create_token(payload, options)
+  end
+
   # Assign a firebase authentication token based on the firebase secret,
   # plus either the dashboard user id or the rails session id. This is
   # sufficient for rate limiting, since it uniquely identifies users.
   #
-  # TODO(dave): include the storage_id associated with the user id
-  # (if one exists), so auth can be used to assign appropriate privileges
-  # to channel owners.
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
