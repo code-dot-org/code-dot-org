@@ -1408,7 +1408,7 @@ And(/^I fill in the sign up form with (in)?valid values for "([^"]*)"$/) do |inv
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "#{age}" option in dropdown "user_age"
-    And I click selector ".btn.btn-primary" once I see it
+    And I click ".btn.btn-primary" to load a new page
   }
 end
 
