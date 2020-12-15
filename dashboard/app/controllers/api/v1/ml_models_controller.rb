@@ -1,7 +1,8 @@
 require 'aws-sdk-s3'
 require 'cdo/aws/s3'
 
-class Api::V1::MlModelsController < ApplicationController
+class Api::V1::MlModelsController < Api::V1::JsonApiController
+  skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
 
   # POST api/v1/ml_models/save
