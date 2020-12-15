@@ -5,7 +5,7 @@ title: Über uns
 # Über uns
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Unsere Vision ist, dass jeder Schüler in jeder Schule die Möglichkeit hat, Informatik zu lernen, genauso wie Biologie, Chemie oder Algebra. Wir bieten den am weitesten verbreiteten Lehrplan für den Informatikunterricht in der Grund- und Sekundarschule und organisieren auch die jährliche Kampagne <a href="https://hourofcode.com">Hour of Code</a>, mit der sich 10% aller Schülerinnen und Schüler in der Welt beschäftigen. Code.org wird von großzügigen Spendern unterstützt, darunter Amazon, Facebook, Google, die Infosys Foundation, Microsoft und <a href="/about/donors">vielen weiteren</a>.
+  Code.org® ist eine gemeinnützige Organisation, die den Zugang zur Informatik in Schulen ausweiten und die Teilnahme von Frauen und anderen Minoritäten fördern will. Unsere Vision ist, dass jeder Schüler in jeder Schule die Möglichkeit hat, Informatik zu lernen, genauso wie Biologie, Chemie oder Algebra. Wir bieten den am weitesten verbreiteten Lehrplan für den Informatikunterricht in der Grund- und Sekundarschule und organisieren auch die jährliche Kampagne <a href="https://hourofcode.com">Hour of Code</a>, mit der sich 10% aller Schülerinnen und Schüler in der Welt beschäftigen. Code.org wird von großzügigen Spendern unterstützt, darunter Amazon, Facebook, Google, die Infosys Foundation, Microsoft und <a href="/about/donors">vielen weiteren</a>.
 </div>
 
 [col-40]
@@ -37,11 +37,11 @@ Mehr als 40% unseres Websiteverkehrs kommen von außerhalb der Vereinigten Staat
 
 ## Übersetzung
 
-Möchtest Du direkten Einfluss auf Schüler in Deinem Land haben? Hilf uns, Code.org-Inhalte in Deiner Muttersprache verfügbar zu machen! Wenn Du uns bei der Übersetzung unserer Tutorials und Lektionen mithilfst, wirst Du Teil einer Gemeinschaft von mehr als 7.000 Übersetzern, die helfen, Informatik-Bildung zu Schülern in der ganzen Welt zu transportieren. Schau' Dir unsere [Übersetzungsanleitung](/translate) für weitere Informationen an.
+Möchtest Du direkten Einfluss auf Schüler in Deinem Land haben? Hilf uns, Code.org-Inhalte in Deiner Muttersprache verfügbar zu machen! Wenn Du uns bei der Übersetzung unserer Tutorials und Lektionen mithilfst, wirst Du Teil einer Gemeinschaft von mehr als 7.000 Übersetzern, die helfen, Informatik-Bildung zu Schülern in der ganzen Welt zu transportieren. Schau Dir unsere [Übersetzungsanleitung](/translate) für weitere Informationen an.
 
 ## Unsere Verpflichtung zu kostenlosen Lehrplänen und Open Source-Technologie
 
-Alle Kurs-Unterlagen und Tutorials, die wir erstellen, werden für immer frei sein und sind unter einer [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/)-Lizenz zu verwenden, so dass andere abgewandelte Bildungsunterlagen für nicht-kommerzielle Zwecke bereitstellen können. Wenn Sie sich für die Lizenzierung unserer Materialien für kommerzielle Zwecke interessieren, [kontaktieren](/contact) Sie uns. Unsere Kurse werden für den weltweiten Gebrauch oder für Vorträge in verschiedene Sprachen übersetzt. Unsere Technologie wird als [Open Source-Projekt](https://github.com/code-dot-org/code-dot-org) entwickelt.
+Alle Kurs-Unterlagen und Tutorials, die wir erstellen, werden für immer frei sein und sind unter einer [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/)-Lizenz zu verwenden, so dass andere abgewandelte Bildungsunterlagen für nicht-kommerzielle Zwecke bereitstellen können. Wenn Sie sich für die Lizenzierung unserer Materialien für kommerzielle Zwecke interessieren, [kontaktieren](/contact) Sie uns. Unsere Kurse werden für den weltweiten Gebrauch von Menschen übersetzt, die unterschiedliche Sprachen sprechen. Unsere Technologie wird als [Open Source-Projekt](https://github.com/code-dot-org/code-dot-org) entwickelt.
 
 <img alt="Schüler mit Laptop" src="/images/international/group_computer.jpg" width="100%" />
 

@@ -14400,3 +14400,11 @@ mn:
               name: Хичээл В
             CS Discoveries:
               name: КШУ-ны нээлтүүд
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Далайд зориулсан ХОУ
+            intro:
+              name: Танилцуулга
+            visualizing:
+              name: Өгөгдөл төсөөлж байна

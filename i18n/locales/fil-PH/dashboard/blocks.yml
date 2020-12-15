@@ -1177,6 +1177,8 @@ fil:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sa ilalim ng tubig
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: wala
+      gamelab_setBackgroundImageAs:
+        text: Itakda ang background sa {IMG}
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} sa {VAL}
         options:
@@ -1706,7 +1708,6 @@ fil:
             '"stoneBricks"': bato brick
             '"mossyStoneBricks"': mossy bato brick
             '"crackedStoneBricks"': basag bato brick
-            '"decorativeStoneBricks"': pandekorasyon bato brick
             '"blueCoralBlock"': Blue coral block
             '"pinkCoralBlock"': pink coral block
             '"magentaCoralBlock"': Magenta coral block

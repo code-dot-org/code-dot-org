@@ -799,12 +799,12 @@
         "behaviors 3a": {
           "behavior_callout": "¿Por qué este comportamiento no funciona para la estrella del medio?",
           "star2_callout": "Quita este bloque 'disfraz' y, en su lugar, usa el bloque \"este sprite\".",
-          "this_sprite_callout": "Recoloca este bloque de disfraz debajo con este."
+          "this_sprite_callout": "Reemplaza el bloque de vestuario a continuación con esto."
         },
         "behaviors 3a_2020": {
           "behavior_callout": "¿Por qué este comportamiento no funciona para la estrella del medio?",
           "star2_callout": "Quita este bloque 'disfraz' y, en su lugar, usa el bloque \"este sprite\".",
-          "this_sprite_callout": "Recoloca este bloque de disfraz debajo con este."
+          "this_sprite_callout": "Reemplaza el bloque de vestuario a continuación con esto."
         },
         "behaviors 4": {
           "behaviors_edit": "Haz clic aquí para ver cómo funciona este comportamiento."
@@ -1789,6 +1789,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Puedes cambiar este número.",
           "courseE_artist_ramp8_2": "Haz click aquí para ingresar el número de veces que tu código se repite."
+        },
+        "outbreak2": {
+          "minitoolbox": "Haz clic aquí para expandir el bloque.",
+          "pointerlocation": "Arrastra un bloque de asunto aquí."
+        },
+        "outbreak7": {
+          "costumes_callout": "Haz clic para hacer un nuevo disfraz"
         }
       }
     }

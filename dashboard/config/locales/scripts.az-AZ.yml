@@ -1685,3 +1685,7 @@ az:
           lesson_groups:
             lg_1:
               display_name: Məzmun
+        ml-playground:
+          lessons:
+            intro:
+              name: Giriş

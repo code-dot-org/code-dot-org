@@ -23692,3 +23692,11 @@ fr:
               name: Cours B
             CS Discoveries:
               name: Découvertes de l'Informatique
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: IA pour les Océans
+            intro:
+              name: Introduction
+            visualizing:
+              name: Visualiser les Données

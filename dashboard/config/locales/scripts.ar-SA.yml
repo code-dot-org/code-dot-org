@@ -21760,3 +21760,11 @@ ar:
               name: الدورة B
             CS Discoveries:
               name: اكتشافات علوم الكمبيوتر
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: الذكاء الاصطناعي للمحيطات
+            intro:
+              name: مقدمة
+            visualizing:
+              name: تمثيل البيانات في رسوم مرئية

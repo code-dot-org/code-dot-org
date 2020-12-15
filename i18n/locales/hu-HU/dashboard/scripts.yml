@@ -957,6 +957,10 @@ hu:
               display_name: Tartalom
             practice:
               display_name: Tanítási gyakorlatok
+        allthehiddenthings:
+          lessons:
+            Game Lab:
+              name: Játék Labor
         MikeTest:
           lessons:
             Artist Functions:
@@ -1645,6 +1649,8 @@ hu:
               name: Betüző méh
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: egyéb
             Thanks:
               name: Köszönjük
         csp3-research-mxghyt:
@@ -2437,6 +2443,8 @@ hu:
           lesson_groups:
             cspSurvey:
               display_name: Kérdőív
+        gamelab:
+          title: Játék Labor
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -3348,3 +3356,7 @@ hu:
           lesson_groups:
             lg_1:
               display_name: Tartalom
+        ml-playground:
+          lessons:
+            intro:
+              name: Bevezető

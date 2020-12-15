@@ -2916,3 +2916,7 @@ et:
           lesson_groups:
             lg_1:
               display_name: Sisu
+        ml-playground:
+          lessons:
+            intro:
+              name: Sissejuhatus

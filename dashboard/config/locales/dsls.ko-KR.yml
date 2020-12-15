@@ -2827,3 +2827,15 @@ ko-KR:
           사용하는 한 가지 훌륭한 방법을 이제 막 배웠습니다!  \n변수를 상수로서 사용할 때, 한 번에 값 하나를 설정하고 그 다음, \"실행\"을
           클릭한 후 변경하지 않고 그 *동일한* 값을 프로그램에서 여러 번 사용할 것입니다.  </h3>\n<br/><hr/>\n<h3>시리즈의
           다음 부분에서는 프로그램 안에서 변*하는* 변수로 코드를 작성할 것입니다.</h3>\n\n"
+      courseD_EOC_2020:
+        display_name: 과정말 프로젝트
+      courseE_EOC_2020:
+        display_name: 과정말 프로젝트
+      courseExpress_EOC_2020:
+        display_name: 과정말 프로젝트
+      courseF_EOC_2020:
+        display_name: 과정말 프로젝트
+      outbreak_story:
+        content1: 설명 입력
+      outbreak_story2:
+        content1: 설명 입력

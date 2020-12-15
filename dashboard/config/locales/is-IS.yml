@@ -194,12 +194,9 @@ is:
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
     student_consent: Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns
       til að nota þjónustur Code.org.
-    agree_us_website: Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum.
-    my_data_to_us: Gögn sem verða til með notkun minni á þessum vef kunna að verða
-      send til og geymd eða greind í Bandaríkjunum.
     agree_us_data_transfer_student: "**Ég samþykki að Code.org flytji gögn (þar með
       talið persónuupplýsingar) sem til koma vegna notkunar þinnar á vefsvæðinu til
-      Bandaríkjanna til hýsingar og vinnslu upplýsinganna."
+      Bandaríkjanna** til hýsingar og vinnslu upplýsinganna."
     agree_us_data_transfer_teacher: "**Ég samþykki að Code.org flytji gögn (þ. á m.
       persónulegar upplýsingar) sem til verða vegna notkunar minnar (og nemenda minna)
       á þessu vefsvæði til Bandaríkjanna**  til hýsingar og úrvinnslu gagnanna."
@@ -679,6 +676,8 @@ is:
     code_from_html: Code.org notar p5.play, sem er undir <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1 leyfinu</a>.
     powered_by_aws: Knúið af Amazon Web Services
+    google_copyright: "&copy; Google Inc. notað með leyfi. Google Classroom er vörumerki
+      Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE merkið og Hour
       of Code&reg; eru vörumerki Code.org."
     copyright: Höfundarréttur

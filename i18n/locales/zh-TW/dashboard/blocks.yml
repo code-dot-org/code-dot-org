@@ -1232,6 +1232,8 @@ zh-TW:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水中
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 無
+      gamelab_setBackgroundImageAs:
+        text: 背景設為 {IMG}
       gamelab_setProp:
         text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
@@ -1828,7 +1830,6 @@ zh-TW:
             '"stoneBricks"': 石磚
             '"mossyStoneBricks"': 青苔石磚
             '"crackedStoneBricks"': 裂紋石磚
-            '"decorativeStoneBricks"': 裝飾石磚
             '"blueCoralBlock"': 藍色珊瑚方塊
             '"pinkCoralBlock"': 粉紅色珊瑚方塊
             '"magentaCoralBlock"': 洋紅色珊瑚方塊

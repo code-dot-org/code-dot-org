@@ -30,7 +30,7 @@
 #  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
 #
 
-class Pd::Workshop < ActiveRecord::Base
+class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants

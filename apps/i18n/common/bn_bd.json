@@ -128,6 +128,7 @@
   "dropletBlock_mathRandom_description": "০ এর সমান বা বড় কিন্তু ১ থেকে ছোট সীমা মধ্যে এলোমেলো সংখ্যা ফিরান",
   "dropletBlock_mathRandom_signatureOverride": "Math.random()",
   "dropletBlock_mathRound_param0": "এক্স",
+  "dropletBlock_mathSqrt_param0": "এক্স",
   "dropletBlock_randomNumber_description": "ছোট থেকে বড় সাজানো বদ্ধ পরিসর থেকে একটি এলোমেলো সংখ্যা দেখায়।",
   "dropletBlock_randomNumber_param0": "নূন্যতম",
   "dropletBlock_randomNumber_param0_description": "ন্যূনতম নম্বর ফিরে আসে",

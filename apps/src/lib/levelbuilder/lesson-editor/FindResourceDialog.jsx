@@ -37,8 +37,8 @@ class FindResourceDialog extends Component {
 
   formatResourceName = resource => {
     let formattedName = resource.name;
-    if (resource.properties.type) {
-      formattedName += ` - ${resource.properties.type}`;
+    if (resource.type) {
+      formattedName += ` - ${resource.type}`;
     }
     return formattedName;
   };

@@ -80,7 +80,7 @@ class ProgressLesson extends React.Component {
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   constructor(props) {
@@ -153,7 +153,8 @@ class ProgressLesson extends React.Component {
 
     // There's no url for a lesson so use the url of the first level of the lesson
     // as the url for the lesson.
-    // TODO: Make the back-end support lesson urls and redirect to the first level.
+    // TODO: Make the back-end return a lesson url as part of the lesson metadata so we
+    // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
     const lessonUrl = levels[0] && levels[0].url;
     return (
       <div
@@ -231,5 +232,5 @@ export default connect(state => ({
   lessonLockedForSection: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
-  selectedSectionId: state.teacherSections.selectedSectionId.toString()
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(ProgressLesson);

@@ -480,6 +480,7 @@ cs-CZ:
         - text: Která verze funkce bude fungovat?
         title: Včelí ladící vícenásobná volba
         content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
       4-5 bee loops multi 1:
         answers:
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"

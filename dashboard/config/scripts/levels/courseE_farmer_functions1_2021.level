@@ -1,0 +1,117 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:35:54.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "1",
+    "step_mode": "0",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "short_instructions": "Help the harvester get to the pumpkin and pick it.",
+    "instructions_important": "false",
+    "ideal": "4",
+    "long_instructions": "*\"Have we met before? I'm the harvester!\"*\r\n\r\nHelp the harvester get to the pumpkin and pick it.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_farmer_functions1_2\",\r\n  \"callout_text\": \"The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.\",\"hint_id\":\"courseE_farmer_functions1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e8edb14c2fca62d676f7caa0da458a68/courseE_farmer_functions1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to pick one pumpkin, but could you use a loop to get to it?\",\"hint_id\":\"courseE_farmer_functions1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/128f7d380e51569185a8664ce926e99e/courseE_farmer_functions1.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2021",
+    "show_type_hints": "false",
+    "parent_level_id": 21551,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 16:27:46 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 23:59:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 17:22:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 17:23:28 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 20:50:07 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 20:50:49 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 21:43:58 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 21:48:31 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 22:35:07 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:01:33 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-24 16:04:48 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 16:05:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 16:07:11 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 16:08:15 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 16:09:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-03-29 17:43:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-06-04 20:34:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 20:35:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="maze_move">
+            <title name="DIR">moveForward</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnRight</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnLeft</title>
+          </block>
+          <block type="harvester_corn"/>
+          <block type="harvester_pumpkin"/>
+          <block type="harvester_lettuce"/>
+        </category>
+        <category name="Loops">
+          <block type="harvester_untilHasPumpkin"/>
+          <block type="harvester_whileHasCrop">
+            <title name="LOC">Corn</title>
+          </block>
+          <block type="maze_untilBlocked"/>
+        </category>
+        <category name="Conditionals">
+          <block type="maze_if">
+            <title name="DIR">isPathForward</title>
+          </block>
+          <block type="maze_ifElse">
+            <title name="DIR">isPathForward</title>
+          </block>
+          <block type="harvester_ifHasCropElse">
+            <title name="LOC">Corn</title>
+          </block>
+          <block type="harvester_ifHasCrop">
+            <title name="LOC">Corn</title>
+          </block>
+          <block type="harvester_untilHasPumpkin"/>
+          <block type="harvester_whileHasCrop">
+            <title name="LOC">Corn</title>
+          </block>
+          <block type="maze_untilBlocked"/>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_untilBlocked">
+              <statement name="DO">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="harvester_pumpkin"/>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

@@ -5057,3 +5057,11 @@ ru:
               name: Курс B
             CS Discoveries:
               name: Открытия в информатике
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI для океанов
+            intro:
+              name: Введение
+            visualizing:
+              name: Визуализация данных

@@ -295,3 +295,11 @@ title: Weź Code Brake
 </div>
 
 </div>
+
+<div style="clear: both"></div>
+
+<hr />
+
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

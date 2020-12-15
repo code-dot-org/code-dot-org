@@ -136,8 +136,6 @@
     invalid_password: "Passordet må bestå av minimum seks tegn"
     mismatch_password: "De to passordene du skrev inn samsvarer ikke"
     student_consent: "Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse til å bruke tjenestene fra Code.org."
-    agree_us_website: "Jeg aksepterer å bruke et nettsted som er basert i USA."
-    my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
     agree_us_data_transfer_student: '**Jeg godtar at Code.org kan overføre data (inkludert personopplysninger) fra min bruk av dette nettstedet til USA** med formål om å hoste og behandle slike data.'
     agree_us_data_transfer_teacher: '**Jeg godtar at Code.org kan overføre data (inkludert personopplysninger) fra min bruk (og mine studenters bruk) av dette nettstedet til USA** med formål om å hoste og behandle slike data.'
     data_collection_us: "Jeg forstår at Code.org er et non profit-nettsted basert i USA og at lovgivningen for datainnhenting i USA kan være annerledes enn for landet mitt."

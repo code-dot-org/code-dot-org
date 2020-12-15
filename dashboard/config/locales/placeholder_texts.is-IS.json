@@ -38,6 +38,30 @@
         },
         "courseF_extras_sim": {
           "a2e534e7e893bd7ddb5d2047ed29dc8e": "fíll hefur safnað "
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Borð: ",
+          "013405bba4219ed238e87658786699b6": " Stig: "
+        },
+        "Course 4 Play Lab Vars 1": {
+          "c469f9393f38213de6fcffa9fe48008d": " -skor- "
+        },
+        "Course 4 Play Lab Vars 2": {
+          "c469f9393f38213de6fcffa9fe48008d": " -skor- "
+        },
+        "course4_playlab_variables_challenge1": {
+          "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
+          "8292c7cbebf598e875ccd0c008958922": " hver?",
+          "40f4f24106dde9234f43bf30465647e0": "Bank, bank.",
+          "3986de660e6560710c546cb2f22c12f3": "Hver er þar?",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabæti!"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
+          "8292c7cbebf598e875ccd0c008958922": " hver?",
+          "40f4f24106dde9234f43bf30465647e0": "Bank, bank.",
+          "3986de660e6560710c546cb2f22c12f3": "Hver er þar?",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabæti!"
         }
       }
     }

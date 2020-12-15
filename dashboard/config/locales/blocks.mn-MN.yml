@@ -1175,6 +1175,8 @@ mn:
               доор
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': өвөл
             undefined: байхгүй
+      gamelab_setBackgroundImageAs:
+        text: суурь өнгийг {IMG} руу тохируулах
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY}-г {VAL} руу тохируулах"
         options:
@@ -1706,7 +1708,6 @@ mn:
             '"stoneBricks"': чулуун тоосго
             '"mossyStoneBricks"': хөвдтэй чулаан тоосго
             '"crackedStoneBricks"': хагарсан чулуун тоосго
-            '"decorativeStoneBricks"': чимэглэгч чулуун тоосго
             '"blueCoralBlock"': хөх шүрэн блок
             '"pinkCoralBlock"': ялгаан шүрэн блок
             '"magentaCoralBlock"': цайвар шүрэн блок

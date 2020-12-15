@@ -959,6 +959,7 @@ is:
       gamelab_allSpritesWithAnimation:
         text: aalab allar {ANIMATION}
       gamelab_atTime:
+        text: á tíma {N} {UNIT}
         options:
           UNIT:
             '"seconds"': sekúndur
@@ -986,6 +987,8 @@ is:
         text: ásmellt vera
       gamelab_comment:
         text: 'athugasemd: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: fjöldi {SPRITE}
       gamelab_createNewSprite:
@@ -1199,6 +1202,12 @@ is:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': neðansjávar
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vetur
             undefined: ekkert
+      gamelab_setBackgroundImageAs:
+        text: stilla bakgrunn á {IMG}
+      gamelab_setPrompt:
+        text: biðja notanda {QUESTION} um breytu {VAR}
+      gamelab_setPromptWithChoices:
+        text: biðja notanda {QUESTION} um breytu {VAR} með valkosti {A}{B}{C}
       gamelab_setProp:
         text: stilla {SPRITE} {PROPERTY} á {VAL}
         options:
@@ -1208,8 +1217,6 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
-      gamelab_setQuestion:
-        text: fá svar við {QUESTION} fyrir breytu {VAR}
       gamelab_setSizes:
         text: stilla {SPRITE} {PROPERTY} á {N}%
         options:
@@ -1263,7 +1270,7 @@ is:
             '"d"': d
       gamelab_whenLeftArrow:
         text: þegar ýtt er á vinstri ör
-      gamelab_whenQuestionAnswered:
+      gamelab_whenPromptAnswered:
         text: þegar {VAR} er svarað
       gamelab_whenRightArrow:
         text: þegar ýtt er á hægri ör
@@ -1493,6 +1500,8 @@ is:
           DANCE:
             MOVES.ClapHigh: fiskur
             MOVES.Clown: ekki mitt-merki
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'staður x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1754,7 +1763,7 @@ is:
             '"stoneBricks"': steinn
             '"mossyStoneBricks"': mosavaxinn steinn
             '"crackedStoneBricks"': sprunginn steinn
-            '"decorativeStoneBricks"': útskorinn steinn
+            '"chiseledStoneBricks"': skrautskornir steinar
             '"blueCoralBlock"': blár kórall
             '"pinkCoralBlock"': bleikur kórall
             '"magentaCoralBlock"': blárauður kórall

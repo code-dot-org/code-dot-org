@@ -8206,3 +8206,9 @@ ka:
               name: კურსი A
             Course B:
               name: კურსი B
+        ml-playground:
+          lessons:
+            intro:
+              name: შესავალი
+            visualizing:
+              name: მონაცემთა ვიზუალიზაცია

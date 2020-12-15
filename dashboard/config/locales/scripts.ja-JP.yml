@@ -3,29 +3,30 @@ ja:
   data:
     script:
       category:
-        csd_category_name: コンピューターサイエンス 発展 ('18~'19)
-        csd_2018_category_name: コンピューターサイエンス 発展 ('18~'19)
-        csd_2019_category_name: コンピューターサイエンス 発展 ('19~'20)
+        csd_category_name: コンピューター サイエンス 発見 ('18～'19)
+        csd_2018_category_name: コンピューター サイエンス 発見 ('18～'19)
+        csd_2019_category_name: コンピューター サイエンス 発見 ('19～'20)
+        csd_2020_category_name: コンピューター サイエンス 発見 ('20～'21)
         csf_category_name: コンピューター・サイエンスの基礎
-        csf_2018_category_name: コンピューターサイエンス 初歩 (2018)
-        csf_international_category_name: コンピューターサイエンス 初歩 (多言語)
+        csf_2018_category_name: CS 入門 (2018)
+        csf_international_category_name: コンピューター サイエンス 国際
         csf2_draft_category_name: '開発中: コース A - F'
         csp_category_name: "'15-'16 コンピューター・サイエンス原理"
-        csp_2018_category_name: コンピューターサイエンス 入門 ('18~'19)
-        csp_2019_category_name: コンピューターサイエンス 原理 ('19-'20)
+        csp_2018_category_name: コンピューター サイエンス 原理 ('18～'19)
+        csp_2019_category_name: コンピューター サイエンス 原則 ('19～'20)
         cspexams_category_name: コンピューター・サイエンス原理実習テスト
         csp17_category_name: コンピューターサイエンス 入門 ('17~18)
         full_course_category_name: すべてのコース
         hoc_category_name: Hour of Code（アワー オブ コード）
         math_category_name: 計算(けいさん)
-        research_studies_category_name: 調査（ちょうさ）・研究（けんきゅう）
+        research_studies_category_name: 調査・研究
         other_category_name: その他
       name:
         course1:
           title: コース1
           description: コース 1 は、初心者でも作れるようにデザインされています。他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学びます。このコースを終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。小学
             1 年生 (5-7才) におすすめのコースです。
-          description_short: コース１は初心者向けです。
+          description_short: コース1はコンピューター サイエンスの初心者向けです。
           description_audience: 4-6 才
           lessons:
             'Artist: Loops':
@@ -40,6 +41,8 @@ ja:
               name: 'みつばち: シーケンス'
             Building a Foundation:
               name: ピラミッドをたてよう
+            Getting Loopy:
+              name: ルーピーをゲット
             Going Places Safely:
               name: 安全な道を通って行く
             Happy Maps:
@@ -60,6 +63,8 @@ ja:
               name: つづりみつばち
             'Studio: Create a Story':
               name: プレイラボ：お話を作りましょう
+            The Big Event:
+              name: ビッグイベント
         course2:
           title: コース2
           description: コース2は、読み書きができてプログラミング経験のない生徒のためのコースです。このコースでは、問題を解くプログラムやインタラクティブなゲームや物語を作ってシェアします。2年生〜5年生向け。
@@ -81,11 +86,13 @@ ja:
             'Bee: Loops':
               name: 'みつばち: ループ'
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
             Conditionals:
               name: 条件
             Flappy:
               name: フラッピー
+            Getting Loopy:
+              name: ルーピーをゲット
             Graph Paper Programming:
               name: グラフ用紙のプログラミング
             'Maze: Loops':
@@ -93,17 +100,19 @@ ja:
             'Maze: Sequence':
               name: '迷路: シーケンス'
             'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+              name: '現実世界のアルゴリズム: 紙飛行機'
             Relay programming:
               name: リレー プログラミング
             'Studio: Create a Story':
               name: プレイラボ：お話を作りましょう
+            The Big Event:
+              name: ビッグイベント
             Your Digital Footprint:
-              name: あなたのデジタルフットプリント
+              name: デジタル フットプリント
         course3:
           title: コース3
-          description: コース3は、コース2を終えた生徒向けに作られています。生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。
-          description_short: コース3はコース２をがくしゅうした人のためのコースです。
+          description: コース3は、コース2を終えた生徒向けに作られています。生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題の解決策を見つけます。このコースの最後には、生徒は皆と共有できるインタラクティブなストーリーとゲームを作成します。このコースは小学4～5年生向けです。
+          description_short: コース3はコース2を学習した人のためのコースです。
           description_audience: 8-18 才
           lessons:
             Artist:
@@ -130,6 +139,8 @@ ja:
               name: クラウドソーシング
             Dice Race:
               name: 言うレース
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             'Farmer: While Loops':
               name: '農夫: While Loops'
             Functional Suncatchers:
@@ -162,22 +173,22 @@ ja:
               name: アーティスト
         hourofcode:
           title: 古典的な迷路
-          description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター科学の基礎を試してみよう！
-          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
+          description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター サイエンスの基礎を試してみよう！
+          description_short: いろいろなキャラクターでコンピューター サイエンスの基礎を試してみよう！
           lessons:
             Maze:
               name: 迷路
         frozen:
           title: アナとエルサとコードを書く
-          description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
+          description: プログラムを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶とパターンを作って、友だちとも共有しよう！
           description_short: コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう
           lessons:
             Artist:
               name: アーティスト
         course4:
           title: コース4
-          description: コース 4は、 コース 2 と 3 を終了した学生向けです。彼らは、それぞれの挑戦を解決するときにいくつかの概念を結合する方法を学ぶように高められた複雑なパズルに取り組む方法を学びます。このコースを完了した時、学生は、ループのパラメーターを持つ関数を含む、複数なスキルを必要とされるプログラムが作れるようになります。4～8年生にお勧めです。
-          description_short: コース4を始める前に、コース2とコース3を終わらせてください。
+          description: コース 4は、コース 2 と 3 を終了した生徒向けです。生徒は複雑なパズルに取り組み、それぞれの課題に挑むときにいくつかの概念を組み合わせる方法を学びます。このコースを完了する頃には、生徒は、ループやパラメータ付き関数など、複数のスキルを発揮してプログラムが作れるようになっていることでしょう。小学4年生～中学2年生にお勧めです。
+          description_short: forループやパラメータ付き関数などの概念を使って、より複雑なプログラムを構築しましょう。これはコース3のフォローアップです。
           description_audience: 9-18 才
           lessons:
             Artist:
@@ -227,7 +238,7 @@ ja:
         Course4pre:
           title: コース 4 を始める前に
           description: コース 2 と 3 を終えていない学生のための、概念の簡単な復習。
-          description_short: コース 2 と 3 を終えていない学生のための、概念の簡単な復習。
+          description_short: コース 2 と 3 を終えていない生徒のための、概念の簡単な復習。
           lessons:
             'Artist: Functions':
               name: アーティスト：関数
@@ -264,9 +275,16 @@ ja:
             'Eval: Conditionals':
               name: 条件
         infinity:
+          title: ディズニー インフィニティ プレイラボ
+          description: プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。
+          description_short: プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。
           lessons:
             Infinity:
               name: インフィニティ
+        algebrademo:
+          lessons:
+            The Design Recipe:
+              name: 設計レシピ
         K5PD:
           lessons:
             Teacher Dashboard:
@@ -274,7 +292,9 @@ ja:
         netsim:
           title: インターネット シミュレータ
         20-hour:
+          title: 集中CSコース入門
           description: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
+          description_short: この20時間のコースでは、コース2～4のコアコンピューター サイエンスおよびプログラミングの概念について扱います。
           description_audience: 10-18 才
           lessons:
             Abstraction:
@@ -338,30 +358,44 @@ ja:
         flappy:
           title: フラッピー コード
           description: 10分以内で自分だけのゲームを作ってみませんか？フラッピー コードを やってみよう！
+          description_short: 独自のフラッピーゲームを書いてみましょう！
           lessons:
             Flappy Code:
               name: フラッピー コード
         jigsaw:
           title: ジグソーパズル
+          description: ジグソーチュートリアルをお試しください。
+          description_short: ジグソーチュートリアルをお試しください。
           lessons:
             Jigsaw:
               name: ジグソーパズル
         step:
           title: ステップ
+          description: ステップチュートリアル
+          description_short: ステップチュートリアル
           lessons:
             Step:
               name: ステップ
         Hour of Code:
           title: Hour of Code 2013
-          description: アングリーバードやプラント vs. ゾンビのキャラクターを使って、コンピューターサイエンスの基礎を試してみよう！
-          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
+          description: アングリーバードや植物vs.ゾンビのキャラクターを使って、コンピューター サイエンスの基礎を試してみよう！
+          description_short: いろいろなキャラクターでコンピューター サイエンスの基礎を試してみよう！
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
+        cspunit1:
+          lessons:
+            Text Compression:
+              name: テキスト圧縮
         algebraPD:
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
+        text-compression:
+          title: テキスト圧縮
+          lessons:
+            Text Compression:
+              name: テキスト圧縮
         cspunit3:
           lessons:
             Creating Functions:
@@ -374,6 +408,8 @@ ja:
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
+            The Design Recipe:
+              name: 設計レシピ
         algebraPD-NexTech:
           lessons:
             Teacher Dashboard:
@@ -392,6 +428,10 @@ ja:
           lessons:
             The Internet:
               name: インターネット
+        algebraPD2a:
+          lessons:
+            The Design Recipe:
+              name: 設計レシピ
         allthethings:
           lessons:
             Artist:
@@ -410,6 +450,8 @@ ja:
               name: マインクラフト
             Multi:
               name: マルチ
+            Text Compression:
+              name: テキスト圧縮
             Web Lab:
               name: ウェッブ ラボ
         algebraPD2b:
@@ -444,6 +486,8 @@ ja:
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
+            The Design Recipe:
+              name: 設計レシピ
             Welcome!:
               name: ようこそ!
         sciencePD2b:
@@ -491,9 +535,11 @@ ja:
         asUnplugged:
           lessons:
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
             Building a Foundation:
               name: ピラミッドをたてよう
+            Getting Loopy:
+              name: ルーピーをゲット
             Graph Paper Programming:
               name: グラフ用紙のプログラミング
             Happy Maps:
@@ -504,6 +550,13 @@ ja:
               name: 現実のアルゴリズム：種を植えましょう
             Songwriting:
               name: 作詞作曲
+            The Big Event:
+              name: ビッグイベント
+        vigenere:
+          description: ヴィジュネル暗号ウィジェットを使って、ヴィジュネル暗号でのメッセージの暗号化と復号化を詳しく見てみましょう。
+          description_short: ヴィジュネル暗号ウィジェットを使って、ヴィジュネル暗号でのメッセージの暗号化と復号化を詳しく見てみましょう。
+        frequency_analysis:
+          description_short: 頻度分析ウィジェットを使って、予想される頻度と比較したテキスト内の文字頻度を分析します。クラックシフトと換字式暗号。
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -514,23 +567,37 @@ ja:
           description_audience: 10-18 才
         SpecialSeries:
           description_audience: 10-18 才
+        iceage:
+          title: アイスエイジ プレイラボ
+          description: アイスエイジ プレイラボでストーリーを作成したり、ゲームを作ったりしましょう！
+          description_short: アイスエイジ プレイラボでストーリーを作成したり、ゲームを作ったりしましょう！
+          lessons:
+            Ice Age Play Lab:
+              name: アイスエイジ プレイラボ
         cspunit3temp:
           lessons:
             Introduction to Arrays:
               name: Introduction to Arrays
             While Loops:
               name: Whileループ
+        gumball:
+          title: ガムボール プレイラボ
+          description: ガムボール プレイラボでストーリーを作ったり、ゲームを作ったりしましょう！
+          description_short: ガムボール プレイラボでストーリーを作ったり、ゲームを作ったりしましょう！
+          lessons:
+            Gumball Play Lab:
+              name: ガムボール プレイラボ
         starwars:
           title: 'スター・ウォーズ: コードを書いて銀河をつくろう'
-          description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
-          description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
+          description: ドロイドをプログラムで動かす方法を学んで、遥かと遠くの銀河で繰り広げられるあなただけのスター・ウォーズのゲームを作りましょう！
+          description_short: ドロイドをプログラムで動かす方法を学んで、遥かと遠くの銀河で繰り広げられるあなただけのスター・ウォーズのゲームを作りましょう！
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
         starwarsblocks:
           title: 'スター・ウォーズ: コードを書いて銀河をつくろう'
-          description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
-          description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
+          description: ドロイドをプログラムで動かす方法を学んで、遥かと遠くの銀河で繰り広げられるあなただけのスター・ウォーズのゲームを作りましょう！
+          description_short: ドロイドをプログラムで動かす方法を学んで、遥かと遠くの銀河で繰り広げられるあなただけのスター・ウォーズのゲームを作りましょう！
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
@@ -541,36 +608,71 @@ ja:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015　（コードの時間　２０１５）
+        oceans:
+          title: 海洋のためのAI
+          description: AIと機械学習を使ってどのように世界の問題に対処するかを学びましょう。
+          description_short: AIと機械学習を使ってどのように世界の問題に対処するかを学びましょう。
         ScienceP3OLPT3:
           lessons:
             Welcome!:
               name: ようこそ!
             Wrap-Up:
               name: まとめ
+        cspunit6:
+          description_short: アプリラボ アプリでデータを収集して使用する方法を学びましょう。
+        AlgebraA:
+          description: 代数を通じて関数型プログラミングを学習する
+          description_short: 代数を通じて関数型プログラミングを学習する
+        AlgebraB:
+          description: 代数を通じて関数型プログラミングを学習する
+          description_short: 代数を通じて関数型プログラミングを学習する
         algebraPD1:
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
         csp1-2017:
+          description: このユニットでは、コンピューターでデジタル情報を表現し、それを人と計算装置の間で転送する必要性から生じる技術的な課題と問題について検討します。次に、このユニットでは、インターネットの構造と設計、および設計で行った決定が与える影響について詳しく見ていきます。
+          description_short: 情報をビットとして表現することに関する課題と、そのビットをある場所から別の場所に移す方法を探ります。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
+            csp1_1:
+              display_name: '第1章: 情報の表現と送信'
+            csp1_2:
+              display_name: '第2章: インターネットの発明'
           lessons:
             The Internet:
               name: インターネット
             Post-Course Survey:
               name: コース終了後アンケート
         csp2-2017:
+          title: CSPユニット2 - デジタル情報 ('17～'18)
+          description: このユニットでは、デジタル情報をエンコード、表現、操作する方法をさらに探ります。データをデジタルで操作して視覚化し、パターン、傾向、および潜在的な意味をつかむスキルは、コンピューター
+            サイエンティストが毎日使っている重要な実践的スキルです。ユニットでは主に、データの出所を理解し、そこから何を学んだり抽出したりできるかを直観的に理解し、計算ツールを使ってデータを操作および伝達するスキルについて学びます。
+          description_short: より複雑なデジタル情報をどのように表現し、計算と視覚化によって操作するかを詳しく見ていきましょう。
           lesson_groups:
+            csp2_1:
+              display_name: '第1章: 複雑な情報のエンコードと圧縮'
+            csp2_2:
+              display_name: '第2章: データの操作と視覚化'
             cspSurvey:
               display_name: アンケート
           lessons:
+            Text Compression:
+              name: テキスト圧縮
             Post-Course Survey:
               name: コース終了後アンケート
         csp3-2017:
+          title: CSPユニット3 - プログラミング入門 ('17～'18)
+          description: "このユニットでは、コンピュータープログラミングの基本的な概念を紹介します。これにより、リッチでインタラクティブなアプリを作成する力がつきます。このコースでは、プログラミング言語としてJavaScriptを使用し、アプリを構築するためのプログラミング環境としてアプリラボを使用しますが、レッスンで学習するコンセプトは、どのプログラミング言語とツールにも通用します。\r
+            \n\r\nこのユニットの最終更新日は2017年10月30日です。カリキュラムの最新情報については、当社のウェブサイト (forum.code.org/c/csp/updates)
+            をご覧ください。"
+          description_short: 古典的な亀の絵を使ったトップダウンの設計アプローチを通じて、JavaScriptのプログラミングの基本を学びます。
           lesson_groups:
             csp3_1:
               display_name: '章 1: プログラミング言語とアルゴリズム'
+            cspAssessment:
+              display_name: 章の評価
             cspSurvey:
               display_name: アンケート
           lessons:
@@ -579,7 +681,16 @@ ja:
             Post-Course Survey:
               name: コース終了後アンケート
         csp4-2017:
+          title: CSPユニット4 - ビッグデータとプライバシー ('17～'18)
+          description: "私たちが住んでいるデータが豊富な世界では、公共政策、法律、倫理、社会的影響に関する複雑な問題が数多く横たわっています。このユニットの目標は、データのプラスとマイナスの影響を含め、世界のデータに関してバランスの取れた見方を養い、最新の暗号化がなぜ・どのように機能するかの基本を理解することにあります。\r
+            \n\r\nこのユニットの最終更新日は2017年11月です。カリキュラムの最新情報については、当社のウェブサイト (forum.code.org/c/csp/updates)
+            をご覧ください。"
+          description_short: 私たちが住んでいるデータが豊富な世界を探索し、データが公共政策、個人のプライバシー、セキュリティ、法律、倫理にどのように影響するかを探ります。
           lesson_groups:
+            csp4_1:
+              display_name: '第1章: ビッグデータと暗号化の世界'
+            cspAssessment:
+              display_name: 章の評価
             cspSurvey:
               display_name: アンケート
           lessons:
@@ -590,7 +701,14 @@ ja:
             Student Post-Course Survey:
               name: コース後の生徒たちの調査
         csp5-2017:
+          title: CSPユニット5 - アプリの構築 ('17～'18)
+          description: このユニットでは、コンピュータープログラミングの基本的な概念の紹介を続けます。これにより、リッチでインタラクティブなアプリを作成する力がつきます。このコースでは、プログラミング言語としてJavaScriptを使用し、アプリを構築するためのプログラミング環境としてアプリラボを使用しますが、レッスンで学習するコンセプトは、どのプログラミング言語とツールにも通用します。
+          description_short: リッチでインタラクティブなアプリを作成することにより、JavaScriptでのコンピュータープログラミングの基本的な概念を引き続き学習します。
           lesson_groups:
+            csp5_1:
+              display_name: '第1章: イベント駆動型プログラミング'
+            csp5_2:
+              display_name: '第2章: データ構造を使用したプログラミング'
             cspSurvey:
               display_name: アンケート
           lessons:
@@ -632,6 +750,10 @@ ja:
           lessons:
             Game Lab:
               name: ゲーム ラボ
+        cspexam1-mWU7ilDYM9:
+          description_short: この多肢選択式の評価では、コンピューター サイエンスの7つの大きなアイデアにわたる質問を扱います。これは、2部構成の50問試験の第1部です。
+        cspexam2-AKwgAh1ac5:
+          description_short: この多肢選択式の評価では、コンピューター サイエンスの7つの大きなアイデアにわたる質問を扱います。これは、2部構成の50問試験の第2部です。
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -668,6 +790,8 @@ ja:
               name: 現実のアルゴリズム：種を植えましょう
         grade4:
           lessons:
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             Songwriting:
               name: 作詞作曲
         grade1:
@@ -696,6 +820,8 @@ ja:
               name: みつばち：ループ
             'Bee: Functions with Parameters':
               name: みつばち：パラメーター付き関数
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             'Play Lab: Variables':
               name: プレイラボ：変数
             'Unplugged: Envelope Variables':
@@ -718,6 +844,8 @@ ja:
               name: ラップアップ
         grade3:
           lessons:
+            " Bee: Conditionals":
+              name: 'Bee: Conditionals'
             'Artist: Nested Loops':
               name: アーティスト：入れ子のループ
             Bee Debugging:
@@ -735,6 +863,9 @@ ja:
             practice:
               display_name: 授業実践
         csd3-2017:
+          title: CSDユニット3 - アニメーションとゲーム ('17～'18)
+          description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -758,9 +889,11 @@ ja:
             Flappy:
               name: フラッピー
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
             'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+              name: '現実世界のアルゴリズム: 紙飛行機'
+            The Big Event:
+              name: ビッグイベント
         k5concepts:
           lessons:
             Binary:
@@ -787,9 +920,14 @@ ja:
           lessons:
             Teacher Dashboard:
               name: 先生用のダッシュボード
+            The Design Recipe:
+              name: 設計レシピ
             Welcome!:
               name: ようこそ!
         csd1-2017:
+          title: CSDユニット1 - 問題解決 ('17～'18)
+          description_short: 人が問題を解決するためにコンピューターを使ってどのように作業をするかを学びます。
+          description: "\r\nユニット1は、コンピューター サイエンスの世界を高度にインタラクティブで協調的な形で紹介し、問題解決のより広い枠組みを見ていきます。問題解決プロセスを使って練習し、一連のパズル、課題、および実際のシナリオをこなしていきます。次に、コンピューターがどのように情報を入力、出力、保存、処理して、人が問題を解決するのを助けているかを学びます。このユニットの終わりに、選択した問題の解決に役立つアプリケーションを設計します。\r"
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -817,9 +955,9 @@ ja:
             practice:
               display_name: 授業実践
         basketball:
-          title: チームをえらんで、バスケットボールのゲームを作る
-          description_short: チームをえらんで、バスケットボールのゲームを作る
-          description: チームをえらんで、バスケットボールのゲームを作る
+          title: チームを選んで、バスケットボールゲームを作りましょう
+          description_short: チームを選んで、バスケットボールゲームを作りましょう
+          description: チームを選んで、バスケットボールゲームを作りましょう
           lessons:
             Bounce:
               name: バウンド
@@ -828,6 +966,9 @@ ja:
             Simple Encryption:
               name: 単純な暗号化
         csd2-2017:
+          title: CSDユニット2 - ウェブ開発 ('17～'18)
+          description_short: ウェブラボで独自のウェブサイトを構築する方法を学びましょう。
+          description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグやコメントなどの貴重なプログラミングスキルも練習します。ユニットの終わりまでに、インターネットに公開できる個人用ウェブサイトが完成していることでしょう。
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -849,6 +990,9 @@ ja:
             practice:
               display_name: 授業実践
         csd4-2017:
+          title: CSDユニット4 - 設計プロセス ('17～'18)
+          description_short: ユーザーのニーズを満たすプログラムを設計する方法を学びましょう。
+          description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
           lesson_groups:
             csd4_1:
               display_name: 第 1 章：ユーザーを中心にしたデザイン
@@ -916,21 +1060,22 @@ ja:
             'Real-life Algorithms: Plant a Seed':
               name: 現実のアルゴリズム：種を植えましょう
             Your Digital Footprint:
-              name: あなたのデジタルフットプリント
+              name: デジタル フットプリント
         coursec-draft:
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
           lessons:
             Programming in Maze:
               name: めいろ のプログラミング
             'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+              name: '現実世界のアルゴリズム: 紙飛行機'
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
             Events in Play Lab:
               name: プレイ ラボのイベント
             Your Digital Footprint:
-              name: あなたのデジタルフットプリント
+              name: デジタル フットプリント
             Building a Foundation:
               name: ピラミッドをたてよう
             Loops in Harvester:
@@ -938,9 +1083,12 @@ ja:
 
 '
         coursed-draft:
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
           lessons:
             Conditionals with Cards:
               name: カードと条件
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             'Unplugged: Binary':
               name: 'アンプラグド: バイナリ'
             Artist Binary:
@@ -950,12 +1098,15 @@ ja:
             Introduction:
               name: はじめに
         coursee-draft:
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
           lesson_groups:
             content:
               display_name: 内容
             extra_course_content:
               display_name: 追加のコース内容
           lessons:
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             Internet:
               name: インターネット
             Crowdsourcing:
@@ -965,25 +1116,37 @@ ja:
             Conditionals:
               name: 条件
         coursef-draft:
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
           lesson_groups:
             content:
               display_name: 内容
           lessons:
+            Digital Citizenship:
+              name: デジタル シティズンシップ
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
             Introduction:
               name: はじめに
+            Ice Age Play Lab:
+              name: アイスエイジ プレイラボ
         classic-hoc-impact-study:
-          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
+          description_short: いろいろなキャラクターでコンピューター サイエンスの基礎を試してみよう！
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         hoc-impact-study:
-          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
+          description_short: いろいろなキャラクターでコンピューター サイエンスの基礎を試してみよう！
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
         sports:
+          title: 独自のスポーツゲームをプログラミングしましょう
+          description_short: スポーツ全体を混ぜて一致させましょう
+          description: スポーツ全体を混ぜて一致させましょう
           lessons:
             Sports:
               name: スポーツ
@@ -1041,6 +1204,7 @@ ja:
             Wrap-Up:
               name: まとめ
         csp5-support:
+          description_short: CSPユニット5の教師用専門学習コース
           lesson_groups:
             required:
               display_name: 概要
@@ -1049,6 +1213,8 @@ ja:
             practice:
               display_name: 授業実践
         csppostap-2017:
+          title: CSPポストAP - データベースと、アプリでのデータの使用 ('17～'18)
+          description_short: アプリラボ アプリでデータを収集して使用する方法を学びましょう。
           lesson_groups:
             content:
               display_name: 内容
@@ -1060,9 +1226,9 @@ ja:
         csd6-draft:
           lesson_groups:
             csd6_1:
-              display_name: 第 1 章：ハードウェア出力
+              display_name: '第 1 章: ハードウェアを使ったプログラミング'
             csd6_2:
-              display_name: 第 2 章：ハードウェア入力
+              display_name: '第 2 章: 物理プロパティの構築'
           lessons:
             Lists:
               name: リスト
@@ -1075,27 +1241,49 @@ ja:
             Introduction:
               name: はじめに
         csd5-draft:
+          title: CSD5のドラフト
           lesson_groups:
             csd5_1:
               display_name: 第1章：情報を表現する
             csd5_2:
               display_name: 第 2 章：データ問題を解決
+        applab-1hour:
+          title: アプリラボ 1時間ワークショップ
+          description_audience: 中高生
+          description: このワークショップは、生徒にアプリラボの基本を1時間で紹介することを目的としています。コンピューター サイエンスのさまざまなバックグラウンドを持った生徒が、何かを作ることの楽しみを覚えることができるでしょう。
+        applab-2hour:
+          title: アプリラボ 2時間ワークショップ
+          description_audience: 中高生
+          description: このワークショップは、生徒にアプリラボの基本を2時間で紹介することを目的としています。コンピューター サイエンスのさまざまなバックグラウンドを持った生徒が、何かを作ることの楽しみを覚えることができるでしょう。
         coursed-ramp:
           lessons:
             Introduction:
               name: はじめに
+        workshop-maker:
+          title: メーカーツールキットワークショップ
+          description_audience: 対面のメーカーツールキット ワークショップに参加する先生
+          description_short: 対面のメーカーツールキット ワークショップに合わせたレベルの進行
+          description: このレベルは、対面のメーカーツールキット ワークショップに合わせて進行することを意図しています。これは、ツールやCSの概念を教えることを目的としたものではなく、ワークショップのファシリテーターが参加者にアプリラボとメーカーツールキットの幅広さを紹介する際の一助になることを目的としています。
         coursee-ramp:
+          title: コースランプ
           lessons:
             Introduction:
               name: はじめに
             Conditionals:
               name: 条件
+            'Real Life Algorithms: Dice Race':
+              name: '実生活アルゴリズム: サイコロレース'
         csd6-2017:
+          title: CSDユニット6 - フィジカルコンピューティング ('17～'18)
+          description_short: 物理デバイスでプログラミングする方法を学びます。
+          description: ユニット6では、コンピューティングにおけるハードウェアプラットフォームの役割と、従来のキーボード、マウス、モニターと比べてさまざまなセンサーによりどのように効果的な入力と出力が行えるかを探ります。アプリラボとAdafruitのサーキット
+            プレイグラウンドを使って、スマートデバイスで見られるのと同じハードウェア入力と出力を利用するプログラムを開発し、単純な粗いプロトタイプがどのようにして完成品につながるかを見ていきます。ユニットの最後には、独自の革新的な設計を行う基礎としてサーキット
+            プレイグラウンドを使用するというデザインチャレンジが用意されています。
           lesson_groups:
             csd6_1:
-              display_name: 第 1 章：ハードウェア出力
+              display_name: '第 1 章: ハードウェアを使ったプログラミング'
             csd6_2:
-              display_name: 第 2 章：ハードウェア入力
+              display_name: '第 2 章: 物理プロパティの構築'
             csd_survey:
               display_name: コース終了後アンケート
           lessons:
@@ -1108,6 +1296,7 @@ ja:
             Functions with Parameters_:
               name: パラメーター付き関数
         csd3-draft:
+          description_short: アニメーションとゲーム
           lessons:
             Variables:
               name: 変数（へんすう）
@@ -1118,6 +1307,8 @@ ja:
             Functions:
               name: 関数(かんすう)
         csd5-2017:
+          title: CSDユニット5 - データと社会 ('17～'18)
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
           lesson_groups:
             csd5_1:
               display_name: 第1章：情報を表現する
@@ -1126,12 +1317,17 @@ ja:
             csd_survey:
               display_name: コース終了後アンケート
         csd3-old:
+          title: CSDユニット3 (非推奨)
+          description_short: CSDユニット3の2016/2017ドラフト
           lessons:
             Velocity:
               name: 速度
             Functions:
               name: 関数(かんすう)
         csd1-old:
+          title: CSDユニット1 (非推奨)
+          description_short: CSDユニット1の2016/2017ドラフト
+          description: これは、2016年秋に最初に公開されたCSDユニット1のオリジナルドラフトです。このバージョンは、studio.code.org/s/csd1で入手できる更済みのユニットに置き換えられました。このオリジナルドラフトは、2017年7月1日までご利用いただけます。
           lessons:
             The Problem Solving Process:
               name: The Problem Solving Process
@@ -1159,10 +1355,28 @@ ja:
           lessons:
             Introduction:
               name: はじめに
+            Ice Age Play Lab:
+              name: アイスエイジ プレイラボ
+        csppostsurvey-staging:
+          description: "/s/csp-post-surveyに移動しました。 17.05.05以降破棄"
+        fmscsd3preview:
+          title: CSD - ゲームラボでの描画
+          description_audience: ファルマス中学校 (Mike Harvey)
+        csppostsurvey:
+          description_audience: CSP生徒
+          description_short: CSP生徒向けコース後の調査
+          description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約10分です。いただいた回答は匿名形式で保存され、公開されることはありません。
         csp-post-survey:
+          title: CSP生徒向けコース後アンケート (2017～2018)
+          description_audience: CSP生徒
+          description_short: CSP生徒向けコース後の調査
+          description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません
+            - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
+        public-key-cryptography:
+          title: パブリックキー暗号ウィジェット
         csd2-old:
           lessons:
             Peer Review:
@@ -1171,6 +1385,8 @@ ja:
           lessons:
             Loops with BB-8:
               name: Loops with BB-8
+            Ice Age Play Lab:
+              name: アイスエイジ プレイラボ
             Bounce:
               name: バウンド
         coursea-2017:
@@ -1178,6 +1394,7 @@ ja:
           assignment_family_title: コース A
           description_audience: 4-7 才
           description_short: 低学年向けコンピューター サイエンス入門
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
@@ -1203,6 +1420,7 @@ ja:
           assignment_family_title: コース B
           description_audience: 5-8 才
           description_short: 低学年向けコンピューター サイエンス入門 (コースAとほぼ同じですが、若干高度な内容を加えています)
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
@@ -1221,11 +1439,14 @@ ja:
         coursec-2017:
           title: コース C
           assignment_family_title: コース C
+          description_audience: '年齢: 6～10才'
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
           lessons:
             Programming in Maze:
               name: めいろ のプログラミング
             'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+              name: '現実世界のアルゴリズム: 紙飛行機'
             Loops in Harvester:
               name: 'Loops in Harvester
 
@@ -1239,22 +1460,33 @@ ja:
         coursed-2017:
           title: コース D
           assignment_family_title: コース D
-          description_short: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
+          description_audience: '年齢: 7～11才'
+          description_short: コースCのおさらいを簡単にした後に、アルゴリズム、入れ子のループ、条件文などへ進みましょう。
+          description: アルゴリズム、入れ子のループ、whileループ、条件、イベントなどの新しいプログラミング概念を学びましょう。独自のゲームやストーリーを作成して人と共有する前に、デジタル
+            シティズンシップについて紹介します。
           lessons:
             Nested Loops:
               name: 入れ子のループ
         coursee-2017:
           title: コース E
           assignment_family_title: コース E
-          description_short: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
+          description_audience: '年齢: 8～12才'
+          description_short: コースCとDのおさらいを簡単にした後、関数へと進みましょう。
+          description: アルゴリズム、ループ、条件文、イベントを使ってプログラミングから始めて、関数に移ります。このコースの後半では、友だちや家族と共有できるキャップストーンプロジェクトを設計して作成します。
           lesson_groups:
             csf_e_1:
-              display_name: コースEへの強化（オプション）
+              display_name: コースEへの強化 (オプション)
             csf_e_2:
               display_name: コースEの内容
             extra_course_content:
               display_name: 追加のコース内容
           lessons:
+            Ice Age Play Lab:
+              name: アイスエイジ プレイラボ
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
             Building a Foundation:
@@ -1266,10 +1498,12 @@ ja:
         coursef-2017:
           title: コース F
           assignment_family_title: コース F
-          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+          description_audience: '年齢: 9～13才'
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
           lesson_groups:
             csf_f_1:
-              display_name: コースFへの強化（オプション）
+              display_name: コースFへの強化 (オプション)
             csf_f_2:
               display_name: コースFの内容
           lessons:
@@ -1277,73 +1511,135 @@ ja:
               name: ピラミッドをたてよう
             Loops in Artist:
               name: アーティストくりかえし
+        csdnovice:
+          title: CS発見 TeacherCon 初心者ファシリテーター
+          description_audience: CSD初心者ファシリテーター
+          description_short: TeacherConの初心者ファシリテーター向けの復習質問。
+          description: 初心者ファシリテーターとしてTeacherConで学んだことを追跡する場所。
+        csp-explore-task:
+          title: CSP PT準備を探索
+          description_short: レッスンでは、CS原則APパフォーマンスタスクの探求の準備と完了を扱います。
+          description: レッスンでは、CS原則APパフォーマンスタスクの探求の準備と完了を扱います。
+        csp-create-task:
+          description_short: レッスンでは、CS原則APパフォーマンスタスクの作成の準備と完了を扱います。
+          description: レッスンでは、CS原則APパフォーマンスタスクの作成の準備と完了を扱います。
+        csp-ap-tech-setup:
+          title: CSP APデジタルポートフォリオとその他のツール
+          description: APパフォーマンスタスクの完了と提出に必要なAPデジタルポートフォリオのセットアップとその他の技術ツールについて説明します。
+        csp-ap:
+          title: CSP AP試験とパフォーマンスタスク
+          description_short: レッスンでは、AP試験とパフォーマンスタスクに向けた準備と完了方法のガイダンスを生徒に提供します。
+          description: レッスンでは、AP試験とパフォーマンスタスクに向けた準備と完了方法のガイダンスを生徒に提供します。
+          lesson_groups:
+            csp_ap_1:
+              display_name: '第1章: AP 技術のセットアップ'
+            csp_ap_3:
+              display_name: '第3章: AP パフォーマンスタスクの作成'
+            csp_ap_2:
+              display_name: '第2章: AP パフォーマンスタスクの探索'
         cspnovice:
+          title: CS原則TeacherCon初心者ファシリテーターの復習
+          description_audience: CSP初心者ファシリテーター
+          description_short: TeacherConの初心者ファシリテーター向けの復習質問。
+          description: 初心者ファシリテーターとしてTeacherConで学んだことを追跡する場所。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
+        novice-view:
+          title: 初心者の回答を見る
+          description_audience: ブルック、ダニ、マル
         csp1-dlp:
+          description_audience: トレーニング中のCS原則ファシリテーター
+          description_short: トレーニング中のCSPファシリテーター向けの詳細学習の資料
+          description: これは、トレーニング中のCode.org CSPファシリテーター向けの詳細学習プランのユニット1です。ここでは、Code.org
+            CSPカリキュラムのユニット1の習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp2-dlp:
+          title: CSPユニット2の詳細学習
+          description_audience: トレーニング中のCS原則ファシリテーター
+          description_short: レーニング中のCSPファシリテーター向けのユニット2ト詳細学習の資料
+          description: これは、トレーニング中のCode.org CSPファシリテーター向けの詳細学習プランのユニット2です。ここでは、Code.org
+            CSPカリキュラムのユニット2の習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp3-dlp:
+          description_audience: トレーニング中のCS原則ファシリテーター
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp4-dlp:
+          description_audience: トレーニング中のCS原則ファシリテーター
+          description_short: トレーニング中のCSPファシリテーター向けの詳細学習の資料
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp5-dlp:
+          description_audience: トレーニング中のCS原則ファシリテーター
+          description_short: トレーニング中のCSPファシリテーター向けの詳細学習の資料
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd1-dlp:
+          title: CS発見ユニット1の詳細学習
+          description_audience: トレーニング中のCS発見ファシリテーター
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのユニット1です。ここでは、Code.org
+            CS発見カリキュラムのユニット1の習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd6-dlp:
+          description_audience: トレーニング中のCS発見ファシリテーター
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd5-dlp:
+          description_audience: トレーニング中のCS発見ファシリテーター
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd4-dlp:
+          description_audience: トレーニング中のCS発見ファシリテーター
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd3-dlp:
+          description_audience: トレーニング中のCS発見ファシリテーター
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd2-dlp:
+          description_audience: トレーニング中のCS発見ファシリテーター
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
           lesson_groups:
             required:
               display_name: 概要
@@ -1351,7 +1647,10 @@ ja:
               display_name: 内容
         express-2017:
           title: エクスプレス コース
+          assignment_family_title: エクスプレスコース
+          description_audience: '年齢: 9～18才'
           description_short: コンピューター サイエンス入門。小学校の中高学年向けコースの良い所をとりだしました。
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
           lesson_groups:
             content:
               display_name: 内容
@@ -1362,10 +1661,16 @@ ja:
               name: アーティストくりかえし
             Internet:
               name: インターネット
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
             Conditionals with Cards:
               name: カードと条件
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
             Building a Foundation:
@@ -1374,7 +1679,10 @@ ja:
               name: 入れ子のループ
         pre-express-2017:
           title: 低学年エクスプレス
+          assignment_family_title: 就学前エクスプレス
+          description_audience: '年齢: 4～8才'
           description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
@@ -1393,28 +1701,44 @@ ja:
             Spelling Bee:
               name: つづりみつばち
         subgoal-labels-opt-in:
+          title: サブゴールラベル学習オプトイン
           lessons:
             Thanks:
               name: ありがとう
         csp3-research-mxghyt:
+          title: CSPユニット3 - プログラミング入門 (サブゴール)
+          description_short: 古典的な亀の絵を使ったトップダウンの設計アプローチを通じて、JavaScriptのプログラミングの基本を学びます。
           lesson_groups:
             csp3_1:
               display_name: '章 1: プログラミング言語とアルゴリズム'
+            cspAssessment:
+              display_name: 章の評価
             cspSurvey:
               display_name: アンケート
           lessons:
             Creating Functions:
               name: 関数の作成
         csd4-draft:
+          title: CSDユニット4復習ドラフト
           lesson_groups:
             csd4_1:
               display_name: 第 1 章：ユーザーを中心にしたデザイン
             csd4_2:
               display_name: 第 2 章：アプリのプロトタイピング
+        craft17:
+          title: Craft17開発スクリプト
+        applab-intro:
+          title: アプリラボの紹介
+          description_short: ブロックベースのプログラミングまたはテキストを使って、JavaScriptで独自のアプリを作成しましょう。ブロックを使ったプログラミングをある程度すでに完了している場合は、スキルを次のレベルに高めましょう。
+          description: ブロックベースのプログラミングまたはテキストを使って、JavaScriptで独自のアプリを作成しましょう。ブロックを使ったプログラミングをある程度すでに完了している場合は、スキルを次のレベルに高めましょう。
+          lessons:
+            Intro to App Lab:
+              name: アプリラボの紹介
         e-f-ramp:
+          title: コースEとF 強化
           lesson_groups:
             csf_e_1:
-              display_name: コースEへの強化（オプション）
+              display_name: コースEへの強化 (オプション)
             csf_e_2:
               display_name: コースEの内容
             extra_course_content:
@@ -1433,6 +1757,7 @@ ja:
             Crowdsourcing:
               name: クラウドソーシング
         new-d:
+          title: 新しいコースD スクリプト
           lessons:
             Introduction:
               name: はじめに
@@ -1440,6 +1765,8 @@ ja:
               name: 入れ子のループ
             Conditionals with Cards:
               name: カードと条件
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             'Unplugged: Binary':
               name: 'アンプラグド: バイナリ'
             Artist Binary:
@@ -1451,10 +1778,14 @@ ja:
             Loops in Ice Age:
               name: アイス・エイジのループ
         csp3-a:
+          title: CSPユニット3 - サブゴールグループA
+          description_short: サブゴールラベル実験グループA向けのCSPユニット3の代替バージョン。
+          description: このユニットでは、サブゴールグループAの生徒向けに、コンピュータープログラミングの基本的な概念を紹介します。
           lesson_groups:
             csp3_1:
               display_name: '章 1: プログラミング言語とアルゴリズム'
         new-express:
+          title: 新しいExpressスクリプト
           lesson_groups:
             content:
               display_name: 内容
@@ -1470,13 +1801,15 @@ ja:
             Nested Loops:
               name: 入れ子のループ
         new-stages-sept-2017:
+          title: 9/17用の新しいステージ
           lessons:
             Loops in Artist:
               name: アーティストくりかえし
         new-e:
+          title: E向けの新しいスクリプト
           lesson_groups:
             csf_e_1:
-              display_name: コースEへの強化（オプション）
+              display_name: コースEへの強化 (オプション)
             csf_e_2:
               display_name: コースEの内容
             extra_course_content:
@@ -1493,9 +1826,10 @@ ja:
             Crowdsourcing:
               name: クラウドソーシング
         new-f:
+          title: Fの向けの新しいスクリプト
           lesson_groups:
             csf_f_1:
-              display_name: コースFへの強化（オプション）
+              display_name: コースFへの強化 (オプション)
             csf_f_2:
               display_name: コースFの内容
           lessons:
@@ -1503,54 +1837,105 @@ ja:
               name: ピラミッドをたてよう
             Loops in Artist:
               name: アーティストくりかえし
+            Ice Age Play Lab:
+              name: アイスエイジ プレイラボ
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
         csd5-old:
+          title: CSDユニット5 - データと社会
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+          description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
           lesson_groups:
             csd5_1:
               display_name: 第1章：情報を表現する
             csd5_2:
               display_name: 第 2 章：データ問題を解決
+        colehoc2017:
+          title: HoC 17 - コール
         csd4-old:
+          title: "(非推奨) CSDユニット4 - 設計プロセス"
+          description_short: CSDユニット4の2016/17ベータ版
           lesson_groups:
             csd4_1:
               display_name: 第 1 章：ユーザーを中心にしたデザイン
             csd4_2:
               display_name: 第 2 章：アプリのプロトタイピング
         csp3-staging:
+          title: CSP 3提案された変更の一時的なステージンググラウンド
+          description_short: csp3への10月の変更の一時的なステージンググラウンド
+          description: "これは、新しいステージと変更されたステージが追加された、/s/csp3のライブレベルのレプリカです。ライブレベルは編集しないでください。\r"
           lesson_groups:
             csp3_1:
               display_name: '章 1: プログラミング言語とアルゴリズム'
+            cspAssessment:
+              display_name: 章の評価
           lessons:
             Creating Functions:
               name: 関数の作成
         pwc:
+          title: PwC's Access Your Potentialカリキュラム
+          description: PwCでは、すべての生徒が明日のリーダーになり、テクノロジーに根差した人材になる可能性があると信じています。 Access
+            Your Potentialは、若者、特に恵まれないコミュニティの若者に、人生の軌道を変えるために必要な経済的、技術的、キャリア選択のスキルを身に付けてもらうことで、機会のギャップを埋めるための取り組みです。当社の取り組みの一環として、Access
+            Your Potential中学校向けテクノロジーおよびキャリアカリキュラムを開始できることを嬉しく思います。
           lessons:
             Simple Encryption:
               name: 単純な暗号化
+            Intro to App Lab:
+              name: アプリラボの紹介
+        allthesurveys:
+          title: すべてのアンケート
+          description_short: Code.orgアンケートをステージングおよびテストする場所
         hero:
-          description: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
+          description_short: Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました！
+          description: Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました。プログラミングを使ってマインクラフトの旅へ
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code プログラミング入門
+        applab-intro-staging:
+          title: アプリラボ ステージングの紹介
+          lessons:
+            Intro to App Lab:
+              name: アプリラボの紹介
         csp-explore-2017:
+          description_short: 生徒がAP探索パフォーマンスタスクを準備して完了するのを助けるレッスンとリソース。
+          description: "このレッスンは、AP探索パフォーマンスタスクを理解し、準備し、実行するのに役立ちます。各「レッスン」には役に立つドキュメントへのリンクが含まれており、先生が説明して理解するのを助けてくれます。注:
+            最初のレッスンの2番目の項目は、PTの探索に直接関連していませんが、探索タスクと作成タスクのさまざまな要素に必要な一般的な技術的な設定とツールについて説明しています。\r
+            \n\r\nこのユニットは11月に最終更新されました。カリキュラムの更新について詳しくは、forum.code.org/c/csp/updatesをご覧ください。"
           lesson_groups:
+            csp_ap_2:
+              display_name: '第2章: AP パフォーマンスタスクの探索'
             cspSurvey:
               display_name: アンケート
           lessons:
             Post-Course Survey:
               name: コース終了後アンケート
         csp-create-2017:
+          description_short: 生徒がAP作成パフォーマンスタスクを準備して完了するのを助けるレッスンとリソース。
+          description: "このレッスンは、AP作成パフォーマンスタスクを理解し、準備し、実行するのに役立ちます。各「レッスン」には役に立つドキュメントへのリンクが含まれており、先生が説明して理解するのを助けてくれます。注:
+            最初のレッスンの1番目の項目は、PTの探索に直接関連していませんが、作成タスクと作成タスクのさまざまな要素に必要な一般的な技術的な設定とツールについて説明しています。\r
+            \n\r\nこのユニットは11月に最終更新されました。カリキュラムの更新について詳しくは、forum.code.org/c/csp/updatesをご覧ください。"
           lesson_groups:
+            csp_ap_3:
+              display_name: '第3章: AP パフォーマンスタスクの作成'
             cspSurvey:
               display_name: アンケート
           lessons:
             Post-Course Survey:
               name: コース終了後アンケート
+        csp3-reovery:
+          title: csp3アンダーザシー 生徒の作品 リカバリー
+        aws-demo:
+          title: AWSデモ
+        valentine:
+          description_short: バレンタインを作るのをお楽しみください
         course-e-2018:
           lesson_groups:
             csf_e_1:
-              display_name: コースEへの強化（オプション）
+              display_name: コースEへの強化 (オプション)
             csf_e_2:
               display_name: コースEの内容
             extra_course_content:
@@ -1573,7 +1958,7 @@ ja:
         course-f-2018:
           lesson_groups:
             csf_f_1:
-              display_name: コースFへの強化（オプション）
+              display_name: コースFへの強化 (オプション)
             csf_f_2:
               display_name: コースFの内容
           lessons:
@@ -1583,20 +1968,34 @@ ja:
               name: アーティストくりかえし
             Introduction:
               name: はじめに
+            Ice Age Play Lab:
+              name: アイスエイジ プレイラボ
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
         csd6-old:
           lesson_groups:
             csd6_1:
-              display_name: 第 1 章：ハードウェア出力
+              display_name: '第 1 章: ハードウェアを使ったプログラミング'
             csd6_2:
-              display_name: 第 2 章：ハードウェア入力
+              display_name: '第 2 章: 物理プロパティの構築'
           lessons:
             Lists:
               name: リスト
             For Loops:
               name: ループ用
+        unembeddedlevels:
+          title: 埋め込みなしのレベル
+        unembedded:
+          title: 埋め込みなしのレベル
         csd3-1819draft:
+          title: CSDユニット3 - アニメーションとゲーム
+          description_short: ゲームラボでアニメーション、インタラクティブアート、ゲームのプログラミングを学びましょう。
+          description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -1613,7 +2012,12 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう)
+        textbook:
+          title: CSFテキストブックページ
         csd3-2018:
+          description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+          description_short: ゲームラボでアニメーション、インタラクティブアート、ゲームのプログラミングを学びましょう。
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -1631,6 +2035,9 @@ ja:
             Functions:
               name: 関数(かんすう)
         csd2-2018:
+          title: CSDユニット2 - ウェブ開発 ('18～'19)
+          description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグやコメントなどの貴重なプログラミングスキルも練習します。ユニットの終わりまでに、インターネットに公開できる個人用ウェブサイトが完成していることでしょう。
+          description_short: ウェブラボで独自のウェブサイトを構築する方法を学びましょう。
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -1643,6 +2050,7 @@ ja:
               name: リスト
         coursea-2018:
           assignment_family_title: コース A
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
           description_short: 低学年向けコンピューター サイエンス入門
           description_audience: 4-7 才
           lessons:
@@ -1670,7 +2078,11 @@ ja:
             'Persistence & Frustration: Stevie and the Big Project':
               name: スティーヴィーと大きなプロジェクト
         express-2018:
+          title: エクスプレスコース
           assignment_family_title: エクスプレスコース
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 'コンピューター サイエンス入門: 小学校低学年向けの最高のカリキュラムを高学年の性と向けに組み合わせています。'
+          description_audience: '年齢: 9～18才'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: グラフ用紙のプログラミング
@@ -1682,14 +2094,22 @@ ja:
               name: アーティストくりかえし
             Nested Loops:
               name: 入れ子のループ
+            'Events: The Big Event':
+              name: ビッグイベント
             Programming in Maze:
               name: めいろ のプログラミング
+            'Loops: Getting Loopy':
+              name: ルーピーをゲット
             Conditionals with Cards:
               name: カードと条件
             'Functions: Songwriting':
               name: 作詞作曲
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
             'Unplugged: Binary':
               name: バイナリ画像
             Artist Binary:
@@ -1703,7 +2123,10 @@ ja:
             Graph Paper Programming:
               name: グラフ用紙のプログラミング
         courseb-2018:
+          title: コース B (2018)
           assignment_family_title: コース B
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
           description_audience: 5-8 才
           lessons:
             'Debugging: Unspotted Bugs':
@@ -1715,7 +2138,7 @@ ja:
             Learn to Drag and Drop:
               name: ドラッグ＆ドロップ
             Your Digital Footprint:
-              name: あなたのデジタルフットプリント
+              name: デジタル フットプリント
             Programming in Maze:
               name: めいろ のプログラミング
             Loops in Collector:
@@ -1726,8 +2149,14 @@ ja:
               name: プレイ ラボのイベント
             Move It, Move It:
               name: 動かせ！動かせ！
+            Copyright and Creativity:
+              name: 作成してフェアにプレイするのは、素晴らしいことです
         coursed-2018:
           assignment_family_title: コース D
+          description: 生徒は、入れ子のループ、whileループ、条件、イベントについての理解を深めます。プログラミング以外に、生徒はデジタル
+            シティズンシップについて学びます。
+          description_short: 条件文について学び、独自のアート、ストーリー、またはゲームを作成します。
+          description_audience: '年齢: 7～11才'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: グラフ用紙のプログラミング
@@ -1739,6 +2168,8 @@ ja:
               name: アーティストくりかえし
             Conditionals with Cards:
               name: カードと条件
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             'Unplugged: Binary':
               name: バイナリ画像
             Artist Binary:
@@ -1749,25 +2180,41 @@ ja:
               name: グラフ用紙のプログラミング
             Relay Programming:
               name: プログラミングをリレーする
+        csp-exam:
+          title: CS原則 AP試験準備
+          description_short: CS原則 AP試験準備
+          description: このページには、コースの1～5ユニットで出題されたすべての多肢選択問題のコピーが含まれています。生徒は、これらのミニテストを再度受けることにより、多肢選択試験の練習ができます。
         coursec-2018:
           assignment_family_title: コース C
+          description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 6～10才'
           lessons:
             Building a Foundation:
               name: ピラミッドをたてよう
             Programming in Maze:
               name: めいろ のプログラミング
+            'Loops: Getting Loopy':
+              name: ルーピーをゲット
             Loops in Artist:
               name: アーティストくりかえし
+            'Events: The Big Event':
+              name: ビッグイベント
             Events in Play Lab:
               name: プレイ ラボのイベント
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
         csd6-2018:
+          title: CSDユニット6 - フィジカルコンピューティング ('18～'19)
+          description: ユニット6では、コンピューティングにおけるハードウェアプラットフォームの役割と、従来のキーボード、マウス、モニターと比べてさまざまなセンサーによりどのように効果的な入力と出力が行えるかを探ります。アプリラボとAdafruitのサーキット
+            プレイグラウンドを使って、スマートデバイスで見られるのと同じハードウェア入力と出力を利用するプログラムを開発し、単純な粗いプロトタイプがどのようにして完成品につながるかを見ていきます。ユニットの最後には、独自の革新的な設計を行う基礎としてサーキット
+            プレイグラウンドを使用するというデザインチャレンジが用意されています。
+          description_short: 物理デバイスでプログラミングする方法を学びます。
           lesson_groups:
             csd6_1:
-              display_name: 第 1 章：ハードウェア出力
+              display_name: '第 1 章: ハードウェアを使ったプログラミング'
             csd6_2:
-              display_name: 第 2 章：ハードウェア入力
+              display_name: '第 2 章: 物理プロパティの構築'
             cspSurvey:
               display_name: アンケート
           lessons:
@@ -1775,9 +2222,12 @@ ja:
               name: パラメーター付き関数
         coursee-2018:
           assignment_family_title: コース E
+          description: アルゴリズム、ループ、条件文、イベントを使ってプログラミングから始めて、関数に移ります。このコースの後半では、友だちや家族と共有できるキャップストーンプロジェクトを設計して作成します。
+          description_short: コースCとDの概念を確認してから、関数を学習してさらに進みます。
+          description_audience: '年齢: 8～12才'
           lesson_groups:
             csf_e_1:
-              display_name: コースEへの強化（オプション）
+              display_name: コースEへの強化 (オプション)
             csf_e_2:
               display_name: コースEの内容
             extra_course_content:
@@ -1801,12 +2251,17 @@ ja:
               name: カードと条件
             Minecraft Hour of Code:
               name: Minecraft Hour of Code プログラミング入門
+            Copyright and Creativity:
+              name: デジタル共有
         coursef-2018:
+          title: コース F (2018)
           assignment_family_title: コース F
-          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+          description: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 9～13才'
           lesson_groups:
             csf_f_1:
-              display_name: コースFへの強化（オプション）
+              display_name: コースFへの強化 (オプション)
             csf_f_2:
               display_name: コースFの内容
           lessons:
@@ -1818,18 +2273,34 @@ ja:
               name: アーティストくりかえし
             Introduction:
               name: はじめに
+            Ice Age Play Lab:
+              name: アイスエイジ プレイラボ
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Songwriting with Parameters:
               name: パラメーターで歌や曲をつくる
             Conditionals with Cards:
               name: カードと条件
         csp1-2018:
+          title: CSPユニット1 - インターネット ('18～'19)
+          description: このユニットでは、コンピューターでデジタル情報を表現し、それを人と計算装置の間で転送する必要性から生じる技術的な課題と問題について検討します。次に、このユニットでは、インターネットの構造と設計、および設計で行った決定が与える影響について詳しく見ていきます。
+          description_short: 情報をビットとして表現することに関する課題と、そのビットをある場所から別の場所に移す方法を探ります。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
+            csp1_1:
+              display_name: '第1章: 情報の表現と送信'
+            csp1_2:
+              display_name: '第2章: インターネットの発明'
           lessons:
             The Internet:
               name: インターネット
         csd1-2018:
+          title: CSDユニット1 - 問題解決 ('18～'19)
+          description: "\r\nユニット1は、コンピューター サイエンスの世界を高度にインタラクティブで協調的な形で紹介し、問題解決のより広い枠組みを見ていきます。問題解決プロセスを使って練習し、一連のパズル、課題、および実際のシナリオをこなしていきます。次に、コンピューターがどのように情報を入力、出力、保存、処理して、人が問題を解決するのを助けているかを学びます。このユニットの終わりに、選択した問題の解決に役立つアプリケーションを設計します。\r"
+          description_short: 人が問題を解決するためにコンピューターを使ってどのように作業をするかを学びます。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -1841,6 +2312,9 @@ ja:
             The Problem Solving Process:
               name: The Problem Solving Process
         csd4-2018:
+          title: CSDユニット4 - 設計プロセス ('18～'19)
+          description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
+          description_short: ユーザーのニーズを満たすプログラムを設計する方法を学びましょう。
           lesson_groups:
             csd4_1:
               display_name: 第 1 章：ユーザーを中心にしたデザイン
@@ -1849,6 +2323,8 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd5-2018:
+          title: CSDユニット5 - データと社会 ('18～'19)
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
           lesson_groups:
             csd5_1:
               display_name: 第1章：情報を表現する
@@ -1857,33 +2333,72 @@ ja:
             cspSurvey:
               display_name: アンケート
         csp2-2018:
+          description: このユニットでは、デジタル情報をエンコード、表現、操作する方法をさらに探ります。データをデジタルで操作して視覚化し、パターン、傾向、および潜在的な意味をつかむスキルは、コンピューター
+            サイエンティストが毎日使っている重要な実践的スキルです。ユニットでは主に、データの出所を理解し、そこから何を学んだり抽出したりできるかを直観的に理解し、計算ツールを使ってデータを操作および伝達するスキルについて学びます。
+          description_short: より複雑なデジタル情報をどのように表現し、計算と視覚化によって操作するかを詳しく見ていきましょう。
           lesson_groups:
             csp2_1_2018:
               display_name: '第 2 章: デジタル情報'
+            cspAssessment:
+              display_name: 章の評価
+          lessons:
+            Text Compression:
+              name: テキスト圧縮
         csp3-2018:
+          title: CSPユニット3 - プログラミング入門 ('18～'19)
+          description_short: 古典的な亀の絵を使ったトップダウンの設計アプローチを通じて、JavaScriptのプログラミングの基本を学びます。
           lesson_groups:
+            csp3_1_2018:
+              display_name: 'ユニット3: プログラミング入門'
+            cspAssessment:
+              display_name: 章の評価
             cspSurvey:
               display_name: アンケート
           lessons:
             Creating Functions:
               name: 関数の作成
         csp-explore-2018:
+          title: 探索 - APパフォーマンスタスクの準備 ('18～'19)
+          description: 'このレッスンは、AP探索パフォーマンスタスクを理解し、準備し、実行するのに役立ちます。各「レッスン」には役に立つドキュメントへのリンクが含まれており、先生が説明して理解するのを助けてくれます。注:
+            最初のレッスンの2番目の項目は、PTの探索に直接関連していませんが、探索タスクと作成タスクのさまざまな要素に必要な一般的な技術的な設定とツールについて説明しています。'
+          description_short: 生徒がAP探索パフォーマンスタスクを準備して完了するのを助けるレッスンとリソース。
           lesson_groups:
+            csp_ap_2:
+              display_name: '第2章: AP パフォーマンスタスクの探索'
             cspSurvey:
               display_name: アンケート
         csp-create-2018:
+          title: 作成 - APパフォーマンスタスクの準備 ('18～'19)
+          description: 'このレッスンは、AP作成パフォーマンスタスクを理解し、準備し、実行するのに役立ちます。各「レッスン」には役に立つドキュメントへのリンクが含まれており、先生が説明して理解するのを助けてくれます。注:
+            最初のレッスンの1番目の項目は、PTの探索に直接関連していませんが、作成タスクと作成タスクのさまざまな要素に必要な一般的な技術的な設定とツールについて説明しています。'
+          description_short: 生徒がAP作成パフォーマンスタスクを準備して完了するのを助けるレッスンとリソース。
           lesson_groups:
+            csp_ap_3:
+              display_name: '第3章: AP パフォーマンスタスクの作成'
             cspSurvey:
               display_name: アンケート
         csp4-2018:
+          title: CSPユニット4 - ビッグデータとプライバシー ('18～'19)
+          description: 私たちが住んでいるデータが豊富な世界では、公共政策、法律、倫理、社会的影響に関する複雑な問題が数多く横たわっています。このユニットの目標は、データのプラスとマイナスの影響を含め、世界のデータに関してバランスの取れた見方を養い、最新の暗号化がなぜ・どのように機能するかの基本を理解することにあります。
+          description_short: 私たちが住んでいるデータが豊富な世界を探索し、データが公共政策、個人のプライバシー、セキュリティ、法律、倫理にどのように影響するかを探ります。
           lesson_groups:
+            csp4_1_2018:
+              display_name: 'ユニット4: ビッグデータとプライバシー'
+            cspAssessment:
+              display_name: 章の評価
             cspSurvey:
               display_name: アンケート
           lessons:
             Simple Encryption:
               name: 単純な暗号化
         csp5-2018:
+          description: このユニットでは、コンピュータープログラミングの基本的な概念の紹介を続けます。これにより、リッチでインタラクティブなアプリを作成する力がつきます。このコースでは、プログラミング言語としてJavaScriptを使用し、アプリを構築するためのプログラミング環境としてアプリラボを使用しますが、レッスンで学習するコンセプトは、どのプログラミング言語とツールにも通用します。
+          description_short: リッチでインタラクティブなアプリを作成することにより、JavaScriptでのコンピュータープログラミングの基本的な概念を引き続き学習します。
           lesson_groups:
+            csp5_1:
+              display_name: '第1章: イベント駆動型プログラミング'
+            csp5_2:
+              display_name: '第2章: データ構造を使用したプログラミング'
             cspSurvey:
               display_name: アンケート
           lessons:
@@ -1892,116 +2407,224 @@ ja:
             Introduction to Arrays:
               name: Introduction to Arrays
         csppostap-2018:
+          title: AP後 - データツール ('18～'19)
+          description: "このユニットの最初の章では、生徒は視覚データを解釈し、スプレッドシートと視覚化ツールを使って独自のデジタルアーティファクトを作成するスキルを身につけます。進行中のプロジェクト
+            (「クラスデータトラッカー」) を通じて、生徒はデータを収集してクリーンにする方法、および集計の計算と視覚化の作成に一般的なツールをどのように使用したらよいかを学びます。
+            \r \n\r \n2番目の章では、アプリ内のデータの重要性について説明します。 アプリラボには、アプリのデータを収集して使用するためのツールが用意されています。2番目の章では、さらにツールの機能の概要、ツールを使って構築できるサンプルプロジェクト、および最終的なプロジェクトを構築して送信するためのスペースについて説明します。"
+          description_short: アプリラボ アプリでデータを収集して使用する方法を学びましょう。
           lesson_groups:
+            csp_postap_1:
+              display_name: '第1章: データの操作と視覚化'
+            csp_postap_2:
+              display_name: '第2章: アプリとデータベース'
             cspSurvey:
               display_name: アンケート
+        spritelab:
+          title: スプライトラボ (PILOT) 入門
+          description_audience: コースE/Fの生徒
+          description_short: これは、Code.orgのコースEおよびFの生徒用の新しいスプライトラボツールのパイロットコースです。
+          description: これは、Code.orgのコースEおよびFの生徒用の新しいスプライトラボツールのパイロットコースです。
         csd1-dlp-18:
+          title: CS発見 ユニット1 詳細学習 2018～2019
+          description_audience: CS発見 トレーニング中のファシリテーター 2018～2019
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのユニット1です。ここでは、Code.org
+            CS発見カリキュラムのユニット1のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd2-dlp-18:
+          title: CS発見 ユニット2 詳細学習 2018～2019
+          description_audience: CS発見 トレーニング中のファシリテーター 2018～2019
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのユニット2です。ここでは、Code.org
+            CS発見カリキュラムのユニット2のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd3-dlp-18:
+          title: CS発見 ユニット3 詳細学習 2018～2019
+          description_audience: CS発見 トレーニング中のファシリテーター 2018～2019
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのユニット3です。ここでは、Code.org
+            CS発見カリキュラムのユニット3のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd4-dlp-18:
+          title: CS発見 ユニット4 詳細学習 2018～2019
+          description_audience: CS発見 トレーニング中のファシリテーター 2018～2019
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのユニット4です。ここでは、Code.org
+            CS発見カリキュラムのユニット4のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd5-dlp-18:
+          title: CS発見 ユニット5 詳細学習 2018～2019
+          description_audience: CS発見 トレーニング中のファシリテーター 2018～2019
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのユニット5です。ここでは、Code.org
+            CS発見カリキュラムのユニット5のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd6-dlp-18:
+          title: CS発見 ユニット6 詳細学習 2018～2019
+          description_audience: CS発見 トレーニング中のファシリテーター 2018～2019
+          description_short: トレーニング中のCS発見ファシリテーター向けの詳細学習の資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのユニット6です。ここでは、Code.org
+            CS発見カリキュラムのユニット6のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp1-dlp-18:
+          title: CS原則 ユニット1 詳細学習 2018 - 2019
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS原則 トレーニング中のファシリテーター向けの詳細学習資料
+          description: これは、トレーニング中のCode.org CS原則ファシリテーター向けの詳細学習プランのユニット1です。ここでは、Code.org
+            CS原則カリキュラムのユニット1のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp2-dlp-18:
+          title: CS原則 ユニット2 詳細学習 2018 - 2019
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS原則 トレーニング中のファシリテーター向けの詳細学習資料
+          description: これは、トレーニング中のCode.org CS原則ファシリテーター向けの詳細学習プランのユニット2です。ここでは、Code.org
+            CS原則カリキュラムのユニット2のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp3-dlp-18:
+          title: CS原則 ユニット3 詳細学習 2018 - 2019
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS原則 トレーニング中のファシリテーター向けの詳細学習資料
+          description: これは、トレーニング中のCode.org CS原則ファシリテーター向けの詳細学習プランのユニット3です。ここでは、Code.org
+            CS原則カリキュラムのユニット3のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp4-dlp-18:
+          title: CS原則 ユニット4 詳細学習 2018 - 2019
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS原則 トレーニング中のファシリテーター向けの詳細学習資料
+          description: これは、トレーニング中のCode.org CS原則ファシリテーター向けの詳細学習プランのユニット4です。ここでは、Code.org
+            CS原則カリキュラムのユニット4のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp5-dlp-18:
+          title: CS原則 ユニット5 詳細学習 2018 - 2019
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS原則 トレーニング中のファシリテーター向けの詳細学習資料
+          description: これは、トレーニング中のCode.org CS原則ファシリテーター向けの詳細学習プランのユニット5です。ここでは、Code.org
+            CS原則カリキュラムのユニット5のファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp-explore-dlp-18:
+          title: 'CS原則: 詳細学習の探求 2018～2019'
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS原則 トレーニング中のファシリテーター向けの詳細学習資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのAPの探索ユニットです。ここでは、Code.org
+            CS発見カリキュラムのAPの探索ユニットのファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp-create-dlp-18:
+          title: CS原則 詳細学習の作成 2018～2019
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS原則 トレーニング中のファシリテーター向けの詳細学習資料
+          description: これは、トレーニング中のCode.org CS発見ファシリテーター向けの詳細学習プランのAPの作成ユニットです。ここでは、Code.org
+            CS発見カリキュラムのAPの作成ユニットのファシリテーターとしての習熟度を示すためのおさらいプロンプトとガイダンスが見つかります。このユニットの感想を提出すると、このページの下部にあるピアレビュー項目が利用できるようになります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd-post-survey:
+          description_audience: CSD生徒
+          description_short: CSD生徒 コース後アンケート
+          description: Code.org CS発見コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません
+            - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
           lesson_groups:
             csd_survey:
               display_name: コース終了後アンケート
         csd-novice-18:
+          title: CS発見 初心者の省察 2018 - 2019
+          description_audience: CS発見 トレーニング中のファシリテーター 2018～2019
+          description_short: CS発見 トレーニング中のファシリテーター用の初心者の省察の資料
+          description: ここでは、5日間かけて行われる夏のワークショップの間に行われる、Code.orgのCS発見のトレーニング中のファシリテーター向けの初心者の一連の省察を扱います。また、対面式の5日間の夏のワークショップの各日向けの省察のプロンプトが表示されます。この質問は、ファシリテーター
+            トレーニング ウィークエンドで行う作業の基礎となります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csd-apprentice-18:
+          title: CS発見 見習いの省察 2018～2019
+          description_audience: CS発見 トレーニング中のファシリテーター 2018～2019
+          description_short: CS発見 トレーニング中のファシリテーター用の見習いの省察の資料
+          description: ここでは、5日間かけて行われる夏のワークショップの間に行われる、Code.orgのCS発見のトレーニング中のファシリテーター向けの見習いの一連の省察を扱います。また、対面式の5日間の夏のワークショップの各日向けの省察のプロンプトが表示されます。この質問は、ファシリテーター
+            トレーニング ウィークエンドで行う作業の基礎となります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp-novice-18:
+          title: CS原則 初心者の省察 2018～2019
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS原則 トレーニング中のファシリテーター向けの初心者の省察に関する資料
+          description: ここでは、5日間かけて行われる夏のワークショップの間に行われる、Code.orgのCS原則のトレーニング中のファシリテーター向けの初心者の一連の省察を扱います。また、対面式の5日間の夏のワークショップの各日向けの省察のプロンプトが表示されます。この質問は、ファシリテーター
+            トレーニング ウィークエンドで行う作業の基礎となります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         csp-apprentice-18:
+          title: Cs原則 見習いの省察 2018～2019
+          description_audience: CS原則 トレーニング中のファシリテーター 2018～2019
+          description_short: CS発見 トレーニング中のファシリテーター用の見習いの省察の資料
+          description: ここでは、5日間かけて行われる夏のワークショップの間に行われる、Code.orgのCS原則のトレーニング中のファシリテーター向けの見習いの一連の省察を扱います。また、対面式の5日間の夏のワークショップの各日向けの省察のプロンプトが表示されます。この質問は、ファシリテーター
+            トレーニング ウィークエンドで行う作業の基礎となります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         pre-express-2018:
+          title: 就学前エクスプレス (2018)
+          assignment_family_title: 就学前エクスプレス
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
+          description_audience: '年齢: 4～8才'
           lessons:
             'Debugging: Unspotted Bugs':
               name: 気づかれていないバグ
@@ -2024,46 +2647,71 @@ ja:
             Move It, Move It:
               name: 動かせ！動かせ！
             Your Digital Footprint:
-              name: あなたのデジタルフットプリント
+              name: デジタル フットプリント
+            Copyright and Creativity:
+              name: 作成してフェアにプレイするのは、素晴らしいことです
             'Persistence & Frustration: Stevie and the Big Project':
               name: スティーヴィーと大きなプロジェクト
+        deepdive-debugging:
+          title: 教育者向けのデバッグレッスン
         fit-test:
+          title: FITトレーニング 練習PLCコース
+          description_audience: トレーニングのファシリテーター
+          description_short: FITトレーニングコース
+          description: PLCコースの仕組みを示すために使用します。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
+        spritelab-simple:
+          title: スプライトラボ (EE) 入門
+          description: これは、Code.orgのコースEおよびFの生徒用の新しいスプライトラボツールのパイロットコースです。
+          description_short: これは、Code.orgのコースEおよびFの生徒用の新しいスプライトラボツールのパイロットコースです。
+          description_audience: コースE/Fの生徒
+        spritelab-ee:
+          title: スプライトラボ (EE) 入門
+        craft18:
+          title: craft18テストスクリプト
         frozen-2018:
+          title: 新しいフローズンスクリプト
           lessons:
             Artist:
               name: アーティスト
         frozen-2018-test:
+          title: 新しいフローズンスクリプト
           lessons:
             Artist:
               name: アーティスト
         dance:
           title: ダンスパーティー
           description_short: ケイティ・ペリー、マドンナ、J. バルヴィン、シーア、キース・アーバン、シアラ、その他25人が出演！
-          description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
+          description: 自分だけのダンスパーティーをプログラムして友だちと共有しましょう。
           lessons:
             Dance Party:
               name: ダンスパーティー
         frozen-2018-test-b:
+          title: 新しいフローズンスクリプト
           lessons:
             Artist:
               name: アーティスト
         aquatic:
+          title: 'マインクラフト: ボヤージュ アクアティック'
           description_short: 創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう！
-          description: Minecraftに新しいアクティビティができました！創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
+          description: マインクラフトに新しいアクティビティができました！創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
+        sconyers:
+          title: トレーシーのプレイグラウンド
         dance--draft:
           lessons:
             Dance Party:
               name: ダンスパーティー
         dance-draft:
+          title: 使用禁止
           lessons:
             Dance Party:
               name: ダンスパーティー
         cspplayground:
+          title: CSPプレイグラウンド
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2071,19 +2719,28 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
         dance-extras:
-          description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
+          title: ダンスを続ける (2018)
+          description_short: Hour of Codeを超えて、Code.orgのダンスパーティーチュートリアルのフォローアップアクティビティを行いましょう。
+          description: 最初の 1 時間を越えて、プロジェクトのアイデアを広げましょう。
         coursef-2019:
-          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+          title: コース F (2019)
+          description: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 9～13才'
           lesson_groups:
             ramp_up:
-              display_name: ランアップ
+              display_name: ランプアップ
             csf_variables:
               display_name: 変数（へんすう）
             csf_for_loops:
               display_name: ループ用
             csf_internet:
               display_name: インターネット
+            csf_digcit:
+              display_name: デジタル シティズンシップ
           lessons:
             Building a Foundation:
               name: ピラミッドをたてよう
@@ -2091,17 +2748,38 @@ ja:
               name: アーティストくりかえし
             Conditionals with Cards:
               name: カードと条件
+            The Power of Words:
+              description_teacher: "Students consider that while they are enjoying
+                their favorite websites they may encounter messages from other kids
+                that can make them feel angry, hurt, sad, or fearful. They explore
+                ways to handle cyberbullying and how to respond in the face of upsetting
+                language online.\r\n\r\nStudents discuss all the ways they use technology
+                for communication and explore the similarities and differences between
+                in-person and online communication. Students then brainstorm ways
+                to respond to cyberbullying. "
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             The Artist:
               name: アーティスト
             Internet:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+            Digital Sharing:
+              name: デジタル共有
+              description_teacher: このレッスンは、コンピューター サイエンス入門で使うために著作権および創造性チームから借り受けたもので、特にデジタル環境において、所有権と著作権を尊重することの課題と利点を生徒が理解するのに役立ちます。生徒には、倫理的なデジタル
+                シティズンでいることの重要な部分として、アーティストの権利を尊重するような姿勢が必要です。
         dance-low:
+          title: ダンスパーティー (低帯域幅)
           lessons:
             Dance Party:
               name: ダンスパーティー
         coursed-2019:
+          description: 生徒はループ、条件、イベントについての理解を深めます。プログラミング以外に、生徒はデジタル シティズンシップについて学びます。
+          description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
+          description_audience: '年齢: 7～11才'
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -2113,17 +2791,22 @@ ja:
               display_name: 条件
             csf_binary:
               display_name: ２しんすう
+            csf_digcit:
+              display_name: デジタル シティズンシップ
           lessons:
             'Algorithms: Graph Paper Programming':
               name: グラフ用紙のプログラミング
             Relay Programming:
               name: プログラミングをリレーする
+              description_teacher: このアクティビティは、デバッグと永続性に関する短いレッスンから始まります。その後すぐに、生徒はチームに分かれ、一度に1つの命令を受けて一緒にプログラムを作成する時間との戦いに入ります。
             Loops in Ice Age:
               name: アイス・エイジのループ
             Loops in Artist:
               name: アーティストくりかえし
             Conditionals with Cards:
               name: カードと条件
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             'Unplugged: Binary':
               name: バイナリ画像
             Artist Binary:
@@ -2131,9 +2814,15 @@ ja:
             Dance Party:
               name: ダンスパーティー
         coursee-2019:
+          title: コース E (2019)
+          description: アルゴリズム、ループ、条件文、イベントを使ってプログラミングから始めて、関数に移ります。このコースの後半では、友だちや家族と共有できるキャップストーンプロジェクトを設計して作成します。
+          description_short: コースCとDの概念を確認してから、関数を学習してさらに進みます。
+          description_audience: '年齢: 8～12才'
           lesson_groups:
             ramp_up:
-              display_name: ランアップ
+              display_name: ランプアップ
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_nested_loops:
               display_name: 入れ子のループ
             csf_functions:
@@ -2153,9 +2842,16 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+            Digital Sharing:
+              name: デジタル共有
+            Simon Says:
+              name: サイモンは言う
             Songwriting:
               name: 作詞作曲
         express-2019:
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: 'コンピューター サイエンス入門: 小学校低学年向けの最高のカリキュラムを高学年の性と向けに組み合わせています。'
+          description_audience: '年齢: 9～18才'
           lesson_groups:
             csf_warmup:
               display_name: ウォームアップ
@@ -2182,8 +2878,12 @@ ja:
               name: カードと条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
             'Unplugged: Binary':
               name: 'アンプラグド: バイナリ'
             Artist Binary:
@@ -2195,6 +2895,9 @@ ja:
             Dance Party:
               name: ダンスパーティー
         csd1-2019:
+          title: CSDユニット1 - 問題解決と計算 ('19～'20)
+          description: "問題解決とコンピューティングは、コンピューター サイエンスの世界を高度にインタラクティブで協調的な形で紹介し、問題解決のより広い枠組みを見ていきます。問題解決プロセスを使って練習し、一連のパズル、課題、および実際のシナリオをこなしていきます。次に、コンピューターがどのように情報を入力、出力、保存、処理して、人が問題を解決するのを助けているかを学びます。このユニットの終わりに、選択した問題の解決に役立つアプリケーションを設計します。\r"
+          description_short: 人が問題を解決するためにコンピューターを使ってどのように作業をするかを学びます。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -2206,6 +2909,9 @@ ja:
             The Problem Solving Process:
               name: The Problem Solving Process
         andrea-test:
+          description_audience: 6-12 トレーニング中のファシリテーター
+          description_short: ここでは、コースを作成するスキルをテストします
+          description: コースを作成する試みについての長めの説明....概要、コンテンツがどこから来たのかまだ疑問に思っています...
           lesson_groups:
             required:
               display_name: 概要
@@ -2216,9 +2922,16 @@ ja:
               name: ヌル
         dance-extras-gallery:
           title: ダンスを続ける
-          description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
+          description_short: Hour of Codeを超えて、Code.orgのダンスパーティーチュートリアルのフォローアップアクティビティを行いましょう。
+          description: 最初の 1 時間を越えて、プロジェクトのアイデアを広げましょう。
         coursec-2019:
+          title: コース C (2019)
+          description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 6～10才'
           lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_sequencing:
               display_name: シークエンス
             csf_binary:
@@ -2231,25 +2944,46 @@ ja:
             Programming in Maze:
               name: めいろ のプログラミング
             'Real-life Algorithms: Paper Planes':
-              name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+              name: '現実世界のアルゴリズム: 紙飛行機'
             Loops in Artist:
               name: アーティストくりかえし
+            'Events: The Big Event':
+              name: ビッグイベント
             Events in Play Lab:
               name: プレイ ラボのイベント
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
+            Powerful Passwords:
+              name: 強力なパスワード
+              description_teacher: "Students explore why people use passwords, learn
+                the benefits of using passwords, and discover strategies for creating
+                and keeping strong, secure passwords.\r\n\r\nStudents learn password
+                tips, test their existing passwords with an interactive game, and
+                create new passwords using guidelines for powerful passwords.\r\n"
             Sticker Art with Loops:
               name: アーティストくりかえし
+            Picturing Data:
+              name: データで予測
         csp-mid-survey:
+          title: CSP生徒向け中間アンケート
+          description_audience: CSP生徒
+          description_short: CSP生徒向け中間アンケート
+          description: Code.org CS原則中間アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません
+            - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
         gamelab:
           title: ゲーム ラボ
+          description: ゲームラボで開発するための先生との対面式チュートリアル。このチュートリアルは、CSDで扱った概念を超えて説明します。
         coursea-2019:
+          title: コース A (2019)
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
           description_short: 低学年向けコンピューター サイエンス入門
           description_audience: 4-7 才
           lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_sequencing:
               display_name: シークエンス
             csf_loops:
@@ -2275,9 +3009,19 @@ ja:
               name: アーティストくりかえし
             Learn to Drag and Drop:
               name: ドラッグ＆ドロップ
+            Sequencing with Scrat:
+              description_teacher: This lesson will give students an idea of what
+                to expect when they head to the computer lab. It begins with a brief
+                discussion introducing them to computer lab manners, then they will
+                progress into using a computer to complete online puzzles.
         courseb-2019:
+          title: コース B (2019)
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
           description_audience: 5-8 才
           lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_sequencing:
               display_name: シークエンス
             csf_loops:
@@ -2288,7 +3032,13 @@ ja:
             Move It, Move It:
               name: 動かせ！動かせ！
             Your Digital Footprint:
-              name: あなたのデジタルフットプリント
+              name: デジタル フットプリント
+              description_teacher: In collaboration with [r common-sense-media], this
+                lesson helps students learn about the similarities of staying safe
+                in the real world and when visiting websites. Students will also learn
+                that the information they put online leaves a digital footprint or
+                “trail.” This trail can be big or small, helpful or hurtful, depending
+                on how they manage it.
             Loops in Ice Age:
               name: アイス・エイジのループ
             Loops in Collector:
@@ -2297,9 +3047,25 @@ ja:
               name: アーティストくりかえし
             Events in Play Lab:
               name: プレイ ラボのイベント
+            'Loops: Getting Loopy':
+              name: ルーピーをゲット
             Programming in Maze:
               name: めいろ のプログラミング
+              description_teacher: Using characters from the game Angry Birds, students
+                will develop sequential algorithms to move a bird from one side of
+                a maze to the pig at the other side. To do this they will stack code
+                blocks together in a linear sequence, making them move straight, turn
+                left, or turn right.
+            Sequencing in Maze:
+              description_teacher: This lesson will give students an idea of what
+                to expect when they head to the computer lab. It begins with a brief
+                discussion introducing them to computer lab manners, then they will
+                progress into using a computer to complete online puzzles.
         pre-express-2019:
+          title: 就学前エクスプレス (2019)
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
+          description_audience: '年齢: 4～8才'
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -2313,7 +3079,7 @@ ja:
             Move It, Move It:
               name: 動かせ！動かせ！
             Your Digital Footprint:
-              name: あなたのデジタルフットプリント
+              name: デジタル フットプリント
             Loops in Collector:
               name: くりかえし あつめる
             Loops in Artist:
@@ -2335,12 +3101,16 @@ ja:
             Ocean Scene with Loops:
               name: アーティストくりかえし
         removed19:
+          title: 2019のCSFから削除されました
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
             'Real-life Algorithms: Plant a Seed':
               name: 現実のアルゴリズム：種を植えましょう
         csd2-2019:
+          title: CSDユニット2 - ウェブ開発 ('19～'20)
+          description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグやコメントなどの貴重なプログラミングスキルも練習します。ユニットの終わりまでに、インターネットに公開できる個人用ウェブサイトが完成していることでしょう。
+          description_short: ウェブラボで独自のウェブサイトを構築する方法を学びましょう。
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -2352,6 +3122,10 @@ ja:
             Lists:
               name: リスト
         csd3-2019:
+          title: CSDユニット3 - アニメーションとゲーム ('19～'20)
+          description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+          description_short: ゲームラボでアニメーション、インタラクティブアート、ゲームのプログラミングを学びましょう。
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -2369,6 +3143,9 @@ ja:
             Functions:
               name: 関数(かんすう)
         csd4-2019:
+          title: CSDユニット4 - 設計プロセス ('19～'20)
+          description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
+          description_short: ユーザーのニーズを満たすプログラムを設計する方法を学びましょう。
           lesson_groups:
             csd4_1:
               display_name: 第 1 章：ユーザーを中心にしたデザイン
@@ -2379,6 +3156,8 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd5-2019:
+          title: CSDユニット5 - データと社会 ('19～'20)
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
           lesson_groups:
             csd5_1:
               display_name: 第1章：情報を表現する
@@ -2387,17 +3166,23 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd6-2019:
+          title: CSDユニット6 - フィジカルコンピューティング ('19～'20)
+          description: ユニット6では、コンピューティングにおけるハードウェアプラットフォームの役割と、従来のキーボード、マウス、モニターと比べてさまざまなセンサーによりどのように効果的な入力と出力が行えるかを探ります。アプリラボとAdafruitのサーキット
+            プレイグラウンドを使って、スマートデバイスで見られるのと同じハードウェア入力と出力を利用するプログラムを開発し、単純な粗いプロトタイプがどのようにして完成品につながるかを見ていきます。ユニットの最後には、独自の革新的な設計を行う基礎としてサーキット
+            プレイグラウンドを使用するというデザインチャレンジが用意されています。
+          description_short: 物理デバイスでプログラミングする方法を学びます。
           lesson_groups:
             csd6_1:
-              display_name: 第 1 章：ハードウェア出力
+              display_name: '第 1 章: ハードウェアを使ったプログラミング'
             csd6_2:
-              display_name: 第 2 章：ハードウェア入力
+              display_name: '第 2 章: 物理プロパティの構築'
             cspSurvey:
               display_name: アンケート
           lessons:
             Functions with Parameters:
               name: パラメーター付き関数
         csp4-pilot:
+          title: CSPユニット4パイロット - 変数、条件文、関数
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2405,40 +3190,80 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
             required:
               display_name: 概要
+            optional_stages:
+              display_name: オプションのステージ
           lessons:
             Surveys:
               name: アンケート
         csp1-2019:
+          title: CSPユニット1 - インターネット ('19～'20)
+          description: このユニットでは、コンピューターでデジタル情報を表現し、それを人と計算装置の間で転送する必要性から生じる技術的な課題と問題について検討します。次に、このユニットでは、インターネットの構造と設計、および設計で行った決定が与える影響について詳しく見ていきます。
+          description_short: 情報をビットとして表現することに関する課題と、そのビットをある場所から別の場所に移す方法を探ります。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
+            csp1_1:
+              display_name: '第1章: 情報の表現と送信'
+            csp1_2:
+              display_name: '第2章: インターネットの発明'
           lessons:
             The Internet:
               name: インターネット
         csp2-2019:
+          title: CSPユニット2 - デジタル情報 ('19～'20)
+          description: このユニットでは、デジタル情報をエンコード、表現、操作する方法をさらに探ります。データをデジタルで操作して視覚化し、パターン、傾向、および潜在的な意味をつかむスキルは、コンピューター
+            サイエンティストが毎日使っている重要な実践的スキルです。ユニットでは主に、データの出所を理解し、そこから何を学んだり抽出したりできるかを直観的に理解し、計算ツールを使ってデータを操作および伝達するスキルについて学びます。
+          description_short: より複雑なデジタル情報をどのように表現し、計算と視覚化によって操作するかを詳しく見ていきましょう。
           lesson_groups:
             csp2_1_2018:
               display_name: '第 2 章: デジタル情報'
+            cspAssessment:
+              display_name: 章の評価
             cspSurvey:
               display_name: アンケート
+          lessons:
+            Text Compression:
+              name: テキスト圧縮
         csp3-2019:
+          title: CSPユニット3 - プログラミング入門 ('19～'20)
+          description_short: 古典的な亀の絵を使ったトップダウンの設計アプローチを通じて、JavaScriptのプログラミングの基本を学びます。
           lesson_groups:
+            csp3_1_2018:
+              display_name: 'ユニット3: プログラミング入門'
+            cspAssessment:
+              display_name: 章の評価
             cspSurvey:
               display_name: アンケート
           lessons:
             Creating Functions:
               name: 関数の作成
         csp4-2019:
+          title: CSPユニット4 - ビッグデータとプライバシー ('19～'20)
+          description: 私たちが住んでいるデータが豊富な世界では、公共政策、法律、倫理、社会的影響に関する複雑な問題が数多く横たわっています。このユニットの目標は、データのプラスとマイナスの影響を含め、世界のデータに関してバランスの取れた見方を養い、最新の暗号化がなぜ・どのように機能するかの基本を理解することにあります。
+          description_short: 私たちが住んでいるデータが豊富な世界を探索し、データが公共政策、個人のプライバシー、セキュリティ、法律、倫理にどのように影響するかを探ります。
           lesson_groups:
+            csp4_1_2018:
+              display_name: 'ユニット4: ビッグデータとプライバシー'
+            cspAssessment:
+              display_name: 章の評価
             cspSurvey:
               display_name: アンケート
           lessons:
             Simple Encryption:
               name: 単純な暗号化
         csp5-2019:
+          title: CSPユニット5 - アプリの構築 ('19～'20)
+          description: このユニットでは、コンピュータープログラミングの基本的な概念の紹介を続けます。これにより、リッチでインタラクティブなアプリを作成する力がつきます。このコースでは、プログラミング言語としてJavaScriptを使用し、アプリを構築するためのプログラミング環境としてアプリラボを使用しますが、レッスンで学習するコンセプトは、どのプログラミング言語とツールにも通用します。
+          description_short: リッチでインタラクティブなアプリを作成することにより、JavaScriptでのコンピュータープログラミングの基本的な概念を引き続き学習します。
           lesson_groups:
+            csp5_1:
+              display_name: '第1章: イベント駆動型プログラミング'
+            csp5_2:
+              display_name: '第2章: データ構造を使用したプログラミング'
             cspSurvey:
               display_name: アンケート
           lessons:
@@ -2447,27 +3272,69 @@ ja:
             Introduction to Arrays:
               name: Introduction to Arrays
         csp-explore-2019:
+          title: 探索 - APパフォーマンスタスクの準備 ('19～'20)
+          description: 'このレッスンは、AP探索パフォーマンスタスクを理解し、準備し、実行するのに役立ちます。各「レッスン」には役に立つドキュメントへのリンクが含まれており、先生が説明して理解するのを助けてくれます。注:
+            最初のレッスンの2番目の項目は、PTの探索に直接関連していませんが、探索タスクと作成タスクのさまざまな要素に必要な一般的な技術的な設定とツールについて説明しています。'
+          description_short: 生徒がAP探索パフォーマンスタスクを準備して完了するのを助けるレッスンとリソース。
           lesson_groups:
+            csp_ap_2:
+              display_name: '第2章: AP パフォーマンスタスクの探索'
             cspSurvey:
               display_name: アンケート
         csp-create-2019:
+          title: 作成 - APパフォーマンスタスクの準備 ('19～'20)
+          description: 'このレッスンは、AP作成パフォーマンスタスクを理解し、準備し、実行するのに役立ちます。各「レッスン」には役に立つドキュメントへのリンクが含まれており、先生が説明して理解するのを助けてくれます。注:
+            最初のレッスンの1番目の項目は、PTの探索に直接関連していませんが、作成タスクと作成タスクのさまざまな要素に必要な一般的な技術的な設定とツールについて説明しています。'
+          description_short: 生徒がAP作成パフォーマンスタスクを準備して完了するのを助けるレッスンとリソース。
           lesson_groups:
+            csp_ap_3:
+              display_name: '第3章: AP パフォーマンスタスクの作成'
             cspSurvey:
               display_name: アンケート
         csppostap-2019:
+          title: AP後 - データツール ('19～'20)
+          description: "このユニットの最初の章では、生徒は視覚データを解釈し、スプレッドシートと視覚化ツールを使って独自のデジタルアーティファクトを作成するスキルを身につけます。進行中のプロジェクト
+            (「クラスデータトラッカー」) を通じて、生徒はデータを収集してクリーンにする方法、および集計の計算と視覚化の作成に一般的なツールをどのように使用したらよいかを学びます。
+            \r \n\r \n2番目の章では、アプリ内のデータの重要性について説明します。 アプリラボには、アプリのデータを収集して使用するためのツールが用意されています。2番目の章では、さらにツールの機能の概要、ツールを使って構築できるサンプルプロジェクト、および最終的なプロジェクトを構築して送信するためのスペースについて説明します。"
+          description_short: アプリラボ アプリでデータを収集して使用する方法を学びましょう。
           lesson_groups:
+            csp_postap_1:
+              display_name: '第1章: データの操作と視覚化'
+            csp_postap_2:
+              display_name: '第2章: アプリとデータベース'
             cspSurvey:
               display_name: アンケート
         csp1-pilot:
+          title: CSPユニット1パイロット - デジタル情報
           lesson_groups:
             cspSurvey:
               display_name: アンケート
             required:
               display_name: 概要
+        csd-tests:
+          title: CSDのプロジェクト後テスト
+        csd-videos:
+          title: CSDビデオ
+          description_short: CS発見のすべてのビデオ
+          description: CS発見のすべてのビデオ
         time4csdemo:
+          title: Time4CS フロリダの多様性
+          description_audience: 4年生
+          description_short: このモジュールでは、4年生の科学と社会の学習基準に焦点を当てます。科学では、生息地、生態系、在来種、外来種を含む生活水準を見ます。社会科では、生徒はフロリダ州政府の支部と、市民が地域や州の政策にどのように影響を与えることができるかを考えます。
+          description: このモジュールでは、4年生の科学と社会の学習基準に焦点を当てます。科学では、生息地、生態系、在来種、外来種を含む生活水準を見ます。社会科では、生徒はフロリダ州政府の支部と、市民が地域や州の政策にどのように影響を与えることができるかを考えます。
           lesson_groups:
             ramp_up:
-              display_name: ランアップ
+              display_name: ランプアップ
+            time4cs_c1:
+              display_name: 'コレクション1: エバーグレーズとその生態系'
+            time4cs_c2:
+              display_name: 'コレクション2: 食物連鎖 (エバーグレーズ)'
+            time4cs_c3:
+              display_name: 'コレクション3: 在来種 (エバーグレーズ)'
+            time4cs_c4:
+              display_name: 'コレクション4: 外来種の影響 (エバーグレーズ)'
+            time4cs_c5:
+              display_name: 'コレクション5: 市民が行動する'
           lessons:
             Crowdsourcing:
               name: クラウドソーシング
@@ -2480,6 +3347,7 @@ ja:
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
         csp1-pilot-staging:
+          title: 'ユニット1: ビットとバイト'
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2487,7 +3355,10 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
         csp2-pilot-staging:
+          title: 'ユニット2: インターネット'
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2495,7 +3366,12 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
+        csp3-pilot-staging:
+          title: 'ユニット3: アプリ開発入門'
         csp4-pilot-staging:
+          title: 'ユニット4: 変数、条件文、関数'
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2503,13 +3379,21 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
         csp5-pilot-staging:
+          title: 'ユニット5: リスト、ループ、トラバーサル'
           lesson_groups:
             csp_lists:
               display_name: リスト
             csp_loops:
               display_name: くりかえし
+            csp_traversals:
+              display_name: トラバーサル
+            csp_project:
+              display_name: プロジェクト
         csp6-pilot-staging:
+          title: 'ユニット6: アルゴリズム'
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2517,7 +3401,15 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
+        csp7-pilot-staging:
+          title: 'ユニット7: 関数とライブラリ'
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: パラメータと戻り値
         csp8-pilot-staging:
+          title: 'ユニット8: PTの作成'
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2525,7 +3417,10 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
         csp9-pilot-staging:
+          title: 'ユニット9: データ'
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2533,7 +3428,10 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
         csp10-pilot-staging:
+          title: 'ユニット10: グローバルインパクト'
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2541,41 +3439,76 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
+        pluralsight:
+          title: Pluralsight Oneにアクセスする
         express-2018-vn:
+          title: ベトナム向けエクスプレス (2018)
           lessons:
             Graph Paper Programming:
               name: グラフ用紙のプログラミング
             Programming in Maze:
               name: めいろ のプログラミング
         csd-post-survey-2018:
+          description_audience: CSD生徒
+          description_short: CSD生徒向けコース後アンケート2018
+          description: "CS発見 コース後アンケートは、お客様からフィードバックを得てコースを改善するための重要なツールです。 \r\nアンケートは非公開で匿名で行われます。先生はクラス全体の匿名の集計結果を確認できます。結果は、先生とCode.orgがコースを保ち、より良くするために不可欠です。ご協力よろしくお願いします。"
           lesson_groups:
             cspSurvey:
               display_name: アンケート
         csp-post-survey-2018:
+          title: CSP生徒向けコース後アンケート ('18～'19)
+          description_audience: CSP生徒
+          description_short: CSP生徒向けコース後の調査
+          description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません
+            - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
         csp5-pilot:
+          title: CSPユニット5パイロット - リスト、ループ、トラバーサル
           lesson_groups:
             csp_lists:
               display_name: リスト
             csp_loops:
               display_name: くりかえし
+            csp_traversals:
+              display_name: トラバーサル
+            csp_project:
+              display_name: プロジェクト
             required:
               display_name: 概要
+            optional_stages:
+              display_name: オプションのステージ
         fit2019-novice:
+          title: 夏のワークショップ2019の初心者用復習資料
+          description_audience: 6 - 12トレーニング中の初心者ファシリテーター
+          description_short: トレーニング中の2019ファシリテーター向けの初心者用復習資料
+          description: これは、Code.orgファシリテーターが5日間の夏のワークショップでトレーニングするための初心者用復習資料です。この中で、対面式の5日間の夏のワークショップの毎日の復習プロンプトが表示されます。これらの質問は、ファシリテータートレーニングワークショップで行う作業の基礎となります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
+        csd-test-saving-state:
+          title: オンラインアクティビティのサンプル
         fit2019-apprentice:
+          title: 夏のワークショップ2019の見習い用復習資料
+          description_audience: 6 - 12トレーニング中の見習いファシリテーター
+          description_short: トレーニング中の2019ファシリテーター向けの見習い用復習資料
+          description: これは、Code.orgファシリテーターが5日間の夏のワークショップでトレーニングするための見習い用復習資料です。この中で、対面式の5日間の夏のワークショップの毎日の復習プロンプトが表示されます。これらの質問は、ファシリテータートレーニングワークショップで行う作業の基礎となります。
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
+        csd-sample-online:
+          title: CS発見のオンラインアクティビティのサンプル
         csd1-pilot:
+          title: CSDユニット1 - 問題解決 (パイロット版)
+          description: "問題解決とコンピューティングは、コンピューター サイエンスの世界を高度にインタラクティブで協調的な形で紹介し、問題解決のより広い枠組みを見ていきます。問題解決プロセスを使って練習し、一連のパズル、課題、および実際のシナリオをこなしていきます。次に、コンピューターがどのように情報を入力、出力、保存、処理して、人が問題を解決するのを助けているかを学びます。このユニットの終わりに、選択した問題の解決に役立つアプリケーションを設計します。\r"
+          description_short: 人が問題を解決するためにコンピューターを使ってどのように作業をするかを学びます。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -2587,6 +3520,9 @@ ja:
             The Problem Solving Process:
               name: The Problem Solving Process
         csd2-pilot:
+          title: CSDユニット2 - ウェブ開発 (パイロット版)
+          description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグやコメントなどの貴重なプログラミングスキルも練習します。ユニットの終わりまでに、インターネットに公開できる個人用ウェブサイトが完成していることでしょう。
+          description_short: ウェブラボで独自のウェブサイトを構築する方法を学びましょう。
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -2598,6 +3534,10 @@ ja:
             Lists:
               name: リスト
         csd3-pilot:
+          title: CSDユニット3 - アニメーションとゲーム (パイロット版)
+          description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+          description_short: ゲームラボでアニメーション、インタラクティブアート、ゲームのプログラミングを学びましょう。
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -2614,7 +3554,10 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう)
+        csd-bugs:
+          title: CSD教師のバグの例
         csp3-pilot:
+          title: CSPユニット3パイロット - アプリ設計入門
           lesson_groups:
             content:
               display_name: 内容
@@ -2624,6 +3567,7 @@ ja:
             Debugging:
               name: Debugging
         csl-vn:
+          title: ベトナムのコンピューター サイエンスリテラシー
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -2639,42 +3583,55 @@ ja:
             Ocean Scene with Loops:
               name: アーティストくりかえし
         dlp19-csd-mod-fit:
+          title: CS発見 詳細学習2019 FiT向けモジュール
+          description_audience: CS発見 トレーニング中のファシリテーター2019
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         dlp19-csp-mod-fit:
+          title: CS原則 詳細学習 2019 FiTワークショップ
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
+        pl-csd-bugs:
+          description_short: ゲームラボでのデバッグ - 学年ワークショップ1
         dlp19-csd-mod-w1:
+          title: CS発見 詳細学習2019 ワークショップ1向けモジュール
+          description_audience: CS発見 トレーニング中のファシリテーター2019
+          description_short: 学年ワークショップ1
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         dlp19-csd-mod-w2:
+          title: CS発見 詳細学習 ワークショップ2向けモジュール
+          description_audience: CS発見 トレーニング中のファシリテーター2019
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         dlp19-csd-mod-w3:
+          description_audience: CS発見 トレーニング中のファシリテーター2019
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         dlp19-csd-mod-w4:
+          description_audience: CS発見 トレーニング中のファシリテーター2019
           lesson_groups:
             required:
               display_name: 概要
             content:
               display_name: 内容
         dlp19-csp-mod-w1:
+          title: CS原則 詳細学習 ワークショップ1向けモジュール
           lesson_groups:
             required:
               display_name: 概要
@@ -2698,7 +3655,10 @@ ja:
               display_name: 概要
             content:
               display_name: 内容
+        csd-pilot:
+          title: CSDパイロットコース
         csd4-pilot:
+          title: コンピューティングと問題解決
           lesson_groups:
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
@@ -2722,12 +3682,19 @@ ja:
               display_name: 内容
             required:
               display_name: 概要
+        denny-science-8:
+          title: 衝突検知器
         dance-2019:
-          description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
+          title: ダンスパーティー (2019)
+          description: 自分だけのダンスパーティーをプログラムして友だちと共有しましょう。
           lessons:
             Dance Party:
               name: ダンスパーティー
         k5-onlinepd-2019:
+          description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター サイエンスを教える方法を学びましょう！
+          lesson_groups:
+            k5_basic_concepts:
+              display_name: 基本的なプログラミングの概念と教授法
           lessons:
             Computer Science Fundamentals:
               name: コンピュータ サイエンス入門
@@ -2746,8 +3713,13 @@ ja:
             For Loops:
               name: ループ用
         dance-extras-2019:
-          description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
+          title: ダンスを続ける (2019)
+          description: 最初の 1 時間を越えて、プロジェクトのアイデアを広げましょう。
+          description_short: Hour of Codeを超えて、Code.orgのダンスパーティーチュートリアルのフォローアップアクティビティを行いましょう。
+        csp10-pilot:
+          title: サイバーセキュリティとグローバルインパクト
         csp4-preview:
+          title: 'CSPプレビュー: 変数、条件文、関数'
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2755,14 +3727,24 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
         time4cs-original-unit-1:
+          title: Time4CS オリジナルユニット1
           lessons:
             Conditionals:
               name: 条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+            Simon Says:
+              name: サイモンは言う
+            Access Ability:
+              name: アクセシビリティ
         time4cs-control-unit-2:
+          title: Time4CS コントロールユニット2
           lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_conditionals:
               display_name: 条件
             csf_nested_loops:
@@ -2774,6 +3756,21 @@ ja:
               name: クラウドソーシング
             Conditionals with Cards:
               name: カードと条件
+        time4cs-experiment-unit-2:
+          title: Time4CS 実験ユニット2
+          description_short: "[説明を追加]"
+          description: "[説明を追加]"
+          lesson_groups:
+            time4cs_c1:
+              display_name: 'コレクション1: エバーグレーズとその生態系'
+            time4cs_c2:
+              display_name: 'コレクション2: 食物連鎖 (エバーグレーズ)'
+            time4cs_c3:
+              display_name: 'コレクション3: 在来種 (エバーグレーズ)'
+            time4cs_c4:
+              display_name: 'コレクション4: 外来種の影響 (エバーグレーズ)'
+            time4cs_c5:
+              display_name: 'コレクション5: 市民が行動する'
         time4cs-control-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -2784,14 +3781,21 @@ ja:
               display_name: 条件
             csf_events:
               display_name: イベント
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             ramp_up:
-              display_name: ランアップ
+              display_name: ランプアップ
           lessons:
             Conditionals:
               name: 条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+            Simon Says:
+              name: サイモンは言う
+            Access Ability:
+              name: アクセシビリティ
         time4cs-experiment-unit-1:
+          title: Time4CS 実験ユニット1
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -2801,18 +3805,32 @@ ja:
               display_name: 条件
             csf_events:
               display_name: イベント
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             ramp_up:
-              display_name: ランアップ
+              display_name: ランプアップ
           lessons:
             Conditionals:
               name: 条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+            Simon Says:
+              name: サイモンは言う
+            Access Ability:
+              name: アクセシビリティ
         csp7-pilot:
+          title: CSPユニット7パイロット - パラメータ、戻り値、ライブラリ
           lesson_groups:
+            csp_parameters_return_values:
+              display_name: パラメータと戻り値
             required:
               display_name: 概要
+            optional_stages:
+              display_name: オプションのステージ
+        csp8-pilot:
+          title: CSPユニット8パイロット - PT作成の準備
         csp4-2020:
+          title: CSPユニット4 - 変数、条件文、関数 ('20～'21)
           lesson_groups:
             csp_variables:
               display_name: 変数（へんすう）
@@ -2820,13 +3838,32 @@ ja:
               display_name: 条件
             csp_functions:
               display_name: 関数(かんすう)
+            csp_project:
+              display_name: プロジェクト
         csp5-2020:
+          title: CSPユニット5 - リスト、ループ、トラバーサル ('20 - '21)
           lesson_groups:
             csp_lists:
               display_name: リスト
             csp_loops:
               display_name: くりかえし
+            csp_traversals:
+              display_name: トラバーサル
+            csp_project:
+              display_name: プロジェクト
+        csp7-2020:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: パラメータと戻り値
+        csd2-projects-temp:
+          title: CSD ウェブプロジェクト - 一時
+          description: CSD ウェブ開発のための新しいミニプロジェクトを開催する一時的な場所
+        csp9-pilot:
+          title: CSPユニット9パイロット - データ
         csd2-2020:
+          title: CSDユニット2 - ウェブ開発
+          description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。
+          description_short: ウェブラボで独自のウェブサイトを構築する方法を学びましょう。
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
@@ -2835,6 +3872,9 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd1-2020:
+          title: CSDユニット1 - 問題の解決とコンピューティング
+          description: "問題解決とコンピューティングは、コンピューター サイエンスの世界を高度にインタラクティブで協調的な形で紹介し、問題解決のより広い枠組みを見ていきます。問題解決プロセスを使って練習し、一連のパズル、課題、および実際のシナリオをこなしていきます。次に、コンピューターがどのように情報を入力、出力、保存、処理して、人が問題を解決するのを助けているかを学びます。このユニットの終わりに、選択した問題の解決に役立つアプリケーションを設計します。\r"
+          description_short: 人が問題を解決するためにコンピューターを使ってどのように作業をするかを学びます。
           lesson_groups:
             cspSurvey:
               display_name: アンケート
@@ -2842,10 +3882,67 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             csd1_2:
               display_name: 第 2 章コンピューターと問題解決
+            csd1_3:
+              display_name: 代替レッスン
           lessons:
             The Problem Solving Process:
               name: The Problem Solving Process
+            " Newspaper Table (Alt Lesson 1: Intro to Problem Solving -)":
+              name: 'Newspaper Table (Alt Lesson 1: Intro to Problem Solving -)'
+            " Newspaper Table (Alternative Lesson 1: Intro to Problem Solving)":
+              name: 'Newspaper Table (Alternative Lesson 1: Intro to Problem Solving)'
+            " Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)":
+              name: 'Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)'
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              description_student: "**Question of the Day: How can we apply the problem
+                solving process to many different kinds of problems?**\r\n\r\nIn this
+                lesson the class applies the problem solving process to three different
+                problems: a tangram puzzle, choosing a pet according to criteria,
+                and planning a pet adoption event. The problems grow increasingly
+                complex and poorly defined to highlight how the problem solving process
+                is particularly helpful when tackling these types of problems."
+              description_teacher: "**Question of the Day: How can we apply the problem
+                solving process to many different kinds of problems?**\r\n\r\nIn this
+                lesson students apply the problem solving process to three different
+                problems in order to better understand the value of each step. They
+                will solve tangrams, choose a pet for several people, and plan a pet
+                adoption event. The problems grow increasingly complex and poorly
+                defined to highlight how the problem solving process is particularly
+                helpful when tackling these types of problems. The lesson concludes
+                with students reflecting on their experience with the problem solving
+                process. They will justify the inclusion of each step and will brainstorm
+                questions or strategies that can help them better define open-ended
+                problems, as this is often the most critical step.\r\n\r\nThis lesson
+                will likely take two class periods or more to complete. The first
+                two problems may fit into a single class period but the third will
+                need to be moved to a second day."
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              description_student: "**Question of the Day: How can we apply the problem
+                solving process to many different kinds of problems?**\r\n\r\nIn this
+                lesson the class applies the problem solving process to three different
+                problems: a maze, a logic puzzle, and planning field day activity.
+                The problems grow increasingly complex and poorly defined to highlight
+                how the problem solving process is particularly helpful when tackling
+                these types of problems."
+              description_teacher: "**Question of the Day: How can we apply the problem
+                solving process to many different kinds of problems?**\r\n\r\nIn this
+                lesson students apply the problem solving process to three different
+                problems in order to better understand the value of each step. They
+                will solve a maze, organizing a team to race as fast as possible,
+                and design a game. The problems grow increasingly complex and poorly
+                defined to highlight how the problem solving process is particularly
+                helpful when tackling these types of problems. The lesson concludes
+                with students reflecting on their experience with the problem solving
+                process. They will justify the inclusion of each step and will brainstorm
+                questions or strategies that can help them better define open-ended
+                problems, as this is often the most critical step.\r\n\r\nThis lesson
+                will likely take two class periods or more to complete. The first
+                two problems may fit into a single class period but the third will
+                need to be moved to a second day."
         csd4-2020:
+          title: CSDユニット4 - 設計プロセス
+          description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
+          description_short: ユーザーのニーズを満たすプログラムを設計する方法を学びましょう。
           lesson_groups:
             csd4_1:
               display_name: 第 1 章：ユーザーを中心にしたデザイン
@@ -2856,6 +3953,8 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd5-2020:
+          title: CSDユニット5 - データと社会 ('20～'21)
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
           lesson_groups:
             csd5_1:
               display_name: 第1章：情報を表現する
@@ -2864,17 +3963,26 @@ ja:
             cspSurvey:
               display_name: アンケート
         csd6-2020:
+          title: CSDユニット6 - フィジカルコンピューティング ('20～'21)
+          description: ユニット6では、コンピューティングにおけるハードウェアプラットフォームの役割と、従来のキーボード、マウス、モニターと比べてさまざまなセンサーによりどのように効果的な入力と出力が行えるかを探ります。アプリラボとAdafruitのサーキット
+            プレイグラウンドを使って、スマートデバイスで見られるのと同じハードウェア入力と出力を利用するプログラムを開発し、単純な粗いプロトタイプがどのようにして完成品につながるかを見ていきます。ユニットの最後には、独自の革新的な設計を行う基礎としてサーキット
+            プレイグラウンドを使用するというデザインチャレンジが用意されています。
+          description_short: 物理デバイスでプログラミングする方法を学びます。
           lesson_groups:
             csd6_1:
-              display_name: 第 1 章：ハードウェア出力
+              display_name: '第 1 章: ハードウェアを使ったプログラミング'
             csd6_2:
-              display_name: 第 2 章：ハードウェア入力
+              display_name: '第 2 章: 物理プロパティの構築'
             cspSurvey:
               display_name: アンケート
           lessons:
             Functions with Parameters:
               name: パラメーター付き関数
         csd3-2020:
+          title: CSDユニット3 - インタラクティブなアニメーションとゲーム
+          description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+          description_short: ゲームラボでアニメーション、インタラクティブアート、ゲームのプログラミングを学びましょう。
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -2894,9 +4002,13 @@ ja:
             Text:
               name: テキスト
         coursea-2020:
+          title: コース A (2020)
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
           description_short: 低学年向けコンピューター サイエンス入門
           description_audience: 4-7 才
           lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_sequencing:
               display_name: シークエンス
             csf_loops:
@@ -2910,6 +4022,11 @@ ja:
               name: ドラッグ＆ドロップ
             'Programming: Happy Maps':
               name: ハッピーマップ
+            Sequencing with Scrat:
+              description_teacher: This lesson will give students an idea of what
+                to expect when they head to the computer lab. It begins with a brief
+                discussion introducing them to computer lab manners, then they will
+                progress into using a computer to complete online puzzles.
             'Loops: Happy Loops':
               name: くりかえし：ハッピー ループ
             Loops in Collector:
@@ -2919,8 +4036,13 @@ ja:
             Events in Play Lab:
               name: プレイ ラボのイベント
         courseb-2020:
+          title: コース B (2020)
+          description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
           description_audience: 5-8 才
           lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_sequencing:
               display_name: シークエンス
             csf_loops:
@@ -2929,11 +4051,23 @@ ja:
               display_name: イベント
           lessons:
             Your Digital Footprint:
-              name: あなたのデジタルフットプリント
+              name: デジタル フットプリント
             Move It, Move It:
               name: 動かせ！動かせ！
+            Sequencing in Maze:
+              description_teacher: This lesson will give students an idea of what
+                to expect when they head to the computer lab. It begins with a brief
+                discussion introducing them to computer lab manners, then they will
+                progress into using a computer to complete online puzzles.
             Programming in Maze:
               name: めいろ のプログラミング
+              description_teacher: Using characters from the game Angry Birds, students
+                will develop sequential algorithms to move a bird from one side of
+                a maze to the pig at the other side. To do this they will stack code
+                blocks together in a linear sequence, making them move straight, turn
+                left, or turn right.
+            'Loops: Getting Loopy':
+              name: ルーピーをゲット
             Loops in Collector:
               name: くりかえし あつめる
             Loops in Artist:
@@ -2941,7 +4075,13 @@ ja:
             Events in Play Lab:
               name: プレイ ラボのイベント
         coursec-2020:
+          title: コース C (2020)
+          description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
+          description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 6～10才'
           lesson_groups:
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_sequencing:
               display_name: シークエンス
             csf_binary:
@@ -2951,15 +4091,25 @@ ja:
             csf_events:
               display_name: イベント
           lessons:
+            Powerful Passwords:
+              name: 強力なパスワード
             Programming in Maze:
               name: めいろ のプログラミング
             Binary Bracelets:
-              name: バイナリブレスレット
+              name: バイナリ ブレスレット
             Sticker Art with Loops:
               name: アーティストくりかえし
+            'Events: The Big Event':
+              name: ビッグイベント
             Events in Play Lab:
               name: プレイ ラボのイベント
+            Picturing Data:
+              name: データで予測
         coursed-2020:
+          title: コース D (2020)
+          description: 生徒はループ、条件、イベントについての理解を深めます。プログラミング以外に、生徒はデジタル シティズンシップについて学びます。
+          description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
+          description_audience: '年齢: 7～11才'
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -2971,11 +4121,14 @@ ja:
               display_name: 条件
             csf_binary:
               display_name: ２しんすう
+            csf_digcit:
+              display_name: デジタル シティズンシップ
           lessons:
             'Algorithms: Graph Paper Programming':
               name: グラフ用紙のプログラミング
             Relay Programming:
               name: プログラミングをリレーする
+              description_teacher: このアクティビティは、デバッグと永続性に関する短いレッスンから始まります。その後すぐに、生徒はチームに分かれ、一度に1つの命令を受けて一緒にプログラムを作成する時間との戦いに入ります。
             Loops in Ice Age:
               name: アイス・エイジのループ
             Loops in Artist:
@@ -2986,34 +4139,87 @@ ja:
               name: バイナリ画像
             Artist Binary:
               name: アーティスト：バイナリ
+            Digital Citizenship:
+              name: デジタル シティズンシップ
             Dance Party:
               name: ダンスパーティー
         coursee-2020:
+          title: コース E (2020)
+          description: アルゴリズム、ループ、条件文、イベントを使ってプログラミングから始めて、関数に移ります。このコースの後半では、友だちや家族と共有できるキャップストーンプロジェクトを設計して作成します。
+          description_short: コースCとDの概念を確認してから、関数を学習してさらに進みます。
+          description_audience: '年齢: 8～12才'
           lesson_groups:
             ramp_up:
-              display_name: ランアップ
+              display_name: ランプアップ
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_nested_loops:
               display_name: 入れ子のループ
             csf_functions:
               display_name: 関数(かんすう)
           lessons:
+            Simon Says:
+              name: サイモンは言う
+            Private and Personal Information:
+              description_teacher: "Developed by Common Sense Education, this lesson
+                is about the difference between information that is safe to share
+                online and information that is not.\r\n\r\nAs students visit sites
+                that request information about their identities, they learn to adopt
+                a critical inquiry process that empowers them to protect themselves
+                and their families from identity theft. In this lesson, students learn
+                to think critically about the user information that some websites
+                request or require. They learn the difference between private information
+                and personal information, as well as how to distinguish what is safe
+                or unsafe to share online."
             'Functions: Songwriting':
               name: 作詞作曲
+            Digital Sharing:
+              name: デジタル共有
+              description_teacher: このレッスンは、コンピューター サイエンス入門で使うために著作権および創造性チームから借り受けたもので、特にデジタル環境において、所有権と著作権を尊重することの課題と利点を生徒が理解するのに役立ちます。生徒には、倫理的なデジタル
+                シティズンでいることの重要な部分として、アーティストの権利を尊重するような姿勢が必要です。
         coursef-2020:
-          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+          title: コース F (2020)
+          description: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+          description_audience: '年齢: 9～13才'
           lesson_groups:
             ramp_up:
-              display_name: ランアップ
+              display_name: ランプアップ
+            csf_digcit:
+              display_name: デジタル シティズンシップ
             csf_variables:
               display_name: 変数（へんすう）
             csf_for_loops:
               display_name: ループ用
           lessons:
+            Envelope Variables:
+              name: エンベロープ変数
+            For Loop Fun:
+              name: Forループを楽しむ
             Internet:
               name: インターネット
+            The Power of Words:
+              description_teacher: "Students consider that while they are enjoying
+                their favorite websites they may encounter messages from other kids
+                that can make them feel angry, hurt, sad, or fearful. They explore
+                ways to handle cyberbullying and how to respond in the face of upsetting
+                language online.\r\n\r\nStudents discuss all the ways they use technology
+                for communication and explore the similarities and differences between
+                in-person and online communication. Students then brainstorm ways
+                to respond to cyberbullying. "
             Crowdsourcing:
               name: クラウドソーシング
+            Digital Sharing:
+              name: デジタル共有
+              description_teacher: このレッスンは、コンピューター サイエンス入門で使うために著作権および創造性チームから借り受けたもので、特にデジタル環境において、所有権と著作権を尊重することの課題と利点を生徒が理解するのに役立ちます。生徒には、倫理的なデジタル
+                シティズンでいることの重要な部分として、アーティストの権利を尊重するような姿勢が必要です。
+            AI for Oceans:
+              name: 海洋のためのAI
         express-2020:
+          title: エクスプレスコース (2020)
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: 'コンピューター サイエンス入門: 小学校低学年向けの最高のカリキュラムを高学年の性と向けに組み合わせています。'
+          description_audience: '年齢: 9～18才'
           lesson_groups:
             csf_warmup:
               display_name: ウォームアップ
@@ -3041,6 +4247,9 @@ ja:
             Sticker Art with Loops:
               name: アーティストくりかえし
         pre-express-2020:
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
+          description_audience: '年齢: 4～8才'
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -3051,8 +4260,18 @@ ja:
           lessons:
             Learn to Drag and Drop:
               name: ドラッグ＆ドロップ
+            Sequencing with Scrat:
+              description_teacher: This lesson will give students an idea of what
+                to expect when they head to the computer lab. It begins with a brief
+                discussion introducing them to computer lab manners, then they will
+                progress into using a computer to complete online puzzles.
             Programming in Maze:
               name: めいろ のプログラミング
+              description_teacher: Using characters from the game Angry Birds, students
+                will develop sequential algorithms to move a bird from one side of
+                a maze to the pig at the other side. To do this they will stack code
+                blocks together in a linear sequence, making them move straight, turn
+                left, or turn right.
             Spelling Bee:
               name: つづりみつばち
             Loops in Ice Age:
@@ -3072,20 +4291,55 @@ ja:
             A Royal Battle with Events:
               name: プレイ ラボのイベント
         csp1-2020:
+          title: CSPユニット1 - デジタル情報 ('20～'21)
           lesson_groups:
             csp_unit1_2020:
-              display_name: "(old) Unit 1: デジタル情報"
+              display_name: 'ユニット1: デジタル情報'
             cspSurvey:
               display_name: アンケート
+        csp2-2020:
+          title: CSPユニット2 - インターネット ('20～'21)
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'ユニット2: インターネット'
         csp3-2020:
+          title: CSPユニット3 - アプリ設計入門 ('20 - '21)
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'ユニット3: アプリ設計入門'
           lessons:
             Debugging:
               name: Debugging
+        csp6-2020:
+          title: CSPユニット6 - アルゴリズム ('20～21)
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'ユニット6: アルゴリズム'
+        csp8-2020:
+          title: CSPユニット8 - PT準備の作成 ('20～'21)
+        csp9-2020:
+          title: CSPユニット9 - データ ('20～'21)
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'ユニット9: データ'
+        csp10-2020:
+          title: CSPユニット10 - サイバーセキュリティとグローバルインパクト ('20～'21)
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'ユニット10: サイバーセキュリティとグローバルインパクト'
+        csp-march-virtual:
+          title: CS原則 20～21 ファシリテーター向けカリキュラムトレーニング
         csp3-virtual:
+          title: アプリラボでの自習型のタートルプログラミング入門
+          description_short: 古典的な亀の絵を使ったトップダウンの設計アプローチを通じて、JavaScriptのプログラミングの基本を学びます。
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'ユニット3: プログラミング入門'
           lessons:
             Creating Functions:
               name: 関数の作成
         jess-test-script:
+          title: ジェスのスクリプト
           lessons:
             Tools:
               name: 'Tools
@@ -3094,17 +4348,25 @@ ja:
             Debugging:
               name: Debugging
         csd2-virtual:
+          title: 自習型のウェブラボ入門
+          description: ここではコンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグやコメントなどの貴重なプログラミングスキルも練習します。ユニットの終わりまでに、インターネットに公開できる個人用ウェブサイトが完成していることでしょう。
+          description_short: ウェブラボで独自のウェブサイトを構築する方法を学びましょう。
           lesson_groups:
             csd2_1:
               display_name: 第 1 章： Web コンテンツと HTML
             csd2_2:
               display_name: 第 2 章：スタイルと CSS
         csp5-virtual:
+          title: アプリラボのイベント駆動型プログラミング
+          description: この自習型モジュールでは、コンピュータープログラミングの基本的な概念を紹介します。これにより、リッチでインタラクティブなアプリを作成する力がつきます。このコースでは、プログラミング言語としてJavaScriptを使用し、アプリを構築するためのプログラミング環境としてアプリラボを使用しますが、レッスンで学習するコンセプトは、どのプログラミング言語とツールにも通用します。
+          description_short: リッチでインタラクティブなアプリを作成することにより、JavaScriptでのコンピュータープログラミングの基本的な概念を学習します。
           lessons:
             While Loops:
               name: Whileループ
             Introduction to Arrays:
               name: Introduction to Arrays
+            Intro to App Lab:
+              name: アプリラボの紹介
             Variables:
               name: 変数（へんすう）
         virtual-holding-place:
@@ -3119,18 +4381,36 @@ ja:
             Functions:
               name: 関数(かんすう)
         code-break:
+          title: コードブレイク
           lessons:
             Algorithms:
               name: アルゴリズム
             Events:
               name: イベント
+        code-break-staging:
+          title: コードブレイク ステージング
+        code-break-younger-staging:
+          title: コードブレイクの低学年向けステージング
+        code-break-younger:
+          title: 低学年向けコードブレイク
+          description: '学校が閉鎖され、数千万人の生徒が自宅にいるため、Code.orgはコードブレイクを開始します。これは、学校が休校中に当社のチームが自宅で子供たちに教える週1回のインタラクティブな教室です。毎週受けられ、生徒の能力を問わずご参加いただけます。コンピューターがない生徒も受けられます。詳細については、Code.org/breakをご覧ください。対象年齢:
+            6～12才。'
         csp5-virtual-part2:
+          title: 自習型のアプリラボ入門
+          description_short: リッチでインタラクティブなアプリを作成することにより、JavaScriptでのコンピュータープログラミングの基本的な概念を学習します。
+          description: このユニットでは、コンピュータープログラミングの基本的な概念を紹介します。これにより、リッチでインタラクティブなアプリを作成する力がつきます。このユニットでは、プログラミング言語としてJavaScriptを使用し、アプリを構築するためのプログラミング環境としてアプリラボを使用しますが、レッスンで学習するコンセプトは、どのプログラミング言語とツールにも通用します。
+          lesson_groups:
+            csp5_1:
+              display_name: '第1章: イベント駆動型プログラミング'
+            csp5_2:
+              display_name: '第2章: データ構造を使用したプログラミング'
           lessons:
             While Loops:
               name: Whileループ
             Introduction to Arrays:
               name: Introduction to Arrays
         k5-onlinepd-2020:
+          description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター サイエンスを教える方法を学びましょう！
           lessons:
             Sequencing:
               name: シークエンス
@@ -3146,11 +4426,20 @@ ja:
               name: 変数（へんすう）
             For Loops:
               name: ループ用
+          lesson_groups:
+            k5_basic_concepts_1:
+              display_name: 基本的なプログラミングの概念と教授法
         dani-june-2020-test:
           lesson_groups:
             cspSurvey:
               display_name: アンケート
+            csp5_1:
+              display_name: '第1章: イベント駆動型プログラミング'
         csd3-virtual:
+          title: 自習型のゲームラボ入門
+          description: ここではゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングします。ユニットは、単純な形状から始まり、コンピューター
+            サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+          description_short: ゲームラボでアニメーション、インタラクティブアート、ゲームのプログラミングを学びましょう。
           lessons:
             Variables:
               name: 変数（へんすう）
@@ -3205,3 +4494,9 @@ ja:
               name: コース B
             CS Discoveries:
               name: コンピューターサイエンス 発展
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: 海洋のためのAI
+            intro:
+              name: はじめに

@@ -3,9 +3,7 @@ import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -13,6 +11,19 @@ import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonE
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import ResourceType, {
+  resourceShape
+} from '@cdo/apps/templates/courseOverview/resourceType';
+import $ from 'jquery';
+import {navigateToHref} from '@cdo/apps/utils';
+import {connect} from 'react-redux';
+import {
+  getSerializedLessonGroups,
+  init,
+  mapLessonGroupDataForEditor
+} from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 const styles = {
   input: {
@@ -35,79 +46,112 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10
-  },
-  saveButtonBackground: {
-    margin: 0,
-    position: 'fixed',
-    bottom: 0,
-    left: 0,
-    backgroundColor: color.lightest_gray,
-    borderColor: color.lightest_gray,
-    height: 50,
-    width: '100%',
-    zIndex: 900,
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  saveButton: {
-    margin: '10px 50px 10px 20px'
   }
 };
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP'];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', ''];
 
 /**
  * Component for editing course scripts.
  */
-export default class ScriptEditor extends React.Component {
+class ScriptEditor extends React.Component {
   static propTypes = {
-    beta: PropTypes.bool,
-    betaWarning: PropTypes.string,
+    id: PropTypes.number,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
-    hidden: PropTypes.bool,
-    isStable: PropTypes.bool,
-    loginRequired: PropTypes.bool,
-    hideableLessons: PropTypes.bool,
-    studentDetailProgressView: PropTypes.bool,
-    professionalLearningCourse: PropTypes.string,
-    peerReviewsRequired: PropTypes.number,
-    wrapupVideo: PropTypes.string,
-    projectWidgetVisible: PropTypes.bool,
-    projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
-    lessonExtrasAvailable: PropTypes.bool,
-    lessonLevelData: PropTypes.string,
-    hasVerifiedResources: PropTypes.bool,
-    hasLessonPlan: PropTypes.bool,
-    curriculumPath: PropTypes.string,
-    pilotExperiment: PropTypes.string,
-    editorExperiment: PropTypes.string,
+    initialHidden: PropTypes.bool,
+    initialIsStable: PropTypes.bool,
+    initialLoginRequired: PropTypes.bool,
+    initialHideableLessons: PropTypes.bool,
+    initialStudentDetailProgressView: PropTypes.bool,
+    initialProfessionalLearningCourse: PropTypes.string,
+    initialPeerReviewsRequired: PropTypes.number,
+    initialWrapupVideo: PropTypes.string,
+    initialProjectWidgetVisible: PropTypes.bool,
+    initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
+    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    initialLessonExtrasAvailable: PropTypes.bool,
+    initialLessonLevelData: PropTypes.string,
+    initialHasVerifiedResources: PropTypes.bool,
+    initialHasLessonPlan: PropTypes.bool,
+    initialCurriculumPath: PropTypes.string,
+    initialPilotExperiment: PropTypes.string,
+    initialEditorExperiment: PropTypes.string,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
-    supportedLocales: PropTypes.arrayOf(PropTypes.string),
-    locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-    projectSharing: PropTypes.bool,
-    curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    initialSupportedLocales: PropTypes.arrayOf(PropTypes.string),
+    initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
+      .isRequired,
+    initialProjectSharing: PropTypes.bool,
+    initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
     initialFamilyName: PropTypes.string,
-    versionYear: PropTypes.string,
+    initialVersionYear: PropTypes.string,
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
-    tts: PropTypes.bool,
+    initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
-    initialIsCourse: PropTypes.bool
+    initialIsCourse: PropTypes.bool,
+    initialShowCalendar: PropTypes.bool,
+    isMigrated: PropTypes.bool,
+
+    // from redux
+    lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
+    levelKeyList: PropTypes.object.isRequired,
+    init: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
+    const resources = [...props.initialTeacherResources];
+    // add empty entries to get to max
+    while (resources.length < Object.keys(ResourceType).length) {
+      resources.push({type: '', link: ''});
+    }
+
     this.state = {
-      familyName: this.props.initialFamilyName || '',
+      isSaving: false,
+      error: null,
+      lastSaved: null,
+      familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
+      showCalendar: this.props.initialShowCalendar,
       description: this.props.i18nData.description,
-      announcements: this.props.initialAnnouncements
+      announcements: this.props.initialAnnouncements,
+      hidden: this.props.initialHidden,
+      isStable: this.props.initialIsStable,
+      loginRequired: this.props.initialLoginRequired,
+      hideableLessons: this.props.initialHideableLessons,
+      studentDetailProgressView: this.props.initialStudentDetailProgressView,
+      professionalLearningCourse: this.props.initialProfessionalLearningCourse,
+      peerReviewsRequired: this.props.initialPeerReviewsRequired,
+      wrapupVideo: this.props.initialWrapupVideo,
+      projectWidgetVisible: this.props.initialProjectWidgetVisible,
+      projectWidgetTypes: this.props.initialProjectWidgetTypes,
+      lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
+      lessonLevelData:
+        this.props.initialLessonLevelData ||
+        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n",
+      hasVerifiedResources: this.props.initialHasVerifiedResources,
+      hasLessonPlan: this.props.initialHasLessonPlan,
+      curriculumPath: this.props.initialCurriculumPath,
+      pilotExperiment: this.props.initialPilotExperiment,
+      editorExperiment: this.props.initialEditorExperiment,
+      supportedLocales: this.props.initialSupportedLocales,
+      locales: this.props.initialLocales,
+      projectSharing: this.props.initialProjectSharing,
+      curriculumUmbrella: this.props.initialCurriculumUmbrella,
+      versionYear: this.props.initialVersionYear,
+      tts: this.props.initialTts,
+      title: this.props.i18nData.title || '',
+      descriptionAudience: this.props.i18nData.descriptionAudience || '',
+      descriptionShort: this.props.i18nData.descriptionShort || '',
+      lessonDescriptions: this.props.i18nData.stageDescriptions,
+      teacherResources: resources,
+      hasImportedLessonDescriptions: false,
+      oldScriptText: this.props.initialLessonLevelData
     };
   }
 
@@ -116,9 +160,18 @@ export default class ScriptEditor extends React.Component {
   };
 
   handleClearSupportedLocalesSelectClick = () => {
-    $(this.supportedLocaleSelect)
-      .children('option')
-      .removeAttr('selected', true);
+    this.setState({supportedLocales: []});
+  };
+
+  handleChangeSupportedLocales = e => {
+    var options = e.target.options;
+    var supportedLocales = [];
+    for (var i = 0, l = options.length; i < l; i++) {
+      if (options[i].selected) {
+        supportedLocales.push(options[i].value);
+      }
+    }
+    this.setState({supportedLocales});
   };
 
   handleFamilyNameChange = event => {
@@ -129,11 +182,15 @@ export default class ScriptEditor extends React.Component {
     this.setState({isCourse: !this.state.isCourse});
   };
 
-  presubmit = e => {
+  handleSave = (event, shouldCloseAfterSave) => {
+    event.preventDefault();
+
+    this.setState({isSaving: true, lastSaved: null, error: null});
+
     const videoKeysBefore = (
-      this.props.lessonLevelData.match(VIDEO_KEY_REGEX) || []
+      this.props.initialLessonLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
-    const scriptText = this.props.beta ? '' : this.scriptTextArea.value;
+    const scriptText = this.props.isMigrated ? '' : this.state.lessonLevelData;
     const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (
@@ -143,7 +200,7 @@ export default class ScriptEditor extends React.Component {
             'continue?'
         )
       ) {
-        e.preventDefault();
+        shouldCloseAfterSave = false;
       }
     }
     // HACK: until the script edit page no longer overwrites changes to the
@@ -157,23 +214,95 @@ export default class ScriptEditor extends React.Component {
           'saving any changes to this script edit page.'
       )
     ) {
-      e.preventDefault();
+      shouldCloseAfterSave = false;
     }
+
+    let dataToSave = {
+      name: this.props.name,
+      family_name: this.state.familyName,
+      is_course: this.state.isCourse,
+      show_calendar: this.state.showCalendar,
+      description: this.state.description,
+      announcements: JSON.stringify(this.state.announcements),
+      visible_to_teachers: !this.state.hidden,
+      is_stable: this.state.isStable,
+      login_required: this.state.loginRequired,
+      hideable_lessons: this.state.hideableLessons,
+      student_detail_progress_view: this.state.studentDetailProgressView,
+      professional_learning_course: this.state.professionalLearningCourse,
+      peer_reviews_to_complete: this.state.peerReviewsRequired,
+      wrapup_video: this.state.wrapupVideo,
+      project_widget_visible: this.state.projectWidgetVisible,
+      project_widget_types: this.state.projectWidgetTypes,
+      lesson_extras_available: this.state.lessonExtrasAvailable,
+      script_text: this.props.isMigrated
+        ? getSerializedLessonGroups(
+            this.props.lessonGroups,
+            this.props.levelKeyList
+          )
+        : this.state.lessonLevelData,
+      old_script_text: this.state.oldScriptText,
+      has_verified_resources: this.state.hasVerifiedResources,
+      has_lesson_plan: this.state.hasLessonPlan,
+      curriculum_path: this.state.curriculumPath,
+      pilot_experiment: this.state.pilotExperiment,
+      editor_experiment: this.state.editorExperiment,
+      supported_locales: this.state.supportedLocales,
+      locales: this.state.locales,
+      project_sharing: this.state.projectSharing,
+      curriculum_umbrella: this.state.curriculumUmbrella,
+      version_year: this.state.versionYear,
+      tts: this.state.tts,
+      title: this.state.title,
+      description_audience: this.state.descriptionAudience,
+      description_short: this.state.descriptionShort,
+      resourceLinks: this.state.teacherResources.map(resource => resource.link),
+      resourceTypes: this.state.teacherResources.map(resource => resource.type),
+      is_migrated: this.props.isMigrated
+    };
+
+    if (this.state.hasImportedLessonDescriptions) {
+      dataToSave.stage_descriptions = this.state.lessonDescriptions;
+    }
+
+    $.ajax({
+      url: `/s/${this.props.id}`,
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(dataToSave)
+    })
+      .done(data => {
+        if (shouldCloseAfterSave) {
+          navigateToHref(`${data.scriptPath}${window.location.search}`);
+        } else {
+          const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
+
+          this.props.init(lessonGroups, this.props.levelKeyList);
+          this.setState({
+            lastSaved: data.updatedAt,
+            isSaving: false,
+            oldScriptText: data.lessonLevelData
+          });
+        }
+      })
+      .fail(error => {
+        this.setState({isSaving: false, error: error.responseText});
+      });
   };
 
   render() {
-    const {betaWarning} = this.props;
-    const textAreaRows = this.props.lessonLevelData
-      ? this.props.lessonLevelData.split('\n').length + 5
+    const textAreaRows = this.state.lessonLevelData
+      ? this.state.lessonLevelData.split('\n').length + 5
       : 10;
     return (
       <div>
         <label>
           Title
           <input
-            name="title"
-            defaultValue={this.props.i18nData.title}
+            value={this.state.title}
             style={styles.input}
+            onChange={e => this.setState({title: e.target.value})}
           />
         </label>
         <label>
@@ -188,9 +317,9 @@ export default class ScriptEditor extends React.Component {
         <label>
           Audience
           <input
-            name="description_audience"
-            defaultValue={this.props.i18nData.descriptionAudience}
+            value={this.state.descriptionAudience}
             style={styles.input}
+            onChange={e => this.setState({descriptionAudience: e.target.value})}
           />
         </label>
         <label>
@@ -202,14 +331,15 @@ export default class ScriptEditor extends React.Component {
             </p>
           </HelpTip>
           <input
-            name="description_short"
-            defaultValue={this.props.i18nData.descriptionShort}
+            value={this.state.descriptionShort}
             style={styles.input}
+            onChange={e => this.setState({descriptionShort: e.target.value})}
           />
         </label>
         <TextareaWithMarkdownPreview
           markdown={this.state.description}
           label={'Description'}
+          name={'description'}
           inputRows={5}
           handleMarkdownChange={e =>
             this.setState({description: e.target.value})
@@ -220,10 +350,12 @@ export default class ScriptEditor extends React.Component {
           <label>
             Require Login To Use
             <input
-              name="login_required"
               type="checkbox"
-              defaultChecked={this.props.loginRequired}
+              checked={this.state.loginRequired}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({loginRequired: !this.state.loginRequired})
+              }
             />
             <HelpTip>
               <p>Require users to log in before viewing this script.</p>
@@ -232,10 +364,15 @@ export default class ScriptEditor extends React.Component {
           <label>
             Default Progress to Detail View
             <input
-              name="student_detail_progress_view"
               type="checkbox"
-              defaultChecked={this.props.studentDetailProgressView}
+              checked={this.state.studentDetailProgressView}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  studentDetailProgressView: !this.state
+                    .studentDetailProgressView
+                })
+              }
             />
             <HelpTip>
               <p>
@@ -249,10 +386,12 @@ export default class ScriptEditor extends React.Component {
           <label>
             Display project sharing column in Teacher Dashboard
             <input
-              name="project_sharing"
               type="checkbox"
-              defaultChecked={this.props.projectSharing}
+              checked={this.state.projectSharing}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({projectSharing: !this.state.projectSharing})
+              }
             />
             <HelpTip>
               <p>
@@ -265,17 +404,41 @@ export default class ScriptEditor extends React.Component {
           <label>
             Enable Text-to-Speech
             <input
-              name="tts"
               type="checkbox"
-              defaultChecked={this.props.tts}
+              checked={this.state.tts}
               style={styles.checkbox}
+              onChange={() => this.setState({tts: !this.state.tts})}
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this script.</p>
             </HelpTip>
           </label>
           <label>
+            Show Calendar
+            <input
+              type="checkbox"
+              checked={this.state.showCalendar}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({showCalendar: !this.state.showCalendar})
+              }
+            />
+            <HelpTip>
+              <p>
+                Check to enable the calendar view on the Unit Overview Page. The
+                calendar displays each lesson and generally how long it will
+                take as well how many weeks the unit is expected to take in
+                general. (Actual calendar UI coming soon!)
+              </p>
+            </HelpTip>
+          </label>
+          <label>
             Supported locales
+            <HelpTip>
+              <p>
+                A list of other locales supported by this script besides en-US.
+              </p>
+            </HelpTip>
             <p>
               <span>
                 {'Select additional locales supported by this script. Select '}
@@ -284,12 +447,11 @@ export default class ScriptEditor extends React.Component {
               <span>{' or shift-click or cmd-click to select multiple.'}</span>
             </p>
             <select
-              name="supported_locales[]"
               multiple
-              defaultValue={this.props.supportedLocales}
-              ref={select => (this.supportedLocaleSelect = select)}
+              value={this.state.supportedLocales}
+              onChange={this.handleChangeSupportedLocales}
             >
-              {this.props.locales
+              {this.state.locales
                 .filter(locale => !locale[1].startsWith('en'))
                 .map(locale => (
                   <option key={locale[1]} value={locale[1]}>
@@ -308,9 +470,11 @@ export default class ScriptEditor extends React.Component {
                 </p>
               </HelpTip>
               <input
-                name="editor_experiment"
-                defaultValue={this.props.editorExperiment}
+                value={this.state.editorExperiment}
                 style={styles.input}
+                onChange={e =>
+                  this.setState({editorExperiment: e.target.value})
+                }
               />
             </label>
           )}
@@ -323,9 +487,9 @@ export default class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
             <input
-              name="wrapup_video"
-              defaultValue={this.props.wrapupVideo}
+              value={this.state.wrapupVideo}
               style={styles.input}
+              onChange={e => this.setState({wrapupVideo: e.target.value})}
             />
           </label>
         </CollapsibleEditorSection>
@@ -344,9 +508,11 @@ export default class ScriptEditor extends React.Component {
               <label>
                 Core Course
                 <select
-                  name="curriculum_umbrella"
                   style={styles.dropdown}
-                  defaultValue={this.props.curriculumUmbrella}
+                  value={this.state.curriculumUmbrella}
+                  onChange={e =>
+                    this.setState({curriculumUmbrella: e.target.value})
+                  }
                 >
                   <option value="">(None)</option>
                   {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
@@ -373,7 +539,7 @@ export default class ScriptEditor extends React.Component {
               <label>
                 Family Name
                 <select
-                  name="family_name"
+                  className="familyNameSelector"
                   value={this.state.familyName}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
@@ -418,10 +584,10 @@ export default class ScriptEditor extends React.Component {
               <label>
                 Version Year
                 <select
-                  name="version_year"
-                  defaultValue={this.props.versionYear}
+                  value={this.state.versionYear}
                   style={styles.dropdown}
                   disabled={this.props.hasCourse}
+                  onChange={e => this.setState({versionYear: e.target.value})}
                 >
                   <option value="">(None)</option>
                   {this.props.versionYearOptions.map(year => (
@@ -444,7 +610,7 @@ export default class ScriptEditor extends React.Component {
               <label>
                 Is a Standalone Course
                 <input
-                  name="is_course"
+                  className="isCourseCheckbox"
                   type="checkbox"
                   checked={this.state.isCourse}
                   disabled={!this.state.familyName}
@@ -480,10 +646,12 @@ export default class ScriptEditor extends React.Component {
               <label>
                 Can be recommended (aka stable)
                 <input
-                  name="is_stable"
                   type="checkbox"
-                  defaultChecked={this.props.isStable}
+                  checked={this.state.isStable}
                   style={styles.checkbox}
+                  onChange={() =>
+                    this.setState({isStable: !this.state.isStable})
+                  }
                 />
                 <HelpTip>
                   <p>
@@ -494,8 +662,14 @@ export default class ScriptEditor extends React.Component {
                 </HelpTip>
               </label>
               <VisibleAndPilotExperiment
-                visible={!this.props.hidden}
-                pilotExperiment={this.props.pilotExperiment}
+                visible={!this.state.hidden}
+                updateVisible={() =>
+                  this.setState({hidden: !this.state.hidden})
+                }
+                pilotExperiment={this.state.pilotExperiment}
+                updatePilotExperiment={pilotExperiment =>
+                  this.setState({pilotExperiment})
+                }
               />
             </div>
           )}
@@ -505,10 +679,12 @@ export default class ScriptEditor extends React.Component {
           <label>
             Show Lesson Plan Links
             <input
-              name="has_lesson_plan"
               type="checkbox"
-              defaultChecked={this.props.hasLessonPlan}
+              checked={this.state.hasLessonPlan}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({hasLessonPlan: !this.state.hasLessonPlan})
+              }
             />
             <HelpTip>
               <p>
@@ -517,23 +693,25 @@ export default class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
-          {!this.props.beta && (
+          {!this.props.isMigrated && (
             <label>
               Curriculum Path
               <input
-                name="curriculum_path"
-                defaultValue={this.props.curriculumPath}
+                value={this.state.curriculumPath}
                 style={styles.input}
+                onChange={e => this.setState({curriculumPath: e.target.value})}
               />
             </label>
           )}
           <label>
             Allow Teachers to Hide Lessons
             <input
-              name="hideable_lessons"
               type="checkbox"
-              defaultChecked={this.props.hideableLessons}
+              checked={this.state.hideableLessons}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({hideableLessons: !this.state.hideableLessons})
+              }
             />
             <HelpTip>
               <p>
@@ -543,14 +721,36 @@ export default class ScriptEditor extends React.Component {
             </HelpTip>
           </label>
           <LessonExtrasEditor
-            lessonExtrasAvailable={this.props.lessonExtrasAvailable}
-            projectWidgetTypes={this.props.projectWidgetTypes}
-            projectWidgetVisible={this.props.projectWidgetVisible}
+            lessonExtrasAvailable={this.state.lessonExtrasAvailable}
+            projectWidgetTypes={this.state.projectWidgetTypes}
+            projectWidgetVisible={this.state.projectWidgetVisible}
+            updateLessonExtrasAvailable={() =>
+              this.setState({
+                lessonExtrasAvailable: !this.state.lessonExtrasAvailable
+              })
+            }
+            updateProjectWidgetVisible={() =>
+              this.setState({
+                projectWidgetVisible: !this.state.projectWidgetVisible
+              })
+            }
+            updateProjectWidgetTypes={projectWidgetTypes =>
+              this.setState({projectWidgetTypes})
+            }
           />
-          {!this.props.beta && (
+          {!this.props.isMigrated && (
             <LessonDescriptions
               scriptName={this.props.name}
               currentDescriptions={this.props.i18nData.stageDescriptions}
+              updateLessonDescriptions={(
+                lessonDescriptions,
+                hasImportedLessonDescriptions
+              ) =>
+                this.setState({
+                  lessonDescriptions,
+                  hasImportedLessonDescriptions
+                })
+              }
             />
           )}
         </CollapsibleEditorSection>
@@ -559,10 +759,14 @@ export default class ScriptEditor extends React.Component {
           <label>
             Has Resources for Verified Teachers
             <input
-              name="has_verified_resources"
               type="checkbox"
-              defaultChecked={this.props.hasVerifiedResources}
+              checked={this.state.hasVerifiedResources}
               style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  hasVerifiedResources: !this.state.hasVerifiedResources
+                })
+              }
             />
             <HelpTip>
               <p>
@@ -579,7 +783,10 @@ export default class ScriptEditor extends React.Component {
             </div>
             <ResourcesEditor
               inputStyle={styles.input}
-              resources={this.props.teacherResources}
+              resources={this.state.teacherResources}
+              updateTeacherResources={teacherResources =>
+                this.setState({teacherResources})
+              }
             />
           </div>
         </CollapsibleEditorSection>
@@ -597,9 +804,11 @@ export default class ScriptEditor extends React.Component {
                 </p>
               </HelpTip>
               <input
-                name="professional_learning_course"
-                defaultValue={this.props.professionalLearningCourse}
+                value={this.state.professionalLearningCourse}
                 style={styles.input}
+                onChange={e =>
+                  this.setState({professionalLearningCourse: e.target.value})
+                }
               />
             </label>
           )}
@@ -609,50 +818,49 @@ export default class ScriptEditor extends React.Component {
               <p>Currently only supported for professional learning courses</p>
             </HelpTip>
             <input
-              name="peer_reviews_to_complete"
-              defaultValue={this.props.peerReviewsRequired}
+              value={this.state.peerReviewsRequired}
               style={styles.input}
+              onChange={e =>
+                this.setState({peerReviewsRequired: e.target.value})
+              }
             />
           </label>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
-          {this.props.beta ? (
+          {this.props.isMigrated ? (
             <UnitCard />
           ) : (
             <div>
-              {betaWarning || (
-                <a href="?beta=true">
-                  Try the beta Script Editor (will reload the page without
-                  saving)
-                </a>
-              )}
               <textarea
                 id="script_text"
-                name="script_text"
                 rows={textAreaRows}
                 style={styles.input}
-                defaultValue={
-                  this.props.lessonLevelData ||
-                  "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n"
-                }
-                ref={textArea => (this.scriptTextArea = textArea)}
+                value={this.state.lessonLevelData}
+                onChange={e => this.setState({lessonLevelData: e.target.value})}
               />
             </div>
           )}
         </CollapsibleEditorSection>
-
-        <div style={styles.saveButtonBackground}>
-          <button
-            className="btn btn-primary"
-            type="submit"
-            style={styles.saveButton}
-            onClick={this.presubmit}
-          >
-            Save Changes
-          </button>
-        </div>
+        <SaveBar
+          handleSave={this.handleSave}
+          error={this.state.error}
+          isSaving={this.state.isSaving}
+          lastSaved={this.state.lastSaved}
+        />
       </div>
     );
   }
 }
+
+export const UnconnectedScriptEditor = ScriptEditor;
+
+export default connect(
+  state => ({
+    lessonGroups: state.lessonGroups,
+    levelKeyList: state.levelKeyList
+  }),
+  {
+    init
+  }
+)(ScriptEditor);

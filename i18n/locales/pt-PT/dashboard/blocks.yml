@@ -1178,6 +1178,8 @@ pt:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': debaixo de água
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
             undefined: nenhum
+      gamelab_setBackgroundImageAs:
+        text: definir fundo para {IMG}
       gamelab_setProp:
         text: Definir {SPRITE} {PROPERTY} Para {VAL}
         options:
@@ -1713,7 +1715,6 @@ pt:
             '"stoneBricks"': tijolos de pedra
             '"mossyStoneBricks"': tijolos de pedra com musgo
             '"crackedStoneBricks"': tijolos de pedra rachada
-            '"decorativeStoneBricks"': tijolos de pedra decorativa
             '"blueCoralBlock"': bloco de coral azul
             '"pinkCoralBlock"': bloco de coral rosa
             '"magentaCoralBlock"': bloco de coral magenta

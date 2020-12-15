@@ -186,13 +186,9 @@ sk:
     mismatch_password: Zadané dve heslá sa nezhodujú
     student_consent: Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať
       stránkua služby Code.org.
-    agree_us_website: Súhlasím s používaním stránky prevádzkovanej z územia Spojených
-      štátov amerických (USA).
-    my_data_to_us: Údaje z používania tejto stránky môžu byť zaslané a uložené alebo
-      spracované v Spojených štátoch amerických (USA).
-    agree_us_data_transfer_student: "** Súhlasím, že Code.org môže prenášať údaje
-      (vrátane osobných údajov) v rámci môjho používania tejto stránky do Spojených
-      štátov** za účelom umiestňovania a spracovania týchto údajov."
+    agree_us_data_transfer_student: "**Súhlasím, že Code.org môže prenášať údaje (vrátane
+      osobných údajov) v rámci môjho používania tejto stránky do Spojených štátov**
+      za účelom umiestňovania a spracovania týchto údajov."
     agree_us_data_transfer_teacher: "** Súhlasím, že Code.org môže prenášať údaje
       (vrátane osobných údajov) v rámci môjho používania (a používania zo strany mojich
       študentov) tejto stránky do Spojených štátov** za účelom umiestňovania a spracovania

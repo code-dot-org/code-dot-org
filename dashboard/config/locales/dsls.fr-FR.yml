@@ -4245,3 +4245,7 @@ fr-FR:
           <br/>\n<a class = \"btn btn-large btn-primary next-stage submitButton\">Continue</a>"
       CSD U1 Test:
         title: Ordinateurs et test de résolution de problèmes après le projet
+      outbreak_story:
+        content1: description ici
+      outbreak_story2:
+        content1: description ici

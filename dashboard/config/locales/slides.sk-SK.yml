@@ -536,6 +536,23 @@ sk:
           by sme použiť 5 blokov "posun sa dopredu", alebo môžeme počítaču povedať,
           nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného
           opakovacieho bloku.
+    C4_conditionals:
+      1:
+        text: Máme nový blok, ktorý sa volá blok ak / inak. Je to podmienka rovnako
+          ako blok ak, ktorý ste používali v predošlých úlohách. Ale teraz je na spodu
+          bloku nová časť, ktorá hovorí inak. Blok ak / inak umožňuje včele rozhodnúť
+          sa medzi dvoma sadami akcií. Ak je včela pri kvete, vykoná sadu akcií, ktoré
+          zadáte v prvej časti, kde sa hovorí, vykonaj ak. Ak včela nie je pri kvete,
+          vykoná sadu akcií, ktoré vložíte na miesto, kde je uvedené inak.
+      2:
+        text: Podmienky ak určujú, ako sú počítače schopné prijímať rozhodnutia. Ľudia
+          nastavujú pre počítač podmienky, ktoré hovoria, že ak sa počítač vyskytne
+          v určitej situácii, urobí jedno. Inak urobí druhé. Horná časť nášho bloku
+          ak / inak hovorí, ak je pri kvete. Horná časť nášho bloku by však mohla
+          hovoriť aj iné veci, napríklad ak sa nektár rovná 2 alebo je pred nami cesta,
+          náš blok sa bude správať rovnako. To znamená, ak je vyhlásenie v hornej
+          časti pravdivé, vykoná sa prvá sada akcií. Ale ak je vyhlásenie v hornej
+          časti nepravdivé, vykoná sa druhá sada akcií.
     infinity_playlab_events:
       1:
         text: Teraz sa naučíme o niečom, čo programátori hier používajú každý deň.
@@ -1176,7 +1193,7 @@ sk:
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston = vďaka, že ste išli so mnou. Chcem vám
+        text: 'Stacy: Stampy, Lizzy, Preston - vďaka, že ste išli so mnou. Chcem vám
           ukázať niečo, čo je za touto planinou. Myslím si, že sa vám to bude páčiť!'
       2:
         image: notes/mc_2017_agent_intro_2.png
@@ -1200,7 +1217,7 @@ sk:
           to. Všetci! Nie to! Stacy: Nie t... (Fňuk.) OK, pôjdem teda ja."
       5:
         image: notes/mc_2017_agent_intro_5.png
-        text: Ach, dobre, ahoj, som teda v skutočnom svete. Idem skúsiť nájst kancelárie
+        text: Ach, dobre, ahoj, som teda v skutočnom svete. Idem skúsiť nájsť kancelárie
           Minecraftu.
       6:
         image: notes/mc_2017_agent_intro_6.png
@@ -1210,10 +1227,10 @@ sk:
       7:
         image: notes/mc_2017_agent_intro_7.png
         text: Na splnenie úloh z Hodiny Kódu budeš musieť napísať kód, ktorý naprogramuje
-          Agenta. Spolupracuj s Agentom, aby si odstránil všetky prekážky a zozbieraj
-          predmety, ktoré budeš potrebovať na svojej ceste. Len Agent môže umiestniť
-          a rozbíjať bloky, a len ty môžeš zbierať predmety. Obrazovka je rozdelená
-          na tri hlavné časti. Na ľavej strane je hracie pole Minecraftu.
+          Agenta. Spolupracuj s Agentom, odstráň všetky prekážky a zozbieraj predmety,
+          ktoré budeš potrebovať na svojej ceste. Len Agent môže umiestniť a rozbíjať
+          bloky a len ty môžeš zbierať predmety. Obrazovka je rozdelená na tri hlavné
+          časti. Na ľavej strane je hracie pole Minecraftu.
       8:
         image: notes/mc_2017_agent_intro_8.png
         text: Stredná oblasť je panel nástrojov s príkazmi, ktorým Agent rozumie.
@@ -1272,21 +1289,20 @@ sk:
         text: V ďalšej úrovni môžeš pomocou cyklov presunúť Agenta popri ceste. Presuň
           blok "Opakuj" do pracovného priestoru a umiestni blok "Posuň sa dopredu"
           do vnútra bloku "Opakuj". Toto informuje počítač, aby opakoval ten istý
-          príkaz veľa krát za sebou, bez toho, aby si musel do pracovného priestoru
-          presunúť celé stohy blokov. Vložením čísla do bloku "Opakuj" si môžeš vybrať,
-          koľkokrát sa príkaz zopakuje.
+          príkaz veľakrát za sebou bez toho, aby boli do pracovného priestoru presunuté
+          celé stohy blokov. Vložením čísla do bloku "Opakuj" si môžeš vybrať, koľkokrát
+          sa príkaz zopakuje.
       8:
         image: notes/mc_2017_repeat_8.png
         text: Do bloku "Opakuj" môžeš pridať aj otočky a iné príkazy, teraz ale skús
-          blok "Opakuj" použiť na to, aby si Agenta posunul o niekoľko krokov dopredu.
+          blok "Opakuj" použiť tak, že posunieš Agenta o niekoľko krokov dopredu.
           Nezabúdaj, že ak sa v úlohe zasekneš, môžeš vždy stlačiť modré tlačidlo
           "Obnoviť" a skúsiť to znova.
       9:
         image: notes/mc_2017_repeat_9.png
-        text: 'Ak by si chcel mať úžasnú prácu ako Katie, klikni na tlačidlo "Zobraziť
-          kód" po dokončení každej úrovne. To ti ukáže skutočný kód naprogramovaný
-          v JavaScripte, ktorý Katie používa, keď programuje Minecraft. Katie: Áno,
-          veľa šťastia!'
+        text: 'Ak chceš mať úžasnú prácu ako Katie, klikni na tlačidlo "Zobraziť kód"
+          po dokončení každej úrovne. To ti ukáže skutočný kód naprogramovaný v JavaScripte,
+          ktorý Katie používa, keď programuje Minecraft. Katie: Áno, veľa šťastia!'
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
@@ -1303,8 +1319,8 @@ sk:
           ktoré môžeš použiť na vyriešenie úloh.
       4:
         image: notes/mc_2017_functions_4.png
-        text: Pozri sa na kód vo vnútri funkcie, keď ju umiestniš do pracovného priestoru,
-          aby si videl, čo robí.
+        text: Pozri sa na kód vo vnútri funkcie, keď ju umiestniš do pracovného priestoru
+          a uvidíš, čo robí.
       5:
         image: notes/mc_2017_functions_5.png
         text: Potom nájdi blok s týmto názvom v paneli nástrojov a presuň ho z panelu
@@ -1635,7 +1651,7 @@ sk:
           Niekde v tomto doku by sme mali stretnúť nášho prvého sprievodcu.
       2:
         text: Vitajte, dobrodruhovia! Na dokončenie okružnej plavby budeš musieť pomocou
-          kódu vyriešiť sériu hádaniek. Pozri, ako to funguje. Obrazovka je rozdelená
+          kódu vyriešiť sériu úloh. Pozri, ako to funguje. Obrazovka je rozdelená
           do troch hlavných častí.
       3:
         text: Naľavo sa ti zobrazuje Minecraft svet.
@@ -1651,7 +1667,7 @@ sk:
         text: Skús potiahnuť bloky z panela nástrojov na pracovnú plochu, ulož ich
           a potom klikni na spúšťacie tlačidlo, ak chceš príkazy vykonať.
       8:
-        text: Možno budeš potrebovať zopár pokusov, aby ti to vyšlo. Niektoré hádanky
+        text: Možno budeš potrebovať zopár pokusov, aby ti to vyšlo. Niektoré úlohy
           majú viac riešení, tak experimentuj a zisti, ktoré funguje.
       9:
         text: Ak to chceš vyskúšať znova, klikni na tlačidlo "Obnoviť" pre návrat
@@ -1663,6 +1679,63 @@ sk:
       11:
         text: Nezdržujme sa viac, dobrodružstvo čaká. Začnime s kódovaním, nech nájdeme
           nejaký skrytý podmorský poklad.
+    MC_2018_loops:
+      1:
+        text: Skvelé! Chytili sme tresku! Vedeli ste, že ak delfínovi hodíte tresku,
+          ukáže vám cestu ku vraku potopenej lode, kde sa možno skrýva poklad? Určite
+          sme už blízko. Ďalšia sada úloh bude iste zložitejšia, tak by sme mali získať
+          viac programovacích zručností. Čo je to? Jaskyňa?
+      2:
+        text: Vitajte, dobrodruhovia! Som sépia. Všimla som si, že pri posledných
+          úlohách ste používali dokola rovnakú sadu príkazov. Muselo to byť dosť únavné.
+          Želali ste si niekedy spôsob, ktorým by ste niečo robili znova a znova,
+          napr. umývanie riadu, čistenie zubov bez toho, aby vás to unavilo alebo
+          k smrti unudilo? To by bolo fajn.
+      3:
+        text: Počítačom ide naozaj dobre robiť to isté znova a znova pomocou programovacích
+          cyklov. Ak chceš, aby program zopakoval rovnaké pokyny veľakrát za sebou,
+          použi cyklus!
+      4:
+        text: Cyklus obsahuje pokyny s príkazom "Opakuj pokiaľ neplatí". Keď program
+          spustí cyklus "Opakuj pokiaľ neplatí", bude pokračovať vo vykonávaní pokynov
+          vo vnútri, dokiaľ nedosiahne cieľ.
+      5:
+        text: Vyskúšaj to! Umiestni príkazy, ktoré chceš zopakovať, do vnútra bloku
+          "Opakuj pokiaľ neplatí", klikni na "Spustiť" a sleduj, čo sa stane!
+      6:
+        text: "No, bolo to trochu divné. Ako to, že sépie vedia programovať? Dokonca
+          som si myslela, že nemajú prsty. Takže teraz už vieme, čo sú cykly. Pomocou
+          nich určite natrafíme na \nďalšie poklady."
+    mc_2018_conditionals:
+      1:
+        text: Wow! Ďalšie tri úlohy vyriešené! Chytili sme...lososa. Nie tak vzrušujúce
+          ako hromada zlata, ale berieme to, čo dostaneme. A mám taký pocit, že ulita
+          lodenky sa bude hodiť neskôr. Zaujímalo by ma, čo sa skrýva v týchto ruinách.
+          Možno ďalšia nápoveda! Pozrime sa dovnútra.
+      2:
+        text: Volám sa Netty a vítam ťa v mojich ruinách. Rozhodujeme sa vždy na základe
+          podmienok. Keď to vyzerá na dážď, zoberieme si dáždnik. Ak sme hladní, dáme
+          si niečo pod zub.
+      3:
+        text: Ak zbadáme creepera, z diaľky sa mu vyhneme. Aj počítače robia takéto
+          typy rozhodnutí. Pomocou kódu môžu naozaj reagovať na podmienky.
+      4:
+        text: Ak chceš naprogramovať takúto odpoveď pomocou príkazov, vyber si blok
+          s podmienkou ak.
+      5:
+        text: Na vytvorenie príkazu vyber rozbaľovaciu ponuku.
+      6:
+        text: "Napríklad, keď napíšeš príkaz \"ak cesta doprava\" a do podmienky uvedieš
+          príkaz otoč sa vpravo, potom keď Steve dosiahne otvorenú cestu vpravo, zakaždým
+          zabočí doprava. Ak neexistuje východ vpravo, nezabočí doprava. Tieto príkazy
+          s podmienkou sú užitočné, keď spustíš kód v nepredvídateľných situáciách,
+          ako sú napr. tajuplné ruiny \npodmorských jaskýň."
+      7:
+        text: Skús použiť bloky s podmienkou ak a zopakuj si kód.
+      8:
+        text: Wow! Nettyine ruiny sú úžasné. Musím sa už odsťahovať od svojich rodičov.
+          Čo si myslíš? Sú podmienky správnou voľbou na vyriešenie záverečných úloh?
+          Dajme tomu šancu.
     hoc_dance_warmup_2019:
       1:
         text: 'Hodina Kódu | Tanečná Párty: Zahrej sa'

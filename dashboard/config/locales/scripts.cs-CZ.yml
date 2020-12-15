@@ -2568,9 +2568,10 @@ cs:
               name: Cykly dokud (until) v bludišti
               description_student: Když použij cykly `dokud`, můžeš udělat úžasné
                 věci!
-              description_teacher: V této lekci se studenti naučí o cyklech `dokud`
-                (until). Studenti budou stavět programy, v nichž hlavní postavy opakují
-                akce, `dokud` se nedostanou do požadovaného bodu.
+              description_teacher: V této lekci se studenti naučí o cyklech `opakuj
+                dokud nenastane` (until). Studenti budou stavět programy, v nichž
+                hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného
+                bodu.
             Conditionals with Cards:
               name: Podmínky s kartami
               description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité
@@ -3637,9 +3638,10 @@ cs:
               name: Cykly dokud (until) v bludišti
               description_student: Když použij cykly `dokud`, můžeš udělat úžasné
                 věci!
-              description_teacher: V této lekci se studenti naučí o cyklech `dokud`
-                (until). Studenti budou stavět programy, v nichž hlavní postavy opakují
-                akce, `dokud` se nedostanou do požadovaného bodu.
+              description_teacher: V této lekci se studenti naučí o cyklech `opakuj
+                dokud nenastane` (until). Studenti budou stavět programy, v nichž
+                hlavní postavy opakují akce, `dokud` se nedostanou do požadovaného
+                bodu.
             Conditionals & Loops in Harvester:
               name: Zahradničení s podmínkami
               description_teacher: Studenti si procvičí cykly `pokud` (while), `dokud`
@@ -3937,3 +3939,9 @@ cs:
               name: Kurz B
             CS Discoveries:
               name: Objevujeme informatiku
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI pomáhá oceánům
+            intro:
+              name: Úvod

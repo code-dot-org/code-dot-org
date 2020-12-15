@@ -248,6 +248,7 @@ module SharedConstants
       "mathMin": null,
       "mathRandom": null,
       "mathPow": null,
+      "mathSqrt": null,
 
       // Variables
       "declareAssign_x": null,
@@ -331,6 +332,9 @@ module SharedConstants
       "on": null,
       "off": null,
       "toggle": null,
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
       "ledScreen.display": null,
       "ledScreen.clear": null,
       "ledScreen.scrollNumber": null,
@@ -542,6 +546,7 @@ module SharedConstants
       "mathMin": null,
       "mathRandom": null,
       "mathPow": null,
+      "mathSqrt": null,
       "comment_Math": null,
 
       // Variables

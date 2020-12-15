@@ -2780,3 +2780,7 @@ fi:
               name: Nopeus
             Functions:
               name: Funktiot
+        ml-playground:
+          lessons:
+            intro:
+              name: Johdanto

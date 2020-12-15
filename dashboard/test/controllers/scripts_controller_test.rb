@@ -341,7 +341,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: @partner_script.name},
       script_text: '',
     }
-    assert_response :redirect
+    assert_response :success
   end
 
   # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in
@@ -429,9 +429,10 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       visible_to_teachers: true
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
     refute script.hidden
+    assert_equal false, JSON.parse(@response.body)['hidden']
   end
 
   test "can update on test without modifying filesystem" do
@@ -447,7 +448,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       visible_to_teachers: true
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
     refute script.hidden
   end
@@ -468,6 +469,50 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :forbidden
     script.reload
     assert script.hidden
+  end
+
+  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    stub_file_writes(script.name)
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: script.id,
+        script: {name: script.name},
+        script_text: '',
+        old_script_text: 'different'
+      }
+    end
+
+    assert_includes error.message, 'Could not update the script because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
+  end
+
+  test 'can update if database matches starting content for current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+    stub_file_writes(script.name)
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      old_script_text: ScriptDSL.serialize_lesson_groups(script)
+    }
+
+    assert_response :success
   end
 
   test 'updates teacher resources' do
@@ -501,6 +546,9 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: 'pilot-experiment',
       visible_to_teachers: true,
     }
+
+    assert_response :success
+
     assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
     # pilot scripts are always marked hidden
     assert Script.find_by_name(script.name).hidden
@@ -520,6 +568,8 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: '',
       visible_to_teachers: true,
     }
+
+    assert_response :success
 
     assert_nil Script.find_by_name(script.name).pilot_experiment
     # blank pilot_experiment does not cause script to be hidden
@@ -573,7 +623,7 @@ class ScriptsControllerTest < ActionController::TestCase
         resourceTypes: ['curriculum', 'something_else'],
         resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
       }
-      assert_response :redirect
+      assert_response :success
       script.reload
 
       assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], script.teacher_resources
@@ -587,7 +637,7 @@ class ScriptsControllerTest < ActionController::TestCase
       resourceTypes: [''],
       resourceLinks: ['']
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
 
     assert_nil script.teacher_resources
@@ -631,7 +681,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
     }.merge(general_params)
-    assert_response :redirect
+    assert_response :success
     script.reload
 
     general_params.each do |k, v|
@@ -656,7 +706,7 @@ class ScriptsControllerTest < ActionController::TestCase
       project_widget_types: [],
       background: ''
     }
-    assert_response :redirect
+    assert_response :success
     script.reload
 
     # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0
@@ -686,8 +736,10 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     script.reload
 
-    assert_response :redirect
+    assert_response :success
     assert_equal level, script.lessons.first.script_levels.first.level
+    assert_equal 'stage 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
+    assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
   no_access_msg = "You don&#39;t have access to this unit."
@@ -787,38 +839,6 @@ class ScriptsControllerTest < ActionController::TestCase
     create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', is_stable: true
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
-  end
-
-  test 'uses gui editor when script levels have variants without experiments' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    (1..2).map {|n| create(:level, name: "Level #{n}")}
-    script_file = File.join(self.class.fixture_path, "test-fixture-variants.script")
-    Script.setup([script_file])
-
-    get :edit, params: {id: 'test-fixture-variants', beta: true}
-    assert_response :success
-    assert_select "script[data-levelbuildereditscript]"
-    assert_select "script[data-levelbuildereditscript]" do |elements|
-      assert elements.first['data-levelbuildereditscript'].match?(/"beta":true/)
-    end
-  end
-
-  test 'uses dsl editor when script levels have variants with experiments' do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    (1..8).map {|n| create(:level, name: "Level #{n}")}
-    script_file = File.join(self.class.fixture_path, "test-fixture-experiments.script")
-    Script.setup([script_file])
-
-    get :edit, params: {id: 'test-fixture-experiments'}
-    assert_response :success
-    assert_select "script[data-levelbuildereditscript]"
-    assert_select "script[data-levelbuildereditscript]" do |elements|
-      assert elements.first['data-levelbuildereditscript'].match?(/"beta":false/)
-    end
   end
 
   test "levelbuilder does not see visible after warning if stage does not have visible_after property" do

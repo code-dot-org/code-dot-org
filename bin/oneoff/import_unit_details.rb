@@ -5,6 +5,7 @@ require 'optparse'
 require 'uri'
 require 'net/http'
 require_relative '../../deployment'
+require 'cdo/lesson_import_helper'
 
 # Once this script is ready, only levelbuilder should be added to this list.
 raise unless [:development, :adhoc].include? rack_env
@@ -76,7 +77,7 @@ def parse_options
 end
 
 def main(options)
-  cb_url_prefix = options.local ? 'http://localhost:8000' : 'https://curriculum.code.org'
+  cb_url_prefix = options.local ? 'http://localhost:8000' : 'http://www.codecurricula.com'
 
   options.unit_names.each do |unit_name|
     script = Script.find_by_name!(unit_name)
@@ -94,23 +95,35 @@ def main(options)
     lesson_pairs = get_validated_lesson_pairs(script, cb_unit)
     lesson_group_pairs = get_lesson_group_pairs(script, cb_unit['chapters'], lesson_pairs)
 
-    if options.dry_run
-      puts "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
-      next
-    end
+    log "validated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
+
+    next if options.dry_run
 
     lesson_pairs.each do |lesson, cb_lesson|
-      lesson.update_from_curriculum_builder(cb_lesson)
+      LessonImportHelper.update_lesson(lesson, cb_lesson)
+      log("update lesson #{lesson.id} with cb lesson data: #{cb_lesson.to_json[0, 50]}...")
     end
 
-    lesson_group_pairs.each do |lesson_group, cb_chapter|
+    paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
+    lockable_lessons_to_update = script.lessons.select(&:lockable?).reject {|l| paired_lesson_ids.include?(l.id)}
+    lockable_lessons_to_update.each do |lockable|
+      LessonImportHelper.update_lesson(lockable)
+    end
+
+    updated_lesson_group_count = lesson_group_pairs.count do |lesson_group, cb_chapter|
       # Make sure the lesson group update does not also try to update lessons.
       cb_chapter = cb_chapter.reject {|k, _| k == 'lessons'}
 
+      # Use a heuristic to make sure we do not import CSF chapter descriptions
+      # which are equal to the chapter title.
+      cb_chapter['description'] = nil if cb_chapter['description'] == cb_chapter['title']
       lesson_group.update_from_curriculum_builder(cb_chapter)
     end
+    script.fix_script_level_positions
 
-    puts "updated #{lesson_pairs.count} lessons and #{lesson_group_pairs.count} lesson groups in unit #{script.name}"
+    script.update!(show_calendar: !!cb_unit['show_calendar'], is_migrated: true)
+
+    puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"
   end
 end
 
@@ -172,7 +185,7 @@ def get_validated_lesson_pairs(script, cb_unit)
   # lessons, none of which have lesson plans on CB.
   cb_lessons_nonlockable = cb_lessons.reject {|lesson| lesson['code_studio_url'].present?}
   unless lessons_nonlockable.count == cb_lessons_nonlockable.count
-    raise "mismatched lesson counts for unit #{script.name} CS: #{lesson_names.count} CB: #{cb_lesson_names.count}"
+    raise "mismatched lesson counts for unit #{script.name} CS: #{lessons_nonlockable.count} CB: #{cb_lessons_nonlockable.count}"
   end
   mismatched_names = []
   lessons_nonlockable.each.with_index do |lesson, index|

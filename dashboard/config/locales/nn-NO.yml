@@ -185,9 +185,17 @@ nn:
     mismatch_password: Dei to passorda du skreiv inn er ikkje like
     student_consent: Eg stadfestar at eg har løyve frå foreldre eller føresatte til
       å nytte tenestene frå Code.org.
-    agree_us_website: Eg godtar å bruke ein nettstad som er basert i USA.
-    my_data_to_us: Mine data fra bruken av denne nettstaden kan sendast til, lagrast
-      eller bli handtert i USA.
+    agree_us_data_transfer_student: "**Jeg godtar at Code.org kan overføre data (inkludert
+      personopplysninger) fra min bruk av dette nettstedet til USA** med formål om
+      å hoste og behandle slike data."
+    agree_us_data_transfer_teacher: "**Jeg godtar at Code.org kan overføre data (inkludert
+      personopplysninger) fra min bruk (og mine studenters bruk) av dette nettstedet
+      til USA** med formål om å hoste og behandle slike data."
+    data_collection_us: Jeg forstår at Code.org er et non profit-nettsted basert i
+      USA og at lovgivningen for datainnhenting i USA kan være annerledes enn for
+      landet mitt.
+    visit_privacy: Besøk [personvernpraksisen](%{privacy_url}) til Code.org for å
+      finne ut mer.
     student_terms_markdown: Epostadresser bli ikkje lagra i eit format som gir oss
       løyve til å kontakte elevane. Elevane vil aldri få epost fra Code.org, unntatt
       ved passordgjenoppretting. Se våre [retningslinjer for personvern] (http://code.org/privacy)

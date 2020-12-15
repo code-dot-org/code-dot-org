@@ -1,14 +1,30 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedActivitySectionCard as ActivitySectionCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCard';
 import sinon from 'sinon';
-import {sampleActivities} from './activitiesTestData';
+import {
+  stubRedux,
+  restoreRedux,
+  getStore,
+  registerReducers
+} from '@cdo/apps/redux';
+import {Provider} from 'react-redux';
+import resourceTestData from './resourceTestData';
+import {sampleActivities, searchOptions} from './activitiesTestData';
+import reducers, {
+  init
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import resourcesEditor, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 
 describe('ActivitySectionCard', () => {
   let defaultProps,
+    store,
     setTargetActivitySection,
     updateTargetActivitySection,
+    clearTargetActivitySection,
     updateActivitySectionMetrics,
     moveActivitySection,
     removeActivitySection,
@@ -17,8 +33,16 @@ describe('ActivitySectionCard', () => {
     moveLevelToActivitySection,
     addLevel;
   beforeEach(() => {
+    stubRedux();
+    registerReducers({...reducers, resources: resourcesEditor});
+
+    store = getStore();
+    store.dispatch(init(sampleActivities, searchOptions));
+    store.dispatch(initResources(resourceTestData));
+
     setTargetActivitySection = sinon.spy();
     updateTargetActivitySection = sinon.spy();
+    clearTargetActivitySection = sinon.spy();
     updateActivitySectionMetrics = sinon.spy();
     moveActivitySection = sinon.spy();
     removeActivitySection = sinon.spy();
@@ -33,6 +57,7 @@ describe('ActivitySectionCard', () => {
       activitiesCount: 1,
       activitySectionMetrics: [],
       updateTargetActivitySection,
+      clearTargetActivitySection,
       updateActivitySectionMetrics,
       setTargetActivitySection,
       targetActivitySectionPos: 1,
@@ -45,6 +70,10 @@ describe('ActivitySectionCard', () => {
       moveLevelToActivitySection,
       addLevel
     };
+  });
+
+  afterEach(() => {
+    restoreRedux();
   });
 
   it('renders activity section without levels', () => {
@@ -125,5 +154,78 @@ describe('ActivitySectionCard', () => {
       'text',
       'My section description'
     );
+  });
+
+  it('can move activity section down to next activity', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <ActivitySectionCard {...defaultProps} />
+      </Provider>
+    );
+
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.find('.fa-caret-down').length).to.equal(1);
+    const down = orderControls.find('.fa-caret-down');
+    down.simulate('mouseDown');
+
+    expect(moveActivitySection).to.have.been.calledWith(1, 1, 'down');
+  });
+
+  it('can not move activity section up if first activity section in first activity', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <ActivitySectionCard {...defaultProps} />
+      </Provider>
+    );
+
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.find('.fa-caret-up').length).to.equal(1);
+    const up = orderControls.find('.fa-caret-up');
+    up.simulate('mouseDown');
+
+    expect(moveActivitySection).to.not.have.been.called;
+  });
+
+  it('can move activity section up to previous activity', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <ActivitySectionCard
+          {...defaultProps}
+          activityPosition={2}
+          activitiesCount={2}
+        />
+      </Provider>
+    );
+
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.find('.fa-caret-up').length).to.equal(1);
+    const up = orderControls.find('.fa-caret-up');
+    up.simulate('mouseDown');
+
+    expect(moveActivitySection).to.have.been.calledWith(2, 1, 'up');
+  });
+
+  it('can not move activity section down if last activity section in last activity', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <ActivitySectionCard
+          {...defaultProps}
+          activityPosition={2}
+          activitiesCount={2}
+          activitySection={sampleActivities[0].activitySections[2]}
+        />
+      </Provider>
+    );
+
+    expect(wrapper.find('OrderControls').length).to.equal(1);
+    const orderControls = wrapper.find('OrderControls');
+    expect(orderControls.find('.fa-caret-down').length).to.equal(1);
+    const down = orderControls.find('.fa-caret-down');
+    down.simulate('mouseDown');
+
+    expect(moveActivitySection).to.not.have.been.called;
   });
 });

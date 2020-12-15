@@ -4029,3 +4029,7 @@ nn:
               name: Kurs B
             CS Discoveries:
               name: Oppdagingar i informatikk
+        ml-playground:
+          lessons:
+            intro:
+              name: Introduksjon

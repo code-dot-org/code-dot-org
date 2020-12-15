@@ -2303,3 +2303,7 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
+        ml-playground:
+          lessons:
+            intro:
+              name: مقدمه

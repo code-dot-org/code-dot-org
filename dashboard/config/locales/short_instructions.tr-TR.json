@@ -2791,9 +2791,9 @@
         "courseB_maze_seq9_2018": "Meydan Okuma: Scrat'i meşe palamuduna ulaştırmak için kırık buz etrafında hareket edin.",
         "courseB_maze_seq9_2019": "Meydan Okuma: Scrat'i meşe palamuduna ulaştırmak için kırık buz etrafında hareket edin.",
         "courseB_maze_seq9_2020": "Meydan Okuma: Scrat'i meşe palamuduna ulaştırmak için kırık buz etrafında hareket edin.",
-        "courseB_playlab_events4_2018": "Bu seviyeyi tamamlamak için ejderhayı alt edin!",
-        "courseB_playlab_events4_2019": "Bu seviyeyi tamamlamak için ejderhayı alt edin!",
-        "courseB_playlab_events4_2020": "Bu seviyeyi tamamlamak için ejderhayı alt edin!",
+        "courseB_playlab_events4_2018": "Bu seviyeyi bitirmek için ejderhayı alın!",
+        "courseB_playlab_events4_2019": "Bu seviyeyi bitirmek için ejderhayı alın!",
+        "courseB_playlab_events4_2020": "Bu seviyeyi bitirmek için ejderhayı alın!",
         "courseB_playlab_events5_2018": "Sağ oka bastığınızda çövalye ejderhadan uzaklaşsın diye bir olay ekleyin.",
         "courseB_playlab_events5_2019": "Sağ oka bastığınızda çövalye ejderhadan uzaklaşsın diye bir olay ekleyin.",
         "courseB_playlab_events5_2020": "Sağ oka bastığınızda çövalye ejderhadan uzaklaşsın diye bir olay ekleyin.",
@@ -3000,7 +3000,8 @@
         "behaviors free play": "Serbest oyun: Kendi dış boşluk sahnenizi oluşturun!",
         "behaviors free play_2020": "Serbest oyun: Kendi dış boşluk sahnenizi oluşturun!",
         "Virtual Pet 8_2019": "**Serbest Oyun:** Evcil hayvanınıza daha başka ne yaptırabilirsiniz? Sevdiğiniz herhangi bir şeyi deneyin!",
-        "Virtual Pet 8_2020": "**Serbest Oyun:** Evcil hayvanınıza daha başka ne yaptırabilirsiniz? Sevdiğiniz herhangi bir şeyi deneyin!"
+        "Virtual Pet 8_2020": "**Serbest Oyun:** Evcil hayvanınıza daha başka ne yaptırabilirsiniz? Sevdiğiniz herhangi bir şeyi deneyin!",
+        "OPD-K5 whats your plan": "Bu deneyimden en iyi biçimde faydalanmanız için bu çevrimiçi kursu nasıl ve ne zaman tamamlayacağınızı düşünmek için şimdi bir dakika ayırın. İyi bir plan tasarladığınızda, Computer Science Fundamentals'a daha derinlemesine dalmaya devam edin. "
       }
     }
   }

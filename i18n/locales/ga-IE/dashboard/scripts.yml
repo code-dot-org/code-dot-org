@@ -3747,3 +3747,9 @@ ga:
               name: Cúrsa B
             CS Discoveries:
               name: Fionnachtana sa Ríomheolaíocht
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI ar son an Aigéin
+            intro:
+              name: Réamhrá

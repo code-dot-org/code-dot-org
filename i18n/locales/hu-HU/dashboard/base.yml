@@ -19,6 +19,11 @@ hu:
       pair_programmer: 'Jelenleg párban programozol egy olyan diáktársaddal, aki ehhez a tartalomhoz nem férhet hozzá. Hogy elérd ezt a tartalmat, állítsd le a páros programozást, és próbáld újra.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "nem érvényes. Minden link csak egyszer használható fel arra, hogy megváltoztasd a jelszavadat, és csak a legutlóljára elküldött link fog működni."
       messages:
         blank: "szükséges"
         blank_plural: "szükségesek"
@@ -45,6 +50,7 @@ hu:
         finish_sign_up_subheader_markdown: 'Töltsd ki az alábbi adatokat **%{email}** Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez **%{provider}****%{email}**.'
+        reset_password_token: "A jelszó megváltoztatásához használt link"
         error:
           future: nem lehet a jövőben
   beta: "béta"
@@ -60,11 +66,12 @@ hu:
   cancel: "Mégsem"
   okay: "Oké"
   or: "vagy"
-  heading_x_of_y: "%{heading} (oldal %{x} %{y})"
+  heading_x_of_y: "%{heading} (%{x}. oldal / %{y})"
   join_section:
     code:
       title: 'Csatlakozz egy csoporthoz a Code.org-on'
       placeholder: "Szakasz kód (ABCDEF)"
+      instructions: "Légyszives üsd be a 6 betűből álló kódot, amit a tanárod osztott meg veled (például: \"ABCDEF\"), hogy csatlakozhass a csoporthoz."
       instructions_short: "Add meg a 6 karakteres szakasz kódod"
       submit: 'Csatlakozás'
   add_hint_form:
@@ -72,7 +79,7 @@ hu:
     submit: 'Írja le a véleményét'
   appname: "Code.org"
   stage: "szakasz"
-  stage_number: "Lecke %{number}"
+  stage_number: "%{number}. Lecke"
   puzzle: "Kirakós"
   trophies: "trófeák"
   courses: 'tanfolyamok'
@@ -96,6 +103,7 @@ hu:
     sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
     signed_in: 'Bejelentkezve!'
     signed_out_markdown: '### Kijelentkeztél innen: [Code.org](%{url}).'
+    sign_out_of_markdown: '#### Te a %{provider}on keresztül léptél be. [Kattints ide,](%{url}) hogy kijelentkezz %{provider}ból.'
     already_signedup: 'Már regisztráltál?'
     notyet_signedup: "Még nem csatlakoztál?"
     google_oauth2: 'Google fiók'
@@ -112,9 +120,16 @@ hu:
     need_unlock: "Nem kaptál a zárolás megszüntetéséhez útmutatót?"
     not_linked: "Sajnáljuk, de Code.org-fiókja nem kapcsolódik a %{provider}. Úgy kell bejelentkezned, hogy beírod a jelszavad."
     use_clever: "Sajnáljuk, de Code.org-fiókja nem kapcsolódik a %{provider}. Kérjük jelentkezzen be a okos portálon keresztül."
+    invalid_provider: "Sajnálom, %{provider} felhasználói fiókot nem lehet társítani a Code.org fiókhoz."
+    migration_required: "Sajnálom, nem lehet fel- vagy lecsatlakoztatni fiókokat, amíg a régi felhasználói környezetet használod. Kérlek frissíts az újra."
     unable_to_connect_provider: "Nem lehet összekötni Code.org-fiókját, a %{provider}. Kérjük, próbálja meg újra."
+    disconnect_successful: "Siker! Szétkapcsoltuk a külső fiókodat a Code.org fiókodtól."
     already_in_use: "A %{provider} fiókodat már korábban összekapcsoltuk egy másik Code.org fiókkal."
     already_linked: "A %{provider} fiókodat már korábban összekapcsoltuk egy másik Code.org fiókkal."
+    existing_account:
+      account_exists: "Jó hírek! Már van egy Code.org fiókod, ami a(z) %{email} email címet használja."
+      sign_in: "Kérlek lépj be a már meglévő fiókodba. Utána hozzá tudod kötni a %{provider} profilodat a Fiók Beállítások oldalon."
+      sign_up: "Nem a saját email címed? Szeretnél egy új fiókot egy másik email címmel? Bejelentkezés után összekötheted a %{provider} profilodat a Fiók Beállítások oldalon, hogyha új fiókot készítessz."
   signup_form:
     email_signup: 'Regisztrálj az e-mail címeddel'
     student_count: '%{count} tanuló iratkozott már fel.'
@@ -144,10 +159,8 @@ hu:
     invalid_password: "A jelszónak legalább 6 karakter hosszúnak kell lennie"
     mismatch_password: "A megadott két jelszó nem egyezik"
     student_consent: "Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
-    agree_us_website: "Elfogadom, hogy egy Egyesült Államokban létrejött weboldalt használok."
-    my_data_to_us: "A weboldal használatából keletkező adatok tárolása és feldolgozása esetlegesen az Egyesült Államokban történik."
-    agree_us_data_transfer_student: '**Hozzájárulok ahhoz, hogy a Code.org adatokat továbbítson (beleértve személyes adatokat is) az Egyesült Államokba azok tárolása és feldolgozása céljából arról, hogy én hogyan használom ezt a webhelyet.'
-    agree_us_data_transfer_teacher: '**Hozzájárulok ahhoz, hogy a Code.org adatokat továbbítson (beleértve személyes adatokat is) az Egyesült Államokba azok tárolása és feldolgozása céljából arról, hogy én (és a diákjaim) hogyan használják ezt a webhelyet.'
+    agree_us_data_transfer_student: '**Hozzájárulok ahhoz, hogy a Code.org adatokat továbbítson (beleértve személyes adatokat is) az Egyesült Államokba** azok tárolása és feldolgozása céljából arról, hogy én hogyan használom ezt a webhelyet.'
+    agree_us_data_transfer_teacher: '**Hozzájárulok ahhoz, hogy a Code.org adatokat továbbítson (beleértve személyes adatokat is) az Egyesült Államokba** azok tárolása és feldolgozása céljából arról, hogy én (és a diákjaim) hogyan használják ezt a webhelyet.'
     data_collection_us: "Tudom, hogy a Code.org egy nonprofit webhely, amelynek székhelye az USA-ban van, és az USA adatgyűjtésre vonatkozó törvényei eltérhetnek az én hazám törvényeitől."
     visit_privacy: 'További információkért keresd fel a Code.org webhelyen az [Adatvédelmi Szabályokat](%{privacy_url}).'
     additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
@@ -335,6 +348,7 @@ hu:
       eval: 'Kiértékel'
       flappy: 'Flappy'
       frozen: 'Jégvarázs'
+      gamelab: 'Játék Labor'
       gamelab_jr: 'Játéklabor (beta)'
       gumball: 'Gumball csodálatos világa'
       iceage: 'Jégkorszak'
@@ -348,7 +362,7 @@ hu:
       spritelab: 'Sprite labor'
       starwars: 'Star Wars'
       weblab: 'Web-Lab'
-      view_all: 'Összes projekt áttekintése...'
+      view_all: 'Nézd meg az összes projektet...'
     popup:
       progress_for_user: "%{name} fejlődése"
       progress: 'Fejlődése'
@@ -561,6 +575,7 @@ hu:
       title: "Galéria"
       body: "Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát"
     gamelab:
+      title: "Játék Labor"
       audience: "Kor 13+"
       cta: "Ismerd meg hogyan"
     weblab:

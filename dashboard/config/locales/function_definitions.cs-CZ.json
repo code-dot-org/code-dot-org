@@ -652,17 +652,17 @@
         },
         "MC_HOC_2017_07_Cole": {
           "clear path": {
-            "name": "vymaž cestu"
+            "name": "vyčisti cestu"
           }
         },
         "MC_HOC_2017_07_Cole_2019": {
           "clear path": {
-            "name": "vymaž cestu"
+            "name": "vyčisti cestu"
           }
         },
         "MC_HOC_2017_07_Cole_2020": {
           "clear path": {
-            "name": "vymaž cestu"
+            "name": "vyčisti cestu"
           }
         },
         "MC_HOC_2017_FP20x20": {
@@ -2461,6 +2461,54 @@
           },
           "check nectar or honey": {
             "name": "zkontroluj nektar nebo med"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "postav krátký most"
+          },
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "postav krátký most"
+          },
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "postav krátký most"
+          },
+          "build long bridge": {
+            "name": "postav dlouhý most"
           }
         }
       }

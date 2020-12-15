@@ -74,7 +74,12 @@ export const activityShape = PropTypes.shape({
 export const resourceShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  audience: PropTypes.string,
+  assessment: PropTypes.bool,
+  includeInPdf: PropTypes.bool,
+  downloadUrl: PropTypes.string
 });
 
 export const levelShapeForScript = PropTypes.shape({

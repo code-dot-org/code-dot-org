@@ -1074,6 +1074,74 @@
         },
         "behaviors free play_2020": {
           "spinning and growing": "dönme ve büyüme"
+        },
+        "outbreak1": {
+          "wandering": "gezinme"
+        },
+        "outbreak2": {
+          "wandering": "gezinme"
+        },
+        "outbreak3": {
+          "wandering": "gezinme"
+        },
+        "outbreak4": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "swimming left and right": "sola ve sağa yüzme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "denetleme"
+        },
+        "outbreak5": {
+          "wandering": "gezinme"
+        },
+        "outbreak6": {
+          "wandering": "gezinme"
+        },
+        "outbreak7": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "denetleme"
+        },
+        "outbreak8": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "denetleme"
+        },
+        "outbreak_freeplay": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "denetleme"
         }
       }
     }

@@ -1198,6 +1198,8 @@ cs:
               vodou
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: žádný
+      gamelab_setBackgroundImageAs:
+        text: nastav pozadí na {IMG}
       gamelab_setProp:
         text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1742,7 +1744,6 @@ cs:
             '"stoneBricks"': kamenné cihly
             '"mossyStoneBricks"': kamenné cihly obrostlé mechem
             '"crackedStoneBricks"': popraskané kamenné cihly
-            '"decorativeStoneBricks"': dekorativní kamenné cihly
             '"blueCoralBlock"': modrý korálový blok
             '"pinkCoralBlock"': růžový korálový blok
             '"magentaCoralBlock"': červenorudý korálový blok

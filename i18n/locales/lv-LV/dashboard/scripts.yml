@@ -2054,3 +2054,7 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+        ml-playground:
+          lessons:
+            intro:
+              name: Ievads

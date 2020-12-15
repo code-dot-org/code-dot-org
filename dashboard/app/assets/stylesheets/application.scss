@@ -448,7 +448,7 @@ img.video_thumbnail {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 165px;
+$footer_height: 270px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -484,6 +484,10 @@ html, body {
   }
   a:hover {
     text-decoration: underline;
+  }
+  .powered-by-aws {
+    width: 100%;
+    margin-top: 12px;
   }
   select {
     width: auto;
@@ -1969,6 +1973,20 @@ a.download-video {
 
     #gdpr-section {
       flex-wrap: wrap;
+      .checkbox {
+        label {
+          align-items: baseline;
+          input[type=checkbox] {
+            align-self: auto;
+          }
+        }
+      }
+      #gdpr-label {
+        margin: 0 10px;
+        span {
+          padding: 0;
+        }
+      }
     }
   }
 }
@@ -3627,3 +3645,5 @@ html[dir=rtl] {
     padding: 0 34px;
   }
 }
+
+@import "NpsSurveyBlock";

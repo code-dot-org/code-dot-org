@@ -1169,6 +1169,8 @@ hi:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पानी के नीचे
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': सर्दी का मोसम
             undefined: कोई नहीं
+      gamelab_setBackgroundImageAs:
+        text: पृष्ठभूमि के तौर पर {IMG} सेट करें
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें"
         options:
@@ -1698,7 +1700,6 @@ hi:
             '"stoneBricks"': कृत्रिम पत्थर की ईंटें
             '"mossyStoneBricks"': कृत्रिम पत्थर की दलदले रंग की ईंटें
             '"crackedStoneBricks"': कृत्रिम पत्थर की दरारों वाली ईंटें
-            '"decorativeStoneBricks"': कृत्रिम पत्थर की सजावटी ईंटें
             '"blueCoralBlock"': नीला मूंगा ब्लॉक
             '"pinkCoralBlock"': गुलाबी मूंगा ब्लॉक
             '"magentaCoralBlock"': मैजेंटा मूंगा ब्लॉक

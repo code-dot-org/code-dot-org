@@ -119,6 +119,13 @@ export const dropletBuiltinConfigBlocks = [
     type: 'value',
     params: ['__'],
     docFunc: 'mathPow'
+  },
+  {
+    func: 'Math.sqrt',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathSqrt'
   }
 ];
 
@@ -172,6 +179,9 @@ standardConfig.blocks = [
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math'},
   {func: 'mathRandom', block: 'Math.random()', category: 'Math'},
   {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math'},
+  {func: 'mathSqrt', block: 'Math.sqrt(__)', category: 'Math'},
+  {func: 'mathIncrement', block: '__++', category: 'Math'},
+  {func: 'mathDecrement', block: '__--', category: 'Math'},
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables'},

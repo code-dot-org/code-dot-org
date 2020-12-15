@@ -1142,6 +1142,8 @@ ga:
               uisce
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': geimhreadh
             undefined: gan chúlra
+      gamelab_setBackgroundImageAs:
+        text: 'socraigh an cúlra: {IMG}'
       gamelab_setProp:
         text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
         options:
@@ -1591,7 +1593,6 @@ ga:
             '"stoneBricks"': brící cloiche
             '"mossyStoneBricks"': brící cloiche caonaigh
             '"crackedStoneBricks"': brící cloiche gágacha
-            '"decorativeStoneBricks"': brící cloiche maisiúla
             '"blueCoralBlock"': bloc coiréil ghoirm
             '"pinkCoralBlock"': bloc coiréil bhándeirg
             '"magentaCoralBlock"': bloc coiréil mhaigeanta

@@ -1184,6 +1184,8 @@ ar:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': تحت الماء
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': الشتاء
             undefined: لا شيء
+      gamelab_setBackgroundImageAs:
+        text: تعيين الخلفية إلى {IMG}
       gamelab_setProp:
         text: تعيين {SPRITE} {PROPERTY} ل {VAL}
         options:
@@ -1720,7 +1722,6 @@ ar:
             '"stoneBricks"': أحجار الطوب
             '"mossyStoneBricks"': أحجار الطوب المطحلبة
             '"crackedStoneBricks"': أحجار الطوب المتصدعة
-            '"decorativeStoneBricks"': أحجار الطوب التزيينية
             '"blueCoralBlock"': كتلة المرجان الأزرق
             '"pinkCoralBlock"': كتلة المرجان الوردي
             '"magentaCoralBlock"': كتلة المرجان الأرجواني

@@ -7663,3 +7663,32 @@ zh-CN:
         title: 计算机科学发现学生课前问卷
       csd-pre-survey-levelgroup_2019:
         title: 计算机科学发现学生课前问卷
+      outbreak_story:
+        content1: 描述
+      outbreak_story2:
+        content1: 描述
+      OPD-K5 Participation_copy:
+        markdown: |
+          # 计划你的课程
+
+          在你开始上课之前，先花点时间想一想你的学习需求、目标以及在网上自学的经验--如果这是你第一次参与网上课程，这一步尤为重要！
+
+          ## 参与课前调研
+
+          我们希望让你尽可能多地从这次专业培训中获益。因此，我们邀请你参与填写<a href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">这份简短的问卷</a>。该问卷将询问你参与本次课程希望达成的目标，让我们对你有一些了解从而向你提供更好的支持和帮助。
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">T参与课前调研</a>
+
+          ## 按你的节奏来
+
+          自定义进度的在线课程旨在让你对课程有全面的掌控，并能自由控制学习进度。 ** 虽然我们针对每个学习阶段给出了参考时长，你仍可按照自己的时间和进度来完成整个课程。**如果你发现在某个阶段花费了更多或更少的时间，请不要担心！ 我们的主要目的是让你在玩得开心的同时掌握一些基础知识，并以最适合你的方式将所学内容应用到课堂实践中。
+
+          ## 随时得到帮助
+
+          如果你在课程中遇到困难，请前往 <a href="http://support.code.org" target="blank">support.code.org</a>，并查看 <a href="https://forum.code.org/" target="blank">我们的社区论坛</a>。你有可能在那里找到问题的答案。如果你没能找到答案或仍然被问题困扰，发邮件到 <a href="mailto:support@code.org" target="blank">support@code.org</a> ，Code.org 的工作人员会尽快给你回复。
+
+          我们强烈推荐另一种获得帮助的方式，是与一个同伴或一个小组一起学习这个在线课程！
+
+          ##找到适合你的学习方式
+
+          最后，在线学习并不适合所有人。本课程没有配备教师或内置机制能让你与其他学习者进行实时交流。如果您发现自己需要更多一对一的关注，或者你在有真实合作参与的线下课堂上学习效果更好，推荐你参与我们的<a href="http://code.org/professional-development-workshops" target="blank">面对面专业发展研讨会</a>。

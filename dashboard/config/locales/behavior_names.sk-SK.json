@@ -1078,6 +1078,74 @@
         },
         "behaviors free play_2020": {
           "spinning and growing": "točenie a zväčšovanie"
+        },
+        "outbreak1": {
+          "wandering": "túlať sa"
+        },
+        "outbreak2": {
+          "wandering": "túlať sa"
+        },
+        "outbreak3": {
+          "wandering": "túlať sa"
+        },
+        "outbreak4": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať"
+        },
+        "outbreak5": {
+          "wandering": "túlať sa"
+        },
+        "outbreak6": {
+          "wandering": "túlať sa"
+        },
+        "outbreak7": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať"
+        },
+        "outbreak8": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať"
+        },
+        "outbreak_freeplay": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať"
         }
       }
     }

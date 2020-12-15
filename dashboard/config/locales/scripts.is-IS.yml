@@ -7577,3 +7577,9 @@ is:
               name: Námskeið B
             CS Discoveries:
               name: Uppgötvanir tölvunarfræði
+        ml-playground:
+          lessons:
+            intro:
+              name: Kynning
+            visualizing:
+              name: Sjóngerving gagna

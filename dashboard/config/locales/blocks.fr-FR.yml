@@ -1181,6 +1181,8 @@ fr:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sous-marin
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hiver
             undefined: aucun
+      gamelab_setBackgroundImageAs:
+        text: établir {IMG} comme arrière-plan
       gamelab_setProp:
         text: établir [PROPERTY] de {SPRITE} [1] à {VAL}
         options:
@@ -1703,7 +1705,6 @@ fr:
             '"stoneBricks"': briques de pierre
             '"mossyStoneBricks"': briques de pierre moussues
             '"crackedStoneBricks"': briques de pierre craquelées
-            '"decorativeStoneBricks"': briques de pierre décoratives
             '"blueCoralBlock"': bloc de corail bleu
             '"pinkCoralBlock"': bloc de corail rose
             '"magentaCoralBlock"': bloc de corail magenta

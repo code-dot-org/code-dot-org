@@ -159,8 +159,6 @@ tr:
     invalid_password: "Parola en az 6 karakter olmalıdır"
     mismatch_password: "Girdiğiniz iki parola aynı değil"
     student_consent: "Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
-    agree_us_website: "Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyorum."
-    my_data_to_us: "Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir."
     agree_us_data_transfer_student: '**Code.org''un bu siteyi kullanımım ile ilgili verileri (kişisel veriler dahil), barındırma ve işleme amacıyla Amerika Birleşik Devletleri''ne** aktarabileceğini kabul ediyorum.'
     agree_us_data_transfer_teacher: '**Code.org''un bu siteyi kullanımım (ve öğrencimin kullanımı) ile ilgili verileri (kişisel veriler dahil), barındırma ve işleme amacıyla Amerika Birleşik Devletleri''ne** aktarabileceğini kabul ediyorum.'
     data_collection_us: "Code.org, kâr amacı gütmeyen, ABD merkezli bir web sitesi olup ABD'nin veri toplama için geçerli kanunlarının, ülkemdeki kanunlardan farklı olabileceğini anlıyorum."

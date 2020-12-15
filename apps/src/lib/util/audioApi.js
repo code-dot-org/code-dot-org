@@ -1,9 +1,10 @@
 /* globals appOptions */
 /** @file Droplet-friendly command defintions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {apiValidateType, OPTIONAL} from './javascriptMode';
-import Sounds from '../../Sounds';
-import {textToSpeech} from './speech';
+import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
+import i18n from '@cdo/locale';
+import Sounds from '@cdo/apps/Sounds';
+import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -13,6 +14,9 @@ let executeCmd;
 export function injectExecuteCmd(fn) {
   executeCmd = fn;
 }
+
+// Max text length for the playSpeech block.
+export const MAX_SPEECH_TEXT_LENGTH = 750;
 
 /**
  * Export a set of native code functions that student code can execute via the
@@ -129,14 +133,30 @@ export const commands = {
       'string',
       OPTIONAL
     );
-    textToSpeech(
-      opts.text,
-      opts.gender,
-      opts.language,
-      appOptions.azureSpeechServiceToken,
-      appOptions.azureSpeechServiceRegion,
-      appOptions.azureSpeechServiceLanguages
-    );
+
+    const {azureSpeechServiceVoices: voices} = appOptions;
+    let {text, gender, language} = opts;
+
+    // Fall back to defaults if requested language/gender combination is not available.
+    if (!(voices[language] && voices[language][gender])) {
+      language = 'English';
+      gender = 'female';
+    }
+
+    const MAX_TEXT_LENGTH = 750;
+    if (text.length > MAX_TEXT_LENGTH) {
+      text = text.slice(0, MAX_TEXT_LENGTH);
+      outputWarning(i18n.textToSpeechTruncation());
+    }
+
+    const azureTTS = AzureTextToSpeech.getSingleton();
+    const promise = azureTTS.createSoundPromise({
+      text,
+      gender,
+      languageCode: voices[language].languageCode,
+      onFailure: message => outputWarning(message + '\n')
+    });
+    azureTTS.enqueueAndPlay(promise);
   }
 };
 

@@ -4208,3 +4208,10 @@ uk:
             Course E/F:
               name: Курс E/F
           description_audience: Внутрішній
+        ml-playground:
+          lessons:
+            intro:
+              name: Вступ
+        2021drafting:
+          description_audience: Внутрішній
+          description_short: Внутрішній

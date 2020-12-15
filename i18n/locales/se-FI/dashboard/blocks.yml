@@ -1062,6 +1062,8 @@ se:
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': násttit
             undefined: ii oktage
+      gamelab_setBackgroundImageAs:
+        text: bija duogábeali dása {IMG}
       gamelab_setProp:
         text: bija {SPRITE} {PROPERTY} dása {VAL}
         options:
@@ -1485,7 +1487,6 @@ se:
             '"stoneBricks"': geađgediillat
             '"mossyStoneBricks"': jeagilduvvon geađgediillat
             '"crackedStoneBricks"': cuovkanan geađgediillat
-            '"decorativeStoneBricks"': girjás geađgediillat
             '"blueCoralBlock"': alit korálla blohkka
             '"pinkCoralBlock"': čuvgesrukses korálla blohkka
             '"magentaCoralBlock"': mageanta korálla blohkka

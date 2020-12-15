@@ -2213,3 +2213,7 @@ gl:
               name: Condicionais
             Functions:
               name: Funcións
+        ml-playground:
+          lessons:
+            intro:
+              name: Introdución

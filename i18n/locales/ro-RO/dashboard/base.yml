@@ -147,12 +147,10 @@ ro:
     invalid_password: "Parola trebuie să conţină cel puțin 6 caractere"
     mismatch_password: "Cele două parole introduse nu se potrivesc"
     student_consent: "Confirm că am permisiunea părintelui sau tutorelui meu legal de a utiliza serviciile Code.org."
-    agree_us_website: "Sunt de acord să folosesc un site web din Statele Unite."
-    my_data_to_us: "Datele obținute în urma utilizării de către mine a acestui site pot fi trimise și stocate sau prelucrate în Statele Unite."
     agree_us_data_transfer_student: '**Sunt de acord ca Code.org poate transfera date (inclusiv datele mele personale) din utilizarea de către mine a acestui site către Statele Unite** în vederea găzduirii și prelucrării acestor date.'
     agree_us_data_transfer_teacher: '**Sunt de acord ca Code.org să poată transfera date (inclusiv datele mele personale) din utilizarea mea (și utilizarea elevilor mei) a prezentului site către SUA** în vederea găzduirii și prelucrării acestor date.'
     data_collection_us: "Înțeleg că Code.org este un site non-profit din SUA, iar legile care guvernează colectarea datelor în SUA pot fi diferite de legile din țara mea."
-    visit_privacy: 'Vizitează Politica de Confidențialitate pe Code.org (%{privacy_url}) pentru mai multe informații.'
+    visit_privacy: 'Vizitează [Politica de Confidențialitate](%{privacy_url}) pe Code.org  pentru mai multe informații.'
     additional_information: "Mai avem nevoie de câteva informaţii adiționale pentru a te putea înscrie."
     user_type_button: "Actualizaţi tipul de contul"
     user_type_label: "Tipul contului"

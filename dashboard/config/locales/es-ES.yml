@@ -191,10 +191,6 @@ es:
     mismatch_password: Las dos contraseñas  introducidas no coinciden
     student_consent: Confirmo que tengo la autorización de mis padres o guardianes
       legales para utilizar los servicios de Code.org.
-    agree_us_website: Estoy de acuerdo con el uso de un sitio web con sede en los
-      Estados Unidos.
-    my_data_to_us: Los datos de mi uso de este sitio pueden ser enviados y almacenados
-      o procesados en los Estados Unidos.
     agree_us_data_transfer_student: "**Acepto que Code.org puede transferir datos
       (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos**
       con el fin de alojar y procesar dichos datos."
@@ -691,7 +687,7 @@ es:
       Network.
     code_from_html: Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: Impulsado por Amazon Web Services
     trademark: "© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de
       Hora de Code ® son marcas registradas de Code.org."
     copyright: Derechos de autor

@@ -99,7 +99,6 @@ class LevelToken extends Component {
     removeLevel: PropTypes.func.isRequired,
 
     // from redux
-    levelKeyList: PropTypes.object.isRequired,
     toggleExpand: PropTypes.func
   };
 
@@ -175,7 +174,11 @@ class LevelToken extends Component {
             <div style={styles.reorder} onMouseDown={this.handleDragStart}>
               <i className="fa fa-arrows-v" />
             </div>
-            <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
+            <span
+              style={styles.levelTokenName}
+              onClick={this.toggleExpand}
+              className="uitest-level-token-name"
+            >
               <span style={styles.levelArea}>
                 <span style={styles.titleAndBubble}>
                   <ProgressBubble
@@ -183,7 +186,7 @@ class LevelToken extends Component {
                     level={progressBubbleLevel}
                     disabled={true}
                   />
-                  <span style={styles.levelTitle}>{activeLevel.name}</span>
+                  <span style={styles.levelTitle}>{scriptLevel.key}</span>
                 </span>
                 {activeLevel.assessment && (
                   <span style={styles.tag}>assessment</span>
@@ -221,9 +224,7 @@ class LevelToken extends Component {
 }
 
 export default connect(
-  state => ({
-    levelKeyList: state.levelKeyList
-  }),
+  state => ({}),
   {
     toggleExpand
   }
