@@ -1155,6 +1155,7 @@ en:
       copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
       error_token_expired: 'Token has expired. Please log in again for a new token.'
       error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_no_linked_google: 'Wrong provider. Please make sure you are logging in with Google or you have linked your Google account to your Code.org account'
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
       confirm_login: 'Select "Confirm" to log in with your Google account.'
