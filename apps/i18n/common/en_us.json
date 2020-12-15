@@ -325,6 +325,7 @@
   "copied": "Copied!",
   "copy": "Copy",
   "copyId": "Copy ID",
+  "copyResourcesWarning": "**Heads Up!** Please make a copy of any documents you plan to share with students.",
   "copySectionCodeSuccess": "Link copied!",
   "copySectionCodeTooltip": "Click here to copy the link students need to join the section",
   "copyStudentsConfirm": "Yes, I want to copy student(s) to be in this current section AND the new section.",
