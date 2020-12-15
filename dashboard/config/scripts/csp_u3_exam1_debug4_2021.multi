@@ -1,0 +1,28 @@
+name 'csp-u3-exam1-debug4_2021'
+height 'auto'
+
+question ‘The following program is run. Then the user clicks the “bottomButton” ONCE and then clicks the “topButton” ONCE. What will be displayed in the console?’
+
+wrong ‘`aaa`  
+`bbb`  
+`ccc`’
+wrong ‘`aaa`  
+`ccc`  
+`bbb`’
+wrong ‘`bbb`  
+`aaa`  
+`ccc`’
+right ‘`ccc`  
+`bbb`  
+`aaa`’
+
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/2019e0c6a2ccdfa7a3668e18cdef2830-image-1567612475002.54.20 AM.png" style="width:500px">
+MARKDOWN

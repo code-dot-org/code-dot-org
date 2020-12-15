@@ -6,6 +6,9 @@ class LessonsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    # stub writes so that we dont actually make updates to filesystem
+    File.stubs(:write)
+
     @script = create :script, name: 'unit-1'
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
@@ -177,13 +180,59 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
   test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
 
-  test 'update lesson return updated lesson' do
+  test 'update lesson returns summary of updated lesson' do
     sign_in @levelbuilder
 
     put :update, params: @update_params
 
-    assert_equal 'new overview', JSON.parse(@response.body)['properties']['overview']
-    assert_equal 'new student overview', JSON.parse(@response.body)['properties']['student_overview']
+    assert_equal 'new overview', JSON.parse(@response.body)['overview']
+    assert_equal 'new student overview', JSON.parse(@response.body)['studentOverview']
+  end
+
+  test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    error = assert_raises RuntimeError do
+      post :update, params: {
+        id: lesson.id,
+        lesson: {name: lesson.name},
+        originalLessonData: {"name": "Not the name"}
+      }
+    end
+
+    assert_includes error.message, "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
+  end
+
+  test 'can update if database matches starting content for current edit page' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    lesson_activity = create :lesson_activity, lesson: lesson
+    activity_section = create :activity_section, lesson_activity: lesson_activity
+    create(
+      :script_level,
+      script: script,
+      activity_section: activity_section,
+      activity_section_position: 1,
+      lesson: lesson,
+      levels: [create(:maze)]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      lesson: {name: lesson.name},
+      originalLessonData: JSON.generate(lesson.summarize_for_lesson_edit.except(:updatedAt))
+    }
+
+    assert_response :success
   end
 
   test 'cannot update lesson with legacy script levels' do
@@ -221,6 +270,31 @@ class LessonsControllerTest < ActionController::TestCase
     activity = @lesson.lesson_activities.first
     assert_equal 'activity name', activity.name
     assert_equal 1, activity.position
+  end
+
+  test 'update writes lesson name to i18n and script_json in levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('scripts.en.yml') && data.include?(@update_params[:name])
+    end.once
+
+    # Just make sure the new lesson name appears somewhere in the new file contents.
+    File.stubs(:write).with do |filename, data|
+      filename.end_with?('.script_json') && data.include?(@update_params[:name])
+    end.once
+
+    sign_in @levelbuilder
+    put :update, params: @update_params
+  end
+
+  test 'update does not write lesson name without levelbuilder mode' do
+    @update_params[:name] = "New Lesson Display Name #{SecureRandom.uuid}"
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write).raises('must not modify filesystem')
+    sign_in @levelbuilder
+    put :update, params: @update_params
   end
 
   test 'remove activity via lesson update' do
@@ -367,9 +441,11 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'update lesson removing and adding resources' do
-    resource_to_keep = create :resource
-    resource_to_add = create :resource
-    resource_to_remove = create :resource
+    course_version = create :course_version
+    resource_to_keep = create :resource, course_version: course_version
+    resource_to_add = create :resource, course_version: course_version
+    resource_to_remove = create :resource, course_version: course_version
+    @lesson.script.course_version = course_version
 
     @lesson.resources << resource_to_keep
     @lesson.resources << resource_to_remove

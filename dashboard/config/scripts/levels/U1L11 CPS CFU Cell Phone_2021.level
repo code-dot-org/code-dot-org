@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:14.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection:",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "You’ve been given a new cell phone with a 2 gigabyte data plan. You plan to use your phone for text messages, images, video, and music. Which of these categories are best compressed using lossless compression? Which of these categories are best compressed using lossy compression? Why?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 19188,
+    "name_suffix": "_2021",
+    "encrypted_solution": "FCdbvlPok53n2ovtyRPwDupsEMBSFwaQTHwNaqa80DQrxfKiBdCmZ+pyCLIx\npEAYlPgFRKmLxWHH1+QZpMNbfWHJhJHBP3G+GixmgMtuBZM0kw+GShHRLW6U\n7fKyX4wO9BsAK649GEliL9T9Nges7y5p8/1jqlohspFIxf/hmmLyuT1qQYQE\nzazDO8GngnBmk/T3F7wl3R5H25GiziTvoBx5MUZjLkGbP1FvJz9vipl9XIPi\n+U0wqhTTPRaeNRIfkBTDP/uBb7MwVTUNDyeDzkLYbWwV/+15WuW+Rb1NCWDi\nMDm0bHxmeMy7whvLxDNOzBGq9ZLcjDG+xLjqLldnfi8e31WB3tlRZqvyM4YO\nzEWUL4QJ+GdVQtgdzzNDIBh6376yTfhmP31Bk63gSh5fDB4OCpS7lStwQgN3\nOq36HYf6j+bM9b4DW3KGlOanXTYn3nVEKA4ErIpufzWOvwsiPFVXLy3yABLo\nVNdp6Z9NfK/RKqPS100Kl6UyOHHxfIQozXZuxHABt2fEtaTcibao2bW3Q6cY\nZRh3Lka/6WpJVPMyWTJK9Of8dpkQkBYSu6WPT/MVKYXkDU1LLunpCt4x5Rrl\niSJGtPhb2m6/hPIRgSmwLZ8Tk/f8wc1CMuJDRJ2SNj36rruKJwPyB7rU+9Ac\nNwfYfzb1oFYKseP3c1JRqk54Iao/Mhfs+MA2NZWYGg8hYlky/zZy0P75tbtU\ncgc95eRq9wvCGfBOcXtnvjccjFRkGzqL0WRbvCO3igg5i82ZiBmi1+cCoYRi\nXa3TBom1MaKEbPMVt2AfqcfN92grbUCN14809GAcbK2v15Iin4Z9JEv9hrAz\ntffbs61H2krwQHTwGnNZMkxpU55sMelj/lZK6e98K9EpECbAMuVoz6yn\n",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 14:28:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-26 14:30:12 +0000\",\"changed\":[\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:09:57 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:19:13 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:42:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-03 22:41:38 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>
