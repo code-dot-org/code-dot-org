@@ -6,6 +6,17 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {connect} from 'react-redux';
+import {
+  Modal,
+  FormGroup,
+  ControlLabel,
+  Button,
+  FormControl
+} from 'react-bootstrap';
+import Select from 'react-select/lib/Select';
+import {SelectStyleProps} from '../../constants';
+import 'react-select/dist/react-select.css';
+import HelpTipModal from '@cdo/apps/lib/ui/HelpTipModal';
 
 const styles = {
   saveButtonBackground: {
@@ -64,12 +75,13 @@ const publishedSaveWarning = (
 
 class FoormSaveBar extends Component {
   static propTypes = {
-    formId: PropTypes.number,
+    formCategories: PropTypes.array,
 
     // Populated by Redux
     formQuestions: PropTypes.object,
     formHasError: PropTypes.bool,
-    isFormPublished: PropTypes.bool
+    isFormPublished: PropTypes.bool,
+    formId: PropTypes.number
   };
 
   constructor(props) {
@@ -79,7 +91,10 @@ class FoormSaveBar extends Component {
       showSaveConfirmation: false,
       isSaving: false,
       saveError: null,
-      lastSaved: null
+      lastSaved: null,
+      showNewFormSave: false,
+      formName: null,
+      formCategory: null
     };
   }
 
@@ -88,6 +103,9 @@ class FoormSaveBar extends Component {
     // do warning if in published mode
     if (this.props.isFormPublished) {
       this.setState({showSaveConfirmation: true});
+    } else if (!this.props.formId) {
+      // if this is not an existing form, show new form save modal
+      this.setState({showNewFormSave: true});
     } else {
       this.save();
     }
@@ -95,6 +113,10 @@ class FoormSaveBar extends Component {
 
   handleSaveCancel = () => {
     this.setState({showSaveConfirmation: false, isSaving: false});
+  };
+
+  handleNewFormSaveCancel = () => {
+    this.setState({showNewFormSave: false, isSaving: false});
   };
 
   save = () => {
@@ -123,6 +145,92 @@ class FoormSaveBar extends Component {
           isSaving: false
         });
       });
+  };
+
+  saveNewForm = () => {
+    // validate form name and category
+    $.ajax({
+      url: `/foorm/forms`,
+      type: 'post',
+      contentType: 'application/json',
+      processData: false,
+      data: JSON.stringify({
+        name: `${this.state.formCategory}/${this.state.formName}`,
+        questions: this.props.formQuestions,
+        published: false
+      })
+    })
+      .done(result => {
+        this.setState({
+          showNewFormSave: false,
+          isSaving: false,
+          lastSaved: Date.now()
+        });
+      })
+      .fail(result => {
+        this.setState({
+          showNewFormSave: false,
+          saveError:
+            (result.responseJSON && result.responseJSON.questions) ||
+            'Unknown error.',
+          isSaving: false
+        });
+      });
+  };
+
+  renderNewFormSaveModal = () => {
+    return (
+      <Modal
+        show={this.state.showNewFormSave}
+        onHide={this.handleNewFormSaveCancel}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Save New Form</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <FormGroup>
+            <ControlLabel>
+              Choose a Category
+              <HelpTipModal>
+                Select a category for the form. The form name will be prefixed
+                with the category name.
+              </HelpTipModal>
+            </ControlLabel>
+            <Select
+              id="folder"
+              value={this.state.formCategory}
+              onChange={e => this.setState({formCategory: e.value})}
+              placeholder="-"
+              options={this.props.formCategories.map(v => ({
+                value: v,
+                label: v
+              }))}
+              required={true}
+              {...SelectStyleProps}
+            />
+            <ControlLabel>
+              Form Name
+              <HelpTipModal>
+                Form names must be all lowercase with underscores to separate
+                words (such as example_form_name).
+              </HelpTipModal>
+            </ControlLabel>
+            <FormControl
+              id="formName"
+              type="text"
+              required={true}
+              onChange={e => this.setState({formName: e.target.value})}
+            />
+          </FormGroup>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button bsStyle="primary" onClick={this.saveNewForm}>
+            Save Form
+          </Button>
+          <Button onClick={this.handleNewFormSaveCancel}>Cancel</Button>
+        </Modal.Footer>
+      </Modal>
+    );
   };
 
   render() {
@@ -163,6 +271,7 @@ class FoormSaveBar extends Component {
             Save
           </button>
         </div>
+        {this.renderNewFormSaveModal()}
         <ConfirmationDialog
           show={this.state.showSaveConfirmation}
           onOk={this.save}
@@ -179,5 +288,6 @@ class FoormSaveBar extends Component {
 export default connect(state => ({
   formQuestions: state.foorm.formQuestions || {},
   isFormPublished: state.foorm.isFormPublished,
-  formHasError: state.foorm.hasError
+  formHasError: state.foorm.hasError,
+  formId: state.foorm.formId
 }))(FoormSaveBar);

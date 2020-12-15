@@ -22,6 +22,7 @@ class FoormEditorManager extends React.Component {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
     formNamesAndVersions: PropTypes.array,
+    formCategories: PropTypes.array,
 
     // populated by redux
     formQuestions: PropTypes.object
@@ -90,6 +91,7 @@ class FoormEditorManager extends React.Component {
   }
 
   initializeEmptyCodeMirror = () => {
+    this.props.updateFormData({questions: {}, published: null});
     this.setState({
       showCodeMirror: true,
       formName: null,
@@ -130,9 +132,7 @@ class FoormEditorManager extends React.Component {
         {this.state.showCodeMirror && (
           <FoormEditor
             populateCodeMirror={this.props.populateCodeMirror}
-            formName={this.state.formName}
-            formVersion={this.state.formVersion}
-            formId={this.state.formId}
+            formCategories={this.props.formCategories}
           />
         )}
       </div>
