@@ -106,6 +106,27 @@
       "level_keys": [
         "2020 new SL stuff"
       ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Symmetry"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "symmetry"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "symmetry"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -136,6 +157,17 @@
         "level.key": "2020 new SL stuff",
         "script_level.level_keys": [
           "2020 new SL stuff"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "symmetry",
+        "script_level.level_keys": [
+          "symmetry"
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",

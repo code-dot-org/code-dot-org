@@ -80,7 +80,7 @@ class ProgressLesson extends React.Component {
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   constructor(props) {
@@ -232,5 +232,5 @@ export default connect(state => ({
   lessonLockedForSection: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
-  selectedSectionId: state.teacherSections.selectedSectionId.toString()
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(ProgressLesson);
