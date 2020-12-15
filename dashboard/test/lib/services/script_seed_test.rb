@@ -79,6 +79,34 @@ module Services
       assert_equal script.script_levels.map(&:id), script_after_seed.script_levels.map(&:id)
     end
 
+    # The following tests ensure that the sequence of serializing and then
+    # seeding produce the right result via the following strategy:
+    #
+    # 1. create script object via create_script_tree. This represents the
+    # initial state of the script, before modifications.
+    #
+    # 2. get_script_and_json_with_change_and_rollback copies and modifies the
+    # script and serializes it to json, and then restores the DB to its original
+    # state via database transaction rollback. It then returns the modified json
+    # the modified script_with_changes, loading script associations into memory
+    # via with_seed_models.
+    #
+    # 3. seed_from_json replays the modification represented in the modified
+    # json, then reloads the script from the database using with_seed_models.
+    #
+    # 4. At this point, `script_with_changes` represents the expected state of
+    # the script after seeding, and `script` represents the actual state of the
+    # script after seeding. Therefore,
+    # assert_script_trees_equal(script_with_changes, script) asserts that the
+    # seed process made exactly the modifications we were expecting, except
+    # for a few explicitly ignored parameters, such as ids and timestamps.
+    #
+    # It is important that both script objects are fully loaded into memory
+    # before the comparison is done, so that the script_with_changes object
+    # representing the expected data does not accidentally load the actual
+    # result of seeding from the database for any of its associated models. This
+    # is ensured by using assert_queries(0) inside assert_script_trees_equal.
+
     test 'seed updates lesson groups' do
       script = create_script_tree
 
