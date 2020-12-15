@@ -1,2 +1,371 @@
 {
+  "uz-UZ": {
+    "data": {
+      "callouts": {
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "Bu yerda raqqosning turini tanlang."
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "Ushbu blokni dasturingizga qo'shing.",
+          "arrow_buttons": "Raqqosni boshqarish uchun o'q tugmachalarini bosing."
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "Dasturingizga yangi hodisa qo'shing."
+        },
+        "InspirationalArtwork": {
+          "InspirationalArtwork_1": "O‘zingizning eslatmangizni dasturda qoldirish uchun ushbu yorliq ostidagi yangi `comment` bo‘lagidan foydalanib ko‘ring!"
+        },
+        "Overworld Move to Sheep": {
+          "craft_drag_block_callout": "\"move forward\" bo‘lagini olib boshqa bo‘laklar pastiga biriktiring."
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_drag_block_callout": "\"move forward\" bo‘lagini olib boshqa bo‘laklar pastiga biriktiring."
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_drag_block_callout": "\"move forward\" bo‘lagini olib boshqa bo‘laklar pastiga biriktiring."
+        },
+        "course4_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "Bu funksiya makkajo‘xori ekini bilan yaxshi ishlaydi, ammo boshqa sabzavot ekinlari bilanchi?"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Maslahat uchun lampochkani bosing!"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "Maslahat uchun lampochkani bosing!"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Maslahat uchun lampochkani bosing!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "Maslahat uchun lampochkani bosing!"
+        },
+        "courseB_maze_seq3": {
+          "courseB_maze_seq3_1": "Kulrang bloklar toshdan yasalgan va ularni tashlab bo'lmaydi."
+        },
+        "courseC_artist_loopsPrePre1a_2018": {
+          "courseC_artist_loopsPrePre1a_1": "Rassomni ekranning o‘rtasiga yetkazish uchun ushbu blokdan foydalaning."
+        },
+        "courseC_artist_loopsPrePre1a_2019": {
+          "courseC_artist_loopsPrePre1a_1": "Rassomni ekranning o‘rtasiga yetkazish uchun ushbu blokdan foydalaning."
+        },
+        "courseC_artist_loopsPrePre1a_2020": {
+          "courseC_artist_loopsPrePre1a_1": "Rassomni ekranning o‘rtasiga yetkazish uchun ushbu blokdan foydalaning."
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_1": "Agar sizga kerak bo‘lsa, uskunalar panelidan ko‘proq bloklarni olishingiz mumkin!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_1": "Agar sizga kerak bo‘lsa, uskunalar panelidan ko‘proq bloklarni olishingiz mumkin!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_1": "Agar sizga kerak bo‘lsa, uskunalar panelidan ko‘proq bloklarni olishingiz mumkin!"
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "courseC_maze_programming3_3": "Ushbu bloklar toshdek bo‘lib, ularni tashlab bo‘lmaydi."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "courseC_maze_programming3_3": "Ushbu bloklar toshdek bo‘lib, ularni tashlab bo‘lmaydi."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "courseC_maze_programming3_3": "Ushbu bloklar toshdek bo‘lib, ularni tashlab bo‘lmaydi."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
+        },
+        "courseC_maze_programming5_2018": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "Bu sizning birinchi qiyin jumbog’ingiz! Bu qiyin bo‘lishi va uni yechish uchun bir necha marta urinishingiz mumkin.",
+          "courseC_maze_programming7_2": "Ushbu bloklar toshdan yasalgan va ularni tashlab bo‘lmaydi."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "Bu sizning birinchi qiyin jumbog’ingiz! Bu qiyin bo‘lishi va uni yechish uchun bir necha marta urinishingiz mumkin.",
+          "courseC_maze_programming7_2": "Ushbu bloklar toshdan yasalgan va ularni tashlab bo‘lmaydi."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "Bu sizning birinchi qiyin jumbog’ingiz! Bu qiyin bo‘lishi va uni yechish uchun bir necha marta urinishingiz mumkin.",
+          "courseC_maze_programming7_2": "Ushbu bloklar toshdan yasalgan va ularni tashlab bo‘lmaydi."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "Ushbu jumboqda sizda faqat bitta blok mavjud."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "Ushbu jumboqda sizda faqat bitta blok mavjud."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "Ushbu jumboqda sizda faqat bitta blok mavjud."
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Bu yerga joylagan kodizni istalgancha takroran ishga tushurishingiz mumkin, so‘ngra dasturni qolgan qismini ishga tushursangiz bo‘ladi."
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "Yodingizda bo'lsin, har bir bulutda GUL borligini tekshiring. Asal qoliplarini umuman tekshirishingiz shart emas."
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "Yodingizda bo'lsin, har bir bulutda GUL borligini tekshiring. Asal qoliplarini umuman tekshirishingiz shart emas."
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "Yodingizda bo'lsin, har bir bulutda GUL borligini tekshiring. Asal qoliplarini umuman tekshirishingiz shart emas."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "Ushbu tsikl yordamida barcha nektarlarni (yoki asalni) bitta guldan (yoki asal qolipidan) yig'ib oling."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "Ushbu tsikl yordamida barcha nektarlarni (yoki asalni) bitta guldan (yoki asal qolipidan) yig'ib oling."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "Ushbu tsikl yordamida barcha nektarlarni (yoki asalni) bitta guldan (yoki asal qolipidan) yig'ib oling."
+        },
+        "courseD_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "Arini orqaga harakatlanishi uchun ushbu buyruqdan foydalaning."
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "stone_block_2": "Kulrang bloklar toshdan yasalgan va ularni tashlab bo‘lmaydi."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "stone_block_2": "Kulrang bloklar toshdan yasalgan va ularni tashlab bo‘lmaydi."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
+        },
+        "courseD_maze_ramp5": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
+        },
+        "courseD_scrat_ramp5": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseD_scrat_ramp6": {
+          "courseD_maze_ramp6_1": "Bu yerga joylagan kodizni istalgancha takroran ishga tushurishingiz mumkin, so‘ngra dasturni qolgan qismini ishga tushursangiz bo‘ladi."
+        },
+        "courseD_scrat_ramp7": {
+          "courseD_maze_ramp6_1": "Bu yerga joylagan kodizni istalgancha takroran ishga tushurishingiz mumkin, so‘ngra dasturni qolgan qismini ishga tushursangiz bo‘ladi."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "Bu sizning birinchi qiyin jumbog’ingiz! Bu qiyin bo‘lishi va uni yechish uchun bir necha marta urinishingiz mumkin."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Siz bu raqamni o'zgartirishingiz mumkin.",
+          "courseE_artist_ramp8_2": "Kodingizni  necha marta takrorlash kerakligini yozish uchun shu yerni bosing."
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "Siz bu raqamni o'zgartirishingiz mumkin.",
+          "courseE_artist_ramp8_2": "Kodingizni  necha marta takrorlash kerakligini yozish uchun shu yerni bosing."
+        },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "Sizning kodingizga ko‘proq joy ajratish uchun asboblar qutisi \"toifadagi\" rejimda. Bu yerda `for` siklidan joylari mavjud."
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "Sizning kodingizga ko‘proq joy ajratish uchun asboblar qutisi \"toifadagi\" rejimda. Bu yerda `for` siklidan joylari mavjud."
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "Sizning kodingizga ko‘proq joy ajratish uchun asboblar qutisi \"toifadagi\" rejimda. Bu yerda `for` siklidan joylari mavjud."
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "Sizning kodingizga ko‘proq joy ajratish uchun asboblar qutisi \"toifadagi\" rejimda. Bu yerda `for` siklidan joylari mavjud."
+        },
+        "courseF_artist_fwp1": {
+          "courseF_artist_fwp1_1": "Funksiya ichidagi kodni o‘zgartirish uchun \"edit\" tugmasini bosing."
+        },
+        "courseF_artist_fwp4": {
+          "courseF_artist_fwp4_1": "Ko‘pburchaklaringizni to‘ldirish uchun har doim 360 ÷ `yon tomonlarga buriling."
+        },
+        "courseF_artist_fwp5": {
+          "courseF_artist_fwp5_1": "Ko‘pburchak funksiyasini bu yerda topasiz."
+        },
+        "courseF_artist_variables3": {
+          "courseF_artist_variables3_a": "`length` o‘zgaruvchisining qiymatini belgilash uchun bundan foydalaning"
+        },
+        "courseF_artist_variables3_2018": {
+          "courseF_artist_variables3_a": "`length` o‘zgaruvchisining qiymatini belgilash uchun bundan foydalaning"
+        },
+        "courseF_artist_variables3_2019": {
+          "courseF_artist_variables3_a": "`length` o‘zgaruvchisining qiymatini belgilash uchun bundan foydalaning"
+        },
+        "courseF_artist_variables3_2020": {
+          "courseF_artist_variables3_a": "`length` o‘zgaruvchisining qiymatini belgilash uchun bundan foydalaning"
+        },
+        "courseF_artist_variables6": {
+          "courseF_artist_variables6_1": "O‘zgaruvchilar bir xil sonli nusxalarni o‘zgartirishingiz kerak bo‘lganda foydali bo‘lishi mumkin."
+        },
+        "courseF_artist_variables6_2018": {
+          "courseF_artist_variables6_1": "O‘zgaruvchilar bir xil sonli nusxalarni o‘zgartirishingiz kerak bo‘lganda foydali bo‘lishi mumkin."
+        },
+        "courseF_artist_variables6_2019": {
+          "courseF_artist_variables6_1": "O‘zgaruvchilar bir xil sonli nusxalarni o‘zgartirishingiz kerak bo‘lganda foydali bo‘lishi mumkin."
+        },
+        "courseF_artist_variables6_2020": {
+          "courseF_artist_variables6_1": "O‘zgaruvchilar bir xil sonli nusxalarni o‘zgartirishingiz kerak bo‘lganda foydali bo‘lishi mumkin."
+        },
+        "courseF_artist_variables6a": {
+          "courseF_artist_variables6a_1": "O‘zgaruvchilar bir xil sonli nusxalarni o‘zgartirishingiz kerak bo‘lganda foydali bo‘lishi mumkin."
+        },
+        "courseF_artist_variables6a_2018": {
+          "courseF_artist_variables6a_1": "O‘zgaruvchilar bir xil sonli nusxalarni o‘zgartirishingiz kerak bo‘lganda foydali bo‘lishi mumkin."
+        },
+        "courseF_artist_variables6a_2019": {
+          "courseF_artist_variables6a_1": "O‘zgaruvchilar bir xil sonli nusxalarni o‘zgartirishingiz kerak bo‘lganda foydali bo‘lishi mumkin."
+        },
+        "courseF_artist_variables6a_2020": {
+          "courseF_artist_variables6a_1": "O‘zgaruvchilar bir xil sonli nusxalarni o‘zgartirishingiz kerak bo‘lganda foydali bo‘lishi mumkin."
+        },
+        "courseF_bee_conditionals2": {
+          "courseF_bee_conditionals2_2": "Asboblar qutisi endi toifadagi holatda. Sizga kerak bo‘lgan barcha bo‘laklar ushbu yorliqlar ostida joylashgan!"
+        },
+        "courseF_bee_conditionals5": {
+          "courseF_bee_conditionals5_1": "Yo‘lning uzunligi o‘zgarganda ushbu bo‘lakdan foydalaning (to‘rtburchaklar tomonlaridagi kabi!)"
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "`for` siklidan bu yerda topasiz!"
+        },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "`for` siklidan bu yerda topasiz!"
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "`for` siklidan bu yerda topasiz!"
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "`for` siklidan bu yerda topasiz!"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "Siz bu yerda \"matematik\" bo‘lagini topasiz."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "Siz bu yerda \"matematik\" bo‘lagini topasiz."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "Siz bu yerda \"matematik\" bo‘lagini topasiz."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "Siz bu yerda \"matematik\" bo‘lagini topasiz."
+        },
+        "courseF_bee_functions2": {
+          "courseF_bee_functions2_1": "Ushbu kod bo‘lagi funksiyani ishga tushiradi. Ichkarida nima borligini ko‘rish uchun \"edit\" tugmachasini bosing!"
+        },
+        "courseF_bee_functions6": {
+          "courseF_bee_functions6_1": "Buni osonlashtirishga yordam beradigan qo‘shimcha bo‘laklarni qidirishni unutmang!"
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "Ushbu funksiyaga qanday kod qo‘yishingiz kerak?",
+          "courseF_bee_functions_challenge1_2": "Bu yerda \"check nectar or honey\" funksiyasi ishlatilishi mumkin, agar uni bir necha bor asal tayyorlash uchun tahrir qilsangiz."
+        },
+        "courseF_bee_fwp1": {
+          "courseF_bee_fwp1_1": "`if` so‘zlarini bu yerda topishingiz mumkin."
+        },
+        "courseF_bee_fwp2": {
+          "courseF_bee_fwp2_a": "Sizning funksiyangizni bajaradigan kod bo‘lagi bu yerda yashaydi."
+        },
+        "courseF_bee_fwp3": {
+          "courseF_bee_fwp3_1": "Bulutlar bilan bir qatorda bo‘sh joylarni tekshirishda ham xuddi shu funksiyadan foydalanish mumkin."
+        },
+        "courseF_bee_fwp4": {
+          "courseF_bee_fwp4_1": "Ushbu funksiyaga parametr qo‘shish uchun \"edit\" tugmachasini bosing."
+        },
+        "courseF_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "Bu funksiya makkajo‘xori ekini bilan yaxshi ishlaydi, ammo boshqa sabzavot ekinlari bilanchi?"
+        },
+        "courseF_playlab_variables1a": {
+          "courseF_playlab_variables1a_1": "Sizga kerakli bo‘laklarni topishni osonlashtirish uchun asboblar qutisi toifalarga ajratilgan."
+        },
+        "courseF_playlab_variables5c": {
+          "courseF_playlab_variables5c_1": "O‘zgaruvchan bo‘lakni bu yerda topasiz."
+        },
+        "courseF_playlab_variables6c": {
+          "courseF_playlab_variables5c_1": "O‘zgaruvchan bo‘lakni bu yerda topasiz."
+        },
+        "courseF_playlab_variables7c": {
+          "courseF_playlab_variables7c_1": "\"Ask\" bo‘lagini bu yerda toping!"
+        },
+        "grade5_artist_variables_triangles1": {
+          "grade5_artist_variables_triangles1_1": "E‘tibor bering, bo‘laklar endi raqamlarni kiritishning yangi usuliga ega. Ushbu \"matematik\" bo‘laklarni tortib olish va ko‘chirish mumkin!"
+        },
+        "grade5_artist_variables_triangles1_2018": {
+          "grade5_artist_variables_triangles1_1": "E‘tibor bering, bo‘laklar endi raqamlarni kiritishning yangi usuliga ega. Ushbu \"matematik\" bo‘laklarni tortib olish va ko‘chirish mumkin!"
+        },
+        "grade5_artist_variables_triangles1_2019": {
+          "grade5_artist_variables_triangles1_1": "E‘tibor bering, bo‘laklar endi raqamlarni kiritishning yangi usuliga ega. Ushbu \"matematik\" bo‘laklarni tortib olish va ko‘chirish mumkin!"
+        },
+        "grade5_artist_variables_triangles1_2020": {
+          "grade5_artist_variables_triangles1_1": "E‘tibor bering, bo‘laklar endi raqamlarni kiritishning yangi usuliga ega. Ushbu \"matematik\" bo‘laklarni tortib olish va ko‘chirish mumkin!"
+        }
+      }
+    }
+  }
 }

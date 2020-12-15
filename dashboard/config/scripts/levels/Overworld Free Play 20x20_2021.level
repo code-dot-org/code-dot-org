@@ -1,0 +1,131 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2020-12-04T22:23:56.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"water\",\"water\",\"water\",\"water\",\"grass\",\"grass\",\"water\",\"water\",\"water\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirt\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"water\",\"water\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"grass\",\"dirt\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"water\",\"stone\",\"lava\",\"lava\",\"lava\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"lava\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"lava\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"lava\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"lava\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"oreLapis\",\"oreLapis\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"oreIron\",\"oreIron\",\"\",\"oreRedstone\",\"oreRedstone\",\"oreRedstone\",\"stone\",\"\",\"stone\",\"stone\",\"oreIron\",\"oreGold\",\"oreGold\",\"oreLapis\",\"oreCoal\",\"\",\"stone\",\"oreIron\",\"oreIron\",\"\",\"stone\",\"\",\"\",\"stone\",\"oreRedstone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"oreGold\",\"oreCoal\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"oreIron\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"oreIron\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"oreDiamond\",\"sheep\",\"\",\"\",\"\",\"sheep\",\"\",\"\",\"treeSpruce\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"oreDiamond\",\"oreDiamond\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"oreEmerald\",\"oreLapis\"]",
+    "player_start_position": "[10, 10]",
+    "grid_width": "20",
+    "grid_height": "20",
+    "is_daytime": "true",
+    "verification_function": "function (verificationAPI) {\r\n      return true;\r\n}",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "available_blocks": [
+      "bedrock",
+      "bricks",
+      "cobblestone",
+      "dirt",
+      "dirtCoarse",
+      "farmlandWet",
+      "glass",
+      "grass",
+      "gravel",
+      "oreCoal",
+      "oreDiamond",
+      "oreEmerald",
+      "oreGold",
+      "oreIron",
+      "oreLapis",
+      "oreRedstone",
+      "sand",
+      "sandstone",
+      "stone",
+      "tnt",
+      "wool",
+      "logAcacia",
+      "logBirch",
+      "logJungle",
+      "logOak",
+      "logSpruce",
+      "planksAcacia",
+      "planksBirch",
+      "planksJungle",
+      "planksOak",
+      "planksSpruce"
+    ],
+    "if_block_options": [
+      "lava",
+      "water"
+    ],
+    "player_start_direction": "0",
+    "special_level_type": "freeplay",
+    "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
+    "video_key": "mc_congrats_no_share",
+    "parent_level_id": 21247,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here.",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "agent_start_direction": "0",
+    "use_score": "false",
+    "is_event_level": "false",
+    "is_agent_level": "false",
+    "is_aquatic_level": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "level_verification_timeout": "0",
+    "use_player": "false",
+    "boat": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-19 14:39:30 -0700\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"verification_function\",\"available_blocks\",\"if_block_options\",\"contained_level_names\"],\"changed_by_id\":1483,\"changed_by_email\":\"elijah+levelbuilder@gmail.com\"},{\"changed_at\":\"2019-06-19 14:11:14 +0000\",\"changed\":[\"toolbox_blocks\",\"available_blocks\",\"if_block_options\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type="craft_destroyBlock"/>
+        <block type="craft_shear"/>
+        <block type="craft_placeBlock">
+          <title name="TYPE">bedrock</title>
+        </block>
+        <block type="craft_placeTorch"/>
+        <block type="craft_plantCrop"/>
+        <block type="craft_placeBlockAhead">
+          <title name="TYPE">bedrock</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+        <block type="craft_ifBlockAhead">
+          <title name="TYPE"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Craft>
