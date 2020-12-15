@@ -14,7 +14,7 @@ import {
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
-describe('The DebugConsole component', () => {
+describe('The DebugConsole component when the console is enabled', () => {
   let root;
 
   beforeEach(() => {
@@ -343,6 +343,80 @@ describe('The DebugConsole component', () => {
       expect(debugOutput().instance().style.backgroundColor).to.equal(
         'rgb(255, 204, 204)'
       );
+    });
+  });
+});
+describe('The DebugConsole component when the debug console is disabled', () => {
+  let root;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(reducers);
+    getStore().dispatch(actions.initialize(sinon.spy()));
+    root = mount(
+      <Provider store={getStore()}>
+        <DebugConsole debugConsoleDisabled={true} />
+      </Provider>
+    );
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  const debugOutput = () => root.find('#debug-output');
+  const debugInput = () => root.find('#debug-input');
+
+  it('renders a debug output div', () => {
+    expect(debugOutput()).to.exist;
+  });
+
+  it('renders a debug input div', () => {
+    expect(debugInput()).to.exist;
+    expect(debugInput().instance().disabled).to.equal(true);
+  });
+
+  function typeKey(keyCode) {
+    debugInput().simulate('keydown', {
+      target: debugInput().instance(),
+      keyCode: keyCode
+    });
+  }
+
+  function type(text) {
+    for (let i = 0; i < text.length; i++) {
+      debugInput().instance().value += text[i];
+      typeKey(text[i].charCodeAt(0));
+    }
+  }
+
+  function submit(text) {
+    type(text);
+    typeKey(KeyCodes.ENTER);
+  }
+
+  describe('After an interpreter has been attached', () => {
+    beforeEach(() => {
+      let interpreter = new JSInterpreter({
+        shouldRunAtMaxSpeed: () => false,
+        studioApp: {hideSource: true}
+      });
+      const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
+      interpreter.calculateCodeInfo({code});
+      interpreter.parse({code});
+      interpreter.paused = true;
+      interpreter.nextStep = JSInterpreter.StepType.IN;
+      interpreter.executeInterpreter(true);
+
+      getStore().dispatch(actions.attach(interpreter));
+    });
+
+    describe('When typing into the text input and pressing enter,', () => {
+      beforeEach(() => submit('console.log("test")'));
+
+      it('the text does not get appended to the output', () => {
+        expect(debugOutput().text()).not.to.contain('test');
+      });
     });
   });
 });
