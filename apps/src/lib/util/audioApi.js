@@ -134,7 +134,10 @@ export const commands = {
       OPTIONAL
     );
 
-    const {azureSpeechServiceVoices: voices} = appOptions;
+    // appOptions.authenticityToken is only expected/used when using this block on a script_level.
+    // This is because script_levels remove Rails' authenticity token from the DOM for caching purposes:
+    // https://github.com/code-dot-org/code-dot-org/pull/5753
+    const {azureSpeechServiceVoices: voices, authenticityToken} = appOptions;
     let {text, gender, language} = opts;
 
     // Fall back to defaults if requested language/gender combination is not available.
@@ -154,6 +157,7 @@ export const commands = {
       text,
       gender,
       languageCode: voices[language].languageCode,
+      authenticityToken,
       onFailure: message => outputWarning(message + '\n')
     });
     azureTTS.enqueueAndPlay(promise);
