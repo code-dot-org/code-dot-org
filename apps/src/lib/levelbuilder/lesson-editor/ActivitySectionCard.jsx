@@ -428,17 +428,15 @@ class ActivitySectionCard extends Component {
           </label>
           <div style={styles.checkboxesAndButtons}>
             <span style={styles.checkboxes}>
-              {this.props.activitySection.scriptLevels.length === 0 && (
-                <label style={styles.labelAndCheckbox}>
-                  Remarks
-                  <input
-                    checked={this.props.activitySection.remarks}
-                    onChange={this.toggleRemarks}
-                    type="checkbox"
-                    style={styles.checkbox}
-                  />
-                </label>
-              )}
+              <label style={styles.labelAndCheckbox}>
+                Remarks
+                <input
+                  checked={this.props.activitySection.remarks}
+                  onChange={this.toggleRemarks}
+                  type="checkbox"
+                  style={styles.checkbox}
+                />
+              </label>
               <label style={styles.labelAndCheckbox}>
                 Slides
                 <input
