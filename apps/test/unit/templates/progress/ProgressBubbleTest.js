@@ -358,7 +358,7 @@ describe('ProgressBubble', () => {
         <ProgressBubble
           {...defaultProps}
           currentLocation={fakeLocation}
-          selectedSectionId="12345"
+          selectedSectionId={12345}
         />
       );
       assert.include(wrapper.find('a').prop('href'), 'section_id=12345');
@@ -370,7 +370,7 @@ describe('ProgressBubble', () => {
         <ProgressBubble
           {...defaultProps}
           currentLocation={fakeLocation}
-          selectedSectionId="12345"
+          selectedSectionId={12345}
           selectedStudentId="207"
         />
       );
@@ -395,7 +395,7 @@ describe('ProgressBubble', () => {
         <ProgressBubble
           {...defaultProps}
           currentLocation={fakeLocation}
-          selectedSectionId="12345"
+          selectedSectionId={12345}
         />
       );
       const href = wrapper.find('a').prop('href');

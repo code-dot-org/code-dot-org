@@ -10,8 +10,9 @@ class ResourcesControllerTest < ActionController::TestCase
 
   test 'can create resource from params' do
     sign_in @levelbuilder
+    course_version = create :course_version
     assert_creates(Resource) do
-      post :create, params: {name: 'resource name', url: 'code.org', downloadUrl: 'download.url', type: 'Slides', audience: 'Teacher'}
+      post :create, params: {name: 'resource name', url: 'code.org', downloadUrl: 'download.url', type: 'Slides', audience: 'Teacher', courseVersionId: course_version.id}
       assert_response :success
     end
     assert(@response.body.include?('resource name'))

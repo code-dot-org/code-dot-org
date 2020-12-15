@@ -78,7 +78,7 @@ describe('hiddenStageRedux', () => {
         hiddenStagesInitialized: true,
         hideableStagesAllowed: true,
         stagesBySection: {
-          STUDENT: {
+          '-2': {
             123: true,
             456: true
           }
@@ -237,18 +237,18 @@ describe('hiddenStageRedux', () => {
     describe('toggleHiddenScript', () => {
       it('updates state and makes POST', () => {
         const dispatch = sinon.spy();
-        toggleHiddenScript('somescript', '123', '45', true)(dispatch);
+        toggleHiddenScript('somescript', 123, '45', true)(dispatch);
 
         assert(
           dispatch.firstCall.calledWithExactly(
-            updateHiddenScript('123', '45', true)
+            updateHiddenScript(123, '45', true)
           )
         );
 
         assert.strictEqual(lastRequest.url, '/s/somescript/toggle_hidden');
         assert.strictEqual(
           lastRequest.requestBody,
-          JSON.stringify({section_id: '123', hidden: true})
+          JSON.stringify({section_id: 123, hidden: true})
         );
       });
     });
@@ -308,21 +308,21 @@ describe('hiddenStageRedux', () => {
 
       it('dispatches for each section/script for teachers', () => {
         const data = {
-          '123': ['1', '2'],
-          '456': ['3']
+          123: ['1', '2'],
+          456: ['3']
         };
         initializeHiddenScripts(data)(dispatch);
         assert.deepEqual(
           dispatch.getCall(0).args[0],
-          updateHiddenScript('123', '1', true)
+          updateHiddenScript(123, '1', true)
         );
         assert.deepEqual(
           dispatch.getCall(1).args[0],
-          updateHiddenScript('123', '2', true)
+          updateHiddenScript(123, '2', true)
         );
         assert.deepEqual(
           dispatch.getCall(2).args[0],
-          updateHiddenScript('456', '3', true)
+          updateHiddenScript(456, '3', true)
         );
       });
 
