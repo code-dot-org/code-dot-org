@@ -9,6 +9,7 @@ import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
 import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
+import {isCodeOrgBrowser} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
@@ -223,6 +224,10 @@ class OauthConnection extends React.Component {
       ? `/users/auth/${id}/disconnect`
       : `/users/auth/${credentialType}?action=connect`;
 
+    const buttonDisabled =
+      !!disconnectDisabledStatus ||
+      (isCodeOrgBrowser() && displayName === 'Google Account');
+
     return (
       <tr>
         <td style={styles.cell}>{displayName}</td>
@@ -237,16 +242,21 @@ class OauthConnection extends React.Component {
               action={oauthToggleConnectionPath}
             >
               {/* This button intentionally uses BootstrapButton to match other
-                  account page buttons */}
+                  account page buttons.
+                  This button is disabled according to disconnectDisabledStatus or
+                  when the user is attempting this action from the Maker App for
+                  their Google Account. This action is blocked due to Google authentication
+                  security protocols.
+                  */}
               <BootstrapButton
                 type="submit"
                 style={styles.button}
                 text={buttonText}
-                disabled={!!disconnectDisabledStatus}
+                disabled={buttonDisabled}
               />
               <RailsAuthenticityToken />
             </form>
-            {disconnectDisabledStatus && (
+            {buttonDisabled && (
               <ReactTooltip
                 id={tooltipId}
                 offset={styles.tooltipOffset}
@@ -254,7 +264,12 @@ class OauthConnection extends React.Component {
                 effect="solid"
               >
                 <div style={styles.tooltip}>
-                  {this.getDisconnectDisabledTooltip()}
+                  {/* There are two causes for errors: disconnectDisabledStatus and logging in to
+                      Google from the Maker App. Display the appropriate error text.
+                    */}
+                  {disconnectDisabledStatus
+                    ? this.getDisconnectDisabledTooltip()
+                    : i18n.manageLinkedAccounts_makerAuthError()}
                 </div>
               </ReactTooltip>
             )}
