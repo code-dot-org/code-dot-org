@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {scriptDataPropType, gutterHeader} from '../sectionProgressConstants';
 import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {
-  summarizeProgressInStage,
+  statusPercentsForLevels,
   stageIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -88,7 +88,7 @@ export default class ProgressTableSummaryView extends React.Component {
 
   progressCellFormatter(_, {rowData, columnIndex}) {
     const stageData = this.props.scriptData.stages[columnIndex];
-    const statusCounts = summarizeProgressInStage(
+    const statusPercents = statusPercentsForLevels(
       this.props.levelProgressByStudent[rowData.id],
       stageData.levels
     );
@@ -96,7 +96,7 @@ export default class ProgressTableSummaryView extends React.Component {
     return (
       <ProgressTableSummaryCell
         studentId={rowData.id}
-        statusCounts={statusCounts}
+        statusPercents={statusPercents}
         assessmentStage={assessmentStage}
         onSelectDetailView={() => this.props.onClickLesson(stageData.position)}
       />
