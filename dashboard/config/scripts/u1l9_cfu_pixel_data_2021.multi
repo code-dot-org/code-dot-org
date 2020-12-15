@@ -1,0 +1,18 @@
+name 'U1L9 CFU pixel data_2021'
+title 'Pixel Data'
+type 'multi2'
+question 'Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels) that were encoded after sampling an image. Choose the two statements that are true.'
+wrong 'The 32 bits of pixel data is enough to produce the image using the widget. Nothing else is needed. '
+wrong 'The digital image would be an exact copy of the analog image.'
+right 'The correct width and height must be input into the pixelation widget to produce the image. '
+right 'The fact that only 32 bits were used to represent the image indicates relatively large sample squares were used. The digital image may vary from the analog image significantly.'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+
+Reinforces that binary (base 2) uses only combinations of the digits zero and one. Correct answers are 1011, 0000, 1011011101111011111011111, and 10.
+
+MARKDOWN

@@ -1,0 +1,9 @@
+name 'CSD games collisions challenge choice_2021'
+display_name 'Collision Challenges'
+description 'Try out these new blocks and challenges with collisions.'
+
+sublevels
+level 'CSD U3 collisions debug_2021'
+level 'CSD U3 collisions setCollider_2021'
+level 'CSD U3 collisions bounciness_2021'
+level 'CSD U3 L18 Freeplay_2021'
