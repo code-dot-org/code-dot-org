@@ -4,7 +4,7 @@
     <arg name="this sprite" type="Sprite"/>
     <description>randomly change the size of a sprite</description>
   </mutation>
-  <title name="NAME">jittering</title>
+  <title name="NAME" id="jittering">jittering</title>
   <statement name="STACK">
     <block type="gamelab_changePropBy">
       <title name="PROPERTY">"scale"</title>

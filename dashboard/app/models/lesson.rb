@@ -24,7 +24,7 @@ require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
-class Lesson < ActiveRecord::Base
+class Lesson < ApplicationRecord
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -53,6 +53,7 @@ class Lesson < ActiveRecord::Base
     preparation
     announcements
     visible_after
+    assessment_opportunities
   )
 
   # A lesson has an absolute position and a relative position. The difference between the two is that relative_position
@@ -206,7 +207,7 @@ class Lesson < ActiveRecord::Base
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
-  def summarize(include_bonus_levels = false)
+  def summarize(include_bonus_levels = false, for_edit: false)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
@@ -223,7 +224,7 @@ class Lesson < ActiveRecord::Base
         title: localized_title,
         lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
-        levels: cached_levels.map {|l| l.summarize(false)},
+        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.lessons.#{key}.description_teacher", default: '')),
         unplugged: display_as_unplugged # TODO: Update to use unplugged property
@@ -267,9 +268,10 @@ class Lesson < ActiveRecord::Base
   # TODO: [PLAT-369] trim down to only include those fields needed on the
   # script edit page
   def summarize_for_script_edit
-    summary = summarize.dup
+    summary = summarize(for_edit: true).dup
     # Do not let script name override lesson name when there is only one lesson
     summary[:name] = name
+    summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
   end
 
@@ -289,6 +291,7 @@ class Lesson < ActiveRecord::Base
       name: name,
       overview: overview,
       studentOverview: student_overview,
+      assessmentOpportunities: assessment_opportunities,
       assessment: assessment,
       unplugged: unplugged,
       lockable: lockable,
@@ -296,9 +299,11 @@ class Lesson < ActiveRecord::Base
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,
-      activities: lesson_activities.map(&:summarize_for_edit),
-      resources: resources,
-      objectives: objectives.map(&:summarize_for_edit)
+      activities: lesson_activities.map(&:summarize_for_lesson_edit),
+      resources: resources.map(&:summarize_for_lesson_edit),
+      objectives: objectives.map(&:summarize_for_edit),
+      courseVersionId: lesson_group.script.course_version&.id,
+      updatedAt: updated_at
     }
   end
 
@@ -308,7 +313,7 @@ class Lesson < ActiveRecord::Base
       position: relative_position,
       lockable: lockable,
       key: key,
-      displayName: localized_title,
+      displayName: localized_name,
       overview: overview || '',
       announcements: announcements,
       purpose: purpose || '',
@@ -316,7 +321,8 @@ class Lesson < ActiveRecord::Base
       activities: lesson_activities.map(&:summarize_for_lesson_show),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       objectives: objectives.map(&:summarize_for_lesson_show),
-      is_teacher: user&.teacher?
+      is_teacher: user&.teacher?,
+      assessmentOpportunities: assessment_opportunities
     }
   end
 
@@ -353,6 +359,21 @@ class Lesson < ActiveRecord::Base
 
         level_json
       end
+    }
+  end
+
+  # Returns a hash representing i18n strings in scripts.en.yml which may need
+  # to be updated after this object was updated. Currently, this only updates
+  # the lesson name.
+  def i18n_hash
+    {
+      script.name => {
+        'lessons' => {
+          key => {
+            'name' => name
+          }
+        }
+      }
     }
   end
 
@@ -461,32 +482,8 @@ class Lesson < ActiveRecord::Base
     end
   end
 
-  # This method takes lesson and activity data exported from curriculum builder
-  # and updates corresponding fields of this lesson to match it. The expected
-  # input format is as follows:
-  # {
-  #   "title": "Lesson Title",
-  #   "number": 1,
-  #   "student_desc": "Student-facing description",
-  #   "teacher_desc": "Teacher-facing description",
-  #   "activities": [
-  #     {
-  #       "name": "Activity name",
-  #       "duration": "5-10 minutes",
-  #       "content": "Activity markdown"
-  #     },
-  #     ...
-  #   ]
-  # }
-  # @param [Hash] cb_lesson_data - Lesson and activity data to import.
-  def update_from_curriculum_builder(_cb_lesson_data)
-    # In the future, only levelbuilder should be added to this list.
-    raise unless [:development, :adhoc].include? rack_env
-
-    # puts "TODO: update lesson #{id} with cb lesson data: #{cb_lesson_data.to_json[0, 50]}..."
-  end
-
-  # Used for seeding from JSON. Returns the full set of information needed to uniquely identify this object.
+  # Used for seeding from JSON. Returns the full set of information needed to
+  # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.

@@ -15,5 +15,5 @@
 #  value       :float(24)        not null
 #
 
-class Metric < ActiveRecord::Base
+class Metric < ApplicationRecord
 end

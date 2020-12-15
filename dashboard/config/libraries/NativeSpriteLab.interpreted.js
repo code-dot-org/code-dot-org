@@ -8,16 +8,6 @@ function draw() {
   }
 }
 
-// TEMPORARY WORKAROUND - anjali to remove as soon as Spritelab input blocks are finalized
-function setPrompt(questionText, variableName) {
-  setQuestion(questionText, variableName);
-}
-
-// TEMPORARY WORKAROUND - anjali to remove as soon as Spritelab input blocks are finalized
-function setPromptWithChoices(questionText, variableName) {
-  setQuestion(questionText, variableName);
-}
-
 /**
  * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
  * rather than being added to the stack. For example, consider the following program:

@@ -1,0 +1,9 @@
+name 'CSD web text challenge choice_2021'
+display_name 'Text Challenges'
+description 'Try out these new blocks and challenges.'
+
+sublevels
+level 'CSD web text stroke_2021'
+level 'CSD web challenge stroke_2021'
+level 'CSD web challenge wrap text_2021'
+level 'CSD games text freeplay_2021'

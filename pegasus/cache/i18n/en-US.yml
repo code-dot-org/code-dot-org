@@ -1578,6 +1578,7 @@
   hoc_overview_partner_activities_body: "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners."
   hoc_overview_partner_activities_link: "View Activities"
   hoc_overview_start_tutorial: "Start"
+  hoc_overview_more_resources: "For more resources on how to engage with your remote classroom, see our guide for hosting a [virtual Hour of Code](https://hourofcode.com/us/how-to/virtual). For students with limited or no technology or connectivity, share this packet of [unplugged Hour of Code activities](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc_overview_view_teacher_guide: "View teacher guide"
   hoc2018_creativity: "creativity"
   hoc2018_creativity_create: "Create"
@@ -1726,3 +1727,9 @@
   hoc2020_mc_available_mee: 'Available in Minecraft: Education Edition'
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
   hoc2020_mc_mee_description: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, and iPad. Learn the basics of coding and explore diversity and inclusion with your students! Access free resources including a lesson plan, videos, computer science curriculum, equity lessons, and teacher trainings.'
+  footer_powered_by_aws: "Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries."
+  footer_built_on_github: "Built on GitHub from Microsoft"
+  codebytes_skinny_banner_title: "Join us December 7-11 for our CodeBytes live mini-lessons!"
+  codebytes_skinny_banner_description: 'Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!'
+  codebytes_skinny_banner_english_only: "English-only"
+  codebytes_skinny_banner_learn: "Learn more at [code.org/codebytes](%{code_bytes_url})."

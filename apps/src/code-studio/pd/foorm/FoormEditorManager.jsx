@@ -47,11 +47,12 @@ class FoormEditorManager extends React.Component {
     return formNamesAndVersions.map((formNameAndVersion, i) => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
+      const formId = formNameAndVersion['id'];
       return (
         <MenuItem
           key={i}
           eventKey={i}
-          onClick={() => this.loadConfiguration(formName, formVersion)}
+          onClick={() => this.loadConfiguration(formName, formVersion, formId)}
         >
           {`${formName}, version ${formVersion}`}
         </MenuItem>
@@ -59,11 +60,10 @@ class FoormEditorManager extends React.Component {
     });
   }
 
-  loadConfiguration(formName, formVersion) {
+  loadConfiguration(formName, formVersion, formId) {
     $.ajax({
-      url: '/api/v1/pd/foorm/form_data',
-      type: 'get',
-      data: {name: formName, version: formVersion}
+      url: `/api/v1/pd/foorm/form/${formId}`,
+      type: 'get'
     })
       .done(result => {
         this.props.updateFormData(result);
@@ -71,6 +71,7 @@ class FoormEditorManager extends React.Component {
           showCodeMirror: true,
           formName: formName,
           formVersion: formVersion,
+          formId: formId,
           hasLoadError: false
         });
         this.props.resetCodeMirror(result['questions']);
@@ -81,6 +82,7 @@ class FoormEditorManager extends React.Component {
           showCodeMirror: true,
           formName: null,
           formVersion: null,
+          formId: null,
           hasLoadError: true
         });
         this.props.resetCodeMirror({});
@@ -92,6 +94,7 @@ class FoormEditorManager extends React.Component {
       showCodeMirror: true,
       formName: null,
       formVersion: null,
+      formId: null,
       hasLoadError: false
     });
     this.props.resetCodeMirror({});
@@ -100,22 +103,36 @@ class FoormEditorManager extends React.Component {
   render() {
     return (
       <div>
+        <h1>Foorm Editor</h1>
+        <p>
+          Interface for creating and making updates to Foorm forms. Check out
+          our{' '}
+          <a
+            href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            How To
+          </a>{' '}
+          to get started.
+        </p>
         <div>
-          <DropdownButton id="load_config" title="Load Survey...">
+          <DropdownButton id="load_config" title="Load Form..." className="btn">
             {this.state.formattedConfigurationOptions}
           </DropdownButton>
-          <Button onClick={this.initializeEmptyCodeMirror}>New Survey</Button>
+          <Button onClick={this.initializeEmptyCodeMirror} className="btn">
+            New Form
+          </Button>
         </div>
         {this.state.hasLoadError && (
-          <div style={styles.loadError}>
-            Could not load the selected survey.
-          </div>
+          <div style={styles.loadError}>Could not load the selected form.</div>
         )}
         {this.state.showCodeMirror && (
           <FoormEditor
             populateCodeMirror={this.props.populateCodeMirror}
             formName={this.state.formName}
             formVersion={this.state.formVersion}
+            formId={this.state.formId}
           />
         )}
       </div>
@@ -123,9 +140,6 @@ class FoormEditorManager extends React.Component {
   }
 }
 
-export default connect(
-  state => ({
-    formQuestions: state.foorm.formQuestions || {}
-  }),
-  dispatch => ({})
-)(FoormEditorManager);
+export default connect(state => ({
+  formQuestions: state.foorm.formQuestions || {}
+}))(FoormEditorManager);

@@ -25,11 +25,6 @@ class LevelsHelperTest < ActionView::TestCase
     stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
-  teardown do
-    # Some tests access and store data in the cache, so clear between tests to avoid state leakage
-    Rails.cache.clear
-  end
-
   test "blockly_options refuses to generate options for non-blockly levels" do
     @level = create(:match)
     assert_raises(ArgumentError) do
@@ -330,111 +325,6 @@ class LevelsHelperTest < ActionView::TestCase
     app_options = question_options
 
     assert_not app_options[:level]['submittable']
-  end
-
-  test 'get_azure_speech_service_token returns token on success' do
-    region = 'westus'
-    api_key = 'abc123'
-    mock_token = 'a1b2c3d4'
-    stub_request(:post, "https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken").
-      with(headers: {'Ocp-Apim-Subscription-Key' => api_key}).
-      to_return(status: 200, body: mock_token)
-    assert_equal mock_token, get_azure_speech_service_token(region, api_key, 1)
-  end
-
-  test 'get_azure_speech_service_token returns nil on error' do
-    region = 'westus'
-    api_key = 'abc123'
-    stub_request(:post, "https://#{region}.api.cognitive.microsoft.com/sts/v1.0/issueToken").
-      with(headers: {'Ocp-Apim-Subscription-Key' => api_key}).
-      to_raise(ArgumentError)
-    Honeybadger.expects(:notify).once
-    assert_nil get_azure_speech_service_token(region, api_key, 1)
-  end
-
-  test 'get_azure_speech_service_voices returns voices array on success' do
-    region = 'eastus'
-    mock_token = 'a1b2c3d4'
-    voices_url = "https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list"
-
-    # Empty response
-    stub_request(:get, voices_url).
-      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
-      to_return(status: 200, body: '')
-    assert_equal [], get_azure_speech_service_voices(region, mock_token, 1)
-
-    # Voices are cached, so delete cache key
-    Rails.cache.delete("azure_speech_service/voices")
-
-    # Voices list response
-    mock_voices = [{'Locale': 'en-US', 'Gender': 'female'}].to_json
-    stub_request(:get, voices_url).
-      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
-      to_return(status: 200, body: mock_voices)
-    assert_equal JSON.parse(mock_voices), get_azure_speech_service_voices(region, mock_token, 1)
-
-    # Make sure voices are cached
-    stub_request(:get, voices_url).
-      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
-      to_raise(ArgumentError)
-    assert_equal JSON.parse(mock_voices), get_azure_speech_service_voices(region, mock_token, 1)
-  end
-
-  test 'get_azure_speech_service_voices returns nil on error' do
-    region = 'eastus'
-    mock_token = 'a1b2c3'
-    stub_request(:get, "https://#{region}.tts.speech.microsoft.com/cognitiveservices/voices/list").
-      with(headers: {'Authorization' => "Bearer #{mock_token}"}).
-      to_raise(ArgumentError)
-    assert_nil get_azure_speech_service_voices(region, mock_token, 1)
-  end
-
-  test 'azure_speech_service_options returns options object on success' do
-    @level.game.expects(:use_azure_speech_service?).returns(true)
-    CDO.stubs(:azure_speech_service_region).returns('westus')
-    CDO.stubs(:azure_speech_service_key).returns('abc123')
-    stubs(:get_azure_speech_service_token).returns('a1b2c3')
-    Languages.expects(:get_native_name_by_locale).with('en-US').returns([{native_name_s: 'English'}]).twice
-    Languages.expects(:get_native_name_by_locale).with('it-IT').returns([{native_name_s: 'Italian'}]).once
-    mock_voices = [
-      {'Locale' => 'en-US', 'Gender' => 'Female', 'ShortName' => 'Alice'},
-      {'Locale' => 'en-US', 'Gender' => 'Male', 'ShortName' => 'Bob'},
-      {'Locale' => 'it-IT', 'Gender' => 'Male', 'ShortName' => 'Dan'}, # Will be filtered out
-    ]
-    stubs(:get_azure_speech_service_voices).returns(mock_voices)
-
-    expected_options = {
-      token: 'a1b2c3',
-      region: 'westus',
-      languages: {'English' => {'female' => 'Alice', 'languageCode' => 'en-US', 'male' => 'Bob'}}
-    }
-    assert_equal expected_options, azure_speech_service_options
-  end
-
-  test 'azure_speech_service_options returns an empty object if gatekeeper disallows it' do
-    expects(:get_azure_speech_service_token).never
-    Gatekeeper.expects(:allows).with('azure_speech_service', default: true).returns(false)
-    assert_empty azure_speech_service_options
-  end
-
-  test 'azure_speech_service_options returns empty object if any responses are empty' do
-    @level.game.stubs(:use_azure_speech_service?).returns(true)
-    CDO.stubs(:azure_speech_service_region).returns('westus')
-    CDO.stubs(:azure_speech_service_key).returns('abc123')
-
-    # Empty token response
-    stubs(:get_azure_speech_service_token).returns(nil)
-    assert_empty azure_speech_service_options
-
-    # Empty voices response
-    stubs(:get_azure_speech_service_token).returns('a1b2c3')
-    stubs(:get_azure_speech_service_voices).returns([])
-    assert_empty azure_speech_service_options
-
-    # Nil voices response
-    stubs(:get_azure_speech_service_token).returns('a1b2c3')
-    stubs(:get_azure_speech_service_voices).returns(nil)
-    assert_empty azure_speech_service_options
   end
 
   test 'submittable level is submittable for student with teacher' do

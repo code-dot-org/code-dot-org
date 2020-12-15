@@ -76,6 +76,11 @@
         %ul
           - @script.unit_groups.each do |course|
             %li= link_to course_path(course)
+      -# use a heuristic to infer whether lesson plans are present for all lessons
+      - if @script.lessons.first&.lesson_activities.present?
+        Lessons:
+        - @script.lessons.map do |lesson|
+          %li= link_to lesson.localized_title, lesson_path(id: lesson.id)
       - levels = Script.get_from_cache(@script.name).lessons.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
       .row
         .span1

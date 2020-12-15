@@ -30,7 +30,7 @@
 # sync_jotforms, process_jotform_data).
 
 module Pd
-  class WorkshopFacilitatorDailySurvey < ActiveRecord::Base
+  class WorkshopFacilitatorDailySurvey < ApplicationRecord
     include JotFormBackedForm
     include Pd::WorkshopSurveyConstants
 

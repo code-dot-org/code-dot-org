@@ -109,9 +109,14 @@
           .checkbox
             = f.label :data_transfer_agreement_accepted do
               = f.check_box :data_transfer_agreement_accepted
-              %span
-                = t('signup_form.agree_us_website')
-                = t('signup_form.my_data_to_us')
+              %div#gdpr-label
+                %span#student-gdpr
+                  = t('signup_form.agree_us_data_transfer_student', markdown: :inline).html_safe
+                %span#teacher-gdpr{style: "display: none;"}
+                  = t('signup_form.agree_us_data_transfer_teacher', markdown: :inline).html_safe
+                %span
+                  = t('signup_form.data_collection_us', markdown: :inline).html_safe
+                  = t('signup_form.visit_privacy', privacy_url: CDO.code_org_url('/privacy'), markdown: :inline).html_safe
           - if @user.errors[:data_transfer_agreement_accepted].present?
             %p.error= t('signup_form.accept_terms')
 

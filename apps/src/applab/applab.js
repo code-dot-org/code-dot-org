@@ -681,6 +681,7 @@ Applab.init = function(config) {
     showDebugSlider: showDebugConsole,
     showDebugWatch:
       !!config.level.isProjectLevel || config.level.showDebugWatch,
+    debugConsoleDisabled: config.readonlyWorkspace,
     showMakerToggle:
       !!config.level.isProjectLevel || config.level.makerlabEnabled,
     validationEnabled: !!config.level.validationEnabled,

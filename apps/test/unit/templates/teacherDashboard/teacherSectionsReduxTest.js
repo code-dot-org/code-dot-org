@@ -452,10 +452,7 @@ describe('teacherSectionsRedux', () => {
     it('does set selectedSectionId if passed a single section', () => {
       const action = setSections(sections.slice(0, 1));
       const nextState = reducer(startState, action);
-      assert.strictEqual(
-        nextState.selectedSectionId,
-        sections[0].id.toString()
-      );
+      assert.strictEqual(nextState.selectedSectionId, sections[0].id);
     });
 
     it('throws rather than let us destroy data', () => {
@@ -483,7 +480,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('selectSection', () => {
-    const firstSectionId = sections[0].id.toString();
+    const firstSectionId = sections[0].id;
     it('can change the selected section', () => {
       const sectionState = reducer(undefined, setSections(sections));
 
@@ -507,7 +504,7 @@ describe('teacherSectionsRedux', () => {
       let sectionState = reducer(undefined, setSections(sections));
       assert.equal(sectionState.selectedSectionId, NO_SECTION);
 
-      const action = selectSection('99999');
+      const action = selectSection(99999);
       sectionState = reducer(initialState, action);
       assert.equal(sectionState.selectedSectionId, NO_SECTION);
     });

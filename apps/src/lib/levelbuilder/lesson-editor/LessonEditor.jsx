@@ -5,7 +5,6 @@ import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesE
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import RelatedLessons from './RelatedLessons';
@@ -14,12 +13,15 @@ import {
   activityShape,
   resourceShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
-import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import {connect} from 'react-redux';
-import {getSerializedActivities} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {
+  getSerializedActivities,
+  mapActivityDataForEditor,
+  initActivities
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {navigateToHref} from '@cdo/apps/utils';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 const styles = {
   editor: {
@@ -40,56 +42,19 @@ const styles = {
   dropdown: {
     margin: '0 6px',
     width: 300
-  },
-  saveButtonBackground: {
-    margin: 0,
-    position: 'fixed',
-    bottom: 0,
-    left: 0,
-    backgroundColor: color.lightest_gray,
-    borderColor: color.lightest_gray,
-    height: 50,
-    width: '100%',
-    zIndex: 900,
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  saveButton: {
-    margin: '10px 50px 10px 20px'
-  },
-  spinner: {
-    fontSize: 25,
-    padding: 10
-  },
-  lastSaved: {
-    fontSize: 14,
-    color: color.level_perfect,
-    padding: 15
-  },
-  error: {
-    fontSize: 14,
-    color: color.red,
-    padding: 15
   }
 };
 
 class LessonEditor extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
-    initialDisplayName: PropTypes.string.isRequired,
-    initialOverview: PropTypes.string,
-    initialStudentOverview: PropTypes.string,
-    initialUnplugged: PropTypes.bool,
-    initialLockable: PropTypes.bool,
-    initialAssessment: PropTypes.bool,
-    initialCreativeCommonsLicense: PropTypes.string,
-    initialPurpose: PropTypes.string,
-    initialPreparation: PropTypes.string,
-    initialAnnouncements: PropTypes.arrayOf(announcementShape),
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
+    initialLessonData: PropTypes.object,
+
+    // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    initActivities: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -99,17 +64,21 @@ class LessonEditor extends Component {
       isSaving: false,
       error: null,
       lastSaved: null,
-      displayName: this.props.initialDisplayName,
-      overview: this.props.initialOverview,
-      studentOverview: this.props.initialStudentOverview,
-      unplugged: this.props.initialUnplugged,
-      lockable: this.props.initialLockable,
-      creativeCommonsLicense: this.props.initialCreativeCommonsLicense,
-      assessment: this.props.initialAssessment,
-      purpose: this.props.initialPurpose,
-      preparation: this.props.initialPreparation,
-      announcements: this.props.initialAnnouncements,
-      objectives: this.props.initialObjectives
+      displayName: this.props.initialLessonData.name,
+      overview: this.props.initialLessonData.overview || '',
+      studentOverview: this.props.initialLessonData.studentOverview || '',
+      assessmentOpportunities:
+        this.props.initialLessonData.assessmentOpportunities || '',
+      unplugged: this.props.initialLessonData.unplugged,
+      lockable: this.props.initialLessonData.lockable,
+      creativeCommonsLicense: this.props.initialLessonData
+        .creativeCommonsLicense,
+      assessment: this.props.initialLessonData.assessment,
+      purpose: this.props.initialLessonData.purpose || '',
+      preparation: this.props.initialLessonData.preparation || '',
+      announcements: this.props.initialLessonData.announcements || [],
+      objectives: this.props.initialObjectives,
+      originalLessonData: this.props.initialLessonData
     };
   }
 
@@ -118,8 +87,12 @@ class LessonEditor extends Component {
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
+    // Remove updatedAt before sending information to server as updateAt time
+    // was not consistent between server version and client
+    delete this.state.originalLessonData.updatedAt;
+
     $.ajax({
-      url: `/lessons/${this.props.id}`,
+      url: `/lessons/${this.state.originalLessonData.id}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
@@ -131,19 +104,32 @@ class LessonEditor extends Component {
         unplugged: this.state.unplugged,
         overview: this.state.overview,
         studentOverview: this.state.studentOverview,
+        assessmentOpportunities: this.state.assessmentOpportunities,
         purpose: this.state.purpose,
         preparation: this.state.preparation,
         objectives: JSON.stringify(this.state.objectives),
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
-        announcements: this.state.announcements
+        announcements: JSON.stringify(this.state.announcements),
+        originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(`/lessons/${this.props.id}${window.location.search}`);
+          navigateToHref(
+            `/lessons/${this.state.originalLessonData.id}${
+              window.location.search
+            }`
+          );
         } else {
-          this.setState({lastSaved: data.updated_at, isSaving: false});
+          const activities = mapActivityDataForEditor(data.activities);
+
+          this.props.initActivities(activities);
+          this.setState({
+            lastSaved: data.updatedAt,
+            isSaving: false,
+            originalLessonData: data
+          });
         }
       })
       .fail(error => {
@@ -164,6 +150,7 @@ class LessonEditor extends Component {
       displayName,
       overview,
       studentOverview,
+      assessmentOpportunities,
       unplugged,
       lockable,
       creativeCommonsLicense,
@@ -313,11 +300,36 @@ class LessonEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
+          title="Assessment Opportunities"
+          collapsed={true}
+          fullWidth={true}
+        >
+          <TextareaWithMarkdownPreview
+            markdown={assessmentOpportunities}
+            label={'Assessment Opportunities'}
+            inputRows={5}
+            handleMarkdownChange={e =>
+              this.setState({assessmentOpportunities: e.target.value})
+            }
+          />
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection
           title="Resources"
           collapsed={true}
           fullWidth={true}
         >
-          <ResourcesEditor />
+          {this.state.originalLessonData.courseVersionId ? (
+            <ResourcesEditor
+              courseVersionId={this.state.originalLessonData.courseVersionId}
+            />
+          ) : (
+            <h4>
+              A unit must be in a course version, i.e. a unit must belong to a
+              course or have 'Is a Standalone Course' checked, in order to add
+              resources.
+            </h4>
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection
@@ -335,43 +347,12 @@ class LessonEditor extends Component {
           <ActivitiesEditor />
         </CollapsibleEditorSection>
 
-        <div style={styles.saveButtonBackground} className="saveBar">
-          {this.state.lastSaved && !this.state.error && (
-            <div style={styles.lastSaved} className="lastSavedMessage">
-              {`Last saved at: ${new Date(
-                this.state.lastSaved
-              ).toLocaleString()}`}
-            </div>
-          )}
-          {this.state.error && (
-            <div style={styles.error}>
-              {`Error Saving: ${this.state.error}`}
-            </div>
-          )}
-          {this.state.isSaving && (
-            <div style={styles.spinner}>
-              <FontAwesome icon="spinner" className="fa-spin" />
-            </div>
-          )}
-          <button
-            className="btn"
-            type="button"
-            style={styles.saveButton}
-            onClick={e => this.handleSave(e, false)}
-            disabled={this.state.isSaving}
-          >
-            Save and Keep Editing
-          </button>
-          <button
-            className="btn btn-primary"
-            type="submit"
-            style={styles.saveButton}
-            onClick={e => this.handleSave(e, true)}
-            disabled={this.state.isSaving}
-          >
-            Save and Close
-          </button>
-        </div>
+        <SaveBar
+          handleSave={this.handleSave}
+          error={this.state.error}
+          isSaving={this.state.isSaving}
+          lastSaved={this.state.lastSaved}
+        />
       </div>
     );
   }
@@ -379,7 +360,12 @@ class LessonEditor extends Component {
 
 export const UnconnectedLessonEditor = LessonEditor;
 
-export default connect(state => ({
-  activities: state.activities,
-  resources: state.resources
-}))(LessonEditor);
+export default connect(
+  state => ({
+    activities: state.activities,
+    resources: state.resources
+  }),
+  {
+    initActivities
+  }
+)(LessonEditor);

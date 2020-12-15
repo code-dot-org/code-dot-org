@@ -151,7 +151,7 @@ class ColumnHeader extends React.Component {
       }
     ];
     return (
-      <th style={dataStyles.headerCell}>
+      <th style={dataStyles.headerCell} className="uitest-data-table-column">
         <div style={containerStyle} className="flex">
           <div style={styles.columnName} className="test-tableNameDiv">
             {this.props.columnName}

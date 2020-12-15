@@ -270,6 +270,46 @@ class Foorm::FormTest < ActiveSupport::TestCase
       form.submissions_to_csv([general_submission_1, other_submission])
   end
 
+  test 'creating new form writes to file in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once
+
+    create :foorm_form
+  end
+
+  test 'creating new form does not write file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    create :foorm_form
+  end
+
+  test 'updating form writes to file in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).twice
+
+    form = create :foorm_form
+    form.questions = JSON.generate({pages: [{elements: [{name: "test"}]}]})
+    form.save
+  end
+
+  test 'updating form does not write to file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    form = create :foorm_form
+    form.questions = JSON.generate({pages: [{elements: [{name: "test"}]}]})
+    form.save
+  end
+
+  test 'form only writes to file on save if it has changed' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once
+
+    # should write to file
+    form = create :foorm_form
+    # should not write to file, form did not change
+    form.save
+  end
+
   private
 
   def get_csv_string(expected_values)

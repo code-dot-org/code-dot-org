@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:13:47.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Reflection\r\n\r\nWhat makes manually cleaning data challenging? ",
+    "encrypted_solution": "TX6MpBITerjOtAyOH3gabiUTPB9JYvfEMZNeMfwFymmD5CH3BEQ7+lsbTXEc\nhrMadI1WqP/vx2y068LwPBr44kYUxOyWCbojHAApkXSB2CMuuiUsYWmbR+Lz\n8JH3jqNmgoc8tphZ4jryyskOfWg3GtYEcbw+v6f+bhT75spqSWu6Ist1OK6K\ndcTYPyOfiyakYS7U1wRNY8HGnFpzxHwOVP5v+bz+HxTEPo6tnzvmyatwAVy7\neFIzMgmcLxFdbqhoYQo2O69S9AdJcisetDBydg==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19985,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-14 18:56:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-02-13 21:07:36 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

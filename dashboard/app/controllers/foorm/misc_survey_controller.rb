@@ -45,6 +45,36 @@ module Foorm
       }
     end
 
+    # Gets a json format of a general misc survey.
+    # GET '/form/:misc_form_path/show'
+    # This is intended for surveys that need to be integrated, with custom rendering, into
+    # an existing page. One example of this is the NPS survey which is rendered as part
+    # of the teacher homepage. The client will handle the custom rendering of the survey.
+    def show
+      return render json: {}, status: :no_content unless current_user&.teacher? && current_user.email.present?
+
+      form_data = MiscSurvey.find_form_data(params[:misc_form_path])
+      return render json: {}, status: :no_content if !form_data || !form_data[:form_name] || MiscSurvey.form_disabled?(params[:misc_form_path])
+
+      form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(form_data[:form_name])
+      key_params = {
+        user_id: current_user.id,
+        misc_form_path: params[:misc_form_path]
+      }
+      return render json: {}, status: :no_content if !form_questions || (!form_data[:allow_multiple_submissions] && response_exists?(key_params))
+
+      render json: @script_data = {
+        props: {
+          formQuestions: form_questions,
+          formName: form_data[:form_name],
+          formVersion: latest_version,
+          surveyData: params[:survey_data] || form_data[:survey_data],
+          submitApi: MISC_FOORM_SUBMIT_API,
+          submitParams: key_params
+        }.to_json
+      }
+    end
+
     protected
 
     def response_exists?(key_params)

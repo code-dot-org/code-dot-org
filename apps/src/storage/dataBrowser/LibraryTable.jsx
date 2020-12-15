@@ -94,7 +94,11 @@ class LibraryTable extends React.Component {
 
     return (
       <div>
-        <a style={styles.tableName} onClick={this.toggleCollapsed}>
+        <a
+          style={styles.tableName}
+          onClick={this.toggleCollapsed}
+          className="uitest-dataset-table-link"
+        >
           <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
         </a>
@@ -136,6 +140,7 @@ class LibraryTable extends React.Component {
                 style={styles.preview}
                 type="button"
                 onClick={() => this.props.onShowPreview(this.props.name)}
+                className="uitest-dataset-preview-btn"
               >
                 {msg.preview()}
               </button>

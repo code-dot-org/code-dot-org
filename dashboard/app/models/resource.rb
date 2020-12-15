@@ -9,7 +9,7 @@
 #  properties        :string(255)
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
-#  course_version_id :integer
+#  course_version_id :integer          not null
 #
 # Indexes
 #
@@ -56,6 +56,20 @@ class Resource < ApplicationRecord
       download_url: download_url,
       audience: audience || 'All',
       type: type
+    }
+  end
+
+  def summarize_for_lesson_edit
+    {
+      id: id,
+      key: key,
+      name: name,
+      url: url,
+      downloadUrl: download_url || '',
+      audience: audience || '',
+      type: type || '',
+      assessment: assessment || false,
+      includeInPdf: include_in_pdf || false
     }
   end
 
