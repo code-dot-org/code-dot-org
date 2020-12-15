@@ -139,8 +139,10 @@ class ProgressTableLevelBubble extends React.PureComponent {
       <FontAwesome icon="users" />
     ) : bonus ? (
       <FontAwesome icon="flag-checkered" />
+    ) : title ? (
+      title
     ) : (
-      (title && title) || ''
+      ''
     );
   }
 
