@@ -34,23 +34,9 @@ $(document).ready(function() {
   ReactDOM.render(
     <Provider store={store}>
       <LessonEditor
-        id={lessonData.id}
-        initialDisplayName={lessonData.name}
-        initialOverview={lessonData.overview || ''}
-        initialStudentOverview={lessonData.studentOverview || ''}
-        initialAssessmentOpportunities={
-          lessonData.assessmentOpportunities || ''
-        }
-        initialUnplugged={lessonData.unplugged}
-        initialLockable={lessonData.lockable}
-        initialCreativeCommonsLicense={lessonData.creativeCommonsLicense}
-        initialAssessment={lessonData.assessment}
-        initialPurpose={lessonData.purpose || ''}
-        initialPreparation={lessonData.preparation || ''}
-        initialAnnouncements={lessonData.announcements || []}
-        relatedLessons={relatedLessons}
         initialObjectives={objectives}
-        courseVersionId={lessonData.courseVersionId}
+        relatedLessons={relatedLessons}
+        initialLessonData={lessonData}
       />
     </Provider>,
     document.getElementById('edit-container')

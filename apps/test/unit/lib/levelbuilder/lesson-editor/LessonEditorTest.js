@@ -31,21 +31,23 @@ describe('LessonEditor', () => {
     store.dispatch(init(sampleActivities, searchOptions));
     store.dispatch(initResources(resourceTestData));
     defaultProps = {
-      id: 1,
-      initialDisplayName: 'Lesson Name',
-      initialOverview: 'Lesson Overview',
-      initialStudentOverview: 'Overview of the lesson for students',
-      initialUnplugged: false,
-      initialLockable: false,
-      initialAssessment: false,
-      initialCreativeCommonsLicense: 'Creative Commons BY-NC-SA',
-      initialPurpose: 'The purpose of the lesson is for people to learn',
-      initialPreparation: '- One',
-      initialAnnouncements: [],
       relatedLessons: [],
       initialObjectives: [],
-      initialAssessmentOpportunities: 'Assessment Opportunities',
-      courseVersionId: 1
+      initialLessonData: {
+        id: 1,
+        name: 'Lesson Name',
+        overview: 'Lesson Overview',
+        studentOverview: 'Overview of the lesson for students',
+        unplugged: false,
+        lockable: false,
+        assessment: false,
+        creativeCommonsLicense: 'Creative Commons BY-NC-SA',
+        purpose: 'The purpose of the lesson is for people to learn',
+        preparation: '- One',
+        announcements: [],
+        assessmentOpportunities: 'Assessment Opportunities',
+        courseVersionId: 1
+      }
     };
   });
 
