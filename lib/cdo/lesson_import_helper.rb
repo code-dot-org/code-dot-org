@@ -25,7 +25,7 @@ module LessonImportHelper
 
     # course version id should always be present for CSF/CSD/CSP 2020 courses.
     course_version_id = lesson.script&.get_course_version&.id
-    raise unless course_version_id
+    raise "Script must have course version" unless course_version_id
 
     lesson_levels = lesson.script_levels.reject {|l| l.levels[0].type == 'CurriculumReference'}
     if cb_lesson_data.empty?
