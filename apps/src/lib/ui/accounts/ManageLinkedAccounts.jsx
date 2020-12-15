@@ -226,8 +226,7 @@ class OauthConnection extends React.Component {
 
     const buttonDisabled =
       !!disconnectDisabledStatus ||
-      (isCodeOrgBrowser() && displayName === 'Google Account');
-
+      (isCodeOrgBrowser() && credentialType === OAuthProviders.google);
     return (
       <tr>
         <td style={styles.cell}>{displayName}</td>
