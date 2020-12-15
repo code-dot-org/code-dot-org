@@ -59,8 +59,6 @@ const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', ''];
 class ScriptEditor extends React.Component {
   static propTypes = {
     id: PropTypes.number,
-    beta: PropTypes.bool,
-    betaWarning: PropTypes.string,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     initialHidden: PropTypes.bool,
@@ -95,6 +93,8 @@ class ScriptEditor extends React.Component {
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool,
+    initialShowCalendar: PropTypes.bool,
+    isMigrated: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -117,6 +117,7 @@ class ScriptEditor extends React.Component {
       lastSaved: null,
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
+      showCalendar: this.props.initialShowCalendar,
       description: this.props.i18nData.description,
       announcements: this.props.initialAnnouncements,
       hidden: this.props.initialHidden,
@@ -130,7 +131,9 @@ class ScriptEditor extends React.Component {
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
-      lessonLevelData: this.props.initialLessonLevelData,
+      lessonLevelData:
+        this.props.initialLessonLevelData ||
+        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name'\n",
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       hasLessonPlan: this.props.initialHasLessonPlan,
       curriculumPath: this.props.initialCurriculumPath,
@@ -147,7 +150,8 @@ class ScriptEditor extends React.Component {
       descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
       teacherResources: resources,
-      hasImportedLessonDescriptions: false
+      hasImportedLessonDescriptions: false,
+      oldScriptText: this.props.initialLessonLevelData
     };
   }
 
@@ -186,7 +190,7 @@ class ScriptEditor extends React.Component {
     const videoKeysBefore = (
       this.props.initialLessonLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
-    const scriptText = this.props.beta ? '' : this.state.lessonLevelData;
+    const scriptText = this.props.isMigrated ? '' : this.state.lessonLevelData;
     const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (
@@ -217,6 +221,7 @@ class ScriptEditor extends React.Component {
       name: this.props.name,
       family_name: this.state.familyName,
       is_course: this.state.isCourse,
+      show_calendar: this.state.showCalendar,
       description: this.state.description,
       announcements: JSON.stringify(this.state.announcements),
       visible_to_teachers: !this.state.hidden,
@@ -230,12 +235,13 @@ class ScriptEditor extends React.Component {
       project_widget_visible: this.state.projectWidgetVisible,
       project_widget_types: this.state.projectWidgetTypes,
       lesson_extras_available: this.state.lessonExtrasAvailable,
-      script_text: this.props.beta
+      script_text: this.props.isMigrated
         ? getSerializedLessonGroups(
             this.props.lessonGroups,
             this.props.levelKeyList
           )
         : this.state.lessonLevelData,
+      old_script_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       has_lesson_plan: this.state.hasLessonPlan,
       curriculum_path: this.state.curriculumPath,
@@ -251,7 +257,8 @@ class ScriptEditor extends React.Component {
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
-      resourceTypes: this.state.teacherResources.map(resource => resource.type)
+      resourceTypes: this.state.teacherResources.map(resource => resource.type),
+      is_migrated: this.props.isMigrated
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -272,7 +279,11 @@ class ScriptEditor extends React.Component {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
           this.props.init(lessonGroups, this.props.levelKeyList);
-          this.setState({lastSaved: data.updatedAt, isSaving: false});
+          this.setState({
+            lastSaved: data.updatedAt,
+            isSaving: false,
+            oldScriptText: data.lessonLevelData
+          });
         }
       })
       .fail(error => {
@@ -281,7 +292,6 @@ class ScriptEditor extends React.Component {
   };
 
   render() {
-    const {betaWarning} = this.props;
     const textAreaRows = this.state.lessonLevelData
       ? this.state.lessonLevelData.split('\n').length + 5
       : 10;
@@ -401,6 +411,25 @@ class ScriptEditor extends React.Component {
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this script.</p>
+            </HelpTip>
+          </label>
+          <label>
+            Show Calendar
+            <input
+              type="checkbox"
+              checked={this.state.showCalendar}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({showCalendar: !this.state.showCalendar})
+              }
+            />
+            <HelpTip>
+              <p>
+                Check to enable the calendar view on the Unit Overview Page. The
+                calendar displays each lesson and generally how long it will
+                take as well how many weeks the unit is expected to take in
+                general. (Actual calendar UI coming soon!)
+              </p>
             </HelpTip>
           </label>
           <label>
@@ -664,7 +693,7 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
-          {!this.props.beta && (
+          {!this.props.isMigrated && (
             <label>
               Curriculum Path
               <input
@@ -709,7 +738,7 @@ class ScriptEditor extends React.Component {
               this.setState({projectWidgetTypes})
             }
           />
-          {!this.props.beta && (
+          {!this.props.isMigrated && (
             <LessonDescriptions
               scriptName={this.props.name}
               currentDescriptions={this.props.i18nData.stageDescriptions}
@@ -799,16 +828,10 @@ class ScriptEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
-          {this.props.beta ? (
+          {this.props.isMigrated ? (
             <UnitCard />
           ) : (
             <div>
-              {betaWarning || (
-                <a href="?beta=true">
-                  Try the beta Script Editor (will reload the page without
-                  saving)
-                </a>
-              )}
               <textarea
                 id="script_text"
                 rows={textAreaRows}
@@ -819,7 +842,6 @@ class ScriptEditor extends React.Component {
             </div>
           )}
         </CollapsibleEditorSection>
-
         <SaveBar
           handleSave={this.handleSave}
           error={this.state.error}

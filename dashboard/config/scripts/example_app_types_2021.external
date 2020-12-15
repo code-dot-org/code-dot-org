@@ -1,0 +1,32 @@
+name 'Example App Types_2021'
+display_name 'Example App Types'
+markdown <<MARKDOWN
+# Example App Types
+
+In the following levels you see several different example apps. They will give you an idea of what the UI (User Interface) could look like for apps with different goals.
+
+For each example app:
+
+* Click through the example to get a feel for how it functions.
+* In your activity guide, make a note of any features or UI elements you find and what they are used for.
+* Discuss with your groups how that app and any of its UI features could be applied to your chosen topic.
+
+# A Note About Functionality
+
+These apps are _prototypes_; they allow a user to interact with the design without worrying about the underlying functionality. For example, when you take use the Quiz App, each question will always respond the same way, regardless of which answer you choose.
+
+By focusing on an interactive prototype first you can learn a lot about how users might use your app before investing too much energy in making it actually work.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In this activity students will be introduced to a small number of relatively constrained apps:
+
+* Quiz Me
+* Decision Maker
+* List Manager
+* Crowdsourcing
+
+For younger or more inexperienced students you may want to restrict them to _just_ these app types. We've specifically chosen these examples because they are relatively easy to prototype in App Lab.
+
+If you allow students to stray from these, be aware that some types of apps are more difficult to create in App Lab and may require more creativity in developing a prototype. For example, App Lab has no mapping functionality, so if students wanted to create a mapping app, they would need to find or create a static image of a map to use in their app.
+MARKDOWN
