@@ -412,9 +412,13 @@ describe('The DebugConsole component when the debug console is disabled', () => 
     });
 
     describe('When typing into the text input and pressing enter,', () => {
-      beforeEach(() => submit('console.log("test")'));
-
-      it('the text does not get appended to the output', () => {
+      it('the text does not get appended to the output if the html is unaltered', () => {
+        submit('console.log("test")');
+        expect(debugOutput().text()).not.to.contain('test');
+      });
+      it('the text does not get appended to the output if the html is changed to enable the input', () => {
+        debugInput().instance().disabled = false;
+        submit('console.log("test")');
         expect(debugOutput().text()).not.to.contain('test');
       });
     });
