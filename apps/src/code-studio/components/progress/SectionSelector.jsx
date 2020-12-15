@@ -34,14 +34,12 @@ class SectionSelector extends React.Component {
         id: PropTypes.number.isRequired
       })
     ).isRequired,
-    selectedSectionId: PropTypes.number,
+    selectedSectionId: PropTypes.string,
     selectSection: PropTypes.func.isRequired
   };
 
   handleSelectChange = event => {
-    const newSectionIdString = event.target.value;
-    const newSectionId =
-      newSectionIdString === '' ? NO_SECTION : parseInt(newSectionIdString);
+    const newSectionId = event.target.value;
 
     if (this.props.logToFirehose) {
       this.props.logToFirehose();
@@ -49,7 +47,7 @@ class SectionSelector extends React.Component {
 
     updateQueryParam(
       'section_id',
-      newSectionId === NO_SECTION ? undefined : newSectionId.toString()
+      newSectionId === NO_SECTION ? undefined : newSectionId
     );
     // If we have a user_id when we switch sections we should get rid of it
     updateQueryParam('user_id', undefined);
@@ -76,7 +74,7 @@ class SectionSelector extends React.Component {
           ...styles.select,
           ...style
         }}
-        value={selectedSectionId ? selectedSectionId.toString() : ''}
+        value={selectedSectionId}
         onChange={this.handleSelectChange}
       >
         {!requireSelection && (
@@ -85,7 +83,7 @@ class SectionSelector extends React.Component {
           </option>
         )}
         {sections.map(({id, name}) => (
-          <option key={id.toString()} value={id.toString()}>
+          <option key={id} value={id}>
             {name}
           </option>
         ))}
@@ -98,7 +96,7 @@ export const UnconnectedSectionSelector = SectionSelector;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId,
+    selectedSectionId: state.teacherSections.selectedSectionId.toString(),
     sections: sectionsNameAndId(state.teacherSections)
   }),
   dispatch => ({
