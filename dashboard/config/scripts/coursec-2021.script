@@ -1,8 +1,6 @@
 hideable_lessons true
 teacher_resources [["teacherForum", "https://forum.code.org/c/csf"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
-has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'coursec'
