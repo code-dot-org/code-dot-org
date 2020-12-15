@@ -135,6 +135,54 @@ export function stageIsAllAssessment(levels) {
 }
 
 /**
+ * Computes progress status percentages for a set of levels.
+ * @param {{id:studentLevelProgressType}} studentProgress An object keyed by
+ * level id containing objects representing the student's progress in that level
+ * @param {levelType[]} levels An array of levels
+ * @returns {object} An object with a percentage of levels in each of the
+ * following buckets: attempted, imperfect, completed, incomplete.
+ *
+ * Note: this function will replace `summarizeProgressInStage` below once we
+ * refactor the legacy StudentProgressSummaryCell component
+ */
+export function statusPercentsForLevels(studentProgress, levels) {
+  // Filter any bonus levels as they do not count toward progress.
+  const filteredLevels = levels.filter(level => !level.bonus);
+  const statuses = filteredLevels.map(level => {
+    const levelProgress = studentProgress[level.id];
+    return (levelProgress && levelProgress.status) || LevelStatus.not_tried;
+  });
+
+  const completedStatuses = [
+    LevelStatus.perfect,
+    LevelStatus.submitted,
+    LevelStatus.free_play_complete,
+    LevelStatus.completed_assessment,
+    LevelStatus.readonly
+  ];
+
+  const attempted = statuses.filter(status => status === LevelStatus.attempted)
+    .length;
+  const imperfect = statuses.filter(status => status === LevelStatus.passed)
+    .length;
+  const completed = statuses.filter(status =>
+    completedStatuses.includes(status)
+  ).length;
+  const incomplete = statuses.length - completed - imperfect;
+
+  const getPercent = count => (100 * count) / statuses.length;
+
+  const statusPercents = {
+    attempted: getPercent(attempted),
+    imperfect: getPercent(imperfect),
+    completed: getPercent(completed),
+    incomplete: getPercent(incomplete)
+  };
+
+  return statusPercents;
+}
+
+/**
  * Summarizes stage progress data.
  * @param {{id:studentLevelProgressType}} studentProgress An object keyed by
  * level id containing objects representing the student's progress in that level

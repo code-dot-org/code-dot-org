@@ -1,56 +1,66 @@
 import React from 'react';
-import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import color from '@cdo/apps/util/color';
 
-const style = {
-  margin: '9px 8px'
+const styles = {
+  container: {
+    height: 20,
+    margin: 10,
+    boxSizing: 'border-box',
+    borderWidth: 1,
+    borderStyle: 'solid'
+  }
 };
 
-class ProgressTableSummaryCell extends React.Component {
+export default class ProgressTableSummaryCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
-    statusCounts: PropTypes.object,
+    statusPercents: PropTypes.object,
     assessmentStage: PropTypes.bool,
     onSelectDetailView: PropTypes.func
   };
 
+  heightForPercent(percent) {
+    return `${percent}%`;
+  }
+
   render() {
-    const totalPixels = 20;
-    const {statusCounts, assessmentStage} = this.props;
-    const perfectPixels =
-      statusCounts.total > 0
-        ? Math.floor(
-            (statusCounts.completed / statusCounts.total) * totalPixels
-          )
-        : 0;
-    const imperfectPixels =
-      statusCounts.total > 0
-        ? Math.floor(
-            (statusCounts.imperfect / statusCounts.total) * totalPixels
-          )
-        : 0;
-    const incompletePixels = totalPixels - perfectPixels - imperfectPixels;
+    const {statusPercents, assessmentStage} = this.props;
     const started =
-      statusCounts.attempted > 0 ||
-      statusCounts.incomplete !== statusCounts.total;
+      statusPercents.attempted > 0 || statusPercents.incomplete < 100;
+
+    const boxStyle = {
+      ...styles.container,
+      borderColor: started
+        ? assessmentStage
+          ? color.level_submitted
+          : color.level_perfect
+        : color.light_gray
+    };
+
+    const incompleteStyle = {
+      backgroundColor: color.level_not_tried,
+      height: this.heightForPercent(statusPercents.incomplete)
+    };
+
+    const imperfectStyle = {
+      backgroundColor: color.level_passed,
+      height: this.heightForPercent(statusPercents.imperfect)
+    };
+
+    const completedStyle = {
+      backgroundColor: assessmentStage
+        ? color.level_submitted
+        : color.level_perfect,
+      height: this.heightForPercent(statusPercents.completed)
+    };
 
     return (
-      <div
-        style={style}
-        onClick={this.props.onSelectDetailView}
-        className="uitest-summary-cell"
-      >
-        <ProgressBox
-          started={started}
-          incomplete={incompletePixels}
-          imperfect={imperfectPixels}
-          perfect={perfectPixels}
-          stageIsAllAssessment={assessmentStage}
-        />
+      <div style={boxStyle} onClick={this.props.onSelectDetailView}>
+        <div style={incompleteStyle} />
+        <div style={imperfectStyle} />
+        <div style={completedStyle} />
       </div>
     );
   }
 }
-
-export default Radium(ProgressTableSummaryCell);

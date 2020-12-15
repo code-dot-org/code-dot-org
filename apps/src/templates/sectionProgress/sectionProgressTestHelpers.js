@@ -66,7 +66,7 @@ function buildSectionProgress(students) {
 }
 
 function randomProgress() {
-  const rand = Math.floor(Math.random() * 3);
+  const rand = Math.floor(Math.random() * 4);
   const paired = Math.floor(Math.random() * 10) === 0;
   switch (rand) {
     case 0:
@@ -80,6 +80,13 @@ function randomProgress() {
       return {
         status: LevelStatus.attempted,
         result: TestResults.LEVEL_STARTED,
+        paired: paired,
+        time_spent: 3
+      };
+    case 2:
+      return {
+        status: LevelStatus.passed,
+        result: TestResults.TOO_MANY_BLOCKS_FAIL,
         paired: paired,
         time_spent: 3
       };
