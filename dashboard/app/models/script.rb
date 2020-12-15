@@ -87,7 +87,7 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validate :set_is_migrated_only_for_new_courses
+  validate :set_is_migrated_only_for_migrated_scripts
 
   include SerializedProperties
 
@@ -95,7 +95,7 @@ class Script < ApplicationRecord
 
   SCRIPT_DIRECTORY = 'config/scripts'.freeze
 
-  def set_is_migrated_only_for_new_courses
+  def set_is_migrated_only_for_migrated_scripts
     if !!is_migrated && !hidden
       errors.add(:is_migrated, "Can't be set on a course that is visible")
     end
