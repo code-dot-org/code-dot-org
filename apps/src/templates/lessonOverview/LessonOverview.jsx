@@ -36,6 +36,13 @@ const styles = {
   navLink: {
     fontSize: 18,
     color: color.purple
+  },
+  copyResourceWarningArea: {
+    color: '#8a6d3b',
+    backgroundColor: '#fcf8e3',
+    border: '2px solid #f5e79e',
+    borderRadius: 4,
+    padding: '10px 10px 0px 10px'
   }
 };
 
@@ -170,6 +177,9 @@ class LessonOverview extends Component {
             {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
                 <h2>{i18n.links()}</h2>
+                <div style={styles.copyResourceWarningArea}>
+                  <SafeMarkdown markdown={i18n.copyResourcesWarning()} />
+                </div>
                 {lesson.resources['Teacher'] && (
                   <div>
                     <h3>{i18n.forTheTeachers()}</h3>
