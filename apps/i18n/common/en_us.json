@@ -1119,6 +1119,7 @@
   "manageLinkedAccounts_microsoft": "Microsoft Account",
   "manageLinkedAccounts_notConnected": "Not Connected",
   "manageLinkedAccounts_rosteredSectionTooltip": "You cannot disconnect from this linked account because it is tied to one of your sections.",
+  "manageLinkedAccounts_makerAuthError": "This action cannot be done from the Maker App. Please return to your default browser and try again.",
   "manageStudents": "Manage Students",
   "manageStudentsNotificationFailure": "Something went wrong.",
   "manageStudentsNotificationCannotAdd": "You could not add {numStudents, plural, one {1 student} other {# students}} to your section. Please try again or refresh the page.",
