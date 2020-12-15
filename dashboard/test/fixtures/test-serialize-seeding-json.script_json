@@ -44,8 +44,8 @@
   ],
   "lessons": [
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-1",
-      "name": "test-serialize-seeding-json-lg-1-lesson-1",
+      "key": "test-serialize-seeding-json-lg-1-l-1",
+      "name": "test-serialize-seeding-json-lg-1-l-1",
       "absolute_position": 1,
       "lockable": false,
       "relative_position": 1,
@@ -53,14 +53,14 @@
         "overview": "overview 1 1"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-2",
-      "name": "test-serialize-seeding-json-lg-1-lesson-2",
+      "key": "test-serialize-seeding-json-lg-1-l-2",
+      "name": "test-serialize-seeding-json-lg-1-l-2",
       "absolute_position": 2,
       "lockable": false,
       "relative_position": 2,
@@ -68,14 +68,14 @@
         "overview": "overview 1 2"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-1",
-      "name": "test-serialize-seeding-json-lg-2-lesson-1",
+      "key": "test-serialize-seeding-json-lg-2-l-1",
+      "name": "test-serialize-seeding-json-lg-2-l-1",
       "absolute_position": 3,
       "lockable": false,
       "relative_position": 3,
@@ -83,14 +83,14 @@
         "overview": "overview 2 1"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-2",
-      "name": "test-serialize-seeding-json-lg-2-lesson-2",
+      "key": "test-serialize-seeding-json-lg-2-l-2",
+      "name": "test-serialize-seeding-json-lg-2-l-2",
       "absolute_position": 4,
       "lockable": false,
       "relative_position": 4,
@@ -98,7 +98,7 @@
         "overview": "overview 2 2"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script"
       }
@@ -106,53 +106,53 @@
   ],
   "lesson_activities": [
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1",
+      "key": "test-serialize-seeding-json-lg-1-l-1-a-1",
       "position": 1,
       "properties": {
         "name": "My Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1",
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
+        "lesson_activity.key": "test-serialize-seeding-json-lg-1-l-1-a-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1",
+      "key": "test-serialize-seeding-json-lg-1-l-2-a-1",
       "position": 1,
       "properties": {
         "name": "My Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1",
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
+        "lesson_activity.key": "test-serialize-seeding-json-lg-1-l-2-a-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1",
+      "key": "test-serialize-seeding-json-lg-2-l-1-a-1",
       "position": 1,
       "properties": {
         "name": "My Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1",
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
+        "lesson_activity.key": "test-serialize-seeding-json-lg-2-l-1-a-1",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1",
+      "key": "test-serialize-seeding-json-lg-2-l-2-a-1",
       "position": 1,
       "properties": {
         "name": "My Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1",
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
+        "lesson_activity.key": "test-serialize-seeding-json-lg-2-l-2-a-1",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script"
       }
@@ -160,47 +160,47 @@
   ],
   "activity_sections": [
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1-section-1",
+      "key": "test-serialize-seeding-json-lg-1-l-1-a-1-s-1",
       "position": 1,
       "properties": {
         "name": "My Activity Section"
       },
       "seeding_key": {
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1-section-1",
-        "lesson_activity.key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-1-a-1-s-1",
+        "lesson_activity.key": "test-serialize-seeding-json-lg-1-l-1-a-1"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1-section-1",
+      "key": "test-serialize-seeding-json-lg-1-l-2-a-1-s-1",
       "position": 1,
       "properties": {
         "name": "My Activity Section"
       },
       "seeding_key": {
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1-section-1",
-        "lesson_activity.key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-2-a-1-s-1",
+        "lesson_activity.key": "test-serialize-seeding-json-lg-1-l-2-a-1"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1-section-1",
+      "key": "test-serialize-seeding-json-lg-2-l-1-a-1-s-1",
       "position": 1,
       "properties": {
         "name": "My Activity Section"
       },
       "seeding_key": {
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1-section-1",
-        "lesson_activity.key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-1-a-1-s-1",
+        "lesson_activity.key": "test-serialize-seeding-json-lg-2-l-1-a-1"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1-section-1",
+      "key": "test-serialize-seeding-json-lg-2-l-2-a-1-s-1",
       "position": 1,
       "properties": {
         "name": "My Activity Section"
       },
       "seeding_key": {
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1-section-1",
-        "lesson_activity.key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-2-a-1-s-1",
+        "lesson_activity.key": "test-serialize-seeding-json-lg-2-l-2-a-1"
       }
     }
   ],
@@ -218,10 +218,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game1:1_2_1"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-1-a-1-s-1"
       },
       "level_keys": [
         "blockly:test-serialize-seeding-json_game1:1_2_1"
@@ -241,10 +241,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game2:1_2_2"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-1-a-1-s-1"
       },
       "level_keys": [
         "blockly:test-serialize-seeding-json_game2:1_2_2"
@@ -253,7 +253,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": null,
       "properties": {
       },
@@ -263,10 +263,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game3:1_2_3"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-2-a-1-s-1"
       },
       "level_keys": [
         "blockly:test-serialize-seeding-json_game3:1_2_3"
@@ -275,7 +275,7 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": 4,
+      "activity_section_position": 2,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -286,10 +286,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game4:1_2_4"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-2-a-1-s-1"
       },
       "level_keys": [
         "blockly:test-serialize-seeding-json_game4:1_2_4"
@@ -298,7 +298,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": null,
       "properties": {
       },
@@ -308,10 +308,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game5:1_2_5"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-1-a-1-s-1"
       },
       "level_keys": [
         "blockly:test-serialize-seeding-json_game5:1_2_5"
@@ -320,7 +320,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": 6,
+      "activity_section_position": 2,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -331,10 +331,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game6:1_2_6"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-1-a-1-s-1"
       },
       "level_keys": [
         "blockly:test-serialize-seeding-json_game6:1_2_6"
@@ -343,7 +343,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": null,
       "properties": {
       },
@@ -353,10 +353,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game7:1_2_7"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-2-a-1-s-1"
       },
       "level_keys": [
         "blockly:test-serialize-seeding-json_game7:1_2_7"
@@ -365,7 +365,7 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": null,
       "properties": {
         "challenge": true
@@ -376,10 +376,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game8:1_2_8"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-2-a-1-s-1"
       },
       "level_keys": [
         "blockly:test-serialize-seeding-json_game8:1_2_8"
@@ -393,10 +393,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game1:1_2_1"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-1-a-1-s-1"
       }
     },
     {
@@ -405,10 +405,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game2:1_2_2"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-1-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-1-a-1-s-1"
       }
     },
     {
@@ -417,10 +417,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game3:1_2_3"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-2-a-1-s-1"
       }
     },
     {
@@ -429,10 +429,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game4:1_2_4"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-1-lesson-2-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-1-l-2-a-1-s-1"
       }
     },
     {
@@ -441,10 +441,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game5:1_2_5"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-1-a-1-s-1"
       }
     },
     {
@@ -453,10 +453,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game6:1_2_6"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-1-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-1-a-1-s-1"
       }
     },
     {
@@ -465,10 +465,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game7:1_2_7"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-2-a-1-s-1"
       }
     },
     {
@@ -477,10 +477,10 @@
         "script_level.level_keys": [
           "blockly:test-serialize-seeding-json_game8:1_2_8"
         ],
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-2",
         "script.name": "test-serialize-seeding-json-script",
-        "activity_section.key": "test-serialize-seeding-json-lg-2-lesson-2-activity-1-section-1"
+        "activity_section.key": "test-serialize-seeding-json-lg-2-l-2-a-1-s-1"
       }
     }
   ],
@@ -488,213 +488,213 @@
     {
       "name": "fake name",
       "url": "fake.url",
-      "key": "test-serialize-seeding-json-lg-1-lesson-1-resource-1",
+      "key": "test-serialize-seeding-json-lg-1-l-1-resource-1",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "test-serialize-seeding-json-lg-1-lesson-1-resource-1"
+        "resource.key": "test-serialize-seeding-json-lg-1-l-1-resource-1"
       }
     },
     {
       "name": "fake name",
       "url": "fake.url",
-      "key": "test-serialize-seeding-json-lg-1-lesson-1-resource-2",
+      "key": "test-serialize-seeding-json-lg-1-l-1-resource-2",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "test-serialize-seeding-json-lg-1-lesson-1-resource-2"
+        "resource.key": "test-serialize-seeding-json-lg-1-l-1-resource-2"
       }
     },
     {
       "name": "fake name",
       "url": "fake.url",
-      "key": "test-serialize-seeding-json-lg-1-lesson-2-resource-1",
+      "key": "test-serialize-seeding-json-lg-1-l-2-resource-1",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "test-serialize-seeding-json-lg-1-lesson-2-resource-1"
+        "resource.key": "test-serialize-seeding-json-lg-1-l-2-resource-1"
       }
     },
     {
       "name": "fake name",
       "url": "fake.url",
-      "key": "test-serialize-seeding-json-lg-1-lesson-2-resource-2",
+      "key": "test-serialize-seeding-json-lg-1-l-2-resource-2",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "test-serialize-seeding-json-lg-1-lesson-2-resource-2"
+        "resource.key": "test-serialize-seeding-json-lg-1-l-2-resource-2"
       }
     },
     {
       "name": "fake name",
       "url": "fake.url",
-      "key": "test-serialize-seeding-json-lg-2-lesson-1-resource-1",
+      "key": "test-serialize-seeding-json-lg-2-l-1-resource-1",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "test-serialize-seeding-json-lg-2-lesson-1-resource-1"
+        "resource.key": "test-serialize-seeding-json-lg-2-l-1-resource-1"
       }
     },
     {
       "name": "fake name",
       "url": "fake.url",
-      "key": "test-serialize-seeding-json-lg-2-lesson-1-resource-2",
+      "key": "test-serialize-seeding-json-lg-2-l-1-resource-2",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "test-serialize-seeding-json-lg-2-lesson-1-resource-2"
+        "resource.key": "test-serialize-seeding-json-lg-2-l-1-resource-2"
       }
     },
     {
       "name": "fake name",
       "url": "fake.url",
-      "key": "test-serialize-seeding-json-lg-2-lesson-2-resource-1",
+      "key": "test-serialize-seeding-json-lg-2-l-2-resource-1",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "test-serialize-seeding-json-lg-2-lesson-2-resource-1"
+        "resource.key": "test-serialize-seeding-json-lg-2-l-2-resource-1"
       }
     },
     {
       "name": "fake name",
       "url": "fake.url",
-      "key": "test-serialize-seeding-json-lg-2-lesson-2-resource-2",
+      "key": "test-serialize-seeding-json-lg-2-l-2-resource-2",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "test-serialize-seeding-json-lg-2-lesson-2-resource-2"
+        "resource.key": "test-serialize-seeding-json-lg-2-l-2-resource-2"
       }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
-        "resource.key": "test-serialize-seeding-json-lg-1-lesson-1-resource-1"
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "resource.key": "test-serialize-seeding-json-lg-1-l-1-resource-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
-        "resource.key": "test-serialize-seeding-json-lg-1-lesson-1-resource-2"
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "resource.key": "test-serialize-seeding-json-lg-1-l-1-resource-2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
-        "resource.key": "test-serialize-seeding-json-lg-1-lesson-2-resource-1"
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "resource.key": "test-serialize-seeding-json-lg-1-l-2-resource-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
-        "resource.key": "test-serialize-seeding-json-lg-1-lesson-2-resource-2"
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "resource.key": "test-serialize-seeding-json-lg-1-l-2-resource-2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
-        "resource.key": "test-serialize-seeding-json-lg-2-lesson-1-resource-1"
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
+        "resource.key": "test-serialize-seeding-json-lg-2-l-1-resource-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
-        "resource.key": "test-serialize-seeding-json-lg-2-lesson-1-resource-2"
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
+        "resource.key": "test-serialize-seeding-json-lg-2-l-1-resource-2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
-        "resource.key": "test-serialize-seeding-json-lg-2-lesson-2-resource-1"
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
+        "resource.key": "test-serialize-seeding-json-lg-2-l-2-resource-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
-        "resource.key": "test-serialize-seeding-json-lg-2-lesson-2-resource-2"
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
+        "resource.key": "test-serialize-seeding-json-lg-2-l-2-resource-2"
       }
     }
   ],
   "objectives": [
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-1-objective-1",
+      "key": "test-serialize-seeding-json-lg-1-l-1-objective-1",
       "properties": {
         "description": "fake description"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
-        "objective.key": "test-serialize-seeding-json-lg-1-lesson-1-objective-1"
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "objective.key": "test-serialize-seeding-json-lg-1-l-1-objective-1"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-1-objective-2",
+      "key": "test-serialize-seeding-json-lg-1-l-1-objective-2",
       "properties": {
         "description": "fake description"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-1",
-        "objective.key": "test-serialize-seeding-json-lg-1-lesson-1-objective-2"
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "objective.key": "test-serialize-seeding-json-lg-1-l-1-objective-2"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-2-objective-1",
+      "key": "test-serialize-seeding-json-lg-1-l-2-objective-1",
       "properties": {
         "description": "fake description"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
-        "objective.key": "test-serialize-seeding-json-lg-1-lesson-2-objective-1"
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "objective.key": "test-serialize-seeding-json-lg-1-l-2-objective-1"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-lesson-2-objective-2",
+      "key": "test-serialize-seeding-json-lg-1-l-2-objective-2",
       "properties": {
         "description": "fake description"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-1-lesson-2",
-        "objective.key": "test-serialize-seeding-json-lg-1-lesson-2-objective-2"
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "objective.key": "test-serialize-seeding-json-lg-1-l-2-objective-2"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-1-objective-1",
+      "key": "test-serialize-seeding-json-lg-2-l-1-objective-1",
       "properties": {
         "description": "fake description"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
-        "objective.key": "test-serialize-seeding-json-lg-2-lesson-1-objective-1"
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
+        "objective.key": "test-serialize-seeding-json-lg-2-l-1-objective-1"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-1-objective-2",
+      "key": "test-serialize-seeding-json-lg-2-l-1-objective-2",
       "properties": {
         "description": "fake description"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-1",
-        "objective.key": "test-serialize-seeding-json-lg-2-lesson-1-objective-2"
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-1",
+        "objective.key": "test-serialize-seeding-json-lg-2-l-1-objective-2"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-2-objective-1",
+      "key": "test-serialize-seeding-json-lg-2-l-2-objective-1",
       "properties": {
         "description": "fake description"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
-        "objective.key": "test-serialize-seeding-json-lg-2-lesson-2-objective-1"
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
+        "objective.key": "test-serialize-seeding-json-lg-2-l-2-objective-1"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-2-lesson-2-objective-2",
+      "key": "test-serialize-seeding-json-lg-2-l-2-objective-2",
       "properties": {
         "description": "fake description"
       },
       "seeding_key": {
-        "lesson.key": "test-serialize-seeding-json-lg-2-lesson-2",
-        "objective.key": "test-serialize-seeding-json-lg-2-lesson-2-objective-2"
+        "lesson.key": "test-serialize-seeding-json-lg-2-l-2",
+        "objective.key": "test-serialize-seeding-json-lg-2-l-2-objective-2"
       }
     }
   ]

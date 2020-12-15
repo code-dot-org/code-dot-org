@@ -592,7 +592,9 @@ module Services
       name_prefix=nil,
       num_lesson_groups=2,
       num_lessons_per_group=2,
-      num_script_levels_per_lesson=2,
+      num_activities_per_lesson=1,
+      num_sections_per_activity=1,
+      num_script_levels_per_section=2,
       num_resources_per_lesson=2,
       num_objectives_per_lesson=2,
       with_unit_group: false
@@ -628,30 +630,32 @@ module Services
 
       script.lesson_groups.each_with_index do |lg, m|
         num_lessons_per_group.times do |n|
-          name = "#{name_prefix}-lg-#{m + 1}-lesson-#{n + 1}"
+          name = "#{name_prefix}-lg-#{m + 1}-l-#{n + 1}"
           create :lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}"
         end
       end
 
-      i = 1
+      sl_num = 1
       script.lessons.each do |lesson|
-        # For now, just create one LessonActivity and ActivitySection per Lesson.
-        activity = lesson.lesson_activities.create(
-          name: 'My Activity',
-          position: 1,
-          key: "#{lesson.name}-activity-1"
-        )
-        section = activity.activity_sections.create(
-          name: 'My Activity Section',
-          position: 1,
-          key: "#{activity.key}-section-1"
-        )
-
-        num_script_levels_per_lesson.times do
-          game = create :game, name: "#{name_prefix}_game#{i}"
-          level = create :level, name: "#{name_prefix}_blockly_#{i}", level_num: "1_2_#{i}", game: game
-          create :script_level, activity_section: section, activity_section_position: i, lesson: lesson, script: script, levels: [level], challenge: i.even?
-          i += 1
+        (1..num_activities_per_lesson).each do |activity_pos|
+          activity = lesson.lesson_activities.create(
+            name: 'My Activity',
+            position: activity_pos,
+            key: "#{lesson.name}-a-#{activity_pos}"
+          )
+          (1..num_sections_per_activity).each do |section_pos|
+            section = activity.activity_sections.create(
+              name: 'My Activity Section',
+              position: section_pos,
+              key: "#{activity.key}-s-#{section_pos}"
+            )
+            (1..num_script_levels_per_section).each do |sl_pos|
+              game = create :game, name: "#{name_prefix}_game#{sl_num}"
+              level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "1_2_#{sl_num}", game: game
+              create :script_level, activity_section: section, activity_section_position: sl_pos, lesson: lesson, script: script, levels: [level], challenge: sl_num.even?
+              sl_num += 1
+            end
+          end
         end
 
         next unless course_version
